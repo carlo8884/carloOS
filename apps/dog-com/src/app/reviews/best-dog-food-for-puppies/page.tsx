@@ -26,19 +26,19 @@ const schema = buildArticleSchema({
 
 const rcSchema = buildProductSchema({ name: 'Royal Canin Large Breed Puppy', description: 'WSAVA-compliant large breed puppy formula with controlled calcium for healthy bone development.', url: 'https://dog.com/go/amazon-brand/royal+canin+large+breed+puppy?s=reviews-best-dog-food-for-puppies', imageUrl: '' })
 const ppSchema = buildProductSchema({ name: 'Purina Pro Plan Puppy Large Breed', description: 'AAFCO feeding trial-tested large breed puppy formula from a company with 400+ published studies.', url: 'https://dog.com/go/chewy-brand/purina+pro+plan+puppy+large+breed?s=reviews-best-dog-food-for-puppies', imageUrl: '' })
-const hillsSchema = buildProductSchema({ name: 'Hill\'s Science Diet Puppy Small Paws', description: 'veterinarian-formulated small breed puppy food with controlled calcium-to-phosphorus ratio.', url: 'https://dog.com/go/chewy-brand/hills+science+diet+puppy+small+paws?s=reviews-best-dog-food-for-puppies', imageUrl: '' })
+const hillsSchema = buildProductSchema({ name: 'Hill\'s Science Diet Puppy Small & Mini', description: 'veterinarian-formulated small breed puppy food, formerly labeled Puppy Small Paws, with a controlled calcium-to-phosphorus ratio.', url: 'https://dog.com/go/chewy-brand/hills+science+diet+puppy+small+paws?s=reviews-best-dog-food-for-puppies', imageUrl: '' })
 const allSchemas = combineSchemas(schema, rcSchema, ppSchema, hillsSchema)
 
 const PICKS = [
   { label: 'Best Large Breed', name: 'Royal Canin Large Breed Puppy', subtitle: 'Most researched · Controlled calcium · Breed-specific', href: '#royal-canin', pickHop: '/go/amazon-brand/royal+canin+large+breed+puppy?s=reviews-best-dog-food-for-puppies' },
   { label: 'Best Overall Value', name: 'Purina Pro Plan Puppy Large Breed', subtitle: 'AAFCO feeding trials · 400+ studies · Widely available', href: '#pro-plan' },
-  { label: 'Best Small Breed', name: 'Hill\'s Science Diet Small Paws', subtitle: 'Small breed puppy · veterinarian-formulated', href: '#hills-small' },
+  { label: 'Best Small Breed', name: 'Hill\'s Science Diet Puppy Small & Mini', subtitle: 'Formerly Puppy Small Paws · veterinarian-formulated', href: '#hills-small' },
   { label: 'Best Budget', name: 'Iams ProActive Health Puppy', subtitle: 'WSAVA-compliant · $30–50 per 30 lb bag', href: '#iams' },
 ]
 
 const itemList = buildItemListSchema({
   name: "Best Puppy Food 2026",
-  items: PICKS.map((pick) => ({ name: pick.name, url: ({ "Royal Canin Large Breed Puppy": "https://dog.com/go/amazon-brand/royal+canin+large+breed+puppy?s=reviews-best-dog-food-for-puppies", "Purina Pro Plan Puppy Large Breed": "https://dog.com/go/chewy-brand/purina+pro+plan+puppy+large+breed?s=reviews-best-dog-food-for-puppies", "Hill's Science Diet Small Paws": "https://dog.com/go/chewy-brand/hills+science+diet+puppy+small+paws?s=reviews-best-dog-food-for-puppies", "Iams ProActive Health Puppy": "https://dog.com/go/chewy-brand/iams+proactive+health+puppy+large+breed?s=reviews-best-dog-food-for-puppies" }[pick.name] ?? `https://dog.com/reviews/best-dog-food-for-puppies${pick.href}`) })),
+  items: PICKS.map((pick) => ({ name: pick.name, url: ({ "Royal Canin Large Breed Puppy": "https://dog.com/go/amazon-brand/royal+canin+large+breed+puppy?s=reviews-best-dog-food-for-puppies", "Purina Pro Plan Puppy Large Breed": "https://dog.com/go/chewy-brand/purina+pro+plan+puppy+large+breed?s=reviews-best-dog-food-for-puppies", "Hill's Science Diet Puppy Small & Mini": "https://dog.com/go/chewy-brand/hills+science+diet+puppy+small+paws?s=reviews-best-dog-food-for-puppies", "Iams ProActive Health Puppy": "https://dog.com/go/chewy-brand/iams+proactive+health+puppy+large+breed?s=reviews-best-dog-food-for-puppies" }[pick.name] ?? `https://dog.com/reviews/best-dog-food-for-puppies${pick.href}`) })),
 })
 export default function BestPuppyFoodPage() {
   return (
@@ -50,7 +50,7 @@ export default function BestPuppyFoodPage() {
           style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>
           Best Puppy Food 2026 — WSAVA-Compliant Formulas Ranked
         </h1>
-        <PriceAsOf date="2026-10-05" tone="dark" />
+        <PriceAsOf date="2026-10-07" tone="dark" />
         <PrimaryHop href='/go/amazon-brand/royal+canin+large+breed+puppy?s=reviews-best-dog-food-for-puppies' label='Check price of Royal Canin Large Breed Puppy on Amazon' />
         <HopDisclosure siteId="dog-com" href="/go/amazon-brand/royal+canin+large+breed+puppy?s=reviews-best-dog-food-for-puppies" />
         <EmailCapture
@@ -154,9 +154,9 @@ export default function BestPuppyFoodPage() {
             <ReviewCard
               id="hills-small"
               badge="Best Small Breed Puppy"
-              name="Hill's Science Diet Puppy Small Paws"
-              subtitle="Small breed puppy formula · DHA for brain · Hill's nutritionist team"
-              description={<p>Hill&apos;s Science Diet is the third member of the WSAVA top-tier alongside Royal Canin and Purina Pro Plan — full-time veterinary nutritionists, AAFCO feeding trials, and strong research investment. Small Paws is formulated for puppies expected to weigh under 25 lbs as adults, with a small kibble size and the energy density appropriate for higher small-breed metabolic rates. For large breed puppies, use Hill&apos;s Science Diet Puppy Large Breed instead — same manufacturer quality standards, different formula.</p>}
+              name="Hill's Science Diet Puppy Small & Mini"
+              subtitle="Formerly labeled Puppy Small Paws · DHA for brain · Hill's nutritionist team"
+              description={<p>Hill&apos;s Science Diet is the third member of the WSAVA top-tier alongside Royal Canin and Purina Pro Plan — full-time veterinary nutritionists, AAFCO feeding trials, and strong research investment. Hill&apos;s current label is Puppy Small &amp; Mini. The same formula was sold as Puppy Small Paws, and the product page address still uses that name. It is formulated for puppies expected to weigh under 25 lbs as adults, with a small kibble size and the energy density appropriate for higher small-breed metabolic rates. For large breed puppies, use Hill&apos;s Science Diet Puppy Large Breed instead — same manufacturer quality standards, different formula.</p>}
               specs={[
                 { label: 'Best For', value: 'Small breeds (adult weight under 25 lbs)' },
                 { label: 'WSAVA Compliant', value: 'Yes', highlight: 'good' },
@@ -167,7 +167,7 @@ export default function BestPuppyFoodPage() {
               cons={['Premium price', 'Not for large breeds — use Hill\'s Large Breed formula instead']}
               price="$55–80 per 28.5 lb bag"
               priceNote="dated 2026-10-05."
-              ctaText="Shop Hill's Science Diet Puppy Small Paws on Amazon →"
+              ctaText="Shop Hill's Science Diet Puppy Small & Mini on Amazon →"
               ctaHref="/go/chewy-brand/hills+science+diet+puppy+small+paws?s=reviews-best-dog-food-for-puppies"
               ctaAffiliateProgram="chewy-brand"
               ctaAffiliateProduct="hills+science+diet+puppy+small+paws"
@@ -224,7 +224,7 @@ export default function BestPuppyFoodPage() {
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">Expected adult weight under 25 lb</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#hills-small" className="text-brand-primary">Hill&apos;s Science Diet Puppy Small Paws</a><TableShopLink href={"/go/chewy-brand/hills+science+diet+puppy+small+paws?s=reviews-best-dog-food-for-puppies"} product={"Hill&apos;s Science Diet Puppy Small Paws"} /></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#hills-small" className="text-brand-primary">Hill&apos;s Science Diet Puppy Small &amp; Mini</a><TableShopLink href={"/go/chewy-brand/hills+science+diet+puppy+small+paws?s=reviews-best-dog-food-for-puppies"} product={"Hill&apos;s Science Diet Puppy Small &amp; Mini"} /></td>
                       <td className="p-3 text-brand-text-mid">Best Small Breed Puppy. $55–80 per 28.5 lb bag</td>
                       <td className="p-3 text-brand-text-mid">A large-breed puppy. The card says to use the Hill&apos;s large-breed formula instead</td>
                     </tr>
@@ -246,7 +246,7 @@ export default function BestPuppyFoodPage() {
                 },
                 {
                   question: 'Which puppy food does this page pick for a small-breed puppy?',
-                  answer: "Hill's Science Diet Puppy Small Paws. The printed price is $55–80 per 28.5 lb bag. The card says it is not for large breeds.",
+                  answer: "Hill's Science Diet Puppy Small & Mini, formerly Puppy Small Paws. The printed price is $55–80 per 28.5 lb bag. The card says it is not for large breeds.",
                 },
                 {
                   question: 'Which puppy food does this page pick at the lowest printed price?',
@@ -261,7 +261,7 @@ export default function BestPuppyFoodPage() {
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">By Adult Size</div>
               {[
                 { size: 'Large breed (50+ lbs adult)', pick: 'Royal Canin Large Breed Puppy' },
-                { size: 'Small breed (under 25 lbs adult)', pick: 'Hill\'s Science Diet Small Paws' },
+                { size: 'Small breed (under 25 lbs adult)', pick: 'Hill\'s Science Diet Puppy Small & Mini' },
                 { size: 'Medium breed (25-50 lbs adult)', pick: 'Purina Pro Plan Puppy' },
                 { size: 'Giant breed (90+ lbs adult)', pick: 'Royal Canin Giant Puppy (specific line)' },
                 { size: 'Budget / any size', pick: 'Iams ProActive Health Large or regular' },
