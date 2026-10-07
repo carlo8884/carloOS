@@ -11224,7 +11224,7 @@ const CALCULATORS = [
       { re: /amazon-brand\/assorted\+highlighter\+set\?s=insurance-what-pet-insurance-covers/, label: 'assorted-highlighter-set search hop (matches on-page typical-coverage / usual-exclusions copy; unique vs 3x3+sticky+notes / yellow+legal+pad / four+column+accounting+pad)' },
       { re: /amazon-brand\/removable\+page\+flags\?s=insurance-what-pet-insurance-covers/, label: 'removable-page-flags search hop (matches on-page exam-fee / hereditary / dental / waiting-period copy; unique vs monthly+desk+pad+calendar / self+inking+date+stamp / letter+size+sheet+protectors)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -11243,7 +11243,7 @@ const CALCULATORS = [
       { re: /amazon-brand\/paid\+rubber\+stamp\?s=insurance-deductibles-reimbursement/, label: 'paid-rubber-stamp search hop (matches on-page pay-then-claim / reimbursed-invoice copy; unique vs self+inking+date+stamp / desktop+receipt+organizer / four+column+accounting+pad)' },
       { re: /amazon-brand\/handheld\+tally\+counter\?s=insurance-deductibles-reimbursement/, label: 'handheld-tally-counter search hop (matches on-page remaining annual-limit headroom copy; unique vs basic+desktop+calculator / locking+cash+box+with+key / cash+envelope+budget+system)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
