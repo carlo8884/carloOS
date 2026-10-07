@@ -7,7 +7,7 @@ import { ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, buildArticleSc
 export const metadata: Metadata = buildMetadata({
   siteId: 'vets-co',
   title: 'Vetster vs AskVet Telehealth | Vets.co',
-  description: 'Pay per video visit versus a $30 chat subscription. Prices and limits are the ones on the telehealth page. Neither replaces an emergency clinic.',
+  description: 'Vetster single visits start at $102. AskVet does not print a flat monthly chat price. Neither is emergency care.',
   path: '/reviews/vetster-vs-askvet-guide',
   type: 'article',
 })
@@ -26,11 +26,11 @@ const schema = buildArticleSchema({
 const FAQS = [
   {
     question: 'Which service does the telehealth page pick for video?',
-    answer: 'Vetster. The review lists video and chat, licensed veterinarians, specialists, pay-per-consult pricing of $50–100, no monthly fee. Prescriptions depend on the jurisdiction.',
+    answer: 'Vetster. The review lists video and chat, licensed veterinarians, and specialists. Prescriptions depend on the jurisdiction. The single-visit figure is on the telehealth card.',
   },
   {
-    question: 'What does the AskVet plan include at $30 a month?',
-    answer: 'Unlimited chat, a typical wait under five minutes, general practice rather than specialists, and limited prescriptions. There is no video.',
+    question: 'What does the AskVet plan include?',
+    answer: 'The current AskVet page does not print a flat monthly chat price. See the carrier\'s current terms. There is no video. Prescriptions are limited.',
   },
   {
     question: 'Can either service replace the emergency clinic?',
@@ -42,7 +42,7 @@ export default function VetsterVsAskvetGuidePage() {
   const visit = consultLink('/go/vetster/telehealth?s=reviews-vetster-vs-askvet-guide')
   return (
     <ArticleLayout
-      priceAsOf="2026-10-05"
+      priceAsOf="2026-10-07"
       siteId="vets-co"
       schema={schema}
       hero={{
@@ -73,11 +73,12 @@ export default function VetsterVsAskvetGuidePage() {
       <div className="carloOS-article">
         <p>The <Link href="/telehealth">telehealth comparison</Link> ranks Vetster, AskVet, and Chewy Connect. Vetster versus AskVet is the choice between paying for a visit and paying for a month of chat. If the pet is in crisis, neither policy applies. The page lists pale or blue gums, breathing difficulty, collapse, suspected poisoning, severe injury, and a cat that cannot urinate as reasons to go to an emergency clinic. The <Link href="/tools/er-vs-clinic">ER versus clinic tool</Link> is the setting check. This guide is for a question that can wait for a screen.</p>
         <h2>Vetster</h2>
-        <p>Vetster is the best overall pick. Consults are video and chat. The review says veterinarians are licensed in the owner&apos;s jurisdiction, which is what makes a prescription valid where state rules allow. Specialists are listed, including behavior, dermatology, and internal medicine. You pay per consult, $50–100, with no monthly fee. Typical wait is under 15 minutes, and the review says peak hours can run longer. The con is the higher price per visit compared with a subscription.</p>
+        <p>Vetster is the best overall pick. Consults are video and chat. The review says veterinarians are licensed in the owner&apos;s jurisdiction, which is what makes a prescription valid where state rules allow. Specialists are listed, including behavior, dermatology, and internal medicine. This page does not publish a wait time. The con is a higher per-visit figure than a chat plan.</p>
+        <p>Single visits start at $102. Plus is $12/month, billed annually.</p>
         <h2>AskVet</h2>
-        <p>AskVet is the subscription option. The price in the review is $30 a month for unlimited chat. Typical wait is under five minutes. There is no video, specialists are general practice, and prescriptions are limited. The review says that is a reasonable trade when the questions are frequent: a new puppy, a senior pet, several pets, or a chronic condition you already understand and need to ask about. It is a weak substitute when you needed someone to look at the animal.</p>
+        <p>AskVet is the subscription option. See the carrier&apos;s current terms for a monthly chat price. There is no video, specialists are general practice, and prescriptions are limited. The review says that is a reasonable trade when the questions are frequent: a new puppy, a senior pet, several pets, or a chronic condition you already understand and need to ask about. It is a weak substitute when you needed someone to look at the animal.</p>
         <h2>Who should use which</h2>
-        <p>Use Vetster when you want video, a specialist, or a prescription the review says is jurisdiction-dependent. Use AskVet when the questions are frequent and chat is enough, and $30 a month is cheaper than repeating a $50–100 visit. If you already pay for Chewy+, the other option on the telehealth page is Chewy Connect, included with that membership, and it is a poor reason to join Chewy+ by itself. Chewy is not the comparison this page is settling.</p>
+        <p>Use Vetster when you want video, a specialist, or a prescription the review says is jurisdiction-dependent. Use AskVet when the questions are frequent and chat is enough. See the carrier&apos;s current terms before comparing a monthly chat price with a single visit. Chewy lists the licensed-vet video price on the telehealth page. Chewy is not the comparison this page is settling.</p>
         <HopDisclosure siteId="vets-co" href={visit?.href ?? ''} showQuietNote={false} />
         <p>The link below opens Vetster from the telehealth page, for a video visit.</p>
         <p><a className="font-semibold text-brand-primary" href={visit?.href} rel={visit?.attributed ? 'sponsored noopener' : 'nofollow noopener'} target={visit?.attributed ? undefined : '_blank'}>Visit Vetster →</a></p>
@@ -90,8 +91,8 @@ export default function VetsterVsAskvetGuidePage() {
           source="reviews-vetster-vs-askvet-guide"
           checklist={[
             'Use Vetster when you want video, a specialist, or a prescription the review says is jurisdiction-dependent.',
-            'Use AskVet when the questions are frequent and chat is enough, and $30 a month is cheaper than repeating a $50–100 visit.',
-            'If you already pay for Chewy+, the other option on the telehealth page is Chewy Connect, included with that membership, and it is a poor reason to join Chewy+ by itself.',
+            'Single visits start at $102. Plus is $12/month, billed annually. AskVet: see the carrier\'s current terms.',
+            'The licensed-vet video visit is $49.99.',
             'Visit Vetster',
           ]}
         />

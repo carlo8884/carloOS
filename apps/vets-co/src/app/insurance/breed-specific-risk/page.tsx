@@ -177,7 +177,7 @@ export default function BreedRiskPage() {
               <p>Offers high and unlimited annual-limit tiers, which suits breeds with known expensive risks, plus an app-based claims experience. Compare its hereditary-condition coverage and orthopedic/bilateral terms against Trupanion when you quote. Early enrollment remains the most powerful lever for high-risk breeds.</p>
             }
             specs={[
-              { label: 'Annual limit', value: 'Up to unlimited', highlight: 'good' },
+              { label: 'Annual limit', value: 'See the carrier\'s current terms', highlight: 'good' },
               { label: 'Claims', value: 'App-based' },
               { label: 'Model', value: 'Pay-then-claim' },
             ]}

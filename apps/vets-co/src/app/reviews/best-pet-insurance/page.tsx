@@ -66,7 +66,7 @@ const healthyPawsSchema = buildProductSchema({
 
 const embraceSchema = buildProductSchema({
   name: 'Embrace Pet Insurance',
-  description: 'Wellness add-on available for routine and preventive care. Diminishing deductible, highly customizable plan structure.',
+  description: 'Wellness add-on available for routine and preventive care. Deductible program: see the carrier\'s current terms.',
   // note: "highly customizable" is a calibrated descriptor, not an objective-superiority claim
   url: 'https://vets.co/go/embrace/home?s=reviews-best-pet-insurance',
   imageUrl: '',
@@ -114,7 +114,7 @@ export default function VetsPetInsurancePage() {
             "Trupanion is the card for direct pay at checkout rather than pay-and-wait reimbursement.",
             "Healthy Paws is the next card, for reimbursement speed.",
             "Embrace is the card for owners who want a wellness add-on beside accident and illness coverage.",
-            "The page notes a 6-month orthopedic waiting period on that plan.",
+            "The page says the orthopedic waiting period is on the carrier page: see the carrier's current terms.",
             "Trupanion is the only one of the 11 major carriers that pays the practice directly at checkout.",
             "Every condition noted in records before enrollment may be classified as pre-existing and excluded.",
           ]}
@@ -167,7 +167,7 @@ export default function VetsPetInsurancePage() {
               ]}
               pros={['Only insurer paying vet directly at time of service', '90% reimbursement', 'Unlimited payouts', 'Per-condition deductible favors chronic disease']}
               cons={['Higher premiums', 'No wellness coverage']}
-              price="$65–120/month"
+              price="See the carrier's current terms"
               priceNote="dated 2026-10-05."
               ctaText="Get a Trupanion quote" ctaHref="/go/trupanion/home?s=reviews-best-pet-insurance" holdWithoutPartnerId
               ctaAffiliateProgram="trupanion" ctaAffiliateProduct="pet-insurance"
@@ -177,31 +177,31 @@ export default function VetsPetInsurancePage() {
               subtitle="~2 day claims processing · Strong customer satisfaction reputation"
               description={<p>Healthy Paws is consistently well-regarded for customer satisfaction — their mobile app claim submission and stated average of about 2 days make the reimbursement experience notably smooth. The annual reimbursement limit is a choice. Healthy Paws lists $5,000, $7,000, or unlimited, dated 2026-10-07. It is not automatically unlimited. Best for owners who prefer to pay the vet and be reimbursed rather than wait for direct payment integration.</p>}
               specs={[
-                { label: 'Reimbursement', value: '80–90%', highlight: 'good' },
+                { label: 'Reimbursement', value: 'Up to 90%', highlight: 'good' },
                 { label: 'Claims Speed', value: '~2 days', highlight: 'good' },
                 { label: 'Payout Limit', value: '$5,000, $7,000, or unlimited', highlight: 'good' },
                 { label: 'Deductible', value: 'Annual' },
               ]}
               pros={['Among the fastest claims processing of major carriers', 'Consistently strong customer satisfaction reputation', 'Unlimited is one of the limit choices', 'Good mobile app']}
               cons={['No direct vet payment', 'No wellness add-on']}
-              price="$40–85/month"
+              price="See the carrier's current terms"
               priceNote="dated 2026-10-07."
               ctaText="Get a Healthy Paws quote" ctaHref="/go/healthy-paws/home?s=reviews-best-pet-insurance" holdWithoutPartnerId
               ctaAffiliateProgram="healthy-paws" ctaAffiliateProduct="pet-insurance"
             />
 
             <ReviewCard id="embrace" badge="Wellness add-on" name="Embrace"
-              subtitle="Wellness add-on · Diminishing deductible · Customizable"
-              description={<p>Embrace includes a wellness add-on for routine and preventive care alongside illness and accident insurance. The add-on covers vaccines, heartworm testing, dental cleanings, and annual exams. The diminishing deductible reduces by $50 each claim-free year. Among the more customizable plan structures of the major insurers — adjust reimbursement, deductible, and annual limit to fit your budget.</p>}
+              subtitle="Wellness add-on · Deductible program: see the carrier's current terms"
+              description={<p>Embrace includes a wellness add-on for routine and preventive care alongside illness and accident coverage. The add-on covers vaccines, heartworm testing, dental cleanings, and annual exams. The deductible program and the orthopedic waiting period: see the carrier's current terms. Reimbursement on the current dog page is 70%, 80%, or 90%.</p>}
               specs={[
                 { label: 'Wellness', value: 'Add-on available', highlight: 'good' },
-                { label: 'Deductible', value: 'Diminishing annual', highlight: 'good' },
+                { label: 'Deductible', value: 'See the carrier\'s current terms' },
                 { label: 'Reimbursement', value: '70–90%' },
-                { label: 'Ortho Waiting', value: '6 months', highlight: 'warn' },
+                { label: 'Ortho Waiting', value: 'See the carrier\'s current terms', highlight: 'warn' },
               ]}
-              pros={['Wellness add-on covers routine and preventive care', 'Diminishing deductible rewards claim-free years', 'Highly customizable']}
-              cons={['6-month orthopedic waiting period', 'More complex plan options']}
-              price="$45–95/month + wellness add-on"
+              pros={['Wellness add-on covers routine and preventive care', 'Deductible program: see the carrier\'s current terms', 'Reimbursement is 70%, 80%, or 90%']}
+              cons={['Orthopedic waiting period: see the carrier\'s current terms', 'More complex plan options']}
+              price="See the carrier's current terms"
               priceNote="dated 2026-10-05."
               ctaText="Get an Embrace quote" ctaHref="/go/embrace/home?s=reviews-best-pet-insurance" holdWithoutPartnerId
               ctaAffiliateProgram="embrace" ctaAffiliateProduct="pet-insurance"
@@ -228,20 +228,20 @@ export default function VetsPetInsurancePage() {
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">You need the clinic paid at checkout</td>
                       <td className="p-3 font-bold text-brand-dark"><a href="#trupanion" className="text-brand-primary">Trupanion</a><TableShopLink href={"/go/trupanion/home?s=reviews-best-pet-insurance"} product={"Trupanion"} holdWithoutPartnerId /></td>
-                      <td className="p-3 text-brand-text-mid">Pays the vet directly. 90% reimbursement. Unlimited payouts. $65–120/month</td>
+                      <td className="p-3 text-brand-text-mid">Pays the vet directly. 90% reimbursement. Unlimited payouts. See the carrier's current terms for the monthly figure.</td>
                       <td className="p-3 text-brand-text-mid">Higher premiums. Wellness is not included. Deductible is per condition</td>
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">You can pay the clinic and want the reimbursement back fast</td>
                       <td className="p-3 font-bold text-brand-dark"><a href="#healthy-paws" className="text-brand-primary">Healthy Paws</a><TableShopLink href={"/go/healthy-paws/home?s=reviews-best-pet-insurance"} product={"Healthy Paws"} holdWithoutPartnerId /></td>
-                      <td className="p-3 text-brand-text-mid">Fastest reimbursement. About 2 days. 80–90%. Annual limit is $5,000, $7,000, or unlimited, dated 2026-10-07. $40–85/month</td>
+                      <td className="p-3 text-brand-text-mid">About 2 days. Up to 90 percent. Annual limit is $5,000, $7,000, or unlimited. See the carrier's current terms for the monthly figure.</td>
                       <td className="p-3 text-brand-text-mid">No direct vet payment. No wellness add-on. Deductible is annual</td>
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">You want routine care budgeted beside accident and illness</td>
                       <td className="p-3 font-bold text-brand-dark"><a href="#embrace" className="text-brand-primary">Embrace</a><TableShopLink href={"/go/embrace/home?s=reviews-best-pet-insurance"} product={"Embrace"} holdWithoutPartnerId /></td>
-                      <td className="p-3 text-brand-text-mid">Wellness add-on. 70–90% reimbursement. $45–95/month plus the add-on</td>
-                      <td className="p-3 text-brand-text-mid">6-month orthopedic waiting period. More plan options to read</td>
+                      <td className="p-3 text-brand-text-mid">Wellness add-on. 70%, 80%, or 90%. See the carrier's current terms for the monthly figure.</td>
+                      <td className="p-3 text-brand-text-mid">Orthopedic waiting period: see the carrier's current terms. More plan options to read</td>
                     </tr>
                   </tbody>
                 </table>
@@ -255,7 +255,7 @@ export default function VetsPetInsurancePage() {
                 },
                 {
                   question: 'Which plan on this page covers routine care?',
-                  answer: 'Embrace is the card for owners who want a wellness add-on beside accident and illness coverage. The page notes a 6-month orthopedic waiting period on that plan.',
+                  answer: 'Embrace is the card for owners who want a wellness add-on beside accident and illness coverage. The page says the orthopedic waiting period is on the carrier page: see the carrier\'s current terms.',
                 },
               ]} />
             </div>

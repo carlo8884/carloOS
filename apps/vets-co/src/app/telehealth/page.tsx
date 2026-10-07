@@ -10,22 +10,22 @@ const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Best Pet Teleheal
 
 // Per-service Product schemas — editorial Review ratings mirror the on-page
 // ReviewCard scores (no AggregateRating; see buildProductSchema contract).
-const vetsterSchema = buildProductSchema({ name: 'Vetster', description: 'Pet telehealth platform — video and chat consultations with licensed veterinarians, including specialists. Pay per consultation.', url: 'https://vets.co/go/vetster/telehealth?s=telehealth', imageUrl: '', priceRange: '50-100' })
-const askVetSchema = buildProductSchema({ name: 'AskVet', description: 'Subscription pet telehealth — unlimited chat consultations with licensed veterinarians for a flat monthly fee.', url: 'https://vets.co/go/askvet/telehealth?s=telehealth', imageUrl: '', priceRange: '25-35' })
+const vetsterSchema = buildProductSchema({ name: 'Vetster', description: 'Single visits start at $102. Plus is $12/month, billed annually.', url: 'https://vets.co/go/vetster/telehealth?s=telehealth', imageUrl: '', priceRange: '102' })
+const askVetSchema = buildProductSchema({ name: 'AskVet', description: 'Chat with licensed veterinarians. The current page does not print a flat monthly chat price.', url: 'https://vets.co/go/askvet/telehealth?s=telehealth', imageUrl: '', })
 const chewyConnectSchema = buildProductSchema({ name: 'Chewy Connect with a Vet', description: 'Free veterinary-technician chat with a Chewy account, plus a separate licensed-vet video visit that Chewy prices at $49.99 and does not offer in every state.', url: 'https://vets.co/go/chewy/connect?s=telehealth', imageUrl: '' })
 const combinedSchema = combineSchemas(schema, vetsterSchema, askVetSchema, chewyConnectSchema)
 
 const FAQS = [
   { question: 'Can a telehealth vet prescribe medication for my pet?', answer: 'It depends on your state. Most states require a veterinarian-client-patient relationship (VCPR) before a vet can prescribe, and many states only allow a VCPR to be established through an in-person exam. A minority of states permit establishing a VCPR remotely. Platforms that match you with vets licensed in your state (such as Vetster) can prescribe where state rules allow it; chat-only services are generally more limited. For refills of existing prescriptions, your regular clinic is usually the faster route.' },
   { question: 'When is telehealth appropriate versus an in-person visit?', answer: 'Telehealth works well for triage ("does this need a clinic visit?"), minor illness assessment, medication and nutrition questions, post-op check-ins, and behavior concerns. It cannot replace a physical exam, blood work, imaging, surgery, or emergency care. Signs like breathing difficulty, pale gums, collapse, suspected poisoning, or inability to urinate need an emergency clinic immediately — not a telehealth appointment.' },
-  { question: 'How much does a pet telehealth consultation cost?', answer: 'Pay-per-consult platforms typically run $50–100 per video consultation. Subscription services run around $25–35/month for unlimited chat consultations. Chewy’s free chat is with a veterinary technician and comes with a Chewy account, not a paid membership. Chewy’s licensed-vet video visit is separate, priced at $49.99, dated 2026-10-07, and is not offered in every state. Per-consult video is generally better for one-off concerns; subscriptions favor owners with frequent questions — new puppies, senior pets, or multi-pet households.' },
+  { question: 'How much does a pet telehealth visit cost?', answer: 'Vetster lists a single-visit starting figure and a monthly Plus plan on its current page. AskVet does not print a flat monthly chat price — see the carrier\'s current terms. Chewy\'s free chat is with a veterinary technician and comes with a Chewy account. The licensed-vet video price is on the Chewy card. A one-off video fits a single question. A chat plan fits frequent questions.' },
   { question: 'Does pet insurance cover telehealth visits?', answer: 'Coverage varies by carrier and plan. Some insurers reimburse telehealth consultations under illness or exam-fee coverage, and several carriers bundle their own 24/7 vet helplines with every policy. Check your policy\'s exam-fee and telehealth language before assuming a consult is reimbursable — wellness-only plans typically exclude it.' },
   { question: 'Are the vets on telehealth platforms actually licensed?', answer: 'The platforms listed on this page describe their consultations as licensed veterinarians, and the stronger platforms say they match you with a vet licensed in your own state or province, which is what makes any prescription legally valid. Before using a platform this page has not described, confirm that it discloses its veterinarians\' licensing rather than offering anonymous "pet experts."' },
 ]
 
 const PICKS = [
   { label: 'Video and chat', name: 'Vetster', subtitle: 'Video + chat · Licensed DVMs', href: '#vetster' },
-  { label: 'Best Subscription', name: 'AskVet', subtitle: 'Unlimited monthly · $25–35/mo', href: '#askvet' },
+  { label: 'Best Subscription', name: 'AskVet', subtitle: 'See the carrier\'s current terms', href: '#askvet' },
   { label: 'Chewy Integration', name: 'Chewy Connect', subtitle: 'Linked to Chewy Rx', href: '#chewy' },
 ]
 
@@ -76,9 +76,9 @@ export default function TelehealthPage() {
         <div className="grid lg:grid-cols-[1fr_270px] gap-12 min-w-0">
           <div className="min-w-0">
             {/* TL;DR — what AI engines should quote */}
-            <p>Those figures are typical US ranges dated 2026-10-05.</p>
+            <p>Single visits start at $102. Plus is $12/month, billed annually. The licensed-vet video visit is $49.99 and is not offered in every state.</p>
             <p className="text-lg text-brand-text-mid leading-relaxed italic mb-8">
-              <strong className="not-italic">TL;DR.</strong> Vetster is the video-and-chat consult on this page — licensed vets (including specialists), no monthly commitment, and state-level licensing that makes prescriptions valid where state rules allow. AskVet is the chat subscription for frequent questions at $25–35/month for unlimited chat. Chewy&apos;s free chat is with a veterinary technician. Its licensed-vet video visit is $49.99, dated 2026-10-07, and is not offered in every state. None of them replace a physical exam — use telehealth for triage and questions, not emergencies.
+              <strong className="not-italic">TL;DR.</strong> Vetster is the video-and-chat option on this page — licensed vets, including specialists, with no monthly requirement, and state-level licensing that makes prescriptions valid where state rules allow. AskVet is the chat option for frequent questions. See the carrier&apos;s current terms for a monthly chat price. Chewy&apos;s free chat is with a veterinary technician. None of them replace a physical exam — use telehealth for triage and questions, not emergencies.
             </p>
             <div className="bg-brand-primary-pale border-l-4 border-brand-primary rounded-r-lg p-5 mb-8">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">When Telehealth Works — and When It Doesn&apos;t</div>
@@ -86,19 +86,19 @@ export default function TelehealthPage() {
             </div>
             <p>Those figures are typical US ranges dated 2026-10-05.</p>
             <ReviewCard id="vetster" badge="Video and chat" name="Vetster" winner subtitle="Video + chat · Board-certified vets available · No monthly commitment"
-              description={<p>Vetster is a comprehensive pet telehealth platform — licensed veterinarians available by video or chat. This page does not publish a wait time. Their credentialing standards are described as rigorous: all vets are licensed in the jurisdiction where the pet owner is located, making prescriptions legally valid. They offer both general practitioners and specialists (including veterinary behaviorists, dermatologists, and internal medicine specialists). Pay per consultation — no monthly commitment required.</p>}
-              specs={[{ label: 'Consultation Type', value: 'Video + chat', highlight: 'good' }, { label: 'Vet Credentials', value: 'Licensed DVMs required', highlight: 'good' }, { label: 'Wait Time', value: 'Not published on this page' }, { label: 'Specialists', value: 'Yes — multiple specialties', highlight: 'good' }, { label: 'Prescriptions', value: 'Yes (jurisdiction-dependent)' }, { label: 'Monthly Fee', value: 'Pay-per-consult' }]}
-              pros={['Specialists available (behaviorists, dermatologists)', 'Rigorous licensing standards', 'No monthly commitment', 'Prescription capability']}
+              description={<p>Vetster is a comprehensive pet telehealth platform — licensed veterinarians available by video or chat. This page does not publish a wait time. Their credentialing standards are described as rigorous: all vets are licensed in the jurisdiction where the pet owner is located, making prescriptions legally valid. They offer both general practitioners and specialists (including veterinary behaviorists, dermatologists, and internal medicine specialists). A single visit does not require the Plus plan.</p>}
+              specs={[{ label: 'Consultation Type', value: 'Video + chat', highlight: 'good' }, { label: 'Vet Credentials', value: 'Licensed DVMs required', highlight: 'good' }, { label: 'Wait Time', value: 'Not published on this page' }, { label: 'Specialists', value: 'Yes — multiple specialties', highlight: 'good' }, { label: 'Prescriptions', value: 'Yes (jurisdiction-dependent)' }, { label: 'Monthly Fee', value: 'Single visit or Plus' }]}
+              pros={['Specialists available (behaviorists, dermatologists)', 'Rigorous licensing standards', 'A single visit does not require Plus', 'Prescription capability']}
               cons={['Higher per-consult cost than subscription services', 'Wait times can extend during peak hours']}
-              priceNote="dated 2026-10-05."
-              price="$50–100 per consultation" ctaText="Visit Vetster →" ctaHref="/go/vetster/telehealth?s=telehealth" ctaAffiliateProgram="vetster" ctaAffiliateProduct="telehealth" />
-            <ReviewCard id="askvet" badge="Best Subscription" name="AskVet" subtitle="Unlimited monthly consultations · $25–35/month"
-              description={<p>AskVet offers an unlimited monthly subscription model — $25–35/month for unlimited chat consultations with licensed veterinarians. For pet owners who have frequent questions (new puppy, senior pet, multiple pets, chronic conditions), the subscription model represents excellent value compared to per-consult pricing. Chat-only (no video) limits the depth of physical assessment, but the convenience and value are genuine for appropriate use cases.</p>}
-              specs={[{ label: 'Consultation Type', value: 'Chat only' }, { label: 'Monthly Cost', value: '$25–35/month unlimited', highlight: 'good' }, { label: 'Wait Time', value: 'Not published on this page' }, { label: 'Specialists', value: 'General practice only' }, { label: 'Prescriptions', value: 'Limited' }]}
-              pros={['Unlimited consultations for $25–35/month', 'Good for frequent questions']}
+              priceNote="dated 2026-10-07."
+              price="Single visits start at $102. Plus is $12/month, billed annually." ctaText="Visit Vetster →" ctaHref="/go/vetster/telehealth?s=telehealth" ctaAffiliateProgram="vetster" ctaAffiliateProduct="telehealth" />
+            <ReviewCard id="askvet" badge="Best Subscription" name="AskVet" subtitle="Chat plan. See the carrier's current terms."
+              description={<p>AskVet&apos;s current page does not print a flat monthly price for unlimited chat. See the carrier&apos;s current terms. Chat-only service, with no video, limits how much of a physical problem a clinician can see.</p>}
+              specs={[{ label: 'Visit type', value: 'Chat only' }, { label: 'Monthly price', value: 'See the carrier\'s current terms', highlight: 'good' }, { label: 'Wait Time', value: 'Not published on this page' }, { label: 'Specialists', value: 'General practice only' }, { label: 'Prescriptions', value: 'Limited' }]}
+              pros={['See the carrier\'s current terms for the monthly chat price', 'Fits frequent questions']}
               cons={['Chat only — no video examination', 'Limited specialist access', 'Less comprehensive than Vetster for complex cases']}
-              priceNote="dated 2026-10-05."
-              price="$25–35/month unlimited" ctaText="Visit AskVet →" ctaHref="/go/askvet/telehealth?s=telehealth" ctaAffiliateProgram="askvet" ctaAffiliateProduct="telehealth" />
+              priceNote="not a printed monthly figure."
+              price="See the carrier's current terms" ctaText="Visit AskVet →" ctaHref="/go/askvet/telehealth?s=telehealth" ctaAffiliateProgram="askvet" ctaAffiliateProduct="telehealth" />
             <ReviewCard id="chewy" badge="Best for Chewy Customers" name="Chewy Connect with a Vet" subtitle="Free technician chat · Separate vet video visit"
               description={<p>Chewy splits this into two services. Free live chat is with a veterinary technician and is available with a Chewy account; that chat does not prescribe. A licensed-veterinarian video visit is separate. Chewy prices that visit at $49.99, dated 2026-10-07, and offers it only in some states. A prescription from that visit can be filled through Chewy. This is not a benefit that comes only with a paid Chewy+ membership.</p>}
               specs={[{ label: 'Free chat', value: 'Veterinary technician', highlight: 'good' }, { label: 'Vet video', value: '$49.99, some states', highlight: 'good' }, { label: 'Prescriptions', value: 'From the vet visit, not the free chat' }, { label: 'Membership', value: 'Not required for the free chat' }]}
@@ -163,13 +163,13 @@ export default function TelehealthPage() {
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">Video, a specialist, or a prescription where state rules allow</td>
                       <td className="p-3 font-bold text-brand-dark"><a href="#vetster" className="text-brand-primary">Vetster</a><TableShopLink href={"/go/vetster/telehealth?s=telehealth"} product={"Vetster"} /></td>
-                      <td className="p-3 text-brand-text-mid">Video and chat. Pay per consult, $50–100. No monthly fee</td>
+                      <td className="p-3 text-brand-text-mid">Video and chat. Single visits start at $102. Plus is $12/month, billed annually.</td>
                       <td className="p-3 text-brand-text-mid">Higher per visit than a subscription. Waits can stretch at peak hours</td>
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">Frequent chat questions, not a video exam</td>
                       <td className="p-3 font-bold text-brand-dark"><a href="#askvet" className="text-brand-primary">AskVet</a><TableShopLink href={"/go/askvet/telehealth?s=telehealth"} product={"AskVet"} /></td>
-                      <td className="p-3 text-brand-text-mid">Best subscription. $25–35/month unlimited chat. This page does not publish a wait time</td>
+                      <td className="p-3 text-brand-text-mid">Best subscription. See the carrier&apos;s current terms. This page does not publish a wait time</td>
                       <td className="p-3 text-brand-text-mid">Chat only. General practice. Prescriptions are limited</td>
                     </tr>
                     <tr className="border-b border-brand-border">

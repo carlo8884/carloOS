@@ -6,7 +6,7 @@ import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, bu
 export const metadata: Metadata = buildMetadata({
   siteId: 'vets-co',
   title: 'Vetster Video vs Chewy Connect | Vets.co',
-  description: 'Vetster is pay-per-visit video. Chewy Connect is included with Chewy+. Neither replaces an emergency clinic.',
+  description: 'Vetster single visits start at $102. The licensed-vet video visit is $49.99. Neither is emergency care.',
   path: '/reviews/vetster-vs-chewy-connect-guide',
   type: 'article',
 })
@@ -25,11 +25,11 @@ const schema = buildArticleSchema({
 const FAQS = [
   {
     question: 'Which service does the telehealth page pick overall?',
-    answer: 'Vetster. The page lists video and chat, licensed veterinarians, specialists, a typical wait under 15 minutes, pay-per-consult pricing of $50–100, and no monthly fee. Prescriptions depend on the jurisdiction.',
+    answer: 'Vetster. The page lists video and chat, licensed veterinarians, and specialists. This page does not publish a wait time. Prescriptions depend on the jurisdiction.',
   },
   {
     question: 'What does Chewy Connect include?',
-    answer: 'Chewy Connect with a Vet. The page says it is included with Chewy+ at $19.99 a month, which also covers free shipping and other benefits. Consults are video and chat, hours are extended, and a prescription can be filled through Chewy’s pharmacy. The page says it is less useful if you do not already want Chewy+.',
+    answer: 'Free chat is with a veterinary technician and comes with a Chewy account. A licensed-vet video visit is separate and is not offered in every state. A prescription from that visit can be filled through Chewy.',
   },
   {
     question: 'Can either service replace the emergency clinic?',
@@ -67,7 +67,7 @@ export default function VetsterVsChewyConnectGuidePage() {
           ]}
         />
       }
-      priceAsOf="2026-10-05"
+      priceAsOf="2026-10-07"
     >
       <div className="carloOS-article">
         <EmailCapture
@@ -82,15 +82,17 @@ export default function VetsterVsChewyConnectGuidePage() {
             "The telehealth page says a crisis needs an emergency clinic, not a video appointment.",
             "Use the ER versus clinic tool if you are unsure which setting fits.",
             "Chewy Connect with a Vet is for people who already use Chewy.",
-            "A typical wait is under 15 minutes, and it can run longer at peak times.",
+            "This page does not publish a wait time.",
             "The page says that per-visit price is higher than a subscription.",
           ]}
         />
         <p>The notes below are the ones on the <Link href="/telehealth">telehealth page</Link>. Vetster is the overall service. Chewy Connect with a Vet is for people who already use Chewy. <Link href="/reviews/askvet-vs-chewy-connect-guide">AskVet versus Chewy Connect</Link> is the chat-subscription comparison, not this video visit.</p>
         <h2>What the page says about Vetster</h2>
-        <p>Vetster is Best Overall and the winner. Consults are video and chat. The page says veterinarians are licensed where the owner is located, so a prescription can be valid, and that specialists are available, including behavior, dermatology, and internal medicine. A typical wait is under 15 minutes, and it can run longer at peak times. You pay per consult. The printed price is $50–100 per consultation, with no monthly fee. The page says that per-visit price is higher than a subscription.</p>
+        <p>Vetster is Best Overall and the winner. Consults are video and chat. The page says veterinarians are licensed where the owner is located, so a prescription can be valid, and that specialists are available, including behavior, dermatology, and internal medicine. This page does not publish a wait time. You pay per visit. The page says that per-visit figure is higher than a chat plan.</p>
+        <p>Single visits start at $102. Plus is $12/month, billed annually.</p>
         <h2>What the page says about Chewy Connect</h2>
-        <p>Chewy Connect with a Vet is Best for Chewy Customers. It is included with Chewy+ at $19.99 a month, which the page also ties to free shipping and other membership benefits. Consults are video and chat, during extended hours. A prescription from Connect can be filled through Chewy and shipped. The page says the telehealth access is a bonus on a membership you already want for shipping, and that specialist access is thinner than Vetster.</p>
+        <p>Chewy Connect with a Vet is Best for Chewy Customers. Free chat is with a veterinary technician and comes with a Chewy account. A prescription from the licensed-vet video visit can be filled through Chewy and shipped. Specialist access is thinner than Vetster.</p>
+        <p>The licensed-vet video visit is $49.99.</p>
         <p>If you are deciding between a video visit, a clinic, and an emergency hospital, use the <Link href="/tools/er-vs-clinic">ER versus clinic tool</Link>. Neither service on this page replaces emergency care.</p>
         <h2>Who should open which service</h2>
         <p>Open Vetster when you want a licensed veterinarian on video, possibly a specialist, and you do not want a monthly fee. Open Chewy Connect when you already pay for Chewy+ and you want the pharmacy tied to that account. If the pet is in crisis, go to an emergency clinic. Do not wait on a video queue.</p>
