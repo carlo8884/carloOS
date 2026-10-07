@@ -10,7 +10,7 @@ const ppSchema = buildProductSchema({ name: 'Purina Pro Plan Large Breed Adult',
 const allSchemas = combineSchemas(schema, rcSchema, ppSchema)
 const PICKS = [
   { label: 'Best Overall', name: 'Royal Canin Large Adult', subtitle: 'Glucosamine + chondroitin · Joint focus · WSAVA', href: '#royal-canin', pickHop: '/go/chewy-brand/royal+canin+large+adult?s=reviews-best-large-breed-dog-food' },
-  { label: 'Best High-Protein', name: 'Purina Pro Plan Large Breed', subtitle: 'EPA + glucosamine · Live probiotics · Widely recommended', href: '#purina' },
+  { label: 'Best High-Protein', name: 'Purina Pro Plan Large Breed', subtitle: '26% protein · Glucosamine min. 500 ppm · Live probiotics', href: '#purina' },
   { label: "Best Hill's", name: "Hill's Science Diet Large Breed", subtitle: 'Glucosamine · Natural ingredients · Antioxidant blend', href: '#hills' },
 ]
 const itemList = buildItemListSchema({
@@ -81,10 +81,10 @@ export default function BestLargeBreedFoodPage() {
               ctaAffiliateProgram="chewy-brand"
               ctaAffiliateProduct="royal+canin+large+adult"
             />
-            <ReviewCard id="purina" badge="Best High-Protein" name="Purina Pro Plan Large Breed Adult" subtitle="Chicken & rice · EPA + glucosamine · Live probiotics"
-              description={<p>Purina Pro Plan Large Breed Adult provides 26% protein (real chicken as first ingredient) and incorporates EPA from fish oil plus glucosamine for joint support. The inclusion of live probiotics (Bacillus coagulans) for digestive health is a meaningful differentiator at this price point. Purina's research investment — including BREATHE trials on respiratory health, joint studies, and cognitive research — backs a formula that balances joint support, digestive health, and overall nutrition for large breed adults. A commonly recommended formula among general practice veterinarians for large breed adults. Also available in salmon and trout variety for dogs with chicken sensitivity.</p>}
-              specs={[{ label: 'WSAVA', value: 'Top tier', highlight: 'good' }, { label: 'Protein', value: '26% — real chicken first ingredient' }, { label: 'Probiotic', value: 'Live B. coagulans — clinically studied', highlight: 'good' }, { label: 'Joint support', value: 'EPA + glucosamine' }]}
-              pros={['WSAVA compliant', 'Real chicken first ingredient', 'Live probiotics', 'EPA and glucosamine joint support', 'Multiple protein options']}
+            <ReviewCard id="purina" badge="Best High-Protein" name="Purina Pro Plan Large Breed Adult" subtitle="Chicken first · 26% protein · Glucosamine min. 500 ppm"
+              description={<p>Purina Pro Plan Large Breed Adult lists 26% protein with chicken as the first ingredient, and glucosamine minimum 500 ppm. EPA is not a separate guaranteed-analysis line on the facts used here — check the label. The page lists live Bacillus coagulans. Check the label for the CFU. It does not print “clinically studied.” Purina's research investment — including BREATHE trials on respiratory health, joint studies, and cognitive research — backs a formula that balances joint support, digestive health, and overall nutrition for large breed adults. A commonly recommended formula among general practice veterinarians for large breed adults. Also available in salmon and trout variety for dogs with chicken sensitivity.</p>}
+              specs={[{ label: 'WSAVA', value: 'Top tier', highlight: 'good' }, { label: 'Protein', value: '26% — real chicken first ingredient' }, { label: 'Probiotic', value: 'Live B. coagulans. CFU: check the label.', highlight: 'good' }, { label: 'Joint support', value: 'Glucosamine min. 500 ppm. EPA: check the label.' }]}
+              pros={['WSAVA compliant', 'Real chicken first ingredient', 'Live Bacillus coagulans. Check the label for the CFU.', 'Glucosamine minimum 500 ppm', 'Multiple protein options']}
               cons={['Current page lists glucosamine minimum 500 ppm. Compare that line with the Royal Canin label.']}
               price="$50–70 / 34 lb"
               priceNote="dated 2026-10-05."
