@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -5,7 +6,6 @@ import {
   ArticleLayout, CrossPortfolioCard,
   RelatedLinks,
   FAQAccordion,
-  AffiliateDisclosure,
   ShopCtas,
   CrossSiteHelp,
 } from '@carloOS/ui'
@@ -335,7 +335,7 @@ export default function VetsBeagleHealthPage() {
             testing.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/analog+stopwatch?s=breeds-beagle-health", "/go/amazon-brand/blank+index+cards?s=breeds-beagle-health", "/go/amazon-brand/recipe+card+box?s=breeds-beagle-health"]} />
 
           {/* Money path — live amazon-brand search hops
               (analog stopwatch /

@@ -13,12 +13,3 @@ apps/fish-com/src/app/reviews/best-aquarium-lighting/page.tsx
 apps/fish-com/src/app/reviews/hygger-vs-fluval-light-guide/page.tsx
 apps/fish-com/src/app/reviews/winter-photoperiod-guide/page.tsx
 apps/horses-com/src/app/llms.txt/route.ts
-apps/vets-co/src/app/breeds/beagle-health/page.tsx
-apps/vets-co/src/app/breeds/chihuahua-health/page.tsx
-apps/vets-co/src/app/breeds/french-bulldog-health/page.tsx
-apps/vets-co/src/app/breeds/german-shepherd-health/page.tsx
-apps/vets-co/src/app/breeds/golden-retriever-health/page.tsx
-apps/vets-co/src/app/breeds/husky-health/page.tsx
-apps/vets-co/src/app/breeds/labrador-health/page.tsx
-apps/vets-co/src/app/breeds/pomeranian-health/page.tsx
-apps/vets-co/src/app/breeds/yorkshire-terrier-health/page.tsx

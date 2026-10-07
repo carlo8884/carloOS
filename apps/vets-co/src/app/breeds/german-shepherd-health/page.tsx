@@ -1,6 +1,7 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, FAQAccordion, AffiliateDisclosure, ShopCtas, CrossSiteHelp } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, FAQAccordion, ShopCtas, CrossSiteHelp } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { BreedHealthCard } from '@carloOS/ui'
@@ -100,7 +101,7 @@ export default function GSHealthPage() {
           testing.
         </p>
 
-        <AffiliateDisclosure variant="inline" siteId="vets-co" />
+        <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/top+bound+steno+pad?s=breeds-german-shepherd-health", "/go/amazon-brand/mechanical+kitchen+timer?s=breeds-german-shepherd-health", "/go/amazon-brand/self+adhesive+file+folder+labels?s=breeds-german-shepherd-health"]} />
 
         {/* Money path — live amazon-brand search hops
             (top-bound steno pad /

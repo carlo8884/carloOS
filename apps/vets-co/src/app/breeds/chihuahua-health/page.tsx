@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -5,7 +6,6 @@ import {
   ArticleLayout, CrossPortfolioCard,
   RelatedLinks,
   FAQAccordion,
-  AffiliateDisclosure,
   ShopCtas,
   CrossSiteHelp,
 } from '@carloOS/ui'
@@ -329,7 +329,7 @@ export default function VetsChihuahuaHealthPage() {
             beagle-health. This page does not claim hands-on
             testing. </p>
 
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/13+column+analysis+pad?s=breeds-chihuahua-health", "/go/amazon-brand/desk+blotter+pad?s=breeds-chihuahua-health", "/go/amazon-brand/numbered+log+book?s=breeds-chihuahua-health"]} />
 
           {/* Money path — live amazon-brand search hops
               (13-column analysis pad /

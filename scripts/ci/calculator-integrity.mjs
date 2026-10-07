@@ -11319,7 +11319,7 @@ const CALCULATORS = [
       { re: /amazon-brand\/bound\+composition\+book\?s=breeds-labrador-health/, label: 'bound-composition-book search hop (matches on-page monthly same-scale weigh-log copy; unique vs spiral+notebook / reporter+notebook / quad+ruled+graph+pad)' },
       { re: /amazon-brand\/letter\+size\+document\+frame\?s=breeds-labrador-health/, label: 'letter-size-document-frame search hop (matches on-page OFA hip-and-elbow certificate copy; unique vs letter+size+file+jacket / clasp+envelope+letter+size / blank+pedigree+chart)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -11337,7 +11337,7 @@ const CALCULATORS = [
       { re: /amazon-brand\/paint\+chip\+sample\+cards\?s=breeds-golden-retriever-health/, label: 'paint-chip-sample-cards search hop (matches on-page gum-color baseline / pale-or-white-gums copy; unique vs round+color+coding+labels / assorted+highlighter+set / dog+gum+color+assessment+chart)' },
       { re: /amazon-brand\/18\+month\+wall\+calendar\?s=breeds-golden-retriever-health/, label: '18-month-wall-calendar search hop (matches on-page age-6 ultrasound / age-8 every-6-month visit copy; unique vs monthly+desk+pad+calendar / hardcover+weekly+appointment+planner / wall+mounted+magnetic+monthly+planner)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -11356,7 +11356,7 @@ const CALCULATORS = [
       { re: /amazon-brand\/mechanical\+kitchen\+timer\?s=breeds-german-shepherd-health/, label: 'mechanical-kitchen-timer search hop (matches on-page avoid-exercise-immediately-after-eating GDV copy; unique vs 48+hour+digital+kitchen+timer / 30+minute+sand+hourglass+timer / hardcover+weekly+appointment+planner)' },
       { re: /amazon-brand\/self\+adhesive\+file\+folder\+labels\?s=breeds-german-shepherd-health/, label: 'self-adhesive-file-folder-labels search hop (matches on-page OFA hip-and-elbow / SOD1 DNA / gastropexy-record copy; unique vs round+color+coding+labels / 3+tab+dividers / removable+page+flags)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -11375,7 +11375,7 @@ const CALCULATORS = [
       { re: /amazon-brand\/analog\+outdoor\+thermometer\?s=breeds-french-bulldog-health/, label: 'analog-outdoor-thermometer search hop (matches on-page 70°F outdoor-limit / heat-stroke copy; unique vs mechanical+kitchen+timer / 48+hour+digital+kitchen+timer / dog+cooling+mat / dog+cooling+vest)' },
       { re: /amazon-brand\/weekly\+checklist\+notepad\?s=breeds-french-bulldog-health/, label: 'weekly-checklist-notepad search hop (matches on-page fold-cleaning 2–3 times weekly copy; unique vs hardcover+weekly+appointment+planner / monthly+desk+pad+calendar / 18+month+wall+calendar)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -11394,7 +11394,7 @@ const CALCULATORS = [
       { re: /amazon-brand\/blank\+index\+cards\?s=breeds-beagle-health/, label: 'blank-index-cards search hop (matches on-page document-seizures date/duration copy; unique vs ruled+index+cards / top+bound+steno+pad / bound+composition+book)' },
       { re: /amazon-brand\/recipe\+card\+box\?s=breeds-beagle-health/, label: 'recipe-card-box search hop (matches on-page measure-every-meal / never-free-feed copy; unique vs four+tab+dividers / weekly+checklist+notepad / hardcover+weekly+appointment+planner)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -11413,7 +11413,7 @@ const CALCULATORS = [
       { re: /amazon-brand\/30\+day\+habit\+tracker\+pad\?s=breeds-yorkshire-terrier-health/, label: '30-day-habit-tracker-pad search hop (matches on-page daily home-brushing copy; unique vs hardcover+weekly+appointment+planner / monthly+desk+pad+calendar / 18+month+wall+calendar)' },
       { re: /amazon-brand\/hourly\+desk\+pad\?s=breeds-yorkshire-terrier-health/, label: 'hourly-desk-pad search hop (matches on-page four-small-meals-until-four-months copy; unique vs monthly+desk+pad+calendar / mechanical+kitchen+timer / recipe+card+box)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -11432,7 +11432,7 @@ const CALCULATORS = [
       { re: /amazon-brand\/desk\+blotter\+pad\?s=breeds-chihuahua-health/, label: 'desk-blotter-pad search hop (matches on-page molera-protection household-rules copy; unique vs monthly+desk+pad+calendar / hourly+desk+pad / letter+size+document+frame)' },
       { re: /amazon-brand\/numbered\+log\+book\?s=breeds-chihuahua-health/, label: 'numbered-log-book search hop (matches on-page tremor-versus-hypoglycemia episode copy; unique vs bound+composition+book / blank+index+cards / lined+telephone+message+pad)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -11451,7 +11451,7 @@ const CALCULATORS = [
       { re: /amazon-brand\/8\+column\+columnar\+pad\?s=breeds-husky-health/, label: '8-column-columnar-pad search hop (matches on-page eyes / hips / thyroid / gastropexy / platelet-review screening row; unique vs 13+column+analysis+pad / four+column+accounting+pad / two+column+ledger+pad)' },
       { re: /amazon-brand\/newsprint\+sketch\+pad\?s=breeds-husky-health/, label: 'newsprint-sketch-pad search hop (matches on-page facial-crusting-site / PRA furniture-layout copy; unique vs paint+chip+sample+cards / blank+pedigree+chart / desk+blotter+pad)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -11470,7 +11470,7 @@ const CALCULATORS = [
       { re: /amazon-brand\/6\+column\+columnar\+pad\?s=breeds-pomeranian-health/, label: '6-column-columnar-pad search hop (matches on-page patellar-grade / murmur / dental-score / BCS well-visit row; unique vs 8+column+columnar+pad / 13+column+analysis+pad / four+column+accounting+pad)' },
       { re: /amazon-brand\/undated\+daily\+planner\?s=breeds-pomeranian-health/, label: 'undated-daily-planner search hop (matches on-page thyroid / ACTH / LDDS dates before accepting alopecia X; unique vs academic+year+planner / hardcover+weekly+appointment+planner / monthly+desk+pad+calendar)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
