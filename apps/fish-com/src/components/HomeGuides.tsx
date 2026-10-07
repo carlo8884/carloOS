@@ -73,7 +73,10 @@ function ToolCard({ href, eyebrow, title, desc, cta, imageKey, imageAlt }: { hre
           <h3 className="font-display font-bold text-white text-xl leading-tight italic">{title}</h3>
         </div>
         <p className="text-sm text-white/55 leading-relaxed mb-5">{desc}</p>
-        <span className="inline-flex items-center gap-1.5 text-sm font-bold text-[#3aa4cc] group-hover:gap-2.5 transition-all">
+        <span className="inline-flex items-center gap-2 text-sm font-bold text-[#3aa4cc] group-hover:gap-2.5 transition-all">
+          <span className={`relative h-7 w-10 shrink-0 overflow-hidden rounded-md bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
+            <StockImage manifestKey={imageKey} alt="" aspect="4:3" />
+          </span>
           {cta}
           <IconArrowRight />
         </span>
