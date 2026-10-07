@@ -35,7 +35,7 @@ export default function DogArthritisPage() {
             <div className="text-xs uppercase tracking-wide text-brand-primary mb-1 font-bold">Arthritis + Insurance</div>
             <h3 className="font-display text-base font-bold text-brand-white mb-2">Joint care adds up year over year</h3>
             <p className="text-xs text-white/60 mb-3 leading-relaxed">Typical range, not a quote. Those management figures are typical US clinic ranges dated 2026-05-30.</p>
-            <p className="text-xs text-white/60 mb-3 leading-relaxed">Lifelong arthritis management — joint injections, surgery, daily medication — typically totals $5,000-$15,000+. Insurance covers it if you enroll before signs appear.</p>
+            <p className="text-xs text-white/60 mb-3 leading-relaxed">Lifelong arthritis management — joint injections, surgery, daily medication — typically totals see current price. Insurance covers it if you enroll before signs appear.</p>
             <a href={crossSiteHref('vets-co', '/reviews/best-pet-insurance')} className="inline-block text-xs font-bold text-brand-primary hover:underline">Compare pet insurance →</a>
           </div>
           <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />

@@ -150,7 +150,7 @@ export default function FrenchBulldogHealthPage() {
 
         <h2 id="cost">The Financial Reality</h2>
         <p>Typical range, not a quote. Those figures are typical US ranges dated 2026-05-25.</p>
-        <p>French Bulldogs are among the most expensive breeds to maintain medically. Realistic lifetime costs for a Frenchie with typical health challenges include: BOAS surgery ($1,500–5,000 if needed), IVDD treatment ($5,000–8,000+ for surgery if severe), ongoing skin fold management, regular ear and eye care, and higher-than-average routine vet costs from breed-related presentations.</p>
+        <p>French Bulldogs are among the most expensive breeds to maintain medically. Realistic lifetime costs for a Frenchie with typical health challenges include: BOAS surgery (see current price if needed), IVDD treatment (see current price for surgery if severe), ongoing skin fold management, regular ear and eye care, and higher-than-average routine vet costs from breed-related presentations.</p>
         <p>Pet insurance is not optional for Frenchie owners. Enroll at the earliest possible age before any conditions develop. Compare policies specifically for BOAS coverage and spinal disease coverage. Read each policy&apos;s hereditary and pre-existing terms yourself — this page does not state which plans exclude them. See the <a href={crossSiteHref('vets-co', '/reviews/best-pet-insurance')}>insurance comparison</a> before choosing a policy. This page does not name a recommended carrier.</p>
 
         <h2 id="choosing">Choosing a Healthier French Bulldog</h2>

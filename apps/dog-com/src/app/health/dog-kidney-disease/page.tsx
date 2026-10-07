@@ -39,7 +39,7 @@ export default function DogKidneyPage() {
             <div className="text-xs uppercase tracking-wide text-brand-primary mb-1 font-bold">Kidney Disease + Insurance</div>
             <h3 className="font-display text-base font-bold text-brand-white mb-2">CKD is a multi-year claim profile</h3>
             <p className="text-xs text-white/60 mb-3 leading-relaxed">Typical range, not a quote. Those progression figures are typical US clinic ranges dated 2026-06-04.</p>
-            <p className="text-xs text-white/60 mb-3 leading-relaxed">Chronic kidney disease -- Rx kidney diet, fluid therapy, recheck bloodwork every 1-3 months -- runs $4,000-$10,000+ over the staged progression. Insurance with no chronic-claim reset is the right structure.</p>
+            <p className="text-xs text-white/60 mb-3 leading-relaxed">Chronic kidney disease -- Rx kidney diet, fluid therapy, recheck bloodwork every 1-3 months -- runs see current price over the staged progression. Insurance with no chronic-claim reset is the right structure.</p>
             <a href={crossSiteHref('vets-co', '/reviews/best-pet-insurance')} className="inline-block text-xs font-bold text-brand-primary hover:underline">Compare pet insurance &rarr;</a>
           </div>
           <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
