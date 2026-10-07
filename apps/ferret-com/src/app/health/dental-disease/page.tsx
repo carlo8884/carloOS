@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import {
   buildMetadata,
@@ -11,7 +12,6 @@ import {
   DropCap,
   CrossPortfolioCard,
   ArticleSourcesList,
-  AffiliateDisclosure,
   ShopCtas,
 } from '@carloOS/ui'
 
@@ -420,7 +420,7 @@ export default function FerretDentalDiseasePage() {
             copy only. This page does not claim hands-on testing.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/finger+toothbrush+pet?s=health-dental-disease", "/go/amazon-brand/infant+toothbrush+soft+bristle?s=health-dental-disease", "/go/amazon-brand/pet+dental+wipes?s=health-dental-disease"]} />
 
           {/* Money path — live amazon-brand search hops (fingertip rubber
               brush / infant toothbrush / pet dental wipes). ShopCtas hides

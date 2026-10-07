@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import {
   buildMetadata,
@@ -10,7 +11,6 @@ import {
   ArticleByline,
   DropCap,
   ReviewCard,
-  AffiliateDisclosure,
   ShopCtas,
   CrossPortfolioCard,
   ArticleSourcesList,
@@ -551,7 +551,7 @@ export default function FerretAgingPage() {
             the household.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <HopDisclosure siteId="ferret-com" href="/go/marshall/ferret-floor-sleep-sack?s=health-aging-ferret-care" />
 
           <h2 id="picks">Supportive Care Picks</h2>
           <CalloutBox variant="warning" title="Supportive supplies, not treatment">
@@ -598,7 +598,7 @@ export default function FerretAgingPage() {
               Shop related supplies
             </div>
             <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
-            <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+            <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/ferret+kibble?s=health-aging" />
             <div className="flex flex-col gap-3 mt-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/ferret+kibble?s=health-aging"

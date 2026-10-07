@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import {
   buildMetadata,
@@ -11,7 +12,6 @@ import {
   CrossPortfolioCard,
   ArticleSourcesList,
   StockImage,
-  AffiliateDisclosure,
   ShopCtas,
 } from '@carloOS/ui'
 
@@ -518,7 +518,7 @@ export default function FerretVaccinationsPage() {
             product chosen by a veterinarian, they do not set a
             premedication dose, and they are not a ranked product list. This page does not claim hands-on testing. </p>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/small+animal+rabies+certificate+holder?s=health-vaccinations", "/go/amazon-brand/top+loading+small+animal+carrier?s=health-vaccinations", "/go/amazon-brand/fleece+small+animal+bonding+pouch?s=health-vaccinations"]} />
 
           {/* Money path — live amazon-brand search hops
               (small-animal rabies-certificate holder /

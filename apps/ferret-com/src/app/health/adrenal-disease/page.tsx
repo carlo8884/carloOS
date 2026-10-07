@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import {
   buildMetadata,
@@ -10,7 +11,6 @@ import {
   ArticleByline,
   DropCap,
   ReviewCard,
-  AffiliateDisclosure,
   ShopCtas,
   CrossPortfolioCard,
   ArticleSourcesList,
@@ -609,7 +609,7 @@ export default function FerretAdrenalDiseasePage() {
           <h2 id="kit">Adrenal comfort kit</h2>
           <p>These are household comfort tools, not treatments. They do not diagnose or treat adrenal disease, they do not replace a deslorelin implant or adrenalectomy, they do not set a hormone-panel number, and they are not a ranked product list. This page does not claim hands-on testing.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/soft+cotton+receiving+blanket?s=health-adrenal-disease", "/go/amazon-brand/activated+charcoal+odor+absorber?s=health-adrenal-disease", "/go/chewy-brand/ferret+fleece+sleep+sack+hammock?s=health-adrenal-disease"]} />
 
           {/* Money path — live amazon-brand search hops
               (ruled marble composition notebook /
