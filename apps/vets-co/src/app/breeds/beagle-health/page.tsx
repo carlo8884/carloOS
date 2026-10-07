@@ -301,8 +301,8 @@ export default function VetsBeagleHealthPage() {
           <p>Those figures are typical US ranges dated 2026-05-28.</p>
           <p>
             Lifetime antiepileptic medication, periodic drug-level monitoring and emergency cluster-seizure
-            care commonly total $4,000–8,000 over a Beagle&apos;s lifetime. Acute glaucoma management with
-            enucleation or intraocular procedures can run $2,500–5,000 per eye. Hypothyroidism medical
+            care commonly total see current price over a Beagle&apos;s lifetime. Acute glaucoma management with
+            enucleation or intraocular procedures can run see current price per eye. Hypothyroidism medical
             therapy is comparatively inexpensive but lifelong. Insurance bought before symptoms appear
             typically covers these as accident/illness with no breed exclusion. See our 2026 comparison:{' '}
             <a href="/reviews/best-pet-insurance">best pet insurance →</a>.

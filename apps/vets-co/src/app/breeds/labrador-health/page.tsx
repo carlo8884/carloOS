@@ -42,7 +42,7 @@ const FAQS = [
   {
     question: 'When should I get pet insurance for a Labrador?',
     answer:
-      'Before the first veterinary visit. Orthopedic surgery for hip dysplasia runs $3,500–7,000 per joint — $7,000–14,000 bilateral — and these are common outcomes in this breed. Enrolling before anything is noted in the medical record avoids pre-existing-condition exclusions.',
+      'Before the first veterinary visit. Orthopedic surgery for hip dysplasia runs see current price per joint — see current price bilateral — and these are common outcomes in this breed. Enrolling before anything is noted in the medical record avoids pre-existing-condition exclusions.',
   },
 ]
 
@@ -99,7 +99,7 @@ export default function VetsLabradorHealthPage() {
 
         <h2>Pet Insurance — Start Early</h2>
         <p>Those figures are typical US ranges dated 2026-06-11.</p>
-        <p>Orthopedic surgery for hip dysplasia runs $3,500–7,000 per joint. Bilateral (both hips): $7,000–14,000. Total hip replacement: $6,000–10,000 per side. These are common outcomes in this breed. Enroll before the first veterinary visit. See the <a href="/reviews/best-pet-insurance">insurance comparison →</a></p>
+        <p>Orthopedic surgery for hip dysplasia runs see current price per joint. Bilateral (both hips): see current price. Total hip replacement: see current price per side. These are common outcomes in this breed. Enroll before the first veterinary visit. See the <a href="/reviews/best-pet-insurance">insurance comparison →</a></p>
 
         <h2 id="kit">Labrador-health kit</h2>
         <p>

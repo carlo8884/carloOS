@@ -124,7 +124,7 @@ const FAQS = [
     question: 'Is pet insurance worth it?',
     answer:
       'Ranges on this answer are dated 2026-06-11. ' +
-      'It depends on three things: your pet\'s breed and age risk profile, your cash buffer for an emergency, and your tolerance for a low-probability large bill. Mathematically, like all insurance, pet insurance has a negative expected value at the average claim level — that is how carriers stay solvent — so in a typical low-cost year a policy does not pay for itself. Its value is risk protection: it converts a rare $5,000–$15,000 emergency or chronic-condition course into a predictable monthly cost. If you could comfortably absorb a five-figure vet bill from savings, self-insuring is a defensible choice; if that bill would force a hard decision about your pet\'s care, insurance is doing exactly the job it is designed for. Use the breakeven line above to see, for a specific quote, the eligible-cost level at which the policy pays for itself.',
+      'It depends on three things: your pet\'s breed and age risk profile, your cash buffer for an emergency, and your tolerance for a low-probability large bill. Mathematically, like all insurance, pet insurance has a negative expected value at the average claim level — that is how carriers stay solvent — so in a typical low-cost year a policy does not pay for itself. Its value is risk protection: it converts a rare see current price emergency or chronic-condition course into a predictable monthly cost. If you could comfortably absorb a five-figure vet bill from savings, self-insuring is a defensible choice; if that bill would force a hard decision about your pet\'s care, insurance is doing exactly the job it is designed for. Use the breakeven line above to see, for a specific quote, the eligible-cost level at which the policy pays for itself.',
   },
   {
     question: 'At what age is pet insurance not worth it?',
@@ -150,7 +150,7 @@ const FAQS = [
     question: 'What is a realistic expected vet-cost number to enter?',
     answer:
       'Ranges on this answer are dated 2026-06-11. ' +
-      'Enter only eligible illness and accident costs — routine wellness is usually excluded. For a healthy mid-life dog or cat with no chronic conditions, a few hundred dollars a year is typical. A single non-routine workup (imaging, bloodwork, a treatment course) can run $1,000–$2,000. One major incident — a foreign-body surgery, a cruciate repair, a serious illness — commonly lands in the $3,000–$8,000 range, and cancer care or emergency hospitalization can exceed $10,000–$15,000. Because the catastrophic scenarios are rare but ruinous, the decision to insure is mostly about the right tail, not the average. The scenario presets above span that range.',
+      'Enter only eligible illness and accident costs — routine wellness is usually excluded. For a healthy mid-life dog or cat with no chronic conditions, a few hundred dollars a year is typical. A single non-routine workup (imaging, bloodwork, a treatment course) can run see current price. One major incident — a foreign-body surgery, a cruciate repair, a serious illness — commonly lands in the see current price range, and cancer care or emergency hospitalization can exceed see current price. Because the catastrophic scenarios are rare but ruinous, the decision to insure is mostly about the right tail, not the average. The scenario presets above span that range.',
   },
 ]
 
@@ -230,7 +230,7 @@ export default function PetInsuranceWorthItPage() {
           typical owner pays a little more in premiums than they get back in claims; that gap is how carriers stay
           solvent and pool the risk of rare, expensive events. So in most individual years a policy does <em>not</em>
           pay for itself, and that is by design. Its real value is protection against the right tail: the
-          $5,000–$15,000 emergency surgery, cancer course, or chronic condition that would otherwise force a hard
+          see current price emergency surgery, cancer course, or chronic condition that would otherwise force a hard
           decision about your pet&apos;s care.
         </p>
         <p>
@@ -351,22 +351,22 @@ export default function PetInsuranceWorthItPage() {
         <p>These amounts are an example, not a live quote.</p>
         <p>Those figures are typical US ranges dated 2026-06-11.</p>
         <p>
-          Suppose a quote of <strong>$45/month</strong> ($540/year) with a <strong>$250 annual deductible</strong>,{' '}
-          <strong>80% reimbursement</strong>, and a <strong>$10,000 annual cap</strong>. Reimbursement applies only to
+          Suppose a quote of <strong>see current price</strong> (see current price) with a <strong>see current price annual deductible</strong>,{' '}
+          <strong>80% reimbursement</strong>, and a <strong>see current price annual cap</strong>. Reimbursement applies only to
           costs above the deductible, at 80%, so the policy pays for itself at the eligible-cost level where:
          <a href="/insurance/deductibles-reimbursement">Deductibles and reimbursement</a> explains the deductible and rate this estimate uses.</p>
         <ul>
           <li><strong>breakeven</strong> = deductible + (annual premium ÷ reimbursement %)</li>
-          <li>= $250 + ($540 ÷ 0.80)</li>
-          <li>= $250 + $675 = <strong>$925</strong></li>
+          <li>= see current price (see current price ÷ 0.80)</li>
+          <li>= see current price see current price = <strong>see current price</strong></li>
         </ul>
         <p>Those figures are typical US ranges dated 2026-06-11.</p>
         <p>
-          So this policy pays for itself once eligible vet costs clear about <strong>$925</strong> in the year. Below
-          that, you pay more in premium than you get back. Worked the other way: in a $300 healthy year the policy
-          reimburses just ($300 − $250) × 80% = <strong>$40</strong> against $540 of premium — a $500 net cost, the
-          expected outcome in a quiet year. In a $6,000 one-incident year it reimburses ($6,000 − $250) × 80% ={' '}
-          <strong>$4,600</strong> against $540 of premium — a $4,060 net benefit. That asymmetry — small predictable cost most years, large
+          So this policy pays for itself once eligible vet costs clear about <strong>see current price</strong> in the year. Below
+          that, you pay more in premium than you get back. Worked the other way: in a see current price healthy year the policy
+          reimburses just (see current price − see current price) × 80% = <strong>see current price</strong> against see current price of premium — a see current price net cost, the
+          expected outcome in a quiet year. In a see current price one-incident year it reimburses (see current price − see current price) × 80% ={' '}
+          <strong>see current price</strong> against see current price of premium — a see current price net benefit. That asymmetry — small predictable cost most years, large
           payout in the bad year — is the whole point of insurance, and exactly what the breakeven line makes visible.
         </p>
 
