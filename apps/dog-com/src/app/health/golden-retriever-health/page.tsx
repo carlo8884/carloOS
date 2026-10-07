@@ -1,6 +1,7 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfContents, CrossPortfolioCard, StockImage, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfContents, CrossPortfolioCard, StockImage, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { BreedHealthCard } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
@@ -215,11 +216,13 @@ export default function GoldenRetrieverHealthPage() {
         <h2 id="insurance">Pet Insurance — Why It Matters More for Goldens</h2>
 
         <p>The cancer-treatment figures in this section are typical US clinic ranges dated 2026-10-05. They are not a quote for one dog.</p>
+        <p>Typical range, not a quote.</p>
         <p>The financial case for pet insurance is stronger for Golden Retrievers than almost any other breed. With a 60%+ lifetime cancer rate and real costs of $8,000–25,000 for cancer treatment, the expected value calculation is different than for lower-risk breeds.</p>
 
         <p>The single most important rule: <strong>enroll before your first vet visit</strong>. Any condition documented in records before enrollment is classified as pre-existing and excluded. A Golden diagnosed with a murmur at their first puppy exam has a cardiac exclusion for life in most policies.</p>
 
         <p>This page does not name a recommended carrier. Compare direct-pay and reimbursement terms on the policy itself.</p>
+        <p>Typical range, not a quote.</p>
         <p>Hemangiosarcoma treatment runs $5,000–12,000.</p>
 
         <div style={{ marginTop: '8px' }}>
@@ -280,7 +283,7 @@ export default function GoldenRetrieverHealthPage() {
             live on other pages. This page does not claim
             hands-on testing. </p>
 
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/dog+lymph+node+anatomy+chart?s=health-golden-retriever-health", "/go/amazon-brand/foam+dog+stairs?s=health-golden-retriever-health", "/go/amazon-brand/dog+ear+wipes?s=health-golden-retriever-health"]} />
 
           {/* Money path — live amazon-brand search hops
               (dog lymph-node anatomy chart / foam dog

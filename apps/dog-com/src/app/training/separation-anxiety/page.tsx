@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -7,7 +8,7 @@ import {
   TableOfContents,
   CrossPortfolioCard,
   ArticleByline,
-  AffiliateDisclosure,
+
   ShopCtas,
   JourneyNext,
 } from '@carloOS/ui'
@@ -132,7 +133,7 @@ export default function SeparationAnxietyPage() {
         {/* Money path — live amazon-brand search hops (alone-time kit).
             ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
             Category searches only — not a ranked list. */}
-        <AffiliateDisclosure variant="inline" siteId="dog-com" />
+        <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/wire+dog+crate+with+divider+panel?s=training-sep-anxiety", "/go/amazon-brand/kong+classic+dog+toy+stuffable?s=training-sep-anxiety", "/go/amazon-brand/snuffle+mat+dog+enrichment?s=training-sep-anxiety", "/go/amazon-brand/bully+sticks+dog+chew?s=training-sep-anxiety"]} />
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
             Shop an alone-time kit
@@ -164,8 +165,7 @@ export default function SeparationAnxietyPage() {
             </Link>
             . They are not a ranked product list and they do not replace the
             camera check or the sub-threshold protocol. Size the crate before
-            you order. Dog.com earns a commission on qualifying purchases at
-            no extra cost to you.</p>
+            you order.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/kong+classic+dog+toy+stuffable?s=training-sep-anxiety"

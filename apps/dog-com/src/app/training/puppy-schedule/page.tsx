@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -7,7 +8,7 @@ import {
   TableOfContents,
   CrossPortfolioCard,
   ArticleByline,
-  AffiliateDisclosure,
+
   ShopCtas,
   JourneyNext,
 } from '@carloOS/ui'
@@ -122,7 +123,7 @@ export default function PuppySchedulePage() {
         {/* Money path — live amazon-brand search hops (schedule essentials).
             ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
             Category searches only — not a ranked list. */}
-        <AffiliateDisclosure variant="inline" siteId="dog-com" />
+        <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/puppy+food?s=training-puppy-schedule", "/go/amazon-brand/wire+dog+crate+with+divider+panel?s=training-puppy-schedule", "/go/amazon-brand/puppy+training+treats?s=training-puppy-schedule", "/go/amazon-brand/enzymatic+pet+stain+odor+cleaner?s=training-puppy-schedule"]} />
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
             Shop schedule essentials
@@ -137,8 +138,7 @@ export default function PuppySchedulePage() {
               new-puppy checklist
             </Link>
             . They are not a ranked product list and they do not replace the first vet
-            visit. Size the crate before you order. Dog.com earns a commission on
-            qualifying purchases at no extra cost to you.</p>
+            visit. Size the crate before you order.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/wire+dog+crate+with+divider+panel?s=training-puppy-schedule"

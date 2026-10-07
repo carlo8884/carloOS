@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -6,7 +7,7 @@ import {
   RelatedLinks,
   CrossPortfolioCard,
   ArticleByline,
-  AffiliateDisclosure,
+
   ShopCtas,
   JourneyNext,
 } from '@carloOS/ui'
@@ -65,7 +66,7 @@ export default function ExcessiveBarkingPage() {
         {/* Money path — live amazon-brand search hops (bark-control / enrichment kit).
             ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
             Category searches only — not a ranked list. */}
-        <AffiliateDisclosure variant="inline" siteId="dog-com" />
+        <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/snuffle+mat+dog+enrichment?s=training-excessive-barking", "/go/amazon-brand/puzzle+feeder+dog?s=training-excessive-barking", "/go/amazon-brand/lick+mat+dog?s=training-excessive-barking", "/go/amazon-brand/calming+dog+chews?s=training-excessive-barking"]} />
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
             Shop a quiet-barking kit
@@ -96,8 +97,7 @@ export default function ExcessiveBarkingPage() {
               dog grimace scale
             </Link>
             . They are not a ranked product list and they do not replace
-            the camera check. Dog.com earns a commission on qualifying
-            purchases at no extra cost to you.</p>
+            the camera check.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/puzzle+feeder+dog?s=training-excessive-barking"

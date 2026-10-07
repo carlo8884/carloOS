@@ -1,10 +1,11 @@
+import { HopDisclosure } from '../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { getSiteConfig } from '@carloOS/config'
 import {
   ArticleLayout,
   ArticleByline,
-  AffiliateDisclosure,
+
   FAQAccordion,
   SchemaScript,
   ShopCtas,
@@ -258,7 +259,7 @@ export default function WhichPetPage() {
             ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
             Category searches only — not a ranked list, not a species ranking. */}
         <section id="first-week-kit" className="mb-12 not-prose">
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/wire+dog+crate+with+divider+panel?s=which-pet", "/go/amazon-brand/puppy+food?s=which-pet", "/go/amazon-brand/julius+k9+idc+powerharness?s=which-pet", "/go/amazon-brand/dog+id+tag+collar?s=which-pet", "/go/amazon-brand/soft+dog+carrier?s=which-pet", "/go/amazon-brand/pet+first+aid+kit?s=which-pet"]} />
           <div className="mt-4 rounded-xl border border-brand-border bg-brand-white p-5">
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
               Shop a first-week starter kit
@@ -282,8 +283,7 @@ export default function WhichPetPage() {
               </Link>
               . They are not a ranked product list, not invented inventory, and they
               do not replace meeting a shelter, breeder, or veterinarian. Size the
-              crate and harness before you order. Dog.com earns a commission on
-              qualifying purchases at no extra cost to you. </p>
+              crate and harness before you order. </p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/wire+dog+crate+with+divider+panel?s=which-pet"

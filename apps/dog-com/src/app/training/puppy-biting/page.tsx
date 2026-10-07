@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -6,7 +7,7 @@ import {
   RelatedLinks,
   CrossPortfolioCard,
   ArticleByline,
-  AffiliateDisclosure,
+
   ShopCtas,
   JourneyNext,
 } from '@carloOS/ui'
@@ -77,7 +78,7 @@ export default function PuppyBitingPage() {
         {/* Money path — live amazon-brand search hops (nipping / teething kit).
             ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
             Category searches only — not a ranked list. */}
-        <AffiliateDisclosure variant="inline" siteId="dog-com" />
+        <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/kong+classic+dog+toy+stuffable?s=training-puppy-biting", "/go/amazon-brand/puppy+chew+toys?s=training-puppy-biting", "/go/amazon-brand/puppy+teething+toys?s=training-puppy-biting", "/go/amazon-brand/bitter+apple+spray+dog?s=training-puppy-biting"]} />
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
             Shop a nipping kit
@@ -109,8 +110,7 @@ export default function PuppyBitingPage() {
               separation-anxiety guide
             </Link>
             . They are not a ranked product list and they do not replace the
-            ouch-and-pause protocol. Dog.com earns a commission on qualifying
-            purchases at no extra cost to you.</p>
+            ouch-and-pause protocol.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/puppy+chew+toys?s=training-puppy-biting"
