@@ -1,6 +1,7 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
@@ -76,7 +77,7 @@ export default function HolidayChocolateCalculatorGuidePage() {
         <p>The calculator FAQ says there is no truly safe amount. It describes theobromine signs as commonly reported from about 20 mg per kilogram of body weight, cardiac signs as possible around 40 to 60 mg/kg, and severe signs including seizures above roughly 60 mg/kg. It also says concentration differs by type, so a small amount of baking chocolate or cocoa powder can be far more dangerous than a larger amount of milk chocolate. Real products vary by cocoa percentage, and caffeine adds to the load. Any ingestion warrants a call to a veterinarian or a poison-control hotline, with the product and the amount. Enter type, amount, and body weight in the calculator. Do not treat a round number on this guide as a clearance to wait.</p>
         <h2>What a first-aid kit does not do</h2>
         <p>The calculator page sells a safety kit in words only: activated charcoal and 3 percent hydrogen peroxide are labeled vet-directed, and the page says the Amazon searches are general supplies. They are not a ranked list and they do not replace veterinary care. They do not reverse chocolate poisoning. The link on this page is the pet first-aid kit search from the calculator page. Charcoal, peroxide, the toxin kit, and the recovery crate stay on the calculator.</p>
-        <AffiliateDisclosure variant="inline" siteId="dog-com" />
+        <HopDisclosure siteId="dog-com" href="/go/amazon-brand/pet+first+aid+kit+dog?s=reviews-holiday-chocolate-calculator-guide" />
         <p>Shop the kit only after you have called a veterinarian or poison control about an actual ingestion.</p>
         <p><a className="font-semibold text-brand-primary" href="/go/amazon-brand/pet+first+aid+kit+dog?s=reviews-holiday-chocolate-calculator-guide">Browse pet first-aid kits on Amazon →</a></p>
         <h2>Questions</h2>

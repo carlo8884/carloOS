@@ -1,6 +1,7 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, ArticleLayout, BelowFoldPhoto, ComparisonFoot, FAQAccordion, RelatedLinks, TableShopLink, buildArticleSchema, buildFAQSchema, buildMetadata, combineSchemas } from '@carloOS/ui'
+import { ArticleLayout, BelowFoldPhoto, ComparisonFoot, FAQAccordion, RelatedLinks, TableShopLink, buildArticleSchema, buildFAQSchema, buildMetadata, combineSchemas } from '@carloOS/ui'
 
 const PATH = '/reviews/november-december-gift-guide'
 const SOURCE = 'reviews-november-december-gift-guide'
@@ -83,7 +84,7 @@ export default function NovemberDecemberGiftGuidePage() {
         <p>The bed review prints the Casper Dog Bed at $125–175. The GPS review prints the Fi Series 3 at $140–160 plus $8–12 a month. The monthly fee is part of that card, so a gift of the collar is not a one-time price. Read the tracker review before you treat the collar as a finished purchase.</p>
         <h2>Who should get which printed band</h2>
         <p>Match the band on the card to the job the review already named. A slow bowl is for a dog that eats too fast. A dental chew does not replace brushing. A front-clip harness is for pulling, and it is the wrong harness for a dog with a shoulder or elbow problem. A wire crate is for house training when the dog does not already defeat wire.</p>
-        <AffiliateDisclosure variant="inline" siteId="dog-com" />
+        <HopDisclosure siteId="dog-com" href={[`/go/chewy-brand/lickimat+splash?s=${SOURCE}`, `/go/chewy-brand/outward+hound+fun+feeder?s=${SOURCE}`, `/go/chewy-brand/petsafe+easy+walk+harness?s=${SOURCE}`, `/go/chewy-brand/whimzees+dental+chews+dogs?s=${SOURCE}`, `/go/chewy-brand/greenies+dental+chews+dogs?s=${SOURCE}`, `/go/amazon-brand/northmate+green+interactive+feeder?s=${SOURCE}`, `/go/chewy-brand/ruffwear+front+range+harness?s=${SOURCE}`, `/go/amazon-brand/julius+k9+idc+powerharness?s=${SOURCE}`, `/go/amazon-brand/midwest+icrate+dog+crate?s=${SOURCE}`, `/go/chewy-brand/casper+dog+bed?s=${SOURCE}`, `/go/amazon-brand/fi+series+3+dog+collar?s=${SOURCE}`]} />
         <div className="overflow-x-auto max-w-full min-w-0">
           <table className="w-full text-sm border-collapse table-fixed sm:table-auto min-w-0 sm:min-w-[36rem] [&_th]:break-words [&_td]:break-words">
             <thead>
@@ -152,7 +153,7 @@ export default function NovemberDecemberGiftGuidePage() {
             </tbody>
           </table>
         </div>
-        <ComparisonFoot updated="2026-10-05" />
+        <ComparisonFoot updated="2026-10-07" />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
         <BelowFoldPhoto siteId="dog-com" />
