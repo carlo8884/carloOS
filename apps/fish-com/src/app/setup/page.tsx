@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -8,7 +9,6 @@ import {
   TableOfContents,
   StockImage,
   ArticleByline,
-  AffiliateDisclosure,
   ShopCtas,
   JourneyNext,
 } from '@carloOS/ui'
@@ -141,7 +141,7 @@ export default function AquariumSetupPage() {
         {/* Money path — live amazon-brand search hops (first-tank kit).
             ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
             Category searches only — not a ranked list. */}
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/api+freshwater+master+test+kit?s=setup-aquarium", "/go/amazon-brand/aquaclear+70+filter?s=setup-aquarium", "/go/amazon-brand/fluval+307+canister+filter?s=setup-aquarium", "/go/amazon-brand/eheim+jager+heater?s=setup-aquarium", "/go/amazon-brand/aquarium+digital+thermometer?s=setup-aquarium", "/go/amazon-brand/seachem+prime+water+conditioner?s=setup-aquarium", "/go/amazon-brand/aquarium+gravel+vacuum+siphon?s=setup-aquarium"]} />
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
             Shop a first-tank setup kit
@@ -187,8 +187,7 @@ export default function AquariumSetupPage() {
               water-test kit review
             </Link>
             . They are not a ranked product list and they do not replace
-            cycling before fish. Fish.com earns a commission on qualifying
-            purchases at no extra cost to you.</p>
+            cycling before fish.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/aquaclear+70+filter?s=setup-aquarium"

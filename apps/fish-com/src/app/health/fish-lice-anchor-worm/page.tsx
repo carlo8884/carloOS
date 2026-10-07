@@ -1,6 +1,7 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, AffiliateDisclosure, ArticleSourcesList, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, ArticleSourcesList, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
@@ -66,7 +67,7 @@ export default function FishLicePage() {
         {/* Money path — live amazon-brand search hops (quarantine-tank kit).
             ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
             Category searches only — not a ranked list. No medication hops. */}
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/aquarium+quarantine+hospital+tank+net?s=health-fish-lice", "/go/amazon-brand/aquarium+sponge+filter?s=health-fish-lice"]} />
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
             Shop a quarantine-tank kit
@@ -99,8 +100,7 @@ export default function FishLicePage() {
             lice and anchor-worm copy has no water-test-first step and no
             heat method. The hops below are not a ranked product list, they
             are not medications, and they do not treat, reverse, or cure
-            Argulus or Lernaea. Fish.com earns a commission on qualifying
-            purchases at no extra cost to you. </p>
+            Argulus or Lernaea. </p>
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+quarantine+hospital+tank+net?s=health-fish-lice"

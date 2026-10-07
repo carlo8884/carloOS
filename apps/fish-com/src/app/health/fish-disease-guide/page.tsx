@@ -1,7 +1,8 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import { HubMoneyLinks } from '@carloOS/ui'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, TableOfContents, ArticleSourcesList, AffiliateDisclosure, ShopCtas, JourneyNext } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, TableOfContents, ArticleSourcesList, ShopCtas, JourneyNext } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 
@@ -30,7 +31,6 @@ const schema = buildArticleSchema({
   publishedAt: '2025-05-01T00:00:00Z',
   modifiedAt: '2025-05-01T00:00:00Z',
   speakable: true,
-
   citation: SOURCES,
 })
 
@@ -226,7 +226,7 @@ export default function FishDiseaseGuidePage() {
         {/* Money path — live amazon-brand search hops (hospital-tank kit).
             ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
             Category searches only — not a ranked list. No medication hops. */}
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/aquarium+quarantine+hospital+tank+net?s=health-disease-guide", "/go/amazon-brand/api+freshwater+master+test+kit?s=health-disease-guide", "/go/amazon-brand/aquarium+sponge+filter?s=health-disease-guide", "/go/amazon-brand/eheim+jager+heater?s=health-disease-guide", "/go/amazon-brand/aquarium+digital+thermometer?s=health-disease-guide"]} />
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
             Shop a hospital-tank kit
@@ -262,9 +262,7 @@ export default function FishDiseaseGuidePage() {
               aquarium setup guide
             </Link>
             . They are not a ranked product list, they are not medications,
-            and they do not replace diagnosis or an aquatic veterinarian.
-            Fish.com earns a commission on qualifying purchases at no extra
-            cost to you.</p>
+            and they do not replace diagnosis or an aquatic veterinarian.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/api+freshwater+master+test+kit?s=health-disease-guide"

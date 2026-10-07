@@ -1,6 +1,7 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, TableOfContents, AffiliateDisclosure, ArticleSourcesList, CalloutBox, FAQAccordion, ShopCtas, JourneyNext, buildFAQSchema, combineSchemas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, TableOfContents, ArticleSourcesList, CalloutBox, FAQAccordion, ShopCtas, JourneyNext, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import type { FAQItem } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
@@ -187,7 +188,7 @@ export default function NitrogenCyclePage() {
         {/* Money path — live amazon-brand search hops (fishless-cycle kit).
             ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
             Category searches only — not a ranked list. No medication hops. */}
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/api+freshwater+master+test+kit?s=health-nitrogen-cycle", "/go/amazon-brand/seachem+prime+water+conditioner?s=health-nitrogen-cycle", "/go/amazon-brand/dr+tims+ammonium+chloride?s=health-nitrogen-cycle", "/go/amazon-brand/tetra+safestart+plus?s=health-nitrogen-cycle", "/go/amazon-brand/aquarium+sponge+filter?s=health-nitrogen-cycle"]} />
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
             Shop a fishless-cycling kit
@@ -237,9 +238,7 @@ export default function NitrogenCyclePage() {
               gill-flukes guide
             </Link>
             . They are not a ranked product list, they are not medications,
-            and they do not treat, reverse, or cure new-tank syndrome.
-            Fish.com earns a commission on qualifying purchases at no extra
-            cost to you.</p>
+            and they do not treat, reverse, or cure new-tank syndrome.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/api+freshwater+master+test+kit?s=health-nitrogen-cycle"
