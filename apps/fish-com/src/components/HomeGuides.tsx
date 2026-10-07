@@ -62,13 +62,13 @@ function ToolCard({ href, eyebrow, title, desc, cta, imageKey, imageAlt }: { hre
       <div className="p-6">
         <div className="flex items-center gap-2.5 mb-2">
           <span className={`relative h-8 w-12 shrink-0 overflow-hidden rounded-md bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-            <StockImage manifestKey={imageKey} alt={imageAlt} aspect="4:3" subtleCredit />
+            <StockImage manifestKey={imageKey} alt={imageAlt} aspect="4:3" />
           </span>
           <span className="text-2xs font-bold tracking-eyebrow uppercase text-[#3aa4cc]">{eyebrow}</span>
         </div>
         <div className="mb-2 flex items-center gap-2.5">
           <span className={`relative h-8 w-12 shrink-0 overflow-hidden rounded-md bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-            <StockImage manifestKey={imageKey} alt={imageAlt} aspect="4:3" subtleCredit />
+            <StockImage manifestKey={imageKey} alt={imageAlt} aspect="4:3" />
           </span>
           <h3 className="font-display font-bold text-white text-xl leading-tight italic">{title}</h3>
         </div>
@@ -97,7 +97,7 @@ function PhotoRow({ items }: { items: { title: string; desc: string; href: strin
           <div>
             <div className="mb-1 flex items-center gap-2.5">
               <span className={`relative h-8 w-12 shrink-0 overflow-hidden rounded-md bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                <StockImage manifestKey={item.imageKey} alt={item.imageAlt} aspect="4:3" subtleCredit />
+                <StockImage manifestKey={item.imageKey} alt={item.imageAlt} aspect="4:3" />
               </span>
               <h3 className="font-display font-bold text-brand-dark text-lg leading-tight italic group-hover:text-brand-primary">{item.title}</h3>
             </div>
@@ -122,7 +122,7 @@ export function HomeGuides() {
                 className="group flex items-center gap-2.5 no-underline"
               >
                 <span className={`relative h-9 w-14 shrink-0 overflow-hidden rounded-md bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                  <StockImage manifestKey="fish-com:tools-hero" alt="An aquarium water test kit" aspect="4:3" subtleCredit />
+                  <StockImage manifestKey="fish-com:tools-hero" alt="An aquarium water test kit" aspect="4:3" />
                 </span>
                 <span className="text-2xs font-bold tracking-eyebrow uppercase text-[#3aa4cc] group-hover:text-white">Calculators & Tools</span>
               </Link>
@@ -169,7 +169,7 @@ export function HomeGuides() {
                 className="group flex items-center gap-2.5 no-underline"
               >
                 <span className={`relative h-9 w-14 shrink-0 overflow-hidden rounded-md bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                  <StockImage manifestKey="fish-com:species-thumb-angelfish" alt="An angelfish in an aquarium" aspect="4:3" subtleCredit />
+                  <StockImage manifestKey="fish-com:species-thumb-angelfish" alt="An angelfish in an aquarium" aspect="4:3" />
                 </span>
                 <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary group-hover:text-brand-dark">Species worth knowing</span>
               </Link>
@@ -209,13 +209,13 @@ export function HomeGuides() {
               <div className="p-5">
                 <div className="flex items-center gap-2.5 mb-1">
                   <span className={`relative h-8 w-12 shrink-0 overflow-hidden rounded-md bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                    <StockImage manifestKey={s.imageKey} alt={s.imageAlt} aspect="4:3" subtleCredit />
+                    <StockImage manifestKey={s.imageKey} alt={s.imageAlt} aspect="4:3" />
                   </span>
                   <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">{s.type}</span>
                 </div>
                 <div className="mb-1 flex items-center gap-2.5">
                   <span className={`relative h-8 w-12 shrink-0 overflow-hidden rounded-md bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                    <StockImage manifestKey={s.imageKey} alt={s.imageAlt} aspect="4:3" subtleCredit />
+                    <StockImage manifestKey={s.imageKey} alt={s.imageAlt} aspect="4:3" />
                   </span>
                   <h3 className="font-display font-bold text-brand-dark text-lg leading-tight italic group-hover:text-brand-primary">{s.name}</h3>
                 </div>
@@ -236,7 +236,7 @@ export function HomeGuides() {
                 className="group flex items-center gap-2.5 no-underline"
               >
                 <span className={`relative h-9 w-14 shrink-0 overflow-hidden rounded-md bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                  <StockImage manifestKey="fish-com:category-planted" alt="Lush aquatic plants in a planted aquarium" aspect="4:3" subtleCredit />
+                  <StockImage manifestKey="fish-com:category-planted" alt="Lush aquatic plants in a planted aquarium" aspect="4:3" />
                 </span>
                 <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary group-hover:text-brand-dark">Tank planning</span>
               </Link>
@@ -276,7 +276,7 @@ export function HomeGuides() {
                 className="group flex items-center gap-2.5 no-underline"
               >
                 <span className={`relative h-9 w-14 shrink-0 overflow-hidden rounded-md bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                  <StockImage manifestKey="fish-com:water-parameters-hero" alt="Aquarium water testing tubes and reagents" aspect="4:3" subtleCredit />
+                  <StockImage manifestKey="fish-com:water-parameters-hero" alt="Aquarium water testing tubes and reagents" aspect="4:3" />
                 </span>
                 <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary group-hover:text-brand-dark">Water safety</span>
               </Link>
@@ -316,7 +316,7 @@ export function HomeGuides() {
                 className="group flex items-center gap-2.5 no-underline"
               >
                 <span className={`relative h-9 w-14 shrink-0 overflow-hidden rounded-md bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                  <StockImage manifestKey="fish-com:category-equipment" alt="Aquarium filtration and heating equipment" aspect="4:3" subtleCredit />
+                  <StockImage manifestKey="fish-com:category-equipment" alt="Aquarium filtration and heating equipment" aspect="4:3" />
                 </span>
                 <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary group-hover:text-brand-dark">Equipment decisions</span>
               </Link>
@@ -358,7 +358,7 @@ export function HomeGuides() {
                     className="group flex items-center gap-2.5 no-underline"
                   >
                     <span className={`relative h-9 w-14 shrink-0 overflow-hidden rounded-md bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                      <StockImage manifestKey="fish-com:species-amano-shrimp" alt="An Amano shrimp on aquarium hardscape" aspect="4:3" subtleCredit />
+                      <StockImage manifestKey="fish-com:species-amano-shrimp" alt="An Amano shrimp on aquarium hardscape" aspect="4:3" />
                     </span>
                     <span className="text-2xs font-bold tracking-eyebrow uppercase text-[#3aa4cc] group-hover:text-white">Product guides</span>
                   </Link>
@@ -397,7 +397,7 @@ export function HomeGuides() {
                   <div className="py-3 pr-3">
                     <div className="mb-1 flex items-center gap-2.5">
                       <span className={`relative h-8 w-12 shrink-0 overflow-hidden rounded-md bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                        <StockImage manifestKey={item.imageKey} alt={item.imageAlt} aspect="4:3" subtleCredit />
+                        <StockImage manifestKey={item.imageKey} alt={item.imageAlt} aspect="4:3" />
                       </span>
                       <div className="font-display font-bold text-white text-sm leading-tight italic group-hover:text-[#3aa4cc]">{item.title}</div>
                     </div>
@@ -432,7 +432,7 @@ export function HomeGuides() {
                     className="group flex items-center gap-2.5 no-underline"
                   >
                     <span className={`relative h-9 w-14 shrink-0 overflow-hidden rounded-md bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                      <StockImage manifestKey="fish-com:species-african-cichlid" alt="An African cichlid in an aquarium" aspect="4:3" subtleCredit />
+                      <StockImage manifestKey="fish-com:species-african-cichlid" alt="An African cichlid in an aquarium" aspect="4:3" />
                     </span>
                     <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary group-hover:text-brand-dark">How we work</span>
                   </Link>
@@ -473,7 +473,7 @@ export function HomeGuides() {
                   <div className="py-3 pr-3">
                     <div className="mb-1 flex items-center gap-2.5">
                       <span className={`relative h-8 w-12 shrink-0 overflow-hidden rounded-md bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                        <StockImage manifestKey={item.imageKey} alt={item.imageAlt} aspect="4:3" subtleCredit />
+                        <StockImage manifestKey={item.imageKey} alt={item.imageAlt} aspect="4:3" />
                       </span>
                       <div className="font-display font-bold text-brand-dark text-sm leading-tight italic group-hover:text-brand-primary">{item.title}</div>
                     </div>
