@@ -198,7 +198,7 @@ export const Specialties: Specialty[] = [
       },
       {
         name: 'FDA Investigation: Potential Link Between Certain Diets and Canine DCM',
-        url: 'https://www.fda.gov/animal-veterinary/news-events/fda-investigation-potential-link-between-certain-diets-and-canine-dilated-cardiomyopathy',
+        url: 'https://www.fda.gov/animal-veterinary/outbreaks-and-advisories/fda-investigation-potential-link-between-certain-diets-and-canine-dilated-cardiomyopathy',
       },
       { name: 'AVMA — American Veterinary Medical Association', url: AVMA },
       { name: 'NAPHIA — North American Pet Health Insurance Association', url: NAPHIA },
@@ -1128,7 +1128,7 @@ export const Specialties: Specialty[] = [
         name: 'Veterinary Emergency and Critical Care Society (VECCS)',
         url: 'https://veccs.org/',
       },
-      { name: 'ASPCA Animal Poison Control Center', url: 'https://www.aspca.org/pet-care/animal-poison-control' },
+      { name: 'ASPCA Animal Poison Control Center', url: 'https://www.aspca.org/pet-care/aspca-poison-control' },
       { name: 'AVMA — American Veterinary Medical Association', url: AVMA },
       { name: 'NAPHIA — North American Pet Health Insurance Association', url: NAPHIA },
     ],

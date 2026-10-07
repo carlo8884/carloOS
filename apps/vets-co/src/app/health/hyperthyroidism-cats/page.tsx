@@ -5,7 +5,7 @@ import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaSc
 import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Hyperthyroidism in Cats — Signs & Treatment Options | Vets.co", description: "Feline hyperthyroidism causes weight loss with a ravenous appetite in older cats. Compare radioiodine, medication, diet, and surgery treatment options.", path: '/health/hyperthyroidism-cats', type: 'article' })
 const SOURCES = [
-  { label: 'Merck Veterinary Manual: Hyperthyroidism in Cats', url: 'https://www.merckvetmanual.com/endocrine-system/the-thyroid-gland/hyperthyroidism-in-cats', publisher: 'Merck Vet Manual' },
+  { label: 'Merck Veterinary Manual: Hyperthyroidism in Cats', url: 'https://www.merckvetmanual.com/endocrine-system/the-thyroid-gland/hyperthyroidism-in-animals', publisher: 'Merck Vet Manual' },
   { label: 'AVMA: Hyperthyroidism in Cats', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/hyperthyroidism-cats', publisher: 'AVMA' },
   { label: 'AAFP: Feline Hyperthyroidism Guidelines', url: 'https://catvets.com/guidelines/practice-guidelines/hyperthyroidism/', publisher: 'American Association of Feline Practitioners' },
 ]

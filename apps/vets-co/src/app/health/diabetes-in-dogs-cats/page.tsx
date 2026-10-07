@@ -7,7 +7,7 @@ export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Dia
 const SOURCES = [
   { label: 'Rand JS et al. ISFM and AAFP Consensus Guidelines: Management of Feline Diabetes. J Feline Med Surg. 2013;15(10):905-913.', publisher: 'J Feline Med Surg' },
   { label: 'Behrend E et al. Diagnosis of Spontaneous Canine Hyperadrenocorticism: 2012 ACVIM Consensus Statement. J Vet Intern Med. 2013;27(6):1292-1304.', publisher: 'ACVIM / JVIM' },
-  { label: 'Merck Veterinary Manual: Diabetes Mellitus in Animals', url: 'https://www.merckvetmanual.com/endocrine-system/the-pancreas/diabetes-mellitus-in-animals', publisher: 'Merck Vet Manual' },
+  { label: 'Merck Veterinary Manual: Diabetes Mellitus in Animals', url: 'https://www.merckvetmanual.com/endocrine-system/the-pancreas/diabetes-mellitus-in-dogs-and-cats', publisher: 'Merck Vet Manual' },
   { label: 'AVMA: Diabetes in Pets', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/diabetes', publisher: 'AVMA' },
   { label: 'Gilor C et al. Continuous Glucose Monitoring in Cats with Diabetes. J Vet Intern Med. 2016;30(4):1207-1217.', publisher: 'JVIM' },
 ]

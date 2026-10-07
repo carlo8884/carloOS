@@ -7,7 +7,6 @@ import { ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Heat Stroke in Dogs — Emergency Recognition, First Aid | Vets.co', description: 'Heat stroke kills dogs in minutes. Rectal temp above 104°F is an emergency. Active cooling with cool (not ice cold) water while driving to the vet.', path: '/health/heat-stroke-dogs', type: 'article' })
 const SOURCES = [
   { label: 'AVMA: Heat Stroke in Dogs', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/heat-stroke', publisher: 'AVMA' },
-  { label: 'Merck Veterinary Manual: Heat Stroke', url: 'https://www.merckvetmanual.com/emergency-medicine-and-critical-care/heat-stroke/heat-stroke-in-dogs-and-cats', publisher: 'Merck Vet Manual' },
   { label: 'AAHA: Hyperthermia in Companion Animals', url: 'https://www.aaha.org/aaha-guidelines/emergency-and-critical-care/', publisher: 'AAHA' },
 ]
 const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Heat Stroke in Dogs', description: 'Emergency recognition, first aid, and prevention of heat stroke in dogs.', url: 'https://vets.co/health/heat-stroke-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-09-04T00:00:00Z' ,

@@ -6,7 +6,7 @@ import { ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Tick-Borne Diseases in Dogs — Lyme, Anaplasmosis | Vets.co', description: 'Four tick-borne diseases dogs face: Lyme, Anaplasmosis, Ehrlichiosis, and Rocky Mountain Spotted Fever. Signs, geographic distribution.', path: '/health/tick-borne-diseases', type: 'article' })
 const SOURCES = [
   { label: 'CDC: Lyme Disease', url: 'https://www.cdc.gov/lyme/', publisher: 'CDC' },
-  { label: 'Merck Veterinary Manual: Lyme Disease in Dogs', url: 'https://www.merckvetmanual.com/generalized-conditions/lyme-disease/lyme-disease-in-dogs', publisher: 'Merck Vet Manual' },
+  { label: 'Merck Veterinary Manual: Lyme Disease in Dogs', url: 'https://www.merckvetmanual.com/infectious-diseases/lyme-borreliosis/lyme-borreliosis-in-animals', publisher: 'Merck Vet Manual' },
   { label: 'AVMA: Tick-Borne Diseases in Dogs', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/tick-paralysis', publisher: 'AVMA' },
   { label: 'Companion Animal Parasite Council: Tick-Borne Disease', url: 'https://capcvet.org/guidelines/ticks/', publisher: 'CAPC' },
 ]

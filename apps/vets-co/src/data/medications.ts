@@ -312,7 +312,6 @@ export const Medications: Medication[] = [
       { label: "Plumb's Veterinary Drug Handbook — Gabapentin monograph", href: PLUMBS },
       {
         label: 'FDA — Xylitol toxicity in dogs (consumer alert)',
-        href: 'https://www.fda.gov/consumers/consumer-updates/paws-xylitol-danger-your-dog',
       },
       {
         label: 'Merck Veterinary Manual — Pharmacology of the Nervous System',

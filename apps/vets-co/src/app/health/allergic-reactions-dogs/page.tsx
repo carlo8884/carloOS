@@ -7,7 +7,6 @@ import { ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Allergic Reactions in Dogs — Hives, Anaphylaxis | Vets.co', description: 'Hives, facial swelling, and vomiting after a bee sting or vaccine can progress to anaphylaxis. When to give Benadryl vs when to rush to the ER.', path: '/health/allergic-reactions-dogs', type: 'article' })
 const SOURCES = [
   { label: 'AVMA: Allergic Reactions in Pets', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/allergic-reactions-pets', publisher: 'AVMA' },
-  { label: 'Merck Veterinary Manual: Anaphylaxis', url: 'https://www.merckvetmanual.com/immunology/allergic-disorders/anaphylaxis', publisher: 'Merck Vet Manual' },
   { label: 'AAHA: Emergency and Critical Care Guidelines', url: 'https://www.aaha.org/aaha-guidelines/emergency-and-critical-care/', publisher: 'AAHA' },
 ]
 const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Allergic Reactions in Dogs', description: 'Hives, anaphylaxis, and vaccine reactions in dogs — when to treat at home vs emergency care.', url: 'https://vets.co/health/allergic-reactions-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-09-05T00:00:00Z' ,
