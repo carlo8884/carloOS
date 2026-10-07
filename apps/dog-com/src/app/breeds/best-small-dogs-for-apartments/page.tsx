@@ -154,7 +154,7 @@ export default function BestSmallDogsForApartmentsPage() {
         </div>
 
         <h2 id="faq">Frequently Asked Questions</h2>
-        <FAQAccordion items={FAQS} />
+        <FAQAccordion items={FAQS} includeSchema={false} />
 
         <p className="text-sm text-gray-500 mt-8"><em>This article is general editorial guidance from the Dog.com editorial team and is not veterinary advice. Breed suitability reflects breed-typical temperament, not a guarantee — every individual dog varies. Consult your veterinarian about breed-specific health considerations before choosing a dog.</em></p>
       </div>

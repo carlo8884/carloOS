@@ -145,7 +145,7 @@ export default function FreshDogFoodWorthItPage() {
         <p>The disciplined approach is the same one that applies to kibble: insist on a complete-and-balanced AAFCO diet from a manufacturer with real nutritional oversight, portion by calories rather than habit, and let any medical condition — not the trend — drive special diets. If your dog is healthy and thriving, the &ldquo;best&rdquo; food is the complete, balanced one you can reliably afford and your dog will eat. Talk to your veterinarian before any major diet change.</p>
 
         <h2 id="faq">Frequently Asked Questions</h2>
-        <FAQAccordion items={FAQS} />
+        <FAQAccordion items={FAQS} includeSchema={false} />
 
         <p className="text-sm text-gray-500 mt-8"><em>This article is general educational information from the Dog.com editorial team and is not veterinary advice. Category-growth figures reflect publicly reported industry trends and are described qualitatively where exact figures vary. Always consult your veterinarian before changing your dog&apos;s diet.</em></p>
 
