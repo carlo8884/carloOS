@@ -552,12 +552,12 @@ export default function FerretLitterTrainingPage() {
             ctaAffiliateProduct="lock-n-litter-pan"
           />
           <ReviewCard quietUntilTag
-            id="yesterdays-news"
+            id="recycled-paper-pellet"
             badge="Substrate Default"
             name="Recycled paper-pellet litter"
             subtitle="Low-dust, non-clumping, non-aromatic paper-pellet substrate"
             description={
-              <p>Recycled paper pellets do not produce respiratory-irritant dust, do not clump on contact with moisture (no GI obstruction risk if ingested), and are not aromatic (no phenolic concerns). Purina discontinued Yesterday&apos;s News on April 20, 2022. This button opens the existing search for that discontinued name. It is not a current formula. Buy a recycled-paper pellet that is still being made.</p>
+              <p>Recycled paper pellets do not produce respiratory-irritant dust, do not clump on contact with moisture (no GI obstruction risk if ingested), and are not aromatic (no phenolic concerns). Purina discontinued Yesterday&apos;s News on April 20, 2022. This search is for a recycled paper pellet still being made.</p>
             }
             specs={[
               { label: 'Material', value: 'Recycled paper pellet', highlight: 'good' },
@@ -570,10 +570,10 @@ export default function FerretLitterTrainingPage() {
             cons={['Pricier per pound than kiln-dried wood pellet', 'Larger bag is heavy to carry']}
             price="$12–25 / 15-30 lb"
             priceNote="dated 2026-05-31."
-            ctaText="Open the existing paper-pellet search. Yesterday's News was discontinued in April 2022."
-            ctaHref="/go/chewy-brand/yesterdays+news+paper+pellet+litter?s=care-litter-training"
+            ctaText="Open the recycled paper-pellet search."
+            ctaHref="/go/chewy-brand/recycled+paper+pellet+litter+non+clumping?s=care-litter-training"
             ctaAffiliateProgram="chewy-brand"
-            ctaAffiliateProduct="yesterdays+news+paper+pellet+litter"
+            ctaAffiliateProduct="recycled+paper+pellet+litter+non+clumping"
           />
 
           <p>The litters in this routine are compared in the <Link href="/reviews/best-ferret-litter">ferret litter review</Link>.</p>

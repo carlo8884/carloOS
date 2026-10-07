@@ -45,7 +45,7 @@ const breadcrumbSchema = buildBreadcrumbSchema({
 const itemList = buildItemListSchema({
   name: 'Ferret Litters That Meet the Criteria',
   items: [
-    { name: 'Recycled Paper Pellet Litter', url: 'https://ferret.com/go/chewy-brand/yesterdays+news+recycled+paper+pellet+litter+non+clumping?s=reviews-best-ferret-litter' },
+    { name: 'Recycled Paper Pellet Litter', url: 'https://ferret.com/go/chewy-brand/recycled+paper+pellet+litter+non+clumping?s=reviews-best-ferret-litter' },
     { name: 'Compressed Wood (Heat-Treated) Pellet Litter', url: 'https://ferret.com/go/amazon-brand/compressed+wood+pellet+litter+heat+treated+non+clumping?s=reviews-best-ferret-litter' },
     { name: 'Pelleted Grass / Plant-Fiber Litter', url: 'https://ferret.com/go/amazon-brand/small+animal+grass+pellet+litter+non+clumping?s=reviews-best-ferret-litter' },
   ],
@@ -55,7 +55,7 @@ const products = [
   buildProductSchema({
     name: 'Recycled Paper Pellet Litter',
     description: 'Low-dust, non-clumping, soft on feet — the default ferret litter',
-    url: 'https://ferret.com/go/chewy-brand/yesterdays+news+recycled+paper+pellet+litter+non+clumping?s=reviews-best-ferret-litter',
+    url: 'https://ferret.com/go/chewy-brand/recycled+paper+pellet+litter+non+clumping?s=reviews-best-ferret-litter',
     reviewAuthorName: 'Ferret.com Editorial',
     reviewBody: 'The default recommendation. Recycled-paper pellets are low-dust, non-clumping, absorbent, and soft enough on the feet that ferrets accept them readily. They carry no clumping agents to swallow and no fine respiratory dust. The trade-off is moderate odor control versus heavily perfumed cat litters and the need to change rather than scoop-and-top-up — both acceptable given the safety profile.',
   }),
@@ -107,7 +107,7 @@ const faqSchema = buildFAQSchema({ questions: FAQS })
 const combined = combineSchemas(schema, breadcrumbSchema, itemList, faqSchema, ...products)
 
 const QUICK_PICKS = [
-  { label: 'Best Overall', name: 'Recycled Paper Pellet', subtitle: 'Low-dust · Non-clumping · Soft', href: '#paper-pellet', pickHop: '/go/chewy-brand/yesterdays+news+recycled+paper+pellet+litter+non+clumping?s=reviews-best-ferret-litter' },
+  { label: 'Best Overall', name: 'Recycled Paper Pellet', subtitle: 'Low-dust · Non-clumping · Soft', href: '#paper-pellet', pickHop: '/go/chewy-brand/recycled+paper+pellet+litter+non+clumping?s=reviews-best-ferret-litter' },
   { label: 'Best for Odor', name: 'Heat-Treated Wood Pellet', subtitle: 'Phenol-free · Strong odor control', href: '#wood-pellet' },
   { label: 'Soft Alternative', name: 'Grass / Plant-Fiber Pellet', subtitle: 'Low-dust · Lighter tracking', href: '#grass-pellet' },
 ]
@@ -119,10 +119,10 @@ export default function BestFerretLitterPage() {
       <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="ferret-com"
-        heroHop={<PrimaryHop href='/go/chewy-brand/yesterdays+news+recycled+paper+pellet+litter+non+clumping?s=reviews-best-ferret-litter' label={"Open the existing paper-pellet search. Purina discontinued Yesterday's News in April 2022."} />}
+        heroHop={<PrimaryHop href='/go/chewy-brand/recycled+paper+pellet+litter+non+clumping?s=reviews-best-ferret-litter' label="Open the recycled paper-pellet search." />}
         heroExtra={
           <>
-          <HopDisclosure siteId="ferret-com" href="/go/chewy-brand/yesterdays+news+recycled+paper+pellet+litter+non+clumping?s=reviews-best-ferret-litter" />
+          <HopDisclosure siteId="ferret-com" href="/go/chewy-brand/recycled+paper+pellet+litter+non+clumping?s=reviews-best-ferret-litter" />
           <div className="[&_.text-brand-primary]:!text-brand-dark">
             <QuickPicks items={QUICK_PICKS} embedded />
           </div>
@@ -276,7 +276,7 @@ export default function BestFerretLitterPage() {
             category, choose a reputable pelleted product and confirm it is non-clumping and free of added clumping
             agents.
           </p>
-          <HopDisclosure siteId="ferret-com" href={["/go/chewy-brand/yesterdays+news+recycled+paper+pellet+litter+non+clumping?s=reviews-best-ferret-litter", "/go/amazon-brand/compressed+wood+pellet+litter+heat+treated+non+clumping?s=reviews-best-ferret-litter", "/go/amazon-brand/small+animal+grass+pellet+litter+non+clumping?s=reviews-best-ferret-litter"]} />
+          <HopDisclosure siteId="ferret-com" href={["/go/chewy-brand/recycled+paper+pellet+litter+non+clumping?s=reviews-best-ferret-litter", "/go/amazon-brand/compressed+wood+pellet+litter+heat+treated+non+clumping?s=reviews-best-ferret-litter", "/go/amazon-brand/small+animal+grass+pellet+litter+non+clumping?s=reviews-best-ferret-litter"]} />
 
           <ReviewCard
             id="paper-pellet"
@@ -285,7 +285,7 @@ export default function BestFerretLitterPage() {
             subtitle="Low-dust, non-clumping, soft on feet — the default ferret litter"
             winner
             description={
-              <p>The default recommendation for ferrets. Recycled-paper pellets are low-dust, non-clumping, absorbent, and soft enough on the feet that ferrets accept them readily. There are no clumping agents to swallow and no fine respiratory dust. The trade-offs are moderate odor control versus heavily perfumed cat litters and the need to change rather than scoop-and-top-up — both easily acceptable given the safety profile. If you buy one litter without overthinking it, buy a current recycled-paper pellet. Purina discontinued Yesterday&apos;s News on April 20, 2022, and closed the plant that June. This button opens the existing search for that discontinued name. It is not a current formula.</p>
+              <p>The default recommendation for ferrets. Recycled-paper pellets are low-dust, non-clumping, absorbent, and soft enough on the feet that ferrets accept them readily. There are no clumping agents to swallow and no fine respiratory dust. The trade-offs are moderate odor control versus heavily perfumed cat litters and the need to change rather than scoop-and-top-up — both easily acceptable given the safety profile. If you buy one litter without overthinking it, buy a current recycled-paper pellet. Purina discontinued Yesterday&apos;s News on April 20, 2022, and closed the plant that June. This search is for a recycled paper pellet still being sold.</p>
             }
             specs={[
               { label: 'Dust', value: 'Very low', highlight: 'good' },
@@ -297,8 +297,8 @@ export default function BestFerretLitterPage() {
             pros={['Very low dust', 'Fully non-clumping', 'Soft and well accepted', 'No ingestion or inhalation hazard', 'Widely available']}
             cons={['Moderate odor control', 'Change rather than scoop', 'Lighter pellets can scatter']}
             price="$$"
-            ctaText="Open the existing paper-pellet search. Yesterday's News was discontinued in April 2022."
-            ctaHref="/go/chewy-brand/yesterdays+news+recycled+paper+pellet+litter+non+clumping?s=reviews-best-ferret-litter"
+            ctaText="Open the recycled paper-pellet search."
+            ctaHref="/go/chewy-brand/recycled+paper+pellet+litter+non+clumping?s=reviews-best-ferret-litter"
             ctaAffiliateProgram="chewy-brand"
             ctaAffiliateProduct="paper-pellet-litter"
           />
@@ -368,7 +368,7 @@ export default function BestFerretLitterPage() {
               <tbody>
                 <tr className="border-b border-brand-border">
                   <td className="p-3">A default that most ferrets accept</td>
-                  <td className="p-3 font-bold"><a href="#paper-pellet">Recycled paper pellets</a><TableShopLink href={"/go/chewy-brand/yesterdays+news+recycled+paper+pellet+litter+non+clumping?s=reviews-best-ferret-litter"} product={"Recycled paper pellets"} /></td>
+                  <td className="p-3 font-bold"><a href="#paper-pellet">Recycled paper pellets</a><TableShopLink href={"/go/chewy-brand/recycled+paper+pellet+litter+non+clumping?s=reviews-best-ferret-litter"} product={"Recycled paper pellets"} /></td>
                   <td className="p-3">Best overall. Very low dust. Soft. Price tier $$</td>
                   <td className="p-3">Moderate odor control. Change the box rather than scoop and top up</td>
                 </tr>
