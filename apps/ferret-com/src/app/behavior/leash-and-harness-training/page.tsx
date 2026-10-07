@@ -94,6 +94,14 @@ export default function LeashAndHarnessTrainingPage() {
       <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="ferret-com"
+        heroHop={
+          <>
+            <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/ferret+vest+harness?s=behavior-leash-harness" />
+            <div className="mb-4" data-primary-hop="true">
+              <a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" data-shop-placement="hero" href="/go/amazon-brand/ferret+vest+harness?s=behavior-leash-harness">Browse a ferret vest harness on Amazon →</a>
+            </div>
+          </>
+        }
         hero={{
           title: 'Leash and Harness Training for Ferrets',
           subtitle:
@@ -297,7 +305,6 @@ export default function LeashAndHarnessTrainingPage() {
             </li>
           </ul>
 
-          <HopDisclosure siteId="ferret-com" href={["/go/marshall/ferret-harness-leash?s=behavior-leash-harness", "/go/amazon-brand/ferret+vest+harness?s=behavior-leash-harness"]} />
 
           <h2 id="picks">Harness Picks</h2>
           <p>
@@ -308,7 +315,7 @@ export default function LeashAndHarnessTrainingPage() {
               Read the stress signs before the first outdoor walk →
             </Link>
           </p>
-          <ReviewCard
+          <ReviewCard quietUntilTag
             id="marshall-ferret-harness"
             badge="H-Style"
             name="Marshall Ferret H-Style Harness & Leash Set"
@@ -333,7 +340,7 @@ export default function LeashAndHarnessTrainingPage() {
             ctaAffiliateProgram="marshall"
             ctaAffiliateProduct="ferret-harness-leash"
           />
-          <ReviewCard
+          <ReviewCard quietUntilTag
             id="ferret-vest-harness"
             badge="Vest-Style"
             name="Ferret Vest-Style Harness"

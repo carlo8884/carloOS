@@ -70,6 +70,14 @@ export default function SafeTreatsPage() {
       <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="ferret-com"
+        heroHop={
+          <>
+            <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/wysong+ferret+food?s=safe-treats" />
+            <div className="mb-4" data-primary-hop="true">
+              <a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" data-shop-placement="hero" href="/go/amazon-brand/wysong+ferret+food?s=safe-treats">Browse Wysong ferret food on Amazon →</a>
+            </div>
+          </>
+        }
         hero={{
           title: 'Safe Treats for Ferrets',
           subtitle:
@@ -168,7 +176,6 @@ export default function SafeTreatsPage() {
             A high-value meat treat is the most effective reward for litter and bite training and for building trust with a new ferret. A meat-based paste is especially useful because it is delivered slowly and holds a ferret's attention. Used this way — small, frequent, meat-based — treats earn their place. The temptation to reach for the convenient sugary products on the shelf is exactly what to resist.
           </p>
 
-          <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/wysong+ferret+food?s=safe-treats", "/go/wysong/freeze-dried-treats?s=diet-safe-treats"]} />
 
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
@@ -187,7 +194,7 @@ export default function SafeTreatsPage() {
           <p>
             A single-ingredient freeze-dried meat treat is the cleanest way to honour the one rule above — no sugar, no grain, just animal protein. This is a documented-spec selection based on published ingredient panels, not a hands-on test.
           </p>
-          <ReviewCard
+          <ReviewCard quietUntilTag
             id="wysong-freeze-dried-treats"
             badge="Meat-Based Treat"
             name="Wysong Single-Ingredient Freeze-Dried Treats"

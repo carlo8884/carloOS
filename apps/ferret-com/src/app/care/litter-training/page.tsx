@@ -112,6 +112,14 @@ export default function FerretLitterTrainingPage() {
       <ArticleLayout
         siteId="ferret-com"
         contentType="care"
+        heroHop={
+          <>
+            <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/ferret+litter?s=litter-training" />
+            <div className="mb-4" data-primary-hop="true">
+              <a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" data-shop-placement="hero" href="/go/amazon-brand/ferret+litter?s=litter-training">Browse ferret litter on Amazon →</a>
+            </div>
+          </>
+        }
         hero={{
           title: 'Ferret Litter Training',
           subtitle:
@@ -500,7 +508,6 @@ export default function FerretLitterTrainingPage() {
             </p>
           </CalloutBox>
 
-          <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/ferret+litter?s=litter-training", "/go/marshall/lock-n-litter-pan?s=care-litter-training", "/go/chewy-brand/yesterdays+news+paper+pellet+litter?s=care-litter-training"]} />
 
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
@@ -519,7 +526,7 @@ export default function FerretLitterTrainingPage() {
           <p>
             Two staples that line up with the substrate and pan-shape recommendations above. This is a documented-spec comparison drawing on widely-stocked products in US pet retail; this page does not claim hands-on testing.
           </p>
-          <ReviewCard
+          <ReviewCard quietUntilTag
             id="marshall-corner-pan"
             badge="Pan Shape Default"
             name="Marshall Lock-N-Litter Corner Pan"
@@ -544,7 +551,7 @@ export default function FerretLitterTrainingPage() {
             ctaAffiliateProgram="marshall"
             ctaAffiliateProduct="lock-n-litter-pan"
           />
-          <ReviewCard
+          <ReviewCard quietUntilTag
             id="yesterdays-news"
             badge="Substrate Default"
             name="Yesterday's News Recycled Paper-Pellet Litter"

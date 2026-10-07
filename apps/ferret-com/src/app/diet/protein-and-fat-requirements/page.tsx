@@ -70,6 +70,14 @@ export default function ProteinAndFatRequirementsPage() {
       <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="ferret-com"
+        heroHop={
+          <>
+            <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/wysong+ferret+food?s=protein-and-fat-requirements" />
+            <div className="mb-4" data-primary-hop="true">
+              <a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" data-shop-placement="hero" href="/go/amazon-brand/wysong+ferret+food?s=protein-and-fat-requirements">Browse Wysong ferret food on Amazon →</a>
+            </div>
+          </>
+        }
         hero={{
           title: 'Ferret Protein & Fat Requirements',
           subtitle:
@@ -166,7 +174,6 @@ export default function ProteinAndFatRequirementsPage() {
             The targets above are stated on a <strong>dry-matter basis</strong> — water removed — but kibble labels report a guaranteed analysis on an <strong>as-fed basis</strong>, including moisture. For dry kibble (around 8–10% moisture) the two are close, so an as-fed protein figure of roughly 36% corresponds to a dry-matter figure in the high 30s or low 40s. For anything moist — raw, canned, or fresh prey at 65–75% water — the difference is dramatic, and comparing as-fed numbers across wet and dry foods is meaningless. Carbohydrate is almost never printed; estimate it by difference, subtracting protein, fat, moisture, ash, and fiber from 100. The method for applying all of this at the shelf is in <a href="/diet/best-ferret-kibble">how to choose a ferret kibble</a>.
           </p>
 
-          <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/wysong+ferret+food?s=protein-and-fat-requirements", "/go/wysong/epigen-90?s=diet-protein-and-fat-requirements"]} />
 
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
@@ -185,7 +192,7 @@ export default function ProteinAndFatRequirementsPage() {
           <p>
             The numbers above are abstract until you map them onto a real product. The diet below is a worked example of a commercial kibble whose published panel lands close to the high-protein, very-low-carbohydrate target — included on its documented spec, not a hands-on test. The full evaluation method is in <a href="/diet/best-ferret-kibble">how to choose a ferret kibble</a>.
           </p>
-          <ReviewCard
+          <ReviewCard quietUntilTag
             id="wysong-epigen-90"
             badge="Hits the Window"
             name="Wysong Epigen 90"

@@ -40,6 +40,14 @@ export default function ReadingFoodLabelsPage() {
       <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="ferret-com"
+        heroHop={
+          <>
+            <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/wysong+ferret+food?s=reading-food-labels" />
+            <div className="mb-4" data-primary-hop="true">
+              <a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" data-shop-placement="hero" href="/go/amazon-brand/wysong+ferret+food?s=reading-food-labels">Browse Wysong ferret food on Amazon →</a>
+            </div>
+          </>
+        }
         hero={{
           title: 'Reading Ferret Food Labels',
           subtitle:
@@ -201,7 +209,6 @@ export default function ReadingFoodLabelsPage() {
             <li><strong>Vague descriptors</strong> — &quot;meat by-products&quot; or &quot;animal digest&quot; without a named species.</li>
           </ul>
 
-          <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/wysong+ferret+food?s=reading-food-labels", "/go/wysong/epigen-90?s=diet-reading-food-labels"]} />
 
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
@@ -220,7 +227,7 @@ export default function ReadingFoodLabelsPage() {
           <p>
             To see what a panel that passes all the checks above looks like, here is one commercial diet whose published ingredient list reads as named animal proteins with no grain or plant-protein filler. Included on its documented panel as a worked example, not a hands-on test — apply the same reading method to any food you consider.
           </p>
-          <ReviewCard
+          <ReviewCard quietUntilTag
             id="wysong-epigen-90"
             badge="Clean Panel"
             name="Wysong Epigen 90"

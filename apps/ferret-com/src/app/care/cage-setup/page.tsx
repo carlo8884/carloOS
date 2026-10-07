@@ -85,6 +85,14 @@ export default function FerretCageSetupPage() {
       <ArticleLayout
         siteId="ferret-com"
         contentType="care"
+        heroHop={
+          <>
+            <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/midwest+critter+nation+double+unit?s=care-cage-setup" />
+            <div className="mb-4" data-primary-hop="true">
+              <a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" data-shop-placement="hero" href="/go/amazon-brand/midwest+critter+nation+double+unit?s=care-cage-setup">Browse a Critter Nation double unit on Amazon →</a>
+            </div>
+          </>
+        }
         hero={{
           title: 'Ferret Cage Setup',
           subtitle:
@@ -241,8 +249,7 @@ export default function FerretCageSetupPage() {
           <p>
             Two cages that come up consistently in keeper communities and at exotic-mammal shelters. Both are widely available; each fills a different price/use niche.
           </p>
-          <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/midwest+critter+nation+double+unit?s=care-cage-setup", "/go/marshall/designer-ferret-cage?s=care-cage-setup", "/go/marshall/ferret-sleep-sack?s=care-cage-setup", "/go/chewy-brand/kaytee+corner+ferret+litter+pan?s=care-cage-setup"]} />
-          <ReviewCard
+          <ReviewCard quietUntilTag
             id="critter-nation"
             badge="Best Overall"
             name="MidWest Critter Nation Double Unit (Model 162)"
@@ -267,7 +274,7 @@ export default function FerretCageSetupPage() {
             ctaAffiliateProgram="amazon-brand"
             ctaAffiliateProduct="midwest+critter+nation+double+unit"
           />
-          <ReviewCard
+          <ReviewCard quietUntilTag
             id="marshall"
             badge="Best Starter"
             name="Marshall Designer Ferret Cage"
@@ -296,7 +303,7 @@ export default function FerretCageSetupPage() {
           <p>
             Two bedding/accessories that come up consistently across ferret keeper communities. Hammocks and fleece sleep sacks are the default resting surface; a corner litter pan with low entry is the practical complement.
           </p>
-          <ReviewCard
+          <ReviewCard quietUntilTag
             id="marshall-sleep-sack"
             badge="Top Pick"
             name="Marshall Ferret Sleep Sack & Hammock Set"
@@ -313,7 +320,7 @@ export default function FerretCageSetupPage() {
             ctaAffiliateProgram="marshall"
             ctaAffiliateProduct="ferret-sleep-sack"
           />
-          <ReviewCard
+          <ReviewCard quietUntilTag
             id="kaytee-litter-pan"
             badge="Essential"
             name="Kaytee Corner Ferret Litter Pan"
