@@ -5,6 +5,9 @@ import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaSc
 import { ArticleByline, DropCap, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Eye Conditions in Dogs — Cherry Eye, Cataracts | Vets.co', description: 'Common dog eye conditions: cherry eye (corrected surgically, not removed), cataracts, glaucoma (emergency), and PRA (genetic).', path: '/health/dog-eye-conditions', type: 'article' })
 const SOURCES = [
+  { label: 'Merck Veterinary Manual: Glaucoma in Dogs', url: 'https://www.merckvetmanual.com/dog-owners/eye-disorders-of-dogs/glaucoma-in-dogs', publisher: 'Merck Vet Manual' },
+  { label: 'Merck Veterinary Manual: Disorders of the Lens in Dogs', url: 'https://www.merckvetmanual.com/dog-owners/eye-disorders-of-dogs/disorders-of-the-lens-in-dogs', publisher: 'Merck Vet Manual' },
+  { label: 'Merck Veterinary Manual: Disorders of the Retina in Dogs', url: 'https://www.merckvetmanual.com/dog-owners/eye-disorders-of-dogs/disorders-of-the-retina-choroid-and-optic-disk-ocular-fundus-in-dogs', publisher: 'Merck Vet Manual' },
   { label: 'ACVO: Eye Conditions in Dogs', url: 'https://www.acvo.org/public-resources', publisher: 'American College of Veterinary Ophthalmologists' },
   { label: 'AVMA: Eye Care for Pets', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/eye-care-pets', publisher: 'AVMA' },
 ]
