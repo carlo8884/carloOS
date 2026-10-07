@@ -20,98 +20,20 @@ export const metadata: Metadata = buildMetadata({
   type: 'website',
 })
 
-type CategoryIcon = 'breeds' | 'health' | 'guides' | 'supplements' | 'reviews' | 'roadmap' | 'racing'
-
-function CategoryIconSvg({ name }: { name: CategoryIcon }) {
-  const common = {
-    width: 28,
-    height: 28,
-    viewBox: '0 0 24 24',
-    fill: 'none',
-    stroke: 'currentColor',
-    strokeWidth: 1.4,
-    strokeLinecap: 'round' as const,
-    strokeLinejoin: 'round' as const,
-    'aria-hidden': true,
-  }
-  switch (name) {
-    case 'breeds':
-      return (
-        <svg {...common}>
-          <path d="M6 20c0-3 1-5 2-7 .5-1 .8-2 .8-3.2 0-1.2-.5-2.3-1.2-3.1-.5-.5-.5-1.3 0-1.7.5-.5 1.3-.5 1.8 0 .6.6 1.3 1 2.1 1.2 1 .3 2 .4 3 .4 2 0 3.5.8 4.5 2.3.7 1 1 2.2 1 3.6 0 3.5-2 7.5-2 7.5" />
-          <path d="M8.5 11.5l-1.5-1" />
-          <path d="M14 9.5c.3-.3.6-.7.6-1.1" />
-        </svg>
-      )
-    case 'health':
-      return (
-        <svg {...common}>
-          <path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z" />
-          <path d="M9 11v2a3 3 0 0 0 6 0v-2" />
-          <circle cx="9" cy="10" r="0.6" fill="currentColor" stroke="none" />
-          <circle cx="15" cy="10" r="0.6" fill="currentColor" stroke="none" />
-        </svg>
-      )
-    case 'guides':
-      return (
-        <svg {...common}>
-          <path d="M3 5c3-1 6-1 9 1 3-2 6-2 9-1v13c-3-1-6-1-9 1-3-2-6-2-9-1V5z" />
-          <path d="M12 6v14" />
-        </svg>
-      )
-    case 'supplements':
-      return (
-        <svg {...common}>
-          <rect x="3" y="9" width="13" height="6" rx="3" />
-          <path d="M9.5 9v6" />
-          <circle cx="19" cy="6" r="1.4" />
-          <circle cx="20.5" cy="17.5" r="1.2" />
-        </svg>
-      )
-    case 'reviews':
-      return (
-        <svg {...common}>
-          <circle cx="12" cy="9" r="5.5" />
-          <path d="M8.5 13L6 21l3.5-2 2.5 1.5 2.5-1.5L18 21l-2.5-8" />
-          <path d="M12 6.5l1 2 2.2.2-1.7 1.4.6 2.2L12 11l-2.1 1.3.6-2.2-1.7-1.4 2.2-.2z" />
-        </svg>
-      )
-    case 'roadmap':
-      return (
-        <svg {...common}>
-          <path d="M4 17c4 0 4-10 8-10s4 10 8 10" />
-          <circle cx="4" cy="17" r="1.4" />
-          <circle cx="12" cy="11" r="1.4" />
-          <circle cx="20" cy="17" r="1.4" />
-        </svg>
-      )
-    case 'racing':
-      return (
-        <svg {...common}>
-          <line x1="18" y1="3" x2="18" y2="21" strokeWidth="2" />
-          <path d="M18 5l-6 2-6-2" />
-          <path d="M4 14c2-1 4-1 5 0s3 2 5 1 3-2 5-1" />
-          <path d="M4 18c2-1 4-1 5 0s3 2 5 1 3-2 5-1" />
-        </svg>
-      )
-  }
-}
-
 const CATEGORIES: {
-  icon: CategoryIcon
   title: string
   desc: string
   href: string
   manifestKey: string
   imageAlt: string
 }[] = [
-  { icon: 'breeds', title: 'Breeds', desc: 'Discipline-tagged breed references with bloodlines, conformation, and genetic-panel coverage.', href: '/breeds/quarter-horse', manifestKey: 'horses-com:category-breeds', imageAlt: 'A horse standing in profile, showing conformation' },
-  { icon: 'health', title: 'Health', desc: 'Condition references with AAEP-aligned guidance and when-to-call-your-vet thresholds.', href: '/health', manifestKey: 'horses-com:category-care', imageAlt: 'A horse receiving routine care' },
-  { icon: 'guides', title: 'Guides', desc: 'Tack, turnout, and management fundamentals — written for owners who own the decision.', href: '/guides/saddle-fit-basics', manifestKey: 'horses-com:guide-saddle-fit', imageAlt: 'A dressage horse and rider working in tack at the canter' },
-  { icon: 'supplements', title: 'Supplements', desc: 'Ingredient-by-ingredient evaluation with research citations and dosing context.', href: '/supplements/joint-supplements', manifestKey: 'horses-com:supplement-joint', imageAlt: 'A working sport horse, the focus of joint-supplement research' },
-  { icon: 'reviews', title: 'Reviews', desc: 'Gear comparisons scored on the same dimensions, discipline-filterable.', href: '/reviews/best-winter-horse-blankets', manifestKey: 'horses-com:category-reviews', imageAlt: 'Horse gear compared side by side' },
-  { icon: 'roadmap', title: 'First-Horse Roadmap', desc: 'A free 90-day plan for the first-time owner — on the page, no email signup.', href: '/first-horse-roadmap', manifestKey: 'horses-com:featured-quarter-horse', imageAlt: 'A horse — the start of the first-horse journey' },
-  { icon: 'racing', title: 'Racing Intelligence', desc: 'Thoroughbred, harness, and Quarter Horse racing as educational reference — disciplines, governance, and OTTB aftercare.', href: '/racing', manifestKey: 'horses-com:category-disciplines', imageAlt: 'Horses competing on a track' },
+  { title: 'Breeds', desc: 'Discipline-tagged breed references with bloodlines, conformation, and genetic-panel coverage.', href: '/breeds/quarter-horse', manifestKey: 'horses-com:category-breeds', imageAlt: 'A horse standing in profile, showing conformation' },
+  { title: 'Health', desc: 'Condition references with AAEP-aligned guidance and when-to-call-your-vet thresholds.', href: '/health', manifestKey: 'horses-com:category-care', imageAlt: 'A horse receiving routine care' },
+  { title: 'Guides', desc: 'Tack, turnout, and management fundamentals — written for owners who own the decision.', href: '/guides/saddle-fit-basics', manifestKey: 'horses-com:guide-saddle-fit', imageAlt: 'A dressage horse and rider working in tack at the canter' },
+  { title: 'Supplements', desc: 'Ingredient-by-ingredient evaluation with research citations and dosing context.', href: '/supplements/joint-supplements', manifestKey: 'horses-com:supplement-joint', imageAlt: 'A working sport horse, the focus of joint-supplement research' },
+  { title: 'Reviews', desc: 'Gear comparisons scored on the same dimensions, discipline-filterable.', href: '/reviews/best-winter-horse-blankets', manifestKey: 'horses-com:category-reviews', imageAlt: 'Horse gear compared side by side' },
+  { title: 'First-Horse Roadmap', desc: 'A free 90-day plan for the first-time owner — on the page, no email signup.', href: '/first-horse-roadmap', manifestKey: 'horses-com:featured-quarter-horse', imageAlt: 'A horse — the start of the first-horse journey' },
+  { title: 'Racing Intelligence', desc: 'Thoroughbred, harness, and Quarter Horse racing as educational reference — disciplines, governance, and OTTB aftercare.', href: '/racing', manifestKey: 'horses-com:category-disciplines', imageAlt: 'Horses competing on a track' },
 ]
 
 const FEATURED_GUIDES = [
@@ -257,8 +179,12 @@ export default function HomePage() {
                   <StockImage manifestKey={cat.manifestKey} fallbackKey="horses-com:hero" alt={cat.imageAlt} aspect="4:3" variant="inline" subtleCredit />
                 </div>
                 <div className="flex flex-col flex-1 p-6">
-                  <div className="mb-3" style={{ color: 'var(--brand-primary)' }}><CategoryIconSvg name={cat.icon} /></div>
-                  <h3 className="font-display font-bold text-xl leading-snug mb-2" style={{ color: 'var(--brand-text-dark)' }}>{cat.title}</h3>
+                  <div className="mb-2 flex items-center gap-2.5">
+                    <span className={`relative h-8 w-12 shrink-0 overflow-hidden rounded-md ${FILL_IMAGE}`}>
+                      <StockImage manifestKey={cat.manifestKey} fallbackKey="horses-com:hero" alt={cat.imageAlt} aspect="4:3" variant="inline" />
+                    </span>
+                    <h3 className="font-display font-bold text-xl leading-snug" style={{ color: 'var(--brand-text-dark)' }}>{cat.title}</h3>
+                  </div>
                   <p className="text-sm leading-relaxed mb-4" style={{ color: 'var(--brand-text-mid)' }}>{cat.desc}</p>
                   <span className="mt-auto inline-flex items-center text-xs font-semibold uppercase tracking-eyebrow" style={{ color: 'var(--brand-primary)' }}>Read <span aria-hidden="true" className="ml-1.5 transition-transform group-hover:translate-x-0.5">→</span></span>
                 </div>
