@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
@@ -123,7 +124,7 @@ export default function GdvPage() {
             live on other pages. This page does not claim
             hands-on testing. </p>
 
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/single+stainless+floor+dog+bowl?s=health-dog-bloat-gvd", "/go/amazon-brand/wobble+dog+food+dispenser?s=health-dog-bloat-gvd", "/go/amazon-brand/30+minute+sand+hourglass+timer?s=health-dog-bloat-gvd"]} />
 
           {/* Money path — live amazon-brand search hops
               (single stainless floor dog bowl /

@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
@@ -68,7 +69,7 @@ export default function MegaesophagusPage() {
           <h2 id="kit">Bailey-chair feeding kit</h2>
           <p>Everyday physical supplies that match the upright-feeding copy above — a Bailey chair or other near-vertical feeding chair that holds the dog in a sitting-bear position during the meal and for 10–30 minutes afterward. Canine Caviar, prescription diets, myasthenia gravis medications, and antibiotics for aspiration pneumonia stay educational copy only — this page never hops brand foods, diet ASINs, or medications. This page does not claim hands-on testing.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/bailey+chair+dog?s=health-megaesophagus", "/go/amazon-brand/upright+dog+feeding+chair?s=health-megaesophagus"]} />
 
           {/* Money path — live amazon-brand search hops (Bailey chair /
               upright feeding chair). ShopCtas hides empty Chewy; never

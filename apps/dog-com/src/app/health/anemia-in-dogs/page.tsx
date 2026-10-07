@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
@@ -87,7 +88,7 @@ export default function DogAnemiaPage() {
             are not a transfusion, and they are not
             prednisolone, azathioprine, or mycophenolate. This page does not claim hands-on testing. </p>
 
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/dog+gum+color+assessment+chart?s=health-anemia-in-dogs", "/go/amazon-brand/high+calorie+dog+recovery+food?s=health-anemia-in-dogs", "/go/amazon-brand/pet+oral+feeding+syringe?s=health-anemia-in-dogs"]} />
 
           {/* Money path — live amazon-brand search hops
               (dog gum-color assessment chart / high-calorie

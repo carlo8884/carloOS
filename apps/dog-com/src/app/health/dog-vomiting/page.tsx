@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
@@ -69,7 +70,7 @@ export default function DogVomitingPage() {
           <h2 id="kit">Bland-diet prep kit</h2>
           <p>Everyday kitchen supplies that match the home-monitor copy above — a mini rice cooker so you can make a small batch of plain white rice after the 6–12 hour withhold, plus glass meal-prep containers for leftover bland-diet portions and the small bedtime snack used for bilious vomiting. These are prep tools, not treatments. They do not stop vomiting, they do not replace fasting or veterinary examination, and they do not treat GDV, obstruction, pancreatitis, or parvovirus. Anti-nausea medication (Cerenia / maropitant and similar), prescription GI diets (Hill&apos;s i/d, Royal Canin Gastrointestinal, and similar), probiotics, and plain canned pumpkin stay educational copy only — probiotics and pumpkin stay on the sister <a href="/health/dog-diarrhea">dog diarrhea</a> page. Slow-feeder bowls stay on <a href="/health/dog-obesity">dog obesity</a>. Bailey chairs and upright feeding chairs stay on <a href="/health/megaesophagus">megaesophagus</a>. Elevated bowls stay off this page. This page does not claim hands-on testing.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/mini+rice+cooker?s=health-dog-vomiting", "/go/amazon-brand/glass+meal+prep+containers?s=health-dog-vomiting"]} />
 
           {/* Money path — live amazon-brand search hops (mini
               rice cooker / glass meal-prep containers). ShopCtas
