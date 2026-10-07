@@ -88,7 +88,7 @@ export default function BestWinterBlanketsPage() {
         </p>
       </div>
 
-      <QuickPicks quietUntilTag items={PICKS} />
+      <QuickPicks items={PICKS} quietUntilTag />
 
       <nav aria-label="Breadcrumb" className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2 flex-wrap">
         <Link href="/" className="hover:text-brand-primary no-underline">Home</Link><span>›</span>
@@ -165,7 +165,7 @@ export default function BestWinterBlanketsPage() {
                 <tbody>
                   {SPEC_TABLE.map(row => (
                     <tr key={row.brand} className="border-b border-brand-border">
-                      <td className="p-3 font-bold text-brand-dark">{row.brand}<TableShopLink quietUntilTag href={row.shopHref} product={row.brand} /></td>
+                      <td className="p-3 font-bold text-brand-dark">{row.brand}<TableShopLink href={row.shopHref} quietUntilTag product={row.brand} /></td>
                       <td className="p-3 text-brand-text-mid">{row.denier}</td>
                       <td className="p-3 text-brand-text-mid">{row.fill}</td>
                       <td className="p-3 text-brand-text-mid">{row.neck}</td>
