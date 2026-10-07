@@ -33,12 +33,12 @@ const PICKS = [
   { label: 'Best Large Breed', name: 'Royal Canin Large Breed Puppy', subtitle: 'Most researched · Controlled calcium · Breed-specific', href: '#royal-canin', pickHop: '/go/amazon-brand/royal+canin+large+breed+puppy?s=reviews-best-dog-food-for-puppies' },
   { label: 'Best Overall Value', name: 'Purina Pro Plan Puppy Large Breed', subtitle: 'AAFCO feeding trials · 400+ studies · Widely available', href: '#pro-plan' },
   { label: 'Best Small Breed', name: 'Hill\'s Science Diet Puppy Small & Mini', subtitle: 'Formerly Puppy Small Paws · veterinarian-formulated', href: '#hills-small' },
-  { label: 'Best Budget', name: 'Iams ProActive Health Puppy', subtitle: 'WSAVA-compliant · $30–50 per 30 lb bag', href: '#iams' },
+  { label: 'Best Budget', name: 'Iams Puppy Large Breed', subtitle: 'Formerly ProActive Health Smart Puppy · $30–50 per 30 lb bag', href: '#iams' },
 ]
 
 const itemList = buildItemListSchema({
   name: "Best Puppy Food 2026",
-  items: PICKS.map((pick) => ({ name: pick.name, url: ({ "Royal Canin Large Breed Puppy": "https://dog.com/go/amazon-brand/royal+canin+large+breed+puppy?s=reviews-best-dog-food-for-puppies", "Purina Pro Plan Puppy Large Breed": "https://dog.com/go/chewy-brand/purina+pro+plan+puppy+large+breed?s=reviews-best-dog-food-for-puppies", "Hill's Science Diet Puppy Small & Mini": "https://dog.com/go/chewy-brand/hills+science+diet+puppy+small+paws?s=reviews-best-dog-food-for-puppies", "Iams ProActive Health Puppy": "https://dog.com/go/chewy-brand/iams+proactive+health+puppy+large+breed?s=reviews-best-dog-food-for-puppies" }[pick.name] ?? `https://dog.com/reviews/best-dog-food-for-puppies${pick.href}`) })),
+  items: PICKS.map((pick) => ({ name: pick.name, url: ({ "Royal Canin Large Breed Puppy": "https://dog.com/go/amazon-brand/royal+canin+large+breed+puppy?s=reviews-best-dog-food-for-puppies", "Purina Pro Plan Puppy Large Breed": "https://dog.com/go/chewy-brand/purina+pro+plan+puppy+large+breed?s=reviews-best-dog-food-for-puppies", "Hill's Science Diet Puppy Small & Mini": "https://dog.com/go/chewy-brand/hills+science+diet+puppy+small+paws?s=reviews-best-dog-food-for-puppies", "Iams Puppy Large Breed": "https://dog.com/go/chewy-brand/iams+proactive+health+puppy+large+breed?s=reviews-best-dog-food-for-puppies" }[pick.name] ?? `https://dog.com/reviews/best-dog-food-for-puppies${pick.href}`) })),
 })
 export default function BestPuppyFoodPage() {
   return (
@@ -64,7 +64,7 @@ export default function BestPuppyFoodPage() {
             "Royal Canin Large Breed Puppy, marked Best Large Breed.",
             "The card says some dogs do not like the kibble shape, and the dog moves to the Royal Canin adult food at the right age.",
             "The card says it is not for large breeds.",
-            "Iams ProActive Health Smart Puppy, marked Best Budget.",
+            "Iams Puppy Large Breed, formerly ProActive Health Smart Puppy, marked Best Budget.",
             "The card says some lines meet AAFCO by formulation rather than a feeding trial.",
           ]}
         />
@@ -176,9 +176,9 @@ export default function BestPuppyFoodPage() {
             <ReviewCard
               id="iams"
               badge="Best Budget"
-              name="Iams ProActive Health Smart Puppy"
-              subtitle="WSAVA-compliant · Budget price · AAFCO meeting standard"
-              description={<p>Iams meets WSAVA compliance standards — they employ qualified nutritionists and conduct AAFCO testing — at a significantly lower price than Royal Canin, Purina Pro Plan, or Hill&apos;s. For large breed puppies, use Iams ProActive Health Smart Puppy Large Breed specifically. The research investment is less extensive than the top three brands, but the nutritional quality is meaningfully better than non-WSAVA-compliant alternatives. A good option for budget-constrained owners who still want WSAVA-compliant nutrition.</p>}
+              name="Iams Puppy Large Breed"
+              subtitle="Formerly ProActive Health Smart Puppy · Budget price · AAFCO meeting standard"
+              description={<p>Iams meets WSAVA compliance standards — they employ qualified nutritionists and conduct AAFCO testing — at a significantly lower price than Royal Canin, Purina Pro Plan, or Hill&apos;s. For large breed puppies, the current Iams name is Puppy Large Breed. The same food was sold as ProActive Health Smart Puppy, and retailer listings still use that title. The research investment is less extensive than the top three brands, but the nutritional quality is meaningfully better than non-WSAVA-compliant alternatives. A good option for budget-constrained owners who still want WSAVA-compliant nutrition.</p>}
               specs={[
                 { label: 'WSAVA Compliant', value: 'Yes', highlight: 'good' },
                 { label: 'AAFCO', value: 'Meets nutrient profiles' },
@@ -189,7 +189,7 @@ export default function BestPuppyFoodPage() {
               cons={['Less research investment than top 3', 'AAFCO formulation (not feeding trial) on some lines', 'Lower-quality protein sourcing than premium options']}
               price="$30–50 per 30 lb bag"
               priceNote="dated 2026-10-05."
-              ctaText="Shop Iams ProActive Health large-breed puppy food on Amazon →"
+              ctaText="Shop Iams Puppy Large Breed on Amazon →"
               ctaHref="/go/chewy-brand/iams+proactive+health+puppy+large+breed?s=reviews-best-dog-food-for-puppies"
               ctaAffiliateProgram="chewy-brand"
               ctaAffiliateProduct="iams+proactive+health+puppy+large+breed"
@@ -230,7 +230,7 @@ export default function BestPuppyFoodPage() {
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">A lower bag price that is still a large-breed puppy formula</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#iams" className="text-brand-primary">Iams ProActive Health Smart Puppy</a><TableShopLink href={"/go/chewy-brand/iams+proactive+health+puppy+large+breed?s=reviews-best-dog-food-for-puppies"} product={"Iams ProActive Health Smart Puppy"} /></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#iams" className="text-brand-primary">Iams Puppy Large Breed</a><TableShopLink href={"/go/chewy-brand/iams+proactive+health+puppy+large+breed?s=reviews-best-dog-food-for-puppies"} product={"Iams Puppy Large Breed"} /></td>
                       <td className="p-3 text-brand-text-mid">Best Budget. $30–50 per 30 lb bag</td>
                       <td className="p-3 text-brand-text-mid">You want a feeding trial. The card says some lines are AAFCO formulation, not a feeding trial</td>
                     </tr>
@@ -250,7 +250,7 @@ export default function BestPuppyFoodPage() {
                 },
                 {
                   question: 'Which puppy food does this page pick at the lowest printed price?',
-                  answer: 'Iams ProActive Health Smart Puppy, marked Best Budget. The printed price is $30–50 per 30 lb bag. The card says some lines meet AAFCO by formulation rather than a feeding trial.',
+                  answer: 'Iams Puppy Large Breed, formerly ProActive Health Smart Puppy, marked Best Budget. The printed price is $30–50 per 30 lb bag. The card says some lines meet AAFCO by formulation rather than a feeding trial.',
                 },
               ]} />
             </div>
@@ -264,7 +264,7 @@ export default function BestPuppyFoodPage() {
                 { size: 'Small breed (under 25 lbs adult)', pick: 'Hill\'s Science Diet Puppy Small & Mini' },
                 { size: 'Medium breed (25-50 lbs adult)', pick: 'Purina Pro Plan Puppy' },
                 { size: 'Giant breed (90+ lbs adult)', pick: 'Royal Canin Giant Puppy (specific line)' },
-                { size: 'Budget / any size', pick: 'Iams ProActive Health Large or regular' },
+                { size: 'Budget / any size', pick: 'Iams Puppy Large Breed' },
               ].map(item => (
                 <div key={item.size} className="py-2.5 border-b border-brand-border last:border-0">
                   <div className="text-2xs text-brand-text-light mb-0.5">{item.size}</div>
