@@ -9,7 +9,6 @@ const SOURCES = [
   { label: 'WSAVA: Vaccination Guidelines for the Owners and Breeders of Dogs and Cats', url: 'https://wsava.org/committees/vaccination-guidelines-group/', publisher: 'WSAVA' },
   { label: 'AAHA: Canine Vaccination Guidelines (2022)', url: 'https://www.aaha.org/aaha-guidelines/vaccination-canine-configuration/vaccination-canine/', publisher: 'AAHA' },
   { label: 'AVMA: Vaccination Basics for Dogs and Cats', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/vaccination-basics', publisher: 'AVMA' },
-  { label: 'Merck Veterinary Manual: Overview of Vaccination Programs for Dogs', url: 'https://www.merckvetmanual.com/dog-owners/disorders-affecting-multiple-body-systems-of-dogs/vaccination-of-dogs', publisher: 'Merck Vet Manual' },
 ]
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Vaccination Schedule — Core, Non-Core | Dog.com', description: 'Complete dog vaccination guide. Core vaccines every dog needs, non-core vaccines by lifestyle, titer testing to avoid over-vaccination.', path: '/health/dog-vaccinations', type: 'article' })

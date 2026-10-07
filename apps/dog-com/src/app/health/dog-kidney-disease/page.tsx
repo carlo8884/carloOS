@@ -147,12 +147,7 @@ export default function DogKidneyPage() {
                 url: 'https://onlinelibrary.wiley.com/doi/10.1111/jvim.13398',
                 publisher: 'J Vet Intern Med (Yerramilli et al., 2016)',
               },
-              {
-                label: 'Merck Veterinary Manual -- Chronic Kidney Disease in Small Animals',
-                url: 'https://www.merckvetmanual.com/urinary-system/noninfectious-diseases-of-the-urinary-system-in-small-animals/chronic-kidney-disease-in-small-animals',
-                publisher: 'Merck Veterinary Manual',
-              },
-            ]}
+                          ]}
           />
         </div>
       </ArticleLayout>

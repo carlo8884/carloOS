@@ -8,7 +8,6 @@ import { crossSiteHref } from '@carloOS/config'
 const SOURCES = [
   { label: 'AVMA: Behavior Problems in Pets — Anxiety and Fear', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/behavior-problems-pets', publisher: 'AVMA' },
   { label: 'American College of Veterinary Behaviorists (ACVB): Canine Anxiety and Fear-Related Behaviors', url: 'https://www.dacvb.org', publisher: 'ACVB' },
-  { label: 'Merck Veterinary Manual: Behavioral Disorders of Dogs', url: 'https://www.merckvetmanual.com/behavior/behavioral-disorders-of-dogs', publisher: 'Merck Vet Manual' },
   { label: 'FDA: Reconcile (fluoxetine) Approved for Separation Anxiety in Dogs', url: 'https://www.fda.gov/animal-veterinary', publisher: 'FDA' },
 ]
 

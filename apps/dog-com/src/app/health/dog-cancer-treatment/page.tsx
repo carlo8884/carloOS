@@ -7,9 +7,7 @@ import { crossSiteHref } from '@carloOS/config'
 
 const SOURCES = [
   { label: 'ACVIM: Veterinary Oncology — Canine Cancer Treatment Guidelines', url: 'https://www.acvim.org/resources-tools/animal-owners', publisher: 'ACVIM Oncology' },
-  { label: 'Merck Veterinary Manual: Cancer Chemotherapy in Animals', url: 'https://www.merckvetmanual.com/pharmacology/antineoplastic-agents/cancer-chemotherapy-in-animals', publisher: 'Merck Vet Manual' },
   { label: 'AVMA: Cancer Treatment Options for Pets', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/cancer-animals', publisher: 'AVMA' },
-  { label: 'FDA CVM: Palladia (toceranib phosphate) — Approved Veterinary Cancer Treatment', url: 'https://www.fda.gov/animal-veterinary/news-events/fda-approves-first-dog-cancer-treatment', publisher: 'FDA CVM' },
 ]
 
 

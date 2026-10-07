@@ -6,7 +6,6 @@ import { ArticleSourcesList } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 
 const SOURCES = [
-  { label: 'Merck Veterinary Manual: Overview of Diarrhea in Small Animals', url: 'https://www.merckvetmanual.com/digestive-system/diarrhea-in-small-animals/overview-of-diarrhea-in-small-animals', publisher: 'Merck Vet Manual' },
   { label: 'WSAVA: Nutritional Support of Dogs With GI Disease — Bland Diet and Probiotic Guidance', url: 'https://wsava.org/global-guidelines/global-nutrition-guidelines/', publisher: 'WSAVA' },
   { label: 'AVMA: Diarrhea in Dogs — When to Call the Vet', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/common-health-conditions-dogs', publisher: 'AVMA' },
   { label: 'Kelley RL et al. Randomized controlled trial on the effect of a synbiotic on fecal quality in healthy dogs. BMC Vet Res. 2009;5:31.', publisher: 'BMC Vet Research' },

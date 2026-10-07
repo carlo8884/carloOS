@@ -127,7 +127,7 @@ export default function DogArthritisPage() {
               },
               {
                 label: 'Roush JK et al. -- Evaluation of the effects of dietary supplementation with fish oil omega-3 fatty acids on weight bearing in dogs with osteoarthritis',
-                url: 'https://avmajournals.avma.org/doi/10.2460/javma.236.1.67',
+                url: 'https://avmajournals.avma.org/view/journals/javma/236/1/javma.236.1.67.xml',
                 publisher: 'J Am Vet Med Assoc (JAVMA 2010)',
               },
               {
@@ -135,12 +135,7 @@ export default function DogArthritisPage() {
                 url: 'https://www.fda.gov/animal-veterinary',
                 publisher: 'U.S. Food and Drug Administration',
               },
-              {
-                label: 'FDA Librela (bedinvetmab) Approval -- monoclonal antibody for canine osteoarthritis pain',
-                url: 'https://www.fda.gov/animal-veterinary/news-events/fda-approves-first-monoclonal-antibody-treat-pain-associated-osteoarthritis-dogs',
-                publisher: 'U.S. Food and Drug Administration',
-              },
-            ]}
+                          ]}
           />
         </div>
       </ArticleLayout>

@@ -6,8 +6,7 @@ import { ArticleSourcesList } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 
 const SOURCES = [
-  { label: 'Merck Veterinary Manual: Otitis Externa in Dogs and Cats', url: 'https://www.merckvetmanual.com/eye-and-ear/ear-diseases/otitis-externa-in-dogs-and-cats', publisher: 'Merck Vet Manual' },
-  { label: 'ACVIM: Otitis Externa — Diagnosis and Management', url: 'https://www.acvim.org/Portals/0/PDF/consensus/otitis_consensus.pdf', publisher: 'ACVIM' },
+  { label: 'Merck Veterinary Manual: Otitis Externa in Dogs and Cats', url: 'https://www.merckvetmanual.com/ear-disorders/otitis-externa/otitis-externa-in-animals', publisher: 'Merck Vet Manual' },
   { label: 'AVMA: Ear Infections in Dogs (Otitis Externa)', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/common-health-conditions-dogs', publisher: 'AVMA' },
   { label: 'Nuttall T et al. Trends in antimicrobial resistance in canine and feline otitis externa and skin infections. J Small Anim Pract. 2019;60(12):728-739.', publisher: 'JSAP' },
 ]

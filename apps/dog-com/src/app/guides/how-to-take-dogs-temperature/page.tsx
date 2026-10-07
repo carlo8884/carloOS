@@ -333,7 +333,7 @@ export default function HowToTakeDogsTemperaturePage() {
           <ArticleSourcesList
             title="References"
             sources={[
-              { label: 'Routine Health Care of Dogs — Physical Examination and Vital Signs', url: 'https://www.merckvetmanual.com/dog-owners/routine-care-and-breeding-of-dogs/routine-health-care-of-dogs', publisher: 'Merck Veterinary Manual' },
+              { label: 'Routine Health Care of Dogs — Physical Examination and Vital Signs', url: 'https://www.merckvetmanual.com/dog-owners/routine-care-of-dogs/routine-health-care-of-dogs', publisher: 'Merck Veterinary Manual' },
               { label: 'Pet First Aid — Knowing Your Pet’s Normal Vital Signs', url: 'https://www.avma.org/resources-tools/pet-owners/emergencycare', publisher: 'AVMA' },
               { label: 'Fever and Heatstroke in Dogs', url: 'https://www.merckvetmanual.com/dog-owners', publisher: 'Merck Veterinary Manual' },
               { label: 'AAHA Canine Life Stage Guidelines — preventive care and physical assessment', url: 'https://www.aaha.org/aaha-guidelines/', publisher: 'AAHA' },

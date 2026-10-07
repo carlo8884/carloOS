@@ -6,7 +6,7 @@ import { ArticleSourcesList } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 
 const SOURCES = [
-  { label: 'Merck Veterinary Manual: Pancreatitis in Small Animals', url: 'https://www.merckvetmanual.com/digestive-system/the-exocrine-pancreas/pancreatitis-in-small-animals', publisher: 'Merck Vet Manual' },
+  { label: 'Merck Veterinary Manual: Pancreatitis in Small Animals', url: 'https://www.merckvetmanual.com/digestive-system/the-exocrine-pancreas/pancreatitis-in-dogs-and-cats', publisher: 'Merck Vet Manual' },
   { label: 'ACVIM: Consensus Statement on the Diagnosis of Pancreatitis in Dogs and Cats', url: 'https://www.acvim.org', publisher: 'ACVIM' },
   { label: 'AVMA: Pancreatitis in Dogs', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/common-health-conditions-dogs', publisher: 'AVMA' },
   { label: 'Xenoulis PG et al. Serum triglyceride concentrations in Miniature Schnauzers with and without a history of hypertriglyceridemia. J Vet Intern Med. 2011;25(1):20-25.', publisher: 'JVIM' },

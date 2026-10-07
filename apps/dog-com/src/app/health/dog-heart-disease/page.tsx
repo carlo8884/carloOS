@@ -145,11 +145,7 @@ export default function DogHeartDiseasePage() {
 
           <ArticleSourcesList
             sources={[
-              {
-                label: 'BSAVA Manual of Canine and Feline Cardiorespiratory Medicine (2nd ed.) — cardiac disease prevalence in general practice',
-                publisher: 'British Small Animal Veterinary Association',
-              },
-              {
+                            {
                 label: 'ACVIM Consensus Guidelines for the Diagnosis and Treatment of Myxomatous Mitral Valve Disease in Dogs — staging criteria and pimobendan thresholds',
                 url: 'https://onlinelibrary.wiley.com/doi/10.1111/jvim.15488',
                 publisher: 'J Vet Intern Med (Boswood et al., 2019)',
@@ -171,7 +167,7 @@ export default function DogHeartDiseasePage() {
               },
               {
                 label: 'FDA Investigation: Potential Dietary Causes of DCM in Dogs',
-                url: 'https://www.fda.gov/animal-veterinary/news-events/fda-investigation-potential-link-between-certain-diets-and-canine-dilated-cardiomyopathy',
+                url: 'https://www.fda.gov/animal-veterinary/outbreaks-and-advisories/fda-investigation-potential-link-between-certain-diets-and-canine-dilated-cardiomyopathy',
                 publisher: 'U.S. Food and Drug Administration',
               },
             ]}

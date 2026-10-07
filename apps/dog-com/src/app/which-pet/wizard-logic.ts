@@ -133,8 +133,8 @@ export const SPECIES: Record<SpeciesId, SpeciesProfile> = {
     label: 'Small mammal (rabbit, guinea pig, hamster)',
     siteId: null,
     externalReference: {
-      label: 'ASPCA small-mammal care',
-      href: 'https://www.aspca.org/pet-care/small-pet-care',
+      label: 'Merck Veterinary Manual — rabbit care',
+      href: 'https://www.merckvetmanual.com/all-other-pets/rabbits/providing-a-home-for-a-rabbit',
     },
   },
   'bird': {
@@ -142,8 +142,8 @@ export const SPECIES: Record<SpeciesId, SpeciesProfile> = {
     label: 'Bird',
     siteId: null,
     externalReference: {
-      label: 'ASPCA bird-care guide',
-      href: 'https://www.aspca.org/pet-care/bird-care',
+      label: 'Merck Veterinary Manual — bird care',
+      href: 'https://www.merckvetmanual.com/bird-owners/choosing-and-taking-care-of-a-pet-bird/providing-a-home-for-a-bird',
     },
   },
 }
