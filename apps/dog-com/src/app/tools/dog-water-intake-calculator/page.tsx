@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -8,7 +9,6 @@ import {
   combineSchemas,
   SchemaScript,
   FAQAccordion,
-  AffiliateDisclosure,
   CrossPortfolioCard,
   JourneyNext,
   ShopCtas,
@@ -168,7 +168,7 @@ export default function DogWaterIntakeCalculatorPage() {
           Category searches only — not a ranked list, not a diagnosis. */}
       <section id="dog-water-intake-kit" className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <div className="max-w-2xl">
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/heavy+ceramic+pet+water+bowl?s=tools-dog-water-intake", "/go/amazon-brand/dog+water+fountain?s=tools-dog-water-intake", "/go/amazon-brand/dog+travel+water+bottle?s=tools-dog-water-intake", "/go/amazon-brand/kitchen+measuring+cup?s=tools-dog-water-intake"]} />
           <div className="mt-4 rounded-xl border border-brand-border bg-brand-white p-5">
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
               Shop a hydration kit

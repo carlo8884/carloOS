@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -8,7 +9,6 @@ import {
   combineSchemas,
   SchemaScript,
   FAQAccordion,
-  AffiliateDisclosure,
   CrossPortfolioCard,
   ShopCtas,
   JourneyNext,
@@ -181,7 +181,7 @@ export default function DogCalorieCalculatorPage() {
           never href="#" or PLACEHOLDER. Category searches only — not ranked ASINs. */}
       <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <div className="max-w-2xl">
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/measured+dog+food?s=tools-dog-calorie-calculator", "/go/amazon-brand/kitchen+gram+scale?s=tools-dog-calorie-calculator", "/go/amazon-brand/slow+feeder+dog+bowl?s=tools-dog-calorie-calculator", "/go/amazon-brand/interactive+dog+feeder?s=tools-dog-calorie-calculator", "/go/amazon-brand/low+calorie+dog+treats?s=tools-dog-calorie-calculator"]} />
           <div className="mt-4 rounded-xl border border-brand-border bg-brand-white p-5">
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
               Shop portions

@@ -1,5 +1,7 @@
 'use client'
 
+import { HopDisclosure } from '../../../components/HopDisclosure'
+
 /**
  * Dog Age in Human Years Calculator -- /tools/dog-age-calculator
  * Client compute component. Implements the AVMA/AAHA-style banded model.
@@ -15,7 +17,7 @@
  */
 
 import { useMemo, useState } from 'react'
-import { AffiliateDisclosure, ResultMeaning, ToolError, numberFieldError } from '@carloOS/ui'
+import { ResultMeaning, ToolError, numberFieldError } from '@carloOS/ui'
 
 type SizeCategory = 'small' | 'medium' | 'large' | 'giant'
 
@@ -229,7 +231,7 @@ export default function DogAgeCalculator() {
             {shop.heading}
           </p>
           <p className="mt-1 text-sm leading-relaxed text-brand-text-mid">{shop.blurb}</p>
-          <AffiliateDisclosure variant="inline" siteId="dog-com" className="my-3" />
+          <HopDisclosure siteId="dog-com" href={shop.href} />
           <a
             href={shop.href}
             rel="sponsored noopener"

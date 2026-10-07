@@ -1,5 +1,7 @@
 'use client'
 
+import { HopDisclosure } from '../../../components/HopDisclosure'
+
 /**
  * Dog Body Condition Score (BCS) Assessor -- /tools/dog-body-condition-score
  *
@@ -12,7 +14,7 @@
  */
 
 import { useMemo, useState } from 'react'
-import { AffiliateDisclosure, ResultMeaning, ToolError } from '@carloOS/ui'
+import { ResultMeaning, ToolError } from '@carloOS/ui'
 
 interface Option {
   label: string
@@ -233,7 +235,7 @@ export default function DogBCSCalculator() {
             {result.shop.heading}
           </p>
           <p className="mt-1 text-sm leading-relaxed text-brand-text-mid">{result.shop.blurb}</p>
-          <AffiliateDisclosure variant="inline" siteId="dog-com" className="my-3" />
+          <HopDisclosure siteId="dog-com" href={result.shop.href} />
           <a
             href={result.shop.href}
             rel="sponsored noopener"

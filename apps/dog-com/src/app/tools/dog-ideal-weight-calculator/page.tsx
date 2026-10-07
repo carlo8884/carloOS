@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -8,7 +9,6 @@ import {
   combineSchemas,
   SchemaScript,
   FAQAccordion,
-  AffiliateDisclosure,
   ArticleSourcesList,
   CrossPortfolioCard,
   ShopCtas,
@@ -222,7 +222,7 @@ export default function DogIdealWeightCalculatorPage() {
           Category searches only — not a ranked list, not a diagnosis. */}
       <section id="ideal-weight-kit" className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <div className="max-w-2xl">
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/digital+gram+scale+kitchen+pet?s=tools-dog-ideal-weight", "/go/amazon-brand/portion+control+food+scale+dog?s=tools-dog-ideal-weight", "/go/amazon-brand/dog+measuring+tape+body+condition+chart?s=tools-dog-ideal-weight", "/go/amazon-brand/elevated+slow+feeder+bowl+dog?s=tools-dog-ideal-weight", "/go/amazon-brand/puzzle+feeder+dog?s=tools-dog-ideal-weight", "/go/amazon-brand/weight+management+dog+food?s=tools-dog-ideal-weight"]} />
           <div className="mt-4 rounded-xl border border-brand-border bg-brand-white p-5">
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
               Shop a weight-check kit
@@ -326,7 +326,6 @@ export default function DogIdealWeightCalculatorPage() {
               </Link>{' '}
               for the full plan. A weight-management diet can keep a dog full on fewer calories.
             </p>
-            <AffiliateDisclosure variant="inline" siteId="dog-com" className="mb-3 text-2xs" />
             <Link
               href="/reviews/best-dry-dog-food"
               className="inline-block bg-brand-primary text-white font-semibold text-sm px-4 py-2 rounded-md no-underline hover:bg-brand-primary-dark"

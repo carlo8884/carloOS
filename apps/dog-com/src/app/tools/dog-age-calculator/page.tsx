@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -7,7 +8,6 @@ import {
   combineSchemas,
   SchemaScript,
   FAQAccordion,
-  AffiliateDisclosure,
   CrossPortfolioCard,
   ShopCtas,
 } from '@carloOS/ui'
@@ -157,7 +157,7 @@ export default function DogAgeCalculatorPage() {
           Category searches only — not a ranked list, not a diagnosis. */}
       <section id="dog-age-kit" className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <div className="max-w-2xl">
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/puppy+food?s=tools-dog-age", "/go/amazon-brand/puppy+teething+toys?s=tools-dog-age", "/go/amazon-brand/dental+chews+dog?s=tools-dog-age", "/go/amazon-brand/joint+support+dog+treats?s=tools-dog-age", "/go/amazon-brand/dog+id+tag+collar?s=tools-dog-age", "/go/amazon-brand/dog+leash?s=tools-dog-age"]} />
           <div className="mt-4 rounded-xl border border-brand-border bg-brand-white p-5">
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
               Shop by life stage
@@ -210,7 +210,6 @@ export default function DogAgeCalculatorPage() {
               pre-existing conditions are universally excluded — so it&apos;s worth
               understanding the options early.
             </p>
-            <AffiliateDisclosure variant="inline" siteId="dog-com" className="mb-3 text-2xs" />
             <Link
               href="https://vets.co/reviews/best-pet-insurance"
               className="inline-block bg-brand-dark text-white font-semibold text-sm px-4 py-2 rounded-md no-underline hover:bg-brand-dark/90"
