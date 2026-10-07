@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, RelatedLinks, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Parvovirus in Puppies — Signs, Treatment, Prevention | Vets.co", description: "Canine parvovirus is a contagious, life-threatening illness in unvaccinated puppies. Learn the signs, why it is an emergency, and how vaccination prevents it.", path: '/health/parvovirus-in-puppies', type: 'article' })
@@ -72,7 +73,7 @@ export default function ParvoPage() {
           <h2 id="kit">Home cleanup kit</h2>
           <p>Everyday physical supplies that match the prevention-cleanup copy above — an accelerated hydrogen peroxide disinfectant labeled for canine parvovirus on hard surfaces, disposable shoe covers so you do not walk the virus from a contaminated yard or kennel into the house, and a pump sprayer for outdoor soil and concrete. These are cleanup tools, not treatments. They do not kill the virus in a sick puppy, they do not replace hospitalization or the vaccine series, and they do not make a public park safe. Three-percent first-aid hydrogen peroxide (the chocolate-toxicity hop), enzymatic odor cleaners, grocery bleach, IV fluids, anti-nausea medication, and vaccines stay educational copy only. This page does not claim hands-on testing.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/accelerated+hydrogen+peroxide+disinfectant?s=health-parvovirus-in-puppies", "/go/amazon-brand/disposable+shoe+covers?s=health-parvovirus-in-puppies", "/go/amazon-brand/pump+sprayer?s=health-parvovirus-in-puppies"]} />
 
           {/* Money path — live amazon-brand search hops (AHP
               disinfectant / disposable shoe covers / pump
