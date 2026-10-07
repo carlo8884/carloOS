@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import Link from 'next/link'
-import { TableShopLink, RelatedReads, ComparisonFoot, EmailCapture, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, CrossPortfolioCard, RelatedLinks, FAQAccordion, PriceAsOf} from '@carloOS/ui'
+import { TableShopLink, RelatedReads, ComparisonFoot, EmailCapture, QuietPartnerLink, buildMetadata, ReviewCard, QuickPicks, CrossPortfolioCard, RelatedLinks, FAQAccordion, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, buildBreadcrumbSchema, SchemaScript, buildItemListSchema} from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -64,8 +64,10 @@ export default function BestWinterBlanketsPage() {
         </h1>
         <PriceAsOf date="2026-10-03" tone="dark" />
         <HopDisclosure siteId="horses-com" href="/go/amazon-brand/winter+horse+blanket?s=reviews-best-winter-horse-blankets" />
-        <p className="mb-4"><a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" href="/go/amazon-brand/winter+horse+blanket?s=reviews-best-winter-horse-blankets">Browse winter horse blankets on Amazon →</a></p>
-        <PrimaryHop quietUntilTag href='/go/smartpak/rambo-original-turnout?s=reviews-best-winter-horse-blankets' label='Check price of the Horseware Rambo Original on SmartPak' />
+        <div className="mb-4" data-primary-hop="true">
+          <a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" data-shop-placement="hero" href="/go/amazon-brand/winter+horse+blanket?s=reviews-best-winter-horse-blankets">Browse winter horse blankets on Amazon →</a>
+        </div>
+        <QuietPartnerLink tone="dark" href="/go/smartpak/rambo-original-turnout?s=reviews-best-winter-horse-blankets" label="Check price of the Horseware Rambo Original on SmartPak" />
         <EmailCapture
           variant="inline"
           siteId="horses-com"
