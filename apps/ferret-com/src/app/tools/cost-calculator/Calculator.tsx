@@ -318,7 +318,7 @@ export default function CostCalculator() {
         <span className="font-semibold">Budget for illness separately.</span> This estimate covers routine
         ownership only. Ferrets are prone to conditions whose treatment is not optional — adrenal disease,
         insulinoma, and gastrointestinal blockages frequently run into four figures per episode. Most
-        exotic-pet veterinarians advise keeping a dedicated emergency fund (commonly $1,000–$3,000) or
+        exotic-pet veterinarians advise keeping a dedicated emergency fund (commonly see current price) or
         carrying insurance. See our <a href="/health" className="underline">ferret health</a> reference.
       </div>
 

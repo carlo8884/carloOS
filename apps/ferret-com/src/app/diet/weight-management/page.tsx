@@ -152,7 +152,7 @@ export default function WeightManagementPage() {
             ]}
             pros={['Gram precision catches small trends', 'Tare helps with a moving ferret', 'Inexpensive and long-lasting', 'Doubles as a kitchen scale']}
             cons={['Small platform — pair with a container', 'Cheap units vary in accuracy']}
-            price="$10–20"
+            price="see current price"
             priceNote="dated 2026-06-01."
             ctaText="Find a Digital Gram Scale on Amazon"
             ctaHref="/go/amazon-brand/digital+gram+scale+kitchen+pet?s=diet-weight-management"

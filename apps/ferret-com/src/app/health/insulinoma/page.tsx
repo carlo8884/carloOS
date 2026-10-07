@@ -178,7 +178,7 @@ export default function FerretInsulinomaPage() {
               </h3>
               <p>Those figures are typical US ranges dated 2026-05-30.</p>
               <p className="text-xs text-white/60 mb-3 leading-relaxed">
-                Insulinoma surgery + lifelong management runs $2,000–$5,000.
+                Insulinoma surgery + lifelong management runs see current price.
                 Exotic-pet insurance covers it — but ONLY if enrolled before
                 symptoms appear.
               </p>

@@ -544,7 +544,7 @@ export default function FerretLitterTrainingPage() {
             ]}
             pros={['Low entrance', 'Locks onto a cage', 'Unscrews for cleaning', 'Check shape and size on the listing']}
             cons={['Splashes can still reach the wall behind a heavily-used pan', 'Plastic surface shows wear in heavy households']}
-            price="$10–18"
+            price="see current price"
             priceNote="dated 2026-05-31."
             ctaText="Find Marshall lock-on litter pans"
             ctaHref="/go/marshall/lock+on+litter+pan?s=care-litter-training"
@@ -568,7 +568,7 @@ export default function FerretLitterTrainingPage() {
             ]}
             pros={['Lowest dust profile in widely-stocked litters', 'No ingestion-obstruction risk', 'No respiratory-irritant aromatics', 'Strong odour control', 'Available in most US chain pet retail']}
             cons={['Pricier per pound than kiln-dried wood pellet', 'Larger bag is heavy to carry']}
-            price="$12–25 / 15-30 lb"
+            price="see current price / 15-30 lb"
             priceNote="dated 2026-05-31."
             ctaText="Open the recycled paper-pellet search."
             ctaHref="/go/chewy-brand/recycled+paper+pellet+litter+non+clumping?s=care-litter-training"

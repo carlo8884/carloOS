@@ -176,8 +176,8 @@ export default function FerretAdrenalDiseasePage() {
               </h3>
               <p className="text-xs text-white/60 mb-3 leading-relaxed">Those surgery and implant figures are typical US clinic ranges dated 2026-05-31.</p>
               <p className="text-xs text-white/60 mb-3 leading-relaxed">
-                Adrenal surgery runs $1,500–$3,500; deslorelin implants add
-                $400-600/year. Exotic-pet insurance covers it — but ONLY if
+                Adrenal surgery runs see current price; deslorelin implants add
+                see current price. Exotic-pet insurance covers it — but ONLY if
                 enrolled before symptoms appear.
               </p>
               <a
@@ -377,11 +377,11 @@ export default function FerretAdrenalDiseasePage() {
                 </tr>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 font-medium">Deslorelin implant cost (US)</td>
-                  <td className="p-3">~$200-450 per implant cycle (varies by region)</td>
+                  <td className="p-3">see current price per implant cycle (varies by region)</td>
                 </tr>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 font-medium">Adrenalectomy cost (US)</td>
-                  <td className="p-3">~$800-2,500 depending on laterality and complications</td>
+                  <td className="p-3">see current price depending on laterality and complications</td>
                 </tr>
                 <tr>
                   <td className="p-3 font-medium">Urgency</td>
@@ -677,7 +677,7 @@ export default function FerretAdrenalDiseasePage() {
             ]}
             pros={['Warmth for ferrets with alopecia-reduced coat', 'Satisfies burrowing instinct', 'Machine washable', 'Low cost per unit']}
             cons={['Not a treatment — see your exotic vet', 'Some ferrets chew fleece', 'Replace regularly as fabric thins']}
-            price="$10–18"
+            price="see current price"
             priceNote="dated 2026-05-31."
             ctaText="Find ferret fleece sleep sack hammocks on Amazon"
             ctaHref="/go/chewy-brand/ferret+fleece+sleep+sack+hammock?s=health-adrenal-disease"

@@ -98,7 +98,7 @@ const FAQS = [
   {
     question: 'How much do enrichment supplies cost?',
     answer:
-      "The starter list — a tunnel or two, a dig box, a few rotated toys, a food puzzle — runs roughly $40-80. The ongoing cost is small because durable plastic and rubber toys last for years. The bigger cost is time: ferret-proofing a room is a 1-2 hour project per room, and supervising out-of-cage time is the major daily commitment.",
+      "The starter list — a tunnel or two, a dig box, a few rotated toys, a food puzzle — runs roughly see current price. The ongoing cost is small because durable plastic and rubber toys last for years. The bigger cost is time: ferret-proofing a room is a 1-2 hour project per room, and supervising out-of-cage time is the major daily commitment.",
   },
 ]
 const faqSchema = buildFAQSchema({ questions: FAQS })
@@ -478,37 +478,37 @@ export default function FerretExerciseEnrichmentPage() {
               <tbody>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 font-medium">Tunnel set (3-tunnel starter)</td>
-                  <td className="p-3">$15-30</td>
+                  <td className="p-3">see current price</td>
                   <td className="p-3">2-5 years</td>
                 </tr>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 font-medium">Dig box + fill</td>
-                  <td className="p-3">$10-20</td>
+                  <td className="p-3">see current price</td>
                   <td className="p-3">Tote: years; fill: rotate weekly</td>
                 </tr>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 font-medium">Ball pit (tote + balls)</td>
-                  <td className="p-3">$15-30</td>
+                  <td className="p-3">see current price</td>
                   <td className="p-3">Several years</td>
                 </tr>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 font-medium">Hard rubber toy assortment</td>
-                  <td className="p-3">$10-25</td>
+                  <td className="p-3">see current price</td>
                   <td className="p-3">Years</td>
                 </tr>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 font-medium">Snuffle mat / puzzle feeder</td>
-                  <td className="p-3">$8-20</td>
+                  <td className="p-3">see current price</td>
                   <td className="p-3">Years</td>
                 </tr>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 font-medium">Ferret-proofing supplies (foam board, hardware cloth)</td>
-                  <td className="p-3">$20-50 one-time</td>
+                  <td className="p-3">see current price one-time</td>
                   <td className="p-3">Indefinite</td>
                 </tr>
                 <tr>
                   <td className="p-3 font-medium">Total starter</td>
-                  <td className="p-3">~$80-175</td>
+                  <td className="p-3">see current price</td>
                   <td className="p-3">Most items last years</td>
                 </tr>
               </tbody>
@@ -551,7 +551,7 @@ export default function FerretExerciseEnrichmentPage() {
             ]}
             pros={['Opens the current Marshall play-tunnel search', 'Check whether the listing stores flat']}
             cons={['Fabric can wear in a heavy-chewer household', 'Check the listing for any internal wire before you buy']}
-            price="$15–30"
+            price="see current price"
             priceNote="dated 2026-05-31."
             ctaText="Find Marshall play tunnels"
             ctaHref="/go/marshall/ferret+play+tunnel?s=care-exercise-and-enrichment"
@@ -573,7 +573,7 @@ export default function FerretExerciseEnrichmentPage() {
             ]}
             pros={['Satisfies the strongest natural drive in a controlled way', 'Cheap and durable container', 'Fill is rotatable for novelty without buying new toys']}
             cons={['Fill spills are inevitable — keep near a vacuum-friendly surface', 'Rice fill needs replacement when it cracks down to dust']}
-            price="$10–25 starter"
+            price="see current price starter"
             priceNote="dated 2026-05-31."
             ctaText="Find ferret-safe ball-pit fill on Amazon"
             ctaHref="/go/chewy-brand/small+pet+ball+pit+balls?s=care-exercise-and-enrichment"
