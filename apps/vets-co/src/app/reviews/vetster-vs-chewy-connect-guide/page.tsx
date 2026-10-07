@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import Link from 'next/link'
 import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
 
@@ -50,6 +51,7 @@ export default function VetsterVsChewyConnectGuidePage() {
         readTime: '6 min',
       }}
       heroHop={<PrimaryHop href="/go/vetster/telehealth?s=reviews-vetster-vs-connect-guide" label="Visit Vetster" />}
+      heroExtra={<HopDisclosure siteId="vets-co" href="/go/vetster/telehealth?s=reviews-vetster-vs-connect-guide" />}
       breadcrumbs={[
         { name: 'Home', href: '/' },
         { name: 'Reviews', href: '/reviews' },

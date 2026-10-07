@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
-import { TableShopLink, ComparisonFoot, EmailCapture, PrimaryHop, buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ReviewCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { HopDisclosure } from '../../../components/HopDisclosure'
+import { TableShopLink, ComparisonFoot, EmailCapture, PrimaryHop, buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ReviewCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 
@@ -20,6 +21,7 @@ export default function WhatCoversPage() {
       <SchemaScript schema={schema} />
       <ArticleLayout siteId="vets-co"
         heroHop={<PrimaryHop href='/go/embrace/home?s=insurance-what-pet-insurance-covers' label='Get an Embrace quote →' holdWithoutPartnerId />}
+        heroExtra={<HopDisclosure siteId="vets-co" href="/go/embrace/home?s=insurance-what-pet-insurance-covers" />}
         hero={{ title: "What Pet Insurance Covers (and Doesn't)", subtitle: 'Most pet insurance sold today is accident-and-illness coverage, which pays toward unexpected injuries and diseases — but every policy has exclusions, and the differences between plans live in the details. Knowing what is typically covered, what is usually excluded, and where plans diverge lets you choose coverage that fits your pet.', category: 'Insurance Guide', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '8 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Insurance', href: '/insurance' }, { name: 'What It Covers', href: '/insurance/what-pet-insurance-covers' }]}
         sidebar={<>
@@ -106,7 +108,7 @@ export default function WhatCoversPage() {
             claim hands-on testing.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/3+tab+dividers?s=insurance-what-pet-insurance-covers", "/go/amazon-brand/assorted+highlighter+set?s=insurance-what-pet-insurance-covers", "/go/amazon-brand/removable+page+flags?s=insurance-what-pet-insurance-covers"]} />
 
           {/* Money path — live amazon-brand search hops
               (3-tab dividers /
@@ -168,7 +170,7 @@ export default function WhatCoversPage() {
 
           <h2 id="quote">Insurers With Different Coverage Models</h2>
           <p>What a plan covers — and whether wellness or preventive care can be added — varies by insurer. The two below take different approaches to that question; for the full side-by-side, see our <a href="/reviews/best-pet-insurance">best pet insurance comparison</a>. Always read the policy&apos;s coverage and exclusions before enrolling.</p>
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/embrace/home?s=insurance-what-pet-insurance-covers", "/go/lemonade/home?s=insurance-what-pet-insurance-covers"]} />
           <ReviewCard
             id="embrace"
             badge="Wellness Add-On"
@@ -241,7 +243,7 @@ export default function WhatCoversPage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-06" />
+          <ComparisonFoot updated="2026-10-07" />
 
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />

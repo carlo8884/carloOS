@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
+import { HopDisclosure } from '../../components/HopDisclosure'
 import Link from 'next/link'
-import { TableShopLink, RelatedReads, ComparisonFoot, EmailCapture, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, Breadcrumb, AffiliateDisclosure, FAQAccordion, ShopCtas, PriceAsOf } from '@carloOS/ui'
+import { TableShopLink, RelatedReads, ComparisonFoot, EmailCapture, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, Breadcrumb, FAQAccordion, ShopCtas, PriceAsOf } from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { HubMasthead } from '../../components/HubMasthead'
 
@@ -39,7 +40,12 @@ export default function TelehealthPage() {
         manifestKey="vets-co:category-telehealth"
         fallbackKey="vets-co:hero"
         imageAlt="A laptop and notepad on a desk, set up for a remote consultation"
-        hop={<PrimaryHop href='/go/vetster/telehealth?s=telehealth' label='Visit Vetster →' />}
+        hop={
+          <>
+            <PrimaryHop href='/go/vetster/telehealth?s=telehealth' label='Visit Vetster →' />
+            <HopDisclosure siteId="vets-co" href="/go/vetster/telehealth?s=telehealth" noteClassName="mt-3 mb-4 text-xs leading-relaxed text-white/80" />
+          </>
+        }
         primaryCta={{ href: '#vetster', label: 'See the video consult' }}
         secondaryCta={{ href: '/find-a-vet', label: 'Find an in-person vet' }}
       />
@@ -106,7 +112,7 @@ export default function TelehealthPage() {
                 Category searches only — not a ranked list, not a diagnosis.
                 Consult links above stay on their existing paths; this block does not re-rank Vetster / AskVet / Chewy. */}
             <div id="telehealth-prep-kit" className="mt-8 mb-8">
-              <AffiliateDisclosure variant="inline" siteId="vets-co" />
+              <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/pet+first+aid+kit?s=telehealth", "/go/amazon-brand/digital+pet+thermometer?s=telehealth", "/go/amazon-brand/digital+pet+scale?s=telehealth", "/go/amazon-brand/pet+calming+aid?s=telehealth", "/go/amazon-brand/pet+recovery+cone?s=telehealth"]} />
               <div className="mt-4 rounded-xl border border-brand-border bg-brand-surface p-5">
                 <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
                   Shop a telehealth prep kit
@@ -175,7 +181,7 @@ export default function TelehealthPage() {
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-06" />
+              <ComparisonFoot updated="2026-10-07" />
             </div>
             <h2 className="font-display text-2xl font-bold text-brand-dark mt-12 mb-6">Frequently Asked Questions</h2>
             <p>Those figures are typical US ranges dated 2026-10-05.</p>

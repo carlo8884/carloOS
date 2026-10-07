@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
-import { TableShopLink, ComparisonFoot, EmailCapture, PrimaryHop, buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ReviewCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { HopDisclosure } from '../../../components/HopDisclosure'
+import { TableShopLink, ComparisonFoot, EmailCapture, PrimaryHop, buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ReviewCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 
@@ -20,6 +21,7 @@ export default function DeductiblesPage() {
       <SchemaScript schema={schema} />
       <ArticleLayout siteId="vets-co"
         heroHop={<PrimaryHop href='/go/healthy-paws/home?s=insurance-deductibles-reimbursement' label='Get a Healthy Paws quote →' holdWithoutPartnerId />}
+        heroExtra={<HopDisclosure siteId="vets-co" href="/go/healthy-paws/home?s=insurance-deductibles-reimbursement" />}
         hero={{ title: 'Deductibles and Reimbursement', subtitle: 'The deductible, reimbursement rate, and annual limit together determine what a pet insurance policy actually costs you when you file a claim. These three settings trade off against your monthly premium, and understanding how they interact lets you tune a policy to your budget and risk tolerance rather than guessing.', category: 'Insurance Guide', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '8 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Insurance', href: '/insurance' }, { name: 'Deductibles & Reimbursement', href: '/insurance/deductibles-reimbursement' }]}
         sidebar={<>
@@ -106,7 +108,7 @@ export default function DeductiblesPage() {
             testing.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/quad+ruled+graph+pad?s=insurance-deductibles-reimbursement", "/go/amazon-brand/paid+rubber+stamp?s=insurance-deductibles-reimbursement", "/go/amazon-brand/handheld+tally+counter?s=insurance-deductibles-reimbursement"]} />
 
           {/* Money path — live amazon-brand search hops
               (quad-ruled graph pad /
@@ -157,8 +159,6 @@ export default function DeductiblesPage() {
               file-jacket hop, they are not a
               financing-brand or insurance-brand hop,
               and they do not replace a veterinarian.
-              Vets.co earns a commission on qualifying
-              purchases at no extra cost to you.
             </p>
             <div className="flex flex-col gap-3">
               <ShopCtas
@@ -178,7 +178,7 @@ export default function DeductiblesPage() {
 
           <h2 id="quote">Model the Levers on Real Quotes</h2>
           <p>The fastest way to see how deductible, reimbursement rate, and annual limit move your premium is to run the same pet through a couple of carriers and adjust the sliders. The two below let you do that; for the full side-by-side, see our <a href="/reviews/best-pet-insurance">best pet insurance comparison</a>.</p>
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/healthy-paws/home?s=insurance-deductibles-reimbursement", "/go/pets-best/home?s=insurance-deductibles-reimbursement"]} />
           <ReviewCard
             id="healthy-paws"
             badge="Simple Levers"
@@ -251,7 +251,7 @@ export default function DeductiblesPage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-06" />
+          <ComparisonFoot updated="2026-10-07" />
 
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
