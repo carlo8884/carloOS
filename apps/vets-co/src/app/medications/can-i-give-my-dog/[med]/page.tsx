@@ -174,7 +174,7 @@ export default async function CanIGiveMyDogMedPage({ params }: PageProps) {
         </p>
 
         <h2 id="faq">Frequently asked questions</h2>
-        <FAQAccordion items={faqs} />
+        <FAQAccordion items={faqs} includeSchema={false} />
 
         {/* Money path — live amazon-brand kitchen hops
             matching on-page verdict / key-caution /

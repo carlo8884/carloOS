@@ -199,6 +199,7 @@ export default function VetsFrenchBulldogHealthPage() {
         <FAQAccordion
           items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))}
           allowMultiple
+          includeSchema={false}
         />
       </div>
     </ArticleLayout>

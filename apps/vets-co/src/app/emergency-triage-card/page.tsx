@@ -478,7 +478,7 @@ This is a triage aid, not a diagnosis. When unsure, call your vet or the nearest
             How this works
           </h2>
           <p>Those figures are typical US ranges dated 2026-10-04.</p>
-          <FAQAccordion items={FAQS} />
+          <FAQAccordion items={FAQS} includeSchema={false} />
 
           <div className="mt-12 pt-8 border-t border-brand-border text-sm text-brand-text-mid">
             <p className="mb-2">Related reference on Vets.co:</p>
