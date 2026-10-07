@@ -14,6 +14,7 @@
  * established OTTB retraining principles.
  */
 
+import { HopDisclosure } from '../../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -24,7 +25,6 @@ import {
   RelatedLinks,
   TableOfContents,
   FAQAccordion,
-  AffiliateDisclosure,
   ShopCtas,
   buildArticleSchema,
   buildFAQSchema,
@@ -179,7 +179,7 @@ export default function OttbInTrailAndPleasurePage() {
             <li>American Association of Equine Practitioners (AAEP). Pre-purchase examination guidelines. aaep.org.</li>
           </ol>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href="/go/amazon-brand/horse+reins?s=ottb-in-trail-and-pleasure" />
 
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">

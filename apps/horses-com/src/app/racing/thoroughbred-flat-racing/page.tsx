@@ -10,6 +10,7 @@
  * Authorities: The Jockey Club, AAEP
  */
 
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import {
   buildMetadata,
@@ -19,7 +20,6 @@ import {
   RelatedLinks,
   TableOfContents,
   FAQAccordion,
-  AffiliateDisclosure,
   ShopCtas,
   buildArticleSchema,
   SchemaScript,
@@ -189,7 +189,7 @@ export default function ThoroughbredFlatRacingPage() {
             <li>Racing Medication and Testing Consortium (RMTC). Uniform medication guidelines. rmtcnet.com.</li>
           </ol>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href="/go/amazon-brand/horse+driving+harness?s=racing-thoroughbred-flat-racing" />
 
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">

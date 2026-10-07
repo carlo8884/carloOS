@@ -11,6 +11,7 @@
  * Byline: Horses.com Editorial (no fabricated credentials).
  */
 
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import {
   ArticleLayout,
   ArticleByline,
@@ -18,7 +19,6 @@ import {
   RelatedLinks,
   TableOfContents,
   FAQAccordion,
-  AffiliateDisclosure,
   ShopCtas,
   buildArticleSchema,
   buildFAQSchema,
@@ -164,7 +164,7 @@ export function NewcomerSpokePage({ spoke }: { spoke: NewcomerSpoke }) {
 
           {spoke.slug === 'how-to-read-a-race-card' ? (
             <>
-              <AffiliateDisclosure variant="inline" siteId="horses-com" />
+              <HopDisclosure siteId="horses-com" href="/go/amazon-brand/daily+racing+form?s=racing-for-newcomers-how-to-read-a-race-card" />
 
               <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
@@ -183,7 +183,7 @@ export function NewcomerSpokePage({ spoke }: { spoke: NewcomerSpoke }) {
 
           {spoke.slug === 'a-day-at-the-races' ? (
             <>
-              <AffiliateDisclosure variant="inline" siteId="horses-com" />
+              <HopDisclosure siteId="horses-com" href="/go/amazon-brand/horse+racing+binoculars?s=racing-for-newcomers-a-day-at-the-races" />
 
               <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
@@ -202,7 +202,7 @@ export function NewcomerSpokePage({ spoke }: { spoke: NewcomerSpoke }) {
 
           {spoke.slug === 'understanding-racing-silks' ? (
             <>
-              <AffiliateDisclosure variant="inline" siteId="horses-com" />
+              <HopDisclosure siteId="horses-com" href="/go/amazon-brand/jockey+racing+silks?s=racing-for-newcomers-understanding-racing-silks" />
 
               <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">

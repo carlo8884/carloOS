@@ -12,6 +12,7 @@
  * Byline: Horses.com Editorial (no fabricated credentials, no AI humans).
  */
 
+import { HopDisclosure } from '../../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import {
   buildMetadata,
@@ -20,7 +21,6 @@ import {
   RelatedLinks,
   TableOfContents,
   FAQAccordion,
-  AffiliateDisclosure,
   ShopCtas,
   buildArticleSchema,
   combineSchemas,
@@ -191,7 +191,7 @@ export default function OwnerRolePage() {
             </p>
           </div>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href="/go/amazon-brand/jockey+racing+silks?s=racing-roles-owner" />
 
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">

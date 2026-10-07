@@ -23,9 +23,10 @@
  * under saddle, discipline aptitude).
  */
 
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { PremiumMasthead } from '@/components/PremiumMasthead'
 
 export const metadata: Metadata = buildMetadata({
@@ -215,7 +216,7 @@ export default function OttbSecondCareersHubPage() {
         </div>
 
         <div className="max-w-content-wide mt-6">
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href="/go/amazon-brand/horse+reins?s=ottb-second-careers-hub" />
         </div>
 
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-content-wide">

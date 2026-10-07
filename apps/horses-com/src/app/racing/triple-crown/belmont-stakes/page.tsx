@@ -14,6 +14,7 @@
  * Editorial"; facts sourced to NYRA and racing's governing bodies.
  */
 
+import { HopDisclosure } from '../../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import {
   buildMetadata,
@@ -22,7 +23,6 @@ import {
   RelatedLinks,
   TableOfContents,
   FAQAccordion,
-  AffiliateDisclosure,
   ShopCtas,
   buildArticleSchema,
   combineSchemas,
@@ -200,7 +200,7 @@ export default function BelmontStakesPage() {
             </p>
           </div>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href="/go/amazon-brand/horse+blanket?s=triple-crown-belmont-stakes" />
 
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">

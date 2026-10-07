@@ -13,9 +13,10 @@
  * Byline: Horses.com Editorial (no fabricated credentials, no AI humans).
  */
 
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { PremiumMasthead } from '@/components/PremiumMasthead'
 import { racingRoleSpokes } from '@/data/racing-roles'
 
@@ -174,7 +175,7 @@ export default function RacingRolesHubPage() {
         <h2 id="kit" className="font-display font-bold text-brand-dark text-xl mb-4 max-w-content-wide">Related supplies</h2>
 
         <div className="max-w-content-wide mt-6">
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href="/go/amazon-brand/horse+saddle?s=racing-roles-hub" />
         </div>
 
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-content-wide">

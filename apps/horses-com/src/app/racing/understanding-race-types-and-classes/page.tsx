@@ -9,6 +9,7 @@
  * Authorities: The Jockey Club, state racing commissions
  */
 
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import {
   buildMetadata,
@@ -18,7 +19,6 @@ import {
   RelatedLinks,
   TableOfContents,
   FAQAccordion,
-  AffiliateDisclosure,
   ShopCtas,
   buildArticleSchema,
   SchemaScript,
@@ -242,7 +242,7 @@ export default function RaceTypesAndClassesPage() {
             <li>National Thoroughbred Racing Association (NTRA). Rules and conditions reference. ntra.com.</li>
           </ol>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href="/go/amazon-brand/horse+saddle?s=racing-understanding-race-types" />
 
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
