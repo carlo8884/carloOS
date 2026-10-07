@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -126,7 +127,7 @@ export default function MartingalesBreastplatesPage() {
           <h2 id="misuse">Use and Misuse</h2>
           <p>Martingales are sometimes reached for to force a horse&apos;s head down or to mask resistance, which is misuse -- a too-tight or wrongly fitted martingale restricts the horse, causes discomfort and tension, and can be dangerous if it limits the head when the horse needs to balance (for example over a fence or on landing). Head-carriage problems usually stem from training, pain, fit, or the rider&apos;s hands, and addressing those is the real fix. Used correctly and at the right length, a martingale is a safety limit, and a breastplate a security aid -- not substitutes for schooling.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href="/go/amazon-brand/horse+martingale?s=martingales" />
 
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">

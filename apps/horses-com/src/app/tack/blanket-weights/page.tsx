@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -126,7 +127,7 @@ export default function BlanketWeightsPage() {
           <h2 id="choosing">Choosing the Weight</h2>
           <p>Match the fill to the temperature, the horse&apos;s coat and condition, and whether it is clipped -- a fully clipped horse in hard cold may need a heavyweight, while an unclipped, sheltered, well-fed horse may need only a no-fill waterproof or no rug at all. Watch the horse rather than the thermometer alone: a horse warm and dry under its rug, neither sweating nor shivering, is rugged about right. Over-rugging is as harmful as under-rugging, so check daily and adjust. See the blanketing guide for the broader decision of whether to rug at all.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href="/go/amazon-brand/waterproof+horse+turnout+rug?s=blanket-weights" />
 
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">

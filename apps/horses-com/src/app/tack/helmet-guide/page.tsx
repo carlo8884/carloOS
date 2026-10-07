@@ -1,6 +1,7 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import { HubMoneyLinks } from '@carloOS/ui'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, AffiliateDisclosure, ShopCtas, StockImage, TableShopLink, ComparisonFoot, EmailCapture } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, ShopCtas, StockImage, TableShopLink, ComparisonFoot, EmailCapture } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -141,7 +142,7 @@ export default function HelmetGuidePage() {
           <h2 id="picks">Certified Helmet Picks</h2>
           <p>The following are widely-stocked, certified equestrian helmets across the common price tiers. Certification and correct fit matter far more than brand or price — any helmet below must be tried on and fitted to the individual head before it protects. This is a documented-spec comparison drawing on standard US equestrian retail; this page does not claim hands-on testing, and no helmet here is endorsed over a fitter&apos;s professional measurement.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href={["/go/ridingwarehouse/troxel-spirit-helmet?s=tack-helmet-guide", "/go/dover/ovation-deluxe-schooler-helmet?s=tack-helmet-guide", "/go/ridingwarehouse/charles-owen-ayr8-plus-helmet?s=tack-helmet-guide", "/go/amazon-brand/troxel+spirit+riding+helmet?s=helmet-guide"]} />
 
 
           <ReviewCard
@@ -245,7 +246,7 @@ export default function HelmetGuidePage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-06" />
+          <ComparisonFoot updated="2026-10-07" />
 
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">

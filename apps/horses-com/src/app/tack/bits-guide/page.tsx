@@ -1,6 +1,7 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import { HubMoneyLinks } from '@carloOS/ui'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas, StockImage } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas, StockImage } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -130,7 +131,7 @@ export default function BitsGuidePage() {
           <h2 id="choosing">Choosing Humanely</h2>
           <p>The guiding principle is that severity lives in the hand, not only the bit -- a mild snaffle can be cruel in rough hands and a curb kind in educated ones. Many competition rules require or restrict particular bits by discipline and level (snaffles for lower-level dressage, for example), so check the rulebook. Reaching for a stronger bit to fix a problem is usually a mistake: training, fit, dental health, and rider hands address the root cause, whereas a harsher bit masks it and risks the horse&apos;s trust and comfort.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href="/go/amazon-brand/horse+snaffle+bit?s=bits-guide" />
 
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
