@@ -21,6 +21,7 @@ export function isCostSentence(line) {
   const s = line.trim()
   if (!PRICE.test(s) || !CARE.test(s)) return false
   if (s.startsWith('//') || s.startsWith('*') || s.startsWith('/*') || s.startsWith('{/*')) return false
+  if (/\bExample:/.test(s)) return false
   if (SKIP.test(s)) return false
   if (/^(text|name|description):/.test(s)) return false
   return true

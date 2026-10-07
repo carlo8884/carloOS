@@ -13,7 +13,7 @@ const FAQS = [
   { question: 'What health problems do Bernese Mountain Dogs have?', answer: 'Cancer accounts for roughly 50% of Berner deaths. Histiocytic sarcoma is dramatically overrepresented in the breed, alongside elevated rates of mast cell tumors, lymphoma, and osteosarcoma. Hip and elbow dysplasia are also common. Every new lump on a Berner warrants a fine needle aspirate, and annual exams with lymph node palpation from age 5 are appropriate — build a surveillance plan with your veterinarian.' },
   { question: 'Are Bernese Mountain Dogs good family dogs?', answer: 'Temperamentally, yes — Berners are characteristically gentle, loyal, and calm, and they are among the most loved family breeds. The main considerations are their size (70-115 lbs), high joint-disease rates that require lean weight management, and the breed\'s short, cancer-prone lifespan, which prospective owners should understand before committing.' },
   { question: 'Why do so many Bernese Mountain Dogs get cancer?', answer: 'The genetic basis is still being studied. The breed\'s founder effect — a small founding population in Switzerland — likely concentrates cancer-predisposing genetic variants, producing the multi-cancer predisposition behind the roughly 50% cancer mortality rate. The Bernese Mountain Dog Club of America funds ongoing breed health research into histiocytic sarcoma genetics.' },
-  { question: 'Is pet insurance worth it for a Bernese Mountain Dog?', answer: 'Given the breed\'s documented cancer predisposition, the cost-benefit calculation is strongly positive — a histiocytic sarcoma workup and treatment can cost $5,000-20,000. Insurance should be purchased before any condition develops, ideally before 8 weeks of age, and compared specifically on cancer, specialist, and oncology coverage.' },
+  { question: 'Is pet insurance worth it for a Bernese Mountain Dog?', answer: 'Given the breed\'s documented cancer predisposition, the cost-benefit calculation is strongly positive — a histiocytic sarcoma workup and treatment is often a very large bill. Ask your veterinarian for an estimate. Insurance should be purchased before any condition develops, ideally before 8 weeks of age, and compared specifically on cancer, specialist, and oncology coverage.' },
 ]
 const combinedSchema = combineSchemas(schema, buildFAQSchema({ questions: FAQS }))
 
@@ -67,8 +67,8 @@ export default function BerneseMountainDogPage() {
         <p>Bernese Mountain Dogs have high rates of hip and elbow dysplasia — compounded by their significant body weight. <a href="https://ofa.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">OFA</a> clearances on both parents are a minimum baseline for responsible breeding. Elbow dysplasia in Berners is particularly common — the elbows should be radiographed and OFA-evaluated in addition to hips. Management follows the standard protocol for large breed joint disease: lean weight, fish oil, joint supplementation, NSAIDs when symptomatic, surgical options for severe cases.</p>
 
         <h2>Pet Insurance — Get It at 8 Weeks</h2>
-        <p>Typical range, not a quote. Those figures are typical US ranges dated 2026-06-11.</p>
-        <p>Pet insurance for Bernese Mountain Dogs should be purchased before the dog is 8 weeks old — ideally before any wellness visit that might create a pre-existing condition record. Given the breed's cancer predisposition and short lifespan, the cost-benefit calculation on pet insurance is strongly positive. A histiocytic sarcoma workup, treatment, and oncology visits can cost $5,000–20,000. Insurance that covers this — purchased before any condition develops — changes the financial reality of managing a breed-specific cancer. Compare policies specifically for cancer coverage, specialist referral coverage, and oncology treatment limits.</p>
+        <p>Costs vary by clinic and region. Ask your veterinarian for an estimate.</p>
+        <p>Pet insurance for Bernese Mountain Dogs should be purchased before the dog is 8 weeks old — ideally before any wellness visit that might create a pre-existing condition record. Given the breed's cancer predisposition and short lifespan, the cost-benefit calculation on pet insurance is strongly positive. A histiocytic sarcoma workup, treatment, and oncology visits are often a very large bill. Ask your veterinarian for an estimate. Insurance that covers this — purchased before any condition develops — changes the financial reality of managing a breed-specific cancer. Compare policies specifically for cancer coverage, specialist referral coverage, and oncology treatment limits.</p>
 
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
@@ -85,7 +85,7 @@ export default function BerneseMountainDogPage() {
         </div>
 
         <h2>Frequently Asked Questions</h2>
-        <p>Typical range, not a quote. Those figures are typical US ranges dated 2026-06-11.</p>
+        <p>Costs vary by clinic and region. Ask your veterinarian for an estimate.</p>
         <FAQAccordion items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
       </div>
     </ArticleLayout>

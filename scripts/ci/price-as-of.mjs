@@ -45,6 +45,8 @@ function priceLineDates(rel) {
     const code = line.slice(line.indexOf(')') + 1)
     const trimmed = code.trim()
     if (trimmed.startsWith('//') || trimmed.startsWith('*') || trimmed.startsWith('/*') || trimmed.startsWith('{/*')) continue
+    // Teaching examples keep their dollars and carry no price stamp.
+    if (/\bExample:/.test(code)) continue
     if (!priceRe.test(code)) continue
     const date = line.match(/(\d{4}-\d{2}-\d{2})/)
     if (date) dates.push(date[1])

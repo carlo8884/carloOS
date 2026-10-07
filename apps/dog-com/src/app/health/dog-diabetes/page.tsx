@@ -40,8 +40,8 @@ export default function DogDiabetesPage() {
           <div className="bg-brand-dark rounded-lg p-5 mb-4">
             <div className="text-xs uppercase tracking-wide text-brand-primary mb-1 font-bold">Diabetes + Insurance</div>
             <h3 className="font-display text-base font-bold text-brand-white mb-2">Insulin + monitoring is forever</h3>
-            <p className="text-xs text-white/60 mb-3 leading-relaxed">Typical range, not a quote. Those monthly figures are typical US clinic ranges dated 2026-05-30.</p>
-            <p className="text-xs text-white/60 mb-3 leading-relaxed">Diabetic management — insulin, syringes, glucose curves, recheck bloodwork — runs $100-$300/month for life. Insurance with no chronic-claim reset (Trupanion-style) is purpose-built for this.</p>
+            <p className="text-xs text-white/60 mb-3 leading-relaxed">Typical range, not a quote. Costs vary by clinic and region. Ask your veterinarian for an estimate.</p>
+            <p className="text-xs text-white/60 mb-3 leading-relaxed">Diabetic management — insulin, syringes, glucose curves, and recheck bloodwork — is an ongoing bill for life. Ask your veterinarian for an estimate. Insurance with no chronic-claim reset (Trupanion-style) is purpose-built for this.</p>
             <a href={crossSiteHref('vets-co', '/reviews/best-pet-insurance')} className="inline-block text-xs font-bold text-brand-primary hover:underline">Compare pet insurance →</a>
           </div>
           <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />

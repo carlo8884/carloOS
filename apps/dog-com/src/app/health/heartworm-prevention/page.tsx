@@ -10,11 +10,13 @@ const SOURCES = [
   { label: 'CAPC: Companion Animal Parasite Council — Heartworm Recommendations', url: 'https://capcvet.org/guidelines/heartworm/', publisher: 'CAPC' },
   { label: 'AVMA: Heartworm Disease in Dogs', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/heartworm-disease', publisher: 'AVMA' },
   { label: 'FDA CVM: Heartworm Prevention Products — Approved Drugs for Dogs', url: 'https://www.fda.gov/animal-veterinary/animal-health-literacy/keep-worms-out-your-pets-heart-facts-about-heartworm-disease', publisher: 'FDA CVM' },
+  { label: 'Parasites & Vectors (2026): US clinic-transaction cost of canine heartworm treatment and prevention', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC13491753/', publisher: 'Parasites & Vectors' },
+  { label: 'ASPCA Pro: Emancipet high-volume heartworm treatment costs', url: 'https://www.aspcapro.org/resource/improving-access-heartworm-treatment', publisher: 'ASPCA Pro' },
 ]
 
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Heartworm Prevention for Dogs — Monthly Preventives | Dog.com', description: 'Heartworm disease is preventable and expensive to treat. Monthly preventives, annual testing, and what to do if your dog tests positive.', path: '/health/heartworm-prevention', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Heartworm Prevention for Dogs', description: 'Monthly preventives, annual testing, and treatment for heartworm disease.', url: 'https://dog.com/health/heartworm-prevention', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Heartworm Prevention for Dogs', description: 'Monthly preventives, annual testing, and treatment for heartworm disease.', url: 'https://dog.com/health/heartworm-prevention', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-07T00:00:00Z' ,
   citation: SOURCES,
 })
 
@@ -29,7 +31,7 @@ const FAQS = [
   { question: 'Do dogs really need heartworm prevention year-round?', answer: 'Yes. Heartworm disease is present in all 50 US states, and mosquitoes can be active even in colder months in heated indoor environments. Year-round prevention is both simpler and safer than seasonal dosing — and because monthly preventives work retroactively (clearing larvae acquired in the previous month), gaps in dosing are exactly when infections establish. All dogs in the continental US should be on year-round prevention.' },
   { question: 'What happens if I miss a dose of heartworm prevention?', answer: 'Monthly preventives eliminate larvae the dog was exposed to in the previous month — missing a month creates a gap during which larvae can mature. If it has been more than 2 months since the last dose, a dog should not simply restart preventive without a negative heartworm test: starting preventive in an infected dog without treatment can cause a life-threatening reaction. Call your veterinarian for guidance on testing and restarting.' },
   { question: 'Why does my dog need an annual heartworm test if already on prevention?', answer: 'Two reasons, per the American Heartworm Society guidance this page summarizes: no preventive is 100% effective, and early detection of a breakthrough infection matters; and if a dose was missed or vomited unnoticed, the annual antigen test catches any resulting infection. The test is a simple blood test — results in about 10 minutes in-clinic.' },
-  { question: 'How much does heartworm treatment cost compared to prevention?', answer: 'Prevention is a monthly chew costing roughly $8–15/month. Treatment of established disease uses melarsomine (an arsenic-based compound), costs $1,000–2,000+ in total with monitoring, and requires 4–6 months of strict exercise restriction so dying worms do not lodge in the lungs. Melarsomine is also intermittently in shortage. The economics and the medicine point the same direction: prevent.' },
+  { question: 'How much does heartworm treatment cost compared to prevention?', answer: 'A 2026 US clinic-transaction study in Parasites & Vectors put year-round prevention at about $183 and average melarsomine treatment at $1,457, with $1,124 of that tied directly to treatment. A high-volume outpatient clinic reported $225–$614 per dog (ASPCA Pro, on the Emancipet protocol). Typical US range, checked Oct 2026; varies by clinic and region. dated 2026-10-07. Treatment uses melarsomine and months of strict exercise restriction. Prevention is the correct approach.' },
   { question: 'Is heartworm medication safe for collies and other herding breeds?', answer: 'At standard preventive doses, yes. Some herding breeds (Collies, Shelties, Australian Shepherds, Border Collies) carry the MDR1/ABCB1 mutation that makes them sensitive to ivermectin at high doses — but standard heartworm-preventive doses are far below the toxic threshold, and milbemycin-based products (Interceptor) are also safe. If you have concerns about your dog\'s breed or MDR1 status, discuss product choice with your veterinarian.' },
 ]
 
@@ -42,7 +44,7 @@ export default function HeartwormPreventionPage() {
       <ArticleLayout
       siteId="dog-com"
       contentType="health"
-      hero={{ title: 'Heartworm Prevention for Dogs', subtitle: 'Heartworm disease is preventable with a monthly chew that costs $8–15/month. Treatment when disease is established costs $1,000–2,000 and requires months of strict rest. Prevention is not optional.', category: 'Preventive Care', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '7 min',}}
+      hero={{ title: 'Heartworm Prevention for Dogs', subtitle: 'A 2026 US clinic-transaction study in Parasites & Vectors put year-round prevention at about $183 and average melarsomine treatment at $1,457, with $1,124 of that tied directly to treatment. A high-volume outpatient clinic reported $225–$614 per dog (ASPCA Pro, on the Emancipet protocol). Typical US range, checked Oct 2026; varies by clinic and region. dated 2026-10-07. Prevention is not optional.', category: 'Preventive Care', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '7 min',}}
       heroExtra={<p className="text-xs text-white/80 mb-3 leading-relaxed">Typical range, not a quote.</p>}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Dog Health', href: '/health' }, { name: 'Heartworm Prevention', href: '/health/heartworm-prevention' }]}
       relatedLinks={[{ title: 'Dog Health Hub', href: '/health', category: 'Hub' }, { title: 'Dog Vaccinations', href: '/health/dog-vaccinations', category: 'Dog Health' }, { title: 'Best Heartworm Prevention', href: '/reviews/best-heartworm-prevention', category: 'Related' }, { title: 'Best Flea & Tick Prevention', href: '/reviews/best-flea-tick-prevention', category: 'Related' }]}
@@ -53,10 +55,10 @@ export default function HeartwormPreventionPage() {
         <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
 
       </>}
-     priceAsOf="2026-06-11">
+     priceAsOf="2026-10-07">
       <div className="carloOS-article">
 
-        <p>Prices on this page are typical US clinic ranges dated 2026-06-11. They are not a quote for one dog, and a clinic can bill outside that range.</p>
+        <p>Typical US range, checked Oct 2026; varies by clinic and region. dated 2026-10-07. They are not a quote for one dog.</p>
 
         <h2>What Heartworm Disease Is</h2>
         <p>Dirofilaria immitis — heartworms — are parasitic worms that live in the heart, lungs, and associated blood vessels of dogs. Transmitted by mosquitoes. A single infected mosquito bite can transmit larvae; larvae mature into worms over 6 months; adult worms live for 5–7 years and can reach 12 inches in length. Untreated heavy infections cause heart failure, lung disease, and death.</p>
@@ -77,8 +79,8 @@ export default function HeartwormPreventionPage() {
         <p>The heartworm antigen test is a blood test performed in-clinic (results in 10 minutes) or sent to a laboratory. It detects adult female worms. A dog cannot begin a new heartworm preventive if it has been more than 2 months since the last dose without a negative heartworm test — starting preventive in an infected dog without treatment can cause a life-threatening reaction.</p>
 
         <h2>Treatment If Positive</h2>
-        <p>Typical range, not a quote. The medication and monitoring figures in the next paragraph are those same clinic ranges, dated 2026-06-11.</p>
-        <p>Heartworm treatment (melarsomine — an arsenic-based compound) kills adult worms. The protocol requires strict exercise restriction for 4–6 months — the dying worms must be broken down and absorbed without the increased blood flow from exercise causing them to lodge in the lungs. Treatment is $500–1,500 for the medication; total treatment costs with monitoring reach $1,000–2,000+. Severe infections may require additional hospitalization. Immiticide is in intermittent shortage — availability varies. Prevention is the correct approach.</p>
+        <p>Typical range, not a quote. Typical US range, checked Oct 2026; varies by clinic and region. dated 2026-10-07.</p>
+        <p>Heartworm treatment (melarsomine — an arsenic-based compound) kills adult worms. The protocol requires strict exercise restriction for 4–6 months — the dying worms must be broken down and absorbed without the increased blood flow from exercise causing them to lodge in the lungs. A 2026 US clinic-transaction study in Parasites & Vectors put year-round prevention at about $183 and average melarsomine treatment at $1,457, with $1,124 of that tied directly to treatment. A high-volume outpatient clinic reported $225–$614 per dog (ASPCA Pro, on the Emancipet protocol). Typical US range, checked Oct 2026; varies by clinic and region. dated 2026-10-07. Severe infections may require additional hospitalization. Immiticide is in intermittent shortage — availability varies. Prevention is the correct approach.</p>
 
         <h2 id="kit">A Simple Mosquito-and-Compliance Kit</h2>
           <p>
@@ -137,7 +139,7 @@ export default function HeartwormPreventionPage() {
           </div>
           </div>
 
-        <p>The cost question below repeats those same clinic ranges, dated 2026-06-11.</p>
+        <p>The cost question below repeats those same published ranges, dated 2026-10-07.</p>
 
         <h2 id="faq">FAQ</h2>
         <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
