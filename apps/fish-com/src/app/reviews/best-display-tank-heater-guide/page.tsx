@@ -25,7 +25,7 @@ const schema = buildArticleSchema({
 const FAQS = [
   {
     question: 'Which heater does the review pick when the tank is a display?',
-    answer: 'The review ranks the Cobalt Aquatics Neo-Therm Pro as the best flat heater. Cobalt accuracy: see the manufacturer's current page. It lists a shatterproof plastic housing, an LED that moves from blue to white, and a price of $35–65. It is not recalibratable. The shop link on this page searches for the Eheim Jager, because a Cobalt Neo-Therm Pro search returned no products.',
+    answer: 'The review ranks the Cobalt Aquatics Neo-Therm Pro as the best flat heater. Cobalt accuracy: see the manufacturer\'s current page. It lists a shatterproof plastic housing, an LED that moves from blue to white, and a price of $35–65. It is not recalibratable. The shop link on this page searches for the Eheim Jager, because a Cobalt Neo-Therm Pro search returned no products.',
   },
   {
     question: 'Does the glass heater match that accuracy?',
@@ -106,7 +106,7 @@ export default function DisplayTankHeaterGuidePage() {
             'The shop link searches for the Eheim Jager, the glass heater the review ranks best overall.',
             'Buy the Eheim if you want that figure plus a recalibration dial and you accept glass.',
             'Buy the Hydor only with a canister.',
-            'The Aqueon Pro, at $18–30, is shatterproof and widely stocked, Aqueon Pro accuracy: see the manufacturer's current page. The review says it is the wrong heater for discus, cardinal tetras, and other tight-range animals.',
+            'The Aqueon Pro, at $18–30, is shatterproof and widely stocked, Aqueon Pro accuracy: see the manufacturer\'s current page. The review says it is the wrong heater for discus, cardinal tetras, and other tight-range animals.',
             'A display of those species is not the budget heater.',
           ]}
         />

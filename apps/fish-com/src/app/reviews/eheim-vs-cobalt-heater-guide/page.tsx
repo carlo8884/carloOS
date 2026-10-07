@@ -29,7 +29,7 @@ const FAQS = [
   },
   {
     question: 'When does the review point to the Cobalt Neo-Therm Pro?',
-    answer: 'When you want a flat heater that is less visible in a display tank. Cobalt accuracy: see the manufacturer's current page. The card lists an LED that goes from blue to white and a shatterproof plastic housing. The printed price is $35–65. It is not recalibratable.',
+    answer: 'When you want a flat heater that is less visible in a display tank. Cobalt accuracy: see the manufacturer\'s current page. The card lists an LED that goes from blue to white and a shatterproof plastic housing. The printed price is $35–65. It is not recalibratable.',
   },
   {
     question: 'What if the wattage calculator asks for more than 300W?',

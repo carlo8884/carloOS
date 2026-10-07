@@ -93,7 +93,7 @@ export default function HobVsCanisterGuidePage() {
             },
             'Buy the AquaClear 70 for a community tank in that 40 to 70 gallon band when you want refillable media and a simpler cleaning day.',
             'Buy the Fluval 307 when the bioload is high, you want the longer service interval and the quieter box, and you have cabinet space.',
-            'Buy the Aqueon QuietFlow 30 at $25–40 only where the manufacturer's current page rates the tank, and a proprietary cartridge is acceptable.',
+            'Buy the Aqueon QuietFlow 30 at $25–40 only where the manufacturer\'s current page rates the tank, and a proprietary cartridge is acceptable.',
             'Buy the sponge, not either of these, for shrimp, fry, or a nano under the sizes those listings claim.',
           ]}
         />
