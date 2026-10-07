@@ -2365,7 +2365,7 @@ const CALCULATORS = [
     mustInclude: [
       { re: /chewy-brand\/greenies\+dental\+chews\+dogs\?s=reviews-best-dental-chews/, label: 'existing Greenies Chewy hop kept (not an empty leftover button)' },
       { re: /chewy-brand\/whimzees\+dental\+chews\+dogs\?s=reviews-best-dental-chews/, label: 'existing Whimzees Chewy hop kept (not an empty leftover button)' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
       { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
@@ -2380,7 +2380,7 @@ const CALCULATORS = [
     mustInclude: [
       { re: /chewy-brand\/big\+barker\+orthopedic\+dog\+bed\?s=reviews-best-dog-beds/, label: 'existing Big Barker Chewy hop kept (not an empty leftover button)' },
       { re: /chewy-brand\/casper\+dog\+bed\?s=reviews-best-dog-beds/, label: 'existing Casper Chewy hop kept (not an empty leftover button)' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
       { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
@@ -2397,7 +2397,7 @@ const CALCULATORS = [
       { re: /chewy-brand\/purina\+pro\+plan\+dry\+dog\+food\?s=reviews-best-dry-dog-food/, label: 'existing Purina Pro Plan Chewy hop kept (not an empty leftover button)' },
       { re: /chewy-brand\/hills\+science\+diet\+dry\+dog\+food\?s=reviews-best-dry-dog-food/, label: 'existing Hill\'s Science Diet Chewy hop kept (not an empty leftover button)' },
       { re: /chewy-brand\/orijen\+dry\+dog\+food\?s=reviews-best-dry-dog-food/, label: 'existing Orijen Chewy hop kept (not an empty leftover button)' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
       { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
@@ -2411,7 +2411,7 @@ const CALCULATORS = [
     file: 'apps/dog-com/src/app/reviews/best-dog-food-sensitive-stomach/page.tsx',
     mustInclude: [
       { re: /chewy-brand\/purina\+pro\+plan\+sensitive\+skin\+stomach\?s=reviews-best-dog-food-sensitive-stomach/, label: 'existing Purina Pro Plan Sensitive Chewy hop kept (not an empty leftover button)' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
       { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
@@ -2426,7 +2426,7 @@ const CALCULATORS = [
     mustInclude: [
       { re: /chewy-brand\/purina\+pro\+plan\+bright\+mind\+senior\?s=reviews-best-dog-food-senior/, label: 'existing Purina Bright Mind Chewy hop kept (not an empty leftover button)' },
       { re: /chewy-brand\/hills\+science\+diet\+senior\+7\?s=reviews-best-dog-food-senior/, label: 'existing Hill\'s Senior 7+ Chewy hop kept (not an empty leftover button)' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
       { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
@@ -2441,7 +2441,7 @@ const CALCULATORS = [
     mustInclude: [
       { re: /chewy-brand\/royal\+canin\+small\+adult\?s=reviews-best-dog-food-small-breed/, label: 'existing Royal Canin Small Adult Chewy hop kept (not an empty leftover button)' },
       { re: /chewy-brand\/purina\+pro\+plan\+small\+toy\+breed\?s=reviews-best-dog-food-small-breed/, label: 'existing Purina Pro Plan Small & Toy Chewy hop kept (not an empty leftover button)' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
       { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
@@ -2456,7 +2456,7 @@ const CALCULATORS = [
     mustInclude: [
       { re: /chewy-brand\/royal\+canin\+large\+adult\?s=reviews-best-large-breed-dog-food/, label: 'existing Royal Canin Large Adult Chewy hop kept (not an empty leftover button)' },
       { re: /chewy-brand\/purina\+pro\+plan\+large\+breed\+adult\?s=reviews-best-large-breed-dog-food/, label: 'existing Purina Pro Plan Large Breed Chewy hop kept (not an empty leftover button)' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
       { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
@@ -2471,7 +2471,7 @@ const CALCULATORS = [
     mustInclude: [
       { re: /amazon-brand\/dry\+dog\+food/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -12307,7 +12307,7 @@ const CALCULATORS = [
       { re: /chewy-brand\/purina\+pro\+plan\+puppy\+large\+breed\?s=reviews-best-dog-food-for-puppies/, label: 'existing Purina Pro Plan puppy large-breed Chewy hop kept (not an empty leftover button)' },
       { re: /chewy-brand\/hills\+science\+diet\+puppy\+small\+paws\?s=reviews-best-dog-food-for-puppies/, label: 'existing Hill\'s Small Paws Chewy hop kept (not an empty leftover button)' },
       { re: /chewy-brand\/iams\+proactive\+health\+puppy\+large\+breed\?s=reviews-best-dog-food-for-puppies/, label: 'existing Iams puppy large-breed Chewy hop kept (not an empty leftover button)' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
       { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
@@ -12326,7 +12326,7 @@ const CALCULATORS = [
       { re: /resourceHref="\/go\/chewy-brand\/royal\+canin\+large\+adult\?s=reviews-best-large-breed-dog-food"/, label: 'journey hop reuses the existing Royal Canin Large Adult Chewy search' },
       { re: /chewy-brand\/royal\+canin\+large\+adult\?s=reviews-best-large-breed-dog-food/, label: 'existing Royal Canin Large Adult Chewy hop kept (do not re-ship a new query)' },
       { re: /chewy-brand\/purina\+pro\+plan\+large\+breed\+adult\?s=reviews-best-large-breed-dog-food/, label: 'existing Purina Pro Plan Large Breed Chewy hop kept (not an empty leftover button)' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
       { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
@@ -12345,7 +12345,7 @@ const CALCULATORS = [
       { re: /resourceHref="\/go\/chewy-brand\/greenies\+dental\+chews\+dogs\?s=reviews-best-dental-chews"/, label: 'journey hop reuses the existing Greenies Chewy search' },
       { re: /chewy-brand\/greenies\+dental\+chews\+dogs\?s=reviews-best-dental-chews/, label: 'existing Greenies Chewy hop kept (do not re-ship a new query)' },
       { re: /chewy-brand\/whimzees\+dental\+chews\+dogs\?s=reviews-best-dental-chews/, label: 'existing Whimzees Chewy hop kept (not an empty leftover button)' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
       { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
@@ -12364,7 +12364,7 @@ const CALCULATORS = [
       { re: /resourceHref="\/go\/chewy-brand\/royal\+canin\+small\+adult\?s=reviews-best-dog-food-small-breed"/, label: 'journey hop reuses the existing Royal Canin Small Adult Chewy search' },
       { re: /chewy-brand\/royal\+canin\+small\+adult\?s=reviews-best-dog-food-small-breed/, label: 'existing Royal Canin Small Adult Chewy hop kept (do not re-ship a new query)' },
       { re: /chewy-brand\/purina\+pro\+plan\+small\+toy\+breed\?s=reviews-best-dog-food-small-breed/, label: 'existing Purina Pro Plan Small & Toy Chewy hop kept (not an empty leftover button)' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
       { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
@@ -12383,7 +12383,7 @@ const CALCULATORS = [
       { re: /resourceHref="\/go\/chewy-brand\/purina\+pro\+plan\+bright\+mind\+senior\?s=reviews-best-dog-food-senior"/, label: 'journey hop reuses the existing Bright Mind Chewy search' },
       { re: /chewy-brand\/purina\+pro\+plan\+bright\+mind\+senior\?s=reviews-best-dog-food-senior/, label: 'existing Purina Bright Mind Chewy hop kept (do not re-ship a new query)' },
       { re: /chewy-brand\/hills\+science\+diet\+senior\+7\?s=reviews-best-dog-food-senior/, label: 'existing Hill\'s Senior 7+ Chewy hop kept (not an empty leftover button)' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
       { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
@@ -12404,7 +12404,7 @@ const CALCULATORS = [
       { re: /amazon-brand\/impact\+high\+anxiety\+dog\+crate\?s=reviews-best-dog-crates/, label: 'existing Impact high-anxiety amazon-brand hop kept (do not re-ship a new query)' },
       { re: /amazon-brand\/petmate\+sky\+kennel\?s=reviews-best-dog-crates/, label: 'existing Petmate Sky Kennel amazon-brand hop kept (do not re-ship a new query)' },
       { re: /chewy-brand\/frisco\+furniture\+style\+dog\+crate\?s=reviews-best-dog-crates/, label: 'existing Frisco furniture-style Chewy hop kept (not an empty leftover button)' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
       { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
@@ -12423,7 +12423,7 @@ const CALCULATORS = [
       { re: /resourceHref="\/go\/chewy-brand\/big\+barker\+orthopedic\+dog\+bed\?s=reviews-best-dog-beds"/, label: 'journey hop reuses the existing Big Barker Chewy search' },
       { re: /chewy-brand\/big\+barker\+orthopedic\+dog\+bed\?s=reviews-best-dog-beds/, label: 'existing Big Barker Chewy hop kept (do not re-ship a new query)' },
       { re: /chewy-brand\/casper\+dog\+bed\?s=reviews-best-dog-beds/, label: 'existing Casper Chewy hop kept (not an empty leftover button)' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
       { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
@@ -12440,7 +12440,7 @@ const CALCULATORS = [
       { re: /amazon-brand\/dasuquin\+with\+msm\?s=reviews-best-joint-supplements/, label: 'existing Dasuquin amazon-brand hop kept (do not re-ship a new query)' },
       { re: /amazon-brand\/nordic\+naturals\+omega\+pet\?s=reviews-best-joint-supplements/, label: 'existing Nordic Naturals amazon-brand hop kept (do not re-ship a new query)' },
       { re: /amazon-brand\/cosequin\+ds\+maximum\+strength\?s=reviews-best-joint-supplements/, label: 'existing Cosequin DS amazon-brand hop kept (do not re-ship a new query)' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
       { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
@@ -12460,7 +12460,7 @@ const CALCULATORS = [
       { re: /amazon-brand\/fi\+series\+3\+dog\+collar\?s=reviews-best-dog-gps-tracker/, label: 'existing Fi Series 3 amazon-brand hop kept (do not re-ship a new query)' },
       { re: /amazon-brand\/whistle\+go\+explore\?s=reviews-best-dog-gps-tracker/, label: 'existing Whistle Go Explore amazon-brand hop kept (do not re-ship a new query)' },
       { re: /amazon-brand\/tractive\+gps\+dog\+tracker\?s=reviews-best-dog-gps-tracker/, label: 'existing Tractive GPS amazon-brand hop kept (do not re-ship a new query)' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
       { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
@@ -12481,7 +12481,7 @@ const CALCULATORS = [
       { re: /amazon-brand\/julius\+k9\+idc\+powerharness\?s=reviews-best-dog-harnesses/, label: 'existing Julius-K9 amazon-brand hop kept (do not re-ship a new query)' },
       { re: /chewy-brand\/petsafe\+easy\+walk\+harness\?s=reviews-best-dog-harnesses/, label: 'existing PetSafe Easy Walk Chewy hop kept (not an empty leftover button)' },
       { re: /chewy-brand\/ruffwear\+front\+range\+harness\?s=reviews-best-dog-harnesses/, label: 'existing Ruffwear Front Range Chewy hop kept (not an empty leftover button)' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
       { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
@@ -12501,7 +12501,7 @@ const CALCULATORS = [
       { re: /amazon-brand\/northmate\+green\+interactive\+feeder\?s=reviews-best-slow-feeder-bowls/, label: 'existing Northmate Green amazon-brand hop kept (do not re-ship a new query)' },
       { re: /chewy-brand\/outward\+hound\+fun\+feeder\?s=reviews-best-slow-feeder-bowls/, label: 'existing Outward Hound Fun Feeder Chewy hop kept (not an empty leftover button)' },
       { re: /chewy-brand\/lickimat\+splash\?s=reviews-best-slow-feeder-bowls/, label: 'existing LickiMat Splash Chewy hop kept (not an empty leftover button)' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
       { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
