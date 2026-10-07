@@ -122,9 +122,7 @@ export default function SeizuresPage() {
               kitchen-timer / harness hops, they are not first-aid-kit,
               thermometer, penlight, stretcher, or
               medical-alert-tag hops, and they do not
-              replace a veterinarian. Vets.co earns a
-              commission on qualifying purchases at no
-              extra cost to you.
+              replace a veterinarian.
             </p>
             <div className="flex flex-col gap-3">
               <ShopCtas
