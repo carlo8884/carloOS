@@ -548,7 +548,7 @@ export default function VetsHomePage() {
                 <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-brand-dark/35 to-transparent" />
                 {/* Label */}
                 <div className="relative z-10 flex flex-col justify-end min-h-[230px] sm:min-h-[260px] p-5">
-                  <div className="text-2xs font-bold tracking-eyebrow uppercase mb-1.5" style={{ color: desk.eyebrow === 'Know the breed' ? '#1e140a' : '#ffffff' }}>
+                  <div className="text-2xs font-bold tracking-eyebrow uppercase mb-1.5" style={{ color: desk.eyebrow === 'Know the breed' ? 'var(--brand-accent-light)' : '#ffffff' }}>
                     {desk.eyebrow}
                   </div>
                   <h2 className={`font-display font-bold text-xl sm:text-2xl leading-tight mb-1.5 ${desk.title === 'Find a Vet' ? 'text-[#1e140a]' : 'text-white'}`}>
