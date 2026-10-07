@@ -2,11 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ─────────────────────────────────────────────
+/* ───────────────────────────────────────────
    FISH.COM THEME TOKENS — aquarium-magazine
    Refined deep teal-blue / cool whites / restrained accents.
    Visual seriousness on par with Practical Fishkeeping.
-   ───────────────────────────────────────────── */
+   ─────────────────────────────────────────── */
 
 :root {
   /* Primary — deep aquarium teal */
@@ -45,7 +45,7 @@
   --nav-height: 68px;
 }
 
-/* ─── BASE ─────────────────────────────────────────────────── */
+/* ─── BASE ──────────────────────────────────────────────────── */
 
 *, *::before, *::after { box-sizing: border-box; }
 
@@ -172,3 +172,22 @@ main > section:first-of-type figure > div {
 .bg-brand-dark .text-brand-primary { color: #1A85AE; }
 .carloOS-article a { text-decoration-line: underline; text-underline-offset: 2px; }
 p a { text-decoration-line: underline; text-underline-offset: 2px; }
+
+/* Small label thumbs repeat a photo already credited on the card. Keep the
+   credit node for attribution, but do not paint a second line over the thumb. */
+span.h-7.w-10 figcaption,
+span.h-8.w-12 figcaption,
+span.h-9.w-14 figcaption,
+span.h-7.w-10 figure > div > span.absolute,
+span.h-8.w-12 figure > div > span.absolute,
+span.h-9.w-14 figure > div > span.absolute {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
