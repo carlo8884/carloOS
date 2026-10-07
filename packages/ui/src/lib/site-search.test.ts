@@ -43,6 +43,16 @@ test('a typed word outranks its synonym, and kennel still finds crates', () => {
   assert.equal(rankSearch(horses.entries, 'headcollar').some((hit) => hit.path.includes('halter')), true)
 })
 
+test('a short disease name does not match inside a longer word', () => {
+  const entries: SearchEntry[] = [
+    { path: '/reviews/api-vs-salifert-guide', title: 'API Master Kit vs Salifert', description: 'Which water test to buy', category: 'comparisons' },
+    { path: '/tools/fish-disease-symptom-checker', title: 'Fish Disease Symptom Checker', description: 'Signs that match ich, velvet, and fin rot', category: 'tools' },
+    { path: '/tools/filter-gph-calculator', title: 'Filter GPH', description: 'cichlid or reef turnover', category: 'tools' },
+  ]
+  const hits = rankSearch(entries, 'ich')
+  assert.deepEqual(hits.map((hit) => hit.path), ['/tools/fish-disease-symptom-checker'])
+})
+
 test('queries shorter than two characters match nothing', () => {
   const entries: SearchEntry[] = [{ path: '/tools/food', title: 'Food grams', description: 'daily', category: 'tools' }]
   assert.equal(rankSearch(entries, 'f').length, 0)
