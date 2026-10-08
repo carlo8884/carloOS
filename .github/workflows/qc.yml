@@ -50,6 +50,8 @@ jobs:
           node-version: '20'
       - name: Run sitemap-drift
         run: node scripts/ci/sitemap-drift.mjs
+      - name: Noindex URLs stay out and indexable hubs stay listed
+        run: node scripts/ci/sitemap-index.mjs
 
   trust-guard:
     name: Trust-integrity guard (QC-STANDARDS.md §1)
