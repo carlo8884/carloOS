@@ -425,7 +425,7 @@ const tennesseeWalkingHorse: BreedHealthRecord = {
     { question: 'Are Tennessee Walking Horses good first horses?', answer: 'Yes, the flat-shod and trail-bred TWH is among the most forgiving first horses in the gaited world — calm, smooth, and long-lived.' },
   ],
   sourceCitations: [
-    { ref: 'usda-aphis-hpa', label: 'USDA APHIS — Horse Protection Act Inspections & Annual Reports', url: 'https://www.aphis.usda.gov/animal-welfare/horse-protection' },
+    { ref: 'usda-aphis-hpa', label: 'USDA APHIS — Horse Protection Act', url: 'https://www.aphis.usda.gov/hpa' },
     { ref: 'andersson-dmrt3', label: 'Andersson L.S. et al. — Mutation in DMRT3 affects locomotion in horses (Nature, 2012)', url: 'https://www.nature.com/articles/nature11399' },
     { ref: 'twhbea-health', label: 'Tennessee Walking Horse Breeders\' & Exhibitors\' Association (TWHBEA) — Health & Registry', url: 'https://twhbea.com/' },
     { ref: 'aaep-lameness', label: 'American Association of Equine Practitioners — Lameness Guidelines', url: 'https://aaep.org/guidelines' },
