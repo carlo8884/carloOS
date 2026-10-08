@@ -61,6 +61,7 @@ export default function SaddlePadsPage() {
           { title: 'Saddle Fit Basics', href: '/guides/saddle-fit-basics' },
           { title: 'Girths and Cinches', href: '/tack/girths-and-cinches' },
           { title: 'Boots and Wraps', href: '/tack/boots-and-wraps' },
+          { title: 'Quilted Pad vs Sheepskin', href: '/reviews/quilted-vs-sheepskin-pad-guide', category: 'Reviews' },
         ]}
         heroHop={
           <>
@@ -104,6 +105,7 @@ export default function SaddlePadsPage() {
               { label: "Girths and Cinches", href: "/tack/girths-and-cinches" },
               { label: "Grooming the Horse", href: "/care/grooming" },
               { label: "Equine Lameness Basics", href: "/health/lameness-basics" },
+              { label: "Quilted Pad vs Sheepskin", href: "/reviews/quilted-vs-sheepskin-pad-guide" },
             ]}
           />
           <CrossPortfolioCard currentSite="horses-com" contentType="equipment" variant="sidebar" />
@@ -240,7 +242,7 @@ export default function SaddlePadsPage() {
           />
 
           <h2 id="who">Who should buy which pad</h2>
-          <p>Material, price, and the limit are already on the three cards. None of them corrects a saddle that does not fit.</p>
+          <p>Material, price, and the limit are already on the three cards. None of them corrects a saddle that does not fit. When the choice is an everyday English pad or a half pad for friction, the <a href="/reviews/quilted-vs-sheepskin-pad-guide" className="text-brand-primary underline">quilted pad versus sheepskin half pad guide</a> compares those two. The wool-felt Western pad is a third option on this page.</p>
           <div className="overflow-x-auto my-6 max-w-full">
             <table className="w-full text-sm border-collapse table-fixed sm:table-auto min-w-0 sm:min-w-[36rem] [&_th]:break-words [&_td]:break-words">
               <thead>
@@ -273,7 +275,7 @@ export default function SaddlePadsPage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-07" />
+          <ComparisonFoot updated="2026-10-08" />
 
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">

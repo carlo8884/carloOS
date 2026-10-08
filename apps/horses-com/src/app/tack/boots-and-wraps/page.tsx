@@ -60,6 +60,7 @@ export default function BootsWrapsPage() {
           { title: 'Equine Lameness Basics', href: '/health/lameness-basics' },
           { title: 'Saddle Pads and Numnahs', href: '/tack/saddle-pads' },
           { title: 'Girths and Cinches', href: '/tack/girths-and-cinches' },
+          { title: 'Brushing Boots vs Bell Boots', href: '/reviews/brushing-boots-vs-bell-boots-guide', category: 'Reviews' },
         ]}
         heroHop={
           <>
@@ -103,6 +104,7 @@ export default function BootsWrapsPage() {
               { label: "Show Jumping", href: "/disciplines/show-jumping" },
               { label: "Trailering and Transport", href: "/care/trailering" },
               { label: "First-Aid Kit", href: "/ownership/first-aid-kit" },
+              { label: "Brushing Boots vs Bell Boots", href: "/reviews/brushing-boots-vs-bell-boots-guide" },
             ]}
           />
           <CrossPortfolioCard currentSite="horses-com" contentType="equipment" variant="sidebar" />
@@ -216,7 +218,7 @@ export default function BootsWrapsPage() {
           />
 
           <h2 id="who">Who should buy which</h2>
-          <p>What each option protects, and what it does not, is already on the three cards. Boots stop a strike. They do not brace a tendon.</p>
+          <p>What each option protects, and what it does not, is already on the three cards. Boots stop a strike. They do not brace a tendon. When the choice is interference protection or overreach protection, the <a href="/reviews/brushing-boots-vs-bell-boots-guide" className="text-brand-primary underline">brushing boots versus bell boots guide</a> puts those two jobs side by side. Standing wraps stay a separate skill and are not one of those two boots.</p>
           <div className="overflow-x-auto my-6 max-w-full">
             <table className="w-full text-sm border-collapse table-fixed sm:table-auto min-w-0 sm:min-w-[36rem] [&_th]:break-words [&_td]:break-words">
               <thead>
@@ -249,7 +251,7 @@ export default function BootsWrapsPage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-07" />
+          <ComparisonFoot updated="2026-10-08" />
 
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
