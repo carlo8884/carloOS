@@ -23,14 +23,14 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: 'Horse Feed & Hay Calculator (Daily Intake) | Horses.com',
   description:
-    'Estimate how much hay and feed a horse needs per day from bodyweight, workload, and keeper type. Free forage-first calculator using NRC intake ranges.',
+    'Estimate daily hay from bodyweight. Merck, citing NRC 2007: forage at least 1.5–2% of body weight, maximal intake 2.5–3%. Other splits are planning figures.',
   path: '/tools/horse-feed-calculator',
 })
 
 const howToSchema = buildHowToSchema({
   name: 'How to calculate how much hay a horse needs per day',
   description:
-    'Estimate a horse’s daily forage from its bodyweight. Horses eat roughly 1.5–2.5% of bodyweight in dry matter per day, forage-first; multiply bodyweight by the intake percentage to get the daily dry-matter target.',
+    'Estimate a horse’s daily forage from its bodyweight. Merck, citing NRC 2007, puts forage at least at 1.5–2% of body weight and maximal intake at 2.5–3%. Other workload splits are planning figures.',
   url: URL,
   totalTime: 'PT3M',
   steps: [
@@ -40,7 +40,7 @@ const howToSchema = buildHowToSchema({
     },
     {
       name: 'Pick an intake percentage',
-      text: 'Most horses eat about 1.5–2.5% of bodyweight in dry matter per day. Use the lower end for idle and easy-keeper horses and the upper end for hard keepers and horses in heavy work.',
+      text: 'Merck, citing NRC 2007, says forage should be at least 1.5–2% of body weight, and maximal daily intake is about 2.5–3%. The light, moderate, and heavy splits on this page are planning figures inside that envelope.',
     },
     {
       name: 'Calculate the daily dry-matter target',
@@ -66,12 +66,12 @@ const softwareApplicationSchema = {
   applicationSubCategory: 'EquineHusbandryCalculator',
   operatingSystem: 'Web Browser (any HTML5-capable device)',
   description:
-    'Free horse feed and hay calculator. Inputs: bodyweight (lb/kg), workload (maintenance / light / moderate / heavy), and keeper type (easy / average / hard). Outputs: total daily dry-matter intake range and a forage baseline, using NRC (2007) intake ranges, forage-first.',
+    'Free horse feed and hay calculator. Inputs: bodyweight (lb/kg), workload (maintenance / light / moderate / heavy), and keeper type (easy / average / hard). Outputs: total daily dry-matter intake range and a forage baseline, using Merck’s reading of NRC 2007 for the forage floor and maximal intake. Workload splits are planning figures.',
   inLanguage: 'en-US',
   isAccessibleForFree: true,
   offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
   featureList: [
-    'Daily dry-matter intake range as 1.5–2.5%+ of bodyweight (NRC 2007)',
+    'Forage at least 1.5–2% of body weight and maximal intake 2.5–3% (Merck, citing NRC 2007); other splits are planning figures',
     'Workload and easy/hard-keeper adjustments',
     'Forage-first baseline with a forage-floor minimum',
     'Dry-matter vs. as-fed conversion guidance for hay and pasture',
@@ -84,12 +84,12 @@ const FAQS = [
   {
     question: 'How much hay should a horse eat per day?',
     answer:
-      'As a rule of thumb, a horse eats about 1.5–2.5% of its bodyweight in dry matter per day, and forage (hay or pasture) should make up the majority of that. For a 1,000 lb (450 kg) horse, that is roughly 15–25 lb of feed dry matter per day, with hay at a minimum of about 1.5% of bodyweight (around 15 lb dry matter). Because grass hay is about 88–90% dry matter, 15 lb of hay dry matter is roughly 17 lb of hay as-fed. Idle and easy-keeper horses sit at the lower end; hard keepers and horses in heavy work sit at the upper end.',
+      'Merck, citing Nutrient Requirements of Horses (NRC 2007), says horses need at least 1.5–2% of body weight in forage per day on a dry-matter basis, and that maximal daily intake is about 2.5–3% of body weight. For a 1,000 lb (450 kg) horse, 1.5% is about 15 lb of dry matter. The 88–90% hay conversion used to turn that into as-fed weight is a planning figure, so 15 lb of hay dry matter is roughly 17 lb of hay as-fed. Light, moderate, and heavy workload bands on this page are planning splits inside that envelope, not a second published table.',
   },
   {
     question: 'How much does a horse eat as a percentage of its bodyweight?',
     answer:
-      'Total daily dry-matter intake is typically 1.5–2.5% of bodyweight, occasionally up to about 3% for horses in very hard work or lactating mares. Forage alone should generally be kept at or above 1.5% of bodyweight to maintain gut health and reduce the risk of ulcers, colic, and stereotypies. The calculator applies these ranges and shifts within them based on workload and whether the horse is an easy or hard keeper.',
+      'Merck, citing NRC 2007, states a forage floor of at least 1.5–2% of body weight and a maximal daily intake of about 2.5–3% of body weight in dry matter. Maintenance on this page uses 1.5–2%. Light, moderate, and heavy bands, and the easy- or hard-keeper shift, are planning figures inside that envelope. They are not a published workload table.',
   },
   {
     question: 'What does “forage first” actually mean?',
@@ -111,7 +111,7 @@ const FAQS = [
 const articleSchema = buildArticleSchema({
   siteId: 'horses-com',
   title: 'Horse Feed & Hay Calculator',
-  description: 'Estimate how much hay and feed a horse needs each day from bodyweight, workload, and keeper type — forage-first, using published NRC intake ranges.',
+  description: 'Estimate how much hay and feed a horse needs each day from bodyweight, workload, and keeper type — forage-first, using Merck’s 1.5–2% forage floor and 2.5–3% maximal intake. Workload splits are planning figures.',
   url: 'https://horses.com/tools/horse-feed-calculator',
   imageUrl: '',
   authorName: 'Horses.com Editorial',
@@ -138,7 +138,7 @@ export default function HorseFeedCalculatorPage() {
       hero={{
         title: 'Horse Feed & Hay Calculator',
         subtitle:
-          'Estimate how much hay and feed a horse needs each day from bodyweight, workload, and keeper type — forage-first, using published NRC intake ranges.',
+          'Estimate how much hay and feed a horse needs each day from bodyweight, workload, and keeper type — forage-first, using Merck’s 1.5–2% forage floor and 2.5–3% maximal intake. Workload splits are planning figures.',
         category: 'Calculators',
         categoryHref: '/tools',
         publishedAt: 'June 2026',
@@ -198,12 +198,12 @@ export default function HorseFeedCalculatorPage() {
         </div>
 
         <p>
-          <strong>The quick answer:</strong> a horse eats about{' '}
-          <strong>1.5–2.5% of its bodyweight in dry matter per day</strong>, forage-first. For a{' '}
-          <strong>1,000 lb (450 kg) horse</strong>, that is roughly{' '}
-          <strong>15–25 lb of feed dry matter per day</strong>, with hay kept at a minimum of about
-          1.5% of bodyweight (around 15 lb dry matter, or about 17 lb of hay as-fed). Build the
-          ration on forage and add concentrates only to fill the gap.
+          <strong>The quick answer:</strong> Merck, citing NRC 2007, puts forage at least at{' '}
+          <strong>1.5–2% of body weight</strong> in dry matter per day, and maximal intake at{' '}
+          <strong>2.5–3%</strong>. For a <strong>1,000 lb (450 kg) horse</strong>, 1.5% is about{' '}
+          <strong>15 lb of dry matter</strong> (about 17 lb of hay as-fed if you use the planning
+          88–90% hay conversion). Workload splits on this page are planning figures inside that
+          envelope. Build the ration on forage and add concentrates only to fill the gap.
         </p>
 
         <h2>The calculator</h2>
@@ -259,8 +259,9 @@ export default function HorseFeedCalculatorPage() {
         <h2 id="math">The math</h2>
         <ul>
           <li>
-            <strong>Total daily dry matter</strong> = bodyweight &times; intake&nbsp;% (about
-            1.5–2.5% for most horses, up to ~3% for very hard work)
+            <strong>Total daily dry matter</strong> = bodyweight &times; intake&nbsp;%. Forage floor
+            1.5–2% and maximal intake 2.5–3% are Merck’s reading of NRC 2007. Other workload percents
+            are planning figures.
           </li>
           <li>
             <strong>Forage baseline</strong> = bodyweight &times; ~1.5% minimum, in dry matter,
@@ -309,8 +310,9 @@ export default function HorseFeedCalculatorPage() {
           sources={[
             {
               label:
-                'National Research Council (2007). Nutrient Requirements of Horses, Sixth Revised Edition. National Academies Press.',
-              publisher: 'NRC',
+                'Merck Veterinary Manual — Nutritional Requirements of Horses. Forage at least 1.5–2% of body weight (dry matter); maximal daily intake estimated at 2.5–3% of body weight. Adapted from Nutrient Requirements of Horses, 6th ed., National Research Council, 2007.',
+              publisher: 'Merck Veterinary Manual',
+              url: 'https://www.merckvetmanual.com/management-and-nutrition/nutrition-horses/nutritional-requirements-of-horses',
             },
             {
               label:
@@ -320,9 +322,9 @@ export default function HorseFeedCalculatorPage() {
           ]}
         />
         <p className="text-sm text-brand-text-mid">
-          Horses.com Editorial cites these as the published basis for the bodyweight-percentage
-          intake ranges and forage-first feeding referenced by the calculator. The output is a
-          general husbandry estimate; it is not a veterinary or therapeutic diet.
+          Merck’s page, which adapts the 2007 NRC horse requirements, is the source for the 1.5–2%
+          forage floor and the 2.5–3% maximal intake. Workload splits and the keeper shift are
+          planning figures inside that envelope. The output is a husbandry estimate, not a veterinary diet.
         </p>
 
         <h2 id="faq">FAQ</h2>

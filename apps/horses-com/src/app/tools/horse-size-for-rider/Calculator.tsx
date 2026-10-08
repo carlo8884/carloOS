@@ -293,7 +293,7 @@ export default function Calculator() {
           </p>
           <p className="mt-1 text-xs text-brand-text-mid">
             {result
-              ? 'so rider + tack stays within ~15–20% of bodyweight'
+              ? 'planning figure: rider + tack within about 15–20% of bodyweight'
               : 'Enter rider weight to estimate'}
           </p>
         </div>
