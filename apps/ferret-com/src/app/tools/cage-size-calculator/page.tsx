@@ -27,7 +27,7 @@ const FAQS = [
     answer:
       'The American Ferret Association owner-education materials cited on this site recommend a minimum floor of roughly 24 × 24 inches and at least 18 inches of height per ferret, with a strong preference for multi-level cages. For two ferrets — the practical default, because ferrets are social — most keepers settle on a 36 × 24-inch or larger footprint with three levels. The calculator turns those planning constants into an L × W × H for your headcount. The cage is the bedroom, not the house: every ferret still needs several hours of supervised out-of-cage time daily.',
     answerText:
-      'AFA-cited planning floor is 24 × 24 in and 18 in of height per ferret. Two ferrets usually want 36 × 24 in with three levels. The cage is for sleep and litter — not full-time living.',
+      'How we calculate: 24 × 24 in of floor and 18 in of height per ferret are a planning figure, not a fetched published standard. Two ferrets usually want 36 × 24 in with three levels. The cage is for sleep and litter — not full-time living.',
   },
   {
     question: 'Does a multi-level cage replace floor space?',
@@ -39,7 +39,7 @@ const FAQS = [
   {
     question: 'How much out-of-cage time does a ferret need?',
     answer:
-      'The working minimum across exotic-pet veterinary literature and AFA owner-education materials is four hours of supervised time per day in a fully ferret-proofed space, with six to eight hours closer to ideal. The time does not have to be one block. If you enter under four hours, this tool adds one ferret-equivalent of floor — they are using the cage as a house — and still tells you to add playtime rather than buy a bigger box.',
+      'The four-hour out-of-cage cutoff is a planning figure, not a fetched published standard. Six to eight hours is the same kind of planning note. The time does not have to be one block. If you enter under four hours, this tool adds one ferret-equivalent of floor — they are using the cage as a house — and still tells you to add playtime rather than buy a bigger box.',
     answerText:
       'Four hours a day is the working minimum; six to eight is closer to ideal. Under four hours, the calculator adds floor and still asks for more playtime.',
   },
@@ -72,13 +72,13 @@ const appSchema = {
   '@type': 'SoftwareApplication',
   name: 'Ferret Cage Size Calculator',
   description:
-    'Free planner that turns ferret count, cage levels, and daily out-of-cage time into a minimum L×W×H footprint using AFA-cited 24×24 in floor and 18 in height per ferret.',
+    'Minimum L×W×H from ferret count, levels, and out-of-cage time. The 24×24 in floor and 18 in height are a planning figure, not a published standard.',
   url: 'https://ferret.com/tools/cage-size-calculator',
   applicationCategory: 'UtilityApplication',
   operatingSystem: 'Web',
   offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
   featureList: [
-    '24 × 24 in floor per ferret (AFA-cited planning minimum)',
+    '24 × 24 in floor per ferret, labeled a planning figure',
     '18 in height per level',
     '36 × 24 in preferred pair footprint',
     'Multi-level usable-habitat multiplier',
@@ -90,7 +90,7 @@ const appSchema = {
 const howToSchema = buildHowToSchema({
   name: 'How to size a ferret cage',
   description:
-    'Count the ferrets, pick how many levels the cage has, and enter daily out-of-cage time. The calculator returns a minimum L × W × H footprint from AFA-cited 24 × 24 in floor and 18 in height per ferret.',
+    'Count the ferrets, pick levels, and enter out-of-cage time. The 24 × 24 in floor and 18 in height are a planning figure, not a published standard.',
   url: 'https://ferret.com/tools/cage-size-calculator',
   steps: [
     {

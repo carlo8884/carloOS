@@ -20,7 +20,7 @@ const URL = 'https://ferret.com/tools/food-evaluator'
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
   title: 'Ferret Food Evaluator — Is This Kibble Right for Ferrets? | Ferret.com',
-  description: 'Paste guaranteed analysis numbers from any kibble bag; the evaluator scores it against published ferret nutrient targets with per-nutrient notes.',
+  description: 'Paste a guaranteed analysis. Protein, fat, fiber, and ash cutoffs are a planning figure, not a published profile.',
   path: '/tools/food-evaluator',
 })
 
@@ -45,7 +45,7 @@ const schema = buildHowToSchema({
     },
     {
       name: 'Read the verdict',
-      text: 'The evaluator scores the food against published ferret targets and returns a clear verdict — appropriate, marginal, or avoid — plus per-nutrient notes.',
+      text: 'The evaluator scores the food against planning-figure cutoffs and returns appropriate, marginal, or avoid, plus per-nutrient notes.',
     },
   ],
 })
@@ -104,14 +104,14 @@ const FAQS = [
   {
     question: 'Is this a substitute for a vet?',
     answer:
-      'No. The evaluator is a husbandry tool that helps you read a bag\'s guaranteed analysis against published ferret targets. For a feeding plan — especially for ferrets with insulinoma, adrenal disease, IBD, or other diet-sensitive conditions — work with an exotics-experienced veterinarian.',
+      'No. The evaluator compares a bag with planning-figure cutoffs, not a published ferret nutrient profile. For a feeding plan — especially for ferrets with insulinoma, adrenal disease, IBD, or other diet-sensitive conditions — work with an exotics-experienced veterinarian.',
   },
 ]
 
 const articleSchema = buildArticleSchema({
   siteId: 'ferret-com',
   title: 'Ferret Food Evaluator',
-  description: 'Paste the guaranteed analysis from any kibble bag. The evaluator scores it against published ferret nutrient targets and returns a clear verdict with per-nutrient notes.',
+  description: 'Paste a guaranteed analysis. The protein, fat, fiber, and ash cutoffs are a planning figure, not a published nutrient profile.',
   url: 'https://ferret.com/tools/food-evaluator',
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
@@ -125,7 +125,7 @@ export default function FerretFoodEvaluatorPage() {
       hero={{
         title: 'Ferret Food Evaluator',
         subtitle:
-          'Paste the guaranteed analysis from any kibble bag. The evaluator scores it against published ferret nutrient targets and returns a clear verdict with per-nutrient notes.',
+          'Paste a guaranteed analysis. Protein, fat, fiber, and ash cutoffs are a planning figure, not a published nutrient profile.',
         category: 'Calculators',
         categoryHref: '/tools',
         publishedAt: 'May 2026',
@@ -195,7 +195,7 @@ export default function FerretFoodEvaluatorPage() {
 
         <h2 id="evaluator">The evaluator</h2>
         <p>
-          Paste the guaranteed analysis from the back of any kibble bag and pick the first ingredient. The evaluator scores the food against published ferret-husbandry nutrient targets and returns "appropriate / marginal / avoid" with per-nutrient notes.
+          Paste the guaranteed analysis from the back of any kibble bag and pick the first ingredient. How we calculate: protein, fat, fiber, and ash cutoffs are a planning figure, not a published nutrient profile. The evaluator returns "appropriate / marginal / avoid" with per-nutrient notes.
         </p>
         <FerretFoodEvaluator />
 
@@ -266,12 +266,12 @@ export default function FerretFoodEvaluatorPage() {
         <ul>
           <li>Lewington, J. H. (2007). <em>Ferret Husbandry, Medicine and Surgery</em>, 2nd Edition. Saunders.</li>
           <li>Marshall Pet Products published feeding guidance (Marshall Premium Ferret Diet panel + Marshall feeding philosophy documentation).</li>
-          <li>AAFCO (Association of American Feed Control Officials) Cat Food Nutrient Profiles — used as the regulatory proxy in the absence of an AAFCO ferret profile.</li>
+          <li>There is no AAFCO ferret nutrient profile. These cutoffs are not the AAFCO cat-food minimums.</li>
           <li>Schoemaker, N. J., et al. (multiple). Pancreatic insulinoma in ferrets — published case series and dietary association reviews.</li>
           <li>Holistic Ferret Forum community resources on raw and whole-prey feeding (informally referenced; verify with vet for any specific raw plan).</li>
         </ul>
         <p className="text-sm text-brand-text-mid">
-          Ferret.com Editorial cites these as the published basis for the nutrient targets and verdict bands used by the evaluator. No third-party bench-testing of specific brands is performed by Ferret.com.
+          How we calculate: the protein, fat, fiber, and ash rows are a planning figure. The books above are not a fetched nutrient-profile table for those percentages. No third-party bench-testing of specific brands is performed by Ferret.com.
         </p>
 
         <h2 id="faq">FAQ</h2>

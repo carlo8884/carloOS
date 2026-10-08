@@ -237,7 +237,7 @@
     {
       "path": "/tools",
       "title": "Ferret Tools — Food Evaluator | Ferret.com",
-      "description": "Free ferret-keeping calculators: paste the guaranteed analysis from any kibble and the evaluator scores it against published ferret nutrient targets.",
+      "description": "Free ferret calculators. Food-evaluator cutoffs are a planning figure, not a published nutrient profile.",
       "category": "tools"
     },
     {
@@ -273,7 +273,7 @@
     {
       "path": "/tools/food-evaluator",
       "title": "Ferret Food Evaluator — Is This Kibble Right for Ferrets? | Ferret.com",
-      "description": "Paste guaranteed analysis numbers from any kibble bag; the evaluator scores it against published ferret nutrient targets with per-nutrient notes.",
+      "description": "Paste a guaranteed analysis. Protein, fat, fiber, and ash cutoffs are a planning figure, not a published profile.",
       "category": "tools"
     },
     {
