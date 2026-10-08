@@ -5645,8 +5645,14 @@ const CALCULATORS = [
     mustInclude: [
       { re: /divisorImperial:\s*330/, label: 'weight-tape divisor 330 (riding horse, lb/in)' },
       { re: /11900/, label: 'weight-tape divisor 11900 (metric, kg/cm)' },
+      { re: /10\.1111\/j\.2042-3306\.1988\.tb01451\.x/, label: 'Carroll & Huntington 1988 DOI cited' },
+      { re: /planning figure/, label: 'pony and draft divisors labeled a planning figure' },
     ],
-    why: 'Carroll & Huntington (1988) heart-girth weight-tape: lb=(girth²·length)/330; kg=(girth²·length)/11900.',
+    mustExclude: [
+      { re: /published separate constants/, label: 'do not attribute pony and draft divisors to Carroll & Huntington' },
+      { re: /published pony divisor/, label: 'pony divisor is not a published Carroll constant' },
+    ],
+    why: 'Carroll & Huntington 1988 abstract: average Y′ = 11900. Imperial 330 is the rounded form. Pony 299 and draft 301 are a planning figure.',
   },
   {
     id: 'horses · horse-weight-calculator hops',
@@ -12814,12 +12820,14 @@ const CALCULATORS = [
     id: 'horses · water band',
     file: 'apps/horses-com/src/app/tools/horse-water-calculator/model.ts',
     mustInclude: [
-      { re: /GAL_PER_100_LB_LOW = 0\.5/, label: '0.5 gallon per 100 lb' },
-      { re: /GAL_PER_100_LB_HIGH = 1\b/, label: '1 gallon per 100 lb' },
+      { re: /GAL_PER_100_LB_LOW = 0\.6/, label: '0.60 gallon per 100 lb from Merck 5 L/100 kg' },
+      { re: /merckvetmanual\.com\/management-and-nutrition\/nutrition-horses\/nutritional-requirements-of-horses-and-other-equids/, label: 'Merck 5 L/100 kg water minimum cited' },
+      { re: /GAL_PER_100_LB_HIGH = 1\b/, label: '1 gallon per 100 lb planning figure' },
+      { re: /planning figure/, label: 'upper water bound labeled a planning figure' },
       { re: /\(weightLb \/ 100\) \* GAL_PER_100_LB_LOW/, label: 'low band scales with weight' },
     ],
     mustExclude: [{ re: /\* 2\b/, label: 'no invented heat multiplier' }],
-    why: 'A 1,000 lb horse is 5–10 gallons, the water page’s temperate idle line. No second coefficient.',
+    why: 'Merck maintenance minimum is 5 L/100 kg, about 0.60 gal per 100 lb (6 gal at 1,000 lb). The 1 gal per 100 lb upper bound is a planning figure. No second coefficient.',
   },
   {
     id: 'horses · feed intake clamp',

@@ -30,7 +30,7 @@ export default function HorseWaterCalculator() {
         <div className="mt-4">
           <p className="m-0 text-2xl font-bold text-brand-dark">{low}–{high} gal/day</p>
           <ResultMeaning>
-            That is about {result.lowL.toFixed(0)}–{result.highL.toFixed(0)} liters. It is the temperate idle band only. Offer water free-choice. A sudden drop in drinking is a reason to call a veterinarian.
+            How we calculate: the low end is Merck’s maintenance minimum of 5 L per 100 kg (about 0.60 gal per 100 lb; {result.lowL.toFixed(0)} L here). The high end, 1 gal per 100 lb ({result.highL.toFixed(0)} L here), is a planning figure. Offer water free-choice. A sudden drop in drinking is a reason to call a veterinarian.
           </ResultMeaning>
           <p className="mt-3 text-sm">
             <a href="/nutrition/water-requirements" className="font-semibold text-brand-primary underline underline-offset-2">Read the water requirements guide →</a>

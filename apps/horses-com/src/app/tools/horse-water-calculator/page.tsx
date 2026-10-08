@@ -16,7 +16,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: 'Horse Water Intake Calculator | Horses.com',
   description:
-    'Scale the water page’s 5–10 gallon idle-adult band by body weight: half a gallon to one gallon per 100 pounds.',
+    'Merck maintenance minimum is 5 L per 100 kg, about 0.60 gal per 100 lb. The upper gallon per 100 lb is a planning figure.',
   path: '/tools/horse-water-calculator',
 })
 
@@ -24,7 +24,7 @@ const articleSchema = buildArticleSchema({
   siteId: 'horses-com',
   title: 'Horse Water Intake Calculator',
   description:
-    'A temperate idle drinking band from body weight, set so a 1,000-pound horse matches the 5–10 gallons on the water page.',
+    'Low end is Merck’s 5 L per 100 kg maintenance minimum. The upper gallon per 100 lb is a planning figure.',
   url: URL,
   imageUrl: '',
   authorName: 'Horses.com Editorial',
@@ -32,11 +32,11 @@ const articleSchema = buildArticleSchema({
 
 const howToSchema = buildHowToSchema({
   name: 'How to estimate a horse’s temperate water band',
-  description: 'Multiply body weight in hundreds of pounds by 0.5 and by 1.0 gallon.',
+  description: 'Low end converts Merck’s 5 L per 100 kg. The upper gallon per 100 lb is a planning figure.',
   url: URL,
   steps: [
-    { name: 'Enter body weight in pounds', text: 'The band is half a gallon to one gallon per 100 pounds.' },
-    { name: 'Read the temperate idle range', text: 'A 1,000-pound horse is 5–10 gallons, the figure on the water requirements page.' },
+    { name: 'Enter body weight in pounds', text: 'The low end is about 0.60 gallon per 100 pounds, Merck’s 5 L per 100 kg minimum.' },
+    { name: 'Read the band', text: 'A 1,000-pound horse is about 6 gallons at the Merck minimum and 10 gallons at the planning-figure upper bound.' },
     { name: 'Choose the stall bucket only if water can freeze', text: 'Freezing does not raise the band. It switches the existing heated-bucket link for the flat-back bucket.' },
   ],
 })
@@ -57,7 +57,7 @@ const FAQS = [
   {
     question: 'Where does the horse water formula come from?',
     answer:
-      'The water requirements page says an average idle adult drinks roughly 5 to 10 gallons, about 20 to 40 liters, in temperate conditions, and that a larger body raises the need. This tool uses half a gallon to one gallon per 100 pounds so a 1,000-pound horse lands on that 5-to-10-gallon line. Heat, work, lactation, and lush grass change intake, and the water page describes those shifts without a second number to multiply by.',
+      'How we calculate: Merck’s nutritional-requirements page states an average minimal maintenance requirement of 5 L per 100 kg per day for a sedentary adult horse in a thermoneutral environment. That is about 0.60 US gallon per 100 pounds, or about 6 gallons for a 1,000-pound horse. The upper bound of 1 gallon per 100 pounds is a planning figure, not that Merck sentence. Merck also says dry hay can almost double intake; this tool does not apply a second coefficient.',
   },
   {
     question: 'Does freezing weather increase the gallons?',
@@ -82,7 +82,7 @@ export default function HorseWaterPage() {
       }
       hero={{
         title: 'Horse Water Intake Calculator',
-        subtitle: 'The water page’s 5–10 gallon idle band, scaled by body weight.',
+        subtitle: 'Merck minimum is 5 L per 100 kg. The upper gallon per 100 lb is a planning figure.',
         category: 'Tools',
         categoryHref: '/tools',
         publishedAt: 'October 2026',
@@ -109,18 +109,18 @@ export default function HorseWaterPage() {
       <div className="carloOS-article">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationSchema) }} />
         <p>
-          The <Link href="/nutrition/water-requirements">water requirements page</Link> puts an average idle adult at
-          roughly 20 to 40 liters a day, about 5 to 10 gallons, in temperate conditions. It also says large body size
-          raises the requirement, and that heat, work, dry forage, and lactation push intake up while lush grass can
-          push it down. The hay calculator covers forage. This one covers the drinking band the water page
-          states, scaled so the 1,000-pound horse matches 5 to 10 gallons.
+          How we calculate: the low end is the Merck Veterinary Manual maintenance minimum of 5 L per 100 kg
+          of body weight per day for a sedentary adult horse in a thermoneutral environment
+          (about 0.60 US gallon per 100 lb, or about 6 gallons at 1,000 lb). The high end, 1 gallon per 100 lb,
+          is a planning figure. Merck says dry hay can almost double intake and that lactation and sweat
+          increase needs; this tool does not multiply by a second coefficient. The{' '}
+          <Link href="/nutrition/water-requirements">water requirements page</Link> is a separate husbandry note.
         </p>
         <h2>What the band is not</h2>
         <p>
-          Half a gallon to one gallon per 100 pounds is the arithmetic that reproduces the page at about 1,000 pounds.
-          A heavier horse gets a wider band in proportion. A lighter horse gets a narrower one. Liters on the result are
-          the gallon figures times 3.785, so they will sit near the page’s 20-to-40-liter line at that average weight
-          and will not match it exactly, because the page calls 20 to 40 liters “about” 5 to 10 gallons.
+          Liters on the result are the gallon figures times 3.785. A heavier horse gets a wider band in proportion.
+          A lighter horse gets a narrower one. The 0.60 gallon figure is the Merck minimum converted to US gallons.
+          The upper gallon is a planning figure.
         </p>
         <p>
           Do not withhold water to hit the low end. The page’s practical rule is free-choice water. The{' '}
