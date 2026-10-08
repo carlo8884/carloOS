@@ -50,7 +50,7 @@ const FAQS = [
   {
     question: 'What size cage does a ferret need?',
     answer:
-      'The American Ferret Association recommends a minimum floor area of roughly 24 x 24 inches with at least 18 inches of height per ferret, with a strong preference for multi-level cages. In practice, most two-ferret households settle on a 36 x 24-inch or larger footprint with at least three levels. Bar spacing matters more than total size for safety: one inch or less for adults, half an inch or less for kits.',
+      'The 24 x 24 inch floor and 18 inch height are a planning figure, not a fetched published standard. Two ferrets usually want about 36 x 24 inches with three levels, also a planning figure. Bar spacing matters more than total size for safety: one inch or less for adults, half an inch or less for kits, as a planning note.',
   },
   {
     question: 'Can ferrets live in a cage all the time?',
@@ -162,7 +162,7 @@ export default function FerretCageSetupPage() {
 
           <h2 id="sizing">Cage Sizing and Bar Spacing</h2>
           <p>
-            The American Ferret Association recommends a minimum cage floor area of roughly 24 × 24 inches with a minimum height of 18 inches per ferret, with strong preference for multi-level cages that increase usable habitat without growing the footprint. For two ferrets — and the practical default is two ferrets, because ferrets are social and a single ferret in an empty household is an under-stimulated ferret — most keepers settle on a 36 × 24-inch or larger footprint with at least three levels. To turn those minimums into an L × W × H for your headcount and level count, use the <a href="/tools/cage-size-calculator">cage size calculator</a>.
+            The 24 × 24 inch floor and 18 inch height per ferret are a planning figure, not a fetched published standard. Multi-level cages add usable habitat without growing the footprint. For two ferrets — and the practical default is two ferrets, because ferrets are social and a single ferret in an empty household is an under-stimulated ferret — a 36 × 24-inch footprint with at least three levels is the same kind of planning figure. To turn those notes into an L × W × H for your headcount and level count, use the <a href="/tools/cage-size-calculator">cage size calculator</a>.
           </p>
           <p>
             Bar spacing matters more than total cage size for safety. <strong>One inch or less</strong> is the working ceiling for adult ferrets; <strong>half an inch or less</strong> is appropriate for kits, who can squeeze through openings that look implausibly small. A ferret can fit through any opening that its skull will pass through; the body deforms around the skeleton. Bars wider than one inch are how kits escape from "ferret-safe" cages.

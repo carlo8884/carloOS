@@ -51,7 +51,7 @@ const FAQS = [
   {
     question: 'Why should I budget extra for ferret health?',
     answer:
-      'Ferrets are prone to several conditions whose treatment is not optional once they appear. Adrenal disease, insulinoma, and gastrointestinal foreign-body blockages are among the most common, and diagnosis plus treatment (hormone panels, surgery, ongoing medication) frequently runs into the thousands of dollars. Because these are common rather than rare, most exotic-pet veterinarians recommend keeping a dedicated emergency fund or carrying exotic-pet insurance rather than treating these as unlikely events.',
+      'Ferrets are prone to several conditions whose treatment is not optional once they appear. Adrenal disease, insulinoma, and gastrointestinal foreign-body blockages are among the most common, and diagnosis plus treatment (hormone panels, surgery, ongoing medication) frequently runs into the thousands of dollars. A dedicated emergency fund is a planning choice for those bills. This page does not cite a veterinary recommendation to buy insurance, and it does not open a quote.',
     answerText:
       'Adrenal disease, insulinoma, and blockages are common in ferrets and treatment is not optional — often thousands of dollars. Keep an emergency fund or carry exotic-pet insurance.',
   },

@@ -81,7 +81,7 @@ const FAQS = [
   {
     question: 'How often should a ferret see the vet?',
     answer:
-      "A healthy young adult ferret should have a wellness exam at least once a year. From around age three onward, most exotic-pet veterinarians recommend twice-yearly visits, because the common middle-aged ferret diseases — insulinoma, adrenal disease, lymphoma, dental and heart disease — develop and progress quickly, and a six-month interval catches them earlier. Kits need a series of early visits for their vaccination schedule.",
+      "A healthy young adult ferret should have a wellness exam at least once a year. From around age three, a six-month interval is a planning figure on this page, not a fetched veterinary standard. Insulinoma, adrenal disease, lymphoma, and dental or heart disease can move quickly, so a shorter gap is a reasonable planning choice. Kits need a series of early visits for their vaccination schedule.",
   },
   {
     question: 'What does a ferret wellness exam include?',
