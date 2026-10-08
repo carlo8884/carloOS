@@ -313,7 +313,7 @@ export default function BestDogFoodPage() {
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-07" />
+              <ComparisonFoot updated="2026-10-08" />
             </div>
 
             {/* Key buying guidance */}

@@ -116,7 +116,7 @@ export default function FleaTickPreventionPage() {
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-07" />
+              <ComparisonFoot updated="2026-10-08" />
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Which flea and tick preventive fits</h2>
               <FAQAccordion items={[
                 {

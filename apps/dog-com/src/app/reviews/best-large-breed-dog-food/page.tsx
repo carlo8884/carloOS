@@ -127,7 +127,7 @@ export default function BestLargeBreedFoodPage() {
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-07" />
+              <ComparisonFoot updated="2026-10-08" />
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Which large-breed food fits</h2>
               <FAQAccordion items={[
                 {
