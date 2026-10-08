@@ -1,0 +1,41 @@
+name: Live link sweep
+
+# Weekly check of every /go target and outbound citation on the five earning sites.
+# Non-blocking: this workflow is not a required check, and the scan exits 0.
+# Findings go to the job summary and to the live-link-sweep artifact.
+# This workflow does not open issues, assign, mention, or request review.
+
+on:
+  schedule:
+    - cron: '30 14 * * 1'
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+concurrency:
+  group: live-link-sweep
+  cancel-in-progress: false
+
+jobs:
+  sweep:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Classifier tests
+        run: node --test scripts/ci/live-link-sweep.test.mjs
+      - name: Sweep hop targets and citations
+        run: node scripts/ci/live-link-sweep.mjs
+      - name: Upload findings
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: live-link-sweep
+          path: live-link-sweep.md
+          if-no-files-found: ignore
+          retention-days: 14
