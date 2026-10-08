@@ -3,11 +3,13 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, RelatedLinks, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
-export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Arthritis in Dogs — Signs, Management, Mobility | Vets.co", description: "Osteoarthritis affects most senior dogs. Recognize early signs of joint pain, and learn the multimodal approach to keeping arthritic dogs mobile.", path: '/health/arthritis-in-dogs', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Arthritis in Dogs — Signs, Management, Mobility | Vets.co", description: "Annual osteoarthritis prevalence was 2.5% in a UK primary-care cohort (Anderson et al., 2018). Signs and a multimodal plan.", path: '/health/arthritis-in-dogs', type: 'article' })
 const SOURCES = [
   { label: 'WSAVA: Osteoarthritis in Dogs and Cats', url: 'https://wsava.org/global-guidelines/pain-guidelines/', publisher: 'WSAVA' },
   { label: 'Merck Veterinary Manual: Osteoarthritis in Dogs', url: 'https://www.merckvetmanual.com/musculoskeletal-system/osteoarthritis-in-dogs-and-cats/osteoarthritis-in-dogs-and-cats', publisher: 'Merck Vet Manual' },
   { label: 'AAHA: Pain Management Guidelines', url: 'https://www.aaha.org/aaha-guidelines/pain-management-guidelines/', publisher: 'AAHA' },
+  { label: 'Anderson KL et al. Estimated annual prevalence of appendicular osteoarthritis in UK primary-care dogs. Scientific Reports. 2018.', url: 'https://www.nature.com/articles/s41598-018-23940-z', publisher: 'Scientific Reports' },
+  { label: 'Kealy RD et al. Evaluation of the effect of limited food consumption on radiographic evidence of osteoarthritis in dogs. JAVMA. 2000;217:1678-1680.', url: 'https://doi.org/10.2460/javma.2000.217.1678', publisher: 'JAVMA' },
 ]
 const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Arthritis in Dogs', description: 'Recognizing and managing osteoarthritis and joint pain in dogs.', url: 'https://vets.co/health/arthritis-in-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-09-04T00:00:00Z' ,
   citation: SOURCES,
@@ -17,14 +19,14 @@ const combined = combineSchemas(schema, med)
 const FAQS = [
   { question: "What are the earliest signs of arthritis in dogs?", answer: "Arthritis develops gradually, so the earliest signs are subtle: slowness to rise after rest, stiffness that eases after the dog warms up, reluctance to jump onto the couch or into the car, hesitation on stairs, slowing on walks, and a quieter, less playful demeanor. Dogs rarely vocalize joint pain, so owners often misread these changes as simple aging. Because arthritis is progressive and irreversible, recognizing these early signs and starting management sooner preserves mobility longer." },
   { question: "Can I give my dog human pain relievers like ibuprofen?", answer: "No. Human anti-inflammatories such as ibuprofen, naproxen, and acetaminophen are toxic to dogs and can cause severe stomach ulcers, kidney failure, or death even at small doses. Dogs need veterinary anti-inflammatories formulated and dosed specifically for them, prescribed and monitored by your veterinarian. Never give any human pain medication to a dog without explicit veterinary direction — it is one of the most common causes of accidental poisoning." },
-  { question: "Does weight really affect arthritis that much?", answer: "Weight is a factor the owner controls. Extra weight loads already-damaged joints. This page does not cite a trial that measures lameness after weight loss, and it does not rank a lean body condition against a medication. Getting to a lean condition still belongs in the plan." },
+  { question: "Does weight really affect arthritis that much?", answer: "Weight is a factor the owner controls. Kealy et al. (JAVMA 2000) followed Labrador Retriever littermates fed 25% less food. At 8 years, hip osteoarthritis was present in 3 of 21 limit-fed dogs versus 15 of 22 control-fed littermates (https://doi.org/10.2460/javma.2000.217.1678). That trial does not rank a lean body condition against a medication." },
 ]
 export default function ArthritisDogsPage() {
   return (
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: 'Arthritis in Dogs', subtitle: 'Osteoarthritis is common in dogs and often recognized late. This page does not cite a prevalence percent. It is progressive. A plan can keep many arthritic dogs more comfortable. The key is recognizing it early, because dogs hide pain well.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '10 min',}}
+        hero={{ title: 'Arthritis in Dogs', subtitle: 'Anderson et al. (Scientific Reports, 2018) estimated the annual period prevalence of appendicular osteoarthritis at 2.5% in 455,557 UK primary-care dogs. Age older than eight years was a risk factor (https://www.nature.com/articles/s41598-018-23940-z). It is progressive. A plan can keep many arthritic dogs more comfortable.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '10 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Arthritis', href: '/health/arthritis-in-dogs' }]}
         relatedLinks={[
           { title: 'Health Conditions', href: '/health', category: 'Hub' },
