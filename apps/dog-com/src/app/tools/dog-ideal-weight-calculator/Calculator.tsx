@@ -355,8 +355,8 @@ export default function DogIdealWeightCalculator() {
       {/* Disclaimer */}
       <div className="mt-6 rounded border border-amber-700/40 bg-amber-950/20 p-4 text-sm text-amber-900">
         <span className="font-semibold">An estimate, not a target your vet set.</span>{' '}
-        Breed ranges are AKC-standard adult bands, and the body-condition estimate uses the standard
-        heuristic that each BCS point above the ideal (4–5/9) is roughly 10% over ideal body weight.
+        Breed ranges are AKC-standard adult bands, and the body-condition estimate uses a planning
+        figure: each BCS point above the ideal (4–5/9) is roughly 10% over ideal body weight.
         Healthy weight depends on frame, sex, age, and muscle, so two dogs of the same breed can sit
         at different points in the range. Your veterinarian can set a target weight for your
         individual dog and rule out a medical cause for weight change.

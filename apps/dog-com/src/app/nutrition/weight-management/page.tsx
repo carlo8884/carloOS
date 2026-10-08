@@ -42,13 +42,13 @@ export default function WeightManagementPage() {
         </ul>
 
         <h2 id="reduction">Safe Caloric Reduction Protocol</h2>
-        <p>Safe weight loss is 1–2% of body weight per month. Faster loss risks muscle mass depletion (which reduces metabolism, making further loss harder) and, in cats, hepatic lipidosis (not typically a risk in dogs but worth noting the principle of too-fast loss).</p>
+        <p>A loss of 1–2% of body weight per month is a planning figure on this page. Faster loss risks muscle mass depletion (which reduces metabolism, making further loss harder) and, in cats, hepatic lipidosis (not typically a risk in dogs but worth noting the principle of too-fast loss).</p>
         <ol>
           <li><strong>Get a baseline weight:</strong> Weigh your dog at a veterinary clinic or pet store scale. Record it.</li>
           <li><strong>Calculate ideal weight:</strong> Work with your veterinarian if unsure. The dog&apos;s current body condition score suggests how far off ideal you are.</li>
           <li><strong>Calculate target caloric intake:</strong> Feed based on ideal body weight, not current weight. Use the RER formula (70 × ideal weight in kg^0.75) × appropriate life stage factor (1.0 for weight loss, lower than maintenance). Most dogs lose weight on 60–80% of their calculated maintenance calorie intake at ideal weight. The <a href="/tools/dog-calorie-calculator">calorie calculator</a> applies that weight-loss factor to the dog&apos;s target weight.</li>
           <li><strong>Measure everything:</strong> Use a kitchen scale, not volume measurements. Calories in a cup of kibble vary by 30–40% depending on how the cup is filled. Treats count — track them and subtract from daily allocation.</li>
-          <li><strong>Monitor monthly:</strong> Weigh at the same time (pre-meal, post-elimination) on the same scale each month. Adjust intake by 10% if not losing at target rate, or if losing faster than 2% per month (too fast).</li>
+          <li><strong>Monitor monthly:</strong> Weigh at the same time (pre-meal, post-elimination) on the same scale each month. Adjust intake by 10% if not losing at target rate, or if losing faster than the planning figure of 2% per month (too fast).</li>
         </ol>
 
         <h2 id="diets">Weight Management Diets</h2>
@@ -65,7 +65,7 @@ export default function WeightManagementPage() {
         <ul>
           <li>Weigh monthly, same conditions (time, scale, pre-meal)</li>
           <li>BCS at each weigh-in — as fat decreases, ribs become more palpable, waist becomes more defined</li>
-          <li>Adjust intake by 10% if not meeting the 1–2%/month target</li>
+          <li>Adjust intake by 10% if not meeting the planning figure of 1–2% of body weight per month</li>
           <li>Recheck with your veterinarian at 3-month intervals during active weight loss — bloodwork may need to be monitored depending on the dog&apos;s health status</li>
           <li>Target: reach ideal weight, then recalculate maintenance intake at the new weight and maintain indefinitely</li>
         </ul>

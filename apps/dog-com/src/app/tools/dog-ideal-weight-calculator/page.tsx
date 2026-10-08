@@ -121,7 +121,7 @@ const howToSchema = buildHowToSchema({
     },
     {
       name: 'Read the healthy range and estimated ideal weight',
-      text: 'The calculator returns the breed\'s healthy adult weight range and applies the standard BCS heuristic (each point above 5 ≈ 10% overweight) to estimate an individual ideal weight. Use this as a starting point; your veterinarian sets the final target.',
+      text: 'The calculator returns the breed\'s healthy adult weight range and applies a planning figure (each point above 5 ≈ 10% overweight) to estimate an individual ideal weight. Use this as a starting point; your veterinarian sets the final target.',
     },
   ],
 })
@@ -189,7 +189,7 @@ export default function DogIdealWeightCalculatorPage() {
               <span className="font-semibold text-brand-dark">Worked example.</span> A Labrador&apos;s
               healthy adult weight is typically{' '}
               <span className="font-semibold text-brand-dark">55–80 lb</span> depending on sex and
-              frame. If a Lab weighs 90 lb at a BCS of 7/9, the standard heuristic (each BCS point
+              frame. If a Lab weighs 90 lb at a BCS of 7/9, the planning figure (each BCS point
               above ideal ≈ 10% over weight) estimates an ideal of about{' '}
               <span className="font-semibold text-brand-dark">75 lb</span> — roughly 15 lb to lose,
               gradually and under veterinary guidance.
@@ -345,9 +345,9 @@ export default function DogIdealWeightCalculatorPage() {
           <p className="mb-4 text-base leading-relaxed text-brand-text-mid">
             The healthy range comes from the AKC-standard adult weight band for the selected breed in
             the Dog.com breed dataset; for a mixed-breed or unlisted dog, a size-class band is used
-            instead. The estimated ideal weight uses the standard veterinary body-condition
-            heuristic: each point of body condition score above the ideal (4–5 of 9) represents
-            roughly 10% over ideal body weight, so estimated ideal weight ≈ current weight ÷ (1 +
+            instead. The estimated ideal weight uses a planning figure: each point of body condition
+            score above the ideal (4–5 of 9) represents roughly 10% over ideal body weight, so
+            estimated ideal weight ≈ current weight ÷ (1 +
             0.10 × (BCS − 5)). Because frame, sex, age, and muscle all shift the right number, two
             dogs of the same breed can sit at different points in the range — which is why a body
             condition assessment matters more than the scale alone.
