@@ -147,7 +147,12 @@ export function HomeTriage() {
                   </div>
                   <div className="font-display font-bold text-white text-sm leading-tight italic group-hover:text-[#3aa4cc]">Health guides</div>
                 </div>
-                <p className="text-xs text-white/55 mt-0.5">Spikes, gasping, and when to test.</p>
+                <div className="text-xs text-white/55 mt-0.5 flex items-center gap-2">
+                  <div className={`relative h-6 w-9 shrink-0 overflow-hidden rounded-md bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
+                    <StockImage manifestKey="fish-com:cornerstone-cycling" alt="" aspect="4:3" />
+                  </div>
+                  <span>Spikes, gasping, and when to test.</span>
+                </div>
               </div>
             </Link>
           </div>
