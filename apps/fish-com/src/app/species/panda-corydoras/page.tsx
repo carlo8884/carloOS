@@ -19,9 +19,9 @@ const FAQS = [
   {
     question: 'What temperature do panda corydoras need?',
     answer:
-      'Cooler than most tropical fish: 68–77°F. Panda corydoras come from cooler, faster-flowing foothill streams of the Peruvian Amazon and struggle in the high-70s-to-low-80s temperatures kept for discus or many gouramis, which shortens their lifespan. Keepers who lose pandas quickly have very often kept them too warm.',
+      'FishBase lists Corydoras panda at 20–25°C, which is 68–77°F (https://www.fishbase.se/summary/Corydoras-panda.html). Panda corydoras come from cooler, faster-flowing foothill streams of the Peruvian Amazon and struggle in the high-70s-to-low-80s temperatures kept for discus or many gouramis, which shortens their lifespan. Keepers who lose pandas quickly have very often kept them too warm.',
     answerText:
-      'Cooler than most tropicals: 68-77F. Pandas come from cool foothill streams and struggle above the high 70s. Most quick losses come from keeping them too warm.',
+      'FishBase lists Corydoras panda at 20–25°C, which is 68–77°F (https://www.fishbase.se/summary/Corydoras-panda.html). Pandas come from cool foothill streams and struggle above the high 70s. Most quick losses come from keeping them too warm.',
   },
   {
     question: 'How many panda corydoras should I keep together?',
@@ -67,7 +67,7 @@ export default function PandaCorydorasPage() {
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Quick Stats</div>
-          {[['Scientific name', 'Corydoras panda'], ['Adult size', '1.5–2 inches'], ['Temperature', '68–77°F (cooler preferred)'], ['pH', '6.0–7.4'], ['Group size', '6 minimum, 8+ better'], ['Substrate', 'Soft sand'], ['Lifespan', '5–10 years']].map(([k, v]) => (
+          {[['Scientific name', 'Corydoras panda'], ['Adult size', '1.5–2 inches'], ['Temperature', '68–77°F (https://www.fishbase.se/summary/Corydoras-panda.html)'], ['pH', '6.0–7.4'], ['Group size', '6 minimum, 8+ better'], ['Substrate', 'Soft sand'], ['Lifespan', '5–10 years']].map(([k, v]) => (
             <div key={k} className="flex justify-between py-1.5 border-b border-brand-border text-xs last:border-0">
               <span className="text-brand-text-light">{k}</span><span className="font-bold text-brand-dark text-right max-w-[55%] break-all">{v}</span>
             </div>
@@ -83,14 +83,14 @@ export default function PandaCorydorasPage() {
         <StockImage manifestKey="fish-com:species-panda-corydoras" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A panda corydoras in a home aquarium." priority />
 
         <h2>The Cooler-Water Cory</h2>
-        <DropCap>The panda corydoras differs from most aquarium catfish in one important respect: it comes from cooler, faster-flowing foothill streams of the Peruvian Amazon rather than the warm lowland waters most tropical fish inhabit. As a result it does best at the lower end of the tropical range, between 68 and 77°F, and tends to struggle and shorten its lifespan in the high-70s-to-low-80s temperatures kept for discus or many gouramis. This makes the panda a poor tankmate for warm-water specialists but an excellent companion for other cool-tolerant species such as white cloud mountain minnows, neon tetras, and many rasboras. Keepers who lose pandas quickly have very often kept them too warm.</DropCap>
+        <DropCap>The panda corydoras differs from most aquarium catfish in one important respect: it comes from cooler, faster-flowing foothill streams of the Peruvian Amazon rather than the warm lowland waters most tropical fish inhabit. As a result it does best at the lower end of the tropical range, at 68–77°F (FishBase lists Corydoras panda at 20–25°C, which is 68–77°F (<a className="break-all" href="https://www.fishbase.se/summary/Corydoras-panda.html">https://www.fishbase.se/summary/Corydoras-panda.html</a>)), and tends to struggle and shorten its lifespan in the high-70s-to-low-80s temperatures kept for discus or many gouramis. This makes the panda a poor tankmate for warm-water specialists but an excellent companion for other cool-tolerant species such as white cloud mountain minnows, neon tetras, and many rasboras. Keepers who lose pandas quickly have very often kept them too warm.</DropCap>
         <p>Pandas are also more sensitive to water quality than the bronze cory. They need a fully cycled, mature tank with stable parameters, zero ammonia and nitrite, and low nitrate. They are not a good fish for a brand-new aquarium.</p>
 
         <h2>A Group Animal — Always</h2>
         <p>Like all corydoras, pandas are obligately social and must be kept in groups of at least six, with eight or more producing the most natural behavior. In a proper group they forage together across the substrate in daylight, occasionally bursting into bouts of playful, darting activity. A lone or paired panda will hide, eat poorly, and slowly decline. Because they are so small, even a 20-gallon tank can comfortably house a sizeable, active shoal.</p>
 
         <CalloutBox variant="info" title="Keep them cool">
-          Panda corydoras originate from cooler highland streams and do best at 68–77°F. Avoid pairing them with warm-water species kept above 78°F, which shortens their lifespan.
+          Panda corydoras originate from cooler highland streams and do best at 68–77°F (FishBase lists Corydoras panda at 20–25°C, which is 68–77°F (<a className="break-all" href="https://www.fishbase.se/summary/Corydoras-panda.html">https://www.fishbase.se/summary/Corydoras-panda.html</a>)). Avoid pairing them with warm-water species kept above 78°F, which shortens their lifespan.
         </CalloutBox>
 
         <h2>Substrate and Tank Setup</h2>

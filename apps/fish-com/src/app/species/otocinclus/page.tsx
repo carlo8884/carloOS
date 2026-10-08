@@ -69,7 +69,7 @@ export default function OtocinclsPage() {
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Quick Stats</div>
-          {[['Size', '1.5 inches'], ['Group', '6+ — social species'], ['Tank age', 'Established only (3+ months)'], ['Temperature', '72–82°F'], ['pH', '6.0–7.5'], ['Diet', 'Soft algae — must supplement'], ['Lifespan', '3–5 years']].map(([k, v]) => (
+          {[['Size', '1.5 inches'], ['Group', '6+ — social species'], ['Tank age', 'Established only (3+ months)'], ['Temperature', '68–77°F (https://www.fishbase.se/summary/Otocinclus-vittatus.html)'], ['pH', '6.0–7.5'], ['Diet', 'Soft algae — must supplement'], ['Lifespan', '3–5 years']].map(([k, v]) => (
             <div key={k} className="flex justify-between py-1.5 border-b border-brand-border text-xs last:border-0">
               <span className="text-brand-text-light">{k}</span><span className="font-bold text-brand-dark text-right max-w-[55%] break-all">{v}</span>
             </div>

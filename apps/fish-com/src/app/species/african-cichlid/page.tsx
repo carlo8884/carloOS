@@ -129,7 +129,7 @@ export default function AfricanCichlidPage() {
                 ['Groups', 'Mbuna · Peacocks · Haps · Tanganyikan'],
                 ['Origin', 'Lakes Malawi, Tanganyika, Victoria'],
                 ['Adult size', '3–12 in by species'],
-                ['Temperature', '76–82°F'],
+                ['Temperature', 'No preferred band on this page'],
                 ['pH', '7.8–9.0 (alkaline)'],
                 ['GH / KH', '10–25 dGH / 10–18 dKH'],
                 ['Min tank', '55 gal mbuna · 75 gal haps/peacock'],
@@ -233,15 +233,15 @@ export default function AfricanCichlidPage() {
           <ul>
             <li>
               <strong>Lake Malawi:</strong> pH 7.8–8.5, GH 10–20 dGH,
-              KH 10–18 dKH, temperature 76–82°F.
+              KH 10–18 dKH.
             </li>
             <li>
               <strong>Lake Tanganyika:</strong> pH 8.5–9.5, GH 12–25
-              dGH, KH 16–25 dKH, temperature 76–82°F.
+              dGH, KH 16–25 dKH.
             </li>
             <li>
               <strong>Lake Victoria:</strong> pH 7.5–8.5, GH 8–20 dGH,
-              KH 6–18 dKH, temperature 76–82°F.
+              KH 6–18 dKH.
             </li>
           </ul>
           <p>

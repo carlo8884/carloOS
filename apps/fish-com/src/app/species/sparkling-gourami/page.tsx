@@ -40,9 +40,9 @@ const FAQS = [
   {
     question: 'What water conditions do sparkling gouramis need?',
     answer:
-      'Soft, slightly acidic, warm water best mimics the still, vegetation-choked ditches and rice paddies they inhabit: around 76–82°F and pH 6.0–7.5. Tannins from driftwood or Indian almond leaves are appreciated. Because the fish comes from near-stagnant water, strong filter current is stressful — use gentle flow such as a sponge filter.',
+      'Soft, slightly acidic, warm water best mimics the still, vegetation-choked ditches and rice paddies they inhabit: pH 6.0–7.5. FishBase lists Trichopsis pumila at 25–28°C, which is 77–83°F (https://www.fishbase.se/summary/Trichopsis-pumila.html). Tannins from driftwood or Indian almond leaves are appreciated. Because the fish comes from near-stagnant water, strong filter current is stressful — use gentle flow such as a sponge filter.',
     answerText:
-      'Soft, slightly acidic, warm water: about 76-82F and pH 6.0-7.5. Use gentle flow such as a sponge filter, since strong current stresses this still-water species.',
+      'Soft, slightly acidic, warm water: pH 6.0-7.5. FishBase lists Trichopsis pumila at 25–28°C, which is 77–83°F (https://www.fishbase.se/summary/Trichopsis-pumila.html). Use gentle flow such as a sponge filter, since strong current stresses this still-water species.',
   },
   {
     question: 'Why does my sparkling gourami gulp at the surface?',
@@ -67,7 +67,7 @@ export default function SparklingGouramiPage() {
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Quick Stats</div>
-          {[['Scientific name', 'Trichopsis pumila'], ['Adult size', '1.25–1.5 inches'], ['Temperature', '76–82°F'], ['pH', '6.0–7.5 (soft preferred)'], ['Tank size', '10 gallons'], ['Temperament', 'Peaceful, shy'], ['Lifespan', '4–5 years']].map(([k, v]) => (
+          {[['Scientific name', 'Trichopsis pumila'], ['Adult size', '1.25–1.5 inches'], ['Temperature', '77–83°F (https://www.fishbase.se/summary/Trichopsis-pumila.html)'], ['pH', '6.0–7.5 (soft preferred)'], ['Tank size', '10 gallons'], ['Temperament', 'Peaceful, shy'], ['Lifespan', '4–5 years']].map(([k, v]) => (
             <div key={k} className="flex justify-between py-1.5 border-b border-brand-border text-xs last:border-0">
               <span className="text-brand-text-light">{k}</span><span className="font-bold text-brand-dark text-right max-w-[55%] break-all">{v}</span>
             </div>

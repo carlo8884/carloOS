@@ -10,7 +10,7 @@ const SOURCES = [
   { label: "Bleher, H. Bleher's Discus. Aquapress, 2006.", publisher: "Aquapress" },
   { label: "Kullander, S.O. & Ferreira, E.J.G. A Review of the South American Cichlid Genus Cichla. Ichthyological Exploration of Freshwaters, 2006.", publisher: "Ichthyological Exploration of Freshwaters" },
 ]
-export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Discus Care Guide — Soft Warm Water, Daily Changes | Fish.com', description: 'Discus are the most demanding freshwater fish. 82-86°F, pH 5.5-6.8, daily or large water changes, and high protein diet.', path: '/species/discus', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Discus Care Guide — Soft Warm Water, Daily Changes | Fish.com', description: 'Discus are the most demanding freshwater fish. pH 5.5-6.8, daily or large water changes, and high protein diet.', path: '/species/discus', type: 'article' })
 const articleSchema = buildArticleSchema({ siteId: 'fish-com', title: 'Discus Care Guide', description: 'Water requirements, daily water changes, and disease prevention for Symphysodon discus.', url: 'https://fish.com/species/discus', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' ,
   citation: SOURCES,
 })
@@ -26,9 +26,9 @@ const FAQS = [
   {
     question: 'What temperature do discus need?',
     answer:
-      '82–86°F, with the warmer end preferred. This limits tankmates to species that share warm-water preferences: cardinal tetras, rummy nose tetras, Corydoras sterbai, and some other Amazonian species. Standard community fish such as neons, platies, and most cories are incompatible with discus temperatures.',
+      'FishBase lists Symphysodon aequifasciatus at 26–30°C, which is 78–86°F (https://www.fishbase.se/summary/Symphysodon-aequifasciatus.html). Cardinal tetras overlap only the low end of this band. Standard community fish such as neons, platies, and most cories do not share this whole band.',
     answerText:
-      '82-86F, warmer end preferred. Compatible tankmates are limited to warm-water species like cardinal tetras, rummy nose tetras, and Corydoras sterbai.',
+      'FishBase lists Symphysodon aequifasciatus at 26–30°C, which is 78–86°F (https://www.fishbase.se/summary/Symphysodon-aequifasciatus.html). Cardinal tetras overlap only the low end of this band.',
   },
   {
     question: 'How often do discus need water changes?',
@@ -70,7 +70,7 @@ export default function DiscusPage() {
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Discus Requirements</div>
-          {[['Temperature', '82–86°F — warm end critical'], ['pH', '5.5–6.8 — soft acidic'], ['GH', 'Under 8 — soft water'], ['Water changes', '30-50% daily or EOD'], ['Min tank', '55 gallons for 6 discus'], ['Group size', 'Minimum 6 — reduces aggression'], ['Diet', 'Beef heart, bloodworms, high protein'], ['Experience', 'Advanced — not a first cichlid']].map(([k, v]) => (
+          {[['Temperature', '78–86°F (https://www.fishbase.se/summary/Symphysodon-aequifasciatus.html)'], ['pH', '5.5–6.8 — soft acidic'], ['GH', 'Under 8 — soft water'], ['Water changes', '30-50% daily or EOD'], ['Min tank', '55 gallons for 6 discus'], ['Group size', 'Minimum 6 — reduces aggression'], ['Diet', 'Beef heart, bloodworms, high protein'], ['Experience', 'Advanced — not a first cichlid']].map(([k, v]) => (
             <div key={k} className="flex justify-between py-1.5 border-b border-brand-border text-xs last:border-0">
               <span className="text-brand-text-light">{k}</span><span className="font-bold text-brand-dark text-right max-w-[55%] break-all">{v}</span>
             </div>
@@ -91,17 +91,17 @@ export default function DiscusPage() {
         <p>The cost: quality wild-caught discus run see current price per fish. Tank-bred discus from quality breeders run see current price. A group of 6 discus in an appropriate tank represents see current price in fish alone before any equipment is purchased. If they die from inadequate water quality, that loss is significant. Research thoroughly before purchasing.</p>
 
         <h2>Water — The Critical Foundation</h2>
-        <p>Target: pH 5.5–6.8, GH under 8, temperature 82–86°F. Most US tap water is too hard and too alkaline. RO/DI water remineralized with Seachem Equilibrium (to achieve GH 4–6 with minimal KH, allowing peat or CO2 to set a stable low pH) is the most reliable approach. Indian almond leaves and peat filtration add tannins that lower pH naturally and provide beneficial compounds. A discus-specific water conditioner (Seachem Discus Trace, Aquavitro Synthesis) replenishes trace minerals removed by RO.</p>
+        <p>Target: pH 5.5–6.8, GH under 8, temperature 78–86°F (FishBase lists Symphysodon aequifasciatus at 26–30°C, which is 78–86°F (<a className="break-all" href="https://www.fishbase.se/summary/Symphysodon-aequifasciatus.html">https://www.fishbase.se/summary/Symphysodon-aequifasciatus.html</a>)). Most US tap water is too hard and too alkaline. RO/DI water remineralized with Seachem Equilibrium (to achieve GH 4–6 with minimal KH, allowing peat or CO2 to set a stable low pH) is the most reliable approach. Indian almond leaves and peat filtration add tannins that lower pH naturally and provide beneficial compounds. A discus-specific water conditioner (Seachem Discus Trace, Aquavitro Synthesis) replenishes trace minerals removed by RO.</p>
         <p><strong>Water change protocol:</strong> The standard discus keeper approach is 30–50% water changes daily or every other day. This maintains pristine water quality and simulates the natural dilution of the soft, rain-fed rivers discus inhabit. The water added must be pre-heated to tank temperature — cold water additions cause temperature shock that immediately stresses discus and triggers disease. Pre-heated RO water stored in large containers (30–50 gallon trash cans with a heater) simplifies daily changes.</p>
 
         <h2>Temperature — Warmer Than Most</h2>
-        <p>82–86°F is the correct range — the warmer end is preferred by most discus keepers and is appropriate for the wild fish's native habitat in the Amazon basin. At this temperature, the metabolism of beneficial bacteria is also higher, processing waste faster. The challenge: most community fish do not thrive at 84°F. Discus-compatible tankmates are limited to species that share warm water preferences: cardinal tetras, rummy nose tetras, Corydoras sterbai (the one cory species that tolerates warm water), and some other Amazonian species. Standard community fish (neons, platies, most cories) are incompatible with discus temperatures.</p>
+        <p>FishBase lists Symphysodon aequifasciatus at 26–30°C, which is 78–86°F (<a className="break-all" href="https://www.fishbase.se/summary/Symphysodon-aequifasciatus.html">https://www.fishbase.se/summary/Symphysodon-aequifasciatus.html</a>). Most community fish do not share this whole band. Cardinal tetras overlap only the low end. Standard community fish (neons, platies, most cories) do not share it.</p>
 
         <h2>Diet — High Protein Required</h2>
         <p>Discus are omnivorous but protein-forward. The traditional discus staple: beef heart mix — ground beef heart (fat removed) combined with frozen seafood, spinach, and vitamins, formed into thin sheets and frozen. Commercial alternatives: Hikari Discus Bio-Gold, NLS Discus Formula, Sera Discus Granules. Frozen bloodworms are eagerly accepted and valuable for conditioning. Feed 3–4 times daily — discus need frequent feeding due to their high metabolism. Remove uneaten food within 10 minutes to maintain water quality.</p>
 
         <CalloutBox variant="tip" title="Pre-heat your change water">
-          Cold water additions cause temperature shock that immediately stresses discus and triggers disease. Store the daily change volume in heated containers (30–50 gallon drums with a heater set to tank temperature) so every refill is already at 84°F when it arrives.
+          Cold water additions cause temperature shock that immediately stresses discus and triggers disease. Store the daily change volume in heated containers (30–50 gallon drums with a heater set to tank temperature) so every refill is already at the tank temperature when it arrives.
         </CalloutBox>
 
         <h2>Disease — The Primary Challenge</h2>

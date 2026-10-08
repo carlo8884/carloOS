@@ -33,9 +33,9 @@ const FAQS = [
   {
     question: 'What water parameters do celestial pearl danios need?',
     answer:
-      'They prefer soft, slightly acidic water — pH 6.5–7.5 and GH under 10 — with a temperature of 73–79°F. They are robust once established, adapt well to standard community parameters, and tolerate moderate hardness. Dark substrate and dense planting intensify their coloration dramatically.',
+      'They prefer soft, slightly acidic water — pH 6.5–7.5 and GH under 10. Seriously Fish lists Danio margaritatus at 20–26°C, which is 68–79°F (https://www.seriouslyfish.com/species/danio-margaritatus/). They are robust once established, adapt well to standard community parameters, and tolerate moderate hardness. Dark substrate and dense planting intensify their coloration dramatically.',
     answerText:
-      'CPD prefer soft, slightly acidic water: pH 6.5-7.5, GH under 10, and 73-79F. They adapt well to community parameters; dark substrate and dense planting intensify their color.',
+      'CPD prefer soft, slightly acidic water: pH 6.5-7.5, GH under 10. Seriously Fish lists Danio margaritatus at 20–26°C, which is 68–79°F (https://www.seriouslyfish.com/species/danio-margaritatus/). They adapt well to community parameters; dark substrate and dense planting intensify their color.',
   },
   {
     question: 'How can I tell male and female celestial pearl danios apart?',
@@ -67,7 +67,7 @@ export default function CPDPage() {
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Quick Stats</div>
-          {[['Scientific name', 'Danio margaritatus'], ['Adult size', '1 inch'], ['Min group', '8 — 10-12 ideal'], ['Temperature', '73–79°F'], ['pH', '6.5–7.5'], ['Min tank', '10 gallons'], ['Breeding', 'Plant spawner — breeds readily']].map(([k, v]) => (
+          {[['Scientific name', 'Danio margaritatus'], ['Adult size', '1 inch'], ['Min group', '8 — 10-12 ideal'], ['Temperature', '68–79°F (https://www.seriouslyfish.com/species/danio-margaritatus/)'], ['pH', '6.5–7.5'], ['Min tank', '10 gallons'], ['Breeding', 'Plant spawner — breeds readily']].map(([k, v]) => (
             <div key={k} className="flex justify-between py-1.5 border-b border-brand-border text-xs last:border-0">
               <span className="text-brand-text-light">{k}</span><span className="font-bold text-brand-dark text-right max-w-[55%] break-all">{v}</span>
             </div>
@@ -85,7 +85,7 @@ export default function CPDPage() {
         <p>CPD males are significantly more colorful than females — the iridescent pearlescent spots are vivid and the fin coloration (red-orange with bold black edges) is dramatic, especially during display. Females are rounder-bodied with less intense fin coloration. Males display to each other and to females in tight, circling, fin-flared behavioral exchanges that are one of the most engaging micro-fish behaviors available. In a group of 8-10 with a 3:2 female-to-male ratio, the display is near-constant and makes the tank feel alive.</p>
 
         <h2>Water Requirements and Care</h2>
-        <p>CPD prefer soft, slightly acidic water (pH 6.5–7.5, GH under 10) — similar to other Southeast Asian fish but not as exacting as crystal shrimp. They adapt well to standard community tank parameters and tolerate moderate hardness. Temperature 73–79°F. Not as sensitive as their nano size might suggest — they are robust once established in appropriate conditions. Dark substrate and dense planting intensify their coloration dramatically compared to bare or light-substrate setups.</p>
+        <p>CPD prefer soft, slightly acidic water (pH 6.5–7.5, GH under 10) — similar to other Southeast Asian fish but not as exacting as crystal shrimp. They adapt well to standard community tank parameters and tolerate moderate hardness. Seriously Fish lists Danio margaritatus at 20–26°C, which is 68–79°F (<a className="break-all" href="https://www.seriouslyfish.com/species/danio-margaritatus/">https://www.seriouslyfish.com/species/danio-margaritatus/</a>). Not as sensitive as their nano size might suggest — they are robust once established in appropriate conditions. Dark substrate and dense planting intensify their coloration dramatically compared to bare or light-substrate setups.</p>
 
         <h2>Breeding — Self-Sustaining in Planted Tanks</h2>
         <p>CPD breed readily among Java moss and fine-leaved plants. Eggs are scattered in vegetation; the parents show mild interest in eating eggs but in dense planting, enough survive to produce periodic batches of fry. Fry are tiny and feed initially on infusoria and micro-organisms naturally present in established planted tanks. A 10-gallon planted CPD colony will produce fry periodically without any deliberate breeding intervention — the population self-sustains at a manageable level.</p>

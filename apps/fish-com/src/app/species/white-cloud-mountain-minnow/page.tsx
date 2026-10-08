@@ -19,9 +19,9 @@ const FAQS = [
   {
     question: 'Can white cloud mountain minnows live without a heater?',
     answer:
-      'Yes. White clouds thrive at 60–72°F, a range that covers most unheated homes for much of the year in temperate climates, making them a correct choice for unheated indoor tanks, cooler rooms, and summer outdoor tubs. At tropical temperatures (78°F and up) they decline — shorter lifespan, weaker immune function, less color and activity — so they are not suitable tankmates for a heated tropical tank.',
+      'Yes, when the room stays inside the published band. FishBase lists Tanichthys albonubes at 18–22°C, which is 64–72°F (https://www.fishbase.se/summary/Tanichthys-albonubes.html). That covers many unheated homes in temperate climates, cooler rooms, and summer outdoor tubs. At tropical temperatures (78°F and up) they decline — shorter lifespan, weaker immune function, less color and activity — so they are not suitable tankmates for a heated tropical tank.',
     answerText:
-      'Yes. White clouds thrive at 60-72F and suit unheated tanks. Above 78F they decline, so they are not suitable for heated tropical tanks.',
+      'Yes. FishBase lists Tanichthys albonubes at 18–22°C, which is 64–72°F (https://www.fishbase.se/summary/Tanichthys-albonubes.html). Above 78F they decline, so they are not suitable for heated tropical tanks.',
   },
   {
     question: 'How many white cloud mountain minnows should I keep?',
@@ -33,9 +33,9 @@ const FAQS = [
   {
     question: 'What water parameters do white cloud mountain minnows need?',
     answer:
-      'They are very adaptable to hardness and tolerate pH 6.0–8.0. Temperature is the key parameter: 60–72°F is preferred and 75°F should be treated as a maximum, since warmer water stresses them. In their preferred cool range they live 5–7 years.',
+      'They are very adaptable to hardness and tolerate pH 6.0–8.0. FishBase lists Tanichthys albonubes at 18–22°C, which is 64–72°F (https://www.fishbase.se/summary/Tanichthys-albonubes.html). In that band they live 5–7 years.',
     answerText:
-      'They tolerate pH 6.0-8.0 and are very adaptable. Temperature matters most: 60-72F preferred, 75F maximum. In cool water they live 5-7 years.',
+      'They tolerate pH 6.0-8.0 and are very adaptable. FishBase lists Tanichthys albonubes at 18–22°C, which is 64–72°F (https://www.fishbase.se/summary/Tanichthys-albonubes.html). In that band they live 5-7 years.',
   },
   {
     question: 'Do white cloud mountain minnows breed easily?',
@@ -47,9 +47,9 @@ const FAQS = [
   {
     question: 'What fish are compatible with white cloud mountain minnows?',
     answer:
-      'Peaceful species of similar size that tolerate the same cool range: other white clouds, Corydoras aeneus and paleatus (not sterbai, which needs warmer water), hillstream loaches, and danio species that tolerate cooler temperatures. Avoid tropical fish requiring 78°F and up, since the temperature mismatch harms one or both groups.',
+      'Peaceful species that overlap this band: other white clouds, hillstream loaches, and zebra danios. Bronze and peppered corydoras do not share this band. Avoid tropical fish requiring 78°F and up, since the temperature mismatch harms one or both groups.',
     answerText:
-      'Peaceful cool-water species: other white clouds, Corydoras aeneus and paleatus, hillstream loaches, and cool-tolerant danios. Avoid tropical fish needing 78F+.',
+      'Peaceful species that overlap this band: other white clouds, hillstream loaches, and zebra danios. Bronze and peppered corydoras do not share this band. Avoid tropical fish needing 78F+.',
   },
 ]
 
@@ -67,7 +67,7 @@ export default function WhiteCloudPage() {
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Quick Stats</div>
-          {[['Scientific name', 'Tanichthys albonubes'], ['Adult size', '1.5 inches'], ['Temperature', '60–72°F — cold water preferred'], ['Max temp', '75°F — above this stresses them'], ['pH', '6.0–8.0 — very adaptable'], ['Group', '8+ recommended'], ['Lifespan', '5–7 years in cool water']].map(([k, v]) => (
+          {[['Scientific name', 'Tanichthys albonubes'], ['Adult size', '1.5 inches'], ['Temperature', '64–72°F (https://www.fishbase.se/summary/Tanichthys-albonubes.html)'], ['Max temp', 'Published band is the ceiling on this page'], ['pH', '6.0–8.0 — very adaptable'], ['Group', '8+ recommended'], ['Lifespan', '5–7 years in cool water']].map(([k, v]) => (
             <div key={k} className="flex justify-between py-1.5 border-b border-brand-border text-xs last:border-0">
               <span className="text-brand-text-light">{k}</span><span className="font-bold text-brand-dark text-right max-w-[55%] break-all">{v}</span>
             </div>
@@ -82,7 +82,7 @@ export default function WhiteCloudPage() {
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
         <StockImage manifestKey="fish-com:species-white-cloud-mountain-minnow" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A white cloud mountain minnow in a home aquarium." priority />
         <h2>The Cold Water Advantage</h2>
-        <p>White clouds thrive at 60–72°F — a temperature range that encompasses most unheated homes during most of the year in temperate climates. This is their defining advantage: a quality cold-tolerant fish that handles room temperature without a heater. They are the correct choice for unheated fish tanks, outdoor tub setups in summer, and indoor rooms that run cooler than typical tropical fish setups tolerate.</p>
+        <p>FishBase lists Tanichthys albonubes at 18–22°C, which is 64–72°F (<a className="break-all" href="https://www.fishbase.se/summary/Tanichthys-albonubes.html">https://www.fishbase.se/summary/Tanichthys-albonubes.html</a>). That band covers many unheated homes during much of the year in temperate climates. This is their defining advantage: a quality cold-tolerant fish that handles room temperature without a heater. They are the correct choice for unheated fish tanks, outdoor tub setups in summer, and indoor rooms that run cooler than typical tropical fish setups tolerate.</p>
         <p>At tropical temperatures (78°F+), white clouds decline: their lifespan shortens significantly, their immune function is compromised, and they are less active and less colorful than at their preferred range. If you are running a heated tropical tank at 78°F, white clouds are not appropriate tankmates — keep them in their preferred temperature range where they thrive.</p>
 
         <h2>Color and Conditioning</h2>
@@ -96,7 +96,7 @@ export default function WhiteCloudPage() {
         <p>The standard wild-type white cloud has green-gold body coloration with the distinctive lateral stripe and red tail. Several cultivated varieties are available: the golden white cloud (warm yellow-gold body replacing the typical green), the long-fin white cloud (extended, flowing fins on both male and female — particularly striking at feeding time when fins are flared), and occasionally albino variants. All have identical care requirements.</p>
 
         <h2>Compatibility</h2>
-        <p>Peaceful with all species of similar size that tolerate the same temperature range. Natural tankmates in the cold-water aquarium: other white clouds (same species colonies are especially active), Corydoras aeneus and paleatus (not sterbai, which needs warmer water), hillstream loaches (love the same cool, oxygenated conditions), and danio species that tolerate cooler temperatures. Avoid tropical fish requiring 78°F+ — the temperature mismatch creates a chronic welfare problem for one or both species.</p>
+        <p>Peaceful with all species of similar size that tolerate the same temperature range. Natural tankmates in the cold-water aquarium: other white clouds (same species colonies are especially active), hillstream loaches, and zebra danios. Bronze and peppered corydoras do not share this band. Avoid tropical fish requiring 78°F+ — the temperature mismatch creates a chronic welfare problem for one or both species.</p>
         <h2>Frequently Asked Questions</h2>
         <FAQAccordion items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answerText }))} includeSchema={false} allowMultiple />
         <HopDisclosure siteId="fish-com" href="/go/amazon-brand/white%20cloud%20mountain%20minnow%20tank%20setup?s=species-white-cloud-mountain-minnow" />

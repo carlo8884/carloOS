@@ -26,9 +26,9 @@ const FAQS = [
   {
     question: 'What water parameters do Boesemani rainbowfish need?',
     answer:
-      'Boesemani come from Lake Ajamaru in West Papua, a hard, alkaline lake (GH 14–20, pH 7.5–8.5). They show their best color and health at pH 7.2–8.0, GH 10–18, KH 6–10, and a temperature of 72–82°F. This makes them ideal for hard-water areas where soft-water species struggle, and the blue coloration in particular intensifies in harder, more alkaline water.',
+      'Boesemani come from Lake Ajamaru in West Papua, a hard, alkaline lake (GH 14–20, pH 7.5–8.5). They show their best color and health at pH 7.2–8.0, GH 10–18, KH 6–10. FishBase lists Melanotaenia boesemani at 27–30°C, which is 80–86°F (https://www.fishbase.se/summary/Melanotaenia-boesemani.html). This makes them ideal for hard-water areas where soft-water species struggle, and the blue coloration in particular intensifies in harder, more alkaline water.',
     answerText:
-      'Boesemani prefer hard alkaline water like their native Lake Ajamaru: pH 7.2-8.0, GH 10-18, KH 6-10, and 72-82F. Harder water intensifies their blue color.',
+      'Boesemani prefer hard alkaline water like their native Lake Ajamaru: pH 7.2-8.0, GH 10-18, KH 6-10. FishBase lists Melanotaenia boesemani at 27–30°C, which is 80–86°F (https://www.fishbase.se/summary/Melanotaenia-boesemani.html). Harder water intensifies their blue color.',
   },
   {
     question: 'How many Boesemani rainbowfish should I keep together?',
@@ -47,9 +47,9 @@ const FAQS = [
   {
     question: 'What fish are compatible with Boesemani rainbowfish?',
     answer:
-      'Other hard-water community fish: Corydoras paleatus (one of the few cories tolerating harder water), other rainbowfish species, hillstream loaches, and larger rasboras. They are not compatible with fish requiring soft, acidic water such as discus and most tetras.',
+      'Other hard-water community fish: Corydoras paleatus (one of the few cories tolerating harder water), other rainbowfish species, and larger rasboras. Hillstream loaches do not share this temperature band. They are not compatible with fish requiring soft, acidic water such as discus and most tetras.',
     answerText:
-      'Compatible with hard-water fish: Corydoras paleatus, other rainbowfish, hillstream loaches, larger rasboras. Not compatible with soft-water species like discus or most tetras.',
+      'Compatible with hard-water fish: Corydoras paleatus, other rainbowfish and larger rasboras. Hillstream loaches do not share this temperature band. Not compatible with soft-water species like discus or most tetras.',
   },
 ]
 
@@ -67,7 +67,7 @@ export default function BoesemaniPage() {
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Quick Stats</div>
-          {[['Scientific name', 'Melanotaenia boesemani'], ['Adult size', '3.5-4.5 inches (males larger)'], ['Temperature', '72–82°F'], ['pH', '7.0–8.0'], ['GH', '8-18 — harder water preferred'], ['Group', '8+ — 10-12 ideal'], ['Lifespan', '5-8 years']].map(([k, v]) => (
+          {[['Scientific name', 'Melanotaenia boesemani'], ['Adult size', '3.5-4.5 inches (males larger)'], ['Temperature', '80–86°F (https://www.fishbase.se/summary/Melanotaenia-boesemani.html)'], ['pH', '7.0–8.0'], ['GH', '8-18 — harder water preferred'], ['Group', '8+ — 10-12 ideal'], ['Lifespan', '5-8 years']].map(([k, v]) => (
             <div key={k} className="flex justify-between py-1.5 border-b border-brand-border text-xs last:border-0">
               <span className="text-brand-text-light">{k}</span><span className="font-bold text-brand-dark text-right max-w-[55%] break-all">{v}</span>
             </div>

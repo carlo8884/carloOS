@@ -92,7 +92,7 @@ export default function HeaterWattageCalculator() {
             onChange={setTargetTemp}
             unit={`°${tempUnit}`}
             step={0.5}
-            hint={tempUnit === 'F' ? 'Tropical: 76–82°F · Discus: 84°F · Cold water: skip heater' : 'Tropical: 24–28°C · Discus: 29°C'}
+            hint={tempUnit === 'F' ? 'Mixed-tank planning figure: 76–82°F · Discus: 78–86°F · Cold water: skip heater' : 'Mixed-tank planning figure: 24–28°C · Discus: 26–30°C'}
             error={targetError}
           />
         </div>
