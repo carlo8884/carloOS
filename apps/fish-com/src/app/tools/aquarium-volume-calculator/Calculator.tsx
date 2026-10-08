@@ -202,6 +202,14 @@ export default function VolumeCalculator() {
         <ResultMeaning>
           Net volume is the water you can put in at this fill level. Size stocking, filtration, and the heater from that number, not from the empty glass.
         </ResultMeaning>
+        <p className="mt-4 text-sm font-semibold leading-snug">
+          <a
+            href="/reviews/best-aquarium-filters"
+            className="inline-block max-w-full whitespace-normal text-brand-primary underline underline-offset-2"
+          >
+            Read the aquarium filter review
+          </a>
+        </p>
         </>
       )}
     </div>

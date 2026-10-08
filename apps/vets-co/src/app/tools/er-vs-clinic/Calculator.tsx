@@ -224,6 +224,12 @@ export default function Calculator() {
             </ResultMeaning>
             <ResultPick siteId="vets-co" pick={careSettingPick(setting)} />
 
+            <Link
+              href="/guides/when-to-go-to-the-vet"
+              className="mt-4 inline-block max-w-full font-semibold text-brand-primary underline underline-offset-2"
+            >
+              Watch vs same-day vs emergency
+            </Link>
             {setting === 'er' ? (
               <div className="mt-4 flex flex-col gap-2">
                 <Link

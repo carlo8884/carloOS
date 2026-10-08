@@ -191,6 +191,12 @@ export default function CageSizeCalculator() {
         <ResultMeaning>
           The footprint is the minimum sleeping-and-litter size for this ferret count, level count, and play time. It is a planning figure, not a brand recommendation.
         </ResultMeaning>
+        <a
+          href="/reviews/best-ferret-cage"
+          className="mt-3 inline-block max-w-full font-semibold text-brand-primary underline underline-offset-2"
+        >
+          Compare the cages that meet this footprint
+        </a>
       </div>
       )}
 
