@@ -75,9 +75,11 @@ async function bodyOutline(target: { evaluate: <T>(fn: () => T) => Promise<T> })
 function outlineDiff(server: string[], client: string[]): string {
   const lines: string[] = []
   const max = Math.max(server.length, client.length)
-  for (let i = 0; i < max && lines.length < 20; i++) {
+  for (let i = 0; i < max && lines.length < 8; i++) {
     if (server[i] === client[i]) continue
+    if (i > 0) lines.push(`#${i - 1} both: ${server[i - 1]}`)
     lines.push(`#${i}\n  server: ${server[i] ?? '(end)'}\n  client: ${client[i] ?? '(end)'}`)
+    break
   }
   return lines.join('\n')
 }
@@ -100,6 +102,7 @@ test('money pages hydrate with no console hydration error', async ({ page }, tes
     try {
       const response = await page.goto(path, { waitUntil: 'commit' })
       expect(response?.status(), path).toBe(200)
+      const rawHtml = path === '/tools' ? await response.text() : ''
       await new Promise((resolve) => setTimeout(resolve, 400))
       await expect(page.locator('h1').first(), path).toBeVisible()
       let detail = ''
@@ -114,7 +117,9 @@ test('money pages hydrate with no console hydration error', async ({ page }, tes
           await plain.goto(path, { waitUntil: 'domcontentloaded' })
           const server = await bodyOutline(plain)
           const diff = outlineDiff(server, client)
-          detail = '\n' + (diff || `outlines match (${server.length} nodes)`)
+          const at = rawHtml.indexOf('h-14 w-20')
+          const snippet = at >= 0 ? rawHtml.slice(Math.max(0, at - 280), at + 40).replace(/\s+/g, ' ') : 'no h-14'
+          detail = '\n' + (diff || `outlines match (${server.length} nodes)`) + '\nHTML ' + snippet
         } finally {
           await plain.close()
         }
