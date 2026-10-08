@@ -73,7 +73,7 @@ const FAQS = [
   {
     question: 'Can ferrets actually be litter-trained?',
     answer:
-      "Yes, but with caveats. A ferret can reliably be trained to use a litter pan around 80-90% of the time in normal conditions. They are not as fastidious as cats; the remaining 10-20% accidents — particularly in unfamiliar rooms, in corners far from a pan, or when startled — are typical and not a training failure. The American Ferret Association and standard exotic-pet behavior references describe this as the realistic ceiling.",
+      "Yes, but with caveats. A ferret can learn to use a litter pan and still miss, especially in an unfamiliar room, in a corner far from a pan, or when startled. This page does not cite a success percent. Misses are part of ferret litter training, not automatic proof the training failed.",
   },
   {
     question: 'How many litter pans do I need?',

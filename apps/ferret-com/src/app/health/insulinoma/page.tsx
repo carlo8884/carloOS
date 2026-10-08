@@ -85,7 +85,7 @@ const FAQS = [
   {
     question: 'Can diet prevent insulinoma in ferrets?',
     answer:
-      'There is no proven prevention. The leading working hypothesis in the exotic-pet literature is that chronic dietary carbohydrate drives sustained insulin demand and eventual beta-cell change — the evidence is associational rather than experimentally proven. The consistent recommendation from the American Ferret Association and exotic-pet veterinary references is to minimize dietary carbohydrate from kithood onward: a high-protein, low-carbohydrate diet and no sugary treats.',
+      'There is no proven prevention. The leading working hypothesis in the exotic-pet literature is that chronic dietary carbohydrate drives sustained insulin demand and eventual beta-cell change — the evidence is associational rather than experimentally proven. Minimizing dietary carbohydrate from kithood — a high-protein, low-carbohydrate diet and no sugary treats — is a planning choice on this page. It is not a fetched American Ferret Association cutoff.',
   },
   {
     question: 'What is the treatment ladder for ferret insulinoma?',
@@ -105,7 +105,7 @@ const FAQS = [
   {
     question: 'Why does my ferret crash again after I give it sugar for low blood sugar?',
     answer:
-      'Pure sugar produces a rebound. The ferret’s remaining functional beta cells respond to the glucose load with another insulin spike, and the crisis can recur within roughly 20-40 minutes. That is why oral sugar (Karo syrup, honey) is only the rescue step for a ferret that cannot safely swallow food — once the ferret is alert, it should be offered a protein-and-fat meal, which is its primary metabolic substrate and stabilizes glucose for longer. Sugar buys minutes; protein buys the window to get to a veterinarian. Crisis-level hypoglycemia still warrants inpatient evaluation even after an apparent recovery at home.',
+      'Pure sugar can produce a rebound. The ferret’s remaining functional beta cells can respond to the glucose load with another insulin spike. This page does not cite a minute range for that rebound. Oral sugar (Karo syrup, honey) is only the rescue step for a ferret that cannot safely swallow food — once the ferret is alert, offer a protein-and-fat meal. Sugar buys a short window; protein is the next step while you get to a veterinarian. Crisis-level hypoglycemia still warrants inpatient evaluation even after an apparent recovery at home.',
   },
   {
     question: 'Is a ferret hypoglycemic episode an emergency?',
@@ -267,7 +267,7 @@ export default function FerretInsulinomaPage() {
             places a calendar age on the same life-stage bands, so a 3-to-7-year window is a stage label rather than a surprise.
           </p>
           <p>
-            The leading working hypothesis for the unusually high prevalence in domestic ferrets is chronic dietary carbohydrate exposure driving sustained insulin demand and eventual beta-cell hyperplasia. The American Ferret Association (AFA) and exotic-pet veterinary references both flag minimizing dietary carbohydrate as the primary lifestyle-level risk-reduction strategy. The evidence is associational rather than experimentally proven.
+            The leading working hypothesis for the unusually high prevalence in domestic ferrets is chronic dietary carbohydrate exposure driving sustained insulin demand and eventual beta-cell hyperplasia. Minimizing dietary carbohydrate is a planning choice on this page, not a fetched American Ferret Association cutoff. The evidence is associational rather than experimentally proven.
           </p>
 
           <h2 id="signs">Clinical Signs — Easy to Miss</h2>

@@ -73,12 +73,12 @@ const FAQS = [
   {
     question: 'Is 4 hours of out-of-cage time really the minimum?',
     answer:
-      "Yes — that is the working floor across American Ferret Association owner education and the exotic-pet welfare literature. Six to eight hours is closer to ideal. Less than four hours is associated with cage stereotypies (bar biting, repetitive pacing), behavioural frustration, and a less well-adjusted adult ferret. The time does not have to be continuous; ferrets are crepuscular and respond well to morning and evening blocks.",
+      "Four hours is a planning figure on this page, not a fetched published standard. Six to eight hours is the same kind of planning note. Less than four hours is when this page treats the cage as the house and tells you to add playtime. The time does not have to be continuous; ferrets are crepuscular and morning and evening blocks both count.",
   },
   {
     question: 'Does environmental enrichment actually reduce adrenal disease risk?',
     answer:
-      "The evidence is suggestive but not proven. Some published case-control work in the exotic-pet literature has found lower adrenal-disease rates in ferrets housed with more enrichment and natural photoperiods, but the causal mechanism is uncertain and confounders (breeder source, neuter timing) are hard to control for. Treat it as a plausible secondary benefit of good husbandry, not a reliable preventive measure.",
+      "This page does not cite a case-control study or a rate. Enrichment and a natural light cycle are husbandry, not a proven prevention for adrenal disease. Breeder source and neuter timing are hard to separate from housing. Treat any disease benefit as unproven.",
   },
   {
     question: 'What is the single most dangerous thing in a ferret-proofed room?',
@@ -218,12 +218,12 @@ export default function FerretExerciseEnrichmentPage() {
             released.
           </p>
           <p>
-            The standard minimum across the American Ferret Association
-            owner-education materials and the exotic-pet veterinary
-            welfare literature: <strong>4 hours of supervised out-of-cage
-            time per day in a ferret-proofed space</strong>. Six to eight
-            hours is closer to ideal. Less than four hours produces the
-            stereotypies above with high reliability.
+            The four-hour out-of-cage floor is a planning figure, not a
+            fetched published standard: <strong>4 hours of supervised
+            out-of-cage time per day in a ferret-proofed space</strong>.
+            Six to eight hours is the same kind of planning note. Less than
+            four hours is when this page says to add playtime rather than
+            treat the cage as the whole house.
           </p>
           <p>
             The time does not have to be continuous. Ferrets are crepuscular —
@@ -457,11 +457,10 @@ export default function FerretExerciseEnrichmentPage() {
             <p>
               The behavioural welfare framework used here draws on
               Quesenberry &amp; Carpenter, <em>Ferrets, Rabbits, and Rodents:
-              Clinical Medicine and Surgery</em> (Saunders/Elsevier), the
-              <em> Journal of Exotic Pet Medicine</em> behavioural literature,
-              and American Ferret Association (AFA) owner-education materials.
-              The four-hour out-of-cage minimum is the figure most consistently
-              cited across these sources.
+              Clinical Medicine and Surgery</em> (Saunders/Elsevier) and the
+              <em> Journal of Exotic Pet Medicine</em> behavioural literature.
+              The four-hour out-of-cage floor on this page is a planning figure.
+              It is not a fetched line from those books.
             </p>
           </CalloutBox>
 
