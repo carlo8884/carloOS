@@ -27,7 +27,7 @@ export const metadata: Metadata = buildMetadata({
 const schema = buildHowToSchema({
   name: 'How to evaluate a kibble for a ferret',
   description:
-    'Score the first ingredient and the guaranteed-analysis crude protein, fat, fiber, and ash from the back of any kibble bag against published ferret-husbandry nutrient targets.',
+    'Score the first ingredient and the guaranteed-analysis crude protein, fat, fiber, and ash from the back of any kibble bag against planning nutrient targets. There is no AAFCO ferret profile behind these numbers.',
   url: URL,
   totalTime: 'PT2M',
   steps: [
@@ -59,13 +59,13 @@ const softwareApplicationSchema = {
   applicationSubCategory: 'FerretHusbandryCalculator',
   operatingSystem: 'Web Browser (any HTML5-capable device)',
   description:
-    'Free interactive ferret kibble evaluator. Inputs: first ingredient (5 classes), crude protein %, crude fat %, crude fiber %, ash %, moisture %. Outputs: 0-18 score, "appropriate / marginal / avoid" verdict, per-nutrient notes against published ferret husbandry targets.',
+    'Free interactive ferret kibble evaluator. Inputs: first ingredient (5 classes), crude protein %, crude fat %, crude fiber %, ash %, moisture %. Outputs: 0-18 score, "appropriate / marginal / avoid" verdict, per-nutrient notes against planning targets, not an AAFCO ferret profile.',
   inLanguage: 'en-US',
   isAccessibleForFree: true,
   offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
   featureList: [
     'First-ingredient analysis (whole meat vs. meat meal vs. by-product vs. grain vs. corn)',
-    'Protein target: ≥38% (excellent), ≥35% (acceptable)',
+    'Planning protein target: ≥38% (excellent), ≥35% (acceptable) — not an AAFCO ferret profile',
     'Fat target: 18-25%',
     'Fiber ceiling: ≤3%',
     'Ash ceiling: ≤7%',
@@ -84,7 +84,7 @@ const FAQS = [
   {
     question: 'What about the AAFCO ferret profile?',
     answer:
-      'There is no AAFCO ferret nutrient profile. The AAFCO Cat Food Nutrient Profiles are used as the regulatory proxy in the US; the ferret community has developed higher-protein and higher-fat targets through Marshall Pet Products, Lewington\'s veterinary text, and decades of keeper consensus. The evaluator uses the keeper-consensus targets, not the cat-proxy minimums.',
+      'There is no AAFCO ferret nutrient profile. The protein, fat, fiber, and ash cutoffs in this tool are planning figures, not a fetched nutrient-profile table. They are not the AAFCO cat-food minimums, and this page does not cite a paper for them.',
   },
   {
     question: 'Is grain-free kitten food acceptable?',
@@ -227,6 +227,7 @@ export default function FerretFoodEvaluatorPage() {
         </section>
 
         <h2 id="targets">Ferret nutrient targets</h2>
+        <p>How we calculate: the rows below are planning figures. This page does not have a fetched ferret nutrient-profile table for them.</p>
         <div style={{ overflowX: 'auto', marginBottom: '24px' }}>
           <table className="w-full text-sm border-collapse">
             <thead>
