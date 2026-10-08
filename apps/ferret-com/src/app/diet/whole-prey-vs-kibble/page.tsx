@@ -283,7 +283,7 @@ export default function WholePreyVsKibblePage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-07" />
+          <ComparisonFoot updated="2026-10-08" />
 
           <h2 id="faq">FAQ</h2>
           <p>Those figures are typical US ranges dated 2026-10-05.</p>
