@@ -6,29 +6,38 @@ import { expect, test } from '@playwright/test'
  */
 const moneyPaths: Record<string, string[]> = {
   'dog-com': [
+    '/',
+    '/tools',
     '/training',
     '/reviews/best-dry-dog-food',
     '/reviews/best-dog-crates',
     '/reviews/best-dog-harnesses',
   ],
   'fish-com': [
+    '/',
     '/tools',
     '/reviews/best-aquarium-filters',
     '/reviews/best-aquarium-heaters',
     '/reviews/best-water-test-kits',
   ],
   'horses-com': [
+    '/',
     '/tools',
     '/reviews/best-equine-supplements',
     '/reviews/best-winter-horse-blankets',
     '/tools/horse-cost-calculator',
   ],
   'vets-co': [
+    '/',
+    '/tools',
+    '/pet-insurance',
     '/telehealth',
     '/reviews/best-pet-insurance',
     '/insurance/wellness-plans-vs-insurance',
   ],
   'ferret-com': [
+    '/',
+    '/tools',
     '/care/seasonal-shedding',
     '/reviews/best-ferret-cage',
     '/reviews/best-ferret-litter',
@@ -72,6 +81,17 @@ async function bodyOutline(target: { evaluate: <T>(fn: () => T) => Promise<T> })
   })
 }
 
+function serverGoHrefs(html: string): string[] {
+  const cleaned = html.replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, '')
+  const hrefs: string[] = []
+  const re = /<a\b[^>]*?\bhref\s*=\s*(?:"([^"]+)"|'([^']+)')/gi
+  for (const match of cleaned.matchAll(re)) {
+    const href = match[1] ?? match[2] ?? ''
+    if (href.includes('/go/')) hrefs.push(href)
+  }
+  return [...new Set(hrefs)]
+}
+
 function outlineDiff(server: string[], client: string[]): string {
   const lines: string[] = []
   const max = Math.max(server.length, client.length)
@@ -85,6 +105,7 @@ function outlineDiff(server: string[], client: string[]): string {
 }
 
 test('money pages hydrate with no console hydration error', async ({ page }, testInfo) => {
+  test.setTimeout(180_000)
   const paths = moneyPaths[testInfo.project.name]
   expect(paths?.length).toBeGreaterThan(0)
 
@@ -102,9 +123,16 @@ test('money pages hydrate with no console hydration error', async ({ page }, tes
     try {
       const response = await page.goto(path, { waitUntil: 'commit' })
       expect(response?.status(), path).toBe(200)
-      const rawHtml = path === '/tools' ? await response.text() : ''
+      const rawHtml = (await response?.text()) ?? ''
+      const serverHops = serverGoHrefs(rawHtml)
       await new Promise((resolve) => setTimeout(resolve, 400))
       await expect(page.locator('h1').first(), path).toBeVisible()
+      const liveHops = await page.locator('a[href*="/go/"]').evaluateAll((els) =>
+        els.map((el) => el.getAttribute('href') || ''),
+      )
+      for (const href of serverHops) {
+        expect(liveHops, `${path} dropped earning hop ${href}`).toContain(href)
+      }
       let detail = ''
       if (problems.length > 0) {
         const client = await bodyOutline(page)

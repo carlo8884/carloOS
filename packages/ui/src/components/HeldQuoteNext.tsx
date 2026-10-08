@@ -1,7 +1,7 @@
 /**
- * Non-carrier step beside a disabled insurance quote.
- * The quote href and hold stay on the disabled control; this link does not replace them.
- * Held quotes render on Vets.co, where this estimator already exists.
+ * Internal comparison step when a carrier quote cannot open.
+ * The quote href stays off the page until that carrier's tag is set.
+ * This link is the next step. It is not a quote and it does not invent an ID.
  */
 export function HeldQuoteNext({ tone = 'ink' }: { tone?: 'ink' | 'on-color' }) {
   const className =
@@ -9,8 +9,8 @@ export function HeldQuoteNext({ tone = 'ink' }: { tone?: 'ink' | 'on-color' }) {
       ? 'inline-block max-w-full whitespace-normal text-left text-sm font-bold text-white underline underline-offset-2'
       : 'inline-block max-w-full whitespace-normal text-left text-sm font-semibold text-brand-primary underline underline-offset-2'
   return (
-    <a href="/tools/insurance-reimbursement-estimator" className={className}>
-      Estimate reimbursement before comparing plans
+    <a href="/reviews/best-pet-insurance" className={className}>
+      Compare carriers on published terms
     </a>
   )
 }

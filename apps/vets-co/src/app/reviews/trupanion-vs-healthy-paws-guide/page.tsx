@@ -81,7 +81,6 @@ export default function TrupanionVsHealthyPawsGuidePage() {
         <p>The annual limit is a choice of $5,000, $7,000, or unlimited.</p>
         <h2>Who should start where</h2>
         <p>Start with Trupanion if the reason you are shopping is a large emergency you do not want to finance yourself at the front desk. Start with Healthy Paws if you can pay the clinic and you want the faster reimbursement the review describes. If the missing piece is vaccines and wellness exams, neither of these policies is that product. The review sends that job to Embrace. A wellness plan is also not a substitute for either policy. That distinction is the <Link href="/insurance/wellness-plans-vs-insurance">wellness versus insurance</Link> page.</p>
-        <p>Quotes not available here yet. When a quote can open from this page, it goes to the Trupanion quote on the insurance review. A quote is not the range printed above.</p>
         <HopDisclosure siteId="vets-co" href="/go/trupanion/home?s=reviews-trupanion-vs-healthy-paws-guide" showQuietNote={false} />
         <p><InlinePartnerQuote href="/go/trupanion/home?s=reviews-trupanion-vs-healthy-paws-guide" label="Get a Trupanion quote →" holdWithoutPartnerId /></p>
         <EmailCapture

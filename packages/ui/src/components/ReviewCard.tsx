@@ -6,7 +6,7 @@
  */
 
 import type { ReactNode } from 'react'
-import { hopCommissionReady, isChewyHop, liveAnchorHref, partnerLinkQuiet, partnerNeededLabel, partnerQuoteHeld, partnerTagReady, shopCtaLabel, tableShopLink } from '@carloOS/config/affiliate-hop'
+import { hopCommissionReady, isChewyHop, liveAnchorHref, partnerLinkQuiet, partnerQuoteHeld, partnerTagReady, shopCtaLabel, tableShopLink } from '@carloOS/config/affiliate-hop'
 import { HeldQuoteNext } from './HeldQuoteNext'
 
 const EARNING_PICK_SITES = new Set(['dog-com', 'fish-com', 'horses-com', 'vets-co', 'ferret-com'])
@@ -263,16 +263,7 @@ export function ReviewCard({
               {ctaText.replace(/\s*→\s*$/, '').trim()} — partner ID needed
             </span>
           ) : held ? (
-            <span className="inline-flex flex-wrap items-center gap-3">
-              <button
-                type="button"
-                disabled
-                className="inline-flex items-center justify-center bg-brand-primary/50 text-brand-white text-sm font-bold px-6 py-3 rounded max-w-full text-center whitespace-normal cursor-not-allowed"
-              >
-                {partnerNeededLabel(label)}
-              </button>
-              <HeldQuoteNext />
-            </span>
+            <HeldQuoteNext />
           ) : href ? (
             <a
               href={href}

@@ -7,7 +7,7 @@ import {
   combineSchemas,
   SchemaScript,
   AffiliateDisclosure} from '@carloOS/ui'
-import { liveAnchorHref, partnerNeededLabel } from '@carloOS/config/affiliate-hop'
+import { liveAnchorHref } from '@carloOS/config/affiliate-hop'
 
 /**
  * Vets-co pet insurance hub.
@@ -142,12 +142,12 @@ export default function VetsCoInsuranceHub() {
                     {label}
                   </a>
                 ) : (
-                  <span
-                    data-partner-held={c.vendor}
-                    className="inline-block px-4 py-2 text-sm font-semibold text-brand-text-mid whitespace-nowrap"
+                  <Link
+                    href="/reviews/best-pet-insurance"
+                    className="inline-block px-4 py-2 text-sm font-semibold text-brand-primary underline underline-offset-2"
                   >
-                    {partnerNeededLabel(label)}
-                  </span>
+                    Compare carriers on published terms →
+                  </Link>
                 )}
               </div>
               <div className="text-xs text-brand-text-light italic border-t border-brand-border/40 pt-3 mt-3">
