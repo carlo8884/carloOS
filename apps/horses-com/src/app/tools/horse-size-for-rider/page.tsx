@@ -314,8 +314,8 @@ export default function HorseSizeForRiderPage() {
             },
             {
               label:
-                'University of Minnesota Extension — Horse care and management (bodyweight estimation and rider/horse suitability context).',
-              url: 'https://extension.umn.edu/horse-care-and-management',
+                'University of Minnesota Extension — Horse.',
+              url: 'https://extension.umn.edu/agriculture/animals-and-livestock/horse',
               publisher: 'UMN Extension',
             },
           ]}

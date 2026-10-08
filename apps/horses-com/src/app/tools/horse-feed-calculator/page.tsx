@@ -317,12 +317,6 @@ export default function HorseFeedCalculatorPage() {
                 'Harris, P. A., et al. (2017). Review: Feeding conserved forage to horses — recent advances and recommendations. Animal, 11(6), 958–967.',
               publisher: 'Animal',
             },
-            {
-              label:
-                'University of Minnesota Extension — How much should I feed my horse? (bodyweight-based forage and concentrate guidance).',
-              url: 'https://extension.umn.edu/horse-nutrition/how-much-feed-my-horse',
-              publisher: 'UMN Extension',
-            },
           ]}
         />
         <p className="text-sm text-brand-text-mid">
