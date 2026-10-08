@@ -234,7 +234,7 @@ export default function BestFerretCagePage() {
           <h2 id="bar-spacing">Bar Spacing — The Escape-and-Injury Variable</h2>
           <p>
             The single most important number on a cage spec sheet is wire spacing. The Ferret Nation manufacturer
-            page does not print a bar-spacing figure (https://www.midwesthomes4pets.com/product/small-animal/habitats-cages/ferret-nation/, fetched 2026-10-08). Confirm it on the box. The reasoning is simple and unforgiving: a ferret&rsquo;s
+            page does not print a bar-spacing figure (<a className="break-all" href="https://www.midwesthomes4pets.com/product/small-animal/habitats-cages/ferret-nation/">https://www.midwesthomes4pets.com/product/small-animal/habitats-cages/ferret-nation/</a>, fetched 2026-10-08). Confirm it on the box. The reasoning is simple and unforgiving: a ferret&rsquo;s
             skull is the widest fixed part of its body, and if the head fits through a gap, the spine and ribs will
             compress and follow. Spacing much wider than that creates two distinct hazards — escape, and entrapment,
             where a ferret pushes its head through and cannot back out, or wedges a leg. Both are common reasons ferrets
@@ -299,7 +299,7 @@ export default function BestFerretCagePage() {
             subtitle="Full-width front doors, deep pans, expandable two-storey footprint. Confirm bar spacing on the box."
             winner
             description={
-              <p>The reference multi-ferret cage in the keeping community. The manufacturer page says the full-width double doors open the entire front for cleaning and feeding, and it does not print a bar-spacing figure (https://www.midwesthomes4pets.com/product/small-animal/habitats-cages/ferret-nation/, fetched 2026-10-08). Deep leak-proof pans, and a modular design that stacks to a second storey for a pair or trio. The trade-offs are price, weight, and the assembly footprint.</p>
+              <p>The reference multi-ferret cage in the keeping community. The manufacturer page says the full-width double doors open the entire front for cleaning and feeding, and it does not print a bar-spacing figure (<a className="break-all" href="https://www.midwesthomes4pets.com/product/small-animal/habitats-cages/ferret-nation/">https://www.midwesthomes4pets.com/product/small-animal/habitats-cages/ferret-nation/</a>, fetched 2026-10-08). Deep leak-proof pans, and a modular design that stacks to a second storey for a pair or trio. The trade-offs are price, weight, and the assembly footprint.</p>
             }
             specs={[
               { label: 'Bar spacing', value: 'Confirm on the box' },
