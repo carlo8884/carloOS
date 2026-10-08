@@ -20,8 +20,9 @@
  */
 
 import { useMemo, useState } from 'react'
-import { AffiliateDisclosure, ResultMeaning } from '@carloOS/ui'
+import { ResultMeaning } from '@carloOS/ui'
 import { liveAnchorHref } from '@carloOS/config/affiliate-hop'
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import { CARRIERS, getCarrierBySlug, type CarrierProfile } from '../../../data/insurance-carriers'
 import {
   breedsForSpecies,
@@ -382,10 +383,11 @@ export function InsuranceCoverageFinder({ reviewsHref, campaignSku = 'insurance-
         </ResultMeaning>
       </div>
 
-      {/* ── Disclosure ABOVE the carrier CTAs ──────────────────────────── */}
-      <div className="mt-4">
-        <AffiliateDisclosure variant="inline" siteId="vets-co" />
-      </div>
+      {/* Disclosure only when a carrier tag is set. Otherwise HopDisclosure is a note. */}
+      <HopDisclosure
+        siteId="vets-co"
+        href={result.carriers.map((carrier) => `/go/${carrier.vendor}/${campaignSku}`)}
+      />
 
       {/* ── Carrier cards ──────────────────────────────────────────────── */}
       <div
