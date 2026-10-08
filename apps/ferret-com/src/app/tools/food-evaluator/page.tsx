@@ -67,7 +67,7 @@ const softwareApplicationSchema = {
     'First-ingredient analysis (whole meat vs. meat meal vs. by-product vs. grain vs. corn)',
     'Planning protein target: ≥38% (excellent), ≥35% (acceptable) — not an AAFCO ferret profile',
     'Fat target: 18-25%',
-    'Fiber ceiling: ≤3%',
+    'Fiber ceiling: ≤3% is a planning figure. Merck states fiber under 2.5% (https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/management-of-ferrets).',
     'Ash ceiling: ≤7%',
     'Routes to exotics-experienced vet at the extremes',
     'Shoppable food kit via Amazon category searches (high-protein ferret kibble, freeze-dried raw treats, salmon oil)',
@@ -89,7 +89,7 @@ const FAQS = [
   {
     question: 'Is grain-free kitten food acceptable?',
     answer:
-      'Often yes. A premium grain-free kitten food with named meat or meat meal as the first ingredient, ≥38% protein, ≥18% fat, and ≤3% fiber meets the evaluator\'s "appropriate for ferrets" threshold. Many ferret keepers feed premium kitten food (Wellness CORE, Orijen Cat & Kitten, etc.) instead of marketed-as-ferret kibble. Always verify the panel — not every bag labeled "premium" meets the targets.',
+      'Often yes. A premium grain-free kitten food with named meat or meat meal as the first ingredient, ≥38% protein, ≥18% fat, and ≤3% fiber meets the evaluator\'s "appropriate for ferrets" threshold. ≤3% fiber is a planning figure. The Merck Veterinary Manual states that fiber proportions of the diet should be relatively low (under 2.5%) (https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/management-of-ferrets). Many ferret keepers feed premium kitten food (Wellness CORE, Orijen Cat & Kitten, etc.) instead of marketed-as-ferret kibble. Always verify the panel — not every bag labeled "premium" meets the targets.',
   },
   {
     question: 'Why is corn-first so bad?',
@@ -241,7 +241,7 @@ export default function FerretFoodEvaluatorPage() {
               <tr className="border-b border-brand-border/50"><td className="py-2 pr-4">First ingredient</td><td className="py-2 pr-4">Named meat or meat meal</td><td className="py-2">Obligate carnivore — animal protein must dominate</td></tr>
               <tr className="border-b border-brand-border/50"><td className="py-2 pr-4">Crude protein</td><td className="py-2 pr-4">38-45% (min 35%)</td><td className="py-2">Short GI tract; high amino-acid requirement</td></tr>
               <tr className="border-b border-brand-border/50"><td className="py-2 pr-4">Crude fat</td><td className="py-2 pr-4">18-25%</td><td className="py-2">Primary energy source; satiety</td></tr>
-              <tr className="border-b border-brand-border/50"><td className="py-2 pr-4">Crude fiber</td><td className="py-2 pr-4">≤3%</td><td className="py-2">Cannot efficiently ferment plant fiber</td></tr>
+              <tr className="border-b border-brand-border/50"><td className="py-2 pr-4">Crude fiber</td><td className="py-2 pr-4">≤3% (planning figure)</td><td className="py-2">Cannot efficiently ferment plant fiber. Merck states fiber under 2.5% (https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/management-of-ferrets).</td></tr>
               <tr className="border-b border-brand-border/50"><td className="py-2 pr-4">Ash</td><td className="py-2 pr-4">≤7%</td><td className="py-2">Associated with urinary issues at higher levels</td></tr>
             </tbody>
           </table>
