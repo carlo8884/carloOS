@@ -4,10 +4,13 @@
  * Cat Body Condition Score (BCS) Assessor -- vets-co /tools/cat-body-condition-score
  *
  * Guided self-assessment, not a diagnosis. The owner answers three checks from
- * the WSAVA 9-point feline Body Condition Score system (rib palpation, top-down
- * waist, side-view belly / abdominal fat pad) and the tool averages them to an
- * estimated BCS (1-9). Includes the primordial-pouch caveat (a normal belly flap
- * cats are mistaken-for-fat). Every result defers to a veterinarian (QC §1).
+ * the WSAVA 9-point feline Body Condition Score chart (rib palpation, waist,
+ * abdominal fat pad). Ideal for most cats is 4 to 5 of 9. Chart PDF:
+ * https://wsava.org/wp-content/uploads/2025/06/WSAVA_BCSCat_BCSCat_Nutrition_250612.pdf
+ * Averaging three checks into one integer is a planning figure simplification
+ * of that chart, not a published scoring equation. The chart does not state a
+ * percent of body weight per point. A BCS of 6/9 may be acceptable in some
+ * cats, especially older cats.
  */
 
 import { useMemo, useState } from 'react'
@@ -89,7 +92,7 @@ function band(bcs: number): Band {
       tone: 'warn',
       label: 'Overweight',
       blurb:
-        'Above ideal. As a rule of thumb, each point above 5 is roughly 10% over ideal body weight, so a BCS of 7 is about 20% overweight. Cats lose weight slowly and safely — never crash-diet a cat (rapid loss risks hepatic lipidosis). Ask your vet for a target weight and a measured feeding plan.',
+        'Above ideal on the WSAVA 9-point chart. The chart does not state a percent of body weight per point. Cats lose weight slowly and safely — never crash-diet a cat (rapid loss risks hepatic lipidosis). Ask your vet for a target weight and a measured feeding plan.',
     }
   }
   return {
@@ -173,7 +176,7 @@ export default function CatBodyConditionScore() {
           </div>
           <p className="mt-3 text-sm leading-relaxed text-brand-text-mid">{result.blurb}</p>
           <ResultMeaning>
-            The score is the rounded average of the three checks on the 9-point scale. It is a hands-on estimate for your veterinarian to confirm.
+            How we calculate: rib, waist, and abdominal-fat-pad wording follows the WSAVA 9-point cat chart, where 4 to 5 of 9 is the goal for most cats. Rounding the average of the three checks is a planning figure, not a published equation. The chart does not state a percent of body weight per point.
           </ResultMeaning>
           <p className="mt-3 text-sm">
             <Link href="/tools/cat-calorie-calculator" className="font-semibold text-brand-primary underline">

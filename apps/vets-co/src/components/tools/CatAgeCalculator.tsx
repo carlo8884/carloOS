@@ -3,16 +3,19 @@
 /**
  * Cat Age & Life-Stage Calculator -- vets-co /tools/cat-age-calculator
  *
- * Converts a cat's age to human-equivalent years using the standard veterinary
- * chart (year 1 = 15, year 2 = +9, each year after = +4) and reports the AAFP/
- * AAHA feline life stage with the care that stage calls for. Informational, not
- * a diagnosis; defers to a veterinarian (QC §1). No fabricated precision.
+ * Life stage follows the 2021 AAHA/AAFP feline life stage definitions:
+ * kitten birth to 1 year, young adult 1–6, mature adult 7–10, senior over 10.
+ * End-of-life is a stage at any age, not an age band.
+ * https://www.aaha.org/resources/2021-aaha-aafp-feline-life-stage-guidelines/feline-life-stage-definitions/
+ * The human-year multipliers (year 1 = 15, year 2 = 24, then +4) and the
+ * age-15 “geriatric” label are a planning figure, not an AAFP stage.
  */
 
 import { useMemo, useState } from 'react'
 import Link from 'next/link'
 import { ResultMeaning, ToolError, numberFieldError } from '@carloOS/ui'
 
+// Planning figure: year 1 = 15, year 2 reaches 24, then +4. Not an AAFP chart.
 function humanYears(cat: number): number {
   if (cat <= 0) return 0
   if (cat < 1) return Math.round(cat * 15)
@@ -51,7 +54,7 @@ function lifeStage(cat: number): Stage {
     }
   }
   return {
-    label: cat >= 15 ? 'Senior (geriatric)' : 'Senior',
+    label: cat >= 15 ? 'Senior (geriatric planning label)' : 'Senior',
     tone: 'warn',
     care:
       'Senior cats benefit from twice-yearly vet visits and routine senior bloodwork and blood-pressure checks, because kidney disease, hyperthyroidism, diabetes, and arthritis are common and very treatable when caught early. Watch closely for weight loss, increased thirst or urination, and changes in appetite or activity.',
@@ -122,9 +125,9 @@ export default function CatAgeCalculator() {
       )}
 
       <p className="mt-4 text-2xs leading-snug text-brand-text-light">
-        Planning / life-stage reference only — not a diagnosis. Human-equivalent ages use the standard
-        veterinary chart (first year ≈ 15, second ≈ 24, then ≈ 4 per year) and are an approximation.
-        Your veterinarian tailors screening to your individual cat.
+        How we calculate: life stage uses the 2021 AAHA/AAFP definitions (kitten to 1 year, young adult
+        1–6, mature adult 7–10, senior over 10). End-of-life is any age, not a band. The 15 / 24 / +4
+        human-year chart and the age-15 geriatric label are a planning figure, not an AAFP stage.
       </p>
     </div>
   )
