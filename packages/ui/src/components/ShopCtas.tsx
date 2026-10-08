@@ -7,7 +7,7 @@
  * A generic "Shop on Amazon" label is renamed from the search in amazonHref.
  */
 import type { CSSProperties } from 'react'
-import { liveAnchorHref, shopCtaLabel, visibleChewyHref } from '@carloOS/config/affiliate-hop'
+import { liveAnchorHref, shopCtaLabel, visibleChewyHref, visibleShopHref } from '@carloOS/config/affiliate-hop'
 import { amazonButtonLabel } from '../lib/amazon-browse-label'
 
 const amazonStyle: CSSProperties = {
@@ -39,7 +39,13 @@ export function ShopCtas({
   amazonLabel?: string
   chewyLabel?: string
 }) {
-  const amazon = liveAnchorHref(amazonHref)
+  // Amazon stays on visibleShopHref. liveAnchorHref reads tags dynamically, and
+  // that diverges between the server render and the client bundle.
+  const amazonVisible = visibleShopHref(amazonHref)
+  const amazon =
+    amazonVisible && /\/go\/amazon/i.test(amazonVisible)
+      ? amazonVisible
+      : liveAnchorHref(amazonVisible)
   const chewyVisible = visibleChewyHref(chewyHref)
   const chewy = chewyVisible ? liveAnchorHref(chewyVisible) : undefined
   const label = shopCtaLabel(amazonHref, amazonButtonLabel(amazon ?? amazonHref, amazonLabel))
