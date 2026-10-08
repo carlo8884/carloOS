@@ -26,19 +26,19 @@ const schema = buildArticleSchema({
 })
 
 const PICKS = [
-  { label: 'Best Wire', name: 'MidWest iCrate', subtitle: 'Best overall wire crate · Divider included', href: '#midwest', pickHop: '/go/amazon-brand/midwest+icrate+dog+crate?s=reviews-best-dog-crates' },
+  { label: 'Best Wire', name: 'MidWest iCrate', subtitle: 'Best overall wire crate · Divider included', href: '#midwest', pickHop: '/go/amazon/B000QFT1RC?s=reviews-best-dog-crates' },
   { label: 'Best Heavy Duty', name: 'Impact Dog Crate', subtitle: 'Escape-proof aluminum · Lifetime warranty', href: '#impact' },
   { label: 'Best Airline', name: 'Petmate Sky Kennel', subtitle: 'IATA compliant · Vet recommended', href: '#petmate' },
   { label: 'Best Furniture', name: 'Frisco Furniture Style', subtitle: 'Doubles as end table', href: '#frisco' },
 ]
 
-const productSchema0 = buildProductSchema({ name: 'MidWest Homes iCrate', description: 'Wire dog crate with divider panel, fold-flat, double door.', url: 'https://dog.com/go/amazon-brand/midwest+icrate+dog+crate?s=reviews-best-dog-crates', imageUrl: '' })
+const productSchema0 = buildProductSchema({ name: 'MidWest Homes iCrate', description: 'Wire dog crate with divider panel, fold-flat, double door.', url: 'https://dog.com/go/amazon/B000QFT1RC?s=reviews-best-dog-crates', imageUrl: '' })
 const productSchema1 = buildProductSchema({ name: 'Impact Dog Crate', description: 'Aircraft-grade aluminum escape-proof dog crate with lifetime warranty.', url: 'https://dog.com/go/amazon-brand/impact+high+anxiety+dog+crate?s=reviews-best-dog-crates', imageUrl: '' })
 const allSchemas = combineSchemas(schema, productSchema0, productSchema1)
 
 const itemList = buildItemListSchema({
   name: "Best Dog Crates 2026",
-  items: PICKS.map((pick) => ({ name: pick.name, url: ({ "MidWest iCrate": "https://dog.com/go/amazon-brand/midwest+icrate+dog+crate?s=reviews-best-dog-crates", "Impact Dog Crate": "https://dog.com/go/amazon-brand/impact+high+anxiety+dog+crate?s=reviews-best-dog-crates", "Petmate Sky Kennel": "https://dog.com/go/amazon-brand/petmate+sky+kennel?s=reviews-best-dog-crates", "Frisco Furniture Style": "https://dog.com/go/chewy-brand/frisco+furniture+style+dog+crate?s=reviews-best-dog-crates" }[pick.name] ?? `https://dog.com/reviews/best-dog-crates${pick.href}`) })),
+  items: PICKS.map((pick) => ({ name: pick.name, url: ({ "MidWest iCrate": "https://dog.com/go/amazon/B000QFT1RC?s=reviews-best-dog-crates", "Impact Dog Crate": "https://dog.com/go/amazon-brand/impact+high+anxiety+dog+crate?s=reviews-best-dog-crates", "Petmate Sky Kennel": "https://dog.com/go/amazon-brand/petmate+sky+kennel?s=reviews-best-dog-crates", "Frisco Furniture Style": "https://dog.com/go/chewy-brand/frisco+furniture+style+dog+crate?s=reviews-best-dog-crates" }[pick.name] ?? `https://dog.com/reviews/best-dog-crates${pick.href}`) })),
 })
 export default function BestDogCratesPage() {
   return (
@@ -55,12 +55,12 @@ export default function BestDogCratesPage() {
         <PriceAsOf date="2026-10-04" tone="dark" />
         <div data-fold="offer">
           <ExperimentPrimaryHop
-          href="/go/amazon-brand/midwest+icrate+dog+crate?s=reviews-best-dog-crates"
+          href="/go/amazon/B000QFT1RC?s=reviews-best-dog-crates"
           experiment="crate_hop_label"
           control="Check price of the MidWest iCrate on Amazon"
           variant="View the MidWest iCrate price on Amazon"
         />
-        <HopDisclosure tone="on-dark" siteId="dog-com" href="/go/amazon-brand/midwest+icrate+dog+crate?s=reviews-best-dog-crates" />
+        <HopDisclosure tone="on-dark" siteId="dog-com" href="/go/amazon/B000QFT1RC?s=reviews-best-dog-crates" />
         </div>
         <EmailCapture
           variant="inline"
@@ -107,12 +107,12 @@ export default function BestDogCratesPage() {
               siteId="dog-com"
               nextHref="/tools/dog-crate-size-calculator"
               nextLabel="Size the crate before you pick a model"
-              nextBlurb="The callout is the sizing rule — stand, turn, lie down, no extra floor a puppy can potty on. Use the crate-size calculator next, then come back for the divider wire crate. The link below searches Amazon for the MidWest iCrate, the same search as on this page."
-              resourceHref="/go/amazon-brand/midwest+icrate+dog+crate?s=reviews-best-dog-crates"
+              nextBlurb="The callout is the sizing rule — stand, turn, lie down, no extra floor a puppy can potty on. Use the crate-size calculator next, then come back for the divider wire crate. The link below opens the MidWest iCrate product page on Amazon, the same product as on this page."
+              resourceHref="/go/amazon/B000QFT1RC?s=reviews-best-dog-crates"
               resourceLabel="Browse MidWest iCrate dog crates on Amazon →"
             />
 
-            <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/midwest+icrate+dog+crate?s=reviews-best-dog-crates", "/go/amazon-brand/impact+high+anxiety+dog+crate?s=reviews-best-dog-crates", "/go/amazon-brand/petmate+sky+kennel?s=reviews-best-dog-crates", "/go/chewy-brand/frisco+furniture+style+dog+crate?s=reviews-best-dog-crates"]} />
+            <HopDisclosure siteId="dog-com" href={["/go/amazon/B000QFT1RC?s=reviews-best-dog-crates", "/go/amazon-brand/impact+high+anxiety+dog+crate?s=reviews-best-dog-crates", "/go/amazon-brand/petmate+sky+kennel?s=reviews-best-dog-crates", "/go/chewy-brand/frisco+furniture+style+dog+crate?s=reviews-best-dog-crates"]} />
             <ReviewCard
               id="midwest"
               badge="Best Wire Crate"
@@ -135,7 +135,7 @@ export default function BestDogCratesPage() {
               price="$40–80"
               priceNote="By size dated 2026-10-04."
               ctaText="Check price of the MidWest iCrate on Amazon"
-              ctaHref="/go/amazon-brand/midwest+icrate+dog+crate?s=reviews-best-dog-crates"
+              ctaHref="/go/amazon/B000QFT1RC?s=reviews-best-dog-crates"
               ctaAffiliateProgram="amazon-brand"
               ctaAffiliateProduct="midwest+icrate+dog+crate"
             />
@@ -233,7 +233,7 @@ export default function BestDogCratesPage() {
                   <tbody>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">House-training a puppy, or a calm adult who needs a fold-flat wire crate</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#midwest" className="text-brand-primary">MidWest iCrate</a><TableShopLink href={"/go/amazon-brand/midwest+icrate+dog+crate?s=reviews-best-dog-crates"} product={"MidWest iCrate"} /></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#midwest" className="text-brand-primary">MidWest iCrate</a><TableShopLink href={"/go/amazon/B000QFT1RC?s=reviews-best-dog-crates"} product={"MidWest iCrate"} /></td>
                       <td className="p-3 text-brand-text-mid">Best Wire Crate. Divider included. $40–80</td>
                       <td className="p-3 text-brand-text-mid">The dog destroys wire crates</td>
                     </tr>

@@ -50,8 +50,8 @@ export default function EheimVsCobaltGuidePage() {
         publishedAt: 'October 2026',
         readTime: '6 min',
       }}
-      heroHop={<PrimaryHop href="/go/amazon-brand/eheim+jager+heater?s=reviews-eheim-vs-cobalt-heater-guide" label="Check price of the Eheim Jager heater on Amazon" />}
-      heroExtra={<HopDisclosure siteId="fish-com" href="/go/amazon-brand/eheim+jager+heater?s=reviews-eheim-vs-cobalt-heater-guide" />}
+      heroHop={<PrimaryHop href="/go/amazon/B003I5UC0W?s=reviews-eheim-vs-cobalt-heater-guide" label="Check price of the Eheim Jager heater on Amazon" />}
+      heroExtra={<HopDisclosure siteId="fish-com" href="/go/amazon/B003I5UC0W?s=reviews-eheim-vs-cobalt-heater-guide" />}
       breadcrumbs={[
         { name: 'Home', href: '/' },
         { name: 'Reviews', href: '/reviews' },

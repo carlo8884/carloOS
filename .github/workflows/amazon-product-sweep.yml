@@ -1,6 +1,6 @@
 name: Amazon product sweep
 
-# Weekly check of /go hops that open a specific Amazon product, not a search.
+# Weekly check of Amazon product hops and /go/amazon-brand/ searches.
 # Non-blocking: this workflow is not a required check, and the scan exits 0.
 # Findings go to the job summary and to the amazon-product-sweep artifact.
 # This workflow does not open issues, assign, mention, or request review.
@@ -29,7 +29,7 @@ jobs:
           node-version: '20'
       - name: Classifier tests
         run: node --test scripts/ci/amazon-product-sweep.test.mjs
-      - name: Sweep Amazon product hops
+      - name: Sweep Amazon product hops and searches
         run: node scripts/ci/amazon-product-sweep.mjs
       - name: Upload findings
         if: always()

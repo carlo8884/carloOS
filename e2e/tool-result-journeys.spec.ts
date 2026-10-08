@@ -70,8 +70,8 @@ const JOURNEYS: Record<string, Journey[]> = {
       resultDestination: { host: 'amazon.com', product: ['dog', 'crate'], forbid: ['horse', 'aquarium', 'ferret'] },
       guide: 'Best dog crates →',
       guideUrl: /\/reviews\/best-dog-crates\/?$/,
-      hop: 'midwest+icrate+dog+crate',
-      destination: { host: 'amazon.com', product: ['midwest', 'dog', 'crate'], forbid: ['horse', 'aquarium', 'ferret'] },
+      hop: 'B000QFT1RC',
+      destination: { host: 'amazon.com', product: ['b000qft1rc'], forbid: ['horse', 'aquarium', 'ferret'] },
     },
     {
       name: 'crate calculator to crate review',
@@ -86,8 +86,8 @@ const JOURNEYS: Record<string, Journey[]> = {
       resultDestination: { host: 'amazon.com', product: ['midwest', 'crate'], forbid: ['horse', 'aquarium', 'ferret'] },
       guide: 'Compare wire, airline, and heavy-duty crates',
       guideUrl: /\/reviews\/best-dog-crates\/?$/,
-      hop: 'midwest+icrate+dog+crate',
-      destination: { host: 'amazon.com', product: ['midwest', 'dog', 'crate'], forbid: ['horse', 'aquarium', 'ferret'] },
+      hop: 'B000QFT1RC',
+      destination: { host: 'amazon.com', product: ['b000qft1rc'], forbid: ['horse', 'aquarium', 'ferret'] },
     },
   ],
   'vets-co': [
@@ -151,8 +151,8 @@ const JOURNEYS: Record<string, Journey[]> = {
       resultDestination: { host: 'amazon.com', product: ['eheim', 'heater'], forbid: fishForbid },
       guide: 'Read the aquarium filter review',
       guideUrl: /\/reviews\/best-aquarium-filters\/?$/,
-      hop: 'aquaclear+70+filter',
-      destination: { host: 'amazon.com', product: ['aquaclear', 'filter'], forbid: fishForbid },
+      hop: 'B0DCGB5T4Y',
+      destination: { host: 'amazon.com', product: ['b0dcgb5t4y'], forbid: fishForbid },
     },
     {
       name: 'cycling estimator to cycling guide',
@@ -181,8 +181,8 @@ const JOURNEYS: Record<string, Journey[]> = {
       resultDestination: { host: 'amazon.com', product: ['aqueon'], forbid: fishForbid },
       guide: 'Read the aquarium filter review',
       guideUrl: /\/reviews\/best-aquarium-filters\/?$/,
-      hop: 'aquaclear+70+filter',
-      destination: { host: 'amazon.com', product: ['aquaclear', 'filter'], forbid: fishForbid },
+      hop: 'B0DCGB5T4Y',
+      destination: { host: 'amazon.com', product: ['b0dcgb5t4y'], forbid: fishForbid },
     },
   ],
   'horses-com': [
@@ -249,8 +249,8 @@ const JOURNEYS: Record<string, Journey[]> = {
       resultDestination: { host: 'amazon.com', product: ['ferret', 'nation'], forbid: ferretForbid },
       guide: 'Compare the cages that meet this footprint',
       guideUrl: /\/reviews\/best-ferret-cage\/?$/,
-      hop: 'ferret+nation+critter+nation+double+unit',
-      destination: { host: 'amazon.com', product: ['ferret', 'nation'], forbid: ferretForbid },
+      hop: 'B0054U8UGW',
+      destination: { host: 'amazon.com', product: ['b0054u8ugw'], forbid: ferretForbid },
     },
     {
       name: 'body condition score to kibble guide',
@@ -266,9 +266,9 @@ const JOURNEYS: Record<string, Journey[]> = {
       resultDestination: { host: 'amazon.com', product: ['ferret', 'hammock'], forbid: ferretForbid },
       guide: 'Compare ferret kibble next',
       guideUrl: /\/diet\/best-ferret-kibble\/?$/,
-      // Amazon search for a Wysong product. Not a /go/wysong direct hop.
-      hop: 'amazon-brand/wysong+ferret+food',
-      destination: { host: 'amazon.com', product: ['wysong', 'ferret'], forbid: ferretForbid },
+      // Verified Wysong Epigen 90 product page. Not a /go/wysong direct hop.
+      hop: 'B019W9VXZK',
+      destination: { host: 'amazon.com', product: ['b019w9vxzk'], forbid: ferretForbid },
     },
     {
       name: 'age calculator to kibble guide',
@@ -282,8 +282,8 @@ const JOURNEYS: Record<string, Journey[]> = {
       resultDestination: { host: 'amazon.com', product: ['ferret'], forbid: ferretForbid },
       guide: 'Next: ferret kibble guide',
       guideUrl: /\/diet\/best-ferret-kibble\/?$/,
-      hop: 'amazon-brand/wysong+ferret+food',
-      destination: { host: 'amazon.com', product: ['wysong', 'ferret'], forbid: ferretForbid },
+      hop: 'B019W9VXZK',
+      destination: { host: 'amazon.com', product: ['b019w9vxzk'], forbid: ferretForbid },
     },
   ],
 }

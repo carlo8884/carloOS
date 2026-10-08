@@ -8,9 +8,9 @@ test('cage guide, cage setup, tagged hop', async ({ page }) => {
   await expect(page.getByRole('heading', { name: /Best Ferret Cage/ })).toBeVisible()
 
   const pick = page.locator('#ferret-nation')
-  await expect(pick.getByRole('link', { name: 'Check price of the Ferret Nation / Critter Nation double unit on Amazon' })).toHaveAttribute(
+  await expect(pick.getByRole('link', { name: 'Check price of the Ferret Nation double unit on Amazon' })).toHaveAttribute(
     'href',
-    '/go/amazon-brand/ferret+nation+critter+nation+double+unit?s=reviews-best-ferret-cage',
+    '/go/amazon/B0054U8UGW?s=reviews-best-ferret-cage',
   )
 
   await page.getByRole('link', { name: 'Cage Setup' }).first().click()
@@ -19,8 +19,8 @@ test('cage guide, cage setup, tagged hop', async ({ page }) => {
 
   await expectHop(
     page.request,
-    '/go/amazon-brand/ferret+nation+critter+nation+double+unit?s=reviews-best-ferret-cage',
-    ['https://amazon.com/s?k=', `tag=${AMAZON_TAG}`, 'ferret'],
+    '/go/amazon/B0054U8UGW?s=reviews-best-ferret-cage',
+    [`https://amazon.com/dp/B0054U8UGW`, `tag=${AMAZON_TAG}`],
   )
 })
 

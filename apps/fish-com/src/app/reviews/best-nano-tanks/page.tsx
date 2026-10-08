@@ -5,11 +5,11 @@ import { TableShopLink, RelatedReads, ComparisonFoot, EmailCapture, PrimaryHop, 
 import { buildArticleSchema, buildItemListSchema, buildProductSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Best Nano Aquariums 2026 — 5 to 20 Gallon Tanks Ranked | Fish.com', description: 'Best nano aquariums for beginners and planted tank enthusiasts. Fluval Spec, Aqueon Minibow, and Innovative Marine compared for betta, shrimp.', path: '/reviews/best-nano-tanks', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Best Nano Aquariums 2026', description: 'Fluval Spec, Aqueon Minibow, and Innovative Marine ranked for nano setups.', url: 'https://fish.com/reviews/best-nano-tanks', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-07T00:00:00Z' })
-const fluvalSchema = buildProductSchema({ name: 'Fluval Spec V 5-Gallon', description: 'Rimless nano aquarium with integrated filtration and LED lighting for betta and shrimp.', url: 'https://fish.com/go/amazon-brand/fluval+spec+v+5+gallon?s=reviews-best-nano-tanks', imageUrl: '' })
+const fluvalSchema = buildProductSchema({ name: 'Fluval Spec V 5-Gallon', description: 'Rimless nano aquarium with integrated filtration and LED lighting for betta and shrimp.', url: 'https://fish.com/go/amazon/B0089E5VLC?s=reviews-best-nano-tanks', imageUrl: '' })
 const aqueonSchema = buildProductSchema({ name: 'Aqueon 20-Gallon Long Aquarium Kit', description: 'Complete 20-gallon long starter kit — the ideal nano community tank.', url: 'https://fish.com/go/amazon-brand/aqueon+20+gallon+long+aquarium?s=reviews-best-nano-tanks', imageUrl: '' })
 const allSchemas = combineSchemas(schema, fluvalSchema, aqueonSchema)
 const PICKS = [
-  { label: 'Best 5 Gallon', name: 'Fluval Spec V', subtitle: 'Rimless · Planted-ready · Betta/shrimp', href: '#fluval-spec', pickHop: '/go/amazon-brand/fluval+spec+v+5+gallon?s=reviews-best-nano-tanks' },
+  { label: 'Best 5 Gallon', name: 'Fluval Spec V', subtitle: 'Rimless · Planted-ready · Betta/shrimp', href: '#fluval-spec', pickHop: '/go/amazon/B0089E5VLC?s=reviews-best-nano-tanks' },
   { label: 'Best 10 Gallon', name: 'Aqueon 10 Standard', subtitle: 'Most versatile · Widely available · Add-your-own equipment', href: '#aqueon-10' },
   { label: 'Best 20 Gallon', name: 'Aqueon 20 Long', subtitle: 'Best community starter · Long footprint · Affordable', href: '#aqueon-20' },
   { label: 'Best Nano Reef', name: 'Innovative Marine Nuvo 10', subtitle: 'AIO saltwater · Hidden filtration · Reef-ready', href: '#IM-nuvo' },
@@ -18,7 +18,7 @@ const PICKS = [
 // PICKS. No aggregateRating, no fabricated specs (QC §1.4).
 const itemList = buildItemListSchema({
   name: 'Best Nano Aquariums 2026',
-  items: PICKS.map((p) => ({ name: p.name, url: ({ "Fluval Spec V": "https://fish.com/go/amazon-brand/fluval+spec+v+5+gallon?s=reviews-best-nano-tanks", "Aqueon 10 Standard": "https://fish.com/go/amazon-brand/aqueon+10+gallon+aquarium?s=reviews-best-nano-tanks", "Aqueon 20 Long": "https://fish.com/go/amazon-brand/aqueon+20+gallon+long+aquarium?s=reviews-best-nano-tanks" }[p.name] ?? `https://fish.com/reviews/best-nano-tanks${p.href}`) })),
+  items: PICKS.map((p) => ({ name: p.name, url: ({ "Fluval Spec V": "https://fish.com/go/amazon/B0089E5VLC?s=reviews-best-nano-tanks", "Aqueon 10 Standard": "https://fish.com/go/amazon-brand/aqueon+10+gallon+aquarium?s=reviews-best-nano-tanks", "Aqueon 20 Long": "https://fish.com/go/amazon-brand/aqueon+20+gallon+long+aquarium?s=reviews-best-nano-tanks" }[p.name] ?? `https://fish.com/reviews/best-nano-tanks${p.href}`) })),
 })
 export default function BestNanoTanksPage() {
   return (
@@ -30,8 +30,8 @@ export default function BestNanoTanksPage() {
         <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">The Fluval Spec V is the top nano tank because the filter is built into a 5-gallon all-in-one.</p>
         <PriceAsOf date="2026-10-07" tone="dark" />
         <div data-fold="offer">
-          <PrimaryHop href='/go/amazon-brand/fluval+spec+v+5+gallon?s=reviews-best-nano-tanks' label='Check price of the Fluval Spec V on Amazon' />
-        <HopDisclosure tone="on-dark" siteId="fish-com" href="/go/amazon-brand/fluval+spec+v+5+gallon?s=reviews-best-nano-tanks" />
+          <PrimaryHop href='/go/amazon/B0089E5VLC?s=reviews-best-nano-tanks' label='Check price of the Fluval Spec V on Amazon' />
+        <HopDisclosure tone="on-dark" siteId="fish-com" href="/go/amazon/B0089E5VLC?s=reviews-best-nano-tanks" />
         </div>
         <EmailCapture
           variant="inline"
@@ -77,7 +77,7 @@ export default function BestNanoTanksPage() {
               resourceHref="/go/amazon-brand/aqueon+20+gallon+long+aquarium?s=reviews-best-nano-tanks"
               resourceLabel="Browse Aqueon 20-gallon long aquariums on Amazon →"
             />
-            <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/fluval+spec+v+5+gallon?s=reviews-best-nano-tanks", "/go/amazon-brand/aqueon+20+gallon+long+aquarium?s=reviews-best-nano-tanks", "/go/amazon-brand/aqueon+10+gallon+aquarium?s=reviews-best-nano-tanks"]} />
+            <HopDisclosure siteId="fish-com" href={["/go/amazon/B0089E5VLC?s=reviews-best-nano-tanks", "/go/amazon-brand/aqueon+20+gallon+long+aquarium?s=reviews-best-nano-tanks", "/go/amazon-brand/aqueon+10+gallon+aquarium?s=reviews-best-nano-tanks"]} />
             <ReviewCard id="fluval-spec" badge="Best 5 Gallon" name="Fluval Spec V 5-Gallon" subtitle="Rimless rimless AIO · Honeycomb filter cover · Low-profile LED" winner
               description={<p>The Fluval Spec V is the standard recommendation for a betta tank or shrimp tank at 5 gallons. The integrated filtration is hidden behind a honeycomb baffle, the LED is plant-capable (adequate for low-light plants like Java fern, Anubias, mosses), and the rimless design looks clean on a desk or shelf. The flow from the filter should be baffled (rubber band a filter sponge over the outlet) to reduce current for betta fish. Comes complete — just add fish, substrate, and cycle the tank.</p>}
               specs={[{ label: 'Volume', value: '5 gallons' }, { label: 'Design', value: 'Rimless, all-in-one' }, { label: 'Filter', value: 'Integrated — 3-stage' }, { label: 'Light', value: 'LED — low-light plant capable', highlight: 'good' }, { label: 'Best for', value: 'Betta, shrimp, planted' }]}
@@ -86,7 +86,7 @@ export default function BestNanoTanksPage() {
               price="$75–95"
               priceNote="dated 2026-10-05."
               ctaText="Shop Fluval Spec V on Amazon →"
-              ctaHref="/go/amazon-brand/fluval+spec+v+5+gallon?s=reviews-best-nano-tanks"
+              ctaHref="/go/amazon/B0089E5VLC?s=reviews-best-nano-tanks"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="fluval-spec-v"
             />
@@ -132,7 +132,7 @@ export default function BestNanoTanksPage() {
                   <tbody>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">A complete 5-gallon for a betta or shrimp</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#fluval-spec" className="text-brand-primary">Fluval Spec V</a><TableShopLink href={"/go/amazon-brand/fluval+spec+v+5+gallon?s=reviews-best-nano-tanks"} product={"Fluval Spec V"} /></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#fluval-spec" className="text-brand-primary">Fluval Spec V</a><TableShopLink href={"/go/amazon/B0089E5VLC?s=reviews-best-nano-tanks"} product={"Fluval Spec V"} /></td>
                       <td className="p-3 text-brand-text-mid">Best 5 Gallon. Rimless all-in-one. Filter and low-light LED included. $75–95</td>
                       <td className="p-3 text-brand-text-mid">You want a more stable volume. The card calls 5 gallons the minimum. Baffle the flow for a betta</td>
                     </tr>

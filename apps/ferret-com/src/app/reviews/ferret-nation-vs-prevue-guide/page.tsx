@@ -53,8 +53,8 @@ export default function FerretNationVsPrevueGuidePage() {
         <>
           <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">The Ferret Nation double is the long-term cage for a small group.</p>
           <div data-fold="offer">
-          <PrimaryHop href="/go/amazon-brand/ferret+nation+critter+nation+double+unit?s=reviews-ferret-nation-vs-prevue-guide" label="Browse Ferret Nation / Critter Nation double units on Amazon" />
-          <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/ferret+nation+critter+nation+double+unit?s=reviews-ferret-nation-vs-prevue-guide" />
+          <PrimaryHop href="/go/amazon/B0054U8UGW?s=reviews-ferret-nation-vs-prevue-guide" label="Browse Ferret Nation / Critter Nation double units on Amazon" />
+          <HopDisclosure siteId="ferret-com" href="/go/amazon/B0054U8UGW?s=reviews-ferret-nation-vs-prevue-guide" />
         </div>
         </>
       }
@@ -83,9 +83,9 @@ export default function FerretNationVsPrevueGuidePage() {
         <p>The <Link href="/tools/cage-size-calculator">cage-size calculator</Link> is the step for floor space. Use that calculator for the length before you order. The Kaytee multi-level cage is a third option, price tier $, for one ferret with daily out-time.</p>
         <h2>Who should buy which cage</h2>
         <p>Buy the Ferret Nation double when one to four ferrets will live in it long term and you can accept the weight and the $$$ tier. Buy the Prevue when the household is one or two ferrets and the double unit is too big or too expensive. Cover wire shelves and ramps on either cage, and check the spacing on the exact model.</p>
-        <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/ferret+nation+critter+nation+double+unit?s=reviews-ferret-nation-vs-prevue-guide" />
-        <p>The link below searches for the Ferret Nation double unit, the same search as on the cage review.</p>
-        <p><a className="font-semibold text-brand-primary" href="/go/amazon-brand/ferret+nation+critter+nation+double+unit?s=reviews-ferret-nation-vs-prevue-guide">Browse Ferret Nation / Critter Nation double units on Amazon →</a></p>
+        <HopDisclosure siteId="ferret-com" href="/go/amazon/B0054U8UGW?s=reviews-ferret-nation-vs-prevue-guide" />
+        <p>The link below opens the Ferret Nation double unit on Amazon, the same product as on the cage review.</p>
+        <p><a className="font-semibold text-brand-primary" href="/go/amazon/B0054U8UGW?s=reviews-ferret-nation-vs-prevue-guide">Browse Ferret Nation / Critter Nation double units on Amazon →</a></p>
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
       </div>

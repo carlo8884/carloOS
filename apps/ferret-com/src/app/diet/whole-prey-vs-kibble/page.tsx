@@ -49,9 +49,9 @@ export default function WholePreyVsKibblePage() {
         siteId="ferret-com"
         heroHop={
           <>
-            <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/wysong+ferret+food?s=whole-prey-vs-kibble" />
+            <HopDisclosure siteId="ferret-com" href="/go/amazon/B019W9VXZK?s=whole-prey-vs-kibble" />
             <div className="mb-4" data-primary-hop="true">
-              <a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" data-shop-placement="hero" href="/go/amazon-brand/wysong+ferret+food?s=whole-prey-vs-kibble">Browse Wysong ferret food on Amazon →</a>
+              <a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" data-shop-placement="hero" href="/go/amazon/B019W9VXZK?s=whole-prey-vs-kibble">Check price of Wysong Epigen 90 on Amazon →</a>
             </div>
             <QuietPartnerLink tone="dark" href="/go/wysong/epigen-90?s=diet-whole-prey-vs-kibble" label="Check price of Wysong Epigen 90 from Wysong" />
           </>
@@ -197,7 +197,7 @@ export default function WholePreyVsKibblePage() {
             <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/wysong+ferret+food?s=whole-prey-vs-kibble"
+                amazonHref="/go/amazon/B019W9VXZK?s=whole-prey-vs-kibble"
                 amazonLabel="Check price of Wysong ferret food on Amazon"
               />
           </div>

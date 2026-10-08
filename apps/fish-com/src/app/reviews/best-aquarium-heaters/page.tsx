@@ -28,14 +28,14 @@ const eheimSchema = buildProductSchema({
   name: 'Eheim Jager TruTemp',
   description:
     'Submersible aquarium heater with ±0.5°C accuracy, recalibration dial, and auto shut-off — Fish.com Best Overall pick.',
-  url: 'https://fish.com/go/amazon-brand/eheim+jager+heater?s=reviews-best-aquarium-heaters',
+  url: 'https://fish.com/go/amazon/B003I5UC0W?s=reviews-best-aquarium-heaters',
   imageUrl: '',
 })
 
 const schema = combineSchemas(articleSchema, eheimSchema)
 
 const PICKS = [
-  { label: 'Best Overall', name: 'Eheim Jager', subtitle: 'Most accurate · Recalibratable', href: '#eheim', pickHop: '/go/amazon-brand/eheim+jager+heater?s=reviews-best-aquarium-heaters' },
+  { label: 'Best Overall', name: 'Eheim Jager', subtitle: 'Most accurate · Recalibratable', href: '#eheim', pickHop: '/go/amazon/B003I5UC0W?s=reviews-best-aquarium-heaters' },
   { label: 'Best Flat Design', name: 'Cobalt Neo-Therm', subtitle: 'Slim profile · LED indicator', href: '#cobalt' },
   { label: 'Best Canister Inline', name: 'Hydor Inline', subtitle: 'No heater in tank · For canister setups', href: '#hydor' },
   { label: 'Best Budget', name: 'Aqueon Pro', subtitle: 'Shatterproof · $18–30', href: '#aqueon' },
@@ -45,7 +45,7 @@ const PICKS = [
 // PICKS. No aggregateRating, no fabricated specs (QC §1.4).
 const itemList = buildItemListSchema({
   name: 'Best Aquarium Heaters 2026',
-  items: PICKS.map((p) => ({ name: p.name, url: ({ "Eheim Jager": "https://fish.com/go/amazon-brand/eheim+jager+heater?s=reviews-best-aquarium-heaters", "Cobalt Neo-Therm": "https://fish.com/go/amazon-brand/eheim+jager+heater?s=reviews-best-aquarium-heaters", "Hydor Inline": "https://fish.com/go/amazon-brand/hydor+inline+heater?s=reviews-best-aquarium-heaters", "Aqueon Pro": "https://fish.com/go/amazon-brand/aqueon+pro+heater?s=reviews-best-aquarium-heaters" }[p.name] ?? `https://fish.com/reviews/best-aquarium-heaters${p.href}`) })),
+  items: PICKS.map((p) => ({ name: p.name, url: ({ "Eheim Jager": "https://fish.com/go/amazon/B003I5UC0W?s=reviews-best-aquarium-heaters", "Cobalt Neo-Therm": "https://fish.com/go/amazon/B003I5UC0W?s=reviews-best-aquarium-heaters", "Hydor Inline": "https://fish.com/go/amazon-brand/hydor+inline+heater?s=reviews-best-aquarium-heaters", "Aqueon Pro": "https://fish.com/go/amazon-brand/aqueon+pro+heater?s=reviews-best-aquarium-heaters" }[p.name] ?? `https://fish.com/reviews/best-aquarium-heaters${p.href}`) })),
 })
 
 // FAQ content derived from this page's comparison criteria and sizing guidance only.
@@ -69,8 +69,8 @@ export default function BestHeatersPage() {
         <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">The Eheim Jager is the top aquarium heater because it is the most accurate of the heaters here, with a recalibration dial.</p>
         <PriceAsOf date="2026-10-07" tone="dark" />
         <div data-fold="offer">
-          <PrimaryHop href='/go/amazon-brand/eheim+jager+heater?s=reviews-best-aquarium-heaters' label='Check price of the Eheim Jager heater on Amazon' />
-        <HopDisclosure tone="on-dark" siteId="fish-com" href="/go/amazon-brand/eheim+jager+heater?s=reviews-best-aquarium-heaters" />
+          <PrimaryHop href='/go/amazon/B003I5UC0W?s=reviews-best-aquarium-heaters' label='Check price of the Eheim Jager heater on Amazon' />
+        <HopDisclosure tone="on-dark" siteId="fish-com" href="/go/amazon/B003I5UC0W?s=reviews-best-aquarium-heaters" />
         </div>
         <EmailCapture
           variant="inline"
@@ -123,12 +123,12 @@ export default function BestHeatersPage() {
               siteId="fish-com"
               nextHref="/tools/heater-wattage-calculator"
               nextLabel="Size the heater wattage before you pick a model"
-              nextBlurb="The callout is the wattage rule — buy slightly above the tank minimum, and split two heaters on large tanks. The heater-wattage calculator is the watt band for this volume and target. The link below searches Amazon for the Eheim Jager, the same search as on this page."
-              resourceHref="/go/amazon-brand/eheim+jager+heater?s=reviews-best-aquarium-heaters"
+              nextBlurb="The callout is the wattage rule — buy slightly above the tank minimum, and split two heaters on large tanks. The heater-wattage calculator is the watt band for this volume and target. The link below opens the Eheim Jager product page on Amazon, the same product as on this page."
+              resourceHref="/go/amazon/B003I5UC0W?s=reviews-best-aquarium-heaters"
               resourceLabel="Browse Eheim Jager aquarium heaters on Amazon →"
             />
 
-            <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/eheim+jager+heater?s=reviews-best-aquarium-heaters", "/go/amazon-brand/hydor+inline+heater?s=reviews-best-aquarium-heaters", "/go/amazon-brand/aqueon+pro+heater?s=reviews-best-aquarium-heaters"]} />
+            <HopDisclosure siteId="fish-com" href={["/go/amazon/B003I5UC0W?s=reviews-best-aquarium-heaters", "/go/amazon-brand/hydor+inline+heater?s=reviews-best-aquarium-heaters", "/go/amazon-brand/aqueon+pro+heater?s=reviews-best-aquarium-heaters"]} />
             <ReviewCard
               id="eheim"
               badge="Best Overall"
@@ -152,7 +152,7 @@ export default function BestHeatersPage() {
               price="$25–55"
               priceNote="By wattage dated 2026-10-04."
               ctaText="Check price of the Eheim Jager heater on Amazon"
-              ctaHref="/go/amazon-brand/eheim+jager+heater?s=reviews-best-aquarium-heaters"
+              ctaHref="/go/amazon/B003I5UC0W?s=reviews-best-aquarium-heaters"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="eheim-jager"
             />
@@ -175,7 +175,7 @@ export default function BestHeatersPage() {
               price="$35–65"
               priceNote="dated 2026-10-04."
               ctaText="Check price of the Eheim Jager heater on Amazon"
-              ctaHref="/go/amazon-brand/eheim+jager+heater?s=reviews-best-aquarium-heaters"
+              ctaHref="/go/amazon/B003I5UC0W?s=reviews-best-aquarium-heaters"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="eheim-jager"
             />
@@ -240,13 +240,13 @@ export default function BestHeatersPage() {
                   <tbody>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">The tightest published tolerance, and a recalibration dial</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#eheim" className="text-brand-primary">Eheim Jager</a><TableShopLink href={"/go/amazon-brand/eheim+jager+heater?s=reviews-best-aquarium-heaters"} product={"Eheim Jager"} /></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#eheim" className="text-brand-primary">Eheim Jager</a><TableShopLink href={"/go/amazon/B003I5UC0W?s=reviews-best-aquarium-heaters"} product={"Eheim Jager"} /></td>
                       <td className="p-3 text-brand-text-mid">Best Overall. ±0.5°C. Auto shut-off out of water. $25–55 by wattage. 25W–300W</td>
                       <td className="p-3 text-brand-text-mid">Glass. It can shatter if dropped</td>
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">The same published accuracy in a display tank</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#cobalt" className="text-brand-primary">Cobalt Neo-Therm Pro</a><TableShopLink href={"/go/amazon-brand/eheim+jager+heater?s=reviews-best-aquarium-heaters"} product={"Eheim Jager"} /></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#cobalt" className="text-brand-primary">Cobalt Neo-Therm Pro</a><TableShopLink href={"/go/amazon/B003I5UC0W?s=reviews-best-aquarium-heaters"} product={"Eheim Jager"} /></td>
                       <td className="p-3 text-brand-text-mid">Best flat design. See the manufacturer's current page. Shatterproof plastic. $35–65</td>
                       <td className="p-3 text-brand-text-mid">More expensive than the Jager, and not recalibratable. The Cobalt search currently returns no products, so the shop link goes to the Eheim Jager.</td>
                     </tr>

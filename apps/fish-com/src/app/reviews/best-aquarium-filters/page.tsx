@@ -24,13 +24,13 @@ const schema = buildArticleSchema({
 })
 
 const PICKS = [
-  { label: 'Best HOB', name: 'Aquaclear 70', subtitle: 'Most biological capacity · Quiet · Refillable', href: '#aquaclear', pickHop: '/go/amazon-brand/aquaclear+70+filter?s=reviews-best-aquarium-filters' },
+  { label: 'Best HOB', name: 'Aquaclear 70', subtitle: 'Most biological capacity · Quiet · Refillable', href: '#aquaclear', pickHop: '/go/amazon/B0DCGB5T4Y?s=reviews-best-aquarium-filters' },
   { label: 'Best Canister', name: 'Fluval 307', subtitle: 'Best for 50–70 gal · Near-silent', href: '#fluval' },
   { label: 'Best Sponge', name: 'Hikari Bacto-Surge', subtitle: 'Nano tanks · Breeding · Shrimp', href: '#sponge' },
   { label: 'Best Budget HOB', name: 'Aqueon QuietFlow 30', subtitle: '$25–40 · Widely available', href: '#aqueon' },
 ]
 
-const productSchema0 = buildProductSchema({ name: 'AquaClear 70 Power Filter', description: 'Hang-on-back aquarium filter with refillable media basket for up to 70 gallons.', url: 'https://fish.com/go/amazon-brand/aquaclear+70+filter?s=reviews-best-aquarium-filters', imageUrl: '' })
+const productSchema0 = buildProductSchema({ name: 'AquaClear 70 Power Filter', description: 'Hang-on-back aquarium filter with refillable media basket for up to 70 gallons.', url: 'https://fish.com/go/amazon/B0DCGB5T4Y?s=reviews-best-aquarium-filters', imageUrl: '' })
 const productSchema1 = buildProductSchema({ name: 'Fluval 307 Canister Filter', description: 'Near-silent canister filter for 40-70 gallon aquariums.', url: 'https://fish.com/go/amazon-brand/fluval+307+canister+filter?s=reviews-best-aquarium-filters', imageUrl: '' })
 const allSchemas = combineSchemas(schema, productSchema0, productSchema1)
 
@@ -38,7 +38,7 @@ const allSchemas = combineSchemas(schema, productSchema0, productSchema1)
 // PICKS. No aggregateRating, no fabricated specs (QC §1.4).
 const itemList = buildItemListSchema({
   name: 'Best Aquarium Filters 2026',
-  items: PICKS.map((p) => ({ name: p.name, url: ({ "Aquaclear 70": "https://fish.com/go/amazon-brand/aquaclear+70+filter?s=reviews-best-aquarium-filters", "Fluval 307": "https://fish.com/go/amazon-brand/fluval+307+canister+filter?s=reviews-best-aquarium-filters", "Hikari Bacto-Surge": "https://fish.com/go/amazon-brand/hikari+bacto+surge+sponge+filter?s=reviews-best-aquarium-filters", "Aqueon QuietFlow 30": "https://fish.com/go/amazon-brand/aqueon+quietflow+30?s=reviews-best-aquarium-filters" }[p.name] ?? `https://fish.com/reviews/best-aquarium-filters${p.href}`) })),
+  items: PICKS.map((p) => ({ name: p.name, url: ({ "Aquaclear 70": "https://fish.com/go/amazon/B0DCGB5T4Y?s=reviews-best-aquarium-filters", "Fluval 307": "https://fish.com/go/amazon-brand/fluval+307+canister+filter?s=reviews-best-aquarium-filters", "Hikari Bacto-Surge": "https://fish.com/go/amazon-brand/hikari+bacto+surge+sponge+filter?s=reviews-best-aquarium-filters", "Aqueon QuietFlow 30": "https://fish.com/go/amazon-brand/aqueon+quietflow+30?s=reviews-best-aquarium-filters" }[p.name] ?? `https://fish.com/reviews/best-aquarium-filters${p.href}`) })),
 })
 
 // FAQ content derived from this page's comparison criteria and type guide only.
@@ -63,8 +63,8 @@ export default function BestAquariumFiltersPage() {
         <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">The AquaClear 70 is the top aquarium filter because the basket holds foam, carbon, and ceramic rings you refill.</p>
         <PriceAsOf date="2026-10-07" tone="dark" />
         <div data-fold="offer">
-          <PrimaryHop href='/go/amazon-brand/aquaclear+70+filter?s=reviews-best-aquarium-filters' label='Check price of the AquaClear 70 filter on Amazon' />
-        <HopDisclosure tone="on-dark" siteId="fish-com" href="/go/amazon-brand/aquaclear+70+filter?s=reviews-best-aquarium-filters" />
+          <PrimaryHop href='/go/amazon/B0DCGB5T4Y?s=reviews-best-aquarium-filters' label='Check price of the AquaClear 70 filter on Amazon' />
+        <HopDisclosure tone="on-dark" siteId="fish-com" href="/go/amazon/B0DCGB5T4Y?s=reviews-best-aquarium-filters" />
         </div>
         <EmailCapture
           variant="inline"
@@ -116,12 +116,12 @@ export default function BestAquariumFiltersPage() {
               siteId="fish-com"
               nextHref="/tools/filter-gph-calculator"
               nextLabel="Size the filter GPH before you pick a model"
-              nextBlurb="The callout is the type rule — HOB for 10–75 gallons, canister for 50+, sponge for nano and fry. The filter-GPH calculator is the turnover range for this tank. The link below searches Amazon for the AquaClear 70, the same search as on this page."
-              resourceHref="/go/amazon-brand/aquaclear+70+filter?s=reviews-best-aquarium-filters"
+              nextBlurb="The callout is the type rule — HOB for 10–75 gallons, canister for 50+, sponge for nano and fry. The filter-GPH calculator is the turnover range for this tank. The link below opens the AquaClear 70 product page on Amazon, the same product as on this page."
+              resourceHref="/go/amazon/B0DCGB5T4Y?s=reviews-best-aquarium-filters"
               resourceLabel="Browse AquaClear 70 hang-on-back filters on Amazon →"
             />
 
-            <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/aquaclear+70+filter?s=reviews-best-aquarium-filters", "/go/amazon-brand/fluval+307+canister+filter?s=reviews-best-aquarium-filters", "/go/amazon-brand/hikari+bacto+surge+sponge+filter?s=reviews-best-aquarium-filters", "/go/amazon-brand/aqueon+quietflow+30?s=reviews-best-aquarium-filters"]} />
+            <HopDisclosure siteId="fish-com" href={["/go/amazon/B0DCGB5T4Y?s=reviews-best-aquarium-filters", "/go/amazon-brand/fluval+307+canister+filter?s=reviews-best-aquarium-filters", "/go/amazon-brand/hikari+bacto+surge+sponge+filter?s=reviews-best-aquarium-filters", "/go/amazon-brand/aqueon+quietflow+30?s=reviews-best-aquarium-filters"]} />
             <ReviewCard
               id="aquaclear"
               badge="Best HOB Overall"
@@ -145,7 +145,7 @@ export default function BestAquariumFiltersPage() {
               price="$45–70"
               priceNote="dated 2026-10-04."
               ctaText="Check price of the AquaClear 70 filter on Amazon"
-              ctaHref="/go/amazon-brand/aquaclear+70+filter?s=reviews-best-aquarium-filters"
+              ctaHref="/go/amazon/B0DCGB5T4Y?s=reviews-best-aquarium-filters"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="aquaclear-70"
             />
@@ -237,7 +237,7 @@ export default function BestAquariumFiltersPage() {
                   <tbody>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">About 30–70 gallons, and you want refillable media</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#aquaclear" className="text-brand-primary">AquaClear 70</a><TableShopLink href={"/go/amazon-brand/aquaclear+70+filter?s=reviews-best-aquarium-filters"} product={"AquaClear 70"} /></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#aquaclear" className="text-brand-primary">AquaClear 70</a><TableShopLink href={"/go/amazon/B0DCGB5T4Y?s=reviews-best-aquarium-filters"} product={"AquaClear 70"} /></td>
                       <td className="p-3 text-brand-text-mid">Best HOB. 300 GPH. Up to 70 gallons. $45–70</td>
                       <td className="p-3 text-brand-text-mid">Impeller needs cleaning every 3–4 months or flow drops</td>
                     </tr>
