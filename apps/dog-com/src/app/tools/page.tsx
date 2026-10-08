@@ -65,7 +65,7 @@ const TOOLS = [
   {
     href: '/tools/dog-gestation-calculator',
     title: 'Dog Pregnancy & Whelping Calendar',
-    desc: 'How long are dogs pregnant? Enter the breeding date to get the estimated whelping (due) date -- the 63-day canine average plus the 58-68 day window -- then pack a whelping-kit checklist (box, pads, scale, thermometer, bulb syringe, towels). Breeding info, not a diagnosis.',
+    desc: 'How long are dogs pregnant? Merck’s table is 58–72 days from an untimed breeding, or 62–64 days from ovulation (https://www.merckvetmanual.com/reproductive-system/reproductive-system-introduction/the-reproductive-system-in-animals). Day 63 is the ovulation midpoint only. Then pack a whelping-kit checklist (box, pads, scale, thermometer, bulb syringe, towels). Breeding info, not a diagnosis.',
     tag: 'Breeding',
   },
   {
@@ -217,7 +217,7 @@ export default function ToolsHub() {
               <h2 className="mb-2 font-display text-2xl font-semibold text-brand-text-dark group-hover:text-brand-primary">
                 {tool.title}
               </h2>
-              <p className="text-sm leading-relaxed text-brand-text-mid">{tool.desc}</p>
+              <p className="text-sm leading-relaxed text-brand-text-mid break-words">{tool.desc}</p>
             </Link>
           ))}
         </div>

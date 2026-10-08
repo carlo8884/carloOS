@@ -26,7 +26,7 @@ const FAQS = [
   {
     question: 'Do zebra danios need a heater?',
     answer:
-      'Often not. Zebra danios prefer cooler water than most tropical community fish — they thrive between 64 and 77°F and can be kept in an unheated room-temperature tank in many climates, alongside other temperate species such as white cloud mountain minnows. Avoid the high end of the tropical range long-term, as sustained warm temperatures shorten their lifespan.',
+      'Often not. Zebra danios prefer cooler water than most tropical community fish — they thrive between 64 and 76°F (https://www.fishbase.se/summary/Danio-rerio.html) and can be kept in an unheated room-temperature tank in many climates, alongside other temperate species such as white cloud mountain minnows. Avoid the high end of the tropical range long-term, as sustained warm temperatures shorten their lifespan.',
     answerText:
       'Often not. They thrive at 64-77F and suit unheated room-temperature tanks in many climates. Sustained warm temperatures shorten their lifespan.',
   },
@@ -69,9 +69,9 @@ export default function ZebraDanioPage() {
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Quick Stats</div>
-          {[['Scientific name', 'Danio rerio'], ['Adult size', '2 inches'], ['Temperature', '64–77°F (cooler tolerant)'], ['pH', '6.5–7.5'], ['School size', '6 minimum, 8-10+ better'], ['Tank size', '10 gallons minimum, 20 long ideal'], ['Lifespan', '3–5 years']].map(([k, v]) => (
+          {[['Scientific name', 'Danio rerio'], ['Adult size', '2 inches'], ['Temperature', '64–76°F (https://www.fishbase.se/summary/Danio-rerio.html)'], ['pH', '6.5–7.5'], ['School size', '6 minimum, 8-10+ better'], ['Tank size', '10 gallons minimum, 20 long ideal'], ['Lifespan', '3–5 years']].map(([k, v]) => (
             <div key={k} className="flex justify-between py-1.5 border-b border-brand-border text-xs last:border-0">
-              <span className="text-brand-text-light">{k}</span><span className="font-bold text-brand-dark text-right max-w-[55%]">{v}</span>
+              <span className="text-brand-text-light">{k}</span><span className="font-bold text-brand-dark text-right max-w-[55%] break-all">{v}</span>
             </div>
           ))}
         </div>
@@ -98,7 +98,7 @@ export default function ZebraDanioPage() {
         </CalloutBox>
 
         <h2>Temperature — Cooler Than You Think</h2>
-        <p>One of the most useful facts about zebra danios is that they prefer cooler water than most tropical community fish. They thrive between 64 and 77°F and can be kept successfully in an unheated room-temperature tank in many climates, alongside other temperate species such as white cloud mountain minnows. This makes them an excellent choice for keepers who want a low-equipment community without committing to a goldfish setup. Avoid keeping them at the high end of the tropical range long-term, as sustained warm temperatures shorten their lifespan.</p>
+        <p>One of the most useful facts about zebra danios is that they prefer cooler water than most tropical community fish. They thrive between 64 and 76°F (<a className="break-all" href="https://www.fishbase.se/summary/Danio-rerio.html">https://www.fishbase.se/summary/Danio-rerio.html</a>) and can be kept successfully in an unheated room-temperature tank in many climates, alongside other temperate species such as white cloud mountain minnows. This makes them an excellent choice for keepers who want a low-equipment community without committing to a goldfish setup. Avoid keeping them at the high end of the tropical range long-term, as sustained warm temperatures shorten their lifespan.</p>
 
         <h2>Breeding — The Lab Fish</h2>
         <p>Zebra danios are egg-scatterers and among the easiest egg-layers to breed. A well-conditioned group will spawn readily at first light, scattering non-adhesive eggs that fall to the bottom. Because the adults eagerly eat their own eggs, breeders use a layer of marbles or a mesh on the tank floor so eggs fall out of reach. Eggs hatch in two to three days; fry require infusoria or commercial liquid fry food until large enough for baby brine shrimp. Their transparent embryos and rapid development are exactly why Danio rerio became a cornerstone of developmental biology research.</p>

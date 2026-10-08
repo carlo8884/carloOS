@@ -34,7 +34,7 @@ const standleeSchema = buildProductSchema({ name: 'Standlee Premium Forage', des
 const allSchemas = combineSchemas(articleSchema, cosequinSchema, platinumSchema, smartGutSchema, kerEoSchema, equithriveSchema, standleeSchema)
 
 const PICKS = [
-  { label: 'Best Joint (Evidence)', emoji: '🏆', name: 'Cosequin ASU Plus', subtitle: 'ASU standardized to 30% unsaponifiables. Initial period 2–4 weeks.', href: '#cosequin-asu', pickHop: '/go/smartpak/cosequin-asu-plus?s=reviews-best-equine-supplements' },
+  { label: 'Best Joint (Evidence)', emoji: '🏆', name: 'Cosequin ASU Plus', subtitle: 'Glucosamine, MSM, chondroitin, and ASU. Initial period 2–4 weeks.', href: '#cosequin-asu', pickHop: '/go/smartpak/cosequin-asu-plus?s=reviews-best-equine-supplements' },
   { label: 'Best Comprehensive Wellness', emoji: '◎', name: 'Platinum Performance Equine', subtitle: 'Omega-3 min. 10% (13 g per 2 scoops) on the current page', href: '#platinum' },
   { label: 'Best Gastric Support', emoji: '🐴', name: 'SmartPak SmartGut Ultra', subtitle: 'Calcium &amp; magnesium buffering · NASC sealed · SmartPak auto-ship', href: '#smartgut' },
   { label: 'Best Marine Omega-3', emoji: '🐟', name: 'KER EO-3', subtitle: 'Per 30 mL: EPA 3,200 mg, DHA 2,300 mg, DPA 500 mg', href: '#ker-eo3' },
@@ -197,17 +197,17 @@ export default function BestEquineSupplementsPage() {
               subtitle="Avocado-soybean unsaponifiables + glucosamine + chondroitin · NASC sealed"
               winner
               description={<>
-                <p>The current Cosequin ASU Plus powder and pellet pages list glucosamine HCl, MSM, chondroitin sulfate, and ASU standardized to a minimum of 30% avocado/soybean unsaponifiables. Milligrams differ for powder and pellets — check the label. The initial administration period on those pages is 2–4 weeks. The pages do not print clinically proven. Kawcak CE et al. (<em>American Journal of Veterinary Research</em>, 2007) is a published ASU study, not a line on the product label.</p>
+                <p>The current Cosequin ASU Plus powder and pellet pages list glucosamine HCl, MSM, chondroitin sulfate, and ASU plus other ingredients (<a className="break-all" href="https://www.cosequin.com/product/horses/cosequin-asu-plus">https://www.cosequin.com/product/horses/cosequin-asu-plus</a>). Milligrams differ for powder and pellets — check the label. The initial administration period on those pages is 2–4 weeks. The pages do not print clinically proven. Kawcak CE et al. (<em>American Journal of Veterinary Research</em>, 2007) is a published ASU study, not a line on the product label.</p>
                 <p>The trade-off: Cosequin ASU runs at the higher end of the joint-supplement price range, and the loading-dose-then-maintenance protocol increases first-month cost. For horses with diagnosed osteoarthritis or significant work-related joint loading, the evidence justifies the price.</p>
               </>}
               specs={[
-                { label: 'Active ingredients', value: 'Glucosamine HCl, MSM, chondroitin sulfate, and ASU at 30% unsaponifiables. Milligrams differ by form — check the label.', highlight: 'good' },
+                { label: 'Active ingredients', value: 'Glucosamine HCl, MSM, chondroitin sulfate, and ASU. Milligrams differ by form — check the label.', highlight: 'good' },
                 { label: 'NASC Quality Seal', value: 'Yes', highlight: 'good' },
                 { label: 'Manufacturer', value: 'Nutramax (US pharma-grade)', highlight: 'good' },
                 { label: 'FEI/USEF compliance', value: 'Check the current FEI and USEF lists' },
                 { label: 'Initial period', value: '2–4 weeks on the current page' },
               ]}
-              pros={['Current pages list a 2–4 week initial period', 'ASU standardized to 30% unsaponifiables', 'NASC Quality Seal', 'Powder and pellet milligrams differ — check the label']}
+              pros={['Current pages list a 2–4 week initial period', 'ASU plus glucosamine, MSM, and chondroitin', 'NASC Quality Seal', 'Powder and pellet milligrams differ — check the label']}
               cons={['Higher price tier', 'Loading dose adds first-month cost', 'Pellet palatability variable across horses']}
               price="$80–110/mo"
               priceNote="dated 2026-10-04."

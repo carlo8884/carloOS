@@ -215,7 +215,7 @@ export default function VetsPetInsurancePage() {
             <div className="mt-10">
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-3">Who should buy which policy</h2>
               <p className="text-sm text-brand-text-mid leading-relaxed mb-4">
-                Reimbursement, limits, and prices below are the figures already on each card. They are not a quote. Enroll before a condition is in the medical record — every card on this page is subject to that rule.
+                Reimbursement, limits, and prices below are the figures already on each card. They are not a quote. The Healthy Paws claims page says most claims are processed in 2 days (<a className="break-all" href="https://www.healthypawspetinsurance.com/pet-insurance-claims.html">https://www.healthypawspetinsurance.com/pet-insurance-claims.html</a>). Enroll before a condition is in the medical record — every card on this page is subject to that rule.
               </p>
               <div className="overflow-x-auto max-w-full min-w-0 mb-8">
                 <table className="w-full text-sm border-collapse table-fixed sm:table-auto min-w-0 sm:min-w-[36rem] [&_th]:break-words [&_td]:break-words">

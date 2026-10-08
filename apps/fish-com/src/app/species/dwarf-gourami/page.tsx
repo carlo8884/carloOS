@@ -40,7 +40,7 @@ const FAQS = [
   {
     question: 'What tank conditions do dwarf gouramis need?',
     answer:
-      'Temperature of 76–82°F and pH 6.0–7.5, with calm water and no strong surface agitation. As labyrinth fish they breathe atmospheric air at the surface, so the tank needs a cover that keeps the air above the water warm and humid while leaving a gap for air access. Heavily planted tanks with floating plants such as frogbit or water lettuce suit them well.',
+      'Temperature of 77–83°F (https://www.fishbase.se/summary/Trichogaster-lalius.html) and pH 6.0–7.5, with calm water and no strong surface agitation. As labyrinth fish they breathe atmospheric air at the surface, so the tank needs a cover that keeps the air above the water warm and humid while leaving a gap for air access. Heavily planted tanks with floating plants such as frogbit or water lettuce suit them well.',
     answerText:
       '76-82F, pH 6.0-7.5, calm water, and a covered tank with warm humid air above the surface — they are labyrinth fish that breathe atmospheric air.',
   },
@@ -94,7 +94,7 @@ export default function DwarfGouramiPage() {
         <p>Trichogaster chuna (honey gourami) is the hardier, more disease-resistant smaller gourami that most aquarists who have lost dwarf gouramis to DGD eventually switch to. Males develop golden-yellow to orange coloration with a dark ventral stripe when comfortable and in good condition — not as vivid as the electric dwarf gourami colors, but genuinely attractive. Females are silver-tan. Honey gouramis are smaller (1.5 inches), more peaceful, and more disease-resistant than dwarf gouramis. They are an excellent community centerpiece fish for 10-20 gallon planted tanks.</p>
 
         <h2>Tank Requirements and Behavior</h2>
-        <p>Both species are labyrinth fish — like bettas, they breathe atmospheric air through a labyrinth organ and must have access to the water surface. Ensure the tank has a cover (to maintain warm, humid air above the water surface — breathing cold air stresses labyrinth fish) but leave a gap for air access. No strong surface agitation — they prefer calm water. Both species appreciate heavily planted tanks with floating plants (frogbit, water lettuce) that provide surface cover and diffused lighting. Temperature 76–82°F. pH 6.0–7.5.</p>
+        <p>Both species are labyrinth fish — like bettas, they breathe atmospheric air through a labyrinth organ and must have access to the water surface. Ensure the tank has a cover (to maintain warm, humid air above the water surface — breathing cold air stresses labyrinth fish) but leave a gap for air access. No strong surface agitation — they prefer calm water. Both species appreciate heavily planted tanks with floating plants (frogbit, water lettuce) that provide surface cover and diffused lighting. Temperature 77–83°F (<a className="break-all" href="https://www.fishbase.se/summary/Trichogaster-lalius.html">https://www.fishbase.se/summary/Trichogaster-lalius.html</a>). pH 6.0–7.5.</p>
         <p>Males of both species are territorial toward other males of the same species — do not keep two males together in a community tank unless the tank is 30+ gallons with significant visual breaks. A single male (or a male-female pair) is appropriate for most community setups. Compatible with virtually all peaceful community fish — harlequin rasboras, corydoras, cherry shrimp, tetras.</p>
 
         <h2>Bubble Nest Building</h2>

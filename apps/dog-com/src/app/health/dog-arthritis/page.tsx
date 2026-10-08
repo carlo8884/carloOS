@@ -57,7 +57,7 @@ export default function DogArthritisPage() {
           <p>Advanced imaging (CT, MRI) is used for complex cases — early joint changes invisible on radiograph, surgical planning, and spinal arthritis assessment.</p>
 
           <h2 id="weight">Weight Management — The Most Powerful Intervention</h2>
-          <p>In an overweight dog, getting back to a lean body condition belongs in the arthritis plan alongside veterinary NSAIDs. Kealy et al. (JAVMA 2000) followed 48 Labrador Retrievers; the limit-fed group received 25% less food. At 8 years, hip osteoarthritis was present in 3 of 21 limit-fed dogs versus 15 of 22 control-fed littermates (https://doi.org/10.2460/javma.2000.217.1678). That trial does not rank weight loss against NSAIDs, and it does not measure pounds of force on a joint.</p>
+          <p>In an overweight dog, getting back to a lean body condition belongs in the arthritis plan alongside veterinary NSAIDs. Kealy et al. (JAVMA 2000) followed 48 Labrador Retrievers; the limit-fed group received 25% less food. At 8 years, hip osteoarthritis was present in 3 of 21 limit-fed dogs versus 15 of 22 control-fed littermates (<a className="break-all" href="https://doi.org/10.2460/javma.2000.217.1678">https://doi.org/10.2460/javma.2000.217.1678</a>). That trial does not rank weight loss against NSAIDs, and it does not measure pounds of force on a joint.</p>
           <p>The goal: BCS 4–5 on a 9-point scale. Ribs easily palpable with light pressure. Visible waist. Abdominal tuck. In arthritic dogs, this is a treatment target, not a cosmetic goal. Prescription weight management diets (Hill's Metabolic, Royal Canin Satiety) achieve more reliable weight loss than calorie restriction of regular food alone.</p>
 
           <PullQuote

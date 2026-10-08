@@ -241,7 +241,7 @@ export default function VetsHuskyHealthPage() {
           <BreedHealthCard
             name="Gastric Dilatation-Volvulus (GDV / Bloat)"
             riskLevel="moderate"
-            description="GDV is the most time-critical canine emergency. The stomach fills with gas (dilatation) and then twists on itself (volvulus), cutting off blood supply and causing rapid cardiovascular collapse. Deep-chested breeds are over-represented; the Siberian Husky has a moderately deep chest and appears in the at-risk lists. Without emergency surgery, mortality is near 100% — with timely surgery, mortality is approximately 10–18% in published series."
+            description="GDV is the most time-critical canine emergency. The stomach fills with gas (dilatation) and then twists on itself (volvulus), cutting off blood supply and causing rapid cardiovascular collapse. Deep-chested breeds are over-represented; the Siberian Husky has a moderately deep chest and appears in the at-risk lists. Merck Veterinary Manual lists overall GDV mortality at approximately 25–30%, and 20–45% in treated animals (https://www.merckvetmanual.com/digestive-system/surgical-problems-of-the-gastrointestinal-tract-in-small-animals/gastric-dilation-and-volvulus-in-small-animals). Cornell reports survival greater than 80 percent with treatment (https://www.vet.cornell.edu/departments-centers-and-institutes/riney-canine-health-center/canine-health-topics/gastric-dilatation-volvulus-gdv-or-bloat)."
             signs={[
               'Unproductive retching — trying to vomit without producing — EMERGENCY',
               'Hard, distended abdomen',

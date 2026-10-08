@@ -69,7 +69,7 @@ export default function EndlersLivebearerPage() {
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Quick Stats</div>
           {[['Scientific name', 'Poecilia wingei'], ['Adult size', '1 inch (males smaller)'], ['Temperature', '72–80°F'], ['pH', '7.0–8.0 (harder water)'], ['Tank size', '10 gallons'], ['Reproduction', 'Livebearer — very prolific'], ['Lifespan', '2–3 years']].map(([k, v]) => (
             <div key={k} className="flex justify-between py-1.5 border-b border-brand-border text-xs last:border-0">
-              <span className="text-brand-text-light">{k}</span><span className="font-bold text-brand-dark text-right max-w-[55%]">{v}</span>
+              <span className="text-brand-text-light">{k}</span><span className="font-bold text-brand-dark text-right max-w-[55%] break-all">{v}</span>
             </div>
           ))}
         </div>

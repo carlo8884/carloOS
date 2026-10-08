@@ -49,7 +49,7 @@ const FAQS = [
   {
     question: 'Can a betta really live in a bowl?',
     answer:
-      'No. Unheated bowls under about 5 gallons are below the species’ minimum welfare needs. Bettas come from warm (78–82°F) tropical waters in Thailand and the Malay Peninsula, and they need a filter to keep ammonia at 0 ppm. The "bowl myth" comes from misreading wild habitat — shallow does not mean tiny, and rice paddies are rain-flushed weekly during monsoon.',
+      'No. Unheated bowls under about 5 gallons are below the species’ minimum welfare needs. Bettas come from warm (75–86°F, FishBase Betta splendens, https://www.fishbase.se/summary/Betta-splendens.html) tropical waters in Thailand and the Malay Peninsula, and they need a filter to keep ammonia at 0 ppm. The "bowl myth" comes from misreading wild habitat — shallow does not mean tiny, and rice paddies are rain-flushed weekly during monsoon.',
     answerText:
       'No. Unheated bowls under about 5 gallons are below the species minimum welfare needs. Bettas come from warm (78-82F) tropical waters and need a filter to keep ammonia at 0 ppm. Shallow wild habitat does not mean tiny.',
   },
@@ -133,7 +133,7 @@ export default function BettaFishPage() {
               {[
                 ['Scientific name', 'Betta splendens'],
                 ['Min tank', '5 gallons — 10 is better'],
-                ['Temperature', '76–82°F — heater required'],
+                ['Temperature', '75–86°F (https://www.fishbase.se/summary/Betta-splendens.html)'],
                 ['pH', '6.5–7.5'],
                 ['Diet', 'Obligate carnivore — protein-first'],
                 ['Filter', 'Gentle flow — sponge filter ideal'],
@@ -145,7 +145,7 @@ export default function BettaFishPage() {
                   className="flex justify-between py-1.5 border-b border-brand-border text-xs last:border-0"
                 >
                   <span className="text-brand-text-light">{k}</span>
-                  <span className="font-bold text-brand-dark text-right max-w-[55%]">{v}</span>
+                  <span className="font-bold text-brand-dark text-right max-w-[55%] break-all">{v}</span>
                 </div>
               ))}
             </div>
@@ -181,7 +181,7 @@ export default function BettaFishPage() {
           <p>
             The minimum correct housing is a 5-gallon tank with a gentle filter (sponge filter or
             low-flow internal filter — long fins are damaged by strong currents) and a heater
-            holding 76–82°F. A 10-gallon tank gives the keeper room to plant heavily, stabilize
+            holding 75–86°F (<a className="break-all" href="https://www.fishbase.se/summary/Betta-splendens.html">https://www.fishbase.se/summary/Betta-splendens.html</a>). A 10-gallon tank gives the keeper room to plant heavily, stabilize
             parameters, and add enrichment. Bettas in appropriately sized, heated, filtered,
             planted tanks live 3–5 years and display vivid colors and active, curious behavior.
             The same fish in a bowl rarely reaches two. If a tank is already in the house, the{' '}
@@ -325,7 +325,7 @@ export default function BettaFishPage() {
             Ammonia at any detectable level damages gill epithelium; nitrite blocks oxygen
             transport in blood; both compound the chronic-stress baseline that comes from being
             cold. The target for a betta tank is the same as the target for any other freshwater
-            tank: ammonia 0 ppm, nitrite 0 ppm, nitrate under 20 ppm, temperature 76–82°F. There
+            tank: ammonia 0 ppm, nitrite 0 ppm, nitrate under 20 ppm, temperature 75–86°F (<a className="break-all" href="https://www.fishbase.se/summary/Betta-splendens.html">https://www.fishbase.se/summary/Betta-splendens.html</a>). There
             is no welfare-defensible reading in which "the fish is alive" justifies an unfiltered
             jar.
           </p>

@@ -86,9 +86,9 @@ const FAQS = [
   {
     question: 'Can platies live in an unheated tank?',
     answer:
-      'Platies tolerate a wider temperature range than most tropical fish — FishBase lists 65–80°F — so a room that stays consistently above 68°F may not strictly require a heater. But "tolerate" is not "thrive": below 72°F, platies eat less, color fades, and the immune system slows. A small adjustable heater holding 74–78°F is inexpensive insurance and recommended for any platy tank.',
+      'FishBase lists Xiphophorus maculatus at 18–25°C, which is 64–77°F (https://www.fishbase.se/summary/Xiphophorus-maculatus.html). A room that stays inside that band may not strictly require a heater. A small adjustable heater is still useful if the room drops below the band.',
     answerText:
-      'They tolerate 65-80°F but thrive at 74-78°F. A heater is recommended even though they can survive briefly without one.',
+      'FishBase lists 18–25°C, 64–77°F (https://www.fishbase.se/summary/Xiphophorus-maculatus.html).',
   },
 ]
 
@@ -129,7 +129,7 @@ export default function PlatyPage() {
                 ['Scientific name', 'Xiphophorus maculatus'],
                 ['Origin', 'Mexico, Belize, Guatemala'],
                 ['Adult size', '2.5 in (females larger)'],
-                ['Temperature', '65–80°F (74–78°F ideal)'],
+                ['Temperature', '64–77°F (https://www.fishbase.se/summary/Xiphophorus-maculatus.html)'],
                 ['pH', '7.0–8.2 (hard alkaline)'],
                 ['GH', '10–25 dGH'],
                 ['Min tank', '10 gal — 20 gal for a group'],
@@ -142,7 +142,7 @@ export default function PlatyPage() {
                   className="flex justify-between py-1.5 border-b border-brand-border text-xs last:border-0"
                 >
                   <span className="text-brand-text-light">{k}</span>
-                  <span className="font-bold text-brand-dark text-right max-w-[55%]">{v}</span>
+                  <span className="font-bold text-brand-dark text-right max-w-[55%] break-all">{v}</span>
                 </div>
               ))}
             </div>
@@ -163,7 +163,7 @@ export default function PlatyPage() {
                   className="flex justify-between py-1.5 border-b border-brand-border text-xs last:border-0"
                 >
                   <span className="text-brand-text-light">{k}</span>
-                  <span className="font-bold text-brand-dark text-right max-w-[55%]">{v}</span>
+                  <span className="font-bold text-brand-dark text-right max-w-[55%] break-all">{v}</span>
                 </div>
               ))}
             </div>
@@ -220,7 +220,7 @@ export default function PlatyPage() {
           </DropCap>
           <p>
             Beyond chemistry, platies are forgiving in temperature
-            (functional from 65°F to 80°F), accept any standard tropical
+            (FishBase 64–77°F, <a className="break-all" href="https://www.fishbase.se/summary/Xiphophorus-maculatus.html">https://www.fishbase.se/summary/Xiphophorus-maculatus.html</a>), accept any standard tropical
             food (flake, micro pellet, frozen, freeze-dried), coexist
             peacefully with virtually all non-aggressive community fish,
             and reach sexual maturity reliably enough that captive

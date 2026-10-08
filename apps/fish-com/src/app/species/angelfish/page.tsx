@@ -47,7 +47,7 @@ const FAQS = [
   {
     question: 'How long do angelfish live?',
     answer:
-      'Ten to fifteen years. They are healthiest and breed most reliably in conditions close to their native Amazon tributaries: warm (78–82°F), soft (GH 2–8), slightly acidic (pH 6.0–7.0) water.',
+      'Ten to fifteen years. They are healthiest and breed most reliably in conditions close to their native Amazon tributaries: warm (75–86°F, FishBase Pterophyllum scalare, https://www.fishbase.se/summary/Pterophyllum-scalare.html), soft (GH 2–8), slightly acidic (pH 6.0–7.0) water.',
     answerText:
       '10-15 years. Healthiest in warm (78-82F), soft, slightly acidic water close to their Amazon origins.',
   },
@@ -70,9 +70,9 @@ export default function AngelfishPage() {
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Quick Stats</div>
-          {[['Scientific name', 'Pterophyllum scalare'], ['Adult size', '6" tall · 4" body length'], ['Tank height', '18" minimum — 24" preferred'], ['Temperature', '76–82°F (warm end)'], ['pH', '6.0–7.5 — slightly acidic'], ['Behavior', 'Cichlid — territorial when breeding'], ['Lifespan', '10–15 years']].map(([k, v]) => (
+          {[['Scientific name', 'Pterophyllum scalare'], ['Adult size', '6" tall · 4" body length'], ['Tank height', '18" minimum — 24" preferred'], ['Temperature', '75–86°F (https://www.fishbase.se/summary/Pterophyllum-scalare.html)'], ['pH', '6.0–7.5 — slightly acidic'], ['Behavior', 'Cichlid — territorial when breeding'], ['Lifespan', '10–15 years']].map(([k, v]) => (
             <div key={k} className="flex justify-between py-1.5 border-b border-brand-border text-xs last:border-0">
-              <span className="text-brand-text-light">{k}</span><span className="font-bold text-brand-dark text-right max-w-[55%]">{v}</span>
+              <span className="text-brand-text-light">{k}</span><span className="font-bold text-brand-dark text-right max-w-[55%] break-all">{v}</span>
             </div>
           ))}
         </div>
@@ -97,7 +97,7 @@ export default function AngelfishPage() {
         <p>Compatible: larger tetras (black skirt, Buenos Aires, silver dollars), corydoras catfish (peaceful and ignored by angels), bristlenose plecos, other similar-sized cichlids that can hold their own (German Blue Rams, keyhole cichlids), and Cardinal tetras (slightly larger and faster than neons — better odds, but not guaranteed safe). Avoid: any fin-nipping species (tiger barbs reliably destroy angelfish fins), very small fish, and aggressive cichlids that will harass angels off food.</p>
 
         <h2>Water and Diet</h2>
-        <p>Angelfish come from the slow-moving Amazon tributaries where water is warm (78–82°F), soft (GH 2–8), and slightly acidic (pH 6.0–7.0). They adapt to a wider range in captivity but are healthiest and breed most reliably in conditions close to this. Tall tank + warm, slightly soft, acidic water + live or frozen foods = ideal conditions. Diet: high-quality flake or pellet as a staple, supplemented with frozen or live foods enthusiastically — frozen bloodworms, mysis shrimp, brine shrimp, and live white worms for conditioning pairs toward breeding. Feed twice daily.</p>
+        <p>Angelfish come from the slow-moving Amazon tributaries where water is warm (75–86°F, FishBase Pterophyllum scalare, <a className="break-all" href="https://www.fishbase.se/summary/Pterophyllum-scalare.html">https://www.fishbase.se/summary/Pterophyllum-scalare.html</a>), soft (GH 2–8), and slightly acidic (pH 6.0–7.0). They adapt to a wider range in captivity but are healthiest and breed most reliably in conditions close to this. Tall tank + warm, slightly soft, acidic water + live or frozen foods = ideal conditions. Diet: high-quality flake or pellet as a staple, supplemented with frozen or live foods enthusiastically — frozen bloodworms, mysis shrimp, brine shrimp, and live white worms for conditioning pairs toward breeding. Feed twice daily.</p>
 
         <h2>Strains and Varieties</h2>
         <p>Decades of selective breeding have produced many angelfish varieties beyond the wild-type silver with black bars: veil angels (extended fins), marble (random black and white pattern), koi (orange, white, and black), gold (solid yellow), black lace (black), platinum (solid white), zebra (extra bars), smoky (brown-gray tones), and others. Veil-tail varieties have the most dramatic fin extensions but are slower and more vulnerable to fin-nipping — avoid keeping them with even mildly nippy species. Wild-type angelfish are hardier and more vigorous spawners than many heavily selectively-bred strains.</p>

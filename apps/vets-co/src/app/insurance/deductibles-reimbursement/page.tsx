@@ -207,7 +207,7 @@ export default function DeductiblesPage() {
             name="Pets Best"
             subtitle="Multiple deductible and reimbursement combinations"
             description={
-              <p>Offers several plan tiers with a range of deductible and reimbursement combinations, which is helpful when you want to compare how each lever shifts the premium. Run a hypothetical large bill through different settings to find the structure that matches your cash reality.</p>
+              <p>Offers several plan tiers with a range of deductible and reimbursement combinations, which is helpful when you want to compare how each lever shifts the premium. Pets Best’s FAQ, fetched 2026-10-08, says there is no upper age limit (<a className="break-all" href="https://www.petsbest.com/faq">https://www.petsbest.com/faq</a>). Run a hypothetical large bill through different settings to find the structure that matches your cash reality.</p>
             }
             specs={[
               { label: 'Plan tiers', value: 'Multiple', highlight: 'good' },
@@ -246,12 +246,12 @@ export default function DeductiblesPage() {
                   <td className="p-3 text-brand-text-mid">Several deductible and reimbursement combinations to compare</td>
                   <td className="p-3 font-bold text-brand-dark"><a href="#pets-best" className="text-brand-primary">Pets Best</a><TableShopLink href={"/go/pets-best/home?s=insurance-deductibles-reimbursement"} product={"Pets Best"} /></td>
                   <td className="p-3 text-brand-text-mid">Tiered Options. Multiple plan tiers. Pay-then-claim. Quote-based</td>
-                  <td className="p-3 text-brand-text-mid">More options to compare. Standard exclusions apply. The card also notes no upper age limit</td>
+                  <td className="p-3 text-brand-text-mid">More options to compare. Standard exclusions apply. Pets Best’s FAQ, fetched 2026-10-08, says there is no upper age limit (<a className="break-all" href="https://www.petsbest.com/faq">https://www.petsbest.com/faq</a>)</td>
                 </tr>
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-07" />
+          <ComparisonFoot updated="2026-10-08" />
 
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />

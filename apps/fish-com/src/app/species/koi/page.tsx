@@ -70,7 +70,7 @@ export default function KoiPage() {
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Pond Requirements</div>
           {[['Min pond volume', '1,000 gallons for 4-5 koi'], ['Per koi rule', '250 gallons per fish (minimum)'], ['Depth', '3+ feet (temperature buffer, predator deterrence)'], ['Filtration', 'Mechanical + biological — size for 2× fish load'], ['Water changes', '10-25% weekly minimum'], ['Temperature', '59–77°F optimal — cold tolerant in winter']].map(([k, v]) => (
             <div key={k} className="flex justify-between py-1.5 border-b border-brand-border text-xs last:border-0">
-              <span className="text-brand-text-light">{k}</span><span className="font-bold text-brand-dark text-right max-w-[55%]">{v}</span>
+              <span className="text-brand-text-light">{k}</span><span className="font-bold text-brand-dark text-right max-w-[55%] break-all">{v}</span>
             </div>
           ))}
         </div>

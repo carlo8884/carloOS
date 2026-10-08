@@ -69,7 +69,7 @@ export default function WhiteCloudPage() {
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Quick Stats</div>
           {[['Scientific name', 'Tanichthys albonubes'], ['Adult size', '1.5 inches'], ['Temperature', '60–72°F — cold water preferred'], ['Max temp', '75°F — above this stresses them'], ['pH', '6.0–8.0 — very adaptable'], ['Group', '8+ recommended'], ['Lifespan', '5–7 years in cool water']].map(([k, v]) => (
             <div key={k} className="flex justify-between py-1.5 border-b border-brand-border text-xs last:border-0">
-              <span className="text-brand-text-light">{k}</span><span className="font-bold text-brand-dark text-right max-w-[55%]">{v}</span>
+              <span className="text-brand-text-light">{k}</span><span className="font-bold text-brand-dark text-right max-w-[55%] break-all">{v}</span>
             </div>
           ))}
         </div>

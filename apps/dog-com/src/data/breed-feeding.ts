@@ -132,7 +132,7 @@ export const BREED_FEEDING_PROFILES: BreedFeedingProfile[] = [
     fatRecommendation:
       'AAFCO minimum 5.5% (adult) and 8.5% (growth) on a dry-matter basis. Most adult Lab diets fall in the 12–18% fat range; higher fat is energy-dense and contributes to obesity risk in this breed.',
     weightManagementNotes:
-      'Labradors gain weight easily and lose it slowly. If your dog is above ideal body condition, work with your veterinarian on a structured weight-loss plan — typically a 1–2% body weight loss per week target, achieved with a therapeutic weight-loss diet (not just less of the regular food, which can create nutrient deficiencies at heavily reduced volumes). Reassess body condition monthly.',
+      'Labradors gain weight easily and lose it slowly. If your dog is above ideal body condition, work with your veterinarian on a structured weight-loss plan — typically a 1–2% body weight loss per week target. The 2014 AAHA Weight Management Guidelines state that the desired rate of weight loss in dogs is 1–2% per week (https://www.aaha.org/wp-content/uploads/globalassets/02-guidelines/weight-management/2014-AAHA-Weight-Management-Guidelines-for-Dogs-and-Cats). Achieve that with a therapeutic weight-loss diet (not just less of the regular food, which can create nutrient deficiencies at heavily reduced volumes). Reassess body condition monthly.',
     recommendedFoodTypes: [
       'Complete-and-balanced dry food meeting AAFCO adult maintenance or large-breed growth profiles',
       'WSAVA-aligned manufacturers (those that meet the WSAVA Global Nutrition Committee selection criteria) preferred',

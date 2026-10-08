@@ -129,7 +129,7 @@ export default function MollyPage() {
                 ['Scientific name', 'Poecilia sphenops (and rel.)'],
                 ['Origin', 'C. & S. America coastal/brackish'],
                 ['Max size', '3 in (short-fin) / 6 in (sailfin)'],
-                ['Temperature', '72–82°F'],
+                ['Temperature', '64–83°F (https://www.fishbase.se/summary/Poecilia-sphenops.html)'],
                 ['pH', '7.5–8.5 (hard alkaline)'],
                 ['GH', '15–30 dGH'],
                 ['Min tank', '20 gal short-fin / 30 gal sailfin'],
@@ -142,7 +142,7 @@ export default function MollyPage() {
                   className="flex justify-between py-1.5 border-b border-brand-border text-xs last:border-0"
                 >
                   <span className="text-brand-text-light">{k}</span>
-                  <span className="font-bold text-brand-dark text-right max-w-[55%]">{v}</span>
+                  <span className="font-bold text-brand-dark text-right max-w-[55%] break-all">{v}</span>
                 </div>
               ))}
             </div>
@@ -162,7 +162,7 @@ export default function MollyPage() {
                   className="flex justify-between py-1.5 border-b border-brand-border text-xs last:border-0"
                 >
                   <span className="text-brand-text-light">{k}</span>
-                  <span className="font-bold text-brand-dark text-right max-w-[55%]">{v}</span>
+                  <span className="font-bold text-brand-dark text-right max-w-[55%] break-all">{v}</span>
                 </div>
               ))}
             </div>
@@ -291,7 +291,7 @@ export default function MollyPage() {
             of the country:
           </p>
           <ul>
-            <li><strong>Temperature:</strong> 72–82°F. 76–80°F is ideal.</li>
+            <li><strong>Temperature:</strong> 64–83°F (<a className="break-all" href="https://www.fishbase.se/summary/Poecilia-sphenops.html">https://www.fishbase.se/summary/Poecilia-sphenops.html</a>).</li>
             <li><strong>pH:</strong> 7.5–8.5. Stable matters more than precise.</li>
             <li><strong>GH:</strong> 15–30 dGH. Higher is better than lower.</li>
             <li><strong>KH:</strong> 10–25 dKH. High KH prevents pH crashes.</li>
