@@ -10,6 +10,8 @@ type Journey = {
   comparison: RegExp
   hop: string
   hopIncludes: string[]
+  /** Unset partner. The comparison shows a note, not a live hop. */
+  held?: boolean
 }
 
 const amazon = (keyword: string): string[] => ['https://amazon.com/s?k=', `tag=${AMAZON_TAG}`, keyword]
@@ -117,8 +119,9 @@ const JOURNEYS: Record<string, Journey[]> = {
       startHeading: /Vetster vs AskVet/,
       link: 'telehealth comparison',
       comparison: /\/telehealth\/?$/,
-      hop: 'https://vetster.com/?campaign=telehealth',
-      hopIncludes: ['https://vetster.com/', 'campaign=telehealth'],
+      hop: '',
+      hopIncludes: [],
+      held: true,
     },
     {
       name: 'Spot guide to insurance review',
@@ -175,6 +178,25 @@ for (const width of [375, 1280]) {
         await page.getByRole('link', { name: journey.link }).first().click()
         await expect(page).toHaveURL(journey.comparison)
 
+        const overflow = await page.evaluate(
+          () => document.documentElement.scrollWidth - document.documentElement.clientWidth,
+        )
+        expect(overflow, 'horizontal overflow').toBeLessThanOrEqual(1)
+        await expect(page.locator('body')).not.toContainText(/\bhop\b/i)
+
+        if (journey.held) {
+          const note = page.locator('[data-primary-hop="held"]')
+          await expect(note).toBeVisible()
+          await expect(page.locator('[data-primary-hop] a')).toHaveCount(0)
+          const hrefs = await page.locator('a[href]').evaluateAll((els) =>
+            els.map((el) => el.getAttribute('href') || ''),
+          )
+          for (const href of hrefs) {
+            expect(href, `${journey.name} live href`).not.toMatch(
+              /\/go\/(vetster|askvet|smartpak|dover|schneider|ridingwarehouse|wysong|marshall|carniwhole|chewy)(\/|\?|#|$)|vetster\.com|askvet\.app|smartpakequine|doversaddlery|chewy\.com/i,
+            )
+          }
+        } else {
         const hop = page.locator('[data-primary-hop] a')
         await expect(hop).toBeVisible()
         await expect(hop).toHaveAttribute('href', journey.hop)
@@ -183,17 +205,12 @@ for (const width of [375, 1280]) {
         expect(box!.x).toBeGreaterThanOrEqual(0)
         expect(box!.x + box!.width).toBeLessThanOrEqual(width + 1)
 
-        const overflow = await page.evaluate(
-          () => document.documentElement.scrollWidth - document.documentElement.clientWidth,
-        )
-        expect(overflow, 'horizontal overflow').toBeLessThanOrEqual(1)
-        await expect(page.locator('body')).not.toContainText(/\bhop\b/i)
-
         if (journey.hop.startsWith('/')) {
           await expectHop(page.request, journey.hop, journey.hopIncludes)
         } else {
           expect(journey.hop, 'unset consult href').not.toContain('PLACEHOLDER')
           for (const part of journey.hopIncludes) expect(journey.hop).toContain(part)
+        }
         }
       })
     }

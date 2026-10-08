@@ -15,7 +15,7 @@ import {
 } from '@carloOS/ui'
 import { InsuranceReimbursementEstimator } from '../../../components/visual/InsuranceReimbursementEstimator'
 import { InsuranceWellnessShop } from '../../../components/InsuranceWellnessShop'
-import { consultLink } from '@carloOS/config/affiliate-hop'
+import { liveAnchorHref } from '@carloOS/config/affiliate-hop'
 
 const URL = 'https://vets.co/tools/insurance-reimbursement-estimator'
 
@@ -126,9 +126,7 @@ const articleSchema = buildArticleSchema({
 })
 export default function InsuranceReimbursementEstimatorPage() {
   const lemonadeHref = '/go/lemonade/estimator?s=insurance-reimbursement-estimator'
-  const lemonade = consultLink(lemonadeHref)
-  const lemonadePlain = Boolean(lemonade && !lemonade.attributed)
-  const lemonadeLink = lemonade?.href ?? lemonadeHref
+  const lemonadeLink = liveAnchorHref(lemonadeHref)
   return (
     <ArticleLayout
       priceAsOf="2026-05-31"
@@ -218,14 +216,22 @@ export default function InsuranceReimbursementEstimatorPage() {
             >
               Compare plans on published terms →
             </Link>
-            <Link
-              href={lemonadeLink}
-              className="inline-block shrink-0 px-5 py-2.5 border border-brand-border text-brand-text-dark text-sm font-semibold rounded hover:border-brand-primary transition-colors text-center"
-              rel={lemonadePlain ? 'nofollow noopener' : 'sponsored nofollow'}
-              target={lemonadePlain ? '_blank' : undefined}
-            >
-              Visit Lemonade Pet
-            </Link>
+            {lemonadeLink ? (
+              <Link
+                href={lemonadeLink}
+                className="inline-block shrink-0 px-5 py-2.5 border border-brand-border text-brand-text-dark text-sm font-semibold rounded hover:border-brand-primary transition-colors text-center"
+                rel="sponsored nofollow"
+              >
+                Visit Lemonade Pet
+              </Link>
+            ) : (
+              <span
+                data-partner-held="lemonade"
+                className="inline-block shrink-0 px-5 py-2.5 border border-brand-border text-brand-text-light text-sm font-semibold rounded text-center"
+              >
+                Visit Lemonade Pet — partner ID needed
+              </span>
+            )}
           </div>
           <HopDisclosure siteId="vets-co" href={lemonadeHref} />
           <p className="mt-3 text-2xs text-brand-text-mid leading-relaxed">

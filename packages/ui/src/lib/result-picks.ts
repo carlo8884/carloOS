@@ -378,14 +378,14 @@ export function foragePick(forageLabel: string, workloadLabel: string): MatchedP
   }
 }
 
-/** Senior stage on the horse-age tool is the only stage that names joints. Cosequin is the review's joint card. */
+/** Senior stage uses the senior-feed search already on the age page. Age does not assign a joint card. */
 export function horseAgePick(stageLabel: string): MatchedPick {
   if (stageLabel === 'Senior') {
     return {
-      href: '/go/smartpak/cosequin-asu-plus?s=tools-horse-age-calculator',
-      label: 'Check price of Cosequin ASU Plus on SmartPak',
+      href: '/go/amazon-brand/senior+horse+feed?s=tools-horse-age-calculator',
+      label: 'Browse senior horse feed on Amazon',
       detail:
-        'This result is the senior stage. The supplement review’s joint pick is Cosequin ASU Plus. Age alone does not mean this horse needs it.',
+        'This result is the senior stage. The age page already links senior horse feed. Age alone does not assign a joint supplement.',
     }
   }
   return {

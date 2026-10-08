@@ -13,7 +13,7 @@ import {
 
   ShopCtas,
 } from '@carloOS/ui'
-import { InsuranceCoverageFinder } from '../../../components/visual/InsuranceCoverageFinder'
+import { InsuranceCoverageFinder } from './CoverageFinder'
 import { InsuranceWellnessShop } from '../../../components/InsuranceWellnessShop'
 
 const URL = 'https://vets.co/tools/insurance-finder'
