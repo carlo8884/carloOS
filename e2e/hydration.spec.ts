@@ -43,20 +43,29 @@ const hydrationError =
 async function bodyOutline(target: { evaluate: <T>(fn: () => T) => Promise<T> }): Promise<string[]> {
   return target.evaluate(() => {
     const out: string[] = []
+    const attrs = ['class', 'style', 'src', 'alt', 'href', 'fetchpriority', 'loading', 'decoding', 'data-nimg', 'id']
     const walk = (n: Node) => {
-      if (out.length > 400) return
+      if (out.length > 500) return
       if (n.nodeType === Node.TEXT_NODE) {
-        const t = (n.textContent || '').replace(/\s+/g, ' ').trim()
-        if (t) out.push('T:' + t.slice(0, 90))
+        const raw = n.textContent || ''
+        const t = raw.replace(/\s+/g, ' ').trim()
+        out.push(t ? 'T:' + t.slice(0, 90) : 'W:' + raw.length)
         return
       }
       if (n.nodeType !== Node.ELEMENT_NODE) return
       const el = n as Element
       if (el.tagName === 'SCRIPT' || el.tagName === 'STYLE' || el.tagName === 'NOSCRIPT') return
-      const href = el.getAttribute('href')
-      out.push('E:' + el.tagName + (href ? ' ' + href.slice(0, 80) : ''))
+      const bits = attrs
+        .map((name) => {
+          const value = el.getAttribute(name)
+          return value ? name + '=' + value.replace(/\s+/g, ' ').slice(0, 60) : ''
+        })
+        .filter(Boolean)
+      out.push('E:' + el.tagName + (bits.length ? ' ' + bits.join(' ') : ''))
       for (const c of el.childNodes) walk(c)
     }
+    const html = document.documentElement
+    out.push('HTML class=' + (html.getAttribute('class') || ''))
     walk(document.body)
     return out
   })
@@ -102,7 +111,9 @@ test('money pages hydrate with no console hydration error', async ({ page }, tes
             return route.continue()
           })
           await plain.goto(path, { waitUntil: 'domcontentloaded' })
-          detail = '\n' + outlineDiff(await bodyOutline(plain), client)
+          const server = await bodyOutline(plain)
+          const diff = outlineDiff(server, client)
+          detail = '\n' + (diff || `outlines match (${server.length} nodes)`)
         } finally {
           await plain.close()
         }
