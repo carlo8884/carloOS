@@ -12,7 +12,7 @@ const pagePath: Record<string, string> = {
 
 const amazonHop: Record<string, string> = {
   'dog-com': '/go/amazon-brand/midwest+icrate+dog+crate?s=reviews-best-puppy-crate-guide',
-  'fish-com': '/go/amazon-brand/aquaclear+70+filter?s=reviews-hob-vs-canister-guide',
+  'fish-com': '/go/amazon/B0DCGB5T4Y?s=reviews-hob-vs-canister-guide',
   'horses-com': '/go/amazon-brand/equine+supplement?s=ownership-leasing-a-horse',
   'vets-co': '/go/amazon-brand/pet+first+aid+kit?s=telehealth',
   'ferret-com': '/go/amazon-brand/ferret+vest+harness+jacket+escape+proof?s=reviews-vest-vs-h-harness-guide',
@@ -67,5 +67,8 @@ test('money-page hop records site, source, and partner, and Amazon hops stay tag
   expect(params?.partner).toBe(partner)
   expect(params?.vendor).toBe(partner)
 
-  await expectHop(page.request, amazonHop[site], ['https://amazon.com/s?k=', `tag=${AMAZON_TAG}`])
+  const amazonShape = amazonHop[site].includes('/go/amazon/')
+    ? [`https://amazon.com/dp/${amazonHop[site].split('/')[3]?.split('?')[0]}`, `tag=${AMAZON_TAG}`]
+    : ['https://amazon.com/s?k=', `tag=${AMAZON_TAG}`]
+  await expectHop(page.request, amazonHop[site], amazonShape)
 })

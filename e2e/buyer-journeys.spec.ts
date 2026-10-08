@@ -15,6 +15,7 @@ type Journey = {
 }
 
 const amazon = (keyword: string): string[] => ['https://amazon.com/s?k=', `tag=${AMAZON_TAG}`, keyword]
+const product = (asin: string): string[] => [`https://amazon.com/dp/${asin}`, `tag=${AMAZON_TAG}`]
 const JOURNEYS: Record<string, Journey[]> = {
   'dog-com': [
     {
@@ -23,8 +24,8 @@ const JOURNEYS: Record<string, Journey[]> = {
       startHeading: /Dog Crate Size Calculator/,
       link: /Compare wire, airline, and heavy-duty crates/,
       comparison: /\/reviews\/best-dog-crates\/?$/,
-      hop: '/go/amazon-brand/midwest+icrate+dog+crate?s=reviews-best-dog-crates',
-      hopIncludes: amazon('midwest'),
+      hop: '/go/amazon/B000QFT1RC?s=reviews-best-dog-crates',
+      hopIncludes: product('B000QFT1RC'),
     },
     {
       name: 'front-clip guide to harness review',
@@ -52,8 +53,8 @@ const JOURNEYS: Record<string, Journey[]> = {
       startHeading: /Heater Wattage Calculator/,
       link: /Read the heater review before you buy/,
       comparison: /\/reviews\/best-aquarium-heaters\/?$/,
-      hop: '/go/amazon-brand/eheim+jager+heater?s=reviews-best-aquarium-heaters',
-      hopIncludes: amazon('eheim'),
+      hop: '/go/amazon/B003I5UC0W?s=reviews-best-aquarium-heaters',
+      hopIncludes: product('B003I5UC0W'),
     },
     {
       name: 'filter guide to filter review',
@@ -61,8 +62,8 @@ const JOURNEYS: Record<string, Journey[]> = {
       startHeading: /HOB vs canister/,
       link: 'filter review',
       comparison: /\/reviews\/best-aquarium-filters\/?$/,
-      hop: '/go/amazon-brand/aquaclear+70+filter?s=reviews-best-aquarium-filters',
-      hopIncludes: amazon('aquaclear'),
+      hop: '/go/amazon/B0DCGB5T4Y?s=reviews-best-aquarium-filters',
+      hopIncludes: product('B0DCGB5T4Y'),
     },
     {
       name: 'test-kit guide to test-kit review',
@@ -70,8 +71,8 @@ const JOURNEYS: Record<string, Journey[]> = {
       startHeading: /API Master Kit or Salifert/,
       link: 'water-test review',
       comparison: /\/reviews\/best-water-test-kits\/?$/,
-      hop: '/go/amazon-brand/api+freshwater+master+test+kit?s=reviews-best-water-test-kits',
-      hopIncludes: amazon('api'),
+      hop: '/go/amazon/B000255NCI?s=reviews-best-water-test-kits',
+      hopIncludes: product('B000255NCI'),
     },
   ],
   'horses-com': [
@@ -81,8 +82,8 @@ const JOURNEYS: Record<string, Journey[]> = {
       startHeading: /Rambo vs Rhino/,
       link: 'winter blanket review',
       comparison: /\/reviews\/best-winter-horse-blankets\/?$/,
-      hop: '/go/amazon-brand/winter+horse+blanket?s=reviews-best-winter-horse-blankets',
-      hopIncludes: amazon('winter'),
+      hop: '/go/amazon/B09JWTFTGY?s=reviews-best-winter-horse-blankets',
+      hopIncludes: product('B09JWTFTGY'),
     },
     {
       name: 'joint guide to joint review',
@@ -140,8 +141,8 @@ const JOURNEYS: Record<string, Journey[]> = {
       startHeading: /Ferret Cage Size Calculator/,
       link: /Compare the cages that meet this footprint/,
       comparison: /\/reviews\/best-ferret-cage\/?$/,
-      hop: '/go/amazon-brand/ferret+nation+critter+nation+double+unit?s=reviews-best-ferret-cage',
-      hopIncludes: amazon('ferret'),
+      hop: '/go/amazon/B0054U8UGW?s=reviews-best-ferret-cage',
+      hopIncludes: product('B0054U8UGW'),
     },
     {
       name: 'litter guide to litter review',
