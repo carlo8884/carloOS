@@ -7,6 +7,7 @@ import { ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Heat Stroke in Dogs — Emergency Recognition, First Aid | Vets.co', description: 'Heat stroke is an emergency. Cool (not ice-cold) water on the way to the vet. Collapse, frantic panting, or red gums needs a clinic now.', path: '/health/heat-stroke-dogs', type: 'article' })
 const SOURCES = [
   { label: 'AAHA: Hyperthermia in Companion Animals', url: 'https://www.aaha.org/aaha-guidelines/emergency-and-critical-care/', publisher: 'AAHA' },
+  { label: 'Merck Veterinary Manual — What to Do in a Dog or Cat Emergency (heat stroke)', url: 'https://www.merckvetmanual.com/special-pet-topics/emergencies/what-to-do-in-a-dog-or-cat-emergency', publisher: 'Merck Veterinary Manual' },
 ]
 const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Heat Stroke in Dogs', description: 'Emergency recognition, first aid, and prevention of heat stroke in dogs.', url: 'https://vets.co/health/heat-stroke-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-09-04T00:00:00Z' ,
   citation: SOURCES,

@@ -27,7 +27,7 @@ export default function WhenToGoPage() {
               </div>
             ))}
           </div>
-          <RelatedLinks title="Related Guides" links={[{ label: 'ER vs Clinic vs Telehealth (tool)', href: '/tools/er-vs-clinic' }, { label: 'Emergency Signs', href: '/health/emergency-signs' }, { label: 'ER vs. Urgent Care', href: '/guides/er-vs-urgent-care' }, { label: 'What to Expect at the Vet', href: '/guides/what-to-expect-at-the-vet' }]} />
+          <RelatedLinks title="Related Guides" links={[{ label: 'Cat Grimace Scale', href: '/tools/cat-grimace-scale' }, { label: 'ER vs Clinic vs Telehealth (tool)', href: '/tools/er-vs-clinic' }, { label: 'Emergency Signs', href: '/health/emergency-signs' }, { label: 'ER vs. Urgent Care', href: '/guides/er-vs-urgent-care' }, { label: 'What to Expect at the Vet', href: '/guides/what-to-expect-at-the-vet' }]} />
 
         </>}
       >
@@ -41,6 +41,7 @@ export default function WhenToGoPage() {
 
           <h2>The Three Buckets</h2>
           <p>Most situations sort into three categories. <strong>Watchful waiting</strong> suits mild, isolated signs in a pet that is otherwise bright, eating, drinking, and acting normally. <strong>Same-day or urgent care</strong> is for problems that are not immediately life-threatening but should not wait days. <strong>Emergency care</strong> is for time-critical, life-threatening situations. Sorting a sign into the right bucket — and erring toward caution when unsure — is the core skill of responsible pet ownership.</p>
+          <p>For a cat that is quiet rather than collapsed, the <a href="/tools/cat-grimace-scale" className="text-brand-primary hover:underline">cat grimace scale</a> is a structured way to look at ear, eye, and whisker position before you decide which bucket you are in. It does not diagnose.</p>
 
           <h2>Signs You Can Often Watch Briefly</h2>
           <p>For a pet that remains alert, eating, and behaving normally, mild and isolated signs can sometimes be monitored for a short, defined period: a single soft stool, one episode of mild vomiting, brief minor stiffness that resolves, or a small superficial scrape. Watch closely, and seek care if the sign persists beyond a day or two, worsens, or is joined by other symptoms. This watchful approach is never appropriate for very young or very old pets, or those with serious underlying conditions.</p>

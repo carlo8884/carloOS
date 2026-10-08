@@ -26,7 +26,7 @@ export default function ERvsUrgentPage() {
               </div>
             ))}
           </div>
-          <RelatedLinks title="Related Guides" links={[{ label: 'ER vs Clinic vs Telehealth (tool)', href: '/tools/er-vs-clinic' }, { label: 'When to Go to the Vet', href: '/guides/when-to-go-to-the-vet' }, { label: 'Emergency Vet Costs', href: '/guides/emergency-vet-costs' }, { label: 'Emergency Signs', href: '/health/emergency-signs' }]} />
+          <RelatedLinks title="Related Guides" links={[{ label: 'Is This a Cat Emergency?', href: '/tools/is-this-a-cat-emergency' }, { label: 'ER vs Clinic vs Telehealth (tool)', href: '/tools/er-vs-clinic' }, { label: 'When to Go to the Vet', href: '/guides/when-to-go-to-the-vet' }, { label: 'Emergency Vet Costs', href: '/guides/emergency-vet-costs' }, { label: 'Emergency Signs', href: '/health/emergency-signs' }]} />
 
         </>}
       >
@@ -40,6 +40,7 @@ export default function ERvsUrgentPage() {
 
           <h2>The Three Levels of Care</h2>
           <p>Pet healthcare, like human healthcare, has tiers. Your <strong>regular veterinarian</strong> handles routine wellness, preventive care, chronic disease management, and many acute but stable problems during business hours. <strong>Urgent care</strong> clinics address same-day problems that are not life-threatening but should not wait days. The <strong>emergency hospital</strong> handles critical, time-sensitive situations around the clock with intensive-care capability. Matching the problem to the right tier gets your pet appropriate care efficiently.</p>
+          <p>If the patient is a cat and you are still sorting emergency from urgent, the <a href="/tools/is-this-a-cat-emergency" className="text-brand-primary hover:underline">Is This a Cat Emergency?</a> tool applies the same buckets to common cat signs. It does not replace a clinic call.</p>
 
           <h2>When to Go to the Emergency Hospital</h2>
           <p>Some situations are unambiguous emergencies: difficulty breathing, severe or uncontrolled bleeding, collapse, suspected bloat, a male cat unable to urinate, seizures that repeat or do not stop, suspected poisoning, major trauma, and rapid deterioration. These cannot safely wait for a regular appointment and warrant going straight to a 24-hour emergency hospital. When a serious sign leaves you uncertain, treat it as an emergency, because the consequences of underreacting can be irreversible.</p>
