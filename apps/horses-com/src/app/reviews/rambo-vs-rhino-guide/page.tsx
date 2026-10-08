@@ -55,7 +55,7 @@ export default function RamboVsRhinoGuidePage() {
           <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">Buy the Rambo Original when you want the ballistic shell kept for years, and the Rhino Plus when you want the current filled Horseware blanket.</p>
           <div data-fold="offer">
           <PrimaryHop href="/go/amazon-brand/horse+turnout+blanket?s=reviews-rambo-vs-rhino-guide" label="Browse horse turnout blankets on Amazon" />
-          <HopDisclosure siteId="horses-com" href="/go/amazon-brand/horse+turnout+blanket?s=reviews-rambo-vs-rhino-guide" />
+          <HopDisclosure tone="on-dark" siteId="horses-com" href="/go/amazon-brand/horse+turnout+blanket?s=reviews-rambo-vs-rhino-guide" />
         </div>
         </>
       }

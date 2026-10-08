@@ -65,7 +65,7 @@ export default function BestWinterBlanketsPage() {
         <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">The Horseware Rambo Original is the top turnout because the 1000-denier ballistic shell is the blanket owners keep for seasons.</p>
         <PriceAsOf date="2026-10-07" tone="dark" />
         <div data-fold="offer">
-          <HopDisclosure siteId="horses-com" href="/go/amazon-brand/winter+horse+blanket?s=reviews-best-winter-horse-blankets" />
+          <HopDisclosure tone="on-dark" siteId="horses-com" href="/go/amazon-brand/winter+horse+blanket?s=reviews-best-winter-horse-blankets" />
         <div className="mb-4" data-primary-hop="true">
           <a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" data-shop-placement="hero" href="/go/amazon-brand/winter+horse+blanket?s=reviews-best-winter-horse-blankets">Browse winter horse blankets on Amazon →</a>
         </div>

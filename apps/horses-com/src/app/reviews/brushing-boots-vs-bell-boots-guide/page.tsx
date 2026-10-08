@@ -58,7 +58,7 @@ export default function BrushingBootsVsBellBootsGuidePage() {
         <>
           <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">Synthetic brushing boots are the everyday pick because they cover the cannon when one leg strikes the other.</p>
           <div data-fold="offer">
-          <HopDisclosure siteId="horses-com" href="/go/amazon-brand/horse+brushing+boots?s=reviews-brushing-boots-vs-bell-boots-guide" /><a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" href="/go/amazon-brand/horse+brushing+boots?s=reviews-brushing-boots-vs-bell-boots-guide">Browse horse brushing boots on Amazon →</a>
+          <HopDisclosure tone="on-dark" siteId="horses-com" href="/go/amazon-brand/horse+brushing+boots?s=reviews-brushing-boots-vs-bell-boots-guide" /><a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" href="/go/amazon-brand/horse+brushing+boots?s=reviews-brushing-boots-vs-bell-boots-guide">Browse horse brushing boots on Amazon →</a>
         </div>
         </>
       }

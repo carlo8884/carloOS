@@ -105,7 +105,7 @@ export default function BestEquineSupplementsPage() {
         <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">Platinum Performance Equine is the top wellness supplement because one daily serving combines omega-3s, antioxidants, and amino acids.</p>
         <PriceAsOf date="2026-10-04" tone="dark" />
         <div data-fold="offer">
-          <HopDisclosure siteId="horses-com" href="/go/amazon-brand/platinum+performance+equine+wellness?s=reviews-best-equine-supplements" />
+          <HopDisclosure tone="on-dark" siteId="horses-com" href="/go/amazon-brand/platinum+performance+equine+wellness?s=reviews-best-equine-supplements" />
         <div className="mb-4" data-primary-hop="true">
           <a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" data-shop-placement="hero" href="/go/amazon-brand/platinum+performance+equine+wellness?s=reviews-best-equine-supplements">Browse Platinum Performance equine wellness on Amazon →</a>
         </div>

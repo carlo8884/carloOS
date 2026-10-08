@@ -55,7 +55,7 @@ export default function QuiltedVsSheepskinPadGuidePage() {
           <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">The quilted cotton pad is the everyday pick because it washes and costs less than a sheepskin half pad.</p>
           <div data-fold="offer">
           <PrimaryHop href="/go/amazon-brand/quilted+all+purpose+saddle+pad?s=reviews-quilted-vs-sheepskin-pad-guide" label="Browse quilted all-purpose saddle pads on Amazon" />
-          <HopDisclosure siteId="horses-com" href="/go/amazon-brand/quilted+all+purpose+saddle+pad?s=reviews-quilted-vs-sheepskin-pad-guide" />
+          <HopDisclosure tone="on-dark" siteId="horses-com" href="/go/amazon-brand/quilted+all+purpose+saddle+pad?s=reviews-quilted-vs-sheepskin-pad-guide" />
         </div>
         </>
       }

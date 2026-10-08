@@ -58,7 +58,7 @@ export default function WinterWaterUnfrozenGuidePage() {
           <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">Horses drink less when water is icy, and a heated stall bucket is the supply that keeps winter water open.</p>
           <div data-fold="offer">
           <PrimaryHop href="/go/amazon-brand/heated+horse+water+bucket?s=reviews-winter-water-unfrozen-guide" label="Browse heated horse water buckets on Amazon" />
-          <HopDisclosure siteId="horses-com" href="/go/amazon-brand/heated+horse+water+bucket?s=reviews-winter-water-unfrozen-guide" />
+          <HopDisclosure tone="on-dark" siteId="horses-com" href="/go/amazon-brand/heated+horse+water+bucket?s=reviews-winter-water-unfrozen-guide" />
         </div>
         </>
       }

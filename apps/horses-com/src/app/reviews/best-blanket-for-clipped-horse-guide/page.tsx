@@ -55,7 +55,7 @@ export default function ClippedHorseBlanketGuidePage() {
           <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">A clipped horse in a cold climate needs a heavyweight turnout, and the Schneiders StormShield lists a 1680-denier shell with 300-gram fill.</p>
           <div data-fold="offer">
           <PrimaryHop href="/go/amazon-brand/horse+heavyweight+blanket?s=reviews-best-blanket-for-clipped-horse-guide" label="Browse heavyweight horse blankets on Amazon" />
-          <HopDisclosure siteId="horses-com" href="/go/amazon-brand/horse+heavyweight+blanket?s=reviews-best-blanket-for-clipped-horse-guide" />
+          <HopDisclosure tone="on-dark" siteId="horses-com" href="/go/amazon-brand/horse+heavyweight+blanket?s=reviews-best-blanket-for-clipped-horse-guide" />
         </div>
         </>
       }
