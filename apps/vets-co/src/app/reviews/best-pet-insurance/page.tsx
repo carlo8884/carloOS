@@ -178,7 +178,7 @@ export default function VetsPetInsurancePage() {
 
             <ReviewCard id="healthy-paws" badge="Fastest Reimbursement" name="Healthy Paws"
               subtitle="Most claims processed in 2 days · Registry lists no wellness add-on"
-              description={<p>The Healthy Paws claims page, fetched 2026-10-08, says most claims are processed in 2 days, and that Direct Pay can reimburse the vet when funding is urgent (https://www.healthypawspetinsurance.com/pet-insurance-claims.html). The annual reimbursement limit is a choice. Healthy Paws lists $5,000, $7,000, or unlimited, dated 2026-10-07. It is not automatically unlimited. The verified registry lists no wellness add-on.</p>}
+              description={<p>The Healthy Paws claims page, fetched 2026-10-08, says most claims are processed in 2 days, and that Direct Pay can reimburse the vet when funding is urgent (https://www.healthypawspetinsurance.com/pet-insurance-claims.html). The annual reimbursement limit is a choice. Healthy Paws lists $5,000, $7,000, or unlimited, dated 2026-10-08. It is not automatically unlimited. The verified registry lists no wellness add-on.</p>}
               specs={[
                 { label: 'Reimbursement', value: 'Up to 90%', highlight: 'good' },
                 { label: 'Claims Speed', value: 'Most in 2 days', highlight: 'good' },
