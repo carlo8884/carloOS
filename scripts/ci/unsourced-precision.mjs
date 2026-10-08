@@ -1,15 +1,16 @@
 #!/usr/bin/env node
 /**
- * CI check: a money or guide page on the five earning sites must not
- * print an unsourced precision claim.
+ * CI check: a money or guide page, or a src/data module, on the five
+ * earning sites must not print an unsourced precision claim.
  *
- * A paragraph or FAQ answer fails when it contains one of the phrases
- * below and the same block has no http(s) URL, "et al.", or
- * "planning figure".
+ * A paragraph, FAQ answer, or data-file block fails when it contains
+ * one of the phrases below and the same block has no http(s) URL,
+ * "et al.", or "planning figure".
  *
  * Phrases: "studies show", "studies have shown", "veterinarians recommend",
  * "vets recommend", a positive "proven to", a positive "clinically proven",
- * and "survival rate" or "success rate" followed by a percent.
+ * and "survival rate" or "success rate" with a percent in the same
+ * sentence, in either order.
  *
  * Left alone: "until proven otherwise", "not proven", "no proven",
  * "disproven", "unproven", and "do not print clinically proven" /
@@ -37,7 +38,11 @@ const SEGMENTS = new Set([
 ])
 
 const CITE = /https?:\/\/|et al\.|planning figure/i
-const RATE = /(?:survival|success) rates?[^.\n]{0,80}?\d+(?:\s*[–—-]\s*\d+)?\s*(?:%|percent)/i
+const PERCENT = String.raw`\d+(?:\s*[–—-]\s*\d+)?\s*(?:%|percent)`
+const RATE = new RegExp(
+  `(?:(?:survival|success) rates?[^.\\n]{0,80}?${PERCENT}|(?<!\\d)${PERCENT}[^.\\n]{0,40}?(?:survival|success) rates?)`,
+  'i',
+)
 
 const RULES = [
   { name: 'studies show', re: /studies show|studies have shown/i },
@@ -90,13 +95,19 @@ function blockFails(text) {
   return phraseHits(text)
 }
 
-function walk(dir, out = []) {
-  for (const entry of readdirSync(dir, { withFileTypes: true })) {
+function walk(dir, out = [], accept = (name) => name === 'page.tsx') {
+  let entries
+  try {
+    entries = readdirSync(dir, { withFileTypes: true })
+  } catch {
+    return out
+  }
+  for (const entry of entries) {
     const path = join(dir, entry.name)
     if (entry.isDirectory()) {
       if (['node_modules', '.next', '.turbo'].includes(entry.name)) continue
-      walk(path, out)
-    } else if (entry.name === 'page.tsx') out.push(path)
+      walk(path, out, accept)
+    } else if (accept(entry.name)) out.push(path)
   }
   return out
 }
@@ -118,6 +129,8 @@ function assertFixtures() {
     ['do not print clinically proven', 'Those pages do not print clinically proven.', true],
     ['bare survival rate', 'The survival rate is 80%.', false],
     ['cited survival rate', 'The survival rate is 80% (Proudman et al., 2002).', true],
+    ['bare percent then success rate', 'PDA closure has near-100% success rates.', false],
+    ['cited percent then success rate', 'Closure has a near-100% success rate (https://example.com/pda).', true],
     ['bare proven to', 'This diet is proven to produce greater weight loss.', false],
     ['bare clinically proven', 'The chew is clinically proven.', false],
     ['clinically significant', 'The change was clinically significant.', true],
@@ -138,10 +151,15 @@ function assertFixtures() {
 assertFixtures()
 
 const files = []
-for (const site of SITES) walk(join(ROOT, 'apps', site, 'src', 'app'), files)
+const dataFiles = []
+for (const site of SITES) {
+  walk(join(ROOT, 'apps', site, 'src', 'app'), files)
+  walk(join(ROOT, 'apps', site, 'src', 'data'), dataFiles, (name) => name.endsWith('.ts') || name.endsWith('.tsx'))
+}
 const pages = files.filter(inScope)
+const dataModules = dataFiles
 const misses = []
-for (const filePath of pages) {
+for (const filePath of [...pages, ...dataModules]) {
   const src = readFileSync(filePath, 'utf8')
   for (const block of blocksOf(src)) {
     const hits = blockFails(block.text)
@@ -167,4 +185,4 @@ if (misses.length) {
   process.exit(1)
 }
 
-console.log(`PASS: ${pages.length} money and guide pages have no unsourced precision claim`)
+console.log(`PASS: ${pages.length} money and guide pages and ${dataModules.length} data modules have no unsourced precision claim`)
