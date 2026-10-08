@@ -251,6 +251,7 @@ export default function ReadingFoodLabelsPage() {
             ctaAffiliateProgram="wysong"
             ctaAffiliateProduct="epigen-90"
           />
+          <p>If the other bag in the aisle is Marshall Premium, the <a href="/reviews/wysong-vs-marshall-kibble-guide">Wysong versus Marshall guide</a> prints both guaranteed analyses. Carbohydrate is not on either label. Skip Marshall when insulinoma risk is why you are choosing a food.</p>
 
           <h2 id="sources">Sources</h2>
           <p>
