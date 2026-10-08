@@ -11,8 +11,8 @@
  * Growth fractions vary by adult-size class -- toy/small breeds mature quickly
  * (~50% of adult weight by ~16 weeks, fully grown by ~10-12 months), while
  * large/giant breeds mature slowly (not fully grown until 18-24 months). The
- * fraction tables below are interpolated from published veterinary/AKC
- * growth-curve references and are presented as an estimate, not a guarantee.
+ * fraction table below is a planning figure. It is not an AKC chart and not
+ * a Waltham growth curve. No paper stating these fractions was fetched.
  *
  * Output is deliberately a RANGE (±~10-15%) -- individual and breed variation
  * means a single number would be false precision.
@@ -33,7 +33,7 @@ interface SizeClass {
    * Growth fraction by age in weeks: the share of adult weight typically
    * reached at that age for this size class. Linearly interpolated between
    * the listed anchor points. Smaller classes mature faster (reach 1.0
-   * sooner). Anchors are drawn from published size-class growth curves.
+   * sooner). Anchors are a planning figure, not a published growth curve.
    */
   anchors: { weeks: number; fraction: number }[]
   /** Age (weeks) at which this class is treated as fully grown (fraction = 1.0). */
@@ -41,7 +41,7 @@ interface SizeClass {
 }
 
 // Anchor points per size class. fraction = body weight / projected adult weight.
-// Sources: AKC puppy growth guidance + Waltham/veterinary growth-curve literature.
+// Planning figure: size-class anchors, mature weeks, and the ±10–15% spread. Not AKC or Waltham.
 const SIZE_CLASSES: SizeClass[] = [
   {
     key: 'toy',
@@ -363,18 +363,17 @@ export default function PuppyWeightPredictor() {
       {/* Disclaimer */}
       <div className="mt-6 rounded border border-amber-700/40 bg-amber-950/20 p-4 text-sm text-amber-900">
         <span className="font-semibold">An estimate, not a diagnosis.</span>{' '}
-        This uses the standard growth-percentage method (adult weight ≈ current weight ÷ the share of
-        adult weight reached at the current age) with published size-class growth curves. Real puppies
+        How we calculate: adult weight ≈ current weight ÷ a planning-figure growth fraction for the
+        selected size class. Those fractions are not a published AKC or Waltham curve. Real puppies
         vary by breed, sex, nutrition, neuter timing, and individual genetics. Treat the range as a
         planning guide — crate size, food, and first-year budget — not a growth-disorder screen.
         Ask your veterinarian to track weight against a body-condition curve.
       </div>
 
       <p className="mt-4 text-xs text-brand-text-light">
-        Method: adult weight ≈ current weight ÷ growth fraction, where the growth fraction is the typical
-        share of adult body weight reached at the current age for the selected size class. Fractions are
-        interpolated from published AKC and veterinary growth-curve references. Smaller breeds reach 100%
-        sooner (~10–12 months); large and giant breeds keep growing to 18–24 months.
+        How we calculate: adult weight ≈ current weight ÷ growth fraction. The anchor table, the age
+        treated as fully grown, and the spread around the point estimate are planning figures. They are
+        not an AKC or Waltham growth curve.
       </p>
     </div>
   )

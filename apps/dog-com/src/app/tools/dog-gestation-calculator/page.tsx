@@ -21,13 +21,15 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
   title: 'Dog Pregnancy Calculator & Whelping Calendar | Dog.com',
   description:
-    'How long are dogs pregnant? Enter a breeding date for the 63-day due date, then pack a whelping-kit checklist.',
+    'Merck window: 58–72 days from an untimed breeding, or 62–64 days from ovulation. Not a diagnosis.',
   path: '/tools/dog-gestation-calculator',
 })
 
 const SOURCES = [
   { label: 'American Kennel Club: Dog Pregnancy — Signs, Care, and Preparation', url: 'https://www.akc.org/expert-advice/dog-breeding/dog-pregnancy-care-prep/', publisher: 'AKC' },
   { label: 'American Animal Hospital Association: Reproduction and Whelping Guidance', url: 'https://www.aaha.org/for-pet-parents/find-an-aaha-accredited-animal-hospital-near-me/', publisher: 'AAHA' },
+  { label: 'Merck Veterinary Manual: The Reproductive System in Animals (gestation table, 58–72 days from untimed breeding; 62–64 days from ovulation)', url: 'https://www.merckvetmanual.com/reproductive-system/reproductive-system-introduction/the-reproductive-system-in-animals', publisher: 'Merck Vet Manual' },
+  { label: 'Merck Veterinary Manual: Whelping and Queening in Bitches and Queens', url: 'https://www.merckvetmanual.com/management-and-nutrition/management-of-reproduction-dogs-and-cats/whelping-and-queening-in-bitches-and-queens', publisher: 'Merck Vet Manual' },
   { label: 'Merck Veterinary Manual: Management of Reproduction in Dogs', url: 'https://www.merckvetmanual.com/dog-owners/reproductive-disorders-of-dogs/management-of-reproduction-in-dogs', publisher: 'Merck Vet Manual' },
   { label: 'WSAVA Global Nutrition Committee: Feeding the Pregnant and Lactating Bitch', url: 'https://wsava.org/global-guidelines/global-nutrition-guidelines/', publisher: 'WSAVA' },
 ]
@@ -36,30 +38,30 @@ const FAQS = [
   {
     question: 'How long are dogs pregnant?',
     answer:
-      'Canine pregnancy averages about 63 days — roughly nine weeks — measured from the day of breeding, with a normal range of about 58 to 68 days. The reason the range is wide is that the breeding date is not always the conception date: sperm can survive several days inside the female reproductive tract, and the egg matures over a window, so fertilization can happen a few days after a given mating. When ovulation is timed precisely by a veterinarian using progesterone testing, the estimate tightens considerably and gestation from the ovulation date is very close to 63 days. This calculator adds 63 days to the breeding date for the estimated due date and shows the 58–68 day window around it.',
+      'Merck’s reproductive-system table gives 58–72 days from breeding at an unknown stage of estrus, and 62–64 days from the day of ovulation. Day 63 is the midpoint of that ovulation window only. It is not an average counted from an untimed breeding date.',
     answerText:
-      'About 63 days (roughly nine weeks) from breeding, with a normal range of 58–68 days. Timing ovulation by progesterone testing tightens the estimate to very close to 63 days from ovulation.',
+      'Merck: 58–72 days from an untimed breeding, and 62–64 days from ovulation. Day 63 is the ovulation midpoint, not a breeding-date average.',
   },
   {
     question: 'How do I calculate my dog\'s due date?',
     answer:
-      'Add 63 days to the breeding date for the estimated whelping date, then treat the span from 58 to 68 days after breeding as the normal window in which labor is likely. For example, a dog bred on May 1 is due around July 3 (May 1 + 63 days), with a normal window of roughly June 28 to July 8. If your veterinarian timed ovulation by progesterone, count 63 days from the ovulation date instead, which is the most accurate version of this estimate.',
+      'If the date is a breeding at an unknown stage of estrus, use 58 to 72 days. A dog bred on May 1 has a Merck window of roughly June 28 to July 12. If a veterinarian timed ovulation, use 62 to 64 days from that date. Day 63 (July 3 from a May 1 ovulation) is the midpoint of 62–64, not the average from an untimed breeding.',
     answerText:
-      'Add 63 days to the breeding date for the estimated due date, and use 58–68 days after breeding as the normal window. A dog bred May 1 is due around July 3.',
+      'Untimed breeding: 58–72 days (May 1 lands about June 28–July 12). Timed ovulation: 62–64 days. Day 63 is the ovulation midpoint only.',
   },
   {
     question: 'When can a vet confirm pregnancy and count the puppies?',
     answer:
-      'Your veterinarian can typically confirm pregnancy by ultrasound from about days 25 to 30 after breeding, which can also check for fetal heartbeats. To estimate how many puppies to expect, your veterinarian can take an X-ray from about day 45 onward, once the puppies\' skeletons have calcified enough to be visible and countable. Knowing the puppy count ahead of time helps you recognize when whelping is complete. These are veterinary procedures — this tool only shows the typical date windows so you can plan the appointments.',
+      'The Merck owner page says ultrasound is reliable by about days 25 to 35, radiographs are useful after about day 45, and the litter count is most reliable after about day 55. These are veterinary procedures. This tool only shows those date windows so you can plan the appointments.',
     answerText:
-      'A vet can confirm pregnancy by ultrasound at ~days 25–30 and estimate the puppy count by X-ray from ~day 45+. This tool shows the typical date windows so you can plan the appointments.',
+      'Merck owner page: ultrasound by about days 25–35, radiographs after about day 45, litter count most reliable after about day 55.',
   },
   {
     question: 'What is the temperature drop before labor?',
     answer:
-      'In the roughly 12 to 24 hours before labor begins, a pregnant dog\'s rectal temperature often drops, frequently to around 98–99°F (below the normal ~100–102.5°F). Many breeders take the dam\'s temperature twice daily in the final week to anticipate whelping. This is a general owner observation rather than a precise predictor — temperature behavior varies between individuals — so use it as one signal alongside the due-date window, and contact your veterinarian if the due window passes with no labor or if anything seems wrong.',
+      'Merck’s whelping page says a drop in rectal temperature usually precedes delivery by about 8 to 24 hours. This page does not print a degree target, because that sentence does not state one. Contact your veterinarian if the window passes with no labor or if anything seems wrong.',
     answerText:
-      'A dog\'s rectal temperature often drops (toward ~98–99°F, below the normal ~100–102.5°F) about 12–24 hours before labor. It is a general owner sign, not a precise predictor.',
+      'Merck: a rectal-temperature drop usually precedes delivery by about 8 to 24 hours. No degree target is stated here.',
   },
   {
     question: 'What should be in a dog whelping kit?',
@@ -83,7 +85,7 @@ const appSchema = {
   '@type': 'WebApplication',
   name: 'Dog Pregnancy Calculator & Whelping Calendar',
   description:
-    'Free dog pregnancy calculator that estimates a whelping (due) date from the breeding date using the 63-day canine gestation average and the normal 58–68 day window, plus a packable whelping-kit checklist.',
+    'Merck windows: 58–72 days from an untimed breeding, or 62–64 days from ovulation. Day 63 is the ovulation midpoint only.',
   url: 'https://dog.com/tools/dog-gestation-calculator',
   applicationCategory: 'UtilityApplication',
   operatingSystem: 'Web',
@@ -93,7 +95,7 @@ const appSchema = {
 const howToSchema = buildHowToSchema({
   name: 'How to calculate a dog\'s due date',
   description:
-    'Estimate a dog\'s whelping (due) date from the breeding date using the canine gestation average and normal window.',
+    'Read Merck’s windows: 58–72 days from an untimed breeding, or 62–64 days from ovulation.',
   url: 'https://dog.com/tools/dog-gestation-calculator',
   steps: [
     {
@@ -101,16 +103,16 @@ const howToSchema = buildHowToSchema({
       text: 'Record the date your dog was bred. If your veterinarian timed ovulation by progesterone testing, use the ovulation date for the tightest estimate.',
     },
     {
-      name: 'Add 63 days',
-      text: 'Add 63 days to the breeding date — the canine gestation average — for the estimated whelping (due) date. Example: bred May 1, due around July 3.',
+      name: 'Use 58–72 days for an untimed breeding',
+      text: 'Merck’s table gives 58–72 days from breeding at an unknown stage of estrus. A May 1 breeding window runs about June 28 to July 12. Day 63 is not that average.',
     },
     {
-      name: 'Mark the 58–68 day window',
-      text: 'Treat the span from 58 to 68 days after breeding as the normal window in which labor is likely, since breeding date can differ from true conception.',
+      name: 'Use 62–64 days for a timed ovulation',
+      text: 'From the day of ovulation, Merck’s window is 62–64 days. Day 63 is the midpoint of that window only.',
     },
     {
       name: 'Plan veterinary checkpoints',
-      text: 'Plan an ultrasound at about days 25–30 to confirm pregnancy, and an X-ray from about day 45+ so your veterinarian can estimate the puppy count.',
+      text: 'The Merck owner page says ultrasound is reliable by about days 25–35, radiographs are useful after about day 45, and litter count is most reliable after about day 55.',
     },
     {
       name: 'Pack the whelping kit by week 7',
@@ -123,7 +125,7 @@ const articleSchema = buildArticleSchema({
   siteId: 'dog-com',
   title: 'Dog Pregnancy & Whelping Calendar',
   description:
-    'How to estimate a dog\'s whelping date from the breeding date using the 63-day canine gestation average and the normal 58–68 day window, plus a packable whelping-kit checklist.',
+    'How to read Merck’s canine windows: 58–72 days from an untimed breeding, or 62–64 days from ovulation.',
   url: 'https://dog.com/tools/dog-gestation-calculator',
   imageUrl: 'https://dog.com/og/tools.png',
   authorName: 'Dog.com Editorial',
@@ -161,8 +163,8 @@ export default function DogGestationCalculatorPage() {
             Dog Pregnancy &amp; Whelping Calendar
           </h1>
           <p className="text-base text-white/60 leading-relaxed max-w-2xl">
-            How long are dogs pregnant? Enter the breeding date to get the estimated whelping (due)
-            date — the 63-day canine average plus the normal 58–68 day window — then pack the
+            How long are dogs pregnant? Merck’s table is 58–72 days from an untimed breeding, or
+            62–64 days from ovulation. Day 63 is the ovulation midpoint only. Then pack the
             whelping-kit checklist before week 7.
           </p>
         </div>
@@ -187,24 +189,24 @@ export default function DogGestationCalculatorPage() {
               The short answer
             </div>
             <p className="text-base text-brand-text-mid leading-relaxed mb-3">
-              Dogs are pregnant for about <span className="font-semibold text-brand-dark">63 days</span>{' '}
-              (roughly nine weeks) from breeding, with a normal range of 58–68 days. To find the due
-              date:
+              How we calculate: Merck’s reproductive-system table gives{' '}
+              <span className="font-semibold text-brand-dark">58–72 days</span> from breeding at an
+              unknown stage of estrus, and <span className="font-semibold text-brand-dark">62–64 days</span>{' '}
+              from ovulation. Day 63 is the ovulation midpoint only.
             </p>
             <p className="text-base font-semibold text-brand-dark leading-relaxed mb-3">
-              estimated whelping date = breeding date + 63 days
+              untimed breeding window = breeding date + 58 to 72 days
             </p>
             <p className="text-base text-brand-text-mid leading-relaxed mb-3">
               <span className="font-semibold text-brand-dark">Worked example.</span> A dog bred on
-              May 1 is due around <span className="font-semibold text-brand-dark">July 3</span> (May 1
-              + 63 days), with a normal window of roughly June 28 to July 8. A veterinarian can
-              confirm pregnancy by ultrasound at about days 25–30 and estimate the puppy count by
-              X-ray from about day 45.
+              May 1, stage of estrus unknown, has a window of roughly June 28 to July 12. If that
+              May 1 date was a timed ovulation, the window is July 2 to July 4, and July 3 is day 63.
+              Ultrasound is reliable by about days 25–35. Radiographs are useful after about day 45;
+              litter count is most reliable after about day 55.
             </p>
             <p className="text-sm text-brand-text-light leading-relaxed m-0">
-              The due date is an <span className="font-semibold">estimate</span>: breeding date and
-              true conception can differ by several days. Timing ovulation by progesterone testing
-              tightens it.
+              Source: Merck Veterinary Manual reproductive-system table and the whelping page. This
+              is a planning calendar, not a diagnosis.
             </p>
           </div>
         </div>
@@ -220,7 +222,7 @@ export default function DogGestationCalculatorPage() {
             siteId="dog-com"
             nextHref="/tools/new-puppy-checklist"
             nextLabel="Pack the new-puppy list once the due date is set"
-            nextBlurb="The short answer is breeding date plus 63 days, with a 58–68 day window. After the due date, the new-puppy checklist is the crate, food, and first-week order. The hop below is the same digital puppy-scale search already on this page."
+            nextBlurb="Merck’s window is 58–72 days from an untimed breeding, or 62–64 days from ovulation. After that, the new-puppy checklist is the crate, food, and first-week order. The hop below is the same digital puppy-scale search already on this page."
             resourceHref="/go/amazon-brand/digital+puppy+scale?s=tools-dog-gestation-calculator"
             resourceLabel="Browse digital puppy scales on Amazon →"
           />
@@ -275,8 +277,9 @@ export default function DogGestationCalculatorPage() {
             Canine pregnancy timeline at a glance
           </h2>
           <p className="mb-4 text-sm text-brand-text-mid leading-relaxed">
-            Days are counted from breeding. These are typical husbandry checkpoints drawn from AKC
-            and veterinary reproduction guidance; the ultrasound and X-ray steps are veterinary
+            How we calculate: the 58–72 and 62–64 windows, the ultrasound days, the radiograph days,
+            and the temperature timing are Merck Veterinary Manual sentences, cited under Sources.
+            The appetite row is a planning note, not a Merck row. Ultrasound and radiographs are
             procedures your veterinarian performs.
           </p>
           <div className="overflow-x-auto rounded-lg border border-brand-border">
@@ -291,11 +294,11 @@ export default function DogGestationCalculatorPage() {
               <tbody className="text-brand-text-mid">
                 {[
                   ['Implantation', '~16–18', 'Embryos implant in the uterine wall'],
-                  ['Ultrasound', '~25–30', 'Vet can confirm pregnancy and fetal heartbeats'],
-                  ['Appetite rises', '~35–45', 'Dam gains weight; breeders often shift to puppy/higher-calorie food'],
-                  ['X-ray (puppy count)', '~45+', 'Skeletons calcify; vet can estimate litter size'],
-                  ['Temperature drop', '~62–63', 'Rectal temp often falls below ~100°F ~12–24 h before labor'],
-                  ['Whelping (due)', '58–68 (avg 63)', 'Labor and delivery in the normal window'],
+                  ['Ultrasound', '~25–35', 'Merck owner page: reliable by about days 25–35'],
+                  ['Appetite rises', '~35–45', 'Dam gains weight; ask a veterinarian before changing the diet'],
+                  ['X-ray (puppy count)', '~45+; count best after ~55', 'Merck owner page: useful after about day 45; litter count most reliable after about day 55'],
+                  ['Temperature drop', 'about 8–24 h before labor', 'Merck whelping page. No degree target is printed here'],
+                  ['Whelping window', '58–72 breeding; 62–64 ovulation', 'Merck reproductive-system table. Day 63 is the ovulation midpoint only'],
                 ].map((row) => (
                   <tr key={row[0]} className="border-b border-brand-border last:border-0">
                     <td className="p-3 font-medium text-brand-dark">{row[0]}</td>
@@ -349,19 +352,17 @@ export default function DogGestationCalculatorPage() {
             The method behind the estimate
           </h2>
           <p className="mb-4 text-base leading-relaxed text-brand-text-mid">
-            The calendar uses the canine gestation average documented in AKC and veterinary
-            reproduction references: about 63 days from breeding, with a normal range of 58–68 days.
-            It adds 63 days to your breeding date for the estimated whelping date and shows the
-            58–68 day span as the normal window. The reason the window is wide is biological — sperm
-            can survive several days in the female tract and the egg matures over a window, so the
-            breeding date and the true conception date can differ. When a veterinarian times
-            ovulation by progesterone testing, gestation from the ovulation date is very close to 63
-            days and the estimate tightens.
+            How we calculate: the windows are the Merck Veterinary Manual reproductive-system table.
+            Breeding at an unknown stage of estrus is 58–72 days. From the day of ovulation the
+            period is 62–64 days, and 63 is the midpoint of that range only. The owner page places
+            ultrasound at about days 25–35, radiographs after about day 45, and the best litter
+            count after about day 55. The whelping page places the rectal-temperature drop about 8
+            to 24 hours before delivery and does not give a degree target on this page.
           </p>
           <p className="mb-4 text-base leading-relaxed text-brand-text-mid">
             This is breeding and husbandry information, not a diagnosis. Pregnancy confirmation, the
             puppy count, and any concern about the dam or labor are questions for your veterinarian,
-            who can confirm by ultrasound (~days 25–30) and X-ray (~day 45+). For feeding the dam and
+            who can confirm by ultrasound (about days 25–35) and X-ray (after about day 45). For feeding the dam and
             the litter, see the{' '}
             <Link href="/nutrition/puppy-nutrition" className="text-brand-primary underline-offset-2 hover:underline">
               puppy nutrition guide

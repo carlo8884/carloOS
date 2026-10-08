@@ -7,9 +7,9 @@
  * and standing height floor-to-head) into the minimum internal crate dimensions
  * and the recommended standard crate size.
  *
- * Sizing rule (standard breeder/trainer guidance): a crate should let the dog
- * stand without ducking, turn around, and lie flat. Add ~2 inches to each body
- * measurement, then pick the smallest standard crate that meets both.
+ * Fit rule: the dog should stand without ducking, turn around, and lie flat.
+ * The +2 inch clearance and the inch table below are a planning figure, not a
+ * published manufacturer standard.
  *
  * Product-sizing / husbandry guidance only -- no clinical claims.
  */
@@ -20,13 +20,10 @@ import { ResultMeaning, ResultPick, ToolError, icratePick, numberFieldError } fr
 type Unit = 'in' | 'cm'
 
 const IN_PER_CM = 1 / 2.54
-// Minimum clearance added to each body measurement. Standard guidance is
-// 2–4 inches; we use the 2-inch minimum so the recommended size lines up with
-// manufacturers' own weight-based crate charts (a +4 height margin systematically
-// bumps dogs one size larger than the chart). Output is labelled as the minimum.
+// Planning figure: +2 inches of clearance. Not a published manufacturer chart.
 const ADD_INCHES = 2
 
-// Common manufacturer crate line (length x width x height, inches).
+// Planning figure: retail inch table (length x width x height). Not a published standard.
 const STANDARD_CRATES = [
   { len: 18, width: 12, height: 14, sizeClass: 'XS', weightHint: 'toy breeds, up to ~12 lb' },
   { len: 22, width: 13, height: 16, sizeClass: 'S', weightHint: '~13–25 lb' },
@@ -201,8 +198,9 @@ export default function DogCrateSizeCalculator() {
         puppy soil one end and sleep in the other, which defeats the purpose.
       </p>
       <p className="mt-3 text-2xs leading-snug text-brand-text-light">
-        Product-sizing guidance based on standard manufacturer crate dimensions; brands vary, so check the
-        specific crate&apos;s internal measurements before buying.
+        How we calculate: add 2 inches to length and to standing height, then pick the smallest row in
+        this planning-figure inch table that clears both. The table is not a published manufacturer
+        standard. Brands vary, so check the crate&apos;s internal measurements before buying.
       </p>
     </div>
   )

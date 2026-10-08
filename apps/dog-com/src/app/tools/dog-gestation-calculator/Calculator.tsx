@@ -3,18 +3,19 @@
 /**
  * Dog Pregnancy / Whelping Calendar -- /tools/dog-gestation-calculator
  *
- * Client compute component. Canine gestation averages ~63 days from the date
- * of breeding/ovulation, with a normal range of 58-68 days (variation is
- * mostly explained by the gap between breeding and actual conception, since
- * sperm can survive several days in the female tract and an egg matures over
- * a window).
+ * Merck Veterinary Manual, reproductive-system table:
+ * https://www.merckvetmanual.com/reproductive-system/reproductive-system-introduction/the-reproductive-system-in-animals
+ * "Gestation period is 58–72 d from breeding at unknown stage of estrus; from
+ * day of ovulation ... gestation period is 62–64 d."
+ * Whelping page (same manual): 58–72 days from the first breeding the female
+ * permitted; 64–66 days from the LH surge / initial progesterone rise; a drop
+ * in rectal temperature usually precedes delivery by about 8 to 24 hours.
+ * https://www.merckvetmanual.com/management-and-nutrition/management-of-reproduction-dogs-and-cats/whelping-and-queening-in-bitches-and-queens
  *
- *   estimated whelping date = breeding date + 63 days
- *   normal window           = breeding date + 58 days ... + 68 days
+ * AVG_DAYS = 63 is the midpoint of the 62–64 ovulation window only. It is not
+ * Merck's average from an untimed breeding date.
  *
- * Husbandry/breeding information only -- NOT a diagnosis. Vet checkpoints are
- * framed as "your veterinarian can confirm via ultrasound/X-ray". The
- * temperature-drop note is general owner knowledge, not a medical instruction.
+ * Husbandry information only -- NOT a diagnosis.
  */
 
 import { useMemo, useState } from 'react'
@@ -22,7 +23,9 @@ import { ResultMeaning, ToolError } from '@carloOS/ui'
 
 const AVG_DAYS = 63
 const MIN_DAYS = 58
-const MAX_DAYS = 68
+const MAX_DAYS = 72
+const OVULATION_MIN_DAYS = 62
+const OVULATION_MAX_DAYS = 64
 
 function addDays(date: Date, days: number): Date {
   const d = new Date(date.getTime())
@@ -75,7 +78,7 @@ const STAGES: Stage[] = [
     label: 'Weeks 3-4 (days 15-28)',
     fromDay: 15,
     toDay: 28,
-    note: 'Embryos implant in the uterine wall (~day 16-18). Your veterinarian can confirm pregnancy by ultrasound from about days 25-30, which can also check fetal heartbeats.',
+    note: 'Embryos implant in the uterine wall (~day 16-18). The Merck owner page says ultrasound is reliable by about days 25–35.',
   },
   {
     label: 'Weeks 5-6 (days 29-42)',
@@ -87,13 +90,13 @@ const STAGES: Stage[] = [
     label: 'Weeks 7-8 (days 43-56)',
     fromDay: 43,
     toDay: 56,
-    note: 'From about day 45, skeletons have calcified enough that your veterinarian can take an X-ray to estimate the puppy count, which helps you know when whelping is complete. Set up a quiet whelping box now so the dam can acclimate.',
+    note: 'The Merck owner page says radiographs are useful after about day 45, and that the litter count is most reliable after about day 55. Set up a quiet whelping box now so the dam can acclimate.',
   },
   {
-    label: 'Week 9 (days 57-63+)',
+    label: 'Week 9 (days 57-72)',
     fromDay: 57,
-    toDay: 70,
-    note: 'Final stretch. A well-known owner sign is a drop in the dam’s rectal temperature (often to roughly 98-99°F / below ~100°F) in the ~12-24 hours before labor begins. If the due window passes with no labor, or you have any concern, contact your veterinarian.',
+    toDay: 72,
+    note: 'Final stretch. Merck says a drop in rectal temperature usually precedes delivery by about 8 to 24 hours. This tool does not print a degree target. If the window passes with no labor, contact your veterinarian.',
   },
 ]
 
@@ -107,14 +110,17 @@ interface Result {
   xrayFrom: Date
 }
 
-function compute(breeding: Date): Result {
+type Clock = 'breeding' | 'ovulation'
+
+function compute(breeding: Date, clock: Clock): Result {
+  const ovulationClock = clock === 'ovulation'
   return {
     breeding,
     due: addDays(breeding, AVG_DAYS),
-    windowStart: addDays(breeding, MIN_DAYS),
-    windowEnd: addDays(breeding, MAX_DAYS),
+    windowStart: addDays(breeding, ovulationClock ? OVULATION_MIN_DAYS : MIN_DAYS),
+    windowEnd: addDays(breeding, ovulationClock ? OVULATION_MAX_DAYS : MAX_DAYS),
     ultrasoundStart: addDays(breeding, 25),
-    ultrasoundEnd: addDays(breeding, 30),
+    ultrasoundEnd: addDays(breeding, 35),
     xrayFrom: addDays(breeding, 45),
   }
 }
@@ -131,12 +137,13 @@ function daysUntilCopy(n: number): string {
   if (n > 1) return `${n} days from today`
   if (n === 1) return '1 day from today'
   if (n === 0) return 'due window starts around today'
-  if (n === -1) return '1 day past the 63-day average'
-  return `${Math.abs(n)} days past the 63-day average`
+  if (n === -1) return '1 day past day 63'
+  return `${Math.abs(n)} days past day 63`
 }
 
 export default function DogGestationCalculator() {
   const [breedingStr, setBreedingStr] = useState<string>('')
+  const [clock, setClock] = useState<Clock>('breeding')
 
   const breeding = useMemo(() => parseInputDate(breedingStr), [breedingStr])
   const breedingError = (() => {
@@ -147,8 +154,8 @@ export default function DogGestationCalculator() {
     return null
   })()
   const result = useMemo(
-    () => (breeding && !breedingError ? compute(breeding) : null),
-    [breeding, breedingError],
+    () => (breeding && !breedingError ? compute(breeding, clock) : null),
+    [breeding, breedingError, clock],
   )
   const daysUntilDue = result ? daysUntil(result.due) : null
 
@@ -168,10 +175,31 @@ export default function DogGestationCalculator() {
           className="w-full rounded border border-brand-border bg-brand-white px-3 py-2 text-brand-dark focus:outline-none focus:ring-2 focus:ring-brand-primary"
         />
         <p className="mt-1 text-2xs text-brand-text-light">
-          Use the mating date, or the ovulation date if your veterinarian timed it by progesterone.
-          A heat-start date is not the same as a breeding date — ovulation usually follows several
-          days later, which is why this tool does not count 63 days from the first day of heat.
+          A heat-start date is not a breeding date. This tool does not count 63 days from the first day of heat.
         </p>
+        <fieldset className="mt-3">
+          <legend className="mb-1 text-xs font-medium text-brand-text-mid">What date is this?</legend>
+          <label className="mr-4 text-sm text-brand-text-mid">
+            <input
+              type="radio"
+              name="gest-clock"
+              className="mr-1"
+              checked={clock === 'breeding'}
+              onChange={() => setClock('breeding')}
+            />
+            Breeding, stage of estrus unknown
+          </label>
+          <label className="text-sm text-brand-text-mid">
+            <input
+              type="radio"
+              name="gest-clock"
+              className="mr-1"
+              checked={clock === 'ovulation'}
+              onChange={() => setClock('ovulation')}
+            />
+            Ovulation timed by a veterinarian
+          </label>
+        </fieldset>
       </div>
 
       {/* Results */}
@@ -179,7 +207,7 @@ export default function DogGestationCalculator() {
         {breedingError && <ToolError>{breedingError}</ToolError>}
         {!result && !breedingError && (
           <div className="rounded border border-brand-border bg-brand-white p-5 text-sm text-brand-text-mid">
-            Enter a breeding date to estimate the whelping (due) date and the normal 58-68 day window.
+            Enter a date. An untimed breeding uses Merck’s 58–72 day window. A timed ovulation uses 62–64 days.
           </div>
         )}
 
@@ -188,36 +216,41 @@ export default function DogGestationCalculator() {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
               <div className="rounded border-2 border-brand-primary bg-brand-primary-pale p-4 sm:col-span-1">
                 <p className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                  Estimated whelping date
+                  {clock === 'ovulation' ? 'Ovulation midpoint (day 63)' : 'Day 63 is not the breeding average'}
                 </p>
                 <p className="mt-1 font-display text-xl text-brand-dark">{fmt(result.due)}</p>
                 <p className="mt-0.5 text-2xs text-brand-text-light">
-                  Breeding date + 63 days (the canine average)
+                  {clock === 'ovulation'
+                    ? 'Midpoint of Merck’s 62–64 day ovulation window.'
+                    : 'Shown only as the midpoint of the 62–64 day ovulation window. Merck does not average an untimed breeding at 63 days.'}
                   {daysUntilDue !== null ? ` · ${daysUntilCopy(daysUntilDue)}` : ''}
                 </p>
               </div>
               <div className="rounded border border-brand-border bg-brand-white p-4 sm:col-span-2">
                 <p className="text-2xs font-bold uppercase tracking-eyebrow text-brand-text-light">
-                  Normal whelping window (58-68 days)
+                  {clock === 'ovulation' ? 'Ovulation window (62–64 days)' : 'Breeding window (58–72 days)'}
                 </p>
                 <p className="mt-1 font-display text-xl text-brand-dark">
                   {fmt(result.windowStart)} &ndash; {fmt(result.windowEnd)}
                 </p>
                 <p className="mt-0.5 text-2xs text-brand-text-light">
-                  Most litters arrive inside this range; the spread reflects how breeding date can
-                  differ from true conception.
+                  {clock === 'ovulation'
+                    ? 'Merck: 62–64 days from ovulation timed by progesterone or LH.'
+                    : 'Merck: 58–72 days from breeding at an unknown stage of estrus.'}
                 </p>
               </div>
             </div>
             <ResultMeaning>
-              That date is the breeding date plus the 63-day average, not a confirmed whelping date.
+              {clock === 'ovulation'
+                ? 'That date is the midpoint of Merck’s 62–64 day ovulation window, not a confirmed whelping date.'
+                : 'The range is Merck’s 58–72 day breeding window. Day 63 is the ovulation midpoint only.'}
             </ResultMeaning>
 
             {/* Checkpoint dates */}
             <div className="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-3">
               <div className="rounded border border-brand-border bg-brand-white p-4">
                 <p className="text-2xs font-bold uppercase tracking-eyebrow text-brand-text-light">
-                  Ultrasound window (~days 25-30)
+                  Ultrasound window (~days 25–35)
                 </p>
                 <p className="mt-1 font-display text-base text-brand-dark">
                   {fmtShort(result.ultrasoundStart)} &ndash; {fmtShort(result.ultrasoundEnd)}
@@ -245,7 +278,7 @@ export default function DogGestationCalculator() {
                   ~{fmtShort(addDays(result.windowStart, -1))} onward
                 </p>
                 <p className="mt-0.5 text-2xs text-brand-text-light">
-                  A drop below ~100&deg;F often precedes labor by ~12-24 hours.
+                  Merck: a rectal-temperature drop usually precedes delivery by about 8 to 24 hours. No degree target is printed here.
                 </p>
               </div>
             </div>
@@ -288,16 +321,17 @@ export default function DogGestationCalculator() {
       {/* Disclaimer */}
       <div className="mt-6 rounded border border-amber-700/40 bg-amber-950/20 p-4 text-sm text-amber-900">
         <span className="font-semibold">A breeding estimate, not a diagnosis.</span>{' '}
-        This calendar adds the canine average of 63 days (normal range 58-68) to your breeding date.
-        Because breeding date and true conception can differ by several days, the due date is an
-        estimate. Pregnancy confirmation, puppy count, and any concern about the dam or labor are
-        questions for your veterinarian, who can confirm via ultrasound and X-ray.
+        How we calculate: an untimed breeding uses Merck’s 58–72 day window. A veterinarian-timed
+        ovulation uses 62–64 days, and day 63 is only that window’s midpoint. Pregnancy confirmation,
+        puppy count, and labor concerns are questions for your veterinarian.
       </div>
 
       <p className="mt-4 text-xs text-brand-text-light">
-        Method: estimated whelping date = breeding date + 63 days; normal window = breeding date +
-        58 to +68 days. Ultrasound (~days 25-30) and X-ray (~day 45+) windows are typical veterinary
-        checkpoints, and the pre-labor temperature drop is a general owner observation.
+        How we calculate: breeding at an unknown stage of estrus is 58–72 days (Merck Veterinary
+        Manual reproductive-system table). Ovulation is 62–64 days, midpoint 63. Ultrasound is the
+        Merck owner-page window of about days 25–35. Radiographs start after about day 45; litter
+        count is most reliable after about day 55. Temperature timing is Merck’s 8 to 24 hours,
+        with no degree figure.
       </p>
     </div>
   )
