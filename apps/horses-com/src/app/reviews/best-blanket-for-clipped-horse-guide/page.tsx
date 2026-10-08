@@ -1,7 +1,7 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, EmailCapture, FAQAccordion, QuietPartnerLink, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { ArticleLayout, EmailCapture, FAQAccordion, QuietPartnerLink, RelatedLinks, buildArticleSchema, buildMetadata, PrimaryHop } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
@@ -45,12 +45,20 @@ export default function ClippedHorseBlanketGuidePage() {
       schema={schema}
       hero={{
         title: 'Best blanket for a clipped horse',
-        subtitle: 'Clipping removes the coat that was doing the insulating. The blanket review already names a heavy specification for that horse in a cold climate, and it names when the same blanket is too much.',
         category: 'Buyer guide',
         authorName: 'Horses.com Editorial',
         publishedAt: 'October 2026',
         readTime: '6 min',
       }}
+      heroHop={
+        <>
+          <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">A clipped horse in a cold climate needs a heavyweight turnout, and the Schneiders StormShield lists a 1680-denier shell with 300-gram fill.</p>
+          <div data-fold="offer">
+          <PrimaryHop href="/go/amazon-brand/horse+heavyweight+blanket?s=reviews-best-blanket-for-clipped-horse-guide" label="Browse heavyweight horse blankets on Amazon" />
+          <HopDisclosure tone="on-dark" siteId="horses-com" href="/go/amazon-brand/horse+heavyweight+blanket?s=reviews-best-blanket-for-clipped-horse-guide" />
+        </div>
+        </>
+      }
       breadcrumbs={[
         { name: 'Home', href: '/' },
         { name: 'Reviews', href: '/reviews' },

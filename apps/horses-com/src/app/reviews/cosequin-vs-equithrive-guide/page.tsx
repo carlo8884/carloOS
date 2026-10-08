@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { HopDisclosure } from '../../../components/HopDisclosure'
-import { ArticleLayout, FAQAccordion, QuietPartnerLink, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: 'Cosequin vs Equithrive for Joints | Horses.com',
@@ -43,14 +43,19 @@ export default function CosequinVsEquithriveGuidePage() {
       schema={schema}
       hero={{
         title: 'Cosequin or Equithrive for joints',
-        subtitle: 'An ASU joint pellet with a 2–4 week initial period on the current page, or a resveratrol pellet the review treats as a complement. Monthly prices below are the ones on the supplement review.',
         category: 'Buyer guide',
         authorName: 'Horses.com Editorial',
         publishedAt: 'October 2026',
         readTime: '6 min',
       }}
-      heroHop={<><HopDisclosure siteId="horses-com" href="/go/amazon-brand/equithrive+original+pellets+resveratrol?s=reviews-cosequin-vs-equithrive-guide" /><a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" href="/go/amazon-brand/equithrive+original+pellets+resveratrol?s=reviews-cosequin-vs-equithrive-guide">Browse Equithrive original pellets on Amazon →</a></>}
-      heroExtra={<QuietPartnerLink tone="dark" href="/go/smartpak/cosequin-asu-plus?s=reviews-cosequin-vs-equithrive-guide" label="Check price of Cosequin ASU Plus on SmartPak" />}
+      heroHop={
+        <>
+          <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">Cosequin ASU Plus is the joint pick because the current label lists glucosamine, MSM, chondroitin, and ASU.</p>
+          <div data-fold="offer">
+          <HopDisclosure tone="on-dark" siteId="horses-com" href="/go/amazon-brand/equithrive+original+pellets+resveratrol?s=reviews-cosequin-vs-equithrive-guide" /><a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" href="/go/amazon-brand/equithrive+original+pellets+resveratrol?s=reviews-cosequin-vs-equithrive-guide">Browse Equithrive original pellets on Amazon →</a>
+        </div>
+        </>
+      }
       breadcrumbs={[
         { name: 'Home', href: '/' },
         { name: 'Reviews', href: '/reviews' },
@@ -85,14 +90,14 @@ export default function CosequinVsEquithriveGuidePage() {
             "Equithrive Original Pellets are the resveratrol pick.",
           ]}
         />
-        <p>Prices below are the ones on the <Link href="/reviews/best-equine-supplements">supplement review</Link>. Cosequin ASU Plus is the joint-evidence pick. Equithrive Original Pellets are the resveratrol pick. <Link href="/reviews/ker-eo3-vs-equithrive-guide">KER EO-3 versus Equithrive</Link> is the omega-3 comparison, not this joint pair. The <Link href="/supplements/joint-supplements">joint-supplement guide</Link> is the ingredient ladder behind the Cosequin ranking.</p>
+        <p>Cosequin ASU Plus is the joint-evidence pick. Equithrive Original Pellets are the resveratrol pick. <Link href="/reviews/ker-eo3-vs-equithrive-guide">KER EO-3 versus Equithrive</Link> is the omega-3 comparison, not this joint pair. The <Link href="/supplements/joint-supplements">joint-supplement guide</Link> is the ingredient ladder behind the Cosequin ranking.</p>
         <h2>What the review says about Cosequin ASU Plus</h2>
         <p>Cosequin ASU Plus is Best Joint Evidence and the winner. The current pages list glucosamine HCl, MSM, chondroitin sulfate, and ASU standardized to a minimum of 30% unsaponifiables. Milligrams differ for powder and pellets — check the label. The initial period is 2–4 weeks. Check the current FEI and USEF lists. The printed price is $80–110 a month. Pellet palatability varies.</p>
         <h2>What the review says about Equithrive</h2>
         <p>Equithrive Original Pellets are Best Resveratrol. The active is trans-resveratrol. The current page says research-backed and FEI and USEF compliant. It does not print University of Kentucky equine trials — check the label for the resveratrol amount. The printed price is $45–65 a month. The review frames resveratrol as a complement to traditional joint ingredients, not a substitute.</p>
         <h2>Who should buy which product</h2>
         <p>Buy Cosequin ASU Plus when the horse has diagnosed osteoarthritis or significant work-related joint loading and you want the product the review ranks on published evidence. Buy Equithrive when you want the lower monthly band and you are adding resveratrol beside another joint product, not instead of one. A single broad wellness tub is Platinum Performance on the same review, not either product here.</p>
-        <p>The link above opens Cosequin ASU Plus on SmartPak, the same link as on the supplement review. The sale price can differ from the band above.</p>
+        <p>The link above searches Amazon for Equithrive original pellets. The sale price can differ from the band above.</p>
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
       </div>
