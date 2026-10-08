@@ -6,7 +6,7 @@
  */
 
 import type { ReactNode } from 'react'
-import { hopCommissionReady, isChewyHop, liveAnchorHref, partnerLinkQuiet, partnerQuoteHeld, partnerTagReady, shopCtaLabel, tableShopLink } from '@carloOS/config/affiliate-hop'
+import { hopCommissionReady, isChewyHop, liveAnchorHref, partnerLinkQuiet, partnerQuoteHeld, partnerTagReady, shopCtaLabel, tableShopLink, visitNextStep } from '@carloOS/config/affiliate-hop'
 import { HeldQuoteNext } from './HeldQuoteNext'
 
 const EARNING_PICK_SITES = new Set(['dog-com', 'fish-com', 'horses-com', 'vets-co', 'ferret-com'])
@@ -128,10 +128,12 @@ export function ReviewCard({
   const quiet = Boolean(
     rawHref?.startsWith('/go/') && !href && (quietUntilTag || partnerLinkQuiet(rawHref)),
   )
+  const visit = !href ? visitNextStep(rawHref) : null
   const held = Boolean(
     rawHref &&
       !href &&
       !quiet &&
+      !visit &&
       (partnerQuoteHeld(rawHref) ||
         (holdWithoutPartnerId && !partnerTagReady(rawHref)) ||
         rawHref.startsWith('/go/')),
@@ -244,7 +246,7 @@ export function ReviewCard({
       )}
 
       {/* Footer: price + CTA */}
-      {(price || href || held || quiet) && (
+      {(price || href || held || quiet || visit) && (
         <div className="flex flex-col items-stretch sm:flex-row sm:items-end sm:justify-between pt-5 border-t border-brand-border mt-2 gap-4 min-w-0">
           {price && (
             <div>
@@ -262,6 +264,13 @@ export function ReviewCard({
             <span className="text-sm leading-relaxed text-brand-text-light">
               {ctaText.replace(/\s*→\s*$/, '').trim()} — partner ID needed
             </span>
+          ) : visit ? (
+            <a
+              href={visit.href}
+              className="inline-flex items-center justify-center text-sm font-bold text-brand-primary underline underline-offset-2 max-w-full text-left whitespace-normal"
+            >
+              {visit.label}
+            </a>
           ) : held ? (
             <HeldQuoteNext />
           ) : href ? (

@@ -216,6 +216,27 @@ export function partnerNeededLabel(label: string): string {
   return base ? 'Quotes not available here yet' : 'Quotes not available here yet'
 }
 
+const VISIT_VENDOR = /^\/go\/(vetster|askvet)(?:\/|\?|#|$)/
+
+/**
+ * Internal next step when a Vetster or AskVet visit hop is withheld.
+ * The comparison page points at the setting tool. Every other visit
+ * surface points at the comparison. This is not a quote and not a partner ID.
+ */
+export function visitNextStep(href: string | undefined): { href: string; label: string } | null {
+  if (!href || !VISIT_VENDOR.test(href)) return null
+  let source = ''
+  try {
+    source = new URL(href, 'https://vets.co').searchParams.get('s') ?? ''
+  } catch {
+    source = ''
+  }
+  if (source === 'telehealth') {
+    return { href: '/tools/er-vs-clinic', label: 'ER vs clinic vs telehealth' }
+  }
+  return { href: '/telehealth', label: 'Compare telehealth services' }
+}
+
 /** True when this href is a Trupanion, Healthy Paws, or Embrace quote and its tag is unset. */
 export function partnerQuoteHeld(
   href: string | undefined,
