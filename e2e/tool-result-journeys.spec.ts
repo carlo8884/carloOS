@@ -2,8 +2,11 @@ import { expect, test, type APIRequestContext, type Page } from '@playwright/tes
 
 /**
  * Top three tools per site, ranked by inbound internal links.
- * Path: open the tool, enter a typical input, read a result, open the
- * guide linked from that result, then follow the first /go/ hop on the guide.
+ * Each path has two hops: the product hop on the result screen, then the
+ * first /go/ hop on the guide that result links to.
+ * A held partner (SmartPak, Dover, Schneider, Riding Warehouse, Wysong,
+ * Marshall, Carniwhole, Chewy, and the insurers) must never be a live hop.
+ * An Amazon search whose words name a held brand is still Amazon.
  * The Amazon Associates tag is still unresolved, so this checks the retailer
  * domain and the product words only.
  */
@@ -20,6 +23,9 @@ type Journey = {
   heading: RegExp
   prepare: (page: Page) => Promise<void>
   result: RegExp
+  /** Product hop on the tool screen. Null means the result card has no /go/. */
+  resultHop: string | null
+  resultDestination?: Destination
   guide: string | RegExp
   guideUrl: RegExp
   hop: string
@@ -32,6 +38,9 @@ const fishForbid = ['dog', 'horse', 'ferret', 'cat']
 const horseForbid = ['aquarium', 'ferret', 'cat']
 const ferretForbid = ['horse', 'aquarium', 'dog']
 
+const HELD_VENDOR =
+  /\/go\/(smartpak|dover|schneider|ridingwarehouse|wysong|marshall|carniwhole|chewy(?:-brand|-pharmacy)?|trupanion|healthy-paws|embrace|vetster|askvet|lemonade|pumpkin|pets-best|spot|manypets|figo|aspca|fetch|metlife|wagmo)(\/|\?|#|$)/i
+
 const JOURNEYS: Record<string, Journey[]> = {
   'dog-com': [
     {
@@ -42,6 +51,8 @@ const JOURNEYS: Record<string, Journey[]> = {
         await page.locator('#dc-weight').fill('50')
       },
       result: /MER \/ day/,
+      resultHop: 'royal+canin+dry+dog+food',
+      resultDestination: { host: 'amazon.com', product: ['royal', 'canin', 'dog'], forbid: dogForbid },
       guide: /Dog Body Condition Score \(BCS\)/,
       guideUrl: /\/guides\/dog-body-condition-score\/?$/,
       hop: 'soft+measuring+tape+for+pets',
@@ -55,6 +66,8 @@ const JOURNEYS: Record<string, Journey[]> = {
         await page.getByRole('button', { name: 'Large', exact: true }).click()
       },
       result: /Your new-puppy checklist/,
+      resultHop: 'wire+dog+crate+with+divider+panel',
+      resultDestination: { host: 'amazon.com', product: ['dog', 'crate'], forbid: ['horse', 'aquarium', 'ferret'] },
       guide: 'Best dog crates →',
       guideUrl: /\/reviews\/best-dog-crates\/?$/,
       hop: 'midwest+icrate+dog+crate',
@@ -69,6 +82,8 @@ const JOURNEYS: Record<string, Journey[]> = {
         await page.locator('#cs-height').fill('22')
       },
       result: /Recommended crate size/,
+      resultHop: 'midwest+icrate+36+inch',
+      resultDestination: { host: 'amazon.com', product: ['midwest', 'crate'], forbid: ['horse', 'aquarium', 'ferret'] },
       guide: 'Compare wire, airline, and heavy-duty crates',
       guideUrl: /\/reviews\/best-dog-crates\/?$/,
       hop: 'midwest+icrate+dog+crate',
@@ -84,10 +99,11 @@ const JOURNEYS: Record<string, Journey[]> = {
         await page.getByRole('checkbox', { name: /Nutrition or diet question/ }).click()
       },
       result: /Talk to a licensed vet remotely/,
+      resultHop: null,
       guide: 'Watch vs same-day vs emergency',
       guideUrl: /\/guides\/when-to-go-to-the-vet\/?$/,
-      hop: '48+hour+digital+kitchen+timer',
-      destination: { host: 'amazon.com', product: ['timer', 'kitchen'], forbid: ['horse', 'aquarium', 'ferret'] },
+      hop: 'pet+first+aid+kit?s=tools-er-vs-clinic',
+      destination: { host: 'amazon.com', product: ['first', 'aid'], forbid: ['horse', 'aquarium', 'ferret'] },
     },
     {
       name: 'cat body condition to calorie calculator',
@@ -99,6 +115,8 @@ const JOURNEYS: Record<string, Journey[]> = {
         await page.getByRole('radio', { name: 'Minimal abdominal fat pad; a slight tuck' }).check()
       },
       result: /\/9/,
+      resultHop: 'digital+pet+scale?s=tools-cat-body-condition-score',
+      resultDestination: { host: 'amazon.com', product: ['scale'], forbid: catForbid },
       guide: 'Estimate daily calories next',
       guideUrl: /\/tools\/cat-calorie-calculator\/?$/,
       hop: 'slow+feeder+cat+bowl',
@@ -112,6 +130,8 @@ const JOURNEYS: Record<string, Journey[]> = {
         await page.locator('#cc-weight').fill('12')
       },
       result: /kcal/,
+      resultHop: 'slow+feeder+cat+bowl',
+      resultDestination: { host: 'amazon.com', product: ['cat', 'bowl'], forbid: catForbid },
       guide: 'Check the number against body condition →',
       guideUrl: /\/tools\/cat-body-condition-score\/?$/,
       hop: 'digital+pet+scale',
@@ -127,6 +147,8 @@ const JOURNEYS: Record<string, Journey[]> = {
         await page.getByLabel(/^Length/).fill('48')
       },
       result: /US gal/,
+      resultHop: 'eheim+jager+200w+heater',
+      resultDestination: { host: 'amazon.com', product: ['eheim', 'heater'], forbid: fishForbid },
       guide: 'Read the aquarium filter review',
       guideUrl: /\/reviews\/best-aquarium-filters\/?$/,
       hop: 'aquaclear+70+filter',
@@ -140,6 +162,8 @@ const JOURNEYS: Record<string, Journey[]> = {
         await page.getByLabel(/Tank temperature/).fill('76')
       },
       result: /\d+ days/,
+      resultHop: 'api+freshwater+master+test+kit',
+      resultDestination: { host: 'amazon.com', product: ['api', 'test'], forbid: fishForbid },
       guide: 'Read the aquarium cycling guide',
       guideUrl: /\/setup\/aquarium-cycling-guide\/?$/,
       hop: 'ammonia',
@@ -153,6 +177,8 @@ const JOURNEYS: Record<string, Journey[]> = {
         await page.getByLabel(/^Tank Volume/).fill('29')
       },
       result: /slim inches/,
+      resultHop: 'aqueon+quietflow+30',
+      resultDestination: { host: 'amazon.com', product: ['aqueon'], forbid: fishForbid },
       guide: 'Read the aquarium filter review',
       guideUrl: /\/reviews\/best-aquarium-filters\/?$/,
       hop: 'aquaclear+70+filter',
@@ -168,6 +194,8 @@ const JOURNEYS: Record<string, Journey[]> = {
         await page.locator('#hf-weight').fill('1100')
       },
       result: /Dry-matter weight/,
+      resultHop: 'standlee+premium+forage+pellets',
+      resultDestination: { host: 'amazon.com', product: ['standlee', 'forage'], forbid: horseForbid },
       guide: 'Read forage basics →',
       guideUrl: /\/nutrition\/forage-basics\/?$/,
       hop: 'slow+feeder+hay+net+horse',
@@ -183,6 +211,8 @@ const JOURNEYS: Record<string, Journey[]> = {
         }
       },
       result: /Overall BCS/,
+      resultHop: 'horse+weight+tape',
+      resultDestination: { host: 'amazon.com', product: ['horse', 'tape'], forbid: horseForbid },
       guide: 'Feed to the score, starting with forage →',
       guideUrl: /\/nutrition\/forage-basics\/?$/,
       hop: 'slow+feeder+hay+net+horse',
@@ -197,6 +227,8 @@ const JOURNEYS: Record<string, Journey[]> = {
         await page.locator('#hw-length').fill('66')
       },
       result: /Estimated weight/,
+      resultHop: 'winter+horse+blanket?s=tools-horse-blanket-size-calculator',
+      resultDestination: { host: 'amazon.com', product: ['winter', 'horse', 'blanket'], forbid: horseForbid },
       guide: 'read forage basics',
       guideUrl: /\/nutrition\/forage-basics\/?$/,
       hop: 'slow+feeder+hay+net+horse',
@@ -213,6 +245,8 @@ const JOURNEYS: Record<string, Journey[]> = {
         await page.getByRole('button', { name: '2', exact: true }).click()
       },
       result: /Minimum footprint/,
+      resultHop: 'ferret+nation+critter+nation+double+unit',
+      resultDestination: { host: 'amazon.com', product: ['ferret', 'nation'], forbid: ferretForbid },
       guide: 'Compare the cages that meet this footprint',
       guideUrl: /\/reviews\/best-ferret-cage\/?$/,
       hop: 'ferret+nation+critter+nation+double+unit',
@@ -228,9 +262,12 @@ const JOURNEYS: Record<string, Journey[]> = {
         await page.getByRole('radio', { name: 'No pendulous belly; a lean, muscular outline from the side' }).check()
       },
       result: /\/9/,
+      resultHop: 'ferret+hammock',
+      resultDestination: { host: 'amazon.com', product: ['ferret', 'hammock'], forbid: ferretForbid },
       guide: 'Compare ferret kibble next',
       guideUrl: /\/diet\/best-ferret-kibble\/?$/,
-      hop: 'wysong+ferret+food',
+      // Amazon search for a Wysong product. Not a /go/wysong direct hop.
+      hop: 'amazon-brand/wysong+ferret+food',
       destination: { host: 'amazon.com', product: ['wysong', 'ferret'], forbid: ferretForbid },
     },
     {
@@ -241,9 +278,11 @@ const JOURNEYS: Record<string, Journey[]> = {
         await page.locator('#fa-age').fill('4')
       },
       result: /Human-equivalent age/,
+      resultHop: 'amazon-brand/ferret+food?s=tools-ferret-age-calculator',
+      resultDestination: { host: 'amazon.com', product: ['ferret'], forbid: ferretForbid },
       guide: 'Next: ferret kibble guide',
       guideUrl: /\/diet\/best-ferret-kibble\/?$/,
-      hop: 'wysong+ferret+food',
+      hop: 'amazon-brand/wysong+ferret+food',
       destination: { host: 'amazon.com', product: ['wysong', 'ferret'], forbid: ferretForbid },
     },
   ],
@@ -253,13 +292,27 @@ function plain(value: string): string {
   return decodeURIComponent(value).replace(/\+/g, ' ').toLowerCase()
 }
 
+async function expectNoHeldHops(page: Page, where: string) {
+  const hrefs = await page.locator('a[href^="/go/"]').evaluateAll((els) =>
+    els.map((el) => el.getAttribute('href') || ''),
+  )
+  expect(hrefs.length, `${where} has at least one hop to inspect`).toBeGreaterThan(0)
+  for (const href of hrefs) {
+    expect(href, `${where} live hop`).not.toMatch(HELD_VENDOR)
+  }
+}
+
 async function expectRetailer(request: APIRequestContext, path: string, destination: Destination) {
+  expect(path, 'live hop vendor').not.toMatch(HELD_VENDOR)
   const hop = await request.get(path, { maxRedirects: 0 })
   expect(hop.status(), `${path} status`).toBe(302)
   const location = hop.headers()['location'] || ''
   expect(location, `${path} location`).not.toBe('')
   const decoded = plain(location)
   expect(decoded, path).toContain(destination.host)
+  expect(decoded, `${path} held host`).not.toMatch(
+    /smartpakequine|doversaddlery|schneidersaddlery|ridingwarehouse|wysong\.net|marshallferrets|carniwhole|chewy\.com|trupanion|healthypaws|embracepet|vetster\.com|askvet\.app|lemonade\.com|pumpkin\.care|petsbest|spotpet|manypets|figopet|aspcapetinsurance/,
+  )
   for (const word of destination.product) expect(decoded, path).toContain(word)
   for (const word of destination.forbid) expect(decoded, path).not.toContain(word)
 }
@@ -276,6 +329,17 @@ for (const [site, journeys] of Object.entries(JOURNEYS)) {
         await expect(page.getByRole('heading', { level: 1, name: journey.heading })).toBeVisible()
         await journey.prepare(page)
         await expect(page.getByText(journey.result).first()).toBeVisible()
+        await expectNoHeldHops(page, `${journey.name} result`)
+
+        if (journey.resultHop && journey.resultDestination) {
+          const resultHop = page.locator(`a[href*="${journey.resultHop}"]`).first()
+          await expect(resultHop).toBeVisible()
+          const resultHref = (await resultHop.getAttribute('href')) || ''
+          expect(plain(resultHref), `${journey.name} result`).toContain(plain(journey.resultHop))
+          await expectRetailer(page.request, resultHref, journey.resultDestination)
+        } else {
+          await expect(page.locator('[data-result-pick] a[href^="/go/"]')).toHaveCount(0)
+        }
 
         const guide = (typeof journey.guide === 'string'
           ? page.getByRole('link', { name: journey.guide, exact: true })
@@ -284,6 +348,7 @@ for (const [site, journeys] of Object.entries(JOURNEYS)) {
         await expect(guide).toBeVisible()
         await guide.click()
         await expect(page).toHaveURL(journey.guideUrl)
+        await expectNoHeldHops(page, `${journey.name} guide`)
 
         const hop = page.locator('a[href^="/go/"]').first()
         await expect(hop).toBeVisible()

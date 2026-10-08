@@ -105,9 +105,9 @@ export function blanketPick(
     }
   }
   return {
-    href: `/go/smartpak/rambo-original-turnout?s=${source}`,
-    label: 'Check price of the Horseware Rambo Original on SmartPak',
-    detail: `${measurement} The review names 75, 78, 81, and 84 as the common full-size steps, so this link is the Rambo listing rather than a size that review does not print.`,
+    href: '/go/amazon-brand/winter+horse+blanket?s=tools-horse-blanket-size-calculator',
+    label: 'Browse winter horse blankets on Amazon',
+    detail: `${measurement} The review names 75, 78, 81, and 84 as the common full-size steps, so this link is the winter-blanket search the blanket-size calculator already uses rather than a size that review does not print.`,
   }
 }
 
