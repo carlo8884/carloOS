@@ -40,15 +40,15 @@ export function HomeEmailCapture() {
             </div>
             <div className="mb-2 flex items-center justify-center lg:justify-start gap-2.5">
               <div className={`relative h-10 w-14 shrink-0 overflow-hidden rounded-md bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                <StockImage manifestKey="fish-com:category-planted" alt="Lush aquatic plants in a planted aquarium" aspect="4:3" />
+                <StockImage manifestKey="fish-com:category-planted" alt="Lush aquatic plants in a planted aquarium" aspect="4:3" subtleCredit />
               </div>
               <h2 className="font-display text-2xl font-bold text-brand-dark italic mb-0">
                 New-tank setup and stocking
               </h2>
             </div>
-            <p className="text-sm text-brand-text-mid mb-0 leading-relaxed">
+            <div className="text-sm text-brand-text-mid mb-0 leading-relaxed">
               Build the tank first, then sketch a slim-inch ceiling — on this site, no email required.
-            </p>
+            </div>
           </div>
           <Link
             href="/setup"
@@ -64,7 +64,7 @@ export function HomeEmailCapture() {
                 </div>
                 <div className="font-display font-bold text-brand-dark text-sm leading-tight italic group-hover:text-brand-primary">Setup guides</div>
               </div>
-              <p className="text-xs text-brand-text-mid mt-0.5">Size, cycle, then the first fish.</p>
+              <div className="text-xs text-brand-text-mid mt-0.5">Size, cycle, then the first fish.</div>
             </div>
           </Link>
         </div>
@@ -87,7 +87,7 @@ export function HomeEmailCapture() {
                     {item.title}
                   </div>
                 </div>
-                <p className="text-xs text-brand-text-mid mt-1 leading-relaxed">{item.note}</p>
+                <div className="text-xs text-brand-text-mid mt-1 leading-relaxed">{item.note}</div>
               </div>
             </Link>
           ))}

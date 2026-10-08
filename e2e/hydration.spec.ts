@@ -117,8 +117,10 @@ test('money pages hydrate with no console hydration error', async ({ page }, tes
           await plain.goto(path, { waitUntil: 'domcontentloaded' })
           const server = await bodyOutline(plain)
           const diff = outlineDiff(server, client)
-          const at = rawHtml.indexOf('h-14 w-20')
-          const snippet = at >= 0 ? rawHtml.slice(Math.max(0, at - 280), at + 40).replace(/\s+/g, ' ') : 'no h-14'
+          const at = rawHtml.indexOf('New-tank setup')
+          const snippet = (at >= 0 ? rawHtml.slice(at, at + 900) : rawHtml.slice(0, 200))
+            .replace(/https?:\/\/[^"\s<]+/g, 'URL')
+            .replace(/\s+/g, ' ')
           detail = '\n' + (diff || `outlines match (${server.length} nodes)`) + '\nHTML ' + snippet
         } finally {
           await plain.close()
