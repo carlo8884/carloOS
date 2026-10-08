@@ -54,7 +54,7 @@ export default function BestPuppyFoodPage() {
         <PriceAsOf date="2026-10-07" tone="dark" />
         <div data-fold="offer">
           <PrimaryHop href='/go/amazon-brand/royal+canin+large+breed+puppy?s=reviews-best-dog-food-for-puppies' label='Check price of Royal Canin Large Breed Puppy on Amazon' />
-        <HopDisclosure siteId="dog-com" href="/go/amazon-brand/royal+canin+large+breed+puppy?s=reviews-best-dog-food-for-puppies" />
+        <HopDisclosure tone="on-dark" siteId="dog-com" href="/go/amazon-brand/royal+canin+large+breed+puppy?s=reviews-best-dog-food-for-puppies" />
         </div>
         <EmailCapture
           variant="inline"

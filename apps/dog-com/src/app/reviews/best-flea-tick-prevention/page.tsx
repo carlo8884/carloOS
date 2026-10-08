@@ -33,7 +33,7 @@ export default function FleaTickPreventionPage() {
         <PriceAsOf date="2026-10-05" tone="dark" />
         <div data-fold="offer">
           <PrimaryHop href="/go/amazon-brand/dog+flea+and+tick?s=reviews-best-flea-tick-prevention" label="Browse over-the-counter dog flea and tick products on Amazon" />
-          <HopDisclosure siteId="dog-com" href="/go/amazon-brand/dog+flea+and+tick?s=reviews-best-flea-tick-prevention" />
+          <HopDisclosure tone="on-dark" siteId="dog-com" href="/go/amazon-brand/dog+flea+and+tick?s=reviews-best-flea-tick-prevention" />
         </div>
         <p className="mb-4"><a href="/find-a-vet" className="text-sm font-bold text-white underline underline-offset-2">Find a vet to discuss Bravecto</a></p>
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">Oral isoxazoline class preventives (Bravecto, NexGard, Simparica) are widely regarded as among the most effective flea and tick prevention available — they work systemically and kill parasites on contact with the dog's blood. Prescription required.</p>

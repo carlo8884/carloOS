@@ -32,7 +32,7 @@ export default function BestDogHarnessesPage() {
         <PriceAsOf date="2026-10-05" tone="dark" />
         <div data-fold="offer">
           <PrimaryHop href='/go/chewy-brand/petsafe+easy+walk+harness?s=reviews-best-dog-harnesses' label='Check price of the PetSafe Easy Walk harness on Amazon' />
-        <HopDisclosure siteId="dog-com" href="/go/chewy-brand/petsafe+easy+walk+harness?s=reviews-best-dog-harnesses" />
+        <HopDisclosure tone="on-dark" siteId="dog-com" href="/go/chewy-brand/petsafe+easy+walk+harness?s=reviews-best-dog-harnesses" />
         </div>
         <EmailCapture
           variant="inline"

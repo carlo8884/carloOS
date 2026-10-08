@@ -34,7 +34,7 @@ export default function BestDogBedsPage() {
         <PriceAsOf date="2026-10-07" tone="dark" />
         <div data-fold="offer">
           <PrimaryHop href='/go/chewy-brand/big+barker+orthopedic+dog+bed?s=reviews-best-dog-beds' label='Check price of the Big Barker orthopedic bed on Amazon' />
-        <HopDisclosure siteId="dog-com" href="/go/chewy-brand/big+barker+orthopedic+dog+bed?s=reviews-best-dog-beds" />
+        <HopDisclosure tone="on-dark" siteId="dog-com" href="/go/chewy-brand/big+barker+orthopedic+dog+bed?s=reviews-best-dog-beds" />
         </div>
         <EmailCapture
           variant="inline"

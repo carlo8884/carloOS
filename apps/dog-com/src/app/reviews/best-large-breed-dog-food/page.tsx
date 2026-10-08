@@ -28,7 +28,7 @@ export default function BestLargeBreedFoodPage() {
         <PriceAsOf date="2026-10-07" tone="dark" />
         <div data-fold="offer">
           <PrimaryHop href='/go/chewy-brand/royal+canin+large+adult?s=reviews-best-large-breed-dog-food' label='Check price of Royal Canin Large Adult on Amazon' />
-        <HopDisclosure siteId="dog-com" href="/go/chewy-brand/royal+canin+large+adult?s=reviews-best-large-breed-dog-food" />
+        <HopDisclosure tone="on-dark" siteId="dog-com" href="/go/chewy-brand/royal+canin+large+adult?s=reviews-best-large-breed-dog-food" />
         </div>
         <EmailCapture
           variant="inline"

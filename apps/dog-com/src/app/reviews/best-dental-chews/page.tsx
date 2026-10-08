@@ -28,7 +28,7 @@ export default function BestDentalChewsPage() {
         <PriceAsOf date="2026-10-07" tone="dark" />
         <div data-fold="offer">
           <PrimaryHop href='/go/chewy-brand/greenies+dental+chews+dogs?s=reviews-best-dental-chews' label='Check price of Greenies dental chews on Amazon' />
-        <HopDisclosure siteId="dog-com" href="/go/chewy-brand/greenies+dental+chews+dogs?s=reviews-best-dental-chews" />
+        <HopDisclosure tone="on-dark" siteId="dog-com" href="/go/chewy-brand/greenies+dental+chews+dogs?s=reviews-best-dental-chews" />
         </div>
         <EmailCapture
           variant="inline"

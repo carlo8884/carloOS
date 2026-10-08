@@ -56,7 +56,7 @@ export default function BestJointSupplementsPage() {
         <PriceAsOf date="2026-10-05" tone="dark" />
         <div data-fold="offer">
           <PrimaryHop href='/go/amazon-brand/dasuquin+with+msm?s=reviews-best-joint-supplements' label='Check price of Nutramax Dasuquin with MSM on Amazon' />
-        <HopDisclosure siteId="dog-com" href="/go/amazon-brand/dasuquin+with+msm?s=reviews-best-joint-supplements" />
+        <HopDisclosure tone="on-dark" siteId="dog-com" href="/go/amazon-brand/dasuquin+with+msm?s=reviews-best-joint-supplements" />
         </div>
         <EmailCapture
           variant="inline"

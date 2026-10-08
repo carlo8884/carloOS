@@ -60,7 +60,7 @@ export default function BestDogCratesPage() {
           control="Check price of the MidWest iCrate on Amazon"
           variant="View the MidWest iCrate price on Amazon"
         />
-        <HopDisclosure siteId="dog-com" href="/go/amazon-brand/midwest+icrate+dog+crate?s=reviews-best-dog-crates" />
+        <HopDisclosure tone="on-dark" siteId="dog-com" href="/go/amazon-brand/midwest+icrate+dog+crate?s=reviews-best-dog-crates" />
         </div>
         <EmailCapture
           variant="inline"

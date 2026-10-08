@@ -75,7 +75,7 @@ export default function BestDogFoodPage() {
         <PriceAsOf date="2026-10-03" tone="dark" />
         <div data-fold="offer">
           <PrimaryHop href='/go/chewy-brand/royal+canin+dry+dog+food?s=reviews-best-dry-dog-food' label='Check price of Royal Canin dry dog food on Amazon' />
-        <HopDisclosure siteId="dog-com" href="/go/chewy-brand/royal+canin+dry+dog+food?s=reviews-best-dry-dog-food" />
+        <HopDisclosure tone="on-dark" siteId="dog-com" href="/go/chewy-brand/royal+canin+dry+dog+food?s=reviews-best-dry-dog-food" />
         </div>
         <EmailCapture
           variant="inline"

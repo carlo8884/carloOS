@@ -28,7 +28,7 @@ export default function BestGPSTrackerPage() {
         <PriceAsOf date="2026-10-07" tone="dark" />
         <div data-fold="offer">
           <PrimaryHop href='/go/amazon-brand/fi+series+3+dog+collar?s=reviews-best-dog-gps-tracker' label='Check price of the Fi Series 3+ collar on Amazon' />
-        <HopDisclosure siteId="dog-com" href="/go/amazon-brand/fi+series+3+dog+collar?s=reviews-best-dog-gps-tracker" />
+        <HopDisclosure tone="on-dark" siteId="dog-com" href="/go/amazon-brand/fi+series+3+dog+collar?s=reviews-best-dog-gps-tracker" />
         </div>
         <EmailCapture
           variant="inline"
