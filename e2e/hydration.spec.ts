@@ -39,6 +39,39 @@ const moneyPaths: Record<string, string[]> = {
 const hydrationError =
   /Hydration failed|did not match server-rendered HTML|Expected server HTML|error while hydrating|Text content does not match|Minified React error #(418|422|423|425)\b/
 
+/** Compact body outline so a CI hydration failure names the first diverging node. */
+async function bodyOutline(target: { evaluate: <T>(fn: () => T) => Promise<T> }): Promise<string[]> {
+  return target.evaluate(() => {
+    const out: string[] = []
+    const walk = (n: Node) => {
+      if (out.length > 400) return
+      if (n.nodeType === Node.TEXT_NODE) {
+        const t = (n.textContent || '').replace(/\s+/g, ' ').trim()
+        if (t) out.push('T:' + t.slice(0, 90))
+        return
+      }
+      if (n.nodeType !== Node.ELEMENT_NODE) return
+      const el = n as Element
+      if (el.tagName === 'SCRIPT' || el.tagName === 'STYLE' || el.tagName === 'NOSCRIPT') return
+      const href = el.getAttribute('href')
+      out.push('E:' + el.tagName + (href ? ' ' + href.slice(0, 80) : ''))
+      for (const c of el.childNodes) walk(c)
+    }
+    walk(document.body)
+    return out
+  })
+}
+
+function outlineDiff(server: string[], client: string[]): string {
+  const lines: string[] = []
+  const max = Math.max(server.length, client.length)
+  for (let i = 0; i < max && lines.length < 12; i++) {
+    if (server[i] === client[i]) continue
+    lines.push(`#${i}\n  server: ${server[i] ?? '(end)'}\n  client: ${client[i] ?? '(end)'}`)
+  }
+  return lines.join('\n')
+}
+
 test('money pages hydrate with no console hydration error', async ({ page }, testInfo) => {
   const paths = moneyPaths[testInfo.project.name]
   expect(paths?.length).toBeGreaterThan(0)
@@ -59,7 +92,22 @@ test('money pages hydrate with no console hydration error', async ({ page }, tes
       expect(response?.status(), path).toBe(200)
       await new Promise((resolve) => setTimeout(resolve, 400))
       await expect(page.locator('h1').first(), path).toBeVisible()
-      expect(problems, `${path}\n${problems.join('\n')}`).toEqual([])
+      let detail = ''
+      if (problems.length > 0) {
+        const client = await bodyOutline(page)
+        const plain = await page.context().newPage()
+        try {
+          await plain.route('**/*', (route) => {
+            if (route.request().resourceType() === 'script') return route.abort()
+            return route.continue()
+          })
+          await plain.goto(path, { waitUntil: 'domcontentloaded' })
+          detail = '\n' + outlineDiff(await bodyOutline(plain), client)
+        } finally {
+          await plain.close()
+        }
+      }
+      expect(problems, `${path}\n${problems.join('\n')}${detail}`).toEqual([])
     } finally {
       page.off('console', onConsole)
       page.off('pageerror', onPageError)
