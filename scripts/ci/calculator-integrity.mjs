@@ -7387,8 +7387,10 @@ const CALCULATORS = [
       { re: /if \(cat < 7\)/, label: 'AAFP/AAHA young adult through age 6' },
       { re: /if \(cat <= 10\)/, label: 'AAFP/AAHA mature adult 7–10' },
       { re: /href="\/tools\/cat-body-condition-score"/, label: 'age result links the body-condition tool' },
+      { re: /aaha\.org\/resources\/2021-aaha-aafp-feline-life-stage-guidelines/, label: '2021 AAHA/AAFP life stages cited' },
+      { re: /planning figure/, label: '15/24/+4 human-year chart labeled a planning figure' },
     ],
-    why: 'Standard veterinary chart: year 1 = 15, year 2 = 24, then +4/year. AAFP/AAHA stages: kitten <1, young adult 1–6, mature 7–10, senior 11+.',
+    why: 'Life stage matches 2021 AAHA/AAFP (kitten to 1, young adult 1–6, mature 7–10, senior over 10). The 15/24/+4 human-year chart and the age-15 geriatric label are a planning figure.',
   },
   {
     id: 'vets · cat-age-calculator hops',
@@ -7418,8 +7420,13 @@ const CALCULATORS = [
       { re: /if \(bcs <= 7\)/, label: 'overweight band ≤7' },
       { re: /primordial pouch/, label: 'primordial-pouch caveat kept (not invented scale)' },
       { re: /href="\/tools\/cat-calorie-calculator"/, label: 'BCS result links the calorie calculator' },
+      { re: /wsava\.org\/wp-content\/uploads\/2025\/06\/WSAVA_BCSCat_BCSCat_Nutrition_250612\.pdf/, label: 'WSAVA cat BCS chart cited' },
+      { re: /planning figure/, label: 'three-check average labeled a planning figure' },
     ],
-    why: 'Existing WSAVA 9-point feline BCS: average rib/waist/belly checks, 4–5 ideal. Do not invent a new scale.',
+    mustExclude: [
+      { re: /10% over ideal body weight/, label: 'do not state a 10% body-weight step as WSAVA' },
+    ],
+    why: 'WSAVA 9-point cat chart: ideal 4–5 of 9. The three-check average is a planning figure. The chart does not state a percent of body weight per point.',
   },
   {
     id: 'vets · cat-body-condition-score hops',

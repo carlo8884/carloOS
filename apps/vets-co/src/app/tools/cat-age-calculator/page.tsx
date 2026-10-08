@@ -21,7 +21,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'vets-co',
   title: 'Cat Age Calculator — Cat Years to Human Years & Life Stage | Vets.co',
   description:
-    'How old is your cat in human years? Convert cat years to human years with the standard vet chart and see your cat’s life stage and the care it needs.',
+    'Life stage follows 2021 AAHA/AAFP. The 15/24/+4 human-year chart is a planning figure, not an AAFP stage.',
   path: '/tools/cat-age-calculator',
 })
 
@@ -54,11 +54,11 @@ const softwareApplicationSchema = {
   operatingSystem: 'Web',
   offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
   description:
-    'Free cat age calculator. Converts a cat’s age to human-equivalent years with the standard veterinary chart (year 1 = 15, year 2 = 24, then +4 per year) and reports the AAFP/AAHA feline life stage with stage-appropriate care guidance.',
+    'Life stage follows the 2021 AAHA/AAFP feline definitions. The 15/24/+4 human-year chart is a planning figure, not an AAFP stage.',
   inLanguage: 'en-US',
   isAccessibleForFree: true,
   featureList: [
-    'Cat years to human years using the standard veterinary chart',
+    'Human-year chart (15/24/+4) labeled a planning figure',
     'AAFP/AAHA life stage: kitten, young adult, mature adult, senior',
     'Stage-appropriate veterinary care guidance',
     'Senior-screening prompts (kidney, thyroid, blood pressure)',
@@ -70,13 +70,13 @@ const softwareApplicationSchema = {
 const howToSchema = buildHowToSchema({
   name: 'How to calculate your cat’s age in human years',
   description:
-    'Convert a cat’s age to human-equivalent years using the standard veterinary chart and read off the matching life stage.',
+    'Read the 2021 AAHA/AAFP life stage, and treat the 15/24/+4 human-year chart as a planning figure.',
   url: URL,
   steps: [
     { name: 'Count the first year as 15', text: 'A cat’s first year is roughly equivalent to 15 human years of development.' },
     { name: 'Add 9 for the second year', text: 'By age two, a cat is about 24 in human-equivalent years.' },
     { name: 'Add 4 for each year after that', text: 'From age two onward, add about four human years per cat year — so a 10-year-old cat is about 56.' },
-    { name: 'Match the life stage', text: 'Kitten under 1, young adult 1–6, mature adult 7–10, senior 11+ — and adjust care accordingly with your vet. This is a planning reference, not a diagnosis.' },
+    { name: 'Match the life stage', text: '2021 AAHA/AAFP: kitten to 1 year, young adult 1–6, mature adult 7–10, senior over 10. The age-15 geriatric label is a planning figure, not an AAFP stage.' },
   ],
 })
 
@@ -84,17 +84,17 @@ const FAQS = [
   {
     question: 'How old is my cat in human years?',
     answer:
-      'Using the standard veterinary chart, a cat’s first year is about 15 human years, the second brings it to about 24, and every year after adds roughly four. So a 3-year-old cat is about 28, a 7-year-old about 44, a 10-year-old about 56, and a 15-year-old about 76. The calculator does the math for any age.',
+      'The 15 / 24 / +4 human-year chart is a planning figure, not an AAFP or AAHA table. On that planning chart a 3-year-old is about 28, a 7-year-old about 44, a 10-year-old about 56, and a 15-year-old about 76.',
   },
   {
     question: 'When is a cat considered a senior?',
     answer:
-      'Under the AAFP/AAHA feline life-stage framework, cats are kittens up to 1 year, young adults from 1 to 6, mature adults from 7 to 10, and seniors from about 11 onward (cats over 15 are sometimes called geriatric or super-senior). Senior cats benefit from twice-yearly vet visits and routine screening, because several common conditions are very treatable when caught early.',
+      'The 2021 AAHA/AAFP feline life stage definitions are kitten (birth to 1 year), young adult (1–6 years), mature adult (7–10 years), and senior (over 10 years). End-of-life is a stage at any age, not an age band. Calling cats over 15 “geriatric” is a planning label on this page, not an AAFP stage.',
   },
   {
     question: 'How do you calculate cat years to human years?',
     answer:
-      'The widely used veterinary formula counts the first year as 15 human years, the second year as 9 more (reaching 24 by age two), and about 4 human years for each year after that. It is an approximation — individual cats age differently — but it is far more accurate than the old “multiply by seven” myth, which overstates a young cat’s age and understates an old one’s.',
+      'How we calculate: life stage is the 2021 AAHA/AAFP set above. The human-year math is a planning figure — first year 15, second year reaches 24, then about 4 per year. It is not an AAFP chart. It is also not the old multiply-by-seven shortcut.',
   },
   {
     question: 'How long do cats live?',
@@ -109,7 +109,7 @@ const FAQS = [
   {
     question: 'Is this calculator a diagnosis?',
     answer:
-      'No. It is a planning and life-stage reference only. The veterinary chart and AAFP/AAHA stages help you talk with your veterinarian about screening and care; they do not diagnose a disease, set a treatment plan, or replace an exam. If your cat is losing weight, drinking more, hiding, or seems painful, use the cat grimace scale as an owner aid and contact a veterinarian — or start with telehealth when the cat is stable and this is not an emergency.',
+      'No. The AAFP/AAHA stages and the planning-figure human-year chart help you talk with your veterinarian about screening. They do not diagnose a disease, set a treatment plan, or replace an exam. If your cat is losing weight, drinking more, hiding, or seems painful, use the cat grimace scale as an owner aid and contact a veterinarian — or start with telehealth when the cat is stable and this is not an emergency.',
   },
 ]
 
@@ -120,7 +120,7 @@ export default function CatAgeCalculatorPage() {
       hero={{
         title: 'Cat Age Calculator',
         subtitle:
-          'How old is your cat in human years — and what does its age mean for its care? Enter your cat’s age to convert it with the standard veterinary chart and see its life stage and the screening it needs.',
+          'How old is your cat in human years? Life stage follows the 2021 AAHA/AAFP definitions. The 15/24/+4 chart is a planning figure, not an AAFP stage.',
         category: 'Tools',
         categoryHref: '/tools',
         publishedAt: 'June 2026',
@@ -176,8 +176,8 @@ export default function CatAgeCalculatorPage() {
         <h2 id="calculator">The calculator</h2>
         <p>
           Enter your cat&apos;s age to convert it to human-equivalent years and see which life stage your cat is in.
-          The conversion uses the standard veterinary chart, not the old &ldquo;multiply by seven&rdquo; rule, which
-          is wrong for cats.
+          How we calculate: life stage follows the 2021 AAHA/AAFP definitions. The 15 / 24 / +4 human-year
+          chart is a planning figure, not that guideline and not the old multiply-by-seven shortcut.
         </p>
         <CatAgeCalculator />
 
@@ -252,16 +252,16 @@ export default function CatAgeCalculatorPage() {
 
         <h2 id="how">How cat years work</h2>
         <p>
-          Cats mature fast and then settle into a long, slow middle age. The first year alone is worth about 15 human
-          years — a one-year-old cat is physically a young adult — and the second year adds another nine, reaching
-          about 24. After that, each cat year is worth roughly four human years. That is why a 10-year-old cat is about
-          56, not 70, and why the &ldquo;cat years = 7 × age&rdquo; shortcut is misleading at both ends.
+          How we calculate: the human-year numbers below are a planning figure, not the 2021 AAHA/AAFP guideline.
+          On that planning chart the first year is 15, the second year reaches 24, and each later year adds about 4.
+          A 10-year-old is about 56 on that chart. The multiply-by-seven shortcut is a different shortcut, and this
+          page does not use it.
         </p>
 
         <h2 id="stages">Care by life stage</h2>
         <p>
-          The AAFP/AAHA feline life-stage framework splits a cat&apos;s life into kitten (under 1), young adult (1–6),
-          mature adult (7–10), and senior (11+). The value of knowing the stage is that it changes what veterinary care
+          The 2021 AAHA/AAFP feline life stage definitions are kitten (birth to 1 year), young adult (1–6),
+          mature adult (7–10), and senior (over 10). End-of-life is a stage at any age, not an age band. The value of knowing the stage is that it changes what veterinary care
           matters most: vaccines and neutering for kittens; weight, dental, and an annual exam for young adults;
           baseline bloodwork and weight vigilance for mature adults; and twice-yearly visits with senior screening for
           kidney disease, thyroid disease, diabetes, and blood pressure once a cat is a senior. This page is a
