@@ -66,7 +66,7 @@ export default function KoiPage() {
     <ArticleLayout siteId="fish-com"
       hero={{ title: 'Koi Fish Care Guide', subtitle: 'Cyprinus rubrofuscus — koi are among the most striking and long-lived ornamental fish available, capable of reaching 24–36 inches and living 25–35+ years with proper care. They are pond fish, not aquarium fish. Their size, waste production, and behavioral needs require a purpose-built pond environment, not a large aquarium.', category: 'Species Guide — Pond', authorName: 'Fish.com Editorial', publishedAt: 'May 2025', readTime: '10 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Koi', href: '/species/koi' }]}
-      relatedLinks={[{ title: "Species Hub", href: "/species", category: "Species" }, { title: "Goldfish", href: "/species/goldfish", category: "Species Guide" }, { title: "Pond Guide", href: "/setup/pond-guide", category: "Tank Setup" }, { title: "Water Chemistry Guide", href: "/setup/water-chemistry-guide", category: "Tank Setup" }]}
+      relatedLinks={[{ title: "Species Hub", href: "/species", category: "Species" }, { title: "Goldfish", href: "/species/goldfish", category: "Species Guide" }, { title: "Pond Volume Calculator", href: "/tools/pond-volume-calculator", category: "Tool" }, { title: "Pond Guide", href: "/setup/pond-guide", category: "Tank Setup" }, { title: "Water Chemistry Guide", href: "/setup/water-chemistry-guide", category: "Tank Setup" }]}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Pond Requirements</div>
@@ -76,7 +76,7 @@ export default function KoiPage() {
             </div>
           ))}
         </div>
-        <RelatedLinks title="Related Guides" links={[{ label: 'Pond Setup Guide', href: '/setup/pond-guide' }, { label: 'Goldfish Care', href: '/species/goldfish' }, { label: 'Water Chemistry', href: '/setup/water-chemistry-guide' }]} />
+        <RelatedLinks title="Related Guides" links={[{ label: 'Pond Volume Calculator', href: '/tools/pond-volume-calculator' }, { label: 'Pond Setup Guide', href: '/setup/pond-guide' }, { label: 'Goldfish Care', href: '/species/goldfish' }, { label: 'Water Chemistry', href: '/setup/water-chemistry-guide' }]} />
             <CrossPortfolioCard currentSite="fish-com" contentType="species" variant="sidebar" />
 
       </>}
@@ -86,7 +86,7 @@ export default function KoiPage() {
         <StockImage manifestKey="fish-com:species-koi" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A koi in a home aquarium." priority />
         <h2>Pond Size — The Non-Negotiable</h2>
         <p>The most common koi husbandry mistake: underestimating pond size requirements. A single koi purchased at 6 inches will reach 18–24 inches within 3–5 years under good conditions. Koi produce substantial waste — ammonia load per fish is significantly higher than smaller pond fish. The guideline of 250 gallons per koi is a conservative minimum; experienced koi keepers recommend 500–1,000 gallons per fish for high-quality water conditions and optimal growth.</p>
-        <p>A 1,000-gallon pond supports 4–5 small-to-medium koi sustainably. A 2,500-gallon pond is the realistic minimum for a serious koi collection of 6–8 fish. Overstocking degrades water quality, stunts growth, stresses fish, and leads to disease. The temptation to add more fish to an existing pond is the most common route to a koi health disaster.</p>
+        <p>A 1,000-gallon pond supports 4–5 small-to-medium koi sustainably. A 2,500-gallon pond is the realistic minimum for a serious koi collection of 6–8 fish. Overstocking degrades water quality, stunts growth, stresses fish, and leads to disease. The temptation to add more fish to an existing pond is the most common route to a koi health disaster. The <a href="/tools/pond-volume-calculator" className="text-brand-primary hover:underline">pond volume calculator</a> turns length, width, and depth into gallons before another koi goes in.</p>
 
         <h2>Filtration — Two Stages Required</h2>
         <p>Koi ponds require both mechanical and biological filtration running continuously. <strong>Mechanical filtration</strong> removes solid waste (fish feces, uneaten food, decomposing plant material) — drum filters, vortex chambers, or settlement tanks separate solids before they decompose into ammonia. <strong>Biological filtration</strong> houses the beneficial bacteria (Nitrosomonas and Nitrospira) that convert ammonia to nitrite and nitrate — large surface area media (biological brushes, K1 media, filter mats) in a biofilter or moving bed filter (MBBR/K1 reactor).</p>

@@ -190,7 +190,9 @@ export default function AfricanCichlidPage() {
             Victoria need hard, alkaline water (pH 7.8–9.0, high GH/KH),
             dense rockwork to break sightlines and create territories,
             and a tank large enough to dilute aggression (55+ gallons for
-            mbuna, 75+ for peacocks and haps). Mbuna are vegetable
+            mbuna, 75+ for peacocks and haps). The{' '}
+            <a href="/tools/aquarium-volume-calculator" className="text-brand-primary hover:underline">tank volume calculator</a>{' '}
+            turns length, width, and height into gallons before you stock a tank that is smaller than the box suggests. Mbuna are vegetable
             specialists; feeding them high-protein food causes fatal
             Malawi bloat. Species-only or carefully curated rift-lake
             communities only — they are not compatible with soft-water
