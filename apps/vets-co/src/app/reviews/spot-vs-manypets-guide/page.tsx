@@ -59,7 +59,7 @@ export default function SpotVsManyPetsGuidePage() {
           <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">Spot is the top pick when you want adjustable limits on one policy instead of a single comprehensive plan.</p>
           <div data-fold="offer">
           <PrimaryHop href="/go/spot/home?s=reviews-spot-vs-manypets-guide" label="Get a Spot quote" />
-          <HopDisclosure siteId="vets-co" href="/go/spot/home?s=reviews-spot-vs-manypets-guide" />
+          <HopDisclosure tone="on-dark" siteId="vets-co" href="/go/spot/home?s=reviews-spot-vs-manypets-guide" />
         </div>
         </>
       }

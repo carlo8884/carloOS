@@ -63,7 +63,7 @@ export default function NovemberDecemberGiftGuidePage() {
           <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">Trupanion is the insurance name to open for an accident-and-illness policy that pays the clinic at checkout.</p>
           <div data-fold="offer">
           <PrimaryHop href="/go/trupanion/home?s=reviews-november-december-gift-guide" label="Get a Trupanion quote" />
-          <HopDisclosure siteId="vets-co" href="/go/trupanion/home?s=reviews-november-december-gift-guide" />
+          <HopDisclosure tone="on-dark" siteId="vets-co" href="/go/trupanion/home?s=reviews-november-december-gift-guide" />
         </div>
         </>
       }

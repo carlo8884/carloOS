@@ -67,7 +67,7 @@ export default function LemonadeVsPetsBestGuidePage() {
           <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">Lemonade is the top pick for a young, healthy pet because that is the window the enrollment page says prices lower.</p>
           <div data-fold="offer">
           <PrimaryHop href="/go/lemonade/home?s=reviews-lemonade-vs-pets-best-guide" label="Get a Lemonade quote" />
-          <HopDisclosure siteId="vets-co" href="/go/lemonade/home?s=reviews-lemonade-vs-pets-best-guide" noteClassName="mt-3 mb-0 text-xs leading-relaxed text-white/80" />
+          <HopDisclosure tone="on-dark" siteId="vets-co" href="/go/lemonade/home?s=reviews-lemonade-vs-pets-best-guide" noteClassName="mt-3 mb-0 text-xs leading-relaxed text-white/80" />
         </div>
         </>
       }

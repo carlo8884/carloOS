@@ -62,7 +62,7 @@ export default function HolidayEmergencyVisitGuidePage() {
           <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">A holiday emergency visit costs more because the hospital keeps staff on duty overnight, and Trupanion is the policy that can pay the clinic at checkout.</p>
           <div data-fold="offer">
           <PrimaryHop href="/go/trupanion/home?s=reviews-holiday-emergency-visit-guide" label="Get a Trupanion quote" />
-          <HopDisclosure siteId="vets-co" href="/go/trupanion/home?s=reviews-holiday-emergency-visit-guide" />
+          <HopDisclosure tone="on-dark" siteId="vets-co" href="/go/trupanion/home?s=reviews-holiday-emergency-visit-guide" />
         </div>
         </>
       }

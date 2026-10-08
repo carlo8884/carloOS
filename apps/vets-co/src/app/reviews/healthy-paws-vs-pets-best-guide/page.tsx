@@ -64,7 +64,7 @@ export default function HealthyPawsVsPetsBestGuidePage() {
           <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">Healthy Paws is the top pick because one accident-and-illness plan has two levers, the deductible and the reimbursement rate.</p>
           <div data-fold="offer">
           <PrimaryHop href="/go/healthy-paws/home?s=reviews-healthy-paws-vs-pets-best-guide" label="Get a Healthy Paws quote" holdWithoutPartnerId />
-          <HopDisclosure siteId="vets-co" href="/go/healthy-paws/home?s=reviews-healthy-paws-vs-pets-best-guide" noteClassName="mt-3 mb-0 text-xs leading-relaxed text-white/80" />
+          <HopDisclosure tone="on-dark" siteId="vets-co" href="/go/healthy-paws/home?s=reviews-healthy-paws-vs-pets-best-guide" noteClassName="mt-3 mb-0 text-xs leading-relaxed text-white/80" />
         </div>
         </>
       }

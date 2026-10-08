@@ -58,7 +58,7 @@ export default function HolidayLeftoversLowFatGuidePage() {
           <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">Fatty leftovers are a known pancreatitis trigger, and a low-fat digestive-care food is the home food to shop only after a veterinarian says the dog is ready.</p>
           <div data-fold="offer">
           <PrimaryHop href="/go/amazon-brand/low+fat+digestive+care+dog+food?s=reviews-holiday-leftovers-low-fat-guide" label="Browse low-fat digestive-care dog foods on Amazon" />
-          <HopDisclosure siteId="vets-co" href="/go/amazon-brand/low+fat+digestive+care+dog+food?s=reviews-holiday-leftovers-low-fat-guide" />
+          <HopDisclosure tone="on-dark" siteId="vets-co" href="/go/amazon-brand/low+fat+digestive+care+dog+food?s=reviews-holiday-leftovers-low-fat-guide" />
         </div>
         </>
       }

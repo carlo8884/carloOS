@@ -96,7 +96,7 @@ export default function VetsPetInsurancePage() {
         <PriceAsOf date="2026-10-07" tone="dark" />
         <div data-fold="offer">
           <PrimaryHop href='/go/trupanion/home?s=reviews-best-pet-insurance' label='Get a Trupanion quote →' holdWithoutPartnerId />
-        <HopDisclosure
+        <HopDisclosure tone="on-dark"
           siteId="vets-co"
           noteClassName="mt-3 mb-0 text-xs leading-relaxed text-white/80"
           href={[
