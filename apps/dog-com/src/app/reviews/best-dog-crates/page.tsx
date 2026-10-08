@@ -51,14 +51,17 @@ export default function BestDogCratesPage() {
           style={{ fontSize: 'clamp(24px, 4vw, 46px)' }}>
           Best Dog Crates 2026 — Wire, Plastic, Heavy Duty & Furniture Style Ranked
         </h1>
+        <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">The MidWest iCrate is the top wire crate because the divider lets you shrink the space while a puppy grows.</p>
         <PriceAsOf date="2026-10-04" tone="dark" />
-        <ExperimentPrimaryHop
+        <div data-fold="offer">
+          <ExperimentPrimaryHop
           href="/go/amazon-brand/midwest+icrate+dog+crate?s=reviews-best-dog-crates"
           experiment="crate_hop_label"
           control="Check price of the MidWest iCrate on Amazon"
           variant="View the MidWest iCrate price on Amazon"
         />
-        <HopDisclosure siteId="dog-com" href="/go/amazon-brand/midwest+icrate+dog+crate?s=reviews-best-dog-crates" />
+        <HopDisclosure tone="on-dark" siteId="dog-com" href="/go/amazon-brand/midwest+icrate+dog+crate?s=reviews-best-dog-crates" />
+        </div>
         <EmailCapture
           variant="inline"
           siteId="dog-com"
@@ -255,7 +258,7 @@ export default function BestDogCratesPage() {
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-07" />
+              <ComparisonFoot updated="2026-10-08" />
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Which crate fits which job</h2>
               <FAQAccordion items={[
                 {

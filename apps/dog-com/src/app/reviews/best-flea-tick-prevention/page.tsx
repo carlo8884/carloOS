@@ -1,7 +1,7 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { RelatedReads, ComparisonFoot, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, CrossPortfolioCard, FAQAccordion, PriceAsOf, ShopCtas} from '@carloOS/ui'
+import { RelatedReads, ComparisonFoot, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, CrossPortfolioCard, FAQAccordion, PriceAsOf, ShopCtas, PrimaryHop } from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript, buildItemListSchema} from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 
@@ -29,10 +29,13 @@ export default function FleaTickPreventionPage() {
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">💊 Evidence-Based · June 2026</span>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Flea & Tick Prevention 2026</h1>
+        <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">Bravecto is the top flea and tick preventive because one chew lasts 12 weeks, and it needs a prescription.</p>
         <PriceAsOf date="2026-10-05" tone="dark" />
-        <p className="mb-5">
-          <a href="/find-a-vet" className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline">Find a vet to discuss Bravecto</a>
-        </p>
+        <div data-fold="offer">
+          <PrimaryHop href="/go/amazon-brand/dog+flea+and+tick?s=reviews-best-flea-tick-prevention" label="Browse over-the-counter dog flea and tick products on Amazon" />
+          <HopDisclosure tone="on-dark" siteId="dog-com" href="/go/amazon-brand/dog+flea+and+tick?s=reviews-best-flea-tick-prevention" />
+        </div>
+        <p className="mb-4"><a href="/find-a-vet" className="text-sm font-bold text-white underline underline-offset-2">Find a vet to discuss Bravecto</a></p>
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">Oral isoxazoline class preventives (Bravecto, NexGard, Simparica) are widely regarded as among the most effective flea and tick prevention available — they work systemically and kill parasites on contact with the dog's blood. Prescription required.</p>
       </div>
       <QuickPicks items={PICKS} />
@@ -113,7 +116,7 @@ export default function FleaTickPreventionPage() {
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-07" />
+              <ComparisonFoot updated="2026-10-08" />
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Which flea and tick preventive fits</h2>
               <FAQAccordion items={[
                 {

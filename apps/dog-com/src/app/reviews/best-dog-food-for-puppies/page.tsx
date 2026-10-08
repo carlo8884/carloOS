@@ -50,9 +50,12 @@ export default function BestPuppyFoodPage() {
           style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>
           Best Puppy Food 2026 — WSAVA-Compliant Formulas Ranked
         </h1>
+        <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">Royal Canin Large Breed Puppy is the top puppy food because large-breed growth needs a formula built for steady gain.</p>
         <PriceAsOf date="2026-10-07" tone="dark" />
-        <PrimaryHop href='/go/amazon-brand/royal+canin+large+breed+puppy?s=reviews-best-dog-food-for-puppies' label='Check price of Royal Canin Large Breed Puppy on Amazon' />
-        <HopDisclosure siteId="dog-com" href="/go/amazon-brand/royal+canin+large+breed+puppy?s=reviews-best-dog-food-for-puppies" />
+        <div data-fold="offer">
+          <PrimaryHop href='/go/amazon-brand/royal+canin+large+breed+puppy?s=reviews-best-dog-food-for-puppies' label='Check price of Royal Canin Large Breed Puppy on Amazon' />
+        <HopDisclosure tone="on-dark" siteId="dog-com" href="/go/amazon-brand/royal+canin+large+breed+puppy?s=reviews-best-dog-food-for-puppies" />
+        </div>
         <EmailCapture
           variant="inline"
           siteId="dog-com"
@@ -237,7 +240,7 @@ export default function BestPuppyFoodPage() {
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-07" />
+              <ComparisonFoot updated="2026-10-08" />
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Which puppy food fits</h2>
               <FAQAccordion items={[
                 {

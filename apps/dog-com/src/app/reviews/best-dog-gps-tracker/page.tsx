@@ -24,9 +24,12 @@ export default function BestGPSTrackerPage() {
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">Buyer's Guide</span>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Dog GPS Trackers 2026</h1>
+        <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">The Fi Series 3+ is the top GPS collar because Fi rates the battery at up to three months.</p>
         <PriceAsOf date="2026-10-07" tone="dark" />
-        <PrimaryHop href='/go/amazon-brand/fi+series+3+dog+collar?s=reviews-best-dog-gps-tracker' label='Check price of the Fi Series 3+ collar on Amazon' />
-        <HopDisclosure siteId="dog-com" href="/go/amazon-brand/fi+series+3+dog+collar?s=reviews-best-dog-gps-tracker" />
+        <div data-fold="offer">
+          <PrimaryHop href='/go/amazon-brand/fi+series+3+dog+collar?s=reviews-best-dog-gps-tracker' label='Check price of the Fi Series 3+ collar on Amazon' />
+        <HopDisclosure tone="on-dark" siteId="dog-com" href="/go/amazon-brand/fi+series+3+dog+collar?s=reviews-best-dog-gps-tracker" />
+        </div>
         <EmailCapture
           variant="inline"
           siteId="dog-com"
@@ -128,7 +131,7 @@ export default function BestGPSTrackerPage() {
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-07" />
+              <ComparisonFoot updated="2026-10-08" />
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Which tracker fits</h2>
               <FAQAccordion items={[
                 {
