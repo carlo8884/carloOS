@@ -77,7 +77,7 @@ export default function Page() {
 
           <ArticleSourcesList sources={[
             { label: 'A Consumer’s Guide to Pet Insurance (claims and reimbursement)', url: 'https://content.naic.org/cipr-topics/pet-insurance', publisher: 'NAIC' },
-            { label: 'State of the Industry Report (claims handling)', url: 'https://naphia.org/state-of-the-industry/', publisher: 'NAPHIA' },
+            { label: 'NAPHIA 2025 State of the Industry Report', url: 'https://naphia.org/news/naphia-news/soi-report-2025/', publisher: 'NAPHIA' },
             { label: 'Sample carrier claim-process and deductible disclosures', publisher: 'General carrier policy disclosures (not an endorsement)' },
           ]} />
         </div>

@@ -76,7 +76,7 @@ export default function Page() {
 
           <ArticleSourcesList sources={[
             { label: 'A Consumer’s Guide to Pet Insurance', url: 'https://content.naic.org/cipr-topics/pet-insurance', publisher: 'NAIC' },
-            { label: 'State of the Industry Report (plan features and discounts)', url: 'https://naphia.org/state-of-the-industry/', publisher: 'NAPHIA' },
+            { label: 'State of the Industry Report (plan features and discounts)', url: 'https://naphia.org/news/naphia-news/soi-report-2025/', publisher: 'NAPHIA' },
             { label: 'Sample carrier multi-pet discount disclosures', publisher: 'General carrier policy disclosures (not an endorsement)' },
           ]} />
         </div>

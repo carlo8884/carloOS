@@ -6,7 +6,7 @@ import { ArticleByline, CalloutBox, DropCap, PullQuote, ArticleSourcesList } fro
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Chronic Kidney Disease in Cats — Stages, Diet, Outlook | Vets.co", description: "Chronic kidney disease is the most common serious illness in older cats. IRIS staging, renal diets, fluid therapy, and prognosis explained.", path: '/health/kidney-disease-cats', type: 'article' })
 const SOURCES = [
   { label: 'Merck Veterinary Manual: Renal Dysfunction in Dogs and Cats', url: 'https://www.merckvetmanual.com/urinary-system/noninfectious-diseases-of-the-urinary-system-in-small-animals/renal-dysfunction-in-dogs-and-cats', publisher: 'Merck Vet Manual' },
-  { label: 'IRIS (International Renal Interest Society): CKD Staging and Substaging Guidelines', url: 'https://www.iris-kidney.com/guidelines/staging.html', publisher: 'IRIS' },
+  { label: 'IRIS (International Renal Interest Society): CKD Staging and Substaging Guidelines', url: 'https://www.iris-kidney.com/iris-staging-system', publisher: 'IRIS' },
   { label: 'Sparkes AH et al. ISFM Consensus Guidelines on the Diagnosis and Management of Feline CKD. J Feline Med Surg. 2016;18(3):219-239.', publisher: 'J Feline Med Surg' },
   { label: 'Brown SA et al. Beneficial effects of chronic administration of dietary omega-3 polyunsaturated fatty acids in dogs with renal insufficiency. J Lab Clin Med. 1998;131(5):447-455.', publisher: 'J Lab Clin Med' },
 ]

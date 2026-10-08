@@ -309,10 +309,6 @@ export const Specialties: Specialty[] = [
       { name: 'ACVIM — American College of Veterinary Internal Medicine', url: ACVIM },
       { name: 'Veterinary Cancer Society', url: 'https://vetcancersociety.org/' },
       { name: 'AVMA — American Veterinary Medical Association', url: AVMA },
-      {
-        name: 'Withrow & MacEwen\'s Small Animal Clinical Oncology (Elsevier) — standard reference textbook',
-        url: 'https://www.elsevier.com/books/withrow-and-macewens-small-animal-clinical-oncology/9780323594967',
-      },
       { name: 'NAPHIA — North American Pet Health Insurance Association', url: NAPHIA },
     ],
   },
@@ -535,10 +531,6 @@ export const Specialties: Specialty[] = [
     ],
     citedSources: [
       { name: 'ACVO — American College of Veterinary Ophthalmologists', url: ACVO },
-      {
-        name: 'ACVO Genetics Committee — Ocular Disorders Presumed to be Inherited in Purebred Dogs',
-        url: 'https://www.acvo.org/genetics',
-      },
       { name: 'OFA — Companion Animal Eye Registry (CAER)', url: 'https://www.ofa.org/diseases/eye-certification' },
       { name: 'AVMA — American Veterinary Medical Association', url: AVMA },
       { name: 'NAPHIA — North American Pet Health Insurance Association', url: NAPHIA },

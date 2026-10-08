@@ -81,7 +81,7 @@ export interface Diagnostic {
 const ACVIM = 'https://www.acvim.org/resources-tools/animal-owners'
 const AAHA = 'https://www.aaha.org/for-pet-parents/find-an-aaha-accredited-animal-hospital-near-me/'
 const ACVR = 'https://www.acvr.org/page/pet-owners'
-const ACVD = 'https://www.acvd.org/page/PetOwners'
+const ACVD = 'https://acvd.org/'
 const MERCK = 'https://www.merckvetmanual.com/'
 
 export const Diagnostics: Diagnostic[] = [
