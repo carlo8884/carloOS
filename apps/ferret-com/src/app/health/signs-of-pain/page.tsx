@@ -149,6 +149,7 @@ export default function FerretSignsOfPainPage() {
             <RelatedLinks
               title="Related Guides"
               links={[
+                { label: 'Ferret Grimace Scale', href: '/tools/ferret-grimace-scale' },
                 { label: 'Emergency Warning Signs', href: '/health/emergency-warning-signs' },
                 { label: 'Stomach Ulcers', href: '/health/ferret-ulcers' },
                 { label: 'GI Blockage', href: '/health/gastrointestinal-blockage' },
@@ -160,6 +161,7 @@ export default function FerretSignsOfPainPage() {
         }
 
         relatedLinks={[
+          { title: 'Ferret Grimace Scale', href: '/tools/ferret-grimace-scale' },
           { title: 'Ferret Health Hub', href: '/health' },
           { title: 'Emergency Warning Signs', href: '/health/emergency-warning-signs' },
           { title: 'Find an Exotic Vet', href: '/find-an-exotic-vet' },
@@ -182,6 +184,13 @@ export default function FerretSignsOfPainPage() {
             sleeping a little more. Learning to read those small deviations is
             how owners catch problems while they are still treatable.
           </DropCap>
+          <p>
+            A structured way to look at those small changes is the{' '}
+            <a href="/tools/ferret-grimace-scale" className="text-brand-primary hover:underline">
+              ferret grimace scale
+            </a>
+            . It scores ear, eye, and muzzle position. It does not diagnose.
+          </p>
 
           <h2 id="why">Why Ferrets Hide Pain</h2>
           <p>

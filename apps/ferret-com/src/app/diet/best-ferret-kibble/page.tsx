@@ -167,6 +167,7 @@ export default function BestFerretKibblePage() {
               links={[
                 { label: 'November and December gifts', href: '/reviews/november-december-gift-guide' },
                 { label: 'Label calculator', href: '/tools/label-calculator' },
+                { label: 'Ferret Body Condition Score', href: '/tools/ferret-body-condition-score' },
                 { label: 'Whole-Prey vs Kibble', href: '/diet/whole-prey-vs-kibble' },
                 { label: 'Protein & Fat Requirements', href: '/diet/protein-and-fat-requirements' },
                 { label: 'Kit vs Adult Feeding', href: '/diet/kit-vs-adult-feeding' },
@@ -179,6 +180,7 @@ export default function BestFerretKibblePage() {
         }
 
         relatedLinks={[
+          { title: 'Ferret Body Condition Score', href: '/tools/ferret-body-condition-score' },
           { title: 'Ferret Diet Hub', href: '/diet' },
           { title: 'Reading Food Labels', href: '/diet/reading-food-labels' },
           { title: 'Protein & Fat Requirements', href: '/diet/protein-and-fat-requirements' },
@@ -212,6 +214,12 @@ export default function BestFerretKibblePage() {
           />
 
 
+
+          <p>
+            Kibble choice and body condition are different questions. The{' '}
+            <Link href="/tools/ferret-body-condition-score">ferret body condition score</Link>{' '}
+            is how to look at rib and waist cover once the diet is in the bowl.
+          </p>
 
           <h2 id="panel">Read the Panel First</h2>
           <p>

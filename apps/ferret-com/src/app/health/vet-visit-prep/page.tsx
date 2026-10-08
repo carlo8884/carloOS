@@ -155,6 +155,7 @@ export default function FerretVetVisitPrepPage() {
             <RelatedLinks
               title="Related Guides"
               links={[
+                { label: 'Is This a Ferret Emergency?', href: '/tools/is-this-a-ferret-emergency' },
                 { label: 'Vaccinations', href: '/health/vaccinations' },
                 { label: 'Aging Ferret Care', href: '/health/aging-ferret-care' },
                 { label: 'First-Year Schedule', href: '/first-year-schedule' },
@@ -166,6 +167,7 @@ export default function FerretVetVisitPrepPage() {
         }
 
         relatedLinks={[
+          { title: 'Is This a Ferret Emergency?', href: '/tools/is-this-a-ferret-emergency' },
           { title: 'Ferret Health Hub', href: '/health' },
           { title: 'Annual Checkup Guide', href: '/health/annual-checkup-guide' },
           { title: 'Find an Exotic Vet', href: '/find-an-exotic-vet' },
@@ -189,6 +191,13 @@ export default function FerretVetVisitPrepPage() {
             visit prep — what to bring, how to travel, what to expect — is
             useful but secondary to that first choice.
           </DropCap>
+          <p>
+            Some visits cannot wait for a scheduled exam. The{' '}
+            <a href="/tools/is-this-a-ferret-emergency" className="text-brand-primary hover:underline">
+              Is This a Ferret Emergency?
+            </a>{' '}
+            tool sorts common signs into go-now and call-today. It does not replace the clinic.
+          </p>
 
           <p>The exam, bloodwork, dental, and surgery figures below are typical US exotic-pet clinic ranges dated 2026-10-04.</p>
           <h2 id="tldr">TL;DR</h2>
