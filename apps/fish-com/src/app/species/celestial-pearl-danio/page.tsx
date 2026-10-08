@@ -7,7 +7,7 @@ import { ArticleByline } from '@carloOS/ui'
 const SOURCES = [
   { label: "Danio margaritatus — Seriously Fish species profile", url: "https://www.seriouslyfish.com/species/danio-margaritatus/", publisher: "Seriously Fish" },
   { label: "Danio margaritatus — FishBase species record", url: "https://www.fishbase.se/summary/Danio-margaritatus.html", publisher: "FishBase" },
-  { label: "Danio margaritatus — IUCN Red List assessment", url: "https://www.iucnredlist.org/species/166497/6220811", publisher: "IUCN Red List" },
+  { label: "Danio margaritatus — IUCN Red List assessment", url: "https://www.iucnredlist.org/species/168409/1186232", publisher: "IUCN Red List" },
   { label: "Roberts, T.R. The Celestial Pearl Danio, a new genus and species of colourful minute Cyprinid fish from Myanmar. Raffles Bulletin of Zoology, 2007.", publisher: "Raffles Bulletin of Zoology" },
 ]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Celestial Pearl Danio: Tank, Diet & Basics | Fish.com', description: 'Celestial pearl danios are 1-inch jewels for nano tanks. Spotted pattern, stunning males, peaceful community fish. Groups of 8+ required.', path: '/species/celestial-pearl-danio', type: 'article' })
