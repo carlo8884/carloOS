@@ -7,7 +7,7 @@ import { crossSiteHref } from '@carloOS/config'
 
 const SOURCES = [
   { label: 'Merck Veterinary Manual: Mange in Dogs', url: 'https://www.merckvetmanual.com/integumentary-system/mange/overview-of-mange-in-animals', publisher: 'Merck Vet Manual' },
-  { label: 'CAPC: Companion Animal Parasite Council — Sarcoptic Mange and Demodex', url: 'https://capcvet.org/guidelines/external-parasites/', publisher: 'CAPC' },
+  { label: 'CAPC: Companion Animal Parasite Council — Sarcoptic Mite', url: 'https://capcvet.org/guidelines/sarcoptic-mite/', publisher: 'CAPC' },
   { label: 'Mueller RS et al. A review of topical therapy for skin infections with bacteria and yeast. Vet Dermatol. 2012;23(4):330-341.', publisher: 'Vet Dermatology' },
 ]
 
