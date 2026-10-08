@@ -1,6 +1,7 @@
 'use client'
 
 import { HopDisclosure } from '../../../components/HopDisclosure'
+import Link from 'next/link'
 /**
  * Dog Chocolate Toxicity Meter -- /tools/dog-chocolate-toxicity-calculator
  *
@@ -354,6 +355,11 @@ export default function ChocolateToxicityMeter() {
             <ResultMeaning>
               That mg/kg figure is an educational theobromine estimate from the chocolate type and amount, not a diagnosis.
             </ResultMeaning>
+            <p className="mt-3 text-sm">
+              <Link href="/health/dog-symptoms-guide" className="font-semibold text-brand-primary underline">
+                Read the dog symptoms guide
+              </Link>
+            </p>
 
             {/* Call-to-action repeated on the result itself, EVERY tier */}
             <div className="rounded-lg bg-brand-white border border-brand-border p-4">

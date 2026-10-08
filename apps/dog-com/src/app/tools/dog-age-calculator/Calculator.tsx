@@ -1,6 +1,7 @@
 'use client'
 
 import { HopDisclosure } from '../../../components/HopDisclosure'
+import Link from 'next/link'
 
 /**
  * Dog Age in Human Years Calculator -- /tools/dog-age-calculator
@@ -190,6 +191,11 @@ export default function DogAgeCalculator() {
       <ResultMeaning>
         That human-year number is a size-banded estimate of equivalent age, not a health assessment.
       </ResultMeaning>
+      <p className="mt-3 text-sm">
+        <Link href="/guides/dog-body-condition-score" className="font-semibold text-brand-primary underline">
+          Score body condition next
+        </Link>
+      </p>
 
       {/* Formula reference row */}
       <div className="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-3">

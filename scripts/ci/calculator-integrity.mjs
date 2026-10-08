@@ -6537,6 +6537,14 @@ const CALCULATORS = [
     why: 'Money path: under-hero capture with a concrete new-puppy-checklist offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN.',
   },
   {
+    id: 'dog · dog-age-calculator result guide',
+    file: 'apps/dog-com/src/app/tools/dog-age-calculator/Calculator.tsx',
+    mustInclude: [
+      { re: /href="\/guides\/dog-body-condition-score"/, label: 'age result links the body-condition guide' },
+    ],
+    why: 'The age result keeps its existing shop hop and adds one internal guide link.',
+  },
+  {
     id: 'dog · dog-age-calculator hops',
     file: 'apps/dog-com/src/app/tools/dog-age-calculator/page.tsx',
     mustInclude: [
@@ -6596,6 +6604,14 @@ const CALCULATORS = [
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
     ],
     why: 'Money path: under-hero capture with a concrete walk-gear-checklist offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN.',
+  },
+  {
+    id: 'dog · dog-chocolate-toxicity-calculator result guide',
+    file: 'apps/dog-com/src/app/tools/dog-chocolate-toxicity-calculator/ToxicityMeter.tsx',
+    mustInclude: [
+      { re: /href="\/health\/dog-symptoms-guide"/, label: 'toxicity result links the symptoms guide' },
+    ],
+    why: 'The toxicity result keeps its existing shop hop and adds one internal guide link.',
   },
   {
     id: 'dog · dog-chocolate-toxicity-calculator hops',
@@ -7440,6 +7456,7 @@ const CALCULATORS = [
       { re: /tier: 'same-day'/, label: 'same-day fallback when mixed/urgent' },
       { re: /There is no "all clear" verdict/, label: 'no all-clear verdict (comment contract)' },
       { re: /from '\.\.\/\.\.\/\.\.\/data\/dog-symptom-signs'/, label: 'signs imported from shared dog-symptom-signs (do not fork)' },
+      { re: /href="\/guides\/dog-first-aid-kit"/, label: 'emergency result links the first-aid kit guide' },
     ],
     why: 'Existing conservative triage: any emergency sign → go now; monitor only for 09/14 monitor-eligible signs; mixed selections resolve upward. No all-clear. Do not invent a new formula.',
   },

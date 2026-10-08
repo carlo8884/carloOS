@@ -227,6 +227,11 @@ export default function TriageHelper() {
             >
               Find your nearest emergency vet →
             </Link>
+            <p className="mt-3 text-sm">
+              <Link href="/guides/dog-first-aid-kit" className="font-semibold text-brand-primary underline">
+                See what belongs in a dog first-aid kit
+              </Link>
+            </p>
 
             <p className="mt-3 text-xs text-brand-text-light m-0">
               Suspect poisoning? Call ASPCA Animal Poison Control:{' '}
