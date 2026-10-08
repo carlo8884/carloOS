@@ -39,7 +39,7 @@ const schema = buildHowToSchema({
     },
     {
       name: 'Pick a change percent',
-      text: 'A standard community tank is 25% weekly. Heavy bioload (goldfish, large cichlids) is 30–50% weekly. Reef tanks usually do 10–15% with matched-salinity water. Cap a single change at 50%.',
+      text: 'These change percents are planning figures: 25% weekly for a community tank, 30–50% weekly for a heavy bioload, and 10–15% for a reef tank with matched salinity. Cap a single change at 50%.',
     },
     {
       name: 'Multiply filled volume by the percent',

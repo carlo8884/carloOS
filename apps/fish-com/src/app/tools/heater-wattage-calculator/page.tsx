@@ -36,7 +36,7 @@ const schema = buildHowToSchema({
   totalTime: 'PT2M',
   steps: [
     { name: 'Find the temperature delta', text: 'Subtract the coldest typical room temperature from your target tank temperature.' },
-    { name: 'Apply 3 W per gallon per 10°F', text: 'Multiply tank gallons × 3 × (delta / 10) to get a baseline heater wattage requirement.' },
+    { name: 'Apply 3 W per gallon per 10°F', text: 'Planning figure, not a manufacturer chart: multiply tank gallons × 3 × (delta / 10), then apply the insulation factor and 25% headroom.' },
     { name: 'Add 25% headroom', text: 'Heaters age and lose efficiency. Cold snaps push beyond typical room lows. Adding 25% prevents undershoot during winter.' },
     { name: 'Split into two heaters for large tanks', text: 'On tanks 40 gallons and up, two smaller heaters are safer than one large one. They fail safer and give redundancy.' },
     { name: 'Use a controller', text: 'For tanks over 75 gallons or with sensitive species, a dedicated controller (Inkbird, Ranco) prevents stuck-heater disasters.' },

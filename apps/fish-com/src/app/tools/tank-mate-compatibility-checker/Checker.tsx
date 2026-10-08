@@ -5,9 +5,14 @@ import { ResultMeaning, ToolError } from '@carloOS/ui'
 import { CalcCard } from '../_components/CalcShell'
 import { ResultCTA } from '../_components/ResultCTA'
 
-// ── Species the site has profile pages for, with the traits that drive
-//    compatibility. Temp/pH ranges are typical aquarium-keeping figures.
-//    Conservative, general-guidance values — not lab measurements.
+// Temperature bands are the published environment range for that species,
+// converted so the °F integers contain the °C band (floor of the low, ceiling
+// of the high), except bristlenose, which uses Seriously Fish's own 70–79°F.
+// FishBase has no temperature line for Ancistrus cirrhosus. Mystery snail,
+// cherry shrimp, and the generic African-cichlid row have no single species
+// page, so they carry no numeric band. Goldfish stays on the coldwater flag;
+// FishBase's 0–41°C record is not used as a preferred band. Betta uses the
+// FishBase 24–30°C band already cited on this page (75–86°F).
 type Temperament = 'peaceful' | 'semi-aggressive' | 'aggressive' | 'territorial'
 
 interface Species {
@@ -15,8 +20,9 @@ interface Species {
   name: string
   slug?: string // /species/<slug> if a profile exists
   temperament: Temperament
-  tempLow: number // °F
-  tempHigh: number
+  /** Inclusive °F band containing the published °C range, or null when no species page states one. */
+  tempLow: number | null
+  tempHigh: number | null
   finNipper: boolean
   longFinned: boolean // vulnerable to fin-nipping
   hardWater: boolean // wants hard, alkaline water
@@ -27,26 +33,26 @@ interface Species {
 
 // Ordered list — common community + a few notable specialists.
 const SPECIES: Species[] = [
-  { id: 'betta', name: 'Betta', slug: 'betta-fish', temperament: 'semi-aggressive', tempLow: 76, tempHigh: 82, finNipper: false, longFinned: true, hardWater: false, coldwater: false, adultInches: 2.5, predatorMouth: false },
-  { id: 'neon-tetra', name: 'Neon Tetra', slug: 'neon-tetra', temperament: 'peaceful', tempLow: 72, tempHigh: 78, finNipper: false, longFinned: false, hardWater: false, coldwater: false, adultInches: 1.5, predatorMouth: false },
+  { id: 'betta', name: 'Betta', slug: 'betta-fish', temperament: 'semi-aggressive', tempLow: 75, tempHigh: 86, finNipper: false, longFinned: true, hardWater: false, coldwater: false, adultInches: 2.5, predatorMouth: false },
+  { id: 'neon-tetra', name: 'Neon Tetra', slug: 'neon-tetra', temperament: 'peaceful', tempLow: 68, tempHigh: 79, finNipper: false, longFinned: false, hardWater: false, coldwater: false, adultInches: 1.5, predatorMouth: false },
   { id: 'cardinal-tetra', name: 'Cardinal Tetra', slug: 'cardinal-tetra', temperament: 'peaceful', tempLow: 73, tempHigh: 81, finNipper: false, longFinned: false, hardWater: false, coldwater: false, adultInches: 1.5, predatorMouth: false },
-  { id: 'guppy', name: 'Guppy', slug: 'guppy', temperament: 'peaceful', tempLow: 72, tempHigh: 82, finNipper: false, longFinned: true, hardWater: true, coldwater: false, adultInches: 2, predatorMouth: false },
-  { id: 'molly', name: 'Molly', slug: 'molly-fish', temperament: 'peaceful', tempLow: 72, tempHigh: 82, finNipper: false, longFinned: false, hardWater: true, coldwater: false, adultInches: 4, predatorMouth: false },
-  { id: 'platy', name: 'Platy', slug: 'platy-fish', temperament: 'peaceful', tempLow: 70, tempHigh: 80, finNipper: false, longFinned: false, hardWater: true, coldwater: false, adultInches: 2.5, predatorMouth: false },
-  { id: 'swordtail', name: 'Swordtail', slug: 'swordtail-fish', temperament: 'peaceful', tempLow: 70, tempHigh: 82, finNipper: false, longFinned: false, hardWater: true, coldwater: false, adultInches: 4, predatorMouth: false },
-  { id: 'angelfish', name: 'Angelfish', slug: 'angelfish', temperament: 'semi-aggressive', tempLow: 76, tempHigh: 84, finNipper: false, longFinned: true, hardWater: false, coldwater: false, adultInches: 6, predatorMouth: true },
-  { id: 'corydoras', name: 'Corydoras', slug: 'corydoras', temperament: 'peaceful', tempLow: 72, tempHigh: 79, finNipper: false, longFinned: false, hardWater: false, coldwater: false, adultInches: 2.5, predatorMouth: false },
-  { id: 'bristlenose-pleco', name: 'Bristlenose Pleco', slug: 'bristlenose-pleco', temperament: 'peaceful', tempLow: 73, tempHigh: 81, finNipper: false, longFinned: false, hardWater: false, coldwater: false, adultInches: 5, predatorMouth: false },
-  { id: 'harlequin-rasbora', name: 'Harlequin Rasbora', slug: 'harlequin-rasbora', temperament: 'peaceful', tempLow: 73, tempHigh: 81, finNipper: false, longFinned: false, hardWater: false, coldwater: false, adultInches: 2, predatorMouth: false },
-  { id: 'zebra-danio', name: 'Zebra Danio', slug: 'zebra-danio', temperament: 'semi-aggressive', tempLow: 65, tempHigh: 77, finNipper: true, longFinned: false, hardWater: false, coldwater: false, adultInches: 2, predatorMouth: false },
-  { id: 'dwarf-gourami', name: 'Dwarf Gourami', slug: 'dwarf-gourami', temperament: 'peaceful', tempLow: 76, tempHigh: 82, finNipper: false, longFinned: false, hardWater: false, coldwater: false, adultInches: 3.5, predatorMouth: false },
-  { id: 'kuhli-loach', name: 'Kuhli Loach', slug: 'kuhli-loach', temperament: 'peaceful', tempLow: 75, tempHigh: 82, finNipper: false, longFinned: false, hardWater: false, coldwater: false, adultInches: 4, predatorMouth: false },
-  { id: 'mystery-snail', name: 'Mystery Snail', slug: 'mystery-snail', temperament: 'peaceful', tempLow: 68, tempHigh: 82, finNipper: false, longFinned: false, hardWater: true, coldwater: false, adultInches: 2, predatorMouth: false },
-  { id: 'cherry-shrimp', name: 'Cherry Shrimp', slug: 'cherry-shrimp', temperament: 'peaceful', tempLow: 65, tempHigh: 80, finNipper: false, longFinned: false, hardWater: false, coldwater: false, adultInches: 0.5, predatorMouth: false },
-  { id: 'tiger-barb', name: 'Tiger Barb', temperament: 'semi-aggressive', tempLow: 74, tempHigh: 82, finNipper: true, longFinned: false, hardWater: false, coldwater: false, adultInches: 3, predatorMouth: false },
-  { id: 'oscar', name: 'Oscar', slug: 'oscar', temperament: 'aggressive', tempLow: 74, tempHigh: 81, finNipper: false, longFinned: false, hardWater: false, coldwater: false, adultInches: 12, predatorMouth: true },
-  { id: 'african-cichlid', name: 'African Cichlid', slug: 'african-cichlid', temperament: 'aggressive', tempLow: 74, tempHigh: 82, finNipper: false, longFinned: false, hardWater: true, coldwater: false, adultInches: 5, predatorMouth: true },
-  { id: 'goldfish', name: 'Goldfish', slug: 'goldfish', temperament: 'peaceful', tempLow: 60, tempHigh: 74, finNipper: false, longFinned: false, hardWater: false, coldwater: true, adultInches: 8, predatorMouth: true },
+  { id: 'guppy', name: 'Guppy', slug: 'guppy', temperament: 'peaceful', tempLow: 64, tempHigh: 83, finNipper: false, longFinned: true, hardWater: true, coldwater: false, adultInches: 2, predatorMouth: false },
+  { id: 'molly', name: 'Molly', slug: 'molly-fish', temperament: 'peaceful', tempLow: 64, tempHigh: 83, finNipper: false, longFinned: false, hardWater: true, coldwater: false, adultInches: 4, predatorMouth: false },
+  { id: 'platy', name: 'Platy', slug: 'platy-fish', temperament: 'peaceful', tempLow: 64, tempHigh: 77, finNipper: false, longFinned: false, hardWater: true, coldwater: false, adultInches: 2.5, predatorMouth: false },
+  { id: 'swordtail', name: 'Swordtail', slug: 'swordtail-fish', temperament: 'peaceful', tempLow: 71, tempHigh: 83, finNipper: false, longFinned: false, hardWater: true, coldwater: false, adultInches: 4, predatorMouth: false },
+  { id: 'angelfish', name: 'Angelfish', slug: 'angelfish', temperament: 'semi-aggressive', tempLow: 75, tempHigh: 86, finNipper: false, longFinned: true, hardWater: false, coldwater: false, adultInches: 6, predatorMouth: true },
+  { id: 'corydoras', name: 'Corydoras', slug: 'corydoras', temperament: 'peaceful', tempLow: 77, tempHigh: 83, finNipper: false, longFinned: false, hardWater: false, coldwater: false, adultInches: 2.5, predatorMouth: false },
+  { id: 'bristlenose-pleco', name: 'Bristlenose Pleco', slug: 'bristlenose-pleco', temperament: 'peaceful', tempLow: 70, tempHigh: 79, finNipper: false, longFinned: false, hardWater: false, coldwater: false, adultInches: 5, predatorMouth: false },
+  { id: 'harlequin-rasbora', name: 'Harlequin Rasbora', slug: 'harlequin-rasbora', temperament: 'peaceful', tempLow: 71, tempHigh: 77, finNipper: false, longFinned: false, hardWater: false, coldwater: false, adultInches: 2, predatorMouth: false },
+  { id: 'zebra-danio', name: 'Zebra Danio', slug: 'zebra-danio', temperament: 'semi-aggressive', tempLow: 64, tempHigh: 76, finNipper: true, longFinned: false, hardWater: false, coldwater: false, adultInches: 2, predatorMouth: false },
+  { id: 'dwarf-gourami', name: 'Dwarf Gourami', slug: 'dwarf-gourami', temperament: 'peaceful', tempLow: 77, tempHigh: 83, finNipper: false, longFinned: false, hardWater: false, coldwater: false, adultInches: 3.5, predatorMouth: false },
+  { id: 'kuhli-loach', name: 'Kuhli Loach', slug: 'kuhli-loach', temperament: 'peaceful', tempLow: 75, tempHigh: 86, finNipper: false, longFinned: false, hardWater: false, coldwater: false, adultInches: 4, predatorMouth: false },
+  { id: 'mystery-snail', name: 'Mystery Snail', slug: 'mystery-snail', temperament: 'peaceful', tempLow: null, tempHigh: null, finNipper: false, longFinned: false, hardWater: true, coldwater: false, adultInches: 2, predatorMouth: false },
+  { id: 'cherry-shrimp', name: 'Cherry Shrimp', slug: 'cherry-shrimp', temperament: 'peaceful', tempLow: null, tempHigh: null, finNipper: false, longFinned: false, hardWater: false, coldwater: false, adultInches: 0.5, predatorMouth: false },
+  { id: 'tiger-barb', name: 'Tiger Barb', temperament: 'semi-aggressive', tempLow: 68, tempHigh: 79, finNipper: true, longFinned: false, hardWater: false, coldwater: false, adultInches: 3, predatorMouth: false },
+  { id: 'oscar', name: 'Oscar', slug: 'oscar', temperament: 'aggressive', tempLow: 71, tempHigh: 77, finNipper: false, longFinned: false, hardWater: false, coldwater: false, adultInches: 12, predatorMouth: true },
+  { id: 'african-cichlid', name: 'African Cichlid', slug: 'african-cichlid', temperament: 'aggressive', tempLow: null, tempHigh: null, finNipper: false, longFinned: false, hardWater: true, coldwater: false, adultInches: 5, predatorMouth: true },
+  { id: 'goldfish', name: 'Goldfish', slug: 'goldfish', temperament: 'peaceful', tempLow: null, tempHigh: null, finNipper: false, longFinned: false, hardWater: false, coldwater: true, adultInches: 8, predatorMouth: true },
 ]
 
 const SPECIES_BY_ID: Record<string, Species> = Object.fromEntries(SPECIES.map((s) => [s.id, s]))
@@ -74,14 +80,13 @@ export function judgePair(a: Species, b: Species): PairResult {
   if (a.coldwater !== b.coldwater) {
     escalate('incompatible')
     const cold = a.coldwater ? a.name : b.name
-    reasons.push(`${cold} is flagged coldwater in this checker. Pairing it with a tropical species is treated as incompatible. Published ranges are on the page (FishBase): this band is a planning flag, not a measured preference.`)
-  } else {
-    // Overlapping comfortable temperature band check.
+    reasons.push(`${cold} is flagged coldwater in this checker. Pairing it with a tropical species is treated as incompatible. FishBase records Carassius auratus as subtropical, 0–41°C; that recorded range is not used as a preferred band.`)
+  } else if (a.tempLow != null && a.tempHigh != null && b.tempLow != null && b.tempHigh != null) {
     const low = Math.max(a.tempLow, b.tempLow)
     const high = Math.min(a.tempHigh, b.tempHigh)
     if (high - low < 3) {
       escalate('caution')
-      reasons.push(`This checker's working temperature bands barely overlap (${low}–${high}°F). Those bands are planning flags, not a published ideal range.`)
+      reasons.push(`Published temperature bands barely overlap (${low}–${high}°F). ${a.name} is listed at ${a.tempLow}–${a.tempHigh}°F and ${b.name} at ${b.tempLow}–${b.tempHigh}°F.`)
     }
   }
 
@@ -147,7 +152,12 @@ export function judgePair(a: Species, b: Species): PairResult {
   }
 
   if (verdict === 'compatible' && reasons.length === 0) {
-    reasons.push("This checker's planning verdict: similar temperament flags, overlapping working temperature bands, and no size or fin-nipping flag. It is not a published safest-mate list.")
+    const bothBands = a.tempLow != null && b.tempLow != null
+    reasons.push(
+      bothBands
+        ? "Similar temperament flags, overlapping published temperature bands, and no size or fin-nipping flag. This is not a published safest-mate list."
+        : "Similar temperament flags and no size or fin-nipping flag. Temperature overlap was not scored because at least one species has no published band on this page. This is not a published safest-mate list."
+    )
   }
 
   return { a, b, verdict, reasons }
@@ -236,7 +246,7 @@ export default function Checker() {
           </div>
           <p className="text-sm text-white/70 mt-2 leading-relaxed">
             {overall === 'compatible' &&
-              'These species are a commonly recommended community combination. Final success still depends on tank size, group sizes (schooling fish need 6+), and individual temperament.'}
+              'No pairing in this selection was flagged. Final success still depends on tank size, group size, and individual temperament.'}
             {overall === 'caution' &&
               'This mix can work in the right setup, but at least one pairing carries risk. Read the per-pair notes below — most cautions come down to tank size, fin-nipping, or a water-parameter compromise.'}
             {overall === 'incompatible' &&

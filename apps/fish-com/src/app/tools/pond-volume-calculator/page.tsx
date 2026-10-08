@@ -36,7 +36,7 @@ const howToSchema = buildHowToSchema({
     { name: 'Measure dimensions', text: 'Measure the pond length, width, and average depth in feet or meters. Use average depth, not the deepest point, if the bottom is contoured.' },
     { name: 'Pick the formula for the shape', text: 'Rectangular: length × width × depth. Circular: π × radius² × depth. Oval: π × (length/2) × (width/2) × depth.' },
     { name: 'Convert to gallons', text: 'Multiply the volume in cubic feet by 7.48 to get US gallons, or multiply gallons by 3.785 to get liters.' },
-    { name: 'Adjust for irregular shape', text: 'For ponds with sloped sides, shelves, or an irregular outline, multiply by about 0.85 to get closer to true water volume.' },
+    { name: 'Adjust for irregular shape', text: 'For ponds with sloped sides, shelves, or an irregular outline, multiply by 0.85. That factor is a planning allowance, not a surveyed volume. The 7.48052 gallons per cubic foot step is the US gallon.' },
     { name: 'Size liner, pump, and filter from the gallons', text: 'Use the gallon figure to pick an EPDM liner, a submersible pump that turns the pond over about once an hour, and a filter or skimmer kit rated at or above that volume.' },
   ],
 })

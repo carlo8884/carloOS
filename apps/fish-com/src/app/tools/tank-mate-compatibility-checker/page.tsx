@@ -358,9 +358,12 @@ export default function TankMateCompatibilityPage() {
         </p>
         <ul>
           <li>
-            <strong>Temperature range.</strong> FishBase lists Betta splendens as tropical, 24–30°C, and Carassius auratus
-            as subtropical, 0–41°C. This checker treats that coldwater-versus-tropical split as incompatible. Other
-            bands inside the checker are planning flags, not published ideals.
+            <strong>Temperature range.</strong> Where a species has a FishBase environment line, the checker uses that
+            °C band, widened to whole °F so the band is not tighter than the page. Bristlenose uses the Seriously Fish
+            21–26°C line (stated there as 70–79°F) because FishBase&apos;s Ancistrus cirrhosus page has no temperature.
+            Betta splendens is FishBase 24–30°C. Goldfish stays on the coldwater flag; the FishBase 0–41°C record is not
+            used as a preferred band. Mystery snails, cherry shrimp, and the generic African-cichlid row have no single
+            species temperature page, so those verdicts do not print a degree range.
           </li>
           <li>
             <strong>Temperament &amp; territory.</strong> Aggressive species (oscar, African cichlid) typically harass
@@ -409,6 +412,81 @@ export default function TankMateCompatibilityPage() {
               label: 'Seriously Fish — Betta splendens: 22–30°C, not a community fish',
               publisher: 'Seriously Fish',
               url: 'https://www.seriouslyfish.com/species/betta-splendens/',
+            },
+            {
+              label: 'FishBase — Paracheirodon innesi (neon tetra): tropical, 20–26°C',
+              publisher: 'FishBase',
+              url: 'https://www.fishbase.se/summary/Paracheirodon-innesi.html',
+            },
+            {
+              label: 'FishBase — Paracheirodon axelrodi (cardinal tetra): tropical, 23–27°C',
+              publisher: 'FishBase',
+              url: 'https://www.fishbase.se/summary/Paracheirodon-axelrodi.html',
+            },
+            {
+              label: 'FishBase — Poecilia reticulata (guppy): tropical, 18–28°C',
+              publisher: 'FishBase',
+              url: 'https://www.fishbase.se/summary/Poecilia-reticulata.html',
+            },
+            {
+              label: 'FishBase — Poecilia sphenops (molly): tropical, 18–28°C',
+              publisher: 'FishBase',
+              url: 'https://www.fishbase.se/summary/Poecilia-sphenops.html',
+            },
+            {
+              label: 'FishBase — Xiphophorus maculatus (platy): tropical, 18–25°C',
+              publisher: 'FishBase',
+              url: 'https://www.fishbase.se/summary/Xiphophorus-maculatus.html',
+            },
+            {
+              label: 'FishBase — Xiphophorus hellerii (swordtail): tropical, 22–28°C',
+              publisher: 'FishBase',
+              url: 'https://www.fishbase.se/summary/Xiphophorus-hellerii.html',
+            },
+            {
+              label: 'FishBase — Pterophyllum scalare (angelfish): tropical, 24–30°C',
+              publisher: 'FishBase',
+              url: 'https://www.fishbase.se/summary/Pterophyllum-scalare.html',
+            },
+            {
+              label: 'FishBase — Corydoras aeneus (bronze corydoras): subtropical, 25–28°C',
+              publisher: 'FishBase',
+              url: 'https://www.fishbase.se/summary/Corydoras-aeneus.html',
+            },
+            {
+              label: 'Seriously Fish — Ancistrus cf. cirrhosus (common bristlenose): 21–26°C, 70–79°F',
+              publisher: 'Seriously Fish',
+              url: 'https://www.seriouslyfish.com/species/ancistrus-cf-cirrhosus/',
+            },
+            {
+              label: 'FishBase — Trigonostigma heteromorpha (harlequin rasbora): tropical, 22–25°C',
+              publisher: 'FishBase',
+              url: 'https://www.fishbase.se/summary/Trigonostigma-heteromorpha.html',
+            },
+            {
+              label: 'FishBase — Danio rerio (zebra danio): tropical, 18–24°C',
+              publisher: 'FishBase',
+              url: 'https://www.fishbase.se/summary/Danio-rerio.html',
+            },
+            {
+              label: 'FishBase — Trichogaster lalius (dwarf gourami): tropical, 25–28°C',
+              publisher: 'FishBase',
+              url: 'https://www.fishbase.se/summary/Trichogaster-lalius.html',
+            },
+            {
+              label: 'FishBase — Pangio kuhlii (kuhli loach): tropical, 24–30°C',
+              publisher: 'FishBase',
+              url: 'https://www.fishbase.se/summary/Pangio-kuhlii.html',
+            },
+            {
+              label: 'FishBase — Puntigrus tetrazona (tiger barb): tropical, 20–26°C',
+              publisher: 'FishBase',
+              url: 'https://www.fishbase.se/summary/Puntigrus-tetrazona.html',
+            },
+            {
+              label: 'FishBase — Astronotus ocellatus (oscar): tropical, 22–25°C',
+              publisher: 'FishBase',
+              url: 'https://www.fishbase.se/summary/Astronotus-ocellatus.html',
             },
           ]}
         />

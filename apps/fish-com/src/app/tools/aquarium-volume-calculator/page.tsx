@@ -33,8 +33,8 @@ const schema = buildHowToSchema({
   steps: [
     { name: 'Measure dimensions', text: 'Measure the inside length, width (front to back), and height of the tank in inches or centimeters.' },
     { name: 'Pick the right formula', text: 'For rectangular and cube tanks, multiply length × width × height. For cylinder tanks use π × radius² × height. For hex tanks use 0.866 × width² × height.' },
-    { name: 'Convert cubic inches to gallons', text: 'Divide cubic inches by 231 for US gallons, by 277.42 for UK gallons, or by 61.02 for liters.' },
-    { name: 'Subtract for displacement', text: 'Net water volume is about 90–92% of gross volume after substrate, decor, and freeboard. Use this number for stocking and dosing.' },
+    { name: 'Convert cubic inches to gallons', text: 'Divide cubic inches by 231, the US liquid gallon, for US gallons; by 277.42, the imperial gallon, for UK gallons; or by 61.02 for liters.' },
+    { name: 'Subtract for displacement', text: 'A 90–92% net-water allowance for substrate, decor, and freeboard is a planning figure, not a measured displacement. Use the gross gallons when you need the tank’s stated capacity.' },
   ],
 })
 
