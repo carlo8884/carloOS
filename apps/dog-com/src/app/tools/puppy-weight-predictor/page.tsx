@@ -25,7 +25,7 @@ export const metadata: Metadata = buildMetadata({
 })
 
 const SOURCES = [
-  { label: 'American Kennel Club: Puppy Growth and Development Stages', url: 'https://www.akc.org/expert-advice/nutrition/puppy-weight-and-growth-chart/', publisher: 'AKC' },
+  { label: 'American Kennel Club: Puppy Growth and Development Stages', url: 'https://www.akc.org/expert-advice/health/when-does-my-puppy-finish-growing/', publisher: 'AKC' },
   { label: 'Merck Veterinary Manual: Growth in Dogs — Nutritional Requirements', url: 'https://www.merckvetmanual.com/management-and-nutrition/nutrition-small-animals/nutrition-in-disease-management-in-small-animals', publisher: 'Merck Vet Manual' },
   { label: 'WSAVA Global Nutrition Committee: Body Condition Score Charts', url: 'https://wsava.org/global-guidelines/global-nutrition-guidelines/', publisher: 'WSAVA' },
   { label: 'VCA Animal Hospitals: Puppy Nutrition and Growth', url: 'https://vcahospitals.com/know-your-pet/feeding-growing-puppies', publisher: 'VCA' },
