@@ -22,7 +22,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: 'Horse Weight Calculator (Girth + Length) | Horses.com',
   description:
-    'Estimate a horse’s weight from heart girth and body length using the standard weight-tape formula. Free, instant lbs + kg, pony / draft / foal adjustments.',
+    'Estimate a horse’s weight from girth and length with Carroll & Huntington 1988. Pony and draft divisors are a planning figure.',
   path: '/tools/horse-weight-calculator',
 })
 
@@ -51,7 +51,7 @@ const howToSchema = buildHowToSchema({
     },
     {
       name: 'Treat the result as an estimate',
-      text: 'A girth-tape figure is typically within about 5–10% of true scale weight for a mature light horse. Verify on a livestock scale for medication dosing or sale weight, and consult your veterinarian for special cases.',
+      text: 'Carroll & Huntington 1988 does not publish a percent error for this estimate. Use it to track trends. Weigh the horse on a livestock scale for medication dosing or sale weight, and consult your veterinarian for special cases.',
     },
   ],
 })
@@ -83,7 +83,7 @@ const FAQS = [
   {
     question: 'How do you calculate a horse’s weight without a scale?',
     answer:
-      'Measure the heart girth (the circumference around the barrel just behind the withers and elbows) and the body length (point of shoulder to point of buttock), both in inches. Then apply the standard weight-tape formula: weight in pounds equals heart girth squared, multiplied by body length, divided by 330 for an adult riding horse. For example, a horse with a 72-inch girth and a 64-inch length is estimated at (72 × 72 × 64) ÷ 330 ≈ 1,005 lb. This is an estimate, usually within about 5–10% of true scale weight for a mature light horse.',
+      'Measure the heart girth (the circumference around the barrel just behind the withers and elbows) and the body length (point of shoulder to point of buttock), both in inches. Then apply the Carroll & Huntington 1988 formula: weight in pounds equals heart girth squared, multiplied by body length, divided by 330 for an adult riding horse. For example, a horse with a 72-inch girth and a 64-inch length is estimated at (72 × 72 × 64) ÷ 330 ≈ 1,005 lb. The 1988 abstract does not publish a percent error for that estimate.',
   },
   {
     question: 'Why is the divisor different for ponies and draft horses?',
@@ -93,7 +93,7 @@ const FAQS = [
   {
     question: 'How accurate is a weight-tape estimate?',
     answer:
-      'For a mature, normally-conformed light horse, a girth-and-length estimate is generally within roughly 5–10% of scale weight — close enough for tracking trends and rough ration planning. Accuracy drops for ponies, drafts, heavily pregnant mares, very fat or very thin horses, and growing youngstock. Commercial weight tapes that read girth alone are less accurate than the girth-plus-length formula because they ignore body length. For anything that needs a true number — medication dosing, sale weight, or a feeding plan for a sick horse — weigh the horse on a livestock scale.',
+      'Carroll & Huntington 1988 does not publish a percent error for the girth-and-length estimate. Use it to track trends and for rough ration planning. Ponies, drafts, heavily pregnant mares, very fat or very thin horses, and growing youngstock are a poorer fit. Commercial weight tapes that read girth alone ignore body length. For anything that needs a true number — medication dosing, sale weight, or a feeding plan for a sick horse — weigh the horse on a livestock scale.',
   },
   {
     question: 'Can I use this calculator for a foal?',
@@ -110,7 +110,7 @@ const FAQS = [
 const articleSchema = buildArticleSchema({
   siteId: 'horses-com',
   title: 'Horse Weight Calculator',
-  description: 'Estimate a horse’s bodyweight from heart girth and body length using the standard weight-tape formula. Instant lbs and kg, with pony, draft, and foal adjustments.',
+  description: 'Estimate a horse’s bodyweight from girth and length with Carroll & Huntington 1988. Pony and draft divisors are a planning figure.',
   url: 'https://horses.com/tools/horse-weight-calculator',
   imageUrl: '',
   authorName: 'Horses.com Editorial',
@@ -138,7 +138,7 @@ export default function HorseWeightCalculatorPage() {
       hero={{
         title: 'Horse Weight Calculator',
         subtitle:
-          'Estimate a horse’s bodyweight from heart girth and body length using the standard weight-tape formula. Instant lbs and kg, with pony, draft, and foal adjustments.',
+          'Estimate a horse’s bodyweight from girth and length with Carroll & Huntington 1988. Pony and draft divisors are a planning figure.',
         category: 'Calculators',
         categoryHref: '/tools',
         publishedAt: 'June 2026',

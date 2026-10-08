@@ -75,7 +75,7 @@ export default function WestNilePage() {
         hero={{
           title: "West Nile Virus in Horses",
           subtitle:
-            "West Nile virus is a mosquito-borne disease that can cause severe, sometimes fatal neurologic illness in horses. Since it arrived and spread across North America, horses have proven to be among the most affected domestic species. There is no specific cure once a horse is infected, which is exactly why it is one of the core vaccines every horse should receive. This is reference material, not a substitute for veterinary care.",
+            "West Nile virus is a mosquito-borne disease that can cause severe, sometimes fatal neurologic illness in horses. Since it arrived and spread across North America, horses are among the domestic species the virus hits hard. There is no specific cure once a horse is infected, which is exactly why it is one of the core vaccines every horse should receive. This is reference material, not a substitute for veterinary care.",
           category: "Equine Health",
           authorName: 'Horses.com Editorial',
           authorAvatar: '☘',

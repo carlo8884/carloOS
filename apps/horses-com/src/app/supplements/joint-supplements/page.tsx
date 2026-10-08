@@ -102,7 +102,7 @@ export default function JointSupplementsPage() {
 
             <h3>Tier 2 — Moderate equine evidence</h3>
 
-            <p><strong>Glucosamine and chondroitin sulfate (oral):</strong> The most-studied oral joint supplement combination in horses. Equine pharmacokinetic studies have shown that orally-administered glucosamine reaches synovial fluid at low concentrations (Laverty S et al., <em>American Journal of Veterinary Research</em>, 2005). Clinical trial evidence is mixed: some studies show modest improvement in lameness scores in horses with osteoarthritis, others show no statistically significant effect compared to placebo. The 2012 meta-analyses in human osteoarthritis (which guide most extrapolation) showed glucosamine + chondroitin produces small effects that approach but do not consistently exceed clinical significance. For horses, evidence supports use as adjunctive — alongside other management — rather than as a standalone osteoarthritis treatment. Quality control matters: look for NASC (National Animal Supplement Council) Quality Seal products with documented label-claim glucosamine and chondroitin content.</p>
+            <p><strong>Glucosamine and chondroitin sulfate (oral):</strong> The most-studied oral joint supplement combination in horses. Equine pharmacokinetic studies have shown that orally-administered glucosamine reaches synovial fluid at low concentrations (Laverty S et al., <em>American Journal of Veterinary Research</em>, 2005). The Laverty citation above is a pharmacokinetic measurement, not a lameness trial. This page does not name a clinical trial that shows a lameness-score change, and it does not treat a human meta-analysis as an equine result. For horses, evidence supports use as adjunctive — alongside other management — rather than as a standalone osteoarthritis treatment. Quality control matters: look for NASC (National Animal Supplement Council) Quality Seal products with documented label-claim glucosamine and chondroitin content.</p>
 
             <p><strong>MSM (methylsulfonylmethane):</strong> A naturally-occurring organosulfur compound. Equine evidence is modest but real — small-trial data shows anti-inflammatory effects and possible analgesic benefit at doses of 10–20 g/day for an adult horse (Marañón G et al., <em>Acta Veterinaria Scandinavica</em>, 2008). MSM is one of the more cost-effective joint-supplement ingredients per gram of demonstrated effect; it appears in most combination products.</p>
 
@@ -114,7 +114,7 @@ export default function JointSupplementsPage() {
 
             <p><strong>Collagen peptides (hydrolyzed collagen):</strong> Mechanistically attractive, with some equine trial data showing modest improvements. The evidence base is younger and smaller than that for ASU or glucosamine.</p>
 
-            <p><strong>Curcumin / turmeric:</strong> Anti-inflammatory in vitro and in small-animal models. Equine pharmacokinetic studies show very low oral bioavailability of unmodified curcumin; products combining curcumin with absorption enhancers (piperine, lipids) may overcome this. Evidence base in horses specifically is small.</p>
+            <p><strong>Curcumin / turmeric:</strong> Anti-inflammatory in vitro and in small-animal models. This page does not cite an equine curcumin trial or a bioavailability percent. Evidence in horses specifically is small.</p>
 
             <p><strong>Boswellia (Indian frankincense):</strong> Some equine clinical-trial data shows lameness improvement in osteoarthritic horses at appropriate doses. The evidence is suggestive rather than definitive.</p>
 
@@ -282,7 +282,7 @@ export default function JointSupplementsPage() {
               </table>
             </div>
             <p>The wider field around these joint products is in the <Link href="/reviews/best-equine-supplements">equine supplement review</Link>.</p>
-            <ComparisonFoot updated="2026-10-07" />
+            <ComparisonFoot updated="2026-10-08" />
 
             <h2>How to Choose</h2>
             <p>The framework that maximizes the evidence-per-dollar in this category:</p>
