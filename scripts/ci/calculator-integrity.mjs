@@ -13109,6 +13109,62 @@ const CALCULATORS = [
     mustExclude: [{ re: /under 3%/, label: 'do not restore a 3% prevention cutoff on this page' }],
     why: 'Insulinoma keeps minimizing carbohydrate as a planning choice and cites Merck’s under-25% proportion. It does not state a 3% cutoff.',
   },
+  {
+    id: 'dog · ideal weight 10% step',
+    file: 'apps/dog-com/src/app/tools/dog-ideal-weight-calculator/page.tsx',
+    mustInclude: [
+      { re: /planning figure/, label: 'the 10% BCS step is labeled a planning figure' },
+      { re: /10% over ideal body weight/, label: 'each point above ideal is about 10% over weight' },
+    ],
+    mustExclude: [{ re: /not a fetched study/, label: 'do not put that phrase on the page' }],
+    why: 'No fetched source states exactly 10% of body weight per BCS point. The 0.10 coefficient stays, and the page calls it a planning figure.',
+  },
+  {
+    id: 'dog · ideal weight calculator 10% step',
+    file: 'apps/dog-com/src/app/tools/dog-ideal-weight-calculator/Calculator.tsx',
+    mustInclude: [
+      { re: /planning figure/, label: 'the 10% step is a planning figure' },
+      { re: /10% over ideal body weight/, label: 'disclaimer states the 10% step' },
+      { re: /0\.10/, label: 'coefficient stays 0.10' },
+    ],
+    why: 'The calculator keeps the 0.10 coefficient and labels the step a planning figure. The study disclaimer stays in this file only.',
+  },
+  {
+    id: 'dog · monthly loss planning figure',
+    file: 'apps/dog-com/src/app/nutrition/weight-management/page.tsx',
+    mustInclude: [
+      { re: /1–2% of body weight per month/, label: 'monthly rate stays monthly' },
+      { re: /planning figure/, label: 'monthly rate is a planning figure' },
+    ],
+    why: 'No fetched source states a monthly rate. AAHA 2014 is a weekly rate, so this sentence stays monthly and labeled a planning figure.',
+  },
+  {
+    id: 'dog · ozempic monthly loss pointer',
+    file: 'apps/dog-com/src/app/nutrition/ozempic-for-dogs/page.tsx',
+    mustInclude: [
+      { re: /planning figure for loss \(1–2% of body weight per month\)/, label: 'pointer stays a monthly planning figure' },
+    ],
+    why: 'The page points at the weight-management planning figure. It does not cite a monthly study.',
+  },
+  {
+    id: 'vets · monthly loss planning figure',
+    file: 'apps/vets-co/src/app/health/weight-management/page.tsx',
+    mustInclude: [
+      { re: /1–2% of body weight per month is a planning figure/, label: 'monthly rate stays a planning figure' },
+    ],
+    why: 'No fetched source states a monthly rate. The sentence stays monthly and labeled a planning figure.',
+  },
+  {
+    id: 'ferret · food evaluator fiber',
+    file: 'apps/ferret-com/src/app/tools/food-evaluator/page.tsx',
+    mustInclude: [
+      { re: /under 2\.5%/, label: 'Merck fiber under 2.5%' },
+      { re: /management-of-ferrets/, label: 'Merck ferret management URL' },
+      { re: /≤3%/, label: 'evaluator ceiling stays' },
+      { re: /planning figure/, label: 'the ≤3% ceiling stays a planning figure' },
+    ],
+    why: 'Merck states fiber under 2.5%. The evaluator ≤3% ceiling stays a planning figure. The visual scorer is unchanged.',
+  },
 
 ]
 
