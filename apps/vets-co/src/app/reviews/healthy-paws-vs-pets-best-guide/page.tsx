@@ -54,14 +54,20 @@ export default function HealthyPawsVsPetsBestGuidePage() {
       schema={combineSchemas(schema, itemList)}
       hero={{
         title: 'Healthy Paws or Pets Best tiers',
-        subtitle: 'One accident-and-illness plan with two levers, or several tiers. The notes below are the ones on the deductible page. Neither price line is a premium.',
         category: 'Buyer guide',
         authorName: 'Vets.co Editorial',
         publishedAt: 'October 2026',
         readTime: '6 min',
       }}
-      heroHop={<PrimaryHop href="/go/healthy-paws/home?s=reviews-healthy-paws-vs-pets-best-guide" label="Get a Healthy Paws quote" holdWithoutPartnerId />}
-      heroExtra={<HopDisclosure siteId="vets-co" href="/go/healthy-paws/home?s=reviews-healthy-paws-vs-pets-best-guide" noteClassName="mt-3 mb-0 text-xs leading-relaxed text-white/80" />}
+      heroHop={
+        <>
+          <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">Healthy Paws is the top pick because one accident-and-illness plan has two levers, the deductible and the reimbursement rate.</p>
+          <div data-fold="offer">
+          <PrimaryHop href="/go/healthy-paws/home?s=reviews-healthy-paws-vs-pets-best-guide" label="Get a Healthy Paws quote" holdWithoutPartnerId />
+          <HopDisclosure siteId="vets-co" href="/go/healthy-paws/home?s=reviews-healthy-paws-vs-pets-best-guide" noteClassName="mt-3 mb-0 text-xs leading-relaxed text-white/80" />
+        </div>
+        </>
+      }
       breadcrumbs={[
         { name: 'Home', href: '/' },
         { name: 'Reviews', href: '/reviews' },
@@ -95,7 +101,7 @@ export default function HealthyPawsVsPetsBestGuidePage() {
             "Trupanion, Lemonade, and Spot have their own guides.",
           ]}
         />
-        <p>The notes below are the ones on the <Link href="/insurance/deductibles-reimbursement">deductible and reimbursement page</Link>. That page puts Healthy Paws and Pets Best side by side as two ways to set the same levers. <Link href="/reviews/healthy-paws-vs-embrace-guide">Healthy Paws versus Embrace</Link> is the wellness-add-on comparison. Trupanion, Lemonade, and Spot have their own guides. Neither card prints a monthly premium.</p>
+        <p>Healthy Paws and Pets Best are two ways to set the same deductible and reimbursement levers. <Link href="/reviews/healthy-paws-vs-embrace-guide">Healthy Paws versus Embrace</Link> is the wellness-add-on comparison. Trupanion, Lemonade, and Spot have their own guides. Neither card prints a monthly premium.</p>
         <h2>What the page says about Healthy Paws</h2>
         <p>Healthy Paws is Simple Levers and the winner. The card describes a single accident-and-illness plan where you choose the deductible and the reimbursement rate. Reimbursement is listed as fast, on a pay-then-claim model. The cons say there is no wellness add-on and that you should confirm the annual-limit structure on the quote, because that limit is the catastrophe protection. The price line is quote-based. The link above opens the Healthy Paws quote from that page.</p>
         <h2>What the page says about Pets Best</h2>

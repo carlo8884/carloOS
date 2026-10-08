@@ -48,14 +48,20 @@ export default function HealthyPawsVsEmbraceGuidePage() {
       schema={schema}
       hero={{
         title: 'Healthy Paws or Embrace wellness',
-        subtitle: 'Fast reimbursement, or a wellness add-on. Prices below are the ones on the insurance review, not a quote for your pet.',
         category: 'Buyer guide',
         authorName: 'Vets.co Editorial',
         publishedAt: 'October 2026',
         readTime: '6 min',
       }}
-      heroHop={<PrimaryHop href="/go/healthy-paws/home?s=reviews-healthy-paws-vs-embrace-guide" label="Get a Healthy Paws quote" holdWithoutPartnerId />}
-      heroExtra={<HopDisclosure siteId="vets-co" href="/go/healthy-paws/home?s=reviews-healthy-paws-vs-embrace-guide" noteClassName="mt-3 mb-0 text-xs leading-relaxed text-white/80" />}
+      heroHop={
+        <>
+          <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">Healthy Paws is the top pick for fast reimbursement, and Embrace is the plan with a wellness add-on.</p>
+          <div data-fold="offer">
+          <PrimaryHop href="/go/healthy-paws/home?s=reviews-healthy-paws-vs-embrace-guide" label="Get a Healthy Paws quote" holdWithoutPartnerId />
+          <HopDisclosure siteId="vets-co" href="/go/healthy-paws/home?s=reviews-healthy-paws-vs-embrace-guide" noteClassName="mt-3 mb-0 text-xs leading-relaxed text-white/80" />
+        </div>
+        </>
+      }
       breadcrumbs={[
         { name: 'Home', href: '/' },
         { name: 'Reviews', href: '/reviews' },
@@ -90,7 +96,7 @@ export default function HealthyPawsVsEmbraceGuidePage() {
             "Embrace is for owners who want routine care on an add-on.",
           ]}
         />
-        <p>Monthly bands below are the ones on the <Link href="/reviews/best-pet-insurance">pet insurance review</Link>. Healthy Paws is the reimbursement-speed pick. Embrace is for owners who want routine care on an add-on. <Link href="/reviews/healthy-paws-vs-pets-best-guide">Healthy Paws versus Pets Best</Link> is the deductible-and-tier comparison, not this wellness add-on. Those bands are not a quote for your pet.</p>
+        <p>Healthy Paws is the reimbursement-speed pick. Embrace is for owners who want routine care on an add-on. <Link href="/reviews/healthy-paws-vs-pets-best-guide">Healthy Paws versus Pets Best</Link> is the deductible-and-tier comparison, not this wellness add-on. Those bands are not a quote for your pet.</p>
         <h2>What the review says about Healthy Paws</h2>
         <p>Healthy Paws is Fastest Reimbursement. Reimbursement is up to 90 percent. The review says the app claim and an average of about two days make the wait short. The deductible is annual. See the carrier&apos;s current terms for the monthly price. It does not pay the clinic at checkout, and it has no wellness add-on. The review says it fits an owner who would rather pay the vet and be paid back quickly.</p>
         <p>The annual limit is a choice of $5,000, $7,000, or unlimited.</p>
@@ -99,7 +105,7 @@ export default function HealthyPawsVsEmbraceGuidePage() {
         <p>To see what a deductible and a reimbursement percent do to a sample bill, use the <Link href="/tools/pet-insurance-worth-it-calculator">worth-it calculator</Link>.</p>
         <h2>Who should read which policy</h2>
         <p>Open the Healthy Paws sample when the annual limit on the quote is the one you want and you want a short reimbursement wait, and you are not buying the policy for wellness or for direct pay at the clinic. Open the Embrace sample when the wellness add-on is the reason, and read the orthopedic waiting period on the carrier page before you enroll. Enroll before a condition is in the record. Trupanion, the direct-pay carrier on that review, is a separate comparison.</p>
-        <p>The link above opens the Healthy Paws quote from the insurance review. The price you see there is the carrier’s quote.</p>
+        <p>The link above compares carriers on published terms. The price on the carrier site is the quote.</p>
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
       </div>

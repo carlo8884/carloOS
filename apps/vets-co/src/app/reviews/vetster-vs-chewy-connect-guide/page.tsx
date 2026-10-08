@@ -44,14 +44,20 @@ export default function VetsterVsChewyConnectGuidePage() {
       schema={schema}
       hero={{
         title: 'Vetster video or Chewy Connect',
-        subtitle: 'Pay per video visit, or telehealth included with a Chewy+ membership. Prices and limits below are the ones on the telehealth page.',
         category: 'Buyer guide',
         authorName: 'Vets.co Editorial',
         publishedAt: 'October 2026',
         readTime: '6 min',
       }}
-      heroHop={<PrimaryHop href="/go/vetster/telehealth?s=reviews-vetster-vs-connect-guide" label="Visit Vetster" />}
-      heroExtra={<HopDisclosure siteId="vets-co" href="/go/vetster/telehealth?s=reviews-vetster-vs-connect-guide" />}
+      heroHop={
+        <>
+          <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">Vetster is the top pick for a video visit paid per consult, and the shop link searches Chewy Connect, the membership alternative.</p>
+          <div data-fold="offer">
+          <PrimaryHop href="/go/chewy-brand/chewy+connect+with+a+vet?s=reviews-vetster-vs-connect-guide" label="Browse Chewy Connect on Amazon" />
+          <HopDisclosure siteId="vets-co" href="/go/chewy-brand/chewy+connect+with+a+vet?s=reviews-vetster-vs-connect-guide" />
+        </div>
+        </>
+      }
       breadcrumbs={[
         { name: 'Home', href: '/' },
         { name: 'Reviews', href: '/reviews' },
@@ -86,7 +92,7 @@ export default function VetsterVsChewyConnectGuidePage() {
             "The page says that per-visit price is higher than a subscription.",
           ]}
         />
-        <p>The notes below are the ones on the <Link href="/telehealth">telehealth page</Link>. Vetster is the overall service. Chewy Connect with a Vet is for people who already use Chewy. <Link href="/reviews/askvet-vs-chewy-connect-guide">AskVet versus Chewy Connect</Link> is the chat-subscription comparison, not this video visit.</p>
+        <p>Vetster is the overall service. Chewy Connect with a Vet is for people who already use Chewy. <Link href="/reviews/askvet-vs-chewy-connect-guide">AskVet versus Chewy Connect</Link> is the chat-subscription comparison, not this video visit.</p>
         <h2>What the page says about Vetster</h2>
         <p>Vetster is Best Overall and the winner. Consults are video and chat. The page says veterinarians are licensed where the owner is located, so a prescription can be valid, and that specialists are available, including behavior, dermatology, and internal medicine. This page does not publish a wait time. You pay per visit. The page says that per-visit figure is higher than a chat plan.</p>
         <p>Single visits start at $102. Plus is $12/month, billed annually.</p>
@@ -96,7 +102,7 @@ export default function VetsterVsChewyConnectGuidePage() {
         <p>If you are deciding between a video visit, a clinic, and an emergency hospital, use the <Link href="/tools/er-vs-clinic">ER versus clinic tool</Link>. Neither service on this page replaces emergency care.</p>
         <h2>Who should open which service</h2>
         <p>Open Vetster when you want a licensed veterinarian on video, possibly a specialist, and you do not want a monthly fee. Open Chewy Connect when you already pay for Chewy+ and you want the pharmacy tied to that account. If the pet is in crisis, go to an emergency clinic. Do not wait on a video queue.</p>
-        <p>The link above opens Vetster, the same link as on the telehealth page. The price you see there is the service’s price.</p>
+        <p>The link above searches Amazon for Chewy Connect. Vetster is the video visit described on the telehealth page.</p>
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
       </div>

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, InlinePartnerQuote, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, InlinePartnerQuote, RelatedLinks, buildArticleSchema, buildMetadata, PrimaryHop } from '@carloOS/ui'
 import { HopDisclosure } from '../../../components/HopDisclosure'
 
 // Request-time env. An unset AFF_SPOT_TAG keeps the quote as a note.
@@ -49,12 +49,20 @@ export default function SpotVsManyPetsGuidePage() {
       schema={schema}
       hero={{
         title: 'Spot or ManyPets',
-        subtitle: 'Adjustable limits and a single comprehensive plan are different documents to read. The notes below are the ones on the fine-print page. Neither price line is a premium.',
         category: 'Buyer guide',
         authorName: 'Vets.co Editorial',
         publishedAt: 'October 2026',
         readTime: '6 min',
       }}
+      heroHop={
+        <>
+          <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">Spot is the top pick when you want adjustable limits on one policy instead of a single comprehensive plan.</p>
+          <div data-fold="offer">
+          <PrimaryHop href="/go/spot/home?s=reviews-spot-vs-manypets-guide" label="Get a Spot quote" />
+          <HopDisclosure siteId="vets-co" href="/go/spot/home?s=reviews-spot-vs-manypets-guide" />
+        </div>
+        </>
+      }
       breadcrumbs={[
         { name: 'Home', href: '/' },
         { name: 'Reviews', href: '/reviews' },

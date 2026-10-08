@@ -44,14 +44,20 @@ export default function AskVetVsChewyConnectGuidePage() {
       schema={schema}
       hero={{
         title: 'AskVet chat or Chewy Connect',
-        subtitle: 'Unlimited chat for a flat monthly fee, or telehealth included with a Chewy+ membership. Prices below are the ones on the telehealth page.',
         category: 'Buyer guide',
         authorName: 'Vets.co Editorial',
         publishedAt: 'October 2026',
         readTime: '6 min',
       }}
-      heroHop={<PrimaryHop href="/go/askvet/telehealth?s=reviews-askvet-vs-connect-guide" label="Visit AskVet" />}
-      heroExtra={<HopDisclosure siteId="vets-co" href="/go/askvet/telehealth?s=reviews-askvet-vs-connect-guide" />}
+      heroHop={
+        <>
+          <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">AskVet is the top pick for unlimited chat at a flat monthly fee, and the shop link searches Chewy Connect, the membership alternative.</p>
+          <div data-fold="offer">
+          <PrimaryHop href="/go/chewy-brand/chewy+connect+with+a+vet?s=reviews-askvet-vs-connect-guide" label="Browse Chewy Connect on Amazon" />
+          <HopDisclosure siteId="vets-co" href="/go/chewy-brand/chewy+connect+with+a+vet?s=reviews-askvet-vs-connect-guide" />
+        </div>
+        </>
+      }
       breadcrumbs={[
         { name: 'Home', href: '/' },
         { name: 'Reviews', href: '/reviews' },
@@ -86,7 +92,7 @@ export default function AskVetVsChewyConnectGuidePage() {
             "Consults are video and chat, during extended hours.",
           ]}
         />
-        <p>The notes below are the ones on the <Link href="/telehealth">telehealth page</Link>. AskVet is the subscription. Chewy Connect with a Vet is for people who already use Chewy. <Link href="/reviews/vetster-vs-chewy-connect-guide">Vetster versus Chewy Connect</Link> is the video-visit comparison, not this chat subscription.</p>
+        <p>AskVet is the subscription. Chewy Connect with a Vet is for people who already use Chewy. <Link href="/reviews/vetster-vs-chewy-connect-guide">Vetster versus Chewy Connect</Link> is the video-visit comparison, not this chat subscription.</p>
         <h2>What the page says about AskVet</h2>
         <p>AskVet is Best Subscription. Chat only, with no video. See the carrier&apos;s current terms for a monthly chat price. This page does not publish a wait time. Specialists are general practice only. Prescriptions are limited. The page says the subscription fits frequent questions, such as a new puppy, a senior pet, several pets, or a chronic condition, and that chat limits how much of a physical problem can be assessed.</p>
         <h2>What the page says about Chewy Connect</h2>
@@ -95,7 +101,7 @@ export default function AskVetVsChewyConnectGuidePage() {
         <p>If you are deciding between a video visit, a clinic, and an emergency hospital, use the <Link href="/tools/er-vs-clinic">ER versus clinic tool</Link>. Neither service on this page replaces emergency care.</p>
         <h2>Who should open which service</h2>
         <p>Open AskVet when you want chat and you do not need video. See the carrier&apos;s current terms for the monthly price. Open Chewy Connect when you already pay for Chewy+ and you want the pharmacy tied to that account. If the pet is in crisis, go to an emergency clinic. Do not wait on a chat queue.</p>
-        <p>The link above opens AskVet, the same link as on the telehealth page. The price you see there is the service’s price.</p>
+        <p>The link above searches Amazon for Chewy Connect. AskVet is the chat subscription described on the telehealth page.</p>
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
       </div>

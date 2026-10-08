@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import Link from 'next/link'
-import { ArticleLayout, BelowFoldPhoto, ComparisonFoot, FAQAccordion, RelatedLinks, TableShopLink, buildArticleSchema, buildFAQSchema, buildMetadata, combineSchemas } from '@carloOS/ui'
+import { ArticleLayout, BelowFoldPhoto, ComparisonFoot, FAQAccordion, RelatedLinks, TableShopLink, buildArticleSchema, buildFAQSchema, buildMetadata, combineSchemas, PrimaryHop } from '@carloOS/ui'
 
 const PATH = '/reviews/november-december-gift-guide'
 const SOURCE = 'reviews-november-december-gift-guide'
@@ -52,12 +53,20 @@ export default function NovemberDecemberGiftGuidePage() {
       schema={combineSchemas(schema, faqSchema)}
       hero={{
         title: 'November and December pet care costs',
-        subtitle: 'These are not toys. The bands are the ones already printed on the insurance review and the telehealth page. A band is not a quote.',
         category: 'Buyer guide',
         authorName: 'Vets.co Editorial',
         publishedAt: 'October 2026',
         readTime: '7 min',
       }}
+      heroHop={
+        <>
+          <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">Trupanion is the insurance name to open for an accident-and-illness policy that pays the clinic at checkout.</p>
+          <div data-fold="offer">
+          <PrimaryHop href="/go/trupanion/home?s=reviews-november-december-gift-guide" label="Get a Trupanion quote" />
+          <HopDisclosure siteId="vets-co" href="/go/trupanion/home?s=reviews-november-december-gift-guide" />
+        </div>
+        </>
+      }
       breadcrumbs={[
         { name: 'Home', href: '/' },
         { name: 'Reviews', href: '/reviews' },
@@ -77,7 +86,7 @@ export default function NovemberDecemberGiftGuidePage() {
       priceAsOf="2026-10-07"
     >
       <div className="carloOS-article">
-        <p>People ask what to buy a pet in November and December. The reviews on this site are not toy reviews. They price insurance and remote visits. The <Link href="/reviews">reviews hub</Link> is where those cards live. This page groups the printed bands so a reader can see a monthly chat fee next to a monthly premium and a per-visit video fee. It does not enroll anyone, and it does not turn a band into a quote.</p>
+        <p>The costs to plan in November and December are the insurance and visit bands already printed here. The <Link href="/reviews">reviews hub</Link> is where those cards live. This page groups the printed bands so a reader can see a monthly chat fee next to a monthly premium and a per-visit video fee. It does not enroll anyone, and it does not turn a band into a quote.</p>
         <p>Holiday leftovers and holiday emergency bills already have their own pages. Fatty leftovers stay on the <Link href="/reviews/holiday-leftovers-low-fat-guide">leftovers guide</Link>. Why a holiday emergency visit costs more stays on the <Link href="/reviews/holiday-emergency-visit-guide">emergency-visit guide</Link>. None of the links below is a substitute for an in-person emergency.</p>
         <h2>Printed monthly bands</h2>
         <p>AskVet, Healthy Paws, Embrace, and Trupanion do not get a flat monthly figure on this page. See the carrier&apos;s current terms. A quote still depends on the pet and the zip code.</p>
