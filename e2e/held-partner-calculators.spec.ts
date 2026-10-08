@@ -72,10 +72,10 @@ const TOOLS: Record<string, string[]> = {
   ],
   'ferret-com': [
     '/tools/cage-size-calculator',
+    // /tools/ferret-cost-calculator only redirects here.
     '/tools/cost-calculator',
     '/tools/ferret-age-calculator',
     '/tools/ferret-body-condition-score',
-    '/tools/ferret-cost-calculator',
     '/tools/ferret-grimace-scale',
     '/tools/food-evaluator',
     '/tools/is-this-a-ferret-emergency',
