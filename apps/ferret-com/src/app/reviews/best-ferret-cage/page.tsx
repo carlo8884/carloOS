@@ -122,21 +122,24 @@ export default function BestFerretCagePage() {
       <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="ferret-com"
-        heroHop={<PrimaryHop href='/go/amazon-brand/ferret+nation+critter+nation+double+unit?s=reviews-best-ferret-cage' label='Check price of the Ferret Nation / Critter Nation double unit on Amazon' />}
-        heroExtra={<>
-        <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/ferret+nation+critter+nation+double+unit?s=reviews-best-ferret-cage" />
-        <QuickPicks items={QUICK_PICKS} embedded />
-      </>}
         hero={{
           title: 'Best Ferret Cage: Bar Spacing, Floor Space & Safety',
-          subtitle:
-            'A ferret cage is the one purchase where getting the specifications wrong has a direct safety cost — too-wide bars let a ferret escape or trap a limb, too little floor space stresses a pair, and unsafe ramps cause falls. This guide ranks multi-level cages on the criteria that matter, then names three that meet them.',
           category: 'Buyer Guides',
           authorName: 'Ferret.com Editorial',
           publishedAt: 'June 2026',
           readTime: '11 min',
         }}
-        breadcrumbs={[
+        heroHop={
+        <>
+          <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">The Ferret Nation double unit is the top cage because the bar spacing is about half an inch and the doors open the full front.</p>
+          <div data-fold="offer">
+          <PrimaryHop href='/go/amazon-brand/ferret+nation+critter+nation+double+unit?s=reviews-best-ferret-cage' label='Check price of the Ferret Nation / Critter Nation double unit on Amazon' />
+          <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/ferret+nation+critter+nation+double+unit?s=reviews-best-ferret-cage" />
+        </div>
+        </>
+      }
+      heroExtra={<><QuickPicks items={QUICK_PICKS} embedded /></>}
+      breadcrumbs={[
           { name: 'Home', href: '/' },
           { name: 'Reviews', href: '/reviews' },
           { name: 'Best Ferret Cage', href: '/reviews/best-ferret-cage' },

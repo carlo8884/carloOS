@@ -1,7 +1,7 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata, PrimaryHop } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -44,12 +44,20 @@ export default function FerretNationVsPrevueGuidePage() {
       schema={schema}
       hero={{
         title: 'Ferret Nation or the Prevue Feisty Ferret',
-        subtitle: 'A long-term colony cage and a smaller pair cage are different footprints. The notes below are the ones on the cage review. Prices there are tiers, not dollar amounts.',
         category: 'Buyer guide',
         authorName: 'Ferret.com Editorial',
         publishedAt: 'October 2026',
         readTime: '6 min',
       }}
+      heroHop={
+        <>
+          <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">The Ferret Nation double is the long-term cage because half-inch bars and full-width doors suit a small group.</p>
+          <div data-fold="offer">
+          <PrimaryHop href="/go/amazon-brand/ferret+nation+critter+nation+double+unit?s=reviews-ferret-nation-vs-prevue-guide" label="Browse Ferret Nation / Critter Nation double units on Amazon" />
+          <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/ferret+nation+critter+nation+double+unit?s=reviews-ferret-nation-vs-prevue-guide" />
+        </div>
+        </>
+      }
       breadcrumbs={[
         { name: 'Home', href: '/' },
         { name: 'Reviews', href: '/reviews' },

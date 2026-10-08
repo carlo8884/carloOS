@@ -1,7 +1,7 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, ShopCtas, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, ShopCtas, buildArticleSchema, buildMetadata, PrimaryHop } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -44,12 +44,20 @@ export default function PaperVsWoodLitterGuidePage() {
       schema={schema}
       hero={{
         title: 'Paper pellets vs wood pellets',
-        subtitle: 'Both litters on the litter review are non-clumping and low-dust. They split on odor, texture, and a wood rule you cannot skip. This page adds no new brand and no new lab result.',
         category: 'Buyer guide',
         authorName: 'Ferret.com Editorial',
         publishedAt: 'October 2026',
         readTime: '6 min',
       }}
+      heroHop={
+        <>
+          <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">Buy recycled paper pellets for most ferrets because they stay non-clumping and low-dust.</p>
+          <div data-fold="offer">
+          <PrimaryHop href="/go/chewy-brand/recycled+paper+pellet+litter+non+clumping?s=reviews-paper-vs-wood-litter-guide" label="Browse recycled paper pellet litter on Amazon" />
+          <HopDisclosure siteId="ferret-com" href="/go/chewy-brand/recycled+paper+pellet+litter+non+clumping?s=reviews-paper-vs-wood-litter-guide" />
+        </div>
+        </>
+      }
       breadcrumbs={[
         { name: 'Home', href: '/' },
         { name: 'Reviews', href: '/reviews' },

@@ -119,25 +119,24 @@ export default function BestFerretHarnessPage() {
       <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="ferret-com"
-        heroHop={<PrimaryHop href='/go/amazon-brand/ferret+vest+harness+jacket+escape+proof?s=reviews-best-ferret-harness' label='Check price of an escape-proof vest jacket ferret harness on Amazon' />}
-        heroExtra={
-          <>
-          <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/ferret+vest+harness+jacket+escape+proof?s=reviews-best-ferret-harness" />
-          <div className="[&_.text-brand-primary]:!text-brand-dark">
-            <QuickPicks items={QUICK_PICKS} embedded />
-          </div>
-          </>
-        }
         hero={{
           title: 'Best Ferret Harness: Escape Prevention and Fit',
-          subtitle:
-            'A ferret has no real neck and a body that tapers and flexes, which makes harness choice almost entirely a question of escape prevention and fit. The two styles that work are the jacket and the H-style; a collar is not an option for walking. This guide compares the two styles and ranks three harnesses on the criteria that keep a ferret attached.',
           category: 'Buyer Guides',
           authorName: 'Ferret.com Editorial',
           publishedAt: 'June 2026',
           readTime: '9 min',
         }}
-        breadcrumbs={[
+        heroHop={
+        <>
+          <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">An escape-proof vest harness is the top ferret harness because the panel wraps the chest instead of a neck strap.</p>
+          <div data-fold="offer">
+          <PrimaryHop href='/go/amazon-brand/ferret+vest+harness+jacket+escape+proof?s=reviews-best-ferret-harness' label='Check price of an escape-proof vest jacket ferret harness on Amazon' />
+          <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/ferret+vest+harness+jacket+escape+proof?s=reviews-best-ferret-harness" />
+        </div>
+        </>
+      }
+      heroExtra={<><QuickPicks items={QUICK_PICKS} embedded /></>}
+      breadcrumbs={[
           { name: 'Home', href: '/' },
           { name: 'Reviews', href: '/reviews' },
           { name: 'Best Ferret Harness', href: '/reviews/best-ferret-harness' },

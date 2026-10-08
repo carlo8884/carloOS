@@ -22,3 +22,46 @@ test('cage guide, cage setup, tagged hop', async ({ page }) => {
     ['https://amazon.com/s?k=', `tag=${AMAZON_TAG}`, 'ferret'],
   )
 })
+
+
+const FOLD: { path: string; pick: string }[] = [
+  { path: '/reviews/best-ferret-cage', pick: 'Ferret Nation' },
+  { path: '/reviews/best-ferret-litter', pick: 'paper pellets' },
+  { path: '/reviews/best-ferret-harness', pick: 'vest harness' },
+  { path: '/reviews/wysong-vs-marshall-kibble-guide', pick: 'Wysong' },
+  { path: '/reviews/vest-vs-h-harness-guide', pick: 'vest harness' },
+  { path: '/reviews/fall-molt-brush-guide', pick: 'slicker' },
+  { path: '/reviews/winter-harness-fit-guide', pick: 'vest harness' },
+  { path: '/reviews/paper-vs-wood-litter-guide', pick: 'paper pellets' },
+  { path: '/reviews/ferret-nation-vs-prevue-guide', pick: 'Ferret Nation' },
+  { path: '/reviews/kaytee-vs-ferret-nation-guide', pick: 'Ferret Nation' },
+]
+
+test.describe('money fold at 390', () => {
+  for (const item of FOLD) {
+    test(item.path, async ({ page }) => {
+      await page.setViewportSize({ width: 390, height: 844 })
+      await page.goto(item.path)
+      const answer = page.locator('[data-fold="answer"]')
+      await expect(answer).toBeVisible()
+      const answerBox = await answer.boundingBox()
+      expect(answerBox).toBeTruthy()
+      expect(answerBox!.y + answerBox!.height).toBeLessThan(844)
+      const text = (await answer.innerText()).replace(/\s+/g, ' ')
+      expect(text.toLowerCase()).toContain(item.pick.toLowerCase())
+      expect(text).not.toMatch(/notes below|partner ID|We cut|We graded/i)
+      const offer = page.locator('[data-fold="offer"]')
+      const hop = offer.locator('a[href*="/go/"], a[href="/reviews/best-pet-insurance"]')
+      await expect(hop.first()).toBeVisible()
+      const hopBox = await hop.first().boundingBox()
+      expect(hopBox).toBeTruthy()
+      expect(hopBox!.y + hopBox!.height).toBeLessThan(844)
+      const note = offer.locator('[data-affiliate-disclosure], [data-quote-note]')
+      await expect(note.first()).toBeVisible()
+      const noteBox = await note.first().boundingBox()
+      expect(noteBox).toBeTruthy()
+      expect(noteBox!.y).toBeLessThan(844)
+      expect(Math.abs((noteBox!.y) - (hopBox!.y))).toBeLessThan(180)
+    })
+  }
+})

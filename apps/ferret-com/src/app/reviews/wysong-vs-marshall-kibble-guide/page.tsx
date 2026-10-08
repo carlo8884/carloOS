@@ -1,7 +1,7 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, QuietPartnerLink, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, QuietPartnerLink, RelatedLinks, buildArticleSchema, buildMetadata, PrimaryHop } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -44,12 +44,20 @@ export default function WysongVsMarshallKibbleGuidePage() {
       schema={schema}
       hero={{
         title: 'Wysong Epigen 90 or Marshall Premium',
-        subtitle: 'A starch-free bag and a chain-shelf bag are different purchases. Carbohydrate is not on either guaranteed analysis. Percentages and prices below are the ones on the kibble review.',
         category: 'Buyer guide',
         authorName: 'Ferret.com Editorial',
         publishedAt: 'October 2026',
         readTime: '6 min',
       }}
+      heroHop={
+        <>
+          <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">Wysong Epigen 90 is the top kibble because the bag lists 63 percent protein and is marketed as starch-free.</p>
+          <div data-fold="offer">
+          <PrimaryHop href="/go/amazon-brand/wysong+ferret+food?s=reviews-wysong-vs-marshall-kibble-guide" label="Browse Wysong ferret food on Amazon" />
+          <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/wysong+ferret+food?s=reviews-wysong-vs-marshall-kibble-guide" />
+        </div>
+        </>
+      }
       breadcrumbs={[
         { name: 'Home', href: '/' },
         { name: 'Reviews', href: '/reviews' },

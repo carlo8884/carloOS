@@ -119,25 +119,24 @@ export default function BestFerretLitterPage() {
       <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="ferret-com"
-        heroHop={<PrimaryHop href='/go/chewy-brand/recycled+paper+pellet+litter+non+clumping?s=reviews-best-ferret-litter' label="Open the recycled paper-pellet search." />}
-        heroExtra={
-          <>
-          <HopDisclosure siteId="ferret-com" href="/go/chewy-brand/recycled+paper+pellet+litter+non+clumping?s=reviews-best-ferret-litter" />
-          <div className="[&_.text-brand-primary]:!text-brand-dark">
-            <QuickPicks items={QUICK_PICKS} embedded />
-          </div>
-          </>
-        }
         hero={{
           title: 'Best Ferret Litter: Dust Safety and the No-Clump Rule',
-          subtitle:
-            'Ferret litter is chosen on two safety criteria before any of the convenience ones: how much respiratory dust it produces, and whether it clumps. Ferrets have sensitive airways and a habit of nosing and grooming in the box, which rules out the clay clumping litters most people reach for. This guide ranks the safe options.',
           category: 'Buyer Guides',
           authorName: 'Ferret.com Editorial',
           publishedAt: 'June 2026',
           readTime: '9 min',
         }}
-        breadcrumbs={[
+        heroHop={
+        <>
+          <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">Recycled paper pellets are the top ferret litter because they do not clump and the dust stays low.</p>
+          <div data-fold="offer">
+          <PrimaryHop href='/go/chewy-brand/recycled+paper+pellet+litter+non+clumping?s=reviews-best-ferret-litter' label="Open the recycled paper-pellet search." />
+          <HopDisclosure siteId="ferret-com" href="/go/chewy-brand/recycled+paper+pellet+litter+non+clumping?s=reviews-best-ferret-litter" />
+        </div>
+        </>
+      }
+      heroExtra={<><QuickPicks items={QUICK_PICKS} embedded /></>}
+      breadcrumbs={[
           { name: 'Home', href: '/' },
           { name: 'Reviews', href: '/reviews' },
           { name: 'Best Ferret Litter', href: '/reviews/best-ferret-litter' },
