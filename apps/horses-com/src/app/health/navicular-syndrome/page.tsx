@@ -125,7 +125,7 @@ export default function NavicularPage() {
           <p>The navicular bone is a small, boat-shaped bone (hence the name, from the Latin for little ship) that sits behind the coffin joint, deep in the heel. The deep digital flexor tendon glides over its lower surface like a rope over a pulley, cushioned by the navicular bursa. Together the bone, bursa, deep digital flexor tendon, and supporting ligaments form the podotrochlear apparatus. Navicular syndrome is pain arising anywhere within this apparatus.</p>
 
           <h2 id="causes">What Causes It</h2>
-          <p>Rather than a single disease, navicular syndrome reflects chronic biomechanical overload of the heel region. Contributing factors include conformation (small feet relative to body size, long-toe low-heel hoof balance, upright or broken-back pastern axis), the demands of athletic work that loads the heel (jumping, hard stops, circles), and degenerative changes in the bone and soft tissues. MRI studies show that much of the pain comes from the deep digital flexor tendon and the supporting ligaments, not only the bone itself.</p>
+          <p>Rather than a single disease, navicular syndrome reflects chronic biomechanical overload of the heel region. Contributing factors include conformation (small feet relative to body size, long-toe low-heel hoof balance, upright or broken-back pastern axis), the demands of athletic work that loads the heel (jumping, hard stops, circles), and degenerative changes in the bone and soft tissues. Pain can come from the deep digital flexor tendon and the supporting ligaments, not only the bone itself. This page does not cite an MRI series for that split.</p>
 
           <h2 id="signs">Clinical Signs</h2>
           <ul>

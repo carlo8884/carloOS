@@ -5657,8 +5657,10 @@ const CALCULATORS = [
     mustExclude: [
       { re: /published separate constants/, label: 'do not attribute pony and draft divisors to Carroll & Huntington' },
       { re: /published pony divisor/, label: 'pony divisor is not a published Carroll constant' },
+      { re: /5–10%/, label: 'Carroll & Huntington 1988 abstract does not state a 5–10% error' },
+      { re: /5-10%/, label: 'do not restore an ASCII 5-10% accuracy claim' },
     ],
-    why: 'Carroll & Huntington 1988 abstract: average Y′ = 11900. Imperial 330 is the rounded form. Pony 299 and draft 301 are a planning figure.',
+    why: 'Carroll & Huntington 1988 abstract: average Y′ = 11900. Imperial 330 is the rounded form. Pony 299 and draft 301 are a planning figure. The abstract does not state a percent error.',
   },
   {
     id: 'horses · horse-weight-calculator hops',
@@ -5673,8 +5675,10 @@ const CALCULATORS = [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
       { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /5–10%/, label: 'page must not restore the unsourced 5–10% tape-error claim' },
+      { re: /5-10%/, label: 'do not restore an ASCII 5-10% accuracy claim' },
     ],
-    why: 'Money path: under-hero capture with a concrete tape-size offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN.',
+    why: 'Money path: under-hero capture with a concrete tape-size offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN. Carroll & Huntington 1988 does not publish a percent error.',
   },
   {
     id: 'horses · body-condition-score',

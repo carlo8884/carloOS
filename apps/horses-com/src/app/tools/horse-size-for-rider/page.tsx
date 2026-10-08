@@ -24,14 +24,14 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: 'Horse Size for Rider Calculator | Horses.com',
   description:
-    'What size horse should you ride? Estimate a suitable horse weight range and height in hands from your weight, height, and discipline using the 15–20% guideline.',
+    'What size horse should you ride? The 15–20% rider-plus-tack band is a planning figure, not a published welfare standard.',
   path: '/tools/horse-size-for-rider',
 })
 
 const howToSchema = buildHowToSchema({
   name: 'How to estimate what size horse a rider should ride',
   description:
-    'Add the rider weight to the weight of the saddle and tack, then divide by the welfare guideline that rider plus tack should be roughly 15 to 20 percent of the horse’s bodyweight to find a suitable horse weight range, and read across to an approximate height band in hands.',
+    'Add rider weight to saddle and tack, then apply this page’s 15–20% planning figure to suggest a horse weight range and an approximate height band in hands.',
   url: URL,
   totalTime: 'PT3M',
   steps: [
@@ -67,13 +67,13 @@ const softwareApplicationSchema = {
   applicationSubCategory: 'EquineRiderFitCalculator',
   operatingSystem: 'Web Browser (any HTML5-capable device)',
   description:
-    'Free horse-size-for-rider estimator. Inputs: rider weight, rider height, discipline/tack (English ~25 lb, western ~45 lb, or bareback), and experience level. Outputs: a suggested horse bodyweight range and an approximate height band in hands, derived from the welfare guideline that rider plus tack should be roughly 15–20% of the horse’s bodyweight.',
+    'Free horse-size-for-rider estimator. Inputs: rider weight, height, tack, and experience. The 15–20% rider-plus-tack band is a planning figure, not a published welfare standard.',
   inLanguage: 'en-US',
   isAccessibleForFree: true,
   offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
   featureList: [
     'Rider weight + discipline tack weight + experience anchor',
-    'Suggested horse bodyweight range from the 15–20% carrying guideline',
+    'Suggested horse bodyweight range from a 15–20% planning figure',
     'Approximate height band in hands for the suggested weight',
     'Leg-length consideration flag for taller riders',
     'Framed as educational guidance that defers to an instructor and the individual horse',
@@ -85,12 +85,12 @@ const FAQS = [
   {
     question: 'What size horse can carry my weight?',
     answer:
-      'A widely cited equine welfare guideline is that the combined weight of the rider plus their saddle and tack should be roughly 15 to 20 percent of the horse’s bodyweight. To estimate a suitable horse, add your weight to your tack (about 25 lb for English, 45 lb for western), then divide by 0.15 for a conservative target and 0.20 for the upper end. For example, a 160 lb rider in English tack carries about 185 lb, which suggests a horse of roughly 925 lb (20% end) up to about 1,230 lb (15% end) — a mid-size to larger horse. The percentage is guidance, not a hard cutoff: a fit, well-built, sound horse may carry comfortably toward the top of the range, while an unfit or poorly-conformed horse may struggle below it.',
+      'This calculator uses a planning figure: rider plus saddle and tack within roughly 15 to 20 percent of the horse’s bodyweight. That band is not a fetched welfare standard. To estimate a suitable horse, add your weight to your tack (about 25 lb for English, 45 lb for western), then divide by 0.15 for a conservative target and 0.20 for the upper end. For example, a 160 lb rider in English tack carries about 185 lb, which suggests a horse of roughly 925 lb (20% end) up to about 1,230 lb (15% end) — a mid-size to larger horse. The percentage is guidance, not a hard cutoff: a fit, well-built, sound horse may carry comfortably toward the top of the range, while an unfit or poorly-conformed horse may struggle below it.',
   },
   {
     question: 'Is the 20% rule for horse riding accurate?',
     answer:
-      'The 15–20% figure is a reasonable welfare guideline rather than an exact law of physics. Research into the effects of rider weight on horses has reported increased signs of strain as the rider-to-horse weight ratio climbs, which is why many organizations suggest keeping rider plus tack at or below about 20% of bodyweight, and nearer 15% for less balanced riders or harder work. But the threshold a given horse tolerates depends heavily on its conformation, back strength, fitness, age, and the fit of the saddle, plus how balanced the rider is. Use the percentage as a starting point and confirm suitability with a knowledgeable instructor and, where appropriate, your veterinarian.',
+      'The 15–20% figure is a planning figure on this page, not a fetched study and not a law of physics. This page does not cite a trial that sets 15% or 20% as a limit. The load a given horse tolerates depends on conformation, back strength, fitness, age, saddle fit, and how balanced the rider is. Use the percentage as a starting point and confirm suitability with a knowledgeable instructor and, where appropriate, your veterinarian.',
   },
   {
     question: 'Does rider height matter for choosing a horse, or just weight?',
@@ -193,8 +193,9 @@ export default function HorseSizeForRiderPage() {
         />
 
         <p>
-          <strong>The quick answer:</strong> a widely cited welfare guideline is that the rider plus their
-          saddle and tack should weigh roughly <strong>15&ndash;20% of the horse&rsquo;s bodyweight</strong>.
+          <strong>The quick answer:</strong> this page uses a planning figure that the rider plus their
+          saddle and tack stay within roughly <strong>15&ndash;20% of the horse&rsquo;s bodyweight</strong>.
+          That band is not a fetched welfare standard.
           To find a suitable horse, add your weight to your tack (about 25&nbsp;lb English, 45&nbsp;lb
           western) and divide by the guideline. A <strong>160&nbsp;lb rider in English tack</strong> carries
           about 185&nbsp;lb, which points to a horse of roughly{' '}

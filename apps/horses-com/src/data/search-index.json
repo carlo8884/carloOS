@@ -183,7 +183,7 @@
     {
       "path": "/tools/horse-size-for-rider",
       "title": "Horse Size for Rider Calculator | Horses.com",
-      "description": "What size horse should you ride? Estimate a suitable horse weight range and height in hands from your weight, height, and discipline using the 15–20% guideline.",
+      "description": "What size horse should you ride? The 15–20% rider-plus-tack band is a planning figure, not a published welfare standard.",
       "category": "tools"
     },
     {
@@ -195,7 +195,7 @@
     {
       "path": "/tools/horse-weight-calculator",
       "title": "Horse Weight Calculator (Girth + Length) | Horses.com",
-      "description": "Estimate a horse’s weight from heart girth and body length using the standard weight-tape formula. Free, instant lbs + kg, pony / draft / foal adjustments.",
+      "description": "Estimate a horse’s weight from girth and length with Carroll & Huntington 1988. Pony and draft divisors are a planning figure.",
       "category": "tools"
     },
     {

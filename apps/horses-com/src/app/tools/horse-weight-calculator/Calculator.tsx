@@ -270,12 +270,11 @@ export default function Calculator() {
       )}
 
       <p className="mt-4 text-xs text-brand-text-mid">
-        This is a girth-tape <strong>estimate</strong>, typically within roughly
-        ±5–10% of scale weight for mature light horses, and less accurate for
-        ponies, drafts, heavily pregnant mares, and growing youngstock. For
-        medication dosing, sale weight, or any decision that needs a real
-        number, weigh the horse on a livestock scale and consult your
-        veterinarian.
+        This is a girth-tape <strong>estimate</strong>. Carroll &amp; Huntington
+        1988 does not publish a percent error for it. Ponies, drafts, heavily
+        pregnant mares, and growing youngstock are a poorer fit. For medication
+        dosing, sale weight, or any decision that needs a real number, weigh
+        the horse on a livestock scale and consult your veterinarian.
       </p>
     </div>
   )

@@ -39,7 +39,7 @@ const TOOLS = [
   {
     href: '/tools/horse-weight-calculator',
     title: 'Horse Weight Calculator',
-    desc: 'Estimate bodyweight from heart girth and body length using the standard weight-tape formula. Instant lbs and kg, with pony, draft, and foal adjustments.',
+    desc: 'Estimate bodyweight from heart girth and body length with Carroll & Huntington 1988. Pony and draft divisors are a planning figure.',
     tag: 'Calculator',
   },
   {
@@ -87,7 +87,7 @@ const TOOLS = [
   {
     href: '/tools/horse-size-for-rider',
     title: 'Horse Size for Rider Calculator',
-    desc: 'What size horse should you ride? Suggests a horse weight range and approximate height band from rider weight, height, and discipline, using the 15–20% carrying guideline — then shop the rider-fit tack set (saddle, pad, girth, stirrups, ASTM/SEI helmet, weight tape). Guidance, not a rule.',
+    desc: 'What size horse should you ride? Suggests a weight range and height band from rider weight, height, and discipline. The 15–20% carrying band is a planning figure, not a published welfare standard.',
     tag: 'Fit',
   },
   {
