@@ -94,7 +94,7 @@ const FAQS = [
   },
   {
     question: 'What temperature should I keep tropical fish at?',
-    answer: '76–80°F (24–27°C) is the standard tropical range. Specific exceptions: discus 84–86°F, German blue rams 80–82°F, white cloud minnows below 72°F. Most tetras, rasboras, livebearers, and gouramis do fine anywhere in 76–80°F.',
+    answer: '76–80°F (24–27°C) is a planning figure for a mixed tropical tank, not a species band. Published exceptions: FishBase lists Symphysodon aequifasciatus at 26–30°C, which is 78–86°F (https://www.fishbase.se/summary/Symphysodon-aequifasciatus.html); FishBase lists Mikrogeophagus ramirezi at 27–30°C, which is 80–86°F (https://www.fishbase.se/summary/Mikrogeophagus-ramirezi.html); FishBase lists Tanichthys albonubes at 18–22°C, which is 64–72°F (https://www.fishbase.se/summary/Tanichthys-albonubes.html).',
   },
 ]
 

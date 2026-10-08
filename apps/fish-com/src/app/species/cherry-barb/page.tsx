@@ -69,7 +69,7 @@ export default function CherryBarbPage() {
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Quick Stats</div>
-          {[['Scientific name', 'Puntius titteya'], ['Adult size', '2 inches'], ['Min school', '8 — 10-12 for best display'], ['Temperature', '73–81°F'], ['pH', '6.0–7.5'], ['Min tank', '20 gallons for a school'], ['Lifespan', '4–7 years'], ['Aggression', 'None — peaceful with all']].map(([k, v]) => (
+          {[['Scientific name', 'Puntius titteya'], ['Adult size', '2 inches'], ['Min school', '8 — 10-12 for best display'], ['Temperature', '73–81°F (https://www.fishbase.se/summary/Puntius-titteya.html)'], ['pH', '6.0–7.5'], ['Min tank', '20 gallons for a school'], ['Lifespan', '4–7 years'], ['Aggression', 'None — peaceful with all']].map(([k, v]) => (
             <div key={k} className="flex justify-between py-1.5 border-b border-brand-border text-xs last:border-0">
               <span className="text-brand-text-light">{k}</span><span className="font-bold text-brand-dark text-right max-w-[55%] break-all">{v}</span>
             </div>

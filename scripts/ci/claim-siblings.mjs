@@ -138,6 +138,45 @@ const CLAIMS = [
   fish('dwarf-gourami', /76\s*[–—-]\s*82\s*°F/, /77\s*[–—-]\s*83\s*°F/, /Trichogaster-lalius\.html/),
   fish('kuhli-loach', /75\s*[–—-]\s*82\s*°F/, /75\s*[–—-]\s*86\s*°F/, /Pangio-kuhlii\.html/),
   fish('oscar', /74\s*[–—-]\s*81\s*°F/, /71\s*[–—-]\s*77\s*°F/, /Astronotus-ocellatus\.html/),
+  fish('blue-ram', /80\s*[–—-]\s*82\s*°F|80-82F/, /80\s*[–—-]\s*86\s*°F|80-86F/, /Mikrogeophagus-ramirezi\.html/),
+  fish('boesemani-rainbowfish', /72\s*[–—-]\s*82\s*°F|72-82F/, /80\s*[–—-]\s*86\s*°F/, /Melanotaenia-boesemani\.html/),
+  fish('cherry-barb', /cherry-barb-old-band/, /73\s*[–—-]\s*81\s*°F/, /Puntius-titteya\.html/),
+  fish('discus', /82\s*[–—-]\s*86\s*°F|82-86F|84\s*[–—-]\s*86\s*°F/, /78\s*[–—-]\s*86\s*°F/, /Symphysodon-aequifasciatus\.html/),
+  fish('dwarf-puffer', /74\s*[–—-]\s*82\s*°F|74-82F/, /71\s*[–—-]\s*83\s*°F/, /Carinotetraodon-travancoricus\.html/),
+  fish('ember-tetra', /73\s*[–—-]\s*82\s*°F|73-82F/, /75\s*[–—-]\s*83\s*°F/, /Hyphessobrycon-amandae\.html/),
+  fish('otocinclus', /72\s*[–—-]\s*82\s*°F/, /68\s*[–—-]\s*77\s*°F/, /Otocinclus-vittatus\.html/),
+  fish('panda-corydoras', /panda-old-band/, /68\s*[–—-]\s*77\s*°F|68-77F/, /Corydoras-panda\.html/),
+  fish('pearl-gourami', /77\s*[–—-]\s*82\s*°F/, /75\s*[–—-]\s*83\s*°F/, /Trichopodus-leerii\.html/),
+  fish('sparkling-gourami', /76\s*[–—-]\s*82\s*°F|76-82F/, /77\s*[–—-]\s*83\s*°F/, /Trichopsis-pumila\.html/),
+  fish('white-cloud-mountain-minnow', /60\s*[–—-]\s*72\s*°F|60-72F|75°F|75F/, /64\s*[–—-]\s*72\s*°F|64-72F/, /Tanichthys-albonubes\.html/),
+  fish('celestial-pearl-danio', /73\s*[–—-]\s*79\s*°F|73-79F/, /68\s*[–—-]\s*79\s*°F/, /danio-margaritatus/),
+  fish('endlers-livebearer', /72\s*[–—-]\s*80\s*°F|72-80F/, /75\s*[–—-]\s*86\s*°F/, /poecilia-wingei/),
+  fish('hillstream-loach', /65\s*[–—-]\s*75\s*°F|65-75F|below 75°F|below 75F|78\s*[–—-]\s*82\s*°F|78-82°F/, /68\s*[–—-]\s*76\s*°F/, /sewellia-lineolata/),
+  {
+    id: 'fish-african-cichlid-band',
+    fileIncludes: 'species/african-cichlid/',
+    forbid: /76\s*[–—-]\s*82\s*°F/,
+  },
+  {
+    id: 'fish-amano-band',
+    fileIncludes: 'species/amano-shrimp/',
+    forbid: /65\s*[–—-]\s*78\s*°?F/,
+  },
+  {
+    id: 'fish-axolotl-band',
+    fileIncludes: 'species/axolotl/',
+    forbid: /60\s*[–—-]\s*68\s*°?F|\b72\s*°F\b|\b75\s*°F\b|\b72F\b|\b75F\b/,
+  },
+  {
+    id: 'fish-koi-band',
+    fileIncludes: 'species/koi/',
+    forbid: /59\s*[–—-]\s*77\s*°F/,
+  },
+  {
+    id: 'fish-mystery-snail-band',
+    fileIncludes: 'species/mystery-snail/',
+    forbid: /68\s*[–—-]\s*82\s*°?F/,
+  },
 ]
 
 function stripComments(src) {
@@ -244,6 +283,13 @@ function assertFixtures() {
     ['betta room', 'apps/fish-com/src/app/species/betta-fish/page.tsx', 'Room temperature in most US homes (68–72°F)', true],
     ['betta sourced', 'apps/fish-com/src/app/species/betta-fish/page.tsx', '75–86°F (https://www.fishbase.se/summary/Betta-splendens.html)', true],
     ['cycling band', 'apps/fish-com/src/app/setup/aquarium-cycling-guide/page.tsx', 'Hold temperature at 78–82°F', true],
+    ['discus wrong', 'apps/fish-com/src/app/species/discus/page.tsx', 'Temperature 82–86°F', false],
+    ['discus sourced', 'apps/fish-com/src/app/species/discus/page.tsx', '78–86°F (https://www.fishbase.se/summary/Symphysodon-aequifasciatus.html)', true],
+    ['koi wrong', 'apps/fish-com/src/app/species/koi/page.tsx', '59–77°F optimal', false],
+    ['koi feeding', 'apps/fish-com/src/app/species/koi/page.tsx', 'Stop feeding below 50°F.', true],
+    ['african wrong', 'apps/fish-com/src/app/species/african-cichlid/page.tsx', 'temperature 76–82°F', false],
+    ['axolotl wrong', 'apps/fish-com/src/app/species/axolotl/page.tsx', 'The optimal range is 60–68°F. Above 72°F.', false],
+    ['hillstream sourced', 'apps/fish-com/src/app/species/hillstream-loach/page.tsx', '68–76°F (https://www.seriouslyfish.com/species/sewellia-lineolata/)', true],
   ]
   const problems = []
   for (const [label, path, text, shouldPass] of checks) {

@@ -47,9 +47,9 @@ const FAQS = [
   {
     question: 'What water conditions do dwarf puffers need?',
     answer:
-      'Keep them at 74–82°F and pH 7.0–7.8. They are sensitive to poor water quality, and the high-protein diet they require produces a heavy bioload, so robust filtration, modest stocking, and frequent water changes are critical.',
+      'Keep them at 71–83°F and pH 7.0–7.8. FishBase lists Carinotetraodon travancoricus at 22–28°C, which is 71–83°F (https://www.fishbase.se/summary/Carinotetraodon-travancoricus.html). They are sensitive to poor water quality, and the high-protein diet they require produces a heavy bioload, so robust filtration, modest stocking, and frequent water changes are critical.',
     answerText:
-      'Keep dwarf puffers at 74-82F and pH 7.0-7.8. Their high-protein diet creates a heavy bioload, so use strong filtration, light stocking, and frequent water changes.',
+      'Keep dwarf puffers at 71–83°F and pH 7.0-7.8. FishBase lists Carinotetraodon travancoricus at 22–28°C, which is 71–83°F (https://www.fishbase.se/summary/Carinotetraodon-travancoricus.html). Their high-protein diet creates a heavy bioload, so use strong filtration, light stocking, and frequent water changes.',
   },
 ]
 
@@ -67,7 +67,7 @@ export default function DwarfPufferPage() {
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Quick Stats</div>
-          {[['Scientific name', 'Carinotetraodon travancoricus'], ['Adult size', '1–1.4 inches'], ['Temperature', '74–82°F'], ['pH', '7.0–7.8'], ['Tank size', '5 gal single, 10+ for group'], ['Diet', 'Carnivore — snails, frozen meaty foods'], ['Lifespan', '4–5 years']].map(([k, v]) => (
+          {[['Scientific name', 'Carinotetraodon travancoricus'], ['Adult size', '1–1.4 inches'], ['Temperature', '71–83°F (https://www.fishbase.se/summary/Carinotetraodon-travancoricus.html)'], ['pH', '7.0–7.8'], ['Tank size', '5 gal single, 10+ for group'], ['Diet', 'Carnivore — snails, frozen meaty foods'], ['Lifespan', '4–5 years']].map(([k, v]) => (
             <div key={k} className="flex justify-between py-1.5 border-b border-brand-border text-xs last:border-0">
               <span className="text-brand-text-light">{k}</span><span className="font-bold text-brand-dark text-right max-w-[55%] break-all">{v}</span>
             </div>

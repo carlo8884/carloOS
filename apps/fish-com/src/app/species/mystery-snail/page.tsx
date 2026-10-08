@@ -46,9 +46,9 @@ const FAQS = [
   {
     question: 'How long do mystery snails live?',
     answer:
-      'One to three years, with an adult shell size of 1.5–2 inches. They do best at 68–82°F in harder water at pH 7.0–8.0, alongside peaceful community fish and shrimp. Avoid tankmates that nip snail antennae, such as some bettas and pufferfish — harassment stresses the snail and prevents normal feeding.',
+      'One to three years, with an adult shell size of 1.5–2 inches, in harder water at pH 7.0–8.0, alongside peaceful community fish and shrimp. This page does not state a preferred temperature band, because FishBase and Seriously Fish do not profile Pomacea bridgesii. Avoid tankmates that nip snail antennae, such as some bettas and pufferfish — harassment stresses the snail and prevents normal feeding.',
     answerText:
-      '1-3 years at 68-82F in harder water (pH 7.0-8.0). Avoid antenna-nipping tankmates like some bettas and puffers.',
+      '1-3 years in harder water (pH 7.0-8.0). This page does not state a preferred temperature band. Avoid antenna-nipping tankmates like some bettas and puffers.',
   },
 ]
 
@@ -68,7 +68,7 @@ export default function MysterySnailPage() {
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Quick Stats</div>
-          {[['Scientific name', 'Pomacea bridgesii'], ['Shell size', '1.5–2 inches (adult)'], ['Temperature', '68–82°F'], ['pH', '7.0–8.0 — prefers harder water'], ['GH', 'Higher GH — stronger shells'], ['Copper', 'LETHAL — avoid all copper'], ['Lifespan', '1–3 years'], ['Breeding', 'Lays egg clutches above waterline']].map(([k, v]) => (
+          {[['Scientific name', 'Pomacea bridgesii'], ['Shell size', '1.5–2 inches (adult)'], ['Temperature', 'No preferred band on this page'], ['pH', '7.0–8.0 — prefers harder water'], ['GH', 'Higher GH — stronger shells'], ['Copper', 'LETHAL — avoid all copper'], ['Lifespan', '1–3 years'], ['Breeding', 'Lays egg clutches above waterline']].map(([k, v]) => (
             <div key={k} className="flex justify-between py-1.5 border-b border-brand-border text-xs last:border-0">
               <span className="text-brand-text-light">{k}</span><span className="font-bold text-brand-dark text-right max-w-[55%] break-all">{v}</span>
             </div>

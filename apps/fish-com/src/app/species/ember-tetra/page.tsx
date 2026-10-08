@@ -40,9 +40,9 @@ const FAQS = [
   {
     question: 'What water parameters do ember tetras need?',
     answer:
-      'They prefer soft, slightly acidic water (pH 5.5–7.0) and tolerate a temperature range of 73–82°F, compatible with most planted tank setups. They are hardy once established and tolerate standard community parameters reasonably well, though the soft acidic end of their range produces better color and breeding behavior.',
+      'They prefer soft, slightly acidic water (pH 5.5–7.0). FishBase lists Hyphessobrycon amandae at 24–28°C, which is 75–83°F (https://www.fishbase.se/summary/Hyphessobrycon-amandae.html). The band is compatible with most planted tank setups. They are hardy once established and tolerate standard community parameters reasonably well, though the soft acidic end of their range produces better color and breeding behavior.',
     answerText:
-      'Ember tetras prefer soft, slightly acidic water (pH 5.5-7.0) at 73-82F. They are hardy, but the soft acidic end of the range gives better color and breeding.',
+      'Ember tetras prefer soft, slightly acidic water (pH 5.5-7.0). FishBase lists Hyphessobrycon amandae at 24–28°C, which is 75–83°F (https://www.fishbase.se/summary/Hyphessobrycon-amandae.html). They are hardy, but the soft acidic end of the range gives better color and breeding.',
   },
   {
     question: 'What do ember tetras eat?',
@@ -67,7 +67,7 @@ export default function EmberTetraPage() {
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Quick Stats</div>
-          {[['Scientific name', 'Hyphessobrycon amandae'], ['Adult size', '0.8 inches — very nano'], ['Min school', '10 — 20+ for best display'], ['Temperature', '73–82°F'], ['pH', '5.5–7.0 preferred'], ['Shrimp safe', 'Yes — ignores adult shrimp'], ['Min tank', '5 gallons (10+ recommended)']].map(([k, v]) => (
+          {[['Scientific name', 'Hyphessobrycon amandae'], ['Adult size', '0.8 inches — very nano'], ['Min school', '10 — 20+ for best display'], ['Temperature', '75–83°F (https://www.fishbase.se/summary/Hyphessobrycon-amandae.html)'], ['pH', '5.5–7.0 preferred'], ['Shrimp safe', 'Yes — ignores adult shrimp'], ['Min tank', '5 gallons (10+ recommended)']].map(([k, v]) => (
             <div key={k} className="flex justify-between py-1.5 border-b border-brand-border text-xs last:border-0">
               <span className="text-brand-text-light">{k}</span><span className="font-bold text-brand-dark text-right max-w-[55%] break-all">{v}</span>
             </div>
@@ -89,7 +89,7 @@ export default function EmberTetraPage() {
         <p>Ember tetras are one of the few fish reliably safe with cherry shrimp colonies, including shrimplets. At 0.8 inches, adult ember tetras cannot eat adult cherry shrimp, and their predatory drive toward tiny prey items appears limited — most aquarists report ember tetras ignoring shrimp completely. They are a popular choice for shrimp-focused planted tanks that want some fish movement without the shrimp predation risk of most species. Verify with your own fish individually, but the reputation for shrimp safety is well-established in the community.</p>
 
         <h2>Water and Care</h2>
-        <p>Ember tetras prefer soft, slightly acidic water (pH 5.5–7.0) and tolerate a temperature range of 73–82°F — compatible with most planted tank setups. They are hardy once established and tolerate standard community parameters reasonably well, though the soft acidic end of their range produces better color and breeding behavior. They are active, confident fish in groups — more reclusive and less colorful when kept in small numbers.</p>
+        <p>Ember tetras prefer soft, slightly acidic water (pH 5.5–7.0). FishBase lists Hyphessobrycon amandae at 24–28°C, which is 75–83°F (<a className="break-all" href="https://www.fishbase.se/summary/Hyphessobrycon-amandae.html">https://www.fishbase.se/summary/Hyphessobrycon-amandae.html</a>). The band is compatible with most planted tank setups. They are hardy once established and tolerate standard community parameters reasonably well, though the soft acidic end of their range produces better color and breeding behavior. They are active, confident fish in groups — more reclusive and less colorful when kept in small numbers.</p>
         <p>Feeding: very small food — they are 0.8 inches with a proportionally tiny mouth. Micro pellets (crushed fine), micro-size live foods (micro worms, baby brine shrimp), and very small flake. They compete well at feeding time within their small size class but will be outcompeted by larger, faster fish — keep with similarly sized species or provide targeted feeding near the bottom where ember tetras forage.</p>
         <h2>Frequently Asked Questions</h2>
         <FAQAccordion items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answerText }))} includeSchema={false} allowMultiple />

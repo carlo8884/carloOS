@@ -47,9 +47,9 @@ const FAQS = [
   {
     question: 'How long do Amano shrimp live?',
     answer:
-      'Two to three years, at 65–78°F and pH 6.0–7.5. They are active daytime grazers, and they can climb filter intake tubes and tank edges — cover all access points on open-topped tanks to prevent escapes.',
+      'Two to three years at pH 6.0–7.5. This page does not state a preferred temperature band, because FishBase and Seriously Fish do not profile Caridina multidentata. They are active daytime grazers, and they can climb filter intake tubes and tank edges — cover all access points on open-topped tanks to prevent escapes.',
     answerText:
-      '2-3 years at 65-78F and pH 6.0-7.5. Cover open tank tops — they climb intake tubes and tank edges.',
+      '2-3 years at pH 6.0-7.5. This page does not state a preferred temperature band. Cover open tank tops — they climb intake tubes and tank edges.',
   },
 ]
 
@@ -69,7 +69,7 @@ export default function AmanoShrimpPage() {
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Quick Stats</div>
-          {[['Scientific name', 'Caridina multidentata'], ['Adult size', '1.5–2 inches (females larger)'], ['Temperature', '65–78°F'], ['pH', '6.0–7.5'], ['Breeds in freshwater', 'No — larvae require brackish/saltwater'], ['Group sizing', '1 per 5 gallons for algae control'], ['Lifespan', '2–3 years']].map(([k, v]) => (
+          {[['Scientific name', 'Caridina multidentata'], ['Adult size', '1.5–2 inches (females larger)'], ['Temperature', 'No preferred band on this page'], ['pH', '6.0–7.5'], ['Breeds in freshwater', 'No — larvae require brackish/saltwater'], ['Group sizing', '1 per 5 gallons for algae control'], ['Lifespan', '2–3 years']].map(([k, v]) => (
             <div key={k} className="flex justify-between py-1.5 border-b border-brand-border text-xs last:border-0">
               <span className="text-brand-text-light">{k}</span><span className="font-bold text-brand-dark text-right max-w-[55%] break-all">{v}</span>
             </div>
