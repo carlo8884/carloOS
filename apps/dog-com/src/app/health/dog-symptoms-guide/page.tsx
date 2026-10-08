@@ -74,7 +74,7 @@ export default function DogSymptomsGuidePage() {
         { name: 'Dog Health', href: '/health' },
         { name: 'Symptom Guide', href: '/health/dog-symptoms-guide' },
       ]}
-      relatedLinks={[{ title: 'Dog Health Hub', href: '/health', category: 'Hub' }, { title: 'Dog Vomiting Guide', href: '/health/dog-vomiting', category: 'Dog Health' }, { title: 'Dog Diarrhea', href: '/health/dog-diarrhea', category: 'Dog Health' }, { title: 'Dog Bloat (GDV)', href: '/health/dog-bloat-gvd', category: 'Dog Health' }]}
+      relatedLinks={[{ title: 'Dog Health Hub', href: '/health', category: 'Hub' }, { title: 'Dog Chocolate Toxicity Calculator', href: '/tools/dog-chocolate-toxicity-calculator', category: 'Tools' }, { title: 'Dog Vomiting Guide', href: '/health/dog-vomiting', category: 'Dog Health' }, { title: 'Dog Diarrhea', href: '/health/dog-diarrhea', category: 'Dog Health' }, { title: 'Dog Bloat (GDV)', href: '/health/dog-bloat-gvd', category: 'Dog Health' }]}
       schema={schema}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-lg p-4">
@@ -92,6 +92,7 @@ export default function DogSymptomsGuidePage() {
         <TableOfContents items={[...SIGNS.slice(0, 8).map(s => ({ label: s.title, href: `#s${s.num}` })), { label: 'FAQ', href: '#faq' }]} />
         <RelatedLinks title="Related Guides" links={[
           { label: 'Is This a Dog Emergency? Triage Tool', href: '/tools/is-this-a-dog-emergency' },
+          { label: 'Dog Chocolate Toxicity Calculator', href: '/tools/dog-chocolate-toxicity-calculator' },
           { label: 'Find an Emergency Vet', href: '/find-a-vet' },
           { label: 'Best Pet Insurance', href: crossSiteHref('vets-co', '/reviews/best-pet-insurance') },
           { label: 'Senior Dog Care', href: '/health/senior-dog-care' },
@@ -110,6 +111,8 @@ export default function DogSymptomsGuidePage() {
         </div>
 
         <p>Not sure how urgent the signs you&apos;re seeing are? Use the <Link href="/tools/is-this-a-dog-emergency">Is This a Dog Emergency? triage tool</Link> to check the symptoms against these same criteria and get a conservative urgency read. It does not diagnose — only a veterinarian can do that.</p>
+
+        <p>Chocolate is a separate question from the general emergency list. The <Link href="/tools/dog-chocolate-toxicity-calculator">dog chocolate toxicity calculator</Link> turns a dog&apos;s weight and the amount eaten into a dose to read before you call poison control. It does not replace that call or a veterinary exam.</p>
 
         <h2>🚨 Emergency — Go Immediately</h2>
         <p>These symptoms require emergency veterinary care right now. Do not wait until morning.</p>

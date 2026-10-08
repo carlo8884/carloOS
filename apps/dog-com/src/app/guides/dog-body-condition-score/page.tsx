@@ -98,7 +98,7 @@ export default function DogBodyConditionScorePage() {
           { name: 'Guides', href: '/guides' },
           { name: 'Dog Body Condition Score', href: '/guides/dog-body-condition-score' },
         ]}
-        relatedLinks={[{ title: 'Dog Calorie Calculator', href: '/tools/dog-calorie-calculator', category: 'Tools' }, { title: 'Body Condition Score Tool', href: '/tools/dog-body-condition-score', category: 'Tools' }, { title: 'Dog Guides Hub', href: '/guides', category: 'Hub' }, { title: 'How Much to Feed', href: '/nutrition/how-much-to-feed', category: 'Nutrition' }, { title: 'Weight Management', href: '/nutrition/weight-management', category: 'Nutrition' }, { title: 'Spay/Neuter Timing', href: '/guides/dog-spay-neuter-timing', category: 'Guides' }]}
+        relatedLinks={[{ title: 'Dog Calorie Calculator', href: '/tools/dog-calorie-calculator', category: 'Tools' }, { title: 'Dog Age Calculator', href: '/tools/dog-age-calculator', category: 'Tools' }, { title: 'Body Condition Score Tool', href: '/tools/dog-body-condition-score', category: 'Tools' }, { title: 'Dog Guides Hub', href: '/guides', category: 'Hub' }, { title: 'How Much to Feed', href: '/nutrition/how-much-to-feed', category: 'Nutrition' }, { title: 'Weight Management', href: '/nutrition/weight-management', category: 'Nutrition' }, { title: 'Spay/Neuter Timing', href: '/guides/dog-spay-neuter-timing', category: 'Guides' }]}
         sidebar={
           <>
             <TableOfContents
@@ -118,6 +118,7 @@ export default function DogBodyConditionScorePage() {
             <RelatedLinks
               title="Related Guides"
               links={[
+                { label: 'Dog Age Calculator', href: '/tools/dog-age-calculator' },
                 { label: 'Dog Calorie Calculator', href: '/tools/dog-calorie-calculator' },
                 { label: 'Dog Obesity — Health Risks & Weight Loss Plan', href: '/health/dog-obesity' },
                 { label: 'How Much to Feed', href: '/nutrition/how-much-to-feed' },
@@ -164,6 +165,13 @@ export default function DogBodyConditionScorePage() {
               Dog Calorie Calculator
             </a>{' '}
             turns that direction into a starting daily energy estimate.
+          </p>
+          <p>
+            Age in years is a different number from body condition. The{' '}
+            <a href="/tools/dog-age-calculator" className="text-brand-primary hover:underline">
+              Dog Age Calculator
+            </a>{' '}
+            converts a birthday into human-year equivalents. It does not score fat cover.
           </p>
 
           <h2 id="scale">The 1–9 Scale, Score by Score</h2>
