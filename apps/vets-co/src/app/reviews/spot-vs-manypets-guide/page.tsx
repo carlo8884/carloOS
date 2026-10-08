@@ -1,11 +1,10 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
-import { consultLink } from '@carloOS/config/affiliate-hop'
+import { ArticleLayout, FAQAccordion, InlinePartnerQuote, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
 import { HopDisclosure } from '../../../components/HopDisclosure'
 
-// Request-time env. An unset AFF_SPOT_TAG renders the plain quote URL.
-// A set tag switches this link back to /go.
+// Request-time env. An unset AFF_SPOT_TAG keeps the quote as a note.
+// A set tag switches this control back to /go.
 export const dynamic = 'force-dynamic'
 
 export const metadata: Metadata = buildMetadata({
@@ -44,9 +43,6 @@ const FAQS = [
 
 export default function SpotVsManyPetsGuidePage() {
   const spotHref = '/go/spot/home?s=reviews-spot-vs-manypets-guide'
-  const spot = consultLink(spotHref)
-  const spotPlain = Boolean(spot && !spot.attributed)
-  const spotLink = spot?.href ?? spotHref
   return (
     <ArticleLayout
       siteId="vets-co"
@@ -85,7 +81,7 @@ export default function SpotVsManyPetsGuidePage() {
         <p>Open the Spot sample when you want several limit and deductible combinations on one carrier, and treat the preventive add-on as separate from the insurance. Open the ManyPets sample when one comprehensive plan is easier to read, and confirm the state actually offers it. On both, read waiting periods, exclusions, exam-fee language, and the annual limit in the sample policy. Do not treat either quote-based line as a price from this page.</p>
         <p>The link below opens the Spot quote from the fine-print page. The price you see there is the carrier&apos;s quote, not a figure from this page.</p>
         <HopDisclosure siteId="vets-co" href={spotHref} />
-        <p><a className="font-semibold text-brand-primary" href={spotLink} rel={spotPlain ? 'nofollow noopener' : 'sponsored noopener'} target={spotPlain ? '_blank' : undefined}>Get a Spot quote →</a></p>
+        <p><InlinePartnerQuote href={spotHref} label="Get a Spot quote" /></p>
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
       </div>

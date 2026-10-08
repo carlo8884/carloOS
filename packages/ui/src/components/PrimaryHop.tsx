@@ -1,11 +1,9 @@
-import { consultLink, hopCommissionReady, partnerLinkQuiet, partnerNeededLabel, partnerQuoteHeld, partnerTagReady, shopCtaLabel, visibleShopHref } from '@carloOS/config/affiliate-hop'
-import { HeldQuoteNext } from './HeldQuoteNext'
+import { hopCommissionReady, liveAnchorHref, partnerLinkQuiet, partnerNeededLabel, shopCtaLabel } from '@carloOS/config/affiliate-hop'
 
 /**
  * The page's top-pick hop, in normal flow under the title.
  * Disclosure sits above the link. Nothing is fixed or overlaid.
- * An unset Trupanion, Healthy Paws, or Embrace quote stays visible but
- * disabled. holdWithoutPartnerId is the same hold for callers that opt in.
+ * An unset held partner stays a note. The link returns when that tag is set.
  */
 export function PrimaryHop({
   href,
@@ -19,34 +17,22 @@ export function PrimaryHop({
   /** Held product partners stay visible as a note until their own tag is set. */
   quietUntilTag?: boolean
 }) {
-  if (quietUntilTag && partnerLinkQuiet(href)) {
+  // Same hold as partnerQuoteHeld. Kept so existing callers still type-check.
+  void holdWithoutPartnerId
+  const hop = liveAnchorHref(href)
+  if (!hop) {
+    if (!href?.startsWith('/go/')) return null
+    const quietProduct = quietUntilTag || partnerLinkQuiet(href)
     return (
       <p className="mb-5 text-sm leading-relaxed text-white/75 m-0" data-primary-hop="held">
-        {label.replace(/\s*→\s*$/, '').trim()} — partner ID needed
+        {quietProduct
+          ? `${label.replace(/\s*→\s*$/, '').trim()} — partner ID needed`
+          : partnerNeededLabel(label)}
       </p>
     )
   }
-  const held = partnerQuoteHeld(href) || (holdWithoutPartnerId && !partnerTagReady(href))
-  if (held) {
-    return (
-      <div className="mb-5 flex flex-wrap items-center gap-3" data-primary-hop="true">
-        <button
-          type="button"
-          disabled
-          className="inline-block max-w-full whitespace-normal text-left bg-white/70 text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md cursor-not-allowed"
-        >
-          {partnerNeededLabel(label)}
-        </button>
-        <HeldQuoteNext tone="on-color" />
-      </div>
-    )
-  }
-  const consult = consultLink(href)
-  const plain = Boolean(consult && !consult.attributed)
-  const hop = plain ? consult!.href : visibleShopHref(href)
-  if (!hop) return null
   const amazon = /\/go\/amazon/.test(hop)
-  const text = plain ? label : shopCtaLabel(href, label)
+  const text = shopCtaLabel(href, label)
   return (
     <div className="mb-5" data-primary-hop="true">
       {hop.startsWith('/go/') && hopCommissionReady(hop) ? (
@@ -59,8 +45,7 @@ export function PrimaryHop({
       <a
         href={hop}
         data-shop-placement="hero"
-        rel={plain ? 'nofollow noopener' : 'sponsored noopener'}
-        target={plain ? '_blank' : undefined}
+        rel="sponsored noopener"
         className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline"
       >
         {text}

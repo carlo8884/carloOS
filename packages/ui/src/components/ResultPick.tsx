@@ -1,5 +1,5 @@
 import type { SiteId } from '@carloOS/config'
-import { partnerNeededLabel, partnerQuoteHeld, shopCtaLabel, visibleShopHref } from '@carloOS/config/affiliate-hop'
+import { liveAnchorHref, partnerLinkQuiet, partnerNeededLabel, partnerQuoteHeld, shopCtaLabel } from '@carloOS/config/affiliate-hop'
 import type { MatchedPick } from '../lib/result-picks'
 import { AffiliateDisclosure } from './AffiliateDisclosure'
 import { HeldQuoteNext } from './HeldQuoteNext'
@@ -17,8 +17,9 @@ export function ResultPick({
 }) {
   if (!pick) return null
   const held = partnerQuoteHeld(pick.href)
-  const href = held ? undefined : pick.href.startsWith('/go/') ? visibleShopHref(pick.href) : pick.href
-  if (!href && !held) return null
+  const href = held ? undefined : liveAnchorHref(pick.href)
+  const quiet = !held && !href && pick.href.startsWith('/go/')
+  if (!href && !held && !quiet) return null
   const shop = Boolean(href?.startsWith('/go/'))
   const label = shop && href ? shopCtaLabel(pick.href, pick.label) : pick.label
   const detail = <p className="m-0 text-sm leading-relaxed text-brand-text-mid">{pick.detail}</p>
@@ -36,16 +37,22 @@ export function ResultPick({
       </button>
       <HeldQuoteNext />
     </span>
-  ) : (
+  ) : quiet ? (
+    <span data-partner-held="true" className="inline-block text-sm font-semibold text-brand-text-light">
+      {partnerLinkQuiet(pick.href)
+        ? `${pick.label.replace(/\s*→\s*$/, '').trim()} — partner ID needed`
+        : partnerNeededLabel(pick.label)}
+    </span>
+  ) : href ? (
     <a
       href={href}
-      data-shop-placement={shop || href?.startsWith('http') ? 'card' : undefined}
+      data-shop-placement={shop || href.startsWith('http') ? 'card' : undefined}
       rel={shop ? 'sponsored noopener' : undefined}
       className="inline-block font-semibold text-brand-primary underline underline-offset-2"
     >
       {label}
     </a>
-  )
+  ) : null
   return (
     <div data-result-pick className={`${linkFirst ? 'mb-4' : 'mt-4'} rounded-lg border border-brand-border bg-brand-surface p-4`}>
       {linkFirst ? (

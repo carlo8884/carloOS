@@ -7,7 +7,8 @@ import {
   buildItemListSchema,
   combineSchemas,
   SchemaScript,
-  AffiliateDisclosure} from '@carloOS/ui'
+  AffiliateDisclosure,
+  InlinePartnerQuote} from '@carloOS/ui'
 import { VETS_PET_INSURANCE_REVIEW } from '@carloOS/config'
 import { CARRIERS } from '../../../data/insurance-carriers'
 
@@ -225,18 +226,8 @@ export default function PetInsuranceHubPage() {
             <p className="text-sm text-brand-text-mid mb-3">
               Per-condition lifetime deductible, no payout caps, direct-pay at participating vets.
             </p>
-            {/* Monetization-lane exception: this hop stays live until Carlo
-                sets AFF_TRUPANION_TAG, AFF_HEALTHY_PAWS_TAG, and AFF_EMBRACE_TAG.
-                Editorial Vets.co quote buttons stay disabled until those tags
-                are set. Do not invent an ID and do not disable this button
-                without his say. See docs/affiliate-ids.md. */}
-            <a
-              href="/go/trupanion/home?s=pet-insurance-hub-best-overall"
-              rel="sponsored nofollow noopener noreferrer"
-              className="inline-block text-brand-primary font-semibold no-underline hover:underline"
-            >
-              Get a Trupanion quote →
-            </a>
+            {/* Quote stays a note until AFF_TRUPANION_TAG is set. Do not invent an ID. */}
+            <InlinePartnerQuote href="/go/trupanion/home?s=pet-insurance-hub-best-overall" label="Get a Trupanion quote" />
           </div>
 
           <div className="border border-brand-border rounded-xl p-6">

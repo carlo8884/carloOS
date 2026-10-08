@@ -1,7 +1,7 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { consultLink } from '@carloOS/config/affiliate-hop'
+import { liveAnchorHref } from '@carloOS/config/affiliate-hop'
 import { ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -39,7 +39,8 @@ const FAQS = [
 ]
 
 export default function VetsterVsAskvetGuidePage() {
-  const visit = consultLink('/go/vetster/telehealth?s=reviews-vetster-vs-askvet-guide')
+  const visitHref = '/go/vetster/telehealth?s=reviews-vetster-vs-askvet-guide'
+  const visit = liveAnchorHref(visitHref)
   return (
     <ArticleLayout
       priceAsOf="2026-10-07"
@@ -79,9 +80,13 @@ export default function VetsterVsAskvetGuidePage() {
         <p>AskVet is the subscription option. See the carrier&apos;s current terms for a monthly chat price. There is no video, specialists are general practice, and prescriptions are limited. The review says that is a reasonable trade when the questions are frequent: a new puppy, a senior pet, several pets, or a chronic condition you already understand and need to ask about. It is a weak substitute when you needed someone to look at the animal.</p>
         <h2>Who should use which</h2>
         <p>Use Vetster when you want video, a specialist, or a prescription the review says is jurisdiction-dependent. Use AskVet when the questions are frequent and chat is enough. See the carrier&apos;s current terms before comparing a monthly chat price with a single visit. Chewy lists the licensed-vet video price on the telehealth page. Chewy is not the comparison this page is settling.</p>
-        <HopDisclosure siteId="vets-co" href={visit?.href ?? ''} showQuietNote={false} />
-        <p>The link below opens Vetster from the telehealth page, for a video visit.</p>
-        <p><a className="font-semibold text-brand-primary" href={visit?.href} rel={visit?.attributed ? 'sponsored noopener' : 'nofollow noopener'} target={visit?.attributed ? undefined : '_blank'}>Visit Vetster →</a></p>
+        <HopDisclosure siteId="vets-co" href={visitHref} showQuietNote={false} />
+        <p>The video visit stays on this page as a note until that partner ID is set. It is not emergency care.</p>
+        {visit ? (
+          <p><a className="font-semibold text-brand-primary" href={visit} rel="sponsored noopener">Visit Vetster →</a></p>
+        ) : (
+          <p data-partner-held="vetster" className="font-semibold text-brand-text-light">Visit Vetster — partner ID needed</p>
+        )}
         <EmailCapture
           variant="inline"
           siteId="vets-co"

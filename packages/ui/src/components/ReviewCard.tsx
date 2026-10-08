@@ -6,7 +6,7 @@
  */
 
 import type { ReactNode } from 'react'
-import { consultLink, hopCommissionReady, isChewyHop, partnerLinkQuiet, partnerNeededLabel, partnerQuoteHeld, partnerTagReady, shopCtaLabel, tableShopLink, visibleShopHref } from '@carloOS/config/affiliate-hop'
+import { hopCommissionReady, isChewyHop, liveAnchorHref, partnerLinkQuiet, partnerNeededLabel, partnerQuoteHeld, partnerTagReady, shopCtaLabel, tableShopLink } from '@carloOS/config/affiliate-hop'
 import { HeldQuoteNext } from './HeldQuoteNext'
 
 const EARNING_PICK_SITES = new Set(['dog-com', 'fish-com', 'horses-com', 'vets-co', 'ferret-com'])
@@ -15,18 +15,21 @@ const EARNING_PICK_SITES = new Set(['dog-com', 'fish-com', 'horses-com', 'vets-c
 function QuickPickShopLink({ href, name, quietUntilTag = false }: { href?: string; name: string; quietUntilTag?: boolean }) {
   if (!href || !name.trim()) return null
   if (!EARNING_PICK_SITES.has(process.env.NEXT_PUBLIC_SITE_ID ?? '')) return null
-  if (quietUntilTag && partnerLinkQuiet(href)) {
+  const hop = liveAnchorHref(href)
+  if (!hop) {
+    if (!href?.startsWith('/go/')) return null
     return (
       <span className="relative z-10 ml-2 text-2xs font-semibold normal-case tracking-normal text-brand-text-light">
         partner ID needed
       </span>
     )
   }
+  void quietUntilTag
   const built = tableShopLink(href, name.trim())
   if (!built) return null
   return (
     <a
-      href={built.href}
+      href={hop}
       data-shop-placement="quick-pick"
       rel="sponsored noopener"
       className="relative z-10 ml-2 text-2xs font-semibold normal-case tracking-normal text-brand-dark underline underline-offset-2"
@@ -121,18 +124,25 @@ export function ReviewCard({
   id,
 }: ReviewCardProps) {
   const rawHref = ctaHref && ctaHref !== '#' ? ctaHref : undefined
-  const quiet = quietUntilTag && partnerLinkQuiet(rawHref)
-  const held = !quiet && (partnerQuoteHeld(rawHref) || (holdWithoutPartnerId && !partnerTagReady(rawHref)))
-  const consult = rawHref ? consultLink(rawHref) : null
-  const plain = Boolean(consult && !consult.attributed)
-  const href = quiet || held ? undefined : plain ? consult!.href : visibleShopHref(rawHref)
+  const href = liveAnchorHref(rawHref)
+  const quiet = Boolean(
+    rawHref?.startsWith('/go/') && !href && (quietUntilTag || partnerLinkQuiet(rawHref)),
+  )
+  const held = Boolean(
+    rawHref &&
+      !href &&
+      !quiet &&
+      (partnerQuoteHeld(rawHref) ||
+        (holdWithoutPartnerId && !partnerTagReady(rawHref)) ||
+        rawHref.startsWith('/go/')),
+  )
   const chewyCta = isChewyHop(href ?? '')
   const program = chewyCta
     ? ctaAffiliateProgram
     : href?.includes('/go/amazon')
       ? 'amazon'
       : ctaAffiliateProgram
-  const label = plain ? ctaText : shopCtaLabel(rawHref, ctaText)
+  const label = shopCtaLabel(rawHref, ctaText)
   return (
     <div
       id={id}
@@ -268,9 +278,9 @@ export function ReviewCard({
               href={href}
               data-shop-placement={!editorial && (href.startsWith('/go/') || href.startsWith('http')) ? 'card' : undefined}
               className="inline-flex items-center justify-center bg-brand-primary text-brand-white text-sm font-bold px-6 py-3 rounded no-underline hover:bg-brand-primary-light transition-colors duration-200 max-w-full text-center whitespace-normal"
-              data-program={editorial || plain ? undefined : program}
-              data-product={editorial || plain ? undefined : ctaAffiliateProduct}
-              rel={editorial ? undefined : plain ? 'nofollow noopener' : 'nofollow sponsored'}
+              data-program={editorial ? undefined : program}
+              data-product={editorial ? undefined : ctaAffiliateProduct}
+              rel={editorial ? undefined : 'nofollow sponsored'}
               target={editorial ? undefined : '_blank'}
             >
               {label}

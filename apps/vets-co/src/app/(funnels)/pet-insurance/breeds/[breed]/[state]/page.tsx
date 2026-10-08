@@ -16,9 +16,39 @@ import {
 import { CARRIERS } from '../../../../../../data/insurance-carriers'
 import { States } from '../../../../../../data/states'
 import { getStateInsuranceContext } from '../../../../../../data/insurance-by-state'
+import { liveAnchorHref, partnerNeededLabel } from '@carloOS/config/affiliate-hop'
 
 interface PageParams {
   params: Promise<{ breed: string; state: string }>
+}
+
+/** Quote visit stays a note until that carrier's tag is set. */
+function CarrierVisit({
+  vendor,
+  sku,
+  label,
+  className,
+  quietClassName = 'inline-block text-sm font-semibold text-brand-text-mid',
+}: {
+  vendor: string
+  sku: string
+  label: string
+  className: string
+  quietClassName?: string
+}) {
+  const hop = liveAnchorHref(`/go/${vendor}/${sku}`)
+  if (!hop) {
+    return (
+      <span data-partner-held={vendor} className={quietClassName}>
+        {partnerNeededLabel(label)}
+      </span>
+    )
+  }
+  return (
+    <a href={hop} rel="sponsored noopener" className={className}>
+      {label}
+    </a>
+  )
 }
 
 /**
@@ -161,13 +191,12 @@ export default async function BreedStateInsurancePage({ params }: PageParams) {
           <p className="text-brand-text-mid leading-relaxed mb-4">
             {b.recommendedReason}
           </p>
-          <a
-            href={`/go/${recommendedCarrier.vendor}/breed-${breed}-${state}`}
-            rel="sponsored noopener"
+          <CarrierVisit
+            vendor={recommendedCarrier.vendor}
+            sku={`breed-${breed}-${state}`}
+            label={`See ${recommendedCarrier.name}'s plans →`}
             className="inline-block px-5 py-2.5 bg-brand-primary text-brand-white text-sm font-bold rounded hover:bg-brand-primary-light transition-colors no-underline"
-          >
-            See {recommendedCarrier.name}&apos;s plans →
-          </a>
+          />
         </section>
       )}
 
@@ -255,13 +284,13 @@ export default async function BreedStateInsurancePage({ params }: PageParams) {
                 <p className="text-sm text-brand-text-mid leading-relaxed mb-3">
                   {c.tagline}
                 </p>
-                <a
-                  href={`/go/${c.vendor}/breed-${breed}-${state}`}
-                  rel="sponsored noopener"
+                <CarrierVisit
+                  vendor={c.vendor}
+                  sku={`breed-${breed}-${state}`}
+                  label={`Visit ${c.name} →`}
                   className="text-sm font-semibold text-brand-primary hover:underline"
-                >
-                  Visit {c.name} →
-                </a>
+                  quietClassName="text-sm font-semibold text-brand-text-mid"
+                />
               </div>
             ))}
           </div>

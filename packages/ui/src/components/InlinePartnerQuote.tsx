@@ -1,4 +1,4 @@
-import { partnerNeededLabel, partnerQuoteHeld, partnerTagReady, visibleShopHref } from '@carloOS/config/affiliate-hop'
+import { liveAnchorHref, partnerNeededLabel, partnerQuoteHeld, partnerTagReady } from '@carloOS/config/affiliate-hop'
 import { HeldQuoteNext } from './HeldQuoteNext'
 
 /**
@@ -15,7 +15,8 @@ export function InlinePartnerQuote({
   label: string
   holdWithoutPartnerId?: boolean
 }) {
-  const held = partnerQuoteHeld(href) || (holdWithoutPartnerId && !partnerTagReady(href))
+  const hop = liveAnchorHref(href)
+  const held = !hop && (partnerQuoteHeld(href) || (holdWithoutPartnerId && !partnerTagReady(href)) || href.startsWith('/go/'))
   if (held) {
     return (
       <span className="inline-flex flex-wrap items-center gap-x-3 gap-y-1">
@@ -30,7 +31,6 @@ export function InlinePartnerQuote({
       </span>
     )
   }
-  const hop = visibleShopHref(href)
   if (!hop) return null
   return (
     <a className="font-semibold text-brand-primary" href={hop} data-shop-placement="card" rel="sponsored noopener">

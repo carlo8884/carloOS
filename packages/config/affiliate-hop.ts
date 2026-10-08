@@ -282,6 +282,101 @@ export function partnerLinkQuiet(
   return resolveTag(vendor, env).tag.length === 0
 }
 
+/**
+ * Vendors whose rendered <a> is a held hop while that vendor's tag is unset.
+ * Amazon searches are not in this set, including an amazon-brand search whose
+ * words name one of these brands. Vetster is not an insurer; its tag is unset too.
+ */
+const HELD_PATH_VENDORS = new Set([
+  ...QUIET_PARTNER_VENDORS,
+  'chewy',
+  'chewy-brand',
+  'chewy-pharmacy',
+  'trupanion',
+  'healthy-paws',
+  'embrace',
+  'lemonade',
+  'pumpkin',
+  'pets-best',
+  'spot',
+  'manypets',
+  'figo',
+  'aspca',
+  'fetch',
+  'metlife',
+  'wagmo',
+  'vetster',
+  'askvet',
+])
+
+const HELD_HOSTS = [
+  'smartpakequine.com',
+  'doversaddlery.com',
+  'schneidersaddlery.com',
+  'ridingwarehouse.com',
+  'wysong.net',
+  'marshallferrets.com',
+  'carniwhole.com',
+  'chewy.com',
+  'trupanion.com',
+  'healthypawspetinsurance.com',
+  'embracepetinsurance.com',
+  'lemonade.com',
+  'pumpkin.care',
+  'petsbest.com',
+  'spotpet.com',
+  'manypets.com',
+  'figopetinsurance.com',
+  'aspcapetinsurance.com',
+  'fetchpet.com',
+  'metlifepetinsurance.com',
+  'wagmo.io',
+  'vetster.com',
+  'askvet.app',
+]
+
+/** Vendor key for a rendered href, or null when the href is not a held partner. */
+export function heldVendorOfHref(href: string | undefined): string | null {
+  if (!href) return null
+  const pathVendor = href.match(/\/go\/([^/?#]+)/i)?.[1]?.toLowerCase() ?? ''
+  if (pathVendor === 'amazon' || pathVendor === 'amazon-brand') return null
+  if (HELD_PATH_VENDORS.has(pathVendor)) return pathVendor
+  let host = ''
+  try {
+    host = new URL(href, 'https://local.invalid').hostname.replace(/^www\./, '').toLowerCase()
+  } catch {
+    return null
+  }
+  if (host === 'local.invalid' || host === 'amazon.com') return null
+  for (const held of HELD_HOSTS) {
+    if (host === held || host.endsWith(`.${held}`)) return held
+  }
+  return null
+}
+
+/**
+ * Href a shop control may put on an <a>.
+ * An unset held-partner tag returns undefined so the page can show a note.
+ * A Chewy-brand search becomes the existing amazon-brand search.
+ * An amazon-brand search stays, even when its words name a held brand.
+ */
+export function liveAnchorHref(
+  href: string | undefined,
+  env: NodeJS.ProcessEnv = process.env,
+): string | undefined {
+  if (!href || href === '#') return undefined
+  if (partnerLinkQuiet(href, env) || partnerQuoteHeld(href, env)) return undefined
+  const consult = consultLink(href, env)
+  if (consult && !consult.attributed) return undefined
+  const visible = visibleShopHref(href, env)
+  if (!visible) return undefined
+  const vendor = visible.match(/^\/go\/([^/?#]+)/i)?.[1]?.toLowerCase() ?? ''
+  if (vendor === 'amazon' || vendor === 'amazon-brand') return visible
+  if (vendor && HELD_PATH_VENDORS.has(vendor) && resolveTag(vendor, env).tag.length === 0) return undefined
+  if (!vendor && heldVendorOfHref(visible)) return undefined
+  return visible
+}
+
 export function partnerHome(vendor: string, template?: string): string {
   if (PARTNER_HOME[vendor]) return PARTNER_HOME[vendor]
   if (template) {
@@ -307,14 +402,15 @@ export function stripPlaceholder(url: string): string {
 }
 
 /**
- * Vetster, AskVet, Chewy Connect, Lemonade, Pumpkin, Pets Best, Spot,
- * ManyPets, Figo, and ASPCA stay live while their tags are unset. The page
- * renders the template with the placeholder id removed. When AFF_VETSTER_TAG,
- * AFF_ASKVET_TAG, AFF_CHEWY_TAG, AFF_LEMONADE_TAG, AFF_PUMPKIN_TAG,
- * AFF_PETS_BEST_TAG, AFF_SPOT_TAG, AFF_MANYPETS_TAG, AFF_FIGO_TAG, or
- * AFF_ASPCA_TAG is set, the same button switches back to the /go hop and the
- * redirect fills that tag. Trupanion, Healthy Paws, and Embrace stay held.
- * These strings match apps/vets-co/src/data/affiliate-routes.ts. Do not invent an ID.
+ * Resolver for Vetster, AskVet, Chewy Connect, Lemonade, Pumpkin, Pets Best,
+ * Spot, ManyPets, Figo, and ASPCA. An unset tag returns the template with the
+ * placeholder id removed. liveAnchorHref does not put that URL on an <a>
+ * until the tag is set. When AFF_VETSTER_TAG, AFF_ASKVET_TAG, AFF_CHEWY_TAG,
+ * AFF_LEMONADE_TAG, AFF_PUMPKIN_TAG, AFF_PETS_BEST_TAG, AFF_SPOT_TAG,
+ * AFF_MANYPETS_TAG, AFF_FIGO_TAG, or AFF_ASPCA_TAG is set, the button switches
+ * back to the /go hop and the redirect fills that tag. Trupanion, Healthy
+ * Paws, and Embrace stay held. These strings match
+ * apps/vets-co/src/data/affiliate-routes.ts. Do not invent an ID.
  */
 const CONSULT_TEMPLATE: Record<string, string> = {
   vetster: 'https://vetster.com/?refid=PLACEHOLDER&campaign={sku}',

@@ -166,11 +166,15 @@ test('forage pick keeps Standlee and changes the dry-matter line', () => {
   assert.match(idle.detail, /does not print a bag size/)
 })
 
-test('horse age assigns the joint card only to the senior stage', () => {
-  assert.match(horseAgePick('Senior').href, /cosequin-asu-plus/)
+test('horse age senior uses the existing senior-feed search', () => {
+  assert.equal(
+    horseAgePick('Senior').href,
+    '/go/amazon-brand/senior+horse+feed?s=tools-horse-age-calculator',
+  )
   assert.equal(horseAgePick('Adult').href, '/reviews/best-equine-supplements')
   assert.equal(horseAgePick('Foal').href, '/reviews/best-equine-supplements')
   assert.match(horseAgePick('Young').detail, /young/)
+  assert.equal(/smartpak|cosequin/i.test(horseAgePick('Senior').href), false)
 })
 
 test('cat food grams follow the calorie page searches', () => {

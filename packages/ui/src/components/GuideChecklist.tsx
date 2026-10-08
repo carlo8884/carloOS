@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { visibleShopHref } from '@carloOS/config/affiliate-hop'
+import { liveAnchorHref } from '@carloOS/config/affiliate-hop'
 import { checklistCopyText, checklistLabel, type ChecklistLine } from '../lib/guide-checklist'
 import { trackEvent } from '../lib/track-event'
 
@@ -90,7 +90,7 @@ export function GuideChecklist({
       <ul className="m-0 pl-5 text-sm text-brand-text-mid leading-relaxed">
         {items.map((item) => {
           const label = checklistLabel(item)
-          const href = typeof item === 'string' ? undefined : visibleShopHref(item.href)
+          const href = typeof item === 'string' ? undefined : liveAnchorHref(item.href)
           return (
             <li key={label} className="mb-1">
               {href ? (

@@ -10,7 +10,7 @@ import {
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
-import { consultLink } from '@carloOS/config/affiliate-hop'
+import { consultLink, liveAnchorHref } from '@carloOS/config/affiliate-hop'
 import { Symptoms, SymptomsBySlug, type Symptom, type UrgencyTier } from '../../../data/symptoms'
 
 interface PageProps {
@@ -150,8 +150,11 @@ export default function SymptomPage({ params }: PageProps) {
   const tier = TIER_STYLE[s.urgencyTriage]
   const isER = s.urgencyTriage === 'ER NOW'
   const faqs = faqsFor(s)
-  const talk = consultLink(`/go/vetster/telehealth?s=symptoms-${s.slug}`)
-  const talkRel = talk?.attributed ? 'sponsored noopener' : 'nofollow noopener'
+  const talkPath = `/go/vetster/telehealth?s=symptoms-${s.slug}`
+  // consultLink stays so the spoke pin still sees the consult path.
+  // The anchor is withheld until AFF_VETSTER_TAG is set.
+  void consultLink(talkPath)
+  const talkHref = liveAnchorHref(talkPath)
 
   const articleSchema = buildArticleSchema({
     siteId: 'vets-co',
@@ -378,25 +381,41 @@ export default function SymptomPage({ params }: PageProps) {
                   >
                     Find an emergency vet →
                   </Link>
-                  <a
-                    href={talk?.href}
-                    rel={talkRel}
-                    target={talk?.attributed ? undefined : '_blank'}
-                    className="inline-block bg-brand-surface border border-brand-border text-brand-dark font-bold text-sm px-5 py-3 rounded-lg no-underline hover:border-brand-primary"
-                  >
-                    Or ask a vet online →
-                  </a>
+                  {talkHref ? (
+                    <a
+                      href={talkHref}
+                      rel="sponsored noopener"
+                      className="inline-block bg-brand-surface border border-brand-border text-brand-dark font-bold text-sm px-5 py-3 rounded-lg no-underline hover:border-brand-primary"
+                    >
+                      Or ask a vet online →
+                    </a>
+                  ) : (
+                    <span
+                      data-partner-held="vetster"
+                      className="inline-block bg-brand-surface border border-brand-border text-brand-text-light font-bold text-sm px-5 py-3 rounded-lg"
+                    >
+                      Or ask a vet online — partner ID needed
+                    </span>
+                  )}
                 </>
               ) : (
                 <>
-                  <a
-                    href={talk?.href}
-                    rel={talkRel}
-                    target={talk?.attributed ? undefined : '_blank'}
-                    className="inline-block bg-brand-primary text-white font-bold text-sm px-5 py-3 rounded-lg no-underline hover:opacity-90"
-                  >
-                    Talk to a vet now →
-                  </a>
+                  {talkHref ? (
+                    <a
+                      href={talkHref}
+                      rel="sponsored noopener"
+                      className="inline-block bg-brand-primary text-white font-bold text-sm px-5 py-3 rounded-lg no-underline hover:opacity-90"
+                    >
+                      Talk to a vet now →
+                    </a>
+                  ) : (
+                    <span
+                      data-partner-held="vetster"
+                      className="inline-block border border-brand-border text-brand-text-light font-bold text-sm px-5 py-3 rounded-lg"
+                    >
+                      Talk to a vet now — partner ID needed
+                    </span>
+                  )}
                   <Link
                     href="/telehealth"
                     className="inline-block bg-brand-surface border border-brand-border text-brand-dark font-bold text-sm px-5 py-3 rounded-lg no-underline hover:border-brand-primary"

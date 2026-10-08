@@ -19,6 +19,8 @@ import {
   partnerNeededLabel,
   partnerQuoteHeld,
   partnerLinkQuiet,
+  liveAnchorHref,
+  heldVendorOfHref,
   VETS_PET_INSURANCE_REVIEW,
 } from './affiliate-hop'
 
@@ -370,6 +372,49 @@ describe('resolveAffiliateHop', () => {
     assert.equal(consultLink('/go/trupanion/home?s=x', {}), null)
     assert.equal(consultLink('/go/healthy-paws/home?s=x', {}), null)
     assert.equal(consultLink('/go/embrace/home?s=x', {}), null)
+  })
+
+  it('withholds a live anchor for an unset held partner', () => {
+    const unset = {}
+    assert.equal(liveAnchorHref('/go/smartpak/cosequin-asu-plus?s=tools-horse-age-calculator', unset), undefined)
+    assert.equal(liveAnchorHref('/go/wysong/epigen-90?s=tools-label-calculator', unset), undefined)
+    assert.equal(liveAnchorHref('/go/dover/sheepskin-half-pad?s=tack-saddle-pads', unset), undefined)
+    assert.equal(liveAnchorHref('/go/schneider/home?s=x', unset), undefined)
+    assert.equal(liveAnchorHref('/go/ridingwarehouse/home?s=x', unset), undefined)
+    assert.equal(liveAnchorHref('/go/marshall/premium-ferret-diet?s=x', unset), undefined)
+    assert.equal(liveAnchorHref('/go/carniwhole/kibble?s=x', unset), undefined)
+    assert.equal(liveAnchorHref('/go/vetster/telehealth?s=telehealth', unset), undefined)
+    assert.equal(liveAnchorHref('/go/askvet/telehealth?s=telehealth', unset), undefined)
+    assert.equal(liveAnchorHref('/go/lemonade/home?s=x', unset), undefined)
+    assert.equal(liveAnchorHref('/go/pumpkin/home?s=x', unset), undefined)
+    assert.equal(liveAnchorHref('/go/trupanion/home?s=x', unset), undefined)
+    assert.equal(liveAnchorHref('/go/healthy-paws/home?s=x', unset), undefined)
+    assert.equal(liveAnchorHref('/go/embrace/home?s=x', unset), undefined)
+    assert.equal(liveAnchorHref('/go/fetch/home?s=x', unset), undefined)
+    assert.equal(liveAnchorHref('/go/chewy/connect?s=telehealth', unset), undefined)
+    assert.equal(heldVendorOfHref('https://vetster.com/?campaign=telehealth'), 'vetster.com')
+    assert.equal(liveAnchorHref('https://vetster.com/?campaign=telehealth', unset), undefined)
+    assert.equal(
+      liveAnchorHref('/go/chewy-brand/royal+canin+dry+dog+food?s=reviews-best-dry-dog-food', unset),
+      '/go/amazon-brand/royal+canin+dry+dog+food?s=reviews-best-dry-dog-food',
+    )
+    assert.equal(
+      liveAnchorHref('/go/amazon-brand/wysong+ferret+food?s=tools-label-calculator', unset),
+      '/go/amazon-brand/wysong+ferret+food?s=tools-label-calculator',
+    )
+    assert.equal(heldVendorOfHref('/go/amazon-brand/wysong+ferret+food?s=tools-label-calculator'), null)
+    assert.equal(
+      liveAnchorHref('/go/smartpak/cosequin-asu-plus?s=x', { AFF_SMARTPAK_TAG: 'sp-live' }),
+      '/go/smartpak/cosequin-asu-plus?s=x',
+    )
+    assert.equal(
+      liveAnchorHref('/go/vetster/telehealth?s=telehealth', { AFF_VETSTER_TAG: 'vet-live' }),
+      '/go/vetster/telehealth?s=telehealth',
+    )
+    assert.equal(
+      liveAnchorHref('/go/trupanion/home?s=x', { AFF_TRUPANION_TAG: 'tru-live' }),
+      '/go/trupanion/home?s=x',
+    )
   })
 
   it('hides a commission claim when the hop tag is unset', () => {
