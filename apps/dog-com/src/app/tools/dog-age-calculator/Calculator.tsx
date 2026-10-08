@@ -45,7 +45,7 @@ function computeHumanAge(dogAge: number, perYear: number): number {
 function getLifeStage(dogAge: number, size: SizeCategory): string {
   if (dogAge < 1) return 'Puppy'
   if (dogAge < 2) return 'Adolescent'
-  // Senior thresholds approximate AVMA/AAHA-style guidance; larger dogs age faster
+  // Senior thresholds are a planning figure, not an AVMA or AAHA chart.
   const seniorAge = size === 'giant' ? 6 : size === 'large' ? 7 : size === 'medium' ? 8 : 9
   const matureAge = size === 'giant' ? 4 : size === 'large' ? 5 : size === 'medium' ? 6 : 7
   if (dogAge >= seniorAge) return 'Senior'
