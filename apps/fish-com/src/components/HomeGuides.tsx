@@ -148,8 +148,11 @@ export function HomeGuides() {
                 Get a number, not just an article.
               </h2>
             </div>
-            <p className="text-base text-white/60 mb-0 max-w-2xl leading-relaxed">
-              Every calculator is built on published aquarist reference data — answer a few questions and get a precise, sourced answer for your tank right now.
+            <p className="text-base text-white/60 mb-0 max-w-2xl leading-relaxed flex items-start gap-2.5">
+              <span className={`relative mt-0.5 h-8 w-12 shrink-0 overflow-hidden rounded-md bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
+                <StockImage manifestKey="fish-com:tools-hero" alt="" aspect="4:3" />
+              </span>
+              <span>Every calculator is built on published aquarist reference data — answer a few questions and get a precise, sourced answer for your tank right now.</span>
             </p>
           </div>
           <Link
@@ -461,7 +464,12 @@ export function HomeGuides() {
                 </div>
               </Link>
             </div>
-            <p className="text-base text-white/70 leading-relaxed mb-6 max-w-xl">Heaters, filters, lighting, canister filters, water-test kits, nano tanks, and planted-tank fertilizers — each guide weighs accuracy, durability, and price.</p>
+            <p className="text-base text-white/70 leading-relaxed mb-6 max-w-xl flex items-start gap-2.5">
+              <span className={`relative mt-0.5 h-8 w-12 shrink-0 overflow-hidden rounded-md bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
+                <StockImage manifestKey="fish-com:species-amano-shrimp" alt="" aspect="4:3" />
+              </span>
+              <span>Heaters, filters, lighting, canister filters, water-test kits, nano tanks, and planted-tank fertilizers — each guide weighs accuracy, durability, and price.</span>
+            </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {PRODUCT_CHIPS.map((item) => (
                 <Link
@@ -560,8 +568,11 @@ export function HomeGuides() {
                 </div>
               </Link>
             </div>
-            <p className="text-sm text-brand-text-mid leading-relaxed mb-3">
-              Fish.com Editorial writes the guides on this site. We reference published aquarist literature, manufacturer specifications, and species-specific water-parameter data. We don't use AI-generated aquarists or biologists. Affiliate links are disclosed above the fold on every product page.
+            <p className="text-sm text-brand-text-mid leading-relaxed mb-3 flex items-start gap-2.5">
+              <span className={`relative mt-0.5 h-8 w-12 shrink-0 overflow-hidden rounded-md bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
+                <StockImage manifestKey="fish-com:species-african-cichlid" alt="" aspect="4:3" />
+              </span>
+              <span>Fish.com Editorial writes the guides on this site. We reference published aquarist literature, manufacturer specifications, and species-specific water-parameter data. We don't use AI-generated aquarists or biologists. Affiliate links are disclosed above the fold on every product page.</span>
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4">
               {WORK_CHIPS.map((item) => (
