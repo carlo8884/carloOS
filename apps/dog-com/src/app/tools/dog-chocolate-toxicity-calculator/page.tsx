@@ -35,9 +35,9 @@ const FAQS = [
   {
     question: 'How much chocolate is toxic to dogs?',
     answer:
-      'There is no truly safe amount, but veterinary references describe dose bands based on theobromine — the stimulant in cocoa that dogs metabolise slowly. Signs are commonly reported starting around 20 mg of theobromine per kilogram of body weight; cardiac signs become possible around 40–60 mg/kg; and severe signs including seizures are described above roughly 60 mg/kg. Because theobromine concentration differs enormously by chocolate type, a small amount of baking chocolate or cocoa powder can be far more dangerous than a much larger amount of milk chocolate. The honest answer is that any ingestion warrants a call to your veterinarian or a poison-control hotline, who can weigh the exact product, amount, and your dog against these thresholds.',
+      'There is no truly safe amount. Merck Veterinary Manual describes chocolate toxicosis from methylxanthines (theobromine plus caffeine). Mild signs may occur at 20 mg/kg, cardiotoxic effects at 40–50 mg/kg, and seizures at 60 mg/kg or more. Concentration differs by type, so a small amount of baking chocolate or cocoa powder can deliver more methylxanthines than a much larger amount of milk chocolate. Any ingestion warrants a call to your veterinarian or a poison-control hotline, who can weigh the exact product, amount, and your dog against these thresholds.',
     answerText:
-      'No amount is truly safe. Theobromine signs are commonly reported from ~20 mg/kg; cardiac signs ~40–60 mg/kg; severe signs/seizures above ~60 mg/kg. Dark, baking chocolate, and cocoa powder are far more concentrated than milk chocolate. Call your vet or poison control for any ingestion.',
+      'No amount is truly safe. Merck: mild signs may occur at 20 mg/kg of methylxanthines, cardiotoxic effects at 40–50 mg/kg, seizures at 60 mg/kg or more. Baking chocolate and cocoa powder are far more concentrated than milk chocolate. Call your vet or poison control for any ingestion.',
   },
   {
     question: 'My dog ate chocolate but seems fine — should I still call?',
@@ -49,16 +49,16 @@ const FAQS = [
   {
     question: 'Which chocolate is most dangerous for dogs?',
     answer:
-      'Danger tracks theobromine concentration. Dry cocoa powder is the most concentrated common form, followed by unsweetened baking chocolate, then dark and semisweet chocolate, then milk chocolate. White chocolate contains almost no theobromine, but its fat and sugar can still cause vomiting, diarrhoea, or pancreatitis, so it is not harmless. This is why type matters as much as amount: a square of baking chocolate can deliver more theobromine than several milk-chocolate bars.',
+      'Danger tracks methylxanthine concentration (theobromine plus caffeine). Merck lists dry cocoa powder as the most concentrated common form, then unsweetened baking chocolate, then semisweet and sweet dark chocolate, then milk chocolate. White chocolate is listed at 1.1 mg/oz, negligible for methylxanthines, but its fat and sugar can still cause vomiting, diarrhoea, or pancreatitis, so it is not harmless. A square of baking chocolate can deliver more methylxanthines than several milk-chocolate bars.',
     answerText:
-      'By theobromine concentration: cocoa powder > baking chocolate > dark/semisweet > milk chocolate. White chocolate has negligible theobromine but its fat/sugar can still cause GI upset or pancreatitis.',
+      'By Merck methylxanthines: cocoa powder > baking chocolate > semisweet and sweet dark > milk chocolate. White chocolate is 1.1 mg/oz, but its fat and sugar can still cause GI upset or pancreatitis.',
   },
   {
     question: 'How is the theobromine dose calculated?',
     answer:
-      'The estimate multiplies the amount eaten by the average theobromine concentration for that chocolate type (in milligrams per ounce, from published veterinary toxicology references), then divides by the dog\'s body weight in kilograms to give a dose in milligrams per kilogram. That mg/kg figure is what veterinary references use to describe risk. The calculation uses average concentrations — real products vary by cocoa percentage and recipe, and caffeine in chocolate adds to the toxic load — so the result is an estimate to share with a professional, not a diagnosis.',
+      'The estimate multiplies the amount eaten by the Merck methylxanthine figure for that chocolate type (theobromine plus caffeine, milligrams per ounce), then divides by the dog\'s body weight in kilograms. Semisweet and sweet dark uses 160 mg/oz, the top of Merck\'s 150–160 range. The high-cocoa 228 mg/oz row is a planning figure. The result is an estimate to share with a professional, not a diagnosis.',
     answerText:
-      'Dose (mg/kg) = amount eaten × average theobromine per ounce for that type ÷ body weight in kg. It uses average concentrations and excludes caffeine, so it is an estimate to give your vet, not a diagnosis.',
+      'Dose (mg/kg) = amount eaten × Merck methylxanthines per ounce for that type ÷ body weight in kg. The 228 mg/oz dark row is a planning figure. This is an estimate for your vet, not a diagnosis.',
   },
 ]
 
@@ -117,11 +117,11 @@ const howToSchema = buildHowToSchema({
     },
     {
       name: 'Select the chocolate type',
-      text: 'Choose the type of chocolate your dog ate: white, milk, semisweet/dark chips, dark, unsweetened baking chocolate, or dry cocoa powder. Type matters because theobromine concentration varies from ~0.25 mg/oz (white) to ~737 mg/oz (dry cocoa powder).',
+      text: 'Choose the type of chocolate your dog ate. Merck lists methylxanthines (theobromine plus caffeine) from 1.1 mg/oz for white chocolate to 807 mg/oz for cocoa powder. The high-cocoa dark row at 228 mg/oz is a planning figure; Merck does not list it.',
     },
     {
       name: 'Enter the amount eaten and your dog\'s weight',
-      text: 'Enter the approximate amount of chocolate ingested (in ounces or grams) and your dog\'s body weight. The calculator multiplies amount × average theobromine per ounce, then divides by body weight in kg to give a dose in mg/kg.',
+      text: 'Enter the approximate amount eaten and your dog\'s body weight. The calculator multiplies amount by the Merck methylxanthine figure for that type (mg per ounce), then divides by body weight in kg.',
     },
     {
       name: 'Share the mg/kg estimate with your vet or poison control',
@@ -224,20 +224,20 @@ export default function DogChocolateToxicityCalculatorPage() {
               The short answer
             </div>
             <p className="text-base text-brand-text-mid leading-relaxed mb-3">
-              Chocolate is toxic to dogs because of <span className="font-semibold text-brand-dark">theobromine</span>,
-              a stimulant dogs clear slowly. Veterinary references describe risk by dose in milligrams of
-              theobromine per kilogram of body weight:
+              Chocolate is toxic to dogs because of methylxanthines
+              (<span className="font-semibold text-brand-dark">theobromine plus caffeine</span>).
+              The Merck Veterinary Manual describes risk by that combined dose in milligrams per kilogram:
             </p>
             <ul className="list-disc pl-5 text-base text-brand-text-mid leading-relaxed mb-3 grid gap-1">
               <li><span className="font-semibold text-brand-dark">~20 mg/kg</span> — GI signs (vomiting, diarrhoea) commonly reported</li>
-              <li><span className="font-semibold text-brand-dark">~40–60 mg/kg</span> — cardiac signs become possible</li>
+              <li><span className="font-semibold text-brand-dark">40–50 mg/kg</span> — Merck describes cardiotoxic effects</li>
               <li><span className="font-semibold text-brand-dark">over ~60 mg/kg</span> — severe signs including tremors and seizures described</li>
             </ul>
             <p className="text-base text-brand-text-mid leading-relaxed mb-3">
               <span className="font-semibold text-brand-dark">Worked example.</span> A 10 lb (4.5 kg) dog
-              that eats 1 oz of unsweetened baking chocolate (~390 mg theobromine/oz) takes in about{' '}
-              <span className="font-semibold text-brand-dark">86 mg/kg</span> — a severe-range exposure.
-              The same dog eating 1 oz of milk chocolate (~58 mg/oz) takes in about 13 mg/kg. Type
+              that eats 1 oz of unsweetened baking chocolate (Merck: 440 mg methylxanthines/oz) takes in about{' '}
+              <span className="font-semibold text-brand-dark">98 mg/kg</span> — above Merck&apos;s 60 mg/kg seizure line.
+              The same dog eating 1 oz of milk chocolate (Merck: 64 mg/oz) takes in about 14 mg/kg. Type
               matters as much as amount.
             </p>
             <p className="text-sm text-brand-text-light leading-relaxed m-0">
@@ -248,25 +248,25 @@ export default function DogChocolateToxicityCalculatorPage() {
 
           {/* Theobromine-by-type reference table — citation magnet */}
           <h2 className="mb-3 font-display text-xl font-semibold text-brand-text-dark">
-            Theobromine content by chocolate type
+            Methylxanthines by chocolate type
           </h2>
           <div className="overflow-x-auto rounded-lg border border-brand-border">
             <table className="w-full text-sm border-collapse bg-brand-white">
               <thead>
                 <tr className="bg-brand-surface text-left">
                   <th className="p-3 font-semibold text-brand-dark border-b border-brand-border">Chocolate type</th>
-                  <th className="p-3 font-semibold text-brand-dark border-b border-brand-border">Theobromine (mg/oz)</th>
-                  <th className="p-3 font-semibold text-brand-dark border-b border-brand-border">Theobromine (mg/g)</th>
+                  <th className="p-3 font-semibold text-brand-dark border-b border-brand-border">Methylxanthines (mg/oz)</th>
+                  <th className="p-3 font-semibold text-brand-dark border-b border-brand-border">Methylxanthines (mg/g)</th>
                 </tr>
               </thead>
               <tbody className="text-brand-text-mid">
                 {[
-                  ['White chocolate', '~0.25', '~0.01'],
-                  ['Milk chocolate', '~58', '~2.0'],
-                  ['Semisweet / dark chips', '~150', '~5.3'],
-                  ['Dark chocolate (high cocoa)', '~228', '~8.0'],
-                  ['Unsweetened baking chocolate', '~390', '~13.8'],
-                  ['Dry cocoa powder', '~737', '~26.0'],
+                  ['White chocolate', '1.1', '0.04'],
+                  ['Milk chocolate', '64', '2.3'],
+                  ['Semisweet and sweet dark', '150–160 (meter uses 160)', '5.3–5.6'],
+                  ['Dark chocolate, high cocoa (planning figure)', '228', 'not in the Merck table'],
+                  ['Unsweetened baking chocolate', '440', '15.5'],
+                  ['Dry cocoa powder', '807', '28.5'],
                 ].map((row) => (
                   <tr key={row[0]} className="border-b border-brand-border last:border-0">
                     <td className="p-3 font-medium text-brand-dark">{row[0]}</td>
@@ -278,8 +278,9 @@ export default function DogChocolateToxicityCalculatorPage() {
             </table>
           </div>
           <p className="mt-2 text-2xs text-brand-text-light">
-            Approximate average concentrations from published veterinary toxicology references (Merck Vet
-            Manual, VCA, ASPCA APCC). Real products vary by cocoa percentage; caffeine adds to the toxic load.
+            Merck Veterinary Manual, Chocolate Toxicosis in Animals. Figures are methylxanthines
+            (theobromine plus caffeine). The 228 mg/oz high-cocoa row is a planning figure; Merck does not list it.
+            Real products still vary by recipe.
           </p>
         </div>
       </section>
@@ -335,13 +336,12 @@ export default function DogChocolateToxicityCalculatorPage() {
             How this estimate works
           </h2>
           <p className="mb-4 text-base leading-relaxed text-brand-text-mid">
-            The meter multiplies the amount eaten by the average theobromine concentration for the
-            selected chocolate type, then divides by your dog&apos;s body weight in kilograms to give a
-            dose in milligrams per kilogram. That mg/kg figure is mapped to the standard veterinary
-            dose bands above. It is built only to help you hand a vet or poison-control line a useful
-            number — it uses average concentrations, ignores the additional caffeine load, and cannot
-            account for your individual dog, so it is an estimate and not a diagnosis. It will never tell
-            you to wait and see.
+            The meter multiplies the amount eaten by the Merck methylxanthine figure for the selected
+            chocolate type (theobromine plus caffeine), then divides by your dog&apos;s body weight in
+            kilograms. Mild signs may occur at 20 mg/kg, cardiotoxic effects at 40–50 mg/kg, and seizures
+            at 60 mg/kg or more. The high-cocoa 228 mg/oz row is a planning figure and is not in that
+            Merck table. The result is an estimate for a veterinarian or poison-control line, not a
+            diagnosis. It will never tell you to wait and see.
           </p>
           <p className="mb-4 text-base leading-relaxed text-brand-text-mid">
             If your dog ate something else, or is showing any worrying signs, use the{' '}

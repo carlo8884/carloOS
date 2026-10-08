@@ -6,8 +6,8 @@ import { HopDisclosure } from '../../../components/HopDisclosure'
  * Dog Water Intake Calculator -- /tools/dog-water-intake-calculator
  *
  * Client compute component. Estimates a dog's typical daily water need from
- * body weight using the standard husbandry rule of thumb: roughly half an ounce
- * to one ounce of water per pound of body weight per day (≈ 50–65 ml/kg).
+ * body weight. Half an ounce to one ounce per pound per day is a planning
+ * figure, not a published requirement.
  *
  * Husbandry guidance only -- NOT a clinical tool. Persistent increases or
  * decreases in drinking can signal disease; the page defers those to a vet.
@@ -155,7 +155,8 @@ export default function DogWaterIntakeCalculator() {
         </p>
         <p className="mt-3 text-sm leading-relaxed text-brand-text-mid">
           The lower end suits a calm day indoors; the upper end reflects a hot day, hard exercise, or a
-          dry-kibble diet (canned food supplies a lot of water on its own). This is total water — what your
+          dry-kibble diet (canned food supplies a lot of water on its own). The half-ounce to one-ounce
+          band is a planning figure, not a published requirement. This is total water — what your
           dog drinks plus the moisture in its food.
         </p>
         <ResultMeaning>

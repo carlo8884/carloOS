@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 /**
  * Dog Age in Human Years Calculator -- /tools/dog-age-calculator
- * Client compute component. Implements the AVMA/AAHA-style banded model.
+ * Planning life-stage model, not an AVMA or AAHA chart.
  *
  * Formula (exact):
  *   age <= 1  : human = age * 15
@@ -254,7 +254,7 @@ export default function DogAgeCalculator() {
         age&nbsp;&gt;&nbsp;2&nbsp;yr: 24&nbsp;+&nbsp;size-factor&nbsp;&times;&nbsp;(age&nbsp;-&nbsp;2).
         Size factors after age&nbsp;2: Small&nbsp;4, Medium&nbsp;5, Large&nbsp;5, Giant&nbsp;6
         human years per calendar year.
-        Model consistent with AVMA and AAHA-style published life-stage frameworks.
+        These size factors are planning figures, not an AVMA or AAHA chart.
       </p>
     </div>
   )

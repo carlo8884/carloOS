@@ -21,7 +21,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
   title: 'Dog Calorie Calculator — RER & Daily Intake | Dog.com',
   description:
-    'Estimate your dog\'s daily calorie needs using the standard RER formula (70 x kg^0.75) and WSAVA/AAHA-style life-stage factors. Free, with cups-per-day output.',
+    'Estimate daily calories with the WSAVA July 2020 adult chart (95 or 130 × kg^0.75). Other life-stage multipliers are planning figures.',
   path: '/tools/dog-calorie-calculator',
 })
 
@@ -29,9 +29,9 @@ const FAQS = [
   {
     question: 'How is a dog\'s daily calorie need calculated?',
     answer:
-      'The standard starting point is the Resting Energy Requirement (RER): 70 multiplied by the dog\'s body weight in kilograms raised to the power of 0.75. RER represents the energy needed at rest. To account for life stage and activity, RER is multiplied by a factor (the Maintenance Energy Requirement, or MER). A neutered adult typically uses a factor of 1.6; a very active dog might use 2.0; a growing puppy under 4 months uses 3.0. These factors follow the WSAVA/AAHA-style published guidelines. The result is an estimate -- individual dogs vary, and veterinary assessment of body condition score is essential for calibration.',
+      'Healthy adult maintenance follows the WSAVA July 2020 chart, which cites the 2006 NRC: 95 times kg to the power 0.75 for an inactive adult, and 130 times kg to the power 0.75 for an active adult. Other multipliers, including 1.6 for a neutered adult, are planning figures on resting energy (70 times kg to the power 0.75). They are not rows on that chart. The result is an estimate. Body condition still belongs with a veterinarian.',
     answerText:
-      'RER = 70 x (weight in kg)^0.75. MER = life-stage factor x RER. Factor ranges from 1.0 (weight loss) to 3.0 (young puppy). These are WSAVA/AAHA-style estimates; confirm with your veterinarian.',
+      'Inactive adult: 95 x kg^0.75. Active adult: 130 x kg^0.75 (WSAVA July 2020, citing 2006 NRC). Other multipliers from 1.0 to 3.0 are planning figures on 70 x kg^0.75.',
   },
   {
     question: 'What weight should I enter -- current or target?',
@@ -76,7 +76,7 @@ const appSchema = {
   '@type': 'WebApplication',
   name: 'Dog Calorie Calculator',
   description:
-    'Free dog calorie calculator using the standard RER formula (70 x kg^0.75) and WSAVA/AAHA-style life-stage MER factors. Outputs kcal/day and optional cups/day.',
+    'Free dog calorie calculator using the standard RER formula (70 x kg^0.75) and the WSAVA July 2020 adult chart; other multipliers are planning figures. Outputs kcal/day and optional cups/day.',
   url: 'https://dog.com/tools/dog-calorie-calculator',
   applicationCategory: 'UtilityApplication',
   operatingSystem: 'Web',
@@ -85,7 +85,7 @@ const appSchema = {
 
 const howToSchema = buildHowToSchema({
   name: 'How to calculate a dog\'s daily calorie needs',
-  description: 'Estimate daily calorie requirements (RER and MER) using the standard veterinary formula and WSAVA/AAHA-style life-stage factors.',
+  description: 'Estimate daily calorie requirements (RER and MER) using the standard veterinary formula and the WSAVA July 2020 adult chart, with other life-stage multipliers labeled as planning figures.',
   url: 'https://dog.com/tools/dog-calorie-calculator',
   steps: [
     {
@@ -94,11 +94,11 @@ const howToSchema = buildHowToSchema({
     },
     {
       name: 'Select the life stage',
-      text: 'Choose the life stage that best fits your dog: neutered adult, intact adult, weight loss, active/working, puppy under 4 months, puppy 4–12 months, or senior. Each stage applies a different MER factor to the RER baseline.',
+      text: 'Inactive and active adults use the WSAVA July 2020 chart (95 or 130 times kg to the power 0.75). Neutered, intact, puppy, senior, and weight-change rows are planning figures on resting energy.',
     },
     {
       name: 'Read the kcal/day estimate',
-      text: 'The calculator computes RER (70 × weight_kg^0.75) and multiplies it by the life-stage MER factor to give kcal/day. For a cups-per-day estimate, also enter the kcal/cup from your food\'s label.',
+      text: 'Inactive adults use 95 times kg to the power 0.75. Active adults use 130 times kg to the power 0.75. Planning rows multiply 70 times kg to the power 0.75 by their factor. For cups per day, enter kcal/cup from the label.',
     },
     {
       name: 'Use as a starting point and monitor',
@@ -110,7 +110,7 @@ const howToSchema = buildHowToSchema({
 const articleSchema = buildArticleSchema({
   siteId: 'dog-com',
   title: 'Dog Calorie Calculator',
-  description: 'Estimate your dog\'s daily calorie needs using the standard RER formula and WSAVA/AAHA-style life-stage factors. Enter weight, pick a life stage, and get kcal/day -- plus optional cups/day if you enter your food\'s calorie density.',
+  description: 'Estimate your dog\'s daily calorie needs using the standard RER formula and the WSAVA July 2020 adult chart, with other life-stage multipliers labeled as planning figures. Enter weight, pick a life stage, and get kcal/day -- plus optional cups/day if you enter your food\'s calorie density.',
   url: 'https://dog.com/tools/dog-calorie-calculator',
   imageUrl: '',
   authorName: 'Dog.com Editorial',
@@ -143,8 +143,8 @@ export default function DogCalorieCalculatorPage() {
             Dog Calorie Calculator
           </h1>
           <p className="text-base text-white/60 leading-relaxed max-w-2xl">
-            Estimate your dog&apos;s daily calorie needs using the standard RER formula and WSAVA/AAHA-style
-            life-stage factors. Enter weight, pick a life stage, and get kcal/day -- plus optional
+            Estimate your dog&apos;s daily calorie needs with the WSAVA July 2020 adult chart. Other life-stage
+            multipliers are planning figures. Enter weight, pick a life stage, and get kcal/day -- plus optional
             cups/day if you enter your food&apos;s calorie density.
           </p>
         </div>
@@ -252,13 +252,11 @@ export default function DogCalorieCalculatorPage() {
             The formulas behind the estimate
           </h2>
           <p className="mb-4 text-base leading-relaxed text-brand-text-mid">
-            The calculator uses two standard equations. First, Resting Energy Requirement (RER):
-            70 multiplied by the dog&apos;s body weight in kilograms raised to the power of 0.75.
-            RER is the baseline energy a dog needs at rest to maintain normal physiological functions.
-            Second, Maintenance Energy Requirement (MER): a life-stage factor multiplied by RER.
-            The factors -- 1.6 for neutered adults, 3.0 for very young puppies, 1.0 for a supervised
-            weight-loss plan -- are the standard values cited in WSAVA Global Nutrition Guidelines and
-            AAHA Nutritional Assessment Guidelines.
+            Healthy adult maintenance uses the WSAVA July 2020 chart, which cites the 2006 NRC:
+            95 &times; kg^0.75 for an inactive adult and 130 &times; kg^0.75 for an active adult.
+            The other multipliers — 1.6 neutered, 1.8 intact, 1.0 weight loss, 1.7 weight gain, 2.0 light work,
+            3.0 and 2.0 for puppies, and 1.4 for a less active senior — are planning figures on
+            RER = 70 &times; kg^0.75. They are not rows on that chart.
           </p>
           <p className="mb-4 text-base leading-relaxed text-brand-text-mid">
             For how feeding amount intersects with body condition scoring and what to do when a dog

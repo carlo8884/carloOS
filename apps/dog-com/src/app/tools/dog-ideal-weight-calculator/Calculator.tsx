@@ -93,7 +93,7 @@ interface BcsResult {
 }
 
 function bcsEstimate(currentLb: number, score: number): BcsResult {
-  // Each BCS point above 5/9 ≈ ~10% over ideal body weight (standard heuristic).
+  // Planning figure: each BCS point above 5/9 ≈ 10% over ideal. Not a fetched study.
   const idealLb = currentLb / (1 + 0.1 * (score - 5))
   const opt = BCS_OPTIONS.find((o) => o.score === score)!
   return { idealLb, deltaLb: currentLb - idealLb, band: opt.band }
@@ -383,7 +383,7 @@ export default function DogIdealWeightCalculator() {
       <p className="mt-4 text-xs text-brand-text-light">
         Method: healthy range = AKC-standard adult weight band for the selected breed (or a
         size-class band for a mixed/unlisted dog). Estimated ideal weight ≈ current weight ÷ (1 +
-        0.10 × (BCS − 5)), the standard veterinary body-condition heuristic. BCS is scored on the
+        0.10 × (BCS − 5)). That 10% step is a planning figure, not a fetched study. BCS uses the
         9-point WSAVA scale.
       </p>
     </div>

@@ -237,7 +237,7 @@
     {
       "path": "/tools/dog-calorie-calculator",
       "title": "Dog Calorie Calculator — RER & Daily Intake | Dog.com",
-      "description": "Estimate your dog's daily calorie needs using the standard RER formula (70 x kg^0.75) and WSAVA/AAHA-style life-stage factors. Free, with cups-per-day output.",
+      "description": "Estimate daily calories with the WSAVA July 2020 adult chart (95 or 130 × kg^0.75). Other life-stage multipliers are planning figures.",
       "category": "tools"
     },
     {
