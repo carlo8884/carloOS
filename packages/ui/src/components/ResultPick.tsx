@@ -27,16 +27,7 @@ export function ResultPick({
     <AffiliateDisclosure variant="inline" siteId={siteId} className={linkFirst ? 'mt-0 mb-3' : 'my-3'} />
   ) : null
   const control = held ? (
-    <span className="inline-flex flex-wrap items-center gap-x-3 gap-y-1">
-      <button
-        type="button"
-        disabled
-        className="inline-block border-0 bg-transparent p-0 text-left font-semibold text-brand-text-light cursor-not-allowed"
-      >
-        {partnerNeededLabel(pick.label)}
-      </button>
-      <HeldQuoteNext />
-    </span>
+    <HeldQuoteNext />
   ) : quiet ? (
     <span data-partner-held="true" className="inline-block text-sm font-semibold text-brand-text-light">
       {partnerLinkQuiet(pick.href)

@@ -16,7 +16,7 @@ import {
 import { CARRIERS } from '../../../../../../data/insurance-carriers'
 import { States } from '../../../../../../data/states'
 import { getStateInsuranceContext } from '../../../../../../data/insurance-by-state'
-import { liveAnchorHref, partnerNeededLabel } from '@carloOS/config/affiliate-hop'
+import { liveAnchorHref } from '@carloOS/config/affiliate-hop'
 
 interface PageParams {
   params: Promise<{ breed: string; state: string }>
@@ -28,20 +28,21 @@ function CarrierVisit({
   sku,
   label,
   className,
-  quietClassName = 'inline-block text-sm font-semibold text-brand-text-mid',
 }: {
   vendor: string
   sku: string
   label: string
   className: string
-  quietClassName?: string
 }) {
   const hop = liveAnchorHref(`/go/${vendor}/${sku}`)
   if (!hop) {
     return (
-      <span data-partner-held={vendor} className={quietClassName}>
-        {partnerNeededLabel(label)}
-      </span>
+      <Link
+        href="/reviews/best-pet-insurance"
+        className="inline-block text-sm font-semibold text-brand-primary underline underline-offset-2"
+      >
+        Compare carriers on published terms →
+      </Link>
     )
   }
   return (
@@ -289,7 +290,6 @@ export default async function BreedStateInsurancePage({ params }: PageParams) {
                   sku={`breed-${breed}-${state}`}
                   label={`Visit ${c.name} →`}
                   className="text-sm font-semibold text-brand-primary hover:underline"
-                  quietClassName="text-sm font-semibold text-brand-text-mid"
                 />
               </div>
             ))}

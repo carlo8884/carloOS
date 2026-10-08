@@ -224,14 +224,7 @@ export default function InsuranceReimbursementEstimatorPage() {
               >
                 Visit Lemonade Pet
               </Link>
-            ) : (
-              <span
-                data-partner-held="lemonade"
-                className="inline-block shrink-0 px-5 py-2.5 border border-brand-border text-brand-text-light text-sm font-semibold rounded text-center"
-              >
-                Visit Lemonade Pet — partner ID needed
-              </span>
-            )}
+            ) : null}
           </div>
           <HopDisclosure siteId="vets-co" href={lemonadeHref} />
           <p className="mt-3 text-2xs text-brand-text-mid leading-relaxed">

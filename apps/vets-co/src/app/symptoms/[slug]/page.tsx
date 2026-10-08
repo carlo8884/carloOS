@@ -389,14 +389,7 @@ export default function SymptomPage({ params }: PageProps) {
                     >
                       Or ask a vet online →
                     </a>
-                  ) : (
-                    <span
-                      data-partner-held="vetster"
-                      className="inline-block bg-brand-surface border border-brand-border text-brand-text-light font-bold text-sm px-5 py-3 rounded-lg"
-                    >
-                      Or ask a vet online — partner ID needed
-                    </span>
-                  )}
+                  ) : null}
                 </>
               ) : (
                 <>
@@ -408,14 +401,7 @@ export default function SymptomPage({ params }: PageProps) {
                     >
                       Talk to a vet now →
                     </a>
-                  ) : (
-                    <span
-                      data-partner-held="vetster"
-                      className="inline-block border border-brand-border text-brand-text-light font-bold text-sm px-5 py-3 rounded-lg"
-                    >
-                      Talk to a vet now — partner ID needed
-                    </span>
-                  )}
+                  ) : null}
                   <Link
                     href="/telehealth"
                     className="inline-block bg-brand-surface border border-brand-border text-brand-dark font-bold text-sm px-5 py-3 rounded-lg no-underline hover:border-brand-primary"

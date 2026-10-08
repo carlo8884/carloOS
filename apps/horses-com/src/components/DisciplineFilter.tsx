@@ -25,7 +25,7 @@ export function DisciplineFilter() {
     <nav aria-label="Browse by discipline" className="mb-10 -mt-2">
       <div className="mb-3 flex items-center justify-between gap-3 flex-wrap">
         <Link href="/disciplines" className="group flex items-center gap-2.5 no-underline">
-          <span className={`relative h-9 w-14 shrink-0 overflow-hidden rounded-md ${FILL_IMAGE}`}>
+          <div className={`relative h-9 w-14 shrink-0 overflow-hidden rounded-md ${FILL_IMAGE}`}>
             <StockImage
               manifestKey="horses-com:category-disciplines"
               fallbackKey="horses-com:hero"
@@ -34,7 +34,7 @@ export function DisciplineFilter() {
               variant="inline"
               subtleCredit
             />
-          </span>
+          </div>
           <span className="text-2xs font-bold uppercase tracking-eyebrow group-hover:underline" style={{ color: 'var(--brand-accent)' }}>
             For
           </span>
@@ -44,7 +44,7 @@ export function DisciplineFilter() {
           className="group flex items-center gap-3 overflow-hidden rounded-md no-underline"
           style={{ background: 'var(--brand-white)', border: '1px solid var(--brand-border)' }}
         >
-          <span className={`relative h-14 w-20 shrink-0 overflow-hidden ${FILL_IMAGE}`}>
+          <div className={`relative h-14 w-20 shrink-0 overflow-hidden ${FILL_IMAGE}`}>
             <StockImage
               manifestKey="horses-com:category-disciplines"
               fallbackKey="horses-com:hero"
@@ -53,7 +53,7 @@ export function DisciplineFilter() {
               variant="inline"
               subtleCredit
             />
-          </span>
+          </div>
           <span className="pr-3 py-2">
             <span className="block font-display font-bold text-sm leading-tight" style={{ color: 'var(--brand-text-dark)' }}>All disciplines</span>
             <span className="block text-xs mt-0.5" style={{ color: 'var(--brand-text-mid)' }}>English, Western, trail, racing.</span>
@@ -72,7 +72,7 @@ export function DisciplineFilter() {
               border: '1px solid var(--brand-border)',
             }}
           >
-            <span className={`relative h-14 w-16 shrink-0 overflow-hidden rounded-l-md ${FILL_IMAGE}`}>
+            <div className={`relative h-14 w-16 shrink-0 overflow-hidden rounded-l-md ${FILL_IMAGE}`}>
               <StockImage
                 manifestKey={chip.manifestKey}
                 fallbackKey="horses-com:hero"
@@ -81,7 +81,7 @@ export function DisciplineFilter() {
                 variant="inline"
                 subtleCredit
               />
-            </span>
+            </div>
             <span className="pr-2 text-xs font-semibold leading-tight group-hover:text-brand-primary">{chip.label}</span>
           </Link>
         ))}

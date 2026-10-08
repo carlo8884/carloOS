@@ -85,7 +85,7 @@ export default function VetsterVsAskvetGuidePage() {
         {visit ? (
           <p><a className="font-semibold text-brand-primary" href={visit} rel="sponsored noopener">Visit Vetster →</a></p>
         ) : (
-          <p data-partner-held="vetster" className="font-semibold text-brand-text-light">Visit Vetster — partner ID needed</p>
+          <p><Link href="/telehealth" className="font-semibold text-brand-primary">Compare telehealth services →</Link></p>
         )}
         <EmailCapture
           variant="inline"

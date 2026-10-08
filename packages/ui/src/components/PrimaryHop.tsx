@@ -1,9 +1,13 @@
 import { hopCommissionReady, liveAnchorHref, partnerLinkQuiet, partnerNeededLabel, shopCtaLabel } from '@carloOS/config/affiliate-hop'
+import { HeldQuoteNext } from './HeldQuoteNext'
+
+const CARRIER_QUOTE = /^\/go\/(trupanion|healthy-paws|embrace|lemonade|pumpkin|pets-best|spot|manypets|figo|aspca|fetch|metlife|wagmo)(?:\/|\?|#|$)/
 
 /**
  * The page's top-pick hop, in normal flow under the title.
  * Disclosure sits above the link. Nothing is fixed or overlaid.
- * An unset held partner stays a note. The link returns when that tag is set.
+ * An unset carrier quote links to the comparison. A quiet product partner stays a note.
+ * The link returns when that tag is set.
  */
 export function PrimaryHop({
   href,
@@ -23,6 +27,13 @@ export function PrimaryHop({
   if (!hop) {
     if (!href?.startsWith('/go/')) return null
     const quietProduct = quietUntilTag || partnerLinkQuiet(href)
+    if (!quietProduct && CARRIER_QUOTE.test(href)) {
+      return (
+        <div className="mb-5" data-primary-hop="held">
+          <HeldQuoteNext tone="on-color" />
+        </div>
+      )
+    }
     return (
       <p className="mb-5 text-sm leading-relaxed text-white/75 m-0" data-primary-hop="held">
         {quietProduct

@@ -485,14 +485,7 @@ export function InsuranceCoverageFinder({ reviewsHref, campaignSku = 'insurance-
                   >
                     Visit {c.name}
                   </a>
-                ) : (
-                  <span
-                    data-partner-held={c.vendor}
-                    className="inline-block shrink-0 rounded border border-brand-border px-4 py-2 text-center text-sm font-semibold text-brand-text-light"
-                  >
-                    Visit {c.name} — partner ID needed
-                  </span>
-                )}
+                ) : null}
               </div>
             </div>
           )
