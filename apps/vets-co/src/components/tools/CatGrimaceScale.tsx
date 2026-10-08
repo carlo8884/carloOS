@@ -16,6 +16,7 @@
  */
 
 import { useMemo, useState } from 'react'
+import Link from 'next/link'
 import { ResultMeaning } from '@carloOS/ui'
 
 interface Option {
@@ -191,6 +192,11 @@ export default function CatGrimaceScale() {
           <ResultMeaning>
             The total adds the five facial scores. It is an education aid for deciding whether to call a veterinarian, not a diagnosis.
           </ResultMeaning>
+          <p className="mt-3 text-sm">
+            <Link href="/guides/when-to-go-to-the-vet" className="font-semibold text-brand-primary underline">
+              Read when to go to the vet
+            </Link>
+          </p>
         </div>
       ) : (
         <p className="mt-2 text-sm text-brand-text-light">

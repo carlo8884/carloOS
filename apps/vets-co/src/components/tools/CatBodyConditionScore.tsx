@@ -11,6 +11,7 @@
  */
 
 import { useMemo, useState } from 'react'
+import Link from 'next/link'
 import { ResultMeaning } from '@carloOS/ui'
 
 interface Option {
@@ -174,6 +175,11 @@ export default function CatBodyConditionScore() {
           <ResultMeaning>
             The score is the rounded average of the three checks on the 9-point scale. It is a hands-on estimate for your veterinarian to confirm.
           </ResultMeaning>
+          <p className="mt-3 text-sm">
+            <Link href="/tools/cat-calorie-calculator" className="font-semibold text-brand-primary underline">
+              Estimate daily calories next
+            </Link>
+          </p>
         </div>
       ) : (
         <p className="mt-2 text-sm text-brand-text-light">
