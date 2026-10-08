@@ -222,7 +222,9 @@ export default function Calculator() {
             <ResultMeaning>
               This setting is the most urgent match among the signs you selected. It is a triage aid, not a diagnosis.
             </ResultMeaning>
-            <ResultPick siteId="vets-co" pick={careSettingPick(setting)} />
+            {!careSettingPick(setting).href.startsWith('/go/') ? (
+              <ResultPick siteId="vets-co" pick={careSettingPick(setting)} />
+            ) : null}
 
             <Link
               href="/guides/when-to-go-to-the-vet"

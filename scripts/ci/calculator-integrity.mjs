@@ -9906,19 +9906,20 @@ const CALCULATORS = [
     id: 'vets · when-to-go-to-the-vet hops',
     file: 'apps/vets-co/src/app/guides/when-to-go-to-the-vet/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/48\+hour\+digital\+kitchen\+timer\?s=guides-when-to-go-to-the-vet/, label: '48-hour digital kitchen-timer search hop (matches on-page watchful-waiting / day-or-two window copy; unique vs 72+hour+digital+countdown+timer / 12+hour+mechanical+kitchen+timer / 30+minute+sand+hourglass+timer / analog+wall+clock+with+second+hand / digital+handheld+stopwatch)' },
+      { re: /amazon-brand\/pet\+first\+aid\+kit\?s=tools-er-vs-clinic/, label: 'existing ER-tool pet first-aid kit search (the triage guide reuses this hop; the kitchen timer is not the product hop)' },
       { re: /amazon-brand\/lined\+telephone\+message\+pad\?s=guides-when-to-go-to-the-vet/, label: 'lined telephone message-pad search hop (matches on-page when-unsure / call-the-clinic / sign-start-time copy; unique vs pocket+spiral+memo+pad / a5+hardcover+dot+grid+notebook / waterproof+field+notebook / dog+weight+log+book)' },
       { re: /amazon-brand\/medium\+hard\+sided\+plastic\+pet\+carrier\?s=guides-when-to-go-to-the-vet/, label: 'medium hard-sided plastic pet-carrier search hop (matches on-page same-day / clinic-trip copy; unique vs soft+sided+vet+visit+carrier / soft+cat+carrier / hard+sided+airline+dog+crate / folding+four+wheel+dog+stroller / cat+carrier / soft+pet+carrier)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
     ],
     mustExclude: [
+      { re: /48\+hour\+digital\+kitchen\+timer/, label: 'kitchen timer is not a product hop on this triage guide' },
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
       { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
       { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
       { re: /amazon-brand\/[^?"']*(laminated\+|fridge\+|stall\+door|mustelid\+|[^"'?]*handbook)/, label: 'never invent laminated / fridge-card / stall-door / handbook product hops' },
     ],
-    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete when-to-go-to-the-vet decision-checklist offer; every gear CTA is an amazon-brand category search matching on-page watchful-waiting / same-day / when-unsure-call copy (a 48-hour digital kitchen timer so a mild isolated sign is a counted day-or-two window, a lined telephone message pad so the clinic call records the sign, start time, and how the pet is otherwise doing, a medium hard-sided plastic pet carrier so a same-day visit is a ready crate), never a placeholder ASIN, a #1092 floor-bowl / wobble-dispenser / hourglass hop, a #1091 laminating-pouch / countdown-timer / travel-bowl hop, a #1090 sandbox-cover / waste-scooper / yard hand-wash hop, a vomiting memo-pad hop, an emergency-signs muzzle / underpad / flashlight hop, a first-aid-kit hop, or a prescription hop. Educational home-care / monitoring / transport tools only — not a ranked product list, not a substitute for veterinary care. Chewy stays omitted so empty buttons stay hidden.',
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete when-to-go-to-the-vet decision-checklist offer; every gear CTA is an amazon-brand category search matching on-page watchful-waiting / same-day / when-unsure-call copy (a pet first-aid kit, the same Amazon search the ER-vs-clinic tool already uses, so the supplies for a clinic trip come before any other product, a lined telephone message pad so the clinic call records the sign, start time, and how the pet is otherwise doing, a medium hard-sided plastic pet carrier so a same-day visit is a ready crate), never a placeholder ASIN, a #1092 floor-bowl / wobble-dispenser / hourglass hop, a #1091 laminating-pouch / countdown-timer / travel-bowl hop, a #1090 sandbox-cover / waste-scooper / yard hand-wash hop, a vomiting memo-pad hop, an emergency-signs muzzle / underpad / flashlight hop, a kitchen-timer hop, or a prescription hop. Educational home-care / monitoring / transport tools only — not a ranked product list, not a substitute for veterinary care. Chewy stays omitted so empty buttons stay hidden.',
   },
   {
     id: 'horses · choke hops',

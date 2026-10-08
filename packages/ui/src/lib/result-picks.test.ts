@@ -62,7 +62,7 @@ test('Eheim stock watts stay inside 25W to 300W', () => {
   }
 })
 
-test('blanket size uses the review inches, and other lengths stay on the Rambo listing', () => {
+test('blanket size uses the review inches, and other lengths use the existing winter-blanket search', () => {
   assert.equal(roundBlanketInches(76.4), 75)
   assert.equal(roundBlanketInches(76.5), 78)
   assert.equal(roundBlanketInches(82.4), 81)
@@ -75,7 +75,8 @@ test('blanket size uses the review inches, and other lengths stay on the Rambo l
     assert.match(pick.label, /Rambo Original/)
   }
   const other = blanketPick(69, 'tools-horse-weight-calculator')
-  assert.match(other.href, /smartpak\/rambo-original-turnout/)
+  assert.match(other.href, /amazon-brand\/winter\+horse\+blanket\?s=tools-horse-blanket-size-calculator/)
+  assert.doesNotMatch(other.href, /smartpak/)
   assert.match(other.detail, /69 inches/)
   assert.match(other.detail, /does not print/)
 })
