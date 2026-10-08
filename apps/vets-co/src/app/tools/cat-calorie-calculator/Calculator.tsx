@@ -3,11 +3,10 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 /**
  * Cat Calorie Calculator -- /tools/cat-calorie-calculator
- * Client compute component. Implements WSAVA/AAHA-style feline RER/DER formulas.
- * RER = 70 * (weight_kg ^ 0.75)
- * DER = factor * RER
- * Feline factors (not dog MER): indoor vs outdoor, neuter status, life stage.
- * No fabricated breed-specific numbers; all factors are standard published values.
+ * Healthy adult maintenance uses the WSAVA July 2020 chart, which cites the
+ * 2006 NRC: lean adult 100 × kg^0.67, obese-prone adult 130 × kg^0.40.
+ * Other multipliers are planning figures on RER = 70 × kg^0.75.
+ * Size-class pounds are planning starters, not a breed calorie table.
  */
 
 import { useMemo, useState } from 'react'
@@ -15,22 +14,30 @@ import { ResultMeaning, ToolError, numberFieldError } from '@carloOS/ui'
 
 type Unit = 'lb' | 'kg'
 
-interface LifeStageOption {
-  label: string
-  factor: number
-}
+type LifeStageOption =
+  | { label: string; kind: 'nrc-lean' }
+  | { label: string; kind: 'nrc-obese' }
+  | { label: string; kind: 'planning'; factor: number }
 
 const LIFE_STAGES: LifeStageOption[] = [
-  { label: 'Neutered indoor adult', factor: 1.2 },
-  { label: 'Intact indoor adult', factor: 1.4 },
-  { label: 'Neutered outdoor / active', factor: 1.4 },
-  { label: 'Intact outdoor / active', factor: 1.6 },
-  { label: 'Weight loss (vet-supervised)', factor: 0.8 },
-  { label: 'Weight gain', factor: 1.3 },
-  { label: 'Kitten', factor: 2.5 },
-  { label: 'Senior indoor', factor: 1.1 },
-  { label: 'Obese-prone indoor', factor: 1.0 },
+  { label: 'Lean adult', kind: 'nrc-lean' },
+  { label: 'Obese-prone adult', kind: 'nrc-obese' },
+  { label: 'Neutered indoor adult', kind: 'planning', factor: 1.2 },
+  { label: 'Intact indoor adult', kind: 'planning', factor: 1.4 },
+  { label: 'Neutered outdoor / active', kind: 'planning', factor: 1.4 },
+  { label: 'Intact outdoor / active', kind: 'planning', factor: 1.6 },
+  { label: 'Weight loss (vet-supervised)', kind: 'planning', factor: 0.8 },
+  { label: 'Weight gain', kind: 'planning', factor: 1.3 },
+  { label: 'Kitten', kind: 'planning', factor: 2.5 },
+  { label: 'Senior indoor', kind: 'planning', factor: 1.1 },
+  { label: 'Obese-prone indoor', kind: 'planning', factor: 1.0 },
 ]
+
+function stageOptionLabel(stage: LifeStageOption): string {
+  if (stage.kind === 'nrc-lean') return 'Lean adult (100 × kg^0.67)'
+  if (stage.kind === 'nrc-obese') return 'Obese-prone adult (130 × kg^0.40)'
+  return `${stage.label} (planning factor ${stage.factor})`
+}
 
 /** Typical adult weights by size class — starting points, not breed calorie tables. */
 const SIZE_PRESETS: { label: string; lb: number | null }[] = [
@@ -51,10 +58,14 @@ function toKg(weight: number, unit: Unit): number {
   return unit === 'lb' ? weight / 2.2046 : weight
 }
 
-function compute(weightRaw: number, unit: Unit, factor: number, kcalPerCup: number | null): Result {
+function compute(weightRaw: number, unit: Unit, stage: LifeStageOption, kcalPerCup: number | null): Result {
   const kg = toKg(Math.max(0.1, weightRaw), unit)
   const rer = 70 * Math.pow(kg, 0.75)
-  const der = factor * rer
+  const der = stage.kind === 'nrc-lean'
+    ? 100 * Math.pow(kg, 0.67)
+    : stage.kind === 'nrc-obese'
+      ? 130 * Math.pow(kg, 0.4)
+      : stage.factor * rer
   const cupsPerDay = kcalPerCup && kcalPerCup > 0 ? der / kcalPerCup : null
   return { rer, der, cupsPerDay }
 }
@@ -113,11 +124,11 @@ export default function CatCalorieCalculator() {
     : numberFieldError(kcalPerCupStr, 'kcal per cup', 1, 1000, 'kcal')
   const weightNum = weightError ? 0 : parseFloat(weight)
   const kcalPerCup = kcalError || kcalPerCupStr.trim() === '' ? null : parseFloat(kcalPerCupStr)
-  const factor = LIFE_STAGES[stageIndex].factor
+  const stage = LIFE_STAGES[stageIndex]
 
   const result = useMemo(
-    () => compute(weightNum, unit, factor, kcalPerCup),
-    [weightNum, unit, factor, kcalPerCup]
+    () => compute(weightNum, unit, stage, kcalPerCup),
+    [weightNum, unit, stage, kcalPerCup]
   )
 
   const weightOk = !weightError && weightNum > 0
@@ -222,12 +233,12 @@ export default function CatCalorieCalculator() {
           >
             {LIFE_STAGES.map((s, i) => (
               <option key={s.label} value={i}>
-                {s.label} (factor {s.factor})
+                {stageOptionLabel(s)}
               </option>
             ))}
           </select>
           <p className="mt-1 text-2xs text-brand-text-light">
-            Feline DER factors are WSAVA/AAHA-style published values — lower than dog MER.
+            Lean and obese-prone adults use the WSAVA July 2020 chart (2006 NRC). The other multipliers are planning figures.
           </p>
         </div>
 
@@ -277,7 +288,13 @@ export default function CatCalorieCalculator() {
         <div className="rounded border-2 border-brand-primary bg-brand-primary-pale p-4">
           <p className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">DER / day</p>
           <p className="mt-1 font-display text-xl text-brand-dark">{weightOk ? kcal(result.der) : '--'}</p>
-          <p className="mt-0.5 text-2xs text-brand-text-light">{factor} &times; RER</p>
+          <p className="mt-0.5 text-2xs text-brand-text-light">
+            {stage.kind === 'nrc-lean'
+              ? '100 × kg^0.67'
+              : stage.kind === 'nrc-obese'
+                ? '130 × kg^0.40'
+                : `${stage.factor} × RER, planning figure`}
+          </p>
         </div>
         <div className="rounded border border-brand-border bg-brand-white p-4">
           <p className="text-2xs font-bold uppercase tracking-eyebrow text-brand-text-light">Cups / day</p>
@@ -316,7 +333,7 @@ export default function CatCalorieCalculator() {
       <div className="mt-6 rounded border border-amber-700/40 bg-amber-950/20 p-4 text-sm text-amber-900">
         <span className="font-semibold">An estimate, not a prescription.</span>{' '}
         Energy needs vary widely by individual; confirm your cat&apos;s target weight and intake with your veterinarian.
-        This calculator uses the standard RER formula (70 &times; kg^0.75) and WSAVA/AAHA-style feline DER factors.
+        Lean adults use 100 &times; kg^0.67 and obese-prone adults use 130 &times; kg^0.40, the WSAVA July 2020 chart (2006 NRC). Other multipliers are planning figures on 70 &times; kg^0.75.
         Treat the result as a starting point, then adjust based on body condition score and veterinary guidance.
         {isWeightLoss ? (
           <>
@@ -329,9 +346,9 @@ export default function CatCalorieCalculator() {
       </div>
 
       <p className="mt-4 text-xs text-brand-text-light">
-        Formulas: RER (kcal/day) = 70 &times; (body weight in kg)^0.75. DER = feline life-stage factor × RER.
-        Source: consistent with WSAVA Global Nutrition Guidelines and AAHA Nutritional Assessment Guidelines.
-        Neutered indoor adults typically use 1.2; intact indoor 1.4; outdoor/active 1.4–1.6; kittens 2.5.
+        How we calculate: lean adult kcal/day = 100 &times; kg^0.67. Obese-prone adult kcal/day = 130 &times; kg^0.40.
+        Source: WSAVA &quot;Calorie Needs for Healthy Adult Cats,&quot; updated July 2020, citing the 2006 NRC.
+        Planning multipliers (neutered indoor 1.2, intact indoor 1.4, neutered outdoor 1.4, intact outdoor 1.6, weight loss 0.8, weight gain 1.3, kitten 2.5, senior 1.1, obese-prone indoor 1.0) use RER = 70 &times; kg^0.75 and are not rows on that chart.
         Cups/day = DER ÷ food energy density (kcal/cup) from the bag&apos;s calorie statement.
       </p>
     </div>

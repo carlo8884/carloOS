@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from 'react'
 import { ResultMeaning, ResultPick, ToolError, catFoodAmountPick, numberFieldError } from '@carloOS/ui'
-import { CAT_STAGES, catFoodGrams } from './model'
+import { CAT_STAGES, catFoodGrams, stageOptionLabel } from './model'
 
 type Unit = 'lb' | 'kg'
 
@@ -18,7 +18,7 @@ export default function CatFoodAmountCalculator() {
 
   const result = useMemo(() => {
     if (weightError || kcalError) return null
-    return catFoodGrams(Number(weight), unit, stage.factor, Number(kcalPerKg))
+    return catFoodGrams(Number(weight), unit, stage, Number(kcalPerKg))
   }, [weight, unit, stage, kcalPerKg, weightError, kcalError])
 
   return (
@@ -41,7 +41,7 @@ export default function CatFoodAmountCalculator() {
           Life stage
           <select className="mt-1 min-h-11 w-full rounded-md border border-brand-border px-2" value={stageIndex} onChange={(e) => setStageIndex(Number(e.target.value))}>
             {CAT_STAGES.map((item, index) => (
-              <option key={item.label} value={index}>{item.label} (×{item.factor})</option>
+              <option key={item.label} value={index}>{stageOptionLabel(item)}</option>
             ))}
           </select>
         </label>
@@ -55,7 +55,11 @@ export default function CatFoodAmountCalculator() {
         <div className="mt-4">
           <p className="m-0 text-2xl font-bold text-brand-dark">{Math.round(result.grams).toLocaleString('en-US')} g/day</p>
           <ResultMeaning>
-            Resting energy is {Math.round(result.rer).toLocaleString('en-US')} kcal. This stage multiplies that by {stage.factor}. Grams are that energy divided by the label&apos;s kcal per kg. This is a portion estimate, not a diagnosis.
+            {stage.kind === 'nrc-lean'
+              ? 'Lean adult energy is 100 × kg^0.67, the WSAVA July 2020 chart (2006 NRC). Grams divide that energy by the label’s kcal per kg.'
+              : stage.kind === 'nrc-obese'
+                ? 'Obese-prone adult energy is 130 × kg^0.40, the WSAVA July 2020 chart (2006 NRC). Grams divide that energy by the label’s kcal per kg.'
+                : `Resting energy is ${Math.round(result.rer).toLocaleString('en-US')} kcal. The ${stage.factor} multiplier is a planning figure, not a row on that chart.`}
           </ResultMeaning>
         </div>
       ) : null}

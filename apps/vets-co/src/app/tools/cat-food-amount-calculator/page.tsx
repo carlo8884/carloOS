@@ -36,7 +36,7 @@ const howToSchema = buildHowToSchema({
   url: URL,
   steps: [
     { name: 'Weigh the cat', text: 'Enter body weight in pounds or kilograms.' },
-    { name: 'Pick the life stage', text: 'Indoor neutered adults use 1.2. Kittens use 2.5. The weight-loss factor is 0.8 and is marked vet-supervised on the calorie calculator.' },
+    { name: 'Pick the life stage', text: 'Lean adult uses 100 times kg to the power 0.67. Obese-prone adult uses 130 times kg to the power 0.40. Neutered indoor 1.2, kitten 2.5, and weight loss 0.8 are planning figures.' },
     { name: 'Read kcal per kg', text: 'Divide daily calories by that density to get grams.' },
   ],
 })
@@ -57,7 +57,7 @@ const FAQS = [
   {
     question: 'Which formula does the cat food gram calculator use?',
     answer:
-      'The same one as the cat calorie calculator. Resting energy is 70 times kilograms to the power of 0.75. A neutered indoor adult multiplies by 1.2, a kitten by 2.5, and the vet-supervised weight-loss factor is 0.8. Grams are those calories times 1,000, divided by kcal per kg on the label.',
+      'The same one as the cat calorie calculator. Lean adult energy is 100 times kilograms to the power of 0.67, and obese-prone adult energy is 130 times kilograms to the power of 0.40, from the WSAVA July 2020 chart. Neutered indoor 1.2, kitten 2.5, and the vet-supervised weight-loss factor 0.8 are planning figures on 70 times kilograms to the power of 0.75. Grams are those calories times 1,000, divided by kcal per kg on the label.',
   },
   {
     question: 'What does the result link to?',
@@ -67,7 +67,7 @@ const FAQS = [
   {
     question: 'Is this a feeding prescription?',
     answer:
-      'No. It is a portion estimate from published energy factors and the label in front of you. Body condition, the food the cat will actually eat, and any disease belong with a veterinarian. The weight-loss factor is labeled vet-supervised for that reason.',
+      'No. Lean and obese-prone adults follow the WSAVA July 2020 chart. The other multipliers are planning figures, and the grams also depend on the label in front of you. Body condition, the food the cat will actually eat, and any disease belong with a veterinarian. The weight-loss factor is labeled vet-supervised for that reason.',
   },
 ]
 
@@ -107,9 +107,10 @@ export default function CatFoodAmountPage() {
         <p>
           The <Link href="/tools/cat-calorie-calculator">cat calorie calculator</Link> estimates daily kilocalories
           and can show cups from kcal per cup. Labels also print kcal per kilogram. This calculator keeps every feline
-          factor on that page and converts the energy into grams. Neutered indoor adult is 1.2, intact indoor is 1.4,
-          neutered outdoor is 1.4, intact outdoor is 1.6, weight loss is 0.8, weight gain is 1.3, kitten is 2.5, senior
-          indoor is 1.1, and obese-prone indoor is 1.0.
+          factor on that page and converts the energy into grams. Lean adult is 100 &times; kg^0.67 and obese-prone
+          adult is 130 &times; kg^0.40, from the WSAVA July 2020 chart. Neutered indoor 1.2, intact indoor 1.4,
+          neutered outdoor 1.4, intact outdoor 1.6, weight loss 0.8, weight gain 1.3, kitten 2.5, senior indoor 1.1,
+          and obese-prone indoor 1.0 are planning figures on 70 &times; kg^0.75.
         </p>
         <h2>How to read the grams</h2>
         <p>
