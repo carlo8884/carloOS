@@ -7,7 +7,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
   title: 'Ferret Diet Basics — Obligate Carnivore Feeding | Ferret.com',
   description:
-    'Ferrets are strict obligate carnivores: 32–40% protein, 18–22% fat, under 3% carbs. Diet tiers, raw/whole-prey context, and insulinoma risk.',
+    'Obligate-carnivore feeding, diet tiers, and raw context. Under 3% carbohydrate on this page is a planning figure.',
   path: '/care/diet-basics',
   type: 'article',
 })
@@ -63,7 +63,7 @@ const FAQS = [
   {
     question: 'What do ferrets eat?',
     answer:
-      'Ferrets are strict obligate carnivores. The macronutrient profile cited in exotic-pet veterinary references is 32-40% animal-sourced protein and 18-22% animal-sourced fat on a dry-matter basis, with carbohydrate under 3% and fiber under 3%. The first 3-5 ingredients of any commercial diet should be named animal proteins or animal fats. Ferrets cannot derive useful energy from plants — their short gut (roughly 5x body length, with a 3-4 hour transit time) lacks the equipment to ferment plant material.',
+      'Ferrets are strict obligate carnivores. A working window on this page is 32-40% animal-sourced protein and 18-22% animal-sourced fat on a dry-matter basis. The Merck Veterinary Manual states that ferrets require protein of 35%–40%, and that carbohydrate (under 25%) and fiber (under 2.5%) proportions of the diet should be relatively low (https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/management-of-ferrets). Under 3% carbohydrate, and fiber under 3%, are planning figures. Merck does not state those tighter cutoffs. The first 3-5 ingredients of any commercial diet should be named animal proteins or animal fats. Ferrets cannot derive useful energy from plants — their short gut (roughly 5x body length, with a 3-4 hour transit time) lacks the equipment to ferment plant material.',
   },
   {
     question: 'Can ferrets eat cat food?',
@@ -189,9 +189,9 @@ export default function FerretDietBasicsPage() {
           <ul>
             <li><strong>Protein: 32–40% on a dry-matter basis,</strong> primarily animal-sourced (chicken, turkey, lamb, fish meal). Plant proteins (corn gluten meal, soy protein, pea protein) are poorly utilized and are a red flag on an ingredient panel.</li>
             <li><strong>Fat: 18–22% on a dry-matter basis,</strong> animal-sourced. Fat is a ferret’s primary energy substrate.</li>
-            <li><strong>Carbohydrate: under 3% (ideally under 2%).</strong> Most "ferret" kibbles on supermarket shelves contain 15–30% carbohydrate by difference. That is a defect, not a feature.</li>
+            <li><strong>Carbohydrate.</strong> The Merck Veterinary Manual states that ferrets require protein of 35%–40%, and that carbohydrate (under 25%) and fiber (under 2.5%) proportions of the diet should be relatively low (https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/management-of-ferrets). Under 3% (ideally under 2%) is a planning figure on this page. Merck does not state that cutoff. Most "ferret" kibbles on supermarket shelves contain 15–30% carbohydrate by difference.</li>
             <li><strong>Taurine:</strong> supplemented, like commercial cat food. Ferrets, like cats, do not synthesize adequate taurine and require it from the diet.</li>
-            <li><strong>Fiber: under 3%.</strong> Higher fiber slows transit beyond what the ferret tract is built for.</li>
+            <li><strong>Fiber.</strong> Merck states fiber proportions should be relatively low (under 2.5%) (https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/management-of-ferrets). Under 3% is a planning figure on this page. Higher fiber slows transit beyond what the ferret tract is built for.</li>
           </ul>
           <p>
             The first 3–5 ingredients of any commercial diet should be named animal proteins or animal fats. If the first ingredient is a grain ("ground corn", "brewers rice", "wheat") or a plant protein concentrate, the formula is not appropriate as a sole diet regardless of the marketing on the bag.
