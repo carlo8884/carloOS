@@ -1,4 +1,5 @@
 import { expect, test } from '@playwright/test'
+import { expectMoneyCopy } from './money-copy'
 import { expectHop } from './hop'
 import { AMAZON_TAG } from './tags'
 
@@ -65,6 +66,7 @@ test.describe('money fold at 390', () => {
       expect(noteBox).toBeTruthy()
       expect(noteBox!.y).toBeLessThan(844)
       expect(Math.abs((noteBox!.y) - (hopBox!.y))).toBeLessThan(180)
+      await expectMoneyCopy(page)
     })
   }
 })

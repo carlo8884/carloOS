@@ -99,7 +99,7 @@ export default function KayteeVsFerretNationGuidePage() {
         <p>Floor space for the number of ferrets is on the <Link href="/tools/cage-size-calculator">cage-size calculator</Link>. Bar spacing stays the figure the Kaytee review prints.</p>
         <h2>Who should buy which cage</h2>
         <p>Buy the Kaytee when you have one ferret, daily out-of-cage time, and you can confirm the bar spacing on the box in the store. Buy the Ferret Nation double unit when you have a pair or you expect to add one, and you can fit the assembled footprint. Cover the wire on either cage. The Prevue Feisty Ferret remains the mid-price cage for one or two, and it is not this pair.</p>
-        <p>The link above searches Amazon for the Ferret Nation double unit, the same search as on the cage review. The sale price can differ from the tier in that review.</p>
+        <p>The Ferret Nation double is the group cage because the bar spacing is about half an inch and the doors open the full front.</p>
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
       </div>
