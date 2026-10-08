@@ -24,7 +24,7 @@ interface BoardOption {
   note: string
 }
 
-// Seed defaults reflect commonly published 2026 US ranges. Boarding is the
+// Planning figure: seed defaults the owner can edit, not a published fee schedule. Boarding is the
 // single largest and most regionally variable line item, so we give the user a
 // board type plus an editable dollar field rather than a fixed number.
 const BOARD_OPTIONS: BoardOption[] = [

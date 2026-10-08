@@ -28,6 +28,7 @@ interface Question {
 }
 
 // Options map to points on the WSAVA 1-9 scale (5 = ideal midpoint).
+// The three-question average is a planning figure, not a copy of the WSAVA chart.
 const QUESTIONS: Question[] = [
   {
     id: 'ribs',

@@ -75,6 +75,8 @@ const softwareApplicationSchema = {
   publisher: { '@type': 'Organization', name: 'Horses.com Editorial', url: 'https://horses.com' },
 }
 
+// Inch and centimetre columns follow 4 inches per hand and 2.54 cm per inch.
+// The 14.2hh pony line is a planning figure.
 const REFERENCE = [
   { hands: '14.2hh', inches: 58, cm: 147.3, note: 'Pony cutoff — 14.2hh and under is a pony' },
   { hands: '15.0hh', inches: 60, cm: 152.4, note: 'Small horse' },

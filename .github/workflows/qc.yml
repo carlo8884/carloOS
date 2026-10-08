@@ -123,6 +123,18 @@ jobs:
       - name: Run calculator-integrity
         run: node scripts/ci/calculator-integrity.mjs
 
+  calculator-constant-provenance:
+    name: Calculator constant tables cite a source or a planning figure
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Run calculator-constant-provenance
+        run: node scripts/ci/calculator-constant-provenance.mjs
+
   kitchen-kit-ban:
     name: Kitchen-kit / fake-magnet copy ban (five earning sites)
     runs-on: ubuntu-latest

@@ -30,7 +30,7 @@ interface Question {
   options: Option[]
 }
 
-// Options map to points on the same 1–9 planning scale as the dog/cat BCS
+// Planning figure. Options map to points on the same 1–9 scale as the dog/cat BCS
 // tools (5 = ideal midpoint). Descriptors are ferret-specific.
 const QUESTIONS: Question[] = [
   {
