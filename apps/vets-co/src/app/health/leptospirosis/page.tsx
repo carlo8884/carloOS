@@ -7,7 +7,7 @@ export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Lep
 const SOURCES = [
   { label: 'Merck Veterinary Manual: Leptospirosis in Dogs', url: 'https://www.merckvetmanual.com/infectious-diseases/leptospirosis/leptospirosis-in-dogs', publisher: 'Merck Vet Manual' },
   { label: 'AVMA: Leptospirosis', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/leptospirosis', publisher: 'AVMA' },
-  { label: 'CDC: Leptospirosis', url: 'https://www.cdc.gov/leptospirosis/index.html', publisher: 'CDC' },
+  { label: 'CDC: Leptospirosis in Animals', url: 'https://www.cdc.gov/leptospirosis/pets/index.html', publisher: 'CDC' },
   { label: 'WSAVA: Vaccination Guidelines (Leptospirosis)', url: 'https://wsava.org/global-guidelines/vaccination-guidelines/', publisher: 'WSAVA' },
 ]
 const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Leptospirosis in Dogs', description: 'Signs, treatment, zoonotic risk, and vaccination for canine leptospirosis.', url: 'https://vets.co/health/leptospirosis', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' ,
