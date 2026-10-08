@@ -48,7 +48,7 @@ const breadcrumbSchema = buildBreadcrumbSchema({
 const itemList = buildItemListSchema({
   name: 'Multi-Level Ferret Cages That Meet the Criteria',
   items: [
-    { name: 'Ferret Nation Double Unit', url: 'https://ferret.com/go/amazon/B0054U8UGW?s=reviews-best-ferret-cage' },
+    { name: 'Ferret Nation / Critter Nation Double Unit', url: 'https://ferret.com/go/amazon/B0054U8UGW?s=reviews-best-ferret-cage' },
     { name: 'Prevue Pet Products Feisty Ferret Cage', url: 'https://ferret.com/go/amazon-brand/prevue+feisty+ferret+cage?s=reviews-best-ferret-cage' },
     { name: 'Kaytee Multi-Level Ferret Home', url: 'https://ferret.com/go/amazon-brand/kaytee+multi+level+ferret+home?s=reviews-best-ferret-cage' },
   ],
@@ -56,7 +56,7 @@ const itemList = buildItemListSchema({
 
 const products = [
   buildProductSchema({
-    name: 'Ferret Nation Double Unit',
+    name: 'Ferret Nation / Critter Nation Double Unit',
     description: 'Full-width front doors, deep pans, expandable two-storey footprint. Confirm bar spacing on the box.',
     url: 'https://ferret.com/go/amazon/B0054U8UGW?s=reviews-best-ferret-cage',
     reviewAuthorName: 'Ferret.com Editorial',
