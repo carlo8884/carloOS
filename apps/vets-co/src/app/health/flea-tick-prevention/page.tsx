@@ -8,7 +8,7 @@ const SOURCES = [
   { label: 'AVMA: Fleas and Your Pet', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/external-parasites', publisher: 'AVMA' },
   { label: 'Companion Animal Parasite Council: Fleas', url: 'https://capcvet.org/guidelines/fleas/', publisher: 'CAPC' },
   { label: 'Companion Animal Parasite Council: Ticks', url: 'https://capcvet.org/guidelines/ticks/', publisher: 'CAPC' },
-  { label: 'CDC: Preventing Ticks on Pets', url: 'https://www.cdc.gov/ticks/prevention/pets.html', publisher: 'CDC' },
+  { label: 'CDC: Preventing Ticks on Pets', url: 'https://www.cdc.gov/ticks/prevention/preventing-ticks-on-pets.html', publisher: 'CDC' },
 ]
 const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Flea and Tick Prevention for Pets', description: 'How flea and tick prevention works and why year-round control matters.', url: 'https://vets.co/health/flea-tick-prevention', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' ,
   citation: SOURCES,
