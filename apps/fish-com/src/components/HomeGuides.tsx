@@ -208,6 +208,12 @@ export function HomeGuides() {
                 Start with the right fish.
               </h2>
             </div>
+            <p className="text-base text-brand-text-mid mt-3 mb-0 max-w-2xl leading-relaxed flex items-start gap-2.5">
+              <span className={`relative mt-0.5 h-8 w-12 shrink-0 overflow-hidden rounded-md bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
+                <StockImage manifestKey="fish-com:species-thumb-angelfish" alt="" aspect="4:3" />
+              </span>
+              <span>Tank size, temperament, and school size first — the four profiles below are the ones most newcomers actually keep.</span>
+            </p>
           </div>
           <Link
             href="/species"
@@ -290,6 +296,12 @@ export function HomeGuides() {
                 Before you buy the tank.
               </h2>
             </div>
+            <p className="text-base text-brand-text-mid mt-3 mb-0 max-w-2xl leading-relaxed flex items-start gap-2.5">
+              <span className={`relative mt-0.5 h-8 w-12 shrink-0 overflow-hidden rounded-md bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
+                <StockImage manifestKey="fish-com:category-planted" alt="" aspect="4:3" />
+              </span>
+              <span>Volume, water type, beginner stock, and the gear checklist — decide those before the first fish goes in.</span>
+            </p>
           </div>
           <Link
             href="/setup"
@@ -340,6 +352,12 @@ export function HomeGuides() {
                 The parameters that actually matter.
               </h2>
             </div>
+            <p className="text-base text-brand-text-mid mt-3 mb-0 max-w-2xl leading-relaxed flex items-start gap-2.5">
+              <span className={`relative mt-0.5 h-8 w-12 shrink-0 overflow-hidden rounded-md bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
+                <StockImage manifestKey="fish-com:water-parameters-hero" alt="" aspect="4:3" />
+              </span>
+              <span>Stable beats perfect. Ranges, cycling, emergency changes, and the nitrogen cycle are the four checks that keep fish alive.</span>
+            </p>
           </div>
           <Link
             href="/water"
@@ -390,6 +408,12 @@ export function HomeGuides() {
                 Gear that earns its place.
               </h2>
             </div>
+            <p className="text-base text-brand-text-mid mt-3 mb-0 max-w-2xl leading-relaxed flex items-start gap-2.5">
+              <span className={`relative mt-0.5 h-8 w-12 shrink-0 overflow-hidden rounded-md bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
+                <StockImage manifestKey="fish-com:category-equipment" alt="" aspect="4:3" />
+              </span>
+              <span>Filter, heater, light, and test kit — pick by tank size and stock, not by what a listing ranks first.</span>
+            </p>
           </div>
           <Link
             href="/equipment"
