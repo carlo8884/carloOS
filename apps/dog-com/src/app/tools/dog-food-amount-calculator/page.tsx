@@ -107,14 +107,14 @@ export default function DogFoodAmountPage() {
         <p>
           The <Link href="/tools/dog-calorie-calculator">calorie calculator</Link> turns weight and life stage into
           kilocalories, and it can show cups when the bag lists kcal per cup. This page answers the next question: how many
-          grams that energy is when the label states kcal per kilogram. The factors are not new. Neutered adult is 1.6,
-          intact adult is 1.8, weight loss is 1.0, weight gain is 1.7, light work is 2.0, a puppy under four months is 3.0,
-          a puppy from four to twelve months is 2.0, and a less active senior is 1.4.
+          grams that energy is when the label states kcal per kilogram. Inactive adults use 95 &times; kg^0.75 and active
+          adults use 130 &times; kg^0.75, the WSAVA July 2020 chart (2006 NRC). Neutered 1.6, intact 1.8, weight loss 1.0,
+          weight gain 1.7, light work 2.0, puppy 3.0 and 2.0, and senior 1.4 are planning figures on 70 &times; kg^0.75.
         </p>
         <h2>Worked example</h2>
         <p>
           A 30-pound neutered adult is about 13.6 kilograms. Resting energy is 70 times that weight to the power of 0.75.
-          Multiplying by 1.6 is the neutered-adult maintenance energy. At 3,500 kcal per kg, daily grams are that energy
+          Multiplying by 1.6 is the planning figure for a neutered adult, not the WSAVA chart. At 3,500 kcal per kg, daily grams are that energy
           times 1,000 divided by 3,500. Change the kcal per kg when the bag prints a different number. The 3,500 figure is
           only an example density, not a brand.
         </p>

@@ -241,8 +241,13 @@ const CALCULATORS = [
   {
     id: 'dog · dog-calorie-calculator',
     file: 'apps/dog-com/src/app/tools/dog-calorie-calculator/Calculator.tsx',
-    mustInclude: [{ re: /70\s*\*\s*Math\.pow\(.*0\.75\)/, label: 'RER = 70 × kg^0.75' }],
-    why: 'WSAVA/AAHA resting energy requirement: RER = 70 × (body-weight-kg)^0.75.',
+    mustInclude: [
+      { re: /70\s*\*\s*Math\.pow\(.*0\.75\)/, label: 'RER = 70 × kg^0.75 for planning multipliers' },
+      { re: /kcalPerKg075: 95/, label: 'inactive adult 95 × kg^0.75 (WSAVA July 2020 / NRC 2006)' },
+      { re: /kcalPerKg075: 130/, label: 'active adult 130 × kg^0.75 (WSAVA July 2020 / NRC 2006)' },
+      { re: /kind: 'planning', factor: 1\.6/, label: 'neutered 1.6 stays a planning figure' },
+    ],
+    why: 'WSAVA July 2020 adult chart cites 2006 NRC: inactive 95 × kg^0.75, active 130 × kg^0.75. Other multipliers, including neutered 1.6, are planning figures on 70 × kg^0.75.',
   },
   {
     id: 'dog · dog-calorie-calculator hops',
@@ -6622,8 +6627,23 @@ const CALCULATORS = [
     file: 'apps/dog-com/src/app/tools/dog-chocolate-toxicity-calculator/ToxicityMeter.tsx',
     mustInclude: [
       { re: /href="\/health\/dog-symptoms-guide"/, label: 'toxicity result links the symptoms guide' },
+      { re: /mgPerOz: 1\.1/, label: 'white chocolate 1.1 mg/oz (Merck)' },
+      { re: /mgPerOz: 64/, label: 'milk chocolate 64 mg/oz (Merck)' },
+      { re: /mgPerOz: 160/, label: 'semisweet uses 160, the top of Merck 150–160' },
+      { re: /mgPerOz: 228, planning: true/, label: 'high-cocoa 228 stays a planning figure' },
+      { re: /mgPerOz: 440/, label: 'baker\'s chocolate 440 mg/oz (Merck)' },
+      { re: /mgPerOz: 807/, label: 'cocoa powder 807 mg/oz (Merck)' },
+      { re: /if \(mgPerKg >= 60\)/, label: 'seizure line stays 60 mg/kg' },
+      { re: /if \(mgPerKg >= 40\)/, label: 'cardiac line starts at 40 mg/kg' },
+      { re: /if \(mgPerKg >= 20\)/, label: 'mild-signs line stays 20 mg/kg' },
     ],
-    why: 'The toxicity result keeps its existing shop hop and adds one internal guide link.',
+    mustExclude: [
+      { re: /mgPerOz: 0\.25/, label: 'do not restore 0.25 mg/oz white chocolate' },
+      { re: /mgPerOz: 58\b/, label: 'do not restore 58 mg/oz milk chocolate' },
+      { re: /mgPerOz: 390/, label: 'do not restore 390 mg/oz baking chocolate' },
+      { re: /mgPerOz: 737/, label: 'do not restore 737 mg/oz cocoa' },
+    ],
+    why: 'Merck Veterinary Manual chocolate page: methylxanthine concentrations and 20 / 40–50 / ≥60 mg/kg sign lines. High-cocoa 228 mg/oz is not on that page.',
   },
   {
     id: 'dog · dog-chocolate-toxicity-calculator hops',
@@ -12736,8 +12756,10 @@ const CALCULATORS = [
     mustInclude: [
       { re: /70 \* Math\.pow\(kg, 0\.75\)/, label: 'RER = 70 × kg^0.75' },
       { re: /\(mer \* 1000\) \/ kcalPerKg/, label: 'grams = MER × 1000 / kcal per kg' },
-      { re: /factor: 1\.6/, label: 'neutered adult factor 1.6' },
+      { re: /factor: 1\.6/, label: 'neutered adult planning factor 1.6' },
       { re: /factor: 3\.0/, label: 'young puppy factor 3.0' },
+      { re: /kcalPerKg075: 95/, label: 'inactive adult 95 × kg^0.75' },
+      { re: /kcalPerKg075: 130/, label: 'active adult 130 × kg^0.75' },
     ],
     mustExclude: [{ re: /12\.839/, label: 'unrelated CO2 coefficient' }],
     why: 'Same life-stage factors as the dog calorie calculator. Grams come from the bag kcal/kg, not a new energy equation.',

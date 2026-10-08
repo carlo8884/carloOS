@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from 'react'
 import { ResultMeaning, ResultPick, ToolError, calorieFoodPick, numberFieldError } from '@carloOS/ui'
-import { DOG_STAGES, foodGrams } from './model'
+import { DOG_STAGES, foodGrams, stageOptionLabel } from './model'
 
 type Unit = 'lb' | 'kg'
 
@@ -18,7 +18,7 @@ export default function DogFoodAmountCalculator() {
 
   const result = useMemo(() => {
     if (weightError || kcalError) return null
-    return foodGrams(Number(weight), unit, stage.factor, Number(kcalPerKg))
+    return foodGrams(Number(weight), unit, stage, Number(kcalPerKg))
   }, [weight, unit, stage, kcalPerKg, weightError, kcalError])
 
   const weightLb = unit === 'lb' ? Number(weight) : Number(weight) * 2.2046
@@ -43,7 +43,7 @@ export default function DogFoodAmountCalculator() {
           Life stage
           <select className="mt-1 min-h-11 w-full rounded-md border border-brand-border px-2" value={stageIndex} onChange={(e) => setStageIndex(Number(e.target.value))}>
             {DOG_STAGES.map((item, index) => (
-              <option key={item.label} value={index}>{item.label} (×{item.factor})</option>
+              <option key={item.label} value={index}>{stageOptionLabel(item)}</option>
             ))}
           </select>
         </label>
@@ -57,7 +57,9 @@ export default function DogFoodAmountCalculator() {
         <div className="mt-4">
           <p className="m-0 text-2xl font-bold text-brand-dark">{Math.round(result.grams).toLocaleString('en-US')} g/day</p>
           <ResultMeaning>
-            Resting energy is {Math.round(result.rer).toLocaleString('en-US')} kcal. This {stage.label.toLowerCase()} stage multiplies that by {stage.factor}, then divides by the bag&apos;s kcal per kg. A measuring cup is not this gram figure.
+            {stage.kind === 'nrc'
+              ? `This ${stage.label.toLowerCase()} figure is ${stage.kcalPerKg075} × kg^0.75, the WSAVA July 2020 chart (2006 NRC). Grams divide that energy by the bag's kcal per kg. A measuring cup is not this gram figure.`
+              : `Resting energy is ${Math.round(result.rer).toLocaleString('en-US')} kcal. The ${stage.label.toLowerCase()} multiplier ${stage.factor} is a planning figure, not a row on the WSAVA chart. Grams divide that energy by the bag's kcal per kg.`}
           </ResultMeaning>
         </div>
       ) : null}

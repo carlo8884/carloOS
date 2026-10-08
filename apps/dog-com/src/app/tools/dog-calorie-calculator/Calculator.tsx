@@ -2,10 +2,10 @@
 
 /**
  * Dog Calorie Calculator -- /tools/dog-calorie-calculator
- * Client compute component. Implements WSAVA/AAHA-style RER/MER formulas.
- * RER = 70 * (weight_kg ^ 0.75)
- * MER = factor * RER
- * No fabricated breed-specific numbers; all factors are standard published values.
+ * Healthy adult maintenance uses the WSAVA July 2020 chart, which cites the
+ * 2006 NRC: inactive 95 × kg^0.75, active 130 × kg^0.75.
+ * Other multipliers are planning figures on top of RER = 70 × kg^0.75.
+ * Size-class pounds are planning starters, not a breed calorie table.
  */
 
 import { useMemo, useState } from 'react'
@@ -13,21 +13,28 @@ import { ResultMeaning, ResultPick, ToolError, calorieFoodPick, numberFieldError
 
 type Unit = 'lb' | 'kg'
 
-interface LifeStageOption {
-  label: string
-  factor: number
-}
+type LifeStageOption =
+  | { label: string; kind: 'nrc'; kcalPerKg075: number }
+  | { label: string; kind: 'planning'; factor: number }
 
 const LIFE_STAGES: LifeStageOption[] = [
-  { label: 'Neutered adult', factor: 1.6 },
-  { label: 'Intact adult', factor: 1.8 },
-  { label: 'Weight loss', factor: 1.0 },
-  { label: 'Weight gain', factor: 1.7 },
-  { label: 'Light work / active', factor: 2.0 },
-  { label: 'Puppy (0-4 months)', factor: 3.0 },
-  { label: 'Puppy (4-12 months)', factor: 2.0 },
-  { label: 'Senior (less active)', factor: 1.4 },
+  { label: 'Inactive adult', kind: 'nrc', kcalPerKg075: 95 },
+  { label: 'Active adult', kind: 'nrc', kcalPerKg075: 130 },
+  { label: 'Neutered adult', kind: 'planning', factor: 1.6 },
+  { label: 'Intact adult', kind: 'planning', factor: 1.8 },
+  { label: 'Weight loss', kind: 'planning', factor: 1.0 },
+  { label: 'Weight gain', kind: 'planning', factor: 1.7 },
+  { label: 'Light work / active', kind: 'planning', factor: 2.0 },
+  { label: 'Puppy (0-4 months)', kind: 'planning', factor: 3.0 },
+  { label: 'Puppy (4-12 months)', kind: 'planning', factor: 2.0 },
+  { label: 'Senior (less active)', kind: 'planning', factor: 1.4 },
 ]
+
+function stageOptionLabel(stage: LifeStageOption): string {
+  return stage.kind === 'nrc'
+    ? `${stage.label} (${stage.kcalPerKg075} × kg^0.75)`
+    : `${stage.label} (planning factor ${stage.factor})`
+}
 
 /** Typical adult weights by size class — starting points, not breed calorie tables. */
 const SIZE_PRESETS: { label: string; lb: number | null }[] = [
@@ -49,10 +56,10 @@ function toKg(weight: number, unit: Unit): number {
   return unit === 'lb' ? weight / 2.2046 : weight
 }
 
-function compute(weightRaw: number, unit: Unit, factor: number, kcalPerCup: number | null): Result {
+function compute(weightRaw: number, unit: Unit, stage: LifeStageOption, kcalPerCup: number | null): Result {
   const kg = toKg(Math.max(0.1, weightRaw), unit)
   const rer = 70 * Math.pow(kg, 0.75)
-  const mer = factor * rer
+  const mer = stage.kind === 'nrc' ? stage.kcalPerKg075 * Math.pow(kg, 0.75) : stage.factor * rer
   const cupsPerDay = kcalPerCup && kcalPerCup > 0 ? mer / kcalPerCup : null
   return { rer, mer, cupsPerDay }
 }
@@ -86,11 +93,11 @@ export default function DogCalorieCalculator() {
     : numberFieldError(kcalPerCupStr, 'kcal per cup', 1, 1000, 'kcal')
   const weightNum = weightError ? 0 : parseFloat(weight)
   const kcalPerCup = kcalError || kcalPerCupStr.trim() === '' ? null : parseFloat(kcalPerCupStr)
-  const factor = LIFE_STAGES[stageIndex].factor
+  const stage = LIFE_STAGES[stageIndex]
 
   const result = useMemo(
-    () => compute(weightNum, unit, factor, kcalPerCup),
-    [weightNum, unit, factor, kcalPerCup]
+    () => compute(weightNum, unit, stage, kcalPerCup),
+    [weightNum, unit, stage, kcalPerCup]
   )
 
   const weightOk = !weightError && weightNum > 0
@@ -205,12 +212,12 @@ export default function DogCalorieCalculator() {
           >
             {LIFE_STAGES.map((s, i) => (
               <option key={i} value={i}>
-                {s.label} (factor {s.factor})
+                {stageOptionLabel(s)}
               </option>
             ))}
           </select>
           <p className="mt-1 text-2xs text-brand-text-light">
-            Factors are standard WSAVA/AAHA-style published values.
+            Inactive and active adults use the WSAVA July 2020 chart (2006 NRC). The other multipliers are planning figures.
           </p>
         </div>
 
@@ -260,7 +267,9 @@ export default function DogCalorieCalculator() {
         <div className="rounded border-2 border-brand-primary bg-brand-primary-pale p-4">
           <p className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">MER / day</p>
           <p className="mt-1 font-display text-xl text-brand-dark">{weightOk ? kcal(result.mer) : '--'}</p>
-          <p className="mt-0.5 text-2xs text-brand-text-light">{factor} &times; RER</p>
+          <p className="mt-0.5 text-2xs text-brand-text-light">
+            {stage.kind === 'nrc' ? `${stage.kcalPerKg075} × kg^0.75` : `${stage.factor} × RER, planning figure`}
+          </p>
         </div>
         <div className="rounded border border-brand-border bg-brand-white p-4">
           <p className="text-2xs font-bold uppercase tracking-eyebrow text-brand-text-light">Cups / day</p>
@@ -294,14 +303,16 @@ export default function DogCalorieCalculator() {
       <div className="mt-6 rounded border border-amber-700/40 bg-amber-950/20 p-4 text-sm text-amber-900">
         <span className="font-semibold">An estimate, not a prescription.</span>{' '}
         Energy needs vary widely by individual; confirm your dog&apos;s target weight and intake with your veterinarian.
-        This calculator uses the standard RER formula (70 &times; kg^0.75) and WSAVA/AAHA-style MER factors.
-        Treat the result as a starting point, then adjust based on body condition score and veterinary guidance.
+        Inactive and active adult maintenance use the WSAVA July 2020 chart (2006 NRC): 95 or 130 &times; kg^0.75.
+        The other life-stage multipliers are planning figures on 70 &times; kg^0.75. Treat the result as a starting point.
       </div>
 
       <p className="mt-4 text-xs text-brand-text-light">
-        Formulas: RER (kcal/day) = 70 &times; (body weight in kg)^0.75. MER = life-stage factor &times; RER.
-        Source: consistent with WSAVA Global Nutrition Guidelines and AAHA Nutritional Assessment Guidelines.
-        Cups/day = MER &divide; food energy density (kcal/cup) from the bag&apos;s calorie statement.
+        How we calculate: healthy adult kcal/day = 95 &times; kg^0.75 (inactive) or 130 &times; kg^0.75 (active), from the
+        WSAVA &quot;Calorie Needs for Healthy Adult Dogs&quot; chart, updated July 2020, which cites the 2006 NRC.
+        Planning multipliers (neutered 1.6, intact 1.8, weight loss 1.0, weight gain 1.7, light work 2.0, puppy 3.0 and 2.0, senior 1.4)
+        use RER = 70 &times; kg^0.75 and are not rows on that chart. Size-class weights are planning starters.
+        Cups/day = daily kcal &divide; the bag&apos;s kcal/cup.
       </p>
     </div>
   )
