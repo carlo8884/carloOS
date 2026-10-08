@@ -139,6 +139,24 @@ export function collectSiteLinks(repoRoot, site) {
   return [...rows.values()]
 }
 
+/** Fetch bot-walls a headless browser confirmed as real pages in Round 173. */
+export const BOT_WALL_OK_DOMAINS = new Set([
+  'aafco.org',
+  'petmicrochiplookup.org',
+  'jockeyclub.com',
+  'aspcapetinsurance.com',
+  'veccs.org',
+])
+
+export function verifiedBotWall(url) {
+  try {
+    const host = new URL(url).hostname.replace(/^www\./, '')
+    return BOT_WALL_OK_DOMAINS.has(host)
+  } catch {
+    return false
+  }
+}
+
 export function botWall(snippet) {
   return /captcha|cf-browser-verification|just a moment|verify you are human|access denied|robot check|pardon our interruption|enable javascript and cookies/i.test(
     snippet || '',
@@ -176,6 +194,17 @@ export function collapsedToHome(original, finalUrl) {
 export function classifyLive({ status, error, snippet, url, finalUrl }) {
   if (error || !status) return { kind: 'manual', detail: error || 'no response' }
   if (status === 404 || status === 410) return { kind: 'dead', detail: `HTTP ${status}` }
+  if (
+    verifiedBotWall(url) &&
+    (status === 401 ||
+      status === 403 ||
+      status === 405 ||
+      status === 429 ||
+      status === 503 ||
+      (status >= 200 && status < 400 && botWall(snippet)))
+  ) {
+    return { kind: 'ok', detail: `allowlisted bot wall HTTP ${status}` }
+  }
   if (status === 401 || status === 403 || status === 405 || status === 429 || status === 503) {
     return { kind: 'manual', detail: `HTTP ${status}` }
   }

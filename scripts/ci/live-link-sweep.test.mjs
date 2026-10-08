@@ -42,6 +42,18 @@ test('404 is dead, a bot wall is manual, and an example line is not required her
     'manual',
   )
   assert.equal(classifyLive({ status: 0, error: 'TimeoutError', snippet: '', url: 'https://avma.org/a', finalUrl: 'https://avma.org/a' }).kind, 'manual')
+  assert.equal(
+    classifyLive({ status: 403, error: '', snippet: '', url: 'https://aafco.org/', finalUrl: 'https://aafco.org/' }).kind,
+    'ok',
+  )
+  assert.equal(
+    classifyLive({ status: 200, error: '', snippet: 'Just a moment while we verify you are human', url: 'https://www.veccs.org/', finalUrl: 'https://www.veccs.org/' }).kind,
+    'ok',
+  )
+  assert.equal(
+    classifyLive({ status: 404, error: '', snippet: '', url: 'https://aafco.org/missing', finalUrl: 'https://aafco.org/missing' }).kind,
+    'dead',
+  )
 })
 
 test('a retailer soft 404 and a citation that falls back to the home page are dead', () => {
