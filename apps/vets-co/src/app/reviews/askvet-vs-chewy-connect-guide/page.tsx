@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import { HopDisclosure } from '../../../components/HopDisclosure'
 import Link from 'next/link'
 import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
 
@@ -51,10 +50,9 @@ export default function AskVetVsChewyConnectGuidePage() {
       }}
       heroHop={
         <>
-          <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">AskVet is the top pick for unlimited chat at a flat monthly fee, and the shop link searches Chewy Connect, the membership alternative.</p>
+          <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">AskVet is the top pick for chat without video, because the telehealth page marks it Best Subscription.</p>
           <div data-fold="offer">
-          <PrimaryHop href="/go/amazon-brand/chewy+connect+with+a+vet?s=reviews-askvet-vs-connect-guide" label="Browse Chewy Connect on Amazon" />
-          <HopDisclosure tone="on-dark" siteId="vets-co" href="/go/amazon-brand/chewy+connect+with+a+vet?s=reviews-askvet-vs-connect-guide" />
+          <PrimaryHop href="/go/askvet/telehealth?s=reviews-askvet-vs-connect-guide" label="Open AskVet" />
         </div>
         </>
       }
@@ -101,7 +99,7 @@ export default function AskVetVsChewyConnectGuidePage() {
         <p>If you are deciding between a video visit, a clinic, and an emergency hospital, use the <Link href="/tools/er-vs-clinic">ER versus clinic tool</Link>. Neither service on this page replaces emergency care.</p>
         <h2>Who should open which service</h2>
         <p>Open AskVet when you want chat and you do not need video. See the carrier&apos;s current terms for the monthly price. Open Chewy Connect when you already pay for Chewy+ and you want the pharmacy tied to that account. If the pet is in crisis, go to an emergency clinic. Do not wait on a chat queue.</p>
-        <p>The link above searches Amazon for Chewy Connect. AskVet is the chat subscription described on the telehealth page.</p>
+        <p>AskVet is chat only. The telehealth page says the subscription fits frequent questions, such as a new puppy, a senior pet, or a chronic condition.</p>
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
       </div>

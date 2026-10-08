@@ -111,7 +111,7 @@ export default function LemonadeVsPetsBestGuidePage() {
         <p>Pets Best is Flexible Plans. The review lists several plan tiers and no upper age limit on new enrollment, which is why it is worth quoting for both puppies and older adopted pets. The model is pay-then-claim. Premiums rise with age, and standard exclusions apply. The price line is quote-based. The review says the pre-existing-condition definition still decides what a late enrollment will cover.</p>
         <h2>Who should read which policy</h2>
         <p>Open the Lemonade sample when the pet is young and healthy and you want the app-claim carrier the enrollment page marks first. Confirm the state actually offers it, and treat the preventive package as separate from the insurance. Open the Pets Best sample when the pet is older, or you want several tiers, and read how premium scales with age. On both, enroll before a condition is in the record. Do not treat either quote-based line as a price from this page.</p>
-        <p>The link above compares carriers on published terms. The price on the carrier site is the quote.</p>
+        <p>Lemonade is the app-claim carrier the review marks for a young, healthy pet, the window where fewer conditions are already excluded. Pets Best has no upper age limit on new enrollment.</p>
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
       </div>

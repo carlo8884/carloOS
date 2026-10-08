@@ -1,4 +1,5 @@
 import { expect, test } from '@playwright/test'
+import { expectMoneyCopy } from './money-copy'
 import { expectHop } from './hop'
 import { TRUPANION_TAG } from './tags'
 
@@ -46,17 +47,31 @@ test.describe('money fold at 390', () => {
       expect(text.toLowerCase()).toContain(item.pick.toLowerCase())
       expect(text).not.toMatch(/notes below|partner ID|We cut|We graded/i)
       const offer = page.locator('[data-fold="offer"]')
-      const hop = offer.locator('a[href*="/go/"], a[href="/reviews/best-pet-insurance"]')
-      await expect(hop.first()).toBeVisible()
-      const hopBox = await hop.first().boundingBox()
-      expect(hopBox).toBeTruthy()
-      expect(hopBox!.y + hopBox!.height).toBeLessThan(844)
-      const note = offer.locator('[data-affiliate-disclosure], [data-quote-note]')
-      await expect(note.first()).toBeVisible()
-      const noteBox = await note.first().boundingBox()
-      expect(noteBox).toBeTruthy()
-      expect(noteBox!.y).toBeLessThan(844)
-      expect(Math.abs((noteBox!.y) - (hopBox!.y))).toBeLessThan(180)
+      const visit = /askvet-vs-chewy|vetster-vs-chewy/.test(item.path)
+      if (visit) {
+        const next = offer.locator('a[href="/telehealth"]')
+        await expect(next).toBeVisible()
+        const nextBox = await next.boundingBox()
+        expect(nextBox).toBeTruthy()
+        expect(nextBox!.y + nextBox!.height).toBeLessThan(844)
+        const held = offer.locator('[data-primary-hop="held"]')
+        await expect(held).toBeVisible()
+        await expect(held.locator('a')).toHaveCount(0)
+        await expect(offer.locator('a[href*="/go/"]')).toHaveCount(0)
+      } else {
+        const hop = offer.locator('a[href*="/go/"], a[href="/reviews/best-pet-insurance"]')
+        await expect(hop.first()).toBeVisible()
+        const hopBox = await hop.first().boundingBox()
+        expect(hopBox).toBeTruthy()
+        expect(hopBox!.y + hopBox!.height).toBeLessThan(844)
+        const note = offer.locator('[data-affiliate-disclosure], [data-quote-note]')
+        await expect(note.first()).toBeVisible()
+        const noteBox = await note.first().boundingBox()
+        expect(noteBox).toBeTruthy()
+        expect(noteBox!.y).toBeLessThan(844)
+        expect(Math.abs((noteBox!.y) - (hopBox!.y))).toBeLessThan(180)
+      }
+      await expectMoneyCopy(page)
     })
   }
 })

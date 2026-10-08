@@ -32,7 +32,7 @@ const FAQS = [
   },
   {
     question: 'Does this page pick a lead rope?',
-    answer: 'No. Lead ropes and tying stay on the halter page, including rope prices and the quick-release knot. This comparison is the two halters.',
+    answer: 'No. Lead ropes and tying stay on the halter page, including rope prices and the quick-release knot. The turnout halter is the leather-crown breakaway, because the crown gives way if a horse gets caught.',
   },
 ]
 
@@ -96,11 +96,11 @@ export default function NylonVsBreakawayGuidePage() {
             "Lead ropes and tying stay on the halter page, including rope prices and the quick-release knot.",
           ]}
         />
-        <p>This comparison is the everyday nylon halter against the leather-crown breakaway.</p>
+        <p>A nylon halter does not break, so it stays for leading under supervision, and the leather-crown breakaway is the one to leave on a horse at turnout.</p>
         <h2>What the page says about flat nylon</h2>
         <p>The adjustable flat nylon halter is Everyday. The card calls it the standard barn halter: strong, washable, inexpensive, and sized from foal to draft. Fit is an adjustable crown and noseband. The same strength is why the card says it should never be left on a turned-out horse. Hardware can rub if the fit is poor. The printed price is $10–25. Reasonable uses on the card are in-hand leading, grooming, and tying under supervision.</p>
         <h2>What the page says about the breakaway</h2>
-        <p>The leather-crown breakaway is Safer Turnout and the winner. The card describes a nylon or leather body with a leather crownpiece or breakable tab that gives way under force, so a horse caught on a post or a hoof can get free. It is the card for a horse that must be left haltered in order to be caught. Cons say the leather crown needs periodic replacement and the price is higher than plain nylon. The printed price is $25–55. The link above searches Amazon for a nylon horse halter.</p>
+        <p>The leather-crown breakaway is Safer Turnout and the winner. The card describes a nylon or leather body with a leather crownpiece or breakable tab that gives way under force, so a horse caught on a post or a hoof can get free. It is the card for a horse that must be left haltered in order to be caught. Cons say the leather crown needs periodic replacement and the price is higher than plain nylon. The printed price is $25–55.</p>
         <h2>Who should buy which halter</h2>
         <p>Buy flat nylon when the horse is led, groomed, or tied while someone is there, and the lower printed band is the point. Buy the breakaway when a halter stays on in turnout. Do not treat the nylon card as a field halter. Tying practice, including a quick-release knot and wither height, stays on the halter page. Lead ropes are a different product there.</p>
         <p>The sale price can differ from the printed band. A pad comparison does not choose a halter, and a halter does not fix saddle fit.</p>

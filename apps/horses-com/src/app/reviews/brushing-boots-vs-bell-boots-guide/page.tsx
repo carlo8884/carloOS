@@ -96,9 +96,9 @@ export default function BrushingBootsVsBellBootsGuidePage() {
             "Standing wraps are a separate skill on that page and are not one of these two products.",
           ]}
         />
-        <p>This comparison is brushing boots against bell boots.</p>
+        <p>Synthetic brushing boots cover the cannon when one leg strikes the other, and bell boots cover the heel when a hind foot reaches a front foot.</p>
         <h2>What the page says about brushing boots</h2>
-        <p>Synthetic brushing or splint boots are Everyday Protection and the winner. The card says they protect the lower leg from interference strikes in schooling, lunging, and turnout. Liners are washable and quick-drying because grit trapped under a boot causes rubs. Fit is snug, not tight. The cons repeat that no boot in this category provides genuine tendon support, and that a dirty boot can rub. The printed price is $25–70 a pair. The link above searches Amazon for horse brushing boots.</p>
+        <p>Synthetic brushing or splint boots are Everyday Protection and the winner. The card says they protect the lower leg from interference strikes in schooling, lunging, and turnout. Liners are washable and quick-drying because grit trapped under a boot causes rubs. Fit is snug, not tight. The cons repeat that no boot in this category provides genuine tendon support, and that a dirty boot can rub. The printed price is $25–70 a pair.</p>
         <h2>What the page says about bell boots</h2>
         <p>Pull-on bell boots are Overreach Protection. The card says they cover the heel bulbs and coronet when a hind foot strikes the back of a front foot, and that they help keep a front shoe on. Pull-on styles stay secure. Hook-and-loop styles are easier to fit and can come loose in deep footing. The printed price is $12–35 a pair. Cons say pull-on styles are harder to put on, an oversized boot can rub, and muddy work means cleaning. The page ties them to horses that overreach, forge, or pull shoes, and to jumping and fast work.</p>
         <h2>Who should buy which boot</h2>

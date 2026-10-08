@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import { HopDisclosure } from '../../../components/HopDisclosure'
 import Link from 'next/link'
 import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
 
@@ -51,10 +50,9 @@ export default function VetsterVsChewyConnectGuidePage() {
       }}
       heroHop={
         <>
-          <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">Vetster is the top pick for a video visit paid per consult, and the shop link searches Chewy Connect, the membership alternative.</p>
+          <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">Vetster is the top pick for a video visit paid per consult, because the telehealth page lists licensed veterinarians and specialists.</p>
           <div data-fold="offer">
-          <PrimaryHop href="/go/amazon-brand/chewy+connect+with+a+vet?s=reviews-vetster-vs-connect-guide" label="Browse Chewy Connect on Amazon" />
-          <HopDisclosure tone="on-dark" siteId="vets-co" href="/go/amazon-brand/chewy+connect+with+a+vet?s=reviews-vetster-vs-connect-guide" />
+          <PrimaryHop href="/go/vetster/telehealth?s=reviews-vetster-vs-connect-guide" label="Open Vetster" />
         </div>
         </>
       }
@@ -102,7 +100,7 @@ export default function VetsterVsChewyConnectGuidePage() {
         <p>If you are deciding between a video visit, a clinic, and an emergency hospital, use the <Link href="/tools/er-vs-clinic">ER versus clinic tool</Link>. Neither service on this page replaces emergency care.</p>
         <h2>Who should open which service</h2>
         <p>Open Vetster when you want a licensed veterinarian on video, possibly a specialist, and you do not want a monthly fee. Open Chewy Connect when you already pay for Chewy+ and you want the pharmacy tied to that account. If the pet is in crisis, go to an emergency clinic. Do not wait on a video queue.</p>
-        <p>The link above searches Amazon for Chewy Connect. Vetster is the video visit described on the telehealth page.</p>
+        <p>Vetster lists video and chat with veterinarians licensed where the owner is located, so a prescription can be valid.</p>
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
       </div>
