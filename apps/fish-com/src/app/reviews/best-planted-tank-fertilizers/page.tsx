@@ -35,7 +35,7 @@ export default function BestPlantedFertilizersPage() {
         <PriceAsOf date="2026-10-05" tone="dark" />
         <div data-fold="offer">
           <PrimaryHop href='/go/amazon-brand/aquarium+co-op+easy+green+fertilizer?s=reviews-best-planted-tank-fertilizers' label='Check price of Aquarium Co-Op Easy Green fertilizer on Amazon' />
-        <HopDisclosure siteId="fish-com" href="/go/amazon-brand/aquarium+co-op+easy+green+fertilizer?s=reviews-best-planted-tank-fertilizers" />
+        <HopDisclosure tone="on-dark" siteId="fish-com" href="/go/amazon-brand/aquarium+co-op+easy+green+fertilizer?s=reviews-best-planted-tank-fertilizers" />
         </div>
         <EmailCapture
           variant="inline"

@@ -34,7 +34,7 @@ export default function BestAquariumLightingPage() {
         <PriceAsOf date="2026-10-05" tone="dark" />
         <div data-fold="offer">
           <PrimaryHop href='/go/amazon-brand/hygger+957?s=reviews-best-aquarium-lighting' label='Check price of the Hygger 957 on Amazon' />
-          <HopDisclosure siteId="fish-com" href="/go/amazon-brand/hygger+957?s=reviews-best-aquarium-lighting" />
+          <HopDisclosure tone="on-dark" siteId="fish-com" href="/go/amazon-brand/hygger+957?s=reviews-best-aquarium-lighting" />
         </div>
         <p className="text-lg font-normal text-white/55 max-w-2xl leading-relaxed">Lighting requirements vary dramatically: a planted tank needs high PAR at the right spectrum; a reef needs intense, programmable full-spectrum light; a fish-only tank needs the bare minimum. Rankings draw on published PAR meter readings.</p>
       </div>

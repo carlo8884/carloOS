@@ -37,7 +37,7 @@ export default function BestWaterTestKitsPage() {
         <PriceAsOf date="2026-10-03" tone="dark" />
         <div data-fold="offer">
           <PrimaryHop href='/go/amazon-brand/api+freshwater+master+test+kit?s=reviews-best-water-test-kits' label='Check price of the API Freshwater Master Test Kit on Amazon' />
-        <HopDisclosure siteId="fish-com" href="/go/amazon-brand/api+freshwater+master+test+kit?s=reviews-best-water-test-kits" />
+        <HopDisclosure tone="on-dark" siteId="fish-com" href="/go/amazon-brand/api+freshwater+master+test+kit?s=reviews-best-water-test-kits" />
         </div>
         <EmailCapture
           variant="inline"

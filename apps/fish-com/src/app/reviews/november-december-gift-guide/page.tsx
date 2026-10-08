@@ -59,7 +59,7 @@ export default function NovemberDecemberGiftGuidePage() {
           <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">Easy Green is the fertilizer to give when the tank is planted, because the dosing is simple and it covers macros and micros.</p>
           <div data-fold="offer">
           <PrimaryHop href="/go/amazon-brand/aquarium+co-op+easy+green+fertilizer?s=reviews-november-december-gift-guide" label="Check price of Aquarium Co-Op Easy Green fertilizer on Amazon" />
-          <HopDisclosure siteId="fish-com" href="/go/amazon-brand/aquarium+co-op+easy+green+fertilizer?s=reviews-november-december-gift-guide" />
+          <HopDisclosure tone="on-dark" siteId="fish-com" href="/go/amazon-brand/aquarium+co-op+easy+green+fertilizer?s=reviews-november-december-gift-guide" />
         </div>
         </>
       }

@@ -70,7 +70,7 @@ export default function BestHeatersPage() {
         <PriceAsOf date="2026-10-07" tone="dark" />
         <div data-fold="offer">
           <PrimaryHop href='/go/amazon-brand/eheim+jager+heater?s=reviews-best-aquarium-heaters' label='Check price of the Eheim Jager heater on Amazon' />
-        <HopDisclosure siteId="fish-com" href="/go/amazon-brand/eheim+jager+heater?s=reviews-best-aquarium-heaters" />
+        <HopDisclosure tone="on-dark" siteId="fish-com" href="/go/amazon-brand/eheim+jager+heater?s=reviews-best-aquarium-heaters" />
         </div>
         <EmailCapture
           variant="inline"

@@ -30,7 +30,7 @@ export default function BestCanisterFiltersPage() {
         <PriceAsOf date="2026-10-05" tone="dark" />
         <div data-fold="offer">
           <PrimaryHop href='/go/amazon-brand/fluval+307+canister+filter?s=reviews-best-canister-filters' label='Check price of the Fluval 307 canister filter on Amazon' />
-        <HopDisclosure siteId="fish-com" href="/go/amazon-brand/fluval+307+canister+filter?s=reviews-best-canister-filters" />
+        <HopDisclosure tone="on-dark" siteId="fish-com" href="/go/amazon-brand/fluval+307+canister+filter?s=reviews-best-canister-filters" />
         </div>
         <EmailCapture
           variant="inline"

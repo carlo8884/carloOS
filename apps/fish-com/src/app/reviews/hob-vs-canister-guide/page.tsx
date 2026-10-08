@@ -54,7 +54,7 @@ export default function HobVsCanisterGuidePage() {
           <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">Buy the AquaClear 70 when you want a refillable hang-on-back, and the Fluval 307 when the tank needs a canister.</p>
           <div data-fold="offer">
           <PrimaryHop href="/go/amazon-brand/aquaclear+70+filter?s=reviews-hob-vs-canister-guide" label="Browse AquaClear 70 hang-on-back filters on Amazon" />
-          <HopDisclosure siteId="fish-com" href="/go/amazon-brand/aquaclear+70+filter?s=reviews-hob-vs-canister-guide" />
+          <HopDisclosure tone="on-dark" siteId="fish-com" href="/go/amazon-brand/aquaclear+70+filter?s=reviews-hob-vs-canister-guide" />
         </div>
         </>
       }

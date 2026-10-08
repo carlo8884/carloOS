@@ -64,7 +64,7 @@ export default function BestAquariumFiltersPage() {
         <PriceAsOf date="2026-10-07" tone="dark" />
         <div data-fold="offer">
           <PrimaryHop href='/go/amazon-brand/aquaclear+70+filter?s=reviews-best-aquarium-filters' label='Check price of the AquaClear 70 filter on Amazon' />
-        <HopDisclosure siteId="fish-com" href="/go/amazon-brand/aquaclear+70+filter?s=reviews-best-aquarium-filters" />
+        <HopDisclosure tone="on-dark" siteId="fish-com" href="/go/amazon-brand/aquaclear+70+filter?s=reviews-best-aquarium-filters" />
         </div>
         <EmailCapture
           variant="inline"

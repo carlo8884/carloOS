@@ -58,7 +58,7 @@ export default function WinterHeaterSizingGuidePage() {
           <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">When the room falls, size the heater from the wattage calculator, and the Eheim Jager is the heater with a recalibration dial.</p>
           <div data-fold="offer">
           <PrimaryHop href="/go/amazon-brand/eheim+jager+heater?s=reviews-winter-heater-sizing-guide" label="Check price of the Eheim Jager heater on Amazon" />
-          <HopDisclosure siteId="fish-com" href="/go/amazon-brand/eheim+jager+heater?s=reviews-winter-heater-sizing-guide" />
+          <HopDisclosure tone="on-dark" siteId="fish-com" href="/go/amazon-brand/eheim+jager+heater?s=reviews-winter-heater-sizing-guide" />
         </div>
         </>
       }

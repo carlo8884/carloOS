@@ -31,7 +31,7 @@ export default function BestNanoTanksPage() {
         <PriceAsOf date="2026-10-07" tone="dark" />
         <div data-fold="offer">
           <PrimaryHop href='/go/amazon-brand/fluval+spec+v+5+gallon?s=reviews-best-nano-tanks' label='Check price of the Fluval Spec V on Amazon' />
-        <HopDisclosure siteId="fish-com" href="/go/amazon-brand/fluval+spec+v+5+gallon?s=reviews-best-nano-tanks" />
+        <HopDisclosure tone="on-dark" siteId="fish-com" href="/go/amazon-brand/fluval+spec+v+5+gallon?s=reviews-best-nano-tanks" />
         </div>
         <EmailCapture
           variant="inline"
