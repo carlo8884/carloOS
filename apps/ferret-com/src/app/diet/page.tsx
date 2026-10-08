@@ -53,7 +53,7 @@ const DIET_CARDS: DietCard[] = [
     eyebrow: 'Macronutrients',
     title: 'Protein & Fat Requirements',
     description:
-      'The published macronutrient window for ferrets: 32–40% protein, 18–22% fat, under 3% carbohydrate, taurine, and why dry-matter basis matters.',
+      'Protein, fat, and carbohydrate targets. Under 3% carbohydrate is a planning figure.',
   },
   {
     slug: 'safe-treats',
@@ -201,7 +201,7 @@ export default function DietHubPage() {
               href: '/diet/protein-and-fat-requirements',
               eyebrow: 'Macronutrients',
               title: 'Protein & Fat Requirements',
-              desc: 'The published macronutrient window: 32–40% protein, 18–22% fat, under 3% carbs — and why dry-matter basis matters.',
+              desc: 'Protein, fat, and carbohydrate targets. Under 3% carbohydrate is a planning figure.',
               manifestKey: 'ferret-com:care-diet-basics',
               imageAlt: 'A ferret near its food bowl — protein and fat macronutrient requirements',
             },

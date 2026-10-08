@@ -33,7 +33,7 @@ const CARE_CARDS: CareCard[] = [
     eyebrow: 'Nutrition',
     title: 'Diet Basics',
     description:
-      'Ferrets are obligate carnivores: 32–40% protein, 18–22% fat, under 3% carbs. Commercial diet tiers, raw-feeding context, and the carbohydrate–insulinoma link.',
+      'Obligate-carnivore diet tiers. The carbohydrate section cites Merck; under 3% carbs is a planning figure.',
   },
   {
     slug: 'cage-setup',

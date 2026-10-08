@@ -7,7 +7,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
   title: 'Ferret Protein & Fat Requirements — Macronutrient Targets | Ferret.com',
   description:
-    'The macronutrient window for ferrets: 32–40% protein, 18–22% fat, under 3% carbohydrate, taurine, and why dry-matter basis changes how you read a label.',
+    'Ferret protein, fat, and carbohydrate targets. The carbohydrate section cites Merck; under 3% carbohydrate is a planning figure.',
   path: '/diet/protein-and-fat-requirements',
   type: 'article',
 })
@@ -47,7 +47,7 @@ const FAQS = [
   {
     question: 'Why is carbohydrate bad for ferrets?',
     answer:
-      'Ferrets have a short gut (roughly five times body length, 3-4 hour transit) with no functional cecum, so they cannot use carbohydrate as a primary fuel — and beyond wasted calories, chronic dietary carbohydrate is the leading working hypothesis for elevated insulinoma risk: sustained carbohydrate intake drives repeated insulin secretion, thought over years to contribute to pancreatic beta-cell stress and tumor formation. The target is under 3%, ideally under 2%; many commercial "ferret" foods land at 15-30% by difference.',
+      'Ferrets have a short gut (roughly five times body length, 3-4 hour transit) with no functional cecum, so they cannot use carbohydrate as a primary fuel — and beyond wasted calories, chronic dietary carbohydrate is the leading working hypothesis for elevated insulinoma risk: sustained carbohydrate intake drives repeated insulin secretion, thought over years to contribute to pancreatic beta-cell stress and tumor formation. The Merck Veterinary Manual states that ferrets require protein of 35%–40%, and that carbohydrate (under 25%) and fiber (under 2.5%) proportions of the diet should be relatively low (https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/management-of-ferrets). Under 3% carbohydrate, ideally under 2%, is a planning figure on this page. Merck does not state that cutoff. Many commercial "ferret" foods land at 15-30% by difference.',
   },
   {
     question: 'Do ferrets need taurine?',
@@ -141,7 +141,7 @@ export default function ProteinAndFatRequirementsPage() {
 
           <h2 id="why">Why the Numbers Are What They Are</h2>
           <p>
-            Ferrets are obligate carnivores with a short gastrointestinal tract — roughly five times body length — a transit time of about three to four hours, and no functional cecum. They cannot ferment plant fiber for energy or use carbohydrate as a primary fuel. Everything in the macronutrient profile below follows from that physiology: the food must be dense in animal protein and animal fat to be fully digested within a short transit window, and it must be nearly free of plant carbohydrate. The targets here are drawn from standard exotic-pet veterinary references.
+            Ferrets are obligate carnivores with a short gastrointestinal tract — roughly five times body length — a transit time of about three to four hours, and no functional cecum. They cannot ferment plant fiber for energy or use carbohydrate as a primary fuel. Everything in the macronutrient profile below follows from that physiology: the food must be dense in animal protein and animal fat to be fully digested within a short transit window, and it must be nearly free of plant carbohydrate. Protein and fat ranges below are a working window on this page. The carbohydrate section cites the Merck Veterinary Manual, and the tighter cutoff is a planning figure.
           </p>
 
           <h2 id="protein">Protein: 32–40% (Dry-Matter Basis)</h2>
@@ -154,9 +154,9 @@ export default function ProteinAndFatRequirementsPage() {
             Fat is a ferret's primary energy substrate, and the typical target is 18–22% on a dry-matter basis, again animal-sourced. Ferrets thrive on a relatively high-fat diet and self-regulate intake well, grazing many small meals a day. Fat also carries fat-soluble vitamins and supports coat condition. Active ferrets, growing kits, and underweight animals benefit from the upper end; sedentary or overweight ferrets may need the lower end paired with portion attention (see <a href="/diet/weight-management">weight management</a>).
           </p>
 
-          <h2 id="carbs">Carbohydrate: Under 3%</h2>
+          <h2 id="carbs">Carbohydrate</h2>
           <p>
-            The carbohydrate target is under 3%, ideally under 2%. This is the number most commercial "ferret" foods miss — many land at 15–30% carbohydrate by difference because extruded kibble requires some binding starch and cheaper formulas lean heavily on grain. Beyond being wasted calories, chronic dietary carbohydrate is the leading working hypothesis for elevated insulinoma risk in ferrets: sustained carbohydrate intake drives repeated insulin secretion, which over years is thought to contribute to pancreatic beta-cell stress and tumor formation. The clinical picture is covered in <a href="/health/insulinoma">insulinoma in ferrets</a>.
+            The Merck Veterinary Manual states that ferrets require protein of 35%–40%, and that carbohydrate (under 25%) and fiber (under 2.5%) proportions of the diet should be relatively low (https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/management-of-ferrets). Under 3% carbohydrate, ideally under 2%, is a planning figure on this page. Merck does not state that cutoff. Commercial "ferret" foods often miss even the wider Merck proportion — many land at 15–30% carbohydrate by difference because extruded kibble requires some binding starch and cheaper formulas lean heavily on grain. Beyond being wasted calories, chronic dietary carbohydrate is the leading working hypothesis for elevated insulinoma risk in ferrets: sustained carbohydrate intake drives repeated insulin secretion, which over years is thought to contribute to pancreatic beta-cell stress and tumor formation. The clinical picture is covered in <a href="/health/insulinoma">insulinoma in ferrets</a>.
           </p>
 
           <h2 id="taurine">Taurine</h2>
@@ -166,7 +166,7 @@ export default function ProteinAndFatRequirementsPage() {
 
           <h2 id="fiber">Fiber & Ash</h2>
           <p>
-            Fiber should be under about 3%. Higher fiber slows gut transit beyond what the ferret tract is built for and reduces digestibility. "Ash" on a label refers to total mineral content; a moderate figure is normal and reflects the bone and mineral content of animal ingredients. Neither fiber nor ash is a headline number, but very high fiber is a sign of plant fillers.
+            The same Merck page states that fiber proportions of the diet should be relatively low (under 2.5%) (https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/management-of-ferrets). Fiber under about 3% is a planning figure on this page. Higher fiber slows gut transit beyond what the ferret tract is built for and reduces digestibility. "Ash" on a label refers to total mineral content; a moderate figure is normal and reflects the bone and mineral content of animal ingredients. Neither fiber nor ash is a headline number, but very high fiber is a sign of plant fillers.
           </p>
 
           <h2 id="dry-matter">Dry-Matter vs As-Fed</h2>
