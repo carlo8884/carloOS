@@ -216,6 +216,7 @@ export default function ProteinAndFatRequirementsPage() {
             ctaAffiliateProgram="wysong"
             ctaAffiliateProduct="epigen-90"
           />
+          <p>The chain-shelf bag next to this one is Marshall Premium. The <a href="/reviews/wysong-vs-marshall-kibble-guide">Wysong versus Marshall guide</a> prints both guaranteed analyses and says to skip Marshall when insulinoma risk is why you are choosing a food.</p>
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />

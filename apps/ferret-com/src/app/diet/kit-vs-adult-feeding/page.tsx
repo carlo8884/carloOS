@@ -176,6 +176,7 @@ export default function KitVsAdultFeedingPage() {
             ctaAffiliateProgram="marshall"
             ctaAffiliateProduct="premium-ferret-diet"
           />
+          <p>The other bag in that rotation, when you want the one marketed as starch-free, is Wysong Epigen 90. The <a href="/reviews/wysong-vs-marshall-kibble-guide">Wysong versus Marshall guide</a> prints both guaranteed analyses. Carbohydrate is not on either label.</p>
 
           <h2 id="sources">Sources</h2>
           <p>
