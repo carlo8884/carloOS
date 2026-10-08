@@ -122,7 +122,7 @@ export default function HorseBlanketSizeCalculator() {
       ) : null}
 
       <p className="mt-4 text-2xs leading-snug text-brand-text-light">
-        US blanket sizing <em>is</em> the chest-to-tail measurement in inches, rounded to the nearest 3-inch standard
+        The 3-inch step is a planning convention for US blanket sizes, not a chart fetched from a manufacturer. US sizing here is the chest-to-tail measurement in inches, rounded to that step
         size (48&Prime;–90&Prime;). Fit also depends on cut, shoulder gusset, and neck style — when in doubt, size up
         and check the brand&apos;s chart.
       </p>

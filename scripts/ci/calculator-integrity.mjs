@@ -12767,6 +12767,19 @@ const CALCULATORS = [
     why: 'A 1,000 lb horse is 5–10 gallons, the water page’s temperate idle line. No second coefficient.',
   },
   {
+    id: 'horses · feed intake clamp',
+    file: 'apps/horses-com/src/app/tools/horse-feed-calculator/Calculator.tsx',
+    mustInclude: [
+      { re: /Math\.max\(1\.5, Math\.min\(3\.0, v\)\)/, label: 'intake percent clamped to 1.5–3.0' },
+      { re: /dmRange: \[1\.5, 2\.0\]/, label: 'maintenance band matches the 1.5–2% forage floor' },
+      { re: /forageMin: 1\.5/, label: 'forage floor stays 1.5% of body weight' },
+    ],
+    mustExclude: [
+      { re: /Math\.max\(1\.25, Math\.min\(3\.25, v\)\)/, label: 'do not restore the 1.25–3.25 clamp' },
+    ],
+    why: 'Merck, citing NRC 2007: forage at least 1.5–2% of body weight (DM) and maximal intake 2.5–3%. The keeper shift stays inside that envelope.',
+  },
+  {
     id: 'fish · live rock',
     file: 'apps/fish-com/src/app/tools/live-rock-calculator/model.ts',
     mustInclude: [

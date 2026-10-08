@@ -5,9 +5,11 @@
  * Client compute component. Estimates daily forage / total dry-matter intake
  * from bodyweight, workload, and keeper type.
  *
- * Horses eat roughly 1.5–2.5% of bodyweight in dry matter (DM) per day,
- * forage-first (NRC 2007). This tool returns a daily DM range, a forage
- * baseline, and a "forage first; concentrates only fill the gap" message.
+ * Merck Veterinary Manual (citing Nutrient Requirements of Horses, 6th ed.,
+ * NRC 2007): at least 1.5–2% of body weight in forage per day on a dry-matter
+ * basis, and maximal daily intake estimated at 2.5–3% of body weight in dry
+ * matter. Workload splits inside that envelope, and the ±0.25 keeper shift,
+ * are planning figures. The percent band is clamped to 1.5–3.0.
  *
  * Husbandry framing only. No clinical dosing, no medicated-diet prescriptions.
  */
@@ -29,8 +31,9 @@ interface WorkloadOption {
   note: string
 }
 
-// NRC (2007) total daily DM intake guidance: ~1.5–3.0% of bodyweight depending
-// on workload, with forage at minimum ~1.5% of bodyweight to protect gut health.
+// Merck: forage at least 1.5–2% of body weight (DM); maximal intake 2.5–3% BW DM.
+// https://www.merckvetmanual.com/management-and-nutrition/nutrition-horses/nutritional-requirements-of-horses
+// Maintenance uses that forage band. Light, moderate, and heavy splits are planning figures inside 1.5–3%.
 const WORKLOADS: WorkloadOption[] = [
   {
     value: 'maintenance',
@@ -44,21 +47,21 @@ const WORKLOADS: WorkloadOption[] = [
     label: 'Light work (1–3 hrs/wk)',
     dmRange: [1.5, 2.5],
     forageMin: 1.5,
-    note: 'Light pleasure or trail work raises calorie needs modestly; quality forage usually still covers most of it.',
+    note: 'Planning split inside the published 1.5–3% envelope. Light pleasure or trail work raises calorie needs modestly; quality forage usually still covers most of it.',
   },
   {
     value: 'moderate',
     label: 'Moderate work (3–5 hrs/wk)',
     dmRange: [1.75, 2.5],
     forageMin: 1.5,
-    note: 'Regular schooling or ranch work may need a ration balancer or modest concentrate on top of forage to meet energy and nutrient needs.',
+    note: 'Planning split. The 1.75% floor is not a separate figure on the Merck page. Regular schooling may need a ration balancer on top of forage.',
   },
   {
     value: 'heavy',
     label: 'Heavy work (race / hard sport)',
     dmRange: [2.0, 3.0],
     forageMin: 1.5,
-    note: 'Hard-working horses have the highest energy demand. Keep forage at the core of the ration and add concentrates gradually to fill the calorie gap, fed in several small meals.',
+    note: 'Planning split. The 3% ceiling matches Merck’s estimated maximal intake. Keep forage at the core and add concentrates gradually, in several small meals.',
   },
 ]
 
@@ -116,9 +119,9 @@ export default function Calculator() {
     const bw = parseFloat(weight)
     if (Number.isNaN(bw) || !(bw > 0)) return null
 
-    // Keeper biases the percentage band up or down by 0.25 pts, clamped to a
-    // sane 1.25–3.25% envelope.
-    const clamp = (v: number) => Math.max(1.25, Math.min(3.25, v))
+    // Keeper bias is a planning shift of 0.25 points, clamped to Merck’s
+    // 1.5% forage floor and 3% estimated maximal intake.
+    const clamp = (v: number) => Math.max(1.5, Math.min(3.0, v))
     const minPct = clamp(wl.dmRange[0] + kp.bias)
     const maxPct = clamp(wl.dmRange[1] + kp.bias)
     const foragePct = clamp(wl.forageMin + Math.min(0, kp.bias))
@@ -274,10 +277,12 @@ export default function Calculator() {
       <div className="mt-6 rounded border border-emerald-700 bg-emerald-950 p-4 text-emerald-200">
         <p className="text-sm font-semibold">Forage first — concentrates only fill the gap.</p>
         <p className="mt-2 text-sm">
-          Build the ration on forage (pasture, hay, haylage) and keep it at roughly 1.5% of
-          bodyweight in dry matter or more to protect gut health and reduce ulcer and colic
-          risk. Add concentrates or a ration balancer only to fill the energy or nutrient gap
-          that forage alone leaves — never as the foundation of the diet.
+          How we calculate: Merck, citing Nutrient Requirements of Horses (NRC 2007), says horses
+          should get at least 1.5–2% of body weight in forage per day on a dry-matter basis, and
+          estimates maximal daily intake at 2.5–3% of body weight. Maintenance uses that 1.5–2%
+          forage band. Light, moderate, and heavy splits, and the 0.25-point keeper shift, are
+          planning figures clamped to 1.5–3%. The 88–90% hay dry-matter step below is a planning
+          conversion, not a forage analysis.
         </p>
       </div>
 
