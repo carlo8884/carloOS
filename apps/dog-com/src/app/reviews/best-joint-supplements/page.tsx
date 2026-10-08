@@ -52,9 +52,12 @@ export default function BestJointSupplementsPage() {
           style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>
           Best Joint Supplements for Dogs 2026
         </h1>
+        <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">Nutramax Dasuquin with MSM is the top joint supplement because the label combines glucosamine, chondroitin, and MSM.</p>
         <PriceAsOf date="2026-10-05" tone="dark" />
-        <PrimaryHop href='/go/amazon-brand/dasuquin+with+msm?s=reviews-best-joint-supplements' label='Check price of Nutramax Dasuquin with MSM on Amazon' />
+        <div data-fold="offer">
+          <PrimaryHop href='/go/amazon-brand/dasuquin+with+msm?s=reviews-best-joint-supplements' label='Check price of Nutramax Dasuquin with MSM on Amazon' />
         <HopDisclosure siteId="dog-com" href="/go/amazon-brand/dasuquin+with+msm?s=reviews-best-joint-supplements" />
+        </div>
         <EmailCapture
           variant="inline"
           siteId="dog-com"
@@ -72,7 +75,7 @@ export default function BestJointSupplementsPage() {
           ]}
         />
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">
-          The pet supplement market is full of products with minimal evidence. We graded each major joint supplement category by the actual research — what works, what&apos;s promising, and what&apos;s expensive placebo.
+          Joint supplements on this page are ranked by the published research — what works, what&apos;s promising, and what&apos;s expensive placebo.
         </p>
       </div>
 

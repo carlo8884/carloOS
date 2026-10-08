@@ -71,9 +71,12 @@ export default function BestDogFoodPage() {
           style={{ fontSize: 'clamp(26px, 4vw, 48px)' }}>
           Best Dry Dog Food 2026
         </h1>
+        <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">Royal Canin is the top dry dog food because the maker runs AAFCO feeding trials and employs veterinary nutritionists.</p>
         <PriceAsOf date="2026-10-03" tone="dark" />
-        <PrimaryHop href='/go/chewy-brand/royal+canin+dry+dog+food?s=reviews-best-dry-dog-food' label='Check price of Royal Canin dry dog food on Amazon' />
+        <div data-fold="offer">
+          <PrimaryHop href='/go/chewy-brand/royal+canin+dry+dog+food?s=reviews-best-dry-dog-food' label='Check price of Royal Canin dry dog food on Amazon' />
         <HopDisclosure siteId="dog-com" href="/go/chewy-brand/royal+canin+dry+dog+food?s=reviews-best-dry-dog-food" />
+        </div>
         <EmailCapture
           variant="inline"
           siteId="dog-com"
@@ -94,7 +97,7 @@ export default function BestDogFoodPage() {
           <QuickPicks items={PICKS} title="Jump to Your Pick" embedded />
         </div>
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed mb-5">
-          The dog food market is full of marketing. We cut through it: 12 foods compared on <a href="https://wsava.org/committees/global-nutrition-committee/" rel="noopener" target="_blank" className="text-brand-primary underline underline-offset-2">WSAVA</a> compliance, nutritional research investment, manufacturing standards, and ingredient quality — based on published specs and stated criteria, not front-of-bag claims.
+          Twelve dry foods are compared on <a href="https://wsava.org/committees/global-nutrition-committee/" rel="noopener" target="_blank" className="text-brand-primary underline underline-offset-2">WSAVA</a> compliance, nutritional research investment, manufacturing standards, and ingredient quality — based on published specs and stated criteria, not front-of-bag claims.
         </p>
         <div className="text-xs text-white/80">
           Updated May 2026 ·{' '}

@@ -24,9 +24,12 @@ export default function BestDentalChewsPage() {
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">🦷 Evidence-Based · Updated 2026</span>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Dental Chews for Dogs 2026</h1>
+        <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">Greenies are the top dental chew because the VOHC accepts them for plaque and tartar reduction.</p>
         <PriceAsOf date="2026-10-07" tone="dark" />
-        <PrimaryHop href='/go/chewy-brand/greenies+dental+chews+dogs?s=reviews-best-dental-chews' label='Check price of Greenies dental chews on Amazon' />
+        <div data-fold="offer">
+          <PrimaryHop href='/go/chewy-brand/greenies+dental+chews+dogs?s=reviews-best-dental-chews' label='Check price of Greenies dental chews on Amazon' />
         <HopDisclosure siteId="dog-com" href="/go/chewy-brand/greenies+dental+chews+dogs?s=reviews-best-dental-chews" />
+        </div>
         <EmailCapture
           variant="inline"
           siteId="dog-com"
