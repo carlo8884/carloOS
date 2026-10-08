@@ -131,7 +131,7 @@ const FAQ_ITEMS: Array<{ question: string; answer: string }> = [
   {
     question: 'Which dog conditions are most commonly diagnosed?',
     answer:
-      'Conditions that show up often in general practice include osteoarthritis, periodontal disease, atopic dermatitis, allergic otitis externa, obesity, and benign mass lesions. This page does not cite a prevalence percent for any of them. Senior dogs add chronic kidney disease, mitral valve disease, hypothyroidism, and Cushing\'s disease to the list. Each condition above is highlighted at the top of this page.',
+      'Conditions that show up often in general practice include osteoarthritis, periodontal disease, atopic dermatitis, allergic otitis externa, obesity, and benign mass lesions. Anderson et al. (Scientific Reports, 2018) estimated the annual period prevalence of appendicular osteoarthritis at 2.5% in 455,557 UK primary-care dogs (https://www.nature.com/articles/s41598-018-23940-z). This page does not cite a prevalence percent for the other conditions on that list. Senior dogs add chronic kidney disease, mitral valve disease, hypothyroidism, and Cushing\'s disease to the list. Each condition above is highlighted at the top of this page.',
   },
   {
     question: 'What dog conditions are immediate emergencies?',

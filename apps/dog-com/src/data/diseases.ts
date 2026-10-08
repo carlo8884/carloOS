@@ -151,9 +151,9 @@ export const Diseases: Disease[] = [
       'Aggressive IV fluid therapy with electrolyte and glucose support',
       'Anti-emetics (maropitant, ondansetron) and broad-spectrum antibiotics for secondary bacterial translocation',
       'Nutritional support — early enteral feeding when tolerated; CRI metoclopramide if not',
-      'Hospitalization in isolation; mortality drops from ~50% to <10% with intensive inpatient care',
+      'Hospitalization in isolation. Merck Veterinary Manual: the survival rate is greater than 90% for dogs treated aggressively in the hospital (https://www.merckvetmanual.com/digestive-system/infectious-diseases-of-the-gastrointestinal-tract-in-small-animals/canine-parvovirus-infection-parvoviral-enteritis-in-dogs).',
     ],
-    prognosisNote: 'With hospitalized supportive care, survival rates reach 75–90%; untreated parvovirus carries 50–90% mortality in puppies.',
+    prognosisNote: 'Merck Veterinary Manual: with appropriate supportive care, 70–90% of dogs with parvoviral enteritis will survive (https://www.merckvetmanual.com/digestive-system/infectious-diseases-of-the-gastrointestinal-tract-in-small-animals/canine-parvovirus-infection-parvoviral-enteritis-in-dogs).',
     preventionPossible: true,
     preventionNote: 'Core DA2PP vaccine series starting at 6–8 weeks, boostered every 3–4 weeks through 16+ weeks per AAHA guidelines.',
     whenToER: [

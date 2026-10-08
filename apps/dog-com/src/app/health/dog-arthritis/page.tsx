@@ -6,13 +6,13 @@ import { ArticleByline, DropCap, CalloutBox, PullQuote, ArticleSourcesList } fro
 import { crossSiteHref } from '@carloOS/config'
 
 
-export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Arthritis in Dogs — Signs, Treatment | Dog.com', description: 'Arthritis signs owners miss, and a practical plan: weight, veterinary NSAIDs, and rehabilitation. This page does not cite a prevalence percent.', path: '/health/dog-arthritis', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Arthritis in Dogs — Signs, Treatment | Dog.com', description: 'UK primary-care data put annual osteoarthritis prevalence at 2.5% (Anderson et al., 2018). Signs, weight, and veterinary NSAIDs.', path: '/health/dog-arthritis', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Arthritis in Dogs', description: 'Signs, diagnosis, and multimodal treatment for canine osteoarthritis.', url: 'https://dog.com/health/dog-arthritis', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
 const med = buildMedicalWebPageSchema({ name: 'Arthritis in Dogs', description: 'Diagnosis and multimodal treatment for canine osteoarthritis.', url: 'https://dog.com/health/dog-arthritis', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
 const FAQS = [
   { question: 'What are the first signs of arthritis in dogs?', answer: 'Most arthritic dogs show subtle changes long before obvious limping: new reluctance to use stairs or jump onto furniture, stiffness after rest that improves with a few minutes of movement (the warming-up pattern), reduced walking pace or distance tolerance, difficulty rising from lying down, muscle loss over affected limbs, and behavioral changes such as irritability when touched. The key question is whether something has changed from the dog\'s normal baseline — age alone does not cause these changes; pain does. Raise any change with your veterinarian.' },
   { question: 'Can I give my dog ibuprofen or Tylenol for arthritis pain?', answer: 'No. Ibuprofen, naproxen, and acetaminophen (Tylenol) are toxic to dogs at doses that are safe for humans — they cause gastrointestinal ulceration and acute kidney or liver injury. Aspirin has a narrow safety margin. Never give a human pain reliever to a dog. Call your veterinarian instead — veterinary NSAIDs (carprofen, meloxicam, grapiprant, deracoxib) are designed for canine physiology and are prescribed with appropriate monitoring.' },
-  { question: 'What is the most effective treatment for arthritis in dogs?', answer: 'In overweight dogs, weight is the factor the owner can change, and it belongs in the plan alongside veterinary NSAIDs. This page does not cite a trial that ranks weight loss against NSAIDs, and it does not cite a pounds-of-force figure. Treatment is multimodal: veterinary NSAIDs, omega-3s where a cited source supports them, formal rehabilitation, and newer options like Librela. Your veterinarian builds the combination for the individual dog.' },
+  { question: 'What is the most effective treatment for arthritis in dogs?', answer: 'In overweight dogs, weight is the factor the owner can change, and it belongs in the plan alongside veterinary NSAIDs. Kealy et al. (JAVMA 2000) followed 48 Labrador Retrievers; the limit-fed group received 25% less food. At 8 years, hip osteoarthritis was present in 3 of 21 limit-fed dogs versus 15 of 22 control-fed littermates (https://doi.org/10.2460/javma.2000.217.1678). That trial does not rank weight loss against NSAIDs, and it does not measure pounds of force on a joint. Treatment is multimodal: veterinary NSAIDs, omega-3s where a cited source supports them, formal rehabilitation, and newer options like Librela. Your veterinarian builds the combination for the individual dog.' },
   { question: 'Do joint supplements actually work for dogs?', answer: 'Some have reasonable evidence. Omega-3 fatty acids (EPA/DHA from fish or krill oil) are among the better-supported supplements in the published literature (Roush et al., JAVMA 2010), with effects building over 4–6 weeks — confirm dosing with your veterinarian. Glucosamine + chondroitin (e.g., Dasuquin) has moderate evidence, with most benefit in early-to-moderate arthritis. Green-lipped mussel combines both mechanisms. Supplements complement — they do not replace — weight management and prescribed treatment.' },
   { question: 'What is Librela and which dogs is it for?', answer: 'Librela (bedinvetmab) is a monoclonal antibody that targets nerve growth factor (NGF), a key pain mediator in osteoarthritis. It is given as a monthly injection. The Merck Veterinary Manual describes bedinvetmab as useful for dogs with moderate to severe osteoarthritis. It is a particularly meaningful option for dogs that cannot tolerate NSAIDs because of kidney or liver disease. Ask your veterinarian whether it fits your dog\'s situation.' },
 ]
@@ -24,7 +24,7 @@ export default function DogArthritisPage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="dog-com"
-        hero={{ title: 'Arthritis in Dogs', subtitle: 'Osteoarthritis is a common cause of chronic pain in dogs. This page does not cite a prevalence percent. Many dogs go untreated because owners read the signs as normal aging. A long-term plan can keep a dog more comfortable.', category: 'Dog Health', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '11 min',}}
+        hero={{ title: 'Arthritis in Dogs', subtitle: 'Anderson et al. (Scientific Reports, 2018) estimated the annual period prevalence of appendicular osteoarthritis at 2.5% in 455,557 UK primary-care dogs. Age older than eight years was a risk factor, not a claim that most older dogs have it (https://www.nature.com/articles/s41598-018-23940-z). Many dogs go untreated because owners read the signs as normal aging.', category: 'Dog Health', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '11 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Dog Health', href: '/health' }, { name: 'Dog Arthritis', href: '/health/dog-arthritis' }]}
         relatedLinks={[{ title: 'Dog Health Hub', href: '/health', category: 'Hub' }, { title: 'Best Joint Supplements', href: '/reviews/best-joint-supplements', category: 'Dog Health' }, { title: 'Dog Obesity', href: '/health/dog-obesity', category: 'Dog Health' }, { title: 'Senior Dog Care', href: '/health/senior-dog-care', category: 'Dog Health' }, { title: 'Newer Treatments: Librela (bedinvetmab)', href: '/health/dog-arthritis#newer', category: 'Dog Health' }]}
         contentType="health"
@@ -57,13 +57,13 @@ export default function DogArthritisPage() {
           <p>Advanced imaging (CT, MRI) is used for complex cases — early joint changes invisible on radiograph, surgical planning, and spinal arthritis assessment.</p>
 
           <h2 id="weight">Weight Management — The Most Powerful Intervention</h2>
-          <p>In an overweight dog, getting back to a lean body condition belongs in the arthritis plan alongside veterinary NSAIDs. This page does not cite a trial that ranks weight loss against NSAIDs, and it does not cite a pounds-of-force figure.</p>
+          <p>In an overweight dog, getting back to a lean body condition belongs in the arthritis plan alongside veterinary NSAIDs. Kealy et al. (JAVMA 2000) followed 48 Labrador Retrievers; the limit-fed group received 25% less food. At 8 years, hip osteoarthritis was present in 3 of 21 limit-fed dogs versus 15 of 22 control-fed littermates (https://doi.org/10.2460/javma.2000.217.1678). That trial does not rank weight loss against NSAIDs, and it does not measure pounds of force on a joint.</p>
           <p>The goal: BCS 4–5 on a 9-point scale. Ribs easily palpable with light pressure. Visible waist. Abdominal tuck. In arthritic dogs, this is a treatment target, not a cosmetic goal. Prescription weight management diets (Hill's Metabolic, Royal Canin Satiety) achieve more reliable weight loss than calorie restriction of regular food alone.</p>
 
           <PullQuote
             variant="inline"
-            quote="Weight loss is the single most impactful arthritis intervention — more effective than NSAIDs alone in overweight dogs."
-            attribution="AAHA Canine Life Stage Guidelines"
+            quote="At 8 years, hip osteoarthritis was present in 3 of 21 Labrador Retrievers fed 25% less food, versus 15 of 22 control-fed littermates."
+            attribution="Kealy et al., JAVMA 2000"
           />
 
           <h2 id="nsaids">NSAIDs — Prescription Required</h2>
@@ -126,6 +126,8 @@ export default function DogArthritisPage() {
                 url: 'https://www.aaha.org/resources/2023-aaha-senior-care-guidelines-for-dogs-and-cats/',
                 publisher: 'AAHA',
               },
+              { label: 'Anderson KL et al. Estimated annual prevalence of appendicular osteoarthritis in UK primary-care dogs. Scientific Reports. 2018.', url: 'https://www.nature.com/articles/s41598-018-23940-z', publisher: 'Scientific Reports' },
+              { label: 'Kealy RD et al. Evaluation of the effect of limited food consumption on radiographic evidence of osteoarthritis in dogs. JAVMA. 2000;217:1678-1680.', url: 'https://doi.org/10.2460/javma.2000.217.1678', publisher: 'JAVMA' },
               {
                 label: 'Roush JK et al. -- Evaluation of the effects of dietary supplementation with fish oil omega-3 fatty acids on weight bearing in dogs with osteoarthritis',
                 url: 'https://avmajournals.avma.org/view/journals/javma/236/1/javma.236.1.67.xml',
