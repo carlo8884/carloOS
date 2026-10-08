@@ -9,7 +9,6 @@ import {
   TableOfContents,
   RelatedLinks,
   ArticleByline,
-  ArticleSourcesList,
 
   ShopCtas,
   JourneyNext,
@@ -283,21 +282,6 @@ export default function SubstrateCalculatorPage() {
           allowMultiple
         />
 
-        <ArticleSourcesList
-          title="Sources"
-          sources={[
-            {
-              label: 'Choosing and preparing aquarium substrate',
-              publisher: 'The Spruce Pets',
-              url: 'https://www.thesprucepets.com/aquarium-substrate-1378763',
-            },
-            {
-              label: 'Aquarium gravel and sand: depth and selection',
-              publisher: 'The Spruce Pets',
-              url: 'https://www.thesprucepets.com/freshwater-aquarium-substrate-1381911',
-            },
-          ]}
-        />
       </div>
     </ArticleLayout>
   )

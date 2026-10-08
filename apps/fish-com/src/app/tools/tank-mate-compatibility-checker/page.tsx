@@ -395,16 +395,6 @@ export default function TankMateCompatibilityPage() {
           title="Sources"
           sources={[
             {
-              label: 'Aquarium fish compatibility and community tank stocking',
-              publisher: 'The Spruce Pets',
-              url: 'https://www.thesprucepets.com/freshwater-aquarium-fish-4162163',
-            },
-            {
-              label: 'Betta fish care and tank mates',
-              publisher: 'The Spruce Pets',
-              url: 'https://www.thesprucepets.com/betta-fish-4162276',
-            },
-            {
               label: 'Goldfish are coldwater fish: temperature requirements',
               publisher: 'Seriously Fish',
               url: 'https://www.seriouslyfish.com/',
