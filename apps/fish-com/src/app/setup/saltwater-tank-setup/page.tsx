@@ -20,12 +20,7 @@ const SOURCES = [
     url: "https://www.advancesmarinebiology.com/article/S0065-2881(09)56001-2/abstract",
     publisher: "Advances in Marine Biology (peer-reviewed)",
   },
-  {
-    label: "Amyloodinium ocellatum (Marine Velvet) in Saltwater Fish",
-    url: "https://edis.ifas.ufl.edu/publication/FA027",
-    publisher: "University of Florida IFAS Extension",
-  },
-  {
+    {
     label: "Protein Skimmers and Dissolved Organic Carbon Removal",
     url: "https://www.sciencedirect.com/science/article/pii/S0044848608001816",
     publisher: "Aquaculture (peer-reviewed)",

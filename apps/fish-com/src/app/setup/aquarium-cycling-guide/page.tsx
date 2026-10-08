@@ -37,12 +37,7 @@ const SOURCES = [
     url: "https://aem.asm.org/content/67/12/5768",
     publisher: "Applied and Environmental Microbiology",
   },
-  {
-    label: "Water Quality for Pond Aquaculture — Nitrogen Cycle",
-    url: "https://www.uaex.uada.edu/environment-nature/water/ponds/nitrogen-cycle.aspx",
-    publisher: "University of Arkansas Cooperative Extension",
-  },
-  {
+    {
     label: "Chloramine in Drinking Water and Its Effect on Aquatic Animals",
     url: "https://srac.tamu.edu/serveFactSheet/140",
     publisher: "Southern Regional Aquaculture Center (SRAC)",

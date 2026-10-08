@@ -9,7 +9,7 @@ const SOURCES = [
   { label: "Bacterial Diseases of Fish — Merck Veterinary Manual", url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/aquarium-fish/bacterial-diseases-of-fish", publisher: "Merck Vet Manual" },
   { label: "Noga, E.J. Fish Disease: Diagnosis and Treatment, 2nd ed. Wiley-Blackwell, 2010.", publisher: "Wiley-Blackwell" },
   { label: "Yanong, R.P.E. Aeromonas Infections in Fish — UF/IFAS Extension FA-TP-174.", url: "https://edis.ifas.ufl.edu/publication/FA174", publisher: "UF/IFAS Extension" },
-  { label: "Francis-Floyd, R. Stress — Its Role in Fish Disease — UF/IFAS Extension FA-43.", url: "https://edis.ifas.ufl.edu/publication/FA043", publisher: "UF/IFAS Extension" },
+  { label: "Francis-Floyd, R. Stress — Its Role in Fish Disease — UF/IFAS Circular 919 / FA005.", url: "https://ask.ifas.ufl.edu/publication/FA005", publisher: "UF/IFAS Extension" },
 ]
 
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Bacterial Infections in Aquarium Fish — Signs & Treatment | Fish.com', description: "How to recognize and treat bacterial infections in fish: ulcers, red streaks, septicemia, and mouth fungus. Why water quality is almost always the root cause.", path: '/health/bacterial-infections', type: 'article' })

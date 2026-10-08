@@ -6,7 +6,7 @@ import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 
 const SOURCES = [
-  { label: "Francis-Floyd, R. Stress — Its Role in Fish Disease — UF/IFAS Extension FA-43.", url: "https://edis.ifas.ufl.edu/publication/FA043", publisher: "UF/IFAS Extension" },
+  { label: "Francis-Floyd, R. Stress — Its Role in Fish Disease — UF/IFAS Circular 919 / FA005.", url: "https://ask.ifas.ufl.edu/publication/FA005", publisher: "UF/IFAS Extension" },
   { label: "Barton, B.A. Stress in Fishes: A Diversity of Responses with Particular Reference to Changes in Circulating Corticosteroids. Integrative and Comparative Biology, 2002.", publisher: "Oxford University Press" },
   { label: "Noga, E.J. Fish Disease: Diagnosis and Treatment, 2nd ed. Wiley-Blackwell, 2010.", publisher: "Wiley-Blackwell" },
   { label: "Yanong, R.P.E. Disease Management in Recirculating Aquaculture Systems — UF/IFAS Extension FA-107.", url: "https://edis.ifas.ufl.edu/publication/FA107", publisher: "UF/IFAS Extension" },

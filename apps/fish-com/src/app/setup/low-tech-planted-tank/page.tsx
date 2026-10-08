@@ -15,7 +15,7 @@ const SOURCES = [
   { label: "Walstad, D.L. Ecology of the Planted Aquarium, 3rd ed. Echinodorus Publishing, 2013.", publisher: "Echinodorus Publishing" },
   { label: "Kasselmann, C. Aquarium Plants. Krieger Publishing, 2003.", publisher: "Krieger Publishing" },
   { label: "Barr, T. & Roger, E. The Estimative Index of Dosing. Barr Report, 2004.", publisher: "Barr Report" },
-  { label: "Aquatic Plants for the Aquarium — UF/IFAS Extension FA-16", url: "https://edis.ifas.ufl.edu/publication/FA016", publisher: "UF/IFAS Extension" },
+  { label: "Francis-Floyd, R. et al. Ammonia in Aquatic Systems — UF/IFAS FA031 (current home of FA-16).", url: "https://ask.ifas.ufl.edu/publication/FA031", publisher: "UF/IFAS Extension" },
 ]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Low-Tech Planted Tank — No CO2, Low Light, Low Effort | Fish.com', description: "How to run a thriving low-tech planted tank without pressurized CO2. Easy plants, modest light, light fertilization, and a slow, stable, beautiful balance.", path: '/setup/low-tech-planted-tank', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Low-Tech Planted Tank Guide', description: 'Running a planted aquarium without CO2 injection: easy plants, light, and fertilization.', url: 'https://fish.com/setup/low-tech-planted-tank', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-09-05T00:00:00Z' ,

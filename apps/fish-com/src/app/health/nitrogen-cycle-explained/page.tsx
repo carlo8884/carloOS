@@ -7,10 +7,9 @@ import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
 const SOURCES = [
-  { label: "Nitrogenous Waste and the Nitrogen Cycle in Aquariums — UF/IFAS Extension FA-16.", url: "https://edis.ifas.ufl.edu/publication/FA016", publisher: "UF/IFAS Extension" },
+  { label: "Francis-Floyd, R. et al. Ammonia in Aquatic Systems — UF/IFAS FA031 (current home of FA-16).", url: "https://ask.ifas.ufl.edu/publication/FA031", publisher: "UF/IFAS Extension" },
   { label: "Timmons, M.B. and Ebeling, J.M. Recirculating Aquaculture, 3rd ed. Ithaca Publishing, 2013.", publisher: "Ithaca Publishing" },
-  { label: "Francis-Floyd, R. Ammonia Toxicosis in Fish — UF/IFAS Extension FA-36.", url: "https://edis.ifas.ufl.edu/publication/FA036", publisher: "UF/IFAS Extension" },
-  { label: "Russo, R.C. and Thurston, R.V. Toxicity of ammonia, nitrite, and nitrate to fishes. Aquaculture and Water Quality, 1991.", publisher: "World Aquaculture Society" },
+    { label: "Russo, R.C. and Thurston, R.V. Toxicity of ammonia, nitrite, and nitrate to fishes. Aquaculture and Water Quality, 1991.", publisher: "World Aquaculture Society" },
 ]
 
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'The Nitrogen Cycle Explained — Why New Tanks Fail | Fish.com', description: 'The nitrogen cycle is why most new aquariums fail. Complete guide: what it is, how to cycle a tank before adding fish, fishless cycling protocol.', path: '/health/nitrogen-cycle-explained', type: 'article' })

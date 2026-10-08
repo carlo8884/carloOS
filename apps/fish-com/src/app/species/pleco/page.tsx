@@ -5,8 +5,7 @@ import { FAQAccordion, SchemaScript, buildArticleSchema, buildFAQSchema, combine
 import { ArticleByline } from '@carloOS/ui'
 
 const SOURCES = [
-  { label: "Hypostomus plecostomus — Seriously Fish species profile", url: "https://www.seriouslyfish.com/species/hypostomus-plecostomus/", publisher: "Seriously Fish" },
-  { label: "Hypostomus plecostomus — FishBase species record", url: "https://www.fishbase.se/summary/Hypostomus-plecostomus.html", publisher: "FishBase" },
+    { label: "Hypostomus plecostomus — FishBase species record", url: "https://www.fishbase.se/summary/Hypostomus-plecostomus.html", publisher: "FishBase" },
   { label: "Armbruster, J.W. Phylogenetic relationships of the suckermouth armored catfishes (Loricariidae). Zoological Journal of the Linnean Society, 2004.", publisher: "Zoological Journal of the Linnean Society" },
   { label: "Reis, R.E. et al. Checklist of the Freshwater Fishes of South and Central America. EDIPUCRS, 2003.", publisher: "EDIPUCRS" },
 ]
