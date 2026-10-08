@@ -20,17 +20,7 @@ const SOURCES = [
     url: "https://www.epa.gov/sites/default/files/2015-09/documents/submerged_aquatic_vegetation.pdf",
     publisher: "U.S. Environmental Protection Agency",
   },
-  {
-    label: "Aquatic Plant Management: Use of Aquatic Herbicides and Control Methods",
-    url: "https://extension.umd.edu/resource/aquatic-plant-management",
-    publisher: "University of Maryland Extension",
-  },
-  {
-    label: "Algae in Freshwater Aquariums: Causes and Biological Control",
-    url: "https://edis.ifas.ufl.edu/publication/FA048",
-    publisher: "University of Florida IFAS Extension",
-  },
-]
+    ]
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Planted Aquarium Setup Guide', description: 'Substrate, lighting, CO2, and fertilization for planted freshwater aquariums.', url: 'https://fish.com/setup/planted-tank-setup', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-09-06T00:00:00Z' ,
   citation: SOURCES,
 })

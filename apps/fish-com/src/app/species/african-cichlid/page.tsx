@@ -18,7 +18,7 @@ import { crossSiteHref } from '@carloOS/config'
 
 
 const SOURCES = [
-  { label: "Haplochromine Cichlids of Lake Malawi — Seriously Fish", url: "https://www.seriouslyfish.com/taxonomy/cichlidae/", publisher: "Seriously Fish" },
+  { label: "Cichlidae — FishBase family record", url: "https://www.fishbase.se/summary/FamilySummary.php?ID=349", publisher: "FishBase" },
   { label: "Lake Malawi Cichlids — FishBase taxonomy", url: "https://www.fishbase.se/identification/SpeciesList.php?family=Cichlidae", publisher: "FishBase" },
   { label: "Konings, A. Malawi Cichlids in Their Natural Habitat, 5th ed. Cichlid Press, 2016.", publisher: "Cichlid Press" },
   { label: "Stauffer, J.R. Jr. et al. The Cichlids of the Lake Malawi National Park. Smithsonian Institution Press, 1997.", publisher: "Smithsonian Institution Press" },

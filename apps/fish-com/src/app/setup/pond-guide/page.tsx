@@ -16,22 +16,7 @@ const SOURCES = [
     url: "https://srac.tamu.edu/serveFactSheet/360",
     publisher: "Southern Regional Aquaculture Center (SRAC)",
   },
-  {
-    label: "EPDM Liner Safety and Pond Construction Best Practices",
-    url: "https://extension.psu.edu/ponds-and-water-gardens",
-    publisher: "Penn State Extension",
-  },
-  {
-    label: "Aquatic Plant Management in Ponds",
-    url: "https://extension.tennessee.edu/publications/Documents/SP341-I.pdf",
-    publisher: "University of Tennessee Extension",
-  },
-  {
-    label: "Predation on Pond Fish: Herons and Wildlife Management",
-    url: "https://www.extension.purdue.edu/extmedia/fnr/fnr-faq-11.pdf",
-    publisher: "Purdue University Extension",
-  },
-]
+      ]
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Backyard Pond Setup Guide', description: 'Size, liner, filtration, and setup for backyard koi and goldfish ponds.', url: 'https://fish.com/setup/pond-guide', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-09-06T00:00:00Z' ,
   citation: SOURCES,
 })

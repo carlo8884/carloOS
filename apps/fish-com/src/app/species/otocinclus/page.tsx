@@ -5,7 +5,7 @@ import { FAQAccordion, SchemaScript, buildArticleSchema, buildFAQSchema, combine
 import { ArticleByline } from '@carloOS/ui'
 
 const SOURCES = [
-  { label: "Otocinclus vestitus — Seriously Fish species profile", url: "https://www.seriouslyfish.com/species/otocinclus-vestitus/", publisher: "Seriously Fish" },
+  { label: "Otocinclus vestitus — FishBase species record", url: "https://www.fishbase.se/summary/Otocinclus-vestitus.html", publisher: "FishBase" },
   { label: "Otocinclus spp. — FishBase genus page", url: "https://www.fishbase.se/identification/SpeciesList.php?genus=otocinclus", publisher: "FishBase" },
   { label: "Schaefer, S.A. Otocinclus (Loricariidae). Systematic Zoology, 1991.", publisher: "Systematic Zoology" },
   { label: "Reis, R.E. et al. Checklist of the Freshwater Fishes of South and Central America. EDIPUCRS, 2003.", publisher: "EDIPUCRS" },

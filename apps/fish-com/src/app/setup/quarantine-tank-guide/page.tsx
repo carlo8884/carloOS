@@ -6,12 +6,7 @@ import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } fr
 import { ArticleByline, DropCap, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Quarantine Tank Guide — Setup, Duration | Fish.com', description: 'A quarantine tank prevents 80% of disease introductions to established aquariums. 4-6 week minimum, bare bottom, how to treat proactively.', path: '/setup/quarantine-tank-guide', type: 'article' })
 const SOURCES = [
-  {
-    label: "Ichthyophthirius multifiliis (Ich): Biology, Pathology, and Control",
-    url: "https://edis.ifas.ufl.edu/publication/FA026",
-    publisher: "University of Florida IFAS Extension",
-  },
-  {
+    {
     label: "Fish Disease Diagnosis and Treatment — Quarantine Procedures",
     url: "https://srac.tamu.edu/serveFactSheet/473",
     publisher: "Southern Regional Aquaculture Center (SRAC)",
@@ -26,12 +21,7 @@ const SOURCES = [
     url: "https://www.sciencedirect.com/science/article/pii/S0044848617303769",
     publisher: "Aquaculture (peer-reviewed)",
   },
-  {
-    label: "Biosecurity Practices for Aquarium Fish: Quarantine and Disease Prevention",
-    url: "https://edis.ifas.ufl.edu/publication/FA032",
-    publisher: "University of Florida IFAS Extension",
-  },
-]
+  ]
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Quarantine Tank Guide', description: 'Setup, minimum duration, and prophylactic treatment protocol for quarantining new fish.', url: 'https://fish.com/setup/quarantine-tank-guide', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-09-06T00:00:00Z' ,
   citation: SOURCES,
 })

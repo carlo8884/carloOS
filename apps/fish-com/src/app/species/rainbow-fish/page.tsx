@@ -5,7 +5,7 @@ import { buildArticleSchema, FAQAccordion, SchemaScript, buildFAQSchema, combine
 import { ArticleByline } from '@carloOS/ui'
 
 const SOURCES = [
-  { label: "Melanotaenia spp. — Seriously Fish species profiles", url: "https://www.seriouslyfish.com/taxonomy/melanotaenia/", publisher: "Seriously Fish" },
+  { label: "Melanotaenia boesemani — FishBase species record", url: "https://www.fishbase.se/summary/Melanotaenia-boesemani.html", publisher: "FishBase" },
   { label: "Melanotaenia lacustris — FishBase species record", url: "https://www.fishbase.se/summary/Melanotaenia-lacustris.html", publisher: "FishBase" },
   { label: "Allen, G.R. & Cross, N.J. Rainbowfishes of Australia and Papua New Guinea. TFH Publications, 1982.", publisher: "TFH Publications" },
   { label: "Boseto, D. & Morrison, C. Freshwater Fishes of the Pacific Islands. Secretariat of the Pacific Regional Environment Programme, 2011.", publisher: "SPREP" },

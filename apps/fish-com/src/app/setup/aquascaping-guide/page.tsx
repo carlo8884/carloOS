@@ -16,7 +16,7 @@ const SOURCES = [
   { label: "Kasselmann, C. Aquarium Plants. Krieger Publishing, 2003.", publisher: "Krieger Publishing" },
   { label: "Walstad, D.L. Ecology of the Planted Aquarium, 3rd ed. Echinodorus Publishing, 2013.", publisher: "Echinodorus Publishing" },
   { label: "Amano, T. Nature Aquarium World, Book 1. TFH Publications, 1994.", publisher: "TFH Publications" },
-  { label: "Aquatic Plants for the Aquarium — UF/IFAS Extension, FA-16", url: "https://edis.ifas.ufl.edu/publication/FA016", publisher: "UF/IFAS Extension" },
+  { label: "Francis-Floyd, R. et al. Ammonia in Aquatic Systems — UF/IFAS FA031 (current home of FA-16).", url: "https://ask.ifas.ufl.edu/publication/FA031", publisher: "UF/IFAS Extension" },
 ]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Aquascaping Guide — Layout, Hardscape & Composition | Fish.com', description: "Aquascaping fundamentals: the rule of thirds, golden ratio, iwagumi and nature-style layouts, hardscape selection, and foreground-to-background planting.", path: '/setup/aquascaping-guide', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Aquascaping Guide', description: 'Composition principles, layout styles, hardscape, and planting structure for aquascaping.', url: 'https://fish.com/setup/aquascaping-guide', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-09-05T00:00:00Z' ,
