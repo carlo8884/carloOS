@@ -34,13 +34,13 @@ const PICKS = [
 ]
 
 const productSchema0 = buildProductSchema({ name: 'Nutramax Dasuquin with MSM', description: 'Glucosamine, chondroitin, ASU and MSM joint supplement for dogs.', url: 'https://dog.com/go/amazon/B0041OOPK2?s=reviews-best-joint-supplements', imageUrl: '' })
-const productSchema1 = buildProductSchema({ name: 'Nordic Naturals Omega-3 Pet', description: 'Marine EPA and DHA omega-3 supplement for dogs.', url: 'https://dog.com/go/amazon-brand/nordic+naturals+omega+pet?s=reviews-best-joint-supplements', imageUrl: '' })
+const productSchema1 = buildProductSchema({ name: 'Nordic Naturals Omega-3 Pet', description: 'Marine EPA and DHA omega-3 supplement for dogs.', url: 'https://dog.com/go/amazon/B007ZTL3ZK?s=reviews-best-joint-supplements', imageUrl: '' })
 const productSchema2 = buildProductSchema({ name: 'Cosequin DS Maximum Strength', description: 'NASC-certified glucosamine and chondroitin supplement for dogs.', url: 'https://dog.com/go/amazon-brand/cosequin+ds+maximum+strength?s=reviews-best-joint-supplements', imageUrl: '' })
 const allSchemas = combineSchemas(schema, productSchema0, productSchema1, productSchema2)
 
 const itemList = buildItemListSchema({
   name: "Best Joint Supplements for Dogs 2026",
-  items: PICKS.map((pick) => ({ name: pick.name, url: ({ 'Dasuquin with MSM': 'https://dog.com/go/amazon/B0041OOPK2?s=reviews-best-joint-supplements', 'Nordic Naturals Omega-3': 'https://dog.com/go/amazon-brand/nordic+naturals+omega+pet?s=reviews-best-joint-supplements', 'Cosequin DS': 'https://dog.com/go/amazon-brand/cosequin+ds+maximum+strength?s=reviews-best-joint-supplements' }[pick.name] ?? `https://dog.com/reviews/best-joint-supplements${pick.href}`) })),
+  items: PICKS.map((pick) => ({ name: pick.name, url: ({ 'Dasuquin with MSM': 'https://dog.com/go/amazon/B0041OOPK2?s=reviews-best-joint-supplements', 'Nordic Naturals Omega-3': 'https://dog.com/go/amazon/B007ZTL3ZK?s=reviews-best-joint-supplements', 'Cosequin DS': 'https://dog.com/go/amazon-brand/cosequin+ds+maximum+strength?s=reviews-best-joint-supplements' }[pick.name] ?? `https://dog.com/reviews/best-joint-supplements${pick.href}`) })),
 })
 export default function BestJointSupplementsPage() {
   return (
@@ -97,7 +97,7 @@ export default function BestJointSupplementsPage() {
               </p>
             </div>
 
-            <HopDisclosure siteId="dog-com" href={["/go/amazon/B0041OOPK2?s=reviews-best-joint-supplements", "/go/amazon-brand/nordic+naturals+omega+pet?s=reviews-best-joint-supplements", "/go/amazon-brand/cosequin+ds+maximum+strength?s=reviews-best-joint-supplements"]} />
+            <HopDisclosure siteId="dog-com" href={["/go/amazon/B0041OOPK2?s=reviews-best-joint-supplements", "/go/amazon/B007ZTL3ZK?s=reviews-best-joint-supplements", "/go/amazon-brand/cosequin+ds+maximum+strength?s=reviews-best-joint-supplements"]} />
             <ReviewCard
               id="dasuquin"
               badge="Best Evidence"
@@ -143,7 +143,7 @@ export default function BestJointSupplementsPage() {
               price="$25–45"
               priceNote="Calculate dose by EPA+DHA content dated 2026-10-05."
               ctaText="Shop Nordic Naturals omega pet on Amazon →"
-              ctaHref="/go/amazon-brand/nordic+naturals+omega+pet?s=reviews-best-joint-supplements"
+              ctaHref="/go/amazon/B007ZTL3ZK?s=reviews-best-joint-supplements"
               ctaAffiliateProgram="amazon-brand"
               ctaAffiliateProduct="nordic+naturals+omega+pet"
             />
@@ -212,7 +212,7 @@ export default function BestJointSupplementsPage() {
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">An omega-3 for inflammation</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#fish-oil" className="text-brand-primary">Nordic Naturals Omega-3 Pet</a><TableShopLink href={"/go/amazon-brand/nordic+naturals+omega+pet?s=reviews-best-joint-supplements"} product={"Nordic Naturals Omega-3 Pet"} /></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#fish-oil" className="text-brand-primary">Nordic Naturals Omega-3 Pet</a><TableShopLink href={"/go/amazon/B007ZTL3ZK?s=reviews-best-joint-supplements"} product={"Nordic Naturals Omega-3 Pet"} /></td>
                       <td className="p-3 text-brand-text-mid">Best Anti-Inflammatory. $25–45</td>
                       <td className="p-3 text-brand-text-mid">The dog refuses fish flavor, or you have not worked out the dose. The card says label suggestions are often too low</td>
                     </tr>

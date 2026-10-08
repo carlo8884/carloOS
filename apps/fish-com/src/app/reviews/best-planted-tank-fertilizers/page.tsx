@@ -21,7 +21,7 @@ const PICKS = [
 // PICKS. No aggregateRating, no fabricated specs (QC §1.4).
 const itemList = buildItemListSchema({
   name: 'Best Planted Tank Fertilizers 2026',
-  items: PICKS.map((p) => ({ name: p.name, url: ({ 'Easy Green (Aquarium Co-Op)': 'https://fish.com/go/amazon-brand/aquarium+co-op+easy+green+fertilizer?s=reviews-best-planted-tank-fertilizers', 'Seachem Flourish': 'https://fish.com/go/amazon-brand/seachem+flourish+comprehensive?s=reviews-best-planted-tank-fertilizers', 'NilocG Thrive': 'https://fish.com/go/amazon-brand/nilocg+thrive+fertilizer?s=reviews-best-planted-tank-fertilizers' }[p.name] ?? `https://fish.com/reviews/best-planted-tank-fertilizers${p.href}`) })),
+  items: PICKS.map((p) => ({ name: p.name, url: ({ 'Easy Green (Aquarium Co-Op)': 'https://fish.com/go/amazon-brand/aquarium+co-op+easy+green+fertilizer?s=reviews-best-planted-tank-fertilizers', 'Seachem Flourish': 'https://fish.com/go/amazon-brand/seachem+flourish+comprehensive?s=reviews-best-planted-tank-fertilizers', 'NilocG Thrive': 'https://fish.com/go/amazon/B01M20WCI5?s=reviews-best-planted-tank-fertilizers' }[p.name] ?? `https://fish.com/reviews/best-planted-tank-fertilizers${p.href}`) })),
 })
 
 export default function BestPlantedFertilizersPage() {
@@ -81,7 +81,7 @@ export default function BestPlantedFertilizersPage() {
               resourceHref="/go/amazon-brand/aquarium+co-op+easy+green+fertilizer?s=reviews-best-planted-tank-fertilizers"
               resourceLabel="Browse Aquarium Co-Op Easy Green planted-tank fertilizer on Amazon →"
             />
-            <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/aquarium+co-op+easy+green+fertilizer?s=reviews-best-planted-tank-fertilizers", "/go/amazon-brand/seachem+flourish+comprehensive?s=reviews-best-planted-tank-fertilizers", "/go/amazon-brand/nilocg+thrive+fertilizer?s=reviews-best-planted-tank-fertilizers"]} />
+            <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/aquarium+co-op+easy+green+fertilizer?s=reviews-best-planted-tank-fertilizers", "/go/amazon-brand/seachem+flourish+comprehensive?s=reviews-best-planted-tank-fertilizers", "/go/amazon/B01M20WCI5?s=reviews-best-planted-tank-fertilizers"]} />
             <ReviewCard id="easy-green" badge="Best Overall" name="Easy Green All-in-One Fertilizer" subtitle="Aquarium Co-Op · Simple weekly dosing · Covers most planted tanks" winner
               description={<p>Easy Green from Aquarium Co-Op is an all-in-one fertilizer for planted tanks. One pump per 10 gallons weekly covers most planted tanks from low-tech to medium-tech. Contains NPK macros plus a comprehensive micronutrient blend. The dosing simplicity eliminates the multiple-bottle approach of traditional fertilizer regimens (Seachem Flourish + Flourish Excel + Potassium separately). If you want a one-product solution that works for Java fern, Anubias, crypts, stem plants, and most common aquarium plants: Easy Green. Available exclusively from Aquarium Co-Op online.</p>}
               specs={[{ label: 'Type', value: 'All-in-one liquid', highlight: 'good' }, { label: 'Dosing', value: '1 pump / 10 gallons / week' }, { label: 'Covers', value: 'Macros + micros', highlight: 'good' }, { label: 'Best for', value: 'Low to medium-tech planted tanks' }]}
@@ -114,7 +114,7 @@ export default function BestPlantedFertilizersPage() {
               price="$12–22"
               priceNote="dated 2026-10-05."
               ctaText="Shop NilocG Thrive fertilizer on Amazon →"
-              ctaHref="/go/amazon-brand/nilocg+thrive+fertilizer?s=reviews-best-planted-tank-fertilizers"
+              ctaHref="/go/amazon/B01M20WCI5?s=reviews-best-planted-tank-fertilizers"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="nilocg-thrive"
             />
@@ -148,7 +148,7 @@ export default function BestPlantedFertilizersPage() {
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">A CO2-injected high-tech tank with fast plants</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#nilocg" className="text-brand-primary">NilocG Thrive</a><TableShopLink href={"/go/amazon-brand/nilocg+thrive+fertilizer?s=reviews-best-planted-tank-fertilizers"} product={"NilocG Thrive"} /></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#nilocg" className="text-brand-primary">NilocG Thrive</a><TableShopLink href={"/go/amazon/B01M20WCI5?s=reviews-best-planted-tank-fertilizers"} product={"NilocG Thrive"} /></td>
                       <td className="p-3 text-brand-text-mid">Best for High-Tech. Higher NPK than Easy Green or Flourish. $12–22</td>
                       <td className="p-3 text-brand-text-mid">A low-tech tank. The card says the higher dose is an algae risk if you overfeed nutrients</td>
                     </tr>

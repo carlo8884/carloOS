@@ -45,7 +45,7 @@ const PICKS = [
 // PICKS. No aggregateRating, no fabricated specs (QC §1.4).
 const itemList = buildItemListSchema({
   name: 'Best Aquarium Heaters 2026',
-  items: PICKS.map((p) => ({ name: p.name, url: ({ "Eheim Jager": "https://fish.com/go/amazon/B003I5UC0W?s=reviews-best-aquarium-heaters", "Cobalt Neo-Therm": "https://fish.com/go/amazon/B003I5UC0W?s=reviews-best-aquarium-heaters", "Hydor Inline": "https://fish.com/go/amazon-brand/hydor+inline+heater?s=reviews-best-aquarium-heaters", "Aqueon Pro": "https://fish.com/go/amazon-brand/aqueon+pro+heater?s=reviews-best-aquarium-heaters" }[p.name] ?? `https://fish.com/reviews/best-aquarium-heaters${p.href}`) })),
+  items: PICKS.map((p) => ({ name: p.name, url: ({ "Eheim Jager": "https://fish.com/go/amazon/B003I5UC0W?s=reviews-best-aquarium-heaters", "Cobalt Neo-Therm": "https://fish.com/go/amazon/B003I5UC0W?s=reviews-best-aquarium-heaters", "Hydor Inline": "https://fish.com/go/amazon-brand/hydor+inline+heater?s=reviews-best-aquarium-heaters", "Aqueon Pro": "https://fish.com/go/amazon/B07L1M7454?s=reviews-best-aquarium-heaters" }[p.name] ?? `https://fish.com/reviews/best-aquarium-heaters${p.href}`) })),
 })
 
 // FAQ content derived from this page's comparison criteria and sizing guidance only.
@@ -128,7 +128,7 @@ export default function BestHeatersPage() {
               resourceLabel="Browse Eheim Jager aquarium heaters on Amazon →"
             />
 
-            <HopDisclosure siteId="fish-com" href={["/go/amazon/B003I5UC0W?s=reviews-best-aquarium-heaters", "/go/amazon-brand/hydor+inline+heater?s=reviews-best-aquarium-heaters", "/go/amazon-brand/aqueon+pro+heater?s=reviews-best-aquarium-heaters"]} />
+            <HopDisclosure siteId="fish-com" href={["/go/amazon/B003I5UC0W?s=reviews-best-aquarium-heaters", "/go/amazon-brand/hydor+inline+heater?s=reviews-best-aquarium-heaters", "/go/amazon/B07L1M7454?s=reviews-best-aquarium-heaters"]} />
             <ReviewCard
               id="eheim"
               badge="Best Overall"
@@ -219,7 +219,7 @@ export default function BestHeatersPage() {
               price="$18–30"
               priceNote="dated 2026-10-04."
               ctaText="Shop Aqueon Pro heater on Amazon →"
-              ctaHref="/go/amazon-brand/aqueon+pro+heater?s=reviews-best-aquarium-heaters"
+              ctaHref="/go/amazon/B07L1M7454?s=reviews-best-aquarium-heaters"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="aqueon-pro-heater"
             />
@@ -258,7 +258,7 @@ export default function BestHeatersPage() {
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">A robust community tank and a low price</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#aqueon" className="text-brand-primary">Aqueon Pro</a><TableShopLink href={"/go/amazon-brand/aqueon+pro+heater?s=reviews-best-aquarium-heaters"} product={"Aqueon Pro"} /></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#aqueon" className="text-brand-primary">Aqueon Pro</a><TableShopLink href={"/go/amazon/B07L1M7454?s=reviews-best-aquarium-heaters"} product={"Aqueon Pro"} /></td>
                       <td className="p-3 text-brand-text-mid">Best budget. Shatterproof. ±1–1.5°F. $18–30</td>
                       <td className="p-3 text-brand-text-mid">Too loose for discus, cardinal tetras, and other tight-range species</td>
                     </tr>

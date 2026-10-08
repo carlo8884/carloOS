@@ -31,14 +31,14 @@ const PICKS = [
 ]
 
 const productSchema0 = buildProductSchema({ name: 'AquaClear 70 Power Filter', description: 'Hang-on-back aquarium filter with refillable media basket for up to 70 gallons.', url: 'https://fish.com/go/amazon/B0DCGB5T4Y?s=reviews-best-aquarium-filters', imageUrl: '' })
-const productSchema1 = buildProductSchema({ name: 'Fluval 307 Canister Filter', description: 'Near-silent canister filter for 40-70 gallon aquariums.', url: 'https://fish.com/go/amazon-brand/fluval+307+canister+filter?s=reviews-best-aquarium-filters', imageUrl: '' })
+const productSchema1 = buildProductSchema({ name: 'Fluval 307 Canister Filter', description: 'Near-silent canister filter for 40-70 gallon aquariums.', url: 'https://fish.com/go/amazon/B07JH4JHTC?s=reviews-best-aquarium-filters', imageUrl: '' })
 const allSchemas = combineSchemas(schema, productSchema0, productSchema1)
 
 // GEO: ItemList of the ranked picks. Names + URLs come only from this page's
 // PICKS. No aggregateRating, no fabricated specs (QC §1.4).
 const itemList = buildItemListSchema({
   name: 'Best Aquarium Filters 2026',
-  items: PICKS.map((p) => ({ name: p.name, url: ({ "Aquaclear 70": "https://fish.com/go/amazon/B0DCGB5T4Y?s=reviews-best-aquarium-filters", "Fluval 307": "https://fish.com/go/amazon-brand/fluval+307+canister+filter?s=reviews-best-aquarium-filters", "Hikari Bacto-Surge": "https://fish.com/go/amazon-brand/hikari+bacto+surge+sponge+filter?s=reviews-best-aquarium-filters", "Aqueon QuietFlow 30": "https://fish.com/go/amazon-brand/aqueon+quietflow+30?s=reviews-best-aquarium-filters" }[p.name] ?? `https://fish.com/reviews/best-aquarium-filters${p.href}`) })),
+  items: PICKS.map((p) => ({ name: p.name, url: ({ "Aquaclear 70": "https://fish.com/go/amazon/B0DCGB5T4Y?s=reviews-best-aquarium-filters", "Fluval 307": "https://fish.com/go/amazon/B07JH4JHTC?s=reviews-best-aquarium-filters", "Hikari Bacto-Surge": "https://fish.com/go/amazon-brand/hikari+bacto+surge+sponge+filter?s=reviews-best-aquarium-filters", "Aqueon QuietFlow 30": "https://fish.com/go/amazon/B000SP65OC?s=reviews-best-aquarium-filters" }[p.name] ?? `https://fish.com/reviews/best-aquarium-filters${p.href}`) })),
 })
 
 // FAQ content derived from this page's comparison criteria and type guide only.
@@ -121,7 +121,7 @@ export default function BestAquariumFiltersPage() {
               resourceLabel="Browse AquaClear 70 hang-on-back filters on Amazon →"
             />
 
-            <HopDisclosure siteId="fish-com" href={["/go/amazon/B0DCGB5T4Y?s=reviews-best-aquarium-filters", "/go/amazon-brand/fluval+307+canister+filter?s=reviews-best-aquarium-filters", "/go/amazon-brand/hikari+bacto+surge+sponge+filter?s=reviews-best-aquarium-filters", "/go/amazon-brand/aqueon+quietflow+30?s=reviews-best-aquarium-filters"]} />
+            <HopDisclosure siteId="fish-com" href={["/go/amazon/B0DCGB5T4Y?s=reviews-best-aquarium-filters", "/go/amazon/B07JH4JHTC?s=reviews-best-aquarium-filters", "/go/amazon-brand/hikari+bacto+surge+sponge+filter?s=reviews-best-aquarium-filters", "/go/amazon/B000SP65OC?s=reviews-best-aquarium-filters"]} />
             <ReviewCard
               id="aquaclear"
               badge="Best HOB Overall"
@@ -169,7 +169,7 @@ export default function BestAquariumFiltersPage() {
               price="$120–160"
               priceNote="dated 2026-10-04."
               ctaText="Shop Fluval 307 canister filter on Amazon →"
-              ctaHref="/go/amazon-brand/fluval+307+canister+filter?s=reviews-best-aquarium-filters"
+              ctaHref="/go/amazon/B07JH4JHTC?s=reviews-best-aquarium-filters"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="fluval-307"
             />
@@ -216,7 +216,7 @@ export default function BestAquariumFiltersPage() {
               price="$25–40"
               priceNote="dated 2026-10-04."
               ctaText="Shop Aqueon QuietFlow on Amazon →"
-              ctaHref="/go/amazon-brand/aqueon+quietflow+30?s=reviews-best-aquarium-filters"
+              ctaHref="/go/amazon/B000SP65OC?s=reviews-best-aquarium-filters"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="aqueon-quietflow-30"
             />
@@ -243,7 +243,7 @@ export default function BestAquariumFiltersPage() {
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">40–70 gallons with a high bioload, and cabinet space</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#fluval" className="text-brand-primary">Fluval 307</a><TableShopLink href={"/go/amazon-brand/fluval+307+canister+filter?s=reviews-best-aquarium-filters"} product={"Fluval 307"} /></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#fluval" className="text-brand-primary">Fluval 307</a><TableShopLink href={"/go/amazon/B07JH4JHTC?s=reviews-best-aquarium-filters"} product={"Fluval 307"} /></td>
                       <td className="p-3 text-brand-text-mid">Best canister. Pump output 303 US GPH. Circulation 206 US GPH. Near-silent. $120–160</td>
                       <td className="p-3 text-brand-text-mid">Cleaning day is more involved than a hang-on-back</td>
                     </tr>
@@ -255,7 +255,7 @@ export default function BestAquariumFiltersPage() {
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">See the manufacturer's current page for the gallon rating, and you want the cheapest widely stocked HOB</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#aqueon" className="text-brand-primary">Aqueon QuietFlow 30</a><TableShopLink href={"/go/amazon-brand/aqueon+quietflow+30?s=reviews-best-aquarium-filters"} product={"Aqueon QuietFlow 30"} /></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#aqueon" className="text-brand-primary">Aqueon QuietFlow 30</a><TableShopLink href={"/go/amazon/B000SP65OC?s=reviews-best-aquarium-filters"} product={"Aqueon QuietFlow 30"} /></td>
                       <td className="p-3 text-brand-text-mid">Best budget HOB. $25–40. Proprietary cartridge</td>
                       <td className="p-3 text-brand-text-mid">Less biological capacity than the AquaClear. Cartridge lock-in</td>
                     </tr>

@@ -6,7 +6,7 @@ import { buildArticleSchema, buildItemListSchema, buildProductSchema, buildBread
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Best Canister Filters 2026 — Fluval, Eheim | Fish.com', description: 'Best canister filters for aquariums 40-150 gallons. Fluval 307, Eheim Classic, and Penn Plax Cascade ranked for flow rate, media capacity, and noise.', path: '/reviews/best-canister-filters', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Best Canister Filters 2026', description: 'Fluval, Eheim, and Penn Plax canister filters ranked for mid-to-large aquariums.', url: 'https://fish.com/reviews/best-canister-filters', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-07T00:00:00Z' })
 const fluvalSchema = buildProductSchema({ name: 'Fluval 307 Performance Canister Filter', description: 'Near-silent canister filter for 40-70 gallon aquariums with AquaStop valve.', url: 'https://fish.com/go/amazon/B07JH4JHTC?s=reviews-best-canister-filters', imageUrl: '' })
-const eheimSchema = buildProductSchema({ name: 'Eheim Classic 350 Canister Filter', description: 'German-engineered classic canister filter — bulletproof reliability for 40-92 gallons.', url: 'https://fish.com/go/amazon-brand/eheim+classic+350+2215?s=reviews-best-canister-filters', imageUrl: '' })
+const eheimSchema = buildProductSchema({ name: 'Eheim Classic 350 Canister Filter', description: 'German-engineered classic canister filter — bulletproof reliability for 40-92 gallons.', url: 'https://fish.com/go/amazon/B0002AQXV8?s=reviews-best-canister-filters', imageUrl: '' })
 const allSchemas = combineSchemas(schema, fluvalSchema, eheimSchema)
 const PICKS = [
   { label: 'Best Overall', name: 'Fluval 307', subtitle: 'Near-silent · AquaStop · 40-70 gal', href: '#fluval', pickHop: '/go/amazon/B07JH4JHTC?s=reviews-best-canister-filters' },
@@ -17,7 +17,7 @@ const PICKS = [
 // PICKS. No aggregateRating, no fabricated specs (QC §1.4).
 const itemList = buildItemListSchema({
   name: 'Best Canister Filters 2026',
-  items: PICKS.map((p) => ({ name: p.name, url: ({ "Fluval 307": "https://fish.com/go/amazon/B07JH4JHTC?s=reviews-best-canister-filters", "Eheim Classic 350": "https://fish.com/go/amazon-brand/eheim+classic+350+2215?s=reviews-best-canister-filters" }[p.name] ?? `https://fish.com/reviews/best-canister-filters${p.href}`) })),
+  items: PICKS.map((p) => ({ name: p.name, url: ({ "Fluval 307": "https://fish.com/go/amazon/B07JH4JHTC?s=reviews-best-canister-filters", "Eheim Classic 350": "https://fish.com/go/amazon/B0002AQXV8?s=reviews-best-canister-filters" }[p.name] ?? `https://fish.com/reviews/best-canister-filters${p.href}`) })),
 })
 export default function BestCanisterFiltersPage() {
   return (
@@ -73,7 +73,7 @@ export default function BestCanisterFiltersPage() {
               resourceHref="/go/amazon/B07JH4JHTC?s=reviews-best-canister-filters"
               resourceLabel="Browse Fluval 307 canister filters on Amazon →"
             />
-            <HopDisclosure siteId="fish-com" href={["/go/amazon/B07JH4JHTC?s=reviews-best-canister-filters", "/go/amazon-brand/eheim+classic+350+2215?s=reviews-best-canister-filters"]} />
+            <HopDisclosure siteId="fish-com" href={["/go/amazon/B07JH4JHTC?s=reviews-best-canister-filters", "/go/amazon/B0002AQXV8?s=reviews-best-canister-filters"]} />
             <ReviewCard id="fluval" badge="Best Overall" name="Fluval 307 Performance Canister Filter" subtitle="Near-silent · AquaStop valve · Multi-stage media baskets · 40-70 gal" winner
               description={<p>The Fluval 307 is the current benchmark for canister filters in the 40–70 gallon range — near-silent operation, excellent media capacity with 4 separated baskets (mechanical, chemical, biological staged properly), and the AquaStop valve that allows media changes without disconnecting hoses. The sound dampening is genuinely impressive compared to older canister filters — you have to get very close to hear it running. Setup is straightforward for a canister. The current Fluval page prints pump output of 303 US GPH and filter circulation of 206 US GPH. Lid design seals reliably. 5-year warranty.</p>}
               specs={[{ label: 'Tank size', value: '40–70 gallons' }, { label: 'Flow rate', value: 'Pump output 303 US GPH. Circulation 206 US GPH.', highlight: 'good' }, { label: 'Noise', value: 'Near-silent', highlight: 'good' }, { label: 'AquaStop', value: 'Yes — media change without disconnect', highlight: 'good' }, { label: 'Warranty', value: '5 years' }]}
@@ -94,7 +94,7 @@ export default function BestCanisterFiltersPage() {
               price="$100–130"
               priceNote="dated 2026-10-05."
               ctaText="Shop Eheim Classic 2215 on Amazon →"
-              ctaHref="/go/amazon-brand/eheim+classic+350+2215?s=reviews-best-canister-filters"
+              ctaHref="/go/amazon/B0002AQXV8?s=reviews-best-canister-filters"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="eheim-classic-2215"
             />
@@ -122,7 +122,7 @@ export default function BestCanisterFiltersPage() {
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">A canister meant to run for years</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#eheim" className="text-brand-primary">Eheim Classic 350</a><TableShopLink href={"/go/amazon-brand/eheim+classic+350+2215?s=reviews-best-canister-filters"} product={"Eheim Classic 350"} /></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#eheim" className="text-brand-primary">Eheim Classic 350</a><TableShopLink href={"/go/amazon/B0002AQXV8?s=reviews-best-canister-filters"} product={"Eheim Classic 350"} /></td>
                       <td className="p-3 text-brand-text-mid">Most Reliable. $100–130</td>
                       <td className="p-3 text-brand-text-mid">You want AquaStop or quieter media baskets. The card says this older design has neither, and it is slightly louder than the Fluval 307</td>
                     </tr>

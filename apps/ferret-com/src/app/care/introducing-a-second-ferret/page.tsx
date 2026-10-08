@@ -220,12 +220,16 @@ export default function IntroducingSecondFerretPage() {
             Critter Nation cages, and puppy playpens already live on
             other pages. This page does not claim hands-on testing. </p>
 
-          <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/extra+small+animal+travel+kennel?s=care-introducing-a-second-ferret", "/go/amazon-brand/scent+swap+fleece+sleep+pouch?s=care-introducing-a-second-ferret", "/go/amazon-brand/portable+small+animal+playpen?s=care-introducing-a-second-ferret"]} />
+          <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/extra+small+animal+travel+kennel?s=care-introducing-a-second-ferret", "/go/amazon-brand/portable+small+animal+playpen?s=care-introducing-a-second-ferret"]} />
 
           {/* Money path — live amazon-brand search hops
               (extra small-animal travel kennel /
-              scent-swap fleece sleep pouch /
               portable small-animal playpen).
+              The scent-swap fleece sleep pouch
+              stays in the copy. That exact Amazon
+              search is empty, and tighter queries
+              open guinea-pig snuggle sacks, so
+              this page has no pouch button.
               ShopCtas hides empty Chewy; never href="#"
               or PLACEHOLDER. Category searches only —
               unused vs #1067 small-animal-rabies-
@@ -259,10 +263,6 @@ export default function IntroducingSecondFerretPage() {
               <ShopCtas
                 amazonHref="/go/amazon-brand/extra+small+animal+travel+kennel?s=care-introducing-a-second-ferret"
                 amazonLabel="Browse extra small-animal travel kennels on Amazon →"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/scent+swap+fleece+sleep+pouch?s=care-introducing-a-second-ferret"
-                amazonLabel="Browse scent-swap fleece sleep pouches on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/portable+small+animal+playpen?s=care-introducing-a-second-ferret"

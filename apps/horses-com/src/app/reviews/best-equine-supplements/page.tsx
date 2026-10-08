@@ -28,8 +28,8 @@ const articleSchema = buildArticleSchema({
 const cosequinSchema = buildProductSchema({ name: 'Cosequin ASU Plus', description: 'Avocado-soybean unsaponifiables plus glucosamine and chondroitin sulfate for equine joint support.', url: 'https://horses.com/go/smartpak/cosequin-asu-plus?s=reviews-best-equine-supplements', imageUrl: '' })
 const platinumSchema = buildProductSchema({ name: 'Platinum Performance Equine', description: 'Comprehensive wellness supplement with omega-3, antioxidants, and amino acids.', url: 'https://horses.com/go/amazon-brand/platinum+performance+equine+wellness?s=reviews-best-equine-supplements', imageUrl: '' })
 const smartGutSchema = buildProductSchema({ name: 'SmartPak SmartGut Ultra', description: 'Pelleted gastric support supplement with calcium, magnesium, glutamine, and sea buckthorn.', url: 'https://horses.com/go/smartpak/smartgut-ultra?s=reviews-best-equine-supplements', imageUrl: '' })
-const kerEoSchema = buildProductSchema({ name: 'KER EO-3 Marine Omega-3', description: 'Marine-source DHA/EPA omega-3 supplement from Kentucky Equine Research.', url: 'https://horses.com/go/amazon-brand/kentucky+equine+research+EO-3+omega+3?s=reviews-best-equine-supplements', imageUrl: '' })
-const equithriveSchema = buildProductSchema({ name: 'Equithrive Original Pellets', description: 'Resveratrol-based anti-inflammatory and joint supplement.', url: 'https://horses.com/go/amazon-brand/equithrive+original+pellets+resveratrol?s=reviews-best-equine-supplements', imageUrl: '' })
+const kerEoSchema = buildProductSchema({ name: 'KER EO-3 Marine Omega-3', description: 'Marine-source DHA/EPA omega-3 supplement from Kentucky Equine Research.', url: 'https://horses.com/go/amazon/B0037PL6QW?s=reviews-best-equine-supplements', imageUrl: '' })
+const equithriveSchema = buildProductSchema({ name: 'Equithrive Original Pellets', description: 'Resveratrol-based anti-inflammatory and joint supplement.', url: 'https://horses.com/go/amazon/B07DM2314W?s=reviews-best-equine-supplements', imageUrl: '' })
 const standleeSchema = buildProductSchema({ name: 'Standlee Premium Forage', description: 'Premium baled and pelleted alfalfa, timothy, and orchard grass forage products.', url: 'https://horses.com/go/amazon-brand/standlee+premium+forage+pellets?s=reviews-best-equine-supplements', imageUrl: '' })
 const allSchemas = combineSchemas(articleSchema, cosequinSchema, platinumSchema, smartGutSchema, kerEoSchema, equithriveSchema, standleeSchema)
 
@@ -91,7 +91,7 @@ const FAQS = [
 
 const itemList = buildItemListSchema({
   name: "Best Equine Supplements 2026",
-  items: PICKS.map((pick) => ({ name: pick.name, url: ({ "Cosequin ASU Plus": "https://horses.com/go/smartpak/cosequin-asu-plus?s=reviews-best-equine-supplements", "Platinum Performance Equine": "https://horses.com/go/amazon-brand/platinum+performance+equine+wellness?s=reviews-best-equine-supplements", "SmartPak SmartGut Ultra": "https://horses.com/go/smartpak/smartgut-ultra?s=reviews-best-equine-supplements", "KER EO-3": "https://horses.com/go/amazon-brand/kentucky+equine+research+EO-3+omega+3?s=reviews-best-equine-supplements" }[pick.name] ?? `https://horses.com/reviews/best-equine-supplements${pick.href}`) })),
+  items: PICKS.map((pick) => ({ name: pick.name, url: ({ "Cosequin ASU Plus": "https://horses.com/go/smartpak/cosequin-asu-plus?s=reviews-best-equine-supplements", "Platinum Performance Equine": "https://horses.com/go/amazon-brand/platinum+performance+equine+wellness?s=reviews-best-equine-supplements", "SmartPak SmartGut Ultra": "https://horses.com/go/smartpak/smartgut-ultra?s=reviews-best-equine-supplements", "KER EO-3": "https://horses.com/go/amazon/B0037PL6QW?s=reviews-best-equine-supplements" }[pick.name] ?? `https://horses.com/reviews/best-equine-supplements${pick.href}`) })),
 })
 export default function BestEquineSupplementsPage() {
   return (
@@ -298,7 +298,7 @@ export default function BestEquineSupplementsPage() {
               price="$55–85/mo"
               priceNote="dated 2026-10-04."
               ctaText="Shop KER EO-3 on Amazon →"
-              ctaHref="/go/amazon-brand/kentucky+equine+research+EO-3+omega+3?s=reviews-best-equine-supplements"
+              ctaHref="/go/amazon/B0037PL6QW?s=reviews-best-equine-supplements"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="ker-eo-3"
             />
@@ -326,7 +326,7 @@ export default function BestEquineSupplementsPage() {
               price="$45–65/mo"
               priceNote="dated 2026-10-04."
               ctaText="Shop Equithrive resveratrol pellets on Amazon →"
-              ctaHref="/go/amazon-brand/equithrive+original+pellets+resveratrol?s=reviews-best-equine-supplements"
+              ctaHref="/go/amazon/B07DM2314W?s=reviews-best-equine-supplements"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="equithrive-original-pellets"
             />
@@ -398,13 +398,13 @@ export default function BestEquineSupplementsPage() {
                   </tr>
                   <tr className="border-b border-brand-border">
                     <td className="p-3 text-brand-text-mid">Marine DHA/EPA, not a plant-oil substitute</td>
-                    <td className="p-3 font-bold text-brand-dark"><a href="#ker-eo3" className="text-brand-primary">KER EO-3</a><TableShopLink href={"/go/amazon-brand/kentucky+equine+research+EO-3+omega+3?s=reviews-best-equine-supplements"} product={"KER EO-3"} /></td>
+                    <td className="p-3 font-bold text-brand-dark"><a href="#ker-eo3" className="text-brand-primary">KER EO-3</a><TableShopLink href={"/go/amazon/B0037PL6QW?s=reviews-best-equine-supplements"} product={"KER EO-3"} /></td>
                     <td className="p-3 text-brand-text-mid">Best marine omega-3. Card price $55–85/mo. The category row calls the marine DHA/EPA evidence strong</td>
                     <td className="p-3 text-brand-text-mid">A joint or gastric product. It is an oil, not those categories</td>
                   </tr>
                   <tr className="border-b border-brand-border">
                     <td className="p-3 text-brand-text-mid">A resveratrol pellet already reviewed on this page</td>
-                    <td className="p-3 font-bold text-brand-dark"><a href="#equithrive" className="text-brand-primary">Equithrive Original</a><TableShopLink href={"/go/amazon-brand/equithrive+original+pellets+resveratrol?s=reviews-best-equine-supplements"} product={"Equithrive Original"} /></td>
+                    <td className="p-3 font-bold text-brand-dark"><a href="#equithrive" className="text-brand-primary">Equithrive Original</a><TableShopLink href={"/go/amazon/B07DM2314W?s=reviews-best-equine-supplements"} product={"Equithrive Original"} /></td>
                     <td className="p-3 text-brand-text-mid">Best resveratrol. The card frames it as a complement to traditional joint ingredients, for mild inflammation or post-injection support</td>
                     <td className="p-3 text-brand-text-mid">A standalone replacement for the ASU pick. The card says the evidence base is smaller</td>
                   </tr>

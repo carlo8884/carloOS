@@ -49,8 +49,8 @@ const itemList = buildItemListSchema({
   name: 'Multi-Level Ferret Cages That Meet the Criteria',
   items: [
     { name: 'Ferret Nation / Critter Nation Double Unit', url: 'https://ferret.com/go/amazon/B0054U8UGW?s=reviews-best-ferret-cage' },
-    { name: 'Prevue Pet Products Feisty Ferret Cage', url: 'https://ferret.com/go/amazon-brand/prevue+feisty+ferret+cage?s=reviews-best-ferret-cage' },
-    { name: 'Kaytee Multi-Level Ferret Home', url: 'https://ferret.com/go/amazon-brand/kaytee+multi+level+ferret+home?s=reviews-best-ferret-cage' },
+    { name: 'Prevue Pet Products Feisty Ferret Cage', url: 'https://ferret.com/go/amazon/B000QFMYWQ?s=reviews-best-ferret-cage' },
+    { name: 'Kaytee Multi-Level Ferret Home', url: 'https://ferret.com/go/amazon/B008FONT2Y?s=reviews-best-ferret-cage' },
   ],
 })
 
@@ -65,14 +65,14 @@ const products = [
   buildProductSchema({
     name: 'Prevue Pet Products Feisty Ferret Cage',
     description: 'Ferret-appropriate bar spacing, multiple solid shelves and ramps, mid-tier price',
-    url: 'https://ferret.com/go/amazon-brand/prevue+feisty+ferret+cage?s=reviews-best-ferret-cage',
+    url: 'https://ferret.com/go/amazon/B000QFMYWQ?s=reviews-best-ferret-cage',
     reviewAuthorName: 'Ferret.com Editorial',
     reviewBody: 'A purpose-built ferret cage with appropriate wire spacing, several solid shelves and ramps, and a price below the modular systems. Floor space suits one to two ferrets comfortably; the wire shelf edges benefit from fleece or linoleum covering. A strong value pick where the larger modular units are out of budget or out of room.',
   }),
   buildProductSchema({
     name: 'Kaytee Multi-Level Ferret Home',
     description: 'Entry-level multi-level cage, widely stocked, suited to a single ferret with daily out-time',
-    url: 'https://ferret.com/go/amazon-brand/kaytee+multi+level+ferret+home?s=reviews-best-ferret-cage',
+    url: 'https://ferret.com/go/amazon/B008FONT2Y?s=reviews-best-ferret-cage',
     reviewAuthorName: 'Ferret.com Editorial',
     reviewBody: 'A widely stocked entry-level multi-level cage. Bar spacing is in range and it carries shelves and ramps, but the footprint suits a single ferret with generous daily out-of-cage time rather than a pair living in it full-time. The most likely appropriate cage to find at a chain store at short notice; verify the spacing on the specific model before buying.',
   }),
@@ -290,7 +290,7 @@ export default function BestFerretCagePage() {
             and shelter communities, not a hands-on durability test. Verify the bar spacing on the exact model you buy,
             and plan to cover wire shelves and ramps regardless of which you choose.
           </p>
-          <HopDisclosure siteId="ferret-com" href={["/go/amazon/B0054U8UGW?s=reviews-best-ferret-cage", "/go/amazon-brand/prevue+feisty+ferret+cage?s=reviews-best-ferret-cage", "/go/amazon-brand/kaytee+multi+level+ferret+home?s=reviews-best-ferret-cage"]} />
+          <HopDisclosure siteId="ferret-com" href={["/go/amazon/B0054U8UGW?s=reviews-best-ferret-cage", "/go/amazon/B000QFMYWQ?s=reviews-best-ferret-cage", "/go/amazon/B008FONT2Y?s=reviews-best-ferret-cage"]} />
 
           <ReviewCard
             id="ferret-nation"
@@ -335,7 +335,7 @@ export default function BestFerretCagePage() {
             cons={['Smaller than a double modular unit', 'Wire shelves need covering', 'Not expandable']}
             price="$$"
             ctaText="Find Prevue Feisty Ferret Cage on Amazon"
-            ctaHref="/go/amazon-brand/prevue+feisty+ferret+cage?s=reviews-best-ferret-cage"
+            ctaHref="/go/amazon/B000QFMYWQ?s=reviews-best-ferret-cage"
             ctaAffiliateProgram="amazon-brand"
             ctaAffiliateProduct="prevue-feisty-ferret-cage"
           />
@@ -358,7 +358,7 @@ export default function BestFerretCagePage() {
             cons={['Tighter footprint than the others', 'Confirm spacing per model', 'May be outgrown with a second ferret']}
             price="$"
             ctaText="Find Kaytee Multi-Level Ferret Home on Amazon"
-            ctaHref="/go/amazon-brand/kaytee+multi+level+ferret+home?s=reviews-best-ferret-cage"
+            ctaHref="/go/amazon/B008FONT2Y?s=reviews-best-ferret-cage"
             ctaAffiliateProgram="amazon-brand"
             ctaAffiliateProduct="kaytee-multi-level-ferret-home"
           />
@@ -386,13 +386,13 @@ export default function BestFerretCagePage() {
                 </tr>
                 <tr className="border-b border-brand-border">
                   <td className="p-3">One or two ferrets, and the double unit is too big or too expensive</td>
-                  <td className="p-3 font-bold"><a href="#prevue-feisty">Prevue Feisty Ferret</a><TableShopLink href={"/go/amazon-brand/prevue+feisty+ferret+cage?s=reviews-best-ferret-cage"} product={"Prevue Feisty Ferret"} /></td>
+                  <td className="p-3 font-bold"><a href="#prevue-feisty">Prevue Feisty Ferret</a><TableShopLink href={"/go/amazon/B000QFMYWQ?s=reviews-best-ferret-cage"} product={"Prevue Feisty Ferret"} /></td>
                   <td className="p-3">Best value. Ferret-appropriate spacing. Mid price tier $$</td>
                   <td className="p-3">Not expandable, and smaller than the double modular unit</td>
                 </tr>
                 <tr className="border-b border-brand-border">
                   <td className="p-3">One ferret, with generous daily out-of-cage time</td>
-                  <td className="p-3 font-bold"><a href="#kaytee-multilevel">Kaytee Multi-Level</a><TableShopLink href={"/go/amazon-brand/kaytee+multi+level+ferret+home?s=reviews-best-ferret-cage"} product={"Kaytee Multi-Level"} /></td>
+                  <td className="p-3 font-bold"><a href="#kaytee-multilevel">Kaytee Multi-Level</a><TableShopLink href={"/go/amazon/B008FONT2Y?s=reviews-best-ferret-cage"} product={"Kaytee Multi-Level"} /></td>
                   <td className="p-3">Entry pick. Spacing in range if you verify the model. Price tier $</td>
                   <td className="p-3">Too tight for a pair living in it full-time</td>
                 </tr>
