@@ -2,18 +2,13 @@
 
 /**
  * Horse Weight Calculator -- /tools/horse-weight-calculator
- * Client compute component. Implements the standard heart-girth + body-length
- * weight-tape estimation (Carroll & Huntington 1988).
- *
- * Adult horse (imperial):  Weight (lb)  = (girth_in^2 * length_in) / 330
- * Adult horse (metric):    Weight (kg)  = (girth_cm^2 * length_cm) / 11900
- *
- * The divisor is type-dependent. Carroll & Huntington (1988) published
- * separate constants for ponies, riding horses, and draft/heavy types; the
- * widely cited imperial divisors are ~299 (pony), 330 (adult riding horse),
- * and ~301 (draft/heavy). We expose a type selector that swaps the divisor.
- * Foals use a different relationship entirely, so we present the foal/young-
- * stock case qualitatively rather than inventing a precise constant.
+ * Carroll CL, Huntington PJ. Equine Vet J. 1988;20(1):41–45.
+ * DOI 10.1111/j.2042-3306.1988.tb01451.x
+ * The abstract’s average Y' for weight from girth² × length was 11900.
+ * divisorMetric 11900 is that figure. divisorImperial 330 is the rounded
+ * inch/pound form of 11900 (11900 / (2.54³ / 0.4536) ≈ 329).
+ * Pony 299 / 10804 and draft 301 / 10874 are a planning figure. They are
+ * not in that abstract. Youngstock reuses 330 as a planning placeholder.
  *
  * All outputs are husbandry ESTIMATES, not measured weights. Framed as such.
  * No fabricated precision, no clinical claims.
@@ -35,39 +30,36 @@ interface TypeOption {
   note: string
 }
 
-// Imperial divisors from the Carroll & Huntington (1988) weight-estimation work,
-// as reproduced by university extension references. Metric divisors are the
-// imperial divisor scaled by the unit-conversion factor so the two unit modes
-// agree to within rounding (1 in = 2.54 cm, 1 lb = 0.4536 kg →
-// metric divisor = imperial divisor * 2.54^3 / 0.4536 ≈ imperial * 36.13).
+// Riding 330 / 11900: Carroll & Huntington 1988 abstract, Y' = 11900.
+// Pony and draft divisors: planning figure, not that paper.
 const TYPES: TypeOption[] = [
   {
     value: 'pony',
     label: 'Pony',
     divisorImperial: 299,
     divisorMetric: 10804,
-    note: 'Ponies carry proportionally more girth for their length, so the published pony divisor (~299) returns a slightly higher estimate than the adult-horse divisor would.',
+    note: 'Planning figure: divisor 299. Carroll & Huntington 1988 does not publish this pony constant in the abstract. The adult figure is 11900.',
   },
   {
     value: 'riding',
     label: 'Adult riding horse',
     divisorImperial: 330,
     divisorMetric: 11900,
-    note: 'The standard adult light-horse formula. This is the divisor used on most commercial weight tapes.',
+    note: 'Carroll & Huntington 1988: average Y′ = 11900 for girth² × length. 330 is the rounded inch-and-pound form of 11900.',
   },
   {
     value: 'draft',
     label: 'Draft / heavy horse',
     divisorImperial: 301,
     divisorMetric: 10874,
-    note: 'Draft and heavy warmblood types are denser for their measurements; the published heavy-horse divisor (~301) corrects for that.',
+    note: 'Planning figure: divisor 301. Carroll & Huntington 1988 does not publish this draft constant in the abstract.',
   },
   {
     value: 'youngstock',
     label: 'Foal / young stock',
     divisorImperial: 330,
     divisorMetric: 11900,
-    note: 'Foals and growing youngstock follow a different girth-to-weight relationship than mature horses, so girth-tape estimates are unreliable for them. Treat any figure here as a rough placeholder only and weigh growing horses on a livestock scale where possible.',
+    note: 'Planning figure: youngstock reuses the adult 330 / 11900 divisors. Carroll & Huntington 1988 does not give a foal constant here. Weigh growing horses on a livestock scale.',
   },
 ]
 

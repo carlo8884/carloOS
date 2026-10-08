@@ -22,9 +22,9 @@ test('cat food grams use the feline 1.2 factor', () => {
   assert.ok(Math.abs(row.grams - (der * 1000) / 3800) < 0.001)
 })
 
-test('a 1000 lb horse is 5 to 10 gallons', () => {
+test('a 1000 lb horse is 6 to 10 gallons', () => {
   const row = horseWaterGallons(1000)
-  assert.equal(row.lowGal, 5)
+  assert.equal(row.lowGal, 6)
   assert.equal(row.highGal, 10)
 })
 
