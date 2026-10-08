@@ -78,7 +78,7 @@ export default function EasyGreenVsFlourishGuidePage() {
         <p>If the tank is injected with CO2, the bubble count is on the <Link href="/tools/co2-calculator">CO2 calculator</Link>.</p>
         <h2>Who should buy which bottle</h2>
         <p>Buy Easy Green when one bottle should cover macros and micros on a low- or medium-tech tank, and ordering online is fine. Buy Flourish Comprehensive when you need trace elements today from a store that stocks Seachem, and you already have a source of nitrogen and phosphorus. A pressurized CO2 tank with fast plants is the NilocG line on the same review.</p>
-        <p>The link above searches Amazon for Easy Green, the same search as on the fertilizer review. The sale price can differ from the band above.</p>
+        <p>Easy Green is the pick when one bottle should cover macros and micros on a low- or medium-tech tank. The sale price can differ from the band above.</p>
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
       </div>

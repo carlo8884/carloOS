@@ -146,10 +146,10 @@ export default function WhenToEnrollPage() {
             id="lemonade"
             badge="Young-Pet Value"
             name="Lemonade Pet"
-            subtitle="Often competitive premiums for young, healthy pets"
+            subtitle="Registry marks this carrier for owners with younger pets"
             winner
             description={
-              <p>App-first accident-and-illness coverage that often prices competitively for young, healthy pets — the enrollment window where premiums are lowest and few conditions are excluded. Availability varies by state; confirm your location and read the pre-existing-condition language when you quote.</p>
+              <p>Lemonade’s FAQ, fetched 2026-10-08, says signing up while a pet is young and healthy means they are not denied coverage at renewal because of age (https://www.lemonade.com/pet/explained/lemonade-pet-insurance-faq/). The verified registry marks Lemonade for owners with younger pets. Availability varies by state; confirm your location and read the pre-existing-condition language when you quote.</p>
             }
             specs={[
               { label: 'Best for', value: 'Young pets', highlight: 'good' },
@@ -170,7 +170,7 @@ export default function WhenToEnrollPage() {
             name="Pets Best"
             subtitle="Multiple plan tiers, no upper age limit on enrollment"
             description={
-              <p>Offers several plan tiers and accepts new enrollments without an upper age limit, which makes it worth quoting for both puppies and older adopted pets. Useful when you are comparing how premium scales with age. As always, the pre-existing-condition definition determines what a late enrollment will and will not cover.</p>
+              <p>Pets Best’s FAQ, fetched 2026-10-08, says there is no upper age limit, and a dog or cat can enroll at any age over 7 weeks (https://www.petsbest.com/faq). That is why it is worth quoting for both puppies and older adopted pets. Useful when you are comparing how premium scales with age. As always, the pre-existing-condition definition determines what a late enrollment will and will not cover.</p>
             }
             specs={[
               { label: 'Plan tiers', value: 'Multiple', highlight: 'good' },

@@ -78,7 +78,7 @@ export default function RoyalCaninVsProPlanGuidePage() {
         <p>Purina Pro Plan is Best Value. The review is specific that Pro Plan, not regular Purina, meets the WSAVA criteria used on the page, and that it uses AAFCO feeding trials. Research is listed as more than 400 published studies. DCM risk is low. Palatability is excellent, and availability is listed as everywhere. The printed price is $45–90 for 30 pounds. The cons say some formulas include artificial colors or preservatives, and that the label is not a clean-label ingredient list.</p>
         <h2>Who should buy which food</h2>
         <p>Buy Royal Canin when breed-specific kibble and the research standard on that review are the reason, and the mid-premium band is acceptable. Buy Pro Plan when the same WSAVA bar should land in the lower printed band, and artificial colors on some formulas are acceptable. A diagnosed condition that a veterinarian is managing with diet is the Hill’s line on the same review, not either food here.</p>
-        <p>The link above is the same Royal Canin search as on the dry-food review. The sale price can differ from the band above.</p>
+        <p>Royal Canin is the pick when breed-specific kibble and the research standard on that review are the reason. The sale price can differ from the band above.</p>
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
       </div>

@@ -24,7 +24,7 @@ const schema = buildArticleSchema({
 const FAQS = [
   {
     question: 'Which service does the telehealth page pick overall?',
-    answer: 'Vetster. The page lists video and chat, licensed veterinarians, and specialists. This page does not publish a wait time. Prescriptions depend on the jurisdiction.',
+    answer: 'Vetster. The telehealth page on this site lists video, chat, and specialists. Vetster’s help page, updated 2025-12-18 and fetched 2026-10-08, says it verifies an active license in the veterinarian’s jurisdiction before they go live (https://help.vetster.com/en/articles/13184184-how-are-licenses-verified). This page does not publish a wait time.',
   },
   {
     question: 'What does Chewy Connect include?',
@@ -50,7 +50,7 @@ export default function VetsterVsChewyConnectGuidePage() {
       }}
       heroHop={
         <>
-          <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">Vetster is the top pick for a video visit paid per consult, because the telehealth page lists licensed veterinarians and specialists.</p>
+          <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">Vetster is the top pick for a video visit paid per consult, because the telehealth page lists veterinarians and specialists.</p>
           <div data-fold="offer">
           <PrimaryHop href="/go/vetster/telehealth?s=reviews-vetster-vs-connect-guide" label="Open Vetster" />
         </div>
@@ -92,7 +92,7 @@ export default function VetsterVsChewyConnectGuidePage() {
         />
         <p>Vetster is the overall service. Chewy Connect with a Vet is for people who already use Chewy. <Link href="/reviews/askvet-vs-chewy-connect-guide">AskVet versus Chewy Connect</Link> is the chat-subscription comparison, not this video visit.</p>
         <h2>What the page says about Vetster</h2>
-        <p>Vetster is Best Overall and the winner. Consults are video and chat. The page says veterinarians are licensed where the owner is located, so a prescription can be valid, and that specialists are available, including behavior, dermatology, and internal medicine. This page does not publish a wait time. You pay per visit. The page says that per-visit figure is higher than a chat plan.</p>
+        <p>Vetster is Best Overall and the winner. The telehealth page on this site lists video and chat. Vetster’s help page, updated 2025-12-18 and fetched 2026-10-08, says it verifies an active license in the veterinarian’s jurisdiction before they go live (https://help.vetster.com/en/articles/13184184-how-are-licenses-verified). The telehealth page lists specialists, including behavior, dermatology, and internal medicine. This page does not publish a wait time. You pay per visit. The page says that per-visit figure is higher than a chat plan.</p>
         <p>Single visits start at $102. Plus is $12/month, billed annually.</p>
         <h2>What the page says about Chewy Connect</h2>
         <p>Chewy Connect with a Vet is Best for Chewy Customers. Free chat is with a veterinary technician and comes with a Chewy account. A prescription from the licensed-vet video visit can be filled through Chewy and shipped. Specialist access is thinner than Vetster.</p>
@@ -100,7 +100,7 @@ export default function VetsterVsChewyConnectGuidePage() {
         <p>If you are deciding between a video visit, a clinic, and an emergency hospital, use the <Link href="/tools/er-vs-clinic">ER versus clinic tool</Link>. Neither service on this page replaces emergency care.</p>
         <h2>Who should open which service</h2>
         <p>Open Vetster when you want a licensed veterinarian on video, possibly a specialist, and you do not want a monthly fee. Open Chewy Connect when you already pay for Chewy+ and you want the pharmacy tied to that account. If the pet is in crisis, go to an emergency clinic. Do not wait on a video queue.</p>
-        <p>Vetster lists video and chat with veterinarians licensed where the owner is located, so a prescription can be valid.</p>
+        <p>Vetster’s help page, updated 2025-12-18 and fetched 2026-10-08, says it verifies an active license in the veterinarian’s jurisdiction before they go live (https://help.vetster.com/en/articles/13184184-how-are-licenses-verified).</p>
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
       </div>

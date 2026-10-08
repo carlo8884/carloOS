@@ -93,7 +93,7 @@ export default function WoodVsGrassLitterGuidePage() {
         <p>Scoop timing is on the <Link href="/tools/litter-planner">litter planner</Link>, using the pan-change approach from that review.</p>
         <h2>Who should buy which litter</h2>
         <p>Buy heat-treated wood pellets when odor is the priority and you will reject loose cedar or pine shavings. Buy grass pellets when the ferret dislikes wood or paper underfoot and you will change the pan more often because wet pellets break down. Do not buy a clumping cat litter for either job. The default low-dust litter on the same review is recycled paper.</p>
-        <p>The link above searches Amazon for heat-treated wood pellet litter, the same search as on the litter review.</p>
+        <p>Heat-treated wood pellets are the odor pick, and only as compressed low-phenol pellets. Loose aromatic shavings are not this product.</p>
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
       </div>

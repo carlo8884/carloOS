@@ -26,7 +26,7 @@ const FAQS = [
   },
   {
     question: 'Embark vs Wisdom Panel — which is better?',
-    answer: 'Both are established consumer dog-DNA brands that offer breed identification and health-screening tiers, and both are reasonable choices; the "better" one depends on what you want. As a category, the trade-offs owners weigh are reference-database size and the breadth of the health panel, the depth of breed and relative-finder features, whether you need a basic breed-only tier or a comprehensive health screen, and price. Compare the specific tier you are considering on the number of genetic conditions screened, breed-database breadth, and what is actually included, rather than relying on the brand name alone. Dog.com does not take affiliate commissions on test kits, and this comparison is editorial.',
+    answer: 'Both are established consumer dog-DNA brands that offer breed identification and health-screening tiers, and both are reasonable choices; the "better" one depends on what you want. As a category, the trade-offs owners weigh are reference-database size and the breadth of the health panel, the depth of breed and relative-finder features, whether you need a basic breed-only tier or a comprehensive health screen, and price. Compare the specific tier you are considering on the number of genetic conditions screened, breed-database breadth, and what is actually included, rather than relying on the brand name alone. Dog.com does not take affiliate commissions on test kits.',
   },
   {
     question: 'Should I tell my vet about my dog\'s DNA results?',
@@ -107,7 +107,7 @@ export default function DogDnaTestsPage() {
           <li><strong>Features beyond breed and health.</strong> Relative-finder, trait, and ancestry-depth features differ. Decide which you actually care about.</li>
           <li><strong>Tier and price fit.</strong> Both sell a basic breed-focused option and a more comprehensive breed-plus-health option. Match the tier to your goal — curiosity versus clinical screening — and compare prices at that tier.</li>
         </ul>
-        <p><em>Dog.com does not take a commission on DNA test kits, and this comparison is editorial.</em> The honest bottom line: for most owners either brand will answer the breed question well, and the deciding factor is usually health-panel scope and price for the tier you want.</p>
+        <p><em>Dog.com does not take a commission on DNA test kits.</em> The honest bottom line: for most owners either brand will answer the breed question well, and the deciding factor is usually health-panel scope and price for the tier you want.</p>
 
         <h2 id="now">What to Do With Your Results</h2>
         <p>A few calibrated next steps once the report lands:</p>

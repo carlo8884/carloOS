@@ -78,7 +78,7 @@ export default function IcrateVsImpactGuidePage() {
         <p>Impact is Best Heavy Duty for escape artists. The review lists aircraft-grade aluminum, welded joints, reinforced latches, and a lifetime warranty. The weight is heavy, 30–70+ lb, so it is not a travel crate. The printed price is $300–500. The review calls that price significant and the crate overkill for a calm dog. It also says professional trainers, law-enforcement K9 units, and sport competitors use this style of crate.</p>
         <h2>Who should buy which crate</h2>
         <p>Buy the iCrate when you are house-training or crating a dog that has not already destroyed wire. Buy Impact when wire, plastic, and standard heavy-duty crates have already failed. The airline crate on the same review is the Petmate Sky Kennel, and it is a different job.</p>
-        <p>The link above searches Amazon for the MidWest iCrate, the same search as on the crate review. Choose the length there. The sale price can differ from the band above.</p>
+        <p>The iCrate is the house-training pick because it ships with a divider and two doors. Choose the length on the crate review. The sale price can differ from the band above.</p>
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
       </div>

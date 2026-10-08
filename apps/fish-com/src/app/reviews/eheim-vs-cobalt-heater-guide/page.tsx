@@ -94,7 +94,7 @@ export default function EheimVsCobaltGuidePage() {
         <p>The Neo-Therm Pro is Best Flat Design. Cobalt accuracy: see the manufacturer's current page. The body is flat, so it hides better in a planted or display tank. An LED moves from blue while heating to white at temperature. The housing is shatterproof plastic. It is not recalibratable. The printed price is $35–65.</p>
         <h2>Who should buy which heater</h2>
         <p>Buy the Jager when you want the recalibration dial, the out-of-water shut-off, and a wattage from 25W to 300W, and you can keep glass off the floor. Buy the Neo-Therm Pro when the tank is a display and you would rather have shatterproof plastic than a calibration dial. The Hydor on the same review is the inline heater, and it needs a canister. It is not this pair.</p>
-        <p>The link above searches Amazon for the Eheim Jager, the same search as on the heater review. Pick the wattage there. The sale price can differ from the band above.</p>
+        <p>The Jager is the pick when you want the recalibration dial and a wattage from 25W to 300W. The sale price can differ from the band above.</p>
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
       </div>

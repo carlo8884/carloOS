@@ -1,4 +1,21 @@
+import { readdirSync, statSync } from 'node:fs'
+import { join } from 'node:path'
 import { expect, type Page } from '@playwright/test'
+
+/** Every /reviews route for one earning app, including the reviews hub. */
+export function reviewRoutes(app: string): string[] {
+  const root = join(process.cwd(), 'apps', app, 'src/app/reviews')
+  const paths: string[] = []
+  const walk = (dir: string) => {
+    for (const name of readdirSync(dir)) {
+      const full = join(dir, name)
+      if (statSync(full).isDirectory()) walk(full)
+      else if (name === 'page.tsx') paths.push(`/reviews${dir.slice(root.length)}`)
+    }
+  }
+  walk(root)
+  return paths.sort()
+}
 
 const META = /this comparison is|the link above/i
 const SERVICE =

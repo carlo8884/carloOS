@@ -1,5 +1,5 @@
 import { expect, test } from '@playwright/test'
-import { expectMoneyCopy } from './money-copy'
+import { expectMoneyCopy, reviewRoutes } from './money-copy'
 import { expectHop } from './hop'
 import { TRUPANION_TAG } from './tags'
 
@@ -73,5 +73,13 @@ test.describe('money fold at 390', () => {
       }
       await expectMoneyCopy(page)
     })
+  }
+})
+
+test('every review route rejects page-about-itself copy', async ({ page }) => {
+  test.setTimeout(240_000)
+  for (const path of reviewRoutes('vets-co')) {
+    await page.goto(path, { waitUntil: 'domcontentloaded' })
+    await expectMoneyCopy(page)
   }
 })
