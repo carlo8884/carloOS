@@ -74,14 +74,14 @@ export function judgePair(a: Species, b: Species): PairResult {
   if (a.coldwater !== b.coldwater) {
     escalate('incompatible')
     const cold = a.coldwater ? a.name : b.name
-    reasons.push(`${cold} is a coldwater species; pairing it with tropical fish forces one species to live outside its safe temperature range.`)
+    reasons.push(`${cold} is flagged coldwater in this checker. Pairing it with a tropical species is treated as incompatible. Published ranges are on the page (FishBase): this band is a planning flag, not a measured preference.`)
   } else {
     // Overlapping comfortable temperature band check.
     const low = Math.max(a.tempLow, b.tempLow)
     const high = Math.min(a.tempHigh, b.tempHigh)
     if (high - low < 3) {
       escalate('caution')
-      reasons.push(`Their ideal temperature ranges barely overlap (${low}–${high}°F), so one species will likely be kept slightly too warm or too cool.`)
+      reasons.push(`This checker's working temperature bands barely overlap (${low}–${high}°F). Those bands are planning flags, not a published ideal range.`)
     }
   }
 
@@ -133,7 +133,7 @@ export function judgePair(a: Species, b: Species): PairResult {
     const soft = a.hardWater ? b : a
     if (hard.id === 'african-cichlid' || soft.id === 'cardinal-tetra' || soft.id === 'neon-tetra') {
       escalate('caution')
-      reasons.push(`${hard.name} prefers hard, alkaline water while ${soft.name} prefers soft, slightly acidic water — a hardness compromise stresses one of them over time.`)
+      reasons.push(`This checker flags a hardness mismatch between ${hard.name} and ${soft.name}. That is a planning caution, not a measured water-chemistry citation.`)
     }
   }
 
@@ -147,7 +147,7 @@ export function judgePair(a: Species, b: Species): PairResult {
   }
 
   if (verdict === 'compatible' && reasons.length === 0) {
-    reasons.push('Similar temperament, overlapping temperature range, and no size or fin-nipping conflict — a commonly recommended community pairing.')
+    reasons.push("This checker's planning verdict: similar temperament flags, overlapping working temperature bands, and no size or fin-nipping flag. It is not a published safest-mate list.")
   }
 
   return { a, b, verdict, reasons }
