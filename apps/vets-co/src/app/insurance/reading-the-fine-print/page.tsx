@@ -135,7 +135,7 @@ export default function FinePrintPage() {
           </div>
 
           <h2 id="quote">Compare Two or Three Policies</h2>
-          <p>The practical reading strategy above works best applied to real sample policies. Pull quotes from a couple of carriers and compare them on the same points — waiting periods, payout model, exam-fee coverage, annual limit, and the exclusions list. The two below are useful starting points; for the full side-by-side, see our <a href="/reviews/best-pet-insurance">best pet insurance comparison</a>.</p>
+          <p>The practical reading strategy above works best applied to real sample policies. Pull quotes from a couple of carriers and compare them on the same points — waiting periods, payout model, exam-fee coverage, annual limit, and the exclusions list. The two below are useful starting points; for the full side-by-side, see our <a href="/reviews/best-pet-insurance">best pet insurance comparison</a>. After the quote and the exclusions list, the <a href="/tools/pet-insurance-worth-it-calculator">worth-it calculator</a> turns that premium into the eligible-cost level where the policy pays for itself.</p>
           <HopDisclosure siteId="vets-co" href={["/go/spot/home?s=insurance-reading-the-fine-print", "/go/manypets/home?s=insurance-reading-the-fine-print"]} />
           <ReviewCard
             id="spot"

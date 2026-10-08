@@ -94,7 +94,7 @@ export default function WellnessVsInsurancePage() {
           <p>If you can only choose one, most owners are best served by accident-and-illness insurance, since it guards against the expenses that force the hardest decisions. Layer a wellness plan on top only if its structure genuinely helps you stay current on preventive care. Whatever you choose, keep the two functions distinct in your mind: budget for what you can predict, and insure against what you cannot.</p>
 
           <h2 id="quote">Insurers That Offer Both</h2>
-          <p>If you want catastrophe insurance with an optional wellness or preventive layer on top, some carriers bundle both — keeping the two functions distinct, as above. The two below take that approach; for the full side-by-side, see our <a href="/reviews/best-pet-insurance">best pet insurance comparison</a>. Remember a wellness add-on is a budgeting benefit, not insurance.</p>
+          <p>If you want catastrophe insurance with an optional wellness or preventive layer on top, some carriers bundle both — keeping the two functions distinct, as above. The two below take that approach; for the full side-by-side, see our <a href="/reviews/best-pet-insurance">best pet insurance comparison</a>. Remember a wellness add-on is a budgeting benefit, not insurance. The <a href="/tools/pet-insurance-worth-it-calculator">worth-it calculator</a> is for the accident-and-illness premium, and it tells you to leave routine wellness out of the eligible-cost figure.</p>
           <ReviewCard
             id="embrace"
             badge="Insurance + Wellness"
@@ -175,7 +175,7 @@ export default function WellnessVsInsurancePage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-06" />
+          <ComparisonFoot updated="2026-10-08" />
 
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />

@@ -50,7 +50,7 @@ export default function EmergencySignsPage() {
             <p className="text-xs text-brand-text-mid leading-relaxed m-0 mb-3">Call ahead while driving — the vet can prepare for your arrival. ASPCA Poison Control: <strong>888-426-4435</strong></p>
             <Link href="/find-a-vet" className="block w-full text-center bg-brand-danger text-white text-xs font-bold py-2.5 rounded-lg no-underline hover:opacity-90">Find Emergency Vet →</Link>
           </div>
-          <RelatedLinks title="Related Guides" links={[{ label: 'ER vs Clinic vs Telehealth', href: '/tools/er-vs-clinic' }, { label: 'Bloat (GDV) in Dogs', href: '/health/bloat-gdv-dogs' }, { label: 'Pain Signs in Dogs', href: '/health/pain-signs-dogs' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
+          <RelatedLinks title="Related Guides" links={[{ label: 'ER vs Clinic vs Telehealth', href: '/tools/er-vs-clinic' }, { label: 'Bloat (GDV) in Dogs', href: '/health/bloat-gdv-dogs' }, { label: 'Pain Signs in Dogs', href: '/health/pain-signs-dogs' }, { label: 'Emergency Vet Costs', href: '/guides/emergency-vet-costs' }, { label: 'How to Afford Vet Care', href: '/guides/how-to-afford-vet-care' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
 
                   <CrossPortfolioCard currentSite="vets-co" contentType="health" variant="sidebar" />
 </>}
@@ -115,6 +115,7 @@ export default function EmergencySignsPage() {
           </div>
           </div>
 
+          <p>These 14 signs are a reason to drive, not a reason to price the visit first. After the pet is stable, the <a href="/guides/emergency-vet-costs">emergency vet costs</a> guide explains why that bill runs higher than a daytime appointment, and <a href="/guides/how-to-afford-vet-care">how to afford vet care</a> covers payment options.</p>
           <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>

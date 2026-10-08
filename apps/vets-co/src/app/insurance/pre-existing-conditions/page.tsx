@@ -140,7 +140,7 @@ export default function PreExistingPage() {
           </div>
 
           <h2 id="quote">Carriers and Curable Conditions</h2>
-          <p>Insurers differ in how they handle <em>curable</em> pre-existing conditions — some will cover a resolved, symptom-free condition again after a defined waiting window, while permanent (incurable) conditions stay excluded everywhere. The two below are worth quoting on that distinction; read each policy&apos;s exact definition, and see our <a href="/reviews/best-pet-insurance">best pet insurance comparison</a> for the full picture.</p>
+          <p>Insurers differ in how they handle <em>curable</em> pre-existing conditions — some will cover a resolved, symptom-free condition again after a defined waiting window, while permanent (incurable) conditions stay excluded everywhere. The two below are worth quoting on that distinction; read each policy&apos;s exact definition, and see our <a href="/reviews/best-pet-insurance">best pet insurance comparison</a> for the full picture. The <a href="/tools/pet-insurance-worth-it-calculator">worth-it calculator</a> says a strong breakeven number does not cover a condition the pet already has.</p>
           <HopDisclosure siteId="vets-co" href={["/go/embrace/home?s=insurance-pre-existing-conditions", "/go/aspca/home?s=insurance-pre-existing-conditions"]} />
           <ReviewCard
             id="embrace"
