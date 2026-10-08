@@ -61,6 +61,7 @@ export default function FirstAidKitPage() {
           { title: 'Equine Health Hub', href: '/health' },
           { title: 'Equine Lameness Basics', href: '/health/lameness-basics' },
           { title: 'Is This a Horse Emergency?', href: '/tools/is-this-a-horse-emergency' },
+          { title: 'Horse Grimace Scale', href: '/tools/horse-grimace-scale' },
           { title: 'The Cost of Owning a Horse', href: '/ownership/cost-of-owning-a-horse' },
           { title: 'Horse Boarding Options', href: '/ownership/boarding-options' },
           { title: 'Senior Horse Care', href: '/ownership/senior-horse-care' },
@@ -99,6 +100,7 @@ export default function FirstAidKitPage() {
               { label: "Boots and Wraps", href: "/tack/boots-and-wraps" },
               { label: "Equine Lameness Basics", href: "/health/lameness-basics" },
               { label: 'Is This a Horse Emergency?', href: '/tools/is-this-a-horse-emergency' },
+              { label: 'Horse Grimace Scale', href: '/tools/horse-grimace-scale' },
               { label: 'The Cost of Owning a Horse', href: '/ownership/cost-of-owning-a-horse' },
               { label: 'Horse Boarding Options', href: '/ownership/boarding-options' },
               { label: 'Senior Horse Care', href: '/ownership/senior-horse-care' },
@@ -147,6 +149,7 @@ export default function FirstAidKitPage() {
 
           <h2 id="why">Why Be Prepared</h2>
           <p>Injuries and sudden illness happen, often outside business hours and far from help. Being prepared -- with supplies on hand, the skills to do basic first aid, and the knowledge to recognize an emergency -- lets an owner stabilize a situation, control bleeding, protect a wound, and gather the information the vet needs, rather than scrambling in a panic. Preparedness is itself a form of horse care, and the time to assemble a kit and learn the basics is long before they are needed.</p>
+          <p>Pain that does not look like a wound still belongs in the same readiness plan. The <a href="/tools/horse-grimace-scale" className="text-brand-primary hover:underline">horse grimace scale</a> is a structured way to read ear, eye, and muzzle tension while you wait for the veterinarian. It does not replace that call.</p>
 
           <h2 id="supplies">Essential Supplies</h2>
           <ul>

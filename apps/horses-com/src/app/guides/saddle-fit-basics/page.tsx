@@ -48,6 +48,8 @@ export default function SaddleFitBasicsPage() {
         priceAsOf="2026-05-31"
         siteId="horses-com"
         relatedLinks={[
+          { title: 'Horse Height Converter', href: '/tools/horse-height-converter', category: 'Tools' },
+          { title: 'Horse Size for Rider', href: '/tools/horse-size-for-rider', category: 'Tools' },
           { title: 'Guides Hub', href: '/guides', category: 'Guides' },
           { title: 'Dressage', href: '/disciplines/dressage' },
           { title: 'Show Jumping', href: '/disciplines/show-jumping' },
@@ -102,6 +104,8 @@ export default function SaddleFitBasicsPage() {
           <RelatedLinks
             title="Related Reading"
             links={[
+              { label: 'Horse Height Converter', href: '/tools/horse-height-converter' },
+              { label: 'Horse Size for Rider', href: '/tools/horse-size-for-rider' },
               { label: 'Best Winter Blankets', href: '/reviews/best-winter-horse-blankets' },
               { label: 'Quarter Horse Guide', href: '/breeds/quarter-horse' },
               { label: 'Equine Ulcers', href: '/health/equine-ulcers' },
@@ -121,6 +125,7 @@ export default function SaddleFitBasicsPage() {
 
           <h2 id="why">Why Saddle Fit Changes</h2>
           <p>Owners are often told to have a saddle fitted to a horse and treat the result as permanent. The horse's back does not cooperate with this view. A working horse's topline gains and loses muscle on a timescale of weeks; the topline of a horse coming back into work after winter turnout looks measurably different from the same horse at the end of a competition season. A saddle that fit at the start of the season often fits poorly six months later, and a saddle that fits a fit horse in July fits poorly the same horse in February.</p>
+          <p>Fit also depends on the horse&apos;s height and the rider&apos;s size. The <Link href="/tools/horse-height-converter">horse height converter</Link> turns hands into inches, and the <Link href="/tools/horse-size-for-rider">horse size for rider</Link> tool checks whether the horse&apos;s height is in a common range for the rider before you judge the saddle.</p>
 
           <p>The other ongoing change is in the saddle itself. Wool flocking compresses asymmetrically based on use, gradually shortening on the heavier side and producing tilts that the rider compensates for unconsciously. Foam panels do not compress the same way but harden over years. Trees lose torsional stability with age. The Society of Master Saddlers (SMS, UK) recommends saddle-fit reassessment at least every 6 months for a working horse and after any significant change in body condition; the Master Saddlers Association (MSA, US) and the German Pferdesportverband make similar recommendations.</p>
 
