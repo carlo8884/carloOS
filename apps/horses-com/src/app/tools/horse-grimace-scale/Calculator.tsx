@@ -224,7 +224,13 @@ export default function HorseGrimaceScale() {
                 Line up equine emergency cover →
               </Link>
             </div>
-          ) : null}
+          ) : (
+            <p className="mt-3 text-sm">
+              <Link href="/ownership/first-aid-kit" className="font-semibold text-brand-primary underline">
+                Review the equine first-aid kit
+              </Link>
+            </p>
+          )}
         </div>
       ) : (
         <ToolError>Score all five facial action units to see a grimace total.</ToolError>

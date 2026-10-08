@@ -5654,6 +5654,7 @@ const CALCULATORS = [
       { re: /lengthFt \* widthFt \* \(depthIn \/ 12\)/, label: 'volume = L × W × (depth_in / 12)' },
       { re: /CU_FT_PER_SHAVINGS_BAG = 8/, label: '8 cu ft per compressed shavings bag' },
       { re: /WEEKLY_FRACTION = 0\.15/, label: 'weekly restock ≈ 15% of initial bed' },
+      { re: /href="\/care\/turnout-vs-stabling"/, label: 'bedding result links turnout versus stabling' },
     ],
     why: 'Stall bed volume is a rectangular prism in cubic feet; 8 cu ft is the typical expanded pine-shavings / pellet bag; 15% is the daily pick-out restock fraction.',
   },
@@ -5807,8 +5808,19 @@ const CALCULATORS = [
   {
     id: 'horses · horse-height-converter',
     file: 'apps/horses-com/src/app/tools/horse-height-converter/Calculator.tsx',
-    mustInclude: [{ re: /hands\s*\*\s*4\s*\+\s*extraInches/, label: 'inches = hands × 4 + extra (hands.inches notation)' }],
+    mustInclude: [
+      { re: /hands\s*\*\s*4\s*\+\s*extraInches/, label: 'inches = hands × 4 + extra (hands.inches notation)' },
+      { re: /href="\/guides\/saddle-fit-basics"/, label: 'height result links saddle-fit basics' },
+    ],
     why: '1 hand = 4 inches; height in hands is hands.inches notation, not decimal (15.2hh = 62 in).',
+  },
+  {
+    id: 'horses · horse-size-for-rider result guide',
+    file: 'apps/horses-com/src/app/tools/horse-size-for-rider/Calculator.tsx',
+    mustInclude: [
+      { re: /href="\/guides\/saddle-fit-basics"/, label: 'size-for-rider result links saddle-fit basics' },
+    ],
+    why: 'The size result keeps its existing shop hop and adds one internal guide link.',
   },
   {
     id: 'horses · horse-height-converter hops',
@@ -7747,6 +7759,7 @@ const CALCULATORS = [
       { re: /if \(total <= 1\)/, label: 'minimal-signs band ≤1' },
       { re: /if \(total <= 3\)/, label: 'watch band ≤3 (below the higher planning band)' },
       { re: /\/tools\/is-this-a-horse-emergency/, label: 'high-pain outcomes push ER triage, not shop-first' },
+      { re: /href="\/ownership\/first-aid-kit"/, label: 'low grimace totals link the equine first-aid kit' },
     ],
     mustExclude: [
       { re: /mg\/kg| milligrams per kilogram/i, label: 'never publish a dose' },
