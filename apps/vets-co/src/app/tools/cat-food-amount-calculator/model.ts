@@ -34,18 +34,21 @@ export function weightKg(weight: number, unit: 'lb' | 'kg'): number {
 /** Planning stages: RER = 70 × kg^0.75, DER = factor × RER.
  *  Lean adult: 100 × kg^0.67. Obese-prone adult: 130 × kg^0.40.
  *  Grams = DER × 1000 / kcal per kg. */
-export function catFoodGrams(weight: number, unit: 'lb' | 'kg', stage: CatStage, kcalPerKg: number): {
+export function catFoodGrams(weight: number, unit: 'lb' | 'kg', stage: CatStage | number, kcalPerKg: number): {
   rer: number
   der: number
   grams: number
 } {
+  const resolved: CatStage = typeof stage === 'number'
+    ? { label: 'planning factor', kind: 'planning', factor: stage }
+    : stage
   const kg = weightKg(weight, unit)
   const rer = 70 * Math.pow(kg, 0.75)
-  const der = stage.kind === 'nrc-lean'
+  const der = resolved.kind === 'nrc-lean'
     ? 100 * Math.pow(kg, 0.67)
-    : stage.kind === 'nrc-obese'
+    : resolved.kind === 'nrc-obese'
       ? 130 * Math.pow(kg, 0.4)
-      : stage.factor * rer
+      : resolved.factor * rer
   const grams = (der * 1000) / kcalPerKg
   return { rer, der, grams }
 }
