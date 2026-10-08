@@ -29,7 +29,7 @@ const PREPARATION_RULES = [
   'No cooking oils — fat content triggers pancreatitis. Boil or bake instead.',
   'No xylitol — check any product label that contains "sugar-free" or sweeteners.',
   'Cooked over raw — for meat especially. Some raw fish is dangerous.',
-  'Small portions — all human foods are additions to a complete diet, not substitutes. Should not exceed 10% of daily caloric intake.',
+  'Small portions — all human foods are additions to a complete diet, not substitutes. The WSAVA guide to treats for dogs states that treats should make up no more than 10% of a dog\'s daily calorie intake (https://wsava.org/wp-content/uploads/2025/11/WSAVA_GuidetoTreats_Dogs_251107.pdf).',
   'Introduce one food at a time — allows identification of sensitivities.',
 ]
 
@@ -58,7 +58,7 @@ export default function SafeHumanFoodsPage() {
 
         <div style={{ background: 'rgba(42,106,58,0.06)', border: '1px solid rgba(42,106,58,0.15)', borderRadius: '10px', padding: '16px 20px', marginBottom: '24px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#2A6A3A', marginBottom: '8px' }}>The 10% Rule</div>
-          <p style={{ fontSize: '14px', color: 'var(--brand-text-mid)', margin: 0, lineHeight: 1.65 }}>All treats and supplemental foods — including safe human foods — should not exceed 10% of your dog&apos;s daily caloric intake. A dog eating 400 kcal/day should get no more than 40 kcal from treats and extras. Exceeding this creates nutritional imbalance and excess calories.</p>
+          <p style={{ fontSize: '14px', color: 'var(--brand-text-mid)', margin: 0, lineHeight: 1.65 }}>The WSAVA guide to treats for dogs states that treats should make up no more than 10% of a dog&apos;s daily calorie intake (<a href="https://wsava.org/wp-content/uploads/2025/11/WSAVA_GuidetoTreats_Dogs_251107.pdf">WSAVA treat guide</a>). As an example of that ceiling, 10% of a 400 kcal day is 40 kcal. Exceeding the ceiling can unbalance the diet and add calories.</p>
         </div>
 
         <h2>Universal Preparation Rules</h2>

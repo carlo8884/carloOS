@@ -157,7 +157,7 @@ export default async function CanDogsEatFoodPage({ params }: PageProps) {
           <>
             <h2 id="serve">How to serve it safely</h2>
             <p>{entry.safePrep}</p>
-            {entry.quantity ? <p><strong>How much:</strong> {entry.quantity} A planning figure is to keep treats within about 10% of daily calories. That 10% is not a fetched feeding trial — see <Link href="/nutrition/how-much-to-feed">how much to feed your dog</Link>.</p> : null}
+            {entry.quantity ? <p><strong>How much:</strong> {entry.quantity} The WSAVA guide to treats for dogs states that treats should make up no more than 10% of a dog’s daily calorie intake (<a href="https://wsava.org/wp-content/uploads/2025/11/WSAVA_GuidetoTreats_Dogs_251107.pdf">WSAVA treat guide</a>). See <Link href="/nutrition/how-much-to-feed">how much to feed your dog</Link>.</p> : null}
           </>
         ) : null}
 

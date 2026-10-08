@@ -42,7 +42,7 @@ const GUIDES = [
       { title: 'Can Dogs Eat…? Food Checker', desc: 'A–Z safe/caution/toxic checker for 30+ common foods', href: '/nutrition/can-dogs-eat', badge: '🆕 Checker' },
       { title: 'Foods Toxic to Dogs', desc: 'Chocolate, xylitol, grapes, onions, and 20+ more', href: '/nutrition/toxic-foods', badge: '⚠️ Safety' },
       { title: 'Human Foods Safe for Dogs', desc: 'What can actually be shared as treats', href: '/nutrition/safe-human-foods' },
-      { title: 'Dog Treats Guide', desc: 'Caloric budget (the 10% rule), dental treats, and jerky safety', href: '/nutrition/dog-treats-guide' },
+      { title: 'Dog Treats Guide', desc: 'WSAVA treat-calorie ceiling, dental treats, and jerky safety', href: '/nutrition/dog-treats-guide' },
       { title: 'Supplements That Work', desc: 'Fish oil, joint supplements, probiotics — evidence graded', href: '/nutrition/dog-supplements' },
     ],
   },
@@ -103,7 +103,7 @@ const FAQS = [
   {
     question: 'What should I feed my dog?',
     answer:
-      "For most healthy dogs, the strongest single signal is a complete-and-balanced commercial diet that meets the AAFCO nutritional adequacy standard for your dog's life stage and is made by a company that meets WSAVA selection guidelines (employs a qualified nutritionist, runs feeding trials, owns its manufacturing). Beyond that baseline, match calories to body condition rather than to the cup markings on the bag, keep treats to roughly 10% of daily calories, and let any medical condition — not breed marketing or trends — drive special diets. Your veterinarian is the right partner for individual targets.",
+      "For most healthy dogs, the strongest single signal is a complete-and-balanced commercial diet that meets the AAFCO nutritional adequacy standard for your dog's life stage and is made by a company that meets WSAVA selection guidelines (employs a qualified nutritionist, runs feeding trials, owns its manufacturing). Beyond that baseline, match calories to body condition rather than to the cup markings on the bag, keep treats to no more than 10% of daily calorie intake, the ceiling in the WSAVA guide to treats for dogs (https://wsava.org/wp-content/uploads/2025/11/WSAVA_GuidetoTreats_Dogs_251107.pdf), and let any medical condition — not breed marketing or trends — drive special diets. Your veterinarian is the right partner for individual targets.",
   },
   {
     question: 'How do I know if a dog food is good quality?',

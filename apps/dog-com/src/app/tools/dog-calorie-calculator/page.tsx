@@ -50,16 +50,16 @@ const FAQS = [
   {
     question: 'Why does this calculator say "estimate" and not "prescription"?',
     answer:
-      'Calorie formulas give a population-level starting point, not an individual prescription. A dog\'s actual metabolic rate depends on breed, body composition, neuter status, health status, temperature, and individual variation that no formula can capture. This page does not cite a percent for that spread. Feed near the estimate, then adjust up or down over 4-6 weeks based on body condition score. Your veterinarian should confirm the target weight and review any significant calorie restriction.',
+      'Calorie formulas give a population-level starting point, not an individual prescription. A dog\'s actual metabolic rate depends on breed, body composition, neuter status, health status, temperature, and individual variation. The WSAVA Nutritional Assessment Guidelines state that energy requirements can vary by 30% in either direction for dogs, particularly the maintenance energy requirement (https://pmc.ncbi.nlm.nih.gov/articles/PMC11107980/). Feed near the estimate, then adjust up or down over 4-6 weeks based on body condition score. Your veterinarian should confirm the target weight and review any significant calorie restriction.',
     answerText:
-      'Individual dogs vary around the formula. This page does not cite a percent for that spread. Adjust over 4-6 weeks using body condition and veterinary guidance.',
+      'The WSAVA Nutritional Assessment Guidelines state that energy requirements can vary by 30% in either direction for dogs, particularly the maintenance energy requirement (https://pmc.ncbi.nlm.nih.gov/articles/PMC11107980/). Adjust over 4-6 weeks using body condition and veterinary guidance.',
   },
   {
     question: 'Do treats count toward the daily calorie target?',
     answer:
-      'Yes. A planning figure on this page is to keep treats within about 10% of daily calories — training treats and table scraps both count. That 10% is not a row on the WSAVA July 2020 chart. Subtract treat calories from the estimate before you portion the bowl. Weigh meals on a kitchen scale rather than a measuring cup: how full the cup is changes the portion. A separate planning figure is that a heaped cup can run about 20% high. That 20% is not a fetched measurement.',
+      'Yes. The WSAVA guide to treats for dogs states that treats should make up no more than 10% of a dog\'s daily calorie intake (https://wsava.org/wp-content/uploads/2025/11/WSAVA_GuidetoTreats_Dogs_251107.pdf). That 10% is not a row on the WSAVA July 2020 calorie chart. Subtract treat calories from the estimate before you portion the bowl. Weigh meals on a kitchen scale rather than a measuring cup: how full the cup is changes the portion. A separate planning figure is that a heaped cup can run about 20% high. That 20% is not a fetched measurement.',
     answerText:
-      'Treats within about 10% of daily calories, and a heaped cup about 20% high, are planning figures. They are not on the WSAVA July 2020 chart. Weigh meals on a kitchen scale.',
+      'The WSAVA guide to treats for dogs states that treats should make up no more than 10% of a dog\'s daily calorie intake (https://wsava.org/wp-content/uploads/2025/11/WSAVA_GuidetoTreats_Dogs_251107.pdf). A heaped cup about 20% high is a planning figure. Weigh meals on a kitchen scale.',
   },
 ]
 

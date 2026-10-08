@@ -56,9 +56,9 @@ const FAQS = [
   {
     question: 'How do I help my dog lose weight safely?',
     answer:
-      'Weight loss should be gradual and vet-guided. A planning figure on this page is about 1–2% of body weight per week, not a crash diet and not a fetched study. Have your veterinarian set the target weight and rule out a medical cause such as hypothyroidism. Measure food by weight or with the calorie calculator rather than free-feeding, account for treats in the daily total, and increase activity as the dog\'s joints allow. Re-check the body condition score every few weeks and adjust.',
+      'Weight loss should be gradual and vet-guided. The 2014 AAHA Weight Management Guidelines state that the desired rate of weight loss in dogs is 1–2% per week (https://www.aaha.org/wp-content/uploads/globalassets/02-guidelines/weight-management/2014-AAHA-Weight-Management-Guidelines-for-Dogs-and-Cats). Have your veterinarian set the target weight and rule out a medical cause such as hypothyroidism. Measure food by weight or with the calorie calculator rather than free-feeding, account for treats in the daily total, and increase activity as the dog\'s joints allow. Re-check the body condition score every few weeks and adjust.',
     answerText:
-      'A planning figure is about 1–2% of body weight per week, under veterinary guidance. The vet sets the target. Measure food, count treats, and re-check body condition.',
+      'The 2014 AAHA Weight Management Guidelines state that the desired rate of weight loss in dogs is 1–2% per week (https://www.aaha.org/wp-content/uploads/globalassets/02-guidelines/weight-management/2014-AAHA-Weight-Management-Guidelines-for-Dogs-and-Cats). The vet sets the target. Measure food, count treats, and re-check body condition.',
   },
 ]
 
