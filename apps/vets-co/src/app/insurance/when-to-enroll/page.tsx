@@ -140,7 +140,7 @@ export default function WhenToEnrollPage() {
           </div>
 
           <h2 id="quote">Carriers to Quote Early</h2>
-          <p>Because premiums are lowest and exclusions fewest when pets are young, the practical move is to get a quote now rather than wait. The two below are worth pricing across life stages; for the full side-by-side, see our <a href="/reviews/best-pet-insurance">best pet insurance comparison</a>. Read each policy&apos;s pre-existing-condition definition before enrolling.</p>
+          <p>Because premiums are lowest and exclusions fewest when pets are young, the practical move is to get a quote now rather than wait. The two below are worth pricing across life stages; for the full side-by-side, see our <a href="/reviews/best-pet-insurance">best pet insurance comparison</a>. Read each policy&apos;s pre-existing-condition definition before enrolling. The <a href="/tools/pet-insurance-worth-it-calculator">worth-it calculator</a> turns today&apos;s quote into the eligible-cost level where the premium pays for itself.</p>
           <HopDisclosure siteId="vets-co" href={["/go/lemonade/home?s=insurance-when-to-enroll", "/go/pets-best/home?s=insurance-when-to-enroll"]} />
           <ReviewCard
             id="lemonade"

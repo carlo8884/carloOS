@@ -175,7 +175,7 @@ export default function HowPetInsuranceWorksPage() {
             ]}
           />
 <h2 id="quote">Compare a Couple of Insurers</h2>
-          <p>Once the four levers make sense, the next step is to price your own pet on a couple of carriers and compare the premium against the deductible, reimbursement rate, and annual limit. The two below illustrate different models; for the full side-by-side, see our <a href="/reviews/best-pet-insurance">best pet insurance comparison</a>.</p>
+          <p>Once the four levers make sense, the next step is to price your own pet on a couple of carriers and compare the premium against the deductible, reimbursement rate, and annual limit. The two below illustrate different models; for the full side-by-side, see our <a href="/reviews/best-pet-insurance">best pet insurance comparison</a>. The <a href="/tools/pet-insurance-worth-it-calculator">worth-it calculator</a> turns one of those quotes into the eligible-cost level where the policy pays for itself. Enter illness and accident costs only.</p>
           <HopDisclosure siteId="vets-co" href={["/go/trupanion/home?s=insurance-how-pet-insurance-works", "/go/healthy-paws/home?s=insurance-how-pet-insurance-works"]} />
           <ReviewCard
             id="trupanion"

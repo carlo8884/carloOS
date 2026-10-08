@@ -169,7 +169,7 @@ export default function WhatCoversPage() {
           </div>
 
           <h2 id="quote">Insurers With Different Coverage Models</h2>
-          <p>What a plan covers — and whether wellness or preventive care can be added — varies by insurer. The two below take different approaches to that question; for the full side-by-side, see our <a href="/reviews/best-pet-insurance">best pet insurance comparison</a>. Always read the policy&apos;s coverage and exclusions before enrolling.</p>
+          <p>What a plan covers — and whether wellness or preventive care can be added — varies by insurer. The two below take different approaches to that question; for the full side-by-side, see our <a href="/reviews/best-pet-insurance">best pet insurance comparison</a>. Always read the policy&apos;s coverage and exclusions before enrolling. The <a href="/tools/pet-insurance-worth-it-calculator">worth-it calculator</a> turns a quote into the eligible-cost level where that policy pays for itself. Enter illness and accident costs only.</p>
           <HopDisclosure siteId="vets-co" href={["/go/embrace/home?s=insurance-what-pet-insurance-covers", "/go/lemonade/home?s=insurance-what-pet-insurance-covers"]} />
           <ReviewCard
             id="embrace"
