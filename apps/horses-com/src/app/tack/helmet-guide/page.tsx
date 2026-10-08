@@ -64,9 +64,9 @@ export default function HelmetGuidePage() {
         ]}
         heroHop={
           <>
-            <HopDisclosure siteId="horses-com" href="/go/amazon-brand/troxel+spirit+riding+helmet?s=helmet-guide" />
+            <HopDisclosure siteId="horses-com" href="/go/amazon/B01NH7H4NG?s=helmet-guide" />
             <div className="mb-4" data-primary-hop="true">
-              <a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" data-shop-placement="hero" href="/go/amazon-brand/troxel+spirit+riding+helmet?s=helmet-guide">Browse the Troxel Spirit riding helmet on Amazon →</a>
+              <a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" data-shop-placement="hero" href="/go/amazon/B01NH7H4NG?s=helmet-guide">Browse the Troxel Spirit riding helmet on Amazon →</a>
             </div>
           </>
         }
@@ -266,7 +266,7 @@ export default function HelmetGuidePage() {
             </p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/troxel+spirit+riding+helmet?s=helmet-guide"
+                amazonHref="/go/amazon/B01NH7H4NG?s=helmet-guide"
                 amazonLabel="Browse Troxel Spirit riding helmet on Amazon →"
               />
 

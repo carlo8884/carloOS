@@ -10778,8 +10778,8 @@ const CALCULATORS = [
     id: 'horses · helmet-guide hops',
     file: 'apps/horses-com/src/app/tack/helmet-guide/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/troxel\+spirit\+riding\+helmet/, label: 'on-page product Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /amazon\/B01NH7H4NG/, label: 'on-page product Amazon search hop' },
+      { re: /amazonHref="\/go\/amazon\/B01NH7H4NG/, label: 'ShopCtas amazon-brand hops only' },
       { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
@@ -12730,7 +12730,7 @@ const CALCULATORS = [
     id: 'ferret · cage-setup hops',
     file: 'apps/ferret-com/src/app/care/cage-setup/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/midwest\+critter\+nation\+double\+unit\?s=care-cage-setup/, label: 'existing MidWest Critter Nation amazon-brand hop kept (do not re-ship a new query)' },
+      { re: /amazon\/B001NJ0DAY\?s=care-cage-setup/, label: 'existing MidWest Critter Nation amazon-brand hop kept (do not re-ship a new query)' },
       { re: /chewy-brand\/kaytee\+corner\+ferret\+litter\+pan\?s=care-cage-setup/, label: 'existing Kaytee corner-pan Chewy hop kept (not an empty leftover button)' },
       { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],

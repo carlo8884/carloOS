@@ -87,9 +87,9 @@ export default function FerretCageSetupPage() {
         contentType="care"
         heroHop={
           <>
-            <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/midwest+critter+nation+double+unit?s=care-cage-setup" />
+            <HopDisclosure siteId="ferret-com" href="/go/amazon/B001NJ0DAY?s=care-cage-setup" />
             <div className="mb-4" data-primary-hop="true">
-              <a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" data-shop-placement="hero" href="/go/amazon-brand/midwest+critter+nation+double+unit?s=care-cage-setup">Browse a Critter Nation double unit on Amazon →</a>
+              <a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" data-shop-placement="hero" href="/go/amazon/B001NJ0DAY?s=care-cage-setup">Browse a Critter Nation double unit on Amazon →</a>
             </div>
           </>
         }
@@ -270,7 +270,7 @@ export default function FerretCageSetupPage() {
             price="see current price"
             priceNote="dated 2026-05-31."
             ctaText="Find Midwest Critter Nation double unit cages on Amazon"
-            ctaHref="/go/amazon-brand/midwest+critter+nation+double+unit?s=care-cage-setup"
+            ctaHref="/go/amazon/B001NJ0DAY?s=care-cage-setup"
             ctaAffiliateProgram="amazon-brand"
             ctaAffiliateProduct="midwest+critter+nation+double+unit"
           />
