@@ -49,7 +49,7 @@ export default function WhenToEnrollPage() {
           <p>Enrolling an adult pet is still worthwhile, especially if the medical record is clean. The earlier within adulthood you act, the fewer conditions will have appeared. An owner adopting a young adult dog or cat should enroll promptly, before the routine wear of life produces the first documented symptom that could become an exclusion. The same early-bird logic applies; it is simply later in the timeline. The same desk pad calendar is where that enroll-this-month square is marked so the wait does not become another year.</p>
 
           <h2>Senior Pets</h2>
-          <p>Insuring a senior pet is more nuanced. Premiums are higher, and seniors are more likely to carry pre-existing conditions that will be excluded. However, seniors are also the most likely to need costly care, Pets Best’s FAQ, fetched 2026-10-08, says there is no upper age limit, and a dog or cat can enroll at any age over 7 weeks (<a className="break-all" href="https://www.petsbest.com/faq">https://www.petsbest.com/faq</a>). For a senior with a relatively clean history, a policy can still protect against new, unrelated illnesses. The key is to compare carriers that welcome older pets and to read carefully how they define and exclude pre-existing conditions.</p>
+          <p>Insuring a senior pet is more nuanced. Premiums are higher, and seniors are more likely to carry pre-existing conditions that will be excluded. However, seniors are also the most likely to need costly care, Pets Best’s FAQ, fetched 2026-10-08, says there is no upper age limit, and a dog or cat can enroll at any age over 7 weeks (<span className="break-all">https://www.petsbest.com/faq</span>). For a senior with a relatively clean history, a policy can still protect against new, unrelated illnesses. The key is to compare carriers that welcome older pets and to read carefully how they define and exclude pre-existing conditions.</p>
 
           <h2>Adopted and Rescue Pets</h2>
           <p>For adopted pets with unknown histories, enroll as soon as possible after adoption and after an initial veterinary exam. Establishing coverage early limits the window in which undocumented conditions might later be deemed pre-existing. A letter-size file jacket is how the adoption papers and the new-pet exam notes stay one sleeve until enrollment is done — it is not a letter-size poly envelope (that lives on how-pet-insurance-works), not a kraft two-pocket folder (that lives on choosing-a-veterinarian), and not letter-size hanging file folders (that live on how-to-afford-vet-care). Schedule the enrollment around the new-pet exam so you understand your pet&apos;s baseline health and can choose appropriate coverage from the start.</p>
@@ -149,7 +149,7 @@ export default function WhenToEnrollPage() {
             subtitle="Registry marks this carrier for owners with younger pets"
             winner
             description={
-              <p>Lemonade’s FAQ, fetched 2026-10-08, says signing up while a pet is young and healthy means they are not denied coverage at renewal because of age (<a className="break-all" href="https://www.lemonade.com/pet/explained/lemonade-pet-insurance-faq/">https://www.lemonade.com/pet/explained/lemonade-pet-insurance-faq/</a>). The verified registry marks Lemonade for owners with younger pets. Availability varies by state; confirm your location and read the pre-existing-condition language when you quote.</p>
+              <p>Lemonade’s FAQ, fetched 2026-10-08, says signing up while a pet is young and healthy means they are not denied coverage at renewal because of age (<span className="break-all">https://www.lemonade.com/pet/explained/lemonade-pet-insurance-faq/</span>). The verified registry marks Lemonade for owners with younger pets. Availability varies by state; confirm your location and read the pre-existing-condition language when you quote.</p>
             }
             specs={[
               { label: 'Best for', value: 'Young pets', highlight: 'good' },
@@ -170,7 +170,7 @@ export default function WhenToEnrollPage() {
             name="Pets Best"
             subtitle="Multiple plan tiers, no upper age limit on enrollment"
             description={
-              <p>Pets Best’s FAQ, fetched 2026-10-08, says there is no upper age limit, and a dog or cat can enroll at any age over 7 weeks (<a className="break-all" href="https://www.petsbest.com/faq">https://www.petsbest.com/faq</a>). That is why it is worth quoting for both puppies and older adopted pets. Useful when you are comparing how premium scales with age. As always, the pre-existing-condition definition determines what a late enrollment will and will not cover.</p>
+              <p>Pets Best’s FAQ, fetched 2026-10-08, says there is no upper age limit, and a dog or cat can enroll at any age over 7 weeks (<span className="break-all">https://www.petsbest.com/faq</span>). That is why it is worth quoting for both puppies and older adopted pets. Useful when you are comparing how premium scales with age. As always, the pre-existing-condition definition determines what a late enrollment will and will not cover.</p>
             }
             specs={[
               { label: 'Plan tiers', value: 'Multiple', highlight: 'good' },
