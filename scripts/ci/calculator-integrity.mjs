@@ -5360,6 +5360,7 @@ const CALCULATORS = [
     mustInclude: [
       { re: /estimateStocking\(/, label: 'shared slim-inch model, no local species math' },
       { re: /Rough planning estimate — not a species count/, label: 'output labeled as rough estimate, not species advice' },
+      { re: /planning figure/, label: 'slim-inch coefficients labeled a planning figure' },
       { re: /Species headcount/, label: 'species headcount explicitly not calculated' },
       { re: /useStockingWater\(\)/, label: 'water-type state shared with the shop block' },
       { re: /href="\/reviews\/best-aquarium-filters"/, label: 'result links the filter review beside the matched filter hop' },

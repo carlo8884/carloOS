@@ -160,7 +160,7 @@ export default function StockingCalculator() {
       {!inputError && result && result.slimInches > 0 && (
         <>
         <ResultMeaning>
-          Slim inches are a planning ceiling for waste and oxygen, not a count of fish you should buy.
+          How we calculate: freshwater uses 1 square foot of surface per 12 slim inches and a 1.1 slim-inch-per-gallon cap; saltwater uses 1/24 and 0.6. Filtration factors (0.75, 1.0, 1.3, 1.6) and style factors are a planning figure, not a published stocking standard. Slim inches are a ceiling for waste and oxygen, not a count of fish you should buy.
         </ResultMeaning>
         <p className="mt-4 text-sm font-semibold leading-snug">
           <a
