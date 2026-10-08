@@ -38,6 +38,8 @@ jobs:
         run: node scripts/ci/insurance-registry-parity.mjs && node --test scripts/ci/insurance-registry-parity.test.mjs
       - name: Price stamp age
         run: node scripts/ci/price-stamp-age.mjs && node --test scripts/ci/price-stamp-age.test.mjs
+      - name: Sitemap index
+        run: node scripts/ci/sitemap-index.mjs
       - uses: actions/cache@v4
         with:
           path: .turbo
