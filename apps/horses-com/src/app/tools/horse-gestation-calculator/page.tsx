@@ -331,8 +331,8 @@ export default function HorseGestationCalculatorPage() {
             },
             {
               label:
-                'Penn State Extension — Breeding the mare: gestation and foaling.',
-              url: 'https://extension.psu.edu/horses',
+                'Penn State Extension — Equine.',
+              url: 'https://extension.psu.edu/animals-and-livestock/equine',
               publisher: 'Penn State Extension',
             },
           ]}

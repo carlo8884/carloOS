@@ -302,8 +302,8 @@ export default function StallBeddingCalculatorPage() {
           sources={[
             {
               label:
-                'University of Minnesota Extension — Horse stall and stable management (bedding depth, pick-out, and absorbent layers).',
-              url: 'https://extension.umn.edu/horse-care-and-management',
+                'University of Minnesota Extension — Horse.',
+              url: 'https://extension.umn.edu/agriculture/animals-and-livestock/horse',
               publisher: 'UMN Extension',
             },
             {

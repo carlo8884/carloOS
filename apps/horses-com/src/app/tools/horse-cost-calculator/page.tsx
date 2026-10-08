@@ -355,14 +355,14 @@ export default function HorseCostCalculatorPage() {
             },
             {
               label:
-                'Penn State Extension — Horse Stable Management & the costs of horse ownership (board, feed, farrier, health-care budgeting).',
-              url: 'https://extension.psu.edu/horses-and-horse-stables',
+                'Penn State Extension — Equine.',
+              url: 'https://extension.psu.edu/animals-and-livestock/equine',
               publisher: 'Penn State Extension',
             },
             {
               label:
-                'University of Minnesota Extension — Horse care and management (routine health, dental, and vaccination scheduling).',
-              url: 'https://extension.umn.edu/horse-care-and-management',
+                'University of Minnesota Extension — Horse.',
+              url: 'https://extension.umn.edu/agriculture/animals-and-livestock/horse',
               publisher: 'UMN Extension',
             },
             {

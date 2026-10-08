@@ -314,8 +314,8 @@ export default function HorseWeightCalculatorPage() {
             },
             {
               label:
-                'University of Minnesota Extension — How much does my horse weigh? (estimating bodyweight from girth and length).',
-              url: 'https://extension.umn.edu/horse-care-and-management/how-much-does-my-horse-weigh',
+                'University of Minnesota Extension — Estimating actual and ideal bodyweight of adult horses.',
+              url: 'https://extension.umn.edu/agriculture/animals-and-livestock/horse/estimating-horse-bodyweight',
               publisher: 'UMN Extension',
             },
           ]}
