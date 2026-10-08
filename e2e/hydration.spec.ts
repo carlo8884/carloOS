@@ -43,24 +43,25 @@ const hydrationError =
 async function bodyOutline(target: { evaluate: <T>(fn: () => T) => Promise<T> }): Promise<string[]> {
   return target.evaluate(() => {
     const out: string[] = []
-    const attrs = ['class', 'style', 'src', 'alt', 'href', 'fetchpriority', 'loading', 'decoding', 'data-nimg', 'id']
     const walk = (n: Node) => {
-      if (out.length > 500) return
+      if (out.length > 800) return
       if (n.nodeType === Node.TEXT_NODE) {
         const raw = n.textContent || ''
         const t = raw.replace(/\s+/g, ' ').trim()
-        out.push(t ? 'T:' + t.slice(0, 90) : 'W:' + raw.length)
+        out.push(t ? 'T:' + t.slice(0, 120) : 'W:' + raw.length)
         return
       }
       if (n.nodeType !== Node.ELEMENT_NODE) return
       const el = n as Element
       if (el.tagName === 'SCRIPT' || el.tagName === 'STYLE' || el.tagName === 'NOSCRIPT') return
-      const bits = attrs
-        .map((name) => {
-          const value = el.getAttribute(name)
-          return value ? name + '=' + value.replace(/\s+/g, ' ').slice(0, 60) : ''
-        })
-        .filter(Boolean)
+      const href = el.getAttribute('href') || ''
+      const src = (el.getAttribute('src') || '').replace(/^https?:\/\/[^/]+/, '')
+      const bits = [
+        el.getAttribute('class') ? 'class=' + el.getAttribute('class') : '',
+        href ? 'href=' + href.slice(0, 80) : '',
+        src ? 'src=' + src.slice(0, 80) : '',
+        el.getAttribute('alt') ? 'alt=' + el.getAttribute('alt') : '',
+      ].filter(Boolean)
       out.push('E:' + el.tagName + (bits.length ? ' ' + bits.join(' ') : ''))
       for (const c of el.childNodes) walk(c)
     }
@@ -74,7 +75,7 @@ async function bodyOutline(target: { evaluate: <T>(fn: () => T) => Promise<T> })
 function outlineDiff(server: string[], client: string[]): string {
   const lines: string[] = []
   const max = Math.max(server.length, client.length)
-  for (let i = 0; i < max && lines.length < 12; i++) {
+  for (let i = 0; i < max && lines.length < 20; i++) {
     if (server[i] === client[i]) continue
     lines.push(`#${i}\n  server: ${server[i] ?? '(end)'}\n  client: ${client[i] ?? '(end)'}`)
   }
