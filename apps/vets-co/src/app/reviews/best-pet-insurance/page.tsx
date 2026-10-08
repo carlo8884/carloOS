@@ -92,9 +92,11 @@ export default function VetsPetInsurancePage() {
           style={{ fontSize: 'clamp(26px, 4vw, 48px)', lineHeight: 1.15, fontFamily: 'Georgia, "Times New Roman", serif' }}>
           Best Pet Insurance 2026 — How the 11 Major Carriers Compare
         </h1>
+        <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">Trupanion is the top pet insurance pick because it is the carrier that pays the clinic at checkout.</p>
         <PriceAsOf date="2026-10-07" tone="dark" />
-        <PrimaryHop href='/go/trupanion/home?s=reviews-best-pet-insurance' label='Get a Trupanion quote →' holdWithoutPartnerId />
-        <HopDisclosure
+        <div data-fold="offer">
+          <PrimaryHop href='/go/trupanion/home?s=reviews-best-pet-insurance' label='Get a Trupanion quote →' holdWithoutPartnerId />
+        <HopDisclosure tone="on-dark"
           siteId="vets-co"
           noteClassName="mt-3 mb-0 text-xs leading-relaxed text-white/80"
           href={[
@@ -103,6 +105,7 @@ export default function VetsPetInsurancePage() {
             '/go/embrace/home?s=reviews-best-pet-insurance',
           ]}
         />
+        </div>
         <EmailCapture
           variant="inline"
           siteId="vets-co"
@@ -246,7 +249,7 @@ export default function VetsPetInsurancePage() {
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-07" />
+              <ComparisonFoot updated="2026-10-08" />
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Questions this comparison answers</h2>
               <FAQAccordion items={[
                 {

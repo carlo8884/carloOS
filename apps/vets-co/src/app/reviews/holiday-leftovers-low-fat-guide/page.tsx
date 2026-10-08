@@ -1,7 +1,7 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata, PrimaryHop } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'vets-co',
@@ -48,12 +48,20 @@ export default function HolidayLeftoversLowFatGuidePage() {
       schema={schema}
       hero={{
         title: 'Holiday leftovers and a low-fat dog food',
-        subtitle: 'The pancreatitis page already says fatty leftovers cause a predictable holiday surge. Buy that food only after a veterinarian has said the dog is ready for a home low-fat plan.',
         category: 'Buyer guide',
         authorName: 'Vets.co Editorial',
         publishedAt: 'October 2026',
         readTime: '7 min',
       }}
+      heroHop={
+        <>
+          <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">Fatty leftovers are a known pancreatitis trigger, and a low-fat digestive-care food is the home food to shop only after a veterinarian says the dog is ready.</p>
+          <div data-fold="offer">
+          <PrimaryHop href="/go/amazon-brand/low+fat+digestive+care+dog+food?s=reviews-holiday-leftovers-low-fat-guide" label="Browse low-fat digestive-care dog foods on Amazon" />
+          <HopDisclosure tone="on-dark" siteId="vets-co" href="/go/amazon-brand/low+fat+digestive+care+dog+food?s=reviews-holiday-leftovers-low-fat-guide" />
+        </div>
+        </>
+      }
       breadcrumbs={[
         { name: 'Home', href: '/' },
         { name: 'Reviews', href: '/reviews' },

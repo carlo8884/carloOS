@@ -57,14 +57,20 @@ export default function LemonadeVsPetsBestGuidePage() {
       schema={combineSchemas(schema, itemList)}
       hero={{
         title: 'Lemonade or Pets Best',
-        subtitle: 'A young-pet quote, or a carrier the enrollment page says will still take an older pet. The notes below are the ones on that page. Neither price line is a premium.',
         category: 'Buyer guide',
         authorName: 'Vets.co Editorial',
         publishedAt: 'October 2026',
         readTime: '6 min',
       }}
-      heroHop={<PrimaryHop href="/go/lemonade/home?s=reviews-lemonade-vs-pets-best-guide" label="Get a Lemonade quote" />}
-      heroExtra={<HopDisclosure siteId="vets-co" href="/go/lemonade/home?s=reviews-lemonade-vs-pets-best-guide" noteClassName="mt-3 mb-0 text-xs leading-relaxed text-white/80" />}
+      heroHop={
+        <>
+          <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">Lemonade is the top pick for a young, healthy pet because that is the window the enrollment page says prices lower.</p>
+          <div data-fold="offer">
+          <PrimaryHop href="/go/lemonade/home?s=reviews-lemonade-vs-pets-best-guide" label="Get a Lemonade quote" />
+          <HopDisclosure tone="on-dark" siteId="vets-co" href="/go/lemonade/home?s=reviews-lemonade-vs-pets-best-guide" noteClassName="mt-3 mb-0 text-xs leading-relaxed text-white/80" />
+        </div>
+        </>
+      }
       breadcrumbs={[
         { name: 'Home', href: '/' },
         { name: 'Reviews', href: '/reviews' },
@@ -98,14 +104,14 @@ export default function LemonadeVsPetsBestGuidePage() {
             "A preventive package is optional, and the review says that package is not insurance.",
           ]}
         />
-        <p>The notes below are the ones on the <Link href="/insurance/when-to-enroll">enrollment page</Link>. That page puts Lemonade and Pets Best side by side as two carriers to quote early, and it points to the <Link href="/reviews/best-pet-insurance">insurance review</Link> for the wider comparison. Neither product prints a monthly premium.</p>
+        <p>Lemonade and Pets Best are two carriers to quote early. The wider comparison is on the <Link href="/reviews/best-pet-insurance">insurance review</Link>. Neither product prints a monthly premium.</p>
         <h2>What the review says about Lemonade</h2>
         <p>Lemonade Pet is Young-Pet Value and the winner on that page. The review says the app-first accident-and-illness coverage often prices competitively for young, healthy pets, which is the window where premiums are lowest and few conditions are excluded. Claims are app-based. Availability varies by state. A preventive package is optional, and the review says that package is not insurance. The price line is quote-based.</p>
         <h2>What the review says about Pets Best</h2>
         <p>Pets Best is Flexible Plans. The review lists several plan tiers and no upper age limit on new enrollment, which is why it is worth quoting for both puppies and older adopted pets. The model is pay-then-claim. Premiums rise with age, and standard exclusions apply. The price line is quote-based. The review says the pre-existing-condition definition still decides what a late enrollment will cover.</p>
         <h2>Who should read which policy</h2>
         <p>Open the Lemonade sample when the pet is young and healthy and you want the app-claim carrier the enrollment page marks first. Confirm the state actually offers it, and treat the preventive package as separate from the insurance. Open the Pets Best sample when the pet is older, or you want several tiers, and read how premium scales with age. On both, enroll before a condition is in the record. Do not treat either quote-based line as a price from this page.</p>
-        <p>The link above opens the Lemonade quote from the enrollment page. The price you see there is the carrier’s quote.</p>
+        <p>The link above compares carriers on published terms. The price on the carrier site is the quote.</p>
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
       </div>

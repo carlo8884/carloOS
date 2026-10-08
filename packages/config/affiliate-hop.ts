@@ -90,6 +90,9 @@ export function visibleShopHref(
   env: NodeJS.ProcessEnv = process.env,
 ): string | undefined {
   if (!href || href === '#') return undefined
+  const vendor = href.match(/^\/go\/([^/?#]+)/i)?.[1]?.toLowerCase() ?? ''
+  // An amazon-brand search stays, even when its words name a held brand.
+  if (vendor === 'amazon' || vendor === 'amazon-brand') return href
   if (!isChewyHop(href)) return href
   const chewy = visibleChewyHref(href, env)
   if (chewy) return chewy

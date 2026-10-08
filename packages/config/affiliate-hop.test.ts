@@ -156,6 +156,14 @@ describe('resolveAffiliateHop', () => {
       '/go/chewy-brand/aqueon+20+gallon+long+aquarium',
     )
     assert.equal(visibleShopHref('/go/amazon-brand/eheim+jager+heater?s=reviews-best-aquarium-heaters', {}), '/go/amazon-brand/eheim+jager+heater?s=reviews-best-aquarium-heaters')
+    assert.equal(
+      visibleShopHref('/go/amazon-brand/chewy+connect+with+a+vet?s=reviews-askvet-vs-connect-guide', {}),
+      '/go/amazon-brand/chewy+connect+with+a+vet?s=reviews-askvet-vs-connect-guide',
+    )
+    assert.equal(
+      liveAnchorHref('/go/amazon-brand/chewy+connect+with+a+vet?s=reviews-askvet-vs-connect-guide', {}),
+      '/go/amazon-brand/chewy+connect+with+a+vet?s=reviews-askvet-vs-connect-guide',
+    )
     assert.equal(visibleShopHref('#', {}), undefined)
   })
 

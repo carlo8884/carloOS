@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, EmailCapture, FAQAccordion, InlinePartnerQuote, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { ArticleLayout, EmailCapture, FAQAccordion, InlinePartnerQuote, RelatedLinks, buildArticleSchema, buildMetadata, PrimaryHop } from '@carloOS/ui'
 import { HopDisclosure } from '../../../components/HopDisclosure'
 
 // Request-time env, same as the insurance comparison. A set partner tag
@@ -52,12 +52,20 @@ export default function HolidayEmergencyVisitGuidePage() {
       schema={schema}
       hero={{
         title: 'Why a holiday emergency visit costs more',
-        subtitle: 'The emergency-cost guide already includes holidays in the reason an ER visit costs more than a daytime appointment. The only shop link here is the Trupanion quote on the insurance review.',
         category: 'Buyer guide',
         authorName: 'Vets.co Editorial',
         publishedAt: 'October 2026',
         readTime: '7 min',
       }}
+      heroHop={
+        <>
+          <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">A holiday emergency visit costs more because the hospital keeps staff on duty overnight, and Trupanion is the policy that can pay the clinic at checkout.</p>
+          <div data-fold="offer">
+          <PrimaryHop href="/go/trupanion/home?s=reviews-holiday-emergency-visit-guide" label="Get a Trupanion quote" />
+          <HopDisclosure tone="on-dark" siteId="vets-co" href="/go/trupanion/home?s=reviews-holiday-emergency-visit-guide" />
+        </div>
+        </>
+      }
       breadcrumbs={[
         { name: 'Home', href: '/' },
         { name: 'Reviews', href: '/reviews' },
