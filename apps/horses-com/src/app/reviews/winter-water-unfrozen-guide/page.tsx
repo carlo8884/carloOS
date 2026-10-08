@@ -1,7 +1,7 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata, PrimaryHop } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
@@ -48,12 +48,20 @@ export default function WinterWaterUnfrozenGuidePage() {
       schema={schema}
       hero={{
         title: 'Keep horse water unfrozen in winter',
-        subtitle: 'Winter care already says horses drink less when water is icy, and that low intake plus dry hay is a leading impaction-colic pattern. The heated bucket is the stall supply the water page already links.',
         category: 'Buyer guide',
         authorName: 'Horses.com Editorial',
         publishedAt: 'October 2026',
         readTime: '7 min',
       }}
+      heroHop={
+        <>
+          <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">Horses drink less when water is icy, and a heated stall bucket is the supply that keeps winter water open.</p>
+          <div data-fold="offer">
+          <PrimaryHop href="/go/amazon-brand/heated+horse+water+bucket?s=reviews-winter-water-unfrozen-guide" label="Browse heated horse water buckets on Amazon" />
+          <HopDisclosure siteId="horses-com" href="/go/amazon-brand/heated+horse+water+bucket?s=reviews-winter-water-unfrozen-guide" />
+        </div>
+        </>
+      }
       breadcrumbs={[
         { name: 'Home', href: '/' },
         { name: 'Reviews', href: '/reviews' },

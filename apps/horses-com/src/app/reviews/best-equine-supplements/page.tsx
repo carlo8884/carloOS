@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import Link from 'next/link'
-import { TableShopLink, RelatedReads, ComparisonFoot, EmailCapture, buildMetadata, ReviewCard, QuickPicks, CrossPortfolioCard, RelatedLinks, FAQAccordion, PriceAsOf, QuietPartnerLink} from '@carloOS/ui'
+import { TableShopLink, RelatedReads, ComparisonFoot, EmailCapture, buildMetadata, ReviewCard, QuickPicks, CrossPortfolioCard, RelatedLinks, FAQAccordion, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, buildBreadcrumbSchema, SchemaScript, buildItemListSchema} from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -102,12 +102,14 @@ export default function BestEquineSupplementsPage() {
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-4 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>
           Best Equine Supplements 2026
         </h1>
+        <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">Platinum Performance Equine is the top wellness supplement because one daily serving combines omega-3s, antioxidants, and amino acids.</p>
         <PriceAsOf date="2026-10-04" tone="dark" />
-        <HopDisclosure siteId="horses-com" href="/go/amazon-brand/platinum+performance+equine+wellness?s=reviews-best-equine-supplements" />
+        <div data-fold="offer">
+          <HopDisclosure siteId="horses-com" href="/go/amazon-brand/platinum+performance+equine+wellness?s=reviews-best-equine-supplements" />
         <div className="mb-4" data-primary-hop="true">
           <a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" data-shop-placement="hero" href="/go/amazon-brand/platinum+performance+equine+wellness?s=reviews-best-equine-supplements">Browse Platinum Performance equine wellness on Amazon →</a>
         </div>
-        <QuietPartnerLink tone="dark" href="/go/smartpak/cosequin-asu-plus?s=reviews-best-equine-supplements" label="Check price of Cosequin ASU Plus on SmartPak" />
+        </div>
         <EmailCapture
           variant="inline"
           siteId="horses-com"

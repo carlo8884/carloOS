@@ -1,7 +1,7 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, EmailCapture, FAQAccordion, QuietPartnerLink, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { ArticleLayout, EmailCapture, FAQAccordion, QuietPartnerLink, RelatedLinks, buildArticleSchema, buildMetadata, PrimaryHop } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
@@ -48,12 +48,20 @@ export default function BlanketWeightByTemperatureGuidePage() {
       schema={schema}
       hero={{
         title: 'Horse blanket weight by temperature',
-        subtitle: 'The winter blanket review already maps fill weight to a temperature band. The gram and temperature bands below are the ones on that review.',
         category: 'Buyer guide',
         authorName: 'Horses.com Editorial',
         publishedAt: 'October 2026',
         readTime: '8 min',
       }}
+      heroHop={
+        <>
+          <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">A 200-gram fill is the medium blanket for cool weather, and the Horseware Rambo Original is the turnout listed with that fill.</p>
+          <div data-fold="offer">
+          <PrimaryHop href="/go/amazon-brand/horse+turnout+blanket?s=reviews-blanket-weight-by-temperature-guide" label="Browse horse turnout blankets on Amazon" />
+          <HopDisclosure siteId="horses-com" href="/go/amazon-brand/horse+turnout+blanket?s=reviews-blanket-weight-by-temperature-guide" />
+        </div>
+        </>
+      }
       breadcrumbs={[
         { name: 'Home', href: '/' },
         { name: 'Reviews', href: '/reviews' },

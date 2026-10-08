@@ -1,7 +1,7 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, EmailCapture, FAQAccordion, QuietPartnerLink, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { ArticleLayout, EmailCapture, FAQAccordion, QuietPartnerLink, RelatedLinks, buildArticleSchema, buildMetadata, PrimaryHop } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
@@ -45,12 +45,20 @@ export default function RamboVsRhinoGuidePage() {
       schema={schema}
       hero={{
         title: 'Rambo vs Rhino, same brand',
-        subtitle: 'Both are Horseware. The blanket review already separates the ballistic Rambo from the current Rhino Plus. Denier, fill, and the printed price below are the ones on the blanket review.',
         category: 'Buyer guide',
         authorName: 'Horses.com Editorial',
         publishedAt: 'October 2026',
         readTime: '6 min',
       }}
+      heroHop={
+        <>
+          <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">Buy the Rambo Original when you want the ballistic shell kept for years, and the Rhino Plus when you want the current filled Horseware blanket.</p>
+          <div data-fold="offer">
+          <PrimaryHop href="/go/amazon-brand/horse+turnout+blanket?s=reviews-rambo-vs-rhino-guide" label="Browse horse turnout blankets on Amazon" />
+          <HopDisclosure siteId="horses-com" href="/go/amazon-brand/horse+turnout+blanket?s=reviews-rambo-vs-rhino-guide" />
+        </div>
+        </>
+      }
       breadcrumbs={[
         { name: 'Home', href: '/' },
         { name: 'Reviews', href: '/reviews' },

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { HopDisclosure } from '../../../components/HopDisclosure'
-import { ArticleLayout, FAQAccordion, QuietPartnerLink, EmailCapture, RelatedLinks, buildArticleSchema, buildItemListSchema, buildMetadata, combineSchemas } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, buildArticleSchema, buildItemListSchema, buildMetadata, combineSchemas } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: 'Brushing Boots vs Bell Boots | Horses.com',
@@ -49,14 +49,19 @@ export default function BrushingBootsVsBellBootsGuidePage() {
       schema={combineSchemas(schema, itemList)}
       hero={{
         title: 'Brushing Boots or Bell Boots',
-        subtitle: 'Interference protection for the cannon, or overreach protection for the heel. Scores and prices below are the ones on the boots page.',
         category: 'Buyer guide',
         authorName: 'Horses.com Editorial',
         publishedAt: 'October 2026',
         readTime: '6 min',
       }}
-      heroHop={<><HopDisclosure siteId="horses-com" href="/go/amazon-brand/horse+brushing+boots?s=reviews-brushing-boots-vs-bell-boots-guide" /><a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" href="/go/amazon-brand/horse+brushing+boots?s=reviews-brushing-boots-vs-bell-boots-guide">Browse horse brushing boots on Amazon →</a></>}
-      heroExtra={<QuietPartnerLink tone="dark" href="/go/ridingwarehouse/synthetic-brushing-boots?s=reviews-brushing-boots-vs-bell-boots-guide" label="Check price of synthetic brushing boots at Riding Warehouse" />}
+      heroHop={
+        <>
+          <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">Synthetic brushing boots are the everyday pick because they cover the cannon when one leg strikes the other.</p>
+          <div data-fold="offer">
+          <HopDisclosure siteId="horses-com" href="/go/amazon-brand/horse+brushing+boots?s=reviews-brushing-boots-vs-bell-boots-guide" /><a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" href="/go/amazon-brand/horse+brushing+boots?s=reviews-brushing-boots-vs-bell-boots-guide">Browse horse brushing boots on Amazon →</a>
+        </div>
+        </>
+      }
       breadcrumbs={[
         { name: 'Home', href: '/' },
         { name: 'Reviews', href: '/reviews' },
@@ -91,9 +96,9 @@ export default function BrushingBootsVsBellBootsGuidePage() {
             "Standing wraps are a separate skill on that page and are not one of these two products.",
           ]}
         />
-        <p>Prices below are the ones on the <Link href="/tack/boots-and-wraps">boots and wraps page</Link>, which compares published retail specs. Blankets and pads have their own guides. This comparison is brushing boots against bell boots.</p>
+        <p>This comparison is brushing boots against bell boots.</p>
         <h2>What the page says about brushing boots</h2>
-        <p>Synthetic brushing or splint boots are Everyday Protection and the winner. The card says they protect the lower leg from interference strikes in schooling, lunging, and turnout. Liners are washable and quick-drying because grit trapped under a boot causes rubs. Fit is snug, not tight. The cons repeat that no boot in this category provides genuine tendon support, and that a dirty boot can rub. The printed price is $25–70 a pair. The link above is the Riding Warehouse search on that page.</p>
+        <p>Synthetic brushing or splint boots are Everyday Protection and the winner. The card says they protect the lower leg from interference strikes in schooling, lunging, and turnout. Liners are washable and quick-drying because grit trapped under a boot causes rubs. Fit is snug, not tight. The cons repeat that no boot in this category provides genuine tendon support, and that a dirty boot can rub. The printed price is $25–70 a pair. The link above searches Amazon for horse brushing boots.</p>
         <h2>What the page says about bell boots</h2>
         <p>Pull-on bell boots are Overreach Protection. The card says they cover the heel bulbs and coronet when a hind foot strikes the back of a front foot, and that they help keep a front shoe on. Pull-on styles stay secure. Hook-and-loop styles are easier to fit and can come loose in deep footing. The printed price is $12–35 a pair. Cons say pull-on styles are harder to put on, an oversized boot can rub, and muddy work means cleaning. The page ties them to horses that overreach, forge, or pull shoes, and to jumping and fast work.</p>
         <h2>Who should buy which boot</h2>
