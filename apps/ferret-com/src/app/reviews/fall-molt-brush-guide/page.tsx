@@ -1,7 +1,7 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata, PrimaryHop } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -48,12 +48,20 @@ export default function FallMoltBrushGuidePage() {
       schema={schema}
       hero={{
         title: 'Fall molt: brush the winter coat',
-        subtitle: 'Grooming already places the fall molt in September through November and names a soft slicker or a fine comb. The months below are the ones on the grooming page.',
         category: 'Buyer guide',
         authorName: 'Ferret.com Editorial',
         publishedAt: 'October 2026',
         readTime: '7 min',
       }}
+      heroHop={
+        <>
+          <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">Use a soft slicker or a fine comb for the fall molt, because that lifts the loose coat a ferret would otherwise swallow.</p>
+          <div data-fold="offer">
+          <PrimaryHop href="/go/amazon-brand/soft+slicker+brush+small+animal?s=reviews-fall-molt-brush-guide" label="Browse soft slicker brushes for small animals on Amazon" />
+          <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/soft+slicker+brush+small+animal?s=reviews-fall-molt-brush-guide" />
+        </div>
+        </>
+      }
       breadcrumbs={[
         { name: 'Home', href: '/' },
         { name: 'Reviews', href: '/reviews' },

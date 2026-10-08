@@ -44,14 +44,20 @@ export default function KayteeVsFerretNationGuidePage() {
       schema={schema}
       hero={{
         title: 'Kaytee or Ferret Nation for a group',
-        subtitle: 'A chain-store cage for one ferret, or the double unit the review lists for a small group. Specs below are the ones on the cage review.',
         category: 'Buyer guide',
         authorName: 'Ferret.com Editorial',
         publishedAt: 'October 2026',
         readTime: '6 min',
       }}
-      heroHop={<PrimaryHop href="/go/amazon-brand/ferret+nation+critter+nation+double+unit?s=reviews-kaytee-vs-ferret-nation-guide" label="Check price of the Ferret Nation / Critter Nation double unit on Amazon" />}
-      heroExtra={<HopDisclosure siteId="ferret-com" href="/go/amazon-brand/ferret+nation+critter+nation+double+unit?s=reviews-kaytee-vs-ferret-nation-guide" />}
+      heroHop={
+        <>
+          <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">The Ferret Nation double is the group cage, and the Kaytee multi-level is the single-ferret starter with daily time outside.</p>
+          <div data-fold="offer">
+          <PrimaryHop href="/go/amazon-brand/ferret+nation+critter+nation+double+unit?s=reviews-kaytee-vs-ferret-nation-guide" label="Check price of the Ferret Nation / Critter Nation double unit on Amazon" />
+          <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/ferret+nation+critter+nation+double+unit?s=reviews-kaytee-vs-ferret-nation-guide" />
+        </div>
+        </>
+      }
       breadcrumbs={[
         { name: 'Home', href: '/' },
         { name: 'Reviews', href: '/reviews' },
@@ -85,7 +91,7 @@ export default function KayteeVsFerretNationGuidePage() {
             "The Ferret Nation double unit is the overall cage.",
           ]}
         />
-        <p>Prices below are the ones on the <Link href="/reviews/best-ferret-cage">cage review</Link>. The Ferret Nation double unit is the overall cage. The Kaytee Multi-Level is the single-ferret starter. <Link href="/reviews/kaytee-vs-prevue-guide">Kaytee versus Prevue</Link> is the one-or-two ferret cage when the double unit is too big. Ferret Nation versus Prevue is a different pair, on the <Link href="/reviews/ferret-nation-vs-prevue-guide">Ferret Nation versus Prevue guide</Link>.</p>
+        <p>The Ferret Nation double unit is the overall cage. The Kaytee Multi-Level is the single-ferret starter. <Link href="/reviews/kaytee-vs-prevue-guide">Kaytee versus Prevue</Link> is the one-or-two ferret cage when the double unit is too big. Ferret Nation versus Prevue is a different pair, on the <Link href="/reviews/ferret-nation-vs-prevue-guide">Ferret Nation versus Prevue guide</Link>.</p>
         <h2>What the review says about the Kaytee</h2>
         <p>The Kaytee Multi-Level Ferret Home is the entry cage. It is widely stocked, multi-level, and the review says the footprint suits one ferret that gets generous daily time outside the cage, not a pair living in it full time. Bar spacing is listed as in range, with a warning to check the exact model. The price tier in the review is the entry tier. A second ferret can outgrow it.</p>
         <h2>What the review says about Ferret Nation</h2>
