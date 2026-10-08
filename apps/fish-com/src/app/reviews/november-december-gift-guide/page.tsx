@@ -1,7 +1,7 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, BelowFoldPhoto, ComparisonFoot, FAQAccordion, RelatedLinks, TableShopLink, buildArticleSchema, buildFAQSchema, buildMetadata, combineSchemas } from '@carloOS/ui'
+import { ArticleLayout, BelowFoldPhoto, ComparisonFoot, FAQAccordion, RelatedLinks, TableShopLink, buildArticleSchema, buildFAQSchema, buildMetadata, combineSchemas, PrimaryHop } from '@carloOS/ui'
 
 const PATH = '/reviews/november-december-gift-guide'
 const SOURCE = 'reviews-november-december-gift-guide'
@@ -49,12 +49,20 @@ export default function NovemberDecemberGiftGuidePage() {
       schema={combineSchemas(schema, faqSchema)}
       hero={{
         title: 'November and December aquarium gifts',
-        subtitle: 'Each price is the band already printed on an equipment card. This page does not add a fish, a score, or a product the reviews do not already name.',
         category: 'Buyer guide',
         authorName: 'Fish.com Editorial',
         publishedAt: 'October 2026',
         readTime: '8 min',
       }}
+      heroHop={
+        <>
+          <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">Easy Green is the fertilizer to give when the tank is planted, because the dosing is simple and it covers macros and micros.</p>
+          <div data-fold="offer">
+          <PrimaryHop href="/go/amazon-brand/aquarium+co-op+easy+green+fertilizer?s=reviews-november-december-gift-guide" label="Check price of Aquarium Co-Op Easy Green fertilizer on Amazon" />
+          <HopDisclosure tone="on-dark" siteId="fish-com" href="/go/amazon-brand/aquarium+co-op+easy+green+fertilizer?s=reviews-november-december-gift-guide" />
+        </div>
+        </>
+      }
       breadcrumbs={[
         { name: 'Home', href: '/' },
         { name: 'Reviews', href: '/reviews' },
@@ -163,7 +171,7 @@ export default function NovemberDecemberGiftGuidePage() {
             </tbody>
           </table>
         </div>
-        <ComparisonFoot updated="2026-10-07" />
+        <ComparisonFoot updated="2026-10-08" />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} includeSchema={false} />
         <BelowFoldPhoto siteId="fish-com" />

@@ -1,7 +1,7 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata, PrimaryHop } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'fish-com',
@@ -48,12 +48,20 @@ export default function WinterHeaterSizingGuidePage() {
       schema={schema}
       hero={{
         title: 'Aquarium heater size for a cold room',
-        subtitle: 'The wattage calculator already sizes a heater from tank volume and how cold the room gets. The wattage below is the winter case the calculator already works.',
         category: 'Buyer guide',
         authorName: 'Fish.com Editorial',
         publishedAt: 'October 2026',
         readTime: '7 min',
       }}
+      heroHop={
+        <>
+          <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">When the room falls, size the heater from the wattage calculator, and the Eheim Jager is the heater with a recalibration dial.</p>
+          <div data-fold="offer">
+          <PrimaryHop href="/go/amazon-brand/eheim+jager+heater?s=reviews-winter-heater-sizing-guide" label="Check price of the Eheim Jager heater on Amazon" />
+          <HopDisclosure tone="on-dark" siteId="fish-com" href="/go/amazon-brand/eheim+jager+heater?s=reviews-winter-heater-sizing-guide" />
+        </div>
+        </>
+      }
       breadcrumbs={[
         { name: 'Home', href: '/' },
         { name: 'Reviews', href: '/reviews' },

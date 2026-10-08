@@ -60,9 +60,12 @@ export default function BestAquariumFiltersPage() {
           style={{ fontSize: 'clamp(24px, 4vw, 46px)' }}>
           Best Aquarium Filters 2026 — HOB, Canister & Sponge Ranked
         </h1>
+        <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">The AquaClear 70 is the top aquarium filter because the basket holds foam, carbon, and ceramic rings you refill.</p>
         <PriceAsOf date="2026-10-07" tone="dark" />
-        <PrimaryHop href='/go/amazon-brand/aquaclear+70+filter?s=reviews-best-aquarium-filters' label='Check price of the AquaClear 70 filter on Amazon' />
-        <HopDisclosure siteId="fish-com" href="/go/amazon-brand/aquaclear+70+filter?s=reviews-best-aquarium-filters" />
+        <div data-fold="offer">
+          <PrimaryHop href='/go/amazon-brand/aquaclear+70+filter?s=reviews-best-aquarium-filters' label='Check price of the AquaClear 70 filter on Amazon' />
+        <HopDisclosure tone="on-dark" siteId="fish-com" href="/go/amazon-brand/aquaclear+70+filter?s=reviews-best-aquarium-filters" />
+        </div>
         <EmailCapture
           variant="inline"
           siteId="fish-com"

@@ -27,9 +27,12 @@ export default function BestNanoTanksPage() {
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-4">Buyer's Guide</span>
         <h1 className="font-display font-bold text-white tracking-tight leading-tight mb-4 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Nano Aquariums 2026</h1>
+        <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">The Fluval Spec V is the top nano tank because the filter is built into a 5-gallon all-in-one.</p>
         <PriceAsOf date="2026-10-07" tone="dark" />
-        <PrimaryHop href='/go/amazon-brand/fluval+spec+v+5+gallon?s=reviews-best-nano-tanks' label='Check price of the Fluval Spec V on Amazon' />
-        <HopDisclosure siteId="fish-com" href="/go/amazon-brand/fluval+spec+v+5+gallon?s=reviews-best-nano-tanks" />
+        <div data-fold="offer">
+          <PrimaryHop href='/go/amazon-brand/fluval+spec+v+5+gallon?s=reviews-best-nano-tanks' label='Check price of the Fluval Spec V on Amazon' />
+        <HopDisclosure tone="on-dark" siteId="fish-com" href="/go/amazon-brand/fluval+spec+v+5+gallon?s=reviews-best-nano-tanks" />
+        </div>
         <EmailCapture
           variant="inline"
           siteId="fish-com"
@@ -148,7 +151,7 @@ export default function BestNanoTanksPage() {
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-07" />
+              <ComparisonFoot updated="2026-10-08" />
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Which nano tank fits</h2>
               <FAQAccordion items={[
                 {

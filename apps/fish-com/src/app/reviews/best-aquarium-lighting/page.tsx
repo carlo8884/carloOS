@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import Link from 'next/link'
 import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildItemListSchema, buildProductSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
@@ -29,8 +30,12 @@ export default function BestAquariumLightingPage() {
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-4">Buyer's Guide</span>
         <h1 className="font-display font-bold text-white tracking-tight leading-tight mb-4 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Aquarium Lights 2026</h1>
+        <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">The Hygger 957 is the top budget planted light because seven channels are adjustable at a lower price than the premium lights.</p>
         <PriceAsOf date="2026-10-05" tone="dark" />
-        <PrimaryHop href='/go/amazon-brand/hygger+957?s=reviews-best-aquarium-lighting' label='Check price of the Hygger 957 on Amazon' />
+        <div data-fold="offer">
+          <PrimaryHop href='/go/amazon-brand/hygger+957?s=reviews-best-aquarium-lighting' label='Check price of the Hygger 957 on Amazon' />
+          <HopDisclosure tone="on-dark" siteId="fish-com" href="/go/amazon-brand/hygger+957?s=reviews-best-aquarium-lighting" />
+        </div>
         <p className="text-lg font-normal text-white/55 max-w-2xl leading-relaxed">Lighting requirements vary dramatically: a planted tank needs high PAR at the right spectrum; a reef needs intense, programmable full-spectrum light; a fish-only tank needs the bare minimum. Rankings draw on published PAR meter readings.</p>
       </div>
       <QuickPicks items={PICKS} />
@@ -124,7 +129,7 @@ export default function BestAquariumLightingPage() {
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-06" />
+              <ComparisonFoot updated="2026-10-08" />
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Which light fits which tank</h2>
               <FAQAccordion items={[
                 {

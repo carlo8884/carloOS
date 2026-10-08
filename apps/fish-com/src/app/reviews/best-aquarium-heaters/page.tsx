@@ -66,9 +66,12 @@ export default function BestHeatersPage() {
         <h1 className="font-display font-bold text-white tracking-tight leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>
           Best Aquarium Heaters 2026 — Ranked for Temperature Accuracy
         </h1>
+        <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">The Eheim Jager is the top aquarium heater because it is the most accurate of the heaters here, with a recalibration dial.</p>
         <PriceAsOf date="2026-10-07" tone="dark" />
-        <PrimaryHop href='/go/amazon-brand/eheim+jager+heater?s=reviews-best-aquarium-heaters' label='Check price of the Eheim Jager heater on Amazon' />
-        <HopDisclosure siteId="fish-com" href="/go/amazon-brand/eheim+jager+heater?s=reviews-best-aquarium-heaters" />
+        <div data-fold="offer">
+          <PrimaryHop href='/go/amazon-brand/eheim+jager+heater?s=reviews-best-aquarium-heaters' label='Check price of the Eheim Jager heater on Amazon' />
+        <HopDisclosure tone="on-dark" siteId="fish-com" href="/go/amazon-brand/eheim+jager+heater?s=reviews-best-aquarium-heaters" />
+        </div>
         <EmailCapture
           variant="inline"
           siteId="fish-com"
@@ -262,7 +265,7 @@ export default function BestHeatersPage() {
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-07" />
+              <ComparisonFoot updated="2026-10-08" />
             </div>
             <h2 className="font-display font-bold text-brand-dark text-xl mt-10 mb-4">Frequently Asked Questions</h2>
             <FAQAccordion items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
