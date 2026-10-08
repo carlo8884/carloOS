@@ -59,7 +59,7 @@ const softwareApplicationSchema = {
     'Supports rectangular, cube, bow-front, hexagonal, and cylinder tank shapes',
     'Outputs US gallons, UK (imperial) gallons, and liters simultaneously',
     'Inputs in inches or centimeters',
-    'Adjustable net-water fill factor (default 92%) for substrate and freeboard',
+    'Adjustable net-water fill factor (default 92%, a planning figure) for substrate and freeboard',
     'Common-size reference table from 5 to 180 US gallons',
   ],
   publisher: {
@@ -247,10 +247,8 @@ export default function VolumeCalculatorPage() {
           Manufacturers advertise <strong>gross volume</strong>: pure geometry, no decor, water filled to the rim. Your real tank is a different number.
         </p>
         <p>
-          Substrate alone usually displaces 5–8% of capacity — size the bed with the{' '}
-          <Link href="/tools/substrate-calculator">substrate calculator</Link>. Hardscape (driftwood, rock) can take another 3–5%. And you never fill water to the brim
-          — you leave 1–2 inches of freeboard. Net water volume — what you should use for dosing meds, calculating water changes, and stocking — is
-          usually <strong>88–92% of gross</strong>. Our calculator defaults to 92%, which is realistic for a planted tank with moderate hardscape.
+          Substrate, hardscape, and freeboard all take space out of the advertised gallons. Size the bed with the{' '}
+          <Link href="/tools/substrate-calculator">substrate calculator</Link>. This page does not cite a measured displacement percent. The 90–92% net-water allowance, including the 92% default, is a planning figure.
         </p>
 
         <h2 id="sizes">Common Tank Sizes (Reference)</h2>

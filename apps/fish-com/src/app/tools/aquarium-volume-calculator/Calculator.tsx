@@ -169,7 +169,7 @@ export default function VolumeCalculator() {
             min={1}
             max={100}
             step={1}
-            hint="Most tanks fill to ~92% of gross volume (substrate, decor, freeboard)."
+            hint="A 92% fill is a planning figure for substrate, decor, and freeboard, not a measured displacement."
             error={fillError}
           />
         </div>

@@ -137,7 +137,7 @@ export default function BestAquariumFiltersPage() {
                 { label: 'Noise', value: 'Low (at correct level)', highlight: 'good' },
                 { label: 'Maintenance', value: 'Monthly rinse, quarterly impeller' },
               ]}
-              pros={['Among the largest media baskets in its class', 'Refillable — no proprietary cartridge lock-in', 'Excellent biological capacity', 'Adjustable flow', 'Proven 30+ year track record']}
+              pros={['Among the largest media baskets in its class', 'Refillable — no proprietary cartridge lock-in', 'Excellent biological capacity', 'Adjustable flow', 'A long-running product line']}
               cons={['Impeller needs quarterly cleaning', 'Noisier if water level drops', 'Larger footprint than competitors']}
               price="$45–70"
               priceNote="dated 2026-10-04."
@@ -259,7 +259,7 @@ export default function BestAquariumFiltersPage() {
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-07" />
+              <ComparisonFoot updated="2026-10-08" />
             </div>
             <h2 className="font-display font-bold text-brand-dark text-xl mt-10 mb-4">Frequently Asked Questions</h2>
             <FAQAccordion items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
