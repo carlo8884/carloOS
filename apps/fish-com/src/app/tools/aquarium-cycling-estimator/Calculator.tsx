@@ -189,6 +189,14 @@ export default function Calculator() {
       <ResultMeaning>
         Those days are a planning range for this method and temperature. A test that reads zero ammonia and zero nitrite is what shows the tank has cycled.
       </ResultMeaning>
+      <p className="mt-4 text-sm font-semibold leading-snug">
+        <a
+          href="/setup/aquarium-cycling-guide"
+          className="inline-block max-w-full whitespace-normal text-brand-primary underline underline-offset-2"
+        >
+          Read the aquarium cycling guide
+        </a>
+      </p>
       <ResultPick siteId="fish-com" pick={cycleTestPick(result.totalDays, METHODS[method].label)} />
       </>
       )}

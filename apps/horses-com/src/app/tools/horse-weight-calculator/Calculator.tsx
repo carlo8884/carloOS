@@ -256,7 +256,11 @@ export default function Calculator() {
 
       {result && type !== 'youngstock' && (
         <p className="mt-2 text-sm text-brand-text-mid">
-          To convert this estimate into a daily forage target, carry it into the{' '}
+          To convert this estimate into a daily forage target,{' '}
+          <a href="/nutrition/forage-basics" className="text-brand-primary underline">
+            read forage basics
+          </a>
+          , then carry the pounds into the{' '}
           <a href="/tools/horse-feed-calculator" className="text-brand-primary underline">
             horse feed &amp; hay calculator
           </a>

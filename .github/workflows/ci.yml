@@ -81,3 +81,39 @@ jobs:
           restore-keys: google-fonts-${{ runner.os }}-
       - run: npm ci
       - run: node scripts/ci/launch-flip.mjs
+
+  # Non-blocking until all five sites pass. Then fold this spec into verify
+  # and delete this job so the required money-journey step runs it once.
+  tool-result-journeys:
+    continue-on-error: true
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      NEXT_PUBLIC_SUPABASE_URL: https://placeholder.supabase.co
+      NEXT_PUBLIC_SUPABASE_ANON_KEY: placeholder-anon-key
+      NEXT_PUBLIC_GA_MEASUREMENT_ID: G-PLACEHOLDER
+      TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
+      TURBO_TEAM: ${{ vars.TURBO_TEAM }}
+      TOOL_RESULT_JOURNEYS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      - uses: actions/cache@v4
+        with:
+          path: .turbo
+          key: turbo-${{ runner.os }}-${{ github.sha }}
+          restore-keys: turbo-${{ runner.os }}-
+      - run: npm ci
+      - uses: actions/cache@v4
+        with:
+          path: node_modules/.cache/google-fonts
+          key: google-fonts-${{ runner.os }}-${{ hashFiles('apps/**/src/app/layout.tsx', 'scripts/ci/patch-google-font-fetch.cjs') }}
+          restore-keys: google-fonts-${{ runner.os }}-
+      - run: npx turbo build
+      - name: Install Playwright Chromium
+        run: npx playwright install --with-deps chromium
+      - name: Tool result journeys
+        run: npx playwright test e2e/tool-result-journeys.spec.ts

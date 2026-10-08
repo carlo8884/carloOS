@@ -22,6 +22,9 @@ function serverEnv(): Record<string, string> {
 
 const only = process.env.JOURNEY_SITE
 const selected = only ? sites.filter((site) => site.name === only) : [...sites]
+// Off by default so the required verify job does not run this spec until
+// every site's tool → guide → hop path has passed the non-blocking job.
+const toolResultSpecs = process.env.TOOL_RESULT_JOURNEYS === '1' ? ['tool-result-journeys.spec.ts'] : []
 
 export default defineConfig({
   testDir: './e2e',
@@ -44,7 +47,7 @@ export default defineConfig({
   })),
   projects: selected.map((site) => ({
     name: site.name,
-    testMatch: [`${site.name}.spec.ts`, 'ga4-queue.spec.ts', 'hydration.spec.ts', 'security-headers.spec.ts', 'hub-groups.spec.ts', 'attribution.spec.ts', 'journey-events.spec.ts', 'buyer-journeys.spec.ts', 'mobile-nav.spec.ts'],
+    testMatch: [`${site.name}.spec.ts`, 'ga4-queue.spec.ts', 'hydration.spec.ts', 'security-headers.spec.ts', 'hub-groups.spec.ts', 'attribution.spec.ts', 'journey-events.spec.ts', 'buyer-journeys.spec.ts', 'mobile-nav.spec.ts', ...toolResultSpecs],
     use: { baseURL: `http://127.0.0.1:${site.port}` },
   })),
 })
