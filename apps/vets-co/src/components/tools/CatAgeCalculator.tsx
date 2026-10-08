@@ -10,6 +10,7 @@
  */
 
 import { useMemo, useState } from 'react'
+import Link from 'next/link'
 import { ResultMeaning, ToolError, numberFieldError } from '@carloOS/ui'
 
 function humanYears(cat: number): number {
@@ -112,6 +113,11 @@ export default function CatAgeCalculator() {
           <ResultMeaning>
             Human-equivalent age is a planning chart for this life stage. It is an approximation, not a diagnosis.
           </ResultMeaning>
+          <p className="mt-3 text-sm">
+            <Link href="/tools/cat-body-condition-score" className="font-semibold text-brand-primary underline">
+              Score body condition next
+            </Link>
+          </p>
         </div>
       )}
 
