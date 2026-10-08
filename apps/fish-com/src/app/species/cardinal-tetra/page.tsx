@@ -323,8 +323,7 @@ export default function CardinalTetraPage() {
           </p>
           <p>
             <strong>Excellent tank mates:</strong> discus (classic), German
-            blue rams, Apistogramma dwarf cichlids, corydoras catfish
-            (especially C. sterbai for the warmer temperature overlap), Amano
+            blue rams, Apistogramma dwarf cichlids, corydoras catfish, Amano
             and cherry shrimp (adult shrimp; juvenile shrimp may be eaten),
             otocinclus, hatchetfish, pencilfish, other small tetras (ember,
             green neon, rummynose).

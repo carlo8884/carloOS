@@ -131,6 +131,13 @@ const CLAIMS = [
   fish('swordtail-fish', /70\s*[–—-]\s*78\s*°F|70-78F/, /71\s*[–—-]\s*83\s*°F/, /Xiphophorus-hellerii\.html/),
   fish('angelfish', /76\s*[–—-]\s*82\s*°F|78\s*[–—-]\s*82\s*°F/, /75\s*[–—-]\s*86\s*°F/, /Pterophyllum-scalare\.html/),
   fish('corydoras', /72\s*[–—-]\s*78\s*°F|sterbai to 84/, /77\s*[–—-]\s*83\s*°F/, /Corydoras-aeneus\.html/),
+  {
+    id: 'fish-corydoras-sterbai',
+    fileIncludes: 'species/corydoras/',
+    wrong: /82\s*[–—-]\s*84\s*°F|82-84F|82-84°F|\b84\s*°F\b/,
+    when: /69\s*[–—-]\s*77\s*°F/,
+    source: /Corydoras-sterbai\.html/,
+  },
   fish('bronze-corydoras', /72\s*[–—-]\s*79\s*°F/, /77\s*[–—-]\s*83\s*°F/, /Corydoras-aeneus\.html/),
   fish('bristlenose-pleco', /73\s*[–—-]\s*80\s*°F/, /70\s*[–—-]\s*79\s*°F/, /ancistrus-cf-cirrhosus/),
   fish('harlequin-rasbora', /73\s*[–—-]\s*82\s*°F/, /71\s*[–—-]\s*77\s*°F/, /Trigonostigma-heteromorpha\.html/),
@@ -290,6 +297,10 @@ function assertFixtures() {
     ['african wrong', 'apps/fish-com/src/app/species/african-cichlid/page.tsx', 'temperature 76–82°F', false],
     ['axolotl wrong', 'apps/fish-com/src/app/species/axolotl/page.tsx', 'The optimal range is 60–68°F. Above 72°F.', false],
     ['hillstream sourced', 'apps/fish-com/src/app/species/hillstream-loach/page.tsx', '68–76°F (https://www.seriouslyfish.com/species/sewellia-lineolata/)', true],
+    ['sterbai wrong', 'apps/fish-com/src/app/species/corydoras/page.tsx', 'handles 82–84°F and Warm tolerant 84°F', false],
+    ['sterbai sourced', 'apps/fish-com/src/app/species/corydoras/page.tsx', '69–77°F (https://www.fishbase.se/summary/Corydoras-sterbai.html)', true],
+    ['aeneus still sourced', 'apps/fish-com/src/app/species/corydoras/page.tsx', '77–83°F (https://www.fishbase.se/summary/Corydoras-aeneus.html)', true],
+    ['ich heat stays', 'apps/fish-com/src/app/health/ich-treatment/page.tsx', '4-5 days at 82-84°F (the heat method)', true],
   ]
   const problems = []
   for (const [label, path, text, shouldPass] of checks) {
