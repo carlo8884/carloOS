@@ -5,12 +5,12 @@ import { HopDisclosure } from '../../../components/HopDisclosure'
 /**
  * Dog Exercise Needs Estimator -- /tools/dog-exercise-calculator
  *
- * Estimates a daily exercise target from life stage and (for adults/seniors)
- * energy level, or — for puppies — the widely-cited "5 minutes per month of age,
- * once or twice a day" guideline that protects developing joints. Outputs are
- * ranges framed as guidelines, not prescriptions; health conditions and hot
- * weather change the answer, and the tool defers to a vet. No fabricated
- * precision.
+ * Puppy walks: AKC cites veterinary researchers for about five minutes of walking
+ * per month of age, once or twice a day.
+ * https://www.akc.org/expert-advice/health/puppies-mental-physical-exercise/
+ * That is a walk cap, not a published physiologic law.
+ * Adult minute bands and the senior ×0.6 factor are planning figures. No
+ * primary source was fetched for those numbers.
  */
 
 import { useMemo, useState } from 'react'
@@ -19,6 +19,7 @@ import { ResultMeaning, ToolError, numberFieldError } from '@carloOS/ui'
 type Stage = 'puppy' | 'adult' | 'senior'
 type Energy = 'low' | 'moderate' | 'high' | 'veryhigh'
 
+// Planning figure: adult minute bands. Not an AKC chart.
 const ENERGY_OPTIONS: { value: Energy; label: string; example: string; min: number; max: number }[] = [
   { value: 'low', label: 'Low energy', example: 'e.g. Bulldog, Basset Hound, many toy breeds', min: 20, max: 40 },
   { value: 'moderate', label: 'Moderate', example: 'e.g. most companion and mixed breeds', min: 45, max: 60 },
@@ -90,12 +91,13 @@ export default function DogExerciseCalculator() {
       const perSession = Math.round(m * 5)
       return {
         headline: `${perSession} min per session, once or twice a day`,
-        body: `The widely used guideline is about five minutes of structured exercise (a lead walk) per month of age, once or twice daily — so roughly ${perSession} minutes a session at ${m} months. Keep it gentle and let free play and sniffing make up the rest. Forced, repetitive, or high-impact exercise (long runs, stairs, jumping) before the growth plates close can damage developing joints.`,
+        body: `How we calculate: the AKC walk cap is about five minutes times age in months, once or twice a day — about ${perSession} minutes a session at ${m} months. It is a walk cap, not a physiologic law. Forced, repetitive, or high-impact exercise before the growth plates close can injure developing joints.`,
         tone: 'good' as const,
       }
     }
     const e = ENERGY_OPTIONS.find((o) => o.value === energy)!
     if (stage === 'senior') {
+      // Planning figure: senior factor 0.6. Not a published exercise standard.
       const min = Math.round(e.min * 0.6)
       const max = Math.round(e.max * 0.6)
       return {
@@ -209,7 +211,9 @@ export default function DogExerciseCalculator() {
       )}
 
       <p className="mt-4 text-2xs leading-snug text-brand-text-light">
-        A guideline, not a prescription. Individual fitness, breed, weather (cut back in heat), and any heart, joint,
+        How we calculate: puppy sessions use the AKC walk cap of about five minutes times age in months, once or twice a day
+        (https://www.akc.org/expert-advice/health/puppies-mental-physical-exercise/). Adult minute bands (20–40, 45–60, 60–90, 90–120)
+        and the senior ×0.6 factor are planning figures. Individual fitness, breed, weather, and any heart, joint,
         or breathing condition change the right amount — check with your vet before increasing a dog&apos;s exercise,
         especially flat-faced breeds and dogs with a diagnosed condition.
       </p>

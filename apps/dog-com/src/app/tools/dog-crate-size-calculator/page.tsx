@@ -46,7 +46,7 @@ const FAQS = [
   {
     question: 'Do crate dimensions vary between brands?',
     answer:
-      'Yes. The 18/22/24/30/36/42/48-inch sizes are an industry convention, but the internal width and height differ between manufacturers, and a crate\'s stated size is usually its external length. Always check the specific crate\'s internal measurements against the minimums this calculator gives you before buying.',
+      'The inch table in this calculator is a planning figure, not a published manufacturer chart. Internal width and height differ between brands, and a stated size is often the external length. Check the crate\'s internal measurements against the minimums before buying.',
   },
 ]
 

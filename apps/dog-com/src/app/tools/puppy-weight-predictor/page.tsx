@@ -20,7 +20,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
   title: 'Puppy Weight Predictor — How Big Will My Puppy Get? | Dog.com',
   description:
-    'Estimate your puppy\'s adult weight from its current age and weight using the standard growth-percentage method and published size-class growth curves. Free.',
+    'Estimate adult weight from age and current weight. The growth-fraction table is a planning figure, not a published curve.',
   path: '/tools/puppy-weight-predictor',
 })
 
@@ -82,7 +82,7 @@ const appSchema = {
   '@type': 'WebApplication',
   name: 'Puppy Weight Predictor',
   description:
-    'Free puppy weight predictor that estimates a dog\'s adult weight range from current age and weight using the growth-percentage method and published size-class growth curves.',
+    'Adult-weight range from current age and weight. The growth-fraction table is a planning figure, not a published curve.',
   url: 'https://dog.com/tools/puppy-weight-predictor',
   applicationCategory: 'UtilityApplication',
   operatingSystem: 'Web',
@@ -100,7 +100,7 @@ const articleSchema = buildArticleSchema({
   siteId: 'dog-com',
   title: 'Puppy Weight Predictor',
   description:
-    'How to estimate a puppy\'s adult weight using the growth-percentage method and published size-class growth curves, with a worked example.',
+    'How to estimate a puppy\'s adult weight from a planning-figure growth table, with a worked example.',
   url: 'https://dog.com/tools/puppy-weight-predictor',
   imageUrl: 'https://dog.com/og/tools.png',
   authorName: 'Dog.com Editorial',
@@ -112,7 +112,7 @@ const articleSchema = buildArticleSchema({
 
 const howToSchema = buildHowToSchema({
   name: 'How to predict a puppy\'s adult weight',
-  description: 'Estimate adult weight from current age and weight using the growth-percentage method and published size-class growth curves.',
+  description: 'Estimate adult weight from current age and weight. The growth fractions are a planning figure, not a published curve.',
   url: 'https://dog.com/tools/puppy-weight-predictor',
   steps: [
     {
@@ -163,8 +163,8 @@ export default function PuppyWeightPredictorPage() {
           </h1>
           <p className="text-base text-white/60 leading-relaxed max-w-2xl">
             How big will your puppy get? Enter your puppy&apos;s size class, current age, and current
-            weight to estimate its adult weight as a range — using the standard growth-percentage method
-            and published size-class growth curves, not a single fixed multiplier.
+            weight to estimate its adult weight as a range. The growth fractions are a planning figure,
+            not a published curve, and the result is not a single fixed multiplier.
           </p>
         </div>
       </section>
@@ -279,9 +279,9 @@ export default function PuppyWeightPredictorPage() {
             Approximate % of adult weight reached by age
           </h2>
           <p className="mb-4 text-sm text-brand-text-mid leading-relaxed">
-            These are typical growth fractions by size class, interpolated from published AKC and
-            veterinary growth-curve references. Smaller breeds mature faster; larger breeds keep growing
-            for many more months. Use the row that matches your puppy&apos;s expected adult size.
+            How we calculate: these growth fractions are a planning figure, not an AKC chart and not a
+            Waltham curve. No paper stating these percentages was fetched. Use the row that matches the
+            expected adult size, and treat the result as a range.
           </p>
           <div className="overflow-x-auto rounded-lg border border-brand-border">
             <table className="w-full text-sm border-collapse bg-brand-white">
@@ -365,13 +365,10 @@ export default function PuppyWeightPredictorPage() {
             The method behind the estimate
           </h2>
           <p className="mb-4 text-base leading-relaxed text-brand-text-mid">
-            The predictor uses the growth-percentage method, the same logic veterinary and AKC growth
-            guidance describe: a puppy reaches a predictable share of its adult weight at a given age,
-            and that share depends mostly on adult size. The tool divides current weight by the typical
-            growth fraction at the puppy&apos;s current age for the selected size class, then widens the
-            result into a range to reflect breed and individual variation. It deliberately avoids the
-            single &quot;multiply by two&quot; shortcut, which only fits small and medium breeds and
-            badly underestimates large and giant dogs.
+            How we calculate: adult weight is current weight divided by a planning-figure growth
+            fraction for the selected size class. Those fractions are not a published AKC or Waltham
+            curve. The tool then widens the result into a range. It does not use a single
+            &quot;multiply by two&quot; shortcut.
           </p>
           <p className="mb-4 text-base leading-relaxed text-brand-text-mid">
             For breed-specific adult-weight context, browse the{' '}

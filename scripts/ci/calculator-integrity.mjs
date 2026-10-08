@@ -318,10 +318,11 @@ const CALCULATORS = [
     file: 'apps/dog-com/src/app/tools/dog-crate-size-calculator/Calculator.tsx',
     mustInclude: [
       { re: /ADD_INCHES\s*=\s*2/, label: '+2 in minimum clearance on each body measurement' },
+      { re: /planning figure/, label: 'crate inch table labeled a planning figure' },
       { re: /c\.len\s*>=\s*minLength\s*&&\s*c\.height\s*>=\s*minHeight/, label: 'pick smallest crate meeting both minimums' },
       { re: /href="\/reviews\/best-dog-crates"/, label: 'result links the crate review next to the iCrate pick' },
     ],
-    why: 'Crate must let the dog stand/turn/lie flat: add ~2 in (standard 2–4 in, min) to length+height, pick smallest standard crate clearing both — aligns with manufacturer weight charts. The result also links the crate review beside the MidWest iCrate pick.',
+    why: 'Crate must let the dog stand/turn/lie flat: add 2 in to length and height, then pick the smallest row in the planning-figure inch table. The table is not a manufacturer standard. The result also links the crate review beside the MidWest iCrate pick.',
   },
   {
     id: 'dog · dog-crate-size-calculator hops',
@@ -5593,8 +5594,12 @@ const CALCULATORS = [
   {
     id: 'dog · dog-gestation-calculator',
     file: 'apps/dog-com/src/app/tools/dog-gestation-calculator/Calculator.tsx',
-    mustInclude: [{ re: /AVG_DAYS\s*=\s*63/, label: 'canine gestation ~63 days' }],
-    why: 'Canine gestation averages ~63 days from breeding (normal window ~58–68).',
+    mustInclude: [
+      { re: /AVG_DAYS\s*=\s*63/, label: 'day 63 is the ovulation midpoint only' },
+      { re: /MAX_DAYS\s*=\s*72/, label: 'Merck untimed-breeding window ends at 72 days' },
+      { re: /merckvetmanual\.com\/reproductive-system\/reproductive-system-introduction\/the-reproductive-system-in-animals/, label: 'Merck gestation table cited beside the constants' },
+    ],
+    why: 'Merck: 58–72 days from breeding at an unknown stage of estrus; 62–64 days from ovulation. Day 63 is that ovulation midpoint, not a breeding-date average.',
   },
   {
     id: 'dog · dog-gestation-calculator hops',
@@ -6524,6 +6529,7 @@ const CALCULATORS = [
       { re: /useState<string>\('20'\)/, label: 'default current weight 20 lb' },
       { re: /\{ weeks: 16, fraction: 0\.40 \}/, label: 'large 16 wk = 40% of adult weight' },
       { re: /\{ weeks: 12, fraction: 0\.30 \}/, label: 'large 12 wk = 30% of adult weight (14 wk interpolates to 35%)' },
+      { re: /planning figure/, label: 'puppy-weight anchors labeled a planning figure' },
     ],
     why: 'Growth-percentage method: adult ≈ current ÷ fraction. Defaults match the on-page 20 lb / 14 wk large-breed worked example (20 ÷ 0.35 ≈ 57 lb). Large 16 wk is 40%, not the small-breed double-at-16-weeks shortcut.',
   },
@@ -6633,6 +6639,16 @@ const CALCULATORS = [
       { re: /laminated\+|fridge\+|handbook/, label: 'no invented kitchen hops on the journey strip' },
     ],
     why: '2026-09-08 journeys: after the BCS estimate, next step is the ideal-weight calculator + the existing portion-control scale hop. Shop dump stays below. No invented kitchen hops.',
+  },
+  {
+    id: 'dog · dog-exercise-calculator',
+    file: 'apps/dog-com/src/app/tools/dog-exercise-calculator/Calculator.tsx',
+    mustInclude: [
+      { re: /akc\.org\/expert-advice\/health\/puppies-mental-physical-exercise/, label: 'AKC five-minute walk cap cited' },
+      { re: /Math\.round\(m \* 5\)/, label: 'puppy minutes = months × 5' },
+      { re: /planning figure/, label: 'adult bands and senior factor labeled planning figures' },
+    ],
+    why: 'Puppy walks cite the AKC five-minutes-times-months cap. Adult minute bands and the senior 0.6 factor are planning figures.',
   },
   {
     id: 'dog · dog-exercise-calculator hops',
@@ -7965,8 +7981,9 @@ const CALCULATORS = [
       { re: /SIZE_UP_MARGIN_IN\s*=\s*0\.5/, label: 'size-up when within 0.5 in of next band' },
       { re: /id: 'XS',\s*minIn: 6,\s*maxIn: 10/, label: 'XS collar band 6–10 in neck' },
       { re: /valueIn\s*>=\s*next\.minIn\s*-\s*SIZE_UP_MARGIN_IN/, label: 'conservative size-up at band boundary' },
+      { re: /planning figure/, label: 'harness bands labeled a planning figure' },
     ],
-    why: 'Typical retail collar/harness letters map to neck/girth inches; between sizes size up by a 0.5 in margin.',
+    why: 'Collar and harness letter bands are a planning figure, not a published brand chart. Between sizes, size up by a 0.5 in margin.',
   },
   {
     id: 'dog · harness-collar-size hops',

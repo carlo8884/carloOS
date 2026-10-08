@@ -4,9 +4,9 @@
  * Dog Harness & Collar Size Calculator -- /tools/harness-collar-size
  *
  * Client compute component. Turns weight and/or size class plus neck and
- * chest measurements into typical manufacturer collar and harness size
- * bands (XS–XXL) with a conservative size-up when the measurement sits
- * near the top of a band.
+ * chest measurements into a planning-figure collar and harness size
+ * table (XS–XXL). The 0.5 inch size-up margin is a planning figure, not a
+ * published brand chart.
  *
  * Product-sizing / husbandry guidance only -- not a medical claim, not a
  * brand-specific guarantee. Brands cut differently; check the product chart.
@@ -35,8 +35,7 @@ interface SizePreset {
   fallbackBand: BandId
 }
 
-// Conservative size-up when a measurement is within this many inches of
-// the next band's minimum (typical "between sizes → size up" retail rule).
+// Planning figure: size up within 0.5 in of the next band. Not a published brand chart.
 const SIZE_UP_MARGIN_IN = 0.5
 const IN_PER_CM = 1 / 2.54
 const LB_PER_KG = 2.20462
@@ -444,9 +443,9 @@ export default function HarnessCollarSizeCalculator() {
       </div>
 
       <p className="mt-5 text-2xs leading-snug text-brand-text-light">
-        Product-sizing guidance from typical manufacturer neck and girth bands. Not a veterinary assessment
-        and not a fit guarantee for any one brand. If a strap rubs, pinches, or the dog can back out, stop
-        and refit or choose another style.
+        How we calculate: letter sizes come from a planning-figure neck and girth table, and the tool
+        sizes up when a measurement is within 0.5 inch of the next band. That table is not a published
+        brand chart. If a strap rubs, pinches, or the dog can back out, stop and refit.
       </p>
     </div>
   )
