@@ -242,12 +242,13 @@ export default function AquariumCyclingEstimatorPage() {
         </div>
 
         <h2 id="methods">Method comparison</h2>
+        <p>The day ranges in this table are planning figures, not a measured cycle time for your tank.</p>
         <div style={{ overflowX: 'auto', marginBottom: '24px' }}>
           <table className="w-full text-sm border-collapse">
             <thead>
               <tr className="border-b border-brand-border">
                 <th className="text-left py-2 pr-4 font-semibold text-brand-dark">Method</th>
-                <th className="text-left py-2 pr-4 font-semibold text-brand-dark">Typical time</th>
+                <th className="text-left py-2 pr-4 font-semibold text-brand-dark">Planning window</th>
                 <th className="text-left py-2 font-semibold text-brand-dark">Best for</th>
               </tr>
             </thead>

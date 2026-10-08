@@ -43,7 +43,7 @@ const schema = buildHowToSchema({
     },
     {
       name: 'Read the starting rate and diffuser size',
-      text: 'Pressurized: start near 1 bubble/second per 10 gallons, scaled by plant density, with a diffuser sized to the tank. Liquid: a typical bottle starting point is 1 ml per 10 US gallons daily — follow the label.',
+      text: 'Planning figures, not a published dosing standard: pressurized CO2 starts near 1 bubble/second per 10 gallons, scaled by plant density. Liquid carbon starts at 1 ml per 10 US gallons daily — follow the bottle label.',
     },
     {
       name: 'Confirm with a drop checker',

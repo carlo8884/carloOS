@@ -38,7 +38,7 @@ const schema = buildHowToSchema({
     },
     {
       name: 'Pick the tank style',
-      text: 'Community and planted tanks typically want 4–6× turnover; goldfish 6–10×; cichlids 8–10×; reef display return plus powerheads 10–20×.',
+      text: 'These turnover bands are planning figures, not a published standard: community and planted 4–6×; goldfish 6–10×; cichlids 8–10×; reef display return plus powerheads 10–20×.',
     },
     {
       name: 'Multiply gallons by the band',
@@ -85,7 +85,7 @@ const FAQS = [
   {
     question: 'How many GPH does my aquarium filter need?',
     answer:
-      'Multiply tank gallons by a turnover band for the style of tank. Community freshwater is usually 4–6 times the tank volume per hour (a 20-gallon tank → about 80–120 GPH). Goldfish and other messy fish need more; reef tanks need still more when you count powerheads. Buy above the manufacturer “rated for X gallons” label.',
+      'Multiply tank gallons by a turnover band for the style of tank. The bands are planning figures: community freshwater 4–6 times the tank volume per hour (a 20-gallon tank → about 80–120 GPH). Goldfish and other messy fish use a higher planning band; reef tanks use a higher one when you count powerheads. Buy above the manufacturer “rated for X gallons” label.',
   },
   {
     question: 'Is the inch-per-gallon rule the same as filter GPH?',
