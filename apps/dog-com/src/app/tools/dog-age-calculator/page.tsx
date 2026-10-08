@@ -17,7 +17,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
   title: 'Dog Age in Human Years Calculator | Dog.com',
   description:
-    'Convert your dog\'s age to human years with the AVMA/AAHA-style banded model -- more accurate than the x7 rule. Enter age and size for an instant estimate.',
+    'Convert a dog\'s age to human years with a banded planning figure, not an AVMA or AAHA chart. Enter age and size.',
   path: '/tools/dog-age-calculator',
 })
 
@@ -25,30 +25,30 @@ const FAQS = [
   {
     question: 'Why is the "multiply by 7" rule inaccurate?',
     answer:
-      'The popular rule of multiplying a dog\'s age by 7 assumes a simple linear relationship between dog and human aging, which does not reflect how dogs actually develop. Dogs mature very rapidly in their first year -- reaching reproductive maturity in roughly 6-12 months -- and then slow down considerably in later life, especially smaller breeds. A one-year-old dog is already physiologically closer to a 15-year-old human than to a 7-year-old. The multiply-by-7 shortcut also ignores size: large and giant breeds age significantly faster than small breeds in later years, meaning a 10-year-old Great Dane and a 10-year-old Chihuahua are not at equivalent human-age stages. A 2020 epigenetic clock study published in Cell Systems (University of California, San Diego) proposed a methylation-based formula -- approximately 16 x ln(dog age) + 31 -- as a more biologically grounded model derived from Labrador Retrievers, though this applies to one breed and is not yet widely generalized across sizes. The AVMA and AAHA use life-stage frameworks (puppy, adult, mature, senior) that better reflect the non-linear nature of dog aging, and the banded model used by this calculator aligns with those frameworks.',
+      'The popular rule of multiplying a dog\'s age by 7 assumes a simple linear relationship between dog and human aging, which does not reflect how dogs actually develop. Dogs mature very rapidly in their first year -- reaching reproductive maturity in roughly 6-12 months -- and then slow down considerably in later life, especially smaller breeds. A one-year-old dog is already physiologically closer to a 15-year-old human than to a 7-year-old on this page\'s planning chart. The multiply-by-7 shortcut also ignores size: large and giant breeds age faster than small breeds in later years, meaning a 10-year-old Great Dane and a 10-year-old Chihuahua are not at equivalent stages on that chart. A 2020 epigenetic clock study published in Cell Systems (University of California, San Diego) proposed a methylation-based formula -- approximately 16 x ln(dog age) + 31 -- from Labrador Retrievers. That formula is one breed study. This calculator does not use it, and it is not an AVMA or AAHA chart. The 15 / 9 / size-rate band on this page is a planning figure.',
     answerText:
-      'The multiply-by-7 rule is inaccurate because dogs age non-linearly: very fast early, then more slowly, with larger breeds aging faster in later life. AVMA/AAHA use life-stage frameworks instead. A 2020 Cell Systems epigenetic study (UCSD) proposed 16 x ln(dog age) + 31 as one alternative model from Labradors.',
+      'The multiply-by-7 rule treats aging as linear. This page uses a planning figure instead: fast early, then slower, with a higher later rate for larger dogs. It is not an AVMA or AAHA chart. A 2020 Cell Systems study proposed 16 x ln(dog age) + 31 from Labradors; this calculator does not use that formula.',
   },
   {
     question: 'How does size affect how a dog ages?',
     answer:
-      'Larger and giant breeds age faster after early adulthood, and typically have shorter median lifespans than small breeds. A Giant breed dog (over 90 lb) is often considered "senior" by around age 6, while a small breed (under 20 lb) may not reach that stage until age 9-10 or later. The physiological reasons are not fully understood, but one leading hypothesis is that rapid growth in large breeds may increase oxidative stress and cellular wear over time. This is why this calculator uses different per-year conversion rates by size for dogs older than two years: Small 4 human years per calendar year, Medium and Large 5, Giant 6. These are population-level estimates; individual dogs of the same size and breed can age quite differently based on genetics, body condition, nutrition, and veterinary care.',
+      'Larger and giant breeds often have shorter median lifespans than small breeds. On this calculator the senior label is a planning figure: giant breeds at about age 6, large at 7, medium at 8, and small at 9. After age two the human-year rates are also a planning figure: Small 4 human years per calendar year, Medium and Large 5, Giant 6. They are not an AVMA or AAHA chart. Individual dogs of the same size can age differently based on genetics, body condition, nutrition, and veterinary care.',
     answerText:
-      'Larger breeds age faster after early adulthood and have shorter lifespans. Giants become "senior" around age 6; small dogs around 9-10. After age 2, the calculator applies size-specific rates: Small 4 human yr/yr, Medium/Large 5, Giant 6.',
+      'Senior labels and the after-age-2 rates are a planning figure, not an AVMA or AAHA chart: giant about 6, large 7, medium 8, small 9; then Small 4, Medium/Large 5, Giant 6 human years per calendar year.',
   },
   {
     question: 'What do the life stage labels (puppy, adult, senior) mean?',
     answer:
-      'The life stage labels in this calculator -- Puppy, Adolescent, Adult, Mature adult, Senior -- are qualitative descriptions aligned with AVMA and AAHA-style frameworks, which divide a dog\'s life into stages to guide veterinary care decisions rather than provide a precise age mapping. "Senior" thresholds vary by source and by size: this calculator places giant breeds in the Senior stage at approximately age 6, large at 7, medium at 8, and small at 9. These are rough approximations. Your veterinarian is the right person to assess your dog\'s individual health status and stage of life, since two dogs of the same age and size can be at meaningfully different physiological stages depending on their history and condition.',
+      'The life stage labels in this calculator -- Puppy, Adolescent, Adult, Mature adult, Senior -- are a planning figure, not an AVMA or AAHA chart. This page places giant breeds in the Senior stage at approximately age 6, large at 7, medium at 8, and small at 9. Your veterinarian is the right person to assess an individual dog, since two dogs of the same age and size can be at different stages depending on their history and condition.',
     answerText:
-      'Life stage labels follow AVMA/AAHA-style frameworks. Senior thresholds: Giant ~6, Large ~7, Medium ~8, Small ~9. These are qualitative and approximate; your veterinarian assesses individual health status.',
+      'Life stage labels are a planning figure, not an AVMA or AAHA chart. Senior thresholds: Giant ~6, Large ~7, Medium ~8, Small ~9. Your veterinarian assesses individual health status.',
   },
   {
     question: 'Is this an exact conversion or an estimate?',
     answer:
-      'It is an estimate. The banded model this calculator uses -- 15 human years in year one, 9 in year two, then a size-based rate per year after that -- is a simplified, population-level approximation derived from published veterinary life-stage frameworks (AVMA, AAHA). It gives a reasonable rough comparison that is far more accurate than the naive multiply-by-7 rule, but it does not account for breed, individual health history, body condition, or the continuous variation in aging rates across individual dogs. Epigenetic research is moving toward more precise biological age clocks, but those are not yet standardized across breeds and sizes for clinical or consumer use. Treat the output as a useful conversational reference, not a medical data point.',
+      'It is an estimate. The banded model -- 15 human years in year one, 9 in year two, then a size-based rate -- is a planning figure, not an AVMA or AAHA chart. It follows the non-linear shape better than multiply-by-7, and this page does not claim a measured accuracy percent. It does not account for breed, individual health history, or body condition. Treat the output as a conversational reference, not a medical data point.',
     answerText:
-      'It is a population-level estimate, not a precise individual measurement. The banded model is more accurate than multiply-by-7 but does not account for breed, genetics, or individual health. Epigenetic clocks are more precise but not yet standardized across breeds.',
+      'It is a planning figure, not an AVMA or AAHA chart and not a measured accuracy percent. It does not account for breed, genetics, or individual health.',
   },
 ]
 
@@ -65,13 +65,13 @@ const appSchema = {
   '@type': 'WebApplication',
   name: 'Dog Age in Human Years Calculator',
   description:
-    'Converts dog age to human-year equivalent using the AVMA/AAHA-style banded model with size-specific factors. More accurate than the multiply-by-7 rule.',
+    'Converts dog age to a human-year equivalent with a banded planning figure. Not an AVMA or AAHA chart.',
   url: 'https://dog.com/tools/dog-age-calculator',
   applicationCategory: 'UtilityApplication',
   operatingSystem: 'Web',
   offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
   featureList: [
-    'Converts dog age to human-year equivalent using an AVMA/AAHA-style banded model',
+    'Converts dog age with a banded planning figure, not an AVMA or AAHA chart',
     'Size-specific rates after year two (small, medium, large, giant)',
     'Qualitative life-stage label: puppy, adolescent, adult, mature adult, senior',
     'Shoppable life-stage kit via Amazon category searches',
@@ -80,7 +80,7 @@ const appSchema = {
 
 const howToSchema = buildHowToSchema({
   name: 'How to convert a dog\'s age to human years',
-  description: 'Estimate a dog\'s equivalent human age using the AVMA/AAHA-style banded model based on life stage and size.',
+  description: 'Estimate a dog\'s equivalent human age with a banded planning figure based on age and size. Not an AVMA or AAHA chart.',
   url: 'https://dog.com/tools/dog-age-calculator',
   steps: [
     {
@@ -93,7 +93,7 @@ const howToSchema = buildHowToSchema({
     },
     {
       name: 'Read the human-year estimate and life stage',
-      text: 'The calculator returns the human-year equivalent using the banded model (year 1 = 15 human years, year 2 = 9 more, then 4–6 per year by size) and a life-stage label aligned with AVMA/AAHA frameworks.',
+      text: 'The calculator returns a planning figure: year 1 = 15 human years, year 2 = 9 more, then 4–6 per year by size, plus a life-stage label. It is not an AVMA or AAHA chart.',
     },
   ],
 })
@@ -126,9 +126,9 @@ export default function DogAgeCalculatorPage() {
             Dog Age in Human Years Calculator
           </h1>
           <p className="text-lg text-white/55 leading-relaxed max-w-2xl">
-            Convert your dog&apos;s age to a human-year equivalent using the AVMA/AAHA-style banded
-            model -- not the inaccurate multiply-by-7 rule. Enter your dog&apos;s age and size to
-            get an estimate and life-stage label.
+            Convert your dog&apos;s age to a human-year equivalent using a banded planning figure —
+            not an AVMA or AAHA chart, and not the multiply-by-7 rule. Enter age and size for an
+            estimate and a life-stage label.
           </p>
         </div>
       </section>
@@ -227,22 +227,17 @@ export default function DogAgeCalculatorPage() {
             The formula behind the estimate
           </h2>
           <p className="mb-4 text-base leading-relaxed text-brand-text-mid">
-            This calculator uses a banded model consistent with AVMA and AAHA-style life-stage
-            frameworks, which recognize that dogs age non-linearly. In the first year, a dog
-            matures very rapidly -- reaching adolescence and often reproductive maturity --
-            so one calendar year maps to approximately 15 human years. In year two, the rate
-            slows to roughly 9 additional human years. From year three onward, the rate depends
-            on size: small dogs (up to 20 lb) accumulate about 4 human years per calendar year;
-            medium and large dogs accumulate 5; giant breeds (over 90 lb) accumulate 6.
+            How we calculate: the band is a planning figure, not an AVMA or AAHA chart. In the
+            first year, one calendar year maps to 15 human years. In year two, the chart adds 9.
+            From year three onward, small dogs (up to 20 lb) add 4 human years per calendar year;
+            medium and large dogs add 5; giant breeds (over 90 lb) add 6.
           </p>
           <p className="mb-4 text-base leading-relaxed text-brand-text-mid">
-            This is an approximation. Aging varies by breed, individual health, and body condition.
-            The old &quot;multiply by 7&quot; rule is widely known to be inaccurate -- it ignores the rapid
-            early development phase and treats all sizes identically. The model used here is a
-            practical improvement, though researchers continue to develop more precise biological
-            age clocks using epigenetic markers (including a 2020 study published in Cell Systems
-            using Labrador Retrievers as a model, cited by AVMA and other veterinary sources as
-            a reference point for advancing the science).
+            This is a planning figure. Aging varies by breed, individual health, and body condition.
+            The old &quot;multiply by 7&quot; shortcut ignores the faster early years and treats all sizes
+            the same. A 2020 study published in Cell Systems used Labrador Retrievers for one
+            epigenetic formula. This page does not claim AVMA or any other body adopted that formula,
+            and this calculator does not use it.
           </p>
           <p className="mb-4 text-base leading-relaxed text-brand-text-mid">
             For how aging intersects with health care decisions -- vaccination schedules, senior

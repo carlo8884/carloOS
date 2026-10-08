@@ -219,13 +219,13 @@
     {
       "path": "/tools",
       "title": "Dog Tools & Calculators | Dog.com",
-      "description": "Free, source-cited dog care calculators. Start with the Dog Calorie Calculator: RER and daily intake estimates using WSAVA/AAHA-style life-stage factors.",
+      "description": "Free dog care calculators. Adult calories use the WSAVA July 2020 chart. Other life-stage multipliers are planning figures.",
       "category": "tools"
     },
     {
       "path": "/tools/dog-age-calculator",
       "title": "Dog Age in Human Years Calculator | Dog.com",
-      "description": "Convert your dog's age to human years with the AVMA/AAHA-style banded model -- more accurate than the x7 rule. Enter age and size for an instant estimate.",
+      "description": "Convert a dog's age to human years with a banded planning figure, not an AVMA or AAHA chart. Enter age and size.",
       "category": "tools"
     },
     {

@@ -143,10 +143,10 @@ export default function DogTreatsGuidePage() {
 
           <CalloutBox variant="evidence" title="TL;DR — How to treat without sabotaging the diet">
             <p>
-              <strong>Keep treats to ≤10% of daily calories</strong> (WSAVA Global Nutrition Guidelines, AAHA Nutritional Assessment Guidelines).
+              <strong>Keep treats to about 10% of daily calories</strong> as a planning figure. That 10% is not a row on the WSAVA July 2020 adult calorie chart.
             </p>
             <p>
-              <strong>Use small, low-calorie treats for training</strong>, VOHC-Seal products for dental support, and single-ingredient options as a default. <strong>Subtract treat calories from the daily food ration</strong> when you cross 5–10%.
+              <strong>Use small, low-calorie treats for training</strong>, VOHC-Seal products for dental support, and single-ingredient options as a default. <strong>Subtract treat calories from the daily food ration</strong> when treats cross a planning-figure 10% of daily calories. That 10% is not a fetched trial.
             </p>
             <p>
               <strong>Skip cooked bones</strong> (splinter risk, FDA CVM warning). <strong>Be cautious with jerky-treat products</strong> (FDA CVM 2007–2017 investigation, 6,200+ illness reports).

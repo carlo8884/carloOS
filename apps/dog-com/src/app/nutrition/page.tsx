@@ -225,7 +225,7 @@ export default function NutritionHubPage() {
           <Link href="/tools/dog-calorie-calculator" className="text-brand-primary hover:underline">
             The Dog Calorie Calculator
           </Link>{' '}
-          estimates daily kcal needs using the standard RER formula and WSAVA/AAHA-style life-stage factors.
+          estimates daily kcal needs. Inactive and active adults use the WSAVA July 2020 chart. Other multipliers are planning figures.
         </p>
       </section>
       <section className="bg-brand-surface px-container-sm sm:px-container pb-section">

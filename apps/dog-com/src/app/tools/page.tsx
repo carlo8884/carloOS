@@ -15,7 +15,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
   title: 'Dog Tools & Calculators | Dog.com',
   description:
-    'Free, source-cited dog care calculators. Start with the Dog Calorie Calculator: RER and daily intake estimates using WSAVA/AAHA-style life-stage factors.',
+    'Free dog care calculators. Adult calories use the WSAVA July 2020 chart. Other life-stage multipliers are planning figures.',
   path: '/tools',
 })
 
@@ -41,19 +41,19 @@ const TOOLS = [
   {
     href: '/tools/dog-calorie-calculator',
     title: 'Dog Calorie Calculator',
-    desc: 'Estimate your dog\'s daily calorie needs (kcal/day) using the standard RER formula (70 x kg^0.75) and WSAVA/AAHA-style life-stage factors. Includes optional cups-per-day output from your food\'s calorie density.',
+    desc: 'Inactive adults use 95 × kg^0.75 and active adults use 130 × kg^0.75 (WSAVA July 2020). Other life-stage multipliers are planning figures.',
     tag: 'Nutrition',
   },
   {
     href: '/tools/dog-age-calculator',
     title: 'Dog Age in Human Years Calculator',
-    desc: 'Convert your dog\'s age to a human-year equivalent using the AVMA/AAHA-style banded model -- not the inaccurate multiply-by-7 rule. Accounts for size and a life-stage label, then shop by stage (puppy food / teething toys, adult dental chews, senior joint support, ID tag, leash).',
+    desc: 'Convert a dog\'s age with a banded planning figure, not an AVMA or AAHA chart and not multiply-by-7. Size changes the later rate. Then shop by life stage.',
     tag: 'Life Stage',
   },
   {
     href: '/tools/puppy-weight-predictor',
     title: 'Puppy Weight Predictor',
-    desc: 'How big will your puppy get? Estimate adult weight as a range from current age and weight using the standard growth-percentage method and published size-class growth curves. Planning estimate, not a diagnosis.',
+    desc: 'How big will your puppy get? Adult weight is a range from current age and weight. The growth fractions are a planning figure, not a published curve.',
     tag: 'Puppy',
   },
   {
@@ -230,11 +230,10 @@ export default function ToolsHub() {
             Why source-cited tools matter
           </h2>
           <p className="mb-4 text-base leading-relaxed text-brand-text-mid">
-            The internet is full of dog calorie calculators that do not disclose their formulas or
-            cite their sources. This hub exists to close that gap. Every tool here uses a published,
-            verifiable equation -- the RER formula and WSAVA/AAHA-style life-stage factors are
-            documented in veterinary nutrition literature, not invented for this site. Every result
-            is labeled as an estimate and includes guidance to calibrate with a veterinarian.
+            The internet is full of dog calorie calculators that do not disclose their formulas.
+            Inactive and active adult calories on this hub use the WSAVA July 2020 chart (95 or
+            130 times kg to the power 0.75). Other life-stage multipliers are planning figures,
+            not rows on that chart. Every result is an estimate to calibrate with a veterinarian.
             The{' '}
             <Link
               href="/tools/dog-grimace-scale"

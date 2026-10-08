@@ -59,7 +59,7 @@ export default function GrainFreeDCMPage() {
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
 
         <p className="text-lg text-brand-text-mid leading-relaxed italic mb-6">
-          <strong className="not-italic">TL;DR.</strong> The FDA investigated more than 500 reports of dilated cardiomyopathy (DCM) in dogs eating grain-free diets, most with peas, lentils, or potatoes as primary ingredients. The link is an association, not proven causation — but most veterinary cardiologists now recommend avoiding high-legume grain-free formulas. Switch to a WSAVA-compliant brand (Royal Canin, Purina Pro Plan, Hill&apos;s) unless your vet directs otherwise.
+          <strong className="not-italic">TL;DR.</strong> The FDA investigated more than 500 reports of dilated cardiomyopathy (DCM) in dogs eating grain-free diets, most with peas, lentils, or potatoes as primary ingredients. The link is an association, not proven causation. This page does not cite a cardiology consensus that tells owners to avoid those formulas. A cautious reading is to skip high-legume grain-free diets unless a veterinarian has a reason to use one. Switch to a WSAVA-compliant brand (Royal Canin, Purina Pro Plan, Hill&apos;s) unless your vet directs otherwise.
         </p>
 
         <h2>What Is DCM?</h2>
@@ -78,7 +78,7 @@ export default function GrainFreeDCMPage() {
 
         <div style={{ background: 'rgba(200,149,42,0.06)', border: '1px solid rgba(200,149,42,0.18)', borderRadius: '10px', padding: '18px 22px', margin: '24px 0' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--brand-warning)', marginBottom: '8px' }}>Important Caveat</div>
-          <p style={{ fontSize: '14px', color: 'var(--brand-text-mid)', margin: 0, lineHeight: 1.65 }}>The FDA investigation was not a controlled study — it was a passive surveillance report. It established an association between grain-free diets and DCM, not causation. The exact mechanism is not fully understood. However, the association is consistent enough that most veterinary cardiologists now recommend avoiding high-legume grain-free diets unless there is a documented medical reason to use them.</p>
+          <p style={{ fontSize: '14px', color: 'var(--brand-text-mid)', margin: 0, lineHeight: 1.65 }}>The FDA investigation was not a controlled study — it was a passive surveillance report. It established an association between grain-free diets and DCM, not causation. The exact mechanism is not fully understood. The association is enough for a cautious reading: skip high-legume grain-free diets unless a veterinarian has a documented reason to use one. This page does not cite a cardiology consensus statement.</p>
         </div>
 
         <h2>What Mechanisms Are Proposed?</h2>

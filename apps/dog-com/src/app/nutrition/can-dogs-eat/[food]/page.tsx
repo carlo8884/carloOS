@@ -157,7 +157,7 @@ export default async function CanDogsEatFoodPage({ params }: PageProps) {
           <>
             <h2 id="serve">How to serve it safely</h2>
             <p>{entry.safePrep}</p>
-            {entry.quantity ? <p><strong>How much:</strong> {entry.quantity} Treats should stay within about 10% of your dog’s daily calories — see <Link href="/nutrition/how-much-to-feed">how much to feed your dog</Link>.</p> : null}
+            {entry.quantity ? <p><strong>How much:</strong> {entry.quantity} A planning figure is to keep treats within about 10% of daily calories. That 10% is not a fetched feeding trial — see <Link href="/nutrition/how-much-to-feed">how much to feed your dog</Link>.</p> : null}
           </>
         ) : null}
 

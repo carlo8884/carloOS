@@ -56,9 +56,9 @@ const FAQS = [
   {
     question: 'How do I help my dog lose weight safely?',
     answer:
-      'Weight loss in dogs should be gradual and vet-guided — typically aiming for roughly 1–2% of body weight lost per week, not a crash diet. Start by having your veterinarian set a target weight and rule out a medical cause such as hypothyroidism. From there, measure food by weight or with the calorie calculator rather than free-feeding, account for treats in the daily total, and increase activity as the dog\'s joints allow. A weight-management or therapeutic diet can help because it keeps the dog feeling full on fewer calories. Re-check the body condition score every few weeks and adjust.',
+      'Weight loss should be gradual and vet-guided. A planning figure on this page is about 1–2% of body weight per week, not a crash diet and not a fetched study. Have your veterinarian set the target weight and rule out a medical cause such as hypothyroidism. Measure food by weight or with the calorie calculator rather than free-feeding, account for treats in the daily total, and increase activity as the dog\'s joints allow. Re-check the body condition score every few weeks and adjust.',
     answerText:
-      'Gradually, under veterinary guidance — about 1–2% of body weight per week. Have the vet set a target and rule out a medical cause, measure food by calories, count treats, and re-check body condition every few weeks.',
+      'A planning figure is about 1–2% of body weight per week, under veterinary guidance. The vet sets the target. Measure food, count treats, and re-check body condition.',
   },
 ]
 

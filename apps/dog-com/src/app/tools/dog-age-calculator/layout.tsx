@@ -4,7 +4,7 @@ import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 const articleSchema = buildArticleSchema({
   siteId: 'dog-com',
   title: 'Dog Age in Human Years Calculator',
-  description: 'Convert your dog\'s age to a human-year equivalent using the AVMA/AAHA-style banded model -- not the inaccurate multiply-by-7 rule. Enter your dog\'s age and size to get an estimate and life-stage label.',
+  description: 'Convert a dog\'s age to a human-year equivalent with a banded planning figure. Not an AVMA or AAHA chart, and not the multiply-by-7 rule.',
   url: 'https://dog.com/tools/dog-age-calculator',
   imageUrl: '',
   authorName: 'Dog.com Editorial',

@@ -39,7 +39,7 @@ export default function DogDentalCarePage() {
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">VOHC-Accepted Products</div>
             <p className="text-xs text-brand-text-mid leading-relaxed m-0 mb-3">The Veterinary Oral Health Council (VOHC) seal means a product has been clinically tested and demonstrated efficacy for plaque or tartar control.</p>
-            {[['Greenies', 'Dental chew — proven plaque reduction'], ['Vetradent water additive', 'Daily water additive — VOHC accepted'], ['CET Enzymatic Toothpaste', 'Toothpaste for brushing'], ['Whimzees', 'Dental chew alternative to Greenies'], ['Hill\'s t/d', 'Prescription dental diet — mechanical action']].map(([p, d]) => (
+            {[['Greenies', 'Dental chew — VOHC-accepted plaque or tartar evidence'], ['Vetradent water additive', 'Daily water additive — VOHC accepted'], ['CET Enzymatic Toothpaste', 'Toothpaste for brushing'], ['Whimzees', 'Dental chew alternative to Greenies'], ['Hill\'s t/d', 'Prescription dental diet — mechanical action']].map(([p, d]) => (
               <div key={p} className="py-1 border-b border-brand-border last:border-0">
                 <div className="text-xs font-bold text-brand-dark">{p}</div>
                 <div className="text-2xs text-brand-text-light">{d}</div>

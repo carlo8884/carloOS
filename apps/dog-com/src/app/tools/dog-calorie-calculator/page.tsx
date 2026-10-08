@@ -50,16 +50,16 @@ const FAQS = [
   {
     question: 'Why does this calculator say "estimate" and not "prescription"?',
     answer:
-      'Calorie formulas give a population-level starting point, not an individual prescription. A dog\'s actual metabolic rate depends on breed, body composition, neuter status, health status, temperature, and individual variation that no formula can capture. Studies have shown individual variation of 30% or more around the mean even within the same life stage. The right way to use this number is as a starting point: feed near the estimate, then adjust up or down over 4-6 weeks based on body condition score. Your veterinarian should confirm the target weight and review any significant calorie restriction.',
+      'Calorie formulas give a population-level starting point, not an individual prescription. A dog\'s actual metabolic rate depends on breed, body composition, neuter status, health status, temperature, and individual variation that no formula can capture. This page does not cite a percent for that spread. Feed near the estimate, then adjust up or down over 4-6 weeks based on body condition score. Your veterinarian should confirm the target weight and review any significant calorie restriction.',
     answerText:
-      'Formula estimates have 30%+ individual variation. Use as a starting point, then adjust over 4-6 weeks based on body condition score and veterinary guidance.',
+      'Individual dogs vary around the formula. This page does not cite a percent for that spread. Adjust over 4-6 weeks using body condition and veterinary guidance.',
   },
   {
     question: 'Do treats count toward the daily calorie target?',
     answer:
-      'Yes. Treats should stay within about 10% of daily calories — training treats and table scraps both count. Subtract treat calories from the MER estimate before you portion the bowl. Weigh meals on a kitchen scale rather than a measuring cup: cups over-portion by roughly 20% depending on how they are filled. That 10% rule and the scale-over-cup note are the same husbandry guidance used on the weight-management and breed-feeding pages.',
+      'Yes. A planning figure on this page is to keep treats within about 10% of daily calories — training treats and table scraps both count. That 10% is not a row on the WSAVA July 2020 chart. Subtract treat calories from the estimate before you portion the bowl. Weigh meals on a kitchen scale rather than a measuring cup: how full the cup is changes the portion. A separate planning figure is that a heaped cup can run about 20% high. That 20% is not a fetched measurement.',
     answerText:
-      'Keep treats to about 10% of daily calories. Weigh meals on a kitchen scale; measuring cups often over-portion by about 20%.',
+      'Treats within about 10% of daily calories, and a heaped cup about 20% high, are planning figures. They are not on the WSAVA July 2020 chart. Weigh meals on a kitchen scale.',
   },
 ]
 
