@@ -69,7 +69,7 @@ export default function BlueRamPage() {
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Quick Stats</div>
           {[['Scientific name', 'Mikrogeophagus ramirezi'], ['Difficulty', 'Intermediate — water chemistry critical'], ['Adult size', '3 inches'], ['pH', '5.5–7.0 — soft acidic required'], ['Temperature', '80–86°F (warmer than most)'], ['Min tank', '20 gallons (pair)'], ['Lifespan', '2–4 years'], ['GH', 'Under 8 dGH — soft water']].map(([k, v]) => (
             <div key={k} className="flex justify-between py-1.5 border-b border-brand-border text-xs last:border-0">
-              <span className="text-brand-text-light">{k}</span><span className="font-bold text-brand-dark text-right max-w-[55%]">{v}</span>
+              <span className="text-brand-text-light">{k}</span><span className="font-bold text-brand-dark text-right max-w-[55%] break-all">{v}</span>
             </div>
           ))}
         </div>

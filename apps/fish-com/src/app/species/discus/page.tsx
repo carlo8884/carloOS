@@ -72,7 +72,7 @@ export default function DiscusPage() {
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Discus Requirements</div>
           {[['Temperature', '82–86°F — warm end critical'], ['pH', '5.5–6.8 — soft acidic'], ['GH', 'Under 8 — soft water'], ['Water changes', '30-50% daily or EOD'], ['Min tank', '55 gallons for 6 discus'], ['Group size', 'Minimum 6 — reduces aggression'], ['Diet', 'Beef heart, bloodworms, high protein'], ['Experience', 'Advanced — not a first cichlid']].map(([k, v]) => (
             <div key={k} className="flex justify-between py-1.5 border-b border-brand-border text-xs last:border-0">
-              <span className="text-brand-text-light">{k}</span><span className="font-bold text-brand-dark text-right max-w-[55%]">{v}</span>
+              <span className="text-brand-text-light">{k}</span><span className="font-bold text-brand-dark text-right max-w-[55%] break-all">{v}</span>
             </div>
           ))}
         </div>

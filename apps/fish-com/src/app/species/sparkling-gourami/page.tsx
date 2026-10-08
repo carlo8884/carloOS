@@ -69,7 +69,7 @@ export default function SparklingGouramiPage() {
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Quick Stats</div>
           {[['Scientific name', 'Trichopsis pumila'], ['Adult size', '1.25–1.5 inches'], ['Temperature', '76–82°F'], ['pH', '6.0–7.5 (soft preferred)'], ['Tank size', '10 gallons'], ['Temperament', 'Peaceful, shy'], ['Lifespan', '4–5 years']].map(([k, v]) => (
             <div key={k} className="flex justify-between py-1.5 border-b border-brand-border text-xs last:border-0">
-              <span className="text-brand-text-light">{k}</span><span className="font-bold text-brand-dark text-right max-w-[55%]">{v}</span>
+              <span className="text-brand-text-light">{k}</span><span className="font-bold text-brand-dark text-right max-w-[55%] break-all">{v}</span>
             </div>
           ))}
         </div>

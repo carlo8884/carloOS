@@ -65,7 +65,7 @@ const FAQS = [
   {
     question: 'Which corydoras species is best for a warm-water tank?',
     answer:
-      'Corydoras sterbai. Most corydoras prefer cooler tropical water (72–78°F) — too cool for discus, German blue rams, and most warm-water community species. C. sterbai is the well-documented exception, comfortable up to 82–84°F, making it the only corydoras commonly recommended for discus and warm-water Amazonian biotopes. Sterbai is distinctly spotted; do not confuse it with the visually similar but warm-intolerant C. haraldschultzi.',
+      'Corydoras sterbai. FishBase lists Corydoras aeneus at 25–28°C, 77–83°F (https://www.fishbase.se/summary/Corydoras-aeneus.html) — too cool for discus, German blue rams, and most warm-water community species. C. sterbai is the well-documented exception, comfortable up to 82–84°F, making it the only corydoras commonly recommended for discus and warm-water Amazonian biotopes. Sterbai is distinctly spotted; do not confuse it with the visually similar but warm-intolerant C. haraldschultzi.',
     answerText:
       'C. sterbai handles 82-84°F comfortably and is the standard corydoras for discus and warm-water tanks. Do not confuse with C. haraldschultzi.',
   },
@@ -129,7 +129,7 @@ export default function CorydorasPage() {
                 ['Genus', 'Corydoras (170+ species)'],
                 ['Origin', 'South America (Amazon, Orinoco)'],
                 ['Adult size', '1–3.5 in by species'],
-                ['Temperature', '72–78°F (sterbai to 84°F)'],
+                ['Temperature', '77–83°F (https://www.fishbase.se/summary/Corydoras-aeneus.html)'],
                 ['pH', '6.5–7.5 (most species)'],
                 ['GH', '2–15 dGH'],
                 ['Substrate', 'Smooth sand — non-negotiable'],
@@ -142,7 +142,7 @@ export default function CorydorasPage() {
                   className="flex justify-between py-1.5 border-b border-brand-border text-xs last:border-0"
                 >
                   <span className="text-brand-text-light">{k}</span>
-                  <span className="font-bold text-brand-dark text-right max-w-[55%]">{v}</span>
+                  <span className="font-bold text-brand-dark text-right max-w-[55%] break-all">{v}</span>
                 </div>
               ))}
             </div>
@@ -163,7 +163,7 @@ export default function CorydorasPage() {
                   className="flex justify-between py-1.5 border-b border-brand-border text-xs last:border-0"
                 >
                   <span className="text-brand-text-light">{k}</span>
-                  <span className="font-bold text-brand-dark text-right max-w-[55%]">{v}</span>
+                  <span className="font-bold text-brand-dark text-right max-w-[55%] break-all">{v}</span>
                 </div>
               ))}
             </div>

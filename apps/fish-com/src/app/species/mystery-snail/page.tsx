@@ -70,7 +70,7 @@ export default function MysterySnailPage() {
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Quick Stats</div>
           {[['Scientific name', 'Pomacea bridgesii'], ['Shell size', '1.5–2 inches (adult)'], ['Temperature', '68–82°F'], ['pH', '7.0–8.0 — prefers harder water'], ['GH', 'Higher GH — stronger shells'], ['Copper', 'LETHAL — avoid all copper'], ['Lifespan', '1–3 years'], ['Breeding', 'Lays egg clutches above waterline']].map(([k, v]) => (
             <div key={k} className="flex justify-between py-1.5 border-b border-brand-border text-xs last:border-0">
-              <span className="text-brand-text-light">{k}</span><span className="font-bold text-brand-dark text-right max-w-[55%]">{v}</span>
+              <span className="text-brand-text-light">{k}</span><span className="font-bold text-brand-dark text-right max-w-[55%] break-all">{v}</span>
             </div>
           ))}
         </div>

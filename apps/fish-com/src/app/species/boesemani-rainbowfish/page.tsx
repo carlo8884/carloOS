@@ -69,7 +69,7 @@ export default function BoesemaniPage() {
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Quick Stats</div>
           {[['Scientific name', 'Melanotaenia boesemani'], ['Adult size', '3.5-4.5 inches (males larger)'], ['Temperature', '72–82°F'], ['pH', '7.0–8.0'], ['GH', '8-18 — harder water preferred'], ['Group', '8+ — 10-12 ideal'], ['Lifespan', '5-8 years']].map(([k, v]) => (
             <div key={k} className="flex justify-between py-1.5 border-b border-brand-border text-xs last:border-0">
-              <span className="text-brand-text-light">{k}</span><span className="font-bold text-brand-dark text-right max-w-[55%]">{v}</span>
+              <span className="text-brand-text-light">{k}</span><span className="font-bold text-brand-dark text-right max-w-[55%] break-all">{v}</span>
             </div>
           ))}
         </div>

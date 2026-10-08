@@ -75,9 +75,9 @@ const FAQS = [
   {
     question: 'What water do swordtails need?',
     answer:
-      'Hard, slightly alkaline water. Target GH 10–25 dGH, KH 6–18 dKH, pH 7.2–8.4, temperature 70–78°F. They do badly in the soft, acidic water that suits tetras and discus. Most municipal hard-water supplies in the US Southwest and Midwest are already in range without remineralization.',
+      'Hard, slightly alkaline water. Target GH 10–25 dGH, KH 6–18 dKH, pH 7.2–8.4, temperature 71–83°F (https://www.fishbase.se/summary/Xiphophorus-hellerii.html). They do badly in the soft, acidic water that suits tetras and discus. Most municipal hard-water supplies in the US Southwest and Midwest are already in range without remineralization.',
     answerText:
-      'Hard, slightly alkaline water. GH 10-25, KH 6-18, pH 7.2-8.4, temperature 70-78F. They do badly in soft acidic water.',
+      'Hard, slightly alkaline water. GH 10-25, KH 6-18, pH 7.2-8.4, temperature 71–83°F (https://www.fishbase.se/summary/Xiphophorus-hellerii.html). They do badly in soft acidic water.',
   },
   {
     question: 'Will swordtails eat their own fry?',
@@ -131,7 +131,7 @@ export default function SwordtailPage() {
               {[
                 ['Scientific name', 'Xiphophorus hellerii'],
                 ['Adult size', '4–5 in. (males with sword)'],
-                ['Temperature', '70–78°F'],
+                ['Temperature', '71–83°F (https://www.fishbase.se/summary/Xiphophorus-hellerii.html)'],
                 ['pH', '7.2–8.4 — hard alkaline'],
                 ['GH / KH', '10–25 / 6–18 dGH/dKH'],
                 ['Diet', 'Omnivore — flake + greens'],
@@ -144,7 +144,7 @@ export default function SwordtailPage() {
                   className="flex justify-between py-1.5 border-b border-brand-border text-xs last:border-0"
                 >
                   <span className="text-brand-text-light">{k}</span>
-                  <span className="font-bold text-brand-dark text-right max-w-[55%]">{v}</span>
+                  <span className="font-bold text-brand-dark text-right max-w-[55%] break-all">{v}</span>
                 </div>
               ))}
             </div>
@@ -264,7 +264,7 @@ export default function SwordtailPage() {
           <h2>Water and Tank Setup</h2>
           <p>
             Target hard, alkaline water: GH 10–25 dGH, KH 6–18 dKH, pH 7.2–8.4, temperature
-            70–78°F. Most US municipal water in the Southwest, Midwest, and Texas Hill Country
+            71–83°F (<a className="break-all" href="https://www.fishbase.se/summary/Xiphophorus-hellerii.html">https://www.fishbase.se/summary/Xiphophorus-hellerii.html</a>). Most US municipal water in the Southwest, Midwest, and Texas Hill Country
             falls into that range without intervention. In soft-water regions, remineralize RO
             water with a livebearer-targeted salt blend (Seachem Equilibrium plus a KH source
             such as Seachem Alkaline Buffer) or add aragonite sand or crushed coral to the filter.

@@ -165,7 +165,7 @@ export default function FerretCageSetupPage() {
             The 24 × 24 inch floor and 18 inch height per ferret are a planning figure, not a fetched published standard. Multi-level cages add usable habitat without growing the footprint. For two ferrets — and the practical default is two ferrets, because ferrets are social and a single ferret in an empty household is an under-stimulated ferret — a 36 × 24-inch footprint with at least three levels is the same kind of planning figure. To turn those notes into an L × W × H for your headcount and level count, use the <a href="/tools/cage-size-calculator">cage size calculator</a>.
           </p>
           <p>
-            Bar spacing matters more than total cage size for safety. <strong>One inch or less</strong> is the working ceiling for adult ferrets; <strong>half an inch or less</strong> is appropriate for kits, who can squeeze through openings that look implausibly small. A ferret can fit through any opening that its skull will pass through; the body deforms around the skeleton. Bars wider than one inch are how kits escape from "ferret-safe" cages.
+            Bar spacing matters more than total cage size for safety. <strong>One inch or less</strong> is the working ceiling for adult ferrets; <strong>half an inch or less</strong> is appropriate for kits, who can squeeze through openings that look implausibly small. A ferret can fit through any opening that its skull will pass through; the body deforms around the skeleton. Bars wider than one inch are how kits escape from "ferret-safe" cages. This is a planning figure, not a manufacturer specification.
           </p>
           <p>
             Other cage hardware to check on first inspection: door latches that a ferret cannot operate (ferrets are skilled at opening simple cam-latches and slide-bolts; carabiner-secured doors are standard), no large gaps where shelves meet walls, and a fully removable bottom tray for cleaning. Wire-floor cages are a defect — ferret feet are not designed for grid flooring, and bumblefoot and chronic foot abrasion are documented in the exotic-pet veterinary literature in ferrets housed on wire. The floor should be solid plastic or covered with a fitted liner.
@@ -253,7 +253,7 @@ export default function FerretCageSetupPage() {
             id="critter-nation"
             badge="Best Overall"
             name="MidWest Critter Nation Double Unit (Model 162)"
-            subtitle="Two-level, 36×25×62 inches, 1/2-inch bar spacing on lower portion"
+            subtitle="Two-level, 36×25×62 inches. The manufacturer page does not print bar spacing"
             winner
             description={
               <p>The default recommendation across the ferret-keeper community. Originally designed for rats and similar small mammals, the Critter Nation’s footprint, height, and bar spacing all land in the right zone for ferrets. Two large solid-floor levels with a connecting ramp, full-width double doors on each level (excellent access for cleaning and for getting a stubborn ferret out), and casters for moving the cage. Single-level (Model 161) and three-level expansion options exist. Expect to spend an afternoon on assembly.</p>
@@ -261,11 +261,11 @@ export default function FerretCageSetupPage() {
             specs={[
               { label: 'Dimensions', value: '36×25×62 in (double unit)' },
               { label: 'Levels', value: '2 large, solid PVC floor', highlight: 'good' },
-              { label: 'Bar Spacing', value: '~0.5 in (kit-safe)', highlight: 'good' },
+              { label: 'Bar Spacing', value: 'Not printed on the manufacturer page', highlight: 'warn' },
               { label: 'Door Access', value: 'Full-width double doors per level', highlight: 'good' },
               { label: 'Assembly', value: 'Multi-hour, two-person preferred', highlight: 'warn' },
             ]}
-            pros={['Bar spacing kit-safe out of the box', 'Excellent door access', 'Casters for moving', 'Solid floor — no wire-floor injuries', 'Modular — add a single-unit on top']}
+            pros={['Confirm bar spacing on the box', 'Excellent door access', 'Casters for moving', 'Solid floor — no wire-floor injuries', 'Modular — add a single-unit on top']}
             cons={['Heavy and large — measure before buying', 'Assembly is non-trivial', 'Ramp can be slippery without fleece cover']}
             price="see current price"
             priceNote="dated 2026-05-31."

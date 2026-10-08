@@ -47,7 +47,7 @@ const FAQS = [
   {
     question: 'How long do kuhli loaches live?',
     answer:
-      'Ten or more years with proper care. They prefer soft, slightly acidic water (pH 6.0–7.0) at 75–82°F but adapt to neutral community conditions. Check filter inlets and lid gaps before adding them — kuhli loaches can squeeze through extremely small openings, so use a pre-filter sponge on intakes.',
+      'Ten or more years with proper care. They prefer soft, slightly acidic water (pH 6.0–7.0) at 75–86°F (https://www.fishbase.se/summary/Pangio-kuhlii.html) but adapt to neutral community conditions. Check filter inlets and lid gaps before adding them — kuhli loaches can squeeze through extremely small openings, so use a pre-filter sponge on intakes.',
     answerText:
       '10+ years with proper care, in soft slightly acidic water at 75-82F. Cover filter inlets and lid gaps — they squeeze through tiny openings.',
   },
@@ -69,9 +69,9 @@ export default function KuhliLoachPage() {
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Quick Stats</div>
-          {[['Size', '3–4 inches'], ['Group', '6+ required'], ['Substrate', 'Fine sand — essential'], ['Activity', 'Nocturnal — rarely visible daytime'], ['Temperature', '75–86°F'], ['pH', '5.5–7.0 (soft acidic preferred)'], ['Lifespan', '10+ years']].map(([k, v]) => (
+          {[['Size', '3–4 inches'], ['Group', '6+ required'], ['Substrate', 'Fine sand — essential'], ['Activity', 'Nocturnal — rarely visible daytime'], ['Temperature', '75–86°F (https://www.fishbase.se/summary/Pangio-kuhlii.html)'], ['pH', '5.5–7.0 (soft acidic preferred)'], ['Lifespan', '10+ years']].map(([k, v]) => (
             <div key={k} className="flex justify-between py-1.5 border-b border-brand-border text-xs last:border-0">
-              <span className="text-brand-text-light">{k}</span><span className="font-bold text-brand-dark text-right max-w-[55%]">{v}</span>
+              <span className="text-brand-text-light">{k}</span><span className="font-bold text-brand-dark text-right max-w-[55%] break-all">{v}</span>
             </div>
           ))}
         </div>
@@ -97,7 +97,7 @@ export default function KuhliLoachPage() {
         <p>Bottom scavengers that eat sinking foods. Primary: sinking micro pellets (Hikari Micro Wafers), sinking algae wafers, and frozen foods that reach the bottom — frozen bloodworms (they go wild for these), frozen daphnia, frozen brine shrimp. Feed at lights-out so they can find food without competition from surface and mid-water feeders. They will also scavenge any uneaten food that reaches the bottom — a useful cleanup function. They do not eat hair algae or soft algae the way plecos and otocinclus do — their feeding is scavenging-based, not algae-grazing.</p>
 
         <h2>Water Parameters and Compatibility</h2>
-        <p>Prefer soft, slightly acidic water (pH 6.0–7.0) with good warmth (75–82°F). Adaptable to neutral community tank conditions. Compatible with virtually all peaceful community fish — they occupy bottom territory that does not overlap with mid-water or surface fish. Compatible with peaceful shrimp (they may eat very small shrimp but ignore adult cherry shrimp and larger). Avoid aggressive cichlids and any fish large enough to eat a 4-inch loach.</p>
+        <p>Prefer soft, slightly acidic water (pH 6.0–7.0) with good warmth (75–86°F, <a className="break-all" href="https://www.fishbase.se/summary/Pangio-kuhlii.html">https://www.fishbase.se/summary/Pangio-kuhlii.html</a>). Adaptable to neutral community tank conditions. Compatible with virtually all peaceful community fish — they occupy bottom territory that does not overlap with mid-water or surface fish. Compatible with peaceful shrimp (they may eat very small shrimp but ignore adult cherry shrimp and larger). Avoid aggressive cichlids and any fish large enough to eat a 4-inch loach.</p>
         <p>Warning: kuhli loaches can squeeze through extremely small gaps in tank lids and equipment — check for any openings in filter inlets (use a pre-filter sponge) and lid gaps before adding them. They will find any gap and explore it.</p>
         <h2>Frequently Asked Questions</h2>
         <FAQAccordion

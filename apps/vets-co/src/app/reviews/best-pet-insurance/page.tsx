@@ -178,7 +178,7 @@ export default function VetsPetInsurancePage() {
 
             <ReviewCard id="healthy-paws" badge="Fastest Reimbursement" name="Healthy Paws"
               subtitle="Most claims processed in 2 days · Registry lists no wellness add-on"
-              description={<p>The Healthy Paws claims page, fetched 2026-10-08, says most claims are processed in 2 days, and that Direct Pay can reimburse the vet when funding is urgent (<a className="break-all" href="https://www.healthypawspetinsurance.com/pet-insurance-claims.html">https://www.healthypawspetinsurance.com/pet-insurance-claims.html</a>). The annual reimbursement limit is a choice. Healthy Paws lists $5,000, $7,000, or unlimited, dated 2026-10-08. It is not automatically unlimited. The verified registry lists no wellness add-on.</p>}
+              description={<p>The Healthy Paws claims page, fetched 2026-10-08, says most claims are processed in 2 days, and that Direct Pay can reimburse the vet when funding is urgent (<span className="break-all">https://www.healthypawspetinsurance.com/pet-insurance-claims.html</span>). The annual reimbursement limit is a choice. Healthy Paws lists $5,000, $7,000, or unlimited, dated 2026-10-08. It is not automatically unlimited. The verified registry lists no wellness add-on.</p>}
               specs={[
                 { label: 'Reimbursement', value: 'Up to 90%', highlight: 'good' },
                 { label: 'Claims Speed', value: 'Most in 2 days', highlight: 'good' },
@@ -195,7 +195,7 @@ export default function VetsPetInsurancePage() {
 
             <ReviewCard id="embrace" badge="Wellness add-on" name="Embrace"
               subtitle="Wellness add-on · Deductible program: see the carrier's current terms"
-              description={<p>The Wellness Rewards page, fetched 2026-10-08, lists wellness exams, vaccinations, flea, tick, and heartworm prevention, and preventative dental cleaning (<a className="break-all" href="https://www.embracepetinsurance.com/coverage/wellness-rewards">https://www.embracepetinsurance.com/coverage/wellness-rewards</a>). The verified registry marks that coverage as a standalone add-on. The deductible program and the orthopedic waiting period: see the carrier's current terms. Reimbursement on the current dog page is 70%, 80%, or 90%.</p>}
+              description={<p>The Wellness Rewards page, fetched 2026-10-08, lists wellness exams, vaccinations, flea, tick, and heartworm prevention, and preventative dental cleaning (<span className="break-all">https://www.embracepetinsurance.com/coverage/wellness-rewards</span>). The verified registry marks that coverage as a standalone add-on. The deductible program and the orthopedic waiting period: see the carrier's current terms. Reimbursement on the current dog page is 70%, 80%, or 90%.</p>}
               specs={[
                 { label: 'Wellness', value: 'Add-on available', highlight: 'good' },
                 { label: 'Deductible', value: 'See the carrier\'s current terms' },
@@ -215,7 +215,7 @@ export default function VetsPetInsurancePage() {
             <div className="mt-10">
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-3">Who should buy which policy</h2>
               <p className="text-sm text-brand-text-mid leading-relaxed mb-4">
-                Reimbursement, limits, and prices below are the figures already on each card. They are not a quote. Enroll before a condition is in the medical record — every card on this page is subject to that rule.
+                Reimbursement, limits, and prices below are the figures already on each card. They are not a quote. The Healthy Paws claims page says most claims are processed in 2 days (<span className="break-all">https://www.healthypawspetinsurance.com/pet-insurance-claims.html</span>). Enroll before a condition is in the medical record — every card on this page is subject to that rule.
               </p>
               <div className="overflow-x-auto max-w-full min-w-0 mb-8">
                 <table className="w-full text-sm border-collapse table-fixed sm:table-auto min-w-0 sm:min-w-[36rem] [&_th]:break-words [&_td]:break-words">

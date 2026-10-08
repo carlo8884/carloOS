@@ -72,7 +72,7 @@ export default function AxolotlPage() {
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Quick Stats</div>
           {[['Scientific name', 'Ambystoma mexicanum'], ['Adult size', '9–12 inches'], ['Temperature', '60–68°F — cold critical'], ['Max temp', '72°F absolute max (causes fatal stress)'], ['Substrate', 'Fine sand or bare bottom — NO gravel'], ['Filtration', 'Gentle — strong currents stress them'], ['Lifespan', '10–15 years']].map(([k, v]) => (
             <div key={k} className="flex justify-between py-1.5 border-b border-brand-border text-xs last:border-0">
-              <span className="text-brand-text-light">{k}</span><span className="font-bold text-brand-dark text-right max-w-[55%]">{v}</span>
+              <span className="text-brand-text-light">{k}</span><span className="font-bold text-brand-dark text-right max-w-[55%] break-all">{v}</span>
             </div>
           ))}
         </div>

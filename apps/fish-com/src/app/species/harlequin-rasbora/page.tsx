@@ -33,7 +33,7 @@ const FAQS = [
   {
     question: 'What water conditions do harlequin rasboras need?',
     answer:
-      'They come from soft, acidic blackwater habitats (pH 5.5–6.5, GH under 5) in Malaysia, Thailand, Singapore, and Sumatra, but adapt to a much wider range in captivity — pH up to 7.5 and GH up to 15 — and thrive in standard community parameters at 73–82°F. Color intensifies in slightly soft, slightly acidic water with tannins from almond leaves, botanicals, or driftwood.',
+      'They come from soft, acidic blackwater habitats (pH 5.5–6.5, GH under 5) in Malaysia, Thailand, Singapore, and Sumatra, but adapt to a much wider range in captivity — pH up to 7.5 and GH up to 15 — and thrive in standard community parameters at 71–77°F (https://www.fishbase.se/summary/Trigonostigma-heteromorpha.html). Color intensifies in slightly soft, slightly acidic water with tannins from almond leaves, botanicals, or driftwood.',
     answerText:
       'Adaptable: pH up to 7.5, GH up to 15, 73-82F. Color intensifies in soft, slightly acidic water with tannins.',
   },
@@ -69,9 +69,9 @@ export default function HarlequinPage() {
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Quick Stats</div>
-          {[['Scientific name', 'Trigonostigma heteromorpha'], ['Adult size', '1.75 inches'], ['Temperature', '73–82°F'], ['pH', '5.5–7.5 (prefers soft acidic)'], ['Group', '10 min — 15+ for best display'], ['Compatibility', 'Peaceful with all community fish'], ['Lifespan', '5–8 years']].map(([k, v]) => (
+          {[['Scientific name', 'Trigonostigma heteromorpha'], ['Adult size', '1.75 inches'], ['Temperature', '71–77°F (https://www.fishbase.se/summary/Trigonostigma-heteromorpha.html)'], ['pH', '5.5–7.5 (prefers soft acidic)'], ['Group', '10 min — 15+ for best display'], ['Compatibility', 'Peaceful with all community fish'], ['Lifespan', '5–8 years']].map(([k, v]) => (
             <div key={k} className="flex justify-between py-1.5 border-b border-brand-border text-xs last:border-0">
-              <span className="text-brand-text-light">{k}</span><span className="font-bold text-brand-dark text-right max-w-[55%]">{v}</span>
+              <span className="text-brand-text-light">{k}</span><span className="font-bold text-brand-dark text-right max-w-[55%] break-all">{v}</span>
             </div>
           ))}
         </div>
@@ -88,7 +88,7 @@ export default function HarlequinPage() {
         <p>A single harlequin rasbora is unremarkable. Eight harlequin rasboras are pleasant. Twenty harlequin rasboras moving as a cohesive school through a planted midground is one of the most satisfying things in the freshwater hobby — the school rotates and banks together, each fish's patch catching the light differently as they turn.</p>
 
         <h2>Water and Care</h2>
-        <p>Harlequins come from the slow, tea-colored, soft, acidic waters of Malaysia, Thailand, Singapore, and Sumatra — blackwater environments with pH 5.5–6.5, GH under 5, heavy tannin staining. In captivity they adapt to a much wider range (pH up to 7.5, GH up to 15) and thrive in standard community parameters. Color intensifies in slightly soft, slightly acidic water with tannins (Indian almond leaves, botanicals, or driftwood) — the orange deepens and the black triangle becomes more distinct. Temperature 73–82°F — they tolerate the same range as most tropical community fish.</p>
+        <p>Harlequins come from the slow, tea-colored, soft, acidic waters of Malaysia, Thailand, Singapore, and Sumatra — blackwater environments with pH 5.5–6.5, GH under 5, heavy tannin staining. In captivity they adapt to a much wider range (pH up to 7.5, GH up to 15) and thrive in standard community parameters. Color intensifies in slightly soft, slightly acidic water with tannins (Indian almond leaves, botanicals, or driftwood) — the orange deepens and the black triangle becomes more distinct. Temperature 71–77°F (<a className="break-all" href="https://www.fishbase.se/summary/Trigonostigma-heteromorpha.html">https://www.fishbase.se/summary/Trigonostigma-heteromorpha.html</a>) — they tolerate the same range as most tropical community fish.</p>
 
         <h2>Tankmates</h2>
         <p>Universally compatible. They do not fin-nip (unlike tiger barbs or some serpae tetras), they do not bother corydoras, shrimp, or snails, and they are fast enough to avoid being eaten by larger fish in the typical community tank. Ideal companions: Corydoras of any species (same soft-water preferences), cherry and neocardinia shrimp (harlequins ignore adult shrimp and most shrimplets), otocinclus, any peaceful dwarf cichlid (apistogramma, German blue ram), betta fish (harlequins are fast and peaceful — one of the more betta-compatible schoolers), and other rasbora species.</p>

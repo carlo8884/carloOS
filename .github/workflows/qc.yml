@@ -149,6 +149,18 @@ jobs:
       - name: Run unsourced-precision
         run: node scripts/ci/unsourced-precision.mjs
 
+  claim-siblings:
+    name: Registered claims keep their source and number
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Run claim-siblings
+        run: node scripts/ci/claim-siblings.mjs
+
   kitchen-kit-ban:
     name: Kitchen-kit / fake-magnet copy ban (five earning sites)
     runs-on: ubuntu-latest

@@ -67,9 +67,9 @@ export default function BronzeCorydorasPage() {
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Quick Stats</div>
-          {[['Scientific name', 'Corydoras aeneus'], ['Adult size', '2.5–3 inches'], ['Temperature', '72–79°F'], ['pH', '6.0–7.8'], ['Group size', '6 minimum, more is better'], ['Substrate', 'Sand or smooth fine gravel'], ['Lifespan', '5–10 years']].map(([k, v]) => (
+          {[['Scientific name', 'Corydoras aeneus'], ['Adult size', '2.5–3 inches'], ['Temperature', '77–83°F (https://www.fishbase.se/summary/Corydoras-aeneus.html)'], ['pH', '6.0–7.8'], ['Group size', '6 minimum, more is better'], ['Substrate', 'Sand or smooth fine gravel'], ['Lifespan', '5–10 years']].map(([k, v]) => (
             <div key={k} className="flex justify-between py-1.5 border-b border-brand-border text-xs last:border-0">
-              <span className="text-brand-text-light">{k}</span><span className="font-bold text-brand-dark text-right max-w-[55%]">{v}</span>
+              <span className="text-brand-text-light">{k}</span><span className="font-bold text-brand-dark text-right max-w-[55%] break-all">{v}</span>
             </div>
           ))}
         </div>

@@ -52,7 +52,7 @@ export function BreedHealthCard({
         </span>
       </div>
 
-      <p className="text-sm text-brand-text-mid leading-relaxed mb-0">{description}</p>
+      <p className="text-sm text-brand-text-mid leading-relaxed mb-0 break-words">{description}</p>
 
       {signs && signs.length > 0 && (
         <div className="mt-3 pt-3" style={{ borderTop: `1px solid ${risk.border}` }}>
@@ -125,7 +125,7 @@ export function SpeciesHealthCard({ name, prevalence, description, prevention, e
           {prev.label}
         </span>
       </div>
-      <p className="text-sm leading-relaxed mb-0" style={{ color: 'rgba(238,240,228,0.75)' }}>{description}</p>
+      <p className="text-sm leading-relaxed mb-0 break-words" style={{ color: 'rgba(238,240,228,0.75)' }}>{description}</p>
       {prevention && (
         <p className="text-xs mt-2 mb-0" style={{ color: 'rgba(238,240,228,0.45)' }}>
           <strong style={{ color: 'rgba(238,240,228,0.65)' }}>Prevention: </strong>{prevention}

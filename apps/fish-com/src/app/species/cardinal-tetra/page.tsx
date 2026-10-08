@@ -129,7 +129,7 @@ export default function CardinalTetraPage() {
                 ['Scientific name', 'Paracheirodon axelrodi'],
                 ['Origin', 'Rio Negro, Orinoco (S. America)'],
                 ['Adult size', '2 in / 5 cm'],
-                ['Temperature', '75–82°F'],
+                ['Temperature', '73–81°F (https://www.fishbase.se/summary/Paracheirodon-axelrodi.html)'],
                 ['pH', '5.0–7.0 (soft acidic)'],
                 ['GH', '1–8 dGH'],
                 ['Min tank', '20 gal long for a school of 10+'],
@@ -142,7 +142,7 @@ export default function CardinalTetraPage() {
                   className="flex justify-between py-1.5 border-b border-brand-border text-xs last:border-0"
                 >
                   <span className="text-brand-text-light">{k}</span>
-                  <span className="font-bold text-brand-dark text-right max-w-[55%]">{v}</span>
+                  <span className="font-bold text-brand-dark text-right max-w-[55%] break-all">{v}</span>
                 </div>
               ))}
             </div>
@@ -162,7 +162,7 @@ export default function CardinalTetraPage() {
                   className="flex justify-between py-1.5 border-b border-brand-border text-xs last:border-0"
                 >
                   <span className="text-brand-text-light">{k}</span>
-                  <span className="font-bold text-brand-dark text-right max-w-[55%]">{v}</span>
+                  <span className="font-bold text-brand-dark text-right max-w-[55%] break-all">{v}</span>
                 </div>
               ))}
             </div>
@@ -193,7 +193,7 @@ export default function CardinalTetraPage() {
           <CalloutBox variant="note" title="TL;DR">
             Cardinal tetras (Paracheirodon axelrodi) are blackwater micro-carnivores from
             the Rio Negro and Orinoco basins. They need soft, warm, acidic water
-            (75–82°F, pH 5.0–7.0, GH 1–8) and schools of at least ten fish in a
+            (73–81°F, FishBase Paracheirodon axelrodi, <a className="break-all" href="https://www.fishbase.se/summary/Paracheirodon-axelrodi.html">https://www.fishbase.se/summary/Paracheirodon-axelrodi.html</a>, pH 5.0–7.0, GH 1–8) and schools of at least ten fish in a
             heavily planted tank. Wild-caught stock from Project Piaba is often more
             vivid than farm-bred stock but requires strict four-week quarantine.
             Peaceful with other small soft-water community fish; classic discus
@@ -254,7 +254,7 @@ export default function CardinalTetraPage() {
           </p>
           <ul>
             <li>
-              <strong>Temperature:</strong> 75–82°F. The species range
+              <strong>Temperature:</strong> 73–81°F (<a className="break-all" href="https://www.fishbase.se/summary/Paracheirodon-axelrodi.html">https://www.fishbase.se/summary/Paracheirodon-axelrodi.html</a>). The species range
               overlaps discus, which is why the two are classic biotope mates.
             </li>
             <li>

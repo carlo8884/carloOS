@@ -142,7 +142,7 @@ export default function AfricanCichlidPage() {
                   className="flex justify-between py-1.5 border-b border-brand-border text-xs last:border-0"
                 >
                   <span className="text-brand-text-light">{k}</span>
-                  <span className="font-bold text-brand-dark text-right max-w-[55%]">{v}</span>
+                  <span className="font-bold text-brand-dark text-right max-w-[55%] break-all">{v}</span>
                 </div>
               ))}
             </div>

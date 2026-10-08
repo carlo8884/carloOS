@@ -69,7 +69,7 @@ export default function CPDPage() {
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Quick Stats</div>
           {[['Scientific name', 'Danio margaritatus'], ['Adult size', '1 inch'], ['Min group', '8 — 10-12 ideal'], ['Temperature', '73–79°F'], ['pH', '6.5–7.5'], ['Min tank', '10 gallons'], ['Breeding', 'Plant spawner — breeds readily']].map(([k, v]) => (
             <div key={k} className="flex justify-between py-1.5 border-b border-brand-border text-xs last:border-0">
-              <span className="text-brand-text-light">{k}</span><span className="font-bold text-brand-dark text-right max-w-[55%]">{v}</span>
+              <span className="text-brand-text-light">{k}</span><span className="font-bold text-brand-dark text-right max-w-[55%] break-all">{v}</span>
             </div>
           ))}
         </div>
