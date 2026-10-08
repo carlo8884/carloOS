@@ -93,7 +93,7 @@ export default function KayteeVsPrevueGuidePage() {
         <p>Floor space for the number of ferrets is on the <Link href="/tools/cage-size-calculator">cage-size calculator</Link>, using the rule from that review.</p>
         <h2>Who should buy which cage</h2>
         <p>Buy the Prevue when you want the one the review lists first of these two, with room the review sizes for one or two ferrets, and you do not need the cage to expand later. Buy the Kaytee when you need a single-ferret cage from a chain store today, you will give daily out-time, and you will check the bar spacing on the box. A pair or trio that should have a stackable double unit is the Ferret Nation on the same review.</p>
-        <p>The link above searches Amazon for the Prevue Feisty Ferret cage, the same search as on the cage review. Cover the wire shelves either way.</p>
+        <p>The Prevue is the pick when the review sizes the floor for one or two ferrets and the cage does not need to expand later. Cover the wire shelves either way.</p>
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
       </div>

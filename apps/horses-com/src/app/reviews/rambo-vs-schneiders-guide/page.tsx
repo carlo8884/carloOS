@@ -93,7 +93,7 @@ export default function RamboVsSchneidersGuidePage() {
         <p>The Schneiders StormShield Euro is Best Heavy Winter. The shell is 1680-denier ballistic nylon, heavier than the Rambo Original. Fills are 300 g and 360 g. The neck is a full neck with a deep shoulder gusset. Hardware is stainless, with a double belly surcingle. The review says that specification matches New England, the Upper Midwest, the Mountain West, and Canadian winters for a clipped horse, and that it is overkill for the mid-Atlantic and the South. It is heavy to handle when wet. The printed price is $300–460.</p>
         <h2>Who should buy which blanket</h2>
         <p>Buy the Rambo when you want the premium mid-weight shell, a choice of lighter fills as well as 400 g, and the lifetime repair program. Buy the StormShield when the horse is clipped and the winter is the heavy one the review names, and you want the 1680-denier shell with 300 g or 360 g. A milder climate is the lighter Horseware and Weatherbeeta options on the same review.</p>
-        <p>The link above opens the Rambo Original on SmartPak, the same link as on the blanket review. The sale price can differ from the band above.</p>
+        <p>The Rambo Original is the pick when you want the 1000-denier shell and a choice of fills from 0 g through 400 g. The sale price can differ from the band above.</p>
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
       </div>

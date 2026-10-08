@@ -32,7 +32,7 @@ const FAQS = [
   },
   {
     question: 'Does this replace the Hygger and Fluval comparison?',
-    answer: 'No. Hygger 957 and Fluval Plant 3.0 are the planted-tank pair on this hub. This comparison is the reef light against the fish-only light on the same lighting review.',
+    answer: 'No. Hygger 957 and Fluval Plant 3.0 are the planted-tank pair on this hub. The Kessil A360X is the reef light and the Nicrew Classic LED+ is the fish-only light on the same lighting review.',
   },
 ]
 
@@ -74,9 +74,9 @@ export default function KessilVsNicrewGuidePage() {
       priceAsOf="2026-10-04"
     >
       <div className="carloOS-article">
-        <p>Prices and scores below are the ones on the <Link href="/reviews/best-aquarium-lighting">lighting review</Link>. Hygger against Fluval Plant 3.0 is the planted-tank guide. This comparison is the Kessil A360X for a reef and the Nicrew Classic LED+ for a fish-only display.</p>
+        <p>Prices and scores below are the ones on the <Link href="/reviews/best-aquarium-lighting">lighting review</Link>. Hygger against Fluval Plant 3.0 is the planted-tank guide. The Kessil A360X is the reef light and the Nicrew Classic LED+ is the fish-only light.</p>
         <h2>What the review says about the Kessil A360X</h2>
-        <p>The Kessil A360X Tuna Blue is Best Reef, score 9.3. The card describes Dense Matrix LED, a shimmer effect, and Wi-Fi control in the Kessil app. PAR is listed as 150–300 or more at 12 inches of depth at moderate settings, which the review calls SPS-capable, over about a 24-inch square footprint. The cons say the printed price is $400–500, that a single point of light may need a second fixture on a wider tank, and that the light is overkill for fish-only or LPS-only. The link above is that product’s search from the lighting review.</p>
+        <p>The Kessil A360X Tuna Blue is Best Reef, score 9.3. The card describes Dense Matrix LED, a shimmer effect, and Wi-Fi control in the Kessil app. PAR is listed as 150–300 or more at 12 inches of depth at moderate settings, which the review calls SPS-capable, over about a 24-inch square footprint. The cons say the printed price is $400–500, that a single point of light may need a second fixture on a wider tank, and that the light is overkill for fish-only or LPS-only.</p>
         <h2>What the review says about the Nicrew Classic LED+</h2>
         <p>The Nicrew Classic LED+ is Best Fish-Only, score 8.5. The review says it is for fish-only or fish-only-with-live-rock, where light is aesthetic. PAR is described as low, about 15–25 at 12 inches, adequate for display and not for photosynthetic plants or coral. A blue channel is said to enhance fish color. A simple timer is built in. There is no app. The card lists a typical lifespan of 2–3 years at this price. The printed price is $20–35. The cons say it is not for planted or reef tanks.</p>
         <p>Live rock weight is a separate question. The <Link href="/tools/live-rock-calculator">live-rock calculator</Link> uses the saltwater setup page’s pounds-per-gallon line.</p>

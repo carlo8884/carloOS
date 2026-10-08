@@ -94,7 +94,7 @@ export default function FluvalVsEheimGuidePage() {
         <p>The Eheim Classic 350, model 2215, is Most Reliable. Tank size is about 120 liters, up to 92 US gallons. Pump output is 164 US GPH at 120 V / 60 Hz. Noise is quiet, not silent, and the review says it is slightly louder than the Fluval 307. Reliability is listed as a decades-long track record, with Classics running 10–15 or more years on impeller replacement. There is no AquaStop, and the media baskets are less separated than the Fluval’s. The printed price is $100–130.</p>
         <h2>Who should buy which canister</h2>
         <p>Buy the Fluval 307 when the tank is in the 40–70 gallon band and you want AquaStop plus the quieter of the two. Buy the Eheim Classic when the tank can be as large as 92 gallons and you would rather have the simpler filter the review credits with the longer life. A hang-on-back filter is the other style on the aquarium-filter review, not a third canister here.</p>
-        <p>The link above searches Amazon for the Fluval 307, the same search as on the canister review. The sale price can differ from the band above.</p>
+        <p>The Fluval 307 is the pick for a 40–70 gallon tank with AquaStop. The sale price can differ from the band above.</p>
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
       </div>

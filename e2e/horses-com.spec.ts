@@ -1,5 +1,5 @@
 import { expect, test } from '@playwright/test'
-import { expectMoneyCopy } from './money-copy'
+import { expectMoneyCopy, reviewRoutes } from './money-copy'
 import { expectHop } from './hop'
 import { AMAZON_TAG } from './tags'
 
@@ -68,5 +68,13 @@ test.describe('money fold at 390', () => {
       expect(Math.abs((noteBox!.y) - (hopBox!.y))).toBeLessThan(180)
       await expectMoneyCopy(page)
     })
+  }
+})
+
+test('every review route rejects page-about-itself copy', async ({ page }) => {
+  test.setTimeout(240_000)
+  for (const path of reviewRoutes('horses-com')) {
+    await page.goto(path, { waitUntil: 'domcontentloaded' })
+    await expectMoneyCopy(page)
   }
 })

@@ -93,7 +93,7 @@ export default function VetsPetInsurancePage() {
           Best Pet Insurance 2026 — How the 11 Major Carriers Compare
         </h1>
         <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">Trupanion is the top pet insurance pick because it is the carrier that pays the clinic at checkout.</p>
-        <PriceAsOf date="2026-10-07" tone="dark" />
+        <PriceAsOf date="2026-10-08" tone="dark" />
         <div data-fold="offer">
           <PrimaryHop href='/go/trupanion/home?s=reviews-best-pet-insurance' label='Get a Trupanion quote →' holdWithoutPartnerId />
         <HopDisclosure tone="on-dark"
@@ -177,16 +177,16 @@ export default function VetsPetInsurancePage() {
             />
 
             <ReviewCard id="healthy-paws" badge="Fastest Reimbursement" name="Healthy Paws"
-              subtitle="~2 day claims processing · Strong customer satisfaction reputation"
-              description={<p>Healthy Paws is consistently well-regarded for customer satisfaction — their mobile app claim submission and stated average of about 2 days make the reimbursement experience notably smooth. The annual reimbursement limit is a choice. Healthy Paws lists $5,000, $7,000, or unlimited, dated 2026-10-07. It is not automatically unlimited. Best for owners who prefer to pay the vet and be reimbursed rather than wait for direct payment integration.</p>}
+              subtitle="Most claims processed in 2 days · Registry lists no wellness add-on"
+              description={<p>The Healthy Paws claims page, fetched 2026-10-08, says most claims are processed in 2 days, and that Direct Pay can reimburse the vet when funding is urgent (https://www.healthypawspetinsurance.com/pet-insurance-claims.html). The annual reimbursement limit is a choice. Healthy Paws lists $5,000, $7,000, or unlimited, dated 2026-10-07. It is not automatically unlimited. The verified registry lists no wellness add-on.</p>}
               specs={[
                 { label: 'Reimbursement', value: 'Up to 90%', highlight: 'good' },
-                { label: 'Claims Speed', value: '~2 days', highlight: 'good' },
+                { label: 'Claims Speed', value: 'Most in 2 days', highlight: 'good' },
                 { label: 'Payout Limit', value: '$5,000, $7,000, or unlimited', highlight: 'good' },
                 { label: 'Deductible', value: 'Annual' },
               ]}
               pros={['Among the fastest claims processing of major carriers', 'Consistently strong customer satisfaction reputation', 'Unlimited is one of the limit choices', 'Good mobile app']}
-              cons={['No direct vet payment', 'No wellness add-on']}
+              cons={['Direct Pay is the urgent exception on the claims page', 'No wellness add-on']}
               price="See the carrier's current terms"
               priceNote="dated 2026-10-07."
               ctaText="Get a Healthy Paws quote" ctaHref="/go/healthy-paws/home?s=reviews-best-pet-insurance" holdWithoutPartnerId
@@ -195,7 +195,7 @@ export default function VetsPetInsurancePage() {
 
             <ReviewCard id="embrace" badge="Wellness add-on" name="Embrace"
               subtitle="Wellness add-on · Deductible program: see the carrier's current terms"
-              description={<p>Embrace includes a wellness add-on for routine and preventive care alongside illness and accident coverage. The add-on covers vaccines, heartworm testing, dental cleanings, and annual exams. The deductible program and the orthopedic waiting period: see the carrier's current terms. Reimbursement on the current dog page is 70%, 80%, or 90%.</p>}
+              description={<p>The Wellness Rewards page, fetched 2026-10-08, lists wellness exams, vaccinations, flea, tick, and heartworm prevention, and preventative dental cleaning (https://www.embracepetinsurance.com/coverage/wellness-rewards). The verified registry marks that coverage as a standalone add-on. The deductible program and the orthopedic waiting period: see the carrier's current terms. Reimbursement on the current dog page is 70%, 80%, or 90%.</p>}
               specs={[
                 { label: 'Wellness', value: 'Add-on available', highlight: 'good' },
                 { label: 'Deductible', value: 'See the carrier\'s current terms' },
@@ -237,8 +237,8 @@ export default function VetsPetInsurancePage() {
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">You can pay the clinic and want the reimbursement back fast</td>
                       <td className="p-3 font-bold text-brand-dark"><a href="#healthy-paws" className="text-brand-primary">Healthy Paws</a><TableShopLink href={"/go/healthy-paws/home?s=reviews-best-pet-insurance"} product={"Healthy Paws"} holdWithoutPartnerId /></td>
-                      <td className="p-3 text-brand-text-mid">About 2 days. Up to 90 percent. Annual limit is $5,000, $7,000, or unlimited. See the carrier's current terms for the monthly figure.</td>
-                      <td className="p-3 text-brand-text-mid">No direct vet payment. No wellness add-on. Deductible is annual</td>
+                      <td className="p-3 text-brand-text-mid">Most claims processed in 2 days. Up to 90 percent. Annual limit is $5,000, $7,000, or unlimited. See the carrier's current terms for the monthly figure.</td>
+                      <td className="p-3 text-brand-text-mid">Wellness is not in the registry. Deductible is annual</td>
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">You want routine care budgeted beside accident and illness</td>

@@ -78,7 +78,7 @@ export default function CosequinVsDasuquinGuidePage() {
         <p>The same review says a dog that is limping needs a veterinary exam before either bottle. Supplements on that page do not replace pain medication.</p>
         <h2>Who should buy which bottle</h2>
         <p>Buy Dasuquin when the review’s evidence ranking is the reason and the higher bottle price is acceptable. Buy Cosequin DS when the lower NASC price is the constraint, and plan the 6-week check the review describes. Neither bottle is the fish-oil product on that page, and neither is a pain medication.</p>
-        <p>The link above searches Amazon for Dasuquin with MSM, the same search as on the joint review. The sale price can differ from the band above.</p>
+        <p>Dasuquin with MSM is the evidence pick because the review lists avocado/soybean unsaponifiables with glucosamine, chondroitin, and MSM. The sale price can differ from the band above.</p>
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
       </div>

@@ -93,7 +93,7 @@ export default function PaperVsGrassLitterGuidePage() {
         <p>The <Link href="/tools/litter-planner">litter planner</Link> sizes the paper-pellet default for the number of ferrets. It does not switch the litter to wood or grass by count.</p>
         <h2>Who should buy which litter</h2>
         <p>Buy paper pellets when you want the litter the review calls the default: very low dust, non-clumping, and widely available. Buy grass pellets when texture is the complaint and you can change the pan more often. Do not buy a clumping cat litter for either job. Heat-treated wood pellets stay on the odor comparison, and only as compressed low-phenol pellets, never as aromatic shavings.</p>
-        <p>The link above is the recycled paper-pellet search from the litter review. Purina discontinued Yesterday’s News on April 20, 2022. The sale price can differ from the tier in that review.</p>
+        <p>Paper pellets are the pick because the review calls them the low-dust default. Purina discontinued Yesterday’s News on April 20, 2022. The sale price can differ from the tier in that review.</p>
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
       </div>

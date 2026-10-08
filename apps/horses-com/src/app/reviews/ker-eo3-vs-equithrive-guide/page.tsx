@@ -94,7 +94,7 @@ export default function KerVsEquithriveGuidePage() {
         <p>Equithrive Original Pellets are Best Resveratrol. The active ingredient in the review is trans-resveratrol. The format is a pellet. The review says the brand carries an NASC seal, was founded by a veterinarian at the University of Kentucky, and lists no prohibited FEI or USEF ingredients. The printed price is $45–65 a month. It frames resveratrol as a complement to traditional joint ingredients, not a substitute, and says the evidence base is smaller than ASU or glucosamine. The common use it names is mild joint inflammation or support after an injection.</p>
         <h2>Who should buy which product</h2>
         <p>Buy EO-3 when the goal is marine DHA and EPA and you can handle a liquid in winter. Buy Equithrive when you want the resveratrol pellet beside a joint formula, not instead of one. Neither product replaces the Cosequin ASU Plus or Platinum Performance tubs on that review.</p>
-        <p>The link above searches Amazon for KER EO-3, the same search as on the supplement review. The sale price can differ from the band above.</p>
+        <p>EO-3 is the pick when the goal is marine DHA and EPA in a liquid top-dress. The sale price can differ from the band above.</p>
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
       </div>
