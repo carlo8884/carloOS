@@ -1,6 +1,7 @@
 'use client'
 
 import { HopDisclosure } from '../../../components/HopDisclosure'
+import Link from 'next/link'
 
 /**
  * Horse Height Converter -- /tools/horse-height-converter
@@ -260,6 +261,11 @@ export default function Calculator() {
         <ResultMeaning>
           These three figures are the same withers height in hands, inches, and centimetres.
         </ResultMeaning>
+        <p className="mt-3 text-sm">
+          <Link href="/guides/saddle-fit-basics" className="font-semibold text-brand-primary underline">
+            Read saddle-fit basics
+          </Link>
+        </p>
       )}
 
       {result && (

@@ -1,6 +1,7 @@
 'use client'
 
 import { HopDisclosure } from '../../../components/HopDisclosure'
+import Link from 'next/link'
 /**
  * Horse Size for Rider Calculator -- /tools/horse-size-for-rider
  * Client compute component. Suggests a horse bodyweight range and an
@@ -313,6 +314,11 @@ export default function Calculator() {
         <ResultMeaning>
           This range is the horse bodyweight that keeps rider plus tack near 15–20 percent, a welfare planning guide rather than a hard fitting rule.
         </ResultMeaning>
+        <p className="mt-3 text-sm">
+          <Link href="/guides/saddle-fit-basics" className="font-semibold text-brand-primary underline">
+            Read saddle-fit basics
+          </Link>
+        </p>
       )}
 
       {result && (

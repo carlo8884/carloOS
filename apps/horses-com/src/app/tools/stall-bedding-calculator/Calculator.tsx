@@ -1,6 +1,7 @@
 'use client'
 
 import { HopDisclosure } from '../../../components/HopDisclosure'
+import Link from 'next/link'
 
 /**
  * Stall Bedding Calculator -- /tools/stall-bedding-calculator
@@ -267,6 +268,11 @@ export default function Calculator() {
         <ResultMeaning>
           This bag count is the bedding volume for the stall size and depth you entered, a planning estimate rather than a bag label.
         </ResultMeaning>
+        <p className="mt-3 text-sm">
+          <Link href="/care/turnout-vs-stabling" className="font-semibold text-brand-primary underline">
+            Compare turnout with stabling
+          </Link>
+        </p>
       )}
 
       <p className="mt-4 text-sm text-brand-text-mid">{bedding.note}</p>
