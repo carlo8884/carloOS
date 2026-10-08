@@ -111,7 +111,7 @@ export default function DogObesityPage() {
           { name: 'Dog Health', href: '/health' },
           { name: 'Dog Obesity', href: '/health/dog-obesity' },
         ]}
-        relatedLinks={[{ title: 'Body Condition Score Tool', href: '/tools/dog-body-condition-score', category: 'Tool' }, { title: 'Dog Health Hub', href: '/health', category: 'Hub' }, { title: 'Dog Diabetes', href: '/health/dog-diabetes', category: 'Dog Health' }, { title: "Cushing's Disease", href: '/health/cushing-disease', category: 'Dog Health' }, { title: 'Dog Arthritis', href: '/health/dog-arthritis', category: 'Dog Health' }]}
+        relatedLinks={[{ title: 'Body Condition Score Tool', href: '/tools/dog-body-condition-score', category: 'Tool' }, { title: 'Dog Calorie Calculator', href: '/tools/dog-calorie-calculator', category: 'Tool' }, { title: 'Dog Health Hub', href: '/health', category: 'Hub' }, { title: 'Dog Diabetes', href: '/health/dog-diabetes', category: 'Dog Health' }, { title: "Cushing's Disease", href: '/health/cushing-disease', category: 'Dog Health' }, { title: 'Dog Arthritis', href: '/health/dog-arthritis', category: 'Dog Health' }]}
         sidebar={
           <>
             <TableOfContents
@@ -222,7 +222,7 @@ export default function DogObesityPage() {
           <ol>
             <li><strong>Establish a baseline.</strong> Veterinary visit including weight, BCS, MCS (muscle condition score), and bloodwork to rule out endocrine disease. The bloodwork is not optional — treating undiagnosed hypothyroidism with caloric restriction will not work.</li>
             <li><strong>Set a target body weight.</strong> Estimate ideal weight by working back from current BCS — every BCS point above 5 corresponds to roughly 10–15% over ideal. Your vet sets the target collaboratively; the number should be specific (&ldquo;52 lb target&rdquo;) rather than vague (&ldquo;lose some weight&rdquo;).</li>
-            <li><strong>Calculate calorie target.</strong> Resting Energy Requirement (RER) = 70 × (body weight in kg)<sup>0.75</sup>. For weight loss, target intake is typically 0.8–1.0 × RER calculated at the target body weight (not current weight). Many veterinary nutrition references and AAHA worksheets provide the calculation; your vet will produce the number for your specific dog.</li>
+            <li><strong>Calculate calorie target.</strong> Resting Energy Requirement (RER) = 70 × (body weight in kg)<sup>0.75</sup>. For weight loss, target intake is typically 0.8–1.0 × RER calculated at the target body weight (not current weight). Many veterinary nutrition references and AAHA worksheets provide the calculation; your vet will produce the number for your specific dog. The <a href="/tools/dog-calorie-calculator" className="text-brand-primary hover:underline">calorie calculator</a> runs that RER formula with a weight-loss factor and an optional cups-per-day figure from the food label. It is a starting estimate, not the clinic&apos;s number.</li>
             <li><strong>Measure all food by weight.</strong> Use a digital kitchen scale and weigh kibble in grams. Measuring cups are inaccurate by 20–30% depending on kibble shape and how the cup is filled — published data documents this consistently. Gram weight is the only reliable measure. <a href="/reviews/best-dry-dog-food">The dry dog food guide</a> compares the kibble you are weighing.</li>
             <li><strong>Account for every treat.</strong> Within 5% of the calorie target if possible; subtract treat calories from the meal ration if treats exceed 10%. Use kibble from the daily ration as training treats, or switch to very low-calorie treats (carrot rounds, green beans, ice cubes).</li>
             <li><strong>Switch to a weight-management diet.</strong> See next section.</li>
@@ -257,7 +257,7 @@ export default function DogObesityPage() {
             <li><strong>Short, frequent walks</strong> (5–10 minutes, 2–3 times daily) instead of one long walk. Build duration weekly.</li>
             <li><strong>Underwater treadmill or hydrotherapy</strong> for severely obese or arthritic dogs. Warm water supports body weight and allows movement without joint load. Veterinary rehabilitation centers (CCRT-certified) offer this service.</li>
             <li><strong>Avoid high-impact play</strong> (chase, jump, hard turning) until weight has been substantially reduced. Acute orthopedic injury during weight-loss programs is a known setback.</li>
-            <li><strong>Mental enrichment.</strong> Slow-feeder bowls, food-dispensing puzzle toys, and snuffle mats slow eating, increase mental effort per meal, and improve satiety without adding calories.</li>
+            <li><strong>Mental enrichment.</strong> Slow-feeder bowls, food-dispensing puzzle toys, and snuffle mats slow eating, increase mental effort per meal, and improve satiety without adding calories. The <a href="/reviews/best-slow-feeder-bowls" className="text-brand-primary hover:underline">slow feeder review</a> compares the bowls that stretch a meal. It does not treat obesity, and it is not a GDV prevention plan.</li>
           </ul>
 
           <h2 id="pitfalls">Common Pitfalls</h2>

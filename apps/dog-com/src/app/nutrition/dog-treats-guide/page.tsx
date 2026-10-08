@@ -100,7 +100,7 @@ export default function DogTreatsGuidePage() {
           { name: 'Dog Nutrition', href: '/nutrition' },
           { name: 'Dog Treats Guide', href: '/nutrition/dog-treats-guide' },
         ]}
-        relatedLinks={[{ title: 'Dog Nutrition Hub', href: '/nutrition', category: 'Hub' }, { title: 'Toxic Foods Guide', href: '/nutrition/toxic-foods', category: 'Nutrition' }, { title: 'How Much to Feed', href: '/nutrition/how-much-to-feed', category: 'Nutrition' }, { title: 'Best Dental Chews', href: '/reviews/best-dental-chews', category: 'Reviews' }]}
+        relatedLinks={[{ title: 'Dog Nutrition Hub', href: '/nutrition', category: 'Hub' }, { title: 'Toxic Foods Guide', href: '/nutrition/toxic-foods', category: 'Nutrition' }, { title: 'How Much to Feed', href: '/nutrition/how-much-to-feed', category: 'Nutrition' }, { title: 'Calorie Calculator', href: '/tools/dog-calorie-calculator', category: 'Tool' }, { title: 'Best Dental Chews', href: '/reviews/best-dental-chews', category: 'Reviews' }]}
         sidebar={
           <>
             <TableOfContents
@@ -124,6 +124,7 @@ export default function DogTreatsGuidePage() {
                 { label: 'WSAVA Guidelines Explained', href: '/nutrition/wsava-explained' },
                 { label: 'Toxic Foods', href: '/nutrition/toxic-foods' },
                 { label: 'How Much to Feed', href: '/nutrition/how-much-to-feed' },
+                { label: 'Calorie Calculator', href: '/tools/dog-calorie-calculator' },
                 { label: 'Body Condition Score', href: '/guides/dog-body-condition-score' },
               ]}
             />
@@ -160,7 +161,7 @@ export default function DogTreatsGuidePage() {
             The 10% rule is easier to follow once you write the numbers down. A typical 20-lb adult dog needs roughly 400–500 kcal per day for maintenance. Ten percent of that is 40–50 kcal — about two small commercial dog treats or a few teaspoons of single-ingredient treat material. For a 60-lb dog the daily intake is roughly 1,000–1,200 kcal, so the treat budget is 100–120 kcal. For an 8-lb dog, the budget is 25–30 kcal — which is one regular-sized biscuit, total, all day.
           </p>
           <p>
-            Treat calories are the most commonly underestimated calorie source in canine diets. Most owners can correctly state how much kibble they feed. Almost no one tracks treat calories. Two standard medium biscuits, one dental chew, and three training rewards over a day can be 150 kcal — meaningfully more than the entire daily treat budget for a small dog.
+            Treat calories are the most commonly underestimated calorie source in canine diets. Most owners can correctly state how much kibble they feed. Almost no one tracks treat calories. Two standard medium biscuits, one dental chew, and three training rewards over a day can be 150 kcal — meaningfully more than the entire daily treat budget for a small dog. The <a href="/tools/dog-calorie-calculator" className="text-brand-primary hover:underline">calorie calculator</a> estimates the maintenance number the 10% treat budget comes out of. Subtract the treats from that total; do not add them on top.
           </p>
 
           <CalloutBox variant="tip" title="Practical math: write the numbers on the bag">
