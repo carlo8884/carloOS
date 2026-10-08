@@ -64,16 +64,16 @@ const FAQS = [
   {
     question: 'Why does this calculator say “estimate” and not “prescription”?',
     answer:
-      'Calorie formulas give a population-level starting point, not an individual prescription. Metabolic rate depends on lean mass, thyroid status, temperature, and individual variation that no formula captures. Studies show variation of 30% or more around the mean even within the same life stage. Feed near the estimate, then adjust over 4–6 weeks based on body condition score. A veterinarian should confirm the target weight and review any significant calorie restriction — especially the 0.8 × RER weight-loss factor.',
+      'Calorie formulas give a population-level starting point, not an individual prescription. Metabolic rate depends on lean mass, thyroid status, temperature, and individual variation that no formula captures. This page does not cite a percent for that spread. Feed near the estimate, then adjust over 4–6 weeks based on body condition score. A veterinarian should confirm the target weight and review any significant calorie restriction — especially the 0.8 × RER weight-loss factor.',
     answerText:
-      'Formula estimates have 30%+ individual variation. Use as a starting point, then adjust over 4–6 weeks based on body condition score and veterinary guidance. Not a diagnosis or a diet plan.',
+      'Individual cats vary around the formula. This page does not cite a percent for that spread. Adjust over 4–6 weeks using body condition and veterinary guidance. Not a diagnosis or a diet plan.',
   },
   {
     question: 'Do treats count toward the daily calorie target?',
     answer:
-      'Yes. Treats should stay within about 10% of daily calories — dental treats, squeeze-ups, and table scraps all count. Subtract treat calories from the DER estimate before you portion the bowl. Weigh meals on a kitchen gram scale rather than a measuring cup: cups over-portion depending on how they are filled. A slow-feeder bowl or interactive feeder can stretch a measured ration without adding calories.',
+      'Yes. A planning figure on this page is to keep treats within about 10% of daily calories — dental treats, squeeze-ups, and table scraps all count. That 10% is not a row on the WSAVA July 2020 chart. Subtract treat calories from the estimate before you portion the bowl. Weigh meals on a kitchen gram scale rather than a measuring cup. A slow-feeder bowl or interactive feeder can stretch a measured ration without adding calories.',
     answerText:
-      'Keep treats to about 10% of daily calories. Weigh meals on a kitchen gram scale; measuring cups often over-portion.',
+      'Treats within about 10% of daily calories are a planning figure, not a row on the WSAVA July 2020 chart. Weigh meals on a kitchen gram scale.',
   },
 ]
 
