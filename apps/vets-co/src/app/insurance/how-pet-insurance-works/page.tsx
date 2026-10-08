@@ -251,7 +251,7 @@ export default function HowPetInsuranceWorksPage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-07" />
+          <ComparisonFoot updated="2026-10-08" />
 
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
