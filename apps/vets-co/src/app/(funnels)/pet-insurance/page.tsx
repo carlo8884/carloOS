@@ -7,6 +7,7 @@ import {
   combineSchemas,
   SchemaScript,
   AffiliateDisclosure} from '@carloOS/ui'
+import { liveAnchorHref, partnerNeededLabel } from '@carloOS/config/affiliate-hop'
 
 /**
  * Vets-co pet insurance hub.
@@ -118,7 +119,10 @@ export default function VetsCoInsuranceHub() {
         </h2>
 
         <div className="grid gap-4 mb-12">
-          {TOP_CARRIERS.map((c) => (
+          {TOP_CARRIERS.map((c) => {
+            const hop = liveAnchorHref(`/go/${c.vendor}/home?s=vets-co-insurance-hub-${c.slug}`)
+            const label = c.vendor === 'manypets' ? 'Visit ManyPets →' : 'Get quote →'
+            return (
             <div
               key={c.slug}
               className="border border-brand-border rounded-xl p-6 bg-white"
@@ -128,18 +132,30 @@ export default function VetsCoInsuranceHub() {
                   <h3 className="font-display text-xl font-bold">{c.name}</h3>
                   <p className="text-sm text-brand-text-mid">{c.blurb}</p>
                 </div>
-                <a
-              href={`/go/${c.vendor}/home?s=vets-co-insurance-hub-${c.slug}`}
-              rel="sponsored nofollow noopener" target="_blank" className="inline-block bg-brand-primary text-white px-4 py-2 rounded-lg font-semibold text-sm no-underline hover:opacity-90 whitespace-nowrap"
-            >
-              {c.vendor === 'manypets' ? 'Visit ManyPets →' : 'Get quote →'}
-            </a>
+                {hop ? (
+                  <a
+                    href={hop}
+                    rel="sponsored nofollow noopener"
+                    target="_blank"
+                    className="inline-block bg-brand-primary text-white px-4 py-2 rounded-lg font-semibold text-sm no-underline hover:opacity-90 whitespace-nowrap"
+                  >
+                    {label}
+                  </a>
+                ) : (
+                  <span
+                    data-partner-held={c.vendor}
+                    className="inline-block px-4 py-2 text-sm font-semibold text-brand-text-mid whitespace-nowrap"
+                  >
+                    {partnerNeededLabel(label)}
+                  </span>
+                )}
               </div>
               <div className="text-xs text-brand-text-light italic border-t border-brand-border/40 pt-3 mt-3">
                 {c.why}
               </div>
             </div>
-          ))}
+            )
+          })}
         </div>
 
         <h2 className="font-display text-2xl font-bold tracking-tight mb-6">

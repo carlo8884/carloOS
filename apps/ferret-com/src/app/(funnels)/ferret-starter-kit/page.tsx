@@ -8,7 +8,41 @@ import {
   SchemaScript,
   AffiliateDisclosure,
 } from '@carloOS/ui'
+import { liveAnchorHref } from '@carloOS/config/affiliate-hop'
 import { STARTER_KIT, BUDGET_SUMMARIES } from '../../../data/starter-kit'
+
+function KitPrice({
+  vendor,
+  sku,
+  name,
+  source,
+}: {
+  vendor: string
+  sku: string
+  name: string
+  source: string
+}) {
+  const hop = liveAnchorHref(`/go/${vendor}/${encodeURIComponent(sku)}?s=${source}`)
+  if (!hop) {
+    return (
+      <span
+        data-partner-held={vendor}
+        className="inline-block whitespace-nowrap text-center px-5 py-2.5 text-sm font-semibold text-brand-text-mid md:self-center"
+      >
+        {name} — partner ID needed
+      </span>
+    )
+  }
+  return (
+    <a
+      href={hop}
+      rel="sponsored noopener"
+      className="inline-block whitespace-nowrap text-center px-5 py-2.5 bg-brand-primary text-brand-white text-sm font-bold rounded hover:bg-brand-primary-light transition-colors md:self-center"
+    >
+      Check Price →
+    </a>
+  )
+}
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -126,13 +160,12 @@ export default function FerretStarterKitPage() {
                     {item.rationale}
                   </p>
                 </div>
-                <a
-                  href={`/go/${item.vendor}/${encodeURIComponent(item.sku)}?s=starter-kit-${cat.slug}`}
-                  rel="sponsored noopener"
-                  className="inline-block whitespace-nowrap text-center px-5 py-2.5 bg-brand-primary text-brand-white text-sm font-bold rounded hover:bg-brand-primary-light transition-colors md:self-center"
-                >
-                  Check Price →
-                </a>
+                <KitPrice
+                  vendor={item.vendor}
+                  sku={item.sku}
+                  name={item.name}
+                  source={`starter-kit-${cat.slug}`}
+                />
               </div>
             ))}
           </div>
