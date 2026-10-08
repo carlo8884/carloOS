@@ -31,9 +31,12 @@ export default function BestPlantedFertilizersPage() {
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-4">Buyer's Guide</span>
         <h1 className="font-display font-bold text-white tracking-tight leading-tight mb-4 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Planted Tank Fertilizers 2026</h1>
+        <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">Aquarium Co-Op Easy Green is the top planted-tank fertilizer because the dosing is simple and it covers macros and micros.</p>
         <PriceAsOf date="2026-10-05" tone="dark" />
-        <PrimaryHop href='/go/amazon-brand/aquarium+co-op+easy+green+fertilizer?s=reviews-best-planted-tank-fertilizers' label='Check price of Aquarium Co-Op Easy Green fertilizer on Amazon' />
+        <div data-fold="offer">
+          <PrimaryHop href='/go/amazon-brand/aquarium+co-op+easy+green+fertilizer?s=reviews-best-planted-tank-fertilizers' label='Check price of Aquarium Co-Op Easy Green fertilizer on Amazon' />
         <HopDisclosure siteId="fish-com" href="/go/amazon-brand/aquarium+co-op+easy+green+fertilizer?s=reviews-best-planted-tank-fertilizers" />
+        </div>
         <EmailCapture
           variant="inline"
           siteId="fish-com"

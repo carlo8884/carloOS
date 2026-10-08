@@ -26,9 +26,12 @@ export default function BestCanisterFiltersPage() {
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-4">Buyer's Guide</span>
         <h1 className="font-display font-bold text-white tracking-tight leading-tight mb-4 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Canister Filters 2026</h1>
+        <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">The Fluval 307 is the top canister filter because separate baskets hold mechanical, chemical, and biological media.</p>
         <PriceAsOf date="2026-10-05" tone="dark" />
-        <PrimaryHop href='/go/amazon-brand/fluval+307+canister+filter?s=reviews-best-canister-filters' label='Check price of the Fluval 307 canister filter on Amazon' />
+        <div data-fold="offer">
+          <PrimaryHop href='/go/amazon-brand/fluval+307+canister+filter?s=reviews-best-canister-filters' label='Check price of the Fluval 307 canister filter on Amazon' />
         <HopDisclosure siteId="fish-com" href="/go/amazon-brand/fluval+307+canister+filter?s=reviews-best-canister-filters" />
+        </div>
         <EmailCapture
           variant="inline"
           siteId="fish-com"

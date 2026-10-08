@@ -33,9 +33,12 @@ export default function BestWaterTestKitsPage() {
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-4">Buyer's Guide</span>
         <h1 className="font-display font-bold text-white tracking-tight leading-tight mb-4 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Aquarium Water Test Kits 2026</h1>
+        <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">The API Freshwater Master Test Kit is the top water test because one box covers pH, ammonia, nitrite, and nitrate.</p>
         <PriceAsOf date="2026-10-03" tone="dark" />
-        <PrimaryHop href='/go/amazon-brand/api+freshwater+master+test+kit?s=reviews-best-water-test-kits' label='Check price of the API Freshwater Master Test Kit on Amazon' />
+        <div data-fold="offer">
+          <PrimaryHop href='/go/amazon-brand/api+freshwater+master+test+kit?s=reviews-best-water-test-kits' label='Check price of the API Freshwater Master Test Kit on Amazon' />
         <HopDisclosure siteId="fish-com" href="/go/amazon-brand/api+freshwater+master+test+kit?s=reviews-best-water-test-kits" />
+        </div>
         <EmailCapture
           variant="inline"
           siteId="fish-com"
