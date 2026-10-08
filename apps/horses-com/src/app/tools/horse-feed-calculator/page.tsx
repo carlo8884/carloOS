@@ -23,7 +23,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: 'Horse Feed & Hay Calculator (Daily Intake) | Horses.com',
   description:
-    'Estimate how much hay and feed a horse needs per day from bodyweight, workload, and keeper type. Forage floor and maximal intake follow Merck’s reading of NRC 2007; workload splits are planning figures.',
+    'Estimate daily hay from bodyweight. Merck, citing NRC 2007: forage at least 1.5–2% of body weight, maximal intake 2.5–3%. Other splits are planning figures.',
   path: '/tools/horse-feed-calculator',
 })
 
