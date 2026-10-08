@@ -77,7 +77,7 @@ export default function NylonVsBreakawayGuidePage() {
           ]}
         />
       }
-      priceAsOf="2026-10-05"
+      priceAsOf="2026-10-08"
     >
       <div className="carloOS-article">
         <EmailCapture

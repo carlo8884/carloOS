@@ -29,7 +29,10 @@ export function HopDisclosure({
     const consult = consultLink(item)
     if (consult && !consult.attributed) return false
     const visible = visibleShopHref(item)
-    return Boolean(visible && hopCommissionReady(visible))
+    if (!visible) return false
+    // Amazon anchors stay on the page even before the tag is read at build time.
+    if (/\/go\/amazon(?:-brand)?\//.test(visible)) return true
+    return hopCommissionReady(visible)
   })
   if (live) {
     return <AffiliateDisclosure variant="inline" siteId={siteId} className="mt-3 mb-0" />
