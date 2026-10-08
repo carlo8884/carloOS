@@ -1,6 +1,7 @@
 'use client'
 
 import { HopDisclosure } from '../../../components/HopDisclosure'
+import Link from 'next/link'
 /**
  * Ferret Body Condition Score (BCS) Assessor -- /tools/ferret-body-condition-score
  *
@@ -226,6 +227,11 @@ export default function FerretBCSCalculator() {
           <ResultMeaning>
             The score is the rounded average of the three checks on the 9-point scale. It is a hands-on estimate for an exotic-mammal veterinarian to confirm.
           </ResultMeaning>
+          <p className="mt-3 text-sm">
+            <Link href="/diet/best-ferret-kibble" className="font-semibold text-brand-primary underline">
+              Compare ferret kibble next
+            </Link>
+          </p>
         </div>
       ) : null}
 

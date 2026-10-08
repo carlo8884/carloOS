@@ -7605,6 +7605,7 @@ const CALCULATORS = [
       { re: /tier: 'same-day'/, label: 'same-day fallback when mixed/urgent' },
       { re: /There is no "all clear" verdict/, label: 'no all-clear verdict (comment contract)' },
       { re: /from '\.\.\/\.\.\/\.\.\/data\/ferret-symptom-signs'/, label: 'signs imported from shared ferret-symptom-signs (do not fork)' },
+      { re: /href="\/health\/vet-visit-prep"/, label: 'triage result links vet-visit prep' },
     ],
     why: 'Conservative ferret triage: any emergency sign → go now; monitor only for 11/12 monitor-eligible signs; mixed selections resolve upward. No all-clear. Do not invent a new formula.',
   },
@@ -7675,6 +7676,7 @@ const CALCULATORS = [
       { re: /if \(bcs <= 5\)/, label: 'ideal band ≤5 (4–5 on the 9-point planning scale)' },
       { re: /if \(bcs <= 7\)/, label: 'overweight band ≤7' },
       { re: /seasonal weight swing/, label: 'seasonal-weight-swing caveat kept (ferret-specific, not invented scale)' },
+      { re: /href="\/diet\/best-ferret-kibble"/, label: 'BCS result links the kibble guide' },
     ],
     why: 'Same 1–9 planning scale as the dog/cat BCS tools (average rib/waist/belly, 4–5 ideal), with ferret descriptors and the seasonal weight-swing caveat from Ferret.com weight-management copy. Do not invent a new scale or claim a published ferret WSAVA chart.',
   },
@@ -7803,6 +7805,7 @@ const CALCULATORS = [
       { re: /if \(total <= 1\)/, label: 'minimal-signs band ≤1' },
       { re: /if \(total <= 3\)/, label: 'watch band ≤3 (below the higher planning band)' },
       { re: /\/tools\/is-this-a-ferret-emergency/, label: 'high-pain outcomes push ER triage, not shop-first' },
+      { re: /href="\/health\/signs-of-pain"/, label: 'low grimace totals link signs of pain' },
     ],
     mustExclude: [
       { re: /mg\/kg| milligrams per kilogram/i, label: 'never publish a dose' },
