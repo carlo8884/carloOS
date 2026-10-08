@@ -92,6 +92,7 @@ export default function WinterCarePage() {
             links={[
               { label: "Blanketing Guide", href: "/care/blanketing" },
               { label: "Best Winter Horse Blankets", href: "/reviews/best-winter-horse-blankets" },
+              { label: "Blanket size calculator", href: "/tools/horse-blanket-size-calculator" },
               { label: "Water Requirements", href: "/nutrition/water-requirements" },
               { label: "Equine Colic", href: "/health/colic" },
             ]}
@@ -115,7 +116,7 @@ export default function WinterCarePage() {
           <p>Forage is the horse&apos;s internal furnace -- the microbial fermentation of fiber in the hindgut generates heat. In cold weather, increasing hay (rather than grain) is the most effective way to help a horse stay warm. Free-choice or near-continuous good-quality hay keeps the fermentation going and the horse warm through the night. As a rough rule, intake needs rise as temperatures fall below the horse&apos;s comfort zone, so winter hay bills climb.</p>
 
           <h2 id="shelter">Shelter and Blanketing</h2>
-          <p>What horses most need is shelter from wind and wet, which strip the coat&apos;s insulation, rather than from cold air. A three-sided run-in shed, a windbreak, or tree cover lets a horse with a full coat and forage cope with severe cold. Blanketing is justified for clipped, old, sick, or underweight horses, or where shelter is lacking in prolonged cold and wet -- but an unclipped, sheltered, well-fed horse often needs no rug. See the blanketing guide.</p>
+          <p>What horses most need is shelter from wind and wet, which strip the coat&apos;s insulation, rather than from cold air. A three-sided run-in shed, a windbreak, or tree cover lets a horse with a full coat and forage cope with severe cold. Blanketing is justified for clipped, old, sick, or underweight horses, or where shelter is lacking in prolonged cold and wet -- but an unclipped, sheltered, well-fed horse often needs no rug. See the <a href="/care/blanketing">blanketing guide</a> before buying a rug. If a rug is warranted, the <a href="/reviews/best-winter-horse-blankets">winter blanket guide</a> compares fills, and the <a href="/tools/horse-blanket-size-calculator">blanket size calculator</a> turns a chest-to-buttock measurement into a US size.</p>
 
           <h2 id="footing">Footing, Ice, and Mud</h2>
           <ul>

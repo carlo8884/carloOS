@@ -90,6 +90,7 @@ export default function BlanketingPage() {
           <RelatedLinks
             title="Related Reading"
             links={[
+              { label: "Blanket size calculator", href: "/tools/horse-blanket-size-calculator" },
               { label: "Blanket Weights Explained", href: "/tack/blanket-weights" },
               { label: "Winter Care", href: "/care/winter-care" },
               { label: "Best Winter Horse Blankets", href: "/reviews/best-winter-horse-blankets" },
@@ -125,7 +126,7 @@ export default function BlanketingPage() {
 
           <h2 id="fit">Fit and Safety</h2>
           <ul>
-            <li><strong>Measure correctly</strong> from the center of the chest to the point of the buttock to size the rug.</li>
+            <li><strong>Measure correctly</strong> from the center of the chest to the point of the buttock to size the rug. The <a href="/tools/horse-blanket-size-calculator">blanket size calculator</a> turns that measurement into the standard US size and the approximate EU centimeter equivalent.</li>
             <li><strong>Check for rubbing</strong> at the shoulders, withers, and chest; a poorly fitted rug causes sores.</li>
             <li><strong>Secure all straps</strong> -- chest, belly surcingles, and leg straps -- adjusted so the horse cannot tangle a leg.</li>
             <li><strong>Inspect daily</strong> for slipping, rubs, damp, and the horse being too hot or too cold underneath.</li>
