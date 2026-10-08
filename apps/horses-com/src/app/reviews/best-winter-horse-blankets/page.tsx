@@ -388,7 +388,7 @@ export default function BestWinterBlanketsPage() {
                 </tbody>
               </table>
             </div>
-            <ComparisonFoot updated="2026-10-07" />
+            <ComparisonFoot updated="2026-10-08" />
 
             <h2>The Layering System Approach</h2>
             <p>The alternative to owning four different weight-specific turnouts: one waterproof sheet shell plus a set of liners in graduated weights. The layering math:</p>
