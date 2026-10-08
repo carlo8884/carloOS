@@ -311,6 +311,7 @@ export default function Calculator() {
       </div>}
 
       {result && (
+        <>
         <ResultMeaning>
           This range is the horse bodyweight that keeps rider plus tack near 15–20 percent, a welfare planning guide rather than a hard fitting rule.
         </ResultMeaning>
@@ -319,6 +320,7 @@ export default function Calculator() {
             Read saddle-fit basics
           </Link>
         </p>
+        </>
       )}
 
       {result && (

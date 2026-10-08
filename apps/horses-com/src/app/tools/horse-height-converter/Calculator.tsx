@@ -258,6 +258,7 @@ export default function Calculator() {
       </div>}
 
       {result && (
+        <>
         <ResultMeaning>
           These three figures are the same withers height in hands, inches, and centimetres.
         </ResultMeaning>
@@ -266,6 +267,7 @@ export default function Calculator() {
             Read saddle-fit basics
           </Link>
         </p>
+        </>
       )}
 
       {result && (
