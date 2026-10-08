@@ -77,7 +77,7 @@ export default function Page() {
 
           <ArticleSourcesList sources={[
             { label: 'A Consumer’s Guide to Pet Insurance (enrollment and waiting periods)', url: 'https://content.naic.org/cipr-topics/pet-insurance', publisher: 'NAIC' },
-            { label: 'State of the Industry Report (enrollment trends)', url: 'https://naphia.org/state-of-the-industry/', publisher: 'NAPHIA' },
+            { label: 'State of the Industry Report (enrollment trends)', url: 'https://naphia.org/news/naphia-news/soi-report-2025/', publisher: 'NAPHIA' },
             { label: 'Sample carrier waiting-period and enrollment-age disclosures', publisher: 'General carrier policy disclosures (not an endorsement)' },
           ]} />
         </div>

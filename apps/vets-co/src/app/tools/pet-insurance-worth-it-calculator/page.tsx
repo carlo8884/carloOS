@@ -33,7 +33,7 @@ export const metadata: Metadata = buildMetadata({
 const SOURCES = [
   {
     label: 'State of the Industry Report — aggregate premium, claim, and policy-count data for North America',
-    url: 'https://naphia.org/state-of-the-industry/',
+    url: 'https://naphia.org/news/naphia-news/soi-report-2025/',
     publisher: 'NAPHIA (North American Pet Health Insurance Association)',
   },
   {
