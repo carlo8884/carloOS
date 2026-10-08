@@ -92,6 +92,7 @@ export default function GrainConcentratesPage() {
           <RelatedLinks
             title="Related Reading"
             links={[
+              { label: "Daily feed calculator", href: "/tools/horse-feed-calculator" },
               { label: "Forage Basics", href: "/nutrition/forage-basics" },
               { label: "Ration Balancers", href: "/nutrition/ration-balancers" },
               { label: "Equine Colic", href: "/health/colic" },
@@ -121,7 +122,7 @@ export default function GrainConcentratesPage() {
 
           <h2 id="rules">Safe Feeding Rules</h2>
           <ul>
-            <li><strong>Forage first.</strong> Build the diet on forage and add concentrates only to fill a real gap.</li>
+            <li><strong>Forage first.</strong> Build the diet on forage and add concentrates only to fill a real gap. The <a href="/tools/horse-feed-calculator">daily feed calculator</a> estimates that forage base from bodyweight.</li>
             <li><strong>Limit starch per meal.</strong> Keep individual grain meals small; split a daily concentrate ration into several feeds rather than one or two large ones. Stackable rubber horse feed tubs are how those split meals stay pre-portioned — they are not a flu-page round rubber feed pan and not choke-page feed-tub rocks.</li>
             <li><strong>Feed by weight, not scoops.</strong> A scoop of pellets and a scoop of oats weigh very differently; weigh the feed. A tabletop digital horse grain scale is how you weigh a meal without guessing — it is not a horse-feed-scoop-scale (that lives on the feed calculator), not a hanging hay-bale scale (that lives on EMS), and not a livestock barn scale (that lives on the weight calculator).</li>
             <li><strong>Change gradually</strong> over a week or more to protect the hindgut microbes. A rodent-proof metal horse feed bin keeps one bag&apos;s ration clean and consistent so the horse is not switched onto spoiled or mixed leftover grain — it is not an airtight pet-food bin (that lives on dog/vets pages).</li>
