@@ -32,14 +32,17 @@ export function weightKg(weight: number, unit: 'lb' | 'kg'): number {
 /** Planning stages: RER = 70 × kg^0.75, MER = factor × RER.
  *  NRC stages: kcal/day = 95 or 130 × kg^0.75 (WSAVA July 2020).
  *  Grams = MER × 1000 / kcal per kg. */
-export function foodGrams(weight: number, unit: 'lb' | 'kg', stage: DogStage, kcalPerKg: number): {
+export function foodGrams(weight: number, unit: 'lb' | 'kg', stage: DogStage | number, kcalPerKg: number): {
   rer: number
   mer: number
   grams: number
 } {
+  const resolved: DogStage = typeof stage === 'number'
+    ? { label: 'planning factor', kind: 'planning', factor: stage }
+    : stage
   const kg = weightKg(weight, unit)
   const rer = 70 * Math.pow(kg, 0.75)
-  const mer = stage.kind === 'nrc' ? stage.kcalPerKg075 * Math.pow(kg, 0.75) : stage.factor * rer
+  const mer = resolved.kind === 'nrc' ? resolved.kcalPerKg075 * Math.pow(kg, 0.75) : resolved.factor * rer
   const grams = (mer * 1000) / kcalPerKg
   return { rer, mer, grams }
 }
