@@ -12,23 +12,22 @@ const CM_PER_IN = 2.54
 const G_PER_LB = 453.592
 const KG_PER_G = 0.001
 
-// Bulk densities (g/cm³), poured/settled — realistic aquarium values.
-// Gravel and sand are denser than aqua soil, which is a light baked clay.
+// Working densities (g/cm³) for bag-weight planning. Not a lab measurement.
 const DENSITY: Record<Substrate, { value: number; label: string; note: string }> = {
   gravel: {
     value: 1.6,
     label: 'Gravel',
-    note: 'standard aquarium gravel, ~1.5–1.7 g/cm³ poured',
+    note: 'planning figure 1.6 g/cm³, not a lab measurement',
   },
   sand: {
     value: 1.5,
     label: 'Sand',
-    note: 'aquarium / play sand, ~1.5 g/cm³ poured',
+    note: 'planning figure 1.5 g/cm³, not a lab measurement',
   },
   aquasoil: {
     value: 0.8,
     label: 'Aqua soil (planted)',
-    note: 'baked-clay aquasoil is much lighter, ~0.7–0.9 g/cm³',
+    note: 'planning figure 0.8 g/cm³, not a lab measurement',
   },
 }
 
@@ -124,7 +123,7 @@ export default function SubstrateCalculator() {
             min={unit === 'in' ? 0.25 : 0.5}
             max={depthMax}
             step={0.1}
-            hint="1–2 in (2.5–5 cm) is typical; go 2.5–3 in for rooted/planted tanks."
+            hint="UF/IFAS VM144 places gravel 2–3 in deep on an undergravel plate, or 5 in with live plants. Enter the depth you want."
             error={depthError}
           />
 
@@ -133,9 +132,9 @@ export default function SubstrateCalculator() {
             value={substrate}
             onChange={(v) => setSubstrate(v as Substrate)}
             options={[
-              { value: 'gravel', label: 'Gravel (~1.6 g/cm³)' },
-              { value: 'sand', label: 'Sand (~1.5 g/cm³)' },
-              { value: 'aquasoil', label: 'Aqua soil — planted (~0.8 g/cm³)' },
+              { value: 'gravel', label: 'Gravel (planning density 1.6 g/cm³)' },
+              { value: 'sand', label: 'Sand (planning density 1.5 g/cm³)' },
+              { value: 'aquasoil', label: 'Aqua soil — planted (planning density 0.8 g/cm³)' },
             ]}
           />
         </div>
@@ -157,10 +156,9 @@ export default function SubstrateCalculator() {
           note={
             <>
               <strong className="text-white/90">Buy ~10% extra.</strong>{' '}
-              Bags settle, slope, and never pour to an exact level. A typical 20 lb bag of gravel covers
-              roughly 5–6 liters poured — use the liters figure to count bags. Weights are estimates from
-              typical poured densities ({DENSITY[substrate].note}); your product&apos;s actual density may
-              vary, so check the bag.
+              Bags settle, slope, and never pour to an exact level. Use the liters figure to count bags.
+              Weights use this calculator&apos;s working density ({DENSITY[substrate].note}). Check the weight
+              printed on the bag.
             </>
           }
         />

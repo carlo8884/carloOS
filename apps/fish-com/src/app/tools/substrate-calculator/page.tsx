@@ -9,7 +9,7 @@ import {
   TableOfContents,
   RelatedLinks,
   ArticleByline,
-
+  ArticleSourcesList,
   ShopCtas,
   JourneyNext,
 } from '@carloOS/ui'
@@ -33,9 +33,9 @@ const howToSchema = buildHowToSchema({
   totalTime: 'PT2M',
   steps: [
     { name: 'Measure the footprint', text: 'Measure the inside length and width (front to back) of the tank in inches or centimeters.' },
-    { name: 'Choose a depth', text: 'Pick a substrate depth. 1–2 inches (2.5–5 cm) suits most tanks; 2.5–3 inches is better for rooted or planted tanks.' },
+    { name: 'Choose a depth', text: 'Pick a substrate depth. Francis-Floyd, Riggs, and Yanong (UF/IFAS VM144, August 2003) place gravel two to three inches deep on an undergravel filter plate, and five inches when live plants are used. Enter the depth you actually want.' },
     { name: 'Calculate volume', text: 'Multiply length × width × depth in the same units to get the substrate volume, then convert to liters (1 liter = 1000 cubic centimeters).' },
-    { name: 'Convert volume to weight', text: 'Multiply volume by the substrate density: gravel ≈ 1.6 g/cm³, sand ≈ 1.5 g/cm³, aqua soil ≈ 0.8 g/cm³. Buy about 10% extra to allow for settling and sloping.' },
+    { name: 'Convert volume to weight', text: 'Multiply volume by a working density so bag weights can be compared: gravel 1.6 g/cm³, sand 1.5 g/cm³, aqua soil 0.8 g/cm³. Those are planning figures, not a lab measurement — use the weight printed on the bag. Buy about 10% extra to allow for settling and sloping.' },
   ],
 })
 
@@ -54,10 +54,10 @@ const softwareApplicationSchema = {
   offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
   featureList: [
     'Inputs in inches or centimeters',
-    'Gravel, sand, and aqua soil with realistic poured densities',
+    'Gravel, sand, and aqua soil using working densities for planning, not a lab measurement',
     'Outputs volume in liters and weight in pounds and kilograms',
     'Adds a 10% buying buffer for settling and slope',
-    'Depth guidance: 1–2 in typical, 2.5–3 in for planted tanks',
+    'Depth guidance from UF/IFAS VM144: two to three inches of gravel on an undergravel plate, five inches when live plants are used',
   ],
   publisher: { '@type': 'Organization', name: 'Fish.com Editorial', url: 'https://fish.com' },
 }
@@ -67,7 +67,7 @@ const articleSchema = {
   '@type': 'Article',
   headline: 'Aquarium Substrate Calculator',
   description:
-    'How to estimate how much gravel, sand, or aqua soil an aquarium needs — the length × width × depth volume formula, realistic substrate densities, a worked example, and a buy-10%-extra rule.',
+    'How to estimate how much gravel, sand, or aqua soil an aquarium needs — the length × width × depth volume formula, working densities for planning, a worked example, and a buy-10%-extra rule.',
   url: URL,
   datePublished: '2026-06-11T00:00:00Z',
   dateModified: '2026-09-03T00:00:00Z',
@@ -90,22 +90,22 @@ const FAQS = [
   {
     question: 'How much substrate do I need for a 20 gallon tank?',
     answer:
-      'A standard 20-gallon long tank has a roughly 30 × 12 inch footprint. At a typical 2-inch depth of gravel that is about 11.8 liters of substrate, or roughly 42 pounds (19 kg). Buy about 10% extra — call it 46 pounds (21 kg) — to allow for settling and an uneven slope. Sand of the same volume weighs slightly less; light aqua soil weighs roughly half as much.',
+      'A standard 20-gallon long tank has a roughly 30 × 12 inch footprint. If you enter a 2-inch depth, the volume is about 11.8 liters. At this calculator’s working density of 1.6 g/cm³ that is roughly 42 pounds (19 kg) of gravel, or about 46 pounds (21 kg) with a 10% buying buffer. Those densities are planning figures, not a lab measurement — use the weight printed on the bag.',
   },
   {
     question: 'How deep should aquarium substrate be?',
     answer:
-      'For most freshwater community tanks, 1–2 inches (2.5–5 cm) is enough and is easier to keep clean. Planted tanks usually want 2.5–3 inches (6–7.5 cm) so root systems and root tabs have somewhere to sit. Very deep beds can trap waste and gas, so go deeper only where plants need it.',
+      'Francis-Floyd, Riggs, and Yanong (UF/IFAS VM144, August 2003) say gravel over an undergravel filter plate should be two to three inches deep, and five inches when live plants are used. That figure is for a filter bed, not a rule for every modern tank. Deeper beds are harder to vacuum, so enter the depth the plants actually need.',
   },
   {
     question: 'How much does aquarium gravel weigh per liter?',
     answer:
-      'Poured aquarium gravel has a bulk density of roughly 1.5–1.7 g/cm³, so one liter weighs about 1.5–1.7 kg (3.3–3.7 lb). Sand is similar at about 1.5 kg per liter. Aqua soil, which is a light baked clay, is much lighter at roughly 0.7–0.9 kg per liter. These are estimates — always check the weight printed on the bag.',
+      'This calculator uses a working density so bag weights can be compared: gravel 1.6 g/cm³, sand 1.5 g/cm³, aqua soil 0.8 g/cm³. Those are planning figures, not a lab measurement. Use the weight printed on the bag.',
   },
   {
     question: 'Is sand or gravel heavier for an aquarium?',
     answer:
-      'By volume they are close. Poured aquarium gravel is about 1.6 g/cm³ and aquarium sand about 1.5 g/cm³, so gravel is marginally heavier for the same depth. The bigger practical difference is behavior, not weight: sand compacts and can trap gas, while gravel lets water flow through it more freely.',
+      'This calculator treats poured gravel as 1.6 g/cm³ and sand as 1.5 g/cm³ so the same depth can be compared. Those are planning figures, not a lab measurement. Sand can compact and gravel is easier to vacuum; use the weight printed on the bag when you buy.',
   },
   {
     question: 'Why should I buy 10% more substrate than the calculator says?',
@@ -236,8 +236,9 @@ export default function SubstrateCalculatorPage() {
           <strong>Volume = length × width × depth</strong> &nbsp;(all in the same units)
         </p>
         <p>
-          <strong>Weight = volume × density.</strong> Use realistic poured densities: gravel ≈ 1.6 g/cm³, sand ≈ 1.5
-          g/cm³, and aqua soil — a light baked clay — ≈ 0.8 g/cm³. Convert volume to liters (1 liter = 1000 cm³) to
+          <strong>Weight = volume × density.</strong> This calculator multiplies volume by a working density (gravel 1.6, sand 1.5,
+          aqua soil 0.8 g/cm³) so bag weights can be compared. Those are planning figures, not a lab measurement — use the
+          weight printed on the bag. Convert volume to liters (1 liter = 1000 cm³) to
           compare against bag sizes, then add about 10% so settling and slope don&apos;t leave you short.
         </p>
 
@@ -251,20 +252,23 @@ export default function SubstrateCalculatorPage() {
           <li><strong>Buy 10% extra:</strong> ≈ 20.8 kg (45.8 lb), about 13 liters.</li>
         </ul>
         <p>
-          So you would buy roughly <strong>46 pounds (21 kg)</strong> of gravel. The same footprint in sand (≈ 1.5
-          g/cm³) comes out a touch lighter; in aqua soil (≈ 0.8 g/cm³) it is roughly half the weight. These are
-          estimates from typical densities — the figure printed on the bag is the one to trust.
+          So you would buy roughly <strong>46 pounds (21 kg)</strong> of gravel at this calculator&apos;s working density.
+          The same footprint in sand (working density 1.5 g/cm³) comes out a touch lighter; in aqua soil (working density
+          0.8 g/cm³) it is roughly half the weight. Those densities are planning figures — the figure printed on the bag
+          is the one to trust.
         </p>
 
         <h2 id="depth">How Much Depth Do You Need?</h2>
         <p>
           Depth, not just footprint, drives how much you buy — so it is worth getting right.
         </p>
-        <ul>
-          <li><strong>1–2 inches (2.5–5 cm)</strong> — fine for most community tanks; easy to keep clean and vacuum.</li>
-          <li><strong>2.5–3 inches (6–7.5 cm)</strong> — better for planted tanks so root systems and root tabs have a home.</li>
-          <li><strong>Deeper beds</strong> — only where plants genuinely need it; deep substrate can trap waste and gas pockets.</li>
-        </ul>
+        <p>
+          Francis-Floyd, Riggs, and Yanong (University of Florida IFAS VM144, August 2003) place gravel on an
+          undergravel filter plate at two to three inches, and recommend five inches when live plants are used.
+          That guidance is for a filter bed. A tank without an undergravel plate can use a shallower layer that is
+          easier to vacuum. Enter the depth you want; this page does not treat 1–2 inches or 2.5–3 inches as a
+          published rule.
+        </p>
         <p>
           Once you know your substrate volume, size everything else around the same tank:{' '}
           <Link href="/tools/aquarium-volume-calculator">calculate water volume</Link> for dosing, the{' '}
@@ -280,6 +284,17 @@ export default function SubstrateCalculatorPage() {
           items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))}
           includeSchema
           allowMultiple
+        />
+
+        <ArticleSourcesList
+          title="Sources"
+          sources={[
+            {
+              label: 'Francis-Floyd, Riggs, and Yanong — Aquarium Setup and Maintenance (UF/IFAS VM144, August 2003): gravel two to three inches on an undergravel plate, five inches when live plants are used',
+              publisher: 'University of Florida IFAS, hosted by Texas A&M AgriLife Extension',
+              url: 'https://extension.rwfm.tamu.edu/wp-content/uploads/sites/8/2013/10/Aquarium-Setup-and-Maintenance.pdf',
+            },
+          ]}
         />
 
       </div>
