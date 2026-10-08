@@ -53,8 +53,8 @@ export default function VetsterVsChewyConnectGuidePage() {
         <>
           <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">Vetster is the top pick for a video visit paid per consult, and the shop link searches Chewy Connect, the membership alternative.</p>
           <div data-fold="offer">
-          <PrimaryHop href="/go/chewy-brand/chewy+connect+with+a+vet?s=reviews-vetster-vs-connect-guide" label="Browse Chewy Connect on Amazon" />
-          <HopDisclosure siteId="vets-co" href="/go/chewy-brand/chewy+connect+with+a+vet?s=reviews-vetster-vs-connect-guide" />
+          <PrimaryHop href="/go/amazon-brand/chewy+connect+with+a+vet?s=reviews-vetster-vs-connect-guide" label="Browse Chewy Connect on Amazon" />
+          <HopDisclosure siteId="vets-co" href="/go/amazon-brand/chewy+connect+with+a+vet?s=reviews-vetster-vs-connect-guide" />
         </div>
         </>
       }

@@ -132,7 +132,7 @@ export default function NovemberDecemberGiftGuidePage() {
             </tbody>
           </table>
         </div>
-        <ComparisonFoot updated="2026-10-07" />
+        <ComparisonFoot updated="2026-10-08" />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} includeSchema={false} />
         <BelowFoldPhoto siteId="vets-co" />
