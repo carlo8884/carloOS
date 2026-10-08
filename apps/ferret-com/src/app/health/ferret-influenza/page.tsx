@@ -24,8 +24,8 @@ const SOURCES = [
     publisher: "Merck Veterinary Manual",
   },
   {
-    label: "CDC — Influenza in Ferrets: ferret susceptibility to human influenza strains and household-transmission considerations",
-    url: "https://www.cdc.gov/flu/other/index.htm",
+    label: "CDC — About Influenza A in Animals, including ferrets",
+    url: "https://www.cdc.gov/flu-in-animals/about/index.html",
     publisher: "CDC",
   },
   {
