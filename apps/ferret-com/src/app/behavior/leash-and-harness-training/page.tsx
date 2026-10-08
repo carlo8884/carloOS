@@ -137,6 +137,7 @@ export default function LeashAndHarnessTrainingPage() {
                 { label: 'Training & Bonding', href: '/behavior/training-and-bonding' },
                 { label: 'Multi-Ferret Introductions', href: '/behavior/multi-ferret-introductions' },
                 { label: 'Behavior Hub', href: '/behavior' },
+                { label: 'Vest vs H-Style Harness', href: '/reviews/vest-vs-h-harness-guide' },
               ]}
             />
 
@@ -149,6 +150,7 @@ export default function LeashAndHarnessTrainingPage() {
           { title: 'Training & Bonding', href: '/behavior/training-and-bonding' },
           { title: 'Bonding With Your Ferret', href: '/behavior/bonding-with-your-ferret' },
           { title: 'Travel & Carriers', href: '/care/travel-and-carriers' },
+          { title: 'Vest vs H-Style Harness', href: '/reviews/vest-vs-h-harness-guide', category: 'Reviews' },
         ]}
  priceAsOf="2026-06-04">
         <div className="carloOS-article">
@@ -362,7 +364,7 @@ export default function LeashAndHarnessTrainingPage() {
             ctaAffiliateProduct="ferret+vest+harness"
           />
 
-          <p>Harness styles for this training are compared in the <Link href="/reviews/best-ferret-harness">ferret harness review</Link>.</p>
+          <p>Harness styles for this training are compared in the <Link href="/reviews/best-ferret-harness">ferret harness review</Link>. The <Link href="/reviews/vest-vs-h-harness-guide">vest versus H-style guide</Link> is the split between a wider vest, which is harder to back out of, and an adjustable H-style, which needs the fit checked before the walk. Neither style is safe if the ferret is left unsupervised.</p>
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
 
