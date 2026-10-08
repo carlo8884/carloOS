@@ -69,7 +69,7 @@ export default function LeashReactivityPage() {
         { name: 'Training', href: '/training' },
         { name: 'Leash Reactivity', href: '/training/leash-reactivity' },
       ]}
-      relatedLinks={[{ title: 'Dog Training Hub', href: '/training', category: 'Hub' }, { title: 'Dog Aggression', href: '/training/dog-aggression', category: 'Training' }, { title: 'Positive Reinforcement', href: '/training/positive-reinforcement', category: 'Training' }, { title: 'Trainer Credentials', href: '/training/trainer-credentials', category: 'Training' }]}
+      relatedLinks={[{ title: 'Dog Training Hub', href: '/training', category: 'Hub' }, { title: 'Dog Aggression', href: '/training/dog-aggression', category: 'Training' }, { title: 'Positive Reinforcement', href: '/training/positive-reinforcement', category: 'Training' }, { title: 'Trainer Credentials', href: '/training/trainer-credentials', category: 'Training' }, { title: 'Front-clip vs back-clip', href: '/reviews/front-clip-vs-back-clip-guide', category: 'Reviews' }]}
       schema={schema}
       sidebar={<>
         <TableOfContents items={[
@@ -167,7 +167,11 @@ export default function LeashReactivityPage() {
             <Link href="/reviews/best-dog-harnesses" className="text-brand-primary hover:underline">
               Best Dog Harnesses 2026
             </Link>
-            {' '}guide for side-by-side comparisons.
+            {' '}guide. The{' '}
+            <Link href="/reviews/front-clip-vs-back-clip-guide" className="text-brand-primary hover:underline">
+              front-clip versus back-clip guide
+            </Link>
+            {' '}says front-clip only when the dog pulls, and a back-clip when the dog already walks well.
           </p>
         </div>
 
