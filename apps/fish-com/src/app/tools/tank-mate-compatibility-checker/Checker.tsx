@@ -13,6 +13,7 @@ import { ResultCTA } from '../_components/ResultCTA'
 // page, so they carry no numeric band. Goldfish stays on the coldwater flag;
 // FishBase's 0–41°C record is not used as a preferred band. Betta uses the
 // FishBase 24–30°C band already cited on this page (75–86°F).
+// https://www.fishbase.se/summary/Betta-splendens.html
 type Temperament = 'peaceful' | 'semi-aggressive' | 'aggressive' | 'territorial'
 
 interface Species {

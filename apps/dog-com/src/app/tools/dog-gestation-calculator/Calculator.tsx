@@ -66,7 +66,7 @@ interface Stage {
   note: string
 }
 
-// Week-by-week husbandry checkpoints, keyed off days since breeding.
+// Planning figure for the week labels. Merck day bounds stay in the header above.
 const STAGES: Stage[] = [
   {
     label: 'Weeks 1-2 (days 0-14)',
