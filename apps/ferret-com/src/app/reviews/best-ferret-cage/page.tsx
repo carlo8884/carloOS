@@ -48,7 +48,7 @@ const breadcrumbSchema = buildBreadcrumbSchema({
 const itemList = buildItemListSchema({
   name: 'Multi-Level Ferret Cages That Meet the Criteria',
   items: [
-    { name: 'Ferret Nation / Critter Nation Double Unit', url: 'https://ferret.com/go/amazon-brand/ferret+nation+critter+nation+double+unit?s=reviews-best-ferret-cage' },
+    { name: 'Ferret Nation Double Unit', url: 'https://ferret.com/go/amazon/B0054U8UGW?s=reviews-best-ferret-cage' },
     { name: 'Prevue Pet Products Feisty Ferret Cage', url: 'https://ferret.com/go/amazon-brand/prevue+feisty+ferret+cage?s=reviews-best-ferret-cage' },
     { name: 'Kaytee Multi-Level Ferret Home', url: 'https://ferret.com/go/amazon-brand/kaytee+multi+level+ferret+home?s=reviews-best-ferret-cage' },
   ],
@@ -56,9 +56,9 @@ const itemList = buildItemListSchema({
 
 const products = [
   buildProductSchema({
-    name: 'Ferret Nation / Critter Nation Double Unit',
+    name: 'Ferret Nation Double Unit',
     description: 'Full-width front doors, deep pans, expandable two-storey footprint. Confirm bar spacing on the box.',
-    url: 'https://ferret.com/go/amazon-brand/ferret+nation+critter+nation+double+unit?s=reviews-best-ferret-cage',
+    url: 'https://ferret.com/go/amazon/B0054U8UGW?s=reviews-best-ferret-cage',
     reviewAuthorName: 'Ferret.com Editorial',
     reviewBody: 'The reference multi-ferret cage in the keeping community. The manufacturer page says the full-width double doors open the entire front for cleaning and feeding, and it does not print a bar-spacing figure (https://www.midwesthomes4pets.com/product/small-animal/habitats-cages/ferret-nation/, fetched 2026-10-08). Deep leak-proof pans, and a modular design that stacks to a second storey. The trade-offs are price, weight, and the assembly footprint.',
   }),
@@ -110,7 +110,7 @@ const faqSchema = buildFAQSchema({ questions: FAQS })
 const combined = combineSchemas(schema, breadcrumbSchema, itemList, faqSchema, ...products)
 
 const QUICK_PICKS = [
-  { label: 'Best Overall', name: 'Ferret Nation Double Unit', subtitle: 'Modular · Full-front doors · Confirm bar spacing', href: '#ferret-nation', pickHop: '/go/amazon-brand/ferret+nation+critter+nation+double+unit?s=reviews-best-ferret-cage' },
+  { label: 'Best Overall', name: 'Ferret Nation Double Unit', subtitle: 'Modular · Full-front doors · Confirm bar spacing', href: '#ferret-nation', pickHop: '/go/amazon/B0054U8UGW?s=reviews-best-ferret-cage' },
   { label: 'Best Value', name: 'Prevue Feisty Ferret', subtitle: 'Ferret-spaced · Shelves + ramps', href: '#prevue-feisty' },
   { label: 'Entry / Single Ferret', name: 'Kaytee Multi-Level', subtitle: 'Widely stocked · One ferret + out-time', href: '#kaytee-multilevel' },
 ]
@@ -133,8 +133,8 @@ export default function BestFerretCagePage() {
         <>
           <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">The Ferret Nation double unit is the top cage for a small group.</p>
           <div data-fold="offer">
-          <PrimaryHop href='/go/amazon-brand/ferret+nation+critter+nation+double+unit?s=reviews-best-ferret-cage' label='Check price of the Ferret Nation / Critter Nation double unit on Amazon' />
-          <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/ferret+nation+critter+nation+double+unit?s=reviews-best-ferret-cage" />
+          <PrimaryHop href='/go/amazon/B0054U8UGW?s=reviews-best-ferret-cage' label='Check price of the Ferret Nation double unit on Amazon' />
+          <HopDisclosure siteId="ferret-com" href="/go/amazon/B0054U8UGW?s=reviews-best-ferret-cage" />
         </div>
         </>
       }
@@ -290,7 +290,7 @@ export default function BestFerretCagePage() {
             and shelter communities, not a hands-on durability test. Verify the bar spacing on the exact model you buy,
             and plan to cover wire shelves and ramps regardless of which you choose.
           </p>
-          <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/ferret+nation+critter+nation+double+unit?s=reviews-best-ferret-cage", "/go/amazon-brand/prevue+feisty+ferret+cage?s=reviews-best-ferret-cage", "/go/amazon-brand/kaytee+multi+level+ferret+home?s=reviews-best-ferret-cage"]} />
+          <HopDisclosure siteId="ferret-com" href={["/go/amazon/B0054U8UGW?s=reviews-best-ferret-cage", "/go/amazon-brand/prevue+feisty+ferret+cage?s=reviews-best-ferret-cage", "/go/amazon-brand/kaytee+multi+level+ferret+home?s=reviews-best-ferret-cage"]} />
 
           <ReviewCard
             id="ferret-nation"
@@ -311,8 +311,8 @@ export default function BestFerretCagePage() {
             pros={['Confirm bar spacing on the box', 'Full-front doors for easy cleaning', 'Modular — expands with the colony', 'Deep pull-out pans', 'Community reference standard']}
             cons={['Premium price', 'Heavy and large assembled', 'Wire shelves need covering']}
             price="$$$"
-            ctaText="Check price of the Ferret Nation / Critter Nation double unit on Amazon"
-            ctaHref="/go/amazon-brand/ferret+nation+critter+nation+double+unit?s=reviews-best-ferret-cage"
+            ctaText="Check price of the Ferret Nation double unit on Amazon"
+            ctaHref="/go/amazon/B0054U8UGW?s=reviews-best-ferret-cage"
             ctaAffiliateProgram="amazon-brand"
             ctaAffiliateProduct="ferret-nation-double-unit"
           />
@@ -380,7 +380,7 @@ export default function BestFerretCagePage() {
               <tbody>
                 <tr className="border-b border-brand-border">
                   <td className="p-3">One to four ferrets, and the cage is the long-term home</td>
-                  <td className="p-3 font-bold"><a href="#ferret-nation">Ferret Nation / Critter Nation double</a><TableShopLink href={"/go/amazon-brand/ferret+nation+critter+nation+double+unit?s=reviews-best-ferret-cage"} product={"Ferret Nation / Critter Nation double"} /></td>
+                  <td className="p-3 font-bold"><a href="#ferret-nation">Ferret Nation / Critter Nation double</a><TableShopLink href={"/go/amazon/B0054U8UGW?s=reviews-best-ferret-cage"} product={"Ferret Nation / Critter Nation double"} /></td>
                   <td className="p-3">Best overall. Confirm bar spacing on the box. Full-width doors. Price tier $$$</td>
                   <td className="p-3">Heavy, large, and the wire shelves still need covering</td>
                 </tr>

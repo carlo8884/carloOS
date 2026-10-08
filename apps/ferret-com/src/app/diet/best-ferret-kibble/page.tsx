@@ -126,9 +126,9 @@ export default function BestFerretKibblePage() {
         }
         heroHop={
           <>
-            <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/wysong+ferret+food?s=best-ferret-kibble" />
+            <HopDisclosure siteId="ferret-com" href="/go/amazon/B019W9VXZK?s=best-ferret-kibble" />
             <div className="mb-4" data-primary-hop="true">
-              <a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" data-shop-placement="hero" href="/go/amazon-brand/wysong+ferret+food?s=best-ferret-kibble">Browse Wysong ferret food on Amazon →</a>
+              <a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" data-shop-placement="hero" href="/go/amazon/B019W9VXZK?s=best-ferret-kibble">Check price of Wysong Epigen 90 on Amazon →</a>
             </div>
             <QuietPartnerLink tone="dark" href="/go/wysong/epigen-90?s=diet-best-ferret-kibble" label="Check price of Wysong Epigen 90 at Wysong" />
           </>
@@ -280,8 +280,8 @@ export default function BestFerretKibblePage() {
             </p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/wysong+ferret+food?s=best-ferret-kibble"
-                amazonLabel="Browse Wysong ferret food on Amazon →"
+                amazonHref="/go/amazon/B019W9VXZK?s=best-ferret-kibble"
+                amazonLabel="Check price of Wysong Epigen 90 on Amazon →"
               />
           </div>
           </div>

@@ -5,11 +5,11 @@ import { TableShopLink, RelatedReads, ComparisonFoot, EmailCapture, PrimaryHop, 
 import { buildArticleSchema, buildItemListSchema, buildProductSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Best Canister Filters 2026 — Fluval, Eheim | Fish.com', description: 'Best canister filters for aquariums 40-150 gallons. Fluval 307, Eheim Classic, and Penn Plax Cascade ranked for flow rate, media capacity, and noise.', path: '/reviews/best-canister-filters', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Best Canister Filters 2026', description: 'Fluval, Eheim, and Penn Plax canister filters ranked for mid-to-large aquariums.', url: 'https://fish.com/reviews/best-canister-filters', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-07T00:00:00Z' })
-const fluvalSchema = buildProductSchema({ name: 'Fluval 307 Performance Canister Filter', description: 'Near-silent canister filter for 40-70 gallon aquariums with AquaStop valve.', url: 'https://fish.com/go/amazon-brand/fluval+307+canister+filter?s=reviews-best-canister-filters', imageUrl: '' })
+const fluvalSchema = buildProductSchema({ name: 'Fluval 307 Performance Canister Filter', description: 'Near-silent canister filter for 40-70 gallon aquariums with AquaStop valve.', url: 'https://fish.com/go/amazon/B07JH4JHTC?s=reviews-best-canister-filters', imageUrl: '' })
 const eheimSchema = buildProductSchema({ name: 'Eheim Classic 350 Canister Filter', description: 'German-engineered classic canister filter — bulletproof reliability for 40-92 gallons.', url: 'https://fish.com/go/amazon-brand/eheim+classic+350+2215?s=reviews-best-canister-filters', imageUrl: '' })
 const allSchemas = combineSchemas(schema, fluvalSchema, eheimSchema)
 const PICKS = [
-  { label: 'Best Overall', name: 'Fluval 307', subtitle: 'Near-silent · AquaStop · 40-70 gal', href: '#fluval', pickHop: '/go/amazon-brand/fluval+307+canister+filter?s=reviews-best-canister-filters' },
+  { label: 'Best Overall', name: 'Fluval 307', subtitle: 'Near-silent · AquaStop · 40-70 gal', href: '#fluval', pickHop: '/go/amazon/B07JH4JHTC?s=reviews-best-canister-filters' },
   { label: 'Most Reliable', name: 'Eheim Classic 350', subtitle: 'German engineering · Runs forever', href: '#eheim' },
   { label: 'Best Budget', name: 'Penn Plax Cascade 1000', subtitle: 'Good value · 100 gal · Lower cost', href: '#penn-plax' },
 ]
@@ -17,7 +17,7 @@ const PICKS = [
 // PICKS. No aggregateRating, no fabricated specs (QC §1.4).
 const itemList = buildItemListSchema({
   name: 'Best Canister Filters 2026',
-  items: PICKS.map((p) => ({ name: p.name, url: ({ "Fluval 307": "https://fish.com/go/amazon-brand/fluval+307+canister+filter?s=reviews-best-canister-filters", "Eheim Classic 350": "https://fish.com/go/amazon-brand/eheim+classic+350+2215?s=reviews-best-canister-filters" }[p.name] ?? `https://fish.com/reviews/best-canister-filters${p.href}`) })),
+  items: PICKS.map((p) => ({ name: p.name, url: ({ "Fluval 307": "https://fish.com/go/amazon/B07JH4JHTC?s=reviews-best-canister-filters", "Eheim Classic 350": "https://fish.com/go/amazon-brand/eheim+classic+350+2215?s=reviews-best-canister-filters" }[p.name] ?? `https://fish.com/reviews/best-canister-filters${p.href}`) })),
 })
 export default function BestCanisterFiltersPage() {
   return (
@@ -29,8 +29,8 @@ export default function BestCanisterFiltersPage() {
         <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">The Fluval 307 is the top canister filter because separate baskets hold mechanical, chemical, and biological media.</p>
         <PriceAsOf date="2026-10-05" tone="dark" />
         <div data-fold="offer">
-          <PrimaryHop href='/go/amazon-brand/fluval+307+canister+filter?s=reviews-best-canister-filters' label='Check price of the Fluval 307 canister filter on Amazon' />
-        <HopDisclosure tone="on-dark" siteId="fish-com" href="/go/amazon-brand/fluval+307+canister+filter?s=reviews-best-canister-filters" />
+          <PrimaryHop href='/go/amazon/B07JH4JHTC?s=reviews-best-canister-filters' label='Check price of the Fluval 307 canister filter on Amazon' />
+        <HopDisclosure tone="on-dark" siteId="fish-com" href="/go/amazon/B07JH4JHTC?s=reviews-best-canister-filters" />
         </div>
         <EmailCapture
           variant="inline"
@@ -70,10 +70,10 @@ export default function BestCanisterFiltersPage() {
               nextHref="/tools/filter-gph-calculator"
               nextLabel="Size canister GPH against the tank before you buy the 307"
               nextBlurb="The bottom line is the size band — Fluval 307 for 40–70 gallons, Eheim Classic when you want decades of runtime. Filter-GPH is the next step: 4–6× turnover, then pick the canister that actually hits it. The hop below is the same Fluval 307 search already on this page."
-              resourceHref="/go/amazon-brand/fluval+307+canister+filter?s=reviews-best-canister-filters"
+              resourceHref="/go/amazon/B07JH4JHTC?s=reviews-best-canister-filters"
               resourceLabel="Browse Fluval 307 canister filters on Amazon →"
             />
-            <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/fluval+307+canister+filter?s=reviews-best-canister-filters", "/go/amazon-brand/eheim+classic+350+2215?s=reviews-best-canister-filters"]} />
+            <HopDisclosure siteId="fish-com" href={["/go/amazon/B07JH4JHTC?s=reviews-best-canister-filters", "/go/amazon-brand/eheim+classic+350+2215?s=reviews-best-canister-filters"]} />
             <ReviewCard id="fluval" badge="Best Overall" name="Fluval 307 Performance Canister Filter" subtitle="Near-silent · AquaStop valve · Multi-stage media baskets · 40-70 gal" winner
               description={<p>The Fluval 307 is the current benchmark for canister filters in the 40–70 gallon range — near-silent operation, excellent media capacity with 4 separated baskets (mechanical, chemical, biological staged properly), and the AquaStop valve that allows media changes without disconnecting hoses. The sound dampening is genuinely impressive compared to older canister filters — you have to get very close to hear it running. Setup is straightforward for a canister. The current Fluval page prints pump output of 303 US GPH and filter circulation of 206 US GPH. Lid design seals reliably. 5-year warranty.</p>}
               specs={[{ label: 'Tank size', value: '40–70 gallons' }, { label: 'Flow rate', value: 'Pump output 303 US GPH. Circulation 206 US GPH.', highlight: 'good' }, { label: 'Noise', value: 'Near-silent', highlight: 'good' }, { label: 'AquaStop', value: 'Yes — media change without disconnect', highlight: 'good' }, { label: 'Warranty', value: '5 years' }]}
@@ -82,7 +82,7 @@ export default function BestCanisterFiltersPage() {
               price="$120–150"
               priceNote="dated 2026-10-05."
               ctaText="Check price of the Fluval 307 canister filter on Amazon"
-              ctaHref="/go/amazon-brand/fluval+307+canister+filter?s=reviews-best-canister-filters"
+              ctaHref="/go/amazon/B07JH4JHTC?s=reviews-best-canister-filters"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="fluval-307"
             />
@@ -116,7 +116,7 @@ export default function BestCanisterFiltersPage() {
                   <tbody>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">A quiet canister for about 40–70 gallons</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#fluval" className="text-brand-primary">Fluval 307</a><TableShopLink href={"/go/amazon-brand/fluval+307+canister+filter?s=reviews-best-canister-filters"} product={"Fluval 307"} /></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#fluval" className="text-brand-primary">Fluval 307</a><TableShopLink href={"/go/amazon/B07JH4JHTC?s=reviews-best-canister-filters"} product={"Fluval 307"} /></td>
                       <td className="p-3 text-brand-text-mid">Best Overall. $120–150</td>
                       <td className="p-3 text-brand-text-mid">The primer button is finicky on first start. The card also says it costs more than Penn Plax</td>
                     </tr>

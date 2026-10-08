@@ -24,13 +24,13 @@ const schema = buildArticleSchema({
   modifiedAt: '2026-10-07T00:00:00Z',
 })
 
-const rcSchema = buildProductSchema({ name: 'Royal Canin Large Breed Puppy', description: 'WSAVA-compliant large breed puppy formula with controlled calcium for healthy bone development.', url: 'https://dog.com/go/amazon-brand/royal+canin+large+breed+puppy?s=reviews-best-dog-food-for-puppies', imageUrl: '' })
+const rcSchema = buildProductSchema({ name: 'Royal Canin Large Breed Puppy', description: 'WSAVA-compliant large breed puppy formula with controlled calcium for healthy bone development.', url: 'https://dog.com/go/amazon/B0BX1D5VS4?s=reviews-best-dog-food-for-puppies', imageUrl: '' })
 const ppSchema = buildProductSchema({ name: 'Purina Pro Plan Puppy Large Breed', description: 'AAFCO feeding trial-tested large breed puppy formula from a company with 400+ published studies.', url: 'https://dog.com/go/chewy-brand/purina+pro+plan+puppy+large+breed?s=reviews-best-dog-food-for-puppies', imageUrl: '' })
 const hillsSchema = buildProductSchema({ name: 'Hill\'s Science Diet Puppy Small & Mini', description: 'veterinarian-formulated small breed puppy food, formerly labeled Puppy Small Paws, with a controlled calcium-to-phosphorus ratio.', url: 'https://dog.com/go/chewy-brand/hills+science+diet+puppy+small+paws?s=reviews-best-dog-food-for-puppies', imageUrl: '' })
 const allSchemas = combineSchemas(schema, rcSchema, ppSchema, hillsSchema)
 
 const PICKS = [
-  { label: 'Best Large Breed', name: 'Royal Canin Large Breed Puppy', subtitle: 'Most researched · Controlled calcium · Breed-specific', href: '#royal-canin', pickHop: '/go/amazon-brand/royal+canin+large+breed+puppy?s=reviews-best-dog-food-for-puppies' },
+  { label: 'Best Large Breed', name: 'Royal Canin Large Breed Puppy', subtitle: 'Most researched · Controlled calcium · Breed-specific', href: '#royal-canin', pickHop: '/go/amazon/B0BX1D5VS4?s=reviews-best-dog-food-for-puppies' },
   { label: 'Best Overall Value', name: 'Purina Pro Plan Puppy Large Breed', subtitle: 'AAFCO feeding trials · 400+ studies · Widely available', href: '#pro-plan' },
   { label: 'Best Small Breed', name: 'Hill\'s Science Diet Puppy Small & Mini', subtitle: 'Formerly Puppy Small Paws · veterinarian-formulated', href: '#hills-small' },
   { label: 'Best Budget', name: 'Iams Puppy Large Breed', subtitle: 'Formerly ProActive Health Smart Puppy · $30–50 per 30 lb bag', href: '#iams' },
@@ -38,7 +38,7 @@ const PICKS = [
 
 const itemList = buildItemListSchema({
   name: "Best Puppy Food 2026",
-  items: PICKS.map((pick) => ({ name: pick.name, url: ({ "Royal Canin Large Breed Puppy": "https://dog.com/go/amazon-brand/royal+canin+large+breed+puppy?s=reviews-best-dog-food-for-puppies", "Purina Pro Plan Puppy Large Breed": "https://dog.com/go/chewy-brand/purina+pro+plan+puppy+large+breed?s=reviews-best-dog-food-for-puppies", "Hill's Science Diet Puppy Small & Mini": "https://dog.com/go/chewy-brand/hills+science+diet+puppy+small+paws?s=reviews-best-dog-food-for-puppies", "Iams Puppy Large Breed": "https://dog.com/go/chewy-brand/iams+proactive+health+puppy+large+breed?s=reviews-best-dog-food-for-puppies" }[pick.name] ?? `https://dog.com/reviews/best-dog-food-for-puppies${pick.href}`) })),
+  items: PICKS.map((pick) => ({ name: pick.name, url: ({ "Royal Canin Large Breed Puppy": "https://dog.com/go/amazon/B0BX1D5VS4?s=reviews-best-dog-food-for-puppies", "Purina Pro Plan Puppy Large Breed": "https://dog.com/go/chewy-brand/purina+pro+plan+puppy+large+breed?s=reviews-best-dog-food-for-puppies", "Hill's Science Diet Puppy Small & Mini": "https://dog.com/go/chewy-brand/hills+science+diet+puppy+small+paws?s=reviews-best-dog-food-for-puppies", "Iams Puppy Large Breed": "https://dog.com/go/chewy-brand/iams+proactive+health+puppy+large+breed?s=reviews-best-dog-food-for-puppies" }[pick.name] ?? `https://dog.com/reviews/best-dog-food-for-puppies${pick.href}`) })),
 })
 export default function BestPuppyFoodPage() {
   return (
@@ -53,8 +53,8 @@ export default function BestPuppyFoodPage() {
         <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">Royal Canin Large Breed Puppy is the top puppy food because large-breed growth needs a formula built for steady gain.</p>
         <PriceAsOf date="2026-10-07" tone="dark" />
         <div data-fold="offer">
-          <PrimaryHop href='/go/amazon-brand/royal+canin+large+breed+puppy?s=reviews-best-dog-food-for-puppies' label='Check price of Royal Canin Large Breed Puppy on Amazon' />
-        <HopDisclosure tone="on-dark" siteId="dog-com" href="/go/amazon-brand/royal+canin+large+breed+puppy?s=reviews-best-dog-food-for-puppies" />
+          <PrimaryHop href='/go/amazon/B0BX1D5VS4?s=reviews-best-dog-food-for-puppies' label='Check price of Royal Canin Large Breed Puppy on Amazon' />
+        <HopDisclosure tone="on-dark" siteId="dog-com" href="/go/amazon/B0BX1D5VS4?s=reviews-best-dog-food-for-puppies" />
         </div>
         <EmailCapture
           variant="inline"
@@ -99,11 +99,11 @@ export default function BestPuppyFoodPage() {
               nextHref="/nutrition/puppy-nutrition"
               nextLabel="Read the large-breed puppy formula rule in full"
               nextBlurb="The callout is the bag rule — expected adult weight over 50 lb needs a large-breed puppy formula, not extra calcium. The puppy-nutrition guide is the next step: schedule, amount, and when to switch. The hop below is the same Royal Canin large-breed puppy search already on this page."
-              resourceHref="/go/amazon-brand/royal+canin+large+breed+puppy?s=reviews-best-dog-food-for-puppies"
+              resourceHref="/go/amazon/B0BX1D5VS4?s=reviews-best-dog-food-for-puppies"
               resourceLabel="Browse Royal Canin large-breed puppy food on Amazon →"
             />
 
-            <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/royal+canin+large+breed+puppy?s=reviews-best-dog-food-for-puppies", "/go/chewy-brand/purina+pro+plan+puppy+large+breed?s=reviews-best-dog-food-for-puppies", "/go/chewy-brand/hills+science+diet+puppy+small+paws?s=reviews-best-dog-food-for-puppies", "/go/chewy-brand/iams+proactive+health+puppy+large+breed?s=reviews-best-dog-food-for-puppies"]} />
+            <HopDisclosure siteId="dog-com" href={["/go/amazon/B0BX1D5VS4?s=reviews-best-dog-food-for-puppies", "/go/chewy-brand/purina+pro+plan+puppy+large+breed?s=reviews-best-dog-food-for-puppies", "/go/chewy-brand/hills+science+diet+puppy+small+paws?s=reviews-best-dog-food-for-puppies", "/go/chewy-brand/iams+proactive+health+puppy+large+breed?s=reviews-best-dog-food-for-puppies"]} />
             <ReviewCard
               id="royal-canin"
               badge="Best Large Breed"
@@ -126,7 +126,7 @@ export default function BestPuppyFoodPage() {
               price="$65–90 per 30 lb bag"
               priceNote="dated 2026-10-05."
               ctaText="Shop Royal Canin large-breed puppy food on Amazon →"
-              ctaHref="/go/amazon-brand/royal+canin+large+breed+puppy?s=reviews-best-dog-food-for-puppies"
+              ctaHref="/go/amazon/B0BX1D5VS4?s=reviews-best-dog-food-for-puppies"
               ctaAffiliateProgram="amazon-brand"
               ctaAffiliateProduct="royal+canin+large+breed+puppy"
             />
@@ -215,7 +215,7 @@ export default function BestPuppyFoodPage() {
                   <tbody>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">Expected adult weight over 50 lb, and you want the large-breed puppy formula</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#royal-canin" className="text-brand-primary">Royal Canin Large Breed Puppy</a><TableShopLink href={"/go/amazon-brand/royal+canin+large+breed+puppy?s=reviews-best-dog-food-for-puppies"} product={"Royal Canin Large Breed Puppy"} /></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#royal-canin" className="text-brand-primary">Royal Canin Large Breed Puppy</a><TableShopLink href={"/go/amazon/B0BX1D5VS4?s=reviews-best-dog-food-for-puppies"} product={"Royal Canin Large Breed Puppy"} /></td>
                       <td className="p-3 text-brand-text-mid">Best Large Breed. $65–90 per 30 lb bag</td>
                       <td className="p-3 text-brand-text-mid">The higher bag price is the limit. The card also says some dogs do not like the kibble shape, and you switch to the adult food at the right age</td>
                     </tr>

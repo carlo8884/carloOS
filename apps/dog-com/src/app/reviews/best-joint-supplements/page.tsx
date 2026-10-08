@@ -27,20 +27,20 @@ const schema = buildArticleSchema({
 })
 
 const PICKS = [
-  { label: 'Best Evidence', name: 'Dasuquin with MSM', subtitle: 'ASU + glucosamine + MSM · Best study support', href: '#dasuquin', pickHop: '/go/amazon-brand/dasuquin+with+msm?s=reviews-best-joint-supplements' },
+  { label: 'Best Evidence', name: 'Dasuquin with MSM', subtitle: 'ASU + glucosamine + MSM · Best study support', href: '#dasuquin', pickHop: '/go/amazon/B0041OOPK2?s=reviews-best-joint-supplements' },
   { label: 'Best Fish Oil', name: 'Nordic Naturals Omega-3', subtitle: 'Marine EPA/DHA · Anti-inflammatory', href: '#fish-oil' },
   { label: 'Best Budget', name: 'Cosequin DS', subtitle: 'Widely available · NASC certified', href: '#cosequin' },
   { label: 'Emerging', name: 'CBD (Vetri-CBD)', subtitle: 'Promising evidence · Vet-formulated', href: '#cbd' },
 ]
 
-const productSchema0 = buildProductSchema({ name: 'Nutramax Dasuquin with MSM', description: 'Glucosamine, chondroitin, ASU and MSM joint supplement for dogs.', url: 'https://dog.com/go/amazon-brand/dasuquin+with+msm?s=reviews-best-joint-supplements', imageUrl: '' })
+const productSchema0 = buildProductSchema({ name: 'Nutramax Dasuquin with MSM', description: 'Glucosamine, chondroitin, ASU and MSM joint supplement for dogs.', url: 'https://dog.com/go/amazon/B0041OOPK2?s=reviews-best-joint-supplements', imageUrl: '' })
 const productSchema1 = buildProductSchema({ name: 'Nordic Naturals Omega-3 Pet', description: 'Marine EPA and DHA omega-3 supplement for dogs.', url: 'https://dog.com/go/amazon-brand/nordic+naturals+omega+pet?s=reviews-best-joint-supplements', imageUrl: '' })
 const productSchema2 = buildProductSchema({ name: 'Cosequin DS Maximum Strength', description: 'NASC-certified glucosamine and chondroitin supplement for dogs.', url: 'https://dog.com/go/amazon-brand/cosequin+ds+maximum+strength?s=reviews-best-joint-supplements', imageUrl: '' })
 const allSchemas = combineSchemas(schema, productSchema0, productSchema1, productSchema2)
 
 const itemList = buildItemListSchema({
   name: "Best Joint Supplements for Dogs 2026",
-  items: PICKS.map((pick) => ({ name: pick.name, url: ({ 'Dasuquin with MSM': 'https://dog.com/go/amazon-brand/dasuquin+with+msm?s=reviews-best-joint-supplements', 'Nordic Naturals Omega-3': 'https://dog.com/go/amazon-brand/nordic+naturals+omega+pet?s=reviews-best-joint-supplements', 'Cosequin DS': 'https://dog.com/go/amazon-brand/cosequin+ds+maximum+strength?s=reviews-best-joint-supplements' }[pick.name] ?? `https://dog.com/reviews/best-joint-supplements${pick.href}`) })),
+  items: PICKS.map((pick) => ({ name: pick.name, url: ({ 'Dasuquin with MSM': 'https://dog.com/go/amazon/B0041OOPK2?s=reviews-best-joint-supplements', 'Nordic Naturals Omega-3': 'https://dog.com/go/amazon-brand/nordic+naturals+omega+pet?s=reviews-best-joint-supplements', 'Cosequin DS': 'https://dog.com/go/amazon-brand/cosequin+ds+maximum+strength?s=reviews-best-joint-supplements' }[pick.name] ?? `https://dog.com/reviews/best-joint-supplements${pick.href}`) })),
 })
 export default function BestJointSupplementsPage() {
   return (
@@ -55,8 +55,8 @@ export default function BestJointSupplementsPage() {
         <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">Nutramax Dasuquin with MSM is the top joint supplement because the label combines glucosamine, chondroitin, and MSM.</p>
         <PriceAsOf date="2026-10-05" tone="dark" />
         <div data-fold="offer">
-          <PrimaryHop href='/go/amazon-brand/dasuquin+with+msm?s=reviews-best-joint-supplements' label='Check price of Nutramax Dasuquin with MSM on Amazon' />
-        <HopDisclosure tone="on-dark" siteId="dog-com" href="/go/amazon-brand/dasuquin+with+msm?s=reviews-best-joint-supplements" />
+          <PrimaryHop href='/go/amazon/B0041OOPK2?s=reviews-best-joint-supplements' label='Check price of Nutramax Dasuquin with MSM on Amazon' />
+        <HopDisclosure tone="on-dark" siteId="dog-com" href="/go/amazon/B0041OOPK2?s=reviews-best-joint-supplements" />
         </div>
         <EmailCapture
           variant="inline"
@@ -97,7 +97,7 @@ export default function BestJointSupplementsPage() {
               </p>
             </div>
 
-            <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/dasuquin+with+msm?s=reviews-best-joint-supplements", "/go/amazon-brand/nordic+naturals+omega+pet?s=reviews-best-joint-supplements", "/go/amazon-brand/cosequin+ds+maximum+strength?s=reviews-best-joint-supplements"]} />
+            <HopDisclosure siteId="dog-com" href={["/go/amazon/B0041OOPK2?s=reviews-best-joint-supplements", "/go/amazon-brand/nordic+naturals+omega+pet?s=reviews-best-joint-supplements", "/go/amazon-brand/cosequin+ds+maximum+strength?s=reviews-best-joint-supplements"]} />
             <ReviewCard
               id="dasuquin"
               badge="Best Evidence"
@@ -120,7 +120,7 @@ export default function BestJointSupplementsPage() {
               price="$40–70 for 84-count"
               priceNote="dated 2026-10-05."
               ctaText="Shop Dasuquin with MSM on Amazon →"
-              ctaHref="/go/amazon-brand/dasuquin+with+msm?s=reviews-best-joint-supplements"
+              ctaHref="/go/amazon/B0041OOPK2?s=reviews-best-joint-supplements"
               ctaAffiliateProgram="amazon-brand"
               ctaAffiliateProduct="dasuquin+with+msm"
             />
@@ -206,7 +206,7 @@ export default function BestJointSupplementsPage() {
                   <tbody>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">The supplement with the ASU evidence</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#dasuquin" className="text-brand-primary">Nutramax Dasuquin with MSM</a><TableShopLink href={"/go/amazon-brand/dasuquin+with+msm?s=reviews-best-joint-supplements"} product={"Nutramax Dasuquin with MSM"} /></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#dasuquin" className="text-brand-primary">Nutramax Dasuquin with MSM</a><TableShopLink href={"/go/amazon/B0041OOPK2?s=reviews-best-joint-supplements"} product={"Nutramax Dasuquin with MSM"} /></td>
                       <td className="p-3 text-brand-text-mid">Best Evidence. $40–70 for 84-count</td>
                       <td className="p-3 text-brand-text-mid">Severe arthritis that needs an NSAID. The card says this does not replace that, and the effect takes 4–6 weeks</td>
                     </tr>

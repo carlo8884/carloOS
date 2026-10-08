@@ -3,8 +3,11 @@ import { test } from 'node:test'
 import {
   asinFromUrl,
   classifyAmazonProduct,
+  classifyAmazonSearch,
+  concreteSearchSku,
   productFromHref,
   renderAmazonSweep,
+  searchFromHref,
 } from './amazon-product-sweep.mjs'
 import { parseRoutes } from './live-link-sweep.mjs'
 
@@ -158,4 +161,104 @@ test('the report counts each status and does not mention anyone', () => {
       sites: [{ name: 'dog-com', rows: [{ asin: 'B0TESTASIN', status: 'live', detail: 'see @someone', target: 'https://amazon.com/dp/B0TESTASIN', where: [] }] }],
     }),
   )
+})
+
+test('a source template is not a search, and a brand query is', () => {
+  assert.equal(concreteSearchSku('${amazonBrandSlug(query)}'), false)
+  assert.equal(searchFromHref('/go/amazon-brand/${amazonBrandSlug(query)}?s=tools-heater', routes), null)
+  assert.equal(productFromHref('/go/amazon-brand/aquaclear+70+filter?s=reviews', routes), null)
+  const search = searchFromHref('/go/amazon-brand/aquaclear+70+filter?s=reviews', routes)
+  assert.equal(search.query, 'aquaclear+70+filter')
+  assert.match(search.target, /^https:\/\/amazon\.com\/s\?k=/)
+})
+
+test('search pages are live, empty, redirected, 404, or unverifiable', () => {
+  const live = '1-48 of 178 results for "aquaclear 70" MAIN-SEARCH_RESULTS-1 s-search-result'
+  assert.equal(
+    classifyAmazonSearch({ status: 200, error: '', snippet: live, finalUrl: 'https://www.amazon.com/s?k=aquaclear' }).status,
+    'live',
+  )
+  assert.equal(
+    classifyAmazonSearch({
+      status: 200,
+      error: '',
+      snippet: '40 results for "easy green" MAIN-SEARCH_RESULTS-1',
+      finalUrl: 'https://www.amazon.com/s?k=easy',
+    }).status,
+    'live',
+  )
+  assert.equal(
+    classifyAmazonSearch({
+      status: 200,
+      error: '',
+      snippet: 'No results for "missing pouch"',
+      finalUrl: 'https://www.amazon.com/s?k=missing',
+    }).status,
+    'empty',
+  )
+  assert.equal(
+    classifyAmazonSearch({
+      status: 200,
+      error: '',
+      snippet: '0 results for "missing pouch"',
+      finalUrl: 'https://www.amazon.com/s?k=missing',
+    }).status,
+    'empty',
+  )
+  assert.equal(
+    classifyAmazonSearch({
+      status: 200,
+      error: '',
+      snippet: 'product',
+      finalUrl: 'https://www.amazon.com/dp/B0TESTASIN',
+    }).status,
+    'redirected',
+  )
+  assert.equal(
+    classifyAmazonSearch({
+      status: 404,
+      error: '',
+      snippet: '',
+      finalUrl: 'https://www.amazon.com/s?k=missing',
+    }).status,
+    '404',
+  )
+  assert.equal(
+    classifyAmazonSearch({
+      status: 200,
+      error: '',
+      snippet: 'Just a moment while we verify you are human',
+      finalUrl: 'https://www.amazon.com/s?k=crate',
+    }).status,
+    'unverifiable',
+  )
+  assert.equal(
+    classifyAmazonSearch({ status: 0, error: 'TimeoutError', snippet: '', finalUrl: '' }).status,
+    'unverifiable',
+  )
+  assert.equal(
+    classifyAmazonSearch({ status: 200, error: '', snippet: 'short', finalUrl: 'https://www.amazon.com/s?k=crate' }).status,
+    'unverifiable',
+  )
+})
+
+test('the report counts search statuses beside the product counts', () => {
+  const body = renderAmazonSweep({
+    checkedAt: '2026-10-08T22:00Z',
+    sites: [{ name: 'ferret-com', rows: [] }],
+    searches: [
+      {
+        name: 'ferret-com',
+        rows: [
+          { query: 'ferret+sleep+sack+fleece', status: 'live', detail: 'HTTP 200 260 results', where: ['apps/ferret-com/src/app/care/page.tsx'] },
+          { query: 'scent+swap+fleece+sleep+pouch', status: 'empty', detail: 'HTTP 200 no results', where: ['apps/ferret-com/src/app/care/introducing-a-second-ferret/page.tsx'] },
+        ],
+      },
+    ],
+  })
+  assert.match(body, /unique queries 2 \/ live 1 \/ empty 1 \/ redirected 0 \/ 404 0 \/ unverifiable 0/)
+  assert.match(body, /scent\+swap\+fleece\+sleep\+pouch/)
+  assert.match(body, /1 live\. Live queries are counted above/)
+  assert.match(body, /none recorded by this job/)
+  assert.equal(/(^|\s)@/.test(body), false)
 })

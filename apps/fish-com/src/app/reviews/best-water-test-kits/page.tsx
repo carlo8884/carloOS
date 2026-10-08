@@ -5,10 +5,10 @@ import { TableShopLink, RelatedReads, ComparisonFoot, EmailCapture, PrimaryHop, 
 import { buildArticleSchema, buildItemListSchema, buildFAQSchema, buildProductSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Best Aquarium Water Test Kits 2026 — API Master Kit | Fish.com', description: 'Best aquarium water test kits ranked. API Master Test Kit for accuracy and value. Salifert individual tests for reef tanks. Digital meters for pH and TDS.', path: '/reviews/best-water-test-kits', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Best Aquarium Water Test Kits 2026', description: 'API Master Test Kit, Salifert, and digital meters ranked for aquarium water testing.', url: 'https://fish.com/reviews/best-water-test-kits', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-07T00:00:00Z' })
-const apiSchema = buildProductSchema({ name: 'API Freshwater Master Test Kit', description: '800 tests for pH, ammonia, nitrite, nitrate — the standard hobbyist kit.', url: 'https://fish.com/go/amazon-brand/api+freshwater+master+test+kit?s=reviews-best-water-test-kits', imageUrl: '' })
+const apiSchema = buildProductSchema({ name: 'API Freshwater Master Test Kit', description: '800 tests for pH, ammonia, nitrite, nitrate — the standard hobbyist kit.', url: 'https://fish.com/go/amazon/B000255NCI?s=reviews-best-water-test-kits', imageUrl: '' })
 const allSchemas = combineSchemas(schema, apiSchema)
 const PICKS = [
-  { label: 'Best Overall', name: 'API Freshwater Master Kit', subtitle: '800 tests · Ammonia+nitrite+nitrate+pH · Best value', href: '#api', pickHop: '/go/amazon-brand/api+freshwater+master+test+kit?s=reviews-best-water-test-kits' },
+  { label: 'Best Overall', name: 'API Freshwater Master Kit', subtitle: '800 tests · Ammonia+nitrite+nitrate+pH · Best value', href: '#api', pickHop: '/go/amazon/B000255NCI?s=reviews-best-water-test-kits' },
   { label: 'Best Reef', name: 'Salifert Individual Tests', subtitle: 'Reef-grade accuracy · Alk, Ca, Mg, nitrate', href: '#salifert' },
   { label: 'Best Digital', name: 'Apogee or Bluelab Meters', subtitle: 'pH/TDS digital meters — no reagents', href: '#digital' },
 ]
@@ -16,7 +16,7 @@ const PICKS = [
 // PICKS. No aggregateRating, no fabricated specs (QC §1.4).
 const itemList = buildItemListSchema({
   name: 'Best Aquarium Water Test Kits 2026',
-  items: PICKS.map((p) => ({ name: p.name, url: ({ "API Freshwater Master Kit": "https://fish.com/go/amazon-brand/api+freshwater+master+test+kit?s=reviews-best-water-test-kits", "Salifert Individual Tests": "https://fish.com/go/amazon-brand/salifert+aquarium+test+kit?s=reviews-best-water-test-kits", "Apogee or Bluelab Meters": "https://fish.com/go/amazon-brand/bluelab+ph+meter?s=reviews-best-water-test-kits" }[p.name] ?? `https://fish.com/reviews/best-water-test-kits${p.href}`) })),
+  items: PICKS.map((p) => ({ name: p.name, url: ({ "API Freshwater Master Kit": "https://fish.com/go/amazon/B000255NCI?s=reviews-best-water-test-kits", "Salifert Individual Tests": "https://fish.com/go/amazon-brand/salifert+aquarium+test+kit?s=reviews-best-water-test-kits", "Apogee or Bluelab Meters": "https://fish.com/go/amazon-brand/bluelab+ph+meter?s=reviews-best-water-test-kits" }[p.name] ?? `https://fish.com/reviews/best-water-test-kits${p.href}`) })),
 })
 // FAQ content derived from this page's testing guidance only.
 const FAQS = [
@@ -36,8 +36,8 @@ export default function BestWaterTestKitsPage() {
         <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">The API Freshwater Master Test Kit is the top water test because one box covers pH, ammonia, nitrite, and nitrate.</p>
         <PriceAsOf date="2026-10-03" tone="dark" />
         <div data-fold="offer">
-          <PrimaryHop href='/go/amazon-brand/api+freshwater+master+test+kit?s=reviews-best-water-test-kits' label='Check price of the API Freshwater Master Test Kit on Amazon' />
-        <HopDisclosure tone="on-dark" siteId="fish-com" href="/go/amazon-brand/api+freshwater+master+test+kit?s=reviews-best-water-test-kits" />
+          <PrimaryHop href='/go/amazon/B000255NCI?s=reviews-best-water-test-kits' label='Check price of the API Freshwater Master Test Kit on Amazon' />
+        <HopDisclosure tone="on-dark" siteId="fish-com" href="/go/amazon/B000255NCI?s=reviews-best-water-test-kits" />
         </div>
         <EmailCapture
           variant="inline"
@@ -76,11 +76,11 @@ export default function BestWaterTestKitsPage() {
               siteId="fish-com"
               nextHref="/water-parameters"
               nextLabel="Read the weekly test-order table next"
-              nextBlurb="The callout is the kit pick — API Master for freshwater pH, ammonia, nitrite, and nitrate. The water-parameters table is the weekly order and the target ranges. The link below searches Amazon for the API Freshwater Master Test Kit, the same search as on this page."
-              resourceHref="/go/amazon-brand/api+freshwater+master+test+kit?s=reviews-best-water-test-kits"
+              nextBlurb="The callout is the kit pick — API Master for freshwater pH, ammonia, nitrite, and nitrate. The water-parameters table is the weekly order and the target ranges. The link below opens the API Freshwater Master Test Kit product page on Amazon, the same product as on this page."
+              resourceHref="/go/amazon/B000255NCI?s=reviews-best-water-test-kits"
               resourceLabel="Browse API Freshwater Master Test Kit on Amazon →"
             />
-            <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/api+freshwater+master+test+kit?s=reviews-best-water-test-kits", "/go/amazon-brand/salifert+aquarium+test+kit?s=reviews-best-water-test-kits", "/go/amazon-brand/bluelab+ph+meter?s=reviews-best-water-test-kits"]} />
+            <HopDisclosure siteId="fish-com" href={["/go/amazon/B000255NCI?s=reviews-best-water-test-kits", "/go/amazon-brand/salifert+aquarium+test+kit?s=reviews-best-water-test-kits", "/go/amazon-brand/bluelab+ph+meter?s=reviews-best-water-test-kits"]} />
             <ReviewCard id="api" badge="Best Overall" name="API Freshwater Master Test Kit" subtitle="800 tests · pH, ammonia, nitrite, nitrate · Most used kit in the hobby" winner
               description={<p>The API Freshwater Master Test Kit is the standard hobbyist water testing solution — used by more aquarists than any other kit. It covers the four parameters that matter most for fish health: pH, ammonia (NH3/NH4+), nitrite (NO2-), and nitrate (NO3-). 800 total tests provides approximately 2+ years of weekly testing for a single tank. Liquid reagent tests are significantly more accurate than dip-strip tests — do not use dip strips for critical parameters like ammonia. Color comparison can be challenging in some lighting conditions, but the ammonia, nitrite, and nitrate tests are reliable and consistent. Essential for every freshwater hobbyist.</p>}
               specs={[{ label: 'Tests', value: '800 total', highlight: 'good' }, { label: 'Parameters', value: 'pH, ammonia, nitrite, nitrate', highlight: 'good' }, { label: 'Format', value: 'Liquid reagent — more accurate than strips', highlight: 'good' }, { label: 'Tank type', value: 'Freshwater' }]}
@@ -89,7 +89,7 @@ export default function BestWaterTestKitsPage() {
               price="$28–35"
               priceNote="dated 2026-10-03."
               ctaText="Check price of the API Freshwater Master Test Kit on Amazon"
-              ctaHref="/go/amazon-brand/api+freshwater+master+test+kit?s=reviews-best-water-test-kits"
+              ctaHref="/go/amazon/B000255NCI?s=reviews-best-water-test-kits"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="api-master-test-kit"
             />
@@ -123,7 +123,7 @@ export default function BestWaterTestKitsPage() {
                   <tbody>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">Freshwater community</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#api" className="text-brand-primary">API Freshwater Master</a><TableShopLink href={"/go/amazon-brand/api+freshwater+master+test+kit?s=reviews-best-water-test-kits"} product={"API Freshwater Master"} /></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#api" className="text-brand-primary">API Freshwater Master</a><TableShopLink href={"/go/amazon/B000255NCI?s=reviews-best-water-test-kits"} product={"API Freshwater Master"} /></td>
                       <td className="p-3 text-brand-text-mid">pH, ammonia, nitrite, nitrate. About 800 tests. $28–35</td>
                       <td className="p-3 text-brand-text-mid">Saltwater, GH/KH, or reef alkalinity</td>
                     </tr>

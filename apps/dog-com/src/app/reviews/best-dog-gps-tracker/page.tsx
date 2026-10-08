@@ -7,15 +7,15 @@ import { crossSiteHref } from '@carloOS/config'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Dog GPS Trackers 2026 — Fi and Tractive | Dog.com', description: 'Fi Series 3+ is the current collar. Tractive is the budget GPS pick. Whistle shut down on August 31, 2025.', path: '/reviews/best-dog-gps-tracker', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Dog GPS Trackers 2026', description: 'Fi Series 3+ and Tractive GPS dog trackers. Whistle shut down on August 31, 2025.', url: 'https://dog.com/reviews/best-dog-gps-tracker', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-07T00:00:00Z' })
-const fiSchema = buildProductSchema({ name: 'Fi Series 3+ Dog Collar', description: 'Current Fi collar. Fi rates battery life at up to 3 months and has described membership from about $14 a month, with the collar kit included.', url: 'https://dog.com/go/amazon-brand/fi+series+3+dog+collar?s=reviews-best-dog-gps-tracker', imageUrl: '' })
+const fiSchema = buildProductSchema({ name: 'Fi Series 3+ Dog Collar', description: 'Current Fi collar. Fi rates battery life at up to 3 months and has described membership from about $14 a month, with the collar kit included.', url: 'https://dog.com/go/amazon/B0HJ43BQGW?s=reviews-best-dog-gps-tracker', imageUrl: '' })
 const allSchemas = combineSchemas(schema, fiSchema)
 const PICKS = [
-  { label: 'Best Overall', name: 'Fi Series 3+', subtitle: 'Current collar · Up to 3-month battery · LTE', href: '#fi', pickHop: '/go/amazon-brand/fi+series+3+dog+collar?s=reviews-best-dog-gps-tracker' },
+  { label: 'Best Overall', name: 'Fi Series 3+', subtitle: 'Current collar · Up to 3-month battery · LTE', href: '#fi', pickHop: '/go/amazon/B0HJ43BQGW?s=reviews-best-dog-gps-tracker' },
   { label: 'Best Budget', name: 'Tractive GPS', subtitle: 'Lower printed monthly fee · Works globally', href: '#tractive' },
 ]
 const itemList = buildItemListSchema({
   name: "Best Dog GPS Trackers 2026",
-  items: PICKS.map((pick) => ({ name: pick.name, url: ({ "Fi Series 3+": "https://dog.com/go/amazon-brand/fi+series+3+dog+collar?s=reviews-best-dog-gps-tracker", "Tractive GPS": "https://dog.com/go/amazon-brand/tractive+gps+dog+tracker?s=reviews-best-dog-gps-tracker" }[pick.name] ?? `https://dog.com/reviews/best-dog-gps-tracker${pick.href}`) })),
+  items: PICKS.map((pick) => ({ name: pick.name, url: ({ "Fi Series 3+": "https://dog.com/go/amazon/B0HJ43BQGW?s=reviews-best-dog-gps-tracker", "Tractive GPS": "https://dog.com/go/amazon-brand/tractive+gps+dog+tracker?s=reviews-best-dog-gps-tracker" }[pick.name] ?? `https://dog.com/reviews/best-dog-gps-tracker${pick.href}`) })),
 })
 export default function BestGPSTrackerPage() {
   return (
@@ -25,10 +25,10 @@ export default function BestGPSTrackerPage() {
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">Buyer's Guide</span>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Dog GPS Trackers 2026</h1>
         <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">The Fi Series 3+ is the top GPS collar because Fi rates the battery at up to three months.</p>
-        <PriceAsOf date="2026-10-07" tone="dark" />
+        <PriceAsOf date="2026-10-08" tone="dark" />
         <div data-fold="offer">
-          <PrimaryHop href='/go/amazon-brand/fi+series+3+dog+collar?s=reviews-best-dog-gps-tracker' label='Check price of the Fi Series 3+ collar on Amazon' />
-        <HopDisclosure tone="on-dark" siteId="dog-com" href="/go/amazon-brand/fi+series+3+dog+collar?s=reviews-best-dog-gps-tracker" />
+          <PrimaryHop href='/go/amazon/B0HJ43BQGW?s=reviews-best-dog-gps-tracker' label='Check price of the Fi Series 3+ collar on Amazon' />
+        <HopDisclosure tone="on-dark" siteId="dog-com" href="/go/amazon/B0HJ43BQGW?s=reviews-best-dog-gps-tracker" />
         </div>
         <EmailCapture
           variant="inline"
@@ -62,10 +62,10 @@ export default function BestGPSTrackerPage() {
               nextHref="/guides/dog-microchipping"
               nextLabel="Register a microchip — GPS is not permanent ID"
               nextBlurb="A GPS collar needs a subscription and a charge. A registered microchip is the ID that still works if the battery dies. Microchipping is the next step: implant plus registry, then the tracker. The hop below is the same Fi Series 3+ search already on this page."
-              resourceHref="/go/amazon-brand/fi+series+3+dog+collar?s=reviews-best-dog-gps-tracker"
+              resourceHref="/go/amazon/B0HJ43BQGW?s=reviews-best-dog-gps-tracker"
               resourceLabel="Browse Fi Series 3+ GPS collars on Amazon →"
             />
-            <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/fi+series+3+dog+collar?s=reviews-best-dog-gps-tracker", "/go/amazon-brand/tractive+gps+dog+tracker?s=reviews-best-dog-gps-tracker"]} />
+            <HopDisclosure siteId="dog-com" href={["/go/amazon/B0HJ43BQGW?s=reviews-best-dog-gps-tracker", "/go/amazon-brand/tractive+gps+dog+tracker?s=reviews-best-dog-gps-tracker"]} />
             <ReviewCard id="fi" badge="Best Overall" name="Fi Series 3+ Dog Collar" subtitle="Current Fi collar · Battery rated up to 3 months · Collar band included" winner
               description={<p>Fi&apos;s current collar is Series 3+, not the older Series 3. Fi rates Series 3+ battery life at up to 3 months and lists AT&amp;T as the cellular provider. The May 2025 Series 3+ announcement described membership from about $14 a month, with the collar kit included. Confirm the live plan before you buy. The app still covers location, activity, and escape alerts.</p>}
               specs={[{ label: 'Battery', value: 'Up to 3 months, per Fi', highlight: 'good' }, { label: 'Network', value: 'AT&T, per Fi' }, { label: 'Membership', value: 'From about $14/mo, kit included', highlight: 'good' }]}
@@ -74,7 +74,7 @@ export default function BestGPSTrackerPage() {
               price="From about $14/mo, kit included"
               priceNote="dated 2026-10-07."
               ctaText="Shop Fi Series 3+ collar on Amazon →"
-              ctaHref="/go/amazon-brand/fi+series+3+dog+collar?s=reviews-best-dog-gps-tracker"
+              ctaHref="/go/amazon/B0HJ43BQGW?s=reviews-best-dog-gps-tracker"
               ctaAffiliateProgram="amazon-brand"
               ctaAffiliateProduct="fi+series+3+dog+collar"
             />
@@ -112,7 +112,7 @@ export default function BestGPSTrackerPage() {
                   <tbody>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">The current Fi collar and escape alerts</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#fi" className="text-brand-primary">Fi Series 3+</a><TableShopLink href={"/go/amazon-brand/fi+series+3+dog+collar?s=reviews-best-dog-gps-tracker"} product={"Fi Series 3+"} /></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#fi" className="text-brand-primary">Fi Series 3+</a><TableShopLink href={"/go/amazon/B0HJ43BQGW?s=reviews-best-dog-gps-tracker"} product={"Fi Series 3+"} /></td>
                       <td className="p-3 text-brand-text-mid">Best Overall. From about $14/mo, kit included, dated 2026-10-07</td>
                       <td className="p-3 text-brand-text-mid">You do not want a membership. Confirm the live plan</td>
                     </tr>
