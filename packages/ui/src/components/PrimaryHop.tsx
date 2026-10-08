@@ -1,4 +1,4 @@
-import { hopCommissionReady, liveAnchorHref, partnerLinkQuiet, partnerNeededLabel, shopCtaLabel } from '@carloOS/config/affiliate-hop'
+import { hopCommissionReady, liveAnchorHref, partnerLinkQuiet, partnerNeededLabel, shopCtaLabel, visitNextStep } from '@carloOS/config/affiliate-hop'
 import { HeldQuoteNext } from './HeldQuoteNext'
 
 const CARRIER_QUOTE = /^\/go\/(trupanion|healthy-paws|embrace|lemonade|pumpkin|pets-best|spot|manypets|figo|aspca|fetch|metlife|wagmo)(?:\/|\?|#|$)/
@@ -32,6 +32,24 @@ export function PrimaryHop({
         <div className="mb-5" data-primary-hop="held">
           <HeldQuoteNext tone="on-color" />
         </div>
+      )
+    }
+    const visit = visitNextStep(href)
+    if (visit) {
+      return (
+        <>
+          <p className="mb-5 text-sm leading-relaxed text-white/75 m-0" data-primary-hop="held">
+            The visit link stays off until that partner ID is set.
+          </p>
+          <p className="mb-5 m-0">
+            <a
+              href={visit.href}
+              className="inline-block max-w-full whitespace-normal text-left text-sm font-bold text-white underline underline-offset-2"
+            >
+              {visit.label}
+            </a>
+          </p>
+        </>
       )
     }
     return (

@@ -1,5 +1,5 @@
 import type { SiteId } from '@carloOS/config'
-import { liveAnchorHref, partnerLinkQuiet, partnerNeededLabel, partnerQuoteHeld, shopCtaLabel } from '@carloOS/config/affiliate-hop'
+import { liveAnchorHref, partnerLinkQuiet, partnerNeededLabel, partnerQuoteHeld, shopCtaLabel, visitNextStep } from '@carloOS/config/affiliate-hop'
 import type { MatchedPick } from '../lib/result-picks'
 import { AffiliateDisclosure } from './AffiliateDisclosure'
 import { HeldQuoteNext } from './HeldQuoteNext'
@@ -22,12 +22,17 @@ export function ResultPick({
   if (!href && !held && !quiet) return null
   const shop = Boolean(href?.startsWith('/go/'))
   const label = shop && href ? shopCtaLabel(pick.href, pick.label) : pick.label
+  const visit = !href && !held ? visitNextStep(pick.href) : null
   const detail = <p className="m-0 text-sm leading-relaxed text-brand-text-mid">{pick.detail}</p>
   const disclosure = shop ? (
     <AffiliateDisclosure variant="inline" siteId={siteId} className={linkFirst ? 'mt-0 mb-3' : 'my-3'} />
   ) : null
   const control = held ? (
     <HeldQuoteNext />
+  ) : visit ? (
+    <a href={visit.href} className="inline-block font-semibold text-brand-primary underline underline-offset-2">
+      {visit.label}
+    </a>
   ) : quiet ? (
     <span data-partner-held="true" className="inline-block text-sm font-semibold text-brand-text-light">
       {partnerLinkQuiet(pick.href)

@@ -17,6 +17,7 @@ import {
   shopCtaLabel,
   partnerTagReady,
   partnerNeededLabel,
+  visitNextStep,
   partnerQuoteHeld,
   partnerLinkQuiet,
   liveAnchorHref,
@@ -259,6 +260,20 @@ describe('resolveAffiliateHop', () => {
     assert.equal(partnerTagReady('/go/embrace/home?s=reviews-best-pet-insurance', { AFF_EMBRACE_TAG: 'emb-live' }), true)
     assert.equal(partnerTagReady('/go/amazon-brand/horse+hoof+pick', {}), true)
     assert.equal(partnerNeededLabel('Get a Trupanion quote →'), 'Quotes not available here yet')
+    assert.deepEqual(visitNextStep('/go/vetster/telehealth?s=telehealth'), {
+      href: '/tools/er-vs-clinic',
+      label: 'ER vs clinic vs telehealth',
+    })
+    assert.deepEqual(visitNextStep('/go/askvet/telehealth?s=reviews-askvet-vs-connect-guide'), {
+      href: '/telehealth',
+      label: 'Compare telehealth services',
+    })
+    assert.deepEqual(visitNextStep('/go/vetster/telehealth?s=tools-er-vs-clinic'), {
+      href: '/telehealth',
+      label: 'Compare telehealth services',
+    })
+    assert.equal(visitNextStep('/go/trupanion/home?s=reviews-best-pet-insurance'), null)
+    assert.equal(visitNextStep('/go/chewy/connect?s=telehealth'), null)
     assert.equal(partnerQuoteHeld(href, {}), true)
     assert.equal(partnerQuoteHeld(href, { AFF_TRUPANION_TAG: 'tru-live' }), false)
     assert.equal(partnerQuoteHeld('/go/amazon-brand/horse+hoof+pick', {}), false)
