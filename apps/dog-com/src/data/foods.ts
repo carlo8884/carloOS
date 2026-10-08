@@ -639,7 +639,7 @@ export function foodFaqs(entry: FoodEntry): { question: string; answer: string }
     if (entry.quantity || entry.safePrep) {
       faqs.push({
         question: `How much ${name} can a dog have?`,
-        answer: `${entry.quantity ?? 'Offer modest amounts as an occasional treat.'} ${entry.safePrep ?? ''} Treats should stay within about 10% of your dog’s daily calories.`.trim(),
+        answer: `${entry.quantity ?? 'Offer modest amounts as an occasional treat.'} ${entry.safePrep ?? ''} The WSAVA guide to treats for dogs states that treats should make up no more than 10% of a dog’s daily calorie intake (https://wsava.org/wp-content/uploads/2025/11/WSAVA_GuidetoTreats_Dogs_251107.pdf).`.trim(),
       })
     }
     if (entry.risks?.length) {
