@@ -65,7 +65,7 @@ export default function ZebraDanioPage() {
     <ArticleLayout siteId="fish-com"
       hero={{ title: 'Zebra Danio Care Guide', subtitle: "Danio rerio — the zebra danio is one of the toughest, most active fish in the freshwater hobby. Its horizontal blue-and-gold stripes, relentless energy, and tolerance of imperfect water quality have made it both a beginner staple and the most studied fish in biomedical research. A school of these fish turns the upper third of a tank into constant motion.", category: 'Species Guide', authorName: 'Fish.com Editorial', publishedAt: 'June 2026', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Zebra Danio', href: '/species/zebra-danio' }]}
-      relatedLinks={[{ title: "Species Hub", href: "/species", category: "Species" }, { title: "White Cloud Mountain Minnow", href: "/species/white-cloud-mountain-minnow", category: "Species Guide" }, { title: "Cherry Barb", href: "/species/cherry-barb", category: "Species Guide" }, { title: "Planted Tank Setup", href: "/setup/planted-tank-setup", category: "Tank Setup" }]}
+      relatedLinks={[{ title: "Species Hub", href: "/species", category: "Species" }, { title: "White Cloud Mountain Minnow", href: "/species/white-cloud-mountain-minnow", category: "Species Guide" }, { title: "Cherry Barb", href: "/species/cherry-barb", category: "Species Guide" }, { title: "Tank Volume Calculator", href: "/tools/aquarium-volume-calculator", category: "Tool" }, { title: "Planted Tank Setup", href: "/setup/planted-tank-setup", category: "Tank Setup" }]}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Quick Stats</div>
@@ -75,7 +75,7 @@ export default function ZebraDanioPage() {
             </div>
           ))}
         </div>
-        <RelatedLinks title="Related Guides" links={[{ label: 'White Cloud Mountain Minnow', href: '/species/white-cloud-mountain-minnow' }, { label: 'Cherry Barb', href: '/species/cherry-barb' }, { label: 'Aquarium Cycling Guide', href: '/setup/aquarium-cycling-guide' }]} />
+        <RelatedLinks title="Related Guides" links={[{ label: 'Tank Volume Calculator', href: '/tools/aquarium-volume-calculator' }, { label: 'White Cloud Mountain Minnow', href: '/species/white-cloud-mountain-minnow' }, { label: 'Cherry Barb', href: '/species/cherry-barb' }, { label: 'Aquarium Cycling Guide', href: '/setup/aquarium-cycling-guide' }]} />
             <CrossPortfolioCard currentSite="fish-com" contentType="species" variant="sidebar" />
 
       </>}
@@ -91,6 +91,7 @@ export default function ZebraDanioPage() {
         <h2>School Size and Behavior</h2>
         <p>Zebra danios are active schoolers that must be kept in groups of at least six, with eight to ten producing better behavior. Kept singly or in pairs, they become stressed and frequently turn into relentless fin-nippers — much of the danio "aggression" reported by keepers stems from understocked groups. In a proper school, intra-group chasing replaces harassment of tankmates, and the fish display the coordinated darting movement that makes them so engaging to watch.</p>
         <p>They occupy the top and middle of the water column and are exceptional jumpers. A tight-fitting lid is non-negotiable — danios are among the most common fish to be found dried on the floor. Their constant motion makes them unsuitable tankmates for slow, long-finned fish such as bettas or fancy goldfish, whose fins they may nip and whose food they will outcompete.</p>
+        <p>That school needs a 10-gallon tank at minimum, and a 20-gallon long is the better shape. The <a href="/tools/aquarium-volume-calculator" className="text-brand-primary hover:underline">tank volume calculator</a> turns the tank&apos;s length, width, and height into gallons before a box label is treated as the water volume.</p>
 
         <CalloutBox variant="warning" title="Danios are accomplished jumpers">
           A secure, tight-fitting lid is essential. Zebra danios spend most of their time near the surface and will leap through any open gap — including filter cutouts and feeding holes left uncovered.

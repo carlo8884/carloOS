@@ -66,7 +66,7 @@ export default function NeonTetraPage() {
     <ArticleLayout siteId="fish-com"
       hero={{ title: 'Neon Tetra Care Guide', subtitle: 'Paracheirodon innesi — the neon tetra may be the most recognizable aquarium fish in existence. The electric blue stripe and vivid red tail have made it a fixture in the hobby since the 1930s. In groups of 15+ in a well-planted tank, the school creates a living light display that no other fish replicates at their size and price point.', category: 'Species Guide', authorName: 'Fish.com Editorial', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Neon Tetra', href: '/species/neon-tetra' }]}
-      relatedLinks={[{ title: "Species Hub", href: "/species", category: "Species" }, { title: "Cardinal Tetra", href: "/species/cardinal-tetra", category: "Species Guide" }, { title: "Ember Tetra", href: "/species/ember-tetra", category: "Species Guide" }, { title: "Betta Fish", href: "/species/betta-fish", category: "Species Guide" }]}
+      relatedLinks={[{ title: "Species Hub", href: "/species", category: "Species" }, { title: "Cardinal Tetra", href: "/species/cardinal-tetra", category: "Species Guide" }, { title: "Ember Tetra", href: "/species/ember-tetra", category: "Species Guide" }, { title: "Tank Volume Calculator", href: "/tools/aquarium-volume-calculator", category: "Tool" }, { title: "Betta Fish", href: "/species/betta-fish", category: "Species Guide" }]}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Quick Stats</div>
@@ -76,7 +76,7 @@ export default function NeonTetraPage() {
             </div>
           ))}
         </div>
-        <RelatedLinks title="Related Species" links={[{ label: 'Cardinal Tetra', href: '/species/cardinal-tetra' }, { label: 'Ember Tetra', href: '/species/ember-tetra' }, { label: 'Planted Tank Setup', href: '/setup/planted-tank-setup' }]} />
+        <RelatedLinks title="Related Species" links={[{ label: 'Tank Volume Calculator', href: '/tools/aquarium-volume-calculator' }, { label: 'Cardinal Tetra', href: '/species/cardinal-tetra' }, { label: 'Ember Tetra', href: '/species/ember-tetra' }, { label: 'Planted Tank Setup', href: '/setup/planted-tank-setup' }]} />
             <CrossPortfolioCard currentSite="fish-com" contentType="species" variant="sidebar" />
 
       </>}
@@ -99,7 +99,7 @@ export default function NeonTetraPage() {
         </CalloutBox>
 
         <h2>Display — The School of 20</h2>
-        <p>The visual impact of neon tetras scales dramatically with school size. Ten neons are pleasant. Twenty neons in a densely planted 30-gallon with dark substrate and good lighting are breathtaking — the school moves as a single organism, the blue stripe and red tail catching light from every angle simultaneously. The school cohesion (how tightly the fish school) also increases with group size — larger schools produce the coordinated, flowing movement behavior that is the most visually compelling aspect of schooling fish.</p>
+        <p>The visual impact of neon tetras scales dramatically with school size. Ten neons are pleasant. Twenty neons in a densely planted 30-gallon with dark substrate and good lighting are breathtaking — the school moves as a single organism, the blue stripe and red tail catching light from every angle simultaneously. The <a href="/tools/aquarium-volume-calculator" className="text-brand-primary hover:underline">tank volume calculator</a> checks that 30-gallon figure from the tank&apos;s length, width, and height. The school cohesion (how tightly the fish school) also increases with group size — larger schools produce the coordinated, flowing movement behavior that is the most visually compelling aspect of schooling fish.</p>
         <p>Tank setup for best display: dark substrate (black sand), green plants creating visual contrast against which the blue-red stripe stands out (Java fern, Anubias, Rotala), moderate lighting, and a dark background. Tannins (Indian almond leaves, driftwood, peat) darken the water slightly, mimic the fish's natural blackwater environment, and produce the slightly acidic conditions that intensify their color.</p>
 
         <h2>Neon vs Cardinal Tetra</h2>

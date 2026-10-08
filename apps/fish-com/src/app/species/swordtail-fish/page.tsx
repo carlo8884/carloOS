@@ -121,7 +121,7 @@ export default function SwordtailPage() {
           { name: 'Species', href: '/species' },
           { name: 'Swordtail', href: '/species/swordtail-fish' },
         ]}
-        relatedLinks={[{ title: 'Species Hub', href: '/species', category: 'Species' }, { title: 'Molly Fish', href: '/species/molly-fish', category: 'Species Guide' }, { title: 'Platy Fish', href: '/species/platy-fish', category: 'Species Guide' }, { title: 'Guppy', href: '/species/guppy', category: 'Species Guide' }]}
+        relatedLinks={[{ title: 'Species Hub', href: '/species', category: 'Species' }, { title: 'Molly Fish', href: '/species/molly-fish', category: 'Species Guide' }, { title: 'Platy Fish', href: '/species/platy-fish', category: 'Species Guide' }, { title: 'Guppy', href: '/species/guppy', category: 'Species Guide' }, { title: 'Tank Volume Calculator', href: '/tools/aquarium-volume-calculator', category: 'Tool' }]}
         sidebar={
           <>
             <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -154,6 +154,7 @@ export default function SwordtailPage() {
                 { label: 'Platy Fish', href: '/species/platy-fish' },
                 { label: 'Guppy Care', href: '/species/guppy' },
                 { label: 'Molly Fish', href: '/species/molly-fish' },
+                { label: 'Tank Volume Calculator', href: '/tools/aquarium-volume-calculator' },
                 { label: 'Water Chemistry', href: '/setup/water-chemistry-guide' },
               ]}
             />
@@ -271,7 +272,9 @@ export default function SwordtailPage() {
           <p>
             Tank size: 30 US gallons is the working minimum for a trio (one male, two females).
             Larger groups need more horizontal swimming length than depth — 48-inch tanks
-            (40-gallon breeder, 55-gallon) suit them better than 30-inch cubes. Plant heavily on
+            (40-gallon breeder, 55-gallon) suit them better than 30-inch cubes. The{' '}
+            <a href="/tools/aquarium-volume-calculator" className="text-brand-primary hover:underline">tank volume calculator</a>{' '}
+            turns those length, width, and height measurements into gallons. Plant heavily on
             the sides and back, leave the middle open for swimming, and float water sprite,
             frogbit, or hornwort across the top to give fry a survival corridor.
           </p>
