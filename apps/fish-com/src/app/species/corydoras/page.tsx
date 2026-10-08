@@ -18,6 +18,8 @@ import { crossSiteHref } from '@carloOS/config'
 
 
 const SOURCES = [
+  { label: "Corydoras sterbai — FishBase species record", url: "https://www.fishbase.se/summary/Corydoras-sterbai.html", publisher: "FishBase" },
+  { label: "Corydoras aeneus — FishBase species record", url: "https://www.fishbase.se/summary/Corydoras-aeneus.html", publisher: "FishBase" },
   { label: "Corydoras paleatus — Seriously Fish species profile", url: "https://www.seriouslyfish.com/species/corydoras-paleatus/", publisher: "Seriously Fish" },
   { label: "Corydoras — FishBase genus overview", url: "https://www.fishbase.se/identification/SpeciesList.php?genus=corydoras", publisher: "FishBase" },
   { label: "Reis, R.E. Systematics of the Neotropical Catfish Family Corydoradinae. Ichthyological Explorations of Freshwaters, 1997.", publisher: "Ichthyological Explorations of Freshwaters" },
@@ -63,11 +65,11 @@ const FAQS = [
       'No — sharp gravel damages barbels. Use fine sand (pool filter sand is ideal). Smooth sub-2mm gravel is a distant second option.',
   },
   {
-    question: 'Which corydoras species is best for a warm-water tank?',
+    question: 'Is Corydoras sterbai a warm-water corydoras?',
     answer:
-      'Corydoras sterbai. FishBase lists Corydoras aeneus at 25–28°C, 77–83°F (https://www.fishbase.se/summary/Corydoras-aeneus.html) — too cool for discus, German blue rams, and most warm-water community species. C. sterbai is the well-documented exception, comfortable up to 82–84°F, making it the only corydoras commonly recommended for discus and warm-water Amazonian biotopes. Sterbai is distinctly spotted; do not confuse it with the visually similar but warm-intolerant C. haraldschultzi.',
+      'FishBase lists Corydoras aeneus at 25–28°C, which is 77–83°F (https://www.fishbase.se/summary/Corydoras-aeneus.html). FishBase lists Corydoras sterbai at 21–25°C, which is 69–77°F (https://www.fishbase.se/summary/Corydoras-sterbai.html). Sterbai is the cooler of the two, so this page does not recommend it for a discus tank. Sterbai is distinctly spotted; do not confuse it with C. haraldschultzi.',
     answerText:
-      'C. sterbai handles 82-84°F comfortably and is the standard corydoras for discus and warm-water tanks. Do not confuse with C. haraldschultzi.',
+      'FishBase lists Corydoras aeneus at 25–28°C, which is 77–83°F (https://www.fishbase.se/summary/Corydoras-aeneus.html). FishBase lists Corydoras sterbai at 21–25°C, which is 69–77°F (https://www.fishbase.se/summary/Corydoras-sterbai.html). Sterbai is cooler, not a discus match.',
   },
   {
     question: 'Do corydoras eat algae?',
@@ -155,7 +157,7 @@ export default function CorydorasPage() {
                 ['Albino (C. aeneus)', '3 in · Color morph of bronze'],
                 ['Pepper (C. paleatus)', '2.5 in · Cooler tolerant'],
                 ['Panda (C. panda)', '2 in · Black/white pattern'],
-                ['Sterbai (C. sterbai)', '2.7 in · Warm tolerant 84°F'],
+                ['Sterbai (C. sterbai)', '2.7 in · 69–77°F (https://www.fishbase.se/summary/Corydoras-sterbai.html)'],
                 ['Pygmy (C. pygmaeus)', '1 in · Mid-water swimmer'],
               ].map(([k, v]) => (
                 <div
@@ -287,9 +289,10 @@ export default function CorydorasPage() {
             </li>
             <li>
               <strong>Sterbai corydoras (C. sterbai):</strong> Heavily
-              spotted, with red-orange pectoral fin spines. The standard
-              corydoras for warm-water tanks (handles 82–84°F) — the
-              only common cory commonly recommended for discus tanks.
+              spotted, with red-orange pectoral fin spines. FishBase lists
+              Corydoras sterbai at 21–25°C, which is 69–77°F (
+              <a className="break-all" href="https://www.fishbase.se/summary/Corydoras-sterbai.html">https://www.fishbase.se/summary/Corydoras-sterbai.html</a>
+              ). Sterbai is the cooler of the two, so this page does not recommend it for a discus tank.
             </li>
             <li>
               <strong>Albino corydoras:</strong> Albino color morph of
@@ -386,8 +389,7 @@ export default function CorydorasPage() {
             <strong>Excellent tank mates:</strong> tetras (neon,
             cardinal, ember, rummynose, black skirt), small barbs
             (cherry, rosy), rasboras (harlequin, chili), gouramis
-            (peaceful species), discus and rams (C. sterbai only —
-            warm-water match), livebearers (platies, mollies in
+            (peaceful species), livebearers (platies, mollies in
             unsalted tanks, guppies), bettas in larger tanks, dwarf
             cichlids (Apistogramma, Bolivian rams), Amano and
             neocaridina shrimp (adults safe).
@@ -395,9 +397,9 @@ export default function CorydorasPage() {
           <p>
             <strong>Avoid:</strong> aggressive cichlids (oscars, jack
             dempseys, mbuna), large fin-nippers, fish large enough to
-            eat a 2-3 inch catfish, and any species that requires
+            eat a 2-3 inch catfish, any species that requires
             salted water (corydoras do not tolerate aquarium salt
-            well).
+            well), and discus or German blue rams with Corydoras sterbai.
           </p>
 
           <h2>Common Health Issues</h2>
