@@ -6071,8 +6071,9 @@ const CALCULATORS = [
       { re: /HEIGHT_PER_LEVEL_IN = 18/, label: '18 in height per level' },
       { re: /PAIR_MIN_LENGTH_IN = 36/, label: '36 in preferred pair footprint length' },
       { re: /neededSqIn = effectiveN \* SQIN_PER_FERRET/, label: 'needed floor = effective ferrets × 24×24' },
+      { re: /planning figure/, label: 'cage floor and play cutoff labeled a planning figure' },
     ],
-    why: 'AFA-cited planning floor is 24×24 in per ferret with 18 in height per level; pair preferred footprint is 36×24. Under-4h play adds one ferret-equivalent of floor.',
+    why: '24×24 in floor, 18 in height, 36 in pair length, and the 4-hour play cutoff are a planning figure, not a fetched published standard. Under-4h play adds one ferret-equivalent of floor.',
   },
   {
     id: 'ferret · cage-size-calculator hops',

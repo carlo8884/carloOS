@@ -4,9 +4,9 @@
  * Ferret Cage Size Calculator -- /tools/cage-size-calculator
  *
  * Client compute. Ferret count + level count + daily out-of-cage hours →
- * a minimum L×W×H footprint. Constants match the published cage-setup and
- * multi-level-housing pages (AFA-cited 24×24 in floor and 18 in height
- * per ferret; 36×24 in preferred pair footprint).
+ * a minimum L×W×H footprint. The 24×24 in floor, 18 in height, 36 in pair
+ * length, and 4-hour play cutoff are a planning figure, not a fetched
+ * published standard.
  *
  * Husbandry PLANNING estimate only — not a clinical spec, not a brand
  * ranking. Bar spacing and out-of-cage time sit next to the math.
@@ -15,7 +15,7 @@
 import { useMemo, useState } from 'react'
 import { ResultMeaning, ResultPick, ToolError, ferretCagePick, numberFieldError } from '@carloOS/ui'
 
-/** AFA-cited planning floor: 24 × 24 in per ferret (4 sq ft). */
+/** Planning figure: 24 × 24 in per ferret (4 sq ft). Not a fetched published standard. */
 const SQIN_PER_FERRET = 24 * 24
 const WIDTH_IN = 24
 const HEIGHT_PER_LEVEL_IN = 18
@@ -147,7 +147,7 @@ export default function CageSizeCalculator() {
             ))}
           </div>
           <p className="mt-1 text-2xs text-brand-text-light leading-snug">
-            Four hours is the working minimum. Below that, the tool adds one ferret-equivalent of floor.
+            Four hours is a planning figure, not a fetched published standard. Below that, the tool adds one ferret-equivalent of floor.
           </p>
         </div>
       </div>
@@ -195,9 +195,9 @@ export default function CageSizeCalculator() {
       )}
 
       <p className="mt-5 text-2xs leading-snug text-brand-text-light">
-        Planning figure only, from the American Ferret Association owner-education minimums cited on
-        the cage-setup page: 24 × 24 in of floor and 18 in of height per ferret, with a 36 × 24 in
-        preferred pair footprint. Multi-level cages multiply usable area; they do not replace playtime.
+        How we calculate: 24 × 24 in of floor, 18 in of height, the 36 × 24 in pair length, and the
+        four-hour play cutoff are a planning figure, not a fetched published standard. Multi-level
+        cages multiply usable area; they do not replace playtime.
         Confirm injuries, escape, or housing-related illness with an exotic-animal veterinarian.
       </p>
     </div>

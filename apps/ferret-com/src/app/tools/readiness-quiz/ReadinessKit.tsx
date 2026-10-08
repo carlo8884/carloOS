@@ -43,7 +43,7 @@ const KIT: KitItem[] = [
     id: 'food',
     name: 'High-protein ferret food',
     detail:
-      'A named-meat, high-protein kibble (or the diet the ferret is already on, so you do not switch on day one). Check the bag against published ferret nutrient targets with the food evaluator before you buy a second brand.',
+      'A named-meat, high-protein kibble (or the diet the ferret is already on, so you do not switch on day one). The food evaluator’s cutoffs are a planning figure, not a published nutrient profile.',
     amazonHref: `/go/amazon-brand/high+protein+ferret+food+kibble?s=${SOURCE}`,
     amazonLabel: 'Browse high-protein ferret kibble on Amazon →',
   },
