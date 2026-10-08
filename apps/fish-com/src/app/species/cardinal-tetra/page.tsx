@@ -118,7 +118,7 @@ export default function CardinalTetraPage() {
           { name: 'Species', href: '/species' },
           { name: 'Cardinal Tetra', href: '/species/cardinal-tetra' },
         ]}
-        relatedLinks={[{ title: 'Species Hub', href: '/species', category: 'Species' }, { title: 'Neon Tetra', href: '/species/neon-tetra', category: 'Species Guide' }, { title: 'Ember Tetra', href: '/species/ember-tetra', category: 'Species Guide' }, { title: 'Angelfish', href: '/species/angelfish', category: 'Species Guide' }]}
+        relatedLinks={[{ title: 'Species Hub', href: '/species', category: 'Species' }, { title: 'Neon Tetra', href: '/species/neon-tetra', category: 'Species Guide' }, { title: 'Ember Tetra', href: '/species/ember-tetra', category: 'Species Guide' }, { title: 'Tank Volume Calculator', href: '/tools/aquarium-volume-calculator', category: 'Tool' }, { title: 'Angelfish', href: '/species/angelfish', category: 'Species Guide' }]}
         sidebar={
           <>
             <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -171,6 +171,7 @@ export default function CardinalTetraPage() {
               links={[
                 { label: 'Neon Tetra Care', href: '/species/neon-tetra' },
                 { label: 'Discus Care', href: '/species/discus' },
+                { label: 'Tank Volume Calculator', href: '/tools/aquarium-volume-calculator' },
                 { label: 'Planted Tank Setup', href: '/setup/planted-tank-setup' },
                 { label: 'Find an Aquarium Vet (WAVMA)', href: crossSiteHref('vets-co', '/find-a-vet/aquarium') },
               ]}
@@ -294,7 +295,9 @@ export default function CardinalTetraPage() {
             skittish, hide constantly, and rarely display their full color. Ten
             is the welfare minimum; fifteen to twenty in a 20-gallon-long or
             larger planted tank is the practical sweet spot for both fish
-            welfare and visual impact. School cohesion — the tightness of
+            welfare and visual impact. The{' '}
+            <a href="/tools/aquarium-volume-calculator" className="text-brand-primary hover:underline">tank volume calculator</a>{' '}
+            checks that gallon figure from the tank&apos;s length, width, and height. It does not pick a long footprint. A 20-gallon-long is still the tank this section asks for. School cohesion — the tightness of
             coordinated movement that gives the school its visual signature
             — increases meaningfully with group size up to roughly 30 fish.
           </p>

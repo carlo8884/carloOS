@@ -118,7 +118,7 @@ export default function PlatyPage() {
           { name: 'Species', href: '/species' },
           { name: 'Platy Fish', href: '/species/platy-fish' },
         ]}
-        relatedLinks={[{ title: 'Species Hub', href: '/species', category: 'Species' }, { title: 'Guppy', href: '/species/guppy', category: 'Species Guide' }, { title: 'Molly Fish', href: '/species/molly-fish', category: 'Species Guide' }, { title: 'Swordtail Fish', href: '/species/swordtail-fish', category: 'Species Guide' }]}
+        relatedLinks={[{ title: 'Species Hub', href: '/species', category: 'Species' }, { title: 'Guppy', href: '/species/guppy', category: 'Species Guide' }, { title: 'Molly Fish', href: '/species/molly-fish', category: 'Species Guide' }, { title: 'Swordtail Fish', href: '/species/swordtail-fish', category: 'Species Guide' }, { title: 'Tank Volume Calculator', href: '/tools/aquarium-volume-calculator', category: 'Tool' }]}
         sidebar={
           <>
             <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -173,6 +173,7 @@ export default function PlatyPage() {
                 { label: 'Guppy Care', href: '/species/guppy' },
                 { label: 'Molly Fish Care', href: '/species/molly-fish' },
                 { label: 'Swordtail Care', href: '/species/swordtail-fish' },
+                { label: 'Tank Volume Calculator', href: '/tools/aquarium-volume-calculator' },
                 { label: 'Aquarium Cycling Guide', href: '/setup/aquarium-cycling-guide' },
                 { label: 'Find an Aquarium Vet (WAVMA)', href: crossSiteHref('vets-co', '/find-a-vet/aquarium') },
               ]}
@@ -306,7 +307,10 @@ export default function PlatyPage() {
           <p>
             Ten gallons is the practical minimum for a small group;
             twenty gallons supports a healthy mixed-age population without
-            stocking pressure. A standard sponge filter or hang-on-back
+            stocking pressure. The{' '}
+            <a href="/tools/aquarium-volume-calculator" className="text-brand-primary hover:underline">tank volume calculator</a>{' '}
+            checks those gallon figures from the tank&apos;s length, width, and height.
+            A standard sponge filter or hang-on-back
             handles the bioload easily. Substrate is unimportant for
             platies themselves — they are mid-to-upper water column fish
             — but matters for plants and any bottom-dwelling tankmates.

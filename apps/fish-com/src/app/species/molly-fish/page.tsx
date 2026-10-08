@@ -118,7 +118,7 @@ export default function MollyPage() {
           { name: 'Species', href: '/species' },
           { name: 'Molly Fish', href: '/species/molly-fish' },
         ]}
-        relatedLinks={[{ title: 'Species Hub', href: '/species', category: 'Species' }, { title: 'Guppy', href: '/species/guppy', category: 'Species Guide' }, { title: 'Platy Fish', href: '/species/platy-fish', category: 'Species Guide' }, { title: 'Swordtail Fish', href: '/species/swordtail-fish', category: 'Species Guide' }]}
+        relatedLinks={[{ title: 'Species Hub', href: '/species', category: 'Species' }, { title: 'Guppy', href: '/species/guppy', category: 'Species Guide' }, { title: 'Platy Fish', href: '/species/platy-fish', category: 'Species Guide' }, { title: 'Swordtail Fish', href: '/species/swordtail-fish', category: 'Species Guide' }, { title: 'Tank Volume Calculator', href: '/tools/aquarium-volume-calculator', category: 'Tool' }]}
         sidebar={
           <>
             <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -172,6 +172,7 @@ export default function MollyPage() {
                 { label: 'Platy Fish Care', href: '/species/platy-fish' },
                 { label: 'Guppy Care', href: '/species/guppy' },
                 { label: 'Swordtail Care', href: '/species/swordtail-fish' },
+                { label: 'Tank Volume Calculator', href: '/tools/aquarium-volume-calculator' },
                 { label: 'Water Chemistry Guide', href: '/setup/water-chemistry-guide' },
                 { label: 'Find an Aquarium Vet (WAVMA)', href: crossSiteHref('vets-co', '/find-a-vet/aquarium') },
               ]}
@@ -251,7 +252,9 @@ export default function MollyPage() {
               Males develop a dramatic extended dorsal fin that they raise
               during courtship and male-male display. The behavior alone is
               worth a 30-gallon tank — sailfins are among the most
-              behaviorally engaging livebearers in the hobby.
+              behaviorally engaging livebearers in the hobby. The{' '}
+              <a href="/tools/aquarium-volume-calculator" className="text-brand-primary hover:underline">tank volume calculator</a>{' '}
+              checks that 30-gallon figure from the tank&apos;s length, width, and height.
             </li>
             <li>
               <strong>Dalmatian molly:</strong> White body with random black
