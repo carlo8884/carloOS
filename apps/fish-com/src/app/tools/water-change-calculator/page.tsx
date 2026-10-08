@@ -47,7 +47,7 @@ const schema = buildHowToSchema({
     },
     {
       name: 'Match temperature and condition the new water',
-      text: 'New water should be within 2°F of the tank. Dose dechlorinator for any tap water before it touches the tank. Vacuum gravel while you siphon so waste leaves with the old water.',
+      text: 'A planning figure is to keep new water within about 2°F of the tank. That 2°F is not a fetched temperature standard. Dose dechlorinator for any tap water before it touches the tank. Vacuum gravel while you siphon so waste leaves with the old water.',
     },
     {
       name: 'Adjust frequency from bioload, not a calendar alone',
@@ -101,7 +101,7 @@ const FAQS = [
   {
     question: 'Do I need to match temperature and dechlorinate?',
     answer:
-      'Yes. New water should be within about 2°F of the tank. Dose a dechlorinator (Seachem Prime, API Stress Coat) for any tap water before it goes in — chlorine and chloramine harm fish and the filter bacteria. For most weekly 25% changes you do not need to chase pH or GH unless you keep sensitive species or you are doing a very large change.',
+      'Yes. A planning figure on this page is to keep new water within about 2°F of the tank. That 2°F is not a fetched temperature standard. Dose a dechlorinator (Seachem Prime, API Stress Coat) for any tap water before it goes in — chlorine and chloramine harm fish and the filter bacteria. For most weekly 25% changes you do not need to chase pH or GH unless you keep sensitive species or you are doing a very large change.',
   },
   {
     question: 'When should I change more water, or change more often?',

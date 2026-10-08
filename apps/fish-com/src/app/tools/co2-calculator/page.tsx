@@ -116,7 +116,7 @@ const FAQS = [
   {
     question: 'Is the KH/pH CO2 formula accurate?',
     answer:
-      'It is accurate when carbonate is the only meaningful buffer in the water. Common things that break it: phosphate-based pH buffers (Seachem Neutral Regulator), peat or driftwood tannins, commercial discus buffers, and very low KH (under 2 dKH) where the formula becomes unstable. For most planted tanks running CO2 injection on tap water, the formula is within about ±20%.',
+      'The chart is usable when carbonate is the main buffer in the water. Common things that break it: phosphate-based pH buffers (Seachem Neutral Regulator), peat or driftwood tannins, commercial discus buffers, and very low KH (under 2 dKH) where the formula becomes unstable. This page does not cite a percent error for planted tanks on tap water.',
   },
   {
     question: 'Do I need a drop checker if I can calculate CO2 from KH/pH?',

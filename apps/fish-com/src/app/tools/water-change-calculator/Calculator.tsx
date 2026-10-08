@@ -324,7 +324,7 @@ export default function WaterChangeCalculator() {
           note={
             <>
               <strong className="text-white/90">{load.tip}</strong>{' '}
-              Match temperature within 2°F and dose dechlorinator before new water touches the tank.
+              A planning figure is to match temperature within about 2°F. Dose dechlorinator before new water touches the tank.
               Single changes over 50% raise the risk of a parameter swing — split those across two days.
               This is maintenance math, not veterinary advice.
             </>
@@ -380,7 +380,7 @@ export default function WaterChangeCalculator() {
               </>
             ) : (
               <>
-                Match temperature within 2°F before adding new water. Always dose dechlorinator for tap water before it touches the tank.
+                A planning figure is to match temperature within about 2°F before adding new water. Always dose dechlorinator for tap water before it touches the tank.
               </>
             )
           }
