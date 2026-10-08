@@ -33,8 +33,8 @@ const SOURCES = [
     publisher: "AEMV",
   },
   {
-    label: "American Board of Veterinary Practitioners (ABVP) — Exotic Companion Mammal diplomate directory for finding board-certified exotic-mammal practitioners",
-    url: "https://www.abvp.com/become-certified/species-specific-credentials/exotic-companion-mammal/",
+    label: "American Board of Veterinary Practitioners (ABVP) — how to become a specialist, including exotic companion mammal practice",
+    url: "https://abvp.com/become-a-specialist/",
     publisher: "ABVP",
   },
 ]
