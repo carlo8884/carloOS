@@ -195,7 +195,12 @@ export default function HomePage() {
                   </div>
                   <span className="block font-display font-bold text-sm leading-tight" style={{ color: 'var(--brand-text-dark)' }}>Editorial standards</span>
                 </div>
-                <span className="block text-xs mt-0.5" style={{ color: 'var(--brand-text-mid)' }}>Citation-anchored, signed on the page.</span>
+                <span className="mt-0.5 flex items-center gap-2 text-xs" style={{ color: 'var(--brand-text-mid)' }}>
+                  <div className={`relative h-6 w-9 shrink-0 overflow-hidden rounded-md ${FILL_IMAGE}`}>
+                    <StockImage manifestKey="horses-com:hero" fallbackKey="horses-com:hero" alt="" aspect="4:3" variant="inline" />
+                  </div>
+                  <span>Citation-anchored, signed on the page.</span>
+                </span>
               </div>
             </Link>
           </div>
@@ -212,7 +217,12 @@ export default function HomePage() {
                     </div>
                     <div className="font-display font-bold text-sm leading-tight" style={{ color: 'var(--brand-text-dark)' }}>{item.label}</div>
                   </div>
-                  <p className="text-xs leading-relaxed mt-1" style={{ color: 'var(--brand-text-mid)' }}>{item.note}</p>
+                  <div className="mt-1 flex items-start gap-2 text-xs leading-relaxed" style={{ color: 'var(--brand-text-mid)' }}>
+                    <div className={`relative mt-0.5 h-6 w-9 shrink-0 overflow-hidden rounded-md ${FILL_IMAGE}`}>
+                      <StockImage manifestKey={item.imageKey} fallbackKey="horses-com:hero" alt="" aspect="4:3" variant="inline" />
+                    </div>
+                    <span>{item.note}</span>
+                  </div>
                 </div>
               </Link>
             ))}
