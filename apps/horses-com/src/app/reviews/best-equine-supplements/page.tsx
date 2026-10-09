@@ -195,7 +195,7 @@ export default function BestEquineSupplementsPage() {
               subtitle="Avocado-soybean unsaponifiables + glucosamine + chondroitin · NASC sealed"
               winner
               description={<>
-                <p>The current Cosequin ASU Plus powder and pellet pages list glucosamine HCl, MSM, chondroitin sulfate, and ASU plus other ingredients (<a className="break-all" href="https://www.cosequin.com/product/horses/cosequin-asu-plus">https://www.cosequin.com/product/horses/cosequin-asu-plus</a>). Milligrams differ for powder and pellets — check the label. The initial administration period on those pages is 2–4 weeks. The pages do not print clinically proven. Kawcak CE et al. (<em>American Journal of Veterinary Research</em>, 2007) is a published ASU study, not a line on the product label.</p>
+                <p>The current Cosequin ASU Plus powder and pellet pages list glucosamine HCl, MSM, chondroitin sulfate, and ASU plus other ingredients (<a href="https://www.cosequin.com/product/horses/cosequin-asu-plus">Cosequin ASU Plus page</a>). Milligrams differ for powder and pellets — check the label. The initial administration period on those pages is 2–4 weeks. The pages do not print clinically proven. Kawcak CE et al. (<em>American Journal of Veterinary Research</em>, 2007) is a published ASU study, not a line on the product label.</p>
                 <p>The trade-off: Cosequin ASU runs at the higher end of the joint-supplement price range, and the loading-dose-then-maintenance protocol increases first-month cost. For horses with diagnosed osteoarthritis or significant work-related joint loading, the evidence justifies the price.</p>
               </>}
               specs={[

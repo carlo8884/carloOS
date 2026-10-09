@@ -76,7 +76,7 @@ const FAQS = [
   {
     question: 'What is the best food for ferrets?',
     answer:
-      'There is no single "best" brand — the best food is whichever formulation matches the obligate-carnivore profile: named animal proteins and animal fats in the first 3-5 ingredients, roughly 32-40% protein and 18-22% fat on a dry-matter basis, and carbohydrate by difference as low as possible. Under 3% carbohydrate is a planning figure, not a cutoff stated by Merck. The Merck Veterinary Manual states that ferrets require protein of 35%–40%, and that carbohydrate (under 25%) and fiber (under 2.5%) proportions of the diet should be relatively low (https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/management-of-ferrets). The current Wysong page does not print carbohydrate, so check the label. Read the panel, not the marketing on the front of the bag.',
+      'There is no single "best" brand — the best food is whichever formulation matches the obligate-carnivore profile: named animal proteins and animal fats in the first 3-5 ingredients, roughly 32-40% protein and 18-22% fat on a dry-matter basis, and carbohydrate by difference as low as possible. Under 3% carbohydrate is a planning figure, not a cutoff stated by Merck. The Merck Veterinary Manual states that ferrets require protein of 35%–40%, and that carbohydrate (under 25%) and fiber (under 2.5%) proportions of the diet should be relatively low. The current Wysong page does not print carbohydrate, so check the label. Read the panel, not the marketing on the front of the bag.',
   },
   {
     question: 'How do I know how much carbohydrate is in ferret food?',
@@ -196,7 +196,7 @@ export default function BestFerretKibblePage() {
             updatedAt="2026-06-11"
             reviewedBy="Editorial team"
           />
-          <LastUpdated date="2026-10-08" />
+          <LastUpdated date="2026-10-09" />
           <EmailCapture
             variant="inline"
             siteId="ferret-com"
@@ -232,7 +232,7 @@ export default function BestFerretKibblePage() {
 
           <h2 id="macros">The Macronutrient Window</h2>
           <p>
-            A working window on this site is roughly 32–40% protein and 18–22% fat on a dry-matter basis, with supplemental taurine. The Merck Veterinary Manual states that ferrets require protein of 35%–40%, and that carbohydrate (under 25%) and fiber (under 2.5%) proportions of the diet should be relatively low (<a className="break-all" href="https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/management-of-ferrets">https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/management-of-ferrets</a>). Under 3% carbohydrate, and fiber under 3%, are planning figures on this page, not a cutoff stated by Merck. Guaranteed-analysis labels report "as fed" rather than dry-matter, and they rarely list carbohydrate at all. You estimate carbohydrate <em>by difference</em>: subtract the listed protein, fat, moisture, ash, and fiber percentages from 100. Many supermarket "ferret" kibbles land at 15–30% carbohydrate by difference — that is a defect, not a feature. The full target window and the reasoning behind it are covered in <a href="/diet/protein-and-fat-requirements">protein and fat requirements</a>.
+            A working window on this site is roughly 32–40% protein and 18–22% fat on a dry-matter basis, with supplemental taurine. The Merck Veterinary Manual states that ferrets require protein of 35%–40%, and that carbohydrate (under 25%) and fiber (under 2.5%) proportions of the diet should be relatively low (<a href="https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/management-of-ferrets">Merck Veterinary Manual</a>). Under 3% carbohydrate, and fiber under 3%, are planning figures on this page, not a cutoff stated by Merck. Guaranteed-analysis labels report "as fed" rather than dry-matter, and they rarely list carbohydrate at all. You estimate carbohydrate <em>by difference</em>: subtract the listed protein, fat, moisture, ash, and fiber percentages from 100. Many supermarket "ferret" kibbles land at 15–30% carbohydrate by difference — that is a defect, not a feature. The full target window and the reasoning behind it are covered in <a href="/diet/protein-and-fat-requirements">protein and fat requirements</a>.
           </p>
 
           <h2 id="tiers">The Three Tiers</h2>
