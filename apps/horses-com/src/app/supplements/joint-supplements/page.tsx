@@ -26,9 +26,8 @@ const articleSchema = buildArticleSchema({
 })
 
 const cosequinSchema = buildProductSchema({ name: 'Cosequin ASU Plus', description: 'Glucosamine, chondroitin, and ASU supplement for horses from Nutramax.', url: 'https://horses.com/go/smartpak/cosequin-asu-plus?s=supplements-joint-supplements', imageUrl: '' })
-const platinumSchema = buildProductSchema({ name: 'Platinum Performance CJ', description: 'Comprehensive equine joint and connective tissue supplement.', url: 'https://horses.com/supplements/joint-supplements#platinum-cj', imageUrl: '' })
 const smartflexSchema = buildProductSchema({ name: 'SmartPak SmartFlex Senior', description: 'SmartFlex Senior Pellets, per serving: glucosamine 7,000 mg, chondroitin sulfate 500 mg, HA 50 mg, MSM 12,000 mg, devil\'s claw 1,750 mg.', url: 'https://horses.com/go/smartpak/smartflex-senior?s=supplements-joint-supplements', imageUrl: '' })
-const allSchemas = combineSchemas(articleSchema, cosequinSchema, platinumSchema, smartflexSchema)
+const allSchemas = combineSchemas(articleSchema, cosequinSchema, smartflexSchema)
 
 const PICKS = [
   { label: 'Best Evidence (ASU)', emoji: '🏆', name: 'Cosequin ASU Plus', subtitle: 'Glucosamine, MSM, chondroitin, and ASU', href: '#cosequin-asu', pickHop: '/go/smartpak/cosequin-asu-plus?s=supplements-joint-supplements' },

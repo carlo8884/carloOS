@@ -26,12 +26,11 @@ const articleSchema = buildArticleSchema({
 })
 
 const cosequinSchema = buildProductSchema({ name: 'Cosequin ASU Plus', description: 'Avocado-soybean unsaponifiables plus glucosamine and chondroitin sulfate for equine joint support.', url: 'https://horses.com/go/smartpak/cosequin-asu-plus?s=reviews-best-equine-supplements', imageUrl: '' })
-const platinumSchema = buildProductSchema({ name: 'Platinum Performance Equine', description: 'Comprehensive wellness supplement with omega-3, antioxidants, and amino acids.', url: 'https://horses.com/reviews/best-equine-supplements#platinum', imageUrl: '' })
 const smartGutSchema = buildProductSchema({ name: 'SmartPak SmartGut Ultra', description: 'Pelleted gastric support supplement with calcium, magnesium, glutamine, and sea buckthorn.', url: 'https://horses.com/go/smartpak/smartgut-ultra?s=reviews-best-equine-supplements', imageUrl: '' })
 const kerEoSchema = buildProductSchema({ name: 'KER EO-3 Marine Omega-3', description: 'Marine-source DHA/EPA omega-3 supplement from Kentucky Equine Research.', url: 'https://horses.com/go/amazon/B0037PL6QW?s=reviews-best-equine-supplements', imageUrl: '' })
 const equithriveSchema = buildProductSchema({ name: 'Equithrive Original Pellets', description: 'Resveratrol-based anti-inflammatory and joint supplement.', url: 'https://horses.com/go/amazon/B07DM2314W?s=reviews-best-equine-supplements', imageUrl: '' })
 const standleeSchema = buildProductSchema({ name: 'Standlee Premium Forage', description: 'Premium baled and pelleted alfalfa, timothy, and orchard grass forage products.', url: 'https://horses.com/go/amazon-brand/standlee+premium+forage+pellets?s=reviews-best-equine-supplements', imageUrl: '' })
-const allSchemas = combineSchemas(articleSchema, cosequinSchema, platinumSchema, smartGutSchema, kerEoSchema, equithriveSchema, standleeSchema)
+const allSchemas = combineSchemas(articleSchema, cosequinSchema, smartGutSchema, kerEoSchema, equithriveSchema, standleeSchema)
 
 const PICKS = [
   { label: 'Best Joint (Evidence)', emoji: '🏆', name: 'Cosequin ASU Plus', subtitle: 'Glucosamine, MSM, chondroitin, and ASU. Initial period 2–4 weeks.', href: '#cosequin-asu', pickHop: '/go/smartpak/cosequin-asu-plus?s=reviews-best-equine-supplements' },

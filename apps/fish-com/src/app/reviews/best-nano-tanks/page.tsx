@@ -6,8 +6,7 @@ import { buildArticleSchema, buildItemListSchema, buildProductSchema, buildBread
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Best Nano Aquariums 2026 — 5 to 20 Gallon Tanks Ranked | Fish.com', description: 'Best nano aquariums for beginners and planted tank enthusiasts. Fluval Spec, Aqueon Minibow, and Innovative Marine compared for betta, shrimp.', path: '/reviews/best-nano-tanks', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Best Nano Aquariums 2026', description: 'Fluval Spec, Aqueon Minibow, and Innovative Marine ranked for nano setups.', url: 'https://fish.com/reviews/best-nano-tanks', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-07T00:00:00Z' })
 const fluvalSchema = buildProductSchema({ name: 'Fluval Spec V 5-Gallon', description: 'Rimless nano aquarium with integrated filtration and LED lighting for betta and shrimp.', url: 'https://fish.com/go/amazon/B0089E5VLC?s=reviews-best-nano-tanks', imageUrl: '' })
-const aqueonSchema = buildProductSchema({ name: 'Aqueon 20-Gallon Long Aquarium Kit', description: 'Complete 20-gallon long starter kit — the ideal nano community tank.', url: 'https://fish.com/reviews/best-nano-tanks#aqueon-20', imageUrl: '' })
-const allSchemas = combineSchemas(schema, fluvalSchema, aqueonSchema)
+const allSchemas = combineSchemas(schema, fluvalSchema)
 const PICKS = [
   { label: 'Best 5 Gallon', name: 'Fluval Spec V', subtitle: 'Rimless · Planted-ready · Betta/shrimp', href: '#fluval-spec', pickHop: '/go/amazon/B0089E5VLC?s=reviews-best-nano-tanks' },
   { label: 'Best 10 Gallon', name: 'Aqueon 10 Standard', subtitle: 'Most versatile · Widely available · Add-your-own equipment', href: '#aqueon-10' },
