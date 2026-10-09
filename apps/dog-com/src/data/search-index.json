@@ -262,7 +262,8 @@
       "path": "/tools/dog-food-amount-calculator",
       "title": "Daily Dog Food Grams | Dog.com",
       "description": "Turn body weight and activity into daily food grams using the same RER formula as the calorie calculator and the bag’s kcal per kg.",
-      "category": "tools"
+      "category": "tools",
+      "keywords": "how much to feed a puppy"
     },
     {
       "path": "/tools/dog-gestation-calculator",

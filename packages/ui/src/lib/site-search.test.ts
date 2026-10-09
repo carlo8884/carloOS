@@ -87,6 +87,79 @@ test('committed indexes match the pages and include the known hubs', () => {
     assert.equal(entry?.category, category, `${site} ${path}`)
     assert.equal(index.entries.some((row: SearchEntry) => row.path === '/search'), false)
   }
+  const first: Record<string, [string, string][]> = {
+    'dog-com': [
+      ['crate size', '/tools/dog-crate-size-calculator'],
+      ['how much to feed puppy', '/tools/dog-food-amount-calculator'],
+      ['dog crates', '/reviews/best-dog-crates'],
+      ['gps tracker', '/reviews/best-dog-gps-tracker'],
+      ['joint supplements', '/reviews/best-joint-supplements'],
+      ['slow feeder', '/reviews/best-slow-feeder-bowls'],
+      ['harness size', '/tools/harness-collar-size'],
+      ['puppy food', '/reviews/best-dog-food-for-puppies'],
+      ['krate size', '/tools/dog-crate-size-calculator'],
+      ['kennel', '/reviews/best-dog-crates'],
+    ],
+    'fish-com': [
+      ['betta tank mates', '/species/betta-fish-tank-mates'],
+      ['heater wattage', '/tools/heater-wattage-calculator'],
+      ['filter gph', '/tools/filter-gph-calculator'],
+      ['aquarium cycling', '/tools/aquarium-cycling-estimator'],
+      ['stocking calculator', '/tools/stocking-calculator'],
+      ['water change', '/tools/water-change-calculator'],
+      ['nano tank', '/setup/nano-tank-setup'],
+      ['fish disease', '/tools/fish-disease-symptom-checker'],
+      ['filters', '/reviews/best-aquarium-filters'],
+      ['cyceling', '/setup/aquarium-cycling-guide'],
+    ],
+    'horses-com': [
+      ['horse weight', '/tools/horse-weight-calculator'],
+      ['blanket size', '/tools/horse-blanket-size-calculator'],
+      ['how much hay', '/tools/horse-feed-calculator'],
+      ['horse water', '/tools/horse-water-calculator'],
+      ['winter blanket', '/reviews/best-winter-horse-blankets'],
+      ['halter', '/reviews/nylon-vs-breakaway-halter-guide'],
+      ['blankets', '/reviews/best-winter-horse-blankets'],
+      ['horse wieght', '/tools/horse-weight-calculator'],
+      ['feed calculator', '/tools/horse-feed-calculator'],
+      ['colic', '/health/colic'],
+    ],
+    'vets-co': [
+      ['is my pet an emergency', '/tools/is-this-a-cat-emergency'],
+      ['emergency vet cost', '/guides/emergency-vet-costs'],
+      ['pet insurance', '/tools/insurance-finder'],
+      ['cat calories', '/tools/cat-calorie-calculator'],
+      ['insurance worth it', '/tools/pet-insurance-worth-it-calculator'],
+      ['vet costs', '/guides/cost-of-veterinary-care'],
+      ['emergancy', '/tools/is-this-a-cat-emergency'],
+      ['reimbursement', '/tools/insurance-reimbursement-estimator'],
+      ['vaccines', '/health/dog-vaccinations-guide'],
+      ['heartworm', '/health/heartworm-in-dogs'],
+    ],
+    'ferret-com': [
+      ['ferret cage', '/reviews/best-ferret-cage'],
+      ['cage size', '/tools/cage-size-calculator'],
+      ['ferret food', '/tools/food-evaluator'],
+      ['litter', '/reviews/best-ferret-litter'],
+      ['harness', '/reviews/best-ferret-harness'],
+      ['cages', '/reviews/best-ferret-cage'],
+      ['ferret kage', '/reviews/best-ferret-cage'],
+      ['diet', '/care/diet-basics'],
+      ['adrenal', '/health/adrenal-disease'],
+      ['kibble', '/diet/whole-prey-vs-kibble'],
+    ],
+  }
+  let checked = 0
+  for (const [site, rows] of Object.entries(first)) {
+    const index = JSON.parse(readFileSync(join(ROOT, 'apps', site, 'src/data/search-index.json'), 'utf8'))
+    for (const [query, path] of rows) {
+      const hit = rankSearch(index.entries, query)[0]
+      assert.equal(hit?.path, path, `${site} “${query}”`)
+      checked += 1
+    }
+  }
+  assert.equal(checked, 50)
+
   const track = readFileSync(join(ROOT, 'packages/ui/src/components/TrackSiteSearch.tsx'), 'utf8')
   assert.match(track, /trackEvent\('site_search'/)
   assert.match(track, /site_search_no_results/)

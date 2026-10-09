@@ -16,7 +16,8 @@
       "path": "/reviews/best-aquarium-filters",
       "title": "Best Aquarium Filters 2026 — HOB, Canister | Fish.com",
       "description": "Flow rate accuracy, biological filtration capacity, noise, and ease of maintenance compared across the major hang-on-back, canister, and sponge options.",
-      "category": "reviews"
+      "category": "reviews",
+      "keywords": "aquarium filters"
     },
     {
       "path": "/reviews/best-aquarium-heaters",
@@ -190,6 +191,12 @@
       "path": "/setup/water-chemistry-guide",
       "title": "Aquarium Water Chemistry Guide — pH, GH, KH | Fish.com",
       "description": "pH, GH (general hardness), KH (carbonate hardness), and TDS explained for aquarium fishkeeping. How each parameter affects fish and plants.",
+      "category": "guides"
+    },
+    {
+      "path": "/species/betta-fish-tank-mates",
+      "title": "Betta Fish Tank Mates — What Can Live with a Betta? | Fish.com",
+      "description": "Can bettas live with other fish? The answer depends on the individual betta. Compatible tankmates, fish to always avoid.",
       "category": "guides"
     },
     {

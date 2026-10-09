@@ -33,12 +33,12 @@ const PICKS = [
 ]
 
 const productSchema0 = buildProductSchema({ name: 'MidWest Homes iCrate', description: 'Wire dog crate with divider panel, fold-flat, double door.', url: 'https://dog.com/go/amazon/B000QFT1RC?s=reviews-best-dog-crates', imageUrl: '' })
-const productSchema1 = buildProductSchema({ name: 'Impact Dog Crate', description: 'Aircraft-grade aluminum escape-proof dog crate with lifetime warranty.', url: 'https://dog.com/go/amazon-brand/impact+high+anxiety+dog+crate?s=reviews-best-dog-crates', imageUrl: '' })
+const productSchema1 = buildProductSchema({ name: 'Impact Dog Crate', description: 'Aircraft-grade aluminum escape-proof dog crate with lifetime warranty.', url: 'https://dog.com/go/amazon/B0CV4KMBX9?s=reviews-best-dog-crates', imageUrl: '' })
 const allSchemas = combineSchemas(schema, productSchema0, productSchema1)
 
 const itemList = buildItemListSchema({
   name: "Best Dog Crates 2026",
-  items: PICKS.map((pick) => ({ name: pick.name, url: ({ "MidWest iCrate": "https://dog.com/go/amazon/B000QFT1RC?s=reviews-best-dog-crates", "Impact Dog Crate": "https://dog.com/go/amazon-brand/impact+high+anxiety+dog+crate?s=reviews-best-dog-crates", "Petmate Sky Kennel": "https://dog.com/go/amazon/B003E77OG4?s=reviews-best-dog-crates", "Frisco Furniture Style": "https://dog.com/go/chewy-brand/frisco+furniture+style+dog+crate?s=reviews-best-dog-crates" }[pick.name] ?? `https://dog.com/reviews/best-dog-crates${pick.href}`) })),
+  items: PICKS.map((pick) => ({ name: pick.name, url: ({ "MidWest iCrate": "https://dog.com/go/amazon/B000QFT1RC?s=reviews-best-dog-crates", "Impact Dog Crate": "https://dog.com/go/amazon/B0CV4KMBX9?s=reviews-best-dog-crates", "Petmate Sky Kennel": "https://dog.com/go/amazon/B003E77OG4?s=reviews-best-dog-crates", "Frisco Furniture Style": "https://dog.com/go/chewy-brand/frisco+furniture+style+dog+crate?s=reviews-best-dog-crates" }[pick.name] ?? `https://dog.com/reviews/best-dog-crates${pick.href}`) })),
 })
 export default function BestDogCratesPage() {
   return (
@@ -112,7 +112,7 @@ export default function BestDogCratesPage() {
               resourceLabel="Browse MidWest iCrate dog crates on Amazon →"
             />
 
-            <HopDisclosure siteId="dog-com" href={["/go/amazon/B000QFT1RC?s=reviews-best-dog-crates", "/go/amazon-brand/impact+high+anxiety+dog+crate?s=reviews-best-dog-crates", "/go/amazon/B003E77OG4?s=reviews-best-dog-crates", "/go/chewy-brand/frisco+furniture+style+dog+crate?s=reviews-best-dog-crates"]} />
+            <HopDisclosure siteId="dog-com" href={["/go/amazon/B000QFT1RC?s=reviews-best-dog-crates", "/go/amazon/B0CV4KMBX9?s=reviews-best-dog-crates", "/go/amazon/B003E77OG4?s=reviews-best-dog-crates", "/go/chewy-brand/frisco+furniture+style+dog+crate?s=reviews-best-dog-crates"]} />
             <ReviewCard
               id="midwest"
               badge="Best Wire Crate"
@@ -160,7 +160,7 @@ export default function BestDogCratesPage() {
               price="$300–500"
               priceNote="dated 2026-10-04."
               ctaText="Shop Impact high-anxiety crates on Amazon →"
-              ctaHref="/go/amazon-brand/impact+high+anxiety+dog+crate?s=reviews-best-dog-crates"
+              ctaHref="/go/amazon/B0CV4KMBX9?s=reviews-best-dog-crates"
               ctaAffiliateProgram="amazon-brand"
               ctaAffiliateProduct="impact+high+anxiety+dog+crate"
             />
@@ -239,7 +239,7 @@ export default function BestDogCratesPage() {
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">Escape artist or severe separation anxiety</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#impact" className="text-brand-primary">Impact High Anxiety</a><TableShopLink href={"/go/amazon-brand/impact+high+anxiety+dog+crate?s=reviews-best-dog-crates"} product={"Impact High Anxiety"} /></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#impact" className="text-brand-primary">Impact High Anxiety</a><TableShopLink href={"/go/amazon/B0CV4KMBX9?s=reviews-best-dog-crates"} product={"Impact High Anxiety"} /></td>
                       <td className="p-3 text-brand-text-mid">Aircraft-grade aluminum. Lifetime warranty. $300–500</td>
                       <td className="p-3 text-brand-text-mid">The dog is calm — the card calls this overkill, and the crate is heavy</td>
                     </tr>

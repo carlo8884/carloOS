@@ -16,7 +16,8 @@
       "path": "/guides/cost-of-veterinary-care",
       "title": "What Veterinary Care Really Costs — A Realistic Guide | Vets.co",
       "description": "Understand the real cost of routine care, common procedures, and major emergencies, plus why prices vary and how to plan financially for a pet.",
-      "category": "guides"
+      "category": "guides",
+      "keywords": "vet costs"
     },
     {
       "path": "/guides/emergency-vet-costs",
@@ -52,6 +53,18 @@
       "path": "/guides/when-to-go-to-the-vet",
       "title": "When to Take Your Pet to the Vet — A Decision Guide | Vets.co",
       "description": "Some signs warrant watchful waiting; others need same-day or emergency care. Learn which symptoms mean it is time to call the vet and which cannot wait.",
+      "category": "guides"
+    },
+    {
+      "path": "/health/dog-vaccinations-guide",
+      "title": "Dog Vaccination Guide — Core, Non-Core & Titer Testing | Vets.co",
+      "description": "Complete dog vaccination guide from a veterinary perspective. Core vaccines every dog needs, non-core lifestyle vaccines, titer testing.",
+      "category": "guides"
+    },
+    {
+      "path": "/health/heartworm-in-dogs",
+      "title": "Heartworm in Dogs — Prevention, Testing | Vets.co",
+      "description": "Heartworm disease is preventable. Prevention averages about $183 a year; treatment averages $1,457. Typical US range, checked October 2026. dated 2026-10-07.",
       "category": "guides"
     },
     {
@@ -214,7 +227,8 @@
       "path": "/tools/is-this-a-cat-emergency",
       "title": "Is This a Cat Emergency? Symptom Triage Tool | Vets.co",
       "description": "Check cat signs against feline emergency criteria for a conservative urgency read: go now, same-day vet, or monitor. A triage aid, not a diagnosis.",
-      "category": "tools"
+      "category": "tools",
+      "keywords": "is my pet an emergency emergancy"
     },
     {
       "path": "/tools/pet-insurance-worth-it-calculator",
