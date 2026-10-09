@@ -79,7 +79,7 @@ export default function SeizuresPage() {
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
 
           <h2 id="kit">Seizure observation kit</h2>
-          <p>These are household tools, not treatments. They do not treat epilepsy, they do not replace a veterinarian or anti-seizure medication, and they are not a ranked product list. This page does not hop medications. This page does not claim hands-on testing.</p>
+          <p>These are household tools, not treatments. They do not treat epilepsy, they do not replace a veterinarian or anti-seizure medication, and they are not a ranked product list.</p>
 
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/digital+handheld+stopwatch?s=health-seizures-in-dogs", "/go/amazon-brand/foam+table+edge+bumper?s=health-seizures-in-dogs"]} />
 
@@ -109,24 +109,9 @@ export default function SeizuresPage() {
               ASINs are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the dog seizure observation kit
+              Shop these supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page first-minutes and diary copy — a
-              digital handheld stopwatch and a foam
-              table-edge bumper. Everyday physical supplies only.
-              They are not a ranked product list, they
-              are not an anticonvulsant or medication
-              hop, they are not the #1028 throw-blanket
-              / crate-bumper / foam-tile hops, they are
-              not the #1057 timed-feeder / maze-bowl /
-              house-line hops, they are not the #1047
-              kitchen-timer / harness hops, they are not first-aid-kit,
-              thermometer, penlight, stretcher, or
-              medical-alert-tag hops, and they do not
-              replace a veterinarian.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">These searches open Amazon results for a digital handheld stopwatch and a foam table-edge bumper. They are household supplies, not medication and not a substitute for a veterinarian.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/digital+handheld+stopwatch?s=health-seizures-in-dogs"

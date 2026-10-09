@@ -60,32 +60,7 @@ export default function WhenToGoPage() {
           <p>Uncertainty is common, and there is a simple rule: when in doubt, call. Your veterinary clinic, or an emergency hospital after hours, can help you decide whether to watch, come in, or treat the situation as an emergency, often with a few questions over the phone. Describing the sign, when it started, and how your pet is otherwise doing helps them advise you. It is always better to ask and be reassured than to wait on something serious.</p>
 
           <h2 id="kit">Home-care kit</h2>
-          <p>
-            Everyday physical supplies that match the
-            watchful-waiting, same-day, and
-            when-unsure-call copy on this page — a
-            pet first-aid kit, the same Amazon search
-            the ER-vs-clinic tool already uses, so the
-            supplies for a clinic trip are named before
-            any other product, a lined telephone message pad so
-            the clinic call records the sign, when it
-            started, and how the pet is otherwise
-            doing, and a medium hard-sided plastic
-            pet carrier so a same-day visit is a
-            ready crate. These are educational
-            home-care / monitoring / transport tools,
-            not a ranked product list, not a
-            substitute for veterinary care, and not
-            a treatment. Pocket spiral
-            memo pads already live on
-            vomiting-diarrhea-pets. Soft-sided
-            vet-visit carriers already live on
-            dog.com heartworm prevention. Wire
-            basket dog muzzles, quilted disposable
-            underpads, and handheld AA LED
-            flashlights already live on
-            emergency-signs. This page does not claim
-            hands-on testing. </p>
+          <p>A pet first-aid kit covers the supplies for a clinic trip. A lined telephone message pad is where you write the sign, when it started, and how the pet is otherwise doing before you call. A medium hard-sided plastic pet carrier is the crate for a same-day visit. These are home-care and transport tools, not a treatment and not a ranked product list.</p>
 
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/pet+first+aid+kit?s=tools-er-vs-clinic", "/go/amazon-brand/lined+telephone+message+pad?s=guides-when-to-go-to-the-vet", "/go/amazon-brand/medium+hard+sided+plastic+pet+carrier?s=guides-when-to-go-to-the-vet"]} />
 

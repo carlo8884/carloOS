@@ -31,7 +31,7 @@ export function MissedPage({
         : 'Search'
   const lead =
     kind === 'missing'
-      ? 'This page does not exist or may have moved. These buying pages are a place to start, or open the calculator.'
+      ? 'This page does not exist or may have moved. Start with the guides below, or open the calculator.'
       : 'Nothing matched that search. These buying pages and the calculator are a place to start.'
 
   return (

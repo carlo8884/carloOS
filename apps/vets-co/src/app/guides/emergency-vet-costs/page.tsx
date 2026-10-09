@@ -45,47 +45,16 @@ export default function EmergencyCostsPage() {
           <p>An emergency visit typically includes a triage assessment, an examination by an emergency veterinarian, and often rapid diagnostics — bloodwork, imaging, or other tests — needed to identify a problem quickly in an unstable patient. Treatment may involve stabilization, hospitalization with continuous monitoring, surgery, or intensive supportive care. Each element reflects the urgency and intensity of emergency medicine, where decisions are made fast and resources are concentrated.</p>
 
           <h2>How Estimates Work</h2>
-          <p>For situations that are not immediately life-threatening, the team provides a written treatment plan and cost estimate, frequently as a range because further workup may change the picture. For a critically ill patient, staff stabilize first and discuss costs as soon as the crisis permits. A deposit before treatment is standard. You are entitled to ask what is essential versus optional, whether care can be staged, and how the estimate might change — these are normal, reasonable questions. Letter-size manila file folders keep that written plan and estimate together instead of loose papers in the car — they are not a letter-size expanding file organizer (that lives on senior-bloodwork-guide) and they are not a letter-size plastic file box (that lives on senior-pet-care). A basic desktop calculator is how an estimate range and the deposit stay added numbers instead of a guessed total — it is not a kitchen gram scale and it does not diagnose or treat. Neither tool delays stabilization, and neither replaces the emergency hospital.</p>
+          <p>For situations that are not immediately life-threatening, the team provides a written treatment plan and cost estimate, frequently as a range because further workup may change the picture. For a critically ill patient, staff stabilize first and discuss costs as soon as the crisis permits. A deposit before treatment is standard. You are entitled to ask what is essential versus optional, whether care can be staged, and how the estimate might change — these are normal, reasonable questions. Letter-size manila file folders keep that written plan and estimate together instead of loose papers in the car . A basic desktop calculator is how an estimate range and the deposit stay added numbers instead of a guessed total — it is not a kitchen gram scale and it does not diagnose or treat. Neither tool delays stabilization, and neither replaces the emergency hospital.</p>
 
           <h2>Preparing in Advance</h2>
-          <p>Because emergencies are unpredictable and costly, preparation matters most. Pet insurance bought before any condition arises covers much of an emergency after the deductible. An emergency savings fund covers the deductible, the non-reimbursed portion, and the upfront deposit. A locking cash box with a key is how that counted fund stays separate from household cash — it is not a 32-gallon locking animal-proof trash can (that lives on leptospirosis) and it is not an airtight locking pet-food bin (that lives on diabetes-in-dogs-cats). Equally important is logistical readiness: know your nearest 24-hour emergency hospital&apos;s location and phone number before you ever need them, since minutes matter in a crisis. Credit-card-size laminating pouches, a small magnetic dry-erase board, and a car visor document holder already live on the ER-vs-urgent-care guide for that three-clinic contact list, and stay off this kit. <a href="/reviews/best-pet-insurance">The pet insurance guide</a> compares the policies that pay after that deductible.</p>
+          <p>Because emergencies are unpredictable and costly, preparation matters most. Pet insurance bought before any condition arises covers much of an emergency after the deductible. An emergency savings fund covers the deductible, the non-reimbursed portion, and the upfront deposit. A locking cash box with a key is how that counted fund stays separate from household cash . Equally important is logistical readiness: know your nearest 24-hour emergency hospital&apos;s location and phone number before you ever need them, since minutes matter in a crisis.  <a href="/reviews/best-pet-insurance">The pet insurance guide</a> compares the policies that pay after that deductible.</p>
 
           <h2>Facing the Bill Calmly</h2>
           <p>Owners who have prepared — with insurance, savings, or both — can concentrate fully on their pet's care during an emergency. If you are caught unprepared, the affordability options covered in our related guide, including financing and open conversation with the team, still apply. The goal is to make medical decisions for your pet rather than financial ones under pressure, and advance preparation is what makes that possible.</p>
 
           <h2 id="kit">Emergency-cost prep kit</h2>
-          <p>
-            Everyday physical supplies that match the
-            emergency-savings-fund, written-estimate,
-            and deposit copy on this page — a locking
-            cash box with a key so the deductible,
-            non-reimbursed portion, and upfront
-            deposit stay a counted fund, a basic
-            desktop calculator so an estimate range
-            is added up instead of guessed, and
-            letter-size manila file folders so the
-            written treatment plan and cost estimate
-            stay together. These are educational
-            cost-prep / paperwork tools, not a ranked
-            product list, not a substitute for
-            veterinary care, and not a treatment.
-            Letter-size expanding file organizers
-            already live on senior-bloodwork-guide.
-            Letter-size plastic file boxes already
-            live on senior-pet-care. Credit-card-size
-            laminating pouches, small magnetic
-            dry-erase boards, and car visor document
-            holders already live on
-            ER-vs-urgent-care. Pet emergency contact
-            cards already live on dog.com
-            dog-symptoms-guide. First-aid kits,
-            digital pet thermometers, soft pet
-            carriers, styptic powder, and wound-care
-            gauze already live on the ER-vs-clinic
-            tool. This page does not hop medications
-            or insurance brands. This page does not
-            claim hands-on testing.
-          </p>
+          <p>A locking cash box with a key keeps the deductible, the non-reimbursed portion, and the upfront deposit separate from household cash. A basic desktop calculator is how an estimate range gets added up. Letter-size manila file folders keep the written treatment plan and cost estimate together. These are paperwork tools, not a treatment and not a ranked product list.</p>
 
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/locking+cash+box+with+key?s=guides-emergency-vet-costs", "/go/amazon-brand/basic+desktop+calculator?s=guides-emergency-vet-costs", "/go/amazon-brand/manila+file+folders+letter+size?s=guides-emergency-vet-costs"]} />
 
@@ -126,29 +95,9 @@ export default function EmergencyCostsPage() {
               are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the emergency-cost prep kit
+              Shop these supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page emergency-savings-fund,
-              written-estimate, and deposit copy — a
-              locking cash box with a key, a basic
-              desktop calculator, and letter-size
-              manila file folders. Educational
-              cost-prep / paperwork tools only.
-              They are not a ranked product list,
-              they are not a substitute for veterinary
-              care, they are not a #1161 laminating-pouch
-              / dry-erase-board / visor-holder hop,
-              they are not a #1093 kitchen-timer /
-              message-pad / hard-sided-carrier hop,
-              they are not an expanding-file or
-              plastic file-box hop, they are not an
-              ER-vs-clinic first-aid kit /
-              thermometer / soft-carrier hop, they
-              are not an insurance-brand hop, and
-              they do not replace a veterinarian.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">These searches open Amazon results for a locking cash box with a key, a basic desktop calculator, and letter-size manila file folders. They are paperwork tools, not a ranked product list and not a substitute for veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/locking+cash+box+with+key?s=guides-emergency-vet-costs"

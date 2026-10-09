@@ -48,7 +48,7 @@ export default function HowPetInsuranceWorksPage() {
           <p>Unlike most human health insurance, pet insurance almost always works by reimbursement. You take your pet to any licensed veterinarian, pay the bill yourself, then submit a claim — usually by app or online — with the itemized invoice and records. The insurer reviews the claim and reimburses you for the covered portion. This means you need to be able to cover the bill upfront, which is an important practical consideration when choosing coverage. The filing steps after you pay the clinic are in the <a href="/insurance/questions/how-does-the-claims-process-work" className="text-brand-primary underline">claims-process guide</a>.</p>
 
           <h2>The Four Levers</h2>
-          <p>Every policy is defined by four interacting numbers. The <strong>premium</strong> is what you pay monthly to keep coverage active. The <strong>deductible</strong> is the amount you pay out of pocket before reimbursement kicks in, set either per year or per condition. The <strong>reimbursement rate</strong> is the percentage of covered costs the insurer pays after the deductible — often 70%, 80%, or 90%. The <strong>annual limit</strong> caps how much the insurer will reimburse in a policy year. A four-column accounting pad is how those four levers stay written columns instead of a remembered quote — it is not a household budget workbook (that lives on cost-of-veterinary-care), not a checkbook register (that lives on cost-of-veterinary-care), and not a basic desktop calculator (that lives on emergency-vet-costs). Raising your reimbursement rate or annual limit, or lowering your deductible, increases your premium; the levers trade off against each other.</p>
+          <p>Every policy is defined by four interacting numbers. The <strong>premium</strong> is what you pay monthly to keep coverage active. The <strong>deductible</strong> is the amount you pay out of pocket before reimbursement kicks in, set either per year or per condition. The <strong>reimbursement rate</strong> is the percentage of covered costs the insurer pays after the deductible — often 70%, 80%, or 90%. The <strong>annual limit</strong> caps how much the insurer will reimburse in a policy year. A four-column accounting pad is how those four levers stay written columns instead of a remembered quote. Raising your reimbursement rate or annual limit, or lowering your deductible, increases your premium; the levers trade off against each other.</p>
 
           <h2>A Worked Example</h2>
           <p>Those figures are typical US ranges dated 2026-09-06.</p>
@@ -59,37 +59,10 @@ export default function HowPetInsuranceWorksPage() {
 
           <h2>Choosing a Structure</h2>
           <p>Those figures are typical US ranges dated 2026-09-06.</p>
-          <p>There is no single best plan; the right structure depends on your budget and risk tolerance. If you could comfortably absorb a few thousand dollars but not a ten-thousand-dollar catastrophe, a higher deductible with a high or unlimited annual limit gives strong protection at a lower premium. If cash flow is tight even for moderate bills, a lower deductible and higher reimbursement rate smooth costs but raise the premium. A desktop receipt organizer is how paid clinic invoices stay filed until reimbursement lands — it is not a cash envelope budget system (that lives on how-to-afford-vet-care), not a locking cash box with a key (that lives on emergency-vet-costs), and not a pocket-size address book (that lives on choosing-a-veterinarian). Understanding the four levers lets you build a plan that matches your situation rather than chasing the cheapest or most expensive option.</p>
+          <p>There is no single best plan; the right structure depends on your budget and risk tolerance. If you could comfortably absorb a few thousand dollars but not a ten-thousand-dollar catastrophe, a higher deductible with a high or unlimited annual limit gives strong protection at a lower premium. If cash flow is tight even for moderate bills, a lower deductible and higher reimbursement rate smooth costs but raise the premium. A desktop receipt organizer is how paid clinic invoices stay filed until reimbursement lands. Understanding the four levers lets you build a plan that matches your situation rather than chasing the cheapest or most expensive option.</p>
 
-          <h2 id="kit">How-pet-insurance-works kit</h2>
-          <p>
-            Everyday physical supplies that match the
-            reimbursement-model, four-levers, and
-            pay-then-claim copy on this page — a
-            four-column accounting pad so premium,
-            deductible, reimbursement rate, and
-            annual limit stay four written columns,
-            a letter-size poly envelope so the
-            itemized invoice and records stay one
-            claim packet, and a desktop receipt
-            organizer so paid invoices stay filed
-            until reimbursement lands. These are
-            educational insurance-education /
-            paperwork tools, not a ranked product
-            list, not a substitute for veterinary
-            care, and not a             treatment. Kraft two-pocket folders and
-            pocket-size address books already live
-            on choosing-a-veterinarian. Ruled index
-            cards, 3x3 sticky notes, and letter-size
-            sheet protectors already live on
-            questions-to-ask-your-vet. Household
-            budget workbooks and checkbook registers
-            already live on
-            cost-of-veterinary-care. This page does
-            not hop medications or insurance brands
-            as Amazon searches. This page does not
-            claim hands-on testing.
-          </p>
+          <h2 id="kit">Supplies for the four policy numbers</h2>
+          <p>A four-column accounting pad keeps the premium, deductible, reimbursement rate, and annual limit in four written columns. A letter-size poly envelope keeps the itemized invoice and records as one claim packet. A desktop receipt organizer holds paid invoices until reimbursement arrives. These are paperwork tools, not a treatment and not a ranked product list.</p>
 
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/four+column+accounting+pad?s=insurance-how-pet-insurance-works", "/go/amazon-brand/letter+size+poly+envelope?s=insurance-how-pet-insurance-works", "/go/amazon-brand/desktop+receipt+organizer?s=insurance-how-pet-insurance-works"]} />
 

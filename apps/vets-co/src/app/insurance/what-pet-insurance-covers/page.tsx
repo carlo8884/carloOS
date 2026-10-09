@@ -64,49 +64,22 @@ export default function WhatCoversPage() {
           </CalloutBox>
 
           <h2>The Three Plan Types</h2>
-          <p>Pet insurance comes in three broad forms. <strong>Accident-only</strong> plans cover injuries — fractures, lacerations, swallowed objects, toxin ingestion — and are the cheapest, suiting young or budget-constrained owners who want catastrophe protection. <strong>Accident-and-illness</strong> plans, the most common, add coverage for diseases ranging from infections to cancer, and are what most people mean by pet insurance. <strong>Wellness add-ons</strong> are optional riders that reimburse routine care; they are budgeting tools rather than true insurance. A 3-tab divider set is how those three categories stay labeled instead of one unmarked stack — it is not a letter-size file jacket (that lives on when-to-enroll), not a kraft two-pocket folder (that lives on choosing-a-veterinarian), and not letter-size hanging file folders (that live on how-to-afford-vet-care).</p>
+          <p>Pet insurance comes in three broad forms. <strong>Accident-only</strong> plans cover injuries — fractures, lacerations, swallowed objects, toxin ingestion — and are the cheapest, suiting young or budget-constrained owners who want catastrophe protection. <strong>Accident-and-illness</strong> plans, the most common, add coverage for diseases ranging from infections to cancer, and are what most people mean by pet insurance. <strong>Wellness add-ons</strong> are optional riders that reimburse routine care; they are budgeting tools rather than true insurance. A 3-tab divider set is how those three categories stay labeled instead of one unmarked stack.</p>
 
           <h2>What Is Typically Covered</h2>
           <p>A standard accident-and-illness policy generally covers diagnostics (bloodwork, imaging, biopsies), surgery and hospitalization, prescription medications related to a covered condition, emergency and specialist care, cancer treatment, and treatment for chronic illnesses. Many modern plans also cover hereditary and congenital conditions, behavioral therapy, and alternative therapies, though these vary by insurer. The unifying principle is that the condition must be unexpected and not pre-existing. How a condition that showed signs before enrollment is treated is in the <a href="/insurance/pre-existing-conditions" className="text-brand-primary underline">pre-existing conditions guide</a>.</p>
 
           <h2>What Is Usually Excluded</h2>
-          <p>Common exclusions include pre-existing conditions (anything showing signs before the policy or during waiting periods), routine and preventive care unless a wellness rider is added, breeding and pregnancy costs, cosmetic or elective procedures, and food or supplements. Some plans exclude or limit specific hereditary conditions for certain breeds, or impose waiting periods for orthopedic issues. An assorted highlighter set is how typical coverage and usual exclusions stay marked on the sample policy — it is not 3x3 sticky notes (that live on questions-to-ask-your-vet), not a yellow legal pad (that lives on how-to-afford-vet-care), and not a four-column accounting pad (that lives on how-pet-insurance-works). Reading the exclusions list is as important as reading the coverage list.</p>
+          <p>Common exclusions include pre-existing conditions (anything showing signs before the policy or during waiting periods), routine and preventive care unless a wellness rider is added, breeding and pregnancy costs, cosmetic or elective procedures, and food or supplements. Some plans exclude or limit specific hereditary conditions for certain breeds, or impose waiting periods for orthopedic issues. An assorted highlighter set is how typical coverage and usual exclusions stay marked on the sample policy. Reading the exclusions list is as important as reading the coverage list.</p>
 
           <h2>Where Plans Diverge</h2>
-          <p>The biggest differences between plans tend to be in four areas: whether exam or consultation fees are reimbursed, how hereditary and congenital conditions are handled, the length of waiting periods (especially for orthopedic conditions), and dental coverage rules. Removable page flags are how those exam-fee, hereditary, dental, and waiting-period clauses stay flagged on the sample policy — they are not a monthly desk pad calendar (that lives on when-to-enroll), not a self-inking date stamp (that lives on when-to-enroll), and not letter-size sheet protectors (that live on questions-to-ask-your-vet). Two plans can look identical in headline coverage yet differ by thousands of dollars in a real claim because of these details. This is why side-by-side comparison of policy documents, not advertisements, is essential.</p>
+          <p>The biggest differences between plans tend to be in four areas: whether exam or consultation fees are reimbursed, how hereditary and congenital conditions are handled, the length of waiting periods (especially for orthopedic conditions), and dental coverage rules. Removable page flags are how those exam-fee, hereditary, dental, and waiting-period clauses stay flagged on the sample policy . Two plans can look identical in headline coverage yet differ by thousands of dollars in a real claim because of these details. This is why side-by-side comparison of policy documents, not advertisements, is essential.</p>
 
           <h2>Matching Coverage to Your Pet</h2>
           <p>A young mixed-breed dog with no known risks may be well served by a straightforward accident-and-illness plan. A purebred with documented hereditary risk benefits from a plan that clearly covers those conditions with short waiting periods. An owner focused purely on catastrophe protection might choose accident-and-illness with a high deductible and high limit and skip the wellness rider. Understanding what each plan type covers — and excludes — lets you align coverage with your pet's specific risk profile.</p>
 
-          <h2 id="kit">What-pet-insurance-covers kit</h2>
-          <p>
-            Everyday physical supplies that match the
-            accident-only, accident-and-illness, and
-            exam-fee copy on this page — a 3-tab
-            divider set so accident-only,
-            accident-and-illness, and wellness
-            add-on stay three labeled categories, an
-            assorted highlighter set so typical
-            coverage and usual exclusions stay
-            marked on the sample policy, and
-            removable page flags so exam-fee,
-            hereditary, dental, and waiting-period
-            clauses stay flagged where plans
-            diverge. These are educational coverage /
-            paperwork tools, not a ranked product
-            list, not a substitute for veterinary
-            care, and not a treatment. Monthly desk
-            pad calendars, self-inking date stamps,
-            and letter-size file jackets already
-            live on when-to-enroll. Four-column
-            accounting pads, letter-size poly
-            envelopes, and desktop receipt
-            organizers already live on
-            how-pet-insurance-works. This page does
-            not hop medications or insurance brands
-            as Amazon searches. This page does not
-            claim hands-on testing.
-          </p>
+          <h2 id="kit">Supplies for reading a policy</h2>
+          <p>A 3-tab divider set keeps accident-only, accident-and-illness, and a wellness add-on as three labeled categories. An assorted highlighter set marks typical coverage and usual exclusions on a sample policy. Removable page flags mark exam-fee, hereditary, dental, and waiting-period clauses. These are paperwork tools, not a treatment and not a ranked product list.</p>
 
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/3+tab+dividers?s=insurance-what-pet-insurance-covers", "/go/amazon-brand/assorted+highlighter+set?s=insurance-what-pet-insurance-covers", "/go/amazon-brand/removable+page+flags?s=insurance-what-pet-insurance-covers"]} />
 

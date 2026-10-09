@@ -34,7 +34,7 @@ export default function FindAVetPage() {
       <HubMasthead
         eyebrow="How to choose care"
         title="Find the Right Vet"
-        intro="General practice vets handle most of your pet's healthcare. Board-certified specialists handle what GPs refer out — complex diagnostics, surgery, and conditions requiring advanced training. These are how-to-choose guides. Imported state-board license stubs live on the Vets.co directory — unclaimed records, not a live clinic list."
+        intro="General practice vets handle most of your pet's healthcare. Board-certified specialists handle what GPs refer out — complex diagnostics, surgery, and conditions requiring advanced training. These are how-to-choose guides, not a live clinic list."
         manifestKey="vets-co:find-a-vet-hero"
         fallbackKey="vets-co:hero"
         imageAlt="The exterior entrance of a veterinary clinic building"
@@ -104,7 +104,7 @@ export default function FindAVetPage() {
               ))}
             </div>
             <div className="mt-4 pt-4 border-t border-brand-danger/20">
-              <p>Those figures are typical US ranges dated 2026-10-04.</p>
+              <PriceAsOf date="2026-10-04" />
               <div className="text-xs text-brand-text-mid">ASPCA Animal Poison Control: <span className="font-bold text-brand-dark">888-426-4435</span> (24/7, $70–100 consultation fee)</div>
             </div>
           </div>
@@ -118,7 +118,6 @@ export default function FindAVetPage() {
             const inRegion = States.filter((s) => s.region === region).sort((a, b) => a.name.localeCompare(b.name))
             return (
               <div key={region} className="mb-6">
-                <PriceAsOf date="2026-10-04" />
                 <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">{region}</div>
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2">
                   {inRegion.map((s) => (
@@ -131,11 +130,11 @@ export default function FindAVetPage() {
             )
           })}
           <p className="text-sm text-brand-text-mid mt-6">
-            Imported license-board stubs live on the{' '}
+            License records, when a state board list has been imported, are on the{' '}
             <Link href="/directory" className="text-brand-primary font-semibold no-underline hover:underline">
               Vets.co directory
             </Link>
-            . States without imported rows stay empty on purpose. No invented phone, email, or rating.
+            . Until then that directory stays empty. This page does not invent a phone number, email, or rating.
           </p>
         </section>
       </div>

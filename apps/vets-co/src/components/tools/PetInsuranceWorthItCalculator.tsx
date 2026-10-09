@@ -220,7 +220,7 @@ export function PetInsuranceWorthItCalculator() {
             step={100}
             value={eligibleCosts}
             onChange={(e) => setEligibleCosts(Number(e.target.value))}
-            className="w-full accent-brand-primary"
+            className="block h-11 w-full cursor-pointer accent-brand-primary"
           />
           <div className="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-4">
             {COST_SCENARIOS.map((s) => (

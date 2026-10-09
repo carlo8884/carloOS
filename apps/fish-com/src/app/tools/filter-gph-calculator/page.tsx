@@ -12,6 +12,7 @@ import {
   ArticleByline,
   ShopCtas,
   JourneyNext,
+  PrimaryHop,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
 
@@ -124,6 +125,10 @@ export default function FilterGphCalculatorPage() {
       heroExtra={
         <div id="calculator" className="mb-4 [&_.text-brand-primary]:!text-brand-dark">
           <Calculator />
+          <div className="mt-6" data-fold="offer">
+            <PrimaryHop href="/go/amazon-brand/aquaclear+70+filter?s=tools-filter-gph-calculator" label="Search Amazon for an AquaClear 70 filter" />
+            <HopDisclosure siteId="fish-com" href="/go/amazon-brand/aquaclear+70+filter?s=tools-filter-gph-calculator" tone="on-dark" />
+          </div>
         </div>
       }
       hero={{
