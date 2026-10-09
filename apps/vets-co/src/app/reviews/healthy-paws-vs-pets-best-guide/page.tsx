@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildItemListSchema, buildMetadata, combineSchemas, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildItemListSchema, buildMetadata, combineSchemas, ArticleSourcesList, LastUpdated, ComparisonFoot } from '@carloOS/ui'
 import { HopDisclosure } from '../../../components/HopDisclosure'
 
 // Request-time env, same as the insurance comparison. A set partner tag
@@ -85,7 +85,7 @@ export default function HealthyPawsVsPetsBestGuidePage() {
       }
     >
       <div className="carloOS-article">
-          <LastUpdated date="2026-10-08" />
+          <LastUpdated date="2026-10-09" />
         <EmailCapture
           variant="inline"
           siteId="vets-co"
@@ -110,6 +110,46 @@ export default function HealthyPawsVsPetsBestGuidePage() {
         <p>What to have ready before either quote is on the <Link href="/tools/insurance-quote-prep">quote-prep checklist</Link>: age, breed, pre-existing conditions, and the deductible and reimbursement choices.</p>
         <h2>Who should quote which carrier</h2>
         <p>Start the Healthy Paws quote when one plan and two levers are enough, and wellness coverage is not the reason you are buying. Start the Pets Best quote when you want several tiers, including for an older pet the card says can still enroll, and you are willing to compare more structures. On both, read the annual limit, exclusions, and waiting periods in the sample policy. Do not treat either quote-based line as a price from this page.</p>
+        <div className="my-6 max-w-full min-w-0">
+          <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
+            <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+            <thead>
+              <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
+                <th scope="col" className="p-3 font-bold text-brand-dark">Healthy Paws</th>
+                <th scope="col" className="p-3 font-bold text-brand-dark">Pets Best</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Role</th>
+                <td className="p-3">Simple Levers, and the winner</td>
+                <td className="p-3">Tiered Options</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">What you set</th>
+                <td className="p-3">One accident-and-illness plan. You choose the deductible and the reimbursement rate</td>
+                <td className="p-3">Several plan tiers, with a wide range of deductible and reimbursement combinations</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Claims</th>
+                <td className="p-3">Pay, then claim. Reimbursement is listed as fast</td>
+                <td className="p-3">Pay, then claim</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Also on the page</th>
+                <td className="p-3">No wellness add-on. Confirm the annual-limit structure on the quote</td>
+                <td className="p-3">No upper age limit. More options to compare. Standard exclusions apply</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Price line</th>
+                <td className="p-3">Quote-based</td>
+                <td className="p-3">Quote-based</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <ComparisonFoot updated="2026-10-09" />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
                 <ArticleSourcesList title="Sources"

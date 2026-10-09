@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata, ArticleSourcesList, LastUpdated, ComparisonFoot } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'vets-co',
@@ -74,7 +74,7 @@ export default function AskVetVsChewyConnectGuidePage() {
       priceAsOf="2026-10-07"
     >
       <div className="carloOS-article">
-          <LastUpdated date="2026-10-08" />
+          <LastUpdated date="2026-10-09" />
         <EmailCapture
           variant="inline"
           siteId="vets-co"
@@ -101,6 +101,46 @@ export default function AskVetVsChewyConnectGuidePage() {
         <h2>Who should open which service</h2>
         <p>Open AskVet when you want the subscription the telehealth page marks Best Subscription. See the carrier&apos;s current terms for the monthly price. Open Chewy Connect when you already pay for Chewy+ and you want the pharmacy tied to that account. If the pet is in crisis, go to an emergency clinic. Do not wait on a chat queue.</p>
         <p>The telehealth card on this site marks AskVet chat-only. The current askvet.app pages, fetched 2026-10-08, do not print a visit type (<span className="break-all">https://askvet.app/</span>). The telehealth page says the subscription fits frequent questions, such as a new puppy, a senior pet, or a chronic condition.</p>
+        <div className="my-6 max-w-full min-w-0">
+          <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
+            <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+            <thead>
+              <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
+                <th scope="col" className="p-3 font-bold text-brand-dark">AskVet</th>
+                <th scope="col" className="p-3 font-bold text-brand-dark">Chewy Connect</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Role</th>
+                <td className="p-3">Best Subscription</td>
+                <td className="p-3">Best for Chewy Customers</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Format</th>
+                <td className="p-3">Chat only. The current pages do not print a visit type</td>
+                <td className="p-3">Free chat with a veterinary technician and a Chewy account. The licensed-vet video visit is separate</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Who you reach</th>
+                <td className="p-3">General practice. Prescriptions are limited</td>
+                <td className="p-3">A veterinary technician for free chat. A prescription from the licensed-vet video visit can be filled through Chewy</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Limit</th>
+                <td className="p-3">A chat format limits how much of a physical problem can be assessed</td>
+                <td className="p-3">The licensed-vet video visit is not offered in every state. Specialist access is thinner than Vetster</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Price line</th>
+                <td className="p-3">See the carrier’s current terms for a monthly chat price</td>
+                <td className="p-3">The licensed-vet video price is the one printed on this page</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <ComparisonFoot updated="2026-10-09" />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
                 <ArticleSourcesList

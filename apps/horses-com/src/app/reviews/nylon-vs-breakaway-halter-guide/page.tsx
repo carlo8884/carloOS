@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { HopDisclosure } from '../../../components/HopDisclosure'
-import { ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, buildArticleSchema, buildItemListSchema, buildMetadata, combineSchemas, LastUpdated } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, buildArticleSchema, buildItemListSchema, buildMetadata, combineSchemas, LastUpdated, ComparisonFoot } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: 'Nylon Halter vs Breakaway | Horses.com',
@@ -80,7 +80,7 @@ export default function NylonVsBreakawayGuidePage() {
       priceAsOf="2026-10-08"
     >
       <div className="carloOS-article">
-          <LastUpdated date="2026-10-08" />
+          <LastUpdated date="2026-10-09" />
         <EmailCapture
           variant="inline"
           siteId="horses-com"
@@ -105,6 +105,46 @@ export default function NylonVsBreakawayGuidePage() {
         <h2>Who should buy which halter</h2>
         <p>Buy flat nylon when the horse is led, groomed, or tied while someone is there, and the lower printed band is the point. Buy the breakaway when a halter stays on in turnout. Do not treat the nylon card as a field halter. Tying practice, including a quick-release knot and wither height, stays on the halter page. Lead ropes are a different product there.</p>
         <p>The sale price can differ from the printed band. A pad comparison does not choose a halter, and a halter does not fix saddle fit.</p>
+        <div className="my-6 max-w-full min-w-0">
+          <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
+            <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+            <thead>
+              <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
+                <th scope="col" className="p-3 font-bold text-brand-dark">Flat nylon</th>
+                <th scope="col" className="p-3 font-bold text-brand-dark">Leather-crown breakaway</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Role</th>
+                <td className="p-3">Everyday</td>
+                <td className="p-3">Safer Turnout, and the winner</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Use</th>
+                <td className="p-3">Leading, grooming, and tying under supervision</td>
+                <td className="p-3">A horse that must be left haltered in order to be caught</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">What gives way</th>
+                <td className="p-3">It does not break. Unsafe to leave on a turned-out horse</td>
+                <td className="p-3">A leather crown or breakable tab gives way if the horse is caught</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Upkeep</th>
+                <td className="p-3">Strong and washable. Hardware can rub if the fit is poor</td>
+                <td className="p-3">The leather crown needs periodic replacement</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Price line</th>
+                <td className="p-3">The lower printed band on the halter page</td>
+                <td className="p-3">Higher than plain nylon</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <ComparisonFoot updated="2026-10-09" />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
       </div>

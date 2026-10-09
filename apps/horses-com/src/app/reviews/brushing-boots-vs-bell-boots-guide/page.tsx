@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { HopDisclosure } from '../../../components/HopDisclosure'
-import { ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, buildArticleSchema, buildItemListSchema, buildMetadata, combineSchemas, LastUpdated } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, buildArticleSchema, buildItemListSchema, buildMetadata, combineSchemas, LastUpdated, ComparisonFoot } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: 'Brushing Boots vs Bell Boots | Horses.com',
@@ -80,7 +80,7 @@ export default function BrushingBootsVsBellBootsGuidePage() {
       priceAsOf="2026-10-08"
     >
       <div className="carloOS-article">
-          <LastUpdated date="2026-10-08" />
+          <LastUpdated date="2026-10-09" />
         <EmailCapture
           variant="inline"
           siteId="horses-com"
@@ -105,6 +105,46 @@ export default function BrushingBootsVsBellBootsGuidePage() {
         <h2>Who should buy which boot</h2>
         <p>Buy brushing boots when the strike is between legs during flatwork or turnout, and clean them so grit does not stay against the skin. Buy bell boots when the injury pattern is overreach or a pulled front shoe. A horse can need both jobs. Neither purchase is tendon support, and neither is a standing wrap. Bandaging technique stays on the boots page because a tight wrap can injure a tendon. Wraps are a different product on that page.</p>
         <p>The sale price can differ from the printed pair price. A blanket fill weight does not choose a boot.</p>
+        <div className="my-6 max-w-full min-w-0">
+          <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
+            <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+            <thead>
+              <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
+                <th scope="col" className="p-3 font-bold text-brand-dark">Synthetic brushing boots</th>
+                <th scope="col" className="p-3 font-bold text-brand-dark">Pull-on bell boots</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Role</th>
+                <td className="p-3">Everyday Protection, and the winner</td>
+                <td className="p-3">Overreach Protection</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Job</th>
+                <td className="p-3">Protect the lower leg from interference strikes in schooling, lunging, and turnout</td>
+                <td className="p-3">Cover the heel bulbs and coronet when a hind foot strikes a front foot, and help keep a front shoe on</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Fit</th>
+                <td className="p-3">Snug, not tight. Liners are washable and quick-drying</td>
+                <td className="p-3">Pull-on styles stay secure and are harder to put on. Hook-and-loop styles are easier to fit and can come loose in deep footing</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Limit</th>
+                <td className="p-3">No tendon support. A dirty boot can rub</td>
+                <td className="p-3">An oversized boot can rub. Muddy work means cleaning</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Buy it when</th>
+                <td className="p-3">The strike is between legs during flatwork or turnout</td>
+                <td className="p-3">The injury pattern is overreach or a pulled front shoe</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <ComparisonFoot updated="2026-10-09" />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
       </div>
