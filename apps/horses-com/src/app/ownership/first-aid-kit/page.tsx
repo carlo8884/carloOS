@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ShopCtas, TableOfContents } from '@carloOS/ui'
+import { ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ShopCtas, TableOfContents, PrimaryHop } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -66,6 +66,10 @@ export default function FirstAidKitPage() {
           { title: 'Horse Boarding Options', href: '/ownership/boarding-options' },
           { title: 'Senior Horse Care', href: '/ownership/senior-horse-care' },
         ]}
+        heroHop={<>
+          <PrimaryHop href="/go/amazon-brand/sterile+saline+wound+flush+horse?s=ownership-first-aid-kit" label="Search Amazon for sterile saline wound flush for horses" />
+          <HopDisclosure tone="on-dark" siteId="horses-com" href="/go/amazon-brand/sterile+saline+wound+flush+horse?s=ownership-first-aid-kit" />
+        </>}
         hero={{
           title: "Equine First-Aid Kit",
           subtitle:

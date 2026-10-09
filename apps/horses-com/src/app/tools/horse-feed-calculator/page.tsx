@@ -14,6 +14,7 @@ import {
   CrossPortfolioCard,
   JourneyNext,
   ShopCtas,
+  PrimaryHop,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
 
@@ -130,6 +131,10 @@ export default function HorseFeedCalculatorPage() {
         { title: 'Horse Gestation Calculator', href: '/tools/horse-gestation-calculator', category: 'Tools' },
         { title: 'Forage Basics', href: '/nutrition/forage-basics' },
       ]}
+      heroHop={<>
+        <PrimaryHop href="/go/amazon-brand/timothy+hay+horse?s=tools-horse-feed-calculator" label="Search Amazon for timothy hay for horses" />
+        <HopDisclosure tone="on-dark" siteId="horses-com" href="/go/amazon-brand/timothy+hay+horse?s=tools-horse-feed-calculator" />
+      </>}
       heroExtra={
         <div id="calculator" className="mb-4 [&_.text-brand-primary]:!text-brand-dark">
           <Calculator />

@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas, PrimaryHop } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -73,6 +73,10 @@ export default function ChokePage() {
           { title: 'Forage Basics', href: '/nutrition/forage-basics' },
           { title: 'Is This a Horse Emergency?', href: '/tools/is-this-a-horse-emergency' },
         ]}
+        heroHop={<>
+          <PrimaryHop href="/go/amazon-brand/lidded+5+gallon+feed+soaking+pail?s=health-choke" label="Search Amazon for a lidded feed-soaking pail" />
+          <HopDisclosure tone="on-dark" siteId="horses-com" href="/go/amazon-brand/lidded+5+gallon+feed+soaking+pail?s=health-choke" />
+        </>}
         hero={{
           title: "Choke in Horses",
           subtitle:

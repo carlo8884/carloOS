@@ -12,6 +12,7 @@ import {
   CrossPortfolioCard,
   ShopCtas,
   JourneyNext,
+  PrimaryHop,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
 
@@ -108,6 +109,10 @@ export default function HorseBlanketSizeCalculatorPage() {
         { title: 'Horse Weight Calculator', href: '/tools/horse-weight-calculator', category: 'Tools' },
         { title: 'Tack Guide', href: '/tack', category: 'Tack' },
       ]}
+      heroHop={<>
+        <PrimaryHop href="/go/amazon-brand/waterproof+turnout+horse+blanket+winter?s=tools-horse-blanket-size-calculator" label="Search Amazon for a waterproof turnout blanket" />
+        <HopDisclosure tone="on-dark" siteId="horses-com" href="/go/amazon-brand/waterproof+turnout+horse+blanket+winter?s=tools-horse-blanket-size-calculator" />
+      </>}
       heroExtra={
         <div id="calculator" className="mb-4 [&_.text-brand-primary]:!text-brand-dark">
           <Calculator />

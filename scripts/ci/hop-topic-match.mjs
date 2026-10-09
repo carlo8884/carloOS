@@ -15,6 +15,12 @@
  * hoof angles, because that search is not a breed product. Hoof-care and
  * grooming pages live outside `/breeds/` and still pass when they name a pick.
  *
+ * Relevance bar for a new hop: a hop's product must be something the page tells the reader to use for their pet.
+ * A cash box, budget workbook, or
+ * envelope system on a vet-cost page is not that product. Those pages stay
+ * without a first-screen hop until insurers are live. This check still only
+ * fails the closed tack-product list; the note is the bar for new hops.
+ *
  * CROSS_SELLS is the allowlist. Those searches are real products on purpose
  * when the article's product words do not overlap:
  *   - /first-horse-roadmap — horse hoof pick

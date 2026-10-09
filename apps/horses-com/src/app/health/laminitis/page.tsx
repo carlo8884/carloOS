@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas, PrimaryHop } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -84,6 +84,10 @@ export default function LaminitisPage() {
           { title: 'Feeding the Easy Keeper', href: '/nutrition/feeding-the-easy-keeper' },
           { title: 'Is This a Horse Emergency?', href: '/tools/is-this-a-horse-emergency' },
         ]}
+        heroHop={<>
+          <PrimaryHop href="/go/amazon-brand/equine+foam+sole+support+pads?s=health-laminitis" label="Search Amazon for equine foam sole-support pads" />
+          <HopDisclosure tone="on-dark" siteId="horses-com" href="/go/amazon-brand/equine+foam+sole+support+pads?s=health-laminitis" />
+        </>}
         hero={{
           title: 'Equine Laminitis',
           subtitle:

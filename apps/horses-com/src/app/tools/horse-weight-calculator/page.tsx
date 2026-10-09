@@ -13,6 +13,7 @@ import {
   RelatedLinks,
   CrossPortfolioCard,
   ShopCtas,
+  PrimaryHop,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
 
@@ -130,6 +131,10 @@ export default function HorseWeightCalculatorPage() {
         { title: 'Horse Grimace Scale', href: '/tools/horse-grimace-scale', category: 'Tools' },
         { title: 'Horse Height Converter', href: '/tools/horse-height-converter', category: 'Tools' },
       ]}
+      heroHop={<>
+        <PrimaryHop href="/go/amazon-brand/horse+weight+tape?s=tools-horse-weight-calculator" label="Search Amazon for a horse weight tape" />
+        <HopDisclosure tone="on-dark" siteId="horses-com" href="/go/amazon-brand/horse+weight+tape?s=tools-horse-weight-calculator" />
+      </>}
       heroExtra={
         <div id="calculator" className="mb-4 [&_.text-brand-primary]:!text-brand-dark">
           <Calculator />

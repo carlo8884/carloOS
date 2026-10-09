@@ -13,6 +13,7 @@ import {
   ArticleSourcesList,
   CrossPortfolioCard,
   ShopCtas,
+  PrimaryHop,
 } from '@carloOS/ui'
 import TriageHelper from './TriageHelper'
 import { crossSiteHref } from '@carloOS/config'
@@ -167,6 +168,10 @@ export default function IsThisAHorseEmergencyPage() {
           >
             Is This a Horse Emergency?
           </h1>
+          <div className="mb-5" data-fold="offer">
+            <PrimaryHop href="/go/amazon-brand/equine+first+aid+kit?s=tools-is-this-a-horse-emergency" label="Search Amazon for an equine first-aid kit" />
+            <HopDisclosure tone="on-dark" siteId="horses-com" href="/go/amazon-brand/equine+first+aid+kit?s=tools-is-this-a-horse-emergency" />
+          </div>
           <p className="text-lg text-white/55 leading-relaxed max-w-2xl">
             Check the equine signs you are seeing and get a conservative urgency read — go now, same-day vet, or
             monitor closely — using emergency-vs-wait criteria from equine emergency medicine.

@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ReviewCard, ShopCtas, TableOfContents } from '@carloOS/ui'
+import { ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ReviewCard, ShopCtas, TableOfContents, PrimaryHop } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -62,6 +62,10 @@ export default function BeetPulpPage() {
           { title: 'Feeding Senior Horses', href: '/nutrition/feeding-senior-horses' },
           { title: 'Forage Basics', href: '/nutrition/forage-basics' },
         ]}
+        heroHop={<>
+          <PrimaryHop href="/go/amazon-brand/molasses+free+beet+pulp+shreds+horse?s=nutrition-beet-pulp" label="Search Amazon for molasses-free beet pulp shreds" />
+          <HopDisclosure tone="on-dark" siteId="horses-com" href="/go/amazon-brand/molasses+free+beet+pulp+shreds+horse?s=nutrition-beet-pulp" />
+        </>}
         hero={{
           title: "Beet Pulp for Horses",
           subtitle:

@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas, PrimaryHop } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -61,6 +61,10 @@ export default function BlanketWeightsPage() {
           { title: 'Winter Care', href: '/care/winter-care' },
           { title: 'Saddle Pads and Numnahs', href: '/tack/saddle-pads' },
         ]}
+        heroHop={<>
+          <PrimaryHop href="/go/amazon-brand/waterproof+horse+turnout+rug?s=blanket-weights" label="Search Amazon for a waterproof horse turnout rug" />
+          <HopDisclosure tone="on-dark" siteId="horses-com" href="/go/amazon-brand/waterproof+horse+turnout+rug?s=blanket-weights" />
+        </>}
         hero={{
           title: "Horse Blanket Weights Explained",
           subtitle:

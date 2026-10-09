@@ -1,7 +1,7 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, CrossSiteHelp, FAQAccordion, RelatedLinks, ShopCtas, TableOfContents } from '@carloOS/ui'
+import { ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, CrossSiteHelp, FAQAccordion, RelatedLinks, ShopCtas, TableOfContents, PrimaryHop } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
@@ -64,6 +64,10 @@ export default function CostOfOwningPage() {
           { title: 'Buying Your First Horse', href: '/ownership/buying-your-first-horse' },
           { title: 'Horse Cost of Ownership Calculator', href: '/tools/horse-cost-calculator', category: 'Tools' },
         ]}
+        heroHop={<>
+          <PrimaryHop href="/go/amazon-brand/horse+feed+scoop+scale?s=ownership-cost-of-owning-a-horse" label="Search Amazon for a horse feed scoop and scale" />
+          <HopDisclosure tone="on-dark" siteId="horses-com" href="/go/amazon-brand/horse+feed+scoop+scale?s=ownership-cost-of-owning-a-horse" />
+        </>}
         hero={{
           title: "The Cost of Owning a Horse",
           subtitle:
