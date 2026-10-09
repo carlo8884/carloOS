@@ -38,7 +38,7 @@ const allSchemas = combineSchemas(schema, productSchema0, productSchema1)
 
 const itemList = buildItemListSchema({
   name: "Best Dog Crates 2026",
-  items: PICKS.map((pick) => ({ name: pick.name, url: ({ "MidWest iCrate": "https://dog.com/go/amazon/B000QFT1RC?s=reviews-best-dog-crates", "Impact Dog Crate": "https://dog.com/go/amazon-brand/impact+high+anxiety+dog+crate?s=reviews-best-dog-crates", "Petmate Sky Kennel": "https://dog.com/go/amazon-brand/petmate+sky+kennel?s=reviews-best-dog-crates", "Frisco Furniture Style": "https://dog.com/go/chewy-brand/frisco+furniture+style+dog+crate?s=reviews-best-dog-crates" }[pick.name] ?? `https://dog.com/reviews/best-dog-crates${pick.href}`) })),
+  items: PICKS.map((pick) => ({ name: pick.name, url: ({ "MidWest iCrate": "https://dog.com/go/amazon/B000QFT1RC?s=reviews-best-dog-crates", "Impact Dog Crate": "https://dog.com/go/amazon-brand/impact+high+anxiety+dog+crate?s=reviews-best-dog-crates", "Petmate Sky Kennel": "https://dog.com/go/amazon/B003E77OG4?s=reviews-best-dog-crates", "Frisco Furniture Style": "https://dog.com/go/chewy-brand/frisco+furniture+style+dog+crate?s=reviews-best-dog-crates" }[pick.name] ?? `https://dog.com/reviews/best-dog-crates${pick.href}`) })),
 })
 export default function BestDogCratesPage() {
   return (
@@ -112,7 +112,7 @@ export default function BestDogCratesPage() {
               resourceLabel="Browse MidWest iCrate dog crates on Amazon →"
             />
 
-            <HopDisclosure siteId="dog-com" href={["/go/amazon/B000QFT1RC?s=reviews-best-dog-crates", "/go/amazon-brand/impact+high+anxiety+dog+crate?s=reviews-best-dog-crates", "/go/amazon-brand/petmate+sky+kennel?s=reviews-best-dog-crates", "/go/chewy-brand/frisco+furniture+style+dog+crate?s=reviews-best-dog-crates"]} />
+            <HopDisclosure siteId="dog-com" href={["/go/amazon/B000QFT1RC?s=reviews-best-dog-crates", "/go/amazon-brand/impact+high+anxiety+dog+crate?s=reviews-best-dog-crates", "/go/amazon/B003E77OG4?s=reviews-best-dog-crates", "/go/chewy-brand/frisco+furniture+style+dog+crate?s=reviews-best-dog-crates"]} />
             <ReviewCard
               id="midwest"
               badge="Best Wire Crate"
@@ -185,7 +185,7 @@ export default function BestDogCratesPage() {
               price="$40–120"
               priceNote="By size dated 2026-10-04."
               ctaText="Shop Petmate Sky Kennel on Amazon →"
-              ctaHref="/go/amazon-brand/petmate+sky+kennel?s=reviews-best-dog-crates"
+              ctaHref="/go/amazon/B003E77OG4?s=reviews-best-dog-crates"
               ctaAffiliateProgram="amazon-brand"
               ctaAffiliateProduct="petmate+sky+kennel"
             />
@@ -245,7 +245,7 @@ export default function BestDogCratesPage() {
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">Airline cargo</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#petmate" className="text-brand-primary">Petmate Sky Kennel</a><TableShopLink href={"/go/amazon-brand/petmate+sky+kennel?s=reviews-best-dog-crates"} product={"Petmate Sky Kennel"} /></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#petmate" className="text-brand-primary">Petmate Sky Kennel</a><TableShopLink href={"/go/amazon/B003E77OG4?s=reviews-best-dog-crates"} product={"Petmate Sky Kennel"} /></td>
                       <td className="p-3 text-brand-text-mid">Best Airline Crate. IATA compliant. $40–120 by size</td>
                       <td className="p-3 text-brand-text-mid">In-cabin travel, or an escape artist. Confirm the airline before you buy</td>
                     </tr>
@@ -258,7 +258,7 @@ export default function BestDogCratesPage() {
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-08" />
+              <ComparisonFoot updated="2026-10-09" />
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Which crate fits which job</h2>
               <FAQAccordion items={[
                 {

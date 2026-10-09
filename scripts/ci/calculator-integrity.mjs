@@ -9481,18 +9481,19 @@ const CALCULATORS = [
     file: 'apps/ferret-com/src/app/care/introducing-a-second-ferret/page.tsx',
     mustInclude: [
       { re: /amazon-brand\/extra\+small\+animal\+travel\+kennel\?s=care-introducing-a-second-ferret/, label: 'extra small-animal travel-kennel search hop (matches on-page separate-quarantine-check-up / newcomer-owns-its-own-box copy; unique vs ferret+carrier+hard+sided / top+loading+small+animal+carrier / soft+pet+carrier / ferret+carrier)' },
-      { re: /amazon-brand\/scent\+swap\+fleece\+sleep\+pouch\?s=care-introducing-a-second-ferret/, label: 'scent-swap fleece sleep-pouch search hop (matches on-page swap-bedding-or-sleep-sacks copy; unique vs ferret+sleep+sack+fleece / fleece+small+animal+bonding+pouch / ferret+hammock)' },
+      { re: /scent-swap fleece sleep pouch/, label: 'scent-swap pouch stays in the copy; it is not a sleep sack, bonding pouch, or hammock' },
       { re: /amazon-brand\/portable\+small\+animal\+playpen\?s=care-introducing-a-second-ferret/, label: 'portable small-animal playpen search hop (matches on-page unfamiliar-playpen / dry-bathtub / neutral-ground copy; unique vs puppy+playpen / ferret+nation+critter+nation+double+unit)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
     ],
     mustExclude: [
+      { re: /scent\+swap\+fleece\+sleep\+pouch/, label: 'empty scent-swap search stays off this page' },
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
       { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
       { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
       { re: /amazon-brand\/[^?"']*(laminated\+|fridge\+|stall\+door|mustelid\+|[^"'?]*handbook)/, label: 'never invent laminated / fridge-card / stall-door / handbook product hops' },
     ],
-    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete ferret quarantine-and-bonding-checklist offer; every gear CTA is an amazon-brand category search matching on-page quarantine / scent-swap / neutral-ground copy (an extra small-animal travel kennel so the newcomer rides to the quarantine check-up in its own box, a scent-swap fleece sleep pouch so bedding can move between cages before any face-to-face meeting, a portable small-animal playpen so the first sessions happen on unfamiliar ground), never a placeholder ASIN, a vaccine / Nobivac / IMRAB hop, a #1067 rabies-certificate-holder / top-loading-carrier / bonding-pouch hop, a #1066 carnivore-care / baby-food / silicone-dosing-syringe hop, a ferret-carrier / sleep-sack hop, or a medication hop. Chewy stays omitted so empty buttons stay hidden.',
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete ferret quarantine-and-bonding-checklist offer; every gear CTA is an amazon-brand category search matching on-page quarantine / neutral-ground copy (an extra small-animal travel kennel so the newcomer rides to the quarantine check-up in its own box, a portable small-animal playpen so the first sessions happen on unfamiliar ground). The scent-swap fleece sleep pouch stays in the copy with no button: that search is empty and tighter queries are guinea-pig snuggle sacks, never a placeholder ASIN, a vaccine / Nobivac / IMRAB hop, a #1067 rabies-certificate-holder / top-loading-carrier / bonding-pouch hop, a #1066 carnivore-care / baby-food / silicone-dosing-syringe hop, a ferret-carrier / sleep-sack hop, or a medication hop. Chewy stays omitted so empty buttons stay hidden.',
   },
   {
     id: 'ferret · multi-ferret-introductions hops',
@@ -11620,9 +11621,9 @@ const CALCULATORS = [
       { re: /nextHref="\/tools\/filter-gph-calculator"/, label: 'next step is filter-GPH, not a shop dump' },
       { re: /resourceHref="\/go\/amazon\/B0DCGB5T4Y\?s=reviews-best-aquarium-filters"/, label: 'journey hop reuses the existing AquaClear 70 search' },
       { re: /amazon\/B0DCGB5T4Y\?s=reviews-best-aquarium-filters/, label: 'existing AquaClear-70 amazon-brand hop kept (do not re-ship a new query)' },
-      { re: /amazon-brand\/fluval\+307\+canister\+filter\?s=reviews-best-aquarium-filters/, label: 'existing Fluval-307 amazon-brand hop kept (do not re-ship a new query)' },
+      { re: /amazon\/B07JH4JHTC\?s=reviews-best-aquarium-filters/, label: 'existing Fluval-307 amazon-brand hop kept (do not re-ship a new query)' },
       { re: /amazon-brand\/hikari\+bacto\+surge\+sponge\+filter\?s=reviews-best-aquarium-filters/, label: 'existing Hikari-Bacto-Surge amazon-brand hop kept (do not re-ship a new query)' },
-      { re: /amazon-brand\/aqueon\+quietflow\+30\?s=reviews-best-aquarium-filters/, label: 'existing Aqueon-QuietFlow-30 amazon-brand hop kept (do not re-ship a new query)' },
+      { re: /amazon\/B000SP65OC\?s=reviews-best-aquarium-filters/, label: 'existing Aqueon-QuietFlow-30 amazon-brand hop kept (do not re-ship a new query)' },
       { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
@@ -11642,7 +11643,7 @@ const CALCULATORS = [
       { re: /nextHref="\/tools\/filter-gph-calculator"/, label: 'next step is filter-GPH, not a shop dump' },
       { re: /resourceHref="\/go\/amazon\/B07JH4JHTC\?s=reviews-best-canister-filters"/, label: 'journey hop reuses the existing Fluval 307 search' },
       { re: /amazon\/B07JH4JHTC\?s=reviews-best-canister-filters/, label: 'existing Fluval-307 amazon-brand hop kept (do not re-ship a new query)' },
-      { re: /amazon-brand\/eheim\+classic\+350\+2215\?s=reviews-best-canister-filters/, label: 'existing Eheim-Classic-350 amazon-brand hop kept (do not re-ship a new query)' },
+      { re: /amazon\/B0002AQXV8\?s=reviews-best-canister-filters/, label: 'existing Eheim-Classic-350 amazon-brand hop kept (do not re-ship a new query)' },
       { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
@@ -11663,7 +11664,7 @@ const CALCULATORS = [
       { re: /resourceHref="\/go\/amazon\/B003I5UC0W\?s=reviews-best-aquarium-heaters"/, label: 'journey hop reuses the existing Eheim Jager search' },
       { re: /amazon\/B003I5UC0W\?s=reviews-best-aquarium-heaters/, label: 'existing Eheim-Jager amazon-brand hop kept (do not re-ship a new query)' },
       { re: /amazon-brand\/hydor\+inline\+heater\?s=reviews-best-aquarium-heaters/, label: 'existing Hydor-Inline amazon-brand hop kept (do not re-ship a new query)' },
-      { re: /amazon-brand\/aqueon\+pro\+heater\?s=reviews-best-aquarium-heaters/, label: 'existing Aqueon-Pro amazon-brand hop kept (do not re-ship a new query)' },
+      { re: /amazon\/B07L1M7454\?s=reviews-best-aquarium-heaters/, label: 'existing Aqueon-Pro amazon-brand hop kept (do not re-ship a new query)' },
       { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
@@ -11684,9 +11685,9 @@ const CALCULATORS = [
       { re: /nextHref="\/tools\/co2-calculator"/, label: 'next step is the CO2 calculator, not a shop dump' },
       { re: /resourceHref="\/go\/amazon-brand\/hygger\+957\?s=reviews-best-aquarium-lighting"/, label: 'journey hop reuses the existing Hygger 957 search' },
       { re: /amazon-brand\/hygger\+957\?s=reviews-best-aquarium-lighting/, label: 'existing Hygger-957 amazon-brand hop kept (do not re-ship a new query)' },
-      { re: /amazon-brand\/fluval\+plant\+3\.0\?s=reviews-best-aquarium-lighting/, label: 'existing Fluval-Plant-3.0 amazon-brand hop kept (do not re-ship a new query)' },
+      { re: /amazon\/B083QP62MP\?s=reviews-best-aquarium-lighting/, label: 'existing Fluval-Plant-3.0 amazon-brand hop kept (do not re-ship a new query)' },
       { re: /amazon-brand\/kessil\+a360x\?s=reviews-best-aquarium-lighting/, label: 'existing Kessil-A360X amazon-brand hop kept (do not re-ship a new query)' },
-      { re: /amazon-brand\/nicrew\+classic\+led\?s=reviews-best-aquarium-lighting/, label: 'existing Nicrew-Classic-LED amazon-brand hop kept (do not re-ship a new query)' },
+      { re: /amazon\/B07F6XD2FH\?s=reviews-best-aquarium-lighting/, label: 'existing Nicrew-Classic-LED amazon-brand hop kept (do not re-ship a new query)' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
     ],
     mustExclude: [
@@ -11747,7 +11748,7 @@ const CALCULATORS = [
       { re: /resourceHref="\/go\/amazon-brand\/aquarium\+co-op\+easy\+green\+fertilizer\?s=reviews-best-planted-tank-fertilizers"/, label: 'journey hop reuses the existing Easy Green search' },
       { re: /amazon-brand\/aquarium\+co-op\+easy\+green\+fertilizer\?s=reviews-best-planted-tank-fertilizers/, label: 'existing Easy-Green amazon-brand hop kept (do not re-ship a new query)' },
       { re: /amazon-brand\/seachem\+flourish\+comprehensive\?s=reviews-best-planted-tank-fertilizers/, label: 'existing Seachem-Flourish amazon-brand hop kept (do not re-ship a new query)' },
-      { re: /amazon-brand\/nilocg\+thrive\+fertilizer\?s=reviews-best-planted-tank-fertilizers/, label: 'existing NilocG-Thrive amazon-brand hop kept (do not re-ship a new query)' },
+      { re: /amazon\/B01M20WCI5\?s=reviews-best-planted-tank-fertilizers/, label: 'existing NilocG-Thrive amazon-brand hop kept (do not re-ship a new query)' },
       { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
@@ -12533,7 +12534,7 @@ const CALCULATORS = [
       { re: /resourceHref="\/go\/amazon\/B000QFT1RC\?s=reviews-best-dog-crates"/, label: 'journey hop reuses the existing MidWest iCrate search' },
       { re: /amazon\/B000QFT1RC\?s=reviews-best-dog-crates/, label: 'existing MidWest iCrate amazon-brand hop kept (do not re-ship a new query)' },
       { re: /amazon-brand\/impact\+high\+anxiety\+dog\+crate\?s=reviews-best-dog-crates/, label: 'existing Impact high-anxiety amazon-brand hop kept (do not re-ship a new query)' },
-      { re: /amazon-brand\/petmate\+sky\+kennel\?s=reviews-best-dog-crates/, label: 'existing Petmate Sky Kennel amazon-brand hop kept (do not re-ship a new query)' },
+      { re: /amazon\/B003E77OG4\?s=reviews-best-dog-crates/, label: 'existing Petmate Sky Kennel amazon-brand hop kept (do not re-ship a new query)' },
       { re: /chewy-brand\/frisco\+furniture\+style\+dog\+crate\?s=reviews-best-dog-crates/, label: 'existing Frisco furniture-style Chewy hop kept (not an empty leftover button)' },
       { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
@@ -12569,7 +12570,7 @@ const CALCULATORS = [
     file: 'apps/dog-com/src/app/reviews/best-joint-supplements/page.tsx',
     mustInclude: [
       { re: /amazon\/B0041OOPK2\?s=reviews-best-joint-supplements/, label: 'existing Dasuquin amazon-brand hop kept (do not re-ship a new query)' },
-      { re: /amazon-brand\/nordic\+naturals\+omega\+pet\?s=reviews-best-joint-supplements/, label: 'existing Nordic Naturals amazon-brand hop kept (do not re-ship a new query)' },
+      { re: /amazon\/B007ZTL3ZK\?s=reviews-best-joint-supplements/, label: 'existing Nordic Naturals amazon-brand hop kept (do not re-ship a new query)' },
       { re: /amazon-brand\/cosequin\+ds\+maximum\+strength\?s=reviews-best-joint-supplements/, label: 'existing Cosequin DS amazon-brand hop kept (do not re-ship a new query)' },
       { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
@@ -12648,8 +12649,8 @@ const CALCULATORS = [
     file: 'apps/horses-com/src/app/reviews/best-equine-supplements/page.tsx',
     mustInclude: [
       { re: /amazon-brand\/platinum\+performance\+equine\+wellness\?s=reviews-best-equine-supplements/, label: 'existing Platinum Performance amazon-brand hop kept (do not re-ship a new query)' },
-      { re: /amazon-brand\/kentucky\+equine\+research\+EO-3\+omega\+3\?s=reviews-best-equine-supplements/, label: 'existing KER EO-3 amazon-brand hop kept (do not re-ship a new query)' },
-      { re: /amazon-brand\/equithrive\+original\+pellets\+resveratrol\?s=reviews-best-equine-supplements/, label: 'existing Equithrive Original amazon-brand hop kept (do not re-ship a new query)' },
+      { re: /amazon\/B0037PL6QW\?s=reviews-best-equine-supplements/, label: 'existing KER EO-3 amazon-brand hop kept (do not re-ship a new query)' },
+      { re: /amazon\/B07DM2314W\?s=reviews-best-equine-supplements/, label: 'existing Equithrive Original amazon-brand hop kept (do not re-ship a new query)' },
       { re: /amazon-brand\/standlee\+premium\+forage\+pellets\?s=reviews-best-equine-supplements/, label: 'existing Standlee forage amazon-brand hop kept (do not re-ship a new query)' },
       { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
@@ -12698,8 +12699,8 @@ const CALCULATORS = [
     file: 'apps/ferret-com/src/app/reviews/best-ferret-cage/page.tsx',
     mustInclude: [
       { re: /amazon\/B0054U8UGW\?s=reviews-best-ferret-cage/, label: 'existing Ferret Nation / Critter Nation amazon-brand hop kept (do not re-ship a new query)' },
-      { re: /amazon-brand\/prevue\+feisty\+ferret\+cage\?s=reviews-best-ferret-cage/, label: 'existing Prevue Feisty amazon-brand hop kept (do not re-ship a new query)' },
-      { re: /amazon-brand\/kaytee\+multi\+level\+ferret\+home\?s=reviews-best-ferret-cage/, label: 'existing Kaytee Multi-Level amazon-brand hop kept (do not re-ship a new query)' },
+      { re: /amazon\/B000QFMYWQ\?s=reviews-best-ferret-cage/, label: 'existing Prevue Feisty amazon-brand hop kept (do not re-ship a new query)' },
+      { re: /amazon\/B008FONT2Y\?s=reviews-best-ferret-cage/, label: 'existing Kaytee Multi-Level amazon-brand hop kept (do not re-ship a new query)' },
       { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
