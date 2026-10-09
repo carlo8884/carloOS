@@ -39,7 +39,7 @@ const FAQS = [
 export default function CosequinVsPlatinumGuidePage() {
   return (
     <ArticleLayout
-      priceAsOf="2026-10-08"
+      priceAsOf="2026-10-09"
       siteId="horses-com"
       schema={schema}
       hero={{
