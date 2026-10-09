@@ -423,7 +423,7 @@ export default function BestEquineSupplementsPage() {
                 </tbody>
               </table>
             </div>
-            <ComparisonFoot updated="2026-10-08" />
+            <ComparisonFoot updated="2026-10-09" />
             <p>Hoof, calming, and weight-gain rows in the category table name products that do not have their own review cards here. Use those rows as a map, not as a reviewed pick.</p>
 
             <h2>What to Avoid</h2>

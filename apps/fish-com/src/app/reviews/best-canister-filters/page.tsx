@@ -129,7 +129,7 @@ export default function BestCanisterFiltersPage() {
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-08" />
+              <ComparisonFoot updated="2026-10-09" />
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Which canister fits</h2>
               <FAQAccordion items={[
                 {
