@@ -22,6 +22,7 @@ import {
   resolveHopTarget,
   SITES,
 } from './live-link-sweep.mjs'
+import { renderFirstScreenAudit } from './amazon-search-audit.mjs'
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '../..')
 
@@ -292,6 +293,7 @@ export function renderAmazonSweep({ checkedAt, sites, searches }) {
       lines.push('')
     }
   }
+  lines.push(...renderFirstScreenAudit())
   lines.push('## Replacements')
   lines.push('')
   lines.push('none recorded by this job')

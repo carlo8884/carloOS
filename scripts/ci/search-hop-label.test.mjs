@@ -3,7 +3,7 @@ import { readFileSync } from 'node:fs'
 import { test } from 'node:test'
 import { labelsForSku, searchHopLabelProblems } from './search-hop-label.mjs'
 
-test('the eight searches do not use product-page wording', () => {
+test('the mismatched searches do not use product-page wording', () => {
   const problems = searchHopLabelProblems()
   assert.deepEqual(problems, [])
 })

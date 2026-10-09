@@ -87,8 +87,8 @@ function catCalorieNext(stageLabel: string): { guideHref: string; guideLabel: st
     return {
       guideHref: '/tools/cat-body-condition-score',
       guideLabel: 'Check the number against body condition',
-      hopHref: '/go/amazon-brand/measured+cat+food?s=tools-cat-calorie-calculator',
-      hopLabel: 'Browse measured cat food on Amazon →',
+      hopHref: '/go/amazon-brand/cat+food+measuring+scoop+grams?s=tools-cat-calorie-calculator',
+      hopLabel: 'Search Amazon for a gram measuring spoon',
     }
   }
   return {

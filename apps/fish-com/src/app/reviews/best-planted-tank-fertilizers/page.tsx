@@ -11,7 +11,7 @@ const flourish = buildProductSchema({ name: 'Seachem Flourish Comprehensive', de
 const allSchemas = combineSchemas(schema, easyGreen, flourish)
 
 const PICKS = [
-  { label: 'Best Overall', name: 'Easy Green (Aquarium Co-Op)', subtitle: 'All-in-one · Simple dosing · Works for most setups', href: '#easy-green', pickHop: '/go/amazon-brand/aquarium+co-op+easy+green+fertilizer?s=reviews-best-planted-tank-fertilizers' },
+  { label: 'Best Overall', name: 'Easy Green (Aquarium Co-Op)', subtitle: 'All-in-one · Simple dosing · Works for most setups', href: '#easy-green', pickHop: '/go/amazon-brand/aquarium+co-op+easy+green+fertilizer?s=reviews-best-planted-tank-fertilizers', pickShopLabel: 'Search Amazon for Easy Green' },
   { label: 'Best Trace Elements', name: 'Seachem Flourish', subtitle: 'Comprehensive micronutrients · Widely available', href: '#flourish' },
   { label: 'Best for High-Tech', name: 'NilocG Thrive', subtitle: 'High-dose · CO2 setups · Serious planted tanks', href: '#nilocg' },
   { label: 'Best Root Tabs', name: 'Aquarium Co-Op Easy Root Tabs', subtitle: 'Heavy root feeders · Substrate nutrients', href: '#root-tabs' },
@@ -34,7 +34,7 @@ export default function BestPlantedFertilizersPage() {
         <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">Aquarium Co-Op Easy Green is the top planted-tank fertilizer because the dosing is simple and it covers macros and micros.</p>
         <PriceAsOf date="2026-10-05" tone="dark" />
         <div data-fold="offer">
-          <PrimaryHop href='/go/amazon-brand/aquarium+co-op+easy+green+fertilizer?s=reviews-best-planted-tank-fertilizers' label='Check price of Aquarium Co-Op Easy Green fertilizer on Amazon' />
+          <PrimaryHop href='/go/amazon-brand/aquarium+co-op+easy+green+fertilizer?s=reviews-best-planted-tank-fertilizers' label='Search Amazon for Easy Green' />
         <HopDisclosure tone="on-dark" siteId="fish-com" href="/go/amazon-brand/aquarium+co-op+easy+green+fertilizer?s=reviews-best-planted-tank-fertilizers" />
         </div>
         <EmailCapture
@@ -79,7 +79,7 @@ export default function BestPlantedFertilizersPage() {
               nextLabel="Size CO2 before you pick a high-tech dose"
               nextBlurb="The callout is the macro/micro rule — low-tech with fish waste usually needs micros; high-tech CO2 tanks burn macros faster. The CO2 calculator is the drop-checker target for the high-tech case. The hop below is the same Easy Green search already on this page."
               resourceHref="/go/amazon-brand/aquarium+co-op+easy+green+fertilizer?s=reviews-best-planted-tank-fertilizers"
-              resourceLabel="Browse Aquarium Co-Op Easy Green planted-tank fertilizer on Amazon →"
+              resourceLabel="Search Amazon for Easy Green"
             />
             <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/aquarium+co-op+easy+green+fertilizer?s=reviews-best-planted-tank-fertilizers", "/go/amazon-brand/seachem+flourish+comprehensive?s=reviews-best-planted-tank-fertilizers", "/go/amazon/B01M20WCI5?s=reviews-best-planted-tank-fertilizers"]} />
             <ReviewCard id="easy-green" badge="Best Overall" name="Easy Green All-in-One Fertilizer" subtitle="Aquarium Co-Op · Simple weekly dosing · Covers most planted tanks" winner
@@ -89,7 +89,7 @@ export default function BestPlantedFertilizersPage() {
               cons={['Online only (Aquarium Co-Op)', 'High-tech CO2 setups may need supplemental macros', 'Not available in local fish stores']}
               price="$15–25"
               priceNote="dated 2026-10-05."
-              ctaText="Shop Aquarium Co-Op Easy Green fertilizer on Amazon →"
+              ctaText="Search Amazon for Easy Green"
               ctaHref="/go/amazon-brand/aquarium+co-op+easy+green+fertilizer?s=reviews-best-planted-tank-fertilizers"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="easy-green-fertilizer"
@@ -136,7 +136,7 @@ export default function BestPlantedFertilizersPage() {
                   <tbody>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">One bottle for a low- or medium-tech planted tank</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#easy-green" className="text-brand-primary">Easy Green</a><TableShopLink href={"/go/amazon-brand/aquarium+co-op+easy+green+fertilizer?s=reviews-best-planted-tank-fertilizers"} product={"Easy Green"} /></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#easy-green" className="text-brand-primary">Easy Green</a><TableShopLink href={"/go/amazon-brand/aquarium+co-op+easy+green+fertilizer?s=reviews-best-planted-tank-fertilizers"} product={"Easy Green"} label="Search Amazon for Easy Green" /></td>
                       <td className="p-3 text-brand-text-mid">Best Overall. 1 pump per 10 gallons weekly. Macros and micros. $15–25</td>
                       <td className="p-3 text-brand-text-mid">You need it from a local fish store. The card says Aquarium Co-Op online only. High-tech CO2 tanks may need extra macros</td>
                     </tr>

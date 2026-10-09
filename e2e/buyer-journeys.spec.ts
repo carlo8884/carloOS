@@ -8,10 +8,12 @@ type Journey = {
   startHeading: RegExp
   link: string | RegExp
   comparison: RegExp
-  hop: string
-  hopIncludes: string[]
+  hop?: string
+  hopIncludes?: string[]
   /** Unset partner. The comparison shows a note, not a live hop. */
   held?: boolean
+  /** The comparison dropped this search because the first result was the wrong product. */
+  droppedSearch?: string
 }
 
 const amazon = (keyword: string): string[] => ['https://amazon.com/s?k=', `tag=${AMAZON_TAG}`, keyword]
@@ -91,8 +93,7 @@ const JOURNEYS: Record<string, Journey[]> = {
       startHeading: /Cosequin ASU Plus or Platinum/,
       link: 'joint-supplement review',
       comparison: /\/supplements\/joint-supplements\/?$/,
-      hop: '/go/amazon-brand/platinum+performance+CJ+joint+supplement?s=supplements-joint-supplements',
-      hopIncludes: amazon('platinum'),
+      droppedSearch: 'platinum+performance+CJ',
     },
     {
       name: 'pad guide to pad review',
@@ -185,7 +186,10 @@ for (const width of [375, 1280]) {
         expect(overflow, 'horizontal overflow').toBeLessThanOrEqual(1)
         await expect(page.locator('body')).not.toContainText(/\bhop\b/i)
 
-        if (journey.held) {
+        if (journey.droppedSearch) {
+          await expect(page.locator(`a[href*="${journey.droppedSearch}"]`)).toHaveCount(0)
+          await expect(page.locator('[data-partner-held="smartpak"]')).toBeVisible()
+        } else if (journey.held) {
           const note = page.locator('[data-primary-hop="held"]')
           await expect(note).toBeVisible()
           await expect(page.locator('[data-primary-hop] a')).toHaveCount(0)
@@ -198,19 +202,21 @@ for (const width of [375, 1280]) {
             )
           }
         } else {
+        const hopHref = journey.hop ?? ''
+        const hopIncludes = journey.hopIncludes ?? []
         const hop = page.locator('[data-primary-hop] a')
         await expect(hop).toBeVisible()
-        await expect(hop).toHaveAttribute('href', journey.hop)
+        await expect(hop).toHaveAttribute('href', hopHref)
         const box = await hop.boundingBox()
         expect(box, 'primary hop box').toBeTruthy()
         expect(box!.x).toBeGreaterThanOrEqual(0)
         expect(box!.x + box!.width).toBeLessThanOrEqual(width + 1)
 
-        if (journey.hop.startsWith('/')) {
-          await expectHop(page.request, journey.hop, journey.hopIncludes)
+        if (hopHref.startsWith('/')) {
+          await expectHop(page.request, hopHref, hopIncludes)
         } else {
-          expect(journey.hop, 'unset consult href').not.toContain('PLACEHOLDER')
-          for (const part of journey.hopIncludes) expect(journey.hop).toContain(part)
+          expect(hopHref, 'unset consult href').not.toContain('PLACEHOLDER')
+          for (const part of hopIncludes) expect(hopHref).toContain(part)
         }
         }
       })

@@ -69,13 +69,18 @@ test('blanket size uses the review inches, and other lengths use the existing wi
   assert.equal(roundBlanketInches(82.6), 84)
   assert.equal(roundBlanketInches(40), 48)
   assert.equal(roundBlanketInches(100), 90)
-  for (const size of [75, 78, 81, 84]) {
+  for (const size of [75, 78]) {
     const pick = blanketPick(size, 'tools-horse-blanket-size-calculator')
-    assert.match(pick.href, new RegExp(`${size}\\+inch`))
-    assert.match(pick.label, /Rambo Original/)
+    assert.match(pick.href, new RegExp(`turnout\\+blanket\\+${size}\\+inch`))
+    assert.match(pick.label, /Search Amazon for/)
+  }
+  for (const size of [81, 84]) {
+    const pick = blanketPick(size, 'tools-horse-blanket-size-calculator')
+    assert.equal(pick.href, '/reviews/best-winter-horse-blankets')
+    assert.match(pick.label, /winter blanket review/)
   }
   const other = blanketPick(69, 'tools-horse-weight-calculator')
-  assert.match(other.href, /amazon-brand\/winter\+horse\+blanket\?s=tools-horse-blanket-size-calculator/)
+  assert.match(other.href, /amazon-brand\/waterproof\+turnout\+horse\+blanket\+winter\?s=tools-horse-blanket-size-calculator/)
   assert.doesNotMatch(other.href, /smartpak/)
   assert.match(other.detail, /69 inches/)
   assert.match(other.detail, /does not print/)
@@ -179,7 +184,8 @@ test('horse age senior uses the existing senior-feed search', () => {
 
 test('cat food grams follow the calorie page searches', () => {
   assert.match(catFoodAmountPick('Weight loss (vet-supervised)', 40).href, /kitchen\+gram\+scale/)
-  assert.match(catFoodAmountPick('Kitten', 80).href, /measured\+cat\+food/)
+  assert.match(catFoodAmountPick('Kitten', 80).href, /cat\+food\+measuring\+scoop\+grams/)
+  assert.match(catFoodAmountPick('Kitten', 80).label, /Search Amazon for/)
   assert.match(catFoodAmountPick('Neutered indoor adult', 55).href, /slow\+feeder\+cat\+bowl/)
   assert.match(catFoodAmountPick('Kitten', 80).detail, /80 grams/)
 })
@@ -187,7 +193,7 @@ test('cat food grams follow the calorie page searches', () => {
 test('horse water switches bucket only when the stall can freeze', () => {
   const open = horseWaterPick(false, '5.0', '10.0')
   const frozen = horseWaterPick(true, '5.0', '10.0')
-  assert.match(open.href, /flat\+back\+horse\+water\+bucket/)
+  assert.equal(open.href, '/nutrition/water-requirements')
   assert.match(frozen.href, /heated\+horse\+water\+bucket/)
   assert.match(open.detail, /5\.0–10\.0/)
   assert.match(frozen.detail, /does not raise the band/)
@@ -195,7 +201,7 @@ test('horse water switches bucket only when the stall can freeze', () => {
 
 test('live rock keeps one starter kit and states the pounds', () => {
   const pick = liveRockPick(40, '40', '60')
-  assert.match(pick.href, /saltwater\+reef\+tank\+starter\+kit\?s=tools-live-rock-calculator/)
+  assert.equal(pick.href, '/setup/saltwater-tank-setup')
   assert.match(pick.detail, /40-gallon/)
   assert.match(pick.detail, /40–60 lb/)
 })
@@ -211,7 +217,7 @@ test('ferret label results stay on the review because carbohydrate is not printe
 
 test('body-length blanket pick does not treat the weight as the size', () => {
   const pick = blanketPick(78, 'tools-horse-weight-calculator', 'body-length')
-  assert.match(pick.href, /78\+inch/)
+  assert.match(pick.href, /turnout\+blanket\+78\+inch/)
   assert.match(pick.detail, /does not set a blanket size/)
   assert.match(pick.detail, /chest-to-tail/)
 })

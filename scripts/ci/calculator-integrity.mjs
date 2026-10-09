@@ -5548,8 +5548,8 @@ const CALCULATORS = [
     mustInclude: [
       { re: /<JourneyNext/, label: 'journey next-step after the calculator' },
       { re: /nextHref="\/tack\/blanket-weights"/, label: 'next step is fill weight, not a shop dump' },
-      { re: /resourceHref="\/go\/amazon-brand\/winter\+horse\+blanket\?s=tools-horse-blanket-size-calculator"/, label: 'journey hop reuses the existing winter blanket search' },
-      { re: /amazon-brand\/winter\+horse\+blanket\?s=tools-horse-blanket-size-calculator/, label: 'winter horse blanket search hop' },
+      { re: /resourceHref="\/go\/amazon-brand\/waterproof\+turnout\+horse\+blanket\+winter\?s=tools-horse-blanket-size-calculator"/, label: 'journey hop reuses the tightened winter turnout search' },
+      { re: /amazon-brand\/waterproof\+turnout\+horse\+blanket\+winter\?s=tools-horse-blanket-size-calculator/, label: 'winter turnout blanket search hop' },
       { re: /amazon-brand\/horse\+turnout\+sheet\?s=tools-horse-blanket-size-calculator/, label: 'turnout sheet search hop' },
       { re: /amazon-brand\/horse\+stable\+blanket\?s=tools-horse-blanket-size-calculator/, label: 'stable blanket search hop' },
       { re: /amazon-brand\/horse\+measuring\+tape\?s=tools-horse-blanket-size-calculator/, label: 'measuring tape search hop (same query as horse-weight-calculator)' },
@@ -6213,7 +6213,6 @@ const CALCULATORS = [
     id: 'ferret · bedding-and-litter-types hops',
     file: 'apps/ferret-com/src/app/care/bedding-and-litter-types/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/ferret\+sleep\+sack\+fleece\?s=care-bedding-and-litter-types/, label: 'ferret sleep-sack / cube-bed search hop (same query as cage-size calculator; matches on-page enclosed fleece pouch copy)' },
       { re: /amazon-brand\/ferret\+hammock\?s=care-bedding-and-litter-types/, label: 'ferret hammock search hop (same query as ferret body-condition score; matches on-page elevated fabric-sling copy)' },
       { re: /amazon-brand\/ferret\+fleece\+liner\?s=care-bedding-and-litter-types/, label: 'ferret fleece-liner search hop (matches on-page machine-washable cage-level liner copy)' },
       { re: /amazon-brand\/recycled\+paper\+pellet\+litter\?s=care-bedding-and-litter-types/, label: 'recycled paper-pellet litter search hop (matches on-page default-safe litter copy)' },
@@ -6225,8 +6224,9 @@ const CALCULATORS = [
       { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
       { re: /amazonHref=["'][^"']*(ibuprofen|acetaminophen|naproxen|aspirin|medication|medicine|prescription|cedar|pine\+shavings|clumping\+clay)/, label: 'never hop medications, cedar, pine shavings, or clumping clay — this page is educational bedding/litter gear, not a drug or hazardous-substrate list' },
+      { re: /ferret\+sleep\+sack\+fleece/, label: 'sleep-sack shop button stays off; the search opens a guinea pig sack' },
     ],
-    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete bedding/litter shopping-list offer; every gear CTA is an amazon-brand category search matching on-page bedding and litter copy (fleece sleep sacks / cube beds, hammocks, fleece liners, recycled paper-pellet litter, corner litter pan), never a placeholder ASIN, a medication hop, cedar, pine shavings, or clumping clay. Chewy stays omitted so empty buttons stay hidden.',
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete bedding/litter shopping-list offer; hammock, fleece liner, paper pellet, and corner pan stay. The sleep-sack copy stays and the shop button is off. Never a placeholder ASIN, a medication hop, cedar, pine shavings, or clumping clay. Chewy stays omitted so empty buttons stay hidden.',
   },
   {
     id: 'ferret · ear-cleaning hops',
@@ -7496,7 +7496,7 @@ const CALCULATORS = [
     id: 'vets · cat-calorie-calculator hops',
     file: 'apps/vets-co/src/app/tools/cat-calorie-calculator/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/measured\+cat\+food\?s=tools-cat-calorie-calculator/, label: 'measured cat food search hop' },
+      { re: /amazon-brand\/cat\+food\+measuring\+scoop\+grams\?s=tools-cat-calorie-calculator/, label: 'gram measuring spoon search hop' },
       { re: /amazon-brand\/kitchen\+gram\+scale\?s=tools-cat-calorie-calculator/, label: 'kitchen gram scale search hop' },
       { re: /amazon-brand\/slow\+feeder\+cat\+bowl\?s=tools-cat-calorie-calculator/, label: 'slow-feeder cat bowl search hop' },
       { re: /amazon-brand\/interactive\+cat\+feeder\?s=tools-cat-calorie-calculator/, label: 'interactive cat feeder search hop' },
@@ -11392,7 +11392,7 @@ const CALCULATORS = [
     mustInclude: [
       { re: /amazon-brand\/full\+page\+magnifier\?s=insurance-reading-the-fine-print/, label: 'full-page-magnifier search hop (matches on-page orthopedic waiting-period / sample-policy copy; unique vs assorted+highlighter+set / removable+page+flags / self+inking+date+stamp)' },
       { re: /amazon-brand\/adjustable\+copyholder\?s=insurance-reading-the-fine-print/, label: 'adjustable-copyholder search hop (matches on-page side-by-side sample-policy / payout-model copy; unique vs letter+size+file+jacket / kraft+two+pocket+folder / clipboard+with+storage)' },
-      { re: /amazon-brand\/line\+reader\+strip\?s=insurance-reading-the-fine-print/, label: 'line-reader-strip search hop (matches on-page exclusions-list copy; unique vs 3x3+sticky+notes / ruled+index+cards / letter+size+sheet+protectors)' },
+      { re: /amazon-brand\/reading\+guide\+strip\+overlay\+line\+reader\?s=insurance-reading-the-fine-print/, label: 'reading-guide strip search hop (matches on-page exclusions-list copy; unique vs 3x3+sticky+notes / ruled+index+cards / letter+size+sheet+protectors)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
@@ -11664,9 +11664,7 @@ const CALCULATORS = [
       { re: /resourceHref="\/go\/amazon\/B003I5UC0W\?s=reviews-best-aquarium-heaters"/, label: 'journey hop reuses the existing Eheim Jager search' },
       { re: /amazon\/B003I5UC0W\?s=reviews-best-aquarium-heaters/, label: 'existing Eheim-Jager amazon-brand hop kept (do not re-ship a new query)' },
       { re: /amazon-brand\/hydor\+inline\+heater\?s=reviews-best-aquarium-heaters/, label: 'existing Hydor-Inline amazon-brand hop kept (do not re-ship a new query)' },
-      { re: /amazon-brand\/cobalt\+neo-therm\+pro\?s=reviews-best-aquarium-heaters/, label: 'Cobalt card keeps a search because the first result is not Neo-Therm' },
       { re: /Search Amazon for Hydor Inline/, label: 'Hydor search hop says it is a search' },
-      { re: /Search Amazon for Cobalt Neo-Therm/, label: 'Cobalt search hop says it is a search' },
       { re: /amazon\/B07L1M7454\?s=reviews-best-aquarium-heaters/, label: 'existing Aqueon-Pro amazon-brand hop kept (do not re-ship a new query)' },
       { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
@@ -11676,9 +11674,10 @@ const CALCULATORS = [
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
       { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
       { re: /laminated\+|fridge\+|handbook/, label: 'no invented kitchen hops on the journey strip' },
-      { re: /Shop Hydor|Browse Hydor|Shop Cobalt|Browse Cobalt|Check price of the Cobalt/, label: 'Hydor and Cobalt searches do not use product-page wording' },
+      { re: /Shop Hydor|Browse Hydor/, label: 'Hydor search does not use product-page wording' },
+      { re: /cobalt\+neo-therm\+pro/, label: 'Cobalt shop button stays off; the search opens a thermometer' },
     ],
-    why: '2026-09-08 journeys: after the right-size wattage rule, next step is heater-wattage + the existing Eheim Jager hop. The Cobalt and Hydor buttons stay searches and say so. Aqueon Pro stays the verified product page. No new Amazon query.',
+    why: '2026-09-08 journeys: after the right-size wattage rule, next step is heater-wattage + the existing Eheim Jager hop. Hydor stays a search and says so. The Cobalt card keeps its copy and has no shop button. Aqueon Pro stays the verified product page. No new Amazon query.',
   },
   {
     id: 'fish · best-aquarium-lighting hops',
@@ -11727,12 +11726,7 @@ const CALCULATORS = [
     mustInclude: [
       { re: /<JourneyNext/, label: 'journey next-step after the bigger-is-more-forgiving size rule' },
       { re: /nextHref="\/setup\/aquarium-cycling-guide"/, label: 'next step is the cycling guide, not a shop dump' },
-      { re: /resourceHref="\/go\/amazon-brand\/aqueon\+20\+gallon\+long\+aquarium\?s=reviews-best-nano-tanks"/, label: 'journey hop reuses the existing Aqueon 20-long search' },
       { re: /amazon\/B0089E5VLC\?s=reviews-best-nano-tanks/, label: 'existing Fluval-Spec-V amazon-brand hop kept (do not re-ship a new query)' },
-      { re: /amazon-brand\/aqueon\+10\+gallon\+aquarium\?s=reviews-best-nano-tanks/, label: 'existing Aqueon-10 amazon-brand hop kept (do not re-ship a new query)' },
-      { re: /amazon-brand\/aqueon\+20\+gallon\+long\+aquarium\?s=reviews-best-nano-tanks/, label: 'existing Aqueon-20-Long amazon-brand hop kept (do not re-ship a new query)' },
-      { re: /Search Amazon for Aqueon 10/, label: 'Aqueon 10 search hop says it is a search' },
-      { re: /Search Amazon for Aqueon 20-gallon long/, label: 'Aqueon 20-long search hop says it is a search' },
       { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
@@ -11741,9 +11735,9 @@ const CALCULATORS = [
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
       { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
       { re: /laminated\+|fridge\+|handbook/, label: 'no invented kitchen hops on the journey strip' },
-      { re: /Shop Aqueon|Browse Aqueon/, label: 'Aqueon searches do not use product-page wording' },
+      { re: /aqueon\+10\+gallon\+aquarium|aqueon\+20\+gallon\+long\+aquarium/, label: 'Aqueon 10 and 20-long shop buttons stay off; those searches miss the tank' },
     ],
-    why: '2026-09-08 journeys: after the bigger-is-more-forgiving size rule, next step is the cycling guide + the existing Aqueon 20-long hop. Review cards stay below. No invented kitchen hops. No new Amazon query. No species headcount.',
+    why: '2026-09-08 journeys: after the bigger-is-more-forgiving size rule, next step is the cycling guide. The Aqueon cards keep their copy and have no shop button. Fluval Spec V stays the verified product page. No new Amazon query. No species headcount.',
   },
   {
     id: 'fish · best-planted-tank-fertilizers hops',
@@ -12662,7 +12656,6 @@ const CALCULATORS = [
     id: 'horses · best-equine-supplements hops',
     file: 'apps/horses-com/src/app/reviews/best-equine-supplements/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/platinum\+performance\+equine\+wellness\?s=reviews-best-equine-supplements/, label: 'existing Platinum Performance amazon-brand hop kept (do not re-ship a new query)' },
       { re: /amazon\/B0037PL6QW\?s=reviews-best-equine-supplements/, label: 'existing KER EO-3 amazon-brand hop kept (do not re-ship a new query)' },
       { re: /amazon\/B07DM2314W\?s=reviews-best-equine-supplements/, label: 'existing Equithrive Original amazon-brand hop kept (do not re-ship a new query)' },
       { re: /amazon-brand\/standlee\+premium\+forage\+pellets\?s=reviews-best-equine-supplements/, label: 'existing Standlee forage amazon-brand hop kept (do not re-ship a new query)' },
@@ -12673,14 +12666,14 @@ const CALCULATORS = [
       { re: /ctaHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
       { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /platinum\+performance\+equine\+wellness/, label: 'Platinum wellness shop button stays off; the search opens a dog formula' },
     ],
-    why: 'Money path leftover after #1240: dog.com slow-feeder review under-hero is on main. Dog.com /reviews/* Amazon leftovers are exhausted. Keep the existing sidebar capture and the already-hopped Platinum / KER EO-3 / Equithrive / Standlee Amazon searches; add under-hero capture with a concrete equine-supplement-checklist offer matching on-page NASC / diagnose-first / Cosequin ASU / marine DHA-EPA / forage-first copy. Do not re-ship new queries. No new brand, no PLACEHOLDER. Chewy stays omitted so empty buttons stay hidden.',
+    why: 'Money path leftover after #1240: dog.com slow-feeder review under-hero is on main. Dog.com /reviews/* Amazon leftovers are exhausted. Keep the existing sidebar capture and the already-hopped KER EO-3 / Equithrive / Standlee Amazon searches. The Platinum card keeps its copy and has no shop button. No new brand, no PLACEHOLDER. Chewy stays omitted so empty buttons stay hidden.',
   },
   {
     id: 'horses · joint-supplements hops',
     file: 'apps/horses-com/src/app/supplements/joint-supplements/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/platinum\+performance\+CJ\+joint\+supplement\?s=supplements-joint-supplements/, label: 'existing Platinum CJ amazon-brand hop kept (do not re-ship a new query)' },
       { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
@@ -12688,8 +12681,9 @@ const CALCULATORS = [
       { re: /ctaHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
       { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /platinum\+performance\+CJ\+joint\+supplement/, label: 'Platinum CJ shop button stays off; the search opens a dog formula' },
     ],
-    why: 'Money path leftover after #1241: equine-supplement review under-hero is on main. Last remaining horses.com Amazon leftover (review/money pages). Keep the existing sidebar capture and the already-hopped Platinum CJ Amazon search; add under-hero capture with a concrete equine joint-supplement-checklist offer matching on-page diagnose-first / ASU / marine DHA-EPA / devil-claw FEI copy. Do not re-ship new queries. No new brand, no PLACEHOLDER. Chewy stays omitted so empty buttons stay hidden.',
+    why: 'Money path leftover after #1241: equine-supplement review under-hero is on main. The Platinum CJ card keeps its copy and has no shop button. HopDisclosure stays on the Cosequin SmartPak link already on the page. No new brand, no PLACEHOLDER. Chewy stays omitted so empty buttons stay hidden.',
   },
   {
     id: 'ferret · best-ferret-harness hops',
@@ -12807,8 +12801,6 @@ const CALCULATORS = [
     id: 'ferret · best-ferret-litter hops',
     file: 'apps/ferret-com/src/app/reviews/best-ferret-litter/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/compressed\+wood\+pellet\+litter\+heat\+treated\+non\+clumping\?s=reviews-best-ferret-litter/, label: 'existing heat-treated wood-pellet amazon-brand hop kept (do not re-ship a new query)' },
-      { re: /amazon-brand\/small\+animal\+grass\+pellet\+litter\+non\+clumping\?s=reviews-best-ferret-litter/, label: 'existing grass-pellet amazon-brand hop kept (do not re-ship a new query)' },
       { re: /chewy-brand\/recycled\+paper\+pellet\+litter\+non\+clumping\?s=reviews-best-ferret-litter/, label: 'Chewy recycled paper-pellet search kept (Yesterday\'s News brand query retired)' },
       { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
@@ -12816,8 +12808,9 @@ const CALCULATORS = [
       { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
       { re: /ctaHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
       { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /compressed\+wood\+pellet\+litter\+heat\+treated\+non\+clumping|small\+animal\+grass\+pellet\+litter\+non\+clumping/, label: 'wood and grass pellet shop buttons stay off; those searches open cat litter' },
     ],
-    why: 'Money path leftover after #1249: ferret leash-and-harness under-hero is on main. Preferred ferret Amazon leftovers and fish/vets/dog/horses Amazon leftovers are exhausted; this is the remaining ferret review leftover (litter was deprioritized until now). Keep the existing sidebar capture, the already-hopped wood / grass Amazon searches, and the product-specific Yesterday\'s News Chewy hop; add under-hero capture with a concrete ferret-litter-checklist offer matching on-page no-clump / low-dust / paper-default / heat-treated-wood copy. Do not re-ship new queries. No new brand, no PLACEHOLDER. Enrichment stays deprioritized; ferret aging stays held.',
+    why: 'Money path leftover after #1249: ferret leash-and-harness under-hero is on main. The paper-pellet Chewy hop stays. The wood and grass cards keep their copy and have no shop button. No new brand, no PLACEHOLDER. Enrichment stays deprioritized; ferret aging stays held.',
   },
   {
     id: 'ferret · diy-enrichment-toys hops',

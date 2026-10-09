@@ -102,7 +102,7 @@ const appSchema = {
     'DER factors for indoor vs outdoor, neuter status, and life stage',
     'Optional cups-per-day from the food-label kcal/cup',
     'Vet-supervised weight-loss factor (0.8) with hepatic-lipidosis caution',
-    'Shoppable portioning kit via Amazon category searches (measured cat food, kitchen gram scale, slow-feeder bowl, interactive feeder, low-calorie treats)',
+    'Shoppable portioning kit via Amazon category searches (gram measuring spoon, kitchen gram scale, slow-feeder bowl, interactive feeder, low-calorie treats)',
   ],
   publisher: { '@type': 'Organization', name: 'Vets.co Editorial', url: 'https://vets.co' },
 }
@@ -218,7 +218,7 @@ export default function CatCalorieCalculatorPage() {
           ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER. */}
       <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <div className="max-w-2xl">
-          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/measured+cat+food?s=tools-cat-calorie-calculator", "/go/amazon-brand/kitchen+gram+scale?s=tools-cat-calorie-calculator", "/go/amazon-brand/slow+feeder+cat+bowl?s=tools-cat-calorie-calculator", "/go/amazon-brand/interactive+cat+feeder?s=tools-cat-calorie-calculator", "/go/amazon-brand/low+calorie+cat+treats?s=tools-cat-calorie-calculator"]} />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/cat+food+measuring+scoop+grams?s=tools-cat-calorie-calculator", "/go/amazon-brand/kitchen+gram+scale?s=tools-cat-calorie-calculator", "/go/amazon-brand/slow+feeder+cat+bowl?s=tools-cat-calorie-calculator", "/go/amazon-brand/interactive+cat+feeder?s=tools-cat-calorie-calculator", "/go/amazon-brand/low+calorie+cat+treats?s=tools-cat-calorie-calculator"]} />
           <div className="mt-4 rounded-xl border border-brand-border bg-brand-white p-5">
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
               Shop portions
@@ -226,8 +226,8 @@ export default function CatCalorieCalculatorPage() {
             <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/measured+cat+food?s=tools-cat-calorie-calculator"
-                amazonLabel="Browse measured cat food on Amazon →"
+                amazonHref="/go/amazon-brand/cat+food+measuring+scoop+grams?s=tools-cat-calorie-calculator"
+                amazonLabel="Search Amazon for a gram measuring spoon"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/kitchen+gram+scale?s=tools-cat-calorie-calculator"

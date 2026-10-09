@@ -12,7 +12,7 @@ import { HeldQuoteNext } from './HeldQuoteNext'
 const EARNING_PICK_SITES = new Set(['dog-com', 'fish-com', 'horses-com', 'vets-co', 'ferret-com'])
 
 /** Names the product and the retailer the pick hop actually opens. */
-function QuickPickShopLink({ href, name, quietUntilTag = false }: { href?: string; name: string; quietUntilTag?: boolean }) {
+function QuickPickShopLink({ href, name, shopLabel, quietUntilTag = false }: { href?: string; name: string; shopLabel?: string; quietUntilTag?: boolean }) {
   if (!href || !name.trim()) return null
   if (!EARNING_PICK_SITES.has(process.env.NEXT_PUBLIC_SITE_ID ?? '')) return null
   const hop = liveAnchorHref(href)
@@ -34,7 +34,7 @@ function QuickPickShopLink({ href, name, quietUntilTag = false }: { href?: strin
       rel="sponsored noopener"
       className="relative z-10 ml-2 text-2xs font-semibold normal-case tracking-normal text-brand-dark underline underline-offset-2"
     >
-      {`Check price of ${built.label}`}
+      {shopLabel || `Check price of ${built.label}`}
     </a>
   )
 }
@@ -309,6 +309,8 @@ interface QuickPickItem {
   href: string
   /** Existing product hop for the Best Overall card. Other labels ignore it. */
   pickHop?: string
+  /** Visible quick-pick wording when the hop is a search, not a product page. */
+  pickShopLabel?: string
 }
 
 interface QuickPicksProps {
@@ -336,7 +338,7 @@ export function QuickPicks({ items, title = 'Jump to Your Pick', embedded = fals
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-1.5 break-words">
               {item.emoji} {item.label}
               <HowWePickLink label={item.label} />
-              <QuickPickShopLink href={item.pickHop} name={item.name} quietUntilTag={quietUntilTag} />
+              <QuickPickShopLink href={item.pickHop} name={item.name} shopLabel={item.pickShopLabel} quietUntilTag={quietUntilTag} />
             </div>
             <div className="pointer-events-none">
               <div className="text-sm font-bold text-brand-dark mb-0.5">{item.name}</div>

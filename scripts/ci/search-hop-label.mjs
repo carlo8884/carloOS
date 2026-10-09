@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * A /go/amazon-brand/ search is not a product page. These eight searches
+ * A /go/amazon-brand/ search is not a product page. These searches
  * still open a different first result, so the button and the text next to
  * it must say "Search Amazon for …". Shop, Browse, and Check price stay
  * legal on a verified /go/amazon/<ASIN> hop.
@@ -19,9 +19,10 @@ export const SEARCH_HOPS = [
   { sku: 'tractive+gps+dog+tracker', label: 'Search Amazon for Tractive GPS' },
   { sku: 'seachem+flourish+comprehensive', label: 'Search Amazon for Seachem Flourish Comprehensive' },
   { sku: 'hydor+inline+heater', label: 'Search Amazon for Hydor Inline' },
-  { sku: 'aqueon+10+gallon+aquarium', label: 'Search Amazon for Aqueon 10' },
-  { sku: 'aqueon+20+gallon+long+aquarium', label: 'Search Amazon for Aqueon 20-gallon long' },
-  { sku: 'cobalt+neo-therm+pro', label: 'Search Amazon for Cobalt Neo-Therm' },
+  { sku: 'aquarium+co-op+easy+green+fertilizer', label: 'Search Amazon for Easy Green' },
+  { sku: 'salifert+aquarium+test+kit', label: 'Search Amazon for Salifert' },
+  { sku: 'bluelab+ph+meter', label: 'Search Amazon for a Bluelab pH meter' },
+  { sku: 'ferret+h+style+harness+adjustable', label: 'Search Amazon for an H-style ferret harness' },
 ]
 
 const PRODUCT_PAGE = /\bShop\b|\bBrowse\b|\bCheck price\b|product page|opens the /i
@@ -83,7 +84,7 @@ function main() {
     for (const problem of problems) console.error('  ' + problem)
     process.exit(1)
   }
-  console.log('PASS: the eight mismatched searches say Search Amazon for, not a product page.')
+  console.log('PASS: the mismatched searches say Search Amazon for, not a product page.')
 }
 
 if (process.argv[1] && process.argv[1].endsWith('search-hop-label.mjs')) main()

@@ -198,7 +198,7 @@ export default function BeddingAndLitterTypesPage() {
               <tbody>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 text-brand-text-mid">An enclosed nest a ferret can crawl inside</td>
-                  <td className="p-3 font-bold text-brand-dark"><a href="/go/amazon-brand/ferret+sleep+sack+fleece?s=care-bedding-and-litter-types" className="text-brand-primary underline">Fleece sleep sack</a></td>
+                  <td className="p-3 font-bold text-brand-dark">Fleece sleep sack</td>
                   <td className="p-3 text-brand-text-mid">Sleep sacks best satisfy the burrowing drive. Wash weekly and retire the sack when seams fray</td>
                   <td className="p-3 text-brand-text-mid">Cedar, pine shavings, paper-pulp bedding, or loose terrycloth. Those are in the avoid list</td>
                 </tr>
@@ -229,19 +229,15 @@ export default function BeddingAndLitterTypesPage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-07" />
+          <ComparisonFoot updated="2026-10-09" />
 
-          <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/ferret+sleep+sack+fleece?s=care-bedding-and-litter-types", "/go/amazon-brand/ferret+hammock?s=care-bedding-and-litter-types", "/go/amazon-brand/ferret+fleece+liner?s=care-bedding-and-litter-types", "/go/amazon-brand/recycled+paper+pellet+litter?s=care-bedding-and-litter-types", "/go/amazon-brand/ferret+corner+litter+pan?s=care-bedding-and-litter-types"]} />
+          <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/ferret+hammock?s=care-bedding-and-litter-types", "/go/amazon-brand/ferret+fleece+liner?s=care-bedding-and-litter-types", "/go/amazon-brand/recycled+paper+pellet+litter?s=care-bedding-and-litter-types", "/go/amazon-brand/ferret+corner+litter+pan?s=care-bedding-and-litter-types"]} />
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop bedding and litter
             </div>
             <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
-              <ShopCtas
-                amazonHref="/go/amazon-brand/ferret+sleep+sack+fleece?s=care-bedding-and-litter-types"
-                amazonLabel="Browse fleece ferret sleep sacks on Amazon →"
-              />
               <ShopCtas
                 amazonHref="/go/amazon-brand/ferret+hammock?s=care-bedding-and-litter-types"
                 amazonLabel="Browse ferret hammocks on Amazon →"

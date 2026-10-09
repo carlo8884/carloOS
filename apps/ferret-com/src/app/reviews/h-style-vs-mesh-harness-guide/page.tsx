@@ -56,7 +56,7 @@ export default function HStyleVsMeshGuidePage() {
         publishedAt: 'October 2026',
         readTime: '6 min',
       }}
-      heroHop={<PrimaryHop href="/go/amazon-brand/ferret+h+style+harness+adjustable?s=reviews-h-style-vs-mesh-harness-guide" label="Browse adjustable H-style ferret harnesses on Amazon" />}
+      heroHop={<PrimaryHop href="/go/amazon-brand/ferret+h+style+harness+adjustable?s=reviews-h-style-vs-mesh-harness-guide" label="Search Amazon for an H-style ferret harness" />}
       heroExtra={<HopDisclosure siteId="ferret-com" href="/go/amazon-brand/ferret+h+style+harness+adjustable?s=reviews-h-style-vs-mesh-harness-guide" />}
       breadcrumbs={[
         { name: 'Home', href: '/' },

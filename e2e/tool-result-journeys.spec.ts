@@ -227,7 +227,7 @@ const JOURNEYS: Record<string, Journey[]> = {
         await page.locator('#hw-length').fill('66')
       },
       result: /Estimated weight/,
-      resultHop: 'winter+horse+blanket?s=tools-horse-blanket-size-calculator',
+      resultHop: 'waterproof+turnout+horse+blanket+winter?s=tools-horse-blanket-size-calculator',
       resultDestination: { host: 'amazon.com', product: ['winter', 'horse', 'blanket'], forbid: horseForbid },
       guide: 'read forage basics',
       guideUrl: /\/nutrition\/forage-basics\/?$/,

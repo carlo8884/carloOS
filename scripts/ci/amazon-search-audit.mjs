@@ -1,0 +1,137 @@
+/**
+ * One-time first-result audit, 2026-10-09.
+ * The Thursday sweep prints this record. It does not re-fetch these queries.
+ */
+export const FIRST_SCREEN_SEARCH_AUDIT = [
+  {"site": "dog-com", "query": "tractive gps dog tracker", "first": "Smart Dog GPS Tracker | Live Pet Tracker with Virtual Fence | Vital Signs Monitoring of Heart & Respiratory Rate | Bark Monitoring | Dog Collar Attachment (Blac", "class": "right-type", "action": "relabel", "note": "already says Search Amazon for Tractive GPS"},
+  {"site": "dog-com", "query": "northmate green interactive feeder", "first": "Company of Animals Green Large Slow Interactive Feeder for Dogs", "class": "named", "action": "kept"},
+  {"site": "dog-com", "query": "cosequin ds maximum strength", "first": "Nutramax Cosequin Dog Joint Supplement, MSM + Boswellia, Soft Chews, 60ct", "class": "right-type", "action": "relabel", "note": "already says Search Amazon for Cosequin DS"},
+  {"site": "fish-com", "query": "hikari bacto surge sponge filter", "first": "Aquarium Solutions® Bacto-Surge® High Density Foam Filter Kit for Aquariums, Small (Up to 40 Gallons)", "class": "named", "action": "kept"},
+  {"site": "fish-com", "query": "hydor inline heater", "first": "Aquarium External Heater in-Line Fish Tank External Heater 300W for Canister Filter", "class": "right-type", "action": "relabel", "note": "already says Search Amazon for Hydor Inline"},
+  {"site": "fish-com", "query": "aquarium co op easy green fertilizer", "first": "Thrive Planted Aquarium Fertilizer -All in One Planted Tank Liquid Fertilizers - Micro & Macro Nutrient Rich Food for Aquatic Plants - Highly Concentrated for 2", "class": "right-type", "action": "relabel", "note": "label now says Search Amazon for Easy Green"},
+  {"site": "fish-com", "query": "seachem flourish comprehensive", "first": "Flourish Freshwater Plant Supplement", "class": "right-type", "action": "relabel", "note": "already says Search Amazon for Seachem Flourish Comprehensive"},
+  {"site": "fish-com", "query": "hygger 957", "first": "Auto On Off LED Aquarium Light 48-55 Inches Dimmable 7 Colors Full Spectrum Fish Tank Light Fixture for Freshwater Planted Tank Build in Timer Daylight Moonligh", "class": "right-type", "action": "parked", "note": "lighting stays parked"},
+  {"site": "fish-com", "query": "kessil a360x", "first": "A360XE Tuna Blue Saltwater Reef Marine Aquarium LED Light", "class": "right-type", "action": "parked", "note": "lighting stays parked; first result is A360XE"},
+  {"site": "fish-com", "query": "salifert aquarium test kit", "first": "Phosphate Test Kit", "class": "right-type", "action": "relabel", "note": "label now says Search Amazon for Salifert"},
+  {"site": "fish-com", "query": "bluelab ph meter", "first": "Combo Meter for pH, Temperature & Conductivity in Water - Easy Calibration, Digital EC/TDS/PPM Tester for Hydroponics & Indoor Plants (METCOM)", "class": "right-type", "action": "relabel", "note": "label now says Search Amazon for a Bluelab pH meter"},
+  {"site": "horses-com", "query": "platinum performance equine wellness", "first": "Canine CJ | Complete Joint & Wellness Formula for Dogs | Omega-3, Glucosamine, MSM, Hyaluronic Acid & Antioxidants | Dog Supplement for Joint & Whole-Body | 2LB", "class": "wrong-type", "action": "dropped", "note": "tighten still missed; button removed, copy kept", "tightenedQuery": "platinum performance equine wellness horse", "tightenedFirst": "Canine CJ | Complete Joint & Wellness Formula for Dogs | Omega-3, Glucosamine, MSM, Hyaluronic Acid & Antioxidants | Dog Supplement"},
+  {"site": "horses-com", "query": "standlee premium forage pellets", "first": "Standlee Alfalfa & Timothy Pellets, Alfalfa & Timothy Horse Feed, 40 lbs", "class": "named", "action": "kept"},
+  {"site": "horses-com", "query": "quilted all purpose saddle pad", "first": "Dover Saddlery Quilted All-Purpose Saddle Pad", "class": "right-type", "action": "kept"},
+  {"site": "horses-com", "query": "horse brushing boots", "first": "Woof Wear Sport Brushing Boots Large Black", "class": "right-type", "action": "kept"},
+  {"site": "horses-com", "query": "nylon horse halter", "first": "Weaver Equine Nylon Horse Halter, Average Horse, Padded & Adjustable, 1 in", "class": "right-type", "action": "kept"},
+  {"site": "horses-com", "query": "anatomic english girth", "first": "Equinavia Saga Non Slip Dressage Girth, Contoured Horse Girth Design", "class": "right-type", "action": "kept"},
+  {"site": "horses-com", "query": "platinum performance CJ joint supplement", "first": "Canine CJ | Complete Joint & Wellness Formula for Dogs | Omega-3, Glucosamine, MSM, Hyaluronic Acid & Antioxidants | Dog Supplement for Joint & Whole-Body | 1LB", "class": "wrong-type", "action": "dropped", "note": "tighten still missed; button removed, copy kept", "tightenedQuery": "platinum performance CJ equine horse joint", "tightenedFirst": "Canine CJ | Complete Joint & Wellness Formula for Dogs | Omega-3, Glucosamine, MSM, Hyaluronic Acid & Antioxidants | Dog Supplement"},
+  {"site": "horses-com", "query": "horse saddle pad", "first": "Weaver Equine Wool Blend Felt Western Saddle Pad for Horses, 30\" x 30\"", "class": "right-type", "action": "kept"},
+  {"site": "horses-com", "query": "horse sheepskin half pad", "first": "Woolous Sheepskin Half Pad for English Saddle, Wool Fleece Horse Saddle Pad", "class": "right-type", "action": "kept"},
+  {"site": "horses-com", "query": "horse saddle shims", "first": "3-Pack Shock Absorbing Saddle Pad Shims 2 Sizes for Horseback Riding Equestrian Performance and Saddle Fit Comfort Adjustment,Replacement Memory Foam Shims for ", "class": "right-type", "action": "kept"},
+  {"site": "horses-com", "query": "horse girth cinch", "first": "Weaver Equine Weaver Leather Smart Felt-Lined Horse Cinch, Roll Snug Stainless Steel Buckle, Felt Lined Horse Girth with Poly Webbing, 5.25\" Wide", "class": "right-type", "action": "kept"},
+  {"site": "vets-co", "query": "pet first aid kit", "first": "Dog First Aid Kit - Vet-Approved Emergency Kit for Dogs & Cats - Essential", "class": "right-type", "action": "kept"},
+  {"site": "vets-co", "query": "digital pet thermometer", "first": "iProven Dog & Cat Thermometer for Fast and Accurate Fever Detection", "class": "right-type", "action": "kept"},
+  {"site": "vets-co", "query": "digital pet scale", "first": "Sponsored Ad - Greater Goods Wiggle-Proof Digital Pet Scale for Cats, Dogs & Small Animals", "class": "right-type", "action": "kept"},
+  {"site": "vets-co", "query": "pet calming aid", "first": "Calming Chews for Dogs - 180ct Dog Calming Chews Anxiety and Stress Relief", "class": "right-type", "action": "kept"},
+  {"site": "vets-co", "query": "pet recovery cone", "first": "Plastic Pet Recovery Collars & Cones for Dogs and Cats After Surgery Adjustable Dog Neck Cone Surgical Elizabeth E-Collar Prevent Biting and Stop Licking Wound ", "class": "right-type", "action": "kept"},
+  {"site": "vets-co", "query": "quad ruled graph pad", "first": "Amazon Basics Quad-Ruled Graph Paper Pad, 4x4 Grid, Perforated Sheets, Letter Size 8.5\" x 11\", White, 100 Sheets per Pad, 6-Pack (600 Sheets)", "class": "right-type", "action": "kept"},
+  {"site": "vets-co", "query": "paid rubber stamp", "first": "Promot Paid Self Inking Rubber Stamp - Refillable Office Stamp (Red)", "class": "right-type", "action": "kept"},
+  {"site": "vets-co", "query": "handheld tally counter", "first": "Sponsored Ad - Oligei 2 Pack Metal Hand Counter Four-Digit Counter with Nylon Lanyard Silver Counter Click Counter Handheld Click Counter Digital Counting", "class": "right-type", "action": "kept"},
+  {"site": "vets-co", "query": "four column accounting pad", "first": "Adams Columnar Analysis Pad, 4 Column Ledger, 8.5\" x 11\", 100 Pages (50 Sheets), Green, 3 Hole Punch, for Accounting, Bookkeeping & Data (ACP85114)", "class": "right-type", "action": "kept"},
+  {"site": "vets-co", "query": "letter size poly envelope", "first": "EOOUT 48 Pack Plastic Envelopes Poly Envelopes with Snap Closure, Clear Document File Folders, A4 Letter Size for School Home Work Office Organization, 8 Colors", "class": "right-type", "action": "kept"},
+  {"site": "vets-co", "query": "desktop receipt organizer", "first": "2 Pieces Desk Mail Organizer, Metal Mesh Small File Holders Letter Organizer, Bill/Document/Filing/Folders/Paper Organizer for Desktop (BLACK-2PCS)", "class": "right-type", "action": "kept"},
+  {"site": "vets-co", "query": "3 tab dividers", "first": "Avery Index Maker Clear Label Dividers, 3-Tab, White, 25 Sets", "class": "right-type", "action": "kept"},
+  {"site": "vets-co", "query": "assorted highlighter set", "first": "Sharpie Clear View Highlighter Sticks, Chisel Tip Highlighter Market Set, Essential School & Teacher Supplies, Smear Resistant, Assorted Color Highlighters, 8-P", "class": "right-type", "action": "kept"},
+  {"site": "vets-co", "query": "removable page flags", "first": "500 Pieces Tabs 2 Inch Sticky Index Tabs, Writable and Repositionable", "class": "right-type", "action": "kept"},
+  {"site": "vets-co", "query": "full page magnifier", "first": "AKKYCVS 5X Full Page Magnifying Glass for Reading, Lightweight Rectangular Magnifier Provides Large Book Page Viewing Area, Upgraded Handheld Magnifier for Read", "class": "right-type", "action": "kept"},
+  {"site": "vets-co", "query": "adjustable copyholder", "first": "Desktop Document Holder Stand with 7 Adjustable Positions, Black Metal File Organizer Management Copyholder for Typing Speech Reading A4 Letter Music Book Table", "class": "right-type", "action": "kept"},
+  {"site": "vets-co", "query": "line reader strip", "first": "320 pcs Mahjong Card Line Finder Highlighter Tape, Mahjong Line Highlighter Stripe, Transparent Sticky Card Markers Tabs, Mahjong Game Rule Reader, Reusable & N", "class": "wrong-type", "action": "tightened", "note": "right type after one tighten", "tightenedQuery": "reading guide strip overlay line reader", "tightenedFirst": "Zonon 18 Pcs Guided Reading Strips Colored Highlight Strip for Dyslexia"},
+  {"site": "vets-co", "query": "pressboard classification folder", "first": "Amazon Basics Classification Folder with Prongs, Pressboard, 2 Dividers, 2-Inch Expansion, Letter Size, Red, Pack of 10, for Organizing Documents", "class": "right-type", "action": "kept"},
+  {"site": "vets-co", "query": "clasp envelope letter size", "first": "Amazon Basics Clasp Kraft Envelopes for Documents, Gummed Mailing Envelope, 9\" x 12\", 100-Pack", "class": "right-type", "action": "kept"},
+  {"site": "vets-co", "query": "red and blue checking pencil", "first": "Containlol 36 Pieces Red and Blue Checking Pencils 2 HB Erasable for School", "class": "right-type", "action": "kept"},
+  {"site": "vets-co", "query": "blank pedigree chart", "first": "Sponsored Ad - EASYGENIE 10 Large Print Genealogy Pedigree Charts, 6 Generations", "class": "right-type", "action": "kept"},
+  {"site": "vets-co", "query": "round color coding labels", "first": "700 Pcs Colored Dot Stickers 3/4 Inch Circle Stickers Color Coding Labels", "class": "right-type", "action": "kept"},
+  {"site": "vets-co", "query": "5 compartment letter sorter", "first": "BEYGORM Acrylic Mail Holder, 5 Compartments Multifunction Desk Organizer", "class": "right-type", "action": "kept"},
+  {"site": "vets-co", "query": "monthly desk pad calendar", "first": "AT-A-GLANCE 2027 Desk Pad Calendar, Monthly Desk Wall Planner, 21.75\" x 17\", Ruled Blocks (SK240027), White", "class": "right-type", "action": "kept"},
+  {"site": "vets-co", "query": "self inking date stamp", "first": "MaxMark 2000 Dater Self Inking Date Stamp - Black", "class": "right-type", "action": "kept"},
+  {"site": "vets-co", "query": "letter size file jacket", "first": "Amazon Basics Reinforced File Jackets, Letter Size, Straight-Cut Tab, 2 Inch Expansion, Manila, 50-Pack", "class": "right-type", "action": "kept"},
+  {"site": "vets-co", "query": "locking cash box with key", "first": "KYODOLED Cash Box with Money Tray and Key Lock, 1mm Thick Metal Cash Drawer", "class": "right-type", "action": "kept"},
+  {"site": "vets-co", "query": "basic desktop calculator", "first": "Amazon Basics LCD 8-Digit Desktop Calculator, Portable and Easy to Use, Black, 1-Pack", "class": "right-type", "action": "kept"},
+  {"site": "vets-co", "query": "manila file folders letter size", "first": "Amazon Basics Sturdy File Folders with Reinforced Tabs for Filing and Organization, 1/3-Cut Tab, Assorted Positions, Letter Size, 8.5x11 inches, Manila, 100-Pac", "class": "right-type", "action": "kept"},
+  {"site": "ferret-com", "query": "compressed wood pellet litter heat treated non clumping", "first": "Feline Pine Platinum Non-Clumping Cat Litter 17lb", "class": "wrong-type", "action": "dropped", "note": "tighten still missed; button removed, copy kept", "tightenedQuery": "pine pellet small animal litter non clumping", "tightenedFirst": "Feline Pine Platinum Non-Clumping Cat Litter 17lb"},
+  {"site": "ferret-com", "query": "small animal grass pellet litter non clumping", "first": "Fresh News Original Pellet Non-Clumping Paper Cat Litter, 12 Pound", "class": "wrong-type", "action": "dropped", "note": "tighten still missed; button removed, copy kept", "tightenedQuery": "grass seed pellet litter small animal", "tightenedFirst": "SmartCat All Natural Clumping Cat Litter, 20 Pound (320oz 1 pack) - Alternative to Clay and Pellet Litter - Chemical and 99% Dust Free - Uns"},
+  {"site": "ferret-com", "query": "ferret vest harness jacket escape proof", "first": "Small Animal Harness and Leash Set, Adjustable Escape Proof Ferret Harness Vest for Adult Ferret, Meerkat, King Squirrel & Fancy Rat, Soft Comfortable Pet Walki", "class": "named", "action": "kept"},
+  {"site": "ferret-com", "query": "ferret h style harness adjustable", "first": "Pet Adjustable Escape Proof Harness and Leash Set for Small Animals, Escape Resistant Figure 8 Harness for Ferret, Meerkat, Groundhog, Guinea Pig, Hedgehog - Sm", "class": "right-type", "action": "relabel", "note": "label now says Search Amazon for an H-style ferret harness"},
+  {"site": "ferret-com", "query": "ferret mesh harness leash set", "first": "Small Animal Harness and Leash, Ferret Harness No Pull Soft Mesh Black,S", "class": "named", "action": "kept"},
+  {"site": "ferret-com", "query": "ferret sleep sack fleece", "first": "2 Pack Guinea Pig Snuggle Sack Soft Fleece Large Hideout", "class": "wrong-type", "action": "dropped", "note": "tighten still missed; button removed, copy kept", "tightenedQuery": "marshall ferret sleep sack", "tightenedFirst": "Hanging Monkey Hammock, brown, 5-quart (FP-360)"},
+  {"site": "ferret-com", "query": "ferret hammock", "first": "Niteangel Hanging Hammock Nap Sack Swing Bag Pet Sleeper for Ferret Rat Sugar Glider and Other Small Animals (Cream, Star)", "class": "right-type", "action": "kept"},
+  {"site": "ferret-com", "query": "ferret fleece liner", "first": "Paw Inspired Fitted Fleece Liner Set for 2-Story Cage, Gray", "class": "right-type", "action": "kept"},
+  {"site": "ferret-com", "query": "recycled paper pellet litter", "first": "Sponsored Ad - Small Pet Select Recycled Paper Pellet Bedding & Litter, Rabbits, 10 lb", "class": "right-type", "action": "kept"},
+  {"site": "ferret-com", "query": "ferret corner litter pan", "first": "Lixit Corner Litter Pan for Ferrets, Rabbits, Rats, Guinea Pigs and Other Small Animals. (Blue Pack of 1)", "class": "named", "action": "kept"},
+  {"site": "dog-com", "query": "midwest icrate dog crate", "first": "Midwest 42-Inch Double Door iCrate, for Large Breeds, 71-90 lbs", "class": "named", "action": "kept"},
+  {"site": "dog-com", "query": "midwest icrate 18 inch dog crate", "first": "Midwest 18-Inch Single Door iCrate, for Tiny Breeds, Up to 10 lbs", "class": "named", "action": "kept"},
+  {"site": "dog-com", "query": "midwest icrate 22 inch dog crate", "first": "Midwest 22-Inch Single Door iCrate, for Extra-Small Breeds, Up to 15 lbs", "class": "named", "action": "kept"},
+  {"site": "dog-com", "query": "midwest icrate 24 inch dog crate", "first": "Midwest 24-Inch Single Door iCrate, for Small Breeds, 12-20 lbs", "class": "named", "action": "kept"},
+  {"site": "dog-com", "query": "midwest icrate 30 inch dog crate", "first": "Midwest 30-Inch Single Door iCrate, for Medium Breeds, 21-40 lbs", "class": "named", "action": "kept"},
+  {"site": "dog-com", "query": "midwest icrate 36 inch dog crate", "first": "Midwest 36-Inch Single Door iCrate, for Medium-Large Breeds, 41-70 lbs", "class": "named", "action": "kept"},
+  {"site": "dog-com", "query": "midwest icrate 42 inch dog crate", "first": "Midwest 42-Inch Double Door iCrate, for Large Breeds, 71-90 lbs", "class": "named", "action": "kept"},
+  {"site": "dog-com", "query": "midwest icrate 48 inch dog crate", "first": "Midwest 48-Inch Single Door iCrate, for Extra-Large Breeds, 90-110 lbs", "class": "named", "action": "kept"},
+  {"site": "fish-com", "query": "eheim jager heater", "first": "Jager Aquarium Thermostat Heater 150W", "class": "named", "action": "kept"},
+  {"site": "fish-com", "query": "eheim jager 25w heater", "first": "Jager Aquarium Thermostat Heater, 250-Watt", "class": "right-type", "action": "relabel", "note": "label now says Search Amazon for a 25W Eheim Jager"},
+  {"site": "fish-com", "query": "eheim jager 50w heater", "first": "Jager Aquarium Thermostat Heater 50W, Black", "class": "named", "action": "kept"},
+  {"site": "fish-com", "query": "eheim jager 75w heater", "first": "Jager Aquarium Thermostat Heater 75W", "class": "named", "action": "kept"},
+  {"site": "fish-com", "query": "eheim jager 100w heater", "first": "Jager Aquarium Thermostat Heater 100W ( Pack of 1)", "class": "named", "action": "kept"},
+  {"site": "fish-com", "query": "eheim jager 150w heater", "first": "Jager Aquarium Thermostat Heater 150W", "class": "named", "action": "kept"},
+  {"site": "fish-com", "query": "eheim jager 200w heater", "first": "AEH3617090 200-watt Jager Heater for Aquarium, 16-Inch", "class": "named", "action": "kept"},
+  {"site": "fish-com", "query": "eheim jager 250w heater", "first": "Jager Aquarium Thermostat Heater, 250-Watt", "class": "named", "action": "kept"},
+  {"site": "fish-com", "query": "eheim jager 300w heater", "first": "3619090 Jager Aquarium Thermostat Heater 300W, Black", "class": "named", "action": "kept"},
+  {"site": "horses-com", "query": "horseware rambo original 75 inch", "first": "Rambo Original Turnout Sheet 75", "class": "wrong-type", "action": "tightened", "note": "blanket, not the named 75-inch Rambo; label says Search Amazon for", "tightenedQuery": "turnout blanket 75 inch", "tightenedFirst": "Equinavia Norse Lightweight 100g Fill Horse Rain Blanket | Waterproof Turnout Sheet - Black - 66 in - Black - 75 in"},
+  {"site": "horses-com", "query": "horseware rambo original 78 inch", "first": "Rambo® Original Turnout 0g - Green/Red, 78 inches", "class": "wrong-type", "action": "tightened", "note": "78-inch turnout blanket, not Rambo; label says Search Amazon for", "tightenedQuery": "turnout blanket 78 inch", "tightenedFirst": "TOUGH1 1200D Turnout Blanket with SNUGGIT, 300-G, Royal Blue, 78-in"},
+  {"site": "horses-com", "query": "horseware rambo original 81 inch", "first": "Rambo® Optimo Stable Sheet - Navy/Thunderstorm Grey & Silver, 81 inches", "class": "wrong-type", "action": "dropped", "note": "tighten still missed; button removed, copy kept", "tightenedQuery": "turnout 81 inch", "tightenedFirst": "Tough 1 600 Denier Waterproof Horse Sheet"},
+  {"site": "horses-com", "query": "horseware rambo original 84 inch", "first": "Rambo Original Turnout Lite 0g 84 Green/Red", "class": "wrong-type", "action": "dropped", "note": "tighten still missed; button removed, copy kept", "tightenedQuery": "turnout blanket 84 inch", "tightenedFirst": "Tough 1 600 Denier Waterproof Horse Sheet"},
+  {"site": "horses-com", "query": "winter horse blanket", "first": "Tough 1 600 Denier Waterproof Horse Sheet", "class": "wrong-type", "action": "tightened", "note": "turnout blanket after one tighten", "tightenedQuery": "waterproof turnout horse blanket winter", "tightenedFirst": "1200D Horse Blanket, 200g Medium Weight Waterproof Winter Turnout"},
+  {"site": "ferret-com", "query": "kaytee multi level ferret home", "first": "My First Home Multi-Level Exotics Habitat for Pet Chinchillas, Rats, Degus, Sugar Gliders and Other Exotic Small Animals", "class": "wrong-type", "action": "tightened", "note": "named ferret habitat after one tighten", "tightenedQuery": "kaytee ferret home multi level", "tightenedFirst": "My First Home Multi-Level Habitat for Pet Ferrets"},
+  {"site": "ferret-com", "query": "ferret nation critter nation double unit", "first": "Critter Nation by MidWest Double Unit Small Animal Cage", "class": "right-type", "action": "relabel", "note": "label now says Search Amazon for the Ferret Nation double unit"},
+  {"site": "fish-com", "query": "aqueon quietflow 30", "first": "QuietFlow 30 LED PRO Aquarium Fish Tank Power Filter For Up To 45 Gallon Aquariums", "class": "named", "action": "kept"},
+  {"site": "fish-com", "query": "fluval 307 canister filter", "first": "307 Perfomance Canister Filter for Aquariums up to 70 Gallons", "class": "named", "action": "kept"},
+  {"site": "fish-com", "query": "aquaclear 70 filter", "first": "AC70 Power Filter, 40-70 US Gal / 152-265 L, Fluval USA", "class": "named", "action": "kept"},
+  {"site": "dog-com", "query": "petsafe easy walk harness", "first": "Easy Walk Harness, No Pull Dog Harness, Red, Small", "class": "named", "action": "kept"},
+  {"site": "dog-com", "query": "royal canin large breed puppy", "first": "Size Health Nutrition Large Puppy Dry Dog Food, 30 lb Bag", "class": "named", "action": "kept"},
+  {"site": "fish-com", "query": "api freshwater master test kit", "first": "Freshwater Master Test Kit 800-Test Freshwater Aquarium Water Kit, White, Single, Multi-Colored", "class": "named", "action": "kept"},
+  {"site": "horses-com", "query": "senior horse feed", "first": "Triple Crown Senior Horse Feed, High Fat and High Fiber, 50 lbs", "class": "right-type", "action": "kept"},
+  {"site": "vets-co", "query": "kitchen gram scale", "first": "Etekcity Food Kitchen Scale, Digital Grams and Ounces, 11lb", "class": "right-type", "action": "kept"},
+  {"site": "vets-co", "query": "measured cat food", "first": "Automatic Cat Feeder, 3L Cat Food Dispenser with Anti-Jam Design, Over 180-day Battery Life, 1-6 Meals Per Day with Stainless Steel Cat Bowl, Keep Dry Food Fres", "class": "wrong-type", "action": "tightened", "note": "gram scoop after one tighten; label says Search Amazon for", "tightenedQuery": "cat food measuring scoop grams", "tightenedFirst": "Digital Measuring Spoon, Weighing Food Measuring Scoop Scale, LCD Electronic Food Scale for Kitchen Gadget, Baking Cooking Coffee, Pet Dog C"},
+  {"site": "vets-co", "query": "slow feeder cat bowl", "first": "Bifeaw Slow Feeder Cat Bowl, Easy to Clean Silicone Bowl, Ideal for Dry and Wet Food (Green and Blue)", "class": "right-type", "action": "kept"},
+  {"site": "horses-com", "query": "heated horse water bucket", "first": "API 5 Gallon 115 Watt Heated Flat Back Bucket 20FB", "class": "right-type", "action": "kept"},
+  {"site": "horses-com", "query": "flat back horse water bucket", "first": "Little Giant Plastic Animal Feed Bucket (Hot Pink) Flat Back Plastic Feed Bucket with Metal Handle (20 Quarts / 5 Gallons) (Item No. P20FBHOTPINK6)", "class": "wrong-type", "action": "dropped", "note": "tighten still missed; button removed, copy kept", "tightenedQuery": "flat back plastic horse water bucket", "tightenedFirst": "Little Giant® Flat Back Plastic Animal Feed Bucket | Animal Feed Bucket with Metal Handle | Horse Stall Feeding and Watering Supplies (Navy,"},
+  {"site": "fish-com", "query": "saltwater reef tank starter kit", "first": "API Saltwater Master Test Kit 550-Test Saltwater Aquarium Water Test Kit", "class": "wrong-type", "action": "dropped", "note": "tighten still missed; button removed, copy kept", "tightenedQuery": "saltwater reef aquarium starter kit live rock", "tightenedFirst": "CaribSea LifeRock Dreamscapes Kit - Aquascaping Rock Set for 15-25 Gallon Tanks, Natural Look & Porous Structure for Marine & Freshw"},
+  {"site": "horses-com", "query": "epdm pond liner", "first": "Firestone 45mil EPDM Rubber Pond Liner 15ft.x20ft.", "class": "named", "action": "kept"},
+  {"site": "fish-com", "query": "aqueon 10 gallon aquarium", "first": "starter kit", "class": "wrong-type", "action": "dropped", "note": "Round 196 miss; button removed, copy kept"},
+  {"site": "fish-com", "query": "aqueon 20 gallon long aquarium", "first": "20-gallon high tank", "class": "wrong-type", "action": "dropped", "note": "Round 196 miss; button removed, copy kept"},
+  {"site": "fish-com", "query": "cobalt neo-therm pro", "first": "cryogenic thermometer", "class": "wrong-type", "action": "dropped", "note": "Round 196 miss; button removed, copy kept"},
+]
+
+export function renderFirstScreenAudit() {
+  const lines = [
+    '## First-screen search audit 2026-10-09',
+    '',
+    'One fetch of the first Amazon result for each hero, card, or quick-pick search on the first-screen money pages, plus tool-result searches.',
+    'Named means the title is the product the button names. Right type means the same kind of product. Wrong type means an accessory, another species, a different category, or an empty page.',
+    'Wrong type was tightened once. A second miss dropped the button and kept the copy. Right type that is not the named product keeps the search and says Search Amazon for.',
+    'Lighting rows are recorded and were not edited.',
+    '',
+  ]
+  const sites = ['dog-com', 'fish-com', 'horses-com', 'vets-co', 'ferret-com']
+  const actions = ['kept', 'relabel', 'tightened', 'dropped', 'parked']
+  for (const site of sites) {
+    const rows = FIRST_SCREEN_SEARCH_AUDIT.filter((row) => row.site === site)
+    const counts = Object.fromEntries(actions.map((action) => [action, rows.filter((row) => row.action === action).length]))
+    lines.push('### ' + site)
+    lines.push('')
+    lines.push('queries ' + rows.length + ' / kept ' + counts.kept + ' / relabel ' + counts.relabel + ' / tightened ' + counts.tightened + ' / dropped ' + counts.dropped + ' / parked ' + counts.parked)
+    lines.push('')
+    for (const row of rows) {
+      const tighten = row.tightenedQuery ? ' → ' + row.tightenedQuery + ' → ' + (row.tightenedFirst || 'no title') : ''
+      const note = row.note ? ' — ' + row.note : ''
+      lines.push('- ' + row.query + ' — ' + row.class + ' — ' + row.action + ' — ' + row.first + tighten + note)
+    }
+    lines.push('')
+  }
+  return lines
+}
