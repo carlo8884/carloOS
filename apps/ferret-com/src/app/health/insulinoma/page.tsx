@@ -85,7 +85,7 @@ const FAQS = [
   {
     question: 'Can diet prevent insulinoma in ferrets?',
     answer:
-      'There is no proven prevention. The leading working hypothesis in the exotic-pet literature is that chronic dietary carbohydrate drives sustained insulin demand and eventual beta-cell change — the evidence is associational rather than experimentally proven. Minimizing dietary carbohydrate from kithood — a high-protein, low-carbohydrate diet and no sugary treats — is a planning choice on this page. It is not a fetched American Ferret Association cutoff. The Merck Veterinary Manual states that ferrets require protein of 35%–40%, and that carbohydrate (under 25%) and fiber (under 2.5%) proportions of the diet should be relatively low (https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/management-of-ferrets).',
+      'There is no proven prevention. The leading working hypothesis in the exotic-pet literature is that chronic dietary carbohydrate drives sustained insulin demand and eventual beta-cell change — the evidence is associational rather than experimentally proven. Minimizing dietary carbohydrate from kithood — a high-protein, low-carbohydrate diet and no sugary treats — is a planning choice on this page. It is not a fetched American Ferret Association cutoff. The Merck Veterinary Manual states that ferrets require protein of 35%–40%, and that carbohydrate (under 25%) and fiber (under 2.5%) proportions of the diet should be relatively low.',
   },
   {
     question: 'What is the treatment ladder for ferret insulinoma?',
@@ -271,7 +271,7 @@ export default function FerretInsulinomaPage() {
             places a calendar age on the same life-stage bands, so a 3-to-7-year window is a stage label rather than a surprise.
           </p>
           <p>
-            The leading working hypothesis for the unusually high prevalence in domestic ferrets is chronic dietary carbohydrate exposure driving sustained insulin demand and eventual beta-cell hyperplasia. Minimizing dietary carbohydrate is a planning choice on this page, not a fetched American Ferret Association cutoff. The Merck Veterinary Manual states that ferrets require protein of 35%–40%, and that carbohydrate (under 25%) and fiber (under 2.5%) proportions of the diet should be relatively low (<a className="break-all" href="https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/management-of-ferrets">https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/management-of-ferrets</a>). The evidence is associational rather than experimentally proven.
+            The leading working hypothesis for the unusually high prevalence in domestic ferrets is chronic dietary carbohydrate exposure driving sustained insulin demand and eventual beta-cell hyperplasia. Minimizing dietary carbohydrate is a planning choice on this page, not a fetched American Ferret Association cutoff. The Merck Veterinary Manual states that ferrets require protein of 35%–40%, and that carbohydrate (under 25%) and fiber (under 2.5%) proportions of the diet should be relatively low (<a href="https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/management-of-ferrets">Merck Veterinary Manual</a>). The evidence is associational rather than experimentally proven.
           </p>
 
           <h2 id="signs">Clinical Signs — Easy to Miss</h2>
