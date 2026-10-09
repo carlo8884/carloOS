@@ -178,16 +178,16 @@ export default function LitterPlannerPage() {
           Chewy; never href="#" or PLACEHOLDER. */}
       <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <div className="max-w-2xl">
-          <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/compressed+wood+pellet+litter+heat+treated+non+clumping?s=tools-litter-planner", "/go/amazon-brand/small+animal+grass+pellet+litter+non+clumping?s=tools-litter-planner", "/go/amazon-brand/ferret+corner+litter+pan?s=tools-litter-planner"]} />
+          <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/ferret+corner+litter+pan?s=tools-litter-planner" />
           <div className="mt-4 rounded-xl border border-brand-border bg-brand-white p-5">
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
               Shop the litter and pans
             </div>
-            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">Same Amazon hops as the{' '}
+            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">Heat-treated wood pellets or grass pellets are the types on the{' '}
               <Link href="/reviews/best-ferret-litter" className="text-brand-primary underline-offset-2 hover:underline">
                 ferret litter review
               </Link>
-              — heat-treated wood pellets or grass pellets — plus the high-back
+              . The button still on this page is the high-back
               corner pan hop already used on the{' '}
               <Link href="/tools/cage-size-calculator" className="text-brand-primary underline-offset-2 hover:underline">
                 cage size calculator
@@ -196,14 +196,6 @@ export default function LitterPlannerPage() {
               Shop the review for the criteria. These are category searches, not
               a ranked product list.</p>
             <div className="flex flex-col gap-3">
-              <ShopCtas
-                amazonHref="/go/amazon-brand/compressed+wood+pellet+litter+heat+treated+non+clumping?s=tools-litter-planner"
-                amazonLabel="Browse compressed heat-treated non-clumping wood pellets on Amazon →"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/small+animal+grass+pellet+litter+non+clumping?s=tools-litter-planner"
-                amazonLabel="Browse grass pellet litter on Amazon →"
-              />
               <ShopCtas
                 amazonHref="/go/amazon-brand/ferret+corner+litter+pan?s=tools-litter-planner"
                 amazonLabel="Browse high-back corner ferret litter pans on Amazon →"

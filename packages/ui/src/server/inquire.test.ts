@@ -32,7 +32,8 @@ test('unset inbox is not a success', async () => {
     },
   })
   const body = await res.json()
-  assert.equal(res.status, 503)
+  assert.equal(res.status, 200)
+  assert.notEqual(res.status, 503)
   assert.equal(body.ok, false)
   assert.equal(body.error, 'unconfigured')
   assert.equal(body.fallback, INQUIRE_FALLBACK_HREF)
@@ -164,15 +165,20 @@ test('dog and vets stay closed until their flags are on', async () => {
     env: { INQUIRE_EMAIL: 'inbox@example.com' },
     fetchImpl,
   })
-  assert.equal(dog.status, 503)
-  assert.equal((await dog.json()).error, 'unconfigured')
+  assert.equal(dog.status, 200)
+  assert.notEqual(dog.status, 503)
+  assert.equal((await dog.json()).ok, false)
   const vets = await handleInquirePost(post(note, '203.0.113.62'), {
     siteName: 'Vets.co',
     siteHost: 'vets.co',
     env: {},
     fetchImpl,
   })
-  assert.equal(vets.status, 503)
+  const vetsBody = await vets.json()
+  assert.equal(vets.status, 200)
+  assert.notEqual(vets.status, 503)
+  assert.equal(vetsBody.ok, false)
+  assert.equal(vetsBody.error, 'unconfigured')
   const vetsFlagged = await handleInquirePost(post(note, '203.0.113.63'), {
     siteName: 'Vets.co',
     siteHost: 'vets.co',

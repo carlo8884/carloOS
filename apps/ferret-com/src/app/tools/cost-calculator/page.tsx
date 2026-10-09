@@ -203,13 +203,13 @@ export default function CostCalculatorPage() {
           ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER. */}
       <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <div className="max-w-2xl">
-          <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/high+protein+ferret+food+kibble?s=tools-cost-calculator", "/go/amazon-brand/compressed+wood+pellet+litter+heat+treated+non+clumping?s=tools-cost-calculator", "/go/amazon-brand/ferret+nation+critter+nation+double+unit?s=tools-cost-calculator", "/go/amazon-brand/ferret+sleep+sack+fleece?s=tools-cost-calculator"]} />
+          <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/high+protein+ferret+food+kibble?s=tools-cost-calculator", "/go/amazon-brand/ferret+nation+critter+nation+double+unit?s=tools-cost-calculator"]} />
           <div className="mt-4 rounded-xl border border-brand-border bg-brand-white p-5">
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
               Shop the setup
             </div>
             <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
-              The first-year number is mostly cage, food, and litter. Same Amazon hops used on the{' '}
+              The first-year number is mostly cage, food, and litter. The Amazon hops still on this page are the kibble search and the cage search, the same ones used on the{' '}
               <Link href="/reviews/best-ferret-cage" className="text-brand-primary underline-offset-2 hover:underline">
                 cage review
               </Link>
@@ -229,16 +229,8 @@ export default function CostCalculatorPage() {
                 amazonLabel="Browse high-protein ferret kibble on Amazon →"
               />
               <ShopCtas
-                amazonHref="/go/amazon-brand/compressed+wood+pellet+litter+heat+treated+non+clumping?s=tools-cost-calculator"
-                amazonLabel="Browse compressed heat-treated non-clumping wood pellets on Amazon →"
-              />
-              <ShopCtas
                 amazonHref="/go/amazon-brand/ferret+nation+critter+nation+double+unit?s=tools-cost-calculator"
                 amazonLabel="Browse Ferret Nation / Critter Nation double units on Amazon →"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/ferret+sleep+sack+fleece?s=tools-cost-calculator"
-                amazonLabel="Browse fleece ferret sleep sacks on Amazon →"
               />
           </div>
           </div>

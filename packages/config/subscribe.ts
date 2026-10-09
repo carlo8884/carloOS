@@ -87,16 +87,13 @@ export async function handleSubscribePost(
 ): Promise<{ status: number; body: { ok?: boolean; message?: string } }> {
   const env = opts.env ?? process.env
   const inbox = env.INQUIRE_EMAIL || env.NEXT_PUBLIC_INQUIRE_EMAIL
-  if (opts.site === 'fish.com' && !fishSubscribeDeliveryEnabled(env)) {
+  if ((opts.site === 'fish.com' && !fishSubscribeDeliveryEnabled(env)) || !inbox) {
     return {
-      status: 503,
-      body: { message: 'Email capture is not connected yet. Try again later.' },
-    }
-  }
-  if (!inbox) {
-    return {
-      status: 503,
-      body: { message: 'Email capture is not connected yet. Try again later.' },
+      status: 200,
+      body: {
+        ok: false,
+        message: 'Email capture is not connected yet. Try again later.',
+      },
     }
   }
 

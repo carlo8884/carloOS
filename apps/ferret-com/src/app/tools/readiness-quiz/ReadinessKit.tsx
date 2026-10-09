@@ -4,22 +4,20 @@
  * Interactive new-owner readiness kit — /tools/readiness-quiz
  *
  * Day-one packing list a prospective ferret household should have ready
- * before arrival. Check items off as you gather them. Each row hops to
- * a live Amazon search via /go/amazon-brand (never PLACEHOLDER, never
- * href="#"). Chewy stays hidden until a Chewy tag is live.
+ * before arrival. Check items off as you gather them. This list does not
+ * render a shop button. The page below keeps the cage, kibble, and
+ * carrier searches. The sleep-sack and wood-pellet searches are not buttons.
  */
 
 import { useMemo, useState } from 'react'
-import { ShopCtas } from '@carloOS/ui'
-
 const SOURCE = 'tools-readiness-quiz'
 
 interface KitItem {
   id: string
   name: string
   detail: string
-  amazonHref: string
-  amazonLabel: string
+  amazonHref?: string
+  amazonLabel?: string
 }
 
 const KIT: KitItem[] = [
@@ -36,8 +34,6 @@ const KIT: KitItem[] = [
     name: 'Corner pans and pellet litter',
     detail:
       'High-back corner pans plus paper or heat-treated wood pellets. Never clumping clay — dust and gut blockage risk. Plan one pan per ferret plus one extra; the litter planner turns headcount into pans and 30 lb bags.',
-    amazonHref: `/go/amazon-brand/compressed+wood+pellet+litter+heat+treated+non+clumping?s=${SOURCE}`,
-    amazonLabel: 'Browse heat-treated non-clumping wood pellets on Amazon →',
   },
   {
     id: 'food',
@@ -52,8 +48,6 @@ const KIT: KitItem[] = [
     name: 'Hammock or sleep sack',
     detail:
       'Fleece hammocks and sleep sacks are the usual sleeping spots — not loose shavings. Ferrets burrow; a washable sack on each level keeps them off wire floors and off aromatic wood chips.',
-    amazonHref: `/go/amazon-brand/ferret+sleep+sack+fleece?s=${SOURCE}`,
-    amazonLabel: 'Browse fleece ferret sleep sacks on Amazon →',
   },
   {
     id: 'dig-box',

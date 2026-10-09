@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
-import { HopDisclosure } from '../../../components/HopDisclosure'
+import { ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -50,8 +49,6 @@ export default function WoodVsGrassLitterGuidePage() {
         publishedAt: 'October 2026',
         readTime: '6 min',
       }}
-      heroHop={<PrimaryHop href="/go/amazon-brand/compressed+wood+pellet+litter+heat+treated+non+clumping?s=reviews-wood-vs-grass-litter-guide" label="Check price of compressed heat-treated wood pellet litter on Amazon" />}
-      heroExtra={<HopDisclosure siteId="ferret-com" href="/go/amazon-brand/compressed+wood+pellet+litter+heat+treated+non+clumping?s=reviews-wood-vs-grass-litter-guide" />}
       breadcrumbs={[
         { name: 'Home', href: '/' },
         { name: 'Reviews', href: '/reviews' },
@@ -87,9 +84,9 @@ export default function WoodVsGrassLitterGuidePage() {
         />
         <p>Prices below are the ones on the <Link href="/reviews/best-ferret-litter">litter review</Link>. Compressed wood pellets are the odor pick. Pelleted grass is for ferrets that dislike a harder texture. Recycled paper is the overall winner on that page, and it is a separate comparison.</p>
         <h2>What the review says about wood pellets</h2>
-        <p>Compressed wood pellet litter is Best for Odor. Dust is low once the fines are sifted. It does not clump. Odor control is the strongest of the safe options on that page. The caveat is the wood form: use only heat-treated, low-phenol compressed pellets. The review says aromatic raw cedar and pine shavings release phenols implicated in respiratory irritation, so loose aromatic shavings are not this product. Wood is harder underfoot than paper. The price tier is the lowest of the three litters. The shop search is heat-treated, non-clumping compressed wood pellets.</p>
+        <p>Compressed wood pellet litter is Best for Odor. Dust is low once the fines are sifted. It does not clump. Odor control is the strongest of the safe options on that page. The caveat is the wood form: use only heat-treated, low-phenol compressed pellets. The review says aromatic raw cedar and pine shavings release phenols implicated in respiratory irritation, so loose aromatic shavings are not this product. Wood is harder underfoot than paper. The price tier is the lowest of the three litters.</p>
         <h2>What the review says about grass pellets</h2>
-        <p>Pelleted grass is the soft alternative. Dust is low. It does not clump. The feel is soft, which the review says some ferrets prefer to wood. Odor control is moderate. Pellets can break down faster when wet, so the pan may need changing more often than wood. The price tier is the mid tier. The review calls it a paper-pellet alternative, useful mainly when texture is the complaint. The shop search is a non-clumping small-animal grass pellet.</p>
+        <p>Pelleted grass is the soft alternative. Dust is low. It does not clump. The feel is soft, which the review says some ferrets prefer to wood. Odor control is moderate. Pellets can break down faster when wet, so the pan may need changing more often than wood. The price tier is the mid tier. The review calls it a paper-pellet alternative, useful mainly when texture is the complaint.</p>
         <p>Scoop timing is on the <Link href="/tools/litter-planner">litter planner</Link>, using the pan-change approach from that review.</p>
         <h2>Who should buy which litter</h2>
         <p>Buy heat-treated wood pellets when odor is the priority and you will reject loose cedar or pine shavings. Buy grass pellets when the ferret dislikes wood or paper underfoot and you will change the pan more often because wet pellets break down. Do not buy a clumping cat litter for either job. The default low-dust litter on the same review is recycled paper.</p>

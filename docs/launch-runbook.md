@@ -1,6 +1,6 @@
 # Launch-day runbook
 
-Read-only snapshot of the five earning Vercel projects on 2026-10-06. This runbook does not change domains, env vars, or DNS. Carlo sets the records and `SITE_INDEXABLE=true` on launch day.
+Read-only snapshot of the five earning Vercel projects on 2026-10-06. This runbook does not change domains, env vars, or DNS. Carlo sets the records and `SITE_INDEXABLE` to one apex on launch day. `true` does not index every host.
 
 | Field | Score |
 |---|---|
@@ -12,7 +12,7 @@ Read-only snapshot of the five earning Vercel projects on 2026-10-06. This runbo
 
 ## What is already true
 
-Canonical, Open Graph, and sitemap URLs are the apex (`https://dog.com`, `https://fish.com`, `https://horses.com`, `https://vets.co`, `https://ferret.com`). `robots.ts` serves a crawlable file with `Sitemap: {apex}/sitemap.xml` only when `SITE_INDEXABLE=true` and the host is not a preview. `*.vercel.app` stays `Disallow: /` and `X-Robots-Tag: noindex` even after the flag is on. The 404 document is `noindex` with an apex canonical.
+Canonical, Open Graph, and sitemap URLs are the apex (`https://dog.com`, `https://fish.com`, `https://horses.com`, `https://vets.co`, `https://ferret.com`). `robots.ts` serves a crawlable file with `Sitemap: {apex}/sitemap.xml` only when `SITE_INDEXABLE` names that apex and the host is not a preview. `SITE_INDEXABLE=true` does not open every host. `*.vercel.app` stays `Disallow: /` and `X-Robots-Tag: noindex` even after the flag is on. The 404 document is `noindex` with an apex canonical.
 
 Do not set `SITE_INDEXABLE` in the repo. Do not set it on Vercel until the apex answers from that project.
 
@@ -43,10 +43,10 @@ Vercel’s current custom-domain docs for an external registrar use an apex A re
 
 ## Per site, the day DNS answers
 
-Repeat for dog.com, fish.com, horses.com, vets.co, and ferret.com. One site at a time.
+The first public launch is one of vets.co, horses.com, or ferret.com. Leave Dog.com and Fish.com unset. One site at a time.
 
 1. Confirm the apex A and www CNAME above are published at the registrar and the apex opens the project named in the table.
-2. On that Vercel project only, set `SITE_INDEXABLE=true` and redeploy. Leave it unset on every `*.vercel.app` host. Preview hosts stay noindex either way.
+2. On that Vercel project only, set `SITE_INDEXABLE` to that apex (`vets.co`, `horses.com`, or `ferret.com`) and redeploy. Do not set `true`. Leave it unset on every other project and on every `*.vercel.app` host. Preview hosts stay noindex either way. Dog.com and Fish.com stay noindex when the value names a different apex.
 3. Submit `{apex}/sitemap.xml` in Google Search Console and Bing Webmaster Tools for that property.
 4. Verify with the apex, which expects a crawlable robots.txt:
 

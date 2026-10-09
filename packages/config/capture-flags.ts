@@ -1,6 +1,7 @@
 /**
  * Capture forms stay off until an operator turns the flag on and an inbox exists.
- * Production leaves the flags unset, so visitors never see a form that 502s or 503s.
+ * Production leaves the flags unset, so visitors never see a live form.
+ * A POST with no inbox returns ok:false and HTTP 200, never 503.
  * A flag that is on still uses the honest-fail path when the upstream rejects the note.
  */
 

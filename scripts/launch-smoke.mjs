@@ -8,7 +8,7 @@
  *
  * With no --host, the script calls the Vercel project domain that is live
  * today (the *.vercel.app alias) and expects noindex. Pass the apex with
- * --host after DNS and SITE_INDEXABLE=true to require a crawlable robots.txt.
+ * --host after DNS and SITE_INDEXABLE=<apex> to require a crawlable robots.txt.
  *
  * Checks: home and five money pages return 200, each canonical is the apex,
  * robots match the mode, sitemap.xml returns 200, a missing path is noindex,

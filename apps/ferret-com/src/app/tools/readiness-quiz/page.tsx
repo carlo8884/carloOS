@@ -205,14 +205,14 @@ export default function ReadinessQuizPage() {
           ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER. */}
       <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <div className="max-w-2xl">
-          <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/ferret+nation+critter+nation+double+unit?s=tools-readiness-quiz", "/go/amazon-brand/high+protein+ferret+food+kibble?s=tools-readiness-quiz", "/go/amazon-brand/compressed+wood+pellet+litter+heat+treated+non+clumping?s=tools-readiness-quiz", "/go/amazon-brand/ferret+carrier+hard+sided?s=tools-readiness-quiz"]} />
+          <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/ferret+nation+critter+nation+double+unit?s=tools-readiness-quiz", "/go/amazon-brand/high+protein+ferret+food+kibble?s=tools-readiness-quiz", "/go/amazon-brand/ferret+carrier+hard+sided?s=tools-readiness-quiz"]} />
           <div className="mt-4 rounded-xl border border-brand-border bg-brand-white p-5">
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
               Shop the kit
             </div>
             <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
               The six-item list above is a husbandry starting point — cage, litter, food, hammock,
-              dig box, carrier — not a ranked product list. Same Amazon hops used on the{' '}
+              dig box, carrier — not a ranked product list. The Amazon hops still on this page are the cage, kibble, and carrier searches used on the{' '}
               <Link href="/reviews/best-ferret-cage" className="text-brand-primary underline-offset-2 hover:underline">
                 cage review
               </Link>
@@ -234,10 +234,6 @@ export default function ReadinessQuizPage() {
               <ShopCtas
                 amazonHref="/go/amazon-brand/high+protein+ferret+food+kibble?s=tools-readiness-quiz"
                 amazonLabel="Browse high-protein ferret kibble on Amazon →"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/compressed+wood+pellet+litter+heat+treated+non+clumping?s=tools-readiness-quiz"
-                amazonLabel="Browse compressed heat-treated non-clumping wood pellets on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/ferret+carrier+hard+sided?s=tools-readiness-quiz"
