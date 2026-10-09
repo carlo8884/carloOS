@@ -142,7 +142,7 @@ export default function BestDogBedsPage() {
                 },
                 {
                   question: 'Which bed does this page pick for everyday use?',
-                  answer: 'The Casper Dog Bed, marked Best Premium, for a medium or large dog without severe arthritis. The card lists a machine-washable cover, memory foam over a support base, and a regular price of $139–249 on casper.com, dated 2026-10-07. Small is for dogs up to 30 lbs, medium up to 60 lbs, and large up to 90 lbs. It is not the more therapeutic pick for severe arthritis, and zippers can be chewed.',
+                  answer: 'The Casper Dog Bed, the everyday foam pick, for a medium or large dog without severe arthritis. The card lists a machine-washable cover, memory foam over a support base, and a regular price of $139–249 on casper.com, dated 2026-10-07. Small is for dogs up to 30 lbs, medium up to 60 lbs, and large up to 90 lbs. It is not the more therapeutic pick for severe arthritis, and zippers can be chewed.',
                 },
                 {
                   question: 'Why are Furhaven and the Best Friends bolster not in the table?',
