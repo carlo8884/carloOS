@@ -25,7 +25,7 @@ const schema = buildArticleSchema({
 const FAQS = [
   {
     question: 'Which cage does the review pick overall?',
-    answer: 'The Ferret Nation or Critter Nation double unit is the long-term cage. The manufacturer page does not print a bar-spacing figure. It says the full-width double doors open for cleaning and feeding (https://www.midwesthomes4pets.com/product/small-animal/habitats-cages/ferret-nation/, fetched 2026-10-08). The review lists deep leak-proof pans, a stackable second level, and a fit of 1–4 ferrets. The price tier is premium. Wire shelves still need a cover.',
+    answer: 'The Ferret Nation or Critter Nation double unit is the long-term cage. The manufacturer page does not print a bar-spacing figure. It says the full-width double doors open for cleaning and feeding (fetched 2026-10-08). The review lists deep leak-proof pans, a stackable second level, and a fit of 1–4 ferrets. The price tier is premium. Wire shelves still need a cover.',
   },
   {
     question: 'When does the review point to the Kaytee?',
@@ -96,11 +96,11 @@ export default function KayteeVsFerretNationGuidePage() {
         <h2>What the review says about the Kaytee</h2>
         <p>The Kaytee Multi-Level Ferret Home is the entry cage. It is widely stocked, multi-level, and the review says the footprint suits one ferret that gets generous daily time outside the cage, not a pair living in it full time. Bar spacing is listed as in range, with a warning to check the exact model. The price tier in the review is the entry tier. A second ferret can outgrow it.</p>
         <h2>What the review says about Ferret Nation</h2>
-        <p>The Ferret Nation or Critter Nation double unit is Best Overall and the winner. The manufacturer page does not print a bar-spacing figure. It says the full-width double doors open for cleaning and feeding (https://www.midwesthomes4pets.com/product/small-animal/habitats-cages/ferret-nation/, fetched 2026-10-08). Pans are deep and leak-proof. The unit stacks to a second level for a pair or trio, and the review lists a fit of 1–4 ferrets. The price tier is premium. It is heavy once assembled, and wire shelves and ramps still need a cover.</p>
+        <p>The Ferret Nation or Critter Nation double unit is Best Overall and the winner. The <a href="https://www.midwesthomes4pets.com/product/small-animal/habitats-cages/ferret-nation/">manufacturer page</a> does not print a bar-spacing figure. It says the full-width double doors open for cleaning and feeding (fetched 2026-10-08). Pans are deep and leak-proof. The unit stacks to a second level for a pair or trio, and the review lists a fit of 1–4 ferrets. The price tier is premium. It is heavy once assembled, and wire shelves and ramps still need a cover.</p>
         <p>Floor space for the number of ferrets is on the <Link href="/tools/cage-size-calculator">cage-size calculator</Link>. Confirm bar spacing on the box. The manufacturer page does not print it.</p>
         <h2>Who should buy which cage</h2>
         <p>Buy the Kaytee when you have one ferret, daily out-of-cage time, and you can confirm the bar spacing on the box in the store. Buy the Ferret Nation double unit when you have a pair or you expect to add one, and you can fit the assembled footprint. Cover the wire on either cage. The Prevue Feisty Ferret remains the mid-price cage for one or two, and it is not this pair.</p>
-        <p>The Ferret Nation double is the group cage because the manufacturer page says the full-width double doors open for cleaning and feeding (https://www.midwesthomes4pets.com/product/small-animal/habitats-cages/ferret-nation/, fetched 2026-10-08).</p>
+        <p>The Ferret Nation double is the group cage because the <a href="https://www.midwesthomes4pets.com/product/small-animal/habitats-cages/ferret-nation/">manufacturer page</a> says the full-width double doors open for cleaning and feeding (fetched 2026-10-08).</p>
         <div className="my-6 max-w-full min-w-0">
           <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
             <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>

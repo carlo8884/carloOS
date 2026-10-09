@@ -19,14 +19,14 @@ const combined = combineSchemas(schema, med)
 const FAQS = [
   { question: "What are the earliest signs of arthritis in dogs?", answer: "Arthritis develops gradually, so the earliest signs are subtle: slowness to rise after rest, stiffness that eases after the dog warms up, reluctance to jump onto the couch or into the car, hesitation on stairs, slowing on walks, and a quieter, less playful demeanor. Dogs rarely vocalize joint pain, so owners often misread these changes as simple aging. Because arthritis is progressive and irreversible, recognizing these early signs and starting management sooner preserves mobility longer." },
   { question: "Can I give my dog human pain relievers like ibuprofen?", answer: "No. Human anti-inflammatories such as ibuprofen, naproxen, and acetaminophen are toxic to dogs and can cause severe stomach ulcers, kidney failure, or death even at small doses. Dogs need veterinary anti-inflammatories formulated and dosed specifically for them, prescribed and monitored by your veterinarian. Never give any human pain medication to a dog without explicit veterinary direction — it is one of the most common causes of accidental poisoning." },
-  { question: "Does weight really affect arthritis that much?", answer: "Weight is a factor the owner controls. Kealy et al. (JAVMA 2000) followed Labrador Retriever littermates fed 25% less food. At 8 years, hip osteoarthritis was present in 3 of 21 limit-fed dogs versus 15 of 22 control-fed littermates (https://doi.org/10.2460/javma.2000.217.1678). That trial does not rank a lean body condition against a medication." },
+  { question: "Does weight really affect arthritis that much?", answer: "Weight is a factor the owner controls. Kealy et al. (JAVMA 2000) followed Labrador Retriever littermates fed 25% less food. At 8 years, hip osteoarthritis was present in 3 of 21 limit-fed dogs versus 15 of 22 control-fed littermates. That trial does not rank a lean body condition against a medication.", source: "https://doi.org/10.2460/javma.2000.217.1678" },
 ]
 export default function ArthritisDogsPage() {
   return (
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: 'Arthritis in Dogs', subtitle: 'Anderson et al. (Scientific Reports, 2018) estimated the annual period prevalence of appendicular osteoarthritis at 2.5% in 455,557 UK primary-care dogs. Age older than eight years was a risk factor (https://www.nature.com/articles/s41598-018-23940-z). It is progressive. A plan can keep many arthritic dogs more comfortable.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '10 min',}}
+        hero={{ title: 'Arthritis in Dogs', subtitle: 'Anderson et al. (Scientific Reports, 2018) estimated the annual period prevalence of appendicular osteoarthritis at 2.5% in 455,557 UK primary-care dogs. Age older than eight years was a risk factor. It is progressive. A plan can keep many arthritic dogs more comfortable.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '10 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Arthritis', href: '/health/arthritis-in-dogs' }]}
         relatedLinks={[
           { title: 'Health Conditions', href: '/health', category: 'Hub' },

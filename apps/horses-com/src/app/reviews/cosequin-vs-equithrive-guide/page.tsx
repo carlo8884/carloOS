@@ -24,7 +24,7 @@ const schema = buildArticleSchema({
 const FAQS = [
   {
     question: 'Which joint product does the review pick for evidence?',
-    answer: 'Cosequin ASU Plus from Nutramax. The current powder page lists glucosamine, MSM, chondroitin, and ASU, and it also lists other ingredients (https://www.cosequin.com/product/horses/cosequin-asu-plus, fetched 2026-10-08). Milligrams differ for powder and pellets — check the label. The initial period is 2–4 weeks. Check the current FEI and USEF lists. The printed price is $80–110 a month.',
+    answer: 'Cosequin ASU Plus from Nutramax. The current powder page lists glucosamine, MSM, chondroitin, and ASU, and it also lists other ingredients (fetched 2026-10-08). Milligrams differ for powder and pellets — check the label. The initial period is 2–4 weeks. Check the current FEI and USEF lists. The printed price is $80–110 a month.',
   },
   {
     question: 'When does the review point to Equithrive?',
@@ -71,7 +71,7 @@ export default function CosequinVsEquithriveGuidePage() {
           ]}
         />
       }
-      priceAsOf="2026-10-08"
+      priceAsOf="2026-10-09"
     >
       <div className="carloOS-article">
           <LastUpdated date="2026-10-09" />
@@ -93,12 +93,12 @@ export default function CosequinVsEquithriveGuidePage() {
         />
         <p>Cosequin ASU Plus is the joint-evidence pick. Equithrive Original Pellets are the resveratrol pick. <Link href="/reviews/ker-eo3-vs-equithrive-guide">KER EO-3 versus Equithrive</Link> is the omega-3 comparison, not this joint pair. The <Link href="/supplements/joint-supplements">joint-supplement guide</Link> is the ingredient ladder behind the Cosequin ranking.</p>
         <h2>What the review says about Cosequin ASU Plus</h2>
-        <p>Cosequin ASU Plus is Best Joint Evidence and the winner. The current powder page lists glucosamine, MSM, chondroitin, and ASU, and it also lists other ingredients (https://www.cosequin.com/product/horses/cosequin-asu-plus, fetched 2026-10-08). Milligrams differ for powder and pellets — check the label. The initial period is 2–4 weeks. Check the current FEI and USEF lists. The printed price is $80–110 a month. Pellet palatability varies.</p>
+        <p>Cosequin ASU Plus is Best Joint Evidence and the winner. The <a href="https://www.cosequin.com/product/horses/cosequin-asu-plus">current powder page</a> lists glucosamine, MSM, chondroitin, and ASU, and it also lists other ingredients (fetched 2026-10-08). Milligrams differ for powder and pellets — check the label. The initial period is 2–4 weeks. Check the current FEI and USEF lists. The printed price is $80–110 a month. Pellet palatability varies.</p>
         <h2>What the review says about Equithrive</h2>
         <p>Equithrive Original Pellets are Best Resveratrol. The active is trans-resveratrol. The current page says research-backed and FEI and USEF compliant. It does not print University of Kentucky equine trials — check the label for the resveratrol amount. The printed price is $45–65 a month. The review frames resveratrol as a complement to traditional joint ingredients, not a substitute.</p>
         <h2>Who should buy which product</h2>
         <p>Buy Cosequin ASU Plus when the horse has diagnosed osteoarthritis or significant work-related joint loading and you want the product the review ranks on published evidence. Buy Equithrive when you want the lower monthly band and you are adding resveratrol beside another joint product, not instead of one. A single broad wellness tub is Platinum Performance on the same review, not either product here.</p>
-        <p>Cosequin ASU Plus is the joint pick because the current powder page lists glucosamine, MSM, chondroitin, and ASU, and it also lists other ingredients (https://www.cosequin.com/product/horses/cosequin-asu-plus, fetched 2026-10-08).</p>
+        <p>Cosequin ASU Plus is the joint pick because the <a href="https://www.cosequin.com/product/horses/cosequin-asu-plus">current powder page</a> lists glucosamine, MSM, chondroitin, and ASU, and it also lists other ingredients (fetched 2026-10-08).</p>
         <div className="my-6 max-w-full min-w-0">
           <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
             <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>

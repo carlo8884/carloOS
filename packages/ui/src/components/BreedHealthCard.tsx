@@ -17,6 +17,8 @@ interface BreedHealthCardProps {
   /** Optional: link to deeper guide */
   guideHref?: string
   guideLabel?: string
+  /** Claim address kept beside the description. The card prints the source name, not this address. */
+  sourceUrl?: string
 }
 
 const RISK_CONFIG: Record<RiskLevel, { label: string; bg: string; text: string; border: string }> = {
@@ -34,12 +36,14 @@ export function BreedHealthCard({
   management,
   guideHref,
   guideLabel,
+  sourceUrl,
 }: BreedHealthCardProps) {
   const risk = RISK_CONFIG[riskLevel]
 
   return (
     <div
       className="rounded-xl p-6 mb-4"
+      data-source={sourceUrl}
       style={{ background: risk.bg, border: `1px solid ${risk.border}` }}
     >
       <div className="flex flex-col gap-2 mb-3 sm:flex-row sm:items-start sm:justify-between sm:gap-4">

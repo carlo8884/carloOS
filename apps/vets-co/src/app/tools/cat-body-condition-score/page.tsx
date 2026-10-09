@@ -260,8 +260,8 @@ export default function CatBodyConditionScorePage() {
 
         <h2 id="how">How it works</h2>
         <p>
-          How we calculate: the three checks follow the WSAVA 9-point cat chart
-          (https://wsava.org/wp-content/uploads/2025/06/WSAVA_BCSCat_BCSCat_Nutrition_250612.pdf).
+          How we calculate: the three checks follow the{' '}
+          <a href="https://wsava.org/wp-content/uploads/2025/06/WSAVA_BCSCat_BCSCat_Nutrition_250612.pdf" className="text-brand-primary hover:underline">WSAVA 9-point cat chart</a>.
           At 4 to 5 of 9 the ribs are felt under a thin layer of fat, a waist is visible, and the
           abdominal fat pad is minimal. A 6 of 9 may be acceptable in some cats, especially older cats.
           Rounding the average of the three checks is a planning figure. The chart does not state a

@@ -240,7 +240,8 @@ export default function VetsHuskyHealthPage() {
           <BreedHealthCard
             name="Gastric Dilatation-Volvulus (GDV / Bloat)"
             riskLevel="moderate"
-            description="GDV is the most time-critical canine emergency. The stomach fills with gas (dilatation) and then twists on itself (volvulus), cutting off blood supply and causing rapid cardiovascular collapse. Deep-chested breeds are over-represented; the Siberian Husky has a moderately deep chest and appears in the at-risk lists. Merck Veterinary Manual lists overall GDV mortality at approximately 25–30%, and 20–45% in treated animals (https://www.merckvetmanual.com/digestive-system/surgical-problems-of-the-gastrointestinal-tract-in-small-animals/gastric-dilation-and-volvulus-in-small-animals). Cornell reports survival greater than 80 percent with treatment (https://www.vet.cornell.edu/departments-centers-and-institutes/riney-canine-health-center/canine-health-topics/gastric-dilatation-volvulus-gdv-or-bloat)."
+            description="GDV is the most time-critical canine emergency. The stomach fills with gas (dilatation) and then twists on itself (volvulus), cutting off blood supply and causing rapid cardiovascular collapse. Deep-chested breeds are over-represented; the Siberian Husky has a moderately deep chest and appears in the at-risk lists. Merck Veterinary Manual lists overall GDV mortality at approximately 25–30%, and 20–45% in treated animals. Cornell reports survival greater than 80 percent with treatment."
+            sourceUrl="https://www.merckvetmanual.com/digestive-system/surgical-problems-of-the-gastrointestinal-tract-in-small-animals/gastric-dilation-and-volvulus-in-small-animals"
             signs={[
               'Unproductive retching — trying to vomit without producing — EMERGENCY',
               'Hard, distended abdomen',
@@ -386,6 +387,8 @@ export default function VetsHuskyHealthPage() {
 
           <h2>Sources & Further Reading</h2>
           <ul>
+            <li><a href="https://www.merckvetmanual.com/digestive-system/surgical-problems-of-the-gastrointestinal-tract-in-small-animals/gastric-dilation-and-volvulus-in-small-animals" rel="noopener" target="_blank" className="text-brand-primary hover:underline">Merck Veterinary Manual: gastric dilatation-volvulus</a></li>
+            <li><a href="https://www.vet.cornell.edu/departments-centers-and-institutes/riney-canine-health-center/canine-health-topics/gastric-dilatation-volvulus-gdv-or-bloat" rel="noopener" target="_blank" className="text-brand-primary hover:underline">Cornell Riney Canine Health Center: gastric dilatation-volvulus</a></li>
             <li><a href="https://www.shca.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">Siberian Husky Club of America</a> — Health Foundation breed health resources.</li>
             <li><a href="https://www.acvo.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">American College of Veterinary Ophthalmologists (ACVO)</a> — Blue Book of breed-related eye disease.</li>
             <li><a href="https://ofa.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">Orthopedic Foundation for Animals (OFA)</a> — hip and CAER eye registries.</li>
