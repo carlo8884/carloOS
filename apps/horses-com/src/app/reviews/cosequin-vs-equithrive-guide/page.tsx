@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { HopDisclosure } from '../../../components/HopDisclosure'
-import { ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata, ArticleSourcesList, LastUpdated, ComparisonFoot } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: 'Cosequin vs Equithrive for Joints | Horses.com',
@@ -99,6 +99,41 @@ export default function CosequinVsEquithriveGuidePage() {
         <h2>Who should buy which product</h2>
         <p>Buy Cosequin ASU Plus when the horse has diagnosed osteoarthritis or significant work-related joint loading and you want the product the review ranks on published evidence. Buy Equithrive when you want the lower monthly band and you are adding resveratrol beside another joint product, not instead of one. A single broad wellness tub is Platinum Performance on the same review, not either product here.</p>
         <p>Cosequin ASU Plus is the joint pick because the current powder page lists glucosamine, MSM, chondroitin, and ASU, and it also lists other ingredients (https://www.cosequin.com/product/horses/cosequin-asu-plus, fetched 2026-10-08).</p>
+        <div className="my-6 max-w-full min-w-0">
+          <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
+            <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+            <thead>
+              <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
+                <th scope="col" className="p-3 font-bold text-brand-dark">Cosequin ASU Plus</th>
+                <th scope="col" className="p-3 font-bold text-brand-dark">Equithrive Original</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Role</th>
+                <td className="p-3">Best Joint Evidence, and the winner</td>
+                <td className="p-3">Best Resveratrol</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">What the page lists</th>
+                <td className="p-3">Glucosamine, MSM, chondroitin, and ASU, plus other ingredients</td>
+                <td className="p-3">Trans-resveratrol</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">How to read the label</th>
+                <td className="p-3">Milligrams differ for powder and pellets. Initial period is 2–4 weeks. Check the current FEI and USEF lists</td>
+                <td className="p-3">Check the label for the resveratrol amount. The page says research-backed and FEI and USEF compliant</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">How the review frames it</th>
+                <td className="p-3">The joint-evidence pick</td>
+                <td className="p-3">A complement to traditional joint ingredients, not a substitute. Smaller evidence base than ASU and glucosamine</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <ComparisonFoot updated="2026-10-09" />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
                 <ArticleSourcesList title="Sources"

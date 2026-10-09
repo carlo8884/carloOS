@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildItemListSchema, buildMetadata, combineSchemas, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildItemListSchema, buildMetadata, combineSchemas, ArticleSourcesList, LastUpdated, ComparisonFoot } from '@carloOS/ui'
 import { HopDisclosure } from '../../../components/HopDisclosure'
 
 // Request-time env, same as the insurance comparison. A set partner tag
@@ -113,6 +113,46 @@ export default function LemonadeVsPetsBestGuidePage() {
         <h2>Who should read which policy</h2>
         <p>Open the Lemonade sample when the pet is young and healthy and you want the app-claim carrier. Confirm the state actually offers it, and treat the preventive package as separate from the insurance. Open the Pets Best sample when the pet is older, or you want several tiers, and read how premium scales with age. On both, enroll before a condition is in the record. Do not treat either quote-based line as a price from this page.</p>
         <p>Lemonade’s FAQ, fetched 2026-10-08, says signing up while a pet is young and healthy means they are not denied coverage at renewal because of age (<span className="break-all">https://www.lemonade.com/pet/explained/lemonade-pet-insurance-faq/</span>). Our notes mark Lemonade for owners with younger pets. Pets Best’s FAQ, fetched the same day, says there is no upper age limit (<span className="break-all">https://www.petsbest.com/faq</span>).</p>
+        <div className="my-6 max-w-full min-w-0">
+          <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
+            <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+            <thead>
+              <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
+                <th scope="col" className="p-3 font-bold text-brand-dark">Lemonade</th>
+                <th scope="col" className="p-3 font-bold text-brand-dark">Pets Best</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Role</th>
+                <td className="p-3">Young-Pet Value, and the winner on that page</td>
+                <td className="p-3">Flexible Plans</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Claims</th>
+                <td className="p-3">App-based. Availability varies by state</td>
+                <td className="p-3">Pay, then claim</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Age</th>
+                <td className="p-3">Notes mark it for younger pets. The FAQ says a young, healthy signup is not denied at renewal because of age</td>
+                <td className="p-3">No upper age limit. A dog or cat can enroll at any age over 7 weeks</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Extra</th>
+                <td className="p-3">Optional preventive package. The review says that package is not insurance</td>
+                <td className="p-3">Several plan tiers. Premiums rise with age</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Price line</th>
+                <td className="p-3">Quote-based</td>
+                <td className="p-3">Quote-based</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <ComparisonFoot updated="2026-10-09" />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
                 <ArticleSourcesList title="Sources"

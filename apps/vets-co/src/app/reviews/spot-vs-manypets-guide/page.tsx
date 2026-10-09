@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, InlinePartnerQuote, RelatedLinks, buildArticleSchema, buildMetadata, PrimaryHop, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, InlinePartnerQuote, RelatedLinks, buildArticleSchema, buildMetadata, PrimaryHop, ArticleSourcesList, LastUpdated, ComparisonFoot } from '@carloOS/ui'
 import { HopDisclosure } from '../../../components/HopDisclosure'
 
 // Request-time env. An unset AFF_SPOT_TAG keeps the quote as a note.
@@ -80,7 +80,7 @@ export default function SpotVsManyPetsGuidePage() {
       }
     >
       <div className="carloOS-article">
-          <LastUpdated date="2026-10-08" />
+          <LastUpdated date="2026-10-09" />
         <p>The <Link href="/insurance/reading-the-fine-print">fine-print page</Link> already puts Spot and ManyPets side by side as two sample policies to read, and it points to the <Link href="/reviews/best-pet-insurance">insurance review</Link> for the wider comparison. Neither product prints a monthly premium.</p>
         <h2>What the review says about Spot</h2>
         <p>Spot is Customizable and the winner on that page. Limits are adjustable. Exam fees are often covered. Preventive care is an optional add-on, and the review says that add-on is not insurance. The price line is quote-based. The cons say to read the waiting-period terms. Nothing here fills in a waiting-period length the review left unread.</p>
@@ -91,6 +91,46 @@ export default function SpotVsManyPetsGuidePage() {
         <p>The link below opens the Spot quote from the fine-print page. The price you see there is the carrier&apos;s quote, not a figure from this page.</p>
         <HopDisclosure siteId="vets-co" href={spotHref} />
         <p><InlinePartnerQuote href={spotHref} label="Get a Spot quote" /></p>
+        <div className="my-6 max-w-full min-w-0">
+          <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
+            <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+            <thead>
+              <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
+                <th scope="col" className="p-3 font-bold text-brand-dark">Spot</th>
+                <th scope="col" className="p-3 font-bold text-brand-dark">ManyPets</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Role</th>
+                <td className="p-3">Customizable, and the winner on that page</td>
+                <td className="p-3">Straightforward Terms</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Plan shape</th>
+                <td className="p-3">Adjustable limits. Exam fees are often covered</td>
+                <td className="p-3">One comprehensive plan. Pay, then claim</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Add-on</th>
+                <td className="p-3">Optional preventive care. The review says that add-on is not insurance</td>
+                <td className="p-3">Fewer structures to mix and match</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Fine print</th>
+                <td className="p-3">Read the waiting-period terms. The length is not filled in here</td>
+                <td className="p-3">Relatively clear. Availability varies by state</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Price line</th>
+                <td className="p-3">Quote-based</td>
+                <td className="p-3">Quote-based</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <ComparisonFoot updated="2026-10-09" />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
                 <ArticleSourcesList

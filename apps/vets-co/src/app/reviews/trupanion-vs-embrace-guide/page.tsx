@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, InlinePartnerQuote, RelatedLinks, buildArticleSchema, buildMetadata, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, InlinePartnerQuote, RelatedLinks, buildArticleSchema, buildMetadata, ArticleSourcesList, LastUpdated, ComparisonFoot } from '@carloOS/ui'
 import { HopDisclosure } from '../../../components/HopDisclosure'
 
 // Request-time env, same as the insurance comparison. A set partner tag
@@ -83,6 +83,46 @@ export default function TrupanionVsEmbraceGuidePage() {
         <p>Open the Trupanion sample when direct payment at checkout, 90% reimbursement, and unlimited payouts are the terms you need to confirm, and you are not buying the policy for wellness. Open the Embrace sample when the wellness add-on is the reason, and read the orthopedic waiting period on the carrier page before you enroll. Enroll before a condition is in the record. The insurance review says a condition noted before enrollment can be excluded. Healthy Paws is another option on that review, for fast reimbursement, and it is not this comparison.</p>
         <HopDisclosure siteId="vets-co" href="/go/trupanion/home?s=reviews-trupanion-vs-embrace-guide" showQuietNote={false} />
         <p><InlinePartnerQuote href="/go/trupanion/home?s=reviews-trupanion-vs-embrace-guide" label="Get a Trupanion quote →" holdWithoutPartnerId /></p>
+        <div className="my-6 max-w-full min-w-0">
+          <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
+            <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+            <thead>
+              <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
+                <th scope="col" className="p-3 font-bold text-brand-dark">Trupanion</th>
+                <th scope="col" className="p-3 font-bold text-brand-dark">Embrace</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Role</th>
+                <td className="p-3">Best Overall</td>
+                <td className="p-3">Wellness Included</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Also on the page</th>
+                <td className="p-3">Direct vet payment at checkout. Higher premiums</td>
+                <td className="p-3">Plan options are more complex</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Reimbursement</th>
+                <td className="p-3">90 percent. Unlimited payouts</td>
+                <td className="p-3">70%, 80%, or 90%</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Deductible</th>
+                <td className="p-3">Per condition</td>
+                <td className="p-3">See the carrier’s current terms</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Wellness</th>
+                <td className="p-3">Not included</td>
+                <td className="p-3">Standalone add-on: exams, vaccines, flea, tick, heartworm, and preventative dental</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <ComparisonFoot updated="2026-10-09" />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
                 <ArticleSourcesList title="Sources"

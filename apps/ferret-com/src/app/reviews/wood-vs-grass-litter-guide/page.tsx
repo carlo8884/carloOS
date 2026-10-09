@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata, LastUpdated } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata, LastUpdated, ComparisonFoot } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -92,6 +92,51 @@ export default function WoodVsGrassLitterGuidePage() {
         <h2>Who should buy which litter</h2>
         <p>Buy heat-treated wood pellets when odor is the priority and you will reject loose cedar or pine shavings. Buy grass pellets when the ferret dislikes wood or paper underfoot and you will change the pan more often because wet pellets break down. Do not buy a clumping cat litter for either job. The default low-dust litter on the same review is recycled paper.</p>
         <p>Heat-treated wood pellets are the odor pick, and only as compressed low-phenol pellets. Loose aromatic shavings are not this product.</p>
+        <div className="my-6 max-w-full min-w-0">
+          <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
+            <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+            <thead>
+              <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
+                <th scope="col" className="p-3 font-bold text-brand-dark">Compressed wood pellets</th>
+                <th scope="col" className="p-3 font-bold text-brand-dark">Grass pellets</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Role</th>
+                <td className="p-3">Best for Odor</td>
+                <td className="p-3">Soft alternative</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Dust</th>
+                <td className="p-3">Low once the fines are sifted</td>
+                <td className="p-3">Low</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Odor</th>
+                <td className="p-3">Strongest of the safe options on that page</td>
+                <td className="p-3">Moderate</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Feel</th>
+                <td className="p-3">Harder underfoot than paper</td>
+                <td className="p-3">Soft. Some ferrets prefer it to wood</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Caveat</th>
+                <td className="p-3">Heat-treated, low-phenol pellets only. Not loose cedar or pine shavings</td>
+                <td className="p-3">Wet pellets break down faster, so change the pan more often than wood</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Price tier</th>
+                <td className="p-3">Lowest of the three litters</td>
+                <td className="p-3">Mid</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <ComparisonFoot updated="2026-10-09" />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
       </div>

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata, ArticleSourcesList, LastUpdated, ComparisonFoot } from '@carloOS/ui'
 import { HopDisclosure } from '../../../components/HopDisclosure'
 
 // Request-time env, same as the insurance comparison. A set partner tag
@@ -107,6 +107,46 @@ export default function HealthyPawsVsEmbraceGuidePage() {
         <h2>Who should read which policy</h2>
         <p>Open the Healthy Paws sample when the annual limit on the quote is the one you want and you want the claims page&apos;s processing window, and you are not buying the policy for a wellness add-on. Open the Embrace sample when the wellness add-on is the reason, and read the orthopedic waiting period on the carrier page before you enroll. Enroll before a condition is in the record. Trupanion, the direct-pay carrier on that review, is a separate comparison.</p>
         <p>The Healthy Paws claims page, fetched 2026-10-08, says most claims are processed in 2 days (<span className="break-all">https://www.healthypawspetinsurance.com/pet-insurance-claims.html</span>). The Embrace Wellness Rewards page, fetched the same day, lists wellness exams, vaccinations, flea, tick, and heartworm prevention, and preventative dental cleaning (<span className="break-all">https://www.embracepetinsurance.com/coverage/wellness-rewards</span>).</p>
+        <div className="my-6 max-w-full min-w-0">
+          <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
+            <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+            <thead>
+              <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
+                <th scope="col" className="p-3 font-bold text-brand-dark">Healthy Paws</th>
+                <th scope="col" className="p-3 font-bold text-brand-dark">Embrace</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Role</th>
+                <td className="p-3">Fastest reimbursement</td>
+                <td className="p-3">Wellness add-on</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Reimbursement</th>
+                <td className="p-3">Up to 90 percent</td>
+                <td className="p-3">70%, 80%, or 90%</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Deductible</th>
+                <td className="p-3">Annual</td>
+                <td className="p-3">See the carrier’s current terms</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Wellness</th>
+                <td className="p-3">Our notes list no add-on</td>
+                <td className="p-3">Standalone add-on: exams, vaccines, flea, tick, heartworm, and preventative dental</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Open the sample when</th>
+                <td className="p-3">You want the 2-day claims window, not a wellness add-on</td>
+                <td className="p-3">The wellness add-on is the reason. Read the orthopedic waiting period first</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <ComparisonFoot updated="2026-10-09" />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
                 <ArticleSourcesList title="Sources"

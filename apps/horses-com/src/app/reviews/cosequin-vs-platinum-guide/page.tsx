@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, QuietPartnerLink, RelatedLinks, buildArticleSchema, buildMetadata, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, QuietPartnerLink, RelatedLinks, buildArticleSchema, buildMetadata, ArticleSourcesList, LastUpdated, ComparisonFoot } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
@@ -76,6 +76,41 @@ export default function CosequinVsPlatinumGuidePage() {
         <h2>Who should buy which tub</h2>
         <p>Buy Cosequin ASU Plus when the job is the ASU formula with disclosed amounts, at the $60–95 band. Buy Platinum CJ when you want one tub that already stacks the longer ingredient list, and the $130–180 band is acceptable. Neither product is a replacement for veterinary joint treatment.</p>
         <QuietPartnerLink href="/go/smartpak/cosequin-asu-plus?s=reviews-cosequin-vs-platinum-guide" label="Compare Cosequin ASU Plus at SmartPak →" />
+        <div className="my-6 max-w-full min-w-0">
+          <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
+            <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+            <thead>
+              <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
+                <th scope="col" className="p-3 font-bold text-brand-dark">Cosequin ASU Plus</th>
+                <th scope="col" className="p-3 font-bold text-brand-dark">Platinum CJ</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Role</th>
+                <td className="p-3">Best Evidence (ASU), and the winner</td>
+                <td className="p-3">Best Comprehensive</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">What the page lists</th>
+                <td className="p-3">Glucosamine, MSM, chondroitin, and ASU, plus other ingredients. Milligrams differ for powder and pellets</td>
+                <td className="p-3">Per 2 scoops: glucosamine sulfate, MSM, ASU, boswellia, cetyl myristoleate, and hyaluronic acid. No chondroitin</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Also on the page</th>
+                <td className="p-3">Initial period is 2–4 weeks</td>
+                <td className="p-3">Omega-3 on that page is flax oil</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Not a replacement for</th>
+                <td className="p-3">Intra-articular medication when synovitis or active osteoarthritis is documented</td>
+                <td className="p-3">Veterinary joint treatment</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <ComparisonFoot updated="2026-10-09" />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
                 <ArticleSourcesList title="Sources"

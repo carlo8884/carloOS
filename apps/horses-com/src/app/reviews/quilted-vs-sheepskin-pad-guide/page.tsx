@@ -1,7 +1,7 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, QuietPartnerLink, RelatedLinks, buildArticleSchema, buildMetadata, PrimaryHop, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, QuietPartnerLink, RelatedLinks, buildArticleSchema, buildMetadata, PrimaryHop, ArticleSourcesList, LastUpdated, ComparisonFoot } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
@@ -76,7 +76,7 @@ export default function QuiltedVsSheepskinPadGuidePage() {
       }
     >
       <div className="carloOS-article">
-          <LastUpdated date="2026-10-08" />
+          <LastUpdated date="2026-10-09" />
         <p>The <Link href="/tack/saddle-pads">saddle-pad review</Link> already lists a quilted cotton all-purpose pad for everyday English schooling and a sheepskin half pad for friction under a saddle that fits. Neither pad corrects saddle fit.</p>
         <h2>What the review says about the quilted pad</h2>
         <p>The Quilted Cotton All-Purpose Pad is Everyday English and the winner. Material is quilted cotton. Care is machine washable. The printed price is $20–45. The review calls it inexpensive enough to keep several in rotation so a clean, dry pad is available. Cons: no structural fit correction, and it wears faster than wool or felt.</p>
@@ -88,6 +88,41 @@ export default function QuiltedVsSheepskinPadGuidePage() {
         <p>The link below opens the quilted cotton pad search already used on the saddle-pad review. The price there is the retailer's.</p>
         <p><a className="font-semibold text-brand-primary" href="/go/amazon-brand/quilted+all+purpose+saddle+pad?s=reviews-quilted-vs-sheepskin-pad-guide">Browse quilted all-purpose saddle pads on Amazon →</a></p>
         <QuietPartnerLink href="/go/smartpak/quilted-all-purpose-saddle-pad?s=reviews-quilted-vs-sheepskin-pad-guide" label="Compare the quilted cotton pad at SmartPak →" />
+        <div className="my-6 max-w-full min-w-0">
+          <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
+            <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+            <thead>
+              <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
+                <th scope="col" className="p-3 font-bold text-brand-dark">Quilted cotton pad</th>
+                <th scope="col" className="p-3 font-bold text-brand-dark">Sheepskin half pad</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Role</th>
+                <td className="p-3">Everyday English, and the winner</td>
+                <td className="p-3">Friction pick</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Material</th>
+                <td className="p-3">Quilted cotton. Machine washable</td>
+                <td className="p-3">Sheepskin or synthetic fleece</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Job</th>
+                <td className="p-3">A clean, dry pad in rotation. No structural fit correction</td>
+                <td className="p-3">Friction reduction and wicking under a saddle that already fits. Some versions have shim pockets</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Limit</th>
+                <td className="p-3">Wears faster than wool or felt. It does not correct saddle fit</td>
+                <td className="p-3">Cannot fix a wrong-width saddle. Real sheepskin needs careful washing</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <ComparisonFoot updated="2026-10-09" />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
                 <ArticleSourcesList

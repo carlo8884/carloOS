@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata, ArticleSourcesList, LastUpdated, ComparisonFoot } from '@carloOS/ui'
 import { HopDisclosure } from '../../../components/HopDisclosure'
 
 export const metadata: Metadata = buildMetadata({
@@ -95,6 +95,46 @@ export default function KayteeVsPrevueGuidePage() {
         <h2>Who should buy which cage</h2>
         <p>Buy the Prevue when you want the one the review lists first of these two, with room the review sizes for one or two ferrets, and you do not need the cage to expand later. Buy the Kaytee when you need a single-ferret cage from a chain store today, you will give daily out-time, and you will check the bar spacing on the box. A pair or trio that should have a stackable double unit is the Ferret Nation on the same review.</p>
         <p>The Prevue is the pick when the review sizes the floor for one or two ferrets and the cage does not need to expand later. Cover the wire shelves either way.</p>
+        <div className="my-6 max-w-full min-w-0">
+          <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
+            <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+            <thead>
+              <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
+                <th scope="col" className="p-3 font-bold text-brand-dark">Prevue Feisty Ferret</th>
+                <th scope="col" className="p-3 font-bold text-brand-dark">Kaytee Multi-Level</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Role</th>
+                <td className="p-3">Best Value</td>
+                <td className="p-3">Entry / Single Ferret</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Fit</th>
+                <td className="p-3">One to two ferrets. Not expandable</td>
+                <td className="p-3">One ferret plus daily out-of-cage time</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Spacing</th>
+                <td className="p-3">Ferret-appropriate</td>
+                <td className="p-3">In range if you verify the exact model</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Layout</th>
+                <td className="p-3">Several shelves and ramps. Wire shelves still need a cover</td>
+                <td className="p-3">Multi-level. A second ferret may outgrow it</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Price tier</th>
+                <td className="p-3">Mid</td>
+                <td className="p-3">Lowest of the three cages on that review</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <ComparisonFoot updated="2026-10-09" />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
                 <ArticleSourcesList
