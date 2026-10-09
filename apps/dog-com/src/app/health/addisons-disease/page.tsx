@@ -76,7 +76,7 @@ export default function AddisonsDiseaseePage() {
               (dog pill pockets / dry-erase monthly
               calendar / dog medical-alert collar tag).
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or PLACEHOLDER. Amazon searches only —
               unused vs #1052 gallon gravity dog waterer
               / extra-large disposable dog pee pads /
               dog cooling bandana, #1051 self-warming
@@ -111,7 +111,7 @@ export default function AddisonsDiseaseePage() {
               Percorten, Zycortal, Florinef,
               fludrocortisone, DOCP, prednisone,
               trilostane, Vetoryl, insulin, and Rx
-              ASINs are not shoppable hops. */}
+              product pages are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

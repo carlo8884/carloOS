@@ -86,9 +86,9 @@ export default function HyperthyroidismCatsPage() {
               monitoring / lifestyle tools, not a
               ranked product list, not a substitute
               for veterinary care, no Rx / methimazole /
-              Felimazole / Hill's y/d / I-131 ASIN hops.
+              Felimazole / Hill's y/d / I-131 product page hops.
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or PLACEHOLDER. Amazon searches only —
               unused vs #1087
               heavy+gauge+48+inch+dog+crate /
               2+foot+nylon+traffic+lead /

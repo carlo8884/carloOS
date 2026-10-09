@@ -67,7 +67,7 @@ const appSchema = {
   '@type': 'WebApplication',
   name: 'New Puppy Essentials Checklist Builder',
   description:
-    'Free interactive checklist that builds a staged new-puppy supplies list from adult size, pickup age, indoor or outdoor living, crate-training status, and budget, with Amazon category searches on every gear item.',
+    'Free interactive checklist that builds a staged new-puppy supplies list from adult size, pickup age, indoor or outdoor living, crate-training status, and budget, with Amazon searches on every gear item.',
   url: 'https://dog.com/tools/new-puppy-checklist',
   applicationCategory: 'LifestyleApplication',
   operatingSystem: 'Web',
@@ -76,7 +76,7 @@ const appSchema = {
     'Tailors the list to adult size, pickup age, indoor/outdoor, crate training, and budget',
     'Checkable stages: before pickup, first 48 hours, first month, vet and paperwork',
     'Flags the essentials vs. the nice-to-haves',
-    'Shoppable first-week kit via Amazon category searches',
+    'Shop the first-week kit via Amazon searches',
   ],
   publisher: { '@type': 'Organization', name: 'Dog.com Editorial', url: 'https://dog.com' },
 }
@@ -109,7 +109,7 @@ const howToSchema = buildHowToSchema({
 const articleSchema = buildArticleSchema({
   siteId: 'dog-com',
   title: 'New Puppy Checklist',
-  description: 'What do you actually need before a puppy comes home? Pick adult size, age at pickup, indoor or outdoor, crate training, and budget — then check off a staged first-week list with a shoppable kit for every gear item.',
+  description: 'What do you actually need before a puppy comes home? Pick adult size, age at pickup, indoor or outdoor, crate training, and budget — then check off a staged first-week list with shop links for every gear item.',
   url: 'https://dog.com/tools/new-puppy-checklist',
   imageUrl: '',
   authorName: 'Dog.com Editorial',
@@ -166,7 +166,7 @@ export default function NewPuppyChecklistPage() {
           <p className="text-lg text-white/55 leading-relaxed max-w-2xl">
             What do you actually need before a puppy comes home? Pick adult size, age at pickup,
             indoor or outdoor, crate training, and budget — then check off a staged first-week list
-            with a shoppable kit for every gear item.
+            with shop links for every gear item.
           </p>
         </div>
       </section>
@@ -207,7 +207,7 @@ export default function NewPuppyChecklistPage() {
 
       {/* Money path — live amazon-brand search hops (first-week kit).
           ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-          Category searches only — not a ranked list, not a diagnosis. */}
+          Amazon searches only — not a ranked list, not a diagnosis. */}
       <section id="new-puppy-kit" className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <div className="max-w-2xl">
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/wire+dog+crate+with+divider+panel?s=tools-new-puppy-checklist", "/go/amazon-brand/puppy+food?s=tools-new-puppy-checklist", "/go/amazon-brand/northmate+green+interactive+feeder?s=tools-new-puppy-checklist", "/go/amazon-brand/julius+k9+idc+powerharness?s=tools-new-puppy-checklist", "/go/amazon-brand/dog+id+tag+collar?s=tools-new-puppy-checklist", "/go/amazon-brand/puppy+teething+toys?s=tools-new-puppy-checklist", "/go/amazon-brand/enzymatic+pet+stain+odor+cleaner?s=tools-new-puppy-checklist"]} />

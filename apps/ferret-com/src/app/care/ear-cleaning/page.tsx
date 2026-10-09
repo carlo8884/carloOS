@@ -175,7 +175,7 @@ export default function EarCleaningPage() {
 
           {/* Money path — live amazon-brand search hops (ear-grooming supplies).
               ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-              Category searches only — educational gear, not medications, not a ranked list.
+              Amazon searches only — educational gear, not medications, not a ranked list.
               No prescription mite treatments, no hydrogen peroxide, no alcohol. */}
           <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/pet+ear+cleaner?s=care-ear-cleaning", "/go/amazon-brand/cotton+pads?s=care-ear-cleaning", "/go/amazon-brand/ferret+lickable+treat+paste?s=care-ear-cleaning"]} />
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">

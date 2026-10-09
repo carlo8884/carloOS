@@ -162,7 +162,7 @@ export default function DogAllergiesPage() {
 
           {/* Money path — live amazon-brand search hops (HEPA air
               purifier / HEPA filter kit). ShopCtas hides empty Chewy;
-              never href="#" or PLACEHOLDER. Category searches only.
+              never href="#" or PLACEHOLDER. Amazon searches only.
               Chlorhexidine shampoo, bathing products, Rx allergy meds
               (Apoquel / Cytopoint / Atopica), and prescription diets
               are not shoppable hops. */}

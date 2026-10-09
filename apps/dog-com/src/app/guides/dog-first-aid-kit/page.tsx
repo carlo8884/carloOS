@@ -207,7 +207,7 @@ export default function DogFirstAidKitPage() {
 
           {/* Money path — live amazon-brand search hops (first-aid / emergency-prep kit).
               ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-              Category searches only — educational kit supplies, not medications, not a ranked list. */}
+              Amazon searches only — educational kit supplies, not medications, not a ranked list. */}
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/wound+care+gauze?s=guides-first-aid-kit", "/go/amazon-brand/vetrap+cohesive+bandage?s=guides-first-aid-kit", "/go/amazon-brand/digital+pet+thermometer?s=guides-first-aid-kit", "/go/amazon-brand/saline+wound+flush?s=guides-first-aid-kit", "/go/amazon-brand/soft+dog+muzzle?s=guides-first-aid-kit", "/go/amazon-brand/soft+dog+carrier?s=guides-first-aid-kit"]} />
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">

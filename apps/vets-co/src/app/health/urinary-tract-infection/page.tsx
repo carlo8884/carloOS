@@ -67,7 +67,7 @@ export default function UTIPage() {
           {/* Money path — live amazon-brand search hops (stainless-steel
               dog fountain / washable pee pads / weighted ceramic bowl).
               ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-              Category searches only — unused vs #848–#1032
+              Amazon searches only — unused vs #848–#1032
               dog+water+fountain, heavy+ceramic+pet+water+bowl,
               puppy+training+pads, and FLUTD (#1024)
               cat+water+fountain / extra+cat+litter+box /

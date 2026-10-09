@@ -318,7 +318,7 @@ export default function VaccinationSchedulePage() {
 
           {/* Money path — live amazon-brand search hops (barn kit).
               ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-              Category searches only — everyday physical supplies matching
+              Amazon searches only — everyday physical supplies matching
               on-page PHF stall-fan / stall-screen copy, not vaccine,
               medication, needle, or invented-kit hops.
               Vaccines, needles, epinephrine, FEI passports, and fly spray

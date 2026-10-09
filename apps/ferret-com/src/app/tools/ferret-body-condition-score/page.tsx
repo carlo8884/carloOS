@@ -87,7 +87,7 @@ const appSchema = {
     'Three guided checks: rib/spine palpation, waist from above, belly from the side',
     'Seasonal weight-swing caveat (autumn fat / spring slim-down)',
     'Interpretation: underweight, ideal, overweight, obese, with vet-deferring next steps',
-    'Shoppable BCS kit via Amazon category searches (ferret food, senior ferret food, digital pet scale, ferret hammock, carrier)',
+    'Shop the BCS kit via Amazon searches (ferret food, senior ferret food, digital pet scale, ferret hammock, carrier)',
   ],
   publisher: { '@type': 'Organization', name: 'Ferret.com Editorial', url: 'https://ferret.com' },
 }
@@ -182,7 +182,7 @@ export default function FerretBodyConditionScorePage() {
 
       {/* Money path — live amazon-brand search hops (BCS / weight-management kit).
           ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-          Category searches only — not a ranked list, not a diagnosis. */}
+          Amazon searches only — not a ranked list, not a diagnosis. */}
       <section id="ferret-bcs-kit" className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <div className="max-w-2xl">
           <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/ferret+food?s=tools-ferret-body-condition-score", "/go/amazon-brand/senior+ferret+food?s=tools-ferret-body-condition-score", "/go/amazon-brand/digital+pet+scale?s=tools-ferret-body-condition-score", "/go/amazon-brand/ferret+hammock?s=tools-ferret-body-condition-score", "/go/amazon-brand/ferret+carrier?s=tools-ferret-body-condition-score"]} />

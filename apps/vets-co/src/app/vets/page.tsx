@@ -72,7 +72,7 @@ export default function VetDirectoryHubPage() {
       <div className="bg-brand-primary/10 border-b border-brand-primary/30 px-container-sm sm:px-container py-3">
         <p className="text-xs text-brand-dark m-0 leading-relaxed max-w-5xl">
           <span className="font-bold">Sample listings — directory under construction.</span> The
-          individual vet profiles below are placeholders used to validate layout and schema. Real
+          individual vet profiles below are samples used to validate layout and schema. Real
           listings will populate after Carlo selects a verified data source (state veterinary medical
           boards, AAHA, AVMA, or another sourced provider). See our{' '}
           <Link href="/editorial-standards" className="text-brand-primary font-bold no-underline hover:underline">

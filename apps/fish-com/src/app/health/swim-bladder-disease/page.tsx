@@ -61,7 +61,7 @@ export default function SwimBladderPage() {
 
         {/* Money path — live amazon-brand search hops (fasting / water-quality / shallow-hospital kit).
             ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-            Category searches only — not a ranked list. No medication hops. */}
+            Amazon searches only — not a ranked list. No medication hops. */}
         <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/api+freshwater+master+test+kit?s=health-swim-bladder", "/go/amazon-brand/aquarium+quarantine+hospital+tank+net?s=health-swim-bladder", "/go/amazon-brand/aquarium+sponge+filter?s=health-swim-bladder"]} />
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">

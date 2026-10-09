@@ -180,7 +180,7 @@ export default function DogSymptomsGuidePage() {
               (LED medical penlight / pet emergency
               contact card / folding pet stretcher).
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or PLACEHOLDER. Amazon searches only —
               unused vs #1044 pet vaccination record
               book / dog seat-belt tether / foldable
               waterproof puppy mat, #1043 mosquito
@@ -195,7 +195,7 @@ export default function DogSymptomsGuidePage() {
               styptic powder, and tick removers.
               Wound gauze, Vetrap, soft dog muzzles,
               seizure throw blankets / crate bumpers /
-              foam tiles, and Rx ASINs are not
+              foam tiles, and prescription brands are not
               shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">

@@ -94,7 +94,7 @@ const appSchema = {
     'Conservative urgency read: go now, same-day vet, or monitor closely',
     '15 equine signs drawn from colic, choke, laminitis, lameness, and first-aid criteria',
     'Always rounds toward more care; no all-clear result',
-    'Shoppable equine emergency-prep kit via Amazon category searches (equine first-aid kit, digital veterinary thermometer, vet wrap bandage, poultice, horse electrolytes)',
+    'Shop the equine emergency-prep kit via Amazon searches (equine first-aid kit, digital veterinary thermometer, vet wrap bandage, poultice, horse electrolytes)',
   ],
 }
 
@@ -228,7 +228,7 @@ export default function IsThisAHorseEmergencyPage() {
 
       {/* Money path — live amazon-brand search hops (equine emergency-prep / first-aid kit).
           ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-          Category searches only — not a ranked list, not a diagnosis. */}
+          Amazon searches only — not a ranked list, not a diagnosis. */}
       <section id="horse-emergency-prep-kit" className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <div className="max-w-2xl">
           <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/equine+first+aid+kit?s=tools-is-this-a-horse-emergency", "/go/amazon-brand/digital+veterinary+thermometer?s=tools-is-this-a-horse-emergency", "/go/amazon-brand/vet+wrap+bandage?s=tools-is-this-a-horse-emergency", "/go/amazon-brand/poultice?s=tools-is-this-a-horse-emergency", "/go/amazon-brand/horse+electrolytes?s=tools-is-this-a-horse-emergency"]} />

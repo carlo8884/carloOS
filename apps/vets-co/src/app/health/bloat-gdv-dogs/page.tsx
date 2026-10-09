@@ -105,7 +105,7 @@ export default function BloatGDVPage() {
               northmate+green+interactive+feeder /
               lick+mat+dog / 6+ft+dog+leash /
               dog+long+line+leash /
-              pet+first+aid+kit hops. Rx ASINs are
+              pet+first+aid+kit hops. prescription brands are
               not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">

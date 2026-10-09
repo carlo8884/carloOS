@@ -130,7 +130,7 @@ export default function CityHubPage({ params }: PageProps) {
       <div className="bg-brand-primary/10 border-b border-brand-primary/30 px-container-sm sm:px-container py-3">
         <p className="text-xs text-brand-dark m-0 leading-relaxed max-w-5xl">
           <span className="font-bold">Sample listings — directory under construction.</span>{' '}
-          Individual vet profiles below are placeholders pending Carlo&apos;s selection of a verified
+          Individual vet profiles below are samples pending Carlo&apos;s selection of a verified
           data source (state vet boards, AAHA, AVMA, or another sourced provider).
         </p>
       </div>

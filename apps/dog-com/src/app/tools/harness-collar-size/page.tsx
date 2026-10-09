@@ -173,7 +173,7 @@ export default function HarnessCollarSizePage() {
 
       {/* Money path — live amazon-brand search hops (walk kit).
           ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-          Category searches only — not a ranked list, not a brand guarantee. */}
+          Amazon searches only — not a ranked list, not a brand guarantee. */}
       <section id="walk-kit" className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <div className="max-w-2xl">
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/julius+k9+idc+powerharness?s=tools-harness-collar-size", "/go/amazon-brand/flat+buckle+nylon+dog+collar?s=tools-harness-collar-size", "/go/amazon-brand/dog+measuring+tape+body+condition+chart?s=tools-harness-collar-size", "/go/amazon-brand/dog+leash?s=tools-harness-collar-size", "/go/amazon-brand/front+clip+no+pull+dog+harness?s=tools-harness-collar-size"]} />

@@ -160,7 +160,7 @@ export default function ToxicPlantsPage() {
               horse pasture walk weed identification handbook /
               horse paddock tree guard fencing).
               Educational pasture/barn-safety searches only;
-              no Rx / vaccine ASIN hops. ShopCtas hides empty
+              no Rx / vaccine product page hops. ShopCtas hides empty
               Chewy; never href="#" or PLACEHOLDER.
               Unused vs #1114
               flat+back+horse+water+bucket /

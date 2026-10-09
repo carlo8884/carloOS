@@ -73,7 +73,7 @@ export default function SeniorBloodworkPage() {
               sterile urine specimen cup /
               12-hour mechanical kitchen timer).
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or PLACEHOLDER. Amazon searches only —
               unused vs #1069
               wire+small+animal+single+story+cage /
               non+slip+suction+bathtub+mat /
@@ -108,7 +108,7 @@ export default function SeniorBloodworkPage() {
               portion+control+food+scale+dog,
               pet+glucometer.
               Levothyroxine, Soloxine, Thyro-Tabs,
-              Hill's, Royal Canin, and Rx ASINs are
+              Hill's, Royal Canin, and prescription brands are
               not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">

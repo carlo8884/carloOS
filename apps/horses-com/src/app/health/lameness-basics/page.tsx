@@ -178,9 +178,9 @@ export default function LamenessBasicsPage() {
               tools, not a ranked product list, not a
               substitute for veterinary care, no Rx /
               vaccine / hoof-tester / soaking-boot /
-              ice-boot ASIN hops.
+              ice-boot product page hops.
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or PLACEHOLDER. Amazon searches only —
               unused vs #1098
               weatherproof+storage+clipboard /
               round+rubber+feed+pan+horse /

@@ -145,7 +145,7 @@ export default function TurnoutStablingPage() {
               nylon equine stall guard /
               hemp equine stall bedding).
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or PLACEHOLDER. Amazon searches only —
               unused vs #1064 thrush-antiseptic /
               folding-hoof-pick / stall-sweet-lime, #1063
               foam-pads / sand-bedding / easy-keeper-muzzle,
@@ -159,7 +159,7 @@ export default function TurnoutStablingPage() {
               pine+shavings / wood+pellet / stall+rubber+mats
               / horse+stall+fan / horse+stall+screen /
               horse+turnout+sheet / horse+grazing+muzzle.
-              Rx ASINs are not shoppable hops. */}
+              prescription brands are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

@@ -217,7 +217,7 @@ export default function IntroducingSecondFerretPage() {
               open guinea-pig snuggle sacks, so
               this page has no pouch button.
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or PLACEHOLDER. Amazon searches only —
               unused vs #1067 small-animal-rabies-
               certificate-holder / top-loading-small-
               animal-carrier / fleece-small-animal-
@@ -238,7 +238,7 @@ export default function IntroducingSecondFerretPage() {
               pet+glucometer / light+corn+syrup,
               pet+oral+feeding+syringe.
               Vaccines, Nobivac, IMRAB, diphenhydramine,
-              insulin syringes, and Rx ASINs are not
+              insulin syringes, and prescription brands are not
               shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">

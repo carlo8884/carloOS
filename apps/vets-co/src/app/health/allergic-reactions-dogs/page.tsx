@@ -62,11 +62,11 @@ export default function AllergicReactionsPage() {
 
           <h2>After a Reaction — What to Discuss With Your Vet</h2>
           <p>Any dog that has experienced a moderate or severe allergic reaction should have a conversation with a veterinarian about: identifying the trigger if possible (to avoid re-exposure), whether an epinephrine auto-injector is appropriate to keep at home, pre-medication protocols for future vaccines, and whether allergy testing is indicated. Dogs with a history of anaphylaxis to bee stings should have an EpiPen Jr prescribed and carried whenever the dog is outdoors during insect season.</p>
-          <p>After a veterinarian has cleared a mild hive or contact flare — localized welts, the dog alert and breathing normally — household rinse-and-rest tools can limit leftover allergen on the coat and paws. Oatmeal dog shampoo rinses residual contact allergen from the coat after a mild hive flare; it is not a treatment for facial swelling or anaphylaxis. Dog paw cleaner wipes clear the investigating paw after a sting or outdoor allergen so the dog is less likely to lick that residue. A soft recovery collar keeps paws off swollen skin while you wait for the veterinarian; it does not open an airway and it is not an EpiPen. Ask your veterinarian which of these, if any, belong in this dog&rsquo;s kit. Prescription allergy drugs (Apoquel, Cytopoint) and antihistamine brand ASINs are not product links on this page — Benadryl dose guidance stays editorial only.</p>
+          <p>After a veterinarian has cleared a mild hive or contact flare — localized welts, the dog alert and breathing normally — household rinse-and-rest tools can limit leftover allergen on the coat and paws. Oatmeal dog shampoo rinses residual contact allergen from the coat after a mild hive flare; it is not a treatment for facial swelling or anaphylaxis. Dog paw cleaner wipes clear the investigating paw after a sting or outdoor allergen so the dog is less likely to lick that residue. A soft recovery collar keeps paws off swollen skin while you wait for the veterinarian; it does not open an airway and it is not an EpiPen. Ask your veterinarian which of these, if any, belong in this dog&rsquo;s kit. Prescription allergy drugs (Apoquel, Cytopoint) and antihistamine product pages are not product links on this page — Benadryl dose guidance stays editorial only.</p>
 
           <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Keep these on hand: oatmeal dog shampoo to rinse a contact allergen after localized hives, dog paw cleaner wipes for the investigating paw after a sting or outdoor allergen, and a soft recovery collar so the dog cannot scratch swollen skin while you wait for the veterinarian. These are household tools, not treatments. They do not treat anaphylaxis, they do not replace epinephrine or a veterinarian, and they are not Apoquel, Cytopoint, prescription antihistamines, or Benadryl ASINs.
+            Keep these on hand: oatmeal dog shampoo to rinse a contact allergen after localized hives, dog paw cleaner wipes for the investigating paw after a sting or outdoor allergen, and a soft recovery collar so the dog cannot scratch swollen skin while you wait for the veterinarian. These are household tools, not treatments. They do not treat anaphylaxis, they do not replace epinephrine or a veterinarian, and they are not Apoquel, Cytopoint, prescription antihistamines, or Benadryl product pages.
           </p>
 
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/oatmeal+dog+shampoo?s=health-allergic-reactions-dogs", "/go/amazon-brand/dog+paw+cleaner+wipes?s=health-allergic-reactions-dogs", "/go/amazon-brand/soft+recovery+collar+dog?s=health-allergic-reactions-dogs"]} />
@@ -74,7 +74,7 @@ export default function AllergicReactionsPage() {
           {/* Money path — live amazon-brand search hops (oatmeal
               dog shampoo / dog paw cleaner wipes / soft recovery
               collar). ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only — unused vs
+              or PLACEHOLDER. Amazon searches only — unused vs
               #848–#1034 dog+ear+cleaner+solution,
               cotton+balls+for+dog+ears, dog+ear+drying+powder,
               UTI fountain/pads/bowl, kennel-cough
@@ -82,7 +82,7 @@ export default function AllergicReactionsPage() {
               chlorhexidine+dog+shampoo (#1013),
               soft+recovery+cone+dog, and soft+e+collar+dog.
               Apoquel, Cytopoint, prescription antihistamines,
-              and Benadryl ASINs are not shoppable hops. */}
+              and Benadryl product pages are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

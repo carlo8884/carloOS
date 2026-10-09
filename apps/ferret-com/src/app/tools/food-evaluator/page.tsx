@@ -71,7 +71,7 @@ const softwareApplicationSchema = {
     'Fiber ceiling: ≤3% is a planning figure. Merck states fiber under 2.5% (https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/management-of-ferrets).',
     'Ash ceiling: ≤7%',
     'Routes to exotics-experienced vet at the extremes',
-    'Shoppable food kit via Amazon category searches (high-protein ferret kibble, freeze-dried raw treats, salmon oil)',
+    'Shop the food kit via Amazon searches (high-protein ferret kibble, freeze-dried raw treats, salmon oil)',
   ],
   publisher: { '@type': 'Organization', name: 'Ferret.com Editorial', url: 'https://ferret.com' },
 }

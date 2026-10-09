@@ -70,7 +70,7 @@ export default function HowMuchToFeedPage() {
           siteId="dog-com"
           nextHref="/tools/dog-calorie-calculator"
           nextLabel="Run the calorie calculator for a starting scoop"
-          nextBlurb="The RER formula is the napkin math. The calorie calculator applies weight, life stage, and activity so you can check the result against the BCS table above. The button below opens the same generic supplies search on Amazon — not a new query."
+          nextBlurb="The RER formula is the napkin math. The calorie calculator applies weight, life stage, and activity so you can check the result against the BCS table above. The button below opens the same generic supplies search on Amazon — not a different search."
           resourceHref="/go/amazon-brand/dry+dog+food?s=nutrition-how-much"
           resourceLabel="Browse dry dog food on Amazon →"
         />

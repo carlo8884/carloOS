@@ -113,7 +113,7 @@ export default function StartupKit() {
         The calculator&rsquo;s one-time tack line is a dollar estimate. The day-one kit is
         a halter and lead, a grooming kit, hoof care, a feed scoop or scale, a barn
         first-aid kit, and a fly mask. Check items off as you gather them. The product
-        rows are category searches. Hoof care is the guide, not a shop search.
+        rows are Amazon searches. Hoof care is the guide, not a shop search.
       </p>
       <p className="text-2xs text-brand-text-light mb-5" aria-live="polite">
         {summary}

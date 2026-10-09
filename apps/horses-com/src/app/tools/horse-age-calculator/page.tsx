@@ -86,7 +86,7 @@ const appSchema = {
     'Horse years to human years using a banded planning model (not multiply-by-seven)',
     'Life stage: foal, young, adult, senior',
     'Stage-appropriate husbandry notes grounded in Horses.com senior-care and feeding copy',
-    'Shoppable life-stage kit via Amazon category searches (horse feed, senior horse feed, weight tape, fly mask, hoof pick)',
+    'Shop the life-stage kit via Amazon searches (horse feed, senior horse feed, weight tape, fly mask, hoof pick)',
   ],
   publisher: { '@type': 'Organization', name: 'Horses.com Editorial', url: 'https://horses.com' },
 }
@@ -187,7 +187,7 @@ export default function HorseAgeCalculatorPage() {
 
       {/* Money path — live amazon-brand search hops (life-stage kit).
           ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-          Category searches only — not a ranked list, not a diagnosis. */}
+          Amazon searches only — not a ranked list, not a diagnosis. */}
       <section id="horse-age-kit" className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <div className="max-w-2xl">
           <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/horse+feed?s=tools-horse-age-calculator", "/go/amazon-brand/senior+horse+feed?s=tools-horse-age-calculator", "/go/amazon-brand/horse+weight+tape?s=tools-horse-age-calculator", "/go/amazon-brand/horse+fly+mask?s=tools-horse-age-calculator"]} />

@@ -104,9 +104,9 @@ export default function DiabetesPage() {
               ranked product list, not a substitute
               for veterinary care, no Rx / Vetsulin /
               NPH / syringe / FreeStyle Libre /
-              Dexcom / Hill's w/d ASIN hops.
+              Dexcom / Hill's w/d product page hops.
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or PLACEHOLDER. Amazon searches only —
               unused vs #1084
               wall+mounted+magnetic+monthly+planner /
               waterproof+rear+seat+hammock /
@@ -141,7 +141,7 @@ export default function DiabetesPage() {
               dog+weight+log+book.
               Vetsulin, NPH, syringes, FreeStyle
               Libre, Dexcom, Hill's w/d, and Rx
-              ASINs are not shoppable hops. */}
+              product pages are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

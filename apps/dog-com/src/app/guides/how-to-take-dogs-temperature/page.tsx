@@ -298,7 +298,7 @@ export default function HowToTakeDogsTemperaturePage() {
 
           {/* Money path — live amazon-brand search hops (home-vitals kit).
               ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-              Category searches only — everyday physical supplies matching
+              Amazon searches only — everyday physical supplies matching
               on-page digital-rectal-thermometer / petroleum-jelly lubricant /
               isopropyl-alcohol-wipes copy, not the first-aid-kit wound hops
               or the generic digital+pet+thermometer key already pinned there. */}

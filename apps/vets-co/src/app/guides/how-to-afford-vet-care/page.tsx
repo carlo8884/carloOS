@@ -68,9 +68,9 @@ export default function AffordVetCarePage() {
               list, not a substitute for veterinary
               care, no Rx / first-aid kit /
               thermometer / carrier / insurance-brand
-              / financing-brand ASIN hops.
+              / financing-brand product page hops.
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or PLACEHOLDER. Amazon searches only —
               unused vs #1163
               household+budget+workbook /
               checkbook+register /

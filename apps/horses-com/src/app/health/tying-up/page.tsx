@@ -173,9 +173,9 @@ export default function TyingUpPage() {
               tools, not a ranked product list, not a
               substitute for veterinary care, no Rx /
               vaccine / fleece-cooler / salt-lick /
-              electrolyte-paste ASIN hops.
+              electrolyte-paste product page hops.
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or PLACEHOLDER. Amazon searches only —
               unused vs #1101
               steel+heart+bar+horseshoe /
               3+degree+leather+wedge+pad /

@@ -117,7 +117,7 @@ export default function PancreatitisPage() {
               lean+low+fat+dog+treats. Hill's i/d,
               Royal Canin Gastrointestinal Low Fat,
               Purina EN, Cerenia, maropitant, and Rx
-              ASINs are not shoppable hops. */}
+              product pages are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

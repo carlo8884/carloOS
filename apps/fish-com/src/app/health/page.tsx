@@ -101,7 +101,7 @@ export default function FishHealthPage() {
 
         {/* Money path — live amazon-brand search hops (health-library kit).
             ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-            Category searches only — not a ranked list. No medication hops. */}
+            Amazon searches only — not a ranked list. No medication hops. */}
         <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/api+freshwater+master+test+kit?s=health-hub", "/go/amazon-brand/aquarium+quarantine+hospital+tank+net?s=health-hub", "/go/amazon-brand/aquarium+sponge+filter?s=health-hub", "/go/amazon-brand/eheim+jager+heater?s=health-hub", "/go/amazon-brand/aquarium+digital+thermometer?s=health-hub"]} />
         <div className="mt-6 p-5 border border-brand-border rounded-xl bg-brand-surface max-w-content-wide mx-auto">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">

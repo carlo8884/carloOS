@@ -163,9 +163,9 @@ export default function WestNilePage() {
               tools, not a ranked product list, not a
               substitute for veterinary care, no Rx /
               vaccine / stall-fan / fly-sheet /
-              mosquito-dunk ASIN hops.
+              mosquito-dunk product page hops.
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or PLACEHOLDER. Amazon searches only —
               unused vs #1099
               30+foot+cotton+lunge+line /
               leather+chain+lead+shank+horse /

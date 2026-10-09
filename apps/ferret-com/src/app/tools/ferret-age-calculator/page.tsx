@@ -86,7 +86,7 @@ const appSchema = {
     'Ferret years to human years using a banded planning model (not multiply-by-seven)',
     'Life stage: kit, young adult, mature, senior',
     'Stage-appropriate husbandry notes grounded in Ferret.com lifespan and aging-care copy',
-    'Shoppable life-stage kit via Amazon category searches (ferret food, senior ferret food, digital pet scale, ferret hammock, carrier)',
+    'Shop the life-stage kit via Amazon searches (ferret food, senior ferret food, digital pet scale, ferret hammock, carrier)',
   ],
   publisher: { '@type': 'Organization', name: 'Ferret.com Editorial', url: 'https://ferret.com' },
 }
@@ -187,7 +187,7 @@ export default function FerretAgeCalculatorPage() {
 
       {/* Money path — live amazon-brand search hops (life-stage kit).
           ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-          Category searches only — not a ranked list, not a diagnosis. */}
+          Amazon searches only — not a ranked list, not a diagnosis. */}
       <section id="ferret-age-kit" className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <div className="max-w-2xl">
           <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/ferret+food?s=tools-ferret-age-calculator", "/go/amazon-brand/senior+ferret+food?s=tools-ferret-age-calculator", "/go/amazon-brand/digital+pet+scale?s=tools-ferret-age-calculator", "/go/amazon-brand/ferret+hammock?s=tools-ferret-age-calculator", "/go/amazon-brand/ferret+carrier?s=tools-ferret-age-calculator"]} />

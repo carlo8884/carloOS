@@ -162,9 +162,9 @@ export default function NavicularPage() {
               tools, not a ranked product list, not a
               substitute for veterinary or farrier care,
               no Rx / vaccine / foam-sole-support /
-              soaking-boot / snow-pad ASIN hops.
+              soaking-boot / snow-pad product page hops.
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or PLACEHOLDER. Amazon searches only —
               unused vs #1100
               long+handle+stock+tank+brush /
               20+foot+barn+mosquito+netting /

@@ -150,7 +150,7 @@ export default function WaterRequirementsPage() {
               The flat-back stall bucket search is not a button:
               its first result was a feed bucket.
               Educational barn searches only; no Rx /
-              vaccine ASIN hops. ShopCtas hides empty
+              vaccine product page hops. ShopCtas hides empty
               Chewy; never href="#" or PLACEHOLDER.
               Unused vs #1114 flat-back stall bucket
               (dropped), #1113

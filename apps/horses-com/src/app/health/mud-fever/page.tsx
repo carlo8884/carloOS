@@ -160,9 +160,9 @@ export default function MudFeverPage() {
               tools, not a ranked product list, not a
               substitute for veterinary care, no Rx /
               vaccine / antimicrobial / fly-boot /
-              shipping-boot / soaking-boot ASIN hops.
+              shipping-boot / soaking-boot product page hops.
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or PLACEHOLDER. Amazon searches only —
               unused vs #1102
               irish+knit+horse+cooler /
               wool+exercise+quarter+sheet /

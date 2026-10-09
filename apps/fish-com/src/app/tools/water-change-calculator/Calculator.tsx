@@ -345,7 +345,7 @@ export default function WaterChangeCalculator() {
           guideLabel="Read the water chemistry guide"
           blurb={
             <>
-              The same Amazon buttons are on water-test and fin-rot maintenance pages — no invented SKUs.
+              The same Amazon buttons are on water-test and fin-rot maintenance pages — no made-up products.
             </>
           }
           query={shop.query}

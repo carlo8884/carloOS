@@ -106,16 +106,16 @@ export default function WeightManagementPage() {
           <p><strong>Weigh monthly.</strong> A loss of 1–2% of body weight per month is a planning figure on this page — faster loss causes muscle loss. Monthly weigh-ins on the same scale track progress and identify when adjustment is needed. If not losing weight after 4 weeks of strict compliance, reduce food by another 10%.</p>
 
           <h2 id="kit">Kitchen-scale portioning kit</h2>
-          <p>Keep these on hand: a kitchen scale that measures in grams, plus a portion-control food scale for weighing every meal. Measuring cups stay off this kit: the copy says they vary by 20–30%. Carrot, cucumber, and green-bean pieces named as low-calorie treat swaps are produce. Prescription weight-management diets (Hill&apos;s Metabolic, Royal Canin Satiety, Purina Pro Plan Overweight Management) stay educational copy only — this page does not link to Rx food, brand ASINs, or medication.</p>
+          <p>Keep these on hand: a kitchen scale that measures in grams, plus a portion-control food scale for weighing every meal. Measuring cups stay off this kit: the copy says they vary by 20–30%. Carrot, cucumber, and green-bean pieces named as low-calorie treat swaps are produce. Prescription weight-management diets (Hill&apos;s Metabolic, Royal Canin Satiety, Purina Pro Plan Overweight Management) stay educational copy only — this page does not link to Rx food, named brands, or medication.</p>
 
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/kitchen+gram+scale?s=health-weight-management", "/go/amazon-brand/portion+control+food+scale+dog?s=health-weight-management"]} />
 
           {/* Money path — live amazon-brand search hops (kitchen / food gram scale).
               ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-              Category searches only — reuse live sister queries from the
+              Amazon searches only — reuse live sister queries from the
               dog calorie calculator (kitchen+gram+scale) and dog
               ideal-weight / BCS tools (portion+control+food+scale+dog).
-              Measuring cups, commercial treat ASINs, prescription WM
+              Measuring cups, commercial treat product pages, prescription WM
               diets, and medication are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">

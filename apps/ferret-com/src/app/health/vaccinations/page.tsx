@@ -508,7 +508,7 @@ export default function FerretVaccinationsPage() {
               top-loading small-animal carrier /
               fleece small-animal bonding pouch).
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or PLACEHOLDER. Amazon searches only —
               unused vs #1066 carnivore-care / baby-food /
               silicone dosing syringe, #1065 hay-box /
               stall-guard / hemp-bedding, #1064
@@ -526,7 +526,7 @@ export default function FerretVaccinationsPage() {
               pet+glucometer / light+corn+syrup,
               pet+oral+feeding+syringe.
               Vaccines, Nobivac, IMRAB, diphenhydramine,
-              insulin syringes, and Rx ASINs are not
+              insulin syringes, and prescription brands are not
               shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">

@@ -157,7 +157,7 @@ export default function HeavesPage() {
 
           {/* Money path — live amazon-brand search hops (heaves kit).
               ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-              Category searches only — everyday physical supplies matching
+              Amazon searches only — everyday physical supplies matching
               on-page soak-or-steam hay copy, not bedding, fans, hay nets,
               inhalers, steroids, or medication hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">

@@ -236,7 +236,7 @@ export default function InsuranceReimbursementEstimatorPage() {
 
         {/* Money path — complementary amazon-brand search hops (home-care prep
             beside a reimbursement estimate). ShopCtas hides empty Chewy; never
-            href="#" or PLACEHOLDER. Category searches only — not a ranked
+            href="#" or PLACEHOLDER. Amazon searches only — not a ranked
             list. InsuranceWellnessShop above stays as-is; this block does not
             re-rank Trupanion / Healthy Paws / Embrace. */}
         <div id="insurance-home-care-kit" className="mt-8 mb-8">
@@ -248,7 +248,7 @@ export default function InsuranceReimbursementEstimatorPage() {
             <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">A first-aid kit, a digital thermometer, a pet scale, a recovery
               cone, and a calming aid are the home-care items owners often keep
               on hand while they run a reimbursement estimate — and after a
-              claim, while a pet recovers. These are Amazon category searches,
+              claim, while a pet recovers. These are Amazon searches,
               not a ranked product list and not a treatment plan.
               Accident-and-illness quotes stay on the{' '}
               <Link

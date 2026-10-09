@@ -72,7 +72,7 @@ export default function AnxietyDogsPage() {
 
           <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Keep these on hand: an anxiety vest for gentle pressure during a known trigger, a dog pheromone diffuser for the room the dog rests in, and a heartbeat comfort toy for short absences. These are household tools, not treatments. They do not treat panic, they do not replace a veterinarian, and they are not Thundershirt brand ASINs, Adaptil brand ASINs, or prescription anxiolytics.
+            Keep these on hand: an anxiety vest for gentle pressure during a known trigger, a dog pheromone diffuser for the room the dog rests in, and a heartbeat comfort toy for short absences. These are household tools, not treatments. They do not treat panic, they do not replace a veterinarian, and they are not Thundershirt product pages, Adaptil product pages, or prescription anxiolytics.
           </p>
 
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/anxiety+vest+dog?s=health-anxiety-in-dogs", "/go/amazon-brand/pheromone+diffuser+dog?s=health-anxiety-in-dogs", "/go/amazon-brand/dog+heartbeat+comfort+toy?s=health-anxiety-in-dogs"]} />
@@ -80,7 +80,7 @@ export default function AnxietyDogsPage() {
           {/* Money path — live amazon-brand search hops (anxiety
               vest / pheromone diffuser / heartbeat comfort toy).
               ShopCtas hides empty Chewy; never href="#" or
-              PLACEHOLDER. Category searches only — unused vs
+              PLACEHOLDER. Amazon searches only — unused vs
               #848–#1035 dog+anxiety+wrap, dog+crate+cover,
               white+noise+machine, lick+mat+dog,
               snuffle+mat+dog+enrichment,

@@ -101,9 +101,9 @@ export default function KidneyDiseaseCatsPage() {
               ranked product list, not a substitute
               for veterinary care, no Rx / Hill's k/d /
               Royal Canin Renal / phosphate-binder /
-              SQ-fluid / needle / syringe ASIN hops.
+              SQ-fluid / needle / syringe product page hops.
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or PLACEHOLDER. Amazon searches only —
               unused vs #1085
               digital+pet+glucose+log+notebook /
               insulated+pet+water+bowl /

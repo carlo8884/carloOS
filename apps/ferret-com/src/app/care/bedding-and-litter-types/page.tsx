@@ -186,10 +186,10 @@ export default function BeddingAndLitterTypesPage() {
 
           {/* Money path — live amazon-brand search hops (bedding / litter gear).
               ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-              Category searches only — educational gear, not medications, not a ranked list.
+              Amazon searches only — educational gear, not medications, not a ranked list.
               No cedar, pine shavings, or clumping-clay products. */}
           <h2 id="who">Who should buy which</h2>
-          <p>These rows match the materials above. The shop links are the same category searches as the box below, not a ranked brand list.</p>
+          <p>These rows match the materials above. The shop links are the same Amazon searches as the box below, not a ranked brand list.</p>
           <div className="overflow-x-auto my-6 max-w-full">
             <table className="w-full text-sm border-collapse table-fixed sm:table-auto min-w-0 sm:min-w-[36rem] [&_th]:break-words [&_td]:break-words">
               <thead>

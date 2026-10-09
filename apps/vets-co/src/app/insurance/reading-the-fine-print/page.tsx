@@ -70,9 +70,9 @@ export default function FinePrintPage() {
               not a ranked product list, not a
               substitute for veterinary care, no Rx
               / first-aid kit / thermometer /
-              carrier / insurance-brand ASIN hops.
+              carrier / insurance-brand product page hops.
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or PLACEHOLDER. Amazon searches only —
               unused vs #1171
               quad+ruled+graph+pad /
               paid+rubber+stamp /

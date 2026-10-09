@@ -95,7 +95,7 @@ const appSchema = {
     'Calibrated interpretation: minimal signs, some signs, or signs consistent with pain',
     'High-pain outcomes push horse emergency triage, not a shopping list',
     'Safety guidance: never give leftover prescriptions or human painkillers; never recommend a dose or a named drug',
-    'Shoppable observation / comfort kit via Amazon category searches (equine first-aid kit, poultice, ice boot / cold therapy wrap, digital veterinary thermometer, vet wrap / cohesive bandage, horse electrolytes)',
+    'Shop the observation / comfort kit via Amazon searches (equine first-aid kit, poultice, ice boot / cold therapy wrap, digital veterinary thermometer, vet wrap / cohesive bandage, horse electrolytes)',
   ],
   publisher: { '@type': 'Organization', name: 'Horses.com Editorial', url: 'https://horses.com' },
 }
@@ -228,7 +228,7 @@ export default function HorseGrimaceScalePage() {
 
       {/* Money path — live amazon-brand search hops (observation / comfort kit).
           ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-          Category searches only — not a ranked list, not a diagnosis.
+          Amazon searches only — not a ranked list, not a diagnosis.
           High-pain outcomes should already have pushed ER triage above. */}
       <section id="horse-grimace-kit" className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <div className="max-w-2xl">

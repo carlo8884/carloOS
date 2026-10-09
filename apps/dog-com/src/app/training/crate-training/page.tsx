@@ -86,7 +86,7 @@ export default function CrateTrainingPage() {
 
         {/* Money path — live amazon-brand search hops (crate kit).
             ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-            Category searches only — not a ranked list. */}
+            Amazon searches only — not a ranked list. */}
         <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/wire+dog+crate+with+divider+panel?s=training-crate", "/go/amazon-brand/dog+crate+pad?s=training-crate", "/go/amazon-brand/dog+crate+cover?s=training-crate", "/go/amazon-brand/puppy+training+pads?s=training-crate"]} />
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">

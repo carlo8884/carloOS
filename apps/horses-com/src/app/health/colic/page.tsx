@@ -347,7 +347,7 @@ export default function ColicPage() {
               large animal stethoscope /
               soft fleece equine cooler).
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or PLACEHOLDER. Amazon searches only —
               unused vs #1061 farrier-log / hoof-stand /
               barn-flood-light, #1060 fecal-container /
               manure-rake / muck-cart, #1059 scoop /
@@ -360,7 +360,7 @@ export default function ColicPage() {
               equine+first+aid+kit, hoof-pick /
               hoof-boots, snow-pads / shoe-studs,
               stall-bedding / pasture-management. Rx
-              ASINs are not shoppable hops. */}
+              product pages are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

@@ -81,10 +81,10 @@ export default function ArthritisDogsPage() {
 
           {/* Money path — live amazon-brand search hops (home-setup kit).
               ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-              Category searches only — everyday physical supplies matching
+              Amazon searches only — everyday physical supplies matching
               on-page home-modification copy (rugs for traction, ramps,
               raised bowls, orthopedic bedding), not medication, vaccine,
-              anesthesia, or invented-ASIN hops. NSAIDs, human pain
+              anesthesia, or invented-product page hops. NSAIDs, human pain
               relievers, injectable therapies, and omega-3 / joint
               supplements are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">

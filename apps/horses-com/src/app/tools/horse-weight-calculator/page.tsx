@@ -99,7 +99,7 @@ const FAQS = [
   {
     question: 'Can I use this calculator for a foal?',
     answer:
-      'Not reliably. Foals and growing youngstock follow a different girth-to-weight relationship than mature horses, so the adult formula tends to misestimate them. The calculator includes a foal / young-stock option, but it should be treated as a rough placeholder only. For growing horses, a livestock scale is strongly preferred, and your veterinarian can advise on age-appropriate weight ranges.',
+      'Not reliably. Foals and growing youngstock follow a different girth-to-weight relationship than mature horses, so the adult formula tends to misestimate them. The calculator includes a foal / young-stock option, but it should be treated as a rough estimate only. For growing horses, a livestock scale is strongly preferred, and your veterinarian can advise on age-appropriate weight ranges.',
   },
   {
     question: 'Where do I measure the heart girth and body length exactly?',
@@ -264,7 +264,7 @@ export default function HorseWeightCalculatorPage() {
           <li>
             <strong>Planning figure:</strong> divisor ~<strong>299</strong> for ponies
             and ~<strong>301</strong> for draft / heavy horses. Those two numbers are not in the
-            1988 abstract. Foals reuse 330 only as a planning placeholder.
+            1988 abstract. Foals reuse 330 only as a planning estimate.
           </li>
         </ul>
         <p>

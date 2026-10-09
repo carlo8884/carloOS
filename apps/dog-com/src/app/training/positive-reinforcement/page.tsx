@@ -135,7 +135,7 @@ export default function PositiveReinforcementPage() {
 
         {/* Money path — live amazon-brand search hops (reward / marker kit).
             ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-            Category searches only — not a ranked list. */}
+            Amazon searches only — not a ranked list. */}
         <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/dog+training+clicker?s=training-positive-reinforcement", "/go/amazon-brand/puppy+training+treats?s=training-positive-reinforcement", "/go/amazon-brand/dog+training+treat+pouch+belt+clip?s=training-positive-reinforcement"]} />
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">

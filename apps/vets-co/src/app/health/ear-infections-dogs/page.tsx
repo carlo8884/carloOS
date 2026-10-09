@@ -81,7 +81,7 @@ export default function EarInfectionsDogsPage() {
           {/* Money path — live amazon-brand search hops (dog ear-cleaner
               solution / cotton balls for dog ears / dog ear-drying
               powder). ShopCtas hides empty Chewy; never href="#" or
-              PLACEHOLDER. Category searches only — unused vs #848–#1033
+              PLACEHOLDER. Amazon searches only — unused vs #848–#1033
               pet+ear+cleaner, cotton+balls, cotton+pads,
               dog+ear+drying+solution, UTI fountain/pads/bowl, and
               kennel-cough harness/humidifier/crate. Prescription

@@ -69,9 +69,9 @@ export default function QuestionsToAskPage() {
               veterinary care, no Rx / first-aid kit
               / thermometer / carrier /
               insurance-brand / financing-brand
-              ASIN hops.
+              product page hops.
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or PLACEHOLDER. Amazon searches only —
               unused vs #1165
               spiral+notebook /
               small+soft+cooler+bag /

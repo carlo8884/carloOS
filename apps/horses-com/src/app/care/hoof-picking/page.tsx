@@ -121,7 +121,7 @@ export default function HoofPickingPage() {
 
           {/* Money path — live amazon-brand search hops (hoof-picking kit).
               ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-              Category searches only — everyday physical supplies matching
+              Amazon searches only — everyday physical supplies matching
               on-page tools copy, not thrush / abscess treatments. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">

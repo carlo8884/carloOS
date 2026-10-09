@@ -155,7 +155,7 @@ export default function ThrushPage() {
               folding pocket equine hoof pick /
               equine stall sweet lime).
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or PLACEHOLDER. Amazon searches only —
               unused vs #1063 foam-pads / sand-bedding /
               easy-keeper-muzzle, #1062 thermometer /
               stethoscope / fleece-cooler, #1061
@@ -167,7 +167,7 @@ export default function ThrushPage() {
               #1056 diapers / collar / crate,
               horse+hoof+pick / horse+hoof+pick+brush /
               horse+hoof+boots / pine+shavings /
-              copper+sulfate / iodine. Rx ASINs are not
+              copper+sulfate / iodine. prescription brands are not
               shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">

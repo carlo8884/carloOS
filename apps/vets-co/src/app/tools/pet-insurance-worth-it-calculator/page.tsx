@@ -291,7 +291,7 @@ export default function PetInsuranceWorthItPage() {
 
         {/* Money path — complementary amazon-brand search hops (home-care prep
             beside an insurance decision). ShopCtas hides empty Chewy; never
-            href="#" or PLACEHOLDER. Category searches only — not a ranked
+            href="#" or PLACEHOLDER. Amazon searches only — not a ranked
             list. InsuranceWellnessShop above stays as-is; this block does not
             re-rank Trupanion / Healthy Paws / Embrace. */}
         <div id="insurance-home-care-kit" className="mt-8 mb-8">

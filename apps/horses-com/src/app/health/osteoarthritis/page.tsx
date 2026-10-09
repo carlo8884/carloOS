@@ -165,9 +165,9 @@ export default function OsteoarthritisPage() {
               These are educational keep-moving
               tools, not a ranked product list, not a
               substitute for veterinary care, no Rx /
-              Adequan / NSAID / joint-supplement ASIN hops.
+              Adequan / NSAID / joint-supplement product page hops.
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or PLACEHOLDER. Amazon searches only —
               unused vs #1105
               digital+hanging+hay+bale+scale /
               equine+forage+nsc+hay+test+kit /

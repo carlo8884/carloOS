@@ -342,7 +342,7 @@ export default function DogSpayNeuterTimingPage() {
               (washable dog heat pants / male dog belly
               band / heavy-duty dog exercise pen).
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or PLACEHOLDER. Amazon searches only —
               unused vs #848–#1040 washable+dog+pee+pads,
               washable+dog+bed+cover, pet+recovery+cone,
               soft+recovery+cone+dog, soft+e+collar+dog,
@@ -350,7 +350,7 @@ export default function DogSpayNeuterTimingPage() {
               dog+recovery+crate, wire+dog+crate,
               extra+tall+baby+gate, engraved+dog+collar,
               and GPS collar hops. Prescription and med
-              ASINs are not shoppable hops. */}
+              product pages are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

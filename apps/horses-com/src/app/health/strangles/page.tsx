@@ -171,9 +171,9 @@ export default function StranglesPage() {
               not a ranked product list, not a
               substitute for veterinary care, no Rx /
               vaccine / thermometer / first-aid kit /
-              shoe-cover / kennel-spray ASIN hops.
+              shoe-cover / kennel-spray product page hops.
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or PLACEHOLDER. Amazon searches only —
               unused vs #1096
               ruled+marble+composition+notebook /
               soft+cotton+receiving+blanket /

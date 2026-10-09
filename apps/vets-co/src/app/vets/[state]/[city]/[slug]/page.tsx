@@ -141,7 +141,7 @@ export default function VetProfilePage({ params }: PageProps) {
           Sample listing — not a real vet.
         </p>
         <p className="text-xs text-brand-text-mid m-0 mt-1 leading-relaxed max-w-5xl">
-          This profile is a placeholder used to validate the directory layout and schema. The
+          This profile is a sample used to validate the directory layout and schema. The
           practice name, phone number (555 prefix, reserved-for-fiction per NANP), and address are
           synthetic. Real listings will populate after Carlo selects a verified data source. See our{' '}
           <Link href="/editorial-standards" className="text-brand-primary font-bold no-underline hover:underline">
@@ -288,7 +288,7 @@ export default function VetProfilePage({ params }: PageProps) {
                 <div className="text-2xs font-bold uppercase text-brand-text-light mb-1">Phone</div>
                 <p className="text-sm font-mono text-brand-dark m-0">
                   {vet.phone}{' '}
-                  <span className="text-2xs text-brand-text-light italic">(placeholder)</span>
+                  <span className="text-2xs text-brand-text-light italic">(sample)</span>
                 </p>
               </div>
               <div className="mb-5">
@@ -300,7 +300,7 @@ export default function VetProfilePage({ params }: PageProps) {
                 disabled
                 aria-disabled
                 className="bg-brand-primary/40 text-white text-sm font-bold px-4 py-2.5 rounded-lg w-full cursor-not-allowed"
-                title="Booking is not active for sample listings. Real CTA wires when verified directory data is loaded."
+                title="Booking is not active for sample listings. The booking button turns on when verified directory data is loaded."
               >
                 Book Appointment
               </button>

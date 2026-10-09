@@ -149,14 +149,14 @@ export default function DewormingProgramPage() {
               pasture manure rake /
               stable muck cart).
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or PLACEHOLDER. Amazon searches only —
               unused vs stall+fork+manure+picker,
               fecal+sample+collection+kit,
               leak-proof+specimen+bags, grazing-muzzle,
               soil-test-kit, #1059 scoop / portion-cups /
               weight-log-book, #1058 stopwatch / notebook /
               bumper, #1057 feeder / maze-bowl / house-line,
-              #1056 diapers / collar / crate. Rx ASINs
+              #1056 diapers / collar / crate. prescription brands
               are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">

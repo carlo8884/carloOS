@@ -169,7 +169,7 @@ function buildRecommendedReviewsForBreed(
 /**
  * One breed-appropriate gear recommendation. `href` always routes a commercial
  * click through an EXISTING /go/<vendor>/<sku> handler (amazon-brand / chewy-brand
- * search SKUs — no invented vendors or ASINs) OR to an internal /reviews money
+ * search SKUs — no invented vendors or product pages) OR to an internal /reviews money
  * page when no honest single product applies. The `s=` source param tags the
  * click origin for Monetization-Bot attribution (mirrors /reviews/* CTA pattern).
  *

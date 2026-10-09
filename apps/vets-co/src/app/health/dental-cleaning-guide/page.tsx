@@ -75,11 +75,11 @@ export default function DentalCleaningGuidePage() {
 
           {/* Money path — live amazon-brand search hops (dental home-care kit).
               ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-              Category searches only — everyday physical supplies matching
+              Amazon searches only — everyday physical supplies matching
               on-page after-cleaning copy (soft toothbrush, enzymatic
               toothpaste, VOHC dental chews, VOHC water additive), not
               medication, anesthesia, or invented-kit hops. Human fluoride
-              toothpaste, CET/Vetradent ASINs, and clinic procedure gear
+              toothpaste, CET/Vetradent product pages, and clinic procedure gear
               are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">

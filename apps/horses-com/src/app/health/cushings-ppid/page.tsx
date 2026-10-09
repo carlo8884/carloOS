@@ -177,9 +177,9 @@ export default function PPIDPage() {
               These are educational coat-and-cooling
               tools, not a ranked product list, not a
               substitute for veterinary care, no Rx /
-              pergolide / ACTH / vaccine ASIN hops.
+              pergolide / ACTH / vaccine product page hops.
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or PLACEHOLDER. Amazon searches only —
               unused vs #1107
               equine+hoof+angle+gauge /
               leather+horse+lunge+cavesson /

@@ -139,7 +139,7 @@ export default function PastureManagementPage() {
 
           {/* Money path — live amazon-brand search hops (pasture kit).
               ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-              Category searches only — everyday physical supplies matching
+              Amazon searches only — everyday physical supplies matching
               on-page grazing-muzzle / soil-testing copy, not strip-grazing
               electric tape (fencing-safety), fans, slow feeders,
               electrolytes, hoof gear, stall forks, fertilizer, or

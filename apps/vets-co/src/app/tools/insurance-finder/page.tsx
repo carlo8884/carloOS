@@ -191,7 +191,7 @@ export default function InsuranceFinderPage() {
 
         {/* Money path — complementary amazon-brand search hops (home-care prep
             beside a coverage shortlist). ShopCtas hides empty Chewy; never
-            href="#" or PLACEHOLDER. Category searches only — not a ranked
+            href="#" or PLACEHOLDER. Amazon searches only — not a ranked
             list. InsuranceWellnessShop above stays as-is; this block does not
             re-rank Trupanion / Healthy Paws / Embrace. */}
         <div id="insurance-home-care-kit" className="mt-8 mb-8">
@@ -248,7 +248,7 @@ export default function InsuranceFinderPage() {
 
         <h2 id="how">How it works</h2>
         <p>
-          Each priority maps to a published coverage attribute in our carrier registry. &ldquo;Exam fees
+          Each priority maps to a published coverage attribute in our published carrier notes. &ldquo;Exam fees
           covered&rdquo; keeps carriers whose policies include exam fees; &ldquo;full dental coverage&rdquo; keeps
           carriers whose dental benefit covers dental disease, not only dental accidents; &ldquo;unlimited annual
           payout option&rdquo; keeps carriers that publish an unlimited annual-limit tier; and so on. Selecting

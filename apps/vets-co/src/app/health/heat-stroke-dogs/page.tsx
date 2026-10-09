@@ -70,13 +70,13 @@ export default function HeatStrokePage() {
           <p>Obese dogs, dark-coated dogs, elderly dogs, and dogs with cardiac or respiratory disease also have elevated heat stroke risk at temperatures that healthy, lean, young dogs handle without difficulty.</p>
 
           <h2 id="kit">Supplies named on this page</h2>
-          <p>Keep these on hand: cool-water towels to wet and apply to the neck, armpits, and groin, plus a digital thermometer so you can watch the temperature and stop active cooling before the dog becomes chilled. Ice packs stay off this kit: the copy above says they cause vasoconstriction and can slow cooling. IV fluids, clotting-disorder treatment, and other veterinary interventions stay educational copy only — this page does not link to medications, brand ASINs, or clinical gear.</p>
+          <p>Keep these on hand: cool-water towels to wet and apply to the neck, armpits, and groin, plus a digital thermometer so you can watch the temperature and stop active cooling before the dog becomes chilled. Ice packs stay off this kit: the copy above says they cause vasoconstriction and can slow cooling. IV fluids, clotting-disorder treatment, and other veterinary interventions stay educational copy only — this page does not link to medications, named brands, or clinical gear.</p>
 
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/cool+water+towels?s=health-heat-stroke-dogs", "/go/amazon-brand/digital+pet+thermometer?s=health-heat-stroke-dogs"]} />
 
           {/* Money path — live amazon-brand search hops (cool-water
               towels / digital thermometer). ShopCtas hides empty Chewy;
-              never href="#" or PLACEHOLDER. Category searches only —
+              never href="#" or PLACEHOLDER. Amazon searches only —
               reuse the live digital+pet+thermometer sister query from
               emergency triage / telehealth / first-aid kit. Ice packs,
               IV fluids, and medication are not shoppable hops. */}

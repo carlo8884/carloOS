@@ -155,7 +155,7 @@ export default function SaltElectrolytesPage() {
               salt first horse electrolyte powder /
               wide mouth horse water bucket).
               Educational barn tools only; no Rx /
-              vaccine ASIN hops. ShopCtas hides empty
+              vaccine product page hops. ShopCtas hides empty
               Chewy; never href="#" or PLACEHOLDER.
               Unused vs #1108
               stainless+horse+shedding+blade /

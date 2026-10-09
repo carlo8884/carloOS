@@ -81,7 +81,7 @@ export default function AquascapingGuidePage() {
 
         {/* Money path — live amazon-brand search hops (aquascape hardscape kit).
             ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-            Category searches only — everyday physical supplies matching
+            Amazon searches only — everyday physical supplies matching
             on-page Seiryu-stone / spiderwood-driftwood copy, not first-tank
             filter / heater / test-kit / CO2 hops. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">

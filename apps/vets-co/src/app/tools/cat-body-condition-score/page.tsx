@@ -60,7 +60,7 @@ const softwareApplicationSchema = {
     'Three guided checks: rib palpation, waist from above, abdominal fat pad',
     'Primordial-pouch caveat (a normal belly flap mistaken for fat)',
     'Interpretation: underweight, ideal, overweight, obese, with safe next steps',
-    'Shoppable weight-management kit via Amazon category searches (digital pet scale, measuring tape, weight-management cat food, puzzle feeder, interactive cat toy)',
+    'Shop the weight-management kit via Amazon searches (digital pet scale, measuring tape, weight-management cat food, puzzle feeder, interactive cat toy)',
   ],
   publisher: { '@type': 'Organization', name: 'Vets.co Editorial', url: 'https://vets.co' },
 }
@@ -191,7 +191,7 @@ export default function CatBodyConditionScorePage() {
 
         {/* Money path — live amazon-brand search hops (weight-management kit).
             ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-            Category searches only — not a ranked list, not a diagnosis. */}
+            Amazon searches only — not a ranked list, not a diagnosis. */}
         <div id="cat-bcs-kit" className="mt-8 mb-8">
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/digital+pet+scale?s=tools-cat-body-condition-score", "/go/amazon-brand/measuring+tape?s=tools-cat-body-condition-score", "/go/amazon-brand/weight+management+cat+food?s=tools-cat-body-condition-score", "/go/amazon-brand/puzzle+feeder?s=tools-cat-body-condition-score", "/go/amazon-brand/interactive+cat+toy?s=tools-cat-body-condition-score"]} />
           <div className="mt-4 rounded-xl border border-brand-border bg-brand-surface p-5">

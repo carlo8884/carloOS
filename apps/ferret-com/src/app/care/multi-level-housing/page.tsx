@@ -184,7 +184,7 @@ export default function MultiLevelHousingPage() {
 
           {/* Money path — live amazon-brand search hops (vertical-housing kit).
               ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-              Category searches only — everyday physical supplies matching
+              Amazon searches only — everyday physical supplies matching
               on-page ramp-cover / PVC-sheet / cable-tie / carabiner copy,
               not Critter Nation, sleep sacks, corner pans, tunnels, or
               medication hops. */}

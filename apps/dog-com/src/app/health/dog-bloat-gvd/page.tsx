@@ -108,7 +108,7 @@ export default function GdvPage() {
               wobble dog food dispenser / 30-minute
               sand hourglass timer). ShopCtas hides
               empty Chewy; never href="#" or
-              PLACEHOLDER. Category searches only —
+              PLACEHOLDER. Amazon searches only —
               unused vs #1091
               letter+size+thermal+laminating+pouches /
               72+hour+digital+countdown+timer /
@@ -131,7 +131,7 @@ export default function GdvPage() {
               slow+feeder+dog+bowl /
               elevated+slow+feeder+bowl+dog /
               raised+dog+bowl / puzzle+feeder+dog /
-              interactive+dog+feeder hops. Rx ASINs
+              interactive+dog+feeder hops. prescription brands
               are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">

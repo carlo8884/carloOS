@@ -76,9 +76,9 @@ export default function IntestinalParasitesPage() {
               ranked product list, not a substitute
               for veterinary care, no Rx / dewormer /
               fenbendazole / pyrantel / praziquantel /
-              metronidazole / vaccine ASIN hops.
+              metronidazole / vaccine product page hops.
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or PLACEHOLDER. Amazon searches only —
               unused vs #1089
               24+ounce+stainless+hiking+dog+bottle /
               powder+free+nitrile+exam+gloves /

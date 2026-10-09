@@ -173,7 +173,7 @@ export default function PuppyFirstYearBudgetPage() {
 
       {/* Money path — live amazon-brand search hops (first-year kit).
           ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-          Category searches only — not a ranked list, not a quote. */}
+          Amazon searches only — not a ranked list, not a quote. */}
       <section id="puppy-budget-kit" className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <div className="max-w-2xl">
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/wire+dog+crate+with+divider+panel?s=tools-puppy-first-year-budget", "/go/amazon-brand/puppy+food?s=tools-puppy-first-year-budget", "/go/amazon-brand/digital+gram+scale+kitchen+pet?s=tools-puppy-first-year-budget", "/go/amazon-brand/puppy+training+pads?s=tools-puppy-first-year-budget"]} />

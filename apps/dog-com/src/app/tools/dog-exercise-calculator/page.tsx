@@ -74,7 +74,7 @@ const appSchema = {
     'Energy-level ranges from low to working-breed',
     'Puppy “5 minutes per month of age” joint-safe guideline',
     'Senior low-impact adjustment and heat/health cautions',
-    'Shoppable walk-gear kit via Amazon category searches',
+    'Shop the walk-gear kit via Amazon searches',
   ],
   publisher: { '@type': 'Organization', name: 'Dog.com Editorial', url: 'https://dog.com' },
 }
@@ -159,7 +159,7 @@ export default function DogExerciseCalculatorPage() {
 
       {/* Money path — live amazon-brand search hops (walk / play kit).
           ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-          Category searches only — not a ranked list, not a workout plan. */}
+          Amazon searches only — not a ranked list, not a workout plan. */}
       <section id="dog-exercise-kit" className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <div className="max-w-2xl">
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/dog+leash?s=tools-dog-exercise", "/go/amazon-brand/julius+k9+idc+powerharness?s=tools-dog-exercise", "/go/amazon-brand/front+clip+no+pull+dog+harness?s=tools-dog-exercise", "/go/amazon-brand/kong+classic+dog+toy+stuffable?s=tools-dog-exercise", "/go/amazon-brand/dog+fetch+toys?s=tools-dog-exercise", "/go/amazon-brand/fi+series+3+dog+collar?s=tools-dog-exercise"]} />
