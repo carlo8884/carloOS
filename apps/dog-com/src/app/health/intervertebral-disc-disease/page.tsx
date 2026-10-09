@@ -91,7 +91,7 @@ export default function IVDDPage() {
           {/* Money path — live amazon-brand search hops (recovery
               crate / belly-support harness / wheelchair). ShopCtas
               hides empty Chewy; never href="#" or PLACEHOLDER.
-              Category searches only. NSAIDs, joint supplements,
+              Amazon searches only. NSAIDs, joint supplements,
               orthopedic beds, dog ramps, knee braces, rear-support
               harnesses, traction rugs, and raised bowls are not
               shoppable hops. */}

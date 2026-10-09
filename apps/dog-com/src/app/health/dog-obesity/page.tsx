@@ -279,14 +279,14 @@ export default function DogObesityPage() {
           </p>
 
           <h2 id="kit">Supplies named on this page</h2>
-          <p>Keep these on hand: a digital pet scale for the every-two-weeks body-weight check, plus a slow-feeder dog bowl so meals take longer and satiety improves without extra calories. These are home-setup aids, not treatments. Prescription weight-management diets (Hill&rsquo;s Metabolic, Royal Canin Satiety Support, Purina Pro Plan Veterinary Diets OM), brand food ASINs, kitchen gram scales, and portion-control food scales stay educational copy only — this page does not link to diets, food ASINs, or the sister <a href={crossSiteHref('vets-co', '/health/weight-management')}>vets.co weight-management</a> kitchen-scale buttons.</p>
+          <p>Keep these on hand: a digital pet scale for the every-two-weeks body-weight check, plus a slow-feeder dog bowl so meals take longer and satiety improves without extra calories. These are home-setup aids, not treatments. Prescription weight-management diets (Hill&rsquo;s Metabolic, Royal Canin Satiety Support, Purina Pro Plan Veterinary Diets OM), named food brands, kitchen gram scales, and portion-control food scales stay educational copy only — this page does not link to diets, named foods, or the sister <a href={crossSiteHref('vets-co', '/health/weight-management')}>vets.co weight-management</a> kitchen-scale buttons.</p>
 
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/digital+pet+scale?s=health-dog-obesity", "/go/amazon-brand/slow+feeder+dog+bowl?s=health-dog-obesity"]} />
 
           {/* Money path — live amazon-brand search hops (digital
               pet scale / slow-feeder dog bowl). ShopCtas hides empty
-              Chewy; never href="#" or PLACEHOLDER. Category searches
-              only. Rx weight diets, brand food ASINs, and kitchen
+              Chewy; never href="#" or PLACEHOLDER. Amazon searches
+              only. Rx weight diets, named food brands, and kitchen
               food-portioning scales are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">

@@ -87,7 +87,7 @@ export default function QuarantineGuidePage() {
           siteId="fish-com"
           nextHref="/health/ich-treatment"
           nextLabel="Know the ich protocol before spots show"
-          nextBlurb="Four weeks is the observation window. Ich is the disease that most often appears in that window. The button below opens the same quarantine-tank kit search on Amazon — not a new query."
+          nextBlurb="Four weeks is the observation window. Ich is the disease that most often appears in that window. The button below opens the same quarantine-tank kit search on Amazon — not a different search."
           resourceHref="/go/amazon-brand/quarantine%20tank%20kit%20aquarium?s=setup-quarantine-tank-guide"
           resourceLabel="Browse quarantine tank kits on Amazon →"
         />

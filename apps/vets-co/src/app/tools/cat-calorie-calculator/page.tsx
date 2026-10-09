@@ -102,7 +102,7 @@ const appSchema = {
     'DER factors for indoor vs outdoor, neuter status, and life stage',
     'Optional cups-per-day from the food-label kcal/cup',
     'Vet-supervised weight-loss factor (0.8) with hepatic-lipidosis caution',
-    'Shoppable portioning kit via Amazon category searches (gram measuring spoon, kitchen gram scale, slow-feeder bowl, interactive feeder, low-calorie treats)',
+    'Shop the portioning kit via Amazon searches (gram measuring spoon, kitchen gram scale, slow-feeder bowl, interactive feeder, low-calorie treats)',
   ],
   publisher: { '@type': 'Organization', name: 'Vets.co Editorial', url: 'https://vets.co' },
 }

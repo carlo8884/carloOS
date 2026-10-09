@@ -115,14 +115,14 @@ export default function PuppySchedulePage() {
           siteId="dog-com"
           nextHref="/nutrition/puppy-nutrition"
           nextLabel="Match meals on this schedule to a puppy formula"
-          nextBlurb="The sample day tells you when to feed. Puppy nutrition is what goes in the bowl — especially large-breed calcium limits. The button below is the same search already in the shop list, not a new query."
+          nextBlurb="The sample day tells you when to feed. Puppy nutrition is what goes in the bowl — especially large-breed calcium limits. The button below is the same search already in the shop list, not a different search."
           resourceHref="/go/amazon-brand/puppy+food?s=training-puppy-schedule"
           resourceLabel="Browse puppy food on Amazon →"
         />
 
         {/* Money path — live amazon-brand search hops (schedule essentials).
             ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-            Category searches only — not a ranked list. */}
+            Amazon searches only — not a ranked list. */}
         <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/puppy+food?s=training-puppy-schedule", "/go/amazon-brand/wire+dog+crate+with+divider+panel?s=training-puppy-schedule", "/go/amazon-brand/puppy+training+treats?s=training-puppy-schedule", "/go/amazon-brand/enzymatic+pet+stain+odor+cleaner?s=training-puppy-schedule"]} />
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">

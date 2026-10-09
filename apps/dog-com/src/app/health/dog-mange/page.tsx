@@ -78,14 +78,14 @@ export default function DogMangePage() {
           <p><strong>Treatment:</strong> Isoxazoline products (Bravecto, NexGard, Simparica) are highly effective — they have revolutionized demodectic mange treatment and are now the standard of care. Monthly or every-3-month dosing continues until two consecutive negative skin scrapings are achieved. Traditional treatments (amitraz dips, oral ivermectin) are still used in some cases. Secondary bacterial pyoderma requires concurrent antibiotic treatment. Treatment duration: typically 3–6 months for generalized cases.</p>
 
           <h2 id="kit">Supplies named on this page</h2>
-          <p>Keep these on hand: a washable dog bed cover so bedding can go in the laundry after a sarcoptic diagnosis, plus pet-safe laundry detergent for that wash. These are household-management aids, not treatments. They do not kill mites, they do not replace isoxazoline therapy, and they do not treat demodectic immune disease. Bravecto / NexGard / Simparica / Credelio, Revolution / selamectin, ivermectin, amitraz dips, chlorhexidine / medicated shampoo, and recovery cones stay educational copy only — this page does not link to parasiticide brands, brand ASINs, medicated shampoo, or clinical gear.</p>
+          <p>Keep these on hand: a washable dog bed cover so bedding can go in the laundry after a sarcoptic diagnosis, plus pet-safe laundry detergent for that wash. These are household-management aids, not treatments. They do not kill mites, they do not replace isoxazoline therapy, and they do not treat demodectic immune disease. Bravecto / NexGard / Simparica / Credelio, Revolution / selamectin, ivermectin, amitraz dips, chlorhexidine / medicated shampoo, and recovery cones stay educational copy only — this page does not link to parasiticide brands, named brands, medicated shampoo, or clinical gear.</p>
 
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/washable+dog+bed+cover?s=health-dog-mange", "/go/amazon-brand/pet+safe+laundry+detergent?s=health-dog-mange"]} />
 
           {/* Money path — live amazon-brand search hops (washable
               dog bed cover / pet-safe laundry detergent). ShopCtas
               hides empty Chewy; never href="#" or PLACEHOLDER.
-              Category searches only. Isoxazoline parasiticide
+              Amazon searches only. Isoxazoline parasiticide
               brands, ivermectin, amitraz, medicated shampoo, and
               recovery cones are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">

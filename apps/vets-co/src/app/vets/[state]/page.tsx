@@ -119,7 +119,7 @@ export default function StateHubPage({ params }: PageProps) {
       <div className="bg-brand-primary/10 border-b border-brand-primary/30 px-container-sm sm:px-container py-3">
         <p className="text-xs text-brand-dark m-0 leading-relaxed max-w-5xl">
           <span className="font-bold">Sample listings — directory under construction.</span>{' '}
-          Individual vet profiles are placeholders pending Carlo&apos;s selection of a verified data
+          Individual vet profiles are samples pending Carlo&apos;s selection of a verified data
           source. For long-form, sourced guidance on vet care in {stateName}, see our{' '}
           <Link
             href={`/find-a-vet/${state.slug}`}
@@ -228,7 +228,7 @@ export default function StateHubPage({ params }: PageProps) {
               Sample Listings in {stateName}
             </h2>
             <p className="text-sm text-brand-text-mid mb-6 max-w-3xl">
-              Sample directory entries for {stateName}. These are placeholder listings — not real
+              Sample directory entries for {stateName}. These are sample listings — not real
               practices.
             </p>
             <div className="grid sm:grid-cols-2 gap-4">

@@ -83,8 +83,8 @@ export default function DisclosurePage() {
           Every page on Horses.com that contains affiliate links carries a
           disclosure either at the top of the page (above the first affiliate
           link) or in the page footer, in addition to the site-wide footer
-          disclosure. Affiliate clicks route through our internal redirect
-          (<code>/go/[vendor]/[sku]</code>) for auditability.
+          disclosure. Affiliate clicks go through our click counter
+          so we can see which pages send people to a retailer.
         </p>
 
         <h2>Programs We Participate In</h2>

@@ -620,7 +620,7 @@ export default function FerretAdrenalDiseasePage() {
               soft cotton receiving blanket /
               activated-charcoal odor absorber).
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or PLACEHOLDER. Amazon searches only —
               unused vs #1095
               air+driven+corner+sponge+filter /
               preset+25+watt+nano+aquarium+heater /
@@ -645,7 +645,7 @@ export default function FerretAdrenalDiseasePage() {
               waterproof+field+notebook /
               dog+weight+log+book.
               Deslorelin, Suprelorin, melatonin, mitotane,
-              ketoconazole, and Rx ASINs are not
+              ketoconazole, and prescription brands are not
               shoppable hops. Existing Chewy ReviewCard
               (ferret fleece sleep sack) stays — it is
               not an empty hop button. */}

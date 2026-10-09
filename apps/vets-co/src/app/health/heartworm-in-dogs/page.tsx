@@ -107,9 +107,9 @@ export default function HeartwormPage() {
               for veterinary care, no Rx / Heartgard /
               Interceptor / Sentinel / Revolution /
               ProHeart / melarsomine / ivermectin
-              ASIN hops.
+              product page hops.
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or PLACEHOLDER. Amazon searches only —
               unused vs #1086
               wide+rim+stainless+cat+water+bowl /
               electric+pet+food+warming+plate /

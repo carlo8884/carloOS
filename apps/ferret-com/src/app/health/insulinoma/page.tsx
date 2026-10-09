@@ -471,7 +471,7 @@ export default function FerretInsulinomaPage() {
               chicken meat baby food /
               silicone-tip oral dosing syringe).
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or PLACEHOLDER. Amazon searches only —
               unused vs #1065 hay-box / stall-guard /
               hemp-bedding, #1064 thrush-antiseptic /
               folding-hoof-pick / stall-sweet-lime, #1063
@@ -490,7 +490,7 @@ export default function FerretInsulinomaPage() {
               ferret+electrolytes+recovery+food,
               high+protein+ferret+food+kibble.
               Insulin syringes, compounded insulin, and
-              Rx ASINs are not shoppable hops. */}
+              prescription brands are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

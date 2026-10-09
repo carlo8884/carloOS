@@ -89,9 +89,9 @@ export default function DisclosurePage() {
           On Dog.com, every page that contains affiliate links carries a
           disclosure either at the top of the page (above the first affiliate
           link) or in the page footer, in addition to the site-wide footer
-          disclosure. Clicking an affiliate link on Dog.com routes through our
-          internal redirect (<code>/go/[vendor]/[sku]</code>) before landing
-          on the retailer. The redirect lets us count clicks for editorial
+          disclosure. Clicking an affiliate link on Dog.com goes through our
+          click counter before landing
+          on the retailer. That step lets us count clicks for editorial
           analytics; it does not change what you see on the retailer&apos;s
           page or what they charge.
         </p>
@@ -183,7 +183,7 @@ export default function DisclosurePage() {
           <li>
             <strong>We do not use undisclosed affiliate links.</strong> Every
             page with affiliate links has a disclosure. Every affiliate link
-            routes through <code>/go/[vendor]/[sku]</code> so it is auditable.
+            goes through our click counter so we can see which pages send people to a retailer.
           </li>
         </ul>
 

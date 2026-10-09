@@ -141,7 +141,7 @@ export default function FencingSafetyPage() {
 
           {/* Money path — live amazon-brand search hops (fencing kit).
               ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-              Category searches only — everyday physical supplies matching
+              Amazon searches only — everyday physical supplies matching
               on-page electric-tape / horse-mesh / electric-rope / tester
               copy, not barbed wire, sheep mesh, medication, or
               contractor lumber hops. */}

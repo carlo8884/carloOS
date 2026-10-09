@@ -81,7 +81,7 @@ export default function DogAnemiaPage() {
               (dog gum-color assessment chart / high-calorie
               dog recovery food / pet oral feeding syringe).
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or PLACEHOLDER. Amazon searches only —
               unused vs #1041 heat-pants / belly-band /
               exercise-pen, #1040 BCS tape / chart /
               lean treats, #1039 pancreatitis food /
@@ -90,7 +90,7 @@ export default function DogAnemiaPage() {
               anxiety-wrap hops, ferret electrolytes
               recovery food, and bulb+syringe+puppy.
               Prescription, iron, transfusion, and
-              immunosuppressant ASINs are not shoppable
+              immunosuppressant product pages are not shoppable
               hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">

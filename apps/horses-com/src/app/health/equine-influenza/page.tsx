@@ -163,9 +163,9 @@ export default function EquineInfluenzaPage() {
               tools, not a ranked product list, not a
               substitute for veterinary care, no Rx /
               vaccine / thermometer / coverall /
-              bucket / hay-steamer ASIN hops.
+              bucket / hay-steamer product page hops.
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or PLACEHOLDER. Amazon searches only —
               unused vs #1097
               color+coded+flat+back+horse+buckets /
               disposable+coverall+suit /

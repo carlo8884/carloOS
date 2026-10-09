@@ -92,7 +92,7 @@ export default function HeartwormPreventionPage() {
               (mosquito dunks / monthly pill organizer /
               soft-sided vet-visit carrier). ShopCtas
               hides empty Chewy; never href="#" or
-              PLACEHOLDER. Category searches only —
+              PLACEHOLDER. Amazon searches only —
               unused vs #1042 gum-chart / recovery-food /
               feeding-syringe, #1041 heat-pants /
               belly-band / exercise-pen, #1030
@@ -102,7 +102,7 @@ export default function HeartwormPreventionPage() {
               ProHeart, melarsomine, ivermectin,
               milbemycin, moxidectin,
               heartworm+prevention drug searches,
-              flea+tick meds, and Rx ASINs are not
+              flea+tick meds, and prescription brands are not
               shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">

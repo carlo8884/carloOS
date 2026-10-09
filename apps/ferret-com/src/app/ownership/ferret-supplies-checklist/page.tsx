@@ -43,7 +43,7 @@ export default function FerretSuppliesChecklistPage() {
         hero={{
           title: 'Ferret Supplies Checklist',
           subtitle:
-            'Everything a new ferret genuinely needs, organized by category, with a clear line between the must-haves you buy before homecoming and the nice-to-haves that can wait. It also flags the supplies marketed for ferrets that you should skip or actively avoid. Category links go to the existing buyer guides — not invented SKUs.',
+            'Everything a new ferret genuinely needs, organized by category, with a clear line between the must-haves you buy before homecoming and the nice-to-haves that can wait. It also flags the supplies marketed for ferrets that you should skip or actively avoid. Category links go to the existing buyer guides — not made-up products.',
           category: 'Ownership & Lifestyle',
           authorName: 'Ferret.com Editorial',
           publishedAt: 'June 2026',
@@ -111,7 +111,7 @@ export default function FerretSuppliesChecklistPage() {
           </ul>
           <p>
             Cage criteria and retailer links live on the{' '}
-            <a href="/reviews/best-ferret-cage">best ferret cage</a> buyer guide — bar spacing, floor space, and ramp safety, not an invented SKU list.
+            <a href="/reviews/best-ferret-cage">best ferret cage</a> buyer guide — bar spacing, floor space, and ramp safety, not a made-up product list.
           </p>
 
           <h2 id="bedding">Bedding & Sleep</h2>

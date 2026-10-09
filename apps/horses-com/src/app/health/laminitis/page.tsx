@@ -231,7 +231,7 @@ export default function LaminitisPage() {
               equine deep-sand stall bedding /
               easy-keeper grazing muzzle).
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or PLACEHOLDER. Amazon searches only —
               unused vs #1062 thermometer / stethoscope /
               fleece-cooler, #1061 farrier-log / hoof-stand /
               barn-flood-light, #1060 fecal-container /
@@ -243,7 +243,7 @@ export default function LaminitisPage() {
               thermometer / horse+fleece+cooler /
               horse+grazing+muzzle / pine+shavings /
               hoof-pick / hoof-boots / snow-pads. Rx
-              ASINs are not shoppable hops. */}
+              product pages are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

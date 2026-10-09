@@ -158,7 +158,7 @@ export default function AbscessPage() {
 
           {/* Money path — live amazon-brand search hops (abscess soak kit).
               ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-              Category searches only — everyday physical supplies matching
+              Amazon searches only — everyday physical supplies matching
               on-page Epsom-salt soak / soaking-boot copy, not poultice,
               bandage, hoof picks, riding hoof boots, or medication hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">

@@ -194,7 +194,7 @@ export default function BasicCommandsPage() {
 
         {/* Money path — live amazon-brand search hops (five-command kit).
             ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-            Category searches only — not a ranked list. */}
+            Amazon searches only — not a ranked list. */}
         <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/puppy+training+treats?s=training-basic-commands", "/go/amazon-brand/dog+training+treat+pouch+belt+clip?s=training-basic-commands", "/go/amazon-brand/dog+training+clicker?s=training-basic-commands", "/go/amazon-brand/dog+long+line+leash?s=training-basic-commands"]} />
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">

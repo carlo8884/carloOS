@@ -144,7 +144,7 @@ export default function GrainConcentratesPage() {
               stackable rubber horse feed tubs /
               rodent proof metal horse feed bin).
               Educational barn tools only; no Rx /
-              vaccine ASIN hops. ShopCtas hides empty
+              vaccine product page hops. ShopCtas hides empty
               Chewy; never href="#" or PLACEHOLDER.
               Unused vs #1111
               horse+hay+probe+moisture+tester /

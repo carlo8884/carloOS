@@ -69,7 +69,7 @@ const appSchema = {
     'lb and kg input',
     'Accounts for the diet/activity/temperature range',
     'Flags the drinking changes worth a veterinary call',
-    'Shoppable hydration kit via Amazon category searches',
+    'Shop the hydration kit via Amazon searches',
   ],
   publisher: { '@type': 'Organization', name: 'Dog.com Editorial', url: 'https://dog.com' },
 }
@@ -165,7 +165,7 @@ export default function DogWaterIntakeCalculatorPage() {
 
       {/* Money path — live amazon-brand search hops (hydration kit).
           ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-          Category searches only — not a ranked list, not a diagnosis. */}
+          Amazon searches only — not a ranked list, not a diagnosis. */}
       <section id="dog-water-intake-kit" className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <div className="max-w-2xl">
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/heavy+ceramic+pet+water+bowl?s=tools-dog-water-intake", "/go/amazon-brand/dog+water+fountain?s=tools-dog-water-intake", "/go/amazon-brand/dog+travel+water+bottle?s=tools-dog-water-intake", "/go/amazon-brand/kitchen+measuring+cup?s=tools-dog-water-intake"]} />

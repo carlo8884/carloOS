@@ -73,7 +73,7 @@ export default function FleaTickPage() {
 
           <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Keep these on hand: a 14-inch manual reel lawn mower so questing ticks have less tall-grass cover, a zippered waterproof dog duvet cover so weekly bedding laundry is a zipper pull instead of a soaked foam pad, and a handheld LED magnifying glass so the after-walk coat check can see what a glance misses. These are household yard, bedding, and inspection tools, not treatments. They do not prevent fleas or ticks, they do not replace a veterinarian-recommended preventive, and they are not a ranked product list. Frontline, Advantage, Bravecto, NexGard, Seresto, isoxazoline preventives, and other Rx ASINs are not product links. </p>
+            Keep these on hand: a 14-inch manual reel lawn mower so questing ticks have less tall-grass cover, a zippered waterproof dog duvet cover so weekly bedding laundry is a zipper pull instead of a soaked foam pad, and a handheld LED magnifying glass so the after-walk coat check can see what a glance misses. These are household yard, bedding, and inspection tools, not treatments. They do not prevent fleas or ticks, they do not replace a veterinarian-recommended preventive, and they are not a ranked product list. Frontline, Advantage, Bravecto, NexGard, Seresto, isoxazoline preventives, and other prescription brands are not product links. </p>
 
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/14+inch+manual+reel+lawn+mower?s=health-flea-tick-prevention", "/go/amazon-brand/zippered+waterproof+dog+duvet+cover?s=health-flea-tick-prevention", "/go/amazon-brand/handheld+led+magnifying+glass?s=health-flea-tick-prevention"]} />
 

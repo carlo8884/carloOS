@@ -159,7 +159,7 @@ export default function TravelAndCarriersPage() {
 
           {/* Money path — live amazon-brand search hops (carrier / travel gear).
               ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-              Category searches only — educational gear, not medications, not a ranked list. */}
+              Amazon searches only — educational gear, not medications, not a ranked list. */}
           <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/ferret+carrier+hard+sided?s=care-travel-and-carriers", "/go/amazon-brand/soft+pet+carrier?s=care-travel-and-carriers", "/go/amazon-brand/ferret+water+bottle?s=care-travel-and-carriers", "/go/amazon-brand/ferret+corner+litter+pan?s=care-travel-and-carriers"]} />
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">

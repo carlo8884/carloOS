@@ -88,8 +88,8 @@ export default function DisclosurePage() {
           On Fish.com, every page that contains affiliate links carries a
           disclosure either at the top of the page (above the first affiliate
           link) or in the page footer, in addition to the site-wide footer
-          disclosure. Clicking an affiliate link on Fish.com routes through
-          our internal redirect (<code>/go/[vendor]/[sku]</code>) before
+          disclosure. Clicking an affiliate link on Fish.com goes through
+          our click counter before
           landing on the retailer.
         </p>
 
@@ -174,7 +174,7 @@ export default function DisclosurePage() {
           <li>
             <strong>We do not use undisclosed affiliate links.</strong> Every
             page with affiliate links has a disclosure. Every affiliate link
-            routes through <code>/go/[vendor]/[sku]</code>.
+            goes through our click counter.
           </li>
         </ul>
 

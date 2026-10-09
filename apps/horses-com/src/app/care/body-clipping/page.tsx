@@ -138,7 +138,7 @@ export default function BodyClippingPage() {
 
           {/* Money path — live amazon-brand search hops (clipping kit).
               ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-              Category searches only — everyday physical supplies matching
+              Amazon searches only — everyday physical supplies matching
               on-page clipper / blade / oil / cooler copy, not rugs
               (blanketing page), medication, or sedation hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">

@@ -148,7 +148,7 @@ export default function SummerHeatCarePage() {
 
           {/* Money path — live amazon-brand search hops (summer-heat kit).
               ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-              Category searches only — everyday physical supplies matching
+              Amazon searches only — everyday physical supplies matching
               on-page sweat-scraper / shade-cloth copy, not electrolytes,
               fans, thermometers, cool-water towels, fleece coolers,
               hoof boots, grazing muzzles, or medication hops. */}

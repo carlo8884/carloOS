@@ -44,7 +44,7 @@ const TOOLS = [
   {
     href: '/tools/food-evaluator',
     title: 'Ferret Food Evaluator',
-    desc: 'Score any kibble against planning-figure cutoffs (protein, fat, fiber, ash, first ingredient), not a published nutrient profile. Returns "appropriate / marginal / avoid", then shop high-protein ferret kibble, freeze-dried raw treats, and salmon oil via Amazon category searches.',
+    desc: 'Score any kibble against planning-figure cutoffs (protein, fat, fiber, ash, first ingredient), not a published nutrient profile. Returns "appropriate / marginal / avoid", then shop high-protein ferret kibble, freeze-dried raw treats, and salmon oil via Amazon searches.',
     tag: 'Nutrition',
   },
   {
@@ -62,7 +62,7 @@ const TOOLS = [
   {
     href: '/tools/litter-planner',
     title: 'Ferret Litter Planner',
-    desc: 'How many pans and how many 30 lb bags? Enter ferret count for the one-per-ferret-plus-one pan rule and a monthly bag estimate. Paper pellet default — never clumping clay — then shop wood or grass pellet litter and a high-back corner pan via Amazon category searches.',
+    desc: 'How many pans and how many 30 lb bags? Enter ferret count for the one-per-ferret-plus-one pan rule and a monthly bag estimate. Paper pellet default — never clumping clay — then shop wood or grass pellet litter and a high-back corner pan via Amazon searches.',
     tag: 'Husbandry',
   },
   {

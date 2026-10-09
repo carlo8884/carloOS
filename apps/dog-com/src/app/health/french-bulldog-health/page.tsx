@@ -164,13 +164,13 @@ export default function FrenchBulldogHealthPage() {
         </ul>
 
         <h2 id="kit">Supplies named on this page</h2>
-        <p>Keep these on hand: a cooling mat the dog can lie on indoors, plus a cooling vest for short outdoor trips when a cool environment is not already available. These are home-setup aids, not treatments. They do not treat heatstroke, they do not replace shade and water, and they do not make a parked car safe. Cool-water towels and digital thermometers stay on the sister <a href={crossSiteHref('vets-co', '/health/heat-stroke-dogs')}>Vets.co heat-stroke</a> first-aid page. Ice packs, dog ramps, fold wipes, paw wipes, soft e-collars, Rx eye drops (cyclosporine / tacrolimus), NSAIDs, and BOAS / IVDD clinical treatments stay educational copy only — this page does not link to medications, brand ASINs, or clinical gear.</p>
+        <p>Keep these on hand: a cooling mat the dog can lie on indoors, plus a cooling vest for short outdoor trips when a cool environment is not already available. These are home-setup aids, not treatments. They do not treat heatstroke, they do not replace shade and water, and they do not make a parked car safe. Cool-water towels and digital thermometers stay on the sister <a href={crossSiteHref('vets-co', '/health/heat-stroke-dogs')}>Vets.co heat-stroke</a> first-aid page. Ice packs, dog ramps, fold wipes, paw wipes, soft e-collars, Rx eye drops (cyclosporine / tacrolimus), NSAIDs, and BOAS / IVDD clinical treatments stay educational copy only — this page does not link to medications, named brands, or clinical gear.</p>
 
         <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/dog+cooling+mat?s=health-french-bulldog-health", "/go/amazon-brand/dog+cooling+vest?s=health-french-bulldog-health"]} />
 
         {/* Money path — live amazon-brand search hops (cooling
             mat / cooling vest). ShopCtas hides empty Chewy;
-            never href="#" or PLACEHOLDER. Category searches
+            never href="#" or PLACEHOLDER. Amazon searches
             only. Cool-water towels, digital thermometers,
             ice packs, ramps, fold wipes, Rx eye drops, and
             BOAS / IVDD clinical treatments are not

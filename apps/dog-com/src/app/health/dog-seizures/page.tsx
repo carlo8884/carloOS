@@ -158,7 +158,7 @@ export default function DogSeizuresPage() {
           {/* Money path — live amazon-brand search hops (soft
               throw blanket / crate bumper pads / interlocking
               foam floor tiles). ShopCtas hides empty Chewy;
-              never href="#" or PLACEHOLDER. Category searches
+              never href="#" or PLACEHOLDER. Amazon searches
               only. Anticonvulsants, first-aid kits,
               thermometers, IVDD recovery crates, crate covers,
               crate pads, cooling mats, and night lights are

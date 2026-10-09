@@ -197,7 +197,7 @@ export default function EquineUlcersPage() {
               </tbody>
             </table>
           </div>
-          <p className="text-xs text-brand-text-mid">Comparison summarizes the on-page discussion; dosing and medication choices must be set by your veterinarian after gastroscopy.</p>
+          <p className="text-xs text-brand-text-mid">Comparison summarizes the sections above; dosing and medication choices must be set by your veterinarian after gastroscopy.</p>
 
           <h2 id="prevalence">Prevalence by Discipline</h2>
           <p>Documented EGUS prevalence varies sharply with discipline, training intensity, and population studied. Key published rates:</p>

@@ -138,7 +138,7 @@ export default function FlyControlPage() {
 
           {/* Money path — live amazon-brand search hops (fly-control kit).
               ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-              Category searches only — everyday physical supplies matching
+              Amazon searches only — everyday physical supplies matching
               on-page barrier / spray / trap copy, not sweet-itch diagnosis
               or medical treatment hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">

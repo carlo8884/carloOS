@@ -81,9 +81,9 @@ export default function LeptospirosisPage() {
               ranked product list, not a substitute
               for veterinary care, no Rx / vaccine /
               Nobivac / L4 / doxycycline / ampicillin
-              ASIN hops.
+              product page hops.
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or PLACEHOLDER. Amazon searches only —
               unused vs #1088
               small+digital+kitchen+food+scale /
               silicone+cat+grooming+glove /

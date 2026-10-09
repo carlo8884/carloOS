@@ -29,7 +29,7 @@ const schema = buildArticleSchema({
 const FAQS = [
   {
     question: 'Which carrier does the review pick for fast reimbursement?',
-    answer: 'Healthy Paws. The review lists reimbursement up to 90 percent and an annual deductible. The Healthy Paws claims page, fetched 2026-10-08, says most claims are processed in 2 days (https://www.healthypawspetinsurance.com/pet-insurance-claims.html). The annual limit is a choice. The verified registry lists no wellness add-on. See the carrier\'s current terms for the monthly price.',
+    answer: 'Healthy Paws. The review lists reimbursement up to 90 percent and an annual deductible. The Healthy Paws claims page, fetched 2026-10-08, says most claims are processed in 2 days (https://www.healthypawspetinsurance.com/pet-insurance-claims.html). The annual limit is a choice. Our notes list no wellness add-on. See the carrier\'s current terms for the monthly price.',
   },
   {
     question: 'When does the review point to Embrace?',
@@ -88,7 +88,7 @@ export default function HealthyPawsVsEmbraceGuidePage() {
           ctaText="Copy checklist"
           source="reviews-healthy-paws-vs-embrace-guide"
           checklist={[
-            "The verified registry lists no wellness add-on. The claims page says most claims are processed in 2 days.",
+            "Our notes list no wellness add-on. The claims page says most claims are processed in 2 days.",
             "They are the price bands printed on the insurance review.",
             "A quote depends on the pet, the ZIP code, and the plan options.",
             "Trupanion is a different comparison on that review.",
@@ -98,10 +98,10 @@ export default function HealthyPawsVsEmbraceGuidePage() {
         />
         <p>Healthy Paws is the reimbursement-speed pick. Embrace is for owners who want routine care on an add-on. <Link href="/reviews/healthy-paws-vs-pets-best-guide">Healthy Paws versus Pets Best</Link> is the deductible-and-tier comparison, not this wellness add-on. Those bands are not a quote for your pet.</p>
         <h2>What the review says about Healthy Paws</h2>
-        <p>Healthy Paws is Fastest Reimbursement. Reimbursement is up to 90 percent. The Healthy Paws claims page, fetched 2026-10-08, says most claims are processed in 2 days, and that Direct Pay can reimburse the vet when funding is urgent (<span className="break-all">https://www.healthypawspetinsurance.com/pet-insurance-claims.html</span>). The deductible is annual. See the carrier&apos;s current terms for the monthly price. The verified registry lists no wellness add-on.</p>
+        <p>Healthy Paws is Fastest Reimbursement. Reimbursement is up to 90 percent. The Healthy Paws claims page, fetched 2026-10-08, says most claims are processed in 2 days, and that Direct Pay can reimburse the vet when funding is urgent (<span className="break-all">https://www.healthypawspetinsurance.com/pet-insurance-claims.html</span>). The deductible is annual. See the carrier&apos;s current terms for the monthly price. Our notes list no wellness add-on.</p>
         <p>The annual limit is a choice of $5,000, $7,000, or unlimited.</p>
         <h2>What the review says about Embrace</h2>
-        <p>Embrace is Wellness Included. The Wellness Rewards page, fetched 2026-10-08, lists wellness exams, vaccinations, flea, tick, and heartworm prevention, and preventative dental cleaning (<span className="break-all">https://www.embracepetinsurance.com/coverage/wellness-rewards</span>). The verified registry marks that coverage as a standalone add-on. Reimbursement in the review is 70%, 80%, or 90%. The deductible program and the orthopedic waiting period: see the carrier&apos;s current terms. The review also says the plan options are more complex.</p>
+        <p>Embrace is Wellness Included. The Wellness Rewards page, fetched 2026-10-08, lists wellness exams, vaccinations, flea, tick, and heartworm prevention, and preventative dental cleaning (<span className="break-all">https://www.embracepetinsurance.com/coverage/wellness-rewards</span>). Our notes mark that coverage as a standalone add-on. Reimbursement in the review is 70%, 80%, or 90%. The deductible program and the orthopedic waiting period: see the carrier&apos;s current terms. The review also says the plan options are more complex.</p>
         <p>To see what a deductible and a reimbursement percent do to a sample bill, use the <Link href="/tools/pet-insurance-worth-it-calculator">worth-it calculator</Link>.</p>
         <h2>Who should read which policy</h2>
         <p>Open the Healthy Paws sample when the annual limit on the quote is the one you want and you want the claims page&apos;s processing window, and you are not buying the policy for a wellness add-on. Open the Embrace sample when the wellness add-on is the reason, and read the orthopedic waiting period on the carrier page before you enroll. Enroll before a condition is in the record. Trupanion, the direct-pay carrier on that review, is a separate comparison.</p>

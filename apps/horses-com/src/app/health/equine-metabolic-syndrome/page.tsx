@@ -169,9 +169,9 @@ export default function EMSPage() {
               tools, not a ranked product list, not a
               substitute for veterinary care, no Rx /
               metformin / pergolide / grazing-muzzle /
-              hay-soaking-bag / ration-balancer ASIN hops.
+              hay-soaking-bag / ration-balancer product page hops.
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or PLACEHOLDER. Amazon searches only —
               unused vs #1104
               portable+3+sided+horse+run+in+shelter /
               labeled+stackable+horse+grooming+caddy /

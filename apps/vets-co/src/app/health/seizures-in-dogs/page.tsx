@@ -87,7 +87,7 @@ export default function SeizuresPage() {
               (digital handheld stopwatch / waterproof
               field notebook / foam table-edge bumper).
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or PLACEHOLDER. Amazon searches only —
               unused vs #1028 soft+throw+blanket /
               dog+crate+bumper+pads /
               interlocking+foam+floor+tiles, #1057
@@ -106,7 +106,7 @@ export default function SeizuresPage() {
               folding+pet+stretcher, #1044
               pet+vaccination+record+book, and #1053
               dog+medical+alert+collar+tag hops. Rx
-              ASINs are not shoppable hops. */}
+              product pages are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop these supplies

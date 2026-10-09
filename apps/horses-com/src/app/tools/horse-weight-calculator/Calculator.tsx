@@ -8,7 +8,7 @@
  * divisorMetric 11900 is that figure. divisorImperial 330 is the rounded
  * inch/pound form of 11900 (11900 / (2.54³ / 0.4536) ≈ 329).
  * Pony 299 / 10804 and draft 301 / 10874 are a planning figure. They are
- * not in that abstract. Youngstock reuses 330 as a planning placeholder.
+ * not in that abstract. Youngstock reuses 330 as a planning estimate.
  *
  * All outputs are husbandry ESTIMATES, not measured weights. Framed as such.
  * No fabricated precision, no clinical claims.

@@ -62,7 +62,7 @@ const softwareApplicationSchema = {
     'AAFP/AAHA life stage: kitten, young adult, mature adult, senior',
     'Stage-appropriate veterinary care guidance',
     'Senior-screening prompts (kidney, thyroid, blood pressure)',
-    'Shoppable life-stage kit via Amazon category searches (kitten food, senior cat food, digital pet scale, carrier, dental)',
+    'Shop the life-stage kit via Amazon searches (kitten food, senior cat food, digital pet scale, carrier, dental)',
   ],
   publisher: { '@type': 'Organization', name: 'Vets.co Editorial', url: 'https://vets.co' },
 }
@@ -183,7 +183,7 @@ export default function CatAgeCalculatorPage() {
 
         {/* Money path — live amazon-brand search hops (life-stage kit).
             ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-            Category searches only — not a ranked list, not a diagnosis. */}
+            Amazon searches only — not a ranked list, not a diagnosis. */}
         <div id="cat-age-kit" className="mt-8 mb-8">
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/kitten+food?s=tools-cat-age-calculator", "/go/amazon-brand/senior+cat+food?s=tools-cat-age-calculator", "/go/amazon-brand/digital+pet+scale?s=tools-cat-age-calculator", "/go/amazon-brand/cat+carrier?s=tools-cat-age-calculator", "/go/amazon-brand/cat+dental?s=tools-cat-age-calculator"]} />
           <div className="mt-4 rounded-xl border border-brand-border bg-brand-surface p-5">

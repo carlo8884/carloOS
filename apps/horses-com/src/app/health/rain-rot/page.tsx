@@ -158,9 +158,9 @@ export default function RainRotPage() {
               tools, not a ranked product list, not a
               substitute for veterinary care, no Rx /
               vaccine / antimicrobial / waterproof-sheet /
-              mud-grid / fly-sheet ASIN hops.
+              mud-grid / fly-sheet product page hops.
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or PLACEHOLDER. Amazon searches only —
               unused vs #1103
               heavy+duty+paddock+mud+grid /
               full+length+horse+turnout+boots /

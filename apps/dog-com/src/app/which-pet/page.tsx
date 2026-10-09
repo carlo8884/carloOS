@@ -257,14 +257,14 @@ export default function WhichPetPage() {
 
         {/* Money path — live amazon-brand search hops (first-week starter kit).
             ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-            Category searches only — not a ranked list, not a species ranking. */}
+            Amazon searches only — not a ranked list, not a species ranking. */}
         <section id="first-week-kit" className="mb-12 not-prose">
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/wire+dog+crate+with+divider+panel?s=which-pet", "/go/amazon-brand/puppy+food?s=which-pet", "/go/amazon-brand/julius+k9+idc+powerharness?s=which-pet", "/go/amazon-brand/dog+id+tag+collar?s=which-pet", "/go/amazon-brand/soft+dog+carrier?s=which-pet", "/go/amazon-brand/pet+first+aid+kit?s=which-pet"]} />
           <div className="mt-4 rounded-xl border border-brand-border bg-brand-white p-5">
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
               Shop these supplies
             </div>
-            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">If the wizard leans dog, these Amazon category searches are day-one
+            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">If the wizard leans dog, these Amazon searches are day-one
               husbandry items — a wire crate with a divider, puppy food, a harness,
               an ID tag / collar, a soft carrier, and a pet first-aid kit. Same buttons
               used on the{' '}
@@ -281,7 +281,7 @@ export default function WhichPetPage() {
               >
                 emergency-prep tool
               </Link>
-              . They are not a ranked product list, not invented inventory, and they
+              . They are not a ranked product list, not made-up products, and they
               do not replace meeting a shelter, breeder, or veterinarian. Size the
               crate and harness before you order. </p>
             <div className="flex flex-col gap-3">

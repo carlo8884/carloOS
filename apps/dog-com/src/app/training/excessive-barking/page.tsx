@@ -65,7 +65,7 @@ export default function ExcessiveBarkingPage() {
 
         {/* Money path — live amazon-brand search hops (bark-control / enrichment kit).
             ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-            Category searches only — not a ranked list. */}
+            Amazon searches only — not a ranked list. */}
         <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/snuffle+mat+dog+enrichment?s=training-excessive-barking", "/go/amazon-brand/puzzle+feeder+dog?s=training-excessive-barking", "/go/amazon-brand/lick+mat+dog?s=training-excessive-barking", "/go/amazon-brand/calming+dog+chews?s=training-excessive-barking"]} />
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
@@ -73,8 +73,8 @@ export default function ExcessiveBarkingPage() {
           </div>
           <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Boredom and frustration barking are enrichment problems — a
             puzzle feeder, lick mat, or snuffle mat occupies the mouth
-            instead of the bark. Calming chews are a category search for
-            anxiety-adjacent barking, not a ranked SKU and not a substitute
+            instead of the bark. Calming chews are an Amazon search for
+            anxiety-adjacent barking, not one specific product and not a substitute
             for diagnosing the bark type. The same puzzle-feeder button is on the{' '}
             <Link
               href="/tools/dog-body-condition-score"

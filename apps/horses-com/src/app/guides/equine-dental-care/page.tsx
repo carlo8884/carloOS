@@ -312,7 +312,7 @@ export default function EquineDentalCarePage() {
 
           {/* Money path — live amazon-brand search hops (dental-care kit).
               ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-              Category searches only — everyday physical supplies matching
+              Amazon searches only — everyday physical supplies matching
               on-page post-float soft-feed copy (soaked hay cubes, mashes),
               not medication, floating-procedure, or invented-kit hops.
               Apple sauce, syringes, oral paste, floats, and speculums are

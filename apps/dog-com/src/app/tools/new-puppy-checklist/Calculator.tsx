@@ -666,8 +666,8 @@ export default function NewPuppyChecklist() {
 
       <p className="mt-4 text-2xs leading-snug text-brand-text-light">
         Shopping guidance, not a veterinary plan. Vaccine timing, parasite prevention, and spay or
-        neuter timing are decisions for your veterinarian. Amazon links are category searches — not
-        a ranked product list and not invented inventory.
+        neuter timing are decisions for your veterinarian. Amazon links are Amazon searches — not
+        a ranked product list and not made-up products.
       </p>
     </div>
   )

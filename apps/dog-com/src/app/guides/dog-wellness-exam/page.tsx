@@ -251,7 +251,7 @@ export default function DogWellnessExamPage() {
 
           {/* Money path — live amazon-brand search hops (wellness-visit kit).
               ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-              Category searches only — everyday physical supplies matching
+              Amazon searches only — everyday physical supplies matching
               on-page fecal-sample-collection-kit / leak-proof-specimen-bags /
               high-value-vet-visit-treats copy, not first-aid wound hops,
               house-training poop bags, or puppy-training treats. */}

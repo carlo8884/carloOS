@@ -92,7 +92,7 @@ const appSchema = {
     'Conservative urgency read: go now, same-day vet, or monitor closely',
     '15 feline signs drawn from veterinary emergency-medicine criteria',
     'Always rounds toward more care; no all-clear result',
-    'Shoppable cat emergency-prep kit via Amazon category searches (pet first-aid kit, digital pet thermometer, soft cat carrier, styptic powder, wound-care gauze)',
+    'Shop the cat emergency-prep kit via Amazon searches (pet first-aid kit, digital pet thermometer, soft cat carrier, styptic powder, wound-care gauze)',
   ],
 }
 
@@ -238,7 +238,7 @@ export default function IsThisACatEmergencyPage() {
 
       {/* Money path — live amazon-brand search hops (cat emergency-prep / first-aid kit).
           ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-          Category searches only — not a ranked list, not a diagnosis. */}
+          Amazon searches only — not a ranked list, not a diagnosis. */}
       <section id="cat-emergency-prep-kit" className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <div className="max-w-2xl">
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/pet+first+aid+kit?s=tools-is-this-a-cat-emergency", "/go/amazon-brand/digital+pet+thermometer?s=tools-is-this-a-cat-emergency", "/go/amazon-brand/soft+cat+carrier?s=tools-is-this-a-cat-emergency", "/go/amazon-brand/styptic+powder?s=tools-is-this-a-cat-emergency", "/go/amazon-brand/wound+care+gauze?s=tools-is-this-a-cat-emergency"]} />

@@ -165,7 +165,7 @@ export default function GermanShepherdHealthPage() {
               (dog assisted-walking sling / dog hind-paw
               booties / dog hip brace). ShopCtas hides
               empty Chewy; never href="#" or PLACEHOLDER.
-              Category searches only — unused vs #1048
+              Amazon searches only — unused vs #1048
               silicone dog grooming glove / analog
               bathroom scale / dog dental finger brush,
               #1047 resting respiratory rate notebook /
@@ -197,7 +197,7 @@ export default function GermanShepherdHealthPage() {
               dog+ramp / joint+support+dog+treats, and
               soft+dog+carrier / soft+pet+carrier.
               Pancreatic enzymes, cyclosporine,
-              tacrolimus, and Rx ASINs are not
+              tacrolimus, and prescription brands are not
               shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">

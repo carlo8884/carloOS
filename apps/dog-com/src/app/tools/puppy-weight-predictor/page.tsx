@@ -91,7 +91,7 @@ const appSchema = {
     'Adult-weight range from current age and weight using size-class growth fractions',
     'Defaults to a 14-week, 20 lb large-breed example so the range is visible with zero extra input',
     'Avoids the single "double at 16 weeks" shortcut that underestimates large and giant breeds',
-    'Shoppable growth kit via Amazon category searches (scale, puppy food, crate, slow feeder)',
+    'Shop the growth kit via Amazon searches (scale, puppy food, crate, slow feeder)',
   ],
   publisher: { '@type': 'Organization', name: 'Dog.com Editorial', url: 'https://dog.com' },
 }
@@ -233,7 +233,7 @@ export default function PuppyWeightPredictorPage() {
 
       {/* Money path — live amazon-brand search hops (growth / weigh-in kit).
           ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-          Category searches only — not a ranked list, not a diagnosis. */}
+          Amazon searches only — not a ranked list, not a diagnosis. */}
       <section id="puppy-growth-kit" className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <div className="max-w-2xl">
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/digital+gram+scale+kitchen+pet?s=tools-puppy-weight-predictor", "/go/amazon-brand/puppy+food?s=tools-puppy-weight-predictor", "/go/amazon-brand/royal+canin+large+breed+puppy?s=tools-puppy-weight-predictor", "/go/amazon-brand/wire+dog+crate+with+divider+panel?s=tools-puppy-weight-predictor", "/go/amazon-brand/northmate+green+interactive+feeder?s=tools-puppy-weight-predictor", "/go/amazon-brand/dog+measuring+tape+body+condition+chart?s=tools-puppy-weight-predictor"]} />

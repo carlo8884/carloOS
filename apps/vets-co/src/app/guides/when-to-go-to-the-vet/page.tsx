@@ -73,11 +73,11 @@ export default function WhenToGoPage() {
               monitoring / transport tools, not a
               ranked product list, not a substitute
               for veterinary care, no Rx / thermometer /
-              muzzle / underpad ASIN hops.
+              muzzle / underpad product page hops.
               The kitchen-timer hop is not on this
               triage guide.
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or PLACEHOLDER. Amazon searches only —
               unused vs #1092
               single+stainless+floor+dog+bowl /
               wobble+dog+food+dispenser /

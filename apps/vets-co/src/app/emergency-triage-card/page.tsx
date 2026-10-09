@@ -62,7 +62,7 @@ const FAQS = [
   },
   {
     question: 'Are there affiliate links?',
-    answer: 'Amazon category searches for kit items sit on this web page below the triage content and are disclosed inline. There is no emailed card or course with affiliate links.',
+    answer: 'Amazon searches for kit items sit on this web page below the triage content and are disclosed inline. There is no emailed card or course with affiliate links.',
   },
   {
     question: 'Does this work for puppies and kittens?',
@@ -395,7 +395,7 @@ export default function EmergencyTriageCardPage() {
 
       {/* Money path — live amazon-brand search hops (first-aid kit items on this page).
           ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-          Category searches only — not a ranked list. Hops stay on this web page;
+          Amazon searches only — not a ranked list. Hops stay on this web page;
           the printable card body has no affiliate links. */}
       <section id="pet-first-aid-kit-shop" className="bg-brand-surface px-container-sm sm:px-container py-section">
         <div className="max-w-2xl mx-auto">

@@ -109,7 +109,7 @@ export default function TelehealthPage() {
 
             {/* Money path — live amazon-brand search hops (home-care prep kit).
                 ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-                Category searches only — not a ranked list, not a diagnosis.
+                Amazon searches only — not a ranked list, not a diagnosis.
                 Consult links above stay on their existing paths; this block does not re-rank Vetster / AskVet / Chewy. */}
             <div id="telehealth-prep-kit" className="mt-8 mb-8">
               <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/pet+first+aid+kit?s=telehealth", "/go/amazon-brand/digital+pet+thermometer?s=telehealth", "/go/amazon-brand/digital+pet+scale?s=telehealth", "/go/amazon-brand/pet+calming+aid?s=telehealth", "/go/amazon-brand/pet+recovery+cone?s=telehealth"]} />

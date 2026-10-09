@@ -67,9 +67,9 @@ export default function EmergencyCostsPage() {
               list, not a substitute for veterinary
               care, no Rx / first-aid kit /
               thermometer / carrier / insurance-brand
-              ASIN hops.
+              product page hops.
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or PLACEHOLDER. Amazon searches only —
               unused vs #1161
               credit+card+size+laminating+pouches /
               small+magnetic+dry+erase+board /

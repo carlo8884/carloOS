@@ -70,9 +70,9 @@ export default function WhenToEnrollPage() {
               not a ranked product list, not a
               substitute for veterinary care, no Rx
               / first-aid kit / thermometer /
-              carrier / insurance-brand ASIN hops.
+              carrier / insurance-brand product page hops.
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or PLACEHOLDER. Amazon searches only —
               unused vs #1168
               four+column+accounting+pad /
               letter+size+poly+envelope /
@@ -122,10 +122,10 @@ export default function WhenToEnrollPage() {
             id="lemonade"
             badge="Young-Pet Value"
             name="Lemonade Pet"
-            subtitle="Registry marks this carrier for owners with younger pets"
+            subtitle="Listed for owners with younger pets"
             winner
             description={
-              <p>Lemonade’s FAQ, fetched 2026-10-08, says signing up while a pet is young and healthy means they are not denied coverage at renewal because of age (<span className="break-all">https://www.lemonade.com/pet/explained/lemonade-pet-insurance-faq/</span>). The verified registry marks Lemonade for owners with younger pets. Availability varies by state; confirm your location and read the pre-existing-condition language when you quote.</p>
+              <p>Lemonade’s FAQ, fetched 2026-10-08, says signing up while a pet is young and healthy means they are not denied coverage at renewal because of age (<span className="break-all">https://www.lemonade.com/pet/explained/lemonade-pet-insurance-faq/</span>). Our notes mark Lemonade for owners with younger pets. Availability varies by state; confirm your location and read the pre-existing-condition language when you quote.</p>
             }
             specs={[
               { label: 'Best for', value: 'Young pets', highlight: 'good' },

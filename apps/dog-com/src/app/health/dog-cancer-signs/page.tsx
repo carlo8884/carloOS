@@ -90,7 +90,7 @@ export default function DogCancerSignsPage() {
               (silicone dog grooming glove / analog
               bathroom scale / dog dental finger brush).
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or PLACEHOLDER. Amazon searches only —
               unused vs #1047 resting respiratory rate
               notebook / one-minute kitchen timer /
               step-in padded dog harness, #1046 pet
@@ -115,7 +115,7 @@ export default function DogCancerSignsPage() {
               digital pet thermometers, and
               soft+dog+carrier / soft+pet+carrier.
               Chemotherapy, Tanovea, Hill's / Royal
-              Canin oncology diets, and Rx ASINs are
+              Canin oncology diets, and prescription brands are
               not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">

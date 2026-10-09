@@ -69,7 +69,7 @@ export default function TickBornePage() {
               (tick-removal hook / fine-tooth flea comb /
               laminated tick identification card).
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or PLACEHOLDER. Amazon searches only —
               unused vs #1071
               letter+size+expanding+file+organizer /
               sterile+urine+specimen+cup /
@@ -103,7 +103,7 @@ export default function TickBornePage() {
               pet+first+aid+kit, led+medical+penlight.
               Doxycycline, isoxazolines, Lyme vaccine,
               Frontline, NexGard, Bravecto, Simparica,
-              and Rx ASINs are not shoppable hops. */}
+              and prescription brands are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

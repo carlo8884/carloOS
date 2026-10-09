@@ -64,7 +64,7 @@ export default function DehydrationPage() {
 
           <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Keep these on hand: an unflavored pediatric electrolyte to dilute 50/50 with water, a kitchen liquid-measuring pitcher for that mix, and a shallow lipped dog saucer for frequent small sips. These are household tools, not treatments. They do not treat moderate or severe dehydration, they do not replace a veterinarian, and they are not Pedialyte brand ASINs, IV fluid bags, SQ giving sets, Lactated Ringer&rsquo;s, or 0.9% NaCl.
+            Keep these on hand: an unflavored pediatric electrolyte to dilute 50/50 with water, a kitchen liquid-measuring pitcher for that mix, and a shallow lipped dog saucer for frequent small sips. These are household tools, not treatments. They do not treat moderate or severe dehydration, they do not replace a veterinarian, and they are not Pedialyte product pages, IV fluid bags, SQ giving sets, Lactated Ringer&rsquo;s, or 0.9% NaCl.
           </p>
 
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/unflavored+pediatric+electrolyte?s=health-dehydration-in-dogs", "/go/amazon-brand/kitchen+liquid+measuring+pitcher?s=health-dehydration-in-dogs", "/go/amazon-brand/shallow+lipped+dog+saucer?s=health-dehydration-in-dogs"]} />
@@ -73,7 +73,7 @@ export default function DehydrationPage() {
               (unflavored pediatric electrolyte / kitchen
               liquid-measuring pitcher / shallow lipped dog
               saucer). ShopCtas hides empty Chewy; never
-              href="#" or PLACEHOLDER. Category searches only
+              href="#" or PLACEHOLDER. Amazon searches only
               — unused vs #848–#1037 dog+water+fountain,
               stainless+steel+dog+fountain,
               heavy+ceramic+pet+water+bowl,
@@ -82,7 +82,7 @@ export default function DehydrationPage() {
               washable+dog+pee+pads, horse+electrolytes,
               ferret+electrolytes+recovery+food, and
               cool+water+towels. IV / SQ fluids and Pedialyte
-              brand ASINs are not shoppable hops. */}
+              named brands are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

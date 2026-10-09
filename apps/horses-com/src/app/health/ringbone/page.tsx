@@ -161,9 +161,9 @@ export default function RingbonePage() {
               tools, not a ranked product list, not a
               substitute for veterinary care, no Rx /
               Adequan / NSAID / joint-supplement /
-              horseshoe ASIN hops.
+              horseshoe product page hops.
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or PLACEHOLDER. Amazon searches only —
               unused vs #1106
               tow+behind+arena+drag+harrow /
               cotton+horse+polo+exercise+wraps /

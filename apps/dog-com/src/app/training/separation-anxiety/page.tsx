@@ -132,7 +132,7 @@ export default function SeparationAnxietyPage() {
 
         {/* Money path — live amazon-brand search hops (alone-time kit).
             ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-            Category searches only — not a ranked list. */}
+            Amazon searches only — not a ranked list. */}
         <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/wire+dog+crate+with+divider+panel?s=training-sep-anxiety", "/go/amazon-brand/kong+classic+dog+toy+stuffable?s=training-sep-anxiety", "/go/amazon-brand/snuffle+mat+dog+enrichment?s=training-sep-anxiety", "/go/amazon-brand/bully+sticks+dog+chew?s=training-sep-anxiety"]} />
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">

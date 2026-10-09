@@ -142,7 +142,7 @@ export default function TraileringPage() {
 
           {/* Money path — live amazon-brand search hops (trailering kit).
               ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-              Category searches only — everyday physical supplies matching
+              Amazon searches only — everyday physical supplies matching
               on-page boots / wraps / poll-guard / tying-rope copy, not
               shipping-fever diagnosis or medication hops. Hay bags and
               water buckets are not named on this page, so they are omitted. */}

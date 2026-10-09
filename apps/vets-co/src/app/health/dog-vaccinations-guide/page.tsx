@@ -81,9 +81,9 @@ export default function DogVaccinationsGuidePage() {
               list, not a substitute for veterinary
               care, no Rx / vaccine / Nobivac /
               DA2PP / Bordetella / rabies / Lyme /
-              influenza / Vaccicheck ASIN hops.
+              influenza / Vaccicheck product page hops.
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or PLACEHOLDER. Amazon searches only —
               unused vs #1090
               hinged+cedar+sandbox+cover /
               metal+jaw+dog+waste+scooper /

@@ -335,9 +335,9 @@ export default function VetsHuskyHealthPage() {
               tools, not a ranked product list, not
               a substitute for veterinary care, no
               Rx / first-aid kit / thermometer /
-              carrier / insurance-brand ASIN hops.
+              carrier / insurance-brand product page hops.
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or PLACEHOLDER. Amazon searches only —
               unused vs #1181
               13+column+analysis+pad /
               desk+blotter+pad /

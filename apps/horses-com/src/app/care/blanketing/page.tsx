@@ -143,7 +143,7 @@ export default function BlanketingPage() {
 
           {/* Money path — live amazon-brand search hops (blanketing kit).
               ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-              Category searches only — everyday physical supplies matching
+              Amazon searches only — everyday physical supplies matching
               on-page turnout / sheet / fill-weight copy, not medical
               or diagnosis hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">

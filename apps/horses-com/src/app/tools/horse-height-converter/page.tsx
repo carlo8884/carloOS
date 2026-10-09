@@ -229,18 +229,18 @@ export default function HorseHeightConverterPage() {
             Shop height and sizing tools
           </div>
           <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">A measuring stick with a level is the official withers tool (same
-            query as the{' '}
+            search as the{' '}
             <Link href="/tools/body-condition-score" className="text-brand-primary no-underline hover:underline">
               Henneke BCS
             </Link>
-            ). A height/weight tape is the everyday barn backup (same query as
+            ). A height/weight tape is the everyday barn backup (same search as
             the{' '}
             <Link href="/tools/horse-weight-calculator" className="text-brand-primary no-underline hover:underline">
               weight calculator
             </Link>
             ). A saddle-fitting kit (wither gauge or fitting template) is how
-            height turns into tack size. These are Amazon category searches —
-            not a ranked product list, not invented inventory, and not a
+            height turns into tack size. These are Amazon searches —
+            not a ranked product list, not made-up products, and not a
             substitute for a formal measurement or a qualified saddle fitter.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas

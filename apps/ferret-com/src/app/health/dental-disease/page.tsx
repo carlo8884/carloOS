@@ -400,7 +400,7 @@ export default function FerretDentalDiseasePage() {
 
           <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Keep these on hand: a fingertip rubber brush so a kit can learn the flavor and the feel before a handle is introduced, a soft infant toothbrush for the 30–60 second outside-surface pass, and pet dental wipes (gauze on a fingertip with enzymatic paste) for the days a ferret will not tolerate a brush. Enzymatic pet toothpaste sits beside those three as the paste already described in the protocol on this page. Human toothpaste (fluoride, xylitol), named toothpaste brand ASINs, antibiotics, analgesia (meloxicam, buprenorphine), and anesthetized scaling stay educational copy only.
+            Keep these on hand: a fingertip rubber brush so a kit can learn the flavor and the feel before a handle is introduced, a soft infant toothbrush for the 30–60 second outside-surface pass, and pet dental wipes (gauze on a fingertip with enzymatic paste) for the days a ferret will not tolerate a brush. Enzymatic pet toothpaste sits beside those three as the paste already described in the protocol on this page. Human toothpaste (fluoride, xylitol), named toothpaste brands, antibiotics, analgesia (meloxicam, buprenorphine), and anesthetized scaling stay educational copy only.
           </p>
 
           <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/finger+toothbrush+pet?s=health-dental-disease", "/go/amazon-brand/infant+toothbrush+soft+bristle?s=health-dental-disease", "/go/amazon-brand/pet+dental+wipes?s=health-dental-disease"]} />
@@ -411,7 +411,7 @@ export default function FerretDentalDiseasePage() {
               searches only — unused vs #993–#1024 soft+pet+toothbrush,
               enzymatic+pet+toothpaste, dental+chews+dog,
               pet+dental+water+additive, and cat+dental.
-              Human toothpaste, brand ASINs, and medications are not hops. */}
+              Human toothpaste, named brands, and medications are not hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

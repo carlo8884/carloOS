@@ -177,8 +177,8 @@ export default function VetsPetInsurancePage() {
             />
 
             <ReviewCard id="healthy-paws" badge="Fastest Reimbursement" name="Healthy Paws"
-              subtitle="Most claims processed in 2 days · Registry lists no wellness add-on"
-              description={<p>The Healthy Paws claims page, fetched 2026-10-08, says most claims are processed in 2 days, and that Direct Pay can reimburse the vet when funding is urgent (<span className="break-all">https://www.healthypawspetinsurance.com/pet-insurance-claims.html</span>). The annual reimbursement limit is a choice. Healthy Paws lists $5,000, $7,000, or unlimited, dated 2026-10-08. It is not automatically unlimited. The verified registry lists no wellness add-on.</p>}
+              subtitle="Most claims processed in 2 days · Notes list no wellness add-on"
+              description={<p>The Healthy Paws claims page, fetched 2026-10-08, says most claims are processed in 2 days, and that Direct Pay can reimburse the vet when funding is urgent (<span className="break-all">https://www.healthypawspetinsurance.com/pet-insurance-claims.html</span>). The annual reimbursement limit is a choice. Healthy Paws lists $5,000, $7,000, or unlimited, dated 2026-10-08. It is not automatically unlimited. Our notes list no wellness add-on.</p>}
               specs={[
                 { label: 'Reimbursement', value: 'Up to 90%', highlight: 'good' },
                 { label: 'Claims Speed', value: 'Most in 2 days', highlight: 'good' },
@@ -195,7 +195,7 @@ export default function VetsPetInsurancePage() {
 
             <ReviewCard id="embrace" badge="Wellness add-on" name="Embrace"
               subtitle="Wellness add-on · Deductible program: see the carrier's current terms"
-              description={<p>The Wellness Rewards page, fetched 2026-10-08, lists wellness exams, vaccinations, flea, tick, and heartworm prevention, and preventative dental cleaning (<span className="break-all">https://www.embracepetinsurance.com/coverage/wellness-rewards</span>). The verified registry marks that coverage as a standalone add-on. The deductible program and the orthopedic waiting period: see the carrier's current terms. Reimbursement on the current dog page is 70%, 80%, or 90%.</p>}
+              description={<p>The Wellness Rewards page, fetched 2026-10-08, lists wellness exams, vaccinations, flea, tick, and heartworm prevention, and preventative dental cleaning (<span className="break-all">https://www.embracepetinsurance.com/coverage/wellness-rewards</span>). Our notes mark that coverage as a standalone add-on. The deductible program and the orthopedic waiting period: see the carrier's current terms. Reimbursement on the current dog page is 70%, 80%, or 90%.</p>}
               specs={[
                 { label: 'Wellness', value: 'Add-on available', highlight: 'good' },
                 { label: 'Deductible', value: 'See the carrier\'s current terms' },
@@ -238,7 +238,7 @@ export default function VetsPetInsurancePage() {
                       <td className="p-3 text-brand-text-mid">You can pay the clinic and want the reimbursement back fast</td>
                       <td className="p-3 font-bold text-brand-dark"><a href="#healthy-paws" className="text-brand-primary">Healthy Paws</a><TableShopLink href={"/go/healthy-paws/home?s=reviews-best-pet-insurance"} product={"Healthy Paws"} holdWithoutPartnerId /></td>
                       <td className="p-3 text-brand-text-mid">Most claims processed in 2 days. Up to 90 percent. Annual limit is $5,000, $7,000, or unlimited. See the carrier's current terms for the monthly figure.</td>
-                      <td className="p-3 text-brand-text-mid">Wellness is not in the registry. Deductible is annual</td>
+                      <td className="p-3 text-brand-text-mid">Wellness is not in our notes. Deductible is annual</td>
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">You want routine care budgeted beside accident and illness</td>
@@ -249,7 +249,7 @@ export default function VetsPetInsurancePage() {
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-08" />
+              <ComparisonFoot updated="2026-10-09" />
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Questions this comparison answers</h2>
               <FAQAccordion items={[
                 {

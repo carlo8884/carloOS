@@ -345,7 +345,7 @@ export default function DogBodyConditionScorePage() {
               condition score chart poster / single-
               ingredient lean dog treats). ShopCtas hides
               empty Chewy; never href="#" or PLACEHOLDER.
-              Category searches only — unused vs #848–#1039
+              Amazon searches only — unused vs #848–#1039
               digital+pet+scale, slow+feeder+dog+bowl,
               kitchen+gram+scale,
               portion+control+food+scale+dog,
@@ -358,7 +358,7 @@ export default function DogBodyConditionScorePage() {
               stainless+steel+dog+fountain,
               washable+dog+pee+pads, and
               weighted+ceramic+dog+water+bowl.
-              Prescription WM diets and med ASINs are
+              Prescription WM diets and med product pages are
               not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">

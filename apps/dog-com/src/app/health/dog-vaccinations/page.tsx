@@ -109,7 +109,7 @@ export default function DogVaccinationsPage() {
               (pet vaccination record book / dog seat-belt
               tether / foldable waterproof puppy mat).
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or PLACEHOLDER. Amazon searches only —
               unused vs #1043 mosquito dunks / monthly
               pill organizer / soft-sided vet-visit
               carrier, #1042 gum-chart / recovery-food /
@@ -121,7 +121,7 @@ export default function DogVaccinationsPage() {
               Nobivac, DA2PP, Bordetella, rabies, Lyme,
               influenza, Heartgard, Interceptor,
               Simparica, ProHeart, flea+tick meds, and
-              Rx ASINs are not shoppable hops. */}
+              prescription brands are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

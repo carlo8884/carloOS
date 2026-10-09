@@ -140,7 +140,7 @@ export default function AquariumSetupPage() {
 
         {/* Money path — live amazon-brand search hops (first-tank kit).
             ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-            Category searches only — not a ranked list. */}
+            Amazon searches only — not a ranked list. */}
         <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/api+freshwater+master+test+kit?s=setup-aquarium", "/go/amazon-brand/aquaclear+70+filter?s=setup-aquarium", "/go/amazon-brand/fluval+307+canister+filter?s=setup-aquarium", "/go/amazon-brand/eheim+jager+heater?s=setup-aquarium", "/go/amazon-brand/aquarium+digital+thermometer?s=setup-aquarium", "/go/amazon-brand/seachem+prime+water+conditioner?s=setup-aquarium", "/go/amazon-brand/aquarium+gravel+vacuum+siphon?s=setup-aquarium"]} />
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">

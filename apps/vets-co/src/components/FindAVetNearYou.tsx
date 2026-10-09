@@ -104,7 +104,7 @@ export async function FindAVetNearYou({ variant = 'compact' }: FindAVetNearYouPr
 function FindAVetDisclaimer() {
   return (
     <p className="text-2xs text-brand-text-light italic m-0 mt-3 leading-relaxed">
-      Sample directory — listings are placeholders until our verified data source is selected. See
+      Sample directory — listings are samples until our verified data source is selected. See
       our editorial standards for current sourcing status.
     </p>
   )

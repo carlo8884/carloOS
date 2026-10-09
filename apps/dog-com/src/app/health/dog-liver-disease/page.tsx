@@ -68,7 +68,7 @@ export default function DogLiverDiseasePage() {
               (pet medical records binder / AM/PM weekly
               pill organizer / digital hanging luggage
               scale). ShopCtas hides empty Chewy; never
-              href="#" or PLACEHOLDER. Category searches
+              href="#" or PLACEHOLDER. Amazon searches
               only — unused vs #1045 LED medical
               penlight / pet emergency contact card /
               folding pet stretcher, #1044 pet
@@ -86,7 +86,7 @@ export default function DogLiverDiseasePage() {
               soft+pet+carrier. Denamarin, Hill's l/d,
               Royal Canin Hepatic, lactulose, Heartgard,
               Interceptor, Simparica, ProHeart, vaccine
-              brands, and Rx ASINs are not shoppable
+              brands, and prescription brands are not shoppable
               hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">

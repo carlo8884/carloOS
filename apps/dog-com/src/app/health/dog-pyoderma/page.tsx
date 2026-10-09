@@ -70,7 +70,7 @@ export default function DogPyodermaPage() {
           {/* Money path — live amazon-brand search hops (chlorhexidine
               dog shampoo / hypoallergenic washcloths). ShopCtas
               hides empty Chewy; never href="#" or PLACEHOLDER.
-              Category searches only. Systemic antibiotics,
+              Amazon searches only. Systemic antibiotics,
               isoxazoline parasiticide brands, steroids, recovery
               cones, paw wipes, HEPA, and mange laundry gear are
               not shoppable hops. */}

@@ -142,7 +142,7 @@ export default function HayTypesPage() {
               alfalfa hay bales horse /
               timothy alfalfa mixed hay horse).
               Educational barn searches only; no Rx /
-              vaccine ASIN hops. ShopCtas hides empty
+              vaccine product page hops. ShopCtas hides empty
               Chewy; never href="#" or PLACEHOLDER.
               Unused vs #1112
               tabletop+digital+horse+grain+scale /

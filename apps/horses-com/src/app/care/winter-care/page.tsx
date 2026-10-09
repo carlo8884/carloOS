@@ -136,7 +136,7 @@ export default function WinterCarePage() {
 
           {/* Money path — live amazon-brand search hops (winter-care kit).
               ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-              Category searches only — everyday physical supplies matching
+              Amazon searches only — everyday physical supplies matching
               on-page tank-heater / grit / snow-pad / stud copy, not colic
               or mud-fever diagnosis hops. Blankets stay on /care/blanketing. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">

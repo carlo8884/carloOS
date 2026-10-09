@@ -74,7 +74,7 @@ const appSchema = {
     'Converts dog age with a banded planning figure, not an AVMA or AAHA chart',
     'Size-specific rates after year two (small, medium, large, giant)',
     'Qualitative life-stage label: puppy, adolescent, adult, mature adult, senior',
-    'Shoppable life-stage kit via Amazon category searches',
+    'Shop the life-stage kit via Amazon searches',
   ],
 }
 
@@ -154,7 +154,7 @@ export default function DogAgeCalculatorPage() {
 
       {/* Money path — live amazon-brand search hops (life-stage kit).
           ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-          Category searches only — not a ranked list, not a diagnosis. */}
+          Amazon searches only — not a ranked list, not a diagnosis. */}
       <section id="dog-age-kit" className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <div className="max-w-2xl">
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/puppy+food?s=tools-dog-age", "/go/amazon-brand/puppy+teething+toys?s=tools-dog-age", "/go/amazon-brand/dental+chews+dog?s=tools-dog-age", "/go/amazon-brand/joint+support+dog+treats?s=tools-dog-age", "/go/amazon-brand/dog+id+tag+collar?s=tools-dog-age", "/go/amazon-brand/dog+leash?s=tools-dog-age"]} />

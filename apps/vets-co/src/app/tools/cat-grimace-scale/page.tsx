@@ -61,7 +61,7 @@ const softwareApplicationSchema = {
     'Estimated grimace total out of 10 with the ≈4/10 analgesia threshold',
     'Calibrated interpretation: minimal signs, some signs, or signs consistent with pain',
     'Safety guidance: never give human painkillers to cats; defer to a veterinarian',
-    'Shoppable observation kit via Amazon category searches (soft carrier, pet first-aid kit, calming pheromone diffuser, digital pet thermometer, cozy recovery bed)',
+    'Shop the observation kit via Amazon searches (soft carrier, pet first-aid kit, calming pheromone diffuser, digital pet thermometer, cozy recovery bed)',
   ],
   publisher: { '@type': 'Organization', name: 'Vets.co Editorial', url: 'https://vets.co' },
 }
@@ -196,7 +196,7 @@ export default function CatGrimaceScalePage() {
 
         {/* Money path — live amazon-brand search hops (observation / comfort kit).
             ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-            Category searches only — not a ranked list, not a diagnosis. */}
+            Amazon searches only — not a ranked list, not a diagnosis. */}
         <div id="cat-grimace-kit" className="mt-8 mb-8">
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/soft+cat+carrier?s=tools-cat-grimace-scale", "/go/amazon-brand/pet+first+aid+kit?s=tools-cat-grimace-scale", "/go/amazon-brand/calming+pheromone+diffuser?s=tools-cat-grimace-scale", "/go/amazon-brand/digital+pet+thermometer?s=tools-cat-grimace-scale", "/go/amazon-brand/cat+recovery+bed?s=tools-cat-grimace-scale"]} />
           <div className="mt-4 rounded-xl border border-brand-border bg-brand-surface p-5">

@@ -102,7 +102,7 @@ export default function PreventiveCareSchedulePage() {
 
           <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Keep these on hand: a wall-mounted magnetic monthly planner so the next wellness slot stays on the fridge, a waterproof rear seat hammock so the clinic ride does not soak the back seat, and a folding four-wheel dog stroller so a senior with a six-month mobility assessment can still make the lobby. These are household cadence and clinic-trip tools, not treatments. They do not replace a vaccine, a heartworm test, a fecal exam, or a veterinarian-chosen preventive, and they are not a ranked product list. Heartgard, Sentinel, Interceptor, ProHeart, Bravecto, NexGard, Simparica, and other Rx ASINs are not product links.
+            Keep these on hand: a wall-mounted magnetic monthly planner so the next wellness slot stays on the fridge, a waterproof rear seat hammock so the clinic ride does not soak the back seat, and a folding four-wheel dog stroller so a senior with a six-month mobility assessment can still make the lobby. These are household cadence and clinic-trip tools, not treatments. They do not replace a vaccine, a heartworm test, a fecal exam, or a veterinarian-chosen preventive, and they are not a ranked product list. Heartgard, Sentinel, Interceptor, ProHeart, Bravecto, NexGard, Simparica, and other prescription brands are not product links.
           </p>
 
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/wall+mounted+magnetic+monthly+planner?s=health-preventive-care-schedule", "/go/amazon-brand/waterproof+rear+seat+hammock?s=health-preventive-care-schedule", "/go/amazon-brand/folding+four+wheel+dog+stroller?s=health-preventive-care-schedule"]} />

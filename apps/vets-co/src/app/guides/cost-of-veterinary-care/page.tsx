@@ -71,9 +71,9 @@ export default function CostOfCarePage() {
               list, not a substitute for veterinary
               care, no Rx / first-aid kit /
               thermometer / carrier / insurance-brand
-              ASIN hops.
+              product page hops.
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or PLACEHOLDER. Amazon searches only —
               unused vs #1162
               locking+cash+box+with+key /
               basic+desktop+calculator /

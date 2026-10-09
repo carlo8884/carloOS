@@ -308,7 +308,7 @@ export default function FerretCageCleaningRoutinePage() {
 
           {/* Money path — live amazon-brand search hops (cage-cleaning supplies).
               ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-              Category searches only — educational gear, not medications, not a ranked list.
+              Amazon searches only — educational gear, not medications, not a ranked list.
               No phenol/pine cleaners, no ammonia, no undiluted bleach. */}
           <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/enzymatic+pet+stain+odor+cleaner?s=care-cage-cleaning-routine", "/go/amazon-brand/small+animal+cage+cleaner?s=care-cage-cleaning-routine", "/go/amazon-brand/litter+scoop?s=care-cage-cleaning-routine", "/go/amazon-brand/disposable+nitrile+gloves?s=care-cage-cleaning-routine", "/go/amazon-brand/fragrance+free+laundry+detergent?s=care-cage-cleaning-routine"]} />
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">

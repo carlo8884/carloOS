@@ -91,7 +91,7 @@ export default function DogCancerTreatmentPage() {
               (dog surgical recovery suit / non-slip
               dog socks / adjustable-height dog bowls).
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or PLACEHOLDER. Amazon searches only —
               unused vs #1054 locking kitchen trash can
               / walk-through pet gate / airtight dog-food
               storage container, #1053 dog pill pockets
@@ -137,7 +137,7 @@ export default function DogCancerTreatmentPage() {
               dog+cooling+vest. Palladia, Tanovea,
               CHOP, doxorubicin, carboplatin,
               prednisone, Cerenia, maropitant,
-              mirtazapine, gabapentin, and Rx ASINs
+              mirtazapine, gabapentin, and prescription brands
               are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">

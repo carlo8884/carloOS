@@ -90,7 +90,7 @@ export default function CushingDiseasePage() {
               disposable dog pee pads / dog cooling
               bandana). ShopCtas hides empty Chewy;
               never href="#" or PLACEHOLDER.
-              Category searches only — unused vs #1051
+              Amazon searches only — unused vs #1051
               self-warming dog mat / fleece dog sweater
               / dog slicker brush, #1050 dog lymph-node
               anatomy chart / foam dog stairs / dog ear
@@ -111,7 +111,7 @@ export default function CushingDiseasePage() {
               dog+cooling+vest, and
               soft+dog+carrier / soft+pet+carrier.
               Trilostane, Vetoryl, Lysodren, mitotane,
-              prednisone, insulin, and Rx ASINs are not
+              prednisone, insulin, and prescription brands are not
               shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">

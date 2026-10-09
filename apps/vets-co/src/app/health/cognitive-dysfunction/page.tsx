@@ -70,7 +70,7 @@ export default function CognitiveDysfunctionPage() {
 
           <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Keep these on hand: a plug-in night light for the hall the dog walks at night, a sniff box with new objects for short scent sessions, and a senior food-puzzle toy for brief enrichment. These are household tools, not treatments. They do not treat CDS, they do not replace a veterinarian, and they are not Bright Mind brand ASINs, Anipryl (selegiline), melatonin, or fish-oil supplements.
+            Keep these on hand: a plug-in night light for the hall the dog walks at night, a sniff box with new objects for short scent sessions, and a senior food-puzzle toy for brief enrichment. These are household tools, not treatments. They do not treat CDS, they do not replace a veterinarian, and they are not Bright Mind product pages, Anipryl (selegiline), melatonin, or fish-oil supplements.
           </p>
 
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/plug+in+night+light?s=health-cognitive-dysfunction", "/go/amazon-brand/dog+sniff+box?s=health-cognitive-dysfunction", "/go/amazon-brand/senior+dog+food+puzzle?s=health-cognitive-dysfunction"]} />
@@ -78,7 +78,7 @@ export default function CognitiveDysfunctionPage() {
           {/* Money path — live amazon-brand search hops (plug-in
               night light / sniff box / senior food-puzzle).
               ShopCtas hides empty Chewy; never href="#" or
-              PLACEHOLDER. Category searches only — unused vs
+              PLACEHOLDER. Amazon searches only — unused vs
               #848–#1036 puzzle+feeder+dog, snuffle+mat+dog+enrichment,
               senior+dog+food, joint+support+dog+treats,
               portion+control+food+scale+dog, anxiety+vest+dog,

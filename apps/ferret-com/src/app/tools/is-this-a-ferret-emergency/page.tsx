@@ -95,7 +95,7 @@ const appSchema = {
     'Conservative urgency read: go now, same-day vet, or monitor closely',
     '15 ferret signs drawn from exotic-mammal emergency-medicine criteria',
     'Always rounds toward more care; no all-clear result',
-    'Shoppable ferret emergency-prep kit via Amazon category searches (pet first-aid kit, digital pet thermometer, soft pet carrier, styptic powder, wound-care gauze)',
+    'Shop the ferret emergency-prep kit via Amazon searches (pet first-aid kit, digital pet thermometer, soft pet carrier, styptic powder, wound-care gauze)',
   ],
 }
 
@@ -234,7 +234,7 @@ export default function IsThisAFerretEmergencyPage() {
 
       {/* Money path — live amazon-brand search hops (ferret emergency-prep / first-aid kit).
           ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-          Category searches only — not a ranked list, not a diagnosis. */}
+          Amazon searches only — not a ranked list, not a diagnosis. */}
       <section id="ferret-emergency-prep-kit" className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <div className="max-w-2xl">
           <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/pet+first+aid+kit?s=tools-is-this-a-ferret-emergency", "/go/amazon-brand/digital+pet+thermometer?s=tools-is-this-a-ferret-emergency", "/go/amazon-brand/soft+pet+carrier?s=tools-is-this-a-ferret-emergency", "/go/amazon-brand/styptic+powder?s=tools-is-this-a-ferret-emergency", "/go/amazon-brand/wound+care+gauze?s=tools-is-this-a-ferret-emergency"]} />

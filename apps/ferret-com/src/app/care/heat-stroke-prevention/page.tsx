@@ -195,7 +195,7 @@ export default function HeatStrokePreventionPage() {
 
           {/* Money path — live amazon-brand search hops (heat-safety / cooling gear).
               ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-              Category searches only — educational gear, not medications, not a ranked list. */}
+              Amazon searches only — educational gear, not medications, not a ranked list. */}
           <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/digital+indoor+thermometer?s=care-heat-stroke-prevention", "/go/amazon-brand/reusable+plastic+water+bottle?s=care-heat-stroke-prevention", "/go/amazon-brand/ceramic+tile?s=care-heat-stroke-prevention", "/go/amazon-brand/ferret+water+bottle?s=care-heat-stroke-prevention", "/go/amazon-brand/clip+on+fan?s=care-heat-stroke-prevention"]} />
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">

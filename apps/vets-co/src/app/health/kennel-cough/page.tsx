@@ -77,7 +77,7 @@ export default function KennelCoughPage() {
           {/* Money path — live amazon-brand search hops (Y-shaped
               front-clip harness / cool-mist humidifier /
               soft-sided crate). ShopCtas hides empty Chewy;
-              never href="#" or PLACEHOLDER. Category searches
+              never href="#" or PLACEHOLDER. Amazon searches
               only — unused vs #848–#1031 front+clip+no+pull
               harness, HEPA air-purifier, dog+recovery+crate,
               and digital+pet+thermometer hops. Antibiotics,

@@ -74,7 +74,7 @@ const appSchema = {
     'Three guided checks: rib palpation, waist from above, abdominal tuck from the side',
     'Plain-English interpretation: underweight, ideal, overweight, obese',
     'Next-step guidance with a defer-to-vet note',
-    'Shoppable BCS / weight-management kit via Amazon category searches',
+    'Shop the BCS / weight-management kit via Amazon searches',
   ],
   publisher: { '@type': 'Organization', name: 'Dog.com Editorial', url: 'https://dog.com' },
 }
@@ -170,7 +170,7 @@ export default function DogBodyConditionScorePage() {
 
       {/* Money path — live amazon-brand search hops (BCS / weight-management kit).
           ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-          Category searches only — not a ranked list, not a diagnosis. */}
+          Amazon searches only — not a ranked list, not a diagnosis. */}
       <section id="bcs-weight-kit" className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <div className="max-w-2xl">
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/dog+measuring+tape+body+condition+chart?s=tools-dog-bcs", "/go/amazon-brand/elevated+slow+feeder+bowl+dog?s=tools-dog-bcs", "/go/amazon-brand/portion+control+food+scale+dog?s=tools-dog-bcs", "/go/amazon-brand/puzzle+feeder+dog?s=tools-dog-bcs", "/go/amazon-brand/joint+support+dog+treats?s=tools-dog-bcs", "/go/amazon-brand/weight+management+dog+food?s=tools-dog-bcs"]} />

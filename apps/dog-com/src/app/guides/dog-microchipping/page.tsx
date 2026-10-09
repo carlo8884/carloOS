@@ -280,7 +280,7 @@ export default function DogMicrochippingPage() {
 
           {/* Money path — live amazon-brand search hops (microchip registration kit).
               ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-              Category searches only — everyday physical supplies matching
+              Amazon searches only — everyday physical supplies matching
               on-page iso-pet-microchip-scanner / engraved-dog-collar-id-tags /
               pet-id-tag-slide-on copy, not GPS trackers, clinic implant kits,
               or generic dog+id+tag+collar hops already used elsewhere. */}

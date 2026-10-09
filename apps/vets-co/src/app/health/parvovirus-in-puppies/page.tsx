@@ -82,7 +82,7 @@ export default function ParvoPage() {
           {/* Money path — live amazon-brand search hops (AHP
               disinfectant / disposable shoe covers / pump
               sprayer). ShopCtas hides empty Chewy; never
-              href="#" or PLACEHOLDER. Category searches only.
+              href="#" or PLACEHOLDER. Amazon searches only.
               3% first-aid peroxide, enzymatic cleaners,
               vaccines, IV fluids, and anti-nausea Rx are not
               shoppable hops. */}

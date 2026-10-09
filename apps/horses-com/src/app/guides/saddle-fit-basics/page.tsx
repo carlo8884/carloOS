@@ -227,7 +227,7 @@ export default function SaddleFitBasicsPage() {
 
           {/* Money path — live amazon-brand search hops (saddle-fit kit).
               ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-              Category searches only — everyday physical supplies matching
+              Amazon searches only — everyday physical supplies matching
               on-page pad / half-pad / shim / girth-or-cinch copy, not
               wither pads, measuring tapes, saddles, or medication hops.
               Wither pads and measuring tapes are not named on this page. */}

@@ -74,7 +74,7 @@ export default function DogVomitingPage() {
           {/* Money path — live amazon-brand search hops (mini
               rice cooker / glass meal-prep containers). ShopCtas
               hides empty Chewy; never href="#" or PLACEHOLDER.
-              Category searches only. Anti-nausea Rx, prescription
+              Amazon searches only. Anti-nausea Rx, prescription
               GI diets, probiotics, pumpkin, slow-feeders,
               elevated bowls, and Bailey chairs are not
               shoppable hops. */}

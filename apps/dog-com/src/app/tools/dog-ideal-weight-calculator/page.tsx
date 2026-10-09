@@ -84,7 +84,7 @@ const appSchema = {
     'Healthy adult weight range by breed from AKC-standard bands',
     'Estimated ideal weight from the WSAVA 9-point body condition score',
     'Size-class fallback for mixed-breed or unlisted dogs',
-    'Shoppable weight-check kit via Amazon category searches',
+    'Shop the weight-check kit via Amazon searches',
   ],
 }
 
@@ -219,7 +219,7 @@ export default function DogIdealWeightCalculatorPage() {
 
       {/* Money path — live amazon-brand search hops (weight-check / portion kit).
           ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-          Category searches only — not a ranked list, not a diagnosis. */}
+          Amazon searches only — not a ranked list, not a diagnosis. */}
       <section id="ideal-weight-kit" className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <div className="max-w-2xl">
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/digital+gram+scale+kitchen+pet?s=tools-dog-ideal-weight", "/go/amazon-brand/portion+control+food+scale+dog?s=tools-dog-ideal-weight", "/go/amazon-brand/dog+measuring+tape+body+condition+chart?s=tools-dog-ideal-weight", "/go/amazon-brand/elevated+slow+feeder+bowl+dog?s=tools-dog-ideal-weight", "/go/amazon-brand/puzzle+feeder+dog?s=tools-dog-ideal-weight", "/go/amazon-brand/weight+management+dog+food?s=tools-dog-ideal-weight"]} />

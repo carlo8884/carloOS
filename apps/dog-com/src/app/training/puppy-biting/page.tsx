@@ -77,7 +77,7 @@ export default function PuppyBitingPage() {
 
         {/* Money path — live amazon-brand search hops (nipping / teething kit).
             ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-            Category searches only — not a ranked list. */}
+            Amazon searches only — not a ranked list. */}
         <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/kong+classic+dog+toy+stuffable?s=training-puppy-biting", "/go/amazon-brand/puppy+chew+toys?s=training-puppy-biting", "/go/amazon-brand/puppy+teething+toys?s=training-puppy-biting", "/go/amazon-brand/bitter+apple+spray+dog?s=training-puppy-biting"]} />
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">

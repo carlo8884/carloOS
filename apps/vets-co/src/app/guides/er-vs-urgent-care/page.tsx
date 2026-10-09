@@ -71,9 +71,9 @@ export default function ERvsUrgentPage() {
               tools, not a ranked product list, not a
               substitute for veterinary care, no Rx /
               first-aid kit / thermometer / carrier
-              ASIN hops.
+              product page hops.
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or PLACEHOLDER. Amazon searches only —
               unused vs #1093
               48+hour+digital+kitchen+timer /
               lined+telephone+message+pad /

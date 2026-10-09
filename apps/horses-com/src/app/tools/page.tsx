@@ -81,7 +81,7 @@ const TOOLS = [
   {
     href: '/tools/horse-cost-calculator',
     title: 'Horse Cost of Ownership Calculator',
-    desc: 'Estimate monthly and annual keeping costs — board, feed, farrier, vet, insurance — then pack a shoppable first-horse startup kit (halter, grooming, hoof pick, scoop, barn first-aid, fly mask).',
+    desc: 'Estimate monthly and annual keeping costs — board, feed, farrier, vet, insurance — then pack a first-horse startup kit (halter, grooming, hoof pick, scoop, barn first-aid, fly mask).',
     tag: 'Budgeting',
   },
   {

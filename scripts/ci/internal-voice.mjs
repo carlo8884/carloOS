@@ -4,16 +4,19 @@
  * appear in customer-facing copy on the five earning sites
  * (dog-com, fish-com, horses-com, vets-co, ferret-com).
  *
- * The phrases are the ones removed in Rounds 204–207: inventory
+ * The phrases are the ones removed in Rounds 204–208: inventory
  * asides ("already live on", "does not hop", "(those live on …)"),
  * hop numbers (#1168), TL;DR labels, slug-shaped shop labels
  * ("Deductibles-reimbursement kit", "Shop the visit-cadence kit"),
- * "not a … hop" / "not a reason to hop" asides, and any other
+ * "not a … hop" / "not a reason to hop" asides, any other
  * customer-facing "hop" or "hops" that means an affiliate link
- * ("The hop below", "never hops", "not shoppable hops").
- * Real kit names stay allowed. Real-word uses stay on the allowlist:
- * three-legged hop, war-dance hop, treat hopper, and a horse that
- * "will not bear weight on a limb, hops,".
+ * ("The hop below", "never hops", "not shoppable hops"), and shop
+ * or dev jargon (ASIN, category search, SKU, slug, query,
+ * affiliate ID, partner held, placeholder, shoppable, internal
+ * redirect, invented inventory). Real-word uses stay on the
+ * allowlist: three-legged hop, war-dance hop, treat hopper, a horse
+ * that "will not bear weight on a limb, hops,", pinned ears, mucosal
+ * or racing integrity, and breed, microchip, or OFA registries.
  *
  * Comments, imports, code identifiers, (funnels), and components/visual
  * are not customer copy.
@@ -42,6 +45,16 @@ export const RULES = [
   { id: 'not-a-hop', pattern: /not (?:an?|the)\s+(?:(?!\bnot\b)[^.;]){0,200}?\bhop\b/i, reason: 'Internal "not a … hop" aside' },
   { id: 'reason-to-hop', pattern: /not a reason to hop/i, reason: 'Internal "not a reason to hop" aside' },
   { id: 'customer-hop', pattern: /\bhops?\b/i, reason: 'Customer-facing "hop" or "hops" outside the real-word allowlist' },
+  {
+    id: 'shop-jargon',
+    pattern: /\bASINs?\b|\bcategory[- ]searches?\b|\bSKUs?\b|\bslugs?\b|\bquer(?:y|ies)\b|\bquery strings?\b|\baffiliate IDs?\b|\b(?:partner held|held partners?)\b|\bpinned\b|\bintegrity\b|\bregistr(?:y|ies)\b|\bshoppable\b|\bplaceholders?\b|\binternal redirects?\b|\binvented inventory\b|\bon-page\b|\[sku\]/i,
+    reason: 'Shop or dev jargon outside the real-word allowlist',
+  },
+  {
+    id: 'shop-cta',
+    pattern: /\bCTAs?\b/,
+    reason: 'Customer-facing "CTA" label',
+  },
 ]
 
 export function stripComments(src) {
@@ -84,6 +97,124 @@ export function customerHopHay(src) {
   return s.replace(/\s+/g, ' ')
 }
 
+function blank(src, re) {
+  re.lastIndex = 0
+  return src.replace(re, ' ')
+}
+
+/** Ears, play, and restraint — not a pinned product. */
+export const PINNED_ALLOWLIST = [
+  /\bpinned(?:,\s*or\s+rotated|\s+flat|\s+ears|\s+against|\s+too\s+hard|\s+painfully)\b/gi,
+  /\b(?:not|being|or|and)\s+pinned\b/gi,
+  /\bears\s+pinned\b/gi,
+  /\bPinned\s+ears\b/g,
+]
+
+/** Editorial, mucosal, and racing integrity — not a formula check. */
+export const INTEGRITY_ALLOWLIST = [
+  /\beditorial-integrity\b/gi,
+  /\bmucosal integrity\b/gi,
+  /\bHorseracing Integrity(?: and Safety (?:Act|Authority))?\b/g,
+  /\bintegrity (?:reforms|rules|standards|processes|programs|and welfare|and safety|of competition|of every race|of a result|of the race|in medication)\b/gi,
+  /\b(?:point of integrity|Integrity Reforms)\b/g,
+  /\b(?:protect|upholds?|guard) the integrity\b/gi,
+  /\bthe integrity (?:that|of|and)\b/gi,
+  /\bintegrity of (?:competition|every race|a result|the race)\b/gi,
+  /\bsafety,\s*integrity,\s*and the welfare\b/gi,
+  /\bconsistency and integrity\b/gi,
+  /\bintegrity-[\w-]+/g,
+  /Racing Roles · Integrity/g,
+  /kicker:\s*'Integrity'/g,
+]
+
+/**
+ * Breed, microchip, and health registries — not our carrier notes.
+ * "carrier registry" and "verified registry" stay banned.
+ */
+export const REGISTRY_ALLOWLIST = [
+  /\bbreed[\s-]+registr(?:y|ies)\b/gi,
+  /\bbreed['’]s\s+registr(?:y|ies)\b/gi,
+  /\bmulti-registry\b/gi,
+  /\bno single registry\b/gi,
+  /\bMulti-registry\b/g,
+  /\bstock-horse registries\b/gi,
+  /\bWarmblood registries\b/gi,
+  /\[\s*'Registry'/g,
+  /\btype Registry\b/g,
+  /\bRegistry\s+type\b/g,
+  /\bregistry\s*:/g,
+  /\.registry\b/g,
+  /\bHealth & Registry\b/g,
+  /\bOFA\b(?:(?!\bregistr(?:y|ies)\b)[\s\S]){0,140}\bregistr(?:y|ies)\b/gi,
+  /\b(?:AQHA|USTA|TWHBEA|Pintabian|CAER)\b(?:(?!\bregistr(?:y|ies)\b)[\s\S]){0,140}\bregistr(?:y|ies)\b/gi,
+  /\b(?:Jockey Club|Standardbred|Thoroughbred|Warmblood|stud book|Stud Book)\b(?:(?!\bregistr(?:y|ies)\b)[\s\S]){0,100}\bregistr(?:y|ies)\b/gi,
+  /\b(?:microchip|implant)\b(?:(?!\bregistr(?:y|ies)\b)[\s\S]){0,100}\bregistr(?:y|ies)\b/gi,
+  /\bchip\b(?:(?!\bregistr(?:y|ies)\b)[\s\S]){0,90}\bregistr(?:y|ies)\b/gi,
+  /\bregistr(?:y|ies)\b(?:(?!\.)[\s\S]){0,60}\b(?:database|record|fees|implant|information)\b/gi,
+  /\b(?:which|its|an out-of-date|major)\s+registr(?:y|ies)\b/gi,
+  /\b(?:contact|Identify|identify|claim) the registry\b/gi,
+  /\b(?:in|to|a|the) registry\b/gi,
+  /\bregistry (?:data|database|fees|record|information|implant)\b/gi,
+  /\bveterinary board(?: public)? registr(?:y|ies)\b/gi,
+  /\b(?:closed|clear-eyed|single-breed|largest equine|largest single-breed|formalized|own|racing-only)\s+registry\b/gi,
+  /\brules and registry\b/gi,
+  /\bU\.S\. — registry\b/g,
+  /\bbreeds\s*—\s*registry\b/gi,
+  /\([^)\n]{0,48}\)\s*registr(?:y|ies)\b/gi,
+  /\bRegistries differ\b/g,
+  /\bmost registry\b/gi,
+  /\bof the registry\b/gi,
+  /\bNone \(registry\b/g,
+  /\bSlug bait\b/g,
+]
+
+/** Visible copy with code identifiers and real-word uses removed. */
+export function customerJargonHay(src) {
+  let s = decodeEntities(stripComments(src))
+  s = s.replace(/^\s*import\b[^\n]*/gm, ' ')
+  const code = [
+    /\bslugs?\s*:/g,
+    /\.slugs?\b/g,
+    /\$\{[^}\n]*\bslugs?\b[^}\n]*\}/g,
+    /\[slugs?\]/g,
+    /\{\s*slugs?\s*\}/g,
+    /\(\s*slugs?\s*\)/g,
+    /\bslugs?\s*[,)=]/g,
+    /[,=(]\s*slugs?\b/g,
+    /\bslugs?\s*(?:===|!==|=>|\?)/g,
+    /\?\s*slugs?\b/g,
+    /\bslugs?\s*\|/g,
+    /\|\s*slugs?\b/g,
+    /\bslugs?\s+as\b/g,
+    /\bas\s+slugs?\b/g,
+    /\bof\s+slugs?\b/g,
+    /\bconst\s+slugs?\b/g,
+    /\bSLUGS?\b/g,
+    /`[^`]*\bslugs?\b[^`]*`/g,
+    /\bskus?\s*:/gi,
+    /\.skus?\b/gi,
+    /\{[^}\n]*\.sku[^}\n]*\}/gi,
+    /\b(?:const|let|return|function)\s+query\b/g,
+    /\bquery\s*[:=,)}\]`?]/g,
+    /\bquery\.(?=[A-Za-z])/g,
+    /[({[,]\s*query\b/g,
+    /\.query\b/g,
+    /\bplaceholders?\s*=/gi,
+    /\bplaceholders?\s*\?:/gi,
+    /\{\s*placeholders?\s*\}/gi,
+    /\bplaceholders?\b(?=\s*[,)])/gi,
+    /[?&]hop=PLACEHOLDER/g,
+    /\bschema\s*=/g,
+    /\{schema\}/g,
+    /\bsource\s*=\s*["'][^"']*["']/g,
+    /\bpartnerQuoteHeld\b/g,
+    /\baffiliateAngle\b/g,
+  ]
+  for (const re of code) s = blank(s, re)
+  for (const re of [...PINNED_ALLOWLIST, ...INTEGRITY_ALLOWLIST, ...REGISTRY_ALLOWLIST]) s = blank(s, re)
+  return s
+}
+
 export function scanSource(src) {
   const visible = stripComments(src)
   const flat = decodeEntities(visible).replace(/\s+/g, ' ')
@@ -91,9 +222,11 @@ export function scanSource(src) {
   for (const rule of RULES) {
     const hay = rule.id === 'customer-hop'
       ? customerHopHay(src)
-      : rule.id === 'slug-kit' || rule.id === 'shop-slug-kit'
-        ? visible
-        : flat
+      : rule.id === 'shop-jargon' || rule.id === 'shop-cta'
+        ? customerJargonHay(src)
+        : rule.id === 'slug-kit' || rule.id === 'shop-slug-kit'
+          ? visible
+          : flat
     if (rule.pattern.test(hay)) {
       const match = hay.match(rule.pattern)
       hits.push({
@@ -131,6 +264,21 @@ export function selfCheck() {
     'Same dental-chew hop used on the dental review.',
     'This page never hops medications.',
     'Clinic prescriptions are not shoppable hops.',
+    'Water additives and brand ASINs stay educational copy only.',
+    'Shoppable weight-check kit via Amazon category searches.',
+    'Calming chews are a category search, not a ranked SKU.',
+    'The button below is the same search, not a new query.',
+    'Each priority maps to a published attribute in our carrier registry.',
+    'The verified registry marks Lemonade for younger pets.',
+    'These are placeholder listings — not real practices.',
+    'Clicking a link routes through our internal redirect.',
+    'Every affiliate link routes through /go/[vendor]/[sku].',
+    'Not invented inventory.',
+    'The affiliate ID is on the hop.',
+    'Quotes stay partner held until the inbox is live.',
+    'Pass the query string through to the retailer.',
+    'The page slug is not a label.',
+    'Real CTA wires when the directory loads.',
   ]
   const good = [
     'Pack a pet first-aid kit for the clinic ride.',
@@ -152,6 +300,23 @@ export function selfCheck() {
     'https://example.com/?hop=PLACEHOLDER',
     '{/* The hop below stays in a comment */}\n<p>Pack a first-aid kit.</p>',
     'Baking soda is a grocery bicarbonate.',
+    'Ears flattened, pinned, or rotated tightly back.',
+    'Pinned ears and a tight eye are on the horse grimace scale.',
+    'One ferret is being pinned against its will.',
+    'Our editorial-integrity contract controls recommendations.',
+    'Early feeding supports mucosal integrity.',
+    'The Horseracing Integrity and Safety Act established a federal authority.',
+    'Stewards protect the integrity of every race.',
+    'Common in Labradors per OFA registry data.',
+    'Assembled from veterinary references and breed registries.',
+    'The number must be linked to your address in a registry.',
+    'A registered microchip is not a registry implant.',
+    'Some links on this page are affiliate links.',
+    'placeholder="e.g. 2"',
+    "slug: 'labrador'",
+    '{schema}',
+    'const query = firstQuery(searchParams?.q)',
+    'sku: "epigen-90"',
   ]
   const errors = []
   for (const sample of bad) {
@@ -196,7 +361,12 @@ function main() {
     // Other rules stay on TSX. TS data and route modules are scanned for
     // customer-facing hop/hops only, so a blurb in a .ts file cannot hide.
     let found = scanSource(readFileSync(file, 'utf8'))
-    if (file.endsWith('.ts')) found = found.filter((hit) => hit.id === 'customer-hop')
+    if (file.endsWith('.ts')) {
+      found = found.filter((hit) => hit.id === 'customer-hop' || hit.id === 'shop-jargon' || hit.id === 'shop-cta')
+    }
+    if (/\/(?:dashboard|admin)\//.test(rel) || rel.endsWith('/affiliate-routes.ts')) {
+      found = found.filter((hit) => hit.id !== 'shop-jargon' && hit.id !== 'shop-cta')
+    }
     const site = SITES.find((s) => rel.startsWith(`apps/${s}/`))
     if (found.length && site) bySite[site] += found.length
     for (const hit of found) hits.push({ file: rel, ...hit })

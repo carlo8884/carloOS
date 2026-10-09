@@ -86,7 +86,7 @@ const appSchema = {
     'Conservative urgency read: go now, same-day vet, or monitor closely',
     '15 signs drawn from veterinary emergency-medicine criteria',
     'Always rounds toward more care; no all-clear result',
-    'Shoppable emergency-prep kit via Amazon category searches (pet first-aid kit, digital pet thermometer, soft carrier, styptic powder, tick remover)',
+    'Shop the emergency-prep kit via Amazon searches (pet first-aid kit, digital pet thermometer, soft carrier, styptic powder, tick remover)',
   ],
 }
 
@@ -220,7 +220,7 @@ export default function IsThisADogEmergencyPage() {
 
       {/* Money path — live amazon-brand search hops (emergency-prep / first-aid kit).
           ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-          Category searches only — not a ranked list, not a diagnosis. */}
+          Amazon searches only — not a ranked list, not a diagnosis. */}
       <section id="dog-emergency-prep-kit" className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <div className="max-w-2xl">
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/pet+first+aid+kit?s=tools-is-this-a-dog-emergency", "/go/amazon-brand/digital+pet+thermometer?s=tools-is-this-a-dog-emergency", "/go/amazon-brand/soft+dog+carrier?s=tools-is-this-a-dog-emergency", "/go/amazon-brand/styptic+powder?s=tools-is-this-a-dog-emergency", "/go/amazon-brand/tick+remover?s=tools-is-this-a-dog-emergency"]} />

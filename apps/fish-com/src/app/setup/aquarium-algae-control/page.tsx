@@ -79,7 +79,7 @@ export default function AlgaeControlPage() {
 
         {/* Money path — live amazon-brand search hops (algae-control scraper kit).
             ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-            Category searches only — everyday physical supplies matching
+            Amazon searches only — everyday physical supplies matching
             on-page magnetic-scraper / handheld-algae-scraper copy, not
             first-tank filter / heater / test-kit / hardscape / CO2 hops. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">

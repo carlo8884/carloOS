@@ -174,7 +174,7 @@ export default function ForageBasicsPage() {
               equine hay core sampler /
               wall mounted horse hay rack).
               Educational barn tools only; no Rx /
-              vaccine ASIN hops. ShopCtas hides empty
+              vaccine product page hops. ShopCtas hides empty
               Chewy; never href="#" or PLACEHOLDER.
               Unused vs #1110
               plain+white+horse+salt+block /

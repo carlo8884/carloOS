@@ -104,7 +104,7 @@ export default function DogHeartDiseasePage() {
               (resting respiratory rate notebook / one-minute
               kitchen timer / step-in padded dog harness).
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or PLACEHOLDER. Amazon searches only —
               unused vs #1046 pet medical records binder /
               AM/PM weekly pill organizer / digital hanging
               luggage scale, #1045 LED medical penlight /
@@ -122,7 +122,7 @@ export default function DogHeartDiseasePage() {
               thermometers, and soft+dog+carrier /
               soft+pet+carrier. Vetmedin, furosemide,
               enalapril, Hill's h/d, Royal Canin Cardiac,
-              and Rx ASINs are not shoppable hops. */}
+              and prescription brands are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

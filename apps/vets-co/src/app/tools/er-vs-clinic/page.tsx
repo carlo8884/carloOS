@@ -96,7 +96,7 @@ const softwareApplicationSchema = {
     'Conservative ER / clinic / telehealth setting',
     'No all-clear result — mixed selections resolve upward',
     'Poison-control number when ingestion is selected',
-    'Shoppable pet emergency-prep kit via Amazon category searches (pet first-aid kit, digital pet thermometer, soft pet carrier, styptic powder, wound-care gauze)',
+    'Shop the pet emergency-prep kit via Amazon searches (pet first-aid kit, digital pet thermometer, soft pet carrier, styptic powder, wound-care gauze)',
   ],
   publisher: { '@type': 'Organization', name: 'Vets.co Editorial', url: 'https://vets.co' },
 }
@@ -222,7 +222,7 @@ export default function ErVsClinicPage() {
 
       {/* Money path — live amazon-brand search hops (pet emergency-prep / first-aid kit).
           ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-          Category searches only — not a ranked list, not a diagnosis. */}
+          Amazon searches only — not a ranked list, not a diagnosis. */}
       <section id="pet-emergency-prep-kit" className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <div className="max-w-2xl">
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/pet+first+aid+kit?s=tools-er-vs-clinic", "/go/amazon-brand/digital+pet+thermometer?s=tools-er-vs-clinic", "/go/amazon-brand/soft+pet+carrier?s=tools-er-vs-clinic", "/go/amazon-brand/styptic+powder?s=tools-er-vs-clinic", "/go/amazon-brand/wound+care+gauze?s=tools-er-vs-clinic"]} />

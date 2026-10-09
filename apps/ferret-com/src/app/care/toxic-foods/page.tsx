@@ -341,7 +341,7 @@ export default function FerretToxicFoodsPage() {
 
           {/* Money path — live amazon-brand search hops (safe treats / bowls / bottles).
               ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-              Category searches only — educational food-safety gear, not medications, not a ranked list. */}
+              Amazon searches only — educational food-safety gear, not medications, not a ranked list. */}
           <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/ferret+safe+treats?s=care-toxic-foods", "/go/amazon-brand/freeze+dried+raw+ferret+treats?s=care-toxic-foods", "/go/amazon-brand/heavy+ceramic+pet+food+bowl?s=care-toxic-foods", "/go/amazon-brand/ferret+water+bottle?s=care-toxic-foods", "/go/amazon-brand/ferret+chew+toys?s=care-toxic-foods"]} />
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">

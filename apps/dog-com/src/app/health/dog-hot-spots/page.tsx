@@ -68,13 +68,13 @@ export default function DogHotSpotsPage() {
           <p>Hot spots that recur despite appropriate treatment indicate an unaddressed underlying trigger. The most common unaddressed triggers: year-round flea prevention not being used consistently (flea allergy in a warm climate requires year-round prevention), environmental or food allergy not being managed, and ear infections not being fully cleared (dogs with chronic ear infections repeatedly scratch at the ear base and develop hot spots there). Addressing the trigger — allergy workup, strict flea prevention, ear disease management — prevents recurrence.</p>
 
           <h2 id="kit">Supplies named on this page</h2>
-          <p>Keep these on hand: pet recovery cone and soft recovery cone dog. Chlorhexidine, betadine, Vetericyn / Genesis / Malacetic sprays, hydrocortisone, Cytopoint, Apoquel, corticosteroids, and systemic antibiotics stay educational copy only — this page does not link to medicated sprays, brand ASINs, or medications.</p>
+          <p>Keep these on hand: pet recovery cone and soft recovery cone dog. Chlorhexidine, betadine, Vetericyn / Genesis / Malacetic sprays, hydrocortisone, Cytopoint, Apoquel, corticosteroids, and systemic antibiotics stay educational copy only — this page does not link to medicated sprays, named brands, or medications.</p>
 
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/pet+recovery+cone?s=health-dog-hot-spots", "/go/amazon-brand/soft+recovery+cone+dog?s=health-dog-hot-spots"]} />
 
           {/* Money path — live amazon-brand search hops (e-collar / soft cone).
               ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-              Category searches only — reuse live sister queries from
+              Amazon searches only — reuse live sister queries from
               vets telehealth / insurance tools (pet+recovery+cone) and
               dog grimace-scale (soft+recovery+cone+dog). Chlorhexidine,
               Vetericyn-style sprays, and Rx meds are not shoppable hops. */}

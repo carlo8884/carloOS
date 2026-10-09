@@ -152,7 +152,7 @@ export default function SweetItchPage() {
 
           {/* Money path — live amazon-brand search hops (sweet-itch kit).
               ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-              Category searches only — everyday physical supplies matching
+              Amazon searches only — everyday physical supplies matching
               on-page sweet-itch rug / hood copy, not fly sheets, fly
               masks, fly spray, fans, blankets, or medication hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">

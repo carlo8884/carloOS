@@ -344,7 +344,7 @@ export default function FerretSeasonalSheddingPage() {
 
           {/* Money path — live amazon-brand search hops (slicker / metal
               comb / lint roller). ShopCtas hides empty Chewy; never
-              href="#" or PLACEHOLDER. Category searches only — unused vs
+              href="#" or PLACEHOLDER. Amazon searches only — unused vs
               #993–#1025 dog slicker-brush-dog-grooming, puppy shampoo+
               clippers+slicker combo, horse curry/dandy/body brushes,
               ferret lickable-treat paste, sleep sacks, and #1025 dental
