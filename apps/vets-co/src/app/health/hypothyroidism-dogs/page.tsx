@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, RelatedLinks, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, RelatedLinks, ShopCtas, LastReviewed } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Hypothyroidism in Dogs — Signs, Testing, Treatment | Vets.co", description: "Canine hypothyroidism causes weight gain, lethargy, and coat changes. Learn the signs, how it is diagnosed, and why treatment is highly effective.", path: '/health/hypothyroidism-dogs', type: 'article' })
@@ -49,6 +49,7 @@ export default function HypothyroidismDogsPage() {
         <div className="carloOS-article">
 
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
+          <LastReviewed date="2026-10-09" />
 
           <CalloutBox variant="info" title="Easy to miss, easy to treat">
             Because the signs develop slowly and look like aging, many hypothyroid dogs go undiagnosed for a long time. A simple blood test confirms it, and treatment is highly effective and affordable. If your middle-aged dog has slowed down and gained weight, ask your veterinarian about thyroid testing. A large platform digital bathroom scale is only a home weight-watch — it does not diagnose hypothyroidism and it is not a substitute for that blood test.

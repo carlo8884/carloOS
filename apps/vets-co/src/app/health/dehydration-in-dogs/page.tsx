@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, ShopCtas, LastReviewed } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Dehydration in Dogs — Signs, Skin Turgor Test | Vets.co', description: 'How to assess dehydration in dogs using the skin turgor test and gum assessment. When dehydration is mild (oral fluids OK) vs severe (IV fluids needed).', path: '/health/dehydration-in-dogs', type: 'article' })
@@ -44,6 +44,7 @@ export default function DehydrationPage() {
         <div className="carloOS-article">
 
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-09-05T00:00:00Z" reviewedBy="Editorial team" />
+          <LastReviewed date="2026-10-09" />
 
           <h2>The Skin Turgor Test</h2>
           <p>The skin turgor test assesses skin elasticity — dehydration reduces skin elasticity as fluid is lost from subcutaneous tissues. Technique: grasp a fold of skin on the back of the neck or between the shoulder blades. Gently lift and then release. In a well-hydrated dog, the skin snaps back immediately to its normal position. In a dehydrated dog, the skin returns slowly ("tenting") or remains raised for a moment before settling. The slower the return, the more significant the dehydration.</p>

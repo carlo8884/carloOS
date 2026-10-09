@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, RelatedLinks, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, RelatedLinks, ShopCtas, LastReviewed } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Flea & Tick Prevention for Pets — A Complete Guide | Vets.co", description: "Fleas and ticks cause more than itching — they spread serious disease. Learn how prevention works, why year-round control matters, and how to choose products.", path: '/health/flea-tick-prevention', type: 'article' })
@@ -51,6 +51,7 @@ export default function FleaTickPage() {
         <div className="carloOS-article">
 
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
+          <LastReviewed date="2026-10-09" />
 
           <CalloutBox variant="warning" title="Never use dog products on cats">
             Some flea and tick products that are safe for dogs are highly toxic to cats and can cause severe, life-threatening reactions. Always use species-appropriate products and follow your veterinarian&apos;s guidance. If you have both species, keep their products clearly separated. Household yard, bedding, and after-walk gear does not replace that species check.

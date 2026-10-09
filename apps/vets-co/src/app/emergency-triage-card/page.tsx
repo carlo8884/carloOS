@@ -191,7 +191,7 @@ export default function EmergencyTriageCardPage() {
             <HopDisclosure tone="on-dark" siteId="vets-co" href="/go/amazon-brand/pet+first+aid+kit?s=emergency-triage" />
           </div>
           <PriceAsOf date="2026-10-04" tone="dark" />
-          <p className="text-lg font-light text-white/65 leading-relaxed max-w-xl mb-8">When a pet symptom is ER-immediate, when it
+          <p className="text-lg font-light text-white/65 leading-relaxed max-w-xl mb-8">This page is not a veterinarian. If your pet may be in danger, contact a vet. When a pet symptom is ER-immediate, when it
             is same-day vet, and when it is safe to monitor at home. Species-specific vitals for
             dogs, cats, ferrets, and rabbits. Built from AVMA, AAHA, and VECCS guidance. No email signup required.</p>
           <ul className="text-sm text-white/70 space-y-2 mb-6 max-w-md">

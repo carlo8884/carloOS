@@ -125,18 +125,12 @@ export function Footer({ siteId, showAffiliateDisclosure = true }: FooterProps) 
           </span>
           <div className="flex gap-5 flex-wrap">
             {[
-              { label: 'Privacy Policy', href: '/legal/privacy-policy' },
+              { label: EARNING_SITES.has(siteId) ? 'Privacy' : 'Privacy Policy', href: '/legal/privacy-policy' },
               { label: 'Terms of Use', href: '/legal/terms' },
-              { label: EARNING_SITES.has(siteId) ? 'Affiliate Disclosure' : 'Disclosure', href: '/disclosure' },
+              { label: 'Disclosure', href: '/disclosure' },
               ...(EARNING_SITES.has(siteId) ? [{ label: 'About', href: ABOUT_HREF }] : []),
-              { label: EARNING_SITES.has(siteId) ? 'Editorial & affiliate policy' : 'Editorial Standards', href: '/editorial-standards' },
-              ...(siteId === 'dog-com' ||
-              siteId === 'fish-com' ||
-              siteId === 'horses-com' ||
-              siteId === 'vets-co' ||
-              siteId === 'ferret-com'
-                ? [{ label: 'Inquiries', href: '/inquire' }]
-                : []),
+              { label: EARNING_SITES.has(siteId) ? 'Editorial policy' : 'Editorial Standards', href: '/editorial-standards' },
+              ...(EARNING_SITES.has(siteId) ? [{ label: 'Contact', href: '/inquire' }] : []),
             ].map((link) => (
               <Link
                 key={link.href}

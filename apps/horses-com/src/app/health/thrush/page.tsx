@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas, ArticleSourcesList, LastReviewed } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -118,6 +118,7 @@ export default function ThrushPage() {
             updatedAt="2026-09-05"
             reviewedBy="Editorial team"
           />
+          <LastReviewed date="2026-10-09" />
 
           <h2 id="what">What Is Thrush</h2>
           <p>Thrush is a degenerative infection of the frog -- the V-shaped, rubbery cushion on the underside of the hoof -- and especially of the deep grooves (sulci) on either side of it and in its center. Anaerobic bacteria, classically Fusobacterium necrophorum, colonize the grooves and break down the horn, producing a characteristic black, moist, foul-smelling discharge. It usually starts in the central or collateral sulci where debris packs in and air cannot reach.</p>
@@ -193,12 +194,16 @@ export default function ThrushPage() {
           <h2 id="faq">Frequently Asked Questions</h2>
           <FAQAccordion items={FAQS} />
 
-          <h2 id="references">References</h2>
-          <ol className="text-sm text-brand-text-mid">
-            <li>Baxter GM (ed). Adams and Stashak&apos;s Lameness in Horses, 7th ed., Wiley-Blackwell, 2020.</li>
-            <li>O&apos;Grady SE. “Guidelines for Trimming the Equine Foot.” AAEP Proceedings, 2009.</li>
-            <li>American Association of Equine Practitioners. “Thrush and Hoof Care” owner resources. aaep.org.</li>
-          </ol>
+          <div id="references">
+            <ArticleSourcesList
+              title="References"
+              sources={[
+              { label: "Baxter GM (ed). Adams and Stashak's Lameness in Horses, 7th ed., Wiley-Blackwell, 2020.", url: "https://www.wiley.com/", publisher: "Wiley" },
+              { label: "O'Grady SE. “Guidelines for Trimming the Equine Foot.” AAEP Proceedings, 2009.", url: "https://aaep.org/", publisher: "AAEP" },
+              { label: "American Association of Equine Practitioners. “Thrush and Hoof Care” owner resources. aaep.org.", url: "https://aaep.org/", publisher: "AAEP" },
+              ]}
+            />
+          </div>
         </div>
       </ArticleLayout>
     </>

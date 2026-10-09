@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas, PrimaryHop } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas, PrimaryHop, ArticleSourcesList, LastReviewed } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -162,6 +162,7 @@ export default function ColicPage() {
             updatedAt="2026-09-05"
             reviewedBy="Editorial team"
           />
+          <LastReviewed date="2026-10-09" />
 
           <h2 id="what-is-colic">What Is Colic</h2>
           <p>Colic is a clinical sign — abdominal pain — and not a diagnosis. The horse&apos;s gastrointestinal anatomy is uniquely vulnerable to problems that cause pain: roughly 100 feet of intestine arranged in a long, mobile, sharply-folded path that includes the large colon (a 12-foot-long fermentation chamber that doubles back on itself at the pelvic flexure) and a relatively narrow attachment to the body wall that allows substantial movement of the gut. The same anatomy that makes horses efficient fiber fermenters also makes them prone to displacements, torsions, impactions, and gas accumulation that do not occur in carnivores or in ruminants.</p>
@@ -385,23 +386,27 @@ export default function ColicPage() {
           <h2 id="faq">Frequently Asked Questions</h2>
           <FAQAccordion items={FAQS} />
 
-          <h2 id="references">References</h2>
-          <ol className="text-sm text-brand-text-mid">
-            <li>American Association of Equine Practitioners. &ldquo;Colic Care Guidelines for Owners&rdquo; and &ldquo;Equine Colic — Diagnosis and Treatment.&rdquo; aaep.org.</li>
-            <li>Tinker MK, White NA, Lessard P, Thatcher CD, Pelzer KD, Davis B, Carmel DK. &ldquo;Prospective Study of Equine Colic Incidence and Mortality.&rdquo; <em>Equine Veterinary Journal</em>, 1997; 29(6):448–453.</li>
-            <li>Curtis L, Burford JH, Thomas JSM, Curran ML, Bayes TC, England GCW, Freeman SL. &ldquo;Prospective Study of the Primary Evaluation of 1,016 Horses with Clinical Signs of Abdominal Pain by Veterinary Practitioners.&rdquo; <em>Equine Veterinary Journal</em>, 2019; 51(4):528–533.</li>
-            <li>Proudman CJ, Smith JE, Edwards GB, French NP. &ldquo;Long-Term Survival of Equine Surgical Colic Cases.&rdquo; <em>Equine Veterinary Journal</em>, 2002; 34(4):432–437.</li>
-            <li>Proudman CJ, Edwards GB, Barnes J, French NP. &ldquo;Modelling Long-Term Survival of Horses Following Surgery for Large Intestinal Disease.&rdquo; <em>Equine Veterinary Journal</em>, 2005; 37(4):366–370.</li>
-            <li>Mair TS, Smith LJ. &ldquo;Survival and Complication Rates in 300 Horses Undergoing Surgical Treatment of Colic.&rdquo; <em>Equine Veterinary Journal</em>, 2005; 37(4):296–302, 303–309, 310–314 (parts 1–3).</li>
-            <li>Cohen ND, Matejka PL, Honnas CM, Hooper RN. &ldquo;Case-Control Study of the Association Between Various Management Factors and Development of Colic in Horses.&rdquo; <em>Journal of the American Veterinary Medical Association</em>, 1995; 206(5):667–673.</li>
-            <li>Cohen ND, Gibbs PG, Woods AM. &ldquo;Dietary and Other Management Factors Associated with Colic in Horses.&rdquo; <em>Journal of the American Veterinary Medical Association</em>, 1999; 215(1):53–60.</li>
-            <li>Hillyer MH, Taylor FGR, French NP. &ldquo;A Cross-Sectional Study of Colic in Horses on Thoroughbred Training Premises in the British Isles in 1997.&rdquo; <em>Equine Veterinary Journal</em>, 2001; 33(4):380–385.</li>
-            <li>Suthers JM, Pinchbeck GL, Proudman CJ, Archer DC. &ldquo;Risk Factors for Large Colon Volvulus in the UK.&rdquo; <em>Equine Veterinary Journal</em>, 2013; 45(5):558–563.</li>
-            <li>Busoni V, De Busscher V, Lopez D, Verwilghen D, Cassart D. &ldquo;Evaluation of a Protocol for Fast Localised Abdominal Sonography of Horses (FLASH) Admitted for Colic.&rdquo; <em>Veterinary Journal</em>, 2011; 188(1):77–82.</li>
-            <li>Blikslager AT, White NA, Moore JN, Mair TS (eds). <em>The Equine Acute Abdomen</em>, 3rd edition, Wiley-Blackwell, 2017.</li>
-            <li>Southwood LL (ed). <em>Practical Guide to Equine Colic</em>, Wiley-Blackwell, 2013.</li>
-            <li>USDA NAHMS Equine 2015 Study. &ldquo;Baseline Reference of Equine Health and Management in the United States.&rdquo; aphis.usda.gov.</li>
-          </ol>
+          <div id="references">
+            <ArticleSourcesList
+              title="References"
+              sources={[
+              { label: "American Association of Equine Practitioners. \"Colic Care Guidelines for Owners\" and \"Equine Colic — Diagnosis and Treatment.\" aaep.org.", url: "https://aaep.org/", publisher: "AAEP" },
+              { label: "Tinker MK, White NA, Lessard P, Thatcher CD, Pelzer KD, Davis B, Carmel DK. \"Prospective Study of Equine Colic Incidence and Mortality.\" Equine Veterinary Journal, 1997; 29(6):448–453.", url: "https://beva.onlinelibrary.wiley.com/journal/20423306", publisher: "Equine Veterinary Journal" },
+              { label: "Curtis L, Burford JH, Thomas JSM, Curran ML, Bayes TC, England GCW, Freeman SL. \"Prospective Study of the Primary Evaluation of 1,016 Horses with Clinical Signs of Abdominal Pain by Veterinary Practitioners.\" Equine Veterinary Journal, 2019; 51(4):528–533.", url: "https://beva.onlinelibrary.wiley.com/journal/20423306", publisher: "Equine Veterinary Journal" },
+              { label: "Proudman CJ, Smith JE, Edwards GB, French NP. \"Long-Term Survival of Equine Surgical Colic Cases.\" Equine Veterinary Journal, 2002; 34(4):432–437.", url: "https://beva.onlinelibrary.wiley.com/journal/20423306", publisher: "Equine Veterinary Journal" },
+              { label: "Proudman CJ, Edwards GB, Barnes J, French NP. \"Modelling Long-Term Survival of Horses Following Surgery for Large Intestinal Disease.\" Equine Veterinary Journal, 2005; 37(4):366–370.", url: "https://beva.onlinelibrary.wiley.com/journal/20423306", publisher: "Equine Veterinary Journal" },
+              { label: "Mair TS, Smith LJ. \"Survival and Complication Rates in 300 Horses Undergoing Surgical Treatment of Colic.\" Equine Veterinary Journal, 2005; 37(4):296–302, 303–309, 310–314 (parts 1–3).", url: "https://beva.onlinelibrary.wiley.com/journal/20423306", publisher: "Equine Veterinary Journal" },
+              { label: "Cohen ND, Matejka PL, Honnas CM, Hooper RN. \"Case-Control Study of the Association Between Various Management Factors and Development of Colic in Horses.\" Journal of the American Veterinary Medical Association, 1995; 206(5):667–673.", url: "https://avmajournals.avma.org/view/journals/javma/javma-overview.xml", publisher: "JAVMA" },
+              { label: "Cohen ND, Gibbs PG, Woods AM. \"Dietary and Other Management Factors Associated with Colic in Horses.\" Journal of the American Veterinary Medical Association, 1999; 215(1):53–60.", url: "https://avmajournals.avma.org/view/journals/javma/javma-overview.xml", publisher: "JAVMA" },
+              { label: "Hillyer MH, Taylor FGR, French NP. \"A Cross-Sectional Study of Colic in Horses on Thoroughbred Training Premises in the British Isles in 1997.\" Equine Veterinary Journal, 2001; 33(4):380–385.", url: "https://beva.onlinelibrary.wiley.com/journal/20423306", publisher: "Equine Veterinary Journal" },
+              { label: "Suthers JM, Pinchbeck GL, Proudman CJ, Archer DC. \"Risk Factors for Large Colon Volvulus in the UK.\" Equine Veterinary Journal, 2013; 45(5):558–563.", url: "https://beva.onlinelibrary.wiley.com/journal/20423306", publisher: "Equine Veterinary Journal" },
+              { label: "Busoni V, De Busscher V, Lopez D, Verwilghen D, Cassart D. \"Evaluation of a Protocol for Fast Localised Abdominal Sonography of Horses (FLASH) Admitted for Colic.\" Veterinary Journal, 2011; 188(1):77–82.", url: "https://www.sciencedirect.com/journal/the-veterinary-journal", publisher: "The Veterinary Journal" },
+              { label: "Blikslager AT, White NA, Moore JN, Mair TS (eds). The Equine Acute Abdomen, 3rd edition, Wiley-Blackwell, 2017.", url: "https://www.wiley.com/", publisher: "Wiley" },
+              { label: "Southwood LL (ed). Practical Guide to Equine Colic, Wiley-Blackwell, 2013.", url: "https://www.wiley.com/", publisher: "Wiley" },
+              { label: "USDA NAHMS Equine 2015 Study. \"Baseline Reference of Equine Health and Management in the United States.\" aphis.usda.gov." },
+              ]}
+            />
+          </div>
         </div>
       </ArticleLayout>
     </>

@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas, ArticleSourcesList, LastReviewed } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -125,6 +125,7 @@ export default function StranglesPage() {
             updatedAt="2026-09-06"
             reviewedBy="Editorial team"
           />
+          <LastReviewed date="2026-10-09" />
 
           <h2 id="what">What Is Strangles</h2>
           <p>Strangles is an upper respiratory infection caused by Streptococcus equi subspecies equi, a host-adapted bacterium that infects only horses and their relatives. After infection, the bacteria colonize the lymph nodes of the head and throat, which swell and abscess. When those abscesses press on the airway they can cause the laboured breathing that historically gave the disease its name. It is among the most contagious equine diseases and one of the most frequently diagnosed worldwide.</p>
@@ -217,12 +218,16 @@ export default function StranglesPage() {
           <h2 id="faq">Frequently Asked Questions</h2>
           <FAQAccordion items={FAQS} />
 
-          <h2 id="references">References</h2>
-          <ol className="text-sm text-brand-text-mid">
-            <li>Boyle AG, Timoney JF, Newton JR, et al. “Streptococcus equi Infections in Horses: ACVIM Consensus Statement.” Journal of Veterinary Internal Medicine, 2018; 32(2):633–647.</li>
-            <li>Waller AS. “New Perspectives for the Diagnosis, Control, Treatment, and Prevention of Strangles.” Veterinary Clinics of North America: Equine Practice, 2014; 30(3):591–607.</li>
-            <li>American Association of Equine Practitioners. “Strangles” owner resources and infectious-disease guidelines. aaep.org.</li>
-          </ol>
+          <div id="references">
+            <ArticleSourcesList
+              title="References"
+              sources={[
+              { label: "Boyle AG, Timoney JF, Newton JR, et al. “Streptococcus equi Infections in Horses: ACVIM Consensus Statement.” Journal of Veterinary Internal Medicine, 2018; 32(2):633–647.", url: "https://onlinelibrary.wiley.com/journal/19391676", publisher: "Journal of Veterinary Internal Medicine" },
+              { label: "Waller AS. “New Perspectives for the Diagnosis, Control, Treatment, and Prevention of Strangles.” Veterinary Clinics of North America: Equine Practice, 2014; 30(3):591–607.", url: "https://www.vetequine.theclinics.com/", publisher: "Veterinary Clinics of North America: Equine Practice" },
+              { label: "American Association of Equine Practitioners. “Strangles” owner resources and infectious-disease guidelines. aaep.org.", url: "https://aaep.org/", publisher: "AAEP" },
+              ]}
+            />
+          </div>
         </div>
       </ArticleLayout>
     </>

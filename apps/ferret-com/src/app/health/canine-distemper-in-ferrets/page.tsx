@@ -10,6 +10,7 @@ import {
   DropCap,
   CrossPortfolioCard,
   ArticleSourcesList,
+  LastReviewed,
 } from '@carloOS/ui'
 
 const SOURCES = [
@@ -161,6 +162,7 @@ export default function FerretCanineDistemperPage() {
             publishedAt="2026-06-01"
             updatedAt="2026-06-01"
           />
+          <LastReviewed date="2026-10-09" />
 
           <DropCap>
             Of all the diseases a ferret can face, canine distemper is the one

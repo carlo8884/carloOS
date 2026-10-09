@@ -32,6 +32,10 @@ export default function AboutPage() {
           <p>
             Ferret.com is a reference for ferret owners. The pages cover diet, housing, care, and product comparisons. The editorial team writes them. Ferret.com is not a veterinary practice, and a licensed veterinarian does not sign the pages. There is no named author and no hands-on trial behind a ranking.
           </p>
+          <h2>How pages are researched</h2>
+          <p>
+            Health pages cite the primary sources used for that page. Prices on money pages carry the date they were checked. Affiliate links are disclosed on the page and on the disclosure. There is no veterinarian reviewer. Pages are researched from cited veterinary sources and are not a substitute for a veterinarian.
+          </p>
           <h2>How picks are made</h2>
           <p>
             Comparison tables use the published spec, the price band, and the owner limit already printed on each product card. The method is on{' '}

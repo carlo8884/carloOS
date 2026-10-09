@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas, ArticleSourcesList, LastReviewed } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -120,6 +120,7 @@ export default function NavicularPage() {
             updatedAt="2026-09-06"
             reviewedBy="Editorial team"
           />
+          <LastReviewed date="2026-10-09" />
 
           <h2 id="anatomy">The Anatomy</h2>
           <p>The navicular bone is a small, boat-shaped bone (hence the name, from the Latin for little ship) that sits behind the coffin joint, deep in the heel. The deep digital flexor tendon glides over its lower surface like a rope over a pulley, cushioned by the navicular bursa. Together the bone, bursa, deep digital flexor tendon, and supporting ligaments form the podotrochlear apparatus. Navicular syndrome is pain arising anywhere within this apparatus.</p>
@@ -225,13 +226,17 @@ export default function NavicularPage() {
           <h2 id="faq">Frequently Asked Questions</h2>
           <FAQAccordion items={FAQS} />
 
-          <h2 id="references">References</h2>
-          <ol className="text-sm text-brand-text-mid">
-            <li>Dyson SJ. “Navicular Disease and Other Soft Tissue Causes of Palmar Foot Pain.” In: Diagnosis and Management of Lameness in the Horse, 2nd ed., Elsevier, 2011.</li>
-            <li>Waguespack RW, Hanson RR. “Navicular Syndrome in Equine Patients.” Compendium: Continuing Education for Veterinarians, 2010; 32(12):E1–E13.</li>
-            <li>Dyson S, Murray R. “Magnetic Resonance Imaging Evaluation of the Foot in Horses with Foot Pain.” Equine Veterinary Journal, 2007; 39(4):340–343.</li>
-            <li>American Association of Equine Practitioners. “Navicular Syndrome” owner resources. aaep.org.</li>
-          </ol>
+          <div id="references">
+            <ArticleSourcesList
+              title="References"
+              sources={[
+              { label: "Dyson SJ. “Navicular Disease and Other Soft Tissue Causes of Palmar Foot Pain.” In: Diagnosis and Management of Lameness in the Horse, 2nd ed., Elsevier, 2011.", url: "https://www.elsevier.com/", publisher: "Elsevier" },
+              { label: "Waguespack RW, Hanson RR. “Navicular Syndrome in Equine Patients.” Compendium: Continuing Education for Veterinarians, 2010; 32(12):E1–E13." },
+              { label: "Dyson S, Murray R. “Magnetic Resonance Imaging Evaluation of the Foot in Horses with Foot Pain.” Equine Veterinary Journal, 2007; 39(4):340–343.", url: "https://beva.onlinelibrary.wiley.com/journal/20423306", publisher: "Equine Veterinary Journal" },
+              { label: "American Association of Equine Practitioners. “Navicular Syndrome” owner resources. aaep.org.", url: "https://aaep.org/", publisher: "AAEP" },
+              ]}
+            />
+          </div>
         </div>
       </ArticleLayout>
     </>

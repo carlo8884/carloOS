@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, RelatedLinks, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, RelatedLinks, ShopCtas, LastReviewed } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Ear Infections in Dogs — Causes, Signs, Treatment | Vets.co", description: "Recurrent ear infections in dogs usually point to an underlying cause like allergies. Learn the signs, why infections recur, and how to manage them.", path: '/health/ear-infections-dogs', type: 'article' })
@@ -48,6 +48,7 @@ export default function EarInfectionsDogsPage() {
       >
         <div className="carloOS-article">
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-09-05T00:00:00Z" reviewedBy="Editorial team" />
+          <LastReviewed date="2026-10-09" />
 
           <CalloutBox variant="info" title="Recurrence means look deeper">
             A dog that gets ear infection after ear infection does not have bad luck — it has an unaddressed underlying cause, most often allergies. Breaking the cycle requires identifying and managing that cause, not just clearing each infection as it appears.

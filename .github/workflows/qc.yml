@@ -320,6 +320,20 @@ jobs:
         run: node scripts/ci/cost-date-nearby.mjs && node --test scripts/ci/cost-date-nearby.test.mjs
 
 
+  health-reviewed:
+    name: Health pages show a last-reviewed date and linked sources
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Run health-reviewed
+        run: node scripts/ci/health-reviewed.mjs
+
   how-we-pick:
     name: How we pick pages and comparison last-updated dates
     runs-on: ubuntu-latest

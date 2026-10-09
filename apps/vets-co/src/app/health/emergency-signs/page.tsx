@@ -1,7 +1,7 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, PrimaryHop, RelatedLinks, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, PrimaryHop, RelatedLinks, ShopCtas, LastReviewed } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: '14 Dog Emergency Signs — When to Go to the Vet Right Now | Vets.co', description: '14 signs that require emergency veterinary care immediately. Pale gums, unproductive retching, seizures, and more', path: '/health/emergency-signs', type: 'article' })
@@ -60,8 +60,9 @@ export default function EmergencySignsPage() {
 </>}
       >
         <div className="carloOS-article">
+          <LastReviewed date="2026-10-09" />
 
-          <p className="text-base text-brand-text-mid leading-relaxed mb-8">When in doubt: call your emergency vet and describe what you are seeing. A 2-minute call is far better than waiting and watching something become life-threatening. Emergency vets would rather you call unnecessarily than delay a critical situation. These 14 signs should prompt an immediate call and drive. Household prep gear — a wire basket dog muzzle, quilted disposable underpads, a handheld AA LED flashlight — is how the ride stays safer and cleaner. It does not treat GDV, it does not replace the clinic, and it is not a reason to delay the drive.</p>
+          <p className="text-base text-brand-text-mid leading-relaxed mb-8">This page is not a veterinarian. If your dog may be in danger, contact a vet. When in doubt: call your emergency vet and describe what you are seeing. A 2-minute call is far better than waiting and watching something become life-threatening. Emergency vets would rather you call unnecessarily than delay a critical situation. These 14 signs should prompt an immediate call and drive. Household prep gear — a wire basket dog muzzle, quilted disposable underpads, a handheld AA LED flashlight — is how the ride stays safer and cleaner. It does not treat GDV, it does not replace the clinic, and it is not a reason to delay the drive.</p>
           {EMERGENCY_SIGNS.map((item, i) => (
             <div key={item.sign} className="flex gap-4 mb-5 p-5 rounded-xl border border-brand-border bg-brand-surface">
               <span className="font-display font-black text-brand-danger text-2xl flex-shrink-0 leading-none mt-0.5">{String(i + 1).padStart(2, '0')}</span>

@@ -214,6 +214,7 @@ export default function SymptomPage({ params }: PageProps) {
         <p className="text-lg font-light text-white/60 max-w-2xl leading-relaxed">
           Urgency triage, red flags, common causes, and when to call the vet —
           sourced from AVMA, AAHA, and ACVIM guidance.
+          This page is not a veterinarian. If your pet may be in danger, contact a vet.
         </p>
       </div>
 

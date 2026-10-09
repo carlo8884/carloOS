@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas, ArticleSourcesList, LastReviewed } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -119,6 +119,7 @@ export default function HeavesPage() {
             updatedAt="2026-09-05"
             reviewedBy="Editorial team"
           />
+          <LastReviewed date="2026-10-09" />
 
           <h2 id="what">What Is Equine Asthma</h2>
           <p>Equine asthma is a spectrum of chronic, non-infectious airway inflammation. Mild to moderate equine asthma (formerly inflammatory airway disease) causes poor performance and intermittent cough in younger horses, while severe equine asthma -- the classic &apos;heaves&apos; -- causes overt difficulty breathing in older horses. In susceptible horses, inhaled allergens provoke airway inflammation, excess mucus, and bronchoconstriction, narrowing the airways and making it hard to push air out.</p>
@@ -180,12 +181,16 @@ export default function HeavesPage() {
           <h2 id="faq">Frequently Asked Questions</h2>
           <FAQAccordion items={FAQS} />
 
-          <h2 id="references">References</h2>
-          <ol className="text-sm text-brand-text-mid">
-            <li>Couetil LL, Cardwell JM, Gerber V, et al. “Inflammatory Airway Disease of Horses — Revised Consensus Statement.” Journal of Veterinary Internal Medicine, 2016; 30(2):503–515.</li>
-            <li>Pirie RS. “Recurrent Airway Obstruction: A Review.” Equine Veterinary Journal, 2014; 46(3):276–288.</li>
-            <li>American Association of Equine Practitioners. “Equine Asthma / Heaves” owner resources. aaep.org.</li>
-          </ol>
+          <div id="references">
+            <ArticleSourcesList
+              title="References"
+              sources={[
+              { label: "Couetil LL, Cardwell JM, Gerber V, et al. “Inflammatory Airway Disease of Horses — Revised Consensus Statement.” Journal of Veterinary Internal Medicine, 2016; 30(2):503–515.", url: "https://onlinelibrary.wiley.com/journal/19391676", publisher: "Journal of Veterinary Internal Medicine" },
+              { label: "Pirie RS. “Recurrent Airway Obstruction: A Review.” Equine Veterinary Journal, 2014; 46(3):276–288.", url: "https://beva.onlinelibrary.wiley.com/journal/20423306", publisher: "Equine Veterinary Journal" },
+              { label: "American Association of Equine Practitioners. “Equine Asthma / Heaves” owner resources. aaep.org.", url: "https://aaep.org/", publisher: "AAEP" },
+              ]}
+            />
+          </div>
         </div>
       </ArticleLayout>
     </>

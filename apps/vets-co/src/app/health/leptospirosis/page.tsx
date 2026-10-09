@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, ShopCtas, LastReviewed } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Leptospirosis in Dogs — Zoonotic, Vaccine Recommended | Vets.co', description: 'Leptospirosis is a zoonotic bacterial disease from wildlife urine in water. Causes acute kidney and liver failure.', path: '/health/leptospirosis', type: 'article' })
@@ -43,6 +43,7 @@ export default function LeptospirosisPage() {
         <div className="carloOS-article">
 
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-06-07T00:00:00Z" reviewedBy="Editorial team" />
+          <LastReviewed date="2026-10-09" />
 
           <h2>Transmission and Geographic Risk</h2>
           <DropCap>Leptospira bacteria survive in warm, moist environments — standing water, muddy soil, and waterways contaminated with infected wildlife urine. Dogs are exposed through: contact with contaminated water (drinking from puddles, swimming in ponds or streams), contact with infected urine directly, or contact with contaminated soil. The bacteria enter through mucous membranes, skin abrasions, or the GI tract. Lepto is not only a rural problem — urban and suburban dogs encounter raccoons, opossums, and rodents that shed Leptospira in their urine in parks, yards, and storm drainage systems. A 24-ounce stainless hiking dog bottle is how a walk becomes a carried sip instead of a puddle gulp — it is not a wide-rim stainless cat water bowl, not an insulated pet water bowl, not a kitchen liquid measuring pitcher, and not a ferret water bottle. A 32-gallon locking animal-proof trash can is how curb overnight leftovers stop inviting raccoon and rodent traffic into the same yard the dog uses — it is not a locking kitchen trash can.</DropCap>

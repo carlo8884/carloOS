@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas, ArticleSourcesList, LastReviewed } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -119,6 +119,7 @@ export default function WestNilePage() {
             updatedAt="2026-09-06"
             reviewedBy="Editorial team"
           />
+          <LastReviewed date="2026-10-09" />
 
           <h2 id="what">What Is West Nile Virus</h2>
           <p>West Nile virus is a flavivirus maintained in nature in a cycle between birds and mosquitoes. Birds are the amplifying hosts; mosquitoes that feed on infected birds can then transmit the virus to mammals, including horses and people. In horses the virus can cross into the nervous system and cause encephalomyelitis -- inflammation of the brain and spinal cord -- with serious neurologic consequences.</p>
@@ -218,12 +219,16 @@ export default function WestNilePage() {
           <h2 id="faq">Frequently Asked Questions</h2>
           <FAQAccordion items={FAQS} />
 
-          <h2 id="references">References</h2>
-          <ol className="text-sm text-brand-text-mid">
-            <li>Long MT. “West Nile Virus and Equine Encephalitis Viruses.” Veterinary Clinics of North America: Equine Practice, 2014; 30(3):523–542.</li>
-            <li>Centers for Disease Control and Prevention. “West Nile Virus” surveillance and veterinary resources. cdc.gov.</li>
-            <li>American Association of Equine Practitioners. “West Nile Virus Vaccination Guidelines” (core vaccine). aaep.org.</li>
-          </ol>
+          <div id="references">
+            <ArticleSourcesList
+              title="References"
+              sources={[
+              { label: "Long MT. “West Nile Virus and Equine Encephalitis Viruses.” Veterinary Clinics of North America: Equine Practice, 2014; 30(3):523–542.", url: "https://www.vetequine.theclinics.com/", publisher: "Veterinary Clinics of North America: Equine Practice" },
+              { label: "Centers for Disease Control and Prevention. “West Nile Virus” surveillance and veterinary resources. cdc.gov.", url: "https://www.cdc.gov/west-nile-virus/", publisher: "CDC" },
+              { label: "American Association of Equine Practitioners. “West Nile Virus Vaccination Guidelines” (core vaccine). aaep.org.", url: "https://aaep.org/", publisher: "AAEP" },
+              ]}
+            />
+          </div>
         </div>
       </ArticleLayout>
     </>

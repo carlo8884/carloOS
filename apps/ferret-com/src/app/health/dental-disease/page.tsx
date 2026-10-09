@@ -13,6 +13,7 @@ import {
   CrossPortfolioCard,
   ArticleSourcesList,
   ShopCtas,
+  LastReviewed,
 } from '@carloOS/ui'
 
 const SOURCES = [
@@ -178,6 +179,7 @@ export default function FerretDentalDiseasePage() {
             updatedAt="2026-09-05"
             reviewedBy="Editorial team"
           />
+          <LastReviewed date="2026-10-09" />
 
           <DropCap>
             Open a healthy 2-year-old ferret&apos;s mouth and you will almost

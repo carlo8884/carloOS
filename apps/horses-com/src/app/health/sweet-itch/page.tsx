@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas, ArticleSourcesList, LastReviewed } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -118,6 +118,7 @@ export default function SweetItchPage() {
             updatedAt="2026-09-05"
             reviewedBy="Editorial team"
           />
+          <LastReviewed date="2026-10-09" />
 
           <h2 id="what">What Is Sweet Itch</h2>
           <p>Sweet itch -- known clinically as Culicoides hypersensitivity or summer seasonal recurrent dermatitis -- is an allergic skin disease. It is one of the most common allergic conditions in horses worldwide and is strongly seasonal, flaring when the biting insects that trigger it are active and subsiding in cold weather. The hallmark is relentless itching that drives the horse to rub and damage its own skin.</p>
@@ -177,12 +178,16 @@ export default function SweetItchPage() {
           <h2 id="faq">Frequently Asked Questions</h2>
           <FAQAccordion items={FAQS} />
 
-          <h2 id="references">References</h2>
-          <ol className="text-sm text-brand-text-mid">
-            <li>Schaffartzik A, Hamza E, Janda J, et al. “Equine Insect Bite Hypersensitivity: What Do We Know?” Veterinary Immunology and Immunopathology, 2012; 147(3–4):113–126.</li>
-            <li>Scott DW, Miller WH. Equine Dermatology, 2nd ed., Elsevier, 2011.</li>
-            <li>American Association of Equine Practitioners. “Insect Hypersensitivity / Sweet Itch” owner resources. aaep.org.</li>
-          </ol>
+          <div id="references">
+            <ArticleSourcesList
+              title="References"
+              sources={[
+              { label: "Schaffartzik A, Hamza E, Janda J, et al. “Equine Insect Bite Hypersensitivity: What Do We Know?” Veterinary Immunology and Immunopathology, 2012; 147(3–4):113–126.", url: "https://www.sciencedirect.com/journal/veterinary-immunology-and-immunopathology", publisher: "Veterinary Immunology and Immunopathology" },
+              { label: "Scott DW, Miller WH. Equine Dermatology, 2nd ed., Elsevier, 2011.", url: "https://www.elsevier.com/", publisher: "Elsevier" },
+              { label: "American Association of Equine Practitioners. “Insect Hypersensitivity / Sweet Itch” owner resources. aaep.org.", url: "https://aaep.org/", publisher: "AAEP" },
+              ]}
+            />
+          </div>
         </div>
       </ArticleLayout>
     </>

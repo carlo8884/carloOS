@@ -1,7 +1,7 @@
 import { HopDisclosure } from '../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, ShopCtas, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, ShopCtas, FAQAccordion, ArticleSourcesList, LastReviewed } from '@carloOS/ui'
 import { HubMasthead } from '../../components/HubMasthead'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Pet Health Library — Sourced Guides | Vets.co', description: 'Complete pet health guides drawing on AVMA, ACVIM, and AAHA guidance. Emergency signs, breed health, preventive care, and specialist guidance.', path: '/health' })
@@ -148,6 +148,14 @@ export default function VetsHealthHubPage() {
       </nav>
       <div className="px-container-sm sm:px-container pt-6 pb-2 bg-brand-surface border-b border-brand-border">
         <p className="text-xs text-brand-text-light max-w-3xl leading-relaxed">Drawing on current <a href="https://www.avma.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">AVMA</a>, <a href="https://aaha.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">AAHA</a>, and <a href="https://www.acvim.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">ACVIM</a> guidance.</p>
+        <LastReviewed date="2026-10-09" />
+        <ArticleSourcesList
+          sources={[
+            { label: 'American Veterinary Medical Association', url: 'https://www.avma.org/', publisher: 'AVMA' },
+            { label: 'American Animal Hospital Association', url: 'https://www.aaha.org/', publisher: 'AAHA' },
+            { label: 'American College of Veterinary Internal Medicine', url: 'https://www.acvim.org/', publisher: 'ACVIM' },
+          ]}
+        />
       </div>
 
       {/* Direct-answer / TL;DR block — extractable summary for AI Overviews,
