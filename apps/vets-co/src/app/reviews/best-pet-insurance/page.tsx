@@ -179,7 +179,7 @@ export default function VetsPetInsurancePage() {
 
             <ReviewCard id="healthy-paws" badge="Fastest Reimbursement" name="Healthy Paws"
               subtitle="Most claims processed in 2 days · Notes list no wellness add-on"
-              description={<p>The Healthy Paws claims page, fetched 2026-10-08, says most claims are processed in 2 days, and that Direct Pay can reimburse the vet when funding is urgent. The annual reimbursement limit is a choice. Healthy Paws lists $5,000, $7,000, or unlimited, dated 2026-10-09. The carrier page was fetched 2026-10-08. It is not automatically unlimited. Our notes list no wellness add-on.</p>}
+              description={<p data-source="https://www.healthypawspetinsurance.com/pet-insurance-claims.html">The Healthy Paws claims page, fetched 2026-10-08, says most claims are processed in 2 days, and that Direct Pay can reimburse the vet when funding is urgent. The annual reimbursement limit is a choice. Healthy Paws lists $5,000, $7,000, or unlimited, dated 2026-10-09. The carrier page was fetched 2026-10-08. It is not automatically unlimited. Our notes list no wellness add-on.</p>}
               specs={[
                 { label: 'Reimbursement', value: 'Up to 90%', highlight: 'good' },
                 { label: 'Claims Speed', value: 'Most in 2 days', highlight: 'good' },
@@ -215,7 +215,7 @@ export default function VetsPetInsurancePage() {
 
             <div className="mt-10">
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-3">Who should buy which policy</h2>
-              <p className="text-sm text-brand-text-mid leading-relaxed mb-4">
+              <p className="text-sm text-brand-text-mid leading-relaxed mb-4" data-source="https://www.healthypawspetinsurance.com/pet-insurance-claims.html">
                 Reimbursement, limits, and prices below are the figures already on each card. They are not a quote. The Healthy Paws claims page says most claims are processed in 2 days. Enroll before a condition is in the medical record — every card on this page is subject to that rule.
               </p>
               <div className="overflow-x-auto max-w-full min-w-0 mb-8">

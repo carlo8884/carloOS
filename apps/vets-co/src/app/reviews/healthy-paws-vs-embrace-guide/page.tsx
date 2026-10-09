@@ -30,6 +30,7 @@ const FAQS = [
   {
     question: 'Which carrier does the review pick for fast reimbursement?',
     answer: 'Healthy Paws. The review lists reimbursement up to 90 percent and an annual deductible. The Healthy Paws claims page, fetched 2026-10-08, says most claims are processed in 2 days. The annual limit is a choice. Our notes list no wellness add-on. See the carrier\'s current terms for the monthly price.',
+    source: 'https://www.healthypawspetinsurance.com/pet-insurance-claims.html',
   },
   {
     question: 'When does the review point to Embrace?',

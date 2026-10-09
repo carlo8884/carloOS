@@ -19,6 +19,7 @@ const schema = buildArticleSchema({
   siteId: 'vets-co',
   title: 'Lemonade or Pets Best',
   description: 'Lemonade for a young pet, or Pets Best for a flexible plan with no upper age limit.',
+  citation: [{ label: 'Pets Best FAQ', url: 'https://www.petsbest.com/faq', publisher: 'Pets Best' }],
   url: 'https://vets.co/reviews/lemonade-vs-pets-best-guide',
   imageUrl: '',
   authorName: 'Vets.co Editorial',
@@ -34,6 +35,7 @@ const FAQS = [
   {
     question: 'When does that page point to Pets Best?',
     answer: 'When you want several plan tiers, including for an older adopted pet. Pets Best. Pets Best\'s FAQ, fetched 2026-10-08, says there is no upper age limit. The review lists multiple plan tiers and a pay-then-claim model. Premiums rise with age. The price line is quote-based.',
+    source: 'https://www.petsbest.com/faq',
   },
   {
     question: 'Does this page publish a monthly premium?',

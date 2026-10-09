@@ -34,6 +34,7 @@ const FAQS = [
   {
     question: 'When does that page point to Pets Best?',
     answer: 'When you want several plan tiers and a wider set of deductible and reimbursement combinations. Pets Best. Pets Best\'s FAQ, fetched 2026-10-08, says there is no upper age limit. The review lists multiple tiers and a pay-then-claim model. The price line is quote-based.',
+    source: 'https://www.petsbest.com/faq',
   },
   {
     question: 'Does this page publish a monthly premium?',
