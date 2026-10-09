@@ -28,6 +28,23 @@ export function shopPlacement(input: {
   return 'card'
 }
 
+export type HopDestinationType = 'ASIN' | 'search' | 'other'
+
+/** ASIN, Amazon search query, or anything else the hop opens. */
+export function hopDestination(partner: string, product: string): {
+  destination_type: HopDestinationType
+  destination: string
+} {
+  const compact = product.replace(/\s+/g, '')
+  if (partner === 'amazon' && /^[A-Z0-9]{10}$/i.test(compact)) {
+    return { destination_type: 'ASIN', destination: compact.toUpperCase() }
+  }
+  if (partner === 'amazon-brand' || partner === 'amazon') {
+    return { destination_type: 'search', destination: product }
+  }
+  return { destination_type: 'other', destination: product }
+}
+
 /** Partner is the /go vendor. Product is the sku or search query. */
 export function goHopParts(pathname: string): { partner: string; product: string } | null {
   let path = pathname
@@ -55,6 +72,10 @@ export interface AffiliateClickInput {
   inQuickPick?: boolean
   text?: string
   dataProduct?: string | null
+  /** Review-card id, or hero / result / table / search-recovery. */
+  slot?: string | null
+  /** On-site suggestion from an empty search or a 404. Not a /go hop. */
+  recoveryPath?: string | null
 }
 
 /** Null when the anchor is not a /go hop and not a marked partner link. */
@@ -65,8 +86,9 @@ export function affiliateClickParams(input: AffiliateClickInput): Record<string,
   } catch {
     return null
   }
+  const recoveryPath = (input.recoveryPath ?? '').trim()
   const go = goHopParts(url.pathname)
-  if (!go && !input.marked) return null
+  if (!go && !input.marked && !recoveryPath) return null
   const sourceParam = url.searchParams.get('s')
   const source = sourceParam || input.page
   const placement = shopPlacement({
@@ -76,8 +98,13 @@ export function affiliateClickParams(input: AffiliateClickInput): Record<string,
     inHero: input.inHero,
     inQuickPick: input.inQuickPick,
   })
-  const partner = go?.partner || url.hostname.replace(/^www\./, '')
-  const product = go?.product || (input.dataProduct ?? '').trim() || (input.text ?? '').replace(/\s+/g, ' ').trim()
+  const partner = recoveryPath ? input.site : go?.partner || url.hostname.replace(/^www\./, '')
+  const product = recoveryPath
+    || go?.product
+    || (input.dataProduct ?? '').trim()
+    || (input.text ?? '').replace(/\s+/g, ' ').trim()
+  const destination = hopDestination(partner, product)
+  const slot = (input.slot ?? '').trim() || (recoveryPath ? 'search-recovery' : placement)
   return {
     site: input.site,
     page: input.page,
@@ -86,7 +113,10 @@ export function affiliateClickParams(input: AffiliateClickInput): Record<string,
     vendor: partner,
     product,
     placement,
-    link_url: go ? `${url.pathname}${url.search}` : url.href,
+    link_url: recoveryPath || (go ? `${url.pathname}${url.search}` : url.href),
+    slot,
+    destination_type: recoveryPath ? 'other' : destination.destination_type,
+    destination: recoveryPath || destination.destination,
   }
 }
 
@@ -108,6 +138,7 @@ export function emailLandingCollectUrl(
 ): string | null {
   if (!measurementId || measurementId === 'G-XXXXXXXXXX') return null
   if (!fields.source.startsWith('email')) return null
+  const destination = hopDestination(fields.partner, fields.product)
   const params = new URLSearchParams({
     v: '2',
     tid: measurementId,
@@ -120,6 +151,9 @@ export function emailLandingCollectUrl(
     'ep.vendor': fields.partner,
     'ep.product': fields.product,
     'ep.placement': 'email landing',
+    'ep.slot': 'email landing',
+    'ep.destination_type': destination.destination_type,
+    'ep.destination': destination.destination,
   })
   return `https://www.google-analytics.com/g/collect?${params.toString()}`
 }

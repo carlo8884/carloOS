@@ -50,6 +50,9 @@ test('every shop component marks a placement the click listener emits', () => {
     assert.equal(event.product, 'midwest icrate dog crate')
     assert.equal(event.placement, component.placement)
     assert.equal(event.source, 'reviews-best-dog-crates')
+    assert.equal(event.slot, component.placement)
+    assert.equal(event.destination_type, 'search')
+    assert.equal(event.destination, 'midwest icrate dog crate')
   }
   const quick = affiliateClickParams({
     site: 'dog-com',
@@ -155,5 +158,43 @@ test('direct email /go hits build one GA4 collect URL from the existing measurem
   assert.equal(parsed.searchParams.get('ep.vendor'), 'amazon-brand')
   assert.equal(parsed.searchParams.get('ep.product'), 'seachem prime')
   assert.equal(parsed.searchParams.get('ep.placement'), 'email landing')
+  assert.equal(parsed.searchParams.get('ep.slot'), 'email landing')
+  assert.equal(parsed.searchParams.get('ep.destination_type'), 'search')
+  assert.equal(parsed.searchParams.get('ep.destination'), 'seachem prime')
   assert.equal(parsed.searchParams.get('ep.source'), 'email-cycling-guide')
+})
+
+test('an ASIN hop, a search hop, and a recovery suggestion name the destination', () => {
+  const asin = affiliateClickParams({
+    site: 'ferret-com',
+    page: '/reviews/best-ferret-cage',
+    href: '/go/amazon/B0054U8UGW?s=reviews-best-ferret-cage',
+    slot: 'hero',
+    inHero: true,
+  })
+  assert.equal(asin?.destination_type, 'ASIN')
+  assert.equal(asin?.destination, 'B0054U8UGW')
+  assert.equal(asin?.slot, 'hero')
+
+  const search = affiliateClickParams({
+    site: 'fish-com',
+    page: '/reviews/best-nano-tanks',
+    href: '/go/amazon-brand/aqueon+10+gallon+aquarium?s=reviews-best-nano-tanks',
+    slot: 'aqueon-10',
+  })
+  assert.equal(search?.destination_type, 'search')
+  assert.equal(search?.destination, 'aqueon 10 gallon aquarium')
+  assert.equal(search?.slot, 'aqueon-10')
+
+  const recovery = affiliateClickParams({
+    site: 'dog-com',
+    page: '/search',
+    href: '/reviews/best-dog-crates',
+    recoveryPath: '/reviews/best-dog-crates',
+    slot: 'search-recovery',
+  })
+  assert.equal(recovery?.destination_type, 'other')
+  assert.equal(recovery?.destination, '/reviews/best-dog-crates')
+  assert.equal(recovery?.slot, 'search-recovery')
+  assert.equal(recovery?.page, '/search')
 })
