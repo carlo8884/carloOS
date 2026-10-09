@@ -88,6 +88,10 @@ export function AnalyticsDashboard({ siteId, days = 30 }: AnalyticsDashboardProp
         const res = await fetch(`/api/analytics?site=${siteId}&days=${days}`)
         if (!res.ok) throw new Error('Failed to load analytics')
         const json = await res.json()
+        if (!json || json.ok === false || !Array.isArray(json.top_pages)) {
+          setError('Analytics unavailable — Supabase not connected')
+          return
+        }
         setData(json)
       } catch (err) {
         setError('Analytics unavailable — Supabase not connected')

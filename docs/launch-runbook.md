@@ -32,14 +32,11 @@ Keep those nameservers. Domains are external (Network Solutions / Worldnic / Eft
 
 ## DNS records to set
 
-Vercel’s current custom-domain docs for an external registrar use an apex A record of `76.76.21.21` and a www CNAME. The CLI example uses `cname.vercel-dns-0.com`; the DNS-table example uses `cname.vercel-dns.com`. After the apex is on the project, copy the CNAME from that domain’s card if the card differs. Do not invent a second address.
+Vets.co, Horses.com, and Ferret.com use the records in `docs/launch-runbook-vets.md`, `docs/launch-runbook-horses.md`, and `docs/launch-runbook-ferret.md`. Those values are the rank-1 pair from each domain’s Vercel config on 2026-10-09 (two apex A records, or one apex ALIAS, plus the www CNAME). The older docs example, a single A of `76.76.21.21` and `cname.vercel-dns.com`, is rank 2 on that config. Use rank 2 only when the project domain card shows it instead of rank 1.
 
-| Host | Type | Value |
-|---|---|---|
-| `@` | A | `76.76.21.21` |
-| `www` | CNAME | the CNAME on the project domain card (`cname.vercel-dns.com` unless the card says otherwise) |
+Dog.com and Fish.com are not in the first launch. When one of those projects gets a domain, copy that domain’s rank-1 records from its Vercel domain card. Do not reuse another site’s CNAME target.
 
-`dog.com`, `fish.com`, and `horses.com` are not on their projects yet. Add the apex and `www` to the project named above, then set these records at the registrar. `vets.co` and `ferret.com` are already attached and verified; set the same records at the registrar that still holds the zone. Leave `www` redirect unset until the apex returns this site, then set `www` to redirect to the apex in that project so the canonical host is the only host. This repo does not make that change.
+`dog.com`, `fish.com`, and `horses.com` are not on their projects yet. Add the apex and `www` to the project named above, then set that site's records at the registrar. `vets.co` and `ferret.com` are already attached and verified; set their records at the registrar that still holds the zone. Leave `www` redirect unset until the apex returns this site, then set `www` to redirect to the apex in that project so the canonical host is the only host. This repo does not make that change.
 
 ## Per site, the day DNS answers
 
