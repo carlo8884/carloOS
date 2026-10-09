@@ -61,27 +61,12 @@ function ToolCard({ href, eyebrow, title, desc, cta, imageKey, imageAlt }: { hre
       </div>
       <div className="p-6">
         <div className="flex items-center gap-2.5 mb-2">
-          <div className={`relative h-8 w-12 shrink-0 overflow-hidden rounded-md bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-            <StockImage manifestKey={imageKey} alt={imageAlt} aspect="4:3" />
-          </div>
+          <span className="w-6 h-0.5 bg-brand-primary" />
           <span className="text-2xs font-bold tracking-eyebrow uppercase text-[#3aa4cc]">{eyebrow}</span>
         </div>
-        <div className="mb-2 flex items-center gap-2.5">
-          <div className={`relative h-8 w-12 shrink-0 overflow-hidden rounded-md bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-            <StockImage manifestKey={imageKey} alt={imageAlt} aspect="4:3" />
-          </div>
-          <h3 className="font-display font-bold text-white text-xl leading-tight italic">{title}</h3>
-        </div>
-        <div className="text-sm text-white/55 leading-relaxed mb-5 flex items-start gap-2">
-          <div className={`relative mt-0.5 h-7 w-10 shrink-0 overflow-hidden rounded-md bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-            <StockImage manifestKey={imageKey} alt="" aspect="4:3" />
-          </div>
-          <span>{desc}</span>
-        </div>
+        <h3 className="font-display font-bold text-white text-xl leading-tight italic mb-2">{title}</h3>
+        <p className="text-sm text-white/55 leading-relaxed mb-5">{desc}</p>
         <div className="inline-flex items-center gap-2 text-sm font-bold text-[#3aa4cc] group-hover:gap-2.5 transition-all">
-          <div className={`relative h-7 w-10 shrink-0 overflow-hidden rounded-md bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-            <StockImage manifestKey={imageKey} alt="" aspect="4:3" />
-          </div>
           {cta}
           <IconArrowRight />
         </div>
@@ -103,18 +88,8 @@ function PhotoRow({ items }: { items: { title: string; desc: string; href: strin
             <StockImage manifestKey={item.imageKey} alt={item.imageAlt} aspect="4:3" subtleCredit />
           </div>
           <div>
-            <div className="mb-1 flex items-center gap-2.5">
-              <div className={`relative h-8 w-12 shrink-0 overflow-hidden rounded-md bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                <StockImage manifestKey={item.imageKey} alt={item.imageAlt} aspect="4:3" />
-              </div>
-              <h3 className="font-display font-bold text-brand-dark text-lg leading-tight italic group-hover:text-brand-primary">{item.title}</h3>
-            </div>
-            <div className="text-sm text-brand-text-mid leading-relaxed flex items-start gap-2">
-              <div className={`relative mt-0.5 h-7 w-10 shrink-0 overflow-hidden rounded-md bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                <StockImage manifestKey={item.imageKey} alt="" aspect="4:3" />
-              </div>
-              <span>{item.desc}</span>
-            </div>
+            <h3 className="font-display font-bold text-brand-dark text-lg leading-tight italic group-hover:text-brand-primary mb-1">{item.title}</h3>
+            <p className="text-sm text-brand-text-mid leading-relaxed">{item.desc}</p>
           </div>
         </Link>
       ))}

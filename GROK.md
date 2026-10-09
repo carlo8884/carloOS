@@ -1,4 +1,26 @@
-# GROK.md — CEO lane log (preview only, last chip 2026-10-09 04:05 PDT)
+# GROK.md — CEO lane log (preview only, last chip 2026-10-09 08:05 PDT)
+
+## 2026-10-09 ~08:05 PDT hour
+1. Fish.com homepage visual quality — hero still image-first, teal/green wash, dual CTAs, subject-forward planted aquarium matching dog.com (hero brand eyebrow left text-only). Calculator cards, triage problem cards, and species/planning/water/equipment rows were repeating the same manifest thumb on the eyebrow, title, caption, and CTA under a photo that already led the card. Those duplicate chips are gone. Each card now leads with one credited photo and text, matching dog.com card density. Section header chips stay. Hero credit left as the photographer's real display name (ק. פ.).
+2. Dog.com /join/pro + /trainers claimed-directory shells present and non-thin: apply form + claimed-only disclaimer; trainers empty-by-design with no fake listings. Left alone.
+3. Horses.com /inquire shared offer form intact and consistent with dog/fish InquireOfferScreen. Homepage stays photo-led. No homepage for-sale banner. Left alone this hour.
+4. Shared Footer inquire left alone.
+
+One real merged improvement: Fish.com calculator, triage, and photo-row cards no longer stack three extra copies of the same thumb under the photo already on the card. No new images, no doses, no sitemap.
+
+Preview URLs (Vercel):
+- https://carlo-os-fish-com.vercel.app/
+- https://dog-com-three.vercel.app/join/pro
+- https://dog-com-three.vercel.app/trainers
+- https://horses-com.vercel.app/inquire
+- https://horses-com.vercel.app/
+
+Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners on dog/fish/horses, no sitemap regen.
+
+Carlo offline until next week. Recap logged here + email to carlo@tabibi.com.
+
+---
+
 
 ## 2026-10-09 ~04:05 PDT hour
 1. Fish.com homepage visual quality — hero still image-first, teal/green wash, dual CTAs, subject-forward planted aquarium matching dog.com (hero brand eyebrow left text-only so it stays matched to dog.com). Species cards, tank-planning rows, water-safety rows, equipment rows, calculator cards, triage cards, product-guide chips, how-we-work, math-strip, under-hero start band, trust chips, calculators header chip, tank-planning header chip, species header chip, math-strip header chip, triage header chip, trust header chip, water-safety header chip, equipment header chip, equipment eyebrow chip, start-band eyebrow, section action titles, how-we-work chip titles, calculator card CTAs, triage problem CTAs, section headlines, species-card notes, planning/water/equipment row descriptions, calculator card descriptions, section-action captions, product/how-we-work notes, calculator/product/how-we-work/species/planning/water/equipment ledes, health-guides action caption, start-band lede, setup-guides caption, and start-link notes remain photo-led. Hero credit left as the photographer's real display name (ק. פ.). Label chips still do not repeat the photographer overlay. Left alone this hour — no remaining plain caption under an existing thumb.
