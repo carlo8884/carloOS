@@ -46,8 +46,8 @@ const itemList = buildItemListSchema({
   name: 'Ferret Litters That Meet the Criteria',
   items: [
     { name: 'Recycled Paper Pellet Litter', url: 'https://ferret.com/go/chewy-brand/recycled+paper+pellet+litter+non+clumping?s=reviews-best-ferret-litter' },
-    { name: 'Compressed Wood (Heat-Treated) Pellet Litter', url: 'https://ferret.com/go/amazon-brand/compressed+wood+pellet+litter+heat+treated+non+clumping?s=reviews-best-ferret-litter' },
-    { name: 'Pelleted Grass / Plant-Fiber Litter', url: 'https://ferret.com/go/amazon-brand/small+animal+grass+pellet+litter+non+clumping?s=reviews-best-ferret-litter' },
+    { name: 'Compressed Wood (Heat-Treated) Pellet Litter', url: 'https://ferret.com/reviews/best-ferret-litter#wood-pellet' },
+    { name: 'Pelleted Grass / Plant-Fiber Litter', url: 'https://ferret.com/reviews/best-ferret-litter#grass-pellet' },
   ],
 })
 
@@ -58,20 +58,6 @@ const products = [
     url: 'https://ferret.com/go/chewy-brand/recycled+paper+pellet+litter+non+clumping?s=reviews-best-ferret-litter',
     reviewAuthorName: 'Ferret.com Editorial',
     reviewBody: 'The default recommendation. Recycled-paper pellets are low-dust, non-clumping, absorbent, and soft enough on the feet that ferrets accept them readily. They carry no clumping agents to swallow and no fine respiratory dust. The trade-off is moderate odor control versus heavily perfumed cat litters and the need to change rather than scoop-and-top-up — both acceptable given the safety profile.',
-  }),
-  buildProductSchema({
-    name: 'Compressed Wood (Heat-Treated) Pellet Litter',
-    description: 'Kiln-dried softwood pellets, good odor control — use phenol-free types only',
-    url: 'https://ferret.com/go/amazon-brand/compressed+wood+pellet+litter+heat+treated+non+clumping?s=reviews-best-ferret-litter',
-    reviewAuthorName: 'Ferret.com Editorial',
-    reviewBody: 'Kiln-dried, compressed softwood pellets offer strong natural odor control and low dust once the fines are sifted out. The important caveat is wood type: aromatic raw cedar and pine shavings release phenols implicated in respiratory irritation, so use only heat-treated, low-phenol compressed pellets, never loose aromatic shavings. A solid pick where odor is the priority and the product is the kiln-dried pelleted form.',
-  }),
-  buildProductSchema({
-    name: 'Pelleted Grass / Plant-Fiber Litter',
-    description: 'Soft plant-fiber pellets, low dust, lighter tracking',
-    url: 'https://ferret.com/go/amazon-brand/small+animal+grass+pellet+litter+non+clumping?s=reviews-best-ferret-litter',
-    reviewAuthorName: 'Ferret.com Editorial',
-    reviewBody: 'Pelleted grass and other plant-fiber litters are low-dust, non-clumping, and softer underfoot than wood, which some ferrets prefer. Odor control is moderate and the pellets can break down faster when wet, so they may need changing more often. A reasonable paper-pellet alternative for a ferret that dislikes the texture of paper or wood.',
   }),
 ]
 
@@ -275,7 +261,7 @@ export default function BestFerretLitterPage() {
             category, choose a reputable pelleted product and confirm it is non-clumping and free of added clumping
             agents.
           </p>
-          <HopDisclosure siteId="ferret-com" href={["/go/chewy-brand/recycled+paper+pellet+litter+non+clumping?s=reviews-best-ferret-litter", "/go/amazon-brand/compressed+wood+pellet+litter+heat+treated+non+clumping?s=reviews-best-ferret-litter", "/go/amazon-brand/small+animal+grass+pellet+litter+non+clumping?s=reviews-best-ferret-litter"]} />
+          <HopDisclosure siteId="ferret-com" href="/go/chewy-brand/recycled+paper+pellet+litter+non+clumping?s=reviews-best-ferret-litter" />
 
           <ReviewCard
             id="paper-pellet"
@@ -320,10 +306,6 @@ export default function BestFerretLitterPage() {
             pros={['Best natural odor control of the safe options', 'Low dust once fines are removed', 'Economical', 'Non-clumping']}
             cons={['Must be heat-treated / low-phenol', 'Never use loose aromatic shavings', 'Harder underfoot than paper']}
             price="$"
-            ctaText="Find compressed heat-treated non-clumping wood pellet litter on Amazon"
-            ctaHref="/go/amazon-brand/compressed+wood+pellet+litter+heat+treated+non+clumping?s=reviews-best-ferret-litter"
-            ctaAffiliateProgram="amazon-brand"
-            ctaAffiliateProduct="compressed-wood-pellet-litter"
           />
 
           <ReviewCard
@@ -344,10 +326,6 @@ export default function BestFerretLitterPage() {
             pros={['Low dust', 'Non-clumping', 'Soft texture some ferrets prefer', 'Lighter tracking']}
             cons={['Moderate odor control', 'Breaks down faster when wet', 'May need more frequent changes']}
             price="$$"
-            ctaText="Find non-clumping grass pellet litter on Amazon"
-            ctaHref="/go/amazon-brand/small+animal+grass+pellet+litter+non+clumping?s=reviews-best-ferret-litter"
-            ctaAffiliateProgram="amazon-brand"
-            ctaAffiliateProduct="grass-pellet-litter"
           />
 
           <h2 id="who">Who should buy which litter</h2>
@@ -373,20 +351,20 @@ export default function BestFerretLitterPage() {
                 </tr>
                 <tr className="border-b border-brand-border">
                   <td className="p-3">Odor, and you will buy the heat-treated form only</td>
-                  <td className="p-3 font-bold"><a href="#wood-pellet">Compressed wood pellets</a><TableShopLink href={"/go/amazon-brand/compressed+wood+pellet+litter+heat+treated+non+clumping?s=reviews-best-ferret-litter"} product={"Compressed wood pellets"} /></td>
+                  <td className="p-3 font-bold"><a href="#wood-pellet">Compressed wood pellets</a></td>
                   <td className="p-3">Best for odor. Strong odor control. Price tier $</td>
                   <td className="p-3">Never loose aromatic pine or cedar shavings. Harder underfoot than paper</td>
                 </tr>
                 <tr className="border-b border-brand-border">
                   <td className="p-3">A ferret that rejects paper or wood texture</td>
-                  <td className="p-3 font-bold"><a href="#grass-pellet">Grass or plant-fiber pellets</a><TableShopLink href={"/go/amazon-brand/small+animal+grass+pellet+litter+non+clumping?s=reviews-best-ferret-litter"} product={"Grass or plant-fiber pellets"} /></td>
+                  <td className="p-3 font-bold"><a href="#grass-pellet">Grass or plant-fiber pellets</a></td>
                   <td className="p-3">Soft alternative. Low dust. Non-clumping. Price tier $$</td>
                   <td className="p-3">Moderate odor, and the pellets break down faster when wet</td>
                 </tr>
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-08" />
+          <ComparisonFoot updated="2026-10-09" />
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />

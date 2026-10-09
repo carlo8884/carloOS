@@ -26,9 +26,8 @@ const articleSchema = buildArticleSchema({
 })
 
 const cosequinSchema = buildProductSchema({ name: 'Cosequin ASU Plus', description: 'Glucosamine, chondroitin, and ASU supplement for horses from Nutramax.', url: 'https://horses.com/go/smartpak/cosequin-asu-plus?s=supplements-joint-supplements', imageUrl: '' })
-const platinumSchema = buildProductSchema({ name: 'Platinum Performance CJ', description: 'Comprehensive equine joint and connective tissue supplement.', url: 'https://horses.com/go/amazon-brand/platinum+performance+CJ+joint+supplement?s=supplements-joint-supplements', imageUrl: '' })
 const smartflexSchema = buildProductSchema({ name: 'SmartPak SmartFlex Senior', description: 'SmartFlex Senior Pellets, per serving: glucosamine 7,000 mg, chondroitin sulfate 500 mg, HA 50 mg, MSM 12,000 mg, devil\'s claw 1,750 mg.', url: 'https://horses.com/go/smartpak/smartflex-senior?s=supplements-joint-supplements', imageUrl: '' })
-const allSchemas = combineSchemas(articleSchema, cosequinSchema, platinumSchema, smartflexSchema)
+const allSchemas = combineSchemas(articleSchema, cosequinSchema, smartflexSchema)
 
 const PICKS = [
   { label: 'Best Evidence (ASU)', emoji: '🏆', name: 'Cosequin ASU Plus', subtitle: 'Glucosamine, MSM, chondroitin, and ASU', href: '#cosequin-asu', pickHop: '/go/smartpak/cosequin-asu-plus?s=supplements-joint-supplements' },
@@ -47,10 +46,7 @@ export default function JointSupplementsPage() {
           Equine Joint Supplements — An Evidence Ladder
         </h1>
         <PriceAsOf date="2026-10-07" tone="dark" />
-        <HopDisclosure siteId="horses-com" href="/go/amazon-brand/platinum+performance+CJ+joint+supplement?s=supplements-joint-supplements" />
-        <div className="mb-4" data-primary-hop="true">
-          <a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" data-shop-placement="hero" href="/go/amazon-brand/platinum+performance+CJ+joint+supplement?s=supplements-joint-supplements">Browse Platinum Performance CJ joint supplement on Amazon →</a>
-        </div>
+        <HopDisclosure siteId="horses-com" href="/go/smartpak/cosequin-asu-plus?s=supplements-joint-supplements" />
         <QuietPartnerLink tone="dark" href="/go/smartpak/cosequin-asu-plus?s=supplements-joint-supplements" label="Check price of Cosequin ASU Plus on SmartPak" />
         <div className="[&_.text-brand-primary]:!text-brand-dark">
           <QuickPicks items={PICKS} quietUntilTag embedded />
@@ -185,10 +181,6 @@ export default function JointSupplementsPage() {
               cons={['Significantly more expensive than category average', 'Some ingredients in the formula are Tier 3 evidence', 'Auto-ship lock-in']}
               price="$130–180 per 30-day supply"
               priceNote="dated 2026-10-04."
-              ctaText="Visit Platinum Performance CJ on Amazon →"
-              ctaHref="/go/amazon-brand/platinum+performance+CJ+joint+supplement?s=supplements-joint-supplements"
-              ctaAffiliateProgram="amazon"
-              ctaAffiliateProduct="platinum-cj"
             />
 
             <ReviewCard quietUntilTag
@@ -262,7 +254,7 @@ export default function JointSupplementsPage() {
                   </tr>
                   <tr className="border-b border-brand-border">
                     <td className="p-3 text-brand-text-mid">One tub that covers joint inputs and the base ration extras</td>
-                    <td className="p-3 font-bold text-brand-dark"><a href="#platinum-cj" className="text-brand-primary">Platinum Performance CJ</a><TableShopLink href={"/go/amazon-brand/platinum+performance+CJ+joint+supplement?s=supplements-joint-supplements"} product={"Platinum Performance CJ"} /></td>
+                    <td className="p-3 font-bold text-brand-dark"><a href="#platinum-cj" className="text-brand-primary">Platinum Performance CJ</a></td>
                     <td className="p-3 text-brand-text-mid">Best Comprehensive. Glucosamine through omega-3 in one product. $130–180 per 30-day supply</td>
                     <td className="p-3 text-brand-text-mid">You want the lower price. The card calls this the highest cost in the set, and some ingredients are weaker evidence</td>
                   </tr>
@@ -282,7 +274,7 @@ export default function JointSupplementsPage() {
               </table>
             </div>
             <p>The wider field around these joint products is in the <Link href="/reviews/best-equine-supplements">equine supplement review</Link>.</p>
-            <ComparisonFoot updated="2026-10-08" />
+            <ComparisonFoot updated="2026-10-09" />
 
             <h2>How to Choose</h2>
             <p>The framework that maximizes the evidence-per-dollar in this category:</p>

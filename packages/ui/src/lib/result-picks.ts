@@ -54,9 +54,12 @@ export function heaterFromGallons(gallons: number, source = 'tools-aquarium-volu
       detail: 'The heater review chart does not list a wattage band for this gallon count. It lists 5 gallons, 10–20, 30–40, 50–75, and 100 gallons or more.',
     }
   }
+  const missedWatt = band.search.includes('25w')
   return {
     href: `/go/amazon-brand/${band.search}?s=${source}`,
-    label: `Browse the Eheim Jager in the review's ${band.watts} band`,
+    label: missedWatt
+      ? 'Search Amazon for a 25W Eheim Jager'
+      : `Browse the Eheim Jager in the review's ${band.watts} band`,
     detail: `The heater review lists ${band.watts} for this gallon band. The Eheim Jager card lists 25W to 300W.`,
   }
 }
@@ -68,7 +71,9 @@ export function heaterFromStockWatts(watts: number, source = 'tools-heater-watta
   if ((EHEIM_WATTS as readonly number[]).includes(watts)) {
     return {
       href: `/go/amazon-brand/eheim+jager+${watts}w+heater?s=${source}`,
-      label: `Browse the ${watts}W Eheim Jager on Amazon`,
+      label: watts === 25
+        ? 'Search Amazon for a 25W Eheim Jager'
+        : `Browse the ${watts}W Eheim Jager on Amazon`,
       detail: `The Eheim Jager card lists 25W to 300W. This result's stock size is ${watts}W.`,
     }
   }
@@ -97,15 +102,22 @@ export function blanketPick(
     basis === 'body-length'
       ? `This weight estimate does not set a blanket size. Blanket size on the review is the chest-to-tail length. The body length entered here, rounded to the same 3-inch step, is ${size} inches.`
       : `This result is ${size} inches, the chest-to-tail length rounded to the blanket calculator's 3-inch step.`
-  if ((REVIEW_BLANKET_INCHES as readonly number[]).includes(size)) {
+  if (size === 75 || size === 78) {
     return {
-      href: `/go/amazon-brand/horseware+rambo+original+${size}+inch?s=${source}`,
-      label: `Browse the ${size}-inch Horseware Rambo Original on Amazon`,
+      href: `/go/amazon-brand/turnout+blanket+${size}+inch?s=${source}`,
+      label: `Search Amazon for a ${size}-inch turnout blanket`,
+      detail: `${measurement} The winter blanket review lists US sizes 75, 78, 81, and 84. The Rambo Original is the premium turnout on that review.`,
+    }
+  }
+  if (size === 81 || size === 84) {
+    return {
+      href: '/reviews/best-winter-horse-blankets',
+      label: 'Read the winter blanket review',
       detail: `${measurement} The winter blanket review lists US sizes 75, 78, 81, and 84. The Rambo Original is the premium turnout on that review.`,
     }
   }
   return {
-    href: '/go/amazon-brand/winter+horse+blanket?s=tools-horse-blanket-size-calculator',
+    href: '/go/amazon-brand/waterproof+turnout+horse+blanket+winter?s=tools-horse-blanket-size-calculator',
     label: 'Browse winter horse blankets on Amazon',
     detail: `${measurement} The review names 75, 78, 81, and 84 as the common full-size steps, so this link is the winter-blanket search the blanket-size calculator already uses rather than a size that review does not print.`,
   }
@@ -115,7 +127,7 @@ export function blanketPick(
 export function ferretCagePick(count: number): MatchedPick {
   if (count <= 1) {
     return {
-      href: '/go/amazon-brand/kaytee+multi+level+ferret+home?s=tools-cage-size-calculator',
+      href: '/go/amazon-brand/kaytee+ferret+home+multi+level?s=tools-cage-size-calculator',
       label: 'Browse the Kaytee multi-level ferret home on Amazon',
       detail: 'The cage review assigns the Kaytee to a single ferret with daily out-time.',
     }
@@ -123,13 +135,13 @@ export function ferretCagePick(count: number): MatchedPick {
   if (count <= 4) {
     return {
       href: '/go/amazon-brand/ferret+nation+critter+nation+double+unit?s=tools-cage-size-calculator',
-      label: 'Browse the Ferret Nation double unit on Amazon',
+      label: 'Search Amazon for the Ferret Nation double unit',
       detail: 'The cage review lists the Ferret Nation double for 1–4 ferrets, and the modular stack for a pair or trio.',
     }
   }
   return {
     href: '/go/amazon-brand/ferret+nation+critter+nation+double+unit?s=tools-cage-size-calculator',
-    label: 'Browse the Ferret Nation double unit on Amazon',
+    label: 'Search Amazon for the Ferret Nation double unit',
     detail: 'The cage review lists the Ferret Nation double for 1–4 ferrets. This count is past that card.',
   }
 }
@@ -407,8 +419,8 @@ export function catFoodAmountPick(stageLabel: string, grams: number): MatchedPic
   }
   if (stageLabel === 'Kitten') {
     return {
-      href: '/go/amazon-brand/measured+cat+food?s=tools-cat-food-amount',
-      label: 'Browse measured cat food on Amazon',
+      href: '/go/amazon-brand/cat+food+measuring+scoop+grams?s=tools-cat-food-amount',
+      label: 'Search Amazon for a gram measuring spoon',
       detail: `This kitten stage is about ${rounded} grams a day. The calorie page's measured-food search is the portioning pick for that stage. It is not a kitten-food ranking.`,
     }
   }
@@ -429,8 +441,8 @@ export function horseWaterPick(freezing: boolean, lowGal: string, highGal: strin
     }
   }
   return {
-    href: '/go/amazon-brand/flat+back+horse+water+bucket?s=tools-horse-water-calculator',
-    label: 'Browse flat-back horse water buckets on Amazon',
+    href: '/nutrition/water-requirements',
+    label: 'Read the water requirements page',
     detail: `This temperate idle band is ${lowGal}–${highGal} gallons. The water page's everyday stall source is a flat-back bucket. Heat, work, lactation, and lush grass move intake off this band; the page does not publish a second coefficient.`,
   }
 }
@@ -438,9 +450,9 @@ export function horseWaterPick(freezing: boolean, lowGal: string, highGal: strin
 /** One starter-kit search from the saltwater setup page. Gallons change the pound sentence. */
 export function liveRockPick(gallons: number, lowLb: string, highLb: string): MatchedPick {
   return {
-    href: '/go/amazon-brand/saltwater+reef+tank+starter+kit?s=tools-live-rock-calculator',
-    label: 'Browse saltwater reef tank starter kits on Amazon',
-    detail: `This ${gallons}-gallon tank is ${lowLb}–${highLb} lb of live rock at the setup page's 1–1.5 lb per gallon line. That page's starter-kit search is the next step. The kit is not a weighed rock order.`,
+    href: '/setup/saltwater-tank-setup',
+    label: 'Read the saltwater tank setup',
+    detail: `This ${gallons}-gallon tank is ${lowLb}–${highLb} lb of live rock at the setup page's 1–1.5 lb per gallon line. The kit is not a weighed rock order.`,
   }
 }
 

@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildItemListSchema, buildMetadata, combineSchemas } from '@carloOS/ui'
-import { HopDisclosure } from '../../../components/HopDisclosure'
+import { ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, buildArticleSchema, buildItemListSchema, buildMetadata, combineSchemas } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'fish-com',
@@ -40,7 +39,7 @@ const FAQS = [
 const RANKED = ['Aqueon 20-Gallon Long', 'Fluval Spec V']
 const itemList = buildItemListSchema({
   name: 'Fluval Spec or a 20-Gallon Long',
-  items: RANKED.map((name) => ({ name, url: ({ 'Aqueon 20-Gallon Long': 'https://fish.com/go/amazon-brand/aqueon+20+gallon+long+aquarium?s=reviews-fluval-spec-vs-aqueon-20-guide' }[name] ?? 'https://fish.com/reviews/fluval-spec-vs-aqueon-20-guide') })),
+  items: RANKED.map((name) => ({ name, url: 'https://fish.com/reviews/fluval-spec-vs-aqueon-20-guide' })),
 })
 
 export default function FluvalSpecVsAqueonGuidePage() {
@@ -56,8 +55,6 @@ export default function FluvalSpecVsAqueonGuidePage() {
         publishedAt: 'October 2026',
         readTime: '6 min',
       }}
-      heroHop={<PrimaryHop href="/go/amazon-brand/aqueon+20+gallon+long+aquarium?s=reviews-fluval-spec-vs-aqueon-20-guide" label="Search Amazon for Aqueon 20-gallon long" />}
-      heroExtra={<HopDisclosure siteId="fish-com" href="/go/amazon-brand/aqueon+20+gallon+long+aquarium?s=reviews-fluval-spec-vs-aqueon-20-guide" />}
       breadcrumbs={[
         { name: 'Home', href: '/' },
         { name: 'Reviews', href: '/reviews' },

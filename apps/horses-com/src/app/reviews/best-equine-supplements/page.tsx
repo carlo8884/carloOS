@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import Link from 'next/link'
-import { TableShopLink, RelatedReads, ComparisonFoot, EmailCapture, buildMetadata, ReviewCard, QuickPicks, CrossPortfolioCard, RelatedLinks, FAQAccordion, PriceAsOf} from '@carloOS/ui'
+import { TableShopLink, RelatedReads, ComparisonFoot, EmailCapture, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, CrossPortfolioCard, RelatedLinks, FAQAccordion, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, buildBreadcrumbSchema, SchemaScript, buildItemListSchema} from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -26,12 +26,11 @@ const articleSchema = buildArticleSchema({
 })
 
 const cosequinSchema = buildProductSchema({ name: 'Cosequin ASU Plus', description: 'Avocado-soybean unsaponifiables plus glucosamine and chondroitin sulfate for equine joint support.', url: 'https://horses.com/go/smartpak/cosequin-asu-plus?s=reviews-best-equine-supplements', imageUrl: '' })
-const platinumSchema = buildProductSchema({ name: 'Platinum Performance Equine', description: 'Comprehensive wellness supplement with omega-3, antioxidants, and amino acids.', url: 'https://horses.com/go/amazon-brand/platinum+performance+equine+wellness?s=reviews-best-equine-supplements', imageUrl: '' })
 const smartGutSchema = buildProductSchema({ name: 'SmartPak SmartGut Ultra', description: 'Pelleted gastric support supplement with calcium, magnesium, glutamine, and sea buckthorn.', url: 'https://horses.com/go/smartpak/smartgut-ultra?s=reviews-best-equine-supplements', imageUrl: '' })
 const kerEoSchema = buildProductSchema({ name: 'KER EO-3 Marine Omega-3', description: 'Marine-source DHA/EPA omega-3 supplement from Kentucky Equine Research.', url: 'https://horses.com/go/amazon/B0037PL6QW?s=reviews-best-equine-supplements', imageUrl: '' })
 const equithriveSchema = buildProductSchema({ name: 'Equithrive Original Pellets', description: 'Resveratrol-based anti-inflammatory and joint supplement.', url: 'https://horses.com/go/amazon/B07DM2314W?s=reviews-best-equine-supplements', imageUrl: '' })
 const standleeSchema = buildProductSchema({ name: 'Standlee Premium Forage', description: 'Premium baled and pelleted alfalfa, timothy, and orchard grass forage products.', url: 'https://horses.com/go/amazon-brand/standlee+premium+forage+pellets?s=reviews-best-equine-supplements', imageUrl: '' })
-const allSchemas = combineSchemas(articleSchema, cosequinSchema, platinumSchema, smartGutSchema, kerEoSchema, equithriveSchema, standleeSchema)
+const allSchemas = combineSchemas(articleSchema, cosequinSchema, smartGutSchema, kerEoSchema, equithriveSchema, standleeSchema)
 
 const PICKS = [
   { label: 'Best Joint (Evidence)', emoji: '🏆', name: 'Cosequin ASU Plus', subtitle: 'Glucosamine, MSM, chondroitin, and ASU. Initial period 2–4 weeks.', href: '#cosequin-asu', pickHop: '/go/smartpak/cosequin-asu-plus?s=reviews-best-equine-supplements' },
@@ -91,7 +90,7 @@ const FAQS = [
 
 const itemList = buildItemListSchema({
   name: "Best Equine Supplements 2026",
-  items: PICKS.map((pick) => ({ name: pick.name, url: ({ "Cosequin ASU Plus": "https://horses.com/go/smartpak/cosequin-asu-plus?s=reviews-best-equine-supplements", "Platinum Performance Equine": "https://horses.com/go/amazon-brand/platinum+performance+equine+wellness?s=reviews-best-equine-supplements", "SmartPak SmartGut Ultra": "https://horses.com/go/smartpak/smartgut-ultra?s=reviews-best-equine-supplements", "KER EO-3": "https://horses.com/go/amazon/B0037PL6QW?s=reviews-best-equine-supplements" }[pick.name] ?? `https://horses.com/reviews/best-equine-supplements${pick.href}`) })),
+  items: PICKS.map((pick) => ({ name: pick.name, url: ({ "Cosequin ASU Plus": "https://horses.com/go/smartpak/cosequin-asu-plus?s=reviews-best-equine-supplements", "Platinum Performance Equine": "https://horses.com/reviews/best-equine-supplements#platinum", "SmartPak SmartGut Ultra": "https://horses.com/go/smartpak/smartgut-ultra?s=reviews-best-equine-supplements", "KER EO-3": "https://horses.com/go/amazon/B0037PL6QW?s=reviews-best-equine-supplements" }[pick.name] ?? `https://horses.com/reviews/best-equine-supplements${pick.href}`) })),
 })
 export default function BestEquineSupplementsPage() {
   return (
@@ -105,10 +104,8 @@ export default function BestEquineSupplementsPage() {
         <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">Platinum Performance Equine is the top wellness supplement because one daily serving combines omega-3s, antioxidants, and amino acids.</p>
         <PriceAsOf date="2026-10-04" tone="dark" />
         <div data-fold="offer">
-          <HopDisclosure tone="on-dark" siteId="horses-com" href="/go/amazon-brand/platinum+performance+equine+wellness?s=reviews-best-equine-supplements" />
-        <div className="mb-4" data-primary-hop="true">
-          <a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" data-shop-placement="hero" href="/go/amazon-brand/platinum+performance+equine+wellness?s=reviews-best-equine-supplements">Browse Platinum Performance equine wellness on Amazon →</a>
-        </div>
+          <HopDisclosure tone="on-dark" siteId="horses-com" href="/go/amazon/B0037PL6QW?s=reviews-best-equine-supplements" />
+          <PrimaryHop href="/go/amazon/B0037PL6QW?s=reviews-best-equine-supplements" label="Check price of KER EO-3 on Amazon" />
         </div>
         <EmailCapture
           variant="inline"
@@ -239,10 +236,6 @@ export default function BestEquineSupplementsPage() {
               cons={['Premium price tier', 'Same nutrient targets cheaper as separate products', 'Auto-ship lock-in pricing structure']}
               price="$95–140/mo"
               priceNote="dated 2026-10-04."
-              ctaText="Shop Platinum Performance equine wellness on Amazon →"
-              ctaHref="/go/amazon-brand/platinum+performance+equine+wellness?s=reviews-best-equine-supplements"
-              ctaAffiliateProgram="amazon"
-              ctaAffiliateProduct="platinum-performance-equine"
             />
 
             <h2>Gastric Support</h2>
@@ -386,7 +379,7 @@ export default function BestEquineSupplementsPage() {
                   </tr>
                   <tr className="border-b border-brand-border">
                     <td className="p-3 text-brand-text-mid">One broad wellness product, after the ration is already balanced</td>
-                    <td className="p-3 font-bold text-brand-dark"><a href="#platinum" className="text-brand-primary">Platinum Performance Equine</a><TableShopLink href={"/go/amazon-brand/platinum+performance+equine+wellness?s=reviews-best-equine-supplements"} product={"Platinum Performance Equine"} /></td>
+                    <td className="p-3 font-bold text-brand-dark"><a href="#platinum" className="text-brand-primary">Platinum Performance Equine</a></td>
                     <td className="p-3 text-brand-text-mid">Best comprehensive. One daily top-dress. Card price $95–140/mo</td>
                     <td className="p-3 text-brand-text-mid">Among the most expensive per month. The card says the same targets can be met more cheaply with a marine omega-3, vitamin E, and a balancer</td>
                   </tr>

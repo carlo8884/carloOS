@@ -82,7 +82,7 @@ export default function FinePrintPage() {
             testing.
           </p>
 
-          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/full+page+magnifier?s=insurance-reading-the-fine-print", "/go/amazon-brand/adjustable+copyholder?s=insurance-reading-the-fine-print", "/go/amazon-brand/line+reader+strip?s=insurance-reading-the-fine-print"]} />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/full+page+magnifier?s=insurance-reading-the-fine-print", "/go/amazon-brand/adjustable+copyholder?s=insurance-reading-the-fine-print", "/go/amazon-brand/reading+guide+strip+overlay+line+reader?s=insurance-reading-the-fine-print"]} />
 
           {/* Money path — live amazon-brand search hops
               (full-page magnifier /
@@ -128,7 +128,7 @@ export default function FinePrintPage() {
                 amazonLabel="Browse adjustable copyholders on Amazon →"
               />
               <ShopCtas
-                amazonHref="/go/amazon-brand/line+reader+strip?s=insurance-reading-the-fine-print"
+                amazonHref="/go/amazon-brand/reading+guide+strip+overlay+line+reader?s=insurance-reading-the-fine-print"
                 amazonLabel="Browse line-reader strips on Amazon →"
               />
           </div>

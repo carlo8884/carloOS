@@ -319,7 +319,7 @@ export default function BestFerretHarnessPage() {
             pros={['Highly adjustable for a no-neck body', 'Lightweight and quick to fit', 'Inexpensive', 'Widely available']}
             cons={['Easiest style to escape if left loose', 'Thin straps spread less pressure', 'Fit must be checked every outing']}
             price="$"
-            ctaText="Find an adjustable H-style ferret harness on Amazon"
+            ctaText="Search Amazon for an H-style ferret harness"
             ctaHref="/go/amazon-brand/ferret+h+style+harness+adjustable?s=reviews-best-ferret-harness"
             ctaAffiliateProgram="amazon-brand"
             ctaAffiliateProduct="ferret-h-style-harness"
@@ -372,7 +372,7 @@ export default function BestFerretHarnessPage() {
                 </tr>
                 <tr className="border-b border-brand-border">
                   <td className="p-3">You will check the fit every outing</td>
-                  <td className="p-3 font-bold"><a href="#h-style">Adjustable H-style</a><TableShopLink href={"/go/amazon-brand/ferret+h+style+harness+adjustable?s=reviews-best-ferret-harness"} product={"Adjustable H-style"} /></td>
+                  <td className="p-3 font-bold"><a href="#h-style">Adjustable H-style</a><TableShopLink href={"/go/amazon-brand/ferret+h+style+harness+adjustable?s=reviews-best-ferret-harness"} product={"Adjustable H-style"} label="Search Amazon for an H-style ferret harness" /></td>
                   <td className="p-3">Best adjustability. Light. Price tier $</td>
                   <td className="p-3">The easiest style to escape if a loop is left loose</td>
                 </tr>
@@ -385,7 +385,7 @@ export default function BestFerretHarnessPage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-08" />
+          <ComparisonFoot updated="2026-10-09" />
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />

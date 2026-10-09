@@ -6,8 +6,7 @@ import { buildArticleSchema, buildItemListSchema, buildProductSchema, buildBread
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Best Nano Aquariums 2026 — 5 to 20 Gallon Tanks Ranked | Fish.com', description: 'Best nano aquariums for beginners and planted tank enthusiasts. Fluval Spec, Aqueon Minibow, and Innovative Marine compared for betta, shrimp.', path: '/reviews/best-nano-tanks', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Best Nano Aquariums 2026', description: 'Fluval Spec, Aqueon Minibow, and Innovative Marine ranked for nano setups.', url: 'https://fish.com/reviews/best-nano-tanks', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-07T00:00:00Z' })
 const fluvalSchema = buildProductSchema({ name: 'Fluval Spec V 5-Gallon', description: 'Rimless nano aquarium with integrated filtration and LED lighting for betta and shrimp.', url: 'https://fish.com/go/amazon/B0089E5VLC?s=reviews-best-nano-tanks', imageUrl: '' })
-const aqueonSchema = buildProductSchema({ name: 'Aqueon 20-Gallon Long Aquarium Kit', description: 'Complete 20-gallon long starter kit — the ideal nano community tank.', url: 'https://fish.com/go/amazon-brand/aqueon+20+gallon+long+aquarium?s=reviews-best-nano-tanks', imageUrl: '' })
-const allSchemas = combineSchemas(schema, fluvalSchema, aqueonSchema)
+const allSchemas = combineSchemas(schema, fluvalSchema)
 const PICKS = [
   { label: 'Best 5 Gallon', name: 'Fluval Spec V', subtitle: 'Rimless · Planted-ready · Betta/shrimp', href: '#fluval-spec', pickHop: '/go/amazon/B0089E5VLC?s=reviews-best-nano-tanks' },
   { label: 'Best 10 Gallon', name: 'Aqueon 10 Standard', subtitle: 'Most versatile · Widely available · Add-your-own equipment', href: '#aqueon-10' },
@@ -18,7 +17,7 @@ const PICKS = [
 // PICKS. No aggregateRating, no fabricated specs (QC §1.4).
 const itemList = buildItemListSchema({
   name: 'Best Nano Aquariums 2026',
-  items: PICKS.map((p) => ({ name: p.name, url: ({ "Fluval Spec V": "https://fish.com/go/amazon/B0089E5VLC?s=reviews-best-nano-tanks", "Aqueon 10 Standard": "https://fish.com/go/amazon-brand/aqueon+10+gallon+aquarium?s=reviews-best-nano-tanks", "Aqueon 20 Long": "https://fish.com/go/amazon-brand/aqueon+20+gallon+long+aquarium?s=reviews-best-nano-tanks" }[p.name] ?? `https://fish.com/reviews/best-nano-tanks${p.href}`) })),
+  items: PICKS.map((p) => ({ name: p.name, url: ({ "Fluval Spec V": "https://fish.com/go/amazon/B0089E5VLC?s=reviews-best-nano-tanks", "Aqueon 10 Standard": "https://fish.com/reviews/best-nano-tanks#aqueon-10", "Aqueon 20 Long": "https://fish.com/reviews/best-nano-tanks#aqueon-20" }[p.name] ?? `https://fish.com/reviews/best-nano-tanks${p.href}`) })),
 })
 export default function BestNanoTanksPage() {
   return (
@@ -73,11 +72,9 @@ export default function BestNanoTanksPage() {
               siteId="fish-com"
               nextHref="/setup/aquarium-cycling-guide"
               nextLabel="Cycle the nano before you add livestock"
-              nextBlurb="The callout is the size rule — a 20-long is more forgiving than a 5-gallon. The cycling guide is the next step so ammonia and nitrite both read zero before anything goes in. The hop below is the same Aqueon 20-long search already on this page."
-              resourceHref="/go/amazon-brand/aqueon+20+gallon+long+aquarium?s=reviews-best-nano-tanks"
-              resourceLabel="Search Amazon for Aqueon 20-gallon long"
+              nextBlurb="The callout is the size rule — a 20-long is more forgiving than a 5-gallon. The cycling guide is the next step so ammonia and nitrite both read zero before anything goes in."
             />
-            <HopDisclosure siteId="fish-com" href={["/go/amazon/B0089E5VLC?s=reviews-best-nano-tanks", "/go/amazon-brand/aqueon+20+gallon+long+aquarium?s=reviews-best-nano-tanks", "/go/amazon-brand/aqueon+10+gallon+aquarium?s=reviews-best-nano-tanks"]} />
+            <HopDisclosure siteId="fish-com" href="/go/amazon/B0089E5VLC?s=reviews-best-nano-tanks" />
             <ReviewCard id="fluval-spec" badge="Best 5 Gallon" name="Fluval Spec V 5-Gallon" subtitle="Rimless rimless AIO · Honeycomb filter cover · Low-profile LED" winner
               description={<p>The Fluval Spec V is the standard recommendation for a betta tank or shrimp tank at 5 gallons. The integrated filtration is hidden behind a honeycomb baffle, the LED is plant-capable (adequate for low-light plants like Java fern, Anubias, mosses), and the rimless design looks clean on a desk or shelf. The flow from the filter should be baffled (rubber band a filter sponge over the outlet) to reduce current for betta fish. Comes complete — just add fish, substrate, and cycle the tank.</p>}
               specs={[{ label: 'Volume', value: '5 gallons' }, { label: 'Design', value: 'Rimless, all-in-one' }, { label: 'Filter', value: 'Integrated — 3-stage' }, { label: 'Light', value: 'LED — low-light plant capable', highlight: 'good' }, { label: 'Best for', value: 'Betta, shrimp, planted' }]}
@@ -97,10 +94,6 @@ export default function BestNanoTanksPage() {
               cons={['No equipment included', 'Requires separate filter, heater, light purchases']}
               price="$20–30"
               priceNote="dated 2026-10-05."
-              ctaText="Search Amazon for Aqueon 10"
-              ctaHref="/go/amazon-brand/aqueon+10+gallon+aquarium?s=reviews-best-nano-tanks"
-              ctaAffiliateProgram="amazon"
-              ctaAffiliateProduct="aqueon-10-gallon"
             />
             <ReviewCard id="aqueon-20" badge="Best Overall Nano" name="Aqueon 20-Gallon Long" subtitle="Best beginner community tank size · Long footprint · Widely available"
               description={<p>The 20-gallon long (30¼"×12½"×12¾") is the best starter aquarium size — large enough for a proper community (8 neon tetras, 6 Corydoras, a centerpiece fish), stable enough to forgive beginner water quality mistakes, and affordable enough to equip completely without breaking the budget. The long footprint provides territorial separation that tall tanks do not. If someone asks what tank they should buy as their first, the answer is almost always the 20-gallon long.</p>}
@@ -109,10 +102,6 @@ export default function BestNanoTanksPage() {
               cons={['No equipment included', 'Requires 20-gallon-rated filter, heater, light']}
               price="$30–50"
               priceNote="dated 2026-10-05."
-              ctaText="Search Amazon for Aqueon 20-gallon long"
-              ctaHref="/go/amazon-brand/aqueon+20+gallon+long+aquarium?s=reviews-best-nano-tanks"
-              ctaAffiliateProgram="amazon"
-              ctaAffiliateProduct="aqueon-20-long"
             />
             <div className="mt-10">
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-3">Who should buy which tank</h2>
@@ -138,13 +127,13 @@ export default function BestNanoTanksPage() {
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">A bare 10-gallon you will equip yourself</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#aqueon-10" className="text-brand-primary">Aqueon 10-gallon</a><TableShopLink href={"/go/amazon-brand/aqueon+10+gallon+aquarium?s=reviews-best-nano-tanks"} product={"Aqueon 10-gallon"} label="Search Amazon for Aqueon 10" /></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#aqueon-10" className="text-brand-primary">Aqueon 10-gallon</a></td>
                       <td className="p-3 text-brand-text-mid">Best 10 Gallon. 20¼&quot; × 10½&quot; × 12 9/16&quot;. No equipment in the box. $20–30</td>
                       <td className="p-3 text-brand-text-mid">You want a kit. Filter, heater, and light are separate purchases</td>
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">A first community or planted tank</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#aqueon-20" className="text-brand-primary">Aqueon 20-gallon long</a><TableShopLink href={"/go/amazon-brand/aqueon+20+gallon+long+aquarium?s=reviews-best-nano-tanks"} product={"Aqueon 20-gallon long"} label="Search Amazon for Aqueon 20-gallon long" /></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#aqueon-20" className="text-brand-primary">Aqueon 20-gallon long</a></td>
                       <td className="p-3 text-brand-text-mid">Best Overall Nano. 30¼&quot; × 12½&quot; × 12¾&quot;. $30–50</td>
                       <td className="p-3 text-brand-text-mid">You want equipment in the box. The card says you still need a 20-gallon-rated filter, heater, and light</td>
                     </tr>

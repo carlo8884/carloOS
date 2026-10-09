@@ -20,8 +20,9 @@ export interface JourneyNextProps {
   nextHref: string
   nextLabel: string
   nextBlurb: string
-  resourceHref: string
-  resourceLabel: string
+  /** Omit both when the page no longer has a shop button for this step. */
+  resourceHref?: string
+  resourceLabel?: string
 }
 
 export function JourneyNext({
@@ -32,10 +33,12 @@ export function JourneyNext({
   resourceHref,
   resourceLabel,
 }: JourneyNextProps) {
-  const consult = consultLink(resourceHref)
-  const visible = consult && !consult.attributed ? null : visibleShopHref(resourceHref)
+  const consult = resourceHref ? consultLink(resourceHref) : null
+  const visible = !resourceHref || (consult && !consult.attributed) ? null : visibleShopHref(resourceHref)
   const live = Boolean(visible && hopCommissionReady(visible))
-  const quiet = !live && (partnerQuoteHeld(resourceHref) || Boolean(consult && !consult.attributed))
+  const quiet = Boolean(
+    resourceHref && !live && (partnerQuoteHeld(resourceHref) || Boolean(consult && !consult.attributed)),
+  )
   return (
     <aside
       id="journey-next"
@@ -56,7 +59,7 @@ export function JourneyNext({
           Quotes open on the carrier&apos;s site.
         </p>
       ) : null}
-      <ShopCtas amazonHref={resourceHref} amazonLabel={resourceLabel} />
+      {resourceHref ? <ShopCtas amazonHref={resourceHref} amazonLabel={resourceLabel ?? ''} /> : null}
     </aside>
   )
 }
