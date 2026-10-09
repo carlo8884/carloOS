@@ -1,7 +1,7 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, ArticleSourcesList, ShopCtas, JourneyNext } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, ArticleSourcesList, ShopCtas, JourneyNext, PrimaryHop } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
@@ -18,6 +18,10 @@ const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Ich Treatment Gu
 export default function IchTreatmentPage() {
   return (
     <ArticleLayout siteId="fish-com"
+      heroHop={<>
+        <PrimaryHop href="/go/amazon-brand/eheim+jager+heater?s=health-ich" label="Search Amazon for an Eheim Jager heater" />
+        <HopDisclosure siteId="fish-com" href="/go/amazon-brand/eheim+jager+heater?s=health-ich" tone="on-dark" />
+      </>}
       hero={{ title: 'Ich Treatment Guide', subtitle: 'Ichthyophthirius multifiliis — "ich" or white spot disease — is the most common disease in aquarium fish. The characteristic white salt-grain spots are visible on the body and fins. Treatment is straightforward once you understand the parasite\'s life cycle: only one stage can be killed by treatment, and that window must be exploited for 10-14 days minimum.', category: 'Fish Health', authorName: 'Fish.com Editorial', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Aquarium Health', href: '/health' }, { name: 'Ich Treatment', href: '/health/ich-treatment' }]}
       schema={schema}

@@ -11,6 +11,7 @@ import {
 
   ShopCtas,
   JourneyNext,
+  PrimaryHop,
 } from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
@@ -40,6 +41,10 @@ export default function CrateTrainingPage() {
       <ArticleLayout
       siteId="dog-com"
       contentType="training"
+      heroHop={<>
+        <PrimaryHop href="/go/amazon-brand/wire+dog+crate+with+divider+panel?s=training-crate" label="Search Amazon for a wire dog crate with a divider" />
+        <HopDisclosure siteId="dog-com" href="/go/amazon-brand/wire+dog+crate+with+divider+panel?s=training-crate" tone="on-dark" />
+      </>}
       hero={{ title: 'Crate Training Guide', subtitle: 'A crate is a management tool and a den — not a punishment. Dogs that learn the crate is a safe, predictable space are calmer, housetrained faster, and have a reliable retreat throughout their lives.', category: 'Puppy Training', authorName: 'Dog.com Editorial', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Training', href: '/training' }, { name: 'Crate Training', href: '/training/crate-training' }]}
       relatedLinks={[{ title: 'Dog Training Hub', href: '/training', category: 'Hub' }, { title: 'House Training', href: '/training/house-training', category: 'Training' }, { title: 'Puppy Schedule', href: '/training/puppy-schedule', category: 'Training' }, { title: 'Best Dog Crates', href: '/reviews/best-dog-crates', category: 'Reviews' }]}

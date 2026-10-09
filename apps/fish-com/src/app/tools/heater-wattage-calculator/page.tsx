@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -10,6 +11,7 @@ import {
   RelatedLinks,
   ArticleByline,
   JourneyNext,
+  PrimaryHop,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
 import {
@@ -113,6 +115,10 @@ export default function HeaterWattageCalculatorPage() {
       heroExtra={
         <div id="calculator" className="mb-4 [&_.text-brand-primary]:!text-brand-dark">
           <Calculator />
+          <div className="mt-6" data-fold="offer">
+            <PrimaryHop href="/go/amazon-brand/eheim+jager+heater?s=tools-heater-wattage-calculator" label="Search Amazon for an Eheim Jager heater" />
+            <HopDisclosure siteId="fish-com" href="/go/amazon-brand/eheim+jager+heater?s=tools-heater-wattage-calculator" tone="on-dark" />
+          </div>
         </div>
       }
       hero={{
