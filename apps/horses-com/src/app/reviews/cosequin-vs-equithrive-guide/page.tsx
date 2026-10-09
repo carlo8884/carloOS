@@ -101,10 +101,9 @@ export default function CosequinVsEquithriveGuidePage() {
         <p>Cosequin ASU Plus is the joint pick because the current powder page lists glucosamine, MSM, chondroitin, and ASU, and it also lists other ingredients (https://www.cosequin.com/product/horses/cosequin-asu-plus, fetched 2026-10-08).</p>
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
-                <ArticleSourcesList
-            title="Sources"
+                <ArticleSourcesList title="Sources"
             sources={[
-            { label: "www.cosequin.com/product/horses/cosequin-asu-plus", url: "https://www.cosequin.com/product/horses/cosequin-asu-plus", publisher: "www.cosequin.com" },
+            { label: 'Cosequin ASU Plus', url: 'https://www.cosequin.com/product/horses/cosequin-asu-plus', publisher: 'Cosequin' },
             ]}
           />
       </div>

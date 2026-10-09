@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, DirectoryPlacesCta, LastUpdated, ArticleSourcesList } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, DirectoryPlacesCta, LastUpdated } from '@carloOS/ui'
 import listings from '../../data/directory-listings.json'
 import { HubMasthead } from '../../components/HubMasthead'
 
@@ -119,12 +119,6 @@ export default function VetsInsuranceHubPage() {
 
       <DirectoryPlacesCta listings={listings} noun="licensed veterinarians" />
     </>
-          <ArticleSourcesList
-            title="Sources"
-            sources={[
-            { label: "A Consumer's Guide to Pet Insurance", url: "https://content.naic.org/cipr-topics/pet-insurance", publisher: "NAIC" },
-            ]}
-          />
   </>
   )
 }

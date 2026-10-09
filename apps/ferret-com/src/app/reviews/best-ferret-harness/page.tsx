@@ -15,8 +15,6 @@ export const metadata: Metadata = buildMetadata({
 const PAGE_URL = 'https://ferret.com/reviews/best-ferret-harness'
 
 const SOURCES = [
-  { label: "American Ferret Association", url: "https://www.ferret.org/", publisher: "AFA" },
-  { label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery", url: "https://www.elsevier.com/books/ferrets-rabbits-and-rodents/quesenberry/978-1-4160-6621-7", publisher: "Elsevier" },
   { label: 'Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery (behavior & restraint)', publisher: 'Quesenberry & Carpenter, Saunders/Elsevier' },
   { label: 'Ferret harness fit, leash training, and outdoor-safety guidance', publisher: 'American Ferret Association' },
   { label: 'Small-mammal harness and restraint safety', publisher: 'Exotic-mammal veterinary husbandry references' },
@@ -393,7 +391,7 @@ export default function BestFerretHarnessPage() {
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
 
-          <ArticleSourcesList sources={SOURCES} />
+          <ArticleSourcesList title="Sources" sources={SOURCES} />
 
           <p className="text-sm text-brand-text-light">
             This guide describes how to choose and fit a harness against published safety criteria; it is not

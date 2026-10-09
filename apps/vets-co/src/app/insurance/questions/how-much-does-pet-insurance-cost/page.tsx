@@ -83,9 +83,8 @@ export default function Page() {
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
 
-          <ArticleSourcesList sources={[
+          <ArticleSourcesList title="Sources" sources={[
             { label: 'NAPHIA 2025 State of the Industry Report', url: 'https://naphia.org/news/naphia-news/soi-report-2025/', publisher: 'NAPHIA' },
-            { label: 'A Consumer’s Guide to Pet Insurance', url: 'https://content.naic.org/cipr-topics/pet-insurance', publisher: 'NAIC' },
             { label: 'Sample carrier rate and plan-design disclosures', publisher: 'General carrier policy disclosures (not an endorsement)' },
           ]} />
         </div>

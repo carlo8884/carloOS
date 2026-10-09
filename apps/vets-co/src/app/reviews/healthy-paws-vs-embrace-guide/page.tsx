@@ -109,11 +109,10 @@ export default function HealthyPawsVsEmbraceGuidePage() {
         <p>The Healthy Paws claims page, fetched 2026-10-08, says most claims are processed in 2 days (<span className="break-all">https://www.healthypawspetinsurance.com/pet-insurance-claims.html</span>). The Embrace Wellness Rewards page, fetched the same day, lists wellness exams, vaccinations, flea, tick, and heartworm prevention, and preventative dental cleaning (<span className="break-all">https://www.embracepetinsurance.com/coverage/wellness-rewards</span>).</p>
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
-                <ArticleSourcesList
-            title="Sources"
+                <ArticleSourcesList title="Sources"
             sources={[
-            { label: "www.healthypawspetinsurance.com/pet-insurance-claims.html", url: "https://www.healthypawspetinsurance.com/pet-insurance-claims.html", publisher: "www.healthypawspetinsurance.com" },
-            { label: "www.embracepetinsurance.com/coverage/wellness-rewards", url: "https://www.embracepetinsurance.com/coverage/wellness-rewards", publisher: "www.embracepetinsurance.com" },
+            { label: 'Healthy Paws claims', url: 'https://www.healthypawspetinsurance.com/pet-insurance-claims.html', publisher: 'Healthy Paws' },
+            { label: 'Embrace Wellness Rewards', url: 'https://www.embracepetinsurance.com/coverage/wellness-rewards', publisher: 'Embrace' },
             ]}
           />
       </div>

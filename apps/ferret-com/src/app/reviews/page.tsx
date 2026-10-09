@@ -1,7 +1,7 @@
 import { HopDisclosure } from '../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, buildItemListSchema, combineSchemas, SchemaScript, ShopCtas, DirectoryPlacesCta, HubSearch, HubJumpNav, LastUpdated, ArticleSourcesList } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, buildItemListSchema, combineSchemas, SchemaScript, ShopCtas, DirectoryPlacesCta, HubSearch, HubJumpNav, LastUpdated } from '@carloOS/ui'
 import listings from '../../data/directory-listings.json'
 import { HubHero } from '../../components/HubHero'
 
@@ -411,12 +411,6 @@ export default function ReviewsHubPage() {
       </section>
 
       <DirectoryPlacesCta listings={listings} noun="licensed exotic-mammal professionals" />
-          <ArticleSourcesList
-            title="Sources"
-            sources={[
-            { label: "Association of Exotic Mammal Veterinarians", url: "https://aemv.org/", publisher: "AEMV" },
-            ]}
-          />
 
     </>
   )

@@ -85,10 +85,9 @@ export default function TrupanionVsEmbraceGuidePage() {
         <p><InlinePartnerQuote href="/go/trupanion/home?s=reviews-trupanion-vs-embrace-guide" label="Get a Trupanion quote →" holdWithoutPartnerId /></p>
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
-                <ArticleSourcesList
-            title="Sources"
+                <ArticleSourcesList title="Sources"
             sources={[
-            { label: "www.embracepetinsurance.com/coverage/wellness-rewards", url: "https://www.embracepetinsurance.com/coverage/wellness-rewards", publisher: "www.embracepetinsurance.com" },
+            { label: 'Embrace Wellness Rewards', url: 'https://www.embracepetinsurance.com/coverage/wellness-rewards', publisher: 'Embrace' },
             ]}
           />
       </div>

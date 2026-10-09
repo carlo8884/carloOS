@@ -15,9 +15,7 @@ export const metadata: Metadata = buildMetadata({
 const PAGE_URL = 'https://ferret.com/reviews/best-ferret-cage'
 
 const SOURCES = [
-  { label: "American Ferret Association", url: "https://www.ferret.org/", publisher: "AFA" },
-  { label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery", url: "https://www.elsevier.com/books/ferrets-rabbits-and-rodents/quesenberry/978-1-4160-6621-7", publisher: "Elsevier" },
-  { label: "www.midwesthomes4pets.com/product/small-animal/habitats-cages/ferret-nation/", url: "https://www.midwesthomes4pets.com/product/small-animal/habitats-cages/ferret-nation/", publisher: "www.midwesthomes4pets.com" },
+  { label: 'Ferret Nation cage', url: 'https://www.midwesthomes4pets.com/product/small-animal/habitats-cages/ferret-nation/', publisher: 'Midwest Homes for Pets' },
   { label: 'Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery (housing chapter)', publisher: 'Quesenberry & Carpenter, Saunders/Elsevier' },
   { label: 'Ferret housing and husbandry guidance', publisher: 'American Ferret Association' },
   { label: 'Ferret care and housing standards', publisher: 'House Rabbit Society / exotic-mammal rescue consensus' },
@@ -408,7 +406,7 @@ export default function BestFerretCagePage() {
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
 
-          <ArticleSourcesList sources={SOURCES} />
+          <ArticleSourcesList title="Sources" sources={SOURCES} />
 
           <p className="text-sm text-brand-text-light">
             This guide describes how to evaluate a cage against published husbandry criteria; it is not individualized

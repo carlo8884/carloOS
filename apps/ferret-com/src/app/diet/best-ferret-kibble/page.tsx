@@ -406,13 +406,11 @@ export default function BestFerretKibblePage() {
           <p className="text-sm text-brand-text-light">
             This page describes how to evaluate a diet, not a prescription for an individual animal. A ferret with a diagnosed condition should have diet decisions supervised by a veterinarian familiar with ferrets.
           </p>
-                  <ArticleSourcesList
-            title="Sources"
+                  <ArticleSourcesList title="Sources"
             sources={[
             { label: "American Ferret Association", url: "https://www.ferret.org/", publisher: "AFA" },
-            { label: "Merck Veterinary Manual", url: "https://www.merckvetmanual.com/", publisher: "Merck Veterinary Manual" },
             { label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery", url: "https://www.elsevier.com/books/ferrets-rabbits-and-rodents/quesenberry/978-1-4160-6621-7", publisher: "Elsevier" },
-            { label: "www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/management-of-ferrets", url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/management-of-ferrets", publisher: "www.merckvetmanual.com" },
+            { label: 'Merck Veterinary Manual: management of ferrets', url: 'https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/management-of-ferrets', publisher: 'Merck Veterinary Manual' },
             ]}
           />
         </div>

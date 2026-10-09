@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
-import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
+import { ArticleByline, CalloutBox } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Is Pet Insurance Worth It? An Honest Answer | Vets.co', description: 'Pet insurance is protection against rare, large vet bills — not a way to save money on average. When it makes sense, when it does not, and how to decide.', path: '/insurance/questions/is-pet-insurance-worth-it', type: 'article' })
 
@@ -84,11 +84,6 @@ export default function Page() {
           <p>Those figures are typical US ranges dated 2026-06-11.</p>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
 
-          <ArticleSourcesList sources={[
-            { label: 'A Consumer’s Guide to Pet Insurance', url: 'https://content.naic.org/cipr-topics/pet-insurance', publisher: 'NAIC' },
-            { label: 'State of the Industry Report (claims and premium data)', url: 'https://naphia.org/news/naphia-news/soi-report-2025/', publisher: 'NAPHIA' },
-            { label: 'Consumer guidance on insurance and emergency savings', url: 'https://www.consumerfinance.gov/', publisher: 'CFPB' },
-          ]} />
         </div>
       </ArticleLayout>
 

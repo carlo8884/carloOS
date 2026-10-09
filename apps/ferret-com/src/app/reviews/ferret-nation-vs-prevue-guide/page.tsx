@@ -89,10 +89,9 @@ export default function FerretNationVsPrevueGuidePage() {
         <p><a className="font-semibold text-brand-primary" href="/go/amazon/B0054U8UGW?s=reviews-ferret-nation-vs-prevue-guide">Browse Ferret Nation / Critter Nation double units on Amazon →</a></p>
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
-                <ArticleSourcesList
-            title="Sources"
+                <ArticleSourcesList title="Sources"
             sources={[
-            { label: "www.midwesthomes4pets.com/product/small-animal/habitats-cages/ferret-nation/", url: "https://www.midwesthomes4pets.com/product/small-animal/habitats-cages/ferret-nation/", publisher: "www.midwesthomes4pets.com" },
+            { label: 'Ferret Nation cage', url: 'https://www.midwesthomes4pets.com/product/small-animal/habitats-cages/ferret-nation/', publisher: 'Midwest Homes for Pets' },
             ]}
           />
       </div>
