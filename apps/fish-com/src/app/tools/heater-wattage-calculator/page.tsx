@@ -68,7 +68,7 @@ const softwareApplicationSchema = {
     'Built-in 25% headroom for heater aging and cold snaps',
     'Dual-heater split recommendation for tanks 40 gallons and up',
     'External-controller guidance for sensitive species and large systems',
-    'Links to existing Amazon heater hops (Eheim Jager, Aqueon Pro)',
+    'Links to existing Amazon heater buttons (Eheim Jager, Aqueon Pro)',
   ],
   publisher: {
     '@type': 'Organization',

@@ -198,7 +198,7 @@ export default function WaterChangeCalculatorPage() {
           siteId="fish-com"
           nextHref="/tools/stocking-calculator"
           nextLabel="Check the slim-inch ceiling before you raise the change percent"
-          nextBlurb="Gallons to remove is maintenance math, not a stocking license. If nitrate climbs between weekly changes, check the slim-inch bioload ceiling — not a species headcount — before you double the siphon. The hop below is the same API Master Test Kit search already on this page."
+          nextBlurb="Gallons to remove is maintenance math, not a stocking license. If nitrate climbs between weekly changes, check the slim-inch bioload ceiling — not a species headcount — before you double the siphon. The button below opens the same API Master Test Kit search on Amazon."
           resourceHref="/go/amazon-brand/api+freshwater+master+test+kit?s=tools-water-change-calculator"
           resourceLabel="Browse API Master Test Kit on Amazon →"
         />

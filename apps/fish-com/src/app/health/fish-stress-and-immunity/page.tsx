@@ -79,7 +79,7 @@ export default function FishStressPage() {
             is how you hold temperature so the dial is not the only
             reading. Quarantine every new arrival in a spare hospital tank
             so shipping stress and latent infections stay out of the
-            display. Same test-kit hop used on the{' '}
+            display. The same test-kit button is on the{' '}
             <Link
               href="/health/bacterial-infections"
               className="text-brand-primary no-underline hover:underline"
@@ -93,7 +93,7 @@ export default function FishStressPage() {
             >
               water-test kit review
             </Link>
-            . Same heater and thermometer hops used on the{' '}
+            . The same heater and thermometer buttons are on the{' '}
             <Link href="/setup" className="text-brand-primary no-underline hover:underline">
               aquarium setup guide
             </Link>
@@ -101,7 +101,7 @@ export default function FishStressPage() {
             <Link href="/health/fish-disease-guide" className="text-brand-primary no-underline hover:underline">
               fish disease guide
             </Link>
-            . Same hospital-tank hop used on the{' '}
+            . The same hospital-tank button is on the{' '}
             <Link
               href="/setup/quarantine-tank-guide"
               className="text-brand-primary no-underline hover:underline"
@@ -112,7 +112,7 @@ export default function FishStressPage() {
             <Link href="/health/fin-rot" className="text-brand-primary no-underline hover:underline">
               fin-rot guide
             </Link>
-            . The hops below are not a ranked product list, they are not
+            . The buttons below are not a ranked product list, they are not
             medications, and they do not treat, reverse, or cure disease.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas

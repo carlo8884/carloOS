@@ -39,7 +39,7 @@ export default function PuppyNutritionPage() {
           siteId="dog-com"
           nextHref="/nutrition/how-much-to-feed"
           nextLabel="Turn the bag guideline into a portion"
-          nextBlurb="Large-breed formula is which bag. How much to feed is the starting scoop, then body-condition scoring. The hop below is the same large-breed AAFCO search already on this page — not a new query."
+          nextBlurb="Large-breed formula is which bag. How much to feed is the starting scoop, then body-condition scoring. The button below opens the same large-breed AAFCO search on Amazon — not a new query."
           resourceHref="/go/amazon-brand/large+breed+puppy+dry+dog+food+aafco?s=nutrition-puppy"
           resourceLabel="Shop AAFCO large-breed puppy food on Amazon →"
         />

@@ -74,7 +74,7 @@ const softwareApplicationSchema = {
     'Average equine gestation of ~340 days (default)',
     'Early/late foaling window of 320–362 days',
     'Optional custom gestation length per mare or breed',
-    'Interactive foaling-kit checklist with Amazon shop hops',
+    'Interactive foaling-kit checklist with Amazon shop buttons',
     'Estimate framed against ultrasound confirmation',
     'Defers foaling management to a veterinarian',
   ],

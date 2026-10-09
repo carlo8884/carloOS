@@ -81,7 +81,7 @@ export default function DogDentalCarePage() {
           <p>Home dental care slows the progression of periodontal disease and extends the interval between professional cleanings — but it does not eliminate the need. Plaque becomes tartar (calculus) at the gum line and below it — in areas the brush cannot reach. Professional cleaning under anesthesia with full-mouth radiographs is required annually or every 1-2 years (depending on the dog's dental disease progression rate) even with excellent home care. Think of home care as maintaining the cleaning, not replacing it.</p>
 
           <h2 id="kit">Supplies named on this page</h2>
-          <p>Keep these on hand: a soft-bristled toothbrush and enzymatic toothpaste for daily brushing, plus VOHC-accepted dental chews as a brushing adjunct. Water additives, Hill&apos;s t/d and other prescription dental diets, human fluoride toothpaste, and brand ASINs (CET, Vetradent, Greenies, Whimzees) stay educational copy only — this page never hops Rx food, brand ASINs, or medications.</p>
+          <p>Keep these on hand: a soft-bristled toothbrush and enzymatic toothpaste for daily brushing, plus VOHC-accepted dental chews as a brushing adjunct. Water additives, Hill&apos;s t/d and other prescription dental diets, human fluoride toothpaste, and brand ASINs (CET, Vetradent, Greenies, Whimzees) stay educational copy only — this page does not link to Rx food, brand ASINs, or medications.</p>
 
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/soft+pet+toothbrush?s=health-dog-dental-care", "/go/amazon-brand/enzymatic+pet+toothpaste?s=health-dog-dental-care", "/go/amazon-brand/dental+chews+dog?s=health-dog-dental-care"]} />
 

@@ -62,7 +62,7 @@ export default function PondGuidePage() {
             siteId="fish-com"
             nextHref="/tools/pond-volume-calculator"
             nextLabel="Turn the adult-size rule into a gallon number"
-            nextBlurb="The failure mode is undersizing — 250+ gallons per adult koi, planned at 18–24 inches, not the 6-inch fish you buy. Pond-volume is the next step: length × width × average depth before you order liner and pump. The hop below is the same pond pump/filter/liner kit search already on this page."
+            nextBlurb="The failure mode is undersizing — 250+ gallons per adult koi, planned at 18–24 inches, not the 6-inch fish you buy. Pond-volume is the next step: length × width × average depth before you order liner and pump. The button below opens the same pond pump/filter/liner kit search on Amazon."
             resourceHref="/go/amazon-brand/pond%20pump%20filter%20liner%20kit?s=setup-pond-guide"
             resourceLabel="Browse pond pump, filter, and liner kits on Amazon →"
           />

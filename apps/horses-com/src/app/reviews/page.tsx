@@ -117,14 +117,14 @@ const REVIEWS = [
     group: 'horses-reviews-blankets',
     title: 'Blanket Weight by Temperature',
     description:
-      'The fill bands already on the winter blanket review, and the Rambo hop for the medium band.',
+      'The fill bands already on the winter blanket review, and the Rambo button for the medium band.',
   },
   {
     slug: 'winter-water-unfrozen-guide',
     group: 'horses-reviews-blankets',
     title: 'Keep Horse Water Unfrozen',
     description:
-      'Icy water and dry hay are the winter colic pattern already published. The hop is the heated bucket.',
+      'Icy water and dry hay are the winter colic pattern already published. The button below is the heated bucket.',
   },
   {
     slug: 'november-december-gift-guide',

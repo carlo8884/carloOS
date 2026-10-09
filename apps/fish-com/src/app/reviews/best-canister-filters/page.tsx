@@ -69,7 +69,7 @@ export default function BestCanisterFiltersPage() {
               siteId="fish-com"
               nextHref="/tools/filter-gph-calculator"
               nextLabel="Size canister GPH against the tank before you buy the 307"
-              nextBlurb="The bottom line is the size band — Fluval 307 for 40–70 gallons, Eheim Classic when you want decades of runtime. Filter-GPH is the next step: 4–6× turnover, then pick the canister that actually hits it. The hop below is the same Fluval 307 search already on this page."
+              nextBlurb="The bottom line is the size band — Fluval 307 for 40–70 gallons, Eheim Classic when you want decades of runtime. Filter-GPH is the next step: 4–6× turnover, then pick the canister that actually hits it. The button below opens the same Fluval 307 search on Amazon."
               resourceHref="/go/amazon/B07JH4JHTC?s=reviews-best-canister-filters"
               resourceLabel="Browse Fluval 307 canister filters on Amazon →"
             />

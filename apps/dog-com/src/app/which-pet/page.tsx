@@ -250,7 +250,7 @@ export default function WhichPetPage() {
           siteId="dog-com"
           nextHref="/tools/new-puppy-checklist"
           nextLabel="Run the new-puppy checklist before you buy a crate"
-          nextBlurb="If the wizard leans dog, the first-week kit is a divider crate, food, and a harness — size those against the checklist before you order. The hop below is the same wire crate with divider search already on this page."
+          nextBlurb="If the wizard leans dog, the first-week kit is a divider crate, food, and a harness — size those against the checklist before you order. The button below opens the same wire crate with divider search on Amazon."
           resourceHref="/go/amazon-brand/wire+dog+crate+with+divider+panel?s=which-pet"
           resourceLabel="Browse wire crates with a divider panel on Amazon →"
         />
@@ -266,7 +266,7 @@ export default function WhichPetPage() {
             </div>
             <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">If the wizard leans dog, these Amazon category searches are day-one
               husbandry items — a wire crate with a divider, puppy food, a harness,
-              an ID tag / collar, a soft carrier, and a pet first-aid kit. Same hops
+              an ID tag / collar, a soft carrier, and a pet first-aid kit. Same buttons
               used on the{' '}
               <Link
                 href="/tools/new-puppy-checklist"

@@ -94,7 +94,7 @@ export default function FishHealthPage() {
           siteId="fish-com"
           nextHref="/water-parameters"
           nextLabel="Read the 8-parameter test order"
-          nextBlurb="The library is not a diagnosis. Test ammonia, nitrite, and nitrate first — those numbers look like disease and they are not. The hop below is the same API Master Test Kit search already on this page."
+          nextBlurb="The library is not a diagnosis. Test ammonia, nitrite, and nitrate first — those numbers look like disease and they are not. The button below opens the same API Master Test Kit search on Amazon."
           resourceHref="/go/amazon-brand/api+freshwater+master+test+kit?s=health-hub"
           resourceLabel="Browse API Master Test Kit on Amazon →"
         />
@@ -113,7 +113,7 @@ export default function FishHealthPage() {
             a sick fish. Pair it with a spare hospital tank and a seeded sponge
             filter so treatment stays off the display biofilter, plus a heater
             and a separate digital thermometer to hold a stable temperature
-            (the ich heat-method kit). Same test-kit hop used on the{' '}
+            (the ich heat-method kit). The same test-kit button is on the{' '}
             <Link
               href="/health/fish-disease-guide"
               className="text-brand-primary no-underline hover:underline"
@@ -127,7 +127,7 @@ export default function FishHealthPage() {
             >
               water-test kit review
             </Link>
-            . Same hospital-tank hop used on the{' '}
+            . The same hospital-tank button is on the{' '}
             <Link
               href="/health/medicating-aquarium-fish"
               className="text-brand-primary no-underline hover:underline"
@@ -141,14 +141,14 @@ export default function FishHealthPage() {
             >
               quarantine tank guide
             </Link>
-            . Same sponge-filter hop used on the{' '}
+            . The same sponge-filter button is on the{' '}
             <Link
               href="/health/ich-treatment"
               className="text-brand-primary no-underline hover:underline"
             >
               ich treatment guide
             </Link>
-            . Same heater hop used on the{' '}
+            . The same heater button is on the{' '}
             <Link href="/setup" className="text-brand-primary no-underline hover:underline">
               aquarium setup guide
             </Link>
@@ -159,7 +159,7 @@ export default function FishHealthPage() {
             >
               velvet disease guide
             </Link>
-            . The hops below are not a ranked product list, they are not
+            . The buttons below are not a ranked product list, they are not
             medications, and they do not treat, reverse, or cure disease.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas

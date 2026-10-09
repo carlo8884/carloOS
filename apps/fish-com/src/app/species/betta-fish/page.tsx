@@ -192,7 +192,7 @@ export default function BettaFishPage() {
             siteId="fish-com"
             nextHref="/setup/nano-tank-setup"
             nextLabel="Build the 5–10 gallon tank before you buy the fish"
-            nextBlurb="The bowl is the failure mode. Five gallons heated and filtered is the welfare floor; ten is more stable. Nano-tank setup is the next step: sponge filter, heater, and a cycle before the betta goes in. The hop below is the same betta tank-setup search already on this page."
+            nextBlurb="The bowl is the failure mode. Five gallons heated and filtered is the welfare floor; ten is more stable. Nano-tank setup is the next step: sponge filter, heater, and a cycle before the betta goes in. The button below opens the same betta tank-setup search on Amazon."
             resourceHref="/go/amazon-brand/betta%20fish%20tank%20setup?s=species-betta-fish"
             resourceLabel="Browse betta tank setups on Amazon →"
           />

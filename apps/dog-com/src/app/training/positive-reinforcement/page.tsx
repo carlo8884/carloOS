@@ -128,7 +128,7 @@ export default function PositiveReinforcementPage() {
           siteId="dog-com"
           nextHref="/training/marker-training"
           nextLabel="Run the 10-rule marker protocol"
-          nextBlurb="Charging the marker is the start, not the session plan. Use the marker-training guide next so click-then-treat stays inside the 2-second window on real behaviors. The hop below is the same clicker search already on this page."
+          nextBlurb="Charging the marker is the start, not the session plan. Use the marker-training guide next so click-then-treat stays inside the 2-second window on real behaviors. The button below opens the same clicker search on Amazon."
           resourceHref="/go/amazon-brand/dog+training+clicker?s=training-positive-reinforcement"
           resourceLabel="Browse dog training clickers on Amazon →"
         />
@@ -144,8 +144,8 @@ export default function PositiveReinforcementPage() {
           <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">High-value, pea-sized treats and a belt-clip pouch keep the
             reinforcer inside the 2-second window. A clicker (or a verbal
             &quot;yes&quot;) marks the exact moment so you can deliver the food a
-            beat later without losing the association. Same clicker, treat,
-            and pouch hops used on the{' '}
+            beat later without losing the association. The same clicker, treat,
+            and pouch buttons are on the{' '}
             <Link
               href="/training/marker-training"
               className="text-brand-primary no-underline hover:underline"
@@ -159,7 +159,7 @@ export default function PositiveReinforcementPage() {
             >
               basic-commands guide
             </Link>
-            . Same treat hop used on the{' '}
+            . The same training-treat button is on the{' '}
             <Link
               href="/training/house-training"
               className="text-brand-primary no-underline hover:underline"

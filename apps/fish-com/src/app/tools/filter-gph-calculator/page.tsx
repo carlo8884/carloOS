@@ -73,7 +73,7 @@ const softwareApplicationSchema = {
     'Turnover bands for community, planted, goldfish, cichlid, and reef tanks',
     'GPH range from gallons × min/max turnover',
     'Filter-class hint (nano sponge / HOB / canister / sump)',
-    'Links to existing Amazon filter and nano-tank hops',
+    'Links to existing Amazon filter and nano-tank buttons',
   ],
   publisher: {
     '@type': 'Organization',
@@ -101,7 +101,7 @@ const FAQS = [
   {
     question: 'What filter do I need for a 10-gallon nano tank?',
     answer:
-      'A 10-gallon community tank at 4–6× wants about 40–60 GPH. A sponge filter or a small hang-on-back is enough if you keep the bioload honest. Purpose-built nano kits (the same hops as the nano-tank review) often include a filter already sized for that volume.',
+      'A 10-gallon community tank at 4–6× wants about 40–60 GPH. A sponge filter or a small hang-on-back is enough if you keep the bioload honest. Purpose-built nano kits (the same buttons as the nano-tank review) often include a filter already sized for that volume.',
   },
   {
     question: 'Does more GPH let me keep more fish?',
@@ -197,7 +197,7 @@ export default function FilterGphCalculatorPage() {
           siteId="fish-com"
           nextHref="/tools/heater-wattage-calculator"
           nextLabel="Size the heater for the same gallons"
-          nextBlurb="The GPH range is flow, not temperature. Size the heater for this volume next so the same tank is not under-heated while the filter turns it over. The hop below is the same AquaClear HOB search already on this page."
+          nextBlurb="The GPH range is flow, not temperature. Size the heater for this volume next so the same tank is not under-heated while the filter turns it over. The button below opens the same AquaClear HOB search on Amazon."
           resourceHref="/go/amazon-brand/aquaclear+70+filter?s=tools-filter-gph-calculator"
           resourceLabel="Browse AquaClear 70 filters on Amazon →"
         />

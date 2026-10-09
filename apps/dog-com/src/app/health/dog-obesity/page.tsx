@@ -279,7 +279,7 @@ export default function DogObesityPage() {
           </p>
 
           <h2 id="kit">Supplies named on this page</h2>
-          <p>Keep these on hand: a digital pet scale for the every-two-weeks body-weight check, plus a slow-feeder dog bowl so meals take longer and satiety improves without extra calories. These are home-setup aids, not treatments. Prescription weight-management diets (Hill&rsquo;s Metabolic, Royal Canin Satiety Support, Purina Pro Plan Veterinary Diets OM), brand food ASINs, kitchen gram scales, and portion-control food scales stay educational copy only — this page never hops diets, food ASINs, or the sister <a href={crossSiteHref('vets-co', '/health/weight-management')}>vets.co weight-management</a> kitchen-scale hops.</p>
+          <p>Keep these on hand: a digital pet scale for the every-two-weeks body-weight check, plus a slow-feeder dog bowl so meals take longer and satiety improves without extra calories. These are home-setup aids, not treatments. Prescription weight-management diets (Hill&rsquo;s Metabolic, Royal Canin Satiety Support, Purina Pro Plan Veterinary Diets OM), brand food ASINs, kitchen gram scales, and portion-control food scales stay educational copy only — this page does not link to diets, food ASINs, or the sister <a href={crossSiteHref('vets-co', '/health/weight-management')}>vets.co weight-management</a> kitchen-scale buttons.</p>
 
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/digital+pet+scale?s=health-dog-obesity", "/go/amazon-brand/slow+feeder+dog+bowl?s=health-dog-obesity"]} />
 

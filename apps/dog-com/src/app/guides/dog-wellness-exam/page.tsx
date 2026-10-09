@@ -170,7 +170,7 @@ export default function DogWellnessExamPage() {
             siteId="dog-com"
             nextHref="/training/puppy-schedule"
             nextLabel="Set the daily puppy schedule around those visits"
-            nextBlurb="The list is the visit-frequency rule — a puppy series every few weeks, annual for healthy adults, twice yearly for seniors. The puppy-schedule tool is the day-to-day plan between those appointments. The hop below is the same fecal-sample collection-kit search already on this page."
+            nextBlurb="The list is the visit-frequency rule — a puppy series every few weeks, annual for healthy adults, twice yearly for seniors. The puppy-schedule tool is the day-to-day plan between those appointments. The button below opens the same fecal-sample collection-kit search on Amazon."
             resourceHref="/go/amazon-brand/fecal+sample+collection+kit?s=guides-dog-wellness-exam"
             resourceLabel="Browse fecal-sample collection kits on Amazon →"
           />

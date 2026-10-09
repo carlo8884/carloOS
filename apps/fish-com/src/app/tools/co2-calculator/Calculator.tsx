@@ -336,7 +336,7 @@ export default function CO2Calculator() {
               heading="Shop the diffuser sized for this tank"
               blurb={
                 <>
-                  This result names a diffuser size. The hop is the aquarium CO2 diffuser search already on this page.
+                  This result names a diffuser size. The button below opens the aquarium CO2 diffuser search on Amazon.
                 </>
               }
               query="aquarium+co2+diffuser"

@@ -210,7 +210,7 @@ export default function DogIdealWeightCalculatorPage() {
             siteId="dog-com"
             nextHref="/tools/dog-calorie-calculator"
             nextLabel="Turn the target into a daily scoop"
-            nextBlurb="Ideal weight is the number to aim for. The calorie calculator turns that target into a starting daily kcal — then the vet confirms the plan. Weigh the bowl; the hop below is the same portion-control scale search already on this page."
+            nextBlurb="Ideal weight is the number to aim for. The calorie calculator turns that target into a starting daily kcal — then the vet confirms the plan. Weigh the bowl; The button below opens the same portion-control scale search on Amazon."
             resourceHref="/go/amazon-brand/portion+control+food+scale+dog?s=tools-dog-ideal-weight"
             resourceLabel="Browse portion-control food scales on Amazon →"
           />

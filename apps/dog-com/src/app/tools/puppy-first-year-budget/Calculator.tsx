@@ -273,7 +273,7 @@ export default function PuppyFirstYearBudget() {
         <a href="/tools/dog-crate-size-calculator" className="text-brand-primary underline-offset-2 hover:underline">
           crate size calculator
         </a>{' '}
-        gives the length. Same Amazon crate hop as the new-puppy checklist.
+        gives the length. The same Amazon crate button as the new-puppy checklist.
       </p>
 
       <p className="mt-5 text-2xs leading-snug text-brand-text-light">

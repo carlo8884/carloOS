@@ -126,7 +126,7 @@ export default function LeashReactivityPage() {
           siteId="dog-com"
           nextHref="/tools/harness-collar-size"
           nextLabel="Size the front-clip harness before the next threshold walk"
-          nextBlurb="CC/DS only works below threshold. Size the harness first so a pull turns the dog sideways instead of dragging you toward the trigger. The hop below is the same front-clip harness search already on this page."
+          nextBlurb="CC/DS only works below threshold. Size the harness first so a pull turns the dog sideways instead of dragging you toward the trigger. The button below opens the same front-clip harness search on Amazon."
           resourceHref="/go/amazon-brand/front+clip+no+pull+dog+harness?s=training-leash-reactivity"
           resourceLabel="Browse front-clip no-pull harnesses on Amazon →"
         />

@@ -78,8 +78,8 @@ export default function PopEyePage() {
             pop-eye. Move the affected fish to a spare hospital tank with a
             seeded sponge filter so treatment stays off the display
             biofilter, a heater rated for the tank, and a separate digital
-            thermometer so the dial is not the only reading. Same test-kit
-            hop used on the{' '}
+            thermometer so the dial is not the only reading. The same test-kit
+            button is on the{' '}
             <Link
               href="/health/fish-disease-guide"
               className="text-brand-primary no-underline hover:underline"
@@ -93,7 +93,7 @@ export default function PopEyePage() {
             >
               water-test kit review
             </Link>
-            . Same hospital-tank hop used on the{' '}
+            . The same hospital-tank button is on the{' '}
             <Link
               href="/tools/fish-disease-symptom-checker"
               className="text-brand-primary no-underline hover:underline"
@@ -104,14 +104,14 @@ export default function PopEyePage() {
             <Link href="/health/dropsy-treatment" className="text-brand-primary no-underline hover:underline">
               dropsy guide
             </Link>
-            . Same sponge-filter hop used on the{' '}
+            . The same sponge-filter button is on the{' '}
             <Link
               href="/tools/aquarium-cycling-estimator"
               className="text-brand-primary no-underline hover:underline"
             >
               cycling estimator
             </Link>
-            . Same heater and thermometer hops used on the{' '}
+            . The same heater and thermometer buttons are on the{' '}
             <Link href="/setup" className="text-brand-primary no-underline hover:underline">
               aquarium setup guide
             </Link>

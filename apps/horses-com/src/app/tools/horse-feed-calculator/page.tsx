@@ -222,7 +222,7 @@ export default function HorseFeedCalculatorPage() {
           siteId="horses-com"
           nextHref="/nutrition/forage-basics"
           nextLabel="Read forage basics before you buy hay"
-          nextBlurb="The pound range is a starting target. Forage basics is why the ration starts with hay, and hay types is the next page when you are choosing a cutting. The hop is the timothy-hay search already on this page."
+          nextBlurb="The pound range is a starting target. Forage basics is why the ration starts with hay, and hay types is the next page when you are choosing a cutting. The button below opens the timothy-hay search on Amazon."
           resourceHref="/go/amazon-brand/timothy+hay+horse?s=tools-horse-feed-calculator"
           resourceLabel="Browse timothy hay for horses on Amazon →"
         />

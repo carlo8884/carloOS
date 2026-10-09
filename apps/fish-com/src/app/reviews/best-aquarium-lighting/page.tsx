@@ -56,7 +56,7 @@ export default function BestAquariumLightingPage() {
               siteId="fish-com"
               nextHref="/tools/co2-calculator"
               nextLabel="Size CO2 if this light is in the high-PAR band"
-              nextBlurb="The callout is the PAR rule — 20–50 for low-tech planted, 50–100+ for high-tech with CO2, 150–350+ for SPS. The CO2 calculator is the drop-checker target for the high-PAR planted case. The hop below is the same Hygger 957 search already on this page."
+              nextBlurb="The callout is the PAR rule — 20–50 for low-tech planted, 50–100+ for high-tech with CO2, 150–350+ for SPS. The CO2 calculator is the drop-checker target for the high-PAR planted case. The button below opens the same Hygger 957 search on Amazon."
               resourceHref="/go/amazon-brand/hygger+957?s=reviews-best-aquarium-lighting"
               resourceLabel="Browse Hygger 957 aquarium lights on Amazon →"
             />

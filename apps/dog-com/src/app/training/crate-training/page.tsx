@@ -93,7 +93,7 @@ export default function CrateTrainingPage() {
             Shop these supplies
           </div>
           <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">A wire crate with a divider panel is the right starting point for
-            most puppies — same crate / pad / cover / training-pad hops used on
+            most puppies — same crate / pad / cover / training-pad buttons used on
             the{' '}
             <Link
               href="/tools/dog-crate-size-calculator"

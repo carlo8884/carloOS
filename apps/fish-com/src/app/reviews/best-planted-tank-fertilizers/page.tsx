@@ -77,7 +77,7 @@ export default function BestPlantedFertilizersPage() {
               siteId="fish-com"
               nextHref="/tools/co2-calculator"
               nextLabel="Size CO2 before you pick a high-tech dose"
-              nextBlurb="The callout is the macro/micro rule — low-tech with fish waste usually needs micros; high-tech CO2 tanks burn macros faster. The CO2 calculator is the drop-checker target for the high-tech case. The hop below is the same Easy Green search already on this page."
+              nextBlurb="The callout is the macro/micro rule — low-tech with fish waste usually needs micros; high-tech CO2 tanks burn macros faster. The CO2 calculator is the drop-checker target for the high-tech case. The button below opens the same Easy Green search on Amazon."
               resourceHref="/go/amazon-brand/aquarium+co-op+easy+green+fertilizer?s=reviews-best-planted-tank-fertilizers"
               resourceLabel="Search Amazon for Easy Green"
             />

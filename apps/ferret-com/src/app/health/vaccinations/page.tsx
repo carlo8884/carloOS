@@ -466,7 +466,7 @@ export default function FerretVaccinationsPage() {
           <p>
             Kit-series days are repeated clinic trips (roughly 8, 11,
             and 14 weeks, plus a separate rabies visit). A top-loading
-            small-animal carrier is the clinic-trip box for those hops
+            small-animal carrier is the clinic-trip box for those buttons
             and for the ride straight home after the 30–60 minute
             in-clinic observation — not a loose ferret on a lap, and
             not a leftover dog airline crate. A fleece small-animal
@@ -499,7 +499,7 @@ export default function FerretVaccinationsPage() {
 
           <h2 id="kit">Vaccine-day travel kit</h2>
           <p>
-            Keep these on hand: a small-animal rabies-certificate holder so the signed rabies certificate and CVI stay with the ferret for interstate or local compliance checks, a top-loading small-animal carrier so kit-series clinic hops and the ride straight home stay contained, and a fleece small-animal bonding pouch so the 30–60 minute in-clinic observation and the quiet ride home after a mild reaction stay wrapped, not loose on a lap. These are household travel tools, not treatments. They do not vaccinate a ferret, they do not replace a USDA-licensed product chosen by a veterinarian, they do not set a premedication dose, and they are not a ranked product list. </p>
+            Keep these on hand: a small-animal rabies-certificate holder so the signed rabies certificate and CVI stay with the ferret for interstate or local compliance checks, a top-loading small-animal carrier so kit-series clinic buttons and the ride straight home stay contained, and a fleece small-animal bonding pouch so the 30–60 minute in-clinic observation and the quiet ride home after a mild reaction stay wrapped, not loose on a lap. These are household travel tools, not treatments. They do not vaccinate a ferret, they do not replace a USDA-licensed product chosen by a veterinarian, they do not set a premedication dose, and they are not a ranked product list. </p>
 
           <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/small+animal+rabies+certificate+holder?s=health-vaccinations", "/go/amazon-brand/top+loading+small+animal+carrier?s=health-vaccinations", "/go/amazon-brand/fleece+small+animal+bonding+pouch?s=health-vaccinations"]} />
 

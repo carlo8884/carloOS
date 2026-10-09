@@ -161,7 +161,7 @@ export default function DogBodyConditionScorePage() {
             siteId="dog-com"
             nextHref="/tools/dog-ideal-weight-calculator"
             nextLabel="Turn the score into a target weight"
-            nextBlurb="BCS is the rib, waist, and tuck check. The ideal-weight calculator turns that score into a number to aim for — then the vet confirms it. Weigh the bowl; the hop below is the same portion-control scale search already on this page."
+            nextBlurb="BCS is the rib, waist, and tuck check. The ideal-weight calculator turns that score into a number to aim for — then the vet confirms it. Weigh the bowl; The button below opens the same portion-control scale search on Amazon."
             resourceHref="/go/amazon-brand/portion+control+food+scale+dog?s=tools-dog-bcs"
             resourceLabel="Browse portion-control food scales on Amazon →"
           />

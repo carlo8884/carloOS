@@ -22,7 +22,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
   title: 'New Puppy Checklist — First-Week Essentials | Dog.com',
   description:
-    'Pick adult size, pickup age, indoor or outdoor, crate training, and budget for a checkable new-puppy list with Amazon shop hops. Free.',
+    'Pick adult size, pickup age, indoor or outdoor, crate training, and budget for a checkable new-puppy list with Amazon shop buttons. Free.',
   path: '/tools/new-puppy-checklist',
 })
 
@@ -67,7 +67,7 @@ const appSchema = {
   '@type': 'WebApplication',
   name: 'New Puppy Essentials Checklist Builder',
   description:
-    'Free interactive checklist that builds a staged new-puppy supplies list from adult size, pickup age, indoor or outdoor living, crate-training status, and budget, with Amazon category-search hops on every gear item.',
+    'Free interactive checklist that builds a staged new-puppy supplies list from adult size, pickup age, indoor or outdoor living, crate-training status, and budget, with Amazon category searches on every gear item.',
   url: 'https://dog.com/tools/new-puppy-checklist',
   applicationCategory: 'LifestyleApplication',
   operatingSystem: 'Web',

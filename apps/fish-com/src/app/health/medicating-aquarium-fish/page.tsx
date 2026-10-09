@@ -78,7 +78,7 @@ export default function MedicatingFishPage() {
             with a seeded sponge filter so treatment stays off the display
             biofilter and aeration holds as medications drop dissolved
             oxygen. A heater rated for the hospital tank is how you hold a
-            stable treatment temperature. Same test-kit hop used on the{' '}
+            stable treatment temperature. The same test-kit button is on the{' '}
             <Link
               href="/health/bacterial-infections"
               className="text-brand-primary no-underline hover:underline"
@@ -92,7 +92,7 @@ export default function MedicatingFishPage() {
             >
               water-test kit review
             </Link>
-            . Same hospital-tank hop used on the{' '}
+            . The same hospital-tank button is on the{' '}
             <Link
               href="/setup/quarantine-tank-guide"
               className="text-brand-primary no-underline hover:underline"
@@ -103,7 +103,7 @@ export default function MedicatingFishPage() {
             <Link href="/health/fin-rot" className="text-brand-primary no-underline hover:underline">
               fin-rot guide
             </Link>
-            . Same sponge-filter hop used on the{' '}
+            . The same sponge-filter button is on the{' '}
             <Link
               href="/tools/aquarium-cycling-estimator"
               className="text-brand-primary no-underline hover:underline"
@@ -114,7 +114,7 @@ export default function MedicatingFishPage() {
             <Link href="/health/ich-treatment" className="text-brand-primary no-underline hover:underline">
               ich treatment guide
             </Link>
-            . Same heater hop used on the{' '}
+            . The same heater button is on the{' '}
             <Link href="/setup" className="text-brand-primary no-underline hover:underline">
               aquarium setup guide
             </Link>
@@ -123,8 +123,8 @@ export default function MedicatingFishPage() {
               fish disease guide
             </Link>
             . There is no live aquarium+air+pump search key on sister
-            pages — the sponge-filter hop is the aeration stand-in, same
-            as ich and velvet. The hops below are not a ranked product
+            pages — the sponge-filter button is the aeration stand-in, same
+            as ich and velvet. The buttons below are not a ranked product
             list, they are not medications, and they do not treat,
             reverse, or cure disease. </p>
           <div className="flex flex-col gap-3">

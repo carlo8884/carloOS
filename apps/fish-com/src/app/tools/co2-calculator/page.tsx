@@ -217,7 +217,7 @@ export default function CO2CalculatorPage() {
           siteId="fish-com"
           nextHref="/tools/aquarium-cycling-estimator"
           nextLabel="Estimate the cycle before you push high-light injection"
-          nextBlurb="The calculator is the starting bubble rate and the 15–35 ppm band. A new tank still has to read zero ammonia and nitrite before you run that rate hard. The cycling estimator is the wait window. The hop below is the same drop-checker search already on this page."
+          nextBlurb="The calculator is the starting bubble rate and the 15–35 ppm band. A new tank still has to read zero ammonia and nitrite before you run that rate hard. The cycling estimator is the wait window. The button below opens the same drop-checker search on Amazon."
           resourceHref="/go/amazon-brand/aquarium+co2+drop+checker?s=tools-co2-calculator"
           resourceLabel="Browse aquarium CO2 drop checkers on Amazon →"
         />
@@ -231,7 +231,7 @@ export default function CO2CalculatorPage() {
           </div>
           <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
             A solenoid regulator, a diffuser sized to the tank, and a 4 dKH drop checker are the
-            pressurized kit; liquid carbon is the low-tech daily dose. Same Amazon hops used on the{' '}
+            pressurized kit; liquid carbon is the low-tech daily dose. The same Amazon buttons are on the{' '}
             <Link
               href="/setup/planted-tank-setup"
               className="text-brand-primary no-underline hover:underline"

@@ -150,7 +150,7 @@ export default function DogExerciseCalculatorPage() {
             siteId="dog-com"
             nextHref="/tools/dog-calorie-calculator"
             nextLabel="Match this walk to a daily portion"
-            nextBlurb="The minute target is the outing. The calorie calculator turns body weight and life stage into a daily portion so the walk and the bowl use the same plan. The hop is the leash search already on this page."
+            nextBlurb="The minute target is the outing. The calorie calculator turns body weight and life stage into a daily portion so the walk and the bowl use the same plan. The button below opens the leash search on Amazon."
             resourceHref="/go/amazon-brand/dog+leash?s=tools-dog-exercise"
             resourceLabel="Browse dog leashes on Amazon →"
           />

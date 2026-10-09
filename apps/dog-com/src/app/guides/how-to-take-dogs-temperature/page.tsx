@@ -285,7 +285,7 @@ export default function HowToTakeDogsTemperaturePage() {
             siteId="dog-com"
             nextHref="/tools/is-this-a-dog-emergency"
             nextLabel="Triage the reading before you start shopping the kit"
-            nextBlurb="104.5 °F+ or under 99 °F is a same-day vet call. 106 °F+ is an emergency. The triage tool is the next step: go-now vs wait, using the number you just took. The hop below is the same digital rectal thermometer search already on this page."
+            nextBlurb="104.5 °F+ or under 99 °F is a same-day vet call. 106 °F+ is an emergency. The triage tool is the next step: go-now vs wait, using the number you just took. The button below opens the same digital rectal thermometer search on Amazon."
             resourceHref="/go/amazon-brand/digital+rectal+thermometer+pet?s=guides-how-to-take-dogs-temperature"
             resourceLabel="Browse digital rectal thermometers for pets on Amazon →"
           />

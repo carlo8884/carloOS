@@ -75,7 +75,7 @@ export default function DogEarInfectionsPage() {
           <p>Breeds with heavy, pendulous ears (Cocker Spaniels, Basset Hounds, Bloodhounds) trap moisture and have reduced airflow — predisposing to chronic infections. Breeds with hairy ear canals (Poodles, Schnauzers) may benefit from hair removal by a groomer or veterinarian to improve ventilation. Breeds with allergies (Goldens, Labradors, Frenchies, Bulldogs) are predisposed because ear infection is commonly an allergy manifestation.</p>
 
           <h2 id="kit">Supplies named on this page</h2>
-          <p>Keep these on hand: a veterinary ear cleaner to fill the canal, then a cotton ball to wipe the visible canal and ear flap after the dog shakes. Cotton swabs stay out of the canal. Prescription ear drops, parasiticide brands (Revolution, Bravecto), and brand ASINs (Virbac Epi-Otic, Douxo Ear) stay educational copy only — this page never hops Rx drops, parasiticide brands, or medications.</p>
+          <p>Keep these on hand: a veterinary ear cleaner to fill the canal, then a cotton ball to wipe the visible canal and ear flap after the dog shakes. Cotton swabs stay out of the canal. Prescription ear drops, parasiticide brands (Revolution, Bravecto), and brand ASINs (Virbac Epi-Otic, Douxo Ear) stay educational copy only — this page does not link to Rx drops, parasiticide brands, or medications.</p>
 
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/pet+ear+cleaner?s=health-dog-ear-infections", "/go/amazon-brand/cotton+balls?s=health-dog-ear-infections"]} />
 

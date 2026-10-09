@@ -436,7 +436,7 @@ function resultShop(
     return {
       heading: 'Start with an adult-size crate and a divider',
       blurb:
-        'The crate is the one item that is cheaper to buy once, sized to the adult dog. A wire crate with a divider is the same hop used on the crate-size calculator. This list is shopping guidance, not a training prescription — pair it with the crate-size calculator before you order.',
+        'The crate is the one item that is cheaper to buy once, sized to the adult dog. A wire crate with a divider is the same button used on the crate-size calculator. This list is shopping guidance, not a training prescription — pair it with the crate-size calculator before you order.',
       href: amazonHop('wire+dog+crate+with+divider+panel'),
       label: 'Browse wire crates with a divider panel on Amazon →',
     }

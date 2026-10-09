@@ -191,7 +191,7 @@ export default function CostCalculatorPage() {
             siteId="ferret-com"
             nextHref="/diet/best-ferret-kibble"
             nextLabel="Read the kibble guide before you price food"
-            nextBlurb="Food is one of the three lines in the first-year total. The kibble guide compares published panels, and the hop is the food search already on this page."
+            nextBlurb="Food is one of the three lines in the first-year total. The kibble guide compares published panels, and The button below opens the food search on Amazon."
             resourceHref="/go/amazon-brand/high+protein+ferret+food+kibble?s=tools-cost-calculator"
             resourceLabel="Browse high-protein ferret kibble on Amazon →"
           />
@@ -209,7 +209,7 @@ export default function CostCalculatorPage() {
               Shop the setup
             </div>
             <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
-              The first-year number is mostly cage, food, and litter. The Amazon hops still on this page are the kibble search and the cage search, the same ones used on the{' '}
+              The first-year number is mostly cage, food, and litter. The Amazon buttons still on this page are the kibble search and the cage search, the same ones used on the{' '}
               <Link href="/reviews/best-ferret-cage" className="text-brand-primary underline-offset-2 hover:underline">
                 cage review
               </Link>

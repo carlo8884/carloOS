@@ -190,7 +190,7 @@ export default function AquariumCyclingEstimatorPage() {
           siteId="fish-com"
           nextHref="/tools/stocking-calculator"
           nextLabel="Sketch a slim-inch ceiling before you stock"
-          nextBlurb="The week range is an estimate. Confirm 0/0 with a liquid kit before livestock, then use the stocking calculator as a slim-inch bioload ceiling — not a species headcount. The hop below is the same API Master Test Kit search already on this page."
+          nextBlurb="The week range is an estimate. Confirm 0/0 with a liquid kit before livestock, then use the stocking calculator as a slim-inch bioload ceiling — not a species headcount. The button below opens the same API Master Test Kit search on Amazon."
           resourceHref="/go/amazon-brand/api+freshwater+master+test+kit?s=tools-aquarium-cycling-estimator"
           resourceLabel="Browse API Master Test Kit on Amazon →"
         />
@@ -204,7 +204,7 @@ export default function AquariumCyclingEstimatorPage() {
           </div>
           <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
             A liquid master kit is the only way to confirm 0 ppm ammonia and 0 ppm nitrite; bottled
-            nitrifiers and a measured ammonia source shorten a fishless cycle. Same Amazon hops used
+            nitrifiers and a measured ammonia source shorten a fishless cycle. Same Amazon buttons used
             on the{' '}
             <Link
               href="/reviews/best-water-test-kits"

@@ -103,7 +103,7 @@ export default function ReadinessKit() {
       <p className="text-sm leading-relaxed text-brand-text-mid mb-4">
         A typical new-owner kit is a multi-level cage, corner pans and pellet
         litter, a high-protein food, a hammock or sleep sack, a dig box, and a
-        hard-sided carrier. Check items off as you gather them. Amazon hops are
+        hard-sided carrier. Check items off as you gather them. Amazon buttons open
         search results for those categories — not a ranked product list, and not
         a substitute for confirming legality, housing rules, and an
         exotics-experienced veterinarian first.

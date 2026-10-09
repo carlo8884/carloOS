@@ -108,7 +108,7 @@ export default function WhelpingKit() {
       </h3>
       <p className="text-sm leading-relaxed text-brand-text-mid mb-4">
         A typical owner whelping kit is a box, pads, a puppy scale, a digital thermometer, a bulb
-        syringe, and a stack of clean towels. Check items off as you gather them. Amazon hops are
+        syringe, and a stack of clean towels. Check items off as you gather them. Amazon buttons open
         search results for those categories — not a ranked product list, and not a substitute for
         the kit your veterinarian recommends for your dam.
       </p>

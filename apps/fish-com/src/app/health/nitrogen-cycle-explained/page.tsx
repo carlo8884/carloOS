@@ -164,7 +164,7 @@ export default function NitrogenCyclePage() {
           siteId="fish-com"
           nextHref="/tools/aquarium-cycling-estimator"
           nextLabel="Estimate weeks until the 0/0 test"
-          nextBlurb="The tank is safe only after a 2 ppm ammonia dose reads 0 ammonia and 0 nitrite 24 hours later. The cycling estimator turns temperature and seeding method into a week range so you know when to run that test. The hop below is the same API Master Test Kit search already on this page."
+          nextBlurb="The tank is safe only after a 2 ppm ammonia dose reads 0 ammonia and 0 nitrite 24 hours later. The cycling estimator turns temperature and seeding method into a week range so you know when to run that test. The button below opens the same API Master Test Kit search on Amazon."
           resourceHref="/go/amazon-brand/api+freshwater+master+test+kit?s=health-nitrogen-cycle"
           resourceLabel="Browse API Master Test Kit on Amazon →"
         />
@@ -198,8 +198,8 @@ export default function NitrogenCyclePage() {
             fill the tank without chlorine killing the colony. A measured
             ammonium-chloride source is how you run a fishless cycle. Bottled
             nitrifiers shorten the wait; a seeded sponge filter is the
-            fastest media transfer from an established tank. Same test-kit
-            hop used on the{' '}
+            fastest media transfer from an established tank. The same test-kit
+            button is on the{' '}
             <Link
               href="/reviews/best-water-test-kits"
               className="text-brand-primary no-underline hover:underline"
@@ -213,7 +213,7 @@ export default function NitrogenCyclePage() {
             >
               water-parameters hub
             </Link>
-            . Same Prime hop used on the{' '}
+            . The same Prime button is on the{' '}
             <Link
               href="/tools/water-change-calculator"
               className="text-brand-primary no-underline hover:underline"
@@ -224,15 +224,15 @@ export default function NitrogenCyclePage() {
             <Link href="/setup" className="text-brand-primary no-underline hover:underline">
               aquarium setup guide
             </Link>
-            . Same ammonium-chloride, bottled-bacteria, and sponge-filter
-            hops used on the{' '}
+            . The same ammonium-chloride, bottled-bacteria, and sponge-filter
+            buttons are on the{' '}
             <Link
               href="/tools/aquarium-cycling-estimator"
               className="text-brand-primary no-underline hover:underline"
             >
               cycling estimator
             </Link>
-            . Same sponge-filter hop used on the{' '}
+            . The same sponge-filter button is on the{' '}
             <Link href="/health/gill-flukes" className="text-brand-primary no-underline hover:underline">
               gill-flukes guide
             </Link>

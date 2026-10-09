@@ -185,7 +185,7 @@ export default function PondVolumeCalculatorPage() {
           siteId="fish-com"
           nextHref="/setup/pond-guide"
           nextLabel="Size the pond for adult koi before you buy the liner"
-          nextBlurb="Gallons are not a kit. The pond guide is the next step: 250+ gallons per adult koi, 45-mil EPDM, and one turnover per hour — then pick liner and pump from that number. The hop below is the same EPDM liner search already on this page."
+          nextBlurb="Gallons are not a kit. The pond guide is the next step: 250+ gallons per adult koi, 45-mil EPDM, and one turnover per hour — then pick liner and pump from that number. The button below opens the same EPDM liner search on Amazon."
           resourceHref="/go/amazon-brand/epdm+pond+liner?s=tools-pond-volume"
           resourceLabel="Browse EPDM pond liners on Amazon →"
         />
@@ -199,7 +199,7 @@ export default function PondVolumeCalculatorPage() {
           </div>
           <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
             Gallons set liner size, pump GPH (about one pond volume per hour), and filter / skimmer
-            rating. Condition tap water before the first fill. Same Amazon hops used with the{' '}
+            rating. Condition tap water before the first fill. The same Amazon buttons go with the{' '}
             <Link
               href="/setup/pond-guide"
               className="text-brand-primary no-underline hover:underline"

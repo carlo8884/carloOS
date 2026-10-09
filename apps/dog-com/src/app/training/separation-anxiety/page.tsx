@@ -125,7 +125,7 @@ export default function SeparationAnxietyPage() {
           siteId="dog-com"
           nextHref="/training/crate-training"
           nextLabel="Set the crate as the alone-time room"
-          nextBlurb="Boredom destruction is a management problem first. Use the crate-training guide next so unsupervised time has a sized crate and a divider before you lengthen absences. The hop below is the same divider-crate search already on this page."
+          nextBlurb="Boredom destruction is a management problem first. Use the crate-training guide next so unsupervised time has a sized crate and a divider before you lengthen absences. The button below opens the same divider-crate search on Amazon."
           resourceHref="/go/amazon-brand/wire+dog+crate+with+divider+panel?s=training-sep-anxiety"
           resourceLabel="Browse wire crates with a divider panel on Amazon →"
         />
@@ -142,7 +142,7 @@ export default function SeparationAnxietyPage() {
             first 15–30 minutes after you leave — the window where boredom
             destruction usually starts. Pair them with a wire crate and
             divider for unsupervised time, and rotate long-lasting chews so
-            the same Kong does not go stale. Same Kong hop used on the{' '}
+            the same Kong does not go stale. The same Kong button is on the{' '}
             <Link
               href="/tools/dog-exercise-calculator"
               className="text-brand-primary no-underline hover:underline"
@@ -156,7 +156,7 @@ export default function SeparationAnxietyPage() {
             >
               new-puppy checklist
             </Link>
-            . Same crate hop used on the{' '}
+            . The same crate button is on the{' '}
             <Link
               href="/training/crate-training"
               className="text-brand-primary no-underline hover:underline"

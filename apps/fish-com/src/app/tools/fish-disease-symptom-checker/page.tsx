@@ -163,7 +163,7 @@ export default function FishDiseaseSymptomCheckerPage() {
           siteId="fish-com"
           nextHref="/water-parameters"
           nextLabel="Test ammonia and nitrite before you treat"
-          nextBlurb="The checker ranks signs. Water comes first — new-tank ammonia and nitrite look like disease. Water-parameters is the next step: read the numbers, then treat only if the water is clean. The hop below is the same API Master test-kit search already on this page."
+          nextBlurb="The checker ranks signs. Water comes first — new-tank ammonia and nitrite look like disease. Water-parameters is the next step: read the numbers, then treat only if the water is clean. The button below opens the same API Master test-kit search on Amazon."
           resourceHref="/go/amazon-brand/api+freshwater+master+test+kit?s=tools-fish-disease-symptom"
           resourceLabel="Browse API Master Test Kit on Amazon →"
         />
@@ -177,7 +177,7 @@ export default function FishDiseaseSymptomCheckerPage() {
           </div>
           <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
             A liquid multi-test kit rules out ammonia, nitrite, and nitrate before you treat; then
-            isolate if you can and use a targeted product from the linked guide. Same Amazon hops
+            isolate if you can and use a targeted product from the linked guide. Same Amazon buttons
             used on the{' '}
             <Link
               href="/reviews/best-water-test-kits"

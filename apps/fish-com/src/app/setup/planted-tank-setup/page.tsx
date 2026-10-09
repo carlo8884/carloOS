@@ -83,7 +83,7 @@ export default function PlantedTankSetupPage() {
           siteId="fish-com"
           nextHref="/setup/aquarium-cycling-guide"
           nextLabel="Cycle the planted tank before you stock it"
-          nextBlurb="Plants take up nutrients and can shorten a cycle, but ammonia and nitrite still have to read zero before fish go in. Use the cycling guide next. The hop below is the same planted-setup CO2 search already on this page."
+          nextBlurb="Plants take up nutrients and can shorten a cycle, but ammonia and nitrite still have to read zero before fish go in. Use the cycling guide next. The button below opens the same planted-setup CO2 search on Amazon."
           resourceHref="/go/amazon-brand/planted%20aquarium%20setup%20co2?s=setup-planted-tank-setup"
           resourceLabel="Browse planted-tank CO2 setup gear on Amazon →"
         />

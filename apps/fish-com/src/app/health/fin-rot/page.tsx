@@ -86,8 +86,7 @@ export default function FinRotPage() {
             fish in a spare hospital tank with a seeded sponge filter so
             treatment stays off the display biofilter. A gravel vacuum is how
             you pull accumulated waste from the substrate during water
-            changes so the ammonia spike does not recur. Same test-kit hop
-            used on the{' '}
+            changes so the ammonia spike does not recur. The same test-kit button is on the{' '}
             <Link
               href="/health/bacterial-infections"
               className="text-brand-primary no-underline hover:underline"
@@ -101,7 +100,7 @@ export default function FinRotPage() {
             >
               water-test kit review
             </Link>
-            . Same hospital-tank hop used on the{' '}
+            . The same hospital-tank button is on the{' '}
             <Link
               href="/tools/fish-disease-symptom-checker"
               className="text-brand-primary no-underline hover:underline"
@@ -112,14 +111,14 @@ export default function FinRotPage() {
             <Link href="/health/columnaris" className="text-brand-primary no-underline hover:underline">
               columnaris guide
             </Link>
-            . Same sponge-filter hop used on the{' '}
+            . The same sponge-filter button is on the{' '}
             <Link
               href="/tools/aquarium-cycling-estimator"
               className="text-brand-primary no-underline hover:underline"
             >
               cycling estimator
             </Link>
-            . Same gravel-vacuum hop used on the{' '}
+            . The same gravel-vacuum button is on the{' '}
             <Link
               href="/tools/water-change-calculator"
               className="text-brand-primary no-underline hover:underline"
@@ -130,8 +129,8 @@ export default function FinRotPage() {
             <Link href="/setup" className="text-brand-primary no-underline hover:underline">
               aquarium setup guide
             </Link>
-            . Heater and thermometer hops stay off this page — fin-rot copy
-            has no heat method. The hops below are not a ranked product
+            . Heater and thermometer buttons stay off this page — fin-rot copy
+            has no heat method. The buttons below are not a ranked product
             list, they are not medications, and they do not treat, reverse,
             or cure fin rot. </p>
           <div className="flex flex-col gap-3">

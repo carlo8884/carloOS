@@ -156,7 +156,7 @@ export default function DogAllergiesPage() {
           </ul>
 
           <h2 id="kit">HEPA filtration kit</h2>
-          <p>Keep these on hand: a HEPA filtration air purifier and a replacement HEPA filter kit for homes where reducing airborne allergen load is part of supportive care. Chlorhexidine shampoo, ceramide bathing products, omega-3 / fish-oil supplements, hydrolyzed or novel-protein diets (Royal Canin Hydrolyzed Protein, Hill&apos;s z/d, Purina HA), Apoquel, Cytopoint, Atopica, antihistamines, and glucocorticoids stay educational copy only — this page never hops medicated shampoos, brand diets, or medications.</p>
+          <p>Keep these on hand: a HEPA filtration air purifier and a replacement HEPA filter kit for homes where reducing airborne allergen load is part of supportive care. Chlorhexidine shampoo, ceramide bathing products, omega-3 / fish-oil supplements, hydrolyzed or novel-protein diets (Royal Canin Hydrolyzed Protein, Hill&apos;s z/d, Purina HA), Apoquel, Cytopoint, Atopica, antihistamines, and glucocorticoids stay educational copy only — this page does not link to medicated shampoos, brand diets, or medications.</p>
 
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/hepa+air+purifier?s=health-dog-allergies", "/go/amazon-brand/hepa+filter+kit?s=health-dog-allergies"]} />
 

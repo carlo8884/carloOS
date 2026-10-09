@@ -224,7 +224,7 @@ export default function DogSpayNeuterTimingPage() {
             siteId="dog-com"
             nextHref="/tools/puppy-weight-predictor"
             nextLabel="Estimate adult size before you lock the timing"
-            nextBlurb="The callout is the size-timing rule — 6–9 months for most small breeds, wait until growth-plate closure (about 12–24 months) for many large and giant breeds. The puppy-weight predictor is the adult-size estimate that sorts this dog into that band. The hop below is the same heavy-duty exercise-pen search already on this page."
+            nextBlurb="The callout is the size-timing rule — 6–9 months for most small breeds, wait until growth-plate closure (about 12–24 months) for many large and giant breeds. The puppy-weight predictor is the adult-size estimate that sorts this dog into that band. The button below opens the same heavy-duty exercise-pen search on Amazon."
             resourceHref="/go/amazon-brand/heavy+duty+dog+exercise+pen?s=guides-dog-spay-neuter-timing"
             resourceLabel="Browse heavy-duty dog exercise pens on Amazon →"
           />

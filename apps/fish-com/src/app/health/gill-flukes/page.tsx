@@ -80,8 +80,8 @@ export default function FlukesPage() {
             see ammonia, nitrite, and nitrate before you medicate. A spare
             quarantine / hospital tank is how you run that watch and the
             combined hospital-tank protocol without dropping the display. A
-            seeded sponge filter keeps that holding water moving. Same
-            test-kit hop used on the{' '}
+            seeded sponge filter keeps that holding water moving. The same
+            test-kit button is on the{' '}
             <Link
               href="/health/fish-disease-guide"
               className="text-brand-primary no-underline hover:underline"
@@ -95,7 +95,7 @@ export default function FlukesPage() {
             >
               water-test kit review
             </Link>
-            . Same hospital-tank hop used on the{' '}
+            . The same hospital-tank button is on the{' '}
             <Link
               href="/tools/fish-disease-symptom-checker"
               className="text-brand-primary no-underline hover:underline"
@@ -106,15 +106,15 @@ export default function FlukesPage() {
             <Link href="/health/fish-lice-anchor-worm" className="text-brand-primary no-underline hover:underline">
               fish lice &amp; anchor worm guide
             </Link>
-            . Same sponge-filter hop used on the{' '}
+            . The same sponge-filter button is on the{' '}
             <Link
               href="/tools/aquarium-cycling-estimator"
               className="text-brand-primary no-underline hover:underline"
             >
               cycling estimator
             </Link>
-            . Heater and thermometer hops stay off this page — gill-flukes
-            copy has no heat method. The hops below are not a ranked product
+            . Heater and thermometer buttons stay off this page — gill-flukes
+            copy has no heat method. The buttons below are not a ranked product
             list, they are not medications, and they do not treat, reverse,
             or cure Gyrodactylus or Dactylogyrus.</p>
           <div className="flex flex-col gap-3">

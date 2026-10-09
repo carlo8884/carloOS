@@ -69,7 +69,7 @@ export default function AquascapingGuidePage() {
           siteId="fish-com"
           nextHref="/setup/planted-tank-setup"
           nextLabel="Build the planted tank equipment and substrate next"
-          nextBlurb="The scape is decided before plants go in — slope the substrate, set the hardscape, then plant in zones. The planted-tank setup guide is the filter, light, and substrate order. The hop below is the same Seiryu-stone search already on this page."
+          nextBlurb="The scape is decided before plants go in — slope the substrate, set the hardscape, then plant in zones. The planted-tank setup guide is the filter, light, and substrate order. The button below opens the same Seiryu-stone search on Amazon."
           resourceHref="/go/amazon-brand/aquarium+seiryu+stone?s=setup-aquascaping-guide"
           resourceLabel="Browse Seiryu stone on Amazon →"
         />

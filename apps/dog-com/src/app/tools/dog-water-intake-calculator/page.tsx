@@ -156,7 +156,7 @@ export default function DogWaterIntakeCalculatorPage() {
             siteId="dog-com"
             nextHref="/tools/dog-calorie-calculator"
             nextLabel="Pair the ounces with a daily portion"
-            nextBlurb="Water and calories move together. The calorie calculator is the next number when drinking drifts with appetite or weight. The hop is the ceramic-bowl search already on this page."
+            nextBlurb="Water and calories move together. The calorie calculator is the next number when drinking drifts with appetite or weight. The button below opens the ceramic-bowl search on Amazon."
             resourceHref="/go/amazon-brand/heavy+ceramic+pet+water+bowl?s=tools-dog-water-intake"
             resourceLabel="Browse heavy ceramic pet water bowls on Amazon →"
           />

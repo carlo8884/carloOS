@@ -274,7 +274,7 @@ export default function Calculator() {
           </a>
         </p>
         <p className="mt-1 text-sm leading-relaxed text-brand-text-mid">
-          The monthly total is a planning budget. The first-horse roadmap is the sequence that budget pays for. The hop is the halter and lead already on this page.
+          The monthly total is a planning budget. The first-horse roadmap is the sequence that budget pays for. The button below is the halter and lead already on this page.
         </p>
         <HopDisclosure siteId="horses-com" href="/go/amazon-brand/horse+halter+lead+rope?s=tools-horse-cost-calculator" />
         <a

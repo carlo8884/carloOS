@@ -345,7 +345,7 @@ export default function WaterChangeCalculator() {
           guideLabel="Read the water chemistry guide"
           blurb={
             <>
-              Same Amazon hops used on water-test and fin-rot maintenance pages — no invented SKUs.
+              The same Amazon buttons are on water-test and fin-rot maintenance pages — no invented SKUs.
             </>
           }
           query={shop.query}
@@ -400,7 +400,7 @@ export default function WaterChangeCalculator() {
           guideLabel="Read the water chemistry guide"
           blurb={
             <>
-              Dilution math is only as good as the reading. The same API Freshwater Master Test Kit hop used on the water-test review.
+              Dilution math is only as good as the reading. The same API Freshwater Master Test Kit button is on the water-test review.
             </>
           }
           query="api+freshwater+master+test+kit"

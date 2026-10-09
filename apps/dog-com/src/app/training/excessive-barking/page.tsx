@@ -58,7 +58,7 @@ export default function ExcessiveBarkingPage() {
           siteId="dog-com"
           nextHref="/training/separation-anxiety"
           nextLabel="Run the camera check if the bark is alone-time"
-          nextBlurb="The six types are the diagnosis, not the protocol. If the footage starts the moment you leave, use the separation-anxiety guide next — treat the distress, not the bark. The hop below is the same snuffle-mat search already on this page."
+          nextBlurb="The six types are the diagnosis, not the protocol. If the footage starts the moment you leave, use the separation-anxiety guide next — treat the distress, not the bark. The button below opens the same snuffle-mat search on Amazon."
           resourceHref="/go/amazon-brand/snuffle+mat+dog+enrichment?s=training-excessive-barking"
           resourceLabel="Browse snuffle mats on Amazon →"
         />
@@ -75,21 +75,21 @@ export default function ExcessiveBarkingPage() {
             puzzle feeder, lick mat, or snuffle mat occupies the mouth
             instead of the bark. Calming chews are a category search for
             anxiety-adjacent barking, not a ranked SKU and not a substitute
-            for diagnosing the bark type. Same puzzle-feeder hop used on the{' '}
+            for diagnosing the bark type. The same puzzle-feeder button is on the{' '}
             <Link
               href="/tools/dog-body-condition-score"
               className="text-brand-primary no-underline hover:underline"
             >
               dog body-condition score
             </Link>
-            . Same snuffle-mat hop used on the{' '}
+            . The same snuffle-mat button is on the{' '}
             <Link
               href="/training/separation-anxiety"
               className="text-brand-primary no-underline hover:underline"
             >
               separation-anxiety guide
             </Link>
-            . Same calming-chew hop used on the{' '}
+            . The same calming-chew button is on the{' '}
             <Link
               href="/tools/dog-grimace-scale"
               className="text-brand-primary no-underline hover:underline"

@@ -228,7 +228,7 @@ export default function DogSocializationWindowPage() {
             siteId="dog-com"
             nextHref="/training/puppy-schedule"
             nextLabel="Put the 100+ exposures on a daily schedule"
-            nextBlurb="The window is 3–14 weeks. The next useful page is the puppy schedule — short, food-paired sessions plus crate alone-time. The hop below is the same wire-crate-with-divider search already on this page."
+            nextBlurb="The window is 3–14 weeks. The next useful page is the puppy schedule — short, food-paired sessions plus crate alone-time. The button below opens the same wire-crate-with-divider search on Amazon."
             resourceHref="/go/amazon-brand/wire+dog+crate+with+divider+panel?s=training-socialization-window"
             resourceLabel="Browse wire crates with a divider panel on Amazon →"
           />
@@ -246,8 +246,8 @@ export default function DogSocializationWindowPage() {
               divider is the alone-time den on the checklist. A soft carrier
               (or sling) is the carry-and-expose tool for high-traffic places
               before the vaccine series finishes. A puppy grooming kit turns
-              daily paw / ear / mouth handling into a food-paired habit. Same
-              treat hop used on the{' '}
+              daily paw / ear / mouth handling into a food-paired habit. The same
+              training-treat button is on the{' '}
               <Link
                 href="/training/puppy-schedule"
                 className="text-brand-primary no-underline hover:underline"
@@ -261,7 +261,7 @@ export default function DogSocializationWindowPage() {
               >
                 house-training guide
               </Link>
-              . Same crate hop used on the{' '}
+              . The same crate button is on the{' '}
               <Link
                 href="/training/crate-training"
                 className="text-brand-primary no-underline hover:underline"
@@ -275,7 +275,7 @@ export default function DogSocializationWindowPage() {
               >
                 new-puppy checklist
               </Link>
-              . Same soft-carrier hop used on the{' '}
+              . The same soft-carrier button is on the{' '}
               <Link
                 href="/which-pet"
                 className="text-brand-primary no-underline hover:underline"

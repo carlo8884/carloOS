@@ -61,7 +61,7 @@ export default function BestGPSTrackerPage() {
               siteId="dog-com"
               nextHref="/guides/dog-microchipping"
               nextLabel="Register a microchip — GPS is not permanent ID"
-              nextBlurb="A GPS collar needs a subscription and a charge. A registered microchip is the ID that still works if the battery dies. Microchipping is the next step: implant plus registry, then the tracker. The hop below is the same Fi Series 3+ search already on this page."
+              nextBlurb="A GPS collar needs a subscription and a charge. A registered microchip is the ID that still works if the battery dies. Microchipping is the next step: implant plus registry, then the tracker. The button below opens the same Fi Series 3+ search on Amazon."
               resourceHref="/go/amazon/B0HJ43BQGW?s=reviews-best-dog-gps-tracker"
               resourceLabel="Browse Fi Series 3+ GPS collars on Amazon →"
             />

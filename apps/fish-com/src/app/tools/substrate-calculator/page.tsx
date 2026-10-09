@@ -188,7 +188,7 @@ export default function SubstrateCalculatorPage() {
           siteId="fish-com"
           nextHref="/tools/aquarium-setup-builder"
           nextLabel="Build the rest of the first-tank kit"
-          nextBlurb="Bag weight is the bed, not the whole setup. Use the setup builder next so filter, heater, and substrate land in one kit before fill-day. The hop below is the same aquarium-gravel search already on this page."
+          nextBlurb="Bag weight is the bed, not the whole setup. Use the setup builder next so filter, heater, and substrate land in one kit before fill-day. The button below opens the same aquarium-gravel search on Amazon."
           resourceHref="/go/amazon-brand/aquarium+gravel?s=tools-substrate-calculator"
           resourceLabel="Browse aquarium gravel on Amazon →"
         />
@@ -201,7 +201,7 @@ export default function SubstrateCalculatorPage() {
           <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
             Use the weight above to pick bag sizes. Inert gravel or sand suits most community tanks;
             aqua soil is the planted-tank bed. A substrate vacuum keeps the bed clean after fill-day.
-            Same Amazon hops used on the{' '}
+            The same Amazon buttons are on the{' '}
             <Link href="/setup/planted-tank-setup" className="text-brand-primary no-underline hover:underline">
               planted tank setup
             </Link>{' '}

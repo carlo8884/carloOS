@@ -217,7 +217,7 @@ export default function TankMateCompatibilityPage() {
           siteId="fish-com"
           nextHref="/setup/quarantine-tank-guide"
           nextLabel="Quarantine a new fish before it joins the display"
-          nextBlurb="A Compatible verdict is temperament, not a green light to drop livestock in today. Run new fish in a bare-bottom quarantine tank for 4–6 weeks. The hop below is the same quarantine/hospital search already in the shop list."
+          nextBlurb="A Compatible verdict is temperament, not a green light to drop livestock in today. Run new fish in a bare-bottom quarantine tank for 4–6 weeks. The button below opens the same quarantine/hospital search on Amazon."
           resourceHref="/go/amazon-brand/aquarium+quarantine+hospital+tank?s=tools-tank-mate-compatibility"
           resourceLabel="Browse hospital and quarantine tanks on Amazon →"
         />
@@ -233,7 +233,7 @@ export default function TankMateCompatibilityPage() {
             Test the water before you add a new fish. If a pairing lands on Caution or Not
             recommended, a tank divider or a small quarantine tank lets you separate fish
             without tearing the display down; caves and hiding spots cut aggression in a
-            mix that can work. Same Amazon hops used with the{' '}
+            mix that can work. The same Amazon buttons go with the{' '}
             <Link
               href="/setup/quarantine-tank-guide"
               className="text-brand-primary no-underline hover:underline"

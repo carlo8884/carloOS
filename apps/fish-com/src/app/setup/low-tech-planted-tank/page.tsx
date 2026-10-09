@@ -58,7 +58,7 @@ export default function LowTechPlantedTankPage() {
           siteId="fish-com"
           nextHref="/setup/aquarium-cycling-guide"
           nextLabel="Cycle the low-tech tank before you stock it"
-          nextBlurb="The light trap is the low-tech setting — 6 to 8 hours on a timer, no extra light that feeds algae. Ammonia and nitrite still have to read zero before fish go in. The hop below is the same aquarium light-timer search already on this page."
+          nextBlurb="The light trap is the low-tech setting — 6 to 8 hours on a timer, no extra light that feeds algae. Ammonia and nitrite still have to read zero before fish go in. The button below opens the same aquarium light-timer search on Amazon."
           resourceHref="/go/amazon-brand/aquarium+light+timer?s=setup-low-tech-planted-tank"
           resourceLabel="Browse aquarium light timers on Amazon →"
         />

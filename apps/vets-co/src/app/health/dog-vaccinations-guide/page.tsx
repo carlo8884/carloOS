@@ -66,7 +66,7 @@ export default function DogVaccinationsGuidePage() {
 
           <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Keep these on hand: letter-size thermal laminating pouches so the rabies certificate and titer printout stay a pocketable legal copy, a 72-hour digital countdown timer so the intranasal Bordetella window is a counted 72 hours, and a collapsible silicone travel dog bowl so boarding water is a carried bowl. These are educational home-care / recordkeeping / travel-prep / monitoring tools, not a ranked product list, not a substitute for veterinary care, and not a vaccine product. Nobivac, DA2PP, Bordetella, rabies, Lyme, influenza, and Vaccicheck kits are clinic products, not shoppable hops.
+            Keep these on hand: letter-size thermal laminating pouches so the rabies certificate and titer printout stay a pocketable legal copy, a 72-hour digital countdown timer so the intranasal Bordetella window is a counted 72 hours, and a collapsible silicone travel dog bowl so boarding water is a carried bowl. These are educational home-care / recordkeeping / travel-prep / monitoring tools, not a ranked product list, not a substitute for veterinary care, and not a vaccine product. Nobivac, DA2PP, Bordetella, rabies, Lyme, influenza, and Vaccicheck kits are clinic products, not product links.
           </p>
 
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/collapsible+silicone+travel+dog+bowl?s=health-dog-vaccinations-guide", "/go/amazon-brand/72+hour+digital+countdown+timer?s=health-dog-vaccinations-guide"]} />
