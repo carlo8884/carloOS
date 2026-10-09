@@ -14,6 +14,7 @@ import {
   ShopCtas,
   CrossPortfolioCard,
   ArticleSourcesList,
+  PrimaryHop,
 } from '@carloOS/ui'
 
 const SOURCES = [
@@ -125,6 +126,10 @@ export default function FerretAdrenalDiseasePage() {
       <ArticleLayout
         siteId="ferret-com"
         contentType="health"
+        heroHop={<>
+          <PrimaryHop href="/go/amazon-brand/soft+cotton+receiving+blanket?s=health-adrenal-disease" label="Search Amazon for a soft cotton receiving blanket" />
+          <HopDisclosure tone="on-dark" siteId="ferret-com" href="/go/amazon-brand/soft+cotton+receiving+blanket?s=health-adrenal-disease" />
+        </>}
         hero={{
           title: 'Adrenal Disease in Ferrets',
           subtitle:

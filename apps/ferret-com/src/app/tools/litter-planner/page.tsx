@@ -11,6 +11,7 @@ import {
   FAQAccordion,
   CrossPortfolioCard,
   ShopCtas,
+  PrimaryHop,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
 
@@ -169,6 +170,10 @@ export default function LitterPlannerPage() {
       <section className="bg-brand-surface px-container-sm sm:px-container pt-4 pb-section">
         <div className="max-w-5xl">
           <Calculator />
+          <div className="mt-6" data-fold="offer">
+            <PrimaryHop href="/go/amazon-brand/ferret+corner+litter+pan?s=tools-litter-planner" label="Search Amazon for a high-back corner litter pan" />
+            <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/ferret+corner+litter+pan?s=tools-litter-planner" />
+          </div>
         </div>
       </section>
 

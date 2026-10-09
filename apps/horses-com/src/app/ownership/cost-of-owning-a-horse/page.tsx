@@ -65,8 +65,8 @@ export default function CostOfOwningPage() {
           { title: 'Horse Cost of Ownership Calculator', href: '/tools/horse-cost-calculator', category: 'Tools' },
         ]}
         heroHop={<>
-          <PrimaryHop href="/go/amazon-brand/horse+feed+scoop+scale?s=ownership-cost-of-owning-a-horse" label="Search Amazon for a horse feed scoop and scale" />
-          <HopDisclosure tone="on-dark" siteId="horses-com" href="/go/amazon-brand/horse+feed+scoop+scale?s=ownership-cost-of-owning-a-horse" />
+          <PrimaryHop href="/go/amazon-brand/plastic+horse+feed+scoop?s=ownership-cost-of-owning-a-horse" label="Search Amazon for a horse feed scoop" />
+          <HopDisclosure tone="on-dark" siteId="horses-com" href="/go/amazon-brand/plastic+horse+feed+scoop?s=ownership-cost-of-owning-a-horse" />
         </>}
         hero={{
           title: "The Cost of Owning a Horse",
