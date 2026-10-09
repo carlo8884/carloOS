@@ -60,32 +60,7 @@ export default function ERvsUrgentPage() {
           <p>In the moment, two questions guide you: how severe is this, and how fast is it changing? Severe or rapidly worsening signs point to the emergency hospital. Urgent but stable problems suit urgent care or a same-day visit with your regular vet. Stable, non-urgent issues belong at your regular clinic. Keep the contact details for all three handy in advance — your regular vet, a nearby urgent care if available, and the nearest 24-hour emergency hospital — so you are not searching during a crisis.</p>
 
           <h2 id="kit">Three-clinic contact kit</h2>
-          <p>
-            Everyday physical supplies that match the
-            keep-contact-details-for-all-three-handy
-            copy on this page — credit-card-size
-            laminating pouches so regular-vet /
-            urgent-care / 24-hour-ER numbers stay a
-            pocket card, a small magnetic dry-erase
-            board so those three numbers stay on the
-            fridge, and a car visor document holder so
-            the nearest ER address rides in the car. These are educational contact / planning
-            tools, not a ranked product list, not a
-            substitute for veterinary care, and not a
-            treatment. Letter-size thermal laminating
-            pouches already live on
-            dog-vaccinations-guide. Wall-mounted magnetic
-            monthly planners already live on
-            preventive-care-schedule. Hardcover weekly
-            appointment planners already live on
-            pain-management-dogs. Medium hard-sided
-            plastic pet carriers and lined telephone
-            message pads already live on
-            when-to-go-to-the-vet. Wire basket dog muzzles, quilted
-            disposable underpads, and handheld AA LED
-            flashlights already live on
-            emergency-signs. This page does not claim
-            hands-on testing. </p>
+          <p>Credit-card-size laminating pouches keep the regular vet, urgent care, and 24-hour ER numbers as a pocket card. A small magnetic dry-erase board keeps those three numbers on the fridge. A car visor document holder keeps the nearest ER address in the car. These are planning tools, not a treatment and not a ranked product list.</p>
 
 
           {/* Money path — live amazon-brand search hops

@@ -207,7 +207,7 @@ export default function CatCalorieCalculatorPage() {
             siteId="vets-co"
             nextHref="/tools/cat-body-condition-score"
             nextLabel="Check the number against body condition"
-            nextBlurb="The calorie target is a starting scoop. Body condition is whether that scoop is right. The hop is the gram-scale search already on this page."
+            nextBlurb="The calorie target is a starting scoop. Body condition is whether that scoop is right. A kitchen gram scale is how you weigh that scoop."
             resourceHref="/go/amazon-brand/kitchen+gram+scale?s=tools-cat-calorie-calculator"
             resourceLabel="Browse kitchen gram scales on Amazon →"
           />
@@ -256,7 +256,7 @@ export default function CatCalorieCalculatorPage() {
               cat body condition score
             </Link>{' '}
             tool. Weight-loss cats should use a veterinarian-set target weight, not the current
-            overweight number. The dog twin of this math lives on{' '}
+            overweight number. The same kind of calculator for dogs is{' '}
             <a
               href={crossSiteHref('dog-com', '/tools/dog-calorie-calculator')}
               className="text-brand-primary underline-offset-2 hover:underline"

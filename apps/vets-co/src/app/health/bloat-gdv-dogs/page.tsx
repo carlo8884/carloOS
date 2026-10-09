@@ -74,36 +74,7 @@ export default function BloatGDVPage() {
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
 
           <h2 id="kit">GDV prevention kit</h2>
-          <p>
-            Everyday physical supplies that match the
-            feeding-management copy on this page — a
-            timed automatic dog feeder so two or more
-            smaller meals replace one large meal, a
-            maze slow-feed dog bowl so a fast eater
-            cannot gulp a bowl in seconds, and an indoor
-            dog house-line so a post-meal potty trip
-            stays a short walk, not a run. These are
-            household tools, not treatments. They do not
-            treat GDV, they do not replace a
-            veterinarian or prophylactic gastropexy, and
-            they are not a ranked product list. Slow-feeder dog bowls, elevated slow-feeder
-            bowls, adjustable-height dog bowls, raised
-            dog bowls, puzzle feeders, Northmate
-            interactive feeders, lick mats, snuffle
-            mats, 6-ft dog leashes, dog long-line
-            leashes, disposable female dog diapers,
-            inflatable dog collars, hard-sided airline
-            dog crates, dog surgical recovery suits,
-            non-slip dog socks, locking kitchen trash
-            cans, walk-through pet gates, airtight
-            dog-food storage containers, dog pill
-            pockets, dry-erase monthly calendars, dog
-            medical-alert collar tags, washable dog heat
-            pants, male dog belly bands, heavy-duty dog
-            exercise pens, first-aid kits, and
-            emergency-contact cards already live on
-            other pages. This page does not claim
-            hands-on testing. </p>
+          <p>A timed automatic dog feeder is one way to split the day into two or more smaller meals. A maze slow-feed bowl slows a dog that finishes a bowl in seconds. An indoor house-line keeps a post-meal potty trip a short walk rather than a run. These are household tools. They do not treat bloat, they do not replace a veterinarian or surgery, and they are not a ranked product list.</p>
 
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/automatic+timed+dog+feeder?s=health-bloat-gdv-dogs", "/go/amazon-brand/maze+slow+feed+dog+bowl?s=health-bloat-gdv-dogs", "/go/amazon-brand/indoor+dog+house+line?s=health-bloat-gdv-dogs"]} />
 

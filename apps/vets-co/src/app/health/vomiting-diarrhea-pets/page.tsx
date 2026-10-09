@@ -68,32 +68,10 @@ export default function VomitingDiarrheaPage() {
           <p>A single mild episode in a well pet that is still eating, drinking, and active can often be monitored briefly. Seek prompt care if signs are frequent or persistent, contain blood, or come with lethargy, appetite loss, abdominal pain, unproductive retching, or signs of dehydration — or if a toxin or foreign object may have been swallowed. Young, old, small, or chronically ill pets warrant a lower threshold for veterinary attention because they decline faster.</p>
 
           <h2>Supportive Care and Diagnosis</h2>
-          <p>For mild cases, your veterinarian may advise ensuring water access and, if appropriate, a short course of a bland, easily digestible diet before returning to normal food. A 2-quart stainless saucepan with lid is that bland-diet prep tool — a small batch of plain, easily digestible food if your veterinarian advises one, not a mini rice cooker and not glass meal-prep containers. A pocket spiral memo pad is how recovery monitoring stays specific: write the time of each vomit or diarrhea episode, whether water stayed down, and whether energy or appetite dropped, so "beyond a day," "frequent," or "worsening" is an observation you can hand the veterinarian. These are educational home-care and monitoring tools, not a ranked product list, and they are not a substitute for veterinary care. Avoid human medications, which can be toxic to pets. Do not hop anti-nausea drugs, Cerenia, maropitant, ondansetron, Pepto, Imodium, or any human OTC. When veterinary care is needed, the team evaluates hydration and may run diagnostics — bloodwork, imaging, or fecal testing — to find the cause and rule out obstruction or systemic disease, then provides fluids, anti-nausea medication, and any condition-specific treatment, with all medications and dosing determined by your veterinarian.</p>
+          <p>For mild cases, your veterinarian may advise ensuring water access and, if appropriate, a short course of a bland, easily digestible diet before returning to normal food. A 2-quart stainless saucepan with lid is that bland-diet prep tool — a small batch of plain, easily digestible food if your veterinarian advises one, not a mini rice cooker and not glass meal-prep containers. A pocket spiral memo pad is how recovery monitoring stays specific: write the time of each vomit or diarrhea episode, whether water stayed down, and whether energy or appetite dropped, so "beyond a day," "frequent," or "worsening" is an observation you can hand the veterinarian. These are home-care and monitoring tools, not a ranked product list, and they are not a substitute for veterinary care. Avoid human medications, which can be toxic to pets. Do not give anti-nausea drugs such as Cerenia, maropitant, ondansetron, Pepto-Bismol, Imodium, or any human over-the-counter product unless a veterinarian prescribes them. When veterinary care is needed, the team evaluates hydration and may run diagnostics — bloodwork, imaging, or fecal testing — to find the cause and rule out obstruction or systemic disease, then provides fluids, anti-nausea medication, and any condition-specific treatment, with all medications and dosing determined by your veterinarian.</p>
 
           <h2 id="kit">Home monitoring kit</h2>
-          <p>
-            Everyday physical supplies that match the
-            hydration-watch, bland-diet, and recovery
-            copy on this page — a narrow-neck glass
-            water carafe so you can see whether the pet
-            is still drinking, a 2-quart stainless
-            saucepan with lid for a short bland-diet
-            batch if your veterinarian advises one, and
-            a pocket spiral memo pad so each episode
-            stays a timed observation. These are
-            educational home-care and monitoring tools,
-            not a ranked product list, not a substitute
-            for veterinary care, and not a treatment
-            for vomiting, diarrhea, dehydration,
-            obstruction, pancreatitis, or parvovirus. Blood, a painful or swollen abdomen,
-            unproductive retching, lethargy, or
-            refusal to eat or drink belongs with a
-            veterinarian, not a saucepan. This page
-            does not hop Cerenia, maropitant,
-            ondansetron, Pepto, Imodium, famotidine,
-            prescription GI diets, probiotics, pumpkin,
-            or other Rx ASINs. This page does not claim
-            hands-on testing. </p>
+          <p>A narrow-neck glass water carafe makes it easier to see whether the pet is still drinking. A 2-quart stainless saucepan with a lid is for a short batch of plain food if your veterinarian advises one. A pocket spiral memo pad is where you write the time of each vomit or diarrhea episode, whether water stayed down, and whether energy or appetite dropped. These are home-care tools, not a treatment for vomiting, diarrhea, or a blockage, and not a ranked product list. Blood, a painful abdomen, unproductive retching, lethargy, or refusal to drink belongs with a veterinarian.</p>
 
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/narrow+neck+glass+water+carafe?s=health-vomiting-diarrhea-pets", "/go/amazon-brand/2+quart+stainless+saucepan+with+lid?s=health-vomiting-diarrhea-pets", "/go/amazon-brand/pocket+spiral+memo+pad?s=health-vomiting-diarrhea-pets"]} />
 

@@ -157,7 +157,7 @@ const FAQS = [
 export default function PetInsuranceWorthItPage() {
   return (
     <ArticleLayout
-      priceAsOf="2026-06-11"
+      priceAsOf="2026-10-07"
       siteId="vets-co"
       hero={{
         title: 'Is Pet Insurance Worth It?',

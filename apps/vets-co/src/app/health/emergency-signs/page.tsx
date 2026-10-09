@@ -21,7 +21,7 @@ const EMERGENCY_SIGNS = [
   { sign: 'Sudden collapse or inability to stand', detail: 'Acute collapse with no obvious injury may indicate internal hemorrhage (splenic rupture), cardiac arrhythmia, hypoglycemia, or neurological emergency. Emergency vet immediately. A wire basket dog muzzle is how a collapsed or painful dog can be moved without a bite to the person carrying them — it is not a soft fabric muzzle, not a grazing muzzle, and not a treatment. Put it on only if the dog is conscious enough to accept it; never delay the drive to hunt for gear.' },
   { sign: 'Difficulty breathing — labored, rapid, or open-mouth breathing', detail: 'Respiratory distress from any cause (fluid around lungs, airway obstruction, pneumonia, cardiac failure) requires emergency care. Dogs do not pant in distress — open-mouth labored breathing at rest is an emergency.' },
   { sign: 'Seizure lasting more than 2-3 minutes (status epilepticus)', detail: 'A single brief seizure in a known epileptic dog may not be an immediate emergency. A first seizure, cluster seizures (multiple in 24 hours), or a seizure lasting more than 2–3 minutes (status epilepticus) is an emergency requiring immediate intervention. After the seizure, a wire basket dog muzzle is how the confused, mouthy recovery ride stays safer for the person driving — it is not a seizure treatment and it does not go on during the seizure itself.' },
-  { sign: 'Suspected toxin ingestion', detail: 'Call the ASPCA Animal Poison Control Center (888-426-4435) immediately. Do not wait for symptoms. Many toxins have a narrow treatment window — induced vomiting is most effective within 30–60 minutes of ingestion. Time is critical. This page does not hop a pet emergency toxin kit; that hop already lives elsewhere.' },
+  { sign: 'Suspected toxin ingestion', detail: 'Call the ASPCA Animal Poison Control Center (888-426-4435) immediately. Do not wait for symptoms. Many toxins have a narrow treatment window — induced vomiting is most effective within 30–60 minutes of ingestion. Time is critical. Call the poison hotline rather than waiting on a home kit.' },
   { sign: 'Eye injury or sudden vision loss', detail: 'Corneal ulcers, penetrating eye injuries, and glaucoma (sudden increased eye pressure with a visibly enlarged or red eye) require same-day veterinary care. Glaucoma causes permanent vision loss within hours without treatment.' },
   { sign: 'Urinary obstruction — straining without producing urine', detail: 'Male dogs and cats that strain to urinate without producing urine may have a blocked urethra — a life-threatening emergency. Bladder rupture and fatal hyperkalemia can occur within 24–48 hours.' },
   { sign: 'Suspected fracture or major wound', detail: 'Visible bone, wounds penetrating the body cavity, or inability to bear any weight after trauma requires emergency evaluation. Quilted disposable underpads are how blood or wound fluid stays off the car seat and the hallway on the way out the door — they are not puppy training pads, not washable pee pads, not extra-large disposable dog pee pads, and not a first-aid kit. They do not stop bleeding and they do not replace pressure from a veterinarian. A wire basket dog muzzle is how a fractured, painful dog can be lifted without a bite.' },
@@ -73,28 +73,7 @@ export default function EmergencySignsPage() {
           ))}
 
           <h2 id="kit">14-sign emergency-prep kit</h2>
-          <p>
-            Everyday household, travel, and monitoring
-            supplies that match the 14 emergency signs
-            on this page — a wire basket dog muzzle so
-            a collapsed, fractured, or post-seizure
-            dog can be lifted without a bite, quilted
-            disposable underpads so blood, vomit, or
-            wound fluid stays off the car seat and the
-            hallway, and a handheld AA LED flashlight
-            so pale, white, blue, or gray gums get a
-            look at night. These are educational prep
-            tools, not treatments. They do not treat
-            GDV, they do not stop internal bleeding,
-            they do not replace the ASPCA poison
-            hotline, and they are not a ranked product
-            list. Soft dog carriers, soft-sided crates,
-            first-aid kits, medical penlights, folding
-            pet stretchers, gum-color assessment
-            charts, puppy training pads, washable pee
-            pads, extra-large disposable dog pee pads,
-            and pet emergency toxin kits already live
-            on other pages. This page does not claim hands-on testing. </p>
+          <p>A wire basket dog muzzle lets you move a collapsed, fractured, or post-seizure dog with less risk of a bite. Quilted disposable underpads keep blood, vomit, or wound fluid off the car seat. A handheld AA LED flashlight is how you check gum color at night. These are prep tools, not treatments. They do not treat bloat, they do not stop bleeding, and they do not replace the ASPCA poison hotline or a veterinarian.</p>
 
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/wire+basket+dog+muzzle?s=health-emergency-signs", "/go/amazon-brand/quilted+disposable+underpads?s=health-emergency-signs", "/go/amazon-brand/handheld+aa+led+flashlight?s=health-emergency-signs"]} />
 
