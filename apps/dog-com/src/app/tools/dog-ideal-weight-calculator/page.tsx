@@ -217,8 +217,8 @@ export default function DogIdealWeightCalculatorPage() {
         </div>
       </section>
 
-      {/* Money path — live amazon-brand search hops (weight-check / portion kit).
-          ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+      {/* Shop note — live amazon-brand search buttons (weight-check / portion kit).
+          ShopCtas hides empty Chewy; never href="#" or an empty link.
           Amazon searches only — not a ranked list, not a diagnosis. */}
       <section id="ideal-weight-kit" className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <div className="max-w-2xl">

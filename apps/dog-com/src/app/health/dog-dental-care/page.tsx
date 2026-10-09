@@ -85,13 +85,13 @@ export default function DogDentalCarePage() {
 
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/soft+pet+toothbrush?s=health-dog-dental-care", "/go/amazon-brand/enzymatic+pet+toothpaste?s=health-dog-dental-care", "/go/amazon-brand/dental+chews+dog?s=health-dog-dental-care"]} />
 
-          {/* Money path — live amazon-brand search hops (daily dental kit).
-              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+          {/* Shop note — live amazon-brand search buttons (daily dental kit).
+              ShopCtas hides empty Chewy; never href="#" or an empty link.
               Amazon searches only — reuse live sister queries from
               vets.co dental-cleaning-guide (soft+pet+toothbrush,
               enzymatic+pet+toothpaste) and the dog health hub
               (dental+chews+dog). Prescription dental diets and brand
-              product pages are not shoppable hops. */}
+              product pages are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

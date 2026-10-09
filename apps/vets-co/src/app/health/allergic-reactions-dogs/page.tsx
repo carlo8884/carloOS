@@ -71,10 +71,10 @@ export default function AllergicReactionsPage() {
 
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/oatmeal+dog+shampoo?s=health-allergic-reactions-dogs", "/go/amazon-brand/dog+paw+cleaner+wipes?s=health-allergic-reactions-dogs", "/go/amazon-brand/soft+recovery+collar+dog?s=health-allergic-reactions-dogs"]} />
 
-          {/* Money path — live amazon-brand search hops (oatmeal
+          {/* Shop note — live amazon-brand search buttons (oatmeal
               dog shampoo / dog paw cleaner wipes / soft recovery
               collar). ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Amazon searches only — unused vs
+              or an empty link. Amazon searches only — unused vs
               #848–#1034 dog+ear+cleaner+solution,
               cotton+balls+for+dog+ears, dog+ear+drying+powder,
               UTI fountain/pads/bowl, kennel-cough
@@ -82,7 +82,7 @@ export default function AllergicReactionsPage() {
               chlorhexidine+dog+shampoo (#1013),
               soft+recovery+cone+dog, and soft+e+collar+dog.
               Apoquel, Cytopoint, prescription antihistamines,
-              and Benadryl product pages are not shoppable hops. */}
+              and Benadryl product pages are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

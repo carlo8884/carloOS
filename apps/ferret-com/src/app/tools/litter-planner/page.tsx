@@ -177,10 +177,10 @@ export default function LitterPlannerPage() {
         </div>
       </section>
 
-      {/* Money path — live amazon-brand search hops (wood / grass pellet / corner pan).
+      {/* Shop note — live amazon-brand search buttons (wood / grass pellet / corner pan).
           Wood + grass reuse the litter-review queries already on this page.
-          Corner pan reuses the cage-size calculator hop. ShopCtas hides empty
-          Chewy; never href="#" or PLACEHOLDER. */}
+          Corner pan reuses the cage-size calculator button. ShopCtas hides empty
+          Chewy; never href="#" or an empty link. */}
       <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <div className="max-w-2xl">
           <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/ferret+corner+litter+pan?s=tools-litter-planner" />

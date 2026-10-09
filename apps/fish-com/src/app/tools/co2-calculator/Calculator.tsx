@@ -16,7 +16,7 @@
  * coefficient here: the input is dKH, so that would overstate CO2 ~4.3×.)
  * Caveat: assumes only carbonate buffer. Phosphate buffers and discus buffers throw this off.
  *
- * Product-maintenance guidance only. Shop hops reuse live amazon-brand queries.
+ * Product-maintenance guidance only. Shop buttons reuse live amazon-brand queries.
  */
 
 import { useMemo, useState } from 'react'

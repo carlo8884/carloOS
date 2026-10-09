@@ -155,7 +155,7 @@ export default function WestNilePage() {
 
           <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/long+handle+stock+tank+brush?s=health-wnv", "/go/amazon-brand/20+foot+barn+mosquito+netting?s=health-wnv", "/go/amazon-brand/fine+mesh+horse+mosquito+sheet?s=health-wnv"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (long handle stock tank brush /
               20 foot barn mosquito netting /
               fine mesh horse mosquito sheet).
@@ -163,9 +163,9 @@ export default function WestNilePage() {
               tools, not a ranked product list, not a
               substitute for veterinary care, no Rx /
               vaccine / stall-fan / fly-sheet /
-              mosquito-dunk product page hops.
+              mosquito-dunk product page buttons.
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Amazon searches only —
+              or an empty link. Amazon searches only —
               unused vs #1099
               30+foot+cotton+lunge+line /
               leather+chain+lead+shank+horse /
@@ -193,7 +193,7 @@ export default function WestNilePage() {
               horse+sweet+itch+rug /
               horse+sweet+itch+hood (sweet-itch).
               Vaccines and prescriptions
-              are not shoppable hops. */}
+              are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

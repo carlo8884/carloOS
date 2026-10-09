@@ -202,9 +202,9 @@ export default function FilterGphCalculatorPage() {
           resourceLabel="Browse AquaClear 70 filters on Amazon →"
         />
 
-        {/* Money path — live amazon-brand search hops (HOB / canister / media /
+        {/* Shop note — live amazon-brand search buttons (HOB / canister / media /
             sponge / powerhead). ShopCtas hides empty Chewy; never href="#"
-            or PLACEHOLDER. HOB / canister / sponge queries match filter reviews
+            or an empty link. HOB / canister / sponge queries match filter reviews
             and the stocking calculator. */}
         <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/aquaclear+70+filter?s=tools-filter-gph-calculator", "/go/amazon-brand/fluval+307+canister+filter?s=tools-filter-gph-calculator", "/go/amazon-brand/aquarium+filter+media?s=tools-filter-gph-calculator", "/go/amazon-brand/aquarium+sponge+filter?s=tools-filter-gph-calculator", "/go/amazon-brand/aquarium+powerhead?s=tools-filter-gph-calculator"]} />
         <div id="shop" className="mb-8 rounded-xl border border-brand-border bg-brand-surface p-5">

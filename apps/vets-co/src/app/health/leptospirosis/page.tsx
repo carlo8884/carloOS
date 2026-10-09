@@ -72,7 +72,7 @@ export default function LeptospirosisPage() {
 
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/24+ounce+stainless+hiking+dog+bottle?s=health-leptospirosis", "/go/amazon-brand/powder+free+nitrile+exam+gloves?s=health-leptospirosis", "/go/amazon-brand/32+gallon+locking+animal+proof+trash+can?s=health-leptospirosis"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (24-ounce stainless hiking dog bottle /
               powder-free nitrile exam gloves /
               32-gallon locking animal-proof trash can).
@@ -81,9 +81,9 @@ export default function LeptospirosisPage() {
               ranked product list, not a substitute
               for veterinary care, no Rx / vaccine /
               Nobivac / L4 / doxycycline / ampicillin
-              product page hops.
+              product page buttons.
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Amazon searches only —
+              or an empty link. Amazon searches only —
               unused vs #1088
               small+digital+kitchen+food+scale /
               silicone+cat+grooming+glove /
@@ -141,7 +141,7 @@ export default function LeptospirosisPage() {
               monthly+pill+organizer /
               soft+sided+vet+visit+carrier.
               Nobivac, L4, doxycycline, and
-              ampicillin are not shoppable hops. */}
+              ampicillin are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

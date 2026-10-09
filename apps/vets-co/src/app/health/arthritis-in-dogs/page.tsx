@@ -79,14 +79,14 @@ export default function ArthritisDogsPage() {
 
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/dog+traction+rug?s=health-arthritis-in-dogs", "/go/amazon-brand/dog+ramp?s=health-arthritis-in-dogs", "/go/amazon-brand/raised+dog+bowl?s=health-arthritis-in-dogs", "/go/amazon-brand/orthopedic+dog+bed?s=health-arthritis-in-dogs"]} />
 
-          {/* Money path — live amazon-brand search hops (home-setup kit).
-              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+          {/* Shop note — live amazon-brand search buttons (home-setup kit).
+              ShopCtas hides empty Chewy; never href="#" or an empty link.
               Amazon searches only — everyday physical supplies matching
               on-page home-modification copy (rugs for traction, ramps,
               raised bowls, orthopedic bedding), not medication, vaccine,
-              anesthesia, or invented-product page hops. NSAIDs, human pain
+              anesthesia, or invented-product page buttons. NSAIDs, human pain
               relievers, injectable therapies, and omega-3 / joint
-              supplements are not shoppable hops. */}
+              supplements are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

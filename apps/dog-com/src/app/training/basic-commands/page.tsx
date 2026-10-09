@@ -192,8 +192,8 @@ export default function BasicCommandsPage() {
           resourceLabel="Browse puppy training treats on Amazon →"
         />
 
-        {/* Money path — live amazon-brand search hops (five-command kit).
-            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+        {/* Shop note — live amazon-brand search buttons (five-command kit).
+            ShopCtas hides empty Chewy; never href="#" or an empty link.
             Amazon searches only — not a ranked list. */}
         <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/puppy+training+treats?s=training-basic-commands", "/go/amazon-brand/dog+training+treat+pouch+belt+clip?s=training-basic-commands", "/go/amazon-brand/dog+training+clicker?s=training-basic-commands", "/go/amazon-brand/dog+long+line+leash?s=training-basic-commands"]} />
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">

@@ -222,8 +222,8 @@ export default function CO2CalculatorPage() {
           resourceLabel="Browse aquarium CO2 drop checkers on Amazon →"
         />
 
-        {/* Money path — live amazon-brand search hops (regulator / diffuser / drop checker / liquid carbon).
-            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER. */}
+        {/* Shop note — live amazon-brand search buttons (regulator / diffuser / drop checker / liquid carbon).
+            ShopCtas hides empty Chewy; never href="#" or an empty link. */}
         <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/aquarium+co2+drop+checker?s=tools-co2-calculator", "/go/amazon-brand/aquarium+co2+regulator+solenoid?s=tools-co2-calculator", "/go/amazon-brand/aquarium+co2+diffuser?s=tools-co2-calculator", "/go/amazon-brand/seachem+flourish+excel?s=tools-co2-calculator"]} />
         <div id="shop" className="mb-8 rounded-xl border border-brand-border bg-brand-surface p-5">
           <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">

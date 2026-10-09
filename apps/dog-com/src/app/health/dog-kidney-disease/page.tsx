@@ -102,14 +102,14 @@ export default function DogKidneyPage() {
 
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/dog+water+fountain?s=health-dog-kidney-disease", "/go/amazon-brand/heavy+ceramic+pet+water+bowl?s=health-dog-kidney-disease"]} />
 
-          {/* Money path — live amazon-brand search hops (fountain / extra
+          {/* Shop note — live amazon-brand search buttons (fountain / extra
               water bowls). ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Amazon searches only — reuse live sister
+              or an empty link. Amazon searches only — reuse live sister
               queries from the dog water-intake calculator
               (dog+water+fountain, heavy+ceramic+pet+water+bowl).
               Prescription renal diets, phosphate binders, subcutaneous
               fluids, and antihypertensive / ACE-inhibitor medications
-              are not shoppable hops. */}
+              are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop these supplies

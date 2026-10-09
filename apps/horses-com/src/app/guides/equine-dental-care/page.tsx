@@ -310,11 +310,11 @@ export default function EquineDentalCarePage() {
 
           <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/horse+hay+cubes?s=guides-equine-dental-care", "/go/amazon-brand/horse+mash?s=guides-equine-dental-care"]} />
 
-          {/* Money path — live amazon-brand search hops (dental-care kit).
-              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+          {/* Shop note — live amazon-brand search buttons (dental-care kit).
+              ShopCtas hides empty Chewy; never href="#" or an empty link.
               Amazon searches only — everyday physical supplies matching
               on-page post-float soft-feed copy (soaked hay cubes, mashes),
-              not medication, floating-procedure, or invented-kit hops.
+              not medication, floating-procedure, or invented-kit buttons.
               Apple sauce, syringes, oral paste, floats, and speculums are
               not named as shoppable owner supplies on this page. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">

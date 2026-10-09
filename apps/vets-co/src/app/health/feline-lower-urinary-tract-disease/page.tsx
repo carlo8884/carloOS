@@ -79,12 +79,12 @@ export default function FLUTDPage() {
 
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/cat+water+fountain?s=health-feline-lower-urinary-tract-disease", "/go/amazon-brand/extra+cat+litter+box?s=health-feline-lower-urinary-tract-disease", "/go/amazon-brand/canned+wet+cat+food?s=health-feline-lower-urinary-tract-disease"]} />
 
-          {/* Money path — live amazon-brand search hops (cat fountain /
+          {/* Shop note — live amazon-brand search buttons (cat fountain /
               extra litter boxes / canned wet cat food). ShopCtas hides
-              empty Chewy; never href="#" or PLACEHOLDER. Category
+              empty Chewy; never href="#" or an empty link. Category
               searches only — unused vs #993–#1023 dog+water+fountain,
-              ceramic pet water bowl, and existing cat-food hops.
-              Prescription urinary diets and medications are not hops. */}
+              ceramic pet water bowl, and existing cat-food buttons.
+              Prescription urinary diets and medications are not buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

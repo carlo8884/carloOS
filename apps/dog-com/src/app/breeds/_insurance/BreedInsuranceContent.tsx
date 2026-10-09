@@ -378,12 +378,12 @@ export function BreedInsuranceContent({ slug }: { slug: string }) {
               </div>
             </section>
 
-            {/* Money path — live amazon-brand kitchen hops
+            {/* Shop note — live amazon-brand kitchen buttons
                 matching on-page hereditary cost-driver /
                 enrollment-timing / OFA-CHIC copy. Unique
                 vs the dog breeds hub + vets insurance-hub
                 kitchens. Educational only — never a
-                product hop, never an Rx hop. */}
+                product button, never an Rx button. */}
             
 
             {/* FAQ — FAQAccordion emits FAQPage schema */}

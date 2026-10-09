@@ -184,8 +184,8 @@ export default function BeddingAndLitterTypesPage() {
             Whatever the material, the pan shape matters as much as the fill: a corner pan with a high back wall and a low front lip works with the ferret's instinct, as covered in our <a href="/care/litter-training">litter training</a> guide.
           </p>
 
-          {/* Money path — live amazon-brand search hops (bedding / litter gear).
-              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+          {/* Shop note — live amazon-brand search buttons (bedding / litter gear).
+              ShopCtas hides empty Chewy; never href="#" or an empty link.
               Amazon searches only — educational gear, not medications, not a ranked list.
               No cedar, pine shavings, or clumping-clay products. */}
           <h2 id="who">Who should buy which</h2>

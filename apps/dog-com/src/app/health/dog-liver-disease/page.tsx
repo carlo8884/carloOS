@@ -64,11 +64,11 @@ export default function DogLiverDiseasePage() {
 
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/pet+medical+records+binder?s=health-dog-liver-disease", "/go/amazon-brand/am+pm+weekly+pill+organizer?s=health-dog-liver-disease", "/go/amazon-brand/digital+hanging+luggage+scale?s=health-dog-liver-disease"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (pet medical records binder / AM/PM weekly
               pill organizer / digital hanging luggage
               scale). ShopCtas hides empty Chewy; never
-              href="#" or PLACEHOLDER. Amazon searches
+              href="#" or an empty link. Amazon searches
               only — unused vs #1045 LED medical
               penlight / pet emergency contact card /
               folding pet stretcher, #1044 pet
@@ -87,7 +87,7 @@ export default function DogLiverDiseasePage() {
               Royal Canin Hepatic, lactulose, Heartgard,
               Interceptor, Simparica, ProHeart, vaccine
               brands, and prescription brands are not shoppable
-              hops. */}
+              buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

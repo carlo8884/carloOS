@@ -11,7 +11,7 @@
  *   10 × 8 × 2 ft rectangle → 10 * 8 * 2 * 7.48052 = 1196.8832 ≈ 1197 US gal
  *   circular diameter 10 ft × depth 2 ft → Math.PI * (10 / 2) ** 2 * 2 * 7.48052 ≈ 1175 US gal
  *
- * Product-maintenance guidance only. Shop hops reuse live amazon-brand queries.
+ * Product-maintenance guidance only. Shop buttons reuse live amazon-brand queries.
  */
 
 import { useMemo, useState } from 'react'

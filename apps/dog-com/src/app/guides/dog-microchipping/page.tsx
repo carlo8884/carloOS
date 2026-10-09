@@ -278,12 +278,12 @@ export default function DogMicrochippingPage() {
 
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/iso+pet+microchip+scanner?s=guides-dog-microchipping", "/go/amazon-brand/engraved+dog+collar+id+tags?s=guides-dog-microchipping", "/go/amazon-brand/pet+id+tag+slide+on?s=guides-dog-microchipping"]} />
 
-          {/* Money path — live amazon-brand search hops (microchip registration kit).
-              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+          {/* Shop note — live amazon-brand search buttons (microchip registration kit).
+              ShopCtas hides empty Chewy; never href="#" or an empty link.
               Amazon searches only — everyday physical supplies matching
               on-page iso-pet-microchip-scanner / engraved-dog-collar-id-tags /
               pet-id-tag-slide-on copy, not GPS trackers, clinic implant kits,
-              or generic dog+id+tag+collar hops already used elsewhere. */}
+              or generic dog+id+tag+collar buttons already used elsewhere. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

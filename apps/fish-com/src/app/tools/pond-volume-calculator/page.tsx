@@ -190,8 +190,8 @@ export default function PondVolumeCalculatorPage() {
           resourceLabel="Browse EPDM pond liners on Amazon →"
         />
 
-        {/* Money path — live amazon-brand search hops (liner / pump / filter-skimmer / conditioner).
-            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER. */}
+        {/* Shop note — live amazon-brand search buttons (liner / pump / filter-skimmer / conditioner).
+            ShopCtas hides empty Chewy; never href="#" or an empty link. */}
         <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/epdm+pond+liner?s=tools-pond-volume", "/go/amazon-brand/submersible+pond+pump?s=tools-pond-volume", "/go/amazon-brand/pond+filter+skimmer+kit?s=tools-pond-volume", "/go/amazon-brand/pond+dechlorinator+water+conditioner?s=tools-pond-volume"]} />
         <div id="shop" className="mb-8 rounded-xl border border-brand-border bg-brand-surface p-5">
           <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">

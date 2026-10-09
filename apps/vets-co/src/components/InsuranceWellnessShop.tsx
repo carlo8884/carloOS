@@ -1,6 +1,6 @@
 /**
- * Complementary Amazon hops for the vets.co insurance / wellness money path.
- * ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+ * Complementary Amazon buttons for the vets.co insurance and wellness shop.
+ * ShopCtas hides empty Chewy; never href="#" or an empty link.
  *
  * Queries match prep items already cited on the emergency-triage card
  * (first-aid kit, digital thermometer) and the dog.com first-aid /

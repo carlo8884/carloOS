@@ -136,11 +136,11 @@ export default function FlyControlPage() {
 
           <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/horse+fly+mask?s=care-fly-control", "/go/amazon-brand/horse+fly+sheet?s=care-fly-control", "/go/amazon-brand/horse+fly+boots?s=care-fly-control", "/go/amazon-brand/horse+fly+spray?s=care-fly-control", "/go/amazon-brand/horse+fly+trap?s=care-fly-control"]} />
 
-          {/* Money path — live amazon-brand search hops (fly-control kit).
-              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+          {/* Shop note — live amazon-brand search buttons (fly-control kit).
+              ShopCtas hides empty Chewy; never href="#" or an empty link.
               Amazon searches only — everyday physical supplies matching
               on-page barrier / spray / trap copy, not sweet-itch diagnosis
-              or medical treatment hops. */}
+              or medical treatment buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

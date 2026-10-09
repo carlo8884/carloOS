@@ -205,8 +205,8 @@ export default function NewPuppyChecklistPage() {
         </div>
       </section>
 
-      {/* Money path — live amazon-brand search hops (first-week kit).
-          ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+      {/* Shop note — live amazon-brand search buttons (first-week kit).
+          ShopCtas hides empty Chewy; never href="#" or an empty link.
           Amazon searches only — not a ranked list, not a diagnosis. */}
       <section id="new-puppy-kit" className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <div className="max-w-2xl">

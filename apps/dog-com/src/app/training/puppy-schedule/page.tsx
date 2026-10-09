@@ -120,8 +120,8 @@ export default function PuppySchedulePage() {
           resourceLabel="Browse puppy food on Amazon →"
         />
 
-        {/* Money path — live amazon-brand search hops (schedule essentials).
-            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+        {/* Shop note — live amazon-brand search buttons (schedule essentials).
+            ShopCtas hides empty Chewy; never href="#" or an empty link.
             Amazon searches only — not a ranked list. */}
         <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/puppy+food?s=training-puppy-schedule", "/go/amazon-brand/wire+dog+crate+with+divider+panel?s=training-puppy-schedule", "/go/amazon-brand/puppy+training+treats?s=training-puppy-schedule", "/go/amazon-brand/enzymatic+pet+stain+odor+cleaner?s=training-puppy-schedule"]} />
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">

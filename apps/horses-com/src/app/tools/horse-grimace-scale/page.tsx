@@ -226,8 +226,8 @@ export default function HorseGrimaceScalePage() {
         </div>
       </section>
 
-      {/* Money path — live amazon-brand search hops (observation / comfort kit).
-          ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+      {/* Shop note — live amazon-brand search buttons (observation / comfort kit).
+          ShopCtas hides empty Chewy; never href="#" or an empty link.
           Amazon searches only — not a ranked list, not a diagnosis.
           High-pain outcomes should already have pushed ER triage above. */}
       <section id="horse-grimace-kit" className="bg-brand-surface px-container-sm sm:px-container pb-section">

@@ -150,13 +150,13 @@ export default function SaltElectrolytesPage() {
             Keep these on hand: a plain white horse salt block so every horse has a free-choice source, a salt-first electrolyte powder so heavy sweat is not replaced with sugar, and a wide-mouth water bucket so electrolytes are never given without water. These are educational barn tools, not a ranked product list, not a substitute for veterinary care, and not loose plain white salt and not an equine salt lick. </p>
 
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (plain white horse salt block /
               salt first horse electrolyte powder /
               wide mouth horse water bucket).
               Educational barn tools only; no Rx /
-              vaccine product page hops. ShopCtas hides empty
-              Chewy; never href="#" or PLACEHOLDER.
+              vaccine product page buttons. ShopCtas hides empty
+              Chewy; never href="#" or an empty link.
               Unused vs #1108
               stainless+horse+shedding+blade /
               wicking+horse+anti+sweat+sheet /

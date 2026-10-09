@@ -310,7 +310,7 @@ export default function VetsChihuahuaHealthPage() {
 
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/13+column+analysis+pad?s=breeds-chihuahua-health", "/go/amazon-brand/desk+blotter+pad?s=breeds-chihuahua-health", "/go/amazon-brand/numbered+log+book?s=breeds-chihuahua-health"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (13-column analysis pad /
               desk blotter pad /
               numbered log book).
@@ -319,9 +319,9 @@ export default function VetsChihuahuaHealthPage() {
               tools, not a ranked product list, not
               a substitute for veterinary care, no
               Rx / first-aid kit / thermometer /
-              carrier / insurance-brand product page hops.
+              carrier / insurance-brand product page buttons.
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Amazon searches only —
+              or an empty link. Amazon searches only —
               unused vs #1180
               two+column+ledger+pad /
               30+day+habit+tracker+pad /

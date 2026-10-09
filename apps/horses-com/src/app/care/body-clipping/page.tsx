@@ -136,11 +136,11 @@ export default function BodyClippingPage() {
 
           <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/horse+clippers?s=care-body-clipping", "/go/amazon-brand/horse+clipper+blades?s=care-body-clipping", "/go/amazon-brand/horse+clipper+oil?s=care-body-clipping", "/go/amazon-brand/horse+fleece+cooler?s=care-body-clipping"]} />
 
-          {/* Money path — live amazon-brand search hops (clipping kit).
-              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+          {/* Shop note — live amazon-brand search buttons (clipping kit).
+              ShopCtas hides empty Chewy; never href="#" or an empty link.
               Amazon searches only — everyday physical supplies matching
               on-page clipper / blade / oil / cooler copy, not rugs
-              (blanketing page), medication, or sedation hops. */}
+              (blanketing page), medication, or sedation buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

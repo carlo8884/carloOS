@@ -155,11 +155,11 @@ export default function HeavesPage() {
 
           <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/horse+hay+steamer?s=health-heaves", "/go/amazon-brand/horse+hay+soaking+bag?s=health-heaves"]} />
 
-          {/* Money path — live amazon-brand search hops (heaves kit).
-              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+          {/* Shop note — live amazon-brand search buttons (heaves kit).
+              ShopCtas hides empty Chewy; never href="#" or an empty link.
               Amazon searches only — everyday physical supplies matching
               on-page soak-or-steam hay copy, not bedding, fans, hay nets,
-              inhalers, steroids, or medication hops. */}
+              inhalers, steroids, or medication buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop these supplies

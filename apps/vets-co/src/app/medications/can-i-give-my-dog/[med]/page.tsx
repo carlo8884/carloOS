@@ -176,7 +176,7 @@ export default async function CanIGiveMyDogMedPage({ params }: PageProps) {
         <h2 id="faq">Frequently asked questions</h2>
         <FAQAccordion items={faqs} includeSchema={false} />
 
-        {/* Money path — live amazon-brand kitchen hops
+        {/* Shop note — live amazon-brand kitchen buttons
             matching on-page verdict / key-caution /
             ASPCA poison-control copy. Unique vs the
             can-i-give hub + medications-spoke kitchens.

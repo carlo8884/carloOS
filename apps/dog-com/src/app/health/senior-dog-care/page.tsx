@@ -172,14 +172,14 @@ export default function SeniorDogCarePage() {
 
         <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/senior+dog+food?s=health-senior-dog-care", "/go/amazon-brand/joint+support+dog+treats?s=health-senior-dog-care", "/go/amazon-brand/portion+control+food+scale+dog?s=health-senior-dog-care"]} />
 
-        {/* Money path — live amazon-brand search hops (senior formula, joint
+        {/* Shop note — live amazon-brand search buttons (senior formula, joint
             treats, portion scale). ShopCtas hides empty Chewy; never href="#"
-            or PLACEHOLDER. Amazon searches only — reuse live sister
+            or an empty link. Amazon searches only — reuse live sister
             queries from dog-age / BCS (joint+support+dog+treats,
             portion+control+food+scale+dog). Senior-formula search matches
             on-page "senior formula food" copy. Prescription kidney /
             cognitive diets, fish-oil bottles, and medication are not
-            shoppable hops. */}
+            shoppable buttons. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
             Shop related supplies

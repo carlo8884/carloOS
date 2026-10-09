@@ -137,8 +137,8 @@ export default function EquipmentHubPage() {
           resourceLabel="Browse AquaClear 70 filters on Amazon →"
         />
 
-        {/* Money path — live amazon-brand search hops (equipment kit).
-            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+        {/* Shop note — live amazon-brand search buttons (equipment kit).
+            ShopCtas hides empty Chewy; never href="#" or an empty link.
             Amazon searches only — not a ranked list. */}
         <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/aquaclear+70+filter?s=equipment-hub", "/go/amazon-brand/fluval+307+canister+filter?s=equipment-hub", "/go/amazon-brand/eheim+jager+heater?s=equipment-hub", "/go/amazon-brand/aquarium+digital+thermometer?s=equipment-hub", "/go/amazon-brand/seachem+prime+water+conditioner?s=equipment-hub", "/go/amazon-brand/api+freshwater+master+test+kit?s=equipment-hub", "/go/amazon-brand/aquarium+gravel+vacuum+siphon?s=equipment-hub"]} />
         <div className="mt-6 p-5 border border-brand-border rounded-xl bg-brand-surface max-w-content-wide mx-auto">

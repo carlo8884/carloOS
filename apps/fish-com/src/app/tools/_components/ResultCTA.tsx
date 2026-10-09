@@ -11,7 +11,7 @@ interface ResultCTAProps {
   /**
    * Amazon search words, or an existing plus-form slug
    * (`python+water+changer`). Spaces and plus signs are separators.
-   * Each token is encoded and rejoined with `+` so the hop matches the
+   * Each token is encoded and rejoined with `+` so the button matches the
    * locked ShopCtas queries (`%20` and `%2B` would not).
    */
   query: string

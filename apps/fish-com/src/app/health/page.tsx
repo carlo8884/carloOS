@@ -99,9 +99,9 @@ export default function FishHealthPage() {
           resourceLabel="Browse API Master Test Kit on Amazon →"
         />
 
-        {/* Money path — live amazon-brand search hops (health-library kit).
-            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-            Amazon searches only — not a ranked list. No medication hops. */}
+        {/* Shop note — live amazon-brand search buttons (health-library kit).
+            ShopCtas hides empty Chewy; never href="#" or an empty link.
+            Amazon searches only — not a ranked list. No medication buttons. */}
         <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/api+freshwater+master+test+kit?s=health-hub", "/go/amazon-brand/aquarium+quarantine+hospital+tank+net?s=health-hub", "/go/amazon-brand/aquarium+sponge+filter?s=health-hub", "/go/amazon-brand/eheim+jager+heater?s=health-hub", "/go/amazon-brand/aquarium+digital+thermometer?s=health-hub"]} />
         <div className="mt-6 p-5 border border-brand-border rounded-xl bg-brand-surface max-w-content-wide mx-auto">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">

@@ -214,8 +214,8 @@ export default function CatCalorieCalculatorPage() {
         </div>
       </section>
 
-      {/* Money path — live amazon-brand search hops (food / scale / feeders / treats).
-          ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER. */}
+      {/* Shop note — live amazon-brand search buttons (food / scale / feeders / treats).
+          ShopCtas hides empty Chewy; never href="#" or an empty link. */}
       <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <div className="max-w-2xl">
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/cat+food+measuring+scoop+grams?s=tools-cat-calorie-calculator", "/go/amazon-brand/kitchen+gram+scale?s=tools-cat-calorie-calculator", "/go/amazon-brand/slow+feeder+cat+bowl?s=tools-cat-calorie-calculator", "/go/amazon-brand/interactive+cat+feeder?s=tools-cat-calorie-calculator", "/go/amazon-brand/low+calorie+cat+treats?s=tools-cat-calorie-calculator"]} />

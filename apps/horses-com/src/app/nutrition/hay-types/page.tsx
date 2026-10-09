@@ -137,13 +137,13 @@ export default function HayTypesPage() {
 
           <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/orchard+grass+hay+horse?s=nutrition-hay", "/go/amazon-brand/alfalfa+hay+bales+horse?s=nutrition-hay", "/go/amazon-brand/timothy+alfalfa+mixed+hay+horse?s=nutrition-hay"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (orchard grass hay horse /
               alfalfa hay bales horse /
               timothy alfalfa mixed hay horse).
               Educational barn searches only; no Rx /
-              vaccine product page hops. ShopCtas hides empty
-              Chewy; never href="#" or PLACEHOLDER.
+              vaccine product page buttons. ShopCtas hides empty
+              Chewy; never href="#" or an empty link.
               Unused vs #1112
               tabletop+digital+horse+grain+scale /
               stackable+rubber+horse+feed+tubs /

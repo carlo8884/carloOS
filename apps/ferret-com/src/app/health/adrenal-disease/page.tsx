@@ -615,12 +615,12 @@ export default function FerretAdrenalDiseasePage() {
 
           <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/soft+cotton+receiving+blanket?s=health-adrenal-disease", "/go/amazon-brand/activated+charcoal+odor+absorber?s=health-adrenal-disease", "/go/chewy-brand/ferret+fleece+sleep+sack+hammock?s=health-adrenal-disease"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (ruled marble composition notebook /
               soft cotton receiving blanket /
               activated-charcoal odor absorber).
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Amazon searches only —
+              or an empty link. Amazon searches only —
               unused vs #1095
               air+driven+corner+sponge+filter /
               preset+25+watt+nano+aquarium+heater /
@@ -646,9 +646,9 @@ export default function FerretAdrenalDiseasePage() {
               dog+weight+log+book.
               Deslorelin, Suprelorin, melatonin, mitotane,
               ketoconazole, and prescription brands are not
-              shoppable hops. Existing Chewy ReviewCard
+              shoppable buttons. Existing Chewy ReviewCard
               (ferret fleece sleep sack) stays — it is
-              not an empty hop button. */}
+              not an empty button button. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

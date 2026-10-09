@@ -208,7 +208,7 @@ export default function IntroducingSecondFerretPage() {
 
           <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/extra+small+animal+travel+kennel?s=care-introducing-a-second-ferret", "/go/amazon-brand/portable+small+animal+playpen?s=care-introducing-a-second-ferret"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (extra small-animal travel kennel /
               portable small-animal playpen).
               The scent-swap fleece sleep pouch
@@ -217,7 +217,7 @@ export default function IntroducingSecondFerretPage() {
               open guinea-pig snuggle sacks, so
               this page has no pouch button.
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Amazon searches only —
+              or an empty link. Amazon searches only —
               unused vs #1067 small-animal-rabies-
               certificate-holder / top-loading-small-
               animal-carrier / fleece-small-animal-
@@ -239,7 +239,7 @@ export default function IntroducingSecondFerretPage() {
               pet+oral+feeding+syringe.
               Vaccines, Nobivac, IMRAB, diphenhydramine,
               insulin syringes, and prescription brands are not
-              shoppable hops. */}
+              shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

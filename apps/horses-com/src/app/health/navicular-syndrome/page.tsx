@@ -154,7 +154,7 @@ export default function NavicularPage() {
 
           <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/steel+heart+bar+horseshoe?s=health-navicular", "/go/amazon-brand/3+degree+leather+wedge+pad?s=health-navicular", "/go/amazon-brand/rocker+toe+steel+horseshoe?s=health-navicular"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (steel heart bar horseshoe /
               3 degree leather wedge pad /
               rocker toe steel horseshoe).
@@ -162,9 +162,9 @@ export default function NavicularPage() {
               tools, not a ranked product list, not a
               substitute for veterinary or farrier care,
               no Rx / vaccine / foam-sole-support /
-              soaking-boot / snow-pad product page hops.
+              soaking-boot / snow-pad product page buttons.
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Amazon searches only —
+              or an empty link. Amazon searches only —
               unused vs #1100
               long+handle+stock+tank+brush /
               20+foot+barn+mosquito+netting /
@@ -200,7 +200,7 @@ export default function NavicularPage() {
               cordless+barn+flood+light
               (farrier-schedule).
               Medications and prescriptions
-              are not shoppable hops. */}
+              are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

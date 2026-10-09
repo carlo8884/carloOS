@@ -229,7 +229,7 @@ export default function DogGestationCalculatorPage() {
         </div>
       </section>
 
-      {/* Interactive whelping kit + Amazon hops. ShopCtas hides empty Chewy. */}
+      {/* Interactive whelping kit + Amazon buttons. ShopCtas hides empty Chewy. */}
       <section id="whelping-kit" className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <div className="max-w-4xl">
           <WhelpingKit />

@@ -152,7 +152,7 @@ export default function MudFeverPage() {
 
           <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/heavy+duty+paddock+mud+grid?s=health-mud-fever", "/go/amazon-brand/full+length+horse+turnout+boots?s=health-mud-fever", "/go/amazon-brand/waffle+weave+horse+leg+towel?s=health-mud-fever"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (heavy duty paddock mud grid /
               full length horse turnout boots /
               waffle weave horse leg towel).
@@ -160,9 +160,9 @@ export default function MudFeverPage() {
               tools, not a ranked product list, not a
               substitute for veterinary care, no Rx /
               vaccine / antimicrobial / fly-boot /
-              shipping-boot / soaking-boot product page hops.
+              shipping-boot / soaking-boot product page buttons.
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Amazon searches only —
+              or an empty link. Amazon searches only —
               unused vs #1102
               irish+knit+horse+cooler /
               wool+exercise+quarter+sheet /
@@ -195,7 +195,7 @@ export default function MudFeverPage() {
               horse+clippers (body-clipping),
               clean+cotton+towels (gestation).
               Medications and prescriptions
-              are not shoppable hops. */}
+              are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

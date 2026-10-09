@@ -227,9 +227,9 @@ export default function FishDiseaseGuidePage() {
           resourceLabel="Browse quarantine / hospital tanks on Amazon →"
         />
 
-        {/* Money path — live amazon-brand search hops (hospital-tank kit).
-            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-            Amazon searches only — not a ranked list. No medication hops. */}
+        {/* Shop note — live amazon-brand search buttons (hospital-tank kit).
+            ShopCtas hides empty Chewy; never href="#" or an empty link.
+            Amazon searches only — not a ranked list. No medication buttons. */}
         <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/aquarium+quarantine+hospital+tank+net?s=health-disease-guide", "/go/amazon-brand/api+freshwater+master+test+kit?s=health-disease-guide", "/go/amazon-brand/aquarium+sponge+filter?s=health-disease-guide", "/go/amazon-brand/eheim+jager+heater?s=health-disease-guide", "/go/amazon-brand/aquarium+digital+thermometer?s=health-disease-guide"]} />
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">

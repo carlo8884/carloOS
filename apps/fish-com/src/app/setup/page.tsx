@@ -138,8 +138,8 @@ export default function AquariumSetupPage() {
           resourceLabel="Browse API Master Test Kit on Amazon →"
         />
 
-        {/* Money path — live amazon-brand search hops (first-tank kit).
-            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+        {/* Shop note — live amazon-brand search buttons (first-tank kit).
+            ShopCtas hides empty Chewy; never href="#" or an empty link.
             Amazon searches only — not a ranked list. */}
         <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/api+freshwater+master+test+kit?s=setup-aquarium", "/go/amazon-brand/aquaclear+70+filter?s=setup-aquarium", "/go/amazon-brand/fluval+307+canister+filter?s=setup-aquarium", "/go/amazon-brand/eheim+jager+heater?s=setup-aquarium", "/go/amazon-brand/aquarium+digital+thermometer?s=setup-aquarium", "/go/amazon-brand/seachem+prime+water+conditioner?s=setup-aquarium", "/go/amazon-brand/aquarium+gravel+vacuum+siphon?s=setup-aquarium"]} />
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">

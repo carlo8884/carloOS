@@ -78,7 +78,7 @@ export default function HyperthyroidismCatsPage() {
 
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/small+digital+kitchen+food+scale?s=health-hyperthyroidism-cats", "/go/amazon-brand/silicone+cat+grooming+glove?s=health-hyperthyroidism-cats", "/go/amazon-brand/8+ounce+glass+liquid+measuring+cup?s=health-hyperthyroidism-cats"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (small digital kitchen food scale /
               silicone cat grooming glove /
               8-ounce glass liquid measuring cup).
@@ -86,9 +86,9 @@ export default function HyperthyroidismCatsPage() {
               monitoring / lifestyle tools, not a
               ranked product list, not a substitute
               for veterinary care, no Rx / methimazole /
-              Felimazole / Hill's y/d / I-131 product page hops.
+              Felimazole / Hill's y/d / I-131 product page buttons.
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Amazon searches only —
+              or an empty link. Amazon searches only —
               unused vs #1087
               heavy+gauge+48+inch+dog+crate /
               2+foot+nylon+traffic+lead /
@@ -140,7 +140,7 @@ export default function HyperthyroidismCatsPage() {
               monthly+pill+organizer /
               soft+sided+vet+visit+carrier.
               Methimazole, Felimazole, Hill's y/d,
-              and I-131 are not shoppable hops. */}
+              and I-131 are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

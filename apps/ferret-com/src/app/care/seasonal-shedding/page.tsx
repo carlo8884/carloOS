@@ -342,14 +342,14 @@ export default function FerretSeasonalSheddingPage() {
 
           <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/soft+slicker+brush+small+animal?s=care-seasonal-shedding", "/go/amazon-brand/fine+tooth+metal+comb?s=care-seasonal-shedding", "/go/amazon-brand/reusable+lint+roller?s=care-seasonal-shedding"]} />
 
-          {/* Money path — live amazon-brand search hops (slicker / metal
+          {/* Shop note — live amazon-brand search buttons (slicker / metal
               comb / lint roller). ShopCtas hides empty Chewy; never
-              href="#" or PLACEHOLDER. Amazon searches only — unused vs
+              href="#" or an empty link. Amazon searches only — unused vs
               #993–#1025 dog slicker-brush-dog-grooming, puppy shampoo+
               clippers+slicker combo, horse curry/dandy/body brushes,
               ferret lickable-treat paste, sleep sacks, and #1025 dental
-              finger-toothbrush / infant-toothbrush / dental-wipe hops.
-              Hairball pastes, shampoos, and medications are not hops. */}
+              finger-toothbrush / infant-toothbrush / dental-wipe buttons.
+              Hairball pastes, shampoos, and medications are not buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

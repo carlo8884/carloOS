@@ -139,12 +139,12 @@ export default function FencingSafetyPage() {
 
           <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/horse+electric+tape?s=care-fencing-safety", "/go/amazon-brand/horse+fence+mesh?s=care-fencing-safety", "/go/amazon-brand/horse+electric+rope?s=care-fencing-safety", "/go/amazon-brand/electric+fence+tester?s=care-fencing-safety"]} />
 
-          {/* Money path — live amazon-brand search hops (fencing kit).
-              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+          {/* Shop note — live amazon-brand search buttons (fencing kit).
+              ShopCtas hides empty Chewy; never href="#" or an empty link.
               Amazon searches only — everyday physical supplies matching
               on-page electric-tape / horse-mesh / electric-rope / tester
               copy, not barbed wire, sheep mesh, medication, or
-              contractor lumber hops. */}
+              contractor lumber buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

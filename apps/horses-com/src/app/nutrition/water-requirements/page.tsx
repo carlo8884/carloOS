@@ -144,14 +144,14 @@ export default function WaterRequirementsPage() {
 
           <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/heated+horse+water+bucket?s=nutrition-water", "/go/amazon-brand/electrolyte+for+horses?s=nutrition-water"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (heated horse water bucket /
               electrolyte for horses).
               The flat-back stall bucket search is not a button:
               its first result was a feed bucket.
               Educational barn searches only; no Rx /
-              vaccine product page hops. ShopCtas hides empty
-              Chewy; never href="#" or PLACEHOLDER.
+              vaccine product page buttons. ShopCtas hides empty
+              Chewy; never href="#" or an empty link.
               Unused vs #1114 flat-back stall bucket
               (dropped), #1113
               orchard+grass+hay+horse /

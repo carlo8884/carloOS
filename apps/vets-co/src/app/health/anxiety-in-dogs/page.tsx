@@ -77,10 +77,10 @@ export default function AnxietyDogsPage() {
 
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/anxiety+vest+dog?s=health-anxiety-in-dogs", "/go/amazon-brand/pheromone+diffuser+dog?s=health-anxiety-in-dogs", "/go/amazon-brand/dog+heartbeat+comfort+toy?s=health-anxiety-in-dogs"]} />
 
-          {/* Money path — live amazon-brand search hops (anxiety
+          {/* Shop note — live amazon-brand search buttons (anxiety
               vest / pheromone diffuser / heartbeat comfort toy).
               ShopCtas hides empty Chewy; never href="#" or
-              PLACEHOLDER. Amazon searches only — unused vs
+              an empty link. Amazon searches only — unused vs
               #848–#1035 dog+anxiety+wrap, dog+crate+cover,
               white+noise+machine, lick+mat+dog,
               snuffle+mat+dog+enrichment,
@@ -88,7 +88,7 @@ export default function AnxietyDogsPage() {
               oatmeal+dog+shampoo, dog+paw+cleaner+wipes,
               and soft+recovery+collar+dog. Trazodone,
               fluoxetine, gabapentin, and other Rx
-              anxiolytics are not shoppable hops. */}
+              anxiolytics are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

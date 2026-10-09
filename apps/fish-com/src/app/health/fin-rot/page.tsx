@@ -72,9 +72,9 @@ export default function FinRotPage() {
         <h2>Fin Rot in Bettas — The Specific Case</h2>
         <p>Bettas are disproportionately affected by fin rot because: they are often kept in small, under-filtered tanks where water quality degrades quickly, their long fins are easily damaged by rough decorations or fin-nipping fish, and their elaborate fins provide more surface area for infection. Betta fin rot treatment follows the same protocol — but tank size and filtration upgrade is the most important preventive measure. A betta in a 5-gallon properly filtered tank rarely develops fin rot; a betta in an unfiltered 1-gallon bowl frequently does.</p>
 
-        {/* Money path — live amazon-brand search hops (water-first / isolate / gravel-vacuum kit).
-            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-            Amazon searches only — not a ranked list. No medication hops. */}
+        {/* Shop note — live amazon-brand search buttons (water-first / isolate / gravel-vacuum kit).
+            ShopCtas hides empty Chewy; never href="#" or an empty link.
+            Amazon searches only — not a ranked list. No medication buttons. */}
         <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/api+freshwater+master+test+kit?s=health-fin-rot", "/go/amazon-brand/aquarium+quarantine+hospital+tank+net?s=health-fin-rot", "/go/amazon-brand/aquarium+sponge+filter?s=health-fin-rot", "/go/amazon-brand/aquarium+gravel+vacuum+siphon?s=health-fin-rot"]} />
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">

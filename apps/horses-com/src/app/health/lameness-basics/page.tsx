@@ -170,7 +170,7 @@ export default function LamenessBasicsPage() {
 
           <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/30+foot+cotton+lunge+line?s=health-lameness", "/go/amazon-brand/leather+chain+lead+shank+horse?s=health-lameness", "/go/amazon-brand/orange+traffic+cone+set?s=health-lameness"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (30 foot cotton lunge line /
               leather chain lead shank horse /
               orange traffic cone set).
@@ -178,9 +178,9 @@ export default function LamenessBasicsPage() {
               tools, not a ranked product list, not a
               substitute for veterinary care, no Rx /
               vaccine / hoof-tester / soaking-boot /
-              ice-boot product page hops.
+              ice-boot product page buttons.
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Amazon searches only —
+              or an empty link. Amazon searches only —
               unused vs #1098
               weatherproof+storage+clipboard /
               round+rubber+feed+pan+horse /
@@ -209,7 +209,7 @@ export default function LamenessBasicsPage() {
               (grimace scale), horse+hoof+boots
               (hoof-care-basics).
               Hoof testers, vaccines, and prescriptions
-              are not shoppable hops. */}
+              are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop these supplies

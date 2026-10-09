@@ -71,13 +71,13 @@ export default function DogVomitingPage() {
 
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/mini+rice+cooker?s=health-dog-vomiting", "/go/amazon-brand/glass+meal+prep+containers?s=health-dog-vomiting"]} />
 
-          {/* Money path — live amazon-brand search hops (mini
+          {/* Shop note — live amazon-brand search buttons (mini
               rice cooker / glass meal-prep containers). ShopCtas
-              hides empty Chewy; never href="#" or PLACEHOLDER.
+              hides empty Chewy; never href="#" or an empty link.
               Amazon searches only. Anti-nausea Rx, prescription
               GI diets, probiotics, pumpkin, slow-feeders,
               elevated bowls, and Bailey chairs are not
-              shoppable hops. */}
+              shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

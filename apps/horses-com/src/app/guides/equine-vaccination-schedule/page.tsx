@@ -316,11 +316,11 @@ export default function VaccinationSchedulePage() {
 
           <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/horse+stall+fan?s=guides-equine-vaccination-schedule", "/go/amazon-brand/horse+stall+screen?s=guides-equine-vaccination-schedule"]} />
 
-          {/* Money path — live amazon-brand search hops (barn kit).
-              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+          {/* Shop note — live amazon-brand search buttons (barn kit).
+              ShopCtas hides empty Chewy; never href="#" or an empty link.
               Amazon searches only — everyday physical supplies matching
               on-page PHF stall-fan / stall-screen copy, not vaccine,
-              medication, needle, or invented-kit hops.
+              medication, needle, or invented-kit buttons.
               Vaccines, needles, epinephrine, FEI passports, and fly spray
               are not named as shoppable owner supplies on this page. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">

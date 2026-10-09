@@ -83,11 +83,11 @@ export default function SeizuresPage() {
 
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/digital+handheld+stopwatch?s=health-seizures-in-dogs", "/go/amazon-brand/foam+table+edge+bumper?s=health-seizures-in-dogs"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (digital handheld stopwatch / waterproof
               field notebook / foam table-edge bumper).
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Amazon searches only —
+              or an empty link. Amazon searches only —
               unused vs #1028 soft+throw+blanket /
               dog+crate+bumper+pads /
               interlocking+foam+floor+tiles, #1057
@@ -105,8 +105,8 @@ export default function SeizuresPage() {
               pet+emergency+contact+card /
               folding+pet+stretcher, #1044
               pet+vaccination+record+book, and #1053
-              dog+medical+alert+collar+tag hops. Rx
-              product pages are not shoppable hops. */}
+              dog+medical+alert+collar+tag buttons. Rx
+              product pages are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop these supplies

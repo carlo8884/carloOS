@@ -73,14 +73,14 @@ export default function DentalCleaningGuidePage() {
 
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/soft+pet+toothbrush?s=health-dental-cleaning-guide", "/go/amazon-brand/enzymatic+pet+toothpaste?s=health-dental-cleaning-guide", "/go/amazon-brand/dental+chews+dog?s=health-dental-cleaning-guide", "/go/amazon-brand/pet+dental+water+additive?s=health-dental-cleaning-guide"]} />
 
-          {/* Money path — live amazon-brand search hops (dental home-care kit).
-              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+          {/* Shop note — live amazon-brand search buttons (dental home-care kit).
+              ShopCtas hides empty Chewy; never href="#" or an empty link.
               Amazon searches only — everyday physical supplies matching
               on-page after-cleaning copy (soft toothbrush, enzymatic
               toothpaste, VOHC dental chews, VOHC water additive), not
-              medication, anesthesia, or invented-kit hops. Human fluoride
+              medication, anesthesia, or invented-kit buttons. Human fluoride
               toothpaste, CET/Vetradent product pages, and clinic procedure gear
-              are not shoppable hops. */}
+              are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

@@ -197,7 +197,7 @@ export default function BreedInsuranceHubPage() {
               </div>
             </section>
 
-            {/* Money path — live amazon-brand kitchen hops
+            {/* Shop note — live amazon-brand kitchen buttons
                 matching on-page why-breed-matters /
                 enroll-before-a-sign / breed-health copy.
                 Unique vs the dog breeds hub, vets

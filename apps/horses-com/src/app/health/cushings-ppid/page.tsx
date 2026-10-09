@@ -170,16 +170,16 @@ export default function PPIDPage() {
 
           <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/stainless+horse+shedding+blade?s=health-ppid", "/go/amazon-brand/wicking+horse+anti+sweat+sheet?s=health-ppid", "/go/amazon-brand/automatic+horse+waterer?s=health-ppid"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (stainless horse shedding blade /
               wicking horse anti sweat sheet /
               automatic horse waterer).
               These are educational coat-and-cooling
               tools, not a ranked product list, not a
               substitute for veterinary care, no Rx /
-              pergolide / ACTH / vaccine product page hops.
+              pergolide / ACTH / vaccine product page buttons.
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Amazon searches only —
+              or an empty link. Amazon searches only —
               unused vs #1107
               equine+hoof+angle+gauge /
               leather+horse+lunge+cavesson /
@@ -218,7 +218,7 @@ export default function PPIDPage() {
               easy+keeper+grazing+muzzle
               (laminitis).
               Medications and prescriptions
-              are not shoppable hops. */}
+              are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop these supplies

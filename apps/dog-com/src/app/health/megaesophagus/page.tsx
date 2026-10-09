@@ -70,11 +70,11 @@ export default function MegaesophagusPage() {
 
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/bailey+chair+dog?s=health-megaesophagus", "/go/amazon-brand/upright+dog+feeding+chair?s=health-megaesophagus"]} />
 
-          {/* Money path — live amazon-brand search hops (Bailey chair /
+          {/* Shop note — live amazon-brand search buttons (Bailey chair /
               upright feeding chair). ShopCtas hides empty Chewy; never
-              href="#" or PLACEHOLDER. Amazon searches only.
+              href="#" or an empty link. Amazon searches only.
               Canine Caviar, prescription diets, myasthenia gravis
-              medications, and antibiotics are not shoppable hops. */}
+              medications, and antibiotics are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

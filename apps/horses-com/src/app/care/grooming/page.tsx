@@ -144,8 +144,8 @@ export default function GroomingPage() {
           <p>A few widely-stocked, non-medical grooming tools that cover the core kit described above. These are everyday physical supplies — brushes, combs, and a hoof pick — not treatments for a skin condition; any rash, scabbing, or persistent irritation belongs with your veterinarian, not a brush.</p>
 
 
-          {/* Money path — live amazon-brand search hops (grooming kit).
-              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+          {/* Shop note — live amazon-brand search buttons (grooming kit).
+              ShopCtas hides empty Chewy; never href="#" or an empty link.
               Amazon searches only — everyday physical supplies matching
               on-page kit copy, not rain-rot / sweet-itch treatments. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">

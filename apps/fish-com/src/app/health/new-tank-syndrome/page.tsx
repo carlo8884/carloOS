@@ -82,9 +82,9 @@ export default function NewTankSyndromePage() {
           resourceLabel="Browse API Master Test Kit on Amazon →"
         />
 
-        {/* Money path — live amazon-brand search hops (fishless-cycle + fish-in kit).
-            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-            Amazon searches only — not a ranked list. No medication hops. */}
+        {/* Shop note — live amazon-brand search buttons (fishless-cycle + fish-in kit).
+            ShopCtas hides empty Chewy; never href="#" or an empty link.
+            Amazon searches only — not a ranked list. No medication buttons. */}
         <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/api+freshwater+master+test+kit?s=health-new-tank-syndrome", "/go/amazon-brand/seachem+prime+water+conditioner?s=health-new-tank-syndrome", "/go/amazon-brand/dr+tims+ammonium+chloride?s=health-new-tank-syndrome", "/go/amazon-brand/tetra+safestart+plus?s=health-new-tank-syndrome", "/go/amazon-brand/aquarium+sponge+filter?s=health-new-tank-syndrome"]} />
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">

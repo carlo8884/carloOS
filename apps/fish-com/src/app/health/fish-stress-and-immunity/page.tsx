@@ -63,9 +63,9 @@ export default function FishStressPage() {
         <h2>Stress, Quarantine, and Acclimation</h2>
         <p>Two moments carry concentrated stress risk: bringing home a new fish and acclimating it. New arrivals are already stressed and immunosuppressed from capture, shipping, and retail holding, which is exactly when latent infections flare. Quarantining new fish in a dedicated <a href="/setup/quarantine-tank-guide">quarantine tank</a> lets them recover in calm, pristine conditions and reveals illness before it reaches the display. Acclimate slowly to match temperature and chemistry, dim the lights, and avoid feeding heavily on the first day. Managing stress at these pinch points prevents a large share of the disease that otherwise follows new additions, and complements the broader picture covered in our <a href="/health/bacterial-infections">bacterial infections</a> guide.</p>
 
-        {/* Money path — live amazon-brand search hops (low-stress tank kit).
-            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-            Amazon searches only — not a ranked list. No medication hops. */}
+        {/* Shop note — live amazon-brand search buttons (low-stress tank kit).
+            ShopCtas hides empty Chewy; never href="#" or an empty link.
+            Amazon searches only — not a ranked list. No medication buttons. */}
         <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/api+freshwater+master+test+kit?s=health-stress-immunity", "/go/amazon-brand/eheim+jager+heater?s=health-stress-immunity", "/go/amazon-brand/aquarium+digital+thermometer?s=health-stress-immunity", "/go/amazon-brand/aquarium+quarantine+hospital+tank+net?s=health-stress-immunity"]} />
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">

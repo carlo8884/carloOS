@@ -134,11 +134,11 @@ export default function WinterCarePage() {
 
           <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/horse+tank+heater?s=care-winter-care", "/go/amazon-brand/ice+grit?s=care-winter-care", "/go/amazon-brand/horse+snow+pads?s=care-winter-care", "/go/amazon-brand/horse+shoe+studs?s=care-winter-care"]} />
 
-          {/* Money path — live amazon-brand search hops (winter-care kit).
-              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+          {/* Shop note — live amazon-brand search buttons (winter-care kit).
+              ShopCtas hides empty Chewy; never href="#" or an empty link.
               Amazon searches only — everyday physical supplies matching
               on-page tank-heater / grit / snow-pad / stud copy, not colic
-              or mud-fever diagnosis hops. Blankets stay on /care/blanketing. */}
+              or mud-fever diagnosis buttons. Blankets stay on /care/blanketing. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

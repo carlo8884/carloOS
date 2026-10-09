@@ -105,11 +105,11 @@ export default function DogVaccinationsPage() {
 
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/pet+vaccination+record+book?s=health-dog-vaccinations", "/go/amazon-brand/dog+seat+belt+tether?s=health-dog-vaccinations", "/go/amazon-brand/foldable+waterproof+puppy+mat?s=health-dog-vaccinations"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (pet vaccination record book / dog seat-belt
               tether / foldable waterproof puppy mat).
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Amazon searches only —
+              or an empty link. Amazon searches only —
               unused vs #1043 mosquito dunks / monthly
               pill organizer / soft-sided vet-visit
               carrier, #1042 gum-chart / recovery-food /
@@ -121,7 +121,7 @@ export default function DogVaccinationsPage() {
               Nobivac, DA2PP, Bordetella, rabies, Lyme,
               influenza, Heartgard, Interceptor,
               Simparica, ProHeart, flea+tick meds, and
-              prescription brands are not shoppable hops. */}
+              prescription brands are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

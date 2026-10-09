@@ -167,8 +167,8 @@ export default function VolumeCalculatorPage() {
           resourceLabel="Browse aquarium filters on Amazon →"
         />
 
-        {/* Money path — live amazon-brand search hops (glass / acrylic / stand / substrate / heater / filter).
-            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER. */}
+        {/* Shop note — live amazon-brand search buttons (glass / acrylic / stand / substrate / heater / filter).
+            ShopCtas hides empty Chewy; never href="#" or an empty link. */}
         <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/aquarium+filter+gallon?s=tools-aquarium-volume", "/go/amazon-brand/glass+aquarium+tank+gallon?s=tools-aquarium-volume", "/go/amazon-brand/acrylic+aquarium+tank?s=tools-aquarium-volume", "/go/amazon-brand/aquarium+stand?s=tools-aquarium-volume", "/go/amazon-brand/aquarium+substrate+gravel+bags?s=tools-aquarium-volume", "/go/amazon-brand/aquarium+heater+tank+size?s=tools-aquarium-volume"]} />
         <div id="shop" className="mb-8 rounded-xl border border-brand-border bg-brand-surface p-5">
           <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">

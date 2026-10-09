@@ -93,11 +93,11 @@ export default function DogArthritisPage() {
 
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/orthopedic+dog+bed?s=health-dog-arthritis", "/go/amazon-brand/dog+ramp?s=health-dog-arthritis"]} />
 
-          {/* Money path — live amazon-brand search hops (orthopedic
+          {/* Shop note — live amazon-brand search buttons (orthopedic
               dog bed / dog ramp). ShopCtas hides empty Chewy; never
-              href="#" or PLACEHOLDER. Amazon searches only.
+              href="#" or an empty link. Amazon searches only.
               NSAIDs, joint supplements, Adequan / Librela, Rx
-              weight diets, and named foods are not shoppable hops. */}
+              weight diets, and named foods are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop these supplies

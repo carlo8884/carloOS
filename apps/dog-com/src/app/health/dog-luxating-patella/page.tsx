@@ -83,12 +83,12 @@ export default function LuxatingPatellaPage() {
 
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/dog+knee+brace?s=health-dog-luxating-patella", "/go/amazon-brand/dog+rear+support+harness?s=health-dog-luxating-patella"]} />
 
-          {/* Money path — live amazon-brand search hops (dog
+          {/* Shop note — live amazon-brand search buttons (dog
               knee brace / rear-support harness). ShopCtas hides
-              empty Chewy; never href="#" or PLACEHOLDER. Category
+              empty Chewy; never href="#" or an empty link. Category
               searches only. Joint supplements, fish oil, NSAIDs,
               Rx weight diets, orthopedic beds, dog ramps, traction
-              rugs, raised bowls, and booties are not shoppable hops. */}
+              rugs, raised bowls, and booties are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

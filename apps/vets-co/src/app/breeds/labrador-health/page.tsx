@@ -107,7 +107,7 @@ export default function VetsLabradorHealthPage() {
 
         <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/flexible+sewing+tape+measure?s=breeds-labrador-health", "/go/amazon-brand/bound+composition+book?s=breeds-labrador-health", "/go/amazon-brand/letter+size+document+frame?s=breeds-labrador-health"]} />
 
-        {/* Money path — live amazon-brand search hops
+        {/* Shop note — live amazon-brand search buttons
             (flexible sewing tape measure /
             bound composition book /
             letter-size document frame).
@@ -116,9 +116,9 @@ export default function VetsLabradorHealthPage() {
             not a ranked product list, not a
             substitute for veterinary care, no Rx
             / first-aid kit / thermometer /
-            carrier / insurance-brand product page hops.
+            carrier / insurance-brand product page buttons.
             ShopCtas hides empty Chewy; never href="#"
-            or PLACEHOLDER. Amazon searches only —
+            or an empty link. Amazon searches only —
             unused vs #1174
             blank+pedigree+chart /
             round+color+coding+labels /

@@ -173,8 +173,8 @@ export default function EarCleaningPage() {
             This page describes supplies editorially and does not recommend a specific product to purchase.
           </p>
 
-          {/* Money path — live amazon-brand search hops (ear-grooming supplies).
-              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+          {/* Shop note — live amazon-brand search buttons (ear-grooming supplies).
+              ShopCtas hides empty Chewy; never href="#" or an empty link.
               Amazon searches only — educational gear, not medications, not a ranked list.
               No prescription mite treatments, no hydrogen peroxide, no alcohol. */}
           <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/pet+ear+cleaner?s=care-ear-cleaning", "/go/amazon-brand/cotton+pads?s=care-ear-cleaning", "/go/amazon-brand/ferret+lickable+treat+paste?s=care-ear-cleaning"]} />

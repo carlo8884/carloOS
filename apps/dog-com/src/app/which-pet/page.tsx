@@ -255,8 +255,8 @@ export default function WhichPetPage() {
           resourceLabel="Browse wire crates with a divider panel on Amazon →"
         />
 
-        {/* Money path — live amazon-brand search hops (first-week starter kit).
-            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+        {/* Shop note — live amazon-brand search buttons (first-week starter kit).
+            ShopCtas hides empty Chewy; never href="#" or an empty link.
             Amazon searches only — not a ranked list, not a species ranking. */}
         <section id="first-week-kit" className="mb-12 not-prose">
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/wire+dog+crate+with+divider+panel?s=which-pet", "/go/amazon-brand/puppy+food?s=which-pet", "/go/amazon-brand/julius+k9+idc+powerharness?s=which-pet", "/go/amazon-brand/dog+id+tag+collar?s=which-pet", "/go/amazon-brand/soft+dog+carrier?s=which-pet", "/go/amazon-brand/pet+first+aid+kit?s=which-pet"]} />

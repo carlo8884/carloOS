@@ -306,7 +306,7 @@ export default function VetsYorkshireTerrierHealthPage() {
 
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/two+column+ledger+pad?s=breeds-yorkshire-terrier-health", "/go/amazon-brand/30+day+habit+tracker+pad?s=breeds-yorkshire-terrier-health", "/go/amazon-brand/hourly+desk+pad?s=breeds-yorkshire-terrier-health"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (two-column ledger pad /
               30-day habit-tracker pad /
               hourly desk pad).
@@ -315,9 +315,9 @@ export default function VetsYorkshireTerrierHealthPage() {
               tools, not a ranked product list, not
               a substitute for veterinary care, no
               Rx / first-aid kit / thermometer /
-              carrier / insurance-brand product page hops.
+              carrier / insurance-brand product page buttons.
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Amazon searches only —
+              or an empty link. Amazon searches only —
               unused vs #1179
               analog+stopwatch /
               blank+index+cards /

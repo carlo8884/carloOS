@@ -51,7 +51,7 @@ interface PageProps {
   params: Promise<{ slug: string }>
 }
 
-/** Named Amazon search hops plus one existing calculator or review. */
+/** Named Amazon search buttons plus one existing calculator or review. */
 const EQUIPMENT_SHOP: Record<
   string,
   { heading: string; amazonHref: string; amazonLabel: string; nextHref: string; nextLabel: string }

@@ -153,7 +153,7 @@ export default function RingbonePage() {
 
           <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/equine+hoof+angle+gauge?s=health-ringbone", "/go/amazon-brand/leather+horse+lunge+cavesson?s=health-ringbone", "/go/amazon-brand/neoprene+horse+overreach+bell+boots?s=health-ringbone"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (equine hoof angle gauge /
               leather horse lunge cavesson /
               neoprene horse overreach bell boots).
@@ -161,9 +161,9 @@ export default function RingbonePage() {
               tools, not a ranked product list, not a
               substitute for veterinary care, no Rx /
               Adequan / NSAID / joint-supplement /
-              horseshoe product page hops.
+              horseshoe product page buttons.
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Amazon searches only —
+              or an empty link. Amazon searches only —
               unused vs #1106
               tow+behind+arena+drag+harrow /
               cotton+horse+polo+exercise+wraps /
@@ -210,7 +210,7 @@ export default function RingbonePage() {
               platinum+performance+CJ+joint+supplement
               (joint-supplements).
               Medications and prescriptions
-              are not shoppable hops. */}
+              are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

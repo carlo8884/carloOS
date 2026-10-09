@@ -71,7 +71,7 @@ export default function DogVaccinationsGuidePage() {
 
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/collapsible+silicone+travel+dog+bowl?s=health-dog-vaccinations-guide", "/go/amazon-brand/72+hour+digital+countdown+timer?s=health-dog-vaccinations-guide"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (letter-size thermal laminating pouches /
               72-hour digital countdown timer /
               collapsible silicone travel dog bowl).
@@ -81,9 +81,9 @@ export default function DogVaccinationsGuidePage() {
               list, not a substitute for veterinary
               care, no Rx / vaccine / Nobivac /
               DA2PP / Bordetella / rabies / Lyme /
-              influenza / Vaccicheck product page hops.
+              influenza / Vaccicheck product page buttons.
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Amazon searches only —
+              or an empty link. Amazon searches only —
               unused vs #1090
               hinged+cedar+sandbox+cover /
               metal+jaw+dog+waste+scooper /
@@ -123,7 +123,7 @@ export default function DogVaccinationsGuidePage() {
               foldable+waterproof+puppy+mat.
               Nobivac, DA2PP, Bordetella, rabies,
               Lyme, influenza, and Vaccicheck
-              are not shoppable hops. */}
+              are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop these supplies

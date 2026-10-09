@@ -110,13 +110,13 @@ export default function WeightManagementPage() {
 
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/kitchen+gram+scale?s=health-weight-management", "/go/amazon-brand/portion+control+food+scale+dog?s=health-weight-management"]} />
 
-          {/* Money path — live amazon-brand search hops (kitchen / food gram scale).
-              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+          {/* Shop note — live amazon-brand search buttons (kitchen / food gram scale).
+              ShopCtas hides empty Chewy; never href="#" or an empty link.
               Amazon searches only — reuse live sister queries from the
               dog calorie calculator (kitchen+gram+scale) and dog
               ideal-weight / BCS tools (portion+control+food+scale+dog).
               Measuring cups, commercial treat product pages, prescription WM
-              diets, and medication are not shoppable hops. */}
+              diets, and medication are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

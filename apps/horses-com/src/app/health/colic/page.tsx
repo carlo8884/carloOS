@@ -342,12 +342,12 @@ export default function ColicPage() {
 
           <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/equine+digital+rectal+thermometer?s=health-colic", "/go/amazon-brand/large+animal+stethoscope?s=health-colic", "/go/amazon-brand/soft+fleece+equine+cooler?s=health-colic"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (equine digital rectal thermometer /
               large animal stethoscope /
               soft fleece equine cooler).
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Amazon searches only —
+              or an empty link. Amazon searches only —
               unused vs #1061 farrier-log / hoof-stand /
               barn-flood-light, #1060 fecal-container /
               manure-rake / muck-cart, #1059 scoop /
@@ -360,7 +360,7 @@ export default function ColicPage() {
               equine+first+aid+kit, hoof-pick /
               hoof-boots, snow-pads / shoe-studs,
               stall-bedding / pasture-management. Rx
-              product pages are not shoppable hops. */}
+              product pages are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

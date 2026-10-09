@@ -159,7 +159,7 @@ export default function VetsGoldenRetrieverHealthPage() {
 
         <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/paint+chip+sample+cards?s=breeds-golden-retriever-health", "/go/amazon-brand/18+month+wall+calendar?s=breeds-golden-retriever-health"]} />
 
-        {/* Money path — live amazon-brand search hops
+        {/* Shop note — live amazon-brand search buttons
             (dot-grid notebook /
             paint-chip sample cards /
             18-month wall calendar).
@@ -168,9 +168,9 @@ export default function VetsGoldenRetrieverHealthPage() {
             tools, not a ranked product list, not
             a substitute for veterinary care, no
             Rx / first-aid kit / thermometer /
-            carrier / insurance-brand product page hops.
+            carrier / insurance-brand product page buttons.
             ShopCtas hides empty Chewy; never href="#"
-            or PLACEHOLDER. Amazon searches only —
+            or an empty link. Amazon searches only —
             unused vs #1175
             flexible+sewing+tape+measure /
             bound+composition+book /

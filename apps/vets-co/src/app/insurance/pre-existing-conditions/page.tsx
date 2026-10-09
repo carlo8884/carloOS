@@ -66,7 +66,7 @@ export default function PreExistingPage() {
 
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/pressboard+classification+folder?s=insurance-pre-existing-conditions", "/go/amazon-brand/clasp+envelope+letter+size?s=insurance-pre-existing-conditions", "/go/amazon-brand/red+and+blue+checking+pencil?s=insurance-pre-existing-conditions"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (pressboard classification folder /
               clasp envelope letter size /
               red-and-blue checking pencil).
@@ -75,9 +75,9 @@ export default function PreExistingPage() {
               not a ranked product list, not a
               substitute for veterinary care, no Rx
               / first-aid kit / thermometer /
-              carrier / insurance-brand product page hops.
+              carrier / insurance-brand product page buttons.
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Amazon searches only —
+              or an empty link. Amazon searches only —
               unused vs #1172
               full+page+magnifier /
               adjustable+copyholder /
@@ -94,7 +94,7 @@ export default function PreExistingPage() {
               wall+mounted+magnetic+monthly+planner.
               Carrier quote CTAs stay on
               /go/embrace and /go/aspca —
-              not amazon-brand hops. */}
+              not amazon-brand buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

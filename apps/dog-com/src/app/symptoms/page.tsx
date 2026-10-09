@@ -18,7 +18,7 @@
  * Trust-bar (QC-STANDARDS.md §1):
  *   - Byline is "Dog.com Editorial" — no fabricated DVM credentials
  *   - No first-person hands-on claims
- *   - Affiliate disclosure sits above kitchen-kit hops; Chewy stays omitted
+ *   - Affiliate disclosure sits above kitchen-kit buttons; Chewy stays omitted
  */
 
 import type { Metadata } from 'next'

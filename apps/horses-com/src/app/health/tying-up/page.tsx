@@ -165,7 +165,7 @@ export default function TyingUpPage() {
 
           <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/irish+knit+horse+cooler?s=health-tying-up", "/go/amazon-brand/wool+exercise+quarter+sheet?s=health-tying-up", "/go/amazon-brand/loose+plain+white+salt+horse?s=health-tying-up"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (irish knit horse cooler /
               wool exercise quarter sheet /
               loose plain white salt horse).
@@ -173,9 +173,9 @@ export default function TyingUpPage() {
               tools, not a ranked product list, not a
               substitute for veterinary care, no Rx /
               vaccine / fleece-cooler / salt-lick /
-              electrolyte-paste product page hops.
+              electrolyte-paste product page buttons.
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Amazon searches only —
+              or an empty link. Amazon searches only —
               unused vs #1101
               steel+heart+bar+horseshoe /
               3+degree+leather+wedge+pad /
@@ -208,7 +208,7 @@ export default function TyingUpPage() {
               high+fat+low+starch+horse+feed
               (nutrition pages).
               Medications and prescriptions
-              are not shoppable hops. */}
+              are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

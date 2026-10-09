@@ -83,11 +83,11 @@ export default function PancreatitisPage() {
 
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/low+fat+digestive+care+dog+food?s=health-pancreatitis-in-dogs", "/go/amazon-brand/lean+low+fat+dog+treats?s=health-pancreatitis-in-dogs", "/go/amazon-brand/digital+pet+food+portion+scale?s=health-pancreatitis-in-dogs"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (low-fat digestive-care dog food / lean
               low-fat dog treats / digital pet-food
               portion scale). ShopCtas hides empty Chewy;
-              never href="#" or PLACEHOLDER. Category
+              never href="#" or an empty link. Category
               searches only — unused vs #848–#1038
               digital+pet+scale, slow+feeder+dog+bowl,
               kitchen+gram+scale,
@@ -99,7 +99,7 @@ export default function PancreatitisPage() {
               washable+dog+pee+pads, and
               weighted+ceramic+dog+water+bowl.
               Prescription GI diets and med product pages are
-              not shoppable hops. */}
+              not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

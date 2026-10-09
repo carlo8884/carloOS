@@ -150,11 +150,11 @@ export default function SweetItchPage() {
 
           <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/horse+sweet+itch+rug?s=health-sweet-itch", "/go/amazon-brand/horse+sweet+itch+hood?s=health-sweet-itch"]} />
 
-          {/* Money path — live amazon-brand search hops (sweet-itch kit).
-              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+          {/* Shop note — live amazon-brand search buttons (sweet-itch kit).
+              ShopCtas hides empty Chewy; never href="#" or an empty link.
               Amazon searches only — everyday physical supplies matching
               on-page sweet-itch rug / hood copy, not fly sheets, fly
-              masks, fly spray, fans, blankets, or medication hops. */}
+              masks, fly spray, fans, blankets, or medication buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop these supplies

@@ -338,19 +338,19 @@ export default function DogSpayNeuterTimingPage() {
 
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/washable+dog+heat+pants?s=guides-dog-spay-neuter-timing", "/go/amazon-brand/male+dog+belly+band?s=guides-dog-spay-neuter-timing", "/go/amazon-brand/heavy+duty+dog+exercise+pen?s=guides-dog-spay-neuter-timing"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (washable dog heat pants / male dog belly
               band / heavy-duty dog exercise pen).
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Amazon searches only —
+              or an empty link. Amazon searches only —
               unused vs #848–#1040 washable+dog+pee+pads,
               washable+dog+bed+cover, pet+recovery+cone,
               soft+recovery+cone+dog, soft+e+collar+dog,
               soft+recovery+collar+dog,
               dog+recovery+crate, wire+dog+crate,
               extra+tall+baby+gate, engraved+dog+collar,
-              and GPS collar hops. Prescription and med
-              product pages are not shoppable hops. */}
+              and GPS collar buttons. Prescription and med
+              product pages are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

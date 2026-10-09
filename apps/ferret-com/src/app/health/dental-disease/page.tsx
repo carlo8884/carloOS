@@ -405,13 +405,13 @@ export default function FerretDentalDiseasePage() {
 
           <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/finger+toothbrush+pet?s=health-dental-disease", "/go/amazon-brand/infant+toothbrush+soft+bristle?s=health-dental-disease", "/go/amazon-brand/pet+dental+wipes?s=health-dental-disease"]} />
 
-          {/* Money path — live amazon-brand search hops (fingertip rubber
+          {/* Shop note — live amazon-brand search buttons (fingertip rubber
               brush / infant toothbrush / pet dental wipes). ShopCtas hides
-              empty Chewy; never href="#" or PLACEHOLDER. Category
+              empty Chewy; never href="#" or an empty link. Category
               searches only — unused vs #993–#1024 soft+pet+toothbrush,
               enzymatic+pet+toothpaste, dental+chews+dog,
               pet+dental+water+additive, and cat+dental.
-              Human toothpaste, named brands, and medications are not hops. */}
+              Human toothpaste, named brands, and medications are not buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

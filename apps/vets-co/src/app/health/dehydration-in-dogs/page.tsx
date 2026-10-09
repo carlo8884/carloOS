@@ -69,11 +69,11 @@ export default function DehydrationPage() {
 
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/unflavored+pediatric+electrolyte?s=health-dehydration-in-dogs", "/go/amazon-brand/kitchen+liquid+measuring+pitcher?s=health-dehydration-in-dogs", "/go/amazon-brand/shallow+lipped+dog+saucer?s=health-dehydration-in-dogs"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (unflavored pediatric electrolyte / kitchen
               liquid-measuring pitcher / shallow lipped dog
               saucer). ShopCtas hides empty Chewy; never
-              href="#" or PLACEHOLDER. Amazon searches only
+              href="#" or an empty link. Amazon searches only
               — unused vs #848–#1037 dog+water+fountain,
               stainless+steel+dog+fountain,
               heavy+ceramic+pet+water+bowl,
@@ -82,7 +82,7 @@ export default function DehydrationPage() {
               washable+dog+pee+pads, horse+electrolytes,
               ferret+electrolytes+recovery+food, and
               cool+water+towels. IV / SQ fluids and Pedialyte
-              named brands are not shoppable hops. */}
+              named brands are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

@@ -176,11 +176,11 @@ export default function DogSymptomsGuidePage() {
 
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/led+medical+penlight?s=health-dog-symptoms-guide", "/go/amazon-brand/pet+emergency+contact+card?s=health-dog-symptoms-guide", "/go/amazon-brand/folding+pet+stretcher?s=health-dog-symptoms-guide"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (LED medical penlight / pet emergency
               contact card / folding pet stretcher).
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Amazon searches only —
+              or an empty link. Amazon searches only —
               unused vs #1044 pet vaccination record
               book / dog seat-belt tether / foldable
               waterproof puppy mat, #1043 mosquito
@@ -196,7 +196,7 @@ export default function DogSymptomsGuidePage() {
               Wound gauze, Vetrap, soft dog muzzles,
               seizure throw blankets / crate bumpers /
               foam tiles, and prescription brands are not
-              shoppable hops. */}
+              shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

@@ -168,7 +168,7 @@ export default function ChokePage() {
 
           <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/lidded+5+gallon+feed+soaking+pail?s=health-choke", "/go/amazon-brand/large+smooth+feed+tub+rocks?s=health-choke", "/go/amazon-brand/apple+wedger+slicer?s=health-choke"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (lidded 5-gallon feed-soaking pail /
               large smooth feed-tub rocks /
               apple wedger slicer).
@@ -176,9 +176,9 @@ export default function ChokePage() {
               tools, not a ranked product list, not a
               substitute for veterinary care, no Rx /
               first-aid kit / thermometer / hay-net /
-              hay-soaking-bag / mash product page hops.
+              hay-soaking-bag / mash product page buttons.
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Amazon searches only —
+              or an empty link. Amazon searches only —
               unused vs #1093
               48+hour+digital+kitchen+timer /
               lined+telephone+message+pad /
@@ -201,7 +201,7 @@ export default function ChokePage() {
               beet+pulp+pellets+horse+feed.
               First-aid kits, digital equine
               thermometers, and prescriptions
-              are not shoppable hops. */}
+              are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

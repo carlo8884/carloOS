@@ -296,11 +296,11 @@ export default function HowToTakeDogsTemperaturePage() {
 
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/digital+rectal+thermometer+pet?s=guides-how-to-take-dogs-temperature", "/go/amazon-brand/water+based+lubricant+petroleum+jelly?s=guides-how-to-take-dogs-temperature", "/go/amazon-brand/isopropyl+alcohol+wipes?s=guides-how-to-take-dogs-temperature"]} />
 
-          {/* Money path — live amazon-brand search hops (home-vitals kit).
-              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+          {/* Shop note — live amazon-brand search buttons (home-vitals kit).
+              ShopCtas hides empty Chewy; never href="#" or an empty link.
               Amazon searches only — everyday physical supplies matching
               on-page digital-rectal-thermometer / petroleum-jelly lubricant /
-              isopropyl-alcohol-wipes copy, not the first-aid-kit wound hops
+              isopropyl-alcohol-wipes copy, not the first-aid-kit wound buttons
               or the generic digital+pet+thermometer key already pinned there. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">

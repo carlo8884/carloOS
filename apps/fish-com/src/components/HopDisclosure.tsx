@@ -8,7 +8,7 @@ import {
 import { AffiliateDisclosure } from '@carloOS/ui'
 
 /**
- * A live /go hop (partner tag set) gets the standard affiliate disclosure.
+ * A live /go button (partner tag set) gets the standard affiliate disclosure.
  * A held quote button or a plain untagged carrier link does not earn, so
  * it gets a neutral note instead of a commission line.
  */
@@ -22,7 +22,7 @@ export function HopDisclosure({
   href: string | readonly string[]
   siteId: SiteId
   noteClassName?: string
-  /** When false, a held or untagged hop adds no extra sentence. */
+  /** When false, a held or untagged button adds no extra sentence. */
   showQuietNote?: boolean
   /** Light text when this note sits on a dark hero. */
   tone?: 'on-dark'

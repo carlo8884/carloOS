@@ -181,8 +181,8 @@ export default function CatAgeCalculatorPage() {
         </p>
         <CatAgeCalculator />
 
-        {/* Money path — live amazon-brand search hops (life-stage kit).
-            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+        {/* Shop note — live amazon-brand search buttons (life-stage kit).
+            ShopCtas hides empty Chewy; never href="#" or an empty link.
             Amazon searches only — not a ranked list, not a diagnosis. */}
         <div id="cat-age-kit" className="mt-8 mb-8">
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/kitten+food?s=tools-cat-age-calculator", "/go/amazon-brand/senior+cat+food?s=tools-cat-age-calculator", "/go/amazon-brand/digital+pet+scale?s=tools-cat-age-calculator", "/go/amazon-brand/cat+carrier?s=tools-cat-age-calculator", "/go/amazon-brand/cat+dental?s=tools-cat-age-calculator"]} />

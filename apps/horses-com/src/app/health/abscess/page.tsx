@@ -156,11 +156,11 @@ export default function AbscessPage() {
 
           <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/epsom+salt+horse+hoof?s=health-abscess", "/go/amazon-brand/horse+hoof+soaking+boot?s=health-abscess"]} />
 
-          {/* Money path — live amazon-brand search hops (abscess soak kit).
-              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+          {/* Shop note — live amazon-brand search buttons (abscess soak kit).
+              ShopCtas hides empty Chewy; never href="#" or an empty link.
               Amazon searches only — everyday physical supplies matching
               on-page Epsom-salt soak / soaking-boot copy, not poultice,
-              bandage, hoof picks, riding hoof boots, or medication hops. */}
+              bandage, hoof picks, riding hoof boots, or medication buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop these supplies

@@ -161,10 +161,10 @@ export default function GermanShepherdHealthPage() {
 
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/dog+assisted+walking+sling?s=health-german-shepherd-health", "/go/amazon-brand/dog+hind+paw+booties?s=health-german-shepherd-health", "/go/amazon-brand/dog+hip+brace?s=health-german-shepherd-health"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (dog assisted-walking sling / dog hind-paw
               booties / dog hip brace). ShopCtas hides
-              empty Chewy; never href="#" or PLACEHOLDER.
+              empty Chewy; never href="#" or an empty link.
               Amazon searches only — unused vs #1048
               silicone dog grooming glove / analog
               bathroom scale / dog dental finger brush,
@@ -198,7 +198,7 @@ export default function GermanShepherdHealthPage() {
               soft+dog+carrier / soft+pet+carrier.
               Pancreatic enzymes, cyclosporine,
               tacrolimus, and prescription brands are not
-              shoppable hops. */}
+              shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

@@ -85,11 +85,11 @@ export default function CushingDiseasePage() {
 
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/gallon+gravity+dog+waterer?s=health-cushing-disease", "/go/amazon-brand/extra+large+disposable+dog+pee+pads?s=health-cushing-disease", "/go/amazon-brand/dog+cooling+bandana?s=health-cushing-disease"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (gallon gravity dog waterer / extra-large
               disposable dog pee pads / dog cooling
               bandana). ShopCtas hides empty Chewy;
-              never href="#" or PLACEHOLDER.
+              never href="#" or an empty link.
               Amazon searches only — unused vs #1051
               self-warming dog mat / fleece dog sweater
               / dog slicker brush, #1050 dog lymph-node
@@ -112,7 +112,7 @@ export default function CushingDiseasePage() {
               soft+dog+carrier / soft+pet+carrier.
               Trilostane, Vetoryl, Lysodren, mitotane,
               prednisone, insulin, and prescription brands are not
-              shoppable hops. */}
+              shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

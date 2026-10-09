@@ -66,7 +66,7 @@ export default function BreedRiskPage() {
 
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/blank+pedigree+chart?s=insurance-breed-specific-risk", "/go/amazon-brand/round+color+coding+labels?s=insurance-breed-specific-risk", "/go/amazon-brand/5+compartment+letter+sorter?s=insurance-breed-specific-risk"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (blank pedigree chart /
               round color-coding labels /
               5-compartment letter sorter).
@@ -75,9 +75,9 @@ export default function BreedRiskPage() {
               not a ranked product list, not a
               substitute for veterinary care, no Rx
               / first-aid kit / thermometer /
-              carrier / insurance-brand product page hops.
+              carrier / insurance-brand product page buttons.
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Amazon searches only —
+              or an empty link. Amazon searches only —
               unused vs #1173
               pressboard+classification+folder /
               clasp+envelope+letter+size /
@@ -98,7 +98,7 @@ export default function BreedRiskPage() {
               wall+mounted+magnetic+monthly+planner.
               Carrier quote CTAs stay on
               /go/trupanion and /go/figo —
-              not amazon-brand hops. */}
+              not amazon-brand buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

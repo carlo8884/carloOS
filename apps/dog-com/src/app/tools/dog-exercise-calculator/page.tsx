@@ -157,8 +157,8 @@ export default function DogExerciseCalculatorPage() {
         </div>
       </section>
 
-      {/* Money path — live amazon-brand search hops (walk / play kit).
-          ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+      {/* Shop note — live amazon-brand search buttons (walk / play kit).
+          ShopCtas hides empty Chewy; never href="#" or an empty link.
           Amazon searches only — not a ranked list, not a workout plan. */}
       <section id="dog-exercise-kit" className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <div className="max-w-2xl">

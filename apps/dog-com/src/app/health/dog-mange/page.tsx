@@ -82,12 +82,12 @@ export default function DogMangePage() {
 
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/washable+dog+bed+cover?s=health-dog-mange", "/go/amazon-brand/pet+safe+laundry+detergent?s=health-dog-mange"]} />
 
-          {/* Money path — live amazon-brand search hops (washable
+          {/* Shop note — live amazon-brand search buttons (washable
               dog bed cover / pet-safe laundry detergent). ShopCtas
-              hides empty Chewy; never href="#" or PLACEHOLDER.
+              hides empty Chewy; never href="#" or an empty link.
               Amazon searches only. Isoxazoline parasiticide
               brands, ivermectin, amitraz, medicated shampoo, and
-              recovery cones are not shoppable hops. */}
+              recovery cones are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

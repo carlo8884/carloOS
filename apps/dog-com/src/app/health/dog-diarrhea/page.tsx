@@ -76,14 +76,14 @@ export default function DogDiarrheaPage() {
 
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/dog+probiotic?s=health-dog-diarrhea", "/go/amazon-brand/plain+canned+pumpkin+dog?s=health-dog-diarrhea"]} />
 
-          {/* Money path — live amazon-brand search hops (dog
+          {/* Shop note — live amazon-brand search buttons (dog
               probiotic / plain canned pumpkin). ShopCtas hides
-              empty Chewy; never href="#" or PLACEHOLDER.
+              empty Chewy; never href="#" or an empty link.
               Amazon searches only. Antibiotics,
               metronidazole, Imodium, Pepto-Bismol,
               prescription GI diets, cherry-eye recovery
               collars, and obesity slow-feeders are not
-              shoppable hops. */}
+              shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

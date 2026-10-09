@@ -150,12 +150,12 @@ export default function ThrushPage() {
 
           <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/topical+equine+thrush+antiseptic?s=health-thrush", "/go/amazon-brand/folding+pocket+equine+hoof+pick?s=health-thrush", "/go/amazon-brand/equine+stall+sweet+lime?s=health-thrush"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (topical equine thrush antiseptic /
               folding pocket equine hoof pick /
               equine stall sweet lime).
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Amazon searches only —
+              or an empty link. Amazon searches only —
               unused vs #1063 foam-pads / sand-bedding /
               easy-keeper-muzzle, #1062 thermometer /
               stethoscope / fleece-cooler, #1061
@@ -168,7 +168,7 @@ export default function ThrushPage() {
               horse+hoof+pick / horse+hoof+pick+brush /
               horse+hoof+boots / pine+shavings /
               copper+sulfate / iodine. prescription brands are not
-              shoppable hops. */}
+              shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

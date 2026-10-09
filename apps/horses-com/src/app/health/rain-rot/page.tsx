@@ -150,7 +150,7 @@ export default function RainRotPage() {
 
           <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/portable+3+sided+horse+run+in+shelter?s=health-rain-rot", "/go/amazon-brand/labeled+stackable+horse+grooming+caddy?s=health-rain-rot", "/go/amazon-brand/large+mesh+horse+blanket+wash+bag?s=health-rain-rot"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (portable 3 sided horse run in shelter /
               labeled stackable horse grooming caddy /
               large mesh horse blanket wash bag).
@@ -158,9 +158,9 @@ export default function RainRotPage() {
               tools, not a ranked product list, not a
               substitute for veterinary care, no Rx /
               vaccine / antimicrobial / waterproof-sheet /
-              mud-grid / fly-sheet product page hops.
+              mud-grid / fly-sheet product page buttons.
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Amazon searches only —
+              or an empty link. Amazon searches only —
               unused vs #1103
               heavy+duty+paddock+mud+grid /
               full+length+horse+turnout+boots /
@@ -193,7 +193,7 @@ export default function RainRotPage() {
               horse+fly+sheet (fly-control),
               horse+sweet+itch+rug (sweet-itch).
               Medications and prescriptions
-              are not shoppable hops. */}
+              are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

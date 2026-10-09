@@ -119,8 +119,8 @@ export default function HoofPickingPage() {
 
           <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/horse+hoof+pick?s=care-hoof-picking", "/go/amazon-brand/horse+hoof+pick+brush?s=care-hoof-picking"]} />
 
-          {/* Money path — live amazon-brand search hops (hoof-picking kit).
-              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+          {/* Shop note — live amazon-brand search buttons (hoof-picking kit).
+              ShopCtas hides empty Chewy; never href="#" or an empty link.
               Amazon searches only — everyday physical supplies matching
               on-page tools copy, not thrush / abscess treatments. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">

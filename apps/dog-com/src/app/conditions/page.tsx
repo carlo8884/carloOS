@@ -26,7 +26,7 @@
  *   - Byline is "Dog.com Editorial — sourced from cited references"
  *   - No fabricated DVM credentials, no first-person hands-on claims
  *   - No AI-generated humans
- *   - Affiliate disclosure sits above kitchen-kit hops; Chewy stays omitted
+ *   - Affiliate disclosure sits above kitchen-kit buttons; Chewy stays omitted
  *   - Every condition resolves to a real reference page; link-check.mjs
  *     verifies this in CI
  */

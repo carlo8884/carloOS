@@ -62,9 +62,9 @@ export default function DropsyPage() {
         <h2>Quarantine Remaining Fish</h2>
         <p>When one fish develops dropsy from a bacterial systemic infection, other fish in the same tank are at risk — particularly if they are stressed by the same water quality issues. Monitor all other fish closely. A preemptive course of antibiotics in the display tank is sometimes recommended when multiple fish are showing early signs, but should be weighed against the impact on biological filtration.</p>
 
-        {/* Money path — live amazon-brand search hops (hospital-tank kit).
-            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-            Amazon searches only — not a ranked list. No medication hops. */}
+        {/* Shop note — live amazon-brand search buttons (hospital-tank kit).
+            ShopCtas hides empty Chewy; never href="#" or an empty link.
+            Amazon searches only — not a ranked list. No medication buttons. */}
         <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/api+freshwater+master+test+kit?s=health-dropsy", "/go/amazon-brand/aquarium+quarantine+hospital+tank+net?s=health-dropsy", "/go/amazon-brand/aquarium+sponge+filter?s=health-dropsy", "/go/amazon-brand/eheim+jager+heater?s=health-dropsy", "/go/amazon-brand/aquarium+digital+thermometer?s=health-dropsy"]} />
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">

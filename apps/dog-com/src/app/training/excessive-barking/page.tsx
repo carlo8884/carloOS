@@ -63,8 +63,8 @@ export default function ExcessiveBarkingPage() {
           resourceLabel="Browse snuffle mats on Amazon →"
         />
 
-        {/* Money path — live amazon-brand search hops (bark-control / enrichment kit).
-            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+        {/* Shop note — live amazon-brand search buttons (bark-control / enrichment kit).
+            ShopCtas hides empty Chewy; never href="#" or an empty link.
             Amazon searches only — not a ranked list. */}
         <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/snuffle+mat+dog+enrichment?s=training-excessive-barking", "/go/amazon-brand/puzzle+feeder+dog?s=training-excessive-barking", "/go/amazon-brand/lick+mat+dog?s=training-excessive-barking", "/go/amazon-brand/calming+dog+chews?s=training-excessive-barking"]} />
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">

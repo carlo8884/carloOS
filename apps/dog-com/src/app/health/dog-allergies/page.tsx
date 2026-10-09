@@ -160,12 +160,12 @@ export default function DogAllergiesPage() {
 
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/hepa+air+purifier?s=health-dog-allergies", "/go/amazon-brand/hepa+filter+kit?s=health-dog-allergies"]} />
 
-          {/* Money path — live amazon-brand search hops (HEPA air
+          {/* Shop note — live amazon-brand search buttons (HEPA air
               purifier / HEPA filter kit). ShopCtas hides empty Chewy;
-              never href="#" or PLACEHOLDER. Amazon searches only.
+              never href="#" or an empty link. Amazon searches only.
               Chlorhexidine shampoo, bathing products, Rx allergy meds
               (Apoquel / Cytopoint / Atopica), and prescription diets
-              are not shoppable hops. */}
+              are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

@@ -171,8 +171,8 @@ export default function HarnessCollarSizePage() {
         </div>
       </section>
 
-      {/* Money path — live amazon-brand search hops (walk kit).
-          ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+      {/* Shop note — live amazon-brand search buttons (walk kit).
+          ShopCtas hides empty Chewy; never href="#" or an empty link.
           Amazon searches only — not a ranked list, not a brand guarantee. */}
       <section id="walk-kit" className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <div className="max-w-2xl">

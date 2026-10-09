@@ -4,16 +4,18 @@
  * appear in customer-facing copy on the five earning sites
  * (dog-com, fish-com, horses-com, vets-co, ferret-com).
  *
- * The phrases are the ones removed in Rounds 204–208: inventory
+ * The phrases are the ones removed in Rounds 204–209: inventory
  * asides ("already live on", "does not hop", "(those live on …)"),
  * hop numbers (#1168), TL;DR labels, slug-shaped shop labels
  * ("Deductibles-reimbursement kit", "Shop the visit-cadence kit"),
  * "not a … hop" / "not a reason to hop" asides, any other
  * customer-facing "hop" or "hops" that means an affiliate link
- * ("The hop below", "never hops", "not shoppable hops"), and shop
+ * ("The hop below", "never hops", "not shoppable hops"), shop
  * or dev jargon (ASIN, category search, SKU, slug, query,
  * affiliate ID, partner held, placeholder, shoppable, internal
- * redirect, invented inventory). Real-word uses stay on the
+ * redirect, invented inventory), the owner's name, handle, or
+ * Gmail address, and visible stub text (TODO, FIXME, lorem,
+ * placeholder). Real-word uses stay on the
  * allowlist: three-legged hop, war-dance hop, treat hopper, a horse
  * that "will not bear weight on a limb, hops,", pinned ears, mucosal
  * or racing integrity, and breed, microchip, or OFA registries.
@@ -54,6 +56,16 @@ export const RULES = [
     id: 'shop-cta',
     pattern: /\bCTAs?\b/,
     reason: 'Customer-facing "CTA" label',
+  },
+  {
+    id: 'owner-identity',
+    pattern: /\bCarlo\b|\bcarlo8884\b|(?<![A-Za-z])gmail\.com/i,
+    reason: 'Owner name, handle, or Gmail address in customer copy',
+  },
+  {
+    id: 'stub-copy',
+    pattern: /\b(?:TODO|FIXME|lorem|placeholders?)\b/i,
+    reason: 'Visible stub text (TODO, FIXME, lorem, or placeholder)',
   },
 ]
 
@@ -215,6 +227,11 @@ export function customerJargonHay(src) {
   return s
 }
 
+/** Visible copy with the Monte Carlo aquarium plant removed. */
+export function customerOwnerHay(src) {
+  return decodeEntities(stripComments(src)).replace(/\bmonte carlo\b/gi, ' ')
+}
+
 export function scanSource(src) {
   const visible = stripComments(src)
   const flat = decodeEntities(visible).replace(/\s+/g, ' ')
@@ -222,11 +239,13 @@ export function scanSource(src) {
   for (const rule of RULES) {
     const hay = rule.id === 'customer-hop'
       ? customerHopHay(src)
-      : rule.id === 'shop-jargon' || rule.id === 'shop-cta'
+      : rule.id === 'shop-jargon' || rule.id === 'shop-cta' || rule.id === 'stub-copy'
         ? customerJargonHay(src)
-        : rule.id === 'slug-kit' || rule.id === 'shop-slug-kit'
-          ? visible
-          : flat
+        : rule.id === 'owner-identity'
+          ? customerOwnerHay(src)
+          : rule.id === 'slug-kit' || rule.id === 'shop-slug-kit'
+            ? visible
+            : flat
     if (rule.pattern.test(hay)) {
       const match = hay.match(rule.pattern)
       hits.push({
@@ -279,6 +298,13 @@ export function selfCheck() {
     'Pass the query string through to the retailer.',
     'The page slug is not a label.',
     'Real CTA wires when the directory loads.',
+    'Real listings will populate after Carlo selects a verified data source.',
+    'Write the editor at owner@gmail.com about this page.',
+    'The note is signed carlo8884.',
+    'TODO: replace this sentence before launch.',
+    'FIXME the dosage line.',
+    'lorem ipsum dolor sit amet, sample body copy.',
+    'The button href is PLACEHOLDER.',
   ]
   const good = [
     'Pack a pet first-aid kit for the clinic ride.',
@@ -317,6 +343,12 @@ export function selfCheck() {
     '{schema}',
     'const query = firstQuery(searchParams?.q)',
     'sku: "epigen-90"',
+    '{/* Carlo review stays in a comment */}\n<p>Pack a first-aid kit.</p>',
+    'import type { SiteId } from "@carloOS/config"',
+    'className="carloOS-article"',
+    'Email editorial@dog.com with the page address.',
+    'dogmail.com stays a domain name.',
+    'Carpets include dwarf hairgrass and monte carlo.',
   ]
   const errors = []
   for (const sample of bad) {
@@ -362,10 +394,19 @@ function main() {
     // customer-facing hop/hops only, so a blurb in a .ts file cannot hide.
     let found = scanSource(readFileSync(file, 'utf8'))
     if (file.endsWith('.ts')) {
-      found = found.filter((hit) => hit.id === 'customer-hop' || hit.id === 'shop-jargon' || hit.id === 'shop-cta')
+      found = found.filter((hit) =>
+        hit.id === 'customer-hop' ||
+        hit.id === 'shop-jargon' ||
+        hit.id === 'shop-cta' ||
+        hit.id === 'owner-identity' ||
+        hit.id === 'stub-copy')
     }
     if (/\/(?:dashboard|admin)\//.test(rel) || rel.endsWith('/affiliate-routes.ts')) {
-      found = found.filter((hit) => hit.id !== 'shop-jargon' && hit.id !== 'shop-cta')
+      found = found.filter((hit) =>
+        hit.id !== 'shop-jargon' &&
+        hit.id !== 'shop-cta' &&
+        hit.id !== 'owner-identity' &&
+        hit.id !== 'stub-copy')
     }
     const site = SITES.find((s) => rel.startsWith(`apps/${s}/`))
     if (found.length && site) bySite[site] += found.length

@@ -292,9 +292,9 @@ export default function DogChocolateToxicityCalculatorPage() {
         </div>
       </section>
 
-      {/* Money path — live amazon-brand search hops (safety kit).
-          ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-          These hops do not treat or reverse chocolate poisoning. */}
+      {/* Shop note — live amazon-brand search buttons (safety kit).
+          ShopCtas hides empty Chewy; never href="#" or an empty link.
+          These buttons do not treat or reverse chocolate poisoning. */}
       <section id="chocolate-safety-kit" className="px-container-sm sm:px-container pb-section">
         <div className="max-w-2xl">
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/activated+charcoal+pet?s=tools-chocolate-toxicity", "/go/amazon-brand/hydrogen+peroxide+3+percent+first+aid?s=tools-chocolate-toxicity", "/go/amazon-brand/pet+first+aid+kit+dog?s=tools-chocolate-toxicity", "/go/amazon-brand/pet+emergency+kit+dog+toxin?s=tools-chocolate-toxicity", "/go/amazon-brand/dog+crate+for+recovery?s=tools-chocolate-toxicity"]} />

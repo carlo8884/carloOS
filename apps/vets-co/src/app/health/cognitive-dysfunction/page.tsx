@@ -75,17 +75,17 @@ export default function CognitiveDysfunctionPage() {
 
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/plug+in+night+light?s=health-cognitive-dysfunction", "/go/amazon-brand/dog+sniff+box?s=health-cognitive-dysfunction", "/go/amazon-brand/senior+dog+food+puzzle?s=health-cognitive-dysfunction"]} />
 
-          {/* Money path — live amazon-brand search hops (plug-in
+          {/* Shop note — live amazon-brand search buttons (plug-in
               night light / sniff box / senior food-puzzle).
               ShopCtas hides empty Chewy; never href="#" or
-              PLACEHOLDER. Amazon searches only — unused vs
+              an empty link. Amazon searches only — unused vs
               #848–#1036 puzzle+feeder+dog, snuffle+mat+dog+enrichment,
               senior+dog+food, joint+support+dog+treats,
               portion+control+food+scale+dog, anxiety+vest+dog,
               pheromone+diffuser+dog, and
               dog+heartbeat+comfort+toy. Bright Mind, Anipryl
               (selegiline), melatonin, and fish-oil
-              supplements are not shoppable hops. */}
+              supplements are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

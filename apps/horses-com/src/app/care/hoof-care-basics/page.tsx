@@ -133,8 +133,8 @@ export default function HoofCareBasicsPage() {
 
           <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/horse+hoof+pick?s=care-hoof-care-basics", "/go/amazon-brand/horse+hoof+pick+brush?s=care-hoof-care-basics", "/go/amazon-brand/horse+hoof+boots?s=care-hoof-care-basics"]} />
 
-          {/* Money path — live amazon-brand search hops (daily hoof-care kit).
-              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+          {/* Shop note — live amazon-brand search buttons (daily hoof-care kit).
+              ShopCtas hides empty Chewy; never href="#" or an empty link.
               Amazon searches only — everyday physical supplies matching
               on-page daily-care / shoeing copy, not thrush / abscess / laminitis treatments. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">

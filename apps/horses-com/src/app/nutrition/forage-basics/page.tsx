@@ -169,13 +169,13 @@ export default function ForageBasicsPage() {
             Keep these on hand: a horse hay-probe moisture tester so moldy forage is not stored or fed, an equine hay-core sampler so a lab sample is representative rather than a grab of the top flake, and a wall-mounted horse hay rack so forage stays off dirty ground. These are educational barn tools, not a ranked product list, not a substitute for veterinary or nutritionist care, and not a hanging hay-bale scale, an EMS forage-NSC hay-test kit, or strip-grazing posts.
           </p>
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (horse hay probe moisture tester /
               equine hay core sampler /
               wall mounted horse hay rack).
               Educational barn tools only; no Rx /
-              vaccine product page hops. ShopCtas hides empty
-              Chewy; never href="#" or PLACEHOLDER.
+              vaccine product page buttons. ShopCtas hides empty
+              Chewy; never href="#" or an empty link.
               Unused vs #1110
               plain+white+horse+salt+block /
               salt+first+horse+electrolyte+powder /

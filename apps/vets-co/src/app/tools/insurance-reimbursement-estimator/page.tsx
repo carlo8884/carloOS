@@ -234,9 +234,9 @@ export default function InsuranceReimbursementEstimatorPage() {
 
         <InsuranceWellnessShop source="tools-insurance-reimbursement-estimator" />
 
-        {/* Money path — complementary amazon-brand search hops (home-care prep
+        {/* Shop note — complementary amazon-brand search buttons (home-care prep
             beside a reimbursement estimate). ShopCtas hides empty Chewy; never
-            href="#" or PLACEHOLDER. Amazon searches only — not a ranked
+            href="#" or an empty link. Amazon searches only — not a ranked
             list. InsuranceWellnessShop above stays as-is; this block does not
             re-rank Trupanion / Healthy Paws / Embrace. */}
         <div id="insurance-home-care-kit" className="mt-8 mb-8">

@@ -79,13 +79,13 @@ export default function ParvoPage() {
 
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/accelerated+hydrogen+peroxide+disinfectant?s=health-parvovirus-in-puppies", "/go/amazon-brand/disposable+shoe+covers?s=health-parvovirus-in-puppies", "/go/amazon-brand/pump+sprayer?s=health-parvovirus-in-puppies"]} />
 
-          {/* Money path — live amazon-brand search hops (AHP
+          {/* Shop note — live amazon-brand search buttons (AHP
               disinfectant / disposable shoe covers / pump
               sprayer). ShopCtas hides empty Chewy; never
-              href="#" or PLACEHOLDER. Amazon searches only.
+              href="#" or an empty link. Amazon searches only.
               3% first-aid peroxide, enzymatic cleaners,
               vaccines, IV fluids, and anti-nausea Rx are not
-              shoppable hops. */}
+              shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

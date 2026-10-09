@@ -276,8 +276,8 @@ export default function WaterParametersHubPage() {
           resourceLabel="Browse API Master Test Kit on Amazon →"
         />
 
-        {/* Money path — live amazon-brand search hops (test + water-change kit).
-            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+        {/* Shop note — live amazon-brand search buttons (test + water-change kit).
+            ShopCtas hides empty Chewy; never href="#" or an empty link.
             Amazon searches only — not a ranked list. */}
         <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/api+freshwater+master+test+kit?s=water-parameters", "/go/amazon-brand/seachem+prime+water+conditioner?s=water-parameters", "/go/amazon-brand/aquarium+gravel+vacuum+siphon?s=water-parameters", "/go/amazon-brand/python+water+changer?s=water-parameters", "/go/amazon-brand/aquarium+digital+thermometer?s=water-parameters"]} />
         <div className="mt-6 p-5 border border-brand-border rounded-xl bg-brand-surface">

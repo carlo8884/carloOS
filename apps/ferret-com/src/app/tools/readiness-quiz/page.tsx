@@ -200,9 +200,9 @@ export default function ReadinessQuizPage() {
         </div>
       </section>
 
-      {/* Money path — live amazon-brand search hops (cage / litter / food / carrier).
+      {/* Shop note — live amazon-brand search buttons (cage / litter / food / carrier).
           Reuses queries already shipped on ferret reviews + cage-size + cost calculator.
-          ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER. */}
+          ShopCtas hides empty Chewy; never href="#" or an empty link. */}
       <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <div className="max-w-2xl">
           <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/ferret+nation+critter+nation+double+unit?s=tools-readiness-quiz", "/go/amazon-brand/high+protein+ferret+food+kibble?s=tools-readiness-quiz", "/go/amazon-brand/ferret+carrier+hard+sided?s=tools-readiness-quiz"]} />

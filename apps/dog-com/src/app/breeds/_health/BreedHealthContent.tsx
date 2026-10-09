@@ -391,12 +391,12 @@ export function BreedHealthContent({ slug }: { slug: string }) {
         </Link>
       </p>
 
-      {/* Money path — live amazon-brand kitchen hops
+      {/* Shop note — live amazon-brand kitchen buttons
           matching on-page issue-frequency / OFA-CHIC
           screening / AVMA-breed-club copy. Unique vs
           the health-spoke + breeds-hub kitchens.
-          Educational only — never a vaccine hop,
-          never an Rx hop. */}
+          Educational only — never a vaccine button,
+          never an Rx button. */}
 
       {/* ── Section: FAQs ─────────────────────────────────────────────────── */}
       <h2 id="faqs">Frequently Asked Questions</h2>
