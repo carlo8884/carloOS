@@ -12,7 +12,7 @@ import { affiliateClickParams } from '../lib/affiliate-click'
 import { experimentEventParams } from '../lib/experiment-client'
 import { trackEvent } from '../lib/track-event'
 
-function slotId(anchor: HTMLAnchorElement, marked: string | null, recovery: boolean): string {
+function slotId(anchor: HTMLAnchorElement, marked: string | null | undefined, recovery: boolean): string {
   if (recovery) return 'search-recovery'
   const card = anchor.closest('[data-review-card]')
   if (card instanceof HTMLElement && card.id) return card.id
