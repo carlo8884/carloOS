@@ -65,7 +65,7 @@ export default function BigBarkerVsCasperGuidePage() {
           ]}
         />
       }
-     priceAsOf="2026-10-09">
+     priceAsOf="2026-10-08">
       <div className="carloOS-article">
         <p>The <Link href="/reviews/best-dog-beds">bed review</Link> already splits this purchase. Big Barker is the orthopedic pick. Casper is the everyday foam pick.</p>
         <h2>What the review says about Big Barker</h2>
