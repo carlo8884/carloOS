@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildItemListSchema, buildMetadata, combineSchemas } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildItemListSchema, buildMetadata, combineSchemas, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
 import { HopDisclosure } from '../../../components/HopDisclosure'
 
 // Request-time env, same as the insurance comparison. A set partner tag
@@ -79,6 +79,7 @@ export default function TrupanionVsFigoGuidePage() {
       }
     >
       <div className="carloOS-article">
+          <LastUpdated date="2026-10-09" />
         <EmailCapture
           variant="inline"
           siteId="vets-co"
@@ -105,6 +106,14 @@ export default function TrupanionVsFigoGuidePage() {
         <p>Start the Trupanion quote when an unlimited annual payout and direct-to-vet payment are the features you are comparing, and wellness coverage is not required. Start the Figo quote when you want high-limit tiers and an app claim flow, and you will read the orthopedic and bilateral language before you enroll. On both, confirm hereditary coverage in the sample policy rather than in a marketing line. Do not treat either quote-based line as a price from this page.</p>
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
+                <ArticleSourcesList
+            title="Sources"
+            sources={[
+            { label: "Trupanion", url: "https://www.trupanion.com/", publisher: "Trupanion" },
+            { label: "Figo", url: "https://figopetinsurance.com/", publisher: "Figo" },
+            { label: "Healthy Paws", url: "https://www.healthypawspetinsurance.com/", publisher: "Healthy Paws" },
+            ]}
+          />
       </div>
     </ArticleLayout>
   )

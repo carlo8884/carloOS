@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, RelatedLinks, ShopCtas, LastReviewed } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, RelatedLinks, ShopCtas, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Arthritis in Dogs — Signs, Management, Mobility | Vets.co", description: "Annual osteoarthritis prevalence was 2.5% in a UK primary-care cohort (Anderson et al., 2018). Signs and a multimodal plan.", path: '/health/arthritis-in-dogs', type: 'article' })
@@ -51,7 +51,7 @@ export default function ArthritisDogsPage() {
       >
         <div className="carloOS-article">
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-09-04T00:00:00Z" reviewedBy="Editorial team" />
-          <LastReviewed date="2026-10-09" />
+          <LastUpdated date="2026-10-09" />
 
           <CalloutBox variant="info" title="Arthritis is treatable, not just inevitable">
             Many owners assume a stiff older dog is simply "slowing down" and that nothing can be done. In reality, osteoarthritis pain responds well to a structured plan. Dogs that seem to have lost their spark often become noticeably more active and engaged once their joint pain is properly managed.

@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, ShopCtas, LastReviewed } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, ShopCtas, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: '14 Signs Your Dog Is in Pain — Subtle | Vets.co', description: 'Dogs hide pain well. 14 signs — from obvious limping to subtle changes in posture, appetite, and behavior — that indicate a dog is experiencing pain.', path: '/health/pain-signs-dogs', type: 'article' })
@@ -57,7 +57,7 @@ export default function PainSignsPage() {
 </>}
       >
         <div className="carloOS-article">
-          <LastReviewed date="2026-10-09" />
+          <LastUpdated date="2026-10-09" />
 
           <p className="text-base text-brand-text-mid leading-relaxed mb-8">A stoic dog in chronic pain may show none of the classic &quot;pain&quot; behaviors — no whimpering, no limping, no obvious distress. They adapt. They stop doing things that hurt, move differently, interact less. The change from baseline is what matters. Know your dog&apos;s normal. Household observation gear — an egg-crate foam dog kennel pad, carpeted wooden pet steps, a wide-platform veterinary floor scale — is how posture, stair reluctance, restlessness, and weight change stay visible.</p>
           {SIGNS.map((item, i) => (

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, QuietPartnerLink, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, QuietPartnerLink, RelatedLinks, buildArticleSchema, buildMetadata, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
@@ -67,6 +67,7 @@ export default function CosequinVsPlatinumGuidePage() {
       }
     >
       <div className="carloOS-article">
+          <LastUpdated date="2026-10-09" />
         <p>The <Link href="/supplements/joint-supplements">joint-supplement review</Link> already lists Nutramax Cosequin ASU Plus as the ASU pick and Platinum Performance CJ as the comprehensive pick. Cosequin milligrams differ by powder and pellets — check the label. Platinum CJ does not list chondroitin.</p>
         <h2>What the review says about Cosequin</h2>
         <p>Nutramax Cosequin ASU Plus is Best Evidence (ASU) and the winner. The current Cosequin ASU Plus page lists glucosamine, MSM, chondroitin, and ASU plus other ingredients (<a className="break-all" href="https://www.cosequin.com/product/horses/cosequin-asu-plus">https://www.cosequin.com/product/horses/cosequin-asu-plus</a>). Milligrams differ for powder and pellets — check the label. The initial period is 2–4 weeks. The printed price is $60–95 per 30-day supply.</p>
@@ -77,6 +78,12 @@ export default function CosequinVsPlatinumGuidePage() {
         <QuietPartnerLink href="/go/smartpak/cosequin-asu-plus?s=reviews-cosequin-vs-platinum-guide" label="Compare Cosequin ASU Plus at SmartPak →" />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
+                <ArticleSourcesList
+            title="Sources"
+            sources={[
+            { label: "www.cosequin.com/product/horses/cosequin-asu-plus", url: "https://www.cosequin.com/product/horses/cosequin-asu-plus", publisher: "www.cosequin.com" },
+            ]}
+          />
       </div>
     </ArticleLayout>
   )

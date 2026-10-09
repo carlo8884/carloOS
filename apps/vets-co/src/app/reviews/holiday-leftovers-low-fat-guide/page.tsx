@@ -1,7 +1,7 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata, PrimaryHop } from '@carloOS/ui'
+import { ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata, PrimaryHop, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'vets-co',
@@ -80,6 +80,7 @@ export default function HolidayLeftoversLowFatGuidePage() {
       }
     >
       <div className="carloOS-article">
+          <LastUpdated date="2026-10-08" />
         <p>The <Link href="/health/pancreatitis-in-dogs">pancreatitis page</Link> names a high-fat meal as the most recognized trigger, and then says many cases have no single cause. For a dog that has already had pancreatitis, prevention on that page is a consistent low-fat diet, no fatty table scraps, no rich treats, and a lean body weight. The holiday sentence is specific: owners should be especially careful around holidays, when fatty leftovers cause a predictable surge in cases.</p>
         <h2>When the low-fat food applies</h2>
         <p>The same page says household recovery-diet tools sit beside that advice only after a veterinarian has confirmed the dog is ready for a home low-fat plan. The low-fat digestive-care food is described as the same class of consistent recovery diet the page already names. It is not a leftover buffet and not a one-off bland meal. Lean low-fat treats are the substitute so bacon grease, holiday skin, and rich chews stay off the plate. A portion scale is the third tool on that page, and it stays there. None of them treats an acute episode. The page is explicit that these are not Hill&apos;s i/d Low Fat, Royal Canin Gastrointestinal Low Fat, or Purina EN prescription products.</p>
@@ -104,6 +105,13 @@ export default function HolidayLeftoversLowFatGuidePage() {
             'Browse low-fat digestive-care dog foods on Amazon',
           ]}
         />
+                <ArticleSourcesList
+            title="Sources"
+            sources={[
+            { label: "Purina", url: "https://www.purina.com/", publisher: "Purina" },
+            { label: "Royal Canin", url: "https://www.royalcanin.com/", publisher: "Royal Canin" },
+            ]}
+          />
       </div>
     </ArticleLayout>
   )

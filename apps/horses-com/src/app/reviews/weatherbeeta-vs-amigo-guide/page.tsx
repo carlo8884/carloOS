@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { HopDisclosure } from '../../../components/HopDisclosure'
-import { ArticleLayout, FAQAccordion, QuietPartnerLink, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, QuietPartnerLink, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: 'Weatherbeeta vs Amigo Turnout | Horses.com',
@@ -69,6 +69,7 @@ export default function WeatherbeetaVsAmigoGuidePage() {
       priceAsOf="2026-10-05"
     >
       <div className="carloOS-article">
+          <LastUpdated date="2026-10-08" />
         <EmailCapture
           variant="inline"
           siteId="horses-com"
@@ -96,6 +97,13 @@ export default function WeatherbeetaVsAmigoGuidePage() {
         <p>The Weatherbeeta is the pick when wither rubs are the reason for a new turnout. The sale price can differ from the band above.</p>
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
+                <ArticleSourcesList
+            title="Sources"
+            sources={[
+            { label: "Horseware", url: "https://www.horseware.com/", publisher: "Horseware" },
+            { label: "Weatherbeeta", url: "https://www.weatherbeeta.com/", publisher: "Weatherbeeta" },
+            ]}
+          />
       </div>
     </ArticleLayout>
   )

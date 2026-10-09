@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { TableShopLink, RelatedReads, ComparisonFoot, EmailCapture, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, CalloutBox, PullQuote, ArticleByline, FAQAccordion, PriceAsOf } from '@carloOS/ui'
+import { TableShopLink, RelatedReads, ComparisonFoot, EmailCapture, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, CalloutBox, PullQuote, ArticleByline, FAQAccordion, PriceAsOf, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import { InsuranceWellnessShop } from '../../../components/InsuranceWellnessShop'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
@@ -143,6 +143,7 @@ export default function VetsPetInsurancePage() {
         <div className="grid lg:grid-cols-[1fr_270px] gap-12 min-w-0">
           <div className="min-w-0">
             <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-10-07T00:00:00Z" reviewedBy="Editorial team" />
+          <LastUpdated date="2026-10-09" />
 
 
             <PullQuote variant="lead" quote="Enroll before your first vet visit. Every condition noted in records before enrollment may be permanently excluded as pre-existing." attribution="The single most important point on pet insurance" />
@@ -283,6 +284,13 @@ export default function VetsPetInsurancePage() {
         </div>
       </div>
       <RelatedReads siteId="vets-co" path="/reviews/best-pet-insurance" />
+          <ArticleSourcesList
+            title="Sources"
+            sources={[
+            { label: "www.healthypawspetinsurance.com/pet-insurance-claims.html", url: "https://www.healthypawspetinsurance.com/pet-insurance-claims.html", publisher: "www.healthypawspetinsurance.com" },
+            { label: "www.embracepetinsurance.com/coverage/wellness-rewards", url: "https://www.embracepetinsurance.com/coverage/wellness-rewards", publisher: "www.embracepetinsurance.com" },
+            ]}
+          />
     </>
   )
 }

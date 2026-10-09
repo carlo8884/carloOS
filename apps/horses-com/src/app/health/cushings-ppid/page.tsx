@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ShopCtas, TableOfContents, ArticleSourcesList, LastReviewed } from '@carloOS/ui'
+import { ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ShopCtas, TableOfContents, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -121,7 +121,7 @@ export default function PPIDPage() {
             updatedAt="2026-09-06"
             reviewedBy="Editorial team"
           />
-          <LastReviewed date="2026-10-09" />
+          <LastUpdated date="2026-10-09" />
           <div className="mb-8">
             <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
               Keep these on hand: a shedding blade so the long curly coat is lifted between clips, a wicking anti-sweat sheet so a clipped or still-coated horse can cool, and an automatic waterer so extra thirst is not a dry bucket. Educational coat-and-cooling checklist, not a treatment, not pergolide or an ACTH kit, not a substitute for calling the veterinarian.

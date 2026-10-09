@@ -1,5 +1,5 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
-import { HubMoneyLinks, LastReviewed } from '@carloOS/ui'
+import { HubMoneyLinks, LastUpdated } from '@carloOS/ui'
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
@@ -35,7 +35,7 @@ export default function SeniorBloodworkPage() {
 </>}
       >
         <div className="carloOS-article">
-          <LastReviewed date="2026-10-09" />
+          <LastUpdated date="2026-10-09" />
 
           <h2>Complete Blood Count (CBC)</h2>
           <p>The CBC evaluates the cellular components of blood — the cells that carry oxygen, fight infection, and enable clotting. Key values:</p>

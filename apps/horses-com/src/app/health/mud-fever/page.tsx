@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas, ArticleSourcesList, LastReviewed } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -118,7 +118,7 @@ export default function MudFeverPage() {
             updatedAt="2026-09-06"
             reviewedBy="Editorial team"
           />
-          <LastReviewed date="2026-10-09" />
+          <LastUpdated date="2026-10-09" />
 
           <h2 id="what">What Is Mud Fever</h2>
           <p>Mud fever is dermatitis -- skin inflammation -- on the back of the pastern and the heel, and sometimes higher up the leg. When the skin is repeatedly wetted, it softens and its protective barrier breaks down, allowing organisms (often the same Dermatophilus congolensis behind rain rot, plus other bacteria and sometimes mites or fungal involvement) to colonize and inflame it. The result is scabbing, crusting, and soreness in the lower limb.</p>

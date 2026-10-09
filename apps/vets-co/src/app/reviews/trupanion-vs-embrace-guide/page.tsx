@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, InlinePartnerQuote, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, InlinePartnerQuote, RelatedLinks, buildArticleSchema, buildMetadata, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
 import { HopDisclosure } from '../../../components/HopDisclosure'
 
 // Request-time env, same as the insurance comparison. A set partner tag
@@ -72,6 +72,7 @@ export default function TrupanionVsEmbraceGuidePage() {
       }
     >
       <div className="carloOS-article">
+          <LastUpdated date="2026-10-09" />
         <p>The <Link href="/reviews/best-pet-insurance">pet insurance review</Link> already scores Trupanion for direct payment at the clinic and Embrace for owners who want routine care on an add-on. The monthly bands are the figures printed in the review, not a quote for your pet.</p>
         <h2>What the review says about Trupanion</h2>
         <p>Trupanion is Best Overall and the winner. It lists 90% reimbursement, unlimited payouts, direct vet payment, and a per-condition deductible. Wellness is not included. See the carrier&apos;s current terms for the monthly price. The downsides are higher premiums and no wellness coverage. The review says Trupanion is the carrier whose policy pays the clinic at checkout rather than the pay-and-wait model.</p>
@@ -84,6 +85,12 @@ export default function TrupanionVsEmbraceGuidePage() {
         <p><InlinePartnerQuote href="/go/trupanion/home?s=reviews-trupanion-vs-embrace-guide" label="Get a Trupanion quote →" holdWithoutPartnerId /></p>
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
+                <ArticleSourcesList
+            title="Sources"
+            sources={[
+            { label: "www.embracepetinsurance.com/coverage/wellness-rewards", url: "https://www.embracepetinsurance.com/coverage/wellness-rewards", publisher: "www.embracepetinsurance.com" },
+            ]}
+          />
       </div>
     </ArticleLayout>
   )

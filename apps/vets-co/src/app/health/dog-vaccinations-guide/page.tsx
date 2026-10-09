@@ -1,5 +1,5 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
-import { HubMoneyLinks, LastReviewed } from '@carloOS/ui'
+import { HubMoneyLinks, LastUpdated } from '@carloOS/ui'
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, RelatedLinks, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
@@ -50,7 +50,7 @@ export default function DogVaccinationsGuidePage() {
 </>}
       >
         <div className="carloOS-article">
-          <LastReviewed date="2026-10-09" />
+          <LastUpdated date="2026-10-09" />
 
           <h2>Core Vaccines — Every Dog Regardless of Lifestyle</h2>
           <p><strong>Rabies:</strong> Required by law in virtually all US states and many countries. Fatal in all mammals including humans. No treatment exists for clinical rabies — prevention is the only option. Initial vaccine at 12–16 weeks, booster at 1 year, then every 1 or 3 years depending on state law and vaccine product label. Rabies vaccination certificates must be kept current for legal compliance. Letter-size thermal laminating pouches are how that certificate — and a later titer printout — stay a pocketable legal copy at boarding or a state checkpoint instead of a crumpled clinic slip. They are not a pet vaccination record book, not a letter-size plastic file box, and not a letter-size expanding file organizer. A laminating pouch does not vaccinate a dog and it does not replace the veterinarian who signs the certificate.</p>

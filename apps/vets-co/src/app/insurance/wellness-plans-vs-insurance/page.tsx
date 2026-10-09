@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { TableShopLink, ComparisonFoot, PrimaryHop, EmailCapture, buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ReviewCard } from '@carloOS/ui'
+import { TableShopLink, ComparisonFoot, PrimaryHop, EmailCapture, buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ReviewCard, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import { InsuranceWellnessShop } from '../../../components/InsuranceWellnessShop'
 import { buildArticleSchema, SchemaScript, buildItemListSchema, combineSchemas} from '@carloOS/ui'
@@ -48,6 +48,7 @@ export default function WellnessVsInsurancePage() {
       >
         <div className="carloOS-article">
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
+          <LastUpdated date="2026-10-08" />
           <EmailCapture
             variant="inline"
             siteId="vets-co"
@@ -175,10 +176,16 @@ export default function WellnessVsInsurancePage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-08" />
+          <ComparisonFoot updated="2026-10-09" />
 
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
+                  <ArticleSourcesList
+            title="Sources"
+            sources={[
+            { label: "Embrace", url: "https://www.embracepetinsurance.com/", publisher: "Embrace" },
+            ]}
+          />
         </div>
       </ArticleLayout>
     </>

@@ -12,7 +12,7 @@ import {
   CrossPortfolioCard,
   ArticleSourcesList,
   ShopCtas,
-  LastReviewed,
+  LastUpdated,
 } from '@carloOS/ui'
 
 const SOURCES = [
@@ -175,7 +175,7 @@ export default function FerretDiarrheaCausesPage() {
             publishedAt="2026-06-01"
             updatedAt="2026-06-01"
           />
-          <LastReviewed date="2026-10-09" />
+          <LastUpdated date="2026-10-07" />
 
           <DropCap>
             Diarrhea is one of the most common reasons ferrets are brought to the

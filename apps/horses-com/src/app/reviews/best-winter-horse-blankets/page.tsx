@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import Link from 'next/link'
-import { TableShopLink, RelatedReads, ComparisonFoot, EmailCapture, buildMetadata, ReviewCard, QuickPicks, CrossPortfolioCard, RelatedLinks, FAQAccordion, PriceAsOf} from '@carloOS/ui'
+import { TableShopLink, RelatedReads, ComparisonFoot, EmailCapture, buildMetadata, ReviewCard, QuickPicks, CrossPortfolioCard, RelatedLinks, FAQAccordion, PriceAsOf, LastUpdated, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, buildBreadcrumbSchema, SchemaScript, buildItemListSchema} from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -64,6 +64,7 @@ export default function BestWinterBlanketsPage() {
         </h1>
         <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">The Horseware Rambo Original is the top turnout because the 1000-denier ballistic shell is the blanket owners keep for seasons.</p>
         <PriceAsOf date="2026-10-07" tone="dark" />
+        <LastUpdated date="2026-10-08" />
         <div data-fold="offer">
           <HopDisclosure siteId="horses-com" href="/go/amazon/B09JWTFTGY?s=reviews-best-winter-horse-blankets" tone="on-dark" />
         <div className="mb-4" data-primary-hop="true">
@@ -390,7 +391,7 @@ export default function BestWinterBlanketsPage() {
                 </tbody>
               </table>
             </div>
-            <ComparisonFoot updated="2026-10-08" />
+            <ComparisonFoot updated="2026-10-09" />
 
             <h2>The Layering System Approach</h2>
             <p>The alternative to owning four different weight-specific turnouts: one waterproof sheet shell plus a set of liners in graduated weights. The layering math:</p>
@@ -487,6 +488,13 @@ export default function BestWinterBlanketsPage() {
         </div>
       </div>
       <RelatedReads siteId="horses-com" path="/reviews/best-winter-horse-blankets" />
+          <ArticleSourcesList
+            title="Sources"
+            sources={[
+            { label: "American Association of Equine Practitioners owner resources", url: "https://aaep.org/", publisher: "AAEP" },
+            { label: "Canadian Veterinary Journal", url: "https://www.canadianveterinarians.net/", publisher: "CVMA" },
+            ]}
+          />
     </>
   )
 }

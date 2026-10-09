@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, EmailCapture, QuietPartnerLink, RelatedLinks, buildArticleSchema, buildItemListSchema, buildMetadata, combineSchemas } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, EmailCapture, QuietPartnerLink, RelatedLinks, buildArticleSchema, buildItemListSchema, buildMetadata, combineSchemas, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
 import { HopDisclosure } from '../../../components/HopDisclosure'
 
 export const metadata: Metadata = buildMetadata({
@@ -76,6 +76,7 @@ export default function WysongVsCarniwholeGuidePage() {
       priceAsOf="2026-10-07"
     >
       <div className="carloOS-article">
+          <LastUpdated date="2026-10-08" />
         <EmailCapture
           variant="inline"
           siteId="ferret-com"
@@ -103,6 +104,13 @@ export default function WysongVsCarniwholeGuidePage() {
         <p>The sale price can differ from the printed Wysong band. Carniwhole’s price is whatever the subscription page shows, not a figure added here.</p>
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
+                <ArticleSourcesList
+            title="Sources"
+            sources={[
+            { label: "Wysong", url: "https://www.wysong.net/", publisher: "Wysong" },
+            { label: "Marshall Pet Products", url: "https://www.marshallpet.com/", publisher: "Marshall Pet Products" },
+            ]}
+          />
       </div>
     </ArticleLayout>
   )

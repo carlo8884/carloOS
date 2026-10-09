@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
 import { HopDisclosure } from '../../../components/HopDisclosure'
 
 export const metadata: Metadata = buildMetadata({
@@ -69,6 +69,7 @@ export default function KayteeVsPrevueGuidePage() {
       }
     >
       <div className="carloOS-article">
+          <LastUpdated date="2026-10-08" />
         <EmailCapture
           variant="inline"
           siteId="ferret-com"
@@ -96,6 +97,13 @@ export default function KayteeVsPrevueGuidePage() {
         <p>The Prevue is the pick when the review sizes the floor for one or two ferrets and the cage does not need to expand later. Cover the wire shelves either way.</p>
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
+                <ArticleSourcesList
+            title="Sources"
+            sources={[
+            { label: "Kaytee", url: "https://www.kaytee.com/", publisher: "Kaytee" },
+            { label: "Prevue Pet Products", url: "https://www.prevuepet.com/", publisher: "Prevue Pet Products" },
+            ]}
+          />
       </div>
     </ArticleLayout>
   )

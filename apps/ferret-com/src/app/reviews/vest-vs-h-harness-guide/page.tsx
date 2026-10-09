@@ -1,7 +1,7 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata, PrimaryHop } from '@carloOS/ui'
+import { ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata, PrimaryHop, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -76,6 +76,7 @@ export default function VestVsHHarnessGuidePage() {
       }
     >
       <div className="carloOS-article">
+          <LastUpdated date="2026-10-08" />
         <p>The <Link href="/reviews/best-ferret-harness">harness review</Link> compares a vest, an adjustable H-style, and a mesh H sold with a leash. The split that matters in the aisle is vest versus H. A ferret can reverse out of a loose loop because there is no real neck to hold it. The review&apos;s fit rule is one finger of slack, checked before the walk, and no unsupervised time in any harness on this page.</p>
         <h2>Vest or jacket</h2>
         <p>The vest is the escape-resistance pick. A broad panel wraps the chest and shoulders and closes on the back. Pressure spreads across that panel instead of two thin cords, which the review says matters because ferret skin is thin. The price tier is $$. You need a body measurement, and the harness is slightly fussier to put on. In warm weather it can overheat the ferret unless the panel is mesh. The review names this style for a determined escape artist and for a first walker who wants the harder layout to back out of.</p>
@@ -104,6 +105,12 @@ export default function VestVsHHarnessGuidePage() {
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
       </div>
+          <ArticleSourcesList
+            title="Sources"
+            sources={[
+            { label: 'American Ferret Association', url: 'https://www.ferret.org/', publisher: 'AFA' },
+            ]}
+          />
     </ArticleLayout>
   )
 }

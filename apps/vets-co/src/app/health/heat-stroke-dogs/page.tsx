@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, PrimaryHop, RelatedLinks, ShopCtas, LastReviewed } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, PrimaryHop, RelatedLinks, ShopCtas, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 
@@ -47,7 +47,7 @@ export default function HeatStrokePage() {
 </>}
       >
         <div className="carloOS-article">
-          <LastReviewed date="2026-10-09" />
+          <LastUpdated date="2026-10-09" />
 
           <h2>The Car Problem — How It Happens</h2>
           <p>A parked car heats up fast, even with the windows cracked. A dog left in a parked car in warm weather for "just a few minutes" can be in danger faster than almost any owner anticipates. This is the most common cause of canine heat stroke — and it is entirely preventable by leaving the dog at home or using drive-through services when running errands.</p>

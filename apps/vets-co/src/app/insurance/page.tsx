@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, DirectoryPlacesCta } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, DirectoryPlacesCta, LastUpdated, ArticleSourcesList } from '@carloOS/ui'
 import listings from '../../data/directory-listings.json'
 import { HubMasthead } from '../../components/HubMasthead'
 
@@ -50,6 +50,9 @@ export default function VetsInsuranceHubPage() {
         primaryCta={{ href: '/reviews/best-pet-insurance', label: 'Compare insurance plans' }}
         secondaryCta={{ href: '/insurance/how-pet-insurance-works', label: 'Start with the basics' }}
       />
+      <div className="px-container-sm sm:px-container pt-6">
+        <LastUpdated date="2026-10-06" />
+      </div>
       <nav aria-label="Breadcrumb" className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
         <Link href="/" className="hover:text-brand-primary no-underline">Home</Link><span>›</span>
         <span className="text-brand-text-mid">Insurance</span>
@@ -116,6 +119,12 @@ export default function VetsInsuranceHubPage() {
 
       <DirectoryPlacesCta listings={listings} noun="licensed veterinarians" />
     </>
+          <ArticleSourcesList
+            title="Sources"
+            sources={[
+            { label: "A Consumer's Guide to Pet Insurance", url: "https://content.naic.org/cipr-topics/pet-insurance", publisher: "NAIC" },
+            ]}
+          />
   </>
   )
 }

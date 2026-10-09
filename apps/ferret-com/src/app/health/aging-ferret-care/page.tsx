@@ -14,7 +14,7 @@ import {
   ShopCtas,
   CrossPortfolioCard,
   ArticleSourcesList,
-  LastReviewed,
+  LastUpdated,
 } from '@carloOS/ui'
 
 const SOURCES = [
@@ -215,7 +215,7 @@ export default function FerretAgingPage() {
             publishedAt="2026-05-28"
             updatedAt="2026-05-28"
           />
-          <LastReviewed date="2026-10-09" />
+          <LastUpdated date="2026-10-09" />
 
           <DropCap>
             The senior years are where the structural decisions made earlier

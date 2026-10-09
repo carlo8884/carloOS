@@ -1,7 +1,7 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata, PrimaryHop } from '@carloOS/ui'
+import { ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata, PrimaryHop, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -80,6 +80,7 @@ export default function FallMoltBrushGuidePage() {
       }
     >
       <div className="carloOS-article">
+          <LastUpdated date="2026-10-08" />
         <p>The <Link href="/care/bathing-and-grooming">bathing and grooming page</Link> describes two coat changes a year. The fall molt, about September through November, is the loss of the summer coat and the growth of a denser winter undercoat, over a similar two-to-four-week window as the spring shed. Normal, on that page, is diffuse shedding, an intact but thinner coat, and regrowth within weeks. Not normal is symmetric hair loss over the rump, tail base, or shoulders, or hair that does not grow back. Those patterns stay on the grooming page and are a reason to call a veterinarian, not a reason to buy a different brush.</p>
         <h2>What to do with the loose coat</h2>
         <p>The <Link href="/care/seasonal-shedding">seasonal shedding page</Link> says the job during a shed is to lift loose hair before the ferret swallows it. A soft slicker brush or a fine-toothed metal comb, in short sessions of a minute or two, is the method it names. Daily brushing during the peak captures more hair. Ferrets groom themselves and, unlike cats, do not reliably vomit hairballs. The page says a heavy shed raises the swallowed-hair load, and a hair mass can contribute to a gastrointestinal obstruction. A vet-recommended hairball remedy is the other step it names. This guide does not name a remedy brand.</p>
@@ -106,6 +107,12 @@ export default function FallMoltBrushGuidePage() {
           ]}
         />
       </div>
+          <ArticleSourcesList
+            title="Sources"
+            sources={[
+            { label: 'American Ferret Association', url: 'https://www.ferret.org/', publisher: 'AFA' },
+            ]}
+          />
     </ArticleLayout>
   )
 }

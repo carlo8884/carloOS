@@ -1,7 +1,7 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata, PrimaryHop } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata, PrimaryHop, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -75,6 +75,7 @@ export default function FerretNationVsPrevueGuidePage() {
       }
     >
       <div className="carloOS-article">
+          <LastUpdated date="2026-10-08" />
         <p>The <Link href="/reviews/best-ferret-cage">cage review</Link> already lists the Ferret Nation / Critter Nation double as the overall pick and the Prevue Feisty Ferret as the value pick. Prices in the review are tiers, not dollar amounts. Nothing here turns those tiers into a dollar price.</p>
         <h2>What the review says about Ferret Nation</h2>
         <p>The Ferret Nation / Critter Nation double unit is Best Overall and the winner. The manufacturer page does not print a bar-spacing figure. It says the full-width double doors open for cleaning and feeding (https://www.midwesthomes4pets.com/product/small-animal/habitats-cages/ferret-nation/, fetched 2026-10-08). Levels are modular and stackable. Pans are deep and leak-proof. It is meant for one to four ferrets. The price tier is $$$. Cons: premium price, heavy and large once assembled, and wire shelves need covering.</p>
@@ -88,6 +89,12 @@ export default function FerretNationVsPrevueGuidePage() {
         <p><a className="font-semibold text-brand-primary" href="/go/amazon/B0054U8UGW?s=reviews-ferret-nation-vs-prevue-guide">Browse Ferret Nation / Critter Nation double units on Amazon →</a></p>
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
+                <ArticleSourcesList
+            title="Sources"
+            sources={[
+            { label: "www.midwesthomes4pets.com/product/small-animal/habitats-cages/ferret-nation/", url: "https://www.midwesthomes4pets.com/product/small-animal/habitats-cages/ferret-nation/", publisher: "www.midwesthomes4pets.com" },
+            ]}
+          />
       </div>
     </ArticleLayout>
   )

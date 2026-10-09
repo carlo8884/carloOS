@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
 import { HopDisclosure } from '../../../components/HopDisclosure'
 
 export const metadata: Metadata = buildMetadata({
@@ -69,6 +69,7 @@ export default function PaperVsGrassLitterGuidePage() {
       }
     >
       <div className="carloOS-article">
+          <LastUpdated date="2026-10-08" />
         <EmailCapture
           variant="inline"
           siteId="ferret-com"
@@ -96,6 +97,12 @@ export default function PaperVsGrassLitterGuidePage() {
         <p>Paper pellets are the pick because the review calls them the low-dust default. Purina discontinued Yesterday’s News on April 20, 2022. The sale price can differ from the tier in that review.</p>
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
+                <ArticleSourcesList
+            title="Sources"
+            sources={[
+            { label: "Purina", url: "https://www.purina.com/", publisher: "Purina" },
+            ]}
+          />
       </div>
     </ArticleLayout>
   )

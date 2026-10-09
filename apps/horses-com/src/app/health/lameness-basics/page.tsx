@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas, ArticleSourcesList, LastReviewed } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -119,7 +119,7 @@ export default function LamenessBasicsPage() {
             updatedAt="2026-09-06"
             reviewedBy="Editorial team"
           />
-          <LastReviewed date="2026-10-09" />
+          <LastUpdated date="2026-10-09" />
           <div className="mb-8">
             <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
               Keep these on hand: a cotton lunge line so subtle lameness shows on a consistent circle, a leather chain lead shank so the in-hand trot-up stays on one steady line, and orange traffic cones so that line is marked on firm ground instead of guessed across a yard. Educational spot-and-describe checklist, not a treatment, not a diagnosis, not a substitute for calling the veterinarian.

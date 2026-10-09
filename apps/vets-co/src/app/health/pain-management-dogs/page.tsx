@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, ShopCtas, LastReviewed } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, ShopCtas, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 
@@ -42,7 +42,7 @@ export default function PainManagementPage() {
 </>}
       >
         <div className="carloOS-article">
-          <LastReviewed date="2026-10-09" />
+          <LastUpdated date="2026-10-09" />
 
           <h2>Why Dogs Hide Pain — and How to See Through It</h2>
           <p>Dogs are descended from prey animals whose survival depended on not appearing weak — showing pain attracted predators. This evolutionary pressure remains: dogs with significant chronic pain often appear &quot;fine&quot; to casual observation while making behavioral adaptations that are the actual pain signal. The dog that used to bound up the stairs and now takes them slowly. The dog that stopped initiating play. The dog that gets up from rest with a brief hesitation before moving normally. These behavioral changes are pain signs that owners frequently attribute to &quot;slowing down with age&quot; — which is itself often a pain signal. An elevated mesh dog cot is rest for that hesitation — a low, open cot they can step onto and off without climbing out of a deep bed, not an extra-large bolster dog lounge and not an egg-crate foam kennel pad. It does not treat pain and it is not a substitute for a veterinary exam. Clear adhesive non-slip stair treads are how the existing staircase gets grip for the dog that now takes the stairs slowly — they are not carpeted wooden pet steps, not a dog ramp, and not a traction rug. A hardcover weekly appointment planner is how those rest and stair observations, plus a daily pain score, stay dated notes you can hand the veterinarian — not a pocket spiral memo pad.</p>

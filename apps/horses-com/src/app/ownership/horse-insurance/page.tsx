@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ComparisonFoot, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, CrossSiteHelp, FAQAccordion, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { ComparisonFoot, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, CrossSiteHelp, FAQAccordion, RelatedLinks, TableOfContents, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
@@ -110,6 +110,7 @@ export default function HorseInsurancePage() {
             updatedAt="2026-10-06"
             reviewedBy="Editorial team"
           />
+          <LastUpdated date="2026-10-06" />
 
           <h2 id="why">Why Insure a Horse</h2>
           <p>Insurance exists because the big costs of horse ownership -- the loss of a valuable horse, an emergency surgery, a long course of treatment, or a claim from someone the horse injures -- can be financially devastating and arrive without warning. Insurance spreads that risk for a recurring premium. Whether it is worth it depends on the horse&apos;s value, the owner&apos;s finances, and their appetite for risk; some owners insure heavily, others self-insure by keeping an emergency fund instead.</p>
@@ -177,7 +178,7 @@ export default function HorseInsurancePage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-06" />
+          <ComparisonFoot updated="2026-10-09" />
 
           <h2 id="deciding">Exclusions and Deciding</h2>
           <p>Policies commonly list exclusions and conditions: pre-existing conditions, certain procedures, a duty to report illness, prior approval for treatment, and limits per condition or per year. Missing one can be grounds for a denial. Read the policy before relying on it. Whether to insure depends on the horse&apos;s value, what the owner can pay out of pocket, and the premium in the actual quote. This page does not compare premiums.</p>
@@ -205,6 +206,12 @@ export default function HorseInsurancePage() {
           <h2 id="references">Scope</h2>
           <p>This page is a plain-language map of cover types. It does not quote a carrier, a premium, a payout percentage, or a scored ranking. Read the policy for exclusions before relying on any of it.</p>
         </div>
+          <ArticleSourcesList
+            title="Sources"
+            sources={[
+            { label: 'American Association of Equine Practitioners owner resources', url: 'https://aaep.org/', publisher: 'AAEP' },
+            ]}
+          />
       </ArticleLayout>
     </>
   )

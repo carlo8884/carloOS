@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, DirectoryPlacesCta, PriceAsOf, HubSearch, HubJumpNav } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, DirectoryPlacesCta, PriceAsOf, HubSearch, HubJumpNav, LastUpdated, ArticleSourcesList } from '@carloOS/ui'
 import listings from '../../data/directory-listings.json'
 import { HubMasthead } from '../../components/HubMasthead'
 
@@ -83,6 +83,7 @@ export default function VetsReviewsPage() {
       />
       <div className="px-container-sm sm:px-container pt-6">
         <PriceAsOf date="2026-06-06" />
+        <LastUpdated date="2026-10-09" />
       </div>
       <nav aria-label="Breadcrumb" className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
         <Link href="/" className="hover:text-brand-primary no-underline">Home</Link><span>›</span>
@@ -136,6 +137,12 @@ export default function VetsReviewsPage() {
 
       <DirectoryPlacesCta listings={listings} noun="licensed veterinarians" />
     </>
+          <ArticleSourcesList
+            title="Sources"
+            sources={[
+            { label: "A Consumer's Guide to Pet Insurance", url: "https://content.naic.org/cipr-topics/pet-insurance", publisher: "NAIC" },
+            ]}
+          />
   </>
   )
 }

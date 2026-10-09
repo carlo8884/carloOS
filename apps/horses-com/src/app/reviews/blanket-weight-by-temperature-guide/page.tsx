@@ -1,7 +1,7 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, EmailCapture, FAQAccordion, QuietPartnerLink, RelatedLinks, buildArticleSchema, buildMetadata, PrimaryHop } from '@carloOS/ui'
+import { ArticleLayout, EmailCapture, FAQAccordion, QuietPartnerLink, RelatedLinks, buildArticleSchema, buildMetadata, PrimaryHop, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
@@ -80,6 +80,7 @@ export default function BlanketWeightByTemperatureGuidePage() {
       }
     >
       <div className="carloOS-article">
+          <LastUpdated date="2026-10-08" />
         <p>Fill weight is not, by itself, a temperature rating. The <Link href="/reviews/best-winter-horse-blankets">winter blanket review</Link> says what matters is fill plus coat (full, body-clipped, or trace-clipped), shelter, and the individual horse. It still publishes bands, and those are the only bands this guide uses.</p>
         <h2>The bands on the review</h2>
         <p>A sheet is 0 grams of fill: a waterproof shell for rain, or a layer over a fleece, on a horse that does not need warmth. Lightweight is 50 to 150 grams, for cool autumn temperatures of 5 to 15°C (40 to 60°F), light wind, and light rain. Medium-weight is 180 to 250 grams, which the review calls the workhorse of most US and UK climates, with an effective range of about −5 to +10°C (25 to 50°F) on most clipped horses. Heavyweight is 300 to 400 grams and up, for deep winter, sustained sub-zero temperatures, and clipped horses in cold climates. The review says that much fill is often unnecessary in the mid-Atlantic and the southern United States, and standard in the Northeast, the Midwest, Canada, and northern Europe. A later sentence names medium-weight, about 200 grams, as the right answer for most clipped horses in most US climates between about −5 and +10°C.</p>
@@ -108,6 +109,12 @@ export default function BlanketWeightByTemperatureGuidePage() {
             'Check price of the Horseware Rambo Original on SmartPak',
           ]}
         />
+                <ArticleSourcesList
+            title="Sources"
+            sources={[
+            { label: "Canadian Veterinary Journal", url: "https://www.canadianveterinarians.net/", publisher: "CVMA" },
+            ]}
+          />
       </div>
     </ArticleLayout>
   )

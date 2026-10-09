@@ -1,7 +1,7 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, EmailCapture, FAQAccordion, QuietPartnerLink, RelatedLinks, buildArticleSchema, buildMetadata, PrimaryHop } from '@carloOS/ui'
+import { ArticleLayout, EmailCapture, FAQAccordion, QuietPartnerLink, RelatedLinks, buildArticleSchema, buildMetadata, PrimaryHop, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
@@ -77,6 +77,7 @@ export default function RamboVsRhinoGuidePage() {
       }
     >
       <div className="carloOS-article">
+          <LastUpdated date="2026-10-08" />
         <p>The <Link href="/reviews/best-winter-horse-blankets">winter blanket review</Link> treats the Horseware Rambo Original as the long-term reference and the Horseware Rhino Plus as the current filled step down. They are not the same shell. <Link href="/reviews/rambo-vs-schneiders-guide">Rambo versus Schneiders</Link> is the heavy-winter comparison, not this same-brand step down. Measure the horse with the <Link href="/tools/horse-blanket-size-calculator">blanket size calculator</Link> before either name matters. A blanket that is short in the shoulder rubs, whichever logo is on the neck.</p>
         <h2>Rambo Original</h2>
         <p>The Rambo listing specifies a 1000-denier ballistic nylon shell and fill weights of 0, 100, 200, and 400 grams. The review credits the leg-arch shoulder with the cut that defined the category, and it says owners report blankets still in service after many winters. The explicit tradeoff is price: a new Rambo retails 50 to 80 percent more than the equivalent fill from a value-tier brand. The Rambo listing specifies stainless hardware. Confirm hardware on the Rhino Plus listing. Buy the Rambo when you expect to keep the horse long enough that replacing a blanket every couple of winters costs more than the premium.</p>
@@ -105,6 +106,13 @@ export default function RamboVsRhinoGuidePage() {
         />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
+                <ArticleSourcesList
+            title="Sources"
+            sources={[
+            { label: "Horseware", url: "https://www.horseware.com/", publisher: "Horseware" },
+            { label: "SmartPak", url: "https://www.smartpakequine.com/", publisher: "SmartPak" },
+            ]}
+          />
       </div>
     </ArticleLayout>
   )

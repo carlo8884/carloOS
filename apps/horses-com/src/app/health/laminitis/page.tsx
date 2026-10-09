@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas, PrimaryHop, ArticleSourcesList, LastReviewed } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas, PrimaryHop, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -145,7 +145,7 @@ export default function LaminitisPage() {
             updatedAt="2026-09-05"
             reviewedBy="Editorial team"
           />
-          <LastReviewed date="2026-10-09" />
+          <LastUpdated date="2026-10-09" />
 
           <div className="bg-brand-primary-pale border-l-4 border-brand-primary rounded-r-xl p-5 not-prose my-6">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">The Short Answer</div>

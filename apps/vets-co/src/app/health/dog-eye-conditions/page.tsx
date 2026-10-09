@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, ShopCtas, LastReviewed } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, ShopCtas, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Eye Conditions in Dogs — Cherry Eye, Cataracts | Vets.co', description: 'Common dog eye conditions: cherry eye (corrected surgically, not removed), cataracts, glaucoma (emergency), and PRA (genetic).', path: '/health/dog-eye-conditions', type: 'article' })
@@ -45,7 +45,7 @@ export default function DogEyeConditionsPage() {
         <div className="carloOS-article">
 
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-06-07T00:00:00Z" reviewedBy="Editorial team" />
-          <LastReviewed date="2026-10-09" />
+          <LastUpdated date="2026-10-09" />
 
           <CalloutBox variant="warning" title="Red-flag list — same-day vet visit">
             Any sudden change in eye appearance — cloudy or bluish tint, a visibly enlarged globe, squinting and reluctance to open the eye, sudden bumping into furniture, eye trauma, or chemical exposure — needs same-day evaluation. Glaucoma can cause permanent vision loss within hours; corneal lacerations and lens luxations are surgical emergencies. A sterile saline eye wash is only a rinse for a chemical splash on the way to the clinic — it is not a medicated eye drop, not Optimmune, and not a substitute for that same-day exam.

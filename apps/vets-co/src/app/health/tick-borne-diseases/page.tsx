@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, ShopCtas, LastReviewed } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, ShopCtas, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Tick-Borne Diseases in Dogs — Lyme, Anaplasmosis | Vets.co', description: 'Four tick-borne diseases dogs face: Lyme, Anaplasmosis, Ehrlichiosis, and Rocky Mountain Spotted Fever. Signs, geographic distribution.', path: '/health/tick-borne-diseases', type: 'article' })
@@ -44,7 +44,7 @@ export default function TickBornePage() {
 </>}
       >
         <div className="carloOS-article">
-          <LastReviewed date="2026-10-09" />
+          <LastUpdated date="2026-10-09" />
 
           <h2>Lyme Disease (Borrelia burgdorferi)</h2>
           <p><strong>Tick vector:</strong> Ixodes scapularis (black-legged tick / deer tick) primarily; Ixodes pacificus on the West Coast. Requires 24–48 hours of tick attachment for transmission — emphasizing prompt tick removal. A tick-removal hook is how an attached tick comes off as a whole instead of a squeezed body — it is not a generic tick remover and not a first-aid tick-removal tool. A fine-tooth flea comb is how ears, armpits, groin, and the collar line get a pass after a walk in grass or woods, before that 24–48 hour window closes. These are household check tools, not treatments. They do not prevent Lyme, they do not replace a veterinarian-recommended preventive, and they do not interpret a 4Dx result. <strong>Geographic distribution:</strong> Northeast, Upper Midwest, and Pacific Northwest — highest prevalence in these regions, but expanding range. <strong>Signs in dogs:</strong> Fever, lethargy, shifting-leg lameness (the joint pain can move from leg to leg), reduced appetite. Lyme nephritis — a serious kidney complication — occurs in a subset of affected dogs, particularly Labrador Retrievers and Golden Retrievers, causing protein-losing nephropathy that can lead to kidney failure. <strong>Testing:</strong> The 4Dx SNAP test detects Lyme antibodies as part of the annual heartworm test. A positive Lyme antibody test means the dog has been exposed — many seropositive dogs never develop clinical disease. <strong>Treatment:</strong> Veterinarians may prescribe doxycycline, typically for about 30 days; the dose must be determined by a veterinarian. <strong>Prevention:</strong> Tick prevention (isoxazoline class products most effective) + Lyme vaccination in tick-endemic regions.</p>

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'vets-co',
@@ -74,6 +74,7 @@ export default function VetsterVsChewyConnectGuidePage() {
       priceAsOf="2026-10-07"
     >
       <div className="carloOS-article">
+          <LastUpdated date="2026-10-08" />
         <EmailCapture
           variant="inline"
           siteId="vets-co"
@@ -103,6 +104,12 @@ export default function VetsterVsChewyConnectGuidePage() {
         <p>Vetster’s help page, updated 2025-12-18 and fetched 2026-10-08, says it verifies an active license in the veterinarian’s jurisdiction before they go live (<span className="break-all">https://help.vetster.com/en/articles/13184184-how-are-licenses-verified</span>).</p>
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
+                <ArticleSourcesList
+            title="Sources"
+            sources={[
+            { label: "help.vetster.com/en/articles/13184184-how-are-licenses-verified", url: "https://help.vetster.com/en/articles/13184184-how-are-licenses-verified", publisher: "help.vetster.com" },
+            ]}
+          />
       </div>
     </ArticleLayout>
   )
