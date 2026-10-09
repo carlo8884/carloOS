@@ -1,7 +1,7 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, ShopCtas, buildArticleSchema, buildMetadata, PrimaryHop, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
+import { ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, ShopCtas, buildArticleSchema, buildMetadata, PrimaryHop, ArticleSourcesList, LastUpdated, ComparisonFoot } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -76,7 +76,7 @@ export default function PaperVsWoodLitterGuidePage() {
       }
     >
       <div className="carloOS-article">
-          <LastUpdated date="2026-10-08" />
+          <LastUpdated date="2026-10-09" />
         <p>The <Link href="/reviews/best-ferret-litter">litter review</Link> refuses clumping cat litter and aromatic pine or cedar shavings, then compares three pelleted options that clear that bar. Paper versus wood is the everyday choice inside that safe set. Litter will not, by itself, fix ferret odor. Diet and the cleaning routine in the <Link href="/care/odor-and-scent-control">odor guide</Link> still do most of that work.</p>
         <h2>Paper pellets</h2>
         <p>Recycled paper pellets are the best overall pick. The review lists very low dust, no clumping agents, a soft feel underfoot, and moderate odor control. The price tier is $$. The cons are the moderate odor, changing the pan instead of scooping and topping up, and lighter pellets that can scatter. The review calls this the litter to buy if you are not trying to optimize a single trait.</p>
@@ -105,6 +105,51 @@ export default function PaperVsWoodLitterGuidePage() {
             'Find paper pellet litter on Amazon',
           ]}
         />
+        <div className="my-6 max-w-full min-w-0">
+          <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
+            <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+            <thead>
+              <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
+                <th scope="col" className="p-3 font-bold text-brand-dark">Recycled paper pellets</th>
+                <th scope="col" className="p-3 font-bold text-brand-dark">Heat-treated wood pellets</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Role</th>
+                <td className="p-3">Best overall</td>
+                <td className="p-3">Odor pick</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Dust</th>
+                <td className="p-3">Very low</td>
+                <td className="p-3">Low once the fines are sifted</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Odor</th>
+                <td className="p-3">Moderate</td>
+                <td className="p-3">Strongest of the safe options on that page</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Feel</th>
+                <td className="p-3">Soft underfoot. Lighter pellets can scatter</td>
+                <td className="p-3">Harder underfoot than paper</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Caveat</th>
+                <td className="p-3">No clumping agents. Change the pan instead of scooping and topping up</td>
+                <td className="p-3">Heat-treated, low-phenol compressed pellets only. Not loose cedar or pine shavings</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Price tier</th>
+                <td className="p-3">$$</td>
+                <td className="p-3">$</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <ComparisonFoot updated="2026-10-09" />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
                 <ArticleSourcesList

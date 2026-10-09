@@ -2,7 +2,7 @@ import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { liveAnchorHref } from '@carloOS/config/affiliate-hop'
-import { ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
+import { ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata, ArticleSourcesList, LastUpdated, ComparisonFoot } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'vets-co',
@@ -72,7 +72,7 @@ export default function VetsterVsAskvetGuidePage() {
       }
     >
       <div className="carloOS-article">
-          <LastUpdated date="2026-10-08" />
+          <LastUpdated date="2026-10-09" />
         <p>The <Link href="/telehealth">telehealth comparison</Link> ranks Vetster, AskVet, and Chewy Connect. Vetster versus AskVet is the choice between paying for a visit and paying for a month of chat. If the pet is in crisis, neither policy applies. The page lists pale or blue gums, breathing difficulty, collapse, suspected poisoning, severe injury, and a cat that cannot urinate as reasons to go to an emergency clinic. The <Link href="/tools/er-vs-clinic">ER versus clinic tool</Link> is the setting check. This guide is for a question that can wait for a screen.</p>
         <h2>Vetster</h2>
         <p>Vetster is the best overall pick. Consults are video and chat. Vetster&apos;s help article, updated 2025-12-18, says it verifies an active license in the veterinarian&apos;s jurisdiction before they go live (<span className="break-all">https://help.vetster.com/en/articles/13184184-how-are-licenses-verified</span>). It does not say the veterinarian is licensed where the owner is, or that a prescription is therefore valid. Specialists are listed, including behavior, dermatology, and internal medicine. This page does not publish a wait time. The con is a higher per-visit figure than a chat plan.</p>
@@ -102,6 +102,46 @@ export default function VetsterVsAskvetGuidePage() {
             'Visit Vetster',
           ]}
         />
+        <div className="my-6 max-w-full min-w-0">
+          <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
+            <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+            <thead>
+              <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
+                <th scope="col" className="p-3 font-bold text-brand-dark">Vetster</th>
+                <th scope="col" className="p-3 font-bold text-brand-dark">AskVet</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Role</th>
+                <td className="p-3">Best overall</td>
+                <td className="p-3">Subscription</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Format</th>
+                <td className="p-3">Video and chat</td>
+                <td className="p-3">Chat. The current pages do not print a visit type</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Who you reach</th>
+                <td className="p-3">Verifies an active license in the veterinarian’s jurisdiction before they go live. Specialists include behavior, dermatology, and internal medicine</td>
+                <td className="p-3">General practice. Prescriptions are limited</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Price line</th>
+                <td className="p-3">A higher per-visit figure than a chat plan</td>
+                <td className="p-3">See the carrier’s current terms for a monthly chat price</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Use it when</th>
+                <td className="p-3">You want video, a specialist, or a prescription the review says is jurisdiction-dependent</td>
+                <td className="p-3">The questions are frequent and chat is enough</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <ComparisonFoot updated="2026-10-09" />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
                 <ArticleSourcesList

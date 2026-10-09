@@ -1,7 +1,7 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, EmailCapture, FAQAccordion, QuietPartnerLink, RelatedLinks, buildArticleSchema, buildMetadata, PrimaryHop, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
+import { ArticleLayout, EmailCapture, FAQAccordion, QuietPartnerLink, RelatedLinks, buildArticleSchema, buildMetadata, PrimaryHop, ArticleSourcesList, LastUpdated, ComparisonFoot } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
@@ -77,7 +77,7 @@ export default function RamboVsRhinoGuidePage() {
       }
     >
       <div className="carloOS-article">
-          <LastUpdated date="2026-10-08" />
+          <LastUpdated date="2026-10-09" />
         <p>The <Link href="/reviews/best-winter-horse-blankets">winter blanket review</Link> treats the Horseware Rambo Original as the long-term reference and the Horseware Rhino Plus as the current filled step down. They are not the same shell. <Link href="/reviews/rambo-vs-schneiders-guide">Rambo versus Schneiders</Link> is the heavy-winter comparison, not this same-brand step down. Measure the horse with the <Link href="/tools/horse-blanket-size-calculator">blanket size calculator</Link> before either name matters. A blanket that is short in the shoulder rubs, whichever logo is on the neck.</p>
         <h2>Rambo Original</h2>
         <p>The Rambo listing specifies a 1000-denier ballistic nylon shell and fill weights of 0, 100, 200, and 400 grams. The review credits the leg-arch shoulder with the cut that defined the category, and it says owners report blankets still in service after many winters. The explicit tradeoff is price: a new Rambo retails 50 to 80 percent more than the equivalent fill from a value-tier brand. The Rambo listing specifies stainless hardware. Confirm hardware on the Rhino Plus listing. Buy the Rambo when you expect to keep the horse long enough that replacing a blanket every couple of winters costs more than the premium.</p>
@@ -104,6 +104,46 @@ export default function RamboVsRhinoGuidePage() {
             'Check price of the Horseware Rambo Original on SmartPak',
           ]}
         />
+        <div className="my-6 max-w-full min-w-0">
+          <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
+            <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+            <thead>
+              <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
+                <th scope="col" className="p-3 font-bold text-brand-dark">Rambo Original</th>
+                <th scope="col" className="p-3 font-bold text-brand-dark">Rhino Plus</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Role</th>
+                <td className="p-3">Long-term turnout reference</td>
+                <td className="p-3">Current filled step down</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Shell</th>
+                <td className="p-3">1000-denier ballistic nylon</td>
+                <td className="p-3">1000D polypropylene outer</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Fill</th>
+                <td className="p-3">0, 100, 200, and 400 grams</td>
+                <td className="p-3">Medium and heavy Vari-Layer fills, including 450 grams</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Front and hardware</th>
+                <td className="p-3">Leg-arch shoulder. Stainless hardware</td>
+                <td className="p-3">V-front. Confirm hardware on the listing</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Also on the page</th>
+                <td className="p-3">Owners report blankets still in service after many winters. A new one retails 50 to 80 percent more than an equivalent fill from a value-tier brand</td>
+                <td className="p-3">A 3-year waterproofness guarantee when the blanket is registered</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <ComparisonFoot updated="2026-10-09" />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
                 <ArticleSourcesList

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata, ArticleSourcesList, LastUpdated, ComparisonFoot } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'vets-co',
@@ -74,7 +74,7 @@ export default function VetsterVsChewyConnectGuidePage() {
       priceAsOf="2026-10-07"
     >
       <div className="carloOS-article">
-          <LastUpdated date="2026-10-08" />
+          <LastUpdated date="2026-10-09" />
         <EmailCapture
           variant="inline"
           siteId="vets-co"
@@ -102,6 +102,46 @@ export default function VetsterVsChewyConnectGuidePage() {
         <h2>Who should open which service</h2>
         <p>Open Vetster when you want a licensed veterinarian on video, possibly a specialist, and you do not want a monthly fee. Open Chewy Connect when you already pay for Chewy+ and you want the pharmacy tied to that account. If the pet is in crisis, go to an emergency clinic. Do not wait on a video queue.</p>
         <p>Vetster’s help page, updated 2025-12-18 and fetched 2026-10-08, says it verifies an active license in the veterinarian’s jurisdiction before they go live (<span className="break-all">https://help.vetster.com/en/articles/13184184-how-are-licenses-verified</span>).</p>
+        <div className="my-6 max-w-full min-w-0">
+          <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
+            <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+            <thead>
+              <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
+                <th scope="col" className="p-3 font-bold text-brand-dark">Vetster</th>
+                <th scope="col" className="p-3 font-bold text-brand-dark">Chewy Connect</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Role</th>
+                <td className="p-3">Best Overall, and the winner</td>
+                <td className="p-3">Best for Chewy Customers</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Format</th>
+                <td className="p-3">Video and chat. You pay per visit</td>
+                <td className="p-3">Free chat with a veterinary technician and a Chewy account. The licensed-vet video visit is separate</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Who you reach</th>
+                <td className="p-3">Verifies an active license in the veterinarian’s jurisdiction before they go live. Specialists include behavior, dermatology, and internal medicine</td>
+                <td className="p-3">A veterinary technician for free chat. Specialist access is thinner than Vetster</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Price line</th>
+                <td className="p-3">The per-visit figure is higher than a chat plan</td>
+                <td className="p-3">The licensed-vet video price is the one printed on this page</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Use it when</th>
+                <td className="p-3">You want a licensed veterinarian on video, possibly a specialist, and you do not want a monthly fee</td>
+                <td className="p-3">You already pay for Chewy+ and you want the pharmacy tied to that account</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <ComparisonFoot updated="2026-10-09" />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
                 <ArticleSourcesList
