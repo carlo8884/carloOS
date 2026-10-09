@@ -86,10 +86,11 @@ export function InquireForm({
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ ...data, siteName, intent }),
       })
-      if (!res.ok) {
+      const body = (await res.json().catch(() => ({}))) as { ok?: boolean; error?: string }
+      if (!res.ok || body.ok !== true) {
         setStatus('error')
         setShowFallback(true)
-        setErrorMsg(inquireFailureLead(res.status))
+        setErrorMsg(inquireFailureLead(body.error === 'unconfigured' ? 503 : res.status))
         return
       }
       setStatus('sent')

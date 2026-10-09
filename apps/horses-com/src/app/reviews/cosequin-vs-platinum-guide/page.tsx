@@ -1,4 +1,3 @@
-import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ArticleLayout, FAQAccordion, QuietPartnerLink, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
@@ -75,9 +74,6 @@ export default function CosequinVsPlatinumGuidePage() {
         <p>Platinum Performance CJ is Best Comprehensive. The current page lists, per 2 scoops, glucosamine sulfate 8,820 mg, MSM 8,200 mg, ASU 2,000 mg, boswellia 1,400 mg, cetyl myristoleate 275 mg, and hyaluronic acid 90 mg. It does not list chondroitin. Omega-3 on that page is flax oil. The printed price is $130–180 per 30-day supply.</p>
         <h2>Who should buy which tub</h2>
         <p>Buy Cosequin ASU Plus when the job is the ASU formula with disclosed amounts, at the $60–95 band. Buy Platinum CJ when you want one tub that already stacks the longer ingredient list, and the $130–180 band is acceptable. Neither product is a replacement for veterinary joint treatment.</p>
-        <HopDisclosure siteId="horses-com" href="/go/amazon-brand/platinum+performance+CJ+joint+supplement?s=reviews-cosequin-vs-platinum-guide" />
-        <p>The link below opens the Platinum Performance CJ search already used on the joint review. The price there is the retailer's, not a quote from this page.</p>
-        <p><a className="font-semibold text-brand-primary" href="/go/amazon-brand/platinum+performance+CJ+joint+supplement?s=reviews-cosequin-vs-platinum-guide">Browse Platinum Performance CJ joint supplement on Amazon →</a></p>
         <QuietPartnerLink href="/go/smartpak/cosequin-asu-plus?s=reviews-cosequin-vs-platinum-guide" label="Compare Cosequin ASU Plus at SmartPak →" />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />

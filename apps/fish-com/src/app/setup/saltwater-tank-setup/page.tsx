@@ -1,4 +1,3 @@
-import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, RelatedLinks, JourneyNext } from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
@@ -85,19 +84,9 @@ export default function SaltwaterTankSetupPage() {
           siteId="fish-com"
           nextHref="/setup/quarantine-tank-guide"
           nextLabel="Set the quarantine tank before the first marine fish"
-          nextBlurb="FOWLR or reef, new saltwater fish go through a bare-bottom QT first — 4–6 weeks, not a display drop. Use the quarantine guide next. The hop below is the same saltwater starter-kit search already on this page."
-          resourceHref="/go/amazon-brand/saltwater%20reef%20tank%20starter%20kit?s=setup-saltwater-tank-setup"
-          resourceLabel="Browse saltwater reef starter kits on Amazon →"
+          nextBlurb="FOWLR or reef, new saltwater fish go through a bare-bottom QT first — 4–6 weeks, not a display drop. Use the quarantine guide next."
         />
-        <HopDisclosure siteId="fish-com" href="/go/amazon-brand/saltwater%20reef%20tank%20starter%20kit?s=setup-saltwater-tank-setup" />
-          <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
-          <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Saltwater Reef Setup — Where to Shop</div>
-          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse the gear referenced in this guide on Amazon.</p>
-          <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
-            <a href="/go/amazon-brand/saltwater%20reef%20tank%20starter%20kit?s=setup-saltwater-tank-setup" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px', maxWidth: '100%', whiteSpace: 'normal' }}>Browse saltwater reef starter kits on Amazon →</a>
-          </div>
           <ArticleSourcesList sources={SOURCES} />
-        </div>
 
         </div>
       </ArticleLayout>

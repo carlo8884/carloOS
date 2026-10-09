@@ -6,12 +6,20 @@
  * https://ferret.com). This module decides whether a request may be indexed.
  *
  * Indexing is on only when BOTH are true:
- *   1. SITE_INDEXABLE=true  (leave unset until DNS points at the apex)
+ *   1. SITE_INDEXABLE names that host (`vets.co`, `horses.com`, or
+ *      `ferret.com`). A comma-separated list names more than one apex.
+ *      `www.` of a named apex is included. The legacy value `true` does
+ *      not index every host, so Dog.com and Fish.com stay noindex when
+ *      another site flips.
  *   2. The request host is not a preview, localhost, or *.vercel.app host
  *
- * Preview and vercel.app hosts stay noindex even after the env flag is set,
- * so flipping the switch before DNS does not publish the Vercel hostname.
+ * Preview and vercel.app hosts stay noindex even when named, so flipping
+ * the switch before DNS does not publish the Vercel hostname.
+ * Leave the env unset until Carlo launches one apex. This module does
+ * not set it.
  */
+
+const LEGACY_GLOBAL = new Set(['true', 'false', '1', '0', 'yes', 'no'])
 
 export function hostnameFromHostHeader(hostHeader: string | null | undefined): string {
   const raw = (hostHeader ?? '').split(',')[0].trim().toLowerCase()
@@ -29,21 +37,38 @@ export function isPreviewHost(hostHeader: string | null | undefined): boolean {
   return false
 }
 
-export function isSiteIndexable(env: NodeJS.ProcessEnv = process.env): boolean {
+/** Apex names in SITE_INDEXABLE. `true` is ignored so one flip cannot launch every site. */
+export function indexableHostNames(env: NodeJS.ProcessEnv = process.env): string[] {
   // Direct member access when reading the real process.env so Next inlines
   // SITE_INDEXABLE into the Edge middleware at build time. A later Vercel
   // env change rebuilds with the new value. Callers that pass a plain object
   // (unit tests) still read that object.
-  if (env === process.env) return process.env.SITE_INDEXABLE === 'true'
-  return env.SITE_INDEXABLE === 'true'
+  const raw = env === process.env ? process.env.SITE_INDEXABLE : env.SITE_INDEXABLE
+  if (!raw) return []
+  return raw
+    .split(',')
+    .map((part) => part.trim().toLowerCase())
+    .filter((part) => part.length > 0 && !LEGACY_GLOBAL.has(part))
 }
 
-/** True only on a live apex (or other non-preview) host after the env switch is on. */
+export function isSiteIndexable(
+  env: NodeJS.ProcessEnv = process.env,
+  hostHeader?: string | null,
+): boolean {
+  const named = indexableHostNames(env)
+  if (hostHeader === undefined) return named.length > 0
+  if (isPreviewHost(hostHeader)) return false
+  const host = hostnameFromHostHeader(hostHeader)
+  const bare = host.startsWith('www.') ? host.slice(4) : host
+  return named.includes(host) || named.includes(bare)
+}
+
+/** True only when SITE_INDEXABLE names this host and the host is not a preview. */
 export function shouldIndexHost(
   hostHeader: string | null | undefined,
   env: NodeJS.ProcessEnv = process.env,
 ): boolean {
-  return isSiteIndexable(env) && !isPreviewHost(hostHeader)
+  return isSiteIndexable(env, hostHeader)
 }
 
 /** Header value for preview and pre-DNS responses. Null when the host may be indexed. */

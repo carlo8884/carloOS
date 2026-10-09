@@ -1,4 +1,3 @@
-import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ArticleLayout, BelowFoldPhoto, ComparisonFoot, FAQAccordion, RelatedLinks, TableShopLink, buildArticleSchema, buildFAQSchema, buildMetadata, combineSchemas } from '@carloOS/ui'
@@ -82,8 +81,6 @@ export default function NovemberDecemberGiftGuidePage() {
         <p>The blanket review prints the Amigo Bravo 12 Plus at $130–190, the SmartPak Ultimate at $279.95–299.95, the Rhino Plus at $180–260, and the Rambo Original at $280–420. Those four bands are the ones on the cards. Measure before you order. A blanket that does not fit is not a useful gift, even when the band looks right.</p>
         <h2>Who should get which printed band</h2>
         <p>A lead or a nylon halter is the small barn gift when the horse is led under supervision. A breakaway is the gift when the horse is left haltered, which is the limit the halter card already states. Bell boots are for overreach. Brushing boots are for interference. A turnout blanket is the larger gift, and the blanket review is where denier and fill live.</p>
-        <HopDisclosure siteId="horses-com" href={`/go/amazon-brand/winter+horse+blanket?s=${SOURCE}`} />
-        <p><a className="font-semibold text-brand-primary" href={`/go/amazon-brand/winter+horse+blanket?s=${SOURCE}`}>Browse winter horse blankets on Amazon →</a></p>
         <div className="overflow-x-auto max-w-full min-w-0">
           <table className="w-full text-sm border-collapse table-fixed sm:table-auto min-w-0 sm:min-w-[36rem] [&_th]:break-words [&_td]:break-words">
             <thead>
@@ -142,7 +139,7 @@ export default function NovemberDecemberGiftGuidePage() {
             </tbody>
           </table>
         </div>
-        <ComparisonFoot updated="2026-10-07" />
+        <ComparisonFoot updated="2026-10-09" />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} includeSchema={false} />
         <BelowFoldPhoto siteId="horses-com" />

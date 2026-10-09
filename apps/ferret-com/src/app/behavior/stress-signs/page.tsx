@@ -98,14 +98,6 @@ export default function FerretStressSignsPage() {
       <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="ferret-com"
-        heroHop={
-          <>
-            <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/ferret+sleep+sack+fleece?s=behavior-stress-signs" />
-            <div className="mb-4" data-primary-hop="true">
-              <a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" data-shop-placement="hero" href="/go/amazon-brand/ferret+sleep+sack+fleece?s=behavior-stress-signs">Browse a ferret fleece sleep sack on Amazon →</a>
-            </div>
-          </>
-        }
         hero={{
           title: 'Signs of Stress in Ferrets — Reading the Quiet Warnings',
           subtitle:
@@ -338,11 +330,8 @@ export default function FerretStressSignsPage() {
             cons={['Some ferrets prefer open hammocks — try both to see what your ferret uses', 'Fleece attracts hair — wash weekly']}
             price="see current price"
             priceNote="dated 2026-06-04."
-            ctaText="Find fleece ferret sleep sacks on Amazon"
-            ctaHref="/go/amazon-brand/ferret+sleep+sack+fleece?s=behavior-stress-signs"
-            ctaAffiliateProgram="amazon-brand"
-            ctaAffiliateProduct="ferret+sleep+sack+fleece"
           />
+          <HopDisclosure siteId="ferret-com" href="/go/marshall/ferret+play+tunnel?s=behavior-stress-signs" />
           <ReviewCard quietUntilTag
             id="ferret-tunnel-stress"
             badge="Enrichment"

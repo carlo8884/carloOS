@@ -134,9 +134,9 @@ export function EmailCapture({
         }),
       })
 
-      if (!res.ok) {
-        const data = await res.json().catch(() => ({}))
-        throw new Error(data.message ?? 'Subscription failed')
+      const data = (await res.json().catch(() => ({}))) as { ok?: boolean; message?: string }
+      if (!res.ok || data.ok !== true) {
+        throw new Error(data.message ?? 'Email capture is not connected yet. Try again later.')
       }
 
       setStatus('success')

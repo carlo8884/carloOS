@@ -2,12 +2,14 @@
 /**
  * Dry-run the go-live indexing switch for the five earning sites.
  *
- * Builds each app with SITE_INDEXABLE=true and a non-preview origin, starts
+ * Builds each app with SITE_INDEXABLE set to that app's apex host, starts
  * it, and requests the apex Host. Asserts robots allow crawling, sitemap
  * locs are apex-only, money-page canonicals are apex, noindex is absent,
- * and cross-site links use the apex table.
+ * and cross-site links use the apex table. `true` is not used: that value
+ * does not index every host.
  *
- * Does not set SITE_INDEXABLE on Vercel. Go-live stays that one env change.
+ * Does not set SITE_INDEXABLE on Vercel. Go-live stays that one env change,
+ * naming one apex.
  *
  *   LAUNCH_FLIP_SITES=dog-com node scripts/ci/launch-flip.mjs
  *   LAUNCH_FLIP_SKIP_BUILD=1 reuses a build already made with the flag on.
@@ -305,20 +307,20 @@ async function main() {
     const nextBin = require.resolve('next/dist/bin/next')
     const buildEnv = {
       ...process.env,
-      SITE_INDEXABLE: 'true',
+      SITE_INDEXABLE: site.host,
       VERCEL_ENV: 'production',
     }
     if (process.env.LAUNCH_FLIP_SKIP_BUILD === '1') {
       console.log(`\n== skip build ${site.id} (LAUNCH_FLIP_SKIP_BUILD=1) ==`)
     } else {
-      console.log(`\n== build ${site.id} SITE_INDEXABLE=true apex ==`)
+      console.log(`\n== build ${site.id} SITE_INDEXABLE=${site.host} apex ==`)
       await run(process.execPath, [path.join(ROOT, 'scripts/ci/next-build.mjs')], {
         cwd: appDir,
         env: buildEnv,
       })
     }
 
-    const startEnv = { ...process.env, SITE_INDEXABLE: 'true', VERCEL_ENV: 'production' }
+    const startEnv = { ...process.env, SITE_INDEXABLE: site.host, VERCEL_ENV: 'production' }
     delete startEnv.NODE_OPTIONS
     const child = spawn(process.execPath, [nextBin, 'start', '-H', '127.0.0.1', '-p', String(site.port)], {
       cwd: appDir,

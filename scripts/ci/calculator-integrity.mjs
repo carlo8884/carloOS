@@ -6030,17 +6030,17 @@ const CALCULATORS = [
     file: 'apps/ferret-com/src/app/tools/cost-calculator/page.tsx',
     mustInclude: [
       { re: /amazon-brand\/high\+protein\+ferret\+food\+kibble\?s=tools-cost-calculator/, label: 'high-protein ferret food search hop (same query as kibble guide)' },
-      { re: /amazon-brand\/compressed\+wood\+pellet\+litter\+heat\+treated\+non\+clumping\?s=tools-cost-calculator/, label: 'heat-treated wood pellet litter search hop (same query as litter review)' },
       { re: /amazon-brand\/ferret\+nation\+critter\+nation\+double\+unit\?s=tools-cost-calculator/, label: 'multi-level cage search hop (same query as cage review)' },
-      { re: /amazon-brand\/ferret\+sleep\+sack\+fleece\?s=tools-cost-calculator/, label: 'hammock / sleep-sack search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
       { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /compressed\+wood\+pellet\+litter\+heat\+treated\+non\+clumping/, label: 'wood-pellet search dropped: first result was cat litter' },
+      { re: /ferret\+sleep\+sack\+fleece/, label: 'sleep-sack search dropped: first result was a hanging hammock' },
     ],
-    why: 'Money path: under-hero capture with a concrete budget offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN.',
+    why: 'Money path: under-hero capture with a concrete budget offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN. Wood-pellet and sleep-sack searches stay off this page.',
   },
   {
     id: 'ferret · litter-planner',
@@ -6055,8 +6055,6 @@ const CALCULATORS = [
     id: 'ferret · litter-planner hops',
     file: 'apps/ferret-com/src/app/tools/litter-planner/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/compressed\+wood\+pellet\+litter\+heat\+treated\+non\+clumping\?s=tools-litter-planner/, label: 'heat-treated wood pellet litter search hop (same query as litter review)' },
-      { re: /amazon-brand\/small\+animal\+grass\+pellet\+litter\+non\+clumping\?s=tools-litter-planner/, label: 'grass pellet litter search hop (same query as litter review)' },
       { re: /amazon-brand\/ferret\+corner\+litter\+pan\?s=tools-litter-planner/, label: 'corner litter pan search hop (same query as cage-size calculator)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
     ],
@@ -6064,8 +6062,10 @@ const CALCULATORS = [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
       { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /compressed\+wood\+pellet\+litter\+heat\+treated\+non\+clumping/, label: 'wood-pellet search dropped: first result was cat litter' },
+      { re: /small\+animal\+grass\+pellet\+litter\+non\+clumping/, label: 'grass-pellet search dropped: first result was clumping cat litter' },
     ],
-    why: 'Money path: under-hero capture with a concrete litter-and-pan-plan offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN.',
+    why: 'Money path: under-hero capture with a concrete litter-and-pan-plan offer; the corner-pan search stays. Wood and grass pellet searches stay off this page.',
   },
   {
     id: 'ferret · cage-size-calculator',
@@ -6177,7 +6177,6 @@ const CALCULATORS = [
     mustInclude: [
       { re: /amazon-brand\/ferret\+carrier\+hard\+sided\?s=care-travel-and-carriers/, label: 'hard-sided ferret-carrier search hop (same query as readiness quiz; matches on-page hard-sided plastic carrier copy)' },
       { re: /amazon-brand\/soft\+pet\+carrier\?s=care-travel-and-carriers/, label: 'soft-sided pet-carrier search hop (same query as ferret emergency triage; matches on-page soft-sided carrier copy)' },
-      { re: /amazon-brand\/ferret\+sleep\+sack\+fleece\?s=care-travel-and-carriers/, label: 'ferret sleep-sack / fleece-liner search hop (same query as cage-size calculator; matches on-page familiar-sleep-sack copy)' },
       { re: /amazon-brand\/ferret\+water\+bottle\?s=care-travel-and-carriers/, label: 'ferret water-bottle search hop (same query as heat-stroke-prevention; matches on-page clip-on water copy)' },
       { re: /amazon-brand\/ferret\+corner\+litter\+pan\?s=care-travel-and-carriers/, label: 'ferret corner-litter-pan search hop (same query as litter-planner; matches on-page small low-sided pan copy)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -6187,8 +6186,9 @@ const CALCULATORS = [
       { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
       { re: /amazonHref=["'][^"']*(ibuprofen|acetaminophen|naproxen|aspirin|medication|medicine|prescription)/, label: 'never hop medications — this page is educational travel gear, not a drug list' },
+      { re: /ferret\+sleep\+sack\+fleece/, label: 'sleep-sack search dropped: first result was a hanging hammock' },
     ],
-    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete travel-carrier-checklist offer; every gear CTA is an amazon-brand category search matching on-page carrier and supplies copy (hard-sided carrier, soft-sided carrier, sleep sack / fleece liner, clip-on water bottle, corner litter pan), never a placeholder ASIN or a medication hop. Chewy stays omitted so empty buttons stay hidden.',
+    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete travel-carrier-checklist offer; every gear CTA is an amazon-brand category search matching on-page carrier and supplies copy (hard-sided carrier, soft-sided carrier, clip-on water bottle, corner litter pan), never a placeholder ASIN or a medication hop. The sleep-sack search stays off this page. Chewy stays omitted so empty buttons stay hidden.',
   },
   {
     id: 'ferret · ferret-proofing-your-home hops',
@@ -10295,7 +10295,6 @@ const CALCULATORS = [
     id: 'horses · water-requirements hops',
     file: 'apps/horses-com/src/app/nutrition/water-requirements/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/flat\+back\+horse\+water\+bucket\?s=nutrition-water/, label: 'flat-back horse water-bucket search hop (matches on-page free-choice stall-source / clean-and-refill copy; unique vs wide+mouth+horse+water+bucket / color+coded+flat+back+horse+buckets)' },
       { re: /amazon-brand\/heated\+horse\+water\+bucket\?s=nutrition-water/, label: 'heated horse water-bucket search hop (matches on-page slightly-warmed winter stall-water copy; unique vs horse+tank+heater / automatic+horse+waterer)' },
       { re: /amazon-brand\/electrolyte\+for\+horses\?s=nutrition-water/, label: 'electrolyte-for-horses search hop (matches on-page after-sweat thirst-drive copy; unique vs salt+first+horse+electrolyte+powder / horse+electrolytes)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -10307,8 +10306,9 @@ const CALCULATORS = [
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
       { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
       { re: /amazon-brand\/[^?"']*(laminated\+|fridge\+|stall\+door|mustelid\+|[^"'?]*handbook)/, label: 'never invent laminated / fridge-card / stall-door / handbook product hops' },
+      { re: /flat\+back\+horse\+water\+bucket/, label: 'flat-back bucket search dropped: first result was a feed bucket' },
     ],
-    why: 'Money path: keep the existing sidebar capture; add AffiliateDisclosure and under-hero capture with a concrete horse water-checklist offer; every gear CTA is an amazon-brand category search matching on-page free-choice / winter-warm / after-sweat copy (a flat-back stall water bucket as the everyday cleaned-and-refilled source, a heated stall water bucket so winter water stays slightly warmed and unfrozen, electrolyte for horses after heavy sweat so thirst stays driven), never a placeholder ASIN, a wide-mouth mixing-bucket hop, an automatic-waterer hop, a tank-heater hop, a hay-types #1113 hop, a grain #1112 hop, or a vaccine / prescription hop. Educational barn searches only — not a ranked product list, not a substitute for veterinary care. Chewy stays omitted so empty buttons stay hidden.',
+    why: 'Money path: keep the existing sidebar capture; add AffiliateDisclosure and under-hero capture with a concrete horse water-checklist offer; heated stall water bucket and electrolyte searches stay. The flat-back bucket search stays off this page. Educational barn searches only — not a ranked product list, not a substitute for veterinary care. Chewy stays omitted so empty buttons stay hidden.',
   },
   {
     id: 'horses · toxic-plants hops',
@@ -11083,9 +11083,6 @@ const CALCULATORS = [
     mustInclude: [
       { re: /<JourneyNext/, label: 'journey next-step after the quarantine answer' },
       { re: /nextHref="\/setup\/quarantine-tank-guide"/, label: 'next step is quarantine, not a shop dump' },
-      { re: /resourceHref="\/go\/amazon-brand\/saltwater%20reef%20tank%20starter%20kit\?s=setup-saltwater-tank-setup"/, label: 'journey hop reuses the existing saltwater starter-kit search' },
-      { re: /amazon-brand\/saltwater%20reef%20tank%20starter%20kit\?s=setup-saltwater-tank-setup/, label: 'existing saltwater-reef-tank-starter-kit amazon-brand hop kept (do not re-ship a new query)' },
-      { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -11093,8 +11090,9 @@ const CALCULATORS = [
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
       { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
       { re: /laminated\+|fridge\+|handbook/, label: 'no invented kitchen hops on the journey strip' },
+      { re: /saltwater%20reef%20tank%20starter%20kit/, label: 'saltwater starter-kit search dropped: first result was a test kit' },
     ],
-    why: '2026-09-08 journeys: after the quarantine answer, next step is the quarantine guide + the existing saltwater starter-kit hop. Shop dump stays below. No invented kitchen hops. No species headcounts.',
+    why: '2026-09-08 journeys: after the quarantine answer, next step is the quarantine guide. The saltwater starter-kit search stays off this page. No invented kitchen hops. No species headcounts.',
   },
 
   {
@@ -12769,7 +12767,6 @@ const CALCULATORS = [
     id: 'ferret · stress-signs hops',
     file: 'apps/ferret-com/src/app/behavior/stress-signs/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/ferret\+sleep\+sack\+fleece\?s=behavior-stress-signs/, label: 'existing ferret sleep-sack amazon-brand hop kept (do not re-ship a new query)' },
       { re: /marshall\/ferret\+play\+tunnel\?s=behavior-stress-signs/, label: 'existing Marshall Pop-N-Play tunnel hop kept (not an empty leftover button)' },
       { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
@@ -12778,8 +12775,9 @@ const CALCULATORS = [
       { re: /ctaHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
       { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /ferret\+sleep\+sack\+fleece/, label: 'sleep-sack search dropped: first result was a hanging hammock' },
     ],
-    why: 'Money path leftover after #1247: ferret weight-management under-hero is on main. Litter/enrichment stay deprioritized; ferret aging stays held. Keep the existing sidebar capture, the already-hopped sleep-sack Amazon search, and the existing Marshall tunnel hop; add under-hero capture with a concrete ferret stress-signs-checklist offer matching on-page appetite / hiding / bar-biting / environment-vs-illness copy. Do not re-ship new queries. No new brand, no PLACEHOLDER. Chewy stays omitted so empty buttons stay hidden.',
+    why: 'Money path leftover after #1247: ferret weight-management under-hero is on main. Litter/enrichment stay deprioritized; ferret aging stays held. Keep the existing sidebar capture and the existing Marshall tunnel hop. The sleep-sack search stays off this page. Stress-signs checklist still matches on-page appetite / hiding / bar-biting / environment-vs-illness copy. Do not re-ship new queries. No new brand, no PLACEHOLDER. Chewy stays omitted so empty buttons stay hidden.',
   },
   {
     id: 'ferret · leash-and-harness-training hops',

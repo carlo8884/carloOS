@@ -161,16 +161,18 @@ export default function WaterRequirementsPage() {
             page does not claim hands-on testing.
           </p>
 
-          <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/flat+back+horse+water+bucket?s=nutrition-water", "/go/amazon-brand/heated+horse+water+bucket?s=nutrition-water", "/go/amazon-brand/electrolyte+for+horses?s=nutrition-water"]} />
+          <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/heated+horse+water+bucket?s=nutrition-water", "/go/amazon-brand/electrolyte+for+horses?s=nutrition-water"]} />
 
           {/* Money path — live amazon-brand search hops
-              (flat back horse water bucket /
-              heated horse water bucket /
+              (heated horse water bucket /
               electrolyte for horses).
+              The flat-back stall bucket search is not a button:
+              its first result was a feed bucket.
               Educational barn searches only; no Rx /
               vaccine ASIN hops. ShopCtas hides empty
               Chewy; never href="#" or PLACEHOLDER.
-              Unused vs #1113
+              Unused vs #1114 flat-back stall bucket
+              (dropped), #1113
               orchard+grass+hay+horse /
               alfalfa+hay+bales+horse /
               timothy+alfalfa+mixed+hay+horse, #1112
@@ -199,10 +201,6 @@ export default function WaterRequirementsPage() {
             </div>
             <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
-              <ShopCtas
-                amazonHref="/go/amazon-brand/flat+back+horse+water+bucket?s=nutrition-water"
-                amazonLabel="Browse flat-back horse water buckets on Amazon →"
-              />
               <ShopCtas
                 amazonHref="/go/amazon-brand/heated+horse+water+bucket?s=nutrition-water"
                 amazonLabel="Browse heated horse water buckets on Amazon →"
