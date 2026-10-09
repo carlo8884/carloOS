@@ -101,7 +101,7 @@ export default function BestPlantedFertilizersPage() {
               cons={['Does not cover macros adequately alone', 'Multi-bottle system needed for full NPK coverage', 'Twice-weekly dosing']}
               price="$10–20"
               priceNote="dated 2026-10-05."
-              ctaText="Shop Seachem Flourish Comprehensive on Amazon →"
+              ctaText="Search Amazon for Seachem Flourish Comprehensive"
               ctaHref="/go/amazon-brand/seachem+flourish+comprehensive?s=reviews-best-planted-tank-fertilizers"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="seachem-flourish"
@@ -142,7 +142,7 @@ export default function BestPlantedFertilizersPage() {
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">Trace elements today, from a store that already stocks it</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#flourish" className="text-brand-primary">Seachem Flourish Comprehensive</a><TableShopLink href={"/go/amazon-brand/seachem+flourish+comprehensive?s=reviews-best-planted-tank-fertilizers"} product={"Seachem Flourish Comprehensive"} /></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#flourish" className="text-brand-primary">Seachem Flourish Comprehensive</a><TableShopLink href={"/go/amazon-brand/seachem+flourish+comprehensive?s=reviews-best-planted-tank-fertilizers"} product={"Seachem Flourish Comprehensive"} label="Search Amazon for Seachem Flourish Comprehensive" /></td>
                       <td className="p-3 text-brand-text-mid">Best Trace Elements. Micros, not a full macro bottle. 5 ml per 250 L twice weekly. $10–20</td>
                       <td className="p-3 text-brand-text-mid">The tank is short on nitrogen, phosphorus, or potassium. The card says those need separate Flourish bottles</td>
                     </tr>

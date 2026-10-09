@@ -2,12 +2,12 @@ import Link from 'next/link'
 import type { SiteId } from '@carloOS/config'
 import { missedPage } from '../data/missed-page'
 import { BelowFoldPhoto } from './BelowFoldPhoto'
-import { HubSearch } from './HubSearch'
 import { TrackPage404 } from './TrackPage404'
 
 /**
- * Plain recovery for a missing URL or an empty search. Hub search filters
- * the buying pages. The calculator stays visible when the filter hides them.
+ * Plain recovery for a missing URL or an empty search. The five buying
+ * pages stay on the page. The search box submits to /search and does not
+ * hide those links.
  */
 export function MissedPage({
   siteId,
@@ -66,15 +66,29 @@ export function MissedPage({
         >
           {lead}
         </p>
-        <HubSearch
-          listId={listId}
-          total={page.guides.length}
-          noun={page.noun}
-          initialQuery={kind === 'search' ? trimmed : ''}
-        />
+        <form action="/search" method="get" role="search" className="mb-8">
+          <label htmlFor="missed-search-q" className="block text-sm font-semibold text-brand-dark mb-2">
+            Search guides, reviews, and tools
+          </label>
+          <div className="flex gap-2">
+            <input
+              id="missed-search-q"
+              name="q"
+              type="search"
+              defaultValue={kind === 'search' ? trimmed : ''}
+              className="w-full min-h-11 border border-brand-border rounded-md px-3 py-2 text-base text-brand-dark bg-brand-white"
+            />
+            <button
+              type="submit"
+              className="min-h-11 shrink-0 px-4 rounded-md bg-brand-primary text-brand-white text-sm font-semibold border-0 cursor-pointer"
+            >
+              Search
+            </button>
+          </div>
+        </form>
         <ul id={listId} className="list-none m-0 p-0 flex flex-col gap-3 mb-8">
           {page.guides.map((guide) => (
-            <li key={guide.href} data-hub-item data-title={guide.title} data-topic={guide.topic}>
+            <li key={guide.href}>
               <Link
                 href={guide.href}
                 className="block rounded border border-brand-border px-4 py-3 no-underline hover:border-brand-primary"

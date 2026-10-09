@@ -56,7 +56,7 @@ export default function FluvalSpecVsAqueonGuidePage() {
         publishedAt: 'October 2026',
         readTime: '6 min',
       }}
-      heroHop={<PrimaryHop href="/go/amazon-brand/aqueon+20+gallon+long+aquarium?s=reviews-fluval-spec-vs-aqueon-20-guide" label="Browse Aqueon 20-gallon long aquariums on Amazon" />}
+      heroHop={<PrimaryHop href="/go/amazon-brand/aqueon+20+gallon+long+aquarium?s=reviews-fluval-spec-vs-aqueon-20-guide" label="Search Amazon for Aqueon 20-gallon long" />}
       heroExtra={<HopDisclosure siteId="fish-com" href="/go/amazon-brand/aqueon+20+gallon+long+aquarium?s=reviews-fluval-spec-vs-aqueon-20-guide" />}
       breadcrumbs={[
         { name: 'Home', href: '/' },

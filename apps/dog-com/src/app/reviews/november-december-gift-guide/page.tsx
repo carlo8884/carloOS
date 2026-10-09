@@ -122,7 +122,7 @@ export default function NovemberDecemberGiftGuidePage() {
               </tr>
               <tr className="border-b border-brand-border">
                 <td className="p-3 text-brand-text-mid">$25–35</td>
-                <td className="p-3 font-bold text-brand-dark">Northmate Green<TableShopLink href={`/go/amazon-brand/northmate+green+interactive+feeder?s=${SOURCE}`} product="Northmate Green" /></td>
+                <td className="p-3 font-bold text-brand-dark">Northmate Green<TableShopLink href={`/go/amazon-brand/northmate+green+interactive+feeder?s=${SOURCE}`} product="Northmate Green" label="Search Amazon for Northmate Green" /></td>
                 <td className="p-3"><Link href="/reviews/best-slow-feeder-bowls">Slow feeder review</Link></td>
               </tr>
               <tr className="border-b border-brand-border">
@@ -153,7 +153,7 @@ export default function NovemberDecemberGiftGuidePage() {
             </tbody>
           </table>
         </div>
-        <ComparisonFoot updated="2026-10-07" />
+        <ComparisonFoot updated="2026-10-09" />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} includeSchema={false} />
         <BelowFoldPhoto siteId="dog-com" />

@@ -56,7 +56,7 @@ export default function OutwardHoundVsNorthmateGuidePage() {
         publishedAt: 'October 2026',
         readTime: '6 min',
       }}
-      heroHop={<PrimaryHop href="/go/amazon-brand/northmate+green+interactive+feeder?s=reviews-outward-hound-vs-northmate-guide" label="Browse Northmate Green interactive feeders on Amazon" />}
+      heroHop={<PrimaryHop href="/go/amazon-brand/northmate+green+interactive+feeder?s=reviews-outward-hound-vs-northmate-guide" label="Search Amazon for Northmate Green" />}
       heroExtra={<HopDisclosure siteId="dog-com" href="/go/amazon-brand/northmate+green+interactive+feeder?s=reviews-outward-hound-vs-northmate-guide" />}
       breadcrumbs={[
         { name: 'Home', href: '/' },

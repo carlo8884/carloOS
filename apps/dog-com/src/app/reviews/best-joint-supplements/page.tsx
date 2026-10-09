@@ -165,7 +165,7 @@ export default function BestJointSupplementsPage() {
               cons={['Less evidence than Dasuquin (no ASU)', 'Significant non-response rate in some dogs']}
               price="$25–45 for 120-count"
               priceNote="dated 2026-10-05."
-              ctaText="Shop Cosequin DS Maximum Strength on Amazon →"
+              ctaText="Search Amazon for Cosequin DS"
               ctaHref="/go/amazon-brand/cosequin+ds+maximum+strength?s=reviews-best-joint-supplements"
               ctaAffiliateProgram="amazon-brand"
               ctaAffiliateProduct="cosequin+ds+maximum+strength"
@@ -218,7 +218,7 @@ export default function BestJointSupplementsPage() {
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">A lower-priced glucosamine</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#cosequin" className="text-brand-primary">Cosequin DS Maximum Strength</a><TableShopLink href={"/go/amazon-brand/cosequin+ds+maximum+strength?s=reviews-best-joint-supplements"} product={"Cosequin DS Maximum Strength"} /></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#cosequin" className="text-brand-primary">Cosequin DS Maximum Strength</a><TableShopLink href={"/go/amazon-brand/cosequin+ds+maximum+strength?s=reviews-best-joint-supplements"} product={"Cosequin DS Maximum Strength"} label="Search Amazon for Cosequin DS" /></td>
                       <td className="p-3 text-brand-text-mid">Best Budget Glucosamine. $25–45 for 120-count</td>
                       <td className="p-3 text-brand-text-mid">You want the ASU evidence. The card says Cosequin has less evidence than Dasuquin</td>
                     </tr>
