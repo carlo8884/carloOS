@@ -64,16 +64,18 @@ const FAQS = [
   {
     question: 'Why does this calculator say “estimate” and not “prescription”?',
     answer:
-      'Calorie formulas give a population-level starting point, not an individual prescription. Metabolic rate depends on lean mass, thyroid status, temperature, and individual variation. The WSAVA Nutritional Assessment Guidelines state that energy requirements can vary by 50% in either direction for cats (https://pmc.ncbi.nlm.nih.gov/articles/PMC11107980/). Feed near the estimate, then adjust over 4–6 weeks based on body condition score. A veterinarian should confirm the target weight and review any significant calorie restriction — especially the 0.8 × RER weight-loss factor.',
+      'Calorie formulas give a population-level starting point, not an individual prescription. Metabolic rate depends on lean mass, thyroid status, temperature, and individual variation. The WSAVA Nutritional Assessment Guidelines state that energy requirements can vary by 50% in either direction for cats. Feed near the estimate, then adjust over 4–6 weeks based on body condition score. A veterinarian should confirm the target weight and review any significant calorie restriction — especially the 0.8 × RER weight-loss factor.',
     answerText:
-      'The WSAVA Nutritional Assessment Guidelines state that energy requirements can vary by 50% in either direction for cats (https://pmc.ncbi.nlm.nih.gov/articles/PMC11107980/). Adjust over 4–6 weeks using body condition and veterinary guidance. Not a diagnosis or a diet plan.',
+      'The WSAVA Nutritional Assessment Guidelines state that energy requirements can vary by 50% in either direction for cats. Adjust over 4–6 weeks using body condition and veterinary guidance. Not a diagnosis or a diet plan.',
+    source: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC11107980/',
   },
   {
     question: 'Do treats count toward the daily calorie target?',
     answer:
-      'Yes. The WSAVA guide to treats for cats states that treats should make up no more than 10% of a cat\'s daily calorie intake (https://wsava.org/wp-content/uploads/2025/11/WSAVA_GuidetoTreats_Cats_251107.pdf). That 10% is not a row on the WSAVA July 2020 calorie chart. Subtract treat calories from the estimate before you portion the bowl. Weigh meals on a kitchen gram scale rather than a measuring cup. A slow-feeder bowl or interactive feeder can stretch a measured ration without adding calories.',
+      'Yes. The WSAVA guide to treats for cats states that treats should make up no more than 10% of a cat\'s daily calorie intake. That 10% is not a row on the WSAVA July 2020 calorie chart. Subtract treat calories from the estimate before you portion the bowl. Weigh meals on a kitchen gram scale rather than a measuring cup. A slow-feeder bowl or interactive feeder can stretch a measured ration without adding calories.',
     answerText:
-      'The WSAVA guide to treats for cats states that treats should make up no more than 10% of a cat\'s daily calorie intake (https://wsava.org/wp-content/uploads/2025/11/WSAVA_GuidetoTreats_Cats_251107.pdf). Weigh meals on a kitchen gram scale.',
+      'The WSAVA guide to treats for cats states that treats should make up no more than 10% of a cat\'s daily calorie intake. Weigh meals on a kitchen gram scale.',
+    source: 'https://wsava.org/wp-content/uploads/2025/11/WSAVA_GuidetoTreats_Cats_251107.pdf',
   },
 ]
 

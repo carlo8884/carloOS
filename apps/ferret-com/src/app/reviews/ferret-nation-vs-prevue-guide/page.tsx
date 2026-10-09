@@ -25,7 +25,7 @@ const schema = buildArticleSchema({
 const FAQS = [
   {
     question: 'Which cage does the cage review mark as the winner?',
-    answer: 'The Ferret Nation / Critter Nation double unit, marked Best Overall. The manufacturer page does not print a bar-spacing figure. It says the full-width double doors open for cleaning and feeding (https://www.midwesthomes4pets.com/product/small-animal/habitats-cages/ferret-nation/, fetched 2026-10-08). The review lists a modular stack and a price tier of $$$. It is the long-term pick for one to four ferrets.',
+    answer: 'The Ferret Nation / Critter Nation double unit, marked Best Overall. The manufacturer page does not print a bar-spacing figure. It says the full-width double doors open for cleaning and feeding (fetched 2026-10-08). The review lists a modular stack and a price tier of $$$. It is the long-term pick for one to four ferrets.',
   },
   {
     question: 'When does the review point to the Prevue Feisty Ferret?',
@@ -78,7 +78,7 @@ export default function FerretNationVsPrevueGuidePage() {
           <LastUpdated date="2026-10-09" />
         <p>The <Link href="/reviews/best-ferret-cage">cage review</Link> already lists the Ferret Nation / Critter Nation double as the overall pick and the Prevue Feisty Ferret as the value pick. Prices in the review are tiers, not dollar amounts. Nothing here turns those tiers into a dollar price.</p>
         <h2>What the review says about Ferret Nation</h2>
-        <p>The Ferret Nation / Critter Nation double unit is Best Overall and the winner. The manufacturer page does not print a bar-spacing figure. It says the full-width double doors open for cleaning and feeding (https://www.midwesthomes4pets.com/product/small-animal/habitats-cages/ferret-nation/, fetched 2026-10-08). Levels are modular and stackable. Pans are deep and leak-proof. It is meant for one to four ferrets. The price tier is $$$. Cons: premium price, heavy and large once assembled, and wire shelves need covering.</p>
+        <p>The Ferret Nation / Critter Nation double unit is Best Overall and the winner. The <a href="https://www.midwesthomes4pets.com/product/small-animal/habitats-cages/ferret-nation/">manufacturer page</a> does not print a bar-spacing figure. It says the full-width double doors open for cleaning and feeding (fetched 2026-10-08). Levels are modular and stackable. Pans are deep and leak-proof. It is meant for one to four ferrets. The price tier is $$$. Cons: premium price, heavy and large once assembled, and wire shelves need covering.</p>
         <h2>What the review says about Prevue</h2>
         <p>The Prevue Pet Products Feisty Ferret Cage is Best Value. Bar spacing is listed as ferret-appropriate, not as a second inch measurement. It includes multiple shelves and ramps. The price tier is $$. It is meant for one to two ferrets. Cons: smaller than a double modular unit, wire shelves need covering, and it is not expandable.</p>
         <p>The <Link href="/tools/cage-size-calculator">cage-size calculator</Link> is the step for floor space. Use that calculator for the length before you order. The Kaytee multi-level cage is a third option, price tier $, for one ferret with daily out-time.</p>
