@@ -3,8 +3,13 @@
  * Dog.com and Fish.com are not in this map, so they stay on their own host.
  * Preview, localhost, and *.vercel.app hosts are not in this map either.
  * This module does not change DNS, domains, or SITE_INDEXABLE.
+ * The host parse is inlined. A `.ts` import fails the Next type check.
  */
-import { hostnameFromHostHeader } from './indexing.ts'
+
+function hostnameFromHostHeader(hostHeader: string | null | undefined): string {
+  const raw = (hostHeader ?? '').split(',')[0].trim().toLowerCase()
+  return raw.replace(/:\d+$/, '')
+}
 
 const APEX_FROM_WWW: Record<string, string> = {
   'www.vets.co': 'https://vets.co',
