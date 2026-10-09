@@ -75,7 +75,7 @@ export default function BestNanoTanksPage() {
               nextLabel="Cycle the nano before you add livestock"
               nextBlurb="The callout is the size rule — a 20-long is more forgiving than a 5-gallon. The cycling guide is the next step so ammonia and nitrite both read zero before anything goes in. The hop below is the same Aqueon 20-long search already on this page."
               resourceHref="/go/amazon-brand/aqueon+20+gallon+long+aquarium?s=reviews-best-nano-tanks"
-              resourceLabel="Browse Aqueon 20-gallon long aquariums on Amazon →"
+              resourceLabel="Search Amazon for Aqueon 20-gallon long"
             />
             <HopDisclosure siteId="fish-com" href={["/go/amazon/B0089E5VLC?s=reviews-best-nano-tanks", "/go/amazon-brand/aqueon+20+gallon+long+aquarium?s=reviews-best-nano-tanks", "/go/amazon-brand/aqueon+10+gallon+aquarium?s=reviews-best-nano-tanks"]} />
             <ReviewCard id="fluval-spec" badge="Best 5 Gallon" name="Fluval Spec V 5-Gallon" subtitle="Rimless rimless AIO · Honeycomb filter cover · Low-profile LED" winner
@@ -97,7 +97,7 @@ export default function BestNanoTanksPage() {
               cons={['No equipment included', 'Requires separate filter, heater, light purchases']}
               price="$20–30"
               priceNote="dated 2026-10-05."
-              ctaText="Shop Aqueon 10 Gallon on Amazon →"
+              ctaText="Search Amazon for Aqueon 10"
               ctaHref="/go/amazon-brand/aqueon+10+gallon+aquarium?s=reviews-best-nano-tanks"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="aqueon-10-gallon"
@@ -109,7 +109,7 @@ export default function BestNanoTanksPage() {
               cons={['No equipment included', 'Requires 20-gallon-rated filter, heater, light']}
               price="$30–50"
               priceNote="dated 2026-10-05."
-              ctaText="Shop Aqueon 20-gallon long aquariums on Amazon →"
+              ctaText="Search Amazon for Aqueon 20-gallon long"
               ctaHref="/go/amazon-brand/aqueon+20+gallon+long+aquarium?s=reviews-best-nano-tanks"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="aqueon-20-long"
@@ -138,20 +138,20 @@ export default function BestNanoTanksPage() {
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">A bare 10-gallon you will equip yourself</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#aqueon-10" className="text-brand-primary">Aqueon 10-gallon</a><TableShopLink href={"/go/amazon-brand/aqueon+10+gallon+aquarium?s=reviews-best-nano-tanks"} product={"Aqueon 10-gallon"} /></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#aqueon-10" className="text-brand-primary">Aqueon 10-gallon</a><TableShopLink href={"/go/amazon-brand/aqueon+10+gallon+aquarium?s=reviews-best-nano-tanks"} product={"Aqueon 10-gallon"} label="Search Amazon for Aqueon 10" /></td>
                       <td className="p-3 text-brand-text-mid">Best 10 Gallon. 20¼&quot; × 10½&quot; × 12 9/16&quot;. No equipment in the box. $20–30</td>
                       <td className="p-3 text-brand-text-mid">You want a kit. Filter, heater, and light are separate purchases</td>
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">A first community or planted tank</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#aqueon-20" className="text-brand-primary">Aqueon 20-gallon long</a><TableShopLink href={"/go/amazon-brand/aqueon+20+gallon+long+aquarium?s=reviews-best-nano-tanks"} product={"Aqueon 20-gallon long"} /></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#aqueon-20" className="text-brand-primary">Aqueon 20-gallon long</a><TableShopLink href={"/go/amazon-brand/aqueon+20+gallon+long+aquarium?s=reviews-best-nano-tanks"} product={"Aqueon 20-gallon long"} label="Search Amazon for Aqueon 20-gallon long" /></td>
                       <td className="p-3 text-brand-text-mid">Best Overall Nano. 30¼&quot; × 12½&quot; × 12¾&quot;. $30–50</td>
                       <td className="p-3 text-brand-text-mid">You want equipment in the box. The card says you still need a 20-gallon-rated filter, heater, and light</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-08" />
+              <ComparisonFoot updated="2026-10-09" />
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Which nano tank fits</h2>
               <FAQAccordion items={[
                 {

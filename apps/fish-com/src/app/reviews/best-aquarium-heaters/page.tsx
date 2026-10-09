@@ -45,7 +45,7 @@ const PICKS = [
 // PICKS. No aggregateRating, no fabricated specs (QC §1.4).
 const itemList = buildItemListSchema({
   name: 'Best Aquarium Heaters 2026',
-  items: PICKS.map((p) => ({ name: p.name, url: ({ "Eheim Jager": "https://fish.com/go/amazon/B003I5UC0W?s=reviews-best-aquarium-heaters", "Cobalt Neo-Therm": "https://fish.com/go/amazon/B003I5UC0W?s=reviews-best-aquarium-heaters", "Hydor Inline": "https://fish.com/go/amazon-brand/hydor+inline+heater?s=reviews-best-aquarium-heaters", "Aqueon Pro": "https://fish.com/go/amazon/B07L1M7454?s=reviews-best-aquarium-heaters" }[p.name] ?? `https://fish.com/reviews/best-aquarium-heaters${p.href}`) })),
+  items: PICKS.map((p) => ({ name: p.name, url: ({ "Eheim Jager": "https://fish.com/go/amazon/B003I5UC0W?s=reviews-best-aquarium-heaters", "Cobalt Neo-Therm": "https://fish.com/go/amazon-brand/cobalt+neo-therm+pro?s=reviews-best-aquarium-heaters", "Hydor Inline": "https://fish.com/go/amazon-brand/hydor+inline+heater?s=reviews-best-aquarium-heaters", "Aqueon Pro": "https://fish.com/go/amazon/B07L1M7454?s=reviews-best-aquarium-heaters" }[p.name] ?? `https://fish.com/reviews/best-aquarium-heaters${p.href}`) })),
 })
 
 // FAQ content derived from this page's comparison criteria and sizing guidance only.
@@ -162,7 +162,7 @@ export default function BestHeatersPage() {
               badge="Best Flat Design"
               name="Cobalt Aquatics Neo-Therm Pro"
               subtitle="Slim flat design · LED color indicator · See the manufacturer's current page"
-              description={<p>Neo-Therm accuracy: see the manufacturer's current page. This card does not copy the Eheim figure onto Cobalt. The flat body is less obtrusive in a planted or display tank than a cylinder. The LED color indicator transitions through blue (heating) to white (at temperature) — functional at a glance. Shatterproof plastic housing removes the main physical risk of the glass Jager. The one tradeoff: the Neo-Therm is more expensive than the Eheim Jager for equivalent performance. The Cobalt search currently returns no products, so the shop link goes to the Eheim Jager.</p>}
+              description={<p>Neo-Therm accuracy: see the manufacturer's current page. This card does not copy the Eheim figure onto Cobalt. The flat body is less obtrusive in a planted or display tank than a cylinder. The LED color indicator transitions through blue (heating) to white (at temperature) — functional at a glance. Shatterproof plastic housing removes the main physical risk of the glass Jager. The one tradeoff: the Neo-Therm is more expensive than the Eheim Jager for equivalent performance. The button searches Amazon for Cobalt Neo-Therm.</p>}
               specs={[
                 { label: 'Accuracy', value: "See the manufacturer's current page" },
                 { label: 'Design', value: 'Flat / slim profile', highlight: 'good' },
@@ -174,10 +174,10 @@ export default function BestHeatersPage() {
               cons={['Higher price than Eheim Jager', 'Not recalibratable']}
               price="$35–65"
               priceNote="dated 2026-10-04."
-              ctaText="Check price of the Eheim Jager heater on Amazon"
-              ctaHref="/go/amazon/B003I5UC0W?s=reviews-best-aquarium-heaters"
+              ctaText="Search Amazon for Cobalt Neo-Therm"
+              ctaHref="/go/amazon-brand/cobalt+neo-therm+pro?s=reviews-best-aquarium-heaters"
               ctaAffiliateProgram="amazon"
-              ctaAffiliateProduct="eheim-jager"
+              ctaAffiliateProduct="cobalt-neo-therm"
             />
 
             <ReviewCard
@@ -196,7 +196,7 @@ export default function BestHeatersPage() {
               cons={['Requires canister filter', 'More expensive than in-tank', 'Not compatible with HOB filters']}
               price="$40–70"
               priceNote="dated 2026-10-04."
-              ctaText="Shop Hydor Inline heater on Amazon →"
+              ctaText="Search Amazon for Hydor Inline"
               ctaHref="/go/amazon-brand/hydor+inline+heater?s=reviews-best-aquarium-heaters"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="hydor-inline"
@@ -246,13 +246,13 @@ export default function BestHeatersPage() {
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">The same published accuracy in a display tank</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#cobalt" className="text-brand-primary">Cobalt Neo-Therm Pro</a><TableShopLink href={"/go/amazon/B003I5UC0W?s=reviews-best-aquarium-heaters"} product={"Eheim Jager"} /></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#cobalt" className="text-brand-primary">Cobalt Neo-Therm Pro</a><TableShopLink href={"/go/amazon-brand/cobalt+neo-therm+pro?s=reviews-best-aquarium-heaters"} product={"Cobalt Neo-Therm Pro"} label="Search Amazon for Cobalt Neo-Therm" /></td>
                       <td className="p-3 text-brand-text-mid">Best flat design. See the manufacturer's current page. Shatterproof plastic. $35–65</td>
-                      <td className="p-3 text-brand-text-mid">More expensive than the Jager, and not recalibratable. The Cobalt search currently returns no products, so the shop link goes to the Eheim Jager.</td>
+                      <td className="p-3 text-brand-text-mid">More expensive than the Jager, and not recalibratable. The button searches Amazon for Cobalt Neo-Therm.</td>
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">A canister filter, and no heater in the tank</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#hydor" className="text-brand-primary">Hydor In-Line</a><TableShopLink href={"/go/amazon-brand/hydor+inline+heater?s=reviews-best-aquarium-heaters"} product={"Hydor In-Line"} /></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#hydor" className="text-brand-primary">Hydor In-Line</a><TableShopLink href={"/go/amazon-brand/hydor+inline+heater?s=reviews-best-aquarium-heaters"} product={"Hydor In-Line"} label="Search Amazon for Hydor Inline" /></td>
                       <td className="p-3 text-brand-text-mid">Best inline. Sits on the canister return hose. $40–70</td>
                       <td className="p-3 text-brand-text-mid">Does not work with a hang-on-back or a sponge filter</td>
                     </tr>

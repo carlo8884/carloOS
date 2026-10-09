@@ -105,7 +105,7 @@ export default function NovemberDecemberGiftGuidePage() {
             <tbody>
               <tr className="border-b border-brand-border">
                 <td className="p-3">$10–20</td>
-                <td className="p-3 font-bold">Seachem Flourish<TableShopLink href={`/go/amazon-brand/seachem+flourish+comprehensive?s=${SOURCE}`} product="Seachem Flourish" /></td>
+                <td className="p-3 font-bold">Seachem Flourish<TableShopLink href={`/go/amazon-brand/seachem+flourish+comprehensive?s=${SOURCE}`} product="Seachem Flourish" label="Search Amazon for Seachem Flourish Comprehensive" /></td>
                 <td className="p-3"><Link href="/reviews/best-planted-tank-fertilizers">Fertilizer review</Link></td>
               </tr>
               <tr className="border-b border-brand-border">
@@ -125,7 +125,7 @@ export default function NovemberDecemberGiftGuidePage() {
               </tr>
               <tr className="border-b border-brand-border">
                 <td className="p-3">$20–30</td>
-                <td className="p-3 font-bold">Aqueon 10-gallon<TableShopLink href={`/go/amazon-brand/aqueon+10+gallon+aquarium?s=${SOURCE}`} product="Aqueon 10-gallon" /></td>
+                <td className="p-3 font-bold">Aqueon 10-gallon<TableShopLink href={`/go/amazon-brand/aqueon+10+gallon+aquarium?s=${SOURCE}`} product="Aqueon 10-gallon" label="Search Amazon for Aqueon 10" /></td>
                 <td className="p-3"><Link href="/reviews/best-nano-tanks">Nano tank review</Link></td>
               </tr>
               <tr className="border-b border-brand-border">
@@ -171,7 +171,7 @@ export default function NovemberDecemberGiftGuidePage() {
             </tbody>
           </table>
         </div>
-        <ComparisonFoot updated="2026-10-08" />
+        <ComparisonFoot updated="2026-10-09" />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} includeSchema={false} />
         <BelowFoldPhoto siteId="fish-com" />

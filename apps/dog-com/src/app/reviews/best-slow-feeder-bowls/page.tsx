@@ -66,7 +66,7 @@ export default function BestSlowFeederBowlsPage() {
               nextLabel="Split the daily amount before you pick a maze"
               nextBlurb="The callout is the bloat rule — twice-daily feeding plus a slow feeder, not one giant gulp. How-much-to-feed is the next step so each bowl actually holds a smaller half-ration. The hop below is the same Northmate search already on this page."
               resourceHref="/go/amazon-brand/northmate+green+interactive+feeder?s=reviews-best-slow-feeder-bowls"
-              resourceLabel="Browse Northmate Green interactive feeders on Amazon →"
+              resourceLabel="Search Amazon for Northmate Green"
             />
             <HopDisclosure siteId="dog-com" href={["/go/chewy-brand/outward+hound+fun+feeder?s=reviews-best-slow-feeder-bowls", "/go/amazon-brand/northmate+green+interactive+feeder?s=reviews-best-slow-feeder-bowls", "/go/chewy-brand/lickimat+splash?s=reviews-best-slow-feeder-bowls"]} />
             <ReviewCard id="outward-hound" badge="Best Overall" name="Outward Hound Fun Feeder Slo Bowl" subtitle="Ridge and maze pattern · Extends mealtime 10x · Dishwasher safe · 5 sizes" winner
@@ -88,7 +88,7 @@ export default function BestSlowFeederBowlsPage() {
               cons={['More expensive than basic slow bowls', 'Kibble can get stuck deep in grass segments']}
               price="$25–35"
               priceNote="dated 2026-10-05."
-              ctaText="Shop Northmate Green interactive feeder on Amazon →"
+              ctaText="Search Amazon for Northmate Green"
               ctaHref="/go/amazon-brand/northmate+green+interactive+feeder?s=reviews-best-slow-feeder-bowls"
               ctaAffiliateProgram="amazon-brand"
               ctaAffiliateProduct="northmate+green+interactive+feeder"
@@ -129,7 +129,7 @@ export default function BestSlowFeederBowlsPage() {
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">Foraging enrichment, or a floor-level feeder a senior can use</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#northmate" className="text-brand-primary">Northmate Green</a><TableShopLink href={"/go/amazon-brand/northmate+green+interactive+feeder?s=reviews-best-slow-feeder-bowls"} product={"Northmate Green"} /></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#northmate" className="text-brand-primary">Northmate Green</a><TableShopLink href={"/go/amazon-brand/northmate+green+interactive+feeder?s=reviews-best-slow-feeder-bowls"} product={"Northmate Green"} label="Search Amazon for Northmate Green" /></td>
                       <td className="p-3 text-brand-text-mid">Best Puzzle Feeder. Flat, so it cannot tip. Works with wet food. $25–35</td>
                       <td className="p-3 text-brand-text-mid">You want the cheapest maze bowl. Kibble can stick deep in the grass segments</td>
                     </tr>
@@ -142,7 +142,7 @@ export default function BestSlowFeederBowlsPage() {
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-07" />
+              <ComparisonFoot updated="2026-10-09" />
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Which feeder fits which meal</h2>
               <FAQAccordion items={[
                 {

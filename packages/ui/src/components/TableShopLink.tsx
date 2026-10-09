@@ -5,11 +5,14 @@ import { HeldQuoteNext } from './HeldQuoteNext'
 export function TableShopLink({
   href,
   product,
+  label,
   holdWithoutPartnerId = false,
   quietUntilTag = false,
 }: {
   href: string
   product: string
+  /** Visible text when the generated “product on retailer” line would imply a product page. */
+  label?: string
   holdWithoutPartnerId?: boolean
   /** Held product partners stay in the row as a note until their own tag is set. */
   quietUntilTag?: boolean
@@ -34,6 +37,7 @@ export function TableShopLink({
   }
   void quietUntilTag
   const link = tableShopLink(href, product)
+  const text = label?.trim() || link?.label || product
   return (
     <a
       href={hop}
@@ -41,7 +45,7 @@ export function TableShopLink({
       rel="sponsored noopener"
       className="mt-1 block font-semibold text-brand-primary underline underline-offset-2"
     >
-      {link?.label ?? product}
+      {text}
     </a>
   )
 }

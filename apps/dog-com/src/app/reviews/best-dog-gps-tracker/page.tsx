@@ -89,7 +89,7 @@ export default function BestGPSTrackerPage() {
               cons={['2–5 day battery — frequent charging', 'No health monitoring', 'Less sophisticated app than Fi']}
               price="$40–60 + $4–6/mo"
               priceNote="dated 2026-10-07."
-              ctaText="Shop Tractive GPS tracker on Amazon →"
+              ctaText="Search Amazon for Tractive GPS"
               ctaHref="/go/amazon-brand/tractive+gps+dog+tracker?s=reviews-best-dog-gps-tracker"
               ctaAffiliateProgram="amazon-brand"
               ctaAffiliateProduct="tractive+gps+dog+tracker"
@@ -124,14 +124,14 @@ export default function BestGPSTrackerPage() {
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">The lowest printed device price and monthly fee</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#tractive" className="text-brand-primary">Tractive GPS</a><TableShopLink href={"/go/amazon-brand/tractive+gps+dog+tracker?s=reviews-best-dog-gps-tracker"} product={"Tractive GPS"} /></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#tractive" className="text-brand-primary">Tractive GPS</a><TableShopLink href={"/go/amazon-brand/tractive+gps+dog+tracker?s=reviews-best-dog-gps-tracker"} product={"Tractive GPS"} label="Search Amazon for Tractive GPS" /></td>
                       <td className="p-3 text-brand-text-mid">Best Budget. $40–60 + $4–6/mo. 175 countries</td>
                       <td className="p-3 text-brand-text-mid">You do not want to charge every 2–5 days, or you want health monitoring. The card says there is none</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-08" />
+              <ComparisonFoot updated="2026-10-09" />
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Which tracker fits</h2>
               <FAQAccordion items={[
                 {

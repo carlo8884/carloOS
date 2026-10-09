@@ -27,6 +27,22 @@ test('each earning site 404 links its five money pages, a hub, and a calculator'
   }
 })
 
+test('empty search and a missing URL keep the five suggestions and a search box', () => {
+  const missed = readFileSync(join(ROOT, 'packages/ui/src/components/MissedPage.tsx'), 'utf8')
+  assert.match(missed, /action="\/search"/)
+  assert.match(missed, /page\.guides\.map/)
+  assert.equal(missed.includes('HubSearch'), false)
+  assert.equal(missed.includes('initialQuery'), false)
+  const results = readFileSync(join(ROOT, 'packages/ui/src/components/SiteSearch.tsx'), 'utf8')
+  assert.match(results, /trimmed\.length < 2 \|\| total === 0/)
+  assert.match(results, /<MissedPage/)
+  for (const site of SITES) {
+    const missing = readFileSync(join(ROOT, 'apps', site, 'src/app/not-found.tsx'), 'utf8')
+    assert.match(missing, /MissedPage/)
+    assert.match(missing, /kind="missing"/)
+  }
+})
+
 test('404 view tracking stays on the missing page', () => {
   const src = readFileSync(join(ROOT, 'packages/ui/src/components/MissedPage.tsx'), 'utf8')
   assert.match(src, /kind === 'missing' \? <TrackPage404/)
