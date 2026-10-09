@@ -103,7 +103,7 @@ export default function BestEquineSupplementsPage() {
         </h1>
         <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">Platinum Performance Equine is the top wellness supplement because one daily serving combines omega-3s, antioxidants, and amino acids.</p>
         <PriceAsOf date="2026-10-04" tone="dark" />
-        <LastUpdated date="2026-10-09" />
+        <LastUpdated date="2026-10-09" tone="dark" />
         <div data-fold="offer">
           <HopDisclosure tone="on-dark" siteId="horses-com" href="/go/amazon/B0037PL6QW?s=reviews-best-equine-supplements" />
           <PrimaryHop href="/go/amazon/B0037PL6QW?s=reviews-best-equine-supplements" label="Check price of KER EO-3 on Amazon" />

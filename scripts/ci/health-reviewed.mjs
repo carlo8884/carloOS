@@ -14,7 +14,7 @@ import { join } from 'node:path'
 import { contentDate, diffHasContent } from './content-date.mjs'
 
 const HEALTH = ['vets-co', 'horses-com', 'ferret-com']
-const DATE_RE = /<LastUpdated date="(\d{4}-\d{2}-\d{2})" \/>/
+const DATE_RE = /<LastUpdated\b[^>]*\bdate="(\d{4}-\d{2}-\d{2})"[^>]*\/>/
 const SOURCE_URL_RE = /url:\s*['"](https:\/\/[^'"]+)['"]/g
 const SKIP_HOST = /(^|\.)(schema\.org|vets\.co|horses\.com|ferret\.com|amazon\.[a-z.]+|chewy\.com|unsplash\.com|pexels\.com|google\.com|gstatic\.com)$/i
 
@@ -56,9 +56,12 @@ export function checkPage(file, text, gitDate, { requireSource }) {
 function selfCheck() {
   const good = `<LastUpdated date="2026-10-08" />
 <ArticleSourcesList sources={[{ url: "https://aaep.org/" }]} />`
+  const darkTone = `<LastUpdated date="2026-10-08" tone="dark" />
+<ArticleSourcesList sources={[{ url: "https://aaep.org/" }]} />`
   const shopOnly = `<LastUpdated date="2026-10-08" />
 <ArticleSourcesList sources={[{ url: "https://www.amazon.com/s?k=hay" }]} />`
   const ok = checkPage('apps/horses-com/src/app/health/colic/page.tsx', good, '2026-10-08', { requireSource: true })
+  const onDark = checkPage('apps/horses-com/src/app/reviews/best-equine-supplements/page.tsx', darkTone, '2026-10-08', { requireSource: true })
   const stale = checkPage('apps/horses-com/src/app/health/colic/page.tsx', good, '2026-10-07', { requireSource: true })
   const bare = checkPage('apps/vets-co/src/app/health/page.tsx', '<p>Health</p>', '2026-10-09', { requireSource: true })
   const shop = checkPage('apps/horses-com/src/app/health/colic/page.tsx', shopOnly, '2026-10-08', { requireSource: true })
@@ -71,8 +74,8 @@ function selfCheck() {
   const stamp = diffHasContent('+          <LastUpdated date="2026-10-09" />\n')
   const prose = diffHasContent('-          <p>Old copy.</p>\n+          <p>New copy.</p>\n')
   const comment = diffHasContent('-          {/* old shop note */\n+          {/* new shop note */\n')
-  if (ok.length || stub.length || stamp || !prose || comment || !stale.length || !bare.length || !shop.length) {
-    console.error('health-reviewed self-check failed', { ok, stale, bare, shop, stub, stamp, prose, comment })
+  if (ok.length || onDark.length || stub.length || stamp || !prose || comment || !stale.length || !bare.length || !shop.length) {
+    console.error('health-reviewed self-check failed', { ok, onDark, stale, bare, shop, stub, stamp, prose, comment })
     process.exit(1)
   }
 }

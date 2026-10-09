@@ -22,16 +22,21 @@ const MONTHS = [
 export interface LastUpdatedProps {
   /** YYYY-MM-DD content-commit date in UTC. */
   date: string
+  /** Dark heroes need light type. The default is for a light page surface. */
+  tone?: 'light' | 'dark'
 }
 
-export function LastUpdated({ date }: LastUpdatedProps) {
+export function LastUpdated({ date, tone = 'light' }: LastUpdatedProps) {
   const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(date)
   const label = match
     ? `${MONTHS[Number(match[2]) - 1]} ${Number(match[3])}, ${match[1]}`
     : date
+  const cls = tone === 'dark'
+    ? 'text-sm text-white/80 mb-6'
+    : 'text-sm text-brand-text-light mb-6'
 
   return (
-    <p className="text-sm text-brand-text-light mb-6">
+    <p className={cls}>
       Last updated <time dateTime={date}>{label}</time>.
     </p>
   )
