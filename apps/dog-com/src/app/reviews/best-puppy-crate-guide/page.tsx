@@ -1,7 +1,7 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { ArticleLayout, EmailCapture, FAQAccordion, PrimaryHop, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
@@ -42,6 +42,10 @@ export default function BestPuppyCrateGuidePage() {
     <ArticleLayout
       siteId="dog-com"
       schema={schema}
+      heroHop={<>
+        <PrimaryHop href="/go/amazon-brand/midwest+icrate+dog+crate?s=reviews-best-puppy-crate-guide" label="Search Amazon for a MidWest iCrate" />
+        <HopDisclosure siteId="dog-com" href="/go/amazon-brand/midwest+icrate+dog+crate?s=reviews-best-puppy-crate-guide" tone="on-dark" />
+      </>}
       hero={{
         title: 'Best crate for puppy house-training',
         subtitle: 'The house-training job is a wire crate with a divider, sized to the adult dog. Prices below are the ones on the crate review.',

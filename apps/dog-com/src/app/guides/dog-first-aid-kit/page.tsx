@@ -9,6 +9,7 @@ import {
   TableOfContents,
   ShopCtas,
   JourneyNext,
+  PrimaryHop,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -101,6 +102,10 @@ export default function DogFirstAidKitPage() {
       <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="dog-com"
+        heroHop={<>
+          <PrimaryHop href="/go/amazon-brand/digital+pet+thermometer?s=guides-first-aid-kit" label="Search Amazon for a digital pet thermometer" />
+          <HopDisclosure siteId="dog-com" href="/go/amazon-brand/digital+pet+thermometer?s=guides-first-aid-kit" tone="on-dark" />
+        </>}
         hero={{
           title: 'Dog First Aid Kit & Emergency Preparedness — The Owner Checklist',
           subtitle:

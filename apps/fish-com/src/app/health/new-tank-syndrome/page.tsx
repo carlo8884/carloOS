@@ -1,7 +1,7 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, ArticleSourcesList, ShopCtas, JourneyNext } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, ArticleSourcesList, ShopCtas, JourneyNext, PrimaryHop } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
@@ -18,6 +18,10 @@ const schema = buildArticleSchema({ siteId: 'fish-com', title: 'New Tank Syndrom
 export default function NewTankSyndromePage() {
   return (
     <ArticleLayout siteId="fish-com"
+      heroHop={<>
+        <PrimaryHop href="/go/amazon-brand/api+freshwater+master+test+kit?s=health-new-tank-syndrome" label="Search Amazon for the API Freshwater Master Test Kit" />
+        <HopDisclosure siteId="fish-com" href="/go/amazon-brand/api+freshwater+master+test+kit?s=health-new-tank-syndrome" tone="on-dark" />
+      </>}
       hero={{ title: 'New Tank Syndrome', subtitle: 'New tank syndrome describes the ammonia and nitrite toxicity that kills fish in an uncycled aquarium. The nitrogen cycle — the establishment of beneficial bacteria that convert fish waste to less harmful compounds — takes 4–8 weeks to complete in a new tank. Fish added before this cycle is established are poisoned by their own waste.', category: 'Fish Health', authorName: 'Fish.com Editorial', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Aquarium Health', href: '/health' }, { name: 'New Tank Syndrome', href: '/health/new-tank-syndrome' }]}
       schema={schema}

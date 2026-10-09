@@ -2,7 +2,7 @@ import { HopDisclosure } from '../../../components/HopDisclosure'
 import { HubMoneyLinks } from '@carloOS/ui'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, TableOfContents, ArticleSourcesList, ShopCtas, JourneyNext } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, TableOfContents, ArticleSourcesList, ShopCtas, JourneyNext, PrimaryHop } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 
@@ -123,6 +123,10 @@ export default function FishDiseaseGuidePage() {
   return (
     <ArticleLayout
       siteId="fish-com"
+      heroHop={<>
+        <PrimaryHop href="/go/amazon-brand/api+freshwater+master+test+kit?s=health-disease-guide" label="Search Amazon for the API Freshwater Master Test Kit" />
+        <HopDisclosure siteId="fish-com" href="/go/amazon-brand/api+freshwater+master+test+kit?s=health-disease-guide" tone="on-dark" />
+      </>}
       hero={{
         title: 'Aquarium Fish Disease Guide',
         subtitle: 'Most fish disease is preventable — excellent water quality, proper quarantine, and stress reduction prevent the vast majority of common conditions. When disease does occur, early identification makes treatment faster and more effective.',
