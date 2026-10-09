@@ -75,7 +75,7 @@ export default function VetsterVsAskvetGuidePage() {
           <LastUpdated date="2026-10-09" />
         <p>The <Link href="/telehealth">telehealth comparison</Link> ranks Vetster, AskVet, and Chewy Connect. Vetster versus AskVet is the choice between paying for a visit and paying for a month of chat. If the pet is in crisis, neither policy applies. The page lists pale or blue gums, breathing difficulty, collapse, suspected poisoning, severe injury, and a cat that cannot urinate as reasons to go to an emergency clinic. The <Link href="/tools/er-vs-clinic">ER versus clinic tool</Link> is the setting check. This guide is for a question that can wait for a screen.</p>
         <h2>Vetster</h2>
-        <p>Vetster is the best overall pick. Consults are video and chat. Vetster&apos;s help article, updated 2025-12-18, says it verifies an active license in the veterinarian&apos;s jurisdiction before they go live (<span className="break-all">https://help.vetster.com/en/articles/13184184-how-are-licenses-verified</span>). It does not say the veterinarian is licensed where the owner is, or that a prescription is therefore valid. Specialists are listed, including behavior, dermatology, and internal medicine. This page does not publish a wait time. The con is a higher per-visit figure than a chat plan.</p>
+        <p>Vetster is the best overall pick. Consults are video and chat. Vetster&apos;s help article, updated 2025-12-18, says it verifies an active license in the veterinarian&apos;s jurisdiction before they go live. It does not say the veterinarian is licensed where the owner is, or that a prescription is therefore valid. Specialists are listed, including behavior, dermatology, and internal medicine. This page does not publish a wait time. The con is a higher per-visit figure than a chat plan.</p>
         <p>Single visits start at $102. Plus is $12/month, billed annually.</p>
         <h2>AskVet</h2>
         <p>AskVet is the subscription option. See the carrier&apos;s current terms for a monthly chat price. The current askvet.app pages do not print a visit type. Specialists are listed as general practice, and prescriptions are limited. The review says that is a reasonable trade when the questions are frequent: a new puppy, a senior pet, several pets, or a chronic condition you already understand and need to ask about. It is a weak substitute when you needed someone to look at the animal.</p>
@@ -147,7 +147,7 @@ export default function VetsterVsAskvetGuidePage() {
                 <ArticleSourcesList
             title="Sources"
             sources={[
-            { label: "help.vetster.com/en/articles/13184184-how-are-licenses-verified", url: "https://help.vetster.com/en/articles/13184184-how-are-licenses-verified", publisher: "help.vetster.com" },
+            { label: "Vetster help article", url: "https://help.vetster.com/en/articles/13184184-how-are-licenses-verified", publisher: "Vetster" },
             ]}
           />
       </div>

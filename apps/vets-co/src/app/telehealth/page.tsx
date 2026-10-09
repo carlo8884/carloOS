@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { HopDisclosure } from '../../components/HopDisclosure'
 import Link from 'next/link'
-import { TableShopLink, RelatedReads, ComparisonFoot, EmailCapture, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, Breadcrumb, FAQAccordion, ShopCtas, PriceAsOf } from '@carloOS/ui'
+import { ArticleSourcesList, TableShopLink, RelatedReads, ComparisonFoot, EmailCapture, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, Breadcrumb, FAQAccordion, ShopCtas, PriceAsOf } from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { HubMasthead } from '../../components/HubMasthead'
 
@@ -16,11 +16,11 @@ const chewyConnectSchema = buildProductSchema({ name: 'Chewy Connect with a Vet'
 const combinedSchema = combineSchemas(schema, vetsterSchema, askVetSchema, chewyConnectSchema)
 
 const FAQS = [
-  { question: 'Can a telehealth vet prescribe medication for my pet?', answer: 'It depends on your state. Most states require a veterinarian-client-patient relationship (VCPR) before a vet can prescribe, and many states only allow a VCPR to be established through an in-person exam. A minority of states permit establishing a VCPR remotely. Vetster\'s help article, updated 2025-12-18, says it verifies an active license in the veterinarian\'s jurisdiction before they go live (https://help.vetster.com/en/articles/13184184-how-are-licenses-verified). It does not say the veterinarian is licensed where the owner is, or that a prescription is therefore valid. Chat-only services are generally more limited. For refills of existing prescriptions, your regular clinic is usually the faster route.' },
+  { question: 'Can a telehealth vet prescribe medication for my pet?', answer: 'It depends on your state. Most states require a veterinarian-client-patient relationship (VCPR) before a vet can prescribe, and many states only allow a VCPR to be established through an in-person exam. A minority of states permit establishing a VCPR remotely. Vetster\'s help article, updated 2025-12-18, says it verifies an active license in the veterinarian\'s jurisdiction before they go live. It does not say the veterinarian is licensed where the owner is, or that a prescription is therefore valid. Chat-only services are generally more limited. For refills of existing prescriptions, your regular clinic is usually the faster route.' },
   { question: 'When is telehealth appropriate versus an in-person visit?', answer: 'Telehealth works well for triage ("does this need a clinic visit?"), minor illness assessment, medication and nutrition questions, post-op check-ins, and behavior concerns. It cannot replace a physical exam, blood work, imaging, surgery, or emergency care. Signs like breathing difficulty, pale gums, collapse, suspected poisoning, or inability to urinate need an emergency clinic immediately — not a telehealth appointment.' },
   { question: 'How much does a pet telehealth visit cost?', answer: 'Vetster lists a single-visit starting figure and a monthly Plus plan on its current page. AskVet does not print a flat monthly chat price — see the carrier\'s current terms. The current askvet.app pages do not print a visit type. Chewy\'s free chat is with a veterinary technician and comes with a Chewy account. The licensed-vet video price is on the Chewy card. A one-off video fits a single question. A chat plan fits frequent questions.' },
   { question: 'Does pet insurance cover telehealth visits?', answer: 'Coverage varies by carrier and plan. Some insurers reimburse telehealth consultations under illness or exam-fee coverage, and several carriers bundle their own 24/7 vet helplines with every policy. Check your policy\'s exam-fee and telehealth language before assuming a consult is reimbursable — wellness-only plans typically exclude it.' },
-  { question: 'Are the vets on telehealth platforms actually licensed?', answer: 'Vetster\'s help article, updated 2025-12-18, says it verifies an active license in the veterinarian\'s jurisdiction before they go live (https://help.vetster.com/en/articles/13184184-how-are-licenses-verified). It does not say the veterinarian is licensed where the owner is, or that a prescription is therefore valid. Before using a platform this page has not described, confirm that it discloses how it checks licenses.' },
+  { question: 'Are the vets on telehealth platforms actually licensed?', answer: 'Vetster\'s help article, updated 2025-12-18, says it verifies an active license in the veterinarian\'s jurisdiction before they go live. It does not say the veterinarian is licensed where the owner is, or that a prescription is therefore valid. Before using a platform this page has not described, confirm that it discloses how it checks licenses.' },
 ]
 
 const PICKS = [
@@ -78,7 +78,7 @@ export default function TelehealthPage() {
             {/* TL;DR — what AI engines should quote */}
             <p>Single visits start at $102. Plus is $12/month, billed annually. The licensed-vet video visit is $49.99 and is not offered in every state.</p>
             <p className="text-lg text-brand-text-mid leading-relaxed italic mb-8">
-              Vetster is the video-and-chat option on this page — licensed vets, including specialists, with no monthly requirement. Vetster's help article, updated 2025-12-18, says it verifies an active license in the veterinarian's jurisdiction before they go live (<span className="break-all">https://help.vetster.com/en/articles/13184184-how-are-licenses-verified</span>). It does not say the veterinarian is licensed where the owner is, or that a prescription is therefore valid. AskVet is the chat option for frequent questions. See the carrier&apos;s current terms for a monthly chat price. Chewy&apos;s free chat is with a veterinary technician. None of them replace a physical exam — use telehealth for triage and questions, not emergencies.
+              Vetster is the video-and-chat option on this page — licensed vets, including specialists, with no monthly requirement. Vetster's help article, updated 2025-12-18, says it verifies an active license in the veterinarian's jurisdiction before they go live. It does not say the veterinarian is licensed where the owner is, or that a prescription is therefore valid. AskVet is the chat option for frequent questions. See the carrier&apos;s current terms for a monthly chat price. Chewy&apos;s free chat is with a veterinary technician. None of them replace a physical exam — use telehealth for triage and questions, not emergencies.
             </p>
             <div className="bg-brand-primary-pale border-l-4 border-brand-primary rounded-r-lg p-5 mb-8">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">When Telehealth Works — and When It Doesn&apos;t</div>
@@ -86,7 +86,7 @@ export default function TelehealthPage() {
             </div>
             <p>Those figures are typical US ranges dated 2026-10-05.</p>
             <ReviewCard id="vetster" badge="Video and chat" name="Vetster" winner subtitle="Video + chat · Board-certified vets available · No monthly commitment"
-              description={<p>Vetster offers licensed veterinarians by video or chat. A wait time is not listed here. Vetster's help article, updated 2025-12-18, says it verifies an active license in the veterinarian's jurisdiction before they go live (<span className="break-all">https://help.vetster.com/en/articles/13184184-how-are-licenses-verified</span>). It does not say the veterinarian is licensed where the owner is, or that a prescription is therefore valid. They offer both general practitioners and specialists (including veterinary behaviorists, dermatologists, and internal medicine specialists). A single visit does not require the Plus plan.</p>}
+              description={<p>Vetster offers licensed veterinarians by video or chat. A wait time is not listed here. Vetster's help article, updated 2025-12-18, says it verifies an active license in the veterinarian's jurisdiction before they go live. It does not say the veterinarian is licensed where the owner is, or that a prescription is therefore valid. They offer both general practitioners and specialists (including veterinary behaviorists, dermatologists, and internal medicine specialists). A single visit does not require the Plus plan.</p>}
               specs={[{ label: 'Consultation Type', value: 'Video + chat', highlight: 'good' }, { label: 'Vet Credentials', value: 'Licensed DVMs required', highlight: 'good' }, { label: 'Wait Time', value: 'Not listed' }, { label: 'Specialists', value: 'Yes — multiple specialties', highlight: 'good' }, { label: 'Prescriptions', value: 'Yes (jurisdiction-dependent)' }, { label: 'Monthly Fee', value: 'Single visit or Plus' }]}
               pros={['Specialists available (behaviorists, dermatologists)', 'Rigorous licensing standards', 'A single visit does not require Plus', 'Prescription capability']}
               cons={['Higher per-consult cost than subscription services', 'Wait times can extend during peak hours']}
@@ -186,6 +186,12 @@ export default function TelehealthPage() {
             <h2 className="font-display text-2xl font-bold text-brand-dark mt-12 mb-6">Frequently Asked Questions</h2>
             <p>Those figures are typical US ranges dated 2026-10-05.</p>
             <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
+            <ArticleSourcesList
+              title="Sources"
+              sources={[
+                { label: "Vetster help article", url: "https://help.vetster.com/en/articles/13184184-how-are-licenses-verified", publisher: "Vetster" },
+              ]}
+            />
           </div>
           <aside className="lg:sticky lg:top-24 lg:self-start flex flex-col gap-5">
             <div className="bg-brand-surface border border-brand-border rounded-xl p-5">

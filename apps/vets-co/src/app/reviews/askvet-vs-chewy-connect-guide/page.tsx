@@ -24,7 +24,7 @@ const schema = buildArticleSchema({
 const FAQS = [
   {
     question: 'What does the telehealth page say AskVet includes?',
-    answer: 'AskVet is marked Best Subscription. The telehealth card on this site lists chat only. The current askvet.app pages, fetched 2026-10-08, do not print a visit type (https://askvet.app/). See the carrier\'s current terms for a monthly chat price. General practice rather than specialists, and limited prescriptions. This page does not publish a wait time.',
+    answer: 'AskVet is marked Best Subscription. The telehealth card on this site lists chat only. The current askvet.app pages, fetched 2026-10-08, do not print a visit type. See the carrier\'s current terms for a monthly chat price. General practice rather than specialists, and limited prescriptions. This page does not publish a wait time.',
   },
   {
     question: 'What does Chewy Connect include?',
@@ -93,14 +93,14 @@ export default function AskVetVsChewyConnectGuidePage() {
         />
         <p>AskVet is the subscription. Chewy Connect with a Vet is for people who already use Chewy. <Link href="/reviews/vetster-vs-chewy-connect-guide">Vetster versus Chewy Connect</Link> is the video-visit comparison, not this chat subscription.</p>
         <h2>What the page says about AskVet</h2>
-        <p>AskVet is Best Subscription. The telehealth card on this site marks it chat-only. The current askvet.app pages, fetched 2026-10-08, do not print a visit type (<span className="break-all">https://askvet.app/</span>). See the carrier&apos;s current terms for a monthly chat price. This page does not publish a wait time. Specialists are general practice only. Prescriptions are limited. The page says the subscription fits frequent questions, such as a new puppy, a senior pet, several pets, or a chronic condition, and that the card says a chat format limits how much of a physical problem can be assessed.</p>
+        <p>AskVet is Best Subscription. The telehealth card on this site marks it chat-only. The current askvet.app pages, fetched 2026-10-08, do not print a visit type. See the carrier&apos;s current terms for a monthly chat price. This page does not publish a wait time. Specialists are general practice only. Prescriptions are limited. The page says the subscription fits frequent questions, such as a new puppy, a senior pet, several pets, or a chronic condition, and that the card says a chat format limits how much of a physical problem can be assessed.</p>
         <h2>What the page says about Chewy Connect</h2>
         <p>Chewy Connect with a Vet is Best for Chewy Customers. Free chat is with a veterinary technician and comes with a Chewy account. A prescription from the licensed-vet video visit can be filled through Chewy and shipped. Specialist access is thinner than Vetster.</p>
         <p>The licensed-vet video visit is $49.99.</p>
         <p>If you are deciding between a video visit, a clinic, and an emergency hospital, use the <Link href="/tools/er-vs-clinic">ER versus clinic tool</Link>. Neither service on this page replaces emergency care.</p>
         <h2>Who should open which service</h2>
         <p>Open AskVet when you want the subscription the telehealth page marks Best Subscription. See the carrier&apos;s current terms for the monthly price. Open Chewy Connect when you already pay for Chewy+ and you want the pharmacy tied to that account. If the pet is in crisis, go to an emergency clinic. Do not wait on a chat queue.</p>
-        <p>The telehealth card on this site marks AskVet chat-only. The current askvet.app pages, fetched 2026-10-08, do not print a visit type (<span className="break-all">https://askvet.app/</span>). The telehealth page says the subscription fits frequent questions, such as a new puppy, a senior pet, or a chronic condition.</p>
+        <p>The telehealth card on this site marks AskVet chat-only. The current askvet.app pages, fetched 2026-10-08, do not print a visit type. The telehealth page says the subscription fits frequent questions, such as a new puppy, a senior pet, or a chronic condition.</p>
         <div className="my-6 max-w-full min-w-0">
           <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
             <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
