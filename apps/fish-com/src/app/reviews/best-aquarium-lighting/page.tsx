@@ -31,7 +31,7 @@ export default function BestAquariumLightingPage() {
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-4">Buyer's Guide</span>
         <h1 className="font-display font-bold text-white tracking-tight leading-tight mb-4 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Aquarium Lights 2026</h1>
         <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">The Hygger 957 is the top budget planted light because seven channels are adjustable at a lower price than the premium lights.</p>
-        <PriceAsOf date="2026-10-09" tone="dark" />
+        <PriceAsOf date="2026-10-08" tone="dark" />
         <div data-fold="offer">
           <PrimaryHop href='/go/amazon-brand/hygger+957?s=reviews-best-aquarium-lighting' label='Check price of the Hygger 957 on Amazon' />
           <HopDisclosure tone="on-dark" siteId="fish-com" href="/go/amazon-brand/hygger+957?s=reviews-best-aquarium-lighting" />
