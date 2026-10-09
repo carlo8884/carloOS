@@ -2385,7 +2385,7 @@ const CALCULATORS = [
     id: 'dog · best-dog-beds',
     file: 'apps/dog-com/src/app/reviews/best-dog-beds/page.tsx',
     mustInclude: [
-      { re: /chewy-brand\/big\+barker\+orthopedic\+dog\+bed\?s=reviews-best-dog-beds/, label: 'existing Big Barker Chewy hop kept (not an empty leftover button)' },
+      { re: /amazon\/B009G9Y59S\?s=reviews-best-dog-beds/, label: 'Big Barker opens the verified Large khaki product page' },
       { re: /chewy-brand\/casper\+dog\+bed\?s=reviews-best-dog-beds/, label: 'existing Casper Chewy hop kept (not an empty leftover button)' },
       { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
@@ -12560,8 +12560,8 @@ const CALCULATORS = [
     mustInclude: [
       { re: /<JourneyNext/, label: 'journey next-step after the orthopedic vs everyday foam rule' },
       { re: /nextHref="\/tools\/dog-crate-size-calculator"/, label: 'next step is crate-size, not a shop dump' },
-      { re: /resourceHref="\/go\/chewy-brand\/big\+barker\+orthopedic\+dog\+bed\?s=reviews-best-dog-beds"/, label: 'journey hop reuses the existing Big Barker Chewy search' },
-      { re: /chewy-brand\/big\+barker\+orthopedic\+dog\+bed\?s=reviews-best-dog-beds/, label: 'existing Big Barker Chewy hop kept (do not re-ship a new query)' },
+      { re: /resourceHref="\/go\/amazon\/B009G9Y59S\?s=reviews-best-dog-beds"/, label: 'journey hop opens the verified Big Barker product page' },
+      { re: /amazon\/B009G9Y59S\?s=reviews-best-dog-beds/, label: 'Big Barker opens the verified Large khaki product page' },
       { re: /chewy-brand\/casper\+dog\+bed\?s=reviews-best-dog-beds/, label: 'existing Casper Chewy hop kept (not an empty leftover button)' },
       { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],

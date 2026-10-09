@@ -42,8 +42,8 @@ const JOURNEYS: Record<string, Journey[]> = {
       startHeading: /Big Barker or the Casper bed/,
       link: 'bed review',
       comparison: /\/reviews\/best-dog-beds\/?$/,
-      hop: '/go/amazon-brand/big+barker+orthopedic+dog+bed?s=reviews-best-dog-beds',
-      hopIncludes: amazon('barker'),
+      hop: '/go/amazon/B009G9Y59S?s=reviews-best-dog-beds',
+      hopIncludes: product('B009G9Y59S'),
     },
   ],
   'fish-com': [
