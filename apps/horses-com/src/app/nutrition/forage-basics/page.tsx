@@ -159,7 +159,7 @@ export default function ForageBasicsPage() {
             <li><strong>Cleanliness</strong> -- forage should be free of dust, mold, and weeds; moldy hay causes respiratory disease and colic. A horse hay-probe moisture tester is how you check a bale before it is stored or fed — it is not a hanging hay-bale scale and not a hay steamer or soaking bag.</li>
             <li><strong>Maturity at cutting</strong> -- earlier-cut forage is more digestible and higher in nutrients; very stemmy late-cut hay is largely filler.</li>
             <li><strong>Type</strong> -- grass versus legume (such as alfalfa) changes calories, protein, and calcium; match to the horse.</li>
-            <li><strong>Sugar and starch content</strong> -- matters greatly for laminitis-prone and metabolic horses; testing or soaking controls it. An equine hay-core sampler is how you pull a representative sample for the lab — it is not an EMS forage-NSC hay-test kit and not a timothy-hay hop.</li>
+            <li><strong>Sugar and starch content</strong> -- matters greatly for laminitis-prone and metabolic horses; testing or soaking controls it. An equine hay-core sampler is how you pull a representative sample for the lab — it is not an EMS forage-NSC hay-test kit.</li>
             <li><strong>Consistency</strong> -- change forage gradually, since the hindgut microbes need time to adapt.</li>
             <li><strong>Keep forage off the ground</strong> -- a wall-mounted horse hay rack keeps a flake out of dirt, urine, and trampling so the horse is not eating contaminated forage. It is not a slow-feeder hay net (that lives in the ReviewCard above), not a small-hole net, and not an equine slow-feeder hay box.</li>
           </ul>

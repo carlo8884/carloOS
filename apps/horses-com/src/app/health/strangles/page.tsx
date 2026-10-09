@@ -152,8 +152,8 @@ export default function StranglesPage() {
             <li><strong>Isolate new arrivals</strong> for a quarantine period and monitor their temperature before mixing with the resident herd.</li>
             <li><strong>Isolate sick horses immediately</strong> and use dedicated equipment, clothing, and handlers for them. Color-coded flat-back horse buckets are how an isolation horse drinks from its own pair instead of a shared trough — they are not a lidded 5-gallon feed-soaking pail and not a hay-soaking bag.</li>
             <li><strong>Stop all horse movement</strong> on and off the property during an outbreak.</li>
-            <li><strong>Clean and disinfect</strong> shared equipment, water sources, stalls, and trailers; the organism persists in the environment. A heavy-duty rubber boot-dip tub at the isolation-stall door is how pus and nasal discharge stay off the next aisle — it is not a parvo shoe-cover hop, not a pump-sprayer hop, and not a kennel-disinfectant-spray hop.</li>
-            <li><strong>Dedicated clothing for handlers</strong> of draining horses so contaminated jackets and jeans do not walk the barn. A disposable coverall suit is how that clothing stays in the isolation barn and comes off before the next stall — it is not a disposable shoe-cover hop and not a nitrile-exam-glove hop.</li>
+            <li><strong>Clean and disinfect</strong> shared equipment, water sources, stalls, and trailers; the organism persists in the environment. A heavy-duty rubber boot-dip tub at the isolation-stall door is how pus and nasal discharge stay off the next aisle.</li>
+            <li><strong>Dedicated clothing for handlers</strong> of draining horses so contaminated jackets and jeans do not walk the barn. A disposable coverall suit is how that clothing stays in the isolation barn and comes off before the next stall.</li>
             <li><strong>Screen recovered horses</strong> for the carrier state with your veterinarian before declaring the outbreak over.</li>
           </ul>
 

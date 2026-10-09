@@ -124,7 +124,7 @@ export default function EasyKeeperPage() {
             <li><strong>Choose low-sugar forage</strong> and soak hay for 30 to 60 minutes to leach out water-soluble carbohydrate. A horse hay soaking tub is the barn tub that flake sits in, then drains — it is not a hay soaking bag, not a horse feed soaking tub, and not a lidded 5-gallon feed-soaking pail.</li>
             <li><strong>Cut the grain</strong> -- easy keepers rarely need any concentrate; calorie-dense feeds are the first thing to remove.</li>
             <li><strong>Restrict grazing</strong> with a grazing muzzle, strip grazing, a dry lot, or turnout at lower-sugar times of day.</li>
-            <li><strong>Skip the treats</strong> or use low-sugar options sparingly. Low-sugar horse treats are that occasional reward — they are not a grain hop and not the low-NSC ration-balancer ReviewCard below.</li>
+            <li><strong>Skip the treats</strong> or use low-sugar options sparingly. Low-sugar horse treats are that occasional reward. They are not the low-NSC ration balancer below.</li>
           </ul>
 
           <h2 id="slow">Slow Feeding</h2>

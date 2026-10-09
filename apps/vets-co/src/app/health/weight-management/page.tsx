@@ -106,7 +106,7 @@ export default function WeightManagementPage() {
           <p><strong>Weigh monthly.</strong> A loss of 1–2% of body weight per month is a planning figure on this page — faster loss causes muscle loss. Monthly weigh-ins on the same scale track progress and identify when adjustment is needed. If not losing weight after 4 weeks of strict compliance, reduce food by another 10%.</p>
 
           <h2 id="kit">Kitchen-scale portioning kit</h2>
-          <p>Keep these on hand: a kitchen scale that measures in grams, plus a portion-control food scale for weighing every meal. Measuring cups stay off this kit: the copy says they vary by 20–30%. Carrot, cucumber, and green-bean pieces named as low-calorie treat swaps are produce, not a retail treat hop. Prescription weight-management diets (Hill&apos;s Metabolic, Royal Canin Satiety, Purina Pro Plan Overweight Management) stay educational copy only — this page never hops Rx food, brand ASINs, or medication.</p>
+          <p>Keep these on hand: a kitchen scale that measures in grams, plus a portion-control food scale for weighing every meal. Measuring cups stay off this kit: the copy says they vary by 20–30%. Carrot, cucumber, and green-bean pieces named as low-calorie treat swaps are produce. Prescription weight-management diets (Hill&apos;s Metabolic, Royal Canin Satiety, Purina Pro Plan Overweight Management) stay educational copy only — this page never hops Rx food, brand ASINs, or medication.</p>
 
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/kitchen+gram+scale?s=health-weight-management", "/go/amazon-brand/portion+control+food+scale+dog?s=health-weight-management"]} />
 

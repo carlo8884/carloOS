@@ -149,7 +149,7 @@ export default function OsteoarthritisPage() {
             <li><strong>Manage weight.</strong> Excess bodyweight multiplies joint load; lean is kinder to arthritic joints. Body-condition scoring lives on the weight-management and EMS pages; this hop set stays on motion and footing, not another hanging scale.</li>
             <li><strong>Choose footing carefully.</strong> Deep, even, forgiving footing reduces concussion; avoid hard or uneven ground. A tow-behind arena drag or harrow is the barn tool that levels a working surface after rain — not a ranked clinical product.</li>
             <li><strong>Maintain farriery</strong> on a tight schedule to keep the foot balanced and reduce abnormal joint loading. Heart-bar, wedge, and rocker shoes already hop on the navicular page; this page does not re-ship farrier hardware.</li>
-            <li><strong>Consider oral joint supplements</strong> as a long-term adjunct, recognizing that the evidence is mixed; see the <a href="/supplements/joint-supplements">joint supplement guide</a>. Cotton polo wraps for a long, even warm-up are barn gear, not a joint-supplement hop.</li>
+            <li><strong>Consider oral joint supplements</strong> as a long-term adjunct, recognizing that the evidence is mixed; see the <a href="/supplements/joint-supplements">joint supplement guide</a>. Cotton polo wraps for a long, even warm-up are barn gear.</li>
           </ul>
 
           <h2 id="kit">Supplies named on this page</h2>

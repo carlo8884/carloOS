@@ -141,7 +141,7 @@ export default function ToxicPlantsPage() {
           <h2 id="prevention">Prevention</h2>
           <ul>
             <li><strong>Walk and inspect pastures</strong> regularly, learning to identify the dangerous plants in your region. An equine toxic-plant identification field guide is that walk-and-name reference — it is not a soil-test kit.</li>
-            <li><strong>Carry a pocket ID on the walk</strong> so weeds and ornamentals can be checked against a named list rather than guessed. A horse pasture-walk weed-identification handbook is that pocket reference — it is not a grazing-muzzle hop.</li>
+            <li><strong>Carry a pocket ID on the walk</strong> so weeds and ornamentals can be checked against a named list rather than guessed. A horse pasture-walk weed-identification handbook is that pocket reference.</li>
             <li><strong>Remove or fence off toxic plants and trees</strong> including ornamental hedges like yew near paddocks. Horse paddock tree-guard fencing is the fence-out for those trees and hedges — it is not electric tape, fence mesh, or electric rope and not portable paddock panels.</li>
             <li><strong>Avoid overgrazing</strong> so horses are never forced to eat weeds on bare ground.</li>
             <li><strong>Check hay carefully</strong> for dried toxic plants such as ragwort, which is dangerous and palatable when dried.</li>
@@ -151,7 +151,7 @@ export default function ToxicPlantsPage() {
 
           <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Keep these on hand: an equine toxic-plant identification field guide so the dangerous plants in the region can be named on the walk, a horse pasture-walk weed-identification handbook so the regular inspection has a pocket reference, and horse paddock tree-guard fencing so ornamental hedges and toxic trees stay out of reach. These are educational pasture-safety searches, not a ranked product list, not a substitute for veterinary care, and not a soil-test-kit hop, a grazing-muzzle hop, an electric-tape / fence-mesh / electric-rope hop, or a paddock-panel hop. </p>
+            Keep these on hand: an equine toxic-plant identification field guide so the dangerous plants in the region can be named on the walk, a horse pasture-walk weed-identification handbook so the regular inspection has a pocket reference, and horse paddock tree-guard fencing so ornamental hedges and toxic trees stay out of reach. These are educational pasture-safety searches, not a ranked product list and not a substitute for veterinary care. </p>
 
           <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/equine+toxic+plant+identification+field+guide?s=nutrition-toxic-plants", "/go/amazon-brand/horse+hay?s=nutrition-toxic-plants", "/go/amazon-brand/horse+paddock+tree+guard+fencing?s=nutrition-toxic-plants"]} />
 

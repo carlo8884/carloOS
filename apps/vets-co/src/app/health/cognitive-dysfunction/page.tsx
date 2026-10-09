@@ -70,7 +70,7 @@ export default function CognitiveDysfunctionPage() {
 
           <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Keep these on hand: a plug-in night light for the hall the dog walks at night, a sniff box with new objects for short scent sessions, and a senior food-puzzle toy for brief enrichment. These are household tools, not treatments. They do not treat CDS, they do not replace a veterinarian, and they are not Bright Mind brand ASINs, Anipryl (selegiline), melatonin, or fish-oil supplements. It is not a puzzle-feeder or snuffle-mat hop.
+            Keep these on hand: a plug-in night light for the hall the dog walks at night, a sniff box with new objects for short scent sessions, and a senior food-puzzle toy for brief enrichment. These are household tools, not treatments. They do not treat CDS, they do not replace a veterinarian, and they are not Bright Mind brand ASINs, Anipryl (selegiline), melatonin, or fish-oil supplements.
           </p>
 
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/plug+in+night+light?s=health-cognitive-dysfunction", "/go/amazon-brand/dog+sniff+box?s=health-cognitive-dysfunction", "/go/amazon-brand/senior+dog+food+puzzle?s=health-cognitive-dysfunction"]} />

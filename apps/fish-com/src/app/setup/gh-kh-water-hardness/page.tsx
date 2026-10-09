@@ -204,7 +204,7 @@ export default function GhKhPage() {
 
           <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Keep these on hand: crushed coral in the filter so both GH and KH climb slowly, a GH remineralizer when you only need calcium and magnesium, and Indian almond leaves when a blackwater biotope should lose KH and pH through tannins. Baking soda is a grocery bicarbonate, not a shop hop. These are not a treatment for a pH crash and not a diagnosis.
+            Keep these on hand: crushed coral in the filter so both GH and KH climb slowly, a GH remineralizer when you only need calcium and magnesium, and Indian almond leaves when a blackwater biotope should lose KH and pH through tannins. Baking soda is a grocery bicarbonate. These are not a treatment for a pH crash and not a diagnosis.
           </p>
 
           <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/crushed+coral+aquarium?s=setup-gh-kh-water-hardness", "/go/amazon-brand/aquarium+gh+remineralizer?s=setup-gh-kh-water-hardness", "/go/amazon-brand/indian+almond+leaves+aquarium?s=setup-gh-kh-water-hardness"]} />

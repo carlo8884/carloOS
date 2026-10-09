@@ -74,7 +74,7 @@ export default function FLUTDPage() {
 
           <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Keep these on hand: a cat water fountain so running water invites more drinking, extra litter boxes so the household hits one box per cat plus one extra, and canned wet cat food that adds water the cat will actually eat. Multiple clean water stations sit beside the fountain; they are not a second shop hop. Prescription urinary diets (Hill&rsquo;s c/d, Royal Canin Urinary SO, and the like), antibiotics, pain control, and IV fluids stay educational copy only — this page never hops medications, brand ASINs, or clinic gear.
+            Keep these on hand: a cat water fountain so running water invites more drinking, extra litter boxes so the household hits one box per cat plus one extra, and canned wet cat food that adds water the cat will actually eat. Multiple clean water stations sit beside the fountain. Prescription urinary diets (Hill&rsquo;s c/d, Royal Canin Urinary SO, and the like), antibiotics, pain control, and IV fluids stay educational copy only — this page never hops medications, brand ASINs, or clinic gear.
           </p>
 
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/cat+water+fountain?s=health-feline-lower-urinary-tract-disease", "/go/amazon-brand/extra+cat+litter+box?s=health-feline-lower-urinary-tract-disease", "/go/amazon-brand/canned+wet+cat+food?s=health-feline-lower-urinary-tract-disease"]} />

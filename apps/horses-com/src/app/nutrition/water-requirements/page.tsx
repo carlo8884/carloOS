@@ -120,7 +120,7 @@ export default function WaterRequirementsPage() {
             <li><strong>Lactation</strong> -- a nursing mare has greatly elevated water needs.</li>
             <li><strong>Large body size and high salt intake</strong> both raise daily requirement.</li>
           </ul>
-          <p>After heavy sweat, electrolyte for horses is the after-work thirst-drive companion to free-choice water — it is not a salt-first electrolyte powder and not a generic horse-electrolytes hop. Electrolytes do not replace clean water.</p>
+          <p>After heavy sweat, electrolyte for horses is the after-work thirst-drive companion to free-choice water — it is not a salt-first electrolyte powder. Electrolytes do not replace clean water.</p>
 
           <h2 id="colic">Water and Colic</h2>
           <p>Dehydration is one of the most consistently identified risk factors for colic, especially impaction colic, where dry gut contents block the bowel. The classic scenario is winter, when icy water suppresses drinking just as horses switch to dry hay -- a recipe for impaction. Keeping water available, unfrozen, and palatable is therefore one of the simplest and most effective colic-prevention measures an owner has.</p>
