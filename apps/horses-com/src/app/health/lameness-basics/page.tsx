@@ -121,7 +121,7 @@ export default function LamenessBasicsPage() {
           />
           <div className="mb-8">
             <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Keep these on hand: a cotton lunge line so subtle lameness shows on a consistent circle, a leather chain lead shank so the in-hand trot-up stays on one steady line, and orange traffic cones so that line is marked on firm ground instead of guessed across a yard. Educational spot-and-describe checklist, not a treatment, not a diagnosis, not a substitute for calling the veterinarian, and not a hoof-tester, soaking-boot, or ice-boot hop.
+              Keep these on hand: a cotton lunge line so subtle lameness shows on a consistent circle, a leather chain lead shank so the in-hand trot-up stays on one steady line, and orange traffic cones so that line is marked on firm ground instead of guessed across a yard. Educational spot-and-describe checklist, not a treatment, not a diagnosis, not a substitute for calling the veterinarian.
             </p>
 
           </div>

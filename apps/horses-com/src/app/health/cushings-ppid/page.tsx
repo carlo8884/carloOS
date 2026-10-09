@@ -123,7 +123,7 @@ export default function PPIDPage() {
           />
           <div className="mb-8">
             <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Keep these on hand: a shedding blade so the long curly coat is lifted between clips, a wicking anti-sweat sheet so a clipped or still-coated horse can cool, and an automatic waterer so extra thirst is not a dry bucket. Educational coat-and-cooling checklist, not a treatment, not pergolide or an ACTH kit, not a substitute for calling the veterinarian, and not a clipper, hay-bale-scale, or grazing-muzzle hop.
+              Keep these on hand: a shedding blade so the long curly coat is lifted between clips, a wicking anti-sweat sheet so a clipped or still-coated horse can cool, and an automatic waterer so extra thirst is not a dry bucket. Educational coat-and-cooling checklist, not a treatment, not pergolide or an ACTH kit, not a substitute for calling the veterinarian.
             </p>
 
           </div>

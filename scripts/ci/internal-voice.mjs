@@ -4,11 +4,13 @@
  * appear in customer-facing copy on the five earning sites
  * (dog-com, fish-com, horses-com, vets-co, ferret-com).
  *
- * The phrases are the ones removed in Rounds 204–205: inventory
+ * The phrases are the ones removed in Rounds 204–206: inventory
  * asides ("already live on", "does not hop", "(those live on …)"),
- * hop numbers (#1168), TL;DR labels, and slug-shaped shop labels
- * ("Deductibles-reimbursement kit", "Shop the visit-cadence kit").
+ * hop numbers (#1168), TL;DR labels, slug-shaped shop labels
+ * ("Deductibles-reimbursement kit", "Shop the visit-cadence kit"),
+ * and "not a … hop" / "not a reason to hop" asides.
  * Real kit names (first-aid kit, day-one kit) stay allowed.
+ * Journey blurbs ("The hop below is the same …") stay allowed.
  *
  * Comments, (funnels), and components/visual are not customer copy.
  * Exit 0 if clean, 1 if any forbidden phrase appears.
@@ -33,6 +35,8 @@ export const RULES = [
   { id: 'hands-on-testing', pattern: /hands-on testing/i, reason: 'Internal testing aside' },
   { id: 'slug-kit', pattern: />\s*[A-Za-z0-9]+(?:-[A-Za-z0-9]+)+\s+kit\s*</, reason: 'Slug used as a shop label ("deductibles-reimbursement kit")' },
   { id: 'shop-slug-kit', pattern: />\s*Shop the\s+[A-Za-z0-9]+(?:-[A-Za-z0-9]+)+\s+kit\s*</i, reason: 'Shop label built from a page slug' },
+  { id: 'not-a-hop', pattern: /not (?:an?|the)\s+(?:(?!\bnot\b)[^.;]){0,200}?\bhop\b/i, reason: 'Internal "not a … hop" aside' },
+  { id: 'reason-to-hop', pattern: /not a reason to hop/i, reason: 'Internal "not a reason to hop" aside' },
 ]
 
 export function stripComments(src) {
@@ -42,9 +46,14 @@ export function stripComments(src) {
     .replace(/(^|[^:"'`])\/\/[^\n]*/gm, '$1')
 }
 
+/** Apostrophe entities hide the semicolon from clause scanners. */
+export function decodeEntities(src) {
+  return src.replace(/&(?:apos|rsquo|lsquo|#39);/g, "'")
+}
+
 export function scanSource(src) {
   const visible = stripComments(src)
-  const flat = visible.replace(/\s+/g, ' ')
+  const flat = decodeEntities(visible).replace(/\s+/g, ' ')
   const hits = []
   for (const rule of RULES) {
     const hay = rule.id === 'slug-kit' || rule.id === 'shop-slug-kit' ? visible : flat
@@ -78,6 +87,9 @@ export function selfCheck() {
     'This page does not claim hands-on testing.',
     '<h2 id="kit">Deductibles-reimbursement kit</h2>',
     '<div>Shop the visit-cadence kit</div>',
+    'A preset heater is sized for a nano — it is not an Eheim Jager hop.',
+    'Mapping a flinch is an observation, not a reason to hop a grooming glove.',
+    'It is not a Hill&apos;s w/d or Royal Canin Diabetic hop.',
   ]
   const good = [
     'Pack a pet first-aid kit for the clinic ride.',
@@ -86,6 +98,10 @@ export function selfCheck() {
     'A <strong>H</strong>urt score for pain.',
     'Shop these supplies',
     '<h2 id="kit">Supplies named on this page</h2>',
+    'The hop below is the same wire crate already on this page.',
+    'Same dental-chew hop used on the dental review.',
+    'An apple wedger is how carrots go in as sticks — it is not a treat hopper.',
+    'Baking soda is a grocery bicarbonate.',
   ]
   const errors = []
   for (const sample of bad) {

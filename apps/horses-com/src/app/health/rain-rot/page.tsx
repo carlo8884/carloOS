@@ -140,7 +140,7 @@ export default function RainRotPage() {
           <ul>
             <li><strong>Provide shelter</strong> so horses can get out of prolonged rain. A portable 3-sided horse run-in shelter is how that rain has a dry wall to stand behind instead of a soaked topline — it is not a turnout blanket, not a waterproof sheet, and not a paddock mud grid.</li>
             <li><strong>Keep the coat clean and dry</strong> -- groom regularly, dry sweaty horses, and avoid leaving a wet horse blanketed.</li>
-            <li><strong>Do not share grooming tools, tack, or blankets</strong> between affected and unaffected horses. A labeled stackable horse grooming caddy is how each horse&apos;s brushes stay in one box instead of a shared tote — it is not a curry comb or dandy brush and not a color-coded bucket. A large mesh horse blanket wash bag is how an affected horse&apos;s sheet is washed apart from the rest of the barn — it is not a turnout blanket hop and not a sweet-itch rug hop.</li>
+            <li><strong>Do not share grooming tools, tack, or blankets</strong> between affected and unaffected horses. A labeled stackable horse grooming caddy is how each horse&apos;s brushes stay in one box instead of a shared tote — it is not a curry comb or dandy brush and not a color-coded bucket. A large mesh horse blanket wash bag is how an affected horse&apos;s sheet is washed apart from the rest of the barn.</li>
             <li><strong>Manage insects</strong> that break the skin barrier and spread the organism.</li>
           </ul>
 

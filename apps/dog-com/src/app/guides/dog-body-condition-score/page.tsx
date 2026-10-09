@@ -335,7 +335,7 @@ export default function DogBodyConditionScorePage() {
 
           <h2 id="kit">A Simple BCS Tracking Kit</h2>
           <p>
-            These are household scoring tools, not treatments. They do not replace a veterinarian&rsquo;s BCS, they are not a prescription weight-management diet, and they are not the dog-obesity digital pet scale or slow-feeder bowl. They are not the calorie / ideal-weight / BCS-tool kitchen gram scale, portion-control food scale, or combined measuring-tape-plus-chart hop. They are not the pancreatitis digital pet-food portion scale, low-fat digestive-care food, or lean low-fat treats.
+            These are household scoring tools, not treatments. They do not replace a veterinarian&rsquo;s BCS, they are not a prescription weight-management diet, and they are not the dog-obesity digital pet scale or slow-feeder bowl. They are not the pancreatitis digital pet-food portion scale, low-fat digestive-care food, or lean low-fat treats.
           </p>
 
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/soft+measuring+tape+for+pets?s=guides-dog-body-condition-score", "/go/amazon-brand/dog+body+condition+score+chart+poster?s=guides-dog-body-condition-score", "/go/amazon-brand/single+ingredient+lean+dog+treats?s=guides-dog-body-condition-score"]} />

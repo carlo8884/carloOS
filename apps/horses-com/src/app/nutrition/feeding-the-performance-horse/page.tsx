@@ -150,7 +150,7 @@ export default function PerformanceFeedingPage() {
               Shop performance feeding supplies
             </div>
             <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              Keep these on hand: a nylon horse hay bag, horse feed-grade vegetable oil, and a marked horse grain scoop. Educational barn searches only. They are not a ranked product list, they are not a hay-soaking-bag or slow-feeder hay-net hop, they are not a chopped-forage hop, they are not the rice-bran or high-fat-feed ReviewCards, and they do not replace a veterinarian.
+              Keep these on hand: a nylon horse hay bag, horse feed-grade vegetable oil, and a marked horse grain scoop. Educational barn searches only. They are not a ranked product list, they are not the rice-bran or high-fat feed below, and they do not replace a veterinarian.
             </p>
             <div className="flex flex-col gap-3">
               <ShopCtas

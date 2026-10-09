@@ -123,7 +123,7 @@ export default function FirstAidKitPage() {
           />
           <div className="mb-8">
             <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Keep these on hand: a sterile saline wound flush for horses so a graze is rinsed with clean saline instead of guessing at an antiseptic (not a sterile saline eye wash, not a poultice, not an equine first-aid-kit hop), nonstick wound dressing pads for horses so a cleaned wound is covered without the dressing sticking and ripping the clot (not vet wrap, not a cohesive bandage, not a riding boot or wrap), and equine bandage scissors so conforming wrap and tape are cut without pointing a sharp blade at the horse (not farrier tools, not a hoof knife). Educational barn checklist, not a treatment, not a ranked product list, and not a substitute for calling the veterinarian.
+              Keep these on hand: a sterile saline wound flush for horses so a graze is rinsed with clean saline instead of guessing at an antiseptic (not a sterile saline eye wash, not a poultice), nonstick wound dressing pads for horses so a cleaned wound is covered without the dressing sticking and ripping the clot (not vet wrap, not a cohesive bandage, not a riding boot or wrap), and equine bandage scissors so conforming wrap and tape are cut without pointing a sharp blade at the horse (not farrier tools, not a hoof knife). Educational barn checklist, not a treatment, not a ranked product list, and not a substitute for calling the veterinarian.
             </p>
 
           </div>
@@ -142,7 +142,7 @@ export default function FirstAidKitPage() {
             <li><strong>Your vet’s number and key records</strong> kept with the kit, along with any directions your vet has given for that horse.</li>
           </ul>
           <p>
-            A sterile saline wound flush for horses is how a graze is rinsed with clean saline instead of guessing at an antiseptic — it is not a sterile saline eye wash, not a poultice, and not an equine first-aid-kit hop or a horse-barn-first-aid-kit hop. Nonstick wound dressing pads for horses are how a cleaned wound is covered without the dressing sticking and ripping the clot — they are not vet wrap, not a cohesive bandage, and not a riding boot or wrap hop. Equine bandage scissors are how conforming wrap and tape are cut without pointing a sharp blade at the horse — they are not farrier tools, not a hoof knife, and not a substitute for calling the veterinarian.
+            A sterile saline wound flush for horses is how a graze is rinsed with clean saline instead of guessing at an antiseptic — it is not a sterile saline eye wash, not a poultice. Nonstick wound dressing pads for horses are how a cleaned wound is covered without the dressing sticking and ripping the clot — they are not vet wrap, not a cohesive bandage, and not a riding boot or wrap. Equine bandage scissors are how conforming wrap and tape are cut without pointing a sharp blade at the horse — they are not farrier tools, not a hoof knife, and not a substitute for calling the veterinarian.
           </p>
 
           <h2 id="vitals">Know Your Vitals</h2>

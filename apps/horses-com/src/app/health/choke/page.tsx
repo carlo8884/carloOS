@@ -155,10 +155,10 @@ export default function ChokePage() {
 
           <h2 id="prevention">Prevention</h2>
           <ul>
-            <li><strong>Soak feeds that swell or pack</strong> such as beet pulp and dry pellets, especially for fast or older eaters. A lidded 5-gallon feed-soaking pail is how that mash stays fully wet before it hits the tub — it is not a hay-soaking bag, not a hay steamer, and not a mash hop.</li>
+            <li><strong>Soak feeds that swell or pack</strong> such as beet pulp and dry pellets, especially for fast or older eaters. A lidded 5-gallon feed-soaking pail is how that mash stays fully wet before it hits the tub — it is not a hay-soaking bag, not a hay steamer.</li>
             <li><strong>Slow down greedy eaters</strong> with large smooth stones in the feed tub, slow feeders, or spreading feed out. Large smooth feed-tub rocks are how a bolting eater works around obstacles instead of packing a dry mouthful — they are not a slow-feeder hay net, not a small-hole hay net, and not an equine slow-feeder hay box.</li>
             <li><strong>Maintain dental care</strong> so the horse can chew properly; poor dentition is a leading risk factor. See the <a href="/guides/equine-dental-care">equine dental-care guide</a>.</li>
-            <li><strong>Cut treats small</strong> and feed at ground level to encourage natural chewing and swallowing. An apple wedger slicer is how apples and carrots go in as sticks, not coins — it is not a treat hopper and not a dental hay-cube hop.</li>
+            <li><strong>Cut treats small</strong> and feed at ground level to encourage natural chewing and swallowing. An apple wedger slicer is how apples and carrots go in as sticks, not coins — it is not a treat hopper.</li>
             <li><strong>Wait after sedation</strong> before feeding, since sedation impairs swallowing.</li>
           </ul>
 

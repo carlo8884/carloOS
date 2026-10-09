@@ -154,7 +154,7 @@ export default function TyingUpPage() {
           <ul>
             <li><strong>Match diet to the cause.</strong> PSSM and RER horses do best on a low-starch, low-sugar, high-fat ration with energy from fat and fiber rather than grain.</li>
             <li><strong>Keep exercise consistent.</strong> Daily turnout and a regular work program without sudden days off on full feed are central to preventing recurrence.</li>
-            <li><strong>Maintain hydration and electrolytes</strong> around hard work and in hot weather. Loose plain white salt is how daily sodium is measured into the ration instead of hoped-for on a lick — it is not an equine salt lick, not a bottled horse-electrolytes hop, and not a tank heater.</li>
+            <li><strong>Maintain hydration and electrolytes</strong> around hard work and in hot weather. Loose plain white salt is how daily sodium is measured into the ration instead of hoped-for on a lick. It is not an equine salt lick and not a tank heater.</li>
             <li><strong>Reduce stress</strong> in nervous RER-type horses with routine and calm handling.</li>
             <li><strong>Warm up and cool down gradually</strong> and build fitness progressively rather than in big jumps. A wool exercise quarter sheet is how that warmup stays on the muscle instead of a cold walk-out — it is not a turnout sheet, not a waterproof sheet, and not a fleece cooler.</li>
           </ul>
