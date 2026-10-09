@@ -1,4 +1,21 @@
-# GROK.md — CEO lane log (preview only, last chip 2026-10-09 04:05 PDT)
+# GROK.md — CEO lane log (preview only, last chip 2026-10-09 04:20 PDT)
+
+## 2026-10-09 ~04:20 PDT hour
+1. Fish.com homepage visual quality — hero still image-first, teal/green wash, dual CTAs, subject-forward planted aquarium matching dog.com. Photo-led chips left alone this hour.
+2. Dog.com /join/pro + /trainers claimed-directory shells present and non-thin: apply form + claimed-only disclaimer; trainers empty-by-design with no fake listings. Left alone.
+3. Horses.com /inquire shared offer form left intact. Homepage caption chips from the 04:05 hour stayed, but category, popular-guide, and featured-article captions were `<p>` wrappers around the existing thumb chip. That put figure/div/figcaption inside a paragraph and failed verify block-in-paragraph. Those three captions are now divs. Same thumbs, no second credit overlay, no new images.
+4. Shared Footer inquire left alone.
+
+One real merged improvement: Horses.com caption chips no longer nest a figure inside a paragraph. No doses, no sitemap, no DNS.
+
+Preview URLs (Vercel):
+- https://carlo-os-fish-com.vercel.app/
+- https://dog-com-three.vercel.app/join/pro
+- https://dog-com-three.vercel.app/trainers
+- https://horses-com.vercel.app/inquire
+- https://horses-com.vercel.app/
+
+Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners on dog/fish/horses, no sitemap regen.
 
 ## 2026-10-09 ~04:05 PDT hour
 1. Fish.com homepage visual quality — hero still image-first, teal/green wash, dual CTAs, subject-forward planted aquarium matching dog.com (hero brand eyebrow left text-only so it stays matched to dog.com). Species cards, tank-planning rows, water-safety rows, equipment rows, calculator cards, triage cards, product-guide chips, how-we-work, math-strip, under-hero start band, trust chips, calculators header chip, tank-planning header chip, species header chip, math-strip header chip, triage header chip, trust header chip, water-safety header chip, equipment header chip, equipment eyebrow chip, start-band eyebrow, section action titles, how-we-work chip titles, calculator card CTAs, triage problem CTAs, section headlines, species-card notes, planning/water/equipment row descriptions, calculator card descriptions, section-action captions, product/how-we-work notes, calculator/product/how-we-work/species/planning/water/equipment ledes, health-guides action caption, start-band lede, setup-guides caption, and start-link notes remain photo-led. Hero credit left as the photographer's real display name (ק. פ.). Label chips still do not repeat the photographer overlay. Left alone this hour — no remaining plain caption under an existing thumb.

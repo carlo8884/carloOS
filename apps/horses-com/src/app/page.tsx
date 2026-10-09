@@ -274,12 +274,12 @@ export default function HomePage() {
                 <div className="flex flex-col flex-1 p-6">
                   <div className="mb-3" style={{ color: 'var(--brand-primary)' }}><CategoryIconSvg name={cat.icon} /></div>
                   <h3 className="font-display font-bold text-xl leading-snug mb-2" style={{ color: 'var(--brand-text-dark)' }}>{cat.title}</h3>
-                  <p className="mb-4 flex items-start gap-2 text-sm leading-relaxed" style={{ color: 'var(--brand-text-mid)' }}>
+                  <div className="mb-4 flex items-start gap-2 text-sm leading-relaxed" style={{ color: 'var(--brand-text-mid)' }}>
                     <span className={`relative mt-0.5 h-6 w-9 shrink-0 overflow-hidden rounded-md ${FILL_IMAGE}`}>
                       <StockImage manifestKey={cat.manifestKey} fallbackKey="horses-com:hero" alt="" aspect="4:3" variant="inline" />
                     </span>
                     <span>{cat.desc}</span>
-                  </p>
+                  </div>
                   <span className="mt-auto inline-flex items-center text-xs font-semibold uppercase tracking-eyebrow" style={{ color: 'var(--brand-primary)' }}>Read <span aria-hidden="true" className="ml-1.5 transition-transform group-hover:translate-x-0.5">→</span></span>
                 </div>
               </Link>
@@ -331,12 +331,12 @@ export default function HomePage() {
                 <div className="flex flex-col flex-1 p-6">
                   <div className="text-2xs font-bold uppercase tracking-eyebrow mb-2" style={{ color: 'var(--brand-primary)' }}>{guide.eyebrow}</div>
                   <h3 className="font-display font-bold text-xl leading-snug mb-2" style={{ color: 'var(--brand-text-dark)' }}>{guide.title}</h3>
-                  <p className="mb-4 flex items-start gap-2 text-sm leading-relaxed" style={{ color: 'var(--brand-text-mid)' }}>
+                  <div className="mb-4 flex items-start gap-2 text-sm leading-relaxed" style={{ color: 'var(--brand-text-mid)' }}>
                     <span className={`relative mt-0.5 h-6 w-9 shrink-0 overflow-hidden rounded-md ${FILL_IMAGE}`}>
                       <StockImage manifestKey={guide.manifestKey} fallbackKey="horses-com:hero" alt="" aspect="4:3" variant="inline" />
                     </span>
                     <span>{guide.desc}</span>
-                  </p>
+                  </div>
                 </div>
               </Link>
             ))}
@@ -458,12 +458,12 @@ export default function HomePage() {
                 <div className="p-7 lg:p-8">
                   <div className="text-2xs font-bold uppercase tracking-eyebrow mb-3" style={{ color: 'var(--brand-primary)' }}>{art.eyebrow}</div>
                   <h3 className="font-display font-bold text-2xl leading-tight mb-3" style={{ color: 'var(--brand-text-dark)' }}>{art.title}</h3>
-                  <p className="mb-5 flex items-start gap-2 text-base leading-relaxed" style={{ color: 'var(--brand-text-mid)' }}>
+                  <div className="mb-5 flex items-start gap-2 text-base leading-relaxed" style={{ color: 'var(--brand-text-mid)' }}>
                     <span className={`relative mt-1 h-7 w-10 shrink-0 overflow-hidden rounded-md ${FILL_IMAGE}`}>
                       <StockImage manifestKey={art.imageKey} fallbackKey="horses-com:hero" alt="" aspect="4:3" variant="inline" />
                     </span>
                     <span>{art.teaser}</span>
-                  </p>
+                  </div>
                   <span className="text-xs font-semibold uppercase tracking-eyebrow" style={{ color: 'var(--brand-text-light)' }}>{art.readTime} read</span>
                 </div>
               </Link>
