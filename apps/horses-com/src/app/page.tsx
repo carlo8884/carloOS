@@ -195,7 +195,12 @@ export default function HomePage() {
                   </div>
                   <span className="block font-display font-bold text-sm leading-tight" style={{ color: 'var(--brand-text-dark)' }}>Editorial standards</span>
                 </div>
-                <span className="block text-xs mt-0.5" style={{ color: 'var(--brand-text-mid)' }}>Citation-anchored, signed on the page.</span>
+                <span className="mt-0.5 flex items-center gap-2 text-xs" style={{ color: 'var(--brand-text-mid)' }}>
+                  <span className={`relative h-6 w-9 shrink-0 overflow-hidden rounded-md ${FILL_IMAGE}`}>
+                    <StockImage manifestKey="horses-com:hero" fallbackKey="horses-com:hero" alt="" aspect="4:3" variant="inline" />
+                  </span>
+                  <span>Citation-anchored, signed on the page.</span>
+                </span>
               </div>
             </Link>
           </div>
@@ -212,7 +217,12 @@ export default function HomePage() {
                     </div>
                     <div className="font-display font-bold text-sm leading-tight" style={{ color: 'var(--brand-text-dark)' }}>{item.label}</div>
                   </div>
-                  <p className="text-xs leading-relaxed mt-1" style={{ color: 'var(--brand-text-mid)' }}>{item.note}</p>
+                  <div className="text-xs leading-relaxed mt-1 flex items-start gap-2" style={{ color: 'var(--brand-text-mid)' }}>
+                    <div className={`relative mt-0.5 h-6 w-9 shrink-0 overflow-hidden rounded-md ${FILL_IMAGE}`}>
+                      <StockImage manifestKey={item.imageKey} fallbackKey="horses-com:hero" alt="" aspect="4:3" variant="inline" />
+                    </div>
+                    <span>{item.note}</span>
+                  </div>
                 </div>
               </Link>
             ))}
@@ -232,7 +242,12 @@ export default function HomePage() {
                   <span className="text-2xs font-bold uppercase tracking-eyebrow group-hover:underline" style={{ color: '#7a5520' }}>By Category</span>
                 </Link>
               </div>
-              <h2 className="font-display font-bold tracking-tight text-3xl sm:text-4xl text-brand-text-dark">Where to start</h2>
+              <div className="flex items-center gap-2.5">
+                <div className={`relative h-10 w-14 shrink-0 overflow-hidden rounded-md ${FILL_IMAGE}`}>
+                  <StockImage manifestKey="horses-com:category-breeds" fallbackKey="horses-com:hero" alt="" aspect="4:3" variant="inline" />
+                </div>
+                <h2 className="font-display font-bold tracking-tight text-3xl sm:text-4xl text-brand-text-dark mb-0">Where to start</h2>
+              </div>
             </div>
             <Link href="/breeds" className="group flex items-center gap-3 overflow-hidden rounded-md no-underline" style={{ background: 'var(--brand-white)', border: '1px solid var(--brand-border)' }}>
               <div className={`relative h-16 w-24 shrink-0 overflow-hidden ${FILL_IMAGE}`}>
