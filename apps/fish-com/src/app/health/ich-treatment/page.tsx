@@ -55,7 +55,7 @@ export default function IchTreatmentPage() {
           siteId="fish-com"
           nextHref="/health/velvet-disease"
           nextLabel="Rule out velvet before you stop treating"
-          nextBlurb="Ich is salt-grain white spots. Velvet is a gold dust that needs a flashlight. The heat method still needs a heater you can hold at 82–86°F — the hop below is the same heater search already on this page."
+          nextBlurb="Ich is salt-grain white spots. Velvet is a gold dust that needs a flashlight. The heat method still needs a heater you can hold at 82–86°F — The button below opens the same heater search on Amazon."
           resourceHref="/go/amazon-brand/eheim+jager+heater?s=health-ich"
           resourceLabel="Browse Eheim Jager heaters on Amazon →"
         />

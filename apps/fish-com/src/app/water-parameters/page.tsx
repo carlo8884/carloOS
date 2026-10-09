@@ -271,7 +271,7 @@ export default function WaterParametersHubPage() {
           siteId="fish-com"
           nextHref="/tools/water-change-calculator"
           nextLabel="Turn this week's nitrate into gallons to remove"
-          nextBlurb="The table is the weekly test order. When nitrate is high, the water-change calculator turns tank gallons and percent into a measurable pull. The hop below is the same API Master Test Kit search already on this page."
+          nextBlurb="The table is the weekly test order. When nitrate is high, the water-change calculator turns tank gallons and percent into a measurable pull. The button below opens the same API Master Test Kit search on Amazon."
           resourceHref="/go/amazon-brand/api+freshwater+master+test+kit?s=water-parameters"
           resourceLabel="Browse API Master Test Kit on Amazon →"
         />
@@ -289,7 +289,7 @@ export default function WaterParametersHubPage() {
             Seachem Prime (or another dechlorinator) at every fill, a gravel
             vacuum or Python-style changer for the weekly water change that
             exports nitrate, and a separate digital thermometer so temperature
-            is not just the heater dial. Same test-kit hop used on the{' '}
+            is not just the heater dial. The same test-kit button is on the{' '}
             <Link
               href="/tools/stocking-calculator"
               className="text-brand-primary no-underline hover:underline"
@@ -303,14 +303,14 @@ export default function WaterParametersHubPage() {
             >
               water-test kit review
             </Link>
-            . Same Prime, gravel-vacuum, and Python hops used on the{' '}
+            . The same Prime, gravel-vacuum, and Python buttons are on the{' '}
             <Link
               href="/tools/water-change-calculator"
               className="text-brand-primary no-underline hover:underline"
             >
               water-change calculator
             </Link>
-            . Same thermometer hop used on the{' '}
+            . The same thermometer button is on the{' '}
             <Link href="/setup" className="text-brand-primary no-underline hover:underline">
               aquarium setup guide
             </Link>

@@ -67,7 +67,7 @@ export default function MarkerTrainingPage() {
             siteId="dog-com"
             nextHref="/training/basic-commands"
             nextLabel="Use the charged marker on sit, down, stay, come, and leave-it"
-            nextBlurb="The click is only useful if it lands on a real behavior. Charge the marker, then run the five-command protocol in 3–5 minute sessions. The hop below is the same clicker search already on this page."
+            nextBlurb="The click is only useful if it lands on a real behavior. Charge the marker, then run the five-command protocol in 3–5 minute sessions. The button below opens the same clicker search on Amazon."
             resourceHref="/go/amazon-brand/dog+training+clicker?s=training-marker-training"
             resourceLabel="Browse dog training clickers on Amazon →"
           />
@@ -82,15 +82,15 @@ export default function MarkerTrainingPage() {
             </div>
             <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">A clicker marks the exact moment of the behavior; pea-sized
               treats and a belt-clip pouch keep the reward inside the 1.3-second
-              window so the click stays charged. Same clicker, treat, and pouch
-              hops used on the{' '}
+              window so the click stays charged. The same clicker, treat, and pouch
+              buttons are on the{' '}
               <Link
                 href="/training/basic-commands"
                 className="text-brand-primary no-underline hover:underline"
               >
                 basic-commands guide
               </Link>
-              . Same treat hop used on the{' '}
+              . The same training-treat button is on the{' '}
               <Link
                 href="/training/house-training"
                 className="text-brand-primary no-underline hover:underline"

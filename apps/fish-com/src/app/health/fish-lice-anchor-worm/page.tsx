@@ -77,8 +77,7 @@ export default function FishLicePage() {
             — plus treating the holding water so eggs and larvae do not
             re-seed the tank. A spare quarantine / hospital tank is how you
             run that watch without dropping the display. A seeded sponge
-            filter keeps that holding water moving. Same hospital-tank hop
-            used on the{' '}
+            filter keeps that holding water moving. The same hospital-tank button is on the{' '}
             <Link
               href="/tools/fish-disease-symptom-checker"
               className="text-brand-primary no-underline hover:underline"
@@ -89,16 +88,16 @@ export default function FishLicePage() {
             <Link href="/health/pop-eye" className="text-brand-primary no-underline hover:underline">
               pop-eye guide
             </Link>
-            . Same sponge-filter hop used on the{' '}
+            . The same sponge-filter button is on the{' '}
             <Link
               href="/tools/aquarium-cycling-estimator"
               className="text-brand-primary no-underline hover:underline"
             >
               cycling estimator
             </Link>
-            . Test-kit, heater, and thermometer hops stay off this page —
+            . Test-kit, heater, and thermometer buttons stay off this page —
             lice and anchor-worm copy has no water-test-first step and no
-            heat method. The hops below are not a ranked product list, they
+            heat method. The buttons below are not a ranked product list, they
             are not medications, and they do not treat, reverse, or cure
             Argulus or Lernaea. </p>
           <div className="flex flex-col gap-3">

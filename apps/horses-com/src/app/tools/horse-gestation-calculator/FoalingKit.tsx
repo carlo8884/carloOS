@@ -109,7 +109,7 @@ export default function FoalingKit() {
       <p className="text-sm leading-relaxed text-brand-text-mid mb-4">
         A typical owner foaling kit is a digital thermometer, a navel dip your veterinarian
         specifies, a stack of clean towels, a headlamp, exam gloves, and a foaling alarm or stall
-        camera. Check items off as you gather them. Amazon hops are search results for those
+        camera. Check items off as you gather them. Amazon buttons open search results for those
         categories — not a ranked product list, and not a substitute for the kit your veterinarian
         recommends for your mare.
       </p>

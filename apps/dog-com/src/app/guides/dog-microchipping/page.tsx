@@ -199,7 +199,7 @@ export default function DogMicrochippingPage() {
             siteId="dog-com"
             nextHref="/tools/new-puppy-checklist"
             nextLabel="Add the collar tag and chip to the puppy checklist"
-            nextBlurb="The callout is the registration rule — a chip with no current phone number does nothing. The new-puppy checklist is the day-one pack list, including the ID tag and the first-visit chip. The hop below is the same engraved collar-ID search already on this page."
+            nextBlurb="The callout is the registration rule — a chip with no current phone number does nothing. The new-puppy checklist is the day-one pack list, including the ID tag and the first-visit chip. The button below opens the same engraved collar-ID search on Amazon."
             resourceHref="/go/amazon-brand/engraved+dog+collar+id+tags?s=guides-dog-microchipping"
             resourceLabel="Browse engraved dog collar ID tags on Amazon →"
           />

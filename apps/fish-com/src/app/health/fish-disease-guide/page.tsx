@@ -222,7 +222,7 @@ export default function FishDiseaseGuidePage() {
           siteId="fish-com"
           nextHref="/setup/quarantine-tank-guide"
           nextLabel="Set up the hospital tank before you dose"
-          nextBlurb="Test water first. Then isolate. The next useful page is the quarantine / hospital-tank setup — so copper and antibiotics stay out of the display. The hop below is the same hospital-tank search already on this page."
+          nextBlurb="Test water first. Then isolate. The next useful page is the quarantine / hospital-tank setup — so copper and antibiotics stay out of the display. The button below opens the same hospital-tank search on Amazon."
           resourceHref="/go/amazon-brand/aquarium+quarantine+hospital+tank+net?s=health-disease-guide"
           resourceLabel="Browse quarantine / hospital tanks on Amazon →"
         />
@@ -239,7 +239,7 @@ export default function FishDiseaseGuidePage() {
             see ammonia, nitrite, and nitrate. Then isolate in a spare
             10-gallon hospital tank with a seeded sponge filter, a heater
             rated for the tank, and a separate digital thermometer so the
-            dial is not the only reading. Same test-kit hop used on the{' '}
+            dial is not the only reading. The same test-kit button is on the{' '}
             <Link
               href="/tools/fish-disease-symptom-checker"
               className="text-brand-primary no-underline hover:underline"
@@ -253,15 +253,15 @@ export default function FishDiseaseGuidePage() {
             >
               water-test kit review
             </Link>
-            . Same hospital-tank hop used on the symptom checker. Same
-            sponge-filter hop used on the{' '}
+            . The same hospital-tank button is on the symptom checker. The same
+            sponge-filter button is on the{' '}
             <Link
               href="/tools/aquarium-cycling-estimator"
               className="text-brand-primary no-underline hover:underline"
             >
               cycling estimator
             </Link>
-            . Same heater and thermometer hops used on the{' '}
+            . The same heater and thermometer buttons are on the{' '}
             <Link href="/setup" className="text-brand-primary no-underline hover:underline">
               aquarium setup guide
             </Link>

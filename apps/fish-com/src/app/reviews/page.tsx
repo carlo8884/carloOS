@@ -144,14 +144,14 @@ const REVIEWS = [
   },
   {
     title: 'Heater Size for a Cold Room',
-    desc: 'The wattage calculator’s winter case, including the 25 percent headroom. The hop is the Eheim Jager.',
+    desc: 'The wattage calculator’s winter case, including the 25 percent headroom. The button below is the Eheim Jager.',
     href: '/reviews/winter-heater-sizing-guide',
     group: 'fish-reviews-heat',
     badge: 'Season',
   },
   {
     title: 'Winter Light Hours for a Planted Tank',
-    desc: 'Shorter days do not change the 6 to 8 hour photoperiod. The hop is the light timer.',
+    desc: 'Shorter days do not change the 6 to 8 hour photoperiod. The button below is the light timer.',
     href: '/reviews/winter-photoperiod-guide',
     group: 'fish-reviews-lighting',
     badge: 'Season',

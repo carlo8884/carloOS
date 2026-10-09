@@ -220,7 +220,7 @@ export default function DogGrimaceScalePage() {
             siteId="dog-com"
             nextHref="/tools/is-this-a-dog-emergency"
             nextLabel="If the face looks sudden or high-pain, run the emergency sign-list"
-            nextBlurb="The grimace total is a planning score, not a diagnosis. Around 4/10 or a sudden change is a reason to call the vet — skip the comfort kit and use the emergency sign-list first. The hop below is the same first-aid kit search already on this page, for packing on a calm day."
+            nextBlurb="The grimace total is a planning score, not a diagnosis. Around 4/10 or a sudden change is a reason to call the vet — skip the comfort kit and use the emergency sign-list first. The button below opens the same first-aid kit search on Amazon, for packing on a calm day."
             resourceHref="/go/amazon-brand/dog+first+aid+kit?s=tools-dog-grimace-scale"
             resourceLabel="Browse dog first-aid kits on Amazon →"
           />

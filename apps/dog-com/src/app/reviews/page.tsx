@@ -54,8 +54,8 @@ const REVIEWS = [
   { title: 'Cosequin vs Dasuquin', desc: 'Glucosamine and chondroitin, or the same base plus ASU. Scores are the ones on the joint review', href: '/reviews/cosequin-vs-dasuquin-guide', badge: 'Joints', group: 'dog-reviews-joints' },
   { title: 'Fi Series 3 vs Tractive', desc: 'Three-month battery and escape alerts, or the lowest printed monthly fee. Scores are the ones on the GPS review', href: '/reviews/fi-vs-tractive-guide', badge: 'Tracking', group: 'dog-reviews-tracking' },
   { title: 'Outward Hound vs Northmate', desc: 'A maze slow bowl, or a flat grass feeder that cannot tip. Scores are the ones on the slow-feeder review', href: '/reviews/outward-hound-vs-northmate-guide', badge: 'Nutrition', group: 'dog-reviews-food' },
-  { title: 'Holiday Scraps and a Locking Trash Can', desc: 'The pancreatitis page already names turkey skin and ham fat. The hop is the locking can on that page', href: '/reviews/holiday-scraps-trash-can-guide', badge: 'Season', group: 'dog-reviews-season' },
-  { title: 'Holiday Chocolate and the Toxicity Calculator', desc: 'Any ingestion is a call. The hop is the first-aid kit the calculator page already links', href: '/reviews/holiday-chocolate-calculator-guide', badge: 'Season', group: 'dog-reviews-season' },
+  { title: 'Holiday Scraps and a Locking Trash Can', desc: 'The pancreatitis page already names turkey skin and ham fat. The button below is the locking can on that page', href: '/reviews/holiday-scraps-trash-can-guide', badge: 'Season', group: 'dog-reviews-season' },
+  { title: 'Holiday Chocolate and the Toxicity Calculator', desc: 'Any ingestion is a call. The button below is the first-aid kit the calculator page already links', href: '/reviews/holiday-chocolate-calculator-guide', badge: 'Season', group: 'dog-reviews-season' },
   { title: 'November and December Dog Gifts', desc: 'Chews, bowls, harnesses, a crate, a bed, and a tracker, grouped by the price bands already on those cards', href: '/reviews/november-december-gift-guide', badge: 'Season', group: 'dog-reviews-season' },
 ]
 

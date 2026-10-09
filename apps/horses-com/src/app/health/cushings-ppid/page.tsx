@@ -159,8 +159,8 @@ export default function PPIDPage() {
             <li><strong>Manage the failed-shed coat.</strong> Hypertrichosis is the most specific sign; the long curly coat stays after spring. A stainless shedding blade is how that coat is lifted between clips — it is not a curry comb or dandy brush and not horse clippers.</li>
             <li><strong>Help the horse cool.</strong> The heavy coat impairs cooling, and some PPID horses sweat abnormally. A wicking anti-sweat sheet is how a clipped or still-coated horse sheds heat after work — it is not an Irish-knit cooler or a wool quarter sheet, not a fleece cooler, and not a sweat scraper.</li>
             <li><strong>Keep water in front of them.</strong> Increased drinking and urination show up in some horses. An automatic waterer is how that extra thirst is not a dry bucket — it is not a color-coded flat-back bucket and not a tank heater.</li>
-            <li><strong>Match the diet to metabolic status</strong> and watch laminitis risk. This page does not re-ship those hops.</li>
-            <li><strong>Leave medication, dental work, and infection treatment to the veterinarian.</strong> Pergolide, ACTH monitoring, and systemic drugs are not shoppable hops.</li>
+            <li><strong>Match the diet to metabolic status</strong> and watch laminitis risk. This page does not repeat those shop buttons.</li>
+            <li><strong>Leave medication, dental work, and infection treatment to the veterinarian.</strong> Pergolide, ACTH monitoring, and systemic drugs are not product links.</li>
           </ul>
 
           <h2 id="kit">Supplies named on this page</h2>

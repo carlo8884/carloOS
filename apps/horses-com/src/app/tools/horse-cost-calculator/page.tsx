@@ -80,7 +80,7 @@ const softwareApplicationSchema = {
     'Board-type presets (full / partial / pasture / self-care) with 2026 US range guidance',
     'Farrier costed on a ~6-week cycle (~8.7 visits/year)',
     'Monthly and annual totals with a per-category breakdown table',
-    'Interactive first-horse startup kit with Amazon shop hops',
+    'Interactive first-horse startup kit with Amazon shop buttons',
     'Estimates framed against large regional and individual variation',
   ],
   publisher: { '@type': 'Organization', name: 'Horses.com Editorial', url: 'https://horses.com' },

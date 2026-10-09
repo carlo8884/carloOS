@@ -65,7 +65,7 @@ export default function BestDentalChewsPage() {
               siteId="dog-com"
               nextHref="/tools/dog-calorie-calculator"
               nextLabel="Subtract the chew calories before you add a daily Greenie"
-              nextBlurb="The callout is the VOHC filter — seal first, then count the printed size calories on the bag so the chew does not become a hidden meal. The calorie calculator is the next step: daily energy, then subtract one chew. The hop below is the same Greenies search already on this page."
+              nextBlurb="The callout is the VOHC filter — seal first, then count the printed size calories on the bag so the chew does not become a hidden meal. The calorie calculator is the next step: daily energy, then subtract one chew. The button below opens the same Greenies search on Amazon."
               resourceHref="/go/chewy-brand/greenies+dental+chews+dogs?s=reviews-best-dental-chews"
               resourceLabel="Browse Greenies dental chews on Amazon →"
             />
@@ -129,7 +129,7 @@ export default function BestDentalChewsPage() {
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-08" />
+              <ComparisonFoot updated="2026-10-09" />
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Which chew fits which dog</h2>
               <FAQAccordion items={[
                 {

@@ -164,7 +164,7 @@ export default function PuppyFirstYearBudgetPage() {
             siteId="dog-com"
             nextHref="/tools/dog-crate-size-calculator"
             nextLabel="Size the crate once for adult length"
-            nextBlurb="The budget is a planning range. The crate is usually the largest gear line — buy adult length once and use a divider. The hop below is the same wire-crate-with-divider search already on this page."
+            nextBlurb="The budget is a planning range. The crate is usually the largest gear line — buy adult length once and use a divider. The button below opens the same wire-crate-with-divider search on Amazon."
             resourceHref="/go/amazon-brand/wire+dog+crate+with+divider+panel?s=tools-puppy-first-year-budget"
             resourceLabel="Browse wire crates with a divider panel on Amazon →"
           />

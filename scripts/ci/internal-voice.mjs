@@ -4,15 +4,19 @@
  * appear in customer-facing copy on the five earning sites
  * (dog-com, fish-com, horses-com, vets-co, ferret-com).
  *
- * The phrases are the ones removed in Rounds 204–206: inventory
+ * The phrases are the ones removed in Rounds 204–207: inventory
  * asides ("already live on", "does not hop", "(those live on …)"),
  * hop numbers (#1168), TL;DR labels, slug-shaped shop labels
  * ("Deductibles-reimbursement kit", "Shop the visit-cadence kit"),
- * and "not a … hop" / "not a reason to hop" asides.
- * Real kit names (first-aid kit, day-one kit) stay allowed.
- * Journey blurbs ("The hop below is the same …") stay allowed.
+ * "not a … hop" / "not a reason to hop" asides, and any other
+ * customer-facing "hop" or "hops" that means an affiliate link
+ * ("The hop below", "never hops", "not shoppable hops").
+ * Real kit names stay allowed. Real-word uses stay on the allowlist:
+ * three-legged hop, war-dance hop, treat hopper, and a horse that
+ * "will not bear weight on a limb, hops,".
  *
- * Comments, (funnels), and components/visual are not customer copy.
+ * Comments, imports, code identifiers, (funnels), and components/visual
+ * are not customer copy.
  * Exit 0 if clean, 1 if any forbidden phrase appears.
  */
 import { readFileSync, readdirSync } from 'node:fs'
@@ -37,6 +41,7 @@ export const RULES = [
   { id: 'shop-slug-kit', pattern: />\s*Shop the\s+[A-Za-z0-9]+(?:-[A-Za-z0-9]+)+\s+kit\s*</i, reason: 'Shop label built from a page slug' },
   { id: 'not-a-hop', pattern: /not (?:an?|the)\s+(?:(?!\bnot\b)[^.;]){0,200}?\bhop\b/i, reason: 'Internal "not a … hop" aside' },
   { id: 'reason-to-hop', pattern: /not a reason to hop/i, reason: 'Internal "not a reason to hop" aside' },
+  { id: 'customer-hop', pattern: /\bhops?\b/i, reason: 'Customer-facing "hop" or "hops" outside the real-word allowlist' },
 ]
 
 export function stripComments(src) {
@@ -51,12 +56,44 @@ export function decodeEntities(src) {
   return src.replace(/&(?:apos|rsquo|lsquo|#39);/g, "'")
 }
 
+/** Real words and gait, not affiliate links. */
+export const HOP_ALLOWLIST = [
+  /\bthree-legged hops?\b/gi,
+  /\bwar-dance hops?\b/gi,
+  /\btreat hoppers?\b/gi,
+  /will not bear weight on a limb, hops,/gi,
+]
+
+/** Visible copy with code identifiers and the real-word allowlist removed. */
+export function customerHopHay(src) {
+  let s = decodeEntities(stripComments(src))
+  s = s.replace(/^\s*import\b[^\n]*/gm, ' ')
+  s = s.replace(/[?&]hop=/g, ' ')
+  s = s.replace(/\baffiliate-hop\b/g, ' ')
+  s = s.replace(/\bdata-[\w-]*hop\w*/gi, ' ')
+  s = s.replace(/\bHop[A-Z]\w*/g, ' ')
+  s = s.replace(/\b(?:pick|next|shop|primary|resource)Hop\b/g, ' ')
+  s = s.replace(/\bhop\s*\??\s*:/g, ' ')
+  s = s.replace(/\bhop\s*=\s*\{/g, ' ')
+  s = s.replace(/\{\s*hop\s*\}/g, ' ')
+  s = s.replace(/\bhop\b(?=\s*[,})])/g, ' ')
+  for (const re of HOP_ALLOWLIST) {
+    re.lastIndex = 0
+    s = s.replace(re, ' ')
+  }
+  return s.replace(/\s+/g, ' ')
+}
+
 export function scanSource(src) {
   const visible = stripComments(src)
   const flat = decodeEntities(visible).replace(/\s+/g, ' ')
   const hits = []
   for (const rule of RULES) {
-    const hay = rule.id === 'slug-kit' || rule.id === 'shop-slug-kit' ? visible : flat
+    const hay = rule.id === 'customer-hop'
+      ? customerHopHay(src)
+      : rule.id === 'slug-kit' || rule.id === 'shop-slug-kit'
+        ? visible
+        : flat
     if (rule.pattern.test(hay)) {
       const match = hay.match(rule.pattern)
       hits.push({
@@ -90,6 +127,10 @@ export function selfCheck() {
     'A preset heater is sized for a nano — it is not an Eheim Jager hop.',
     'Mapping a flinch is an observation, not a reason to hop a grooming glove.',
     'It is not a Hill&apos;s w/d or Royal Canin Diabetic hop.',
+    'The hop below is the same wire crate already on this page.',
+    'Same dental-chew hop used on the dental review.',
+    'This page never hops medications.',
+    'Clinic prescriptions are not shoppable hops.',
   ]
   const good = [
     'Pack a pet first-aid kit for the clinic ride.',
@@ -98,9 +139,18 @@ export function selfCheck() {
     'A <strong>H</strong>urt score for pain.',
     'Shop these supplies',
     '<h2 id="kit">Supplies named on this page</h2>',
-    'The hop below is the same wire crate already on this page.',
-    'Same dental-chew hop used on the dental review.',
+    'The button below opens the same wire crate search on Amazon.',
+    'The same dental-chew button is on the dental review.',
     'An apple wedger is how carrots go in as sticks — it is not a treat hopper.',
+    'Skipping or three-legged hop',
+    'A sideways war-dance hop that signals play.',
+    'A horse that will not bear weight on a limb, hops, or is suspected of a fracture is an emergency.',
+    'hop?: ReactNode',
+    '{hop}',
+    'import { x } from "./affiliate-hop"',
+    'data-primary-hop="1"',
+    'https://example.com/?hop=PLACEHOLDER',
+    '{/* The hop below stays in a comment */}\n<p>Pack a first-aid kit.</p>',
     'Baking soda is a grocery bicarbonate.',
   ]
   const errors = []
@@ -120,7 +170,7 @@ function walk(dir, out = []) {
     if (e.isDirectory()) {
       if (['node_modules', '.next', '.turbo', '(funnels)', 'visual'].includes(e.name)) continue
       walk(p, out)
-    } else if (/\.tsx$/.test(e.name)) {
+    } else if (/\.tsx?$/.test(e.name)) {
       out.push(p)
     }
   }
@@ -143,7 +193,10 @@ function main() {
   const bySite = Object.fromEntries(SITES.map((site) => [site, 0]))
   for (const file of files) {
     const rel = file.replace(root + '/', '')
-    const found = scanSource(readFileSync(file, 'utf8'))
+    // Other rules stay on TSX. TS data and route modules are scanned for
+    // customer-facing hop/hops only, so a blurb in a .ts file cannot hide.
+    let found = scanSource(readFileSync(file, 'utf8'))
+    if (file.endsWith('.ts')) found = found.filter((hit) => hit.id === 'customer-hop')
     const site = SITES.find((s) => rel.startsWith(`apps/${s}/`))
     if (found.length && site) bySite[site] += found.length
     for (const hit of found) hits.push({ file: rel, ...hit })
@@ -162,7 +215,7 @@ function main() {
   }
 
   console.log('## Internal voice: clean')
-  console.log(`\nPASS: scanned ${files.length} customer-facing TSX files on the five earning sites; 0 hits.`)
+  console.log(`\nPASS: scanned ${files.length} customer-facing TS/TSX files on the five earning sites; 0 hits.`)
   console.log('Per site:', JSON.stringify(bySite))
 }
 

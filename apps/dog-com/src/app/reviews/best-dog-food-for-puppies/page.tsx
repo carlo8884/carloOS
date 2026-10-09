@@ -98,7 +98,7 @@ export default function BestPuppyFoodPage() {
               siteId="dog-com"
               nextHref="/nutrition/puppy-nutrition"
               nextLabel="Read the large-breed puppy formula rule in full"
-              nextBlurb="The callout is the bag rule — expected adult weight over 50 lb needs a large-breed puppy formula, not extra calcium. The puppy-nutrition guide is the next step: schedule, amount, and when to switch. The hop below is the same Royal Canin large-breed puppy search already on this page."
+              nextBlurb="The callout is the bag rule — expected adult weight over 50 lb needs a large-breed puppy formula, not extra calcium. The puppy-nutrition guide is the next step: schedule, amount, and when to switch. The button below opens the same Royal Canin large-breed puppy search on Amazon."
               resourceHref="/go/amazon/B0BX1D5VS4?s=reviews-best-dog-food-for-puppies"
               resourceLabel="Browse Royal Canin large-breed puppy food on Amazon →"
             />
@@ -240,7 +240,7 @@ export default function BestPuppyFoodPage() {
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-08" />
+              <ComparisonFoot updated="2026-10-09" />
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Which puppy food fits</h2>
               <FAQAccordion items={[
                 {

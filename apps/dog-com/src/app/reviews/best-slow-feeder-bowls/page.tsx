@@ -64,7 +64,7 @@ export default function BestSlowFeederBowlsPage() {
               siteId="dog-com"
               nextHref="/nutrition/how-much-to-feed"
               nextLabel="Split the daily amount before you pick a maze"
-              nextBlurb="The callout is the bloat rule — twice-daily feeding plus a slow feeder, not one giant gulp. How-much-to-feed is the next step so each bowl actually holds a smaller half-ration. The hop below is the same Northmate search already on this page."
+              nextBlurb="The callout is the bloat rule — twice-daily feeding plus a slow feeder, not one giant gulp. How-much-to-feed is the next step so each bowl actually holds a smaller half-ration. The button below opens the same Northmate search on Amazon."
               resourceHref="/go/amazon-brand/northmate+green+interactive+feeder?s=reviews-best-slow-feeder-bowls"
               resourceLabel="Search Amazon for Northmate Green"
             />

@@ -169,7 +169,7 @@ export default function DogCalorieCalculatorPage() {
             siteId="dog-com"
             nextHref="/tools/dog-body-condition-score"
             nextLabel="Check the number against body condition"
-            nextBlurb="The calculator is a starting scoop. BCS is whether that scoop is right — ribs felt, waist seen. Weigh the meal; the hop below is the same kitchen-scale search already on this page."
+            nextBlurb="The calculator is a starting scoop. BCS is whether that scoop is right — ribs felt, waist seen. Weigh the meal; The button below opens the same kitchen-scale search on Amazon."
             resourceHref="/go/amazon-brand/kitchen+gram+scale?s=tools-dog-calorie-calculator"
             resourceLabel="Browse kitchen gram scales on Amazon →"
           />

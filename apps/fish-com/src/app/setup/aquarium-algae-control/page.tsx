@@ -61,7 +61,7 @@ export default function AlgaeControlPage() {
           siteId="fish-com"
           nextHref="/tools/water-change-calculator"
           nextLabel="Measure this week's water change to export nutrients"
-          nextBlurb="The playbook is the order — cut the photoperiod, then export nitrate and phosphate with a measured change. Scraping the glass is support, not the fix. The hop below is the same magnetic-scraper search already on this page."
+          nextBlurb="The playbook is the order — cut the photoperiod, then export nitrate and phosphate with a measured change. Scraping the glass is support, not the fix. The button below opens the same magnetic-scraper search on Amazon."
           resourceHref="/go/amazon-brand/aquarium+magnetic+scraper?s=setup-aquarium-algae-control"
           resourceLabel="Browse aquarium magnetic scrapers on Amazon →"
         />

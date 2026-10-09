@@ -224,7 +224,7 @@ export default function PuppyWeightPredictorPage() {
             siteId="dog-com"
             nextHref="/tools/dog-crate-size-calculator"
             nextLabel="Size the crate once for adult length"
-            nextBlurb="The predictor is a planning range, not a guaranteed adult weight. Size the crate for the high end of that range and use a divider while the puppy grows. The hop below is the same wire-crate-with-divider search already on this page."
+            nextBlurb="The predictor is a planning range, not a guaranteed adult weight. Size the crate for the high end of that range and use a divider while the puppy grows. The button below opens the same wire-crate-with-divider search on Amazon."
             resourceHref="/go/amazon-brand/wire+dog+crate+with+divider+panel?s=tools-puppy-weight-predictor"
             resourceLabel="Browse wire crates with a divider panel on Amazon →"
           />

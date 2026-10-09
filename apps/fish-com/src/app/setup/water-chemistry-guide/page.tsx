@@ -63,7 +63,7 @@ export default function WaterChemistryGuidePage() {
           siteId="fish-com"
           nextHref="/water-parameters"
           nextLabel="Turn pH / GH / KH into this week's test order"
-          nextBlurb="The chemistry guide is the definitions. The water-parameters table is the weekly order — ammonia, nitrite, nitrate, pH, GH, and KH in one pass. The hop below is the same API Master Test Kit search already on this page."
+          nextBlurb="The chemistry guide is the definitions. The water-parameters table is the weekly order — ammonia, nitrite, nitrate, pH, GH, and KH in one pass. The button below opens the same API Master Test Kit search on Amazon."
           resourceHref="/go/amazon-brand/api%20freshwater%20master%20test%20kit?s=setup-water-chemistry-guide"
           resourceLabel="Browse API Master Test Kit on Amazon →"
         />

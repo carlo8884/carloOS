@@ -193,7 +193,7 @@ export default function LitterPlannerPage() {
                 ferret litter review
               </Link>
               . The button still on this page is the high-back
-              corner pan hop already used on the{' '}
+              corner pan button already used on the{' '}
               <Link href="/tools/cage-size-calculator" className="text-brand-primary underline-offset-2 hover:underline">
                 cage size calculator
               </Link>

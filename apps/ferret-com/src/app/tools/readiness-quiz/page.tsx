@@ -20,7 +20,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
   title: 'Ferret Readiness Quiz & New-Owner Kit | Ferret.com',
   description:
-    'Ten honest questions on legality, time, budget, and housing — then a day-one kit checklist with Amazon hops for cage, litter, food, and carrier.',
+    'Ten honest questions on legality, time, budget, and housing — then a day-one kit checklist with Amazon buttons for cage, litter, food, and carrier.',
   path: '/tools/readiness-quiz',
 })
 
@@ -43,7 +43,7 @@ const appSchema = {
   featureList: [
     'Ten scored questions on legality, time, budget, housing, and commitment',
     'Four readiness tiers with plain-English next steps',
-    'Interactive new-owner kit checklist with Amazon shop hops',
+    'Interactive new-owner kit checklist with Amazon shop buttons',
     'Day-one list: cage, litter, food, hammock, dig box, carrier',
   ],
   publisher: { '@type': 'Organization', name: 'Ferret.com Editorial', url: 'https://ferret.com' },
@@ -212,7 +212,7 @@ export default function ReadinessQuizPage() {
             </div>
             <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
               The six-item list above is a husbandry starting point — cage, litter, food, hammock,
-              dig box, carrier — not a ranked product list. The Amazon hops still on this page are the cage, kibble, and carrier searches used on the{' '}
+              dig box, carrier — not a ranked product list. The Amazon buttons still on this page are the cage, kibble, and carrier searches used on the{' '}
               <Link href="/reviews/best-ferret-cage" className="text-brand-primary underline-offset-2 hover:underline">
                 cage review
               </Link>

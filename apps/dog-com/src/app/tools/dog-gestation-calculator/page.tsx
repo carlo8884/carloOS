@@ -222,7 +222,7 @@ export default function DogGestationCalculatorPage() {
             siteId="dog-com"
             nextHref="/tools/new-puppy-checklist"
             nextLabel="Pack the new-puppy list once the due date is set"
-            nextBlurb="Merck’s window is 58–72 days from an untimed breeding, or 62–64 days from ovulation. After that, the new-puppy checklist is the crate, food, and first-week order. The hop below is the same digital puppy-scale search already on this page."
+            nextBlurb="Merck’s window is 58–72 days from an untimed breeding, or 62–64 days from ovulation. After that, the new-puppy checklist is the crate, food, and first-week order. The button below opens the same digital puppy-scale search on Amazon."
             resourceHref="/go/amazon-brand/digital+puppy+scale?s=tools-dog-gestation-calculator"
             resourceLabel="Browse digital puppy scales on Amazon →"
           />

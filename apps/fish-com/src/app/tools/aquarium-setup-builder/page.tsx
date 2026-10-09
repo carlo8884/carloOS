@@ -181,7 +181,7 @@ export default function AquariumSetupBuilderPage() {
           </div>
           <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
             The checklist is a filter, heater, light, liquid master kit, water conditioner, and
-            substrate — then cycle before any fish. Same Amazon hops used on the{' '}
+            substrate — then cycle before any fish. The same Amazon buttons are on the{' '}
             <Link href="/reviews/best-aquarium-filters" className="text-brand-primary no-underline hover:underline">
               filter
             </Link>

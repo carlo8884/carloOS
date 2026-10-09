@@ -40,7 +40,7 @@ const FAQS = [
   },
   {
     question: 'What about a holiday emergency visit?',
-    answer: 'The holiday emergency page is the one that explains why a holiday visit can cost more. This page does not replace that explanation, and none of these hops is emergency care.',
+    answer: 'The holiday emergency page is the one that explains why a holiday visit can cost more. This page does not replace that explanation, and none of these buttons is emergency care.',
   },
 ]
 
@@ -132,7 +132,7 @@ export default function NovemberDecemberGiftGuidePage() {
             </tbody>
           </table>
         </div>
-        <ComparisonFoot updated="2026-10-08" />
+        <ComparisonFoot updated="2026-10-09" />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} includeSchema={false} />
         <BelowFoldPhoto siteId="vets-co" />

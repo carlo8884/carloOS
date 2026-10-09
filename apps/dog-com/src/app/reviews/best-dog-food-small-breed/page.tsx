@@ -67,7 +67,7 @@ export default function BestSmallBreedFoodPage() {
               siteId="dog-com"
               nextHref="/tools/dog-calorie-calculator"
               nextLabel="Size the daily calories before you pick the small-breed bag"
-              nextBlurb="The callout is the density rule — a 10-lb toy breed needs more kcal per kilogram than a Labrador, in a kibble that actually fits the mouth. The calorie calculator is the next step: daily energy, then a small-mouth bag. The hop below is the same Royal Canin Small Adult search already on this page."
+              nextBlurb="The callout is the density rule — a 10-lb toy breed needs more kcal per kilogram than a Labrador, in a kibble that actually fits the mouth. The calorie calculator is the next step: daily energy, then a small-mouth bag. The button below opens the same Royal Canin Small Adult search on Amazon."
               resourceHref="/go/chewy-brand/royal+canin+small+adult?s=reviews-best-dog-food-small-breed"
               resourceLabel="Browse Royal Canin Small Adult dog food on Amazon →"
             />
@@ -127,7 +127,7 @@ export default function BestSmallBreedFoodPage() {
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-07" />
+              <ComparisonFoot updated="2026-10-09" />
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Which small-breed food fits</h2>
               <FAQAccordion items={[
                 {

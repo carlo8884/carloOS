@@ -56,7 +56,7 @@ const TOOLS = [
   {
     href: '/tools/readiness-quiz',
     title: 'Ferret Ownership Readiness Quiz',
-    desc: 'Ten honest questions covering legality, daily time, budget, housing, other pets, odor tolerance, vet access, and long-term commitment — then a day-one kit checklist (cage, litter, food, hammock, dig box, carrier) with Amazon shop hops.',
+    desc: 'Ten honest questions covering legality, daily time, budget, housing, other pets, odor tolerance, vet access, and long-term commitment — then a day-one kit checklist (cage, litter, food, hammock, dig box, carrier) with Amazon shop buttons.',
     tag: 'Decision Tool',
   },
   {

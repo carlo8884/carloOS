@@ -48,7 +48,7 @@ export default function VelvetDiseasePage() {
           siteId="fish-com"
           nextHref="/health/fish-disease-guide"
           nextLabel="Sort velvet from other look-alikes"
-          nextBlurb="Gold dust under a flashlight is velvet, not ich. The next useful page is the disease hub — so you can sort parasitic, bacterial, and water-quality look-alikes before treating. Isolate first; copper stays hospital-tank only. The hop below is the same quarantine / hospital-tank search already on this page."
+          nextBlurb="Gold dust under a flashlight is velvet, not ich. The next useful page is the disease hub — so you can sort parasitic, bacterial, and water-quality look-alikes before treating. Isolate first; copper stays hospital-tank only. The button below opens the same quarantine / hospital-tank search on Amazon."
           resourceHref="/go/amazon-brand/aquarium+quarantine+hospital+tank+net?s=health-velvet"
           resourceLabel="Browse quarantine / hospital tanks on Amazon →"
         />

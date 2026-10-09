@@ -174,7 +174,7 @@ const REVIEW_CARDS: ReviewCardEntry[] = [
     eyebrow: 'Season',
     title: 'Fall Molt Brush',
     description:
-      'September through November is the fall molt already on the grooming page. The hop is the soft slicker.',
+      'September through November is the fall molt already on the grooming page. The button below is the soft slicker.',
   },
   {
     slug: 'winter-harness-fit-guide',
@@ -183,7 +183,7 @@ const REVIEW_CARDS: ReviewCardEntry[] = [
     eyebrow: 'Season',
     title: 'Recheck the Harness',
     description:
-      'Weight changes with the season. The vest hop is the one already on the harness review.',
+      'Weight changes with the season. The button below is the one already on the harness review.',
   },
   {
     slug: 'november-december-gift-guide',

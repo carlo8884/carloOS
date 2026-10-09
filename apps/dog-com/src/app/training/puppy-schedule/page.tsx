@@ -115,7 +115,7 @@ export default function PuppySchedulePage() {
           siteId="dog-com"
           nextHref="/nutrition/puppy-nutrition"
           nextLabel="Match meals on this schedule to a puppy formula"
-          nextBlurb="The sample day tells you when to feed. Puppy nutrition is what goes in the bowl — especially large-breed calcium limits. The food hop below is the same search already in the shop list, not a new query."
+          nextBlurb="The sample day tells you when to feed. Puppy nutrition is what goes in the bowl — especially large-breed calcium limits. The button below is the same search already in the shop list, not a new query."
           resourceHref="/go/amazon-brand/puppy+food?s=training-puppy-schedule"
           resourceLabel="Browse puppy food on Amazon →"
         />
@@ -130,7 +130,7 @@ export default function PuppySchedulePage() {
           </div>
           <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">A few supplies make the schedule easier to run: a wire crate with a divider
             (safe nap space), age-appropriate puppy food, high-value training treats, and
-            an enzymatic cleaner for accidents. Same crate / food / treat hops used on the{' '}
+            an enzymatic cleaner for accidents. The same crate / food / treat buttons are on the{' '}
             <Link
               href="/tools/new-puppy-checklist"
               className="text-brand-primary no-underline hover:underline"

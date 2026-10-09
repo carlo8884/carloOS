@@ -91,7 +91,7 @@ export default function NovemberDecemberGiftGuidePage() {
         <h2>Printed cage band</h2>
         <p>The cage-setup page prints the MidWest Critter Nation double unit at $200–280. That is the dollar band this page can cite for a cage. The cage review still explains bar spacing and which household that style of cage is for. Measure the room before you order a double unit as a surprise.</p>
         <h2>Who should get which printed band</h2>
-        <p>A litter pan, a sleep sack, a treat pack, or a bottle of shampoo is the small gift. A bag of kibble is the gift when the ferret already eats that food. A double unit is the large gift, and only when the cage page’s spacing and footprint already fit the room. The shop link is the hop already on that card, with this page named as the source.</p>
+        <p>A litter pan, a sleep sack, a treat pack, or a bottle of shampoo is the small gift. A bag of kibble is the gift when the ferret already eats that food. A double unit is the large gift, and only when the cage page’s spacing and footprint already fit the room. The shop link is the button already on that card, with this page named as the source.</p>
         <div className="overflow-x-auto max-w-full min-w-0">
           <table className="w-full text-sm border-collapse table-fixed sm:table-auto min-w-0 sm:min-w-[36rem] [&_th]:break-words [&_td]:break-words">
             <thead>
@@ -140,7 +140,7 @@ export default function NovemberDecemberGiftGuidePage() {
             </tbody>
           </table>
         </div>
-        <ComparisonFoot updated="2026-10-07" />
+        <ComparisonFoot updated="2026-10-09" />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} includeSchema={false} />
         <BelowFoldPhoto siteId="ferret-com" />

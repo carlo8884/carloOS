@@ -200,7 +200,7 @@ export default function DogFirstAidKitPage() {
             siteId="dog-com"
             nextHref="/guides/how-to-take-dogs-temperature"
             nextLabel="Practice a temperature reading before you need one"
-            nextBlurb="The kit list is the packing order. A digital thermometer only helps if you already know this dog's normal. Take a calm-day reading next. The hop below is the same digital pet thermometer search already on this page."
+            nextBlurb="The kit list is the packing order. A digital thermometer only helps if you already know this dog's normal. Take a calm-day reading next. The button below opens the same digital pet thermometer search on Amazon."
             resourceHref="/go/amazon-brand/digital+pet+thermometer?s=guides-first-aid-kit"
             resourceLabel="Browse digital pet thermometers on Amazon →"
           />

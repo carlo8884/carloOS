@@ -162,7 +162,7 @@ export default function VolumeCalculatorPage() {
           siteId="fish-com"
           nextHref="/tools/filter-gph-calculator"
           nextLabel="Size the filter from those gallons"
-          nextBlurb="Gross gallons are not a kit. Use the filter GPH calculator next so the hang-on-back or canister is rated 1.5–2× the net volume before you shop the stand. The hop below is the same filter-by-gallon search already on this page."
+          nextBlurb="Gross gallons are not a kit. Use the filter GPH calculator next so the hang-on-back or canister is rated 1.5–2× the net volume before you shop the stand. The button below opens the same filter-by-gallon search on Amazon."
           resourceHref="/go/amazon-brand/aquarium+filter+gallon?s=tools-aquarium-volume"
           resourceLabel="Browse aquarium filters on Amazon →"
         />
@@ -177,7 +177,7 @@ export default function VolumeCalculatorPage() {
           <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
             Gallons set the glass or acrylic tank you buy, the stand that can hold the filled
             weight, substrate bag count, heater watts, and a filter rated at or above that
-            volume. Same Amazon hops used with the{' '}
+            volume. The same Amazon buttons go with the{' '}
             <Link
               href="/tools/heater-wattage-calculator"
               className="text-brand-primary no-underline hover:underline"

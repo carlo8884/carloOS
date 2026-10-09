@@ -70,7 +70,7 @@ export default function PuppyBitingPage() {
           siteId="dog-com"
           nextHref="/training/puppy-schedule"
           nextLabel="Put the 90-minute awake window on the puppy schedule"
-          nextBlurb="Ouch-and-pause only works if the puppy can still regulate. After 90 minutes awake, crate for a nap before the next play bout. The hop below is the same stuffable Kong search already on this page."
+          nextBlurb="Ouch-and-pause only works if the puppy can still regulate. After 90 minutes awake, crate for a nap before the next play bout. The button below opens the same stuffable Kong search on Amazon."
           resourceHref="/go/amazon-brand/kong+classic+dog+toy+stuffable?s=training-puppy-biting"
           resourceLabel="Browse stuffable Kong classic toys on Amazon →"
         />
@@ -88,7 +88,7 @@ export default function PuppyBitingPage() {
             to do instead of hands. A stuffable Kong occupies the same
             mouth-need during crate naps. Bitter spray is a furniture
             deterrent category, not a substitute for the two-phase protocol.
-            Same teething-toy hop used on the{' '}
+            The same teething-toy button is on the{' '}
             <Link
               href="/tools/new-puppy-checklist"
               className="text-brand-primary no-underline hover:underline"
@@ -102,7 +102,7 @@ export default function PuppyBitingPage() {
             >
               dog age calculator
             </Link>
-            . Same Kong hop used on the{' '}
+            . The same Kong button is on the{' '}
             <Link
               href="/training/separation-anxiety"
               className="text-brand-primary no-underline hover:underline"

@@ -43,7 +43,7 @@ export default function FerretSuppliesChecklistPage() {
         hero={{
           title: 'Ferret Supplies Checklist',
           subtitle:
-            'Everything a new ferret genuinely needs, organized by category, with a clear line between the must-haves you buy before homecoming and the nice-to-haves that can wait. It also flags the supplies marketed for ferrets that you should skip or actively avoid. Category hops go to the existing buyer guides — not invented SKUs.',
+            'Everything a new ferret genuinely needs, organized by category, with a clear line between the must-haves you buy before homecoming and the nice-to-haves that can wait. It also flags the supplies marketed for ferrets that you should skip or actively avoid. Category links go to the existing buyer guides — not invented SKUs.',
           category: 'Ownership & Lifestyle',
           authorName: 'Ferret.com Editorial',
           publishedAt: 'June 2026',
@@ -110,7 +110,7 @@ export default function FerretSuppliesChecklistPage() {
             <li><strong>A ferret-proofed play area</strong> — not a purchase exactly, but plan the space (see <a href="/care/ferret-proofing-your-home">ferret-proofing your home</a>).</li>
           </ul>
           <p>
-            Cage criteria and retailer hops live on the{' '}
+            Cage criteria and retailer links live on the{' '}
             <a href="/reviews/best-ferret-cage">best ferret cage</a> buyer guide — bar spacing, floor space, and ramp safety, not an invented SKU list.
           </p>
 
@@ -127,7 +127,7 @@ export default function FerretSuppliesChecklistPage() {
             <li><strong>Ferret-safe litter</strong> — paper-pellet or recycled-paper litter. <em>Avoid</em> clumping clay litters and pine/cedar shavings, which pose respiratory and ingestion risks (see <a href="/care/bedding-and-litter-types">bedding and litter types</a>).</li>
           </ul>
           <p>
-            Dust, clumping risk, and retailer hops: <a href="/reviews/best-ferret-litter">best ferret litter</a>.
+            Dust, clumping risk, and retailer links: <a href="/reviews/best-ferret-litter">best ferret litter</a>.
           </p>
 
           <h2 id="food">Food & Water</h2>
@@ -137,7 +137,7 @@ export default function FerretSuppliesChecklistPage() {
             <li><strong>Water bowl and/or bottle</strong> — many keepers offer both; a heavy bowl encourages better hydration, a bottle stays cleaner.</li>
           </ul>
           <p>
-            Macronutrient window and retailer hops: <a href="/diet/best-ferret-kibble">best ferret food</a>.
+            Macronutrient window and retailer links: <a href="/diet/best-ferret-kibble">best ferret food</a>.
           </p>
 
           <h2 id="grooming">Grooming</h2>
@@ -156,7 +156,7 @@ export default function FerretSuppliesChecklistPage() {
             <li><strong>Dig boxes and puzzle enrichment</strong> — satisfy digging and foraging instincts (see <a href="/care/exercise-and-enrichment">exercise and enrichment</a>).</li>
           </ul>
           <p>
-            Escape-proof fit and retailer hops: <a href="/reviews/best-ferret-harness">best ferret harness</a>.
+            Escape-proof fit and retailer links: <a href="/reviews/best-ferret-harness">best ferret harness</a>.
           </p>
 
           <h2 id="avoid">What to Avoid</h2>
@@ -170,7 +170,7 @@ export default function FerretSuppliesChecklistPage() {
 
           <h2 id="compare">Compare the gear that already has a buyer guide</h2>
           <p>
-            This checklist stays category-level. The four buyer guides below already carry documented-criteria comparisons and <code>/go</code> hops — use those instead of a dead shop page:
+            This checklist stays category-level. The four buyer guides below already carry documented-criteria comparisons and <code>/go</code> buttons — use those instead of a dead shop page:
           </p>
           <ul>
             <li><a href="/reviews/best-ferret-cage">Best ferret cage</a></li>

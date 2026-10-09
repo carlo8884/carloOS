@@ -77,7 +77,7 @@ export default function NewTankSyndromePage() {
           siteId="fish-com"
           nextHref="/setup/aquarium-cycling-guide"
           nextLabel="Run the fishless cycle to 0/0"
-          nextBlurb="The emergency protocol buys time. The cycling guide is the measurable next step — dose ammonia, test daily, and do not add more fish until both ammonia and nitrite stay at 0 ppm 24 hours after a 2 ppm dose. The hop below is the same API Master Test Kit search already on this page."
+          nextBlurb="The emergency protocol buys time. The cycling guide is the measurable next step — dose ammonia, test daily, and do not add more fish until both ammonia and nitrite stay at 0 ppm 24 hours after a 2 ppm dose. The button below opens the same API Master Test Kit search on Amazon."
           resourceHref="/go/amazon-brand/api+freshwater+master+test+kit?s=health-new-tank-syndrome"
           resourceLabel="Browse API Master Test Kit on Amazon →"
         />
@@ -98,7 +98,7 @@ export default function NewTankSyndromePage() {
             A measured ammonium-chloride source is how you run a fishless
             cycle. Bottled nitrifiers shorten the wait; a seeded sponge
             filter is the fastest media transfer from an established tank.
-            Same test-kit hop used on the{' '}
+            The same test-kit button is on the{' '}
             <Link
               href="/reviews/best-water-test-kits"
               className="text-brand-primary no-underline hover:underline"
@@ -112,7 +112,7 @@ export default function NewTankSyndromePage() {
             >
               nitrogen-cycle guide
             </Link>
-            . Same Prime hop used on the{' '}
+            . The same Prime button is on the{' '}
             <Link
               href="/tools/water-change-calculator"
               className="text-brand-primary no-underline hover:underline"
@@ -123,8 +123,8 @@ export default function NewTankSyndromePage() {
             <Link href="/setup" className="text-brand-primary no-underline hover:underline">
               aquarium setup guide
             </Link>
-            . Same ammonium-chloride, bottled-bacteria, and sponge-filter
-            hops used on the{' '}
+            . The same ammonium-chloride, bottled-bacteria, and sponge-filter
+            buttons are on the{' '}
             <Link
               href="/tools/aquarium-cycling-estimator"
               className="text-brand-primary no-underline hover:underline"

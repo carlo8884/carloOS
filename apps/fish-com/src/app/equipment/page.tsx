@@ -132,7 +132,7 @@ export default function EquipmentHubPage() {
           siteId="fish-com"
           nextHref="/tools/filter-gph-calculator"
           nextLabel="Size the filter for your gallons"
-          nextBlurb="The six categories are the buyer map, not a sized kit. Use the filter GPH calculator next so the hang-on-back or canister is rated for the tank before you shop the rest. The hop below is the same AquaClear HOB search already on this page."
+          nextBlurb="The six categories are the buyer map, not a sized kit. Use the filter GPH calculator next so the hang-on-back or canister is rated for the tank before you shop the rest. The button below opens the same AquaClear HOB search on Amazon."
           resourceHref="/go/amazon-brand/aquaclear+70+filter?s=equipment-hub"
           resourceLabel="Browse AquaClear 70 filters on Amazon →"
         />
@@ -149,7 +149,7 @@ export default function EquipmentHubPage() {
             with a heater rated for the tank, a separate digital thermometer to
             verify the dial, Seachem Prime (or another dechlorinator) at every
             fill, the API Master Test Kit so you can see ammonia/nitrite/nitrate,
-            and a gravel vacuum for water changes. Same HOB hop used on the{' '}
+            and a gravel vacuum for water changes. The same HOB button is on the{' '}
             <Link
               href="/tools/stocking-calculator"
               className="text-brand-primary no-underline hover:underline"
@@ -163,21 +163,21 @@ export default function EquipmentHubPage() {
             >
               filter GPH calculator
             </Link>
-            . Same heater hop used on the{' '}
+            . The same heater button is on the{' '}
             <Link
               href="/tools/heater-wattage-calculator"
               className="text-brand-primary no-underline hover:underline"
             >
               heater wattage calculator
             </Link>
-            . Same Prime and gravel-vacuum hops used on the{' '}
+            . The same Prime and gravel-vacuum buttons are on the{' '}
             <Link
               href="/tools/water-change-calculator"
               className="text-brand-primary no-underline hover:underline"
             >
               water-change calculator
             </Link>
-            . Same test-kit hop used on the{' '}
+            . The same test-kit button is on the{' '}
             <Link
               href="/reviews/best-water-test-kits"
               className="text-brand-primary no-underline hover:underline"

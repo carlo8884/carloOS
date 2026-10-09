@@ -64,7 +64,7 @@ export default function NanoTankSetupPage() {
           siteId="fish-com"
           nextHref="/setup/aquarium-cycling-guide"
           nextLabel="Cycle the nano before you stock it"
-          nextBlurb="A five-gallon uncycled nano can spike lethal ammonia in a day. Use the cycling guide next so ammonia and nitrite both read zero before chili rasboras or a betta go in. The hop below is the same air-driven corner sponge-filter search already on this page."
+          nextBlurb="A five-gallon uncycled nano can spike lethal ammonia in a day. Use the cycling guide next so ammonia and nitrite both read zero before chili rasboras or a betta go in. The button below opens the same air-driven corner sponge-filter search on Amazon."
           resourceHref="/go/amazon-brand/air+driven+corner+sponge+filter?s=setup-nano-tank"
           resourceLabel="Browse air-driven corner sponge filters on Amazon →"
         />

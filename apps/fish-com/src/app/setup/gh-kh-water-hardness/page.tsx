@@ -133,7 +133,7 @@ export default function GhKhPage() {
           siteId="fish-com"
           nextHref="/water-parameters"
           nextLabel="Test GH and KH against this week's parameter table"
-          nextBlurb="The table is the hardness bands — soft vs hard, and what KH does to pH. The water-parameters hub is the weekly order so you measure both, not a single strip number. The hop below is the same crushed-coral search already on this page, for raising GH and KH slowly when the reading is low."
+          nextBlurb="The table is the hardness bands — soft vs hard, and what KH does to pH. The water-parameters hub is the weekly order so you measure both, not a single strip number. The button below opens the same crushed-coral search on Amazon, for raising GH and KH slowly when the reading is low."
           resourceHref="/go/amazon-brand/crushed+coral+aquarium?s=setup-gh-kh-water-hardness"
           resourceLabel="Browse crushed coral for aquariums on Amazon →"
         />
