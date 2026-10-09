@@ -163,23 +163,13 @@ export function HomeTriage() {
                   <StockImage manifestKey={p.imageKey} alt={p.imageAlt} aspect="16:9" subtleCredit />
                 </div>
                 <div className="p-5">
-                  <div className="mb-3 text-[#3aa4cc]">{p.icon}</div>
-                  <div className="mb-2 flex items-center gap-2.5">
-                    <div className={`relative h-8 w-12 shrink-0 overflow-hidden rounded-md bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                      <StockImage manifestKey={p.imageKey} alt={p.imageAlt} aspect="4:3" />
-                    </div>
-                    <h2 className="font-display font-bold text-white text-base leading-tight italic">{p.title}</h2>
+                  <div className="mb-3 flex items-center gap-2 text-[#3aa4cc]">
+                    {p.icon}
+                    <span className="text-2xs font-bold tracking-eyebrow uppercase">Start here</span>
                   </div>
-                  <div className="text-xs text-white/55 leading-relaxed mb-3 flex items-start gap-2">
-                    <div className={`relative mt-0.5 h-6 w-9 shrink-0 overflow-hidden rounded-md bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                      <StockImage manifestKey={p.imageKey} alt="" aspect="4:3" />
-                    </div>
-                    <span>{p.desc}</span>
-                  </div>
+                  <h2 className="font-display font-bold text-white text-base leading-tight italic mb-2">{p.title}</h2>
+                  <p className="text-xs text-white/55 leading-relaxed mb-3">{p.desc}</p>
                   <div className="inline-flex items-center gap-1.5 text-xs font-bold text-[#3aa4cc] group-hover:gap-2 transition-all">
-                    <div className={`relative h-6 w-9 shrink-0 overflow-hidden rounded-md bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                      <StockImage manifestKey={p.imageKey} alt="" aspect="4:3" />
-                    </div>
                     Start here
                     <IconArrowRight className="w-3.5 h-3.5" />
                   </div>
