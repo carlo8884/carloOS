@@ -255,7 +255,12 @@ export default function HomePage() {
                   </div>
                   <span className="block font-display font-bold text-sm leading-tight" style={{ color: 'var(--brand-text-dark)' }}>All breed guides</span>
                 </div>
-                <span className="block text-xs mt-0.5" style={{ color: 'var(--brand-text-mid)' }}>Conformation and genetic panels.</span>
+                <span className="mt-0.5 flex items-center gap-2 text-xs" style={{ color: 'var(--brand-text-mid)' }}>
+                  <div className={`relative h-6 w-9 shrink-0 overflow-hidden rounded-md ${FILL_IMAGE}`}>
+                    <StockImage manifestKey="horses-com:category-breeds" fallbackKey="horses-com:hero" alt="" aspect="4:3" variant="inline" />
+                  </div>
+                  <span>Conformation and genetic panels.</span>
+                </span>
               </div>
             </Link>
           </div>
@@ -269,7 +274,12 @@ export default function HomePage() {
                 <div className="flex flex-col flex-1 p-6">
                   <div className="mb-3" style={{ color: 'var(--brand-primary)' }}><CategoryIconSvg name={cat.icon} /></div>
                   <h3 className="font-display font-bold text-xl leading-snug mb-2" style={{ color: 'var(--brand-text-dark)' }}>{cat.title}</h3>
-                  <p className="text-sm leading-relaxed mb-4" style={{ color: 'var(--brand-text-mid)' }}>{cat.desc}</p>
+                  <p className="mb-4 flex items-start gap-2 text-sm leading-relaxed" style={{ color: 'var(--brand-text-mid)' }}>
+                    <span className={`relative mt-0.5 h-6 w-9 shrink-0 overflow-hidden rounded-md ${FILL_IMAGE}`}>
+                      <StockImage manifestKey={cat.manifestKey} fallbackKey="horses-com:hero" alt="" aspect="4:3" variant="inline" />
+                    </span>
+                    <span>{cat.desc}</span>
+                  </p>
                   <span className="mt-auto inline-flex items-center text-xs font-semibold uppercase tracking-eyebrow" style={{ color: 'var(--brand-primary)' }}>Read <span aria-hidden="true" className="ml-1.5 transition-transform group-hover:translate-x-0.5">→</span></span>
                 </div>
               </Link>
@@ -303,7 +313,12 @@ export default function HomePage() {
                   </div>
                   <span className="block font-display font-bold text-sm leading-tight" style={{ color: 'var(--brand-text-dark)' }}>Quarter Horse guide</span>
                 </div>
-                <span className="block text-xs mt-0.5" style={{ color: 'var(--brand-text-mid)' }}>The breed owners open first.</span>
+                <span className="mt-0.5 flex items-center gap-2 text-xs" style={{ color: 'var(--brand-text-mid)' }}>
+                  <div className={`relative h-6 w-9 shrink-0 overflow-hidden rounded-md ${FILL_IMAGE}`}>
+                    <StockImage manifestKey="horses-com:featured-quarter-horse" fallbackKey="horses-com:hero" alt="" aspect="4:3" variant="inline" />
+                  </div>
+                  <span>The breed owners open first.</span>
+                </span>
               </div>
             </Link>
           </div>
@@ -316,7 +331,12 @@ export default function HomePage() {
                 <div className="flex flex-col flex-1 p-6">
                   <div className="text-2xs font-bold uppercase tracking-eyebrow mb-2" style={{ color: 'var(--brand-primary)' }}>{guide.eyebrow}</div>
                   <h3 className="font-display font-bold text-xl leading-snug mb-2" style={{ color: 'var(--brand-text-dark)' }}>{guide.title}</h3>
-                  <p className="text-sm leading-relaxed mb-4" style={{ color: 'var(--brand-text-mid)' }}>{guide.desc}</p>
+                  <p className="mb-4 flex items-start gap-2 text-sm leading-relaxed" style={{ color: 'var(--brand-text-mid)' }}>
+                    <span className={`relative mt-0.5 h-6 w-9 shrink-0 overflow-hidden rounded-md ${FILL_IMAGE}`}>
+                      <StockImage manifestKey={guide.manifestKey} fallbackKey="horses-com:hero" alt="" aspect="4:3" variant="inline" />
+                    </span>
+                    <span>{guide.desc}</span>
+                  </p>
                 </div>
               </Link>
             ))}
@@ -353,7 +373,12 @@ export default function HomePage() {
                         </div>
                         <span className="block font-display font-bold text-sm leading-tight" style={{ color: 'var(--brand-text-dark)' }}>Body condition tool</span>
                       </div>
-                      <span className="block text-xs mt-0.5" style={{ color: 'var(--brand-text-mid)' }}>Six checkpoints, 1–9 score.</span>
+                      <span className="mt-0.5 flex items-center gap-2 text-xs" style={{ color: 'var(--brand-text-mid)' }}>
+                        <span className={`relative h-6 w-9 shrink-0 overflow-hidden rounded-md ${FILL_IMAGE}`}>
+                          <StockImage manifestKey="horses-com:tool-bcs-calculator" fallbackKey="horses-com:hero" alt="" aspect="4:3" variant="inline" />
+                        </span>
+                        <span>Six checkpoints, 1–9 score.</span>
+                      </span>
                     </div>
                   </Link>
                 </div>
@@ -417,7 +442,12 @@ export default function HomePage() {
                   </div>
                   <span className="block font-display font-bold text-sm leading-tight" style={{ color: 'var(--brand-text-dark)' }}>Equine health</span>
                 </div>
-                <span className="block text-xs mt-0.5" style={{ color: 'var(--brand-text-mid)' }}>When-to-call thresholds, no invented clinicians.</span>
+                <span className="mt-0.5 flex items-center gap-2 text-xs" style={{ color: 'var(--brand-text-mid)' }}>
+                  <div className={`relative h-6 w-9 shrink-0 overflow-hidden rounded-md ${FILL_IMAGE}`}>
+                    <StockImage manifestKey="horses-com:category-care" fallbackKey="horses-com:hero" alt="" aspect="4:3" variant="inline" />
+                  </div>
+                  <span>When-to-call thresholds, no invented clinicians.</span>
+                </span>
               </div>
             </Link>
           </div>
@@ -428,7 +458,12 @@ export default function HomePage() {
                 <div className="p-7 lg:p-8">
                   <div className="text-2xs font-bold uppercase tracking-eyebrow mb-3" style={{ color: 'var(--brand-primary)' }}>{art.eyebrow}</div>
                   <h3 className="font-display font-bold text-2xl leading-tight mb-3" style={{ color: 'var(--brand-text-dark)' }}>{art.title}</h3>
-                  <p className="text-base leading-relaxed mb-5" style={{ color: 'var(--brand-text-mid)' }}>{art.teaser}</p>
+                  <p className="mb-5 flex items-start gap-2 text-base leading-relaxed" style={{ color: 'var(--brand-text-mid)' }}>
+                    <span className={`relative mt-1 h-7 w-10 shrink-0 overflow-hidden rounded-md ${FILL_IMAGE}`}>
+                      <StockImage manifestKey={art.imageKey} fallbackKey="horses-com:hero" alt="" aspect="4:3" variant="inline" />
+                    </span>
+                    <span>{art.teaser}</span>
+                  </p>
                   <span className="text-xs font-semibold uppercase tracking-eyebrow" style={{ color: 'var(--brand-text-light)' }}>{art.readTime} read</span>
                 </div>
               </Link>
