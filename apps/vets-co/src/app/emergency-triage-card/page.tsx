@@ -393,8 +393,8 @@ export default function EmergencyTriageCardPage() {
         </div>
       </section>
 
-      {/* Money path — live amazon-brand search hops (first-aid kit items on this page).
-          ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+      {/* Shop note — live amazon-brand search buttons (first-aid kit items on this page).
+          ShopCtas hides empty Chewy; never href="#" or an empty link.
           Amazon searches only — not a ranked list. Hops stay on this web page;
           the printable card body has no affiliate links. */}
       <section id="pet-first-aid-kit-shop" className="bg-brand-surface px-container-sm sm:px-container py-section">

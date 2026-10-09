@@ -140,11 +140,11 @@ export default function TraileringPage() {
 
           <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/horse+shipping+boots?s=care-trailering", "/go/amazon-brand/horse+shipping+wraps?s=care-trailering", "/go/amazon-brand/horse+poll+guard?s=care-trailering", "/go/amazon-brand/horse+trailer+ties?s=care-trailering"]} />
 
-          {/* Money path — live amazon-brand search hops (trailering kit).
-              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+          {/* Shop note — live amazon-brand search buttons (trailering kit).
+              ShopCtas hides empty Chewy; never href="#" or an empty link.
               Amazon searches only — everyday physical supplies matching
               on-page boots / wraps / poll-guard / tying-rope copy, not
-              shipping-fever diagnosis or medication hops. Hay bags and
+              shipping-fever diagnosis or medication buttons. Hay bags and
               water buckets are not named on this page, so they are omitted. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">

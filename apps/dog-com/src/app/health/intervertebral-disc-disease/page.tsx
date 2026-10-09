@@ -88,13 +88,13 @@ export default function IVDDPage() {
 
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/dog+recovery+crate?s=health-intervertebral-disc-disease", "/go/amazon-brand/dog+belly+support+harness?s=health-intervertebral-disc-disease", "/go/amazon-brand/dog+wheelchair+mobility+cart?s=health-intervertebral-disc-disease"]} />
 
-          {/* Money path — live amazon-brand search hops (recovery
+          {/* Shop note — live amazon-brand search buttons (recovery
               crate / belly-support harness / wheelchair). ShopCtas
-              hides empty Chewy; never href="#" or PLACEHOLDER.
+              hides empty Chewy; never href="#" or an empty link.
               Amazon searches only. NSAIDs, joint supplements,
               orthopedic beds, dog ramps, knee braces, rear-support
               harnesses, traction rugs, and raised bowls are not
-              shoppable hops. */}
+              shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

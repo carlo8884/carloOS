@@ -226,12 +226,12 @@ export default function LaminitisPage() {
 
           <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/equine+foam+sole+support+pads?s=health-laminitis", "/go/amazon-brand/equine+deep+sand+stall+bedding?s=health-laminitis", "/go/amazon-brand/easy+keeper+grazing+muzzle?s=health-laminitis"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (equine foam sole-support pads /
               equine deep-sand stall bedding /
               easy-keeper grazing muzzle).
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Amazon searches only —
+              or an empty link. Amazon searches only —
               unused vs #1062 thermometer / stethoscope /
               fleece-cooler, #1061 farrier-log / hoof-stand /
               barn-flood-light, #1060 fecal-container /
@@ -243,7 +243,7 @@ export default function LaminitisPage() {
               thermometer / horse+fleece+cooler /
               horse+grazing+muzzle / pine+shavings /
               hoof-pick / hoof-boots / snow-pads. Rx
-              product pages are not shoppable hops. */}
+              product pages are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

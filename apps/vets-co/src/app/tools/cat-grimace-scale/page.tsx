@@ -194,8 +194,8 @@ export default function CatGrimaceScalePage() {
         </p>
         <CatGrimaceScale />
 
-        {/* Money path — live amazon-brand search hops (observation / comfort kit).
-            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+        {/* Shop note — live amazon-brand search buttons (observation / comfort kit).
+            ShopCtas hides empty Chewy; never href="#" or an empty link.
             Amazon searches only — not a ranked list, not a diagnosis. */}
         <div id="cat-grimace-kit" className="mt-8 mb-8">
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/soft+cat+carrier?s=tools-cat-grimace-scale", "/go/amazon-brand/pet+first+aid+kit?s=tools-cat-grimace-scale", "/go/amazon-brand/calming+pheromone+diffuser?s=tools-cat-grimace-scale", "/go/amazon-brand/digital+pet+thermometer?s=tools-cat-grimace-scale", "/go/amazon-brand/cat+recovery+bed?s=tools-cat-grimace-scale"]} />

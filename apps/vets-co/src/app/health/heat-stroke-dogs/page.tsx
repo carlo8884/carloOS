@@ -74,12 +74,12 @@ export default function HeatStrokePage() {
 
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/cool+water+towels?s=health-heat-stroke-dogs", "/go/amazon-brand/digital+pet+thermometer?s=health-heat-stroke-dogs"]} />
 
-          {/* Money path — live amazon-brand search hops (cool-water
+          {/* Shop note — live amazon-brand search buttons (cool-water
               towels / digital thermometer). ShopCtas hides empty Chewy;
-              never href="#" or PLACEHOLDER. Amazon searches only —
+              never href="#" or an empty link. Amazon searches only —
               reuse the live digital+pet+thermometer sister query from
               emergency triage / telehealth / first-aid kit. Ice packs,
-              IV fluids, and medication are not shoppable hops. */}
+              IV fluids, and medication are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

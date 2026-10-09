@@ -146,12 +146,12 @@ export default function SummerHeatCarePage() {
 
           <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/horse+sweat+scraper?s=care-summer-heat-care", "/go/amazon-brand/horse+shade+cloth?s=care-summer-heat-care"]} />
 
-          {/* Money path — live amazon-brand search hops (summer-heat kit).
-              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+          {/* Shop note — live amazon-brand search buttons (summer-heat kit).
+              ShopCtas hides empty Chewy; never href="#" or an empty link.
               Amazon searches only — everyday physical supplies matching
               on-page sweat-scraper / shade-cloth copy, not electrolytes,
               fans, thermometers, cool-water towels, fleece coolers,
-              hoof boots, grazing muzzles, or medication hops. */}
+              hoof boots, grazing muzzles, or medication buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

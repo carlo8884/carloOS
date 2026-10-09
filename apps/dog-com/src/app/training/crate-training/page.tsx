@@ -84,8 +84,8 @@ export default function CrateTrainingPage() {
           resourceLabel="Browse wire crates with a divider panel on Amazon →"
         />
 
-        {/* Money path — live amazon-brand search hops (crate kit).
-            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+        {/* Shop note — live amazon-brand search buttons (crate kit).
+            ShopCtas hides empty Chewy; never href="#" or an empty link.
             Amazon searches only — not a ranked list. */}
         <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/wire+dog+crate+with+divider+panel?s=training-crate", "/go/amazon-brand/dog+crate+pad?s=training-crate", "/go/amazon-brand/dog+crate+cover?s=training-crate", "/go/amazon-brand/puppy+training+pads?s=training-crate"]} />
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">

@@ -70,11 +70,11 @@ export default function PancreatitisPage() {
 
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/locking+kitchen+trash+can?s=health-pancreatitis", "/go/amazon-brand/walk+through+pet+gate?s=health-pancreatitis", "/go/amazon-brand/airtight+dog+food+storage+container?s=health-pancreatitis"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (locking kitchen trash can / walk-through
               pet gate / airtight dog-food storage
               container). ShopCtas hides empty Chewy;
-              never href="#" or PLACEHOLDER. Category
+              never href="#" or an empty link. Category
               searches only — unused vs #1053 dog pill
               pockets / dry-erase monthly calendar /
               dog medical-alert collar tag, #1052
@@ -117,7 +117,7 @@ export default function PancreatitisPage() {
               lean+low+fat+dog+treats. Hill's i/d,
               Royal Canin Gastrointestinal Low Fat,
               Purina EN, Cerenia, maropitant, and Rx
-              product pages are not shoppable hops. */}
+              product pages are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

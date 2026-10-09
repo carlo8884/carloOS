@@ -73,10 +73,10 @@ export default function HypothyroidismPage() {
 
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/self+warming+dog+mat?s=health-hypothyroidism", "/go/amazon-brand/fleece+dog+sweater?s=health-hypothyroidism", "/go/amazon-brand/dog+slicker+brush?s=health-hypothyroidism"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (self-warming dog mat / fleece dog sweater
               / dog slicker brush). ShopCtas hides
-              empty Chewy; never href="#" or PLACEHOLDER.
+              empty Chewy; never href="#" or an empty link.
               Amazon searches only — unused vs #1050
               dog lymph-node anatomy chart / foam dog
               stairs / dog ear wipes, #1049 dog
@@ -118,7 +118,7 @@ export default function HypothyroidismPage() {
               soft+dog+carrier / soft+pet+carrier.
               Soloxine, Thyro-Tabs, Synthroid,
               levothyroxine, and prescription brands are not
-              shoppable hops. */}
+              shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop these supplies

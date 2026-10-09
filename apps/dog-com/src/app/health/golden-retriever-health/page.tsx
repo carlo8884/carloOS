@@ -237,10 +237,10 @@ export default function GoldenRetrieverHealthPage() {
 
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/dog+lymph+node+anatomy+chart?s=health-golden-retriever-health", "/go/amazon-brand/foam+dog+stairs?s=health-golden-retriever-health", "/go/amazon-brand/dog+ear+wipes?s=health-golden-retriever-health"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (dog lymph-node anatomy chart / foam dog
               stairs / dog ear wipes). ShopCtas hides
-              empty Chewy; never href="#" or PLACEHOLDER.
+              empty Chewy; never href="#" or an empty link.
               Amazon searches only — unused vs #1049
               dog assisted-walking sling / dog hind-paw
               booties / dog hip brace, #1048 silicone
@@ -276,7 +276,7 @@ export default function GoldenRetrieverHealthPage() {
               dog+paw+wipes / dog+eye+wipes, and
               soft+dog+carrier / soft+pet+carrier.
               Apoquel, Cytopoint, chemotherapy, and Rx
-              product pages are not shoppable hops. */}
+              product pages are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

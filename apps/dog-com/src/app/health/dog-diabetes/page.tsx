@@ -84,13 +84,13 @@ export default function DogDiabetesPage() {
 
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/pet+glucometer?s=health-dog-diabetes", "/go/amazon-brand/light+corn+syrup?s=health-dog-diabetes"]} />
 
-          {/* Money path — live amazon-brand search hops (pet
+          {/* Shop note — live amazon-brand search buttons (pet
               glucometer / light corn syrup). ShopCtas hides
-              empty Chewy; never href="#" or PLACEHOLDER.
+              empty Chewy; never href="#" or an empty link.
               Amazon searches only. Insulin, syringes,
               Vetsulin / NPH, FreeStyle Libre / Dexcom,
               digital pet scales, and prescription diabetic
-              diets are not shoppable hops. */}
+              diets are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

@@ -103,12 +103,12 @@ export default function GdvPage() {
 
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/single+stainless+floor+dog+bowl?s=health-dog-bloat-gvd", "/go/amazon-brand/wobble+dog+food+dispenser?s=health-dog-bloat-gvd", "/go/amazon-brand/30+minute+sand+hourglass+timer?s=health-dog-bloat-gvd"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (single stainless floor dog bowl /
               wobble dog food dispenser / 30-minute
               sand hourglass timer). ShopCtas hides
               empty Chewy; never href="#" or
-              PLACEHOLDER. Amazon searches only —
+              an empty link. Amazon searches only —
               unused vs #1091
               letter+size+thermal+laminating+pouches /
               72+hour+digital+countdown+timer /
@@ -131,8 +131,8 @@ export default function GdvPage() {
               slow+feeder+dog+bowl /
               elevated+slow+feeder+bowl+dog /
               raised+dog+bowl / puzzle+feeder+dog /
-              interactive+dog+feeder hops. prescription brands
-              are not shoppable hops. */}
+              interactive+dog+feeder buttons. prescription brands
+              are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

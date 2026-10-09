@@ -137,13 +137,13 @@ export default function PastureManagementPage() {
 
           <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/horse+grazing+muzzle?s=care-pasture-management", "/go/amazon-brand/soil+test+kit?s=care-pasture-management"]} />
 
-          {/* Money path — live amazon-brand search hops (pasture kit).
-              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+          {/* Shop note — live amazon-brand search buttons (pasture kit).
+              ShopCtas hides empty Chewy; never href="#" or an empty link.
               Amazon searches only — everyday physical supplies matching
               on-page grazing-muzzle / soil-testing copy, not strip-grazing
               electric tape (fencing-safety), fans, slow feeders,
               electrolytes, hoof gear, stall forks, fertilizer, or
-              medication hops. */}
+              medication buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

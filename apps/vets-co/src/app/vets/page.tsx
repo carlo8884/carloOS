@@ -7,8 +7,8 @@
  *   - Top US cities list (linked to city hubs)
  *   - <FindAVetNearYou> hero entry (IP-geo deep-link)
  *
- * SCAFFOLD ONLY: vet listings are sample placeholders until Carlo approves a
- * verified data source. See ops/handoffs/2026-05-30-vet-directory-data-source-decision.md.
+ * SCAFFOLD ONLY: vet listings are sample listings until a verified data source
+ * is selected. See ops/handoffs/2026-05-30-vet-directory-data-source-decision.md.
  */
 
 import type { Metadata } from 'next'
@@ -72,8 +72,8 @@ export default function VetDirectoryHubPage() {
       <div className="bg-brand-primary/10 border-b border-brand-primary/30 px-container-sm sm:px-container py-3">
         <p className="text-xs text-brand-dark m-0 leading-relaxed max-w-5xl">
           <span className="font-bold">Sample listings — directory under construction.</span> The
-          individual vet profiles below are samples used to validate layout and schema. Real
-          listings will populate after Carlo selects a verified data source (state veterinary medical
+          profiles below are sample listings, not real clinics. Real
+          listings will appear after a verified data source is selected (state veterinary medical
           boards, AAHA, AVMA, or another sourced provider). See our{' '}
           <Link href="/editorial-standards" className="text-brand-primary font-bold no-underline hover:underline">
             editorial standards
@@ -106,7 +106,7 @@ export default function VetDirectoryHubPage() {
           <FindAVetNearYou variant="hero" />
         </section>
 
-        {/* USA map placeholder */}
+        {/* Browse by region */}
         <section className="mb-12">
           <h2
             className="font-display font-black text-brand-dark mb-3 mt-0"

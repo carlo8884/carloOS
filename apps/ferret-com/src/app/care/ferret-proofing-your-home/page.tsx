@@ -202,8 +202,8 @@ export default function FerretProofingPage() {
             <li><strong>Electrical cords.</strong> Bundle, cover, or route them out of reach to prevent both shock and chewing damage.</li>
           </ul>
 
-          {/* Money path — live amazon-brand search hops (proofing / safe-room gear).
-              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+          {/* Shop note — live amazon-brand search buttons (proofing / safe-room gear).
+              ShopCtas hides empty Chewy; never href="#" or an empty link.
               Amazon searches only — educational gear, not medications, not a ranked list. */}
           <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/floor+vent+cover?s=care-ferret-proofing-your-home", "/go/amazon-brand/cable+cord+cover?s=care-ferret-proofing-your-home", "/go/amazon-brand/hardware+cloth?s=care-ferret-proofing-your-home", "/go/amazon-brand/ferret+chew+toys?s=care-ferret-proofing-your-home", "/go/amazon-brand/ferret+dig+box?s=care-ferret-proofing-your-home"]} />
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">

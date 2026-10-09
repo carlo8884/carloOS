@@ -326,7 +326,7 @@ export default function VetsHuskyHealthPage() {
 
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/academic+year+planner?s=breeds-husky-health", "/go/amazon-brand/8+column+columnar+pad?s=breeds-husky-health", "/go/amazon-brand/newsprint+sketch+pad?s=breeds-husky-health"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (academic-year planner /
               8-column columnar pad /
               newsprint sketch pad).
@@ -335,9 +335,9 @@ export default function VetsHuskyHealthPage() {
               tools, not a ranked product list, not
               a substitute for veterinary care, no
               Rx / first-aid kit / thermometer /
-              carrier / insurance-brand product page hops.
+              carrier / insurance-brand product page buttons.
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Amazon searches only —
+              or an empty link. Amazon searches only —
               unused vs #1181
               13+column+analysis+pad /
               desk+blotter+pad /

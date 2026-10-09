@@ -233,8 +233,8 @@ export default function DogSocializationWindowPage() {
             resourceLabel="Browse wire crates with a divider panel on Amazon →"
           />
 
-          {/* Money path — live amazon-brand search hops (socialization-window kit).
-              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+          {/* Shop note — live amazon-brand search buttons (socialization-window kit).
+              ShopCtas hides empty Chewy; never href="#" or an empty link.
               Amazon searches only — not a ranked list. */}
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/wire+dog+crate+with+divider+panel?s=training-socialization-window", "/go/amazon-brand/puppy+training+treats?s=training-socialization-window", "/go/amazon-brand/soft+dog+carrier?s=training-socialization-window", "/go/amazon-brand/puppy+grooming+kit?s=training-socialization-window"]} />
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">

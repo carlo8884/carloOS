@@ -184,9 +184,9 @@ export default function NitrogenCyclePage() {
         <h2 id="faq">Frequently Asked Questions</h2>
         <FAQAccordion items={FAQ_ITEMS} includeSchema={false} />
 
-        {/* Money path — live amazon-brand search hops (fishless-cycle kit).
-            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-            Amazon searches only — not a ranked list. No medication hops. */}
+        {/* Shop note — live amazon-brand search buttons (fishless-cycle kit).
+            ShopCtas hides empty Chewy; never href="#" or an empty link.
+            Amazon searches only — not a ranked list. No medication buttons. */}
         <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/api+freshwater+master+test+kit?s=health-nitrogen-cycle", "/go/amazon-brand/seachem+prime+water+conditioner?s=health-nitrogen-cycle", "/go/amazon-brand/dr+tims+ammonium+chloride?s=health-nitrogen-cycle", "/go/amazon-brand/tetra+safestart+plus?s=health-nitrogen-cycle", "/go/amazon-brand/aquarium+sponge+filter?s=health-nitrogen-cycle"]} />
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">

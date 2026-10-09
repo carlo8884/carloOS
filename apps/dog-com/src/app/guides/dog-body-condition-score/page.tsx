@@ -340,11 +340,11 @@ export default function DogBodyConditionScorePage() {
 
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/soft+measuring+tape+for+pets?s=guides-dog-body-condition-score", "/go/amazon-brand/dog+body+condition+score+chart+poster?s=guides-dog-body-condition-score", "/go/amazon-brand/single+ingredient+lean+dog+treats?s=guides-dog-body-condition-score"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (soft measuring tape for pets / dog body
               condition score chart poster / single-
               ingredient lean dog treats). ShopCtas hides
-              empty Chewy; never href="#" or PLACEHOLDER.
+              empty Chewy; never href="#" or an empty link.
               Amazon searches only — unused vs #848–#1039
               digital+pet+scale, slow+feeder+dog+bowl,
               kitchen+gram+scale,
@@ -359,7 +359,7 @@ export default function DogBodyConditionScorePage() {
               washable+dog+pee+pads, and
               weighted+ceramic+dog+water+bowl.
               Prescription WM diets and med product pages are
-              not shoppable hops. */}
+              not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

@@ -65,11 +65,11 @@ export default function TickBornePage() {
           <p>Keep these on hand: tick removal hook, fine tooth flea comb, and dog flea and tick. They are not a treatment and they do not replace a veterinarian.</p>
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/tick+removal+hook?s=health-tick-borne-diseases", "/go/amazon-brand/fine+tooth+flea+comb?s=health-tick-borne-diseases", "/go/amazon-brand/dog+flea+and+tick?s=health-tick-borne-diseases"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (tick-removal hook / fine-tooth flea comb /
               laminated tick identification card).
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Amazon searches only —
+              or an empty link. Amazon searches only —
               unused vs #1071
               letter+size+expanding+file+organizer /
               sterile+urine+specimen+cup /
@@ -103,7 +103,7 @@ export default function TickBornePage() {
               pet+first+aid+kit, led+medical+penlight.
               Doxycycline, isoxazolines, Lyme vaccine,
               Frontline, NexGard, Bravecto, Simparica,
-              and prescription brands are not shoppable hops. */}
+              and prescription brands are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

@@ -119,8 +119,8 @@ export default function StateHubPage({ params }: PageProps) {
       <div className="bg-brand-primary/10 border-b border-brand-primary/30 px-container-sm sm:px-container py-3">
         <p className="text-xs text-brand-dark m-0 leading-relaxed max-w-5xl">
           <span className="font-bold">Sample listings — directory under construction.</span>{' '}
-          Individual vet profiles are samples pending Carlo&apos;s selection of a verified data
-          source. For long-form, sourced guidance on vet care in {stateName}, see our{' '}
+          The profiles on this page are sample listings, not real clinics. Real
+          listings will appear after a verified data source is selected. For long-form, sourced guidance on vet care in {stateName}, see our{' '}
           <Link
             href={`/find-a-vet/${state.slug}`}
             className="text-brand-primary font-bold no-underline hover:underline"

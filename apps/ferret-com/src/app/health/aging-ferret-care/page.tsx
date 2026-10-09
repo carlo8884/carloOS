@@ -593,12 +593,12 @@ export default function FerretAgingPage() {
             ctaAffiliateProduct="leisure+lounge"
           />
 
-          {/* Money path — live amazon-brand kitchen hops
+          {/* Shop note — live amazon-brand kitchen buttons
               matching on-page HHHHHMM / monitoring /
               Merck-AEMV copy. Unique vs the ferret
               health-hub kitchen. Keep the existing
               Marshall floor-sleep-sack CTA. Educational
-              only — never a flea hop, never an Rx. */}
+              only — never a flea button, never an Rx. */}
           <div className="not-prose my-10 rounded-xl border border-brand-border bg-brand-surface p-6">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

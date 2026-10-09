@@ -79,7 +79,7 @@ export interface HubMastheadProps {
   primaryCta: HubMastheadCta
   /** Optional secondary action (ghost button). */
   secondaryCta?: HubMastheadCta
-  /** Commercial hop under the intro. Stays in flow so the title and intro stay visible. */
+  /** Commercial button under the intro. Stays in flow so the title and intro stay visible. */
   hop?: ReactNode
 }
 

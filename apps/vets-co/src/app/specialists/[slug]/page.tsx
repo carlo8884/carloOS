@@ -468,7 +468,7 @@ export default function SpecialistPage({ params }: PageProps) {
         </p>
       </section>
 
-      {/* Money path — live amazon-brand search hops
+      {/* Shop note — live amazon-brand search buttons
           matching on-page when-to-see / typical-US-cost /
           board-certification copy. Unique vs the
           specialists hub kitchen + diagnostics-spoke

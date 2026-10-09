@@ -158,16 +158,16 @@ export default function OsteoarthritisPage() {
 
           <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/tow+behind+arena+drag+harrow?s=health-osteoarthritis", "/go/amazon-brand/cotton+horse+polo+exercise+wraps?s=health-osteoarthritis", "/go/amazon-brand/portable+horse+paddock+panels?s=health-osteoarthritis"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (tow behind arena drag harrow /
               cotton horse polo exercise wraps /
               portable horse paddock panels).
               These are educational keep-moving
               tools, not a ranked product list, not a
               substitute for veterinary care, no Rx /
-              Adequan / NSAID / joint-supplement product page hops.
+              Adequan / NSAID / joint-supplement product page buttons.
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Amazon searches only —
+              or an empty link. Amazon searches only —
               unused vs #1105
               digital+hanging+hay+bale+scale /
               equine+forage+nsc+hay+test+kit /
@@ -208,7 +208,7 @@ export default function OsteoarthritisPage() {
               portable+farrier+hoof+stand
               (farrier-schedule).
               Medications and prescriptions
-              are not shoppable hops. */}
+              are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

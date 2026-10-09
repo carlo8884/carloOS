@@ -249,11 +249,11 @@ export default function DogWellnessExamPage() {
 
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/fecal+sample+collection+kit?s=guides-dog-wellness-exam", "/go/amazon-brand/leak+proof+specimen+bags?s=guides-dog-wellness-exam", "/go/amazon-brand/high+value+vet+visit+treats?s=guides-dog-wellness-exam"]} />
 
-          {/* Money path — live amazon-brand search hops (wellness-visit kit).
-              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+          {/* Shop note — live amazon-brand search buttons (wellness-visit kit).
+              ShopCtas hides empty Chewy; never href="#" or an empty link.
               Amazon searches only — everyday physical supplies matching
               on-page fecal-sample-collection-kit / leak-proof-specimen-bags /
-              high-value-vet-visit-treats copy, not first-aid wound hops,
+              high-value-vet-visit-treats copy, not first-aid wound buttons,
               house-training poop bags, or puppy-training treats. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">

@@ -68,9 +68,9 @@ export default function IchTreatmentPage() {
         <h2>After Treatment — Prevention</h2>
         <p>Ich enters tanks from: new fish (quarantine all new fish — the most reliable prevention), aquatic plants from infected systems, water from pet store bags, and equipment moved between tanks. Once successfully treated, the tank is ich-free — but there is no lasting immunity. New introductions restart the risk. The parasite cannot survive in an established tank without a fish host for more than 48 hours at room temperature — a fish-out "fallow" period of 4-6 weeks in the display tank (all fish moved to a hospital tank for treatment) reliably clears ich from the display environment.</p>
 
-        {/* Money path — live amazon-brand search hops (heat-method kit).
-            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-            Amazon searches only — not a ranked list. No medication hops. */}
+        {/* Shop note — live amazon-brand search buttons (heat-method kit).
+            ShopCtas hides empty Chewy; never href="#" or an empty link.
+            Amazon searches only — not a ranked list. No medication buttons. */}
         <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/eheim+jager+heater?s=health-ich", "/go/amazon-brand/aquarium+digital+thermometer?s=health-ich", "/go/amazon-brand/aquarium+sponge+filter?s=health-ich", "/go/amazon-brand/aquarium+quarantine+hospital+tank+net?s=health-ich"]} />
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">

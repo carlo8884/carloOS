@@ -79,7 +79,7 @@ export default function GSHealthPage() {
 
         <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/top+bound+steno+pad?s=breeds-german-shepherd-health", "/go/amazon-brand/mechanical+kitchen+timer?s=breeds-german-shepherd-health", "/go/amazon-brand/self+adhesive+file+folder+labels?s=breeds-german-shepherd-health"]} />
 
-        {/* Money path — live amazon-brand search hops
+        {/* Shop note — live amazon-brand search buttons
             (top-bound steno pad /
             mechanical kitchen timer /
             self-adhesive file-folder labels).
@@ -88,9 +88,9 @@ export default function GSHealthPage() {
             tools, not a ranked product list, not
             a substitute for veterinary care, no
             Rx / first-aid kit / thermometer /
-            carrier / insurance-brand product page hops.
+            carrier / insurance-brand product page buttons.
             ShopCtas hides empty Chewy; never href="#"
-            or PLACEHOLDER. Amazon searches only —
+            or an empty link. Amazon searches only —
             unused vs #1176
             dot+grid+notebook /
             paint+chip+sample+cards /

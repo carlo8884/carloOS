@@ -64,7 +64,7 @@ export default function WhenToGoPage() {
 
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/pet+first+aid+kit?s=tools-er-vs-clinic", "/go/amazon-brand/lined+telephone+message+pad?s=guides-when-to-go-to-the-vet", "/go/amazon-brand/medium+hard+sided+plastic+pet+carrier?s=guides-when-to-go-to-the-vet"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (pet first-aid kit already on the
               ER-vs-clinic tool /
               lined telephone message pad /
@@ -73,11 +73,11 @@ export default function WhenToGoPage() {
               monitoring / transport tools, not a
               ranked product list, not a substitute
               for veterinary care, no Rx / thermometer /
-              muzzle / underpad product page hops.
-              The kitchen-timer hop is not on this
+              muzzle / underpad product page buttons.
+              The kitchen-timer button is not on this
               triage guide.
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Amazon searches only —
+              or an empty link. Amazon searches only —
               unused vs #1092
               single+stainless+floor+dog+bowl /
               wobble+dog+food+dispenser /
@@ -116,7 +116,7 @@ export default function WhenToGoPage() {
               flashlight, vomiting memo-pad,
               vaccinations 72-hour timer.
               Digital pet thermometers and
-              prescriptions are not shoppable hops
+              prescriptions are not shoppable buttons
               on this guide. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">

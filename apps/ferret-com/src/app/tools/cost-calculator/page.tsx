@@ -198,9 +198,9 @@ export default function CostCalculatorPage() {
         </div>
       </section>
 
-      {/* Money path — live amazon-brand search hops (food / litter / cage / accessories).
+      {/* Shop note — live amazon-brand search buttons (food / litter / cage / accessories).
           Reuses queries already shipped on ferret reviews + care + behavior.
-          ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER. */}
+          ShopCtas hides empty Chewy; never href="#" or an empty link. */}
       <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <div className="max-w-2xl">
           <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/high+protein+ferret+food+kibble?s=tools-cost-calculator", "/go/amazon-brand/ferret+nation+critter+nation+double+unit?s=tools-cost-calculator"]} />

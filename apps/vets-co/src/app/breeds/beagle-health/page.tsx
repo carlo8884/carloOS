@@ -309,7 +309,7 @@ export default function VetsBeagleHealthPage() {
 
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/analog+stopwatch?s=breeds-beagle-health", "/go/amazon-brand/blank+index+cards?s=breeds-beagle-health", "/go/amazon-brand/recipe+card+box?s=breeds-beagle-health"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (analog stopwatch /
               blank index cards /
               recipe-card box).
@@ -318,9 +318,9 @@ export default function VetsBeagleHealthPage() {
               not a ranked product list, not a
               substitute for veterinary care, no
               Rx / first-aid kit / thermometer /
-              carrier / insurance-brand product page hops.
+              carrier / insurance-brand product page buttons.
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Amazon searches only —
+              or an empty link. Amazon searches only —
               unused vs #1178
               four+tab+dividers /
               analog+outdoor+thermometer /

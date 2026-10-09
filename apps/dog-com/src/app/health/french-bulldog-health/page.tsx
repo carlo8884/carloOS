@@ -168,13 +168,13 @@ export default function FrenchBulldogHealthPage() {
 
         <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/dog+cooling+mat?s=health-french-bulldog-health", "/go/amazon-brand/dog+cooling+vest?s=health-french-bulldog-health"]} />
 
-        {/* Money path — live amazon-brand search hops (cooling
+        {/* Shop note — live amazon-brand search buttons (cooling
             mat / cooling vest). ShopCtas hides empty Chewy;
-            never href="#" or PLACEHOLDER. Amazon searches
+            never href="#" or an empty link. Amazon searches
             only. Cool-water towels, digital thermometers,
             ice packs, ramps, fold wipes, Rx eye drops, and
             BOAS / IVDD clinical treatments are not
-            shoppable hops. */}
+            shoppable buttons. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
             Shop related supplies

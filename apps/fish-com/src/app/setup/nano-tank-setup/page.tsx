@@ -71,13 +71,13 @@ export default function NanoTankSetupPage() {
 
         <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/air+driven+corner+sponge+filter?s=setup-nano-tank", "/go/amazon-brand/preset+25+watt+nano+aquarium+heater?s=setup-nano-tank", "/go/amazon-brand/food+grade+1+gallon+water+jug?s=setup-nano-tank"]} />
 
-        {/* Money path — live amazon-brand search hops
+        {/* Shop note — live amazon-brand search buttons
             (air-driven corner sponge filter /
             preset 25-watt nano aquarium heater /
             food-grade 1-gallon water jug).
             These are educational setup tools, not a
             ranked product list, not livestock, not
-            medications, no href="#" / PLACEHOLDER.
+            medications, no href="#" / an empty link.
             ShopCtas hides empty Chewy. Category
             searches only — unused vs #1094
             lidded+5+gallon+feed+soaking+pail /

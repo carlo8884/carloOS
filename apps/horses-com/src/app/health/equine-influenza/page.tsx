@@ -155,7 +155,7 @@ export default function EquineInfluenzaPage() {
 
           <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/weatherproof+storage+clipboard?s=health-flu", "/go/amazon-brand/round+rubber+feed+pan+horse?s=health-flu", "/go/amazon-brand/paper+pellet+horse+bedding?s=health-flu"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (weatherproof storage clipboard /
               round rubber feed pan horse /
               paper pellet horse bedding).
@@ -163,9 +163,9 @@ export default function EquineInfluenzaPage() {
               tools, not a ranked product list, not a
               substitute for veterinary care, no Rx /
               vaccine / thermometer / coverall /
-              bucket / hay-steamer product page hops.
+              bucket / hay-steamer product page buttons.
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Amazon searches only —
+              or an empty link. Amazon searches only —
               unused vs #1097
               color+coded+flat+back+horse+buckets /
               disposable+coverall+suit /
@@ -188,7 +188,7 @@ export default function EquineInfluenzaPage() {
               (vaccination schedule), pine+shavings /
               wood+pellet / hemp stall bedding.
               Thermometers, vaccines, and prescriptions
-              are not shoppable hops. */}
+              are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

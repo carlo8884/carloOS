@@ -68,12 +68,12 @@ export default function SeniorBloodworkPage() {
 
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/letter+size+expanding+file+organizer?s=health-senior-bloodwork-guide", "/go/amazon-brand/sterile+urine+specimen+cup?s=health-senior-bloodwork-guide", "/go/amazon-brand/12+hour+mechanical+kitchen+timer?s=health-senior-bloodwork-guide"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (letter-size expanding file organizer /
               sterile urine specimen cup /
               12-hour mechanical kitchen timer).
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Amazon searches only —
+              or an empty link. Amazon searches only —
               unused vs #1069
               wire+small+animal+single+story+cage /
               non+slip+suction+bathtub+mat /
@@ -109,7 +109,7 @@ export default function SeniorBloodworkPage() {
               pet+glucometer.
               Levothyroxine, Soloxine, Thyro-Tabs,
               Hill's, Royal Canin, and prescription brands are
-              not shoppable hops. */}
+              not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

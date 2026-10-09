@@ -139,13 +139,13 @@ export default function GrainConcentratesPage() {
 
           <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/tabletop+digital+horse+grain+scale?s=nutrition-grain", "/go/amazon-brand/stackable+rubber+horse+feed+tubs?s=nutrition-grain", "/go/amazon-brand/rodent+proof+metal+horse+feed+bin?s=nutrition-grain", "/go/amazon-brand/complete+pelleted+horse+feed+formulated?s=nutrition-grain-and-concentrates", "/go/amazon-brand/low+starch+senior+horse+feed?s=nutrition-grain-and-concentrates"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (tabletop digital horse grain scale /
               stackable rubber horse feed tubs /
               rodent proof metal horse feed bin).
               Educational barn tools only; no Rx /
-              vaccine product page hops. ShopCtas hides empty
-              Chewy; never href="#" or PLACEHOLDER.
+              vaccine product page buttons. ShopCtas hides empty
+              Chewy; never href="#" or an empty link.
               Unused vs #1111
               horse+hay+probe+moisture+tester /
               equine+hay+core+sampler /

@@ -72,12 +72,12 @@ export default function DogHotSpotsPage() {
 
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/pet+recovery+cone?s=health-dog-hot-spots", "/go/amazon-brand/soft+recovery+cone+dog?s=health-dog-hot-spots"]} />
 
-          {/* Money path — live amazon-brand search hops (e-collar / soft cone).
-              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+          {/* Shop note — live amazon-brand search buttons (e-collar / soft cone).
+              ShopCtas hides empty Chewy; never href="#" or an empty link.
               Amazon searches only — reuse live sister queries from
               vets telehealth / insurance tools (pet+recovery+cone) and
               dog grimace-scale (soft+recovery+cone+dog). Chlorhexidine,
-              Vetericyn-style sprays, and Rx meds are not shoppable hops. */}
+              Vetericyn-style sprays, and Rx meds are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

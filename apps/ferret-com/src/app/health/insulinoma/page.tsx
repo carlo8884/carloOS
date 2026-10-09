@@ -466,12 +466,12 @@ export default function FerretInsulinomaPage() {
 
           <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/carnivore+care+critical+care+formula?s=health-insulinoma", "/go/amazon-brand/chicken+meat+baby+food?s=health-insulinoma", "/go/amazon-brand/silicone+tip+oral+dosing+syringe?s=health-insulinoma"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (carnivore-care critical-care formula /
               chicken meat baby food /
               silicone-tip oral dosing syringe).
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Amazon searches only —
+              or an empty link. Amazon searches only —
               unused vs #1065 hay-box / stall-guard /
               hemp-bedding, #1064 thrush-antiseptic /
               folding-hoof-pick / stall-sweet-lime, #1063
@@ -490,7 +490,7 @@ export default function FerretInsulinomaPage() {
               ferret+electrolytes+recovery+food,
               high+protein+ferret+food+kibble.
               Insulin syringes, compounded insulin, and
-              prescription brands are not shoppable hops. */}
+              prescription brands are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

@@ -64,9 +64,9 @@ export default function VelvetDiseasePage() {
         <h2>Saltwater Velvet (Amyloodinium) — More Dangerous</h2>
         <p>Amyloodinium ocellatum in marine aquariums is significantly more lethal than freshwater Piscinoodinium. It progresses faster, the dinospore infective stage is shorter, and it can kill a full tank of fish within 48-72 hours of first visible signs. Marine velvet is an emergency — treatment must begin immediately. The same copper or chloroquine phosphate protocols apply, in a quarantine tank separate from any invertebrates or coral.</p>
 
-        {/* Money path — live amazon-brand search hops (temp-and-blackout kit).
-            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-            Amazon searches only — not a ranked list. No medication hops. */}
+        {/* Shop note — live amazon-brand search buttons (temp-and-blackout kit).
+            ShopCtas hides empty Chewy; never href="#" or an empty link.
+            Amazon searches only — not a ranked list. No medication buttons. */}
         <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/eheim+jager+heater?s=health-velvet", "/go/amazon-brand/aquarium+digital+thermometer?s=health-velvet", "/go/amazon-brand/aquarium+sponge+filter?s=health-velvet", "/go/amazon-brand/aquarium+quarantine+hospital+tank+net?s=health-velvet"]} />
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">

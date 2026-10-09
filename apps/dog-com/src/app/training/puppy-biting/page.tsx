@@ -75,8 +75,8 @@ export default function PuppyBitingPage() {
           resourceLabel="Browse stuffable Kong classic toys on Amazon →"
         />
 
-        {/* Money path — live amazon-brand search hops (nipping / teething kit).
-            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+        {/* Shop note — live amazon-brand search buttons (nipping / teething kit).
+            ShopCtas hides empty Chewy; never href="#" or an empty link.
             Amazon searches only — not a ranked list. */}
         <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/kong+classic+dog+toy+stuffable?s=training-puppy-biting", "/go/amazon-brand/puppy+chew+toys?s=training-puppy-biting", "/go/amazon-brand/puppy+teething+toys?s=training-puppy-biting", "/go/amazon-brand/bitter+apple+spray+dog?s=training-puppy-biting"]} />
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">

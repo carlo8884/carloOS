@@ -209,14 +209,14 @@ export default function GhKhPage() {
 
           <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/crushed+coral+aquarium?s=setup-gh-kh-water-hardness", "/go/amazon-brand/aquarium+gh+remineralizer?s=setup-gh-kh-water-hardness", "/go/amazon-brand/indian+almond+leaves+aquarium?s=setup-gh-kh-water-hardness"]} />
 
-          {/* Money path — live amazon-brand search hops (crushed coral /
+          {/* Shop note — live amazon-brand search buttons (crushed coral /
               GH remineralizer / Indian almond leaves). ShopCtas hides
-              empty Chewy; never href="#" or PLACEHOLDER. Category
+              empty Chewy; never href="#" or an empty link. Category
               searches only — unused vs #993–#1026 setup-hub filter /
               heater / API-freshwater-master / Prime, #1020 Seiryu /
               spiderwood, #1021 scrapers, #1022 light-timer / root-tabs,
-              planted aquasoil, and CO2 regulator / Flourish Excel hops.
-              Test kits and medications are not hops. */}
+              planted aquasoil, and CO2 regulator / Flourish Excel buttons.
+              Test kits and medications are not buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

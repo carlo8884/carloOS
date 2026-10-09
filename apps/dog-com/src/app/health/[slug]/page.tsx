@@ -53,7 +53,7 @@ export const dynamic = 'force-static'
 export const dynamicParams = false
 
 /**
- * Category → owner next-step money path (QC §1.5 trust split).
+ * Category → owner next-step shop links (QC §1.5 trust split).
  *
  * For categories where a genuinely useful NON-CLINICAL management product
  * exists (joint supplements, VOHC dental chews, sensitive-stomach diet), we

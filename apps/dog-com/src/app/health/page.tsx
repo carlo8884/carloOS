@@ -344,9 +344,9 @@ export default function DogHealthHubPage() {
           </div>
         ))}
 
-        {/* Money path — live amazon-brand search hops (health-library kit).
-            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-            Amazon searches only — not a ranked list. No medication hops. */}
+        {/* Shop note — live amazon-brand search buttons (health-library kit).
+            ShopCtas hides empty Chewy; never href="#" or an empty link.
+            Amazon searches only — not a ranked list. No medication buttons. */}
         <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/pet+first+aid+kit?s=health-hub", "/go/amazon-brand/digital+pet+thermometer?s=health-hub", "/go/amazon-brand/soft+dog+carrier?s=health-hub", "/go/amazon-brand/dental+chews+dog?s=health-hub", "/go/amazon-brand/orthopedic+dog+bed?s=health-hub"]} />
         <div className="mt-6 p-5 border border-brand-border rounded-xl bg-brand-surface max-w-content-wide">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">

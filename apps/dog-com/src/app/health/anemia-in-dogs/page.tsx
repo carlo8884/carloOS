@@ -77,21 +77,21 @@ export default function DogAnemiaPage() {
 
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/dog+gum+color+assessment+chart?s=health-anemia-in-dogs", "/go/amazon-brand/high+calorie+dog+recovery+food?s=health-anemia-in-dogs", "/go/amazon-brand/pet+oral+feeding+syringe?s=health-anemia-in-dogs"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (dog gum-color assessment chart / high-calorie
               dog recovery food / pet oral feeding syringe).
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Amazon searches only —
+              or an empty link. Amazon searches only —
               unused vs #1041 heat-pants / belly-band /
               exercise-pen, #1040 BCS tape / chart /
               lean treats, #1039 pancreatitis food /
-              treat / portion-scale hops, #1038
+              treat / portion-scale buttons, #1038
               dehydration electrolyte kits, UTI / ear /
-              anxiety-wrap hops, ferret electrolytes
+              anxiety-wrap buttons, ferret electrolytes
               recovery food, and bulb+syringe+puppy.
               Prescription, iron, transfusion, and
               immunosuppressant product pages are not shoppable
-              hops. */}
+              buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

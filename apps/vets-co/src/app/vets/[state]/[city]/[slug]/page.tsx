@@ -141,9 +141,9 @@ export default function VetProfilePage({ params }: PageProps) {
           Sample listing — not a real vet.
         </p>
         <p className="text-xs text-brand-text-mid m-0 mt-1 leading-relaxed max-w-5xl">
-          This profile is a sample used to validate the directory layout and schema. The
+          This profile is a sample listing, not a real clinic. The
           practice name, phone number (555 prefix, reserved-for-fiction per NANP), and address are
-          synthetic. Real listings will populate after Carlo selects a verified data source. See our{' '}
+          made up. Real listings will appear after a verified data source is selected. See our{' '}
           <Link href="/editorial-standards" className="text-brand-primary font-bold no-underline hover:underline">
             editorial standards
           </Link>{' '}

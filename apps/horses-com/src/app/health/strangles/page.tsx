@@ -163,7 +163,7 @@ export default function StranglesPage() {
 
           <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/color+coded+flat+back+horse+buckets?s=health-strangles", "/go/amazon-brand/disposable+coverall+suit?s=health-strangles", "/go/amazon-brand/heavy+duty+rubber+boot+dip+tub?s=health-strangles"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (color-coded flat-back horse buckets /
               disposable coverall suit /
               heavy-duty rubber boot-dip tub).
@@ -171,9 +171,9 @@ export default function StranglesPage() {
               not a ranked product list, not a
               substitute for veterinary care, no Rx /
               vaccine / thermometer / first-aid kit /
-              shoe-cover / kennel-spray product page hops.
+              shoe-cover / kennel-spray product page buttons.
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Amazon searches only —
+              or an empty link. Amazon searches only —
               unused vs #1096
               ruled+marble+composition+notebook /
               soft+cotton+receiving+blanket /
@@ -192,7 +192,7 @@ export default function StranglesPage() {
               pet+safe+kennel+disinfectant+spray
               (canine influenza).
               Thermometers, first-aid kits, vaccines,
-              and prescriptions are not shoppable hops. */}
+              and prescriptions are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

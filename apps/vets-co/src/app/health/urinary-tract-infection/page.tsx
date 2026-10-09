@@ -64,16 +64,16 @@ export default function UTIPage() {
 
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/stainless+steel+dog+fountain?s=health-urinary-tract-infection", "/go/amazon-brand/washable+dog+pee+pads?s=health-urinary-tract-infection", "/go/amazon-brand/weighted+ceramic+dog+water+bowl?s=health-urinary-tract-infection"]} />
 
-          {/* Money path — live amazon-brand search hops (stainless-steel
+          {/* Shop note — live amazon-brand search buttons (stainless-steel
               dog fountain / washable pee pads / weighted ceramic bowl).
-              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+              ShopCtas hides empty Chewy; never href="#" or an empty link.
               Amazon searches only — unused vs #848–#1032
               dog+water+fountain, heavy+ceramic+pet+water+bowl,
               puppy+training+pads, and FLUTD (#1024)
               cat+water+fountain / extra+cat+litter+box /
               canned+wet+cat+food. Antibiotics, prescription urinary
               diets, cranberry products, and clinic culture kits
-              are not shoppable hops. */}
+              are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

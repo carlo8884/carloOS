@@ -131,8 +131,8 @@ export default function LeashReactivityPage() {
           resourceLabel="Browse front-clip no-pull harnesses on Amazon →"
         />
 
-        {/* Money path — live amazon-brand search hops (leash-reactivity kit).
-            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+        {/* Shop note — live amazon-brand search buttons (leash-reactivity kit).
+            ShopCtas hides empty Chewy; never href="#" or an empty link.
             Amazon searches only — not a ranked list. */}
         <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/front+clip+no+pull+dog+harness?s=training-leash-reactivity", "/go/amazon-brand/6+ft+dog+leash?s=training-leash-reactivity", "/go/amazon-brand/dog+training+treat+pouch+belt+clip?s=training-leash-reactivity", "/go/amazon-brand/puppy+training+treats?s=training-leash-reactivity"]} />
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">

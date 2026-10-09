@@ -66,13 +66,13 @@ export default function CherryEyePage() {
 
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/soft+e+collar+dog?s=health-cherry-eye", "/go/amazon-brand/dog+eye+wipes?s=health-cherry-eye"]} />
 
-          {/* Money path — live amazon-brand search hops (soft
+          {/* Shop note — live amazon-brand search buttons (soft
               e-collar / dog eye wipes). ShopCtas hides empty
-              Chewy; never href="#" or PLACEHOLDER. Category
+              Chewy; never href="#" or an empty link. Category
               searches only. Cyclosporine, tacrolimus, other Rx
               eye drops, NSAIDs, supplements, hot-spot recovery
               cones, IVDD crates / harnesses / wheelchairs, and
-              luxating-patella braces are not shoppable hops. */}
+              luxating-patella braces are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

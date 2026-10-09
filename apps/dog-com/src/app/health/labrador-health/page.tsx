@@ -198,13 +198,13 @@ export default function LabradorHealthPage() {
 
         <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/microfiber+dog+towel?s=health-labrador-health", "/go/amazon-brand/dog+ear+drying+solution?s=health-labrador-health"]} />
 
-        {/* Money path — live amazon-brand search hops (microfiber
+        {/* Shop note — live amazon-brand search buttons (microfiber
             dog towel / ear drying solution). ShopCtas hides
-            empty Chewy; never href="#" or PLACEHOLDER.
+            empty Chewy; never href="#" or an empty link.
             Amazon searches only. Veterinary ear cleaners,
             cotton balls, cotton swabs, measuring cups, pet
             scales, slow-feeders, chlorhexidine shampoo,
-            washcloths, and nightlights are not shoppable hops. */}
+            washcloths, and nightlights are not shoppable buttons. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
             Shop related supplies

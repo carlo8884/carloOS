@@ -205,8 +205,8 @@ export default function DogFirstAidKitPage() {
             resourceLabel="Browse digital pet thermometers on Amazon →"
           />
 
-          {/* Money path — live amazon-brand search hops (first-aid / emergency-prep kit).
-              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+          {/* Shop note — live amazon-brand search buttons (first-aid / emergency-prep kit).
+              ShopCtas hides empty Chewy; never href="#" or an empty link.
               Amazon searches only — educational kit supplies, not medications, not a ranked list. */}
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/wound+care+gauze?s=guides-first-aid-kit", "/go/amazon-brand/vetrap+cohesive+bandage?s=guides-first-aid-kit", "/go/amazon-brand/digital+pet+thermometer?s=guides-first-aid-kit", "/go/amazon-brand/saline+wound+flush?s=guides-first-aid-kit", "/go/amazon-brand/soft+dog+muzzle?s=guides-first-aid-kit", "/go/amazon-brand/soft+dog+carrier?s=guides-first-aid-kit"]} />
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">

@@ -227,9 +227,9 @@ export default function HorseFeedCalculatorPage() {
           resourceLabel="Browse timothy hay for horses on Amazon →"
         />
 
-        {/* Money path — live amazon-brand search hops (timothy hay / ration
+        {/* Shop note — live amazon-brand search buttons (timothy hay / ration
             balancer / feed scoop / slow-feeder net / salt lick). ShopCtas
-            hides empty Chewy; never href="#" or PLACEHOLDER. Scoop and
+            hides empty Chewy; never href="#" or an empty link. Scoop and
             slow-feeder queries match horse-cost-calculator / forage-basics. */}
         <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/timothy+hay+horse?s=tools-horse-feed-calculator", "/go/amazon-brand/horse+ration+balancer?s=tools-horse-feed-calculator", "/go/amazon-brand/horse+feed+scoop+scale?s=tools-horse-feed-calculator", "/go/amazon-brand/slow+feeder+hay+net+horse?s=tools-horse-feed-calculator", "/go/amazon-brand/equine+salt+lick?s=tools-horse-feed-calculator"]} />
         <div id="shop" className="mb-8 rounded-xl border border-brand-border bg-brand-surface p-5">

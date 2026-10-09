@@ -204,9 +204,9 @@ export default function FerretFoodEvaluatorPage() {
           <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/high+protein+ferret+food+kibble?s=tools-food-evaluator" />
         </div>
 
-        {/* Money path — live amazon-brand search hops (kibble / freeze-dried treats / oil).
+        {/* Shop note — live amazon-brand search buttons (kibble / freeze-dried treats / oil).
             Reuses the high-protein kibble query already shipped on cost + readiness.
-            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER. */}
+            ShopCtas hides empty Chewy; never href="#" or an empty link. */}
         <section id="shop-the-bag" className="not-prose my-8">
           <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/high+protein+ferret+food+kibble?s=tools-food-evaluator", "/go/amazon-brand/freeze+dried+raw+ferret+treats?s=tools-food-evaluator", "/go/amazon-brand/salmon+oil+ferret?s=tools-food-evaluator"]} />
           <div className="mt-4 rounded-xl border border-brand-border bg-brand-white p-5">

@@ -140,12 +140,12 @@ export default function TurnoutStablingPage() {
 
           <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/equine+slow+feeder+hay+box?s=care-turnout-vs-stabling", "/go/amazon-brand/nylon+equine+stall+guard?s=care-turnout-vs-stabling", "/go/amazon-brand/hemp+equine+stall+bedding?s=care-turnout-vs-stabling"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (equine slow-feeder hay box /
               nylon equine stall guard /
               hemp equine stall bedding).
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Amazon searches only —
+              or an empty link. Amazon searches only —
               unused vs #1064 thrush-antiseptic /
               folding-hoof-pick / stall-sweet-lime, #1063
               foam-pads / sand-bedding / easy-keeper-muzzle,
@@ -159,7 +159,7 @@ export default function TurnoutStablingPage() {
               pine+shavings / wood+pellet / stall+rubber+mats
               / horse+stall+fan / horse+stall+screen /
               horse+turnout+sheet / horse+grazing+muzzle.
-              prescription brands are not shoppable hops. */}
+              prescription brands are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

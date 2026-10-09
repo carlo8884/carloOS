@@ -189,8 +189,8 @@ export default function CatBodyConditionScorePage() {
         </p>
         <CatBodyConditionScore />
 
-        {/* Money path — live amazon-brand search hops (weight-management kit).
-            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+        {/* Shop note — live amazon-brand search buttons (weight-management kit).
+            ShopCtas hides empty Chewy; never href="#" or an empty link.
             Amazon searches only — not a ranked list, not a diagnosis. */}
         <div id="cat-bcs-kit" className="mt-8 mb-8">
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/digital+pet+scale?s=tools-cat-body-condition-score", "/go/amazon-brand/measuring+tape?s=tools-cat-body-condition-score", "/go/amazon-brand/weight+management+cat+food?s=tools-cat-body-condition-score", "/go/amazon-brand/puzzle+feeder?s=tools-cat-body-condition-score", "/go/amazon-brand/interactive+cat+toy?s=tools-cat-body-condition-score"]} />

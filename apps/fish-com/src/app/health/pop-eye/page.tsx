@@ -65,9 +65,9 @@ export default function PopEyePage() {
         <h2>Prevention</h2>
         <p>Pop-eye prevention is water quality management. The vast majority of pop-eye cases occur in tanks with elevated nitrate, inadequate filtration, or irregular maintenance. Weekly water changes of 25-30%, filter maintenance, and not overstocking are the primary preventive measures. Quarantine new fish before adding to established tanks — new fish stressed from shipping are more susceptible to bacterial infection including orbital infection.</p>
 
-        {/* Money path — live amazon-brand search hops (water-first / hospital-tank kit).
-            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-            Amazon searches only — not a ranked list. No medication hops. */}
+        {/* Shop note — live amazon-brand search buttons (water-first / hospital-tank kit).
+            ShopCtas hides empty Chewy; never href="#" or an empty link.
+            Amazon searches only — not a ranked list. No medication buttons. */}
         <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/api+freshwater+master+test+kit?s=health-pop-eye", "/go/amazon-brand/aquarium+quarantine+hospital+tank+net?s=health-pop-eye", "/go/amazon-brand/aquarium+sponge+filter?s=health-pop-eye", "/go/amazon-brand/eheim+jager+heater?s=health-pop-eye", "/go/amazon-brand/aquarium+digital+thermometer?s=health-pop-eye"]} />
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">

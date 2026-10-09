@@ -203,10 +203,10 @@ export default function WaterChangeCalculatorPage() {
           resourceLabel="Browse API Master Test Kit on Amazon →"
         />
 
-        {/* Money path — live amazon-brand search hops (Python changer / gravel
+        {/* Shop note — live amazon-brand search buttons (Python changer / gravel
             vacuum / Seachem Prime / API test kit). ShopCtas hides empty Chewy;
-            never href="#" or PLACEHOLDER. Python + gravel-vacuum queries already
-            live on this page / ResultCTA; Prime matches the disease-checker hop;
+            never href="#" or an empty link. Python + gravel-vacuum queries already
+            live on this page / ResultCTA; Prime matches the disease-checker button;
             API kit matches the water-test review and stocking tool. */}
         <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/api+freshwater+master+test+kit?s=tools-water-change-calculator", "/go/amazon-brand/python+water+changer?s=tools-water-change-calculator", "/go/amazon-brand/aquarium+gravel+vacuum+siphon?s=tools-water-change-calculator", "/go/amazon-brand/seachem+prime+water+conditioner?s=tools-water-change-calculator"]} />
         <div id="shop" className="mb-8 rounded-xl border border-brand-border bg-brand-surface p-5">

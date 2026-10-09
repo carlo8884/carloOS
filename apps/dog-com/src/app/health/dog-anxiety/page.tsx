@@ -67,14 +67,14 @@ export default function DogAnxietyPage() {
 
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/dog+anxiety+wrap?s=health-dog-anxiety", "/go/amazon-brand/dog+crate+cover?s=health-dog-anxiety", "/go/amazon-brand/white+noise+machine?s=health-dog-anxiety"]} />
 
-          {/* Money path — live amazon-brand search hops (pressure wrap /
+          {/* Shop note — live amazon-brand search buttons (pressure wrap /
               covered crate / white noise). ShopCtas hides empty Chewy;
-              never href="#" or PLACEHOLDER. Amazon searches only —
+              never href="#" or an empty link. Amazon searches only —
               reuse live sister query from crate-size + crate-training
               (dog+crate+cover). Pressure-wrap and white-noise searches
               match on-page named gear; they are not named brands.
               Fluoxetine / Reconcile, trazodone, gabapentin, Sileo, and
-              clomipramine are not shoppable hops. */}
+              clomipramine are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

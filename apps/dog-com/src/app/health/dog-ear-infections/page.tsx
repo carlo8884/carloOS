@@ -79,12 +79,12 @@ export default function DogEarInfectionsPage() {
 
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/pet+ear+cleaner?s=health-dog-ear-infections", "/go/amazon-brand/cotton+balls?s=health-dog-ear-infections"]} />
 
-          {/* Money path — live amazon-brand search hops (weekly ear-cleaning kit).
-              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+          {/* Shop note — live amazon-brand search buttons (weekly ear-cleaning kit).
+              ShopCtas hides empty Chewy; never href="#" or an empty link.
               Amazon searches only — reuse the live sister query from
               ferret.com ear-cleaning (pet+ear+cleaner). Cotton balls
               match on-page wipe copy. Prescription ear drops,
-              parasiticide brands, and named brands are not shoppable hops. */}
+              parasiticide brands, and named brands are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

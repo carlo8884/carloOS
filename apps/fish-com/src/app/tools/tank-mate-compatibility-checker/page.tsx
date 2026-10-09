@@ -222,8 +222,8 @@ export default function TankMateCompatibilityPage() {
           resourceLabel="Browse hospital and quarantine tanks on Amazon →"
         />
 
-        {/* Money path — live amazon-brand search hops (divider / quarantine / caves / food / test kit / net).
-            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER. */}
+        {/* Shop note — live amazon-brand search buttons (divider / quarantine / caves / food / test kit / net).
+            ShopCtas hides empty Chewy; never href="#" or an empty link. */}
         <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/aquarium+quarantine+hospital+tank?s=tools-tank-mate-compatibility", "/go/amazon-brand/aquarium+tank+divider?s=tools-tank-mate-compatibility", "/go/amazon-brand/aquarium+decorations+caves+hiding+spots?s=tools-tank-mate-compatibility", "/go/amazon-brand/tropical+community+fish+food?s=tools-tank-mate-compatibility", "/go/amazon-brand/api+freshwater+master+test+kit?s=tools-tank-mate-compatibility", "/go/amazon-brand/aquarium+fish+net+acclimation+kit?s=tools-tank-mate-compatibility"]} />
         <div id="shop" className="mb-8 rounded-xl border border-brand-border bg-brand-surface p-5">
           <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">

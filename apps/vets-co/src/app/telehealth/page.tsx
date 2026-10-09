@@ -107,8 +107,8 @@ export default function TelehealthPage() {
               priceNote="dated 2026-10-07."
               price="$49.99 per vet video visit" ctaText="Check Chewy Connect on Chewy" ctaHref="/go/chewy/connect?s=telehealth" ctaAffiliateProgram="chewy" ctaAffiliateProduct="connect" />
 
-            {/* Money path — live amazon-brand search hops (home-care prep kit).
-                ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+            {/* Shop note — live amazon-brand search buttons (home-care prep kit).
+                ShopCtas hides empty Chewy; never href="#" or an empty link.
                 Amazon searches only — not a ranked list, not a diagnosis.
                 Consult links above stay on their existing paths; this block does not re-rank Vetster / AskVet / Chewy. */}
             <div id="telehealth-prep-kit" className="mt-8 mb-8">

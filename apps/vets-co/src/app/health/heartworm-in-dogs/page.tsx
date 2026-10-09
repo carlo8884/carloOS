@@ -97,7 +97,7 @@ export default function HeartwormPage() {
 
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/heavy+gauge+48+inch+dog+crate?s=health-heartworm-in-dogs", "/go/amazon-brand/2+foot+nylon+traffic+lead?s=health-heartworm-in-dogs", "/go/amazon-brand/adjustable+aluminum+downspout+extender?s=health-heartworm-in-dogs"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (heavy-gauge 48-inch dog crate /
               2-foot nylon traffic lead /
               adjustable aluminum downspout extender).
@@ -107,9 +107,9 @@ export default function HeartwormPage() {
               for veterinary care, no Rx / Heartgard /
               Interceptor / Sentinel / Revolution /
               ProHeart / melarsomine / ivermectin
-              product page hops.
+              product page buttons.
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Amazon searches only —
+              or an empty link. Amazon searches only —
               unused vs #1086
               wide+rim+stainless+cat+water+bowl /
               electric+pet+food+warming+plate /
@@ -154,7 +154,7 @@ export default function HeartwormPage() {
               Heartgard, Interceptor, Sentinel,
               Revolution, ProHeart, ivermectin,
               milbemycin, moxidectin, and
-              melarsomine are not shoppable hops. */}
+              melarsomine are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

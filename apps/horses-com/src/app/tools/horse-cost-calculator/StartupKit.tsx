@@ -5,8 +5,8 @@
  *
  * Husbandry packing list for the one-time tack/equipment line in the
  * cost-of-ownership calculator. Check items off as you gather them.
- * Each row hops to a live Amazon search via /go/amazon-brand
- * (never PLACEHOLDER, never href="#"). Chewy stays hidden until a
+ * Each row buttons to a live Amazon search via /go/amazon-brand
+ * (never an empty link, never href="#"). Chewy stays hidden until a
  * Chewy tag is live.
  */
 

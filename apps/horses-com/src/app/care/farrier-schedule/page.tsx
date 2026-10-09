@@ -134,12 +134,12 @@ export default function FarrierSchedulePage() {
 
           <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/equine+farrier+log+book?s=care-farrier-schedule", "/go/amazon-brand/portable+farrier+hoof+stand?s=care-farrier-schedule", "/go/amazon-brand/cordless+barn+flood+light?s=care-farrier-schedule"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (equine farrier log book /
               portable farrier hoof stand /
               cordless barn flood light).
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Amazon searches only —
+              or an empty link. Amazon searches only —
               unused vs #1060 fecal-container / manure-rake /
               muck-cart, #1059 scoop / portion-cups /
               weight-log-book, #1058 stopwatch / notebook /
@@ -147,7 +147,7 @@ export default function FarrierSchedulePage() {
               #1056 diapers / collar / crate, hoof-pick /
               hoof-boots, snow-pads / shoe-studs,
               stall-bedding / pasture-management. prescription brands
-              are not shoppable hops. */}
+              are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

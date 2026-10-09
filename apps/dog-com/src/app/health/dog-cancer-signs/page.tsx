@@ -86,11 +86,11 @@ export default function DogCancerSignsPage() {
 
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/silicone+dog+grooming+glove?s=health-dog-cancer-signs", "/go/amazon-brand/analog+bathroom+scale?s=health-dog-cancer-signs", "/go/amazon-brand/dog+dental+finger+brush?s=health-dog-cancer-signs"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (silicone dog grooming glove / analog
               bathroom scale / dog dental finger brush).
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Amazon searches only —
+              or an empty link. Amazon searches only —
               unused vs #1047 resting respiratory rate
               notebook / one-minute kitchen timer /
               step-in padded dog harness, #1046 pet
@@ -116,7 +116,7 @@ export default function DogCancerSignsPage() {
               soft+dog+carrier / soft+pet+carrier.
               Chemotherapy, Tanovea, Hill's / Royal
               Canin oncology diets, and prescription brands are
-              not shoppable hops. */}
+              not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

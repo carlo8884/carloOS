@@ -130,8 +130,8 @@ export default function CityHubPage({ params }: PageProps) {
       <div className="bg-brand-primary/10 border-b border-brand-primary/30 px-container-sm sm:px-container py-3">
         <p className="text-xs text-brand-dark m-0 leading-relaxed max-w-5xl">
           <span className="font-bold">Sample listings — directory under construction.</span>{' '}
-          Individual vet profiles below are samples pending Carlo&apos;s selection of a verified
-          data source (state vet boards, AAHA, AVMA, or another sourced provider).
+          The profiles below are sample listings, not real clinics. Real listings
+          will appear after a verified data source is selected (state vet boards, AAHA, AVMA, or another sourced provider).
         </p>
       </div>
 
@@ -237,7 +237,7 @@ export default function CityHubPage({ params }: PageProps) {
           <p className="text-sm text-brand-text-mid mb-6 max-w-3xl">
             {vets.length > 0
               ? `Sample directory entries for ${city.city}, ${state.code}.`
-              : `Listings will populate after Carlo selects a verified data source. See our long-form guide to vet care in ${state.name} for sourced editorial in the meantime.`}
+              : `Listings will appear after a verified data source is selected. See our long-form guide to vet care in ${state.name} for sourced editorial in the meantime.`}
           </p>
           {vets.length > 0 ? (
             <div className="space-y-4">

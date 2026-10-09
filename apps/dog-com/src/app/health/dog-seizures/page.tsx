@@ -155,14 +155,14 @@ export default function DogSeizuresPage() {
 
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/soft+throw+blanket?s=health-dog-seizures", "/go/amazon-brand/dog+crate+bumper+pads?s=health-dog-seizures", "/go/amazon-brand/interlocking+foam+floor+tiles?s=health-dog-seizures"]} />
 
-          {/* Money path — live amazon-brand search hops (soft
+          {/* Shop note — live amazon-brand search buttons (soft
               throw blanket / crate bumper pads / interlocking
               foam floor tiles). ShopCtas hides empty Chewy;
-              never href="#" or PLACEHOLDER. Amazon searches
+              never href="#" or an empty link. Amazon searches
               only. Anticonvulsants, first-aid kits,
               thermometers, IVDD recovery crates, crate covers,
               crate pads, cooling mats, and night lights are
-              not shoppable hops. */}
+              not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

@@ -504,7 +504,7 @@ export default function SymptomPage({ params }: PageProps) {
           </p>
         </section>
 
-        {/* Money path — live amazon-brand kitchen hops
+        {/* Shop note — live amazon-brand kitchen buttons
             matching on-page urgency / red-flag /
             AVMA-AAHA-ACVIM copy. Unique vs the
             symptoms hub + diagnostics-spoke kitchens.

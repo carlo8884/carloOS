@@ -182,12 +182,12 @@ export default function MultiLevelHousingPage() {
 
           <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/fleece+ramp+cover?s=care-multi-level-housing", "/go/amazon-brand/pvc+sheet?s=care-multi-level-housing", "/go/amazon-brand/cable+ties?s=care-multi-level-housing", "/go/amazon-brand/locking+carabiner?s=care-multi-level-housing"]} />
 
-          {/* Money path — live amazon-brand search hops (vertical-housing kit).
-              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+          {/* Shop note — live amazon-brand search buttons (vertical-housing kit).
+              ShopCtas hides empty Chewy; never href="#" or an empty link.
               Amazon searches only — everyday physical supplies matching
               on-page ramp-cover / PVC-sheet / cable-tie / carabiner copy,
               not Critter Nation, sleep sacks, corner pans, tunnels, or
-              medication hops. */}
+              medication buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

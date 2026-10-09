@@ -78,11 +78,11 @@ export default function BloatGDVPage() {
 
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/automatic+timed+dog+feeder?s=health-bloat-gdv-dogs", "/go/amazon-brand/maze+slow+feed+dog+bowl?s=health-bloat-gdv-dogs", "/go/amazon-brand/indoor+dog+house+line?s=health-bloat-gdv-dogs"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (timed automatic dog feeder / maze
               slow-feed dog bowl / indoor dog
               house-line). ShopCtas hides empty Chewy;
-              never href="#" or PLACEHOLDER. Category
+              never href="#" or an empty link. Category
               searches only — unused vs #1056
               disposable+female+dog+diapers /
               inflatable+dog+collar /
@@ -105,8 +105,8 @@ export default function BloatGDVPage() {
               northmate+green+interactive+feeder /
               lick+mat+dog / 6+ft+dog+leash /
               dog+long+line+leash /
-              pet+first+aid+kit hops. prescription brands are
-              not shoppable hops. */}
+              pet+first+aid+kit buttons. prescription brands are
+              not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

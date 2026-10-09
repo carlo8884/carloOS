@@ -283,11 +283,11 @@ export default function DogObesityPage() {
 
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/digital+pet+scale?s=health-dog-obesity", "/go/amazon-brand/slow+feeder+dog+bowl?s=health-dog-obesity"]} />
 
-          {/* Money path — live amazon-brand search hops (digital
+          {/* Shop note — live amazon-brand search buttons (digital
               pet scale / slow-feeder dog bowl). ShopCtas hides empty
-              Chewy; never href="#" or PLACEHOLDER. Amazon searches
+              Chewy; never href="#" or an empty link. Amazon searches
               only. Rx weight diets, named food brands, and kitchen
-              food-portioning scales are not shoppable hops. */}
+              food-portioning scales are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

@@ -9,7 +9,7 @@
  *   2. Dilution — existing nitrate/TDS/GH/salinity math (CI-pinned).
  *
  * Product-maintenance guidance only. No medical or disease claims.
- * Shop hops reuse live amazon-brand queries (Python-style changer, gravel
+ * Shop buttons reuse live amazon-brand queries (Python-style changer, gravel
  * vacuum, API Master Test Kit) — no invented review URLs.
  */
 

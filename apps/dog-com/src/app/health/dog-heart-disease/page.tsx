@@ -100,11 +100,11 @@ export default function DogHeartDiseasePage() {
 
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/one+minute+kitchen+timer?s=health-dog-heart-disease", "/go/amazon-brand/step+in+padded+dog+harness?s=health-dog-heart-disease"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (resting respiratory rate notebook / one-minute
               kitchen timer / step-in padded dog harness).
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Amazon searches only —
+              or an empty link. Amazon searches only —
               unused vs #1046 pet medical records binder /
               AM/PM weekly pill organizer / digital hanging
               luggage scale, #1045 LED medical penlight /
@@ -122,7 +122,7 @@ export default function DogHeartDiseasePage() {
               thermometers, and soft+dog+carrier /
               soft+pet+carrier. Vetmedin, furosemide,
               enalapril, Hill's h/d, Royal Canin Cardiac,
-              and prescription brands are not shoppable hops. */}
+              and prescription brands are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

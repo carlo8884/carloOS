@@ -59,7 +59,7 @@ export default function QuestionsToAskPage() {
 
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/ruled+index+cards?s=guides-questions-to-ask-your-vet", "/go/amazon-brand/3x3+sticky+notes?s=guides-questions-to-ask-your-vet", "/go/amazon-brand/letter+size+sheet+protectors?s=guides-questions-to-ask-your-vet"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (ruled index cards /
               3x3 sticky notes /
               letter-size sheet protectors).
@@ -69,9 +69,9 @@ export default function QuestionsToAskPage() {
               veterinary care, no Rx / first-aid kit
               / thermometer / carrier /
               insurance-brand / financing-brand
-              product page hops.
+              product page buttons.
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Amazon searches only —
+              or an empty link. Amazon searches only —
               unused vs #1165
               spiral+notebook /
               small+soft+cooler+bag /
@@ -98,7 +98,7 @@ export default function QuestionsToAskPage() {
               medium+hard+sided+plastic+pet+carrier.
               First-aid kits, digital pet
               thermometers, and prescriptions
-              are not shoppable hops. */}
+              are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop these supplies

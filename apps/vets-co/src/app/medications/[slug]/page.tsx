@@ -394,7 +394,7 @@ export default function MedicationPage({ params }: PageProps) {
           </p>
         </section>
 
-        {/* Money path — live amazon-brand kitchen hops
+        {/* Shop note — live amazon-brand kitchen buttons
             matching on-page uses / side-effects /
             monitoring / FDA-CVM-Plumb's copy. Unique vs
             the medications hub kitchen. Educational

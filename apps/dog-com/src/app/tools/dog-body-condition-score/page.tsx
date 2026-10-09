@@ -168,8 +168,8 @@ export default function DogBodyConditionScorePage() {
         </div>
       </section>
 
-      {/* Money path — live amazon-brand search hops (BCS / weight-management kit).
-          ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+      {/* Shop note — live amazon-brand search buttons (BCS / weight-management kit).
+          ShopCtas hides empty Chewy; never href="#" or an empty link.
           Amazon searches only — not a ranked list, not a diagnosis. */}
       <section id="bcs-weight-kit" className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <div className="max-w-2xl">

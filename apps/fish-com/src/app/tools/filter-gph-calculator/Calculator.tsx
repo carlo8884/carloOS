@@ -5,7 +5,7 @@
  *
  * Client compute. Gallons × tank-style turnover band → recommended filter
  * flow (GPH). Companion to the existing stocking calculator (which already
- * models bioload). Does not invent SKUs; shop hops reuse live amazon-brand
+ * models bioload). Does not invent SKUs; shop buttons reuse live amazon-brand
  * queries from the filter and nano-tank reviews.
  */
 

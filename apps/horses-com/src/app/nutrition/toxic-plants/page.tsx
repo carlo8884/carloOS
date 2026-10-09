@@ -155,13 +155,13 @@ export default function ToxicPlantsPage() {
 
           <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/equine+toxic+plant+identification+field+guide?s=nutrition-toxic-plants", "/go/amazon-brand/horse+hay?s=nutrition-toxic-plants", "/go/amazon-brand/horse+paddock+tree+guard+fencing?s=nutrition-toxic-plants"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (equine toxic plant identification field guide /
               horse pasture walk weed identification handbook /
               horse paddock tree guard fencing).
               Educational pasture/barn-safety searches only;
-              no Rx / vaccine product page hops. ShopCtas hides empty
-              Chewy; never href="#" or PLACEHOLDER.
+              no Rx / vaccine product page buttons. ShopCtas hides empty
+              Chewy; never href="#" or an empty link.
               Unused vs #1114
               flat+back+horse+water+bucket /
               heated+horse+water+bucket /

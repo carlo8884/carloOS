@@ -195,8 +195,8 @@ export default function AquariumCyclingEstimatorPage() {
           resourceLabel="Browse API Master Test Kit on Amazon →"
         />
 
-        {/* Money path — live amazon-brand search hops (test kit / bottled bacteria / ammonia / sponge).
-            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER. */}
+        {/* Shop note — live amazon-brand search buttons (test kit / bottled bacteria / ammonia / sponge).
+            ShopCtas hides empty Chewy; never href="#" or an empty link. */}
         <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/api+freshwater+master+test+kit?s=tools-aquarium-cycling-estimator", "/go/amazon-brand/tetra+safestart+plus?s=tools-aquarium-cycling-estimator", "/go/amazon-brand/dr+tims+ammonium+chloride?s=tools-aquarium-cycling-estimator", "/go/amazon-brand/aquarium+sponge+filter?s=tools-aquarium-cycling-estimator"]} />
         <div id="shop" className="mb-8 rounded-xl border border-brand-border bg-brand-surface p-5">
           <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">

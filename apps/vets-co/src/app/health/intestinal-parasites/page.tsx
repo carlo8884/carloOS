@@ -67,7 +67,7 @@ export default function IntestinalParasitesPage() {
 
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/hinged+cedar+sandbox+cover?s=health-intestinal-parasites", "/go/amazon-brand/metal+jaw+dog+waste+scooper?s=health-intestinal-parasites", "/go/amazon-brand/outdoor+garden+hand+wash+station?s=health-intestinal-parasites"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (hinged cedar sandbox cover /
               metal-jaw dog waste scooper /
               outdoor garden hand-wash station).
@@ -76,9 +76,9 @@ export default function IntestinalParasitesPage() {
               ranked product list, not a substitute
               for veterinary care, no Rx / dewormer /
               fenbendazole / pyrantel / praziquantel /
-              metronidazole / vaccine product page hops.
+              metronidazole / vaccine product page buttons.
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Amazon searches only —
+              or an empty link. Amazon searches only —
               unused vs #1089
               24+ounce+stainless+hiking+dog+bottle /
               powder+free+nitrile+exam+gloves /
@@ -146,7 +146,7 @@ export default function IntestinalParasitesPage() {
               soft+sided+vet+visit+carrier.
               Fenbendazole, pyrantel,
               praziquantel, and metronidazole
-              are not shoppable hops. */}
+              are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

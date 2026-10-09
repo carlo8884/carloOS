@@ -63,9 +63,9 @@ export default function BacterialInfectionsPage() {
         <h2>Prevention</h2>
         <p>Because these infections are opportunistic, prevention is overwhelmingly a matter of husbandry. Keep ammonia and nitrite at zero and nitrate low through a fully established <a href="/health/nitrogen-cycle-explained">nitrogen cycle</a> and regular water changes. Quarantine every new arrival to avoid importing both pathogens and stress. Avoid overcrowding and incompatible tankmates that cause chronic stress and injury. Feed a varied, high-quality diet to support immune function. A fish kept in clean, stable water at appropriate density very rarely succumbs to the bacteria that are always swimming alongside it.</p>
 
-        {/* Money path — live amazon-brand search hops (water-first / hospital-tank kit).
-            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-            Amazon searches only — not a ranked list. No medication hops. */}
+        {/* Shop note — live amazon-brand search buttons (water-first / hospital-tank kit).
+            ShopCtas hides empty Chewy; never href="#" or an empty link.
+            Amazon searches only — not a ranked list. No medication buttons. */}
         <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/api+freshwater+master+test+kit?s=health-bacterial-infections", "/go/amazon-brand/aquarium+quarantine+hospital+tank+net?s=health-bacterial-infections", "/go/amazon-brand/aquarium+sponge+filter?s=health-bacterial-infections", "/go/amazon-brand/eheim+jager+heater?s=health-bacterial-infections", "/go/amazon-brand/aquarium+digital+thermometer?s=health-bacterial-infections"]} />
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">

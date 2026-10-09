@@ -83,7 +83,7 @@ export default function WhatCoversPage() {
 
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/3+tab+dividers?s=insurance-what-pet-insurance-covers", "/go/amazon-brand/assorted+highlighter+set?s=insurance-what-pet-insurance-covers", "/go/amazon-brand/removable+page+flags?s=insurance-what-pet-insurance-covers"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (3-tab dividers /
               assorted highlighter set /
               removable page flags).
@@ -92,9 +92,9 @@ export default function WhatCoversPage() {
               not a ranked product list, not a
               substitute for veterinary care, no Rx
               / first-aid kit / thermometer /
-              carrier / insurance-brand product page hops.
+              carrier / insurance-brand product page buttons.
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Amazon searches only —
+              or an empty link. Amazon searches only —
               unused vs #1169
               monthly+desk+pad+calendar /
               self+inking+date+stamp /
@@ -119,7 +119,7 @@ export default function WhatCoversPage() {
               wall+mounted+magnetic+monthly+planner.
               Carrier quote CTAs stay on
               /go/embrace and /go/lemonade —
-              not amazon-brand hops. */}
+              not amazon-brand buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

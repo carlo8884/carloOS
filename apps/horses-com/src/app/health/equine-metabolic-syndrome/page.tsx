@@ -161,7 +161,7 @@ export default function EMSPage() {
 
           <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/digital+hanging+hay+bale+scale?s=health-ems", "/go/amazon-brand/equine+forage+nsc+hay+test+kit?s=health-ems", "/go/amazon-brand/portable+strip+grazing+step+in+posts?s=health-ems"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (digital hanging hay bale scale /
               equine forage nsc hay test kit /
               portable strip grazing step in posts).
@@ -169,9 +169,9 @@ export default function EMSPage() {
               tools, not a ranked product list, not a
               substitute for veterinary care, no Rx /
               metformin / pergolide / grazing-muzzle /
-              hay-soaking-bag / ration-balancer product page hops.
+              hay-soaking-bag / ration-balancer product page buttons.
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Amazon searches only —
+              or an empty link. Amazon searches only —
               unused vs #1104
               portable+3+sided+horse+run+in+shelter /
               labeled+stackable+horse+grooming+caddy /
@@ -212,7 +212,7 @@ export default function EMSPage() {
               horse+feed+scoop+scale /
               horse+weight+tape.
               Medications and prescriptions
-              are not shoppable hops. */}
+              are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

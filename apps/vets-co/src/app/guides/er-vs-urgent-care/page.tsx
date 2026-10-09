@@ -63,7 +63,7 @@ export default function ERvsUrgentPage() {
           <p>Credit-card-size laminating pouches keep the regular vet, urgent care, and 24-hour ER numbers as a pocket card. A small magnetic dry-erase board keeps those three numbers on the fridge. A car visor document holder keeps the nearest ER address in the car. These are planning tools, not a treatment and not a ranked product list.</p>
 
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (credit-card-size laminating pouches /
               small magnetic dry-erase board /
               car visor document holder).
@@ -71,9 +71,9 @@ export default function ERvsUrgentPage() {
               tools, not a ranked product list, not a
               substitute for veterinary care, no Rx /
               first-aid kit / thermometer / carrier
-              product page hops.
+              product page buttons.
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Amazon searches only —
+              or an empty link. Amazon searches only —
               unused vs #1093
               48+hour+digital+kitchen+timer /
               lined+telephone+message+pad /
@@ -101,7 +101,7 @@ export default function ERvsUrgentPage() {
               handheld+aa+led+flashlight.
               First-aid kits, digital pet
               thermometers, and prescriptions
-              are not shoppable hops. */}
+              are not shoppable buttons. */}
           
 
           <h2>FAQ</h2>

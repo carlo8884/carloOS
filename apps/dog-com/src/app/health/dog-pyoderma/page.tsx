@@ -67,13 +67,13 @@ export default function DogPyodermaPage() {
 
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/chlorhexidine+dog+shampoo?s=health-dog-pyoderma", "/go/amazon-brand/hypoallergenic+washcloths?s=health-dog-pyoderma"]} />
 
-          {/* Money path — live amazon-brand search hops (chlorhexidine
+          {/* Shop note — live amazon-brand search buttons (chlorhexidine
               dog shampoo / hypoallergenic washcloths). ShopCtas
-              hides empty Chewy; never href="#" or PLACEHOLDER.
+              hides empty Chewy; never href="#" or an empty link.
               Amazon searches only. Systemic antibiotics,
               isoxazoline parasiticide brands, steroids, recovery
               cones, paw wipes, HEPA, and mange laundry gear are
-              not shoppable hops. */}
+              not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

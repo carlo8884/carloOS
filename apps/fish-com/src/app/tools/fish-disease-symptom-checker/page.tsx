@@ -168,8 +168,8 @@ export default function FishDiseaseSymptomCheckerPage() {
           resourceLabel="Browse API Master Test Kit on Amazon →"
         />
 
-        {/* Money path — live amazon-brand search hops (test kit / ich / salt / conditioner / quarantine).
-            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER. */}
+        {/* Shop note — live amazon-brand search buttons (test kit / ich / salt / conditioner / quarantine).
+            ShopCtas hides empty Chewy; never href="#" or an empty link. */}
         <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/api+freshwater+master+test+kit?s=tools-fish-disease-symptom", "/go/amazon-brand/ich+white+spot+treatment+aquarium?s=tools-fish-disease-symptom", "/go/amazon-brand/aquarium+salt+disease+treatment?s=tools-fish-disease-symptom", "/go/amazon-brand/seachem+prime+water+conditioner?s=tools-fish-disease-symptom", "/go/amazon-brand/aquarium+quarantine+hospital+tank+net?s=tools-fish-disease-symptom"]} />
         <div id="shop" className="mb-8 rounded-xl border border-brand-border bg-brand-surface p-5">
           <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">

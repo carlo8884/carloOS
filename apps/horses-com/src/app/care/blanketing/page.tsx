@@ -141,11 +141,11 @@ export default function BlanketingPage() {
 
           <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/horse+turnout+blanket?s=care-blanketing", "/go/amazon-brand/horse+waterproof+sheet?s=care-blanketing", "/go/amazon-brand/horse+lightweight+blanket?s=care-blanketing", "/go/amazon-brand/horse+medium+weight+blanket?s=care-blanketing", "/go/amazon-brand/horse+heavyweight+blanket?s=care-blanketing"]} />
 
-          {/* Money path — live amazon-brand search hops (blanketing kit).
-              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+          {/* Shop note — live amazon-brand search buttons (blanketing kit).
+              ShopCtas hides empty Chewy; never href="#" or an empty link.
               Amazon searches only — everyday physical supplies matching
               on-page turnout / sheet / fill-weight copy, not medical
-              or diagnosis hops. */}
+              or diagnosis buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

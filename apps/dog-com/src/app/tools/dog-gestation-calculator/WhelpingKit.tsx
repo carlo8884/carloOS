@@ -4,8 +4,8 @@
  * Interactive whelping-kit checklist — /tools/dog-gestation-calculator
  *
  * Husbandry packing list drawn from AKC / AAHA-style whelping prep.
- * Check items off as you gather them. Each row hops to a live Amazon
- * search via /go/amazon-brand (never PLACEHOLDER, never href="#").
+ * Check items off as you gather them. Each row buttons to a live Amazon
+ * search via /go/amazon-brand (never an empty link, never href="#").
  * Chewy stays hidden until a Chewy tag is live.
  */
 

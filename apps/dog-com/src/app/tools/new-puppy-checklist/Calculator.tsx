@@ -7,7 +7,7 @@ import { HopDisclosure } from '../../../components/HopDisclosure'
  * Client checklist builder. The owner picks expected adult size, age at
  * pickup, indoor/outdoor, crate-training status, and budget tier. The tool
  * returns a checkable first-week list grouped into stages (before pickup,
- * first 48 hours, first month, vet and paperwork), with Amazon search hops
+ * first 48 hours, first month, vet and paperwork), with Amazon search buttons
  * on every gear item.
  *
  * Husbandry / shopping guidance only -- not a veterinary plan. Vaccine,

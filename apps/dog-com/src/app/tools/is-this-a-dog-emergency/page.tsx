@@ -218,8 +218,8 @@ export default function IsThisADogEmergencyPage() {
         </div>
       </section>
 
-      {/* Money path — live amazon-brand search hops (emergency-prep / first-aid kit).
-          ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+      {/* Shop note — live amazon-brand search buttons (emergency-prep / first-aid kit).
+          ShopCtas hides empty Chewy; never href="#" or an empty link.
           Amazon searches only — not a ranked list, not a diagnosis. */}
       <section id="dog-emergency-prep-kit" className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <div className="max-w-2xl">

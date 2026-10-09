@@ -218,11 +218,11 @@ export default function HorseHeightConverterPage() {
         </p>
         <Calculator />
 
-        {/* Money path — live amazon-brand search hops (measuring stick /
+        {/* Shop note — live amazon-brand search buttons (measuring stick /
             height-weight tape / saddle-fitting kit). ShopCtas hides empty
-            Chewy; never href="#" or PLACEHOLDER. Stick matches BCS; tape
+            Chewy; never href="#" or an empty link. Stick matches BCS; tape
             matches weight-calculator / BCS / age / size-for-rider; saddle-
-            fitting kit is the height→tack hop already on this page. */}
+            fitting kit is the height→tack button already on this page. */}
         <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/horse+measuring+stick?s=tools-horse-height-converter", "/go/amazon-brand/horse+weight+tape?s=tools-horse-height-converter", "/go/amazon-brand/horse+saddle+fitting+kit?s=tools-horse-height-converter"]} />
         <div id="shop" className="mb-8 rounded-xl border border-brand-border bg-brand-surface p-5">
           <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">

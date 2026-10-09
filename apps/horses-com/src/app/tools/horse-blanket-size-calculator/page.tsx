@@ -180,9 +180,9 @@ export default function HorseBlanketSizeCalculatorPage() {
           resourceLabel="Browse winter horse blankets on Amazon →"
         />
 
-        {/* Money path — live amazon-brand search hops (winter blanket / turnout /
+        {/* Shop note — live amazon-brand search buttons (winter blanket / turnout /
             stable / tape / cooler). ShopCtas hides empty Chewy; never href="#"
-            or PLACEHOLDER. Measuring-tape query matches horse-weight-calculator. */}
+            or an empty link. Measuring-tape query matches horse-weight-calculator. */}
         <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/waterproof+turnout+horse+blanket+winter?s=tools-horse-blanket-size-calculator", "/go/amazon-brand/horse+turnout+sheet?s=tools-horse-blanket-size-calculator", "/go/amazon-brand/horse+stable+blanket?s=tools-horse-blanket-size-calculator", "/go/amazon-brand/horse+measuring+tape?s=tools-horse-blanket-size-calculator", "/go/amazon-brand/horse+fleece+cooler?s=tools-horse-blanket-size-calculator"]} />
         <div id="shop" className="mb-8 rounded-xl border border-brand-border bg-brand-surface p-5">
           <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">

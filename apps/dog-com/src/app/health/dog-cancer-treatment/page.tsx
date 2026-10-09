@@ -87,11 +87,11 @@ export default function DogCancerTreatmentPage() {
 
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/dog+surgical+recovery+suit?s=health-dog-cancer-treatment", "/go/amazon-brand/non+slip+dog+socks?s=health-dog-cancer-treatment", "/go/amazon-brand/adjustable+height+dog+bowls?s=health-dog-cancer-treatment"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (dog surgical recovery suit / non-slip
               dog socks / adjustable-height dog bowls).
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Amazon searches only —
+              or an empty link. Amazon searches only —
               unused vs #1054 locking kitchen trash can
               / walk-through pet gate / airtight dog-food
               storage container, #1053 dog pill pockets
@@ -138,7 +138,7 @@ export default function DogCancerTreatmentPage() {
               CHOP, doxorubicin, carboplatin,
               prednisone, Cerenia, maropitant,
               mirtazapine, gabapentin, and prescription brands
-              are not shoppable hops. */}
+              are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

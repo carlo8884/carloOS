@@ -74,15 +74,15 @@ export default function KennelCoughPage() {
 
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/y+shaped+front+clip+dog+harness?s=health-kennel-cough", "/go/amazon-brand/cool+mist+humidifier?s=health-kennel-cough", "/go/amazon-brand/soft+sided+dog+crate?s=health-kennel-cough"]} />
 
-          {/* Money path — live amazon-brand search hops (Y-shaped
+          {/* Shop note — live amazon-brand search buttons (Y-shaped
               front-clip harness / cool-mist humidifier /
               soft-sided crate). ShopCtas hides empty Chewy;
-              never href="#" or PLACEHOLDER. Amazon searches
+              never href="#" or an empty link. Amazon searches
               only — unused vs #848–#1031 front+clip+no+pull
               harness, HEPA air-purifier, dog+recovery+crate,
-              and digital+pet+thermometer hops. Antibiotics,
+              and digital+pet+thermometer buttons. Antibiotics,
               Bordetella vaccines, and clinic implant kits
-              are not shoppable hops. */}
+              are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

@@ -88,11 +88,11 @@ export default function HeartwormPreventionPage() {
 
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/mosquito+dunks?s=health-heartworm-prevention", "/go/amazon-brand/monthly+pill+organizer?s=health-heartworm-prevention", "/go/amazon-brand/soft+sided+vet+visit+carrier?s=health-heartworm-prevention"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (mosquito dunks / monthly pill organizer /
               soft-sided vet-visit carrier). ShopCtas
               hides empty Chewy; never href="#" or
-              PLACEHOLDER. Amazon searches only —
+              an empty link. Amazon searches only —
               unused vs #1042 gum-chart / recovery-food /
               feeding-syringe, #1041 heat-pants /
               belly-band / exercise-pen, #1030
@@ -103,7 +103,7 @@ export default function HeartwormPreventionPage() {
               milbemycin, moxidectin,
               heartworm+prevention drug searches,
               flea+tick meds, and prescription brands are not
-              shoppable hops. */}
+              shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

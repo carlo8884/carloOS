@@ -65,9 +65,9 @@ export default function ColumnarisguidePage() {
         <h2>Water Quality and Prevention</h2>
         <p>Columnaris, like most bacterial fish diseases, opportunistically infects fish that are stressed or immunocompromised. The most common predisposing factor: elevated nitrate, ammonia, or nitrite. Overcrowding, rough handling (net injuries), shipping stress, and oxygen-poor water all increase vulnerability. Prevention: pristine water quality, avoid overcrowding, acclimate fish carefully to minimize handling stress, and quarantine new fish before adding to established tanks.</p>
 
-        {/* Money path — live amazon-brand search hops (water-first / hospital-tank kit).
-            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-            Amazon searches only — not a ranked list. No medication hops. */}
+        {/* Shop note — live amazon-brand search buttons (water-first / hospital-tank kit).
+            ShopCtas hides empty Chewy; never href="#" or an empty link.
+            Amazon searches only — not a ranked list. No medication buttons. */}
         <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/api+freshwater+master+test+kit?s=health-columnaris", "/go/amazon-brand/aquarium+quarantine+hospital+tank+net?s=health-columnaris", "/go/amazon-brand/aquarium+sponge+filter?s=health-columnaris", "/go/amazon-brand/eheim+jager+heater?s=health-columnaris", "/go/amazon-brand/aquarium+digital+thermometer?s=health-columnaris"]} />
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">

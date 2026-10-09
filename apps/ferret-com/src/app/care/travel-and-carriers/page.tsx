@@ -157,8 +157,8 @@ export default function TravelAndCarriersPage() {
             <li><strong>Litter:</strong> a small low-sided pan in a larger carrier, or simply plan stops and a clean-up kit. Line the carrier with an absorbent washable liner in case of accidents.</li>
           </ul>
 
-          {/* Money path — live amazon-brand search hops (carrier / travel gear).
-              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+          {/* Shop note — live amazon-brand search buttons (carrier / travel gear).
+              ShopCtas hides empty Chewy; never href="#" or an empty link.
               Amazon searches only — educational gear, not medications, not a ranked list. */}
           <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/ferret+carrier+hard+sided?s=care-travel-and-carriers", "/go/amazon-brand/soft+pet+carrier?s=care-travel-and-carriers", "/go/amazon-brand/ferret+water+bottle?s=care-travel-and-carriers", "/go/amazon-brand/ferret+corner+litter+pan?s=care-travel-and-carriers"]} />
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">

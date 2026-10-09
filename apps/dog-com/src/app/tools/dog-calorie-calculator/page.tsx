@@ -176,9 +176,9 @@ export default function DogCalorieCalculatorPage() {
         </div>
       </section>
 
-      {/* Money path — live amazon-brand search hops (food / scale / feeders / treats).
+      {/* Shop note — live amazon-brand search buttons (food / scale / feeders / treats).
           Twin of vets.co cat-calorie-calculator. ShopCtas hides empty Chewy;
-          never href="#" or PLACEHOLDER. Amazon searches only — not ranked product pages. */}
+          never href="#" or an empty link. Amazon searches only — not ranked product pages. */}
       <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <div className="max-w-2xl">
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/measured+dog+food?s=tools-dog-calorie-calculator", "/go/amazon-brand/kitchen+gram+scale?s=tools-dog-calorie-calculator", "/go/amazon-brand/slow+feeder+dog+bowl?s=tools-dog-calorie-calculator", "/go/amazon-brand/interactive+dog+feeder?s=tools-dog-calorie-calculator", "/go/amazon-brand/low+calorie+dog+treats?s=tools-dog-calorie-calculator"]} />

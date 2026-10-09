@@ -77,11 +77,11 @@ export default function LowTechPlantedTankPage() {
 
         <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/aquarium+light+timer?s=setup-low-tech-planted-tank", "/go/amazon-brand/aquarium+plant+root+tabs?s=setup-low-tech-planted-tank"]} />
 
-        {/* Money path — live amazon-brand search hops (low-tech planted kit).
-            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+        {/* Shop note — live amazon-brand search buttons (low-tech planted kit).
+            ShopCtas hides empty Chewy; never href="#" or an empty link.
             Amazon searches only — everyday physical supplies matching
             on-page aquarium-light-timer / plant-root-tabs copy, not
-            first-tank filter / heater / test-kit / hardscape / scraper / CO2 hops. */}
+            first-tank filter / heater / test-kit / hardscape / scraper / CO2 buttons. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
             Shop these supplies

@@ -292,12 +292,12 @@ export default function MultiFerretIntroductionsPage() {
 
           <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/wire+small+animal+single+story+cage?s=behavior-multi-ferret-introductions", "/go/amazon-brand/non+slip+suction+bathtub+mat?s=behavior-multi-ferret-introductions", "/go/amazon-brand/stainless+steel+small+animal+crock?s=behavior-multi-ferret-introductions"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (wire small-animal single-story cage /
               non-slip suction bathtub mat /
               stainless-steel small-animal crock).
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Amazon searches only —
+              or an empty link. Amazon searches only —
               unused vs #1068 extra-small-animal-travel-
               kennel / scent-swap-fleece-sleep-pouch /
               portable-small-animal-playpen, #1067
@@ -324,7 +324,7 @@ export default function MultiFerretIntroductionsPage() {
               pet+oral+feeding+syringe.
               Vaccines, Nobivac, IMRAB, diphenhydramine,
               insulin syringes, and prescription brands are not
-              shoppable hops. */}
+              shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
