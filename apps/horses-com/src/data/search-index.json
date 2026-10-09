@@ -31,6 +31,12 @@
       "category": "guides"
     },
     {
+      "path": "/health/colic",
+      "title": "Equine Colic — Types, Clinical Signs, When to Call the Vet",
+      "description": "Reference guide to equine colic — spasmodic, impaction, gas, displacement, and more. Clinical signs, when it is an emergency, diagnostics, and treatment.",
+      "category": "guides"
+    },
+    {
       "path": "/reviews",
       "title": "Horses.com Reviews — Supplements, Blankets, Tack | Horses.com",
       "description": "Independent equine product reviews — joint supplements, winter blankets, and gear that performs. Citation-anchored against AAEP and breed-club references.",
@@ -160,7 +166,8 @@
       "path": "/tools/horse-feed-calculator",
       "title": "Horse Feed & Hay Calculator (Daily Intake) | Horses.com",
       "description": "Estimate daily hay from bodyweight. Merck, citing NRC 2007: forage at least 1.5–2% of body weight, maximal intake 2.5–3%. Other splits are planning figures.",
-      "category": "tools"
+      "category": "tools",
+      "keywords": "how much hay"
     },
     {
       "path": "/tools/horse-gestation-calculator",
@@ -190,7 +197,8 @@
       "path": "/tools/horse-water-calculator",
       "title": "Horse Water Intake Calculator | Horses.com",
       "description": "Merck maintenance minimum is 5 L per 100 kg, about 0.60 gal per 100 lb. The upper gallon per 100 lb is a planning figure.",
-      "category": "tools"
+      "category": "tools",
+      "keywords": "daily horse water intake"
     },
     {
       "path": "/tools/horse-weight-calculator",

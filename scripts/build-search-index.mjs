@@ -21,6 +21,35 @@ export const SEARCH_SITES = {
   'ferret-com': ['/care'],
 }
 
+/** Pages outside the guide roots that customers search for by name. */
+export const EXTRA_GUIDES = {
+  'fish-com': ['/species/betta-fish-tank-mates'],
+  'horses-com': ['/health/colic'],
+  'vets-co': ['/health/heartworm-in-dogs', '/health/dog-vaccinations-guide'],
+  'ferret-com': ['/health/adrenal-disease'],
+}
+
+/**
+ * Match text that is not the page title. Used when a tool's title
+ * does not contain the words a customer types.
+ */
+export const SEARCH_KEYWORDS = {
+  'dog-com': {
+    '/tools/dog-food-amount-calculator': 'how much to feed a puppy',
+  },
+  'fish-com': {
+    '/reviews/best-aquarium-filters': 'aquarium filters',
+  },
+  'horses-com': {
+    '/tools/horse-feed-calculator': 'how much hay',
+    '/tools/horse-water-calculator': 'daily horse water intake',
+  },
+  'vets-co': {
+    '/tools/is-this-a-cat-emergency': 'is my pet an emergency emergancy',
+    '/guides/cost-of-veterinary-care': 'vet costs',
+  },
+}
+
 export function searchCategory(route, guideRoots) {
   if (route.includes('-vs-')) return 'comparisons'
   if (route === '/tools' || route.startsWith('/tools/')) return 'tools'
@@ -87,17 +116,20 @@ export function buildSiteIndex(site) {
   for (const file of walkPages(appDir)) {
     const route = routeOf(appDir, file)
     if (route.includes('[')) continue
-    const category = searchCategory(route, guideRoots)
+    const extra = EXTRA_GUIDES[site]?.includes(route) ? 'guides' : null
+    const category = extra ?? searchCategory(route, guideRoots)
     if (!category) continue
     const src = readFileSync(file, 'utf8')
     if (isRedirectStub(src) || isNoIndex(src)) continue
     const { title, description } = extractMetadata(src)
     if (!title) continue
+    const keywords = SEARCH_KEYWORDS[site]?.[route]
     entries.push({
       path: route,
       title,
       description: description ?? '',
       category,
+      ...(keywords ? { keywords } : {}),
     })
   }
   entries.sort((a, b) => a.path.localeCompare(b.path))

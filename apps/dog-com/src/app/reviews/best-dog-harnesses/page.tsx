@@ -19,7 +19,7 @@ const PICKS = [
 
 const itemList = buildItemListSchema({
   name: "Best Dog Harnesses 2026",
-  items: PICKS.map((pick) => ({ name: pick.name, url: ({ "PetSafe Easy Walk": "https://dog.com/go/chewy-brand/petsafe+easy+walk+harness?s=reviews-best-dog-harnesses", "Ruffwear Front Range": "https://dog.com/go/chewy-brand/ruffwear+front+range+harness?s=reviews-best-dog-harnesses", "Julius-K9 IDC Powerharness": "https://dog.com/go/amazon-brand/julius+k9+idc+powerharness?s=reviews-best-dog-harnesses" }[pick.name] ?? `https://dog.com/reviews/best-dog-harnesses${pick.href}`) })),
+  items: PICKS.map((pick) => ({ name: pick.name, url: ({ "PetSafe Easy Walk": "https://dog.com/go/chewy-brand/petsafe+easy+walk+harness?s=reviews-best-dog-harnesses", "Ruffwear Front Range": "https://dog.com/go/chewy-brand/ruffwear+front+range+harness?s=reviews-best-dog-harnesses", "Julius-K9 IDC Powerharness": "https://dog.com/go/amazon/B0B21KVSNV?s=reviews-best-dog-harnesses" }[pick.name] ?? `https://dog.com/reviews/best-dog-harnesses${pick.href}`) })),
 })
 export default function BestDogHarnessesPage() {
   return (
@@ -70,11 +70,11 @@ export default function BestDogHarnessesPage() {
               siteId="dog-com"
               nextHref="/tools/harness-collar-size"
               nextLabel="Size the chest and neck before you pick a clip"
-              nextBlurb="The callout is the clip rule — front-clip for pullers, back-clip for dogs that already walk well. The harness-size calculator is the next step so the chest band actually sits where the clip can work. The link below searches Amazon for the Julius-K9 IDC Powerharness, the same search as on this page."
-              resourceHref="/go/amazon-brand/julius+k9+idc+powerharness?s=reviews-best-dog-harnesses"
+              nextBlurb="The callout is the clip rule — front-clip for pullers, back-clip for dogs that already walk well. The harness-size calculator is the next step so the chest band actually sits where the clip can work. The link below opens the Julius-K9 IDC Powerharness product page on Amazon, the same product as on this page."
+              resourceHref="/go/amazon/B0B21KVSNV?s=reviews-best-dog-harnesses"
               resourceLabel="Browse Julius-K9 IDC Powerharness on Amazon →"
             />
-            <HopDisclosure siteId="dog-com" href={["/go/chewy-brand/petsafe+easy+walk+harness?s=reviews-best-dog-harnesses", "/go/chewy-brand/ruffwear+front+range+harness?s=reviews-best-dog-harnesses", "/go/amazon-brand/julius+k9+idc+powerharness?s=reviews-best-dog-harnesses"]} />
+            <HopDisclosure siteId="dog-com" href={["/go/chewy-brand/petsafe+easy+walk+harness?s=reviews-best-dog-harnesses", "/go/chewy-brand/ruffwear+front+range+harness?s=reviews-best-dog-harnesses", "/go/amazon/B0B21KVSNV?s=reviews-best-dog-harnesses"]} />
             <ReviewCard id="easy-walk" badge="Best No-Pull" name="PetSafe Easy Walk Harness" subtitle="Front-clip · Martingale loop · Immediate pulling reduction" winner
               description={<p>The Easy Walk is a widely recommended front-clip harness by trainers and veterinary behaviorists. The martingale loop at the chest creates gentle pressure when the dog pulls — the directional correction redirects forward momentum to the side without pain, choke, or discomfort. Effectiveness is immediate in most dogs — pulling behavior reduces significantly within the first walk. Not suitable for dogs with existing shoulder or elbow issues (front-clip pressure can aggravate). Available at all pet stores, easily adjustable, machine washable.</p>}
               specs={[{ label: 'Clip position', value: 'Front-clip (chest)', highlight: 'good' }, { label: 'Mechanism', value: 'Martingale redirection', highlight: 'good' }, { label: 'Best for', value: 'Pullers, reactive walkers' }, { label: 'Price', value: '$20–30', highlight: 'good' }]}
@@ -107,7 +107,7 @@ export default function BestDogHarnessesPage() {
               price="$40–70"
               priceNote="dated 2026-10-05."
               ctaText="Shop Julius-K9 IDC Powerharness on Amazon →"
-              ctaHref="/go/amazon-brand/julius+k9+idc+powerharness?s=reviews-best-dog-harnesses"
+              ctaHref="/go/amazon/B0B21KVSNV?s=reviews-best-dog-harnesses"
               ctaAffiliateProgram="amazon-brand"
               ctaAffiliateProduct="julius+k9+idc+powerharness"
             />
@@ -141,14 +141,14 @@ export default function BestDogHarnessesPage() {
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">Backs out of or destroys harnesses</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#julius" className="text-brand-primary">Julius-K9 IDC</a><TableShopLink href={"/go/amazon-brand/julius+k9+idc+powerharness?s=reviews-best-dog-harnesses"} product={"Julius-K9 IDC"} /></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#julius" className="text-brand-primary">Julius-K9 IDC</a><TableShopLink href={"/go/amazon/B0B21KVSNV?s=reviews-best-dog-harnesses"} product={"Julius-K9 IDC"} /></td>
                       <td className="p-3 text-brand-text-mid">Back-clip only. $40–70</td>
                       <td className="p-3 text-brand-text-mid">Not a no-pull harness. Heavy for a small dog</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-08" />
+              <ComparisonFoot updated="2026-10-09" />
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Which harness fits which dog</h2>
               <FAQAccordion items={[
                 {
