@@ -93,7 +93,7 @@ export default function VetsPetInsurancePage() {
           Best Pet Insurance 2026 — How the 11 Major Carriers Compare
         </h1>
         <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">Trupanion is the top pet insurance pick because it is the carrier that pays the clinic at checkout.</p>
-        <PriceAsOf date="2026-10-08" tone="dark" />
+        <PriceAsOf date="2026-10-09" tone="dark" />
         <div data-fold="offer">
           <PrimaryHop href='/go/trupanion/home?s=reviews-best-pet-insurance' label='Get a Trupanion quote →' holdWithoutPartnerId />
         <HopDisclosure tone="on-dark"
