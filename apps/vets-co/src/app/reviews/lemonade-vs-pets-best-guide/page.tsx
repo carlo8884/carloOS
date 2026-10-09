@@ -18,7 +18,8 @@ export const metadata: Metadata = buildMetadata({
 const schema = buildArticleSchema({
   siteId: 'vets-co',
   title: 'Lemonade or Pets Best',
-  description: 'Lemonade for a young pet, or Pets Best for a flexible plan with no upper age limit (https://www.petsbest.com/faq).',
+  description: 'Lemonade for a young pet, or Pets Best for a flexible plan with no upper age limit.',
+  citation: [{ label: 'Pets Best FAQ', url: 'https://www.petsbest.com/faq', publisher: 'Pets Best' }],
   url: 'https://vets.co/reviews/lemonade-vs-pets-best-guide',
   imageUrl: '',
   authorName: 'Vets.co Editorial',
@@ -33,7 +34,8 @@ const FAQS = [
   },
   {
     question: 'When does that page point to Pets Best?',
-    answer: 'When you want several plan tiers, including for an older adopted pet. Pets Best. Pets Best\'s FAQ, fetched 2026-10-08, says there is no upper age limit (https://www.petsbest.com/faq). The review lists multiple plan tiers and a pay-then-claim model. Premiums rise with age. The price line is quote-based.',
+    answer: 'When you want several plan tiers, including for an older adopted pet. Pets Best. Pets Best\'s FAQ, fetched 2026-10-08, says there is no upper age limit. The review lists multiple plan tiers and a pay-then-claim model. Premiums rise with age. The price line is quote-based.',
+    source: 'https://www.petsbest.com/faq',
   },
   {
     question: 'Does this page publish a monthly premium?',
@@ -99,7 +101,7 @@ export default function LemonadeVsPetsBestGuidePage() {
           checklist={[
             "The review lists app-based claims, availability that varies by state, and an optional preventive package.",
             "When you want several plan tiers, including for an older adopted pet.",
-            "The review lists multiple plan tiers, no upper age limit on enrollment (https://www.petsbest.com/faq), and a pay-then-claim model.",
+            "The review lists multiple plan tiers, no upper age limit on enrollment, and a pay-then-claim model.",
             "The premium, reimbursement percent, and waiting period are the ones the enrollment page prints, or the ones on the carrier quote.",
             "Lemonade Pet is Young-Pet Value and the winner on that page.",
             "A preventive package is optional, and the review says that package is not insurance.",
@@ -107,12 +109,12 @@ export default function LemonadeVsPetsBestGuidePage() {
         />
         <p>Lemonade and Pets Best are two carriers to quote early. The wider comparison is on the <Link href="/reviews/best-pet-insurance">insurance review</Link>. Neither product prints a monthly premium.</p>
         <h2>What the review says about Lemonade</h2>
-        <p>Lemonade Pet is Young-Pet Value and the winner on that page. Lemonade’s FAQ, fetched 2026-10-08, says signing up while a pet is young and healthy means they are not denied coverage at renewal because of age (<span className="break-all">https://www.lemonade.com/pet/explained/lemonade-pet-insurance-faq/</span>). Our notes mark Lemonade for owners with younger pets. Claims are app-based. Availability varies by state. A preventive package is optional, and the review says that package is not insurance. The price line is quote-based.</p>
+        <p>Lemonade Pet is Young-Pet Value and the winner on that page. Lemonade’s FAQ, fetched 2026-10-08, says signing up while a pet is young and healthy means they are not denied coverage at renewal because of age. Our notes mark Lemonade for owners with younger pets. Claims are app-based. Availability varies by state. A preventive package is optional, and the review says that package is not insurance. The price line is quote-based.</p>
         <h2>What the review says about Pets Best</h2>
-        <p>Pets Best is Flexible Plans. Pets Best’s FAQ, fetched 2026-10-08, says there is no upper age limit, and a dog or cat can enroll at any age over 7 weeks (<span className="break-all">https://www.petsbest.com/faq</span>). The review lists several plan tiers, which is why it is worth quoting for both puppies and older adopted pets. The model is pay-then-claim. Premiums rise with age, and standard exclusions apply. The price line is quote-based. The review says the pre-existing-condition definition still decides what a late enrollment will cover.</p>
+        <p>Pets Best is Flexible Plans. Pets Best’s FAQ, fetched 2026-10-08, says there is no upper age limit, and a dog or cat can enroll at any age over 7 weeks. The review lists several plan tiers, which is why it is worth quoting for both puppies and older adopted pets. The model is pay-then-claim. Premiums rise with age, and standard exclusions apply. The price line is quote-based. The review says the pre-existing-condition definition still decides what a late enrollment will cover.</p>
         <h2>Who should read which policy</h2>
         <p>Open the Lemonade sample when the pet is young and healthy and you want the app-claim carrier. Confirm the state actually offers it, and treat the preventive package as separate from the insurance. Open the Pets Best sample when the pet is older, or you want several tiers, and read how premium scales with age. On both, enroll before a condition is in the record. Do not treat either quote-based line as a price from this page.</p>
-        <p>Lemonade’s FAQ, fetched 2026-10-08, says signing up while a pet is young and healthy means they are not denied coverage at renewal because of age (<span className="break-all">https://www.lemonade.com/pet/explained/lemonade-pet-insurance-faq/</span>). Our notes mark Lemonade for owners with younger pets. Pets Best’s FAQ, fetched the same day, says there is no upper age limit (<span className="break-all">https://www.petsbest.com/faq</span>).</p>
+        <p>Lemonade’s FAQ, fetched 2026-10-08, says signing up while a pet is young and healthy means they are not denied coverage at renewal because of age. Our notes mark Lemonade for owners with younger pets. Pets Best’s FAQ, fetched the same day, says there is no upper age limit.</p>
         <div className="my-6 max-w-full min-w-0">
           <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
             <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>

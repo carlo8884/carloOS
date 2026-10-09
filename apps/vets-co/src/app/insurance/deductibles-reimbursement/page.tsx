@@ -170,7 +170,7 @@ export default function DeductiblesPage() {
             name="Pets Best"
             subtitle="Multiple deductible and reimbursement combinations"
             description={
-              <p>Offers several plan tiers with a range of deductible and reimbursement combinations, which is helpful when you want to compare how each lever shifts the premium. Pets Best’s FAQ, fetched 2026-10-08, says there is no upper age limit (<span className="break-all">https://www.petsbest.com/faq</span>). Run a hypothetical large bill through different settings to find the structure that matches your cash reality.</p>
+              <p data-source="https://www.petsbest.com/faq">Offers several plan tiers with a range of deductible and reimbursement combinations, which is helpful when you want to compare how each lever shifts the premium. Pets Best’s FAQ, fetched 2026-10-08, says there is no upper age limit. Run a hypothetical large bill through different settings to find the structure that matches your cash reality.</p>
             }
             specs={[
               { label: 'Plan tiers', value: 'Multiple', highlight: 'good' },
@@ -209,7 +209,7 @@ export default function DeductiblesPage() {
                   <td className="p-3 text-brand-text-mid">Several deductible and reimbursement combinations to compare</td>
                   <td className="p-3 font-bold text-brand-dark"><a href="#pets-best" className="text-brand-primary">Pets Best</a><TableShopLink href={"/go/pets-best/home?s=insurance-deductibles-reimbursement"} product={"Pets Best"} /></td>
                   <td className="p-3 text-brand-text-mid">Tiered Options. Multiple plan tiers. Pay-then-claim. Quote-based</td>
-                  <td className="p-3 text-brand-text-mid">More options to compare. Standard exclusions apply. Pets Best’s FAQ, fetched 2026-10-08, says there is no upper age limit (<span className="break-all">https://www.petsbest.com/faq</span>)</td>
+                  <td className="p-3 text-brand-text-mid" data-source="https://www.petsbest.com/faq">More options to compare. Standard exclusions apply. Pets Best’s FAQ, fetched 2026-10-08, says there is no upper age limit</td>
                 </tr>
               </tbody>
             </table>
