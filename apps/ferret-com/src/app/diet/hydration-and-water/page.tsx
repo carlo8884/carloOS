@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, ReviewCard, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, ReviewCard, CrossPortfolioCard, PrimaryHop } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -40,6 +40,10 @@ export default function HydrationAndWaterPage() {
       <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="ferret-com"
+        heroHop={<>
+          <PrimaryHop href="/go/amazon-brand/heavy+wide+ceramic+pet+bowl?s=diet-hydration-and-water" label="Search Amazon for a heavy ceramic water bowl" />
+          <HopDisclosure tone="on-dark" siteId="ferret-com" href="/go/amazon-brand/heavy+wide+ceramic+pet+bowl?s=diet-hydration-and-water" />
+        </>}
         hero={{
           title: 'Ferret Hydration & Water',
           subtitle:

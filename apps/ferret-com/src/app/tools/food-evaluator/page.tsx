@@ -12,6 +12,7 @@ import {
   RelatedLinks,
   CrossPortfolioCard,
   ShopCtas,
+  PrimaryHop,
 } from '@carloOS/ui'
 import { FerretFoodEvaluator } from '../../../components/visual/FerretFoodEvaluator'
 
@@ -198,6 +199,10 @@ export default function FerretFoodEvaluatorPage() {
           Paste the guaranteed analysis from the back of any kibble bag and pick the first ingredient. How we calculate: protein, fat, fiber, and ash cutoffs are a planning figure, not a published nutrient profile. The evaluator returns "appropriate / marginal / avoid" with per-nutrient notes.
         </p>
         <FerretFoodEvaluator />
+        <div className="not-prose mt-6" data-fold="offer">
+          <PrimaryHop href="/go/amazon-brand/high+protein+ferret+food+kibble?s=tools-food-evaluator" label="Search Amazon for high-protein ferret kibble" />
+          <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/high+protein+ferret+food+kibble?s=tools-food-evaluator" />
+        </div>
 
         {/* Money path — live amazon-brand search hops (kibble / freeze-dried treats / oil).
             Reuses the high-protein kibble query already shipped on cost + readiness.

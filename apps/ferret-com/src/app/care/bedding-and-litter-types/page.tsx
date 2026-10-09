@@ -12,6 +12,7 @@ import {
   ShopCtas,
   ComparisonFoot,
   EmailCapture,
+  PrimaryHop,
 } from '@carloOS/ui'
 import { buildArticleSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
@@ -61,6 +62,10 @@ export default function BeddingAndLitterTypesPage() {
       <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="ferret-com"
+        heroHop={<>
+          <PrimaryHop href="/go/amazon-brand/ferret+hammock?s=care-bedding-and-litter-types" label="Search Amazon for a ferret hammock" />
+          <HopDisclosure tone="on-dark" siteId="ferret-com" href="/go/amazon-brand/ferret+hammock?s=care-bedding-and-litter-types" />
+        </>}
         hero={{
           title: 'Bedding & Litter Types',
           subtitle:

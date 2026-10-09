@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, StockImage, RelatedLinks, TableOfContents, FAQAccordion, DropCap, CrossPortfolioCard, ArticleSourcesList, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, StockImage, RelatedLinks, TableOfContents, FAQAccordion, DropCap, CrossPortfolioCard, ArticleSourcesList, ShopCtas, PrimaryHop } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 
@@ -124,6 +124,10 @@ export default function FerretInsulinomaPage() {
       <ArticleLayout
         siteId="ferret-com"
         contentType="health"
+        heroHop={<>
+          <PrimaryHop href="/go/amazon-brand/carnivore+care+critical+care+formula?s=health-insulinoma" label="Search Amazon for a carnivore-care critical-care formula" />
+          <HopDisclosure tone="on-dark" siteId="ferret-com" href="/go/amazon-brand/carnivore+care+critical+care+formula?s=health-insulinoma" />
+        </>}
         hero={{
           title: 'Insulinoma in Ferrets',
           subtitle:

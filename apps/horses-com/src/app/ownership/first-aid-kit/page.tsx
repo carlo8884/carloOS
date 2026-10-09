@@ -67,8 +67,8 @@ export default function FirstAidKitPage() {
           { title: 'Senior Horse Care', href: '/ownership/senior-horse-care' },
         ]}
         heroHop={<>
-          <PrimaryHop href="/go/amazon-brand/sterile+saline+wound+flush+horse?s=ownership-first-aid-kit" label="Search Amazon for sterile saline wound flush for horses" />
-          <HopDisclosure tone="on-dark" siteId="horses-com" href="/go/amazon-brand/sterile+saline+wound+flush+horse?s=ownership-first-aid-kit" />
+          <PrimaryHop href="/go/amazon-brand/nonstick+wound+dressing+pads+horse?s=ownership-first-aid-kit" label="Search Amazon for nonstick wound dressing pads" />
+          <HopDisclosure tone="on-dark" siteId="horses-com" href="/go/amazon-brand/nonstick+wound+dressing+pads+horse?s=ownership-first-aid-kit" />
         </>}
         hero={{
           title: "Equine First-Aid Kit",
