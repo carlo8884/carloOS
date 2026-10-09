@@ -1,6 +1,7 @@
+import { HopDisclosure } from '../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import {
+import { PrimaryHop,
   buildMetadata,
   buildBreadcrumbSchema,
   combineSchemas,
@@ -201,6 +202,12 @@ export default function SymptomsHubPage() {
         imageAlt="A veterinarian examining a pet during a check-up"
         primaryCta={{ href: '/find-a-vet', label: 'Find a vet' }}
         secondaryCta={{ href: '/health/emergency-signs', label: 'Emergency signs' }}
+        hop={
+          <>
+            <PrimaryHop href="/go/amazon-brand/digital+pet+thermometer?s=symptoms" label="Search Amazon for a digital pet thermometer" />
+            <HopDisclosure tone="on-dark" siteId="vets-co" href="/go/amazon-brand/digital+pet+thermometer?s=symptoms" />
+          </>
+        }
       />
       <div className="px-container-sm sm:px-container pt-6 pb-2 bg-brand-surface border-b border-brand-border">
         <p className="text-xs text-brand-text-light max-w-3xl leading-relaxed">

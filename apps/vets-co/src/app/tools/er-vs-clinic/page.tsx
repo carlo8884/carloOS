@@ -9,6 +9,7 @@ import {
   combineSchemas,
   SchemaScript,
   FAQAccordion,
+  PrimaryHop,
   ShopCtas,
   JourneyNext,
   CrossPortfolioCard,
@@ -159,6 +160,10 @@ export default function ErVsClinicPage() {
           >
             ER vs Clinic vs Telehealth
           </h1>
+          <div data-fold="offer">
+            <PrimaryHop href="/go/amazon-brand/pet+first+aid+kit?s=tools-er-vs-clinic" label="Search Amazon for a pet first-aid kit" />
+            <HopDisclosure tone="on-dark" siteId="vets-co" href="/go/amazon-brand/pet+first+aid+kit?s=tools-er-vs-clinic" />
+          </div>
           <p className="text-lg text-white/55 leading-relaxed max-w-2xl">
             Where should this go — emergency hospital now, clinic tomorrow, or a licensed vet on
             a screen? Select the signs. The tool returns the more urgent setting. It does not

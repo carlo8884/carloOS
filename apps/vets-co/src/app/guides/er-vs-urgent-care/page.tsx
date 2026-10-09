@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, PrimaryHop, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "ER vs. Urgent Care vs. Regular Vet — Where to Go | Vets.co", description: "Knowing whether to go to the emergency hospital, an urgent care clinic, or your regular vet saves time, money, and sometimes lives. Here is how to decide.", path: '/guides/er-vs-urgent-care', type: 'article' })
@@ -15,6 +16,10 @@ export default function ERvsUrgentPage() {
       <SchemaScript schema={schema} />
       <ArticleLayout siteId="vets-co"
         hero={{ title: 'ER vs. Urgent Care vs. Regular Vet', subtitle: 'When something is wrong with your pet, knowing where to go — the emergency hospital, an urgent care clinic, or your regular veterinarian — saves time, money, and sometimes your pet\'s life. This guide explains what each setting is for and how to match the severity and timing of a problem to the right level of care.', category: 'Owner Guide', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '8 min',}}
+        heroHop={<>
+          <PrimaryHop href="/go/amazon-brand/pet+first+aid+kit?s=guides-er-vs-urgent-care" label="Search Amazon for a pet first-aid kit" />
+          <HopDisclosure tone="on-dark" siteId="vets-co" href="/go/amazon-brand/pet+first+aid+kit?s=guides-er-vs-urgent-care" />
+        </>}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Guides', href: '/guides' }, { name: 'ER vs. Urgent Care', href: '/guides/er-vs-urgent-care' }]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">

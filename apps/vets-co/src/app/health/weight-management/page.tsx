@@ -1,7 +1,7 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, PrimaryHop, RelatedLinks, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 
@@ -23,6 +23,10 @@ export default function WeightManagementPage() {
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="vets-co"
         hero={{ title: 'Weight Management in Dogs and Cats', subtitle: 'Roughly 59% of US dogs are overweight or obese (APOP 2022 survey). Excess weight is not a cosmetic issue — it is the leading modifiable risk factor for arthritis, diabetes, respiratory disease, cardiac stress, reduced mobility, and shortened lifespan in dogs. A dog at ideal body weight lives on average ~1.8 years longer than the same dog kept overweight (Kealy et al., Purina Lifespan Study, JAVMA 2002). That survey figure is for dogs. Cat checks are the tools linked below, not this dog example.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', publishedAt: 'May 2025', readTime: '9 min',}}
+        heroHop={<>
+          <PrimaryHop href="/go/amazon-brand/digital+pet+scale?s=health-weight-management" label="Search Amazon for a digital pet scale" />
+          <HopDisclosure tone="on-dark" siteId="vets-co" href="/go/amazon-brand/digital+pet+scale?s=health-weight-management" />
+        </>}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Weight Management', href: '/health/weight-management' }]}
         relatedLinks={[
           { title: 'Daily Cat Food Grams', href: '/tools/cat-food-amount-calculator', category: 'Tool' },

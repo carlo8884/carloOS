@@ -6,6 +6,7 @@ import {
   EmailCapture,
   FAQAccordion,
   buildBreadcrumbSchema,
+  PrimaryHop,
   ShopCtas,
   PriceAsOf
 } from '@carloOS/ui'
@@ -185,6 +186,10 @@ export default function EmergencyTriageCardPage() {
             Pet Emergency<br />
             <span className="text-brand-primary">Triage Guide.</span>
           </h1>
+          <div data-fold="offer">
+            <PrimaryHop href="/go/amazon-brand/pet+first+aid+kit?s=emergency-triage" label="Search Amazon for a pet first-aid kit" />
+            <HopDisclosure tone="on-dark" siteId="vets-co" href="/go/amazon-brand/pet+first+aid+kit?s=emergency-triage" />
+          </div>
           <PriceAsOf date="2026-10-04" tone="dark" />
           <p className="text-lg font-light text-white/65 leading-relaxed max-w-xl mb-8">When a pet symptom is ER-immediate, when it
             is same-day vet, and when it is safe to monitor at home. Species-specific vitals for

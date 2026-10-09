@@ -9,6 +9,7 @@
     "./tailwind": "./tailwind.preset.ts",
     "./robots": "./robots.ts",
     "./indexing": "./indexing.ts",
+    "./apex-redirect": "./apex-redirect.ts",
     "./security-headers": "./security-headers.ts",
     "./affiliate-hop": "./affiliate-hop.ts",
     "./directory": "./directory.ts",
