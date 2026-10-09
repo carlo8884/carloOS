@@ -31,7 +31,7 @@ export default function BestDogBedsPage() {
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">Buyer's Guide</span>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Dog Beds 2026</h1>
         <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">The Big Barker orthopedic bed is the top bed because a published study measured sleep in large dogs with arthritis.</p>
-        <PriceAsOf date="2026-10-09" tone="dark" />
+        <PriceAsOf date="2026-10-08" tone="dark" />
         <div data-fold="offer">
           <PrimaryHop href='/go/amazon/B009G9Y59S?s=reviews-best-dog-beds' label='Check price of the Big Barker 7-inch orthopedic bed on Amazon' />
         <HopDisclosure tone="on-dark" siteId="dog-com" href="/go/amazon/B009G9Y59S?s=reviews-best-dog-beds" />
