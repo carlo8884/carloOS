@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import Link from 'next/link'
-import { TableShopLink, RelatedReads, ComparisonFoot, EmailCapture, buildMetadata, ReviewCard, QuickPicks, CrossPortfolioCard, RelatedLinks, FAQAccordion, PriceAsOf} from '@carloOS/ui'
+import { TableShopLink, RelatedReads, ComparisonFoot, EmailCapture, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, CrossPortfolioCard, RelatedLinks, FAQAccordion, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, buildBreadcrumbSchema, SchemaScript, buildItemListSchema} from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -104,7 +104,8 @@ export default function BestEquineSupplementsPage() {
         <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">Platinum Performance Equine is the top wellness supplement because one daily serving combines omega-3s, antioxidants, and amino acids.</p>
         <PriceAsOf date="2026-10-04" tone="dark" />
         <div data-fold="offer">
-          <HopDisclosure tone="on-dark" siteId="horses-com" href="/go/amazon-brand/standlee+premium+forage+pellets?s=reviews-best-equine-supplements" />
+          <HopDisclosure tone="on-dark" siteId="horses-com" href="/go/amazon/B0037PL6QW?s=reviews-best-equine-supplements" />
+          <PrimaryHop href="/go/amazon/B0037PL6QW?s=reviews-best-equine-supplements" label="Check price of KER EO-3 on Amazon" />
         </div>
         <EmailCapture
           variant="inline"
