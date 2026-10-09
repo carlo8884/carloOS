@@ -141,18 +141,8 @@ export function HomeTriage() {
                 <StockImage manifestKey="fish-com:cornerstone-cycling" alt="A freshwater aquarium test kit being used to check water parameters" aspect="4:3" subtleCredit />
               </div>
               <div className="pr-3 py-2">
-                <div className="mb-1 flex items-center gap-2">
-                  <div className={`relative h-7 w-10 shrink-0 overflow-hidden rounded-md bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                    <StockImage manifestKey="fish-com:cornerstone-cycling" alt="A freshwater aquarium test kit being used to check water parameters" aspect="4:3" subtleCredit />
-                  </div>
-                  <div className="font-display font-bold text-white text-sm leading-tight italic group-hover:text-[#3aa4cc]">Health guides</div>
-                </div>
-                <div className="text-xs text-white/55 mt-0.5 flex items-center gap-2">
-                  <div className={`relative h-6 w-9 shrink-0 overflow-hidden rounded-md bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                    <StockImage manifestKey="fish-com:cornerstone-cycling" alt="" aspect="4:3" />
-                  </div>
-                  <span>Spikes, gasping, and when to test.</span>
-                </div>
+                <div className="font-display font-bold text-white text-sm leading-tight italic group-hover:text-[#3aa4cc]">Health guides</div>
+                <div className="text-xs text-white/55 mt-0.5">Spikes, gasping, and when to test.</div>
               </div>
             </Link>
           </div>
@@ -203,18 +193,8 @@ export function HomeTriage() {
                 <StockImage manifestKey="fish-com:species-thumb-corydoras" alt="Corydoras catfish" aspect="4:3" subtleCredit />
               </div>
               <div className="pr-3 py-2">
-                <div className="mb-1 flex items-center gap-2">
-                  <div className={`relative h-7 w-10 shrink-0 overflow-hidden rounded-md bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                    <StockImage manifestKey="fish-com:species-thumb-corydoras" alt="Corydoras catfish" aspect="4:3" subtleCredit />
-                  </div>
-                  <div className="font-display font-bold text-brand-dark text-sm leading-tight italic group-hover:text-brand-primary">Editorial standards</div>
-                </div>
-                <div className="text-xs text-brand-text-mid mt-0.5 flex items-center gap-2">
-                  <div className={`relative h-6 w-9 shrink-0 overflow-hidden rounded-md bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                    <StockImage manifestKey="fish-com:species-thumb-corydoras" alt="" aspect="4:3" />
-                  </div>
-                  <span>Signed guides, no invented experts.</span>
-                </div>
+                <div className="font-display font-bold text-brand-dark text-sm leading-tight italic group-hover:text-brand-primary">Editorial standards</div>
+                <div className="text-xs text-brand-text-mid mt-0.5">Signed guides, no invented experts.</div>
               </div>
             </Link>
           </div>
@@ -229,20 +209,10 @@ export function HomeTriage() {
                   <StockImage manifestKey={item.imageKey} alt={item.imageAlt} aspect="16:9" subtleCredit />
                 </div>
                 <div className="p-3.5">
-                  <div className="flex items-center gap-2.5 mb-1">
-                    <div className={`relative h-8 w-12 shrink-0 overflow-hidden rounded-md bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                      <StockImage manifestKey={item.imageKey} alt={item.imageAlt} aspect="4:3" />
-                    </div>
-                    <div className="font-display font-bold text-brand-dark text-sm leading-tight italic group-hover:text-brand-primary">
-                      {item.label}
-                    </div>
+                  <div className="font-display font-bold text-brand-dark text-sm leading-tight italic group-hover:text-brand-primary">
+                    {item.label}
                   </div>
-                  <div className="text-xs text-brand-text-mid mt-1 leading-relaxed flex items-start gap-2">
-                    <div className={`relative mt-0.5 h-6 w-9 shrink-0 overflow-hidden rounded-md bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                      <StockImage manifestKey={item.imageKey} alt="" aspect="4:3" />
-                    </div>
-                    <span>{item.note}</span>
-                  </div>
+                  <div className="text-xs text-brand-text-mid mt-1 leading-relaxed">{item.note}</div>
                 </div>
               </Link>
             ))}
@@ -265,12 +235,7 @@ export function HomeTriage() {
                 <span className="text-xs font-bold tracking-eyebrow uppercase text-[#3aa4cc] group-hover:text-white">Decide with math, not guesses</span>
               </Link>
             </div>
-            <div className="flex items-center gap-2.5">
-              <div className={`relative h-8 w-12 shrink-0 overflow-hidden rounded-md bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                <StockImage manifestKey="fish-com:category-planted" alt="Lush aquatic plants in a planted aquarium" aspect="4:3" />
-              </div>
-              <div className="text-sm sm:text-base text-white font-semibold">6 free aquarist calculators — volume, stocking, heater wattage, water changes, CO₂, cycling</div>
-            </div>
+            <div className="text-sm sm:text-base text-white font-semibold">6 free aquarist calculators — volume, stocking, heater wattage, water changes, CO₂, cycling</div>
           </div>
           <Link
             href="/tools"
@@ -280,18 +245,8 @@ export function HomeTriage() {
               <StockImage manifestKey="fish-com:species-thumb-betta" alt="A betta fish" aspect="4:3" subtleCredit />
             </div>
             <div className="pr-3 py-2">
-              <div className="mb-1 flex items-center gap-2">
-                <div className={`relative h-7 w-10 shrink-0 overflow-hidden rounded-md bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                  <StockImage manifestKey="fish-com:species-thumb-betta" alt="A betta fish" aspect="4:3" subtleCredit />
-                </div>
-                <div className="font-display font-bold text-white text-sm leading-tight italic group-hover:text-[#3aa4cc]">All calculators</div>
-              </div>
-              <div className="text-xs text-white/55 mt-0.5 flex items-center gap-2">
-                <div className={`relative h-6 w-9 shrink-0 overflow-hidden rounded-md bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                  <StockImage manifestKey="fish-com:species-thumb-betta" alt="" aspect="4:3" />
-                </div>
-                <span>Volume, stocking, heater, CO₂, cycling.</span>
-              </div>
+              <div className="font-display font-bold text-white text-sm leading-tight italic group-hover:text-[#3aa4cc]">All calculators</div>
+              <div className="text-xs text-white/55 mt-0.5">Volume, stocking, heater, CO₂, cycling.</div>
             </div>
           </Link>
         </div>
@@ -301,10 +256,7 @@ export function HomeTriage() {
               <div className={`relative h-16 bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
                 <StockImage manifestKey={c.imageKey} alt={c.imageAlt} aspect="16:9" subtleCredit />
               </div>
-              <div className="flex items-center gap-2 px-2.5 py-2">
-                <div className={`relative h-7 w-10 shrink-0 overflow-hidden rounded-md bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                  <StockImage manifestKey={c.imageKey} alt={c.imageAlt} aspect="4:3" subtleCredit />
-                </div>
+              <div className="px-2.5 py-2">
                 <span className="text-xs font-semibold text-white leading-tight">{c.title}</span>
               </div>
             </Link>
