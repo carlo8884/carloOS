@@ -284,11 +284,10 @@ export default function VetsPetInsurancePage() {
         </div>
       </div>
       <RelatedReads siteId="vets-co" path="/reviews/best-pet-insurance" />
-          <ArticleSourcesList
-            title="Sources"
+          <ArticleSourcesList title="Sources"
             sources={[
-            { label: "www.healthypawspetinsurance.com/pet-insurance-claims.html", url: "https://www.healthypawspetinsurance.com/pet-insurance-claims.html", publisher: "www.healthypawspetinsurance.com" },
-            { label: "www.embracepetinsurance.com/coverage/wellness-rewards", url: "https://www.embracepetinsurance.com/coverage/wellness-rewards", publisher: "www.embracepetinsurance.com" },
+            { label: 'Healthy Paws claims', url: 'https://www.healthypawspetinsurance.com/pet-insurance-claims.html', publisher: 'Healthy Paws' },
+            { label: 'Embrace Wellness Rewards', url: 'https://www.embracepetinsurance.com/coverage/wellness-rewards', publisher: 'Embrace' },
             ]}
           />
     </>

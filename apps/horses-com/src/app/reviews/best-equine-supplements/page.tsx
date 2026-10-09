@@ -506,12 +506,11 @@ export default function BestEquineSupplementsPage() {
         </div>
       </div>
       <RelatedReads siteId="horses-com" path="/reviews/best-equine-supplements" />
-          <ArticleSourcesList
-            title="Sources"
+          <ArticleSourcesList title="Sources"
             sources={[
             { label: "American Association of Equine Practitioners owner resources", url: "https://aaep.org/", publisher: "AAEP" },
             { label: "FDA Center for Veterinary Medicine", url: "https://www.fda.gov/animal-veterinary", publisher: "FDA" },
-            { label: "www.cosequin.com/product/horses/cosequin-asu-plus", url: "https://www.cosequin.com/product/horses/cosequin-asu-plus", publisher: "www.cosequin.com" },
+            { label: 'Cosequin ASU Plus', url: 'https://www.cosequin.com/product/horses/cosequin-asu-plus', publisher: 'Cosequin' },
             ]}
           />
     </>

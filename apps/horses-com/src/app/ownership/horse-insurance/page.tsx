@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ComparisonFoot, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, CrossSiteHelp, FAQAccordion, RelatedLinks, TableOfContents, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
+import { ComparisonFoot, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, CrossSiteHelp, FAQAccordion, RelatedLinks, TableOfContents, LastUpdated } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
@@ -206,12 +206,6 @@ export default function HorseInsurancePage() {
           <h2 id="references">Scope</h2>
           <p>This page is a plain-language map of cover types. It does not quote a carrier, a premium, a payout percentage, or a scored ranking. Read the policy for exclusions before relying on any of it.</p>
         </div>
-          <ArticleSourcesList
-            title="Sources"
-            sources={[
-            { label: 'American Association of Equine Practitioners owner resources', url: 'https://aaep.org/', publisher: 'AAEP' },
-            ]}
-          />
       </ArticleLayout>
     </>
   )

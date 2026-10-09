@@ -112,10 +112,9 @@ export default function HealthyPawsVsPetsBestGuidePage() {
         <p>Start the Healthy Paws quote when one plan and two levers are enough, and wellness coverage is not the reason you are buying. Start the Pets Best quote when you want several tiers, including for an older pet the card says can still enroll, and you are willing to compare more structures. On both, read the annual limit, exclusions, and waiting periods in the sample policy. Do not treat either quote-based line as a price from this page.</p>
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
-                <ArticleSourcesList
-            title="Sources"
+                <ArticleSourcesList title="Sources"
             sources={[
-            { label: "www.petsbest.com/faq", url: "https://www.petsbest.com/faq", publisher: "www.petsbest.com" },
+            { label: 'Pets Best FAQ', url: 'https://www.petsbest.com/faq', publisher: 'Pets Best' },
             ]}
           />
       </div>

@@ -115,11 +115,10 @@ export default function LemonadeVsPetsBestGuidePage() {
         <p>Lemonade’s FAQ, fetched 2026-10-08, says signing up while a pet is young and healthy means they are not denied coverage at renewal because of age (<span className="break-all">https://www.lemonade.com/pet/explained/lemonade-pet-insurance-faq/</span>). Our notes mark Lemonade for owners with younger pets. Pets Best’s FAQ, fetched the same day, says there is no upper age limit (<span className="break-all">https://www.petsbest.com/faq</span>).</p>
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
-                <ArticleSourcesList
-            title="Sources"
+                <ArticleSourcesList title="Sources"
             sources={[
-            { label: "www.petsbest.com/faq", url: "https://www.petsbest.com/faq", publisher: "www.petsbest.com" },
-            { label: "www.lemonade.com/pet/explained/lemonade-pet-insurance-faq/", url: "https://www.lemonade.com/pet/explained/lemonade-pet-insurance-faq/", publisher: "www.lemonade.com" },
+            { label: 'Pets Best FAQ', url: 'https://www.petsbest.com/faq', publisher: 'Pets Best' },
+            { label: 'Lemonade pet insurance FAQ', url: 'https://www.lemonade.com/pet/explained/lemonade-pet-insurance-faq/', publisher: 'Lemonade' },
             ]}
           />
       </div>

@@ -102,10 +102,9 @@ export default function TrupanionVsHealthyPawsGuidePage() {
         />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
-                <ArticleSourcesList
-            title="Sources"
+                <ArticleSourcesList title="Sources"
             sources={[
-            { label: "www.healthypawspetinsurance.com/pet-insurance-claims.html", url: "https://www.healthypawspetinsurance.com/pet-insurance-claims.html", publisher: "www.healthypawspetinsurance.com" },
+            { label: 'Healthy Paws claims', url: 'https://www.healthypawspetinsurance.com/pet-insurance-claims.html', publisher: 'Healthy Paws' },
             ]}
           />
       </div>

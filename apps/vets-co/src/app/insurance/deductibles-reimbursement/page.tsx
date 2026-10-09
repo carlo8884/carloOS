@@ -218,10 +218,9 @@ export default function DeductiblesPage() {
 
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
-                  <ArticleSourcesList
-            title="Sources"
+                  <ArticleSourcesList title="Sources"
             sources={[
-            { label: "www.petsbest.com/faq", url: "https://www.petsbest.com/faq", publisher: "www.petsbest.com" },
+            { label: 'Pets Best FAQ', url: 'https://www.petsbest.com/faq', publisher: 'Pets Best' },
             ]}
           />
         </div>

@@ -80,9 +80,7 @@ export default function Page() {
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
 
-          <ArticleSourcesList sources={[
-            { label: 'A Consumer’s Guide to Pet Insurance', url: 'https://content.naic.org/cipr-topics/pet-insurance', publisher: 'NAIC' },
-            { label: 'Pet Insurance Model Act (pre-existing condition definitions)', url: 'https://content.naic.org/', publisher: 'NAIC' },
+          <ArticleSourcesList title="Sources" sources={[
             { label: 'Sample carrier policy documents (curable vs. incurable, bilateral exclusions)', publisher: 'General carrier policy disclosures (not an endorsement)' },
           ]} />
         </div>

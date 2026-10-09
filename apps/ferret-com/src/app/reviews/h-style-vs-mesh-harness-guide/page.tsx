@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildItemListSchema, buildMetadata, combineSchemas, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildItemListSchema, buildMetadata, combineSchemas, LastUpdated } from '@carloOS/ui'
 import { HopDisclosure } from '../../../components/HopDisclosure'
 
 export const metadata: Metadata = buildMetadata({
@@ -103,12 +103,6 @@ export default function HStyleVsMeshGuidePage() {
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
       </div>
-          <ArticleSourcesList
-            title="Sources"
-            sources={[
-            { label: 'American Ferret Association', url: 'https://www.ferret.org/', publisher: 'AFA' },
-            ]}
-          />
     </ArticleLayout>
   )
 }

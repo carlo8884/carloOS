@@ -103,10 +103,9 @@ export default function KayteeVsFerretNationGuidePage() {
         <p>The Ferret Nation double is the group cage because the manufacturer page says the full-width double doors open for cleaning and feeding (https://www.midwesthomes4pets.com/product/small-animal/habitats-cages/ferret-nation/, fetched 2026-10-08).</p>
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
-                <ArticleSourcesList
-            title="Sources"
+                <ArticleSourcesList title="Sources"
             sources={[
-            { label: "www.midwesthomes4pets.com/product/small-animal/habitats-cages/ferret-nation/", url: "https://www.midwesthomes4pets.com/product/small-animal/habitats-cages/ferret-nation/", publisher: "www.midwesthomes4pets.com" },
+            { label: 'Ferret Nation cage', url: 'https://www.midwesthomes4pets.com/product/small-animal/habitats-cages/ferret-nation/', publisher: 'Midwest Homes for Pets' },
             ]}
           />
       </div>

@@ -165,11 +165,10 @@ export default function WhenToEnrollPage() {
 
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
-                  <ArticleSourcesList
-            title="Sources"
+                  <ArticleSourcesList title="Sources"
             sources={[
-            { label: "www.petsbest.com/faq", url: "https://www.petsbest.com/faq", publisher: "www.petsbest.com" },
-            { label: "www.lemonade.com/pet/explained/lemonade-pet-insurance-faq/", url: "https://www.lemonade.com/pet/explained/lemonade-pet-insurance-faq/", publisher: "www.lemonade.com" },
+            { label: 'Pets Best FAQ', url: 'https://www.petsbest.com/faq', publisher: 'Pets Best' },
+            { label: 'Lemonade pet insurance FAQ', url: 'https://www.lemonade.com/pet/explained/lemonade-pet-insurance-faq/', publisher: 'Lemonade' },
             ]}
           />
         </div>

@@ -15,8 +15,6 @@ export const metadata: Metadata = buildMetadata({
 const PAGE_URL = 'https://ferret.com/reviews/best-ferret-litter'
 
 const SOURCES = [
-  { label: "American Ferret Association", url: "https://www.ferret.org/", publisher: "AFA" },
-  { label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery", url: "https://www.elsevier.com/books/ferrets-rabbits-and-rodents/quesenberry/978-1-4160-6621-7", publisher: "Elsevier" },
   { label: 'Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery (husbandry & respiratory disease)', publisher: 'Quesenberry & Carpenter, Saunders/Elsevier' },
   { label: 'Softwood bedding phenols and small-mammal respiratory irritation (review of the literature)', publisher: 'Laboratory-animal husbandry references' },
   { label: 'Ferret litter and bedding guidance', publisher: 'American Ferret Association' },
@@ -372,7 +370,7 @@ export default function BestFerretLitterPage() {
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
 
-          <ArticleSourcesList sources={SOURCES} />
+          <ArticleSourcesList title="Sources" sources={SOURCES} />
 
           <p className="text-sm text-brand-text-light">
             This guide describes how to choose a litter type against published safety criteria; it is not individualized

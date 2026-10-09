@@ -1,7 +1,7 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata, PrimaryHop, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
+import { ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata, PrimaryHop, LastUpdated } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -105,12 +105,6 @@ export default function VestVsHHarnessGuidePage() {
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
       </div>
-          <ArticleSourcesList
-            title="Sources"
-            sources={[
-            { label: 'American Ferret Association', url: 'https://www.ferret.org/', publisher: 'AFA' },
-            ]}
-          />
     </ArticleLayout>
   )
 }
