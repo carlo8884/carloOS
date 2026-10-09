@@ -12,6 +12,7 @@ import {
   FAQAccordion,
   ArticleSourcesList,
   CrossPortfolioCard,
+  PrimaryHop,
   ShopCtas,
 } from '@carloOS/ui'
 import TriageHelper from './TriageHelper'
@@ -164,6 +165,10 @@ export default function IsThisACatEmergencyPage() {
           >
             Is This a Cat Emergency?
           </h1>
+          <div data-fold="offer">
+            <PrimaryHop href="/go/amazon-brand/pet+first+aid+kit?s=tools-is-this-a-cat-emergency" label="Search Amazon for a pet first-aid kit" />
+            <HopDisclosure tone="on-dark" siteId="vets-co" href="/go/amazon-brand/pet+first+aid+kit?s=tools-is-this-a-cat-emergency" />
+          </div>
           <p className="text-lg text-white/55 leading-relaxed max-w-2xl">
             Check the feline signs you are seeing and get a conservative urgency read — go now, same-day vet, or
             monitor closely — using emergency-vs-wait criteria from veterinary emergency medicine.

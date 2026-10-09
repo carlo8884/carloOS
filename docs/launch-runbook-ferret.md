@@ -36,7 +36,7 @@ Network Solutions may label `@` as blank or as `ferret.com`. Drop the trailing d
 
 ## Order
 
-1. Vercel → project `ferret-com` → Settings → Domains. `ferret.com` and `www.ferret.com` are already there. Add a row only if it is missing. Set `www.ferret.com` to redirect to `ferret.com` with status 308.
+1. Vercel → project `ferret-com` → Settings → Domains. `ferret.com` and `www.ferret.com` are already there. Add a row only if it is missing. Set `www.ferret.com` to redirect to `ferret.com` with status 308. App middleware already returns that 308 when the domain redirect is still unset. Previews stay noindex.
 2. At Network Solutions, publish the records above. Leave the nameservers.
 3. Wait until the domain card says the certificate is valid. That is usually a few minutes after Vercel sees the records.
 4. On this project only, set Production `SITE_INDEXABLE` to `ferret.com`. Do not set `true`. Leave the variable unset on `dog-com`, `carlo-os-fish-com`, `horses-com`, and `carlo-os-vets-co`.

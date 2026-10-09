@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, PrimaryHop, RelatedLinks, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "How to Afford Vet Care — Options That Actually Help | Vets.co", description: "Pet insurance, emergency funds, payment plans, charitable funds, and veterinary schools can all help cover vet bills. Here are realistic options to explore.", path: '/guides/how-to-afford-vet-care', type: 'article' })
@@ -16,6 +16,10 @@ export default function AffordVetCarePage() {
       <SchemaScript schema={schema} />
       <ArticleLayout siteId="vets-co"
         hero={{ title: 'How to Afford Vet Care', subtitle: 'A large or unexpected veterinary bill can be daunting, but more options exist than many owners realize — from insurance and emergency savings to financing, assistance funds, and open conversations with your veterinary team. This guide lays out realistic ways to prepare for and manage the cost of caring for your pet.', category: 'Owner Guide', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '9 min',}}
+        heroHop={<>
+          <PrimaryHop href="/go/amazon-brand/cash+envelope+budget+system?s=guides-how-to-afford-vet-care" label="Search Amazon for a cash envelope budget system" />
+          <HopDisclosure tone="on-dark" siteId="vets-co" href="/go/amazon-brand/cash+envelope+budget+system?s=guides-how-to-afford-vet-care" />
+        </>}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Guides', href: '/guides' }, { name: 'How to Afford Vet Care', href: '/guides/how-to-afford-vet-care' }]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">

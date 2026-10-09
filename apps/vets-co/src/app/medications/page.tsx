@@ -1,6 +1,7 @@
+import { HopDisclosure } from '../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import {
+import { PrimaryHop,
   buildMetadata,
   buildBreadcrumbSchema,
   combineSchemas,
@@ -124,6 +125,10 @@ export default function MedicationsHubPage() {
         >
           Pet Medications
         </h1>
+        <div data-fold="offer">
+          <PrimaryHop href="/go/amazon-brand/pet+pill+organizer?s=medications" label="Search Amazon for a pet pill organizer" />
+          <HopDisclosure tone="on-dark" siteId="vets-co" href="/go/amazon-brand/pet+pill+organizer?s=medications" />
+        </div>
         <p className="text-lg font-light text-white/60 max-w-2xl leading-relaxed">
           What {Medications.length} common dog and cat prescription medications treat, what side
           effects to watch for, what monitoring is required, and when to call the vet — sourced from{' '}
