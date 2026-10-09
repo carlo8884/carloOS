@@ -62,23 +62,9 @@ export default function SeniorBloodworkPage() {
           <p><strong>Glucose in urine (glucosuria):</strong> Glucose should not be in urine. Glucosuria indicates either blood glucose above the renal threshold (diabetes) or — in the absence of hyperglycemia — primary renal glucosuria (renal tubular disease).</p>
           <p><strong>Bacteria and white cells:</strong> Urinary tract infection. Culture and sensitivity testing should be performed on any urine showing bacterial growth to guide antibiotic selection — empirical antibiotic treatment without culture misses resistant organisms. When the clinic asks for a home free-catch sample to travel with the dog, a sterile urine specimen cup is that container — a first-morning catch with a lid, not a fecal-sample collection kit, not a leak-proof specimen bag, and not a clinic cystocentesis. It does not replace culture technique the laboratory requires, and it does not treat a UTI.</p>
 
-          <h2 id="kit">Senior-dog bloodwork-visit kit</h2>
+          <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Everyday physical supplies that match the
-            serial-panel, urinalysis, and fasting-glucose
-            copy on this page — a letter-size expanding
-            file organizer so CBC, chemistry, and SDMA
-            printouts stay in date order, a sterile
-            urine specimen cup so a first-morning
-            free-catch sample can travel with the dog
-            when the clinic asks for a home urinalysis,
-            and a 12-hour mechanical kitchen timer so
-            the pre-chemistry food hold is a set window. These are household visit-prep tools, not
-            treatments. They do not interpret labs, they
-            do not diagnose CKD or diabetes, they do not
-            replace a veterinarian, and they are not a
-            ranked product list. This page does
-            not hop diagnosis kits that imply treatment. This page does not claim hands-on testing. </p>
+            Keep these on hand: a letter-size expanding file organizer so CBC, chemistry, and SDMA printouts stay in date order, a sterile urine specimen cup so a first-morning free-catch sample can travel with the dog when the clinic asks for a home urinalysis, and a 12-hour mechanical kitchen timer so the pre-chemistry food hold is a set window. These are household visit-prep tools, not treatments. They do not interpret labs, they do not diagnose CKD or diabetes, they do not replace a veterinarian, and they are not a ranked product list. </p>
 
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/letter+size+expanding+file+organizer?s=health-senior-bloodwork-guide", "/go/amazon-brand/sterile+urine+specimen+cup?s=health-senior-bloodwork-guide", "/go/amazon-brand/12+hour+mechanical+kitchen+timer?s=health-senior-bloodwork-guide"]} />
 

@@ -73,7 +73,7 @@ export default function LowTechPlantedTankPage() {
         <p>The low-tech tank is defined by its easy upkeep: a weekly or biweekly water change, occasional trimming of the faster growers, glass cleaning as needed, and light feeding of any fish. The slow growth means the scape holds its shape for long stretches without intervention. This forgiving rhythm is what makes the low-tech approach ideal for beginners and busy keepers alike, and it pairs naturally with the gentle conditions favored by nano fish and shrimp. For the broader setup mechanics shared with high-tech tanks, see the <a href="/setup/planted-tank-setup">planted tank setup guide</a>.</p>
 
         <h2 id="kit">Low-tech planted kit</h2>
-        <p>Everyday physical supplies that match the no-CO2 copy above — an aquarium light timer so the photoperiod stays at six to eight hours, plus aquarium plant root tabs placed near swords and crypts. These are low-tech tools, not a ranked product list and not a first-tank filter / heater / test-kit order. Filters, heaters, digital thermometers, Seachem Prime, API Master Test Kit, gravel vacuums, aquasoil, Seiryu stone, spiderwood driftwood, magnetic scrapers, handheld algae scrapers, pressurized CO2 gear, and Flourish Excel stay off this kit — those already ship on the setup hub, equipment hub, aquascaping guide, algae-control guide, and CO2 calculator. This page does not claim hands-on testing.</p>
+        <p>Keep these on hand: an aquarium light timer so the photoperiod stays at six to eight hours, plus aquarium plant root tabs placed near swords and crypts. These are low-tech tools, not a ranked product list and not a first-tank filter / heater / test-kit order. Filters, heaters, digital thermometers, Seachem Prime, API Master Test Kit, gravel vacuums, aquasoil, Seiryu stone, spiderwood driftwood, magnetic scrapers, handheld algae scrapers, pressurized CO2 gear, and Flourish Excel stay off this kit — those already ship on the setup hub, equipment hub, aquascaping guide, algae-control guide, and CO2 calculator.</p>
 
         <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/aquarium+light+timer?s=setup-low-tech-planted-tank", "/go/amazon-brand/aquarium+plant+root+tabs?s=setup-low-tech-planted-tank"]} />
 
@@ -84,18 +84,10 @@ export default function LowTechPlantedTankPage() {
             first-tank filter / heater / test-kit / hardscape / scraper / CO2 hops. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-            Shop the low-tech planted kit
+            Shop these supplies
           </div>
           <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-            These Amazon category searches match the on-page
-            no-CO2 copy — an aquarium light timer and aquarium
-            plant root tabs. Everyday physical low-tech tools
-            only. They are not a ranked product list, they are not
-            a first-tank filter or heater, they are not a test kit
-            or a gravel vacuum, they are not aquasoil, Seiryu
-            stone, spiderwood, a magnetic scraper, a handheld
-            algae scraper, or pressurized CO2, and they do not
-            replace choosing easy plants.
+            Keep these on hand: an aquarium light timer and aquarium plant root tabs. Everyday physical low-tech tools only. They are not a ranked product list, they are not a first-tank filter or heater, they are not a test kit or a gravel vacuum, they are not aquasoil, Seiryu stone, spiderwood, a magnetic scraper, a handheld algae scraper, or pressurized CO2, and they do not replace choosing easy plants.
           </p>
           <div className="flex flex-col gap-3">
             <ShopCtas

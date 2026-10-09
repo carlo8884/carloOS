@@ -70,7 +70,7 @@ export default function FishLicePage() {
         <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/aquarium+quarantine+hospital+tank+net?s=health-fish-lice", "/go/amazon-brand/aquarium+sponge+filter?s=health-fish-lice"]} />
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
-            Shop a quarantine-tank kit
+            Shop these supplies
           </div>
           <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Prevention on this page is a 4–6 week quarantine of every new
             fish — both parasites would be visible well within that window

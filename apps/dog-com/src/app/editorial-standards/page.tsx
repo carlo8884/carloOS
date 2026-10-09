@@ -46,7 +46,7 @@ export default function EditorialStandardsPage() {
           <li><strong>Sources are cited where it matters.</strong> When a recommendation reflects a published guideline or study, we name the guideline or study so you can verify it yourself.</li>
           <li><strong>Current guidance.</strong> Where consensus guidance exists (WSAVA nutrition, AAHA preventive care, VOHC dental, etc.) we follow it rather than folk wisdom.</li>
           <li><strong>We say when evidence is thin.</strong> If a topic is contested or under-studied, we say so instead of pretending certainty.</li>
-          <li><strong>Honest scope.</strong> We don&apos;t claim hands-on testing we haven&apos;t done. Product write-ups are based on published reviews, manufacturer specifications, ingredient analysis, and aggregated owner feedback.</li>
+          <li><strong>Honest scope.</strong> Product write-ups are based on published reviews, manufacturer specifications, ingredient analysis, and aggregated owner feedback.</li>
         </ul>
 
         <h2>Affiliate Independence</h2>

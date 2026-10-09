@@ -96,7 +96,7 @@ export default function DogHeartDiseasePage() {
           <p>Advanced or refractory CHF may also include: torsemide (more potent diuretic), sildenafil (for pulmonary hypertension), digoxin (for rate control in atrial fibrillation), and in some cases thoracocentesis (draining pleural fluid) or abdominocentesis (draining ascites). A veterinary cardiologist is the appropriate specialist to guide CHF management — these medication combinations and their adjustments require cardiac expertise.</p>
 
           <h2 id="kit">A Simple Heart-Disease Home-Watch Kit</h2>
-          <p>These are household log-and-walk tools, not treatments. They do not diagnose a murmur, they do not replace echocardiography, they do not start pimobendan, they do not replace a veterinarian-directed cardiac diet (Hill&apos;s h/d, Royal Canin Cardiac), they do not treat left-sided or right-sided CHF, and they are not Vetmedin, furosemide, enalapril, or spironolactone. This page does not hop medications. This page does not claim hands-on testing.</p>
+          <p>Keep these on hand: one minute kitchen timer and step in padded dog harness. These are household log-and-walk tools, not treatments. They do not diagnose a murmur, they do not replace echocardiography, they do not start pimobendan, they do not replace a veterinarian-directed cardiac diet (Hill&apos;s h/d, Royal Canin Cardiac), they do not treat left-sided or right-sided CHF, and they are not Vetmedin, furosemide, enalapril, or spironolactone.</p>
 
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/one+minute+kitchen+timer?s=health-dog-heart-disease", "/go/amazon-brand/step+in+padded+dog+harness?s=health-dog-heart-disease"]} />
 

@@ -129,7 +129,7 @@ export default function FerretAnesthesiaRiskPage() {
           <>
             <TableOfContents
               items={[
-                { label: 'TL;DR', href: '#tldr' },
+                { label: '', href: '#tldr' },
                 { label: 'Why Ferrets Are Different', href: '#different' },
                 { label: 'The Short-Fast Rule', href: '#fasting' },
                 { label: 'Blood Sugar & Temperature', href: '#homeostasis' },
@@ -177,8 +177,7 @@ export default function FerretAnesthesiaRiskPage() {
             small size leaves a narrow margin for mistakes.
           </DropCap>
 
-          <h2 id="tldr">TL;DR</h2>
-          <p>
+                    <p>
             Ferret anesthesia is generally safe in experienced hands but carries
             species-specific risks. Ferrets lose body heat fast, are prone to
             low blood sugar (especially given the high background rate of

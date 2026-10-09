@@ -156,31 +156,17 @@ export default function ForageBasicsPage() {
 
           <h2 id="quality">Forage Quality</h2>
           <ul>
-            <li><strong>Cleanliness</strong> -- forage should be free of dust, mold, and weeds; moldy hay causes respiratory disease and colic. A horse hay-probe moisture tester is how you check a bale before it is stored or fed — it is not a hanging hay-bale scale (that lives on EMS) and not a hay steamer or soaking bag (those live on heaves).</li>
+            <li><strong>Cleanliness</strong> -- forage should be free of dust, mold, and weeds; moldy hay causes respiratory disease and colic. A horse hay-probe moisture tester is how you check a bale before it is stored or fed — it is not a hanging hay-bale scale and not a hay steamer or soaking bag.</li>
             <li><strong>Maturity at cutting</strong> -- earlier-cut forage is more digestible and higher in nutrients; very stemmy late-cut hay is largely filler.</li>
             <li><strong>Type</strong> -- grass versus legume (such as alfalfa) changes calories, protein, and calcium; match to the horse.</li>
-            <li><strong>Sugar and starch content</strong> -- matters greatly for laminitis-prone and metabolic horses; testing or soaking controls it. An equine hay-core sampler is how you pull a representative sample for the lab — it is not an EMS forage-NSC hay-test kit and not a timothy-hay hop (that lives on the feed calculator).</li>
+            <li><strong>Sugar and starch content</strong> -- matters greatly for laminitis-prone and metabolic horses; testing or soaking controls it. An equine hay-core sampler is how you pull a representative sample for the lab — it is not an EMS forage-NSC hay-test kit and not a timothy-hay hop.</li>
             <li><strong>Consistency</strong> -- change forage gradually, since the hindgut microbes need time to adapt.</li>
-            <li><strong>Keep forage off the ground</strong> -- a wall-mounted horse hay rack keeps a flake out of dirt, urine, and trampling so the horse is not eating contaminated forage. It is not a slow-feeder hay net (that lives in the ReviewCard above), not a small-hole net (that lives on easy-keeper), and not an equine slow-feeder hay box (that lives on turnout).</li>
+            <li><strong>Keep forage off the ground</strong> -- a wall-mounted horse hay rack keeps a flake out of dirt, urine, and trampling so the horse is not eating contaminated forage. It is not a slow-feeder hay net (that lives in the ReviewCard above), not a small-hole net, and not an equine slow-feeder hay box.</li>
           </ul>
 
-          <h2 id="kit">Barn forage-quality kit</h2>
+          <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Everyday physical supplies that match the
-            cleanliness, representative-sample, and
-            keep-forage-off-the-ground copy on this page — a
-            horse hay-probe moisture tester so moldy forage
-            is not stored or fed, an equine hay-core sampler
-            so a lab sample is representative rather than a
-            grab of the top flake, and a wall-mounted horse
-            hay rack so forage stays off dirty ground. These
-            are educational barn tools, not a ranked product
-            list, not a substitute for veterinary or
-            nutritionist care, and not a hanging hay-bale
-            scale, an EMS forage-NSC hay-test kit, or
-            strip-grazing posts (those live on EMS). This
-            page does not hop medications or vaccines. This
-            page does not claim hands-on testing.
+            Keep these on hand: a horse hay-probe moisture tester so moldy forage is not stored or fed, an equine hay-core sampler so a lab sample is representative rather than a grab of the top flake, and a wall-mounted horse hay rack so forage stays off dirty ground. These are educational barn tools, not a ranked product list, not a substitute for veterinary or nutritionist care, and not a hanging hay-bale scale, an EMS forage-NSC hay-test kit, or strip-grazing posts.
           </p>
 
           {/* Money path — live amazon-brand search hops

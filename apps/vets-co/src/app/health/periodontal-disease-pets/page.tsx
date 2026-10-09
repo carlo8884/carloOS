@@ -70,25 +70,9 @@ export default function PeriodontalDiseasePage() {
           <h2>Home Care and Prevention</h2>
           <p>Daily tooth brushing with pet-safe toothpaste is the most effective home measure, removing plaque before it mineralizes. A pet toothbrush and enzymatic toothpaste kit is that daily-brushing tool — pet-safe enzymatic paste, never human fluoride toothpaste. Products with the Veterinary Oral Health Council seal — certain dental diets, chews, and water additives — have published plaque or tartar data. They are an adjunct when brushing is not feasible. VOHC dental chews for dogs and a VOHC-accepted dental water additive are those adjuncts for plaque prevention when brushing is not possible every day. Home care slows disease but does not replace periodic professional cleanings. These are educational home-care tools, not a ranked product list, and they are not a substitute for professional veterinary dental cleaning under anesthesia. A combined approach of consistent home care plus regular veterinary dental assessments keeps most pets comfortable and protects their long-term health.</p>
 
-          <h2 id="kit">Home dental-care kit</h2>
+          <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Everyday physical supplies that match the
-            brushing, VOHC home-care, and plaque-prevention
-            copy on this page — a pet toothbrush and
-            enzymatic toothpaste kit for daily brushing,
-            VOHC dental chews for dogs as secondary
-            plaque support, and a VOHC-accepted dental
-            water additive when brushing is not possible
-            every day. These are educational home-care
-            tools, not a ranked product list, not a
-            substitute for professional veterinary dental
-            cleaning or anesthesia dentistry, and not a
-            treatment for periodontal disease. Bad
-            breath, tartar, red gums, or eating changes
-            belong with a veterinarian, not a chew. Soft pet toothbrushes, standalone enzymatic
-            toothpaste, generic dental chews, and
-            pet dental water additives already live on
-            the dental-cleaning-guide page. This page does not claim hands-on testing. </p>
+            Keep these on hand: a pet toothbrush and enzymatic toothpaste kit for daily brushing, VOHC dental chews for dogs as secondary plaque support, and a VOHC-accepted dental water additive when brushing is not possible every day. These are educational home-care tools, not a ranked product list, not a substitute for professional veterinary dental cleaning or anesthesia dentistry, and not a treatment for periodontal disease. Bad breath, tartar, red gums, or eating changes belong with a veterinarian, not a chew. </p>
 
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/pet+toothbrush+and+enzymatic+toothpaste+kit?s=health-periodontal-disease-pets", "/go/amazon-brand/vohc+dental+chews+for+dogs?s=health-periodontal-disease-pets", "/go/amazon-brand/vohc+accepted+dental+water+additive?s=health-periodontal-disease-pets"]} />
 

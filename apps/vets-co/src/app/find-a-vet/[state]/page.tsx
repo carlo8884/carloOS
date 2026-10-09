@@ -136,7 +136,6 @@ export default function StateVetFinderPage({ params }: PageProps) {
         )}
         {/* TL;DR */}
         <section className="bg-brand-surface border border-brand-border rounded-xl p-6 mb-10">
-          <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-2">TL;DR</div>
           <p className="text-brand-text-mid leading-relaxed m-0">
             Most pet-owner health needs in {state.name} are handled by a general practice (GP) veterinarian — wellness exams, vaccines, routine illness, and most chronic conditions. Build a relationship with a GP vet you trust before you need them urgently. For after-hours emergencies, identify your nearest 24-hour emergency veterinary hospital and save the number now. For complex cases, board-certified specialists handle what GPs refer out. Verify credentials through your state veterinary medical board and recognized specialty colleges (ACVIM, ACVS, others).
           </p>

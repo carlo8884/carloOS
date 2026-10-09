@@ -208,7 +208,7 @@ export default function ReadinessQuizPage() {
           <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/ferret+nation+critter+nation+double+unit?s=tools-readiness-quiz", "/go/amazon-brand/high+protein+ferret+food+kibble?s=tools-readiness-quiz", "/go/amazon-brand/ferret+carrier+hard+sided?s=tools-readiness-quiz"]} />
           <div className="mt-4 rounded-xl border border-brand-border bg-brand-white p-5">
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Shop the kit
+              Shop these supplies
             </div>
             <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
               The six-item list above is a husbandry starting point — cage, litter, food, hammock,

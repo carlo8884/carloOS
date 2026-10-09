@@ -171,7 +171,7 @@ export default function DogWaterIntakeCalculatorPage() {
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/heavy+ceramic+pet+water+bowl?s=tools-dog-water-intake", "/go/amazon-brand/dog+water+fountain?s=tools-dog-water-intake", "/go/amazon-brand/dog+travel+water+bottle?s=tools-dog-water-intake", "/go/amazon-brand/kitchen+measuring+cup?s=tools-dog-water-intake"]} />
           <div className="mt-4 rounded-xl border border-brand-border bg-brand-white p-5">
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Shop a hydration kit
+              Shop these supplies
             </div>
             <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">

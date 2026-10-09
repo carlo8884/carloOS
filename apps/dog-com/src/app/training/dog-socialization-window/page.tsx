@@ -171,7 +171,7 @@ export default function DogSocializationWindowPage() {
             reviewedBy="Editorial team"
           />
 
-          <CalloutBox variant="evidence" title="TL;DR — The science in one box">
+          <CalloutBox variant="evidence" title="The science in one box">
             <p>
               <strong>The window:</strong> approximately 3–14 weeks of age, peak sensitivity 6–8 weeks (AVSAB, veterinary behavior textbooks).
             </p>
@@ -239,7 +239,7 @@ export default function DogSocializationWindowPage() {
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/wire+dog+crate+with+divider+panel?s=training-socialization-window", "/go/amazon-brand/puppy+training+treats?s=training-socialization-window", "/go/amazon-brand/soft+dog+carrier?s=training-socialization-window", "/go/amazon-brand/puppy+grooming+kit?s=training-socialization-window"]} />
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
-              Shop a socialization-window kit
+              Shop these supplies
             </div>
             <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">High-value, pea-sized treats pair every new person, surface, and
               handling session with a positive outcome. A wire crate with a

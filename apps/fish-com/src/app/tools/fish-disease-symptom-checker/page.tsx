@@ -128,7 +128,7 @@ export default function FishDiseaseSymptomCheckerPage() {
           <TableOfContents
             items={[
               { label: 'The checker', href: '#checker' },
-              { label: 'Shop an illness kit', href: '#shop' },
+              { label: 'Shop these supplies', href: '#shop' },
               { label: 'Water quality comes first', href: '#water' },
               { label: 'FAQ', href: '#faq' },
             ]}
@@ -173,7 +173,7 @@ export default function FishDiseaseSymptomCheckerPage() {
         <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/api+freshwater+master+test+kit?s=tools-fish-disease-symptom", "/go/amazon-brand/ich+white+spot+treatment+aquarium?s=tools-fish-disease-symptom", "/go/amazon-brand/aquarium+salt+disease+treatment?s=tools-fish-disease-symptom", "/go/amazon-brand/seachem+prime+water+conditioner?s=tools-fish-disease-symptom", "/go/amazon-brand/aquarium+quarantine+hospital+tank+net?s=tools-fish-disease-symptom"]} />
         <div id="shop" className="mb-8 rounded-xl border border-brand-border bg-brand-surface p-5">
           <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Shop an illness kit
+            Shop these supplies
           </div>
           <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
             A liquid multi-test kit rules out ammonia, nitrite, and nitrate before you treat; then

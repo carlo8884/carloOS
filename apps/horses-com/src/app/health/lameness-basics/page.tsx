@@ -121,21 +121,7 @@ export default function LamenessBasicsPage() {
           />
           <div className="mb-8">
             <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the 30-foot-cotton-lunge-line,
-              leather-chain-lead-shank, and
-              orange-traffic-cone-set notes that match the
-              lunge-on-a-circle, trot-in-hand, and
-              firm-level-straight-line copy on this page — a
-              cotton lunge line so subtle lameness shows on
-              a consistent circle, a leather chain lead
-              shank so the in-hand trot-up stays on one
-              steady line, and orange traffic cones so that
-              line is marked on firm ground instead of
-              guessed across a yard. Educational
-              spot-and-describe checklist, not a treatment,
-              not a diagnosis, not a substitute for calling
-              the veterinarian, and not a hoof-tester,
-              soaking-boot, or ice-boot hop. No spam.
+              Keep these on hand: a cotton lunge line so subtle lameness shows on a consistent circle, a leather chain lead shank so the in-hand trot-up stays on one steady line, and orange traffic cones so that line is marked on firm ground instead of guessed across a yard. Educational spot-and-describe checklist, not a treatment, not a diagnosis, not a substitute for calling the veterinarian, and not a hoof-tester, soaking-boot, or ice-boot hop.
             </p>
 
           </div>
@@ -144,7 +130,7 @@ export default function LamenessBasicsPage() {
           <p>Lameness is any deviation from a horse&apos;s normal gait, almost always caused by pain somewhere in the limb, foot, back, or pelvis, though occasionally by a mechanical restriction such as a scarred-down joint. The old farrier adage is to treat lameness as in the foot until proven otherwise. Kane et al. (AAEP Proceedings 2000), using NAHMS Equine &apos;98 owner reports, found foot problems including laminitis were the most common perceived cause of lameness in summer, at 50.4% (https://www.ivis.org/sites/default/files/library/aaep/2000/277.pdf). Leg or joint problems were the most common perceived cause in spring and winter. That share is seasonal and owner-reported. Lameness can be sudden and severe (an abscess, a fracture) or slow and subtle (arthritis, navicular syndrome).</p>
 
           <h2 id="spotting">Spotting Lameness</h2>
-          <p>A horse is usually trotted in a straight line on firm, level ground and watched from the front, behind, and the side. A leather chain lead shank is how that in-hand trot-up stays on one steady line instead of a slack rope — it is not a generic horse-halter-and-lead-rope set (that lives on the cost calculator), not trailer ties (those live on trailering), and not a shipping wrap. Orange traffic cones are how that straight line is marked on firm ground instead of guessed across a yard — they are not ice grit (that lives on winter-care) and not a measuring stick. For a front-limb lameness, the horse raises its head as the painful leg lands and drops the head as the sound leg lands -- the classic &apos;head bob&apos; (down on sound). Hind-limb lameness is read from the pelvis: the hip on the painful side rises higher (the &apos;hip hike&apos;). Lungeing on a circle and flexion tests exaggerate subtle lameness. A 30-foot cotton lunge line is how that circle stays consistent so a Grade 1 or Grade 2 hitch actually shows — it is not a lead shank, not a trailer tie, and not a vaulting lunge setup. Watching on hard versus soft ground gives further clues.</p>
+          <p>A horse is usually trotted in a straight line on firm, level ground and watched from the front, behind, and the side. A leather chain lead shank is how that in-hand trot-up stays on one steady line instead of a slack rope — it is not a generic horse-halter-and-lead-rope set, not trailer ties, and not a shipping wrap. Orange traffic cones are how that straight line is marked on firm ground instead of guessed across a yard — they are not ice grit and not a measuring stick. For a front-limb lameness, the horse raises its head as the painful leg lands and drops the head as the sound leg lands -- the classic &apos;head bob&apos; (down on sound). Hind-limb lameness is read from the pelvis: the hip on the painful side rises higher (the &apos;hip hike&apos;). Lungeing on a circle and flexion tests exaggerate subtle lameness. A 30-foot cotton lunge line is how that circle stays consistent so a Grade 1 or Grade 2 hitch actually shows — it is not a lead shank, not a trailer tie, and not a vaulting lunge setup. Watching on hard versus soft ground gives further clues.</p>
 
           <h2 id="grading">The AAEP Grading Scale</h2>
           <p>The American Association of Equine Practitioners grades lameness on a 0-to-5 scale, which gives veterinarians and owners a shared language:</p>
@@ -177,33 +163,9 @@ export default function LamenessBasicsPage() {
             <li>Recurrent or progressive lameness, which points to a problem that needs diagnosis rather than time.</li>
           </ul>
 
-          <h2 id="kit">Spot-and-describe kit</h2>
+          <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Everyday physical supplies that match the
-            lunge-on-a-circle, trot-in-hand, and
-            firm-level-straight-line copy on this page — a
-            30-foot cotton lunge line so subtle lameness
-            shows on a consistent circle, a leather chain
-            lead shank so the in-hand trot-up stays on one
-            steady line, and an orange traffic-cone set so
-            that line is marked on firm ground instead of
-            guessed across a yard. These are educational
-            spot-and-describe tools, not a ranked product
-            list, not a substitute for veterinary care, and
-            not a diagnosis or a treatment. Hoof testers,
-            nerve blocks, and imaging stay with the
-            veterinarian. Hoof soaking boots and Epsom salt
-            already live on abscess. Ice boots, poultice,
-            and vet wrap already live on the grimace scale
-            and the emergency tool. Riding hoof boots
-            already live on hoof-care-basics. Halter-and-lead
-            rope sets already live on the cost calculator.
-            Trailer ties already live on trailering. Stall
-            guards already live on turnout-vs-stabling.
-            Weatherproof clipboards already live on equine
-            influenza. This page does not hop medications,
-            joint injections, or vaccines. This page does
-            not claim hands-on testing.
+            Keep these on hand: a 30-foot cotton lunge line so subtle lameness shows on a consistent circle, a leather chain lead shank so the in-hand trot-up stays on one steady line, and an orange traffic-cone set so that line is marked on firm ground instead of guessed across a yard. These are educational spot-and-describe tools, not a ranked product list, not a substitute for veterinary care, and not a diagnosis or a treatment. Hoof testers, nerve blocks, and imaging stay with the veterinarian.
           </p>
 
           <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/30+foot+cotton+lunge+line?s=health-lameness", "/go/amazon-brand/leather+chain+lead+shank+horse?s=health-lameness", "/go/amazon-brand/orange+traffic+cone+set?s=health-lameness"]} />
@@ -250,34 +212,10 @@ export default function LamenessBasicsPage() {
               are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the spot-and-describe kit
+              Shop these supplies
             </div>
             <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page lunge-on-a-circle, trot-in-hand, and
-              firm-level-straight-line copy — a 30-foot
-              cotton lunge line, a leather chain lead
-              shank, and an orange traffic-cone set.
-              Educational spot-and-describe tools only.
-              They are not a ranked product list,
-              they are not a substitute for veterinary
-              care, they are not a #1098 clipboard /
-              feed-pan / paper-pellet-bedding hop, they
-              are not a #1097 color-coded-bucket /
-              coverall / boot-dip-tub hop, they
-              are not a #1096 receiving-blanket /
-              charcoal hop, they
-              are not a #1095 sponge-filter /
-              nano-heater / water-jug hop, they
-              are not a #1094 soaking-pail /
-              feed-tub-rock / apple-wedger hop, they
-              are not a #1093 kitchen-timer /
-              message-pad / pet-carrier hop, they
-              are not a cost-calculator
-              halter-and-lead-rope hop, they
-              are not an abscess soaking-boot hop,
-              they are not a grimace-scale ice-boot hop,
-              and they do not replace a veterinarian.
+              Keep these on hand: a 30-foot cotton lunge line, a leather chain lead shank, and an orange traffic-cone set. Educational spot-and-describe tools only.
             </p>
             <div className="flex flex-col gap-3">
               <ShopCtas

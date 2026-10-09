@@ -227,7 +227,7 @@ export default function HorseGrimaceScale() {
           ) : (
             <p className="mt-3 text-sm">
               <Link href="/ownership/first-aid-kit" className="font-semibold text-brand-primary underline">
-                Review the equine first-aid kit
+                Supplies named on this page
               </Link>
             </p>
           )}

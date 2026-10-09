@@ -236,7 +236,7 @@ export default function DogGrimaceScalePage() {
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/dog+first+aid+kit?s=tools-dog-grimace-scale", "/go/amazon-brand/soft+recovery+cone+dog?s=tools-dog-grimace-scale", "/go/amazon-brand/orthopedic+dog+bed?s=tools-dog-grimace-scale", "/go/amazon-brand/dog+ice+pack+wrap?s=tools-dog-grimace-scale", "/go/amazon-brand/calming+dog+chews?s=tools-dog-grimace-scale"]} />
           <div className="mt-4 rounded-xl border border-brand-border bg-brand-white p-5">
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Shop a pain-watch observation kit
+              Shop these supplies
             </div>
             <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">

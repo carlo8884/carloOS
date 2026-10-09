@@ -76,7 +76,7 @@ export default function GhKhPage() {
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-09-05T00:00:00Z" reviewedBy="Editorial team" />
 
         <p className="text-lg text-brand-text-mid leading-relaxed italic mb-6">
-          <strong className="not-italic">TL;DR.</strong> GH (general hardness) measures dissolved calcium and magnesium; KH (carbonate hardness) measures the carbonate/bicarbonate that buffers pH. They are independent parameters — a tank can be high in one and low in the other. One degree of hardness equals 17.9 ppm CaCO₃. Soft water runs 0–6 dGH, hard water 12+ dGH; for a stable community buffer, keep KH at or above roughly 4 dKH. Crushed coral or aragonite raise both GH and KH together; baking soda raises KH only; diluting with RO water lowers both. Change hardness slowly — over days, not minutes.
+          GH (general hardness) measures dissolved calcium and magnesium; KH (carbonate hardness) measures the carbonate/bicarbonate that buffers pH. They are independent parameters — a tank can be high in one and low in the other. One degree of hardness equals 17.9 ppm CaCO₃. Soft water runs 0–6 dGH, hard water 12+ dGH; for a stable community buffer, keep KH at or above roughly 4 dKH. Crushed coral or aragonite raise both GH and KH together; baking soda raises KH only; diluting with RO water lowers both. Change hardness slowly — over days, not minutes.
         </p>
 
         <h2>Two Different Measurements</h2>
@@ -202,20 +202,9 @@ export default function GhKhPage() {
 
         <p>For the wider picture of pH, ammonia, and nitrate, see the <a href="/setup/water-chemistry-guide">water chemistry guide</a>, and to choose a kit that reads GH and KH accurately as drop tests rather than coarse strips, see our <a href="/reviews/best-water-test-kits">best water test kits</a> guide.</p>
 
-          <h2 id="kit">Hardness-adjust kit</h2>
+          <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Everyday physical supplies that match the raise-and-lower copy
-            above — crushed coral in the filter so both GH and KH climb
-            slowly, a GH remineralizer when you only need calcium and
-            magnesium, and Indian almond leaves when a blackwater biotope
-            should lose KH and pH through tannins. API freshwater master
-            test kits, Seachem Prime, Flourish Excel, aquasoil, pressurized
-            CO2 gear, Seiryu stone, spiderwood, algae scrapers, light
-            timers, and root tabs stay off this kit — those hops already
-            live on the setup hub, CO2 calculator, planted-tank, and
-            #1020–#1022 pages. Baking soda is a grocery bicarbonate, not a
-            shop hop. These are not a treatment for a pH crash and not a
-            diagnosis. This page does not claim hands-on testing.
+            Keep these on hand: crushed coral in the filter so both GH and KH climb slowly, a GH remineralizer when you only need calcium and magnesium, and Indian almond leaves when a blackwater biotope should lose KH and pH through tannins. Baking soda is a grocery bicarbonate, not a shop hop. These are not a treatment for a pH crash and not a diagnosis.
           </p>
 
           <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/crushed+coral+aquarium?s=setup-gh-kh-water-hardness", "/go/amazon-brand/aquarium+gh+remineralizer?s=setup-gh-kh-water-hardness", "/go/amazon-brand/indian+almond+leaves+aquarium?s=setup-gh-kh-water-hardness"]} />

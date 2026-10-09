@@ -40,10 +40,10 @@ export default function WhenToEnrollPage() {
           </CalloutBox>
 
           <h2>Why Earlier Is Almost Always Better</h2>
-          <p>Two forces make early enrollment advantageous. First, pre-existing conditions are excluded permanently, so the longer you wait, the more conditions can accumulate and be locked out. Second, premiums are lowest for young pets and rise with age as claim likelihood increases. A monthly desk pad calendar is how the enroll-this-month date stays a written square instead of a remembered intention — it is not a hardcover weekly appointment planner (that lives on pain-management-dogs), not a wall-mounted magnetic monthly planner (that lives on preventive-care-schedule), and not a 48-hour digital kitchen timer (that lives on when-to-go-to-the-vet). Enrolling a healthy puppy or kitten captures the lowest premium and the broadest possible coverage, and it means that when an expensive condition eventually appears — as it often does later in life — it will be covered rather than excluded. <a href="/insurance/what-pet-insurance-covers">What pet insurance covers</a> is the exclusion list that wait creates.</p>
+          <p>Two forces make early enrollment advantageous. First, pre-existing conditions are excluded permanently, so the longer you wait, the more conditions can accumulate and be locked out. Second, premiums are lowest for young pets and rise with age as claim likelihood increases. A monthly desk pad calendar is how the enroll-this-month date stays a written square instead of a remembered intention — it is not a hardcover weekly appointment planner, not a wall-mounted magnetic monthly planner, and not a 48-hour digital kitchen timer. Enrolling a healthy puppy or kitten captures the lowest premium and the broadest possible coverage, and it means that when an expensive condition eventually appears — as it often does later in life — it will be covered rather than excluded. <a href="/insurance/what-pet-insurance-covers">What pet insurance covers</a> is the exclusion list that wait creates.</p>
 
           <h2>Puppies and Kittens</h2>
-          <p>Most insurers allow enrollment from around six to eight weeks of age. This is the ideal moment: the pet has no medical history to exclude, premiums are at their lowest, and waiting periods will pass long before most conditions arise. A self-inking date stamp is how the enrollment day and the first wellness-exam day stay stamped facts on the desk-pad square — it is not a 72-hour digital countdown timer (that lives on dog-vaccinations-guide) and it is not a 12-hour mechanical kitchen timer (that lives on senior-bloodwork-guide). New owners sometimes hesitate because a young pet seems unlikely to need care, but that is precisely the point — coverage purchased during health is what pays out during later illness.</p>
+          <p>Most insurers allow enrollment from around six to eight weeks of age. This is the ideal moment: the pet has no medical history to exclude, premiums are at their lowest, and waiting periods will pass long before most conditions arise. A self-inking date stamp is how the enrollment day and the first wellness-exam day stay stamped facts on the desk-pad square — it is not a 72-hour digital countdown timer and it is not a 12-hour mechanical kitchen timer. New owners sometimes hesitate because a young pet seems unlikely to need care, but that is precisely the point — coverage purchased during health is what pays out during later illness.</p>
 
           <h2>Adult Pets</h2>
           <p>Enrolling an adult pet is still worthwhile, especially if the medical record is clean. The earlier within adulthood you act, the fewer conditions will have appeared. An owner adopting a young adult dog or cat should enroll promptly, before the routine wear of life produces the first documented symptom that could become an exclusion. The same early-bird logic applies; it is simply later in the timeline. The same desk pad calendar is where that enroll-this-month square is marked so the wait does not become another year.</p>
@@ -52,35 +52,11 @@ export default function WhenToEnrollPage() {
           <p>Insuring a senior pet is more nuanced. Premiums are higher, and seniors are more likely to carry pre-existing conditions that will be excluded. However, seniors are also the most likely to need costly care, Pets Best’s FAQ, fetched 2026-10-08, says there is no upper age limit, and a dog or cat can enroll at any age over 7 weeks (<span className="break-all">https://www.petsbest.com/faq</span>). For a senior with a relatively clean history, a policy can still protect against new, unrelated illnesses. The key is to compare carriers that welcome older pets and to read carefully how they define and exclude pre-existing conditions.</p>
 
           <h2>Adopted and Rescue Pets</h2>
-          <p>For adopted pets with unknown histories, enroll as soon as possible after adoption and after an initial veterinary exam. Establishing coverage early limits the window in which undocumented conditions might later be deemed pre-existing. A letter-size file jacket is how the adoption papers and the new-pet exam notes stay one sleeve until enrollment is done — it is not a letter-size poly envelope (that lives on how-pet-insurance-works), not a kraft two-pocket folder (that lives on choosing-a-veterinarian), and not letter-size hanging file folders (that live on how-to-afford-vet-care). Schedule the enrollment around the new-pet exam so you understand your pet&apos;s baseline health and can choose appropriate coverage from the start.</p>
+          <p>For adopted pets with unknown histories, enroll as soon as possible after adoption and after an initial veterinary exam. Establishing coverage early limits the window in which undocumented conditions might later be deemed pre-existing. A letter-size file jacket is how the adoption papers and the new-pet exam notes stay one sleeve until enrollment is done — it is not a letter-size poly envelope, not a kraft two-pocket folder, and not letter-size hanging file folders. Schedule the enrollment around the new-pet exam so you understand your pet&apos;s baseline health and can choose appropriate coverage from the start.</p>
 
-          <h2 id="kit">When-to-enroll kit</h2>
+          <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Everyday physical supplies that match the
-            enroll-while-healthy, puppy-or-kitten,
-            and adopted-pet-exam copy on this page —
-            a monthly desk pad calendar so the
-            enroll-this-month and waiting-period
-            window stay a written date, a self-inking
-            date stamp so the enrollment day and
-            new-pet exam day stay stamped facts, and
-            a letter-size file jacket so adoption
-            and exam paperwork stay one sleeve until
-            coverage starts. These are educational
-            enrollment-timing / paperwork tools, not
-            a ranked product list, not a substitute
-            for veterinary care, and not a
-            treatment. Four-column accounting pads,
-            letter-size poly envelopes, and desktop
-            receipt organizers already live on
-            how-pet-insurance-works. Kraft two-pocket
-            folders and pocket-size address books
-            already live on choosing-a-veterinarian. Hardcover
-            weekly appointment planners already live
-            on pain-management-dogs. This page does
-            not hop medications or insurance brands
-            as Amazon searches. This page does not
-            claim hands-on testing.
+            Keep these on hand: a monthly desk pad calendar so the enroll-this-month and waiting-period window stay a written date, a self-inking date stamp so the enrollment day and new-pet exam day stay stamped facts, and a letter-size file jacket so adoption and exam paperwork stay one sleeve until coverage starts. These are educational enrollment-timing / paperwork tools, not a ranked product list, not a substitute for veterinary care, and not a treatment.
           </p>
 
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/monthly+desk+pad+calendar?s=insurance-when-to-enroll", "/go/amazon-brand/self+inking+date+stamp?s=insurance-when-to-enroll", "/go/amazon-brand/letter+size+file+jacket?s=insurance-when-to-enroll"]} />

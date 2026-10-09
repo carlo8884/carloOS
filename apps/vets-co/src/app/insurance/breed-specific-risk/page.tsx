@@ -48,43 +48,20 @@ export default function BreedRiskPage() {
           <p>Insurers set premiums partly on breed because decades of veterinary data link certain breeds to certain expensive conditions. A plan covering a giant breed with high orthopedic and cardiac risk carries a higher expected claim cost than one covering a low-risk mixed-breed cat, and pricing reflects that. Understanding why your premium is what it is — and which conditions drive it — helps you choose a policy aligned with your pet's actual risk rather than reacting only to the monthly cost.</p>
 
           <h2>Common Breed Risk Patterns</h2>
-          <p>Large and giant breeds are prone to orthopedic disease (hip and elbow dysplasia, cruciate rupture), bloat, and some cardiac conditions. Brachycephalic breeds — those with flat faces — face airway problems, dental crowding, and eye issues. Many purebred lines carry specific hereditary conditions, from heart defects to eye and neurological disorders. Mixed-breed pets often enjoy broader genetic diversity and lower insurance costs, though they are not risk-free. Round color-coding labels are how those large, brachy, purebred, and mixed risk patterns stay marked — they are not 3-tab dividers (that live on what-pet-insurance-covers), not removable page flags (that live on what-pet-insurance-covers), and not 3x3 sticky notes (that live on questions-to-ask-your-vet). Knowing your breed's profile tells you which coverage details to scrutinize.</p>
+          <p>Large and giant breeds are prone to orthopedic disease (hip and elbow dysplasia, cruciate rupture), bloat, and some cardiac conditions. Brachycephalic breeds — those with flat faces — face airway problems, dental crowding, and eye issues. Many purebred lines carry specific hereditary conditions, from heart defects to eye and neurological disorders. Mixed-breed pets often enjoy broader genetic diversity and lower insurance costs, though they are not risk-free. Round color-coding labels are how those large, brachy, purebred, and mixed risk patterns stay marked — they are not 3-tab dividers, not removable page flags, and not 3x3 sticky notes. Knowing your breed's profile tells you which coverage details to scrutinize.</p>
 
           <h2>Orthopedic Waiting Periods and Bilateral Rules</h2>
-          <p>For breeds prone to joint disease, two policy details are pivotal. First, orthopedic waiting periods can stretch to six months or a year, and any joint problem that appears during the wait is excluded. Second, bilateral-condition rules mean an insurer may treat one affected joint as making the matching joint pre-existing. A 5-compartment letter sorter is how those four breed types stay separate stacks while you read the wait and bilateral language — it is not a pressboard classification folder (that lives on pre-existing-conditions), not hanging file folders (that live on how-to-afford-vet-care), and not a desktop receipt organizer (that lives on how-pet-insurance-works). Owners of orthopedic-prone breeds should favor plans with shorter orthopedic waits and read the bilateral language closely, because these terms directly govern whether the most likely claims will be paid.</p>
+          <p>For breeds prone to joint disease, two policy details are pivotal. First, orthopedic waiting periods can stretch to six months or a year, and any joint problem that appears during the wait is excluded. Second, bilateral-condition rules mean an insurer may treat one affected joint as making the matching joint pre-existing. A 5-compartment letter sorter is how those four breed types stay separate stacks while you read the wait and bilateral language — it is not a pressboard classification folder, not hanging file folders, and not a desktop receipt organizer. Owners of orthopedic-prone breeds should favor plans with shorter orthopedic waits and read the bilateral language closely, because these terms directly govern whether the most likely claims will be paid.</p>
 
           <h2>Coverage Choices for High-Risk Breeds</h2>
-          <p>For a breed with predictable expensive needs, prioritize a high or unlimited annual limit so a single major procedure does not exhaust coverage, confirm that hereditary and congenital conditions are covered, and check orthopedic and bilateral terms. Enroll as early as possible — ideally as a puppy — because the breed-typical conditions are exactly the ones that become pre-existing exclusions if they appear before coverage. A blank pedigree chart is how hereditary and congenital lines stay a written family tree instead of a remembered breed rumor — it is not a pocket-size address book (that lives on choosing-a-veterinarian), and not ruled index cards (that live on questions-to-ask-your-vet). The goal is a policy whose strengths line up with the breed's likely claims.</p>
+          <p>For a breed with predictable expensive needs, prioritize a high or unlimited annual limit so a single major procedure does not exhaust coverage, confirm that hereditary and congenital conditions are covered, and check orthopedic and bilateral terms. Enroll as early as possible — ideally as a puppy — because the breed-typical conditions are exactly the ones that become pre-existing exclusions if they appear before coverage. A blank pedigree chart is how hereditary and congenital lines stay a written family tree instead of a remembered breed rumor — it is not a pocket-size address book, and not ruled index cards. The goal is a policy whose strengths line up with the breed's likely claims.</p>
 
           <h2>Using Breed Risk Wisely</h2>
           <p>Breed-specific risk is not a reason to avoid insurance; it is a reason to choose it carefully and early. Pair this understanding with our breed health guides to learn the specific conditions your dog or cat may face, then select coverage that protects against them. Predictable risk, planned for in advance, is precisely what insurance handles best.</p>
 
-          <h2 id="kit">Breed-specific-risk kit</h2>
+          <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Everyday physical supplies that match the
-            large-breed, brachycephalic, and
-            hereditary-condition copy on this page
-            — a blank pedigree chart so hereditary
-            and congenital lines stay a written
-            family tree, round color-coding labels
-            so large, brachy, purebred, and mixed
-            risk patterns stay marked, and a
-            5-compartment letter sorter so those
-            four breed types stay separate stacks.
-            These are educational breed-risk /
-            paperwork tools, not a ranked product
-            list, not a substitute for veterinary
-            care, and not a treatment. Pressboard
-            classification folders, letter-size
-            clasp envelopes, and red-and-blue
-            checking pencils already live on
-            pre-existing-conditions. Full-page
-            magnifiers, adjustable copyholders, and
-            line-reader strips already live on
-            reading-the-fine-print. This page does
-            not hop medications or insurance brands
-            as Amazon searches. This page does not
-            claim hands-on testing.
+            Keep these on hand: a blank pedigree chart so hereditary and congenital lines stay a written family tree, round color-coding labels so large, brachy, purebred, and mixed risk patterns stay marked, and a 5-compartment letter sorter so those four breed types stay separate stacks. These are educational breed-risk / paperwork tools, not a ranked product list, not a substitute for veterinary care, and not a treatment.
           </p>
 
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/blank+pedigree+chart?s=insurance-breed-specific-risk", "/go/amazon-brand/round+color+coding+labels?s=insurance-breed-specific-risk", "/go/amazon-brand/5+compartment+letter+sorter?s=insurance-breed-specific-risk"]} />

@@ -60,7 +60,7 @@ export default function FleaTickPage() {
           <p>Fleas and ticks cause far more than itching. Fleas trigger flea allergy dermatitis — one of the most common skin conditions in pets — transmit tapeworms, and in heavy infestations can cause dangerous anemia, especially in small or young animals. Ticks transmit serious infections such as Lyme disease, anaplasmosis, and ehrlichiosis, several of which can also affect people. Preventing these parasites protects your pet from disease and discomfort and reduces zoonotic risk to your household. A shorter lawn, washable bedding, and an after-walk coat check do not replace a veterinarian-recommended preventive.</p>
 
           <h2>How Prevention Works</h2>
-          <p>Modern preventives work by killing or repelling parasites before they can establish or transmit disease, delivered as topical spot-ons, oral chews, or collars depending on the product. Many products protect against fleas and ticks together, and some also cover other parasites such as mites or intestinal worms. The right choice depends on your pet&apos;s species, weight, health status, lifestyle, and regional parasite risks, which is why a veterinarian&apos;s recommendation matters more than a label claim. This page does not rank Frontline, Advantage, Bravecto, NexGard, Seresto, or any other brand, and it does not hop a prescription ASIN.</p>
+          <p>Modern preventives work by killing or repelling parasites before they can establish or transmit disease, delivered as topical spot-ons, oral chews, or collars depending on the product. Many products protect against fleas and ticks together, and some also cover other parasites such as mites or intestinal worms. The right choice depends on your pet&apos;s species, weight, health status, lifestyle, and regional parasite risks, which is why a veterinarian&apos;s recommendation matters more than a label claim.</p>
 
           <h2>Why Year-Round, Consistent Use</h2>
           <p>Gaps in prevention are where problems start. Fleas can survive indoors and remain active in mild conditions, and ticks are active across more of the year than many owners assume. A single lapse can allow an infestation to take hold — and once fleas establish in a home, eliminating them requires treating the environment as well as the pet, a far bigger task than prevention. Year-round, consistent use closes these gaps and is the approach veterinary guidance generally favors. A zippered waterproof dog duvet cover is how indoor bedding can be washed on a regular cycle; it is not a treatment for an established home infestation.</p>
@@ -69,29 +69,11 @@ export default function FleaTickPage() {
           <p>Effectiveness and safety vary considerably among products, and crucially, some products safe for dogs are toxic to cats. Because dosing must match the individual animal and the best choice depends on regional risks and your pet&apos;s health, select a product on your veterinarian&apos;s recommendation rather than by guesswork. Use products exactly as directed, and never apply a dog product to a cat. If you are unsure whether a product is working or appropriate, ask your veterinary team. Household yard, bedding, and after-walk gear is not a ranked product list and is not a substitute for that conversation.</p>
 
           <h2>Environmental and Lifestyle Measures</h2>
-          <p>Prevention products are most effective alongside good habits. Check your pet for ticks after walks in grassy or wooded areas and remove any promptly and correctly. Keep grass trimmed and reduce wildlife access to your yard where feasible. Wash pet bedding regularly. For multi-pet homes, treat all pets, since untreated animals can sustain an infestation. Combining consistent preventives with these measures gives the most reliable protection against fleas, ticks, and the diseases they carry. It does not kill fleas or ticks and it does not replace a preventive. A zippered waterproof dog duvet cover is how the bedding you wash regularly comes off the insert — it is not a washable dog bed cover (that lives on dog.com mange), not a quilted disposable underpad (that lives on emergency-signs), and not a heated pet mat. Finding a tick is a reason to remove it correctly and tell the veterinarian; the magnifier does not diagnose Lyme, Anaplasmosis, Ehrlichiosis, or RMSF.</p>
+          <p>Prevention products are most effective alongside good habits. Check your pet for ticks after walks in grassy or wooded areas and remove any promptly and correctly. Keep grass trimmed and reduce wildlife access to your yard where feasible. Wash pet bedding regularly. For multi-pet homes, treat all pets, since untreated animals can sustain an infestation. Combining consistent preventives with these measures gives the most reliable protection against fleas, ticks, and the diseases they carry. It does not kill fleas or ticks and it does not replace a preventive. A zippered waterproof dog duvet cover is how the bedding you wash regularly comes off the insert — it is not a washable dog bed cover, not a quilted disposable underpad, and not a heated pet mat. Finding a tick is a reason to remove it correctly and tell the veterinarian; the magnifier does not diagnose Lyme, Anaplasmosis, Ehrlichiosis, or RMSF.</p>
 
-          <h2 id="kit">Yard, bedding, and after-walk kit</h2>
+          <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Everyday physical supplies that match the
-            keep-grass-trimmed, wash-bedding-regularly,
-            and check-after-walk copy on this page — a
-            14-inch manual reel lawn mower so questing
-            ticks have less tall-grass cover, a
-            zippered waterproof dog duvet cover so
-            weekly bedding laundry is a zipper pull
-            instead of a soaked foam pad, and a
-            handheld LED magnifying glass so the
-            after-walk coat check can see what a
-            glance misses. These are household yard,
-            bedding, and inspection tools, not
-            treatments. They do not prevent fleas or
-            ticks, they do not replace a
-            veterinarian-recommended preventive, and
-            they are not a ranked product list. Handheld AA LED flashlights already live
-            on emergency-signs. Frontline, Advantage, Bravecto, NexGard,
-            Seresto, isoxazoline preventives, and
-            other Rx ASINs are not shoppable hops. This page does not claim hands-on testing. </p>
+            Keep these on hand: a 14-inch manual reel lawn mower so questing ticks have less tall-grass cover, a zippered waterproof dog duvet cover so weekly bedding laundry is a zipper pull instead of a soaked foam pad, and a handheld LED magnifying glass so the after-walk coat check can see what a glance misses. These are household yard, bedding, and inspection tools, not treatments. They do not prevent fleas or ticks, they do not replace a veterinarian-recommended preventive, and they are not a ranked product list. Frontline, Advantage, Bravecto, NexGard, Seresto, isoxazoline preventives, and other Rx ASINs are not shoppable hops. </p>
 
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/14+inch+manual+reel+lawn+mower?s=health-flea-tick-prevention", "/go/amazon-brand/zippered+waterproof+dog+duvet+cover?s=health-flea-tick-prevention", "/go/amazon-brand/handheld+led+magnifying+glass?s=health-flea-tick-prevention"]} />
 

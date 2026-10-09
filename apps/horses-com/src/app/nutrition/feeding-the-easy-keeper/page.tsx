@@ -120,11 +120,11 @@ export default function EasyKeeperPage() {
 
           <h2 id="calories">Controlling Calories and Sugar</h2>
           <ul>
-            <li><strong>Feed by weight, not eye.</strong> Weigh the hay; for weight loss, vets often start around 1.5 percent of ideal bodyweight in forage dry matter, not dropping below about 1.25 percent without supervision. The <a href="/tools/horse-feed-calculator">daily feed calculator</a> applies that percent to the horse&apos;s weight. A portable horse hay flake scale is how that restricted flake is weighed at the stall — it is not a digital hanging hay-bale scale (that lives on EMS), not a tabletop digital horse grain scale (that lives on grain), and not a horse feed-scoop scale (those live on the feed calculators).</li>
-            <li><strong>Choose low-sugar forage</strong> and soak hay for 30 to 60 minutes to leach out water-soluble carbohydrate. A horse hay soaking tub is the barn tub that flake sits in, then drains — it is not a hay soaking bag (that lives on heaves), not a horse feed soaking tub (that lives on feeding-senior-horses), and not a lidded 5-gallon feed-soaking pail (that lives on choke).</li>
+            <li><strong>Feed by weight, not eye.</strong> Weigh the hay; for weight loss, vets often start around 1.5 percent of ideal bodyweight in forage dry matter, not dropping below about 1.25 percent without supervision. The <a href="/tools/horse-feed-calculator">daily feed calculator</a> applies that percent to the horse&apos;s weight. A portable horse hay flake scale is how that restricted flake is weighed at the stall — it is not a digital hanging hay-bale scale, not a tabletop digital horse grain scale, and not a horse feed-scoop scale.</li>
+            <li><strong>Choose low-sugar forage</strong> and soak hay for 30 to 60 minutes to leach out water-soluble carbohydrate. A horse hay soaking tub is the barn tub that flake sits in, then drains — it is not a hay soaking bag, not a horse feed soaking tub, and not a lidded 5-gallon feed-soaking pail.</li>
             <li><strong>Cut the grain</strong> -- easy keepers rarely need any concentrate; calorie-dense feeds are the first thing to remove.</li>
-            <li><strong>Restrict grazing</strong> with a grazing muzzle, strip grazing, a dry lot, or turnout at lower-sugar times of day. Grazing muzzles already live on pasture-management and laminitis. Strip-grazing step-in posts already live on EMS.</li>
-            <li><strong>Skip the treats</strong> or use low-sugar options sparingly. Low-sugar horse treats are that occasional reward — they are not a grain hop (those live on grain) and not the low-NSC ration-balancer ReviewCard below.</li>
+            <li><strong>Restrict grazing</strong> with a grazing muzzle, strip grazing, a dry lot, or turnout at lower-sugar times of day.</li>
+            <li><strong>Skip the treats</strong> or use low-sugar options sparingly. Low-sugar horse treats are that occasional reward — they are not a grain hop and not the low-NSC ration-balancer ReviewCard below.</li>
           </ul>
 
           <h2 id="slow">Slow Feeding</h2>
@@ -138,30 +138,7 @@ export default function EasyKeeperPage() {
 
           <h2 id="kit">Easy-keeper feeding supplies</h2>
           <p>
-            Everyday physical supplies that match the
-            weigh-the-hay, soak-to-leach-sugar, and
-            skip-the-treats copy on this page — a
-            portable horse hay flake scale so a
-            restricted ration is weighed flake by
-            flake instead of scooped by eye, a horse
-            hay soaking tub so a flake sits in water
-            30 to 60 minutes and drains so
-            water-soluble carbohydrate leaches out,
-            and low-sugar horse treats so the
-            occasional reward is not a starch spike. These are educational barn searches, not a
-            ranked product list, not a substitute for
-            veterinary care, and not a hanging
-            hay-bale-scale hop (that lives on EMS), a
-            tabletop grain-scale hop (that lives on
-            grain), a hay-soaking-bag hop (that lives
-            on heaves), a feed-soaking-tub hop (that
-            lives on feeding-senior-horses), a
-            grazing-muzzle hop (that lives on
-            pasture-management), a nylon-hay-bag hop
-            (that lives on feeding-the-performance-horse),
-            or the small-hole-net / low-NSC-balancer
-            ReviewCards below. This page does
-            not claim hands-on testing. </p>
+            Keep these on hand: a portable horse hay flake scale so a restricted ration is weighed flake by flake instead of scooped by eye, a horse hay soaking tub so a flake sits in water 30 to 60 minutes and drains so water-soluble carbohydrate leaches out, and low-sugar horse treats so the occasional reward is not a starch spike. </p>
 
           <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/portable+horse+hay+flake+scale?s=nutrition-feeding-the-easy-keeper", "/go/amazon-brand/horse+hay+soaking+tub?s=nutrition-feeding-the-easy-keeper", "/go/amazon-brand/low+sugar+horse+treats?s=nutrition-feeding-the-easy-keeper", "/go/amazon-brand/small+hole+slow+feeder+hay+net+horse?s=nutrition-easy-keeper", "/go/amazon-brand/low+nsc+ration+balancer+easy+keeper+horse?s=nutrition-easy-keeper"]} />
 
@@ -187,7 +164,7 @@ export default function EasyKeeperPage() {
           </div>
 
           <h2 id="picks">Product Picks — Slow-Feed and Weight-Management Supports</h2>
-          <p>Two widely-used general management tools for easy keepers: slow-feeder hay nets to extend eating time without long fasts, and a low-calorie ration balancer to fill nutrition gaps in a restricted diet. These are management aids, not treatments for laminitis, metabolic syndrome, or any diagnosed condition. For metabolic horses coordinate the full plan with your veterinarian. This is a documented-spec comparison drawing on standard US equestrian retail; this page does not claim hands-on testing.</p>
+          <p>Two widely-used general management tools for easy keepers: slow-feeder hay nets to extend eating time without long fasts, and a low-calorie ration balancer to fill nutrition gaps in a restricted diet. These are management aids, not treatments for laminitis, metabolic syndrome, or any diagnosed condition. For metabolic horses coordinate the full plan with your veterinarian.</p>
 
 
           <ReviewCard

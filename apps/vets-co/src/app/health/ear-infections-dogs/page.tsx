@@ -71,23 +71,9 @@ export default function EarInfectionsDogsPage() {
           <h2>Prevention</h2>
           <p>Prevention is tailored to the dog. For allergic dogs, allergy management is the foundation. General measures include drying ears after swimming and bathing, routine cleaning with a veterinarian-recommended cleaner for wax-prone dogs, and avoiding over-cleaning healthy ears. A dog ear-cleaner solution a veterinarian has recommended loosens wax in the L-shaped canal; cotton balls for dog ears wipe the visible canal and flap after the dog shakes — cotton swabs stay out of the canal. Dog ear-drying powder after a swim or bath helps leftover moisture leave the canal instead of sitting warm and wet. Staying ahead of the underlying cause is what keeps prone dogs comfortable and out of the recurring-infection cycle.</p>
 
-          <h2 id="kit">Home ear-care kit</h2>
+          <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Everyday physical supplies that match the prevention copy
-            on this page — a dog ear-cleaner solution a veterinarian
-            has recommended for wax-prone ears, cotton balls for dog
-            ears to wipe the visible canal and flap after the dog
-            shakes, and dog ear-drying powder after swimming or
-            bathing. These are household tools, not treatments. They
-            do not treat an active infection, they do not replace a
-            veterinarian or cytology, and they are not prescription
-            ear drops, leftover medication, vinegar, peroxide, or
-            cotton swabs. This is not the sister Dog.com weekly
-            ear-cleaning page and it does not hop a generic pet ear
-            cleaner or bare cotton-ball search. It is not the
-            Labrador swim-ear page and it does not hop a
-            microfiber dog towel or dog ear-drying solution. This
-            page does not claim hands-on testing.
+            Keep these on hand: a dog ear-cleaner solution a veterinarian has recommended for wax-prone ears, cotton balls for dog ears to wipe the visible canal and flap after the dog shakes, and dog ear-drying powder after swimming or bathing. These are household tools, not treatments. They do not treat an active infection, they do not replace a veterinarian or cytology, and they are not prescription ear drops, leftover medication, vinegar, peroxide, or cotton swabs.
           </p>
 
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/dog+ear+cleaner+solution?s=health-ear-infections-dogs", "/go/amazon-brand/cotton+balls+for+dog+ears?s=health-ear-infections-dogs", "/go/amazon-brand/dog+ear+drying+powder?s=health-ear-infections-dogs"]} />

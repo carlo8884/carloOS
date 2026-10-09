@@ -62,8 +62,8 @@ export default function DogAnxietyPage() {
           <h2 id="medication">When Medication Helps</h2>
           <p>Anxiety is a medical condition with neurobiological underpinnings. For moderate to severe anxiety, medication is not a shortcut or a crutch — it is a tool that reduces the neurological arousal enough to allow learning to occur. Without medication, a severely anxious dog may be unable to engage with behavioral modification at all. Daily medication (fluoxetine is <a href="https://www.fda.gov/animal-veterinary" rel="noopener" target="_blank" className="text-brand-primary hover:underline">FDA</a>-approved for separation anxiety in dogs as Reconcile) takes 4–6 weeks to reach full effect. Situational medications (trazodone, gabapentin) work within 1–2 hours for acute events. Discuss both options with your veterinarian.</p>
 
-          <h2 id="kit">Noise-phobia safe-space kit</h2>
-          <p>Everyday physical supplies that match the noise-phobia copy above — a pressure wrap (Thundershirt is named as the example product type), a covered crate or other small dark hiding space dogs self-select, and white noise to mask some sound. Fluoxetine / Reconcile, clomipramine, trazodone, gabapentin, and Sileo (dexmedetomidine oromucosal gel) stay educational copy only — this page never hops medications, brand ASINs, or prescription products. This page does not claim hands-on testing.</p>
+          <h2 id="kit">Supplies named on this page</h2>
+          <p>Keep these on hand: a pressure wrap (Thundershirt is named as the example product type), a covered crate or other small dark hiding space dogs self-select, and white noise to mask some sound. Fluoxetine / Reconcile, clomipramine, trazodone, gabapentin, and Sileo (dexmedetomidine oromucosal gel) stay educational copy only — this page never hops medications, brand ASINs, or prescription products.</p>
 
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/dog+anxiety+wrap?s=health-dog-anxiety", "/go/amazon-brand/dog+crate+cover?s=health-dog-anxiety", "/go/amazon-brand/white+noise+machine?s=health-dog-anxiety"]} />
 

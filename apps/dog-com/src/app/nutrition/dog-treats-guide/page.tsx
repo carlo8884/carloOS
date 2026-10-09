@@ -141,7 +141,7 @@ export default function DogTreatsGuidePage() {
             reviewedBy="Editorial team"
           />
 
-          <CalloutBox variant="evidence" title="TL;DR — How to treat without sabotaging the diet">
+          <CalloutBox variant="evidence" title="How to treat without sabotaging the diet">
             <p>
               <strong>Keep treats to no more than 10% of daily calories.</strong> The WSAVA guide to treats for dogs states that treats should make up no more than 10% of a dog’s daily calorie intake (<a href="https://wsava.org/wp-content/uploads/2025/11/WSAVA_GuidetoTreats_Dogs_251107.pdf">WSAVA treat guide</a>). That 10% is not a row on the WSAVA July 2020 adult calorie chart.
             </p>

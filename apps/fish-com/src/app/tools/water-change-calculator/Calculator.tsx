@@ -395,7 +395,7 @@ export default function WaterChangeCalculator() {
 
       {mode === 'dilution' && dilution && dilution.kind === 'ok' && (
         <ResultCTA
-          heading="Shop a liquid test kit before the next change"
+          heading="Shop these supplies"
           guideHref="/setup/water-chemistry-guide"
           guideLabel="Read the water chemistry guide"
           blurb={

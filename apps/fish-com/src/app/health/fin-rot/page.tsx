@@ -78,7 +78,7 @@ export default function FinRotPage() {
         <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/api+freshwater+master+test+kit?s=health-fin-rot", "/go/amazon-brand/aquarium+quarantine+hospital+tank+net?s=health-fin-rot", "/go/amazon-brand/aquarium+sponge+filter?s=health-fin-rot", "/go/amazon-brand/aquarium+gravel+vacuum+siphon?s=health-fin-rot"]} />
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
-            Shop a water-first isolate kit
+            Shop these supplies
           </div>
           <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Fin rot is almost always a water-quality problem. A liquid master
             kit is how you see ammonia, nitrite, and nitrate before you treat

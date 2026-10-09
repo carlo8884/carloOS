@@ -135,8 +135,8 @@ export default function VetsGoldenRetrieverHealthPage() {
         <ul>
           <li><strong>Annual wellness from year 1–5:</strong> Full physical, vaccines as indicated, annual bloodwork from year 3</li>
           <li><strong>From age 6:</strong> Annual abdominal ultrasound added — the most impactful change in monitoring for hemangiosarcoma. Annual echocardiogram if any murmur detected. Full bloodwork including chemistry, CBC, urinalysis.</li>
-          <li><strong>From age 8:</strong> Every 6 months for everything. Goldens change faster than annual monitoring captures in the senior years. Blood pressure measurement added. An 18-month wall calendar is how that age-6 ultrasound and these every-6-month senior visits stay written on one longer horizon — it is not a monthly desk pad calendar (that lives on when-to-enroll), not a hardcover weekly appointment planner, and not a wall-mounted magnetic monthly planner.</li>
-          <li>Monthly at home: Lymph node check, gum color baseline awareness, body weight, body condition scoring. Paint-chip sample cards are how the gum-color baseline stays a pink-versus-pale comparison — they are not round color-coding labels (that live on breed-specific-risk), not an assorted highlighter set (that lives on what-pet-insurance-covers), and not a dog-com gum-color assessment chart.</li>
+          <li><strong>From age 8:</strong> Every 6 months for everything. Goldens change faster than annual monitoring captures in the senior years. Blood pressure measurement added. An 18-month wall calendar is how that age-6 ultrasound and these every-6-month senior visits stay written on one longer horizon — it is not a monthly desk pad calendar, not a hardcover weekly appointment planner, and not a wall-mounted magnetic monthly planner.</li>
+          <li>Monthly at home: Lymph node check, gum color baseline awareness, body weight, body condition scoring. Paint-chip sample cards are how the gum-color baseline stays a pink-versus-pale comparison — they are not round color-coding labels, not an assorted highlighter set, and not a dog-com gum-color assessment chart.</li>
         </ul>
 
         <h2 id="specialist">When to Refer to a Specialist</h2>
@@ -154,8 +154,8 @@ export default function VetsGoldenRetrieverHealthPage() {
         <p>The non-negotiable rule: <strong>enroll before the first appointment.</strong> Any condition noted in records before enrollment becomes a pre-existing condition and is excluded. A puppy with a murmur noted at the first exam has a cardiac exclusion for life on most policies. Enroll the week you get the dog, before the first vet visit.</p>
         <p>This page does not name a recommended carrier. See the <Link href="/reviews/best-pet-insurance">full comparison →</Link></p>
 
-        <h2 id="kit">Golden-retriever-health kit</h2>
-        <p>These are educational Golden-retriever-health / paperwork tools, not a ranked product list, not a substitute for veterinary care, and not a treatment. This page does not claim hands-on testing.</p>
+        <h2 id="kit">Supplies named on this page</h2>
+        <p>Keep these on hand: paint chip sample cards and 18 month wall calendar. These are educational Golden-retriever-health / paperwork tools, not a ranked product list, not a substitute for veterinary care, and not a treatment.</p>
 
         <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/paint+chip+sample+cards?s=breeds-golden-retriever-health", "/go/amazon-brand/18+month+wall+calendar?s=breeds-golden-retriever-health"]} />
 

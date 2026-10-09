@@ -338,14 +338,7 @@ export default function FerretSeasonalSheddingPage() {
 
           <h2 id="kit">Molt grooming kit</h2>
           <p>
-            Everyday physical supplies that match the coat-blow copy above —
-            a soft slicker brush and a fine-toothed metal comb for the short
-            daily sessions that lift dead coat before the ferret swallows it,
-            plus a reusable lint roller for hammocks and hard surfaces between
-            washes. Hairball / petroleum laxative pastes stay a vet
-            conversation, not a shop hop. These are not a treatment for adrenal disease
-            or a GI blockage and not a diagnosis. This page does not claim
-            hands-on testing. </p>
+            Keep these on hand: a soft slicker brush and a fine-toothed metal comb for the short daily sessions that lift dead coat before the ferret swallows it, plus a reusable lint roller for hammocks and hard surfaces between washes. Hairball / petroleum laxative pastes stay a vet conversation, not a shop hop. These are not a treatment for adrenal disease or a GI blockage and not a diagnosis. </p>
 
           <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/soft+slicker+brush+small+animal?s=care-seasonal-shedding", "/go/amazon-brand/fine+tooth+metal+comb?s=care-seasonal-shedding", "/go/amazon-brand/reusable+lint+roller?s=care-seasonal-shedding"]} />
 

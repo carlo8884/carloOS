@@ -48,10 +48,10 @@ export default function PreExistingPage() {
           <p>A pre-existing condition is any injury or illness that began, showed signs, or was treated before your policy's coverage started, including during any waiting period. Insurers establish this by reviewing your pet's veterinary records. Crucially, a formal diagnosis is not required — a documented symptom can be enough. If your records note repeated scratching before enrollment, a later allergy diagnosis may be classified as pre-existing and excluded. The condition itself is excluded, but unrelated future conditions remain coverable. <a href="/insurance/what-pet-insurance-covers">What pet insurance covers</a> is the exclusion list that definition creates.</p>
 
           <h2>Curable vs. Incurable</h2>
-          <p>Many insurers separate pre-existing conditions into curable and incurable. Incurable or chronic conditions — diabetes, allergies, heart disease, cancer, kidney disease — are generally excluded for the life of the policy. Curable conditions — a single ear infection, a respiratory infection, a urinary tract infection that fully resolved — may become eligible for coverage after the pet has gone a defined symptom-free and treatment-free period, often six to eighteen months. A red-and-blue checking pencil is how incurable vs curable stays marked on that record copy — it is not an assorted highlighter set (that lives on what-pet-insurance-covers), not a yellow legal pad (that lives on how-to-afford-vet-care), and not a four-column accounting pad (that lives on how-pet-insurance-works). Whether an insurer offers this curable-condition pathway, and how long the waiting period is, varies and is worth comparing.</p>
+          <p>Many insurers separate pre-existing conditions into curable and incurable. Incurable or chronic conditions — diabetes, allergies, heart disease, cancer, kidney disease — are generally excluded for the life of the policy. Curable conditions — a single ear infection, a respiratory infection, a urinary tract infection that fully resolved — may become eligible for coverage after the pet has gone a defined symptom-free and treatment-free period, often six to eighteen months. A red-and-blue checking pencil is how incurable vs curable stays marked on that record copy — it is not an assorted highlighter set, not a yellow legal pad, and not a four-column accounting pad. Whether an insurer offers this curable-condition pathway, and how long the waiting period is, varies and is worth comparing.</p>
 
           <h2>Bilateral Conditions</h2>
-          <p>A subtle but important rule involves bilateral conditions — those that can affect paired body parts, such as cruciate ligaments, hips, or eyes. Many insurers treat a problem on one side as making the other side pre-existing too. So if your dog tore one cruciate ligament before enrollment, the insurer may exclude the other knee as well, on the reasoning that the underlying predisposition was already present. A pressboard classification folder is how curable, incurable, and bilateral conditions stay three labeled sections — it is not 3-tab dividers (that live on what-pet-insurance-covers), not hanging file folders (that live on how-to-afford-vet-care), and not manila file folders (that live on emergency-vet-costs). Reading how a policy handles bilateral conditions matters for breeds prone to orthopedic disease.</p>
+          <p>A subtle but important rule involves bilateral conditions — those that can affect paired body parts, such as cruciate ligaments, hips, or eyes. Many insurers treat a problem on one side as making the other side pre-existing too. So if your dog tore one cruciate ligament before enrollment, the insurer may exclude the other knee as well, on the reasoning that the underlying predisposition was already present. A pressboard classification folder is how curable, incurable, and bilateral conditions stay three labeled sections — it is not 3-tab dividers, not hanging file folders, and not manila file folders. Reading how a policy handles bilateral conditions matters for breeds prone to orthopedic disease.</p>
 
           <h2>Why Waiting Periods Matter</h2>
           <p>Policies impose waiting periods after enrollment before coverage begins — short for accidents, longer for illness, and often longest for orthopedic conditions. Anything that arises during a waiting period is treated as pre-existing. This is another reason to enroll before problems appear: a condition that emerges in the gap between signing up and coverage taking effect will not be covered.</p>
@@ -59,32 +59,9 @@ export default function PreExistingPage() {
           <h2>The Practical Takeaway</h2>
           <p>Because pre-existing exclusions are permanent and broadly defined, the value of pet insurance is highest when you enroll a young, healthy pet with a clean record. Waiting until a pet shows symptoms — or worse, until after a diagnosis — locks out coverage for exactly the conditions most likely to generate large bills. If your pet already has a condition, insurance can still cover unrelated future problems, so it is rarely pointless, but enrolling early remains the most powerful decision an owner can make.</p>
 
-          <h2 id="kit">Pre-existing-conditions kit</h2>
+          <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Everyday physical supplies that match the
-            curable-vs-incurable, bilateral, and
-            veterinary-records copy on this page —
-            a pressboard classification folder so
-            curable, incurable, and bilateral
-            conditions stay three labeled sections,
-            a letter-size clasp envelope so the
-            vet-record copy stays one packet for
-            the insurer review, and a red-and-blue
-            checking pencil so incurable vs curable
-            stays marked on that copy. These are
-            educational pre-existing / records
-            tools, not a ranked product list, not a
-            substitute for veterinary care, and not
-            a treatment. Full-page magnifiers,
-            adjustable copyholders, and line-reader
-            strips already live on
-            reading-the-fine-print. Quad-ruled
-            graph pads, paid rubber stamps, and
-            handheld tally counters already live on
-            deductibles-reimbursement. This page
-            does not hop medications or insurance
-            brands as Amazon searches. This page
-            does not claim hands-on testing.
+            Keep these on hand: a pressboard classification folder so curable, incurable, and bilateral conditions stay three labeled sections, a letter-size clasp envelope so the vet-record copy stays one packet for the insurer review, and a red-and-blue checking pencil so incurable vs curable stays marked on that copy. These are educational pre-existing / records tools, not a ranked product list, not a substitute for veterinary care, and not a treatment.
           </p>
 
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/pressboard+classification+folder?s=insurance-pre-existing-conditions", "/go/amazon-brand/clasp+envelope+letter+size?s=insurance-pre-existing-conditions", "/go/amazon-brand/red+and+blue+checking+pencil?s=insurance-pre-existing-conditions"]} />

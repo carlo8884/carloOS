@@ -121,7 +121,7 @@ export default function BeetPulpPage() {
           <p>Beet pulp is a super-fiber: a highly digestible, fermentable fiber that delivers more calories than typical hay but without the starch and sugar load of grain. That makes it a safe way to add condition-building energy through the hindgut rather than through risky starch. As a soft, soaked mash it is also easy to chew and swallow, ideal for horses with poor teeth, and it carries water into the horse, aiding hydration.</p>
 
           <h2 id="soaking">Soaking Beet Pulp</h2>
-          <p>Beet pulp absorbs several times its dry weight in water and swells substantially, which is why it is soaked before feeding. Soaking dried shreds for around 30 minutes (pellets longer) produces a safe, easily eaten mash and removes the (largely theoretical, but worth avoiding) risk of dry pulp swelling after a horse bolts it. Use plenty of water, soak for the time the product specifies, and in hot weather soak fresh each feed to avoid fermentation and spoilage. Discard sour or fermented mash. A fine-mesh horse feed colander is how soaked shreds drain after that half-hour so the mash is a mash, not a soup — it is not a horse hay soaking tub (that lives on feeding-the-easy-keeper), not a horse feed soaking tub (that lives on feeding-senior-horses), not a lidded 5-gallon feed-soaking pail (that lives on choke), and not a horse hay soaking bag (that lives on heaves). A long-handled horse feed mixing paddle is how dry pulp is stirred into plenty of water and how supplements are mixed through the palatable mash — it is not a small rubber horse mixing pan (that lives on ration-balancers), not a marked horse grain scoop (that lives on feeding-the-performance-horse), and not a dental mash hop (that lives on equine-dental-care). A silicone horse feed-tub scraper is how leftover mash is scraped out so the next soak is fresh instead of fermented — it is not stackable rubber horse feed tubs (those live on grain) and not large smooth feed-tub rocks (those live on choke).</p>
+          <p>Beet pulp absorbs several times its dry weight in water and swells substantially, which is why it is soaked before feeding. Soaking dried shreds for around 30 minutes (pellets longer) produces a safe, easily eaten mash and removes the (largely theoretical, but worth avoiding) risk of dry pulp swelling after a horse bolts it. Use plenty of water, soak for the time the product specifies, and in hot weather soak fresh each feed to avoid fermentation and spoilage. Discard sour or fermented mash. A fine-mesh horse feed colander is how soaked shreds drain after that half-hour so the mash is a mash, not a soup — it is not a horse hay soaking tub, not a horse feed soaking tub, not a lidded 5-gallon feed-soaking pail, and not a horse hay soaking bag. A long-handled horse feed mixing paddle is how dry pulp is stirred into plenty of water and how supplements are mixed through the palatable mash — it is not a small rubber horse mixing pan, not a marked horse grain scoop, and not a dental mash hop. A silicone horse feed-tub scraper is how leftover mash is scraped out so the next soak is fresh instead of fermented — it is not stackable rubber horse feed tubs and not large smooth feed-tub rocks.</p>
 
           <h2 id="who">Who It Suits</h2>
           <ul>
@@ -137,30 +137,7 @@ export default function BeetPulpPage() {
 
           <h2 id="kit">Beet-pulp soaking supplies</h2>
           <p>
-            Everyday physical supplies that match the
-            soak-with-plenty-of-water, stir-into-a-mash,
-            and soak-fresh-each-feed copy on this page —
-            a fine-mesh horse feed colander so soaked
-            shreds drain after about 30 minutes instead
-            of being served as soup, a long-handled
-            horse feed mixing paddle so dry pulp is
-            stirred into plenty of water and supplements
-            are mixed through the mash, and a silicone
-            horse feed-tub scraper so leftover mash is
-            scraped out before the next soak ferments
-            in heat. These are educational barn
-            searches, not a ranked product list, not a
-            substitute for veterinary care, and not a
-            hay-soaking-tub hop (that lives on
-            feeding-the-easy-keeper), a feed-soaking-tub
-            hop (that lives on feeding-senior-horses),
-            a lidded-5-gallon-soaking-pail hop (that
-            lives on choke), a hay-soaking-bag hop
-            (that lives on heaves), a mixing-pan hop
-            (that lives on ration-balancers), or the
-            molasses-free-shreds / beet-pulp-pellets
-            ReviewCards below. This page does
-            not claim hands-on testing. </p>
+            Keep these on hand: a fine-mesh horse feed colander so soaked shreds drain after about 30 minutes instead of being served as soup, a long-handled horse feed mixing paddle so dry pulp is stirred into plenty of water and supplements are mixed through the mash, and a silicone horse feed-tub scraper so leftover mash is scraped out before the next soak ferments in heat. </p>
 
           <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/fine+mesh+horse+feed+colander?s=nutrition-beet-pulp", "/go/amazon-brand/long+handled+horse+feed+mixing+paddle?s=nutrition-beet-pulp", "/go/amazon-brand/silicone+horse+feed+tub+scraper?s=nutrition-beet-pulp"]} />
 
@@ -186,7 +163,7 @@ export default function BeetPulpPage() {
           </div>
 
           <h2 id="picks">Beet Pulp Picks</h2>
-          <p>A few widely-available beet pulp options covering shred and pellet formats and molasses-free for low-sugar diets. Always soak before feeding; introduce gradually. Use as part of a balanced ration -- beet pulp is a general fiber and calorie support, not a complete feed or a treatment. This is a documented-spec comparison drawing on standard US equestrian retail; this page does not claim hands-on testing.</p>
+          <p>A few widely-available beet pulp options covering shred and pellet formats and molasses-free for low-sugar diets. Always soak before feeding; introduce gradually. Use as part of a balanced ration -- beet pulp is a general fiber and calorie support, not a complete feed or a treatment.</p>
 
           <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/molasses+free+beet+pulp+shreds+horse?s=nutrition-beet-pulp", "/go/amazon-brand/beet+pulp+pellets+horse+feed?s=nutrition-beet-pulp"]} />
 

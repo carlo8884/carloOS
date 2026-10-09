@@ -136,7 +136,7 @@ export default function TraileringPage() {
           </ul>
 
           <h2 id="kit">Trailering Kit</h2>
-          <p>Everyday physical supplies that match the travel-protection and tying copy above — shipping boots or wraps and a poll guard if the horse is accustomed to them, plus trailer ties long enough that the horse can lower its head periodically without getting a leg over the rope. These are not treatments for shipping fever, dehydration, or loading fear; a feverish or dull horse after travel belongs with your veterinarian, not a pair of boots. Trailer floor, tire, brake, hitch, and lighting maintenance is vehicle work, not a retail kit. This page does not claim hands-on testing.</p>
+          <p>Keep these on hand: shipping boots or wraps and a poll guard if the horse is accustomed to them, plus trailer ties long enough that the horse can lower its head periodically without getting a leg over the rope. These are not treatments for shipping fever, dehydration, or loading fear; a feverish or dull horse after travel belongs with your veterinarian, not a pair of boots. Trailer floor, tire, brake, hitch, and lighting maintenance is vehicle work, not a retail kit.</p>
 
           <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/horse+shipping+boots?s=care-trailering", "/go/amazon-brand/horse+shipping+wraps?s=care-trailering", "/go/amazon-brand/horse+poll+guard?s=care-trailering", "/go/amazon-brand/horse+trailer+ties?s=care-trailering"]} />
 

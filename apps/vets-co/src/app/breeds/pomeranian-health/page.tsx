@@ -137,8 +137,7 @@ export default function VetsPomeranianHealthPage() {
             reviewedBy="Editorial team"
           />
 
-          <h2>TL;DR</h2>
-          <p>
+                    <p>
             The Pomeranian is a small (typically 3–7 lb), long-lived (12–16 years) toy spitz with a well-documented
             cluster of breed-predispositions: patellar luxation, tracheal collapse, dental crowding and periodontal
             disease, alopecia X (Black Skin Disease), congenital heart defects (particularly patent ductus
@@ -307,27 +306,9 @@ export default function VetsPomeranianHealthPage() {
             <a href="/reviews/best-pet-insurance">best pet insurance →</a>.
           </p>
 
-          <h2 id="kit">Pomeranian-health kit</h2>
+          <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Everyday physical supplies that match the
-            trachea, PDA, and alopecia X copy on
-            this page — an analog indoor hygrometer
-            so heat-and-humidity cough triggers stay
-            a written reading, a 6-column columnar
-            pad so patellar grade, murmur, dental
-            score, and body condition stay one
-            well-visit row, and an undated daily
-            planner so thyroid / ACTH / LDDS dates
-            stay written before anyone accepts
-            alopecia X. These are educational
-            Pomeranian-health / paperwork tools, not
-            a ranked product list, not a substitute
-            for veterinary care, and not a
-            treatment. Academic-year planners,
-            8-column columnar pads, and newsprint
-            sketch pads already live on
-            husky-health. This page
-            does not claim hands-on testing. </p>
+            Keep these on hand: an analog indoor hygrometer so heat-and-humidity cough triggers stay a written reading, a 6-column columnar pad so patellar grade, murmur, dental score, and body condition stay one well-visit row, and an undated daily planner so thyroid / ACTH / LDDS dates stay written before anyone accepts alopecia X. These are educational Pomeranian-health / paperwork tools, not a ranked product list, not a substitute for veterinary care, and not a treatment. </p>
 
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/analog+indoor+hygrometer?s=breeds-pomeranian-health", "/go/amazon-brand/6+column+columnar+pad?s=breeds-pomeranian-health", "/go/amazon-brand/undated+daily+planner?s=breeds-pomeranian-health"]} />
 

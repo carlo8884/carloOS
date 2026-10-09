@@ -148,7 +148,7 @@ export default function HaltersLeadRopesPage() {
           </ul>
 
           <h2 id="picks">Halter and Lead Picks</h2>
-          <p>A few widely-stocked options covering the everyday flat halter, a safer turnout halter, and a serviceable lead rope. These are physical handling tools, not training shortcuts — a halter and lead are only as safe as the handling and tying practices described above. This is a documented-spec comparison drawing on standard US equestrian retail; this page does not claim hands-on testing.</p>
+          <p>A few widely-stocked options covering the everyday flat halter, a safer turnout halter, and a serviceable lead rope. These are physical handling tools, not training shortcuts — a halter and lead are only as safe as the handling and tying practices described above.</p>
 
 
 
@@ -259,7 +259,7 @@ export default function HaltersLeadRopesPage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-07" />
+          <ComparisonFoot updated="2026-10-09" />
 
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">

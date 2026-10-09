@@ -138,7 +138,7 @@ export default function FerretLitterTrainingPage() {
           <>
             <TableOfContents
               items={[
-                { label: 'TL;DR', href: '#tldr' },
+                { label: '', href: '#tldr' },
                 { label: 'How Ferret Elimination Works', href: '#behavior' },
                 { label: 'Pan Placement Strategy', href: '#placement' },
                 { label: 'Substrate Choice', href: '#substrate' },
@@ -190,8 +190,7 @@ export default function FerretLitterTrainingPage() {
             even the best-trained ferret will look like a training failure.
           </DropCap>
 
-          <h2 id="tldr">TL;DR</h2>
-          <p>
+                    <p>
             Ferrets naturally back into corners to eliminate. Place a
             corner-shaped pan in every corner the ferret uses and the
             training largely happens on its own. Use paper-pellet or
@@ -524,7 +523,7 @@ export default function FerretLitterTrainingPage() {
 
           <h2 id="picks">Pan and Litter Picks</h2>
           <p>
-            Two staples that line up with the substrate and pan-shape recommendations above. This is a documented-spec comparison drawing on widely-stocked products in US pet retail; this page does not claim hands-on testing.
+            Two staples that line up with the substrate and pan-shape recommendations above.
           </p>
           <ReviewCard quietUntilTag
             id="marshall-corner-pan"

@@ -66,22 +66,9 @@ export default function SpayNeuterPage() {
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
 
-          <h2 id="kit">Post-neuter calorie-cut kit</h2>
+          <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Everyday physical supplies that match the
-            after-surgery portion copy on this page —
-            an adjustable sliding dog-food scoop so the
-            20–25% cut is a set mark, reusable dog-food
-            portion cups so the smaller daily ration is
-            pre-measured for the whole household, and a
-            dog weight-log book so monthly body
-            condition stays written down. These are
-            household tools, not treatments. They do
-            not treat obesity, they do not replace a
-            veterinarian or a weight-management plan,
-            and they are not a ranked product list. This page
-            does not hop medications. This page does
-            not claim hands-on testing. </p>
+            Keep these on hand: an adjustable sliding dog-food scoop so the 20–25% cut is a set mark, reusable dog-food portion cups so the smaller daily ration is pre-measured for the whole household, and a dog weight-log book so monthly body condition stays written down. These are household tools, not treatments. They do not treat obesity, they do not replace a veterinarian or a weight-management plan, and they are not a ranked product list. </p>
 
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/adjustable+sliding+dog+food+scoop?s=health-spay-neuter-benefits", "/go/amazon-brand/reusable+dog+food+portion+cups?s=health-spay-neuter-benefits", "/go/amazon-brand/dog+weight+log+book?s=health-spay-neuter-benefits"]} />
 

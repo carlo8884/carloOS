@@ -129,7 +129,7 @@ export default function FerretHeartDiseasePage() {
           <>
             <TableOfContents
               items={[
-                { label: 'TL;DR', href: '#tldr' },
+                { label: '', href: '#tldr' },
                 { label: 'Types of Heart Disease', href: '#types' },
                 { label: 'Why It Hides', href: '#hides' },
                 { label: 'Signs to Watch For', href: '#signs' },
@@ -177,8 +177,7 @@ export default function FerretHeartDiseasePage() {
             stamina changes seriously and asking a vet to listen to the heart.
           </DropCap>
 
-          <h2 id="tldr">TL;DR</h2>
-          <p>
+                    <p>
             The most common heart disease in pet ferrets is dilated
             cardiomyopathy, a weakening and enlargement of the heart muscle;
             valvular disease and, less often, hypertrophic cardiomyopathy also

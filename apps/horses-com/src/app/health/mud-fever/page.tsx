@@ -139,36 +139,15 @@ export default function MudFeverPage() {
 
           <h2 id="prevention">Prevention</h2>
           <ul>
-            <li><strong>Provide dry standing.</strong> Rotate muddy paddocks, use hardstanding or gravel around gates and water, and give horses a dry place to stand. A heavy-duty paddock mud grid is how that gate and water standing becomes a drained pad instead of a wet bowl — it is not ice grit (that lives on winter-care), not a stall rubber mat (that lives on the stall-bedding calculator), and not deep-sand stall bedding (that lives on laminitis).</li>
-            <li><strong>Keep legs dry.</strong> Avoid washing legs constantly in winter; if you must wash off mud, dry thoroughly afterward. Full-length horse turnout boots are how the pastern stays out of mud instead of soaking in it — they are not fly boots (those live on fly-control), not shipping boots (those live on trailering), not hoof boots (those live on hoof-care-basics), and not a hoof-soaking boot (that lives on abscess).</li>
-            <li><strong>Manage feathers</strong> in heavily feathered breeds, keeping them clean and dry and watching for mites. This page does not hop clippers — those live on body-clipping.</li>
+            <li><strong>Provide dry standing.</strong> Rotate muddy paddocks, use hardstanding or gravel around gates and water, and give horses a dry place to stand. A heavy-duty paddock mud grid is how that gate and water standing becomes a drained pad instead of a wet bowl — it is not ice grit, not a stall rubber mat, and not deep-sand stall bedding.</li>
+            <li><strong>Keep legs dry.</strong> Avoid washing legs constantly in winter; if you must wash off mud, dry thoroughly afterward. Full-length horse turnout boots are how the pastern stays out of mud instead of soaking in it — they are not fly boots, not shipping boots, not hoof boots, and not a hoof-soaking boot.</li>
+            <li><strong>Manage feathers</strong> in heavily feathered breeds, keeping them clean and dry and watching for mites.</li>
             <li><strong>Check legs daily</strong> in wet weather so early lesions are caught and treated before they spread.</li>
           </ul>
 
-          <h2 id="kit">Dry-leg kit</h2>
+          <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Everyday physical supplies that match the
-            dry-standing, keep-legs-dry, and dry-thoroughly
-            copy on this page — a heavy-duty paddock mud
-            grid so gate and water standing is a drained
-            pad, full-length horse turnout boots so the
-            pastern stays out of mud, and a waffle-weave
-            horse leg towel so a necessary wash is dried.
-            These are educational dry-leg tools, not a
-            ranked product list, not a substitute for
-            veterinary care, and not an antimicrobial
-            cream or a diagnosis. Fly boots already live
-            on fly-control. Shipping boots already live
-            on trailering. Hoof boots already live on
-            hoof-care-basics. Soaking boots already live
-            on abscess. Stall rubber mats already live on
-            the stall-bedding calculator. Ice grit already
-            lives on winter-care. Clippers already live on
-            body-clipping. Cotton foaling towels already
-            live on the gestation calculator. This page
-            does not hop antimicrobial wash, barrier
-            cream, mite treatments, or systemic drugs.
-            This page does not claim hands-on testing.
+            Keep these on hand: a heavy-duty paddock mud grid so gate and water standing is a drained pad, full-length horse turnout boots so the pastern stays out of mud, and a waffle-weave horse leg towel so a necessary wash is dried. These are educational dry-leg tools, not a ranked product list, not a substitute for veterinary care, and not an antimicrobial cream or a diagnosis.
           </p>
 
           <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/heavy+duty+paddock+mud+grid?s=health-mud-fever", "/go/amazon-brand/full+length+horse+turnout+boots?s=health-mud-fever", "/go/amazon-brand/waffle+weave+horse+leg+towel?s=health-mud-fever"]} />

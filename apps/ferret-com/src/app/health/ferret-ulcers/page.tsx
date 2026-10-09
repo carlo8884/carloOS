@@ -131,7 +131,7 @@ export default function FerretUlcersPage() {
           <>
             <TableOfContents
               items={[
-                { label: 'TL;DR', href: '#tldr' },
+                { label: '', href: '#tldr' },
                 { label: 'What Causes Them', href: '#causes' },
                 { label: 'Signs to Watch For', href: '#signs' },
                 { label: 'Diagnosis', href: '#diagnosis' },
@@ -178,8 +178,7 @@ export default function FerretUlcersPage() {
             is the closest ferret analog to the human ulcer story.
           </DropCap>
 
-          <h2 id="tldr">TL;DR</h2>
-          <p>
+                    <p>
             Gastric ulcers are common in ferrets and frequently linked to{' '}
             <em>Helicobacter mustelae</em>, a stomach bacterium analogous to{' '}
             <em>H. pylori</em> in people; stress and concurrent illness also

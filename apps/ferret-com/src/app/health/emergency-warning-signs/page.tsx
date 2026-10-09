@@ -131,7 +131,7 @@ export default function FerretEmergencySignsPage() {
           <>
             <TableOfContents
               items={[
-                { label: 'TL;DR', href: '#tldr' },
+                { label: '', href: '#tldr' },
                 { label: 'Why Ferrets Crash Fast', href: '#fast' },
                 { label: 'The Can’t-Wait List', href: '#redflags' },
                 { label: 'What Each Can Mean', href: '#meaning' },
@@ -185,8 +185,7 @@ export default function FerretEmergencySignsPage() {
             entry.
           </DropCap>
 
-          <h2 id="tldr">TL;DR</h2>
-          <p>
+                    <p>
             Ferrets hide illness and deteriorate quickly, so several signs
             warrant immediate veterinary care rather than watchful waiting:
             collapse or sudden weakness, seizures or stargazing, labored or

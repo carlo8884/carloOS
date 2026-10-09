@@ -67,8 +67,8 @@ export default function DogHotSpotsPage() {
           <h2>Preventing Recurrence</h2>
           <p>Hot spots that recur despite appropriate treatment indicate an unaddressed underlying trigger. The most common unaddressed triggers: year-round flea prevention not being used consistently (flea allergy in a warm climate requires year-round prevention), environmental or food allergy not being managed, and ear infections not being fully cleared (dogs with chronic ear infections repeatedly scratch at the ear base and develop hot spots there). Addressing the trigger — allergy workup, strict flea prevention, ear disease management — prevents recurrence.</p>
 
-          <h2 id="kit">Hot-spot e-collar kit</h2>
-          <p>Everyday physical supplies that match the home-care copy above — an e-collar (cone) so the dog cannot lick, scratch, or bite the lesion, plus a soft cone alternative for dogs that tolerate it. Chlorhexidine, betadine, Vetericyn / Genesis / Malacetic sprays, hydrocortisone, Cytopoint, Apoquel, corticosteroids, and systemic antibiotics stay educational copy only — this page never hops medicated sprays, brand ASINs, or medications. This page does not claim hands-on testing.</p>
+          <h2 id="kit">Supplies named on this page</h2>
+          <p>Keep these on hand: pet recovery cone and soft recovery cone dog. Chlorhexidine, betadine, Vetericyn / Genesis / Malacetic sprays, hydrocortisone, Cytopoint, Apoquel, corticosteroids, and systemic antibiotics stay educational copy only — this page never hops medicated sprays, brand ASINs, or medications.</p>
 
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/pet+recovery+cone?s=health-dog-hot-spots", "/go/amazon-brand/soft+recovery+cone+dog?s=health-dog-hot-spots"]} />
 

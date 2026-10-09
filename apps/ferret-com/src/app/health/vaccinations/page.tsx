@@ -135,7 +135,7 @@ export default function FerretVaccinationsPage() {
           <>
             <TableOfContents
               items={[
-                { label: 'TL;DR', href: '#tldr' },
+                { label: '', href: '#tldr' },
                 { label: 'The Two Core Vaccines', href: '#core' },
                 { label: 'Canine Distemper (CDV)', href: '#cdv' },
                 { label: 'Rabies', href: '#rabies' },
@@ -195,8 +195,7 @@ export default function FerretVaccinationsPage() {
             reaction profiles, and both warrant doing on schedule.
           </DropCap>
 
-          <h2 id="tldr">TL;DR</h2>
-          <p>
+                    <p>
             Ferrets need two vaccines: canine distemper virus (CDV) and
             rabies. Kit series: CDV at approximately 8, 11, and 14 weeks;
             rabies at 12-16 weeks. Annual boosters for life. Use the
@@ -500,18 +499,7 @@ export default function FerretVaccinationsPage() {
 
           <h2 id="kit">Vaccine-day travel kit</h2>
           <p>
-            Everyday physical supplies that match the clinic-trip, legal-
-            certificate, and post-vaccine observation copy on this page —
-            a small-animal rabies-certificate holder so the signed rabies
-            certificate and CVI stay with the ferret for interstate or
-            local compliance checks, a top-loading small-animal carrier
-            so kit-series clinic hops and the ride straight home stay
-            contained, and a fleece small-animal bonding pouch so the
-            30–60 minute in-clinic observation and the quiet ride home
-            after a mild reaction stay wrapped, not loose on a lap. These are household travel tools, not treatments. They do
-            not vaccinate a ferret, they do not replace a USDA-licensed
-            product chosen by a veterinarian, they do not set a
-            premedication dose, and they are not a ranked product list. This page does not claim hands-on testing. </p>
+            Keep these on hand: a small-animal rabies-certificate holder so the signed rabies certificate and CVI stay with the ferret for interstate or local compliance checks, a top-loading small-animal carrier so kit-series clinic hops and the ride straight home stay contained, and a fleece small-animal bonding pouch so the 30–60 minute in-clinic observation and the quiet ride home after a mild reaction stay wrapped, not loose on a lap. These are household travel tools, not treatments. They do not vaccinate a ferret, they do not replace a USDA-licensed product chosen by a veterinarian, they do not set a premedication dose, and they are not a ranked product list. </p>
 
           <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/small+animal+rabies+certificate+holder?s=health-vaccinations", "/go/amazon-brand/top+loading+small+animal+carrier?s=health-vaccinations", "/go/amazon-brand/fleece+small+animal+bonding+pouch?s=health-vaccinations"]} />
 

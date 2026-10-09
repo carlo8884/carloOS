@@ -88,7 +88,7 @@ export default function NewTankSyndromePage() {
         <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/api+freshwater+master+test+kit?s=health-new-tank-syndrome", "/go/amazon-brand/seachem+prime+water+conditioner?s=health-new-tank-syndrome", "/go/amazon-brand/dr+tims+ammonium+chloride?s=health-new-tank-syndrome", "/go/amazon-brand/tetra+safestart+plus?s=health-new-tank-syndrome", "/go/amazon-brand/aquarium+sponge+filter?s=health-new-tank-syndrome"]} />
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
-            Shop a new-tank cycling kit
+            Shop these supplies
           </div>
           <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">A liquid master kit is how you see ammonia, nitrite, and nitrate
             through fishless cycling and through the fish-in emergency

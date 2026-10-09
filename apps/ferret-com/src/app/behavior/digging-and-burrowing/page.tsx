@@ -317,7 +317,7 @@ export default function FerretDiggingBurrowingPage() {
 
           <h2 id="picks">Dig Box and Tunnel Picks</h2>
           <p>
-            Two purchases that address the digging instinct directly — a tunnel set for the burrowing side and a ball pit for the dig-box side. This is a documented-spec comparison based on published product details and keeper community use patterns; this page does not claim hands-on testing.
+            Two purchases that address the digging instinct directly — a tunnel set for the burrowing side and a ball pit for the dig-box side.
           </p>
           <ReviewCard quietUntilTag
             id="marshall-pop-n-play-dig"

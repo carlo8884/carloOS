@@ -60,42 +60,7 @@ export default function DogLiverDiseasePage() {
 
           <h2 id="kit">A Simple Liver-Enzyme Watch Kit</h2>
           <p>
-            Three everyday physical supplies match the
-            enzyme-monitoring, hepatoprotective-support
-            routine, and cachexia weight-tracking copy
-            above: a pet medical records binder so ALT
-            and ALP printouts, bile-acids results, and
-            jaundice-watch notes stay in one history
-            (the trend over time matters more than a
-            single value), an AM/PM weekly pill organizer
-            for the SAMe / silymarin timing the
-            veterinarian sets — not a Denamarin brand
-            hop and not a prescription — and a digital
-            hanging luggage scale for cachexia weight
-            tracking between rechecks when a floor pet
-            scale is not already in the house. These are
-            household record-and-routine tools, not
-            treatments. They do not interpret liver
-            enzymes, they do not replace a veterinarian
-            directed diet (highly digestible protein
-            such as egg, cottage cheese, or poultry;
-            protein restriction only for hepatic
-            encephalopathy), they do not replace a
-            biopsy or a bile-acids test, they do not
-            treat jaundice, ascites, or a portosystemic
-            shunt, and they are not Hill&apos;s l/d,
-            Royal Canin Hepatic, lactulose, or
-            Denamarin. LED medical penlights, pet
-            emergency contact cards, folding pet
-            stretchers, vaccination record books,
-            seat-belt tethers, foldable waterproof
-            puppy mats, mosquito dunks, a monthly pill
-            organizer, a soft-sided vet-visit carrier,
-            a gum-color assessment chart, recovery food,
-            a feeding syringe, digital pet scales, and
-            high-value vet-visit treats already live
-            on other pages. This page does not claim
-            hands-on testing. </p>
+            Keep these on hand: not a Denamarin brand hop and not a prescription — and a digital hanging luggage scale for cachexia weight tracking between rechecks when a floor pet scale is not already in the house. These are household record-and-routine tools, not treatments. They do not interpret liver enzymes, they do not replace a veterinarian directed diet (highly digestible protein such as egg, cottage cheese, or poultry; protein restriction only for hepatic encephalopathy), they do not replace a biopsy or a bile-acids test, they do not treat jaundice, ascites, or a portosystemic shunt, and they are not Hill&apos;s l/d, Royal Canin Hepatic, lactulose, or Denamarin. </p>
 
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/pet+medical+records+binder?s=health-dog-liver-disease", "/go/amazon-brand/am+pm+weekly+pill+organizer?s=health-dog-liver-disease", "/go/amazon-brand/digital+hanging+luggage+scale?s=health-dog-liver-disease"]} />
 

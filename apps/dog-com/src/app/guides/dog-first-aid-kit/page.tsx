@@ -161,7 +161,7 @@ export default function DogFirstAidKitPage() {
             reviewedBy="Editorial team"
           />
 
-          <CalloutBox variant="evidence" title="TL;DR — Be ready before you need to be">
+          <CalloutBox variant="evidence" title="Be ready before you need to be">
             <p>
               <strong>Build a kit:</strong> wound and bandaging supplies, a muzzle, gloves, a thermometer, a towel, your dog&rsquo;s records and photo, and only veterinarian-approved medications.
             </p>

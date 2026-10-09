@@ -153,7 +153,7 @@ export default function DogObesityPage() {
             reviewedBy="Editorial team"
           />
 
-          <CalloutBox variant="evidence" title="TL;DR — Dog obesity, in numbers">
+          <CalloutBox variant="evidence" title="Dog obesity, in numbers">
             <p>
               <strong>About 59% of US dogs</strong> are overweight or obese (APOP 2022 survey).
             </p>
@@ -278,8 +278,8 @@ export default function DogObesityPage() {
             For these breeds, the management is the same as for any obese dog but with less margin for error: measure every meal, treat sparingly within the WSAVA ceiling of no more than 10% of daily calorie intake (<a href="https://wsava.org/wp-content/uploads/2025/11/WSAVA_GuidetoTreats_Dogs_251107.pdf">WSAVA treat guide</a>), weigh monthly, and maintain BCS 4–5 as a lifelong baseline rather than a recovery target.
           </p>
 
-          <h2 id="kit">Weigh-in kit</h2>
-          <p>Everyday physical supplies that match the weigh-in and meal-pacing copy above — a digital pet scale for the every-two-weeks body-weight check, plus a slow-feeder dog bowl so meals take longer and satiety improves without extra calories. These are home-setup aids, not treatments. Prescription weight-management diets (Hill&rsquo;s Metabolic, Royal Canin Satiety Support, Purina Pro Plan Veterinary Diets OM), brand food ASINs, kitchen gram scales, and portion-control food scales stay educational copy only — this page never hops diets, food ASINs, or the sister <a href={crossSiteHref('vets-co', '/health/weight-management')}>vets.co weight-management</a> kitchen-scale hops. This page does not claim hands-on testing.</p>
+          <h2 id="kit">Supplies named on this page</h2>
+          <p>Keep these on hand: a digital pet scale for the every-two-weeks body-weight check, plus a slow-feeder dog bowl so meals take longer and satiety improves without extra calories. These are home-setup aids, not treatments. Prescription weight-management diets (Hill&rsquo;s Metabolic, Royal Canin Satiety Support, Purina Pro Plan Veterinary Diets OM), brand food ASINs, kitchen gram scales, and portion-control food scales stay educational copy only — this page never hops diets, food ASINs, or the sister <a href={crossSiteHref('vets-co', '/health/weight-management')}>vets.co weight-management</a> kitchen-scale hops.</p>
 
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/digital+pet+scale?s=health-dog-obesity", "/go/amazon-brand/slow+feeder+dog+bowl?s=health-dog-obesity"]} />
 

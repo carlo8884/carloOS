@@ -198,7 +198,7 @@ export default function BasicCommandsPage() {
         <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/puppy+training+treats?s=training-basic-commands", "/go/amazon-brand/dog+training+treat+pouch+belt+clip?s=training-basic-commands", "/go/amazon-brand/dog+training+clicker?s=training-basic-commands", "/go/amazon-brand/dog+long+line+leash?s=training-basic-commands"]} />
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
-            Shop a five-command kit
+            Shop these supplies
           </div>
           <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Soft, pea-sized treats and a belt-clip pouch keep rewards in the
             1–2 second window. Pair them with a clicker (or a verbal &quot;yes&quot;)

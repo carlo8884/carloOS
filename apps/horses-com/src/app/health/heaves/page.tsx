@@ -142,16 +142,16 @@ export default function HeavesPage() {
           <h2 id="environment">Environmental Management</h2>
           <ul>
             <li><strong>Maximize turnout</strong> and fresh air -- for most heaves horses, living out is the single biggest improvement.</li>
-            <li><strong>Soak or steam hay, or feed alternative forage</strong> such as haylage or a low-dust complete feed, to slash inhaled mold and dust. A hay steamer treats a flake or net in steam so mold and dust drop before the horse eats; a hay soaking bag lets a flake sit in water, then drain, so the same dusty winter hay is wet rather than airborne. Low-dust bedding and rubber stall mats already live on the stall-bedding calculator and stay off this kit.</li>
+            <li><strong>Soak or steam hay, or feed alternative forage</strong> such as haylage or a low-dust complete feed, to slash inhaled mold and dust. A hay steamer treats a flake or net in steam so mold and dust drop before the horse eats; a hay soaking bag lets a flake sit in water, then drain, so the same dusty winter hay is wet rather than airborne.</li>
             <li><strong>Use low-dust bedding</strong> such as dust-extracted shavings, cardboard, or rubber mats instead of straw.</li>
-            <li><strong>Improve barn ventilation</strong> and avoid keeping the horse stabled while bedding is shaken out or hay is moved nearby. Stall fans already live on other horses.com pages and stay off this kit.</li>
+            <li><strong>Improve barn ventilation</strong> and avoid keeping the horse stabled while bedding is shaken out or hay is moved nearby.</li>
             <li><strong>Feed at ground level</strong> rather than from a raised net, to help airway drainage. Slow-feeder hay nets stay on the feed calculator and forage pages.</li>
           </ul>
 
           <h2 id="medical">Medical Treatment</h2>
 
           <h2 id="kit">Heaves Kit</h2>
-          <p>Everyday physical supplies that match the soak-or-steam hay copy above — a horse hay steamer so a flake can be steamed before feeding, plus a hay soaking bag so dusty winter hay can sit in water and drain. These are not treatments for equine asthma, heaves flares, or infectious cough; a horse that is struggling to breathe, has a fever, or is not improving after the dusty-hay trigger is removed needs a veterinarian. Low-dust bedding, rubber stall mats, slow-feeder hay nets, stall fans, inhaler spacers, corticosteroids, and bronchodilators stay off this kit — those already ship on other pages or are prescription-only. This page does not claim hands-on testing.</p>
+          <p>Keep these on hand: a horse hay steamer so a flake can be steamed before feeding, plus a hay soaking bag so dusty winter hay can sit in water and drain. These are not treatments for equine asthma, heaves flares, or infectious cough; a horse that is struggling to breathe, has a fever, or is not improving after the dusty-hay trigger is removed needs a veterinarian. Low-dust bedding, rubber stall mats, slow-feeder hay nets, stall fans, inhaler spacers, corticosteroids, and bronchodilators stay off this kit — those already ship on other pages or are prescription-only.</p>
 
           <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/horse+hay+steamer?s=health-heaves", "/go/amazon-brand/horse+hay+soaking+bag?s=health-heaves"]} />
 
@@ -162,7 +162,7 @@ export default function HeavesPage() {
               inhalers, steroids, or medication hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the heaves kit
+              Shop these supplies
             </div>
             <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">

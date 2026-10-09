@@ -132,7 +132,6 @@ export default function SeniorHorseCarePage() {
 
           <h2 id="comfort">Comfort and Exercise</h2>
           <p>Gentle, consistent exercise keeps an older horse&apos;s joints mobile, muscles toned, and mind engaged; the arthritic senior generally does better with movement and turnout than with confinement. Adapt the work to the horse -- lighter, with thorough warm-ups -- and provide comfort: shelter, soft footing, protection from bullying by younger herdmates, body clipping for PPID horses that fail to shed, and attentive blanketing for those that struggle to keep warm. Small accommodations make a large difference to an old horse&apos;s comfort.</p>
-          <p>This page does not hop medications.</p>
 
           <h2 id="monitoring">Veterinary Monitoring</h2>
           <p>Senior horses benefit from more frequent veterinary attention: regular dental exams, testing for PPID when signs appear, more careful parasite control given reduced immunity, attention to vaccination, and prompt investigation of weight loss or other changes. Because age-related conditions develop gradually and a thick or PPID coat hides weight change, regular hands-on checks and body condition scoring catch problems early, when they are most manageable.</p>

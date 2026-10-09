@@ -48,7 +48,7 @@ export default function SeniorPetCarePage() {
 
           <h2>Why Biannual Exams Matter</h2>
           <DropCap>A year in a senior dog&apos;s life corresponds to 5–7 human years. Conditions that develop gradually — dental disease, kidney disease, hypothyroidism, arthritis, cardiac disease, early cancer — can progress from manageable to advanced within one annual exam cycle. The standard of care for dogs 7+ is twice-yearly comprehensive examinations. This is not excessive — it is appropriate for the rate at which senior dogs&apos; health changes.</DropCap>
-          <p>Each biannual senior exam should include: a comprehensive physical examination with specific attention to lymph nodes (lymphoma screening), abdominal palpation (organ size and masses), cardiac auscultation (murmur grading), orthopedic assessment (joint pain, range of motion), ophthalmic assessment (cataracts, early glaucoma), dental grading, body weight and condition scoring, and a brief cognitive and behavioral history review. A letter-size plastic file box is how the last two exam packets — physical notes, CBC, chemistry, SDMA, and the blood-pressure reading — travel to that visit in date order instead of as a pile of loose printouts. It is not a letter-size expanding file organizer (that lives on senior-bloodwork-guide), not a pet medical-records binder, and not a hardcover weekly appointment planner. It does not interpret labs and it is not a substitute for the veterinarian who reviews the trend.</p>
+          <p>Each biannual senior exam should include: a comprehensive physical examination with specific attention to lymph nodes (lymphoma screening), abdominal palpation (organ size and masses), cardiac auscultation (murmur grading), orthopedic assessment (joint pain, range of motion), ophthalmic assessment (cataracts, early glaucoma), dental grading, body weight and condition scoring, and a brief cognitive and behavioral history review. A letter-size plastic file box is how the last two exam packets — physical notes, CBC, chemistry, SDMA, and the blood-pressure reading — travel to that visit in date order instead of as a pile of loose printouts. It is not a letter-size expanding file organizer, not a pet medical-records binder, and not a hardcover weekly appointment planner. It does not interpret labs and it is not a substitute for the veterinarian who reviews the trend.</p>
 
           <h2>What Bloodwork Reveals</h2>
           <p>Annual bloodwork in senior dogs — CBC (complete blood count) plus comprehensive chemistry panel plus urinalysis — screens for the most common senior health conditions before clinical signs develop. Key findings:</p>
@@ -69,40 +69,14 @@ export default function SeniorPetCarePage() {
 
           <h2>Cognitive Dysfunction Syndrome</h2>
           <p>Cognitive dysfunction syndrome (CDS) — the canine equivalent of dementia — affects approximately 22% of dogs 9–11 years and over 60% of dogs 15+ years (Madari et al., Appl Anim Behav Sci). Signs: disorientation (getting stuck in corners, losing their way in familiar places), altered sleep-wake cycles (sleeping during day, awake and vocal at night), house soiling (forgetting trained behaviors), reduced interest in interaction, staring at walls.</p>
-          <p>The DISHAA scale (Disorientation, Interactions, Sleep/wake, Housetraining, Activity, Anxiety) standardizes CDS assessment. CDS is underdiagnosed — owners frequently attribute signs to &quot;just getting old.&quot; While there is no cure, management helps: Purina Pro Plan Bright Mind (has clinical evidence), Anipryl (selegiline — <a href="https://www.fda.gov/animal-veterinary" rel="noopener" target="_blank" className="text-brand-primary hover:underline">FDA</a> approved for CDS), environmental enrichment, regular exercise maintaining cognitive engagement, and Apoaequorin (Neutricks) which has some supporting evidence. Those are clinic and diet conversations, not shoppable hops on this page. A battery motion-sensor night light is how night wandering and vocalizing become a dated DISHAA observation you can hand the veterinarian — the light comes on when the dog gets up, so the sleep-wake note is a time and a count, not a guessed &quot;up a lot.&quot; It is not a plug-in night light (that lives on cognitive-dysfunction), not an analog wall clock with a second hand, and not a handheld AA LED flashlight. It does not treat CDS and it is not a substitute for a veterinary exam.</p>
+          <p>The DISHAA scale (Disorientation, Interactions, Sleep/wake, Housetraining, Activity, Anxiety) standardizes CDS assessment. CDS is underdiagnosed — owners frequently attribute signs to &quot;just getting old.&quot; While there is no cure, management helps: Purina Pro Plan Bright Mind (has clinical evidence), Anipryl (selegiline — <a href="https://www.fda.gov/animal-veterinary" rel="noopener" target="_blank" className="text-brand-primary hover:underline">FDA</a> approved for CDS), environmental enrichment, regular exercise maintaining cognitive engagement, and Apoaequorin (Neutricks) which has some supporting evidence. Those are clinic and diet conversations, not shoppable hops on this page. A battery motion-sensor night light is how night wandering and vocalizing become a dated DISHAA observation you can hand the veterinarian — the light comes on when the dog gets up, so the sleep-wake note is a time and a count, not a guessed &quot;up a lot.&quot; It is not a plug-in night light, not an analog wall clock with a second hand, and not a handheld AA LED flashlight. It does not treat CDS and it is not a substitute for a veterinary exam.</p>
 
           <h2>Quality of Life Assessment</h2>
           <p>For senior dogs with chronic illness, a formal quality of life assessment helps owners and veterinarians make difficult decisions objectively. The Lap of Love Quality of Life Scale and the HHHHHMM scale (Hurt, Hunger, Hydration, Hygiene, Happiness, Mobility, More good days than bad) provide structured frameworks. The goal is not length of life alone — it is maximum quality of life for whatever time remains. Regular QoL conversations with your veterinarian starting in early senior years, before crisis, allow more thoughtful and less emotionally reactive end-of-life decision-making. A plug-in heated pet mat is rest-and-comfort gear for that QoL watch — a warm surface the dog can choose at home so Hunger, Happiness, and Mobility notes come from a dog that can settle, not a treatment for arthritis, CDS, or pain. It is not an elevated mesh dog cot, not an extra-large bolster dog lounge, not an egg-crate foam kennel pad, not a self-warming dog mat, and not an orthopedic dog bed. It does not replace the HHHHHMM conversation with the veterinarian.</p>
 
-          <h2 id="kit">Home-care kit</h2>
+          <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Everyday physical supplies that match the
-            biannual-exam, screening-record, blood-pressure,
-            cognitive-observation, and quality-of-life
-            copy on this page — a letter-size plastic
-            file box so CBC, chemistry, SDMA, and blood-
-            pressure printouts stack in date order for
-            the next twice-yearly visit, a plug-in
-            heated pet mat so rest at home stays a
-            comfort surface you can watch for QoL
-            changes, and a battery motion-sensor night
-            light so night wandering and vocalizing
-            become dated DISHAA observations for the
-            veterinarian. These are educational
-            home-care and monitoring tools, not a
-            ranked product list, not a substitute for
-            veterinary care, and not a treatment for
-            CDS, CKD, hypertension, or arthritis. Anipryl, selegiline, Bright Mind, Neutricks,
-            and human medicines are not shoppable hops. Letter-size expanding file organizers,
-            sterile urine specimen cups, and 12-hour
-            mechanical kitchen timers already live on
-            senior-bloodwork-guide. Elevated mesh dog cots, clear adhesive
-            non-slip stair treads, and hardcover weekly
-            appointment planners already live on
-            pain-management-dogs. Egg-crate kennel pads, carpeted wooden pet
-            steps, and veterinary floor scales already
-            live on pain-signs-dogs. This
-            page does not claim hands-on testing. </p>
+            Keep these on hand: a letter-size plastic file box so CBC, chemistry, SDMA, and blood- pressure printouts stack in date order for the next twice-yearly visit, a plug-in heated pet mat so rest at home stays a comfort surface you can watch for QoL changes, and a battery motion-sensor night light so night wandering and vocalizing become dated DISHAA observations for the veterinarian. These are educational home-care and monitoring tools, not a ranked product list, not a substitute for veterinary care, and not a treatment for CDS, CKD, hypertension, or arthritis. Anipryl, selegiline, Bright Mind, Neutricks, and human medicines are not shoppable hops. </p>
 
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/letter+size+plastic+file+box?s=health-senior-pet-care", "/go/amazon-brand/plug+in+heated+pet+mat?s=health-senior-pet-care", "/go/amazon-brand/battery+motion+sensor+night+light?s=health-senior-pet-care"]} />
 

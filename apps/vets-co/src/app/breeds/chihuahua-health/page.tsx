@@ -137,8 +137,7 @@ export default function VetsChihuahuaHealthPage() {
             reviewedBy="Editorial team"
           />
 
-          <h2>TL;DR</h2>
-          <p>
+                    <p>
             The Chihuahua is a small (typically 3–6 lb), long-lived (12–16 years) toy breed with a
             well-described cluster of predispositions: patellar luxation, hydrocephalus (more often suspected
             than confirmed because of the molera), severe dental crowding, juvenile and small-adult
@@ -305,29 +304,9 @@ export default function VetsChihuahuaHealthPage() {
             breed exclusion. See our 2026 comparison: <a href="/reviews/best-pet-insurance">best pet insurance →</a>.
           </p>
 
-          <h2 id="kit">Chihuahua-health kit</h2>
+          <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Everyday physical supplies that match the
-            molera, MMVD, and hypoglycemia copy on
-            this page — a 13-column analysis pad so
-            murmur grade, echo date, Stage A–D, and
-            resting respiratory rate stay one
-            written row, a desk blotter pad so the
-            molera-protection household rules stay
-            where kids see them, and a numbered log
-            book so each tremor-versus-hypo episode
-            stays one dated entry. These are
-            educational Chihuahua-health / paperwork
-            tools, not a ranked product list, not a
-            substitute for veterinary care, and not
-            a treatment. Two-column ledger pads,
-            30-day habit-tracker pads, and hourly
-            desk pads already live on
-            yorkshire-terrier-health. Analog
-            stopwatches, blank index cards, and
-            recipe-card boxes already live on
-            beagle-health. This page does not claim hands-on
-            testing. </p>
+            Keep these on hand: a 13-column analysis pad so murmur grade, echo date, Stage A–D, and resting respiratory rate stay one written row, a desk blotter pad so the molera-protection household rules stay where kids see them, and a numbered log book so each tremor-versus-hypo episode stays one dated entry. These are educational Chihuahua-health / paperwork tools, not a ranked product list, not a substitute for veterinary care, and not a treatment. </p>
 
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/13+column+analysis+pad?s=breeds-chihuahua-health", "/go/amazon-brand/desk+blotter+pad?s=breeds-chihuahua-health", "/go/amazon-brand/numbered+log+book?s=breeds-chihuahua-health"]} />
 

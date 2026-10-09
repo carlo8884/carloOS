@@ -337,8 +337,8 @@ export default function ColicPage() {
           <h3>Monitor and document baseline vitals</h3>
           <p>Knowing the horse&apos;s resting heart rate, normal gut sounds, normal manure output, and typical attitude makes it possible to recognize early deviations. Owners who can describe the horse&apos;s baseline accurately give the veterinarian a substantial diagnostic advantage in any acute presentation. A soft fleece equine cooler is how a sweating horse stays quietly covered in a stall while you wait for the veterinarian — it is not a turnout blanket, not a body-clipping cooler, and not a treatment.</p>
 
-          <h2 id="kit">Baseline-vitals kit</h2>
-          <p>Everyday physical supplies that match the monitoring and quiet-stall copy on this page — an equine digital rectal thermometer so the physical-exam temperature stays written down with the onset notes, a large-animal stethoscope so gut sounds in all four quadrants can be listened to for the auscultation copy, and a soft fleece equine cooler so a sweating horse stays quietly covered in a stall while you wait for the veterinarian. These are household barn tools, not treatments. They do not diagnose or treat colic, they do not replace a veterinarian, and they are not a ranked product list. This page does not claim hands-on testing.</p>
+          <h2 id="kit">Supplies named on this page</h2>
+          <p>Keep these on hand: an equine digital rectal thermometer so the physical-exam temperature stays written down with the onset notes, a large-animal stethoscope so gut sounds in all four quadrants can be listened to for the auscultation copy, and a soft fleece equine cooler so a sweating horse stays quietly covered in a stall while you wait for the veterinarian. These are household barn tools, not treatments. They do not diagnose or treat colic, they do not replace a veterinarian, and they are not a ranked product list.</p>
 
           <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/equine+digital+rectal+thermometer?s=health-colic", "/go/amazon-brand/large+animal+stethoscope?s=health-colic", "/go/amazon-brand/soft+fleece+equine+cooler?s=health-colic"]} />
 

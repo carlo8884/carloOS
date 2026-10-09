@@ -129,8 +129,8 @@ export default function FarrierSchedulePage() {
             <li><strong>Coordinate farrier and vet</strong> when managing conditions like laminitis or navicular syndrome, where they work as a team.</li>
           </ul>
 
-          <h2 id="kit">Farrier-visit kit</h2>
-          <p>Everyday physical supplies that match the booking and work-area copy on this page — an equine farrier log book so the standing appointment and last interval stay written down, a portable farrier hoof stand so a lifted foot stays supported while the farrier works, and a cordless barn flood light so the aisle is bright enough to see clenches, flaring, and dry feet. These are household barn tools, not treatments. They do not trim or shoe a horse, they do not replace a farrier or veterinarian, and they are not a ranked product list. This page does not claim hands-on testing.</p>
+          <h2 id="kit">Supplies named on this page</h2>
+          <p>Keep these on hand: an equine farrier log book so the standing appointment and last interval stay written down, a portable farrier hoof stand so a lifted foot stays supported while the farrier works, and a cordless barn flood light so the aisle is bright enough to see clenches, flaring, and dry feet. These are household barn tools, not treatments. They do not trim or shoe a horse, they do not replace a farrier or veterinarian, and they are not a ranked product list.</p>
 
           <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/equine+farrier+log+book?s=care-farrier-schedule", "/go/amazon-brand/portable+farrier+hoof+stand?s=care-farrier-schedule", "/go/amazon-brand/cordless+barn+flood+light?s=care-farrier-schedule"]} />
 

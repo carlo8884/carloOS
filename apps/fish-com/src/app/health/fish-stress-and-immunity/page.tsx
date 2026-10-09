@@ -69,7 +69,7 @@ export default function FishStressPage() {
         <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/api+freshwater+master+test+kit?s=health-stress-immunity", "/go/amazon-brand/eheim+jager+heater?s=health-stress-immunity", "/go/amazon-brand/aquarium+digital+thermometer?s=health-stress-immunity", "/go/amazon-brand/aquarium+quarantine+hospital+tank+net?s=health-stress-immunity"]} />
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
-            Shop a low-stress tank kit
+            Shop these supplies
           </div>
           <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Water quality and temperature stability are the two most
             controllable stressors in any aquarium. A liquid master kit is

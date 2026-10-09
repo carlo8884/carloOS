@@ -137,7 +137,7 @@ export default function SweetItchPage() {
           <h2 id="midge">Midge Control</h2>
           <ul>
             <li><strong>Use a fitted sweet-itch rug and hood</strong> with a fine weave that physically excludes midges -- often the single most effective measure. A sweet-itch rug covers the body, belly, and often the tail dock so midges cannot reach the usual rub sites; a matching hood covers the mane, poll, and ears. These are purpose-cut eczema rugs, not the everyday fly sheet or fly mask already covered on the fly-control page.</li>
-            <li><strong>Stable during peak feeding times</strong> at dawn and dusk, ideally with fine mesh over openings and a fan, since midges are weak fliers. Stall fans already live on other horses.com pages and stay off this kit.</li>
+            <li><strong>Stable during peak feeding times</strong> at dawn and dusk, ideally with fine mesh over openings and a fan, since midges are weak fliers.</li>
             <li><strong>Keep horses away from still water</strong> and rotting vegetation where midges breed.</li>
             <li><strong>Apply appropriate insect repellents</strong> rated for horses, reapplied as directed. Fly spray, fly traps, fly boots, fly sheets, and fly masks stay on the fly-control guide, not this page.</li>
             <li><strong>Site turnout in breezy, open ground</strong> rather than sheltered, damp corners.</li>
@@ -146,7 +146,7 @@ export default function SweetItchPage() {
           <h2 id="medical">Veterinary Management</h2>
 
           <h2 id="kit">Sweet-Itch Kit</h2>
-          <p>Everyday physical supplies that match the fitted-barrier copy above — a sweet-itch rug so the body, belly, and tail dock stay covered, plus a sweet-itch hood so the mane, poll, and ears are closed to midges. These are not treatments for Culicoides hypersensitivity, summer seasonal recurrent dermatitis, or secondary skin infection; a horse that is rubbing raw, has broken skin, or is not improving after the barrier is on needs a veterinarian. Fly sheets, fly masks, fly boots, fly spray, fly traps, stall fans, turnout blankets, and any steroid, antihistamine, or spot-on stay off this kit — those already ship on other pages or are prescription-only. This page does not claim hands-on testing.</p>
+          <p>Keep these on hand: a sweet-itch rug so the body, belly, and tail dock stay covered, plus a sweet-itch hood so the mane, poll, and ears are closed to midges. These are not treatments for Culicoides hypersensitivity, summer seasonal recurrent dermatitis, or secondary skin infection; a horse that is rubbing raw, has broken skin, or is not improving after the barrier is on needs a veterinarian. Fly sheets, fly masks, fly boots, fly spray, fly traps, stall fans, turnout blankets, and any steroid, antihistamine, or spot-on stay off this kit — those already ship on other pages or are prescription-only.</p>
 
           <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/horse+sweet+itch+rug?s=health-sweet-itch", "/go/amazon-brand/horse+sweet+itch+hood?s=health-sweet-itch"]} />
 
@@ -157,17 +157,10 @@ export default function SweetItchPage() {
               masks, fly spray, fans, blankets, or medication hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the sweet-itch kit
+              Shop these supplies
             </div>
             <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the on-page fitted-barrier
-              copy — a horse sweet-itch rug for covering the body, belly,
-              and tail dock, and a sweet-itch hood so the mane, poll, and
-              ears stay closed to midges. Everyday physical supplies only.
-              They are not a ranked product list, they are not a fly sheet
-              or fly mask, they are not fly spray or fly traps, they are
-              not a steroid or a spot-on, they are not a medication, and
-              they do not replace a veterinarian.
+              Keep these on hand: a horse sweet-itch rug for covering the body, belly, and tail dock, and a sweet-itch hood so the mane, poll, and ears stay closed to midges. Everyday physical supplies only. They are not a ranked product list, they are not a fly sheet or fly mask, they are not fly spray or fly traps, they are not a steroid or a spot-on, they are not a medication, and they do not replace a veterinarian.
             </p>
             <div className="flex flex-col gap-3">
               <ShopCtas

@@ -129,7 +129,7 @@ export default function FerretInfluenzaPage() {
           <>
             <TableOfContents
               items={[
-                { label: 'TL;DR', href: '#tldr' },
+                { label: '', href: '#tldr' },
                 { label: 'Why Ferrets Catch Our Flu', href: '#why' },
                 { label: 'Signs to Watch For', href: '#signs' },
                 { label: 'When It Becomes Serious', href: '#serious' },
@@ -175,8 +175,7 @@ export default function FerretInfluenzaPage() {
             model for human influenza for the better part of a century.
           </DropCap>
 
-          <h2 id="tldr">TL;DR</h2>
-          <p>
+                    <p>
             Ferrets are highly susceptible to human influenza viruses, and
             transmission runs in both directions between ferrets and people. In
             healthy adult ferrets the flu is usually a mild, self-limiting

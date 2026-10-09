@@ -84,21 +84,7 @@ export default function HeartwormPreventionPage() {
 
         <h2 id="kit">A Simple Mosquito-and-Compliance Kit</h2>
           <p>
-            Three everyday physical supplies match the
-            mosquito, year-round prevention-compliance, and
-            annual-testing copy above: mosquito dunks for
-            standing water so fewer larvae hatch in the
-            yard, a monthly pill organizer so the
-            preventive chew is not skipped, and a
-            soft-sided vet-visit carrier for the annual
-            in-clinic antigen blood test. These are
-            household support tools, not treatments. They do not prevent heartworm by themselves,
-            they do not replace a monthly preventive
-            prescribed by a veterinarian, they do not
-            replace the annual antigen blood test, and they
-            are not Heartgard, Interceptor, Simparica,
-            ProHeart, melarsomine, ivermectin, milbemycin,
-            or moxidectin. This page does not claim hands-on testing. </p>
+            Keep these on hand: mosquito dunks, monthly pill organizer, and soft sided vet visit carrier. These are household support tools, not treatments. They do not prevent heartworm by themselves, they do not replace a monthly preventive prescribed by a veterinarian, they do not replace the annual antigen blood test, and they are not Heartgard, Interceptor, Simparica, ProHeart, melarsomine, ivermectin, milbemycin, or moxidectin. </p>
 
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/mosquito+dunks?s=health-heartworm-prevention", "/go/amazon-brand/monthly+pill+organizer?s=health-heartworm-prevention", "/go/amazon-brand/soft+sided+vet+visit+carrier?s=health-heartworm-prevention"]} />
 

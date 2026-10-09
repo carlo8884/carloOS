@@ -110,13 +110,13 @@ export default function HayTypesPage() {
           />
 
           <h2 id="grass">Grass Hays</h2>
-          <p>Grass hays are the everyday forage for most horses. Timothy is prized for its consistent quality and palatability; orchardgrass is soft, leafy, and well liked; bermudagrass (coastal) is common in the warm south; and meadow, brome, fescue, and ryegrass hays are used regionally. Grass hays are generally moderate in calories and protein and lower in calcium than legumes, making them a sensible base forage for the majority of horses, including easy keepers when sugar content is controlled. How many pounds of that hay to feed is a bodyweight question. The <a href="/tools/horse-feed-calculator">daily feed calculator</a> estimates it. Orchard-grass hay for horses is that everyday leafy grass base — it is not a timothy-hay hop (that lives on the feed calculator) and not a Standlee forage-pellet hop (that lives on the supplements review).</p>
+          <p>Grass hays are the everyday forage for most horses. Timothy is prized for its consistent quality and palatability; orchardgrass is soft, leafy, and well liked; bermudagrass (coastal) is common in the warm south; and meadow, brome, fescue, and ryegrass hays are used regionally. Grass hays are generally moderate in calories and protein and lower in calcium than legumes, making them a sensible base forage for the majority of horses, including easy keepers when sugar content is controlled. How many pounds of that hay to feed is a bodyweight question. The <a href="/tools/horse-feed-calculator">daily feed calculator</a> estimates it. Orchard-grass hay for horses is that everyday leafy grass base — it is not a timothy-hay hop and not a Standlee forage-pellet hop.</p>
 
           <h2 id="legume">Legume Hays</h2>
           <p>Alfalfa (lucerne) is the dominant legume hay, with clover hays also used. Legume hays are richer than grass hays -- higher in calories, protein, and calcium -- which makes them valuable for horses needing condition: hard keepers, lactating mares, growing youngstock, and performance horses. The same richness makes them easy to overfeed to idle or metabolic horses. Alfalfa is also useful fed in small amounts as a stomach-acid buffer for ulcer-prone horses. Alfalfa hay bales for horses are that richer legume option — they are not an EMS forage-NSC hay-test kit and not forage-page hay-core sampler.</p>
 
           <h2 id="mixed">Mixed Hays</h2>
-          <p>Many hays are a mix of grass and legume -- for example a timothy-alfalfa or grass-clover blend -- which moderates the richness of pure legume while raising the nutrition of pure grass. Mixed hays are a practical middle ground for horses in moderate work or that need a little more than grass hay alone provides, and they are widely available baled together from mixed swards. A timothy-alfalfa mixed hay for horses is that middle ground — it is not a hanging hay-bale scale (that lives on EMS) and not a wall-mounted hay rack (that lives on forage-basics).</p>
+          <p>Many hays are a mix of grass and legume -- for example a timothy-alfalfa or grass-clover blend -- which moderates the richness of pure legume while raising the nutrition of pure grass. Mixed hays are a practical middle ground for horses in moderate work or that need a little more than grass hay alone provides, and they are widely available baled together from mixed swards. A timothy-alfalfa mixed hay for horses is that middle ground — it is not a hanging hay-bale scale and not a wall-mounted hay rack.</p>
 
           <h2 id="quality">Judging Quality</h2>
           <ul>
@@ -130,23 +130,9 @@ export default function HayTypesPage() {
           <h2 id="matching">Matching Hay to the Horse</h2>
           <p>Match the forage to the horse rather than feeding one hay to all. Easy keepers and laminitis-prone horses do best on lower-sugar grass hay, often soaked, fed by weight. Hard keepers, broodmares, youngstock, and hard-working horses benefit from richer or part-legume hay. Seniors with poor teeth may need soft, leafy hay, chopped or soaked forage, or hay replacers. Whatever the type, introduce new hay gradually to let the hindgut adapt.</p>
 
-          <h2 id="kit">Barn hay-types kit</h2>
+          <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Everyday physical supplies that match the
-            grass, legume, and mixed-hay copy on this page — orchard-grass
-            hay for horses as the everyday leafy grass
-            base, alfalfa hay bales as the richer
-            legume option for horses that need
-            condition, and a timothy-alfalfa mixed hay
-            as the middle ground. These are educational
-            barn searches, not a ranked product list,
-            not a substitute for veterinary or
-            nutritionist care, and not a timothy-hay
-            hop (that lives on the feed calculator), an
-            EMS hay-test kit, or a forage-page moisture
-            tester / core sampler / hay rack. This page
-            does not hop medications or vaccines. This
-            page does not claim hands-on testing.
+            Keep these on hand: orchard-grass hay for horses as the everyday leafy grass base, alfalfa hay bales as the richer legume option for horses that need condition, and a timothy-alfalfa mixed hay as the middle ground. These are educational barn searches, not a ranked product list, not a substitute for veterinary or nutritionist care, and not a timothy-hay hop, an EMS hay-test kit, or a forage-page moisture tester / core sampler / hay rack.
           </p>
 
           <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/orchard+grass+hay+horse?s=nutrition-hay", "/go/amazon-brand/alfalfa+hay+bales+horse?s=nutrition-hay", "/go/amazon-brand/timothy+alfalfa+mixed+hay+horse?s=nutrition-hay"]} />

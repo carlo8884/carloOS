@@ -72,7 +72,7 @@ export default function EmergencySignsPage() {
             </div>
           ))}
 
-          <h2 id="kit">14-sign emergency-prep kit</h2>
+          <h2 id="kit">Supplies named on this page</h2>
           <p>A wire basket dog muzzle lets you move a collapsed, fractured, or post-seizure dog with less risk of a bite. Quilted disposable underpads keep blood, vomit, or wound fluid off the car seat. A handheld AA LED flashlight is how you check gum color at night. These are prep tools, not treatments. They do not treat bloat, they do not stop bleeding, and they do not replace the ASPCA poison hotline or a veterinarian.</p>
 
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/wire+basket+dog+muzzle?s=health-emergency-signs", "/go/amazon-brand/quilted+disposable+underpads?s=health-emergency-signs", "/go/amazon-brand/handheld+aa+led+flashlight?s=health-emergency-signs"]} />

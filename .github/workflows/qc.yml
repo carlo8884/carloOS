@@ -173,6 +173,18 @@ jobs:
       - name: Run kitchen-kit-ban
         run: node scripts/ci/kitchen-kit-ban.mjs
 
+  internal-voice:
+    name: Internal shop voice ban (five earning sites)
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Run internal-voice
+        run: node scripts/ci/internal-voice.mjs && node --test scripts/ci/internal-voice.test.mjs
+
   hop-topic-match:
     name: Amazon search matches page topic
     runs-on: ubuntu-latest

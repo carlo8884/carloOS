@@ -131,7 +131,7 @@ export default function FerretEarMitesPage() {
           <>
             <TableOfContents
               items={[
-                { label: 'TL;DR', href: '#tldr' },
+                { label: '', href: '#tldr' },
                 { label: 'What Ear Mites Are', href: '#what' },
                 { label: 'Signs to Watch For', href: '#signs' },
                 { label: 'How Vets Diagnose It', href: '#diagnosis' },
@@ -178,8 +178,7 @@ export default function FerretEarMitesPage() {
             health problems to confirm and clear.
           </DropCap>
 
-          <h2 id="tldr">TL;DR</h2>
-          <p>
+                    <p>
             Ear mites in ferrets are caused by <em>Otodectes cynotis</em>, the
             same mite seen in dogs and cats. Signs are head-shaking, ear
             scratching, and abundant dark waxy debris. Diagnosis is a quick

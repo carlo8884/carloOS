@@ -89,7 +89,7 @@ export default function DogArthritisPage() {
           <p><strong>Adequan (polysulfated glycosaminoglycan):</strong> Injectable — administered by injection twice weekly for 4 weeks, then monthly. Inhibits cartilage-degrading enzymes and may support cartilage repair. Used as a disease-modifying treatment in early arthritis.</p>
 
           <h2 id="kit">Mobility kit</h2>
-          <p>Everyday physical supplies that match the mobility-and-comfort copy above — an orthopedic dog bed when rising from lying down or stiffness after rest is the new pattern, plus a dog ramp when stairs or jumping onto furniture have become hard. These are home-setup aids, not treatments. Veterinary NSAIDs (carprofen, meloxicam, grapiprant / Galliprant), joint supplements (glucosamine, chondroitin, green-lipped mussel, omega-3 / fish oil), Adequan, Librela, prescription weight-management diets, and food ASINs stay educational copy only — this page never hops medications, supplements, or brand diets. Traction rugs and raised bowls stay on the sister <a href={crossSiteHref('vets-co', '/health/arthritis-in-dogs')}>vets.co arthritis-in-dogs</a> page. This page does not claim hands-on testing.</p>
+          <p>Keep these on hand: an orthopedic dog bed when rising from lying down or stiffness after rest is the new pattern, plus a dog ramp when stairs or jumping onto furniture have become hard. These are home-setup aids, not treatments. Veterinary NSAIDs (carprofen, meloxicam, grapiprant / Galliprant), joint supplements (glucosamine, chondroitin, green-lipped mussel, omega-3 / fish oil), Adequan, Librela, prescription weight-management diets, and food ASINs stay educational copy only — this page never hops medications, supplements, or brand diets. Traction rugs and raised bowls stay on the sister <a href={crossSiteHref('vets-co', '/health/arthritis-in-dogs')}>vets.co arthritis-in-dogs</a> page.</p>
 
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/orthopedic+dog+bed?s=health-dog-arthritis", "/go/amazon-brand/dog+ramp?s=health-dog-arthritis"]} />
 
@@ -100,7 +100,7 @@ export default function DogArthritisPage() {
               weight diets, and food ASINs are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the dog-arthritis mobility kit
+              Shop these supplies
             </div>
             <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">

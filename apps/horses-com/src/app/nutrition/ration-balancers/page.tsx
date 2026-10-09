@@ -130,36 +130,11 @@ export default function RationBalancersPage() {
           <p>The crucial difference is calories and serving size. A regular fortified feed delivers its full vitamins and minerals only when you feed the larger recommended amount, which also delivers significant calories -- a problem for an easy keeper. Feed far less than the recommended rate, and you starve the horse of the very nutrients the feed was meant to provide. A balancer breaks that trade-off: full fortification in a tiny, low-calorie serving, so you can keep calories low and the diet complete.</p>
 
           <h2 id="using">Using a Balancer</h2>
-          <p>Feed a ration balancer at the manufacturer&apos;s recommended daily amount, alongside forage, to top up the diet. Because the serving is small — typically a few hundred grams rather than a scooped grain meal — weigh it on a compact digital gram scale instead of guessing. Mix the weighed serving with a handful of molasses-free chaff or soaked fiber to make it palatable and slow eating. Molasses-free chaff is that handful mixer — it is not chopped forage as a hay replacer (that lives on feeding-senior-horses) and not molasses-free beet pulp shreds (that lives on the beet-pulp leftover). Stir balancer and chaff in a small rubber horse mixing pan so the tiny serving is not lost in a deep tub — it is not a round rubber feed pan (that lives on flu), not stackable rubber feed tubs (those live on grain), and not an over-door horse feed bucket (that lives on feeding-the-hard-keeper). Choose a balancer appropriate to the horse and forage (some are formulated for grass forage, others for legume), and for metabolic horses a low-sugar, low-starch balancer. The balancer does not set the hay amount. The <a href="/tools/horse-feed-calculator">daily feed calculator</a> estimates forage from bodyweight before that small serving is added. As always, build the specifics with your veterinarian or an equine nutritionist.</p>
+          <p>Feed a ration balancer at the manufacturer&apos;s recommended daily amount, alongside forage, to top up the diet. Because the serving is small — typically a few hundred grams rather than a scooped grain meal — weigh it on a compact digital gram scale instead of guessing. Mix the weighed serving with a handful of molasses-free chaff or soaked fiber to make it palatable and slow eating. Molasses-free chaff is that handful mixer — it is not chopped forage as a hay replacer and not molasses-free beet pulp shreds. Stir balancer and chaff in a small rubber horse mixing pan so the tiny serving is not lost in a deep tub — it is not a round rubber feed pan, not stackable rubber feed tubs, and not an over-door horse feed bucket. Choose a balancer appropriate to the horse and forage (some are formulated for grass forage, others for legume), and for metabolic horses a low-sugar, low-starch balancer. The balancer does not set the hay amount. The <a href="/tools/horse-feed-calculator">daily feed calculator</a> estimates forage from bodyweight before that small serving is added. As always, build the specifics with your veterinarian or an equine nutritionist.</p>
 
           <h2 id="kit">Ration-balancer supplies</h2>
           <p>
-            Everyday physical supplies that match the
-            weigh-the-few-hundred-grams,
-            mix-with-a-handful-of-chaff, and
-            slow-the-tiny-serving copy on this page —
-            a compact digital gram scale so the
-            manufacturer&apos;s few-hundred-gram serving
-            is weighed instead of guessed, molasses-free
-            chaff so the tiny serving is mixed with a
-            handful of low-sugar chop, and a small
-            rubber horse mixing pan so balancer and
-            chaff are stirred in a shallow pan the
-            horse can finish. These are educational
-            barn searches, not a ranked product list,
-            not a substitute for veterinary care, and
-            not a tabletop-grain-scale hop (that lives
-            on grain), a hay-flake-scale hop (that
-            lives on feeding-the-easy-keeper), a
-            chopped-forage hop (that lives on
-            feeding-senior-horses), a beet-pulp hop
-            (that lives on the beet-pulp leftover),
-            an over-door-feed-bucket hop (that lives
-            on feeding-the-hard-keeper), or the
-            Enrich Plus / Triple Crown 30 / Empower
-            Topline ReviewCards below. This page does
-            not hop medications or vaccines. This page
-            does not claim hands-on testing.
+            Keep these on hand: a compact digital gram scale so the manufacturer&apos;s few-hundred-gram serving is weighed instead of guessed, molasses-free chaff so the tiny serving is mixed with a handful of low-sugar chop, and a small rubber horse mixing pan so balancer and chaff are stirred in a shallow pan the horse can finish.
           </p>
 
           <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/compact+digital+gram+scale+horse+feed?s=nutrition-ration-balancers", "/go/amazon-brand/molasses+free+chaff+horse?s=nutrition-ration-balancers", "/go/amazon-brand/small+rubber+horse+mixing+pan?s=nutrition-ration-balancers"]} />
@@ -186,7 +161,7 @@ export default function RationBalancersPage() {
           </div>
 
           <h2 id="picks">Ration Balancer Picks</h2>
-          <p>A few widely-available ration balancers covering the common grass-forage, low-sugar/low-starch, and senior needs. Match the balancer to the horse and the forage type, and feed at the label rate. Ration balancers are widely sold through feed stores; the links below route to a tracked brand search since these are typically stocked outside specialist tack retail. This is a documented-spec comparison drawing on standard US retail; this page does not claim hands-on testing.</p>
+          <p>A few widely-available ration balancers covering the common grass-forage, low-sugar/low-starch, and senior needs. Match the balancer to the horse and the forage type, and feed at the label rate. Ration balancers are widely sold through feed stores; the links below route to a tracked brand search since these are typically stocked outside specialist tack retail.</p>
 
           <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/purina+enrich+plus+ration+balancer?s=nutrition-ration-balancers", "/go/amazon-brand/triple+crown+30+ration+balancer?s=nutrition-ration-balancers", "/go/amazon-brand/nutrena+empower+topline+balancer?s=nutrition-ration-balancers"]} />
 

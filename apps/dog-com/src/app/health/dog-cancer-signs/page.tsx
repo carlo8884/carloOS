@@ -82,49 +82,7 @@ export default function DogCancerSignsPage() {
 
           <h2 id="kit">A Simple Cancer-Signs Early-Detection Kit</h2>
           <p>
-            Three everyday physical supplies match the
-            lymph-node palpation, unexplained-weight-loss,
-            and oral-examination copy above: a silicone dog
-            grooming glove so a weekly coat-and-node check
-            can feel the nodes under the jaw, in front of
-            the shoulders, in the groin, and behind the
-            knees plus any new lump or bump — do not take a
-            wait-and-see approach; fine needle aspiration
-            is what identifies the cell type — an analog
-            bathroom scale so progressive weight loss not
-            explained by reduced calorie intake can be
-            logged between wellness exams (hold-to-weigh
-            the dog; unintended loss of more than 10% of
-            body weight warrants investigation), and a dog
-            dental finger brush so a weekly lip-lift can
-            catch oral odor from tissue necrosis, difficulty
-            eating or swallowing, or a visible oral mass
-            (melanoma, squamous cell carcinoma, fibrosarcoma)
-            before the next appointment. These are household
-            early-detection tools, not treatments. They do
-            not diagnose cancer, they do not replace fine
-            needle aspiration, they do not replace lymph
-            node palpation, abdominal palpation, or oral
-            examination by a veterinarian, they do not
-            treat lymphoma, hemangiosarcoma, osteosarcoma,
-            or mast cell tumors, and they are not
-            chemotherapy, Tanovea, or a ranked oncology
-            product list. One-minute kitchen timers, step-in
-            padded dog harnesses, pet medical records
-            binders, AM/PM weekly pill organizers, digital
-            hanging luggage scales, LED medical penlights,
-            pet emergency contact cards, folding pet
-            stretchers, vaccination record books, seat-belt
-            tethers, foldable waterproof puppy mats,
-            mosquito dunks, a monthly pill organizer, a
-            soft-sided vet-visit carrier, a gum-color
-            assessment chart, recovery food, a feeding
-            syringe, digital pet scales, digital puppy
-            scales, kitchen gram scales, portion-control
-            food scales, hanging luggage scales, and
-            high-value vet-visit treats already live on
-            other pages. This page does not claim
-            hands-on testing. </p>
+            Keep these on hand: do not take a wait-and-see approach; fine needle aspiration is what identifies the cell type — an analog bathroom scale so progressive weight loss not explained by reduced calorie intake can be logged between wellness exams (hold-to-weigh the dog; unintended loss of more than 10% of body weight warrants investigation), and a dog dental finger brush so a weekly lip-lift can catch oral odor from tissue necrosis, difficulty eating or swallowing, or a visible oral mass (melanoma, squamous cell carcinoma, fibrosarcoma) before the next appointment. These are household early-detection tools, not treatments. They do not diagnose cancer, they do not replace fine needle aspiration, they do not replace lymph node palpation, abdominal palpation, or oral examination by a veterinarian, they do not treat lymphoma, hemangiosarcoma, osteosarcoma, or mast cell tumors, and they are not chemotherapy, Tanovea, or a ranked oncology product list. </p>
 
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/silicone+dog+grooming+glove?s=health-dog-cancer-signs", "/go/amazon-brand/analog+bathroom+scale?s=health-dog-cancer-signs", "/go/amazon-brand/dog+dental+finger+brush?s=health-dog-cancer-signs"]} />
 

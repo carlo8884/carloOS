@@ -124,14 +124,7 @@ export default function BoardingOptionsPage() {
           <h2 id="home">Keeping a Horse at Home</h2>
           <p>Keeping a horse at home offers maximum control and the joy of having the horse on your doorstep, but it is a serious undertaking: it requires suitable land, safe fencing and shelter, water, hay and bedding storage, and your labor every single day, year-round. Horses are herd animals, so a lone horse needs company. Home-keeping also means you are the first responder in every emergency. It can be rewarding and even economical with the right setup, but it is a lifestyle commitment, not just a saving.</p>
           <p>
-            A waterproof horse hay-bale storage tarp is how
-            home-kept hay and bedding stay dry instead of
-            sitting in a leak — it is not a wall-mounted
-            horse hay rack (that lives on forage-basics),
-            not a nylon horse hay bag (that lives on
-            performance feeding), and not a rodent-proof
-            metal horse feed bin (that lives on grain
-            and concentrates). </p>
+            A waterproof horse hay-bale storage tarp is how home-kept hay and bedding stay dry instead of sitting in a leak — it is not a wall-mounted horse hay rack, not a nylon horse hay bag, and not a rodent-proof metal horse feed bin. </p>
 
           <h2 id="choosing">Choosing a Facility</h2>
           <ul>
@@ -143,7 +136,7 @@ export default function BoardingOptionsPage() {
           </ul>
 
           <h2 id="kit">Boarding supplies</h2>
-
+          <p>Keep these on hand: horse hay, horse boarding contract document binder, and waterproof horse hay bale storage tarp. They are not a treatment and they do not replace a veterinarian.</p>
           <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/horse+hay?s=ownership-boarding-options", "/go/amazon-brand/horse+boarding+contract+document+binder?s=ownership-boarding-options", "/go/amazon-brand/waterproof+horse+hay+bale+storage+tarp?s=ownership-boarding-options"]} />
 
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">

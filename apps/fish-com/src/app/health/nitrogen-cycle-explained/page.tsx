@@ -190,7 +190,7 @@ export default function NitrogenCyclePage() {
         <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/api+freshwater+master+test+kit?s=health-nitrogen-cycle", "/go/amazon-brand/seachem+prime+water+conditioner?s=health-nitrogen-cycle", "/go/amazon-brand/dr+tims+ammonium+chloride?s=health-nitrogen-cycle", "/go/amazon-brand/tetra+safestart+plus?s=health-nitrogen-cycle", "/go/amazon-brand/aquarium+sponge+filter?s=health-nitrogen-cycle"]} />
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
-            Shop a fishless-cycling kit
+            Shop these supplies
           </div>
           <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">A liquid master kit is how you see ammonia, nitrite, and nitrate
             through the three stages and confirm the 24-hour 0/0 test before

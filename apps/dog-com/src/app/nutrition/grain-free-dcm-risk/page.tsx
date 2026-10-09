@@ -59,7 +59,7 @@ export default function GrainFreeDCMPage() {
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
 
         <p className="text-lg text-brand-text-mid leading-relaxed italic mb-6">
-          <strong className="not-italic">TL;DR.</strong> The FDA investigated more than 500 reports of dilated cardiomyopathy (DCM) in dogs eating grain-free diets, most with peas, lentils, or potatoes as primary ingredients. The link is an association, not proven causation. This page does not cite a cardiology consensus that tells owners to avoid those formulas. A cautious reading is to skip high-legume grain-free diets unless a veterinarian has a reason to use one. Switch to a WSAVA-compliant brand (Royal Canin, Purina Pro Plan, Hill&apos;s) unless your vet directs otherwise.
+          The FDA investigated more than 500 reports of dilated cardiomyopathy (DCM) in dogs eating grain-free diets, most with peas, lentils, or potatoes as primary ingredients. The link is an association, not proven causation. This page does not cite a cardiology consensus that tells owners to avoid those formulas. A cautious reading is to skip high-legume grain-free diets unless a veterinarian has a reason to use one. Switch to a WSAVA-compliant brand (Royal Canin, Purina Pro Plan, Hill&apos;s) unless your vet directs otherwise.
         </p>
 
         <h2>What Is DCM?</h2>

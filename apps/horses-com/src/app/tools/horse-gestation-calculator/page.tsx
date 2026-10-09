@@ -232,7 +232,7 @@ export default function HorseGestationCalculatorPage() {
         <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/digital+equine+thermometer?s=tools-horse-gestation-calculator", "/go/amazon-brand/iodine+navel+dip+foal?s=tools-horse-gestation-calculator", "/go/amazon-brand/foaling+alarm?s=tools-horse-gestation-calculator"]} />
         <div className="mb-8 rounded-xl border border-brand-border bg-brand-surface p-5">
           <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Shop the kit
+            Shop these supplies
           </div>
           <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
           <div className="flex flex-col gap-3">

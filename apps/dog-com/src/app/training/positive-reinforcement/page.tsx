@@ -139,7 +139,7 @@ export default function PositiveReinforcementPage() {
         <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/dog+training+clicker?s=training-positive-reinforcement", "/go/amazon-brand/puppy+training+treats?s=training-positive-reinforcement", "/go/amazon-brand/dog+training+treat+pouch+belt+clip?s=training-positive-reinforcement"]} />
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
-            Shop a reward-based training kit
+            Shop these supplies
           </div>
           <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">High-value, pea-sized treats and a belt-clip pouch keep the
             reinforcer inside the 2-second window. A clicker (or a verbal

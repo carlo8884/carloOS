@@ -191,7 +191,7 @@ export default function MollyPage() {
           />
         <StockImage manifestKey="fish-com:species-molly-fish" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A molly in a home aquarium." priority />
 
-          <CalloutBox variant="note" title="TL;DR">
+          <CalloutBox variant="note" title="In short">
             Mollies (Poecilia sphenops, P. latipinna, P. velifera) are
             livebearing fish from the Americas that tolerate hard, alkaline
             water and a wide salinity range from pure fresh to brackish. They

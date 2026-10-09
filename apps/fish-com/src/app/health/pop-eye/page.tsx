@@ -71,7 +71,7 @@ export default function PopEyePage() {
         <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/api+freshwater+master+test+kit?s=health-pop-eye", "/go/amazon-brand/aquarium+quarantine+hospital+tank+net?s=health-pop-eye", "/go/amazon-brand/aquarium+sponge+filter?s=health-pop-eye", "/go/amazon-brand/eheim+jager+heater?s=health-pop-eye", "/go/amazon-brand/aquarium+digital+thermometer?s=health-pop-eye"]} />
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
-            Shop a water-first hospital-tank kit
+            Shop these supplies
           </div>
           <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Isolate first, then test the water — a liquid master kit is how
             you see ammonia, nitrite, and nitrate that almost always precede

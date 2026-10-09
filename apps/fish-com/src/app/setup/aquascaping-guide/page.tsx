@@ -75,7 +75,7 @@ export default function AquascapingGuidePage() {
         />
 
         <h2 id="kit">Aquascape hardscape kit</h2>
-        <p>Everyday physical supplies that match the hardscape copy above — aquarium Seiryu stone for the textured rock skeleton, plus aquarium spiderwood driftwood for the wood lines. These are layout materials, not a ranked product list and not a first-tank filter / heater / test-kit order. Filters, heaters, digital thermometers, Seachem Prime, API Master Test Kit, gravel vacuums, aquasoil, substrate vacuums, and pressurized CO2 gear stay off this kit — those already ship on the setup hub, equipment hub, planted-tank guide, and CO2 calculator. This page does not claim hands-on testing.</p>
+        <p>Keep these on hand: aquarium Seiryu stone for the textured rock skeleton, plus aquarium spiderwood driftwood for the wood lines. These are layout materials, not a ranked product list and not a first-tank filter / heater / test-kit order. Filters, heaters, digital thermometers, Seachem Prime, API Master Test Kit, gravel vacuums, aquasoil, substrate vacuums, and pressurized CO2 gear stay off this kit — those already ship on the setup hub, equipment hub, planted-tank guide, and CO2 calculator.</p>
 
         <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/aquarium+seiryu+stone?s=setup-aquascaping-guide", "/go/amazon-brand/aquarium+spiderwood+driftwood?s=setup-aquascaping-guide"]} />
 

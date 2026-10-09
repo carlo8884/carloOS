@@ -225,8 +225,7 @@ export default function FerretAdrenalDiseasePage() {
             treatments work.
           </DropCap>
 
-          <h2 id="tldr">TL;DR</h2>
-          <p>
+                    <p>
             Hyperadrenocorticism in ferrets is overproduction of sex steroids
             (estradiol, androstenedione, 17-hydroxyprogesterone) by a hyperplastic
             or neoplastic adrenal cortex. Classic signs: progressive bilateral
@@ -612,7 +611,7 @@ export default function FerretAdrenalDiseasePage() {
           <p>A soft cotton receiving blanket is an extra warm layer for an alopecic or thin-skinned ferret — it is not a fleece sleep sack (that Chewy comfort card stays below), not a hammock, and not a heating pad. An activated-charcoal odor absorber is a cage-side filter for the intensified musky odor this page names — it is not an enzymatic cleaner and not a fragrance spray. These are household monitoring, comfort, and odor tools. They do not treat adrenal disease, they do not replace deslorelin or adrenalectomy, and they are not a ranked product list.</p>
 
           <h2 id="kit">Adrenal comfort kit</h2>
-          <p>These are household comfort tools, not treatments. They do not diagnose or treat adrenal disease, they do not replace a deslorelin implant or adrenalectomy, they do not set a hormone-panel number, and they are not a ranked product list. This page does not claim hands-on testing.</p>
+          <p>Keep these on hand: soft cotton receiving blanket and activated charcoal odor absorber. These are household comfort tools, not treatments. They do not diagnose or treat adrenal disease, they do not replace a deslorelin implant or adrenalectomy, they do not set a hormone-panel number, and they are not a ranked product list.</p>
 
           <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/soft+cotton+receiving+blanket?s=health-adrenal-disease", "/go/amazon-brand/activated+charcoal+odor+absorber?s=health-adrenal-disease", "/go/chewy-brand/ferret+fleece+sleep+sack+hammock?s=health-adrenal-disease"]} />
 

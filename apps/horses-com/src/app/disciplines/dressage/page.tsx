@@ -129,7 +129,7 @@ export default function DressagePage() {
         ]}
         sidebar={<>
           <TableOfContents items={[
-            { label: 'TL;DR', href: '#tldr' },
+            { label: '', href: '#tldr' },
             { label: 'History &amp; Origins', href: '#history' },
             { label: 'The Training Pyramid', href: '#pyramid' },
             { label: 'Levels — Intro to Grand Prix', href: '#levels' },
@@ -166,8 +166,7 @@ export default function DressagePage() {
             updatedAt="2026-05-28"
           />
 
-          <h2 id="tldr">TL;DR</h2>
-          <ul>
+                    <ul>
             <li><strong>What it is:</strong> the systematic gymnastic training of the riding horse, judged against a written test in a standard 20×60 m (or 20×40 m for lower levels) arena.</li>
             <li><strong>Framework:</strong> the training pyramid — <em>rhythm → relaxation → contact → impulsion → straightness → collection</em>.</li>
             <li><strong>Levels:</strong> six US national levels (Introductory through Fourth) and four FEI levels (Prix St. Georges, Intermediate I and II, Grand Prix), plus FEI Young Rider and Under-25 tracks.</li>

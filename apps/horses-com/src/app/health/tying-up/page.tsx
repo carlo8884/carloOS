@@ -145,34 +145,23 @@ export default function TyingUpPage() {
           </ul>
 
           <h2 id="emergency">Why It Is Urgent</h2>
-          <p>A severe episode is an emergency. Forcing a tying-up horse to keep moving worsens muscle damage, and the myoglobin released by damaged muscle can injure the kidneys, especially if the horse is dehydrated. Prompt veterinary care -- rest, fluids to protect the kidneys, pain relief, and monitoring of muscle enzymes -- limits the damage. Never trailer or work a horse through an acute episode. An Irish-knit horse cooler is how a horse that must stay still stays warm and dry instead of standing in a sweat-soaked sheet — it is not a soft fleece equine cooler (that lives on colic), not a horse fleece cooler (those live on body-clipping and the blanket-size calculator), and not a turnout blanket (that lives on blanketing).</p>
+          <p>A severe episode is an emergency. Forcing a tying-up horse to keep moving worsens muscle damage, and the myoglobin released by damaged muscle can injure the kidneys, especially if the horse is dehydrated. Prompt veterinary care -- rest, fluids to protect the kidneys, pain relief, and monitoring of muscle enzymes -- limits the damage. Never trailer or work a horse through an acute episode. An Irish-knit horse cooler is how a horse that must stay still stays warm and dry instead of standing in a sweat-soaked sheet — it is not a soft fleece equine cooler, not a horse fleece cooler, and not a turnout blanket.</p>
 
           <h2 id="diagnosis">Diagnosis</h2>
           <p>A veterinarian confirms tying-up by measuring muscle enzymes (creatine kinase and AST) in the blood, which rise markedly with muscle damage. For recurrent cases, the workup may include an exercise challenge test, muscle biopsy, and genetic testing for PSSM type 1 (the GYS1 mutation) to distinguish the underlying cause, which directs the long-term plan.</p>
 
           <h2 id="management">Management</h2>
           <ul>
-            <li><strong>Match diet to the cause.</strong> PSSM and RER horses do best on a low-starch, low-sugar, high-fat ration with energy from fat and fiber rather than grain. This page does not hop rice-bran pellets, high-fat performance feed, or ration balancers — those already live on the nutrition pages and stay a veterinary ration, not a shoppable treatment.</li>
+            <li><strong>Match diet to the cause.</strong> PSSM and RER horses do best on a low-starch, low-sugar, high-fat ration with energy from fat and fiber rather than grain.</li>
             <li><strong>Keep exercise consistent.</strong> Daily turnout and a regular work program without sudden days off on full feed are central to preventing recurrence.</li>
-            <li><strong>Maintain hydration and electrolytes</strong> around hard work and in hot weather. Loose plain white salt is how daily sodium is measured into the ration instead of hoped-for on a lick — it is not an equine salt lick (that lives on the feed calculator), not a bottled horse-electrolytes hop (those live on the emergency tool and grimace scale), and not a tank heater (that lives on winter-care).</li>
+            <li><strong>Maintain hydration and electrolytes</strong> around hard work and in hot weather. Loose plain white salt is how daily sodium is measured into the ration instead of hoped-for on a lick — it is not an equine salt lick, not a bottled horse-electrolytes hop, and not a tank heater.</li>
             <li><strong>Reduce stress</strong> in nervous RER-type horses with routine and calm handling.</li>
-            <li><strong>Warm up and cool down gradually</strong> and build fitness progressively rather than in big jumps. A wool exercise quarter sheet is how that warmup stays on the muscle instead of a cold walk-out — it is not a turnout sheet (that lives on the blanket-size calculator), not a waterproof sheet (that lives on blanketing), and not a fleece cooler.</li>
+            <li><strong>Warm up and cool down gradually</strong> and build fitness progressively rather than in big jumps. A wool exercise quarter sheet is how that warmup stays on the muscle instead of a cold walk-out — it is not a turnout sheet, not a waterproof sheet, and not a fleece cooler.</li>
           </ul>
 
-          <h2 id="kit">Rest-and-routine kit</h2>
+          <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Everyday physical supplies that match the
-            keep-warm-and-calm, warm-up-and-cool-down, and
-            hydration-and-electrolytes copy on this page —
-            an Irish-knit horse cooler so a horse that must
-            stay still stays warm, a wool exercise quarter
-            sheet so the warmup starts on the muscle, and
-            loose plain white salt so daily sodium is
-            measured into the ration. These are educational
-            rest-and-routine tools, not a ranked product
-            list, not a substitute for veterinary care, and
-            not a diet or medication prescription. Salt licks already
-            live on the feed calculator. This page does not claim hands-on testing. </p>
+            Keep these on hand: an Irish-knit horse cooler so a horse that must stay still stays warm, a wool exercise quarter sheet so the warmup starts on the muscle, and loose plain white salt so daily sodium is measured into the ration. These are educational rest-and-routine tools, not a ranked product list, not a substitute for veterinary care, and not a diet or medication prescription. </p>
 
           <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/irish+knit+horse+cooler?s=health-tying-up", "/go/amazon-brand/wool+exercise+quarter+sheet?s=health-tying-up", "/go/amazon-brand/loose+plain+white+salt+horse?s=health-tying-up"]} />
 

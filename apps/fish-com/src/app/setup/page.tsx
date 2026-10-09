@@ -144,7 +144,7 @@ export default function AquariumSetupPage() {
         <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/api+freshwater+master+test+kit?s=setup-aquarium", "/go/amazon-brand/aquaclear+70+filter?s=setup-aquarium", "/go/amazon-brand/fluval+307+canister+filter?s=setup-aquarium", "/go/amazon-brand/eheim+jager+heater?s=setup-aquarium", "/go/amazon-brand/aquarium+digital+thermometer?s=setup-aquarium", "/go/amazon-brand/seachem+prime+water+conditioner?s=setup-aquarium", "/go/amazon-brand/aquarium+gravel+vacuum+siphon?s=setup-aquarium"]} />
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
-            Shop a first-tank setup kit
+            Shop these supplies
           </div>
           <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">A hang-on-back or canister filter is where the cycle lives. Pair it
             with a heater rated for the tank, a separate digital thermometer to

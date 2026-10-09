@@ -138,7 +138,7 @@ export default function FerretBathingGroomingPage() {
           <>
             <TableOfContents
               items={[
-                { label: 'TL;DR', href: '#tldr' },
+                { label: '', href: '#tldr' },
                 { label: 'Where the Smell Comes From', href: '#smell' },
                 { label: 'Bathing Frequency', href: '#frequency' },
                 { label: 'How to Bathe Safely', href: '#how' },
@@ -199,8 +199,7 @@ export default function FerretBathingGroomingPage() {
             to look like at baseline.
           </DropCap>
 
-          <h2 id="tldr">TL;DR</h2>
-          <p>
+                    <p>
             Ferrets need bathing at most every 2-3 months — frequent
             bathing makes them smell worse, not better. Use a
             ferret-specific or unscented kitten shampoo. Clean ears every
@@ -544,7 +543,7 @@ export default function FerretBathingGroomingPage() {
 
           <h2 id="picks">Grooming Kit Picks</h2>
           <p>
-            A minimal kit that covers occasional bathing, monthly ear cleaning, and every-2–3-week nail trims. This is a documented-spec comparison drawing on widely-stocked products in US pet retail and the shampoo and ear-product categories referenced in standard exotic-pet practice; the page does not claim hands-on testing. Avoid any shampoo containing tea tree oil — it is toxic to ferrets.
+            A minimal kit that covers occasional bathing, monthly ear cleaning, and every-2–3-week nail trims. Avoid any shampoo containing tea tree oil — it is toxic to ferrets.
           </p>
           <p className="mb-4 text-sm font-semibold leading-snug">
             <a href="/care/odor-and-scent-control" className="inline-block max-w-full whitespace-normal text-brand-primary underline underline-offset-2">
@@ -655,7 +654,7 @@ export default function FerretBathingGroomingPage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-07" />
+          <ComparisonFoot updated="2026-10-09" />
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />

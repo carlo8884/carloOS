@@ -346,11 +346,7 @@ export default async function DisciplineEquipmentPage({ params }: PageProps) {
           {/* ─── 8. Brands to Know ───────────────────────────────── */}
           <h2 id="brands">Brands to Know</h2>
           <p>
-            Reference list of makers and brands that consistently appear in{' '}
-            {data.disciplineName.toLowerCase()} tack-shop, saddler, and
-            competition-vendor lists. This is not an endorsement and does not
-            reflect hands-on testing — use it as a starting point for your own
-            research and on-farm fitting.
+            Reference list of makers and brands that consistently appear in{' '} {data.disciplineName.toLowerCase()} tack-shop, saddler, and competition-vendor lists.
           </p>
           <ul>
             {data.brandsToConsider.map((b) => (

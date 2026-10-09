@@ -66,30 +66,7 @@ export default function PancreatitisPage() {
 
           <h2 id="kit">A Simple Pancreatitis Leftover-Lockdown Kit</h2>
           <p>
-            Three everyday physical supplies match the
-            holiday-trigger, garbage-ingestion, and
-            lifelong low-fat-diet copy above: a locking
-            kitchen trash can so turkey skin, ham fat,
-            bacon grease, and other high-fat leftovers
-            cannot become the garbage-ingestion trigger
-            this page lists, a walk-through pet gate so
-            the dog stays out of the kitchen while
-            holiday scraps sit on counters, and an
-            airtight dog-food storage container so the
-            dedicated low-fat kibble stays labeled and
-            separate from household food. These are
-            household leftover-lockdown tools, not
-            treatments. They do not diagnose
-            pancreatitis, they do not replace a cPLI
-            test or abdominal ultrasound, they do not
-            set a fat-percent threshold, they do not
-            replace hospitalization or IV fluids, and
-            they are not Hill&apos;s i/d Low Fat, Royal
-            Canin Gastrointestinal Low Fat, Purina EN
-            Gastroenteric Low Fat, Cerenia, maropitant,
-            or a ranked GI product list. This page
-            does not hop medications. This page does
-            not claim hands-on testing. </p>
+            Keep these on hand: locking kitchen trash can, walk through pet gate, and airtight dog food storage container. These are household leftover-lockdown tools, not treatments. They do not diagnose pancreatitis, they do not replace a cPLI test or abdominal ultrasound, they do not set a fat-percent threshold, they do not replace hospitalization or IV fluids, and they are not Hill&apos;s i/d Low Fat, Royal Canin Gastrointestinal Low Fat, Purina EN Gastroenteric Low Fat, Cerenia, maropitant, or a ranked GI product list. </p>
 
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/locking+kitchen+trash+can?s=health-pancreatitis", "/go/amazon-brand/walk+through+pet+gate?s=health-pancreatitis", "/go/amazon-brand/airtight+dog+food+storage+container?s=health-pancreatitis"]} />
 

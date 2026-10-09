@@ -138,7 +138,7 @@ export default function DogMicrochippingPage() {
             reviewedBy="Editorial team"
           />
 
-          <CalloutBox variant="evidence" title="TL;DR — What you need to know">
+          <CalloutBox variant="evidence" title="What you need to know">
             <p>
               <strong>A microchip is a permanent ID, not a tracker.</strong> It is a passive RFID transponder the size of a grain of rice, implanted under the skin between the shoulder blades. When a shelter or vet scans a found dog, the chip transmits a unique number.
             </p>
@@ -274,7 +274,7 @@ export default function DogMicrochippingPage() {
 
           <h2 id="kit">A Simple Home-Verification and Collar-ID Kit</h2>
           <p>
-            Three everyday physical supplies match the registration and reunion copy above: an ISO pet microchip scanner so you can read the number at home and confirm the registry record, engraved dog collar ID tags so a neighbor can call you without a scanner, and a silent slide-on pet ID tag that stays on the collar if a hanging tag comes off. These are identification tools. They do not implant a chip, they do not track a dog in real time, they are not a clinic implant kit, and they do not replace a registered microchip or a veterinary scan of a found dog. This page does not claim hands-on testing. </p>
+            These are identification tools. They do not implant a chip, they do not track a dog in real time, they are not a clinic implant kit, and they do not replace a registered microchip or a veterinary scan of a found dog. </p>
 
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/iso+pet+microchip+scanner?s=guides-dog-microchipping", "/go/amazon-brand/engraved+dog+collar+id+tags?s=guides-dog-microchipping", "/go/amazon-brand/pet+id+tag+slide+on?s=guides-dog-microchipping"]} />
 

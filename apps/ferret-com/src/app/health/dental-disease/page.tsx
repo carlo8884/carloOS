@@ -189,8 +189,7 @@ export default function FerretDentalDiseasePage() {
             high-protein carnivore for years without an active dental routine.
           </DropCap>
 
-          <h2 id="tldr">TL;DR</h2>
-          <p>
+                    <p>
             Ferrets accumulate dental tartar rapidly on kibble diets, and
             clinically meaningful gingivitis is commonly visible by age 2-3.
             The standard prevention pattern across the exotic-pet veterinary
@@ -399,20 +398,9 @@ export default function FerretDentalDiseasePage() {
             </p>
           </CalloutBox>
 
-          <h2 id="kit">Home dental-care kit</h2>
+          <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Everyday physical supplies that match the brushing copy above
-            — a fingertip rubber brush so a kit can learn the flavor and
-            the feel before a handle is introduced, a soft infant
-            toothbrush for the 30–60 second outside-surface pass, and pet
-            dental wipes (gauze on a fingertip with enzymatic paste) for
-            the days a ferret will not tolerate a brush. Enzymatic pet
-            toothpaste sits beside those three as the paste already
-            described in the protocol; it is not a fourth shop hop on
-            this page. Human toothpaste (fluoride, xylitol), named
-            toothpaste brand ASINs, antibiotics, analgesia (meloxicam,
-            buprenorphine), and anesthetized scaling stay educational
-            copy only. This page does not claim hands-on testing.
+            Keep these on hand: a fingertip rubber brush so a kit can learn the flavor and the feel before a handle is introduced, a soft infant toothbrush for the 30–60 second outside-surface pass, and pet dental wipes (gauze on a fingertip with enzymatic paste) for the days a ferret will not tolerate a brush. Enzymatic pet toothpaste sits beside those three as the paste already described in the protocol; it is not a fourth shop hop on this page. Human toothpaste (fluoride, xylitol), named toothpaste brand ASINs, antibiotics, analgesia (meloxicam, buprenorphine), and anesthetized scaling stay educational copy only.
           </p>
 
           <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/finger+toothbrush+pet?s=health-dental-disease", "/go/amazon-brand/infant+toothbrush+soft+bristle?s=health-dental-disease", "/go/amazon-brand/pet+dental+wipes?s=health-dental-disease"]} />

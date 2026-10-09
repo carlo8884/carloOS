@@ -88,39 +88,17 @@ export default function VetsFrenchBulldogHealthPage() {
         <CalloutBox variant="evidence" title="Operate before age 2 when possible">
           Surgical correction of stenotic nares, elongated soft palate, and everted saccules produces the best outcomes when performed before age 2 — the soft palate and surrounding tissues have undergone less secondary remodeling. If your Frenchie is still young and is BOAS Grade II–III, the assessment is worth scheduling sooner rather than later.
         </CalloutBox>
-        <p>Surgical correction before 2 years produces the best outcomes because the soft palate and other tissues haven&apos;t undergone as much secondary remodeling. Four-tab dividers are how those BOAS grades 0–III stay four labeled stacks after the specialist assessment — they are not 3-tab dividers (that live on what-pet-insurance-covers), not removable page flags (that live on what-pet-insurance-covers), and not self-adhesive file-folder labels (that live on german-shepherd-health). If your Frenchie is still young: get the assessment now.</p>
-        <p>Limit outdoor time in temperatures above 70°F, particularly if humid, and walk in early morning or after sunset in summer. An analog outdoor thermometer is how that 70°F outdoor limit stays a written cutoff — it is not a mechanical kitchen timer (that lives on german-shepherd-health), not a 48-hour digital kitchen timer (that lives on when-to-go-to-the-vet), and not a dog-com cooling-mat or cooling-vest hop. Clean skin folds 2–3 times weekly and dry thoroughly. A weekly checklist notepad is how that fold-cleaning cadence stays a dated list — it is not a hardcover weekly appointment planner, not a monthly desk pad calendar (that lives on when-to-enroll), and not an 18-month wall calendar (that lives on golden-retriever-health).</p>
+        <p>Surgical correction before 2 years produces the best outcomes because the soft palate and other tissues haven&apos;t undergone as much secondary remodeling. Four-tab dividers are how those BOAS grades 0–III stay four labeled stacks after the specialist assessment — they are not 3-tab dividers, not removable page flags, and not self-adhesive file-folder labels. If your Frenchie is still young: get the assessment now.</p>
+        <p>Limit outdoor time in temperatures above 70°F, particularly if humid, and walk in early morning or after sunset in summer. An analog outdoor thermometer is how that 70°F outdoor limit stays a written cutoff — it is not a mechanical kitchen timer, not a 48-hour digital kitchen timer, and not a dog-com cooling-mat or cooling-vest hop. Clean skin folds 2–3 times weekly and dry thoroughly. A weekly checklist notepad is how that fold-cleaning cadence stays a dated list — it is not a hardcover weekly appointment planner, not a monthly desk pad calendar, and not an 18-month wall calendar.</p>
 
         <h2>Insurance — Non-Negotiable for This Breed</h2>
         <p>Those figures are typical US ranges dated 2026-10-05.</p>
         <p>BOAS surgery: $2,500–5,000. IVDD decompression: $5,000–10,000. These are not rare worst-case scenarios — they are common outcomes in this breed within the first 5 years.</p>
         <p>Enroll before symptoms appear and compare hereditary and spinal terms on the quote itself. This page does not name a carrier. See the <a href="/reviews/best-pet-insurance">full insurance comparison →</a></p>
 
-        <h2 id="kit">French-bulldog-health kit</h2>
+        <h2 id="kit">Supplies named on this page</h2>
         <p>
-          Everyday physical supplies that match the
-          BOAS, IVDD, and heat-risk copy on this
-          page — four-tab dividers so BOAS grades
-          0–III stay four labeled stacks, an analog
-          outdoor thermometer so the 70°F outdoor
-          limit stays a written cutoff, and a
-          weekly checklist notepad so fold-cleaning
-          two-to-three times a week stays a dated
-          list. These are educational
-          French-bulldog-health / paperwork tools,
-          not a ranked product list, not a
-          substitute for veterinary care, and not
-          a treatment. Top-bound steno pads,
-          mechanical kitchen timers, and
-          self-adhesive file-folder labels already
-          live on german-shepherd-health. Paint-chip
-          sample cards and 18-month wall calendars
-          already live on
-          golden-retriever-health. This page does
-          not hop cooling mats, cooling vests,
-          medications, or insurance brands as
-          Amazon searches. This page does not
-          claim hands-on testing.
+          Keep these on hand: four-tab dividers so BOAS grades 0–III stay four labeled stacks, an analog outdoor thermometer so the 70°F outdoor limit stays a written cutoff, and a weekly checklist notepad so fold-cleaning two-to-three times a week stays a dated list. These are educational French-bulldog-health / paperwork tools, not a ranked product list, not a substitute for veterinary care, and not a treatment.
         </p>
 
         <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/four+tab+dividers?s=breeds-french-bulldog-health", "/go/amazon-brand/analog+outdoor+thermometer?s=breeds-french-bulldog-health", "/go/amazon-brand/weekly+checklist+notepad?s=breeds-french-bulldog-health"]} />
@@ -150,24 +128,10 @@ export default function VetsFrenchBulldogHealthPage() {
             dog+cooling+vest. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-            Shop the French-bulldog-health kit
+            Shop these supplies
           </div>
           <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-            These Amazon category searches match the
-            on-page BOAS, IVDD, and heat-risk copy
-            — four-tab dividers, an analog outdoor
-            thermometer, and a weekly checklist
-            notepad. Educational
-            French-bulldog-health / paperwork
-            tools only. They are not a ranked
-            product list, they are not a
-            substitute for veterinary care, they
-            are not a #1177 steno-pad / kitchen-
-            timer / file-label hop, they are not a
-            dog-com Frenchie cooling hop, they are
-            not a financing-brand or insurance-
-            brand hop, and they do not replace a
-            veterinarian.
+            Keep these on hand: four-tab dividers, an analog outdoor thermometer, and a weekly checklist notepad. Educational French-bulldog-health / paperwork tools only.
           </p>
           <div className="flex flex-col gap-3">
             <ShopCtas

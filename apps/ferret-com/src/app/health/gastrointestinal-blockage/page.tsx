@@ -133,7 +133,7 @@ export default function FerretGIBlockagePage() {
           <>
             <TableOfContents
               items={[
-                { label: 'TL;DR', href: '#tldr' },
+                { label: '', href: '#tldr' },
                 { label: 'Why Ferrets Are at Risk', href: '#risk' },
                 { label: 'Warning Signs', href: '#signs' },
                 { label: 'Diagnosis', href: '#diagnosis' },
@@ -187,8 +187,7 @@ export default function FerretGIBlockagePage() {
             species.
           </DropCap>
 
-          <h2 id="tldr">TL;DR</h2>
-          <p>
+                    <p>
             Gastrointestinal blockage in ferrets is usually caused by swallowed
             foreign objects (especially soft rubber and foam) or, less often,
             hairballs (trichobezoars). The ferret intestine is narrow, so even

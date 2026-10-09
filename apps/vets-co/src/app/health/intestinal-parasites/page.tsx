@@ -47,7 +47,7 @@ export default function IntestinalParasitesPage() {
 
           <h2>Roundworms — The Most Common and Zoonotic</h2>
           <p>Toxocara canis (roundworm) is the most commonly found intestinal parasite in dogs and one of the most important zoonotic parasites worldwide. Adult roundworms live in the small intestine. Puppies are often infected in utero or through nursing — almost all puppies are born with roundworm larvae transmitted transplacentally. Clinical signs in heavily infected puppies: pot-bellied appearance, dull coat, diarrhea, and in severe cases, intestinal obstruction. Adult dogs with small burdens often show no signs.</p>
-          <p><strong>Zoonotic risk:</strong> Toxocara eggs are shed in dog feces and become infective in the environment after 2–4 weeks. Children playing in contaminated soil can accidentally ingest eggs — larvae migrate through human tissues (visceral larva migrans) and in rare cases reach the eyes (ocular larva migrans), causing vision damage. This is why children&apos;s sandboxes near dog areas and handwashing after dog contact are genuine public health recommendations. A hinged cedar sandbox cover is how a kids&apos; sandbox next to a dog area stays a lidded box instead of an open soil tray — it is not a zippered waterproof dog duvet cover (that lives on flea-tick-prevention) and it is not a quilted disposable underpad (that lives on emergency-signs). A metal-jaw dog waste scooper is how yard feces leave the grass before that 2–4 week infective window — it is not a dog poop bag (those live on house-training), not a fecal-sample collection kit (that lives on the dog.com wellness-exam guide), and not a pasture manure rake (that lives on horses.com deworming). An outdoor garden hand-wash station is how handwashing after dog contact is a yard-side wash instead of a hoped-for indoor sink — it is not powder-free nitrile exam gloves (those live on leptospirosis) and it is not disposable nitrile gloves (those live on ferret cage-cleaning). Annual fecal testing and regular deworming are a household health measure, not just veterinary maintenance. A sandbox cover, a waste scooper, and a yard hand-wash station do not diagnose intestinal parasites and they do not replace that fecal test.</p>
+          <p><strong>Zoonotic risk:</strong> Toxocara eggs are shed in dog feces and become infective in the environment after 2–4 weeks. Children playing in contaminated soil can accidentally ingest eggs — larvae migrate through human tissues (visceral larva migrans) and in rare cases reach the eyes (ocular larva migrans), causing vision damage. This is why children&apos;s sandboxes near dog areas and handwashing after dog contact are genuine public health recommendations. A hinged cedar sandbox cover is how a kids&apos; sandbox next to a dog area stays a lidded box instead of an open soil tray — it is not a zippered waterproof dog duvet cover and it is not a quilted disposable underpad. A metal-jaw dog waste scooper is how yard feces leave the grass before that 2–4 week infective window — it is not a dog poop bag, not a fecal-sample collection kit, and not a pasture manure rake. An outdoor garden hand-wash station is how handwashing after dog contact is a yard-side wash instead of a hoped-for indoor sink — it is not powder-free nitrile exam gloves and it is not disposable nitrile gloves. Annual fecal testing and regular deworming are a household health measure, not just veterinary maintenance. A sandbox cover, a waste scooper, and a yard hand-wash station do not diagnose intestinal parasites and they do not replace that fecal test.</p>
           <p>Treatment: fenbendazole (Panacur) 5 days, repeated at 2-3 weeks. Pyrantel pamoate (in most monthly heartworm preventives) prevents reinfestation with monthly dosing. All puppies should be dewormed starting at 2 weeks of age, repeated every 2 weeks until 8 weeks, then monthly until 6 months. Fenbendazole, pyrantel, praziquantel, and metronidazole are clinic prescriptions, not shoppable hops.</p>
 
           <h2>Hookworms — Blood Loss and Skin Penetration</h2>
@@ -55,37 +55,15 @@ export default function IntestinalParasitesPage() {
           <p>Treatment: pyrantel pamoate or fenbendazole. Severely anemic puppies may require blood transfusion before deworming treatment. Those drugs stay clinic prescriptions. Household yard-hygiene gear does not replace them.</p>
 
           <h2>Giardia — The Persistent Protist</h2>
-          <p>Giardia duodenalis is a protozoan parasite (not a worm) that causes intermittent soft or liquid diarrhea that may be mucoid, fatty-appearing, and foul-smelling. Many infected dogs are asymptomatic. Diagnosis requires specific Giardia antigen testing or PCR — standard fecal flotation misses Giardia cysts in most cases. Treatment: metronidazole (5-7 days) combined with fenbendazole (5 days) has better clearance rates than either alone. Environmental decontamination is important — Giardia cysts survive in the environment and resist standard disinfectants (dilute bleach 1:32 or quaternary ammonium compounds are effective). An outdoor garden hand-wash station is how a yard-side wash happens after handling an infected dog or cleaning diarrhea — it is not a pet-safe kennel disinfectant spray (that lives on canine-influenza) and it is not an accelerated hydrogen peroxide disinfectant (that lives on parvovirus-in-puppies). Hand-washing gear does not clear Giardia from a dog.</p>
+          <p>Giardia duodenalis is a protozoan parasite (not a worm) that causes intermittent soft or liquid diarrhea that may be mucoid, fatty-appearing, and foul-smelling. Many infected dogs are asymptomatic. Diagnosis requires specific Giardia antigen testing or PCR — standard fecal flotation misses Giardia cysts in most cases. Treatment: metronidazole (5-7 days) combined with fenbendazole (5 days) has better clearance rates than either alone. Environmental decontamination is important — Giardia cysts survive in the environment and resist standard disinfectants (dilute bleach 1:32 or quaternary ammonium compounds are effective). An outdoor garden hand-wash station is how a yard-side wash happens after handling an infected dog or cleaning diarrhea — it is not a pet-safe kennel disinfectant spray and it is not an accelerated hydrogen peroxide disinfectant. Hand-washing gear does not clear Giardia from a dog.</p>
           <p>Giardia is considered potentially zoonotic to humans — the strain (assemblage) in dogs most commonly is assemblage C or D, which has low transmissibility to humans, but immunocompromised people should exercise standard hygiene precautions around infected dogs.</p>
 
           <h2>Annual Fecal Testing — The Standard of Care</h2>
           <p>The Companion Animal Parasite Council (CAPC) recommends fecal testing at least annually for all dogs, and 2-4 times per year for puppies and dogs in high-exposure environments (doggy daycare, boarding facilities, dog parks, multiple-dog households, hunting dogs). The fecal flotation detects roundworm, hookworm, whipworm, coccidia, and tapeworm eggs. A separate Giardia antigen ELISA or PCR is required to detect Giardia — it is not part of standard fecal flotation. Most annual wellness fecal tests include both. A waste scooper is yard hygiene; it is not a fecal-sample collection kit and it does not replace the laboratory flotation.</p>
 
-          <h2 id="kit">Home-care kit</h2>
+          <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Everyday physical supplies that match the
-            children&apos;s-sandbox, fecal-pickup, and
-            handwashing-after-dog-contact copy on this
-            page — a hinged cedar sandbox cover so a
-            kids&apos; sandbox next to a dog area is a
-            lidded box instead of an open soil tray, a
-            metal-jaw dog waste scooper so yard feces
-            leave the grass before the 2–4 week
-            Toxocara infective window, and an outdoor
-            garden hand-wash station so handwashing
-            after dog contact is a yard-side wash. These are educational home-care / hygiene /
-            monitoring tools, not a ranked product
-            list, not a substitute for veterinary
-            care, and not a treatment for intestinal
-            parasites. Fenbendazole, pyrantel,
-            praziquantel, metronidazole, ponazuril, and
-            vaccines are clinic prescriptions, not
-            shoppable hops. 24-ounce stainless hiking
-            dog bottles already live on
-            leptospirosis. Small digital kitchen food
-            scales already live on
-            hyperthyroidism-cats. This page
-            does not claim hands-on testing. </p>
+            Keep these on hand: a hinged cedar sandbox cover so a kids&apos; sandbox next to a dog area is a lidded box instead of an open soil tray, a metal-jaw dog waste scooper so yard feces leave the grass before the 2–4 week Toxocara infective window, and an outdoor garden hand-wash station so handwashing after dog contact is a yard-side wash. These are educational home-care / hygiene / monitoring tools, not a ranked product list, not a substitute for veterinary care, and not a treatment for intestinal parasites. Fenbendazole, pyrantel, praziquantel, metronidazole, ponazuril, and vaccines are clinic prescriptions, not shoppable hops. </p>
 
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/hinged+cedar+sandbox+cover?s=health-intestinal-parasites", "/go/amazon-brand/metal+jaw+dog+waste+scooper?s=health-intestinal-parasites", "/go/amazon-brand/outdoor+garden+hand+wash+station?s=health-intestinal-parasites"]} />
 

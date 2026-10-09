@@ -127,7 +127,7 @@ export default function TrailRidingPage() {
         ]}
         sidebar={<>
           <TableOfContents items={[
-            { label: 'TL;DR', href: '#tldr' },
+            { label: '', href: '#tldr' },
             { label: 'Recreational vs Competitive', href: '#types' },
             { label: 'NATRC Competitive Trail', href: '#natrc' },
             { label: 'AERC Endurance', href: '#aerc' },
@@ -161,8 +161,7 @@ export default function TrailRidingPage() {
             updatedAt="2026-05-28"
           />
 
-          <h2 id="tldr">TL;DR</h2>
-          <ul>
+                    <ul>
             <li><strong>What it is:</strong> riding a horse on a trail, recreationally or in competition. The competitive variants are NATRC Competitive Trail (judged ride) and AERC/FEI Endurance (timed race up to 100 miles).</li>
             <li><strong>Governing bodies:</strong> none for recreational trail; NATRC for Competitive Trail (founded 1961); AERC for endurance (founded 1972); FEI Endurance for international.</li>
             <li><strong>Key gear:</strong> trail saddle, breast collar, saddlebags, water, helmet, ID, basic first-aid kit, cell phone.</li>

@@ -72,9 +72,9 @@ export default function FLUTDPage() {
           <h2 id="prevention">Prevention and Long-Term Care</h2>
           <p>Because FLUTD tends to recur, prevention is central. The pillars are water intake (wet food, fountains, multiple water stations), litter box hygiene and adequate numbers of boxes, stress reduction, weight control, and an appropriate diet. Many cats do well long-term once their environment and hydration are optimized, with veterinary rechecks to catch recurrences early.</p>
 
-          <h2 id="kit">Home hydration and litter-box kit</h2>
+          <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Everyday physical supplies that match the prevention copy above — a cat water fountain so running water invites more drinking, extra litter boxes so the household hits one box per cat plus one extra, and canned wet cat food that adds water the cat will actually eat. Multiple clean water stations sit beside the fountain; they are not a second shop hop. Prescription urinary diets (Hill&rsquo;s c/d, Royal Canin Urinary SO, and the like), antibiotics, pain control, and IV fluids stay educational copy only — this page never hops medications, brand ASINs, or clinic gear. This is not the sister UTI page and it does not hop a dog water fountain. This page does not claim hands-on testing.
+            Keep these on hand: a cat water fountain so running water invites more drinking, extra litter boxes so the household hits one box per cat plus one extra, and canned wet cat food that adds water the cat will actually eat. Multiple clean water stations sit beside the fountain; they are not a second shop hop. Prescription urinary diets (Hill&rsquo;s c/d, Royal Canin Urinary SO, and the like), antibiotics, pain control, and IV fluids stay educational copy only — this page never hops medications, brand ASINs, or clinic gear.
           </p>
 
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/cat+water+fountain?s=health-feline-lower-urinary-tract-disease", "/go/amazon-brand/extra+cat+litter+box?s=health-feline-lower-urinary-tract-disease", "/go/amazon-brand/canned+wet+cat+food?s=health-feline-lower-urinary-tract-disease"]} />

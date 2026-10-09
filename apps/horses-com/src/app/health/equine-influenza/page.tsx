@@ -143,31 +143,15 @@ export default function EquineInfluenzaPage() {
 
           <h2 id="biosecurity">Biosecurity</h2>
           <ul>
-            <li><strong>Quarantine new and returning horses</strong> and monitor temperatures before mixing them with the herd. A weatherproof storage clipboard is how twice-daily quarantine temperatures live on one barn sheet instead of a scrap of paper — it is not a lined telephone message pad (that lives on when-to-go-to-the-vet) and not a rectal thermometer (those live on colic, the grimace scale, and the emergency tool).</li>
-            <li><strong>Isolate coughing or feverish horses</strong> immediately and use dedicated equipment. A round rubber horse feed pan is how a coughing horse eats from its own tub instead of a shared feeder — it is not a color-coded flat-back bucket (that lives on strangles), not a lidded 5-gallon feed-soaking pail (that lives on choke), and not a food-grade water jug (that lives on nano-tank setup).</li>
+            <li><strong>Quarantine new and returning horses</strong> and monitor temperatures before mixing them with the herd. A weatherproof storage clipboard is how twice-daily quarantine temperatures live on one barn sheet instead of a scrap of paper — it is not a lined telephone message pad and not a rectal thermometer.</li>
+            <li><strong>Isolate coughing or feverish horses</strong> immediately and use dedicated equipment. A round rubber horse feed pan is how a coughing horse eats from its own tub instead of a shared feeder — it is not a color-coded flat-back bucket, not a lidded 5-gallon feed-soaking pail, and not a food-grade water jug.</li>
             <li><strong>Limit shared airspace and equipment</strong> at events and in transport.</li>
-            <li><strong>Maintain vaccination</strong> across the group so that population immunity blunts outbreaks. This page does not hop vaccines, needles, or ranked vaccine products — those decisions stay with the veterinarian and the vaccination-schedule guide.</li>
+            <li><strong>Maintain vaccination</strong> across the group so that population immunity blunts outbreaks.</li>
           </ul>
 
-          <h2 id="kit">Quarantine-and-rest kit</h2>
+          <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Everyday physical supplies that match the
-            monitor-temperatures, dedicated-equipment, and
-            clean-air-rest copy on this page — a weatherproof
-            storage clipboard so twice-daily quarantine
-            temperatures live on one barn sheet, a round
-            rubber horse feed pan so a coughing horse eats
-            from its own tub, and paper-pellet horse bedding
-            so a stripped airway rests on low-dust stall
-            fill. These are educational quarantine-and-rest
-            tools, not a ranked product list, not a
-            substitute for veterinary care, and not a
-            treatment or a vaccine. Thermometers already live
-            on colic, the grimace scale, and the emergency
-            tool. Color-coded flat-back buckets, disposable
-            coveralls, and boot-dip tubs already live on
-            strangles. This page does not claim hands-on
-            testing. </p>
+            Keep these on hand: a weatherproof storage clipboard so twice-daily quarantine temperatures live on one barn sheet, a round rubber horse feed pan so a coughing horse eats from its own tub, and paper-pellet horse bedding so a stripped airway rests on low-dust stall fill. These are educational quarantine-and-rest tools, not a ranked product list, not a substitute for veterinary care, and not a treatment or a vaccine. </p>
 
           <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/weatherproof+storage+clipboard?s=health-flu", "/go/amazon-brand/round+rubber+feed+pan+horse?s=health-flu", "/go/amazon-brand/paper+pellet+horse+bedding?s=health-flu"]} />
 

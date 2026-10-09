@@ -78,7 +78,7 @@ export default function MarkerTrainingPage() {
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/dog+training+clicker?s=training-marker-training", "/go/amazon-brand/puppy+training+treats?s=training-marker-training", "/go/amazon-brand/dog+training+treat+pouch+belt+clip?s=training-marker-training"]} />
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
-              Shop a marker-training kit
+              Shop these supplies
             </div>
             <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">A clicker marks the exact moment of the behavior; pea-sized
               treats and a belt-clip pouch keep the reward inside the 1.3-second

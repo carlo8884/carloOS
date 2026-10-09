@@ -221,7 +221,7 @@ export default function SaddleFitBasicsPage() {
 
           <h2 id="picks">Pad and Tack Picks</h2>
           <p>
-            Two items commonly used by horse owners between professional fittings. These are <strong>not</strong> a substitute for a professional fit assessment — the framework above and the references below make clear that pads cannot correct structural fit problems. They are standard tack used under a correctly fitting saddle. These are not treatments for back pain, lameness, or girthiness; new dry patches, protective tension, or new behavioral problems under saddle belong with a qualified saddle fitter or veterinarian, not a thicker pad. This is a documented-spec comparison drawing on widely-stocked products in US equestrian retail; this page does not claim hands-on testing.
+            Two items commonly used by horse owners between professional fittings. These are <strong>not</strong> a substitute for a professional fit assessment — the framework above and the references below make clear that pads cannot correct structural fit problems. They are standard tack used under a correctly fitting saddle. These are not treatments for back pain, lameness, or girthiness; new dry patches, protective tension, or new behavioral problems under saddle belong with a qualified saddle fitter or veterinarian, not a thicker pad.
           </p>
 
 

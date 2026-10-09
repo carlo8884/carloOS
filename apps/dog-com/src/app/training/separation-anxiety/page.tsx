@@ -136,7 +136,7 @@ export default function SeparationAnxietyPage() {
         <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/wire+dog+crate+with+divider+panel?s=training-sep-anxiety", "/go/amazon-brand/kong+classic+dog+toy+stuffable?s=training-sep-anxiety", "/go/amazon-brand/snuffle+mat+dog+enrichment?s=training-sep-anxiety", "/go/amazon-brand/bully+sticks+dog+chew?s=training-sep-anxiety"]} />
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
-            Shop an alone-time kit
+            Shop these supplies
           </div>
           <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">A stuffed frozen Kong plus a snuffle mat occupy most dogs for the
             first 15–30 minutes after you leave — the window where boredom

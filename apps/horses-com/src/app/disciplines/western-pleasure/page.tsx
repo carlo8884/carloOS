@@ -129,7 +129,7 @@ export default function WesternPleasurePage() {
         ]}
         sidebar={<>
           <TableOfContents items={[
-            { label: 'TL;DR', href: '#tldr' },
+            { label: '', href: '#tldr' },
             { label: 'History &amp; Origins', href: '#history' },
             { label: 'How a Class is Judged', href: '#judging' },
             { label: 'The Slow-Pleasure Controversy', href: '#controversy' },
@@ -162,8 +162,7 @@ export default function WesternPleasurePage() {
             updatedAt="2026-05-28"
           />
 
-          <h2 id="tldr">TL;DR</h2>
-          <ul>
+                    <ul>
             <li><strong>What it is:</strong> a rail class judged on manners and way of going at walk, jog, and lope in both directions of the arena.</li>
             <li><strong>Governing bodies:</strong> AQHA, APHA, ApHC, and POA for the stock-horse breed shows; USEF Western for cross-breed competition.</li>
             <li><strong>Key rule:</strong> per AQHA SHW340, the lope must be a three-beat gait with cadence and the horse must travel with natural carriage (not below the withers).</li>

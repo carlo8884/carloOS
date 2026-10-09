@@ -69,7 +69,7 @@ export default function ExcessiveBarkingPage() {
         <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/snuffle+mat+dog+enrichment?s=training-excessive-barking", "/go/amazon-brand/puzzle+feeder+dog?s=training-excessive-barking", "/go/amazon-brand/lick+mat+dog?s=training-excessive-barking", "/go/amazon-brand/calming+dog+chews?s=training-excessive-barking"]} />
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
-            Shop a quiet-barking kit
+            Shop these supplies
           </div>
           <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Boredom and frustration barking are enrichment problems — a
             puzzle feeder, lick mat, or snuffle mat occupies the mouth

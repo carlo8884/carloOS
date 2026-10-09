@@ -76,28 +76,9 @@ export default function PancreatitisPage() {
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
 
-          <h2 id="kit">Recovery-diet kit</h2>
+          <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Everyday physical supplies that match the
-            low-fat recovery, no-table-scraps, and
-            weight-control copy on this page — a low-fat
-            digestive-care dog food for the consistent
-            recovery diet, lean low-fat dog treats so
-            fatty scraps stay out, and a digital pet-food
-            portion scale for honest portions. These are
-            household tools, not treatments. They do not
-            treat pancreatitis, they do not replace a
-            veterinarian, and they are not Hill&rsquo;s i/d,
-            Royal Canin Gastrointestinal Low Fat, or
-            Purina EN prescription ASINs. This is not the
-            dog-obesity page and it does not hop a
-            digital pet scale or a slow-feeder dog bowl.
-            It is not the calorie / ideal-weight / BCS
-            tools and it does not hop a kitchen gram
-            scale or a portion-control food scale. It is
-            not the dehydration page and it does not hop
-            an electrolyte, pitcher, or saucer. This page
-            does not claim hands-on testing.
+            Keep these on hand: a low-fat digestive-care dog food for the consistent recovery diet, lean low-fat dog treats so fatty scraps stay out, and a digital pet-food portion scale for honest portions. These are household tools, not treatments. They do not treat pancreatitis, they do not replace a veterinarian, and they are not Hill&rsquo;s i/d, Royal Canin Gastrointestinal Low Fat, or Purina EN prescription ASINs.
           </p>
 
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/low+fat+digestive+care+dog+food?s=health-pancreatitis-in-dogs", "/go/amazon-brand/lean+low+fat+dog+treats?s=health-pancreatitis-in-dogs", "/go/amazon-brand/digital+pet+food+portion+scale?s=health-pancreatitis-in-dogs"]} />

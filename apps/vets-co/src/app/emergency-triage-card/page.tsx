@@ -402,7 +402,7 @@ export default function EmergencyTriageCardPage() {
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/pet+first+aid+kit?s=emergency-triage", "/go/amazon-brand/digital+pet+thermometer?s=emergency-triage", "/go/amazon-brand/styptic+powder?s=emergency-triage", "/go/amazon-brand/tick+removal+tool?s=emergency-triage", "/go/amazon-brand/vetrap+cohesive+bandage?s=emergency-triage"]} />
           <div className="mt-4 rounded-xl border border-brand-border bg-brand-white p-5">
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Shop the kit items
+              Shop these supplies
             </div>
             
             <div className="flex flex-col gap-3">

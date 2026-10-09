@@ -140,7 +140,7 @@ export default function DogBodyConditionScorePage() {
             reviewedBy="Editorial team"
           />
 
-          <CalloutBox variant="evidence" title="TL;DR — What you need to know">
+          <CalloutBox variant="evidence" title="What you need to know">
             <p>
               <strong>Use the 1–9 scale.</strong> Aim for BCS 4–5. Check monthly: feel for ribs with light pressure, look down from above for a waist, look from the side for an abdominal tuck. Breed matters — sighthounds look bony at ideal weight, brachycephalics look stocky.
             </p>
@@ -335,25 +335,7 @@ export default function DogBodyConditionScorePage() {
 
           <h2 id="kit">A Simple BCS Tracking Kit</h2>
           <p>
-            Three everyday physical supplies match the monthly
-            scoring copy above: a soft measuring tape for pets
-            so girth and pelvic-circumference checks stay
-            consistent month to month, a dog body condition
-            score chart poster as the visual 1–9 reference
-            next to the hands-on rib / waist / tuck tests, and
-            single-ingredient lean dog treats so the treat
-            calorie audit is not mixed table scraps. These
-            are household scoring tools, not treatments. They
-            do not replace a veterinarian&rsquo;s BCS, they
-            are not a prescription weight-management diet,
-            and they are not the dog-obesity digital pet
-            scale or slow-feeder bowl. They are not the
-            calorie / ideal-weight / BCS-tool kitchen gram
-            scale, portion-control food scale, or combined
-            measuring-tape-plus-chart hop. They are not the
-            pancreatitis digital pet-food portion scale,
-            low-fat digestive-care food, or lean low-fat
-            treats. This page does not claim hands-on testing.
+            These are household scoring tools, not treatments. They do not replace a veterinarian&rsquo;s BCS, they are not a prescription weight-management diet, and they are not the dog-obesity digital pet scale or slow-feeder bowl. They are not the calorie / ideal-weight / BCS-tool kitchen gram scale, portion-control food scale, or combined measuring-tape-plus-chart hop. They are not the pancreatitis digital pet-food portion scale, low-fat digestive-care food, or lean low-fat treats.
           </p>
 
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/soft+measuring+tape+for+pets?s=guides-dog-body-condition-score", "/go/amazon-brand/dog+body+condition+score+chart+poster?s=guides-dog-body-condition-score", "/go/amazon-brand/single+ingredient+lean+dog+treats?s=guides-dog-body-condition-score"]} />
