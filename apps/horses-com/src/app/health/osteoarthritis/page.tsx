@@ -1,7 +1,7 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ShopCtas, TableOfContents } from '@carloOS/ui'
+import { ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ShopCtas, TableOfContents, ArticleSourcesList, LastReviewed } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -120,6 +120,7 @@ export default function OsteoarthritisPage() {
             updatedAt="2026-09-06"
             reviewedBy="Editorial team"
           />
+          <LastReviewed date="2026-10-09" />
 
           <h2 id="what">What Is Osteoarthritis</h2>
           <p>A healthy joint is lined with articular cartilage -- a slick, resilient surface that lets bone glide on bone -- and lubricated by joint (synovial) fluid. Osteoarthritis begins when that cartilage is damaged by wear, repetitive concussion, injury, or inflammation. The damaged cartilage releases enzymes that degrade it further, the joint inflames, the surrounding bone responds by forming new growth (osteophytes), and the cycle becomes self-sustaining. The result is pain, stiffness, and progressive loss of motion.</p>
@@ -234,13 +235,17 @@ export default function OsteoarthritisPage() {
           <h2 id="faq">Frequently Asked Questions</h2>
           <FAQAccordion items={FAQS} />
 
-          <h2 id="references">References</h2>
-          <ol className="text-sm text-brand-text-mid">
-            <li>McIlwraith CW, Frisbie DD, Kawcak CE. “The Horse as a Model of Naturally Occurring Osteoarthritis.” Bone &amp; Joint Research, 2012; 1(11):297–309.</li>
-            <li>Goodrich LR, Nixon AJ. “Medical Treatment of Osteoarthritis in the Horse — A Review.” Veterinary Journal, 2006; 171(1):51–69.</li>
-            <li>Frisbie DD, Kawcak CE, Werpy NM, et al. Evaluation of intra-articular therapies, multiple studies. Equine Veterinary Journal, 2007–2013.</li>
-            <li>American Association of Equine Practitioners. “Arthritis / Degenerative Joint Disease” owner resources. aaep.org.</li>
-          </ol>
+          <div id="references">
+            <ArticleSourcesList
+              title="References"
+              sources={[
+              { label: "McIlwraith CW, Frisbie DD, Kawcak CE. “The Horse as a Model of Naturally Occurring Osteoarthritis.” Bone & Joint Research, 2012; 1(11):297–309.", url: "https://boneandjoint.org.uk/journal/bjr", publisher: "Bone & Joint Research" },
+              { label: "Goodrich LR, Nixon AJ. “Medical Treatment of Osteoarthritis in the Horse — A Review.” Veterinary Journal, 2006; 171(1):51–69.", url: "https://www.sciencedirect.com/journal/the-veterinary-journal", publisher: "The Veterinary Journal" },
+              { label: "Frisbie DD, Kawcak CE, Werpy NM, et al. Evaluation of intra-articular therapies, multiple studies. Equine Veterinary Journal, 2007–2013.", url: "https://beva.onlinelibrary.wiley.com/journal/20423306", publisher: "Equine Veterinary Journal" },
+              { label: "American Association of Equine Practitioners. “Arthritis / Degenerative Joint Disease” owner resources. aaep.org.", url: "https://aaep.org/", publisher: "AAEP" },
+              ]}
+            />
+          </div>
         </div>
       </ArticleLayout>
     </>

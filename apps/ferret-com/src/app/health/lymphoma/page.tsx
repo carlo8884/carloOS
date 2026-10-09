@@ -10,6 +10,7 @@ import {
   DropCap,
   CrossPortfolioCard,
   ArticleSourcesList,
+  LastReviewed,
 } from '@carloOS/ui'
 
 const SOURCES = [
@@ -198,6 +199,7 @@ export default function FerretLymphomaPage() {
             updatedAt="2026-05-29"
             reviewedBy="Editorial team"
           />
+          <LastReviewed date="2026-10-09" />
 
           <DropCap>
             Ferret lymphoma is the cancer that does not have a single

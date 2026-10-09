@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas, ArticleSourcesList, LastReviewed } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -118,6 +118,7 @@ export default function RainRotPage() {
             updatedAt="2026-09-06"
             reviewedBy="Editorial team"
           />
+          <LastReviewed date="2026-10-09" />
 
           <h2 id="what">What Is Rain Rot</h2>
           <p>Rain rot is a skin infection caused by Dermatophilus congolensis, a bacterium that behaves in some ways like a fungus. It infects the outer skin layers and provokes an inflammatory response that produces crusty, matted scabs binding tufts of hair, which lift off to leave bare, sometimes raw, patches. It most commonly appears over the topline, back, croup, and hindquarters -- the areas that stay wettest in rain.</p>
@@ -218,12 +219,16 @@ export default function RainRotPage() {
           <h2 id="faq">Frequently Asked Questions</h2>
           <FAQAccordion items={FAQS} />
 
-          <h2 id="references">References</h2>
-          <ol className="text-sm text-brand-text-mid">
-            <li>Scott DW, Miller WH. Equine Dermatology, 2nd ed., Elsevier, 2011.</li>
-            <li>Fadok VA. “An Overview of Equine Dermatoses Characterized by Scaling and Crusting.” Veterinary Clinics of North America: Equine Practice, 1995; 11(1):43–51.</li>
-            <li>American Association of Equine Practitioners. “Rain Rot / Dermatophilosis” owner resources. aaep.org.</li>
-          </ol>
+          <div id="references">
+            <ArticleSourcesList
+              title="References"
+              sources={[
+              { label: "Scott DW, Miller WH. Equine Dermatology, 2nd ed., Elsevier, 2011.", url: "https://www.elsevier.com/", publisher: "Elsevier" },
+              { label: "Fadok VA. “An Overview of Equine Dermatoses Characterized by Scaling and Crusting.” Veterinary Clinics of North America: Equine Practice, 1995; 11(1):43–51.", url: "https://www.vetequine.theclinics.com/", publisher: "Veterinary Clinics of North America: Equine Practice" },
+              { label: "American Association of Equine Practitioners. “Rain Rot / Dermatophilosis” owner resources. aaep.org.", url: "https://aaep.org/", publisher: "AAEP" },
+              ]}
+            />
+          </div>
         </div>
       </ArticleLayout>
     </>

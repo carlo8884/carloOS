@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ShopCtas, TableOfContents } from '@carloOS/ui'
+import { ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ShopCtas, TableOfContents, ArticleSourcesList, LastReviewed } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -121,6 +121,7 @@ export default function PPIDPage() {
             updatedAt="2026-09-06"
             reviewedBy="Editorial team"
           />
+          <LastReviewed date="2026-10-09" />
           <div className="mb-8">
             <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
               Keep these on hand: a shedding blade so the long curly coat is lifted between clips, a wicking anti-sweat sheet so a clipped or still-coated horse can cool, and an automatic waterer so extra thirst is not a dry bucket. Educational coat-and-cooling checklist, not a treatment, not pergolide or an ACTH kit, not a substitute for calling the veterinarian.
@@ -245,13 +246,17 @@ export default function PPIDPage() {
           <h2 id="faq">Frequently Asked Questions</h2>
           <FAQAccordion items={FAQS} />
 
-          <h2 id="references">References</h2>
-          <ol className="text-sm text-brand-text-mid">
-            <li>Equine Endocrinology Group. “Recommendations for the Diagnosis and Treatment of PPID,” current edition. sites.tufts.edu/equineendogroup.</li>
-            <li>McFarlane D. “Equine Pituitary Pars Intermedia Dysfunction.” Veterinary Clinics of North America: Equine Practice, 2011; 27(1):93–113.</li>
-            <li>Ireland JL, McGowan CM. “Epidemiology of Pituitary Pars Intermedia Dysfunction.” Veterinary Journal, 2018; 235:22–30.</li>
-            <li>American Association of Equine Practitioners. “PPID (Equine Cushing&apos;s Disease)” owner resources. aaep.org.</li>
-          </ol>
+          <div id="references">
+            <ArticleSourcesList
+              title="References"
+              sources={[
+              { label: "Equine Endocrinology Group. “Recommendations for the Diagnosis and Treatment of PPID,” current edition. sites.tufts.edu/equineendogroup.", url: "https://sites.tufts.edu/equineendogroup/", publisher: "Equine Endocrinology Group" },
+              { label: "McFarlane D. “Equine Pituitary Pars Intermedia Dysfunction.” Veterinary Clinics of North America: Equine Practice, 2011; 27(1):93–113.", url: "https://www.vetequine.theclinics.com/", publisher: "Veterinary Clinics of North America: Equine Practice" },
+              { label: "Ireland JL, McGowan CM. “Epidemiology of Pituitary Pars Intermedia Dysfunction.” Veterinary Journal, 2018; 235:22–30.", url: "https://www.sciencedirect.com/journal/the-veterinary-journal", publisher: "The Veterinary Journal" },
+              { label: "American Association of Equine Practitioners. “PPID (Equine Cushing's Disease)” owner resources. aaep.org.", url: "https://aaep.org/", publisher: "AAEP" },
+              ]}
+            />
+          </div>
         </div>
       </ArticleLayout>
     </>

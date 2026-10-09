@@ -215,6 +215,7 @@ export default function SymptomsHubPage() {
           <a href="https://www.avma.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">AVMA</a>,{' '}
           <a href="https://aaha.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">AAHA</a>, and{' '}
           <a href="https://www.acvim.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">ACVIM</a> guidance.
+          This page is not a veterinarian. If your pet may be in danger, contact a vet.
         </p>
       </div>
 

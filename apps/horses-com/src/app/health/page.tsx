@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, buildFAQSchema, combineSchemas, SchemaScript, CrossPortfolioCard, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, buildFAQSchema, combineSchemas, SchemaScript, CrossPortfolioCard, FAQAccordion, ArticleSourcesList, LastReviewed } from '@carloOS/ui'
 import { PremiumMasthead } from '../../components/PremiumMasthead'
 
 export const metadata: Metadata = buildMetadata({
@@ -279,9 +279,15 @@ export default function HealthHubPage() {
 
       {/* Content */}
       <div className="px-container-sm sm:px-container py-12">
-        <p className="text-sm text-brand-text-light mb-10 max-w-2xl">These pages are reference material — a supplement to, not a substitute for, qualified
+        <p className="text-sm text-brand-text-light mb-6 max-w-2xl">These pages are reference material — a supplement to, not a substitute for, qualified
           equine veterinary care. Contact your veterinarian immediately if your horse shows acute
           colic signs or rapid clinical deterioration</p>
+        <LastReviewed date="2026-10-09" />
+        <ArticleSourcesList
+          sources={[
+            { label: 'American Association of Equine Practitioners owner resources', url: 'https://aaep.org/', publisher: 'AAEP' },
+          ]}
+        />
 
         {/* Direct-answer / TL;DR block — extractable summary for search + AI surfaces */}
         <div className="max-w-3xl mb-12 rounded-xl border border-brand-border bg-brand-surface p-6 sm:p-8">

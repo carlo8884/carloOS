@@ -172,6 +172,7 @@ export default function IsThisACatEmergencyPage() {
           <p className="text-lg text-white/55 leading-relaxed max-w-2xl">
             Check the feline signs you are seeing and get a conservative urgency read — go now, same-day vet, or
             monitor closely — using emergency-vs-wait criteria from veterinary emergency medicine.
+            This page is not a veterinarian. If your cat may be in danger, contact a vet.
             This tool helps you decide how urgently to seek care. It does not diagnose your cat.
           </p>
         </div>

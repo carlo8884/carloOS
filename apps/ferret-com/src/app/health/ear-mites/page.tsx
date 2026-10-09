@@ -12,6 +12,7 @@ import {
   CrossPortfolioCard,
   ArticleSourcesList,
   ShopCtas,
+  LastReviewed,
 } from '@carloOS/ui'
 
 const SOURCES = [
@@ -167,6 +168,7 @@ export default function FerretEarMitesPage() {
             publishedAt="2026-06-01"
             updatedAt="2026-06-01"
           />
+          <LastReviewed date="2026-10-09" />
 
           <DropCap>
             A ferret that suddenly starts shaking its head, scratching at its

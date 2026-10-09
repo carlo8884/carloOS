@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas, ArticleSourcesList, LastReviewed } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -126,6 +126,7 @@ export default function EMSPage() {
             updatedAt="2026-09-06"
             reviewedBy="Editorial team"
           />
+          <LastReviewed date="2026-10-09" />
 
           <h2 id="what">What Is EMS</h2>
           <p>Equine metabolic syndrome describes a horse with insulin dysregulation and an elevated risk of laminitis, frequently in combination with generalized obesity or localized fat deposits over the crest of the neck, the tailhead, behind the shoulder, and around the sheath or mammary region. The syndrome was formalized in the early 2000s and refined by the Equine Endocrinology Group, which publishes the consensus diagnostic and management guidance veterinarians follow.</p>
@@ -243,13 +244,17 @@ export default function EMSPage() {
           <h2 id="faq">Frequently Asked Questions</h2>
           <FAQAccordion items={FAQS} />
 
-          <h2 id="references">References</h2>
-          <ol className="text-sm text-brand-text-mid">
-            <li>Equine Endocrinology Group. “Recommendations for the Diagnosis and Management of Equine Metabolic Syndrome,” current edition. sites.tufts.edu/equineendogroup.</li>
-            <li>Frank N, Geor RJ, Bailey SR, Durham AE, Johnson PJ. “Equine Metabolic Syndrome.” Journal of Veterinary Internal Medicine, 2010; 24(3):467–475.</li>
-            <li>Durham AE, Frank N, McGowan CM, et al. “ECEIM Consensus Statement on Equine Metabolic Syndrome.” Journal of Veterinary Internal Medicine, 2019; 33(2):335–349.</li>
-            <li>American Association of Equine Practitioners. “Equine Metabolic Syndrome” owner resources. aaep.org.</li>
-          </ol>
+          <div id="references">
+            <ArticleSourcesList
+              title="References"
+              sources={[
+              { label: "Equine Endocrinology Group. “Recommendations for the Diagnosis and Management of Equine Metabolic Syndrome,” current edition. sites.tufts.edu/equineendogroup.", url: "https://sites.tufts.edu/equineendogroup/", publisher: "Equine Endocrinology Group" },
+              { label: "Frank N, Geor RJ, Bailey SR, Durham AE, Johnson PJ. “Equine Metabolic Syndrome.” Journal of Veterinary Internal Medicine, 2010; 24(3):467–475.", url: "https://onlinelibrary.wiley.com/journal/19391676", publisher: "Journal of Veterinary Internal Medicine" },
+              { label: "Durham AE, Frank N, McGowan CM, et al. “ECEIM Consensus Statement on Equine Metabolic Syndrome.” Journal of Veterinary Internal Medicine, 2019; 33(2):335–349.", url: "https://onlinelibrary.wiley.com/journal/19391676", publisher: "Journal of Veterinary Internal Medicine" },
+              { label: "American Association of Equine Practitioners. “Equine Metabolic Syndrome” owner resources. aaep.org.", url: "https://aaep.org/", publisher: "AAEP" },
+              ]}
+            />
+          </div>
         </div>
       </ArticleLayout>
     </>

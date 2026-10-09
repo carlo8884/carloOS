@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas, PrimaryHop } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas, PrimaryHop, ArticleSourcesList, LastReviewed } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -131,6 +131,7 @@ export default function ChokePage() {
             updatedAt="2026-09-05"
             reviewedBy="Editorial team"
           />
+          <LastReviewed date="2026-10-09" />
 
           <h2 id="what">What Choke Is</h2>
           <p>In horses, choke means an obstruction of the esophagus -- the muscular tube carrying food from the throat to the stomach -- not of the windpipe. Because the airway is usually unaffected, a choking horse can typically still breathe, which distinguishes it from human choking. The obstruction prevents the horse from swallowing, so saliva and feed back up and may spill out of the nose and mouth.</p>
@@ -226,12 +227,16 @@ export default function ChokePage() {
           <h2 id="faq">Frequently Asked Questions</h2>
           <FAQAccordion items={FAQS} />
 
-          <h2 id="references">References</h2>
-          <ol className="text-sm text-brand-text-mid">
-            <li>Feige K, Schwarzwald C, Furst A, Kaser-Hotz B. “Esophageal Obstruction in Horses.” Equine Veterinary Education and related reviews.</li>
-            <li>Reed SM, Bayly WM, Sellon DC. Equine Internal Medicine, 4th ed., Elsevier, 2018 (esophageal disease).</li>
-            <li>American Association of Equine Practitioners. “Choke in Horses” owner resources. aaep.org.</li>
-          </ol>
+          <div id="references">
+            <ArticleSourcesList
+              title="References"
+              sources={[
+              { label: "Feige K, Schwarzwald C, Furst A, Kaser-Hotz B. “Esophageal Obstruction in Horses.” Equine Veterinary Education and related reviews.", url: "https://beva.onlinelibrary.wiley.com/journal/20423292", publisher: "Equine Veterinary Education" },
+              { label: "Reed SM, Bayly WM, Sellon DC. Equine Internal Medicine, 4th ed., Elsevier, 2018 (esophageal disease).", url: "https://www.elsevier.com/", publisher: "Elsevier" },
+              { label: "American Association of Equine Practitioners. “Choke in Horses” owner resources. aaep.org.", url: "https://aaep.org/", publisher: "AAEP" },
+              ]}
+            />
+          </div>
         </div>
       </ArticleLayout>
     </>

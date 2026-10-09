@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { Playfair_Display, Source_Sans_3 } from 'next/font/google'
-import { Nav, Footer, buildMetadata, DisplayAds, Ga4Loader, AffiliateClickListener, JourneyEvents } from '@carloOS/ui'
+import { Nav, Footer, buildMetadata, buildOrganizationSchema, SchemaScript, DisplayAds, Ga4Loader, AffiliateClickListener, JourneyEvents } from '@carloOS/ui'
 import { displayAds } from '../data/display-ads'
 import { HomeEmailCapture } from '../components/HomeEmailCapture'
 import { EmailCaptureGate } from '../components/EmailCaptureGate'
@@ -43,6 +43,12 @@ export const metadata: Metadata = buildMetadata({
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
 
+const organizationSchema = buildOrganizationSchema({
+  siteId: 'horses-com',
+  name: 'Horses.com',
+  url: 'https://horses.com/',
+})
+
 // ─── Layout ─────────────────────────────────────────────────────────────────
 
 export default function RootLayout({
@@ -56,6 +62,7 @@ export default function RootLayout({
       className={`${playfair.variable} ${sourceSans.variable} font-vars`}
     >
       <body>
+        <SchemaScript schema={organizationSchema} />
         <Ga4Loader measurementId={GA_ID} customMap />
         <AffiliateClickListener site="horses-com" />
         <JourneyEvents site="horses-com" />

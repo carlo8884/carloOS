@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas, PrimaryHop } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas, PrimaryHop, ArticleSourcesList, LastReviewed } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -145,6 +145,7 @@ export default function LaminitisPage() {
             updatedAt="2026-09-05"
             reviewedBy="Editorial team"
           />
+          <LastReviewed date="2026-10-09" />
 
           <div className="bg-brand-primary-pale border-l-4 border-brand-primary rounded-r-xl p-5 not-prose my-6">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">The Short Answer</div>
@@ -268,15 +269,19 @@ export default function LaminitisPage() {
           <h2 id="faq">Frequently Asked Questions</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
 
-          <h2 id="references">References</h2>
-          <ol className="text-sm text-brand-text-mid">
-            <li>Equine Endocrinology Group. &ldquo;Recommendations for the Diagnosis and Management of Equine Metabolic Syndrome and PPID,&rdquo; current edition. sites.tufts.edu/equineendogroup.</li>
-            <li>de Laat MA, McGowan CM, Sillence MN, Pollitt CC. &ldquo;Equine Laminitis: Induced by 48 h Hyperinsulinaemia in Standardbred Horses.&rdquo; <em>Equine Veterinary Journal</em>, 2010; 42(2):129&ndash;135.</li>
-            <li>Patterson-Kane JC, Karikoski NP, McGowan CM. &ldquo;Paradigm Shifts in Understanding Equine Laminitis.&rdquo; <em>Veterinary Journal</em>, 2018; 231:33&ndash;40.</li>
-            <li>Obel N. <em>Studies on the Histopathology of Acute Laminitis.</em> Almqvist and Wiksells, 1948.</li>
-            <li>American Association of Equine Practitioners. &ldquo;Laminitis: Prevention and Treatment&rdquo; owner resources. aaep.org.</li>
-            <li>van Eps AW, Pollitt CC. &ldquo;Equine Laminitis Model: Cryotherapy Reduces the Severity of Lesions.&rdquo; <em>Equine Veterinary Journal</em>, 2009; 41(8):741&ndash;746.</li>
-          </ol>
+          <div id="references">
+            <ArticleSourcesList
+              title="References"
+              sources={[
+              { label: "Equine Endocrinology Group. \"Recommendations for the Diagnosis and Management of Equine Metabolic Syndrome and PPID,\" current edition. sites.tufts.edu/equineendogroup.", url: "https://sites.tufts.edu/equineendogroup/", publisher: "Equine Endocrinology Group" },
+              { label: "de Laat MA, McGowan CM, Sillence MN, Pollitt CC. \"Equine Laminitis: Induced by 48 h Hyperinsulinaemia in Standardbred Horses.\" Equine Veterinary Journal, 2010; 42(2):129–135.", url: "https://beva.onlinelibrary.wiley.com/journal/20423306", publisher: "Equine Veterinary Journal" },
+              { label: "Patterson-Kane JC, Karikoski NP, McGowan CM. \"Paradigm Shifts in Understanding Equine Laminitis.\" Veterinary Journal, 2018; 231:33–40.", url: "https://www.sciencedirect.com/journal/the-veterinary-journal", publisher: "The Veterinary Journal" },
+              { label: "Obel N. Studies on the Histopathology of Acute Laminitis. Almqvist and Wiksells, 1948." },
+              { label: "American Association of Equine Practitioners. \"Laminitis: Prevention and Treatment\" owner resources. aaep.org.", url: "https://aaep.org/", publisher: "AAEP" },
+              { label: "van Eps AW, Pollitt CC. \"Equine Laminitis Model: Cryotherapy Reduces the Severity of Lesions.\" Equine Veterinary Journal, 2009; 41(8):741–746.", url: "https://beva.onlinelibrary.wiley.com/journal/20423306", publisher: "Equine Veterinary Journal" },
+              ]}
+            />
+          </div>
         </div>
       </ArticleLayout>
     </>

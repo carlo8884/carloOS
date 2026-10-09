@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas, ArticleSourcesList, LastReviewed } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -119,6 +119,7 @@ export default function EquineInfluenzaPage() {
             updatedAt="2026-09-06"
             reviewedBy="Editorial team"
           />
+          <LastReviewed date="2026-10-09" />
 
           <h2 id="what">What Is Equine Influenza</h2>
           <p>Equine influenza is caused by influenza A virus subtypes adapted to horses, principally the H3N8 lineage. The virus infects and damages the lining of the respiratory tract, stripping the protective cilia and leaving the airway vulnerable to secondary bacterial infection. It is endemic in many horse populations worldwide and is a notifiable concern in regions that are normally free of it, where an incursion can shut down equine movement entirely.</p>
@@ -213,12 +214,16 @@ export default function EquineInfluenzaPage() {
           <h2 id="faq">Frequently Asked Questions</h2>
           <FAQAccordion items={FAQS} />
 
-          <h2 id="references">References</h2>
-          <ol className="text-sm text-brand-text-mid">
-            <li>Cullinane A, Newton JR. “Equine Influenza — A Global Perspective.” Veterinary Microbiology, 2013; 167(1–2):205–214.</li>
-            <li>Daly JM, et al. “Equine Influenza: A Review.” Equine Veterinary Journal and related reviews.</li>
-            <li>American Association of Equine Practitioners. “Equine Influenza Vaccination Guidelines” (risk-based vaccine). aaep.org.</li>
-          </ol>
+          <div id="references">
+            <ArticleSourcesList
+              title="References"
+              sources={[
+              { label: "Cullinane A, Newton JR. “Equine Influenza — A Global Perspective.” Veterinary Microbiology, 2013; 167(1–2):205–214.", url: "https://www.sciencedirect.com/journal/veterinary-microbiology", publisher: "Veterinary Microbiology" },
+              { label: "Daly JM, et al. “Equine Influenza: A Review.” Equine Veterinary Journal and related reviews.", url: "https://beva.onlinelibrary.wiley.com/journal/20423306", publisher: "Equine Veterinary Journal" },
+              { label: "American Association of Equine Practitioners. “Equine Influenza Vaccination Guidelines” (risk-based vaccine). aaep.org.", url: "https://aaep.org/", publisher: "AAEP" },
+              ]}
+            />
+          </div>
         </div>
       </ArticleLayout>
     </>

@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas, ArticleSourcesList, LastReviewed } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -125,6 +125,7 @@ export default function TyingUpPage() {
             updatedAt="2026-09-06"
             reviewedBy="Editorial team"
           />
+          <LastReviewed date="2026-10-09" />
 
           <h2 id="what">What Is Tying-Up</h2>
           <p>Tying-up is the breakdown of skeletal muscle (rhabdomyolysis) in connection with exercise. Damaged muscle cells release their contents -- including the enzyme creatine kinase and the protein myoglobin -- into the bloodstream. The horse experiences cramping, stiffness, and pain, classically over the large muscles of the hindquarters and back. In severe episodes, myoglobin can overload and injure the kidneys, turning the urine dark.</p>
@@ -233,13 +234,17 @@ export default function TyingUpPage() {
           <h2 id="faq">Frequently Asked Questions</h2>
           <FAQAccordion items={FAQS} />
 
-          <h2 id="references">References</h2>
-          <ol className="text-sm text-brand-text-mid">
-            <li>Valberg SJ. “Exertional Rhabdomyolysis in the Horse.” Veterinary Clinics of North America: Equine Practice and related reviews.</li>
-            <li>MacLeay JM, et al. “Recurrent Exertional Rhabdomyolysis in Thoroughbred Racehorses.” American Journal of Veterinary Research.</li>
-            <li>McCue ME, Valberg SJ, et al. “Glycogen Synthase (GYS1) Mutation and PSSM.” Genomics, 2008; 91(5):458–466.</li>
-            <li>American Association of Equine Practitioners. “Tying-Up / Exertional Rhabdomyolysis” owner resources. aaep.org.</li>
-          </ol>
+          <div id="references">
+            <ArticleSourcesList
+              title="References"
+              sources={[
+              { label: "Valberg SJ. “Exertional Rhabdomyolysis in the Horse.” Veterinary Clinics of North America: Equine Practice and related reviews.", url: "https://www.vetequine.theclinics.com/", publisher: "Veterinary Clinics of North America: Equine Practice" },
+              { label: "MacLeay JM, et al. “Recurrent Exertional Rhabdomyolysis in Thoroughbred Racehorses.” American Journal of Veterinary Research.", url: "https://avmajournals.avma.org/view/journals/ajvr/ajvr-overview.xml", publisher: "American Journal of Veterinary Research" },
+              { label: "McCue ME, Valberg SJ, et al. “Glycogen Synthase (GYS1) Mutation and PSSM.” Genomics, 2008; 91(5):458–466.", url: "https://www.sciencedirect.com/journal/genomics", publisher: "Genomics" },
+              { label: "American Association of Equine Practitioners. “Tying-Up / Exertional Rhabdomyolysis” owner resources. aaep.org.", url: "https://aaep.org/", publisher: "AAEP" },
+              ]}
+            />
+          </div>
         </div>
       </ArticleLayout>
     </>

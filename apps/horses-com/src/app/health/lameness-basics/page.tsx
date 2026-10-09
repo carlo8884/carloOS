@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas, ArticleSourcesList, LastReviewed } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -119,6 +119,7 @@ export default function LamenessBasicsPage() {
             updatedAt="2026-09-06"
             reviewedBy="Editorial team"
           />
+          <LastReviewed date="2026-10-09" />
           <div className="mb-8">
             <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
               Keep these on hand: a cotton lunge line so subtle lameness shows on a consistent circle, a leather chain lead shank so the in-hand trot-up stays on one steady line, and orange traffic cones so that line is marked on firm ground instead of guessed across a yard. Educational spot-and-describe checklist, not a treatment, not a diagnosis, not a substitute for calling the veterinarian.
@@ -236,12 +237,16 @@ export default function LamenessBasicsPage() {
           <h2 id="faq">Frequently Asked Questions</h2>
           <FAQAccordion items={FAQS} />
 
-          <h2 id="references">References</h2>
-          <ol className="text-sm text-brand-text-mid">
-            <li>American Association of Equine Practitioners. “Lameness Examination and Grading Scale” resources. aaep.org.</li>
-            <li>Ross MW, Dyson SJ (eds). Diagnosis and Management of Lameness in the Horse, 2nd ed., Elsevier, 2011.</li>
-            <li>Baxter GM (ed). Adams and Stashak&apos;s Lameness in Horses, 7th ed., Wiley-Blackwell, 2020.</li>
-          </ol>
+          <div id="references">
+            <ArticleSourcesList
+              title="References"
+              sources={[
+              { label: "American Association of Equine Practitioners. “Lameness Examination and Grading Scale” resources. aaep.org.", url: "https://aaep.org/", publisher: "AAEP" },
+              { label: "Ross MW, Dyson SJ (eds). Diagnosis and Management of Lameness in the Horse, 2nd ed., Elsevier, 2011.", url: "https://www.elsevier.com/", publisher: "Elsevier" },
+              { label: "Baxter GM (ed). Adams and Stashak's Lameness in Horses, 7th ed., Wiley-Blackwell, 2020.", url: "https://www.wiley.com/", publisher: "Wiley" },
+              ]}
+            />
+          </div>
         </div>
       </ArticleLayout>
     </>

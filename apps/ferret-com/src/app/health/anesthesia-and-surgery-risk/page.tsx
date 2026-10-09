@@ -10,6 +10,7 @@ import {
   DropCap,
   CrossPortfolioCard,
   ArticleSourcesList,
+  LastReviewed,
 } from '@carloOS/ui'
 
 const SOURCES = [
@@ -166,6 +167,7 @@ export default function FerretAnesthesiaRiskPage() {
             publishedAt="2026-06-01"
             updatedAt="2026-06-01"
           />
+          <LastReviewed date="2026-10-09" />
 
           <DropCap>
             Sooner or later most ferrets face anesthesia — for a dental

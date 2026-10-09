@@ -13,6 +13,7 @@ import {
   ArticleSourcesList,
   ShopCtas,
   CrossSiteHelp,
+  LastReviewed,
 } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 
@@ -181,6 +182,7 @@ export default function FerretVetVisitPrepPage() {
             updatedAt="2026-05-29"
             reviewedBy="Editorial team"
           />
+          <LastReviewed date="2026-10-09" />
 
           <DropCap>
             The single highest-leverage decision in ferret veterinary care

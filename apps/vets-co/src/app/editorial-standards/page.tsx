@@ -47,6 +47,7 @@ export default function EditorialStandardsPage() {
           <li><strong>Current guidance.</strong> Where consensus has updated (vaccine intervals, spay/neuter timing for large breeds, NSAID monitoring), we follow current professional guidance rather than the older version.</li>
           <li><strong>We say when evidence is thin.</strong> Plenty of veterinary topics are still under-studied or contested. Where the field is split, we say so.</li>
           <li><strong>Honest scope.</strong> We don&apos;t claim a medical-review process we don&apos;t run. Articles are written by the editorial team and grounded in cited sources, not signed off by a licensed clinician for individual animals.</li>
+          <li><strong>Prices are dated.</strong> A price on a money page carries the date it was checked. There is no veterinarian reviewer. Pages are researched from the cited veterinary sources and are not a substitute for a veterinarian.</li>
         </ul>
 
         <h2>Affiliate Independence</h2>
