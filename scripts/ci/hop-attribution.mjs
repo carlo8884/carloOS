@@ -87,13 +87,18 @@ for (const site of SITES) {
 
 const listener = readFileSync(join(ROOT, 'packages/ui/src/components/AffiliateClickListener.tsx'), 'utf8')
 if (!/trackEvent\(\s*'affiliate_click'/.test(listener)) hits.push('AffiliateClickListener does not fire affiliate_click')
-for (const field of ['site:', 'page:', 'source:', 'partner:', 'vendor:', 'product:', 'placement:']) {
+for (const field of ['site:', 'page:', 'source:', 'partner:', 'vendor:', 'product:', 'placement:', 'slot:', 'destination_type:', 'destination:']) {
   if (!listener.includes(field)) hits.push(`AffiliateClickListener event is missing ${field}`)
 }
+if (!listener.includes('search-recovery')) hits.push('AffiliateClickListener does not slot empty-search suggestions')
+if (!listener.includes('now - lastAt < 1200')) hits.push('AffiliateClickListener does not collapse a double click')
 
 const clickLib = readFileSync(join(ROOT, 'packages/ui/src/lib/affiliate-click.ts'), 'utf8')
 if (!/vendor:\s*partner/.test(clickLib)) hits.push('affiliate click payload does not send vendor')
 if (!/'ep\.vendor':\s*fields\.partner/.test(clickLib)) hits.push('email /go collect does not send ep.vendor')
+if (!/'ep\.slot':\s*'email landing'/.test(clickLib)) hits.push('email /go collect does not send ep.slot')
+if (!/'ep\.destination_type':/.test(clickLib)) hits.push('email /go collect does not send ep.destination_type')
+if (!/'ep\.destination':/.test(clickLib)) hits.push('email /go collect does not send ep.destination')
 
 const resolver = readFileSync(join(ROOT, 'packages/config/affiliate-hop.ts'), 'utf8')
 if (!/split\('PLACEHOLDER'\)\.join\(tag\)/.test(resolver)) {
