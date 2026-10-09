@@ -193,7 +193,7 @@ export default function CorydorasPage() {
           />
         <StockImage manifestKey="fish-com:species-corydoras" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A corydoras catfish in a home aquarium." priority />
 
-          <CalloutBox variant="note" title="TL;DR">
+          <CalloutBox variant="note" title="In short">
             Corydoras catfish are peaceful South American bottom-dwellers
             that require three things to thrive: smooth sand substrate
             (sharp gravel damages their sensory barbels), a school of at

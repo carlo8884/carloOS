@@ -178,12 +178,7 @@ export default function MultiLevelHousingPage() {
 
           <h2 id="kit">Vertical-Housing Kit</h2>
           <p>
-            Everyday physical supplies that match the ramp-safety and door-security
-            copy above — fleece ramp covers for traction, PVC sheet as a hard
-            ramp liner, cable ties to pin both ends of a ramp, and locking
-            carabiners so a ferret cannot work a cam-latch. These are not a
-            treatment for a fracture and not a diagnosis. This page does not
-            claim hands-on testing. </p>
+            Keep these on hand: fleece ramp covers for traction, PVC sheet as a hard ramp liner, cable ties to pin both ends of a ramp, and locking carabiners so a ferret cannot work a cam-latch. These are not a treatment for a fracture and not a diagnosis. </p>
 
           <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/fleece+ramp+cover?s=care-multi-level-housing", "/go/amazon-brand/pvc+sheet?s=care-multi-level-housing", "/go/amazon-brand/cable+ties?s=care-multi-level-housing", "/go/amazon-brand/locking+carabiner?s=care-multi-level-housing"]} />
 

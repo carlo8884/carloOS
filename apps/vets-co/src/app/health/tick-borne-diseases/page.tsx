@@ -61,9 +61,8 @@ export default function TickBornePage() {
           <p>The annual heartworm test (4Dx SNAP) also detects antibodies for Lyme, Anaplasma, and Ehrlichia — three tick-borne diseases in a single test with the heartworm antigen test. This is one of the primary reasons the 4Dx is standard of care rather than a simple heartworm test — it provides meaningful surveillance for tick-borne disease simultaneously. A positive result on the 4Dx does not automatically mean treatment is needed — many seropositive dogs have been exposed but not clinically affected. A positive 4Dx in a dog with clinical signs is a significant finding warranting treatment. A positive 4Dx in a completely healthy dog warrants a urine protein:creatinine ratio (to screen for Lyme nephritis) and a full workup conversation with your veterinarian about whether treatment is indicated.</p>
           
 
-          <h2 id="kit">Dog tick-check kit</h2>
-          
-
+          <h2 id="kit">Supplies named on this page</h2>
+          <p>Keep these on hand: tick removal hook, fine tooth flea comb, and dog flea and tick. They are not a treatment and they do not replace a veterinarian.</p>
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/tick+removal+hook?s=health-tick-borne-diseases", "/go/amazon-brand/fine+tooth+flea+comb?s=health-tick-borne-diseases", "/go/amazon-brand/dog+flea+and+tick?s=health-tick-borne-diseases"]} />
 
           {/* Money path — live amazon-brand search hops

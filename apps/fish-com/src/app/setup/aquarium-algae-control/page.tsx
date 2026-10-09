@@ -56,7 +56,7 @@ export default function AlgaeControlPage() {
 
         <h2>The Treatment Playbook</h2>
         <p>Start with the universal fixes that help every algae type: cut the photoperiod to 6 to 8 hours on a timer, keep light off direct sunlight, increase water-change frequency to export excess nutrients, improve flow so no dead spots accumulate detritus, and feed less. For black beard algae and persistent spot algae, dosing liquid carbon (such as glutaraldehyde-based products) directly onto the affected areas with the filter briefly off can spot-treat it, but use caution as some plants and invertebrates are sensitive. For diatoms and green dust in a new tank, patience plus regular maintenance is usually all that is required.</p>
-        <p>Manual removal is the physical half of that playbook — it clears the bloom you can see while the levers catch up. An aquarium magnetic scraper wipes green-spot dots and green-dust film off the viewing panes without putting a hand in the tank. A handheld aquarium algae scraper reaches the plant leaves, hardscape tufts, and corners a magnet cannot press against. Neither tool replaces a shorter photoperiod or a water change, and neither is a first-tank filter, heater, or test kit. Filters, heaters, dechlorinator, test kits, gravel vacuums, aquasoil, Seiryu stone, spiderwood, light timers, root tabs, pressurized CO2, and Flourish Excel already live on the <a href="/setup">setup hub</a>, the <a href="/setup/aquascaping-guide">aquascaping guide</a>, the <a href="/setup/low-tech-planted-tank">low-tech planted tank guide</a>, and the CO2 calculator, and stay off this kit. This page does not hop algaecides, erythromycin, or any medication.</p>
+        <p>Manual removal is the physical half of that playbook — it clears the bloom you can see while the levers catch up. An aquarium magnetic scraper wipes green-spot dots and green-dust film off the viewing panes without putting a hand in the tank. A handheld aquarium algae scraper reaches the plant leaves, hardscape tufts, and corners a magnet cannot press against. Neither tool replaces a shorter photoperiod or a water change, and neither is a first-tank filter, heater, or test kit. <a href="/setup">setup hub</a>, the <a href="/setup/aquascaping-guide">aquascaping guide</a>, the <a href="/setup/low-tech-planted-tank">low-tech planted tank guide</a>, and the CO2 calculator, and stay off this kit.</p>
         <JourneyNext
           siteId="fish-com"
           nextHref="/tools/water-change-calculator"
@@ -73,7 +73,7 @@ export default function AlgaeControlPage() {
         <p>The tanks that stay algae-free long term share a few traits: a consistent, modest photoperiod on a timer; healthy, actively growing plants that monopolize nutrients; regular water changes that prevent nutrient accumulation; and restrained feeding. Establish those routines and algae becomes a minor, occasional nuisance rather than a recurring battle. Test nitrate and phosphate periodically — both unusually high and unusually low readings can drive specific algae types, and balance is the goal.</p>
 
         <h2 id="kit">Algae-control scraper kit</h2>
-        <p>Everyday physical supplies that match the glass-cleaning copy above — an aquarium magnetic scraper for the viewing panes, plus a handheld aquarium algae scraper for plant leaves and hardscape the magnet cannot reach. These are maintenance tools, not a ranked product list and not a first-tank filter / heater / test-kit order. Filters, heaters, digital thermometers, Seachem Prime, API Master Test Kit, gravel vacuums, aquasoil, Seiryu stone, spiderwood driftwood, light timers, root tabs, pressurized CO2 gear, and Flourish Excel stay off this kit — those already ship on the setup hub, equipment hub, aquascaping guide, low-tech planted tank guide, and CO2 calculator. This page does not claim hands-on testing.</p>
+        <p>Keep these on hand: an aquarium magnetic scraper for the viewing panes, plus a handheld aquarium algae scraper for plant leaves and hardscape the magnet cannot reach. These are maintenance tools, not a ranked product list and not a first-tank filter / heater / test-kit order. Filters, heaters, digital thermometers, Seachem Prime, API Master Test Kit, gravel vacuums, aquasoil, Seiryu stone, spiderwood driftwood, light timers, root tabs, pressurized CO2 gear, and Flourish Excel stay off this kit — those already ship on the setup hub, equipment hub, aquascaping guide, low-tech planted tank guide, and CO2 calculator.</p>
 
         <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/aquarium+magnetic+scraper?s=setup-aquarium-algae-control", "/go/amazon-brand/handheld+aquarium+algae+scraper?s=setup-aquarium-algae-control"]} />
 
@@ -84,18 +84,10 @@ export default function AlgaeControlPage() {
             first-tank filter / heater / test-kit / hardscape / CO2 hops. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-            Shop the algae-control scraper kit
+            Shop these supplies
           </div>
           <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-            These Amazon category searches match the on-page
-            glass-cleaning copy — an aquarium magnetic scraper and a
-            handheld aquarium algae scraper. Everyday physical
-            maintenance tools only. They are not a ranked product
-            list, they are not a first-tank filter or heater, they
-            are not a test kit or a gravel vacuum, they are not
-            aquasoil, Seiryu stone, spiderwood, a light timer, root
-            tabs, or pressurized CO2, and they do not replace fixing
-            the light / nutrient / CO2 imbalance.
+            Keep these on hand: an aquarium magnetic scraper and a handheld aquarium algae scraper. Everyday physical maintenance tools only. They are not a ranked product list, they are not a first-tank filter or heater, they are not a test kit or a gravel vacuum, they are not aquasoil, Seiryu stone, spiderwood, a light timer, root tabs, or pressurized CO2, and they do not replace fixing the light / nutrient / CO2 imbalance.
           </p>
           <div className="flex flex-col gap-3">
             <ShopCtas

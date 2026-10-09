@@ -71,7 +71,7 @@ export default function FlukesPage() {
         <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/api+freshwater+master+test+kit?s=health-gill-flukes", "/go/amazon-brand/aquarium+quarantine+hospital+tank+net?s=health-gill-flukes", "/go/amazon-brand/aquarium+sponge+filter?s=health-gill-flukes"]} />
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
-            Shop a quarantine / water-first kit
+            Shop these supplies
           </div>
           <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Prevention on this page is prophylactic treatment during
             quarantine of every new fish — flukes are microscopic and often

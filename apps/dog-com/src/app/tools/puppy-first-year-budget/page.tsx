@@ -179,7 +179,7 @@ export default function PuppyFirstYearBudgetPage() {
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/wire+dog+crate+with+divider+panel?s=tools-puppy-first-year-budget", "/go/amazon-brand/puppy+food?s=tools-puppy-first-year-budget", "/go/amazon-brand/digital+gram+scale+kitchen+pet?s=tools-puppy-first-year-budget", "/go/amazon-brand/puppy+training+pads?s=tools-puppy-first-year-budget"]} />
           <div className="mt-4 rounded-xl border border-brand-border bg-brand-white p-5">
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Shop a first-year puppy kit
+              Shop these supplies
             </div>
             <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">

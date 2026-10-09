@@ -115,7 +115,7 @@ export default function HoofPickingPage() {
           <p>A simple hoof pick, ideally one with a stiff brush on the back to sweep the cleaned sole. That is all -- the value is in doing it consistently and thoroughly, not in fancy equipment. A safe, level place to work and a horse that has been taught to lift its feet make the job quick and safe.</p>
 
           <h2 id="kit">Hoof-Picking Kit</h2>
-          <p>Everyday physical supplies that match the tools described above — a simple hoof pick, and a pick with a stiff brush on the back. These are not treatments for thrush, abscess, or any medical condition; heat, a foul smell, a lodged puncture, or sudden refusal to pick up a foot belongs with your veterinarian or farrier, not a pick. This page does not claim hands-on testing.</p>
+          <p>Everyday physical supplies that match the tools described above — a simple hoof pick, and a pick with a stiff brush on the back. These are not treatments for thrush, abscess, or any medical condition; heat, a foul smell, a lodged puncture, or sudden refusal to pick up a foot belongs with your veterinarian or farrier, not a pick.</p>
 
           <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/horse+hoof+pick?s=care-hoof-picking", "/go/amazon-brand/horse+hoof+pick+brush?s=care-hoof-picking"]} />
 

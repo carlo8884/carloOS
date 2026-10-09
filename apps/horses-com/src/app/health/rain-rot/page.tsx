@@ -138,34 +138,15 @@ export default function RainRotPage() {
 
           <h2 id="prevention">Prevention</h2>
           <ul>
-            <li><strong>Provide shelter</strong> so horses can get out of prolonged rain. A portable 3-sided horse run-in shelter is how that rain has a dry wall to stand behind instead of a soaked topline — it is not a turnout blanket (that lives on blanketing), not a waterproof sheet (that lives on blanketing), and not a paddock mud grid (that lives on mud-fever).</li>
-            <li><strong>Keep the coat clean and dry</strong> -- groom regularly, dry sweaty horses, and avoid leaving a wet horse blanketed. This page does not hop Irish-knit coolers, fleece coolers, or waffle-weave leg towels — those already live on tying-up, colic/clipping, and mud-fever.</li>
-            <li><strong>Do not share grooming tools, tack, or blankets</strong> between affected and unaffected horses. A labeled stackable horse grooming caddy is how each horse&apos;s brushes stay in one box instead of a shared tote — it is not a curry comb or dandy brush (those live on grooming) and not a color-coded bucket (that lives on strangles). A large mesh horse blanket wash bag is how an affected horse&apos;s sheet is washed apart from the rest of the barn — it is not a turnout blanket hop and not a sweet-itch rug hop.</li>
-            <li><strong>Manage insects</strong> that break the skin barrier and spread the organism. This page does not hop fly sheets, fly spray, or mosquito sheets — those already live on fly-control and West Nile.</li>
+            <li><strong>Provide shelter</strong> so horses can get out of prolonged rain. A portable 3-sided horse run-in shelter is how that rain has a dry wall to stand behind instead of a soaked topline — it is not a turnout blanket, not a waterproof sheet, and not a paddock mud grid.</li>
+            <li><strong>Keep the coat clean and dry</strong> -- groom regularly, dry sweaty horses, and avoid leaving a wet horse blanketed.</li>
+            <li><strong>Do not share grooming tools, tack, or blankets</strong> between affected and unaffected horses. A labeled stackable horse grooming caddy is how each horse&apos;s brushes stay in one box instead of a shared tote — it is not a curry comb or dandy brush and not a color-coded bucket. A large mesh horse blanket wash bag is how an affected horse&apos;s sheet is washed apart from the rest of the barn — it is not a turnout blanket hop and not a sweet-itch rug hop.</li>
+            <li><strong>Manage insects</strong> that break the skin barrier and spread the organism.</li>
           </ul>
 
-          <h2 id="kit">Keep-dry-and-unshared kit</h2>
+          <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Everyday physical supplies that match the
-            provide-shelter, do-not-share-grooming-tools,
-            and do-not-share-blankets copy on this page —
-            a portable 3-sided horse run-in shelter so
-            prolonged rain has a dry wall to stand behind,
-            a labeled stackable horse grooming caddy so
-            each horse&apos;s brushes stay in one box, and
-            a large mesh horse blanket wash bag so an
-            affected horse&apos;s sheet is washed apart from
-            the rest of the barn. These are educational
-            keep-dry-and-unshared tools, not a ranked
-            product list, not a substitute for veterinary
-            care, and not an antimicrobial shampoo or a
-            diagnosis. Paddock
-            mud grids and turnout boots already live on
-            mud-fever. Fly sheets already
-            live on fly-control. Sweet-itch rugs already
-            live on sweet-itch. Irish-knit coolers already
-            live on tying-up. This page does
-            not claim hands-on testing. </p>
+            Keep these on hand: a portable 3-sided horse run-in shelter so prolonged rain has a dry wall to stand behind, a labeled stackable horse grooming caddy so each horse&apos;s brushes stay in one box, and a large mesh horse blanket wash bag so an affected horse&apos;s sheet is washed apart from the rest of the barn. These are educational keep-dry-and-unshared tools, not a ranked product list, not a substitute for veterinary care, and not an antimicrobial shampoo or a diagnosis. </p>
 
           <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/portable+3+sided+horse+run+in+shelter?s=health-rain-rot", "/go/amazon-brand/labeled+stackable+horse+grooming+caddy?s=health-rain-rot", "/go/amazon-brand/large+mesh+horse+blanket+wash+bag?s=health-rain-rot"]} />
 

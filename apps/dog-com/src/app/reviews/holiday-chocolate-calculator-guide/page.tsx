@@ -78,7 +78,7 @@ export default function HolidayChocolateCalculatorGuidePage() {
         <h2>What a first-aid kit does not do</h2>
         <p>The calculator page sells a safety kit in words only: activated charcoal and 3 percent hydrogen peroxide are labeled vet-directed, and the page says the Amazon searches are general supplies. They are not a ranked list and they do not replace veterinary care. They do not reverse chocolate poisoning. The link on this page is the pet first-aid kit search from the calculator page. Charcoal, peroxide, the toxin kit, and the recovery crate stay on the calculator.</p>
         <HopDisclosure siteId="dog-com" href="/go/amazon-brand/pet+first+aid+kit+dog?s=reviews-holiday-chocolate-calculator-guide" />
-        <p>Shop the kit only after you have called a veterinarian or poison control about an actual ingestion.</p>
+        <p>Shop these supplies</p>
         <p><a className="font-semibold text-brand-primary" href="/go/amazon-brand/pet+first+aid+kit+dog?s=reviews-holiday-chocolate-calculator-guide">Browse pet first-aid kits on Amazon →</a></p>
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
@@ -94,7 +94,7 @@ export default function HolidayChocolateCalculatorGuidePage() {
             'Enter type, amount, and body weight in the calculator.',
             'Do not treat a round number on this guide as a clearance to wait.',
             'They do not reverse chocolate poisoning.',
-            'Shop the kit only after you have called a veterinarian or poison control about an actual ingestion.',
+            'Shop these supplies',
             'Browse pet first-aid kits on Amazon',
           ]}
         />

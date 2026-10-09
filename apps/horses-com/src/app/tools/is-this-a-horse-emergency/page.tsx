@@ -234,7 +234,7 @@ export default function IsThisAHorseEmergencyPage() {
           <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/equine+first+aid+kit?s=tools-is-this-a-horse-emergency", "/go/amazon-brand/digital+veterinary+thermometer?s=tools-is-this-a-horse-emergency", "/go/amazon-brand/vet+wrap+bandage?s=tools-is-this-a-horse-emergency", "/go/amazon-brand/poultice?s=tools-is-this-a-horse-emergency", "/go/amazon-brand/horse+electrolytes?s=tools-is-this-a-horse-emergency"]} />
           <div className="mt-4 rounded-xl border border-brand-border bg-brand-white p-5">
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Shop an equine emergency-prep kit
+              Shop these supplies
             </div>
             <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
@@ -338,7 +338,7 @@ export default function IsThisAHorseEmergencyPage() {
               href="/ownership/first-aid-kit"
               className="text-brand-primary underline-offset-2 hover:underline"
             >
-              equine first-aid kit
+              Supplies named on this page
             </Link>
             . To line up emergency cover before a crisis, use{' '}
             <Link href="/ownership/choosing-a-vet" className="text-brand-primary underline-offset-2 hover:underline">

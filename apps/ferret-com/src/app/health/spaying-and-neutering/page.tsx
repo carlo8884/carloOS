@@ -129,7 +129,7 @@ export default function FerretSpayNeuterPage() {
           <>
             <TableOfContents
               items={[
-                { label: 'TL;DR', href: '#tldr' },
+                { label: '', href: '#tldr' },
                 { label: 'Estrogen Toxicity', href: '#estrogen' },
                 { label: 'The Early-Spay Debate', href: '#early' },
                 { label: 'Neutering Males', href: '#males' },
@@ -175,8 +175,7 @@ export default function FerretSpayNeuterPage() {
             whole conversation about desexing ferrets.
           </DropCap>
 
-          <h2 id="tldr">TL;DR</h2>
-          <p>
+                    <p>
             Female ferrets (jills) are induced ovulators who remain in heat
             until bred. Prolonged heat floods the body with estrogen, which
             suppresses the bone marrow and causes a life-threatening aplastic

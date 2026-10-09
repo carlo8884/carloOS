@@ -143,7 +143,7 @@ export default function DogSpayNeuterTimingPage() {
             reviewedBy="Editorial team"
           />
 
-          <CalloutBox variant="evidence" title="TL;DR — The current consensus">
+          <CalloutBox variant="evidence" title="The current consensus">
             <p>
               <strong>Old advice:</strong> spay/neuter at 6 months — universal.
             </p>
@@ -333,23 +333,7 @@ export default function DogSpayNeuterTimingPage() {
 
           <h2 id="kit">A Simple Intact-Dog Management Kit</h2>
           <p>
-            Three everyday physical supplies match the
-            delayed-timing lifestyle copy above: washable
-            dog heat pants so the bloody phase of a heat
-            cycle does not soak furniture, a male dog
-            belly band that contains indoor marking while
-            you keep working the outdoor toilet plan, and
-            a heavy-duty dog exercise pen when the yard
-            is not fully fenced. These are household
-            management tools, not treatments. They do not
-            prevent pregnancy, they do not replace a
-            locked gate or a veterinary timing
-            conversation, they are not a recovery cone or
-            surgical recovery suit, and they are not a
-            crate, GPS collar, or first-aid kit. This
-            page does not hop recovery cones, crates,
-            baby gates, or medications. This page does
-            not claim hands-on testing.
+            Keep these on hand: washable dog heat pants, male dog belly band, and heavy duty dog exercise pen. These are household management tools, not treatments. They do not prevent pregnancy, they do not replace a locked gate or a veterinary timing conversation, they are not a recovery cone or surgical recovery suit, and they are not a crate, GPS collar, or first-aid kit.
           </p>
 
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/washable+dog+heat+pants?s=guides-dog-spay-neuter-timing", "/go/amazon-brand/male+dog+belly+band?s=guides-dog-spay-neuter-timing", "/go/amazon-brand/heavy+duty+dog+exercise+pen?s=guides-dog-spay-neuter-timing"]} />

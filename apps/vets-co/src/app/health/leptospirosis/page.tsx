@@ -45,7 +45,7 @@ export default function LeptospirosisPage() {
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-06-07T00:00:00Z" reviewedBy="Editorial team" />
 
           <h2>Transmission and Geographic Risk</h2>
-          <DropCap>Leptospira bacteria survive in warm, moist environments — standing water, muddy soil, and waterways contaminated with infected wildlife urine. Dogs are exposed through: contact with contaminated water (drinking from puddles, swimming in ponds or streams), contact with infected urine directly, or contact with contaminated soil. The bacteria enter through mucous membranes, skin abrasions, or the GI tract. Lepto is not only a rural problem — urban and suburban dogs encounter raccoons, opossums, and rodents that shed Leptospira in their urine in parks, yards, and storm drainage systems. A 24-ounce stainless hiking dog bottle is how a walk becomes a carried sip instead of a puddle gulp — it is not a wide-rim stainless cat water bowl (that lives on kidney-disease-cats), not an insulated pet water bowl (that lives on diabetes), not a kitchen liquid measuring pitcher (that lives on dehydration), and not a ferret water bottle (that lives on ferret travel). A 32-gallon locking animal-proof trash can is how curb overnight leftovers stop inviting raccoon and rodent traffic into the same yard the dog uses — it is not a locking kitchen trash can (that lives on dog.com pancreatitis).</DropCap>
+          <DropCap>Leptospira bacteria survive in warm, moist environments — standing water, muddy soil, and waterways contaminated with infected wildlife urine. Dogs are exposed through: contact with contaminated water (drinking from puddles, swimming in ponds or streams), contact with infected urine directly, or contact with contaminated soil. The bacteria enter through mucous membranes, skin abrasions, or the GI tract. Lepto is not only a rural problem — urban and suburban dogs encounter raccoons, opossums, and rodents that shed Leptospira in their urine in parks, yards, and storm drainage systems. A 24-ounce stainless hiking dog bottle is how a walk becomes a carried sip instead of a puddle gulp — it is not a wide-rim stainless cat water bowl, not an insulated pet water bowl, not a kitchen liquid measuring pitcher, and not a ferret water bottle. A 32-gallon locking animal-proof trash can is how curb overnight leftovers stop inviting raccoon and rodent traffic into the same yard the dog uses — it is not a locking kitchen trash can.</DropCap>
 
           <CalloutBox variant="warning" title="Zoonotic — call the vet today">
             A dog with sudden vomiting, lethargy, marked thirst, and reluctance to move after recent water or wildlife exposure may have leptospirosis. Lepto is transmissible to people through infected urine — call the veterinarian the same day and wear powder-free nitrile exam gloves when cleaning up urine until the dog is evaluated. A hiking bottle, exam gloves, and an animal-proof trash can do not diagnose leptospirosis and they do not replace that same-day call.
@@ -58,7 +58,7 @@ export default function LeptospirosisPage() {
           <p>Subclinical infection — dog is infected but shows no signs, clears the infection and develops antibody titers — is more common than is often appreciated. These dogs may shed Leptospira in their urine during the infection period, posing zoonotic risk to household members.</p>
 
           <h2>Zoonotic Risk — Protect Your Family</h2>
-          <p>Leptospirosis is one of the most widespread zoonotic diseases in the world. A dog diagnosed with leptospirosis is shedding Leptospira in its urine for weeks during and after illness — human household members can be infected through contact with contaminated urine. This is why veterinary teams handling lepto cases use significant personal protective equipment and why dog owners of infected animals should: wear powder-free nitrile exam gloves when handling the dog or cleaning up urine, avoid contact with the dog&apos;s urine, wash hands thoroughly, and inform healthcare providers if they develop flu-like symptoms after exposure. Powder-free nitrile exam gloves are how a urine wipe stays a gloved wipe — they are not disposable nitrile gloves (those live on ferret cage-cleaning) and they are not a silicone cat grooming glove (that lives on hyperthyroidism-cats). Gloves do not treat leptospirosis and they do not replace the veterinarian.</p>
+          <p>Leptospirosis is one of the most widespread zoonotic diseases in the world. A dog diagnosed with leptospirosis is shedding Leptospira in its urine for weeks during and after illness — human household members can be infected through contact with contaminated urine. This is why veterinary teams handling lepto cases use significant personal protective equipment and why dog owners of infected animals should: wear powder-free nitrile exam gloves when handling the dog or cleaning up urine, avoid contact with the dog&apos;s urine, wash hands thoroughly, and inform healthcare providers if they develop flu-like symptoms after exposure. Powder-free nitrile exam gloves are how a urine wipe stays a gloved wipe — they are not disposable nitrile gloves and they are not a silicone cat grooming glove. Gloves do not treat leptospirosis and they do not replace the veterinarian.</p>
 
           <h2>Treatment</h2>
           <p>Leptospirosis is bacterial and responds to antibiotics — specifically doxycycline (first-line; clears the renal carrier state) or ampicillin/amoxicillin in severely ill animals where GI absorption may be compromised. Hospitalization for IV fluid support of kidney and liver function is critical for moderate-to-severe cases — the bacterial septicemia is manageable but the organ damage requires supportive care. Prognosis: good for mild cases caught early; guarded for cases presenting in renal failure with anuric kidney injury.</p>
@@ -66,28 +66,9 @@ export default function LeptospirosisPage() {
           <h2>Vaccination</h2>
           <p>The leptospirosis vaccine is a non-core vaccine — recommended based on lifestyle risk rather than universally. Dogs with outdoor access, dogs in endemic areas, dogs that swim in natural water, hunting dogs, and dogs in suburban areas with wildlife exposure should receive the vaccine. The current 4-serovar vaccine (L4) covers the four most clinically prevalent serovars (Canicola, Icterohaemorrhagiae, Grippotyphosa, Pomona). Boosted annually as immunity wanes faster than core vaccines. A booster 2-4 weeks after initial vaccination is required for puppies and dogs receiving the vaccine for the first time. Nobivac, L4, doxycycline, and ampicillin are clinic prescriptions and hospital treatments, not shoppable hops. The hiking bottle, exam gloves, and animal-proof trash can are household outdoor-risk tools. They do not replace the veterinarian who chooses the protocol.</p>
 
-          <h2 id="kit">Home-care kit</h2>
+          <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Everyday physical supplies that match the
-            puddle-drinking, urine-cleanup, and suburban
-            wildlife-attractant copy on this page — a
-            24-ounce stainless hiking dog bottle so a
-            walk is a carried sip instead of a puddle
-            gulp, powder-free nitrile exam gloves so
-            cleaning infected urine is a gloved wipe,
-            and a 32-gallon locking animal-proof trash
-            can so raccoon and rodent traffic is not
-            invited to overnight at the curb. These are
-            educational outdoor / water / wildlife-exposure
-            tools, not a ranked product list, not a
-            substitute for veterinary care, and not a
-            treatment for leptospirosis. Nobivac, L4,
-            doxycycline, and ampicillin are clinic
-            prescriptions, not shoppable hops. Heavy-gauge 48-inch dog crates already live
-            on heartworm-in-dogs. Small digital kitchen
-            food scales already live on
-            hyperthyroidism-cats. This
-            page does not claim hands-on testing. </p>
+            Keep these on hand: a 24-ounce stainless hiking dog bottle so a walk is a carried sip instead of a puddle gulp, powder-free nitrile exam gloves so cleaning infected urine is a gloved wipe, and a 32-gallon locking animal-proof trash can so raccoon and rodent traffic is not invited to overnight at the curb. These are educational outdoor / water / wildlife-exposure tools, not a ranked product list, not a substitute for veterinary care, and not a treatment for leptospirosis. Nobivac, L4, doxycycline, and ampicillin are clinic prescriptions, not shoppable hops. </p>
 
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/24+ounce+stainless+hiking+dog+bottle?s=health-leptospirosis", "/go/amazon-brand/powder+free+nitrile+exam+gloves?s=health-leptospirosis", "/go/amazon-brand/32+gallon+locking+animal+proof+trash+can?s=health-leptospirosis"]} />
 

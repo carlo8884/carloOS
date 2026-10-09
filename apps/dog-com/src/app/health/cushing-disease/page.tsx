@@ -81,29 +81,7 @@ export default function CushingDiseasePage() {
 
           <h2 id="kit">A Simple Cushing&apos;s Thirst-and-Comfort Kit</h2>
           <p>
-            Three everyday physical supplies match the
-            thirst, nighttime-urination, and panting copy
-            above: a gallon gravity dog waterer so a dog
-            with polyuria/polydipsia (drinking and
-            urinating dramatically more, sometimes
-            needing to go outside multiple times at
-            night) has a refill that lasts overnight, extra-large
-            disposable dog pee pads so those nighttime
-            trips have an indoor backup when the door
-            cannot open fast enough, and a dog cooling
-            bandana so excessive panting has a physical
-            cool-down layer instead of a cooling mat or
-            cooling vest already used on other pages. These are household comfort and monitoring
-            tools, not treatments. They do not diagnose
-            Cushing&apos;s, they do not replace UCCR / LDDS
-            / ACTH stimulation testing, they do not set
-            or adjust a trilostane dose, they do not
-            replace 10–14-day and every-3-month ACTH
-            monitoring, and they are not Vetoryl,
-            Lysodren, mitotane, prednisone, insulin, or
-            a ranked endocrine product list. This
-            page does not hop medications. This page
-            does not claim hands-on testing. </p>
+            Keep these on hand: gallon gravity dog waterer, extra large disposable dog pee pads, and dog cooling bandana. These are household comfort and monitoring tools, not treatments. They do not diagnose Cushing&apos;s, they do not replace UCCR / LDDS / ACTH stimulation testing, they do not set or adjust a trilostane dose, they do not replace 10–14-day and every-3-month ACTH monitoring, and they are not Vetoryl, Lysodren, mitotane, prednisone, insulin, or a ranked endocrine product list. </p>
 
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/gallon+gravity+dog+waterer?s=health-cushing-disease", "/go/amazon-brand/extra+large+disposable+dog+pee+pads?s=health-cushing-disease", "/go/amazon-brand/dog+cooling+bandana?s=health-cushing-disease"]} />
 

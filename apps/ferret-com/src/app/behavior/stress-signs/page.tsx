@@ -301,7 +301,7 @@ export default function FerretStressSignsPage() {
 
           <h2 id="supplies">Comfort and Enrichment Supplies</h2>
           <p>
-            Environmental stress is often improved by providing a quiet, enclosed sleeping space and reliable enrichment. Two items that address the most common environmental causes — inadequate sleep hiding spots and under-stimulation. This is a documented-spec comparison based on published product details; this page does not claim hands-on testing.
+            Environmental stress is often improved by providing a quiet, enclosed sleeping space and reliable enrichment. Two items that address the most common environmental causes — inadequate sleep hiding spots and under-stimulation.
           </p>
           <p className="text-sm font-medium border border-amber-300 bg-amber-50 rounded p-3 my-4">
             Comfort supplies do not treat adrenal disease, insulinoma, or other medical conditions. Work with an exotic-pet veterinarian for diagnosis and treatment.

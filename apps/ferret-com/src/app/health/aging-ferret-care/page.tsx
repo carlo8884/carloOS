@@ -226,8 +226,7 @@ export default function FerretAgingPage() {
             cleanly.
           </DropCap>
 
-          <h2 id="tldr">TL;DR</h2>
-          <p>
+                    <p>
             Domestic ferrets live an average of 5-8 years. Senior care
             typically begins at age 4-5, with formal protocols by age 5.
             Disease incidence rises sharply for insulinoma, adrenal disease,
@@ -567,7 +566,7 @@ export default function FerretAgingPage() {
             </p>
           </CalloutBox>
           <p>
-            Two items that come up consistently in senior-ferret hospice and palliative-care guidance: a floor-level soft sleeping setup, and a meat-based recovery diet for ferrets who are eating less. This is a documented-spec comparison; the page does not claim hands-on testing.
+            Two items that come up consistently in senior-ferret hospice and palliative-care guidance: a floor-level soft sleeping setup, and a meat-based recovery diet for ferrets who are eating less.
           </p>
           <ReviewCard quietUntilTag
             id="floor-level-hammock"

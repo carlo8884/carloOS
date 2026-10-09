@@ -136,7 +136,7 @@ export default function FerretLymphomaPage() {
           <>
             <TableOfContents
               items={[
-                { label: 'TL;DR', href: '#tldr' },
+                { label: '', href: '#tldr' },
                 { label: 'What It Is', href: '#what' },
                 { label: 'Who Gets It', href: '#epidemiology' },
                 { label: 'Clinical Signs', href: '#signs' },
@@ -209,8 +209,7 @@ export default function FerretLymphomaPage() {
             substantially with which form the ferret has.
           </DropCap>
 
-          <h2 id="tldr">TL;DR</h2>
-          <p>
+                    <p>
             Lymphoma is among the top three ferret cancers (alongside
             insulinoma and adrenal disease). Presentations range from
             visible enlarged lymph nodes through slow weight loss to

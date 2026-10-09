@@ -138,7 +138,7 @@ export default function HorseBlanketSizeCalculatorPage() {
           <TableOfContents
             items={[
               { label: 'The calculator', href: '#calculator' },
-              { label: 'Shop a blanket-fit kit', href: '#shop' },
+              { label: 'Shop these supplies', href: '#shop' },
               { label: 'How to measure', href: '#measure' },
               { label: 'Size vs. weight', href: '#weight' },
               { label: 'FAQ', href: '#faq' },
@@ -186,7 +186,7 @@ export default function HorseBlanketSizeCalculatorPage() {
         <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/waterproof+turnout+horse+blanket+winter?s=tools-horse-blanket-size-calculator", "/go/amazon-brand/horse+turnout+sheet?s=tools-horse-blanket-size-calculator", "/go/amazon-brand/horse+stable+blanket?s=tools-horse-blanket-size-calculator", "/go/amazon-brand/horse+measuring+tape?s=tools-horse-blanket-size-calculator", "/go/amazon-brand/horse+fleece+cooler?s=tools-horse-blanket-size-calculator"]} />
         <div id="shop" className="mb-8 rounded-xl border border-brand-border bg-brand-surface p-5">
           <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Shop a blanket-fit kit
+            Shop these supplies
           </div>
           <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
           <div className="flex flex-col gap-3">

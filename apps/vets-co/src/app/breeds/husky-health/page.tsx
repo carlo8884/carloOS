@@ -137,8 +137,7 @@ export default function VetsHuskyHealthPage() {
             reviewedBy="Editorial team"
           />
 
-          <h2>TL;DR</h2>
-          <p>
+                    <p>
             The Siberian Husky is a medium (35–60 lb), athletic (12–15 year) working sled-dog breed with a
             distinctive cluster of predispositions: hereditary cataracts, progressive retinal atrophy and
             corneal dystrophy (the three classical Husky eye diseases); zinc-responsive dermatosis (a
@@ -320,33 +319,9 @@ export default function VetsHuskyHealthPage() {
             comparison: <a href="/reviews/best-pet-insurance">best pet insurance →</a>.
           </p>
 
-          <h2 id="kit">Siberian-husky-health kit</h2>
+          <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Everyday physical supplies that match the
-            ACVO, GDV, and zinc-dermatosis copy on
-            this page — an academic-year planner so
-            the annual CAER eye exam stays one dated
-            visit covering cataracts, PRA, and
-            corneal dystrophy, an 8-column columnar
-            pad so eyes, hips, thyroid, gastropexy,
-            and platelet review stay one written
-            row, and a newsprint sketch pad so
-            facial crusting sites and PRA furniture-
-            layout cues stay drawn, not guessed.
-            These are educational Siberian-husky-
-            health / paperwork tools, not a ranked
-            product list, not a substitute for
-            veterinary care, and not a treatment.
-            13-column analysis pads, desk blotter
-            pads, and numbered log books already
-            live on chihuahua-health. Two-column
-            ledger pads, 30-day habit-tracker pads,
-            and hourly desk pads already live on
-            yorkshire-terrier-health. This page does
-            not hop zinc supplements, levothyroxine,
-            harnesses, or insurance brands as Amazon
-            searches. This page does not claim
-            hands-on testing.
+            Keep these on hand: an academic-year planner so the annual CAER eye exam stays one dated visit covering cataracts, PRA, and corneal dystrophy, an 8-column columnar pad so eyes, hips, thyroid, gastropexy, and platelet review stay one written row, and a newsprint sketch pad so facial crusting sites and PRA furniture- layout cues stay drawn, not guessed. These are educational Siberian-husky- health / paperwork tools, not a ranked product list, not a substitute for veterinary care, and not a treatment.
           </p>
 
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/academic+year+planner?s=breeds-husky-health", "/go/amazon-brand/8+column+columnar+pad?s=breeds-husky-health", "/go/amazon-brand/newsprint+sketch+pad?s=breeds-husky-health"]} />

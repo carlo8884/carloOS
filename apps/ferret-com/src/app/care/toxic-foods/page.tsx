@@ -132,7 +132,7 @@ export default function FerretToxicFoodsPage() {
           <>
             <TableOfContents
               items={[
-                { label: 'TL;DR', href: '#tldr' },
+                { label: '', href: '#tldr' },
                 { label: 'The Top-Tier Toxic Foods', href: '#toptier' },
                 { label: 'Foods to Avoid as Treats', href: '#avoid' },
                 { label: 'Household Toxins', href: '#household' },
@@ -191,8 +191,7 @@ export default function FerretToxicFoodsPage() {
             crisis.
           </DropCap>
 
-          <h2 id="tldr">TL;DR</h2>
-          <p>
+                    <p>
             Top-tier toxic: chocolate, xylitol, onions/garlic,
             grapes/raisins. Common avoid-as-treats: sugary fruits,
             dairy, peanut butter (xylitol risk), bread and grain

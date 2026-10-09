@@ -226,7 +226,7 @@ export default function IsThisADogEmergencyPage() {
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/pet+first+aid+kit?s=tools-is-this-a-dog-emergency", "/go/amazon-brand/digital+pet+thermometer?s=tools-is-this-a-dog-emergency", "/go/amazon-brand/soft+dog+carrier?s=tools-is-this-a-dog-emergency", "/go/amazon-brand/styptic+powder?s=tools-is-this-a-dog-emergency", "/go/amazon-brand/tick+remover?s=tools-is-this-a-dog-emergency"]} />
           <div className="mt-4 rounded-xl border border-brand-border bg-brand-white p-5">
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Shop a dog emergency-prep kit
+              Shop these supplies
             </div>
             <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">

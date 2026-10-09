@@ -119,7 +119,7 @@ export default function SeniorFeedingPage() {
           <p>Dental wear is the single biggest feeding change in old age. Worn, loose, or missing teeth make a horse unable to chew long-stem hay effectively, leading to quidding (dropping balls of half-chewed hay), weight loss, and choke risk from poorly chewed feed. Regular dental care helps, but eventually many seniors cannot manage hay and need forage in a form they can process. Watching for quidding and weight loss is the cue to adapt the forage. If the horse can still eat long-stem hay, the <a href="/tools/horse-feed-calculator">daily feed calculator</a> estimates that forage from bodyweight. Soaked cubes and mashes change the form, not the need for a weighed target.</p>
 
           <h2 id="feeds">Senior Feeds and Hay Replacers</h2>
-          <p>Senior horses that cannot chew hay well can be maintained on soaked, easily chewed forage and complete senior feeds. Soaked hay cubes, chopped forage, soaked beet pulp, and complete senior feeds (designed to be the whole ration, including forage replacement) provide digestible fiber the horse can manage. These are usually fed soaked into a mash for horses with poor teeth, in several small meals a day. The goal is to keep fiber intake high in a chewable form. Horse chopped forage is that chewable hay-replacer fiber — it is not a dental-page hay-cube hop and not a beet-pulp shred or pellet hop (those live on the beet-pulp page). A horse feed soaking tub is how cubes and complete senior feed sit in water until they become a mash a poor-toothed horse can eat — it is not a lidded 5-gallon feed-soaking pail (that lives on the choke page), not stackable rubber feed tubs (those live on the grain page), and not a hay soaking bag (that lives on heaves).</p>
+          <p>Senior horses that cannot chew hay well can be maintained on soaked, easily chewed forage and complete senior feeds. Soaked hay cubes, chopped forage, soaked beet pulp, and complete senior feeds (designed to be the whole ration, including forage replacement) provide digestible fiber the horse can manage. These are usually fed soaked into a mash for horses with poor teeth, in several small meals a day. The goal is to keep fiber intake high in a chewable form. Horse chopped forage is that chewable hay-replacer fiber — it is not a dental-page hay-cube hop and not a beet-pulp shred or pellet hop. A horse feed soaking tub is how cubes and complete senior feed sit in water until they become a mash a poor-toothed horse can eat — it is not a lidded 5-gallon feed-soaking pail, not stackable rubber feed tubs, and not a hay soaking bag.</p>
 
           <h2 id="protein">Protein and Condition</h2>
           <p>Older horses often need good-quality, digestible protein to maintain muscle and topline, which can decline with age, and the senior feeds designed for them reflect this. Loss of topline and a pot-bellied, sway-backed look can reflect age, reduced protein efficiency, or PPID. Maintaining condition in a thin senior means combining digestible fiber calories, adequate quality protein, and treatment of any underlying disease rather than simply adding starch.</p>
@@ -129,8 +129,8 @@ export default function SeniorFeedingPage() {
 
           <h2 id="practical">Practical Feeding</h2>
           <ul>
-            <li><strong>Feed several small meals</strong> a day, soaked for horses with poor teeth. A horse feed soaking tub is the barn tub those soaked meals are prepared in — it is not a wide-mouth mixing bucket (that lives on the salt page).</li>
-            <li><strong>Feed separately</strong> so a slow-eating senior is not bullied off its food by younger herdmates. A horse corner feeder is that separate stall station — it is not a wall-mounted hay rack (that lives on forage-basics), not a slow-feeder hay net (that lives on the forage ReviewCard), and not an equine slow-feeder hay box (that lives on turnout).</li>
+            <li><strong>Feed several small meals</strong> a day, soaked for horses with poor teeth. A horse feed soaking tub is the barn tub those soaked meals are prepared in — it is not a wide-mouth mixing bucket.</li>
+            <li><strong>Feed separately</strong> so a slow-eating senior is not bullied off its food by younger herdmates. A horse corner feeder is that separate stall station — it is not a wall-mounted hay rack, not a slow-feeder hay net, and not an equine slow-feeder hay box.</li>
             <li><strong>Keep dental care current</strong> and watch for quidding as a sign to change the forage.</li>
             <li><strong>Provide free-choice water and salt</strong> and ensure the senior is drinking, as dehydration risk rises with age.</li>
             <li><strong>Monitor condition closely</strong> with body condition scoring, since a thick or PPID coat hides weight change.</li>
@@ -138,27 +138,7 @@ export default function SeniorFeedingPage() {
 
           <h2 id="kit">Senior feeding supplies</h2>
           <p>
-            Everyday physical supplies that match the
-            chewable-forage, soak-into-a-mash, and
-            feed-separately copy on this page — horse
-            chopped forage so a senior that cannot chew
-            long-stem hay still gets digestible fiber,
-            a horse feed soaking tub so cubes and
-            complete senior feed soak into a mash for
-            poor teeth, and a horse corner feeder so a
-            slow-eating senior is not bullied off its
-            meal. These are educational barn searches,
-            not a ranked product list, not a substitute
-            for veterinary care, and not a dental
-            hay-cube / mash hop (those live on equine
-            dental care), a beet-pulp hop (that lives
-            on the beet-pulp page), a lidded 5-gallon
-            soaking-pail hop (that lives on choke), a
-            stackable feed-tub hop (that lives on
-            grain), or a slow-feeder hay-net hop (that
-            lives on forage-basics). This page does
-            not hop medications or vaccines. This
-            page does not claim hands-on testing.
+            Keep these on hand: horse chopped forage so a senior that cannot chew long-stem hay still gets digestible fiber, a horse feed soaking tub so cubes and complete senior feed soak into a mash for poor teeth, and a horse corner feeder so a slow-eating senior is not bullied off its meal.
           </p>
 
           <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/horse+chopped+forage?s=nutrition-feeding-senior-horses", "/go/amazon-brand/horse+feed+soaking+tub?s=nutrition-feeding-senior-horses", "/go/amazon-brand/horse+corner+feeder?s=nutrition-feeding-senior-horses", "/go/amazon-brand/complete+senior+horse+feed+soakable?s=nutrition-senior-horses", "/go/amazon-brand/horse+topline+amino+acid+supplement+lysine?s=nutrition-senior-horses"]} />
@@ -185,7 +165,7 @@ export default function SeniorFeedingPage() {
           </div>
 
           <h2 id="picks">Product Picks — General Nutrition Supports for Senior Horses</h2>
-          <p>A few widely-available general nutrition options for aging horses: a complete senior feed and a topline/condition supplement. These support the feeding approach described above and are not treatments for PPID, dental disease, or any diagnosed condition. For PPID horses, coordinate with your veterinarian before selecting a senior feed, as some are not low-NSC. This is a documented-spec comparison drawing on standard US equestrian retail; this page does not claim hands-on testing. <a href="/reviews/best-equine-supplements">The equine supplement guide</a> compares that topline supplement.</p>
+          <p>A few widely-available general nutrition options for aging horses: a complete senior feed and a topline/condition supplement. These support the feeding approach described above and are not treatments for PPID, dental disease, or any diagnosed condition. For PPID horses, coordinate with your veterinarian before selecting a senior feed, as some are not low-NSC. <a href="/reviews/best-equine-supplements">The equine supplement guide</a> compares that topline supplement.</p>
 
 
           <ReviewCard

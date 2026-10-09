@@ -146,7 +146,7 @@ export default function ThrushPage() {
           </ul>
 
           <h2 id="kit">Hygiene kit</h2>
-          <p>Everyday physical supplies that match the daily-picking, groove-prep, and dry-stall copy on this page — a folding pocket equine hoof pick so packed manure comes out of the sulci before it seals them from air, a topical equine thrush antiseptic so the cleaned grooves get the barn-shelf prep the label directs, and equine stall sweet lime so wet stalls dry instead of staying urine-soaked. These are household barn tools, not treatments. They do not diagnose or treat thrush, they do not replace a veterinarian or a farrier, and they are not a ranked product list. This page does not claim hands-on testing.</p>
+          <p>Keep these on hand: a folding pocket equine hoof pick so packed manure comes out of the sulci before it seals them from air, a topical equine thrush antiseptic so the cleaned grooves get the barn-shelf prep the label directs, and equine stall sweet lime so wet stalls dry instead of staying urine-soaked. These are household barn tools, not treatments. They do not diagnose or treat thrush, they do not replace a veterinarian or a farrier, and they are not a ranked product list.</p>
 
           <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/topical+equine+thrush+antiseptic?s=health-thrush", "/go/amazon-brand/folding+pocket+equine+hoof+pick?s=health-thrush", "/go/amazon-brand/equine+stall+sweet+lime?s=health-thrush"]} />
 

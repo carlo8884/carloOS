@@ -363,7 +363,6 @@ export default async function DiseaseTemplatePage({ params }: PageProps) {
 
             {/* TL;DR */}
             <section className="bg-brand-surface border-l-4 border-brand-primary rounded-r-lg p-5 mb-8 not-prose">
-              <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">TL;DR</div>
               <p className="text-sm text-brand-text-mid leading-relaxed mb-0">{tldr}</p>
             </section>
 

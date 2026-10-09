@@ -229,7 +229,7 @@ export default function TriageHelper() {
             </Link>
             <p className="mt-3 text-sm">
               <Link href="/guides/dog-first-aid-kit" className="font-semibold text-brand-primary underline">
-                See what belongs in a dog first-aid kit
+                Supplies named on this page
               </Link>
             </p>
 

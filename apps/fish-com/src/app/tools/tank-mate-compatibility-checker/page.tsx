@@ -159,7 +159,7 @@ export default function TankMateCompatibilityPage() {
           <TableOfContents
             items={[
               { label: 'The checker', href: '#checker' },
-              { label: 'Shop a pairing kit', href: '#shop' },
+              { label: 'Shop these supplies', href: '#shop' },
               { label: 'Quick answer', href: '#answer' },
               { label: 'Common pairings', href: '#pairings' },
               { label: 'How compatibility is judged', href: '#methodology' },
@@ -227,7 +227,7 @@ export default function TankMateCompatibilityPage() {
         <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/aquarium+quarantine+hospital+tank?s=tools-tank-mate-compatibility", "/go/amazon-brand/aquarium+tank+divider?s=tools-tank-mate-compatibility", "/go/amazon-brand/aquarium+decorations+caves+hiding+spots?s=tools-tank-mate-compatibility", "/go/amazon-brand/tropical+community+fish+food?s=tools-tank-mate-compatibility", "/go/amazon-brand/api+freshwater+master+test+kit?s=tools-tank-mate-compatibility", "/go/amazon-brand/aquarium+fish+net+acclimation+kit?s=tools-tank-mate-compatibility"]} />
         <div id="shop" className="mb-8 rounded-xl border border-brand-border bg-brand-surface p-5">
           <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Shop a pairing kit
+            Shop these supplies
           </div>
           <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
             Test the water before you add a new fish. If a pairing lands on Caution or Not

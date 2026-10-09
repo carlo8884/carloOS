@@ -308,7 +308,7 @@ export default function FerretDIYEnrichmentPage() {
 
           <h2 id="picks">Ready-Made Picks</h2>
           <p>
-            Most enrichment is best built at home, but the two items below are worth buying: ferret-specific tunnels that fit the body diameter correctly, and a snuffle mat for foraging. This is a documented-spec comparison based on published product details and keeper community use patterns; this page does not claim hands-on testing.
+            Most enrichment is best built at home, but the two items below are worth buying: ferret-specific tunnels that fit the body diameter correctly, and a snuffle mat for foraging.
           </p>
           <p className="mb-4 text-sm font-semibold leading-snug">
             <Link href="/care/exercise-and-enrichment" className="inline-block max-w-full whitespace-normal text-brand-primary underline underline-offset-2">

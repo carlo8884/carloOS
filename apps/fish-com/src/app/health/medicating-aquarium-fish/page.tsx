@@ -69,7 +69,7 @@ export default function MedicatingFishPage() {
         <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/api+freshwater+master+test+kit?s=health-medicating-fish", "/go/amazon-brand/aquarium+quarantine+hospital+tank+net?s=health-medicating-fish", "/go/amazon-brand/aquarium+sponge+filter?s=health-medicating-fish", "/go/amazon-brand/eheim+jager+heater?s=health-medicating-fish"]} />
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
-            Shop a hospital-tank dosing kit
+            Shop these supplies
           </div>
           <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Medication is last, not first. A liquid master kit is how you
             see ammonia, nitrite, and nitrate before any dose — strips are

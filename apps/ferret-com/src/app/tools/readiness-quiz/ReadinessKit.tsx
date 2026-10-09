@@ -95,7 +95,7 @@ export default function ReadinessKit() {
   return (
     <div className="rounded-lg border border-brand-border bg-brand-surface p-6 sm:p-8">
       <div className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-        New-owner kit
+        Supplies named on this page
       </div>
       <h3 className="font-display text-xl font-bold text-brand-dark mb-2">
         Pack before a ferret comes home

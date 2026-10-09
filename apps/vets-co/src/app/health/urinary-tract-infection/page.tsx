@@ -59,20 +59,7 @@ export default function UTIPage() {
 
           <h2 id="kit">Home hydration and accident kit</h2>
           <p>
-            Everyday physical supplies that match the house-accident and
-            hydration copy on this page — a stainless-steel dog fountain so
-            running water invites more drinking, washable pee pads for the
-            accidents a previously reliable dog may have while straining and
-            urgent, and a weighted ceramic water bowl that does not tip when
-            the dog returns to the bowl often. Extra water stations sit beside
-            the fountain; they are not a second shop hop. These are household
-            tools, not treatments. They do not treat a UTI, they do not replace
-            a veterinarian or a urine culture, and they are not antibiotics,
-            prescription urinary diets (Hill&rsquo;s c/d, Royal Canin Urinary SO,
-            and the like), cranberry products, or clinic culture kits. This is
-            not the sister FLUTD page and it does not hop a cat water fountain,
-            extra cat litter boxes, or canned wet cat food. This page does not
-            claim hands-on testing.
+            Keep these on hand: a stainless-steel dog fountain so running water invites more drinking, washable pee pads for the accidents a previously reliable dog may have while straining and urgent, and a weighted ceramic water bowl that does not tip when the dog returns to the bowl often. Extra water stations sit beside the fountain; they are not a second shop hop. These are household tools, not treatments. They do not treat a UTI, they do not replace a veterinarian or a urine culture, and they are not antibiotics, prescription urinary diets (Hill&rsquo;s c/d, Royal Canin Urinary SO, and the like), cranberry products, or clinic culture kits.
           </p>
 
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/stainless+steel+dog+fountain?s=health-urinary-tract-infection", "/go/amazon-brand/washable+dog+pee+pads?s=health-urinary-tract-infection", "/go/amazon-brand/weighted+ceramic+dog+water+bowl?s=health-urinary-tract-infection"]} />

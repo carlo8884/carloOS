@@ -116,7 +116,7 @@ export default function HardKeeperPage() {
           <p>A horse that will not hold weight despite good feeding usually has an underlying reason, and piling on grain without finding it wastes money and can do harm. Common culprits include dental problems that prevent proper chewing, a heavy parasite burden, gastric ulcers, PPID and other endocrine disease, chronic pain, and competition from herdmates at feeding time. A veterinary workup -- including a dental exam, fecal egg count, and consideration of ulcers and PPID -- should come before simply increasing the ration.</p>
 
           <h2 id="forage">Maximize Forage</h2>
-          <p>Forage should still do the heavy lifting. Offer free-choice, good-quality, leafy hay -- the more a horse will eat, the more calories from the safest source. The <a href="/tools/horse-feed-calculator">daily feed calculator</a> estimates that forage target from bodyweight before fat or beet pulp is added. Higher-energy or part-legume hay (such as alfalfa mix) raises the calorie density of the forage itself. For horses that physically cannot eat enough long-stem hay, chopped forage, soaked hay cubes, and high-fiber complete feeds extend forage intake. Horse alfalfa cubes are that higher-energy cube form of the part-legume forage already named — they are not alfalfa hay bales (that lives on hay-types), not chopped forage (that lives on feeding-senior-horses), and not generic hay cubes (those live on equine-dental-care).</p>
+          <p>Forage should still do the heavy lifting. Offer free-choice, good-quality, leafy hay -- the more a horse will eat, the more calories from the safest source. The <a href="/tools/horse-feed-calculator">daily feed calculator</a> estimates that forage target from bodyweight before fat or beet pulp is added. Higher-energy or part-legume hay (such as alfalfa mix) raises the calorie density of the forage itself. For horses that physically cannot eat enough long-stem hay, chopped forage, soaked hay cubes, and high-fiber complete feeds extend forage intake. Horse alfalfa cubes are that higher-energy cube form of the part-legume forage already named — they are not alfalfa hay bales, not chopped forage, and not generic hay cubes.</p>
 
           <h2 id="calories">Add Calories Safely</h2>
           <p>When forage alone cannot maintain condition, add calories in a way that respects the equine gut. The safest dense energy comes from fat and highly digestible fiber rather than large grain meals, which risk hindgut upset, ulcers, and excitability. If grain or a concentrate is used, feed it in small, frequent meals rather than a few large ones. The mantra is to add energy without adding starch.</p>
@@ -125,13 +125,13 @@ export default function HardKeeperPage() {
           <ul>
             <li><strong>Vegetable oil and stabilized rice bran</strong> -- concentrated, slow-burning calories that are cool (non-heating) and easy on the gut, introduced gradually.</li>
             <li><strong>Beet pulp</strong> -- a soaked super-fiber that adds digestible-fiber calories without much sugar or starch; see the beet pulp guide.</li>
-            <li><strong>Soya hulls and other high-fiber feeds</strong> as additional fermentable-fiber energy. Soy hull pellets are that fermentable-fiber calorie add — they are not horse feed-grade vegetable oil (that lives on feeding-the-performance-horse), not the stabilized-rice-bran ReviewCard below, and not beet pulp (that lives on the beet-pulp leftover).</li>
+            <li><strong>Soya hulls and other high-fiber feeds</strong> as additional fermentable-fiber energy. Soy hull pellets are that fermentable-fiber calorie add — they are not horse feed-grade vegetable oil, not the stabilized-rice-bran ReviewCard below, and not beet pulp.</li>
             <li><strong>High-fat, low-starch performance feeds</strong> formulated for weight gain without the risks of high grain.</li>
           </ul>
 
           <h2 id="management">Feeding Management</h2>
           <ul>
-            <li><strong>Feed separately</strong> so a timid horse is not driven off its food by herdmates. An over-door horse feed bucket hangs in the stall so that small meal is eaten away from the herd — it is not a corner feeder (that lives on feeding-senior-horses), not stackable rubber feed tubs (those live on grain), and not a marked grain scoop (that lives on feeding-the-performance-horse).</li>
+            <li><strong>Feed separately</strong> so a timid horse is not driven off its food by herdmates. An over-door horse feed bucket hangs in the stall so that small meal is eaten away from the herd — it is not a corner feeder, not stackable rubber feed tubs, and not a marked grain scoop.</li>
             <li><strong>Split meals</strong> into several small feeds a day rather than one or two large ones. The same over-door bucket is hung at each small feeding so concentrate stays split instead of dumped in one trough.</li>
             <li><strong>Make changes gradually</strong> over a week or more to protect the hindgut microbes.</li>
             <li><strong>Treat ulcers and dental issues</strong> as found, since these often unlock weight gain on their own.</li>
@@ -143,31 +143,7 @@ export default function HardKeeperPage() {
 
           <h2 id="kit">Hard-keeper feeding supplies</h2>
           <p>
-            Everyday physical supplies that match the
-            maximize-forage, add-calories-safely with
-            fat-and-fiber, and
-            feed-separately-plus-split-meals copy on
-            this page — horse alfalfa cubes so
-            free-choice forage calories rise through a
-            higher-energy cube the horse can eat when
-            long-stem hay is not enough, soy hull
-            pellets so fermentable-fiber calories are
-            added without a starch spike, and an
-            over-door horse feed bucket so a timid
-            horse eats each small meal in its stall
-            away from herdmates. These are educational
-            barn searches, not a ranked product list,
-            not a substitute for veterinary care, and
-            not an alfalfa-hay-bales hop (that lives
-            on hay-types), a chopped-forage hop (that
-            lives on feeding-senior-horses), a
-            vegetable-oil hop (that lives on
-            feeding-the-performance-horse), a
-            corner-feeder hop (that lives on
-            feeding-senior-horses), or the rice-bran /
-            high-fat-low-starch-feed ReviewCards
-            below. This page does not claim
-            hands-on testing. </p>
+            Keep these on hand: horse alfalfa cubes so free-choice forage calories rise through a higher-energy cube the horse can eat when long-stem hay is not enough, soy hull pellets so fermentable-fiber calories are added without a starch spike, and an over-door horse feed bucket so a timid horse eats each small meal in its stall away from herdmates. </p>
 
           <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/horse+alfalfa+cubes?s=nutrition-feeding-the-hard-keeper", "/go/amazon-brand/soy+hull+pellets+horse+feed?s=nutrition-feeding-the-hard-keeper", "/go/amazon-brand/over+door+horse+feed+bucket?s=nutrition-feeding-the-hard-keeper"]} />
 
@@ -193,7 +169,7 @@ export default function HardKeeperPage() {
           </div>
 
           <h2 id="picks">Product Picks — Calorie Supports for Hard Keepers</h2>
-          <p>A few widely-available feed supplements for horses needing safe extra calories. These are general nutrition supports -- fat and fiber sources to add condition without high-starch risk. Always build a complete feeding plan with your veterinarian or an equine nutritionist. This is a documented-spec comparison drawing on standard US equestrian retail; this page does not claim hands-on testing. <a href="/reviews/best-equine-supplements">The equine supplement guide</a> compares those calorie supports.</p>
+          <p>A few widely-available feed supplements for horses needing safe extra calories. These are general nutrition supports -- fat and fiber sources to add condition without high-starch risk. Always build a complete feeding plan with your veterinarian or an equine nutritionist. <a href="/reviews/best-equine-supplements">The equine supplement guide</a> compares those calorie supports.</p>
 
           <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/stabilized+rice+bran+horse+supplement?s=nutrition-hard-keeper", "/go/amazon-brand/high+fat+low+starch+horse+feed?s=nutrition-hard-keeper"]} />
 

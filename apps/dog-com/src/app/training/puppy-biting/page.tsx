@@ -81,7 +81,7 @@ export default function PuppyBitingPage() {
         <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/kong+classic+dog+toy+stuffable?s=training-puppy-biting", "/go/amazon-brand/puppy+chew+toys?s=training-puppy-biting", "/go/amazon-brand/puppy+teething+toys?s=training-puppy-biting", "/go/amazon-brand/bitter+apple+spray+dog?s=training-puppy-biting"]} />
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
-            Shop a nipping kit
+            Shop these supplies
           </div>
           <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Redirection only works if an appropriate chew is within reach —
             puppy chew toys and teething toys give the mouth something legal

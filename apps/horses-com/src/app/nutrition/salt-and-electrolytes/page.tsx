@@ -129,7 +129,7 @@ export default function SaltElectrolytesPage() {
 
           <h2 id="when">When to Supplement</h2>
           <ul>
-            <li><strong>Baseline salt</strong> for every horse, year-round, via loose salt in feed and access to a salt source. A plain white horse salt block is that free-choice source — it is not loose plain white salt (that lives on tying-up) and not an equine salt lick (that lives on the feed calculator).</li>
+            <li><strong>Baseline salt</strong> for every horse, year-round, via loose salt in feed and access to a salt source. A plain white horse salt block is that free-choice source — it is not loose plain white salt and not an equine salt lick.</li>
             <li><strong>Added electrolytes</strong> for horses in hard or prolonged work, especially in heat and humidity.</li>
             <li><strong>After heavy sweating</strong> from competition, long hauls, or hot-weather exertion.</li>
             <li><strong>For poor drinkers and travelers</strong> where salt and electrolytes help maintain the drive to drink.</li>
@@ -138,32 +138,16 @@ export default function SaltElectrolytesPage() {
 
           <h2 id="safe">Using Electrolytes Safely</h2>
           <ul>
-            <li><strong>Always provide water alongside</strong> -- never give concentrated electrolytes to a horse without free access to water, as this worsens dehydration. A wide-mouth horse water bucket is how that water stays in front of the horse — it is not an automatic waterer (that lives on PPID) and not a color-coded flat-back bucket (that lives on strangles).</li>
+            <li><strong>Always provide water alongside</strong> -- never give concentrated electrolytes to a horse without free access to water, as this worsens dehydration. A wide-mouth horse water bucket is how that water stays in front of the horse — it is not an automatic waterer and not a color-coded flat-back bucket.</li>
             <li><strong>Choose quality products</strong> where salt is the main ingredient, not sugar fillers. A salt-first horse electrolyte powder is how heavy sweat is replaced without a sugar-first mix — it is not the generic horse-electrolytes hop on the emergency and grimace-scale tools.</li>
             <li><strong>Introduce gradually</strong> and avoid giving large doses to an empty stomach, which can irritate it.</li>
             <li><strong>Match the dose to the work and losses</strong> rather than over-supplementing an idle horse.</li>
             <li><strong>Consult your vet</strong> for horses with kidney issues or specific medical conditions before adding electrolytes.</li>
           </ul>
 
-          <h2 id="kit">Barn salt-and-water kit</h2>
+          <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Everyday physical supplies that match the
-            year-round-baseline-salt, sweat-replacement,
-            and always-provide-water copy on this page — a
-            plain white horse salt block so every horse
-            has a free-choice source, a salt-first
-            electrolyte powder so heavy sweat is not
-            replaced with sugar, and a wide-mouth water
-            bucket so electrolytes are never given
-            without water. These are educational barn
-            tools, not a ranked product list, not a
-            substitute for veterinary care, and not
-            loose plain white salt (that lives on
-            tying-up), a generic horse-electrolytes hop
-            (that lives on the emergency tools), or an
-            equine salt lick (that lives on the feed
-            calculator). This page does not
-            claim hands-on testing. </p>
+            Keep these on hand: a plain white horse salt block so every horse has a free-choice source, a salt-first electrolyte powder so heavy sweat is not replaced with sugar, and a wide-mouth water bucket so electrolytes are never given without water. These are educational barn tools, not a ranked product list, not a substitute for veterinary care, and not loose plain white salt, a generic horse-electrolytes hop, or an equine salt lick. </p>
 
 
           {/* Money path — live amazon-brand search hops
@@ -216,7 +200,7 @@ export default function SaltElectrolytesPage() {
           </div>
 
           <h2 id="picks">Salt and Electrolyte Picks</h2>
-          <p>A few widely-stocked options covering year-round baseline salt and sweat-replacement electrolytes. Always provide free-choice water alongside any electrolyte, and favor products where salt — not sugar — is the leading ingredient. This is a documented-spec comparison drawing on standard US equestrian retail; this page does not claim hands-on testing.</p>
+          <p>A few widely-stocked options covering year-round baseline salt and sweat-replacement electrolytes. Always provide free-choice water alongside any electrolyte, and favor products where salt — not sugar — is the leading ingredient.</p>
 
 
 

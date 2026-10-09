@@ -300,7 +300,7 @@ export default function DogChocolateToxicityCalculatorPage() {
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/activated+charcoal+pet?s=tools-chocolate-toxicity", "/go/amazon-brand/hydrogen+peroxide+3+percent+first+aid?s=tools-chocolate-toxicity", "/go/amazon-brand/pet+first+aid+kit+dog?s=tools-chocolate-toxicity", "/go/amazon-brand/pet+emergency+kit+dog+toxin?s=tools-chocolate-toxicity", "/go/amazon-brand/dog+crate+for+recovery?s=tools-chocolate-toxicity"]} />
           <div className="mt-4 rounded-xl border border-brand-border bg-brand-white p-5">
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Shop a chocolate-safety kit
+              Shop these supplies
             </div>
             <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">

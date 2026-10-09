@@ -146,7 +146,7 @@ export default function FerretInsulinomaPage() {
           <>
             <TableOfContents
               items={[
-                { label: 'TL;DR', href: '#tldr' },
+                { label: '', href: '#tldr' },
                 { label: 'What It Is', href: '#pathophys' },
                 { label: 'Who Gets It', href: '#epidemiology' },
                 { label: 'Clinical Signs', href: '#signs' },
@@ -231,8 +231,7 @@ export default function FerretInsulinomaPage() {
             well-established. Recognizing it early is what changes the outlook.
           </DropCap>
 
-          <h2 id="tldr">TL;DR</h2>
-          <p>
+                    <p>
             Insulinoma is a functional tumor of the pancreatic beta cells that
             secretes insulin without regard to the normal feedback loop,
             producing chronic, intermittent hypoglycemia. It is the most
@@ -463,7 +462,7 @@ export default function FerretInsulinomaPage() {
 
           <h2 id="kit">Insulinoma support kit</h2>
           <p>
-            Everyday physical supplies that match the supportive-nutrition and crisis-meal copy on this page — a carnivore-care critical-care formula so a ferret can take frequent protein-and-fat meals by syringe or spoon, chicken meat baby food as the swallow-safe protein meal after a crash, and a silicone-tip oral dosing syringe so that formula is given by mouth. These are household feeding tools, not treatments. They do not diagnose or treat insulinoma, they do not replace prednisolone or diazoxide prescribed by a veterinarian, they do not set a glucose number, and they are not a ranked product list. This page does not claim hands-on testing. </p>
+            Keep these on hand: a carnivore-care critical-care formula so a ferret can take frequent protein-and-fat meals by syringe or spoon, chicken meat baby food as the swallow-safe protein meal after a crash, and a silicone-tip oral dosing syringe so that formula is given by mouth. These are household feeding tools, not treatments. They do not diagnose or treat insulinoma, they do not replace prednisolone or diazoxide prescribed by a veterinarian, they do not set a glucose number, and they are not a ranked product list. </p>
 
           <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/carnivore+care+critical+care+formula?s=health-insulinoma", "/go/amazon-brand/chicken+meat+baby+food?s=health-insulinoma", "/go/amazon-brand/silicone+tip+oral+dosing+syringe?s=health-insulinoma"]} />
 

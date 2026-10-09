@@ -193,7 +193,7 @@ export default function HorseAgeCalculatorPage() {
           <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/horse+feed?s=tools-horse-age-calculator", "/go/amazon-brand/senior+horse+feed?s=tools-horse-age-calculator", "/go/amazon-brand/horse+weight+tape?s=tools-horse-age-calculator", "/go/amazon-brand/horse+fly+mask?s=tools-horse-age-calculator"]} />
           <div className="mt-4 rounded-xl border border-brand-border bg-brand-white p-5">
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Shop a life-stage kit
+              Shop these supplies
             </div>
             <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">

@@ -185,7 +185,7 @@ export default function AfricanCichlidPage() {
           />
         <StockImage manifestKey="fish-com:species-african-cichlid" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="An African cichlid in a home aquarium." priority />
 
-          <CalloutBox variant="note" title="TL;DR">
+          <CalloutBox variant="note" title="In short">
             African rift-lake cichlids from Lakes Malawi, Tanganyika, and
             Victoria need hard, alkaline water (pH 7.8–9.0, high GH/KH),
             dense rockwork to break sightlines and create territories,

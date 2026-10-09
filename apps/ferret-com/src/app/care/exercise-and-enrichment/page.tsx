@@ -193,8 +193,7 @@ export default function FerretExerciseEnrichmentPage() {
             the bedroom. The enriched room is the house.
           </DropCap>
 
-          <h2 id="tldr">TL;DR</h2>
-          <p>
+                    <p>
             A minimum of four hours of supervised out-of-cage time per day in
             a ferret-proofed space is the working floor across the AFA owner
             literature and the exotic-pet welfare references. Enrichment
@@ -530,7 +529,7 @@ export default function FerretExerciseEnrichmentPage() {
 
           <h2 id="picks">Enrichment Picks</h2>
           <p>
-            Two starter purchases that anchor most ferret enrichment setups — a tunnel set and a dig box. This is a documented-spec comparison drawing on widely-stocked products and the durable-material constraints discussed above; this page does not claim hands-on testing.
+            Two starter purchases that anchor most ferret enrichment setups — a tunnel set and a dig box.
           </p>
           <ReviewCard quietUntilTag
             id="marshall-pop-n-play"

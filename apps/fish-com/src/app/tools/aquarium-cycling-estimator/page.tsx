@@ -147,7 +147,7 @@ export default function AquariumCyclingEstimatorPage() {
           <TableOfContents
             items={[
               { label: 'The estimator', href: '#estimator' },
-              { label: 'Shop a cycling kit', href: '#shop' },
+              { label: 'Shop these supplies', href: '#shop' },
               { label: 'Method comparison', href: '#methods' },
               { label: 'Methodology &amp; limits', href: '#methodology' },
               { label: 'Sources', href: '#sources' },
@@ -200,7 +200,7 @@ export default function AquariumCyclingEstimatorPage() {
         <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/api+freshwater+master+test+kit?s=tools-aquarium-cycling-estimator", "/go/amazon-brand/tetra+safestart+plus?s=tools-aquarium-cycling-estimator", "/go/amazon-brand/dr+tims+ammonium+chloride?s=tools-aquarium-cycling-estimator", "/go/amazon-brand/aquarium+sponge+filter?s=tools-aquarium-cycling-estimator"]} />
         <div id="shop" className="mb-8 rounded-xl border border-brand-border bg-brand-surface p-5">
           <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Shop a cycling kit
+            Shop these supplies
           </div>
           <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
             A liquid master kit is the only way to confirm 0 ppm ammonia and 0 ppm nitrite; bottled

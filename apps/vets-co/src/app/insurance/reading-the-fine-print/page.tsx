@@ -40,10 +40,10 @@ export default function FinePrintPage() {
           </CalloutBox>
 
           <h2>Waiting Periods</h2>
-          <p>Every policy imposes a waiting period after enrollment before coverage starts, and anything arising during it is excluded as pre-existing. Accident waiting periods are typically short, illness periods longer, and orthopedic conditions can carry the longest waits — six months or more with some insurers. For breeds prone to cruciate or hip disease, a long orthopedic waiting period is a major consideration. A full-page magnifier is how those orthopedic-wait clauses stay readable on the sample policy — it is not an assorted highlighter set (that lives on what-pet-insurance-covers), not removable page flags (that live on what-pet-insurance-covers), and not a self-inking date stamp (that lives on when-to-enroll). Check the length of each waiting period and whether the insurer offers a way to shorten the orthopedic wait, such as an exam. <a href="/insurance/what-pet-insurance-covers">What pet insurance covers</a> is where those waiting-period exclusions are spelled out.</p>
+          <p>Every policy imposes a waiting period after enrollment before coverage starts, and anything arising during it is excluded as pre-existing. Accident waiting periods are typically short, illness periods longer, and orthopedic conditions can carry the longest waits — six months or more with some insurers. For breeds prone to cruciate or hip disease, a long orthopedic waiting period is a major consideration. A full-page magnifier is how those orthopedic-wait clauses stay readable on the sample policy — it is not an assorted highlighter set, not removable page flags, and not a self-inking date stamp. Check the length of each waiting period and whether the insurer offers a way to shorten the orthopedic wait, such as an exam. <a href="/insurance/what-pet-insurance-covers">What pet insurance covers</a> is where those waiting-period exclusions are spelled out.</p>
 
           <h2>How the Plan Pays</h2>
-          <p>There are two payout models. Most modern plans reimburse a percentage of your actual covered costs. A minority use a benefit schedule, capping payment for each condition or procedure at a fixed amount regardless of the real bill — which can leave large gaps even when a claim is covered. An adjustable copyholder is how two sample policies stay propped for a side-by-side payout-model read — it is not a letter-size file jacket (that lives on when-to-enroll), not a kraft two-pocket folder (that lives on choosing-a-veterinarian), and not a clipboard with storage (that lives on what-to-expect-at-the-vet). Confirm the plan reimburses actual costs, and be wary of unusually cheap plans that quietly use a benefit schedule.</p>
+          <p>There are two payout models. Most modern plans reimburse a percentage of your actual covered costs. A minority use a benefit schedule, capping payment for each condition or procedure at a fixed amount regardless of the real bill — which can leave large gaps even when a claim is covered. An adjustable copyholder is how two sample policies stay propped for a side-by-side payout-model read — it is not a letter-size file jacket, not a kraft two-pocket folder, and not a clipboard with storage. Confirm the plan reimburses actual costs, and be wary of unusually cheap plans that quietly use a benefit schedule.</p>
 
           <h2>Exam Fees and Ancillary Costs</h2>
           <p>Some insurers reimburse the exam or consultation fee; others exclude it. Over a chronic condition requiring repeated rechecks, this adds up. Look also at how the plan handles prescription medications, hospitalization, specialist and emergency care, alternative therapies, and behavioral treatment. These ancillary inclusions and exclusions distinguish otherwise-similar plans and can swing the value substantially for a pet with ongoing needs.</p>
@@ -54,32 +54,9 @@ export default function FinePrintPage() {
           <h2>Practical Reading Strategy</h2>
           <p>Approach the policy with a checklist: waiting periods (especially orthopedic), payout model (percentage vs. schedule), exam-fee coverage, annual limit, and the full exclusions list. Compare two or three plans on these same points side by side rather than on price alone. A few minutes reading the fine print before enrollment prevents the far more painful discovery, during a claim, that the coverage you thought you had does not apply.</p>
 
-          <h2 id="kit">Reading-the-fine-print kit</h2>
+          <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Everyday physical supplies that match the
-            waiting-period, payout-model, and
-            exclusions-list copy on this page — a
-            full-page magnifier so orthopedic
-            waiting-period clauses stay readable on
-            the sample policy, an adjustable
-            copyholder so two sample policies stay
-            propped for a side-by-side read, and a
-            line-reader strip so the exclusions
-            list stays followed line by line. These
-            are educational fine-print / reading
-            tools, not a ranked product list, not a
-            substitute for veterinary care, and not
-            a treatment. Quad-ruled graph pads,
-            paid rubber stamps, and handheld tally
-            counters already live on
-            deductibles-reimbursement. 3-tab
-            dividers, assorted highlighter sets,
-            and removable page flags already live
-            on what-pet-insurance-covers. This
-            page does not hop medications or
-            insurance brands as Amazon searches.
-            This page does not claim hands-on
-            testing.
+            Keep these on hand: a full-page magnifier so orthopedic waiting-period clauses stay readable on the sample policy, an adjustable copyholder so two sample policies stay propped for a side-by-side read, and a line-reader strip so the exclusions list stays followed line by line. These are educational fine-print / reading tools, not a ranked product list, not a substitute for veterinary care, and not a treatment.
           </p>
 
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/full+page+magnifier?s=insurance-reading-the-fine-print", "/go/amazon-brand/adjustable+copyholder?s=insurance-reading-the-fine-print", "/go/amazon-brand/reading+guide+strip+overlay+line+reader?s=insurance-reading-the-fine-print"]} />

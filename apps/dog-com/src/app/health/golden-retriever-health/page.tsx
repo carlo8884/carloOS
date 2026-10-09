@@ -233,54 +233,7 @@ export default function GoldenRetrieverHealthPage() {
 
         <h2 id="kit">A Simple Golden Retriever Cancer-Watch Kit</h2>
           <p>
-            Three everyday physical supplies match the
-            lymphoma lymph-node, hip-and-elbow stair, and
-            allergy ear-cleaning copy above: a dog
-            lymph-node anatomy chart so the monthly check
-            from middle age covers the nodes under the jaw,
-            in front of the shoulders, in the groin, and
-            behind the knees — swollen nodes that persist
-            more than 2 weeks warrant veterinary
-            evaluation — foam dog stairs so hip- and
-            elbow-dysplasia reluctance to climb stairs,
-            stiffness after exercise, and reduced exercise
-            tolerance have a low-impact indoor step
-            (weight management remains the most impactful
-            intervention; this is not a dog ramp, hip
-            brace, or joint-support treat), and dog ear
-            wipes so regular ear cleaning can interrupt
-            the recurrent ear infections that come with
-            atopic dermatitis, paw licking, and face
-            rubbing. These are household cancer-watch and
-            allergy-care tools, not treatments. They do
-            not diagnose hemangiosarcoma, lymphoma,
-            osteosarcoma, or mast cell tumors, they do
-            not replace annual abdominal ultrasound from
-            age 6–7, they do not replace OFA hip and
-            elbow films, they do not treat hypothyroidism
-            with levothyroxine, they do not treat SAS,
-            and they are not Apoquel, Cytopoint,
-            chemotherapy, or a ranked clinical product
-            list. Assisted-walking slings, hind-paw
-            booties, hip braces, silicone dog grooming
-            gloves, analog bathroom scales, dog dental
-            finger brushes, one-minute kitchen timers, step-in
-            padded dog harnesses, pet medical records
-            binders, AM/PM weekly pill organizers,
-            digital hanging luggage scales, LED medical
-            penlights, pet emergency contact cards,
-            folding pet stretchers, vaccination record
-            books, seat-belt tethers, foldable waterproof
-            puppy mats, mosquito dunks, a monthly pill
-            organizer, a soft-sided vet-visit carrier, a
-            gum-color assessment chart, recovery food, a
-            feeding syringe, digital pet scales, dog
-            wheelchairs, rear-support harnesses,
-            belly-support harnesses, knee braces,
-            waterproof dog booties, orthopedic dog beds,
-            dog ramps, and joint-support treats already
-            live on other pages. This page does not claim
-            hands-on testing. </p>
+            Keep these on hand: swollen nodes that persist more than 2 weeks warrant veterinary evaluation — foam dog stairs so hip- and elbow-dysplasia reluctance to climb stairs, stiffness after exercise, and reduced exercise tolerance have a low-impact indoor step (weight management remains the most impactful intervention; this is not a dog ramp, hip brace, or joint-support treat), and dog ear wipes so regular ear cleaning can interrupt the recurrent ear infections that come with atopic dermatitis, paw licking, and face rubbing. These are household cancer-watch and allergy-care tools, not treatments. They do not diagnose hemangiosarcoma, lymphoma, osteosarcoma, or mast cell tumors, they do not replace annual abdominal ultrasound from age 6–7, they do not replace OFA hip and elbow films, they do not treat hypothyroidism with levothyroxine, they do not treat SAS, and they are not Apoquel, Cytopoint, chemotherapy, or a ranked clinical product list. </p>
 
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/dog+lymph+node+anatomy+chart?s=health-golden-retriever-health", "/go/amazon-brand/foam+dog+stairs?s=health-golden-retriever-health", "/go/amazon-brand/dog+ear+wipes?s=health-golden-retriever-health"]} />
 

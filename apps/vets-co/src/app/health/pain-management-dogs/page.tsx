@@ -63,28 +63,9 @@ export default function PainManagementPage() {
           <h2>Weight Management as Pain Treatment</h2>
           <p>For osteoarthritic dogs, getting back to a lean body condition belongs in the pain plan. Kealy et al. (JAVMA 2000) reported hip osteoarthritis at 8 years in 3 of 21 Labrador Retrievers fed 25% less food, versus 15 of 22 control-fed littermates (<a className="break-all" href="https://doi.org/10.2460/javma.2000.217.1678">https://doi.org/10.2460/javma.2000.217.1678</a>). That study does not measure pounds of force, and it does not say a percent of body weight matches an NSAID. A hardcover weekly appointment planner can carry the weekly weight the veterinarian already asked for next to the daily pain score — it is not a diet hop and it is not a treatment.</p>
 
-          <h2 id="kit">Home-care kit</h2>
+          <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Everyday physical supplies that match the
-            rest, mobility-support, and pain-score copy
-            on this page — an elevated mesh dog cot so
-            a dog that sleeps more and hesitates before
-            rising has a low rest surface they can
-            step off, clear adhesive non-slip stair
-            treads so the dog that now takes the stairs
-            slowly has grip on the existing staircase,
-            and a hardcover weekly appointment planner
-            so rest, stairs, and daily pain scores stay
-            dated observations for the veterinarian. These are educational home-care and
-            monitoring tools, not a ranked product
-            list, not a substitute for veterinary
-            care, and not a treatment for pain,
-            arthritis, or nerve disease. NSAIDs,
-            gabapentin, tramadol, Librela, CBD, fish
-            oil, and human pain medicines are not
-            shoppable hops. Egg-crate kennel pads, carpeted wooden pet
-            steps, and veterinary floor scales already
-            live on pain-signs-dogs. This page does not claim hands-on testing. </p>
+            Keep these on hand: an elevated mesh dog cot so a dog that sleeps more and hesitates before rising has a low rest surface they can step off, clear adhesive non-slip stair treads so the dog that now takes the stairs slowly has grip on the existing staircase, and a hardcover weekly appointment planner so rest, stairs, and daily pain scores stay dated observations for the veterinarian. These are educational home-care and monitoring tools, not a ranked product list, not a substitute for veterinary care, and not a treatment for pain, arthritis, or nerve disease. NSAIDs, gabapentin, tramadol, Librela, CBD, fish oil, and human pain medicines are not shoppable hops. </p>
 
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/elevated+mesh+dog+cot?s=health-pain-management-dogs", "/go/amazon-brand/clear+adhesive+non+slip+stair+treads?s=health-pain-management-dogs", "/go/amazon-brand/hardcover+weekly+appointment+planner?s=health-pain-management-dogs"]} />
 

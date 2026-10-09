@@ -148,7 +148,7 @@ export default function HelmetGuidePage() {
           </ul>
 
           <h2 id="picks">Certified Helmet Picks</h2>
-          <p>The following are widely-stocked, certified equestrian helmets across the common price tiers. Certification and correct fit matter far more than brand or price — any helmet below must be tried on and fitted to the individual head before it protects. This is a documented-spec comparison drawing on standard US equestrian retail; this page does not claim hands-on testing, and no helmet here is endorsed over a fitter&apos;s professional measurement.</p>
+          <p>The following are widely-stocked, certified equestrian helmets across the common price tiers. Certification and correct fit matter far more than brand or price — any helmet below must be tried on and fitted to the individual head before it protects.</p>
 
 
 
@@ -253,7 +253,7 @@ export default function HelmetGuidePage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-08" />
+          <ComparisonFoot updated="2026-10-09" />
 
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">

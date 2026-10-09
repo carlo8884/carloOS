@@ -139,7 +139,7 @@ export default function DogWellnessExamPage() {
             reviewedBy="Editorial team"
           />
 
-          <CalloutBox variant="evidence" title="TL;DR — What you need to know">
+          <CalloutBox variant="evidence" title="What you need to know">
             <p>
               <strong>Frequency:</strong> annual for healthy adults, twice yearly for seniors, a frequent series for puppies (per AAHA Canine Life Stage Guidelines).
             </p>
@@ -245,7 +245,7 @@ export default function DogWellnessExamPage() {
 
           <h2 id="kit">A Simple Wellness-Visit Kit</h2>
           <p>
-            Three everyday physical supplies match the prepare and low-stress copy above: a fecal-sample collection kit so a fresh stool sample is ready if the clinic asks for one, leak-proof specimen bags so the sample does not leak in the car or at the desk, and high-value vet-visit treats reserved for the exam room so handling stays easier. These are appointment-prep tools. They do not diagnose intestinal parasites, they do not replace the fecal test the veterinarian runs, they are not a first-aid wound kit, and they are not vaccines, heartworm tests, or medications. Home temperature checks stay on the <a href="/guides/how-to-take-dogs-temperature" className="text-brand-primary hover:underline">vital signs guide</a>. This page does not claim hands-on testing. </p>
+            Keep these on hand: fecal sample collection kit, leak proof specimen bags, and high value vet visit treats. These are appointment-prep tools. They do not diagnose intestinal parasites, they do not replace the fecal test the veterinarian runs, they are not a first-aid wound kit, and they are not vaccines, heartworm tests, or medications. Home temperature checks stay on the <a href="/guides/how-to-take-dogs-temperature" className="text-brand-primary hover:underline">vital signs guide</a>. </p>
 
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/fecal+sample+collection+kit?s=guides-dog-wellness-exam", "/go/amazon-brand/leak+proof+specimen+bags?s=guides-dog-wellness-exam", "/go/amazon-brand/high+value+vet+visit+treats?s=guides-dog-wellness-exam"]} />
 

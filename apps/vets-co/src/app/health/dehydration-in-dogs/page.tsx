@@ -62,29 +62,9 @@ export default function DehydrationPage() {
           <p>In-clinic IV fluid therapy (Lactated Ringer's solution, 0.9% NaCl, or Plasmalyte depending on the electrolyte status) corrects dehydration rapidly and allows monitoring of the response. The fluid type, rate, and volume are calculated by the veterinarian based on the degree of dehydration, bodyweight, and concurrent conditions. Most moderately dehydrated dogs respond well to several hours of IV fluids and can go home the same day.</p>
           <p>Subcutaneous (under-the-skin) fluid therapy is a technique some veterinarians teach owners of dogs with chronic conditions (kidney disease, diabetes) that require regular fluid supplementation. It is not appropriate for acute significant dehydration but is valuable for preventing dehydration in dogs with chronic water regulation problems.</p>
 
-          <h2 id="kit">Home-sip kit</h2>
+          <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Everyday physical supplies that match the
-            mild-case oral-fluid copy on this page — an
-            unflavored pediatric electrolyte to dilute
-            50/50 with water, a kitchen liquid-measuring
-            pitcher for that mix, and a shallow lipped
-            dog saucer for frequent small sips. These are
-            household tools, not treatments. They do not
-            treat moderate or severe dehydration, they do
-            not replace a veterinarian, and they are not
-            Pedialyte brand ASINs, IV fluid bags, SQ
-            giving sets, Lactated Ringer&rsquo;s, or 0.9%
-            NaCl. This is not the UTI page and it does
-            not hop a stainless-steel fountain, washable
-            pee pad, or weighted ceramic bowl. It is not
-            the dog water-intake calculator and it does
-            not hop a ceramic pet bowl, dog water
-            fountain, travel bottle, or kitchen measuring
-            cup. It is not the heat-stroke page and it
-            does not hop cool-water towels or a
-            thermometer. This page does not claim
-            hands-on testing.
+            Keep these on hand: an unflavored pediatric electrolyte to dilute 50/50 with water, a kitchen liquid-measuring pitcher for that mix, and a shallow lipped dog saucer for frequent small sips. These are household tools, not treatments. They do not treat moderate or severe dehydration, they do not replace a veterinarian, and they are not Pedialyte brand ASINs, IV fluid bags, SQ giving sets, Lactated Ringer&rsquo;s, or 0.9% NaCl.
           </p>
 
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/unflavored+pediatric+electrolyte?s=health-dehydration-in-dogs", "/go/amazon-brand/kitchen+liquid+measuring+pitcher?s=health-dehydration-in-dogs", "/go/amazon-brand/shallow+lipped+dog+saucer?s=health-dehydration-in-dogs"]} />

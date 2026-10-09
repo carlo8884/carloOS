@@ -52,7 +52,7 @@ export default function DogEyeConditionsPage() {
 
           <h2>Cherry Eye (Prolapsed Nictitans Gland)</h2>
           <DropCap>Cherry eye — the prolapse of the gland of the third eyelid — appears as a red, round, cherry-like mass in the inner corner of the eye. It looks alarming but is not painful acutely. It is most common in brachycephalic breeds (Bulldogs, Pugs, Boston Terriers, Beagles, Cocker Spaniels). The third eyelid (nictitating membrane) contains a tear gland that contributes approximately 30-40% of the tear film. If this gland is surgically removed (an older, now discouraged treatment), the dog is at increased risk for keratoconjunctivitis sicca (KCS / dry eye) for the rest of its life.</DropCap>
-          <p>Current usual treatment: surgical repositioning (tacking the gland back into its normal position) rather than removal. White and Brennan pooled studies of the Morgan pocket procedure and reported an overall failure rate of 3% (95% CI 1–7%) (<a className="break-all" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6163435/">https://pmc.ncbi.nlm.nih.gov/articles/PMC6163435/</a>). Some dogs need a second procedure. Prompt treatment is preferable — a chronically prolapsed gland becomes inflamed and more difficult to reposition successfully. Any dog with cherry eye should see a veterinarian within a few days of appearance; ophthalmology referral provides the best surgical outcomes. A padded Elizabethan collar is how the dog cannot paw the prolapsed gland on the way to that visit or during the first nights after tacking — it is not a soft e-collar (that lives on dog.com cherry-eye), not an inflatable dog collar (that lives on the spay-neuter guide), not a pet recovery cone, and not a soft recovery collar. It does not treat cherry eye and it is not a substitute for surgical repositioning.</p>
+          <p>Current usual treatment: surgical repositioning (tacking the gland back into its normal position) rather than removal. White and Brennan pooled studies of the Morgan pocket procedure and reported an overall failure rate of 3% (95% CI 1–7%) (<a className="break-all" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6163435/">https://pmc.ncbi.nlm.nih.gov/articles/PMC6163435/</a>). Some dogs need a second procedure. Prompt treatment is preferable — a chronically prolapsed gland becomes inflamed and more difficult to reposition successfully. Any dog with cherry eye should see a veterinarian within a few days of appearance; ophthalmology referral provides the best surgical outcomes. A padded Elizabethan collar is how the dog cannot paw the prolapsed gland on the way to that visit or during the first nights after tacking — it is not a soft e-collar, not an inflatable dog collar, not a pet recovery cone, and not a soft recovery collar. It does not treat cherry eye and it is not a substitute for surgical repositioning.</p>
 
           <h2>Cataracts</h2>
           <p>A cataract is opacity of the crystalline lens — appearing as a white or blue-white cloudiness within the pupil (the dark central part of the eye, not the iris). It must be distinguished from nuclear sclerosis — a normal age-related change where the lens appears hazy in older dogs but does not significantly impair vision. Nuclear sclerosis is bilateral, affects the lens nucleus centrally, and appears more grayish-blue than white.</p>
@@ -64,42 +64,14 @@ export default function DogEyeConditionsPage() {
 
           <h2>Progressive Retinal Atrophy (PRA)</h2>
           <p>PRA is a hereditary degeneration of the photoreceptors in the retina — rods first (night vision), then cones (day vision), progressing to total blindness over months to years. It is not painful. There is no treatment. Many breeds have DNA tests available for specific PRA mutations — testing breeding dogs eliminates production of affected offspring.</p>
-          <p>Signs: progressive night blindness (the dog bumps into things in low light, is reluctant to navigate in the dark, shows fear in dimly lit environments) that gradually worsens to daytime vision loss. Dogs adapt remarkably well to progressive vision loss — familiar environments remain navigable even with significant visual impairment. Keep furniture placement consistent, use scent markers on key items, and avoid moving the dog to unfamiliar environments without guidance. Blind dogs can live full, happy lives. A dog blind-halo harness is how night-blindness walks stay bumpered — a hoop in front of the muzzle so furniture and door frames announce themselves before a collision. It is not a plug-in night light (that lives on cognitive-dysfunction), not a battery motion-sensor night light (that lives on senior-pet-care), not a handheld AA LED flashlight, and not a foam table-edge bumper. It does not treat PRA and it is not a substitute for a veterinary exam.</p>
+          <p>Signs: progressive night blindness (the dog bumps into things in low light, is reluctant to navigate in the dark, shows fear in dimly lit environments) that gradually worsens to daytime vision loss. Dogs adapt remarkably well to progressive vision loss — familiar environments remain navigable even with significant visual impairment. Keep furniture placement consistent, use scent markers on key items, and avoid moving the dog to unfamiliar environments without guidance. Blind dogs can live full, happy lives. A dog blind-halo harness is how night-blindness walks stay bumpered — a hoop in front of the muzzle so furniture and door frames announce themselves before a collision. It is not a plug-in night light, not a battery motion-sensor night light, not a handheld AA LED flashlight, and not a foam table-edge bumper. It does not treat PRA and it is not a substitute for a veterinary exam.</p>
 
           <h2>Keratoconjunctivitis Sicca (KCS / Dry Eye)</h2>
-          <p>KCS is inadequate tear production causing dry, inflamed corneal and conjunctival surfaces. Signs: thick, mucoid, yellow-green discharge (the body produces mucus as a substitute for tears), red conjunctiva, dull corneal surface, and in chronic cases, corneal pigmentation and scarring that impairs vision. Most commonly caused by immune-mediated destruction of the lacrimal glands — treated with topical cyclosporine or tacrolimus (immunosuppressants that restore tear production in most dogs within 4-8 weeks of daily application). Lifelong treatment is required. Brachycephalic breeds and Cocker Spaniels are predisposed. Cyclosporine, tacrolimus, and Optimmune are clinic prescriptions, not shoppable hops. A sterile saline eye wash is only a rinse for the mucoid discharge around the lids if the veterinarian has said a rinse is appropriate — it is not a medicated eye drop, not dog eye wipes (those live on dog.com cherry-eye), and not saline wound flush (that lives on the first-aid kit). It does not restore tear production.</p>
+          <p>KCS is inadequate tear production causing dry, inflamed corneal and conjunctival surfaces. Signs: thick, mucoid, yellow-green discharge (the body produces mucus as a substitute for tears), red conjunctiva, dull corneal surface, and in chronic cases, corneal pigmentation and scarring that impairs vision. Most commonly caused by immune-mediated destruction of the lacrimal glands — treated with topical cyclosporine or tacrolimus (immunosuppressants that restore tear production in most dogs within 4-8 weeks of daily application). Lifelong treatment is required. Brachycephalic breeds and Cocker Spaniels are predisposed. Cyclosporine, tacrolimus, and Optimmune are clinic prescriptions, not shoppable hops. A sterile saline eye wash is only a rinse for the mucoid discharge around the lids if the veterinarian has said a rinse is appropriate — it is not a medicated eye drop, not dog eye wipes, and not saline wound flush. It does not restore tear production.</p>
 
-          <h2 id="kit">Home-care kit</h2>
+          <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Everyday physical supplies that match the
-            cherry-eye, chemical-exposure, KCS, and
-            PRA night-blindness copy on this page — a
-            sterile saline eye wash so a chemical
-            splash or thick mucoid discharge is a
-            rinse, not an Rx drop, a padded
-            Elizabethan collar so a dog cannot paw a
-            prolapsed third-eyelid gland while you
-            wait for surgical repositioning, and a
-            dog blind-halo harness so night
-            blindness becomes a bumpered walk
-            instead of furniture collisions. These
-            are educational home-care and monitoring
-            tools, not a ranked product list, not a
-            substitute for veterinary care, and not
-            a treatment for cherry eye, cataracts,
-            glaucoma, PRA, or KCS. Cyclosporine,
-            tacrolimus, Optimmune, mannitol, and
-            Anipryl are not shoppable hops. Soft
-            e-collars and dog eye wipes already live
-            on dog.com cherry-eye. Inflatable dog collars already live on
-            the spay-neuter guide. Plug-in night
-            lights already live on
-            cognitive-dysfunction. Battery
-            motion-sensor night lights already live
-            on senior-pet-care. Handheld AA LED
-            flashlights already live on
-            emergency-signs. This page does not
-            claim hands-on testing. </p>
+            Keep these on hand: a sterile saline eye wash so a chemical splash or thick mucoid discharge is a rinse, not an Rx drop, a padded Elizabethan collar so a dog cannot paw a prolapsed third-eyelid gland while you wait for surgical repositioning, and a dog blind-halo harness so night blindness becomes a bumpered walk instead of furniture collisions. These are educational home-care and monitoring tools, not a ranked product list, not a substitute for veterinary care, and not a treatment for cherry eye, cataracts, glaucoma, PRA, or KCS. Cyclosporine, tacrolimus, Optimmune, mannitol, and Anipryl are not shoppable hops. </p>
 
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/sterile+saline+eye+wash?s=health-dog-eye-conditions", "/go/amazon-brand/padded+elizabethan+collar+dog?s=health-dog-eye-conditions", "/go/amazon-brand/dog+blind+halo+harness?s=health-dog-eye-conditions"]} />
 

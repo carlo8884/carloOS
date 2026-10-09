@@ -140,7 +140,7 @@ export default function NavicularPage() {
           <p>Diagnosis begins with a lameness examination, including flexion tests and hoof testers. Diagnostic nerve blocks -- a palmar digital block that desensitizes the heel -- localize the pain to the caudal foot. Radiographs assess the navicular bone for degenerative change, but normal radiographs do not rule out the syndrome. MRI is the reference standard, distinguishing tendon, ligament, bursa, and bone lesions and guiding targeted treatment. This is a veterinary diagnostic workup, not something an owner can confirm at home.</p>
 
           <h2 id="farriery">Farriery</h2>
-          <p>Corrective farriery is the foundation of management. The goals are to restore hoof balance, ease breakover, support the heel, and shorten the lever arm on the deep digital flexor tendon. Common approaches include rolled or rocker toes, bar shoes or heart-bar shoes, wedge pads to adjust the pastern axis, and shortening a long toe. A steel heart-bar horseshoe is how heel support stays a physical bar under the frog instead of a guessed pad stack — it is not a foam sole-support pad (that lives on laminitis), not a riding hoof boot (that lives on hoof-care-basics), and not a snow pad (that lives on winter-care). A 3-degree leather wedge pad is how a broken-back pastern axis is lifted instead of left long-toe low-heel — it is not an equine foam sole-support pad and not a hoof-soaking boot (that lives on abscess). A rocker-toe steel horseshoe is how breakover shortens so the deep digital flexor tendon is not levered over a long toe — it is not a portable farrier hoof stand (that lives on the farrier-schedule page) and not a shoe stud (that lives on winter-care). The right prescription depends on the individual foot and on imaging, so the farrier and veterinarian work together.</p>
+          <p>Corrective farriery is the foundation of management. The goals are to restore hoof balance, ease breakover, support the heel, and shorten the lever arm on the deep digital flexor tendon. Common approaches include rolled or rocker toes, bar shoes or heart-bar shoes, wedge pads to adjust the pastern axis, and shortening a long toe. A steel heart-bar horseshoe is how heel support stays a physical bar under the frog instead of a guessed pad stack — it is not a foam sole-support pad, not a riding hoof boot, and not a snow pad. A 3-degree leather wedge pad is how a broken-back pastern axis is lifted instead of left long-toe low-heel — it is not an equine foam sole-support pad and not a hoof-soaking boot. A rocker-toe steel horseshoe is how breakover shortens so the deep digital flexor tendon is not levered over a long toe — it is not a portable farrier hoof stand and not a shoe stud. The right prescription depends on the individual foot and on imaging, so the farrier and veterinarian work together.</p>
 
           <h2 id="medical">Medical Management</h2>
           <p>Beyond farriery, veterinarians may prescribe anti-inflammatory medication, intra-articular or navicular-bursa medication, and bisphosphonate drugs that target bone remodeling in selected cases -- all under veterinary direction. Controlled exercise, appropriate footing, and weight management support the plan. Surgical options such as palmar digital neurectomy exist for refractory cases but are a last resort with their own risks.</p>
@@ -150,27 +150,7 @@ export default function NavicularPage() {
 
           <h2 id="kit">Farriery kit</h2>
           <p>
-            Everyday physical supplies that match the
-            bar-shoes-or-heart-bar-shoes, wedge-pads, and
-            rolled-or-rocker-toes copy on this page — a
-            steel heart-bar horseshoe so heel support is a
-            physical bar under the frog, a 3-degree leather
-            wedge pad so a broken-back pastern axis is
-            lifted, and a rocker-toe steel horseshoe so
-            breakover shortens instead of levering the
-            deep digital flexor tendon over a long toe. These are educational farriery tools, not a
-            ranked product list, not a substitute for
-            veterinary or farrier care, and not a shoeing
-            prescription. Riding hoof boots already live on
-            hoof-care-basics. Soaking boots already live
-            on abscess. Snow pads and shoe studs already
-            live on winter-care. Farrier log books, hoof
-            stands, and barn flood lights already live on
-            the farrier-schedule page. This page does not
-            hop anti-inflammatory medication,
-            bisphosphonates, nerve-block kits, MRI, or
-            neurectomy gear. This page does not claim
-            hands-on testing. </p>
+            Keep these on hand: a steel heart-bar horseshoe so heel support is a physical bar under the frog, a 3-degree leather wedge pad so a broken-back pastern axis is lifted, and a rocker-toe steel horseshoe so breakover shortens instead of levering the deep digital flexor tendon over a long toe. These are educational farriery tools, not a ranked product list, not a substitute for veterinary or farrier care, and not a shoeing prescription. </p>
 
           <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/steel+heart+bar+horseshoe?s=health-navicular", "/go/amazon-brand/3+degree+leather+wedge+pad?s=health-navicular", "/go/amazon-brand/rocker+toe+steel+horseshoe?s=health-navicular"]} />
 

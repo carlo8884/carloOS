@@ -140,33 +140,16 @@ export default function RingbonePage() {
           <h2 id="management">Diagnosis and Management</h2>
           <p>A veterinarian localizes the lameness with diagnostic blocks and confirms ringbone with radiographs, which show the location, severity, and joint involvement. Management mirrors osteoarthritis generally. All treatment decisions belong to the veterinarian.</p>
           <ul>
-            <li><strong>Balance the foot and ease breakover.</strong> Corrective farriery is the foundation — a long toe and a broken hoof-pastern axis load the pastern and coffin. An equine hoof-angle gauge is how that angle is recorded at the visit instead of guessed — it is not a farrier log book or a portable hoof stand (those live on the farrier-schedule page) and not a heart-bar, wedge, or rocker shoe (those live on navicular).</li>
-            <li><strong>Control the work.</strong> Controlled exercise keeps the joint moving without the concussion of hard, fast work. A leather lunge cavesson is how that work stays a quiet circle — it is not a 30-foot cotton lunge line or a traffic-cone set (those live on lameness-basics) and not cotton polo exercise wraps (those live on osteoarthritis).</li>
-            <li><strong>Protect the pastern on hard ground.</strong> Lameness often worsens on hard footing and after work. Neoprene overreach bell boots are how the pastern and heel are not struck by the hind foot — they are not full-length turnout boots (those live on mud-fever), not shipping boots (those live on trailering), not fly boots, and not riding hoof boots. <a href="/tack/boots-and-wraps">The boots and wraps guide</a> compares those overreach bell boots.</li>
-            <li><strong>Manage weight</strong> so extra bodyweight is not extra joint load. Hanging hay-bale scales already live on EMS; this page does not hop another scale.</li>
-            <li><strong>Leave joint medication to the veterinarian.</strong> Systemic and intra-articular anti-inflammatories, Adequan, Legend, and surgical fusion of a low-motion pastern stay a veterinary call. This page does not hop NSAIDs, injectables, or joint supplements — those already live on the joint-supplement guide when they are shoppable at all.</li>
+            <li><strong>Balance the foot and ease breakover.</strong> Corrective farriery is the foundation — a long toe and a broken hoof-pastern axis load the pastern and coffin. An equine hoof-angle gauge is how that angle is recorded at the visit instead of guessed — it is not a farrier log book or a portable hoof stand and not a heart-bar, wedge, or rocker shoe.</li>
+            <li><strong>Control the work.</strong> Controlled exercise keeps the joint moving without the concussion of hard, fast work. A leather lunge cavesson is how that work stays a quiet circle — it is not a 30-foot cotton lunge line or a traffic-cone set and not cotton polo exercise wraps.</li>
+            <li><strong>Protect the pastern on hard ground.</strong> Lameness often worsens on hard footing and after work. Neoprene overreach bell boots are how the pastern and heel are not struck by the hind foot — they are not full-length turnout boots, not shipping boots, not fly boots, and not riding hoof boots. <a href="/tack/boots-and-wraps">The boots and wraps guide</a> compares those overreach bell boots.</li>
+            <li><strong>Manage weight</strong> so extra bodyweight is not extra joint load.</li>
+            <li><strong>Leave joint medication to the veterinarian.</strong> Systemic and intra-articular anti-inflammatories, Adequan, Legend, and surgical fusion of a low-motion pastern stay a veterinary call.</li>
           </ul>
 
-          <h2 id="kit">Balance-and-exercise kit</h2>
+          <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Everyday physical supplies that match the
-            balance-the-foot, controlled-exercise, and
-            hard-ground copy on this page — an equine
-            hoof-angle gauge so the farrier visit has a
-            recorded pastern-to-hoof angle, a leather
-            lunge cavesson so work is a quiet circle,
-            and neoprene overreach bell boots so the
-            pastern and coffin are not struck on hard
-            ground. These are educational barn tools,
-            not a ranked product list, not a substitute
-            for veterinary care, and not Adequan,
-            Legend, NSAIDs, or a diagnosis. Heart-bar,
-            wedge, and rocker shoes already live on
-            navicular. Polo wraps and arena drags already live on
-            osteoarthritis. This page
-            does not hop medications, vaccines, or
-            injectable joint products. This page does
-            not claim hands-on testing. </p>
+            Keep these on hand: an equine hoof-angle gauge so the farrier visit has a recorded pastern-to-hoof angle, a leather lunge cavesson so work is a quiet circle, and neoprene overreach bell boots so the pastern and coffin are not struck on hard ground. These are educational barn tools, not a ranked product list, not a substitute for veterinary care, and not Adequan, Legend, NSAIDs, or a diagnosis. </p>
 
           <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/equine+hoof+angle+gauge?s=health-ringbone", "/go/amazon-brand/leather+horse+lunge+cavesson?s=health-ringbone", "/go/amazon-brand/neoprene+horse+overreach+bell+boots?s=health-ringbone"]} />
 

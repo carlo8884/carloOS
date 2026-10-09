@@ -68,47 +68,7 @@ export default function AddisonsDiseaseePage() {
 
           <h2 id="kit">A Simple Addison&apos;s Daily-Care Kit</h2>
           <p>
-            Three everyday physical supplies match the
-            daily-tablet, injection-window, and crisis
-            copy above: dog pill pockets so a daily oral
-            tablet (fludrocortisone in many dogs, plus
-            any veterinarian-directed glucocorticoid)
-            has a mapped way to meet daily dosing
-            compliance, a dry-erase monthly calendar so
-            DOCP injections given every 25–28 days and
-            electrolyte-monitoring recheck dates stay
-            visible next to the written stress-dosing
-            protocol, and a dog medical-alert collar tag
-            so an emergency clinic can see Addisonian
-            crisis risk — collapse, profound weakness,
-            and dangerous potassium-driven arrhythmias —
-            before the electrolyte panel comes back. These are household daily-care and
-            monitoring tools, not treatments. They do
-            not diagnose Addison&apos;s, they do not
-            replace an ACTH stimulation test, they do
-            not set or adjust a DOCP or fludrocortisone
-            dose, they do not replace electrolyte
-            monitoring, and they are not Percorten-V,
-            Zycortal, Florinef, fludrocortisone, DOCP,
-            prednisone, trilostane, Vetoryl, insulin,
-            or a ranked endocrine product list. Gallon gravity dog waterers, extra-large
-            disposable dog pee pads, dog cooling
-            bandanas, self-warming dog mats, fleece dog
-            sweaters, dog slicker brushes, lymph-node
-            anatomy charts, foam dog stairs, dog ear
-            wipes, assisted-walking slings, hind-paw
-            booties, hip braces, silicone dog grooming
-            gloves, analog bathroom scales, dog dental
-            finger brushes, AM/PM weekly pill
-            organizers, monthly pill organizers, pet
-            medical records binders, pet emergency
-            contact cards, folding pet stretchers,
-            soft-sided vet-visit carriers, digital
-            pet-food portion scales, kitchen gram
-            scales, cooling mats, cooling vests, and
-            high-value vet-visit treats already live on
-            other pages. This page does not claim
-            hands-on testing. </p>
+            Keep these on hand: dog pill pockets and dog medical alert collar tag. These are household daily-care and monitoring tools, not treatments. They do not diagnose Addison&apos;s, they do not replace an ACTH stimulation test, they do not set or adjust a DOCP or fludrocortisone dose, they do not replace electrolyte monitoring, and they are not Percorten-V, Zycortal, Florinef, fludrocortisone, DOCP, prednisone, trilostane, Vetoryl, insulin, or a ranked endocrine product list. </p>
 
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/dog+pill+pockets?s=health-addisons-disease", "/go/amazon-brand/dog+medical+alert+collar+tag?s=health-addisons-disease"]} />
 

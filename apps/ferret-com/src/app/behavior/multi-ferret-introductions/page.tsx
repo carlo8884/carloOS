@@ -286,24 +286,9 @@ export default function MultiFerretIntroductionsPage() {
             exam rather than re-introduction.
           </p>
 
-          <h2 id="kit">Staged-introduction kit</h2>
+          <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Everyday physical supplies that match the quarantine,
-            adjacent-cage, bathtub, and two-of-every-resource copy on
-            this page — a wire small-animal single-story cage so the
-            newcomer has its own adjacent box during the isolation
-            window and the two-week see-and-smell phase, a non-slip
-            suction bathtub mat so the first sessions happen on a dry
-            bathtub floor neither ferret owns, and a stainless-steel
-            small-animal crock so the shared cage has a second food
-            station. These are household introduction tools, not
-            treatments. They do not guarantee a pairing, they do not
-            replace a veterinary quarantine check, they do not skip
-            the separate-room window, and they are not a ranked
-            product list. This page
-            does not hop vaccines, Nobivac, IMRAB, diphenhydramine,
-            insulin syringes, compounded meds, or Rx ASINs. This
-            page does not hop diagnosis kits that imply treatment. This page does not claim hands-on testing. </p>
+            Keep these on hand: a wire small-animal single-story cage so the newcomer has its own adjacent box during the isolation window and the two-week see-and-smell phase, a non-slip suction bathtub mat so the first sessions happen on a dry bathtub floor neither ferret owns, and a stainless-steel small-animal crock so the shared cage has a second food station. These are household introduction tools, not treatments. They do not guarantee a pairing, they do not replace a veterinary quarantine check, they do not skip the separate-room window, and they are not a ranked product list. </p>
 
           <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/wire+small+animal+single+story+cage?s=behavior-multi-ferret-introductions", "/go/amazon-brand/non+slip+suction+bathtub+mat?s=behavior-multi-ferret-introductions", "/go/amazon-brand/stainless+steel+small+animal+crock?s=behavior-multi-ferret-introductions"]} />
 

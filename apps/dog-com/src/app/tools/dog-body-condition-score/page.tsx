@@ -176,7 +176,7 @@ export default function DogBodyConditionScorePage() {
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/dog+measuring+tape+body+condition+chart?s=tools-dog-bcs", "/go/amazon-brand/elevated+slow+feeder+bowl+dog?s=tools-dog-bcs", "/go/amazon-brand/portion+control+food+scale+dog?s=tools-dog-bcs", "/go/amazon-brand/puzzle+feeder+dog?s=tools-dog-bcs", "/go/amazon-brand/joint+support+dog+treats?s=tools-dog-bcs", "/go/amazon-brand/weight+management+dog+food?s=tools-dog-bcs"]} />
           <div className="mt-4 rounded-xl border border-brand-border bg-brand-white p-5">
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Shop a BCS / weight-management kit
+              Shop these supplies
             </div>
             <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">

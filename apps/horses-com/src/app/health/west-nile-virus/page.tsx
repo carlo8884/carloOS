@@ -143,30 +143,15 @@ export default function WestNilePage() {
 
           <h2 id="mosquito">Mosquito Control</h2>
           <ul>
-            <li><strong>Eliminate standing water</strong> where mosquitoes breed -- empty and scrub troughs, fix drainage, and remove containers that hold water. A long-handle stock-tank brush is how a trough is dumped and scrubbed instead of left as a green breeding bowl — it is not a color-coded flat-back bucket (that lives on strangles), not a lidded 5-gallon feed-soaking pail (that lives on choke), and not a mosquito dunk (that lives on dog heartworm prevention).</li>
-            <li><strong>Reduce dawn and dusk exposure</strong> when many vector mosquitoes feed, using stabling and fans. 20-foot barn mosquito netting is how dusk stabling becomes a mesh wall instead of an open doorway — it is not a stall fan or stall screen (those live on the vaccination-schedule guide).</li>
+            <li><strong>Eliminate standing water</strong> where mosquitoes breed -- empty and scrub troughs, fix drainage, and remove containers that hold water. A long-handle stock-tank brush is how a trough is dumped and scrubbed instead of left as a green breeding bowl — it is not a color-coded flat-back bucket, not a lidded 5-gallon feed-soaking pail, and not a mosquito dunk.</li>
+            <li><strong>Reduce dawn and dusk exposure</strong> when many vector mosquitoes feed, using stabling and fans. 20-foot barn mosquito netting is how dusk stabling becomes a mesh wall instead of an open doorway — it is not a stall fan or stall screen.</li>
             <li><strong>Use fly and mosquito repellents and sheets</strong> appropriate for horses during mosquito season. A fine-mesh horse mosquito sheet is how overnight turnout is covered without hopping the fly-control fly sheet or the sweet-itch rug.</li>
-            <li><strong>Keep vaccination current</strong> as the primary defense, since control measures alone cannot eliminate exposure. This page does not hop vaccines, needles, or ranked vaccine products — those decisions stay with the veterinarian and the vaccination-schedule guide.</li>
+            <li><strong>Keep vaccination current</strong> as the primary defense, since control measures alone cannot eliminate exposure.</li>
           </ul>
 
-          <h2 id="kit">Mosquito-control kit</h2>
+          <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Everyday physical supplies that match the
-            empty-and-scrub-troughs, dawn-and-dusk
-            stabling, and mosquito-sheets copy on this
-            page — a long-handle stock-tank brush so
-            standing water is dumped and the trough is
-            scrubbed, 20-foot barn mosquito netting so dusk
-            stabling is a mesh wall instead of an open
-            doorway, and a fine-mesh horse mosquito sheet
-            so overnight turnout is covered. These are
-            educational mosquito-control tools, not a
-            ranked product list, not a substitute for
-            veterinary care, and not a treatment or a
-            vaccine. Stall fans and stall screens already
-            live on the vaccination-schedule guide. This page does not
-            hop vaccines, antibiotics, or needles. This
-            page does not claim hands-on testing. </p>
+            Keep these on hand: a long-handle stock-tank brush so standing water is dumped and the trough is scrubbed, 20-foot barn mosquito netting so dusk stabling is a mesh wall instead of an open doorway, and a fine-mesh horse mosquito sheet so overnight turnout is covered. These are educational mosquito-control tools, not a ranked product list, not a substitute for veterinary care, and not a treatment or a vaccine. </p>
 
           <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/long+handle+stock+tank+brush?s=health-wnv", "/go/amazon-brand/20+foot+barn+mosquito+netting?s=health-wnv", "/go/amazon-brand/fine+mesh+horse+mosquito+sheet?s=health-wnv"]} />
 

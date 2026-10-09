@@ -201,7 +201,7 @@ export default function CatGrimaceScalePage() {
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/soft+cat+carrier?s=tools-cat-grimace-scale", "/go/amazon-brand/pet+first+aid+kit?s=tools-cat-grimace-scale", "/go/amazon-brand/calming+pheromone+diffuser?s=tools-cat-grimace-scale", "/go/amazon-brand/digital+pet+thermometer?s=tools-cat-grimace-scale", "/go/amazon-brand/cat+recovery+bed?s=tools-cat-grimace-scale"]} />
           <div className="mt-4 rounded-xl border border-brand-border bg-brand-surface p-5">
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Shop a pain-watch observation kit
+              Shop these supplies
             </div>
             <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">

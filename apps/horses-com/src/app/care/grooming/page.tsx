@@ -141,7 +141,7 @@ export default function GroomingPage() {
           <p>Run your hands as well as the brushes over the horse. Feel for heat, swelling, cuts, lumps, and reactions to pressure; check the legs and feet carefully; and note anything new. Catching a small wound, a filling leg, or a developing girth gall during grooming turns a potential problem into a quick fix. The pre-ride groom is also the moment to confirm the horse is sound and comfortable before tacking up.</p>
 
           <h2 id="kit-picks">Grooming Kit Picks</h2>
-          <p>A few widely-stocked, non-medical grooming tools that cover the core kit described above. These are everyday physical supplies — brushes, combs, and a hoof pick — not treatments for a skin condition; any rash, scabbing, or persistent irritation belongs with your veterinarian, not a brush. This is a documented-spec comparison drawing on standard US equestrian retail; this page does not claim hands-on testing.</p>
+          <p>A few widely-stocked, non-medical grooming tools that cover the core kit described above. These are everyday physical supplies — brushes, combs, and a hoof pick — not treatments for a skin condition; any rash, scabbing, or persistent irritation belongs with your veterinarian, not a brush.</p>
 
 
           {/* Money path — live amazon-brand search hops (grooming kit).

@@ -165,7 +165,7 @@ export default async function CanHorsesEatFoodPage({ params }: PageProps) {
           <>
             <h2 id="serve">How to serve it safely</h2>
             <p>{entry.safePrep}</p>
-            {entry.quantity ? <p><strong>How much:</strong> {entry.quantity} Treats stay small alongside a forage-first diet — see <Link href="/nutrition/forage-basics">forage basics</Link> and, for sugar-sensitive horses, <Link href="/health/laminitis">laminitis</Link>. A nonslip horse barn cutting board is how an approved treat is cut to a choke-safe size before it is offered — it is not a marked horse grain scoop (that lives on feeding-the-performance-horse) and not a small rubber horse mixing pan (that lives on ration-balancers).</p> : null}
+            {entry.quantity ? <p><strong>How much:</strong> {entry.quantity} Treats stay small alongside a forage-first diet — see <Link href="/nutrition/forage-basics">forage basics</Link> and, for sugar-sensitive horses, <Link href="/health/laminitis">laminitis</Link>. A nonslip horse barn cutting board is how an approved treat is cut to a choke-safe size before it is offered — it is not a marked horse grain scoop and not a small rubber horse mixing pan.</p> : null}
           </>
         ) : null}
 
@@ -189,33 +189,11 @@ export default async function CanHorsesEatFoodPage({ params }: PageProps) {
         </p>
 
         <p className="text-sm text-gray-500 mt-2">
-          See also: <Link href="/nutrition/toxic-plants">toxic plants for horses</Link>, <Link href="/health/colic">equine colic</Link>, <Link href="/health/laminitis">laminitis</Link>, and the full <Link href="/nutrition/can-horses-eat">can-horses-eat list</Link>. An airtight labeled horse treat canister is how only pre-checked safe treats sit sealed and labeled away from kitchen leftovers — it is not a rodent-proof metal horse feed bin (that lives on grain). A nylon horse waist treat pouch is how a measured handful of pre-approved treats leaves the kitchen instead of chocolate or avocado — it is not a low-sugar horse-treat hop (that lives on feeding-the-easy-keeper). </p>
+          See also: <Link href="/nutrition/toxic-plants">toxic plants for horses</Link>, <Link href="/health/colic">equine colic</Link>, <Link href="/health/laminitis">laminitis</Link>, and the full <Link href="/nutrition/can-horses-eat">can-horses-eat list</Link>. An airtight labeled horse treat canister is how only pre-checked safe treats sit sealed and labeled away from kitchen leftovers — it is not a rodent-proof metal horse feed bin. A nylon horse waist treat pouch is how a measured handful of pre-approved treats leaves the kitchen instead of chocolate or avocado — it is not a low-sugar horse-treat hop. </p>
 
         <h2 id="kit">Treat-safety supplies</h2>
         <p>
-          Everyday physical supplies that match the
-          keep-kitchen-leftovers-out-of-the-barn,
-          cut-treats-to-a-safe-size, and
-          carry-a-measured-handful copy on this page —
-          an airtight labeled horse treat canister so
-          only pre-checked safe treats sit sealed and
-          labeled away from kitchen leftovers, a
-          nonslip horse barn cutting board so an
-          approved treat is cut to a choke-safe size
-          before it is offered, and a nylon horse
-          waist treat pouch so a measured handful of
-          pre-approved treats leaves the kitchen
-          instead of whatever is on the counter.
-          These are educational barn searches, not a
-          ranked product list, not a substitute for
-          veterinary care, not a toxic-food or poison
-          hop, not a rodent-proof metal feed-bin hop
-          (that lives on grain), not a marked-grain-scoop
-          hop (that lives on feeding-the-performance-horse),
-          and not a low-sugar-horse-treat hop (that
-          lives on feeding-the-easy-keeper). This page
-          does not hop medications or vaccines. This
-          page does not claim hands-on testing.
+          Keep these on hand: an airtight labeled horse treat canister so only pre-checked safe treats sit sealed and labeled away from kitchen leftovers, a nonslip horse barn cutting board so an approved treat is cut to a choke-safe size before it is offered, and a nylon horse waist treat pouch so a measured handful of pre-approved treats leaves the kitchen instead of whatever is on the counter.
         </p>
 
         <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/airtight+labeled+horse+treat+canister?s=can-horses-eat", "/go/amazon-brand/nonslip+horse+barn+cutting+board?s=can-horses-eat", "/go/amazon-brand/nylon+horse+waist+treat+pouch?s=can-horses-eat"]} />

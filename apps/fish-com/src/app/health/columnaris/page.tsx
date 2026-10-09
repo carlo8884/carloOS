@@ -71,7 +71,7 @@ export default function ColumnarisguidePage() {
         <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/api+freshwater+master+test+kit?s=health-columnaris", "/go/amazon-brand/aquarium+quarantine+hospital+tank+net?s=health-columnaris", "/go/amazon-brand/aquarium+sponge+filter?s=health-columnaris", "/go/amazon-brand/eheim+jager+heater?s=health-columnaris", "/go/amazon-brand/aquarium+digital+thermometer?s=health-columnaris"]} />
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
-            Shop a water-first hospital-tank kit
+            Shop these supplies
           </div>
           <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Fix the water first — a liquid master kit is how you see ammonia,
             nitrite, and nitrate that let columnaris take hold. Isolate in a

@@ -90,7 +90,7 @@ export default function CrateTrainingPage() {
         <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/wire+dog+crate+with+divider+panel?s=training-crate", "/go/amazon-brand/dog+crate+pad?s=training-crate", "/go/amazon-brand/dog+crate+cover?s=training-crate", "/go/amazon-brand/puppy+training+pads?s=training-crate"]} />
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
-            Shop a crate kit
+            Shop these supplies
           </div>
           <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">A wire crate with a divider panel is the right starting point for
             most puppies — same crate / pad / cover / training-pad hops used on

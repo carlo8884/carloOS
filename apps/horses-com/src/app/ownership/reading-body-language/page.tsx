@@ -110,7 +110,7 @@ export default function BodyLanguagePage() {
 
           <h2 id="why">Why It Matters</h2>
           <p>The horse is a large, powerful prey animal whose first instinct in fear is to flee, and it broadcasts its emotional state through subtle and not-so-subtle body signals. Reading those signals lets a handler anticipate a spook, defuse tension before it becomes a kick or bite, recognize discomfort or pain, and build the trust that comes from responding to what the horse is saying. It is fundamental to both safety and good horsemanship -- the horse is always communicating, and the skill is learning to listen.</p>
-          <p>This page does not hop first-aid saline, dressing pads, or bandage scissors. This page does not invent clinic listings.</p>
+          <p>This page does not invent clinic listings.</p>
 
           <h2 id="ears">The Ears</h2>
           <p>The ears are the most expressive part of the horse and the first thing to watch. Ears pricked sharply forward show attention or interest in something ahead; ears flicking and swiveling show the horse monitoring its surroundings (and often a relaxed, working attention, as in a ridden horse listening back to the rider); ears pinned flat back against the neck signal anger, threat, or pain and are a clear warning of a possible bite or kick; and ears lolling loosely to the side often indicate relaxation or dozing.</p>
@@ -126,7 +126,6 @@ export default function BodyLanguagePage() {
 
           <h2 id="pain">Signs of Pain</h2>
           <p>Recognizing pain is one of the most important uses of body-language reading, because horses are stoic and often hide it. Pain shows in a tense, withdrawn expression with tight muzzle and eye lines (captured in equine grimace scales), reluctance to move or weight a limb, restlessness, lying down more than usual, dullness and disinterest, pinned ears or aggression when a sore area is touched, and changes in posture such as the colic or laminitis stances. Subtle, persistent changes in a horse&apos;s normal demeanor often signal pain before anything dramatic happens, and warrant a closer look or a veterinary call.</p>
-          <p>This page does not hop first-aid saline / pads / scissors. This page does not hop grimace-scale comfort hops. This page does not claim hands-on testing.</p>
 
           <h2 id="kit">Body-language notes</h2>
 

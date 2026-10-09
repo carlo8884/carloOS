@@ -172,35 +172,7 @@ export default function DogSymptomsGuidePage() {
 
         <h2 id="kit">A Simple Emergency-Sign Watch Kit</h2>
           <p>
-            Three everyday physical supplies match the
-            gum-check, poison-control, and
-            collapse-transport copy above: an LED
-            medical penlight so pale, white, blue, or
-            grey gums and sudden pupil or eye changes
-            can be checked in low light against the
-            individual baseline this page tells owners
-            to learn, a pet emergency contact card so
-            the ASPCA Animal Poison Control number
-            (888-426-4435) and the nearest emergency
-            clinic stay visible, and a folding pet
-            stretcher for a dog that collapses or
-            cannot support its own weight. These are
-            household watch-and-transport tools, not
-            treatments. They do not diagnose a
-            symptom, they do not replace a phone call
-            to the emergency clinic, they do not
-            replace ASPCA Poison Control, they do not
-            treat GDV, seizure, poisoning, bleeding,
-            or eye trauma, and they are not a first-aid
-            kit. Vaccination record books, seat-belt
-            tethers, foldable waterproof puppy mats,
-            mosquito dunks, a monthly pill organizer,
-            a soft-sided vet-visit carrier, a gum-color
-            assessment chart, recovery food, a feeding
-            syringe, digital pet thermometers, and
-            high-value vet-visit treats already live
-            on other pages. This page does not claim
-            hands-on testing. </p>
+            These are household watch-and-transport tools, not treatments. They do not diagnose a symptom, they do not replace a phone call to the emergency clinic, they do not replace ASPCA Poison Control, they do not treat GDV, seizure, poisoning, bleeding, or eye trauma, and they are not a first-aid kit. </p>
 
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/led+medical+penlight?s=health-dog-symptoms-guide", "/go/amazon-brand/pet+emergency+contact+card?s=health-dog-symptoms-guide", "/go/amazon-brand/folding+pet+stretcher?s=health-dog-symptoms-guide"]} />
 

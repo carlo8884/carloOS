@@ -243,7 +243,7 @@ export default function InsuranceReimbursementEstimatorPage() {
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/pet+first+aid+kit?s=tools-insurance-reimbursement-estimator", "/go/amazon-brand/digital+pet+thermometer?s=tools-insurance-reimbursement-estimator", "/go/amazon-brand/digital+pet+scale?s=tools-insurance-reimbursement-estimator", "/go/amazon-brand/pet+recovery+cone?s=tools-insurance-reimbursement-estimator", "/go/amazon-brand/pet+calming+aid?s=tools-insurance-reimbursement-estimator"]} />
           <div className="mt-4 rounded-xl border border-brand-border bg-brand-surface p-5">
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Shop a home-care prep kit
+              Shop these supplies
             </div>
             <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">A first-aid kit, a digital thermometer, a pet scale, a recovery
               cone, and a calming aid are the home-care items owners often keep

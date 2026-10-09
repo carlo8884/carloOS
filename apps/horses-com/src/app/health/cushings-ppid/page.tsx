@@ -123,22 +123,7 @@ export default function PPIDPage() {
           />
           <div className="mb-8">
             <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the stainless-horse-shedding-blade,
-              wicking-horse-anti-sweat-sheet, and
-              automatic-horse-waterer notes that match
-              the failed-shed coat, heavy-coat-impairs-
-              cooling, and increased-drinking copy on
-              this page — a shedding blade so the long
-              curly coat is lifted between clips, a
-              wicking anti-sweat sheet so a clipped or
-              still-coated horse can cool, and an
-              automatic waterer so extra thirst is not
-              a dry bucket. Educational coat-and-cooling
-              checklist, not a treatment, not pergolide
-              or an ACTH kit, not a substitute for
-              calling the veterinarian, and not a
-              clipper, hay-bale-scale, or grazing-muzzle
-              hop. No spam.
+              Keep these on hand: a shedding blade so the long curly coat is lifted between clips, a wicking anti-sweat sheet so a clipped or still-coated horse can cool, and an automatic waterer so extra thirst is not a dry bucket. Educational coat-and-cooling checklist, not a treatment, not pergolide or an ACTH kit, not a substitute for calling the veterinarian, and not a clipper, hay-bale-scale, or grazing-muzzle hop.
             </p>
 
           </div>
@@ -171,34 +156,16 @@ export default function PPIDPage() {
 
           <h2 id="management">Management</h2>
           <ul>
-            <li><strong>Manage the failed-shed coat.</strong> Hypertrichosis is the most specific sign; the long curly coat stays after spring. A stainless shedding blade is how that coat is lifted between clips — it is not a curry comb or dandy brush (those live on grooming) and not horse clippers (those live on body-clipping).</li>
-            <li><strong>Help the horse cool.</strong> The heavy coat impairs cooling, and some PPID horses sweat abnormally. A wicking anti-sweat sheet is how a clipped or still-coated horse sheds heat after work — it is not an Irish-knit cooler or a wool quarter sheet (those live on tying-up), not a fleece cooler (that lives on body-clipping), and not a sweat scraper (that lives on summer-heat-care).</li>
-            <li><strong>Keep water in front of them.</strong> Increased drinking and urination show up in some horses. An automatic waterer is how that extra thirst is not a dry bucket — it is not a color-coded flat-back bucket (that lives on strangles) and not a tank heater (that lives on winter-care).</li>
-            <li><strong>Match the diet to metabolic status</strong> and watch laminitis risk. Hanging hay-bale scales, NSC hay-test kits, and strip-grazing posts already live on EMS; grazing muzzles already live on laminitis. This page does not re-ship those hops.</li>
+            <li><strong>Manage the failed-shed coat.</strong> Hypertrichosis is the most specific sign; the long curly coat stays after spring. A stainless shedding blade is how that coat is lifted between clips — it is not a curry comb or dandy brush and not horse clippers.</li>
+            <li><strong>Help the horse cool.</strong> The heavy coat impairs cooling, and some PPID horses sweat abnormally. A wicking anti-sweat sheet is how a clipped or still-coated horse sheds heat after work — it is not an Irish-knit cooler or a wool quarter sheet, not a fleece cooler, and not a sweat scraper.</li>
+            <li><strong>Keep water in front of them.</strong> Increased drinking and urination show up in some horses. An automatic waterer is how that extra thirst is not a dry bucket — it is not a color-coded flat-back bucket and not a tank heater.</li>
+            <li><strong>Match the diet to metabolic status</strong> and watch laminitis risk. This page does not re-ship those hops.</li>
             <li><strong>Leave medication, dental work, and infection treatment to the veterinarian.</strong> Pergolide, ACTH monitoring, and systemic drugs are not shoppable hops.</li>
           </ul>
 
-          <h2 id="kit">Coat-and-cooling kit</h2>
+          <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Everyday physical supplies that match the
-            failed-shed coat, heavy-coat-impairs-cooling,
-            and increased-drinking copy on this page — a
-            stainless shedding blade so the long curly
-            coat is lifted between clips, a wicking
-            anti-sweat sheet so the horse can cool, and
-            an automatic waterer so extra thirst is not
-            a dry bucket. These are educational barn
-            tools, not a ranked product list, not a
-            substitute for veterinary care, and not
-            pergolide, an ACTH kit, or a diagnosis.
-            Clippers already live on body-clipping.
-            Hay-bale scales and NSC kits already live
-            on EMS. Grazing muzzles already live on
-            laminitis. Coolers and quarter sheets
-            already live on tying-up. This page does
-            not hop medications, vaccines, or endocrine
-            test kits. This page does not claim
-            hands-on testing.
+            Keep these on hand: a stainless shedding blade so the long curly coat is lifted between clips, a wicking anti-sweat sheet so the horse can cool, and an automatic waterer so extra thirst is not a dry bucket. These are educational barn tools, not a ranked product list, not a substitute for veterinary care, and not pergolide, an ACTH kit, or a diagnosis.
           </p>
 
           <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/stainless+horse+shedding+blade?s=health-ppid", "/go/amazon-brand/wicking+horse+anti+sweat+sheet?s=health-ppid", "/go/amazon-brand/automatic+horse+waterer?s=health-ppid"]} />
@@ -254,35 +221,10 @@ export default function PPIDPage() {
               are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the PPID coat-and-cooling kit
+              Shop these supplies
             </div>
             <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page failed-shed coat, heavy-coat-
-              impairs-cooling, and increased-drinking
-              copy — a stainless shedding blade, a
-              wicking anti-sweat sheet, and an automatic
-              waterer. Educational barn tools only.
-              Hopping pergolide, ACTH kits, or clippers
-              is not the job of this kit. They are not
-              a ranked product list, they are not a
-              substitute for veterinary care, they are
-              not a #1107 hoof-angle-gauge / lunge-
-              cavesson / overreach-bell-boots hop, they
-              are not a #1106 arena-drag / polo-wrap /
-              paddock-panel hop, they are not a #1105
-              hay-bale-scale / NSC-hay-test-kit /
-              strip-grazing-posts hop, they are not a
-              #1104 run-in-shelter / grooming-caddy /
-              blanket-wash-bag hop, they are not a
-              #1103 mud-grid / turnout-boot / leg-towel
-              hop, they are not a #1102 Irish-knit-
-              cooler / quarter-sheet / loose-salt hop,
-              they are not a body-clipping clipper hop,
-              they are not an EMS diet-management hop,
-              they are not a laminitis grazing-muzzle
-              hop, and they do not replace a
-              veterinarian.
+              Keep these on hand: a stainless shedding blade, a wicking anti-sweat sheet, and an automatic waterer. Educational barn tools only. Hopping pergolide, ACTH kits, or clippers is not the job of this kit.
             </p>
             <div className="flex flex-col gap-3">
               <ShopCtas

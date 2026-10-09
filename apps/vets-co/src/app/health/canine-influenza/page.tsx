@@ -54,59 +54,17 @@ export default function CanineInfluenzaPage() {
 
           <h2 id="kit">Dog-flu isolation kit</h2>
           <p>
-            Everyday physical supplies that match the
-            post-boarding isolation, surface-cleanup,
-            and respiratory-monitoring copy on this
-            page — a double-door wire dog crate so
-            the returning dog spends the 7-day
-            isolation in a separate room, a pet-safe
-            kennel disinfectant spray so bowls and
-            kennel surfaces get a pass after boarding
-            or daycare, and an analog wall clock with
-            a second hand so rapid or labored
-            breathing gets a one-minute count during
-            rest. These are household isolation
-            tools, not treatments. They do not
-            prevent canine influenza, they do not
-            replace a veterinarian-recommended
-            vaccine, and they are not a ranked
-            product list. Recovery crates, soft-sided
-            crates, wire crates with divider panels,
-            airline crates, heavy-duty exercise pens,
-            accelerated hydrogen-peroxide
-            disinfectant, digital pet thermometers,
-            cool-mist humidifiers, and handheld
-            stopwatches already live on other pages. This page does not
-            hop canine influenza vaccine, Tamiflu,
-            oseltamivir, Nobivac, or other Rx ASINs.
-            This page does not claim hands-on
-            testing.
+            Keep these on hand: a double-door wire dog crate so the returning dog spends the 7-day isolation in a separate room, a pet-safe kennel disinfectant spray so bowls and kennel surfaces get a pass after boarding or daycare, and an analog wall clock with a second hand so rapid or labored breathing gets a one-minute count during rest. These are household isolation tools, not treatments. They do not prevent canine influenza, they do not replace a veterinarian-recommended vaccine, and they are not a ranked product list.
           </p>
 
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/double+door+wire+dog+crate?s=health-canine-influenza", "/go/amazon-brand/pet+safe+kennel+disinfectant+spray?s=health-canine-influenza", "/go/amazon-brand/analog+wall+clock+with+second+hand?s=health-canine-influenza"]} />
 
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the dog-flu isolation kit
+              Shop these supplies
             </div>
             <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page post-boarding isolation,
-              surface-cleanup, and
-              respiratory-monitoring copy — a
-              double-door wire dog crate, a pet-safe
-              kennel disinfectant spray, and an analog
-              wall clock with a second hand. Everyday
-              physical supplies only. They are not a
-              ranked product list, they are not a
-              vaccine or antiviral hop, they are not a
-              #1072 tick-hook / flea-comb / ID-card
-              hop, they are not a #1071 expanding-file
-              / urine-cup / 12-hour-timer hop, they
-              are not a recovery-crate / soft-sided
-              crate / humidifier / thermometer hop,
-              and they do not replace a veterinarian. Empty
-              Chewy buttons stay hidden.
+              Keep these on hand: a double-door wire dog crate, a pet-safe kennel disinfectant spray, and an analog wall clock with a second hand. Everyday physical supplies only.
             </p>
             <div className="flex flex-col gap-3">
               <ShopCtas

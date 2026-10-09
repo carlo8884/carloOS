@@ -136,13 +136,13 @@ export default function SummerHeatCarePage() {
           <ul>
             <li><strong>Work in the cool hours</strong> of early morning or evening and reduce intensity on hot, humid days.</li>
             <li><strong>Cool actively after work</strong> with copious cold water applied and scraped off repeatedly with a sweat scraper -- continuous cold-water application is the fastest safe method. The scraper lets water carry heat off the coat instead of sitting as a warm film.</li>
-            <li><strong>Provide shade, airflow, and fans</strong> and avoid trailering in the heat of the day. A shade cloth over a run-in or paddock adds shade when tree cover is thin; stall fans already live on other horses.com pages and stay off this kit.</li>
+            <li><strong>Provide shade, airflow, and fans</strong> and avoid trailering in the heat of the day.</li>
             <li><strong>Use the heat index</strong> (temperature plus humidity) to judge risk; high combined values call for caution or rest.</li>
             <li><strong>Keep water and electrolytes available</strong> and let the horse drink during and after work. Electrolyte products stay on the salt-and-electrolytes guide, not this page.</li>
           </ul>
 
           <h2 id="kit">Summer-Heat Kit</h2>
-          <p>Everyday physical supplies that match the cooling and shade copy above — a sweat scraper so cold water can be applied and scraped off repeatedly after work, plus a shade cloth when a run-in or paddock needs shade and tree cover is thin. These are not treatments for heat stroke or anhidrosis; a distressed horse, a very high temperature, a horse that has stopped sweating, or one that becomes weak or disoriented in the heat needs immediate aggressive cooling and a veterinarian. Fans, stall fans, electrolytes, digital thermometers, cool-water towels, fleece coolers, grazing muzzles, soil-test kits, hoof boots, and slow feeders stay off this kit — those already ship on other pages. This page does not claim hands-on testing.</p>
+          <p>Keep these on hand: a sweat scraper so cold water can be applied and scraped off repeatedly after work, plus a shade cloth when a run-in or paddock needs shade and tree cover is thin. These are not treatments for heat stroke or anhidrosis; a distressed horse, a very high temperature, a horse that has stopped sweating, or one that becomes weak or disoriented in the heat needs immediate aggressive cooling and a veterinarian. Fans, stall fans, electrolytes, digital thermometers, cool-water towels, fleece coolers, grazing muzzles, soil-test kits, hoof boots, and slow feeders stay off this kit — those already ship on other pages.</p>
 
           <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/horse+sweat+scraper?s=care-summer-heat-care", "/go/amazon-brand/horse+shade+cloth?s=care-summer-heat-care"]} />
 

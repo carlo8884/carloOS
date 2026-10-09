@@ -69,36 +69,12 @@ export default function GSHealthPage() {
 
         <h2>What I Watch for in My GSD Patients</h2>
         <p>Any hind limb incoordination after age 5: DM workup — neurological examination, MRI if indicated, DNA confirmation. Any episode of unproductive retching in a GSD: emergency evaluation — I would rather see a false alarm than miss a GDV. Gradual hind limb weakness in a young GSD (under 3): OFA radiographs, orthopedic evaluation.</p>
-        <p>Feed twice daily rather than once, and avoid exercise immediately after eating. Self-adhesive file-folder labels are how the OFA hip-and-elbow result, the SOD1 DNA result, and the gastropexy note stay three labeled tabs — they are not round color-coding labels (that live on breed-specific-risk), not 3-tab dividers (that live on what-pet-insurance-covers), and not removable page flags (that live on what-pet-insurance-covers).</p>
+        <p>Feed twice daily rather than once, and avoid exercise immediately after eating. Self-adhesive file-folder labels are how the OFA hip-and-elbow result, the SOD1 DNA result, and the gastropexy note stay three labeled tabs — they are not round color-coding labels, not 3-tab dividers, and not removable page flags.</p>
         <p>GSDs stoically mask pain. A GSD that is &quot;slowing down&quot; or &quot;getting old&quot; may be in significant orthopedic pain that is genuinely manageable with treatment. Do not attribute behavioral changes to age without a veterinary evaluation first.</p>
 
-        <h2 id="kit">German-shepherd-health kit</h2>
+        <h2 id="kit">Supplies named on this page</h2>
         <p>
-          Everyday physical supplies that match the
-          DM, hip-dysplasia, and GDV copy on this
-          page — a top-bound steno pad so hind-
-          limb wobble and knuckling after age 5
-          stay a written DM-workup log, a
-          mechanical kitchen timer so the no-
-          exercise-right-after-eating rule stays a
-          timed rest, and self-adhesive file-
-          folder labels so OFA hip-and-elbow,
-          SOD1 DNA, and gastropexy notes stay
-          three labeled tabs. These are
-          educational German-shepherd-health /
-          paperwork tools, not a ranked product
-          list, not a substitute for veterinary
-          care, and not a treatment. Paint-chip
-          sample cards and 18-month wall calendars
-          already live on
-          golden-retriever-health. Flexible sewing
-          tape measures, bound composition books,
-          and letter-size document frames already
-          live on labrador-health. This page does
-          not hop medications, enzymes, wheelchairs,
-          or insurance brands as Amazon searches.
-          This page does not claim hands-on
-          testing.
+          Keep these on hand: a top-bound steno pad so hind- limb wobble and knuckling after age 5 stay a written DM-workup log, a mechanical kitchen timer so the no- exercise-right-after-eating rule stays a timed rest, and self-adhesive file- folder labels so OFA hip-and-elbow, SOD1 DNA, and gastropexy notes stay three labeled tabs. These are educational German-shepherd-health / paperwork tools, not a ranked product list, not a substitute for veterinary care, and not a treatment.
         </p>
 
         <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/top+bound+steno+pad?s=breeds-german-shepherd-health", "/go/amazon-brand/mechanical+kitchen+timer?s=breeds-german-shepherd-health", "/go/amazon-brand/self+adhesive+file+folder+labels?s=breeds-german-shepherd-health"]} />

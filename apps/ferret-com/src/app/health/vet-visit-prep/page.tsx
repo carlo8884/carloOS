@@ -140,7 +140,7 @@ export default function FerretVetVisitPrepPage() {
           <>
             <TableOfContents
               items={[
-                { label: 'TL;DR', href: '#tldr' },
+                { label: '', href: '#tldr' },
                 { label: 'Finding the Right Vet', href: '#vet' },
                 { label: 'Annual vs Sick Visit', href: '#visit-type' },
                 { label: 'What to Bring', href: '#bring' },
@@ -200,8 +200,7 @@ export default function FerretVetVisitPrepPage() {
           </p>
 
           <p>The exam, bloodwork, dental, and surgery figures below are typical US exotic-pet clinic ranges dated 2026-10-04.</p>
-          <h2 id="tldr">TL;DR</h2>
-          <p>
+                    <p>
             Use an exotic-pet vet, ideally an AEMV member or an ABVP
             Exotic Companion Mammal diplomate. Bring a familiar carrier,
             written notes on what you have observed, a current home

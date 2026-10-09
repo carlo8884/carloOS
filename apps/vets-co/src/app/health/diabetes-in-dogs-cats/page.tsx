@@ -90,8 +90,8 @@ export default function DiabetesPage() {
           <h2>Prognosis</h2>
           <p>With committed daily care, most diabetic dogs and cats live well for years. Cats may achieve remission with early, aggressive management. The disease is demanding for owners — daily injections, scheduled feeding, and regular rechecks — but the payoff is a comfortable pet with a normal quality of life. The pets that do poorly are usually those diagnosed late, with uncontrolled concurrent disease, or where treatment is inconsistent.</p>
 
-          <h2 id="kit">Home-care kit</h2>
-          <p>These are educational home-care and monitoring tools, not a ranked product list, not a substitute for veterinary care, and not a treatment for diabetes. Vetsulin, NPH, ProZinc, glargine, syringes, FreeStyle Libre, Dexcom, and prescription diabetic diets are not shoppable hops. Soft-sided vet-visit carriers already live on dog.com heartworm-prevention. This page does not claim hands-on testing.</p>
+          <h2 id="kit">Supplies named on this page</h2>
+          <p>Keep these on hand: insulated pet water bowl and airtight locking pet food bin. These are educational home-care and monitoring tools, not a ranked product list, not a substitute for veterinary care, and not a treatment for diabetes. Vetsulin, NPH, ProZinc, glargine, syringes, FreeStyle Libre, Dexcom, and prescription diabetic diets are not shoppable hops.</p>
 
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/insulated+pet+water+bowl?s=health-diabetes-in-dogs-cats", "/go/amazon-brand/airtight+locking+pet+food+bin?s=health-diabetes-in-dogs-cats"]} />
 

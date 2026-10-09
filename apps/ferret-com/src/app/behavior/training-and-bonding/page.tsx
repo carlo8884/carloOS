@@ -185,8 +185,7 @@ export default function FerretTrainingBondingPage() {
             from the first day in the home.
           </DropCap>
 
-          <h2 id="tldr">TL;DR</h2>
-          <p>
+                    <p>
             Ferrets train quickly to litter boxes, bite inhibition, and
             harness/leash work, but the methods differ from dog training in
             several specifics. Use food-reward operant conditioning with

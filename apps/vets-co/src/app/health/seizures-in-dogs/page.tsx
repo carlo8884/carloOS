@@ -79,7 +79,7 @@ export default function SeizuresPage() {
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
 
           <h2 id="kit">Seizure observation kit</h2>
-          <p>These are household tools, not treatments. They do not treat epilepsy, they do not replace a veterinarian or anti-seizure medication, and they are not a ranked product list.</p>
+          <p>Keep these on hand: digital handheld stopwatch and foam table edge bumper. These are household tools, not treatments. They do not treat epilepsy, they do not replace a veterinarian or anti-seizure medication, and they are not a ranked product list.</p>
 
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/digital+handheld+stopwatch?s=health-seizures-in-dogs", "/go/amazon-brand/foam+table+edge+bumper?s=health-seizures-in-dogs"]} />
 

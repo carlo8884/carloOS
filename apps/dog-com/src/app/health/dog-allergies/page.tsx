@@ -59,7 +59,7 @@ export default function DogAllergiesPage() {
           <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
 
           <p className="text-lg text-brand-text-mid leading-relaxed italic mb-6">
-            <strong className="not-italic">TL;DR.</strong> Dogs get three types of allergy — atopic dermatitis (the most common, environmental), cutaneous adverse food reaction, and contact allergy — plus flea allergy as the critical differential. The only validated food-allergy test is a strict 8–12 week elimination diet with provocation. First-line atopic therapy is oclacitinib (Apoquel) or lokivetmab (Cytopoint); antihistamines are unreliable.
+            Dogs get three types of allergy — atopic dermatitis (the most common, environmental), cutaneous adverse food reaction, and contact allergy — plus flea allergy as the critical differential. The only validated food-allergy test is a strict 8–12 week elimination diet with provocation. First-line atopic therapy is oclacitinib (Apoquel) or lokivetmab (Cytopoint); antihistamines are unreliable.
           </p>
 
           <div style={{ background: 'rgba(60, 90, 140, 0.06)', border: '1px solid rgba(60, 90, 140, 0.20)', borderRadius: '10px', padding: '16px 20px', marginBottom: '24px' }}>
@@ -156,7 +156,7 @@ export default function DogAllergiesPage() {
           </ul>
 
           <h2 id="kit">HEPA filtration kit</h2>
-          <p>Everyday physical supplies that match the environmental-measures copy above — a HEPA filtration air purifier and a replacement HEPA filter kit for homes where reducing airborne allergen load is part of supportive care. Chlorhexidine shampoo, ceramide bathing products, omega-3 / fish-oil supplements, hydrolyzed or novel-protein diets (Royal Canin Hydrolyzed Protein, Hill&apos;s z/d, Purina HA), Apoquel, Cytopoint, Atopica, antihistamines, and glucocorticoids stay educational copy only — this page never hops medicated shampoos, brand diets, or medications. This page does not claim hands-on testing.</p>
+          <p>Keep these on hand: a HEPA filtration air purifier and a replacement HEPA filter kit for homes where reducing airborne allergen load is part of supportive care. Chlorhexidine shampoo, ceramide bathing products, omega-3 / fish-oil supplements, hydrolyzed or novel-protein diets (Royal Canin Hydrolyzed Protein, Hill&apos;s z/d, Purina HA), Apoquel, Cytopoint, Atopica, antihistamines, and glucocorticoids stay educational copy only — this page never hops medicated shampoos, brand diets, or medications.</p>
 
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/hepa+air+purifier?s=health-dog-allergies", "/go/amazon-brand/hepa+filter+kit?s=health-dog-allergies"]} />
 

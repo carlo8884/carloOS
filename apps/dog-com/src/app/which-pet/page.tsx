@@ -262,7 +262,7 @@ export default function WhichPetPage() {
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/wire+dog+crate+with+divider+panel?s=which-pet", "/go/amazon-brand/puppy+food?s=which-pet", "/go/amazon-brand/julius+k9+idc+powerharness?s=which-pet", "/go/amazon-brand/dog+id+tag+collar?s=which-pet", "/go/amazon-brand/soft+dog+carrier?s=which-pet", "/go/amazon-brand/pet+first+aid+kit?s=which-pet"]} />
           <div className="mt-4 rounded-xl border border-brand-border bg-brand-white p-5">
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Shop a first-week starter kit
+              Shop these supplies
             </div>
             <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">If the wizard leans dog, these Amazon category searches are day-one
               husbandry items — a wire crate with a divider, puppy food, a harness,

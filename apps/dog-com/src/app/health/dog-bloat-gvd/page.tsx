@@ -99,30 +99,7 @@ export default function GdvPage() {
 
           <h2 id="kit">A Simple Dog Bloat / GDV Home-Care Kit</h2>
           <p>
-            Three everyday physical supplies match the
-            elevated-feeder-debate, slow-feeding, and
-            post-meal-rest copy above: a single
-            stainless floor dog bowl so a deep-chested
-            dog eats at floor level instead of from a
-            raised feeder, a wobble dog food dispenser
-            so a fast eater cannot gulp a bowl in
-            seconds, and a 30-minute sand hourglass
-            timer so fetch and yard sprints stay off
-            the half-hour after a meal. These are
-            household home-care tools, not treatments. They do not diagnose GDV, they do not
-            replace prophylactic gastropexy, they do
-            not replace the emergency vet, and they
-            are not a ranked product list. Maze
-            slow-feed dog bowls, slow-feeder dog bowls,
-            raised dog bowls, adjustable-height dog
-            bowls, elevated slow-feeder bowls, timed
-            automatic dog feeders, puzzle feeders,
-            Northmate interactive feeders, lick mats,
-            snuffle mats, indoor dog house-lines, 6-ft
-            dog leashes, dog long-line leashes, first-aid
-            kits, and emergency-contact cards already
-            live on other pages. This page does not claim
-            hands-on testing. </p>
+            Keep these on hand: single stainless floor dog bowl, wobble dog food dispenser, and 30 minute sand hourglass timer. These are household home-care tools, not treatments. They do not diagnose GDV, they do not replace prophylactic gastropexy, they do not replace the emergency vet, and they are not a ranked product list. </p>
 
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/single+stainless+floor+dog+bowl?s=health-dog-bloat-gvd", "/go/amazon-brand/wobble+dog+food+dispenser?s=health-dog-bloat-gvd", "/go/amazon-brand/30+minute+sand+hourglass+timer?s=health-dog-bloat-gvd"]} />
 

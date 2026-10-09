@@ -64,28 +64,9 @@ export default function AllergicReactionsPage() {
           <p>Any dog that has experienced a moderate or severe allergic reaction should have a conversation with a veterinarian about: identifying the trigger if possible (to avoid re-exposure), whether an epinephrine auto-injector is appropriate to keep at home, pre-medication protocols for future vaccines, and whether allergy testing is indicated. Dogs with a history of anaphylaxis to bee stings should have an EpiPen Jr prescribed and carried whenever the dog is outdoors during insect season.</p>
           <p>After a veterinarian has cleared a mild hive or contact flare — localized welts, the dog alert and breathing normally — household rinse-and-rest tools can limit leftover allergen on the coat and paws. Oatmeal dog shampoo rinses residual contact allergen from the coat after a mild hive flare; it is not a treatment for facial swelling or anaphylaxis. Dog paw cleaner wipes clear the investigating paw after a sting or outdoor allergen so the dog is less likely to lick that residue. A soft recovery collar keeps paws off swollen skin while you wait for the veterinarian; it does not open an airway and it is not an EpiPen. Ask your veterinarian which of these, if any, belong in this dog&rsquo;s kit. Prescription allergy drugs (Apoquel, Cytopoint) and antihistamine brand ASINs are not shoppable hops on this page — Benadryl dose guidance stays editorial only.</p>
 
-          <h2 id="kit">Home allergy-flare kit</h2>
+          <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Everyday physical supplies that match the mild-flare
-            rinse-and-rest copy on this page — oatmeal dog shampoo
-            to rinse a contact allergen after localized hives, dog
-            paw cleaner wipes for the investigating paw after a
-            sting or outdoor allergen, and a soft recovery collar
-            so the dog cannot scratch swollen skin while you wait
-            for the veterinarian. These are household tools, not
-            treatments. They do not treat anaphylaxis, they do not
-            replace epinephrine or a veterinarian, and they are not
-            Apoquel, Cytopoint, prescription antihistamines, or
-            Benadryl ASINs. This is not the sister ear-infections
-            page and it does not hop a dog ear-cleaner solution,
-            cotton balls for dog ears, or dog ear-drying powder. It
-            is not the UTI page and it does not hop a fountain,
-            pee pads, or a ceramic bowl. It is not the Dog.com
-            skin-allergies page and it does not hop bare dog paw
-            wipes or a chlorhexidine shampoo. It is not the
-            cherry-eye or hot-spots page and it does not hop a
-            soft e-collar or a soft recovery cone. This page does
-            not claim hands-on testing.
+            Keep these on hand: oatmeal dog shampoo to rinse a contact allergen after localized hives, dog paw cleaner wipes for the investigating paw after a sting or outdoor allergen, and a soft recovery collar so the dog cannot scratch swollen skin while you wait for the veterinarian. These are household tools, not treatments. They do not treat anaphylaxis, they do not replace epinephrine or a veterinarian, and they are not Apoquel, Cytopoint, prescription antihistamines, or Benadryl ASINs.
           </p>
 
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/oatmeal+dog+shampoo?s=health-allergic-reactions-dogs", "/go/amazon-brand/dog+paw+cleaner+wipes?s=health-allergic-reactions-dogs", "/go/amazon-brand/soft+recovery+collar+dog?s=health-allergic-reactions-dogs"]} />

@@ -137,8 +137,7 @@ export default function VetsBeagleHealthPage() {
             reviewedBy="Editorial team"
           />
 
-          <h2>TL;DR</h2>
-          <p>
+                    <p>
             The Beagle is a medium-small (20–30 lb), long-lived (12–15 years) scent hound with a focused set
             of predispositions: idiopathic epilepsy (the Beagle is a model breed in canine epilepsy
             research), Musladin-Lueke Syndrome, Imerslund-Gräsbeck Syndrome (selective cobalamin
@@ -171,12 +170,7 @@ export default function VetsBeagleHealthPage() {
               'Generalized tonic-clonic seizure (collapse, paddling, urination)',
               'Focal seizures: fly-biting, sudden chewing, staring episodes, transient behavior change',
               'Post-ictal phase: disorientation, blindness, ataxia lasting minutes to hours',
-              'Cluster seizures (≥2 in 24 h) or seizure >5 min — emergency',
-            ]}
-            management="Document seizures (date, duration, video). An analog stopwatch is how that duration stays a written count against the five-minute emergency line — it is not a mechanical kitchen timer (that lives on german-shepherd-health) and not a 48-hour digital kitchen timer (that lives on when-to-go-to-the-vet). Blank index cards are how each seizure stays one dated card — they are not ruled index cards (that live on questions-to-ask-your-vet), not a top-bound steno pad (that lives on german-shepherd-health), and not a bound composition book (that lives on labrador-health). Bloodwork, urinalysis and bile-acids to exclude metabolic causes; MRI and CSF analysis to exclude structural causes when indicated. Start chronic antiepileptic medication per ACVIM thresholds — commonly phenobarbital or levetiracetam, with potassium bromide as add-on. Refer cluster seizures, status epilepticus or drug-refractory cases to ACVIM neurology."
-            guideHref="/find-a-vet"
-            guideLabel="Find a veterinary neurologist →"
-          />
+              'Cluster seizures (≥2 in 24 h) or seizure >5 min — emergency', ]} management="Document seizures (date, duration, video). An analog stopwatch is how that duration stays a written count against the five-minute emergency line — it is not a mechanical kitchen timer and not a 48-hour digital kitchen timer. Blank index cards are how each seizure stays one dated card — they are not ruled index cards, not a top-bound steno pad, and not a bound composition book. Bloodwork, urinalysis and bile-acids to exclude metabolic causes; MRI and CSF analysis to exclude structural causes when indicated. Start chronic antiepileptic medication per ACVIM thresholds — commonly phenobarbital or levetiracetam, with potassium bromide as add-on. Refer cluster seizures, status epilepticus or drug-refractory cases to ACVIM neurology." guideHref="/find-a-vet" guideLabel="Find a veterinary neurologist →" />
 
           <CalloutBox variant="evidence" title="ACVIM 2016 Consensus on Canine Epilepsy">
             Podell M, Volk HA, Berendt M et al. <em>2015 ACVIM Small Animal Consensus Statement on Seizure
@@ -234,7 +228,7 @@ export default function VetsBeagleHealthPage() {
               'No abdominal tuck from the side',
               'Reduced exercise tolerance, reluctant to walk',
             ]}
-            management={'Measure every meal — never free-feed. A recipe-card box is how those measured meals stay one card per ration — it is not a four-tab divider (that lives on french-bulldog-health), not a weekly checklist notepad (that lives on french-bulldog-health), and not a hardcover weekly appointment planner. Body condition score monthly; target BCS 4–5. Subtract treats from the daily ration. Use puzzle feeders and snuffle mats to slow intake and provide enrichment. Prescription weight-loss diets (e.g., Hill\'s Metabolic, Royal Canin Satiety) for dogs that do not lose on portion control alone.'}
+            management={'Measure every meal — never free-feed. A recipe-card box is how those measured meals stay one card per ration — it is not a four-tab divider, not a weekly checklist notepad, and not a hardcover weekly appointment planner. Body condition score monthly; target BCS 4–5. Subtract treats from the daily ration. Use puzzle feeders and snuffle mats to slow intake and provide enrichment. Prescription weight-loss diets (e.g., Hill\'s Metabolic, Royal Canin Satiety) for dogs that do not lose on portion control alone.'}
           />
 
           <BreedHealthCard
@@ -308,31 +302,9 @@ export default function VetsBeagleHealthPage() {
             <a href="/reviews/best-pet-insurance">best pet insurance →</a>.
           </p>
 
-          <h2 id="kit">Beagle-health kit</h2>
+          <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Everyday physical supplies that match the
-            epilepsy, obesity, and screening copy on
-            this page — an analog stopwatch so
-            seizure duration stays a written count
-            against the five-minute emergency line,
-            blank index cards so each seizure
-            stays one dated card, and a recipe-card
-            box so measured meals stay one card per
-            ration. These are educational
-            Beagle-health / paperwork tools, not a
-            ranked product list, not a substitute
-            for veterinary care, and not a
-            treatment. Four-tab dividers, analog
-            outdoor thermometers, and weekly
-            checklist notepads already live on
-            french-bulldog-health. Top-bound steno
-            pads, mechanical kitchen timers, and
-            self-adhesive file-folder labels already
-            live on german-shepherd-health. This
-            page does not hop medications, enzymes,
-            or insurance brands as Amazon searches.
-            This page does not claim hands-on
-            testing.
+            Keep these on hand: an analog stopwatch so seizure duration stays a written count against the five-minute emergency line, blank index cards so each seizure stays one dated card, and a recipe-card box so measured meals stay one card per ration. These are educational Beagle-health / paperwork tools, not a ranked product list, not a substitute for veterinary care, and not a treatment.
           </p>
 
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/analog+stopwatch?s=breeds-beagle-health", "/go/amazon-brand/blank+index+cards?s=breeds-beagle-health", "/go/amazon-brand/recipe+card+box?s=breeds-beagle-health"]} />

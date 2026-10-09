@@ -129,7 +129,7 @@ export default function ShowJumpingPage() {
         ]}
         sidebar={<>
           <TableOfContents items={[
-            { label: 'TL;DR', href: '#tldr' },
+            { label: '', href: '#tldr' },
             { label: 'History &amp; Origins', href: '#history' },
             { label: 'Course Design Fundamentals', href: '#course' },
             { label: 'Levels — Crossrails to Grand Prix', href: '#levels' },
@@ -162,8 +162,7 @@ export default function ShowJumpingPage() {
             updatedAt="2026-05-28"
           />
 
-          <h2 id="tldr">TL;DR</h2>
-          <ul>
+                    <ul>
             <li><strong>What it is:</strong> a numbered course of jumps ridden against the clock under USEF Jumper and FEI Jumping rules; the horse with the fewest faults (and, in the jump-off, the fastest time) wins.</li>
             <li><strong>Scoring:</strong> 4 faults per knockdown; 4 faults per first refusal; time faults for exceeding the time allowed; elimination on the second refusal (current FEI rules).</li>
             <li><strong>Levels:</strong> from Schooling and Crossrails (2&apos;0″–2&apos;6″) through 1.60 m FEI Grand Prix and the Olympics.</li>

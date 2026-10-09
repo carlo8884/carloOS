@@ -125,7 +125,7 @@ export default function FerretCanineDistemperPage() {
           <>
             <TableOfContents
               items={[
-                { label: 'TL;DR', href: '#tldr' },
+                { label: '', href: '#tldr' },
                 { label: 'What the Virus Is', href: '#virus' },
                 { label: 'How It Spreads', href: '#spread' },
                 { label: 'Clinical Course', href: '#course' },
@@ -171,8 +171,7 @@ export default function FerretCanineDistemperPage() {
             the overwhelming case for prevention.
           </DropCap>
 
-          <h2 id="tldr">TL;DR</h2>
-          <p>
+                    <p>
             Canine distemper virus (CDV) is almost always fatal in unvaccinated
             ferrets once clinical signs appear. It spreads through respiratory
             secretions and contaminated objects, and can reach even

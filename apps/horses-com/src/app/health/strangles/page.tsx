@@ -150,34 +150,16 @@ export default function StranglesPage() {
           <h2 id="biosecurity">Biosecurity</h2>
           <ul>
             <li><strong>Isolate new arrivals</strong> for a quarantine period and monitor their temperature before mixing with the resident herd.</li>
-            <li><strong>Isolate sick horses immediately</strong> and use dedicated equipment, clothing, and handlers for them. Color-coded flat-back horse buckets are how an isolation horse drinks from its own pair instead of a shared trough — they are not a lidded 5-gallon feed-soaking pail (that lives on choke) and not a hay-soaking bag (that lives on heaves).</li>
+            <li><strong>Isolate sick horses immediately</strong> and use dedicated equipment, clothing, and handlers for them. Color-coded flat-back horse buckets are how an isolation horse drinks from its own pair instead of a shared trough — they are not a lidded 5-gallon feed-soaking pail and not a hay-soaking bag.</li>
             <li><strong>Stop all horse movement</strong> on and off the property during an outbreak.</li>
             <li><strong>Clean and disinfect</strong> shared equipment, water sources, stalls, and trailers; the organism persists in the environment. A heavy-duty rubber boot-dip tub at the isolation-stall door is how pus and nasal discharge stay off the next aisle — it is not a parvo shoe-cover hop, not a pump-sprayer hop, and not a kennel-disinfectant-spray hop.</li>
             <li><strong>Dedicated clothing for handlers</strong> of draining horses so contaminated jackets and jeans do not walk the barn. A disposable coverall suit is how that clothing stays in the isolation barn and comes off before the next stall — it is not a disposable shoe-cover hop and not a nitrile-exam-glove hop.</li>
             <li><strong>Screen recovered horses</strong> for the carrier state with your veterinarian before declaring the outbreak over.</li>
           </ul>
 
-          <h2 id="kit">Isolation-and-disinfect kit</h2>
+          <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Everyday physical supplies that match the
-            dedicated-equipment, dedicated-clothing, and
-            clean-and-disinfect copy on this page — color-coded
-            flat-back horse buckets so an isolation horse
-            drinks from its own pair instead of a shared
-            trough, a disposable coverall suit so the handler
-            of a draining horse wears clothing that stays in
-            that barn, and a heavy-duty rubber boot-dip tub
-            so pus and nasal discharge do not walk to the
-            next stall. These are educational biosecurity
-            tools, not a ranked product list, not a
-            substitute for veterinary care, and not a
-            treatment or a vaccine. Thermometers already live
-            on colic, the grimace scale, and the emergency
-            tool. Lidded 5-gallon feed-soaking pails already
-            live on choke. Hay-soaking bags already live on
-            heaves. Kennel-disinfectant spray already lives on canine
-            influenza. This page does not claim
-            hands-on testing. </p>
+            Keep these on hand: color-coded flat-back horse buckets so an isolation horse drinks from its own pair instead of a shared trough, a disposable coverall suit so the handler of a draining horse wears clothing that stays in that barn, and a heavy-duty rubber boot-dip tub so pus and nasal discharge do not walk to the next stall. These are educational biosecurity tools, not a ranked product list, not a substitute for veterinary care, and not a treatment or a vaccine. </p>
 
           <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/color+coded+flat+back+horse+buckets?s=health-strangles", "/go/amazon-brand/disposable+coverall+suit?s=health-strangles", "/go/amazon-brand/heavy+duty+rubber+boot+dip+tub?s=health-strangles"]} />
 

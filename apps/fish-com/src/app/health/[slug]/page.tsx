@@ -246,7 +246,7 @@ export default async function DiseasePage({ params }: PageProps) {
         <>
           <TableOfContents
             items={[
-              { label: 'TL;DR', href: '#tldr' },
+              { label: '', href: '#tldr' },
               { label: 'At a Glance', href: '#at-a-glance' },
               { label: 'Symptoms', href: '#symptoms' },
               { label: 'Causes', href: '#causes' },
@@ -284,7 +284,7 @@ export default async function DiseasePage({ params }: PageProps) {
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2026-05-28T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
 
         <p id="tldr">
-          <strong style={{ color: urgency.color }}>TL;DR — {urgency.label}.</strong> {buildTldr(disease)}
+          <strong style={{ color: urgency.color }}>{urgency.label}.</strong> {buildTldr(disease)}
         </p>
 
         {disease.mortality === 'Severe' && (

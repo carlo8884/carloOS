@@ -153,7 +153,7 @@ export default function HowToTakeDogsTemperaturePage() {
             reviewedBy="Editorial team"
           />
 
-          <CalloutBox variant="evidence" title="TL;DR — The numbers to know">
+          <CalloutBox variant="evidence" title="The numbers to know">
             <p>
               <strong>Temperature:</strong> 99.5–102.5 °F normal (rectal). 104.5 °F+ or under 99 °F: call your vet. 106 °F+: emergency.
             </p>

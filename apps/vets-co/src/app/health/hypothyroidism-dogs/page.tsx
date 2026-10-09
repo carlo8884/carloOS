@@ -58,7 +58,7 @@ export default function HypothyroidismDogsPage() {
           <p>The thyroid gland in the neck produces hormones that regulate the body&apos;s metabolic rate — essentially how fast cells burn energy. When the gland becomes underactive, metabolism slows across the board, affecting weight, energy, skin, coat, and even mood. In dogs, the cause is usually progressive immune-mediated destruction or atrophy of the gland. It is most common in middle-aged dogs of medium to large breeds.</p>
 
           <h2>Recognizing the Signs</h2>
-          <p>Classic signs are weight gain without overeating, lethargy and reduced activity, and skin and coat changes — thinning fur, a dull coat, symmetric hair loss over the trunk, darkened or thickened skin, and recurrent ear or skin infections. Some dogs seek out warm spots because they tolerate cold poorly. Occasionally hypothyroidism affects the nerves or causes a &quot;tragic&quot; facial expression from thickened skin. These signs accumulate gradually, which is why owners often attribute them to age. It does not diagnose thyroid disease. A quilted dog winter coat is how cold intolerance becomes a short outdoor layer instead of skipping the walk — it is not a fleece dog sweater (that lives on dog.com hypothyroidism), not a self-warming dog mat, not a plug-in heated pet mat (that lives on senior-pet-care), and not washable heat pants. It does not treat an underactive thyroid.</p>
+          <p>Classic signs are weight gain without overeating, lethargy and reduced activity, and skin and coat changes — thinning fur, a dull coat, symmetric hair loss over the trunk, darkened or thickened skin, and recurrent ear or skin infections. Some dogs seek out warm spots because they tolerate cold poorly. Occasionally hypothyroidism affects the nerves or causes a &quot;tragic&quot; facial expression from thickened skin. These signs accumulate gradually, which is why owners often attribute them to age. It does not diagnose thyroid disease. A quilted dog winter coat is how cold intolerance becomes a short outdoor layer instead of skipping the walk — it is not a fleece dog sweater, not a self-warming dog mat, not a plug-in heated pet mat, and not washable heat pants. It does not treat an underactive thyroid.</p>
 
           <h2>How It Is Diagnosed</h2>
           <p>Diagnosis relies on bloodwork, but interpretation requires care. A low total T4 supports the diagnosis but is not enough alone, because many unrelated illnesses and some medications lower T4 without true thyroid disease. Veterinarians therefore confirm with a fuller panel — free T4 and TSH — and avoid testing while a dog is acutely ill. Routine bloodwork in hypothyroid dogs often also shows elevated cholesterol, a supportive clue. Household scales, coats, and pill boxes do not replace that panel.</p>
@@ -69,31 +69,9 @@ export default function HypothyroidismDogsPage() {
           <h2>Long-Term Management</h2>
           <p>Once stabilized, hypothyroid dogs need only their daily medication and periodic monitoring bloodwork to confirm the dose remains appropriate as they age or change weight. The prognosis is excellent. Because the disease is lifelong but easily controlled, the main job for owners is consistency — giving the medication reliably and keeping up with recheck testing. A large platform digital bathroom scale is how a weight change between rechecks stays a number, not a guess. A quilted dog winter coat is still comfort for leftover cold intolerance while the coat fills back in. A weekly pill organizer with alarms is still the reminder that the daily tablet was given. None of those replace the veterinarian who reads the next T4.</p>
 
-          <h2 id="kit">Home-care kit</h2>
+          <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Everyday physical supplies that match the
-            weight-gain, cold-intolerance, and daily
-            thyroid-medication copy on this page — a
-            large platform digital bathroom scale so
-            weight gain despite normal eating is a
-            dated home number for the next T4 recheck,
-            a quilted dog winter coat so a dog that
-            seeks warm spots can still take a short
-            cold-weather walk, and a weekly pill
-            organizer with alarms so lifelong daily
-            hormone replacement stays a remembered
-            dose. These are educational home-care and
-            monitoring tools, not a ranked product
-            list, not a substitute for veterinary
-            care, and not a treatment for
-            hypothyroidism. Soloxine, Thyro-Tabs,
-            Synthroid, and levothyroxine are not
-            shoppable hops. Analog bathroom scales already live on
-            dog-cancer-signs. Wide-platform
-            veterinary floor scales already live on
-            pain-signs-dogs. AM/PM weekly pill organizers already live
-            on dog-liver-disease. This
-            page does not claim hands-on testing. </p>
+            Keep these on hand: a large platform digital bathroom scale so weight gain despite normal eating is a dated home number for the next T4 recheck, a quilted dog winter coat so a dog that seeks warm spots can still take a short cold-weather walk, and a weekly pill organizer with alarms so lifelong daily hormone replacement stays a remembered dose. These are educational home-care and monitoring tools, not a ranked product list, not a substitute for veterinary care, and not a treatment for hypothyroidism. Soloxine, Thyro-Tabs, Synthroid, and levothyroxine are not shoppable hops. </p>
 
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/large+platform+digital+bathroom+scale?s=health-hypothyroidism-dogs", "/go/amazon-brand/quilted+dog+winter+coat?s=health-hypothyroidism-dogs", "/go/amazon-brand/weekly+pill+organizer+with+alarms?s=health-hypothyroidism-dogs"]} />
 

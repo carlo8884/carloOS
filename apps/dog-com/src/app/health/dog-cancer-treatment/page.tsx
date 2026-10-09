@@ -83,32 +83,7 @@ export default function DogCancerTreatmentPage() {
 
           <h2 id="kit">A Simple Cancer-Treatment Home-Care Kit</h2>
           <p>
-            Three everyday physical supplies match the
-            post-excision, tripod-adaptation, and
-            small-meal copy above: a dog surgical
-            recovery suit so a mast-cell or
-            soft-tissue-sarcoma incision stays covered
-            while the pathologist evaluates clean versus
-            dirty margins, non-slip dog socks so a newly
-            tripod dog after osteosarcoma amputation has
-            indoor traction during the 2–4 week
-            adaptation window, and adjustable-height dog
-            bowls so small, frequent meals stay reachable
-            during the 2–3 day chemo GI window and after
-            oral-tumor surgery that may include partial
-            jaw removal. These are household home-care
-            tools, not treatments. They do not diagnose
-            cancer, they do not replace staging or an
-            oncologist consult, they do not set a CHOP,
-            doxorubicin, or carboplatin protocol, they
-            do not replace pain control or anti-nausea
-            medication, and they are not Palladia
-            (toceranib), Tanovea (rabacfosadine),
-            VERITAS, prednisone, Cerenia, maropitant,
-            mirtazapine, gabapentin, or a ranked
-            oncology product list. This page does
-            not hop medications. This page does not
-            claim hands-on testing. </p>
+            Keep these on hand: dog surgical recovery suit, non slip dog socks, and adjustable height dog bowls. These are household home-care tools, not treatments. They do not diagnose cancer, they do not replace staging or an oncologist consult, they do not set a CHOP, doxorubicin, or carboplatin protocol, they do not replace pain control or anti-nausea medication, and they are not Palladia (toceranib), Tanovea (rabacfosadine), VERITAS, prednisone, Cerenia, maropitant, mirtazapine, gabapentin, or a ranked oncology product list. </p>
 
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/dog+surgical+recovery+suit?s=health-dog-cancer-treatment", "/go/amazon-brand/non+slip+dog+socks?s=health-dog-cancer-treatment", "/go/amazon-brand/adjustable+height+dog+bowls?s=health-dog-cancer-treatment"]} />
 

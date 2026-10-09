@@ -190,7 +190,7 @@ export default function CardinalTetraPage() {
           />
         <StockImage manifestKey="fish-com:species-cardinal-tetra" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A cardinal tetra in a home aquarium." priority />
 
-          <CalloutBox variant="note" title="TL;DR">
+          <CalloutBox variant="note" title="In short">
             Cardinal tetras (Paracheirodon axelrodi) are blackwater micro-carnivores from
             the Rio Negro and Orinoco basins. They need soft, warm, acidic water
             (73–81°F, FishBase Paracheirodon axelrodi, <a className="break-all" href="https://www.fishbase.se/summary/Paracheirodon-axelrodi.html">https://www.fishbase.se/summary/Paracheirodon-axelrodi.html</a>, pH 5.0–7.0, GH 1–8) and schools of at least ten fish in a

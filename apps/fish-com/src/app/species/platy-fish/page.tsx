@@ -192,7 +192,7 @@ export default function PlatyPage() {
           />
         <StockImage manifestKey="fish-com:species-platy-fish" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A platy in a home aquarium." priority />
 
-          <CalloutBox variant="note" title="TL;DR">
+          <CalloutBox variant="note" title="In short">
             Platies (Xiphophorus maculatus) are the textbook beginner
             livebearer: hardy, adaptable to hard alkaline tap water,
             peaceful in community tanks, and available in dozens of color

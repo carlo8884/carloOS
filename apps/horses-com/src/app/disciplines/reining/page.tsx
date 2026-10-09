@@ -127,7 +127,7 @@ export default function ReiningPage() {
         ]}
         sidebar={<>
           <TableOfContents items={[
-            { label: 'TL;DR', href: '#tldr' },
+            { label: '', href: '#tldr' },
             { label: 'History &amp; Origins', href: '#history' },
             { label: 'The Maneuvers', href: '#maneuvers' },
             { label: 'Scoring', href: '#scoring' },
@@ -160,8 +160,7 @@ export default function ReiningPage() {
             updatedAt="2026-05-28"
           />
 
-          <h2 id="tldr">TL;DR</h2>
-          <ul>
+                    <ul>
             <li><strong>What it is:</strong> a western pattern class judged on prescribed maneuvers — sliding stops, spins, flying lead changes, rollbacks, large fast and small slow circles.</li>
             <li><strong>Scoring:</strong> each horse starts at 70; each maneuver scored -1.5 to +1.5 in half-point increments (0 = correct).</li>
             <li><strong>Governing body:</strong> NRHA (National Reining Horse Association) is the international governing body; USEF and FEI also recognize reining.</li>

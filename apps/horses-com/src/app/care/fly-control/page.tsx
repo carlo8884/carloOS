@@ -132,7 +132,7 @@ export default function FlyControlPage() {
           </ul>
 
           <h2 id="kit">Fly-Control Kit</h2>
-          <p>Everyday physical supplies that match the barrier, repellent, and environmental-management copy above — a well-fitted fly mask for the eyes and face, a breathable fly sheet, fly boots for the legs, a topical fly spray rated for horses, and fly traps placed away from the horses. These are not treatments for sweet itch, summer sores, eye infections, or bots; persistent rubbing, wounds, or eye discharge belongs with your veterinarian, not a mask or a spray. This page does not claim hands-on testing.</p>
+          <p>Keep these on hand: a well-fitted fly mask for the eyes and face, a breathable fly sheet, fly boots for the legs, a topical fly spray rated for horses, and fly traps placed away from the horses. These are not treatments for sweet itch, summer sores, eye infections, or bots; persistent rubbing, wounds, or eye discharge belongs with your veterinarian, not a mask or a spray.</p>
 
           <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/horse+fly+mask?s=care-fly-control", "/go/amazon-brand/horse+fly+sheet?s=care-fly-control", "/go/amazon-brand/horse+fly+boots?s=care-fly-control", "/go/amazon-brand/horse+fly+spray?s=care-fly-control", "/go/amazon-brand/horse+fly+trap?s=care-fly-control"]} />
 

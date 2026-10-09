@@ -52,46 +52,21 @@ export default function DogVaccinationsGuidePage() {
         <div className="carloOS-article">
 
           <h2>Core Vaccines — Every Dog Regardless of Lifestyle</h2>
-          <p><strong>Rabies:</strong> Required by law in virtually all US states and many countries. Fatal in all mammals including humans. No treatment exists for clinical rabies — prevention is the only option. Initial vaccine at 12–16 weeks, booster at 1 year, then every 1 or 3 years depending on state law and vaccine product label. Rabies vaccination certificates must be kept current for legal compliance. Letter-size thermal laminating pouches are how that certificate — and a later titer printout — stay a pocketable legal copy at boarding or a state checkpoint instead of a crumpled clinic slip. They are not a pet vaccination record book (those live on dog.com vaccinations), not a letter-size plastic file box (that lives on senior-pet-care), and not a letter-size expanding file organizer (that lives on senior-bloodwork-guide). A laminating pouch does not vaccinate a dog and it does not replace the veterinarian who signs the certificate.</p>
-          <p><strong>DA2PP (Distemper, Adenovirus-2, Parvovirus, Parainfluenza):</strong> A combination vaccine protecting against four diseases. Canine parvovirus is highly contagious and fatal in unvaccinated puppies — it survives in the environment for months to years and is resistant to most common disinfectants. Canine distemper causes severe multisystemic disease including neurological damage. Puppy series starting at 6–8 weeks, every 3–4 weeks until 16 weeks, booster at 12–16 months, then every 3 years in documented adult dogs. Until that 14–16 week final puppy dose, shared water bowls at parks and boarding kennels are an exposure the series is still building toward. A collapsible silicone travel dog bowl is how a carried sip stays the puppy&apos;s own bowl on those clinic-series trips — it is not a 24-ounce stainless hiking dog bottle (that lives on leptospirosis), not an insulated pet water bowl (that lives on diabetes-in-dogs-cats), and not a foldable waterproof puppy mat (that lives on dog.com vaccinations).</p>
+          <p><strong>Rabies:</strong> Required by law in virtually all US states and many countries. Fatal in all mammals including humans. No treatment exists for clinical rabies — prevention is the only option. Initial vaccine at 12–16 weeks, booster at 1 year, then every 1 or 3 years depending on state law and vaccine product label. Rabies vaccination certificates must be kept current for legal compliance. Letter-size thermal laminating pouches are how that certificate — and a later titer printout — stay a pocketable legal copy at boarding or a state checkpoint instead of a crumpled clinic slip. They are not a pet vaccination record book, not a letter-size plastic file box, and not a letter-size expanding file organizer. A laminating pouch does not vaccinate a dog and it does not replace the veterinarian who signs the certificate.</p>
+          <p><strong>DA2PP (Distemper, Adenovirus-2, Parvovirus, Parainfluenza):</strong> A combination vaccine protecting against four diseases. Canine parvovirus is highly contagious and fatal in unvaccinated puppies — it survives in the environment for months to years and is resistant to most common disinfectants. Canine distemper causes severe multisystemic disease including neurological damage. Puppy series starting at 6–8 weeks, every 3–4 weeks until 16 weeks, booster at 12–16 months, then every 3 years in documented adult dogs. Until that 14–16 week final puppy dose, shared water bowls at parks and boarding kennels are an exposure the series is still building toward. A collapsible silicone travel dog bowl is how a carried sip stays the puppy&apos;s own bowl on those clinic-series trips — it is not a 24-ounce stainless hiking dog bottle, not an insulated pet water bowl, and not a foldable waterproof puppy mat.</p>
 
           <h2>Non-Core Vaccines — Lifestyle Dependent</h2>
-          <p><strong>Bordetella bronchiseptica (kennel cough):</strong> Recommended for any dog with exposure to other dogs — boarding, daycare, dog parks, training classes, grooming salons, dog shows. Bordetella is highly contagious via respiratory secretions. Intranasal or oral administration provides local immunity faster (within 72 hours) than injectable — important before boarding. Annual booster; some facilities require every 6 months. A 72-hour digital countdown timer is how that boarding window is a counted 72 hours after the intranasal dose instead of a guessed morning — it is not a 12-hour mechanical kitchen timer (that lives on senior-bloodwork-guide), not an analog wall clock with a second hand (that lives on canine-influenza), and it is not a Bordetella product. The timer does not confer immunity. A collapsible silicone travel dog bowl is how boarding water is a carried bowl instead of a shared kennel bucket — the same high-contact setting that is why Bordetella is a lifestyle vaccine in the first place.</p>
+          <p><strong>Bordetella bronchiseptica (kennel cough):</strong> Recommended for any dog with exposure to other dogs — boarding, daycare, dog parks, training classes, grooming salons, dog shows. Bordetella is highly contagious via respiratory secretions. Intranasal or oral administration provides local immunity faster (within 72 hours) than injectable — important before boarding. Annual booster; some facilities require every 6 months. A 72-hour digital countdown timer is how that boarding window is a counted 72 hours after the intranasal dose instead of a guessed morning — it is not a 12-hour mechanical kitchen timer, not an analog wall clock with a second hand, and it is not a Bordetella product. The timer does not confer immunity. A collapsible silicone travel dog bowl is how boarding water is a carried bowl instead of a shared kennel bucket — the same high-contact setting that is why Bordetella is a lifestyle vaccine in the first place.</p>
           <p><strong>Lyme disease:</strong> Recommended in tick-endemic areas — Northeast, Upper Midwest, Pacific Northwest. Two initial doses 3–4 weeks apart, then annual booster. Does not replace tick prevention — use both. The Lyme vaccine reduces disease severity if a vaccinated dog is infected but does not provide complete protection.</p>
           <p><strong>Canine influenza (H3N2/H3N8):</strong> For dogs with high-contact lifestyles — boarding, dog shows, competition events, grooming salons. Influenza outbreaks occur periodically in dog populations and can be severe. Two initial doses 3–4 weeks apart, then annual booster. A carried travel bowl is household hygiene at those same high-contact drops; it is not a kennel disinfectant spray and it is not an influenza vaccine.</p>
 
           <h2>Titer Testing</h2>
           <p>Titer tests measure circulating antibody levels against specific pathogens — they assess whether a prior vaccine generated a protective immune response. Positive titers for parvovirus, distemper, and adenovirus indicate likely immunity and can support a decision to defer revaccination. The Vaccicheck in-clinic titer test provides same-day results for these three antigens. Letter-size thermal laminating pouches are how that same-day printout rides with the rabies certificate instead of living in a glove-box pile — they are not a Vaccicheck kit, not a titer blood test, and not a clinic lab. A pouch does not measure antibodies.</p>
-          <p>Important limitations: titer testing cannot substitute for rabies vaccination in most US states (legal requirement regardless of titer status). Titers measure one arm of immunity — circulating antibodies — and do not capture cell-mediated immunity. A negative titer does not definitively mean the dog is unprotected; a positive titer does not guarantee protection against all strains. Titer testing is most useful for owners of adult dogs with documented vaccine history who want to minimize vaccine frequency. Documented history is a kept certificate and a kept printout. It is not a pet vaccination record book hop — that already lives on dog.com.</p>
+          <p>Important limitations: titer testing cannot substitute for rabies vaccination in most US states (legal requirement regardless of titer status). Titers measure one arm of immunity — circulating antibodies — and do not capture cell-mediated immunity. A negative titer does not definitively mean the dog is unprotected; a positive titer does not guarantee protection against all strains. Titer testing is most useful for owners of adult dogs with documented vaccine history who want to minimize vaccine frequency. Documented history is a kept certificate and a kept printout.</p>
 
-          <h2 id="kit">Home-care kit</h2>
+          <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Everyday physical supplies that match the
-            rabies-certificate, boarding-Bordetella,
-            titer-printout, and puppy-series copy on
-            this page — letter-size thermal laminating
-            pouches so the rabies certificate and
-            titer printout stay a pocketable legal
-            copy, a 72-hour digital countdown timer so
-            the intranasal Bordetella window is a
-            counted 72 hours, and a collapsible
-            silicone travel dog bowl so boarding
-            water is a carried bowl. These are
-            educational home-care / recordkeeping /
-            travel-prep / monitoring tools, not a
-            ranked product list, not a substitute for
-            veterinary care, and not a vaccine
-            product. Nobivac, DA2PP, Bordetella,
-            rabies, Lyme, influenza, and Vaccicheck
-            kits are clinic products, not shoppable
-            hops. Pet vaccination record books, dog
-            seat-belt tethers, and foldable waterproof
-            puppy mats already live on dog.com
-            vaccinations. Hinged cedar sandbox covers
-            already live on intestinal-parasites.
-            24-ounce stainless hiking dog bottles
-            already live on leptospirosis. This page
-            does not claim hands-on testing.
+            Keep these on hand: letter-size thermal laminating pouches so the rabies certificate and titer printout stay a pocketable legal copy, a 72-hour digital countdown timer so the intranasal Bordetella window is a counted 72 hours, and a collapsible silicone travel dog bowl so boarding water is a carried bowl. These are educational home-care / recordkeeping / travel-prep / monitoring tools, not a ranked product list, not a substitute for veterinary care, and not a vaccine product. Nobivac, DA2PP, Bordetella, rabies, Lyme, influenza, and Vaccicheck kits are clinic products, not shoppable hops.
           </p>
 
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/collapsible+silicone+travel+dog+bowl?s=health-dog-vaccinations-guide", "/go/amazon-brand/72+hour+digital+countdown+timer?s=health-dog-vaccinations-guide"]} />
@@ -151,30 +126,10 @@ export default function DogVaccinationsGuidePage() {
               are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the home-care kit
+              Shop these supplies
             </div>
             <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page rabies-certificate,
-              boarding-Bordetella, titer-printout, and
-              puppy-series copy — letter-size thermal
-              laminating pouches, a 72-hour digital
-              countdown timer, and a collapsible
-              silicone travel dog bowl. Educational
-              home-care / recordkeeping / travel-prep /
-              monitoring tools only.
-              They are not a ranked product list,
-              they are not a substitute for veterinary
-              care, they are not a #1090 sandbox-cover /
-              waste-scooper / yard hand-wash hop,
-              they are not a #1089 hiking-bottle /
-              nitrile-exam-glove / animal-proof trash-can
-              hop, they are not the dog.com
-              vaccination record-book / seat-belt-tether /
-              puppy-mat hops, they are not a Nobivac /
-              DA2PP / Bordetella / rabies / Lyme /
-              influenza / Vaccicheck hop, and they do
-              not replace a veterinarian.
+              Keep these on hand: letter-size thermal laminating pouches, a 72-hour digital countdown timer, and a collapsible silicone travel dog bowl. Educational home-care / recordkeeping / travel-prep / monitoring tools only.
             </p>
             <div className="flex flex-col gap-3">
               <ShopCtas

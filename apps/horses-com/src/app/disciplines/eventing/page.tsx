@@ -129,7 +129,7 @@ export default function EventingPage() {
         ]}
         sidebar={<>
           <TableOfContents items={[
-            { label: 'TL;DR', href: '#tldr' },
+            { label: '', href: '#tldr' },
             { label: 'History &amp; Origins', href: '#history' },
             { label: 'The Three Phases', href: '#phases' },
             { label: 'Levels — BN to CCI5*', href: '#levels' },
@@ -162,8 +162,7 @@ export default function EventingPage() {
             updatedAt="2026-05-28"
           />
 
-          <h2 id="tldr">TL;DR</h2>
-          <ul>
+                    <ul>
             <li><strong>What it is:</strong> a single combined-test competition of three phases — dressage, cross-country, and show jumping — judged on a combined penalty score; lowest score wins.</li>
             <li><strong>Format:</strong> One-Day (all three phases in one day at lower levels) or Three-Day (one phase per day, traditional format).</li>
             <li><strong>Levels:</strong> Beginner Novice through Advanced nationally (USEA); CCI1* through CCI5* internationally (FEI), each in -L (long) or -S (short) format.</li>

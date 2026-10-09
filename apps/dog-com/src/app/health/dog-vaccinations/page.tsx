@@ -101,24 +101,7 @@ export default function DogVaccinationsPage() {
 
           <h2 id="kit">A Simple Vaccine-Record-and-Clinic-Trip Kit</h2>
           <p>
-            Three everyday physical supplies match the
-            puppy-series, documented-history / titer, and
-            30–60 minute observation copy above: a pet
-            vaccination record book so the 6–8, 10–12, and
-            14–16 week dates, adult boosters, and titer
-            printouts stay in one official history, a dog
-            seat-belt tether for the repeated clinic trips
-            that series requires, and a foldable waterproof
-            puppy mat for waiting after vaccines while
-            watching for a reaction. These are household
-            record-and-logistics tools, not treatments. They do not vaccinate a dog, they do not
-            replace a veterinarian-administered core or
-            lifestyle vaccine, they do not replace a titer
-            blood test, and they are not Nobivac, DA2PP,
-            Bordetella, rabies, Lyme, or influenza
-            products. This page
-            does not hop vaccines or medications. This
-            page does not claim hands-on testing. </p>
+            Keep these on hand: pet vaccination record book, dog seat belt tether, and foldable waterproof puppy mat. These are household record-and-logistics tools, not treatments. They do not vaccinate a dog, they do not replace a veterinarian-administered core or lifestyle vaccine, they do not replace a titer blood test, and they are not Nobivac, DA2PP, Bordetella, rabies, Lyme, or influenza products. </p>
 
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/pet+vaccination+record+book?s=health-dog-vaccinations", "/go/amazon-brand/dog+seat+belt+tether?s=health-dog-vaccinations", "/go/amazon-brand/foldable+waterproof+puppy+mat?s=health-dog-vaccinations"]} />
 

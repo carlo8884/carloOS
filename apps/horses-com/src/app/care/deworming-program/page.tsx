@@ -140,7 +140,7 @@ export default function DewormingProgramPage() {
           </ul>
 
           <h2 id="kit">FEC sampling kit</h2>
-          <p>Everyday physical supplies that match the fecal-egg-count and pasture-cleanup copy on this page — an equine fecal-sample container so a labeled fresh pile reaches the clinic, a pasture manure rake so piles come off the grass between samples, and a stable muck cart so those piles leave the paddock. These are household barn tools, not treatments. They do not deworm a horse, they do not replace a veterinarian or a fecal egg count, and they are not a ranked product list. This page does not claim hands-on testing.</p>
+          <p>Keep these on hand: an equine fecal-sample container so a labeled fresh pile reaches the clinic, a pasture manure rake so piles come off the grass between samples, and a stable muck cart so those piles leave the paddock. These are household barn tools, not treatments. They do not deworm a horse, they do not replace a veterinarian or a fecal egg count, and they are not a ranked product list.</p>
 
           <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/equine+fecal+sample+container?s=care-deworming-program", "/go/amazon-brand/pasture+manure+rake?s=care-deworming-program", "/go/amazon-brand/stable+muck+cart?s=care-deworming-program"]} />
 

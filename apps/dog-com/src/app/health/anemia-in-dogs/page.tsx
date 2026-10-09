@@ -73,19 +73,7 @@ export default function DogAnemiaPage() {
 
           <h2 id="kit">A Simple Pale-Gums Watch Kit</h2>
           <p>
-            Three everyday physical supplies match the
-            pale-gums and reduced-appetite copy above: a
-            dog gum-color assessment chart so pale, white,
-            or gray gums have a shared color word for the
-            veterinarian, high-calorie dog recovery food
-            when appetite drops, and a pet oral feeding
-            syringe for offering blended soft food. These
-            are household watch-and-feed tools, not
-            treatments. They do not diagnose anemia, they
-            do not replace a CBC or a packed-cell-volume
-            reading, they are not iron supplements, they
-            are not a transfusion, and they are not
-            prednisolone, azathioprine, or mycophenolate. This page does not claim hands-on testing. </p>
+            Keep these on hand: dog gum color assessment chart, high calorie dog recovery food, and pet oral feeding syringe. These are household watch-and-feed tools, not treatments. They do not diagnose anemia, they do not replace a CBC or a packed-cell-volume reading, they are not iron supplements, they are not a transfusion, and they are not prednisolone, azathioprine, or mycophenolate. </p>
 
           <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/dog+gum+color+assessment+chart?s=health-anemia-in-dogs", "/go/amazon-brand/high+calorie+dog+recovery+food?s=health-anemia-in-dogs", "/go/amazon-brand/pet+oral+feeding+syringe?s=health-anemia-in-dogs"]} />
 

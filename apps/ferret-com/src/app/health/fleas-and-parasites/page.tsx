@@ -130,7 +130,7 @@ export default function FerretFleasParasitesPage() {
           <>
             <TableOfContents
               items={[
-                { label: 'TL;DR', href: '#tldr' },
+                { label: '', href: '#tldr' },
                 { label: 'Why Size Changes Everything', href: '#size' },
                 { label: 'Fleas', href: '#fleas' },
                 { label: 'Mites', href: '#mites' },
@@ -177,8 +177,7 @@ export default function FerretFleasParasitesPage() {
             the margins are not.
           </DropCap>
 
-          <h2 id="tldr">TL;DR</h2>
-          <p>
+                    <p>
             Ferrets are affected by fleas, mites (especially{' '}
             <a href="/health/ear-mites">ear mites</a>), heartworm, and intestinal
             parasites. Their small size raises the stakes: fleas can cause

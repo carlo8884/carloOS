@@ -159,7 +159,7 @@ export default function FilterGphCalculatorPage() {
           <TableOfContents
             items={[
               { label: 'The calculator', href: '#calculator' },
-              { label: 'Shop a filter kit', href: '#shop' },
+              { label: 'Shop these supplies', href: '#shop' },
               { label: 'Turnover by tank style', href: '#bands' },
               { label: 'Rated-for vs real GPH', href: '#rated' },
               { label: 'FAQ', href: '#faq' },
@@ -209,7 +209,7 @@ export default function FilterGphCalculatorPage() {
         <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/aquaclear+70+filter?s=tools-filter-gph-calculator", "/go/amazon-brand/fluval+307+canister+filter?s=tools-filter-gph-calculator", "/go/amazon-brand/aquarium+filter+media?s=tools-filter-gph-calculator", "/go/amazon-brand/aquarium+sponge+filter?s=tools-filter-gph-calculator", "/go/amazon-brand/aquarium+powerhead?s=tools-filter-gph-calculator"]} />
         <div id="shop" className="mb-8 rounded-xl border border-brand-border bg-brand-surface p-5">
           <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Shop a filter kit
+            Shop these supplies
           </div>
           <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
           <div className="flex flex-col gap-3">

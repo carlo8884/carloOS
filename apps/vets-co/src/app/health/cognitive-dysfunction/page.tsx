@@ -68,26 +68,9 @@ export default function CognitiveDysfunctionPage() {
           <h2>Nighttime Management</h2>
           <p>Nighttime restlessness and vocalization is one of the most disruptive CDS signs for owners. The dog wanders, vocalizes, or appears confused at night — often the only time the owner is aware something is wrong. Management: melatonin as above, maintaining a consistent bedtime routine, keeping the dog in the bedroom where human presence is reassuring, night lights (disorientation is worse in darkness), and ensuring the dog is not in pain (pain can disrupt sleep in senior dogs independent of CDS — pain management may dramatically improve nighttime behavior).</p>
 
-          <h2 id="kit">Home-support kit</h2>
+          <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Everyday physical supplies that match the
-            enrichment and nighttime-management copy on
-            this page — a plug-in night light for the hall
-            the dog walks at night, a sniff box with new
-            objects for short scent sessions, and a senior
-            food-puzzle toy for brief enrichment. These are
-            household tools, not treatments. They do not
-            treat CDS, they do not replace a veterinarian,
-            and they are not Bright Mind brand ASINs,
-            Anipryl (selegiline), melatonin, or fish-oil
-            supplements. This is not the Dog.com
-            senior-dog-care page and it does not hop senior
-            dog food, joint-support treats, or a
-            portion-control scale. It is not the anxiety-in-dogs
-            page and it does not hop an anxiety vest,
-            pheromone diffuser, or heartbeat comfort toy.
-            It is not a puzzle-feeder or snuffle-mat hop.
-            This page does not claim hands-on testing.
+            Keep these on hand: a plug-in night light for the hall the dog walks at night, a sniff box with new objects for short scent sessions, and a senior food-puzzle toy for brief enrichment. These are household tools, not treatments. They do not treat CDS, they do not replace a veterinarian, and they are not Bright Mind brand ASINs, Anipryl (selegiline), melatonin, or fish-oil supplements. It is not a puzzle-feeder or snuffle-mat hop.
           </p>
 
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/plug+in+night+light?s=health-cognitive-dysfunction", "/go/amazon-brand/dog+sniff+box?s=health-cognitive-dysfunction", "/go/amazon-brand/senior+dog+food+puzzle?s=health-cognitive-dysfunction"]} />

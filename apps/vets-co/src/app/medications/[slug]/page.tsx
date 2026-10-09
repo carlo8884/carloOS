@@ -161,9 +161,6 @@ export default function MedicationPage({ params }: PageProps) {
 
         {/* TL;DR */}
         <section className="bg-brand-surface border border-brand-border rounded-xl p-6 mb-8 not-prose">
-          <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-2">
-            TL;DR
-          </div>
           <p className="text-brand-text-mid leading-relaxed m-0">{tldr(m)}</p>
         </section>
 

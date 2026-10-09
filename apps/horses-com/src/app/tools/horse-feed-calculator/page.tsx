@@ -160,7 +160,7 @@ export default function HorseFeedCalculatorPage() {
           <TableOfContents
             items={[
               { label: 'The calculator', href: '#calculator' },
-              { label: 'Shop a barn feed kit', href: '#shop' },
+              { label: 'Shop these supplies', href: '#shop' },
               { label: 'The math', href: '#math' },
               { label: 'How it works', href: '#methodology' },
               { label: 'Sources', href: '#sources' },
@@ -234,7 +234,7 @@ export default function HorseFeedCalculatorPage() {
         <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/timothy+hay+horse?s=tools-horse-feed-calculator", "/go/amazon-brand/horse+ration+balancer?s=tools-horse-feed-calculator", "/go/amazon-brand/horse+feed+scoop+scale?s=tools-horse-feed-calculator", "/go/amazon-brand/slow+feeder+hay+net+horse?s=tools-horse-feed-calculator", "/go/amazon-brand/equine+salt+lick?s=tools-horse-feed-calculator"]} />
         <div id="shop" className="mb-8 rounded-xl border border-brand-border bg-brand-surface p-5">
           <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Shop a barn feed kit
+            Shop these supplies
           </div>
           
           <div className="flex flex-col gap-3">

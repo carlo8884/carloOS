@@ -62,7 +62,7 @@ export default function KidneyDiseaseCatsPage() {
           <DropCap>The kidneys filter waste, balance fluids and electrolytes, regulate blood pressure, and support red blood cell production. In chronic kidney disease, functional kidney tissue (nephrons) is gradually lost and replaced by scar tissue. The decline is irreversible and tends to progress over months to years. Because cats compensate well, they often show no signs until a large fraction of kidney function is already gone — which is why screening older cats is so valuable.</DropCap>
 
           <h2>Signs to Watch For</h2>
-          <p>Early CKD is quiet. The first changes owners notice are usually increased thirst and urination, as the failing kidneys can no longer concentrate urine. Larger or more frequent litter clumps and an emptier water bowl are common early clues. A high-sided jumbo cat litter box is how those larger clumps stay a seen clue instead of a tracked scatter on the floor — it is not an extra cat litter box (that lives on FLUTD) and it is not a covered top-entry box that hides the clump. Household bowls and boxes do not diagnose CKD and they do not replace SDMA or creatinine. As disease advances, cats lose weight and muscle, eat less, develop a dull coat, may vomit, and become lethargic. Bad breath with a chemical odor, mouth ulcers, and dehydration appear in later stages. Any older cat losing weight or drinking more should be tested promptly.</p>
+          <p>Early CKD is quiet. The first changes owners notice are usually increased thirst and urination, as the failing kidneys can no longer concentrate urine. Larger or more frequent litter clumps and an emptier water bowl are common early clues. A high-sided jumbo cat litter box is how those larger clumps stay a seen clue instead of a tracked scatter on the floor — it is not an extra cat litter box and it is not a covered top-entry box that hides the clump. Household bowls and boxes do not diagnose CKD and they do not replace SDMA or creatinine. As disease advances, cats lose weight and muscle, eat less, develop a dull coat, may vomit, and become lethargic. Bad breath with a chemical odor, mouth ulcers, and dehydration appear in later stages. Any older cat losing weight or drinking more should be tested promptly.</p>
 
           <h2>Staging With IRIS</h2>
           <p>Veterinarians stage CKD using the International Renal Interest Society (IRIS) system, based primarily on blood creatinine and SDMA, then substaged by urine protein and blood pressure. Staging guides treatment and prognosis: a stage 2 cat may need only a renal diet and monitoring, while a stage 4 cat needs intensive support. Staging is repeated over time to track progression and adjust care.</p>
@@ -86,28 +86,9 @@ export default function KidneyDiseaseCatsPage() {
           <h2>Quality of Life and Prognosis</h2>
           <p>CKD is a marathon, not a sprint. Many cats diagnosed early live comfortably for years with diet and hydration support, with periodic rechecks to adjust treatment. The focus throughout is quality of life: a cat that is eating, hydrated, comfortable, and engaged is doing well regardless of bloodwork numbers. Honest, ongoing conversations with your veterinary team about how your cat is actually doing day to day guide both treatment intensity and, eventually, end-of-life decisions. The water bowl, warming plate, and litter box do not replace those conversations.</p>
 
-          <h2 id="kit">Home-care kit</h2>
+          <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Everyday physical supplies that match the
-            water-bowl, warming-food, and litter-clump
-            copy on this page — a wide-rim stainless
-            cat water bowl so an emptier bowl is a
-            seen refill, an electric pet-food warming
-            plate so the renal diet is warmed food the
-            cat will actually try, and a high-sided
-            jumbo cat litter box so larger or more
-            frequent clumps stay a seen early clue. These are educational home-care and
-            monitoring tools, not a ranked product
-            list, not a substitute for veterinary
-            care, and not a treatment for CKD. Hill&apos;s k/d, Royal Canin Renal,
-            phosphate binders, SQ fluid bags, needles,
-            and syringes are not shoppable hops. Insulated pet water bowls and airtight
-            locking pet-food bins already live on
-            diabetes. Heated pet mats already live on
-            senior-pet-care. Ceramic pet water bowls
-            and dog water fountains already live on
-            dog.com kidney-disease. This page does
-            not claim hands-on testing. </p>
+            Keep these on hand: a wide-rim stainless cat water bowl so an emptier bowl is a seen refill, an electric pet-food warming plate so the renal diet is warmed food the cat will actually try, and a high-sided jumbo cat litter box so larger or more frequent clumps stay a seen early clue. These are educational home-care and monitoring tools, not a ranked product list, not a substitute for veterinary care, and not a treatment for CKD. Hill&apos;s k/d, Royal Canin Renal, phosphate binders, SQ fluid bags, needles, and syringes are not shoppable hops. </p>
 
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/wide+rim+stainless+cat+water+bowl?s=health-kidney-disease-cats", "/go/amazon-brand/electric+pet+food+warming+plate?s=health-kidney-disease-cats", "/go/amazon-brand/high+sided+jumbo+cat+litter+box?s=health-kidney-disease-cats"]} />
 

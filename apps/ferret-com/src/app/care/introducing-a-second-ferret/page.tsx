@@ -204,21 +204,7 @@ export default function IntroducingSecondFerretPage() {
 
           <h2 id="kit">Quarantine &amp; bonding kit</h2>
           <p>
-            Everyday physical supplies that match the quarantine, scent-swap,
-            and neutral-ground copy on this page — an extra small-animal
-            travel kennel so the newcomer&apos;s quarantine check-up stays
-            in its own box, a scent-swap fleece sleep pouch so bedding can
-            move between cages before any face-to-face meeting, and a
-            portable small-animal playpen so the first sessions happen on
-            unfamiliar ground neither ferret owns. These are household
-            introduction tools, not treatments. They do not guarantee a
-            pairing, they do not replace a veterinary quarantine check,
-            they do not skip the separate-room window, and they are not a
-            ranked product list. Hard-sided ferret carriers, soft pet
-            carriers, top-loading small-animal carriers, ferret sleep
-            sacks, fleece small-animal bonding pouches, ferret hammocks,
-            Critter Nation cages, and puppy playpens already live on
-            other pages. This page does not claim hands-on testing. </p>
+            Keep these on hand: an extra small-animal travel kennel so the newcomer&apos;s quarantine check-up stays in its own box, a scent-swap fleece sleep pouch so bedding can move between cages before any face-to-face meeting, and a portable small-animal playpen so the first sessions happen on unfamiliar ground neither ferret owns. These are household introduction tools, not treatments. They do not guarantee a pairing, they do not replace a veterinary quarantine check, they do not skip the separate-room window, and they are not a ranked product list. </p>
 
           <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/extra+small+animal+travel+kennel?s=care-introducing-a-second-ferret", "/go/amazon-brand/portable+small+animal+playpen?s=care-introducing-a-second-ferret"]} />
 

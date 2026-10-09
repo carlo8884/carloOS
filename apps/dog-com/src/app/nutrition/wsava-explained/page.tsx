@@ -59,7 +59,7 @@ export default function WSAVAExplainedPage() {
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
 
         <p className="text-lg text-brand-text-mid leading-relaxed italic mb-6">
-          <strong className="not-italic">TL;DR.</strong> The World Small Animal Veterinary Association (WSAVA) does not certify dog foods; it publishes six questions for evaluating the manufacturer behind a food — whether the company employs board-certified nutritionists, runs feeding trials, owns its plants, and supports its formulas with research. Royal Canin, Hill&apos;s, and Purina Pro Plan consistently answer those questions yes.
+          The World Small Animal Veterinary Association (WSAVA) does not certify dog foods; it publishes six questions for evaluating the manufacturer behind a food — whether the company employs board-certified nutritionists, runs feeding trials, owns its plants, and supports its formulas with research. Royal Canin, Hill&apos;s, and Purina Pro Plan consistently answer those questions yes.
         </p>
 
         <h2>What Are WSAVA Guidelines?</h2>
