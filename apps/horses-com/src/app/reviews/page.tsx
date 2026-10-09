@@ -1,7 +1,7 @@
 import { HopDisclosure } from '../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, ShopCtas, CrossPortfolioCard, DirectoryPlacesCta, PriceAsOf, HubSearch, HubJumpNav } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, ShopCtas, CrossPortfolioCard, DirectoryPlacesCta, PriceAsOf, HubSearch, HubJumpNav, LastUpdated, ArticleSourcesList } from '@carloOS/ui'
 import listings from '../../data/directory-listings.json'
 import { PremiumMasthead } from '../../components/PremiumMasthead'
 
@@ -157,6 +157,7 @@ export default function HorsesReviewsPage() {
       />
       <div className="px-container-sm sm:px-container pt-6">
         <PriceAsOf date="2026-10-04" />
+        <LastUpdated date="2026-10-09" />
       </div>
 
       <nav className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
@@ -231,6 +232,12 @@ export default function HorsesReviewsPage() {
 
       <DirectoryPlacesCta listings={listings} noun="licensed equine professionals" />
       <CrossPortfolioCard currentSite="horses-com" contentType="gear" variant="footer" />
+          <ArticleSourcesList
+            title="Sources"
+            sources={[
+            { label: "American Association of Equine Practitioners owner resources", url: "https://aaep.org/", publisher: "AAEP" },
+            ]}
+          />
     </>
   )
 }

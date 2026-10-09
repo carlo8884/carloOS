@@ -1,7 +1,7 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, EmailCapture, FAQAccordion, QuietPartnerLink, RelatedLinks, buildArticleSchema, buildMetadata, PrimaryHop } from '@carloOS/ui'
+import { ArticleLayout, EmailCapture, FAQAccordion, QuietPartnerLink, RelatedLinks, buildArticleSchema, buildMetadata, PrimaryHop, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
@@ -77,6 +77,7 @@ export default function ClippedHorseBlanketGuidePage() {
       }
     >
       <div className="carloOS-article">
+          <LastUpdated date="2026-10-08" />
         <p>A clipped horse in January does not wear the same turnout as a hairy horse in a mild winter. The <Link href="/reviews/best-winter-horse-blankets">winter blanket review</Link> puts the heavy specification on the Schneiders StormShield Euro, and it tells milder climates to leave that blanket on the shelf. Size still comes first. A heavy blanket that pulls on the shoulder is a rub, not warmth. Use the <Link href="/tools/horse-blanket-size-calculator">blanket size calculator</Link> and the fit notes on the review.</p>
         <h2>The heavy blanket</h2>
         <p>The StormShield card lists a 1680-denier ballistic shell, heavier than the Rambo Original&apos;s 1000-denier shell, and fills of 300 and 360 grams. The neck is a full neck with a deep shoulder gusset. Hardware is stainless, with a double belly surcingle. The price in the review is $300–460. The review assigns it to New England, the Upper Midwest, the Mountain West, and Canadian winters, and to clipped competition horses in sustained cold. It does not publish a temperature cutoff beyond the climates and the “sub-zero” phrasing already on that listing.</p>
@@ -105,6 +106,13 @@ export default function ClippedHorseBlanketGuidePage() {
         />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
+                <ArticleSourcesList
+            title="Sources"
+            sources={[
+            { label: "Horseware", url: "https://www.horseware.com/", publisher: "Horseware" },
+            { label: "Weatherbeeta", url: "https://www.weatherbeeta.com/", publisher: "Weatherbeeta" },
+            ]}
+          />
       </div>
     </ArticleLayout>
   )

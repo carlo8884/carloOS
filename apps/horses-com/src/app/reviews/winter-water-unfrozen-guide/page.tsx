@@ -1,7 +1,7 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata, PrimaryHop } from '@carloOS/ui'
+import { ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata, PrimaryHop, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
@@ -80,6 +80,7 @@ export default function WinterWaterUnfrozenGuidePage() {
       }
     >
       <div className="carloOS-article">
+          <LastUpdated date="2026-10-08" />
         <p>The <Link href="/nutrition/water-requirements">water requirements page</Link> puts a number on ordinary drinking and then says winter is when the number fails. An idle adult horse drinks roughly 20 to 40 liters a day, about 5 to 10 gallons, in temperate conditions, with more in heat, work, dry forage, or lactation, and less on lush grass. The same page says too little water dries the gut into an impaction. That pattern is most common in winter, when icy water suppresses drinking just as the horse moves onto dry hay. The instruction is free-choice water that is available, unfrozen, and palatable, not a fixed bucket count.</p>
         <h2>What winter care adds</h2>
         <p>The <Link href="/care/winter-care">winter care page</Link> says the same thing in management language: horses drink less when water is icy, and reduced intake plus dry winter forage is a leading cause of impaction colic. Keeping water unfrozen, and offering slightly warmed water, is one of the most important winter tasks on that page. Heat for the horse itself, on the same page, comes from more hay, because fiber fermentation in the hindgut produces heat. Grain is not the warmth plan. A thick coat also hides weight loss, so the page says to feel the ribs rather than trust the eye.</p>
@@ -110,6 +111,12 @@ export default function WinterWaterUnfrozenGuidePage() {
           ]}
         />
       </div>
+          <ArticleSourcesList
+            title="Sources"
+            sources={[
+            { label: 'American Association of Equine Practitioners owner resources', url: 'https://aaep.org/', publisher: 'AAEP' },
+            ]}
+          />
     </ArticleLayout>
   )
 }

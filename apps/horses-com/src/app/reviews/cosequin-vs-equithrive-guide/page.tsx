@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { HopDisclosure } from '../../../components/HopDisclosure'
-import { ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: 'Cosequin vs Equithrive for Joints | Horses.com',
@@ -74,6 +74,7 @@ export default function CosequinVsEquithriveGuidePage() {
       priceAsOf="2026-10-08"
     >
       <div className="carloOS-article">
+          <LastUpdated date="2026-10-08" />
         <EmailCapture
           variant="inline"
           siteId="horses-com"
@@ -100,6 +101,12 @@ export default function CosequinVsEquithriveGuidePage() {
         <p>Cosequin ASU Plus is the joint pick because the current powder page lists glucosamine, MSM, chondroitin, and ASU, and it also lists other ingredients (https://www.cosequin.com/product/horses/cosequin-asu-plus, fetched 2026-10-08).</p>
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
+                <ArticleSourcesList
+            title="Sources"
+            sources={[
+            { label: "www.cosequin.com/product/horses/cosequin-asu-plus", url: "https://www.cosequin.com/product/horses/cosequin-asu-plus", publisher: "www.cosequin.com" },
+            ]}
+          />
       </div>
     </ArticleLayout>
   )

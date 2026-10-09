@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildItemListSchema, buildMetadata, combineSchemas } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildItemListSchema, buildMetadata, combineSchemas, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
 import { HopDisclosure } from '../../../components/HopDisclosure'
 
 // Request-time env, same as the insurance comparison. A set partner tag
@@ -88,6 +88,7 @@ export default function LemonadeVsPetsBestGuidePage() {
       }
     >
       <div className="carloOS-article">
+          <LastUpdated date="2026-10-09" />
         <EmailCapture
           variant="inline"
           siteId="vets-co"
@@ -114,6 +115,13 @@ export default function LemonadeVsPetsBestGuidePage() {
         <p>Lemonade’s FAQ, fetched 2026-10-08, says signing up while a pet is young and healthy means they are not denied coverage at renewal because of age (<span className="break-all">https://www.lemonade.com/pet/explained/lemonade-pet-insurance-faq/</span>). Our notes mark Lemonade for owners with younger pets. Pets Best’s FAQ, fetched the same day, says there is no upper age limit (<span className="break-all">https://www.petsbest.com/faq</span>).</p>
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
+                <ArticleSourcesList
+            title="Sources"
+            sources={[
+            { label: "www.petsbest.com/faq", url: "https://www.petsbest.com/faq", publisher: "www.petsbest.com" },
+            { label: "www.lemonade.com/pet/explained/lemonade-pet-insurance-faq/", url: "https://www.lemonade.com/pet/explained/lemonade-pet-insurance-faq/", publisher: "www.lemonade.com" },
+            ]}
+          />
       </div>
     </ArticleLayout>
   )

@@ -50,14 +50,18 @@ export function MissedPage({
               y="84"
               fill="currentColor"
               fillOpacity="0.08"
-              className="font-display"
-              style={{ fontSize: 96, fontWeight: 900 }}
+              style={{ fontFamily: 'Georgia, Times New Roman, serif', fontSize: 96, fontWeight: 700 }}
             >
               404
             </text>
           </svg>
         ) : null}
-        <h1 className="font-display font-black text-brand-dark text-3xl tracking-tight mb-3">{heading}</h1>
+        <h1
+          className="font-black text-brand-dark text-3xl tracking-tight mb-3"
+          style={{ fontFamily: 'var(--font-body)' }}
+        >
+          {heading}
+        </h1>
         <p
           className="text-base text-brand-text-light leading-relaxed mb-8"
           role={kind === 'search' ? 'status' : undefined}

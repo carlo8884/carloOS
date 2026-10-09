@@ -1,7 +1,7 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, ShopCtas, buildArticleSchema, buildMetadata, PrimaryHop } from '@carloOS/ui'
+import { ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, ShopCtas, buildArticleSchema, buildMetadata, PrimaryHop, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -76,6 +76,7 @@ export default function PaperVsWoodLitterGuidePage() {
       }
     >
       <div className="carloOS-article">
+          <LastUpdated date="2026-10-08" />
         <p>The <Link href="/reviews/best-ferret-litter">litter review</Link> refuses clumping cat litter and aromatic pine or cedar shavings, then compares three pelleted options that clear that bar. Paper versus wood is the everyday choice inside that safe set. Litter will not, by itself, fix ferret odor. Diet and the cleaning routine in the <Link href="/care/odor-and-scent-control">odor guide</Link> still do most of that work.</p>
         <h2>Paper pellets</h2>
         <p>Recycled paper pellets are the best overall pick. The review lists very low dust, no clumping agents, a soft feel underfoot, and moderate odor control. The price tier is $$. The cons are the moderate odor, changing the pan instead of scooping and topping up, and lighter pellets that can scatter. The review calls this the litter to buy if you are not trying to optimize a single trait.</p>
@@ -106,6 +107,12 @@ export default function PaperVsWoodLitterGuidePage() {
         />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
+                <ArticleSourcesList
+            title="Sources"
+            sources={[
+            { label: "Purina", url: "https://www.purina.com/", publisher: "Purina" },
+            ]}
+          />
       </div>
     </ArticleLayout>
   )

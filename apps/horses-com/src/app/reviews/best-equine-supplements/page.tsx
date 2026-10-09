@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import Link from 'next/link'
-import { TableShopLink, RelatedReads, ComparisonFoot, EmailCapture, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, CrossPortfolioCard, RelatedLinks, FAQAccordion, PriceAsOf} from '@carloOS/ui'
+import { TableShopLink, RelatedReads, ComparisonFoot, EmailCapture, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, CrossPortfolioCard, RelatedLinks, FAQAccordion, PriceAsOf, LastUpdated, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, buildBreadcrumbSchema, SchemaScript, buildItemListSchema} from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -103,6 +103,7 @@ export default function BestEquineSupplementsPage() {
         </h1>
         <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">Platinum Performance Equine is the top wellness supplement because one daily serving combines omega-3s, antioxidants, and amino acids.</p>
         <PriceAsOf date="2026-10-04" tone="dark" />
+        <LastUpdated date="2026-10-09" tone="dark" />
         <div data-fold="offer">
           <HopDisclosure tone="on-dark" siteId="horses-com" href="/go/amazon/B0037PL6QW?s=reviews-best-equine-supplements" />
           <PrimaryHop href="/go/amazon/B0037PL6QW?s=reviews-best-equine-supplements" label="Check price of KER EO-3 on Amazon" />
@@ -505,6 +506,14 @@ export default function BestEquineSupplementsPage() {
         </div>
       </div>
       <RelatedReads siteId="horses-com" path="/reviews/best-equine-supplements" />
+          <ArticleSourcesList
+            title="Sources"
+            sources={[
+            { label: "American Association of Equine Practitioners owner resources", url: "https://aaep.org/", publisher: "AAEP" },
+            { label: "FDA Center for Veterinary Medicine", url: "https://www.fda.gov/animal-veterinary", publisher: "FDA" },
+            { label: "www.cosequin.com/product/horses/cosequin-asu-plus", url: "https://www.cosequin.com/product/horses/cosequin-asu-plus", publisher: "www.cosequin.com" },
+            ]}
+          />
     </>
   )
 }

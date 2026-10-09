@@ -1,5 +1,5 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
-import { HubMoneyLinks, LastReviewed } from '@carloOS/ui'
+import { HubMoneyLinks, LastUpdated } from '@carloOS/ui'
 import type { Metadata } from 'next'
 import {
   buildMetadata,
@@ -173,7 +173,7 @@ export default function FerretAnnualCheckupGuidePage() {
             publishedAt="2026-06-01"
             updatedAt="2026-06-01"
           />
-          <LastReviewed date="2026-10-09" />
+          <LastUpdated date="2026-10-08" />
 
           <DropCap>
             Ferrets live fast and develop disease young. By the time a ferret

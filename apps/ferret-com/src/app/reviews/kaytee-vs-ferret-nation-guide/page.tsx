@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
 import { HopDisclosure } from '../../../components/HopDisclosure'
 
 export const metadata: Metadata = buildMetadata({
@@ -75,6 +75,7 @@ export default function KayteeVsFerretNationGuidePage() {
       }
     >
       <div className="carloOS-article">
+          <LastUpdated date="2026-10-08" />
         <EmailCapture
           variant="inline"
           siteId="ferret-com"
@@ -102,6 +103,12 @@ export default function KayteeVsFerretNationGuidePage() {
         <p>The Ferret Nation double is the group cage because the manufacturer page says the full-width double doors open for cleaning and feeding (https://www.midwesthomes4pets.com/product/small-animal/habitats-cages/ferret-nation/, fetched 2026-10-08).</p>
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
+                <ArticleSourcesList
+            title="Sources"
+            sources={[
+            { label: "www.midwesthomes4pets.com/product/small-animal/habitats-cages/ferret-nation/", url: "https://www.midwesthomes4pets.com/product/small-animal/habitats-cages/ferret-nation/", publisher: "www.midwesthomes4pets.com" },
+            ]}
+          />
       </div>
     </ArticleLayout>
   )

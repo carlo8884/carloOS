@@ -321,7 +321,7 @@ jobs:
 
 
   health-reviewed:
-    name: Health pages show a last-reviewed date and linked sources
+    name: Health and money pages show a content date and linked sources
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:

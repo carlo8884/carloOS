@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { HopDisclosure } from '../../../components/HopDisclosure'
-import { TableShopLink, ComparisonFoot, EmailCapture, PrimaryHop, buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, QuickPicks, ArticleSourcesList, CrossPortfolioCard } from '@carloOS/ui'
+import { TableShopLink, ComparisonFoot, EmailCapture, PrimaryHop, buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, QuickPicks, ArticleSourcesList, CrossPortfolioCard, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, buildItemListSchema, buildProductSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -15,6 +15,9 @@ export const metadata: Metadata = buildMetadata({
 const PAGE_URL = 'https://ferret.com/reviews/best-ferret-cage'
 
 const SOURCES = [
+  { label: "American Ferret Association", url: "https://www.ferret.org/", publisher: "AFA" },
+  { label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery", url: "https://www.elsevier.com/books/ferrets-rabbits-and-rodents/quesenberry/978-1-4160-6621-7", publisher: "Elsevier" },
+  { label: "www.midwesthomes4pets.com/product/small-animal/habitats-cages/ferret-nation/", url: "https://www.midwesthomes4pets.com/product/small-animal/habitats-cages/ferret-nation/", publisher: "www.midwesthomes4pets.com" },
   { label: 'Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery (housing chapter)', publisher: 'Quesenberry & Carpenter, Saunders/Elsevier' },
   { label: 'Ferret housing and husbandry guidance', publisher: 'American Ferret Association' },
   { label: 'Ferret care and housing standards', publisher: 'House Rabbit Society / exotic-mammal rescue consensus' },
@@ -191,6 +194,7 @@ export default function BestFerretCagePage() {
             updatedAt="2026-06-11"
             reviewedBy="Editorial team"
           />
+          <LastUpdated date="2026-10-09" />
           <EmailCapture
             variant="inline"
             siteId="ferret-com"

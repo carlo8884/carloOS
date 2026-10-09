@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ShopCtas, TableOfContents, ArticleSourcesList, LastReviewed } from '@carloOS/ui'
+import { ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ShopCtas, TableOfContents, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -118,7 +118,7 @@ export default function RingbonePage() {
             updatedAt="2026-09-06"
             reviewedBy="Editorial team"
           />
-          <LastReviewed date="2026-10-09" />
+          <LastUpdated date="2026-10-09" />
 
           <h2 id="what">What Is Ringbone</h2>
           <p>Ringbone is osteoarthritis -- with associated new bone formation -- affecting the joints of the lower limb between the fetlock and the hoof. It develops from repetitive concussion, poor conformation, hoof imbalance, or previous injury that inflames the joint and provokes the bone to lay down osteophytes. As the bony change builds, it can become palpable or even visible as a firm enlargement around the pastern, the origin of the name.</p>

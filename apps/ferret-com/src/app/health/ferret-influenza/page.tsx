@@ -10,7 +10,7 @@ import {
   DropCap,
   CrossPortfolioCard,
   ArticleSourcesList,
-  LastReviewed,
+  LastUpdated,
 } from '@carloOS/ui'
 
 const SOURCES = [
@@ -166,7 +166,7 @@ export default function FerretInfluenzaPage() {
             publishedAt="2026-06-01"
             updatedAt="2026-06-01"
           />
-          <LastReviewed date="2026-10-09" />
+          <LastUpdated date="2026-10-09" />
 
           <DropCap>
             Influenza is one of the few illnesses you can quite literally share

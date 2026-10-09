@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, EmailCapture, FAQAccordion, InlinePartnerQuote, RelatedLinks, buildArticleSchema, buildMetadata, PrimaryHop } from '@carloOS/ui'
+import { ArticleLayout, EmailCapture, FAQAccordion, InlinePartnerQuote, RelatedLinks, buildArticleSchema, buildMetadata, PrimaryHop, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
 import { HopDisclosure } from '../../../components/HopDisclosure'
 
 // Request-time env, same as the insurance comparison. A set partner tag
@@ -85,6 +85,7 @@ export default function HolidayEmergencyVisitGuidePage() {
       }
     >
       <div className="carloOS-article">
+          <LastUpdated date="2026-10-08" />
         <p>The <Link href="/guides/emergency-vet-costs">emergency vet costs guide</Link> says an emergency hospital is a different operation from a general practice. It keeps veterinarians and technicians on duty overnight, on weekends, and on holidays, and it keeps oxygen, blood products, and monitoring ready. That standing capacity is the cost. A holiday does not create a separate fee schedule on that page. It is already inside the round-the-clock sentence.</p>
         <h2>What the page says to do first</h2>
         <p>The same guide tells owners not to delay a real emergency over cost. Difficulty breathing, severe bleeding, collapse, inability to urinate, or suspected bloat means go. Financial options are discussed once the pet is stable. For a case that is not immediately life-threatening, the page says the hospital provides a written plan and an estimate, often as a range, and that a deposit before treatment is standard. This guide does not reprint a dollar figure from any other page and does not invent one.</p>
@@ -109,6 +110,12 @@ export default function HolidayEmergencyVisitGuidePage() {
             'Get a Trupanion quote',
           ]}
         />
+                <ArticleSourcesList
+            title="Sources"
+            sources={[
+            { label: "Trupanion", url: "https://www.trupanion.com/", publisher: "Trupanion" },
+            ]}
+          />
       </div>
     </ArticleLayout>
   )

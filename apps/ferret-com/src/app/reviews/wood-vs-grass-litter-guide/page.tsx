@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -66,6 +66,7 @@ export default function WoodVsGrassLitterGuidePage() {
       }
     >
       <div className="carloOS-article">
+          <LastUpdated date="2026-10-09" />
         <EmailCapture
           variant="inline"
           siteId="ferret-com"
@@ -94,6 +95,12 @@ export default function WoodVsGrassLitterGuidePage() {
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
       </div>
+          <ArticleSourcesList
+            title="Sources"
+            sources={[
+            { label: 'American Ferret Association', url: 'https://www.ferret.org/', publisher: 'AFA' },
+            ]}
+          />
     </ArticleLayout>
   )
 }

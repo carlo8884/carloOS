@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'vets-co',
@@ -74,6 +74,7 @@ export default function AskVetVsChewyConnectGuidePage() {
       priceAsOf="2026-10-07"
     >
       <div className="carloOS-article">
+          <LastUpdated date="2026-10-08" />
         <EmailCapture
           variant="inline"
           siteId="vets-co"
@@ -102,6 +103,12 @@ export default function AskVetVsChewyConnectGuidePage() {
         <p>The telehealth card on this site marks AskVet chat-only. The current askvet.app pages, fetched 2026-10-08, do not print a visit type (<span className="break-all">https://askvet.app/</span>). The telehealth page says the subscription fits frequent questions, such as a new puppy, a senior pet, or a chronic condition.</p>
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
+                <ArticleSourcesList
+            title="Sources"
+            sources={[
+            { label: "askvet.app/", url: "https://askvet.app/", publisher: "askvet.app" },
+            ]}
+          />
       </div>
     </ArticleLayout>
   )

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildItemListSchema, buildMetadata, combineSchemas } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildItemListSchema, buildMetadata, combineSchemas, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
 import { HopDisclosure } from '../../../components/HopDisclosure'
 
 // Request-time env, same as the insurance comparison. A set partner tag
@@ -85,6 +85,7 @@ export default function HealthyPawsVsPetsBestGuidePage() {
       }
     >
       <div className="carloOS-article">
+          <LastUpdated date="2026-10-08" />
         <EmailCapture
           variant="inline"
           siteId="vets-co"
@@ -111,6 +112,12 @@ export default function HealthyPawsVsPetsBestGuidePage() {
         <p>Start the Healthy Paws quote when one plan and two levers are enough, and wellness coverage is not the reason you are buying. Start the Pets Best quote when you want several tiers, including for an older pet the card says can still enroll, and you are willing to compare more structures. On both, read the annual limit, exclusions, and waiting periods in the sample policy. Do not treat either quote-based line as a price from this page.</p>
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
+                <ArticleSourcesList
+            title="Sources"
+            sources={[
+            { label: "www.petsbest.com/faq", url: "https://www.petsbest.com/faq", publisher: "www.petsbest.com" },
+            ]}
+          />
       </div>
     </ArticleLayout>
   )

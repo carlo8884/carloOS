@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 
@@ -36,6 +36,7 @@ export default function Page() {
       >
         <div className="carloOS-article">
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-11T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
+          <LastUpdated date="2026-10-08" />
 
           <CalloutBox variant="info" title="The short answer">
             Pet insurance is almost always <strong>reimbursement-based</strong>: you pay the veterinarian in full, then submit the itemized invoice (and sometimes records) to the insurer, which pays you back your reimbursement percentage of the eligible amount after your deductible is met. Processing usually takes a few days to a few weeks; some insurers offer faster app-based claims or, with select vets, direct pay.

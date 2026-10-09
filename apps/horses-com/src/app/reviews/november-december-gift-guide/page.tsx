@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, BelowFoldPhoto, ComparisonFoot, FAQAccordion, RelatedLinks, TableShopLink, buildArticleSchema, buildFAQSchema, buildMetadata, combineSchemas } from '@carloOS/ui'
+import { ArticleLayout, BelowFoldPhoto, ComparisonFoot, FAQAccordion, RelatedLinks, TableShopLink, buildArticleSchema, buildFAQSchema, buildMetadata, combineSchemas, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
 
 const PATH = '/reviews/november-december-gift-guide'
 const SOURCE = 'reviews-november-december-gift-guide'
@@ -73,6 +73,7 @@ export default function NovemberDecemberGiftGuidePage() {
       priceAsOf="2026-10-07"
     >
       <div className="carloOS-article">
+          <LastUpdated date="2026-10-09" />
         <p>November and December are blanket season in a lot of barns, and they are also when a lead rope or a pair of boots shows up as a gift. The <Link href="/reviews">reviews hub</Link> already prints those bands. This page sorts the one-time prices from the halter page, the boot page, and the winter blanket review. It does not call any row the gift of the year, and it does not invent a size chart.</p>
         <p>Supplement cards on the supplement review are monthly ranges. A monthly tub is a different kind of spending from a blanket you buy once. Those monthly figures stay on the <Link href="/reviews/best-equine-supplements">supplement review</Link>. Fill weight for a clipped horse stays on the <Link href="/reviews/blanket-weight-by-temperature-guide">blanket-weight guide</Link>.</p>
         <h2>Printed bands under $70</h2>
@@ -143,6 +144,13 @@ export default function NovemberDecemberGiftGuidePage() {
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} includeSchema={false} />
         <BelowFoldPhoto siteId="horses-com" />
+                <ArticleSourcesList
+            title="Sources"
+            sources={[
+            { label: "Horseware", url: "https://www.horseware.com/", publisher: "Horseware" },
+            { label: "SmartPak", url: "https://www.smartpakequine.com/", publisher: "SmartPak" },
+            ]}
+          />
       </div>
     </ArticleLayout>
   )

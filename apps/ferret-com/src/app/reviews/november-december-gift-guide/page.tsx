@@ -1,7 +1,7 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, BelowFoldPhoto, ComparisonFoot, FAQAccordion, RelatedLinks, TableShopLink, buildArticleSchema, buildFAQSchema, buildMetadata, combineSchemas } from '@carloOS/ui'
+import { ArticleLayout, BelowFoldPhoto, ComparisonFoot, FAQAccordion, RelatedLinks, TableShopLink, buildArticleSchema, buildFAQSchema, buildMetadata, combineSchemas, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
 
 const PATH = '/reviews/november-december-gift-guide'
 const SOURCE = 'reviews-november-december-gift-guide'
@@ -82,6 +82,7 @@ export default function NovemberDecemberGiftGuidePage() {
       priceAsOf="2026-10-04"
     >
       <div className="carloOS-article">
+          <LastUpdated date="2026-10-09" />
         <p>November and December gifts for a ferret are usually a small supply, a bag of food, or a cage someone has already measured. The <Link href="/reviews">reviews hub</Link> points at those pages. This guide only lists cards that print a dollar band and a shop link. The cage review’s $, $$, and $$$ tiers stay symbols. Inventing a dollar range for those symbols would be a new price, and this page does not do that.</p>
         <p>Seasonal coat and harness fit already have guides. The <Link href="/reviews/fall-molt-brush-guide">fall molt guide</Link> is the brush page. The <Link href="/reviews/winter-harness-fit-guide">winter harness guide</Link> is the fit check. They are not repeated as new products here.</p>
         <h2>Printed bands under $20</h2>
@@ -144,6 +145,14 @@ export default function NovemberDecemberGiftGuidePage() {
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} includeSchema={false} />
         <BelowFoldPhoto siteId="ferret-com" />
+                <ArticleSourcesList
+            title="Sources"
+            sources={[
+            { label: "Wysong", url: "https://www.wysong.net/", publisher: "Wysong" },
+            { label: "Marshall Pet Products", url: "https://www.marshallpet.com/", publisher: "Marshall Pet Products" },
+            { label: "Kaytee", url: "https://www.kaytee.com/", publisher: "Kaytee" },
+            ]}
+          />
       </div>
     </ArticleLayout>
   )

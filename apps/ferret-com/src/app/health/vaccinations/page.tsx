@@ -13,7 +13,7 @@ import {
   ArticleSourcesList,
   StockImage,
   ShopCtas,
-  LastReviewed,
+  LastUpdated,
 } from '@carloOS/ui'
 
 const SOURCES = [
@@ -184,7 +184,7 @@ export default function FerretVaccinationsPage() {
             updatedAt="2026-09-05"
             reviewedBy="Editorial team"
           />
-          <LastReviewed date="2026-10-09" />
+          <LastUpdated date="2026-10-09" />
 
           <DropCap>
             Ferret vaccination is one of the small number of preventive

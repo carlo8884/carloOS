@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, QuietPartnerLink, RelatedLinks, TableOfContents, FAQAccordion, ArticleSourcesList, LastReviewed } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, QuietPartnerLink, RelatedLinks, TableOfContents, FAQAccordion, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -138,7 +138,7 @@ export default function EquineUlcersPage() {
             updatedAt="2026-09-06"
             reviewedBy="Editorial team"
           />
-          <LastReviewed date="2026-10-09" />
+          <LastUpdated date="2026-10-09" />
 
           <div id="key-facts" className="bg-brand-primary-pale border-l-4 border-brand-primary rounded-r-xl p-5 my-6 not-prose">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Key Facts — Equine Gastric Ulcers</div>

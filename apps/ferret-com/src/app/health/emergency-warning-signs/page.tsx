@@ -11,7 +11,7 @@ import {
   CrossPortfolioCard,
   ArticleSourcesList,
   StockImage,
-  LastReviewed,
+  LastUpdated,
 } from '@carloOS/ui'
 
 const SOURCES = [
@@ -176,7 +176,7 @@ export default function FerretEmergencySignsPage() {
             publishedAt="2026-06-01"
             updatedAt="2026-06-01"
           />
-          <LastReviewed date="2026-10-09" />
+          <LastUpdated date="2026-10-09" />
           <p>This page is not a veterinarian. If your ferret may be in danger, contact a vet.</p>
 
           <DropCap>

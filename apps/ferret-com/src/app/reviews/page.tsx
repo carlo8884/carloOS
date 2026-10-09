@@ -1,7 +1,7 @@
 import { HopDisclosure } from '../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, buildItemListSchema, combineSchemas, SchemaScript, ShopCtas, DirectoryPlacesCta, HubSearch, HubJumpNav } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, buildItemListSchema, combineSchemas, SchemaScript, ShopCtas, DirectoryPlacesCta, HubSearch, HubJumpNav, LastUpdated, ArticleSourcesList } from '@carloOS/ui'
 import listings from '../../data/directory-listings.json'
 import { HubHero } from '../../components/HubHero'
 
@@ -219,6 +219,9 @@ export default function ReviewsHubPage() {
         imageAlt="Ferret housing and gear reference"
         cta={{ href: '/reviews/best-ferret-cage', label: 'Start with the cage' }}
       />
+      <div className="px-container-sm sm:px-container pt-6">
+        <LastUpdated date="2026-10-09" />
+      </div>
 
       {/* Breadcrumb */}
       <nav
@@ -408,6 +411,12 @@ export default function ReviewsHubPage() {
       </section>
 
       <DirectoryPlacesCta listings={listings} noun="licensed exotic-mammal professionals" />
+          <ArticleSourcesList
+            title="Sources"
+            sources={[
+            { label: "Association of Exotic Mammal Veterinarians", url: "https://aemv.org/", publisher: "AEMV" },
+            ]}
+          />
 
     </>
   )

@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, RelatedLinks, ShopCtas, LastReviewed } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, RelatedLinks, ShopCtas, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, DropCap, PullQuote, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Chronic Kidney Disease in Cats — Stages, Diet, Outlook | Vets.co", description: "Chronic kidney disease is the most common serious illness in older cats. IRIS staging, renal diets, fluid therapy, and prognosis explained.", path: '/health/kidney-disease-cats', type: 'article' })
@@ -54,7 +54,7 @@ export default function KidneyDiseaseCatsPage() {
         <div className="carloOS-article">
 
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-05T00:00:00Z" reviewedBy="Editorial team" />
-          <LastReviewed date="2026-10-09" />
+          <LastUpdated date="2026-10-09" />
 
           <CalloutBox variant="info" title="Early detection changes the outcome">
             The SDMA blood marker can detect kidney decline when as little as 25% of function is lost, far earlier than creatinine, which only rises after roughly 75% is lost. Annual or twice-yearly bloodwork in cats over 7 is the most effective tool for catching CKD while management is most effective.

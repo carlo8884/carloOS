@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
 import { HopDisclosure } from '../../../components/HopDisclosure'
 
 export const metadata: Metadata = buildMetadata({
@@ -70,6 +70,7 @@ export default function KerVsEquithriveGuidePage() {
       priceAsOf="2026-10-07"
     >
       <div className="carloOS-article">
+          <LastUpdated date="2026-10-08" />
         <EmailCapture
           variant="inline"
           siteId="horses-com"
@@ -97,6 +98,13 @@ export default function KerVsEquithriveGuidePage() {
         <p>EO-3 is the pick when the goal is marine DHA and EPA in a liquid top-dress. The sale price can differ from the band above.</p>
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
+                <ArticleSourcesList
+            title="Sources"
+            sources={[
+            { label: "Kentucky Equine Research", url: "https://ker.com/", publisher: "Kentucky Equine Research" },
+            { label: "Equithrive", url: "https://www.equithrive.com/", publisher: "Equithrive" },
+            ]}
+          />
       </div>
     </ArticleLayout>
   )

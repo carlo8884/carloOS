@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { HopDisclosure } from '../../../components/HopDisclosure'
-import { ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, buildArticleSchema, buildItemListSchema, buildMetadata, combineSchemas } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, buildArticleSchema, buildItemListSchema, buildMetadata, combineSchemas, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: 'Nylon Halter vs Breakaway | Horses.com',
@@ -80,6 +80,7 @@ export default function NylonVsBreakawayGuidePage() {
       priceAsOf="2026-10-08"
     >
       <div className="carloOS-article">
+          <LastUpdated date="2026-10-08" />
         <EmailCapture
           variant="inline"
           siteId="horses-com"
@@ -107,6 +108,12 @@ export default function NylonVsBreakawayGuidePage() {
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
       </div>
+          <ArticleSourcesList
+            title="Sources"
+            sources={[
+            { label: 'American Association of Equine Practitioners owner resources', url: 'https://aaep.org/', publisher: 'AAEP' },
+            ]}
+          />
     </ArticleLayout>
   )
 }

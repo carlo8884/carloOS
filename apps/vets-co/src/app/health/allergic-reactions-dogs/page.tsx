@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, ShopCtas, LastReviewed } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, ShopCtas, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 
@@ -45,7 +45,7 @@ export default function AllergicReactionsPage() {
 </>}
       >
         <div className="carloOS-article">
-          <LastReviewed date="2026-10-09" />
+          <LastUpdated date="2026-10-09" />
 
           <h2>Types of Allergic Reaction — Severity Spectrum</h2>
           <p><strong>Mild (localized hives/urticaria):</strong> Raised bumpy welts on the skin, often visible as hair standing up in patches across the body. The dog may scratch at affected areas. No facial swelling, no respiratory signs, the dog is alert and mobile. Most common after insect stings, contact with allergens, or certain vaccines. This is the mildest form of allergic reaction — concerning but not immediately life-threatening.</p>

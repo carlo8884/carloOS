@@ -1,7 +1,7 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata, PrimaryHop } from '@carloOS/ui'
+import { ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata, PrimaryHop, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -80,6 +80,7 @@ export default function WinterHarnessFitGuidePage() {
       }
     >
       <div className="carloOS-article">
+          <LastUpdated date="2026-10-08" />
         <p>The <Link href="/behavior/leash-and-harness-training">leash and harness training page</Link> says to recheck fit every few weeks because ferrets gain and lose noticeable weight with the seasons. Its example runs one direction: a harness that fit in winter may be loose by summer. It does not publish the reverse as a separate measurement. Heading into the colder months, the action on that page is the same recheck, not a new size chart. The two-finger rule on that page is its own sentence: two fingers should slide under the harness anywhere it touches the body. Tighter chafes. Looser lets the ferret back out. <a href="/reviews/best-ferret-harness">The ferret harness guide</a> compares the harness you are rechecking.</p>
         <h2>The review uses a different finger count</h2>
         <p>The <Link href="/reviews/vest-vs-h-harness-guide">vest versus H-style guide</Link> repeats the harness review&apos;s fit rule as one finger of slack, checked before the walk, with no unsupervised time in the harness. This page does not average one finger and two fingers into a third rule. Use the review&apos;s check on the review&apos;s harness, and the training page&apos;s check when you are following that page. Both say a loose harness is how a ferret backs out.</p>
@@ -106,6 +107,12 @@ export default function WinterHarnessFitGuidePage() {
           ]}
         />
       </div>
+          <ArticleSourcesList
+            title="Sources"
+            sources={[
+            { label: 'American Ferret Association', url: 'https://www.ferret.org/', publisher: 'AFA' },
+            ]}
+          />
     </ArticleLayout>
   )
 }

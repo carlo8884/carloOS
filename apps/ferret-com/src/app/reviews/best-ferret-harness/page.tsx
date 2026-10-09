@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { HopDisclosure } from '../../../components/HopDisclosure'
-import { TableShopLink, ComparisonFoot, EmailCapture, PrimaryHop, buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, QuickPicks, ArticleSourcesList, CrossPortfolioCard } from '@carloOS/ui'
+import { TableShopLink, ComparisonFoot, EmailCapture, PrimaryHop, buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, QuickPicks, ArticleSourcesList, CrossPortfolioCard, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, buildItemListSchema, buildProductSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -15,6 +15,8 @@ export const metadata: Metadata = buildMetadata({
 const PAGE_URL = 'https://ferret.com/reviews/best-ferret-harness'
 
 const SOURCES = [
+  { label: "American Ferret Association", url: "https://www.ferret.org/", publisher: "AFA" },
+  { label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery", url: "https://www.elsevier.com/books/ferrets-rabbits-and-rodents/quesenberry/978-1-4160-6621-7", publisher: "Elsevier" },
   { label: 'Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery (behavior & restraint)', publisher: 'Quesenberry & Carpenter, Saunders/Elsevier' },
   { label: 'Ferret harness fit, leash training, and outdoor-safety guidance', publisher: 'American Ferret Association' },
   { label: 'Small-mammal harness and restraint safety', publisher: 'Exotic-mammal veterinary husbandry references' },
@@ -186,6 +188,7 @@ export default function BestFerretHarnessPage() {
             updatedAt="2026-06-11"
             reviewedBy="Editorial team"
           />
+          <LastUpdated date="2026-10-09" />
           <EmailCapture
             variant="inline"
             siteId="ferret-com"

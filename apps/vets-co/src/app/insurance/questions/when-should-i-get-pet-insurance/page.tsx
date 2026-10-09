@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 
@@ -36,6 +36,7 @@ export default function Page() {
       >
         <div className="carloOS-article">
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-11T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
+          <LastUpdated date="2026-10-08" />
 
           <CalloutBox variant="info" title="The short answer">
             Enroll <strong>as early as the insurer allows</strong> — many start coverage at six to eight weeks of age. Enrolling while a pet is young and healthy locks in coverage before any condition becomes a permanent pre-existing exclusion, and premiums start lower. There is no &ldquo;too late&rdquo; if your pet is healthy, but every year you wait risks a new note in the records becoming an exclusion.
