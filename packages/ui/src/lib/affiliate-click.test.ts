@@ -198,3 +198,40 @@ test('an ASIN hop, a search hop, and a recovery suggestion name the destination'
   assert.equal(recovery?.slot, 'search-recovery')
   assert.equal(recovery?.page, '/search')
 })
+
+test('the Big Barker bed hop records the Large khaki ASIN', () => {
+  const root = join(fileURLToPath(new URL('.', import.meta.url)), '../../../..')
+  const review = readFileSync(join(root, 'apps/dog-com/src/app/reviews/best-dog-beds/page.tsx'), 'utf8')
+  const guide = readFileSync(join(root, 'apps/dog-com/src/app/reviews/big-barker-vs-casper-guide/page.tsx'), 'utf8')
+  const href = '/go/amazon/B009G9Y59S?s=reviews-best-dog-beds'
+  assert.match(guide, /href="\/reviews\/best-dog-beds"/)
+  assert.match(guide, /\/go\/amazon\/B009G9Y59S\?s=reviews-big-barker-vs-casper-guide/)
+  assert.match(review, /PrimaryHop href='\/go\/amazon\/B009G9Y59S\?s=reviews-best-dog-beds'/)
+  assert.match(review, /price="\$249\.95"/)
+  assert.match(review, /dated 2026-10-09/)
+  const hero = affiliateClickParams({
+    site: 'dog-com',
+    page: '/reviews/best-dog-beds',
+    href,
+    slot: 'hero',
+    inHero: true,
+  })
+  assert.equal(hero?.site, 'dog-com')
+  assert.equal(hero?.page, '/reviews/best-dog-beds')
+  assert.equal(hero?.source, 'reviews-best-dog-beds')
+  assert.equal(hero?.partner, 'amazon')
+  assert.equal(hero?.slot, 'hero')
+  assert.equal(hero?.destination_type, 'ASIN')
+  assert.equal(hero?.destination, 'B009G9Y59S')
+  const card = affiliateClickParams({
+    site: 'dog-com',
+    page: '/reviews/best-dog-beds',
+    href,
+    slot: 'big-barker',
+    marked: 'card',
+  })
+  assert.equal(card?.slot, 'big-barker')
+  assert.equal(card?.placement, 'card')
+  assert.equal(card?.destination_type, 'ASIN')
+  assert.equal(card?.destination, 'B009G9Y59S')
+})

@@ -101,6 +101,15 @@ test('five hops record one click each, including a double click', async ({ page 
     await oneClick(page, page.locator('a[data-shop-placement="hero"]').first(), site, '/reviews/best-dog-crates')
     await oneClick(page, page.locator('[data-review-card] a[href*="/go/"]').nth(1), site, '/reviews/best-dog-crates')
 
+    await page.goto('/reviews/big-barker-vs-casper-guide')
+    await page.getByRole('link', { name: 'bed review', exact: true }).click()
+    await expect(page).toHaveURL(/\/reviews\/best-dog-beds\/?$/)
+    await oneClick(page, page.locator('[data-primary-hop] a[href*="/go/amazon/B009G9Y59S"]').first(), site, '/reviews/best-dog-beds')
+    const bed = (await clicks(page)).at(-1)
+    expect(bed?.destination_type).toBe('ASIN')
+    expect(bed?.destination).toBe('B009G9Y59S')
+    expect(bed?.slot).toBe('hero')
+
     await page.goto('/guides/dog-body-condition-score')
     await oneClick(page, page.locator('main a[href*="/go/amazon"]').first(), site, '/guides/dog-body-condition-score')
   }
