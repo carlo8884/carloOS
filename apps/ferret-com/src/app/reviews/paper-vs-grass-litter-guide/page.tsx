@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata, ArticleSourcesList, LastUpdated, ComparisonFoot } from '@carloOS/ui'
 import { HopDisclosure } from '../../../components/HopDisclosure'
 
 export const metadata: Metadata = buildMetadata({
@@ -69,7 +69,7 @@ export default function PaperVsGrassLitterGuidePage() {
       }
     >
       <div className="carloOS-article">
-          <LastUpdated date="2026-10-08" />
+          <LastUpdated date="2026-10-09" />
         <EmailCapture
           variant="inline"
           siteId="ferret-com"
@@ -95,6 +95,51 @@ export default function PaperVsGrassLitterGuidePage() {
         <h2>Who should buy which litter</h2>
         <p>Buy paper pellets when you want the litter the review calls the default: very low dust, non-clumping, and widely available. Buy grass pellets when texture is the complaint and you can change the pan more often. Do not buy a clumping cat litter for either job. Heat-treated wood pellets stay on the odor comparison, and only as compressed low-phenol pellets, never as aromatic shavings.</p>
         <p>Paper pellets are the pick because the review calls them the low-dust default. Purina discontinued Yesterday’s News on April 20, 2022. The sale price can differ from the tier in that review.</p>
+        <div className="my-6 max-w-full min-w-0">
+          <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
+            <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+            <thead>
+              <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
+                <th scope="col" className="p-3 font-bold text-brand-dark">Recycled paper pellets</th>
+                <th scope="col" className="p-3 font-bold text-brand-dark">Grass pellets</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Role</th>
+                <td className="p-3">Best Overall, and the winner</td>
+                <td className="p-3">Soft alternative</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Dust</th>
+                <td className="p-3">Very low</td>
+                <td className="p-3">Low</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Clumping</th>
+                <td className="p-3">Does not clump</td>
+                <td className="p-3">Does not clump</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Odor</th>
+                <td className="p-3">Moderate</td>
+                <td className="p-3">Moderate</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Pan</th>
+                <td className="p-3">Change the pan rather than scoop and top it up. Lighter pellets can scatter</td>
+                <td className="p-3">Wet pellets break down faster, so the pan may need changing more often than wood</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Price tier</th>
+                <td className="p-3">Mid</td>
+                <td className="p-3">Mid</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <ComparisonFoot updated="2026-10-09" />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
                 <ArticleSourcesList

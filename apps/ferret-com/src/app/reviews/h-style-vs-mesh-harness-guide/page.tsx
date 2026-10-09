@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildItemListSchema, buildMetadata, combineSchemas, LastUpdated } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildItemListSchema, buildMetadata, combineSchemas, LastUpdated, ComparisonFoot } from '@carloOS/ui'
 import { HopDisclosure } from '../../../components/HopDisclosure'
 
 export const metadata: Metadata = buildMetadata({
@@ -100,6 +100,41 @@ export default function HStyleVsMeshGuidePage() {
         <p>Fit itself is the one-finger rule on the harness review and on the <Link href="/reviews/vest-vs-h-harness-guide">vest comparison</Link>. Use that check before a walk. A winter refit is a separate seasonal guide.</p>
         <h2>Who should buy which harness</h2>
         <p>Buy the adjustable H-style when you want the multi-point fit on the one the review lists first of these two cards and you will test the fit indoors before a walk. Buy the mesh set when you want the included leash and a lighter warm-weather H, and you accept fewer adjustment points. If the ferret already backs out of an H, the review’s escape-resistance card is the vest, not a second H. Measure the ferret either way. Do not walk a ferret unsupervised in either harness.</p>
+        <div className="my-6 max-w-full min-w-0">
+          <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
+            <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+            <thead>
+              <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
+                <th scope="col" className="p-3 font-bold text-brand-dark">Adjustable H-style</th>
+                <th scope="col" className="p-3 font-bold text-brand-dark">Figure-H mesh set</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Role</th>
+                <td className="p-3">Best Adjustability</td>
+                <td className="p-3">Entry / Bundle</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Fit</th>
+                <td className="p-3">Neck loop and girth loop, with multiple adjustment points</td>
+                <td className="p-3">Fewer adjustment points and lighter buckles than a dedicated H-style</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">What you get</th>
+                <td className="p-3">Lightweight and quick to fit</td>
+                <td className="p-3">Breathable mesh, usually bundled with a matched leash</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Limit</th>
+                <td className="p-3">A loose H is the easiest style to escape. Check the fit every outing</td>
+                <td className="p-3">Warm-weather starter. An escape artist may need the vest instead</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <ComparisonFoot updated="2026-10-09" />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
       </div>

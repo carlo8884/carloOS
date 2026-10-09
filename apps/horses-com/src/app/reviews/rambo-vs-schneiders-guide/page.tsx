@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { HopDisclosure } from '../../../components/HopDisclosure'
-import { ArticleLayout, FAQAccordion, QuietPartnerLink, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, QuietPartnerLink, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata, ArticleSourcesList, LastUpdated, ComparisonFoot } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: 'Rambo vs Schneiders Heavy Winter | Horses.com',
@@ -69,7 +69,7 @@ export default function RamboVsSchneidersGuidePage() {
       priceAsOf="2026-10-05"
     >
       <div className="carloOS-article">
-          <LastUpdated date="2026-10-08" />
+          <LastUpdated date="2026-10-09" />
         <EmailCapture
           variant="inline"
           siteId="horses-com"
@@ -95,6 +95,46 @@ export default function RamboVsSchneidersGuidePage() {
         <h2>Who should buy which blanket</h2>
         <p>Buy the Rambo when you want the premium mid-weight shell, a choice of lighter fills as well as 400 g, and the lifetime repair program. Buy the StormShield when the horse is clipped and the winter is the heavy one the review names, and you want the 1680-denier shell with 300 g or 360 g. A milder climate is the lighter Horseware and Weatherbeeta options on the same review.</p>
         <p>The Rambo Original is the pick when you want the 1000-denier shell and a choice of fills from 0 g through 400 g. The sale price can differ from the band above.</p>
+        <div className="my-6 max-w-full min-w-0">
+          <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
+            <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+            <thead>
+              <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
+                <th scope="col" className="p-3 font-bold text-brand-dark">Rambo Original</th>
+                <th scope="col" className="p-3 font-bold text-brand-dark">StormShield Euro</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Role</th>
+                <td className="p-3">Best Premium Turnout, and the winner</td>
+                <td className="p-3">Best Heavy Winter</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Shell</th>
+                <td className="p-3">1000-denier ballistic nylon</td>
+                <td className="p-3">1680-denier ballistic nylon</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Fill</th>
+                <td className="p-3">0 g, 100 g, 200 g, and 400 g</td>
+                <td className="p-3">300 g and 360 g</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Neck and hardware</th>
+                <td className="p-3">V-front high neck with a leg arch. Stainless surcingle and T-bar buckles</td>
+                <td className="p-3">Full neck with a deep shoulder gusset. Stainless double belly surcingle</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Buy it when</th>
+                <td className="p-3">You want the lifetime tear and abrasion repair and a choice of lighter fills</td>
+                <td className="p-3">The horse is clipped in the heavy winter the review names. Overkill in a milder climate</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <ComparisonFoot updated="2026-10-09" />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
                 <ArticleSourcesList

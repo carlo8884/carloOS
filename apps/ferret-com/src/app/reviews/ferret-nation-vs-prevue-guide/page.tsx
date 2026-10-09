@@ -1,7 +1,7 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata, PrimaryHop, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata, PrimaryHop, ArticleSourcesList, LastUpdated, ComparisonFoot } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -75,7 +75,7 @@ export default function FerretNationVsPrevueGuidePage() {
       }
     >
       <div className="carloOS-article">
-          <LastUpdated date="2026-10-08" />
+          <LastUpdated date="2026-10-09" />
         <p>The <Link href="/reviews/best-ferret-cage">cage review</Link> already lists the Ferret Nation / Critter Nation double as the overall pick and the Prevue Feisty Ferret as the value pick. Prices in the review are tiers, not dollar amounts. Nothing here turns those tiers into a dollar price.</p>
         <h2>What the review says about Ferret Nation</h2>
         <p>The Ferret Nation / Critter Nation double unit is Best Overall and the winner. The manufacturer page does not print a bar-spacing figure. It says the full-width double doors open for cleaning and feeding (https://www.midwesthomes4pets.com/product/small-animal/habitats-cages/ferret-nation/, fetched 2026-10-08). Levels are modular and stackable. Pans are deep and leak-proof. It is meant for one to four ferrets. The price tier is $$$. Cons: premium price, heavy and large once assembled, and wire shelves need covering.</p>
@@ -87,6 +87,46 @@ export default function FerretNationVsPrevueGuidePage() {
         <HopDisclosure siteId="ferret-com" href="/go/amazon/B0054U8UGW?s=reviews-ferret-nation-vs-prevue-guide" />
         <p>The link below opens the Ferret Nation double unit on Amazon, the same product as on the cage review.</p>
         <p><a className="font-semibold text-brand-primary" href="/go/amazon/B0054U8UGW?s=reviews-ferret-nation-vs-prevue-guide">Browse Ferret Nation / Critter Nation double units on Amazon →</a></p>
+        <div className="my-6 max-w-full min-w-0">
+          <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
+            <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+            <thead>
+              <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
+                <th scope="col" className="p-3 font-bold text-brand-dark">Ferret Nation double</th>
+                <th scope="col" className="p-3 font-bold text-brand-dark">Prevue Feisty Ferret</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Role</th>
+                <td className="p-3">Best Overall, and the winner</td>
+                <td className="p-3">Best Value</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Fit</th>
+                <td className="p-3">One to four ferrets. Modular and stackable</td>
+                <td className="p-3">One or two ferrets. Not expandable</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">What the page lists</th>
+                <td className="p-3">Full-width double doors. Deep leak-proof pans. No bar-spacing figure on the manufacturer page</td>
+                <td className="p-3">Ferret-appropriate spacing. Shelves and ramps</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Price tier</th>
+                <td className="p-3">$$$</td>
+                <td className="p-3">$$</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Shelves and ramps</th>
+                <td className="p-3">Cover wire shelves and ramps</td>
+                <td className="p-3">Cover wire shelves and ramps</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <ComparisonFoot updated="2026-10-09" />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
                 <ArticleSourcesList title="Sources"

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata, ArticleSourcesList, LastUpdated, ComparisonFoot } from '@carloOS/ui'
 import { HopDisclosure } from '../../../components/HopDisclosure'
 
 export const metadata: Metadata = buildMetadata({
@@ -96,6 +96,41 @@ export default function KerVsEquithriveGuidePage() {
         <h2>Who should buy which product</h2>
         <p>Buy EO-3 when the goal is marine DHA and EPA and you can handle a liquid in winter. Buy Equithrive when you want the resveratrol pellet beside a joint formula, not instead of one. Neither product replaces the Cosequin ASU Plus or Platinum Performance tubs on that review.</p>
         <p>EO-3 is the pick when the goal is marine DHA and EPA in a liquid top-dress. The sale price can differ from the band above.</p>
+        <div className="my-6 max-w-full min-w-0">
+          <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
+            <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+            <thead>
+              <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
+                <th scope="col" className="p-3 font-bold text-brand-dark">KER EO-3</th>
+                <th scope="col" className="p-3 font-bold text-brand-dark">Equithrive Original</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Role</th>
+                <td className="p-3">Best Marine Omega-3</td>
+                <td className="p-3">Best Resveratrol</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Format</th>
+                <td className="p-3">Stabilized liquid top-dress</td>
+                <td className="p-3">Pellet</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">What the page lists</th>
+                <td className="p-3">Per 30 mL: EPA 3,200 mg, DHA 2,300 mg, and DPA 500 mg</td>
+                <td className="p-3">Trans-resveratrol. NASC seal. No prohibited FEI or USEF ingredients</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Buy it when</th>
+                <td className="p-3">The goal is marine DHA and EPA and you can handle a liquid in winter</td>
+                <td className="p-3">You want resveratrol beside a joint formula, not instead of one</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <ComparisonFoot updated="2026-10-09" />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
                 <ArticleSourcesList
