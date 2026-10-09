@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, PrimaryHop, RelatedLinks, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "What Veterinary Care Really Costs — A Realistic Guide | Vets.co", description: "Understand the real cost of routine care, common procedures, and major emergencies, plus why prices vary and how to plan financially for a pet.", path: '/guides/cost-of-veterinary-care', type: 'article' })
@@ -16,10 +16,6 @@ export default function CostOfCarePage() {
       <SchemaScript schema={schema} />
       <ArticleLayout siteId="vets-co"
         hero={{ title: 'What Veterinary Care Really Costs', subtitle: 'Pet ownership comes with predictable routine costs and unpredictable large ones, and understanding the difference is the foundation of planning. This guide gives a realistic picture of routine care, common procedures, and major emergencies — and explains why prices vary so widely — so you can budget and protect yourself sensibly.', category: 'Owner Guide', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '9 min',}}
-        heroHop={<>
-          <PrimaryHop href="/go/amazon-brand/household+budget+workbook?s=guides-cost-of-veterinary-care" label="Search Amazon for a household budget workbook" />
-          <HopDisclosure tone="on-dark" siteId="vets-co" href="/go/amazon-brand/household+budget+workbook?s=guides-cost-of-veterinary-care" />
-        </>}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Guides', href: '/guides' }, { name: 'Cost of Care', href: '/guides/cost-of-veterinary-care' }]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">

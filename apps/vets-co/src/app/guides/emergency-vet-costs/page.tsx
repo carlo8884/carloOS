@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, PrimaryHop, RelatedLinks, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Emergency Vet Costs Explained — Why ER Care Costs More | Vets.co", description: "Emergency veterinary care costs more than routine care for real reasons. Learn what drives ER pricing, how estimates work, and how to prepare financially.", path: '/guides/emergency-vet-costs', type: 'article' })
@@ -16,10 +16,6 @@ export default function EmergencyCostsPage() {
       <SchemaScript schema={schema} />
       <ArticleLayout siteId="vets-co"
         hero={{ title: 'Emergency Vet Costs, Explained', subtitle: 'Emergency veterinary care costs significantly more than routine care, and the difference is not arbitrary — it reflects the round-the-clock staffing, intensive-care equipment, and instant readiness that an emergency hospital must maintain. Understanding what drives ER pricing, and how to prepare, lets you face an emergency focused on your pet rather than the bill.', category: 'Owner Guide', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '8 min',}}
-        heroHop={<>
-          <PrimaryHop href="/go/amazon-brand/locking+cash+box+with+key?s=guides-emergency-vet-costs" label="Search Amazon for a locking cash box" />
-          <HopDisclosure tone="on-dark" siteId="vets-co" href="/go/amazon-brand/locking+cash+box+with+key?s=guides-emergency-vet-costs" />
-        </>}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Guides', href: '/guides' }, { name: 'Emergency Vet Costs', href: '/guides/emergency-vet-costs' }]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">

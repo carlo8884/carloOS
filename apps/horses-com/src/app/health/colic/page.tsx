@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas, PrimaryHop } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -101,6 +101,10 @@ export default function ColicPage() {
           { title: 'Forage Basics', href: '/nutrition/forage-basics' },
           { title: 'Is This a Horse Emergency?', href: '/tools/is-this-a-horse-emergency' },
         ]}
+        heroHop={<>
+          <PrimaryHop href="/go/amazon-brand/equine+digital+rectal+thermometer?s=health-colic" label="Search Amazon for an equine digital rectal thermometer" />
+          <HopDisclosure tone="on-dark" siteId="horses-com" href="/go/amazon-brand/equine+digital+rectal+thermometer?s=health-colic" />
+        </>}
         hero={{
           title: 'Equine Colic',
           subtitle:

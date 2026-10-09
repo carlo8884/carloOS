@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ReviewCard, ShopCtas, StockImage, TableOfContents } from '@carloOS/ui'
+import { ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ReviewCard, ShopCtas, StockImage, TableOfContents, PrimaryHop } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -62,6 +62,10 @@ export default function ForageBasicsPage() {
           { title: 'Equine Gastric Ulcers', href: '/health/equine-ulcers' },
           { title: 'Equine Colic', href: '/health/colic' },
         ]}
+        heroHop={<>
+          <PrimaryHop href="/go/amazon-brand/slow+feeder+hay+net+horse?s=nutrition-forage-basics" label="Search Amazon for a slow-feeder hay net" />
+          <HopDisclosure tone="on-dark" siteId="horses-com" href="/go/amazon-brand/slow+feeder+hay+net+horse?s=nutrition-forage-basics" />
+        </>}
         hero={{
           title: "Equine Forage Basics",
           subtitle:

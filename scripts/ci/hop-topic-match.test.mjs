@@ -136,6 +136,14 @@ test('the cross-sell allowlist is the documented set', () => {
   )
 })
 
+test('the relevance note stays on the hop guard', () => {
+  const script = readFileSync(new URL('./hop-topic-match.mjs', import.meta.url), 'utf8')
+  assert.match(
+    script,
+    /a hop's product must be something the page tells the reader to use for their pet/,
+  )
+})
+
 test('the workflow job fails the build on a mismatch', () => {
   const script = readFileSync(new URL('./hop-topic-match.mjs', import.meta.url), 'utf8')
   const yml = readFileSync(new URL('../../.github/workflows/qc.yml', import.meta.url), 'utf8')
