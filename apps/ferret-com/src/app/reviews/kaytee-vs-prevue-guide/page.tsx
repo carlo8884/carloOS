@@ -50,8 +50,8 @@ export default function KayteeVsPrevueGuidePage() {
         publishedAt: 'October 2026',
         readTime: '6 min',
       }}
-      heroHop={<PrimaryHop href="/go/amazon-brand/prevue+feisty+ferret+cage?s=reviews-kaytee-vs-prevue-guide" label="Check price of the Prevue Feisty Ferret cage on Amazon" />}
-      heroExtra={<HopDisclosure siteId="ferret-com" href="/go/amazon-brand/prevue+feisty+ferret+cage?s=reviews-kaytee-vs-prevue-guide" />}
+      heroHop={<PrimaryHop href="/go/amazon/B000QFMYWQ?s=reviews-kaytee-vs-prevue-guide" label="Check price of the Prevue Feisty Ferret cage on Amazon" />}
+      heroExtra={<HopDisclosure siteId="ferret-com" href="/go/amazon/B000QFMYWQ?s=reviews-kaytee-vs-prevue-guide" />}
       breadcrumbs={[
         { name: 'Home', href: '/' },
         { name: 'Reviews', href: '/reviews' },
@@ -69,7 +69,7 @@ export default function KayteeVsPrevueGuidePage() {
       }
     >
       <div className="carloOS-article">
-          <LastUpdated date="2026-10-08" />
+          <LastUpdated date="2026-10-09" />
         <EmailCapture
           variant="inline"
           siteId="ferret-com"

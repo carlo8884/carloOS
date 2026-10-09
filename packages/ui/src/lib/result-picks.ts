@@ -127,21 +127,21 @@ export function blanketPick(
 export function ferretCagePick(count: number): MatchedPick {
   if (count <= 1) {
     return {
-      href: '/go/amazon-brand/kaytee+ferret+home+multi+level?s=tools-cage-size-calculator',
+      href: '/go/amazon/B008FONT2Y?s=tools-cage-size-calculator',
       label: 'Browse the Kaytee multi-level ferret home on Amazon',
       detail: 'The cage review assigns the Kaytee to a single ferret with daily out-time.',
     }
   }
   if (count <= 4) {
     return {
-      href: '/go/amazon-brand/ferret+nation+critter+nation+double+unit?s=tools-cage-size-calculator',
-      label: 'Search Amazon for the Ferret Nation double unit',
+      href: '/go/amazon/B0054U8UGW?s=tools-cage-size-calculator',
+      label: 'Browse the Ferret Nation / Critter Nation double unit on Amazon',
       detail: 'The cage review lists the Ferret Nation double for 1–4 ferrets, and the modular stack for a pair or trio.',
     }
   }
   return {
-    href: '/go/amazon-brand/ferret+nation+critter+nation+double+unit?s=tools-cage-size-calculator',
-    label: 'Search Amazon for the Ferret Nation double unit',
+    href: '/go/amazon/B0054U8UGW?s=tools-cage-size-calculator',
+    label: 'Browse the Ferret Nation / Critter Nation double unit on Amazon',
     detail: 'The cage review lists the Ferret Nation double for 1–4 ferrets. This count is past that card.',
   }
 }

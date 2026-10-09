@@ -50,8 +50,8 @@ export default function KerVsEquithriveGuidePage() {
         publishedAt: 'October 2026',
         readTime: '6 min',
       }}
-      heroHop={<PrimaryHop href="/go/amazon-brand/kentucky+equine+research+EO-3+omega+3?s=reviews-ker-eo3-vs-equithrive-guide" label="Check price of KER EO-3 on Amazon" />}
-      heroExtra={<HopDisclosure siteId="horses-com" href="/go/amazon-brand/kentucky+equine+research+EO-3+omega+3?s=reviews-ker-eo3-vs-equithrive-guide" />}
+      heroHop={<PrimaryHop href="/go/amazon/B0037PL6QW?s=reviews-ker-eo3-vs-equithrive-guide" label="Check price of KER EO-3 on Amazon" />}
+      heroExtra={<HopDisclosure siteId="horses-com" href="/go/amazon/B0037PL6QW?s=reviews-ker-eo3-vs-equithrive-guide" />}
       breadcrumbs={[
         { name: 'Home', href: '/' },
         { name: 'Reviews', href: '/reviews' },
@@ -70,7 +70,7 @@ export default function KerVsEquithriveGuidePage() {
       priceAsOf="2026-10-07"
     >
       <div className="carloOS-article">
-          <LastUpdated date="2026-10-08" />
+          <LastUpdated date="2026-10-09" />
         <EmailCapture
           variant="inline"
           siteId="horses-com"

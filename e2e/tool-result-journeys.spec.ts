@@ -245,8 +245,8 @@ const JOURNEYS: Record<string, Journey[]> = {
         await page.getByRole('button', { name: '2', exact: true }).click()
       },
       result: /Minimum footprint/,
-      resultHop: 'ferret+nation+critter+nation+double+unit',
-      resultDestination: { host: 'amazon.com', product: ['ferret', 'nation'], forbid: ferretForbid },
+      resultHop: 'B0054U8UGW',
+      resultDestination: { host: 'amazon.com', product: ['b0054u8ugw'], forbid: ferretForbid },
       guide: 'Compare the cages that meet this footprint',
       guideUrl: /\/reviews\/best-ferret-cage\/?$/,
       hop: 'B0054U8UGW',

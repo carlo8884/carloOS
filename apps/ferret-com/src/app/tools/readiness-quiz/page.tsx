@@ -200,19 +200,19 @@ export default function ReadinessQuizPage() {
         </div>
       </section>
 
-      {/* Shop note — live amazon-brand search buttons (cage / litter / food / carrier).
-          Reuses queries already shipped on ferret reviews + cage-size + cost calculator.
+      {/* Shop note — Ferret Nation double unit plus kibble and carrier searches.
+          Reuses the cage ASIN and the searches already shipped on ferret reviews.
           ShopCtas hides empty Chewy; never href="#" or an empty link. */}
       <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <div className="max-w-2xl">
-          <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/ferret+nation+critter+nation+double+unit?s=tools-readiness-quiz", "/go/amazon-brand/high+protein+ferret+food+kibble?s=tools-readiness-quiz", "/go/amazon-brand/ferret+carrier+hard+sided?s=tools-readiness-quiz"]} />
+          <HopDisclosure siteId="ferret-com" href={["/go/amazon/B0054U8UGW?s=tools-readiness-quiz", "/go/amazon-brand/high+protein+ferret+food+kibble?s=tools-readiness-quiz", "/go/amazon-brand/ferret+carrier+hard+sided?s=tools-readiness-quiz"]} />
           <div className="mt-4 rounded-xl border border-brand-border bg-brand-white p-5">
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
               Shop these supplies
             </div>
             <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
               The six-item list above is a husbandry starting point — cage, litter, food, hammock,
-              dig box, carrier — not a ranked product list. The Amazon buttons still on this page are the cage, kibble, and carrier searches used on the{' '}
+              dig box, carrier — not a ranked product list. The Amazon buttons still on this page are the Ferret Nation / Critter Nation double unit, plus the kibble and carrier searches used on the{' '}
               <Link href="/reviews/best-ferret-cage" className="text-brand-primary underline-offset-2 hover:underline">
                 cage review
               </Link>
@@ -228,7 +228,7 @@ export default function ReadinessQuizPage() {
             </p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/ferret+nation+critter+nation+double+unit?s=tools-readiness-quiz"
+                amazonHref="/go/amazon/B0054U8UGW?s=tools-readiness-quiz"
                 amazonLabel="Browse Ferret Nation / Critter Nation double units on Amazon →"
               />
               <ShopCtas

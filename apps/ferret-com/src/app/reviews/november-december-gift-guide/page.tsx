@@ -49,9 +49,9 @@ export default function NovemberDecemberGiftGuidePage() {
       schema={combineSchemas(schema, faqSchema)}
       heroHop={
         <>
-          <HopDisclosure siteId="ferret-com" href={`/go/amazon-brand/midwest+critter+nation+double+unit?s=${SOURCE}`} />
+          <HopDisclosure siteId="ferret-com" href={`/go/amazon/B001NJ0DAY?s=${SOURCE}`} />
           <div className="mb-4" data-primary-hop="true">
-            <a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" data-shop-placement="hero" href={`/go/amazon-brand/midwest+critter+nation+double+unit?s=${SOURCE}`}>Browse a Critter Nation double unit on Amazon →</a>
+            <a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" data-shop-placement="hero" href={`/go/amazon/B001NJ0DAY?s=${SOURCE}`}>Browse a Critter Nation double unit on Amazon →</a>
           </div>
         </>
       }
@@ -135,7 +135,7 @@ export default function NovemberDecemberGiftGuidePage() {
               </tr>
               <tr className="border-b border-brand-border">
                 <td className="p-3">$200–280</td>
-                <td className="p-3 font-bold">Critter Nation double unit<TableShopLink href={`/go/amazon-brand/midwest+critter+nation+double+unit?s=${SOURCE}`} product="Critter Nation double unit" /></td>
+                <td className="p-3 font-bold">Critter Nation double unit<TableShopLink href={`/go/amazon/B001NJ0DAY?s=${SOURCE}`} product="Critter Nation double unit" /></td>
                 <td className="p-3"><Link href="/care/cage-setup">Cage setup</Link></td>
               </tr>
             </tbody>
