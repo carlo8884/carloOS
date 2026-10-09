@@ -6030,7 +6030,7 @@ const CALCULATORS = [
     file: 'apps/ferret-com/src/app/tools/cost-calculator/page.tsx',
     mustInclude: [
       { re: /amazon-brand\/high\+protein\+ferret\+food\+kibble\?s=tools-cost-calculator/, label: 'high-protein ferret food search hop (same query as kibble guide)' },
-      { re: /amazon-brand\/ferret\+nation\+critter\+nation\+double\+unit\?s=tools-cost-calculator/, label: 'multi-level cage search hop (same query as cage review)' },
+      { re: /\/go\/amazon\/B0054U8UGW\?s=tools-cost-calculator/, label: 'Ferret Nation double-unit item hop (same ASIN as the cage review)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
     ],
     mustExclude: [
@@ -6040,7 +6040,7 @@ const CALCULATORS = [
       { re: /compressed\+wood\+pellet\+litter\+heat\+treated\+non\+clumping/, label: 'wood-pellet search dropped: first result was cat litter' },
       { re: /ferret\+sleep\+sack\+fleece/, label: 'sleep-sack search dropped: first result was a hanging hammock' },
     ],
-    why: 'Money path: under-hero capture with a concrete budget offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN. Wood-pellet and sleep-sack searches stay off this page.',
+    why: 'Money path: under-hero capture with a concrete budget offer. The kibble button stays a category search. The cage button opens the Ferret Nation double unit already used on the cage review. Wood-pellet and sleep-sack searches stay off this page.',
   },
   {
     id: 'ferret · litter-planner',
@@ -6085,8 +6085,8 @@ const CALCULATORS = [
     mustInclude: [
       { re: /<JourneyNext/, label: 'journey next-step after the calculator' },
       { re: /nextHref="\/reviews\/best-ferret-cage"/, label: 'next step is the cage review, one money page' },
-      { re: /resourceHref="\/go\/amazon-brand\/ferret\+nation\+critter\+nation\+double\+unit\?s=tools-cage-size-calculator"/, label: 'journey hop reuses the existing multi-level cage search' },
-      { re: /amazon-brand\/ferret\+nation\+critter\+nation\+double\+unit\?s=tools-cage-size-calculator/, label: 'multi-level cage search hop (same query as cage review)' },
+      { re: /resourceHref="\/go\/amazon\/B0054U8UGW\?s=tools-cage-size-calculator"/, label: 'journey hop opens the Ferret Nation double unit' },
+      { re: /\/go\/amazon\/B0054U8UGW\?s=tools-cage-size-calculator/, label: 'Ferret Nation double-unit item hop (same ASIN as the cage review)' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -6097,7 +6097,7 @@ const CALCULATORS = [
       { re: /laminated\+|fridge\+|handbook/, label: 'no invented kitchen hops on the journey strip' },
       { re: /ferret\+sleep\+sack\+fleece|ferret\+corner\+litter\+pan|compressed\+wood\+pellet\+litter/, label: 'one cage hop, not a habitat kit' },
     ],
-    why: 'After the footprint, one next step: the cage review plus the existing Ferret Nation double-unit search. No hammock, pan, or litter stack.',
+    why: 'After the footprint, one next step: the cage review plus the Ferret Nation double unit. No hammock, pan, or litter stack.',
   },
   {
     id: 'ferret · food-evaluator hops',

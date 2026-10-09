@@ -87,9 +87,9 @@ test('blanket size uses the review inches, and other lengths use the existing wi
 })
 
 test('ferret cage pick follows the review count', () => {
-  assert.match(ferretCagePick(1).href, /kaytee/)
+  assert.match(ferretCagePick(1).href, /B008FONT2Y/)
   assert.match(ferretCagePick(2).detail, /pair or trio/)
-  assert.match(ferretCagePick(3).href, /ferret\+nation/)
+  assert.match(ferretCagePick(3).href, /B0054U8UGW/)
   assert.match(ferretCagePick(4).detail, /1–4/)
   assert.doesNotMatch(ferretCagePick(4).detail, /past that card/)
   assert.match(ferretCagePick(5).detail, /past that card/)

@@ -52,7 +52,7 @@ export default function CosequinVsEquithriveGuidePage() {
         <>
           <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">Cosequin ASU Plus is the joint pick on the supplement review.</p>
           <div data-fold="offer">
-          <HopDisclosure tone="on-dark" siteId="horses-com" href="/go/amazon-brand/equithrive+original+pellets+resveratrol?s=reviews-cosequin-vs-equithrive-guide" /><a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" href="/go/amazon-brand/equithrive+original+pellets+resveratrol?s=reviews-cosequin-vs-equithrive-guide">Browse Equithrive original pellets on Amazon →</a>
+          <HopDisclosure tone="on-dark" siteId="horses-com" href="/go/amazon/B07DM2314W?s=reviews-cosequin-vs-equithrive-guide" /><a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" href="/go/amazon/B07DM2314W?s=reviews-cosequin-vs-equithrive-guide">Browse Equithrive original pellets on Amazon →</a>
         </div>
         </>
       }
@@ -74,7 +74,7 @@ export default function CosequinVsEquithriveGuidePage() {
       priceAsOf="2026-10-08"
     >
       <div className="carloOS-article">
-          <LastUpdated date="2026-10-08" />
+          <LastUpdated date="2026-10-09" />
         <EmailCapture
           variant="inline"
           siteId="horses-com"

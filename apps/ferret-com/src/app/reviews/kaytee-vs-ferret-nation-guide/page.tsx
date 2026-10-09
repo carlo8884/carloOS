@@ -53,8 +53,8 @@ export default function KayteeVsFerretNationGuidePage() {
         <>
           <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">The Ferret Nation double is the group cage, and the Kaytee multi-level is the single-ferret starter with daily time outside.</p>
           <div data-fold="offer">
-          <PrimaryHop href="/go/amazon-brand/ferret+nation+critter+nation+double+unit?s=reviews-kaytee-vs-ferret-nation-guide" label="Check price of the Ferret Nation / Critter Nation double unit on Amazon" />
-          <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/ferret+nation+critter+nation+double+unit?s=reviews-kaytee-vs-ferret-nation-guide" />
+          <PrimaryHop href="/go/amazon/B0054U8UGW?s=reviews-kaytee-vs-ferret-nation-guide" label="Check price of the Ferret Nation / Critter Nation double unit on Amazon" />
+          <HopDisclosure siteId="ferret-com" href="/go/amazon/B0054U8UGW?s=reviews-kaytee-vs-ferret-nation-guide" />
         </div>
         </>
       }
@@ -75,7 +75,7 @@ export default function KayteeVsFerretNationGuidePage() {
       }
     >
       <div className="carloOS-article">
-          <LastUpdated date="2026-10-08" />
+          <LastUpdated date="2026-10-09" />
         <EmailCapture
           variant="inline"
           siteId="ferret-com"

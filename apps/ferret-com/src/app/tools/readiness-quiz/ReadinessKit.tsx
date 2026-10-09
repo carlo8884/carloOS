@@ -5,8 +5,9 @@
  *
  * Day-one packing list a prospective ferret household should have ready
  * before arrival. Check items off as you gather them. This list does not
- * render a shop button. The page below keeps the cage, kibble, and
- * carrier searches. The sleep-sack and wood-pellet searches are not buttons.
+ * render a shop button. The page below opens the Ferret Nation double
+ * unit, plus the kibble and carrier searches. The sleep-sack and
+ * wood-pellet searches are not buttons.
  */
 
 import { useMemo, useState } from 'react'
@@ -26,7 +27,7 @@ const KIT: KitItem[] = [
     name: 'Multi-level cage',
     detail:
       'A multi-level cage with solid floors (or fleece-covered wire) and bar spacing of one inch or less is the usual day-one habitat. Size the footprint with the cage-size calculator — the cage is the bedroom, not the house. Ferrets still need several hours of supervised out-of-cage time daily.',
-    amazonHref: `/go/amazon-brand/ferret+nation+critter+nation+double+unit?s=${SOURCE}`,
+    amazonHref: `/go/amazon/B0054U8UGW?s=${SOURCE}`,
     amazonLabel: 'Browse Ferret Nation / Critter Nation double units on Amazon →',
   },
   {
