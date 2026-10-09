@@ -73,7 +73,7 @@ export default function BestDogBedsPage() {
               siteId="dog-com"
               nextHref="/tools/dog-crate-size-calculator"
               nextLabel="Size the crate before you pick the foam"
-              nextBlurb="The callout is the foam rule — 7-inch orthopedic for arthritic large and giant dogs, everyday foam otherwise. The crate-size calculator is the next step so the bed actually fits the stand-turn-lie footprint. The hop below opens the Big Barker Large 7-inch mattress, the same product page as the button on this page."
+              nextBlurb="The callout is the foam rule — 7-inch orthopedic for arthritic large and giant dogs, everyday foam otherwise. The crate-size calculator is the next step so the bed actually fits the stand-turn-lie footprint. The button below opens the Big Barker Large 7-inch mattress, the same product page as the price button at the top of this page."
               resourceHref="/go/amazon/B009G9Y59S?s=reviews-best-dog-beds"
               resourceLabel="Check price of the Big Barker 7-inch orthopedic bed on Amazon"
             />
