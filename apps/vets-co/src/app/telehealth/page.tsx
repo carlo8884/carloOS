@@ -181,7 +181,7 @@ export default function TelehealthPage() {
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-08" />
+              <ComparisonFoot updated="2026-10-09" />
             </div>
             <h2 className="font-display text-2xl font-bold text-brand-dark mt-12 mb-6">Frequently Asked Questions</h2>
             <p>Those figures are typical US ranges dated 2026-10-05.</p>
