@@ -9,5 +9,6 @@ export const metadata: Metadata = {
 }
 
 export default function NotFound() {
-  return <MissedPage siteId="dog-com" kind="missing" />
+  // Phone LCP is the lede. The lazy photo still loads before it in Lighthouse, so skip it here.
+  return <MissedPage siteId="dog-com" kind="missing" photo={false} />
 }

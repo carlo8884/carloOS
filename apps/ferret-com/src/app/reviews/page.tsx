@@ -123,6 +123,15 @@ const REVIEW_CARDS: ReviewCardEntry[] = [
       'The smaller Prevue for one or two ferrets, when the Ferret Nation double unit is too big.',
   },
   {
+    slug: 'critter-nation-vs-marshall-cage-guide',
+    group: 'ferret-reviews-housing',
+    href: '/reviews/critter-nation-vs-marshall-cage-guide',
+    eyebrow: 'Housing',
+    title: 'Critter Nation vs Marshall Cage',
+    description:
+      'The two-level double unit from the cage-setup page, or a Marshall starter cage for one ferret. Confirm bar spacing on both.',
+  },
+  {
     slug: 'wood-vs-grass-litter-guide',
     group: 'ferret-reviews-litter',
     href: '/reviews/wood-vs-grass-litter-guide',
