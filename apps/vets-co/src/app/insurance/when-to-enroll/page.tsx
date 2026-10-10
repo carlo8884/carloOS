@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { PrimaryHop, buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, RelatedReads, ReviewCard, ShopCtas, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
+import { PrimaryHop, buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, RelatedReads, ReviewCard, ShopCtas, ArticleSourcesList, LastUpdated, ComparisonFoot } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "When to Enroll Your Pet in Insurance | Vets.co", description: "The best time to get pet insurance is when your pet is young and healthy. Learn why enrolling early matters, and how to think about insuring senior pets.", path: '/insurance/when-to-enroll', type: 'article' })
@@ -56,6 +56,43 @@ export default function WhenToEnrollPage() {
 
           <h2>Adopted and Rescue Pets</h2>
           <p>For adopted pets with unknown histories, enroll as soon as possible after adoption and after an initial veterinary exam. Establishing coverage early limits the window in which undocumented conditions might later be deemed pre-existing. A letter-size file jacket is how the adoption papers and the new-pet exam notes stay one sleeve until enrollment is done — it is not a letter-size poly envelope, not a kraft two-pocket folder, and not letter-size hanging file folders. Schedule the enrollment around the new-pet exam so you understand your pet&apos;s baseline health and can choose appropriate coverage from the start.</p>
+          <div className="my-6 max-w-full min-w-0">
+            <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
+              <caption className="text-left font-semibold text-brand-dark p-3">Life stage, from the sentences on this page</caption>
+              <thead>
+                <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Stage</th>
+                  <th scope="col" className="p-3 font-bold text-brand-dark">What the record does</th>
+                  <th scope="col" className="p-3 font-bold text-brand-dark">When to enroll</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Puppy or kitten</th>
+                  <td className="p-3">No medical history to exclude. Premiums are at their lowest. Waiting periods pass before most conditions arise</td>
+                  <td className="p-3">From about six to eight weeks, while the pet is healthy</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Adult</th>
+                  <td className="p-3">Still worthwhile when the record is clean. Earlier in adulthood means fewer conditions have appeared</td>
+                  <td className="p-3">Promptly, before the first documented symptom becomes an exclusion</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Senior</th>
+                  <td className="p-3">Premiums are higher, and existing conditions are more likely to be excluded. Seniors are also the most likely to need costly care</td>
+                  <td className="p-3">When the history is relatively clean, against new unrelated illness</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Adopted</th>
+                  <td className="p-3">Unknown history. Early coverage limits the window in which an undocumented condition is later called pre-existing</td>
+                  <td className="p-3">As soon as possible after adoption and after an initial exam</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <ComparisonFoot updated="2026-10-10" />
+          <h2>Who should enroll at which stage</h2>
+          <p>Enroll a puppy or kitten while the record is empty. Enroll an adult before the first documented symptom. Enroll a senior with a relatively clean history against new illness. Enroll an adopted pet right after the new-pet exam.</p>
 
           <h2 id="kit">Supplies named on this page</h2>
           <p>

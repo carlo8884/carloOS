@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { PrimaryHop, buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ReviewCard, ShopCtas, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
+import { PrimaryHop, buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ReviewCard, ShopCtas, ArticleSourcesList, LastUpdated, ComparisonFoot } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 
@@ -52,6 +52,38 @@ export default function BreedRiskPage() {
 
           <h2>Common Breed Risk Patterns</h2>
           <p>Large and giant breeds are prone to orthopedic disease (hip and elbow dysplasia, cruciate rupture), bloat, and some cardiac conditions. Brachycephalic breeds — those with flat faces — face airway problems, dental crowding, and eye issues. Many purebred lines carry specific hereditary conditions, from heart defects to eye and neurological disorders. Mixed-breed pets often enjoy broader genetic diversity and lower insurance costs, though they are not risk-free. Round color-coding labels are how those large, brachy, purebred, and mixed risk patterns stay marked — they are not 3-tab dividers, not removable page flags, and not 3x3 sticky notes. Knowing your breed's profile tells you which coverage details to scrutinize.</p>
+          <div className="my-6 max-w-full min-w-0">
+            <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
+              <caption className="text-left font-semibold text-brand-dark p-3">Breed patterns, from the sentences on this page</caption>
+              <thead>
+                <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Pattern</th>
+                  <th scope="col" className="p-3 font-bold text-brand-dark">What this page says</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Large and giant</th>
+                  <td className="p-3">Orthopedic disease, bloat, and some cardiac conditions</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Brachycephalic</th>
+                  <td className="p-3">Airway problems, dental crowding, and eye issues</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Purebred lines</th>
+                  <td className="p-3">Specific hereditary conditions, from heart defects to eye and neurological disorders</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Mixed-breed</th>
+                  <td className="p-3">Broader genetic diversity and lower insurance costs, and not risk-free</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <ComparisonFoot updated="2026-10-10" />
+          <h2>Who should read which term</h2>
+          <p>Read the orthopedic wait and the bilateral rule when the breed is prone to joint disease. Prioritize a high annual limit, and hereditary coverage, when the breed has predictable expensive needs. Enroll early, because the breed-typical conditions are the ones that become exclusions if they appear first.</p>
 
           <h2>Orthopedic Waiting Periods and Bilateral Rules</h2>
           <p>For breeds prone to joint disease, two policy details are pivotal. First, orthopedic waiting periods can stretch to six months or a year, and any joint problem that appears during the wait is excluded. Second, bilateral-condition rules mean an insurer may treat one affected joint as making the matching joint pre-existing. A 5-compartment letter sorter is how those four breed types stay separate stacks while you read the wait and bilateral language — it is not a pressboard classification folder, not hanging file folders, and not a desktop receipt organizer. Owners of orthopedic-prone breeds should favor plans with shorter orthopedic waits and read the bilateral language closely, because these terms directly govern whether the most likely claims will be paid.</p>
