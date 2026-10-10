@@ -74,6 +74,7 @@ export default function TrupanionVsEmbraceGuidePage() {
             { label: 'Reviews hub', href: '/reviews' },
             { label: 'Best pet insurance', href: '/reviews/best-pet-insurance' },
             { label: 'Trupanion vs Healthy Paws', href: '/reviews/trupanion-vs-healthy-paws-guide' },
+            { label: 'Trupanion vs Figo', href: '/reviews/trupanion-vs-figo-guide' },
             { label: 'Healthy Paws vs Embrace', href: '/reviews/healthy-paws-vs-embrace-guide' },
             { label: 'Reimbursement estimator', href: '/tools/insurance-reimbursement-estimator' },
           ]}
