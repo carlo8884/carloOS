@@ -8,7 +8,7 @@ const SOURCE = 'reviews-november-december-gift-guide'
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: 'November and December Horse Gifts | Horses.com',
-  description: 'November and December horse gifts grouped by the price bands already printed on the halter, boot, and winter blanket reviews.',
+  description: 'November and December horse gifts, with the prices exactly as the halter, boot, and winter blanket reviews print them.',
   path: PATH,
   type: 'article',
 })
@@ -30,8 +30,8 @@ const FAQS = [
     answer: 'No. The supplement review prints monthly ranges, such as a tub that is priced per month. This page lists one-time bands from the halter, boot, and blanket cards so a monthly cost is not mixed in as if it were a single gift.',
   },
   {
-    question: 'Which printed bands are the smaller barn gifts?',
-    answer: 'The halter page prints a cotton lead at $8–22 and an adjustable nylon halter at $10–25. The boot page prints pull-on bell boots at $12–35 a pair. The breakaway halter is $25–55. Synthetic brushing boots are $25–70 a pair.',
+    question: 'Which are the smaller barn gifts?',
+    answer: 'The halter page prints a cotton lead at $8–22 and an adjustable nylon halter at $10–25. The breakaway halter is $25–55. The boot page cards for pull-on bell boots and synthetic brushing boots say see current price.',
   },
   {
     question: 'Which blanket band is the lower one?',
@@ -70,23 +70,23 @@ export default function NovemberDecemberGiftGuidePage() {
           ]}
         />
       }
-      priceAsOf="2026-10-07"
+      priceAsOf="2026-10-10"
     >
       <div className="carloOS-article">
           <LastUpdated date="2026-10-10" />
         <p>November and December are blanket season in a lot of barns, and they are also when a lead rope or a pair of boots shows up as a gift. The <Link href="/reviews">reviews hub</Link> already prints those bands. This page sorts the one-time prices from the halter page, the boot page, and the winter blanket review. It does not call any row the gift of the year, and it does not invent a size chart.</p>
         <p>Supplement cards on the supplement review are monthly ranges. A monthly tub is a different kind of spending from a blanket you buy once. Those monthly figures stay on the <Link href="/reviews/best-equine-supplements">supplement review</Link>. Fill weight for a clipped horse stays on the <Link href="/reviews/blanket-weight-by-temperature-guide">blanket-weight guide</Link>.</p>
-        <h2>Printed bands under $70</h2>
-        <p>The halter page prints the cotton lead with a bull snap at $8–22, the adjustable flat nylon halter at $10–25, and the leather-crown breakaway at $25–55. The boot page prints pull-on bell boots at $12–35 a pair and synthetic brushing boots at $25–70 a pair. The nylon halter is the in-hand halter. The breakaway is the one the card describes for a horse left haltered. Brushing boots and bell boots protect different parts of the leg. The boot page says neither one is tendon support.</p>
+        <h2>Smaller barn gifts</h2>
+        <p>The halter page prints the cotton lead with a bull snap at $8–22, the adjustable flat nylon halter at $10–25, and the leather-crown breakaway at $25–55. The boot page cards for pull-on bell boots and synthetic brushing boots say see current price, so this page does too. The nylon halter is the in-hand halter. The breakaway is the one the card describes for a horse left haltered. Brushing boots and bell boots protect different parts of the leg. The boot page says neither one is tendon support.</p>
         <h2>Printed blanket bands</h2>
         <p>The blanket review prints the Amigo Bravo 12 Plus at $130–190, the SmartPak Ultimate at $279.95–299.95, the Rhino Plus at $180–260, and the Rambo Original at $280–420. Those four bands are the ones on the cards. Measure before you order. A blanket that does not fit is not a useful gift, even when the band looks right.</p>
-        <h2>Who should get which printed band</h2>
+        <h2>Who should get which gift</h2>
         <p>A lead or a nylon halter is the small barn gift when the horse is led under supervision. A breakaway is the gift when the horse is left haltered, which is the limit the halter card already states. Bell boots are for overreach. Brushing boots are for interference. A turnout blanket is the larger gift, and the blanket review is where denier and fill live.</p>
         <div className="overflow-x-auto max-w-full min-w-0">
           <table className="w-full text-sm border-collapse table-fixed sm:table-auto min-w-0 sm:min-w-[36rem] [&_th]:break-words [&_td]:break-words">
             <thead>
               <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
-                <th className="p-3 font-bold text-brand-dark">Printed band</th>
+                <th className="p-3 font-bold text-brand-dark">Price on the card</th>
                 <th className="p-3 font-bold text-brand-dark">Product</th>
                 <th className="p-3 font-bold text-brand-dark">Review</th>
               </tr>
@@ -103,7 +103,7 @@ export default function NovemberDecemberGiftGuidePage() {
                 <td className="p-3"><Link href="/tack/halters-and-lead-ropes">Halter page</Link></td>
               </tr>
               <tr className="border-b border-brand-border">
-                <td className="p-3">$12–35 a pair</td>
+                <td className="p-3">See current price</td>
                 <td className="p-3 font-bold">Pull-on bell boots<TableShopLink quietUntilTag href={`/go/smartpak/pull-on-bell-boots?s=${SOURCE}`} product="Pull-on bell boots" /></td>
                 <td className="p-3"><Link href="/tack/boots-and-wraps">Boot page</Link></td>
               </tr>
@@ -113,7 +113,7 @@ export default function NovemberDecemberGiftGuidePage() {
                 <td className="p-3"><Link href="/tack/halters-and-lead-ropes">Halter page</Link></td>
               </tr>
               <tr className="border-b border-brand-border">
-                <td className="p-3">$25–70 a pair</td>
+                <td className="p-3">See current price</td>
                 <td className="p-3 font-bold">Synthetic brushing boots<TableShopLink quietUntilTag href={`/go/ridingwarehouse/synthetic-brushing-boots?s=${SOURCE}`} product="Synthetic brushing boots" /></td>
                 <td className="p-3"><Link href="/tack/boots-and-wraps">Boot page</Link></td>
               </tr>

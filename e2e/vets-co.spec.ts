@@ -19,6 +19,34 @@ test('insurance review, then a carrier quote hop', async ({ page }) => {
   ])
 })
 
+test('claim helper: add a line item, pick an insurer, see the summary', async ({ page }) => {
+  await page.goto('/tools/claim-helper')
+  await expect(page.getByRole('heading', { level: 1, name: 'Pet Insurance Claim Helper' })).toBeVisible()
+  await expect(page.getByText('Everything stays in your browser; nothing is stored or sent.', { exact: true })).toBeVisible()
+
+  await page.getByLabel('Pet name').fill('Bella')
+  await page.getByLabel('Visit date').fill('2026-10-01')
+  await page.getByLabel('Item 1', { exact: true }).fill('Exam')
+  await page.getByLabel('Amount ($)').first().fill('75')
+  await page.getByRole('button', { name: 'Add line item' }).click()
+  await expect(page.locator('[data-line-item]')).toHaveCount(2)
+  await page.getByLabel('Item 2', { exact: true }).fill('X-ray')
+  await page.getByLabel('Amount ($)').nth(1).fill('200.50')
+  await expect(page.locator('[data-claim-total]')).toHaveText('$275.50')
+
+  await page.getByLabel('Your insurer').selectOption('aspca')
+  await expect(page.getByRole('heading', { name: 'ASPCA Pet Health Insurance claim checklist' })).toBeVisible()
+  await expect(page.locator('[data-claim-deadline]')).toContainText('June 28, 2027')
+  const summary = page.locator('[data-claim-summary]')
+  await expect(summary).toContainText('Bella')
+  await expect(summary).toContainText('X-ray: $200.50')
+  await expect(summary).toContainText('Total: $275.50')
+  await expect(page.locator('[data-claim-email]')).toContainText('Subject: Claim for Bella')
+
+  await page.getByLabel('Your insurer').selectOption('trupanion')
+  await expect(page.locator('[data-generic-checklist]')).toContainText('General guidance')
+  await expect(page.locator('[data-calculator-result] a')).toHaveCount(0)
+})
 
 const FOLD: { path: string; pick: string }[] = [
   { path: '/reviews/best-pet-insurance', pick: 'Trupanion' },

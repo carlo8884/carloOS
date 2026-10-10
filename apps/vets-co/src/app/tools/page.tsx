@@ -79,6 +79,12 @@ const TOOLS = [
     tag: 'Finance',
   },
   {
+    href: '/tools/claim-helper',
+    title: 'Pet Insurance Claim Helper',
+    desc: 'Enter the visit, the invoice line items, and your insurer. Returns that insurer’s claim checklist and filing deadline, a claim summary to copy or print, a cover email draft, and common denial reasons. Nothing you type is stored or sent.',
+    tag: 'Finance',
+  },
+  {
     href: '/tools/insurance-reimbursement-estimator',
     title: 'Pet Insurance Reimbursement Estimator',
     desc: 'Enter the carrier quote (monthly premium, deductible, reimbursement %, annual cap) and your expected claims. Returns annual reimbursement, total cost with insurance, and net benefit vs. paying out-of-pocket.',

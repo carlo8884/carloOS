@@ -86,6 +86,7 @@ export default function Page() {
           <h2 id="next-steps">Next Steps</h2>
           <p>Understanding the claim flow is most useful when paired with the numbers — what you will actually be reimbursed on a given bill, and whether a policy is worth it for your situation.</p>
           <ul>
+            <li>Put the visit, the invoice lines, and your insurer&rsquo;s checklist and deadline in one summary with the <a href="/tools/claim-helper">claim helper</a>.</li>
             <li>Estimate net out-of-pocket on a representative bill with the <a href="/tools/insurance-reimbursement-estimator">reimbursement estimator</a>.</li>
             <li>Weigh the overall decision with the <a href="/tools/pet-insurance-worth-it-calculator">worth-it calculator</a>.</li>
             <li>Compare carriers on claim speed and payout in our <a href="/reviews/best-pet-insurance">best pet insurance comparison</a>, or narrow the field with the <a href="/tools/insurance-finder">coverage finder</a>.</li>
