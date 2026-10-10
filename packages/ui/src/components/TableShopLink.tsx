@@ -1,4 +1,4 @@
-import { liveAnchorHref, partnerQuoteHeld, partnerTagReady, tableShopLink } from '@carloOS/config/affiliate-hop'
+import { hopCommissionReady, liveAnchorHref, partnerQuoteHeld, partnerTagReady, tableShopLink } from '@carloOS/config/affiliate-hop'
 import { HeldQuoteNext } from './HeldQuoteNext'
 
 /** One product row's tracked shop link. The href is an existing /go target. */
@@ -38,14 +38,24 @@ export function TableShopLink({
   void quietUntilTag
   const link = tableShopLink(href, product)
   const text = label?.trim() || link?.label || product
+  const amazon = /\/go\/amazon/i.test(hop)
   return (
-    <a
-      href={hop}
-      data-shop-placement="table"
-      rel="sponsored noopener"
-      className="mt-1 block font-semibold text-brand-primary underline underline-offset-2"
-    >
-      {text}
-    </a>
+    <span className="mt-1 block">
+      {hopCommissionReady(hop) ? (
+        <span className="mb-1 block text-2xs font-normal text-brand-text-light no-underline" data-affiliate-disclosure="hop">
+          {amazon
+            ? 'As an Amazon Associate we earn from qualifying purchases.'
+            : 'We may earn a commission from qualifying purchases.'}
+        </span>
+      ) : null}
+      <a
+        href={hop}
+        data-shop-placement="table"
+        rel="sponsored noopener"
+        className="block font-semibold text-brand-primary underline underline-offset-2"
+      >
+        {text}
+      </a>
+    </span>
   )
 }
