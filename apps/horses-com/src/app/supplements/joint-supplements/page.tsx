@@ -237,7 +237,7 @@ export default function JointSupplementsPage() {
             />
 
             <h2 id="who">Who should buy which</h2>
-            <p>Ingredient, price per supply, and the limit are already on the four cards. This table only lines those facts up. A lame horse still needs a veterinary exam before a supplement decision.</p>
+            <p>Ingredient, price per supply, and the limit are already on the four cards. This table only lines those facts up; <Link href="/reviews/cosequin-vs-platinum-guide">Cosequin vs Platinum Performance</Link> takes two of them side by side. A lame horse still needs a veterinary exam before a supplement decision.</p>
             <div className="overflow-x-auto my-6 max-w-full">
               <table className="w-full text-sm border-collapse table-fixed sm:table-auto min-w-0 sm:min-w-[36rem] [&_th]:break-words [&_td]:break-words">
                 <thead>

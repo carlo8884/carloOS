@@ -227,7 +227,9 @@ export default function FerretSeasonalSheddingPage() {
             fine-toothed metal comb, used in short, gentle sessions, lifts dead
             coat efficiently. Most ferrets tolerate brushing better when it is
             paired with a high-value treat and kept brief — a minute or two at
-            a time rather than a long session.
+            a time rather than a long session. The{' '}
+            <a href="/reviews/fall-molt-brush-guide">fall molt brushing guide</a>{' '}
+            covers the slicker brush for the autumn coat change.
           </p>
           <ul>
             <li>

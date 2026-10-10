@@ -186,7 +186,7 @@ export default function BreedRiskPage() {
             name="Figo Pet Insurance"
             subtitle="High and unlimited annual-limit options, app-based claims"
             description={
-              <p>Offers high and unlimited annual-limit tiers, which suits breeds with known expensive risks, plus an app-based claims experience. Compare its hereditary-condition coverage and orthopedic/bilateral terms against Trupanion when you quote. Early enrollment remains the most powerful lever for high-risk breeds.</p>
+              <p>Offers high and unlimited annual-limit tiers, which suits breeds with known expensive risks, plus an app-based claims experience. Compare its hereditary-condition coverage and orthopedic/bilateral terms against Trupanion when you quote; <a href="/reviews/trupanion-vs-figo-guide">Trupanion vs Figo</a> sets the two side by side. Early enrollment remains the most powerful lever for high-risk breeds.</p>
             }
             specs={[
               { label: 'Annual limit', value: 'See the carrier\'s current terms', highlight: 'good' },
