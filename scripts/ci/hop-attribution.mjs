@@ -123,6 +123,11 @@ for (const file of ['packages/ui/src/components/ShopCtas.tsx', 'packages/ui/src/
   }
 }
 
+const reviewCard = readFileSync(join(ROOT, 'packages/ui/src/components/ReviewCard.tsx'), 'utf8')
+if (!reviewCard.includes("rel={editorial ? undefined : 'nofollow sponsored noopener'}")) {
+  hits.push('ReviewCard new-tab shop button must set noopener')
+}
+
 const shopCtas = readFileSync(join(ROOT, 'packages/ui/src/components/ShopCtas.tsx'), 'utf8')
 if (!shopCtas.includes('useAmazonEarns()')) {
   hits.push('ShopCtas must take the Associates line from the server earns flag')

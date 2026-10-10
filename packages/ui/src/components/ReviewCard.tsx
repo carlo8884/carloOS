@@ -288,7 +288,7 @@ export function ReviewCard({
                 className="inline-flex items-center justify-center bg-brand-primary text-brand-white text-sm font-bold px-6 py-3 rounded no-underline hover:bg-brand-primary-light transition-colors duration-200 max-w-full text-center whitespace-normal"
                 data-program={editorial ? undefined : program}
                 data-product={editorial ? undefined : ctaAffiliateProduct}
-                rel={editorial ? undefined : 'nofollow sponsored'}
+                rel={editorial ? undefined : 'nofollow sponsored noopener'}
                 target={editorial ? undefined : '_blank'}
               >
                 {label}
