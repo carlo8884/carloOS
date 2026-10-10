@@ -200,6 +200,12 @@
       "category": "tools"
     },
     {
+      "path": "/tools/claim-helper",
+      "title": "Pet Insurance Claim Helper | Vets.co",
+      "description": "Enter the visit, invoice lines, and insurer to get that insurer’s claim checklist and deadline, a printable claim summary, and a cover email draft.",
+      "category": "tools"
+    },
+    {
       "path": "/tools/er-vs-clinic",
       "title": "ER vs Clinic vs Telehealth — Where to Go | Vets.co",
       "description": "Pick the signs you see. Get a conservative setting — ER now, clinic tomorrow, or telehealth. A triage aid, not a diagnosis.",
