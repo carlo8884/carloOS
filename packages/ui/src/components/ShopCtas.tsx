@@ -4,7 +4,8 @@
  * Amazon + optional Chewy shop pair. Hides empty Chewy hops — never href="#".
  * Chewy-brand search queries fall back to amazon-brand until a Chewy tag is live.
  * Clicks are recorded by AffiliateClickListener (site, page, partner, product, placement).
- * A generic "Shop on Amazon" label is renamed from the search in amazonHref.
+ * The Associates line sits above the buttons. A generic "Shop on Amazon" label
+ * is renamed from the search in amazonHref.
  */
 import type { CSSProperties } from 'react'
 import { liveAnchorHref, shopCtaLabel, visibleChewyHref, visibleShopHref } from '@carloOS/config/affiliate-hop'
@@ -56,8 +57,19 @@ export function ShopCtas({
   const amazonEarns = Boolean(amazonAssociate && amazonTag)
   const chewyEarns = Boolean(chewy && /\/go\/chewy/i.test(chewy) && chewyTag)
   if (!amazon && !chewy) return null
+  const disclosure = amazonEarns || chewyEarns ? (
+    <p
+      data-affiliate-disclosure="hop"
+      style={{ margin: '0 0 8px', fontSize: '12px', lineHeight: 1.45, color: 'var(--brand-text-mid, #5c6570)' }}
+    >
+      {amazonEarns
+        ? 'As an Amazon Associate we earn from qualifying purchases.'
+        : 'We may earn a commission from qualifying purchases.'}
+    </p>
+  ) : null
   return (
     <div>
+      {disclosure}
       <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
         {amazon ? (
           <a
@@ -80,16 +92,6 @@ export function ShopCtas({
           </a>
         ) : null}
       </div>
-      {amazonEarns || chewyEarns ? (
-      <p
-        data-affiliate-disclosure="hop"
-        style={{ margin: '8px 0 0', fontSize: '12px', lineHeight: 1.45, color: 'var(--brand-text-mid, #5c6570)' }}
-      >
-        {amazonEarns
-          ? 'As an Amazon Associate we earn from qualifying purchases.'
-          : 'We may earn a commission from qualifying purchases.'}
-      </p>
-      ) : null}
     </div>
   )
 }
