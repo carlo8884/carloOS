@@ -147,6 +147,9 @@ export default function BestFerretLitterPage() {
               links={[
                 { label: 'Bedding & Litter Types', href: '/care/bedding-and-litter-types' },
                 { label: 'Litter Training', href: '/care/litter-training' },
+                { label: 'Paper vs Wood Litter', href: '/reviews/paper-vs-wood-litter-guide' },
+                { label: 'Paper vs Grass Litter', href: '/reviews/paper-vs-grass-litter-guide' },
+                { label: 'Wood vs Grass Litter', href: '/reviews/wood-vs-grass-litter-guide' },
                 { label: 'Odor & Scent Control', href: '/care/odor-and-scent-control' },
                 { label: 'Cage Cleaning Routine', href: '/care/cage-cleaning-routine' },
                 { label: 'Reviews Hub', href: '/reviews' },
@@ -174,7 +177,7 @@ export default function BestFerretLitterPage() {
             updatedAt="2026-06-11"
             reviewedBy="Editorial team"
           />
-          <LastUpdated date="2026-10-09" />
+          <LastUpdated date="2026-10-10" />
           <EmailCapture
             variant="inline"
             siteId="ferret-com"
@@ -200,7 +203,8 @@ export default function BestFerretLitterPage() {
             on odor control, tracking, and cost. This guide explains those criteria and ranks the litter types that
             clear them. It pairs with our husbandry write-ups on{' '}
             <a href="/care/bedding-and-litter-types">bedding and litter types</a> and{' '}
-            <a href="/care/litter-training">litter training</a>, which cover placement and routine in depth.
+            <a href="/care/litter-training">litter training</a>, which cover placement and routine in depth. The top two types are set side by side in{' '}
+            <a href="/reviews/paper-vs-wood-litter-guide">paper vs wood litter</a>.
           </p>
 
           <h2 id="criteria">The Two Safety Criteria</h2>
@@ -365,7 +369,7 @@ export default function BestFerretLitterPage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-09" />
+          <ComparisonFoot updated="2026-10-10" />
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />

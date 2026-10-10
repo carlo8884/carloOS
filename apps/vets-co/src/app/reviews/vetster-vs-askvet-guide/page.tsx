@@ -67,6 +67,8 @@ export default function VetsterVsAskvetGuidePage() {
             { label: 'Telehealth comparison', href: '/telehealth' },
             { label: 'ER vs clinic', href: '/tools/er-vs-clinic' },
             { label: 'Best pet insurance', href: '/reviews/best-pet-insurance' },
+            { label: 'Vetster vs Chewy Connect', href: '/reviews/vetster-vs-chewy-connect-guide' },
+            { label: 'AskVet vs Chewy Connect', href: '/reviews/askvet-vs-chewy-connect-guide' },
           ]}
         />
       }

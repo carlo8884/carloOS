@@ -69,6 +69,8 @@ export default function FerretNationVsPrevueGuidePage() {
           links={[
             { label: 'Reviews hub', href: '/reviews' },
             { label: 'Best ferret cage', href: '/reviews/best-ferret-cage' },
+            { label: 'Kaytee vs Prevue', href: '/reviews/kaytee-vs-prevue-guide' },
+            { label: 'Kaytee vs Ferret Nation', href: '/reviews/kaytee-vs-ferret-nation-guide' },
             { label: 'Cage size calculator', href: '/tools/cage-size-calculator' },
           ]}
         />

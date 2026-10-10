@@ -165,6 +165,9 @@ export default function BestFerretCagePage() {
               links={[
                 { label: 'Cage Setup', href: '/care/cage-setup' },
                 { label: 'Cage Size Calculator', href: '/tools/cage-size-calculator' },
+                { label: 'Ferret Nation vs Prevue', href: '/reviews/ferret-nation-vs-prevue-guide' },
+                { label: 'Kaytee vs Ferret Nation', href: '/reviews/kaytee-vs-ferret-nation-guide' },
+                { label: 'Kaytee vs Prevue', href: '/reviews/kaytee-vs-prevue-guide' },
                 { label: 'Multi-Level Housing', href: '/care/multi-level-housing' },
                 { label: 'Cage Cleaning Routine', href: '/care/cage-cleaning-routine' },
                 { label: 'Bedding & Litter Types', href: '/care/bedding-and-litter-types' },
@@ -192,7 +195,7 @@ export default function BestFerretCagePage() {
             updatedAt="2026-06-11"
             reviewedBy="Editorial team"
           />
-          <LastUpdated date="2026-10-09" />
+          <LastUpdated date="2026-10-10" />
           <EmailCapture
             variant="inline"
             siteId="ferret-com"
@@ -230,7 +233,8 @@ export default function BestFerretCagePage() {
             clean it and get the ferret in and out). Height and number of levels are secondary: a tall cage with a
             single small footprint is worse than a wide one with two solid levels. Everything below expands on these,
             and the full husbandry context lives in our <a href="/care/cage-setup">cage setup</a> and{' '}
-            <a href="/care/multi-level-housing">multi-level housing</a> references.
+            <a href="/care/multi-level-housing">multi-level housing</a> references. The first two cages are set side by side in{' '}
+            <a href="/reviews/ferret-nation-vs-prevue-guide">Ferret Nation vs Prevue</a>.
           </p>
 
           <h2 id="bar-spacing">Bar Spacing — The Escape-and-Injury Variable</h2>
@@ -401,7 +405,7 @@ export default function BestFerretCagePage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-09" />
+          <ComparisonFoot updated="2026-10-10" />
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
