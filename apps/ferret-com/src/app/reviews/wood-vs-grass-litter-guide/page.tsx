@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata, LastUpdated, ComparisonFoot } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, ShopCtas, buildArticleSchema, buildMetadata, LastUpdated, ComparisonFoot } from '@carloOS/ui'
+import { HopDisclosure } from '../../../components/HopDisclosure'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -93,6 +94,12 @@ export default function WoodVsGrassLitterGuidePage() {
         <h2>Who should buy which litter</h2>
         <p>Buy heat-treated wood pellets when odor is the priority and you will reject loose cedar or pine shavings. Buy grass pellets when the ferret dislikes wood or paper underfoot and you will change the pan more often because wet pellets break down. Do not buy a clumping cat litter for either job. The default low-dust litter on the same review is recycled paper.</p>
         <p>Heat-treated wood pellets are the odor pick, and only as compressed low-phenol pellets. Loose aromatic shavings are not this product.</p>
+        <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/heat+treated+wood+pellet+litter?s=reviews-wood-vs-grass-litter-guide" />
+        <p>The link below is an Amazon search, not one product. Check the bag says heat-treated, compressed pellets, not loose shavings.</p>
+        <ShopCtas
+          amazonHref="/go/amazon-brand/heat+treated+wood+pellet+litter?s=reviews-wood-vs-grass-litter-guide"
+          amazonLabel="Search Amazon for heat-treated wood pellet litter"
+        />
         <div className="my-6 max-w-full min-w-0">
           <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
             <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
