@@ -83,7 +83,10 @@ export default function JointSupplementsPage() {
                 A horse with active lameness needs a lameness exam, not a supplement decision. Many products marketed as &ldquo;joint supplements&rdquo; would be more honestly described as connective-tissue maintenance. Genuine osteoarthritis often requires intra-articular medication (corticosteroid + hyaluronate, IRAP, PRP), systemic chondroprotectants (Adequan, Legend), or NSAIDs — managed by a veterinarian. Supplements support these treatments; they do not replace them.
               </p>
             </div>
-
+            <ShopCtas
+              amazonHref="/go/amazon-brand/cosequin+asu+plus?s=supplements-joint-supplements"
+              amazonLabel="Browse Cosequin ASU Plus on Amazon"
+            />
 
             <h2>Evidence Ladder — How Joint Ingredients Stack Up</h2>
             <p>The following ranking summarizes peer-reviewed equine and (where equine data is thin) extrapolated mammalian data on each ingredient. Inclusion of an ingredient in a high-grossing branded product is not the same thing as that ingredient having evidence; commercial popularity and evidence base often disagree.</p>
@@ -274,10 +277,6 @@ export default function JointSupplementsPage() {
               </table>
             </div>
             <p>The wider field around these joint products is in the <Link href="/reviews/best-equine-supplements">equine supplement review</Link>.</p>
-            <ShopCtas
-              amazonHref="/go/amazon-brand/cosequin+asu+plus?s=supplements-joint-supplements"
-              amazonLabel="Browse Cosequin ASU Plus on Amazon"
-            />
             <ComparisonFoot updated="2026-10-10" />
 
             <h2>How to Choose</h2>
