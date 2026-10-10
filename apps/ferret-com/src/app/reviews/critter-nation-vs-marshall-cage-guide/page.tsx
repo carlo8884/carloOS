@@ -157,7 +157,6 @@ export default function CritterNationVsMarshallCageGuidePage() {
                 <ArticleSourcesList
             title="Sources"
             sources={[
-            { label: "MidWest Homes for Pets", url: "https://www.midwestpetproducts.com/", publisher: "MidWest Homes for Pets" },
             { label: "Marshall Pet Products", url: "https://www.marshallpet.com/", publisher: "Marshall Pet Products" },
             ]}
           />
