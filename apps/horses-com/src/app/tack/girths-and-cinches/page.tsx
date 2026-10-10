@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, ShopCtas } from '@carloOS/ui'
+import { TableShopLink, ComparisonFoot, buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -93,6 +93,7 @@ export default function GirthsCinchesPage() {
             { label: "Fit and Tightening", href: "#fit" },
             { label: "Girth Galls and Girthiness", href: "#galls" },
             { label: "Girth Picks", href: "#picks" },
+            { label: "Who Should Buy Which", href: "#which" },
             { label: "FAQ", href: "#faq" },
             { label: "References", href: "#references" },
           ]} />
@@ -214,6 +215,42 @@ export default function GirthsCinchesPage() {
             ctaAffiliateProgram="smartpak"
             ctaAffiliateProduct="fleece-girth-cover"
           />
+
+          <h2 id="which">Who should buy which girth</h2>
+          <p>For an English-saddle horse, the anatomic English girth is the main pick. Western riders start with the mohair cinch. The fleece cover is not a girth on its own. It goes over a girth that already fits. None of the three makes up for a wrong size, a dirty surface, or tightening it all at once.</p>
+          <div className="overflow-x-auto my-6 max-w-full">
+            <table className="w-full text-sm border-collapse table-fixed sm:table-auto min-w-0 sm:min-w-[36rem] [&_th]:break-words [&_td]:break-words">
+              <thead>
+                <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                  <th className="p-3 font-bold text-brand-dark">If you need</th>
+                  <th className="p-3 font-bold text-brand-dark">Buy</th>
+                  <th className="p-3 font-bold text-brand-dark">From the card</th>
+                  <th className="p-3 font-bold text-brand-dark">Skip it when</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-brand-border">
+                  <td className="p-3 text-brand-text-mid">An everyday English girth that eases rubs behind the elbow</td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#anatomic-english-girth" className="text-brand-primary">Anatomic English girth</a><TableShopLink quietUntilTag href={"/go/dover/anatomic-english-girth?s=tack-girths-and-cinches"} product={"Anatomic English girth"} /></td>
+                  <td className="p-3 text-brand-text-mid">Cut back behind the elbow. Leather or synthetic. English schooling and showing</td>
+                  <td className="p-3 text-brand-text-mid">You ride Western. The card also says it still needs the correct size and a clean surface</td>
+                </tr>
+                <tr className="border-b border-brand-border">
+                  <td className="p-3 text-brand-text-mid">A breathable Western cinch for long working rides</td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#mohair-cinch" className="text-brand-primary">Mohair roper cinch</a><TableShopLink quietUntilTag href={"/go/schneider/mohair-roper-cinch?s=tack-girths-and-cinches"} product={"Mohair roper cinch"} /></td>
+                  <td className="p-3 text-brand-text-mid">Mohair or mohair blend. Straight or roper cut. Wicks moisture</td>
+                  <td className="p-3 text-brand-text-mid">You will not keep natural fiber clean. The card says pure mohair costs more than synthetic, and width must match the horse</td>
+                </tr>
+                <tr className="border-b border-brand-border">
+                  <td className="p-3 text-brand-text-mid">Extra cushioning for a thin-skinned or gall-prone horse</td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#fleece-girth-cover" className="text-brand-primary">Fleece girth cover</a><TableShopLink quietUntilTag href={"/go/smartpak/fleece-girth-cover?s=tack-girths-and-cinches"} product={"Fleece girth cover"} /></td>
+                  <td className="p-3 text-brand-text-mid">Sheepskin or synthetic fleece. Slips over an existing girth</td>
+                  <td className="p-3 text-brand-text-mid">The girth under it is the wrong size or dirty. The card says the cover traps dirt and adds bulk that can affect fit</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <ComparisonFoot updated="2026-10-10" />
 
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
