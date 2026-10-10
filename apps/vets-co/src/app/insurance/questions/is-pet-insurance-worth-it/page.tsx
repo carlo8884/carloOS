@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, LastUpdated } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, LastUpdated, ComparisonFoot } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 
@@ -62,6 +62,38 @@ export default function Page() {
 
           <h2>The Alternative: A Pet Emergency Fund</h2>
           <p>For the disciplined, a dedicated pet emergency fund is a legitimate alternative. It works if you fund it consistently and you are not hit with a large bill early, before the balance is meaningful. The trade-off is timing risk: insurance covers from the end of the waiting period, while a fund only protects you once it is large enough. Some owners split the difference — a modest fund for routine surprises plus insurance for the catastrophic tail. There is no universally correct answer, only the one that fits your finances and your tolerance for a bad-luck year.</p>
+          <div className="my-6 max-w-full min-w-0">
+            <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
+              <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+              <thead>
+                <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Insurance</th>
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Emergency fund</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">What it does</th>
+                  <td className="p-3">Risk transfer. A rare bill becomes a predictable monthly cost</td>
+                  <td className="p-3">Works if you fund it consistently and the bill arrives after the balance is meaningful</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Where it misses</th>
+                  <td className="p-3">The average policyholder pays in more than they get back. Not a way to save on routine costs</td>
+                  <td className="p-3">An early emergency can arrive before the fund is large enough</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">When this page says to use it</th>
+                  <td className="p-3">When a large bill would strain finances, and you enroll while the pet is young and healthy</td>
+                  <td className="p-3">When you could pay a large bill and you actually keep the account funded</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <ComparisonFoot updated="2026-10-10" />
+          <h2>Who should use which</h2>
+          <p>Use insurance when a large bill would force a hard choice and you can enroll before a condition exists. Use a fund when you will fund it and a large bill would not change your life. Some owners keep a modest fund for routine surprises and insurance for the catastrophic tail.</p>
 
           <h2 id="next-steps">Run Your Own Breakeven</h2>
           <p>Because the right answer depends on your finances, your pet, and a quote you have in hand, the most useful next step is to model it rather than accept a blanket verdict.</p>
