@@ -1,7 +1,7 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata, PrimaryHop, LastUpdated } from '@carloOS/ui'
+import { ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata, PrimaryHop, LastUpdated, ComparisonFoot } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -80,12 +80,44 @@ export default function FallMoltBrushGuidePage() {
       }
     >
       <div className="carloOS-article">
-          <LastUpdated date="2026-10-08" />
+          <LastUpdated date="2026-10-10" />
         <p>The <Link href="/care/bathing-and-grooming">bathing and grooming page</Link> describes two coat changes a year. The fall molt, about September through November, is the loss of the summer coat and the growth of a denser winter undercoat, over a similar two-to-four-week window as the spring shed. Normal, on that page, is diffuse shedding, an intact but thinner coat, and regrowth within weeks. Not normal is symmetric hair loss over the rump, tail base, or shoulders, or hair that does not grow back. Those patterns stay on the grooming page and are a reason to call a veterinarian, not a reason to buy a different brush.</p>
         <h2>What to do with the loose coat</h2>
         <p>The <Link href="/care/seasonal-shedding">seasonal shedding page</Link> says the job during a shed is to lift loose hair before the ferret swallows it. A soft slicker brush or a fine-toothed metal comb, in short sessions of a minute or two, is the method it names. Daily brushing during the peak captures more hair. Ferrets groom themselves and, unlike cats, do not reliably vomit hairballs. The page says a heavy shed raises the swallowed-hair load, and a hair mass can contribute to a gastrointestinal obstruction. A vet-recommended hairball remedy is the other step it names. This guide does not name a remedy brand.</p>
         <h2>Baths stay limited</h2>
         <p>Both pages allow one warm-water bath to loosen a heavy shed and then say not to repeat it. Frequent bathing strips skin oils and can make the coat greasier. Most of the work is the brush. Shampoo stays on the grooming page. The comb and the lint roller stay on the shedding page. The link on this page is the soft slicker search from that page.</p>
+        <div className="my-6 max-w-full min-w-0">
+          <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
+            <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+            <thead>
+              <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
+                <th scope="col" className="p-3 font-bold text-brand-dark">Soft slicker brush</th>
+                <th scope="col" className="p-3 font-bold text-brand-dark">Fine-toothed metal comb</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">What it does</th>
+                <td className="p-3">Lifts loose hair before the ferret swallows it</td>
+                <td className="p-3">The same method the shedding page names</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Session</th>
+                <td className="p-3">A minute or two</td>
+                <td className="p-3">A minute or two</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">What this page links</th>
+                <td className="p-3">The soft slicker search</td>
+                <td className="p-3">Stays on the shedding page, with the lint roller</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <ComparisonFoot updated="2026-10-10" />
+        <h2>Who should use which tool</h2>
+        <p>Use either tool in short sessions during the fall molt. This page links the soft slicker. The comb and the lint roller stay on the shedding page. One warm-water bath can loosen a heavy shed. Do not repeat it.</p>
         <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/soft+slicker+brush+small+animal?s=reviews-fall-molt-brush-guide" />
         <p>The link below searches for a soft slicker brush.</p>
         <p><a className="font-semibold text-brand-primary" href="/go/amazon-brand/soft+slicker+brush+small+animal?s=reviews-fall-molt-brush-guide">Browse soft slicker brushes for small animals on Amazon →</a></p>

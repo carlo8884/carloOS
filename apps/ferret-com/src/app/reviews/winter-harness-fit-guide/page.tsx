@@ -1,7 +1,7 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata, PrimaryHop, LastUpdated } from '@carloOS/ui'
+import { ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata, PrimaryHop, LastUpdated, ComparisonFoot } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -80,12 +80,44 @@ export default function WinterHarnessFitGuidePage() {
       }
     >
       <div className="carloOS-article">
-          <LastUpdated date="2026-10-08" />
+          <LastUpdated date="2026-10-10" />
         <p>The <Link href="/behavior/leash-and-harness-training">leash and harness training page</Link> says to recheck fit every few weeks because ferrets gain and lose noticeable weight with the seasons. Its example runs one direction: a harness that fit in winter may be loose by summer. It does not publish the reverse as a separate measurement. Heading into the colder months, the action on that page is the same recheck, not a new size chart. The two-finger rule on that page is its own sentence: two fingers should slide under the harness anywhere it touches the body. Tighter chafes. Looser lets the ferret back out. <a href="/reviews/best-ferret-harness">The ferret harness guide</a> compares the harness you are rechecking.</p>
         <h2>The review uses a different finger count</h2>
         <p>The <Link href="/reviews/vest-vs-h-harness-guide">vest versus H-style guide</Link> repeats the harness review&apos;s fit rule as one finger of slack, checked before the walk, with no unsupervised time in the harness. This page does not average one finger and two fingers into a third rule. Use the review&apos;s check on the review&apos;s harness, and the training page&apos;s check when you are following that page. Both say a loose harness is how a ferret backs out.</p>
         <h2>Which harness to shop</h2>
         <p>The vest is the escape-resistance pick on that guide, a broad panel over the chest and shoulders. The review says it can overheat a ferret in warm weather unless the panel is mesh. That warning is about heat, not about October. The H-style is the lighter harness the guide says to buy only if you will measure and recheck every outing. The link on this page is the vest search from the harness review, the layout named when backing out is the problem. A coat change is the <Link href="/reviews/fall-molt-brush-guide">fall molt guide</Link>. It does not change the buckle.</p>
+        <div className="my-6 max-w-full min-w-0">
+          <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
+            <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+            <thead>
+              <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
+                <th scope="col" className="p-3 font-bold text-brand-dark">Vest harness</th>
+                <th scope="col" className="p-3 font-bold text-brand-dark">H-style harness</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Fit check</th>
+                <td className="p-3">One finger of slack, from the vest guide, checked before the walk</td>
+                <td className="p-3">Two fingers under the harness anywhere it touches the body, from the training page</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">When to buy</th>
+                <td className="p-3">Escape-resistance pick. A broad panel over the chest and shoulders</td>
+                <td className="p-3">Only if you will measure and recheck every outing</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Limit</th>
+                <td className="p-3">Can overheat in warm weather unless the panel is mesh. That warning is about heat, not October</td>
+                <td className="p-3">A loose harness is how a ferret backs out</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <ComparisonFoot updated="2026-10-10" />
+        <h2>Who should use which check</h2>
+        <p>Use the review check on the review harness, and the training-page check when you are following that page. This page does not average one finger and two fingers into a third rule.</p>
         <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/ferret+vest+harness+jacket+escape+proof?s=reviews-winter-harness-fit-guide" />
         <p>The link below searches for the vest harness from the harness review.</p>
         <p><a className="font-semibold text-brand-primary" href="/go/amazon-brand/ferret+vest+harness+jacket+escape+proof?s=reviews-winter-harness-fit-guide">Find an escape-proof jacket ferret harness on Amazon →</a></p>
