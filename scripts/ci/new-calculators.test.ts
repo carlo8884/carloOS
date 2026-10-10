@@ -3,6 +3,7 @@ import test from 'node:test'
 import { foodGrams } from '../../apps/dog-com/src/app/tools/dog-food-amount-calculator/model.ts'
 import { catFoodGrams } from '../../apps/vets-co/src/app/tools/cat-food-amount-calculator/model.ts'
 import { horseWaterGallons } from '../../apps/horses-com/src/app/tools/horse-water-calculator/model.ts'
+import { fromInches } from '../../apps/horses-com/src/app/tools/horse-height-converter/model.ts'
 import { liveRockPounds } from '../../apps/fish-com/src/app/tools/live-rock-calculator/model.ts'
 import { labelMath } from '../../apps/ferret-com/src/app/tools/label-calculator/model.ts'
 
@@ -20,6 +21,26 @@ test('cat food grams use the feline 1.2 factor', () => {
   const kg = 10 / 2.2046
   const der = 1.2 * 70 * Math.pow(kg, 0.75)
   assert.ok(Math.abs(row.grams - (der * 1000) / 3800) < 0.001)
+})
+
+test('hands notation never uses a fourth inch and 58 inches is a pony', () => {
+  const exact = fromInches(15 * 4 + 2)
+  assert.equal(exact.handsNotation, '15.2')
+  assert.equal(exact.inches, 62)
+  assert.equal(exact.isPony, false)
+
+  const carried = fromInches(63.6)
+  assert.equal(carried.handsNotation, '16.0')
+  assert.equal(carried.hands, 16)
+  assert.equal(carried.handInches, 0)
+
+  const pony = fromInches(58)
+  assert.equal(pony.handsNotation, '14.2')
+  assert.equal(pony.isPony, true)
+
+  const justOver = fromInches(58.2)
+  assert.equal(justOver.handsNotation, '14.2')
+  assert.equal(justOver.isPony, false)
 })
 
 test('a 1000 lb horse is 6 to 10 gallons', () => {
