@@ -13,10 +13,13 @@ export function MissedPage({
   siteId,
   kind,
   query = '',
+  photo = true,
 }: {
   siteId: SiteId
   kind: 'missing' | 'search'
   query?: string
+  /** False skips the below-fold photo, so its request does not compete with the lede on phones. */
+  photo?: boolean
 }) {
   const page = missedPage(siteId)
   if (!page) return null
@@ -114,7 +117,7 @@ export function MissedPage({
         <Link href={page.hub.href} className="text-sm font-semibold text-brand-primary no-underline hover:underline">
           All {page.hub.title.toLowerCase()}
         </Link>
-        <BelowFoldPhoto siteId={siteId} />
+        {photo ? <BelowFoldPhoto siteId={siteId} /> : null}
       </div>
     </div>
   )
