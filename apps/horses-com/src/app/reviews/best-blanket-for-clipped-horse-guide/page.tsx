@@ -1,7 +1,7 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, EmailCapture, FAQAccordion, QuietPartnerLink, RelatedLinks, buildArticleSchema, buildMetadata, PrimaryHop, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
+import { ArticleLayout, EmailCapture, FAQAccordion, QuietPartnerLink, RelatedLinks, buildArticleSchema, buildMetadata, PrimaryHop, ArticleSourcesList, LastUpdated, ComparisonFoot } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
@@ -83,8 +83,39 @@ export default function ClippedHorseBlanketGuidePage() {
         <p>The StormShield card lists a 1680-denier ballistic shell, heavier than the Rambo Original&apos;s 1000-denier shell, and fills of 300 and 360 grams. The neck is a full neck with a deep shoulder gusset. Hardware is stainless, with a double belly surcingle. The price in the review is $300–460. The review assigns it to New England, the Upper Midwest, the Mountain West, and Canadian winters, and to clipped competition horses in sustained cold. It does not publish a temperature cutoff beyond the climates and the “sub-zero” phrasing already on that listing.</p>
         <h2>When the heavy blanket is the wrong buy</h2>
         <p>The same review says the blanket is overkill in a milder climate and heavy to handle once it is wet. The review points mid-Atlantic and southern barns at the lighter Horseware and Weatherbeeta turnouts. If you are choosing between the Rambo Original and the Rhino Plus, that comparison is the <Link href="/reviews/rambo-vs-rhino-guide">Rambo versus Rhino guide</Link>, not this one. Those are mid-weight Horseware blankets. They are not the 300-gram StormShield.</p>
+        <div className="my-6 max-w-full min-w-0">
+          <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
+            <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+            <thead>
+              <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
+                <th scope="col" className="p-3 font-bold text-brand-dark">StormShield</th>
+                <th scope="col" className="p-3 font-bold text-brand-dark">Lighter turnout</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Fill</th>
+                <td className="p-3">300 and 360 grams, in a 1680-denier shell, with a full neck</td>
+                <td className="p-3">Mid-weight Horseware blankets. Not the 300-gram StormShield</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Climate</th>
+                <td className="p-3">New England, the Upper Midwest, the Mountain West, and Canadian winters, and clipped horses in sustained cold</td>
+                <td className="p-3">Mid-Atlantic and southern barns, where the review calls the heavy fill overkill</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Handling</th>
+                <td className="p-3">Heavy to handle once it is wet</td>
+                <td className="p-3">The review points these climates at Horseware and Weatherbeeta</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <ComparisonFoot updated="2026-10-10" />
         <h2>Layering, if the horse changes climates</h2>
         <p>The review offers a second pattern: one waterproof shell plus liners. The shell alone is a sheet. Shell plus a 100-gram liner is light cool weather. Shell plus 200 grams is mid-weight. Stacking the 100 and the 200 is the heavyweight equivalent in that system. Bucas, Horseware, and Schneiders are the liner systems the review names. The upfront cost of a shell plus three liners approaches two weight-specific turnouts. The review says the system earns its keep when the horse moves between climates, and that a one-climate barn is usually simpler with one turnout of the right fill.</p>
+        <h2>Who should buy which blanket</h2>
         <p>Buy the StormShield when the horse is clipped and the winter matches the northern climates on that listing. Buy a lighter turnout, or a liner stack, when the review has already called the heavy fill overkill.</p>
         <HopDisclosure siteId="horses-com" href="/go/amazon-brand/schneiders+stormshield+heavyweight+horse+blanket?s=reviews-best-blanket-for-clipped-horse-guide" />
         <p>The link below is the heavyweight turnout search already used on the blanket review.</p>
