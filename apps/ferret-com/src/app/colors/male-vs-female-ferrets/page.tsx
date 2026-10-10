@@ -8,6 +8,8 @@ import {
   CalloutBox,
   ArticleByline,
   DropCap,
+  ComparisonFoot,
+  LastUpdated,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -121,6 +123,7 @@ export default function MaleVsFemaleFerretsPage() {
             publishedAt="2026-06-01"
             updatedAt="2026-06-01"
           />
+          <LastUpdated date="2026-10-10" />
           <div className="mb-8">
             <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
 
@@ -217,6 +220,38 @@ export default function MaleVsFemaleFerretsPage() {
             <a href="/colors/choosing-a-healthy-ferret">choosing a healthy
             ferret</a>.
           </p>
+          <div className="my-6 max-w-full min-w-0">
+            <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
+              <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+              <thead>
+                <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Hob</th>
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Jill</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Size</th>
+                  <td className="p-3">Typically larger and heavier, with a broader head and a stockier frame</td>
+                  <td className="p-3">Usually smaller, sleeker, and lighter</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Temperament</th>
+                  <td className="p-3">No reliable rule that one sex is friendlier or calmer. Meet the individual</td>
+                  <td className="p-3">The same. Personality and socialization matter more than sex</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">The health point</th>
+                  <td className="p-3">Neutering reduces the strong musky odor and territorial marking of an intact hob</td>
+                  <td className="p-3">An intact jill in prolonged heat can develop life-threatening aplastic anemia. Spay, or manage the cycle with a vet</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <ComparisonFoot updated="2026-10-10" />
+          <h2>Who should choose which</h2>
+          <p>Choose the individual ferret you click with. Use sex as a size lever when you want a larger or smaller animal. Manage an intact jill’s heat with a veterinarian. Nearly all pet-store ferrets are already altered.</p>
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
