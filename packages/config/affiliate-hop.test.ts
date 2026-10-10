@@ -457,6 +457,80 @@ describe('resolveAffiliateHop', () => {
     )
   })
 
+  it('withholds every held-partner href form, and keeps non-held hrefs unchanged', () => {
+    const unset = {}
+    const held = [
+      // absolute partner URLs: https, http, protocol-relative, www, subdomains, case
+      'https://www.smartpak.com/rambo-original-turnout',
+      'http://smartpak.com/',
+      '//www.smartpak.com/home?x=1',
+      'https://shop.smartpakequine.com/cosequin',
+      'HTTPS://WWW.DOVERSADDLERY.COM/girths/',
+      'https://www.schneidersaddlery.com/p/stormshield',
+      'https://www.ridingwarehouse.com/x',
+      'https://www.wysong.net/epigen',
+      'https://www.marshallferrets.com/food',
+      'https://carniwhole.com/',
+      'https://www.chewy.com/b/dog-food',
+      'https://www.trupanion.com/quote',
+      'https://www.healthypawspetinsurance.com/',
+      'https://vetster.com/',
+      'https://askvet.app/',
+      'https://www.smartpak.com./x',
+      'https://www.smartpak.com/go/amazon/x',
+      // mixed-case /go paths
+      '/go/SmartPak/rambo-original-turnout',
+      '/GO/dover/home',
+      '/Go/Wysong/epigen-90',
+      // trailing slashes and query strings
+      '/go/smartpak/',
+      '/go/smartpak',
+      '/go/dover/home/?s=health-equine-ulcers',
+      '/go/schneider?s=x',
+      '/go/wysong/epigen-90#buy',
+      // encoded characters and dot segments
+      '/go/smart%70ak/rambo',
+      '/go/%53martPak/rambo',
+      '/go%2Fdover/home',
+      '/go/amazon/../smartpak/x',
+      '/go/amazon/%2e%2e/dover/home',
+      // absolute own-site /go and other held lists
+      'https://horses.com/go/smartpak/x',
+      '/go/ridingwarehouse/home',
+      '/go/marshall/x',
+      '/go/carniwhole/x',
+      '/go/chewy/home',
+      '/go/Trupanion/home',
+      '/go/VETSTER/telehealth',
+      '/go/askvet/telehealth',
+    ]
+    for (const href of held) {
+      assert.equal(liveAnchorHref(href, unset), undefined, href)
+      assert.notEqual(heldVendorOfHref(href), null, href)
+    }
+    assert.equal(heldVendorOfHref('https://www.smartpak.com/x'), 'smartpak.com')
+    assert.equal(heldVendorOfHref('/GO/SmartPak/x/'), 'smartpak')
+    assert.equal(heldVendorOfHref('/go/smart%70ak/x'), 'smartpak')
+
+    const live = [
+      '/go/amazon/B000ABC123?s=x',
+      '/go/amazon-brand/smartpak+cosequin?s=x',
+      '/go/amazon-brand/dover+saddlery+girth',
+      '/go/Amazon/B000ABC123',
+      'https://www.amazon.com/dp/B000ABC123',
+      '/reviews/rambo-vs-rhino-guide',
+      '/tack/saddle-pads?s=x#top',
+      'https://vets.co/reviews/best-pet-insurance',
+    ]
+    for (const href of live) {
+      assert.equal(liveAnchorHref(href, unset), href, href)
+      assert.equal(heldVendorOfHref(href), null, href)
+    }
+    // A set tag reopens that vendor's own /go hop, never an absolute partner URL.
+    assert.equal(liveAnchorHref('/GO/SmartPak/x', { AFF_SMARTPAK_TAG: 'sp-live' }), '/GO/SmartPak/x')
+    assert.equal(liveAnchorHref('https://www.smartpak.com/x', { AFF_SMARTPAK_TAG: 'sp-live' }), undefined)
+  })
+
   it('hides a commission claim when the hop tag is unset', () => {
     assert.equal(hopCommissionReady('/go/lemonade/home?s=x', {}), false)
     assert.equal(hopCommissionReady('/go/amazon-brand/pet+first+aid+kit', {}), false)

@@ -1,4 +1,4 @@
-import { heldShopText, partnerLinkQuiet } from '@carloOS/config/affiliate-hop'
+import { heldShopText, heldVendorOfHref, liveAnchorHref, partnerLinkQuiet } from '@carloOS/config/affiliate-hop'
 
 /**
  * Keeps a held product-partner hop in the page.
@@ -14,8 +14,10 @@ export function QuietPartnerLink({
   label: string
   tone?: 'light' | 'dark'
 }) {
-  const vendor = href.match(/^\/go\/([^/?#]+)/)?.[1] ?? ''
-  if (!partnerLinkQuiet(href)) {
+  // Any held partner form (absolute URL, mixed-case or encoded /go path) stays text until liveAnchorHref clears it.
+  const vendor = heldVendorOfHref(href) ?? ''
+  const held = partnerLinkQuiet(href) || (vendor !== '' && liveAnchorHref(href) !== href)
+  if (!held) {
     const className =
       tone === 'dark'
         ? 'inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline'
