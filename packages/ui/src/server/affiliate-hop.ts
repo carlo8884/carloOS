@@ -9,7 +9,7 @@ import {
   resolveAffiliateHop,
   type AffiliateRoute,
 } from '@carloOS/config/affiliate-hop'
-import { emailLandingCollectUrl } from '../lib/affiliate-click'
+import { emailLandingCollectUrl, emailLandingHopClickUrl } from '../lib/affiliate-click'
 
 export type GoRouteParams = {
   params: { vendor: string; sku?: string | string[] }
@@ -56,22 +56,27 @@ async function logAffiliateClick(
   // the same GA4 event. Same-site navigations already fired gtag.
   const fetchSite = request.headers.get('sec-fetch-site')
   const clientAlreadyFired = fetchSite === 'same-origin' || fetchSite === 'same-site'
-  const collect =
-    clientAlreadyFired
-      ? null
-      : emailLandingCollectUrl(process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID, {
-          site: fields.site,
-          page: new URL(request.url).pathname,
-          source: fields.source,
-          partner: fields.vendor,
-          product: fields.sku.replace(/\+/g, ' '),
-          clientId: crypto.randomUUID(),
+  const emailFields = {
+    site: fields.site,
+    page: new URL(request.url).pathname,
+    source: fields.source,
+    partner: fields.vendor,
+    product: fields.sku.replace(/\+/g, ' '),
+    clientId: crypto.randomUUID(),
+  }
+  const collect = clientAlreadyFired
+    ? null
+    : emailLandingCollectUrl(process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID, emailFields)
+  const hopCollect = clientAlreadyFired
+    ? null
+    : emailLandingHopClickUrl(process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID, emailFields)
+  const sendCollect = (target: string | null) =>
+    target
+      ? fetch(target, { method: 'POST' }).catch((err) => {
+          console.error('[affiliate-click] ga4 collect failed', err)
         })
-  const ga = collect
-    ? fetch(collect, { method: 'POST' }).catch((err) => {
-        console.error('[affiliate-click] ga4 collect failed', err)
-      })
-    : Promise.resolve()
+      : Promise.resolve()
+  const ga = Promise.all([sendCollect(collect), sendCollect(hopCollect)])
   await Promise.race([
     Promise.all([
       track(

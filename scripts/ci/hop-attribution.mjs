@@ -87,6 +87,8 @@ for (const site of SITES) {
 
 const listener = readFileSync(join(ROOT, 'packages/ui/src/components/AffiliateClickListener.tsx'), 'utf8')
 if (!/trackEvent\(\s*'affiliate_click'/.test(listener)) hits.push('AffiliateClickListener does not fire affiliate_click')
+if (!/trackEvent\(\s*'hop_click'/.test(listener)) hits.push('AffiliateClickListener does not fire hop_click')
+if (!/card_id:\s*click\.slot/.test(listener)) hits.push('hop_click is missing card_id')
 for (const field of ['site:', 'page:', 'source:', 'partner:', 'vendor:', 'product:', 'placement:', 'slot:', 'destination_type:', 'destination:']) {
   if (!listener.includes(field)) hits.push(`AffiliateClickListener event is missing ${field}`)
 }
@@ -97,6 +99,7 @@ const clickLib = readFileSync(join(ROOT, 'packages/ui/src/lib/affiliate-click.ts
 if (!/vendor:\s*partner/.test(clickLib)) hits.push('affiliate click payload does not send vendor')
 if (!/'ep\.vendor':\s*fields\.partner/.test(clickLib)) hits.push('email /go collect does not send ep.vendor')
 if (!/'ep\.slot':\s*'email landing'/.test(clickLib)) hits.push('email /go collect does not send ep.slot')
+if (!/ep\.card_id',\s*'email landing'/.test(clickLib)) hits.push('email /go hop_click does not send ep.card_id')
 if (!/'ep\.destination_type':/.test(clickLib)) hits.push('email /go collect does not send ep.destination_type')
 if (!/'ep\.destination':/.test(clickLib)) hits.push('email /go collect does not send ep.destination')
 
@@ -107,6 +110,7 @@ if (!/split\('PLACEHOLDER'\)\.join\(tag\)/.test(resolver)) {
 
 const goHandler = readFileSync(join(ROOT, 'packages/ui/src/server/affiliate-hop.ts'), 'utf8')
 if (!/event:\s*'affiliate_click'/.test(goHandler)) hits.push('/go handler does not log affiliate_click')
+if (!/emailLandingHopClickUrl/.test(goHandler)) hits.push('/go handler does not send hop_click for a direct email hit')
 for (const field of ['site:', 'source', 'vendor']) {
   if (!goHandler.includes(field)) hits.push(`/go handler log is missing ${field}`)
 }

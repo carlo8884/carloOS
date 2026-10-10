@@ -37,6 +37,17 @@ test('gtag library waits, and a shop click still queues affiliate_click', async 
   })
   expect(queued).toBe(true)
 
+  const hopQueued = await page.evaluate(() => {
+    const layer = (window as unknown as { dataLayer?: unknown[] }).dataLayer ?? []
+    return layer.some((entry) => {
+      const list = Array.isArray(entry) ? entry : Array.from(entry as ArrayLike<unknown>)
+      if (list[0] !== 'event' || list[1] !== 'hop_click') return false
+      const params = list[2] as { card_id?: string } | undefined
+      return typeof params?.card_id === 'string' && params.card_id.length > 0
+    })
+  })
+  expect(hopQueued).toBe(true)
+
   const library = page.locator('script[src*="googletagmanager.com/gtag/js"]')
   await expect(library).toHaveAttribute('data-nscript', 'lazyOnload')
 })
