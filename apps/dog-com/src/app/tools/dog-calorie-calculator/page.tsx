@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -8,7 +9,6 @@ import {
   combineSchemas,
   SchemaScript,
   FAQAccordion,
-  AffiliateDisclosure,
   CrossPortfolioCard,
   ShopCtas,
   JourneyNext,
@@ -21,7 +21,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
   title: 'Dog Calorie Calculator — RER & Daily Intake | Dog.com',
   description:
-    'Estimate your dog\'s daily calorie needs using the standard RER formula (70 x kg^0.75) and WSAVA/AAHA-style life-stage factors. Free, with cups-per-day output.',
+    'Estimate daily calories with the WSAVA July 2020 adult chart (95 or 130 × kg^0.75). Other life-stage multipliers are planning figures.',
   path: '/tools/dog-calorie-calculator',
 })
 
@@ -29,9 +29,9 @@ const FAQS = [
   {
     question: 'How is a dog\'s daily calorie need calculated?',
     answer:
-      'The standard starting point is the Resting Energy Requirement (RER): 70 multiplied by the dog\'s body weight in kilograms raised to the power of 0.75. RER represents the energy needed at rest. To account for life stage and activity, RER is multiplied by a factor (the Maintenance Energy Requirement, or MER). A neutered adult typically uses a factor of 1.6; a very active dog might use 2.0; a growing puppy under 4 months uses 3.0. These factors follow the WSAVA/AAHA-style published guidelines. The result is an estimate -- individual dogs vary, and veterinary assessment of body condition score is essential for calibration.',
+      'Healthy adult maintenance follows the WSAVA July 2020 chart, which cites the 2006 NRC: 95 times kg to the power 0.75 for an inactive adult, and 130 times kg to the power 0.75 for an active adult. Other multipliers, including 1.6 for a neutered adult, are planning figures on resting energy (70 times kg to the power 0.75). They are not rows on that chart. The result is an estimate. Body condition still belongs with a veterinarian.',
     answerText:
-      'RER = 70 x (weight in kg)^0.75. MER = life-stage factor x RER. Factor ranges from 1.0 (weight loss) to 3.0 (young puppy). These are WSAVA/AAHA-style estimates; confirm with your veterinarian.',
+      'Inactive adult: 95 x kg^0.75. Active adult: 130 x kg^0.75 (WSAVA July 2020, citing 2006 NRC). Other multipliers from 1.0 to 3.0 are planning figures on 70 x kg^0.75.',
   },
   {
     question: 'What weight should I enter -- current or target?',
@@ -50,16 +50,16 @@ const FAQS = [
   {
     question: 'Why does this calculator say "estimate" and not "prescription"?',
     answer:
-      'Calorie formulas give a population-level starting point, not an individual prescription. A dog\'s actual metabolic rate depends on breed, body composition, neuter status, health status, temperature, and individual variation that no formula can capture. Studies have shown individual variation of 30% or more around the mean even within the same life stage. The right way to use this number is as a starting point: feed near the estimate, then adjust up or down over 4-6 weeks based on body condition score. Your veterinarian should confirm the target weight and review any significant calorie restriction.',
+      'Calorie formulas give a population-level starting point, not an individual prescription. A dog\'s actual metabolic rate depends on breed, body composition, neuter status, health status, temperature, and individual variation. The WSAVA Nutritional Assessment Guidelines state that energy requirements can vary by 30% in either direction for dogs, particularly the maintenance energy requirement (https://pmc.ncbi.nlm.nih.gov/articles/PMC11107980/). Feed near the estimate, then adjust up or down over 4-6 weeks based on body condition score. Your veterinarian should confirm the target weight and review any significant calorie restriction.',
     answerText:
-      'Formula estimates have 30%+ individual variation. Use as a starting point, then adjust over 4-6 weeks based on body condition score and veterinary guidance.',
+      'The WSAVA Nutritional Assessment Guidelines state that energy requirements can vary by 30% in either direction for dogs, particularly the maintenance energy requirement (https://pmc.ncbi.nlm.nih.gov/articles/PMC11107980/). Adjust over 4-6 weeks using body condition and veterinary guidance.',
   },
   {
     question: 'Do treats count toward the daily calorie target?',
     answer:
-      'Yes. Treats should stay within about 10% of daily calories — training treats and table scraps both count. Subtract treat calories from the MER estimate before you portion the bowl. Weigh meals on a kitchen scale rather than a measuring cup: cups over-portion by roughly 20% depending on how they are filled. That 10% rule and the scale-over-cup note are the same husbandry guidance used on the weight-management and breed-feeding pages.',
+      'Yes. The WSAVA guide to treats for dogs states that treats should make up no more than 10% of a dog\'s daily calorie intake (https://wsava.org/wp-content/uploads/2025/11/WSAVA_GuidetoTreats_Dogs_251107.pdf). That 10% is not a row on the WSAVA July 2020 calorie chart. Subtract treat calories from the estimate before you portion the bowl. Weigh meals on a kitchen scale rather than a measuring cup: how full the cup is changes the portion. A separate planning figure is that a heaped cup can run about 20% high. That 20% is not a fetched measurement.',
     answerText:
-      'Keep treats to about 10% of daily calories. Weigh meals on a kitchen scale; measuring cups often over-portion by about 20%.',
+      'The WSAVA guide to treats for dogs states that treats should make up no more than 10% of a dog\'s daily calorie intake (https://wsava.org/wp-content/uploads/2025/11/WSAVA_GuidetoTreats_Dogs_251107.pdf). A heaped cup about 20% high is a planning figure. Weigh meals on a kitchen scale.',
   },
 ]
 
@@ -76,7 +76,7 @@ const appSchema = {
   '@type': 'WebApplication',
   name: 'Dog Calorie Calculator',
   description:
-    'Free dog calorie calculator using the standard RER formula (70 x kg^0.75) and WSAVA/AAHA-style life-stage MER factors. Outputs kcal/day and optional cups/day.',
+    'Free dog calorie calculator using the standard RER formula (70 x kg^0.75) and the WSAVA July 2020 adult chart; other multipliers are planning figures. Outputs kcal/day and optional cups/day.',
   url: 'https://dog.com/tools/dog-calorie-calculator',
   applicationCategory: 'UtilityApplication',
   operatingSystem: 'Web',
@@ -85,7 +85,7 @@ const appSchema = {
 
 const howToSchema = buildHowToSchema({
   name: 'How to calculate a dog\'s daily calorie needs',
-  description: 'Estimate daily calorie requirements (RER and MER) using the standard veterinary formula and WSAVA/AAHA-style life-stage factors.',
+  description: 'Estimate daily calorie requirements (RER and MER) using the standard veterinary formula and the WSAVA July 2020 adult chart, with other life-stage multipliers labeled as planning figures.',
   url: 'https://dog.com/tools/dog-calorie-calculator',
   steps: [
     {
@@ -94,11 +94,11 @@ const howToSchema = buildHowToSchema({
     },
     {
       name: 'Select the life stage',
-      text: 'Choose the life stage that best fits your dog: neutered adult, intact adult, weight loss, active/working, puppy under 4 months, puppy 4–12 months, or senior. Each stage applies a different MER factor to the RER baseline.',
+      text: 'Inactive and active adults use the WSAVA July 2020 chart (95 or 130 times kg to the power 0.75). Neutered, intact, puppy, senior, and weight-change rows are planning figures on resting energy.',
     },
     {
       name: 'Read the kcal/day estimate',
-      text: 'The calculator computes RER (70 × weight_kg^0.75) and multiplies it by the life-stage MER factor to give kcal/day. For a cups-per-day estimate, also enter the kcal/cup from your food\'s label.',
+      text: 'Inactive adults use 95 times kg to the power 0.75. Active adults use 130 times kg to the power 0.75. Planning rows multiply 70 times kg to the power 0.75 by their factor. For cups per day, enter kcal/cup from the label.',
     },
     {
       name: 'Use as a starting point and monitor',
@@ -110,7 +110,7 @@ const howToSchema = buildHowToSchema({
 const articleSchema = buildArticleSchema({
   siteId: 'dog-com',
   title: 'Dog Calorie Calculator',
-  description: 'Estimate your dog\'s daily calorie needs using the standard RER formula and WSAVA/AAHA-style life-stage factors. Enter weight, pick a life stage, and get kcal/day -- plus optional cups/day if you enter your food\'s calorie density.',
+  description: 'Estimate your dog\'s daily calorie needs using the standard RER formula and the WSAVA July 2020 adult chart, with other life-stage multipliers labeled as planning figures. Enter weight, pick a life stage, and get kcal/day -- plus optional cups/day if you enter your food\'s calorie density.',
   url: 'https://dog.com/tools/dog-calorie-calculator',
   imageUrl: '',
   authorName: 'Dog.com Editorial',
@@ -143,8 +143,8 @@ export default function DogCalorieCalculatorPage() {
             Dog Calorie Calculator
           </h1>
           <p className="text-base text-white/60 leading-relaxed max-w-2xl">
-            Estimate your dog&apos;s daily calorie needs using the standard RER formula and WSAVA/AAHA-style
-            life-stage factors. Enter weight, pick a life stage, and get kcal/day -- plus optional
+            Estimate your dog&apos;s daily calorie needs with the WSAVA July 2020 adult chart. Other life-stage
+            multipliers are planning figures. Enter weight, pick a life stage, and get kcal/day -- plus optional
             cups/day if you enter your food&apos;s calorie density.
           </p>
         </div>
@@ -169,19 +169,19 @@ export default function DogCalorieCalculatorPage() {
             siteId="dog-com"
             nextHref="/tools/dog-body-condition-score"
             nextLabel="Check the number against body condition"
-            nextBlurb="The calculator is a starting scoop. BCS is whether that scoop is right — ribs felt, waist seen. Weigh the meal; the hop below is the same kitchen-scale search already on this page."
+            nextBlurb="The calculator is a starting scoop. BCS is whether that scoop is right — ribs felt, waist seen. Weigh the meal; The button below opens the same kitchen-scale search on Amazon."
             resourceHref="/go/amazon-brand/kitchen+gram+scale?s=tools-dog-calorie-calculator"
             resourceLabel="Browse kitchen gram scales on Amazon →"
           />
         </div>
       </section>
 
-      {/* Money path — live amazon-brand search hops (food / scale / feeders / treats).
+      {/* Shop note — live amazon-brand search buttons (food / scale / feeders / treats).
           Twin of vets.co cat-calorie-calculator. ShopCtas hides empty Chewy;
-          never href="#" or PLACEHOLDER. Category searches only — not ranked ASINs. */}
+          never href="#" or an empty link. Amazon searches only — not ranked product pages. */}
       <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <div className="max-w-2xl">
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/measured+dog+food?s=tools-dog-calorie-calculator", "/go/amazon-brand/kitchen+gram+scale?s=tools-dog-calorie-calculator", "/go/amazon-brand/slow+feeder+dog+bowl?s=tools-dog-calorie-calculator", "/go/amazon-brand/interactive+dog+feeder?s=tools-dog-calorie-calculator", "/go/amazon-brand/low+calorie+dog+treats?s=tools-dog-calorie-calculator"]} />
           <div className="mt-4 rounded-xl border border-brand-border bg-brand-white p-5">
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
               Shop portions
@@ -252,13 +252,11 @@ export default function DogCalorieCalculatorPage() {
             The formulas behind the estimate
           </h2>
           <p className="mb-4 text-base leading-relaxed text-brand-text-mid">
-            The calculator uses two standard equations. First, Resting Energy Requirement (RER):
-            70 multiplied by the dog&apos;s body weight in kilograms raised to the power of 0.75.
-            RER is the baseline energy a dog needs at rest to maintain normal physiological functions.
-            Second, Maintenance Energy Requirement (MER): a life-stage factor multiplied by RER.
-            The factors -- 1.6 for neutered adults, 3.0 for very young puppies, 1.0 for a supervised
-            weight-loss plan -- are the standard values cited in WSAVA Global Nutrition Guidelines and
-            AAHA Nutritional Assessment Guidelines.
+            Healthy adult maintenance uses the WSAVA July 2020 chart, which cites the 2006 NRC:
+            95 &times; kg^0.75 for an inactive adult and 130 &times; kg^0.75 for an active adult.
+            The other multipliers — 1.6 neutered, 1.8 intact, 1.0 weight loss, 1.7 weight gain, 2.0 light work,
+            3.0 and 2.0 for puppies, and 1.4 for a less active senior — are planning figures on
+            RER = 70 &times; kg^0.75. They are not rows on that chart.
           </p>
           <p className="mb-4 text-base leading-relaxed text-brand-text-mid">
             For how feeding amount intersects with body condition scoring and what to do when a dog
@@ -342,6 +340,7 @@ export default function DogCalorieCalculatorPage() {
               { label: 'Best Large Breed Dog Food', href: '/reviews/best-large-breed-dog-food', note: 'Controlled-calorie large breed formulas' },
               { label: 'Breed Profiles — Exercise &amp; Energy', href: '/breeds', note: 'Energy level by breed affects calorie needs' },
               { label: 'Dog Body Condition Score', href: '/tools/dog-body-condition-score', note: 'Calibrate the kcal target to rib feel and waist' },
+              { label: 'Dog Body Condition Score (BCS) — The 1–9 Scale, Step by Step', href: '/guides/dog-body-condition-score', note: 'How to score ribs, waist, and tuck on the 1–9 scale' },
               { label: 'Pet Insurance Review', href: crossSiteHref('vets-co', '/reviews/best-pet-insurance'), note: 'Educational coverage comparison, not a ranking' },
               { label: 'Talk to a vet (telehealth)', href: crossSiteHref('vets-co', '/telehealth'), note: 'Stable feeding questions, not an ER substitute' },
             ].map(item => (

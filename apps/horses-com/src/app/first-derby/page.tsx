@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../components/HopDisclosure'
 /**
  * Horses.com -- Your First Day at the Races (Derby Spectator Guide)
  * /first-derby
@@ -19,7 +20,6 @@
 
 import type { Metadata } from 'next'
 import {
-  AffiliateDisclosure,
   buildMetadata,
   ArticleLayout,
   ArticleByline,
@@ -319,19 +319,9 @@ export default function FirstDerbyPage() {
         <p className="max-w-content-wide text-sm text-brand-text-mid leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
 
         <div className="max-w-content-wide mt-6">
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href="/go/amazon-brand/jockey+racing+silks?s=first-derby" />
         </div>
 
-        {/* Money path — live amazon-brand search hops
-            (laminated horse barn spectator day-map chart /
-            horse stall-door silks follow card /
-            equine first-derby spectator handbook).
-            Educational kitchen searches only; no Rx hops.
-            ShopCtas hides empty Chewy; never href="#"
-            or PLACEHOLDER. Unused vs racing / bloodstock /
-            first-horse-roadmap kitchen kits and child
-            horse+curry+comb / horse+hoof+pick hops. Do not
-            re-open #1165 / what-to-expect. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-content-wide">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
             Shop related supplies
@@ -340,7 +330,7 @@ export default function FirstDerbyPage() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/jockey+racing+silks?s=first-derby"
-              amazonLabel="Shop on Amazon"
+              amazonLabel="Browse jockey racing silks on Amazon →"
             />
           </div>
         </div>

@@ -15,7 +15,7 @@ import { visibleShopHref } from '@carloOS/config/affiliate-hop'
  * generic confirmation. Each should have a dedicated thank-you page
  * with affiliate recommendations."
  *
- * Each lead magnet (Mailchimp tag) maps to its thank-you content here.
+ * Each lead magnet maps to its thank-you content here.
  * After signup, redirect to /thanks/<magnet>.
  *
  * Architect S20 (Lead Magnet Library).
@@ -59,7 +59,7 @@ const MAGNETS: Record<string, MagnetContent> = {
       {
         headline: 'A reasonable starter kit on Chewy',
         body: 'Crate, food, training treats, leash, collar — Chewy delivers same-day in most metros and routinely has the best price on starter bundles.',
-        cta: { label: 'Browse puppy gear →', vendor: 'chewy', sku: 'puppy-starter-kit' },
+        cta: { label: 'Browse puppy gear →', vendor: 'chewy-brand', sku: 'puppy+crate+food+treats+leash+collar' },
       },
     ],
     nextReadingHref: '/health',
@@ -83,7 +83,7 @@ const MAGNETS: Record<string, MagnetContent> = {
       },
       {
         headline: 'See the Dog.com comparison table',
-        body: 'Editorial scores and sample premiums stay on Dog.com. Quote buttons go to the Vets.co review.',
+        body: 'Sample premiums stay on Dog.com. Quote buttons go to the Vets.co review.',
         cta: { label: 'Open the comparison →', href: '/pet-insurance' },
       },
     ],

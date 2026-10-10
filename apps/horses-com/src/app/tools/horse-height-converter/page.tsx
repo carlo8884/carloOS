@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -11,7 +12,6 @@ import {
   TableOfContents,
   RelatedLinks,
   CrossPortfolioCard,
-  AffiliateDisclosure,
   ShopCtas,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
@@ -75,6 +75,8 @@ const softwareApplicationSchema = {
   publisher: { '@type': 'Organization', name: 'Horses.com Editorial', url: 'https://horses.com' },
 }
 
+// Inch and centimetre columns follow 4 inches per hand and 2.54 cm per inch.
+// The 14.2hh pony line is a planning figure.
 const REFERENCE = [
   { hands: '14.2hh', inches: 58, cm: 147.3, note: 'Pony cutoff — 14.2hh and under is a pony' },
   { hands: '15.0hh', inches: 60, cm: 152.4, note: 'Small horse' },
@@ -216,32 +218,30 @@ export default function HorseHeightConverterPage() {
         </p>
         <Calculator />
 
-        {/* Money path — live amazon-brand search hops (measuring stick /
+        {/* Shop note — live amazon-brand search buttons (measuring stick /
             height-weight tape / saddle-fitting kit). ShopCtas hides empty
-            Chewy; never href="#" or PLACEHOLDER. Stick matches BCS; tape
+            Chewy; never href="#" or an empty link. Stick matches BCS; tape
             matches weight-calculator / BCS / age / size-for-rider; saddle-
-            fitting kit is the height→tack hop already on this page. */}
-        <AffiliateDisclosure variant="inline" siteId="horses-com" />
+            fitting kit is the height→tack button already on this page. */}
+        <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/horse+measuring+stick?s=tools-horse-height-converter", "/go/amazon-brand/horse+weight+tape?s=tools-horse-height-converter", "/go/amazon-brand/horse+saddle+fitting+kit?s=tools-horse-height-converter"]} />
         <div id="shop" className="mb-8 rounded-xl border border-brand-border bg-brand-surface p-5">
           <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
             Shop height and sizing tools
           </div>
           <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">A measuring stick with a level is the official withers tool (same
-            query as the{' '}
+            search as the{' '}
             <Link href="/tools/body-condition-score" className="text-brand-primary no-underline hover:underline">
               Henneke BCS
             </Link>
-            ). A height/weight tape is the everyday barn backup (same query as
+            ). A height/weight tape is the everyday barn backup (same search as
             the{' '}
             <Link href="/tools/horse-weight-calculator" className="text-brand-primary no-underline hover:underline">
               weight calculator
             </Link>
             ). A saddle-fitting kit (wither gauge or fitting template) is how
-            height turns into tack size. These are Amazon category searches —
-            not a ranked product list, not invented inventory, and not a
-            substitute for a formal measurement or a qualified saddle fitter.
-            Horses.com earns a commission on qualifying purchases at no extra
-            cost to you.</p>
+            height turns into tack size. These are Amazon searches —
+            not a ranked product list, not made-up products, and not a
+            substitute for a formal measurement or a qualified saddle fitter.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/horse+measuring+stick?s=tools-horse-height-converter"

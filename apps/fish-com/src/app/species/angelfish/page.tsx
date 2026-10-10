@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { StockImage, buildMetadata, ArticleLayout, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
+import { ShopCtas, StockImage, buildMetadata, ArticleLayout, RelatedLinks, CrossPortfolioCard , ArticleSourcesList } from '@carloOS/ui'
 import { FAQAccordion, SchemaScript, buildArticleSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
@@ -46,7 +47,7 @@ const FAQS = [
   {
     question: 'How long do angelfish live?',
     answer:
-      'Ten to fifteen years. They are healthiest and breed most reliably in conditions close to their native Amazon tributaries: warm (78–82°F), soft (GH 2–8), slightly acidic (pH 6.0–7.0) water.',
+      'Ten to fifteen years. They are healthiest and breed most reliably in conditions close to their native Amazon tributaries: warm (75–86°F, FishBase Pterophyllum scalare, https://www.fishbase.se/summary/Pterophyllum-scalare.html), soft (GH 2–8), slightly acidic (pH 6.0–7.0) water.',
     answerText:
       '10-15 years. Healthiest in warm (78-82F), soft, slightly acidic water close to their Amazon origins.',
   },
@@ -69,9 +70,9 @@ export default function AngelfishPage() {
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Quick Stats</div>
-          {[['Scientific name', 'Pterophyllum scalare'], ['Adult size', '6" tall · 4" body length'], ['Tank height', '18" minimum — 24" preferred'], ['Temperature', '76–82°F (warm end)'], ['pH', '6.0–7.5 — slightly acidic'], ['Behavior', 'Cichlid — territorial when breeding'], ['Lifespan', '10–15 years']].map(([k, v]) => (
+          {[['Scientific name', 'Pterophyllum scalare'], ['Adult size', '6" tall · 4" body length'], ['Tank height', '18" minimum — 24" preferred'], ['Temperature', '75–86°F (https://www.fishbase.se/summary/Pterophyllum-scalare.html)'], ['pH', '6.0–7.5 — slightly acidic'], ['Behavior', 'Cichlid — territorial when breeding'], ['Lifespan', '10–15 years']].map(([k, v]) => (
             <div key={k} className="flex justify-between py-1.5 border-b border-brand-border text-xs last:border-0">
-              <span className="text-brand-text-light">{k}</span><span className="font-bold text-brand-dark text-right max-w-[55%]">{v}</span>
+              <span className="text-brand-text-light">{k}</span><span className="font-bold text-brand-dark text-right max-w-[55%] break-all">{v}</span>
             </div>
           ))}
         </div>
@@ -84,7 +85,7 @@ export default function AngelfishPage() {
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <StockImage manifestKey="fish-com:species-angelfish" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A freshwater angelfish in a home aquarium." priority />
         <h2>Tank Height — The Non-Negotiable</h2>
-        <p>Angelfish grow vertically — their body is laterally compressed and their dorsal and ventral fins extend dramatically above and below. An adult angelfish may reach 6 inches in height (fin tip to fin tip) while being only 4 inches long. A standard 20-gallon "high" tank at 16 inches depth is barely adequate; a 55-gallon with 21 inches of depth works; a 75-gallon with 20+ inches and longer footprint is ideal for a small group or a pair. Shallow tanks stunt their growth, restrict their natural fin expression, and cause chronic stress. When buying angelfish, buy for the adult, not the juvenile.</p>
+        <p>Angelfish grow vertically — their body is laterally compressed and their dorsal and ventral fins extend dramatically above and below. An adult angelfish may reach 6 inches in height (fin tip to fin tip) while being only 4 inches long. A standard 20-gallon "high" tank at 16 inches depth is barely adequate; a 55-gallon with 21 inches of depth works; a 75-gallon with 20+ inches and longer footprint is ideal for a small group or a pair. Shallow tanks stunt their growth, restrict their natural fin expression, and cause chronic stress. When buying angelfish, buy for the adult, not the juvenile. The <a href="/tools/aquarium-volume-calculator" className="text-brand-primary hover:underline">tank volume calculator</a> turns the tank&apos;s length, width, and height into gallons so a 20-gallon box is not mistaken for a 55.</p>
 
         <h2>Cichlid Pair Bonding and Territory</h2>
         <p>Angelfish form pair bonds that can last for years. A bonded pair will select a spawning site — typically a broad leaf, a piece of slate, or a vertical surface — and defend it against all other tank inhabitants when breeding. "Defending" means genuine cichlid aggression: chasing, fin-nipping, and potentially injuring any fish that enters the defended zone. This behavior is normal and cannot be trained away — it is the cichlid imperative to protect a spawning site.</p>
@@ -96,7 +97,7 @@ export default function AngelfishPage() {
         <p>Compatible: larger tetras (black skirt, Buenos Aires, silver dollars), corydoras catfish (peaceful and ignored by angels), bristlenose plecos, other similar-sized cichlids that can hold their own (German Blue Rams, keyhole cichlids), and Cardinal tetras (slightly larger and faster than neons — better odds, but not guaranteed safe). Avoid: any fin-nipping species (tiger barbs reliably destroy angelfish fins), very small fish, and aggressive cichlids that will harass angels off food.</p>
 
         <h2>Water and Diet</h2>
-        <p>Angelfish come from the slow-moving Amazon tributaries where water is warm (78–82°F), soft (GH 2–8), and slightly acidic (pH 6.0–7.0). They adapt to a wider range in captivity but are healthiest and breed most reliably in conditions close to this. Tall tank + warm, slightly soft, acidic water + live or frozen foods = ideal conditions. Diet: high-quality flake or pellet as a staple, supplemented with frozen or live foods enthusiastically — frozen bloodworms, mysis shrimp, brine shrimp, and live white worms for conditioning pairs toward breeding. Feed twice daily.</p>
+        <p>Angelfish come from the slow-moving Amazon tributaries where water is warm (75–86°F, FishBase Pterophyllum scalare, <a className="break-all" href="https://www.fishbase.se/summary/Pterophyllum-scalare.html">https://www.fishbase.se/summary/Pterophyllum-scalare.html</a>), soft (GH 2–8), and slightly acidic (pH 6.0–7.0). They adapt to a wider range in captivity but are healthiest and breed most reliably in conditions close to this. Tall tank + warm, slightly soft, acidic water + live or frozen foods = ideal conditions. Diet: high-quality flake or pellet as a staple, supplemented with frozen or live foods enthusiastically — frozen bloodworms, mysis shrimp, brine shrimp, and live white worms for conditioning pairs toward breeding. Feed twice daily.</p>
 
         <h2>Strains and Varieties</h2>
         <p>Decades of selective breeding have produced many angelfish varieties beyond the wild-type silver with black bars: veil angels (extended fins), marble (random black and white pattern), koi (orange, white, and black), gold (solid yellow), black lace (black), platinum (solid white), zebra (extra bars), smoky (brown-gray tones), and others. Veil-tail varieties have the most dramatic fin extensions but are slower and more vulnerable to fin-nipping — avoid keeping them with even mildly nippy species. Wild-type angelfish are hardier and more vigorous spawners than many heavily selectively-bred strains.</p>
@@ -111,12 +112,12 @@ export default function AngelfishPage() {
           includeSchema={false}
           allowMultiple
         />
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        <HopDisclosure siteId="fish-com" href="/go/amazon-brand/angelfish%20tank%20setup?s=species-angelfish" />
           <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Angelfish — Tank Setup</div>
-          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for angelfish care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
+          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for angelfish care.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
-            <a href="/go/amazon-brand/angelfish%20tank%20setup?s=species-angelfish" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop Angelfish Setup on Amazon →</a>
+            <ShopCtas amazonHref="/go/amazon-brand/angelfish%20tank%20setup?s=species-angelfish" amazonLabel="Browse angelfish tank setups on Amazon →" />
           </div>
         </div>
 

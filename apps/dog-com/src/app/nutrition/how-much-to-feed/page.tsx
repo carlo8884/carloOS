@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleByline, AffiliateDisclosure, ShopCtas, JourneyNext } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleByline, ShopCtas, JourneyNext } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'How Much to Feed Your Dog — By Weight, Age | Dog.com', description: 'Dog feeding amounts based on current weight, ideal weight, life stage, and activity level. Body condition scoring explained. research-based.', path: '/nutrition/how-much-to-feed', type: 'article' })
@@ -69,9 +70,9 @@ export default function HowMuchToFeedPage() {
           siteId="dog-com"
           nextHref="/tools/dog-calorie-calculator"
           nextLabel="Run the calorie calculator for a starting scoop"
-          nextBlurb="The RER formula is the napkin math. The calorie calculator applies weight, life stage, and activity so you can check the result against the BCS table above. The hop below is the same generic supplies search already on this page — not a new query."
+          nextBlurb="The RER formula is the napkin math. The calorie calculator applies weight, life stage, and activity so you can check the result against the BCS table above. The button below opens the same generic supplies search on Amazon — not a different search."
           resourceHref="/go/amazon-brand/dry+dog+food?s=nutrition-how-much"
-          resourceLabel="Shop dog supplies on Amazon →"
+          resourceLabel="Browse dry dog food on Amazon →"
         />
 
         <h2 id="activity">Adjusting for Activity Level</h2>
@@ -83,19 +84,8 @@ export default function HowMuchToFeedPage() {
         <h2 id="seniors">Senior Dogs — Adjust for Metabolic Slowdown</h2>
         <p>Senior dogs have lower metabolic rates. The portions that maintained ideal weight at age 4 will cause gradual weight gain by age 9 if not adjusted. Reduce portions by 10–15% when your dog enters senior status and monitor BCS monthly. Dogs with kidney disease need prescription diet portioning guidance from their veterinarian.</p>
 
-        <AffiliateDisclosure variant="inline" siteId="dog-com" />
+        <HopDisclosure siteId="dog-com" href="/go/amazon-brand/dry+dog+food?s=nutrition-how-much" />
 
-        {/* Money path — live amazon-brand search hops
-            (laminated dog BCS-score chart /
-            dog fridge ideal-weight card /
-            canine RER-portion handbook).
-            No existing product hop to keep.
-            Educational kitchen searches only; no Rx /
-            vaccine / flea / heartworm / nsaid hops.
-            ShopCtas hides empty Chewy; never href="#"
-            or PLACEHOLDER. Unused vs safe-human-foods /
-            toxic-foods / can-dogs-eat hops.
-            Do not re-open #1165 / what-to-expect. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
             Shop related supplies
@@ -104,7 +94,7 @@ export default function HowMuchToFeedPage() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/dry+dog+food?s=nutrition-how-much"
-              amazonLabel="Shop on Amazon"
+              amazonLabel="Browse dry dog food on Amazon →"
             />
           </div>
         </div>

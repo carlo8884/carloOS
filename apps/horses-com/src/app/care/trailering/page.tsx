@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -135,15 +136,15 @@ export default function TraileringPage() {
           </ul>
 
           <h2 id="kit">Trailering Kit</h2>
-          <p>Everyday physical supplies that match the travel-protection and tying copy above — shipping boots or wraps and a poll guard if the horse is accustomed to them, plus trailer ties long enough that the horse can lower its head periodically without getting a leg over the rope. These are not treatments for shipping fever, dehydration, or loading fear; a feverish or dull horse after travel belongs with your veterinarian, not a pair of boots. Trailer floor, tire, brake, hitch, and lighting maintenance is vehicle work, not a retail kit. This page does not claim hands-on testing.</p>
+          <p>Keep these on hand: shipping boots or wraps and a poll guard if the horse is accustomed to them, plus trailer ties long enough that the horse can lower its head periodically without getting a leg over the rope. These are not treatments for shipping fever, dehydration, or loading fear; a feverish or dull horse after travel belongs with your veterinarian, not a pair of boots. Trailer floor, tire, brake, hitch, and lighting maintenance is vehicle work, not a retail kit.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/horse+shipping+boots?s=care-trailering", "/go/amazon-brand/horse+shipping+wraps?s=care-trailering", "/go/amazon-brand/horse+poll+guard?s=care-trailering", "/go/amazon-brand/horse+trailer+ties?s=care-trailering"]} />
 
-          {/* Money path — live amazon-brand search hops (trailering kit).
-              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-              Category searches only — everyday physical supplies matching
+          {/* Shop note — live amazon-brand search buttons (trailering kit).
+              ShopCtas hides empty Chewy; never href="#" or an empty link.
+              Amazon searches only — everyday physical supplies matching
               on-page boots / wraps / poll-guard / tying-rope copy, not
-              shipping-fever diagnosis or medication hops. Hay bags and
+              shipping-fever diagnosis or medication buttons. Hay bags and
               water buckets are not named on this page, so they are omitted. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">

@@ -1,19 +1,22 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, RelatedLinks, ShopCtas, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, DropCap, PullQuote, ArticleSourcesList } from '@carloOS/ui'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Heartworm in Dogs — Prevention, Testing | Vets.co', description: 'Heartworm disease is a life-threatening but preventable condition. Monthly prevention costs $5-10. Treatment costs $1,000-3,000.', path: '/health/heartworm-in-dogs', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Heartworm in Dogs — Prevention, Testing | Vets.co', description: 'Heartworm disease is preventable. Prevention averages about $183 a year; treatment averages $1,457. Typical US range, checked October 2026. dated 2026-10-07.', path: '/health/heartworm-in-dogs', type: 'article' })
 const SOURCES = [
   { label: 'American Heartworm Society: Current Canine Guidelines (2018 revision)', url: 'https://www.heartwormsociety.org/veterinary-resources/american-heartworm-society-guidelines', publisher: 'American Heartworm Society' },
-  { label: 'Merck Veterinary Manual: Heartworm Disease', url: 'https://www.merckvetmanual.com/circulatory-system/heartworm-disease/heartworm-disease-in-dogs', publisher: 'Merck Vet Manual' },
+  { label: 'Merck Veterinary Manual: Heartworm Disease', url: 'https://www.merckvetmanual.com/dog-owners/heart-and-blood-vessel-disorders-of-dogs/heartworm-disease-in-dogs', publisher: 'Merck Vet Manual' },
   { label: 'Atkins CE et al. Guidelines for the diagnosis, prevention and management of heartworm infection in dogs. J Vet Intern Med. 2010;24(4):713-733.', publisher: 'JVIM' },
   { label: 'AVMA: Heartworm Disease', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/heartworm-disease', publisher: 'AVMA' },
+  { label: 'Parasites & Vectors (2026): US clinic-transaction cost of canine heartworm treatment and prevention', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC13491753/', publisher: 'Parasites & Vectors' },
+  { label: 'ASPCA Pro: Emancipet high-volume heartworm treatment costs', url: 'https://www.aspcapro.org/resource/improving-access-heartworm-treatment', publisher: 'ASPCA Pro' },
 ]
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Heartworm in Dogs', description: 'Prevention, annual testing, and melarsomine treatment for canine heartworm disease.', url: 'https://vets.co/health/heartworm-in-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Heartworm in Dogs', description: 'Prevention, annual testing, and melarsomine treatment for canine heartworm disease.', url: 'https://vets.co/health/heartworm-in-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-07T00:00:00Z' ,
   citation: SOURCES,
 })
-const med = buildMedicalWebPageSchema({ name: 'Heartworm Disease in Dogs', description: 'Prevention, testing, and treatment of Dirofilaria immitis heartworm in dogs.', url: 'https://vets.co/health/heartworm-in-dogs', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-07' })
+const med = buildMedicalWebPageSchema({ name: 'Heartworm Disease in Dogs', description: 'Prevention, testing, and treatment of Dirofilaria immitis heartworm in dogs.', url: 'https://vets.co/health/heartworm-in-dogs', authorName: 'Vets.co Editorial', lastReviewed: '2026-10-07' })
 const combined = combineSchemas(schema, med)
 const FAQS = [
   { question: 'Can I skip prevention in winter?', answer: 'Year-round prevention is recommended in most of the US. Mosquitoes can be active on warm winter days — temperatures above 57 degrees F allow heartworm larvae to develop in mosquitoes. In warm climates (Southeast US, Florida, Gulf Coast, Hawaii), mosquitoes are active year-round. The American Heartworm Society recommends year-round prevention for all dogs regardless of climate, both because exposure risk is difficult to predict and because monthly heartworm preventives also control intestinal parasites (roundworms, hookworms) that are present year-round.' },
@@ -27,8 +30,8 @@ export default function HeartwormPage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="vets-co"
-        priceAsOf="2026-06-04"
-        hero={{ title: 'Heartworm Disease in Dogs', subtitle: 'Heartworm disease -- caused by the parasitic worm Dirofilaria immitis transmitted through mosquito bites -- is one of the most important preventable conditions in veterinary medicine. Prevention costs approximately $5-15/month. Treatment costs $1,000-3,000 and is difficult and risky. The math is straightforward.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', authorAvatar: '', publishedAt: 'May 2025', readTime: '9 min',}}
+        priceAsOf="2026-10-07"
+        hero={{ title: 'Heartworm Disease in Dogs', subtitle: 'Heartworm disease -- caused by the parasitic worm Dirofilaria immitis transmitted through mosquito bites -- is one of the most important preventable conditions in veterinary medicine. A 2026 US clinic-transaction study in Parasites & Vectors put year-round prevention at about $183 and average melarsomine treatment at $1,457, with $1,124 of that tied directly to treatment. A high-volume outpatient clinic reported $225–$614 per dog (ASPCA Pro, on the Emancipet protocol). Typical US range, checked October 2026; varies by clinic and region. dated 2026-10-07. Treatment is difficult and risky. The math is straightforward.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', authorAvatar: '', publishedAt: 'May 2025', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Heartworm', href: '/health/heartworm-in-dogs' }]}
         relatedLinks={[
           { title: 'Health Hub', href: '/health', category: 'Hub' },
@@ -54,15 +57,17 @@ export default function HeartwormPage() {
       >
         <div className="carloOS-article">
 
-          <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-06-05T00:00:00Z" reviewedBy="Editorial team" />
+          <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-10-07T00:00:00Z" reviewedBy="Editorial team" />
+          <LastUpdated date="2026-10-09" />
 
-          <DropCap>Dirofilaria immitis requires the mosquito as an intermediate host. An infected dog has microfilariae (larval heartworms) circulating in the blood -- a mosquito biting this dog ingests microfilariae that develop through larval stages inside the mosquito over 10-14 days at temperatures above 57 degrees F. When this mosquito bites another dog, it deposits infective larvae (L3) into the skin. These larvae migrate through tissue over 6 months, molt through additional larval stages, and eventually reach the heart and pulmonary arteries as adult worms. Adult worms cause disease; the antigen test detects proteins from adult female worms. Standing water near the house is how that mosquito finds a puddle. An adjustable aluminum downspout extender is how roof runoff is carried away from the foundation instead of pooling at the downspout — it is not a 14-inch manual reel lawn mower (that lives on flea-tick-prevention), not mosquito dunks (those live on dog.com heartworm prevention), and it is not a Heartgard chew. A downspout does not diagnose heartworm and it does not replace year-round prevention prescribed by a veterinarian.</DropCap>
+          <DropCap>Dirofilaria immitis requires the mosquito as an intermediate host. An infected dog has microfilariae (larval heartworms) circulating in the blood -- a mosquito biting this dog ingests microfilariae that develop through larval stages inside the mosquito over 10-14 days at temperatures above 57 degrees F. When this mosquito bites another dog, it deposits infective larvae (L3) into the skin. These larvae migrate through tissue over 6 months, molt through additional larval stages, and eventually reach the heart and pulmonary arteries as adult worms. Adult worms cause disease; the antigen test detects proteins from adult female worms. Standing water near the house is how that mosquito finds a puddle. An adjustable aluminum downspout extender is how roof runoff is carried away from the foundation instead of pooling at the downspout — it is not a 14-inch manual reel lawn mower, not mosquito dunks, and it is not a Heartgard chew. A downspout does not diagnose heartworm and it does not replace year-round prevention prescribed by a veterinarian.</DropCap>
 
           <CalloutBox variant="warning" title="Strict rest during treatment">
-            Once melarsomine is administered, dying worms can lodge in pulmonary arteries and cause life-threatening thromboembolism -- exercise dramatically raises this risk. The dog must be leash-restricted (no running, no playing, crate rest for high-energy dogs) for the full 8-week treatment course. A heavy-gauge 48-inch dog crate is how that crate rest stays a crate instead of a guessed hallway — it is not a double-door wire dog crate (that lives on canine-influenza) and it is not a soft-sided crate. A 2-foot nylon traffic lead is how outdoor potty stays a short leash instead of a run — it is not a seat-belt tether (that lives on dog.com vaccinations) and it is not a long-line. This is not optional; non-compliance kills dogs every year. The crate and lead do not replace the veterinarian who stages the infection and administers melarsomine.
+            Once melarsomine is administered, dying worms can lodge in pulmonary arteries and cause life-threatening thromboembolism -- exercise dramatically raises this risk. The dog must be leash-restricted (no running, no playing, crate rest for high-energy dogs) for the full 8-week treatment course. A heavy-gauge 48-inch dog crate is how that crate rest stays a crate instead of a guessed hallway — it is not a double-door wire dog crate and it is not a soft-sided crate. A 2-foot nylon traffic lead is how outdoor potty stays a short leash instead of a run — it is not a seat-belt tether and it is not a long-line. This is not optional; non-compliance kills dogs every year. The crate and lead do not replace the veterinarian who stages the infection and administers melarsomine.
           </CalloutBox>
 
           <h2>Annual Testing -- Required Even on Prevention</h2>
+          <p>A 2026 US clinic-transaction study in Parasites & Vectors put year-round prevention at about $183 and average melarsomine treatment at $1,457, with $1,124 of that tied directly to treatment. A high-volume outpatient clinic reported $225–$614 per dog (ASPCA Pro, on the Emancipet protocol). Typical US range, checked October 2026; varies by clinic and region. dated 2026-10-07. How that prevention-versus-treatment gap sits with the rest of a year of bills is in the <a href="/guides/cost-of-veterinary-care">cost of veterinary care</a> guide. The <a href="/tools/pet-insurance-worth-it-calculator">worth-it calculator</a> turns a premium into the eligible-cost level where a policy pays for itself. It does not use these clinic figures as a quote.</p>
           <p>Annual heartworm antigen testing is required for all dogs, even those on year-round prevention. The reasons: no preventive is 100% effective -- a dog that vomited a dose, was undertreated due to weight change, or encountered a preventive-resistant strain may have been infected despite preventive use. Starting a new dog on prevention without testing first risks treating an already-infected dog with macrocyclic lactone preventives, which can cause a severe microfilarial reaction. Federal regulations require annual testing for heartworm antigen as a condition of prescribing preventives in most states.</p>
 
           <PullQuote
@@ -85,36 +90,15 @@ export default function HeartwormPage() {
             The American Heartworm Society recommends the three-dose melarsomine protocol combined with doxycycline as the evidence-based standard for treating heartworm-positive dogs. The previous "slow kill" approach using macrocyclic lactone prevention alone is explicitly no longer recommended due to slow clearance, ongoing cardiac damage, and growing macrocyclic lactone resistance in heartworm populations.
           </CalloutBox>
 
-          <p>The most serious treatment complication: pulmonary thromboembolism from dead worms obstructing pulmonary blood flow -- exercise increases this risk dramatically, which is why strict rest is medically mandatory, not a preference. The crate, traffic lead, and downspout extender are household consistency tools. They do not replace the veterinarian who chooses the protocol, and they are not Heartgard, Interceptor, Sentinel, Revolution, ProHeart, or melarsomine hops.</p>
+          <p>The most serious treatment complication: pulmonary thromboembolism from dead worms obstructing pulmonary blood flow -- exercise increases this risk dramatically, which is why strict rest is medically mandatory, not a preference. The crate, traffic lead, and downspout extender are household consistency tools. They do not replace the veterinarian who chooses the protocol, and they are not Heartgard, Interceptor, Sentinel, Revolution, ProHeart, or melarsomine buttons.</p>
 
-          <h2 id="kit">Home-care kit</h2>
+          <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Everyday physical supplies that match the
-            crate-rest, leash-restriction, and
-            standing-water copy on this page — a
-            heavy-gauge 48-inch dog crate so an
-            8-week treatment rest is a crate, a
-            2-foot nylon traffic lead so outdoor
-            potty stays leash-restricted, and an
-            adjustable aluminum downspout extender
-            so roof runoff does not pool into a
-            mosquito breeding puddle. These are
-            educational home-care and monitoring
-            tools, not a ranked product list, not a
-            substitute for veterinary care, and not
-            a treatment for heartworm. Heartgard,
-            Interceptor, Sentinel, Revolution,
-            ProHeart, ivermectin, milbemycin,
-            moxidectin, and melarsomine are clinic
-            prescriptions, not shoppable hops. Mosquito dunks, monthly pill organizers,
-            and soft-sided vet-visit carriers already
-            live on dog.com heartworm prevention. Double-door wire crates already live on
-            canine-influenza. This page does not claim hands-on
-            testing. </p>
+            Keep these on hand: a heavy-gauge 48-inch dog crate so an 8-week treatment rest is a crate, a 2-foot nylon traffic lead so outdoor potty stays leash-restricted, and an adjustable aluminum downspout extender so roof runoff does not pool into a mosquito breeding puddle. These are educational home-care and monitoring tools, not a ranked product list, not a substitute for veterinary care, and not a treatment for heartworm. Heartgard, Interceptor, Sentinel, Revolution, ProHeart, ivermectin, milbemycin, moxidectin, and melarsomine are clinic prescriptions, not product links. </p>
 
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/heavy+gauge+48+inch+dog+crate?s=health-heartworm-in-dogs", "/go/amazon-brand/2+foot+nylon+traffic+lead?s=health-heartworm-in-dogs", "/go/amazon-brand/adjustable+aluminum+downspout+extender?s=health-heartworm-in-dogs"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (heavy-gauge 48-inch dog crate /
               2-foot nylon traffic lead /
               adjustable aluminum downspout extender).
@@ -124,9 +108,9 @@ export default function HeartwormPage() {
               for veterinary care, no Rx / Heartgard /
               Interceptor / Sentinel / Revolution /
               ProHeart / melarsomine / ivermectin
-              ASIN hops.
+              product page buttons.
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or an empty link. Amazon searches only —
               unused vs #1086
               wide+rim+stainless+cat+water+bowl /
               electric+pet+food+warming+plate /
@@ -171,7 +155,7 @@ export default function HeartwormPage() {
               Heartgard, Interceptor, Sentinel,
               Revolution, ProHeart, ivermectin,
               milbemycin, moxidectin, and
-              melarsomine are not shoppable hops. */}
+              melarsomine are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

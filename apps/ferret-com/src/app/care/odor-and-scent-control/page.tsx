@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import {
   buildMetadata,
@@ -10,7 +11,6 @@ import {
   DropCap,
   CrossPortfolioCard,
   ArticleSourcesList,
-  AffiliateDisclosure,
   ShopCtas,
 } from '@carloOS/ui'
 import {
@@ -58,7 +58,6 @@ const articleSchema = buildArticleSchema({
   citation: SOURCES,
 })
 
-
 const FAQS = [
   {
     question: 'Why do ferrets smell?',
@@ -94,7 +93,6 @@ const FAQS = [
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
 const combined = combineSchemas(articleSchema, faqSchema)
-
 
 export default function FerretOdorScentControlPage() {
   return (
@@ -142,7 +140,7 @@ export default function FerretOdorScentControlPage() {
 
           </>
         }
-      
+
         relatedLinks={[
           { title: 'Ferret Care Hub', href: '/care' },
           { title: 'Bathing & Grooming', href: '/care/bathing-and-grooming' },
@@ -256,7 +254,9 @@ export default function FerretOdorScentControlPage() {
             <li>
               <strong>Use the right litter and enough boxes.</strong>{' '}
               Paper-pellet litter and adequate box numbers keep waste contained
-              and easy to remove before it off-gasses.
+              and easy to remove before it off-gasses. Our{' '}
+              <a href="/reviews/best-ferret-litter">ferret litter guide</a>{' '}
+              covers the litter options.
             </li>
             <li>
               <strong>Clean ears gently and on schedule.</strong> Wax buildup
@@ -324,20 +324,8 @@ export default function FerretOdorScentControlPage() {
             </p>
           </CalloutBox>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/ferret+litter?s=odor-and-scent-control" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated ferret odor-source-map chart /
-              ferret fridge bedding-wash card /
-              mustelid odor-control handbook).
-              No existing product hop to keep.
-              Educational kitchen searches only; no Rx /
-              vaccine / aging hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs care-hub /
-              bathing / exercise kitchen kits. Ferret
-              aging stays held.
-              Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
@@ -346,7 +334,7 @@ export default function FerretOdorScentControlPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/ferret+litter?s=odor-and-scent-control"
-                amazonLabel="Shop on Amazon"
+                amazonLabel="Browse ferret litter on Amazon →"
               />
           </div>
           </div>

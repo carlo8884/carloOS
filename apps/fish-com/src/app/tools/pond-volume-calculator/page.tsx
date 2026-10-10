@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -9,7 +10,7 @@ import {
   RelatedLinks,
   ArticleByline,
   ArticleSourcesList,
-  AffiliateDisclosure,
+
   ShopCtas,
   JourneyNext,
 } from '@carloOS/ui'
@@ -35,7 +36,7 @@ const howToSchema = buildHowToSchema({
     { name: 'Measure dimensions', text: 'Measure the pond length, width, and average depth in feet or meters. Use average depth, not the deepest point, if the bottom is contoured.' },
     { name: 'Pick the formula for the shape', text: 'Rectangular: length × width × depth. Circular: π × radius² × depth. Oval: π × (length/2) × (width/2) × depth.' },
     { name: 'Convert to gallons', text: 'Multiply the volume in cubic feet by 7.48 to get US gallons, or multiply gallons by 3.785 to get liters.' },
-    { name: 'Adjust for irregular shape', text: 'For ponds with sloped sides, shelves, or an irregular outline, multiply by about 0.85 to get closer to true water volume.' },
+    { name: 'Adjust for irregular shape', text: 'For ponds with sloped sides, shelves, or an irregular outline, multiply by 0.85. That factor is a planning allowance, not a surveyed volume. The 7.48052 gallons per cubic foot step is the US gallon.' },
     { name: 'Size liner, pump, and filter from the gallons', text: 'Use the gallon figure to pick an EPDM liner, a submersible pump that turns the pond over about once an hour, and a filter or skimmer kit rated at or above that volume.' },
   ],
 })
@@ -184,21 +185,21 @@ export default function PondVolumeCalculatorPage() {
           siteId="fish-com"
           nextHref="/setup/pond-guide"
           nextLabel="Size the pond for adult koi before you buy the liner"
-          nextBlurb="Gallons are not a kit. The pond guide is the next step: 250+ gallons per adult koi, 45-mil EPDM, and one turnover per hour — then pick liner and pump from that number. The hop below is the same EPDM liner search already on this page."
+          nextBlurb="Gallons are not a kit. The pond guide is the next step: 250+ gallons per adult koi, 45-mil EPDM, and one turnover per hour — then pick liner and pump from that number. The button below opens the same EPDM liner search on Amazon."
           resourceHref="/go/amazon-brand/epdm+pond+liner?s=tools-pond-volume"
           resourceLabel="Browse EPDM pond liners on Amazon →"
         />
 
-        {/* Money path — live amazon-brand search hops (liner / pump / filter-skimmer / conditioner).
-            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER. */}
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        {/* Shop note — live amazon-brand search buttons (liner / pump / filter-skimmer / conditioner).
+            ShopCtas hides empty Chewy; never href="#" or an empty link. */}
+        <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/epdm+pond+liner?s=tools-pond-volume", "/go/amazon-brand/submersible+pond+pump?s=tools-pond-volume", "/go/amazon-brand/pond+filter+skimmer+kit?s=tools-pond-volume", "/go/amazon-brand/pond+dechlorinator+water+conditioner?s=tools-pond-volume"]} />
         <div id="shop" className="mb-8 rounded-xl border border-brand-border bg-brand-surface p-5">
           <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
             Shop pond gear
           </div>
           <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
             Gallons set liner size, pump GPH (about one pond volume per hour), and filter / skimmer
-            rating. Condition tap water before the first fill. Same Amazon hops used with the{' '}
+            rating. Condition tap water before the first fill. The same Amazon buttons go with the{' '}
             <Link
               href="/setup/pond-guide"
               className="text-brand-primary no-underline hover:underline"
@@ -209,24 +210,24 @@ export default function PondVolumeCalculatorPage() {
             <Link href="/species/koi" className="text-brand-primary no-underline hover:underline">
               koi care guide
             </Link>
-            . Fish.com earns a commission on qualifying purchases at no extra cost to you.
+            .
           </p>
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/epdm+pond+liner?s=tools-pond-volume"
-              amazonLabel="Shop pond liners on Amazon →"
+              amazonLabel="Browse EPDM pond liners on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/submersible+pond+pump?s=tools-pond-volume"
-              amazonLabel="Shop submersible pond pumps on Amazon →"
+              amazonLabel="Browse submersible pond pumps on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/pond+filter+skimmer+kit?s=tools-pond-volume"
-              amazonLabel="Shop pond filter / skimmer kits on Amazon →"
+              amazonLabel="Browse pond filter and skimmer kits on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/pond+dechlorinator+water+conditioner?s=tools-pond-volume"
-              amazonLabel="Shop pond dechlorinator on Amazon →"
+              amazonLabel="Browse pond dechlorinator water conditioner on Amazon →"
             />
           </div>
         </div>

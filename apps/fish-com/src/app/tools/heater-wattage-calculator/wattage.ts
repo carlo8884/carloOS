@@ -3,8 +3,9 @@
  * quick-reference table. One formula so a 40 gal default cannot disagree
  * with the chart.
  *
- * Baseline: 3 W per gallon for a 10°F lift, scaled linearly, times an
- * insulation factor. Then 25% headroom, then the next stock heater size.
+ * Planning figures, not a manufacturer chart: 3 W per gallon for a 10°F
+ * lift, scaled linearly, times an insulation factor (open 1.2, lid 1,
+ * sealed 0.85). Then 25% headroom, then the next stock heater size.
  */
 
 export const HEATER_STEPS = [25, 50, 75, 100, 150, 200, 250, 300, 400, 500, 800] as const

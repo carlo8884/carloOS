@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import {
   buildMetadata,
@@ -10,9 +11,9 @@ import {
   DropCap,
   CrossPortfolioCard,
   ArticleSourcesList,
-  AffiliateDisclosure,
   ShopCtas,
   CrossSiteHelp,
+  LastUpdated,
 } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 
@@ -24,7 +25,7 @@ const SOURCES = [
   },
   {
     label: "Merck Veterinary Manual — Routine Health Care of Ferrets: what to bring, what to expect at the exam, and standard diagnostic components",
-    url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/routine-health-care-of-ferrets",
+    url: "https://www.merckvetmanual.com/all-other-pets/ferrets/routine-health-care-for-ferrets",
     publisher: "Merck Veterinary Manual",
   },
   {
@@ -33,8 +34,8 @@ const SOURCES = [
     publisher: "AEMV",
   },
   {
-    label: "American Board of Veterinary Practitioners (ABVP) — Exotic Companion Mammal diplomate directory for finding board-certified exotic-mammal practitioners",
-    url: "https://www.abvp.com/become-certified/species-specific-credentials/exotic-companion-mammal/",
+    label: "American Board of Veterinary Practitioners (ABVP) — how to become a specialist, including exotic companion mammal practice",
+    url: "https://abvp.com/become-a-specialist/",
     publisher: "ABVP",
   },
 ]
@@ -78,7 +79,6 @@ const medSchema = buildMedicalWebPageSchema({
   lastReviewed: '2026-05-29',
 })
 
-
 const FAQS = [
   {
     question: 'Do I need a special exotic-pet vet for a ferret?',
@@ -88,6 +88,7 @@ const FAQS = [
   {
     question: 'How much does a ferret vet visit cost?',
     answer:
+      "Ranges on this answer are dated 2026-10-04. " +
       "Costs vary substantially by region and clinic but ballpark figures for US exotic-pet practice as of 2026: routine annual exam $75-150, full senior bloodwork (CBC + chemistry + fasting glucose) $150-300, abdominal ultrasound $250-500, dental cleaning under anesthesia $400-800, ferret surgery (insulinoma or adrenalectomy) $1500-3500. Emergency exotic-vet visits at non-routine hours start around $200-400 before any diagnostics. Pet insurance for exotics exists but with significant coverage gaps; check pre-existing condition rules carefully.",
   },
   {
@@ -140,7 +141,7 @@ export default function FerretVetVisitPrepPage() {
           <>
             <TableOfContents
               items={[
-                { label: 'TL;DR', href: '#tldr' },
+                { label: '', href: '#tldr' },
                 { label: 'Finding the Right Vet', href: '#vet' },
                 { label: 'Annual vs Sick Visit', href: '#visit-type' },
                 { label: 'What to Bring', href: '#bring' },
@@ -155,6 +156,7 @@ export default function FerretVetVisitPrepPage() {
             <RelatedLinks
               title="Related Guides"
               links={[
+                { label: 'Is This a Ferret Emergency?', href: '/tools/is-this-a-ferret-emergency' },
                 { label: 'Vaccinations', href: '/health/vaccinations' },
                 { label: 'Aging Ferret Care', href: '/health/aging-ferret-care' },
                 { label: 'First-Year Schedule', href: '/first-year-schedule' },
@@ -164,14 +166,15 @@ export default function FerretVetVisitPrepPage() {
 
           </>
         }
-      
+
         relatedLinks={[
+          { title: 'Is This a Ferret Emergency?', href: '/tools/is-this-a-ferret-emergency' },
           { title: 'Ferret Health Hub', href: '/health' },
           { title: 'Annual Checkup Guide', href: '/health/annual-checkup-guide' },
           { title: 'Find an Exotic Vet', href: '/find-an-exotic-vet' },
           { title: 'Vaccinations', href: '/health/vaccinations' },
         ]}
- priceAsOf="2026-05-29">
+ priceAsOf="2026-10-04">
         <div className="carloOS-article">
           <ArticleByline
             siteName="Ferret.com Editorial"
@@ -179,6 +182,7 @@ export default function FerretVetVisitPrepPage() {
             updatedAt="2026-05-29"
             reviewedBy="Editorial team"
           />
+          <LastUpdated date="2026-10-09" />
 
           <DropCap>
             The single highest-leverage decision in ferret veterinary care
@@ -189,9 +193,16 @@ export default function FerretVetVisitPrepPage() {
             visit prep — what to bring, how to travel, what to expect — is
             useful but secondary to that first choice.
           </DropCap>
-
-          <h2 id="tldr">TL;DR</h2>
           <p>
+            Some visits cannot wait for a scheduled exam. The{' '}
+            <a href="/tools/is-this-a-ferret-emergency" className="text-brand-primary hover:underline">
+              Is This a Ferret Emergency?
+            </a>{' '}
+            tool sorts common signs into go-now and call-today. It does not replace the clinic.
+          </p>
+
+          <p>The exam, bloodwork, dental, and surgery figures below are typical US exotic-pet clinic ranges dated 2026-10-04.</p>
+                    <p>
             Use an exotic-pet vet, ideally an AEMV member or an ABVP
             Exotic Companion Mammal diplomate. Bring a familiar carrier,
             written notes on what you have observed, a current home
@@ -200,7 +211,7 @@ export default function FerretVetVisitPrepPage() {
             insulinoma bloodwork or per pre-anesthesia instructions.
             Expect cost ranges of $75-150 for a routine exam, $150-300
             for full bloodwork, $400-800 for dental work under
-            anesthesia, $1500+ for major ferret surgery. Annual visits
+            anesthesia, $1,500–$3,500 for major ferret surgery. Annual visits
             through age 3, every 6 months age 3-5, every 3-6 months
             beyond that.
           </p>
@@ -423,6 +434,7 @@ export default function FerretVetVisitPrepPage() {
             </li>
           </ul>
 
+          <p>The service bands in the table below are those same clinic ranges, dated 2026-10-04.</p>
           <h2 id="cost">Typical Cost Ranges</h2>
           <p>
             US exotic-pet practice cost ranges as of 2026, with
@@ -523,21 +535,8 @@ export default function FerretVetVisitPrepPage() {
             </li>
           </ul>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/ferret+carrier?s=vet-visit-prep" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated ferret bring-list chart /
-              ferret fridge carrier-prep card /
-              mustelid clinic-choice handbook).
-              No existing product hop to keep.
-              Educational kitchen searches only; no Rx /
-              vaccine / aging hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs health-hub /
-              checkup / insurance / travel-and-carriers
-              product hops. Ferret
-              aging stays held.
-              Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
@@ -546,12 +545,13 @@ export default function FerretVetVisitPrepPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/ferret+carrier?s=vet-visit-prep"
-                amazonLabel="Shop on Amazon"
+                amazonLabel="Browse ferret carriers on Amazon →"
               />
           </div>
           </div>
 
           <h2 id="faq">FAQ</h2>
+          <p>The cost question below repeats those same clinic ranges, dated 2026-10-04.</p>
           <FAQAccordion items={FAQS} includeSchema={false} />
 
           <ArticleSourcesList sources={SOURCES} />

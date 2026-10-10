@@ -15,6 +15,7 @@
  *   - Cost ranges are national averages with explicit disclaimer.
  */
 
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
@@ -25,7 +26,6 @@ import {
   buildFAQSchema,
   combineSchemas,
   SchemaScript,
-  AffiliateDisclosure,
   CrossPortfolioCard,
   RelatedLinks,
   ShopCtas,
@@ -512,14 +512,7 @@ export default async function ComparePage({ params }: PageProps) {
         <div className="grid lg:grid-cols-[1fr_290px] gap-12">
           <article className="carloOS-article min-w-0">
             <p className="text-sm text-brand-text-mid leading-relaxed mb-8">
-              The working story starts with the side-by-side
-              table: energy, size, lifespan, grooming,
-              apartment suitability, and first-time-owner
-              suitability drawn from AKC / OFA fields — not
-              a crate-only afternoon and not a compare-hub
-              kitchen hop. Use the checklist above, then the
-              shop block later, to keep this pair&apos;s
-              vs-row notes on the fridge.
+              The working story starts with the side-by-side table: energy, size, lifespan, grooming, apartment suitability, and first-time-owner suitability drawn from AKC / OFA fields — not a crate-only afternoon. Use the checklist above, then the shop block later, to keep this pair&apos;s vs-row notes on the fridge.
             </p>
 
             {/* Quick verdict */}
@@ -658,11 +651,11 @@ export default async function ComparePage({ params }: PageProps) {
                 Shop related supplies
               </div>
               <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
-              <AffiliateDisclosure variant="inline" siteId="dog-com" />
+              <HopDisclosure siteId="dog-com" href="/go/amazon-brand/dog+crate?s=compare-pair" />
               <div className="flex flex-col gap-3 mt-3">
                 <ShopCtas
                   amazonHref="/go/amazon-brand/dog+crate?s=compare-pair"
-                  amazonLabel="Shop on Amazon"
+                  amazonLabel="Browse dog crate on Amazon →"
                 />
           </div>
             </div>

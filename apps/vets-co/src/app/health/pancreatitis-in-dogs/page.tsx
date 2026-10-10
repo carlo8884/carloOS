@@ -1,11 +1,11 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, RelatedLinks, ShopCtas, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Pancreatitis in Dogs — Causes, Signs, Recovery | Vets.co", description: "Pancreatitis in dogs is a painful inflammation of the pancreas, often triggered by fatty food. Learn the warning signs, diagnosis, and recovery diet.", path: '/health/pancreatitis-in-dogs', type: 'article' })
 const SOURCES = [
-  { label: 'Merck Veterinary Manual: Pancreatitis in Dogs', url: 'https://www.merckvetmanual.com/digestive-system/exocrine-pancreatic-disease/pancreatitis-in-dogs', publisher: 'Merck Vet Manual' },
-  { label: 'AVMA: Pancreatitis in Pets', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/pancreatitis', publisher: 'AVMA' },
+  { label: 'Merck Veterinary Manual: Pancreatitis in Dogs', url: 'https://www.merckvetmanual.com/digestive-system/the-exocrine-pancreas/pancreatitis-in-dogs-and-cats', publisher: 'Merck Vet Manual' },
   { label: 'AAHA: Nutritional Assessment Guidelines', url: 'https://www.aaha.org/aaha-guidelines/nutritional-assessment/', publisher: 'AAHA' },
 ]
 const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Pancreatitis in Dogs', description: 'Causes, clinical signs, diagnosis, and recovery management of canine pancreatitis.', url: 'https://vets.co/health/pancreatitis-in-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-09-05T00:00:00Z' ,
@@ -49,6 +49,7 @@ export default function PancreatitisPage() {
         <div className="carloOS-article">
 
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-09-05T00:00:00Z" reviewedBy="Editorial team" />
+          <LastUpdated date="2026-10-09" />
 
           <CalloutBox variant="warning" title="Repeated vomiting and pain are urgent">
             A dog that is repeatedly vomiting, refusing food, painful in the belly, or lethargic needs same-day veterinary evaluation. Severe pancreatitis can progress to dehydration, organ involvement, and a dangerous systemic inflammatory response. Early fluids and supportive care dramatically improve the outcome.
@@ -71,42 +72,23 @@ export default function PancreatitisPage() {
 
           <h2>Preventing Recurrence</h2>
           <p>For dogs that have had pancreatitis, prevention is mostly dietary: a consistent low-fat diet, strict avoidance of fatty table scraps and rich treats, and maintaining a lean body weight. Managing related conditions — diabetes, high triglycerides, Cushing disease — further lowers risk. Owners should be especially vigilant around holidays, when fatty leftovers cause a predictable surge in pancreatitis cases.</p>
-          <p>Household recovery-diet tools can sit alongside that prevention copy after a veterinarian has confirmed the dog is ready for a home low-fat plan. A low-fat digestive-care dog food is the same class of consistent recovery diet the page already names — not a leftover buffet and not a one-off bland meal. Lean low-fat dog treats are the no-table-scraps substitute so bacon grease, holiday skin, and rich chews stay off the plate. A digital pet-food portion scale keeps weight-control portions honest so the bowl is not guessed. These are household tools, not treatments. They do not treat an acute episode, they are not Hill&rsquo;s i/d Low Fat or Royal Canin Gastrointestinal Low Fat prescription ASINs, and they are not the dog-obesity digital pet scale or slow-feeder bowl. Ask your veterinarian which of these, if any, belong in this dog&rsquo;s kit — and go in if vomiting, belly pain, or refusal to eat returns.</p>
+          <p>Household recovery-diet tools can sit alongside that prevention copy after a veterinarian has confirmed the dog is ready for a home low-fat plan. A low-fat digestive-care dog food is the same class of consistent recovery diet the page already names — not a leftover buffet and not a one-off bland meal. Lean low-fat dog treats are the no-table-scraps substitute so bacon grease, holiday skin, and rich chews stay off the plate. A digital pet-food portion scale keeps weight-control portions honest so the bowl is not guessed. These are household tools, not treatments. They do not treat an acute episode, they are not Hill&rsquo;s i/d Low Fat or Royal Canin Gastrointestinal Low Fat prescription product pages, and they are not the dog-obesity digital pet scale or slow-feeder bowl. Ask your veterinarian which of these, if any, belong in this dog&rsquo;s kit — and go in if vomiting, belly pain, or refusal to eat returns.</p>
 
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
 
-          <h2 id="kit">Recovery-diet kit</h2>
+          <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Everyday physical supplies that match the
-            low-fat recovery, no-table-scraps, and
-            weight-control copy on this page — a low-fat
-            digestive-care dog food for the consistent
-            recovery diet, lean low-fat dog treats so
-            fatty scraps stay out, and a digital pet-food
-            portion scale for honest portions. These are
-            household tools, not treatments. They do not
-            treat pancreatitis, they do not replace a
-            veterinarian, and they are not Hill&rsquo;s i/d,
-            Royal Canin Gastrointestinal Low Fat, or
-            Purina EN prescription ASINs. This is not the
-            dog-obesity page and it does not hop a
-            digital pet scale or a slow-feeder dog bowl.
-            It is not the calorie / ideal-weight / BCS
-            tools and it does not hop a kitchen gram
-            scale or a portion-control food scale. It is
-            not the dehydration page and it does not hop
-            an electrolyte, pitcher, or saucer. This page
-            does not claim hands-on testing.
+            Keep these on hand: a low-fat digestive-care dog food for the consistent recovery diet, lean low-fat dog treats so fatty scraps stay out, and a digital pet-food portion scale for honest portions. These are household tools, not treatments. They do not treat pancreatitis, they do not replace a veterinarian, and they are not Hill&rsquo;s i/d, Royal Canin Gastrointestinal Low Fat, or Purina EN prescription product pages.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/low+fat+digestive+care+dog+food?s=health-pancreatitis-in-dogs", "/go/amazon-brand/lean+low+fat+dog+treats?s=health-pancreatitis-in-dogs", "/go/amazon-brand/digital+pet+food+portion+scale?s=health-pancreatitis-in-dogs"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (low-fat digestive-care dog food / lean
               low-fat dog treats / digital pet-food
               portion scale). ShopCtas hides empty Chewy;
-              never href="#" or PLACEHOLDER. Category
+              never href="#" or an empty link. Category
               searches only — unused vs #848–#1038
               digital+pet+scale, slow+feeder+dog+bowl,
               kitchen+gram+scale,
@@ -117,8 +99,8 @@ export default function PancreatitisPage() {
               stainless+steel+dog+fountain,
               washable+dog+pee+pads, and
               weighted+ceramic+dog+water+bowl.
-              Prescription GI diets and med ASINs are
-              not shoppable hops. */}
+              Prescription GI diets and med product pages are
+              not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

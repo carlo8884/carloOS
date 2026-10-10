@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -8,7 +9,6 @@ import {
   combineSchemas,
   SchemaScript,
   FAQAccordion,
-  AffiliateDisclosure,
   CrossPortfolioCard,
   ShopCtas,
   PriceAsOf
@@ -20,7 +20,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
   title: 'Ferret Readiness Quiz & New-Owner Kit | Ferret.com',
   description:
-    'Ten honest questions on legality, time, budget, and housing — then a day-one kit checklist with Amazon hops for cage, litter, food, and carrier.',
+    'Ten honest questions on legality, time, budget, and housing — then a day-one kit checklist with Amazon buttons for cage, litter, food, and carrier.',
   path: '/tools/readiness-quiz',
 })
 
@@ -43,7 +43,7 @@ const appSchema = {
   featureList: [
     'Ten scored questions on legality, time, budget, housing, and commitment',
     'Four readiness tiers with plain-English next steps',
-    'Interactive new-owner kit checklist with Amazon shop hops',
+    'Interactive new-owner kit checklist with Amazon shop buttons',
     'Day-one list: cage, litter, food, hammock, dig box, carrier',
   ],
   publisher: { '@type': 'Organization', name: 'Ferret.com Editorial', url: 'https://ferret.com' },
@@ -141,7 +141,7 @@ export default function ReadinessQuizPage() {
           >
             Is a ferret the right animal for you?
           </h1>
-          <PriceAsOf date="2026-06-02" tone="dark" />
+          <PriceAsOf date="2026-10-04" tone="dark" />
           <p className="text-lg text-white/55 leading-relaxed max-w-2xl">
             Ten honest questions about legality, daily time, budget, housing, and long-term commitment.
             Then pack a day-one kit — cage, litter, food, hammock, dig box, carrier — before a ferret
@@ -200,19 +200,19 @@ export default function ReadinessQuizPage() {
         </div>
       </section>
 
-      {/* Money path — live amazon-brand search hops (cage / litter / food / carrier).
-          Reuses queries already shipped on ferret reviews + cage-size + cost calculator.
-          ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER. */}
+      {/* Shop note — Ferret Nation double unit plus kibble and carrier searches.
+          Reuses the cage ASIN and the searches already shipped on ferret reviews.
+          ShopCtas hides empty Chewy; never href="#" or an empty link. */}
       <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <div className="max-w-2xl">
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <HopDisclosure siteId="ferret-com" href={["/go/amazon/B0054U8UGW?s=tools-readiness-quiz", "/go/amazon-brand/high+protein+ferret+food+kibble?s=tools-readiness-quiz", "/go/amazon-brand/ferret+carrier+hard+sided?s=tools-readiness-quiz"]} />
           <div className="mt-4 rounded-xl border border-brand-border bg-brand-white p-5">
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Shop the kit
+              Shop these supplies
             </div>
             <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
               The six-item list above is a husbandry starting point — cage, litter, food, hammock,
-              dig box, carrier — not a ranked product list. Same Amazon hops used on the{' '}
+              dig box, carrier — not a ranked product list. The Amazon buttons still on this page are the Ferret Nation / Critter Nation double unit, plus the kibble and carrier searches used on the{' '}
               <Link href="/reviews/best-ferret-cage" className="text-brand-primary underline-offset-2 hover:underline">
                 cage review
               </Link>
@@ -224,30 +224,23 @@ export default function ReadinessQuizPage() {
               <Link href="/diet/best-ferret-kibble" className="text-brand-primary underline-offset-2 hover:underline">
                 kibble guide
               </Link>
-              . Paper or wood pellet — never clumping clay. Ferret.com earns a commission on
-              qualifying purchases at no extra cost to you.
+              . Paper or wood pellet — never clumping clay.
             </p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/ferret+nation+critter+nation+double+unit?s=tools-readiness-quiz"
-                amazonLabel="Browse multi-level cages on Amazon →"
+                amazonHref="/go/amazon/B0054U8UGW?s=tools-readiness-quiz"
+                amazonLabel="Browse Ferret Nation / Critter Nation double units on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/high+protein+ferret+food+kibble?s=tools-readiness-quiz"
-                amazonLabel="Browse ferret food on Amazon →"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/compressed+wood+pellet+litter+heat+treated+non+clumping?s=tools-readiness-quiz"
-                amazonLabel="Browse wood pellet litter on Amazon →"
+                amazonLabel="Browse high-protein ferret kibble on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/ferret+carrier+hard+sided?s=tools-readiness-quiz"
-                amazonLabel="Browse ferret carriers on Amazon →"
+                amazonLabel="Browse hard-sided ferret carriers on Amazon →"
               />
           </div>
           </div>
-          <p className="mt-3 text-xs text-brand-text-light">We may earn a commission if you buy through an Amazon link — at no extra cost to you, and we never
-            rank by commission.</p>
           <p className="mt-4 text-sm leading-relaxed text-brand-text-mid">
             Fold the kit into year-one cost with the{' '}
             <Link href="/tools/cost-calculator" className="text-brand-primary underline-offset-2 hover:underline">

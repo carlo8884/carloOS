@@ -1,12 +1,13 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, RelatedLinks, ShopCtas, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Feline Lower Urinary Tract Disease (FLUTD) — Signs | Vets.co", description: "FLUTD causes straining, frequent urination, and blood in cat urine. A blocked male cat is an emergency. Learn the signs, causes, and management.", path: '/health/feline-lower-urinary-tract-disease', type: 'article' })
 const SOURCES = [
-  { label: 'Merck Veterinary Manual: Feline Lower Urinary Tract Disease', url: 'https://www.merckvetmanual.com/urinary-system/noninfectious-diseases-of-the-urinary-system-in-small-animals/feline-lower-urinary-tract-disease', publisher: 'Merck Vet Manual' },
+  { label: 'Merck Veterinary Manual: Lower Urinary Tract Disease in Cats', url: 'https://www.merckvetmanual.com/urinary-system/noninfectious-diseases-of-the-urinary-system-in-small-animals/lower-urinary-tract-disease-in-cats', publisher: 'Merck Vet Manual' },
   { label: 'AVMA: Feline Lower Urinary Tract Disease', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/feline-lower-urinary-tract-disease', publisher: 'AVMA' },
-  { label: 'AAFP: Feline Lower Urinary Tract Disease Guidelines', url: 'https://catvets.com/guidelines/practice-guidelines/feline-lower-urinary-tract-disease/', publisher: 'American Association of Feline Practitioners' },
+  { label: '2025 iCatCare / FelineVMA consensus guidelines on feline lower urinary tract disease', url: 'https://catvets.com/publication/2025-icatcare-consensus-guidelines-on-the-diagnosis-and-management-of-lower-urinary-tract-diseases-in-cats/', publisher: 'American Association of Feline Practitioners' },
 ]
 const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Feline Lower Urinary Tract Disease (FLUTD)', description: 'Signs, causes, and management of feline lower urinary tract disease.', url: 'https://vets.co/health/feline-lower-urinary-tract-disease', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-09-05T00:00:00Z' ,
   citation: SOURCES,
@@ -48,6 +49,7 @@ export default function FLUTDPage() {
       >
         <div className="carloOS-article">
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-09-05T00:00:00Z" reviewedBy="Editorial team" />
+          <LastUpdated date="2026-10-09" />
 
           <CalloutBox variant="warning" title="A cat that cannot urinate is an emergency">
             If your cat — especially a male cat — is straining in the litter box and producing little or no urine, crying, vomiting, or hiding and lethargic, treat it as an emergency and seek veterinary care right away. A complete urethral obstruction can be fatal within a day. Do not wait until morning.
@@ -71,19 +73,19 @@ export default function FLUTDPage() {
           <h2 id="prevention">Prevention and Long-Term Care</h2>
           <p>Because FLUTD tends to recur, prevention is central. The pillars are water intake (wet food, fountains, multiple water stations), litter box hygiene and adequate numbers of boxes, stress reduction, weight control, and an appropriate diet. Many cats do well long-term once their environment and hydration are optimized, with veterinary rechecks to catch recurrences early.</p>
 
-          <h2 id="kit">Home hydration and litter-box kit</h2>
+          <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Everyday physical supplies that match the prevention copy above — a cat water fountain so running water invites more drinking, extra litter boxes so the household hits one box per cat plus one extra, and canned wet cat food that adds water the cat will actually eat. Multiple clean water stations sit beside the fountain; they are not a second shop hop. Prescription urinary diets (Hill&rsquo;s c/d, Royal Canin Urinary SO, and the like), antibiotics, pain control, and IV fluids stay educational copy only — this page never hops medications, brand ASINs, or clinic gear. This is not the sister UTI page and it does not hop a dog water fountain. This page does not claim hands-on testing.
+            Keep these on hand: a cat water fountain so running water invites more drinking, extra litter boxes so the household hits one box per cat plus one extra, and canned wet cat food that adds water the cat will actually eat. Multiple clean water stations sit beside the fountain. Prescription urinary diets (Hill&rsquo;s c/d, Royal Canin Urinary SO, and the like), antibiotics, pain control, and IV fluids stay educational copy only — this page does not link to medications, named brands, or clinic gear.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/cat+water+fountain?s=health-feline-lower-urinary-tract-disease", "/go/amazon-brand/extra+cat+litter+box?s=health-feline-lower-urinary-tract-disease", "/go/amazon-brand/canned+wet+cat+food?s=health-feline-lower-urinary-tract-disease"]} />
 
-          {/* Money path — live amazon-brand search hops (cat fountain /
+          {/* Shop note — live amazon-brand search buttons (cat fountain /
               extra litter boxes / canned wet cat food). ShopCtas hides
-              empty Chewy; never href="#" or PLACEHOLDER. Category
+              empty Chewy; never href="#" or an empty link. Category
               searches only — unused vs #993–#1023 dog+water+fountain,
-              ceramic pet water bowl, and existing cat-food hops.
-              Prescription urinary diets and medications are not hops. */}
+              ceramic pet water bowl, and existing cat-food buttons.
+              Prescription urinary diets and medications are not buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

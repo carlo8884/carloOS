@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import {
   buildMetadata,
@@ -11,8 +12,8 @@ import {
   DropCap,
   CrossPortfolioCard,
   ArticleSourcesList,
-  AffiliateDisclosure,
   ShopCtas,
+  LastUpdated,
 } from '@carloOS/ui'
 
 const SOURCES = [
@@ -21,12 +22,7 @@ const SOURCES = [
     url: "https://www.elsevier.com/books/ferrets-rabbits-and-rodents/quesenberry/978-1-4160-6621-7",
     publisher: "Elsevier/Saunders",
   },
-  {
-    label: "Merck Veterinary Manual — Dental Disease in Ferrets: periodontal staging, tartar accumulation, and dental-procedure anesthesia considerations",
-    url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/digestive-diseases-of-ferrets",
-    publisher: "Merck Veterinary Manual",
-  },
-  {
+    {
     label: "Association of Exotic Mammal Veterinarians (AEMV) — ferret dentistry and oral-surgery continuing-education resources",
     url: "https://aemv.org",
     publisher: "AEMV",
@@ -183,6 +179,7 @@ export default function FerretDentalDiseasePage() {
             updatedAt="2026-09-05"
             reviewedBy="Editorial team"
           />
+          <LastUpdated date="2026-10-09" />
 
           <DropCap>
             Open a healthy 2-year-old ferret&apos;s mouth and you will almost
@@ -194,8 +191,7 @@ export default function FerretDentalDiseasePage() {
             high-protein carnivore for years without an active dental routine.
           </DropCap>
 
-          <h2 id="tldr">TL;DR</h2>
-          <p>
+                    <p>
             Ferrets accumulate dental tartar rapidly on kibble diets, and
             clinically meaningful gingivitis is commonly visible by age 2-3.
             The standard prevention pattern across the exotic-pet veterinary
@@ -205,7 +201,7 @@ export default function FerretDentalDiseasePage() {
             Ignored periodontal disease progresses through gingivitis to
             periodontitis to tooth loss, and root abscesses can become
             systemic infections in older ferrets.
-          </p>
+           <a href="/diet/best-ferret-kibble">The ferret kibble guide</a> compares the kibble this tartar pattern comes from.</p>
 
           <h2 id="why-ferrets">Why Ferrets in Particular</h2>
           <p>
@@ -404,31 +400,20 @@ export default function FerretDentalDiseasePage() {
             </p>
           </CalloutBox>
 
-          <h2 id="kit">Home dental-care kit</h2>
+          <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Everyday physical supplies that match the brushing copy above
-            — a fingertip rubber brush so a kit can learn the flavor and
-            the feel before a handle is introduced, a soft infant
-            toothbrush for the 30–60 second outside-surface pass, and pet
-            dental wipes (gauze on a fingertip with enzymatic paste) for
-            the days a ferret will not tolerate a brush. Enzymatic pet
-            toothpaste sits beside those three as the paste already
-            described in the protocol; it is not a fourth shop hop on
-            this page. Human toothpaste (fluoride, xylitol), named
-            toothpaste brand ASINs, antibiotics, analgesia (meloxicam,
-            buprenorphine), and anesthetized scaling stay educational
-            copy only. This page does not claim hands-on testing.
+            Keep these on hand: a fingertip rubber brush so a kit can learn the flavor and the feel before a handle is introduced, a soft infant toothbrush for the 30–60 second outside-surface pass, and pet dental wipes (gauze on a fingertip with enzymatic paste) for the days a ferret will not tolerate a brush. Enzymatic pet toothpaste sits beside those three as the paste already described in the protocol on this page. Human toothpaste (fluoride, xylitol), named toothpaste brands, antibiotics, analgesia (meloxicam, buprenorphine), and anesthetized scaling stay educational copy only.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/finger+toothbrush+pet?s=health-dental-disease", "/go/amazon-brand/infant+toothbrush+soft+bristle?s=health-dental-disease", "/go/amazon-brand/pet+dental+wipes?s=health-dental-disease"]} />
 
-          {/* Money path — live amazon-brand search hops (fingertip rubber
+          {/* Shop note — live amazon-brand search buttons (fingertip rubber
               brush / infant toothbrush / pet dental wipes). ShopCtas hides
-              empty Chewy; never href="#" or PLACEHOLDER. Category
+              empty Chewy; never href="#" or an empty link. Category
               searches only — unused vs #993–#1024 soft+pet+toothbrush,
               enzymatic+pet+toothpaste, dental+chews+dog,
               pet+dental+water+additive, and cat+dental.
-              Human toothpaste, brand ASINs, and medications are not hops. */}
+              Human toothpaste, named brands, and medications are not buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
@@ -441,7 +426,7 @@ export default function FerretDentalDiseasePage() {
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/infant+toothbrush+soft+bristle?s=health-dental-disease"
-                amazonLabel="Browse soft infant toothbrushes on Amazon →"
+                amazonLabel="Browse soft-bristle infant toothbrushes on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/pet+dental+wipes?s=health-dental-disease"

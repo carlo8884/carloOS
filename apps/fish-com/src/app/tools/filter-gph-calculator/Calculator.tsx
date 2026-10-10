@@ -5,7 +5,7 @@
  *
  * Client compute. Gallons × tank-style turnover band → recommended filter
  * flow (GPH). Companion to the existing stocking calculator (which already
- * models bioload). Does not invent SKUs; shop hops reuse live amazon-brand
+ * models bioload). Does not invent SKUs; shop buttons reuse live amazon-brand
  * queries from the filter and nano-tank reviews.
  */
 
@@ -97,6 +97,9 @@ export default function FilterGphCalculator() {
 
   return (
     <div>
+      {result && gal > 0 ? (
+        <ResultPick linkFirst siteId="fish-com" pick={filterFromGallons(gal, style)} />
+      ) : null}
       <CalcCard>
         <div className="grid sm:grid-cols-2 gap-x-6 gap-y-0">
           <FieldNumber
@@ -146,10 +149,14 @@ export default function FilterGphCalculator() {
           That GPH band is how much water the filter should move each hour for this tank style. It is not a species count.
         </ResultMeaning>
       )}
-
       {result && gal > 0 && (
-        <ResultPick siteId="fish-com" pick={filterFromGallons(gal, style)} />
+        <p className="mt-4 text-sm">
+          <a href="/reviews/hob-vs-canister-guide" className="inline-block max-w-full whitespace-normal text-brand-primary underline underline-offset-2">
+            HOB vs canister filter
+          </a>
+        </p>
       )}
+
     </div>
   )
 }

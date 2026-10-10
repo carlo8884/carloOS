@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, DirectoryPlacesCta, PriceAsOf, HubSearch, HubJumpNav } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, DirectoryPlacesCta, PriceAsOf, HubSearch, HubJumpNav, LastUpdated } from '@carloOS/ui'
 import listings from '../../data/directory-listings.json'
 import { HubMasthead } from '../../components/HubMasthead'
 
@@ -12,7 +12,6 @@ const breadcrumbSchema = buildBreadcrumbSchema({
     { name: 'Reviews', url: 'https://vets.co/reviews' },
   ],
 })
-
 
 const REVIEW_GROUPS = [
   { id: 'vets-reviews-insurance', label: 'Insurance', intro: 'Insurance comparisons. Printed prices are not a quote.' },
@@ -45,9 +44,9 @@ const REVIEWS = [
     group: 'vets-reviews-insurance', badge: 'Insurance' },
   { title: 'Trupanion vs Figo', desc: 'Unlimited payouts, or high-limit tiers with app claims. Both prices are quote-based', href: '/reviews/trupanion-vs-figo-guide',
     group: 'vets-reviews-insurance', badge: 'Insurance' },
-  { title: 'Holiday Leftovers and a Low-Fat Dog Food', desc: 'The pancreatitis page’s holiday surge. The food hop applies after a veterinarian says the dog is ready', href: '/reviews/holiday-leftovers-low-fat-guide',
+  { title: 'Holiday Leftovers and a Low-Fat Dog Food', desc: 'The pancreatitis page’s holiday surge. Use the food button only after a veterinarian says the dog is ready', href: '/reviews/holiday-leftovers-low-fat-guide',
     group: 'vets-reviews-season', badge: 'Season' },
-  { title: 'Why a Holiday Emergency Visit Costs More', desc: 'Holidays are already inside the round-the-clock staffing explanation. The hop is the Trupanion quote', href: '/reviews/holiday-emergency-visit-guide',
+  { title: 'Why a Holiday Emergency Visit Costs More', desc: 'Holidays are already inside the round-the-clock staffing explanation. The button below is the Trupanion quote', href: '/reviews/holiday-emergency-visit-guide',
     group: 'vets-reviews-season', badge: 'Season' },
   { title: 'November and December Pet Care Costs', desc: 'Insurance and telehealth bands already printed on those cards. Not toys, and not a quote', href: '/reviews/november-december-gift-guide',
     group: 'vets-reviews-season', badge: 'Season' },
@@ -84,6 +83,7 @@ export default function VetsReviewsPage() {
       />
       <div className="px-container-sm sm:px-container pt-6">
         <PriceAsOf date="2026-06-06" />
+        <LastUpdated date="2026-10-09" />
       </div>
       <nav aria-label="Breadcrumb" className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
         <Link href="/" className="hover:text-brand-primary no-underline">Home</Link><span>›</span>
@@ -129,28 +129,10 @@ export default function VetsReviewsPage() {
       </div>
 
       <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
-                
+
         <div className="max-w-content-wide mt-6">
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
         </div>
 
-        {/* Money path — live amazon-brand search hops
-            (laminated pet reviews buyer-guide chart /
-            pet fridge reviews comparison card /
-            veterinary reviews reference handbook).
-            Educational kitchen searches only; no Rx /
-            vaccine / enrollment hops.
-            ShopCtas hides empty Chewy; never href="#"
-            or PLACEHOLDER. Unused vs tools-hub
-            laminated+cat+calculator+tools+chart /
-            cat+fridge+measurement+card /
-            feline+calculator+reference+handbook,
-            insurance-hub
-            laminated+pet+insurance+policy+map+chart /
-            pet+fridge+insurance+levers+card /
-            veterinary+insurance+reference+handbook,
-            and child four+column+accounting+pad /
-            self+inking+date+stamp hops. */}
               </section>
 
       <DirectoryPlacesCta listings={listings} noun="licensed veterinarians" />

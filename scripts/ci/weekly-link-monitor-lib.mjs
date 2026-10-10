@@ -39,6 +39,25 @@ const SKIP_HOSTS = new Set([
   '127.0.0.1',
 ])
 
+/** Email markdown hops, including the ?s= query goHrefsFromSource stops before. */
+export function emailShopHrefs(src) {
+  const found = []
+  const re = /\/go\/[a-z0-9-]+\/[^\s)"']+/gi
+  for (const match of src.matchAll(re)) found.push(match[0])
+  return found
+}
+
+export const EMAIL_SEARCH_VENDORS = new Set([
+  'amazon-brand',
+  'chewy-brand',
+  'smartpak',
+  'dover',
+  'schneider',
+  'ridingwarehouse',
+  'marshall',
+  'wysong',
+])
+
 export function goHrefsFromSource(src) {
   const found = new Set()
   const re = /\/go\/[a-z0-9-]+(?:\/[^"'\\\s?#)]+)?/gi
@@ -50,6 +69,14 @@ export function goHrefsFromSource(src) {
 export function tableShopHrefs(src) {
   const found = []
   const re = /<TableShopLink\b[^>]*?\bhref=\{(?:"([^"]+)"|`([^`]+)`)}/g
+  for (const match of src.matchAll(re)) found.push(match[1] || match[2])
+  return found
+}
+
+/** ReviewCard ctaHref and ShopCtas amazonHref / chewyHref hops. */
+export function cardShopHrefs(src) {
+  const found = []
+  const re = /\b(?:ctaHref|amazonHref|chewyHref)\s*=\s*(?:"(\/go\/[^"]+)"|\{"(\/go\/[^"]+)"\})/g
   for (const match of src.matchAll(re)) found.push(match[1] || match[2])
   return found
 }
@@ -129,6 +156,71 @@ export function classifyStatus(status, error) {
   return 'fail'
 }
 
+/**
+ * A retailer search document is empty only when the page says so and it
+ * does not also contain a normal result list. Rate-limit and captcha
+ * pages are not empty searches.
+ */
+export function isEmptySearchHtml(html, asinCount = 0) {
+  const text = String(html || '').toLowerCase()
+  if (!text) return false
+  if (text.includes('captcha') || text.includes('robot check') || text.includes('service unavailable')) return false
+  const saysEmpty =
+    text.includes('no results for your search query') ||
+    text.includes('did not match any products')
+  return saysEmpty && asinCount < 4
+}
+
+/**
+ * Shop-link probe only. A 200 page that says the search is empty fails.
+ * 401, 403, 405, 429, and 503 stay blocked, including when the body
+ * also contains an empty-search phrase.
+ */
+export function shopSearchVerdict(statuses, error = '', html = '') {
+  const verdict = classifyRedirectChain(statuses, error)
+  if (verdict.kind !== 'ok') return verdict
+  const asinCount = (String(html).match(/data-asin="[A-Z0-9]/gi) || []).length
+  if (isEmptySearchHtml(html, asinCount)) return { kind: 'fail', detail: 'empty search' }
+  return verdict
+}
+
+const RETAILER_SEARCH_HOSTS = new Set([
+  'amazon.com',
+  'chewy.com',
+  'smartpakequine.com',
+  'doversaddlery.com',
+  'sstack.com',
+  'ridingwarehouse.com',
+  'marshallpet.com',
+  'wysong.net',
+])
+
+/** Resolved retailer search URL. Product pages and homepages are not searches. */
+export function isRetailerSearchUrl(url) {
+  let parsed
+  try {
+    parsed = new URL(url)
+  } catch {
+    return false
+  }
+  const host = parsed.hostname.toLowerCase().replace(/^www\./, '')
+  if (!RETAILER_SEARCH_HOSTS.has(host)) return false
+  const path = parsed.pathname.toLowerCase()
+  if (host === 'amazon.com' || host === 'chewy.com') return path === '/s' || path.startsWith('/s/')
+  return path === '/search' || path.startsWith('/search/') || path.endsWith('/search.html')
+}
+
+/**
+ * Citation probe body-read. Shop-link URLs are already read there.
+ * 503 and 429 stay blocked inside shopSearchVerdict, and the download
+ * cap stays 250KB in the shared reader.
+ */
+export function citationProbeReadsBody(url, shopUrls) {
+  if (!isRetailerSearchUrl(url)) return false
+  if (shopUrls && typeof shopUrls.has === 'function' && shopUrls.has(url)) return false
+  return true
+}
+
 export function renderReport({ checkedAt, checked, failures, blocked, shop }) {
   const shopFailures = shop?.failures?.length ?? 0
   const lines = [
@@ -157,13 +249,13 @@ export function renderReport({ checkedAt, checked, failures, blocked, shop }) {
   if (shop) {
     lines.push('## Comparison-table and gift-guide shop links', '')
     lines.push(
-      `Checked ${shop.checked} unique retailer targets from TableShopLink rows on dog-com, fish-com, horses-com, vets-co, and ferret-com, including the November and December gift guides.`,
+      `Checked ${shop.checked} unique retailer targets from TableShopLink, ReviewCard, and ShopCtas hops, plus email retailer searches, on dog-com, fish-com, horses-com, vets-co, and ferret-com, including the November and December gift guides.`,
     )
     lines.push(
       `Hidden Chewy hops with no tag: ${shop.hidden}. Those rows do not render a shop link.`,
     )
     lines.push(
-      'A shop failure is a 404, a 410, a server error other than 503, a missing ?s= source, an Amazon search whose tag does not match the environment, or more than one redirect. One redirect is the retailer canonical or product hop.',
+      'A shop failure is a 404, a 410, a server error other than 503, a missing ?s= source, an Amazon search whose tag does not match the environment, more than one redirect, or an empty retailer search. One redirect is the retailer canonical or product hop. 401, 403, 405, 429, and 503 stay blocked.',
     )
     lines.push('', '### Shop failures', '')
     if (!shop.failures.length) lines.push('none')

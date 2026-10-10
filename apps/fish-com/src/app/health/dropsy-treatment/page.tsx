@@ -1,11 +1,12 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, ArticleSourcesList, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, ArticleSourcesList, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
 const SOURCES = [
-  { label: "Dropsy in Fish — Merck Veterinary Manual", url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/aquarium-fish/dropsy-in-fish", publisher: "Merck Vet Manual" },
+  { label: "Dropsy in Fish — Merck Veterinary Manual", url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/aquarium-fish/bacterial-diseases-of-fish", publisher: "Merck Vet Manual" },
   { label: "Noga, E.J. Fish Disease: Diagnosis and Treatment, 2nd ed. Wiley-Blackwell, 2010.", publisher: "Wiley-Blackwell" },
   { label: "Yanong, R.P.E. Aeromonas Infections in Fish — UF/IFAS Extension FA-TP-174.", url: "https://edis.ifas.ufl.edu/publication/FA174", publisher: "UF/IFAS Extension" },
 ]
@@ -61,13 +62,13 @@ export default function DropsyPage() {
         <h2>Quarantine Remaining Fish</h2>
         <p>When one fish develops dropsy from a bacterial systemic infection, other fish in the same tank are at risk — particularly if they are stressed by the same water quality issues. Monitor all other fish closely. A preemptive course of antibiotics in the display tank is sometimes recommended when multiple fish are showing early signs, but should be weighed against the impact on biological filtration.</p>
 
-        {/* Money path — live amazon-brand search hops (hospital-tank kit).
-            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-            Category searches only — not a ranked list. No medication hops. */}
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        {/* Shop note — live amazon-brand search buttons (hospital-tank kit).
+            ShopCtas hides empty Chewy; never href="#" or an empty link.
+            Amazon searches only — not a ranked list. No medication buttons. */}
+        <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/api+freshwater+master+test+kit?s=health-dropsy", "/go/amazon-brand/aquarium+quarantine+hospital+tank+net?s=health-dropsy", "/go/amazon-brand/aquarium+sponge+filter?s=health-dropsy", "/go/amazon-brand/eheim+jager+heater?s=health-dropsy", "/go/amazon-brand/aquarium+digital+thermometer?s=health-dropsy"]} />
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
-            Shop a hospital-tank kit
+            Shop these supplies
           </div>
           
           <div className="flex flex-col gap-3">
@@ -85,7 +86,7 @@ export default function DropsyPage() {
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/eheim+jager+heater?s=health-dropsy"
-              amazonLabel="Browse aquarium heaters on Amazon →"
+              amazonLabel="Browse Eheim Jager heaters on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+digital+thermometer?s=health-dropsy"

@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import { HubMoneyLinks } from '@carloOS/ui'
 import type { Metadata } from 'next'
 import {
@@ -6,7 +7,6 @@ import {
   FAQAccordion,
   RelatedLinks,
   TableOfContents,
-  AffiliateDisclosure,
   ShopCtas,
 } from '@carloOS/ui'
 import {
@@ -52,7 +52,7 @@ const FAQS = [
   {
     question: 'What percent of my dog’s diet should be treats?',
     answer:
-      'WSAVA, AAHA, and most veterinary nutrition guidelines use the 10% rule: treats and chews should not exceed 10% of the dog’s total daily calorie intake. The other 90% should come from a complete and balanced diet so that the dog still receives the right ratios of protein, fat, vitamins, and minerals. Going above 10% routinely unbalances the diet even if the dog stays at a healthy weight.',
+      'The WSAVA guide to treats for dogs states that treats should make up no more than 10% of a dog’s daily calorie intake, and that treats should never replace a meal (https://wsava.org/wp-content/uploads/2025/11/WSAVA_GuidetoTreats_Dogs_251107.pdf). The rest of the ration should be a complete and balanced diet. Going above that ceiling routinely unbalances the diet even if the dog stays at a healthy weight.',
   },
   {
     question: 'Are dental treats actually effective?',
@@ -100,7 +100,7 @@ export default function DogTreatsGuidePage() {
           { name: 'Dog Nutrition', href: '/nutrition' },
           { name: 'Dog Treats Guide', href: '/nutrition/dog-treats-guide' },
         ]}
-        relatedLinks={[{ title: 'Dog Nutrition Hub', href: '/nutrition', category: 'Hub' }, { title: 'Toxic Foods Guide', href: '/nutrition/toxic-foods', category: 'Nutrition' }, { title: 'How Much to Feed', href: '/nutrition/how-much-to-feed', category: 'Nutrition' }, { title: 'Best Dental Chews', href: '/reviews/best-dental-chews', category: 'Reviews' }]}
+        relatedLinks={[{ title: 'Dog Nutrition Hub', href: '/nutrition', category: 'Hub' }, { title: 'Toxic Foods Guide', href: '/nutrition/toxic-foods', category: 'Nutrition' }, { title: 'How Much to Feed', href: '/nutrition/how-much-to-feed', category: 'Nutrition' }, { title: 'Calorie Calculator', href: '/tools/dog-calorie-calculator', category: 'Tool' }, { title: 'Best Dental Chews', href: '/reviews/best-dental-chews', category: 'Reviews' }]}
         sidebar={
           <>
             <TableOfContents
@@ -124,6 +124,7 @@ export default function DogTreatsGuidePage() {
                 { label: 'WSAVA Guidelines Explained', href: '/nutrition/wsava-explained' },
                 { label: 'Toxic Foods', href: '/nutrition/toxic-foods' },
                 { label: 'How Much to Feed', href: '/nutrition/how-much-to-feed' },
+                { label: 'Calorie Calculator', href: '/tools/dog-calorie-calculator' },
                 { label: 'Body Condition Score', href: '/guides/dog-body-condition-score' },
               ]}
             />
@@ -140,12 +141,12 @@ export default function DogTreatsGuidePage() {
             reviewedBy="Editorial team"
           />
 
-          <CalloutBox variant="evidence" title="TL;DR — How to treat without sabotaging the diet">
+          <CalloutBox variant="evidence" title="How to treat without sabotaging the diet">
             <p>
-              <strong>Keep treats to ≤10% of daily calories</strong> (WSAVA Global Nutrition Guidelines, AAHA Nutritional Assessment Guidelines).
+              <strong>Keep treats to no more than 10% of daily calories.</strong> The WSAVA guide to treats for dogs states that treats should make up no more than 10% of a dog’s daily calorie intake (<a href="https://wsava.org/wp-content/uploads/2025/11/WSAVA_GuidetoTreats_Dogs_251107.pdf">WSAVA treat guide</a>). That 10% is not a row on the WSAVA July 2020 adult calorie chart.
             </p>
             <p>
-              <strong>Use small, low-calorie treats for training</strong>, VOHC-Seal products for dental support, and single-ingredient options as a default. <strong>Subtract treat calories from the daily food ration</strong> when you cross 5–10%.
+              <strong>Use small, low-calorie treats for training</strong>, VOHC-Seal products for dental support, and single-ingredient options as a default. <strong>Subtract treat calories from the daily food ration</strong> when treats cross that WSAVA ceiling.
             </p>
             <p>
               <strong>Skip cooked bones</strong> (splinter risk, FDA CVM warning). <strong>Be cautious with jerky-treat products</strong> (FDA CVM 2007–2017 investigation, 6,200+ illness reports).
@@ -154,18 +155,18 @@ export default function DogTreatsGuidePage() {
 
           <h2 id="budget">The 10% Caloric Rule — The Number That Actually Matters</h2>
           <DropCap>
-            Almost every veterinary nutrition guideline — including the WSAVA Global Nutrition Guidelines and the AAHA Nutritional Assessment Guidelines — uses the same upper limit for treats: no more than 10% of total daily calorie intake. The reason is not arbitrary. The other 90% has to come from a food labeled &ldquo;complete and balanced&rdquo; per the AAFCO nutrient profile so the dog still receives the right ratios of protein, fat, essential fatty acids, vitamins, and minerals. Push treats above 10% routinely and the diet starts to drift out of balance even if total calories are correct.
+            The WSAVA guide to treats for dogs states that treats should make up no more than 10% of a dog’s daily calorie intake (<a href="https://wsava.org/wp-content/uploads/2025/11/WSAVA_GuidetoTreats_Dogs_251107.pdf">WSAVA treat guide</a>). The rest of the ration has to come from a food labeled &ldquo;complete and balanced&rdquo; per the AAFCO nutrient profile so the dog still receives the right ratios of protein, fat, essential fatty acids, vitamins, and minerals. Push treats above that ceiling routinely and the diet starts to drift out of balance even if total calories are correct.
           </DropCap>
           <p>
             The 10% rule is easier to follow once you write the numbers down. A typical 20-lb adult dog needs roughly 400–500 kcal per day for maintenance. Ten percent of that is 40–50 kcal — about two small commercial dog treats or a few teaspoons of single-ingredient treat material. For a 60-lb dog the daily intake is roughly 1,000–1,200 kcal, so the treat budget is 100–120 kcal. For an 8-lb dog, the budget is 25–30 kcal — which is one regular-sized biscuit, total, all day.
           </p>
           <p>
-            Treat calories are the most commonly underestimated calorie source in canine diets. Most owners can correctly state how much kibble they feed. Almost no one tracks treat calories. Two standard medium biscuits, one dental chew, and three training rewards over a day can be 150 kcal — meaningfully more than the entire daily treat budget for a small dog.
+            Treat calories are the most commonly underestimated calorie source in canine diets. Most owners can correctly state how much kibble they feed. Almost no one tracks treat calories. Two standard medium biscuits, one dental chew, and three training rewards over a day can be 150 kcal — meaningfully more than the entire daily treat budget for a small dog. The <a href="/tools/dog-calorie-calculator" className="text-brand-primary hover:underline">calorie calculator</a> estimates the maintenance number the 10% treat budget comes out of. Subtract the treats from that total; do not add them on top.
           </p>
 
           <CalloutBox variant="tip" title="Practical math: write the numbers on the bag">
             <p>
-              Read the calorie content per treat from the package (it must be on the label per AAFCO Chapter 6 — see below). Decide your daily treat budget (10% of maintenance calories). Write the count on the treat bag with a marker: &ldquo;Max 4 per day.&rdquo; Everyone in the household sees the same number.
+              Read the calorie content per treat from the package (it must be on the label per AAFCO Chapter 6 — see below). Decide your daily treat budget from that WSAVA ceiling (no more than 10% of daily calorie intake; <a href="https://wsava.org/wp-content/uploads/2025/11/WSAVA_GuidetoTreats_Dogs_251107.pdf">WSAVA treat guide</a>). Write the count on the treat bag with a marker: &ldquo;Max 4 per day.&rdquo; Everyone in the household sees the same number.
             </p>
           </CalloutBox>
 
@@ -329,7 +330,7 @@ export default function DogTreatsGuidePage() {
               <strong>Count the calories.</strong> Homemade treats have the same 10% limit as commercial treats. Track approximate calorie content (USDA FoodData Central is a useful reference for whole-food ingredients).
             </li>
             <li>
-              <strong>Do not try to make a complete diet</strong> in the form of treats. Complete and balanced canine diets require formulation work by a veterinary nutritionist; the failure mode of homemade complete diets is recurrent nutrient imbalance (calcium, taurine, copper, zinc, vitamin D, vitamin E). Use commercial complete diets as the 90%; use homemade or commercial treats for the 10%.
+              <strong>Do not try to make a complete diet</strong> in the form of treats. Complete and balanced canine diets require formulation work by a veterinary nutritionist; the failure mode of homemade complete diets is recurrent nutrient imbalance (calcium, taurine, copper, zinc, vitamin D, vitamin E). Use a commercial complete diet for the rest of the ration, and keep homemade or commercial treats inside the WSAVA ceiling of no more than 10% of daily calorie intake (<a href="https://wsava.org/wp-content/uploads/2025/11/WSAVA_GuidetoTreats_Dogs_251107.pdf">WSAVA treat guide</a>).
             </li>
           </ul>
 
@@ -337,27 +338,17 @@ export default function DogTreatsGuidePage() {
           <FAQAccordion
             items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))}
             allowMultiple
+            includeSchema={false}
           />
 
           <CalloutBox variant="info" title="References">
             <p>
-              FDA Center for Veterinary Medicine, &ldquo;Jerky Pet Treat Update&rdquo; final consumer communications, 2017 (with ongoing safety reporting guidance). • Veterinary Oral Health Council (VOHC) accepted products list, vohc.org. • AAFCO Official Publication, Chapter 6 — Model Regulations for Pet Food and Specialty Pet Food. • WSAVA Global Nutrition Committee — Global Nutrition Guidelines (treats 10% rule). • AAHA Nutritional Assessment Guidelines for Dogs and Cats. • FDA CVM — &ldquo;No Bones (or Bone Treats) About It: Reasons Not to Give Your Dog Bones.&rdquo;
+              FDA Center for Veterinary Medicine, &ldquo;Jerky Pet Treat Update&rdquo; final consumer communications, 2017 (with ongoing safety reporting guidance). • Veterinary Oral Health Council (VOHC) accepted products list, vohc.org. • AAFCO Official Publication, Chapter 6 — Model Regulations for Pet Food and Specialty Pet Food. • WSAVA guide to treats for dogs (https://wsava.org/wp-content/uploads/2025/11/WSAVA_GuidetoTreats_Dogs_251107.pdf). • FDA CVM — &ldquo;No Bones (or Bone Treats) About It: Reasons Not to Give Your Dog Bones.&rdquo;
             </p>
           </CalloutBox>
 
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href="/go/amazon-brand/purina+dog+food?s=nutrition-treats" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated dog treat-kcal chart /
-              dog fridge VOHC-seal card /
-              canine jerky-FDA handbook).
-              No existing product hop to keep.
-              Educational kitchen searches only; no Rx /
-              vaccine / flea / heartworm / nsaid hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs weight-management /
-              feeding-frequency / how-much-to-feed hops.
-              Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
@@ -366,7 +357,7 @@ export default function DogTreatsGuidePage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/purina+dog+food?s=nutrition-treats"
-                amazonLabel="Shop on Amazon"
+                amazonLabel="Browse Purina dog food on Amazon →"
               />
           </div>
           </div>

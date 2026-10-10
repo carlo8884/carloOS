@@ -1,13 +1,15 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfContents, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import Link from 'next/link'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfContents, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 
 const SOURCES = [
+  { label: 'Merck Veterinary Manual: Routine Health Care of Dogs, including senior visits', url: 'https://www.merckvetmanual.com/dog-owners/routine-care-of-dogs/routine-health-care-of-dogs', publisher: 'Merck Vet Manual' },
   { label: 'AAHA: Senior Care Guidelines for Dogs and Cats (2023)', url: 'https://www.aaha.org/aaha-guidelines/senior-care/senior-care-guidelines/', publisher: 'AAHA' },
-  { label: 'AVMA: Caring for Senior Pets', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/caring-senior-pets', publisher: 'AVMA' },
-  { label: 'Merck Veterinary Manual: Aging in Dogs — Physiologic Changes and Preventive Care', url: 'https://www.merckvetmanual.com/dog-owners/routine-care-and-breeding-of-dogs/aging-in-dogs', publisher: 'Merck Vet Manual' },
+  { label: 'AVMA: Caring for Senior Pets', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/senior-pets', publisher: 'AVMA' },
   { label: 'Landsberg GM et al. Cognitive dysfunction syndrome: a disease of canine and feline brain aging. Vet Clin North Am Small Anim Pract. 2012;42(4):749-768.', publisher: 'Vet Clinics Small Animal Practice' },
 ]
 
@@ -166,18 +168,18 @@ export default function SeniorDogCarePage() {
         </ul>
 
         <h2 id="kit">Senior care kit</h2>
-        <p>Everyday physical supplies that match the senior-care copy above — a senior formula (lower calorie density, typically higher protein), a portion-control food scale for monthly body weight and BCS checks plus the 10–15% portion adjustment, and joint-support treats as a husbandry category beside the arthritis notes. Fish oil (EPA/DHA), glucosamine/chondroitin bottles, NSAIDs, selegiline/Anipryl, and prescription kidney or cognitive diets (Hill&apos;s k/d, Royal Canin Renal Support, Hill&apos;s b/d, Purina Pro Plan Bright Mind) stay educational copy only — this page never hops Rx food, brand ASINs, supplements as medication, or drugs. Orthopedic beds and ramps are not named on this page, so they stay off the kit. This page does not claim hands-on testing.</p>
+        <p>Keep these on hand: a senior formula (lower calorie density, typically higher protein), a portion-control food scale for monthly body weight and BCS checks plus the 10–15% portion adjustment, and joint-support treats as a husbandry category beside the arthritis notes. Fish oil (EPA/DHA), glucosamine/chondroitin bottles, NSAIDs, selegiline/Anipryl, and prescription kidney or cognitive diets (Hill&apos;s k/d, Royal Canin Renal Support, Hill&apos;s b/d, Purina Pro Plan Bright Mind) stay educational copy only — this page does not link to Rx food, named brands, supplements as medication, or drugs. Orthopedic beds and ramps are not named on this page, so they stay off the kit.</p>
 
-        <AffiliateDisclosure variant="inline" siteId="dog-com" />
+        <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/senior+dog+food?s=health-senior-dog-care", "/go/amazon-brand/joint+support+dog+treats?s=health-senior-dog-care", "/go/amazon-brand/portion+control+food+scale+dog?s=health-senior-dog-care"]} />
 
-        {/* Money path — live amazon-brand search hops (senior formula, joint
+        {/* Shop note — live amazon-brand search buttons (senior formula, joint
             treats, portion scale). ShopCtas hides empty Chewy; never href="#"
-            or PLACEHOLDER. Category searches only — reuse live sister
+            or an empty link. Amazon searches only — reuse live sister
             queries from dog-age / BCS (joint+support+dog+treats,
             portion+control+food+scale+dog). Senior-formula search matches
             on-page "senior formula food" copy. Prescription kidney /
             cognitive diets, fish-oil bottles, and medication are not
-            shoppable hops. */}
+            shoppable buttons. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
             Shop related supplies
@@ -199,6 +201,7 @@ export default function SeniorDogCarePage() {
           </div>
         </div>
 
+        <p>Senior diets are compared in the <Link href="/reviews/best-dog-food-senior">senior dog food review</Link>.</p>
         <h2 id="faq">Frequently Asked Questions</h2>
         <FAQAccordion items={FAQ_ITEMS} allowMultiple />
 

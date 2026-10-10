@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -9,7 +10,6 @@ import {
   combineSchemas,
   SchemaScript,
   FAQAccordion,
-  AffiliateDisclosure,
   ArticleSourcesList,
   CrossPortfolioCard,
   ShopCtas,
@@ -30,8 +30,8 @@ const SOURCES = [
   { label: 'AAEP: Colic — owner resources and emergency recognition', url: 'https://aaep.org/horsehealth/colic', publisher: 'AAEP' },
   { label: 'AAEP: First Aid and Emergency Preparedness — owner resources', url: 'https://aaep.org', publisher: 'AAEP' },
   { label: 'Merck Veterinary Manual: Colic in Horses — emergency presentation', url: 'https://www.merckvetmanual.com/horse-owners/digestive-disorders-of-horses/colic-in-horses', publisher: 'Merck Vet Manual' },
-  { label: 'Merck Veterinary Manual: Laminitis in Horses', url: 'https://www.merckvetmanual.com/horse-owners/bone-joint-and-muscle-disorders-of-horses/laminitis-in-horses', publisher: 'Merck Vet Manual' },
-  { label: 'ASPCA Animal Poison Control Center: Pet Poison Information', url: 'https://www.aspca.org/pet-care/animal-poison-control', publisher: 'ASPCA' },
+  { label: 'Merck Veterinary Manual: Laminitis in Horses', url: 'https://www.merckvetmanual.com/musculoskeletal-system/disorders-of-the-foot-in-horses/laminitis-in-horses', publisher: 'Merck Vet Manual' },
+  { label: 'ASPCA Animal Poison Control Center: Pet Poison Information', url: 'https://www.aspca.org/pet-care/aspca-poison-control', publisher: 'ASPCA' },
 ]
 
 const FAQS = [
@@ -94,7 +94,7 @@ const appSchema = {
     'Conservative urgency read: go now, same-day vet, or monitor closely',
     '15 equine signs drawn from colic, choke, laminitis, lameness, and first-aid criteria',
     'Always rounds toward more care; no all-clear result',
-    'Shoppable equine emergency-prep kit via Amazon category searches (equine first-aid kit, digital veterinary thermometer, vet wrap bandage, poultice, horse electrolytes)',
+    'Shop the equine emergency-prep kit via Amazon searches (equine first-aid kit, digital veterinary thermometer, vet wrap bandage, poultice, horse electrolytes)',
   ],
 }
 
@@ -170,6 +170,7 @@ export default function IsThisAHorseEmergencyPage() {
           <p className="text-lg text-white/55 leading-relaxed max-w-2xl">
             Check the equine signs you are seeing and get a conservative urgency read — go now, same-day vet, or
             monitor closely — using emergency-vs-wait criteria from equine emergency medicine.
+            This page is not a veterinarian. If your horse may be in danger, contact a vet.
             This tool helps you decide how urgently to seek care. It does not diagnose your horse.
           </p>
         </div>
@@ -226,15 +227,15 @@ export default function IsThisAHorseEmergencyPage() {
         </div>
       </section>
 
-      {/* Money path — live amazon-brand search hops (equine emergency-prep / first-aid kit).
-          ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-          Category searches only — not a ranked list, not a diagnosis. */}
+      {/* Shop note — live amazon-brand search buttons (equine emergency-prep / first-aid kit).
+          ShopCtas hides empty Chewy; never href="#" or an empty link.
+          Amazon searches only — not a ranked list, not a diagnosis. */}
       <section id="horse-emergency-prep-kit" className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <div className="max-w-2xl">
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/equine+first+aid+kit?s=tools-is-this-a-horse-emergency", "/go/amazon-brand/digital+veterinary+thermometer?s=tools-is-this-a-horse-emergency", "/go/amazon-brand/vet+wrap+bandage?s=tools-is-this-a-horse-emergency", "/go/amazon-brand/poultice?s=tools-is-this-a-horse-emergency", "/go/amazon-brand/horse+electrolytes?s=tools-is-this-a-horse-emergency"]} />
           <div className="mt-4 rounded-xl border border-brand-border bg-brand-white p-5">
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Shop an equine emergency-prep kit
+              Shop these supplies
             </div>
             <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
@@ -279,7 +280,6 @@ export default function IsThisAHorseEmergencyPage() {
               rolling, not choke, not a horse that cannot rise — talk to a licensed vet on a screen
               rather than waiting for a gap to become an ER haul.
             </p>
-            <AffiliateDisclosure variant="inline" siteId="horses-com" className="mb-3 text-2xs" />
             <div className="flex flex-col gap-2 sm:flex-row sm:flex-wrap">
               <Link
                 href="/ownership/horse-insurance"
@@ -339,7 +339,7 @@ export default function IsThisAHorseEmergencyPage() {
               href="/ownership/first-aid-kit"
               className="text-brand-primary underline-offset-2 hover:underline"
             >
-              equine first-aid kit
+              Supplies named on this page
             </Link>
             . To line up emergency cover before a crisis, use{' '}
             <Link href="/ownership/choosing-a-vet" className="text-brand-primary underline-offset-2 hover:underline">

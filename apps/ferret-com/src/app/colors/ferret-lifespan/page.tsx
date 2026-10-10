@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import {
   buildMetadata,
@@ -8,7 +9,6 @@ import {
   CalloutBox,
   ArticleByline,
   DropCap,
-  AffiliateDisclosure,
   ShopCtas,
 } from '@carloOS/ui'
 import {
@@ -38,7 +38,6 @@ const articleSchema = buildArticleSchema({
   publishedAt: '2026-06-01T00:00:00Z',
   modifiedAt: '2026-06-01T00:00:00Z',
 })
-
 
 const FAQS = [
   {
@@ -110,7 +109,7 @@ export default function FerretLifespanPage() {
 
           </>
         }
-      
+
         relatedLinks={[
           { title: 'Ferret Colors Hub', href: '/colors' },
           { title: 'Aging Ferret Care', href: '/health/aging-ferret-care' },
@@ -259,30 +258,8 @@ export default function FerretLifespanPage() {
             health or aging warrant evaluation by an exotic-mammal veterinarian.
           </p>
 
-          
+          <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/ferret+cage?s=ferret-lifespan" />
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
-
-          {/* Money path — live amazon-brand search hops
-              (laminated ferret lifespan-stage chart /
-              ferret fridge life-stage card /
-              mustelid lifespan reference handbook).
-              Educational kitchen searches only; no Rx /
-              vaccine / aging hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs tools / reviews /
-              diet / care / behavior / health / ownership /
-              colors-hub / first-year-schedule /
-              colors-and-patterns / sable-ferrets /
-              albino-ferrets / dew-ferrets /
-              cinnamon-ferrets / champagne-ferrets /
-              chocolate-ferrets / black-ferrets /
-              silver-ferrets / panda-ferrets /
-              blaze-and-roan / choosing-healthy kitchen
-              kits and child finger+toothbrush /
-              carnivore+care hops. Directory import left
-              untouched.
-              Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
@@ -291,7 +268,7 @@ export default function FerretLifespanPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/ferret+cage?s=ferret-lifespan"
-                amazonLabel="Shop on Amazon"
+                amazonLabel="Browse ferret cages on Amazon →"
               />
           </div>
           </div>

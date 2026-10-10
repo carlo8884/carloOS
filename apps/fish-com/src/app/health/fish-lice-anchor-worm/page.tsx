@@ -1,11 +1,12 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, AffiliateDisclosure, ArticleSourcesList, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, ArticleSourcesList, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
 const SOURCES = [
-  { label: "Argulus (Fish Lice) and Lernaea (Anchor Worm) — Merck Veterinary Manual", url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/aquarium-fish/argulosis-and-lernaesis-in-fish", publisher: "Merck Vet Manual" },
+  { label: "Argulus (Fish Lice) and Lernaea (Anchor Worm) — Merck Veterinary Manual", url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/aquarium-fish/parasitic-diseases-of-fish", publisher: "Merck Vet Manual" },
   { label: "Shinn, A.P. et al. Fish parasites — pathobiology and protection. CABI, 2012.", publisher: "CABI" },
   { label: "Noga, E.J. Fish Disease: Diagnosis and Treatment, 2nd ed. Wiley-Blackwell, 2010.", publisher: "Wiley-Blackwell" },
   { label: "Yanong, R.P.E. Use of Chemicals in Aquaculture in the United States — UF/IFAS Extension FA-54.", url: "https://edis.ifas.ufl.edu/publication/FA054", publisher: "UF/IFAS Extension" },
@@ -63,21 +64,20 @@ export default function FishLicePage() {
         <p>Both parasites enter closed aquariums from: wild-caught fish not quarantined, live feeder fish from pond environments (feeder goldfish from outdoor rearing ponds are a common source), water or plants taken from natural water sources, and pond-reared fish of any species. Prevention: rigorous quarantine of all new fish (4–6 weeks observation — both parasites would be visible well within this window), avoid live feeder fish from unknown sources, and do not introduce water, plants, or substrate from natural water bodies without treating for potential parasites.</p>
         <p>Once established in a pond, both parasites can be extremely persistent — pond treatment with diflubenzuron or potassium permanganate repeated at appropriate intervals is required to break the life cycle.</p>
 
-        {/* Money path — live amazon-brand search hops (quarantine-tank kit).
-            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-            Category searches only — not a ranked list. No medication hops. */}
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        {/* Shop note — live amazon-brand search buttons (quarantine-tank kit).
+            ShopCtas hides empty Chewy; never href="#" or an empty link.
+            Amazon searches only — not a ranked list. No medication buttons. */}
+        <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/aquarium+quarantine+hospital+tank+net?s=health-fish-lice", "/go/amazon-brand/aquarium+sponge+filter?s=health-fish-lice"]} />
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
-            Shop a quarantine-tank kit
+            Shop these supplies
           </div>
           <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Prevention on this page is a 4–6 week quarantine of every new
             fish — both parasites would be visible well within that window
             — plus treating the holding water so eggs and larvae do not
             re-seed the tank. A spare quarantine / hospital tank is how you
             run that watch without dropping the display. A seeded sponge
-            filter keeps that holding water moving. Same hospital-tank hop
-            used on the{' '}
+            filter keeps that holding water moving. The same hospital-tank button is on the{' '}
             <Link
               href="/tools/fish-disease-symptom-checker"
               className="text-brand-primary no-underline hover:underline"
@@ -88,19 +88,18 @@ export default function FishLicePage() {
             <Link href="/health/pop-eye" className="text-brand-primary no-underline hover:underline">
               pop-eye guide
             </Link>
-            . Same sponge-filter hop used on the{' '}
+            . The same sponge-filter button is on the{' '}
             <Link
               href="/tools/aquarium-cycling-estimator"
               className="text-brand-primary no-underline hover:underline"
             >
               cycling estimator
             </Link>
-            . Test-kit, heater, and thermometer hops stay off this page —
+            . Test-kit, heater, and thermometer buttons stay off this page —
             lice and anchor-worm copy has no water-test-first step and no
-            heat method. The hops below are not a ranked product list, they
+            heat method. The buttons below are not a ranked product list, they
             are not medications, and they do not treat, reverse, or cure
-            Argulus or Lernaea. Fish.com earns a commission on qualifying
-            purchases at no extra cost to you. </p>
+            Argulus or Lernaea. </p>
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+quarantine+hospital+tank+net?s=health-fish-lice"

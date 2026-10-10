@@ -52,13 +52,36 @@ export function visibleChewyHref(
 
 /**
  * Chewy-brand search hops can earn on Amazon until Carlo sets a Chewy tag.
- * Only `/go/chewy-brand/{query}` rewrites. `/go/chewy/connect` and pharmacy
- * hops stay hidden — those are not Amazon search queries.
+ * Only `/go/chewy-brand/{query}` rewrites. Pharmacy uses hiddenChewyReplacement.
+ * Chewy Connect stays a live consult (see consultLink), not an AskVet swap.
  */
 export function amazonFallbackFromChewyHref(href: string): string | undefined {
   const match = href.match(/^(\/go\/)chewy-brand\/([^?#]+)([?#].*)?$/i)
   if (!match) return undefined
   return `${match[1]}amazon-brand/${match[2]}${match[3] ?? ''}`
+}
+
+/**
+ * Pharmacy hops disappear when no Chewy tag is set.
+ * Chewy Connect is a consult and is not rewritten here.
+ * Show a link that already exists on Vets.co, and return nothing once a tag
+ * is set so the original /go href comes back.
+ */
+export function hiddenChewyReplacement(
+  href: string | undefined,
+  env: NodeJS.ProcessEnv = process.env,
+): { href: string; label: string } | undefined {
+  if (!href || href === '#' || isChewyHopLive(env) || !isChewyHop(href)) return undefined
+  const path = href.split('?')[0].toLowerCase()
+  if (
+    path === '/go/chewy-pharmacy' ||
+    path.startsWith('/go/chewy-pharmacy/') ||
+    path === '/go/chewy/pharmacy' ||
+    path.startsWith('/go/chewy/pharmacy/')
+  ) {
+    return { href: '/find-a-vet', label: 'Find a clinic that can prescribe →' }
+  }
+  return undefined
 }
 
 /** Shop CTA href: hide empty Chewy, or fall Chewy-brand search hops back to Amazon. Never "#". */
@@ -67,10 +90,52 @@ export function visibleShopHref(
   env: NodeJS.ProcessEnv = process.env,
 ): string | undefined {
   if (!href || href === '#') return undefined
+  const vendor = href.match(/^\/go\/([^/?#]+)/i)?.[1]?.toLowerCase() ?? ''
+  // An amazon-brand search stays, even when its words name a held brand.
+  if (vendor === 'amazon' || vendor === 'amazon-brand') return href
   if (!isChewyHop(href)) return href
   const chewy = visibleChewyHref(href, env)
   if (chewy) return chewy
-  return amazonFallbackFromChewyHref(href)
+  return amazonFallbackFromChewyHref(href) ?? hiddenChewyReplacement(href, env)?.href
+}
+
+/**
+ * Hero and card labels name the retailer the visitor actually opens.
+ * A Chewy-brand hop says Amazon while the tag is unset, and Chewy once it is set.
+ * Pharmacy keeps the vet-finder label from hiddenChewyReplacement.
+ * Chewy Connect keeps the page label; consultLink owns that href.
+ */
+export function shopCtaLabel(
+  rawHref: string | undefined,
+  label: string,
+  env: NodeJS.ProcessEnv = process.env,
+): string {
+  const visible = visibleShopHref(rawHref, env)
+  const replacement = hiddenChewyReplacement(rawHref, env)
+  if (replacement && visible === replacement.href) return replacement.label
+  if (!visible || !label) return label
+  let named = label
+  if (/\/go\/amazon/.test(visible) && /\bon Chewy\b/i.test(named)) {
+    named = named.replace(/\bon Chewy\b/gi, 'on Amazon')
+  }
+  if (/\/go\/chewy/.test(visible) && rawHref && isChewyHop(rawHref) && /\bon Amazon\b/i.test(named)) {
+    named = named.replace(/\bon Amazon\b/gi, 'on Chewy')
+  }
+  if (/\/go\/amazon/.test(visible)) return nameLiveRetailer(named, 'Amazon')
+  if (/\/go\/chewy/.test(visible)) return nameLiveRetailer(named, 'Chewy')
+  return named
+}
+
+/** A shop label that never names the store gets the retailer the hop actually opens. */
+function nameLiveRetailer(label: string, retailer: string): string {
+  if (new RegExp(`\\b${retailer}\\b`, 'i').test(label)) return label
+  const arrow = label.match(/\s*(?:→|->)\s*$/)
+  const tail = arrow?.[0] ?? ''
+  const core = (tail ? label.slice(0, -tail.length) : label).trimEnd()
+  const period = core.endsWith('.')
+  const body = (period ? core.slice(0, -1) : core).trimEnd()
+  const named = `${body} on ${retailer}`
+  return `${period ? `${named}.` : named}${tail}`
 }
 
 /** Display names for a product-row shop link. Unknown vendors are not labeled. */
@@ -106,6 +171,8 @@ export function tableShopLink(
   product: string,
   env: NodeJS.ProcessEnv = process.env,
 ): { href: string; label: string } | null {
+  const replacement = hiddenChewyReplacement(href, env)
+  if (replacement) return replacement
   const visible = visibleShopHref(href, env)
   if (!visible?.startsWith('/go/')) return null
   const path = visible.split('?')[0].split('/')
@@ -116,6 +183,19 @@ export function tableShopLink(
   const sameName = product.trim().toLowerCase() === retailer.toLowerCase()
   const label = sku === 'home' || sameName ? `${product} quote` : `${product} on ${retailer}`
   return { href: visible, label }
+}
+
+/** Brands with a held /go hop but no product-row label above. */
+const HELD_BRAND: Record<string, string> = { carniwhole: 'Carniwhole', vetster: 'Vetster', askvet: 'AskVet' }
+
+/**
+ * Customer text for a /go hop that has no live link yet: the retailer or
+ * brand name only, never internal wording. No href is rendered with it.
+ */
+export function heldShopText(href: string | undefined): string {
+  const vendor = heldVendorOfHref(href) ?? href?.match(/^\/go\/([^/?#]+)/i)?.[1]?.toLowerCase() ?? ''
+  const retailer = SHOP_RETAILER[vendor] ?? HELD_BRAND[vendor]
+  return retailer ? `Available from ${retailer}` : 'Available from the brand'
 }
 
 const DEFAULT_HOME = 'https://www.amazon.com'
@@ -139,20 +219,86 @@ export function isRetailVendor(vendor: string): boolean {
   return RETAIL_VENDORS.has(vendor)
 }
 
+/** Associates tag, copied from AFF_AMAZON_TAG with nothing appended and no built-in default. */
+export function amazonAssociateTag(env: NodeJS.ProcessEnv = process.env): string {
+  const tag = env.AFF_AMAZON_TAG
+  return typeof tag === 'string' ? tag : ''
+}
+
+const PARTNER_ID_VENDORS = new Set(['trupanion', 'healthy-paws', 'embrace'])
+
+/**
+ * Trupanion, Healthy Paws, and Embrace quote buttons stay on the page, but
+ * they are not a working hop until that vendor's AFF_*_TAG is set. Other
+ * hrefs are unchanged. This does not invent an ID.
+ */
+export function partnerTagReady(
+  href: string | undefined,
+  env: NodeJS.ProcessEnv = process.env,
+): boolean {
+  if (!href) return false
+  const vendor = href.match(/^\/go\/([^/?#]+)/)?.[1] ?? ''
+  if (!PARTNER_ID_VENDORS.has(vendor)) return true
+  return resolveTag(vendor, env).tag.length > 0
+}
+
+export function partnerNeededLabel(label: string): string {
+  const base = label.replace(/\s*→\s*$/, '').trim()
+  return base ? 'Quotes not available here yet' : 'Quotes not available here yet'
+}
+
+const VISIT_VENDOR = /^\/go\/(vetster|askvet)(?:\/|\?|#|$)/
+
+/**
+ * Internal next step when a Vetster or AskVet visit hop is withheld.
+ * The comparison page points at the setting tool. Every other visit
+ * surface points at the comparison. This is not a quote and not a partner ID.
+ */
+export function visitNextStep(href: string | undefined): { href: string; label: string } | null {
+  if (!href || !VISIT_VENDOR.test(href)) return null
+  let source = ''
+  try {
+    source = new URL(href, 'https://vets.co').searchParams.get('s') ?? ''
+  } catch {
+    source = ''
+  }
+  if (source === 'telehealth') {
+    return { href: '/tools/er-vs-clinic', label: 'ER vs clinic vs telehealth' }
+  }
+  return { href: '/telehealth', label: 'Compare telehealth services' }
+}
+
+/** True when this href is a Trupanion, Healthy Paws, or Embrace quote and its tag is unset. */
+export function partnerQuoteHeld(
+  href: string | undefined,
+  env: NodeJS.ProcessEnv = process.env,
+): boolean {
+  if (!href) return false
+  return !partnerTagReady(href, env)
+}
+
 export function resolveTag(
   vendor: string,
   env: NodeJS.ProcessEnv = process.env,
 ): { tag: string; envVarName: string } {
+  if (vendor === 'amazon' || vendor === 'amazon-brand') {
+    if (vendor === 'amazon-brand') {
+      const brand = env.AFF_AMAZON_BRAND_TAG
+      if (typeof brand === 'string' && brand.length > 0) {
+        return { tag: brand, envVarName: 'AFF_AMAZON_BRAND_TAG' }
+      }
+    }
+    const tag = amazonAssociateTag(env)
+    if (tag.length > 0) return { tag, envVarName: 'AFF_AMAZON_TAG' }
+    return {
+      tag: '',
+      envVarName: vendor === 'amazon' ? 'AFF_AMAZON_TAG' : 'AFF_AMAZON_BRAND_TAG',
+    }
+  }
   const primaryName = `AFF_${vendor.replace(/-/g, '_').toUpperCase()}_TAG`
   const primary = env[primaryName]
   if (typeof primary === 'string' && primary.length > 0) {
     return { tag: primary, envVarName: primaryName }
-  }
-  if (vendor === 'amazon-brand' || vendor === 'amazon') {
-    const fallback = env.AFF_AMAZON_TAG
-    if (typeof fallback === 'string' && fallback.length > 0) {
-      return { tag: fallback, envVarName: 'AFF_AMAZON_TAG' }
-    }
   }
   if (vendor === 'chewy-brand' || vendor === 'chewy-pharmacy') {
     const fallback = env.AFF_CHEWY_TAG
@@ -161,6 +307,139 @@ export function resolveTag(
     }
   }
   return { tag: '', envVarName: primaryName }
+}
+
+/** Product retailers whose /go link stays in the page and stays quiet until that vendor's tag is set. */
+const QUIET_PARTNER_VENDORS = new Set([
+  'smartpak',
+  'dover',
+  'schneider',
+  'ridingwarehouse',
+  'wysong',
+  'marshall',
+  'carniwhole',
+])
+
+/**
+ * True when this href is a held product partner and its own tag is unset.
+ * Amazon and insurance quotes are not in this set. This does not invent an ID.
+ */
+export function partnerLinkQuiet(
+  href: string | undefined,
+  env: NodeJS.ProcessEnv = process.env,
+): boolean {
+  if (!href) return false
+  const vendor = href.match(/^\/go\/([^/?#]+)/)?.[1] ?? ''
+  if (!QUIET_PARTNER_VENDORS.has(vendor)) return false
+  return resolveTag(vendor, env).tag.length === 0
+}
+
+/**
+ * Vendors whose rendered <a> is a held hop while that vendor's tag is unset.
+ * Amazon searches are not in this set, including an amazon-brand search whose
+ * words name one of these brands. Vetster is not an insurer; its tag is unset too.
+ */
+const HELD_PATH_VENDORS = new Set([
+  ...QUIET_PARTNER_VENDORS,
+  'chewy',
+  'chewy-brand',
+  'chewy-pharmacy',
+  'trupanion',
+  'healthy-paws',
+  'embrace',
+  'lemonade',
+  'pumpkin',
+  'pets-best',
+  'spot',
+  'manypets',
+  'figo',
+  'aspca',
+  'fetch',
+  'metlife',
+  'wagmo',
+  'vetster',
+  'askvet',
+])
+
+const HELD_HOSTS = [
+  'smartpak.com',
+  'smartpakequine.com',
+  'doversaddlery.com',
+  'schneidersaddlery.com',
+  'ridingwarehouse.com',
+  'wysong.net',
+  'marshallferrets.com',
+  'carniwhole.com',
+  'chewy.com',
+  'trupanion.com',
+  'healthypawspetinsurance.com',
+  'embracepetinsurance.com',
+  'lemonade.com',
+  'pumpkin.care',
+  'petsbest.com',
+  'spotpet.com',
+  'manypets.com',
+  'figopetinsurance.com',
+  'aspcapetinsurance.com',
+  'fetchpet.com',
+  'metlifepetinsurance.com',
+  'wagmo.io',
+  'vetster.com',
+  'askvet.app',
+]
+
+/**
+ * Vendor key for a rendered href, or null when the href is not a held partner.
+ * Absolute, protocol-relative, mixed-case, encoded, and dot-segment forms all
+ * resolve the way a browser would before the held check.
+ */
+export function heldVendorOfHref(href: string | undefined): string | null {
+  if (!href) return null
+  let url: URL
+  try {
+    url = new URL(href.trim(), 'https://local.invalid')
+  } catch {
+    return null
+  }
+  const host = url.hostname.replace(/^www\./, '').replace(/\.$/, '').toLowerCase()
+  for (const held of HELD_HOSTS) {
+    if (host === held || host.endsWith(`.${held}`)) return held
+  }
+  let path = url.pathname
+  try {
+    path = decodeURIComponent(path)
+  } catch {
+    // keep the raw path
+  }
+  const pathVendor = path.match(/\/go\/+([^/]+)/i)?.[1]?.toLowerCase() ?? ''
+  if (HELD_PATH_VENDORS.has(pathVendor)) return pathVendor
+  const rawVendor = href.match(/\/go\/([^/?#]+)/i)?.[1]?.toLowerCase() ?? ''
+  if (rawVendor === 'amazon' || rawVendor === 'amazon-brand') return null
+  if (HELD_PATH_VENDORS.has(rawVendor)) return rawVendor
+  return null
+}
+
+/**
+ * Href a shop control may put on an <a>.
+ * An unset held-partner tag returns undefined so the page can show a note.
+ * A Chewy-brand search becomes the existing amazon-brand search.
+ * An amazon-brand search stays, even when its words name a held brand.
+ */
+export function liveAnchorHref(
+  href: string | undefined,
+  env: NodeJS.ProcessEnv = process.env,
+): string | undefined {
+  if (!href || href === '#') return undefined
+  if (partnerLinkQuiet(href, env) || partnerQuoteHeld(href, env)) return undefined
+  const consult = consultLink(href, env)
+  if (consult && !consult.attributed) return undefined
+  const visible = visibleShopHref(href, env)
+  if (!visible) return undefined
+  const held = heldVendorOfHref(visible)
+  if (!held) return visible
+  // A held /go hop goes live only once that vendor's tag is set. A held host never does.
+  if (HELD_PATH_VENDORS.has(held) && resolveTag(held, env).tag.length > 0) return visible
+  return undefined
 }
 
 export function partnerHome(vendor: string, template?: string): string {
@@ -185,6 +464,72 @@ export function stripPlaceholder(url: string): string {
     .replace(/[?&]$/, '')
   if (!out.includes('?') && out.includes('&')) out = out.replace('&', '?')
   return out
+}
+
+/**
+ * Resolver for Vetster, AskVet, Chewy Connect, Lemonade, Pumpkin, Pets Best,
+ * Spot, ManyPets, Figo, and ASPCA. An unset tag returns the template with the
+ * placeholder id removed. liveAnchorHref does not put that URL on an <a>
+ * until the tag is set. When AFF_VETSTER_TAG, AFF_ASKVET_TAG, AFF_CHEWY_TAG,
+ * AFF_LEMONADE_TAG, AFF_PUMPKIN_TAG, AFF_PETS_BEST_TAG, AFF_SPOT_TAG,
+ * AFF_MANYPETS_TAG, AFF_FIGO_TAG, or AFF_ASPCA_TAG is set, the button switches
+ * back to the /go hop and the redirect fills that tag. Trupanion, Healthy
+ * Paws, and Embrace stay held. These strings match
+ * apps/vets-co/src/data/affiliate-routes.ts. Do not invent an ID.
+ */
+const CONSULT_TEMPLATE: Record<string, string> = {
+  vetster: 'https://vetster.com/?refid=PLACEHOLDER&campaign={sku}',
+  askvet: 'https://askvet.app/?refid=PLACEHOLDER&campaign={sku}',
+  chewy: 'https://www.chewy.com/pethealth/connect-with-a-vet?refid=PLACEHOLDER&campaign={sku}',
+  lemonade: 'https://lemonade.com/pet?affid=PLACEHOLDER&offer={sku}',
+  pumpkin: 'https://get.pumpkin.care/quote?refid=PLACEHOLDER&campaign={sku}',
+  'pets-best': 'https://www.petsbest.com/enroll?affid=PLACEHOLDER&campaign={sku}',
+  spot: 'https://quote.spotpet.com/?refid=PLACEHOLDER&offer={sku}',
+  manypets: 'https://manypets.com/us/?affid=PLACEHOLDER&campaign={sku}',
+  figo: 'https://figopetinsurance.com/get-started?refid=PLACEHOLDER&campaign={sku}',
+  aspca: 'https://www.aspcapetinsurance.com/quote/?refid=PLACEHOLDER&campaign={sku}',
+}
+
+const PLAIN_UNTIL_TAG = new Set([
+  'vetster',
+  'askvet',
+  'lemonade',
+  'pumpkin',
+  'pets-best',
+  'spot',
+  'manypets',
+  'figo',
+  'aspca',
+])
+
+export function consultLink(
+  href: string,
+  env: NodeJS.ProcessEnv = process.env,
+): { href: string; attributed: boolean } | null {
+  const match = href.match(/^\/go\/([^/?#]+)\/([^?#]*)/)
+  if (!match) return null
+  const vendor = match[1].toLowerCase()
+  const sku = decodeURIComponent(match[2] || '')
+  const consult =
+    PLAIN_UNTIL_TAG.has(vendor) || (vendor === 'chewy' && sku.toLowerCase() === 'connect')
+  if (!consult) return null
+  const { tag } = resolveTag(vendor, env)
+  if (tag.length > 0) return { href, attributed: true }
+  const template = CONSULT_TEMPLATE[vendor]
+  const target = stripPlaceholder(template.split('{sku}').join(encodeURIComponent(sku.replaceAll('+', ' '))))
+  if (!target || target.includes('PLACEHOLDER')) return null
+  return { href: target, attributed: false }
+}
+
+/** True only when this rendered hop is still /go and that vendor's tag is set. */
+export function hopCommissionReady(
+  href: string | undefined,
+  env: NodeJS.ProcessEnv = process.env,
+): boolean {
+  if (!href?.startsWith('/go/')) return false
+  const vendor = href.match(/^\/go\/([^/?#]+)/)?.[1]?.toLowerCase() ?? ''
+  if (!vendor) return false
+  return resolveTag(vendor, env).tag.length > 0
 }
 
 export interface HopResult {
@@ -219,8 +564,11 @@ export function resolveAffiliateHop(opts: {
   }
 
   const retail = isRetailVendor(vendor)
+  // Chewy Connect is the live /pethealth/connect-with-a-vet page in the route
+  // template. An unset tag still opens that path with refid removed.
+  const chewyConnect = vendor === 'chewy' && sku.toLowerCase() === 'connect'
   // Retail: no sku or no tag → homepage. Never an untagged Amazon/Chewy URL.
-  if (retail && (!sku || !tagResolved)) {
+  if (retail && !chewyConnect && (!sku || !tagResolved)) {
     return { target: partnerHome(vendor, route.template), tagResolved, envVarName, vendor, sku }
   }
   // Non-retail product URLs that require a sku still go home when the sku is empty.

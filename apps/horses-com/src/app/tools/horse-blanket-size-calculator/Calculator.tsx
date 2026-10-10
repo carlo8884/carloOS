@@ -47,6 +47,9 @@ export default function HorseBlanketSizeCalculator() {
 
   return (
     <div className="rounded-lg border border-brand-border bg-brand-surface p-6 sm:p-8">
+      {r ? (
+        <ResultPick linkFirst siteId="horses-com" pick={blanketPick(r.us, 'tools-horse-blanket-size-calculator')} />
+      ) : null}
       <label className="block mb-4">
         <span className="block text-xs font-bold uppercase tracking-eyebrow text-brand-text-light mb-1.5">
           Chest-to-tail measurement
@@ -110,12 +113,16 @@ export default function HorseBlanketSizeCalculator() {
           <ResultMeaning>
             This is the US blanket size for that chest-to-tail length, rounded to the nearest 3-inch step.
           </ResultMeaning>
-          <ResultPick siteId="horses-com" pick={blanketPick(r.us, 'tools-horse-blanket-size-calculator')} />
+          <p className="mt-4 text-sm font-semibold leading-snug">
+            <a href="/tack/blanket-weights" className="inline-block max-w-full whitespace-normal text-brand-primary underline underline-offset-2">
+              Match the fill to this size before you buy →
+            </a>
+          </p>
         </div>
       ) : null}
 
       <p className="mt-4 text-2xs leading-snug text-brand-text-light">
-        US blanket sizing <em>is</em> the chest-to-tail measurement in inches, rounded to the nearest 3-inch standard
+        The 3-inch step is a planning convention for US blanket sizes, not a chart fetched from a manufacturer. US sizing here is the chest-to-tail measurement in inches, rounded to that step
         size (48&Prime;–90&Prime;). Fit also depends on cut, shoulder gusset, and neck style — when in doubt, size up
         and check the brand&apos;s chart.
       </p>

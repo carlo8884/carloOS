@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas, PrimaryHop, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -83,6 +84,10 @@ export default function LaminitisPage() {
           { title: 'Feeding the Easy Keeper', href: '/nutrition/feeding-the-easy-keeper' },
           { title: 'Is This a Horse Emergency?', href: '/tools/is-this-a-horse-emergency' },
         ]}
+        heroHop={<>
+          <PrimaryHop href="/go/amazon-brand/equine+foam+sole+support+pads?s=health-laminitis" label="Search Amazon for equine foam sole-support pads" />
+          <HopDisclosure tone="on-dark" siteId="horses-com" href="/go/amazon-brand/equine+foam+sole+support+pads?s=health-laminitis" />
+        </>}
         hero={{
           title: 'Equine Laminitis',
           subtitle:
@@ -140,6 +145,7 @@ export default function LaminitisPage() {
             updatedAt="2026-09-05"
             reviewedBy="Editorial team"
           />
+          <LastUpdated date="2026-10-09" />
 
           <div className="bg-brand-primary-pale border-l-4 border-brand-primary rounded-r-xl p-5 not-prose my-6">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">The Short Answer</div>
@@ -209,7 +215,7 @@ export default function LaminitisPage() {
           <ul>
             <li><strong>Maintain a lean body condition.</strong> Obesity drives insulin dysregulation. Score the horse regularly with a body condition tool and keep at-risk ponies in the 4 to 5 range on the Henneke scale.</li>
             <li><strong>Restrict non-structural carbohydrate (NSC) intake.</strong> Limit or eliminate grain for easy keepers; soak hay to reduce sugar; test hay for sugar/starch content when feeding metabolic horses.</li>
-            <li><strong>Manage grazing.</strong> Restrict or eliminate lush spring and autumn grass for at-risk horses; use a grazing muzzle or a dry lot. Sugar content in pasture is highest on sunny afternoons after cool nights. An easy-keeper grazing muzzle is how that metabolic-management copy stays a physical muzzle on a pony that cannot have unlimited spring grass — it is not the generic pasture-management grazing-muzzle hop and not a treatment for EMS or PPID.</li>
+            <li><strong>Manage grazing.</strong> Restrict or eliminate lush spring and autumn grass for at-risk horses; use a grazing muzzle or a dry lot. Sugar content in pasture is highest on sunny afternoons after cool nights. An easy-keeper grazing muzzle is how that metabolic-management copy stays a physical muzzle on a pony that cannot have unlimited spring grass. It is not a treatment for EMS or PPID.</li>
             <li><strong>Test and treat PPID.</strong> Older horses with a long coat, regional fat, or recurrent laminitis should be tested for PPID and treated with veterinarian-prescribed pergolide when indicated.</li>
             <li><strong>Secure the feed room.</strong> Prevent grain-overload accidents with horse-proof latches.</li>
             <li><strong>Introduce feed changes gradually</strong> and address colic and infections promptly to limit sepsis-associated risk.</li>
@@ -217,16 +223,16 @@ export default function LaminitisPage() {
           <p>Tracking body condition is the single most reliable early-warning lever for at-risk horses; score yours with the <a href="/tools/body-condition-score">equine body-condition score tool</a>.</p>
 
           <h2 id="kit">Support kit</h2>
-          <p>Everyday physical supplies that match the soft-footing, sole-support, and metabolic-management copy on this page — an equine foam sole-support pad so the sole can share load away from the failing dorsal laminae, equine deep-sand stall bedding so box rest happens on a thick soft bed instead of hard ground, and an easy-keeper grazing muzzle so lush spring grass stays limited for the at-risk easy keeper. These are household barn tools, not treatments. They do not diagnose or treat laminitis, they do not replace a veterinarian or a farrier, and they are not a ranked product list. This page does not claim hands-on testing.</p>
+          <p>Keep these on hand: an equine foam sole-support pad so the sole can share load away from the failing dorsal laminae, equine deep-sand stall bedding so box rest happens on a thick soft bed instead of hard ground, and an easy-keeper grazing muzzle so lush spring grass stays limited for the at-risk easy keeper. These are household barn tools, not treatments. They do not diagnose or treat laminitis, they do not replace a veterinarian or a farrier, and they are not a ranked product list.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/equine+foam+sole+support+pads?s=health-laminitis", "/go/amazon-brand/equine+deep+sand+stall+bedding?s=health-laminitis", "/go/amazon-brand/easy+keeper+grazing+muzzle?s=health-laminitis"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (equine foam sole-support pads /
               equine deep-sand stall bedding /
               easy-keeper grazing muzzle).
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or an empty link. Amazon searches only —
               unused vs #1062 thermometer / stethoscope /
               fleece-cooler, #1061 farrier-log / hoof-stand /
               barn-flood-light, #1060 fecal-container /
@@ -238,7 +244,7 @@ export default function LaminitisPage() {
               thermometer / horse+fleece+cooler /
               horse+grazing+muzzle / pine+shavings /
               hoof-pick / hoof-boots / snow-pads. Rx
-              ASINs are not shoppable hops. */}
+              product pages are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
@@ -261,17 +267,21 @@ export default function LaminitisPage() {
           </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>
-          <FAQAccordion items={FAQS} />
+          <FAQAccordion items={FAQS} includeSchema={false} />
 
-          <h2 id="references">References</h2>
-          <ol className="text-sm text-brand-text-mid">
-            <li>Equine Endocrinology Group. &ldquo;Recommendations for the Diagnosis and Management of Equine Metabolic Syndrome and PPID,&rdquo; current edition. sites.tufts.edu/equineendogroup.</li>
-            <li>de Laat MA, McGowan CM, Sillence MN, Pollitt CC. &ldquo;Equine Laminitis: Induced by 48 h Hyperinsulinaemia in Standardbred Horses.&rdquo; <em>Equine Veterinary Journal</em>, 2010; 42(2):129&ndash;135.</li>
-            <li>Patterson-Kane JC, Karikoski NP, McGowan CM. &ldquo;Paradigm Shifts in Understanding Equine Laminitis.&rdquo; <em>Veterinary Journal</em>, 2018; 231:33&ndash;40.</li>
-            <li>Obel N. <em>Studies on the Histopathology of Acute Laminitis.</em> Almqvist and Wiksells, 1948.</li>
-            <li>American Association of Equine Practitioners. &ldquo;Laminitis: Prevention and Treatment&rdquo; owner resources. aaep.org.</li>
-            <li>van Eps AW, Pollitt CC. &ldquo;Equine Laminitis Model: Cryotherapy Reduces the Severity of Lesions.&rdquo; <em>Equine Veterinary Journal</em>, 2009; 41(8):741&ndash;746.</li>
-          </ol>
+          <div id="references">
+            <ArticleSourcesList
+              title="References"
+              sources={[
+              { label: "Equine Endocrinology Group. \"Recommendations for the Diagnosis and Management of Equine Metabolic Syndrome and PPID,\" current edition. sites.tufts.edu/equineendogroup.", url: "https://sites.tufts.edu/equineendogroup/", publisher: "Equine Endocrinology Group" },
+              { label: "de Laat MA, McGowan CM, Sillence MN, Pollitt CC. \"Equine Laminitis: Induced by 48 h Hyperinsulinaemia in Standardbred Horses.\" Equine Veterinary Journal, 2010; 42(2):129–135.", url: "https://beva.onlinelibrary.wiley.com/journal/20423306", publisher: "Equine Veterinary Journal" },
+              { label: "Patterson-Kane JC, Karikoski NP, McGowan CM. \"Paradigm Shifts in Understanding Equine Laminitis.\" Veterinary Journal, 2018; 231:33–40.", url: "https://www.sciencedirect.com/journal/the-veterinary-journal", publisher: "The Veterinary Journal" },
+              { label: "Obel N. Studies on the Histopathology of Acute Laminitis. Almqvist and Wiksells, 1948." },
+              { label: "American Association of Equine Practitioners. \"Laminitis: Prevention and Treatment\" owner resources. aaep.org.", url: "https://aaep.org/", publisher: "AAEP" },
+              { label: "van Eps AW, Pollitt CC. \"Equine Laminitis Model: Cryotherapy Reduces the Severity of Lesions.\" Equine Veterinary Journal, 2009; 41(8):741–746.", url: "https://beva.onlinelibrary.wiley.com/journal/20423306", publisher: "Equine Veterinary Journal" },
+              ]}
+            />
+          </div>
         </div>
       </ArticleLayout>
     </>

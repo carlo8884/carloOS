@@ -1,6 +1,7 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, CrossPortfolioCard, TableOfContents, ReviewCard, ScoreMethodology, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, CrossPortfolioCard, TableOfContents, ReviewCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -47,11 +48,21 @@ export default function SaddleFitBasicsPage() {
         priceAsOf="2026-05-31"
         siteId="horses-com"
         relatedLinks={[
+          { title: 'Horse Height Converter', href: '/tools/horse-height-converter', category: 'Tools' },
+          { title: 'Horse Size for Rider', href: '/tools/horse-size-for-rider', category: 'Tools' },
           { title: 'Guides Hub', href: '/guides', category: 'Guides' },
           { title: 'Dressage', href: '/disciplines/dressage' },
           { title: 'Show Jumping', href: '/disciplines/show-jumping' },
           { title: 'Saddle Pads', href: '/tack/saddle-pads' },
         ]}
+        heroHop={
+          <>
+            <HopDisclosure siteId="horses-com" href="/go/amazon-brand/horse+saddle+pad?s=guides-saddle-fit-basics" />
+            <div className="mb-4" data-primary-hop="true">
+              <a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" data-shop-placement="hero" href="/go/amazon-brand/horse+saddle+pad?s=guides-saddle-fit-basics">Browse horse saddle pads on Amazon →</a>
+            </div>
+          </>
+        }
         hero={{
           title: 'Saddle Fit Basics — A 12-Point Framework',
           subtitle:
@@ -93,6 +104,8 @@ export default function SaddleFitBasicsPage() {
           <RelatedLinks
             title="Related Reading"
             links={[
+              { label: 'Horse Height Converter', href: '/tools/horse-height-converter' },
+              { label: 'Horse Size for Rider', href: '/tools/horse-size-for-rider' },
               { label: 'Best Winter Blankets', href: '/reviews/best-winter-horse-blankets' },
               { label: 'Quarter Horse Guide', href: '/breeds/quarter-horse' },
               { label: 'Equine Ulcers', href: '/health/equine-ulcers' },
@@ -112,6 +125,7 @@ export default function SaddleFitBasicsPage() {
 
           <h2 id="why">Why Saddle Fit Changes</h2>
           <p>Owners are often told to have a saddle fitted to a horse and treat the result as permanent. The horse's back does not cooperate with this view. A working horse's topline gains and loses muscle on a timescale of weeks; the topline of a horse coming back into work after winter turnout looks measurably different from the same horse at the end of a competition season. A saddle that fit at the start of the season often fits poorly six months later, and a saddle that fits a fit horse in July fits poorly the same horse in February.</p>
+          <p>Fit also depends on the horse&apos;s height and the rider&apos;s size. The <Link href="/tools/horse-height-converter">horse height converter</Link> turns hands into inches, and the <Link href="/tools/horse-size-for-rider">horse size for rider</Link> tool checks whether the horse&apos;s height is in a common range for the rider before you judge the saddle.</p>
 
           <p>The other ongoing change is in the saddle itself. Wool flocking compresses asymmetrically based on use, gradually shortening on the heavier side and producing tilts that the rider compensates for unconsciously. Foam panels do not compress the same way but harden over years. Trees lose torsional stability with age. The Society of Master Saddlers (SMS, UK) recommends saddle-fit reassessment at least every 6 months for a working horse and after any significant change in body condition; the Master Saddlers Association (MSA, US) and the German Pferdesportverband make similar recommendations.</p>
 
@@ -153,7 +167,7 @@ export default function SaddleFitBasicsPage() {
           <p>The underside of the panels has a curvature called rocker. The rocker should follow the curvature of the horse's back from front to rear. A flat-rockered saddle on a curved back will bridge (point 2). A heavily-rockered saddle on a flat-backed horse will rock or perch on the middle of the panel. Rocker is panel-flocking-correctable to a limited extent; gross mismatches require a different saddle.</p>
 
           <h3>11. Sweat-pattern reading</h3>
-          <p>After 20–30 minutes of work in trot and canter, remove the saddle and read the sweat pattern on the horse's back and on the underside of the saddle pad. Read all three surfaces — back, pad, and panel undersides. Acceptable: even, full coverage across the whole bearing area. Unacceptable: dry patches in the middle of the panel (indicates a bridging gap with no contact, no friction, no sweat), dry patches at the front (indicates pommel contact pinching off blood flow), dry patches at the back of the panel (indicates lifting or a back-tilted balance). White hair growing in over a previously dark area, or visible muscle atrophy where the panels sit, is documentation of months-long mismatch.</p>
+          <p>After 20–30 minutes of work in trot and canter, remove the saddle and read the sweat pattern on the horse's back and on the underside of the saddle pad. Read all three surfaces — back, pad, and panel undersides. Acceptable: even, full coverage across the whole bearing area. Unacceptable: dry patches in the middle of the panel (indicates a bridging gap with no contact, no friction, no sweat), dry patches at the front (indicates pommel contact pinching off blood flow), dry patches at the back of the panel (indicates lifting or a back-tilted balance). White hair growing in over a previously dark area, or visible muscle atrophy where the panels sit, is documentation of months-long mismatch. Pads whose sweat pattern you are reading are compared in the <a href="/tack/saddle-pads" className="text-brand-primary underline">saddle pad guide</a>.</p>
 
           <h3>12. Dynamic fit</h3>
           <p>Watch the saddle from the ground while the rider works the horse in walk, trot, and canter. The saddle should sit steady — not slide forward (a sign of too-wide tree or too-flat rocker), not slide backward (a sign of too-narrow tree or insufficient billet engagement), not rock side-to-side (a sign of asymmetric flocking or wither contact). Have the rider drop the stirrups and ride a sitting trot; a saddle whose seat tilts or whose panels lift unevenly under the rider's weight is failing dynamically.</p>
@@ -207,16 +221,15 @@ export default function SaddleFitBasicsPage() {
 
           <h2 id="picks">Pad and Tack Picks</h2>
           <p>
-            Two items commonly used by horse owners between professional fittings. These are <strong>not</strong> a substitute for a professional fit assessment — the framework above and the references below make clear that pads cannot correct structural fit problems. They are standard tack used under a correctly fitting saddle. These are not treatments for back pain, lameness, or girthiness; new dry patches, protective tension, or new behavioral problems under saddle belong with a qualified saddle fitter or veterinarian, not a thicker pad. This is a documented-spec comparison drawing on widely-stocked products in US equestrian retail; this page does not claim hands-on testing.
+            Two items commonly used by horse owners between professional fittings. These are <strong>not</strong> a substitute for a professional fit assessment — the framework above and the references below make clear that pads cannot correct structural fit problems. They are standard tack used under a correctly fitting saddle. These are not treatments for back pain, lameness, or girthiness; new dry patches, protective tension, or new behavioral problems under saddle belong with a qualified saddle fitter or veterinarian, not a thicker pad.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
-          {/* Money path — live amazon-brand search hops (saddle-fit kit).
-              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-              Category searches only — everyday physical supplies matching
+          {/* Shop note — live amazon-brand search buttons (saddle-fit kit).
+              ShopCtas hides empty Chewy; never href="#" or an empty link.
+              Amazon searches only — everyday physical supplies matching
               on-page pad / half-pad / shim / girth-or-cinch copy, not
-              wither pads, measuring tapes, saddles, or medication hops.
+              wither pads, measuring tapes, saddles, or medication buttons.
               Wither pads and measuring tapes are not named on this page. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
@@ -243,13 +256,11 @@ export default function SaddleFitBasicsPage() {
           </div>
           </div>
 
-          <ScoreMethodology />
-          <ReviewCard
+          <ReviewCard quietUntilTag
             id="mattes-sheepskin-half-pad"
             badge="Half-Pad"
             name="Mattes Sheepskin Half-Pad (Correction-Pocket Style)"
             subtitle="Cushioning + correction-pocket shims for minor asymmetries"
-            score={8.6}
             winner
             description={
               <p>The reference sheepskin half-pad in international saddle-fitting practice. Sheepskin distributes pressure under a correctly fitting saddle and adds a thin cushioning layer between the saddle panels and the horse's back. The "correction" variant has front and rear pockets that accept thin shims — useful for the minor asymmetries a qualified fitter has identified, NOT for forcing fit on a structurally wrong saddle. The article above is explicit: pads are a between-fitting tool, not a fix.</p>
@@ -262,20 +273,20 @@ export default function SaddleFitBasicsPage() {
             ]}
             pros={['Standard correction-pad in qualified-fitter practice', 'Sheepskin pressure distribution', 'Shimmable when a fitter has identified minor asymmetry', 'Long product life if washed correctly']}
             cons={['Premium price', 'Cannot correct structural fit problems — saddle work is the fix', 'Sheepskin care is more involved than a synthetic pad']}
-            price="$180–350"
-            ctaText="Find Mattes sheepskin half-pads"
+            price="see current price"
+            priceNote="dated 2026-05-31."
+            ctaText="Find Mattes sheepskin half-pads on SmartPak"
             ctaHref="/go/smartpak/mattes-sheepskin-half-pad?s=guides-saddle-fit-basics"
             ctaAffiliateProgram="smartpak"
             ctaAffiliateProduct="mattes-sheepskin-half-pad"
           />
-          <ReviewCard
+          <ReviewCard quietUntilTag
             id="all-purpose-saddle-pad"
             badge="Daily Pad"
             name="Contoured All-Purpose Saddle Pad"
             subtitle="Standard daily-use saddle pad — contoured to the horse's back"
-            score={8.0}
             description={
-              <p>The everyday saddle pad sitting between a correctly fitting saddle and the horse — contoured (cut-back at the wither, shaped to the spine) so it does not bridge the gullet or press into the withers. Brand choice matters less than getting a contoured shape that does not flatten under the saddle and a wickable lining that does not trap heat. Toklat, ECP, Roma, and several mid-tier brands cover this category at the $30–80 price point.</p>
+              <p>The everyday saddle pad sitting between a correctly fitting saddle and the horse — contoured (cut-back at the wither, shaped to the spine) so it does not bridge the gullet or press into the withers. Brand choice matters less than getting a contoured shape that does not flatten under the saddle and a wickable lining that does not trap heat. Toklat, ECP, Roma, and several mid-tier brands cover this category at the see current price price point.</p>
             }
             specs={[
               { label: 'Shape', value: 'Contoured (cut-back wither)', highlight: 'good' },
@@ -285,13 +296,15 @@ export default function SaddleFitBasicsPage() {
             ]}
             pros={['Standard daily tack', 'Cheap relative to other riding gear', 'Multiple-discipline shapes available', 'Washable']}
             cons={['Square (non-contoured) pads bridge the wither under most saddles — avoid', 'Cheap fleece linings pill and lose wickability after a season']}
-            price="$30–80"
-            ctaText="Find contoured saddle pads"
+            price="see current price"
+            priceNote="dated 2026-05-31."
+            ctaText="Find contoured saddle pads on SmartPak"
             ctaHref="/go/smartpak/contoured-all-purpose-pad?s=guides-saddle-fit-basics"
             ctaAffiliateProgram="smartpak"
             ctaAffiliateProduct="contoured-all-purpose-pad"
           />
 
+          <p>Sheepskin and quilted pads are compared in the <Link href="/reviews/quilted-vs-sheepskin-pad-guide">quilted versus sheepskin pad guide</Link>.</p>
           <h2 id="references">References</h2>
           <ol className="text-sm text-brand-text-mid">
             <li>Society of Master Saddlers. &ldquo;Saddle Fitting — A Guide for Riders and Owners,&rdquo; current edition. mastersaddlers.co.uk.</li>

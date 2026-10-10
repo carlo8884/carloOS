@@ -1,9 +1,14 @@
 import type { Metadata } from 'next'
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import Link from 'next/link'
-import { AffiliateDisclosure, ArticleLayout, ComparisonFoot, FAQAccordion, RelatedLinks, TableShopLink, buildArticleSchema, buildFAQSchema, buildMetadata, combineSchemas } from '@carloOS/ui'
+import { ArticleLayout, BelowFoldPhoto, ComparisonFoot, FAQAccordion, RelatedLinks, TableShopLink, buildArticleSchema, buildFAQSchema, buildMetadata, combineSchemas, PrimaryHop, ArticleSourcesList, LastUpdated, EmailCapture } from '@carloOS/ui'
 
 const PATH = '/reviews/november-december-gift-guide'
 const SOURCE = 'reviews-november-december-gift-guide'
+
+// Request-time env, same as the insurance comparison. A set partner tag
+// renders the quote link; an unset tag stays a disabled button.
+export const dynamic = 'force-dynamic'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'vets-co',
@@ -31,11 +36,11 @@ const FAQS = [
   },
   {
     question: 'Which card prints the lower monthly band?',
-    answer: 'The telehealth page prints AskVet at $25–35 a month for unlimited chat. The insurance review prints Healthy Paws at $40–85 a month, Embrace at $45–95 a month plus a wellness add-on, and Trupanion at $65–120 a month.',
+    answer: 'AskVet, Healthy Paws, Embrace, and Trupanion: see the carrier\'s current terms. Single visits start at $102.',
   },
   {
     question: 'What about a holiday emergency visit?',
-    answer: 'The holiday emergency page is the one that explains why a holiday visit can cost more. This page does not replace that explanation, and none of these hops is emergency care.',
+    answer: 'The holiday emergency page is the one that explains why a holiday visit can cost more. This page does not replace that explanation, and none of these buttons is emergency care.',
   },
 ]
 
@@ -48,12 +53,20 @@ export default function NovemberDecemberGiftGuidePage() {
       schema={combineSchemas(schema, faqSchema)}
       hero={{
         title: 'November and December pet care costs',
-        subtitle: 'These are not toys. The bands are the ones already printed on the insurance review and the telehealth page. A band is not a quote.',
         category: 'Buyer guide',
         authorName: 'Vets.co Editorial',
         publishedAt: 'October 2026',
         readTime: '7 min',
       }}
+      heroHop={
+        <>
+          <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">Trupanion is the insurance name to open for an accident-and-illness policy that pays the clinic at checkout.</p>
+          <div data-fold="offer">
+          <PrimaryHop href="/go/trupanion/home?s=reviews-november-december-gift-guide" label="Get a Trupanion quote" />
+          <HopDisclosure tone="on-dark" siteId="vets-co" href="/go/trupanion/home?s=reviews-november-december-gift-guide" />
+        </div>
+        </>
+      }
       breadcrumbs={[
         { name: 'Home', href: '/' },
         { name: 'Reviews', href: '/reviews' },
@@ -70,18 +83,18 @@ export default function NovemberDecemberGiftGuidePage() {
           ]}
         />
       }
-      priceAsOf="2026-10-04"
+      priceAsOf="2026-10-07"
     >
       <div className="carloOS-article">
-        <p>People ask what to buy a pet in November and December. The reviews on this site are not toy reviews. They price insurance and remote visits. The <Link href="/reviews">reviews hub</Link> is where those cards live. This page groups the printed bands so a reader can see a monthly chat fee next to a monthly premium and a per-visit video fee. It does not enroll anyone, and it does not turn a band into a quote.</p>
+          <LastUpdated date="2026-10-10" />
+        <p>The costs to plan in November and December are the insurance and visit bands already printed here. The <Link href="/reviews">reviews hub</Link> is where those cards live. This page groups the printed bands so a reader can see a monthly chat fee next to a monthly premium and a per-visit video fee. It does not enroll anyone, and it does not turn a band into a quote.</p>
         <p>Holiday leftovers and holiday emergency bills already have their own pages. Fatty leftovers stay on the <Link href="/reviews/holiday-leftovers-low-fat-guide">leftovers guide</Link>. Why a holiday emergency visit costs more stays on the <Link href="/reviews/holiday-emergency-visit-guide">emergency-visit guide</Link>. None of the links below is a substitute for an in-person emergency.</p>
         <h2>Printed monthly bands</h2>
-        <p>The telehealth page prints AskVet at $25–35 a month for unlimited chat. The insurance review prints Healthy Paws at $40–85 a month, Embrace at $45–95 a month plus a wellness add-on, and Trupanion at $65–120 a month. Those are the bands on the cards. Your premium depends on the pet, the deductible, and the zip code. The quote button is how that number gets made. This page does not guess it.</p>
+        <p>AskVet, Healthy Paws, Embrace, and Trupanion do not get a flat monthly figure on this page. See the carrier&apos;s current terms. A quote still depends on the pet and the zip code.</p>
         <h2>Printed per-visit band</h2>
-        <p>The telehealth page prints Vetster at $50–100 per consultation, with no monthly fee on that card. That is a different shape of spending from a monthly premium. The same page prints Chewy Connect as included with Chewy+ at $15–25 a month. This page does not add a shop link for Chewy Connect. That hop stays off until a Chewy tag is set, which is the same rule as the telehealth card.</p>
+        <p>Single visits start at $102. Plus is $12/month, billed annually. The licensed-vet video visit is $49.99.</p>
         <h2>Who should open which printed band</h2>
         <p>Open the AskVet card when the question is a chat subscription. Open Vetster when the question is a video visit paid per consult. Open Healthy Paws, Embrace, or Trupanion when the question is an accident-and-illness policy. Read the waiting period and the deductible on the insurance review before you treat any of those bands as the price you will pay.</p>
-        <AffiliateDisclosure variant="inline" siteId="vets-co" />
         <div className="overflow-x-auto max-w-full min-w-0">
           <table className="w-full text-sm border-collapse table-fixed sm:table-auto min-w-0 sm:min-w-[36rem] [&_th]:break-words [&_td]:break-words">
             <thead>
@@ -93,36 +106,60 @@ export default function NovemberDecemberGiftGuidePage() {
             </thead>
             <tbody>
               <tr className="border-b border-brand-border">
-                <td className="p-3">$25–35 a month</td>
+                <td className="p-3">See the carrier&apos;s current terms</td>
                 <td className="p-3 font-bold">AskVet<TableShopLink href={`/go/askvet/telehealth?s=${SOURCE}`} product="AskVet" /></td>
                 <td className="p-3"><Link href="/telehealth">Telehealth page</Link></td>
               </tr>
               <tr className="border-b border-brand-border">
-                <td className="p-3">$40–85 a month</td>
+                <td className="p-3">See the carrier&apos;s current terms</td>
                 <td className="p-3 font-bold">Healthy Paws<TableShopLink href={`/go/healthy-paws/home?s=${SOURCE}`} product="Healthy Paws" /></td>
                 <td className="p-3"><Link href="/reviews/best-pet-insurance">Insurance review</Link></td>
               </tr>
               <tr className="border-b border-brand-border">
-                <td className="p-3">$45–95 a month plus a wellness add-on</td>
+                <td className="p-3">See the carrier&apos;s current terms</td>
                 <td className="p-3 font-bold">Embrace<TableShopLink href={`/go/embrace/home?s=${SOURCE}`} product="Embrace" /></td>
                 <td className="p-3"><Link href="/reviews/best-pet-insurance">Insurance review</Link></td>
               </tr>
               <tr className="border-b border-brand-border">
-                <td className="p-3">$50–100 per consultation</td>
+                <td className="p-3">Single visits start at $102</td>
                 <td className="p-3 font-bold">Vetster<TableShopLink href={`/go/vetster/telehealth?s=${SOURCE}`} product="Vetster" /></td>
                 <td className="p-3"><Link href="/telehealth">Telehealth page</Link></td>
               </tr>
               <tr className="border-b border-brand-border">
-                <td className="p-3">$65–120 a month</td>
+                <td className="p-3">See the carrier&apos;s current terms</td>
                 <td className="p-3 font-bold">Trupanion<TableShopLink href={`/go/trupanion/home?s=${SOURCE}`} product="Trupanion" /></td>
                 <td className="p-3"><Link href="/reviews/best-pet-insurance">Insurance review</Link></td>
               </tr>
             </tbody>
           </table>
         </div>
-        <ComparisonFoot updated="2026-10-05" />
+        <ComparisonFoot updated="2026-10-10" />
+        <EmailCapture
+          variant="inline"
+          siteId="vets-co"
+          addressOnly
+          title="Shopping checklist"
+          ctaText="Copy checklist"
+          source="reviews-november-december-gift-guide"
+          checklist={[
+            "Open the AskVet card when the question is a chat subscription.",
+            "Open Vetster when the question is a video visit paid per consult.",
+            "Open Healthy Paws, Embrace, or Trupanion when the question is an accident-and-illness policy.",
+            "Read the waiting period and the deductible on the insurance review before you treat any of those bands as the price you will pay.",
+            "A quote still depends on the pet and the zip code.",
+          ]}
+        />
         <h2>Questions</h2>
-        <FAQAccordion items={FAQS} />
+        <FAQAccordion items={FAQS} includeSchema={false} />
+        <BelowFoldPhoto siteId="vets-co" />
+                <ArticleSourcesList
+            title="Sources"
+            sources={[
+            { label: "Trupanion", url: "https://www.trupanion.com/", publisher: "Trupanion" },
+            { label: "Healthy Paws", url: "https://www.healthypawspetinsurance.com/", publisher: "Healthy Paws" },
+            { label: "Embrace", url: "https://www.embracepetinsurance.com/", publisher: "Embrace" },
+            ]}
+          />
       </div>
     </ArticleLayout>
   )

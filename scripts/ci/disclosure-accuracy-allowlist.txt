@@ -1,0 +1,15 @@
+# Pages on the five earning sites that still render <AffiliateDisclosure>
+# or a hardcoded commission sentence outside disclosure, about, and legal.
+# This list is frozen. A new page that matches fails CI. Drop a line when
+# that page is converted to HopDisclosure and the sentence is removed.
+#
+# Parked (do not convert to shrink this list): aquarium lighting reviews
+# best-aquarium-lighting, hygger-vs-fluval-light-guide, winter-photoperiod-guide.
+# Homepages stay listed because homepage rewrites are out of scope.
+apps/dog-com/src/app/llms.txt/route.ts
+apps/ferret-com/src/app/llms.txt/route.ts
+apps/fish-com/src/app/llms.txt/route.ts
+apps/fish-com/src/app/reviews/best-aquarium-lighting/page.tsx
+apps/fish-com/src/app/reviews/hygger-vs-fluval-light-guide/page.tsx
+apps/fish-com/src/app/reviews/winter-photoperiod-guide/page.tsx
+apps/horses-com/src/app/llms.txt/route.ts

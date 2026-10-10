@@ -25,8 +25,9 @@ function fail(status: number, error: string) {
 
 /**
  * Shared inquire handler for the five earning sites.
- * No inbox, or a rejected send, returns ok:false. ok:true only after the
- * upstream accepts the note (or the hidden honeypot trips).
+ * No inbox returns ok:false with HTTP 200 so a visitor never sees 503.
+ * A rejected send returns ok:false. ok:true only after the upstream
+ * accepts the note (or the hidden honeypot trips).
  */
 export async function handleInquirePost(
   req: Request,
@@ -42,8 +43,12 @@ export async function handleInquirePost(
   const env = opts.env ?? process.env
   const fetchImpl = opts.fetchImpl ?? fetch
   const inbox = env.INQUIRE_EMAIL || env.NEXT_PUBLIC_INQUIRE_EMAIL
-  if (!inquireCaptureEnabled(opts.siteHost, env)) return fail(503, 'unconfigured')
-  if (!inbox) return fail(503, 'unconfigured')
+  if (!inquireCaptureEnabled(opts.siteHost, env) || !inbox) {
+    return NextResponse.json(
+      { ok: false, error: 'unconfigured', fallback: INQUIRE_FALLBACK_HREF },
+      { status: 200 },
+    )
+  }
 
   const body = await req.json().catch(() => null)
   if (!body || typeof body !== 'object') return fail(400, 'bad-request')

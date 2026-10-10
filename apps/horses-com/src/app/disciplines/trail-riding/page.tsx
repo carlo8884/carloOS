@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import {
   buildMetadata,
   ArticleLayout,
@@ -10,7 +11,6 @@ import {
   ArticleByline,
   DropCap,
   CalloutBox,
-  AffiliateDisclosure,
   ShopCtas,
 } from '@carloOS/ui'
 import {
@@ -129,7 +129,7 @@ export default function TrailRidingPage() {
         ]}
         sidebar={<>
           <TableOfContents items={[
-            { label: 'TL;DR', href: '#tldr' },
+            { label: '', href: '#tldr' },
             { label: 'Recreational vs Competitive', href: '#types' },
             { label: 'NATRC Competitive Trail', href: '#natrc' },
             { label: 'AERC Endurance', href: '#aerc' },
@@ -163,8 +163,7 @@ export default function TrailRidingPage() {
             updatedAt="2026-05-28"
           />
 
-          <h2 id="tldr">TL;DR</h2>
-          <ul>
+                    <ul>
             <li><strong>What it is:</strong> riding a horse on a trail, recreationally or in competition. The competitive variants are NATRC Competitive Trail (judged ride) and AERC/FEI Endurance (timed race up to 100 miles).</li>
             <li><strong>Governing bodies:</strong> none for recreational trail; NATRC for Competitive Trail (founded 1961); AERC for endurance (founded 1972); FEI Endurance for international.</li>
             <li><strong>Key gear:</strong> trail saddle, breast collar, saddlebags, water, helmet, ID, basic first-aid kit, cell phone.</li>
@@ -277,8 +276,14 @@ export default function TrailRidingPage() {
           <h2 id="safety">Safety</h2>
 
           <CalloutBox variant="warning" title="Helmets are non-negotiable">
-            <p>An ASTM/SEI-certified helmet is mandatory on any ride at any speed. AERC and NATRC require helmets on all competitive rides. Trail riding takes place in unpredictable terrain with footing variations, wildlife encounters, and other trail users — falls happen even on calm horses. Helmet use on recreational trail rides is the single most-impactful personal safety decision a trail rider can make.</p>
+            <p>An ASTM/SEI-certified helmet is mandatory on any ride at any speed. AERC and NATRC require helmets on all competitive rides. Trail riding takes place in unpredictable terrain with footing variations, wildlife encounters, and other trail users — falls happen even on calm horses. Helmet use on recreational trail rides is the single most-impactful personal safety decision a trail rider can make. <a href="/tack/helmet-guide">The helmet guide</a> compares the ASTM/SEI helmets this ride requires.</p>
           </CalloutBox>
+
+          <HopDisclosure siteId="horses-com" href="/go/amazon-brand/ASTM+SEI+horse+riding+helmet?s=discipline-trail-riding" />
+          <ShopCtas
+            amazonHref="/go/amazon-brand/ASTM+SEI+horse+riding+helmet?s=discipline-trail-riding"
+            amazonLabel="Search Amazon for ASTM/SEI riding helmets"
+          />
 
           <h3>What to carry</h3>
           <ul>
@@ -325,7 +330,7 @@ export default function TrailRidingPage() {
           <p>For recreational and competitive trail, soundness and a calm temperament matter more than breed identity. A sound, well-conditioned horse of any breed can be a good trail horse.</p>
 
           <h2 id="faq">Frequently Asked Questions</h2>
-          <FAQAccordion items={FAQS} />
+          <FAQAccordion items={FAQS} includeSchema={false} />
 
           <h2 id="references">References</h2>
           <ol className="text-sm text-brand-text-mid">
@@ -343,31 +348,17 @@ export default function TrailRidingPage() {
             <li>NATRC affiliated regional clubs. natrc.org/find-a-ride.</li>
           </ol>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
-
-          {/* Money path — live amazon-brand search hops
-              (laminated horse trail-etiquette chart /
-              horse stall-door NATRC pace card /
-              equine AERC endurance handbook).
-              No existing product hop to keep.
-              Educational barn searches only; no Rx /
-              vaccine / flea / heartworm / nsaid hops
-              and no Easyboot kit hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs racing-hub /
-              salt-and-electrolytes hops.
-              Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop related supplies
+              Next step
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
-            <div className="flex flex-col gap-3">
-              <ShopCtas
-                amazonHref="/go/amazon-brand/horse+hoof+pick?s=discipline-trail-riding"
-                amazonLabel="Shop on Amazon"
-              />
-          </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Barefoot, boots, and shoes are a farrier decision. Daily picking lives on the hoof-care guide. This page does not shop a hoof pick or a boot brand.</p>
+            <Link
+              href="/care/hoof-care-basics"
+              className="inline-block bg-brand-primary text-white font-semibold px-5 py-2.5 rounded-md no-underline hover:bg-brand-primary-dark"
+            >
+              Read hoof-care basics →
+            </Link>
           </div>
         </div>
       </ArticleLayout>

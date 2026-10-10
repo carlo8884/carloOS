@@ -1,4 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import {
   buildMetadata,
   ArticleLayout,
@@ -9,8 +11,6 @@ import {
   ArticleByline,
   DropCap,
   ReviewCard,
-  ScoreMethodology,
-  AffiliateDisclosure,
   ArticleSourcesList,
   CrossPortfolioCard,
 } from '@carloOS/ui'
@@ -93,6 +93,14 @@ export default function FerretDIYEnrichmentPage() {
       <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="ferret-com"
+        heroHop={
+          <>
+            <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/snuffle+mat+small+pet?s=behavior-diy-enrichment" />
+            <div className="mb-4" data-primary-hop="true">
+              <a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" data-shop-placement="hero" href="/go/amazon-brand/snuffle+mat+small+pet?s=behavior-diy-enrichment">Browse a small-pet snuffle mat on Amazon →</a>
+            </div>
+          </>
+        }
         hero={{
           title: 'DIY Ferret Enrichment Toys — Big Fun, Tiny Budget',
           subtitle:
@@ -297,44 +305,46 @@ export default function FerretDIYEnrichmentPage() {
             guide</a>.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
 
           <h2 id="picks">Ready-Made Picks</h2>
           <p>
-            Most enrichment is best built at home, but the two items below are worth buying: ferret-specific tunnels that fit the body diameter correctly, and a snuffle mat for foraging. This is a documented-spec comparison based on published product details and keeper community use patterns; this page does not claim hands-on testing.
+            Most enrichment is best built at home, but the two items below are worth buying: ferret-specific tunnels that fit the body diameter correctly, and a snuffle mat for foraging.
           </p>
-          <ScoreMethodology />
-          <ReviewCard
+          <p className="mb-4 text-sm font-semibold leading-snug">
+            <Link href="/care/exercise-and-enrichment" className="inline-block max-w-full whitespace-normal text-brand-primary underline underline-offset-2">
+              Pair these toys with an out-of-cage routine →
+            </Link>
+          </p>
+          <ReviewCard quietUntilTag
             id="marshall-pop-n-play-diy"
             badge="Tunnel Set"
-            name="Marshall Pop-N-Play Tunnel Set"
-            subtitle="Pop-up fabric tunnel set sized for ferret bodies — the one bought item most worth having"
-            score={8.6}
+            name="Marshall play tunnel"
+            subtitle="Check the current listing for construction, openings, and storage"
             winner
             description={
-              <p>DIY tunnels (dryer hose, cardboard tubes) are genuinely good, but the Marshall set earns its place because the fabric diameter is designed for ferret bodies, it chains to itself for longer circuits, and it folds flat when not in use. A length of dryer hose and a cardboard tunnel box are excellent supplements; the Pop-N-Play is the better primary tunnel for consistent daily use.</p>
+              <p>Marshall's Pop-N-Play tunnel product page no longer resolves. This button opens Marshall's current play-tunnel search. DIY tunnels (dryer hose, cardboard tubes) are a separate project. The current Ele-Fun Nap & Play listing is a plush tunnel with several openings, and that page says it is machine washable. It does not print a chain, a wire frame, or flat storage. Other results in this search can differ. Check the listing.</p>
             }
             specs={[
-              { label: 'Construction', value: 'Pop-up fabric with internal wire' },
-              { label: 'Sizing', value: 'Ferret-appropriate diameter', highlight: 'good' },
-              { label: 'Connectivity', value: 'Multi-tunnel chain' },
-              { label: 'Washable', value: 'Yes', highlight: 'good' },
-              { label: 'Storage', value: 'Folds flat' },
+              { label: 'Construction', value: 'Check the current listing' },
+              { label: 'Sizing', value: 'Check the current listing' },
+              { label: 'Connectivity', value: 'Check the current listing' },
+              { label: 'Washable', value: 'Check the current listing' },
+              { label: 'Storage', value: 'Check the current listing' },
             ]}
-            pros={['Correct ferret body diameter', 'Chainable for longer courses', 'Machine washable', 'Compact storage']}
-            cons={['Fabric wears in heavy-chewer households — inspect the internal wire periodically']}
-            price="$15–30"
-            ctaText="Find Marshall Pop-N-Play tunnels"
-            ctaHref="/go/marshall/pop-n-play-tunnel?s=behavior-diy-enrichment"
+            pros={['Opens the current Marshall play-tunnel search', 'Check the diameter on the listing']}
+            cons={['Check the listing for any internal wire before you buy']}
+            price="see current price"
+            priceNote="dated 2026-06-04."
+            ctaText="Find Marshall play tunnels"
+            ctaHref="/go/marshall/ferret+play+tunnel?s=behavior-diy-enrichment"
             ctaAffiliateProgram="marshall"
-            ctaAffiliateProduct="pop-n-play-tunnel"
+            ctaAffiliateProduct="ferret+play+tunnel"
           />
-          <ReviewCard
+          <ReviewCard quietUntilTag
             id="snuffle-mat-ferret"
             badge="Foraging"
             name="Snuffle Mat (Dog/Small-Pet)"
             subtitle="Rubber-backed fabric mat with pockets for hiding treats — nose-work puzzle"
-            score={7.8}
             description={
               <p>A snuffle mat — the kind sold for dogs — works well for ferrets as a foraging puzzle. Tuck small, high-protein treat pieces into the fabric pockets; the ferret roots them out by scent. Mental exercise in five minutes. Avoid mats with loose rubber loops or stringy fabric the ferret can chew off and swallow. Look for a mat with dense, firmly attached fabric strips and a solid rubber base.</p>
             }
@@ -346,8 +356,9 @@ export default function FerretDIYEnrichmentPage() {
             ]}
             pros={['Mental enrichment in minutes', 'Works with treats already on hand', 'Compact and portable', 'Easy to wash']}
             cons={['Loose-loop mats can shed chewable pieces — inspect before each use', 'Ferrets finish the treats quickly; limited session length']}
-            price="$10–20"
-            ctaText="Find snuffle mats for ferrets"
+            price="see current price"
+            priceNote="dated 2026-06-04."
+            ctaText="Find snuffle mats for ferrets on Amazon"
             ctaHref="/go/amazon-brand/snuffle+mat+small+pet?s=behavior-diy-enrichment"
             ctaAffiliateProgram="amazon-brand"
             ctaAffiliateProduct="snuffle+mat+small+pet"

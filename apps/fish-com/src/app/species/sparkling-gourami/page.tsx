@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { StockImage, buildMetadata, ArticleLayout, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
+import { ShopCtas, StockImage, buildMetadata, ArticleLayout, RelatedLinks, CrossPortfolioCard , ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema, FAQAccordion, SchemaScript, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 
@@ -39,9 +40,9 @@ const FAQS = [
   {
     question: 'What water conditions do sparkling gouramis need?',
     answer:
-      'Soft, slightly acidic, warm water best mimics the still, vegetation-choked ditches and rice paddies they inhabit: around 76–82°F and pH 6.0–7.5. Tannins from driftwood or Indian almond leaves are appreciated. Because the fish comes from near-stagnant water, strong filter current is stressful — use gentle flow such as a sponge filter.',
+      'Soft, slightly acidic, warm water best mimics the still, vegetation-choked ditches and rice paddies they inhabit: pH 6.0–7.5. FishBase lists Trichopsis pumila at 25–28°C, which is 77–83°F (https://www.fishbase.se/summary/Trichopsis-pumila.html). Tannins from driftwood or Indian almond leaves are appreciated. Because the fish comes from near-stagnant water, strong filter current is stressful — use gentle flow such as a sponge filter.',
     answerText:
-      'Soft, slightly acidic, warm water: about 76-82F and pH 6.0-7.5. Use gentle flow such as a sponge filter, since strong current stresses this still-water species.',
+      'Soft, slightly acidic, warm water: pH 6.0-7.5. FishBase lists Trichopsis pumila at 25–28°C, which is 77–83°F (https://www.fishbase.se/summary/Trichopsis-pumila.html). Use gentle flow such as a sponge filter, since strong current stresses this still-water species.',
   },
   {
     question: 'Why does my sparkling gourami gulp at the surface?',
@@ -66,9 +67,9 @@ export default function SparklingGouramiPage() {
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Quick Stats</div>
-          {[['Scientific name', 'Trichopsis pumila'], ['Adult size', '1.25–1.5 inches'], ['Temperature', '76–82°F'], ['pH', '6.0–7.5 (soft preferred)'], ['Tank size', '10 gallons'], ['Temperament', 'Peaceful, shy'], ['Lifespan', '4–5 years']].map(([k, v]) => (
+          {[['Scientific name', 'Trichopsis pumila'], ['Adult size', '1.25–1.5 inches'], ['Temperature', '77–83°F (https://www.fishbase.se/summary/Trichopsis-pumila.html)'], ['pH', '6.0–7.5 (soft preferred)'], ['Tank size', '10 gallons'], ['Temperament', 'Peaceful, shy'], ['Lifespan', '4–5 years']].map(([k, v]) => (
             <div key={k} className="flex justify-between py-1.5 border-b border-brand-border text-xs last:border-0">
-              <span className="text-brand-text-light">{k}</span><span className="font-bold text-brand-dark text-right max-w-[55%]">{v}</span>
+              <span className="text-brand-text-light">{k}</span><span className="font-bold text-brand-dark text-right max-w-[55%] break-all">{v}</span>
             </div>
           ))}
         </div>
@@ -99,12 +100,12 @@ export default function SparklingGouramiPage() {
         <p>Sparkling gouramis are bubble-nest builders, though some populations nest near the surface among plants and others build under broad leaves or in caves. The male tends the nest and guards the eggs and fry. Spawning is often preceded by especially intense croaking. Fry are tiny and require infusoria and other very fine first foods before graduating to baby brine shrimp. A species-only or heavily planted shrimp-safe tank gives the best fry survival.</p>
         <h2>Frequently Asked Questions</h2>
         <FAQAccordion items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answerText }))} includeSchema={false} allowMultiple />
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        <HopDisclosure siteId="fish-com" href="/go/amazon-brand/sparkling%20gourami%20nano%20tank%20setup?s=species-sparkling-gourami" />
           <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Sparkling Gourami — Tank Setup</div>
-          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse nano tanks, gentle filters, heaters, live plants, and food sized for sparkling gourami care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
+          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse nano tanks, gentle filters, heaters, live plants, and food sized for sparkling gourami care.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
-            <a href="/go/amazon-brand/sparkling%20gourami%20nano%20tank%20setup?s=species-sparkling-gourami" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop Sparkling Gourami Setup on Amazon →</a>
+            <ShopCtas amazonHref="/go/amazon-brand/sparkling%20gourami%20nano%20tank%20setup?s=species-sparkling-gourami" amazonLabel="Browse sparkling gourami nano tank setups on Amazon →" />
           </div>
         </div>
         <ArticleSourcesList sources={SOURCES} />

@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import {
   buildMetadata,
@@ -9,8 +10,6 @@ import {
   ArticleByline,
   DropCap,
   ReviewCard,
-  ScoreMethodology,
-  AffiliateDisclosure,
   CrossPortfolioCard,
   StockImage,
   ArticleSourcesList,
@@ -70,17 +69,16 @@ const articleSchema = buildArticleSchema({
   citation: SOURCES,
 })
 
-
 const FAQS = [
   {
     question: 'Is 4 hours of out-of-cage time really the minimum?',
     answer:
-      "Yes — that is the working floor across American Ferret Association owner education and the exotic-pet welfare literature. Six to eight hours is closer to ideal. Less than four hours is associated with cage stereotypies (bar biting, repetitive pacing), behavioural frustration, and a less well-adjusted adult ferret. The time does not have to be continuous; ferrets are crepuscular and respond well to morning and evening blocks.",
+      "Four hours is a planning figure on this page, not a fetched published standard. Six to eight hours is the same kind of planning note. Less than four hours is when this page treats the cage as the house and tells you to add playtime. The time does not have to be continuous; ferrets are crepuscular and morning and evening blocks both count.",
   },
   {
     question: 'Does environmental enrichment actually reduce adrenal disease risk?',
     answer:
-      "The evidence is suggestive but not proven. Some published case-control work in the exotic-pet literature has found lower adrenal-disease rates in ferrets housed with more enrichment and natural photoperiods, but the causal mechanism is uncertain and confounders (breeder source, neuter timing) are hard to control for. Treat it as a plausible secondary benefit of good husbandry, not a reliable preventive measure.",
+      "This page does not cite a case-control study or a rate. Enrichment and a natural light cycle are husbandry, not a proven prevention for adrenal disease. Breeder source and neuter timing are hard to separate from housing. Treat any disease benefit as unproven.",
   },
   {
     question: 'What is the single most dangerous thing in a ferret-proofed room?',
@@ -100,13 +98,12 @@ const FAQS = [
   {
     question: 'How much do enrichment supplies cost?',
     answer:
-      "The starter list — a tunnel or two, a dig box, a few rotated toys, a food puzzle — runs roughly $40-80. The ongoing cost is small because durable plastic and rubber toys last for years. The bigger cost is time: ferret-proofing a room is a 1-2 hour project per room, and supervising out-of-cage time is the major daily commitment.",
+      "The starter list — a tunnel or two, a dig box, a few rotated toys, a food puzzle — runs roughly see current price. The ongoing cost is small because durable plastic and rubber toys last for years. The bigger cost is time: ferret-proofing a room is a 1-2 hour project per room, and supervising out-of-cage time is the major daily commitment.",
   },
 ]
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
 const combined = combineSchemas(articleSchema, faqSchema)
-
 
 export default function FerretExerciseEnrichmentPage() {
   return (
@@ -115,6 +112,14 @@ export default function FerretExerciseEnrichmentPage() {
       <ArticleLayout
         siteId="ferret-com"
         contentType="care"
+        heroHop={
+          <>
+            <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/ferret+cage?s=exercise-and-enrichment" />
+            <div className="mb-4" data-primary-hop="true">
+              <a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" data-shop-placement="hero" href="/go/amazon-brand/ferret+cage?s=exercise-and-enrichment">Browse a ferret cage on Amazon →</a>
+            </div>
+          </>
+        }
         hero={{
           title: 'Ferret Exercise and Enrichment',
           subtitle:
@@ -157,7 +162,7 @@ export default function FerretExerciseEnrichmentPage() {
 
           </>
         }
-      
+
         relatedLinks={[
           { title: 'Ferret Care Hub', href: '/care' },
           { title: 'DIY Enrichment Toys', href: '/behavior/diy-enrichment-toys' },
@@ -188,8 +193,7 @@ export default function FerretExerciseEnrichmentPage() {
             the bedroom. The enriched room is the house.
           </DropCap>
 
-          <h2 id="tldr">TL;DR</h2>
-          <p>
+                    <p>
             A minimum of four hours of supervised out-of-cage time per day in
             a ferret-proofed space is the working floor across the AFA owner
             literature and the exotic-pet welfare references. Enrichment
@@ -199,7 +203,7 @@ export default function FerretExerciseEnrichmentPage() {
             soft rubber, gap-block at floor level, and toxic houseplants are
             the highest-risk items. Multi-ferret households need less
             human-supplied enrichment because much of the play happens
-            ferret-to-ferret.
+            ferret-to-ferret. <a href="/reviews/best-ferret-cage">The ferret cage guide</a> compares the cage those out-of-cage hours start from.
           </p>
 
           <h2 id="out-of-cage">Out-of-Cage Time — Non-Negotiable</h2>
@@ -213,12 +217,12 @@ export default function FerretExerciseEnrichmentPage() {
             released.
           </p>
           <p>
-            The standard minimum across the American Ferret Association
-            owner-education materials and the exotic-pet veterinary
-            welfare literature: <strong>4 hours of supervised out-of-cage
-            time per day in a ferret-proofed space</strong>. Six to eight
-            hours is closer to ideal. Less than four hours produces the
-            stereotypies above with high reliability.
+            The four-hour out-of-cage floor is a planning figure, not a
+            fetched published standard: <strong>4 hours of supervised
+            out-of-cage time per day in a ferret-proofed space</strong>.
+            Six to eight hours is the same kind of planning note. Less than
+            four hours is when this page says to add playtime rather than
+            treat the cage as the whole house.
           </p>
           <p>
             The time does not have to be continuous. Ferrets are crepuscular —
@@ -452,11 +456,10 @@ export default function FerretExerciseEnrichmentPage() {
             <p>
               The behavioural welfare framework used here draws on
               Quesenberry &amp; Carpenter, <em>Ferrets, Rabbits, and Rodents:
-              Clinical Medicine and Surgery</em> (Saunders/Elsevier), the
-              <em> Journal of Exotic Pet Medicine</em> behavioural literature,
-              and American Ferret Association (AFA) owner-education materials.
-              The four-hour out-of-cage minimum is the figure most consistently
-              cited across these sources.
+              Clinical Medicine and Surgery</em> (Saunders/Elsevier) and the
+              <em> Journal of Exotic Pet Medicine</em> behavioural literature.
+              The four-hour out-of-cage floor on this page is a planning figure.
+              It is not a fetched line from those books.
             </p>
           </CalloutBox>
 
@@ -473,57 +476,44 @@ export default function FerretExerciseEnrichmentPage() {
               <tbody>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 font-medium">Tunnel set (3-tunnel starter)</td>
-                  <td className="p-3">$15-30</td>
+                  <td className="p-3">see current price</td>
                   <td className="p-3">2-5 years</td>
                 </tr>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 font-medium">Dig box + fill</td>
-                  <td className="p-3">$10-20</td>
+                  <td className="p-3">see current price</td>
                   <td className="p-3">Tote: years; fill: rotate weekly</td>
                 </tr>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 font-medium">Ball pit (tote + balls)</td>
-                  <td className="p-3">$15-30</td>
+                  <td className="p-3">see current price</td>
                   <td className="p-3">Several years</td>
                 </tr>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 font-medium">Hard rubber toy assortment</td>
-                  <td className="p-3">$10-25</td>
+                  <td className="p-3">see current price</td>
                   <td className="p-3">Years</td>
                 </tr>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 font-medium">Snuffle mat / puzzle feeder</td>
-                  <td className="p-3">$8-20</td>
+                  <td className="p-3">see current price</td>
                   <td className="p-3">Years</td>
                 </tr>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 font-medium">Ferret-proofing supplies (foam board, hardware cloth)</td>
-                  <td className="p-3">$20-50 one-time</td>
+                  <td className="p-3">see current price one-time</td>
                   <td className="p-3">Indefinite</td>
                 </tr>
                 <tr>
                   <td className="p-3 font-medium">Total starter</td>
-                  <td className="p-3">~$80-175</td>
+                  <td className="p-3">see current price</td>
                   <td className="p-3">Most items last years</td>
                 </tr>
               </tbody>
             </table>
           </div>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated ferret four-hour-out-cage chart /
-              ferret fridge tunnel-circuit card /
-              mustelid enrichment-reference handbook).
-              Keep existing Marshall + Chewy review hops.
-              Educational kitchen searches only; no Rx /
-              vaccine / aging hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs care-hub /
-              digging / litter-training kitchen kits. Ferret
-              aging stays held.
-              Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
@@ -532,47 +522,45 @@ export default function FerretExerciseEnrichmentPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/ferret+cage?s=exercise-and-enrichment"
-                amazonLabel="Shop on Amazon"
+                amazonLabel="Browse ferret cages on Amazon →"
               />
           </div>
           </div>
 
           <h2 id="picks">Enrichment Picks</h2>
           <p>
-            Two starter purchases that anchor most ferret enrichment setups — a tunnel set and a dig box. This is a documented-spec comparison drawing on widely-stocked products and the durable-material constraints discussed above; this page does not claim hands-on testing.
+            Two starter purchases that anchor most ferret enrichment setups — a tunnel set and a dig box.
           </p>
-          <ScoreMethodology />
-          <ReviewCard
+          <ReviewCard quietUntilTag
             id="marshall-pop-n-play"
             badge="Tunnel Default"
-            name="Marshall Pop-N-Play Tunnel Set"
-            subtitle="Pop-up fabric tunnel system, ferret-sized, machine washable"
-            score={8.6}
+            name="Marshall play tunnel"
+            subtitle="Check the current listing for construction, openings, and storage"
             winner
             description={
-              <p>The reference ferret tunnel product in US pet retail. Pop-up fabric construction stores flat, sets up in seconds, and connects to itself for multi-tunnel circuits. Sized for ferret bodies (a tunnel that fits a small dog is too wide to be interesting to a ferret). Machine washable, which matters for the dust and dander that accumulates in any enrichment item that spends time on a floor.</p>
+              <p>Marshall's Pop-N-Play tunnel product page no longer resolves. This button opens Marshall's current play-tunnel search. The current Ele-Fun Nap & Play listing is a plush tunnel with several openings, and that page says it is machine washable. It does not print a chain, a wire frame, or flat storage. Other results in this search can differ. Check the listing.</p>
             }
             specs={[
-              { label: 'Construction', value: 'Pop-up fabric with internal wire' },
-              { label: 'Sizing', value: 'Ferret-appropriate diameter', highlight: 'good' },
-              { label: 'Connectivity', value: 'Multi-tunnel chain' },
-              { label: 'Washable', value: 'Yes', highlight: 'good' },
-              { label: 'Storage', value: 'Folds flat' },
+              { label: 'Construction', value: 'Check the current listing' },
+              { label: 'Sizing', value: 'Check the current listing' },
+              { label: 'Connectivity', value: 'Check the current listing' },
+              { label: 'Washable', value: 'Check the current listing' },
+              { label: 'Storage', value: 'Check the current listing' },
             ]}
-            pros={['Highest enrichment value per dollar in most ferret households', 'Pop-up + foldable for storage', 'Connects to itself for circuits', 'Machine washable']}
-            cons={['Fabric wears in heavy-chewer households (6–18 months for a chronic chewer)', 'Internal wire is a defect risk if exposed — inspect periodically']}
-            price="$15–30"
-            ctaText="Find Marshall Pop-N-Play tunnels"
-            ctaHref="/go/marshall/pop-n-play-tunnel?s=care-exercise-and-enrichment"
+            pros={['Opens the current Marshall play-tunnel search', 'Check whether the listing stores flat']}
+            cons={['Fabric can wear in a heavy-chewer household', 'Check the listing for any internal wire before you buy']}
+            price="see current price"
+            priceNote="dated 2026-05-31."
+            ctaText="Find Marshall play tunnels"
+            ctaHref="/go/marshall/ferret+play+tunnel?s=care-exercise-and-enrichment"
             ctaAffiliateProgram="marshall"
-            ctaAffiliateProduct="pop-n-play-tunnel"
+            ctaAffiliateProduct="ferret+play+tunnel"
           />
-          <ReviewCard
+          <ReviewCard quietUntilTag
             id="dig-box-supplies"
             badge="Dig Box"
             name="Storage-Tote Dig Box + Safe Fill"
             subtitle="Plastic tote plus washed river rocks, ferret-safe plastic balls, or rice"
-            score={8.0}
             description={
               <p>The dig drive is one of the strongest behavioural patterns in ferrets and is best satisfied in a designated container rather than a houseplant. Any clear plastic storage tote with a low-cut entry is the structural part; the fill is the variable — washed river rocks, ferret-safe plastic balls, or uncooked rice are all standard. Avoid soil, sand, or shredded paper (ingestion and inhalation risk). Rotate the fill weekly for novelty.</p>
             }
@@ -583,14 +571,16 @@ export default function FerretExerciseEnrichmentPage() {
             ]}
             pros={['Satisfies the strongest natural drive in a controlled way', 'Cheap and durable container', 'Fill is rotatable for novelty without buying new toys']}
             cons={['Fill spills are inevitable — keep near a vacuum-friendly surface', 'Rice fill needs replacement when it cracks down to dust']}
-            price="$10–25 starter"
-            ctaText="Find ferret-safe ball-pit fill"
-            ctaHref="/go/chewy-brand/small-pet-ball-pit-balls?s=care-exercise-and-enrichment"
+            price="see current price starter"
+            priceNote="dated 2026-05-31."
+            ctaText="Find ferret-safe ball-pit fill on Amazon"
+            ctaHref="/go/chewy-brand/small+pet+ball+pit+balls?s=care-exercise-and-enrichment"
             ctaAffiliateProgram="chewy-brand"
             ctaAffiliateProduct="dig-box-balls"
           />
 
           <h2 id="faq">FAQ</h2>
+          <p>Those figures are typical US ranges dated 2026-05-31.</p>
           <FAQAccordion items={FAQS} includeSchema={false} />
 
           <ArticleSourcesList sources={SOURCES} />

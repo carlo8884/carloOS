@@ -1,6 +1,7 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfContents, CrossPortfolioCard, StockImage, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfContents, CrossPortfolioCard, StockImage, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { BreedHealthCard } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
@@ -9,8 +10,7 @@ import { crossSiteHref } from '@carloOS/config'
 const SOURCES = [
   { label: 'Morris Animal Foundation: Golden Retriever Lifetime Study — Cancer and Longevity', url: 'https://www.morrisanimalfoundation.org/golden-retriever-lifetime-study', publisher: 'Morris Animal Foundation' },
   { label: 'Orthopedic Foundation for Animals (OFA): Golden Retriever Hip and Cardiac Statistics', url: 'https://www.ofa.org', publisher: 'OFA' },
-  { label: 'AVMA: Cancer Prevalence and Monitoring in Golden Retrievers', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/cancer-animals', publisher: 'AVMA' },
-  { label: 'Merck Veterinary Manual: Hemangiosarcoma in Dogs', url: 'https://www.merckvetmanual.com/integumentary-system/tumors-of-the-skin-and-soft-tissues-in-dogs-and-cats/hemangiosarcoma-in-dogs-and-cats', publisher: 'Merck Vet Manual' },
+  { label: 'AVMA: Cancer Prevalence and Monitoring in Golden Retrievers', url: 'https://www.avma.org/resources/pet-owners/petcare/cancer-pets', publisher: 'AVMA' },
 ]
 
 
@@ -44,7 +44,7 @@ const medicalSchema = buildMedicalWebPageSchema({
 })
 const FAQS = [
   { question: 'What percentage of Golden Retrievers get cancer?', answer: 'Over 60% of Golden Retrievers develop cancer in their lifetime, compared to approximately 25% of all dogs — the defining health challenge of the breed and the primary reason their lifespan trails similar-sized dogs. The most common cancers in Goldens are hemangiosarcoma, lymphoma, osteosarcoma, and mast cell tumors. This is documented by the Morris Animal Foundation\'s Golden Retriever Lifetime Study, the largest dog health study ever conducted, tracking over 3,000 Goldens since 2012.' },
-  { question: 'What are the signs of hemangiosarcoma in a Golden Retriever?', answer: 'Often none until crisis — that is what makes it dangerous. Hemangiosarcoma typically causes no symptoms until the tumor ruptures and bleeds internally: sudden collapse or weakness, pale or white gums, a distended abdomen, rapid breathing, and extreme lethargy. A Golden that was completely normal can collapse from hemorrhagic shock within hours; that presentation is an emergency. The best current screening is an annual abdominal ultrasound from age 6–7, which can catch splenic tumors before rupture.' },
+  { question: 'What are the signs of hemangiosarcoma in a Golden Retriever?', answer: 'Often none until a crisis. A bleeding tumor can stay quiet and then cause sudden collapse; that presentation is an emergency. Ask your veterinarian whether abdominal ultrasound screening is appropriate as a Golden ages.' },
   { question: 'How do I check my Golden Retriever for lymphoma?', answer: 'Learn to feel the lymph nodes monthly from middle age: under the jaw, in front of the shoulders, in the groin, and behind the knees. Lymphoma typically presents as painless, firm, enlarged nodes, often in several locations at once. Swollen nodes that persist more than 2 weeks warrant veterinary evaluation. Caught and treated with CHOP chemotherapy, 60–90% of dogs achieve remission with median survival of 12–14 months — and some live significantly longer.' },
   { question: 'What health screening schedule should a Golden Retriever follow?', answer: 'From the schedule on this page: annual wellness exams and bloodwork from age 3; from age 6–7, an annual abdominal ultrasound (hemangiosarcoma screening), cardiac auscultation, full bloodwork including T4, and dental evaluation; from age 8+, a full exam with bloodwork and urinalysis every 6 months, plus annual abdominal ultrasound and chest X-rays, with an echocardiogram if a murmur is present. The intensified senior schedule exists because early detection is what changes cancer outcomes.' },
   { question: 'Is pet insurance worth it for a Golden Retriever?', answer: 'The financial case is stronger for Goldens than almost any breed: a 60%+ lifetime cancer rate against real treatment costs of $8,000–25,000. The single most important rule is to enroll before the first vet visit — any condition documented before enrollment is excluded as pre-existing for life (a murmur noted at the first puppy exam becomes a permanent cardiac exclusion in most policies). Choose a policy without per-incident caps, since hemangiosarcoma treatment alone runs $5,000–12,000.' },
@@ -103,7 +103,7 @@ export default function GoldenRetrieverHealthPage() {
         { title: 'Best Pet Insurance', href: crossSiteHref('vets-co', '/reviews/best-pet-insurance'), category: 'Insurance' },
         { title: 'Find a Veterinary Oncologist', href: '/find-a-vet', category: 'Specialist Care' },
       ]}
-     priceAsOf="2026-06-11">
+     priceAsOf="2026-10-05">
       <div className="carloOS-article">
 
         <StockImage manifestKey="dog-com:breed-golden-retriever" alt="A Golden Retriever in natural light" aspect="16:9" priority />
@@ -214,11 +214,15 @@ export default function GoldenRetrieverHealthPage() {
 
         <h2 id="insurance">Pet Insurance — Why It Matters More for Goldens</h2>
 
+        <p>The cancer-treatment figures in this section are typical US clinic ranges dated 2026-10-05. They are not a quote for one dog.</p>
+        <p>Typical range, not a quote.</p>
         <p>The financial case for pet insurance is stronger for Golden Retrievers than almost any other breed. With a 60%+ lifetime cancer rate and real costs of $8,000–25,000 for cancer treatment, the expected value calculation is different than for lower-risk breeds.</p>
 
         <p>The single most important rule: <strong>enroll before your first vet visit</strong>. Any condition documented in records before enrollment is classified as pre-existing and excluded. A Golden diagnosed with a murmur at their first puppy exam has a cardiac exclusion for life in most policies.</p>
 
-        <p>For Goldens specifically, we recommend <strong>Trupanion</strong> (direct vet payment, unlimited payouts, 90% reimbursement) or <strong>Healthy Paws</strong> (fast claims processing per the carrier, no payout limits, lower premiums). Both handle cancer treatment without per-incident caps — which matters when hemangiosarcoma treatment runs $5,000–12,000.</p>
+        <p>This page does not name a recommended carrier. Compare direct-pay and reimbursement terms on the policy itself.</p>
+        <p>Typical range, not a quote.</p>
+        <p>Hemangiosarcoma treatment runs $5,000–12,000.</p>
 
         <div style={{ marginTop: '8px' }}>
           <Link href={crossSiteHref('vets-co', '/reviews/best-pet-insurance')}
@@ -229,63 +233,15 @@ export default function GoldenRetrieverHealthPage() {
 
         <h2 id="kit">A Simple Golden Retriever Cancer-Watch Kit</h2>
           <p>
-            Three everyday physical supplies match the
-            lymphoma lymph-node, hip-and-elbow stair, and
-            allergy ear-cleaning copy above: a dog
-            lymph-node anatomy chart so the monthly check
-            from middle age covers the nodes under the jaw,
-            in front of the shoulders, in the groin, and
-            behind the knees — swollen nodes that persist
-            more than 2 weeks warrant veterinary
-            evaluation — foam dog stairs so hip- and
-            elbow-dysplasia reluctance to climb stairs,
-            stiffness after exercise, and reduced exercise
-            tolerance have a low-impact indoor step
-            (weight management remains the most impactful
-            intervention; this is not a dog ramp, hip
-            brace, or joint-support treat), and dog ear
-            wipes so regular ear cleaning can interrupt
-            the recurrent ear infections that come with
-            atopic dermatitis, paw licking, and face
-            rubbing. These are household cancer-watch and
-            allergy-care tools, not treatments. They do
-            not diagnose hemangiosarcoma, lymphoma,
-            osteosarcoma, or mast cell tumors, they do
-            not replace annual abdominal ultrasound from
-            age 6–7, they do not replace OFA hip and
-            elbow films, they do not treat hypothyroidism
-            with levothyroxine, they do not treat SAS,
-            and they are not Apoquel, Cytopoint,
-            chemotherapy, or a ranked clinical product
-            list. Assisted-walking slings, hind-paw
-            booties, hip braces, silicone dog grooming
-            gloves, analog bathroom scales, dog dental
-            finger brushes, resting respiratory rate
-            notebooks, one-minute kitchen timers, step-in
-            padded dog harnesses, pet medical records
-            binders, AM/PM weekly pill organizers,
-            digital hanging luggage scales, LED medical
-            penlights, pet emergency contact cards,
-            folding pet stretchers, vaccination record
-            books, seat-belt tethers, foldable waterproof
-            puppy mats, mosquito dunks, a monthly pill
-            organizer, a soft-sided vet-visit carrier, a
-            gum-color assessment chart, recovery food, a
-            feeding syringe, digital pet scales, dog
-            wheelchairs, rear-support harnesses,
-            belly-support harnesses, knee braces,
-            waterproof dog booties, orthopedic dog beds,
-            dog ramps, and joint-support treats already
-            live on other pages. This page does not claim
-            hands-on testing. </p>
+            Keep these on hand: swollen nodes that persist more than 2 weeks warrant veterinary evaluation — foam dog stairs so hip- and elbow-dysplasia reluctance to climb stairs, stiffness after exercise, and reduced exercise tolerance have a low-impact indoor step (weight management remains the most impactful intervention; this is not a dog ramp, hip brace, or joint-support treat), and dog ear wipes so regular ear cleaning can interrupt the recurrent ear infections that come with atopic dermatitis, paw licking, and face rubbing. These are household cancer-watch and allergy-care tools, not treatments. They do not diagnose hemangiosarcoma, lymphoma, osteosarcoma, or mast cell tumors, they do not replace annual abdominal ultrasound from age 6–7, they do not replace OFA hip and elbow films, they do not treat hypothyroidism with levothyroxine, they do not treat SAS, and they are not Apoquel, Cytopoint, chemotherapy, or a ranked clinical product list. </p>
 
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/dog+lymph+node+anatomy+chart?s=health-golden-retriever-health", "/go/amazon-brand/foam+dog+stairs?s=health-golden-retriever-health", "/go/amazon-brand/dog+ear+wipes?s=health-golden-retriever-health"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (dog lymph-node anatomy chart / foam dog
               stairs / dog ear wipes). ShopCtas hides
-              empty Chewy; never href="#" or PLACEHOLDER.
-              Category searches only — unused vs #1049
+              empty Chewy; never href="#" or an empty link.
+              Amazon searches only — unused vs #1049
               dog assisted-walking sling / dog hind-paw
               booties / dog hip brace, #1048 silicone
               dog grooming glove / analog bathroom scale
@@ -320,7 +276,7 @@ export default function GoldenRetrieverHealthPage() {
               dog+paw+wipes / dog+eye+wipes, and
               soft+dog+carrier / soft+pet+carrier.
               Apoquel, Cytopoint, chemotherapy, and Rx
-              ASINs are not shoppable hops. */}
+              product pages are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
@@ -342,7 +298,9 @@ export default function GoldenRetrieverHealthPage() {
           </div>
           </div>
 
+        <p>Joint supplements for this breed are compared in the <Link href="/reviews/best-joint-supplements">joint supplement review</Link>.</p>
         <h2 id="faq">FAQ</h2>
+        <p>The insurance question below repeats those same clinic ranges, dated 2026-10-05.</p>
         <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
 
           <ArticleSourcesList sources={SOURCES} />

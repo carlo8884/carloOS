@@ -1,7 +1,13 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ReviewCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { PrimaryHop, buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ReviewCard, ShopCtas, ArticleSourcesList, LastUpdated, ComparisonFoot } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
+
+// Request-time env, same as the insurance comparison. A set partner tag
+// renders the quote link; an unset tag stays a disabled button.
+export const dynamic = 'force-dynamic'
+
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Pre-Existing Conditions & Pet Insurance Explained | Vets.co", description: "Pre-existing conditions are the most important pet insurance concept. Learn the difference between curable and incurable, and why enrolling early matters.", path: '/insurance/pre-existing-conditions', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Pre-Existing Conditions and Pet Insurance', description: 'How pre-existing conditions work in pet insurance, including curable vs. incurable distinctions.', url: 'https://vets.co/insurance/pre-existing-conditions', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-09-06T00:00:00Z' })
 const FAQS = [
@@ -14,6 +20,8 @@ export default function PreExistingPage() {
     <>
       <SchemaScript schema={schema} />
       <ArticleLayout siteId="vets-co"
+        heroHop={<PrimaryHop href="/go/amazon-brand/pressboard+classification+folder?s=insurance-pre-existing-conditions" label="Browse pressboard classification folders on Amazon →" />}
+        heroExtra={<HopDisclosure siteId="vets-co" href="/go/amazon-brand/pressboard+classification+folder?s=insurance-pre-existing-conditions" tone="on-dark" />}
         hero={{ title: 'Pre-Existing Conditions, Explained', subtitle: 'The single most important concept in pet insurance is the pre-existing condition. Because insurers do not cover conditions that existed before coverage began, the value of a policy is largely set the day you enroll. Understanding how pre-existing conditions are defined — and why timing matters so much — is essential before buying.', category: 'Insurance Guide', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '8 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Insurance', href: '/insurance' }, { name: 'Pre-Existing Conditions', href: '/insurance/pre-existing-conditions' }]}
         sidebar={<>
@@ -33,19 +41,52 @@ export default function PreExistingPage() {
         <div className="carloOS-article">
 
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-09-06T00:00:00Z" reviewedBy="Editorial team" />
+          <LastUpdated date="2026-10-10" />
 
           <CalloutBox variant="warning" title="Timing is everything">
             Every condition your pet develops before coverage starts becomes a permanent gap. This is why the most common piece of advice from veterinary teams is to enroll while a pet is young and healthy — not after the first worrying symptom appears.
           </CalloutBox>
 
           <h2>What a Pre-Existing Condition Is</h2>
-          <p>A pre-existing condition is any injury or illness that began, showed signs, or was treated before your policy's coverage started, including during any waiting period. Insurers establish this by reviewing your pet's veterinary records. Crucially, a formal diagnosis is not required — a documented symptom can be enough. If your records note repeated scratching before enrollment, a later allergy diagnosis may be classified as pre-existing and excluded. The condition itself is excluded, but unrelated future conditions remain coverable.</p>
+          <p>A pre-existing condition is any injury or illness that began, showed signs, or was treated before your policy's coverage started, including during any waiting period. Insurers establish this by reviewing your pet's veterinary records. Crucially, a formal diagnosis is not required — a documented symptom can be enough. If your records note repeated scratching before enrollment, a later allergy diagnosis may be classified as pre-existing and excluded. The condition itself is excluded, but unrelated future conditions remain coverable. <a href="/insurance/what-pet-insurance-covers">What pet insurance covers</a> is the exclusion list that definition creates.</p>
 
           <h2>Curable vs. Incurable</h2>
-          <p>Many insurers separate pre-existing conditions into curable and incurable. Incurable or chronic conditions — diabetes, allergies, heart disease, cancer, kidney disease — are generally excluded for the life of the policy. Curable conditions — a single ear infection, a respiratory infection, a urinary tract infection that fully resolved — may become eligible for coverage after the pet has gone a defined symptom-free and treatment-free period, often six to eighteen months. A red-and-blue checking pencil is how incurable vs curable stays marked on that record copy — it is not an assorted highlighter set (that lives on what-pet-insurance-covers), not a yellow legal pad (that lives on how-to-afford-vet-care), and not a four-column accounting pad (that lives on how-pet-insurance-works). Whether an insurer offers this curable-condition pathway, and how long the waiting period is, varies and is worth comparing.</p>
+          <p>Many insurers separate pre-existing conditions into curable and incurable. Incurable or chronic conditions — diabetes, allergies, heart disease, cancer, kidney disease — are generally excluded for the life of the policy. Curable conditions — a single ear infection, a respiratory infection, a urinary tract infection that fully resolved — may become eligible for coverage after the pet has gone a defined symptom-free and treatment-free period, often six to eighteen months. A red-and-blue checking pencil is how incurable vs curable stays marked on that record copy — it is not an assorted highlighter set, not a yellow legal pad, and not a four-column accounting pad. Whether an insurer offers this curable-condition pathway, and how long the waiting period is, varies and is worth comparing.</p>
+          <div className="my-6 max-w-full min-w-0">
+            <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
+              <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+              <thead>
+                <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Incurable</th>
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Curable</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Examples</th>
+                  <td className="p-3">Diabetes, allergies, heart disease, cancer, kidney disease</td>
+                  <td className="p-3">A single ear infection, a respiratory infection, or a urinary tract infection that fully resolved</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Coverage</th>
+                  <td className="p-3">Generally excluded for the life of the policy</td>
+                  <td className="p-3">May become eligible after a symptom-free and treatment-free period, often six to eighteen months</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">What varies</th>
+                  <td className="p-3">The exclusion is the usual rule for chronic conditions</td>
+                  <td className="p-3">Not every insurer offers the pathway, and the wait is not the same</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <ComparisonFoot updated="2026-10-10" />
+          <h2>Who should compare which pathway</h2>
+          <p>Compare whether the insurer offers a curable-condition pathway, and how long that symptom-free period is. An incurable condition stays excluded. A resolved infection may not.</p>
 
           <h2>Bilateral Conditions</h2>
-          <p>A subtle but important rule involves bilateral conditions — those that can affect paired body parts, such as cruciate ligaments, hips, or eyes. Many insurers treat a problem on one side as making the other side pre-existing too. So if your dog tore one cruciate ligament before enrollment, the insurer may exclude the other knee as well, on the reasoning that the underlying predisposition was already present. A pressboard classification folder is how curable, incurable, and bilateral conditions stay three labeled sections — it is not 3-tab dividers (that live on what-pet-insurance-covers), not hanging file folders (that live on how-to-afford-vet-care), and not manila file folders (that live on emergency-vet-costs). Reading how a policy handles bilateral conditions matters for breeds prone to orthopedic disease.</p>
+          <p>A subtle but important rule involves bilateral conditions — those that can affect paired body parts, such as cruciate ligaments, hips, or eyes. Many insurers treat a problem on one side as making the other side pre-existing too. So if your dog tore one cruciate ligament before enrollment, the insurer may exclude the other knee as well, on the reasoning that the underlying predisposition was already present. A pressboard classification folder is how curable, incurable, and bilateral conditions stay three labeled sections — it is not 3-tab dividers, not hanging file folders, and not manila file folders. Reading how a policy handles bilateral conditions matters for breeds prone to orthopedic disease.</p>
 
           <h2>Why Waiting Periods Matter</h2>
           <p>Policies impose waiting periods after enrollment before coverage begins — short for accidents, longer for illness, and often longest for orthopedic conditions. Anything that arises during a waiting period is treated as pre-existing. This is another reason to enroll before problems appear: a condition that emerges in the gap between signing up and coverage taking effect will not be covered.</p>
@@ -53,37 +94,14 @@ export default function PreExistingPage() {
           <h2>The Practical Takeaway</h2>
           <p>Because pre-existing exclusions are permanent and broadly defined, the value of pet insurance is highest when you enroll a young, healthy pet with a clean record. Waiting until a pet shows symptoms — or worse, until after a diagnosis — locks out coverage for exactly the conditions most likely to generate large bills. If your pet already has a condition, insurance can still cover unrelated future problems, so it is rarely pointless, but enrolling early remains the most powerful decision an owner can make.</p>
 
-          <h2 id="kit">Pre-existing-conditions kit</h2>
+          <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Everyday physical supplies that match the
-            curable-vs-incurable, bilateral, and
-            veterinary-records copy on this page —
-            a pressboard classification folder so
-            curable, incurable, and bilateral
-            conditions stay three labeled sections,
-            a letter-size clasp envelope so the
-            vet-record copy stays one packet for
-            the insurer review, and a red-and-blue
-            checking pencil so incurable vs curable
-            stays marked on that copy. These are
-            educational pre-existing / records
-            tools, not a ranked product list, not a
-            substitute for veterinary care, and not
-            a treatment. Full-page magnifiers,
-            adjustable copyholders, and line-reader
-            strips already live on
-            reading-the-fine-print. Quad-ruled
-            graph pads, paid rubber stamps, and
-            handheld tally counters already live on
-            deductibles-reimbursement. This page
-            does not hop medications or insurance
-            brands as Amazon searches. This page
-            does not claim hands-on testing.
+            Keep these on hand: a pressboard classification folder so curable, incurable, and bilateral conditions stay three labeled sections, a letter-size clasp envelope so the vet-record copy stays one packet for the insurer review, and a red-and-blue checking pencil so incurable vs curable stays marked on that copy. These are educational pre-existing / records tools, not a ranked product list, not a substitute for veterinary care, and not a treatment.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/pressboard+classification+folder?s=insurance-pre-existing-conditions", "/go/amazon-brand/clasp+envelope+letter+size?s=insurance-pre-existing-conditions", "/go/amazon-brand/red+and+blue+checking+pencil?s=insurance-pre-existing-conditions"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (pressboard classification folder /
               clasp envelope letter size /
               red-and-blue checking pencil).
@@ -92,9 +110,9 @@ export default function PreExistingPage() {
               not a ranked product list, not a
               substitute for veterinary care, no Rx
               / first-aid kit / thermometer /
-              carrier / insurance-brand ASIN hops.
+              carrier / insurance-brand product page buttons.
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or an empty link. Amazon searches only —
               unused vs #1172
               full+page+magnifier /
               adjustable+copyholder /
@@ -111,7 +129,7 @@ export default function PreExistingPage() {
               wall+mounted+magnetic+monthly+planner.
               Carrier quote CTAs stay on
               /go/embrace and /go/aspca —
-              not amazon-brand hops. */}
+              not amazon-brand buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
@@ -134,14 +152,13 @@ export default function PreExistingPage() {
           </div>
 
           <h2 id="quote">Carriers and Curable Conditions</h2>
-          <p>Insurers differ in how they handle <em>curable</em> pre-existing conditions — some will cover a resolved, symptom-free condition again after a defined waiting window, while permanent (incurable) conditions stay excluded everywhere. The two below are worth quoting on that distinction; read each policy&apos;s exact definition, and see our <a href="/reviews/best-pet-insurance">best pet insurance comparison</a> for the full picture.</p>
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <p>Insurers differ in how they handle <em>curable</em> pre-existing conditions — some will cover a resolved, symptom-free condition again after a defined waiting window, while permanent (incurable) conditions stay excluded everywhere. The two below are worth quoting on that distinction; read each policy&apos;s exact definition, and see our <a href="/reviews/best-pet-insurance">best pet insurance comparison</a> for the full picture. The <a href="/tools/pet-insurance-worth-it-calculator">worth-it calculator</a> says a strong breakeven number does not cover a condition the pet already has.</p>
+          <HopDisclosure siteId="vets-co" href={["/go/embrace/home?s=insurance-pre-existing-conditions", "/go/aspca/home?s=insurance-pre-existing-conditions"]} />
           <ReviewCard
             id="embrace"
             badge="Curable-Condition Policy"
             name="Embrace"
             subtitle="May re-cover curable pre-existing conditions after a symptom-free period"
-            score={8.5}
             winner
             description={
               <p>Embrace distinguishes curable from incurable pre-existing conditions and, per its policy terms, can resume covering a curable condition after a defined symptom-free period. That makes it worth quoting if your pet has a resolved past issue. Permanent conditions remain excluded — confirm the exact terms and waiting windows when you quote.</p>
@@ -155,7 +172,7 @@ export default function PreExistingPage() {
             cons={['Incurable conditions stay excluded', 'Symptom-free window applies']}
             price="Quote-based"
             ctaText="Get a Quote →"
-            ctaHref="/go/embrace/home?s=insurance-pre-existing-conditions"
+            ctaHref="/go/embrace/home?s=insurance-pre-existing-conditions" holdWithoutPartnerId
             ctaAffiliateProgram="embrace"
             ctaAffiliateProduct="home"
           />
@@ -164,7 +181,6 @@ export default function PreExistingPage() {
             badge="Established Carrier"
             name="ASPCA Pet Health Insurance"
             subtitle="Accident-and-illness with curable pre-existing flexibility"
-            score={8.1}
             description={
               <p>An established accident-and-illness program that, per its policy terms, may cover certain curable pre-existing conditions after a symptom-free period. Worth comparing alongside Embrace if a past condition has resolved. As always, the policy&apos;s own definitions govern — read them before enrolling.</p>
             }
@@ -184,6 +200,12 @@ export default function PreExistingPage() {
 
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
+                  <ArticleSourcesList
+            title="Sources"
+            sources={[
+            { label: "Embrace", url: "https://www.embracepetinsurance.com/", publisher: "Embrace" },
+            ]}
+          />
         </div>
       </ArticleLayout>
     </>

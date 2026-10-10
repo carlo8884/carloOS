@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, CalloutBox, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, CalloutBox, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -78,7 +79,7 @@ export default function TravelingWithAFerretPage() {
 
           </>
         }
-      
+
         relatedLinks={[
           { title: 'Ferret Ownership Hub', href: '/ownership' },
           { title: 'Travel & Carriers', href: '/care/travel-and-carriers' },
@@ -180,21 +181,8 @@ export default function TravelingWithAFerretPage() {
             do not go with it.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/ferret+litter?s=traveling-with-a-ferret" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated ferret trip-decide chart /
-              ferret fridge heat-limit card /
-              mustelid trip-plan handbook).
-              No existing product hop to keep.
-              Educational kitchen searches only; no Rx /
-              vaccine / aging hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs ownership-hub /
-              other-pets / kids / travel-and-carriers
-              product hops. Ferret
-              aging stays held.
-              Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
@@ -203,7 +191,7 @@ export default function TravelingWithAFerretPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/ferret+litter?s=traveling-with-a-ferret"
-                amazonLabel="Shop on Amazon"
+                amazonLabel="Browse ferret litter on Amazon →"
               />
           </div>
           </div>

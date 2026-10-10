@@ -1,5 +1,7 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, FAQAccordion, AffiliateDisclosure, ShopCtas, CrossSiteHelp } from '@carloOS/ui'
+import Link from 'next/link'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, FAQAccordion, ShopCtas, CrossSiteHelp } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { BreedHealthCard } from '@carloOS/ui'
@@ -59,7 +61,7 @@ export default function GSHealthPage() {
 
         <BreedHealthCard name="Degenerative Myelopathy (DM)" riskLevel="very-high" description="DM is a progressive, fatal neurological disease affecting the spinal cord — analogous to ALS in humans. Starts as hind limb wobbling and weakness, progresses to complete paralysis over 6–18 months. No cure exists. DNA testing identifies carriers and affected dogs. Almost all German Shepherds showing DM carry two copies of the SOD1 gene mutation — DNA test before breeding. Physical therapy and supportive care can maintain quality of life significantly longer than untreated progression." signs={['Hind limb wobbling or weakness', 'Crossing hind legs while walking', 'Knuckling (paws turning under)', 'Eventual inability to walk']} management="DNA test all GSDs before breeding. Physical therapy (underwater treadmill, controlled exercise) significantly extends functional life. Wheelchairs when paralysis progresses. DM-affected dogs maintain quality of life with dedicated care." />
 
-        <BreedHealthCard name="Hip and Elbow Dysplasia" riskLevel="high" description="GSDs have among the highest rates of hip and elbow dysplasia of any breed. OFA screening of breeding dogs has improved outcomes over decades but has not eliminated the problem. Signs typically appear in the first 2 years of life. Weight management and appropriate exercise are critical — every pound above ideal adds approximately 4 pounds of force on each joint with every step." signs={['Lameness after exercise', 'Bunny-hopping gait', 'Difficulty rising', 'Reluctance to jump or use stairs']} management="OFA hip and elbow screening for breeding stock. Lean body condition throughout life. Fish oil from young adulthood. Glucosamine/chondroitin supplementation. Surgical options (FHO, TPO, total hip replacement) for severe cases." />
+        <BreedHealthCard name="Hip and Elbow Dysplasia" riskLevel="high" description="GSDs have among the highest rates of hip and elbow dysplasia of any breed. OFA screening of breeding dogs has improved outcomes over decades but has not eliminated the problem. Signs typically appear in the first 2 years of life. Weight management and appropriate exercise still belong in the plan. This page does not cite a pounds-of-force figure." signs={['Lameness after exercise', 'Bunny-hopping gait', 'Difficulty rising', 'Reluctance to jump or use stairs']} management="OFA hip and elbow screening for breeding stock. Lean body condition throughout life. Fish oil from young adulthood. Glucosamine/chondroitin supplementation. Surgical options (FHO, TPO, total hip replacement) for severe cases." />
 
         <BreedHealthCard name="GDV (Bloat)" riskLevel="high" description="Gastric dilatation-volvulus — the stomach fills with gas and twists on itself, cutting off blood supply. Fatal without emergency surgery within hours. GSDs are a predisposed breed. Warning signs: unproductive retching (trying to vomit without producing anything), distended hard abdomen, extreme restlessness. This is the most time-critical emergency in the breed." signs={['Unproductive retching — EMERGENCY', 'Hard distended abdomen', 'Extreme restlessness, unable to settle', 'Drooling, obvious distress']} management="Emergency vet immediately — do not wait. Preventive gastropexy (surgical stomach tacking) can be performed prophylactically during spay/neuter, preventing torsion. Discuss with your vet at spay/neuter appointment. Feed twice daily rather than once; avoid exercise immediately after eating." />
 
@@ -67,41 +69,17 @@ export default function GSHealthPage() {
 
         <h2>What I Watch for in My GSD Patients</h2>
         <p>Any hind limb incoordination after age 5: DM workup — neurological examination, MRI if indicated, DNA confirmation. Any episode of unproductive retching in a GSD: emergency evaluation — I would rather see a false alarm than miss a GDV. Gradual hind limb weakness in a young GSD (under 3): OFA radiographs, orthopedic evaluation.</p>
-        <p>Feed twice daily rather than once, and avoid exercise immediately after eating. Self-adhesive file-folder labels are how the OFA hip-and-elbow result, the SOD1 DNA result, and the gastropexy note stay three labeled tabs — they are not round color-coding labels (that live on breed-specific-risk), not 3-tab dividers (that live on what-pet-insurance-covers), and not removable page flags (that live on what-pet-insurance-covers).</p>
+        <p>Feed twice daily rather than once, and avoid exercise immediately after eating. Self-adhesive file-folder labels are how the OFA hip-and-elbow result, the SOD1 DNA result, and the gastropexy note stay three labeled tabs — they are not round color-coding labels, not 3-tab dividers, and not removable page flags.</p>
         <p>GSDs stoically mask pain. A GSD that is &quot;slowing down&quot; or &quot;getting old&quot; may be in significant orthopedic pain that is genuinely manageable with treatment. Do not attribute behavioral changes to age without a veterinary evaluation first.</p>
 
-        <h2 id="kit">German-shepherd-health kit</h2>
+        <h2 id="kit">Supplies named on this page</h2>
         <p>
-          Everyday physical supplies that match the
-          DM, hip-dysplasia, and GDV copy on this
-          page — a top-bound steno pad so hind-
-          limb wobble and knuckling after age 5
-          stay a written DM-workup log, a
-          mechanical kitchen timer so the no-
-          exercise-right-after-eating rule stays a
-          timed rest, and self-adhesive file-
-          folder labels so OFA hip-and-elbow,
-          SOD1 DNA, and gastropexy notes stay
-          three labeled tabs. These are
-          educational German-shepherd-health /
-          paperwork tools, not a ranked product
-          list, not a substitute for veterinary
-          care, and not a treatment. Dot-grid
-          notebooks, paint-chip sample cards, and
-          18-month wall calendars already live on
-          golden-retriever-health. Flexible sewing
-          tape measures, bound composition books,
-          and letter-size document frames already
-          live on labrador-health. This page does
-          not hop medications, enzymes, wheelchairs,
-          or insurance brands as Amazon searches.
-          This page does not claim hands-on
-          testing.
+          Keep these on hand: a top-bound steno pad so hind- limb wobble and knuckling after age 5 stay a written DM-workup log, a mechanical kitchen timer so the no- exercise-right-after-eating rule stays a timed rest, and self-adhesive file- folder labels so OFA hip-and-elbow, SOD1 DNA, and gastropexy notes stay three labeled tabs. These are educational German-shepherd-health / paperwork tools, not a ranked product list, not a substitute for veterinary care, and not a treatment.
         </p>
 
-        <AffiliateDisclosure variant="inline" siteId="vets-co" />
+        <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/top+bound+steno+pad?s=breeds-german-shepherd-health", "/go/amazon-brand/mechanical+kitchen+timer?s=breeds-german-shepherd-health", "/go/amazon-brand/self+adhesive+file+folder+labels?s=breeds-german-shepherd-health"]} />
 
-        {/* Money path — live amazon-brand search hops
+        {/* Shop note — live amazon-brand search buttons
             (top-bound steno pad /
             mechanical kitchen timer /
             self-adhesive file-folder labels).
@@ -110,9 +88,9 @@ export default function GSHealthPage() {
             tools, not a ranked product list, not
             a substitute for veterinary care, no
             Rx / first-aid kit / thermometer /
-            carrier / insurance-brand ASIN hops.
+            carrier / insurance-brand product page buttons.
             ShopCtas hides empty Chewy; never href="#"
-            or PLACEHOLDER. Category searches only —
+            or an empty link. Amazon searches only —
             unused vs #1176
             dot+grid+notebook /
             paint+chip+sample+cards /
@@ -155,10 +133,12 @@ export default function GSHealthPage() {
         >
           The Dog.com German Shepherd page is the owner-side guide for this breed: size, temperament, and everyday care.
         </CrossSiteHelp>
+        <p>Joint supplements for this breed are compared in the <Link href={crossSiteHref('dog-com', '/reviews/best-joint-supplements')}>joint supplement review</Link>.</p>
         <h2>FAQ</h2>
         <FAQAccordion
           items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))}
           allowMultiple
+          includeSchema={false}
         />
       </div>
     </ArticleLayout>

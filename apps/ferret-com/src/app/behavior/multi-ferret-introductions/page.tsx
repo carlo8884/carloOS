@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import {
   buildMetadata,
@@ -10,7 +11,6 @@ import {
   DropCap,
   ArticleSourcesList,
   CrossPortfolioCard,
-  AffiliateDisclosure,
   ShopCtas,
 } from '@carloOS/ui'
 import {
@@ -286,33 +286,18 @@ export default function MultiFerretIntroductionsPage() {
             exam rather than re-introduction.
           </p>
 
-          <h2 id="kit">Staged-introduction kit</h2>
+          <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Everyday physical supplies that match the quarantine,
-            adjacent-cage, bathtub, and two-of-every-resource copy on
-            this page — a wire small-animal single-story cage so the
-            newcomer has its own adjacent box during the isolation
-            window and the two-week see-and-smell phase, a non-slip
-            suction bathtub mat so the first sessions happen on a dry
-            bathtub floor neither ferret owns, and a stainless-steel
-            small-animal crock so the shared cage has a second food
-            station. These are household introduction tools, not
-            treatments. They do not guarantee a pairing, they do not
-            replace a veterinary quarantine check, they do not skip
-            the separate-room window, and they are not a ranked
-            product list. This page
-            does not hop vaccines, Nobivac, IMRAB, diphenhydramine,
-            insulin syringes, compounded meds, or Rx ASINs. This
-            page does not hop diagnosis kits that imply treatment. This page does not claim hands-on testing. </p>
+            Keep these on hand: a wire small-animal single-story cage so the newcomer has its own adjacent box during the isolation window and the two-week see-and-smell phase, a non-slip suction bathtub mat so the first sessions happen on a dry bathtub floor neither ferret owns, and a stainless-steel small-animal crock so the shared cage has a second food station. These are household introduction tools, not treatments. They do not guarantee a pairing, they do not replace a veterinary quarantine check, they do not skip the separate-room window, and they are not a ranked product list. </p>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/wire+small+animal+single+story+cage?s=behavior-multi-ferret-introductions", "/go/amazon-brand/non+slip+suction+bathtub+mat?s=behavior-multi-ferret-introductions", "/go/amazon-brand/stainless+steel+small+animal+crock?s=behavior-multi-ferret-introductions"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (wire small-animal single-story cage /
               non-slip suction bathtub mat /
               stainless-steel small-animal crock).
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or an empty link. Amazon searches only —
               unused vs #1068 extra-small-animal-travel-
               kennel / scent-swap-fleece-sleep-pouch /
               portable-small-animal-playpen, #1067
@@ -338,8 +323,8 @@ export default function MultiFerretIntroductionsPage() {
               pet+glucometer / light+corn+syrup,
               pet+oral+feeding+syringe.
               Vaccines, Nobivac, IMRAB, diphenhydramine,
-              insulin syringes, and Rx ASINs are not
-              shoppable hops. */}
+              insulin syringes, and prescription brands are not
+              shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, LastUpdated, ComparisonFoot } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 
@@ -18,6 +18,7 @@ export default function Page() {
     <>
       <SchemaScript schema={schema} />
       <ArticleLayout siteId="vets-co"
+        heroHop={<a href="/insurance/when-to-enroll" className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline mb-5">When to enroll</a>}
         hero={{ title: 'When Should I Get Pet Insurance?', subtitle: 'Enroll as early as the insurer allows — often as young as six to eight weeks. Signing up while a pet is young and healthy locks in coverage before any condition becomes a permanent pre-existing exclusion, and starts your premium from a lower base.', category: 'Insurance Q&A', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '6 min' }}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Insurance', href: '/insurance' }, { name: 'Questions', href: '/insurance/questions' }, { name: 'When to Enroll', href: '/insurance/questions/when-should-i-get-pet-insurance' }]}
         sidebar={<>
@@ -36,6 +37,7 @@ export default function Page() {
       >
         <div className="carloOS-article">
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-11T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
+          <LastUpdated date="2026-10-10" />
 
           <CalloutBox variant="info" title="The short answer">
             Enroll <strong>as early as the insurer allows</strong> — many start coverage at six to eight weeks of age. Enrolling while a pet is young and healthy locks in coverage before any condition becomes a permanent pre-existing exclusion, and premiums start lower. There is no &ldquo;too late&rdquo; if your pet is healthy, but every year you wait risks a new note in the records becoming an exclusion.
@@ -53,10 +55,37 @@ export default function Page() {
 
           <h2>Enrollment-Age Limits and Senior Surcharges</h2>
           <p>Some insurers set a maximum enrollment age or apply senior surcharges to pets enrolled later in life, particularly for certain breeds. Coverage purchased while a pet is young usually continues into old age even as premiums rise, whereas trying to start a brand-new policy on a senior pet can mean higher prices, more exclusions from an already-populated record, or, occasionally, limited options. This is another reason the enroll-early decision compounds: it is easier and cheaper to maintain continuous coverage than to begin it late.</p>
+          <div className="my-6 max-w-full min-w-0">
+            <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
+              <caption className="text-left font-semibold text-brand-dark p-3">Timing, from the sentences on this page</caption>
+              <thead>
+                <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                  <th scope="col" className="p-3 font-bold text-brand-dark">When</th>
+                  <th scope="col" className="p-3 font-bold text-brand-dark">What this page says</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Young and healthy</th>
+                  <td className="p-3">A clean record covers the widest range of future problems. The premium starts lower and stays continuous into the senior years</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Waiting period</th>
+                  <td className="p-3">Coverage is not instant. Commonly a few days for accidents, around fourteen days for illness, and often months for orthopedic conditions. Anything that arises in the gap is excluded</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">A new policy late</th>
+                  <td className="p-3">Higher prices, more exclusions from a populated record, or limited options. Maintaining continuous coverage is easier than beginning it late</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <ComparisonFoot updated="2026-10-10" />
+          <h2>Who should start when</h2>
+          <p>Start while the pet is young and healthy. Enroll before a worrying symptom, because a condition that shows up in the waiting period is not paid. Do not wait to open a first policy on a senior record.</p>
 
           <h2 id="next-steps">Next Steps</h2>
           <p>If your pet is young and healthy, the highest-value move is simply to start coverage soon. Pair that with a clear-eyed read on whether the protection fits your finances.</p>
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
           <ul>
             <li>Understand what timing protects against in <a href="/insurance/questions/does-pet-insurance-cover-pre-existing-conditions">does pet insurance cover pre-existing conditions</a>.</li>
             <li>Weigh the overall decision with the <a href="/tools/pet-insurance-worth-it-calculator">worth-it calculator</a>.</li>
@@ -76,9 +105,7 @@ export default function Page() {
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
 
-          <ArticleSourcesList sources={[
-            { label: 'A Consumer’s Guide to Pet Insurance (enrollment and waiting periods)', url: 'https://content.naic.org/cipr-topics/pet-insurance', publisher: 'NAIC' },
-            { label: 'State of the Industry Report (enrollment trends)', url: 'https://naphia.org/state-of-the-industry/', publisher: 'NAPHIA' },
+          <ArticleSourcesList title="Sources" sources={[
             { label: 'Sample carrier waiting-period and enrollment-age disclosures', publisher: 'General carrier policy disclosures (not an endorsement)' },
           ]} />
         </div>

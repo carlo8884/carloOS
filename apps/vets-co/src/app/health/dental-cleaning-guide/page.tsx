@@ -1,6 +1,7 @@
-import { HubMoneyLinks } from '@carloOS/ui'
+import { HopDisclosure } from '../../../components/HopDisclosure'
+import { HubMoneyLinks, LastUpdated } from '@carloOS/ui'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, RelatedLinks, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, DropCap, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Veterinary Dental Cleaning — What to Expect, Anesthesia | Vets.co', description: 'Professional dental cleaning under anesthesia is the only way to clean below the gumline. Dental grades, anesthesia safety.', path: '/health/dental-cleaning-guide', type: 'article' })
@@ -49,6 +50,7 @@ export default function DentalCleaningGuidePage() {
       >
         <div className="carloOS-article">
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-09-04T00:00:00Z" reviewedBy="Editorial team" />
+          <LastUpdated date="2026-10-09" />
 
           <h2>Why Anesthesia Is Required</h2>
           <DropCap>Proper dental cleaning requires scaling above and below the gumline (subgingival scaling), probing every tooth to assess pocket depth (the space between tooth and gum — deep pockets indicate periodontitis), dental radiographs to evaluate the tooth root and surrounding bone (70% of tooth structure is below the gumline — invisible to visual examination), extraction of non-viable teeth, polishing, and charting for the dental record. None of these can be performed safely or effectively in an awake, unsedated dog. The mouth must be still, the subgingival environment must be accessible, and the animal must not aspirate water, debris, or extracted tooth fragments. General anesthesia with an endotracheal tube provides all of these requirements.</DropCap>
@@ -68,18 +70,18 @@ export default function DentalCleaningGuidePage() {
           <p>A professional cleaning resets the clock on periodontal disease — the tooth surface is clean and the gumline is healthy. What happens next depends on home care. Daily toothbrushing (a soft toothbrush and enzymatic toothpaste — CET, Vetradent — never human fluoride toothpaste) is the most effective intervention to maintain the cleaning and extend the interval before the next professional cleaning is needed. VOHC-accepted dental chews (Greenies, Whimzees) supplement brushing. Water additives with the VOHC seal provide additional support. The goal is to maintain the Grade 0-1 state achieved by the cleaning for as long as possible.</p>
 
           <h2 id="kit">Home-Care Kit After a Cleaning</h2>
-          <p>Everyday physical supplies that match the home-care copy above — a soft toothbrush and enzymatic toothpaste for daily brushing, plus VOHC-accepted dental chews and a VOHC water additive as adjuncts. These are not a professional cleaning, not anesthesia-free dentistry, and not a treatment for periodontal disease; bad breath, tartar, red gums, or eating changes belong with a veterinarian, not a chew. Human fluoride toothpaste is explicitly not for pets. This page does not claim hands-on testing.</p>
+          <p>Keep these on hand: a soft toothbrush and enzymatic toothpaste for daily brushing, plus VOHC-accepted dental chews and a VOHC water additive as adjuncts. These are not a professional cleaning, not anesthesia-free dentistry, and not a treatment for periodontal disease; bad breath, tartar, red gums, or eating changes belong with a veterinarian, not a chew. Human fluoride toothpaste is explicitly not for pets.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/soft+pet+toothbrush?s=health-dental-cleaning-guide", "/go/amazon-brand/enzymatic+pet+toothpaste?s=health-dental-cleaning-guide", "/go/amazon-brand/dental+chews+dog?s=health-dental-cleaning-guide", "/go/amazon-brand/pet+dental+water+additive?s=health-dental-cleaning-guide"]} />
 
-          {/* Money path — live amazon-brand search hops (dental home-care kit).
-              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-              Category searches only — everyday physical supplies matching
+          {/* Shop note — live amazon-brand search buttons (dental home-care kit).
+              ShopCtas hides empty Chewy; never href="#" or an empty link.
+              Amazon searches only — everyday physical supplies matching
               on-page after-cleaning copy (soft toothbrush, enzymatic
               toothpaste, VOHC dental chews, VOHC water additive), not
-              medication, anesthesia, or invented-kit hops. Human fluoride
-              toothpaste, CET/Vetradent ASINs, and clinic procedure gear
-              are not shoppable hops. */}
+              medication, anesthesia, or invented-kit buttons. Human fluoride
+              toothpaste, CET/Vetradent product pages, and clinic procedure gear
+              are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

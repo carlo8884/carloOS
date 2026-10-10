@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -111,8 +112,6 @@ export default function StirrupsSafetyPage() {
 
           <h2 id="sizing">Sizing to the Foot</h2>
           <p>Stirrup size is a safety-critical fit. The stirrup should be roughly an inch (about 2.5 cm) wider than the widest part of the rider&apos;s boot -- enough clearance that the foot is not pinched and can release in a fall, but not so wide that the whole foot can slide through and become trapped. Too small risks the foot jamming; too large risks the foot going through to the ankle. Children and adults need stirrups matched to their own footwear.</p>
-          <p>
-            A horse stirrup width-inch-clearance question card is how &quot;about an inch wider than the widest part of the boot, enough clearance that the foot is not pinched, and not so wide that the whole foot can slide through&quot; stays posted — it is not a horse girth buckle-elbow-clearance question card (that lives on girths-and-cinches), not a horse bridle cheekpiece-length fit question card (that lives on bridle-types), not a horse breastplate-vs-breastgirth fit question card (that lives on martingales-and-breastplates), not a horse denier-vs-fill question card (that lives on blanket-weights), not a horse rope-vs-flat-halter task question card (that lives on halters-and-lead-ropes), not a horse-boot impact-not-tendon-support question card (that lives on boots-and-wraps), and not a saddle-pad sweat-pattern dry-spot question card (that lives on saddle-pads). This page does not invent clinic listings. </p>
 
           <h2 id="safety">Safety Stirrup Designs</h2>
           <ul>
@@ -121,137 +120,31 @@ export default function StirrupsSafetyPage() {
             <li><strong>Modern breakaway / release stirrups</strong> -- engineered to open or release the foot in a fall, an increasingly popular safety upgrade.</li>
             <li><strong>Caged or tapadero western stirrups</strong> -- enclose the front of the foot to stop it sliding through, used in some western and trail contexts.</li>
           </ul>
-          
 
           <h2 id="footwear">Footwear and Treads</h2>
           <p>Proper riding footwear is part of stirrup safety. A riding boot has a smooth sole and a defined heel, which together stop the foot sliding too far through the stirrup and hold it in place. Trainers, work boots with heavy treads, and flat shoes are dangerous because a treaded or heelless sole can jam in the stirrup. Stirrup treads (rubber grips on the footbed) add grip and comfort but do not replace the need for correct footwear.</p>
 
           <h2 id="dragged">Avoiding Being Dragged</h2>
           <p>Being dragged by a trapped foot after a fall can cause catastrophic injury, which is why every other point on this page exists. The defenses stack together: correctly sized stirrups that let the foot release, riding boots with a heel and smooth sole, safety or breakaway stirrup designs where appropriate (especially for children and beginners), riding with the ball of the foot on the tread and heels down, and never riding in unsuitable footwear. Together these dramatically reduce the chance of a foot being trapped in a fall.</p>
-          <p>
-            A horse stirrup drag-entrapment watch log notebook is how correctly-sized-stirrups-that-let-the-foot-release, riding-boots-with-a-heel-and-smooth-sole, and ball-of-the-foot-on-the-tread-and-heels-down stay written down — it is not a horse girth-gall skin-wrinkle log notebook (that lives on girths-and-cinches), not a horse noseband two-finger welfare log notebook (that lives on bridle-types), not a horse martingale-misuse head-carriage log notebook (that lives on martingales-and-breastplates), not a horse over-rugging sweat-shiver watch log notebook (that lives on blanket-weights), not a horse quick-release wither-height tie log notebook (that lives on halters-and-lead-ropes), not a horse-boot grit-rub clean-dry log notebook (that lives on boots-and-wraps), and not a saddle-pad clean-dry rotation log notebook (that lives on saddle-pads). </p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href="/go/amazon-brand/horse+safety+stirrups?s=stirrups-and-safety" />
 
-          {/* Shop leftover kit — unused vs #1147
-              laminated+horse+anatomical+vs+straight+girth+checklist /
-              horse+girth+buckle+elbow+clearance+question+card /
-              horse+girth+gall+skin+wrinkle+log+notebook, #1146
-              laminated+horse+snaffle+vs+double+bridle+checklist /
-              horse+bridle+cheekpiece+length+fit+question+card /
-              horse+noseband+two+finger+welfare+log+notebook, #1145
-              laminated+horse+standing+vs+running+martingale+checklist /
-              horse+breastplate+vs+breastgirth+fit+question+card /
-              horse+martingale+misuse+head+carriage+log+notebook, #1144
-              laminated+horse+turnout+vs+stable+rug+checklist /
-              horse+denier+vs+fill+question+card /
-              horse+over+rugging+sweat+shiver+watch+log+notebook, #1143
-              laminated+horse+turnout+halter+breakaway+checklist /
-              horse+rope+vs+flat+halter+task+question+card /
-              horse+quick+release+wither+height+tie+log+notebook, #1142
-              laminated+horse+leg+bandage+bow+technique+checklist /
-              horse+boot+impact+not+tendon+support+question+card /
-              horse+boot+grit+rub+clean+dry+log+notebook, #1141
-              laminated+saddle+pad+cannot+fix+fit+checklist /
-              saddle+pad+sweat+pattern+dry+spot+question+card /
-              saddle+pad+clean+dry+rotation+log+notebook, #1140
-              laminated+riding+helmet+fit+and+replace+checklist /
-              riding+helmet+certification+label+question+card /
-              riding+helmet+impact+retirement+log+notebook, #1139
-              laminated+first+horse+90+day+week+by+week+checklist /
-              first+horse+ground+manners+cue+card /
-              first+horse+tack+room+emergency+plan+card, #1138
-              laminated+senior+horse+age+related+change+checklist /
-              senior+horse+weight+and+joint+watch+notebook /
-              senior+horse+quality+of+life+score+card, #1137
-              laminated+horse+ear+eye+tail+signal+checklist /
-              horse+handler+kick+zone+safety+question+card /
-              horse+pain+demeanor+change+log+notebook, #1136
-              laminated+pre+purchase+exam+stage+walkthrough+checklist /
-              horse+pre+purchase+exam+findings+decision+worksheet /
-              horse+buyer+vet+briefing+question+card, #1135
-              horse+lease+agreement+document+binder /
-              laminated+horse+lease+walkthrough+checklist /
-              horse+full+vs+partial+lease+cost+share+worksheet, #1134
-              horse+insurance+policy+document+binder /
-              laminated+horse+insurance+claims+checklist /
-              horse+mortality+vs+major+medical+decision+worksheet, #1133
-              horse+ownership+monthly+budget+worksheet /
-              equine+emergency+fund+expense+tracker+notebook /
-              horse+keep+feed+farrier+cost+log+binder, #1132
-              laminated+equine+vet+interview+checklist /
-              horse+after+hours+emergency+cover+question+card /
-              horse+veterinary+history+vcpr+records+folder, #1131
-              first+horse+buyer+visit+field+notebook /
-              laminated+first+horse+tryout+walkthrough+checklist /
-              horse+pre+purchase+exam+records+binder, #1130
-              laminated+horse+boarding+facility+walkthrough+checklist /
-              horse+boarding+contract+document+binder /
-              waterproof+horse+hay+bale+storage+tarp, #1129
-              sterile+saline+wound+flush+horse /
-              nonstick+wound+dressing+pads+horse /
-              equine+bandage+scissors,
-              blanketing
-              horse+turnout+blanket /
-              horse+waterproof+sheet /
-              horse+lightweight+blanket /
-              horse+medium+weight+blanket /
-              horse+heavyweight+blanket,
-              blanket-size
-              winter+horse+blanket /
-              horse+turnout+sheet /
-              horse+stable+blanket /
-              horse+fleece+cooler,
-              fly-control
-              horse+fly+sheet,
-              cost-calculator
-              horse+halter+lead+rope,
-              trailering
-              horse+shipping+boots /
-              horse+shipping+wraps /
-              horse+trailer+ties,
-              saddle-fit-basics
-              horse+saddle+pad /
-              horse+sheepskin+half+pad /
-              horse+saddle+shims /
-              horse+girth+cinch,
-              horse-size-for-rider
-              ASTM+SEI+horse+riding+helmet,
-              grimace / first-aid
-              ice+boot+cold+therapy+wrap /
-              vet+wrap /
-              equine+first+aid+kit,
-              #1128
-              laminated+horse+barn+calculator+tools+chart /
-              horse+stall+door+measurement+card /
-              equine+calculator+reference+handbook, #1127
-              laminated+horse+barn+owner+guides+chart /
-              horse+stall+door+owner+guides+card /
-              equine+owner+guides+reference+handbook, #1126
-              laminated+horse+barn+daily+care+chart /
-              horse+stall+door+care+card /
-              equine+husbandry+reference+handbook, #1125
-              laminated+horse+barn+emergency+triage+chart /
-              horse+stall+door+vital+signs+card /
-              equine+health+reference+handbook. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
             </div>
             <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
+            <p className="mb-4 text-sm font-semibold leading-snug">
+              <a href="/tack/helmet-guide" className="inline-block max-w-full whitespace-normal text-brand-primary underline underline-offset-2">
+                Read the helmet guide before you buy stirrups →
+              </a>
+            </p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/equestrian+riding+helmet?s=stirrups-and-safety"
-                amazonLabel="Shop on Amazon"
+                amazonHref="/go/amazon-brand/horse+safety+stirrups?s=stirrups-and-safety"
+                amazonLabel="Browse horse safety stirrups on Amazon →"
               />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/horse+stirrup+width+inch+clearance+question+card?s=stirrups-and-safety"
-                amazonLabel="Browse horse stirrup width-inch-clearance question cards on Amazon →"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/horse+stirrup+drag+entrapment+watch+log+notebook?s=stirrups-and-safety"
-                amazonLabel="Browse horse stirrup drag-entrapment watch log notebooks on Amazon →"
-              />
+
           </div>
           </div>
 

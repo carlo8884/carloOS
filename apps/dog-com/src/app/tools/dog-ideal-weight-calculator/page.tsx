@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -8,7 +9,6 @@ import {
   combineSchemas,
   SchemaScript,
   FAQAccordion,
-  AffiliateDisclosure,
   ArticleSourcesList,
   CrossPortfolioCard,
   ShopCtas,
@@ -28,7 +28,7 @@ const SOURCES = [
   { label: 'American Kennel Club: Breed Weight and Standards', url: 'https://www.akc.org/dog-breeds/', publisher: 'AKC' },
   { label: 'American Animal Hospital Association: Weight Management Guidelines for Dogs and Cats', url: 'https://www.aaha.org/aaha-guidelines/weight-management/weight-management-home/', publisher: 'AAHA' },
   { label: 'WSAVA Global Nutrition Committee: Body Condition Score Charts (9-point)', url: 'https://wsava.org/global-guidelines/global-nutrition-guidelines/', publisher: 'WSAVA' },
-  { label: 'Merck Veterinary Manual: Obesity and Nutritional Management in Dogs', url: 'https://www.merckvetmanual.com/management-and-nutrition/nutrition-small-animals/nutritional-requirements-and-related-diseases-of-small-animals', publisher: 'Merck Vet Manual' },
+  { label: 'Merck Veterinary Manual: Obesity and Nutritional Management in Dogs', url: 'https://www.merckvetmanual.com/management-and-nutrition/nutrition-small-animals/nutritional-requirements-of-small-animals', publisher: 'Merck Vet Manual' },
 ]
 
 const FAQS = [
@@ -56,9 +56,9 @@ const FAQS = [
   {
     question: 'How do I help my dog lose weight safely?',
     answer:
-      'Weight loss in dogs should be gradual and vet-guided — typically aiming for roughly 1–2% of body weight lost per week, not a crash diet. Start by having your veterinarian set a target weight and rule out a medical cause such as hypothyroidism. From there, measure food by weight or with the calorie calculator rather than free-feeding, account for treats in the daily total, and increase activity as the dog\'s joints allow. A weight-management or therapeutic diet can help because it keeps the dog feeling full on fewer calories. Re-check the body condition score every few weeks and adjust.',
+      'Weight loss should be gradual and vet-guided. The 2014 AAHA Weight Management Guidelines state that the desired rate of weight loss in dogs is 1–2% per week (https://www.aaha.org/wp-content/uploads/globalassets/02-guidelines/weight-management/2014-AAHA-Weight-Management-Guidelines-for-Dogs-and-Cats). Have your veterinarian set the target weight and rule out a medical cause such as hypothyroidism. Measure food by weight or with the calorie calculator rather than free-feeding, account for treats in the daily total, and increase activity as the dog\'s joints allow. Re-check the body condition score every few weeks and adjust.',
     answerText:
-      'Gradually, under veterinary guidance — about 1–2% of body weight per week. Have the vet set a target and rule out a medical cause, measure food by calories, count treats, and re-check body condition every few weeks.',
+      'The 2014 AAHA Weight Management Guidelines state that the desired rate of weight loss in dogs is 1–2% per week (https://www.aaha.org/wp-content/uploads/globalassets/02-guidelines/weight-management/2014-AAHA-Weight-Management-Guidelines-for-Dogs-and-Cats). The vet sets the target. Measure food, count treats, and re-check body condition.',
   },
 ]
 
@@ -84,7 +84,7 @@ const appSchema = {
     'Healthy adult weight range by breed from AKC-standard bands',
     'Estimated ideal weight from the WSAVA 9-point body condition score',
     'Size-class fallback for mixed-breed or unlisted dogs',
-    'Shoppable weight-check kit via Amazon category searches',
+    'Shop the weight-check kit via Amazon searches',
   ],
 }
 
@@ -121,7 +121,7 @@ const howToSchema = buildHowToSchema({
     },
     {
       name: 'Read the healthy range and estimated ideal weight',
-      text: 'The calculator returns the breed\'s healthy adult weight range and applies the standard BCS heuristic (each point above 5 ≈ 10% overweight) to estimate an individual ideal weight. Use this as a starting point; your veterinarian sets the final target.',
+      text: 'The calculator returns the breed\'s healthy adult weight range and applies a planning figure (each point above 5 ≈ 10% overweight) to estimate an individual ideal weight. Use this as a starting point; your veterinarian sets the final target.',
     },
   ],
 })
@@ -189,7 +189,7 @@ export default function DogIdealWeightCalculatorPage() {
               <span className="font-semibold text-brand-dark">Worked example.</span> A Labrador&apos;s
               healthy adult weight is typically{' '}
               <span className="font-semibold text-brand-dark">55–80 lb</span> depending on sex and
-              frame. If a Lab weighs 90 lb at a BCS of 7/9, the standard heuristic (each BCS point
+              frame. If a Lab weighs 90 lb at a BCS of 7/9, the planning figure (each BCS point
               above ideal ≈ 10% over weight) estimates an ideal of about{' '}
               <span className="font-semibold text-brand-dark">75 lb</span> — roughly 15 lb to lose,
               gradually and under veterinary guidance.
@@ -210,28 +210,28 @@ export default function DogIdealWeightCalculatorPage() {
             siteId="dog-com"
             nextHref="/tools/dog-calorie-calculator"
             nextLabel="Turn the target into a daily scoop"
-            nextBlurb="Ideal weight is the number to aim for. The calorie calculator turns that target into a starting daily kcal — then the vet confirms the plan. Weigh the bowl; the hop below is the same portion-control scale search already on this page."
+            nextBlurb="Ideal weight is the number to aim for. The calorie calculator turns that target into a starting daily kcal — then the vet confirms the plan. Weigh the bowl; The button below opens the same portion-control scale search on Amazon."
             resourceHref="/go/amazon-brand/portion+control+food+scale+dog?s=tools-dog-ideal-weight"
             resourceLabel="Browse portion-control food scales on Amazon →"
           />
         </div>
       </section>
 
-      {/* Money path — live amazon-brand search hops (weight-check / portion kit).
-          ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-          Category searches only — not a ranked list, not a diagnosis. */}
+      {/* Shop note — live amazon-brand search buttons (weight-check / portion kit).
+          ShopCtas hides empty Chewy; never href="#" or an empty link.
+          Amazon searches only — not a ranked list, not a diagnosis. */}
       <section id="ideal-weight-kit" className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <div className="max-w-2xl">
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/digital+gram+scale+kitchen+pet?s=tools-dog-ideal-weight", "/go/amazon-brand/portion+control+food+scale+dog?s=tools-dog-ideal-weight", "/go/amazon-brand/dog+measuring+tape+body+condition+chart?s=tools-dog-ideal-weight", "/go/amazon-brand/elevated+slow+feeder+bowl+dog?s=tools-dog-ideal-weight", "/go/amazon-brand/puzzle+feeder+dog?s=tools-dog-ideal-weight", "/go/amazon-brand/weight+management+dog+food?s=tools-dog-ideal-weight"]} />
           <div className="mt-4 rounded-xl border border-brand-border bg-brand-white p-5">
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Shop a weight-check kit
+              Shop these supplies
             </div>
             <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/digital+gram+scale+kitchen+pet?s=tools-dog-ideal-weight"
-                amazonLabel="Browse kitchen / pet scales on Amazon →"
+                amazonLabel="Browse digital gram scales on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/portion+control+food+scale+dog?s=tools-dog-ideal-weight"
@@ -239,7 +239,7 @@ export default function DogIdealWeightCalculatorPage() {
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/dog+measuring+tape+body+condition+chart?s=tools-dog-ideal-weight"
-                amazonLabel="Browse dog measuring tapes and BCS charts on Amazon →"
+                amazonLabel="Browse dog measuring tapes and body condition charts on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/elevated+slow+feeder+bowl+dog?s=tools-dog-ideal-weight"
@@ -326,7 +326,6 @@ export default function DogIdealWeightCalculatorPage() {
               </Link>{' '}
               for the full plan. A weight-management diet can keep a dog full on fewer calories.
             </p>
-            <AffiliateDisclosure variant="inline" siteId="dog-com" className="mb-3 text-2xs" />
             <Link
               href="/reviews/best-dry-dog-food"
               className="inline-block bg-brand-primary text-white font-semibold text-sm px-4 py-2 rounded-md no-underline hover:bg-brand-primary-dark"
@@ -346,9 +345,9 @@ export default function DogIdealWeightCalculatorPage() {
           <p className="mb-4 text-base leading-relaxed text-brand-text-mid">
             The healthy range comes from the AKC-standard adult weight band for the selected breed in
             the Dog.com breed dataset; for a mixed-breed or unlisted dog, a size-class band is used
-            instead. The estimated ideal weight uses the standard veterinary body-condition
-            heuristic: each point of body condition score above the ideal (4–5 of 9) represents
-            roughly 10% over ideal body weight, so estimated ideal weight ≈ current weight ÷ (1 +
+            instead. The estimated ideal weight uses a planning figure: each point of body condition
+            score above the ideal (4–5 of 9) represents roughly 10% over ideal body weight, so
+            estimated ideal weight ≈ current weight ÷ (1 +
             0.10 × (BCS − 5)). Because frame, sex, age, and muscle all shift the right number, two
             dogs of the same breed can sit at different points in the range — which is why a body
             condition assessment matters more than the scale alone.

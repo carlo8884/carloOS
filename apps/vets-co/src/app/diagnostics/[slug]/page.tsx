@@ -11,7 +11,6 @@ import {
   ArticleLayout,
   CalloutBox,
   RelatedLinks,
-  AffiliateDisclosure
 } from '@carloOS/ui'
 import {
   Diagnostics,
@@ -231,7 +230,7 @@ export default function DiagnosticPage({ params }: PageProps) {
           <h2>Typical cost</h2>
           <p>
             Cost varies by region, hospital, and complexity. The figures below are{' '}
-            <strong>typical US ranges</strong>, never guaranteed — your individual quote may fall
+            <strong>typical US ranges</strong> dated 2026-05-30, never guaranteed — your individual quote may fall
             outside the range based on local pricing and whether the test is bundled with other
             diagnostics.
           </p>
@@ -256,6 +255,7 @@ export default function DiagnosticPage({ params }: PageProps) {
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
                 Pet Insurance & Diagnostic Costs
               </div>
+              <p>Those figures are typical US ranges dated 2026-05-30.</p>
               <div className="font-display font-bold text-brand-dark text-lg mb-2">
                 Diagnostic workups commonly run $300-2,000
               </div>
@@ -326,7 +326,6 @@ export default function DiagnosticPage({ params }: PageProps) {
             interpretation supersedes any general guidance here.
           </CalloutBox>
 
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
 
           {/* FAQs */}
           <h2>Frequently asked questions</h2>

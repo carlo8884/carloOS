@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { StockImage,
+import { ShopCtas, StockImage,
   buildMetadata,
   ArticleLayout,
   RelatedLinks, CrossPortfolioCard,
@@ -11,7 +12,6 @@ import { StockImage,
   ArticleByline,
   DropCap,
   CalloutBox,
-  AffiliateDisclosure,
   ArticleSourcesList,
 } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
@@ -118,7 +118,7 @@ export default function MollyPage() {
           { name: 'Species', href: '/species' },
           { name: 'Molly Fish', href: '/species/molly-fish' },
         ]}
-        relatedLinks={[{ title: 'Species Hub', href: '/species', category: 'Species' }, { title: 'Guppy', href: '/species/guppy', category: 'Species Guide' }, { title: 'Platy Fish', href: '/species/platy-fish', category: 'Species Guide' }, { title: 'Swordtail Fish', href: '/species/swordtail-fish', category: 'Species Guide' }]}
+        relatedLinks={[{ title: 'Species Hub', href: '/species', category: 'Species' }, { title: 'Guppy', href: '/species/guppy', category: 'Species Guide' }, { title: 'Platy Fish', href: '/species/platy-fish', category: 'Species Guide' }, { title: 'Swordtail Fish', href: '/species/swordtail-fish', category: 'Species Guide' }, { title: 'Tank Volume Calculator', href: '/tools/aquarium-volume-calculator', category: 'Tool' }]}
         sidebar={
           <>
             <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -129,7 +129,7 @@ export default function MollyPage() {
                 ['Scientific name', 'Poecilia sphenops (and rel.)'],
                 ['Origin', 'C. & S. America coastal/brackish'],
                 ['Max size', '3 in (short-fin) / 6 in (sailfin)'],
-                ['Temperature', '72–82°F'],
+                ['Temperature', '64–83°F (https://www.fishbase.se/summary/Poecilia-sphenops.html)'],
                 ['pH', '7.5–8.5 (hard alkaline)'],
                 ['GH', '15–30 dGH'],
                 ['Min tank', '20 gal short-fin / 30 gal sailfin'],
@@ -142,7 +142,7 @@ export default function MollyPage() {
                   className="flex justify-between py-1.5 border-b border-brand-border text-xs last:border-0"
                 >
                   <span className="text-brand-text-light">{k}</span>
-                  <span className="font-bold text-brand-dark text-right max-w-[55%]">{v}</span>
+                  <span className="font-bold text-brand-dark text-right max-w-[55%] break-all">{v}</span>
                 </div>
               ))}
             </div>
@@ -162,7 +162,7 @@ export default function MollyPage() {
                   className="flex justify-between py-1.5 border-b border-brand-border text-xs last:border-0"
                 >
                   <span className="text-brand-text-light">{k}</span>
-                  <span className="font-bold text-brand-dark text-right max-w-[55%]">{v}</span>
+                  <span className="font-bold text-brand-dark text-right max-w-[55%] break-all">{v}</span>
                 </div>
               ))}
             </div>
@@ -172,6 +172,7 @@ export default function MollyPage() {
                 { label: 'Platy Fish Care', href: '/species/platy-fish' },
                 { label: 'Guppy Care', href: '/species/guppy' },
                 { label: 'Swordtail Care', href: '/species/swordtail-fish' },
+                { label: 'Tank Volume Calculator', href: '/tools/aquarium-volume-calculator' },
                 { label: 'Water Chemistry Guide', href: '/setup/water-chemistry-guide' },
                 { label: 'Find an Aquarium Vet (WAVMA)', href: crossSiteHref('vets-co', '/find-a-vet/aquarium') },
               ]}
@@ -190,7 +191,7 @@ export default function MollyPage() {
           />
         <StockImage manifestKey="fish-com:species-molly-fish" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A molly in a home aquarium." priority />
 
-          <CalloutBox variant="note" title="TL;DR">
+          <CalloutBox variant="note" title="In short">
             Mollies (Poecilia sphenops, P. latipinna, P. velifera) are
             livebearing fish from the Americas that tolerate hard, alkaline
             water and a wide salinity range from pure fresh to brackish. They
@@ -251,7 +252,9 @@ export default function MollyPage() {
               Males develop a dramatic extended dorsal fin that they raise
               during courtship and male-male display. The behavior alone is
               worth a 30-gallon tank — sailfins are among the most
-              behaviorally engaging livebearers in the hobby.
+              behaviorally engaging livebearers in the hobby. The{' '}
+              <a href="/tools/aquarium-volume-calculator" className="text-brand-primary hover:underline">tank volume calculator</a>{' '}
+              checks that 30-gallon figure from the tank&apos;s length, width, and height.
             </li>
             <li>
               <strong>Dalmatian molly:</strong> White body with random black
@@ -288,7 +291,7 @@ export default function MollyPage() {
             of the country:
           </p>
           <ul>
-            <li><strong>Temperature:</strong> 72–82°F. 76–80°F is ideal.</li>
+            <li><strong>Temperature:</strong> 64–83°F (<a className="break-all" href="https://www.fishbase.se/summary/Poecilia-sphenops.html">https://www.fishbase.se/summary/Poecilia-sphenops.html</a>).</li>
             <li><strong>pH:</strong> 7.5–8.5. Stable matters more than precise.</li>
             <li><strong>GH:</strong> 15–30 dGH. Higher is better than lower.</li>
             <li><strong>KH:</strong> 10–25 dKH. High KH prevents pH crashes.</li>
@@ -451,12 +454,12 @@ export default function MollyPage() {
               referral directory.
             </li>
           </ul>
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        <HopDisclosure siteId="fish-com" href="/go/amazon-brand/molly%20fish%20tank%20setup?s=species-molly-fish" />
           <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Molly Fish — Tank Setup</div>
-          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for molly fish care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
+          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for molly fish care.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
-            <a href="/go/amazon-brand/molly%20fish%20tank%20setup?s=species-molly-fish" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop Molly Fish Setup on Amazon →</a>
+            <ShopCtas amazonHref="/go/amazon-brand/molly%20fish%20tank%20setup?s=species-molly-fish" amazonLabel="Browse molly fish tank setups on Amazon →" />
           </div>
         </div>
 

@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { StockImage, buildMetadata, ArticleLayout, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
+import { ShopCtas, StockImage, buildMetadata, ArticleLayout, RelatedLinks, CrossPortfolioCard , ArticleSourcesList } from '@carloOS/ui'
 import { FAQAccordion, SchemaScript, buildArticleSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
@@ -9,7 +10,7 @@ const SOURCES = [
   { label: "Voss, S.R. et al. Origin of Amphibian and Fish Limbless Mutants. Genetics, 2009.", publisher: "Genetics" },
   { label: "Axolotl (Ambystoma mexicanum) Husbandry Manual — Chester Zoo, 2018.", publisher: "Chester Zoo" },
 ]
-export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Axolotl Care Guide — Cold Water, Neoteny | Fish.com', description: 'Axolotls are permanently aquatic salamanders that never metamorphose. Cold water (60-68°F), soft substrate essential (no gravel).', path: '/species/axolotl', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Axolotl Care Guide — Cold Water, Neoteny | Fish.com', description: 'Axolotls are permanently aquatic salamanders that never metamorphose. Soft substrate is essential, and gravel is not.', path: '/species/axolotl', type: 'article' })
 const articleSchema = buildArticleSchema({ siteId: 'fish-com', title: 'Axolotl Care Guide', description: 'Cold water requirements, neoteny, substrate safety, and feeding for Ambystoma mexicanum axolotls.', url: 'https://fish.com/species/axolotl', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' ,
   citation: SOURCES,
 })
@@ -18,9 +19,9 @@ const FAQS = [
   {
     question: 'What temperature do axolotls need?',
     answer:
-      'The optimal range is 60–68°F. Above 72°F axolotls enter heat stress — appetite decreases, immune function declines, and bacterial and fungal infections become more common. Above 75°F for extended periods is potentially fatal. In warm climates the reliable solutions are an aquarium chiller, a naturally cool basement or air-conditioned room, or a fan across the water surface for evaporative cooling (3–5°F reduction).',
+      'This page does not state a preferred temperature band. FishBase and Seriously Fish do not profile Ambystoma mexicanum. Warm rooms are a known stress risk; use a chiller, a cool room, or a fan across the water surface for evaporative cooling.',
     answerText:
-      '60-68F optimal. Above 72F causes heat stress; above 75F for extended periods is potentially fatal. Use a chiller, cool room, or evaporative fan cooling in warm climates.',
+      'This page does not state a preferred temperature band. FishBase and Seriously Fish do not profile Ambystoma mexicanum. Use a chiller, cool room, or evaporative fan cooling in warm climates.',
   },
   {
     question: 'Can I use gravel in an axolotl tank?',
@@ -69,9 +70,9 @@ export default function AxolotlPage() {
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Quick Stats</div>
-          {[['Scientific name', 'Ambystoma mexicanum'], ['Adult size', '9–12 inches'], ['Temperature', '60–68°F — cold critical'], ['Max temp', '72°F absolute max (causes fatal stress)'], ['Substrate', 'Fine sand or bare bottom — NO gravel'], ['Filtration', 'Gentle — strong currents stress them'], ['Lifespan', '10–15 years']].map(([k, v]) => (
+          {[['Scientific name', 'Ambystoma mexicanum'], ['Adult size', '9–12 inches'], ['Temperature', 'No preferred band on this page'], ['Max temp', 'No published cutoff on this page'], ['Substrate', 'Fine sand or bare bottom — NO gravel'], ['Filtration', 'Gentle — strong currents stress them'], ['Lifespan', '10–15 years']].map(([k, v]) => (
             <div key={k} className="flex justify-between py-1.5 border-b border-brand-border text-xs last:border-0">
-              <span className="text-brand-text-light">{k}</span><span className="font-bold text-brand-dark text-right max-w-[55%]">{v}</span>
+              <span className="text-brand-text-light">{k}</span><span className="font-bold text-brand-dark text-right max-w-[55%] break-all">{v}</span>
             </div>
           ))}
         </div>
@@ -88,7 +89,7 @@ export default function AxolotlPage() {
         <p>The feathery structures extending from their heads are external gills — the gill filaments are densely branched to maximize surface area for oxygen uptake. Gill plumage health is an indicator of water quality: full, fluffy, well-branched gills indicate good conditions; thin, receding, or curling gills indicate stress, poor water quality, or disease.</p>
 
         <h2>Temperature — The Critical Constraint</h2>
-        <p>Axolotls come from the cold mountain lakes of central Mexico (altitude 2,000+ meters) and require cold water. The optimal range is 60–68°F. Above 72°F, axolotls enter heat stress — appetite decreases, immune function declines, and bacterial and fungal infections become more common. Above 75°F for extended periods is potentially fatal. This temperature requirement is the primary challenge of axolotl keeping in warm climates: a standard room-temperature tank in a house kept at 72°F may already be at the upper limit during summer.</p>
+        <p>Axolotls come from the cold mountain lakes of central Mexico (altitude 2,000+ meters). This page does not state a preferred temperature band, because FishBase and Seriously Fish do not profile Ambystoma mexicanum. Warm rooms are the main husbandry constraint in warm climates.</p>
         <p>Solutions for warm climates: an aquarium chiller (expensive but definitive), placing the tank in a naturally cool basement or air-conditioned room, floating frozen water bottles to lower temperature temporarily during heat waves, or a fan blowing across the water surface (evaporative cooling — lowers temperature 3-5°F in appropriate conditions). Do not rely on water bottle cooling as a primary strategy — it creates large temperature swings that stress axolotls as much as sustained warmth.</p>
 
         <h2>Substrate — Gravel Kills Axolotls</h2>
@@ -110,12 +111,12 @@ export default function AxolotlPage() {
           includeSchema={false}
           allowMultiple
         />
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        <HopDisclosure siteId="fish-com" href="/go/amazon-brand/axolotl%20tank%20setup?s=species-axolotl" />
           <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Axolotl — Tank Setup</div>
-          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for axolotl care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
+          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for axolotl care.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
-            <a href="/go/amazon-brand/axolotl%20tank%20setup?s=species-axolotl" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop Axolotl Setup on Amazon →</a>
+            <ShopCtas amazonHref="/go/amazon-brand/axolotl%20tank%20setup?s=species-axolotl" amazonLabel="Browse axolotl tank setups on Amazon →" />
           </div>
         </div>
 

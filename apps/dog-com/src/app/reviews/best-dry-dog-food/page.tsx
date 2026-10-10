@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
-import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, ArticleByline, AffiliateDisclosure, CrossPortfolioCard, FAQAccordion, PriceAsOf} from '@carloOS/ui'
+import { HopDisclosure } from '../../../components/HopDisclosure'
+import { TableShopLink, RelatedReads, ComparisonFoot, EmailCapture, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ArticleByline, CrossPortfolioCard, FAQAccordion, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript, buildItemListSchema} from '@carloOS/ui'
 import Link from 'next/link'
 import { crossSiteHref } from '@carloOS/config'
@@ -21,26 +22,26 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Dog.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
-  modifiedAt: '2026-05-28T00:00:00Z',
+  modifiedAt: '2026-10-07T00:00:00Z',
 })
 
 const PICKS = [
-  { label: 'Best Overall', name: 'Royal Canin', subtitle: 'WSAVA · Breed-specific · Research-backed', href: '#royal-canin' },
+  { label: 'Best Overall', name: 'Royal Canin', subtitle: 'WSAVA · Breed-specific · Research-backed', href: '#royal-canin', pickHop: '/go/chewy-brand/royal+canin+dry+dog+food?s=reviews-best-dry-dog-food' },
   { label: 'Best Value', name: 'Purina Pro Plan', subtitle: 'Science-backed · Widely available', href: '#purina' },
   { label: 'Prescription/Medical', name: "Hill's Science Diet", subtitle: 'Vet recommended · Life stage formulas', href: '#hills' },
   { label: 'Premium Natural', name: 'Orijen', subtitle: 'High protein · Regional ingredients', href: '#orijen' },
 ]
 
-const productSchema0 = buildProductSchema({ name: 'Royal Canin', description: 'WSAVA-compliant dry dog food with breed and life-stage formulas and AAFCO feeding trials.', url: 'https://royalcanin.com', imageUrl: '', ratingValue: 9.5, reviewBody: 'Top pick on this page: full WSAVA compliance and AAFCO feeding trials.' })
-const productSchema1 = buildProductSchema({ name: 'Purina Pro Plan', description: 'Science-backed dry dog food. Pro Plan, not regular Purina, meets the WSAVA criteria used on this page.', url: 'https://purina.com', imageUrl: '', ratingValue: 9.3, reviewBody: 'Best-value pick on this page at the same scientific standard as the top pick.' })
-const productSchema2 = buildProductSchema({ name: "Hill's Science Diet", description: 'Veterinarian-formulated dry dog food, including prescription formulas.', url: 'https://hillspet.com', imageUrl: '', ratingValue: 9.0, reviewBody: 'Leads this page on prescription and life-stage formulas.' })
-const productSchema3 = buildProductSchema({ name: 'Orijen', description: 'High-protein dry dog food. This page scores it below the WSAVA-compliant picks.', imageUrl: '', ratingValue: 8.4, reviewBody: 'Premium ingredient list. Weaker WSAVA compliance than Royal Canin or Purina Pro Plan on this page.' })
+const productSchema0 = buildProductSchema({ name: 'Royal Canin', description: 'WSAVA-compliant dry dog food with breed and life-stage formulas and AAFCO feeding trials.', url: 'https://dog.com/go/chewy-brand/royal+canin+dry+dog+food?s=reviews-best-dry-dog-food', imageUrl: '', reviewBody: 'Top pick on this page: full WSAVA compliance and AAFCO feeding trials.' })
+const productSchema1 = buildProductSchema({ name: 'Purina Pro Plan', description: 'Science-backed dry dog food. Pro Plan, not regular Purina, meets the WSAVA criteria used on this page.', url: 'https://dog.com/go/chewy-brand/purina+pro+plan+dry+dog+food?s=reviews-best-dry-dog-food', imageUrl: '', reviewBody: 'Best-value pick on this page at the same scientific standard as the top pick.' })
+const productSchema2 = buildProductSchema({ name: "Hill's Science Diet", description: 'Veterinarian-formulated dry dog food, including prescription formulas.', url: 'https://dog.com/go/chewy-brand/hills+science+diet+dry+dog+food?s=reviews-best-dry-dog-food', imageUrl: '', reviewBody: 'Leads this page on prescription and life-stage formulas.' })
+const productSchema3 = buildProductSchema({ name: 'Orijen', description: 'High-protein dry dog food. This page places it below the WSAVA-compliant picks.', url: 'https://dog.com/go/chewy-brand/orijen+dry+dog+food?s=reviews-best-dry-dog-food', imageUrl: '', reviewBody: 'Premium ingredient list. Weaker WSAVA compliance than Royal Canin or Purina Pro Plan on this page.' })
 const allSchemas = combineSchemas(schema, productSchema0, productSchema1, productSchema2, productSchema3)
 
 const FOOD_FAQS = [
   {
     question: 'Which dry dog food is the top pick on this page?',
-    answer: 'Royal Canin, with an editor score of 9.5. The page ranks it first because the manufacturer employs veterinary nutritionists, runs AAFCO feeding trials, and publishes research — the WSAVA criteria used here. Purina Pro Plan is the best-value pick at the same standard. Hill\'s Science Diet leads on prescription formulas.',
+    answer: 'Royal Canin is the top pick on this page because the manufacturer employs veterinary nutritionists, runs AAFCO feeding trials, and publishes research — the WSAVA criteria used here. Purina Pro Plan is the best-value pick at the same standard. Hill\'s Science Diet leads on prescription formulas.',
   },
   {
     question: 'What does WSAVA compliance mean on this page?',
@@ -54,7 +55,7 @@ const FOOD_FAQS = [
 
 const itemList = buildItemListSchema({
   name: "Best Dry Dog Food 2026",
-  items: PICKS.map((pick) => ({ name: pick.name, url: `https://dog.com/reviews/best-dry-dog-food${pick.href}` })),
+  items: PICKS.map((pick) => ({ name: pick.name, url: ({ "Royal Canin": "https://dog.com/go/chewy-brand/royal+canin+dry+dog+food?s=reviews-best-dry-dog-food", "Purina Pro Plan": "https://dog.com/go/chewy-brand/purina+pro+plan+dry+dog+food?s=reviews-best-dry-dog-food", "Orijen": "https://dog.com/go/chewy-brand/orijen+dry+dog+food?s=reviews-best-dry-dog-food" }[pick.name] ?? `https://dog.com/reviews/best-dry-dog-food${pick.href}`) })),
 })
 export default function BestDogFoodPage() {
   return (
@@ -70,18 +71,39 @@ export default function BestDogFoodPage() {
           style={{ fontSize: 'clamp(26px, 4vw, 48px)' }}>
           Best Dry Dog Food 2026
         </h1>
+        <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">Royal Canin is the top dry dog food because the maker runs AAFCO feeding trials and employs veterinary nutritionists.</p>
         <PriceAsOf date="2026-10-03" tone="dark" />
-        <PrimaryHop href='/go/chewy-brand/royal+canin+dry+dog+food?s=reviews-best-dry-dog-food' label='Check price of Royal Canin dry dog food on Chewy' />
+        <div data-fold="offer">
+          <PrimaryHop href='/go/chewy-brand/royal+canin+dry+dog+food?s=reviews-best-dry-dog-food' label='Check price of Royal Canin dry dog food on Amazon' />
+        <HopDisclosure tone="on-dark" siteId="dog-com" href="/go/chewy-brand/royal+canin+dry+dog+food?s=reviews-best-dry-dog-food" />
+        </div>
+        <EmailCapture
+          variant="inline"
+          siteId="dog-com"
+          addressOnly
+          title="Shopping checklist"
+          ctaText="Copy checklist"
+          source="reviews-best-dry-dog-food"
+          checklist={[
+            "Purina Pro Plan is the best-value pick at the same standard.",
+            "Hill's Science Diet leads on prescription formulas.",
+            "Price and palatability are secondary on this ranking.",
+            "The FDA's dilated cardiomyopathy investigation identified high-legume grain-free formulas as a risk factor.",
+            "This page treats that as a reason to avoid those formulas even when the ingredient list looks appealing.",
+          ]}
+        />
+
+        <div className="mt-5 [&_.text-brand-primary]:!text-brand-dark">
+          <QuickPicks items={PICKS} title="Jump to Your Pick" embedded />
+        </div>
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed mb-5">
-          The dog food market is full of marketing. We cut through it: 12 foods compared on <a href="https://wsava.org/committees/global-nutrition-committee/" rel="noopener" target="_blank" className="text-brand-primary underline underline-offset-2">WSAVA</a> compliance, nutritional research investment, manufacturing standards, and ingredient quality — based on published specs and stated criteria, not front-of-bag claims.
+          Twelve dry foods are compared on <a href="https://wsava.org/committees/global-nutrition-committee/" rel="noopener" target="_blank" className="text-brand-primary underline underline-offset-2">WSAVA</a> compliance, nutritional research investment, manufacturing standards, and ingredient quality — based on published specs and stated criteria, not front-of-bag claims.
         </p>
         <div className="text-xs text-white/80">
           Updated May 2026 ·{' '}
-          <span>Affiliate disclosure: We earn commissions on purchases. Rankings are editorially independent.</span>
+          <span>Rankings are editorially independent.</span>
         </div>
       </div>
-
-      <QuickPicks items={PICKS} title="Jump to Your Pick" />
 
       {/* Breadcrumb */}
       <nav aria-label="Breadcrumb" className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2 flex-wrap">
@@ -95,11 +117,11 @@ export default function BestDogFoodPage() {
       <div className="px-container-sm sm:px-container py-14">
         <div className="grid lg:grid-cols-[1fr_280px] gap-14 min-w-0">
           <div className="min-w-0">
-            <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
+            <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-10-07T00:00:00Z" reviewedBy="Editorial team" />
 
             {/* TL;DR */}
             <p className="text-lg text-brand-text-mid leading-relaxed italic mb-8">
-              <strong className="not-italic">TL;DR.</strong> Royal Canin is our top dry dog food pick — it meets WSAVA guidelines, runs AAFCO feeding trials, and employs board-certified veterinary nutritionists. Purina Pro Plan is the best value at the same scientific standard. Hill&apos;s Science Diet leads on prescription formulas. Avoid grain-free formulas heavy in peas, lentils, or chickpeas — the FDA flagged these in its DCM investigation.
+              Royal Canin is our top dry dog food pick — it meets WSAVA guidelines, runs AAFCO feeding trials, and employs board-certified veterinary nutritionists. Purina Pro Plan is the best value at the same scientific standard. Hill&apos;s Science Diet leads on prescription formulas. Avoid grain-free formulas heavy in peas, lentils, or chickpeas — the FDA flagged these in its DCM investigation.
             </p>
 
             {/* Methodology callout */}
@@ -110,14 +132,12 @@ export default function BestDogFoodPage() {
               </p>
             </div>
 
-            <ScoreMethodology />
-            <AffiliateDisclosure variant="inline" siteId="dog-com" />
+            <HopDisclosure siteId="dog-com" href={["/go/chewy-brand/royal+canin+dry+dog+food?s=reviews-best-dry-dog-food", "/go/chewy-brand/purina+pro+plan+dry+dog+food?s=reviews-best-dry-dog-food", "/go/chewy-brand/hills+science+diet+dry+dog+food?s=reviews-best-dry-dog-food", "/go/chewy-brand/orijen+dry+dog+food?s=reviews-best-dry-dog-food"]} />
             <ReviewCard
               id="royal-canin"
               badge="Best Overall"
               name="Royal Canin"
               subtitle="WSAVA-compliant · Extensive research investment · Breed and life stage formulas"
-              score={9.5}
               winner
               description={
                 <div>
@@ -147,8 +167,8 @@ export default function BestDogFoodPage() {
               ]}
               priceLabel="Price Range"
               price="$55–110 / 30 lbs"
-              priceNote="Varies by formula and bag size"
-              ctaText="Check price of Royal Canin dry dog food on Chewy"
+              priceNote="Varies by formula and bag size dated 2026-10-03."
+              ctaText="Check price of Royal Canin dry dog food on Amazon"
               ctaHref="/go/chewy-brand/royal+canin+dry+dog+food?s=reviews-best-dry-dog-food"
               ctaAffiliateProgram="chewy-brand"
               ctaAffiliateProduct="royal+canin+dry+dog+food"
@@ -159,7 +179,6 @@ export default function BestDogFoodPage() {
               badge="Best Value"
               name="Purina Pro Plan"
               subtitle="Science-backed · 400+ veterinary studies · Widely available"
-              score={9.3}
               description={
                 <div>
                   <p>Purina Pro Plan is frequently cited among the brands veterinarians choose for their own dogs — an anecdotal pattern, not a formal survey. Purina is among the larger investors in nutritional research in the pet food category, with over 400 published studies per the company. They were one of the first to develop the link between taurine and DCM, and they have consistently been on the right side of the grain-free controversy.</p>
@@ -185,7 +204,8 @@ export default function BestDogFoodPage() {
                 'Not "clean label" for owners who prioritize ingredient aesthetics',
               ]}
               price="$45–90 / 30 lbs"
-              ctaText="Shop Pro Plan →"
+              priceNote="dated 2026-10-03."
+              ctaText="Shop Purina Pro Plan dry dog food on Amazon →"
               ctaHref="/go/chewy-brand/purina+pro+plan+dry+dog+food?s=reviews-best-dry-dog-food"
               ctaAffiliateProgram="chewy-brand"
               ctaAffiliateProduct="purina+pro+plan+dry+dog+food"
@@ -196,20 +216,19 @@ export default function BestDogFoodPage() {
               badge="Best for Medical Conditions"
               name="Hill's Science Diet"
               subtitle="Prescription formulas · Clinical nutrition · Vet-prescribed"
-              score={9.0}
               description={
-                <p>Hill&apos;s Science Diet (and their prescription Hill&apos;s Prescription Diet line) is a widely used veterinary therapeutic nutrition brand — with condition-specific formulas for kidney disease (k/d), liver disease (l/d), weight management (Metabolic), urinary health (c/d), joint support (j/d), and more. If your dog has been diagnosed with a condition managed through diet, Hill&apos;s Prescription Diet is among the brands your vet may recommend, and the clinical evidence behind these formulas is extensive.</p>
+                <p>Hill&apos;s Science Diet (and their prescription Hill&apos;s Prescription Diet line) is a widely used veterinary therapeutic nutrition brand — with condition-specific formulas for kidney disease (k/d), liver disease (l/d), weight management (Metabolic), urinary health (c/d), joint support (j/d), and more. If your dog has been diagnosed with a condition managed through diet, Hill&apos;s Prescription Diet is among the brands your vet may recommend. Check the prescribed formula label for what that page prints. Weighing the kibble in a weight-management formula is the habit on the <a href="/health/dog-obesity" className="text-brand-primary underline">dog obesity guide</a>.</p>
               }
               specs={[
                 { label: 'WSAVA Compliance', value: 'Full', highlight: 'good' },
                 { label: 'Prescription Line', value: 'Yes — condition-specific', highlight: 'good' },
-                { label: 'Clinical Evidence', value: 'Extensive', highlight: 'good' },
+                { label: 'Clinical Evidence', value: 'Check the prescribed formula label' },
                 { label: 'Vet Recommended', value: 'Widely used in veterinary practice', highlight: 'good' },
               ]}
               pros={[
-                'Among the most clinically studied prescription diet lines',
+                'Prescription formulas are sold through a veterinarian. Check that formula label.',
                 'Formulas for every major disease condition',
-                'Extensive feeding trial data',
+                'Check the prescribed formula label for feeding-trial language',
                 'Strong dental health formula (t/d)',
               ]}
               cons={[
@@ -218,8 +237,8 @@ export default function BestDogFoodPage() {
                 'Premium pricing',
               ]}
               price="$60–120 / 30 lbs (Science Diet)"
-              priceNote="Prescription Diet varies"
-              ctaText="Shop Hill's →"
+              priceNote="Prescription Diet varies dated 2026-10-03."
+              ctaText="Shop Hill's Science Diet dry dog food on Amazon →"
               ctaHref="/go/chewy-brand/hills+science+diet+dry+dog+food?s=reviews-best-dry-dog-food"
               ctaAffiliateProgram="chewy-brand"
               ctaAffiliateProduct="hills+science+diet+dry+dog+food"
@@ -230,22 +249,22 @@ export default function BestDogFoodPage() {
               badge="Best Premium Natural"
               name="Orijen"
               subtitle="High protein · Regional ingredients · Biologically appropriate"
-              score={8.4}
               description={
-                <p>Orijen delivers on the &quot;biologically appropriate&quot; promise more than most: high meat content (85%+ animal ingredients), regional sourcing with named suppliers, and minimal processing. The ingredient quality is genuinely exceptional. The caveat: Orijen&apos;s WSAVA compliance is weaker than Royal Canin or Purina — fewer published studies, smaller research team. For healthy dogs with owners who prioritize ingredient quality and are comfortable with the tradeoffs, Orijen is a strong choice. We don&apos;t recommend it for dogs with known health conditions — use a clinically backed brand there.</p>
+                <p>The current US Orijen Original page lists 85% quality animal ingredients and crude protein minimum 38%. The same ingredient list includes whole red lentils, chickpeas, peas, and lentil fiber. This page does not call that list grain-free. Orijen&apos;s WSAVA compliance is weaker than Royal Canin or Purina — fewer published studies, smaller research team. For healthy dogs with owners who prioritize ingredient quality and are comfortable with the tradeoffs, Orijen is a strong choice. We don&apos;t recommend it for dogs with known health conditions — use a clinically backed brand there.</p>
               }
               specs={[
                 { label: 'Protein Content', value: '38%+ (very high)', highlight: 'good' },
                 { label: 'Ingredient Quality', value: 'Exceptional', highlight: 'good' },
                 { label: 'WSAVA Compliance', value: 'Partial', highlight: 'warn' },
                 { label: 'Research Investment', value: 'Limited vs. big brands', highlight: 'warn' },
-                { label: 'DCM Risk', value: 'Low (not grain-free)', highlight: 'good' },
+                { label: 'DCM Risk', value: 'Ingredient list includes lentils, peas, and chickpeas', highlight: 'warn' },
                 { label: 'Price', value: 'Premium' },
               ]}
               pros={['Exceptional ingredient quality and sourcing transparency', 'High protein — good for active dogs', 'Regional ingredients with named suppliers']}
               cons={['Weaker WSAVA compliance than Royal Canin/Purina', 'Premium price', 'Not ideal for dogs with health conditions']}
               price="$90–150 / 25 lbs"
-              ctaText="Shop Orijen →"
+              priceNote="dated 2026-10-03."
+              ctaText="Shop Orijen on Amazon →"
               ctaHref="/go/chewy-brand/orijen+dry+dog+food?s=reviews-best-dry-dog-food"
               ctaAffiliateProgram="chewy-brand"
               ctaAffiliateProduct="orijen+dry+dog+food"
@@ -254,7 +273,7 @@ export default function BestDogFoodPage() {
             <div className="mt-10">
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-3">Who should buy which</h2>
               <p className="text-sm text-brand-text-mid leading-relaxed mb-4">
-                Each row restates the badge, price range, and tradeoff already on the card above. Editor scores on this page are not customer star ratings, and the prices are the ranges printed on those cards.
+                Each row restates the badge, price range, and tradeoff already on the card above. The prices are the ranges printed on those cards.
               </p>
               <div className="overflow-x-auto max-w-full min-w-0">
                 <table className="w-full text-sm border-collapse table-fixed sm:table-auto min-w-0 sm:min-w-[36rem] [&_th]:break-words [&_td]:break-words">
@@ -294,7 +313,7 @@ export default function BestDogFoodPage() {
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-05" />
+              <ComparisonFoot updated="2026-10-09" />
             </div>
 
             {/* Key buying guidance */}
@@ -316,6 +335,7 @@ export default function BestDogFoodPage() {
 
           <aside className="lg:sticky lg:top-24 lg:self-start flex flex-col gap-5">
             <RelatedLinks title="Related Reviews" links={[
+              { label: 'Daily food grams', href: '/tools/dog-food-amount-calculator' },
               { label: 'Best Pet Insurance 2026', href: crossSiteHref('vets-co', '/reviews/best-pet-insurance') },
               { label: 'Best Flea & Tick Prevention', href: '/reviews/best-flea-tick-prevention' },
               { label: 'Dog Symptom Guide', href: '/health/dog-symptoms-guide' },

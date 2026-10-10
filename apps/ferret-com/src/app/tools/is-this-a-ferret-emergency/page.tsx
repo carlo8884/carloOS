@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -9,10 +10,10 @@ import {
   combineSchemas,
   SchemaScript,
   FAQAccordion,
-  AffiliateDisclosure,
   ArticleSourcesList,
   CrossPortfolioCard,
   ShopCtas,
+  PrimaryHop,
 } from '@carloOS/ui'
 import TriageHelper from './TriageHelper'
 import { crossSiteHref } from '@carloOS/config'
@@ -28,10 +29,10 @@ export const metadata: Metadata = buildMetadata({
 
 const SOURCES = [
   { label: 'Quesenberry KE, Carpenter JW (eds.). Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery. 4th ed. — ferret emergency presentation and critical-care chapters', url: 'https://www.elsevier.com/books/ferrets-rabbits-and-rodents/quesenberry/978-1-4160-6621-7', publisher: 'Elsevier/Saunders' },
-  { label: 'Merck Veterinary Manual: Routine Health Care of Ferrets — emergency vs wait presentations', url: 'https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/routine-health-care-of-ferrets', publisher: 'Merck Vet Manual' },
+  { label: 'Merck Veterinary Manual: Routine Health Care of Ferrets — emergency vs wait presentations', url: 'https://www.merckvetmanual.com/all-other-pets/ferrets/routine-health-care-for-ferrets', publisher: 'Merck Vet Manual' },
   { label: 'Association of Exotic Mammal Veterinarians (AEMV) — exotic-mammal emergency care and practitioner directory', url: 'https://aemv.org', publisher: 'AEMV' },
-  { label: 'ASPCA Animal Poison Control Center: Pet Poison Information', url: 'https://www.aspca.org/pet-care/animal-poison-control', publisher: 'ASPCA' },
-  { label: 'AVMA: Emergency Care for Pets — Warning Signs', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/emergencies-pets', publisher: 'AVMA' },
+  { label: 'ASPCA Animal Poison Control Center: Pet Poison Information', url: 'https://www.aspca.org/pet-care/aspca-poison-control', publisher: 'ASPCA' },
+  { label: 'AVMA: Emergency Care for Pets — Warning Signs', url: 'https://www.avma.org/resources-tools/pet-owners/emergency-care', publisher: 'AVMA' },
 ]
 
 const FAQS = [
@@ -94,7 +95,7 @@ const appSchema = {
     'Conservative urgency read: go now, same-day vet, or monitor closely',
     '15 ferret signs drawn from exotic-mammal emergency-medicine criteria',
     'Always rounds toward more care; no all-clear result',
-    'Shoppable ferret emergency-prep kit via Amazon category searches (pet first-aid kit, digital pet thermometer, soft pet carrier, styptic powder, wound-care gauze)',
+    'Shop the ferret emergency-prep kit via Amazon searches (pet first-aid kit, digital pet thermometer, soft pet carrier, styptic powder, wound-care gauze)',
   ],
 }
 
@@ -167,9 +168,14 @@ export default function IsThisAFerretEmergencyPage() {
           >
             Is This a Ferret Emergency?
           </h1>
+          <div className="mb-5" data-fold="offer">
+            <PrimaryHop href="/go/amazon-brand/pet+first+aid+kit?s=tools-is-this-a-ferret-emergency" label="Search Amazon for a pet first-aid kit" />
+            <HopDisclosure tone="on-dark" siteId="ferret-com" href="/go/amazon-brand/pet+first+aid+kit?s=tools-is-this-a-ferret-emergency" />
+          </div>
           <p className="text-lg text-white/55 leading-relaxed max-w-2xl">
             Check the ferret signs you are seeing and get a conservative urgency read — go now, same-day vet, or
             monitor closely — using emergency-vs-wait criteria from exotic-mammal emergency medicine.
+            This page is not a veterinarian. If your ferret may be in danger, contact a vet.
             This tool helps you decide how urgently to seek care. It does not diagnose your ferret.
           </p>
         </div>
@@ -227,15 +233,15 @@ export default function IsThisAFerretEmergencyPage() {
         </div>
       </section>
 
-      {/* Money path — live amazon-brand search hops (ferret emergency-prep / first-aid kit).
-          ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-          Category searches only — not a ranked list, not a diagnosis. */}
+      {/* Shop note — live amazon-brand search buttons (ferret emergency-prep / first-aid kit).
+          ShopCtas hides empty Chewy; never href="#" or an empty link.
+          Amazon searches only — not a ranked list, not a diagnosis. */}
       <section id="ferret-emergency-prep-kit" className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <div className="max-w-2xl">
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/pet+first+aid+kit?s=tools-is-this-a-ferret-emergency", "/go/amazon-brand/digital+pet+thermometer?s=tools-is-this-a-ferret-emergency", "/go/amazon-brand/soft+pet+carrier?s=tools-is-this-a-ferret-emergency", "/go/amazon-brand/styptic+powder?s=tools-is-this-a-ferret-emergency", "/go/amazon-brand/wound+care+gauze?s=tools-is-this-a-ferret-emergency"]} />
           <div className="mt-4 rounded-xl border border-brand-border bg-brand-white p-5">
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Shop a ferret emergency-prep kit
+              Shop these supplies
             </div>
             <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
@@ -280,7 +286,6 @@ export default function IsThisAFerretEmergencyPage() {
               collapse, not trouble breathing, not a blocked bladder — talk to a licensed vet on a screen
               rather than waiting for a gap to become an ER visit.
             </p>
-            <AffiliateDisclosure variant="inline" siteId="ferret-com" className="mb-3 text-2xs" />
             <div className="flex flex-col gap-2 sm:flex-row sm:flex-wrap">
               <Link
                 href="/ownership/ferret-insurance-basics"

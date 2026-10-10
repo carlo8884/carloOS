@@ -1,11 +1,12 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, AffiliateDisclosure, ArticleSourcesList, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, ArticleSourcesList, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 
 const SOURCES = [
-  { label: "Francis-Floyd, R. Stress — Its Role in Fish Disease — UF/IFAS Extension FA-43.", url: "https://edis.ifas.ufl.edu/publication/FA043", publisher: "UF/IFAS Extension" },
+  { label: "Francis-Floyd, R. Stress — Its Role in Fish Disease — UF/IFAS Circular 919 / FA005.", url: "https://ask.ifas.ufl.edu/publication/FA005", publisher: "UF/IFAS Extension" },
   { label: "Barton, B.A. Stress in Fishes: A Diversity of Responses with Particular Reference to Changes in Circulating Corticosteroids. Integrative and Comparative Biology, 2002.", publisher: "Oxford University Press" },
   { label: "Noga, E.J. Fish Disease: Diagnosis and Treatment, 2nd ed. Wiley-Blackwell, 2010.", publisher: "Wiley-Blackwell" },
   { label: "Yanong, R.P.E. Disease Management in Recirculating Aquaculture Systems — UF/IFAS Extension FA-107.", url: "https://edis.ifas.ufl.edu/publication/FA107", publisher: "UF/IFAS Extension" },
@@ -62,13 +63,13 @@ export default function FishStressPage() {
         <h2>Stress, Quarantine, and Acclimation</h2>
         <p>Two moments carry concentrated stress risk: bringing home a new fish and acclimating it. New arrivals are already stressed and immunosuppressed from capture, shipping, and retail holding, which is exactly when latent infections flare. Quarantining new fish in a dedicated <a href="/setup/quarantine-tank-guide">quarantine tank</a> lets them recover in calm, pristine conditions and reveals illness before it reaches the display. Acclimate slowly to match temperature and chemistry, dim the lights, and avoid feeding heavily on the first day. Managing stress at these pinch points prevents a large share of the disease that otherwise follows new additions, and complements the broader picture covered in our <a href="/health/bacterial-infections">bacterial infections</a> guide.</p>
 
-        {/* Money path — live amazon-brand search hops (low-stress tank kit).
-            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-            Category searches only — not a ranked list. No medication hops. */}
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        {/* Shop note — live amazon-brand search buttons (low-stress tank kit).
+            ShopCtas hides empty Chewy; never href="#" or an empty link.
+            Amazon searches only — not a ranked list. No medication buttons. */}
+        <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/api+freshwater+master+test+kit?s=health-stress-immunity", "/go/amazon-brand/eheim+jager+heater?s=health-stress-immunity", "/go/amazon-brand/aquarium+digital+thermometer?s=health-stress-immunity", "/go/amazon-brand/aquarium+quarantine+hospital+tank+net?s=health-stress-immunity"]} />
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
-            Shop a low-stress tank kit
+            Shop these supplies
           </div>
           <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Water quality and temperature stability are the two most
             controllable stressors in any aquarium. A liquid master kit is
@@ -78,7 +79,7 @@ export default function FishStressPage() {
             is how you hold temperature so the dial is not the only
             reading. Quarantine every new arrival in a spare hospital tank
             so shipping stress and latent infections stay out of the
-            display. Same test-kit hop used on the{' '}
+            display. The same test-kit button is on the{' '}
             <Link
               href="/health/bacterial-infections"
               className="text-brand-primary no-underline hover:underline"
@@ -92,7 +93,7 @@ export default function FishStressPage() {
             >
               water-test kit review
             </Link>
-            . Same heater and thermometer hops used on the{' '}
+            . The same heater and thermometer buttons are on the{' '}
             <Link href="/setup" className="text-brand-primary no-underline hover:underline">
               aquarium setup guide
             </Link>
@@ -100,7 +101,7 @@ export default function FishStressPage() {
             <Link href="/health/fish-disease-guide" className="text-brand-primary no-underline hover:underline">
               fish disease guide
             </Link>
-            . Same hospital-tank hop used on the{' '}
+            . The same hospital-tank button is on the{' '}
             <Link
               href="/setup/quarantine-tank-guide"
               className="text-brand-primary no-underline hover:underline"
@@ -111,10 +112,8 @@ export default function FishStressPage() {
             <Link href="/health/fin-rot" className="text-brand-primary no-underline hover:underline">
               fin-rot guide
             </Link>
-            . The hops below are not a ranked product list, they are not
-            medications, and they do not treat, reverse, or cure disease.
-            Fish.com earns a commission on qualifying purchases at no extra
-            cost to you.</p>
+            . The buttons below are not a ranked product list, they are not
+            medications, and they do not treat, reverse, or cure disease.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/api+freshwater+master+test+kit?s=health-stress-immunity"
@@ -122,7 +121,7 @@ export default function FishStressPage() {
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/eheim+jager+heater?s=health-stress-immunity"
-              amazonLabel="Browse aquarium heaters on Amazon →"
+              amazonLabel="Browse Eheim Jager heaters on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+digital+thermometer?s=health-stress-immunity"

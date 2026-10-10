@@ -52,8 +52,10 @@ interface ArticleLayoutProps {
    * place the card inline do not get a duplicate.
    */
   contentType?: ContentType
-  /** Top-pick hop rendered under the subtitle, still inside the hero. */
+  /** Top-pick hop rendered under the title, still inside the hero. */
   heroHop?: ReactNode
+  /** Sits after the hop and before a long subtitle, so a quick pick stays on the first screen. */
+  heroExtra?: ReactNode
   /** Git date of the newest dollar figure on the page. */
   priceAsOf?: string
 }
@@ -68,6 +70,7 @@ export function ArticleLayout({
   relatedLinks,
   contentType,
   heroHop,
+  heroExtra,
   priceAsOf,
 }: ArticleLayoutProps) {
   // SINGLE SOURCE OF TRUTH for BreadcrumbList JSON-LD = the inner <Breadcrumb>
@@ -135,6 +138,8 @@ export function ArticleLayout({
           </h1>
 
           {heroHop}
+
+          {heroExtra}
 
           {/* Subtitle — after the hop so a long lede cannot push the link below a phone screen. */}
           {hero.subtitle && (

@@ -1,5 +1,7 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { AffiliateDisclosure, buildMetadata, ArticleLayout, FAQAccordion, BreedHealthCard, RelatedLinks, ShopCtas, CrossPortfolioCard } from '@carloOS/ui'
+import Link from 'next/link'
+import { buildMetadata, ArticleLayout, FAQAccordion, BreedHealthCard, RelatedLinks, ShopCtas, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
@@ -70,14 +72,17 @@ export default function DachshundPage() {
             Shop related supplies
           </div>
           <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href="/go/amazon-brand/dog+harness?s=breed-dachshund" />
           <div className="flex flex-col gap-3 mt-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/dog+harness?s=breed-dachshund"
-              amazonLabel="Shop on Amazon"
+              amazonLabel="Browse dog harness on Amazon →"
             />
           </div>
         </div>
+
+        <p>Harnesses for this breed are compared in the <Link href="/reviews/best-dog-harnesses">dog harness review</Link>.</p>
+        <p>Dog beds for this breed are compared in the <Link href="/reviews/best-dog-beds">dog bed review</Link>.</p>
 
         <h2>Frequently Asked Questions</h2>
         <FAQAccordion items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />

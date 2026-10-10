@@ -175,7 +175,7 @@ export default function RacingVenueSpokePage({ params }: { params: { slug: strin
           ))}
 
           <h2 id="faq">Frequently Asked Questions</h2>
-          <FAQAccordion items={venue.faq} />
+          <FAQAccordion items={venue.faq} includeSchema={false} />
 
           <h2 id="references">References</h2>
           <ol className="text-sm text-brand-text-mid">

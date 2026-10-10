@@ -1,11 +1,11 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, RelatedLinks, ShopCtas, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Bloat (GDV) in Dogs — Emergency Signs & Prevention | Vets.co", description: "Gastric dilatation-volvulus (bloat) is a sudden, life-threatening emergency in deep-chested dogs. Know the warning signs and act within minutes.", path: '/health/bloat-gdv-dogs', type: 'article' })
 const SOURCES = [
-  { label: 'Merck Veterinary Manual: Gastric Dilatation and Volvulus in Small Animals', url: 'https://www.merckvetmanual.com/digestive-system/diseases-of-the-stomach-and-intestines-in-small-animals/gastric-dilatation-and-volvulus-in-small-animals', publisher: 'Merck Vet Manual' },
-  { label: 'AVMA: Bloat — Gastric Dilatation-Volvulus', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/bloat-gastric-dilatation-volvulus', publisher: 'AVMA' },
+  { label: 'Merck Veterinary Manual: Gastric Dilatation and Volvulus in Small Animals', url: 'https://www.merckvetmanual.com/digestive-system/surgical-problems-of-the-gastrointestinal-tract-in-small-animals/gastric-dilation-and-volvulus-in-small-animals', publisher: 'Merck Vet Manual' },
   { label: 'Glickman LT et al. Incidence of and breed-related risk factors for gastric dilatation-volvulus in dogs. JAVMA. 2000;216(1):40-45.', publisher: 'JAVMA' },
 ]
 const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Bloat (GDV) in Dogs', description: 'Emergency recognition, risk factors, and prevention of gastric dilatation-volvulus in dogs.', url: 'https://vets.co/health/bloat-gdv-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-09-05T00:00:00Z' ,
@@ -49,6 +49,7 @@ export default function BloatGDVPage() {
         <div className="carloOS-article">
 
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-09-05T00:00:00Z" reviewedBy="Editorial team" />
+          <LastUpdated date="2026-10-09" />
 
           <CalloutBox variant="warning" title="This is a go-now emergency">
             If your dog has a swollen belly and is repeatedly trying to vomit without producing anything, go to an emergency veterinary hospital immediately. Do not wait to see if it passes. GDV is fatal within hours and there is no effective home treatment. Call ahead if you can so the team is ready.
@@ -74,44 +75,15 @@ export default function BloatGDVPage() {
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
 
           <h2 id="kit">GDV prevention kit</h2>
-          <p>
-            Everyday physical supplies that match the
-            feeding-management copy on this page — a
-            timed automatic dog feeder so two or more
-            smaller meals replace one large meal, a
-            maze slow-feed dog bowl so a fast eater
-            cannot gulp a bowl in seconds, and an indoor
-            dog house-line so a post-meal potty trip
-            stays a short walk, not a run. These are
-            household tools, not treatments. They do not
-            treat GDV, they do not replace a
-            veterinarian or prophylactic gastropexy, and
-            they are not a ranked product list. Slow-feeder dog bowls, elevated slow-feeder
-            bowls, adjustable-height dog bowls, raised
-            dog bowls, puzzle feeders, Northmate
-            interactive feeders, lick mats, snuffle
-            mats, 6-ft dog leashes, dog long-line
-            leashes, disposable female dog diapers,
-            inflatable dog collars, hard-sided airline
-            dog crates, dog surgical recovery suits,
-            non-slip dog socks, locking kitchen trash
-            cans, walk-through pet gates, airtight
-            dog-food storage containers, dog pill
-            pockets, dry-erase monthly calendars, dog
-            medical-alert collar tags, washable dog heat
-            pants, male dog belly bands, heavy-duty dog
-            exercise pens, first-aid kits, and
-            emergency-contact cards already live on
-            other pages. This page does not claim
-            hands-on testing. </p>
+          <p>A timed automatic dog feeder is one way to split the day into two or more smaller meals. A maze slow-feed bowl slows a dog that finishes a bowl in seconds. An indoor house-line keeps a post-meal potty trip a short walk rather than a run. These are household tools. They do not treat bloat, they do not replace a veterinarian or surgery, and they are not a ranked product list.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/automatic+timed+dog+feeder?s=health-bloat-gdv-dogs", "/go/amazon-brand/maze+slow+feed+dog+bowl?s=health-bloat-gdv-dogs", "/go/amazon-brand/indoor+dog+house+line?s=health-bloat-gdv-dogs"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (timed automatic dog feeder / maze
               slow-feed dog bowl / indoor dog
               house-line). ShopCtas hides empty Chewy;
-              never href="#" or PLACEHOLDER. Category
+              never href="#" or an empty link. Category
               searches only — unused vs #1056
               disposable+female+dog+diapers /
               inflatable+dog+collar /
@@ -134,8 +106,8 @@ export default function BloatGDVPage() {
               northmate+green+interactive+feeder /
               lick+mat+dog / 6+ft+dog+leash /
               dog+long+line+leash /
-              pet+first+aid+kit hops. Rx ASINs are
-              not shoppable hops. */}
+              pet+first+aid+kit buttons. prescription brands are
+              not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

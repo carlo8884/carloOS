@@ -4,8 +4,8 @@
  * Interactive whelping-kit checklist — /tools/dog-gestation-calculator
  *
  * Husbandry packing list drawn from AKC / AAHA-style whelping prep.
- * Check items off as you gather them. Each row hops to a live Amazon
- * search via /go/amazon-brand (never PLACEHOLDER, never href="#").
+ * Check items off as you gather them. Each row buttons to a live Amazon
+ * search via /go/amazon-brand (never an empty link, never href="#").
  * Chewy stays hidden until a Chewy tag is live.
  */
 
@@ -108,7 +108,7 @@ export default function WhelpingKit() {
       </h3>
       <p className="text-sm leading-relaxed text-brand-text-mid mb-4">
         A typical owner whelping kit is a box, pads, a puppy scale, a digital thermometer, a bulb
-        syringe, and a stack of clean towels. Check items off as you gather them. Amazon hops are
+        syringe, and a stack of clean towels. Check items off as you gather them. Amazon buttons open
         search results for those categories — not a ranked product list, and not a substitute for
         the kit your veterinarian recommends for your dam.
       </p>

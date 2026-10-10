@@ -1,13 +1,13 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 
 const SOURCES = [
-  { label: 'Merck Veterinary Manual: Overview of Diarrhea in Small Animals', url: 'https://www.merckvetmanual.com/digestive-system/diarrhea-in-small-animals/overview-of-diarrhea-in-small-animals', publisher: 'Merck Vet Manual' },
+  { label: 'Merck Veterinary Manual: Disorders of the Stomach and Intestines in Dogs', url: 'https://www.merckvetmanual.com/dog-owners/digestive-disorders-of-dogs/disorders-of-the-stomach-and-intestines-in-dogs', publisher: 'Merck Vet Manual' },
   { label: 'WSAVA: Nutritional Support of Dogs With GI Disease — Bland Diet and Probiotic Guidance', url: 'https://wsava.org/global-guidelines/global-nutrition-guidelines/', publisher: 'WSAVA' },
-  { label: 'AVMA: Diarrhea in Dogs — When to Call the Vet', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/common-health-conditions-dogs', publisher: 'AVMA' },
   { label: 'Kelley RL et al. Randomized controlled trial on the effect of a synbiotic on fecal quality in healthy dogs. BMC Vet Res. 2009;5:31.', publisher: 'BMC Vet Research' },
 ]
 
@@ -71,19 +71,19 @@ export default function DogDiarrheaPage() {
           <h2>Diagnostic Workup for Chronic Diarrhea</h2>
           <p>For recurring or chronic diarrhea: fecal examination (parasites — Giardia is commonly missed with standard flotation, requires specific antigen testing), fecal culture, serum TLI (trypsin-like immunoreactivity — screens for EPI), cobalamin and folate (malabsorption markers), and dietary elimination trial (rules out food-responsive diarrhea, which is common and frequently the diagnosis). Endoscopy and intestinal biopsy are reserved for cases where less invasive workup is inconclusive.</p>
 
-          <h2 id="kit">Home-care kit</h2>
-          <p>Everyday OTC supplies that match the home-care copy above — a canine-specific dog probiotic for digestive support, plus optional plain canned pumpkin (100% pumpkin, not pie filling) when a veterinarian agrees it fits a mild large-intestinal episode. These are home-setup aids, not treatments. Antibiotics, metronidazole, Imodium, Pepto-Bismol, and prescription GI diets (Hill&apos;s i/d, Royal Canin Gastrointestinal, and similar) stay educational copy only — this page never hops medications, Rx diets marketed as treatment, or brand ASINs. Soft e-collars and dog eye wipes stay on the sister <a href="/health/cherry-eye">cherry-eye</a> page. Slow-feeder bowls stay on <a href="/health/dog-obesity">dog obesity</a>. This page does not claim hands-on testing.</p>
+          <h2 id="kit">Supplies named on this page</h2>
+          <p>Keep these on hand: a canine-specific dog probiotic for digestive support, plus optional plain canned pumpkin (100% pumpkin, not pie filling) when a veterinarian agrees it fits a mild large-intestinal episode. These are home-setup aids, not treatments. Antibiotics, metronidazole, Imodium, Pepto-Bismol, and prescription GI diets (Hill&apos;s i/d, Royal Canin Gastrointestinal, and similar) stay educational copy only — this page does not link to medications, Rx diets marketed as treatment, or named brands. Soft e-collars and dog eye wipes stay on the sister <a href="/health/cherry-eye">cherry-eye</a> page. Slow-feeder bowls stay on <a href="/health/dog-obesity">dog obesity</a>.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/dog+probiotic?s=health-dog-diarrhea", "/go/amazon-brand/plain+canned+pumpkin+dog?s=health-dog-diarrhea"]} />
 
-          {/* Money path — live amazon-brand search hops (dog
+          {/* Shop note — live amazon-brand search buttons (dog
               probiotic / plain canned pumpkin). ShopCtas hides
-              empty Chewy; never href="#" or PLACEHOLDER.
-              Category searches only. Antibiotics,
+              empty Chewy; never href="#" or an empty link.
+              Amazon searches only. Antibiotics,
               metronidazole, Imodium, Pepto-Bismol,
               prescription GI diets, cherry-eye recovery
               collars, and obesity slow-feeders are not
-              shoppable hops. */}
+              shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

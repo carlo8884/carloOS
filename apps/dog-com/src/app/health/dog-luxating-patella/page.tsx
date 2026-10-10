@@ -1,12 +1,13 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import Link from 'next/link'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 
 const SOURCES = [
-  { label: 'Merck Veterinary Manual: Patellar Luxation in Dogs and Cats', url: 'https://www.merckvetmanual.com/musculoskeletal-system/joint-diseases-of-dogs-and-cats/patellar-luxation-in-dogs-and-cats', publisher: 'Merck Vet Manual' },
-  { label: 'AVMA: Luxating Patella (Slipping Kneecap) in Dogs', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/common-health-conditions-dogs', publisher: 'AVMA' },
+  { label: 'Merck Veterinary Manual: Patellar Luxation in Dogs and Cats', url: 'https://www.merckvetmanual.com/musculoskeletal-system/arthropathies-and-related-disorders-in-small-animals/patellar-luxation-in-dogs-and-cats', publisher: 'Merck Vet Manual' },
   { label: 'ACVS: American College of Veterinary Surgeons — Patellar Luxation', url: 'https://www.acvs.org/small-animal/patellar-luxation', publisher: 'ACVS' },
   { label: 'Willauer CC, Vasseur PB. Clinical results of surgical correction of medial luxation of the patella in dogs. Vet Surg. 1987;16(1):31-36.', publisher: 'Vet Surgery' },
 ]
@@ -77,17 +78,17 @@ export default function LuxatingPatellaPage() {
           <p>Grade 1 luxating patella in a dog with minimal clinical signs does not necessarily require surgery. Management: maintain lean body weight (reduces force across the joint with every step), joint supplementation (Dasuquin Advanced — glucosamine and chondroitin), omega-3 fatty acids (EPA/DHA from fish oil — anti-inflammatory), and monitoring every 6 months to assess for progression. If the dog begins showing more frequent skipping, increased lameness, or significant cartilage wear (visible on radiograph), surgical intervention should be reconsidered.</p>
           <p>Exercise modification during flares — reduce high-impact jumping and running during symptomatic periods. Low-impact activity (leash walks, swimming) maintains muscle mass without worsening the joint. Some owners use a dog knee brace on the affected hind limb during those leash walks when skipping flares, so the kneecap has less room to slip sideways. Ask your veterinarian whether a brace fits this dog and this grade — it is a walk-support aid, not a substitute for grading, weight management, or surgery when those are indicated.</p>
 
-          <h2 id="kit">Walk-support kit</h2>
-          <p>Everyday physical supplies that match the walk-control copy above — a dog knee brace on the affected hind limb during leash walks when the kneecap is slipping, plus a rear-support harness to keep Grade 1 flare walks and the 6–8 week post-op restriction window short and controlled. These are home-setup aids, not treatments. Joint supplements (Dasuquin, glucosamine, chondroitin, omega-3 / fish oil), NSAIDs, prescription weight-management diets, and food ASINs stay educational copy only — this page never hops medications, supplements, or brand diets. Orthopedic beds and dog ramps stay on the sister <a href="/health/dog-arthritis">dog.com arthritis</a> page. Traction rugs and raised bowls stay on <a href={crossSiteHref('vets-co', '/health/arthritis-in-dogs')}>vets.co arthritis-in-dogs</a>. The allergy work-up is on <a href="/health/dog-allergies">dog allergies</a>. This page does not claim hands-on testing.</p>
+          <h2 id="kit">Supplies named on this page</h2>
+          <p>Keep these on hand: a dog knee brace on the affected hind limb during leash walks when the kneecap is slipping, plus a rear-support harness to keep Grade 1 flare walks and the 6–8 week post-op restriction window short and controlled. These are home-setup aids, not treatments. Joint supplements (Dasuquin, glucosamine, chondroitin, omega-3 / fish oil), NSAIDs, prescription weight-management diets, and named foods stay educational copy only — this page does not link to medications, supplements, or brand diets. Orthopedic beds and dog ramps stay on the sister <a href="/health/dog-arthritis">dog.com arthritis</a> page. Traction rugs and raised bowls stay on <a href={crossSiteHref('vets-co', '/health/arthritis-in-dogs')}>vets.co arthritis-in-dogs</a>. The allergy work-up is on <a href="/health/dog-allergies">dog allergies</a>.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/dog+knee+brace?s=health-dog-luxating-patella", "/go/amazon-brand/dog+rear+support+harness?s=health-dog-luxating-patella"]} />
 
-          {/* Money path — live amazon-brand search hops (dog
+          {/* Shop note — live amazon-brand search buttons (dog
               knee brace / rear-support harness). ShopCtas hides
-              empty Chewy; never href="#" or PLACEHOLDER. Category
+              empty Chewy; never href="#" or an empty link. Category
               searches only. Joint supplements, fish oil, NSAIDs,
               Rx weight diets, orthopedic beds, dog ramps, traction
-              rugs, raised bowls, and booties are not shoppable hops. */}
+              rugs, raised bowls, and booties are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
@@ -105,6 +106,7 @@ export default function LuxatingPatellaPage() {
           </div>
           </div>
 
+          <p>Orthopedic beds for this injury are compared in the <Link href="/reviews/best-dog-beds">dog bed review</Link>.</p>
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
 

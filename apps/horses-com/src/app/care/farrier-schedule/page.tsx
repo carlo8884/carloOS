@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -121,32 +122,32 @@ export default function FarrierSchedulePage() {
 
           <h2 id="working">Working With Your Farrier</h2>
           <ul>
-            <li><strong>Book ahead</strong> and keep a standing appointment rather than calling once the feet are already overgrown. An equine farrier log book is how the next 6-to-8-week date, the last interval, and any flaring notes stay written down instead of guessed from memory; it is not a notebook for seizures or a dog weight-log book.</li>
+            <li><strong>Book ahead</strong> and keep a standing appointment rather than calling once the feet are already overgrown. An equine farrier log book is how the next 6-to-8-week date, the last interval, and any flaring notes stay written down instead of guessed from memory.</li>
             <li><strong>Teach the horse to stand</strong> quietly and pick up its feet, which protects both horse and farrier. A portable farrier hoof stand is how a lifted foot stays supported while the farrier trims or resets a shoe — it is not a soaking boot and not a riding hoof boot.</li>
             <li><strong>Provide a clean, level, well-lit area</strong> and dry feet to work on. A cordless barn flood light is how that aisle or wash stall stays bright when the standing appointment lands before sunrise or in a dark barn; it is not a foaling headlamp and not a medical penlight.</li>
             <li><strong>Communicate</strong> about any lameness, footing changes, or the horse&apos;s workload so shoeing can be tailored.</li>
             <li><strong>Coordinate farrier and vet</strong> when managing conditions like laminitis or navicular syndrome, where they work as a team.</li>
           </ul>
 
-          <h2 id="kit">Farrier-visit kit</h2>
-          <p>Everyday physical supplies that match the booking and work-area copy on this page — an equine farrier log book so the standing appointment and last interval stay written down, a portable farrier hoof stand so a lifted foot stays supported while the farrier works, and a cordless barn flood light so the aisle is bright enough to see clenches, flaring, and dry feet. These are household barn tools, not treatments. They do not trim or shoe a horse, they do not replace a farrier or veterinarian, and they are not a ranked product list. This page does not claim hands-on testing.</p>
+          <h2 id="kit">Supplies named on this page</h2>
+          <p>Keep these on hand: an equine farrier log book so the standing appointment and last interval stay written down, a portable farrier hoof stand so a lifted foot stays supported while the farrier works, and a cordless barn flood light so the aisle is bright enough to see clenches, flaring, and dry feet. These are household barn tools, not treatments. They do not trim or shoe a horse, they do not replace a farrier or veterinarian, and they are not a ranked product list.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/equine+farrier+log+book?s=care-farrier-schedule", "/go/amazon-brand/portable+farrier+hoof+stand?s=care-farrier-schedule", "/go/amazon-brand/cordless+barn+flood+light?s=care-farrier-schedule"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (equine farrier log book /
               portable farrier hoof stand /
               cordless barn flood light).
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or an empty link. Amazon searches only —
               unused vs #1060 fecal-container / manure-rake /
               muck-cart, #1059 scoop / portion-cups /
               weight-log-book, #1058 stopwatch / notebook /
               bumper, #1057 feeder / maze-bowl / house-line,
               #1056 diapers / collar / crate, hoof-pick /
               hoof-boots, snow-pads / shoe-studs,
-              stall-bedding / pasture-management. Rx ASINs
-              are not shoppable hops. */}
+              stall-bedding / pasture-management. prescription brands
+              are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

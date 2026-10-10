@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -89,6 +90,7 @@ export default function BlanketingPage() {
           <RelatedLinks
             title="Related Reading"
             links={[
+              { label: "Blanket size calculator", href: "/tools/horse-blanket-size-calculator" },
               { label: "Blanket Weights Explained", href: "/tack/blanket-weights" },
               { label: "Winter Care", href: "/care/winter-care" },
               { label: "Best Winter Horse Blankets", href: "/reviews/best-winter-horse-blankets" },
@@ -120,11 +122,11 @@ export default function BlanketingPage() {
           </ul>
 
           <h2 id="weight">Choosing a Weight</h2>
-          <p>Turnout rugs are rated by fill weight: lightweight (little or no fill, mainly waterproofing), medium (around 150 to 250 grams of fill), and heavyweight (300 grams and up). Match the weight to the temperature, the horse&apos;s coat and condition, and whether it is clipped -- a clipped horse in hard winter weather may need a heavyweight, while a fluffy unclipped horse may need only a light waterproof sheet to stay dry. See the blanket weights guide for the temperature ranges. Over-rugging is as much a welfare issue as under-rugging, since a sweating horse under a heavy rug gets chilled.</p>
+          <p>Turnout rugs are rated by fill weight: lightweight (little or no fill, mainly waterproofing), medium (around 150 to 250 grams of fill), and heavyweight (300 grams and up). Match the weight to the temperature, the horse&apos;s coat and condition, and whether it is clipped -- a clipped horse in hard winter weather may need a heavyweight, while a fluffy unclipped horse may need only a light waterproof sheet to stay dry. See the blanket weights guide for the temperature ranges. Over-rugging is as much a welfare issue as under-rugging, since a sweating horse under a heavy rug gets chilled. <a href="/reviews/best-winter-horse-blankets">The winter blanket guide</a> compares the fills this weight choice uses.</p>
 
           <h2 id="fit">Fit and Safety</h2>
           <ul>
-            <li><strong>Measure correctly</strong> from the center of the chest to the point of the buttock to size the rug.</li>
+            <li><strong>Measure correctly</strong> from the center of the chest to the point of the buttock to size the rug. The <a href="/tools/horse-blanket-size-calculator">blanket size calculator</a> turns that measurement into the standard US size and the approximate EU centimeter equivalent.</li>
             <li><strong>Check for rubbing</strong> at the shoulders, withers, and chest; a poorly fitted rug causes sores.</li>
             <li><strong>Secure all straps</strong> -- chest, belly surcingles, and leg straps -- adjusted so the horse cannot tangle a leg.</li>
             <li><strong>Inspect daily</strong> for slipping, rubs, damp, and the horse being too hot or too cold underneath.</li>
@@ -135,15 +137,15 @@ export default function BlanketingPage() {
           <p>For many healthy, unclipped horses with shelter and forage, no blanket is the better welfare choice: they regulate their own temperature, move freely, and keep their coats functioning. Blanketing an unclipped horse can flatten its coat and reduce its natural insulation, and a horse that overheats under a rug then chills. The honest question is whether the blanket serves the horse or the owner&apos;s worry.</p>
 
           <h2 id="kit">Blanketing Kit</h2>
-          <p>Everyday physical supplies that match the weight, fit, and waterproof-sheet copy above — a turnout rug rated by fill, a light waterproof sheet when an unclipped horse only needs to stay dry, and lightweight, medium, and heavyweight options so the rug can be swapped as the temperature changes. These are not treatments for a sick, underweight, or shivering horse; a horse that cannot maintain condition or that is suddenly too cold or too hot belongs with your veterinarian, not a heavier rug. This page does not claim hands-on testing.</p>
+          <p>Keep these on hand: a turnout rug rated by fill, a light waterproof sheet when an unclipped horse only needs to stay dry, and lightweight, medium, and heavyweight options so the rug can be swapped as the temperature changes. These are not treatments for a sick, underweight, or shivering horse; a horse that cannot maintain condition or that is suddenly too cold or too hot belongs with your veterinarian, not a heavier rug.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/horse+turnout+blanket?s=care-blanketing", "/go/amazon-brand/horse+waterproof+sheet?s=care-blanketing", "/go/amazon-brand/horse+lightweight+blanket?s=care-blanketing", "/go/amazon-brand/horse+medium+weight+blanket?s=care-blanketing", "/go/amazon-brand/horse+heavyweight+blanket?s=care-blanketing"]} />
 
-          {/* Money path — live amazon-brand search hops (blanketing kit).
-              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-              Category searches only — everyday physical supplies matching
+          {/* Shop note — live amazon-brand search buttons (blanketing kit).
+              ShopCtas hides empty Chewy; never href="#" or an empty link.
+              Amazon searches only — everyday physical supplies matching
               on-page turnout / sheet / fill-weight copy, not medical
-              or diagnosis hops. */}
+              or diagnosis buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

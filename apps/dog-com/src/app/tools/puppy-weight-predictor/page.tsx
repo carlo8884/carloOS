@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -8,7 +9,6 @@ import {
   combineSchemas,
   SchemaScript,
   FAQAccordion,
-  AffiliateDisclosure,
   ArticleSourcesList,
   CrossPortfolioCard,
   ShopCtas,
@@ -20,12 +20,12 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
   title: 'Puppy Weight Predictor — How Big Will My Puppy Get? | Dog.com',
   description:
-    'Estimate your puppy\'s adult weight from its current age and weight using the standard growth-percentage method and published size-class growth curves. Free.',
+    'Estimate adult weight from age and current weight. The growth-fraction table is a planning figure, not a published curve.',
   path: '/tools/puppy-weight-predictor',
 })
 
 const SOURCES = [
-  { label: 'American Kennel Club: Puppy Growth and Development Stages', url: 'https://www.akc.org/expert-advice/nutrition/puppy-weight-and-growth-chart/', publisher: 'AKC' },
+  { label: 'American Kennel Club: Puppy Growth and Development Stages', url: 'https://www.akc.org/expert-advice/health/when-does-my-puppy-finish-growing/', publisher: 'AKC' },
   { label: 'Merck Veterinary Manual: Growth in Dogs — Nutritional Requirements', url: 'https://www.merckvetmanual.com/management-and-nutrition/nutrition-small-animals/nutrition-in-disease-management-in-small-animals', publisher: 'Merck Vet Manual' },
   { label: 'WSAVA Global Nutrition Committee: Body Condition Score Charts', url: 'https://wsava.org/global-guidelines/global-nutrition-guidelines/', publisher: 'WSAVA' },
   { label: 'VCA Animal Hospitals: Puppy Nutrition and Growth', url: 'https://vcahospitals.com/know-your-pet/feeding-growing-puppies', publisher: 'VCA' },
@@ -82,7 +82,7 @@ const appSchema = {
   '@type': 'WebApplication',
   name: 'Puppy Weight Predictor',
   description:
-    'Free puppy weight predictor that estimates a dog\'s adult weight range from current age and weight using the growth-percentage method and published size-class growth curves.',
+    'Adult-weight range from current age and weight. The growth-fraction table is a planning figure, not a published curve.',
   url: 'https://dog.com/tools/puppy-weight-predictor',
   applicationCategory: 'UtilityApplication',
   operatingSystem: 'Web',
@@ -91,7 +91,7 @@ const appSchema = {
     'Adult-weight range from current age and weight using size-class growth fractions',
     'Defaults to a 14-week, 20 lb large-breed example so the range is visible with zero extra input',
     'Avoids the single "double at 16 weeks" shortcut that underestimates large and giant breeds',
-    'Shoppable growth kit via Amazon category searches (scale, puppy food, crate, slow feeder)',
+    'Shop the growth kit via Amazon searches (scale, puppy food, crate, slow feeder)',
   ],
   publisher: { '@type': 'Organization', name: 'Dog.com Editorial', url: 'https://dog.com' },
 }
@@ -100,7 +100,7 @@ const articleSchema = buildArticleSchema({
   siteId: 'dog-com',
   title: 'Puppy Weight Predictor',
   description:
-    'How to estimate a puppy\'s adult weight using the growth-percentage method and published size-class growth curves, with a worked example.',
+    'How to estimate a puppy\'s adult weight from a planning-figure growth table, with a worked example.',
   url: 'https://dog.com/tools/puppy-weight-predictor',
   imageUrl: 'https://dog.com/og/tools.png',
   authorName: 'Dog.com Editorial',
@@ -112,7 +112,7 @@ const articleSchema = buildArticleSchema({
 
 const howToSchema = buildHowToSchema({
   name: 'How to predict a puppy\'s adult weight',
-  description: 'Estimate adult weight from current age and weight using the growth-percentage method and published size-class growth curves.',
+  description: 'Estimate adult weight from current age and weight. The growth fractions are a planning figure, not a published curve.',
   url: 'https://dog.com/tools/puppy-weight-predictor',
   steps: [
     {
@@ -163,8 +163,8 @@ export default function PuppyWeightPredictorPage() {
           </h1>
           <p className="text-base text-white/60 leading-relaxed max-w-2xl">
             How big will your puppy get? Enter your puppy&apos;s size class, current age, and current
-            weight to estimate its adult weight as a range — using the standard growth-percentage method
-            and published size-class growth curves, not a single fixed multiplier.
+            weight to estimate its adult weight as a range. The growth fractions are a planning figure,
+            not a published curve, and the result is not a single fixed multiplier.
           </p>
         </div>
       </section>
@@ -180,7 +180,14 @@ export default function PuppyWeightPredictorPage() {
         <span>&#8250;</span>
         <span className="text-brand-text-mid font-medium">Puppy Weight Predictor</span>
       </nav>
-      {/* GEO: extractable answer + worked example, ABOVE the tool */}
+      {/* Tool — default result and its shop link stay on the first screen. */}
+      <section className="bg-brand-surface px-container-sm sm:px-container py-8 sm:py-10">
+        <div className="max-w-4xl">
+          <Predictor />
+        </div>
+      </section>
+
+      {/* GEO: extractable answer + worked example */}
       <section className="bg-brand-surface px-container-sm sm:px-container pt-section pb-2">
         <div className="max-w-2xl">
           <div className="rounded-xl border border-brand-border bg-brand-white p-5 sm:p-6">
@@ -211,36 +218,34 @@ export default function PuppyWeightPredictorPage() {
         </div>
       </section>
 
-      {/* Tool */}
-      <section className="bg-brand-surface px-container-sm sm:px-container py-8 sm:py-10">
+      <section className="bg-brand-surface px-container-sm sm:px-container pb-8 sm:pb-10">
         <div className="max-w-4xl">
-          <Predictor />
           <JourneyNext
             siteId="dog-com"
             nextHref="/tools/dog-crate-size-calculator"
             nextLabel="Size the crate once for adult length"
-            nextBlurb="The predictor is a planning range, not a guaranteed adult weight. Size the crate for the high end of that range and use a divider while the puppy grows. The hop below is the same wire-crate-with-divider search already on this page."
+            nextBlurb="The predictor is a planning range, not a guaranteed adult weight. Size the crate for the high end of that range and use a divider while the puppy grows. The button below opens the same wire-crate-with-divider search on Amazon."
             resourceHref="/go/amazon-brand/wire+dog+crate+with+divider+panel?s=tools-puppy-weight-predictor"
-            resourceLabel="Browse crates on Amazon →"
+            resourceLabel="Browse wire crates with a divider panel on Amazon →"
           />
         </div>
       </section>
 
-      {/* Money path — live amazon-brand search hops (growth / weigh-in kit).
-          ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-          Category searches only — not a ranked list, not a diagnosis. */}
+      {/* Shop note — live amazon-brand search buttons (growth / weigh-in kit).
+          ShopCtas hides empty Chewy; never href="#" or an empty link.
+          Amazon searches only — not a ranked list, not a diagnosis. */}
       <section id="puppy-growth-kit" className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <div className="max-w-2xl">
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/digital+gram+scale+kitchen+pet?s=tools-puppy-weight-predictor", "/go/amazon-brand/puppy+food?s=tools-puppy-weight-predictor", "/go/amazon-brand/royal+canin+large+breed+puppy?s=tools-puppy-weight-predictor", "/go/amazon-brand/wire+dog+crate+with+divider+panel?s=tools-puppy-weight-predictor", "/go/amazon-brand/northmate+green+interactive+feeder?s=tools-puppy-weight-predictor", "/go/amazon-brand/dog+measuring+tape+body+condition+chart?s=tools-puppy-weight-predictor"]} />
           <div className="mt-4 rounded-xl border border-brand-border bg-brand-white p-5">
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Shop a puppy growth kit
+              Shop these supplies
             </div>
             <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/digital+gram+scale+kitchen+pet?s=tools-puppy-weight-predictor"
-                amazonLabel="Browse kitchen / pet scales on Amazon →"
+                amazonLabel="Browse digital gram scales on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/puppy+food?s=tools-puppy-weight-predictor"
@@ -248,19 +253,19 @@ export default function PuppyWeightPredictorPage() {
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/royal+canin+large+breed+puppy?s=tools-puppy-weight-predictor"
-                amazonLabel="Browse large-breed puppy food on Amazon →"
+                amazonLabel="Browse Royal Canin large-breed puppy food on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/wire+dog+crate+with+divider+panel?s=tools-puppy-weight-predictor"
-                amazonLabel="Browse crates on Amazon →"
+                amazonLabel="Browse wire crates with a divider panel on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/northmate+green+interactive+feeder?s=tools-puppy-weight-predictor"
-                amazonLabel="Browse slow-feeder bowls on Amazon →"
+                amazonLabel="Search Amazon for Northmate Green"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/dog+measuring+tape+body+condition+chart?s=tools-puppy-weight-predictor"
-                amazonLabel="Browse dog measuring tapes and BCS charts on Amazon →"
+                amazonLabel="Browse dog measuring tapes and body condition charts on Amazon →"
               />
           </div>
           </div>
@@ -274,9 +279,9 @@ export default function PuppyWeightPredictorPage() {
             Approximate % of adult weight reached by age
           </h2>
           <p className="mb-4 text-sm text-brand-text-mid leading-relaxed">
-            These are typical growth fractions by size class, interpolated from published AKC and
-            veterinary growth-curve references. Smaller breeds mature faster; larger breeds keep growing
-            for many more months. Use the row that matches your puppy&apos;s expected adult size.
+            How we calculate: these growth fractions are a planning figure, not an AKC chart and not a
+            Waltham curve. No paper stating these percentages was fetched. Use the row that matches the
+            expected adult size, and treat the result as a range.
           </p>
           <div className="overflow-x-auto rounded-lg border border-brand-border">
             <table className="w-full text-sm border-collapse bg-brand-white">
@@ -343,7 +348,6 @@ export default function PuppyWeightPredictorPage() {
               </Link>{' '}
               for feeding. Compare large- and small-breed-appropriate puppy formulas next.
             </p>
-            <AffiliateDisclosure variant="inline" siteId="dog-com" className="mb-3 text-2xs" />
             <Link
               href="/reviews/best-dog-food-for-puppies"
               className="inline-block bg-brand-primary text-white font-semibold text-sm px-4 py-2 rounded-md no-underline hover:bg-brand-primary-dark"
@@ -361,13 +365,10 @@ export default function PuppyWeightPredictorPage() {
             The method behind the estimate
           </h2>
           <p className="mb-4 text-base leading-relaxed text-brand-text-mid">
-            The predictor uses the growth-percentage method, the same logic veterinary and AKC growth
-            guidance describe: a puppy reaches a predictable share of its adult weight at a given age,
-            and that share depends mostly on adult size. The tool divides current weight by the typical
-            growth fraction at the puppy&apos;s current age for the selected size class, then widens the
-            result into a range to reflect breed and individual variation. It deliberately avoids the
-            single &quot;multiply by two&quot; shortcut, which only fits small and medium breeds and
-            badly underestimates large and giant dogs.
+            How we calculate: adult weight is current weight divided by a planning-figure growth
+            fraction for the selected size class. Those fractions are not a published AKC or Waltham
+            curve. The tool then widens the result into a range. It does not use a single
+            &quot;multiply by two&quot; shortcut.
           </p>
           <p className="mb-4 text-base leading-relaxed text-brand-text-mid">
             For breed-specific adult-weight context, browse the{' '}

@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -11,8 +12,8 @@ import {
   TableOfContents,
   RelatedLinks,
   CrossPortfolioCard,
-  AffiliateDisclosure,
   ShopCtas,
+  PrimaryHop,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
 
@@ -22,7 +23,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: 'Horse Weight Calculator (Girth + Length) | Horses.com',
   description:
-    'Estimate a horse’s weight from heart girth and body length using the standard weight-tape formula. Free, instant lbs + kg, pony / draft / foal adjustments.',
+    'Estimate a horse’s weight from girth and length with Carroll & Huntington 1988. Pony and draft divisors are a planning figure.',
   path: '/tools/horse-weight-calculator',
 })
 
@@ -47,11 +48,11 @@ const howToSchema = buildHowToSchema({
     },
     {
       name: 'Apply the formula',
-      text: 'Weight (lb) = (heart girth in inches squared × body length in inches) ÷ 330 for an adult riding horse. Use ÷ 299 for a pony and ÷ 301 for a draft / heavy horse. In metric: weight (kg) = (girth in cm squared × length in cm) ÷ 11,900.',
+      text: 'Adult riding horse: weight (lb) = girth² × length ÷ 330, the rounded form of Carroll & Huntington 1988 Y′ = 11900. Pony ÷ 299 and draft ÷ 301 are a planning figure, not that abstract.',
     },
     {
       name: 'Treat the result as an estimate',
-      text: 'A girth-tape figure is typically within about 5–10% of true scale weight for a mature light horse. Verify on a livestock scale for medication dosing or sale weight, and consult your veterinarian for special cases.',
+      text: 'Carroll & Huntington 1988 does not publish a percent error for this estimate. Use it to track trends. Weigh the horse on a livestock scale for medication dosing or sale weight, and consult your veterinarian for special cases.',
     },
   ],
 })
@@ -65,13 +66,13 @@ const softwareApplicationSchema = {
   applicationSubCategory: 'EquineHusbandryCalculator',
   operatingSystem: 'Web Browser (any HTML5-capable device)',
   description:
-    'Free horse weight estimator. Inputs: heart-girth circumference, body length, unit (in/cm), and horse type (pony / adult riding horse / draft / foal). Outputs: estimated bodyweight in pounds and kilograms using the Carroll & Huntington weight-tape formula with type-specific divisors.',
+    'Adult riding horses use Carroll & Huntington 1988 (Y′ = 11900, imperial 330). Pony 299 and draft 301 are a planning figure.',
   inLanguage: 'en-US',
   isAccessibleForFree: true,
   offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
   featureList: [
     'Carroll & Huntington (1988) heart-girth + body-length weight formula',
-    'Type-specific divisors: pony (~299), adult riding horse (330), draft (~301)',
+    'Pony 299 and draft 301 labeled a planning figure, not the 1988 abstract',
     'Imperial and metric input with results in both lb and kg',
     'Estimate framed against livestock-scale verification',
     'Result links to the feed/hay calculator and body condition score tool',
@@ -83,22 +84,22 @@ const FAQS = [
   {
     question: 'How do you calculate a horse’s weight without a scale?',
     answer:
-      'Measure the heart girth (the circumference around the barrel just behind the withers and elbows) and the body length (point of shoulder to point of buttock), both in inches. Then apply the standard weight-tape formula: weight in pounds equals heart girth squared, multiplied by body length, divided by 330 for an adult riding horse. For example, a horse with a 72-inch girth and a 64-inch length is estimated at (72 × 72 × 64) ÷ 330 ≈ 1,005 lb. This is an estimate, usually within about 5–10% of true scale weight for a mature light horse.',
+      'Measure the heart girth (the circumference around the barrel just behind the withers and elbows) and the body length (point of shoulder to point of buttock), both in inches. Then apply the Carroll & Huntington 1988 formula: weight in pounds equals heart girth squared, multiplied by body length, divided by 330 for an adult riding horse. For example, a horse with a 72-inch girth and a 64-inch length is estimated at (72 × 72 × 64) ÷ 330 ≈ 1,005 lb. The 1988 abstract does not publish a percent error for that estimate.',
   },
   {
     question: 'Why is the divisor different for ponies and draft horses?',
     answer:
-      'The single-divisor formula was fitted to a population of light riding horses, where 330 (imperial) gives the best average fit. Ponies are proportionally rounder for their length, so a smaller divisor (~299) returns a more accurate, slightly higher estimate. Draft and heavy types are denser, and the published heavy-horse divisor is around 301. Carroll & Huntington (1988) reported separate constants for these body types, which is why the calculator swaps the divisor when you change the horse type.',
+      'How we calculate: Carroll and Huntington (1988) reported an average Y′ of 11900 for weight estimated from girth squared times length. 330 is the rounded inch-and-pound form of 11900. The pony divisor 299 and the draft divisor 301 are a planning figure. They are not in that abstract.',
   },
   {
     question: 'How accurate is a weight-tape estimate?',
     answer:
-      'For a mature, normally-conformed light horse, a girth-and-length estimate is generally within roughly 5–10% of scale weight — close enough for tracking trends and rough ration planning. Accuracy drops for ponies, drafts, heavily pregnant mares, very fat or very thin horses, and growing youngstock. Commercial weight tapes that read girth alone are less accurate than the girth-plus-length formula because they ignore body length. For anything that needs a true number — medication dosing, sale weight, or a feeding plan for a sick horse — weigh the horse on a livestock scale.',
+      'Carroll & Huntington 1988 does not publish a percent error for the girth-and-length estimate. Use it to track trends and for rough ration planning. Ponies, drafts, heavily pregnant mares, very fat or very thin horses, and growing youngstock are a poorer fit. Commercial weight tapes that read girth alone ignore body length. For anything that needs a true number — medication dosing, sale weight, or a feeding plan for a sick horse — weigh the horse on a livestock scale.',
   },
   {
     question: 'Can I use this calculator for a foal?',
     answer:
-      'Not reliably. Foals and growing youngstock follow a different girth-to-weight relationship than mature horses, so the adult formula tends to misestimate them. The calculator includes a foal / young-stock option, but it should be treated as a rough placeholder only. For growing horses, a livestock scale is strongly preferred, and your veterinarian can advise on age-appropriate weight ranges.',
+      'Not reliably. Foals and growing youngstock follow a different girth-to-weight relationship than mature horses, so the adult formula tends to misestimate them. The calculator includes a foal / young-stock option, but it should be treated as a rough estimate only. For growing horses, a livestock scale is strongly preferred, and your veterinarian can advise on age-appropriate weight ranges.',
   },
   {
     question: 'Where do I measure the heart girth and body length exactly?',
@@ -110,7 +111,7 @@ const FAQS = [
 const articleSchema = buildArticleSchema({
   siteId: 'horses-com',
   title: 'Horse Weight Calculator',
-  description: 'Estimate a horse’s bodyweight from heart girth and body length using the standard weight-tape formula. Instant lbs and kg, with pony, draft, and foal adjustments.',
+  description: 'Estimate a horse’s bodyweight from girth and length with Carroll & Huntington 1988. Pony and draft divisors are a planning figure.',
   url: 'https://horses.com/tools/horse-weight-calculator',
   imageUrl: '',
   authorName: 'Horses.com Editorial',
@@ -130,10 +131,19 @@ export default function HorseWeightCalculatorPage() {
         { title: 'Horse Grimace Scale', href: '/tools/horse-grimace-scale', category: 'Tools' },
         { title: 'Horse Height Converter', href: '/tools/horse-height-converter', category: 'Tools' },
       ]}
+      heroHop={<>
+        <PrimaryHop href="/go/amazon-brand/horse+weight+tape?s=tools-horse-weight-calculator" label="Search Amazon for a horse weight tape" />
+        <HopDisclosure tone="on-dark" siteId="horses-com" href="/go/amazon-brand/horse+weight+tape?s=tools-horse-weight-calculator" />
+      </>}
+      heroExtra={
+        <div id="calculator" className="mb-4 [&_.text-brand-primary]:!text-brand-dark">
+          <Calculator />
+        </div>
+      }
       hero={{
         title: 'Horse Weight Calculator',
         subtitle:
-          'Estimate a horse’s bodyweight from heart girth and body length using the standard weight-tape formula. Instant lbs and kg, with pony, draft, and foal adjustments.',
+          'Estimate a horse’s bodyweight from girth and length with Carroll & Huntington 1988. Pony and draft divisors are a planning figure.',
         category: 'Calculators',
         categoryHref: '/tools',
         publishedAt: 'June 2026',
@@ -193,18 +203,17 @@ export default function HorseWeightCalculatorPage() {
           horse. In metric, weight in kilograms equals girth (cm) squared times length (cm)
           divided by 11,900. A horse with a <strong>72-inch girth and a 64-inch length</strong>{' '}
           is estimated at <strong>(72&nbsp;&times;&nbsp;72&nbsp;&times;&nbsp;64)&nbsp;&divide;&nbsp;330&nbsp;&asymp;&nbsp;1,005&nbsp;lb</strong>{' '}
-          (about 456&nbsp;kg). Use a divisor of 299 for a pony and 301 for a draft horse.
+          (about 456&nbsp;kg). Pony 299 and draft 301 are a planning figure, not the 1988 abstract.
         </p>
 
-        <h2 id="calculator">The calculator</h2>
+        <h2>The calculator</h2>
         <p>
           Enter the heart-girth circumference and the body length, choose your unit and horse
           type, and the calculator returns an estimated bodyweight in both pounds and
-          kilograms. Switching the horse type swaps the published divisor.
+          kilograms. The adult divisor is Carroll &amp; Huntington 1988. Pony and draft divisors are a planning figure.
         </p>
-        <Calculator />
 
-        <AffiliateDisclosure variant="inline" siteId="horses-com" />
+        <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/horse+weight+tape?s=tools-horse-weight-calculator", "/go/amazon-brand/horse+measuring+tape?s=tools-horse-weight-calculator", "/go/amazon-brand/livestock+barn+scale?s=tools-horse-weight-calculator"]} />
         <div className="mb-8 rounded-xl border border-brand-border bg-brand-surface p-5">
           <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
             Shop weight tapes
@@ -213,21 +222,20 @@ export default function HorseWeightCalculatorPage() {
             A dedicated equine weight tape (girth + length marks) is more repeatable than a
             carpenter&rsquo;s tape. A soft measuring tape is the backup for body length. A livestock
             barn scale is the check when the estimate has to be a true number — medication, sale
-            weight, or a clinical ration. Horses.com earns a commission on qualifying purchases at
-            no extra cost to you.
+            weight, or a clinical ration.
           </p>
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/horse+weight+tape?s=tools-horse-weight-calculator"
-              amazonLabel="Shop horse weight tapes on Amazon →"
+              amazonLabel="Browse horse weight tape on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/horse+measuring+tape?s=tools-horse-weight-calculator"
-              amazonLabel="Shop horse measuring tapes on Amazon →"
+              amazonLabel="Browse horse measuring tape on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/livestock+barn+scale?s=tools-horse-weight-calculator"
-              amazonLabel="Shop livestock barn scales on Amazon →"
+              amazonLabel="Browse livestock barn scale on Amazon →"
             />
           </div>
         </div>
@@ -243,7 +251,7 @@ export default function HorseWeightCalculatorPage() {
         </div>
 
         <h2 id="formula">The formula</h2>
-        <p>The girth-and-length weight estimate (Carroll &amp; Huntington, 1988):</p>
+        <p>How we calculate: Carroll &amp; Huntington, 1988, average Y′ = 11,900. Imperial 330 is the rounded inch-and-pound form. Pony 299 and draft 301 are a planning figure.</p>
         <ul>
           <li>
             <strong>Imperial:</strong> Weight (lb) = (heart girth in inches)<sup>2</sup> &times;
@@ -254,9 +262,9 @@ export default function HorseWeightCalculatorPage() {
             body length in cm &divide; <strong>11,900</strong> (adult riding horse)
           </li>
           <li>
-            <strong>Type adjustment:</strong> use a divisor of ~<strong>299</strong> for ponies
-            and ~<strong>301</strong> for draft / heavy horses. Foals and growing youngstock
-            follow a different relationship, so girth-tape estimates are unreliable for them.
+            <strong>Planning figure:</strong> divisor ~<strong>299</strong> for ponies
+            and ~<strong>301</strong> for draft / heavy horses. Those two numbers are not in the
+            1988 abstract. Foals reuse 330 only as a planning estimate.
           </li>
         </ul>
         <p>
@@ -273,7 +281,7 @@ export default function HorseWeightCalculatorPage() {
           and width of the chest and barrel, where most of the body&rsquo;s weight sits. Adding body
           length corrects for frame size, which is why a girth-plus-length formula beats a
           girth-only weight tape. The constant divisor is what converts the geometric product
-          into pounds or kilograms; it was fitted to measured horses and differs by body type.
+          into pounds or kilograms. Carroll and Huntington’s abstract gives 11900 for the horses in that study. Pony and draft divisors on this page are a planning figure.
         </p>
         <p>The estimate does <strong>not</strong>:</p>
         <ul>
@@ -311,16 +319,15 @@ export default function HorseWeightCalculatorPage() {
             },
             {
               label:
-                'University of Minnesota Extension — How much does my horse weigh? (estimating bodyweight from girth and length).',
-              url: 'https://extension.umn.edu/horse-care-and-management/how-much-does-my-horse-weigh',
+                'University of Minnesota Extension — Estimating actual and ideal bodyweight of adult horses.',
+              url: 'https://extension.umn.edu/agriculture/animals-and-livestock/horse/estimating-horse-bodyweight',
               publisher: 'UMN Extension',
             },
           ]}
         />
         <p className="text-sm text-brand-text-mid">
-          Horses.com Editorial cites these as the published basis for the girth-and-length
-          weight formula and its type-specific divisors. The calculator output is a husbandry
-          estimate; no veterinary diagnosis is implied.
+          Carroll and Huntington 1988 are the source for the adult Y′ of 11900. Pony 299 and draft 301
+          are a planning figure, not that paper. The calculator output is a husbandry estimate.
         </p>
 
         <h2 id="faq">FAQ</h2>

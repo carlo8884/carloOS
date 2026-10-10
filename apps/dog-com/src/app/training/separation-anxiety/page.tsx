@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -7,7 +8,7 @@ import {
   TableOfContents,
   CrossPortfolioCard,
   ArticleByline,
-  AffiliateDisclosure,
+
   ShopCtas,
   JourneyNext,
 } from '@carloOS/ui'
@@ -124,24 +125,24 @@ export default function SeparationAnxietyPage() {
           siteId="dog-com"
           nextHref="/training/crate-training"
           nextLabel="Set the crate as the alone-time room"
-          nextBlurb="Boredom destruction is a management problem first. Use the crate-training guide next so unsupervised time has a sized crate and a divider before you lengthen absences. The hop below is the same divider-crate search already on this page."
+          nextBlurb="Boredom destruction is a management problem first. Use the crate-training guide next so unsupervised time has a sized crate and a divider before you lengthen absences. The button below opens the same divider-crate search on Amazon."
           resourceHref="/go/amazon-brand/wire+dog+crate+with+divider+panel?s=training-sep-anxiety"
-          resourceLabel="Browse crates on Amazon →"
+          resourceLabel="Browse wire crates with a divider panel on Amazon →"
         />
 
-        {/* Money path — live amazon-brand search hops (alone-time kit).
-            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-            Category searches only — not a ranked list. */}
-        <AffiliateDisclosure variant="inline" siteId="dog-com" />
+        {/* Shop note — live amazon-brand search buttons (alone-time kit).
+            ShopCtas hides empty Chewy; never href="#" or an empty link.
+            Amazon searches only — not a ranked list. */}
+        <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/wire+dog+crate+with+divider+panel?s=training-sep-anxiety", "/go/amazon-brand/kong+classic+dog+toy+stuffable?s=training-sep-anxiety", "/go/amazon-brand/snuffle+mat+dog+enrichment?s=training-sep-anxiety", "/go/amazon-brand/bully+sticks+dog+chew?s=training-sep-anxiety"]} />
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
-            Shop an alone-time kit
+            Shop these supplies
           </div>
           <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">A stuffed frozen Kong plus a snuffle mat occupy most dogs for the
             first 15–30 minutes after you leave — the window where boredom
             destruction usually starts. Pair them with a wire crate and
             divider for unsupervised time, and rotate long-lasting chews so
-            the same Kong does not go stale. Same Kong hop used on the{' '}
+            the same Kong does not go stale. The same Kong button is on the{' '}
             <Link
               href="/tools/dog-exercise-calculator"
               className="text-brand-primary no-underline hover:underline"
@@ -155,7 +156,7 @@ export default function SeparationAnxietyPage() {
             >
               new-puppy checklist
             </Link>
-            . Same crate hop used on the{' '}
+            . The same crate button is on the{' '}
             <Link
               href="/training/crate-training"
               className="text-brand-primary no-underline hover:underline"
@@ -164,12 +165,11 @@ export default function SeparationAnxietyPage() {
             </Link>
             . They are not a ranked product list and they do not replace the
             camera check or the sub-threshold protocol. Size the crate before
-            you order. Dog.com earns a commission on qualifying purchases at
-            no extra cost to you.</p>
+            you order.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/kong+classic+dog+toy+stuffable?s=training-sep-anxiety"
-              amazonLabel="Browse stuffable Kong toys on Amazon →"
+              amazonLabel="Browse stuffable Kong classic toys on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/snuffle+mat+dog+enrichment?s=training-sep-anxiety"
@@ -177,11 +177,11 @@ export default function SeparationAnxietyPage() {
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/wire+dog+crate+with+divider+panel?s=training-sep-anxiety"
-              amazonLabel="Browse crates on Amazon →"
+              amazonLabel="Browse wire crates with a divider panel on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/bully+sticks+dog+chew?s=training-sep-anxiety"
-              amazonLabel="Browse long-lasting chews on Amazon →"
+              amazonLabel="Browse bully stick chews on Amazon →"
             />
           </div>
           <p className="text-2xs text-brand-text-light mt-3">

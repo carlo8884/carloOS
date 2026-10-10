@@ -1,6 +1,7 @@
+import { HopDisclosure } from '../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, buildMetadata, EmailCapture, FAQAccordion, ShopCtas, StockImage } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, FAQAccordion, ShopCtas, StockImage } from '@carloOS/ui'
 import {
   buildArticleSchema,
   buildFAQSchema,
@@ -116,7 +117,7 @@ const QUARTERS = [
     weeks: 'Weeks 1–13',
     title: 'Acclimation and Vaccine Series',
     bullets: [
-      'Ferret-proof — gap-block any opening over 1 inch; remove rubber/foam items (the #1 ferret surgery cause)',
+      'Ferret-proof — gap-block any opening over 1 inch; remove rubber/foam items (a common cause of ferret surgery)',
       'First exotic-pet vet visit — meet-and-greet ideal before vaccinations',
       'Canine distemper series — boosters at 6–8, 10–12, and 14–16 weeks (AFA / AEMV)',
       'Rabies vaccine — single dose at 12+ weeks, USDA-licensed product',
@@ -334,7 +335,7 @@ export default function FerretFirstYearSchedulePage() {
           <h2 className="font-display font-bold text-brand-dark text-3xl tracking-tight mb-8">
             Questions new ferret owners ask
           </h2>
-          <FAQAccordion items={FAQS} />
+          <FAQAccordion items={FAQS} includeSchema={false} />
 
           <div className="mt-12 pt-8 border-t border-brand-border text-sm text-brand-text-mid">
             <p className="mb-2">Ferret reference hubs:</p>
@@ -368,21 +369,9 @@ export default function FerretFirstYearSchedulePage() {
         <p className="max-w-content-wide text-sm text-brand-text-mid leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
 
         <div className="max-w-content-wide mt-6">
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/ferret+kibble?s=first-year-schedule" />
         </div>
 
-        {/* Money path — live amazon-brand search hops
-            (laminated ferret first-year schedule chart /
-            ferret fridge first-year milestone card /
-            mustelid first-year reference handbook).
-            Educational kitchen searches only; no Rx /
-            vaccine / aging hops.
-            ShopCtas hides empty Chewy; never href="#"
-            or PLACEHOLDER. Unused vs tools / reviews /
-            diet / care / behavior / health / ownership /
-            colors kitchen kits and child
-            finger+toothbrush / carnivore+care hops.
-            Do not re-open #1165 / what-to-expect. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-content-wide">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
             Shop related supplies
@@ -391,7 +380,7 @@ export default function FerretFirstYearSchedulePage() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/ferret+kibble?s=first-year-schedule"
-              amazonLabel="Shop on Amazon"
+              amazonLabel="Browse ferret kibble on Amazon →"
             />
           </div>
         </div>

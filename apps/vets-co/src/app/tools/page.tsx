@@ -1,6 +1,7 @@
+import { HopDisclosure } from '../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildArticleSchema, AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, SchemaScript, ShopCtas, StockImage } from '@carloOS/ui'
+import { buildArticleSchema, buildMetadata, buildBreadcrumbSchema, SchemaScript, ShopCtas, StockImage } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'vets-co',
@@ -15,7 +16,6 @@ const breadcrumbSchema = buildBreadcrumbSchema({
     { name: 'Tools', url: 'https://vets.co/tools' },
   ],
 })
-
 
 const TOOLS = [
   {
@@ -178,7 +178,7 @@ export default function ToolsHub() {
               <strong>The &ldquo;is pet insurance worth it?&rdquo; calculator</strong> answers the decision question before the carrier question. It turns a quote — premium, deductible, reimbursement %, annual cap — into a single breakeven number: the eligible vet-cost level at which the policy reimburses exactly what it costs. It is honest about the result most owners find counterintuitive: in a typical year a policy does not pay for itself, because insurance is catastrophic-cost protection, not guaranteed savings. It never tells you to buy; it shows the math and points to the neutral comparison.
             </p>
             <p>
-              <strong>The coverage finder</strong> is a filter-and-group tool, not a ranking wizard. Each coverage priority — exam fees covered, full dental, a wellness add-on, an unlimited annual-limit option, alternative or behavioral coverage, prescription food, a 100&#37; reimbursement option — maps to a published policy attribute in our carrier registry. Select the features you care about and the finder narrows the list to the carriers that publish them, grouped by how many of your priorities each one covers. It never scores carriers, picks a winner, or quotes a price; absent fields are simply omitted. It pairs with the reimbursement estimator: the finder answers <em>which carriers</em>, the estimator answers <em>what a policy would reimburse</em>.
+              <strong>The coverage finder</strong> is a filter-and-group tool, not a ranking wizard. Each coverage priority — exam fees covered, full dental, a wellness add-on, an unlimited annual-limit option, alternative or behavioral coverage, prescription food, a 100&#37; reimbursement option — maps to a published policy attribute in our published carrier notes. Select the features you care about and the finder narrows the list to the carriers that publish them, grouped by how many of your priorities each one covers. It never scores carriers, picks a winner, or quotes a price; absent fields are simply omitted. It pairs with the reimbursement estimator: the finder answers <em>which carriers</em>, the estimator answers <em>what a policy would reimburse</em>.
             </p>
             <p>
               <strong>The reimbursement estimator</strong> models the four levers that every consumer pet-insurance contract uses: the monthly premium, the annual deductible, the reimbursement percentage applied after the deductible is met, and the annual payout cap. For a given expected claim total, it computes the annual reimbursement, the total cost (premium minus reimbursement), and the net benefit vs. paying out of pocket. The math is the standard claims-side accounting — no carrier marketing, no &ldquo;estimated savings&rdquo; that double-counts. If the inputs match what your carrier actually wrote on the quote, the output matches what they will actually pay.
@@ -214,19 +214,9 @@ export default function ToolsHub() {
         <p className="max-w-content-wide text-sm text-brand-text-mid leading-relaxed">Amazon search links open a search for a digital pet scale, which this page names in the age-calculator kit. They are not a ranked product list and they do not replace veterinary care.</p>
 
         <div className="max-w-content-wide mt-6">
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href="/go/amazon-brand/digital+pet+scale?s=tools-hub" />
         </div>
 
-        {/* Money path — live amazon-brand search hops
-            (laminated cat calculator-tools chart /
-            cat fridge measurement card /
-            feline calculator reference handbook).
-            Educational kitchen searches only; no Rx /
-            vaccine ASIN hops. ShopCtas hides empty
-            Chewy; never href="#" or PLACEHOLDER.
-            Unused vs child tools pet+first+aid+kit /
-            digital+pet+thermometer / soft+cat+carrier /
-            styptic+powder / wound+care+gauze. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-content-wide">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
             Shop related supplies
@@ -235,7 +225,7 @@ export default function ToolsHub() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/digital+pet+scale?s=tools-hub"
-              amazonLabel="Shop a digital pet scale on Amazon"
+              amazonLabel="Browse digital pet scale on Amazon →"
             />
           </div>
         </div>

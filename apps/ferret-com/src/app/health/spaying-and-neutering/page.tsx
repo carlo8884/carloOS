@@ -10,7 +10,7 @@ import {
   DropCap,
   CrossPortfolioCard,
   ArticleSourcesList,
-  AffiliateDisclosure,
+  LastUpdated,
 } from '@carloOS/ui'
 
 const SOURCES = [
@@ -21,7 +21,7 @@ const SOURCES = [
   },
   {
     label: "Merck Veterinary Manual — Reproductive Diseases of Ferrets: persistent estrus, aplastic anemia risk in unspayed jills, and surgical options",
-    url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/reproductive-diseases-of-ferrets",
+    url: "https://www.merckvetmanual.com/all-other-pets/ferrets/breeding-and-reproduction-of-ferrets",
     publisher: "Merck Veterinary Manual",
   },
   {
@@ -74,7 +74,6 @@ const medSchema = buildMedicalWebPageSchema({
   authorName: 'Ferret.com Editorial',
   lastReviewed: '2026-06-01',
 })
-
 
 const FAQS = [
   {
@@ -131,7 +130,7 @@ export default function FerretSpayNeuterPage() {
           <>
             <TableOfContents
               items={[
-                { label: 'TL;DR', href: '#tldr' },
+                { label: '', href: '#tldr' },
                 { label: 'Estrogen Toxicity', href: '#estrogen' },
                 { label: 'The Early-Spay Debate', href: '#early' },
                 { label: 'Neutering Males', href: '#males' },
@@ -153,7 +152,7 @@ export default function FerretSpayNeuterPage() {
 
           </>
         }
-      
+
         relatedLinks={[
           { title: 'Ferret Health Hub', href: '/health' },
           { title: 'Adrenal Disease', href: '/health/adrenal-disease' },
@@ -167,6 +166,7 @@ export default function FerretSpayNeuterPage() {
             publishedAt="2026-06-01"
             updatedAt="2026-06-01"
           />
+          <LastUpdated date="2026-10-09" />
 
           <DropCap>
             In most companion species, spaying is about preventing unwanted
@@ -177,8 +177,7 @@ export default function FerretSpayNeuterPage() {
             whole conversation about desexing ferrets.
           </DropCap>
 
-          <h2 id="tldr">TL;DR</h2>
-          <p>
+                    <p>
             Female ferrets (jills) are induced ovulators who remain in heat
             until bred. Prolonged heat floods the body with estrogen, which
             suppresses the bone marrow and causes a life-threatening aplastic
@@ -278,21 +277,7 @@ export default function FerretSpayNeuterPage() {
             <a href="/health">health hub</a>.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated ferret jill-heat chart /
-              ferret fridge musk-vs-gland card /
-              mustelid spay-timing handbook).
-              No existing product hop to keep.
-              Educational kitchen searches only; no Rx /
-              vaccine / flea / heartworm / nsaid / aging hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs health-hub /
-              diarrhea / lymphoma / anesthesia hops. Ferret
-              aging stays held.
-              Do not re-open #1165 / what-to-expect. */}
-          
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
 

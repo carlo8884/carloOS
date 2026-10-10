@@ -9,7 +9,6 @@ import {
   CalloutBox,
   ArticleByline,
   DropCap,
-  AffiliateDisclosure,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -38,7 +37,6 @@ const articleSchema = buildArticleSchema({
   publishedAt: '2026-06-01T00:00:00Z',
   modifiedAt: '2026-06-01T00:00:00Z',
 })
-
 
 const FAQS = [
   {
@@ -110,7 +108,7 @@ export default function FerretColorsPatternsPage() {
 
           </>
         }
-      
+
         relatedLinks={[
           { title: 'Ferret Colors Hub', href: '/colors' },
           { title: 'Sable Ferrets', href: '/colors/sable-ferrets' },
@@ -286,22 +284,7 @@ export default function FerretColorsPatternsPage() {
             veterinarian.
           </p>
 
-          
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated ferret color-pattern axis chart /
-              ferret fridge color-vs-pattern card /
-              mustelid color-pattern reference handbook).
-              Educational kitchen searches only; no Rx /
-              vaccine / aging hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs tools / reviews /
-              diet / care / behavior / health / ownership /
-              colors-hub / first-year-schedule kitchen kits
-              and child finger+toothbrush / carnivore+care
-              hops.
-              Do not re-open #1165 / what-to-expect. */}
                   </div>
       </ArticleLayout>
     </>

@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { AffiliateDisclosure, buildMetadata, ArticleLayout, FAQAccordion, BreedHealthCard, RelatedLinks, ShopCtas, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, BreedHealthCard, RelatedLinks, ShopCtas, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 
@@ -52,7 +53,7 @@ export default function GreatPyreneesPage() {
         <p>This heritage is still fully present in the breed. A Great Pyrenees that is barking at 2am is not being disobedient — it heard something and is doing its job. A Great Pyrenees that escapes the yard is not being defiant — it is patrolling what it perceives as its territory. A Great Pyrenees that does not respond to recall with a squirrel in sight is not failing its training — it has evolved to make independent decisions. Understanding this context does not eliminate the management challenges, but it reframes them from "behavioral problems" to "breed characteristics requiring appropriate management."</p>
 
         <BreedHealthCard name="Gastric Dilatation-Volvulus (GDV / Bloat)" riskLevel="high"
-          description="Great Pyrenees are a deep-chested giant breed with significant GDV predisposition. Prophylactic gastropexy — surgically tacking the stomach to the abdominal wall to prevent rotation — is strongly recommended at the time of spay/neuter for all Great Pyrenees. The procedure adds minimal time to the surgery and eliminates the most life-threatening acute risk in the breed. GDV mortality without immediate emergency surgery is near 100% — with prompt surgery, 70–80% survival."
+          description="Great Pyrenees are a deep-chested giant breed with significant GDV predisposition. Prophylactic gastropexy — surgically tacking the stomach to the abdominal wall to prevent rotation — is strongly recommended at the time of spay/neuter for all Great Pyrenees. The procedure adds minimal time to the surgery and eliminates the most life-threatening acute risk in the breed. Merck Veterinary Manual lists overall GDV mortality at approximately 25–30%, and 20–45% in treated animals (https://www.merckvetmanual.com/digestive-system/surgical-problems-of-the-gastrointestinal-tract-in-small-animals/gastric-dilation-and-volvulus-in-small-animals). Cornell reports survival greater than 80 percent with treatment (https://www.vet.cornell.edu/departments-centers-and-institutes/riney-canine-health-center/canine-health-topics/gastric-dilatation-volvulus-gdv-or-bloat)."
           signs={['Unproductive retching — attempting to vomit without producing anything', 'Distended, drum-like abdomen', 'Restlessness progressing to sudden collapse', 'Excessive drooling', 'Pale gums']}
           management="Prophylactic gastropexy at spay/neuter — the most important preventive decision. Emergency surgery if GDV occurs. Know the location of the nearest 24-hour emergency vet before it is ever needed." />
 
@@ -74,11 +75,11 @@ export default function GreatPyreneesPage() {
             Shop related supplies
           </div>
           <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href="/go/amazon-brand/dog+leash?s=breed-great-pyrenees" />
           <div className="flex flex-col gap-3 mt-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/dog+leash?s=breed-great-pyrenees"
-              amazonLabel="Shop on Amazon"
+              amazonLabel="Browse dog leash on Amazon →"
             />
           </div>
         </div>

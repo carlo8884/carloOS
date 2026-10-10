@@ -1,10 +1,11 @@
+import { HopDisclosure } from '../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { getSiteConfig } from '@carloOS/config'
 import {
   ArticleLayout,
   ArticleByline,
-  AffiliateDisclosure,
+
   FAQAccordion,
   SchemaScript,
   ShopCtas,
@@ -150,13 +151,13 @@ const STATIC_PROFILES: Array<{
       'Active species that benefit from the owner being present. Dog leads for most household configurations; ferret suits those who can supervise out-of-cage time; horse only if acreage and experience match.',
   },
   {
-    persona: 'Experienced hobbyist, hot/humid climate, $300+/mo budget',
+    persona: 'Example: Experienced hobbyist, hot/humid climate, $300+/mo budget',
     topMatches: 'Saltwater fish · Reptile (lizard) · Reptile (snake)',
     rationale:
       'Hobby-grade species rewarding to experienced keepers; tropical/desert climates suit many reptile species with minimal climate-control overhead.',
   },
   {
-    persona: 'Acreage owner, experienced, $1,000+/mo budget',
+    persona: 'Example: Acreage owner, experienced, $1,000+/mo budget',
     topMatches: 'Horse · Dog · Reptile (lizard)',
     rationale:
       'Acreage unlocks horse keeping; high-energy working dog breeds also thrive here. Reptile suits the same household as a low-overhead companion species.',
@@ -249,23 +250,23 @@ export default function WhichPetPage() {
           siteId="dog-com"
           nextHref="/tools/new-puppy-checklist"
           nextLabel="Run the new-puppy checklist before you buy a crate"
-          nextBlurb="If the wizard leans dog, the first-week kit is a divider crate, food, and a harness — size those against the checklist before you order. The hop below is the same wire crate with divider search already on this page."
+          nextBlurb="If the wizard leans dog, the first-week kit is a divider crate, food, and a harness — size those against the checklist before you order. The button below opens the same wire crate with divider search on Amazon."
           resourceHref="/go/amazon-brand/wire+dog+crate+with+divider+panel?s=which-pet"
-          resourceLabel="Browse crates on Amazon →"
+          resourceLabel="Browse wire crates with a divider panel on Amazon →"
         />
 
-        {/* Money path — live amazon-brand search hops (first-week starter kit).
-            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-            Category searches only — not a ranked list, not a species ranking. */}
+        {/* Shop note — live amazon-brand search buttons (first-week starter kit).
+            ShopCtas hides empty Chewy; never href="#" or an empty link.
+            Amazon searches only — not a ranked list, not a species ranking. */}
         <section id="first-week-kit" className="mb-12 not-prose">
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/wire+dog+crate+with+divider+panel?s=which-pet", "/go/amazon-brand/puppy+food?s=which-pet", "/go/amazon-brand/julius+k9+idc+powerharness?s=which-pet", "/go/amazon-brand/dog+id+tag+collar?s=which-pet", "/go/amazon-brand/soft+dog+carrier?s=which-pet", "/go/amazon-brand/pet+first+aid+kit?s=which-pet"]} />
           <div className="mt-4 rounded-xl border border-brand-border bg-brand-white p-5">
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Shop a first-week starter kit
+              Shop these supplies
             </div>
-            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">If the wizard leans dog, these Amazon category searches are day-one
+            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">If the wizard leans dog, these Amazon searches are day-one
               husbandry items — a wire crate with a divider, puppy food, a harness,
-              an ID tag / collar, a soft carrier, and a pet first-aid kit. Same hops
+              an ID tag / collar, a soft carrier, and a pet first-aid kit. Same buttons
               used on the{' '}
               <Link
                 href="/tools/new-puppy-checklist"
@@ -280,14 +281,13 @@ export default function WhichPetPage() {
               >
                 emergency-prep tool
               </Link>
-              . They are not a ranked product list, not invented inventory, and they
+              . They are not a ranked product list, not made-up products, and they
               do not replace meeting a shelter, breeder, or veterinarian. Size the
-              crate and harness before you order. Dog.com earns a commission on
-              qualifying purchases at no extra cost to you. </p>
+              crate and harness before you order. </p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/wire+dog+crate+with+divider+panel?s=which-pet"
-                amazonLabel="Browse crates on Amazon →"
+                amazonLabel="Browse wire crates with a divider panel on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/puppy+food?s=which-pet"
@@ -295,7 +295,7 @@ export default function WhichPetPage() {
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/julius+k9+idc+powerharness?s=which-pet"
-                amazonLabel="Browse harnesses on Amazon →"
+                amazonLabel="Browse Julius-K9 IDC Powerharness on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/dog+id+tag+collar?s=which-pet"

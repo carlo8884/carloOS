@@ -1,12 +1,13 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, StockImage, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, ScoreMethodology, AffiliateDisclosure, ShopCtas, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, StockImage, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, ShopCtas, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
   title: 'Ferret Diet Basics — Obligate Carnivore Feeding | Ferret.com',
   description:
-    'Ferrets are strict obligate carnivores: 32–40% protein, 18–22% fat, under 3% carbs. Diet tiers, raw/whole-prey context, and insulinoma risk.',
+    'Obligate-carnivore feeding, diet tiers, and raw context. Under 3% carbohydrate on this page is a planning figure.',
   path: '/care/diet-basics',
   type: 'article',
 })
@@ -62,7 +63,7 @@ const FAQS = [
   {
     question: 'What do ferrets eat?',
     answer:
-      'Ferrets are strict obligate carnivores. The macronutrient profile cited in exotic-pet veterinary references is 32-40% animal-sourced protein and 18-22% animal-sourced fat on a dry-matter basis, with carbohydrate under 3% and fiber under 3%. The first 3-5 ingredients of any commercial diet should be named animal proteins or animal fats. Ferrets cannot derive useful energy from plants — their short gut (roughly 5x body length, with a 3-4 hour transit time) lacks the equipment to ferment plant material.',
+      'Ferrets are strict obligate carnivores. A working window on this page is 32-40% animal-sourced protein and 18-22% animal-sourced fat on a dry-matter basis. The Merck Veterinary Manual states that ferrets require protein of 35%–40%, and that carbohydrate (under 25%) and fiber (under 2.5%) proportions of the diet should be relatively low. Under 3% carbohydrate, and fiber under 3%, are planning figures. Merck does not state those tighter cutoffs. The first 3-5 ingredients of any commercial diet should be named animal proteins or animal fats. Ferrets cannot derive useful energy from plants — their short gut (roughly 5x body length, with a 3-4 hour transit time) lacks the equipment to ferment plant material.',
   },
   {
     question: 'Can ferrets eat cat food?',
@@ -94,7 +95,6 @@ const faqSchema = buildFAQSchema({ questions: FAQS })
 
 const combined = combineSchemas(schema, med, faqSchema)
 
-
 export default function FerretDietBasicsPage() {
   return (
     <>
@@ -102,6 +102,14 @@ export default function FerretDietBasicsPage() {
       <ArticleLayout
         siteId="ferret-com"
         contentType="care"
+        heroHop={
+          <>
+            <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/wysong+ferret+food?s=diet-basics" />
+            <div className="mb-4" data-primary-hop="true">
+              <a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" data-shop-placement="hero" href="/go/amazon-brand/wysong+ferret+food?s=diet-basics">Browse Wysong ferret food on Amazon →</a>
+            </div>
+          </>
+        }
         hero={{
           title: 'Ferret Diet Basics',
           subtitle:
@@ -135,6 +143,7 @@ export default function FerretDietBasicsPage() {
             <RelatedLinks
               title="Related Guides"
               links={[
+                { label: 'Label calculator', href: '/tools/label-calculator' },
                 { label: 'Insulinoma in Ferrets', href: '/health/insulinoma' },
                 { label: 'Cage Setup', href: '/care/cage-setup' },
               ]}
@@ -143,7 +152,7 @@ export default function FerretDietBasicsPage() {
 
           </>
         }
-      
+
         relatedLinks={[
           { title: 'Ferret Care Hub', href: '/care' },
           { title: 'Ferret Diet Hub', href: '/diet' },
@@ -180,9 +189,9 @@ export default function FerretDietBasicsPage() {
           <ul>
             <li><strong>Protein: 32–40% on a dry-matter basis,</strong> primarily animal-sourced (chicken, turkey, lamb, fish meal). Plant proteins (corn gluten meal, soy protein, pea protein) are poorly utilized and are a red flag on an ingredient panel.</li>
             <li><strong>Fat: 18–22% on a dry-matter basis,</strong> animal-sourced. Fat is a ferret’s primary energy substrate.</li>
-            <li><strong>Carbohydrate: under 3% (ideally under 2%).</strong> Most "ferret" kibbles on supermarket shelves contain 15–30% carbohydrate by difference. That is a defect, not a feature.</li>
+            <li><strong>Carbohydrate.</strong> The Merck Veterinary Manual states that ferrets require protein of 35%–40%, and that carbohydrate (under 25%) and fiber (under 2.5%) proportions of the diet should be relatively low (<a href="https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/management-of-ferrets">Merck Veterinary Manual</a>). Under 3% (ideally under 2%) is a planning figure on this page. Merck does not state that cutoff. Most "ferret" kibbles on supermarket shelves contain 15–30% carbohydrate by difference.</li>
             <li><strong>Taurine:</strong> supplemented, like commercial cat food. Ferrets, like cats, do not synthesize adequate taurine and require it from the diet.</li>
-            <li><strong>Fiber: under 3%.</strong> Higher fiber slows transit beyond what the ferret tract is built for.</li>
+            <li><strong>Fiber.</strong> Merck states fiber proportions should be relatively low (under 2.5%) (<a href="https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/management-of-ferrets">Merck Veterinary Manual</a>). Under 3% is a planning figure on this page. Higher fiber slows transit beyond what the ferret tract is built for.</li>
           </ul>
           <p>
             The first 3–5 ingredients of any commercial diet should be named animal proteins or animal fats. If the first ingredient is a grain ("ground corn", "brewers rice", "wheat") or a plant protein concentrate, the formula is not appropriate as a sole diet regardless of the marketing on the bag.
@@ -206,7 +215,7 @@ export default function FerretDietBasicsPage() {
             Three tiers, broadly. None are perfect; the goal is to land on a formulation whose ingredient panel matches the obligate-carnivore profile above, then stay consistent. Ferrets imprint on food in the first 6 months and become reluctant to switch later, so it is sensible to rotate among 2–3 acceptable brands from kithood to prevent food fixation.
           </p>
           <p>
-            <strong>Premium tier — animal-first, low-carb, no grain:</strong> Wysong Epigen 90, Wysong Archetype, Orijen Cat &amp; Kitten (used off-label by many ferret keepers), and similar formulations. Ingredient panel reads as named meats and meat meals; carbohydrate by difference is typically under 10%. Higher price point, but materially closer to the published macronutrient targets.
+            <strong>Premium tier — animal-first:</strong> Wysong Epigen 90 markets starch-free, and its printed ingredient list does not name wheat, corn, rice, or soy. Carbohydrate is not on that guaranteed analysis — check the label. Wysong Archetype and Orijen Cat &amp; Kitten are used off-label by many ferret keepers; check each label before treating them as the same panel.
           </p>
           <p>
             <strong>Mid tier — ferret-specific, mostly acceptable:</strong> Marshall Premium Ferret Diet, ZuPreem Premium Ferret Diet, 8in1 Ultimate Ferret Diet. These are the brands stocked at independent pet retailers and used widely by breeders and shelters. Ingredient panels are imperfect (some plant protein, some grain) but the profile is in range for healthy adults.
@@ -231,7 +240,7 @@ export default function FerretDietBasicsPage() {
             Insulinoma — a functional tumor of the pancreatic beta cells that produces inappropriate insulin — is the single most common neoplasm reported in middle-aged and older domestic ferrets. The leading working hypothesis in the exotic-pet literature is that chronic dietary carbohydrate load drives sustained insulin secretion, which over years contributes to beta-cell hyperplasia and eventually insulinoma formation. The evidence is associational rather than experimentally established, but the recommendation is consistent across exotic-vet sources: minimize dietary carbohydrate from kithood onward.
           </p>
           <p>
-            Practical consequence: low-carb commercial kibble plus raw/whole-prey supplementation is the diet pattern most consistent with reducing this risk. Sugary treats — including fruit, "ferret treats" sweetened with molasses or honey, and human snacks — are the highest-leverage items to eliminate. For a full clinical summary, see our companion page on <a href="/health/insulinoma">Insulinoma in Ferrets</a>.
+            Practical consequence: a commercial kibble whose carbohydrate you have checked on the label, plus raw/whole-prey supplementation, is the diet pattern most consistent with reducing this risk. Sugary treats — including fruit, "ferret treats" sweetened with molasses or honey, and human snacks — are the highest-leverage items to eliminate. For a full clinical summary, see our companion page on <a href="/health/insulinoma">Insulinoma in Ferrets</a>. <a href="/diet/best-ferret-kibble">The ferret kibble guide</a> compares kibbles and says carbohydrate is not on the Wysong guaranteed analysis. Wysong Epigen 90 and Marshall Premium, the two bags named in the tiers above, are set side by side in the <a href="/reviews/wysong-vs-marshall-kibble-guide">Wysong versus Marshall guide</a>.
           </p>
 
           <h2 id="water">Water, Treats, and Feeding Mechanics</h2>
@@ -242,21 +251,7 @@ export default function FerretDietBasicsPage() {
             Acceptable treats: small pieces of cooked or freeze-dried meat, egg yolk in small amounts, commercial high-protein freeze-dried treats (Wysong, Bravo, Vital Essentials). Unacceptable: yogurt drops, raisin treats, fruit-and-vegetable medleys, and any treat whose first ingredient is sugar or grain. A useful rule: if you would feed it to a cat with diabetes, it is probably fine for a ferret.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated ferret obligate-macro chart /
-              ferret fridge diet-ladder card /
-              mustelid diet-basics handbook).
-              Keep existing Wysong / Marshall /
-              Carniwhole review hops.
-              Educational kitchen searches only; no Rx /
-              vaccine / aging hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs diet-hub /
-              protein-fat / kibble / odor kitchen kits. Ferret
-              aging stays held.
-              Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
@@ -265,71 +260,69 @@ export default function FerretDietBasicsPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/wysong+ferret+food?s=diet-basics"
-                amazonLabel="Shop on Amazon"
+                amazonLabel="Browse Wysong ferret food on Amazon →"
               />
           </div>
           </div>
 
           <h2 id="picks">Diet Picks</h2>
           <p>
-            Three formulations that line up with the obligate-carnivore macronutrient targets above — animal-first ingredient panels, low plant carbohydrate, widely available in US pet retail or direct from the manufacturer. This is a documented-spec comparison, not a hands-on test: inclusion is based on published ingredient and macronutrient panels and on adoption patterns in keeper communities and at exotic-mammal shelters.
+            Three formulations with animal-first ingredient panels, widely available in US pet retail or direct from the manufacturer. Carbohydrate is not on the Wysong or Marshall guaranteed analysis — check the label. This is a documented-spec comparison, not a hands-on test: inclusion is based on published ingredient and macronutrient panels and on adoption patterns in keeper communities and at exotic-mammal shelters.
           </p>
-          <ScoreMethodology />
-          <ReviewCard
+          <ReviewCard quietUntilTag
             id="wysong-epigen-90"
             badge="Premium Tier"
             name="Wysong Epigen 90"
-            subtitle="Animal-first, starch-free, grain-free"
-            score={9.3}
+            subtitle="Animal-first. Marketed starch-free. The printed list does not name wheat, corn, rice, or soy."
             winner
             description={
-              <p>The lowest-carbohydrate commercial kibble in wide ferret-keeping use. Ingredient panel reads as named meats and organ meats; the formula is built on a starch-free system that drives carbohydrate by difference into the low single digits. Suitable as a sole diet for healthy adult ferrets, and the default choice when insulinoma risk is a primary concern. Higher price per pound than the mid tier.</p>
+              <p>The current Wysong Epigen 90 page lists crude protein minimum 63% and crude fat minimum 16%. Those are guaranteed-analysis figures as printed, not a dry-matter conversion. The page markets the food as starch-free. Carbohydrate is not on the guaranteed analysis — check the label.</p>
             }
             specs={[
-              { label: 'Protein (dry-matter)', value: '~60%', highlight: 'good' },
-              { label: 'Fat (dry-matter)', value: '~16%' },
-              { label: 'Carbohydrate', value: 'Single digits', highlight: 'good' },
-              { label: 'Grain-free', value: 'Yes', highlight: 'good' },
+              { label: 'Crude protein (as printed)', value: 'Min. 63%', highlight: 'good' },
+              { label: 'Crude fat (as printed)', value: 'Min. 16%' },
+              { label: 'Carbohydrate', value: 'Not on the guaranteed analysis. Check the label.' },
+              { label: 'Starch-free', value: 'Marketed on the current page. Check the label.', highlight: 'good' },
               { label: 'Distribution', value: 'Direct + specialty pet retail' },
             ]}
-            pros={['Lowest commercial carb load in wide ferret use', 'Animal-first throughout', 'Starch-free system', 'Suitable for insulinoma-prone adults']}
+            pros={['Carbohydrate is not on the guaranteed analysis. Check the label.', 'Animal-first throughout', 'Marketed as starch-free', 'The printed list does not name wheat, corn, rice, or soy']}
             cons={['Premium price', 'Not always stocked at supermarket pet aisles']}
-            price="$30–50 / 5 lb"
+            price="see current price / 5 lb"
+            priceNote="dated 2026-05-31."
             ctaText="Find Wysong Epigen 90"
             ctaHref="/go/wysong/epigen-90?s=care-diet-basics"
             ctaAffiliateProgram="wysong"
             ctaAffiliateProduct="epigen-90"
           />
-          <ReviewCard
+          <ReviewCard quietUntilTag
             id="marshall-premium-diet"
             badge="Mid Tier"
             name="Marshall Premium Ferret Diet"
             subtitle="Ferret-specific formulation, widely stocked, ferret-targeted macros"
-            score={8.0}
             description={
-              <p>The reference mid-tier ferret kibble in US pet retail. Specifically formulated for ferrets — not adapted from cat food — with a protein and fat profile that lands in the working ferret range. Imperfect ingredient panel (contains some plant protein) but the macro profile is acceptable for healthy adults, and per-pound price is materially lower than the premium tier. The most likely brand to find on a chain pet retailer shelf at short notice.</p>
+              <p>The current Marshall Premium Ferret Diet page lists crude protein minimum 38% and crude fat minimum 18%. Those are guaranteed-analysis figures as printed, not a dry-matter conversion. Carbohydrate is not on the guaranteed analysis — check the label.</p>
             }
             specs={[
-              { label: 'Protein (dry-matter)', value: '~38%', highlight: 'good' },
-              { label: 'Fat (dry-matter)', value: '~20%', highlight: 'good' },
-              { label: 'Carbohydrate', value: 'Mid teens', highlight: 'warn' },
+              { label: 'Crude protein (as printed)', value: 'Min. 38%', highlight: 'good' },
+              { label: 'Crude fat (as printed)', value: 'Min. 18%', highlight: 'good' },
+              { label: 'Carbohydrate', value: 'Not on the guaranteed analysis. Check the label.' },
               { label: 'Ferret-specific', value: 'Yes', highlight: 'good' },
               { label: 'Distribution', value: 'National chain pet retail' },
             ]}
             pros={['Ferret-specific formulation', 'Widely available', 'Affordable per pound', 'Long manufacturer track record in ferret retail']}
-            cons={['Higher carb than premium tier', 'Plant protein in ingredient list']}
-            price="$15–25 / 4 lb"
+            cons={['Carbohydrate is not on the guaranteed analysis. Check the label.', 'Check the ingredient list on the current bag']}
+            price="see current price / 4 lb"
+            priceNote="dated 2026-05-31."
             ctaText="Find Marshall Premium Ferret Diet"
             ctaHref="/go/marshall/premium-ferret-diet?s=care-diet-basics"
             ctaAffiliateProgram="marshall"
             ctaAffiliateProduct="premium-ferret-diet"
           />
-          <ReviewCard
+          <ReviewCard quietUntilTag
             id="carniwhole"
             badge="Direct-to-Consumer"
             name="Carniwhole Ferret Food"
             subtitle="Direct-to-consumer ferret food, published macros, subscription-shipped"
-            score={8.2}
             description={
               <p>A direct-to-consumer ferret food brand favoured by keepers who want ingredient transparency and a fresher product than long-shelf-stable commercial kibble. Carniwhole publishes its ingredient and macronutrient panel and ships on a subscription model. Appeal: transparency and freshness. Trade-off: subscription logistics and a shorter community track record than Marshall or Wysong.</p>
             }

@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { AffiliateDisclosure, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ReviewCard, ScoreMethodology, ShopCtas, TableOfContents } from '@carloOS/ui'
+import { ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ReviewCard, ShopCtas, TableOfContents, PrimaryHop } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -61,6 +62,10 @@ export default function BeetPulpPage() {
           { title: 'Feeding Senior Horses', href: '/nutrition/feeding-senior-horses' },
           { title: 'Forage Basics', href: '/nutrition/forage-basics' },
         ]}
+        heroHop={<>
+          <PrimaryHop href="/go/amazon-brand/molasses+free+beet+pulp+shreds+horse?s=nutrition-beet-pulp" label="Search Amazon for molasses-free beet pulp shreds" />
+          <HopDisclosure tone="on-dark" siteId="horses-com" href="/go/amazon-brand/molasses+free+beet+pulp+shreds+horse?s=nutrition-beet-pulp" />
+        </>}
         hero={{
           title: "Beet Pulp for Horses",
           subtitle:
@@ -116,7 +121,7 @@ export default function BeetPulpPage() {
           <p>Beet pulp is a super-fiber: a highly digestible, fermentable fiber that delivers more calories than typical hay but without the starch and sugar load of grain. That makes it a safe way to add condition-building energy through the hindgut rather than through risky starch. As a soft, soaked mash it is also easy to chew and swallow, ideal for horses with poor teeth, and it carries water into the horse, aiding hydration.</p>
 
           <h2 id="soaking">Soaking Beet Pulp</h2>
-          <p>Beet pulp absorbs several times its dry weight in water and swells substantially, which is why it is soaked before feeding. Soaking dried shreds for around 30 minutes (pellets longer) produces a safe, easily eaten mash and removes the (largely theoretical, but worth avoiding) risk of dry pulp swelling after a horse bolts it. Use plenty of water, soak for the time the product specifies, and in hot weather soak fresh each feed to avoid fermentation and spoilage. Discard sour or fermented mash. A fine-mesh horse feed colander is how soaked shreds drain after that half-hour so the mash is a mash, not a soup — it is not a horse hay soaking tub (that lives on feeding-the-easy-keeper), not a horse feed soaking tub (that lives on feeding-senior-horses), not a lidded 5-gallon feed-soaking pail (that lives on choke), and not a horse hay soaking bag (that lives on heaves). A long-handled horse feed mixing paddle is how dry pulp is stirred into plenty of water and how supplements are mixed through the palatable mash — it is not a small rubber horse mixing pan (that lives on ration-balancers), not a marked horse grain scoop (that lives on feeding-the-performance-horse), and not a dental mash hop (that lives on equine-dental-care). A silicone horse feed-tub scraper is how leftover mash is scraped out so the next soak is fresh instead of fermented — it is not stackable rubber horse feed tubs (those live on grain) and not large smooth feed-tub rocks (those live on choke).</p>
+          <p>Beet pulp absorbs several times its dry weight in water and swells substantially, which is why it is soaked before feeding. Soaking dried shreds for around 30 minutes (pellets longer) produces a safe, easily eaten mash and removes the (largely theoretical, but worth avoiding) risk of dry pulp swelling after a horse bolts it. Use plenty of water, soak for the time the product specifies, and in hot weather soak fresh each feed to avoid fermentation and spoilage. Discard sour or fermented mash. A fine-mesh horse feed colander is how soaked shreds drain after that half-hour so the mash is a mash, not a soup — it is not a horse hay soaking tub, not a horse feed soaking tub, not a lidded 5-gallon feed-soaking pail, and not a horse hay soaking bag. A long-handled horse feed mixing paddle is how dry pulp is stirred into plenty of water and how supplements are mixed through the palatable mash — it is not a small rubber horse mixing pan, not a marked horse grain scoop. A silicone horse feed-tub scraper is how leftover mash is scraped out so the next soak is fresh instead of fermented — it is not stackable rubber horse feed tubs and not large smooth feed-tub rocks.</p>
 
           <h2 id="who">Who It Suits</h2>
           <ul>
@@ -132,115 +137,10 @@ export default function BeetPulpPage() {
 
           <h2 id="kit">Beet-pulp soaking supplies</h2>
           <p>
-            Everyday physical supplies that match the
-            soak-with-plenty-of-water, stir-into-a-mash,
-            and soak-fresh-each-feed copy on this page —
-            a fine-mesh horse feed colander so soaked
-            shreds drain after about 30 minutes instead
-            of being served as soup, a long-handled
-            horse feed mixing paddle so dry pulp is
-            stirred into plenty of water and supplements
-            are mixed through the mash, and a silicone
-            horse feed-tub scraper so leftover mash is
-            scraped out before the next soak ferments
-            in heat. These are educational barn
-            searches, not a ranked product list, not a
-            substitute for veterinary care, and not a
-            hay-soaking-tub hop (that lives on
-            feeding-the-easy-keeper), a feed-soaking-tub
-            hop (that lives on feeding-senior-horses),
-            a lidded-5-gallon-soaking-pail hop (that
-            lives on choke), a hay-soaking-bag hop
-            (that lives on heaves), a mixing-pan hop
-            (that lives on ration-balancers), or the
-            molasses-free-shreds / beet-pulp-pellets
-            ReviewCards below. This page does
-            not claim hands-on testing. </p>
+            Keep these on hand: a fine-mesh horse feed colander so soaked shreds drain after about 30 minutes instead of being served as soup, a long-handled horse feed mixing paddle so dry pulp is stirred into plenty of water and supplements are mixed through the mash, and a silicone horse feed-tub scraper so leftover mash is scraped out before the next soak ferments in heat. </p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/fine+mesh+horse+feed+colander?s=nutrition-beet-pulp", "/go/amazon-brand/long+handled+horse+feed+mixing+paddle?s=nutrition-beet-pulp", "/go/amazon-brand/silicone+horse+feed+tub+scraper?s=nutrition-beet-pulp"]} />
 
-          {/* Money path — live amazon-brand search hops
-              (fine mesh horse feed colander /
-              long handled horse feed mixing paddle /
-              silicone horse feed tub scraper).
-              Educational barn searches only; no Rx /
-              vaccine ASIN hops. ShopCtas hides empty
-              Chewy; never href="#" or PLACEHOLDER.
-              Unused vs #1120
-              compact+digital+gram+scale+horse+feed /
-              molasses+free+chaff+horse /
-              small+rubber+horse+mixing+pan, #1119
-              horse+alfalfa+cubes /
-              soy+hull+pellets+horse+feed /
-              over+door+horse+feed+bucket, #1118
-              portable+horse+hay+flake+scale /
-              horse+hay+soaking+tub /
-              low+sugar+horse+treats, #1117
-              nylon+horse+hay+bag /
-              horse+feed+grade+vegetable+oil /
-              marked+horse+grain+scoop, #1116
-              horse+chopped+forage /
-              horse+feed+soaking+tub /
-              horse+corner+feeder, #1115
-              equine+toxic+plant+identification+field+guide /
-              horse+pasture+walk+weed+identification+handbook /
-              horse+paddock+tree+guard+fencing, #1114
-              flat+back+horse+water+bucket /
-              heated+horse+water+bucket /
-              electrolyte+for+horses, #1113
-              orchard+grass+hay+horse /
-              alfalfa+hay+bales+horse /
-              timothy+alfalfa+mixed+hay+horse, #1112
-              tabletop+digital+horse+grain+scale /
-              stackable+rubber+horse+feed+tubs /
-              rodent+proof+metal+horse+feed+bin, #1111
-              horse+hay+probe+moisture+tester /
-              equine+hay+core+sampler /
-              wall+mounted+horse+hay+rack, #1110
-              plain+white+horse+salt+block /
-              salt+first+horse+electrolyte+powder /
-              wide+mouth+horse+water+bucket, #1105
-              digital+hanging+hay+bale+scale /
-              equine+forage+nsc+hay+test+kit /
-              portable+strip+grazing+step+in+posts,
-              horse+tank+heater
-              (winter-care),
-              color+coded+flat+back+horse+buckets
-              (strangles),
-              horse+electrolytes
-              (emergency / grimace-scale),
-              horse+electric+tape / horse+fence+mesh /
-              horse+electric+rope / electric+fence+tester
-              (fencing-safety),
-              horse+grazing+muzzle / soil+test+kit
-              (pasture-management),
-              portable+horse+paddock+panels
-              (osteoarthritis),
-              small+hole+slow+feeder+hay+net+horse /
-              low+nsc+ration+balancer+easy+keeper+horse
-              (easy-keeper ReviewCards),
-              stabilized+rice+bran+horse+fat+supplement /
-              performance+horse+feed+high+fat
-              (performance ReviewCards),
-              horse+hay+cubes / horse+mash
-              (dental),
-              lidded+5+gallon+feed+soaking+pail /
-              large+smooth+feed+tub+rocks /
-              round+rubber+feed+pan+horse
-              (choke / flu),
-              horse+hay+soaking+bag / horse+hay+steamer
-              (heaves),
-              slow+feeder+hay+net+horse
-              (forage ReviewCard),
-              equine+slow+feeder+hay+box
-              (turnout),
-              compact+digital+gram+scale+horse+feed /
-              molasses+free+chaff+horse /
-              small+rubber+horse+mixing+pan
-              (ration-balancers #1120),
-              molasses+free+beet+pulp+shreds+horse /
-              beet+pulp+pellets+horse+feed
-              (kept on the ReviewCards below). */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
@@ -263,18 +163,16 @@ export default function BeetPulpPage() {
           </div>
 
           <h2 id="picks">Beet Pulp Picks</h2>
-          <p>A few widely-available beet pulp options covering shred and pellet formats and molasses-free for low-sugar diets. Always soak before feeding; introduce gradually. Use as part of a balanced ration -- beet pulp is a general fiber and calorie support, not a complete feed or a treatment. This is a documented-spec comparison drawing on standard US equestrian retail; this page does not claim hands-on testing.</p>
+          <p>A few widely-available beet pulp options covering shred and pellet formats and molasses-free for low-sugar diets. Always soak before feeding; introduce gradually. Use as part of a balanced ration -- beet pulp is a general fiber and calorie support, not a complete feed or a treatment.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/molasses+free+beet+pulp+shreds+horse?s=nutrition-beet-pulp", "/go/amazon-brand/beet+pulp+pellets+horse+feed?s=nutrition-beet-pulp"]} />
 
-          <ScoreMethodology />
 
           <ReviewCard
             id="beet-pulp-shreds-mf"
             badge="Molasses-Free Shreds"
             name="Molasses-Free Beet Pulp Shreds"
             subtitle="Low-sugar super-fiber for hard keepers, seniors, and metabolic horses"
-            score={8.8}
             winner
             description={<>
               <p>Molasses-free beet pulp shreds are the go-to form for horses on low-sugar diets -- the molasses coating is omitted so the natural low-sugar profile of the fiber is preserved, making it suitable for many easy keepers and metabolic horses as a calorie source. Shreds soak up quickly (about 30 minutes) into a palatable mash and are easy for seniors with worn teeth to eat. A very widely used general fiber supplement for adding safe condition-building calories without starch.</p>
@@ -287,8 +185,9 @@ export default function BeetPulpPage() {
             ]}
             pros={['Low sugar — suits metabolic horses', 'Soaks quickly into palatable mash', 'Safe calorie addition without starch', 'Good hydration vehicle']}
             cons={['Must be soaked before feeding', 'Not a complete feed', 'Some horses initially reluctant']}
-            price="$18–35 per 40–50 lb"
-            ctaText="Search on Amazon →"
+            price="see current price per 40–50 lb"
+            priceNote="dated 2026-06-12."
+            ctaText="Search molasses-free beet pulp shreds on Amazon →"
             ctaHref="/go/amazon-brand/molasses+free+beet+pulp+shreds+horse?s=nutrition-beet-pulp"
             ctaAffiliateProgram="amazon"
             ctaAffiliateProduct="beet-pulp-shreds-mf"
@@ -299,7 +198,6 @@ export default function BeetPulpPage() {
             badge="Pellet Format"
             name="Beet Pulp Pellets"
             subtitle="Convenient pellet form of beet pulp for horses on a super-fiber program"
-            score={8.4}
             description={<>
               <p>Beet pulp pellets deliver the same high-digestibility super-fiber as shreds in a denser, easier-to-store pellet form. They take longer to soak than shreds (typically 45 minutes to 1 hour to fully expand) but are convenient for stable management and travel. Available with or without molasses; choose molasses-free for horses on low-sugar protocols. Use as a fiber and calorie supplement alongside forage and a complete mineral source.</p>
               <p>General nutrition support for: the same horses as shreds, particularly where storage convenience and consistent pellet-form serving matter.</p>
@@ -311,8 +209,9 @@ export default function BeetPulpPage() {
             ]}
             pros={['Convenient to store and measure', 'Same fiber benefits as shreds', 'Suits horses that prefer pellet texture']}
             cons={['Longer soaking time than shreds', 'Must still be fully soaked', 'Check for molasses if low-sugar diet needed']}
-            price="$18–32 per 40–50 lb"
-            ctaText="Search on Amazon →"
+            price="see current price per 40–50 lb"
+            priceNote="dated 2026-06-12."
+            ctaText="Search beet pulp pellet horse feed on Amazon →"
             ctaHref="/go/amazon-brand/beet+pulp+pellets+horse+feed?s=nutrition-beet-pulp"
             ctaAffiliateProgram="amazon"
             ctaAffiliateProduct="beet-pulp-pellets"

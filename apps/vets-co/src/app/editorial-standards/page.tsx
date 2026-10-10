@@ -38,7 +38,7 @@ export default function EditorialStandardsPage() {
           A short account of the site is on <Link href="/about" className="text-brand-primary hover:underline">About</Link>.
         </p>
         <h2>What Vets.co Is</h2>
-        <p>Vets.co is a consumer-facing reference site for pet owners — specialist directories, breed-health guides, preventive-care reference material, insurance comparisons, and telehealth overviews. Articles are written by the Vets.co editorial team and draw on publicly available sources: <a href="https://avma.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">AVMA</a>, <a href="https://aaha.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">AAHA</a>, and <a href="https://acvim.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">ACVIM</a> guidance; published peer-reviewed veterinary literature; specialist-college reference material; insurer disclosures and public payout data; and reputable industry reporting.</p>
+        <p>Vets.co is a consumer-facing reference site for pet owners — specialist directories, breed-health guides, preventive-care reference material, insurance comparisons, and telehealth overviews. Articles are written by the Vets.co editorial team and draw on publicly available sources: <a href="https://www.avma.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">AVMA</a>, <a href="https://aaha.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">AAHA</a>, and <a href="https://www.acvim.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">ACVIM</a> guidance; published peer-reviewed veterinary literature; specialist-college reference material; insurer disclosures and public payout data; and reputable industry reporting.</p>
         <p>Vets.co is <strong>not</strong> a veterinary practice. Our content is general reference, not individual veterinary advice for a specific animal. If you need diagnostic guidance for your pet, please consult your own veterinarian.</p>
 
         <h2>How We Research and Write</h2>
@@ -47,6 +47,7 @@ export default function EditorialStandardsPage() {
           <li><strong>Current guidance.</strong> Where consensus has updated (vaccine intervals, spay/neuter timing for large breeds, NSAID monitoring), we follow current professional guidance rather than the older version.</li>
           <li><strong>We say when evidence is thin.</strong> Plenty of veterinary topics are still under-studied or contested. Where the field is split, we say so.</li>
           <li><strong>Honest scope.</strong> We don&apos;t claim a medical-review process we don&apos;t run. Articles are written by the editorial team and grounded in cited sources, not signed off by a licensed clinician for individual animals.</li>
+          <li><strong>Prices are dated.</strong> A price on a money page carries the date it was checked. There is no veterinarian reviewer. Pages are researched from the cited veterinary sources and are not a substitute for a veterinarian.</li>
         </ul>
 
         <h2>Affiliate Independence</h2>

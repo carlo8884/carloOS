@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -8,7 +9,6 @@ import {
   combineSchemas,
   SchemaScript,
   FAQAccordion,
-  AffiliateDisclosure,
   CrossPortfolioCard,
   ShopCtas,
 } from '@carloOS/ui'
@@ -95,7 +95,7 @@ const appSchema = {
     'Calibrated interpretation: minimal signs, some signs, or signs consistent with pain',
     'High-pain outcomes push horse emergency triage, not a shopping list',
     'Safety guidance: never give leftover prescriptions or human painkillers; never recommend a dose or a named drug',
-    'Shoppable observation / comfort kit via Amazon category searches (equine first-aid kit, poultice, ice boot / cold therapy wrap, digital veterinary thermometer, vet wrap / cohesive bandage, horse electrolytes)',
+    'Shop the observation / comfort kit via Amazon searches (equine first-aid kit, poultice, ice boot / cold therapy wrap, digital veterinary thermometer, vet wrap / cohesive bandage, horse electrolytes)',
   ],
   publisher: { '@type': 'Organization', name: 'Horses.com Editorial', url: 'https://horses.com' },
 }
@@ -226,16 +226,16 @@ export default function HorseGrimaceScalePage() {
         </div>
       </section>
 
-      {/* Money path — live amazon-brand search hops (observation / comfort kit).
-          ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-          Category searches only — not a ranked list, not a diagnosis.
+      {/* Shop note — live amazon-brand search buttons (observation / comfort kit).
+          ShopCtas hides empty Chewy; never href="#" or an empty link.
+          Amazon searches only — not a ranked list, not a diagnosis.
           High-pain outcomes should already have pushed ER triage above. */}
       <section id="horse-grimace-kit" className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <div className="max-w-2xl">
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/equine+first+aid+kit?s=tools-horse-grimace-scale", "/go/amazon-brand/poultice?s=tools-horse-grimace-scale", "/go/amazon-brand/ice+boot+cold+therapy+wrap?s=tools-horse-grimace-scale", "/go/amazon-brand/digital+veterinary+thermometer?s=tools-horse-grimace-scale", "/go/amazon-brand/vet+wrap+cohesive+bandage?s=tools-horse-grimace-scale", "/go/amazon-brand/horse+electrolytes?s=tools-horse-grimace-scale"]} />
           <div className="mt-4 rounded-xl border border-brand-border bg-brand-white p-5">
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Shop a pain-watch observation kit
+              Shop these supplies
             </div>
             <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
@@ -285,7 +285,6 @@ export default function HorseGrimaceScalePage() {
               licensed vet on a screen rather than waiting for a gap to become
               an ER haul.
             </p>
-            <AffiliateDisclosure variant="inline" siteId="horses-com" className="mb-3 text-2xs" />
             <div className="flex flex-col gap-2 sm:flex-row sm:flex-wrap">
               <Link
                 href={crossSiteHref('vets-co', '/reviews/best-pet-insurance')}

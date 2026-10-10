@@ -1,5 +1,6 @@
 'use client'
 
+import { HopDisclosure } from '../../../components/HopDisclosure'
 /**
  * Horse Cost-of-Ownership Calculator -- /tools/horse-cost-calculator
  * Client compute component. Sums recurring monthly horse-keeping costs into a
@@ -23,7 +24,7 @@ interface BoardOption {
   note: string
 }
 
-// Seed defaults reflect commonly published 2026 US ranges. Boarding is the
+// Planning figure: seed defaults the owner can edit, not a published fee schedule. Boarding is the
 // single largest and most regionally variable line item, so we give the user a
 // board type plus an editable dollar field rather than a fixed number.
 const BOARD_OPTIONS: BoardOption[] = [
@@ -179,7 +180,10 @@ export default function Calculator() {
 
   return (
     <div className="rounded-lg border border-brand-border bg-brand-surface p-6 sm:p-8">
-      <PriceAsOf date="2026-06-11" />
+      <PriceAsOf date="2026-10-05" />
+      <p className="mb-4 text-xs leading-relaxed text-brand-text-mid">
+        Typical US ranges, last updated 2026-10-05; local prices vary.
+      </p>
       {/* Board type */}
       <div className="mb-5">
         <label htmlFor="hc-board-type" className="mb-1 block text-sm font-medium text-brand-text-dark">
@@ -262,6 +266,25 @@ export default function Calculator() {
       <ResultMeaning>
         These totals add the monthly amounts you entered into a planning budget, not a quote from a barn.
       </ResultMeaning>
+      <div className="mt-6 rounded-lg border border-brand-border bg-brand-surface p-5">
+        <p className="mb-1 text-xs font-bold uppercase tracking-wide text-brand-primary">Next step</p>
+        <p className="text-base font-semibold leading-snug">
+          <a href="/first-horse-roadmap" className="text-brand-primary underline underline-offset-2">
+            Walk the first 90 days before you buy →
+          </a>
+        </p>
+        <p className="mt-1 text-sm leading-relaxed text-brand-text-mid">
+          The monthly total is a planning budget. The first-horse roadmap is the sequence that budget pays for. The button below is the halter and lead already on this page.
+        </p>
+        <HopDisclosure siteId="horses-com" href="/go/amazon-brand/horse+halter+lead+rope?s=tools-horse-cost-calculator" />
+        <a
+          href="/go/amazon-brand/horse+halter+lead+rope?s=tools-horse-cost-calculator"
+          rel="sponsored noopener"
+          className="inline-block max-w-full font-semibold text-brand-primary underline underline-offset-2 whitespace-normal text-left"
+        >
+          Browse horse halters and leads on Amazon →
+        </a>
+      </div>
 
       {/* Breakdown table */}
       <div className="mt-4 overflow-hidden rounded border border-brand-border">

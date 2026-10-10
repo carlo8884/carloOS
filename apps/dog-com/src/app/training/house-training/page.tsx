@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -7,7 +8,6 @@ import {
   TableOfContents,
   CrossPortfolioCard,
   ArticleByline,
-  AffiliateDisclosure,
   ShopCtas,
   JourneyNext,
 } from '@carloOS/ui'
@@ -73,26 +73,26 @@ export default function HouseTrainingPage() {
           nextLabel="Put the schedule on a first-year timeline"
           nextBlurb="The schedule method is take them out after every meal, nap, play, drink, and crate. The puppy schedule is when those windows change by age. An enzymatic cleaner is for accidents that already happened — not a substitute for the schedule."
           resourceHref="/go/amazon-brand/enzymatic+pet+stain+odor+cleaner?s=training-house"
-          resourceLabel="Browse enzymatic pet cleaners on Amazon →"
+          resourceLabel="Browse enzymatic stain and odor cleaner on Amazon →"
         />
 
         <h2 id="accidents">Accident Protocol</h2>
         <p>If you catch the puppy in the act: a calm, neutral "ah-ah" or clap to interrupt, then immediately take outside. If they finish outside, reward. Never yell, never rub the puppy&apos;s nose in it, never physical punishment — none of these work and all of them damage the relationship and trust required for effective training.</p>
         <p>If you find the accident after the fact: clean it up quietly and completely with an enzymatic cleaner (Nature&apos;s Miracle, Simple Solution) that eliminates the scent residue — regular cleaners leave residue that dogs can smell even when humans cannot, which marks the spot as a bathroom. Do not react to the puppy. There is no teaching opportunity after the fact; the puppy does not connect your current reaction to something that happened minutes or hours ago.</p>
 
-        {/* Money path — live amazon-brand search hops (house-training kit).
-            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-            Category searches only — not a ranked list. */}
-        <AffiliateDisclosure variant="inline" siteId="dog-com" />
+        {/* Shop note — live amazon-brand search buttons (house-training kit).
+            ShopCtas hides empty Chewy; never href="#" or an empty link.
+            Amazon searches only — not a ranked list. */}
+        <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/enzymatic+pet+stain+odor+cleaner?s=training-house", "/go/amazon-brand/puppy+training+treats?s=training-house", "/go/amazon-brand/wire+dog+crate+with+divider+panel?s=training-house", "/go/amazon-brand/dog+poop+bags?s=training-house"]} />
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
-            Shop a house-training kit
+            Shop these supplies
           </div>
           
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/enzymatic+pet+stain+odor+cleaner?s=training-house"
-              amazonLabel="Browse enzymatic pet cleaners on Amazon →"
+              amazonLabel="Browse enzymatic stain and odor cleaner on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/puppy+training+treats?s=training-house"
@@ -100,7 +100,7 @@ export default function HouseTrainingPage() {
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/wire+dog+crate+with+divider+panel?s=training-house"
-              amazonLabel="Browse crates on Amazon →"
+              amazonLabel="Browse wire crates with a divider panel on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/dog+poop+bags?s=training-house"

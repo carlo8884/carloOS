@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, ScoreMethodology, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { TableShopLink, ComparisonFoot, buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -61,6 +62,14 @@ export default function GirthsCinchesPage() {
           { title: 'Saddle Fit Basics', href: '/guides/saddle-fit-basics' },
           { title: 'Boots and Wraps', href: '/tack/boots-and-wraps' },
         ]}
+        heroHop={
+          <>
+            <HopDisclosure siteId="horses-com" href="/go/amazon-brand/anatomic+english+girth?s=girths-and-cinches" />
+            <div className="mb-4" data-primary-hop="true">
+              <a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" data-shop-placement="hero" href="/go/amazon-brand/anatomic+english+girth?s=girths-and-cinches">Browse anatomic English girths on Amazon →</a>
+            </div>
+          </>
+        }
         hero={{
           title: "Girths and Cinches",
           subtitle:
@@ -84,6 +93,7 @@ export default function GirthsCinchesPage() {
             { label: "Fit and Tightening", href: "#fit" },
             { label: "Girth Galls and Girthiness", href: "#galls" },
             { label: "Girth Picks", href: "#picks" },
+            { label: "Who Should Buy Which", href: "#which" },
             { label: "FAQ", href: "#faq" },
             { label: "References", href: "#references" },
           ]} />
@@ -118,34 +128,26 @@ export default function GirthsCinchesPage() {
             <li><strong>Stud-guard and short dressage girths</strong> for jumping (protecting the belly) and dressage (used with long billets and a monoflap saddle).</li>
             <li><strong>Materials</strong> -- leather, neoprene, fleece-lined, string, and breathable synthetics, varying in grip, comfort, and ease of cleaning.</li>
           </ul>
-          
 
           <h2 id="western">Western Cinches</h2>
           <p>The western cinch attaches to the saddle by long latigo straps and a cinch ring. Cinches are commonly made of woven mohair, felt, fleece, or neoprene, with mohair prized for breathability and comfort. A western saddle may use a single front cinch or, for harder stopping and roping work, an additional rear cinch (the back cinch must be snugged so a hind foot cannot get caught, and connected to the front cinch). Material and width are chosen for the horse&apos;s comfort over long miles.</p>
 
           <h2 id="fit">Fit and Tightening</h2>
           <p>A girth should be the right length so the buckles or rings sit clear of the elbow and skin, of a width and shape that suits the horse, and positioned in the natural girth groove rather than dragged forward against the elbow. Tighten gradually -- snug enough at the mounting block to keep the saddle stable, then check and adjust after walking on and warming up, rather than yanking it tight all at once. Always smooth the skin under the girth (or pull the forelegs forward) to remove wrinkles that cause rubs.</p>
-          <p>
-            A horse girth buckle-elbow-clearance question card is how &quot;the right length keeps buckles or rings clear of the elbow, the girth sits in the natural girth groove, and it is not dragged forward against the elbow&quot; stays posted — it is not a horse bridle cheekpiece-length fit question card (that lives on bridle-types), not a horse breastplate-vs-breastgirth fit question card (that lives on martingales-and-breastplates), not a horse denier-vs-fill question card (that lives on blanket-weights), not a horse rope-vs-flat-halter task question card (that lives on halters-and-lead-ropes), not a horse-boot impact-not-tendon-support question card (that lives on boots-and-wraps), and not a saddle-pad sweat-pattern dry-spot question card (that lives on saddle-pads). This page does not invent clinic listings. </p>
 
           <h2 id="galls">Girth Galls and Girthiness</h2>
           <p>Girth galls are painful sores or rubs in the girth area, caused by friction, dirt, a poorly fitting girth, or skin pinched in wrinkles. Prevent them with a clean girth and coat, correct fit, gradual tightening, and a girth shape suited to the horse. Girthiness -- the horse pinning its ears, biting, or tensing when girthed -- can be learned discomfort from past galls or rough girthing, but can also signal pain such as gastric ulcers, so persistent girthiness warrants checking fit and, if it continues, a veterinary look rather than just discipline.</p>
-          <p>
-            A horse girth-gall skin-wrinkle log notebook is how gradual-tightening, smooth-the-skin-under-the-girth, and pull-the-forelegs-forward-to-remove-wrinkles stay written down — it is not a horse noseband two-finger welfare log notebook (that lives on bridle-types), not a horse martingale-misuse head-carriage log notebook (that lives on martingales-and-breastplates), not a horse over-rugging sweat-shiver watch log notebook (that lives on blanket-weights), not a horse quick-release wither-height tie log notebook (that lives on halters-and-lead-ropes), not a horse-boot grit-rub clean-dry log notebook (that lives on boots-and-wraps), and not a saddle-pad clean-dry rotation log notebook (that lives on saddle-pads). </p>
 
           <h2 id="picks">Girth Picks</h2>
-          <p>A few widely-stocked girth and cinch types covering the common English and Western needs. A clean girth in the correct shape and size, tightened gradually, prevents most girth galls — the product matters less than fit and hygiene. This is a documented-spec comparison drawing on standard US equestrian retail; this page does not claim hands-on testing.</p>
+          <p>A few widely-stocked girth and cinch types covering the common English and Western needs. A clean girth in the correct shape and size, tightened gradually, prevents most girth galls — the product matters less than fit and hygiene.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
-          <ScoreMethodology />
 
-          <ReviewCard
+          <ReviewCard quietUntilTag
             id="anatomic-english-girth"
             badge="English Everyday"
             name="Anatomic / Shaped English Girth"
             subtitle="Contoured shape to relieve the elbow and reduce galls"
-            score={8.6}
             winner
             description={<>
               <p>A shaped or anatomic English girth is cut back behind the elbow to reduce pinching and rubbing in the girth groove — a common upgrade for horses prone to galls or girthiness from a straight girth. Synthetic and leather versions both work; the key is a clean surface, the right size, and gradual tightening.</p>
@@ -158,19 +160,19 @@ export default function GirthsCinchesPage() {
             ]}
             pros={['Relieves elbow-area pinching', 'Reduces girth-gall risk', 'Available in leather and synthetic']}
             cons={['Anatomic leather versions are pricier', 'Still needs correct size and clean surface']}
-            price="$45–140"
-            ctaText="Compare at Dover Saddlery →"
+            price="see current price"
+            priceNote="dated 2026-06-01."
+            ctaText="Compare an anatomic English girth at Dover Saddlery →"
             ctaHref="/go/dover/anatomic-english-girth?s=tack-girths-and-cinches"
             ctaAffiliateProgram="dover"
             ctaAffiliateProduct="anatomic-english-girth"
           />
 
-          <ReviewCard
+          <ReviewCard quietUntilTag
             id="mohair-cinch"
             badge="Western"
             name="Mohair / Roper Western Cinch"
             subtitle="Breathable natural-fiber cinch for long rides"
-            score={8.5}
             description={<>
               <p>A mohair (or mohair-blend) roper cinch is a traditional Western choice valued for breathability and the way natural fibers wick moisture and resist galling on long working rides. Straight or roper cuts suit most working horses; correct width and gradual tightening matter as much as material.</p>
               <p>Most relevant for trail, ranch, and Western performance riders who want a breathable natural-fiber cinch for extended time in the saddle.</p>
@@ -182,19 +184,19 @@ export default function GirthsCinchesPage() {
             ]}
             pros={['Breathable and moisture-wicking', 'Natural fiber resists galling', 'Traditional, durable construction']}
             cons={['Natural fiber needs cleaning to last', 'Pure mohair costs more than synthetic', 'Width must match the horse']}
-            price="$40–120"
-            ctaText="Compare at Schneiders →"
+            price="see current price"
+            priceNote="dated 2026-06-01."
+            ctaText="Compare a mohair roper cinch at Schneiders →"
             ctaHref="/go/schneider/mohair-roper-cinch?s=tack-girths-and-cinches"
             ctaAffiliateProgram="schneider"
             ctaAffiliateProduct="mohair-roper-cinch"
           />
 
-          <ReviewCard
+          <ReviewCard quietUntilTag
             id="fleece-girth-cover"
             badge="Gall Prevention"
             name="Sheepskin / Fleece Girth Cover"
             subtitle="Cushioning sleeve to reduce friction on sensitive horses"
-            score={8.1}
             description={<>
               <p>A sheepskin or fleece girth cover slips over an existing girth to add a soft, friction-reducing layer for horses with thin skin or a history of galls. It is a supportive measure, not a fix for a wrong-size or dirty girth — keep both the cover and the coat clean, since trapped dirt under fleece can itself cause rubs.</p>
               <p>Most relevant for gall-prone or thin-skinned horses already in a correctly sized girth that still shows minor friction.</p>
@@ -206,129 +208,66 @@ export default function GirthsCinchesPage() {
             ]}
             pros={['Adds friction-reducing cushioning', 'Fits over most existing girths', 'Inexpensive insurance for sensitive horses']}
             cons={['Not a fix for a wrong-size girth', 'Traps dirt if not cleaned', 'Adds bulk that can affect fit']}
-            price="$18–45"
-            ctaText="Compare at SmartPak →"
+            price="see current price"
+            priceNote="dated 2026-06-01."
+            ctaText="Compare a fleece girth cover at SmartPak →"
             ctaHref="/go/smartpak/fleece-girth-cover?s=tack-girths-and-cinches"
             ctaAffiliateProgram="smartpak"
             ctaAffiliateProduct="fleece-girth-cover"
           />
 
-          {/* Shop leftover kit — unused vs #1146
-              laminated+horse+snaffle+vs+double+bridle+checklist /
-              horse+bridle+cheekpiece+length+fit+question+card /
-              horse+noseband+two+finger+welfare+log+notebook, #1145
-              laminated+horse+standing+vs+running+martingale+checklist /
-              horse+breastplate+vs+breastgirth+fit+question+card /
-              horse+martingale+misuse+head+carriage+log+notebook, #1144
-              laminated+horse+turnout+vs+stable+rug+checklist /
-              horse+denier+vs+fill+question+card /
-              horse+over+rugging+sweat+shiver+watch+log+notebook, #1143
-              laminated+horse+turnout+halter+breakaway+checklist /
-              horse+rope+vs+flat+halter+task+question+card /
-              horse+quick+release+wither+height+tie+log+notebook, #1142
-              laminated+horse+leg+bandage+bow+technique+checklist /
-              horse+boot+impact+not+tendon+support+question+card /
-              horse+boot+grit+rub+clean+dry+log+notebook, #1141
-              laminated+saddle+pad+cannot+fix+fit+checklist /
-              saddle+pad+sweat+pattern+dry+spot+question+card /
-              saddle+pad+clean+dry+rotation+log+notebook, #1140
-              laminated+riding+helmet+fit+and+replace+checklist /
-              riding+helmet+certification+label+question+card /
-              riding+helmet+impact+retirement+log+notebook, #1139
-              laminated+first+horse+90+day+week+by+week+checklist /
-              first+horse+ground+manners+cue+card /
-              first+horse+tack+room+emergency+plan+card, #1138
-              laminated+senior+horse+age+related+change+checklist /
-              senior+horse+weight+and+joint+watch+notebook /
-              senior+horse+quality+of+life+score+card, #1137
-              laminated+horse+ear+eye+tail+signal+checklist /
-              horse+handler+kick+zone+safety+question+card /
-              horse+pain+demeanor+change+log+notebook, #1136
-              laminated+pre+purchase+exam+stage+walkthrough+checklist /
-              horse+pre+purchase+exam+findings+decision+worksheet /
-              horse+buyer+vet+briefing+question+card, #1135
-              horse+lease+agreement+document+binder /
-              laminated+horse+lease+walkthrough+checklist /
-              horse+full+vs+partial+lease+cost+share+worksheet, #1134
-              horse+insurance+policy+document+binder /
-              laminated+horse+insurance+claims+checklist /
-              horse+mortality+vs+major+medical+decision+worksheet, #1133
-              horse+ownership+monthly+budget+worksheet /
-              equine+emergency+fund+expense+tracker+notebook /
-              horse+keep+feed+farrier+cost+log+binder, #1132
-              laminated+equine+vet+interview+checklist /
-              horse+after+hours+emergency+cover+question+card /
-              horse+veterinary+history+vcpr+records+folder, #1131
-              first+horse+buyer+visit+field+notebook /
-              laminated+first+horse+tryout+walkthrough+checklist /
-              horse+pre+purchase+exam+records+binder, #1130
-              laminated+horse+boarding+facility+walkthrough+checklist /
-              horse+boarding+contract+document+binder /
-              waterproof+horse+hay+bale+storage+tarp, #1129
-              sterile+saline+wound+flush+horse /
-              nonstick+wound+dressing+pads+horse /
-              equine+bandage+scissors,
-              blanketing
-              horse+turnout+blanket /
-              horse+waterproof+sheet /
-              horse+lightweight+blanket /
-              horse+medium+weight+blanket /
-              horse+heavyweight+blanket,
-              blanket-size
-              winter+horse+blanket /
-              horse+turnout+sheet /
-              horse+stable+blanket /
-              horse+fleece+cooler,
-              fly-control
-              horse+fly+sheet,
-              cost-calculator
-              horse+halter+lead+rope,
-              trailering
-              horse+shipping+boots /
-              horse+shipping+wraps /
-              horse+trailer+ties,
-              saddle-fit-basics
-              horse+saddle+pad /
-              horse+sheepskin+half+pad /
-              horse+saddle+shims /
-              horse+girth+cinch,
-              horse-size-for-rider
-              ASTM+SEI+horse+riding+helmet,
-              grimace / first-aid
-              ice+boot+cold+therapy+wrap /
-              vet+wrap /
-              equine+first+aid+kit,
-              #1128
-              laminated+horse+barn+calculator+tools+chart /
-              horse+stall+door+measurement+card /
-              equine+calculator+reference+handbook, #1127
-              laminated+horse+barn+owner+guides+chart /
-              horse+stall+door+owner+guides+card /
-              equine+owner+guides+reference+handbook, #1126
-              laminated+horse+barn+daily+care+chart /
-              horse+stall+door+care+card /
-              equine+husbandry+reference+handbook, #1125
-              laminated+horse+barn+emergency+triage+chart /
-              horse+stall+door+vital+signs+card /
-              equine+health+reference+handbook. */}
+          <h2 id="which">Who should buy which girth</h2>
+          <p>For an English-saddle horse, the anatomic English girth is the main pick. Western riders start with the mohair cinch. The fleece cover is not a girth on its own. It goes over a girth that already fits. None of the three makes up for a wrong size, a dirty surface, or tightening it all at once.</p>
+          <div className="overflow-x-auto my-6 max-w-full">
+            <table className="w-full text-sm border-collapse table-fixed sm:table-auto min-w-0 sm:min-w-[36rem] [&_th]:break-words [&_td]:break-words">
+              <thead>
+                <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                  <th className="p-3 font-bold text-brand-dark">If you need</th>
+                  <th className="p-3 font-bold text-brand-dark">Buy</th>
+                  <th className="p-3 font-bold text-brand-dark">From the card</th>
+                  <th className="p-3 font-bold text-brand-dark">Skip it when</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-brand-border">
+                  <td className="p-3 text-brand-text-mid">An everyday English girth that eases rubs behind the elbow</td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#anatomic-english-girth" className="text-brand-primary">Anatomic English girth</a><TableShopLink quietUntilTag href={"/go/dover/anatomic-english-girth?s=tack-girths-and-cinches"} product={"Anatomic English girth"} /></td>
+                  <td className="p-3 text-brand-text-mid">Cut back behind the elbow. Leather or synthetic. English schooling and showing</td>
+                  <td className="p-3 text-brand-text-mid">You ride Western. The card also says it still needs the correct size and a clean surface</td>
+                </tr>
+                <tr className="border-b border-brand-border">
+                  <td className="p-3 text-brand-text-mid">A breathable Western cinch for long working rides</td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#mohair-cinch" className="text-brand-primary">Mohair roper cinch</a><TableShopLink quietUntilTag href={"/go/schneider/mohair-roper-cinch?s=tack-girths-and-cinches"} product={"Mohair roper cinch"} /></td>
+                  <td className="p-3 text-brand-text-mid">Mohair or mohair blend. Straight or roper cut. Wicks moisture</td>
+                  <td className="p-3 text-brand-text-mid">You will not keep natural fiber clean. The card says pure mohair costs more than synthetic, and width must match the horse</td>
+                </tr>
+                <tr className="border-b border-brand-border">
+                  <td className="p-3 text-brand-text-mid">Extra cushioning for a thin-skinned or gall-prone horse</td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#fleece-girth-cover" className="text-brand-primary">Fleece girth cover</a><TableShopLink quietUntilTag href={"/go/smartpak/fleece-girth-cover?s=tack-girths-and-cinches"} product={"Fleece girth cover"} /></td>
+                  <td className="p-3 text-brand-text-mid">Sheepskin or synthetic fleece. Slips over an existing girth</td>
+                  <td className="p-3 text-brand-text-mid">The girth under it is the wrong size or dirty. The card says the cover traps dirt and adds bulk that can affect fit</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <ComparisonFoot updated="2026-10-10" />
+
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
             </div>
             <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
+            <p className="mb-4 text-sm font-semibold leading-snug">
+              <a href="/guides/saddle-fit-basics" className="inline-block max-w-full whitespace-normal text-brand-primary underline underline-offset-2">
+                Check saddle fit before you buy a girth →
+              </a>
+            </p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/horse+martingale?s=girths-and-cinches"
-                amazonLabel="Shop on Amazon"
+                amazonHref="/go/amazon-brand/anatomic+english+girth?s=girths-and-cinches"
+                amazonLabel="Browse anatomic English girths on Amazon →"
               />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/horse+girth+buckle+elbow+clearance+question+card?s=girths-and-cinches"
-                amazonLabel="Browse horse girth buckle-elbow-clearance question cards on Amazon →"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/horse+girth+gall+skin+wrinkle+log+notebook?s=girths-and-cinches"
-                amazonLabel="Browse horse girth-gall skin-wrinkle log notebooks on Amazon →"
-              />
+
           </div>
           </div>
 

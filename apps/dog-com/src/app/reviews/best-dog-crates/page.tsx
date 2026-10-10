@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import Link from 'next/link'
-import { TableShopLink, RelatedReads, ComparisonFoot, ExperimentPrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
+import { TableShopLink, RelatedReads, ComparisonFoot, EmailCapture, ExperimentPrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, CrossPortfolioCard, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript, buildItemListSchema} from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 
@@ -21,23 +22,23 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Dog.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
-  modifiedAt: '2026-06-07T00:00:00Z',
+  modifiedAt: '2026-10-07T00:00:00Z',
 })
 
 const PICKS = [
-  { label: 'Best Wire', name: 'MidWest iCrate', subtitle: 'Best overall wire crate · Divider included', href: '#midwest' },
+  { label: 'Best Wire', name: 'MidWest iCrate', subtitle: 'Best overall wire crate · Divider included', href: '#midwest', pickHop: '/go/amazon/B000QFT1RC?s=reviews-best-dog-crates' },
   { label: 'Best Heavy Duty', name: 'Impact Dog Crate', subtitle: 'Escape-proof aluminum · Lifetime warranty', href: '#impact' },
   { label: 'Best Airline', name: 'Petmate Sky Kennel', subtitle: 'IATA compliant · Vet recommended', href: '#petmate' },
   { label: 'Best Furniture', name: 'Frisco Furniture Style', subtitle: 'Doubles as end table', href: '#frisco' },
 ]
 
-const productSchema0 = buildProductSchema({ name: 'MidWest Homes iCrate', description: 'Wire dog crate with divider panel, fold-flat, double door.', url: 'https://midwesthomes4pets.com', imageUrl: '', ratingValue: 9.3, reviewCount: 1 })
-const productSchema1 = buildProductSchema({ name: 'Impact Dog Crate', description: 'Aircraft-grade aluminum escape-proof dog crate with lifetime warranty.', url: 'https://impactdogcrates.com', imageUrl: '', ratingValue: 9.4, reviewCount: 1 })
+const productSchema0 = buildProductSchema({ name: 'MidWest Homes iCrate', description: 'Wire dog crate with divider panel, fold-flat, double door.', url: 'https://dog.com/go/amazon/B000QFT1RC?s=reviews-best-dog-crates', imageUrl: '' })
+const productSchema1 = buildProductSchema({ name: 'Impact Dog Crate', description: 'Aircraft-grade aluminum escape-proof dog crate with lifetime warranty.', url: 'https://dog.com/go/amazon/B0CV4KMBX9?s=reviews-best-dog-crates', imageUrl: '' })
 const allSchemas = combineSchemas(schema, productSchema0, productSchema1)
 
 const itemList = buildItemListSchema({
   name: "Best Dog Crates 2026",
-  items: PICKS.map((pick) => ({ name: pick.name, url: `https://dog.com/reviews/best-dog-crates${pick.href}` })),
+  items: PICKS.map((pick) => ({ name: pick.name, url: ({ "MidWest iCrate": "https://dog.com/go/amazon/B000QFT1RC?s=reviews-best-dog-crates", "Impact Dog Crate": "https://dog.com/go/amazon/B0CV4KMBX9?s=reviews-best-dog-crates", "Petmate Sky Kennel": "https://dog.com/go/amazon/B003E77OG4?s=reviews-best-dog-crates", "Frisco Furniture Style": "https://dog.com/go/chewy-brand/frisco+furniture+style+dog+crate?s=reviews-best-dog-crates" }[pick.name] ?? `https://dog.com/reviews/best-dog-crates${pick.href}`) })),
 })
 export default function BestDogCratesPage() {
   return (
@@ -50,15 +51,36 @@ export default function BestDogCratesPage() {
           style={{ fontSize: 'clamp(24px, 4vw, 46px)' }}>
           Best Dog Crates 2026 — Wire, Plastic, Heavy Duty & Furniture Style Ranked
         </h1>
+        <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">The MidWest iCrate is the top wire crate because the divider lets you shrink the space while a puppy grows.</p>
         <PriceAsOf date="2026-10-04" tone="dark" />
-        <ExperimentPrimaryHop
-          href="/go/amazon-brand/midwest+icrate+dog+crate?s=reviews-best-dog-crates"
+        <div data-fold="offer">
+          <ExperimentPrimaryHop
+          href="/go/amazon/B000QFT1RC?s=reviews-best-dog-crates"
           experiment="crate_hop_label"
           control="Check price of the MidWest iCrate on Amazon"
           variant="View the MidWest iCrate price on Amazon"
         />
+        <HopDisclosure tone="on-dark" siteId="dog-com" href="/go/amazon/B000QFT1RC?s=reviews-best-dog-crates" />
+        </div>
+        <EmailCapture
+          variant="inline"
+          siteId="dog-com"
+          addressOnly
+          title="Shopping checklist"
+          ctaText="Copy checklist"
+          source="reviews-best-dog-crates"
+          checklist={[
+            "The MidWest iCrate, because it includes a divider.",
+            "Size the crate to the adult dog and close the divider down while the puppy is small.",
+            "It is not the pick for an escape artist.",
+            "The furniture-style Frisco crate is the living-room pick and is not described as chew-resistant.",
+            "The right crate depends on your dog's size, temperament, and how you're using it.",
+            "A crate for house training is different from one for a separation anxiety escape artist or airline travel.",
+          ]}
+        />
+
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">
-          The right crate depends on your dog&apos;s size, temperament, and how you&apos;re using it. A crate for house training is different from one for a separation anxiety escape artist or airline travel.
+          The right crate depends on your dog&apos;s size, temperament, and how you&apos;re using it. A crate for house training is different from one for a separation anxiety escape artist or airline travel. A covered crate used as a hiding space is the setup on the <a href="/health/dog-anxiety" className="underline text-white">dog anxiety guide</a>.
         </p>
       </div>
 
@@ -85,19 +107,17 @@ export default function BestDogCratesPage() {
               siteId="dog-com"
               nextHref="/tools/dog-crate-size-calculator"
               nextLabel="Size the crate before you pick a model"
-              nextBlurb="The callout is the sizing rule — stand, turn, lie down, no extra floor a puppy can potty on. Use the crate-size calculator next, then come back for the divider wire crate. The link below searches Amazon for the MidWest iCrate, the same search as on this page."
-              resourceHref="/go/amazon-brand/midwest+icrate+dog+crate?s=reviews-best-dog-crates"
+              nextBlurb="The callout is the sizing rule — stand, turn, lie down, no extra floor a puppy can potty on. Use the crate-size calculator next, then come back for the divider wire crate. The link below opens the MidWest iCrate product page on Amazon, the same product as on this page."
+              resourceHref="/go/amazon/B000QFT1RC?s=reviews-best-dog-crates"
               resourceLabel="Browse MidWest iCrate dog crates on Amazon →"
             />
 
-            <ScoreMethodology />
-            <AffiliateDisclosure variant="inline" siteId="dog-com" />
+            <HopDisclosure siteId="dog-com" href={["/go/amazon/B000QFT1RC?s=reviews-best-dog-crates", "/go/amazon/B0CV4KMBX9?s=reviews-best-dog-crates", "/go/amazon/B003E77OG4?s=reviews-best-dog-crates", "/go/chewy-brand/frisco+furniture+style+dog+crate?s=reviews-best-dog-crates"]} />
             <ReviewCard
               id="midwest"
               badge="Best Wire Crate"
               name="MidWest Homes iCrate"
               subtitle="Divider panel included · Fold-flat · Double door · Best value wire"
-              score={9.3}
               winner
               description={
                 <p>The MidWest iCrate is the default recommendation for house training, travel, and general crating — for good reason. It ships with a divider panel (essential for puppies — use the divider and expand as the puppy grows), folds flat for storage or travel, has both front and side doors, and comes in sizes from 18" to 54". The printed price is $40–80. The value-to-quality ratio is hard to beat among wire crates. Not escape-proof for determined dogs — step up to Impact for that use case.</p>
@@ -113,9 +133,9 @@ export default function BestDogCratesPage() {
               pros={['Divider included — grows with puppy', 'Fold-flat for easy storage', 'Double door access', 'Best price-to-quality in wire category', 'Easy to clean']}
               cons={['Not escape-proof for determined dogs', 'Wire can feel industrial in living space']}
               price="$40–80"
-              priceNote="By size"
+              priceNote="By size dated 2026-10-04."
               ctaText="Check price of the MidWest iCrate on Amazon"
-              ctaHref="/go/amazon-brand/midwest+icrate+dog+crate?s=reviews-best-dog-crates"
+              ctaHref="/go/amazon/B000QFT1RC?s=reviews-best-dog-crates"
               ctaAffiliateProgram="amazon-brand"
               ctaAffiliateProduct="midwest+icrate+dog+crate"
             />
@@ -125,7 +145,6 @@ export default function BestDogCratesPage() {
               badge="Best Heavy Duty — Escape Artists"
               name="Impact High Anxiety Dog Crate"
               subtitle="Aircraft-grade aluminum · Escape-proof · Lifetime warranty"
-              score={9.4}
               description={
                 <p>For dogs with severe separation anxiety or Houdini-level escape skills, the Impact crate is the best answer. Aircraft-grade aluminum construction, welded joints, reinforced latches — dogs that have destroyed wire crates, plastic crates, and standard heavy-duty options stay contained. Impact backs this with a lifetime warranty. The investment ($300–500) is significant, but it&apos;s frequently the last crate an escape-artist dog owner ever buys. Also used by professional trainers, law enforcement K9 units, and sport dog competitors.</p>
               }
@@ -139,8 +158,9 @@ export default function BestDogCratesPage() {
               pros={['Genuinely escape-proof', 'Aircraft-grade aluminum construction', 'Lifetime warranty', 'Preferred by professional trainers and K9 handlers']}
               cons={['Significant weight — not portable', 'Premium price point', 'Overkill for calm dogs']}
               price="$300–500"
-              ctaText="Shop Impact Crates →"
-              ctaHref="/go/amazon-brand/impact+high+anxiety+dog+crate?s=reviews-best-dog-crates"
+              priceNote="dated 2026-10-04."
+              ctaText="Shop Impact high-anxiety crates on Amazon →"
+              ctaHref="/go/amazon/B0CV4KMBX9?s=reviews-best-dog-crates"
               ctaAffiliateProgram="amazon-brand"
               ctaAffiliateProduct="impact+high+anxiety+dog+crate"
             />
@@ -150,7 +170,6 @@ export default function BestDogCratesPage() {
               badge="Best Airline Crate"
               name="Petmate Sky Kennel"
               subtitle="IATA compliant · Live Animal ventilation · Most airlines accept"
-              score={9.0}
               description={
                 <p>For air travel with a dog in cargo, the Petmate Sky Kennel is a widely accepted airline-approved crate. It meets IATA (International Air Transport Association) Live Animals Regulations, has the required 360° ventilation, and includes the required food and water dishes that attach inside the door. Check your specific airline&apos;s requirements before travel — most follow IATA standards but some have additional requirements. Comes with &quot;Live Animal&quot; stickers and assembly hardware required by most carriers.</p>
               }
@@ -164,9 +183,9 @@ export default function BestDogCratesPage() {
               pros={['IATA compliant', 'Accepted by most major airlines', 'Includes required dishes and hardware', 'Secure fastening system', 'Good ventilation']}
               cons={['Confirm with specific airline before travel', 'Heavier than soft-sided carriers', 'Not for cabin use (in-cabin requires soft-sided)']}
               price="$40–120"
-              priceNote="By size"
-              ctaText="Shop Petmate Sky Kennel →"
-              ctaHref="/go/amazon-brand/petmate+sky+kennel?s=reviews-best-dog-crates"
+              priceNote="By size dated 2026-10-04."
+              ctaText="Shop Petmate Sky Kennel on Amazon →"
+              ctaHref="/go/amazon/B003E77OG4?s=reviews-best-dog-crates"
               ctaAffiliateProgram="amazon-brand"
               ctaAffiliateProduct="petmate+sky+kennel"
             />
@@ -176,7 +195,6 @@ export default function BestDogCratesPage() {
               badge="Best Furniture Style"
               name="Frisco Furniture Style Dog Crate"
               subtitle="Doubles as end table · Wooden exterior · Calm dogs only"
-              score={8.3}
               description={
                 <p>Furniture-style crates blend into living spaces in a way wire crates never will — the Frisco model has a wooden exterior that functions as a side table or TV stand. The trade-off is ventilation (less than wire) and structural strength (not for dogs who chew or push against crate walls). Best suited for calm, crate-trained dogs in homes where aesthetics matter. Not appropriate for puppies, escape artists, or dogs with separation anxiety. A dog that&apos;s content in their crate and not actively trying to escape will be fine — any other situation calls for wire or heavy duty.</p>
               }
@@ -190,7 +208,8 @@ export default function BestDogCratesPage() {
               pros={['Integrates into living space aesthetically', 'Functions as furniture', 'Good for calm adult dogs']}
               cons={['Not chew-resistant', 'Less ventilation than wire', 'Not for escape artists or puppies', 'Harder to clean']}
               price="$80–160"
-              ctaText="Shop Frisco Furniture Crates →"
+              priceNote="dated 2026-10-04."
+              ctaText="Shop Frisco Furniture Crates on Amazon →"
               ctaHref="/go/chewy-brand/frisco+furniture+style+dog+crate?s=reviews-best-dog-crates"
               ctaAffiliateProgram="chewy-brand"
               ctaAffiliateProduct="frisco+furniture+style+dog+crate"
@@ -199,7 +218,7 @@ export default function BestDogCratesPage() {
             <div className="mt-10">
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-3">Who should buy which crate</h2>
               <p className="text-sm text-brand-text-mid leading-relaxed mb-4">
-                The four cards above already name the job, the price band, and the limit. This table only lines those facts up. Scores are this page&apos;s editorial scores, not customer star ratings.
+                The four cards above already name the job, the price band, and the limit. This table only lines those facts up. 
               </p>
               <div className="overflow-x-auto max-w-full min-w-0 mb-8">
                 <table className="w-full text-sm border-collapse table-fixed sm:table-auto min-w-0 sm:min-w-[36rem] [&_th]:break-words [&_td]:break-words">
@@ -214,19 +233,19 @@ export default function BestDogCratesPage() {
                   <tbody>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">House-training a puppy, or a calm adult who needs a fold-flat wire crate</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#midwest" className="text-brand-primary">MidWest iCrate</a><TableShopLink href={"/go/amazon-brand/midwest+icrate+dog+crate?s=reviews-best-dog-crates"} product={"MidWest iCrate"} /></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#midwest" className="text-brand-primary">MidWest iCrate</a><TableShopLink href={"/go/amazon/B000QFT1RC?s=reviews-best-dog-crates"} product={"MidWest iCrate"} /></td>
                       <td className="p-3 text-brand-text-mid">Best Wire Crate. Divider included. $40–80</td>
                       <td className="p-3 text-brand-text-mid">The dog destroys wire crates</td>
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">Escape artist or severe separation anxiety</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#impact" className="text-brand-primary">Impact High Anxiety</a><TableShopLink href={"/go/amazon-brand/impact+high+anxiety+dog+crate?s=reviews-best-dog-crates"} product={"Impact High Anxiety"} /></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#impact" className="text-brand-primary">Impact High Anxiety</a><TableShopLink href={"/go/amazon/B0CV4KMBX9?s=reviews-best-dog-crates"} product={"Impact High Anxiety"} /></td>
                       <td className="p-3 text-brand-text-mid">Aircraft-grade aluminum. Lifetime warranty. $300–500</td>
                       <td className="p-3 text-brand-text-mid">The dog is calm — the card calls this overkill, and the crate is heavy</td>
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">Airline cargo</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#petmate" className="text-brand-primary">Petmate Sky Kennel</a><TableShopLink href={"/go/amazon-brand/petmate+sky+kennel?s=reviews-best-dog-crates"} product={"Petmate Sky Kennel"} /></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#petmate" className="text-brand-primary">Petmate Sky Kennel</a><TableShopLink href={"/go/amazon/B003E77OG4?s=reviews-best-dog-crates"} product={"Petmate Sky Kennel"} /></td>
                       <td className="p-3 text-brand-text-mid">Best Airline Crate. IATA compliant. $40–120 by size</td>
                       <td className="p-3 text-brand-text-mid">In-cabin travel, or an escape artist. Confirm the airline before you buy</td>
                     </tr>
@@ -239,20 +258,20 @@ export default function BestDogCratesPage() {
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-05" />
+              <ComparisonFoot updated="2026-10-09" />
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Which crate fits which job</h2>
               <FAQAccordion items={[
                 {
                   question: 'Which crate does this page pick for house-training a puppy?',
-                  answer: 'The MidWest iCrate, scored 9.3, because it includes a divider. Size the crate to the adult dog and close the divider down while the puppy is small.',
+                  answer: 'The MidWest iCrate, because it includes a divider. Size the crate to the adult dog and close the divider down while the puppy is small.',
                 },
                 {
                   question: 'Which crate does this page pick for airline cargo?',
-                  answer: 'The Petmate Sky Kennel, scored 9.0. The card calls it IATA compliant. It is not the pick for an escape artist.',
+                  answer: 'The Petmate Sky Kennel. The card calls it IATA compliant. It is not the pick for an escape artist.',
                 },
                 {
                   question: 'Which crate does this page pick for an escape artist?',
-                  answer: 'The Impact aluminum crate, scored 9.4. The furniture-style Frisco crate, scored 8.3, is the living-room pick and is not described as chew-resistant.',
+                  answer: 'The Impact aluminum crate. The furniture-style Frisco crate is the living-room pick and is not described as chew-resistant.',
                 },
               ]} />
             </div>

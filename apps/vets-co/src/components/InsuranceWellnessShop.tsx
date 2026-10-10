@@ -1,6 +1,6 @@
 /**
- * Complementary Amazon hops for the vets.co insurance / wellness money path.
- * ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
+ * Complementary Amazon buttons for the vets.co insurance and wellness shop.
+ * ShopCtas hides empty Chewy; never href="#" or an empty link.
  *
  * Queries match prep items already cited on the emergency-triage card
  * (first-aid kit, digital thermometer) and the dog.com first-aid /
@@ -8,7 +8,6 @@
  * /reviews/best-pet-insurance — this block does not re-rank insurers.
  */
 import Link from 'next/link'
-import { AffiliateDisclosure } from '@carloOS/ui'
 
 export function InsuranceWellnessShop({
   source,
@@ -18,10 +17,9 @@ export function InsuranceWellnessShop({
 }) {
   return (
     <div>
-      <AffiliateDisclosure variant="inline" siteId="vets-co" />
       <div className="mt-4 mb-8 rounded-xl border border-brand-border bg-brand-surface p-5">
         <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-          Shop wellness prep
+          Next step
         </div>
         <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">Insurance covers the unexpected bill. A first-aid kit, a digital thermometer, and an
           engraved ID tag are the prep items on the{' '}
@@ -39,8 +37,7 @@ export function InsuranceWellnessShop({
           >
             Best Pet Insurance
           </Link>{' '}
-          review. Vets.co earns a commission on qualifying Amazon purchases at no extra cost to
-          you.</p>
+          review.</p>
       </div>
     </div>
   )

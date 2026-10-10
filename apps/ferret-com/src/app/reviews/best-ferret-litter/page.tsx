@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
-import { TableShopLink, ComparisonFoot, PrimaryHop, buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, QuickPicks, ScoreMethodology, ArticleSourcesList, CrossPortfolioCard, AffiliateDisclosure } from '@carloOS/ui'
+import { HopDisclosure } from '../../../components/HopDisclosure'
+import { TableShopLink, ComparisonFoot, EmailCapture, PrimaryHop, buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, QuickPicks, ArticleSourcesList, CrossPortfolioCard, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, buildItemListSchema, buildProductSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -44,9 +45,9 @@ const breadcrumbSchema = buildBreadcrumbSchema({
 const itemList = buildItemListSchema({
   name: 'Ferret Litters That Meet the Criteria',
   items: [
-    { name: 'Recycled Paper Pellet Litter', url: `${PAGE_URL}#paper-pellet` },
-    { name: 'Compressed Wood (Heat-Treated) Pellet Litter', url: `${PAGE_URL}#wood-pellet` },
-    { name: 'Pelleted Grass / Plant-Fiber Litter', url: `${PAGE_URL}#grass-pellet` },
+    { name: 'Recycled Paper Pellet Litter', url: 'https://ferret.com/go/chewy-brand/recycled+paper+pellet+litter+non+clumping?s=reviews-best-ferret-litter' },
+    { name: 'Compressed Wood (Heat-Treated) Pellet Litter', url: 'https://ferret.com/reviews/best-ferret-litter#wood-pellet' },
+    { name: 'Pelleted Grass / Plant-Fiber Litter', url: 'https://ferret.com/reviews/best-ferret-litter#grass-pellet' },
   ],
 })
 
@@ -54,26 +55,9 @@ const products = [
   buildProductSchema({
     name: 'Recycled Paper Pellet Litter',
     description: 'Low-dust, non-clumping, soft on feet — the default ferret litter',
-    url: `${PAGE_URL}#paper-pellet`,
-    ratingValue: 9.2,
+    url: 'https://ferret.com/go/chewy-brand/recycled+paper+pellet+litter+non+clumping?s=reviews-best-ferret-litter',
     reviewAuthorName: 'Ferret.com Editorial',
     reviewBody: 'The default recommendation. Recycled-paper pellets are low-dust, non-clumping, absorbent, and soft enough on the feet that ferrets accept them readily. They carry no clumping agents to swallow and no fine respiratory dust. The trade-off is moderate odor control versus heavily perfumed cat litters and the need to change rather than scoop-and-top-up — both acceptable given the safety profile.',
-  }),
-  buildProductSchema({
-    name: 'Compressed Wood (Heat-Treated) Pellet Litter',
-    description: 'Kiln-dried softwood pellets, good odor control — use phenol-free types only',
-    url: `${PAGE_URL}#wood-pellet`,
-    ratingValue: 8.0,
-    reviewAuthorName: 'Ferret.com Editorial',
-    reviewBody: 'Kiln-dried, compressed softwood pellets offer strong natural odor control and low dust once the fines are sifted out. The important caveat is wood type: aromatic raw cedar and pine shavings release phenols implicated in respiratory irritation, so use only heat-treated, low-phenol compressed pellets, never loose aromatic shavings. A solid pick where odor is the priority and the product is the kiln-dried pelleted form.',
-  }),
-  buildProductSchema({
-    name: 'Pelleted Grass / Plant-Fiber Litter',
-    description: 'Soft plant-fiber pellets, low dust, lighter tracking',
-    url: `${PAGE_URL}#grass-pellet`,
-    ratingValue: 7.8,
-    reviewAuthorName: 'Ferret.com Editorial',
-    reviewBody: 'Pelleted grass and other plant-fiber litters are low-dust, non-clumping, and softer underfoot than wood, which some ferrets prefer. Odor control is moderate and the pellets can break down faster when wet, so they may need changing more often. A reasonable paper-pellet alternative for a ferret that dislikes the texture of paper or wood.',
   }),
 ]
 
@@ -109,7 +93,7 @@ const faqSchema = buildFAQSchema({ questions: FAQS })
 const combined = combineSchemas(schema, breadcrumbSchema, itemList, faqSchema, ...products)
 
 const QUICK_PICKS = [
-  { label: 'Best Overall', name: 'Recycled Paper Pellet', subtitle: 'Low-dust · Non-clumping · Soft', href: '#paper-pellet' },
+  { label: 'Best Overall', name: 'Recycled Paper Pellet', subtitle: 'Low-dust · Non-clumping · Soft', href: '#paper-pellet', pickHop: '/go/chewy-brand/recycled+paper+pellet+litter+non+clumping?s=reviews-best-ferret-litter' },
   { label: 'Best for Odor', name: 'Heat-Treated Wood Pellet', subtitle: 'Phenol-free · Strong odor control', href: '#wood-pellet' },
   { label: 'Soft Alternative', name: 'Grass / Plant-Fiber Pellet', subtitle: 'Low-dust · Lighter tracking', href: '#grass-pellet' },
 ]
@@ -121,17 +105,24 @@ export default function BestFerretLitterPage() {
       <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="ferret-com"
-        heroHop={<PrimaryHop href='/go/chewy-brand/yesterdays+news+recycled+paper+pellet+litter+non+clumping?s=reviews-best-ferret-litter' label={"Check price of Yesterday's News paper pellet litter on Chewy"} />}
         hero={{
           title: 'Best Ferret Litter: Dust Safety and the No-Clump Rule',
-          subtitle:
-            'Ferret litter is chosen on two safety criteria before any of the convenience ones: how much respiratory dust it produces, and whether it clumps. Ferrets have sensitive airways and a habit of nosing and grooming in the box, which rules out the clay clumping litters most people reach for. This guide ranks the safe options.',
           category: 'Buyer Guides',
           authorName: 'Ferret.com Editorial',
           publishedAt: 'June 2026',
           readTime: '9 min',
         }}
-        breadcrumbs={[
+        heroHop={
+        <>
+          <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">Recycled paper pellets are the top ferret litter because they do not clump and the dust stays low.</p>
+          <div data-fold="offer">
+          <PrimaryHop href='/go/chewy-brand/recycled+paper+pellet+litter+non+clumping?s=reviews-best-ferret-litter' label="Open the recycled paper-pellet search." />
+          <HopDisclosure siteId="ferret-com" href="/go/chewy-brand/recycled+paper+pellet+litter+non+clumping?s=reviews-best-ferret-litter" />
+        </div>
+        </>
+      }
+      heroExtra={<><QuickPicks items={QUICK_PICKS} embedded /></>}
+      breadcrumbs={[
           { name: 'Home', href: '/' },
           { name: 'Reviews', href: '/reviews' },
           { name: 'Best Ferret Litter', href: '/reviews/best-ferret-litter' },
@@ -156,6 +147,9 @@ export default function BestFerretLitterPage() {
               links={[
                 { label: 'Bedding & Litter Types', href: '/care/bedding-and-litter-types' },
                 { label: 'Litter Training', href: '/care/litter-training' },
+                { label: 'Paper vs Wood Litter', href: '/reviews/paper-vs-wood-litter-guide' },
+                { label: 'Paper vs Grass Litter', href: '/reviews/paper-vs-grass-litter-guide' },
+                { label: 'Wood vs Grass Litter', href: '/reviews/wood-vs-grass-litter-guide' },
                 { label: 'Odor & Scent Control', href: '/care/odor-and-scent-control' },
                 { label: 'Cage Cleaning Routine', href: '/care/cage-cleaning-routine' },
                 { label: 'Reviews Hub', href: '/reviews' },
@@ -183,8 +177,24 @@ export default function BestFerretLitterPage() {
             updatedAt="2026-06-11"
             reviewedBy="Editorial team"
           />
+          <LastUpdated date="2026-10-10" />
+          <EmailCapture
+            variant="inline"
+            siteId="ferret-com"
+            addressOnly
+            title="Shopping checklist"
+            ctaText="Copy checklist"
+            source="reviews-best-ferret-litter"
+            checklist={[
+              "Recycled paper-pellet litter is the most widely recommended choice.",
+              "It is low-dust, non-clumping, absorbent, and soft on the feet, with no clumping agents to swallow and no fine respiratory dust.",
+              "Heat-treated compressed wood pellets and pelleted plant-fiber litters are good alternatives.",
+              "The unifying rule is: a pelleted, low-dust, non-clumping litter \u2014 not a clay or fine-grain cat litter.",
+              "Clumping clay litters form a solid mass when wet, which is the hazard.",
+              "Ferrets dig, nose into the litter, and groom \u2014 and ingested or inhaled clumping agent can swell in the airway or digestive tract.",
+            ]}
+          />
 
-          <QuickPicks items={QUICK_PICKS} />
 
           <p>
             Choosing ferret litter is one of the few pet-store decisions where the obvious default is the wrong answer.
@@ -193,7 +203,8 @@ export default function BestFerretLitterPage() {
             on odor control, tracking, and cost. This guide explains those criteria and ranks the litter types that
             clear them. It pairs with our husbandry write-ups on{' '}
             <a href="/care/bedding-and-litter-types">bedding and litter types</a> and{' '}
-            <a href="/care/litter-training">litter training</a>, which cover placement and routine in depth.
+            <a href="/care/litter-training">litter training</a>, which cover placement and routine in depth. The top two types are set side by side in{' '}
+            <a href="/reviews/paper-vs-wood-litter-guide">paper vs wood litter</a>.
           </p>
 
           <h2 id="criteria">The Two Safety Criteria</h2>
@@ -245,7 +256,7 @@ export default function BestFerretLitterPage() {
             safe pelleted litters, heat-treated wood pellets tend to control odor best, paper pellets are middling, and
             grass pellets are similar to paper. Pellets track far less than fine litters but can still scatter; a
             high-backed corner box and a litter mat help. Avoid the temptation to switch to a perfumed clumping litter
-            for odor — that trades a real safety margin for a cosmetic one.
+            for odor — that trades a real safety margin for a cosmetic one. That no-clumping rule, next to where the box sits in the cage, is in the <a href="/care/cage-setup" className="text-brand-primary underline">cage-setup guide</a>.
           </p>
 
           <h2 id="picks">Litters That Meet the Criteria</h2>
@@ -255,18 +266,16 @@ export default function BestFerretLitterPage() {
             category, choose a reputable pelleted product and confirm it is non-clumping and free of added clumping
             agents.
           </p>
-          <ScoreMethodology />
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <HopDisclosure siteId="ferret-com" href="/go/chewy-brand/recycled+paper+pellet+litter+non+clumping?s=reviews-best-ferret-litter" />
 
           <ReviewCard
             id="paper-pellet"
             badge="Best Overall"
             name="Recycled Paper Pellet Litter"
             subtitle="Low-dust, non-clumping, soft on feet — the default ferret litter"
-            score={9.2}
             winner
             description={
-              <p>The default recommendation for ferrets. Recycled-paper pellets are low-dust, non-clumping, absorbent, and soft enough on the feet that ferrets accept them readily. There are no clumping agents to swallow and no fine respiratory dust. The trade-offs are moderate odor control versus heavily perfumed cat litters and the need to change rather than scoop-and-top-up — both easily acceptable given the safety profile. If you buy one litter without overthinking it, buy this.</p>
+              <p>The default recommendation for ferrets. Recycled-paper pellets are low-dust, non-clumping, absorbent, and soft enough on the feet that ferrets accept them readily. There are no clumping agents to swallow and no fine respiratory dust. The trade-offs are moderate odor control versus heavily perfumed cat litters and the need to change rather than scoop-and-top-up — both easily acceptable given the safety profile. If you buy one litter without overthinking it, buy a current recycled-paper pellet. Purina discontinued Yesterday&apos;s News on April 20, 2022, and closed the plant that June. This search is for a recycled paper pellet still being sold.</p>
             }
             specs={[
               { label: 'Dust', value: 'Very low', highlight: 'good' },
@@ -278,8 +287,8 @@ export default function BestFerretLitterPage() {
             pros={['Very low dust', 'Fully non-clumping', 'Soft and well accepted', 'No ingestion or inhalation hazard', 'Widely available']}
             cons={['Moderate odor control', 'Change rather than scoop', 'Lighter pellets can scatter']}
             price="$$"
-            ctaText="Check price of Yesterday's News paper pellet litter on Chewy"
-            ctaHref="/go/chewy-brand/yesterdays+news+recycled+paper+pellet+litter+non+clumping?s=reviews-best-ferret-litter"
+            ctaText="Open the recycled paper-pellet search."
+            ctaHref="/go/chewy-brand/recycled+paper+pellet+litter+non+clumping?s=reviews-best-ferret-litter"
             ctaAffiliateProgram="chewy-brand"
             ctaAffiliateProduct="paper-pellet-litter"
           />
@@ -289,7 +298,6 @@ export default function BestFerretLitterPage() {
             badge="Best for Odor"
             name="Compressed Wood (Heat-Treated) Pellet Litter"
             subtitle="Kiln-dried softwood pellets, strong odor control — use phenol-free types only"
-            score={8.0}
             description={
               <p>Kiln-dried, compressed softwood pellets offer the strongest natural odor control of the safe options and low dust once the fines are sifted out. The important caveat is the wood form: aromatic raw cedar and pine shavings release phenols implicated in respiratory irritation, so use only heat-treated, low-phenol compressed pellets — never loose aromatic shavings. With that caveat respected, it is a strong pick when odor is the priority.</p>
             }
@@ -303,10 +311,6 @@ export default function BestFerretLitterPage() {
             pros={['Best natural odor control of the safe options', 'Low dust once fines are removed', 'Economical', 'Non-clumping']}
             cons={['Must be heat-treated / low-phenol', 'Never use loose aromatic shavings', 'Harder underfoot than paper']}
             price="$"
-            ctaText="Find Wood Pellet Litter on Amazon"
-            ctaHref="/go/amazon-brand/compressed+wood+pellet+litter+heat+treated+non+clumping?s=reviews-best-ferret-litter"
-            ctaAffiliateProgram="amazon-brand"
-            ctaAffiliateProduct="compressed-wood-pellet-litter"
           />
 
           <ReviewCard
@@ -314,7 +318,6 @@ export default function BestFerretLitterPage() {
             badge="Soft Alternative"
             name="Pelleted Grass / Plant-Fiber Litter"
             subtitle="Soft plant-fiber pellets, low dust, lighter tracking"
-            score={7.8}
             description={
               <p>Pelleted grass and other plant-fiber litters are low-dust, non-clumping, and softer underfoot than wood, which some ferrets clearly prefer. Odor control is moderate and the pellets can break down faster when wet, so they may need changing more often than wood. A reasonable paper-pellet alternative — useful mainly for a ferret that dislikes the texture of paper or wood pellets.</p>
             }
@@ -328,10 +331,6 @@ export default function BestFerretLitterPage() {
             pros={['Low dust', 'Non-clumping', 'Soft texture some ferrets prefer', 'Lighter tracking']}
             cons={['Moderate odor control', 'Breaks down faster when wet', 'May need more frequent changes']}
             price="$$"
-            ctaText="Find Grass Pellet Litter on Amazon"
-            ctaHref="/go/amazon-brand/small+animal+grass+pellet+litter+non+clumping?s=reviews-best-ferret-litter"
-            ctaAffiliateProgram="amazon-brand"
-            ctaAffiliateProduct="grass-pellet-litter"
           />
 
           <h2 id="who">Who should buy which litter</h2>
@@ -351,31 +350,31 @@ export default function BestFerretLitterPage() {
               <tbody>
                 <tr className="border-b border-brand-border">
                   <td className="p-3">A default that most ferrets accept</td>
-                  <td className="p-3 font-bold"><a href="#paper-pellet">Recycled paper pellets</a><TableShopLink href={"/go/chewy-brand/yesterdays+news+recycled+paper+pellet+litter+non+clumping?s=reviews-best-ferret-litter"} product={"Recycled paper pellets"} /></td>
+                  <td className="p-3 font-bold"><a href="#paper-pellet">Recycled paper pellets</a><TableShopLink href={"/go/chewy-brand/recycled+paper+pellet+litter+non+clumping?s=reviews-best-ferret-litter"} product={"Recycled paper pellets"} /></td>
                   <td className="p-3">Best overall. Very low dust. Soft. Price tier $$</td>
                   <td className="p-3">Moderate odor control. Change the box rather than scoop and top up</td>
                 </tr>
                 <tr className="border-b border-brand-border">
                   <td className="p-3">Odor, and you will buy the heat-treated form only</td>
-                  <td className="p-3 font-bold"><a href="#wood-pellet">Compressed wood pellets</a><TableShopLink href={"/go/amazon-brand/compressed+wood+pellet+litter+heat+treated+non+clumping?s=reviews-best-ferret-litter"} product={"Compressed wood pellets"} /></td>
+                  <td className="p-3 font-bold"><a href="#wood-pellet">Compressed wood pellets</a></td>
                   <td className="p-3">Best for odor. Strong odor control. Price tier $</td>
                   <td className="p-3">Never loose aromatic pine or cedar shavings. Harder underfoot than paper</td>
                 </tr>
                 <tr className="border-b border-brand-border">
                   <td className="p-3">A ferret that rejects paper or wood texture</td>
-                  <td className="p-3 font-bold"><a href="#grass-pellet">Grass or plant-fiber pellets</a><TableShopLink href={"/go/amazon-brand/small+animal+grass+pellet+litter+non+clumping?s=reviews-best-ferret-litter"} product={"Grass or plant-fiber pellets"} /></td>
+                  <td className="p-3 font-bold"><a href="#grass-pellet">Grass or plant-fiber pellets</a></td>
                   <td className="p-3">Soft alternative. Low dust. Non-clumping. Price tier $$</td>
                   <td className="p-3">Moderate odor, and the pellets break down faster when wet</td>
                 </tr>
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-05" />
+          <ComparisonFoot updated="2026-10-10" />
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
 
-          <ArticleSourcesList sources={SOURCES} />
+          <ArticleSourcesList title="Sources" sources={SOURCES} />
 
           <p className="text-sm text-brand-text-light">
             This guide describes how to choose a litter type against published safety criteria; it is not individualized

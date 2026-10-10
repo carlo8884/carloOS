@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import {
+import { ShopCtas,
   buildMetadata,
   ArticleLayout,
   RelatedLinks, CrossPortfolioCard,
@@ -9,7 +10,6 @@ import {
   buildFAQSchema,
   combineSchemas,
   StockImage,
-  AffiliateDisclosure,
   ArticleByline,
   ArticleSourcesList,
   JourneyNext,
@@ -49,7 +49,7 @@ const FAQS = [
   {
     question: 'Can a betta really live in a bowl?',
     answer:
-      'No. Unheated bowls under about 5 gallons are below the species’ minimum welfare needs. Bettas come from warm (78–82°F) tropical waters in Thailand and the Malay Peninsula, and they need a filter to keep ammonia at 0 ppm. The "bowl myth" comes from misreading wild habitat — shallow does not mean tiny, and rice paddies are rain-flushed weekly during monsoon.',
+      'No. Unheated bowls under about 5 gallons are below the species’ minimum welfare needs. Bettas come from warm (75–86°F, FishBase Betta splendens, https://www.fishbase.se/summary/Betta-splendens.html) tropical waters in Thailand and the Malay Peninsula, and they need a filter to keep ammonia at 0 ppm. The "bowl myth" comes from misreading wild habitat — shallow does not mean tiny, and rice paddies are rain-flushed weekly during monsoon.',
     answerText:
       'No. Unheated bowls under about 5 gallons are below the species minimum welfare needs. Bettas come from warm (78-82F) tropical waters and need a filter to keep ammonia at 0 ppm. Shallow wild habitat does not mean tiny.',
   },
@@ -133,7 +133,7 @@ export default function BettaFishPage() {
               {[
                 ['Scientific name', 'Betta splendens'],
                 ['Min tank', '5 gallons — 10 is better'],
-                ['Temperature', '76–82°F — heater required'],
+                ['Temperature', '75–86°F (https://www.fishbase.se/summary/Betta-splendens.html)'],
                 ['pH', '6.5–7.5'],
                 ['Diet', 'Obligate carnivore — protein-first'],
                 ['Filter', 'Gentle flow — sponge filter ideal'],
@@ -145,7 +145,7 @@ export default function BettaFishPage() {
                   className="flex justify-between py-1.5 border-b border-brand-border text-xs last:border-0"
                 >
                   <span className="text-brand-text-light">{k}</span>
-                  <span className="font-bold text-brand-dark text-right max-w-[55%]">{v}</span>
+                  <span className="font-bold text-brand-dark text-right max-w-[55%] break-all">{v}</span>
                 </div>
               ))}
             </div>
@@ -181,16 +181,18 @@ export default function BettaFishPage() {
           <p>
             The minimum correct housing is a 5-gallon tank with a gentle filter (sponge filter or
             low-flow internal filter — long fins are damaged by strong currents) and a heater
-            holding 76–82°F. A 10-gallon tank gives the keeper room to plant heavily, stabilize
+            holding 75–86°F (<a className="break-all" href="https://www.fishbase.se/summary/Betta-splendens.html">https://www.fishbase.se/summary/Betta-splendens.html</a>). A 10-gallon tank gives the keeper room to plant heavily, stabilize
             parameters, and add enrichment. Bettas in appropriately sized, heated, filtered,
             planted tanks live 3–5 years and display vivid colors and active, curious behavior.
-            The same fish in a bowl rarely reaches two.
+            The same fish in a bowl rarely reaches two. If a tank is already in the house, the{' '}
+            <a href="/tools/aquarium-volume-calculator" className="text-brand-primary hover:underline">volume calculator</a>{' '}
+            turns its length, width, and height into gallons before you decide the 5-gallon floor is met.
           </p>
           <JourneyNext
             siteId="fish-com"
             nextHref="/setup/nano-tank-setup"
             nextLabel="Build the 5–10 gallon tank before you buy the fish"
-            nextBlurb="The bowl is the failure mode. Five gallons heated and filtered is the welfare floor; ten is more stable. Nano-tank setup is the next step: sponge filter, heater, and a cycle before the betta goes in. The hop below is the same betta tank-setup search already on this page."
+            nextBlurb="The bowl is the failure mode. Five gallons heated and filtered is the welfare floor; ten is more stable. Nano-tank setup is the next step: sponge filter, heater, and a cycle before the betta goes in. The button below opens the same betta tank-setup search on Amazon."
             resourceHref="/go/amazon-brand/betta%20fish%20tank%20setup?s=species-betta-fish"
             resourceLabel="Browse betta tank setups on Amazon →"
           />
@@ -205,10 +207,12 @@ export default function BettaFishPage() {
           </p>
           <p>
             <strong>Protein first, named animal source first.</strong> A correct staple pellet
-            lists a named animal protein (whole krill, black soldier fly larvae, salmon, herring)
-            as the first ingredient, runs 40–55% protein, and avoids wheat, corn, soy, and rice as
-            primary ingredients. Northfin Betta Bits, Fluval Bug Bites Betta, New Life Spectrum
-            Betta Formula, and Hikari Vibra Bites all meet that bar. Generic tropical "flake food"
+            lists a named animal protein first. Check the label for the protein minimum and for
+            wheat, corn, soy, or rice. The current pages print crude protein minimum 45% for
+            Northfin Betta Bits, 46% for Fluval Bug Bites Betta flakes (45% for the micro granules),
+            46% for Hikari Vibra Bites, and 37% for New Life Spectrum Betta. The 37% figure is
+            under a 40% floor, and wheat flour is on the Northfin, New Life Spectrum, and Hikari
+            ingredient lists. Those four foods do not all meet one protein band. Generic tropical "flake food"
             and grain-filled "betta bites" do not — the fish will eat them, but long-term
             keepers report fading color, bloating from carbohydrate fermentation, and shortened
             lifespan.
@@ -279,7 +283,7 @@ export default function BettaFishPage() {
               hang-on-back with the flow baffled by a pre-filter sponge, replicates the still
               water bettas evolved for. Strong canister output across the surface tears at long
               fins and exhausts the fish.
-            </li>
+             <a href="/reviews/best-aquarium-filters">The filter guide</a> compares that low-flow sponge and hang-on-back.</li>
             <li>
               <strong>Leaf litter.</strong> Indian almond leaves (Terminalia catappa), oak leaves,
               and magnolia leaves on the substrate decompose slowly, release tannins, and host
@@ -321,7 +325,7 @@ export default function BettaFishPage() {
             Ammonia at any detectable level damages gill epithelium; nitrite blocks oxygen
             transport in blood; both compound the chronic-stress baseline that comes from being
             cold. The target for a betta tank is the same as the target for any other freshwater
-            tank: ammonia 0 ppm, nitrite 0 ppm, nitrate under 20 ppm, temperature 76–82°F. There
+            tank: ammonia 0 ppm, nitrite 0 ppm, nitrate under 20 ppm, temperature 75–86°F (<a className="break-all" href="https://www.fishbase.se/summary/Betta-splendens.html">https://www.fishbase.se/summary/Betta-splendens.html</a>). There
             is no welfare-defensible reading in which "the fish is alive" justifies an unfiltered
             jar.
           </p>
@@ -334,7 +338,11 @@ export default function BettaFishPage() {
             </li>
             <li>
               <strong>No heater.</strong> A 25–50W preset or adjustable heater is non-optional.
-              "Room temperature" in most US homes is too cold for a tropical fish.
+              "Room temperature" in most US homes is too cold for a tropical fish. The{' '}
+              <a href="/tools/heater-wattage-calculator" className="text-brand-primary hover:underline">heater wattage calculator</a>{' '}
+              sizes watts from the gallons and a target temperature, and the{' '}
+              <a href="/reviews/best-aquarium-heaters" className="text-brand-primary hover:underline">heater guide</a>{' '}
+              compares the models.
             </li>
             <li>
               <strong>Wrong tankmates.</strong> Fin-nippers (tiger barbs, serpae tetras), other
@@ -391,12 +399,12 @@ export default function BettaFishPage() {
             includeSchema={false}
             allowMultiple
           />
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        <HopDisclosure siteId="fish-com" href="/go/amazon-brand/betta%20fish%20tank%20setup?s=species-betta-fish" />
           <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Betta Fish — Tank Setup</div>
-          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for betta fish care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
+          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for betta fish care.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
-            <a href="/go/amazon-brand/betta%20fish%20tank%20setup?s=species-betta-fish" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop Betta Fish Setup on Amazon →</a>
+            <ShopCtas amazonHref="/go/amazon-brand/betta%20fish%20tank%20setup?s=species-betta-fish" amazonLabel="Browse betta tank setups on Amazon →" />
           </div>
         </div>
 

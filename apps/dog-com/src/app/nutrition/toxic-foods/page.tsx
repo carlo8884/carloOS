@@ -1,8 +1,8 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleByline, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleByline, ShopCtas } from '@carloOS/ui'
 import { buildFAQSchema, buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
-
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
@@ -230,19 +230,8 @@ export default function ToxicFoodsPage() {
             <li><strong>Note the time of ingestion</strong> — treatment options narrow significantly as time passes for some toxins. Earlier treatment equals better outcomes.</li>
           </ol>
 
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href="/go/amazon-brand/dog+food?s=nutrition-toxic-foods" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated dog xylitol-critical chart /
-              dog fridge grape-kidney card /
-              canine poison-protocol handbook).
-              No existing product hop to keep.
-              Educational kitchen searches only; no Rx /
-              vaccine / flea / heartworm / nsaid hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs can-dogs-eat /
-              nutrition-hub / puppy-schedule hops.
-              Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
@@ -251,7 +240,7 @@ export default function ToxicFoodsPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/dog+food?s=nutrition-toxic-foods"
-                amazonLabel="Shop on Amazon"
+                amazonLabel="Browse dog food on Amazon →"
               />
           </div>
           </div>

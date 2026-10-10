@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -9,7 +10,7 @@ import {
   TableOfContents,
   RelatedLinks,
   ArticleByline,
-  AffiliateDisclosure,
+
   ShopCtas,
   JourneyNext,
 } from '@carloOS/ui'
@@ -38,7 +39,7 @@ const schema = buildHowToSchema({
     },
     {
       name: 'Pick a change percent',
-      text: 'A standard community tank is 25% weekly. Heavy bioload (goldfish, large cichlids) is 30–50% weekly. Reef tanks usually do 10–15% with matched-salinity water. Cap a single change at 50%.',
+      text: 'These change percents are planning figures: 25% weekly for a community tank, 30–50% weekly for a heavy bioload, and 10–15% for a reef tank with matched salinity. Cap a single change at 50%.',
     },
     {
       name: 'Multiply filled volume by the percent',
@@ -46,7 +47,7 @@ const schema = buildHowToSchema({
     },
     {
       name: 'Match temperature and condition the new water',
-      text: 'New water should be within 2°F of the tank. Dose dechlorinator for any tap water before it touches the tank. Vacuum gravel while you siphon so waste leaves with the old water.',
+      text: 'A planning figure is to keep new water within about 2°F of the tank. That 2°F is not a fetched temperature standard. Dose dechlorinator for any tap water before it touches the tank. Vacuum gravel while you siphon so waste leaves with the old water.',
     },
     {
       name: 'Adjust frequency from bioload, not a calendar alone',
@@ -100,7 +101,7 @@ const FAQS = [
   {
     question: 'Do I need to match temperature and dechlorinate?',
     answer:
-      'Yes. New water should be within about 2°F of the tank. Dose a dechlorinator (Seachem Prime, API Stress Coat) for any tap water before it goes in — chlorine and chloramine harm fish and the filter bacteria. For most weekly 25% changes you do not need to chase pH or GH unless you keep sensitive species or you are doing a very large change.',
+      'Yes. A planning figure on this page is to keep new water within about 2°F of the tank. That 2°F is not a fetched temperature standard. Dose a dechlorinator (Seachem Prime, API Stress Coat) for any tap water before it goes in — chlorine and chloramine harm fish and the filter bacteria. For most weekly 25% changes you do not need to chase pH or GH unless you keep sensitive species or you are doing a very large change.',
   },
   {
     question: 'When should I change more water, or change more often?',
@@ -197,17 +198,17 @@ export default function WaterChangeCalculatorPage() {
           siteId="fish-com"
           nextHref="/tools/stocking-calculator"
           nextLabel="Check the slim-inch ceiling before you raise the change percent"
-          nextBlurb="Gallons to remove is maintenance math, not a stocking license. If nitrate climbs between weekly changes, check the slim-inch bioload ceiling — not a species headcount — before you double the siphon. The hop below is the same API Master Test Kit search already on this page."
+          nextBlurb="Gallons to remove is maintenance math, not a stocking license. If nitrate climbs between weekly changes, check the slim-inch bioload ceiling — not a species headcount — before you double the siphon. The button below opens the same API Master Test Kit search on Amazon."
           resourceHref="/go/amazon-brand/api+freshwater+master+test+kit?s=tools-water-change-calculator"
-          resourceLabel="Shop API Master Test Kit on Amazon →"
+          resourceLabel="Browse API Master Test Kit on Amazon →"
         />
 
-        {/* Money path — live amazon-brand search hops (Python changer / gravel
+        {/* Shop note — live amazon-brand search buttons (Python changer / gravel
             vacuum / Seachem Prime / API test kit). ShopCtas hides empty Chewy;
-            never href="#" or PLACEHOLDER. Python + gravel-vacuum queries already
-            live on this page / ResultCTA; Prime matches the disease-checker hop;
+            never href="#" or an empty link. Python + gravel-vacuum queries already
+            live on this page / ResultCTA; Prime matches the disease-checker button;
             API kit matches the water-test review and stocking tool. */}
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/api+freshwater+master+test+kit?s=tools-water-change-calculator", "/go/amazon-brand/python+water+changer?s=tools-water-change-calculator", "/go/amazon-brand/aquarium+gravel+vacuum+siphon?s=tools-water-change-calculator", "/go/amazon-brand/seachem+prime+water+conditioner?s=tools-water-change-calculator"]} />
         <div id="shop" className="mb-8 rounded-xl border border-brand-border bg-brand-surface p-5">
           <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
             Shop water-change gear
@@ -216,19 +217,19 @@ export default function WaterChangeCalculatorPage() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/python+water+changer?s=tools-water-change-calculator"
-              amazonLabel="Shop Python water changer on Amazon →"
+              amazonLabel="Browse Python-style water changers on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+gravel+vacuum+siphon?s=tools-water-change-calculator"
-              amazonLabel="Shop gravel vacuums on Amazon →"
+              amazonLabel="Browse gravel vacuum siphons on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/seachem+prime+water+conditioner?s=tools-water-change-calculator"
-              amazonLabel="Shop water conditioner / dechlorinator on Amazon →"
+              amazonLabel="Browse Seachem Prime water conditioner on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/api+freshwater+master+test+kit?s=tools-water-change-calculator"
-              amazonLabel="Shop API Master Test Kit on Amazon →"
+              amazonLabel="Browse API Master Test Kit on Amazon →"
             />
           </div>
         </div>

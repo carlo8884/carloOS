@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -10,7 +11,6 @@ import {
   SchemaScript,
   FAQAccordion,
   CrossSiteHelp,
-  AffiliateDisclosure,
   CrossPortfolioCard,
   ShopCtas,
   JourneyNext,
@@ -22,7 +22,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
   title: 'New Puppy Checklist — First-Week Essentials | Dog.com',
   description:
-    'Pick adult size, pickup age, indoor or outdoor, crate training, and budget for a checkable new-puppy list with Amazon shop hops. Free.',
+    'Pick adult size, pickup age, indoor or outdoor, crate training, and budget for a checkable new-puppy list with Amazon shop buttons. Free.',
   path: '/tools/new-puppy-checklist',
 })
 
@@ -67,7 +67,7 @@ const appSchema = {
   '@type': 'WebApplication',
   name: 'New Puppy Essentials Checklist Builder',
   description:
-    'Free interactive checklist that builds a staged new-puppy supplies list from adult size, pickup age, indoor or outdoor living, crate-training status, and budget, with Amazon category-search hops on every gear item.',
+    'Free interactive checklist that builds a staged new-puppy supplies list from adult size, pickup age, indoor or outdoor living, crate-training status, and budget, with Amazon searches on every gear item.',
   url: 'https://dog.com/tools/new-puppy-checklist',
   applicationCategory: 'LifestyleApplication',
   operatingSystem: 'Web',
@@ -76,7 +76,7 @@ const appSchema = {
     'Tailors the list to adult size, pickup age, indoor/outdoor, crate training, and budget',
     'Checkable stages: before pickup, first 48 hours, first month, vet and paperwork',
     'Flags the essentials vs. the nice-to-haves',
-    'Shoppable first-week kit via Amazon category searches',
+    'Shop the first-week kit via Amazon searches',
   ],
   publisher: { '@type': 'Organization', name: 'Dog.com Editorial', url: 'https://dog.com' },
 }
@@ -109,7 +109,7 @@ const howToSchema = buildHowToSchema({
 const articleSchema = buildArticleSchema({
   siteId: 'dog-com',
   title: 'New Puppy Checklist',
-  description: 'What do you actually need before a puppy comes home? Pick adult size, age at pickup, indoor or outdoor, crate training, and budget — then check off a staged first-week list with a shoppable kit for every gear item.',
+  description: 'What do you actually need before a puppy comes home? Pick adult size, age at pickup, indoor or outdoor, crate training, and budget — then check off a staged first-week list with shop links for every gear item.',
   url: 'https://dog.com/tools/new-puppy-checklist',
   imageUrl: '',
   authorName: 'Dog.com Editorial',
@@ -166,7 +166,7 @@ export default function NewPuppyChecklistPage() {
           <p className="text-lg text-white/55 leading-relaxed max-w-2xl">
             What do you actually need before a puppy comes home? Pick adult size, age at pickup,
             indoor or outdoor, crate training, and budget — then check off a staged first-week list
-            with a shoppable kit for every gear item.
+            with shop links for every gear item.
           </p>
         </div>
       </section>
@@ -190,7 +190,7 @@ export default function NewPuppyChecklistPage() {
           nextLabel="Size the crate before you buy"
           nextBlurb="The checklist is the day-one list. The crate-size calculator turns nose-to-tail and height into a standard crate length so you buy the adult size once — then use a divider while the puppy is small."
           resourceHref="/go/amazon-brand/wire+dog+crate+with+divider+panel?s=tools-new-puppy-checklist"
-          resourceLabel="Browse crates on Amazon →"
+          resourceLabel="Browse wire crates with a divider panel on Amazon →"
         />
         <div className="max-w-2xl mt-8">
           <EmailCapture
@@ -205,21 +205,21 @@ export default function NewPuppyChecklistPage() {
         </div>
       </section>
 
-      {/* Money path — live amazon-brand search hops (first-week kit).
-          ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-          Category searches only — not a ranked list, not a diagnosis. */}
+      {/* Shop note — live amazon-brand search buttons (first-week kit).
+          ShopCtas hides empty Chewy; never href="#" or an empty link.
+          Amazon searches only — not a ranked list, not a diagnosis. */}
       <section id="new-puppy-kit" className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <div className="max-w-2xl">
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/wire+dog+crate+with+divider+panel?s=tools-new-puppy-checklist", "/go/amazon-brand/puppy+food?s=tools-new-puppy-checklist", "/go/amazon-brand/northmate+green+interactive+feeder?s=tools-new-puppy-checklist", "/go/amazon-brand/julius+k9+idc+powerharness?s=tools-new-puppy-checklist", "/go/amazon-brand/dog+id+tag+collar?s=tools-new-puppy-checklist", "/go/amazon-brand/puppy+teething+toys?s=tools-new-puppy-checklist", "/go/amazon-brand/enzymatic+pet+stain+odor+cleaner?s=tools-new-puppy-checklist"]} />
           <div className="mt-4 rounded-xl border border-brand-border bg-brand-white p-5">
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Shop a first-week puppy kit
+              Shop these supplies
             </div>
             <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/wire+dog+crate+with+divider+panel?s=tools-new-puppy-checklist"
-                amazonLabel="Browse crates on Amazon →"
+                amazonLabel="Browse wire crates with a divider panel on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/puppy+food?s=tools-new-puppy-checklist"
@@ -227,11 +227,11 @@ export default function NewPuppyChecklistPage() {
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/northmate+green+interactive+feeder?s=tools-new-puppy-checklist"
-                amazonLabel="Browse slow-feeder bowls on Amazon →"
+                amazonLabel="Search Amazon for Northmate Green"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/julius+k9+idc+powerharness?s=tools-new-puppy-checklist"
-                amazonLabel="Browse harnesses on Amazon →"
+                amazonLabel="Browse Julius-K9 IDC Powerharness on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/dog+id+tag+collar?s=tools-new-puppy-checklist"
@@ -243,7 +243,7 @@ export default function NewPuppyChecklistPage() {
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/enzymatic+pet+stain+odor+cleaner?s=tools-new-puppy-checklist"
-                amazonLabel="Browse enzymatic pet cleaners on Amazon →"
+                amazonLabel="Browse enzymatic stain and odor cleaner on Amazon →"
               />
           </div>
           </div>
@@ -269,7 +269,7 @@ export default function NewPuppyChecklistPage() {
                 , and running the{' '}
                 <Link href="/tools/puppy-first-year-budget" className="text-brand-primary underline-offset-2 hover:underline">first-year budget planner</Link>{' '}
                 from the start are the easiest ways to avoid early mistakes.
-              </p>
+               <a href="/reviews/best-dog-crates">The crate guide</a> compares the first crate on that list.</p>
               <p>
                 Everything else — chews and toys, grooming tools, a first-aid kit — can follow in the
                 first week while you focus on what actually shapes the dog: socialisation,
@@ -284,6 +284,7 @@ export default function NewPuppyChecklistPage() {
 
           <div>
             <h2 className="mb-4 font-display text-2xl font-bold text-brand-dark">Frequently asked questions</h2>
+            <p>Puppy foods for the day-one list are compared in the <Link href="/reviews/best-dog-food-for-puppies">puppy food review</Link>.</p>
             <FAQAccordion items={FAQS} />
             <CrossSiteHelp
               href={crossSiteHref('vets-co', '/reviews/best-pet-insurance')}

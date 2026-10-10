@@ -15,7 +15,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
-  AffiliateDisclosure,
   buildMetadata,
   buildBreadcrumbSchema,
   buildFAQSchema,
@@ -24,7 +23,7 @@ import {
   SchemaScript,
   CalloutBox,
   StockImage,
-  PriceAsOf
+  PriceAsOf,
 } from '@carloOS/ui'
 import { Specialties, type Specialty } from '../../data/specialties'
 
@@ -56,6 +55,7 @@ const HUB_FAQS = [
   {
     question: 'How much does a veterinary specialist visit cost?',
     answer:
+      'Ranges on this answer are dated 2026-10-04. ' +
       'An initial specialist consultation commonly runs about $150–500 in the United States, depending on the discipline — emergency and dentistry consultations tend to start lower, while most internal-medicine subspecialties start near $200–500. The consultation is only the entry point: advanced diagnostics (echocardiograms, MRI, CT, biopsy) and any procedure or surgery are billed separately and can reach several thousand dollars. The reference table on this page lists the typical initial-consultation range for each of the nine specialties. All figures are typical US ranges and are not guaranteed.',
   },
   {
@@ -140,7 +140,7 @@ export default function SpecialistsHubPage() {
         >
           Board-Certified Veterinary Specialists
         </h1>
-        <PriceAsOf date="2026-06-14" tone="dark" />
+        <PriceAsOf date="2026-10-04" tone="dark" />
         <p className="text-lg font-light text-white/60 max-w-2xl leading-relaxed">
           Nine specialty deep-dives — when your primary vet refers, what to expect at the visit,
           typical US cost ranges, how pet insurance fits in, and how to verify board
@@ -171,7 +171,7 @@ export default function SpecialistsHubPage() {
             thousand dollars. Most accident-and-illness pet insurance plans reimburse specialist
             care once the policy is active and waiting periods clear — but pre-existing conditions
             are excluded. Verify any specialist in the relevant college&apos;s public directory.
-            All cost figures are typical US ranges and are not guaranteed.
+            All cost figures are typical US ranges dated 2026-10-04 and are not guaranteed.
           </p>
         </section>
 
@@ -306,6 +306,7 @@ export default function SpecialistsHubPage() {
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
               Pet Insurance & Specialist Care
             </div>
+            <p>Those figures are typical US ranges dated 2026-10-04.</p>
             <div className="font-display font-bold text-brand-dark text-lg mb-2">
               Chronic specialist visits can cost $3,000–15,000 annually
             </div>
@@ -419,6 +420,7 @@ export default function SpecialistsHubPage() {
           >
             Common questions about veterinary specialists
           </h2>
+          <p>Those figures are typical US ranges dated 2026-10-04.</p>
           <FAQAccordion items={HUB_FAQS} includeSchema={false} />
           <p className="text-xs text-brand-text-light mt-4 leading-relaxed max-w-3xl">
             For the tests a specialist commonly orders, see the{' '}
@@ -443,23 +445,10 @@ export default function SpecialistsHubPage() {
       </main>
 
       <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
-                
+
         <div className="max-w-content-wide mt-6">
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
         </div>
 
-        {/* Money path — live amazon-brand search hops
-            (laminated pet specialty discipline chart /
-            pet fridge referral consult card /
-            veterinary specialty reference handbook).
-            Educational kitchen searches only; no Rx /
-            vaccine / flea hops.
-            ShopCtas hides empty Chewy; never href="#"
-            or PLACEHOLDER. Unused vs tools / insurance /
-            reviews / health / guides / breeds /
-            diagnostics / symptoms / medications kitchen
-            kits and child spiral+notebook hops.
-            Do not re-open #1165 / what-to-expect. */}
               </section>
     </>
   )

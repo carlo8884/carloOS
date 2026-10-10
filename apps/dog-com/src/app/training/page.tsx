@@ -1,6 +1,7 @@
+import { HopDisclosure } from '../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, buildFAQSchema, combineSchemas, SchemaScript, ShopCtas, StockImage, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, buildFAQSchema, combineSchemas, SchemaScript, ShopCtas, StockImage, CrossPortfolioCard } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
@@ -75,7 +76,6 @@ const FAQ_ITEMS: Array<{ question: string; answer: string }> = [
       'Aggression (toward people or other dogs), severe separation anxiety, and intense fear or reactivity benefit from a certified behavior professional rather than a general trainer or a self-guided plan — and some cases warrant a veterinary behaviorist, because pain or an underlying medical condition can drive sudden behavior change. If a behavior is dangerous, escalating, or appeared abruptly, rule out a medical cause with your veterinarian first, then work with a credentialed professional. The trainer-credentials guide explains what qualifications such as CPDT-KA, CBCC-KA, and CAAB actually mean.',
   },
 ]
-
 
 const SECTIONS = [
   {
@@ -337,20 +337,9 @@ export default function TrainingHubPage() {
         <p className="max-w-container-wide text-sm text-brand-text-mid leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
 
         <div className="max-w-container-wide mt-6">
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href="/go/amazon-brand/dog+leash?s=training-hub" />
         </div>
 
-        {/* Money path — live amazon-brand search hops
-            (laminated dog training session chart /
-            dog fridge training cue card /
-            canine training reference handbook).
-            Educational kitchen searches only; no Rx /
-            vaccine / flea / heartworm / shock-collar
-            ASIN hops. ShopCtas hides empty Chewy;
-            never href="#" or PLACEHOLDER. Unused vs
-            tools / reviews / nutrition kitchen kits
-            and child training crate / clicker / treat
-            / harness hops. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-container-wide">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
             Shop related supplies
@@ -359,7 +348,7 @@ export default function TrainingHubPage() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/dog+leash?s=training-hub"
-              amazonLabel="Shop on Amazon"
+              amazonLabel="Browse dog leash on Amazon →"
             />
           </div>
         </div>

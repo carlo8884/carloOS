@@ -1,16 +1,17 @@
 import type { Metadata } from 'next'
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import Link from 'next/link'
-import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
+import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, EmailCapture, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildItemListSchema, buildProductSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Best Planted Tank Fertilizers 2026 — Seachem Flourish | Fish.com', description: 'Best aquarium fertilizers for planted tanks. Seachem Flourish, Easy Green, and NilocG ranked for low-tech, high-tech, and CO2 injected planted aquariums.', path: '/reviews/best-planted-tank-fertilizers', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Best Planted Tank Fertilizers 2026', description: 'Seachem Flourish, Easy Green, and NilocG ranked for planted aquariums.', url: 'https://fish.com/reviews/best-planted-tank-fertilizers', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' })
-const easyGreen = buildProductSchema({ name: 'Easy Green All-in-One Fertilizer', description: 'All-in-one liquid fertilizer for planted aquariums with simple weekly dosing.', url: 'https://aquariumcoop.com', imageUrl: '', ratingValue: 9.4, reviewCount: 1 })
-const flourish = buildProductSchema({ name: 'Seachem Flourish Comprehensive', description: 'Comprehensive trace element supplement for planted aquariums.', url: 'https://seachem.com', imageUrl: '', ratingValue: 9.1, reviewCount: 1 })
+const easyGreen = buildProductSchema({ name: 'Easy Green All-in-One Fertilizer', description: 'All-in-one liquid fertilizer for planted aquariums with simple weekly dosing.', url: 'https://fish.com/go/amazon-brand/aquarium+co-op+easy+green+fertilizer?s=reviews-best-planted-tank-fertilizers', imageUrl: '' })
+const flourish = buildProductSchema({ name: 'Seachem Flourish Comprehensive', description: 'Comprehensive trace element supplement for planted aquariums.', url: 'https://fish.com/go/amazon-brand/seachem+flourish+comprehensive?s=reviews-best-planted-tank-fertilizers', imageUrl: '' })
 const allSchemas = combineSchemas(schema, easyGreen, flourish)
 
 const PICKS = [
-  { label: 'Best Overall', name: 'Easy Green (Aquarium Co-Op)', subtitle: 'All-in-one · Simple dosing · Works for most setups', href: '#easy-green' },
+  { label: 'Best Overall', name: 'Easy Green (Aquarium Co-Op)', subtitle: 'All-in-one · Simple dosing · Works for most setups', href: '#easy-green', pickHop: '/go/amazon-brand/aquarium+co-op+easy+green+fertilizer?s=reviews-best-planted-tank-fertilizers', pickShopLabel: 'Search Amazon for Easy Green' },
   { label: 'Best Trace Elements', name: 'Seachem Flourish', subtitle: 'Comprehensive micronutrients · Widely available', href: '#flourish' },
   { label: 'Best for High-Tech', name: 'NilocG Thrive', subtitle: 'High-dose · CO2 setups · Serious planted tanks', href: '#nilocg' },
   { label: 'Best Root Tabs', name: 'Aquarium Co-Op Easy Root Tabs', subtitle: 'Heavy root feeders · Substrate nutrients', href: '#root-tabs' },
@@ -20,7 +21,7 @@ const PICKS = [
 // PICKS. No aggregateRating, no fabricated specs (QC §1.4).
 const itemList = buildItemListSchema({
   name: 'Best Planted Tank Fertilizers 2026',
-  items: PICKS.map((p) => ({ name: p.name, url: `https://fish.com/reviews/best-planted-tank-fertilizers${p.href}` })),
+  items: PICKS.map((p) => ({ name: p.name, url: ({ 'Easy Green (Aquarium Co-Op)': 'https://fish.com/go/amazon-brand/aquarium+co-op+easy+green+fertilizer?s=reviews-best-planted-tank-fertilizers', 'Seachem Flourish': 'https://fish.com/go/amazon-brand/seachem+flourish+comprehensive?s=reviews-best-planted-tank-fertilizers', 'NilocG Thrive': 'https://fish.com/go/amazon/B01M20WCI5?s=reviews-best-planted-tank-fertilizers' }[p.name] ?? `https://fish.com/reviews/best-planted-tank-fertilizers${p.href}`) })),
 })
 
 export default function BestPlantedFertilizersPage() {
@@ -30,8 +31,28 @@ export default function BestPlantedFertilizersPage() {
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-4">Buyer's Guide</span>
         <h1 className="font-display font-bold text-white tracking-tight leading-tight mb-4 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Planted Tank Fertilizers 2026</h1>
-        <PriceAsOf date="2026-10-04" tone="dark" />
-        <PrimaryHop href='/go/amazon-brand/aquarium+co-op+easy+green+fertilizer?s=reviews-best-planted-tank-fertilizers' label='Check price of Easy Green on Amazon' />
+        <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">Aquarium Co-Op Easy Green is the top planted-tank fertilizer because the dosing is simple and it covers macros and micros.</p>
+        <PriceAsOf date="2026-10-05" tone="dark" />
+        <div data-fold="offer">
+          <PrimaryHop href='/go/amazon-brand/aquarium+co-op+easy+green+fertilizer?s=reviews-best-planted-tank-fertilizers' label='Search Amazon for Easy Green' />
+        <HopDisclosure tone="on-dark" siteId="fish-com" href="/go/amazon-brand/aquarium+co-op+easy+green+fertilizer?s=reviews-best-planted-tank-fertilizers" />
+        </div>
+        <EmailCapture
+          variant="inline"
+          siteId="fish-com"
+          addressOnly
+          title="Shopping checklist"
+          ctaText="Copy checklist"
+          source="reviews-best-planted-tank-fertilizers"
+          checklist={[
+            "The card says it is online only, and a high-tech CO2 tank may still need extra macros.",
+            "The card says it does not cover macros on its own and the dose is twice a week.",
+            "The card says it is overkill for a low-tech tank and overdosing is an algae risk.",
+            "Macro and micronutrients drive growth, color, and health.",
+            "The right fertilizer depends on your setup — low-tech, high-tech, and heavy root feeders all have different needs.",
+            "Macros (NPK — nitrogen, phosphorus, potassium) drive bulk growth.",
+          ]}
+        />
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">Plants need more than light and CO2. Macro and micronutrients drive growth, color, and health. The right fertilizer depends on your setup — low-tech, high-tech, and heavy root feeders all have different needs.</p>
       </div>
       <QuickPicks items={PICKS} />
@@ -56,49 +77,51 @@ export default function BestPlantedFertilizersPage() {
               siteId="fish-com"
               nextHref="/tools/co2-calculator"
               nextLabel="Size CO2 before you pick a high-tech dose"
-              nextBlurb="The callout is the macro/micro rule — low-tech with fish waste usually needs micros; high-tech CO2 tanks burn macros faster. The CO2 calculator is the drop-checker target for the high-tech case. The hop below is the same Easy Green search already on this page."
+              nextBlurb="The callout is the macro/micro rule — low-tech with fish waste usually needs micros; high-tech CO2 tanks burn macros faster. The CO2 calculator is the drop-checker target for the high-tech case. The button below opens the same Easy Green search on Amazon."
               resourceHref="/go/amazon-brand/aquarium+co-op+easy+green+fertilizer?s=reviews-best-planted-tank-fertilizers"
-              resourceLabel="Browse Easy Green planted-tank fertilizer on Amazon →"
+              resourceLabel="Search Amazon for Easy Green"
             />
-            <ScoreMethodology />
-            <AffiliateDisclosure variant="inline" siteId="fish-com" />
-            <ReviewCard id="easy-green" badge="Best Overall" name="Easy Green All-in-One Fertilizer" subtitle="Aquarium Co-Op · Simple weekly dosing · Covers most planted tanks" score={9.4} winner
-              description={<p>Easy Green from Aquarium Co-Op has become the most recommended all-in-one fertilizer in the planted tank hobby — for good reason. One pump per 10 gallons weekly covers most planted tanks from low-tech to medium-tech. Contains NPK macros plus a comprehensive micronutrient blend. The dosing simplicity eliminates the multiple-bottle approach of traditional fertilizer regimens (Seachem Flourish + Flourish Excel + Potassium separately). If you want a one-product solution that works for Java fern, Anubias, crypts, stem plants, and most common aquarium plants: Easy Green. Available exclusively from Aquarium Co-Op online.</p>}
+            <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/aquarium+co-op+easy+green+fertilizer?s=reviews-best-planted-tank-fertilizers", "/go/amazon-brand/seachem+flourish+comprehensive?s=reviews-best-planted-tank-fertilizers", "/go/amazon/B01M20WCI5?s=reviews-best-planted-tank-fertilizers"]} />
+            <ReviewCard id="easy-green" badge="Best Overall" name="Easy Green All-in-One Fertilizer" subtitle="Aquarium Co-Op · Simple weekly dosing · Covers most planted tanks" winner
+              description={<p>Easy Green from Aquarium Co-Op is an all-in-one fertilizer for planted tanks. One pump per 10 gallons weekly covers most planted tanks from low-tech to medium-tech. Contains NPK macros plus a comprehensive micronutrient blend. The dosing simplicity eliminates the multiple-bottle approach of traditional fertilizer regimens (Seachem Flourish + Flourish Excel + Potassium separately). If you want a one-product solution that works for Java fern, Anubias, crypts, stem plants, and most common aquarium plants: Easy Green. Available exclusively from Aquarium Co-Op online.</p>}
               specs={[{ label: 'Type', value: 'All-in-one liquid', highlight: 'good' }, { label: 'Dosing', value: '1 pump / 10 gallons / week' }, { label: 'Covers', value: 'Macros + micros', highlight: 'good' }, { label: 'Best for', value: 'Low to medium-tech planted tanks' }]}
               pros={['Simplest dosing regimen available', 'Covers macros and micros in one product', 'Designed by experienced planted tank hobbyists', 'Works for 90% of planted setups']}
               cons={['Online only (Aquarium Co-Op)', 'High-tech CO2 setups may need supplemental macros', 'Not available in local fish stores']}
               price="$15–25"
-              ctaText="Shop Easy Green →"
+              priceNote="dated 2026-10-05."
+              ctaText="Search Amazon for Easy Green"
               ctaHref="/go/amazon-brand/aquarium+co-op+easy+green+fertilizer?s=reviews-best-planted-tank-fertilizers"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="easy-green-fertilizer"
             />
-            <ReviewCard id="flourish" badge="Best Trace Elements" name="Seachem Flourish Comprehensive" subtitle="Widest availability · Micronutrient focus · Every fish store carries it" score={9.1}
+            <ReviewCard id="flourish" badge="Best Trace Elements" name="Seachem Flourish Comprehensive" subtitle="Widest availability · Micronutrient focus · Every fish store carries it"
               description={<p>Seachem Flourish Comprehensive is the most widely available planted tank supplement — found at virtually every fish store and online retailer. It is primarily a micronutrient supplement (trace elements, vitamins, amino acids) rather than a comprehensive macro + micro product. For low-tech planted tanks with adequate fish waste (providing nitrogen and phosphorus), Flourish Comprehensive fills the micronutrient gap effectively. For tanks lacking macros, you'll need to pair it with Seachem Flourish Nitrogen, Flourish Phosphorus, and Flourish Potassium — which gets complex. Easy Green is simpler for most hobbyists; Seachem's value is universal availability when you need something today.</p>}
               specs={[{ label: 'Type', value: 'Micronutrient supplement' }, { label: 'Macros included', value: 'Minimal — supplement separately', highlight: 'warn' }, { label: 'Availability', value: 'Universal — every fish store', highlight: 'good' }, { label: 'Dosing', value: '5ml per 250L (66 gal) twice weekly' }]}
               pros={['Universally available', 'Comprehensive micronutrient profile', 'Long track record', 'Works well for low-tech with good fish load']}
               cons={['Does not cover macros adequately alone', 'Multi-bottle system needed for full NPK coverage', 'Twice-weekly dosing']}
               price="$10–20"
-              ctaText="Shop Seachem Flourish →"
+              priceNote="dated 2026-10-05."
+              ctaText="Search Amazon for Seachem Flourish Comprehensive"
               ctaHref="/go/amazon-brand/seachem+flourish+comprehensive?s=reviews-best-planted-tank-fertilizers"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="seachem-flourish"
             />
-            <ReviewCard id="nilocg" badge="Best for High-Tech" name="NilocG Thrive All-in-One" subtitle="High-dose formula · CO2 injected tanks · Serious planted aquascaping" score={9.2}
+            <ReviewCard id="nilocg" badge="Best for High-Tech" name="NilocG Thrive All-in-One" subtitle="High-dose formula · CO2 injected tanks · Serious planted aquascaping"
               description={<p>NilocG Thrive is formulated for high-tech CO2-injected planted tanks where rapid plant growth depletes nutrients faster than typical dosing can replace. Higher NPK concentrations than Easy Green or Flourish, with a comprehensive micro blend. The higher potency means fewer bottle changes and more cost-effective dosing at higher volumes. For the hobbyist running pressurized CO2, high lighting, and fast-growing stem plants and carpets — Thrive is the appropriate tool. For low-tech tanks, the higher dose creates algae risk from excess nutrients.</p>}
               specs={[{ label: 'Type', value: 'All-in-one high-dose', highlight: 'good' }, { label: 'Best for', value: 'CO2-injected high-tech tanks', highlight: 'good' }, { label: 'Risk', value: 'Algae if overdosed in low-tech', highlight: 'warn' }, { label: 'Value', value: 'Most cost-effective at high doses' }]}
               pros={['Higher concentration — better for high-tech', 'Cost-effective per dose at volume', 'Comprehensive macro + micro coverage', 'Popular in serious aquascaping community']}
               cons={['Overkill for low-tech / easy planted tanks', 'Algae risk if overdosed', 'Online ordering typically required']}
               price="$12–22"
-              ctaText="Shop NilocG Thrive →"
-              ctaHref="/go/amazon-brand/nilocg+thrive+fertilizer?s=reviews-best-planted-tank-fertilizers"
+              priceNote="dated 2026-10-05."
+              ctaText="Shop NilocG Thrive fertilizer on Amazon →"
+              ctaHref="/go/amazon/B01M20WCI5?s=reviews-best-planted-tank-fertilizers"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="nilocg-thrive"
             />
             <div className="mt-10">
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-3">Who should buy which fertilizer</h2>
               <p className="text-sm text-brand-text-mid leading-relaxed mb-4">
-                Dose, price, and the tank type are already on the three cards. This table only lines those facts up. Scores are this page&apos;s editorial scores, not customer star ratings.
+                Dose, price, and the tank type are already on the three cards. This table only lines those facts up.
               </p>
               <div className="overflow-x-auto max-w-full min-w-0 mb-8">
                 <table className="w-full text-sm border-collapse table-fixed sm:table-auto min-w-0 sm:min-w-[36rem] [&_th]:break-words [&_td]:break-words">
@@ -113,39 +136,39 @@ export default function BestPlantedFertilizersPage() {
                   <tbody>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">One bottle for a low- or medium-tech planted tank</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#easy-green" className="text-brand-primary">Easy Green</a><TableShopLink href={"/go/amazon-brand/aquarium+co-op+easy+green+fertilizer?s=reviews-best-planted-tank-fertilizers"} product={"Easy Green"} /></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#easy-green" className="text-brand-primary">Easy Green</a><TableShopLink href={"/go/amazon-brand/aquarium+co-op+easy+green+fertilizer?s=reviews-best-planted-tank-fertilizers"} product={"Easy Green"} label="Search Amazon for Easy Green" /></td>
                       <td className="p-3 text-brand-text-mid">Best Overall. 1 pump per 10 gallons weekly. Macros and micros. $15–25</td>
                       <td className="p-3 text-brand-text-mid">You need it from a local fish store. The card says Aquarium Co-Op online only. High-tech CO2 tanks may need extra macros</td>
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">Trace elements today, from a store that already stocks it</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#flourish" className="text-brand-primary">Seachem Flourish Comprehensive</a><TableShopLink href={"/go/amazon-brand/seachem+flourish+comprehensive?s=reviews-best-planted-tank-fertilizers"} product={"Seachem Flourish Comprehensive"} /></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#flourish" className="text-brand-primary">Seachem Flourish Comprehensive</a><TableShopLink href={"/go/amazon-brand/seachem+flourish+comprehensive?s=reviews-best-planted-tank-fertilizers"} product={"Seachem Flourish Comprehensive"} label="Search Amazon for Seachem Flourish Comprehensive" /></td>
                       <td className="p-3 text-brand-text-mid">Best Trace Elements. Micros, not a full macro bottle. 5 ml per 250 L twice weekly. $10–20</td>
                       <td className="p-3 text-brand-text-mid">The tank is short on nitrogen, phosphorus, or potassium. The card says those need separate Flourish bottles</td>
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">A CO2-injected high-tech tank with fast plants</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#nilocg" className="text-brand-primary">NilocG Thrive</a><TableShopLink href={"/go/amazon-brand/nilocg+thrive+fertilizer?s=reviews-best-planted-tank-fertilizers"} product={"NilocG Thrive"} /></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#nilocg" className="text-brand-primary">NilocG Thrive</a><TableShopLink href={"/go/amazon/B01M20WCI5?s=reviews-best-planted-tank-fertilizers"} product={"NilocG Thrive"} /></td>
                       <td className="p-3 text-brand-text-mid">Best for High-Tech. Higher NPK than Easy Green or Flourish. $12–22</td>
                       <td className="p-3 text-brand-text-mid">A low-tech tank. The card says the higher dose is an algae risk if you overfeed nutrients</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-05" />
+              <ComparisonFoot updated="2026-10-09" />
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Which fertilizer fits which tank</h2>
               <FAQAccordion items={[
                 {
                   question: 'Which fertilizer does this page pick for most planted tanks?',
-                  answer: 'Easy Green, scored 9.4 and marked Best Overall. The printed price is $15–25. The card says it is online only, and a high-tech CO2 tank may still need extra macros.',
+                  answer: 'Easy Green, marked Best Overall. The printed price is $15–25. The card says it is online only, and a high-tech CO2 tank may still need extra macros.',
                 },
                 {
                   question: 'Which fertilizer does this page pick for trace elements?',
-                  answer: 'Seachem Flourish Comprehensive, scored 9.1. The printed price is $10–20. The card says it does not cover macros on its own and the dose is twice a week.',
+                  answer: 'Seachem Flourish Comprehensive. The printed price is $10–20. The card says it does not cover macros on its own and the dose is twice a week.',
                 },
                 {
                   question: 'Which fertilizer does this page pick for a high-tech tank?',
-                  answer: 'NilocG Thrive, scored 9.2. The printed price is $12–22. The card says it is overkill for a low-tech tank and overdosing is an algae risk.',
+                  answer: 'NilocG Thrive. The printed price is $12–22. The card says it is overkill for a low-tech tank and overdosing is an algae risk.',
                 },
               ]} />
             </div>

@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -9,7 +10,7 @@ import {
   TableOfContents,
   RelatedLinks,
   ArticleByline,
-  AffiliateDisclosure,
+
   ShopCtas,
   JourneyNext,
 } from '@carloOS/ui'
@@ -42,7 +43,7 @@ const schema = buildHowToSchema({
     },
     {
       name: 'Read the starting rate and diffuser size',
-      text: 'Pressurized: start near 1 bubble/second per 10 gallons, scaled by plant density, with a diffuser sized to the tank. Liquid: a typical bottle starting point is 1 ml per 10 US gallons daily — follow the label.',
+      text: 'Planning figures, not a published dosing standard: pressurized CO2 starts near 1 bubble/second per 10 gallons, scaled by plant density. Liquid carbon starts at 1 ml per 10 US gallons daily — follow the bottle label.',
     },
     {
       name: 'Confirm with a drop checker',
@@ -115,7 +116,7 @@ const FAQS = [
   {
     question: 'Is the KH/pH CO2 formula accurate?',
     answer:
-      'It is accurate when carbonate is the only meaningful buffer in the water. Common things that break it: phosphate-based pH buffers (Seachem Neutral Regulator), peat or driftwood tannins, commercial discus buffers, and very low KH (under 2 dKH) where the formula becomes unstable. For most planted tanks running CO2 injection on tap water, the formula is within about ±20%.',
+      'The chart is usable when carbonate is the main buffer in the water. Common things that break it: phosphate-based pH buffers (Seachem Neutral Regulator), peat or driftwood tannins, commercial discus buffers, and very low KH (under 2 dKH) where the formula becomes unstable. This page does not cite a percent error for planted tanks on tap water.',
   },
   {
     question: 'Do I need a drop checker if I can calculate CO2 from KH/pH?',
@@ -216,21 +217,21 @@ export default function CO2CalculatorPage() {
           siteId="fish-com"
           nextHref="/tools/aquarium-cycling-estimator"
           nextLabel="Estimate the cycle before you push high-light injection"
-          nextBlurb="The calculator is the starting bubble rate and the 15–35 ppm band. A new tank still has to read zero ammonia and nitrite before you run that rate hard. The cycling estimator is the wait window. The hop below is the same drop-checker search already on this page."
+          nextBlurb="The calculator is the starting bubble rate and the 15–35 ppm band. A new tank still has to read zero ammonia and nitrite before you run that rate hard. The cycling estimator is the wait window. The button below opens the same drop-checker search on Amazon."
           resourceHref="/go/amazon-brand/aquarium+co2+drop+checker?s=tools-co2-calculator"
           resourceLabel="Browse aquarium CO2 drop checkers on Amazon →"
         />
 
-        {/* Money path — live amazon-brand search hops (regulator / diffuser / drop checker / liquid carbon).
-            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER. */}
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        {/* Shop note — live amazon-brand search buttons (regulator / diffuser / drop checker / liquid carbon).
+            ShopCtas hides empty Chewy; never href="#" or an empty link. */}
+        <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/aquarium+co2+drop+checker?s=tools-co2-calculator", "/go/amazon-brand/aquarium+co2+regulator+solenoid?s=tools-co2-calculator", "/go/amazon-brand/aquarium+co2+diffuser?s=tools-co2-calculator", "/go/amazon-brand/seachem+flourish+excel?s=tools-co2-calculator"]} />
         <div id="shop" className="mb-8 rounded-xl border border-brand-border bg-brand-surface p-5">
           <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
             Shop CO2 gear
           </div>
           <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
             A solenoid regulator, a diffuser sized to the tank, and a 4 dKH drop checker are the
-            pressurized kit; liquid carbon is the low-tech daily dose. Same Amazon hops used on the{' '}
+            pressurized kit; liquid carbon is the low-tech daily dose. The same Amazon buttons are on the{' '}
             <Link
               href="/setup/planted-tank-setup"
               className="text-brand-primary no-underline hover:underline"
@@ -244,24 +245,24 @@ export default function CO2CalculatorPage() {
             >
               lighting review
             </Link>
-            . Fish.com earns a commission on qualifying purchases at no extra cost to you.
+            .
           </p>
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+co2+regulator+solenoid?s=tools-co2-calculator"
-              amazonLabel="Shop CO2 regulators on Amazon →"
+              amazonLabel="Browse solenoid CO2 regulators on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+co2+diffuser?s=tools-co2-calculator"
-              amazonLabel="Shop CO2 diffusers on Amazon →"
+              amazonLabel="Browse aquarium CO2 diffusers on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+co2+drop+checker?s=tools-co2-calculator"
-              amazonLabel="Shop drop checkers on Amazon →"
+              amazonLabel="Browse aquarium CO2 drop checkers on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/seachem+flourish+excel?s=tools-co2-calculator"
-              amazonLabel="Shop liquid carbon on Amazon →"
+              amazonLabel="Browse Seachem Flourish Excel on Amazon →"
             />
           </div>
         </div>

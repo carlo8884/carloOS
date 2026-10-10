@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import {
   buildMetadata,
@@ -8,7 +9,6 @@ import {
   CalloutBox,
   ArticleByline,
   DropCap,
-  AffiliateDisclosure,
   ShopCtas,
 } from '@carloOS/ui'
 import {
@@ -38,7 +38,6 @@ const articleSchema = buildArticleSchema({
   publishedAt: '2026-06-01T00:00:00Z',
   modifiedAt: '2026-06-01T00:00:00Z',
 })
-
 
 const FAQS = [
   {
@@ -111,7 +110,7 @@ export default function ChoosingHealthyFerretPage() {
 
           </>
         }
-      
+
         relatedLinks={[
           { title: 'Ferret Colors Hub', href: '/colors' },
           { title: 'Adoption vs. Buying', href: '/ownership/adoption-vs-buying' },
@@ -305,27 +304,8 @@ export default function ChoosingHealthyFerretPage() {
 
           <p className="text-sm leading-relaxed text-brand-text-mid">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/ferret+cage?s=choosing-healthy" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated ferret healthy-kit checklist chart /
-              ferret fridge adoption red-flag card /
-              mustelid healthy ferret reference handbook).
-              Educational kitchen searches only; no Rx /
-              vaccine / aging hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs tools / reviews /
-              diet / care / behavior / health / ownership /
-              colors-hub / first-year-schedule /
-              colors-and-patterns / sable-ferrets /
-              albino-ferrets / dew-ferrets /
-              cinnamon-ferrets / champagne-ferrets /
-              chocolate-ferrets / black-ferrets /
-              silver-ferrets / panda-ferrets /
-              blaze-and-roan kitchen kits and child
-              finger+toothbrush / carnivore+care hops. Ferret
-              aging stays held.
-              Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
@@ -334,7 +314,7 @@ export default function ChoosingHealthyFerretPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/ferret+cage?s=choosing-healthy"
-                amazonLabel="Shop on Amazon"
+                amazonLabel="Browse ferret cages on Amazon →"
               />
           </div>
           </div>

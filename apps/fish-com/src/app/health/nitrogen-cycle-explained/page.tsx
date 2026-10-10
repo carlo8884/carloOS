@@ -1,15 +1,15 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, TableOfContents, AffiliateDisclosure, ArticleSourcesList, CalloutBox, FAQAccordion, ShopCtas, JourneyNext, buildFAQSchema, combineSchemas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, TableOfContents, ArticleSourcesList, CalloutBox, FAQAccordion, ShopCtas, JourneyNext, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import type { FAQItem } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
 const SOURCES = [
-  { label: "Nitrogenous Waste and the Nitrogen Cycle in Aquariums — UF/IFAS Extension FA-16.", url: "https://edis.ifas.ufl.edu/publication/FA016", publisher: "UF/IFAS Extension" },
+  { label: "Francis-Floyd, R. et al. Ammonia in Aquatic Systems — UF/IFAS FA031 (current home of FA-16).", url: "https://ask.ifas.ufl.edu/publication/FA031", publisher: "UF/IFAS Extension" },
   { label: "Timmons, M.B. and Ebeling, J.M. Recirculating Aquaculture, 3rd ed. Ithaca Publishing, 2013.", publisher: "Ithaca Publishing" },
-  { label: "Francis-Floyd, R. Ammonia Toxicosis in Fish — UF/IFAS Extension FA-36.", url: "https://edis.ifas.ufl.edu/publication/FA036", publisher: "UF/IFAS Extension" },
-  { label: "Russo, R.C. and Thurston, R.V. Toxicity of ammonia, nitrite, and nitrate to fishes. Aquaculture and Water Quality, 1991.", publisher: "World Aquaculture Society" },
+    { label: "Russo, R.C. and Thurston, R.V. Toxicity of ammonia, nitrite, and nitrate to fishes. Aquaculture and Water Quality, 1991.", publisher: "World Aquaculture Society" },
 ]
 
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'The Nitrogen Cycle Explained — Why New Tanks Fail | Fish.com', description: 'The nitrogen cycle is why most new aquariums fail. Complete guide: what it is, how to cycle a tank before adding fish, fishless cycling protocol.', path: '/health/nitrogen-cycle-explained', type: 'article' })
@@ -84,7 +84,7 @@ export default function NitrogenCyclePage() {
 
         <h2 id="what">What the Nitrogen Cycle Is</h2>
         <p>Fish produce ammonia — through their gills, waste, and urine — continuously. Ammonia is acutely toxic: fish exposed to ammonia develop gill damage, immune suppression, neurological harm, and death at concentrations as low as 0.25 ppm over time, and 2+ ppm causes rapid mortality.</p>
-        <p>The nitrogen cycle is the biological process by which ammonia is converted — first to nitrite (also toxic), then to nitrate (far less toxic at moderate levels) — by two groups of beneficial bacteria that colonize filter media and substrate. Without these bacteria, ammonia accumulates and kills fish. With them, a tank becomes self-regulating.</p>
+        <p>The nitrogen cycle is the biological process by which ammonia is converted — first to nitrite (also toxic), then to nitrate (far less toxic at moderate levels) — by two groups of beneficial bacteria that colonize filter media and substrate. Without these bacteria, ammonia accumulates and kills fish. With them, a tank becomes self-regulating. <a href="/reviews/best-aquarium-filters">The aquarium filter guide</a> compares the filter media those bacteria colonize.</p>
         <p>The process: <strong>Fish waste → Ammonia (NH₃) → Nitrite (NO₂⁻) → Nitrate (NO₃⁻)</strong></p>
         <p>Nitrobacter and Nitrospira bacteria handle the second conversion. Nitrosomonas handle the first. These bacteria are not present in tap water — they must be grown in your tank. This growth takes 4–8 weeks. During this time, the tank is unsafe for fish.</p>
 
@@ -164,7 +164,7 @@ export default function NitrogenCyclePage() {
           siteId="fish-com"
           nextHref="/tools/aquarium-cycling-estimator"
           nextLabel="Estimate weeks until the 0/0 test"
-          nextBlurb="The tank is safe only after a 2 ppm ammonia dose reads 0 ammonia and 0 nitrite 24 hours later. The cycling estimator turns temperature and seeding method into a week range so you know when to run that test. The hop below is the same API Master Test Kit search already on this page."
+          nextBlurb="The tank is safe only after a 2 ppm ammonia dose reads 0 ammonia and 0 nitrite 24 hours later. The cycling estimator turns temperature and seeding method into a week range so you know when to run that test. The button below opens the same API Master Test Kit search on Amazon."
           resourceHref="/go/amazon-brand/api+freshwater+master+test+kit?s=health-nitrogen-cycle"
           resourceLabel="Browse API Master Test Kit on Amazon →"
         />
@@ -182,15 +182,15 @@ export default function NitrogenCyclePage() {
         <p>To watch a cycle in progress you need a kit that reads ammonia, nitrite, and nitrate — see our breakdown of the <Link href="/reviews/best-water-test-kits">best aquarium water test kits</Link>. For target ranges on every parameter once the tank is running, use the <Link href="/water-parameters">water parameters reference</Link>. Once the tank is stocked, the <Link href="/tools/water-change-calculator">water change calculator</Link> turns weekly percent into gallons to remove. If a tank that was running fine suddenly shows fish in distress, the <Link href="/health/new-tank-syndrome">new tank syndrome guide</Link> and the <Link href="/health/fish-disease-guide">fish disease guide</Link> help separate a chemistry crash from an actual pathogen. Setting up from scratch? Work through the full <Link href="/setup/aquarium-cycling-guide">aquarium cycling guide</Link> alongside this page.</p>
 
         <h2 id="faq">Frequently Asked Questions</h2>
-        <FAQAccordion items={FAQ_ITEMS} />
+        <FAQAccordion items={FAQ_ITEMS} includeSchema={false} />
 
-        {/* Money path — live amazon-brand search hops (fishless-cycle kit).
-            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-            Category searches only — not a ranked list. No medication hops. */}
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        {/* Shop note — live amazon-brand search buttons (fishless-cycle kit).
+            ShopCtas hides empty Chewy; never href="#" or an empty link.
+            Amazon searches only — not a ranked list. No medication buttons. */}
+        <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/api+freshwater+master+test+kit?s=health-nitrogen-cycle", "/go/amazon-brand/seachem+prime+water+conditioner?s=health-nitrogen-cycle", "/go/amazon-brand/dr+tims+ammonium+chloride?s=health-nitrogen-cycle", "/go/amazon-brand/tetra+safestart+plus?s=health-nitrogen-cycle", "/go/amazon-brand/aquarium+sponge+filter?s=health-nitrogen-cycle"]} />
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
-            Shop a fishless-cycling kit
+            Shop these supplies
           </div>
           <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">A liquid master kit is how you see ammonia, nitrite, and nitrate
             through the three stages and confirm the 24-hour 0/0 test before
@@ -198,8 +198,8 @@ export default function NitrogenCyclePage() {
             fill the tank without chlorine killing the colony. A measured
             ammonium-chloride source is how you run a fishless cycle. Bottled
             nitrifiers shorten the wait; a seeded sponge filter is the
-            fastest media transfer from an established tank. Same test-kit
-            hop used on the{' '}
+            fastest media transfer from an established tank. The same test-kit
+            button is on the{' '}
             <Link
               href="/reviews/best-water-test-kits"
               className="text-brand-primary no-underline hover:underline"
@@ -213,7 +213,7 @@ export default function NitrogenCyclePage() {
             >
               water-parameters hub
             </Link>
-            . Same Prime hop used on the{' '}
+            . The same Prime button is on the{' '}
             <Link
               href="/tools/water-change-calculator"
               className="text-brand-primary no-underline hover:underline"
@@ -224,22 +224,20 @@ export default function NitrogenCyclePage() {
             <Link href="/setup" className="text-brand-primary no-underline hover:underline">
               aquarium setup guide
             </Link>
-            . Same ammonium-chloride, bottled-bacteria, and sponge-filter
-            hops used on the{' '}
+            . The same ammonium-chloride, bottled-bacteria, and sponge-filter
+            buttons are on the{' '}
             <Link
               href="/tools/aquarium-cycling-estimator"
               className="text-brand-primary no-underline hover:underline"
             >
               cycling estimator
             </Link>
-            . Same sponge-filter hop used on the{' '}
+            . The same sponge-filter button is on the{' '}
             <Link href="/health/gill-flukes" className="text-brand-primary no-underline hover:underline">
               gill-flukes guide
             </Link>
             . They are not a ranked product list, they are not medications,
-            and they do not treat, reverse, or cure new-tank syndrome.
-            Fish.com earns a commission on qualifying purchases at no extra
-            cost to you.</p>
+            and they do not treat, reverse, or cure new-tank syndrome.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/api+freshwater+master+test+kit?s=health-nitrogen-cycle"
@@ -247,15 +245,15 @@ export default function NitrogenCyclePage() {
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/seachem+prime+water+conditioner?s=health-nitrogen-cycle"
-              amazonLabel="Browse dechlorinator / Seachem Prime on Amazon →"
+              amazonLabel="Browse Seachem Prime water conditioner on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/dr+tims+ammonium+chloride?s=health-nitrogen-cycle"
-              amazonLabel="Browse fishless-cycling ammonia on Amazon →"
+              amazonLabel="Browse Dr. Tim's ammonium chloride on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/tetra+safestart+plus?s=health-nitrogen-cycle"
-              amazonLabel="Browse bottled bacteria starter on Amazon →"
+              amazonLabel="Browse Tetra SafeStart Plus on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+sponge+filter?s=health-nitrogen-cycle"

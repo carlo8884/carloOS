@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -9,10 +10,10 @@ import {
   TableOfContents,
   RelatedLinks,
   CrossPortfolioCard,
-  AffiliateDisclosure,
+
   ShopCtas,
 } from '@carloOS/ui'
-import { InsuranceCoverageFinder } from '../../../components/visual/InsuranceCoverageFinder'
+import { InsuranceCoverageFinder } from './CoverageFinder'
 import { InsuranceWellnessShop } from '../../../components/InsuranceWellnessShop'
 
 const URL = 'https://vets.co/tools/insurance-finder'
@@ -118,7 +119,7 @@ const articleSchema = buildArticleSchema({
 export default function InsuranceFinderPage() {
   return (
     <ArticleLayout
-      priceAsOf="2026-05-30"
+      priceAsOf="2026-10-05"
       siteId="vets-co"
       hero={{
         title: 'Pet Insurance Coverage Finder',
@@ -188,16 +189,16 @@ export default function InsuranceFinderPage() {
 
         <InsuranceWellnessShop source="tools-insurance-finder" />
 
-        {/* Money path — complementary amazon-brand search hops (home-care prep
+        {/* Shop note — complementary amazon-brand search buttons (home-care prep
             beside a coverage shortlist). ShopCtas hides empty Chewy; never
-            href="#" or PLACEHOLDER. Category searches only — not a ranked
+            href="#" or an empty link. Amazon searches only — not a ranked
             list. InsuranceWellnessShop above stays as-is; this block does not
             re-rank Trupanion / Healthy Paws / Embrace. */}
         <div id="insurance-home-care-kit" className="mt-8 mb-8">
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/pet+first+aid+kit?s=tools-insurance-finder", "/go/amazon-brand/digital+pet+thermometer?s=tools-insurance-finder", "/go/amazon-brand/digital+pet+scale?s=tools-insurance-finder", "/go/amazon-brand/pet+recovery+cone?s=tools-insurance-finder", "/go/amazon-brand/pet+calming+aid?s=tools-insurance-finder"]} />
           <div className="mt-4 rounded-xl border border-brand-border bg-brand-surface p-5">
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Shop a home-care prep kit
+              Shop these supplies
             </div>
             <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">A first-aid kit, a digital thermometer, a pet scale, a recovery
               cone, and a calming aid are the home-care items owners often keep
@@ -219,8 +220,7 @@ export default function InsuranceFinderPage() {
               >
                 telehealth
               </Link>
-              . Vets.co earns a commission on qualifying purchases at no extra
-              cost to you.</p>
+              .</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/pet+first+aid+kit?s=tools-insurance-finder"
@@ -248,7 +248,7 @@ export default function InsuranceFinderPage() {
 
         <h2 id="how">How it works</h2>
         <p>
-          Each priority maps to a published coverage attribute in our carrier registry. &ldquo;Exam fees
+          Each priority maps to a published coverage attribute in our published carrier notes. &ldquo;Exam fees
           covered&rdquo; keeps carriers whose policies include exam fees; &ldquo;full dental coverage&rdquo; keeps
           carriers whose dental benefit covers dental disease, not only dental accidents; &ldquo;unlimited annual
           payout option&rdquo; keeps carriers that publish an unlimited annual-limit tier; and so on. Selecting

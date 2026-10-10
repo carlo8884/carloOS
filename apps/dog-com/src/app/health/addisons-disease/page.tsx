@@ -1,13 +1,13 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 
 const SOURCES = [
-  { label: 'Merck Veterinary Manual: Hypoadrenocorticism in Animals', url: 'https://www.merckvetmanual.com/endocrine-system/the-adrenal-glands/hypoadrenocorticism-in-animals', publisher: 'Merck Vet Manual' },
+  { label: 'Merck Veterinary Manual: Hypoadrenocorticism in Animals', url: 'https://www.merckvetmanual.com/endocrine-system/the-adrenal-glands/addison-disease-hypoadrenocorticism-in-animals', publisher: 'Merck Vet Manual' },
   { label: 'ACVIM: Diagnosis of Hypoadrenocorticism in Dogs and Cats — Consensus Statement', url: 'https://www.acvim.org', publisher: 'ACVIM' },
-  { label: 'AVMA: Addison\'s Disease in Pets', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/common-health-conditions-dogs', publisher: 'AVMA' },
   { label: 'Baumstark ME et al. Alternate-day dosing of desoxycorticosterone pivalate in dogs with hypoadrenocorticism. J Vet Intern Med. 2014;28(4):1214-1220.', publisher: 'JVIM' },
 ]
 
@@ -68,55 +68,15 @@ export default function AddisonsDiseaseePage() {
 
           <h2 id="kit">A Simple Addison&apos;s Daily-Care Kit</h2>
           <p>
-            Three everyday physical supplies match the
-            daily-tablet, injection-window, and crisis
-            copy above: dog pill pockets so a daily oral
-            tablet (fludrocortisone in many dogs, plus
-            any veterinarian-directed glucocorticoid)
-            has a mapped way to meet daily dosing
-            compliance, a dry-erase monthly calendar so
-            DOCP injections given every 25–28 days and
-            electrolyte-monitoring recheck dates stay
-            visible next to the written stress-dosing
-            protocol, and a dog medical-alert collar tag
-            so an emergency clinic can see Addisonian
-            crisis risk — collapse, profound weakness,
-            and dangerous potassium-driven arrhythmias —
-            before the electrolyte panel comes back. These are household daily-care and
-            monitoring tools, not treatments. They do
-            not diagnose Addison&apos;s, they do not
-            replace an ACTH stimulation test, they do
-            not set or adjust a DOCP or fludrocortisone
-            dose, they do not replace electrolyte
-            monitoring, and they are not Percorten-V,
-            Zycortal, Florinef, fludrocortisone, DOCP,
-            prednisone, trilostane, Vetoryl, insulin,
-            or a ranked endocrine product list. Gallon gravity dog waterers, extra-large
-            disposable dog pee pads, dog cooling
-            bandanas, self-warming dog mats, fleece dog
-            sweaters, dog slicker brushes, lymph-node
-            anatomy charts, foam dog stairs, dog ear
-            wipes, assisted-walking slings, hind-paw
-            booties, hip braces, silicone dog grooming
-            gloves, analog bathroom scales, dog dental
-            finger brushes, AM/PM weekly pill
-            organizers, monthly pill organizers, pet
-            medical records binders, pet emergency
-            contact cards, folding pet stretchers,
-            soft-sided vet-visit carriers, digital
-            pet-food portion scales, kitchen gram
-            scales, cooling mats, cooling vests, and
-            high-value vet-visit treats already live on
-            other pages. This page does not claim
-            hands-on testing. </p>
+            Keep these on hand: dog pill pockets and dog medical alert collar tag. These are household daily-care and monitoring tools, not treatments. They do not diagnose Addison&apos;s, they do not replace an ACTH stimulation test, they do not set or adjust a DOCP or fludrocortisone dose, they do not replace electrolyte monitoring, and they are not Percorten-V, Zycortal, Florinef, fludrocortisone, DOCP, prednisone, trilostane, Vetoryl, insulin, or a ranked endocrine product list. </p>
 
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/dog+pill+pockets?s=health-addisons-disease", "/go/amazon-brand/dog+medical+alert+collar+tag?s=health-addisons-disease"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (dog pill pockets / dry-erase monthly
               calendar / dog medical-alert collar tag).
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or an empty link. Amazon searches only —
               unused vs #1052 gallon gravity dog waterer
               / extra-large disposable dog pee pads /
               dog cooling bandana, #1051 self-warming
@@ -151,7 +111,7 @@ export default function AddisonsDiseaseePage() {
               Percorten, Zycortal, Florinef,
               fludrocortisone, DOCP, prednisone,
               trilostane, Vetoryl, insulin, and Rx
-              ASINs are not shoppable hops. */}
+              product pages are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

@@ -11,7 +11,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
   title: 'Affiliate Disclosure',
   description:
-    'How Dog.com makes money: affiliate programs (Amazon, Chewy, pet insurance), what we never do (paid reviews), and editorial-integrity policy.',
+    'How Dog.com makes money: Amazon Associates and Chewy. Trupanion, Healthy Paws, and Embrace are not currently connected.',
   path: '/disclosure',
   type: 'article',
 })
@@ -89,17 +89,17 @@ export default function DisclosurePage() {
           On Dog.com, every page that contains affiliate links carries a
           disclosure either at the top of the page (above the first affiliate
           link) or in the page footer, in addition to the site-wide footer
-          disclosure. Clicking an affiliate link on Dog.com routes through our
-          internal redirect (<code>/go/[vendor]/[sku]</code>) before landing
-          on the retailer. The redirect lets us count clicks for editorial
+          disclosure. Clicking an affiliate link on Dog.com goes through our
+          click counter before landing
+          on the retailer. That step lets us count clicks for editorial
           analytics; it does not change what you see on the retailer&apos;s
           page or what they charge.
         </p>
 
         <h2>Programs We Participate In</h2>
         <p>
-          Dog.com is a participant in or actively pursuing membership in the
-          following affiliate programs:
+          Dog.com is a participant in Amazon Associates and Chewy. Trupanion,
+          Healthy Paws, and Embrace are not currently connected.
         </p>
         <ul>
           <li>
@@ -118,10 +118,9 @@ export default function DisclosurePage() {
             you are.
           </li>
           <li>
-            <strong>Pet insurance affiliate networks</strong> — including
-            Impact Radius and Awin, which administer affiliate relationships
-            for Trupanion, Healthy Paws, Embrace, Lemonade Pet, and others.
-            Pet insurance commissions are typically structured as cost-per-
+            <strong>Pet insurance.</strong> Trupanion, Healthy Paws, and
+            Embrace are not currently connected. When a pet insurance program
+            is connected, commissions are typically structured as cost-per-
             acquisition (CPA) flat payments rather than percentage-of-sale,
             because insurance is a subscription product.
           </li>
@@ -136,8 +135,7 @@ export default function DisclosurePage() {
 
         <h2>How We Make Money</h2>
         <p>
-          Dog.com&apos;s revenue today comes from three sources, in
-          approximate order of size:
+          Dog.com accounts for money on this page as follows:
         </p>
         <ol>
           <li>
@@ -145,17 +143,11 @@ export default function DisclosurePage() {
             when readers click through to a retailer and complete a purchase.
           </li>
           <li>
-            Newsletter sponsorships. When we accept a sponsor for the Dog.com
-            newsletter, the sponsorship is labeled clearly as a sponsorship
-            inside the newsletter, and the sponsor has no input on the
-            surrounding editorial content. We do not accept sponsors for
-            on-site editorial pages.
+            No newsletter is currently sent, so there is no sponsored newsletter.
+            We do not accept sponsors for on-site editorial pages.
           </li>
           <li>
-            Display advertising via a third-party ad network. Ads are served
-            programmatically; we do not have direct relationships with the
-            individual brands shown. Editorial team members do not see ad
-            performance data when making editorial decisions.
+            No display ads are currently served.
           </li>
         </ol>
 
@@ -179,8 +171,7 @@ export default function DisclosurePage() {
           <li>
             <strong>We do not run sponsored editorial.</strong> If you are
             reading editorial content on Dog.com, no brand paid for that
-            placement. Sponsored content lives in our newsletter and is
-            labeled.
+            placement. No newsletter is currently sent, so there is no sponsored newsletter.
           </li>
           <li>
             <strong>We do not invent credentials.</strong> Articles on Dog.com
@@ -192,7 +183,7 @@ export default function DisclosurePage() {
           <li>
             <strong>We do not use undisclosed affiliate links.</strong> Every
             page with affiliate links has a disclosure. Every affiliate link
-            routes through <code>/go/[vendor]/[sku]</code> so it is auditable.
+            goes through our click counter so we can see which pages send people to a retailer.
           </li>
         </ul>
 

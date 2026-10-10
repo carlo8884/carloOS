@@ -1,11 +1,12 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, AffiliateDisclosure, ArticleSourcesList, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, ArticleSourcesList, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
 const SOURCES = [
-  { label: "Swim Bladder Disease in Fish — Merck Veterinary Manual", url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/aquarium-fish/swim-bladder-disease-in-fish", publisher: "Merck Vet Manual" },
+  { label: "Swim Bladder Disease in Fish — Merck Veterinary Manual", url: "https://www.merckvetmanual.com/all-other-pets/fish/disorders-and-diseases-of-fish", publisher: "Merck Vet Manual" },
   { label: "Noga, E.J. Fish Disease: Diagnosis and Treatment, 2nd ed. Wiley-Blackwell, 2010.", publisher: "Wiley-Blackwell" },
   { label: "Yanong, R.P.E. Disease Management in Recirculating Aquaculture Systems — UF/IFAS Extension FA-107.", url: "https://edis.ifas.ufl.edu/publication/FA107", publisher: "UF/IFAS Extension" },
 ]
@@ -58,10 +59,10 @@ export default function SwimBladderPage() {
         <h2>Long-Term Management for Structural Cases</h2>
         <p>Fancy goldfish with chronic swim bladder disorders can live comfortably for years with appropriate management. Key adjustments: feed sinking rather than floating foods (surface feeding causes air ingestion that worsens buoyancy problems), soak all dry foods before feeding (reduces expansion in the stomach), reduce feeding frequency slightly, and maintain excellent water quality (stressed fish with compromised organ function need pristine conditions). Some keepers use shallow water (4-6 inches) for severely affected fish — the reduced depth makes swimming and reaching food much easier for a fish that cannot maintain neutral buoyancy.</p>
 
-        {/* Money path — live amazon-brand search hops (fasting / water-quality / shallow-hospital kit).
-            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-            Category searches only — not a ranked list. No medication hops. */}
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        {/* Shop note — live amazon-brand search buttons (fasting / water-quality / shallow-hospital kit).
+            ShopCtas hides empty Chewy; never href="#" or an empty link.
+            Amazon searches only — not a ranked list. No medication buttons. */}
+        <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/api+freshwater+master+test+kit?s=health-swim-bladder", "/go/amazon-brand/aquarium+quarantine+hospital+tank+net?s=health-swim-bladder", "/go/amazon-brand/aquarium+sponge+filter?s=health-swim-bladder"]} />
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
             Shop fasting-and-pea husbandry gear
@@ -72,7 +73,7 @@ export default function SwimBladderPage() {
             quarantine tank is how you run the 4–6 inch shallow-water setup
             for a fish that cannot hold neutral buoyancy, without dropping
             the display. A seeded sponge filter keeps that hospital water
-            moving. Same test-kit hop used on the{' '}
+            moving. The same test-kit button is on the{' '}
             <Link
               href="/health/fish-disease-guide"
               className="text-brand-primary no-underline hover:underline"
@@ -86,7 +87,7 @@ export default function SwimBladderPage() {
             >
               water-test kit review
             </Link>
-            . Same hospital-tank hop used on the{' '}
+            . The same hospital-tank button is on the{' '}
             <Link
               href="/tools/fish-disease-symptom-checker"
               className="text-brand-primary no-underline hover:underline"
@@ -97,18 +98,17 @@ export default function SwimBladderPage() {
             <Link href="/health/dropsy-treatment" className="text-brand-primary no-underline hover:underline">
               dropsy guide
             </Link>
-            . Same sponge-filter hop used on the{' '}
+            . The same sponge-filter button is on the{' '}
             <Link
               href="/tools/aquarium-cycling-estimator"
               className="text-brand-primary no-underline hover:underline"
             >
               cycling estimator
             </Link>
-            . Heater and thermometer hops stay off this page — swim-bladder
-            copy does not call a heat method. The hops below are not a
+            . Heater and thermometer buttons stay off this page — swim-bladder
+            copy does not call a heat method. The buttons below are not a
             ranked product list, they are not medications, and they do not
-            treat, reverse, or cure swim bladder disease. Fish.com earns a
-            commission on qualifying purchases at no extra cost to you.</p>
+            treat, reverse, or cure swim bladder disease.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/api+freshwater+master+test+kit?s=health-swim-bladder"

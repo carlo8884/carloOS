@@ -138,9 +138,11 @@ export function BreedMatchWizard() {
         <div
           className="h-1.5 bg-brand-border rounded-full overflow-hidden"
           role="progressbar"
+          aria-label="Breed match progress"
           aria-valuenow={progress}
           aria-valuemin={0}
           aria-valuemax={100}
+          aria-valuetext={`Step ${stepIdx + 1} of ${QUESTIONS.length}`}
         >
           <div
             className="h-full bg-brand-primary transition-all duration-300"

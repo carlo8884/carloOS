@@ -1,10 +1,11 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import {
   buildMetadata,
   ArticleLayout, CrossPortfolioCard,
   RelatedLinks,
   FAQAccordion,
-  AffiliateDisclosure,
   ShopCtas,
   CrossSiteHelp,
 } from '@carloOS/ui'
@@ -92,7 +93,7 @@ export default function VetsChihuahuaHealthPage() {
     <>
       <SchemaScript schema={combinedSchema} />
       <ArticleLayout
-        priceAsOf="2026-05-28"
+        priceAsOf="2026-10-04"
         siteId="vets-co"
         contentType="breed"
         hero={{
@@ -136,8 +137,7 @@ export default function VetsChihuahuaHealthPage() {
             reviewedBy="Editorial team"
           />
 
-          <h2>TL;DR</h2>
-          <p>
+                    <p>
             The Chihuahua is a small (typically 3–6 lb), long-lived (12–16 years) toy breed with a
             well-described cluster of predispositions: patellar luxation, hydrocephalus (more often suspected
             than confirmed because of the molera), severe dental crowding, juvenile and small-adult
@@ -295,41 +295,22 @@ export default function VetsChihuahuaHealthPage() {
           </p>
 
           <h2>Pet Insurance for a Chihuahua</h2>
+          <p>Those figures are typical US ranges dated 2026-10-04.</p>
           <p>
             Patellar luxation correction commonly runs $2,000–4,000 per knee; hydrocephalus shunting can
             exceed $5,000–8,000 at a referral center; lifetime MMVD medical management can total
-            $5,000–10,000; dental disease can easily exceed $5,000 across a normal Chihuahua lifespan.
+            $5,000–10,000; dental disease can easily run $4,000–$7,000 across a normal Chihuahua lifespan.
             Insurance bought before symptoms appear typically covers these as accident/illness with no
             breed exclusion. See our 2026 comparison: <a href="/reviews/best-pet-insurance">best pet insurance →</a>.
           </p>
 
-          <h2 id="kit">Chihuahua-health kit</h2>
+          <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Everyday physical supplies that match the
-            molera, MMVD, and hypoglycemia copy on
-            this page — a 13-column analysis pad so
-            murmur grade, echo date, Stage A–D, and
-            resting respiratory rate stay one
-            written row, a desk blotter pad so the
-            molera-protection household rules stay
-            where kids see them, and a numbered log
-            book so each tremor-versus-hypo episode
-            stays one dated entry. These are
-            educational Chihuahua-health / paperwork
-            tools, not a ranked product list, not a
-            substitute for veterinary care, and not
-            a treatment. Two-column ledger pads,
-            30-day habit-tracker pads, and hourly
-            desk pads already live on
-            yorkshire-terrier-health. Analog
-            stopwatches, blank index cards, and
-            recipe-card boxes already live on
-            beagle-health. This page does not claim hands-on
-            testing. </p>
+            Keep these on hand: a 13-column analysis pad so murmur grade, echo date, Stage A–D, and resting respiratory rate stay one written row, a desk blotter pad so the molera-protection household rules stay where kids see them, and a numbered log book so each tremor-versus-hypo episode stays one dated entry. These are educational Chihuahua-health / paperwork tools, not a ranked product list, not a substitute for veterinary care, and not a treatment. </p>
 
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/13+column+analysis+pad?s=breeds-chihuahua-health", "/go/amazon-brand/desk+blotter+pad?s=breeds-chihuahua-health", "/go/amazon-brand/numbered+log+book?s=breeds-chihuahua-health"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (13-column analysis pad /
               desk blotter pad /
               numbered log book).
@@ -338,9 +319,9 @@ export default function VetsChihuahuaHealthPage() {
               tools, not a ranked product list, not
               a substitute for veterinary care, no
               Rx / first-aid kit / thermometer /
-              carrier / insurance-brand ASIN hops.
+              carrier / insurance-brand product page buttons.
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or an empty link. Amazon searches only —
               unused vs #1180
               two+column+ledger+pad /
               30+day+habit+tracker+pad /
@@ -379,10 +360,13 @@ export default function VetsChihuahuaHealthPage() {
           >
             The Dog.com Chihuahua page is the owner-side guide for this breed: size, temperament, and everyday care.
           </CrossSiteHelp>
+          <p>Harnesses for this breed are compared in the <Link href={crossSiteHref('dog-com', '/reviews/best-dog-harnesses')}>dog harness review</Link>.</p>
+          <p>Dental chews for this breed are compared in the <Link href={crossSiteHref('dog-com', '/reviews/best-dental-chews')}>dental chew review</Link>.</p>
           <h2>FAQ</h2>
           <FAQAccordion
             items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))}
             allowMultiple
+            includeSchema={false}
           />
 
           <h2>Sources & Further Reading</h2>

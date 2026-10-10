@@ -14,6 +14,7 @@
  * established OTTB retraining principles.
  */
 
+import { HopDisclosure } from '../../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -24,7 +25,6 @@ import {
   RelatedLinks,
   TableOfContents,
   FAQAccordion,
-  AffiliateDisclosure,
   ShopCtas,
   buildArticleSchema,
   buildFAQSchema,
@@ -171,7 +171,7 @@ export default function OttbInEventingPage() {
           <p>Not every OTTB will become a competitive eventer, and that is not the measure of a successful transition. Some horses are best suited to the lower levels, to other disciplines, or to a quieter ridden life. The aftercare ecosystem&apos;s goal is to match each horse to an appropriate outcome, not to push every horse up the levels. Where a horse does show eventing aptitude, patient progression — letdown, foundation, then phase-specific schooling, ideally with a trainer experienced in OTTBs — is the most reliable route. For the rehoming side of the picture, including the Thoroughbred Aftercare Alliance and adopting an OTTB, see the broader <Link href="/racing/off-track-thoroughbred-aftercare">aftercare reference</Link>.</p>
 
           <h2 id="faq">Frequently Asked Questions</h2>
-          <FAQAccordion items={FAQS} />
+          <FAQAccordion items={FAQS} includeSchema={false} />
 
           <h2 id="references">References</h2>
           <ol className="text-sm text-brand-text-mid">
@@ -180,19 +180,8 @@ export default function OttbInEventingPage() {
             <li>American Association of Equine Practitioners (AAEP). Pre-purchase examination guidelines. aaep.org.</li>
           </ol>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href="/go/amazon-brand/horse+reins?s=ottb-in-eventing" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated horse OTTB cross-country chart /
-              horse stall-door three-phase card /
-              equine eventing-gallop handbook).
-              No existing product hop to keep.
-              Educational barn searches only; no Rx /
-              vaccine / flea / heartworm / nsaid hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs ottb-second-careers
-              hub / aftercare hops.
-              Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
@@ -201,7 +190,7 @@ export default function OttbInEventingPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/horse+reins?s=ottb-in-eventing"
-                amazonLabel="Shop on Amazon"
+                amazonLabel="Browse horse reins on Amazon →"
               />
           </div>
           </div>

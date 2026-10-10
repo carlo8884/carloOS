@@ -1,14 +1,14 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfContents, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfContents, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 
 const SOURCES = [
+  { label: 'Merck Veterinary Manual: Epilepsy in Small Animals', url: 'https://www.merckvetmanual.com/nervous-system/epilepsy-in-small-animals/epilepsy-in-small-animals', publisher: 'Merck Vet Manual' },
   { label: 'Podell M et al. 2015 ACVIM Small Animal Consensus Statement on Seizure Management in Dogs. J Vet Intern Med. 2016;30(2):477-490.', publisher: 'JVIM / ACVIM' },
   { label: 'De Risio L et al. International veterinary epilepsy task force consensus proposal: diagnostic approach to epilepsy in dogs. BMC Vet Res. 2015;11:148.', publisher: 'BMC Vet Research' },
-  { label: 'Merck Veterinary Manual: Seizure Disorders in Dogs', url: 'https://www.merckvetmanual.com/nervous-system/seizure-disorders/overview-of-seizure-disorders-in-animals', publisher: 'Merck Vet Manual' },
-  { label: 'AVMA: Epilepsy and Seizures in Dogs', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/common-health-conditions-dogs', publisher: 'AVMA' },
 ]
 
 
@@ -151,18 +151,18 @@ export default function DogSeizuresPage() {
           <p>Bringing the journal to follow-up visits transforms the conversation from impressionistic ("she had a few seizures this month") to actionable ("three seizures in the last 60 days, two within an 18-hour cluster on day 34, durations 90 seconds, 75 seconds, and 110 seconds, missed an evening dose two days before the cluster"). That is the level of detail that drives sensible dose adjustments.</p>
 
           <h2 id="kit">Home safety kit</h2>
-          <p>Everyday physical supplies that match the during-and-after copy above — a soft throw blanket to slide the dog away from stairs or water without putting hands near the mouth, crate bumper pads so the usual rest crate is already padded if an event starts there, and interlocking foam floor tiles for the quiet dim recovery space. These are safety tools, not treatments. They do not stop a seizure, they do not replace a timer or a video clip, and they do not treat epilepsy, toxin exposure, or status epilepticus. Phenobarbital, potassium bromide, levetiracetam (Keppra), zonisamide, rescue diazepam or midazolam, and CBD stay educational copy only. First-aid kits, digital pet thermometers, IVDD recovery crates, crate covers, crate pads, cooling mats, and night lights stay off this kit. This page does not claim hands-on testing.</p>
+          <p>Keep these on hand: a soft throw blanket to slide the dog away from stairs or water without putting hands near the mouth, crate bumper pads so the usual rest crate is already padded if an event starts there, and interlocking foam floor tiles for the quiet dim recovery space. These are safety tools, not treatments. They do not stop a seizure, they do not replace a timer or a video clip, and they do not treat epilepsy, toxin exposure, or status epilepticus. Phenobarbital, potassium bromide, levetiracetam (Keppra), zonisamide, rescue diazepam or midazolam, and CBD stay educational copy only. First-aid kits, digital pet thermometers, IVDD recovery crates, crate covers, crate pads, cooling mats, and night lights stay off this kit.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/soft+throw+blanket?s=health-dog-seizures", "/go/amazon-brand/dog+crate+bumper+pads?s=health-dog-seizures", "/go/amazon-brand/interlocking+foam+floor+tiles?s=health-dog-seizures"]} />
 
-          {/* Money path — live amazon-brand search hops (soft
+          {/* Shop note — live amazon-brand search buttons (soft
               throw blanket / crate bumper pads / interlocking
               foam floor tiles). ShopCtas hides empty Chewy;
-              never href="#" or PLACEHOLDER. Category searches
+              never href="#" or an empty link. Amazon searches
               only. Anticonvulsants, first-aid kits,
               thermometers, IVDD recovery crates, crate covers,
               crate pads, cooling mats, and night lights are
-              not shoppable hops. */}
+              not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

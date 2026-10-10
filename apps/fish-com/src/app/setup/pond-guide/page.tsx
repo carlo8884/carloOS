@@ -1,6 +1,7 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import { HubMoneyLinks } from '@carloOS/ui'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, RelatedLinks , AffiliateDisclosure, JourneyNext} from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, RelatedLinks , JourneyNext} from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Backyard Pond Setup Guide — Size, Filtration & Liner | Fish.com', description: 'How to build a backyard koi or goldfish pond. Minimum size for fish, liner selection, filtration sizing.', path: '/setup/pond-guide', type: 'article' })
@@ -15,22 +16,7 @@ const SOURCES = [
     url: "https://srac.tamu.edu/serveFactSheet/360",
     publisher: "Southern Regional Aquaculture Center (SRAC)",
   },
-  {
-    label: "EPDM Liner Safety and Pond Construction Best Practices",
-    url: "https://extension.psu.edu/ponds-and-water-gardens",
-    publisher: "Penn State Extension",
-  },
-  {
-    label: "Aquatic Plant Management in Ponds",
-    url: "https://extension.tennessee.edu/publications/Documents/SP341-I.pdf",
-    publisher: "University of Tennessee Extension",
-  },
-  {
-    label: "Predation on Pond Fish: Herons and Wildlife Management",
-    url: "https://www.extension.purdue.edu/extmedia/fnr/fnr-faq-11.pdf",
-    publisher: "Purdue University Extension",
-  },
-]
+      ]
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Backyard Pond Setup Guide', description: 'Size, liner, filtration, and setup for backyard koi and goldfish ponds.', url: 'https://fish.com/setup/pond-guide', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-09-06T00:00:00Z' ,
   citation: SOURCES,
 })
@@ -76,7 +62,7 @@ export default function PondGuidePage() {
             siteId="fish-com"
             nextHref="/tools/pond-volume-calculator"
             nextLabel="Turn the adult-size rule into a gallon number"
-            nextBlurb="The failure mode is undersizing — 250+ gallons per adult koi, planned at 18–24 inches, not the 6-inch fish you buy. Pond-volume is the next step: length × width × average depth before you order liner and pump. The hop below is the same pond pump/filter/liner kit search already on this page."
+            nextBlurb="The failure mode is undersizing — 250+ gallons per adult koi, planned at 18–24 inches, not the 6-inch fish you buy. Pond-volume is the next step: length × width × average depth before you order liner and pump. The button below opens the same pond pump/filter/liner kit search on Amazon."
             resourceHref="/go/amazon-brand/pond%20pump%20filter%20liner%20kit?s=setup-pond-guide"
             resourceLabel="Browse pond pump, filter, and liner kits on Amazon →"
           />
@@ -93,12 +79,12 @@ export default function PondGuidePage() {
           <h2>Pond Plants — Function and Aesthetics</h2>
           <p>Pond plants serve three functional purposes: oxygenation, nutrient uptake (natural filtration), and shade. Water hyacinth and water lettuce are the most effective surface-floating nutrient absorbers — they take up nitrogen (nitrate) directly from pond water, reducing water change requirements significantly. Water lilies provide shade (reducing algae growth in full-sun ponds) and spawning habitat. Marginal plants (iris, cattail, papyrus) around pond edges naturalize the appearance and provide additional biological filtration.</p>
           <p>In koi ponds: koi eat most plants. Keep plants in separate baskets or caged areas, or choose plants that koi avoid (typically those with bitter or firm tissue). A "veggie filter" — a separate, shallower planting area connected to the main pond via pump — allows heavy planting without koi access.</p>
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        <HopDisclosure siteId="fish-com" href="/go/amazon-brand/pond%20pump%20filter%20liner%20kit?s=setup-pond-guide" />
           <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Backyard Pond Setup — Where to Shop</div>
-          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse the gear referenced in this guide on Amazon. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
+          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse the gear referenced in this guide on Amazon.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
-            <a href="/go/amazon-brand/pond%20pump%20filter%20liner%20kit?s=setup-pond-guide" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Amazon →</a>
+            <a href="/go/amazon-brand/pond%20pump%20filter%20liner%20kit?s=setup-pond-guide" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px', maxWidth: '100%', whiteSpace: 'normal' }}>Browse pond pump, filter, and liner kits on Amazon →</a>
           </div>
           <ArticleSourcesList sources={SOURCES} />
         </div>

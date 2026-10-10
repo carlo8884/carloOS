@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import {
   buildMetadata,
@@ -5,7 +6,6 @@ import {
   FAQAccordion,
   RelatedLinks,
   TableOfContents,
-  AffiliateDisclosure,
   ShopCtas,
 } from '@carloOS/ui'
 import {
@@ -68,7 +68,7 @@ const FAQS = [
   {
     question: 'How fast should an overweight dog lose weight?',
     answer:
-      'AAHA Weight Management Guidelines recommend a target rate of approximately 1–2% of body weight per week. Faster rates risk muscle mass loss rather than fat loss; slower is acceptable but requires patience. Reaching ideal body condition often takes 6–12 months for moderately overweight dogs and 12–18 months for severely obese dogs.',
+      'The 2014 AAHA Weight Management Guidelines state that the desired rate of weight loss in dogs is 1–2% per week (https://www.aaha.org/wp-content/uploads/globalassets/02-guidelines/weight-management/2014-AAHA-Weight-Management-Guidelines-for-Dogs-and-Cats). Faster rates risk muscle mass loss rather than fat loss; slower is acceptable but requires patience. Reaching ideal body condition often takes 6–12 months for moderately overweight dogs and 12–18 months for severely obese dogs.',
   },
   {
     question: 'Do prescription weight-loss diets actually work?',
@@ -111,7 +111,7 @@ export default function DogObesityPage() {
           { name: 'Dog Health', href: '/health' },
           { name: 'Dog Obesity', href: '/health/dog-obesity' },
         ]}
-        relatedLinks={[{ title: 'Body Condition Score Tool', href: '/tools/dog-body-condition-score', category: 'Tool' }, { title: 'Dog Health Hub', href: '/health', category: 'Hub' }, { title: 'Dog Diabetes', href: '/health/dog-diabetes', category: 'Dog Health' }, { title: "Cushing's Disease", href: '/health/cushing-disease', category: 'Dog Health' }, { title: 'Dog Arthritis', href: '/health/dog-arthritis', category: 'Dog Health' }]}
+        relatedLinks={[{ title: 'Body Condition Score Tool', href: '/tools/dog-body-condition-score', category: 'Tool' }, { title: 'Dog Calorie Calculator', href: '/tools/dog-calorie-calculator', category: 'Tool' }, { title: 'Dog Health Hub', href: '/health', category: 'Hub' }, { title: 'Dog Diabetes', href: '/health/dog-diabetes', category: 'Dog Health' }, { title: "Cushing's Disease", href: '/health/cushing-disease', category: 'Dog Health' }, { title: 'Dog Arthritis', href: '/health/dog-arthritis', category: 'Dog Health' }]}
         sidebar={
           <>
             <TableOfContents
@@ -153,7 +153,7 @@ export default function DogObesityPage() {
             reviewedBy="Editorial team"
           />
 
-          <CalloutBox variant="evidence" title="TL;DR — Dog obesity, in numbers">
+          <CalloutBox variant="evidence" title="Dog obesity, in numbers">
             <p>
               <strong>About 59% of US dogs</strong> are overweight or obese (APOP 2022 survey).
             </p>
@@ -161,7 +161,7 @@ export default function DogObesityPage() {
               <strong>Lean dogs live ~1.8 years longer.</strong> Kealy et al., <em>JAVMA</em> 2002 — the Purina Lifespan Study.
             </p>
             <p>
-              <strong>Diagnosis is BCS 6–9</strong> on the 1–9 scale (WSAVA/AAHA). <strong>Treatment is structured weight loss</strong>: prescription weight-management diet, measured feeding, controlled activity, and 1–2% body-weight loss per week.
+              <strong>Diagnosis is BCS 6–9</strong> on the 1–9 scale (WSAVA/AAHA). <strong>Treatment is structured weight loss</strong>: prescription weight-management diet, measured feeding, controlled activity, and 1–2% body-weight loss per week, the rate stated in the 2014 AAHA Weight Management Guidelines (<a className="break-all" href="https://www.aaha.org/wp-content/uploads/globalassets/02-guidelines/weight-management/2014-AAHA-Weight-Management-Guidelines-for-Dogs-and-Cats">https://www.aaha.org/wp-content/uploads/globalassets/02-guidelines/weight-management/2014-AAHA-Weight-Management-Guidelines-for-Dogs-and-Cats</a>).
             </p>
           </CalloutBox>
 
@@ -184,7 +184,7 @@ export default function DogObesityPage() {
             <strong>Overfeeding.</strong> The primary driver. Feeding by appearance (&ldquo;the bowl looks empty&rdquo;) rather than measured weight is the most common error. Feeding guidelines printed on commercial food bags are calibrated for an active, intact dog of average build; the typical spayed/neutered, moderately active indoor companion needs roughly 20–30% fewer calories than the bag suggests.
           </p>
           <p>
-            <strong>Treats.</strong> The most commonly underestimated calorie source. A single medium commercial dog treat may contain 30–50 kcal. For a 20-lb dog with a maintenance requirement of about 400 kcal, three treats is already 25–40% of the daily calorie target before any meal calories are counted. See our <a href="/nutrition/dog-treats-guide" className="text-brand-primary hover:underline">treats guide</a> for the 10% rule and how to budget treats.
+            <strong>Treats.</strong> The most commonly underestimated calorie source. A single medium commercial dog treat may contain 30–50 kcal. For a 20-lb dog with a maintenance requirement of about 400 kcal, three treats is already 25–40% of the daily calorie target before any meal calories are counted. The WSAVA guide to treats for dogs states that treats should make up no more than 10% of a dog’s daily calorie intake (<a href="https://wsava.org/wp-content/uploads/2025/11/WSAVA_GuidetoTreats_Dogs_251107.pdf">WSAVA treat guide</a>). See the <a href="/nutrition/dog-treats-guide" className="text-brand-primary hover:underline">treats guide</a> for how to budget that ceiling.
           </p>
           <p>
             <strong>Low activity.</strong> Modern indoor companion dogs commonly receive less than 30 minutes of structured exercise per day. Energy intake calibrated for an active dog and energy expenditure of a sedentary dog is a reliable formula for slow weight gain.
@@ -206,7 +206,7 @@ export default function DogObesityPage() {
           <h2 id="consequences">Health Consequences — Why It Matters</h2>
           <ul>
             <li><strong>Shortened lifespan.</strong> The Purina Lifespan Study (Kealy et al., <em>JAVMA</em> 2002) followed 48 Labrador Retrievers through life. Dogs maintained at lean body condition (~BCS 4–5) lived a median 1.8 years longer than littermates maintained at moderately overweight body condition (~BCS 6–7). This is the strongest evidence in veterinary nutrition for the lifelong value of lean body condition.</li>
-            <li><strong>Osteoarthritis.</strong> Each pound of excess weight adds roughly 4 pounds of force per step on each weight-bearing joint. Obesity is both a cause and a major accelerant of arthritis; weight loss is the single most effective arthritis intervention in overweight dogs — in many studies more effective than NSAIDs alone. See our <a href="/health/dog-arthritis" className="text-brand-primary hover:underline">dog arthritis</a> guide.</li>
+            <li><strong>Osteoarthritis.</strong> Kealy et al. (JAVMA 2000) found hip osteoarthritis at 8 years in 3 of 21 Labrador Retrievers fed 25% less food, versus 15 of 22 control-fed littermates (<a className="break-all" href="https://doi.org/10.2460/javma.2000.217.1678">https://doi.org/10.2460/javma.2000.217.1678</a>). That study does not measure pounds of force or rank the feeding difference against an NSAID. See our <a href="/health/dog-arthritis" className="text-brand-primary hover:underline">dog arthritis</a> guide.</li>
             <li><strong>Diabetes mellitus.</strong> Adipose tissue produces inflammatory cytokines that drive insulin resistance. Obese dogs develop diabetes at higher rates than lean dogs. See our <a href="/health/dog-diabetes" className="text-brand-primary hover:underline">dog diabetes</a> guide.</li>
             <li><strong>Decreased hepatic function.</strong> Hepatic lipidosis and impaired drug metabolism are documented in chronically obese dogs.</li>
             <li><strong>Cardiac strain and reduced exercise tolerance.</strong> Excess thoracic and visceral fat reduces cardiac efficiency and exercise capacity.</li>
@@ -217,13 +217,13 @@ export default function DogObesityPage() {
 
           <h2 id="plan">The Weight Loss Plan — Vet-Supervised, Structured</h2>
           <p>
-            Target rate: 1–2% of body weight per week, per AAHA Weight Management Guidelines. Faster weight loss disproportionately removes lean muscle mass; slower is acceptable but extends timeline.
+            Target rate: 1–2% of body weight per week. The 2014 AAHA Weight Management Guidelines state that the desired rate of weight loss in dogs is 1–2% per week (<a className="break-all" href="https://www.aaha.org/wp-content/uploads/globalassets/02-guidelines/weight-management/2014-AAHA-Weight-Management-Guidelines-for-Dogs-and-Cats">https://www.aaha.org/wp-content/uploads/globalassets/02-guidelines/weight-management/2014-AAHA-Weight-Management-Guidelines-for-Dogs-and-Cats</a>). Faster weight loss disproportionately removes lean muscle mass; slower is acceptable but extends timeline.
           </p>
           <ol>
             <li><strong>Establish a baseline.</strong> Veterinary visit including weight, BCS, MCS (muscle condition score), and bloodwork to rule out endocrine disease. The bloodwork is not optional — treating undiagnosed hypothyroidism with caloric restriction will not work.</li>
             <li><strong>Set a target body weight.</strong> Estimate ideal weight by working back from current BCS — every BCS point above 5 corresponds to roughly 10–15% over ideal. Your vet sets the target collaboratively; the number should be specific (&ldquo;52 lb target&rdquo;) rather than vague (&ldquo;lose some weight&rdquo;).</li>
-            <li><strong>Calculate calorie target.</strong> Resting Energy Requirement (RER) = 70 × (body weight in kg)<sup>0.75</sup>. For weight loss, target intake is typically 0.8–1.0 × RER calculated at the target body weight (not current weight). Many veterinary nutrition references and AAHA worksheets provide the calculation; your vet will produce the number for your specific dog.</li>
-            <li><strong>Measure all food by weight.</strong> Use a digital kitchen scale and weigh kibble in grams. Measuring cups are inaccurate by 20–30% depending on kibble shape and how the cup is filled — published data documents this consistently. Gram weight is the only reliable measure.</li>
+            <li><strong>Calculate calorie target.</strong> Resting Energy Requirement (RER) = 70 × (body weight in kg)<sup>0.75</sup>. For weight loss, target intake is typically 0.8–1.0 × RER calculated at the target body weight (not current weight). Many veterinary nutrition references and AAHA worksheets provide the calculation; your vet will produce the number for your specific dog. The <a href="/tools/dog-calorie-calculator" className="text-brand-primary hover:underline">calorie calculator</a> runs that RER formula with a weight-loss factor and an optional cups-per-day figure from the food label. It is a starting estimate, not the clinic&apos;s number.</li>
+            <li><strong>Measure all food by weight.</strong> Use a digital kitchen scale and weigh kibble in grams. Measuring cups are inaccurate by 20–30% depending on kibble shape and how the cup is filled — published data documents this consistently. Gram weight is the only reliable measure. <a href="/reviews/best-dry-dog-food">The dry dog food guide</a> compares the kibble you are weighing.</li>
             <li><strong>Account for every treat.</strong> Within 5% of the calorie target if possible; subtract treat calories from the meal ration if treats exceed 10%. Use kibble from the daily ration as training treats, or switch to very low-calorie treats (carrot rounds, green beans, ice cubes).</li>
             <li><strong>Switch to a weight-management diet.</strong> See next section.</li>
             <li><strong>Weigh every 2 weeks on a digital pet scale</strong> (or the same clinic scale each visit) so the number is consistent. Adjust the calorie target by 10% in the appropriate direction if weekly loss is outside the 1–2% range.</li>
@@ -257,13 +257,13 @@ export default function DogObesityPage() {
             <li><strong>Short, frequent walks</strong> (5–10 minutes, 2–3 times daily) instead of one long walk. Build duration weekly.</li>
             <li><strong>Underwater treadmill or hydrotherapy</strong> for severely obese or arthritic dogs. Warm water supports body weight and allows movement without joint load. Veterinary rehabilitation centers (CCRT-certified) offer this service.</li>
             <li><strong>Avoid high-impact play</strong> (chase, jump, hard turning) until weight has been substantially reduced. Acute orthopedic injury during weight-loss programs is a known setback.</li>
-            <li><strong>Mental enrichment.</strong> Slow-feeder bowls, food-dispensing puzzle toys, and snuffle mats slow eating, increase mental effort per meal, and improve satiety without adding calories.</li>
+            <li><strong>Mental enrichment.</strong> Slow-feeder bowls, food-dispensing puzzle toys, and snuffle mats slow eating, increase mental effort per meal, and improve satiety without adding calories. The <a href="/reviews/best-slow-feeder-bowls" className="text-brand-primary hover:underline">slow feeder review</a> compares the bowls that stretch a meal. It does not treat obesity, and it is not a GDV prevention plan.</li>
           </ul>
 
           <h2 id="pitfalls">Common Pitfalls</h2>
           <ul>
-            <li><strong>Too-aggressive caloric restriction.</strong> In cats, severe rapid weight loss can trigger hepatic lipidosis — a documented and serious risk that is the reason feline weight loss protocols cap weight loss at about 1% per week. In dogs the analogous risk is lower but not zero, and overly aggressive restriction also drives muscle loss, hunger-driven destructive behavior, and owner non-compliance. Stick to the 1–2% per week guidance.</li>
-            <li><strong>Denying treats entirely.</strong> A treat-free plan is psychologically harder for owners and the dog; partner and child non-compliance follow. Better strategy: budget treats explicitly within the 10% rule, use treats as meal-replacement (subtract treat calories from kibble), or switch to ultra-low-calorie substitutes.</li>
+            <li><strong>Too-aggressive caloric restriction.</strong> In cats, severe rapid weight loss can trigger hepatic lipidosis — a documented and serious risk that is the reason feline weight loss protocols cap weight loss at about 1% per week. In dogs the analogous risk is lower but not zero, and overly aggressive restriction also drives muscle loss, hunger-driven destructive behavior, and owner non-compliance. Stick to the 1–2% per week rate in the 2014 AAHA Weight Management Guidelines (<a className="break-all" href="https://www.aaha.org/wp-content/uploads/globalassets/02-guidelines/weight-management/2014-AAHA-Weight-Management-Guidelines-for-Dogs-and-Cats">https://www.aaha.org/wp-content/uploads/globalassets/02-guidelines/weight-management/2014-AAHA-Weight-Management-Guidelines-for-Dogs-and-Cats</a>).</li>
+            <li><strong>Denying treats entirely.</strong> A treat-free plan is psychologically harder for owners and the dog; partner and child non-compliance follow. Better strategy: budget treats explicitly within the WSAVA ceiling of no more than 10% of daily calorie intake (<a href="https://wsava.org/wp-content/uploads/2025/11/WSAVA_GuidetoTreats_Dogs_251107.pdf">WSAVA treat guide</a>), use treats as meal-replacement (subtract treat calories from kibble), or switch to ultra-low-calorie substitutes.</li>
             <li><strong>Partner non-compliance.</strong> The most common reason weight-loss plans fail. The whole household needs to be on the same plan. Pre-portion the day&rsquo;s food and treats into a labeled container each morning so everyone draws from the same allocation.</li>
             <li><strong>Measuring by volume, not weight.</strong> Cup-scoop variability is consistently 20–30%. Weigh in grams or use a calibrated scoop.</li>
             <li><strong>Stopping at &ldquo;better.&rdquo;</strong> Weight loss to BCS 6 from BCS 8 is progress but not the goal. Target is BCS 4–5; stopping early forfeits most of the lifespan and arthritis benefit.</li>
@@ -275,19 +275,19 @@ export default function DogObesityPage() {
             Labrador Retrievers carry a documented mutation in the POMC gene that affects satiety signaling — affected Labradors genuinely do not feel full the way other dogs do. The trait is physiological, not behavioral. Labradors require lifelong portion control and should not be free-fed. Similar predisposition patterns (reduced satiety signaling, lower resting metabolic rate, or both) are documented in Beagles, Cavalier King Charles Spaniels, Cocker Spaniels, Pugs, Basset Hounds, and Dachshunds.
           </p>
           <p>
-            For these breeds, the management is the same as for any obese dog but with less margin for error: measure every meal, treat sparingly within the 10% rule, weigh monthly, and maintain BCS 4–5 as a lifelong baseline rather than a recovery target.
+            For these breeds, the management is the same as for any obese dog but with less margin for error: measure every meal, treat sparingly within the WSAVA ceiling of no more than 10% of daily calorie intake (<a href="https://wsava.org/wp-content/uploads/2025/11/WSAVA_GuidetoTreats_Dogs_251107.pdf">WSAVA treat guide</a>), weigh monthly, and maintain BCS 4–5 as a lifelong baseline rather than a recovery target.
           </p>
 
-          <h2 id="kit">Weigh-in kit</h2>
-          <p>Everyday physical supplies that match the weigh-in and meal-pacing copy above — a digital pet scale for the every-two-weeks body-weight check, plus a slow-feeder dog bowl so meals take longer and satiety improves without extra calories. These are home-setup aids, not treatments. Prescription weight-management diets (Hill&rsquo;s Metabolic, Royal Canin Satiety Support, Purina Pro Plan Veterinary Diets OM), brand food ASINs, kitchen gram scales, and portion-control food scales stay educational copy only — this page never hops diets, food ASINs, or the sister <a href={crossSiteHref('vets-co', '/health/weight-management')}>vets.co weight-management</a> kitchen-scale hops. This page does not claim hands-on testing.</p>
+          <h2 id="kit">Supplies named on this page</h2>
+          <p>Keep these on hand: a digital pet scale for the every-two-weeks body-weight check, plus a slow-feeder dog bowl so meals take longer and satiety improves without extra calories. These are home-setup aids, not treatments. Prescription weight-management diets (Hill&rsquo;s Metabolic, Royal Canin Satiety Support, Purina Pro Plan Veterinary Diets OM), named food brands, kitchen gram scales, and portion-control food scales stay educational copy only — this page does not link to diets, named foods, or the sister <a href={crossSiteHref('vets-co', '/health/weight-management')}>vets.co weight-management</a> kitchen-scale buttons.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/digital+pet+scale?s=health-dog-obesity", "/go/amazon-brand/slow+feeder+dog+bowl?s=health-dog-obesity"]} />
 
-          {/* Money path — live amazon-brand search hops (digital
+          {/* Shop note — live amazon-brand search buttons (digital
               pet scale / slow-feeder dog bowl). ShopCtas hides empty
-              Chewy; never href="#" or PLACEHOLDER. Category searches
-              only. Rx weight diets, brand food ASINs, and kitchen
-              food-portioning scales are not shoppable hops. */}
+              Chewy; never href="#" or an empty link. Amazon searches
+              only. Rx weight diets, named food brands, and kitchen
+              food-portioning scales are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
@@ -309,6 +309,7 @@ export default function DogObesityPage() {
           <FAQAccordion
             items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))}
             allowMultiple
+            includeSchema={false}
           />
 
           <CalloutBox variant="info" title="References">

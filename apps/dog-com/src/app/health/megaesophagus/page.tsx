@@ -1,12 +1,12 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 
 const SOURCES = [
-  { label: 'Merck Veterinary Manual: Megaesophagus in Animals', url: 'https://www.merckvetmanual.com/digestive-system/diseases-of-the-esophagus-in-small-animals/megaesophagus-in-dogs-and-cats', publisher: 'Merck Vet Manual' },
-  { label: 'AVMA: Megaesophagus in Dogs — Management and Aspiration Pneumonia Prevention', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/common-health-conditions-dogs', publisher: 'AVMA' },
+  { label: 'Merck Veterinary Manual: Disorders of the Esophagus in Dogs, including megaesophagus', url: 'https://www.merckvetmanual.com/dog-owners/digestive-disorders-of-dogs/disorders-of-the-esophagus-in-dogs', publisher: 'Merck Vet Manual' },
   { label: 'Gaynor AR et al. Risk factors for acquired megaesophagus in dogs. J Am Vet Med Assoc. 1997;211(11):1406-1412.', publisher: 'JAVMA' },
   { label: 'Dewey CW et al. Myasthenia gravis and megaesophagus in dogs. Vet Clin North Am Small Anim Pract. 2004;34(6):1437-1468.', publisher: 'Vet Clinics Small Animal Practice' },
 ]
@@ -66,15 +66,15 @@ export default function MegaesophagusPage() {
           <p>Megaesophagus may be congenital (present from birth — diagnosed when puppies begin eating solid food) or acquired (develops later in life from neuromuscular disease). Acquired causes include myasthenia gravis (the most common cause of acquired megaesophagus in adult dogs — an immune-mediated condition affecting the neuromuscular junction), hypothyroidism, hypoadrenocorticism (Addison's disease), and toxin exposure. Thoracic radiographs show the dilated esophagus. Fluoroscopic swallow study (barium swallow) demonstrates the functional deficit. In acquired megaesophagus, testing for underlying causes — specifically acetylcholine receptor antibody titer for myasthenia gravis — is essential because treating the underlying condition may resolve the megaesophagus.</p>
 
           <h2 id="kit">Bailey-chair feeding kit</h2>
-          <p>Everyday physical supplies that match the upright-feeding copy above — a Bailey chair or other near-vertical feeding chair that holds the dog in a sitting-bear position during the meal and for 10–30 minutes afterward. Canine Caviar, prescription diets, myasthenia gravis medications, and antibiotics for aspiration pneumonia stay educational copy only — this page never hops brand foods, diet ASINs, or medications. This page does not claim hands-on testing.</p>
+          <p>Keep these on hand: a Bailey chair or other near-vertical feeding chair that holds the dog in a sitting-bear position during the meal and for 10–30 minutes afterward. Canine Caviar, prescription diets, myasthenia gravis medications, and antibiotics for aspiration pneumonia stay educational copy only — this page does not link to brand foods, named diets, or medications.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/bailey+chair+dog?s=health-megaesophagus", "/go/amazon-brand/upright+dog+feeding+chair?s=health-megaesophagus"]} />
 
-          {/* Money path — live amazon-brand search hops (Bailey chair /
+          {/* Shop note — live amazon-brand search buttons (Bailey chair /
               upright feeding chair). ShopCtas hides empty Chewy; never
-              href="#" or PLACEHOLDER. Category searches only.
+              href="#" or an empty link. Amazon searches only.
               Canine Caviar, prescription diets, myasthenia gravis
-              medications, and antibiotics are not shoppable hops. */}
+              medications, and antibiotics are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

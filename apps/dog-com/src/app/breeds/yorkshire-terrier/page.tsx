@@ -1,5 +1,7 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { AffiliateDisclosure, buildMetadata, ArticleLayout, BreedHealthCard, RelatedLinks, ShopCtas, CrossPortfolioCard , ArticleByline, FAQAccordion } from '@carloOS/ui'
+import Link from 'next/link'
+import { buildMetadata, ArticleLayout, BreedHealthCard, RelatedLinks, ShopCtas, CrossPortfolioCard , ArticleByline, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 
@@ -87,14 +89,17 @@ export default function YorkiePage() {
             Shop related supplies
           </div>
           <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href="/go/amazon-brand/dog+harness?s=breed-yorkie" />
           <div className="flex flex-col gap-3 mt-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/dog+harness?s=breed-yorkie"
-              amazonLabel="Shop on Amazon"
+              amazonLabel="Browse dog harness on Amazon →"
             />
           </div>
         </div>
+
+        <p>Harnesses for this breed are compared in the <Link href="/reviews/best-dog-harnesses">dog harness review</Link>.</p>
+        <p>Dental chews for this breed are compared in the <Link href="/reviews/best-dental-chews">dental chew review</Link>.</p>
 
         <h2>Frequently Asked Questions</h2>
         <FAQAccordion

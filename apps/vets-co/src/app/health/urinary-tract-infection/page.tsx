@@ -1,12 +1,12 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, ShopCtas, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Urinary Tract Infections in Dogs — Signs, Culture | Vets.co', description: 'UTIs in dogs cause straining, blood in urine, and accidents. Culture and sensitivity before antibiotics prevents resistance.', path: '/health/urinary-tract-infection', type: 'article' })
 const SOURCES = [
-  { label: 'Merck Veterinary Manual: Urinary Tract Infections in Dogs', url: 'https://www.merckvetmanual.com/urinary-system/noninfectious-diseases-of-the-urinary-system-in-small-animals/urinary-tract-infections-in-small-animals', publisher: 'Merck Vet Manual' },
+  { label: 'Merck Veterinary Manual: Bacterial Cystitis in Small Animals', url: 'https://www.merckvetmanual.com/urinary-system/infectious-diseases-of-the-urinary-system-in-small-animals/bacterial-cystitis-in-small-animals', publisher: 'Merck Vet Manual' },
   { label: 'ISCAID: Antimicrobial Use Guidelines for UTI in Dogs and Cats', url: 'https://onlinelibrary.wiley.com/doi/10.1111/jvim.15575', publisher: 'Journal of Veterinary Internal Medicine' },
-  { label: 'AVMA: Urinary Tract Infections', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/urinary-tract-problems-dogs', publisher: 'AVMA' },
 ]
 const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Urinary Tract Infections in Dogs', description: 'Signs, urine culture, antibiotic selection, and recurrent UTI management in dogs.', url: 'https://vets.co/health/urinary-tract-infection', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-09-05T00:00:00Z' ,
   citation: SOURCES,
@@ -39,6 +39,7 @@ export default function UTIPage() {
 </>}
       >
         <div className="carloOS-article">
+          <LastUpdated date="2026-10-07" />
 
           <h2>Diagnosis — Culture Before Antibiotics</h2>
           <p>The appropriate diagnostic sequence: urinalysis (evaluates urine concentration, pH, white cells, red cells, bacteria, casts, protein) followed by urine culture and antibiotic sensitivity testing when bacteria are present on urinalysis. The culture takes 48-72 hours but identifies exactly which bacteria is causing the infection and which antibiotics will treat it effectively.</p>
@@ -59,34 +60,21 @@ export default function UTIPage() {
 
           <h2 id="kit">Home hydration and accident kit</h2>
           <p>
-            Everyday physical supplies that match the house-accident and
-            hydration copy on this page — a stainless-steel dog fountain so
-            running water invites more drinking, washable pee pads for the
-            accidents a previously reliable dog may have while straining and
-            urgent, and a weighted ceramic water bowl that does not tip when
-            the dog returns to the bowl often. Extra water stations sit beside
-            the fountain; they are not a second shop hop. These are household
-            tools, not treatments. They do not treat a UTI, they do not replace
-            a veterinarian or a urine culture, and they are not antibiotics,
-            prescription urinary diets (Hill&rsquo;s c/d, Royal Canin Urinary SO,
-            and the like), cranberry products, or clinic culture kits. This is
-            not the sister FLUTD page and it does not hop a cat water fountain,
-            extra cat litter boxes, or canned wet cat food. This page does not
-            claim hands-on testing.
+            Keep these on hand: a stainless-steel dog fountain so running water invites more drinking, washable pee pads for the accidents a previously reliable dog may have while straining and urgent, and a weighted ceramic water bowl that does not tip when the dog returns to the bowl often. Extra water stations sit beside the fountain. These are household tools, not treatments. They do not treat a UTI, they do not replace a veterinarian or a urine culture, and they are not antibiotics, prescription urinary diets (Hill&rsquo;s c/d, Royal Canin Urinary SO, and the like), cranberry products, or clinic culture kits.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/stainless+steel+dog+fountain?s=health-urinary-tract-infection", "/go/amazon-brand/washable+dog+pee+pads?s=health-urinary-tract-infection", "/go/amazon-brand/weighted+ceramic+dog+water+bowl?s=health-urinary-tract-infection"]} />
 
-          {/* Money path — live amazon-brand search hops (stainless-steel
+          {/* Shop note — live amazon-brand search buttons (stainless-steel
               dog fountain / washable pee pads / weighted ceramic bowl).
-              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-              Category searches only — unused vs #848–#1032
+              ShopCtas hides empty Chewy; never href="#" or an empty link.
+              Amazon searches only — unused vs #848–#1032
               dog+water+fountain, heavy+ceramic+pet+water+bowl,
               puppy+training+pads, and FLUTD (#1024)
               cat+water+fountain / extra+cat+litter+box /
               canned+wet+cat+food. Antibiotics, prescription urinary
               diets, cranberry products, and clinic culture kits
-              are not shoppable hops. */}
+              are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

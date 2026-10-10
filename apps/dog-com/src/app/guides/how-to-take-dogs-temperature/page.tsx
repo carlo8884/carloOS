@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import {
   buildMetadata,
@@ -5,7 +6,6 @@ import {
   FAQAccordion,
   RelatedLinks, CrossPortfolioCard,
   TableOfContents,
-  AffiliateDisclosure,
   ShopCtas,
   JourneyNext,
 } from '@carloOS/ui'
@@ -153,7 +153,7 @@ export default function HowToTakeDogsTemperaturePage() {
             reviewedBy="Editorial team"
           />
 
-          <CalloutBox variant="evidence" title="TL;DR — The numbers to know">
+          <CalloutBox variant="evidence" title="The numbers to know">
             <p>
               <strong>Temperature:</strong> 99.5–102.5 °F normal (rectal). 104.5 °F+ or under 99 °F: call your vet. 106 °F+: emergency.
             </p>
@@ -285,7 +285,7 @@ export default function HowToTakeDogsTemperaturePage() {
             siteId="dog-com"
             nextHref="/tools/is-this-a-dog-emergency"
             nextLabel="Triage the reading before you start shopping the kit"
-            nextBlurb="104.5 °F+ or under 99 °F is a same-day vet call. 106 °F+ is an emergency. The triage tool is the next step: go-now vs wait, using the number you just took. The hop below is the same digital rectal thermometer search already on this page."
+            nextBlurb="104.5 °F+ or under 99 °F is a same-day vet call. 106 °F+ is an emergency. The triage tool is the next step: go-now vs wait, using the number you just took. The button below opens the same digital rectal thermometer search on Amazon."
             resourceHref="/go/amazon-brand/digital+rectal+thermometer+pet?s=guides-how-to-take-dogs-temperature"
             resourceLabel="Browse digital rectal thermometers for pets on Amazon →"
           />
@@ -294,13 +294,13 @@ export default function HowToTakeDogsTemperaturePage() {
           <p>
             A small kit kept where you can reach it makes home checks routine rather than improvised. A practical set: a digital rectal thermometer (dedicated to the dog), a water-based lubricant (petroleum jelly works) for the tip, isopropyl alcohol wipes to clean the probe after each reading, a phone with a stopwatch and a notes file for your baseline numbers, and your veterinarian&rsquo;s daytime number plus the nearest 24-hour emergency clinic&rsquo;s address and number saved in advance. Those three physical supplies are vitals tools. Knowing where the emergency clinic is <em>before</em> you need it removes a frightening delay from a real emergency. If you have not chosen a regular veterinarian yet, our <a href="/guides/dog-wellness-exam" className="text-brand-primary hover:underline">wellness exam guide</a> covers how to find one and what to expect. </p>
 
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/digital+rectal+thermometer+pet?s=guides-how-to-take-dogs-temperature", "/go/amazon-brand/water+based+lubricant+petroleum+jelly?s=guides-how-to-take-dogs-temperature", "/go/amazon-brand/isopropyl+alcohol+wipes?s=guides-how-to-take-dogs-temperature"]} />
 
-          {/* Money path — live amazon-brand search hops (home-vitals kit).
-              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-              Category searches only — everyday physical supplies matching
+          {/* Shop note — live amazon-brand search buttons (home-vitals kit).
+              ShopCtas hides empty Chewy; never href="#" or an empty link.
+              Amazon searches only — everyday physical supplies matching
               on-page digital-rectal-thermometer / petroleum-jelly lubricant /
-              isopropyl-alcohol-wipes copy, not the first-aid-kit wound hops
+              isopropyl-alcohol-wipes copy, not the first-aid-kit wound buttons
               or the generic digital+pet+thermometer key already pinned there. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
@@ -327,13 +327,14 @@ export default function HowToTakeDogsTemperaturePage() {
           <FAQAccordion
             items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))}
             allowMultiple
+            includeSchema={false}
           />
 
           <ArticleSourcesList
             title="References"
             sources={[
-              { label: 'Routine Health Care of Dogs — Physical Examination and Vital Signs', url: 'https://www.merckvetmanual.com/dog-owners/routine-care-and-breeding-of-dogs/routine-health-care-of-dogs', publisher: 'Merck Veterinary Manual' },
-              { label: 'Pet First Aid — Knowing Your Pet’s Normal Vital Signs', url: 'https://www.avma.org/resources-tools/pet-owners/emergencycare', publisher: 'AVMA' },
+              { label: 'Routine Health Care of Dogs — Physical Examination and Vital Signs', url: 'https://www.merckvetmanual.com/dog-owners/routine-care-of-dogs/routine-health-care-of-dogs', publisher: 'Merck Veterinary Manual' },
+              { label: 'Pet First Aid — Knowing Your Pet’s Normal Vital Signs', url: 'https://www.avma.org/resources-tools/pet-owners/emergency-care', publisher: 'AVMA' },
               { label: 'Fever and Heatstroke in Dogs', url: 'https://www.merckvetmanual.com/dog-owners', publisher: 'Merck Veterinary Manual' },
               { label: 'AAHA Canine Life Stage Guidelines — preventive care and physical assessment', url: 'https://www.aaha.org/aaha-guidelines/', publisher: 'AAHA' },
             ]}

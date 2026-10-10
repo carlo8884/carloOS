@@ -1,4 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import {
   buildMetadata,
   ArticleLayout,
@@ -8,7 +10,6 @@ import {
   CalloutBox,
   ArticleByline,
   DropCap,
-  AffiliateDisclosure,
   ArticleSourcesList,
   CrossPortfolioCard,
   ShopCtas,
@@ -60,7 +61,6 @@ const articleSchema = buildArticleSchema({
   citation: SOURCES,
 })
 
-
 const FAQS = [
   {
     question: 'Why does my ferret keep missing the litter box?',
@@ -86,7 +86,6 @@ const FAQS = [
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
 const combined = combineSchemas(articleSchema, faqSchema)
-
 
 export default function LitterBoxTroubleshootingPage() {
   return (
@@ -135,7 +134,7 @@ export default function LitterBoxTroubleshootingPage() {
             <CrossPortfolioCard currentSite="ferret-com" contentType="behavior" variant="sidebar" />
           </>
         }
-      
+
         relatedLinks={[
           { title: 'Ferret Behavior Hub', href: '/behavior' },
           { title: 'Litter Training', href: '/care/litter-training' },
@@ -270,6 +269,7 @@ export default function LitterBoxTroubleshootingPage() {
             </p>
           </CalloutBox>
 
+          <p>If the box problem is the litter itself, the options are in the <Link href="/reviews/best-ferret-litter">ferret litter review</Link>.</p>
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
 
@@ -281,20 +281,8 @@ export default function LitterBoxTroubleshootingPage() {
             training-only solution.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/ferret+litter?s=litter-box-troubleshooting" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated ferret litter-box chart /
-              ferret fridge litter-choice card /
-              mustelid litter-box reference handbook).
-              Educational kitchen searches only; no Rx /
-              vaccine / aging hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs behavior-hub /
-              dooking / digging kitchen kits and child
-              sleep-sack / snuffle-mat hops. Ferret
-              aging stays held.
-              Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
@@ -303,7 +291,7 @@ export default function LitterBoxTroubleshootingPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/ferret+litter?s=litter-box-troubleshooting"
-                amazonLabel="Shop on Amazon"
+                amazonLabel="Browse ferret litter on Amazon →"
               />
           </div>
           </div>

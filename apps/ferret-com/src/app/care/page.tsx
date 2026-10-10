@@ -1,6 +1,7 @@
+import { HopDisclosure } from '../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, ShopCtas, CrossPortfolioCard, DirectoryPlacesCta } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, ShopCtas, CrossPortfolioCard, DirectoryPlacesCta } from '@carloOS/ui'
 import listings from '../../data/directory-listings.json'
 import { HubHero } from '../../components/HubHero'
 
@@ -32,7 +33,7 @@ const CARE_CARDS: CareCard[] = [
     eyebrow: 'Nutrition',
     title: 'Diet Basics',
     description:
-      'Ferrets are obligate carnivores: 32–40% protein, 18–22% fat, under 3% carbs. Commercial diet tiers, raw-feeding context, and the carbohydrate–insulinoma link.',
+      'Obligate-carnivore diet tiers. The carbohydrate section cites Merck; under 3% carbs is a planning figure.',
   },
   {
     slug: 'cage-setup',
@@ -299,20 +300,9 @@ export default function CareHubPage() {
         <h2 id="kit" className="font-display font-bold text-brand-dark text-xl mb-4 max-w-content-wide">Related supplies</h2>
 
         <div className="max-w-content-wide mt-6">
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/ferret+litter?s=care-hub" />
         </div>
 
-        {/* Money path — live amazon-brand search hops
-            (laminated ferret care routine chart /
-            ferret fridge care card /
-            mustelid care reference handbook).
-            Educational kitchen searches only; no Rx /
-            vaccine / cage-SKU hops.
-            ShopCtas hides empty Chewy; never href="#"
-            or PLACEHOLDER. Unused vs tools / reviews /
-            diet kitchen kits and child
-            midwest+critter+nation / ferret+sleep+sack
-            hops. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-content-wide">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
             Shop related supplies
@@ -321,7 +311,7 @@ export default function CareHubPage() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/ferret+litter?s=care-hub"
-              amazonLabel="Shop on Amazon"
+              amazonLabel="Browse ferret litter on Amazon →"
             />
           </div>
         </div>

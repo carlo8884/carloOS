@@ -116,7 +116,7 @@ export const BREED_FEEDING_PROFILES: BreedFeedingProfile[] = [
       'Lifelong lean body condition (BCS 4–5/9) is the single highest-impact intervention',
       'Marine-source EPA/DHA supports joints and may modestly reduce arthritis NSAID needs',
       'Measured meals — never free-feed a Labrador',
-      'Treats counted as part of daily calories, ideally ≤10% of intake',
+      'Treats counted as part of daily calories. The WSAVA guide to treats for dogs states no more than 10% of daily calorie intake (https://wsava.org/wp-content/uploads/2025/11/WSAVA_GuidetoTreats_Dogs_251107.pdf)',
     ],
     feedingFrequency: {
       puppy: '3–4 meals/day until 4 months, then 3 meals until 6 months, then 2 meals/day',
@@ -132,7 +132,7 @@ export const BREED_FEEDING_PROFILES: BreedFeedingProfile[] = [
     fatRecommendation:
       'AAFCO minimum 5.5% (adult) and 8.5% (growth) on a dry-matter basis. Most adult Lab diets fall in the 12–18% fat range; higher fat is energy-dense and contributes to obesity risk in this breed.',
     weightManagementNotes:
-      'Labradors gain weight easily and lose it slowly. If your dog is above ideal body condition, work with your veterinarian on a structured weight-loss plan — typically a 1–2% body weight loss per week target, achieved with a therapeutic weight-loss diet (not just less of the regular food, which can create nutrient deficiencies at heavily reduced volumes). Reassess body condition monthly.',
+      'Labradors gain weight easily and lose it slowly. If your dog is above ideal body condition, work with your veterinarian on a structured weight-loss plan — typically a 1–2% body weight loss per week target. The 2014 AAHA Weight Management Guidelines state that the desired rate of weight loss in dogs is 1–2% per week (https://www.aaha.org/wp-content/uploads/globalassets/02-guidelines/weight-management/2014-AAHA-Weight-Management-Guidelines-for-Dogs-and-Cats). Achieve that with a therapeutic weight-loss diet (not just less of the regular food, which can create nutrient deficiencies at heavily reduced volumes). Reassess body condition monthly.',
     recommendedFoodTypes: [
       'Complete-and-balanced dry food meeting AAFCO adult maintenance or large-breed growth profiles',
       'WSAVA-aligned manufacturers (those that meet the WSAVA Global Nutrition Committee selection criteria) preferred',
@@ -638,7 +638,7 @@ export const BREED_FEEDING_PROFILES: BreedFeedingProfile[] = [
     ],
     dietaryConsiderations: [
       'Measured meals — never free-feed a Beagle',
-      'Treats counted as part of daily calories, ≤10% of intake',
+      'Treats counted as part of daily calories. The WSAVA guide to treats for dogs states no more than 10% of daily calorie intake (https://wsava.org/wp-content/uploads/2025/11/WSAVA_GuidetoTreats_Dogs_251107.pdf)',
       'Slow-feeder bowls or puzzle feeders help slow eating and provide mental enrichment',
       'Locked or out-of-reach food storage — Beagles will counter-surf and trash-raid',
     ],
@@ -689,7 +689,7 @@ export const BREED_FEEDING_PROFILES: BreedFeedingProfile[] = [
       {
         question: 'What treats can I give my Beagle without making them fat?',
         answer:
-          'Low-calorie options include pieces of the daily kibble ration (the simplest approach), fresh vegetables (green beans, carrots, cucumber, sliced apple without seeds), and commercial training treats with a published calorie count. Whatever the source, total treats should make up no more than 10% of daily caloric intake.',
+          'Low-calorie options include pieces of the daily kibble ration (the simplest approach), fresh vegetables (green beans, carrots, cucumber, sliced apple without seeds), and commercial training treats with a published calorie count. Whatever the source, the WSAVA guide to treats for dogs states that treats should make up no more than 10% of a dog’s daily calorie intake (https://wsava.org/wp-content/uploads/2025/11/WSAVA_GuidetoTreats_Dogs_251107.pdf).',
       },
     ],
   },

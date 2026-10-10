@@ -1,11 +1,11 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, RelatedLinks, ArticleSourcesList, AffiliateDisclosure, ShopCtas, JourneyNext } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, RelatedLinks, ArticleSourcesList, ShopCtas, JourneyNext } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 
 const SOURCES = [
-  { label: "Aquarium Management — UF/IFAS Extension, FA-9", url: "https://edis.ifas.ufl.edu/publication/FA009", publisher: "UF/IFAS Extension" },
-  { label: "Walstad, D.L. Ecology of the Planted Aquarium, 3rd ed. Echinodorus Publishing, 2013.", publisher: "Echinodorus Publishing" },
+    { label: "Walstad, D.L. Ecology of the Planted Aquarium, 3rd ed. Echinodorus Publishing, 2013.", publisher: "Echinodorus Publishing" },
   { label: "Hargreaves, J.A. & Tucker, C.S. Managing Ammonia in Fish Ponds. SRAC 4603, 2004.", publisher: "Southern Regional Aquaculture Center" },
   { label: "Boyd, C.E. & Tucker, C.S. Pond Aquaculture Water Quality Management. Kluwer Academic, 1998.", publisher: "Kluwer Academic" },
 ]
@@ -48,56 +48,36 @@ export default function NanoTankSetupPage() {
         </CalloutBox>
 
         <h2>Stock for the Volume, Not the Glass</h2>
-        <p>The single most common nano mistake is overstocking, often because the tank looks empty when first set up. Resist it. A five-gallon tank suits a single betta, a small colony of dwarf shrimp, or a tight school of the very smallest fish such as chili rasboras. A ten-gallon tank opens up options: a school of <a href="/species/endlers-livebearer">Endlers</a>, a group of <a href="/species/sparkling-gourami">sparkling gouramis</a>, pygmy corydoras, or a single <a href="/species/dwarf-puffer">dwarf puffer</a> in a planted setup. Goldfish, common plecos, and most cichlids are categorically wrong for nano tanks regardless of how small they appear in the store.</p>
+        <p>The single most common nano mistake is overstocking, often because the tank looks empty when first set up. Resist it. A five-gallon tank suits a single betta, a small colony of dwarf shrimp, or a tight school of the very smallest fish such as chili rasboras. A ten-gallon tank opens up options: a school of <a href="/species/endlers-livebearer">Endlers</a>, a group of <a href="/species/sparkling-gourami">sparkling gouramis</a>, pygmy corydoras, or a single <a href="/species/dwarf-puffer">dwarf puffer</a> in a planted setup. Goldfish, common plecos, and most cichlids are categorically wrong for nano tanks regardless of how small they appear in the store. <a href="/reviews/best-nano-tanks">The nano tank guide</a> compares the tanks this stocking limit assumes.</p>
 
         <h2>Plants and Scaping the Small Tank</h2>
-        <p>Live plants are especially valuable in a nano because they consume nitrate and add stability to the small water column. Slow-growing, low-light species — Anubias, Java fern, Bucephalandra, and mosses attached to driftwood and rock — keep maintenance low and look proportional in a small space. A single well-chosen piece of hardscape reads as a focal point at nano scale, where a large display would need several. Floating plants add shade and absorb excess nutrients. Pair plants with a modest light on a timer to control algae. The aquarium light-timer hop already lives on the <a href="/setup/low-tech-planted-tank">low-tech planted tank guide</a>; this page does not re-hop it, and it does not hop livestock or a ranked plant list.</p>
+        <p>Live plants are especially valuable in a nano because they consume nitrate and add stability to the small water column. Slow-growing, low-light species — Anubias, Java fern, Bucephalandra, and mosses attached to driftwood and rock — keep maintenance low and look proportional in a small space. A single well-chosen piece of hardscape reads as a focal point at nano scale, where a large display would need several. Floating plants add shade and absorb excess nutrients. Pair plants with a modest light on a timer to control algae. The light timer is covered in the <a href="/setup/low-tech-planted-tank">low-tech planted tank guide</a>.</p>
 
         <h2>Maintenance Routine</h2>
-        <p>The nano maintenance rhythm is little and often: a 15 to 25 percent water change weekly, glass wiped as needed, and feeding kept light enough that nothing settles uneaten. Always replace evaporated water with dechlorinated fresh water rather than letting the tank concentrate minerals as it evaporates down. A small, accurate heater and a thermometer are essential, since room-temperature swings reach a nano faster than a larger tank. A preset 25-watt nano aquarium heater is sized for a five-to-ten-gallon volume — it is not an Eheim Jager hop (that lives on the heater-wattage tool and setup hub) and not a digital-thermometer hop (that lives on the setup hub). Keep a jug of dechlorinated water on hand so a quick change is never a chore. A food-grade 1-gallon water jug is how that dechlorinated top-off sits ready — it is not a Python water changer, not Seachem Prime (those live on the setup hub and water-change calculator), and not a 5-gallon feed-soaking pail.</p>
+        <p>The nano maintenance rhythm is little and often: a 15 to 25 percent water change weekly, glass wiped as needed, and feeding kept light enough that nothing settles uneaten. Always replace evaporated water with dechlorinated fresh water rather than letting the tank concentrate minerals as it evaporates down. A small, accurate heater and a thermometer are essential, since room-temperature swings reach a nano faster than a larger tank. A preset 25-watt nano aquarium heater is sized for a five-to-ten-gallon volume. Keep a jug of dechlorinated water on hand so a quick change is never a chore. A food-grade 1-gallon water jug is how that dechlorinated top-off sits ready — it is not a Python water changer, not Seachem Prime, and not a 5-gallon feed-soaking pail.</p>
 
         <h2 id="kit">Nano-tank stability kit</h2>
         <p>
-          Everyday physical supplies that match the
-          sponge-or-gentle-filter, reliable-heater, and
-          dechlorinated-water-change copy on this page — an
-          air-driven corner sponge filter so a five-gallon
-          keeps gentle current for small inhabitants, a
-          preset 25-watt nano aquarium heater so a small
-          volume does not swing overnight, and a food-grade
-          1-gallon water jug so dechlorinated top-off water
-          is already mixed. These are educational setup
-          tools, not a ranked product list, not livestock,
-          and not medications. Hang-on-back AquaClear and
-          Fluval canister hops already live on the
-          <a href="/setup">setup hub</a>. Eheim Jager,
-          digital thermometer, Seachem Prime, and gravel
-          vacuum hops already live on the setup hub and
-          water-change calculator. The aquarium light-timer
-          hop already lives on the
-          <a href="/setup/low-tech-planted-tank">low-tech planted tank guide</a>.
-          This page does not hop fish, shrimp, or plants as
-          shoppable SKUs. This page does not claim
-          hands-on testing.
+          Keep these on hand: an air-driven corner sponge filter so a five-gallon keeps gentle current for small inhabitants, a preset 25-watt nano aquarium heater so a small volume does not swing overnight, and a food-grade 1-gallon water jug so dechlorinated top-off water is already mixed. These are educational setup tools, not a ranked product list, not livestock, and not medications.
         </p>
         <JourneyNext
           siteId="fish-com"
           nextHref="/setup/aquarium-cycling-guide"
           nextLabel="Cycle the nano before you stock it"
-          nextBlurb="A five-gallon uncycled nano can spike lethal ammonia in a day. Use the cycling guide next so ammonia and nitrite both read zero before chili rasboras or a betta go in. The hop below is the same air-driven corner sponge-filter search already on this page."
+          nextBlurb="A five-gallon uncycled nano can spike lethal ammonia in a day. Use the cycling guide next so ammonia and nitrite both read zero before chili rasboras or a betta go in. The button below opens the same air-driven corner sponge-filter search on Amazon."
           resourceHref="/go/amazon-brand/air+driven+corner+sponge+filter?s=setup-nano-tank"
           resourceLabel="Browse air-driven corner sponge filters on Amazon →"
         />
 
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/air+driven+corner+sponge+filter?s=setup-nano-tank", "/go/amazon-brand/preset+25+watt+nano+aquarium+heater?s=setup-nano-tank", "/go/amazon-brand/food+grade+1+gallon+water+jug?s=setup-nano-tank"]} />
 
-        {/* Money path — live amazon-brand search hops
+        {/* Shop note — live amazon-brand search buttons
             (air-driven corner sponge filter /
             preset 25-watt nano aquarium heater /
             food-grade 1-gallon water jug).
             These are educational setup tools, not a
             ranked product list, not livestock, not
-            medications, no href="#" / PLACEHOLDER.
+            medications, no href="#" / an empty link.
             ShopCtas hides empty Chewy. Category
             searches only — unused vs #1094
             lidded+5+gallon+feed+soaking+pail /
@@ -125,29 +105,10 @@ export default function NanoTankSetupPage() {
             aquarium+plant+root+tabs (low-tech planted). */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-            Shop the nano-tank stability kit
+            Shop these supplies
           </div>
           <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-            These Amazon category searches match the
-            on-page sponge-or-gentle-filter, reliable-heater,
-            and dechlorinated-water-change copy — an
-            air-driven corner sponge filter, a preset
-            25-watt nano aquarium heater, and a food-grade
-            1-gallon water jug. Educational setup gear
-            only. They are not a ranked product list,
-            they are not livestock, they are not a #1094
-            soaking-pail / feed-tub-rock / apple-wedger hop,
-            they are not a #1093 kitchen-timer / message-pad
-            / pet-carrier hop, they are not a #1092
-            floor-bowl / wobble-dispenser / hourglass hop,
-            they are not a #1091 laminating-pouch /
-            72-hour-timer / travel-bowl hop, they are not
-            an aquarium+sponge+filter health hop, they are
-            not an Eheim Jager / AquaClear / Prime /
-            light-timer hop, and they do not replace
-            cycling before fish. Fish.com earns a
-            commission on qualifying purchases at no extra
-            cost to you.
+            Keep these on hand: an air-driven corner sponge filter, a preset 25-watt nano aquarium heater, and a food-grade 1-gallon water jug. Educational setup gear only.
           </p>
           <div className="flex flex-col gap-3">
             <ShopCtas

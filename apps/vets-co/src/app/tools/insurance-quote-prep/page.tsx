@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
-  AffiliateDisclosure,
   ArticleLayout,
   ArticleSourcesList,
   FAQAccordion,
@@ -86,13 +85,13 @@ const GROUPS = [
         id: 'deductible-ask',
         label: 'Is this deductible annual or per condition?',
         detail:
-          'The comparison records Trupanion as per-condition, Healthy Paws as annual, and Embrace as a diminishing annual deductible. Ask which structure is on the quote you are looking at.',
+          'The comparison records Trupanion as per-condition and Healthy Paws as annual. Embrace deductible program: see the carrier\'s current terms. Ask which structure is on the quote you are looking at.',
       },
       {
         id: 'percent-limit',
         label: 'What reimbursement percentage and annual limit are on this quote?',
         detail:
-          'The comparison records Trupanion at 90% with unlimited payouts, Healthy Paws at 80–90% with unlimited payouts, and Embrace at 70–90%. Read the percentage and the limit on the quote itself.',
+          'The comparison records Trupanion at 90% with unlimited payouts, Healthy Paws at up to 90% with a choice of annual limit, and Embrace at 70%, 80%, or 90%. Read the percentage and the limit on the quote itself.',
       },
       {
         id: 'preexisting',
@@ -116,7 +115,7 @@ const GROUPS = [
         id: 'waiting',
         label: 'What are the waiting periods?',
         detail:
-          'Waiting periods are short for accidents, longer for illness, and often longest for orthopedic conditions. Anything that arises during a waiting period is treated as pre-existing. The comparison records a 6-month orthopedic waiting period on Embrace. Ask for the accident, illness, and orthopedic periods on each quote.',
+          'Waiting periods are short for accidents, longer for illness, and often longest for orthopedic conditions. Anything that arises during a waiting period is treated as pre-existing. Orthopedic waiting period for Embrace: see the carrier\'s current terms. Ask for the accident, illness, and orthopedic periods on each quote.',
       },
     ],
   },
@@ -125,7 +124,7 @@ const GROUPS = [
 const howToSchema = buildHowToSchema({
   name: 'How to prepare for a pet insurance quote',
   description:
-    'Gather the pet facts a quote form asks for, then ask each carrier about deductible structure, reimbursement, pre-existing conditions, and waiting periods before you open a tracked quote.',
+    'Gather the pet facts a quote form asks for, then ask each carrier about deductible structure, reimbursement, pre-existing conditions, and waiting periods before you compare quotes.',
   url: URL,
   totalTime: 'PT10M',
   steps: [
@@ -146,8 +145,8 @@ const howToSchema = buildHowToSchema({
       text: 'Ask whether the clinic is paid directly, how the deductible works, how pre-existing and bilateral conditions are defined, and what the accident, illness, and orthopedic waiting periods are.',
     },
     {
-      name: 'Open a tracked quote',
-      text: 'Use the existing Trupanion, Healthy Paws, and Embrace quote links. The checklist does not rank those links.',
+      name: 'Compare quotes on the carrier comparison',
+      text: 'Direct pay, deductibles, reimbursement, and waiting periods are written out on the carrier comparison. This checklist does not open a carrier enrollment.',
     },
   ],
 })
@@ -191,12 +190,12 @@ const FAQS = [
   {
     question: 'Does this checklist produce a premium?',
     answer:
-      'No. It prepares the facts and the questions. Premiums depend on the pet and the quote. The three links at the end are the Trupanion, Healthy Paws, and Embrace quote paths on the carrier comparison.',
+      'No. It prepares the facts and the questions. Premiums depend on the pet and the quote. Compare quotes on the carrier comparison when you want direct pay, deductibles, and waiting periods in one place.',
   },
   {
     question: 'Where do these facts come from?',
     answer:
-      'From the Vets.co pages on deductibles, pre-existing conditions, and the 11-carrier comparison, plus the NAIC consumer guide on pet insurance and the public quote pages those links open. Waiting-period lengths are the ones that comparison records.',
+      'From the Vets.co pages on deductibles, pre-existing conditions, and the 11-carrier comparison, plus the NAIC consumer guide on pet insurance and the public quote pages named in the sources. Waiting-period lengths are the ones that comparison records.',
   },
 ]
 
@@ -222,17 +221,17 @@ const SOURCES = [
     publisher: 'NAIC',
   },
   {
-    label: 'Trupanion quote page opened by the tracked Trupanion link',
+    label: 'Trupanion public quote page',
     url: 'https://www.trupanion.com/enrollments/get-a-quote',
     publisher: 'Trupanion',
   },
   {
-    label: 'Healthy Paws quote page opened by the tracked Healthy Paws link',
+    label: 'Healthy Paws public quote page',
     url: 'https://www.healthypawspetinsurance.com/quote',
     publisher: 'Healthy Paws',
   },
   {
-    label: 'Embrace quote page opened by the tracked Embrace link',
+    label: 'Embrace public quote page',
     url: 'https://quote.embracepetinsurance.com/',
     publisher: 'Embrace',
   },
@@ -245,7 +244,7 @@ export default function InsuranceQuotePrepPage() {
       hero={{
         title: 'Insurance Quote Prep Checklist',
         subtitle:
-          'What to have ready, and what to ask, before you open a Trupanion, Healthy Paws, or Embrace quote.',
+          'What to have ready, and what to ask, before you compare pet insurance quotes.',
         category: 'Tools',
         categoryHref: '/tools',
         publishedAt: 'October 2026',
@@ -297,37 +296,26 @@ export default function InsuranceQuotePrepPage() {
 
         <h2 id="checklist">Checklist</h2>
         <p>
-          Check an item when you have it, or when you have asked it. Nothing here is stored. The quote links stay on the
+          Check an item when you have it, or when you have asked it. Nothing here is stored. The comparison link stays on the
           page whether or not every box is checked. Routine wellness is usually outside a standard accident-and-illness
           policy unless the quote includes a separate wellness add-on, which the comparison records as available on Embrace
           and not included on Trupanion or Healthy Paws.
         </p>
         <QuotePrepChecklist groups={GROUPS} />
 
-        <h2 id="quotes">Request a quote</h2>
+        <h2 id="quotes">Compare quotes</h2>
         <p>
-          These three links are the quote paths on the carrier comparison. A commission may be earned
-          if you enroll through them. The commission does not decide the order, and this checklist does not rank the carriers.
-          Read the sample policy on the quote, not only the marketing page.
+          Direct pay, deductibles, reimbursement, and waiting periods are written out on the carrier comparison.
+          This checklist does not open a carrier enrollment.
         </p>
-        <AffiliateDisclosure variant="inline" siteId="vets-co" />
-        <ul>
-          <li>
-            <a className="font-semibold text-brand-primary" rel="sponsored noopener" href="/go/trupanion/home?s=tools-insurance-quote-prep">
-              Get a Trupanion quote
-            </a>
-          </li>
-          <li>
-            <a className="font-semibold text-brand-primary" rel="sponsored noopener" href="/go/healthy-paws/home?s=tools-insurance-quote-prep">
-              Get a Healthy Paws quote
-            </a>
-          </li>
-          <li>
-            <a className="font-semibold text-brand-primary" rel="sponsored noopener" href="/go/embrace/home?s=tools-insurance-quote-prep">
-              Get an Embrace quote
-            </a>
-          </li>
-        </ul>
+        <p>
+          <Link
+            href="/reviews/best-pet-insurance"
+            className="inline-block max-w-full whitespace-normal text-center bg-brand-primary text-white font-semibold px-5 py-2.5 rounded-md no-underline hover:bg-brand-primary-dark"
+          >
+            Compare quotes on the carrier comparison →
+          </Link>
+        </p>
         <p>
           After a quote, the{' '}
           <Link href="/tools/insurance-reimbursement-estimator" className="text-brand-primary">reimbursement estimator</Link>{' '}

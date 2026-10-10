@@ -190,6 +190,7 @@ export default function FindAVetPage() {
       {/* FAQ */}
       <div className="px-container-sm sm:px-container pb-14">
         <h2 className="font-display text-2xl font-bold text-brand-dark mb-6">Common Questions</h2>
+        <p>Those figures are typical US ranges dated 2026-05-25.</p>
         <FAQAccordion
           items={FAQ_ITEMS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answerText }))}
           includeSchema={false}

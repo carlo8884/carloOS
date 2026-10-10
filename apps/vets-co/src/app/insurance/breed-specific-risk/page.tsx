@@ -1,7 +1,13 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ReviewCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { PrimaryHop, buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ReviewCard, ShopCtas, ArticleSourcesList, LastUpdated, ComparisonFoot } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
+
+// Request-time env, same as the insurance comparison. A set partner tag
+// renders the quote link; an unset tag stays a disabled button.
+export const dynamic = 'force-dynamic'
+
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Breed-Specific Insurance Risk — What to Know | Vets.co", description: "Breed predispositions to orthopedic, cardiac, and other conditions shape how — and how early — to insure. Learn how breed risk affects pet insurance decisions.", path: '/insurance/breed-specific-risk', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Breed-Specific Insurance Risk', description: 'How breed predispositions affect pet insurance decisions, waiting periods, and coverage choices.', url: 'https://vets.co/insurance/breed-specific-risk', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-09-06T00:00:00Z' })
 const FAQS = [
@@ -14,6 +20,8 @@ export default function BreedRiskPage() {
     <>
       <SchemaScript schema={schema} />
       <ArticleLayout siteId="vets-co"
+        heroHop={<PrimaryHop href="/go/amazon-brand/blank+pedigree+chart?s=insurance-breed-specific-risk" label="Browse blank pedigree charts on Amazon →" />}
+        heroExtra={<HopDisclosure siteId="vets-co" href="/go/amazon-brand/blank+pedigree+chart?s=insurance-breed-specific-risk" tone="on-dark" />}
         hero={{ title: 'Breed-Specific Insurance Risk', subtitle: 'Breed shapes both the conditions a pet is likely to face and how insurers price and structure coverage. For breeds with known predispositions — orthopedic disease in large breeds, airway problems in flat-faced breeds, cancer and cardiac risks in others — matching the policy to the breed\'s likely needs matters more than chasing the lowest premium.', category: 'Insurance Guide', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '8 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Insurance', href: '/insurance' }, { name: 'Breed-Specific Risk', href: '/insurance/breed-specific-risk' }]}
         sidebar={<>
@@ -33,6 +41,7 @@ export default function BreedRiskPage() {
         <div className="carloOS-article">
 
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-09-06T00:00:00Z" reviewedBy="Editorial team" />
+          <LastUpdated date="2026-10-10" />
 
           <CalloutBox variant="info" title="Insure the risk you can predict">
             Breed predispositions are some of the most predictable risks in pet health. That predictability cuts both ways: insurers price for it, and you can plan for it. The owner who knows their breed's likely conditions and enrolls early, with appropriate terms, is best positioned.
@@ -42,48 +51,57 @@ export default function BreedRiskPage() {
           <p>Insurers set premiums partly on breed because decades of veterinary data link certain breeds to certain expensive conditions. A plan covering a giant breed with high orthopedic and cardiac risk carries a higher expected claim cost than one covering a low-risk mixed-breed cat, and pricing reflects that. Understanding why your premium is what it is — and which conditions drive it — helps you choose a policy aligned with your pet's actual risk rather than reacting only to the monthly cost.</p>
 
           <h2>Common Breed Risk Patterns</h2>
-          <p>Large and giant breeds are prone to orthopedic disease (hip and elbow dysplasia, cruciate rupture), bloat, and some cardiac conditions. Brachycephalic breeds — those with flat faces — face airway problems, dental crowding, and eye issues. Many purebred lines carry specific hereditary conditions, from heart defects to eye and neurological disorders. Mixed-breed pets often enjoy broader genetic diversity and lower insurance costs, though they are not risk-free. Round color-coding labels are how those large, brachy, purebred, and mixed risk patterns stay marked — they are not 3-tab dividers (that live on what-pet-insurance-covers), not removable page flags (that live on what-pet-insurance-covers), and not 3x3 sticky notes (that live on questions-to-ask-your-vet). Knowing your breed's profile tells you which coverage details to scrutinize.</p>
+          <p>Large and giant breeds are prone to orthopedic disease (hip and elbow dysplasia, cruciate rupture), bloat, and some cardiac conditions. Brachycephalic breeds — those with flat faces — face airway problems, dental crowding, and eye issues. Many purebred lines carry specific hereditary conditions, from heart defects to eye and neurological disorders. Mixed-breed pets often enjoy broader genetic diversity and lower insurance costs, though they are not risk-free. Round color-coding labels are how those large, brachy, purebred, and mixed risk patterns stay marked — they are not 3-tab dividers, not removable page flags, and not 3x3 sticky notes. Knowing your breed's profile tells you which coverage details to scrutinize.</p>
+          <div className="my-6 max-w-full min-w-0">
+            <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
+              <caption className="text-left font-semibold text-brand-dark p-3">Breed patterns, from the sentences on this page</caption>
+              <thead>
+                <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Pattern</th>
+                  <th scope="col" className="p-3 font-bold text-brand-dark">What this page says</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Large and giant</th>
+                  <td className="p-3">Orthopedic disease, bloat, and some cardiac conditions</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Brachycephalic</th>
+                  <td className="p-3">Airway problems, dental crowding, and eye issues</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Purebred lines</th>
+                  <td className="p-3">Specific hereditary conditions, from heart defects to eye and neurological disorders</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Mixed-breed</th>
+                  <td className="p-3">Broader genetic diversity and lower insurance costs, and not risk-free</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <ComparisonFoot updated="2026-10-10" />
+          <h2>Who should read which term</h2>
+          <p>Read the orthopedic wait and the bilateral rule when the breed is prone to joint disease. Prioritize a high annual limit, and hereditary coverage, when the breed has predictable expensive needs. Enroll early, because the breed-typical conditions are the ones that become exclusions if they appear first.</p>
 
           <h2>Orthopedic Waiting Periods and Bilateral Rules</h2>
-          <p>For breeds prone to joint disease, two policy details are pivotal. First, orthopedic waiting periods can stretch to six months or a year, and any joint problem that appears during the wait is excluded. Second, bilateral-condition rules mean an insurer may treat one affected joint as making the matching joint pre-existing. A 5-compartment letter sorter is how those four breed types stay separate stacks while you read the wait and bilateral language — it is not a pressboard classification folder (that lives on pre-existing-conditions), not hanging file folders (that live on how-to-afford-vet-care), and not a desktop receipt organizer (that lives on how-pet-insurance-works). Owners of orthopedic-prone breeds should favor plans with shorter orthopedic waits and read the bilateral language closely, because these terms directly govern whether the most likely claims will be paid.</p>
+          <p>For breeds prone to joint disease, two policy details are pivotal. First, orthopedic waiting periods can stretch to six months or a year, and any joint problem that appears during the wait is excluded. Second, bilateral-condition rules mean an insurer may treat one affected joint as making the matching joint pre-existing. A 5-compartment letter sorter is how those four breed types stay separate stacks while you read the wait and bilateral language — it is not a pressboard classification folder, not hanging file folders, and not a desktop receipt organizer. Owners of orthopedic-prone breeds should favor plans with shorter orthopedic waits and read the bilateral language closely, because these terms directly govern whether the most likely claims will be paid.</p>
 
           <h2>Coverage Choices for High-Risk Breeds</h2>
-          <p>For a breed with predictable expensive needs, prioritize a high or unlimited annual limit so a single major procedure does not exhaust coverage, confirm that hereditary and congenital conditions are covered, and check orthopedic and bilateral terms. Enroll as early as possible — ideally as a puppy — because the breed-typical conditions are exactly the ones that become pre-existing exclusions if they appear before coverage. A blank pedigree chart is how hereditary and congenital lines stay a written family tree instead of a remembered breed rumor — it is not a pocket-size address book (that lives on choosing-a-veterinarian), not ruled index cards (that live on questions-to-ask-your-vet), and not a reporter notebook (that lives on choosing-a-veterinarian). The goal is a policy whose strengths line up with the breed's likely claims.</p>
+          <p>For a breed with predictable expensive needs, prioritize a high or unlimited annual limit so a single major procedure does not exhaust coverage, confirm that hereditary and congenital conditions are covered, and check orthopedic and bilateral terms. Enroll as early as possible — ideally as a puppy — because the breed-typical conditions are exactly the ones that become pre-existing exclusions if they appear before coverage. A blank pedigree chart is how hereditary and congenital lines stay a written family tree instead of a remembered breed rumor — it is not a pocket-size address book, and not ruled index cards. The goal is a policy whose strengths line up with the breed's likely claims.</p>
 
           <h2>Using Breed Risk Wisely</h2>
           <p>Breed-specific risk is not a reason to avoid insurance; it is a reason to choose it carefully and early. Pair this understanding with our breed health guides to learn the specific conditions your dog or cat may face, then select coverage that protects against them. Predictable risk, planned for in advance, is precisely what insurance handles best.</p>
 
-          <h2 id="kit">Breed-specific-risk kit</h2>
+          <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Everyday physical supplies that match the
-            large-breed, brachycephalic, and
-            hereditary-condition copy on this page
-            — a blank pedigree chart so hereditary
-            and congenital lines stay a written
-            family tree, round color-coding labels
-            so large, brachy, purebred, and mixed
-            risk patterns stay marked, and a
-            5-compartment letter sorter so those
-            four breed types stay separate stacks.
-            These are educational breed-risk /
-            paperwork tools, not a ranked product
-            list, not a substitute for veterinary
-            care, and not a treatment. Pressboard
-            classification folders, letter-size
-            clasp envelopes, and red-and-blue
-            checking pencils already live on
-            pre-existing-conditions. Full-page
-            magnifiers, adjustable copyholders, and
-            line-reader strips already live on
-            reading-the-fine-print. This page does
-            not hop medications or insurance brands
-            as Amazon searches. This page does not
-            claim hands-on testing.
+            Keep these on hand: a blank pedigree chart so hereditary and congenital lines stay a written family tree, round color-coding labels so large, brachy, purebred, and mixed risk patterns stay marked, and a 5-compartment letter sorter so those four breed types stay separate stacks. These are educational breed-risk / paperwork tools, not a ranked product list, not a substitute for veterinary care, and not a treatment.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/blank+pedigree+chart?s=insurance-breed-specific-risk", "/go/amazon-brand/round+color+coding+labels?s=insurance-breed-specific-risk", "/go/amazon-brand/5+compartment+letter+sorter?s=insurance-breed-specific-risk"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (blank pedigree chart /
               round color-coding labels /
               5-compartment letter sorter).
@@ -92,9 +110,9 @@ export default function BreedRiskPage() {
               not a ranked product list, not a
               substitute for veterinary care, no Rx
               / first-aid kit / thermometer /
-              carrier / insurance-brand ASIN hops.
+              carrier / insurance-brand product page buttons.
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or an empty link. Amazon searches only —
               unused vs #1173
               pressboard+classification+folder /
               clasp+envelope+letter+size /
@@ -115,7 +133,7 @@ export default function BreedRiskPage() {
               wall+mounted+magnetic+monthly+planner.
               Carrier quote CTAs stay on
               /go/trupanion and /go/figo —
-              not amazon-brand hops. */}
+              not amazon-brand buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
@@ -138,14 +156,13 @@ export default function BreedRiskPage() {
           </div>
 
           <h2 id="quote">Carriers for High-Risk Breeds</h2>
-          <p>For a breed with predictable expensive needs, the policy features that matter most are a high or unlimited annual limit and clear coverage of hereditary and congenital conditions. The two below are worth quoting on those terms; pair this with your <a href="/breeds">breed health guide</a> and the full <a href="/reviews/best-pet-insurance">best pet insurance comparison</a>, and enroll early so breed-typical conditions are not excluded as pre-existing.</p>
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <p>For a breed with predictable expensive needs, the policy features that matter most are a high or unlimited annual limit and clear coverage of hereditary and congenital conditions. The two below are worth quoting on those terms; pair this with your <a href="/breeds">breed health guide</a> and the full <a href="/reviews/best-pet-insurance">best pet insurance comparison</a>, and enroll early so breed-typical conditions are not excluded as pre-existing. The <a href="/tools/pet-insurance-worth-it-calculator">worth-it calculator</a> turns a quote into the eligible-cost level where the premium pays for itself. It does not adjust that line for breed on its own — the breed shows up in the premium the carrier quotes.</p>
+          <HopDisclosure siteId="vets-co" href={["/go/trupanion/home?s=insurance-breed-specific-risk", "/go/figo/home?s=insurance-breed-specific-risk"]} />
           <ReviewCard
             id="trupanion"
             badge="Unlimited Payouts"
             name="Trupanion"
             subtitle="Unlimited annual payouts, strong for predictable major needs"
-            score={9.0}
             winner
             description={
               <p>The unlimited annual payout structure is a strong fit for breeds with predictable, expensive needs — a single major orthopedic or chronic-disease course will not exhaust an annual cap. Covers hereditary and congenital conditions per its terms. Enroll as a puppy so breed-typical conditions are not later excluded as pre-existing.</p>
@@ -159,7 +176,7 @@ export default function BreedRiskPage() {
             cons={['Premiums can run higher', 'No wellness add-on']}
             price="Quote-based"
             ctaText="Get a Quote →"
-            ctaHref="/go/trupanion/home?s=insurance-breed-specific-risk"
+            ctaHref="/go/trupanion/home?s=insurance-breed-specific-risk" holdWithoutPartnerId
             ctaAffiliateProgram="trupanion"
             ctaAffiliateProduct="home"
           />
@@ -168,12 +185,11 @@ export default function BreedRiskPage() {
             badge="High-Limit Plans"
             name="Figo Pet Insurance"
             subtitle="High and unlimited annual-limit options, app-based claims"
-            score={8.3}
             description={
-              <p>Offers high and unlimited annual-limit tiers, which suits breeds with known expensive risks, plus an app-based claims experience. Compare its hereditary-condition coverage and orthopedic/bilateral terms against Trupanion when you quote. Early enrollment remains the most powerful lever for high-risk breeds.</p>
+              <p>Offers high and unlimited annual-limit tiers, which suits breeds with known expensive risks, plus an app-based claims experience. Compare its hereditary-condition coverage and orthopedic/bilateral terms against Trupanion when you quote; <a href="/reviews/trupanion-vs-figo-guide">Trupanion vs Figo</a> sets the two side by side. Early enrollment remains the most powerful lever for high-risk breeds.</p>
             }
             specs={[
-              { label: 'Annual limit', value: 'Up to unlimited', highlight: 'good' },
+              { label: 'Annual limit', value: 'See the carrier\'s current terms', highlight: 'good' },
               { label: 'Claims', value: 'App-based' },
               { label: 'Model', value: 'Pay-then-claim' },
             ]}
@@ -188,6 +204,13 @@ export default function BreedRiskPage() {
 
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
+                  <ArticleSourcesList
+            title="Sources"
+            sources={[
+            { label: "Trupanion", url: "https://www.trupanion.com/", publisher: "Trupanion" },
+            { label: "Figo", url: "https://figopetinsurance.com/", publisher: "Figo" },
+            ]}
+          />
         </div>
       </ArticleLayout>
     </>

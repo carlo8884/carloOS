@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { AffiliateDisclosure, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ReviewCard, ScoreMethodology, ShopCtas, TableOfContents } from '@carloOS/ui'
+import { ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ReviewCard, ShopCtas, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -61,6 +62,14 @@ export default function SaltElectrolytesPage() {
           { title: 'Summer Heat Care', href: '/care/summer-heat-care' },
           { title: 'Feeding the Performance Horse', href: '/nutrition/feeding-the-performance-horse' },
         ]}
+        heroHop={
+          <>
+            <HopDisclosure siteId="horses-com" href="/go/amazon-brand/plain+white+horse+salt+block?s=nutrition-salt" />
+            <div className="mb-4" data-primary-hop="true">
+              <a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" data-shop-placement="hero" href="/go/amazon-brand/plain+white+horse+salt+block?s=nutrition-salt">Browse a plain white horse salt block on Amazon →</a>
+            </div>
+          </>
+        }
         hero={{
           title: "Salt and Electrolytes for Horses",
           subtitle:
@@ -120,7 +129,7 @@ export default function SaltElectrolytesPage() {
 
           <h2 id="when">When to Supplement</h2>
           <ul>
-            <li><strong>Baseline salt</strong> for every horse, year-round, via loose salt in feed and access to a salt source. A plain white horse salt block is that free-choice source — it is not loose plain white salt (that lives on tying-up) and not an equine salt lick (that lives on the feed calculator).</li>
+            <li><strong>Baseline salt</strong> for every horse, year-round, via loose salt in feed and access to a salt source. A plain white horse salt block is that free-choice source — it is not loose plain white salt and not an equine salt lick.</li>
             <li><strong>Added electrolytes</strong> for horses in hard or prolonged work, especially in heat and humidity.</li>
             <li><strong>After heavy sweating</strong> from competition, long hauls, or hot-weather exertion.</li>
             <li><strong>For poor drinkers and travelers</strong> where salt and electrolytes help maintain the drive to drink.</li>
@@ -129,42 +138,25 @@ export default function SaltElectrolytesPage() {
 
           <h2 id="safe">Using Electrolytes Safely</h2>
           <ul>
-            <li><strong>Always provide water alongside</strong> -- never give concentrated electrolytes to a horse without free access to water, as this worsens dehydration. A wide-mouth horse water bucket is how that water stays in front of the horse — it is not an automatic waterer (that lives on PPID) and not a color-coded flat-back bucket (that lives on strangles).</li>
-            <li><strong>Choose quality products</strong> where salt is the main ingredient, not sugar fillers. A salt-first horse electrolyte powder is how heavy sweat is replaced without a sugar-first mix — it is not the generic horse-electrolytes hop on the emergency and grimace-scale tools.</li>
+            <li><strong>Always provide water alongside</strong> -- never give concentrated electrolytes to a horse without free access to water, as this worsens dehydration. A wide-mouth horse water bucket is how that water stays in front of the horse — it is not an automatic waterer and not a color-coded flat-back bucket.</li>
+            <li><strong>Choose quality products</strong> where salt is the main ingredient, not sugar fillers. A salt-first horse electrolyte powder is how heavy sweat is replaced without a sugar-first mix.</li>
             <li><strong>Introduce gradually</strong> and avoid giving large doses to an empty stomach, which can irritate it.</li>
             <li><strong>Match the dose to the work and losses</strong> rather than over-supplementing an idle horse.</li>
             <li><strong>Consult your vet</strong> for horses with kidney issues or specific medical conditions before adding electrolytes.</li>
           </ul>
 
-          <h2 id="kit">Barn salt-and-water kit</h2>
+          <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Everyday physical supplies that match the
-            year-round-baseline-salt, sweat-replacement,
-            and always-provide-water copy on this page — a
-            plain white horse salt block so every horse
-            has a free-choice source, a salt-first
-            electrolyte powder so heavy sweat is not
-            replaced with sugar, and a wide-mouth water
-            bucket so electrolytes are never given
-            without water. These are educational barn
-            tools, not a ranked product list, not a
-            substitute for veterinary care, and not
-            loose plain white salt (that lives on
-            tying-up), a generic horse-electrolytes hop
-            (that lives on the emergency tools), or an
-            equine salt lick (that lives on the feed
-            calculator). This page does not
-            claim hands-on testing. </p>
+            Keep these on hand: a plain white horse salt block so every horse has a free-choice source, a salt-first electrolyte powder so heavy sweat is not replaced with sugar, and a wide-mouth water bucket so electrolytes are never given without water. These are educational barn tools, not a ranked product list, not a substitute for veterinary care, and not loose plain white salt and not an equine salt lick. </p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (plain white horse salt block /
               salt first horse electrolyte powder /
               wide mouth horse water bucket).
               Educational barn tools only; no Rx /
-              vaccine ASIN hops. ShopCtas hides empty
-              Chewy; never href="#" or PLACEHOLDER.
+              vaccine product page buttons. ShopCtas hides empty
+              Chewy; never href="#" or an empty link.
               Unused vs #1108
               stainless+horse+shedding+blade /
               wicking+horse+anti+sweat+sheet /
@@ -208,18 +200,15 @@ export default function SaltElectrolytesPage() {
           </div>
 
           <h2 id="picks">Salt and Electrolyte Picks</h2>
-          <p>A few widely-stocked options covering year-round baseline salt and sweat-replacement electrolytes. Always provide free-choice water alongside any electrolyte, and favor products where salt — not sugar — is the leading ingredient. This is a documented-spec comparison drawing on standard US equestrian retail; this page does not claim hands-on testing.</p>
+          <p>A few widely-stocked options covering year-round baseline salt and sweat-replacement electrolytes. Always provide free-choice water alongside any electrolyte, and favor products where salt — not sugar — is the leading ingredient.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
-          <ScoreMethodology />
 
-          <ReviewCard
+          <ReviewCard quietUntilTag
             id="plain-salt-block"
             badge="Year-Round Baseline"
             name="Plain White Salt Block / Loose Salt"
             subtitle="The free-choice baseline every horse needs"
-            score={8.7}
             winner
             description={<>
               <p>Plain white salt — as a free-choice block or, better for reliable intake, loose salt top-dressed on feed — is the year-round baseline every horse needs to meet sodium requirements. Loose salt is easier for most horses to consume in adequate amounts than a hard block, which some horses underuse. Inexpensive and foundational; address baseline salt before any flavored electrolyte.</p>
@@ -232,19 +221,19 @@ export default function SaltElectrolytesPage() {
             ]}
             pros={['Meets baseline sodium need', 'Very inexpensive', 'Loose form ensures adequate intake', 'No sugar fillers']}
             cons={['Hard blocks can be underconsumed', 'Not sufficient alone for heavy sweat losses']}
-            price="$8–25"
-            ctaText="Compare at SmartPak →"
+            price="see current price"
+            priceNote="dated 2026-06-01."
+            ctaText="Compare plain loose salt at SmartPak →"
             ctaHref="/go/smartpak/plain-loose-salt?s=nutrition-salt-and-electrolytes"
             ctaAffiliateProgram="smartpak"
             ctaAffiliateProduct="plain-loose-salt"
           />
 
-          <ReviewCard
+          <ReviewCard quietUntilTag
             id="sweat-electrolyte"
             badge="Sweat Replacement"
             name="Salt-First Sweat-Replacement Electrolyte"
             subtitle="For horses in heavy work or hot, humid conditions"
-            score={8.5}
             description={<>
               <p>A quality sweat-replacement electrolyte supplies sodium, chloride, and potassium in proportions that reflect equine sweat losses — for horses working hard, traveling, or sweating in heat and humidity. The key selection criterion from the section above: salt should be the leading ingredient, not sugar. Always offer water alongside, and match the dose to actual work and losses rather than over-supplementing an idle horse.</p>
               <p>Most relevant for performance, endurance, and traveling horses, and any horse sweating heavily in hot, humid weather.</p>
@@ -256,8 +245,9 @@ export default function SaltElectrolytesPage() {
             ]}
             pros={['Replaces sweat-specific losses', 'Supports recovery after hard work', 'Paste and powder formats available']}
             cons={['Useless without water alongside', 'Sugar-heavy products are poor value', 'Over-dosing an idle horse is wasteful']}
-            price="$20–50"
-            ctaText="Compare at Riding Warehouse →"
+            price="see current price"
+            priceNote="dated 2026-06-01."
+            ctaText="Compare a sweat-replacement electrolyte at Riding Warehouse →"
             ctaHref="/go/ridingwarehouse/sweat-replacement-electrolyte?s=nutrition-salt-and-electrolytes"
             ctaAffiliateProgram="ridingwarehouse"
             ctaAffiliateProduct="sweat-replacement-electrolyte"

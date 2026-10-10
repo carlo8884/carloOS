@@ -10,6 +10,7 @@
  * Authorities: USTA, AAEP
  */
 
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import {
   buildMetadata,
@@ -19,7 +20,6 @@ import {
   RelatedLinks,
   TableOfContents,
   FAQAccordion,
-  AffiliateDisclosure,
   ShopCtas,
   buildArticleSchema,
   SchemaScript,
@@ -187,19 +187,8 @@ export default function HarnessRacingPage() {
             <li>International Trotting Association (UET). International rules of trotting. uet-trotting.com.</li>
           </ol>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href="/go/amazon-brand/horse+saddle+pad?s=racing-harness-racing" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated horse harness trot-pace chart /
-              horse stall-door USTA Standardbred card /
-              equine sulky-harness handbook).
-              No existing product hop to keep.
-              Educational barn searches only; no Rx /
-              vaccine / flea / heartworm / nsaid hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs thoroughbred-flat-racing /
-              racing-hub hops.
-              Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
@@ -208,7 +197,7 @@ export default function HarnessRacingPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/horse+saddle+pad?s=racing-harness-racing"
-                amazonLabel="Shop on Amazon"
+                amazonLabel="Browse horse saddle pads on Amazon →"
               />
           </div>
           </div>

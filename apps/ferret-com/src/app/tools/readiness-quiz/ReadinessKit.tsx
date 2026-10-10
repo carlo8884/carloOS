@@ -4,22 +4,21 @@
  * Interactive new-owner readiness kit — /tools/readiness-quiz
  *
  * Day-one packing list a prospective ferret household should have ready
- * before arrival. Check items off as you gather them. Each row hops to
- * a live Amazon search via /go/amazon-brand (never PLACEHOLDER, never
- * href="#"). Chewy stays hidden until a Chewy tag is live.
+ * before arrival. Check items off as you gather them. This list does not
+ * render a shop button. The page below opens the Ferret Nation double
+ * unit, plus the kibble and carrier searches. The sleep-sack and
+ * wood-pellet searches are not buttons.
  */
 
 import { useMemo, useState } from 'react'
-import { ShopCtas } from '@carloOS/ui'
-
 const SOURCE = 'tools-readiness-quiz'
 
 interface KitItem {
   id: string
   name: string
   detail: string
-  amazonHref: string
-  amazonLabel: string
+  amazonHref?: string
+  amazonLabel?: string
 }
 
 const KIT: KitItem[] = [
@@ -28,32 +27,28 @@ const KIT: KitItem[] = [
     name: 'Multi-level cage',
     detail:
       'A multi-level cage with solid floors (or fleece-covered wire) and bar spacing of one inch or less is the usual day-one habitat. Size the footprint with the cage-size calculator — the cage is the bedroom, not the house. Ferrets still need several hours of supervised out-of-cage time daily.',
-    amazonHref: `/go/amazon-brand/ferret+nation+critter+nation+double+unit?s=${SOURCE}`,
-    amazonLabel: 'Browse multi-level cages on Amazon →',
+    amazonHref: `/go/amazon/B0054U8UGW?s=${SOURCE}`,
+    amazonLabel: 'Browse Ferret Nation / Critter Nation double units on Amazon →',
   },
   {
     id: 'litter',
     name: 'Corner pans and pellet litter',
     detail:
       'High-back corner pans plus paper or heat-treated wood pellets. Never clumping clay — dust and gut blockage risk. Plan one pan per ferret plus one extra; the litter planner turns headcount into pans and 30 lb bags.',
-    amazonHref: `/go/amazon-brand/compressed+wood+pellet+litter+heat+treated+non+clumping?s=${SOURCE}`,
-    amazonLabel: 'Browse wood pellet litter on Amazon →',
   },
   {
     id: 'food',
     name: 'High-protein ferret food',
     detail:
-      'A named-meat, high-protein kibble (or the diet the ferret is already on, so you do not switch on day one). Check the bag against published ferret nutrient targets with the food evaluator before you buy a second brand.',
+      'A named-meat, high-protein kibble (or the diet the ferret is already on, so you do not switch on day one). The food evaluator’s cutoffs are a planning figure, not a published nutrient profile.',
     amazonHref: `/go/amazon-brand/high+protein+ferret+food+kibble?s=${SOURCE}`,
-    amazonLabel: 'Browse ferret food on Amazon →',
+    amazonLabel: 'Browse high-protein ferret kibble on Amazon →',
   },
   {
     id: 'hammock',
     name: 'Hammock or sleep sack',
     detail:
       'Fleece hammocks and sleep sacks are the usual sleeping spots — not loose shavings. Ferrets burrow; a washable sack on each level keeps them off wire floors and off aromatic wood chips.',
-    amazonHref: `/go/amazon-brand/ferret+sleep+sack+fleece?s=${SOURCE}`,
-    amazonLabel: 'Browse hammocks and sleep sacks on Amazon →',
   },
   {
     id: 'dig-box',
@@ -69,7 +64,7 @@ const KIT: KitItem[] = [
     detail:
       'Needed on day one for the ride home and every vet trip after. A small hard-sided carrier with a secure latch is the usual pick; leave it out as a nap spot so it does not become a vet-only box.',
     amazonHref: `/go/amazon-brand/ferret+carrier+hard+sided?s=${SOURCE}`,
-    amazonLabel: 'Browse ferret carriers on Amazon →',
+    amazonLabel: 'Browse hard-sided ferret carriers on Amazon →',
   },
 ]
 
@@ -101,7 +96,7 @@ export default function ReadinessKit() {
   return (
     <div className="rounded-lg border border-brand-border bg-brand-surface p-6 sm:p-8">
       <div className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-        New-owner kit
+        Supplies named on this page
       </div>
       <h3 className="font-display text-xl font-bold text-brand-dark mb-2">
         Pack before a ferret comes home
@@ -109,7 +104,7 @@ export default function ReadinessKit() {
       <p className="text-sm leading-relaxed text-brand-text-mid mb-4">
         A typical new-owner kit is a multi-level cage, corner pans and pellet
         litter, a high-protein food, a hammock or sleep sack, a dig box, and a
-        hard-sided carrier. Check items off as you gather them. Amazon hops are
+        hard-sided carrier. Check items off as you gather them. Amazon buttons open
         search results for those categories — not a ranked product list, and not
         a substitute for confirming legality, housing rules, and an
         exotics-experienced veterinarian first.

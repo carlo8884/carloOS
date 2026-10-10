@@ -1,6 +1,7 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, buildMetadata, ArticleLayout, FAQAccordion, BreedHealthCard, RelatedLinks, ShopCtas, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, BreedHealthCard, RelatedLinks, ShopCtas, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
@@ -64,7 +65,7 @@ export default function BeaglePage() {
 
         <BreedHealthCard name="Hypothyroidism" riskLevel="moderate" description="Low thyroid hormone production — causes weight gain, lethargy, cold intolerance, and skin and coat changes. Blood test (total T4, free T4) diagnoses it. Highly manageable with daily oral levothyroxine — most dogs normalize fully within weeks of starting treatment." signs={['Weight gain without diet change', 'Lethargy', 'Coat thinning, skin thickening', 'Cold intolerance']} management="Daily levothyroxine oral medication. T4 levels monitored at 4-6 weeks after starting, then every 6 months. Lifelong treatment." />
 
-        <BreedHealthCard name="Obesity" riskLevel="very-high" description="Beagles are among the most obesity-prone breeds — they will eat everything available and never self-regulate. Obesity worsens joint health, cardiac function, and metabolic disease. Body condition scoring monthly is essential. Feed by measured portion, not free choice, always." signs={['Cannot feel ribs without pressing', 'No visible waist from above', 'Reluctance to exercise']} management="Measured portions at consistent times. No free feeding. Limit treats to under 10% of daily caloric intake. Daily exercise 30-60 minutes minimum." />
+        <BreedHealthCard name="Obesity" riskLevel="very-high" description="Beagles are among the most obesity-prone breeds — they will eat everything available and never self-regulate. Obesity worsens joint health, cardiac function, and metabolic disease. Body condition scoring monthly is essential. Feed by measured portion, not free choice, always." signs={['Cannot feel ribs without pressing', 'No visible waist from above', 'Reluctance to exercise']} management="Measured portions at consistent times. No free feeding. The WSAVA guide to treats for dogs states that treats should make up no more than 10% of a dog’s daily calorie intake (https://wsava.org/wp-content/uploads/2025/11/WSAVA_GuidetoTreats_Dogs_251107.pdf). Daily exercise 30-60 minutes minimum." />
 
         <h2>Exercise and Enrichment</h2>
         <p>30-60 minutes of exercise daily minimum — nose work, leash walks, or fenced yard time. Mental stimulation is equally important: snuffle mats, food puzzles, and nose work classes address the Beagle's primary cognitive need. An under-stimulated Beagle becomes a destructive, vocal Beagle.</p>
@@ -77,14 +78,16 @@ export default function BeaglePage() {
             Shop related supplies
           </div>
           <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href="/go/amazon-brand/dog+leash?s=breed-beagle" />
           <div className="flex flex-col gap-3 mt-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/dog+leash?s=breed-beagle"
-              amazonLabel="Shop on Amazon"
+              amazonLabel="Browse dog leash on Amazon →"
             />
           </div>
         </div>
+
+        <p>Harnesses for this breed are compared in the <Link href="/reviews/best-dog-harnesses">dog harness review</Link>.</p>
 
         <h2>Frequently Asked Questions</h2>
         <FAQAccordion items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />

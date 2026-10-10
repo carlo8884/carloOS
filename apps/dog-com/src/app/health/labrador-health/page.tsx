@@ -1,5 +1,7 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfContents, CrossPortfolioCard, StockImage, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import Link from 'next/link'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfContents, CrossPortfolioCard, StockImage, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import { BreedHealthCard } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
@@ -8,8 +10,7 @@ import { crossSiteHref } from '@carloOS/config'
 const SOURCES = [
   { label: 'Orthopedic Foundation for Animals (OFA): Labrador Retriever Hip and Elbow Dysplasia Statistics', url: 'https://www.ofa.org', publisher: 'OFA' },
   { label: 'Raffan E et al. A deletion in the canine POMC gene is associated with weight and appetite in obesity-prone Labrador Retriever dogs. Cell Metab. 2016;23(5):893-900.', publisher: 'Cell Metabolism' },
-  { label: 'AVMA: Labrador Retriever Common Health Conditions', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/common-health-conditions-dogs', publisher: 'AVMA' },
-  { label: 'Merck Veterinary Manual: Hip Dysplasia in Dogs', url: 'https://www.merckvetmanual.com/musculoskeletal-system/joint-diseases-of-dogs-and-cats/hip-dysplasia-in-dogs', publisher: 'Merck Vet Manual' },
+  { label: 'Merck Veterinary Manual: Hip Dysplasia in Dogs', url: 'https://www.merckvetmanual.com/musculoskeletal-system/arthropathies-and-related-disorders-in-small-animals/hip-dysplasia-in-dogs', publisher: 'Merck Vet Manual' },
 ]
 
 
@@ -22,7 +23,7 @@ export const metadata: Metadata = buildMetadata({
 })
 
 const FAQS = [
-  { question: 'Why is my Labrador always hungry?', answer: 'It is biology, not bad manners. Cambridge researchers identified a mutation in the POMC gene — extremely common in the breed — that disrupts the brain\'s satiety signaling: affected Labs do not receive normal "I am full" signals after eating. That is not an excuse to overfeed; it is the explanation for why strict portion control matters more in Labs than in almost any other breed. Measure every meal, never free-feed, and count treats toward the daily total (maximum 10% of calories).' },
+  { question: 'Why is my Labrador always hungry?', answer: 'It is biology, not bad manners. Cambridge researchers identified a mutation in the POMC gene — extremely common in the breed — that disrupts the brain\'s satiety signaling: affected Labs do not receive normal "I am full" signals after eating. That is not an excuse to overfeed; it is the explanation for why strict portion control matters more in Labs than in almost any other breed. Measure every meal, never free-feed, and count treats toward the daily total. The WSAVA guide to treats for dogs states that treats should make up no more than 10% of a dog\'s daily calorie intake (https://wsava.org/wp-content/uploads/2025/11/WSAVA_GuidetoTreats_Dogs_251107.pdf).' },
   { question: 'Does keeping a Labrador lean really extend its life?', answer: 'Yes — by the most compelling dietary longevity data in canine medicine. The 2002 Purina Life Span Study found lean Labs lived 1.8 years longer than their slightly overweight littermates, and obesity — which affects over half of US Labs — accelerates joint disease, raises cancer and diabetes risk, and shortens lifespan by 2+ years. Aim for a body condition score of 4–5 out of 9, where the ribs are easily felt but not visible, and score monthly.' },
   { question: 'What is Exercise-Induced Collapse (EIC) in Labradors?', answer: 'A genetic condition essentially unique to Labs and a few related breeds: after 5–20 minutes of strenuous activity, an affected dog loses hindlimb coordination and muscle tone and collapses, then recovers fully within 5–25 minutes and looks completely normal at rest. It is caused by a recessive DNM1 mutation — dogs with two copies are at risk; carriers do not collapse. There is no treatment; management is avoiding triggering exercise intensity. If your Lab has ever collapsed after hard exercise, ask your veterinarian about EIC DNA testing.' },
   { question: 'How do I prevent ear infections in my Lab?', answer: 'Labs\' floppy ears trap moisture, and swimmers are at particular risk — ear infections are among the most common reasons Labs see the vet, and most are preventable. The routine on this page: check ears weekly, dry the coat with an absorbent microfiber dog towel after every swim or bath so water does not drip back into the canal, then dry the ears with a veterinary ear drying solution (never cotton swabs into the canal), and have infections treated promptly — untreated infections progress and become harder to resolve. Weekly cleaning with a veterinary ear cleaner stays on the sister ear-infections page. Chronic recurrences warrant cytology with your veterinarian to identify the organism.' },
@@ -117,7 +118,7 @@ export default function LabradorHealthPage() {
           riskLevel="very-high"
           description="Obesity affects over 50% of Labrador Retrievers in the United States. The consequences are not cosmetic: obesity directly accelerates joint disease (hip and elbow dysplasia), increases cancer risk, contributes to diabetes, shortens lifespan by 2+ years, and significantly reduces quality of life. A 2002 Purina Life Span Study found that lean Labs lived 1.8 years longer than their slightly overweight littermates — the most compelling dietary longevity data in canine medicine."
           signs={['Cannot feel ribs without pressing firmly', 'No visible waist when viewed from above', 'Belly does not tuck when viewed from side', 'Reduced exercise tolerance', 'Reluctance to engage in activities they previously enjoyed']}
-          management="Measure every meal — no free-feeding, ever. Treats count toward daily caloric intake (maximum 10% of calories). Use a measuring cup, not estimation. Weigh your Lab monthly. Body condition score is more useful than scale weight — aim for a score of 4–5 out of 9 where ribs are easily felt but not visible. Switch to a weight management formula if your Lab trends above ideal weight. Two measured meals daily minimum."
+          management="Measure every meal — no free-feeding, ever. The WSAVA guide to treats for dogs states that treats should make up no more than 10% of a dog’s daily calorie intake (https://wsava.org/wp-content/uploads/2025/11/WSAVA_GuidetoTreats_Dogs_251107.pdf). Use a measuring cup, not estimation. Weigh your Lab monthly. Body condition score is more useful than scale weight — aim for a score of 4–5 out of 9 where ribs are easily felt but not visible. Switch to a weight management formula if your Lab trends above ideal weight. Two measured meals daily minimum."
         />
 
         <h2 id="joints">Hip &amp; Elbow Dysplasia</h2>
@@ -172,7 +173,7 @@ export default function LabradorHealthPage() {
           management="Check ears weekly. After every swim or bath, dry the coat with an absorbent microfiber dog towel so water does not drip back into the canal, then dry the ears with a veterinary ear drying solution — not cotton swabs into the canal. Weekly veterinary ear-cleaner and cotton-ball wipe routine stays on the sister ear-infections page. Treat infections promptly — untreated ear infections progress and become harder to resolve. Chronic or recurring infections warrant cytology to identify the specific organism and guide treatment."
         />
 
-        <p>Everyday physical swim-ear drying — not a treatment for an active infection — starts with an absorbent microfiber dog towel after the swim so the wet coat does not drip back into floppy Lab ears, then a veterinary ear drying solution in the visible canal. These are post-swim drying tools. They are not a prescription ear drop, they do not replace cytology for recurring infections, and they are not the weekly veterinary ear-cleaner / cotton-ball wipe that lives on the sister <a href="/health/dog-ear-infections">dog ear infections</a> page. Cotton swabs stay out of the canal. Ask your veterinarian whether a towel-plus-drying-solution routine fits this dog.</p>
+        <p>Everyday physical swim-ear drying — not a treatment for an active infection — starts with an absorbent microfiber dog towel after the swim so the wet coat does not drip back into floppy Lab ears, then a veterinary ear drying solution in the visible canal. These are post-swim drying tools. <a href="/health/dog-ear-infections">dog ear infections</a> page. Cotton swabs stay out of the canal. Ask your veterinarian whether a towel-plus-drying-solution routine fits this dog.</p>
 
         <h2 id="preventive">Preventive Care Schedule for Labs</h2>
 
@@ -192,18 +193,18 @@ export default function LabradorHealthPage() {
 
         <p>Minimum health testing for a reputable Lab breeder: OFA hip evaluation, OFA elbow evaluation, CAER eye examination (current, annual), OFA cardiac evaluation, EIC DNA test, and prcd-PRA DNA test. Request documentation for all of these — not verbal assurances. A breeder who cannot provide this documentation is not a reputable breeder regardless of how nice their website looks.</p>
 
-        <h2 id="kit">Swim-ear kit</h2>
-        <p>Everyday physical supplies that match the swim-ear copy above — an absorbent microfiber dog towel to dry the coat after a swim or bath so water does not drip back into the canal, plus a veterinary ear drying solution for the ears themselves. These are post-swim drying tools, not treatments. They do not treat an active ear infection, they do not replace cytology, and they do not replace a veterinarian. Veterinary ear cleaners, cotton balls, and cotton swabs stay educational copy only — the weekly cleaner / cotton-ball wipe lives on the sister <a href="/health/dog-ear-infections">dog ear infections</a> page. Measuring cups, digital pet scales, slow-feeders, chlorhexidine shampoo, hypoallergenic washcloths, nightlights, fish oil, glucosamine, and prescription ear drops stay off this kit. This page does not claim hands-on testing.</p>
+        <h2 id="kit">Supplies named on this page</h2>
+        <p>Keep these on hand: an absorbent microfiber dog towel to dry the coat after a swim or bath so water does not drip back into the canal, plus a veterinary ear drying solution for the ears themselves. These are post-swim drying tools, not treatments. They do not treat an active ear infection, they do not replace cytology, and they do not replace a veterinarian. Veterinary ear cleaners, cotton balls, and cotton swabs stay educational copy only — the weekly cleaner / cotton-ball wipe lives on the sister <a href="/health/dog-ear-infections">dog ear infections</a> page. Measuring cups, digital pet scales, slow-feeders, chlorhexidine shampoo, hypoallergenic washcloths, nightlights, fish oil, glucosamine, and prescription ear drops stay off this kit.</p>
 
-        <AffiliateDisclosure variant="inline" siteId="dog-com" />
+        <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/microfiber+dog+towel?s=health-labrador-health", "/go/amazon-brand/dog+ear+drying+solution?s=health-labrador-health"]} />
 
-        {/* Money path — live amazon-brand search hops (microfiber
+        {/* Shop note — live amazon-brand search buttons (microfiber
             dog towel / ear drying solution). ShopCtas hides
-            empty Chewy; never href="#" or PLACEHOLDER.
-            Category searches only. Veterinary ear cleaners,
+            empty Chewy; never href="#" or an empty link.
+            Amazon searches only. Veterinary ear cleaners,
             cotton balls, cotton swabs, measuring cups, pet
             scales, slow-feeders, chlorhexidine shampoo,
-            washcloths, and nightlights are not shoppable hops. */}
+            washcloths, and nightlights are not shoppable buttons. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
             Shop related supplies
@@ -221,6 +222,7 @@ export default function LabradorHealthPage() {
           </div>
         </div>
 
+        <p>Joint supplements for this breed are compared in the <Link href="/reviews/best-joint-supplements">joint supplement review</Link>.</p>
         <h2 id="faq">FAQ</h2>
         <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
 

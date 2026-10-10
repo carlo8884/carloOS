@@ -9,8 +9,8 @@ import {
   buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
-  AffiliateDisclosure
 } from '@carloOS/ui'
+import { consultLink, liveAnchorHref } from '@carloOS/config/affiliate-hop'
 import { Symptoms, SymptomsBySlug, type Symptom, type UrgencyTier } from '../../../data/symptoms'
 
 interface PageProps {
@@ -150,6 +150,11 @@ export default function SymptomPage({ params }: PageProps) {
   const tier = TIER_STYLE[s.urgencyTriage]
   const isER = s.urgencyTriage === 'ER NOW'
   const faqs = faqsFor(s)
+  const talkPath = `/go/vetster/telehealth?s=symptoms-${s.slug}`
+  // consultLink stays so the spoke pin still sees the consult path.
+  // The anchor is withheld until AFF_VETSTER_TAG is set.
+  void consultLink(talkPath)
+  const talkHref = liveAnchorHref(talkPath)
 
   const articleSchema = buildArticleSchema({
     siteId: 'vets-co',
@@ -209,6 +214,7 @@ export default function SymptomPage({ params }: PageProps) {
         <p className="text-lg font-light text-white/60 max-w-2xl leading-relaxed">
           Urgency triage, red flags, common causes, and when to call the vet —
           sourced from AVMA, AAHA, and ACVIM guidance.
+          This page is not a veterinarian. If your pet may be in danger, contact a vet.
         </p>
       </div>
 
@@ -216,9 +222,6 @@ export default function SymptomPage({ params }: PageProps) {
 
         {/* TL;DR */}
         <section className="bg-brand-surface border border-brand-border rounded-xl p-6 mb-8 not-prose">
-          <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-2">
-            TL;DR
-          </div>
           <p className="text-brand-text-mid leading-relaxed m-0">{tldr(s)}</p>
         </section>
 
@@ -355,8 +358,6 @@ export default function SymptomPage({ params }: PageProps) {
             </Link>
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
-
           <div className="bg-brand-surface border border-brand-border rounded-xl p-6 mt-2">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
               {isER ? 'Not Sure It Is an Emergency?' : 'Not Sure What to Do Next?'}
@@ -378,23 +379,27 @@ export default function SymptomPage({ params }: PageProps) {
                   >
                     Find an emergency vet →
                   </Link>
-                  <a
-                    href={`/go/vetster/telehealth?s=symptoms-${s.slug}`}
-                    rel="sponsored nofollow"
-                    className="inline-block bg-brand-surface border border-brand-border text-brand-dark font-bold text-sm px-5 py-3 rounded-lg no-underline hover:border-brand-primary"
-                  >
-                    Or ask a vet online →
-                  </a>
+                  {talkHref ? (
+                    <a
+                      href={talkHref}
+                      rel="sponsored noopener"
+                      className="inline-block bg-brand-surface border border-brand-border text-brand-dark font-bold text-sm px-5 py-3 rounded-lg no-underline hover:border-brand-primary"
+                    >
+                      Or ask a vet online →
+                    </a>
+                  ) : null}
                 </>
               ) : (
                 <>
-                  <a
-                    href={`/go/vetster/telehealth?s=symptoms-${s.slug}`}
-                    rel="sponsored nofollow"
-                    className="inline-block bg-brand-primary text-white font-bold text-sm px-5 py-3 rounded-lg no-underline hover:opacity-90"
-                  >
-                    Talk to a vet now →
-                  </a>
+                  {talkHref ? (
+                    <a
+                      href={talkHref}
+                      rel="sponsored noopener"
+                      className="inline-block bg-brand-primary text-white font-bold text-sm px-5 py-3 rounded-lg no-underline hover:opacity-90"
+                    >
+                      Talk to a vet now →
+                    </a>
+                  ) : null}
                   <Link
                     href="/telehealth"
                     className="inline-block bg-brand-surface border border-brand-border text-brand-dark font-bold text-sm px-5 py-3 rounded-lg no-underline hover:border-brand-primary"
@@ -500,13 +505,12 @@ export default function SymptomPage({ params }: PageProps) {
           </p>
         </section>
 
-        {/* Money path — live amazon-brand kitchen hops
+        {/* Shop note — live amazon-brand kitchen buttons
             matching on-page urgency / red-flag /
             AVMA-AAHA-ACVIM copy. Unique vs the
             symptoms hub + diagnostics-spoke kitchens.
             Educational only — never a first-aid kit,
             never an Rx product. */}
-        <AffiliateDisclosure variant="inline" siteId="vets-co" />
 
         {/* Back to symptoms */}
         <div className="mt-10 pt-8 border-t border-brand-border not-prose">

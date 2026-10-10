@@ -1,18 +1,20 @@
 'use client'
 
+import { HopDisclosure } from '../../../components/HopDisclosure'
+
 /**
  * Dog Water Intake Calculator -- /tools/dog-water-intake-calculator
  *
  * Client compute component. Estimates a dog's typical daily water need from
- * body weight using the standard husbandry rule of thumb: roughly half an ounce
- * to one ounce of water per pound of body weight per day (≈ 50–65 ml/kg).
+ * body weight. Half an ounce to one ounce per pound per day is a planning
+ * figure, not a published requirement.
  *
  * Husbandry guidance only -- NOT a clinical tool. Persistent increases or
  * decreases in drinking can signal disease; the page defers those to a vet.
  */
 
 import { useMemo, useState } from 'react'
-import { AffiliateDisclosure, ResultMeaning, ToolError, numberFieldError } from '@carloOS/ui'
+import { ResultMeaning, ToolError, numberFieldError } from '@carloOS/ui'
 
 type Unit = 'lb' | 'kg'
 
@@ -80,7 +82,7 @@ function resultShop(highOz: number): {
     blurb:
       'The estimate is a typical daily range, not a quota to enforce. A heavy ceramic water bowl keeps fresh water available so you can see how much was offered versus what was left. Pair it with a measuring cup if you want the ounces and cups in numbers. This tool does not diagnose thirst — a marked, lasting change in drinking is worth a veterinary call.',
     href: `/go/amazon-brand/heavy+ceramic+pet+water+bowl?s=${SHOP_SOURCE}`,
-    label: 'Browse ceramic pet water bowls on Amazon →',
+    label: 'Browse heavy ceramic pet water bowls on Amazon →',
   }
 }
 
@@ -153,7 +155,8 @@ export default function DogWaterIntakeCalculator() {
         </p>
         <p className="mt-3 text-sm leading-relaxed text-brand-text-mid">
           The lower end suits a calm day indoors; the upper end reflects a hot day, hard exercise, or a
-          dry-kibble diet (canned food supplies a lot of water on its own). This is total water — what your
+          dry-kibble diet (canned food supplies a lot of water on its own). The half-ounce to one-ounce
+          band is a planning figure, not a published requirement. This is total water — what your
           dog drinks plus the moisture in its food.
         </p>
         <ResultMeaning>
@@ -162,16 +165,19 @@ export default function DogWaterIntakeCalculator() {
       </div>
       )}
 
-      {shop && (
+      {result && shop && (
       <div className="mt-6 rounded-lg border border-brand-border bg-brand-white p-5">
         <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
           Next step
         </p>
         <p className="font-display text-base font-semibold leading-snug text-brand-text-dark">
-          {shop.heading}
+          <a href="/tools/dog-calorie-calculator" className="text-brand-primary underline underline-offset-2">Pair the ounces with a daily portion →</a>
         </p>
         <p className="mt-1 text-sm leading-relaxed text-brand-text-mid">{shop.blurb}</p>
-        <AffiliateDisclosure variant="inline" siteId="dog-com" className="my-3" />
+        <HopDisclosure siteId="dog-com" href={shop.href} />
+        <a href={shop.href} rel="sponsored noopener" className="inline-block font-semibold text-brand-primary underline underline-offset-2">
+          {shop.label}
+        </a>
       </div>
       )}
 

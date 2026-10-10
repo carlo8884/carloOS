@@ -126,6 +126,23 @@ export default function FerretAgeCalculator() {
           <ResultMeaning>
             Human-equivalent age is a planning chart for this life stage. It is an approximation, not a biological clock.
           </ResultMeaning>
+          <p className="mt-4 text-sm">
+            <a href="/diet/best-ferret-kibble" className="inline-block max-w-full whitespace-normal font-semibold text-brand-primary underline underline-offset-2">
+              Next: ferret kibble guide
+            </a>
+          </p>
+          <ul className="mt-2 space-y-2 text-sm">
+            <li>
+              <a href="/health/insulinoma" className="inline-block max-w-full whitespace-normal font-semibold text-brand-primary underline underline-offset-2">
+                Insulinoma in Ferrets
+              </a>
+            </li>
+            <li>
+              <a href="/ownership/cost-of-owning-a-ferret" className="inline-block max-w-full whitespace-normal font-semibold text-brand-primary underline underline-offset-2">
+                The Cost of Owning a Ferret
+              </a>
+            </li>
+          </ul>
         </div>
       )}
 

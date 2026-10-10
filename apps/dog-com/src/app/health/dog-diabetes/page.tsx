@@ -1,15 +1,15 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfContents, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfContents, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 
 const SOURCES = [
-  { label: 'Merck Veterinary Manual: Diabetes Mellitus in Dogs', url: 'https://www.merckvetmanual.com/endocrine-system/the-pancreas/diabetes-mellitus-in-dogs', publisher: 'Merck Vet Manual' },
+  { label: 'Merck Veterinary Manual: Diabetes Mellitus in Dogs', url: 'https://www.merckvetmanual.com/endocrine-system/the-pancreas/diabetes-mellitus-in-dogs-and-cats', publisher: 'Merck Vet Manual' },
   { label: 'ACVIM: Consensus Statement on the Diagnosis and Management of Diabetes Mellitus in Dogs and Cats', url: 'https://www.acvim.org', publisher: 'ACVIM' },
-  { label: 'AVMA: Diabetes Mellitus in Pets', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/diabetes-mellitus-pets', publisher: 'AVMA' },
-  { label: 'FDA CVM: Vetsulin (porcine insulin zinc suspension) — FDA-Approved for Canine Diabetes', url: 'https://www.fda.gov/animal-veterinary/approved-animal-drug-products/nada-141-236-vetsulin', publisher: 'FDA CVM' },
+  { label: 'AVMA: Diabetes Mellitus in Pets', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/diabetes-pets', publisher: 'AVMA' },
 ]
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Diabetes in Dogs — Signs, Insulin Treatment | Dog.com', description: 'Canine diabetes: PU/PD signs, why insulin injection is the treatment (not oral medication), blood glucose curves, and long-term management. research-based.', path: '/health/dog-diabetes', type: 'article' })
@@ -19,7 +19,7 @@ const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Diabetes in Dogs'
 const med = buildMedicalWebPageSchema({ name: 'Diabetes in Dogs', description: 'Canine diabetes mellitus — signs, insulin, and management.', url: 'https://dog.com/health/dog-diabetes', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
 const FAQS = [
   { question: 'What are the first signs of diabetes in dogs?', answer: 'The classic "four Ps": polyuria (urinating more), polydipsia (drinking more), polyphagia (eating more), and weight loss despite the increased appetite. Additional signs include rapidly developing cataracts (canine diabetics are uniquely prone to these, sometimes within weeks of diagnosis), recurring urinary tract infections, and lethargy. A dog drinking and urinating dramatically more while losing weight should be tested by a veterinarian promptly.' },
-  { question: 'Can dog diabetes be treated with pills instead of insulin?', answer: 'No. Dogs require insulin injections — oral antidiabetic medications used in human type 2 diabetes (metformin, glipizide) are not effective for canine diabetes. Canine diabetes is typically insulin-deficient, similar to human type 1, and oral medications work by mechanisms inadequate for that physiology. The standard treatment is twice-daily insulin (Vetsulin — the only FDA-approved insulin for dogs in the US — or human NPH insulin under veterinary guidance) given at consistent times with meals.' },
+  { question: 'Can dog diabetes be treated with pills instead of insulin?', answer: 'No. Dogs require insulin injections — oral antidiabetic medications used in human type 2 diabetes (metformin, glipizide) are not effective for canine diabetes. Canine diabetes is typically insulin-deficient, similar to human type 1, and oral medications work by mechanisms inadequate for that physiology. The standard treatment is twice-daily insulin (porcine insulin zinc suspension such as Vetsulin, or human NPH insulin) under veterinary guidance, given at consistent times with meals.' },
   { question: 'What should I do if my diabetic dog will not eat?', answer: 'Do not give the usual insulin dose — insulin given without food risks dangerous hypoglycemia. Contact your veterinarian for instructions instead. Consistency is the dietary foundation for diabetic dogs: same food, same amount, same time as each insulin injection, because dietary changes alter glucose absorption and can destabilize previously controlled diabetes.' },
   { question: 'What do I do if my diabetic dog is shaking, wobbly, or disoriented?', answer: 'Treat it as a hypoglycemia emergency, exactly as the page above describes: rub a tablespoon of Karo corn syrup or honey on the gums and inside the cheeks, then travel to the veterinarian immediately — this is life-threatening and requires IV dextrose. Never give anything by mouth to an unconscious or seizing dog; in that case go directly to emergency care. Every diabetic dog household should keep corn syrup or honey accessible and an emergency-vet number saved.' },
   { question: 'How is a diabetic dog\'s blood sugar monitored?', answer: 'Several layers: glucose curves (serial measurements every 1–2 hours across a 12-hour dosing interval, used to set and adjust the insulin dose — never adjust insulin on your own), home glucometer checks on the ear margin or inner lip, continuous glucose monitors such as the FreeStyle Libre applied with veterinary guidance, and fructosamine bloodwork, which reflects average glucose over the prior 2–3 weeks (target 350–450 μmol/L in well-controlled dogs).' },
@@ -40,7 +40,8 @@ export default function DogDiabetesPage() {
           <div className="bg-brand-dark rounded-lg p-5 mb-4">
             <div className="text-xs uppercase tracking-wide text-brand-primary mb-1 font-bold">Diabetes + Insurance</div>
             <h3 className="font-display text-base font-bold text-brand-white mb-2">Insulin + monitoring is forever</h3>
-            <p className="text-xs text-white/60 mb-3 leading-relaxed">Diabetic management — insulin, syringes, glucose curves, recheck bloodwork — runs $100-$300/month for life. Insurance with no chronic-claim reset (Trupanion-style) is purpose-built for this.</p>
+            <p className="text-xs text-white/60 mb-3 leading-relaxed">Typical range, not a quote. Costs vary by clinic and region. Ask your veterinarian for an estimate.</p>
+            <p className="text-xs text-white/60 mb-3 leading-relaxed">Diabetic management — insulin, syringes, glucose curves, and recheck bloodwork — is an ongoing bill for life. Ask your veterinarian for an estimate. Insurance with no chronic-claim reset (Trupanion-style) is purpose-built for this.</p>
             <a href={crossSiteHref('vets-co', '/reviews/best-pet-insurance')} className="inline-block text-xs font-bold text-brand-primary hover:underline">Compare pet insurance →</a>
           </div>
           <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
@@ -60,7 +61,7 @@ export default function DogDiabetesPage() {
 
           <h2 id="insulin">Insulin — Why Injections, Not Pills</h2>
           <p>Dogs require insulin injections — oral antidiabetic medications used in human type 2 diabetes (metformin, glipizide) are not effective for canine diabetes. Canine diabetes is typically insulin-deficient (similar to human type 1) rather than insulin-resistant, and oral medications work by different mechanisms that are inadequate for the dog's diabetic physiology.</p>
-          <p><strong>Vetsulin (porcine insulin zinc suspension):</strong> The only <a href="https://www.fda.gov/animal-veterinary" rel="noopener" target="_blank" className="text-brand-primary hover:underline">FDA</a>-approved insulin for dogs in the US. Intermediate-acting, typically given twice daily (every 12 hours) with meals. The starting dose and all adjustments are set by your veterinarian based on glucose curves — never adjust insulin on your own. The twice-daily schedule with consistent timing is the foundation of diabetic management — irregular timing produces uncontrolled glucose swings.</p>
+          <p><strong>Vetsulin (porcine insulin zinc suspension):</strong> An intermediate-acting porcine insulin zinc suspension veterinarians use in dogs, typically twice daily (every 12 hours) with meals. The starting dose and all adjustments are set by your veterinarian based on glucose curves — never adjust insulin on your own. The twice-daily schedule with consistent timing is the foundation of diabetic management — irregular timing produces uncontrolled glucose swings.</p>
           <p><strong>NPH insulin (Humulin N, Novolin N):</strong> Human NPH insulin is used by many veterinarians and is less expensive than Vetsulin. Works similarly to Vetsulin in most dogs. Some dogs respond better to one formulation — if one is not achieving adequate control, the other can be tried under veterinary guidance.</p>
 
           <h2 id="diet">Diet — Consistency Is Everything</h2>
@@ -68,7 +69,7 @@ export default function DogDiabetesPage() {
 
           <h2 id="monitoring">Blood Glucose Monitoring</h2>
           <p><strong>Glucose curves:</strong> Serial blood glucose measured every 1–2 hours over a full 12-hour dosing interval to assess the insulin&apos;s peak effect and duration. This identifies whether the dose is adequate, too high, or too low. Performed in clinic initially and then periodically during management adjustments. Home glucose monitoring using a pet glucometer (or a human glucometer, on the ear margin or inner lip) allows owners to detect hypoglycemia or poor control between clinic visits. A pet glucometer is a home-setup aid so you can check between scheduled clinic curves — it does not replace those curves, it does not set the insulin dose, and it is not a reason to adjust insulin on your own. Ask your veterinarian which meter and sampling site fit this dog.</p>
-          <p><strong>Continuous glucose monitors (CGM):</strong> Human CGMs (FreeStyle Libre, Dexcom) can be applied to a dog&apos;s skin with veterinary guidance — they provide continuous 24-hour glucose data without blood draws. A week of CGM data provides far more information about a dog&apos;s glucose pattern than a single clinic curve, and has changed the standard of care for attentive diabetic dog management. Brand CGM sensors stay educational copy only on this page — this kit hops the pet glucometer, not a FreeStyle Libre or Dexcom ASIN.</p>
+          <p><strong>Continuous glucose monitors (CGM):</strong> Human CGMs (FreeStyle Libre, Dexcom) can be applied to a dog&apos;s skin with veterinary guidance — they provide continuous 24-hour glucose data without blood draws. A week of CGM data provides far more information about a dog&apos;s glucose pattern than a single clinic curve, and has changed the standard of care for attentive diabetic dog management. Brand CGM sensors stay educational copy only on this page — this kit links the pet glucometer, not a FreeStyle Libre or Dexcom product page.</p>
           <p><strong>Fructosamine:</strong> Reflects average blood glucose over 2–3 weeks. A single clinic value provides a useful "average control" metric. Target fructosamine: 350–450 μmol/L in well-controlled diabetic dogs.</p>
 
           <h2 id="hypoglycemia">Hypoglycemia — The Emergency to Know</h2>
@@ -78,18 +79,18 @@ export default function DogDiabetesPage() {
 
           <p>Hypoglycemia (blood glucose below 60 mg/dL) is the most dangerous acute complication of insulin therapy. Signs: weakness, trembling, disorientation, seizures, coma. Every diabetic dog owner should have light corn syrup (Karo is one grocery example; the category is the product class, not a single brand) or honey accessible at all times. At the first sign of hypoglycemia: rub a tablespoon of light corn syrup on the gums and inside the cheeks, then get to the veterinarian immediately. Do not give anything by mouth if the dog is unconscious or seizing — go directly to the emergency vet. This is a life-threatening situation that requires IV dextrose. Light corn syrup in the front-door kit is a first-sign glucose source, not a treatment plan and not a substitute for emergency care.</p>
 
-          <h2 id="kit">Glucose-monitor kit</h2>
-          <p>Everyday physical supplies that match the home-monitor and hypoglycemia-kit copy above — a pet glucometer for ear-margin or inner-lip checks between clinic curves, plus light corn syrup kept at the door for the first-sign gum rub (honey is the same-category stand-in). These are home-setup aids, not treatments. They do not set the insulin dose, they do not replace clinic glucose curves or fructosamine, and they do not treat unconscious hypoglycemia. Insulin, syringes, Vetsulin / NPH brand ASINs, FreeStyle Libre / Dexcom brand CGMs, digital pet scales, and prescription diabetic diets (Hill&apos;s w/d, Royal Canin Diabetic) stay educational copy only — this page never hops medications, brand ASINs, or clinical gear. This page does not claim hands-on testing.</p>
+          <h2 id="kit">Supplies named on this page</h2>
+          <p>Keep these on hand: a pet glucometer for ear-margin or inner-lip checks between clinic curves, plus light corn syrup kept at the door for the first-sign gum rub (honey is the same-category stand-in). These are home-setup aids, not treatments. They do not set the insulin dose, they do not replace clinic glucose curves or fructosamine, and they do not treat unconscious hypoglycemia. Insulin, syringes, Vetsulin or NPH product pages, FreeStyle Libre / Dexcom brand CGMs, digital pet scales, and prescription diabetic diets (Hill&apos;s w/d, Royal Canin Diabetic) stay educational copy only — this page does not link to medications, named brands, or clinical gear.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/pet+glucometer?s=health-dog-diabetes", "/go/amazon-brand/light+corn+syrup?s=health-dog-diabetes"]} />
 
-          {/* Money path — live amazon-brand search hops (pet
+          {/* Shop note — live amazon-brand search buttons (pet
               glucometer / light corn syrup). ShopCtas hides
-              empty Chewy; never href="#" or PLACEHOLDER.
-              Category searches only. Insulin, syringes,
+              empty Chewy; never href="#" or an empty link.
+              Amazon searches only. Insulin, syringes,
               Vetsulin / NPH, FreeStyle Libre / Dexcom,
               digital pet scales, and prescription diabetic
-              diets are not shoppable hops. */}
+              diets are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

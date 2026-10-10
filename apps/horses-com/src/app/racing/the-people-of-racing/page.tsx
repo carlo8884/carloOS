@@ -10,6 +10,7 @@
  * Authorities: The Jockey Club, racing commissions, AAEP.
  */
 
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import {
   buildMetadata,
@@ -19,7 +20,6 @@ import {
   RelatedLinks,
   TableOfContents,
   FAQAccordion,
-  AffiliateDisclosure,
   ShopCtas,
   buildArticleSchema,
   SchemaScript,
@@ -215,19 +215,8 @@ export default function PeopleOfRacingPage() {
             <li>American Association of Equine Practitioners (AAEP). Equine welfare and veterinary guidance. aaep.org.</li>
           </ol>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href="/go/amazon-brand/horse+saddle+pad?s=racing-people" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated horse owner-trainer-jockey chart /
-              horse stall-door steward-official card /
-              equine backstretch role handbook).
-              No existing product hop to keep.
-              Educational barn searches only; no Rx /
-              vaccine / flea / heartworm / nsaid hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs training /
-              aftercare hops.
-              Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
@@ -236,7 +225,7 @@ export default function PeopleOfRacingPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/horse+saddle+pad?s=racing-people"
-                amazonLabel="Shop on Amazon"
+                amazonLabel="Browse horse saddle pads on Amazon →"
               />
           </div>
           </div>

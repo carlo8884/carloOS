@@ -19,11 +19,11 @@
  * JSON-LD: Article + BreadcrumbList + FAQPage, emitted via combineSchemas.
  */
 
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import {
   ArticleLayout,
-  AffiliateDisclosure,
   CrossPortfolioCard,
   FAQAccordion,
   RelatedLinks,
@@ -49,6 +49,55 @@ export function generateStaticParams() {
 
 interface PageProps {
   params: Promise<{ slug: string }>
+}
+
+/** Named Amazon search buttons plus one existing calculator or review. */
+const EQUIPMENT_SHOP: Record<
+  string,
+  { heading: string; amazonHref: string; amazonLabel: string; nextHref: string; nextLabel: string }
+> = {
+  'aquarium-filters': {
+    heading: 'Shop aquarium filters',
+    amazonHref: '/go/amazon-brand/aquarium+filter?s=equipment-aquarium-filters',
+    amazonLabel: 'Browse aquarium filters on Amazon →',
+    nextHref: '/tools/filter-gph-calculator',
+    nextLabel: 'Size turnover with the filter GPH calculator',
+  },
+  'aquarium-heaters': {
+    heading: 'Shop aquarium heaters',
+    amazonHref: '/go/amazon-brand/aquarium+heater?s=equipment-aquarium-heaters',
+    amazonLabel: 'Browse aquarium heaters on Amazon →',
+    nextHref: '/tools/heater-wattage-calculator',
+    nextLabel: 'Size the heater with the wattage calculator',
+  },
+  'aquarium-lighting': {
+    heading: 'Shop aquarium lighting',
+    amazonHref: '/go/amazon-brand/aquarium+led+light?s=equipment-aquarium-lighting',
+    amazonLabel: 'Browse aquarium LED lights on Amazon →',
+    nextHref: '/reviews/best-aquarium-lighting',
+    nextLabel: 'Read the lighting review',
+  },
+  'aquarium-substrates': {
+    heading: 'Shop aquarium substrates',
+    amazonHref: '/go/amazon-brand/aquarium+substrate?s=equipment-aquarium-substrates',
+    amazonLabel: 'Browse aquarium substrate on Amazon →',
+    nextHref: '/tools/substrate-calculator',
+    nextLabel: 'Estimate substrate with the calculator',
+  },
+  'aquarium-test-kits': {
+    heading: 'Shop aquarium test kits',
+    amazonHref: '/go/amazon-brand/aquarium+test+kit?s=equipment-aquarium-test-kits',
+    amazonLabel: 'Browse aquarium test kits on Amazon →',
+    nextHref: '/reviews/best-water-test-kits',
+    nextLabel: 'Read the test-kit review',
+  },
+  'aquarium-co2-systems': {
+    heading: 'Shop aquarium CO2 systems',
+    amazonHref: '/go/amazon-brand/aquarium+co2+system?s=equipment-aquarium-co2-systems',
+    amazonLabel: 'Browse aquarium CO2 systems on Amazon →',
+    nextHref: '/tools/co2-calculator',
+    nextLabel: 'Set a target with the CO2 calculator',
+  },
 }
 
 // ─── Metadata ──────────────────────────────────────────────────────────────
@@ -136,6 +185,7 @@ export default async function EquipmentCategoryPage({ params }: PageProps) {
   // returns an array; SchemaScript serializes the array into one JSON-LD
   // <script> tag.
   const allSchemas = combineSchemas(articleSchema, faqSchema)
+  const shop = EQUIPMENT_SHOP[category.slug]
 
   return (
     <ArticleLayout
@@ -150,7 +200,13 @@ export default async function EquipmentCategoryPage({ params }: PageProps) {
       }}
       breadcrumbs={breadcrumbItems}
       schema={allSchemas as unknown as Record<string, unknown>}
-      relatedLinks={[{ title: 'Equipment Hub', href: '/equipment', category: 'Equipment' }, { title: 'Filter GPH Calculator', href: '/tools/filter-gph-calculator', category: 'Tools' }, { title: 'Best Aquarium Filters', href: '/reviews/best-aquarium-filters', category: 'Reviews' }, { title: 'Aquarium Cycling Guide', href: '/setup/aquarium-cycling-guide', category: 'Tank Setup' }]}
+      relatedLinks={[
+        { title: 'Equipment Hub', href: '/equipment', category: 'Equipment' },
+        ...(shop
+          ? [{ title: shop.nextLabel, href: shop.nextHref, category: 'Next step' }]
+          : []),
+        { title: 'Aquarium Cycling Guide', href: '/setup/aquarium-cycling-guide', category: 'Tank Setup' },
+      ]}
       sidebar={
         <>
           <RelatedLinks
@@ -167,26 +223,26 @@ export default async function EquipmentCategoryPage({ params }: PageProps) {
           />
           <div className="bg-brand-primary-pale border border-brand-primary/20 rounded-xl p-5">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
-              Free Lead Magnet
+              On this site
             </div>
             <div className="font-display font-bold text-brand-dark text-base leading-snug mb-2">
-              Get our Aquarium Cycling Survival Kit
+              Read the aquarium cycling guide
             </div>
             <p className="text-xs text-brand-text-mid leading-relaxed mb-3">
-              The 14-day fish-in / fishless cycling checklist, water-test schedule, and emergency
-              ammonia-spike playbook — delivered as a printable PDF.
+              Fishless and fish-in cycling, a test schedule, and what to do when a cycle stalls.
+              The guide is a page on Fish.com.
             </p>
             <a
-              href="/setup"
+              href="/setup/aquarium-cycling-guide"
               className="inline-block text-xs font-semibold text-brand-primary no-underline hover:underline"
             >
-              Get the Survival Kit →
+              Open the cycling guide →
             </a>
           </div>
 
         </>
       }
-     priceAsOf="2026-05-29">
+     priceAsOf="2026-10-04">
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2026-05-29T00:00:00Z" updatedAt="2026-05-29T00:00:00Z" reviewedBy="Editorial team" />
 
@@ -375,100 +431,28 @@ export default async function EquipmentCategoryPage({ params }: PageProps) {
         </div>
 
         <h2 id="shop">Where to Shop</h2>
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        <HopDisclosure siteId="fish-com" href={shop?.amazonHref ?? ''} />
         <p style={{ fontSize: '14px', color: 'var(--brand-text-mid)', marginBottom: '12px' }}>
-          Browse the {category.categoryName.toLowerCase()} category on Amazon. Fish.com
-          earns an affiliate commission when you purchase through these links — at no extra cost
-          to you. Commission does not influence editorial picks.
+          Browse the {category.categoryName.toLowerCase()} category on Amazon.
+          Commission does not influence editorial picks.
         </p>
 
-        {category.slug === 'aquarium-filters' ? (
+        {shop ? (
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop aquarium filters
+              {shop.heading}
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.
+            </p>
+            <p className="text-sm mb-4">
+              <a href={shop.nextHref} className="font-semibold text-brand-primary">
+                {shop.nextLabel} →
+              </a>
+            </p>
             <div className="flex flex-col gap-3">
-              <ShopCtas
-                amazonHref="/go/amazon-brand/aquarium+filter?s=equipment-aquarium-filters"
-                amazonLabel="Shop on Amazon"
-              />
-</div>
-          </div>
-        ) : null}
-
-        {category.slug === 'aquarium-heaters' ? (
-          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
-            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop aquarium heaters
+              <ShopCtas amazonHref={shop.amazonHref} amazonLabel={shop.amazonLabel} />
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
-            <div className="flex flex-col gap-3">
-              <ShopCtas
-                amazonHref="/go/amazon-brand/aquarium+heater?s=equipment-aquarium-heaters"
-                amazonLabel="Shop on Amazon"
-              />
-</div>
-          </div>
-        ) : null}
-
-        {category.slug === 'aquarium-lighting' ? (
-          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
-            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop aquarium lighting
-            </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
-            <div className="flex flex-col gap-3">
-              <ShopCtas
-                amazonHref="/go/amazon-brand/aquarium+led+light?s=equipment-aquarium-lighting"
-                amazonLabel="Shop on Amazon"
-              />
-</div>
-          </div>
-        ) : null}
-
-        {category.slug === 'aquarium-substrates' ? (
-          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
-            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop aquarium substrates
-            </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
-            <div className="flex flex-col gap-3">
-              <ShopCtas
-                amazonHref="/go/amazon-brand/aquarium+substrate?s=equipment-aquarium-substrates"
-                amazonLabel="Shop on Amazon"
-              />
-</div>
-          </div>
-        ) : null}
-
-        {category.slug === 'aquarium-test-kits' ? (
-          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
-            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop aquarium test kits
-            </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
-            <div className="flex flex-col gap-3">
-              <ShopCtas
-                amazonHref="/go/amazon-brand/aquarium+test+kit?s=equipment-aquarium-test-kits"
-                amazonLabel="Shop on Amazon"
-              />
-</div>
-          </div>
-        ) : null}
-
-        {category.slug === 'aquarium-co2-systems' ? (
-          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
-            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop aquarium CO2 systems
-            </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
-            <div className="flex flex-col gap-3">
-              <ShopCtas
-                amazonHref="/go/amazon-brand/aquarium+co2+system?s=equipment-aquarium-co2-systems"
-                amazonLabel="Shop on Amazon"
-              />
-</div>
           </div>
         ) : null}
 
@@ -498,8 +482,7 @@ export default async function EquipmentCategoryPage({ params }: PageProps) {
             paddingTop: '16px',
           }}
         >
-          Affiliate disclosure: Fish.com earns commissions on purchases made through links on our
-          review pages. Buyer-guide rankings and category recommendations are editorially
+          Buyer-guide rankings and category recommendations are editorially
           independent — affiliate relationships have no influence on which sub-types we recommend.
         </p>
       </div>

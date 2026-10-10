@@ -116,21 +116,21 @@ export default async function StateInsuranceHub({ params }: PageParams) {
         </div>
       </section>
 
-      {/* ─── Dog breed index ──────────────────────────────────────────────── */}
+      {/* ─── Dog breed hubs ───────────────────────────────────────────────── */}
       <section className="mt-12">
         <h2 className="font-display text-2xl font-bold mb-3">
-          Dog Breeds — Recommendations for {s.name} Owners
+          Dog breed recommendations
         </h2>
         <p className="text-brand-text-mid leading-relaxed mb-5">
-          Different breeds carry different hereditary risk profiles. The right
-          carrier for your dog depends on its breed first, then state-specific
-          factors second. Pick your breed for a {s.name}-specific breakdown:
+          The regulatory note above applies in {s.name} for every breed. The
+          carrier recommendation for a dog breed is on that breed hub, and it
+          is the same in every state.
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2">
           {breedsForSpecies('dog').map((b) => (
             <Link
               key={b.slug}
-              href={`/pet-insurance/breeds/${b.slug}/${s.slug}`}
+              href={`/pet-insurance/breeds/${b.slug}`}
               className="text-sm px-3 py-2 border border-brand-border rounded hover:border-brand-primary hover:text-brand-primary transition-colors"
             >
               {b.breedName}
@@ -139,22 +139,21 @@ export default async function StateInsuranceHub({ params }: PageParams) {
         </div>
       </section>
 
-      {/* ─── Cat breed index ──────────────────────────────────────────────── */}
+      {/* ─── Cat breed hubs ───────────────────────────────────────────────── */}
       <section className="mt-12">
         <h2 className="font-display text-2xl font-bold mb-3">
-          Cat Breeds — Recommendations for {s.name} Owners
+          Cat breed recommendations
         </h2>
         <p className="text-brand-text-mid leading-relaxed mb-5">
-          Cat insurance is a different market than dog insurance — generally
-          lower premiums, but hereditary conditions (HCM, PKD, breed-specific
-          metabolic disorders) make breed-aware coverage selection important.
-          Pick your breed:
+          Cat hereditary conditions (HCM, PKD, and breed-specific metabolic
+          disorders) are on the breed hub. The {s.name} regulatory note on
+          this page does not change that recommendation.
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2">
           {breedsForSpecies('cat').map((b) => (
             <Link
               key={b.slug}
-              href={`/pet-insurance/breeds/${b.slug}/${s.slug}`}
+              href={`/pet-insurance/breeds/${b.slug}`}
               className="text-sm px-3 py-2 border border-brand-border rounded hover:border-brand-primary hover:text-brand-primary transition-colors"
             >
               {b.breedName}

@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, ShopCtas, ComparisonFoot, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -42,7 +43,7 @@ export default function FerretSuppliesChecklistPage() {
         hero={{
           title: 'Ferret Supplies Checklist',
           subtitle:
-            'Everything a new ferret genuinely needs, organized by category, with a clear line between the must-haves you buy before homecoming and the nice-to-haves that can wait. It also flags the supplies marketed for ferrets that you should skip or actively avoid. Category hops go to the existing buyer guides — not invented SKUs.',
+            'Everything a new ferret genuinely needs, organized by category, with a clear line between the must-haves you buy before homecoming and the nice-to-haves that can wait. It also flags the supplies marketed for ferrets that you should skip or actively avoid. Category links go to the existing buyer guides — not made-up products.',
           category: 'Ownership & Lifestyle',
           authorName: 'Ferret.com Editorial',
           publishedAt: 'June 2026',
@@ -81,7 +82,7 @@ export default function FerretSuppliesChecklistPage() {
 
           </>
         }
-      
+
         relatedLinks={[
           { title: 'Ferret Ownership Hub', href: '/ownership' },
           { title: 'First Week Checklist', href: '/ownership/first-week-checklist' },
@@ -96,11 +97,36 @@ export default function FerretSuppliesChecklistPage() {
             updatedAt="2026-06-01"
             reviewedBy="Editorial team"
           />
+          <LastUpdated date="2026-10-10" />
 
           <h2 id="priority">Buy First vs Later</h2>
           <p>
             Not everything has to be ready on day one, but the essentials do. <strong>Before the ferret comes home</strong> you need: a proper cage, bedding, a litter pan and litter, food and water dishes, an appropriate food, and a carrier. <strong>In the first week or two</strong> you can add: grooming tools, a fuller toy rotation, and tunnels and enrichment. Buying the core well is more important than buying a lot — a single good cage matters more than a pile of accessories. Use this alongside the day-by-day <a href="/ownership/first-week-checklist">first-week checklist</a>, and budget with <a href="/ownership/cost-of-owning-a-ferret">cost of owning a ferret</a>.
           </p>
+          <div className="my-6 max-w-full min-w-0">
+            <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
+              <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+              <thead>
+                <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                  <th scope="col" className="p-3 font-bold text-brand-dark">When</th>
+                  <th scope="col" className="p-3 font-bold text-brand-dark">What to have</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Before the ferret comes home</th>
+                  <td className="p-3">A proper cage, bedding, a litter pan and litter, food and water dishes, an appropriate food, and a carrier</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">The first week or two</th>
+                  <td className="p-3">Grooming tools, a fuller toy rotation, and tunnels and enrichment</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <ComparisonFoot updated="2026-10-10" />
+          <h2>Who should buy which first</h2>
+          <p>Buy the cage, bedding, litter, dishes, food, and carrier before the ferret comes home. Add grooming tools, toys, and tunnels in the first week or two. A single good cage matters more than a pile of accessories.</p>
 
           <h2 id="housing">Housing</h2>
           <ul>
@@ -109,8 +135,8 @@ export default function FerretSuppliesChecklistPage() {
             <li><strong>A ferret-proofed play area</strong> — not a purchase exactly, but plan the space (see <a href="/care/ferret-proofing-your-home">ferret-proofing your home</a>).</li>
           </ul>
           <p>
-            Cage criteria and retailer hops live on the{' '}
-            <a href="/reviews/best-ferret-cage">best ferret cage</a> buyer guide — bar spacing, floor space, and ramp safety, not an invented SKU list.
+            Cage criteria and retailer links live on the{' '}
+            <a href="/reviews/best-ferret-cage">best ferret cage</a> buyer guide — bar spacing, floor space, and ramp safety, not a made-up product list.
           </p>
 
           <h2 id="bedding">Bedding & Sleep</h2>
@@ -126,7 +152,7 @@ export default function FerretSuppliesChecklistPage() {
             <li><strong>Ferret-safe litter</strong> — paper-pellet or recycled-paper litter. <em>Avoid</em> clumping clay litters and pine/cedar shavings, which pose respiratory and ingestion risks (see <a href="/care/bedding-and-litter-types">bedding and litter types</a>).</li>
           </ul>
           <p>
-            Dust, clumping risk, and retailer hops: <a href="/reviews/best-ferret-litter">best ferret litter</a>.
+            Dust, clumping risk, and retailer links: <a href="/reviews/best-ferret-litter">best ferret litter</a>.
           </p>
 
           <h2 id="food">Food & Water</h2>
@@ -136,7 +162,7 @@ export default function FerretSuppliesChecklistPage() {
             <li><strong>Water bowl and/or bottle</strong> — many keepers offer both; a heavy bowl encourages better hydration, a bottle stays cleaner.</li>
           </ul>
           <p>
-            Macronutrient window and retailer hops: <a href="/diet/best-ferret-kibble">best ferret food</a>.
+            Macronutrient window and retailer links: <a href="/diet/best-ferret-kibble">best ferret food</a>.
           </p>
 
           <h2 id="grooming">Grooming</h2>
@@ -155,7 +181,7 @@ export default function FerretSuppliesChecklistPage() {
             <li><strong>Dig boxes and puzzle enrichment</strong> — satisfy digging and foraging instincts (see <a href="/care/exercise-and-enrichment">exercise and enrichment</a>).</li>
           </ul>
           <p>
-            Escape-proof fit and retailer hops: <a href="/reviews/best-ferret-harness">best ferret harness</a>.
+            Escape-proof fit and retailer links: <a href="/reviews/best-ferret-harness">best ferret harness</a>.
           </p>
 
           <h2 id="avoid">What to Avoid</h2>
@@ -169,7 +195,7 @@ export default function FerretSuppliesChecklistPage() {
 
           <h2 id="compare">Compare the gear that already has a buyer guide</h2>
           <p>
-            This checklist stays category-level. The four buyer guides below already carry documented-criteria comparisons and <code>/go</code> hops — use those instead of a dead shop page:
+            This checklist stays category-level. The four buyer guides below already carry documented-criteria comparisons and <code>/go</code> buttons — use those instead of a dead shop page:
           </p>
           <ul>
             <li><a href="/reviews/best-ferret-cage">Best ferret cage</a></li>
@@ -178,20 +204,8 @@ export default function FerretSuppliesChecklistPage() {
             <li><a href="/diet/best-ferret-kibble">Best ferret food</a></li>
           </ul>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/ferret+litter?s=ferret-supplies-checklist"]} />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated ferret buy-first checklist chart /
-              ferret fridge housing-litter card /
-              mustelid supplies-checklist handbook).
-              No existing product hop to keep.
-              Educational kitchen searches only; no Rx /
-              vaccine / aging hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs ownership-hub /
-              first-year / supplements kitchen kits. Ferret
-              aging stays held.
-              Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
@@ -200,7 +214,7 @@ export default function FerretSuppliesChecklistPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/ferret+litter?s=ferret-supplies-checklist"
-                amazonLabel="Shop on Amazon"
+                amazonLabel="Browse ferret litter on Amazon →"
               />
           </div>
           </div>

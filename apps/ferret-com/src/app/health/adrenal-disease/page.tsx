@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import {
   buildMetadata,
@@ -10,10 +11,11 @@ import {
   ArticleByline,
   DropCap,
   ReviewCard,
-  AffiliateDisclosure,
   ShopCtas,
   CrossPortfolioCard,
   ArticleSourcesList,
+  PrimaryHop,
+  LastUpdated,
 } from '@carloOS/ui'
 
 const SOURCES = [
@@ -24,7 +26,7 @@ const SOURCES = [
   },
   {
     label: "Merck Veterinary Manual — Endocrine Diseases of Ferrets: adrenal cortical disease, sex-steroid overproduction, diagnosis, and surgical management",
-    url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/endocrine-diseases-of-ferrets",
+    url: "https://www.merckvetmanual.com/all-other-pets/ferrets/hormonal-disorders-of-ferrets",
     publisher: "Merck Veterinary Manual",
   },
   {
@@ -125,6 +127,10 @@ export default function FerretAdrenalDiseasePage() {
       <ArticleLayout
         siteId="ferret-com"
         contentType="health"
+        heroHop={<>
+          <PrimaryHop href="/go/amazon-brand/soft+cotton+receiving+blanket?s=health-adrenal-disease" label="Search Amazon for a soft cotton receiving blanket" />
+          <HopDisclosure tone="on-dark" siteId="ferret-com" href="/go/amazon-brand/soft+cotton+receiving+blanket?s=health-adrenal-disease" />
+        </>}
         hero={{
           title: 'Adrenal Disease in Ferrets',
           subtitle:
@@ -174,9 +180,10 @@ export default function FerretAdrenalDiseasePage() {
               <h3 className="font-display text-base font-bold text-brand-white mb-2">
                 Cover this condition before it&apos;s diagnosed
               </h3>
+              <p className="text-xs text-white/60 mb-3 leading-relaxed">Costs vary by clinic and region. Ask an exotic veterinarian for an estimate.</p>
               <p className="text-xs text-white/60 mb-3 leading-relaxed">
-                Adrenal surgery runs $1,500–$3,500; deslorelin implants add
-                $400-600/year. Exotic-pet insurance covers it — but ONLY if
+                Adrenal surgery is a larger one-time procedure. A deslorelin implant
+                is repeat treatment and is often several hundred dollars a year. Exotic-pet insurance covers it — but ONLY if
                 enrolled before symptoms appear.
               </p>
               <a
@@ -209,6 +216,7 @@ export default function FerretAdrenalDiseasePage() {
             publishedAt="2026-05-28"
             updatedAt="2026-09-06"
           />
+          <LastUpdated date="2026-10-09" />
 
           <DropCap>
             Adrenal disease is the diagnosis owners learn to expect somewhere in
@@ -219,8 +227,7 @@ export default function FerretAdrenalDiseasePage() {
             treatments work.
           </DropCap>
 
-          <h2 id="tldr">TL;DR</h2>
-          <p>
+                    <p>
             Hyperadrenocorticism in ferrets is overproduction of sex steroids
             (estradiol, androstenedione, 17-hydroxyprogesterone) by a hyperplastic
             or neoplastic adrenal cortex. Classic signs: progressive bilateral
@@ -292,21 +299,7 @@ export default function FerretAdrenalDiseasePage() {
             The signs are remarkably stereotyped across cases:
           </p>
           <ul>
-            <li>
-              <strong>Symmetrical hair loss starting at the tail base.</strong>{' '}
-              The earliest and most reliable sign. Hair thins on the tail,
-              progresses up the rump, and eventually involves the flanks and
-              shoulders. The pattern is bilateral and symmetrical — patchy or
-              unilateral hair loss is more suggestive of dermatophyte
-              infection or external parasites. Write the first thinning
-              date in a ruled marble composition notebook so the exotic-pet
-              vet can see the timeline at the hormone-panel visit — it is
-              not a waterproof field notebook, not a dog weight-log book,
-              and not a vaccination record book. Alopecic ferrets lose
-              insulation; a soft cotton receiving blanket is an extra
-              warm layer that is not a fleece sleep sack, not a hammock,
-              and not a bonding pouch.
-            </li>
+            <li>Symmetrical hair loss starting at the tail base.{' '} The earliest and most reliable sign. Hair thins on the tail, progresses up the rump, and eventually involves the flanks and shoulders. The pattern is bilateral and symmetrical — patchy or unilateral hair loss is more suggestive of dermatophyte infection or external parasites. Alopecic ferrets lose insulation; a soft cotton receiving blanket is an extra warm layer that is not a fleece sleep sack, not a hammock, and not a bonding pouch.</li>
             <li>
               <strong>Vulvar swelling in spayed females.</strong> A spayed jill
               should have a small, recessed vulva. Visible swelling that
@@ -357,6 +350,7 @@ export default function FerretAdrenalDiseasePage() {
             </p>
           </CalloutBox>
 
+          <p>The implant and adrenalectomy figures in the table below are typical US clinic ranges dated 2026-05-31.</p>
           <h2 id="quickref">Quick Reference</h2>
           <div className="overflow-x-auto my-6">
             <table className="w-full text-sm border-collapse">
@@ -389,11 +383,11 @@ export default function FerretAdrenalDiseasePage() {
                 </tr>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 font-medium">Deslorelin implant cost (US)</td>
-                  <td className="p-3">~$200-450 per implant cycle (varies by region)</td>
+                  <td className="p-3">Repeat treatment; often several hundred dollars per cycle. Ask an exotic veterinarian for an estimate.</td>
                 </tr>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 font-medium">Adrenalectomy cost (US)</td>
-                  <td className="p-3">~$800-2,500 depending on laterality and complications</td>
+                  <td className="p-3">A larger one-time procedure; often a four-figure bill. Ask an exotic veterinarian for an estimate.</td>
                 </tr>
                 <tr>
                   <td className="p-3 font-medium">Urgency</td>
@@ -484,18 +478,7 @@ export default function FerretAdrenalDiseasePage() {
             adrenal gland removed, the adrenal&apos;s sex-steroid output falls and
             clinical signs regress.
           </p>
-          <p>
-            Typical timeline of response: vulvar swelling resolves within
-            2-6 weeks, hair regrows over 2-4 months, behavioral signs
-            normalize within weeks. Most published series report median
-            duration of effect per implant of approximately{' '}
-            <strong>12-24 months</strong>, with substantial individual variation.
-            When signs return, a repeat implant is placed. Some ferrets receive
-            multiple implant cycles across the rest of their life with good
-            symptom control. Log each implant date and the first returning
-            sign in the same ruled marble composition notebook so the
-            12–24 month window is a written record, not a guess.
-          </p>
+          <p>Typical timeline of response: vulvar swelling resolves within 2-6 weeks, hair regrows over 2-4 months, behavioral signs normalize within weeks. Most published series report median duration of effect per implant of approximately{' '} 12-24 months, with substantial individual variation. When signs return, a repeat implant is placed. Some ferrets receive multiple implant cycles across the rest of their life with good symptom control.</p>
           <p>
             Limitations: deslorelin treats signs, not the tumor. The adrenal
             lesion continues to grow at its native rate, and a small fraction
@@ -627,47 +610,19 @@ export default function FerretAdrenalDiseasePage() {
           <p className="text-sm font-medium text-brand-primary mb-3">
             The products below are comfort and general-care items for ferrets living with adrenal disease — they do NOT treat adrenal disease. Adrenal disease requires diagnosis and a treatment plan from a veterinarian experienced with ferrets.
           </p>
-          <p>
-            A ruled marble composition notebook is how the first
-            hair-thinning date, vulvar-swelling start, and each
-            deslorelin implant date stay written down for the next
-            exotic-pet visit — it is not a waterproof field notebook
-            and not a dog weight-log book. A soft cotton receiving
-            blanket is an extra warm layer for an alopecic or
-            thin-skinned ferret — it is not a fleece sleep sack
-            (that Chewy comfort card stays below), not a hammock,
-            and not a heating pad. An activated-charcoal odor
-            absorber is a cage-side filter for the intensified
-            musky odor this page names — it is not an enzymatic
-            cleaner and not a fragrance spray. These are household
-            monitoring, comfort, and odor tools. They do not treat
-            adrenal disease, they do not replace deslorelin or
-            adrenalectomy, and they are not a ranked product list.
-          </p>
+          <p>A soft cotton receiving blanket is an extra warm layer for an alopecic or thin-skinned ferret — it is not a fleece sleep sack (that Chewy comfort card stays below), not a hammock, and not a heating pad. An activated-charcoal odor absorber is a cage-side filter for the intensified musky odor this page names — it is not an enzymatic cleaner and not a fragrance spray. These are household monitoring, comfort, and odor tools. They do not treat adrenal disease, they do not replace deslorelin or adrenalectomy, and they are not a ranked product list.</p>
 
           <h2 id="kit">Adrenal comfort kit</h2>
-          <p>
-            Everyday physical supplies that match the hair-loss
-            timeline, alopecia-warmth, and intensified-odor copy on
-            this page — a ruled marble composition notebook so the
-            first thinning date and each implant cycle are written
-            down, a soft cotton receiving blanket so an alopecic
-            ferret has an extra warm layer, and an
-            activated-charcoal odor absorber so the extra musk has
-            a cage-side filter. These are household comfort tools,
-            not treatments. They do not diagnose or treat adrenal
-            disease, they do not replace a deslorelin implant or
-            adrenalectomy, they do not set a hormone-panel number,
-            and they are not a ranked product list. This page does not claim hands-on testing. </p>
+          <p>Keep these on hand: soft cotton receiving blanket and activated charcoal odor absorber. These are household comfort tools, not treatments. They do not diagnose or treat adrenal disease, they do not replace a deslorelin implant or adrenalectomy, they do not set a hormone-panel number, and they are not a ranked product list.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/soft+cotton+receiving+blanket?s=health-adrenal-disease", "/go/amazon-brand/activated+charcoal+odor+absorber?s=health-adrenal-disease", "/go/chewy-brand/ferret+fleece+sleep+sack+hammock?s=health-adrenal-disease"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (ruled marble composition notebook /
               soft cotton receiving blanket /
               activated-charcoal odor absorber).
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or an empty link. Amazon searches only —
               unused vs #1095
               air+driven+corner+sponge+filter /
               preset+25+watt+nano+aquarium+heater /
@@ -692,21 +647,17 @@ export default function FerretAdrenalDiseasePage() {
               waterproof+field+notebook /
               dog+weight+log+book.
               Deslorelin, Suprelorin, melatonin, mitotane,
-              ketoconazole, and Rx ASINs are not
-              shoppable hops. Existing Chewy ReviewCard
+              ketoconazole, and prescription brands are not
+              shoppable buttons. Existing Chewy ReviewCard
               (ferret fleece sleep sack) stays — it is
-              not an empty hop button. */}
+              not an empty button button. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
             </div>
             
             <div className="flex flex-col gap-3">
-              <ShopCtas
-                amazonHref="/go/amazon-brand/ruled+marble+composition+notebook?s=health-adrenal-disease"
-                amazonLabel="Browse ruled marble composition notebooks on Amazon →"
-              />
-              <ShopCtas
+<ShopCtas
                 amazonHref="/go/amazon-brand/soft+cotton+receiving+blanket?s=health-adrenal-disease"
                 amazonLabel="Browse soft cotton receiving blankets on Amazon →"
               />
@@ -721,7 +672,6 @@ export default function FerretAdrenalDiseasePage() {
             id="ferret-fleece-sleep-sack"
             name="Ferret Fleece Sleep Sack"
             subtitle="Enclosed fleece bedding — warmth and burrowing comfort for alopecic or post-surgical ferrets"
-            score={8.8}
             description={
               <p>Ferrets with adrenal disease often experience progressive hair loss (alopecia) that reduces their ability to retain body heat — particularly relevant in ferrets recovering from adrenalectomy. An enclosed fleece sleep sack provides warmth and satisfies the burrowing instinct simultaneously. Machine washable, ferret-specific sizing. Replace every 3–6 months or when fabric thins. This is a comfort and warmth tool; it does not treat adrenal disease.
               </p>
@@ -733,8 +683,9 @@ export default function FerretAdrenalDiseasePage() {
             ]}
             pros={['Warmth for ferrets with alopecia-reduced coat', 'Satisfies burrowing instinct', 'Machine washable', 'Low cost per unit']}
             cons={['Not a treatment — see your exotic vet', 'Some ferrets chew fleece', 'Replace regularly as fabric thins']}
-            price="$10–18"
-            ctaText="Find ferret fleece sleep sacks"
+            price="see current price"
+            priceNote="dated 2026-05-31."
+            ctaText="Find ferret fleece sleep sack hammocks on Amazon"
             ctaHref="/go/chewy-brand/ferret+fleece+sleep+sack+hammock?s=health-adrenal-disease"
             ctaAffiliateProgram="chewy-brand"
             ctaAffiliateProduct="ferret+fleece+sleep+sack+hammock"

@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { StockImage, buildMetadata, ArticleLayout, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
+import { ShopCtas, StockImage, buildMetadata, ArticleLayout, RelatedLinks, CrossPortfolioCard , ArticleSourcesList } from '@carloOS/ui'
 import { FAQAccordion, SchemaScript, buildArticleSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
@@ -7,8 +8,7 @@ const SOURCES = [
   { label: "Pomacea bridgesii — Seriously Fish species profile", url: "https://www.seriouslyfish.com/species/pomacea-bridgesii/", publisher: "Seriously Fish" },
   { label: "Pomacea bridgesii — FishBase species record", url: "https://www.fishbase.se/summary/Pomacea-bridgesii.html", publisher: "FishBase" },
   { label: "Rawlings, T.A. et al. Molecular phylogenetics of Pomacea apple snails. Molecular Phylogenetics and Evolution, 2007.", publisher: "Molecular Phylogenetics and Evolution" },
-  { label: "Invasive Apple Snails in Florida — UF/IFAS Extension", url: "https://edis.ifas.ufl.edu/publication/IN920", publisher: "UF/IFAS Extension" },
-]
+  ]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Mystery Snail Care Guide — Colors, Copper Toxicity | Fish.com', description: 'Mystery snails (Pomacea bridgesii) are peaceful, stunning, and available in gold, blue, ivory, and purple. They die instantly from copper', path: '/species/mystery-snail', type: 'article' })
 const articleSchema = buildArticleSchema({ siteId: 'fish-com', title: 'Mystery Snail Care Guide', description: 'Color varieties, copper toxicity, breeding, and care for Pomacea bridgesii mystery snails.', url: 'https://fish.com/species/mystery-snail', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' ,
   citation: SOURCES,
@@ -46,9 +46,9 @@ const FAQS = [
   {
     question: 'How long do mystery snails live?',
     answer:
-      'One to three years, with an adult shell size of 1.5–2 inches. They do best at 68–82°F in harder water at pH 7.0–8.0, alongside peaceful community fish and shrimp. Avoid tankmates that nip snail antennae, such as some bettas and pufferfish — harassment stresses the snail and prevents normal feeding.',
+      'One to three years, with an adult shell size of 1.5–2 inches, in harder water at pH 7.0–8.0, alongside peaceful community fish and shrimp. This page does not state a preferred temperature band, because FishBase and Seriously Fish do not profile Pomacea bridgesii. Avoid tankmates that nip snail antennae, such as some bettas and pufferfish — harassment stresses the snail and prevents normal feeding.',
     answerText:
-      '1-3 years at 68-82F in harder water (pH 7.0-8.0). Avoid antenna-nipping tankmates like some bettas and puffers.',
+      '1-3 years in harder water (pH 7.0-8.0). This page does not state a preferred temperature band. Avoid antenna-nipping tankmates like some bettas and puffers.',
   },
 ]
 
@@ -68,9 +68,9 @@ export default function MysterySnailPage() {
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Quick Stats</div>
-          {[['Scientific name', 'Pomacea bridgesii'], ['Shell size', '1.5–2 inches (adult)'], ['Temperature', '68–82°F'], ['pH', '7.0–8.0 — prefers harder water'], ['GH', 'Higher GH — stronger shells'], ['Copper', 'LETHAL — avoid all copper'], ['Lifespan', '1–3 years'], ['Breeding', 'Lays egg clutches above waterline']].map(([k, v]) => (
+          {[['Scientific name', 'Pomacea bridgesii'], ['Shell size', '1.5–2 inches (adult)'], ['Temperature', 'No preferred band on this page'], ['pH', '7.0–8.0 — prefers harder water'], ['GH', 'Higher GH — stronger shells'], ['Copper', 'LETHAL — avoid all copper'], ['Lifespan', '1–3 years'], ['Breeding', 'Lays egg clutches above waterline']].map(([k, v]) => (
             <div key={k} className="flex justify-between py-1.5 border-b border-brand-border text-xs last:border-0">
-              <span className="text-brand-text-light">{k}</span><span className="font-bold text-brand-dark text-right max-w-[55%]">{v}</span>
+              <span className="text-brand-text-light">{k}</span><span className="font-bold text-brand-dark text-right max-w-[55%] break-all">{v}</span>
             </div>
           ))}
         </div>
@@ -107,12 +107,12 @@ export default function MysterySnailPage() {
           includeSchema={false}
           allowMultiple
         />
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        <HopDisclosure siteId="fish-com" href="/go/amazon-brand/mystery%20snail%20tank%20setup?s=species-mystery-snail" />
           <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Mystery Snail — Tank Setup</div>
-          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for mystery snail care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
+          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for mystery snail care.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
-            <a href="/go/amazon-brand/mystery%20snail%20tank%20setup?s=species-mystery-snail" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop Mystery Snail Setup on Amazon →</a>
+            <ShopCtas amazonHref="/go/amazon-brand/mystery%20snail%20tank%20setup?s=species-mystery-snail" amazonLabel="Browse mystery snail tank setups on Amazon →" />
           </div>
         </div>
 

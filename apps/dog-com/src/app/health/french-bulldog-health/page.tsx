@@ -1,13 +1,13 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfContents, CrossPortfolioCard, StockImage, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfContents, CrossPortfolioCard, StockImage, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import { BreedHealthCard } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 
 const SOURCES = [
-  { label: 'Merck Veterinary Manual: Brachycephalic Airway Syndrome', url: 'https://www.merckvetmanual.com/respiratory-system/respiratory-diseases-of-small-animals/brachycephalic-airway-syndrome-in-dogs-and-cats', publisher: 'Merck Vet Manual' },
-  { label: 'AVMA: Brachycephalic Breeds and BOAS — Health Resources', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/brachycephalic-syndrome', publisher: 'AVMA' },
+  { label: 'Merck Veterinary Manual: congenital airway narrowing in dogs (nostrils and soft palate)', url: 'https://www.merckvetmanual.com/dog-owners/lung-and-airway-disorders-of-dogs/introduction-to-lung-and-airway-disorders-of-dogs', publisher: 'Merck Vet Manual' },
   { label: 'ACVS: Brachycephalic Syndrome (BAS)', url: 'https://www.acvs.org/small-animal/brachycephalic-syndrome', publisher: 'ACVS' },
   { label: 'Roedler FS et al. How strongly does conformity affect the respiratory phenotype? Correlations between brachycephaly and BOAS in French Bulldogs. PLoS ONE. 2013;8(3):e63551.', publisher: 'PLoS ONE' },
 ]
@@ -149,8 +149,9 @@ export default function FrenchBulldogHealthPage() {
         />
 
         <h2 id="cost">The Financial Reality</h2>
-        <p>French Bulldogs are among the most expensive breeds to maintain medically. Realistic lifetime costs for a Frenchie with typical health challenges include: BOAS surgery ($1,500–5,000 if needed), IVDD treatment ($5,000–8,000+ for surgery if severe), ongoing skin fold management, regular ear and eye care, and higher-than-average routine vet costs from breed-related presentations.</p>
-        <p>Pet insurance is not optional for Frenchie owners. Enroll at the earliest possible age before any conditions develop. Compare policies specifically for BOAS coverage and spinal disease coverage — some plans exclude these as hereditary conditions. Trupanion and Embrace are the policies most commonly recommended by vets who treat Frenchies regularly.</p>
+        <p>Costs vary by clinic and region. Ask your veterinarian for an estimate.</p>
+        <p>French Bulldogs are among the most expensive breeds to maintain medically. Realistic lifetime costs for a Frenchie with typical health challenges include airway surgery when it is needed and spinal treatment when it is severe, both often large bills, plus ongoing skin fold management, regular ear and eye care, and higher-than-average routine vet costs from breed-related presentations.</p>
+        <p>Pet insurance is not optional for Frenchie owners. Enroll at the earliest possible age before any conditions develop. Compare policies specifically for BOAS coverage and spinal disease coverage. Read each policy&apos;s hereditary and pre-existing terms yourself — this page does not state which plans exclude them. See the <a href={crossSiteHref('vets-co', '/reviews/best-pet-insurance')}>insurance comparison</a> before choosing a policy. This page does not name a recommended carrier.</p>
 
         <h2 id="choosing">Choosing a Healthier French Bulldog</h2>
         <p>Health-focused breeders are actively selecting for wider nostrils, longer relative muzzle length, and better airway conformation — and the dogs they produce breathe measurably better and live healthier lives. What to look for:</p>
@@ -162,18 +163,18 @@ export default function FrenchBulldogHealthPage() {
           <li><strong>Avoid the &quot;extreme&quot; Frenchie look</strong> — maximally flat face, deeply furrowed skin, very small nostrils. These features are associated with the worst health outcomes.</li>
         </ul>
 
-        <h2 id="kit">Heat-care kit</h2>
-        <p>Everyday physical supplies that match the heat-care copy above — a cooling mat the dog can lie on indoors, plus a cooling vest for short outdoor trips when a cool environment is not already available. These are home-setup aids, not treatments. They do not treat heatstroke, they do not replace shade and water, and they do not make a parked car safe. Cool-water towels and digital thermometers stay on the sister <a href={crossSiteHref('vets-co', '/health/heat-stroke-dogs')}>Vets.co heat-stroke</a> first-aid page. Ice packs, dog ramps, fold wipes, paw wipes, soft e-collars, Rx eye drops (cyclosporine / tacrolimus), NSAIDs, and BOAS / IVDD clinical treatments stay educational copy only — this page never hops medications, brand ASINs, or clinical gear. This page does not claim hands-on testing.</p>
+        <h2 id="kit">Supplies named on this page</h2>
+        <p>Keep these on hand: a cooling mat the dog can lie on indoors, plus a cooling vest for short outdoor trips when a cool environment is not already available. These are home-setup aids, not treatments. They do not treat heatstroke, they do not replace shade and water, and they do not make a parked car safe. Cool-water towels and digital thermometers stay on the sister <a href={crossSiteHref('vets-co', '/health/heat-stroke-dogs')}>Vets.co heat-stroke</a> first-aid page. Ice packs, dog ramps, fold wipes, paw wipes, soft e-collars, Rx eye drops (cyclosporine / tacrolimus), NSAIDs, and BOAS / IVDD clinical treatments stay educational copy only — this page does not link to medications, named brands, or clinical gear.</p>
 
-        <AffiliateDisclosure variant="inline" siteId="dog-com" />
+        <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/dog+cooling+mat?s=health-french-bulldog-health", "/go/amazon-brand/dog+cooling+vest?s=health-french-bulldog-health"]} />
 
-        {/* Money path — live amazon-brand search hops (cooling
+        {/* Shop note — live amazon-brand search buttons (cooling
             mat / cooling vest). ShopCtas hides empty Chewy;
-            never href="#" or PLACEHOLDER. Category searches
+            never href="#" or an empty link. Amazon searches
             only. Cool-water towels, digital thermometers,
             ice packs, ramps, fold wipes, Rx eye drops, and
             BOAS / IVDD clinical treatments are not
-            shoppable hops. */}
+            shoppable buttons. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
             Shop related supplies

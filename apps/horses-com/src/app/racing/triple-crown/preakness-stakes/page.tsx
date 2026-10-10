@@ -14,6 +14,7 @@
  * Editorial"; facts sourced to the Maryland Jockey Club and racing's bodies.
  */
 
+import { HopDisclosure } from '../../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import {
   buildMetadata,
@@ -22,7 +23,6 @@ import {
   RelatedLinks,
   TableOfContents,
   FAQAccordion,
-  AffiliateDisclosure,
   ShopCtas,
   buildArticleSchema,
   combineSchemas,
@@ -200,19 +200,8 @@ export default function PreaknessStakesPage() {
             </p>
           </div>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href="/go/amazon-brand/horse+blanket?s=triple-crown-preakness-stakes" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated horse black-eyed-Susan chart /
-              horse stall-door Pimlico-two-week card /
-              equine Woodlawn-Vase handbook).
-              No existing product hop to keep.
-              Educational barn searches only; no Rx /
-              vaccine / flea / heartworm / nsaid hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs kentucky-derby /
-              triple-crown hub hops.
-              Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
@@ -221,7 +210,7 @@ export default function PreaknessStakesPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/horse+blanket?s=triple-crown-preakness-stakes"
-                amazonLabel="Shop on Amazon"
+                amazonLabel="Browse horse blankets on Amazon →"
               />
           </div>
           </div>

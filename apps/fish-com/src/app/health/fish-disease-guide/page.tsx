@@ -1,14 +1,15 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import { HubMoneyLinks } from '@carloOS/ui'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, TableOfContents, ArticleSourcesList, AffiliateDisclosure, ShopCtas, JourneyNext } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, TableOfContents, ArticleSourcesList, ShopCtas, JourneyNext, PrimaryHop } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 
 const SOURCES = [
-  { label: "Overview of Fish Health — Merck Veterinary Manual", url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/aquarium-fish/overview-of-fish-health", publisher: "Merck Vet Manual" },
+  { label: "Overview of Fish Health — Merck Veterinary Manual", url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/aquarium-fish/overview-of-aquarium-fish", publisher: "Merck Vet Manual" },
   { label: "Noga, E.J. Fish Disease: Diagnosis and Treatment, 2nd ed. Wiley-Blackwell, 2010.", publisher: "Wiley-Blackwell" },
-  { label: "Francis-Floyd, R. Stress — Its Role in Fish Disease — UF/IFAS Extension FA-43.", url: "https://edis.ifas.ufl.edu/publication/FA043", publisher: "UF/IFAS Extension" },
+  { label: "Francis-Floyd, R. Stress — Its Role in Fish Disease — UF/IFAS Circular 919 / FA005.", url: "https://ask.ifas.ufl.edu/publication/FA005", publisher: "UF/IFAS Extension" },
   { label: "Yanong, R.P.E. Disease Management in Recirculating Aquaculture Systems — UF/IFAS Extension FA-107.", url: "https://edis.ifas.ufl.edu/publication/FA107", publisher: "UF/IFAS Extension" },
 ]
 
@@ -30,7 +31,6 @@ const schema = buildArticleSchema({
   publishedAt: '2025-05-01T00:00:00Z',
   modifiedAt: '2025-05-01T00:00:00Z',
   speakable: true,
-
   citation: SOURCES,
 })
 
@@ -123,6 +123,10 @@ export default function FishDiseaseGuidePage() {
   return (
     <ArticleLayout
       siteId="fish-com"
+      heroHop={<>
+        <PrimaryHop href="/go/amazon-brand/api+freshwater+master+test+kit?s=health-disease-guide" label="Search Amazon for the API Freshwater Master Test Kit" />
+        <HopDisclosure siteId="fish-com" href="/go/amazon-brand/api+freshwater+master+test+kit?s=health-disease-guide" tone="on-dark" />
+      </>}
       hero={{
         title: 'Aquarium Fish Disease Guide',
         subtitle: 'Most fish disease is preventable — excellent water quality, proper quarantine, and stress reduction prevent the vast majority of common conditions. When disease does occur, early identification makes treatment faster and more effective.',
@@ -140,8 +144,9 @@ export default function FishDiseaseGuidePage() {
       relatedLinks={[{ title: "Fish Health Hub", href: "/health", category: "Fish Health" }, { title: "Ich Treatment Guide", href: "/health/ich-treatment", category: "Fish Health" }, { title: "Velvet Disease", href: "/health/velvet-disease", category: "Fish Health" }, { title: "New Tank Syndrome", href: "/health/new-tank-syndrome", category: "Fish Health" }]}
       sidebar={<>
         <div className="bg-brand-primary-pale border border-brand-border rounded-xl p-4">
-          <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">The #1 Prevention</div>
-          <p className="text-xs text-brand-text-mid leading-relaxed m-0">4-week quarantine of all new fish. Most disease enters tanks via new arrivals. A hospital/quarantine tank is the best investment in fish health you can make.</p>
+          <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Quarantine new arrivals</div>
+          <p className="text-xs text-brand-text-mid leading-relaxed m-0">4-week quarantine of all new fish. Most disease enters tanks via new arrivals. A spare hospital tank is where that quarantine happens.</p>
+          <p className="text-xs mt-2 mb-0"><Link href="/setup/quarantine-tank-guide" className="text-brand-primary underline underline-offset-2">Quarantine tank setup →</Link></p>
         </div>
         <TableOfContents items={[
           ...DISEASES.map(d => ({ label: d.name, href: `#${d.name.toLowerCase().replace(/[\s()\/]/g, '-').replace(/-+/g, '-')}` })),
@@ -211,30 +216,30 @@ export default function FishDiseaseGuidePage() {
 
         <div id="hospital-tank" className="bg-brand-surface border border-brand-border rounded-xl p-6 mt-4">
           <h2 className="font-display text-xl font-bold text-brand-dark mb-3 mt-0">The Hospital Tank — Essential Equipment</h2>
-          <p className="text-sm text-brand-text-mid leading-relaxed m-0">A dedicated hospital/quarantine tank is the single best investment for fish health. It serves as a 4-week quarantine for new arrivals (preventing disease introduction to your display tank) and as a treatment space for sick fish (allowing targeted medication without medicating your entire display tank or disturbing beneficial bacteria). Minimum: a spare 10-gallon tank with a cycled sponge filter (seed the sponge in your main tank), a heater, and a lid. Keep it ready. You will need it.</p>
+          <p className="text-sm text-brand-text-mid leading-relaxed m-0">A spare 10-gallon hospital tank is the setup for a 4-week quarantine of new arrivals and for treating sick fish away from the display. It keeps new arrivals from introducing disease to the display tank, and it lets you medicate one fish without treating the whole tank or its bacteria. Use a cycled sponge filter (seed the sponge in your main tank), a heater, and a lid. Keep it ready. You will need it.</p>
         </div>
         <JourneyNext
           siteId="fish-com"
           nextHref="/setup/quarantine-tank-guide"
           nextLabel="Set up the hospital tank before you dose"
-          nextBlurb="Test water first. Then isolate. The next useful page is the quarantine / hospital-tank setup — so copper and antibiotics stay out of the display. The hop below is the same hospital-tank search already on this page."
+          nextBlurb="Test water first. Then isolate. The next useful page is the quarantine / hospital-tank setup — so copper and antibiotics stay out of the display. The button below opens the same hospital-tank search on Amazon."
           resourceHref="/go/amazon-brand/aquarium+quarantine+hospital+tank+net?s=health-disease-guide"
           resourceLabel="Browse quarantine / hospital tanks on Amazon →"
         />
 
-        {/* Money path — live amazon-brand search hops (hospital-tank kit).
-            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-            Category searches only — not a ranked list. No medication hops. */}
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        {/* Shop note — live amazon-brand search buttons (hospital-tank kit).
+            ShopCtas hides empty Chewy; never href="#" or an empty link.
+            Amazon searches only — not a ranked list. No medication buttons. */}
+        <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/aquarium+quarantine+hospital+tank+net?s=health-disease-guide", "/go/amazon-brand/api+freshwater+master+test+kit?s=health-disease-guide", "/go/amazon-brand/aquarium+sponge+filter?s=health-disease-guide", "/go/amazon-brand/eheim+jager+heater?s=health-disease-guide", "/go/amazon-brand/aquarium+digital+thermometer?s=health-disease-guide"]} />
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
-            Shop a hospital-tank kit
+            Shop these supplies
           </div>
           <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Test water before you medicate — a liquid master kit is how you
             see ammonia, nitrite, and nitrate. Then isolate in a spare
             10-gallon hospital tank with a seeded sponge filter, a heater
             rated for the tank, and a separate digital thermometer so the
-            dial is not the only reading. Same test-kit hop used on the{' '}
+            dial is not the only reading. The same test-kit button is on the{' '}
             <Link
               href="/tools/fish-disease-symptom-checker"
               className="text-brand-primary no-underline hover:underline"
@@ -248,22 +253,20 @@ export default function FishDiseaseGuidePage() {
             >
               water-test kit review
             </Link>
-            . Same hospital-tank hop used on the symptom checker. Same
-            sponge-filter hop used on the{' '}
+            . The same hospital-tank button is on the symptom checker. The same
+            sponge-filter button is on the{' '}
             <Link
               href="/tools/aquarium-cycling-estimator"
               className="text-brand-primary no-underline hover:underline"
             >
               cycling estimator
             </Link>
-            . Same heater and thermometer hops used on the{' '}
+            . The same heater and thermometer buttons are on the{' '}
             <Link href="/setup" className="text-brand-primary no-underline hover:underline">
               aquarium setup guide
             </Link>
             . They are not a ranked product list, they are not medications,
-            and they do not replace diagnosis or an aquatic veterinarian.
-            Fish.com earns a commission on qualifying purchases at no extra
-            cost to you.</p>
+            and they do not replace diagnosis or an aquatic veterinarian.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/api+freshwater+master+test+kit?s=health-disease-guide"
@@ -279,7 +282,7 @@ export default function FishDiseaseGuidePage() {
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/eheim+jager+heater?s=health-disease-guide"
-              amazonLabel="Browse aquarium heaters on Amazon →"
+              amazonLabel="Browse Eheim Jager heaters on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+digital+thermometer?s=health-disease-guide"

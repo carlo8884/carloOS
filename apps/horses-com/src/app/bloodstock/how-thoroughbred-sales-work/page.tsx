@@ -17,7 +17,6 @@ import {
   RelatedLinks,
   TableOfContents,
   FAQAccordion,
-  AffiliateDisclosure,
   buildArticleSchema,
   SchemaScript,
 } from '@carloOS/ui'
@@ -161,19 +160,7 @@ export default function HowSalesWorkPage() {
             <li>International Federation of Horseracing Authorities (IFHA). International sales and breeding overview. horseracingintfed.com.</li>
           </ol>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated horse breeze-up-gallop chart /
-              horse stall-door bid-spotter card /
-              equine pinhook-sale-topper handbook).
-              No existing product hop to keep.
-              Educational barn searches only; no Rx /
-              vaccine / flea / heartworm / nsaid hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs what-is-bloodstock
-              / reading-a-pedigree / racing-bloodstock hops.
-              Do not re-open #1165 / what-to-expect. */}
                   </div>
       </ArticleLayout>
     </>

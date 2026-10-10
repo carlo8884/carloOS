@@ -1,6 +1,7 @@
+import { HopDisclosure } from '../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, buildMetadata, FAQAccordion, buildBreadcrumbSchema, buildFAQSchema, combineSchemas, SchemaScript, ShopCtas, StockImage, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, FAQAccordion, buildBreadcrumbSchema, buildFAQSchema, combineSchemas, SchemaScript, ShopCtas, StockImage, CrossPortfolioCard } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
@@ -15,7 +16,6 @@ const breadcrumbSchema = buildBreadcrumbSchema({
     { name: 'Nutrition', url: 'https://dog.com/nutrition' },
   ],
 })
-
 
 const GUIDES = [
   {
@@ -42,7 +42,7 @@ const GUIDES = [
       { title: 'Can Dogs Eat…? Food Checker', desc: 'A–Z safe/caution/toxic checker for 30+ common foods', href: '/nutrition/can-dogs-eat', badge: '🆕 Checker' },
       { title: 'Foods Toxic to Dogs', desc: 'Chocolate, xylitol, grapes, onions, and 20+ more', href: '/nutrition/toxic-foods', badge: '⚠️ Safety' },
       { title: 'Human Foods Safe for Dogs', desc: 'What can actually be shared as treats', href: '/nutrition/safe-human-foods' },
-      { title: 'Dog Treats Guide', desc: 'Caloric budget (the 10% rule), dental treats, and jerky safety', href: '/nutrition/dog-treats-guide' },
+      { title: 'Dog Treats Guide', desc: 'WSAVA treat-calorie ceiling, dental treats, and jerky safety', href: '/nutrition/dog-treats-guide' },
       { title: 'Supplements That Work', desc: 'Fish oil, joint supplements, probiotics — evidence graded', href: '/nutrition/dog-supplements' },
     ],
   },
@@ -103,7 +103,7 @@ const FAQS = [
   {
     question: 'What should I feed my dog?',
     answer:
-      "For most healthy dogs, the strongest single signal is a complete-and-balanced commercial diet that meets the AAFCO nutritional adequacy standard for your dog's life stage and is made by a company that meets WSAVA selection guidelines (employs a qualified nutritionist, runs feeding trials, owns its manufacturing). Beyond that baseline, match calories to body condition rather than to the cup markings on the bag, keep treats to roughly 10% of daily calories, and let any medical condition — not breed marketing or trends — drive special diets. Your veterinarian is the right partner for individual targets.",
+      "For most healthy dogs, the strongest single signal is a complete-and-balanced commercial diet that meets the AAFCO nutritional adequacy standard for your dog's life stage and is made by a company that meets WSAVA selection guidelines (employs a qualified nutritionist, runs feeding trials, owns its manufacturing). Beyond that baseline, match calories to body condition rather than to the cup markings on the bag, keep treats to no more than 10% of daily calorie intake, the ceiling in the WSAVA guide to treats for dogs (https://wsava.org/wp-content/uploads/2025/11/WSAVA_GuidetoTreats_Dogs_251107.pdf), and let any medical condition — not breed marketing or trends — drive special diets. Your veterinarian is the right partner for individual targets.",
   },
   {
     question: 'How do I know if a dog food is good quality?',
@@ -225,32 +225,16 @@ export default function NutritionHubPage() {
           <Link href="/tools/dog-calorie-calculator" className="text-brand-primary hover:underline">
             The Dog Calorie Calculator
           </Link>{' '}
-          estimates daily kcal needs using the standard RER formula and WSAVA/AAHA-style life-stage factors.
+          estimates daily kcal needs. Inactive and active adults use the WSAVA July 2020 chart. Other multipliers are planning figures.
         </p>
       </section>
       <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <h2 id="kit" className="font-display font-bold text-brand-dark text-xl mb-4 max-w-container-wide">Related supplies</h2>
 
         <div className="max-w-container-wide mt-6">
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href="/go/amazon-brand/royal+canin+dog+food?s=nutrition-hub" />
         </div>
 
-        {/* Money path — live amazon-brand search hops
-            (laminated dog nutrition feeding chart /
-            dog fridge WSAVA label card /
-            canine nutrition reference handbook).
-            Educational kitchen searches only; no Rx /
-            vaccine / flea / heartworm ASIN hops.
-            ShopCtas hides empty Chewy; never href="#"
-            or PLACEHOLDER. Unused vs tools-hub
-            laminated+dog+calculator+tools+chart /
-            dog+fridge+measurement+card /
-            canine+calculator+reference+handbook,
-            reviews-hub laminated+dog+reviews+buyer+guide+chart /
-            dog+fridge+reviews+comparison+card /
-            canine+reviews+reference+handbook,
-            child nutrition large+breed+puppy+dry+dog+food+aafco /
-            senior+dog+dry+food+wsava+recommended. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-container-wide">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
             Shop related supplies
@@ -259,7 +243,7 @@ export default function NutritionHubPage() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/royal+canin+dog+food?s=nutrition-hub"
-              amazonLabel="Shop on Amazon"
+              amazonLabel="Browse Royal Canin dog food on Amazon →"
             />
           </div>
         </div>

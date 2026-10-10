@@ -20,9 +20,7 @@ You walk to the edge of the new thing. You sit down. You let the puppy decide wh
 
 Ten exposures a week, puppy-led, beats fifty exposures a week, owner-led, every single time. This is the consensus position from the AVSAB (American Veterinary Society of Animal Behavior) puppy socialization statement.
 
-**One product that earns its place this week:** a 6-ft flat lead — not a retractable, not a long line yet. A flat lead gives the puppy a defined distance to retreat to (you), and gives you a calm, slack-handled way to say "we're staying here." We've been pointing readers to the basic Chewy house brand for years; it's $9 and lasts.
-
-[Get a 6-ft flat lead on Chewy →](https://dog.com/go/chewy/frisco-flat-lead-6ft)
+**One product that earns its place this week:** a 6-ft flat lead — not a retractable, not a long line yet. A flat lead gives the puppy a defined distance to retreat to (you), and gives you a calm, slack-handled way to say "we're staying here." A basic flat nylon lead is the usual pick for this week.
 
 Tomorrow: nothing. Friday: a real owner's story about getting weeks 8–16 right.
 

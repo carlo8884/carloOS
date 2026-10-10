@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -6,7 +7,7 @@ import {
   RelatedLinks,
   CrossPortfolioCard,
   ArticleByline,
-  AffiliateDisclosure,
+
   ShopCtas,
   JourneyNext,
 } from '@carloOS/ui'
@@ -66,30 +67,30 @@ export default function MarkerTrainingPage() {
             siteId="dog-com"
             nextHref="/training/basic-commands"
             nextLabel="Use the charged marker on sit, down, stay, come, and leave-it"
-            nextBlurb="The click is only useful if it lands on a real behavior. Charge the marker, then run the five-command protocol in 3–5 minute sessions. The hop below is the same clicker search already on this page."
+            nextBlurb="The click is only useful if it lands on a real behavior. Charge the marker, then run the five-command protocol in 3–5 minute sessions. The button below opens the same clicker search on Amazon."
             resourceHref="/go/amazon-brand/dog+training+clicker?s=training-marker-training"
             resourceLabel="Browse dog training clickers on Amazon →"
           />
 
-          {/* Money path — live amazon-brand search hops (marker / clicker kit).
-              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-              Category searches only — not a ranked list. */}
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          {/* Shop note — live amazon-brand search buttons (marker / clicker kit).
+              ShopCtas hides empty Chewy; never href="#" or an empty link.
+              Amazon searches only — not a ranked list. */}
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/dog+training+clicker?s=training-marker-training", "/go/amazon-brand/puppy+training+treats?s=training-marker-training", "/go/amazon-brand/dog+training+treat+pouch+belt+clip?s=training-marker-training"]} />
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
-              Shop a marker-training kit
+              Shop these supplies
             </div>
             <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">A clicker marks the exact moment of the behavior; pea-sized
               treats and a belt-clip pouch keep the reward inside the 1.3-second
-              window so the click stays charged. Same clicker, treat, and pouch
-              hops used on the{' '}
+              window so the click stays charged. The same clicker, treat, and pouch
+              buttons are on the{' '}
               <Link
                 href="/training/basic-commands"
                 className="text-brand-primary no-underline hover:underline"
               >
                 basic-commands guide
               </Link>
-              . Same treat hop used on the{' '}
+              . The same training-treat button is on the{' '}
               <Link
                 href="/training/house-training"
                 className="text-brand-primary no-underline hover:underline"
@@ -104,8 +105,7 @@ export default function MarkerTrainingPage() {
                 puppy schedule
               </Link>
               . They are not a ranked product list and they do not replace
-              charging the marker. Dog.com earns a commission on qualifying
-              purchases at no extra cost to you.</p>
+              charging the marker.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/dog+training+clicker?s=training-marker-training"
@@ -117,7 +117,7 @@ export default function MarkerTrainingPage() {
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/dog+training+treat+pouch+belt+clip?s=training-marker-training"
-                amazonLabel="Browse treat pouches on Amazon →"
+                amazonLabel="Browse belt-clip treat pouches on Amazon →"
               />
           </div>
             <p className="text-2xs text-brand-text-light mt-3">

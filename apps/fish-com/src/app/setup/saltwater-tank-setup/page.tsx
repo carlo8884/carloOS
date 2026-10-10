@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, RelatedLinks, AffiliateDisclosure, JourneyNext } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, RelatedLinks, JourneyNext } from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Saltwater Aquarium Setup Guide — FOWLR vs Reef | Fish.com', description: 'How to set up a saltwater aquarium. FOWLR vs reef tank, salinity maintenance, live rock, protein skimmer, and the longer cycling process explained.', path: '/setup/saltwater-tank-setup', type: 'article' })
@@ -19,12 +19,7 @@ const SOURCES = [
     url: "https://www.advancesmarinebiology.com/article/S0065-2881(09)56001-2/abstract",
     publisher: "Advances in Marine Biology (peer-reviewed)",
   },
-  {
-    label: "Amyloodinium ocellatum (Marine Velvet) in Saltwater Fish",
-    url: "https://edis.ifas.ufl.edu/publication/FA027",
-    publisher: "University of Florida IFAS Extension",
-  },
-  {
+    {
     label: "Protein Skimmers and Dissolved Organic Carbon Removal",
     url: "https://www.sciencedirect.com/science/article/pii/S0044848608001816",
     publisher: "Aquaculture (peer-reviewed)",
@@ -70,10 +65,10 @@ export default function SaltwaterTankSetupPage() {
 
           <h2>FOWLR vs Reef — Choose First</h2>
           <p><strong>FOWLR (Fish Only With Live Rock):</strong> Saltwater fish in a tank with live rock for biological filtration. No corals or invertebrates. Much more forgiving water chemistry requirements. Standard lighting. Less equipment. Less expensive. The appropriate starting point for most people entering saltwater keeping. Many popular marine fish — tangs, angelfish, triggers, lionfish — are kept in FOWLR tanks.</p>
-          <p><strong>Reef tank:</strong> Corals, invertebrates, and fish. Corals require precise alkalinity, calcium, magnesium, and phosphate levels, high-intensity lighting, and low nitrate/phosphate. Significantly higher equipment cost ($500–2000+ for lighting and dosing equipment alone) and daily monitoring requirements. Not appropriate as a first saltwater tank. Recommend 12+ months of FOWLR experience before reef.</p>
+          <p><strong>Reef tank:</strong> Corals, invertebrates, and fish. Corals require precise alkalinity, calcium, magnesium, and phosphate levels, high-intensity lighting, and low nitrate/phosphate. Significantly higher equipment cost (see current price for lighting and dosing equipment alone) and daily monitoring requirements. Not appropriate as a first saltwater tank. Recommend 12+ months of FOWLR experience before reef.</p>
 
           <h2>Water — The Critical Difference from Freshwater</h2>
-          <p>Do not use tap water for saltwater tanks. Tap water contains chlorine, chloramine, phosphates, silicates, and heavy metals that cause algae problems and harm marine life. Use RO/DI (reverse osmosis + deionized) water: either a home RO/DI unit ($150–400 one-time purchase that produces unlimited pure water) or purchasing RO/DI water from a local fish store. Check with a TDS (total dissolved solids) meter — target under 10 ppm, ideally 0 ppm TDS.</p>
+          <p>Do not use tap water for saltwater tanks. Tap water contains chlorine, chloramine, phosphates, silicates, and heavy metals that cause algae problems and harm marine life. Use RO/DI (reverse osmosis + deionized) water: either a home RO/DI unit (see current price one-time purchase that produces unlimited pure water) or purchasing RO/DI water from a local fish store. Check with a TDS (total dissolved solids) meter — target under 10 ppm, ideally 0 ppm TDS.</p>
           <p>Salinity is maintained with a quality marine salt mix. Instant Ocean and Reef Crystals (for reef) are reliable and widely available. Mix in a container outside the tank with a powerhead for circulation. Measure with a refractometer (not a swing arm hydrometer — they are inaccurate). Top off evaporation with fresh RO/DI water (not saltwater — salt does not evaporate, only water does).</p>
 
           <h2>Live Rock and Biological Filtration</h2>
@@ -89,19 +84,9 @@ export default function SaltwaterTankSetupPage() {
           siteId="fish-com"
           nextHref="/setup/quarantine-tank-guide"
           nextLabel="Set the quarantine tank before the first marine fish"
-          nextBlurb="FOWLR or reef, new saltwater fish go through a bare-bottom QT first — 4–6 weeks, not a display drop. Use the quarantine guide next. The hop below is the same saltwater starter-kit search already on this page."
-          resourceHref="/go/amazon-brand/saltwater%20reef%20tank%20starter%20kit?s=setup-saltwater-tank-setup"
-          resourceLabel="Browse saltwater reef starter kits on Amazon →"
+          nextBlurb="FOWLR or reef, new saltwater fish go through a bare-bottom QT first — 4–6 weeks, not a display drop. Use the quarantine guide next."
         />
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
-          <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
-          <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Saltwater Reef Setup — Where to Shop</div>
-          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse the gear referenced in this guide on Amazon. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
-          <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
-            <a href="/go/amazon-brand/saltwater%20reef%20tank%20starter%20kit?s=setup-saltwater-tank-setup" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Amazon →</a>
-          </div>
           <ArticleSourcesList sources={SOURCES} />
-        </div>
 
         </div>
       </ArticleLayout>

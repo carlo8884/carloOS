@@ -1,8 +1,8 @@
+import { HopDisclosure } from '../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
   buildArticleSchema,
-  AffiliateDisclosure,
   buildMetadata,
   buildBreadcrumbSchema,
   combineSchemas,
@@ -15,7 +15,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
   title: 'Dog Tools & Calculators | Dog.com',
   description:
-    'Free, source-cited dog care calculators. Start with the Dog Calorie Calculator: RER and daily intake estimates using WSAVA/AAHA-style life-stage factors.',
+    'Free dog care calculators. Adult calories use the WSAVA July 2020 chart. Other life-stage multipliers are planning figures.',
   path: '/tools',
 })
 
@@ -41,19 +41,19 @@ const TOOLS = [
   {
     href: '/tools/dog-calorie-calculator',
     title: 'Dog Calorie Calculator',
-    desc: 'Estimate your dog\'s daily calorie needs (kcal/day) using the standard RER formula (70 x kg^0.75) and WSAVA/AAHA-style life-stage factors. Includes optional cups-per-day output from your food\'s calorie density.',
+    desc: 'Inactive adults use 95 × kg^0.75 and active adults use 130 × kg^0.75 (WSAVA July 2020). Other life-stage multipliers are planning figures.',
     tag: 'Nutrition',
   },
   {
     href: '/tools/dog-age-calculator',
     title: 'Dog Age in Human Years Calculator',
-    desc: 'Convert your dog\'s age to a human-year equivalent using the AVMA/AAHA-style banded model -- not the inaccurate multiply-by-7 rule. Accounts for size and a life-stage label, then shop by stage (puppy food / teething toys, adult dental chews, senior joint support, ID tag, leash).',
+    desc: 'Convert a dog\'s age with a banded planning figure, not an AVMA or AAHA chart and not multiply-by-7. Size changes the later rate. Then shop by life stage.',
     tag: 'Life Stage',
   },
   {
     href: '/tools/puppy-weight-predictor',
     title: 'Puppy Weight Predictor',
-    desc: 'How big will your puppy get? Estimate adult weight as a range from current age and weight using the standard growth-percentage method and published size-class growth curves. Planning estimate, not a diagnosis.',
+    desc: 'How big will your puppy get? Adult weight is a range from current age and weight. The growth fractions are a planning figure, not a published curve.',
     tag: 'Puppy',
   },
   {
@@ -65,7 +65,7 @@ const TOOLS = [
   {
     href: '/tools/dog-gestation-calculator',
     title: 'Dog Pregnancy & Whelping Calendar',
-    desc: 'How long are dogs pregnant? Enter the breeding date to get the estimated whelping (due) date -- the 63-day canine average plus the 58-68 day window -- then pack a whelping-kit checklist (box, pads, scale, thermometer, bulb syringe, towels). Breeding info, not a diagnosis.',
+    desc: 'How long are dogs pregnant? Merck’s table is 58–72 days from an untimed breeding, or 62–64 days from ovulation (https://www.merckvetmanual.com/reproductive-system/reproductive-system-introduction/the-reproductive-system-in-animals). Day 63 is the ovulation midpoint only. Then pack a whelping-kit checklist (box, pads, scale, thermometer, bulb syringe, towels). Breeding info, not a diagnosis.',
     tag: 'Breeding',
   },
   {
@@ -217,7 +217,7 @@ export default function ToolsHub() {
               <h2 className="mb-2 font-display text-2xl font-semibold text-brand-text-dark group-hover:text-brand-primary">
                 {tool.title}
               </h2>
-              <p className="text-sm leading-relaxed text-brand-text-mid">{tool.desc}</p>
+              <p className="text-sm leading-relaxed text-brand-text-mid break-words">{tool.desc}</p>
             </Link>
           ))}
         </div>
@@ -230,11 +230,10 @@ export default function ToolsHub() {
             Why source-cited tools matter
           </h2>
           <p className="mb-4 text-base leading-relaxed text-brand-text-mid">
-            The internet is full of dog calorie calculators that do not disclose their formulas or
-            cite their sources. This hub exists to close that gap. Every tool here uses a published,
-            verifiable equation -- the RER formula and WSAVA/AAHA-style life-stage factors are
-            documented in veterinary nutrition literature, not invented for this site. Every result
-            is labeled as an estimate and includes guidance to calibrate with a veterinarian.
+            The internet is full of dog calorie calculators that do not disclose their formulas.
+            Inactive and active adult calories on this hub use the WSAVA July 2020 chart (95 or
+            130 times kg to the power 0.75). Other life-stage multipliers are planning figures,
+            not rows on that chart. Every result is an estimate to calibrate with a veterinarian.
             The{' '}
             <Link
               href="/tools/dog-grimace-scale"
@@ -276,23 +275,9 @@ export default function ToolsHub() {
         <p className="max-w-content-wide text-sm text-brand-text-mid leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
 
         <div className="max-w-content-wide mt-6">
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href="/go/amazon-brand/digital+pet+thermometer?s=tools-hub" />
         </div>
 
-        {/* Money path — live amazon-brand search hops
-            (laminated dog calculator-tools chart /
-            dog fridge measurement card /
-            canine calculator reference handbook).
-            Educational kitchen searches only; no Rx /
-            vaccine ASIN hops. ShopCtas hides empty
-            Chewy; never href="#" or PLACEHOLDER.
-            Unused vs health-hub
-            pet+first+aid+kit / digital+pet+thermometer /
-            soft+dog+carrier / dental+chews+dog /
-            orthopedic+dog+bed, tool children
-            wire+dog+crate+with+divider+panel /
-            dog+crate+pad / dog+crate+cover /
-            puppy+training+pads. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-content-wide">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
             Shop related supplies
@@ -301,7 +286,7 @@ export default function ToolsHub() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/digital+pet+thermometer?s=tools-hub"
-              amazonLabel="Shop on Amazon"
+              amazonLabel="Browse digital pet thermometer on Amazon →"
             />
           </div>
         </div>

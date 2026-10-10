@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -117,6 +118,7 @@ export default function ThrushPage() {
             updatedAt="2026-09-05"
             reviewedBy="Editorial team"
           />
+          <LastUpdated date="2026-10-09" />
 
           <h2 id="what">What Is Thrush</h2>
           <p>Thrush is a degenerative infection of the frog -- the V-shaped, rubbery cushion on the underside of the hoof -- and especially of the deep grooves (sulci) on either side of it and in its center. Anaerobic bacteria, classically Fusobacterium necrophorum, colonize the grooves and break down the horn, producing a characteristic black, moist, foul-smelling discharge. It usually starts in the central or collateral sulci where debris packs in and air cannot reach.</p>
@@ -145,16 +147,16 @@ export default function ThrushPage() {
           </ul>
 
           <h2 id="kit">Hygiene kit</h2>
-          <p>Everyday physical supplies that match the daily-picking, groove-prep, and dry-stall copy on this page — a folding pocket equine hoof pick so packed manure comes out of the sulci before it seals them from air, a topical equine thrush antiseptic so the cleaned grooves get the barn-shelf prep the label directs, and equine stall sweet lime so wet stalls dry instead of staying urine-soaked. These are household barn tools, not treatments. They do not diagnose or treat thrush, they do not replace a veterinarian or a farrier, and they are not a ranked product list. This page does not claim hands-on testing.</p>
+          <p>Keep these on hand: a folding pocket equine hoof pick so packed manure comes out of the sulci before it seals them from air, a topical equine thrush antiseptic so the cleaned grooves get the barn-shelf prep the label directs, and equine stall sweet lime so wet stalls dry instead of staying urine-soaked. These are household barn tools, not treatments. They do not diagnose or treat thrush, they do not replace a veterinarian or a farrier, and they are not a ranked product list.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/topical+equine+thrush+antiseptic?s=health-thrush", "/go/amazon-brand/folding+pocket+equine+hoof+pick?s=health-thrush", "/go/amazon-brand/equine+stall+sweet+lime?s=health-thrush"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (topical equine thrush antiseptic /
               folding pocket equine hoof pick /
               equine stall sweet lime).
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or an empty link. Amazon searches only —
               unused vs #1063 foam-pads / sand-bedding /
               easy-keeper-muzzle, #1062 thermometer /
               stethoscope / fleece-cooler, #1061
@@ -166,8 +168,8 @@ export default function ThrushPage() {
               #1056 diapers / collar / crate,
               horse+hoof+pick / horse+hoof+pick+brush /
               horse+hoof+boots / pine+shavings /
-              copper+sulfate / iodine. Rx ASINs are not
-              shoppable hops. */}
+              copper+sulfate / iodine. prescription brands are not
+              shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
@@ -192,12 +194,16 @@ export default function ThrushPage() {
           <h2 id="faq">Frequently Asked Questions</h2>
           <FAQAccordion items={FAQS} />
 
-          <h2 id="references">References</h2>
-          <ol className="text-sm text-brand-text-mid">
-            <li>Baxter GM (ed). Adams and Stashak&apos;s Lameness in Horses, 7th ed., Wiley-Blackwell, 2020.</li>
-            <li>O&apos;Grady SE. “Guidelines for Trimming the Equine Foot.” AAEP Proceedings, 2009.</li>
-            <li>American Association of Equine Practitioners. “Thrush and Hoof Care” owner resources. aaep.org.</li>
-          </ol>
+          <div id="references">
+            <ArticleSourcesList
+              title="References"
+              sources={[
+              { label: "Baxter GM (ed). Adams and Stashak's Lameness in Horses, 7th ed., Wiley-Blackwell, 2020.", url: "https://www.wiley.com/", publisher: "Wiley" },
+              { label: "O'Grady SE. “Guidelines for Trimming the Equine Foot.” AAEP Proceedings, 2009.", url: "https://aaep.org/", publisher: "AAEP" },
+              { label: "American Association of Equine Practitioners. “Thrush and Hoof Care” owner resources. aaep.org.", url: "https://aaep.org/", publisher: "AAEP" },
+              ]}
+            />
+          </div>
         </div>
       </ArticleLayout>
     </>

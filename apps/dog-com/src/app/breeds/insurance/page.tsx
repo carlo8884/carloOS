@@ -14,12 +14,11 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
   Breadcrumb,
-  AffiliateDisclosure,
   CrossPortfolioCard,
   RelatedLinks,
   SchemaScript,
   buildMetadata,
-  PriceAsOf
+  PriceAsOf,
 } from '@carloOS/ui'
 import {
   getBreedsWithInsuranceProfile,
@@ -172,9 +171,6 @@ export default function BreedInsuranceHubPage() {
             </div>
 
             {/* Disclosure above the comparison CTA (QC §1) */}
-            <div className="not-prose my-8">
-              <AffiliateDisclosure variant="inline" siteId="dog-com" />
-            </div>
 
             <section className="not-prose my-8 border border-brand-border rounded-xl p-6 bg-brand-surface">
               <h2 className="font-display font-black text-brand-dark tracking-tight text-2xl mt-0 mb-2">
@@ -201,18 +197,13 @@ export default function BreedInsuranceHubPage() {
               </div>
             </section>
 
-            {/* Money path — live amazon-brand kitchen hops
+            {/* Shop note — live amazon-brand kitchen buttons
                 matching on-page why-breed-matters /
                 enroll-before-a-sign / breed-health copy.
                 Unique vs the dog breeds hub, vets
                 insurance hub, and breed-insurance spoke
                 kitchens. Educational only. */}
-            <div className="not-prose my-10 rounded-xl border border-brand-border bg-brand-surface p-6">
-              <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-                Shop related supplies
-              </div>
-                            <AffiliateDisclosure variant="inline" siteId="dog-com" />
-            </div>
+            
 
             <p className="text-sm text-brand-text-light mt-8">
               Editorial guidance from <strong>Dog.com Editorial</strong>, drawn

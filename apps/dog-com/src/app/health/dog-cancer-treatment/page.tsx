@@ -1,25 +1,29 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfContents, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfContents, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 
 const SOURCES = [
+  { label: 'Merck Veterinary Manual: Overview of Antineoplastic Agents', url: 'https://www.merckvetmanual.com/pharmacology/antineoplastic-agents/overview-of-antineoplastic-agents', publisher: 'Merck Vet Manual' },
+  { label: 'Merck Veterinary Manual: Targeted Antineoplastic Agents, including FDA-approved toceranib for canine mast cell tumors', url: 'https://www.merckvetmanual.com/pharmacology/antineoplastic-agents/targeted-antineoplastic-agents-in-animals', publisher: 'Merck Vet Manual' },
   { label: 'ACVIM: Veterinary Oncology — Canine Cancer Treatment Guidelines', url: 'https://www.acvim.org/resources-tools/animal-owners', publisher: 'ACVIM Oncology' },
-  { label: 'Merck Veterinary Manual: Cancer Chemotherapy in Animals', url: 'https://www.merckvetmanual.com/pharmacology/antineoplastic-agents/cancer-chemotherapy-in-animals', publisher: 'Merck Vet Manual' },
-  { label: 'AVMA: Cancer Treatment Options for Pets', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/cancer-animals', publisher: 'AVMA' },
-  { label: 'FDA CVM: Palladia (toceranib phosphate) — Approved Veterinary Cancer Treatment', url: 'https://www.fda.gov/animal-veterinary/news-events/fda-approves-first-dog-cancer-treatment', publisher: 'FDA CVM' },
+  { label: 'AVMA: Cancer Treatment Options for Pets', url: 'https://www.avma.org/resources/pet-owners/petcare/cancer-pets', publisher: 'AVMA' },
+  { label: 'Cornell University Hospital for Animals: Cancer management cost FAQ', url: 'https://www.vet.cornell.edu/departments-centers-and-institutes/sprecher-institute-comparative-cancer-research/cancer-care-cornell-university-hospital-animals/cancer-management-frequently-asked-questions', publisher: 'Cornell University' },
+  { label: 'NC State Veterinary Hospital: Radiation therapy for bone cancer', url: 'https://hospital.cvm.ncsu.edu/services/small-animals/cancer-oncology/radiation-oncology/radiation-therapy-for-bone-cancer/', publisher: 'NC State' },
+  { label: 'Dog Cancer Foundation: Chemotherapy costs, citing the Veterinary Cancer Society (February 2025)', url: 'https://www.dogcancerfoundation.org/blog/cost-dog-chemotherapy', publisher: 'Dog Cancer Foundation' },
 ]
 
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Cancer Treatment — Chemotherapy, Surgery, Radiation | Dog.com', description: 'How cancer is treated in dogs. Chemotherapy in dogs is different from human chemo — most dogs tolerate it well. Surgery, radiation, immunotherapy.', path: '/health/dog-cancer-treatment', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Dog Cancer Treatment', description: 'Chemotherapy, surgery, radiation, and palliative care for canine cancer.', url: 'https://dog.com/health/dog-cancer-treatment', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Dog Cancer Treatment', description: 'Chemotherapy, surgery, radiation, and palliative care for canine cancer.', url: 'https://dog.com/health/dog-cancer-treatment', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-07T00:00:00Z' ,
   citation: SOURCES,
 })
 const med = buildMedicalWebPageSchema({ name: 'Dog Cancer Treatment', description: 'Canine cancer treatment — chemotherapy, surgery, radiation, and palliative care.', url: 'https://dog.com/health/dog-cancer-treatment', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
 const FAQS = [
   { question: 'Do dogs get as sick from chemotherapy as people do?', answer: 'No — and this is the most common misconception oncologists encounter. Human chemotherapy aims for cure and accepts significant short-term suffering; veterinary chemotherapy prioritizes quality of life. Approximately 75–80% of dogs on standard protocols experience no significant adverse effects; the 20–25% that do typically have mild, transient GI upset for 2–3 days. Severe effects requiring hospitalization occur in roughly 5% of dogs, and dogs do not lose their hair (double-coated breeds may thin slightly). Most treatments are outpatient — IV infusion, then home the same day.' },
-  { question: 'How much does cancer treatment for a dog cost?', answer: 'From the figures on this page: oncologist consultation $200–500, chemotherapy $200–1,500 per cycle, a radiation therapy course $8,000–20,000, and surgery $2,000–15,000+ depending on complexity. Pet insurance purchased before diagnosis is the primary financial tool for managing these costs — conditions documented before enrollment are excluded as pre-existing.' },
+  { question: 'How much does cancer treatment for a dog cost?', answer: 'Cornell University Hospital for Animals says radiation therapy is approximately $2,500–$7,000, a chemotherapy course over three to six months runs from several hundred dollars to several thousand, and major surgery starts around $500 and rises with the procedure. A February 2025 Dog Cancer Foundation summary of Veterinary Cancer Society figures puts an oncology consultation at $100–$250 and chemotherapy at $150–$600 per dose. NC State Veterinary Hospital lists bone-tumor stereotactic radiation at about $7,500–$8,500 and palliative radiation at about $800–$1,500. Typical US range, checked Oct 2026; varies by clinic and region. dated 2026-10-07. Pet insurance purchased before diagnosis is the primary financial tool — conditions documented before enrollment are excluded as pre-existing.' },
   { question: 'How long can chemotherapy extend a dog\'s life?', answer: 'It depends on the cancer. Published protocol outcomes summarized here: lymphoma treated with CHOP achieves complete remission in 60–90% of cases with median remission of 10–14 months; hemangiosarcoma post-surgery doxorubicin extends survival from 1–2 months to 4–8 months; osteosarcoma post-amputation carboplatin or doxorubicin extends median survival from 3–5 months to 9–12 months. A veterinary oncologist can give realistic expected outcomes for your dog\'s specific tumor type and stage.' },
   { question: 'Is choosing palliative care instead of chemotherapy giving up?', answer: 'No. Palliative care is a valid, compassionate treatment choice that prioritizes the dog\'s experience over extending life at any cost. The toolkit is real medicine: NSAIDs and gabapentin for pain, prednisone for lymphoma (1–4 months of remission while maintaining appetite and activity), palliative radiation for bone pain, and appetite and anti-nausea support throughout. Discuss the option openly with your veterinarian or oncologist — it is a standard part of the treatment conversation.' },
   { question: 'Should my dog see a veterinary oncologist?', answer: 'Referral is appropriate whenever a cancer diagnosis is made. A board-certified oncologist (DACVIM Oncology) provides staging, treatment options with realistic expected outcomes, and clinical trial information. Many primary care veterinarians can then administer straightforward chemotherapy protocols after the oncologist establishes the plan — the specialist designs, the primary vet and owner implement with ongoing oversight.' },
@@ -40,13 +44,14 @@ export default function DogCancerTreatmentPage() {
           <div className="bg-brand-dark rounded-lg p-5 mb-4">
             <div className="text-xs uppercase tracking-wide text-brand-primary mb-1 font-bold">Cancer + Insurance</div>
             <h3 className="font-display text-base font-bold text-brand-white mb-2">Cover treatment costs before diagnosis</h3>
-            <p className="text-xs text-white/60 mb-3 leading-relaxed">Canine cancer treatment ranges $3,000-$15,000+ depending on stage and modality. Insurance covers it — but only if enrolled before diagnosis.</p>
+            <p className="text-xs text-white/60 mb-3 leading-relaxed">Typical range, not a quote. Typical US range, checked Oct 2026; varies by clinic and region. dated 2026-10-07.</p>
+            <p className="text-xs text-white/60 mb-3 leading-relaxed">Cornell University Hospital for Animals says radiation therapy is approximately $2,500–$7,000, a chemotherapy course over three to six months runs from several hundred dollars to several thousand, and major surgery starts around $500 and rises with the procedure. A February 2025 Dog Cancer Foundation summary of Veterinary Cancer Society figures puts an oncology consultation at $100–$250 and chemotherapy at $150–$600 per dose. NC State Veterinary Hospital lists bone-tumor stereotactic radiation at about $7,500–$8,500 and palliative radiation at about $800–$1,500. Typical US range, checked Oct 2026; varies by clinic and region. dated 2026-10-07. Insurance covers it only if enrolled before diagnosis.</p>
             <a href={crossSiteHref('vets-co', '/reviews/best-pet-insurance')} className="inline-block text-xs font-bold text-brand-primary hover:underline">Compare pet insurance →</a>
           </div>
           <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
 
         </>}
-       priceAsOf="2026-06-11">
+       priceAsOf="2026-10-07">
         <div className="carloOS-article">
 
           <h2 id="chemo">Chemotherapy — Not What Most Owners Expect</h2>
@@ -63,7 +68,7 @@ export default function DogCancerTreatmentPage() {
           <p>Radiation therapy is available at university veterinary teaching hospitals and a growing number of specialty referral centers. It is used for: tumors that cannot be fully surgically resected (nasal tumors, brain tumors, tumors adjacent to critical structures), as an adjunct to surgery for incompletely excised tumors, and for pain management in bone cancer (palliative radiation reduces osteosarcoma pain significantly, extending quality of life without cure-intent). Dogs require general anesthesia for each radiation treatment session — treatments are typically given daily Monday through Friday for 3–5 weeks for definitive-intent protocols, or in 3–4 larger fractions weekly for palliative-intent protocols.</p>
 
           <h2 id="immunotherapy">Immunotherapy and Targeted Therapy</h2>
-          <p><strong>Palladia (toceranib phosphate):</strong> A tyrosine kinase inhibitor FDA-approved for canine mast cell tumors. Targets PDGFR, VEGFR, and c-Kit — molecular pathways active in certain mast cell tumors. Given orally every other day. Side effects: GI (vomiting, diarrhea, anorexia), muscle pain, hypertension, protein-losing nephropathy — require regular monitoring. Provides disease control in 40–60% of mast cell tumors not cured by surgery alone, and in other tumor types with relevant molecular targets.</p>
+          <p><strong>Palladia (toceranib phosphate):</strong> A tyrosine kinase inhibitor FDA-approved for canine mast cell tumors. Targets PDGFR, VEGFR, and c-Kit — molecular pathways active in certain mast cell tumors. Given orally every other day. Side effects: GI (vomiting, diarrhea, anorexia), muscle pain, hypertension, protein-losing nephropathy — require regular monitoring. The Merck Veterinary Manual notes FDA approval of toceranib for canine mast cell tumors. Response depends on the tumor, and regular monitoring is required.</p>
           <p><strong>VERITAS (Elias Animal Health):</strong> An emerging autologous tumor vaccine for canine osteosarcoma — uses the dog's own tumor cells to create a personalized vaccine. Early trial data is promising. Represents the direction of canine oncology toward personalized, targeted treatment.</p>
           <p><strong>Tanovea (rabacfosadine):</strong> FDA-approved for canine lymphoma — a nucleotide analog chemotherapy with a different mechanism and side effect profile than traditional CHOP chemotherapy. Used for relapsed or refractory lymphoma.</p>
 
@@ -73,44 +78,20 @@ export default function DogCancerTreatmentPage() {
 
           <h2 id="oncologist">The Role of the Veterinary Oncologist</h2>
           <p>A board-certified veterinary oncologist (<a href="https://www.acvim.org/resources-tools/animal-owners" rel="noopener" target="_blank" className="text-brand-primary hover:underline">DACVIM Oncology</a>) specializes in cancer diagnosis and treatment. Referral is appropriate whenever a cancer diagnosis is made — they provide staging workup, treatment options with realistic expected outcomes, clinical trial information, and ongoing monitoring during treatment. Many primary care veterinarians can administer straightforward chemotherapy protocols after oncologist consultation establishes the treatment plan. The oncologist is the specialist; the primary vet and owner implement the plan with ongoing oncologist oversight.</p>
-          <p>Cost reality: consultation with a veterinary oncologist: $200–500. Chemotherapy per cycle: $200–1,500 depending on protocol. Radiation therapy course: $8,000–20,000. Surgery: $2,000–15,000+ depending on procedure complexity. Pet insurance purchased before diagnosis is the primary financial tool for managing these costs.</p>
+          <p>Typical range, not a quote. Typical US range, checked Oct 2026; varies by clinic and region. dated 2026-10-07.</p>
+          <p>Cornell University Hospital for Animals says radiation therapy is approximately $2,500–$7,000, a chemotherapy course over three to six months runs from several hundred dollars to several thousand, and major surgery starts around $500 and rises with the procedure. A February 2025 Dog Cancer Foundation summary of Veterinary Cancer Society figures puts an oncology consultation at $100–$250 and chemotherapy at $150–$600 per dose. NC State Veterinary Hospital lists bone-tumor stereotactic radiation at about $7,500–$8,500 and palliative radiation at about $800–$1,500. Typical US range, checked Oct 2026; varies by clinic and region. dated 2026-10-07. Pet insurance purchased before diagnosis is the primary financial tool for managing these costs.</p>
 
           <h2 id="kit">A Simple Cancer-Treatment Home-Care Kit</h2>
           <p>
-            Three everyday physical supplies match the
-            post-excision, tripod-adaptation, and
-            small-meal copy above: a dog surgical
-            recovery suit so a mast-cell or
-            soft-tissue-sarcoma incision stays covered
-            while the pathologist evaluates clean versus
-            dirty margins, non-slip dog socks so a newly
-            tripod dog after osteosarcoma amputation has
-            indoor traction during the 2–4 week
-            adaptation window, and adjustable-height dog
-            bowls so small, frequent meals stay reachable
-            during the 2–3 day chemo GI window and after
-            oral-tumor surgery that may include partial
-            jaw removal. These are household home-care
-            tools, not treatments. They do not diagnose
-            cancer, they do not replace staging or an
-            oncologist consult, they do not set a CHOP,
-            doxorubicin, or carboplatin protocol, they
-            do not replace pain control or anti-nausea
-            medication, and they are not Palladia
-            (toceranib), Tanovea (rabacfosadine),
-            VERITAS, prednisone, Cerenia, maropitant,
-            mirtazapine, gabapentin, or a ranked
-            oncology product list. This page does
-            not hop medications. This page does not
-            claim hands-on testing. </p>
+            Keep these on hand: dog surgical recovery suit, non slip dog socks, and adjustable height dog bowls. These are household home-care tools, not treatments. They do not diagnose cancer, they do not replace staging or an oncologist consult, they do not set a CHOP, doxorubicin, or carboplatin protocol, they do not replace pain control or anti-nausea medication, and they are not Palladia (toceranib), Tanovea (rabacfosadine), VERITAS, prednisone, Cerenia, maropitant, mirtazapine, gabapentin, or a ranked oncology product list. </p>
 
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/dog+surgical+recovery+suit?s=health-dog-cancer-treatment", "/go/amazon-brand/non+slip+dog+socks?s=health-dog-cancer-treatment", "/go/amazon-brand/adjustable+height+dog+bowls?s=health-dog-cancer-treatment"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (dog surgical recovery suit / non-slip
               dog socks / adjustable-height dog bowls).
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or an empty link. Amazon searches only —
               unused vs #1054 locking kitchen trash can
               / walk-through pet gate / airtight dog-food
               storage container, #1053 dog pill pockets
@@ -156,8 +137,8 @@ export default function DogCancerTreatmentPage() {
               dog+cooling+vest. Palladia, Tanovea,
               CHOP, doxorubicin, carboplatin,
               prednisone, Cerenia, maropitant,
-              mirtazapine, gabapentin, and Rx ASINs
-              are not shoppable hops. */}
+              mirtazapine, gabapentin, and prescription brands
+              are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
@@ -179,6 +160,7 @@ export default function DogCancerTreatmentPage() {
           </div>
           </div>
 
+          <p>The cost question below repeats those same published ranges, dated 2026-10-07.</p>
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
 

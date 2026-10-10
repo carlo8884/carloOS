@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { StockImage,
+import { ShopCtas, StockImage,
   buildMetadata,
   ArticleLayout,
   RelatedLinks, CrossPortfolioCard,
@@ -11,14 +12,13 @@ import { StockImage,
   ArticleByline,
   DropCap,
   CalloutBox,
-  AffiliateDisclosure,
   ArticleSourcesList,
 } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 
 
 const SOURCES = [
-  { label: "Haplochromine Cichlids of Lake Malawi — Seriously Fish", url: "https://www.seriouslyfish.com/taxonomy/cichlidae/", publisher: "Seriously Fish" },
+  { label: "Cichlidae — FishBase family record", url: "https://www.fishbase.se/summary/FamilySummary.php?ID=349", publisher: "FishBase" },
   { label: "Lake Malawi Cichlids — FishBase taxonomy", url: "https://www.fishbase.se/identification/SpeciesList.php?family=Cichlidae", publisher: "FishBase" },
   { label: "Konings, A. Malawi Cichlids in Their Natural Habitat, 5th ed. Cichlid Press, 2016.", publisher: "Cichlid Press" },
   { label: "Stauffer, J.R. Jr. et al. The Cichlids of the Lake Malawi National Park. Smithsonian Institution Press, 1997.", publisher: "Smithsonian Institution Press" },
@@ -129,7 +129,7 @@ export default function AfricanCichlidPage() {
                 ['Groups', 'Mbuna · Peacocks · Haps · Tanganyikan'],
                 ['Origin', 'Lakes Malawi, Tanganyika, Victoria'],
                 ['Adult size', '3–12 in by species'],
-                ['Temperature', '76–82°F'],
+                ['Temperature', 'No preferred band on this page'],
                 ['pH', '7.8–9.0 (alkaline)'],
                 ['GH / KH', '10–25 dGH / 10–18 dKH'],
                 ['Min tank', '55 gal mbuna · 75 gal haps/peacock'],
@@ -142,7 +142,7 @@ export default function AfricanCichlidPage() {
                   className="flex justify-between py-1.5 border-b border-brand-border text-xs last:border-0"
                 >
                   <span className="text-brand-text-light">{k}</span>
-                  <span className="font-bold text-brand-dark text-right max-w-[55%]">{v}</span>
+                  <span className="font-bold text-brand-dark text-right max-w-[55%] break-all">{v}</span>
                 </div>
               ))}
             </div>
@@ -185,12 +185,14 @@ export default function AfricanCichlidPage() {
           />
         <StockImage manifestKey="fish-com:species-african-cichlid" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="An African cichlid in a home aquarium." priority />
 
-          <CalloutBox variant="note" title="TL;DR">
+          <CalloutBox variant="note" title="In short">
             African rift-lake cichlids from Lakes Malawi, Tanganyika, and
             Victoria need hard, alkaline water (pH 7.8–9.0, high GH/KH),
             dense rockwork to break sightlines and create territories,
             and a tank large enough to dilute aggression (55+ gallons for
-            mbuna, 75+ for peacocks and haps). Mbuna are vegetable
+            mbuna, 75+ for peacocks and haps). The{' '}
+            <a href="/tools/aquarium-volume-calculator" className="text-brand-primary hover:underline">tank volume calculator</a>{' '}
+            turns length, width, and height into gallons before you stock a tank that is smaller than the box suggests. Mbuna are vegetable
             specialists; feeding them high-protein food causes fatal
             Malawi bloat. Species-only or carefully curated rift-lake
             communities only — they are not compatible with soft-water
@@ -231,15 +233,15 @@ export default function AfricanCichlidPage() {
           <ul>
             <li>
               <strong>Lake Malawi:</strong> pH 7.8–8.5, GH 10–20 dGH,
-              KH 10–18 dKH, temperature 76–82°F.
+              KH 10–18 dKH.
             </li>
             <li>
               <strong>Lake Tanganyika:</strong> pH 8.5–9.5, GH 12–25
-              dGH, KH 16–25 dKH, temperature 76–82°F.
+              dGH, KH 16–25 dKH.
             </li>
             <li>
               <strong>Lake Victoria:</strong> pH 7.5–8.5, GH 8–20 dGH,
-              KH 6–18 dKH, temperature 76–82°F.
+              KH 6–18 dKH.
             </li>
           </ul>
           <p>
@@ -537,12 +539,12 @@ export default function AfricanCichlidPage() {
               practice referral directory.
             </li>
           </ul>
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        <HopDisclosure siteId="fish-com" href="/go/amazon-brand/african%20cichlid%20tank%20setup?s=species-african-cichlid" />
           <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>African Cichlid — Tank Setup</div>
-          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for african cichlid care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
+          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for african cichlid care.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
-            <a href="/go/amazon-brand/african%20cichlid%20tank%20setup?s=species-african-cichlid" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop African Cichlid Setup on Amazon →</a>
+            <ShopCtas amazonHref="/go/amazon-brand/african%20cichlid%20tank%20setup?s=species-african-cichlid" amazonLabel="Browse African cichlid tank setups on Amazon →" />
           </div>
         </div>
 

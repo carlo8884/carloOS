@@ -10,7 +10,7 @@ import {
   DropCap,
   CrossPortfolioCard,
   ArticleSourcesList,
-  AffiliateDisclosure,
+  LastUpdated,
 } from '@carloOS/ui'
 
 const SOURCES = [
@@ -21,18 +21,13 @@ const SOURCES = [
   },
   {
     label: "Merck Veterinary Manual — Canine Distemper in Ferrets: morbillivirus susceptibility, transmission, clinical course, and vaccination",
-    url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/canine-distemper-in-ferrets",
+    url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/infectious-diseases-of-ferrets",
     publisher: "Merck Veterinary Manual",
   },
   {
     label: "Association of Exotic Mammal Veterinarians (AEMV) — ferret vaccination protocols and practitioner continuing-education resources",
     url: "https://aemv.org",
     publisher: "AEMV",
-  },
-  {
-    label: "American Veterinary Medical Association (AVMA) — ferret distemper and rabies vaccination guidance for companion exotic species",
-    url: "https://www.avma.org/resources-tools/pet-owners/petcare/ferrets",
-    publisher: "AVMA",
   },
 ]
 import {
@@ -75,7 +70,6 @@ const medSchema = buildMedicalWebPageSchema({
   authorName: 'Ferret.com Editorial',
   lastReviewed: '2026-06-01',
 })
-
 
 const FAQS = [
   {
@@ -132,7 +126,7 @@ export default function FerretCanineDistemperPage() {
           <>
             <TableOfContents
               items={[
-                { label: 'TL;DR', href: '#tldr' },
+                { label: '', href: '#tldr' },
                 { label: 'What the Virus Is', href: '#virus' },
                 { label: 'How It Spreads', href: '#spread' },
                 { label: 'Clinical Course', href: '#course' },
@@ -154,7 +148,7 @@ export default function FerretCanineDistemperPage() {
 
           </>
         }
-      
+
         relatedLinks={[
           { title: 'Ferret Health Hub', href: '/health' },
           { title: 'Vaccinations', href: '/health/vaccinations' },
@@ -168,6 +162,7 @@ export default function FerretCanineDistemperPage() {
             publishedAt="2026-06-01"
             updatedAt="2026-06-01"
           />
+          <LastUpdated date="2026-10-09" />
 
           <DropCap>
             Of all the diseases a ferret can face, canine distemper is the one
@@ -178,8 +173,7 @@ export default function FerretCanineDistemperPage() {
             the overwhelming case for prevention.
           </DropCap>
 
-          <h2 id="tldr">TL;DR</h2>
-          <p>
+                    <p>
             Canine distemper virus (CDV) is almost always fatal in unvaccinated
             ferrets once clinical signs appear. It spreads through respiratory
             secretions and contaminated objects, and can reach even
@@ -290,21 +284,7 @@ export default function FerretCanineDistemperPage() {
             </p>
           </CalloutBox>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated ferret CDV-risk chart /
-              ferret fridge indoor-carry card /
-              mustelid distemper-risk handbook).
-              No existing product hop to keep.
-              Educational kitchen searches only; no Rx /
-              vaccine / aging hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs health-hub /
-              GI / emergency / vet-visit hops. Ferret
-              aging stays held.
-              Do not re-open #1165 / what-to-expect. */}
-          
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
 

@@ -1,11 +1,12 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, RelatedLinks, ShopCtas, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Kennel Cough in Dogs — Signs, Treatment, Prevention | Vets.co", description: "Kennel cough is a highly contagious respiratory infection causing a distinctive honking cough. Learn the signs, when it is serious, and how vaccination helps.", path: '/health/kennel-cough', type: 'article' })
 const SOURCES = [
-  { label: 'AVMA: Kennel Cough (Infectious Tracheobronchitis)', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/kennel-cough', publisher: 'AVMA' },
-  { label: 'Merck Veterinary Manual: Canine Infectious Respiratory Disease', url: 'https://www.merckvetmanual.com/respiratory-system/respiratory-diseases-of-small-animals/canine-infectious-respiratory-disease', publisher: 'Merck Vet Manual' },
+  { label: 'AVMA: Kennel Cough (Infectious Tracheobronchitis)', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/canine-infectious-respiratory-disease-complex-kennel-cough', publisher: 'AVMA' },
+  { label: 'Merck Veterinary Manual: Canine Infectious Respiratory Disease', url: 'https://www.merckvetmanual.com/respiratory-system/respiratory-diseases-of-small-animals/kennel-cough', publisher: 'Merck Vet Manual' },
   { label: 'AAHA: Canine Vaccination Guidelines (Bordetella)', url: 'https://www.aaha.org/aaha-guidelines/vaccination-canine-configuration/', publisher: 'AAHA' },
 ]
 const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Kennel Cough in Dogs', description: 'Signs, treatment, and prevention of canine infectious respiratory disease (kennel cough).', url: 'https://vets.co/health/kennel-cough', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-09-05T00:00:00Z' ,
@@ -48,6 +49,7 @@ export default function KennelCoughPage() {
       >
         <div className="carloOS-article">
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-09-05T00:00:00Z" reviewedBy="Editorial team" />
+          <LastUpdated date="2026-10-09" />
 
           <CalloutBox variant="info" title="Usually mild, but watch the vulnerable">
             In a healthy adult dog, kennel cough is typically a self-limiting nuisance that clears with rest. In puppies, seniors, and dogs with underlying disease, it can be more serious and occasionally leads to pneumonia, so these dogs warrant closer monitoring and a lower threshold for veterinary care.
@@ -69,19 +71,19 @@ export default function KennelCoughPage() {
           <p>Vaccines are available against several of the agents involved, including the Bordetella component commonly required by boarding and daycare facilities. While vaccination does not prevent every case — because multiple organisms can cause the syndrome — it reduces the risk and severity and limits spread in group settings. Good hygiene at facilities, avoiding contact with obviously sick dogs, and keeping vulnerable dogs out of high-exposure environments further lower the risk. Discuss the right vaccination plan for your dog's lifestyle with your veterinarian.</p>
 
           <h2 id="kit">Home isolation kit</h2>
-          <p>Everyday physical supplies that match the supportive-care copy above — a Y-shaped front-clip harness so leash pressure lands on the chest instead of the trachea, a cool-mist humidifier for the room where the dog rests, and a soft-sided crate so the household can isolate after boarding or daycare. These are rest and isolation tools, not treatments. They do not treat kennel cough, they do not replace a veterinarian, and they are not Bordetella vaccines, antibiotics, or cough suppressants. The digital pet thermometer already hopped on heat-stroke and first-aid pages stays off this kit. This page does not claim hands-on testing.</p>
+          <p>Keep these on hand: a Y-shaped front-clip harness so leash pressure lands on the chest instead of the trachea, a cool-mist humidifier for the room where the dog rests, and a soft-sided crate so the household can isolate after boarding or daycare. These are rest and isolation tools, not treatments. They do not treat kennel cough, they do not replace a veterinarian, and they are not Bordetella vaccines, antibiotics, or cough suppressants. The digital pet thermometer already hopped on heat-stroke and first-aid pages stays off this kit.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/y+shaped+front+clip+dog+harness?s=health-kennel-cough", "/go/amazon-brand/cool+mist+humidifier?s=health-kennel-cough", "/go/amazon-brand/soft+sided+dog+crate?s=health-kennel-cough"]} />
 
-          {/* Money path — live amazon-brand search hops (Y-shaped
+          {/* Shop note — live amazon-brand search buttons (Y-shaped
               front-clip harness / cool-mist humidifier /
               soft-sided crate). ShopCtas hides empty Chewy;
-              never href="#" or PLACEHOLDER. Category searches
+              never href="#" or an empty link. Amazon searches
               only — unused vs #848–#1031 front+clip+no+pull
               harness, HEPA air-purifier, dog+recovery+crate,
-              and digital+pet+thermometer hops. Antibiotics,
+              and digital+pet+thermometer buttons. Antibiotics,
               Bordetella vaccines, and clinic implant kits
-              are not shoppable hops. */}
+              are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

@@ -26,6 +26,7 @@
  *   - Article + FAQPage + BreadcrumbList schemas
  */
 
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
@@ -40,7 +41,6 @@ import {
   RelatedLinks,
   ShopCtas,
   StockImage,
-  AffiliateDisclosure,
   PriceAsOf
 } from '@carloOS/ui'
 import {
@@ -54,7 +54,7 @@ import {
   BREED_COMPARISON_PAIRS,
   pairSlug,
 } from '../../../data/breed-comparisons'
-import { crossSiteHref } from '@carloOS/config'
+import { crossSiteHref, visibleShopHref } from '@carloOS/config'
 
 
 // Force static rendering — every breed slug we generate is known at build time.
@@ -169,7 +169,7 @@ function buildRecommendedReviewsForBreed(
 /**
  * One breed-appropriate gear recommendation. `href` always routes a commercial
  * click through an EXISTING /go/<vendor>/<sku> handler (amazon-brand / chewy-brand
- * search SKUs — no invented vendors or ASINs) OR to an internal /reviews money
+ * search SKUs — no invented vendors or product pages) OR to an internal /reviews money
  * page when no honest single product applies. The `s=` source param tags the
  * click origin for Monetization-Bot attribution (mirrors /reviews/* CTA pattern).
  *
@@ -252,7 +252,7 @@ function buildGearForBreed(breed: Breed): GearPick[] {
     href: `/go/chewy-brand/${enc(
       large ? 'orthopedic large dog bed' : `${breed.sizeCategory.toLowerCase()} dog bed washable`,
     )}?s=${src}`,
-    cta: 'Shop beds',
+    cta: 'Shop beds on Amazon',
   })
 
   // ── Grooming — derived from grooming level. ──
@@ -288,7 +288,7 @@ function buildGearForBreed(breed: Breed): GearPick[] {
       title: 'Durable chew + puzzle toys',
       rationale: `High-drive ${breed.name}s need a mental and physical outlet — tough chew and food-puzzle toys curb boredom-driven behavior.`,
       href: `/go/chewy-brand/${enc('durable dog puzzle toy')}?s=${src}`,
-      cta: 'Shop toys',
+      cta: 'Shop toys on Amazon',
     })
   } else {
     picks.push({
@@ -403,7 +403,7 @@ function buildFAQs(breed: Breed): Array<{ question: string; answer: string }> {
 /**
  * Presentational "Recommended gear" block. Editorial voice only — no ratings,
  * no review counts. The first instance on the page passes `withDisclosure` so
- * the FTC AffiliateDisclosure sits ABOVE the first commercial CTA (QC §1).
+ * the FTC HopDisclosure sits ABOVE the first commercial CTA (QC §1).
  * `/go` links open the click-tracker; /reviews links are internal money pages.
  */
 function GearBlock({
@@ -427,7 +427,7 @@ function GearBlock({
         Breed-appropriate picks for the {breedName}, chosen from our editorial
         reviews. Some links are affiliate links.
       </p>
-      {withDisclosure && <AffiliateDisclosure variant="inline" siteId="dog-com" />}
+      {withDisclosure && <HopDisclosure siteId="dog-com" href={picks.map((pick) => pick.href)} />}
       <div className="grid sm:grid-cols-2 gap-4 mt-4">
         {picks.map((p) => (
           <div
@@ -444,7 +444,7 @@ function GearBlock({
               {p.rationale}
             </p>
             <Link
-              href={p.href}
+              href={visibleShopHref(p.href) ?? p.href}
               className="inline-block self-start bg-brand-primary text-white text-sm font-semibold px-4 py-2 rounded-md no-underline hover:bg-brand-primary-dark"
             >
               {p.cta} →
@@ -589,9 +589,6 @@ export default async function BreedTemplatePage({ params }: PageProps) {
 
             {/* TL;DR */}
             <section className="bg-brand-surface border-l-4 border-brand-primary rounded-r-lg p-5 mb-8 not-prose">
-              <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
-                TL;DR
-              </div>
               <p className="text-sm text-brand-text-mid leading-relaxed mb-0">
                 The <strong>{breed.name}</strong> is a {breed.sizeCategory.toLowerCase()}-size{' '}
                 {breed.group.toLowerCase()} breed from {breed.originCountry}, weighing{' '}
@@ -772,11 +769,11 @@ export default async function BreedTemplatePage({ params }: PageProps) {
                 Shop related supplies
               </div>
               <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
-              <AffiliateDisclosure variant="inline" siteId="dog-com" />
+              <HopDisclosure siteId="dog-com" href="/go/amazon-brand/no+pull+dog+harness?s=breed-profile" />
               <div className="flex flex-col gap-3 mt-3">
                 <ShopCtas
                   amazonHref="/go/amazon-brand/no+pull+dog+harness?s=breed-profile"
-                  amazonLabel="Shop on Amazon"
+                  amazonLabel="Browse no-pull dog harness on Amazon →"
                 />
           </div>
             </div>

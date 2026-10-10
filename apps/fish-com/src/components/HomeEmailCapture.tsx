@@ -32,18 +32,26 @@ export function HomeEmailCapture() {
                 href="/tools/aquarium-setup-builder"
                 className="group flex items-center gap-2.5 no-underline"
               >
-                <span className={`relative h-9 w-14 shrink-0 overflow-hidden rounded-md bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
+                <div className={`relative h-9 w-14 shrink-0 overflow-hidden rounded-md bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
                   <StockImage manifestKey="fish-com:category-planted" alt="Lush aquatic plants in a planted aquarium" aspect="4:3" subtleCredit />
-                </span>
+                </div>
                 <span className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary group-hover:text-brand-dark">Start here</span>
               </Link>
             </div>
-            <h2 className="font-display text-2xl font-bold text-brand-dark mb-2 italic">
-              New-tank setup and stocking
-            </h2>
-            <p className="text-sm text-brand-text-mid mb-0 leading-relaxed">
-              Build the tank first, then sketch a slim-inch ceiling — on this site, no email required.
-            </p>
+            <div className="mb-2 flex items-center justify-center lg:justify-start gap-2.5">
+              <div className={`relative h-10 w-14 shrink-0 overflow-hidden rounded-md bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
+                <StockImage manifestKey="fish-com:category-planted" alt="Lush aquatic plants in a planted aquarium" aspect="4:3" subtleCredit />
+              </div>
+              <h2 className="font-display text-2xl font-bold text-brand-dark italic mb-0">
+                New-tank setup and stocking
+              </h2>
+            </div>
+            <div className="text-sm text-brand-text-mid mb-0 leading-relaxed flex items-start justify-center lg:justify-start gap-2.5">
+              <div className={`relative mt-0.5 h-8 w-12 shrink-0 overflow-hidden rounded-md bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
+                <StockImage manifestKey="fish-com:category-planted" alt="" aspect="4:3" />
+              </div>
+              <span>Build the tank first, then sketch a slim-inch ceiling — on this site, no email required.</span>
+            </div>
           </div>
           <Link
             href="/setup"
@@ -53,8 +61,18 @@ export function HomeEmailCapture() {
               <StockImage manifestKey="fish-com:species-thumb-goldfish" alt="A goldfish" aspect="4:3" subtleCredit />
             </div>
             <div className="pr-3 py-2">
-              <div className="font-display font-bold text-brand-dark text-sm leading-tight italic group-hover:text-brand-primary">Setup guides</div>
-              <p className="text-xs text-brand-text-mid mt-0.5">Size, cycle, then the first fish.</p>
+              <div className="mb-1 flex items-center gap-2">
+                <div className={`relative h-7 w-10 shrink-0 overflow-hidden rounded-md bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
+                  <StockImage manifestKey="fish-com:species-thumb-goldfish" alt="A goldfish" aspect="4:3" subtleCredit />
+                </div>
+                <div className="font-display font-bold text-brand-dark text-sm leading-tight italic group-hover:text-brand-primary">Setup guides</div>
+              </div>
+              <div className="text-xs text-brand-text-mid mt-0.5 flex items-center gap-2">
+                <div className={`relative h-6 w-9 shrink-0 overflow-hidden rounded-md bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
+                  <StockImage manifestKey="fish-com:species-thumb-goldfish" alt="" aspect="4:3" />
+                </div>
+                <span>Size, cycle, then the first fish.</span>
+              </div>
             </div>
           </Link>
         </div>
@@ -69,10 +87,20 @@ export function HomeEmailCapture() {
                 <StockImage manifestKey={item.imageKey} alt={item.imageAlt} aspect="16:9" subtleCredit />
               </div>
               <div className="p-4">
-                <div className="font-display font-bold text-brand-dark text-base leading-tight italic group-hover:text-brand-primary">
-                  {item.title}
+                <div className="mb-1 flex items-center gap-2">
+                  <div className={`relative h-7 w-10 shrink-0 overflow-hidden rounded-md bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
+                    <StockImage manifestKey={item.imageKey} alt={item.imageAlt} aspect="4:3" subtleCredit />
+                  </div>
+                  <div className="font-display font-bold text-brand-dark text-base leading-tight italic group-hover:text-brand-primary">
+                    {item.title}
+                  </div>
                 </div>
-                <p className="text-xs text-brand-text-mid mt-1 leading-relaxed">{item.note}</p>
+                <div className="text-xs text-brand-text-mid mt-1 leading-relaxed flex items-start gap-2">
+                  <div className={`relative mt-0.5 h-6 w-9 shrink-0 overflow-hidden rounded-md bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
+                    <StockImage manifestKey={item.imageKey} alt="" aspect="4:3" />
+                  </div>
+                  <span>{item.note}</span>
+                </div>
               </div>
             </Link>
           ))}

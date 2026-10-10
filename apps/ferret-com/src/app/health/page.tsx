@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, buildFAQSchema, combineSchemas, SchemaScript, FAQAccordion, CrossPortfolioCard, DirectoryPlacesCta } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, buildFAQSchema, combineSchemas, SchemaScript, FAQAccordion, CrossPortfolioCard, DirectoryPlacesCta, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
 import listings from '../../data/directory-listings.json'
 import { HubHero } from '../../components/HubHero'
 
@@ -244,6 +244,16 @@ export default function HealthHubPage() {
         <span>›</span>
         <span style={{ color: 'var(--brand-text-mid)', fontWeight: 500 }}>Health</span>
       </nav>
+      <section className="px-container-sm sm:px-container pt-8 max-w-3xl mx-auto">
+        <LastUpdated date="2026-10-09" />
+        <ArticleSourcesList
+          sources={[
+            { label: 'Quesenberry KE, Carpenter JW. Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery.', url: 'https://www.elsevier.com/books/ferrets-rabbits-and-rodents/quesenberry/978-1-4160-6621-7', publisher: 'Elsevier' },
+            { label: 'Merck Veterinary Manual — routine health care for ferrets', url: 'https://www.merckvetmanual.com/all-other-pets/ferrets/routine-health-care-for-ferrets', publisher: 'Merck Veterinary Manual' },
+            { label: 'Association of Exotic Mammal Veterinarians', url: 'https://aemv.org/', publisher: 'AEMV' },
+          ]}
+        />
+      </section>
 
       {/* Direct-answer / TL;DR block — extractable summary for search + AI surfaces */}
       <section
@@ -494,21 +504,10 @@ export default function HealthHubPage() {
       </div>
 
       <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
-        
+
         <div className="max-w-content-wide mt-6">
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
         </div>
 
-        {/* Money path — live amazon-brand search hops
-            (laminated ferret health triage chart /
-            ferret fridge health library card /
-            mustelid health reference handbook).
-            Educational kitchen searches only; no Rx /
-            vaccine / aging hops.
-            ShopCtas hides empty Chewy; never href="#"
-            or PLACEHOLDER. Unused vs tools / reviews /
-            diet / care / behavior kitchen kits and child
-            finger+toothbrush / carnivore+care hops. */}
               </section>
 
       {/* FAQ — grounded in on-page facts; FAQPage schema is injected via the combined

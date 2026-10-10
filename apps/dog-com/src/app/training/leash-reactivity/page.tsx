@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -7,7 +8,6 @@ import {
   TableOfContents,
   CrossPortfolioCard,
   ArticleByline,
-  AffiliateDisclosure,
   ShopCtas,
   JourneyNext,
 } from '@carloOS/ui'
@@ -69,7 +69,7 @@ export default function LeashReactivityPage() {
         { name: 'Training', href: '/training' },
         { name: 'Leash Reactivity', href: '/training/leash-reactivity' },
       ]}
-      relatedLinks={[{ title: 'Dog Training Hub', href: '/training', category: 'Hub' }, { title: 'Dog Aggression', href: '/training/dog-aggression', category: 'Training' }, { title: 'Positive Reinforcement', href: '/training/positive-reinforcement', category: 'Training' }, { title: 'Trainer Credentials', href: '/training/trainer-credentials', category: 'Training' }]}
+      relatedLinks={[{ title: 'Dog Training Hub', href: '/training', category: 'Hub' }, { title: 'Dog Aggression', href: '/training/dog-aggression', category: 'Training' }, { title: 'Positive Reinforcement', href: '/training/positive-reinforcement', category: 'Training' }, { title: 'Trainer Credentials', href: '/training/trainer-credentials', category: 'Training' }, { title: 'Front-clip vs back-clip', href: '/reviews/front-clip-vs-back-clip-guide', category: 'Reviews' }]}
       schema={schema}
       sidebar={<>
         <TableOfContents items={[
@@ -126,24 +126,24 @@ export default function LeashReactivityPage() {
           siteId="dog-com"
           nextHref="/tools/harness-collar-size"
           nextLabel="Size the front-clip harness before the next threshold walk"
-          nextBlurb="CC/DS only works below threshold. Size the harness first so a pull turns the dog sideways instead of dragging you toward the trigger. The hop below is the same front-clip harness search already on this page."
+          nextBlurb="CC/DS only works below threshold. Size the harness first so a pull turns the dog sideways instead of dragging you toward the trigger. The button below opens the same front-clip harness search on Amazon."
           resourceHref="/go/amazon-brand/front+clip+no+pull+dog+harness?s=training-leash-reactivity"
-          resourceLabel="Browse no-pull harnesses on Amazon →"
+          resourceLabel="Browse front-clip no-pull harnesses on Amazon →"
         />
 
-        {/* Money path — live amazon-brand search hops (leash-reactivity kit).
-            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-            Category searches only — not a ranked list. */}
-        <AffiliateDisclosure variant="inline" siteId="dog-com" />
+        {/* Shop note — live amazon-brand search buttons (leash-reactivity kit).
+            ShopCtas hides empty Chewy; never href="#" or an empty link.
+            Amazon searches only — not a ranked list. */}
+        <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/front+clip+no+pull+dog+harness?s=training-leash-reactivity", "/go/amazon-brand/6+ft+dog+leash?s=training-leash-reactivity", "/go/amazon-brand/dog+training+treat+pouch+belt+clip?s=training-leash-reactivity", "/go/amazon-brand/puppy+training+treats?s=training-leash-reactivity"]} />
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
-            Shop a leash-reactivity kit
+            Shop these supplies
           </div>
           
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/front+clip+no+pull+dog+harness?s=training-leash-reactivity"
-              amazonLabel="Browse no-pull harnesses on Amazon →"
+              amazonLabel="Browse front-clip no-pull harnesses on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/6+ft+dog+leash?s=training-leash-reactivity"
@@ -151,7 +151,7 @@ export default function LeashReactivityPage() {
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/dog+training+treat+pouch+belt+clip?s=training-leash-reactivity"
-              amazonLabel="Browse treat pouches on Amazon →"
+              amazonLabel="Browse belt-clip treat pouches on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/puppy+training+treats?s=training-leash-reactivity"
@@ -167,7 +167,11 @@ export default function LeashReactivityPage() {
             <Link href="/reviews/best-dog-harnesses" className="text-brand-primary hover:underline">
               Best Dog Harnesses 2026
             </Link>
-            {' '}guide for side-by-side comparisons.
+            {' '}guide. The{' '}
+            <Link href="/reviews/front-clip-vs-back-clip-guide" className="text-brand-primary hover:underline">
+              front-clip versus back-clip guide
+            </Link>
+            {' '}says front-clip only when the dog pulls, and a back-clip when the dog already walks well.
           </p>
         </div>
 

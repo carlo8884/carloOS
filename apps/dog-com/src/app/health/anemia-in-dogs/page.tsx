@@ -1,14 +1,14 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 
 const SOURCES = [
-  { label: 'Merck Veterinary Manual: Anemia in Dogs and Cats', url: 'https://www.merckvetmanual.com/circulatory-system/anemia/anemia-in-dogs-and-cats', publisher: 'Merck Vet Manual' },
   { label: 'ACVIM: Immune-Mediated Hemolytic Anemia (IMHA) Consensus Guidelines', url: 'https://www.acvim.org', publisher: 'ACVIM' },
   { label: 'Swann JW et al. ACVIM consensus statement on the treatment of IMHA in dogs. J Vet Intern Med. 2019;33(3):1141-1172.', publisher: 'JVIM' },
-  { label: 'AVMA: Blood Disorders in Dogs', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/common-health-conditions-dogs', publisher: 'AVMA' },
+  { label: 'Merck Veterinary Manual: Anemia in Dogs', url: 'https://www.merckvetmanual.com/dog-owners/blood-disorders-of-dogs/anemia-in-dogs', publisher: 'Merck Vet Manual' },
 ]
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Anemia in Dogs — Causes, Pale Gums & Treatment | Dog.com', description: 'Anemia (low red blood cells) causes pale gums, lethargy, and exercise intolerance.', path: '/health/anemia-in-dogs', type: 'article' })
@@ -43,7 +43,8 @@ export default function DogAnemiaPage() {
           <div className="bg-brand-dark rounded-lg p-5 mb-4">
             <div className="text-xs uppercase tracking-wide text-brand-primary mb-1 font-bold">Anemia + Insurance</div>
             <h3 className="font-display text-base font-bold text-brand-white mb-2">Underlying-cause workups are expensive</h3>
-            <p className="text-xs text-white/60 mb-3 leading-relaxed">Anemia diagnostic workups (IMHA, hemorrhagic disease, neoplasia) commonly run $2,000-$5,000 before treatment even begins. Insurance covers diagnostics if enrolled before symptoms.</p>
+            <p className="text-xs text-white/60 mb-3 leading-relaxed">Typical range, not a quote. Costs vary by clinic and region. Ask your veterinarian for an estimate.</p>
+            <p className="text-xs text-white/60 mb-3 leading-relaxed">Anemia diagnostic workups (IMHA, hemorrhagic disease, neoplasia) are often a large bill before treatment starts. Ask your veterinarian for an estimate. Insurance covers diagnostics if enrolled before symptoms.</p>
             <a href={crossSiteHref('vets-co', '/reviews/best-pet-insurance')} className="inline-block text-xs font-bold text-brand-primary hover:underline">Compare pet insurance →</a>
           </div>
           <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
@@ -72,37 +73,25 @@ export default function DogAnemiaPage() {
 
           <h2 id="kit">A Simple Pale-Gums Watch Kit</h2>
           <p>
-            Three everyday physical supplies match the
-            pale-gums and reduced-appetite copy above: a
-            dog gum-color assessment chart so pale, white,
-            or gray gums have a shared color word for the
-            veterinarian, high-calorie dog recovery food
-            when appetite drops, and a pet oral feeding
-            syringe for offering blended soft food. These
-            are household watch-and-feed tools, not
-            treatments. They do not diagnose anemia, they
-            do not replace a CBC or a packed-cell-volume
-            reading, they are not iron supplements, they
-            are not a transfusion, and they are not
-            prednisolone, azathioprine, or mycophenolate. This page does not claim hands-on testing. </p>
+            Keep these on hand: dog gum color assessment chart, high calorie dog recovery food, and pet oral feeding syringe. These are household watch-and-feed tools, not treatments. They do not diagnose anemia, they do not replace a CBC or a packed-cell-volume reading, they are not iron supplements, they are not a transfusion, and they are not prednisolone, azathioprine, or mycophenolate. </p>
 
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/dog+gum+color+assessment+chart?s=health-anemia-in-dogs", "/go/amazon-brand/high+calorie+dog+recovery+food?s=health-anemia-in-dogs", "/go/amazon-brand/pet+oral+feeding+syringe?s=health-anemia-in-dogs"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (dog gum-color assessment chart / high-calorie
               dog recovery food / pet oral feeding syringe).
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or an empty link. Amazon searches only —
               unused vs #1041 heat-pants / belly-band /
               exercise-pen, #1040 BCS tape / chart /
               lean treats, #1039 pancreatitis food /
-              treat / portion-scale hops, #1038
+              treat / portion-scale buttons, #1038
               dehydration electrolyte kits, UTI / ear /
-              anxiety-wrap hops, ferret electrolytes
+              anxiety-wrap buttons, ferret electrolytes
               recovery food, and bulb+syringe+puppy.
               Prescription, iron, transfusion, and
-              immunosuppressant ASINs are not shoppable
-              hops. */}
+              immunosuppressant product pages are not shoppable
+              buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

@@ -1,17 +1,18 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import { HubMoneyLinks } from '@carloOS/ui'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfContents, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfContents, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 import { SIGNS, STYLES } from '../../../data/dog-symptom-signs'
 import { crossSiteHref } from '@carloOS/config'
 
 const SOURCES = [
-  { label: 'AVMA: Emergency Care for Pets — Warning Signs', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/emergencies-pets', publisher: 'AVMA' },
-  { label: 'Merck Veterinary Manual: Emergency and Critical Care Overview for Small Animals', url: 'https://www.merckvetmanual.com/emergency-medicine-and-critical-care/critical-care-medicine/overview-of-critical-care-medicine', publisher: 'Merck Vet Manual' },
+  { label: 'Merck Veterinary Manual: Initial Triage and Resuscitation of Small Animal Emergency Patients', url: 'https://www.merckvetmanual.com/emergency-medicine-and-critical-care/evaluation-and-initial-treatment-of-small-animal-emergency-patients/initial-triage-and-resuscitation-of-small-animal-emergency-patients', publisher: 'Merck Vet Manual' },
+  { label: 'AVMA: Emergency Care for Pets — Warning Signs', url: 'https://www.avma.org/resources-tools/pet-owners/emergency-care', publisher: 'AVMA' },
   { label: 'AAHA: Emergency and Critical Care Standards', url: 'https://www.aaha.org/aaha-guidelines/emergency-and-critical-care/emergency-and-critical-care-guidelines/', publisher: 'AAHA' },
-  { label: 'ASPCA Animal Poison Control Center: Pet Poison Information', url: 'https://www.aspca.org/pet-care/animal-poison-control', publisher: 'ASPCA' },
+  { label: 'ASPCA Animal Poison Control Center: Pet Poison Information', url: 'https://www.aspca.org/pet-care/aspca-poison-control', publisher: 'ASPCA' },
 ]
 
 
@@ -73,7 +74,7 @@ export default function DogSymptomsGuidePage() {
         { name: 'Dog Health', href: '/health' },
         { name: 'Symptom Guide', href: '/health/dog-symptoms-guide' },
       ]}
-      relatedLinks={[{ title: 'Dog Health Hub', href: '/health', category: 'Hub' }, { title: 'Dog Vomiting Guide', href: '/health/dog-vomiting', category: 'Dog Health' }, { title: 'Dog Diarrhea', href: '/health/dog-diarrhea', category: 'Dog Health' }, { title: 'Dog Bloat (GDV)', href: '/health/dog-bloat-gvd', category: 'Dog Health' }]}
+      relatedLinks={[{ title: 'Dog Health Hub', href: '/health', category: 'Hub' }, { title: 'Dog Chocolate Toxicity Calculator', href: '/tools/dog-chocolate-toxicity-calculator', category: 'Tools' }, { title: 'Dog Vomiting Guide', href: '/health/dog-vomiting', category: 'Dog Health' }, { title: 'Dog Diarrhea', href: '/health/dog-diarrhea', category: 'Dog Health' }, { title: 'Dog Bloat (GDV)', href: '/health/dog-bloat-gvd', category: 'Dog Health' }]}
       schema={schema}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-lg p-4">
@@ -91,6 +92,7 @@ export default function DogSymptomsGuidePage() {
         <TableOfContents items={[...SIGNS.slice(0, 8).map(s => ({ label: s.title, href: `#s${s.num}` })), { label: 'FAQ', href: '#faq' }]} />
         <RelatedLinks title="Related Guides" links={[
           { label: 'Is This a Dog Emergency? Triage Tool', href: '/tools/is-this-a-dog-emergency' },
+          { label: 'Dog Chocolate Toxicity Calculator', href: '/tools/dog-chocolate-toxicity-calculator' },
           { label: 'Find an Emergency Vet', href: '/find-a-vet' },
           { label: 'Best Pet Insurance', href: crossSiteHref('vets-co', '/reviews/best-pet-insurance') },
           { label: 'Senior Dog Care', href: '/health/senior-dog-care' },
@@ -109,6 +111,8 @@ export default function DogSymptomsGuidePage() {
         </div>
 
         <p>Not sure how urgent the signs you&apos;re seeing are? Use the <Link href="/tools/is-this-a-dog-emergency">Is This a Dog Emergency? triage tool</Link> to check the symptoms against these same criteria and get a conservative urgency read. It does not diagnose — only a veterinarian can do that.</p>
+
+        <p>Chocolate is a separate question from the general emergency list. The <Link href="/tools/dog-chocolate-toxicity-calculator">dog chocolate toxicity calculator</Link> turns a dog&apos;s weight and the amount eaten into a dose to read before you call poison control. It does not replace that call or a veterinary exam.</p>
 
         <h2>🚨 Emergency — Go Immediately</h2>
         <p>These symptoms require emergency veterinary care right now. Do not wait until morning.</p>
@@ -168,43 +172,15 @@ export default function DogSymptomsGuidePage() {
 
         <h2 id="kit">A Simple Emergency-Sign Watch Kit</h2>
           <p>
-            Three everyday physical supplies match the
-            gum-check, poison-control, and
-            collapse-transport copy above: an LED
-            medical penlight so pale, white, blue, or
-            grey gums and sudden pupil or eye changes
-            can be checked in low light against the
-            individual baseline this page tells owners
-            to learn, a pet emergency contact card so
-            the ASPCA Animal Poison Control number
-            (888-426-4435) and the nearest emergency
-            clinic stay visible, and a folding pet
-            stretcher for a dog that collapses or
-            cannot support its own weight. These are
-            household watch-and-transport tools, not
-            treatments. They do not diagnose a
-            symptom, they do not replace a phone call
-            to the emergency clinic, they do not
-            replace ASPCA Poison Control, they do not
-            treat GDV, seizure, poisoning, bleeding,
-            or eye trauma, and they are not a first-aid
-            kit. Vaccination record books, seat-belt
-            tethers, foldable waterproof puppy mats,
-            mosquito dunks, a monthly pill organizer,
-            a soft-sided vet-visit carrier, a gum-color
-            assessment chart, recovery food, a feeding
-            syringe, digital pet thermometers, and
-            high-value vet-visit treats already live
-            on other pages. This page does not claim
-            hands-on testing. </p>
+            These are household watch-and-transport tools, not treatments. They do not diagnose a symptom, they do not replace a phone call to the emergency clinic, they do not replace ASPCA Poison Control, they do not treat GDV, seizure, poisoning, bleeding, or eye trauma, and they are not a first-aid kit. </p>
 
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/led+medical+penlight?s=health-dog-symptoms-guide", "/go/amazon-brand/pet+emergency+contact+card?s=health-dog-symptoms-guide", "/go/amazon-brand/folding+pet+stretcher?s=health-dog-symptoms-guide"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (LED medical penlight / pet emergency
               contact card / folding pet stretcher).
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or an empty link. Amazon searches only —
               unused vs #1044 pet vaccination record
               book / dog seat-belt tether / foldable
               waterproof puppy mat, #1043 mosquito
@@ -219,8 +195,8 @@ export default function DogSymptomsGuidePage() {
               styptic powder, and tick removers.
               Wound gauze, Vetrap, soft dog muzzles,
               seizure throw blankets / crate bumpers /
-              foam tiles, and Rx ASINs are not
-              shoppable hops. */}
+              foam tiles, and prescription brands are not
+              shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

@@ -1,10 +1,11 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { StockImage, buildMetadata, ArticleLayout, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
+import { ShopCtas, StockImage, buildMetadata, ArticleLayout, RelatedLinks, CrossPortfolioCard , ArticleSourcesList } from '@carloOS/ui'
 import { FAQAccordion, SchemaScript, buildArticleSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
 const SOURCES = [
-  { label: "Otocinclus vestitus — Seriously Fish species profile", url: "https://www.seriouslyfish.com/species/otocinclus-vestitus/", publisher: "Seriously Fish" },
+  { label: "Otocinclus vestitus — FishBase species record", url: "https://www.fishbase.se/summary/Otocinclus-vestitus.html", publisher: "FishBase" },
   { label: "Otocinclus spp. — FishBase genus page", url: "https://www.fishbase.se/identification/SpeciesList.php?genus=otocinclus", publisher: "FishBase" },
   { label: "Schaefer, S.A. Otocinclus (Loricariidae). Systematic Zoology, 1991.", publisher: "Systematic Zoology" },
   { label: "Reis, R.E. et al. Checklist of the Freshwater Fishes of South and Central America. EDIPUCRS, 2003.", publisher: "EDIPUCRS" },
@@ -68,9 +69,9 @@ export default function OtocinclsPage() {
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Quick Stats</div>
-          {[['Size', '1.5 inches'], ['Group', '6+ — social species'], ['Tank age', 'Established only (3+ months)'], ['Temperature', '72–82°F'], ['pH', '6.0–7.5'], ['Diet', 'Soft algae — must supplement'], ['Lifespan', '3–5 years']].map(([k, v]) => (
+          {[['Size', '1.5 inches'], ['Group', '6+ — social species'], ['Tank age', 'Established only (3+ months)'], ['Temperature', '68–77°F (https://www.fishbase.se/summary/Otocinclus-vittatus.html)'], ['pH', '6.0–7.5'], ['Diet', 'Soft algae — must supplement'], ['Lifespan', '3–5 years']].map(([k, v]) => (
             <div key={k} className="flex justify-between py-1.5 border-b border-brand-border text-xs last:border-0">
-              <span className="text-brand-text-light">{k}</span><span className="font-bold text-brand-dark text-right max-w-[55%]">{v}</span>
+              <span className="text-brand-text-light">{k}</span><span className="font-bold text-brand-dark text-right max-w-[55%] break-all">{v}</span>
             </div>
           ))}
         </div>
@@ -107,12 +108,12 @@ export default function OtocinclsPage() {
           includeSchema={false}
           allowMultiple
         />
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        <HopDisclosure siteId="fish-com" href="/go/amazon-brand/otocinclus%20tank%20setup?s=species-otocinclus" />
           <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Otocinclus — Tank Setup</div>
-          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for otocinclus care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
+          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for otocinclus care.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
-            <a href="/go/amazon-brand/otocinclus%20tank%20setup?s=species-otocinclus" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop Otocinclus Setup on Amazon →</a>
+            <ShopCtas amazonHref="/go/amazon-brand/otocinclus%20tank%20setup?s=species-otocinclus" amazonLabel="Browse otocinclus tank setups on Amazon →" />
           </div>
         </div>
 

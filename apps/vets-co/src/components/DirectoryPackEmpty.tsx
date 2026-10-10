@@ -12,19 +12,17 @@ export function DirectoryPackEmpty() {
   return (
     <div className="border border-brand-border rounded-xl p-6 bg-brand-surface mb-10">
       <h2 className="font-display text-xl font-bold text-brand-dark mt-0 mb-2">
-        No licensed-clinic listings imported
+        No clinic listings yet
       </h2>
       <p className="text-sm text-brand-text-mid leading-relaxed mb-3">
-        The Vets.co state-board pack is empty on purpose. This page is a
-        how-to-choose guide — specialty pathways and state notes — not a live
-        DVM list. No clinic names, phone numbers, or star ratings are invented
-        here.
+        This page explains how to choose a veterinarian: specialty pathways
+        and state notes. It does not list clinics, phone numbers, or ratings.
       </p>
       <p className="text-sm text-brand-text-mid m-0">
         <Link href="/directory" className="text-brand-primary font-bold no-underline hover:underline">
           Open the license directory
         </Link>
-        {' '}(also empty until a public source URL and license number are imported).
+        {' '}(empty until a public source and a license number are imported).
       </p>
     </div>
   )

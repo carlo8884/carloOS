@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -11,7 +12,6 @@ import {
   DropCap,
   CrossPortfolioCard,
   ArticleSourcesList,
-  AffiliateDisclosure,
   ShopCtas,
 } from '@carloOS/ui'
 import {
@@ -306,11 +306,11 @@ export default function FerretCageCleaningRoutinePage() {
             </p>
           </CalloutBox>
 
-          {/* Money path — live amazon-brand search hops (cage-cleaning supplies).
-              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-              Category searches only — educational gear, not medications, not a ranked list.
+          {/* Shop note — live amazon-brand search buttons (cage-cleaning supplies).
+              ShopCtas hides empty Chewy; never href="#" or an empty link.
+              Amazon searches only — educational gear, not medications, not a ranked list.
               No phenol/pine cleaners, no ammonia, no undiluted bleach. */}
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/enzymatic+pet+stain+odor+cleaner?s=care-cage-cleaning-routine", "/go/amazon-brand/small+animal+cage+cleaner?s=care-cage-cleaning-routine", "/go/amazon-brand/litter+scoop?s=care-cage-cleaning-routine", "/go/amazon-brand/disposable+nitrile+gloves?s=care-cage-cleaning-routine", "/go/amazon-brand/fragrance+free+laundry+detergent?s=care-cage-cleaning-routine"]} />
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop cage-cleaning supplies
@@ -319,7 +319,7 @@ export default function FerretCageCleaningRoutinePage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/enzymatic+pet+stain+odor+cleaner?s=care-cage-cleaning-routine"
-                amazonLabel="Browse enzymatic pet cleaners on Amazon →"
+                amazonLabel="Browse enzymatic stain and odor cleaner on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/small+animal+cage+cleaner?s=care-cage-cleaning-routine"
@@ -369,6 +369,7 @@ export default function FerretCageCleaningRoutinePage() {
             <a href="/care/odor-and-scent-control">odor and scent control guide</a>.
           </p>
 
+          <p>The cages this cleaning routine fits are compared in the <Link href="/reviews/best-ferret-cage">ferret cage review</Link>.</p>
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
 

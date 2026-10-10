@@ -1,7 +1,7 @@
+import { HopDisclosure } from '../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import {
-  AffiliateDisclosure,
+import { PrimaryHop,
   buildMetadata,
   buildBreadcrumbSchema,
   combineSchemas,
@@ -125,6 +125,10 @@ export default function MedicationsHubPage() {
         >
           Pet Medications
         </h1>
+        <div data-fold="offer">
+          <PrimaryHop href="/go/amazon-brand/pet+pill+organizer?s=medications" label="Search Amazon for a pet pill organizer" />
+          <HopDisclosure tone="on-dark" siteId="vets-co" href="/go/amazon-brand/pet+pill+organizer?s=medications" />
+        </div>
         <p className="text-lg font-light text-white/60 max-w-2xl leading-relaxed">
           What {Medications.length} common dog and cat prescription medications treat, what side
           effects to watch for, what monitoring is required, and when to call the vet — sourced from{' '}
@@ -282,23 +286,10 @@ export default function MedicationsHubPage() {
       </div>
 
       <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
-        
+
         <div className="max-w-content-wide mt-6">
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
         </div>
 
-        {/* Money path — live amazon-brand search hops
-            (laminated pet therapeutic category chart /
-            pet fridge monitoring recheck card /
-            veterinary Plumb's reference handbook).
-            Educational kitchen searches only; no Rx /
-            vaccine / flea hops.
-            ShopCtas hides empty Chewy; never href="#"
-            or PLACEHOLDER. Unused vs tools / insurance /
-            reviews / health / guides / breeds /
-            diagnostics / symptoms kitchen kits and child
-            elevated+mesh+dog+cot hops.
-            Do not re-open #1165 / what-to-expect. */}
               </section>
     </>
   )

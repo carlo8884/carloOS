@@ -1,10 +1,10 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import {
   buildMetadata,
   ArticleLayout,
   RelatedLinks,
   ArticleSourcesList,
-  AffiliateDisclosure,
   ShopCtas,
   JourneyNext,
 } from '@carloOS/ui'
@@ -15,7 +15,7 @@ const SOURCES = [
   { label: "Walstad, D.L. Ecology of the Planted Aquarium, 3rd ed. Echinodorus Publishing, 2013.", publisher: "Echinodorus Publishing" },
   { label: "Kasselmann, C. Aquarium Plants. Krieger Publishing, 2003.", publisher: "Krieger Publishing" },
   { label: "Barr, T. & Roger, E. The Estimative Index of Dosing. Barr Report, 2004.", publisher: "Barr Report" },
-  { label: "Aquatic Plants for the Aquarium — UF/IFAS Extension FA-16", url: "https://edis.ifas.ufl.edu/publication/FA016", publisher: "UF/IFAS Extension" },
+  { label: "Francis-Floyd, R. et al. Ammonia in Aquatic Systems — UF/IFAS FA031 (current home of FA-16).", url: "https://ask.ifas.ufl.edu/publication/FA031", publisher: "UF/IFAS Extension" },
 ]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Low-Tech Planted Tank — No CO2, Low Light, Low Effort | Fish.com', description: "How to run a thriving low-tech planted tank without pressurized CO2. Easy plants, modest light, light fertilization, and a slow, stable, beautiful balance.", path: '/setup/low-tech-planted-tank', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Low-Tech Planted Tank Guide', description: 'Running a planted aquarium without CO2 injection: easy plants, light, and fertilization.', url: 'https://fish.com/setup/low-tech-planted-tank', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-09-05T00:00:00Z' ,
@@ -58,7 +58,7 @@ export default function LowTechPlantedTankPage() {
           siteId="fish-com"
           nextHref="/setup/aquarium-cycling-guide"
           nextLabel="Cycle the low-tech tank before you stock it"
-          nextBlurb="The light trap is the low-tech setting — 6 to 8 hours on a timer, no extra light that feeds algae. Ammonia and nitrite still have to read zero before fish go in. The hop below is the same aquarium light-timer search already on this page."
+          nextBlurb="The light trap is the low-tech setting — 6 to 8 hours on a timer, no extra light that feeds algae. Ammonia and nitrite still have to read zero before fish go in. The button below opens the same aquarium light-timer search on Amazon."
           resourceHref="/go/amazon-brand/aquarium+light+timer?s=setup-low-tech-planted-tank"
           resourceLabel="Browse aquarium light timers on Amazon →"
         />
@@ -73,31 +73,21 @@ export default function LowTechPlantedTankPage() {
         <p>The low-tech tank is defined by its easy upkeep: a weekly or biweekly water change, occasional trimming of the faster growers, glass cleaning as needed, and light feeding of any fish. The slow growth means the scape holds its shape for long stretches without intervention. This forgiving rhythm is what makes the low-tech approach ideal for beginners and busy keepers alike, and it pairs naturally with the gentle conditions favored by nano fish and shrimp. For the broader setup mechanics shared with high-tech tanks, see the <a href="/setup/planted-tank-setup">planted tank setup guide</a>.</p>
 
         <h2 id="kit">Low-tech planted kit</h2>
-        <p>Everyday physical supplies that match the no-CO2 copy above — an aquarium light timer so the photoperiod stays at six to eight hours, plus aquarium plant root tabs placed near swords and crypts. These are low-tech tools, not a ranked product list and not a first-tank filter / heater / test-kit order. Filters, heaters, digital thermometers, Seachem Prime, API Master Test Kit, gravel vacuums, aquasoil, Seiryu stone, spiderwood driftwood, magnetic scrapers, handheld algae scrapers, pressurized CO2 gear, and Flourish Excel stay off this kit — those already ship on the setup hub, equipment hub, aquascaping guide, algae-control guide, and CO2 calculator. This page does not claim hands-on testing.</p>
+        <p>Keep these on hand: an aquarium light timer so the photoperiod stays at six to eight hours, plus aquarium plant root tabs placed near swords and crypts. These are low-tech tools, not a ranked product list and not a first-tank filter / heater / test-kit order. Filters, heaters, digital thermometers, Seachem Prime, API Master Test Kit, gravel vacuums, aquasoil, Seiryu stone, spiderwood driftwood, magnetic scrapers, handheld algae scrapers, pressurized CO2 gear, and Flourish Excel stay off this kit — those already ship on the setup hub, equipment hub, aquascaping guide, algae-control guide, and CO2 calculator.</p>
 
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/aquarium+light+timer?s=setup-low-tech-planted-tank", "/go/amazon-brand/aquarium+plant+root+tabs?s=setup-low-tech-planted-tank"]} />
 
-        {/* Money path — live amazon-brand search hops (low-tech planted kit).
-            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-            Category searches only — everyday physical supplies matching
+        {/* Shop note — live amazon-brand search buttons (low-tech planted kit).
+            ShopCtas hides empty Chewy; never href="#" or an empty link.
+            Amazon searches only — everyday physical supplies matching
             on-page aquarium-light-timer / plant-root-tabs copy, not
-            first-tank filter / heater / test-kit / hardscape / scraper / CO2 hops. */}
+            first-tank filter / heater / test-kit / hardscape / scraper / CO2 buttons. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-            Shop the low-tech planted kit
+            Shop these supplies
           </div>
           <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-            These Amazon category searches match the on-page
-            no-CO2 copy — an aquarium light timer and aquarium
-            plant root tabs. Everyday physical low-tech tools
-            only. They are not a ranked product list, they are not
-            a first-tank filter or heater, they are not a test kit
-            or a gravel vacuum, they are not aquasoil, Seiryu
-            stone, spiderwood, a magnetic scraper, a handheld
-            algae scraper, or pressurized CO2, and they do not
-            replace choosing easy plants. Fish.com earns a
-            commission on qualifying purchases at no extra cost to
-            you.
+            Keep these on hand: an aquarium light timer and aquarium plant root tabs. Everyday physical low-tech tools only. They are not a ranked product list, they are not a first-tank filter or heater, they are not a test kit or a gravel vacuum, they are not aquasoil, Seiryu stone, spiderwood, a magnetic scraper, a handheld algae scraper, or pressurized CO2, and they do not replace choosing easy plants.
           </p>
           <div className="flex flex-col gap-3">
             <ShopCtas

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { Playfair_Display, Source_Sans_3 } from 'next/font/google'
-import { Nav, Footer, DisplayAds, Ga4Loader, AffiliateClickListener, JourneyEvents } from '@carloOS/ui'
+import { Nav, Footer, DisplayAds, buildOrganizationSchema, SchemaScript, Ga4Loader, AffiliateClickListener, JourneyEvents, HopEarnsProvider } from '@carloOS/ui'
 import { buildMetadata } from '@carloOS/ui'
 import { displayAds } from '../data/display-ads'
 import { HomeEmailCapture } from '../components/HomeEmailCapture'
@@ -35,6 +35,12 @@ export const metadata: Metadata = buildMetadata({
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
 
+const organizationSchema = buildOrganizationSchema({
+  siteId: 'ferret-com',
+  name: 'Ferret.com',
+  url: 'https://ferret.com/',
+})
+
 export default function RootLayout({
   children,
 }: {
@@ -46,6 +52,8 @@ export default function RootLayout({
       className={`font-vars ${playfair.variable} ${sourceSans.variable}`}
     >
       <body>
+        <HopEarnsProvider amazon={Boolean(process.env.AFF_AMAZON_TAG || process.env.AFF_AMAZON_BRAND_TAG)}>
+        <SchemaScript schema={organizationSchema} />
         <Ga4Loader measurementId={GA_ID} customMap />
         <AffiliateClickListener site="ferret-com" />
         <JourneyEvents site="ferret-com" />
@@ -69,6 +77,7 @@ export default function RootLayout({
         <Footer siteId="ferret-com" showAffiliateDisclosure />
 
         <DisplayAds config={displayAds} />
+        </HopEarnsProvider>
       </body>
     </html>
   )

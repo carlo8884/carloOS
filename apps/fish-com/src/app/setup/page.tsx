@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -8,7 +9,6 @@ import {
   TableOfContents,
   StockImage,
   ArticleByline,
-  AffiliateDisclosure,
   ShopCtas,
   JourneyNext,
 } from '@carloOS/ui'
@@ -49,7 +49,7 @@ const schema = combineSchemas(articleSchema, howToSchema)
 
 const FAQS = [
   { question: 'How long does aquarium cycling take?', answer: 'A fishless cycle typically takes 4–8 weeks. Using established filter media can reduce this to 1–2 weeks. A fish-in cycle takes 4–6 weeks with careful daily water testing and water changes to keep ammonia and nitrite below 0.5 ppm.', answerText: '' },
-  { question: 'What size tank is best for a beginner?', answer: 'A 20-gallon long is our recommendation for a first tank. Counterintuitively, larger tanks are actually easier to maintain than smaller ones — water parameters are more stable, errors are more forgiving, and you have more species options. The 5-gallon "starter" tanks sold as beginner kits are harder to maintain, not easier.', answerText: '' },
+  { question: 'What size tank is best for a beginner?', answer: 'Common guidance for a first tank is a 20-gallon long. Larger tanks are easier to maintain than smaller ones because the extra water volume keeps parameters more stable, so small mistakes are buffered, and you have more species options. The 5-gallon tanks sold as beginner kits are harder to maintain.', answerText: '' },
   { question: 'Do I need live plants?', answer: 'No — but they help. Live plants consume ammonia and nitrite, compete with algae for nutrients, and provide behavioral enrichment for fish. Low-tech plants (java fern, anubias, amazon sword) are nearly indestructible and don\'t require CO2 injection or special lighting. If you\'re not ready for live plants, silk plants are a better choice than plastic ones that can tear fish fins.', answerText: '' },
   { question: 'What is a good community fish for a beginner?', answer: 'The classic beginner community: neon tetras (school of 6–10), corydoras catfish (4–6), a centerpiece fish like a single gourami, and a cleanup crew of snails. All are peaceful, easy to feed, tolerant of beginner water conditions (once cycled), and widely available. Avoid cichlids, large carnivores, and any fish labeled "aggressive" for your first tank.', answerText: '' },
 ]
@@ -104,11 +104,11 @@ export default function AquariumSetupPage() {
         <StockImage manifestKey="fish-com:category-setup" aspect="16:9" variant="inline" caption="A healthy, fully cycled planted aquarium — the goal of a careful setup." priority />
 
         <h2 id="size">Step 1 — Choose the Right Tank Size</h2>
-        <p>The most common beginner mistake is starting with a small tank. Small tanks are harder to maintain, not easier — water parameters swing more dramatically, small errors have larger consequences, and you have fewer species options. Our recommendation: start with at least 20 gallons.</p>
+        <p>The most common beginner mistake is starting with a small tank. Small tanks are harder to maintain, not easier — water parameters swing more dramatically, small errors have larger consequences, and you have fewer species options. Common guidance is to start with at least 20 gallons, because the extra water volume buffers those swings.</p>
         <ul>
           <li><strong>5 gallons</strong> — betta fish only, experienced keeper. Not recommended for beginners despite being sold as "starter" tanks.</li>
           <li><strong>10 gallons</strong> — appropriate for a small community (neon tetras, corydoras). Manageable for beginners who are willing to test water weekly.</li>
-          <li><strong>20 gallons long</strong> — the beginner recommendation. Stable water parameters, good species options, forgiving of minor errors.</li>
+          <li><strong>20 gallons long</strong> — a common starting size. Stable water parameters, good species options, and more water volume to buffer minor errors.</li>
           <li><strong>40+ gallons</strong> — easiest to maintain, widest species selection, most stable parameters. If space allows, start here.</li>
         </ul>
         <p className="text-sm text-brand-text-mid">
@@ -117,9 +117,10 @@ export default function AquariumSetupPage() {
 
         <h2 id="equipment">Step 2 — Equipment You Actually Need</h2>
         <p><strong>Non-negotiable:</strong></p>
+        <p>The thermometer and liquid test-kit prices in this list are dated 2026-10-04.</p>
         <ul>
           <li><strong>Filter</strong> — a hang-on-back or canister filter rated for at least the tank size (ideally 1.5–2x). This is where beneficial bacteria live. Never skip this.</li>
-          <li><strong>Heater</strong> — for tropical fish (most common aquarium fish require 76–82°F). Get one rated for your tank size + 20% buffer. A heater that fails cold is common.</li>
+          <li><strong>Heater</strong> — for tropical fish (most common aquarium fish require 76–82°F). Get one rated for your tank size + 20% buffer. A heater that fails cold is common. <a href="/reviews/best-aquarium-heaters">The heater guide</a> compares heaters sized with that buffer.</li>
           <li><strong>Thermometer</strong> — digital stick thermometer ($8–15). Verify heater accuracy on day one.</li>
           <li><strong>Dechlorinator (water conditioner)</strong> — Seachem Prime or API Stress Coat. Removes chlorine and chloramine from tap water. Use at every water change.</li>
           <li><strong>Liquid test kit</strong> — API Master Test Kit ($28–35, the band on the water-test review). Tests ammonia, nitrite, nitrate, and pH. This is how you know when your tank is cycled and when water changes are needed. Test strips are inaccurate.</li>
@@ -132,24 +133,24 @@ export default function AquariumSetupPage() {
           siteId="fish-com"
           nextHref="/setup/aquarium-cycling-guide"
           nextLabel="Cycle before you add fish"
-          nextBlurb="The kit list is not the cycle. The next useful page is the cycling guide — 4–8 weeks of ammonia/nitrite tests before livestock. The hop below is the same API Master Test Kit search already on this page."
+          nextBlurb="The kit list is not the cycle. The next useful page is the cycling guide — 4–8 weeks of ammonia/nitrite tests before livestock. The button below opens the same API Master Test Kit search on Amazon."
           resourceHref="/go/amazon-brand/api+freshwater+master+test+kit?s=setup-aquarium"
           resourceLabel="Browse API Master Test Kit on Amazon →"
         />
 
-        {/* Money path — live amazon-brand search hops (first-tank kit).
-            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-            Category searches only — not a ranked list. */}
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        {/* Shop note — live amazon-brand search buttons (first-tank kit).
+            ShopCtas hides empty Chewy; never href="#" or an empty link.
+            Amazon searches only — not a ranked list. */}
+        <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/api+freshwater+master+test+kit?s=setup-aquarium", "/go/amazon-brand/aquaclear+70+filter?s=setup-aquarium", "/go/amazon-brand/fluval+307+canister+filter?s=setup-aquarium", "/go/amazon-brand/eheim+jager+heater?s=setup-aquarium", "/go/amazon-brand/aquarium+digital+thermometer?s=setup-aquarium", "/go/amazon-brand/seachem+prime+water+conditioner?s=setup-aquarium", "/go/amazon-brand/aquarium+gravel+vacuum+siphon?s=setup-aquarium"]} />
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
-            Shop a first-tank setup kit
+            Shop these supplies
           </div>
           <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">A hang-on-back or canister filter is where the cycle lives. Pair it
             with a heater rated for the tank, a separate digital thermometer to
             verify the dial, Seachem Prime (or another dechlorinator) at every
             fill, the API Master Test Kit so you can see ammonia/nitrite/nitrate,
-            and a gravel vacuum for the first water change. Same HOB hop used on
+            and a gravel vacuum for the first water change. The same HOB button is on
             the{' '}
             <Link
               href="/tools/stocking-calculator"
@@ -164,21 +165,21 @@ export default function AquariumSetupPage() {
             >
               filter GPH calculator
             </Link>
-            . Same heater hop used on the{' '}
+            . The same heater button is on the{' '}
             <Link
               href="/tools/heater-wattage-calculator"
               className="text-brand-primary no-underline hover:underline"
             >
               heater wattage calculator
             </Link>
-            . Same Prime and gravel-vacuum hops used on the{' '}
+            . The same Prime and gravel-vacuum buttons are on the{' '}
             <Link
               href="/tools/water-change-calculator"
               className="text-brand-primary no-underline hover:underline"
             >
               water-change calculator
             </Link>
-            . Same test-kit hop used on the{' '}
+            . The same test-kit button is on the{' '}
             <Link
               href="/reviews/best-water-test-kits"
               className="text-brand-primary no-underline hover:underline"
@@ -186,20 +187,19 @@ export default function AquariumSetupPage() {
               water-test kit review
             </Link>
             . They are not a ranked product list and they do not replace
-            cycling before fish. Fish.com earns a commission on qualifying
-            purchases at no extra cost to you.</p>
+            cycling before fish.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/aquaclear+70+filter?s=setup-aquarium"
-              amazonLabel="Browse hang-on-back filters on Amazon →"
+              amazonLabel="Browse AquaClear 70 filters on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/fluval+307+canister+filter?s=setup-aquarium"
-              amazonLabel="Browse canister filters on Amazon →"
+              amazonLabel="Browse Fluval 307 canister filters on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/eheim+jager+heater?s=setup-aquarium"
-              amazonLabel="Browse aquarium heaters on Amazon →"
+              amazonLabel="Browse Eheim Jager heaters on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+digital+thermometer?s=setup-aquarium"
@@ -207,7 +207,7 @@ export default function AquariumSetupPage() {
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/seachem+prime+water+conditioner?s=setup-aquarium"
-              amazonLabel="Browse dechlorinator / Seachem Prime on Amazon →"
+              amazonLabel="Browse Seachem Prime water conditioner on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/api+freshwater+master+test+kit?s=setup-aquarium"
@@ -215,7 +215,7 @@ export default function AquariumSetupPage() {
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+gravel+vacuum+siphon?s=setup-aquarium"
-              amazonLabel="Browse gravel vacuums on Amazon →"
+              amazonLabel="Browse gravel vacuum siphons on Amazon →"
             />
           </div>
           <p className="text-2xs text-brand-text-light mt-3">

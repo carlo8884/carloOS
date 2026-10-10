@@ -1,19 +1,21 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, FAQAccordion, AffiliateDisclosure, ShopCtas, CrossSiteHelp } from '@carloOS/ui'
+import Link from 'next/link'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, FAQAccordion, ShopCtas, CrossSiteHelp } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { BreedHealthCard } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Labrador Retriever Health — Hip & Elbow Dysplasia | Vets.co', description: 'From a veterinarian\'s perspective: Labrador health priorities — OFA screening, weight management, exercise-induced collapse, and when to refer to a specialist.', path: '/breeds/labrador-health', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Labrador Retriever Health — Owner Guide', description: 'Managing Labrador health with payout data and case-cost ranges.', url: 'https://vets.co/breeds/labrador-health', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Labrador Retriever Health — Owner Guide', description: 'Managing Labrador health with payout data and case-cost ranges.', url: 'https://vets.co/breeds/labrador-health', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-07T00:00:00Z' })
 
 const medicalSchema = buildMedicalWebPageSchema({
   name: 'Labrador Retriever Health',
   description: 'Hip dysplasia, EIC, and obesity management in Labradors.',
   url: 'https://vets.co/breeds/labrador-health',
   authorName: 'Vets.co Editorial',
-  lastReviewed: '2026-06-11',
+  lastReviewed: '2026-10-07',
 })
 
 const FAQS = [
@@ -40,7 +42,7 @@ const FAQS = [
   {
     question: 'When should I get pet insurance for a Labrador?',
     answer:
-      'Before the first veterinary visit. Orthopedic surgery for hip dysplasia runs $3,500–7,000 per joint — $7,000–14,000 bilateral — and these are common outcomes in this breed. Enrolling before anything is noted in the medical record avoids pre-existing-condition exclusions.',
+      'Before the first veterinary visit. University of Missouri Veterinary Health Center lists a total hip replacement consult at $2,000–$2,500, surgery at $8,500–$10,000 per hip, and follow-up at $600–$700. Each hip is quoted separately. Typical US range, checked Oct 2026; varies by clinic and region. dated 2026-10-07. These are common outcomes in this breed. Enrolling before anything is noted in the medical record avoids pre-existing-condition exclusions.',
   },
 ]
 
@@ -52,7 +54,7 @@ export default function VetsLabradorHealthPage() {
     <>
       <SchemaScript schema={combinedSchemaAll} />
       <ArticleLayout
-      priceAsOf="2026-06-11"
+      priceAsOf="2026-10-07"
       siteId="vets-co"
       contentType="breed"
       hero={{ title: 'Labrador Retriever Health — A Veterinarian\'s Perspective', subtitle: 'Labradors are among my highest-volume patients. Fantastic temperaments, but specific health predispositions require proactive management. Here\'s what I prioritize with every Lab owner.', category: 'Breed Health Guide', authorName: 'Vets.co Editorial', publishedAt: 'May 2025', readTime: '9 min',}}
@@ -84,11 +86,11 @@ export default function VetsLabradorHealthPage() {
         <CalloutBox variant="evidence" title="The POMC deletion is genuine — and prevalent">
           A 2016 Cell Metabolism study identified a POMC gene deletion that impairs satiety in Labradors; roughly 23% of pet Labs and a higher proportion of assistance dogs carry the mutation. The implication is that a hungry Lab is often biologically driven, not behaviorally manipulative. Measured meals and no free-feeding are management essentials, not preferences.
         </CalloutBox>
-        <p>The practical approach: weigh the dog monthly (same time, same scale). Adjust portions based on BCS, not appetite. A flexible sewing tape measure is how the visible waist and abdominal tuck stay a written BCS check — it is not a handheld tally counter (that lives on deductibles-reimbursement), not a basic desktop calculator (that lives on emergency-vet-costs), and not a digital pet scale hop. The dog will always ask for more. The dog&apos;s actual needs are what the scale and BCS tell you, not what the dog communicates.</p>
+        <p>The practical approach: weigh the dog monthly (same time, same scale). Adjust portions based on BCS, not appetite. A flexible sewing tape measure is how the visible waist and abdominal tuck stay a written BCS check — it is not a handheld tally counter, not a basic desktop calculator. The dog will always ask for more. The dog&apos;s actual needs are what the scale and BCS tell you, not what the dog communicates.</p>
 
         <h2>Recommended Screening</h2>
         <ul>
-          <li><strong><a href="https://ofa.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">OFA</a> hip and elbow:</strong> At 2 years minimum; consider preliminary at 12–16 months for dogs showing early symptoms. A letter-size document frame is how that OFA hip and elbow result stays one posted certificate — it is not a letter-size file jacket (that lives on when-to-enroll), not a clasp envelope (that lives on pre-existing-conditions), and not a blank pedigree chart (that lives on breed-specific-risk).</li>
+          <li><strong><a href="https://ofa.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">OFA</a> hip and elbow:</strong> At 2 years minimum; consider preliminary at 12–16 months for dogs showing early symptoms. A letter-size document frame is how that OFA hip and elbow result stays one posted certificate — it is not a letter-size file jacket, not a clasp envelope, and not a blank pedigree chart.</li>
           <li><strong>EIC DNA test:</strong> Before intense training programs; important for families with children who play intensely with the dog</li>
           <li><strong>PRA DNA test:</strong> For any dog used for breeding</li>
           <li><strong>Annual bloodwork:</strong> From age 5; earlier if overweight (metabolic monitoring)</li>
@@ -96,33 +98,16 @@ export default function VetsLabradorHealthPage() {
         </ul>
 
         <h2>Pet Insurance — Start Early</h2>
-        <p>Orthopedic surgery for hip dysplasia runs $3,500–7,000 per joint. Bilateral (both hips): $7,000–14,000. Total hip replacement: $6,000–10,000 per side. These are common outcomes in this breed. Enroll before the first veterinary visit. See the <a href="/reviews/best-pet-insurance">insurance comparison →</a></p>
+        <p>Typical US range, checked Oct 2026; varies by clinic and region. dated 2026-10-07.</p>
+        <p>University of Missouri Veterinary Health Center lists a total hip replacement consult at $2,000–$2,500, surgery at $8,500–$10,000 per hip, and follow-up at $600–$700. Each hip is quoted separately. Typical US range, checked Oct 2026; varies by clinic and region. dated 2026-10-07. These are common outcomes in this breed. Enroll before the first veterinary visit. See the <a href="/reviews/best-pet-insurance">insurance comparison →</a></p>
 
-        <h2 id="kit">Labrador-health kit</h2>
+        <h2 id="kit">Supplies named on this page</h2>
         <p>
-          Everyday physical supplies that match the
-          hip-dysplasia, obesity, and OFA-screening
-          copy on this page — a flexible sewing
-          tape measure so the visible waist and
-          abdominal tuck stay a written BCS check,
-          a bound composition book so the monthly
-          weigh stays the same-scale same-time log,
-          and a letter-size document frame so the
-          OFA hip and elbow result stays one posted
-          certificate. These are educational
-          Labrador-health / paperwork tools, not a
-          ranked product list, not a substitute for
-          veterinary care, and not a treatment. Pressboard classification folders,
-          letter-size clasp envelopes, and
-          red-and-blue checking pencils already
-          live on pre-existing-conditions. This
-          page does not hop medications, diets, or
-          insurance brands as Amazon searches. This page does not claim hands-on
-          testing. </p>
+          Keep these on hand: a flexible sewing tape measure so the visible waist and abdominal tuck stay a written BCS check, a bound composition book so the monthly weigh stays the same-scale same-time log, and a letter-size document frame so the OFA hip and elbow result stays one posted certificate. These are educational Labrador-health / paperwork tools, not a ranked product list, not a substitute for veterinary care, and not a treatment. </p>
 
-        <AffiliateDisclosure variant="inline" siteId="vets-co" />
+        <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/flexible+sewing+tape+measure?s=breeds-labrador-health", "/go/amazon-brand/bound+composition+book?s=breeds-labrador-health", "/go/amazon-brand/letter+size+document+frame?s=breeds-labrador-health"]} />
 
-        {/* Money path — live amazon-brand search hops
+        {/* Shop note — live amazon-brand search buttons
             (flexible sewing tape measure /
             bound composition book /
             letter-size document frame).
@@ -131,9 +116,9 @@ export default function VetsLabradorHealthPage() {
             not a ranked product list, not a
             substitute for veterinary care, no Rx
             / first-aid kit / thermometer /
-            carrier / insurance-brand ASIN hops.
+            carrier / insurance-brand product page buttons.
             ShopCtas hides empty Chewy; never href="#"
-            or PLACEHOLDER. Category searches only —
+            or an empty link. Amazon searches only —
             unused vs #1174
             blank+pedigree+chart /
             round+color+coding+labels /
@@ -177,10 +162,13 @@ export default function VetsLabradorHealthPage() {
         >
           The Dog.com Labrador Retriever page is the owner-side guide for this breed: size, temperament, and everyday care.
         </CrossSiteHelp>
+        <p>Joint supplements for this breed are compared in the <Link href={crossSiteHref('dog-com', '/reviews/best-joint-supplements')}>joint supplement review</Link>.</p>
         <h2>FAQ</h2>
+        <p>Typical US range, checked Oct 2026; varies by clinic and region. dated 2026-10-07.</p>
         <FAQAccordion
           items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))}
           allowMultiple
+          includeSchema={false}
         />
       </div>
     </ArticleLayout>

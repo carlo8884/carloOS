@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -8,8 +9,8 @@ import {
   combineSchemas,
   SchemaScript,
   FAQAccordion,
-  AffiliateDisclosure,
   CrossPortfolioCard,
+  JourneyNext,
   ShopCtas,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
@@ -68,7 +69,7 @@ const appSchema = {
     'lb and kg input',
     'Accounts for the diet/activity/temperature range',
     'Flags the drinking changes worth a veterinary call',
-    'Shoppable hydration kit via Amazon category searches',
+    'Shop the hydration kit via Amazon searches',
   ],
   publisher: { '@type': 'Organization', name: 'Dog.com Editorial', url: 'https://dog.com' },
 }
@@ -151,24 +152,32 @@ export default function DogWaterIntakeCalculatorPage() {
       <section className="bg-brand-surface px-container-sm sm:px-container py-section">
         <div className="max-w-5xl">
           <Calculator />
+          <JourneyNext
+            siteId="dog-com"
+            nextHref="/tools/dog-calorie-calculator"
+            nextLabel="Pair the ounces with a daily portion"
+            nextBlurb="Water and calories move together. The calorie calculator is the next number when drinking drifts with appetite or weight. The button below opens the ceramic-bowl search on Amazon."
+            resourceHref="/go/amazon-brand/heavy+ceramic+pet+water+bowl?s=tools-dog-water-intake"
+            resourceLabel="Browse heavy ceramic pet water bowls on Amazon →"
+          />
         </div>
       </section>
 
-      {/* Money path — live amazon-brand search hops (hydration kit).
-          ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-          Category searches only — not a ranked list, not a diagnosis. */}
+      {/* Shop note — live amazon-brand search buttons (hydration kit).
+          ShopCtas hides empty Chewy; never href="#" or an empty link.
+          Amazon searches only — not a ranked list, not a diagnosis. */}
       <section id="dog-water-intake-kit" className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <div className="max-w-2xl">
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/heavy+ceramic+pet+water+bowl?s=tools-dog-water-intake", "/go/amazon-brand/dog+water+fountain?s=tools-dog-water-intake", "/go/amazon-brand/dog+travel+water+bottle?s=tools-dog-water-intake", "/go/amazon-brand/kitchen+measuring+cup?s=tools-dog-water-intake"]} />
           <div className="mt-4 rounded-xl border border-brand-border bg-brand-white p-5">
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Shop a hydration kit
+              Shop these supplies
             </div>
             <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/heavy+ceramic+pet+water+bowl?s=tools-dog-water-intake"
-                amazonLabel="Browse ceramic pet water bowls on Amazon →"
+                amazonLabel="Browse heavy ceramic pet water bowls on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/dog+water+fountain?s=tools-dog-water-intake"

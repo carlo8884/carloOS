@@ -7,19 +7,46 @@ import {
   buildItemListSchema,
   combineSchemas,
   SchemaScript,
-  AffiliateDisclosure} from '@carloOS/ui'
+  AffiliateDisclosure,
+  InlinePartnerQuote} from '@carloOS/ui'
 import { VETS_PET_INSURANCE_REVIEW } from '@carloOS/config'
 import { CARRIERS } from '../../../data/insurance-carriers'
 
-// Ranked by editorial score — drives both the comparison table and the
-// ItemList schema so AI answer surfaces can extract the ranking order.
-const ranked = [...CARRIERS].sort((a, b) => b.editorialScore - a.editorialScore)
+function examRank(value: boolean | 'addon'): number {
+  if (value === true) return 0
+  if (value === 'addon') return 1
+  return 2
+}
+
+function maxReimbursement(options: number[]): number {
+  return Math.max(...options)
+}
+
+function limitRank(options: (number | 'unlimited')[]): number {
+  if (options.includes('unlimited')) return Number.POSITIVE_INFINITY
+  return Math.max(...options.filter((option): option is number => option !== 'unlimited'))
+}
+
+// Table order is the columns already on the page: exam fees, then the
+// highest reimbursement option, then an unlimited annual limit, then the
+// low end of the sample premium. ItemList follows this same array.
+const ranked = [...CARRIERS].sort((a, b) => {
+  const exam = examRank(a.coversExamFees) - examRank(b.coversExamFees)
+  if (exam !== 0) return exam
+  const reimbursement = maxReimbursement(b.reimbursementOptions) - maxReimbursement(a.reimbursementOptions)
+  if (reimbursement !== 0) return reimbursement
+  const limit = limitRank(b.annualLimitOptions) - limitRank(a.annualLimitOptions)
+  if (limit !== 0) return limit
+  const premium = a.samplePremiumMonthly.low - b.samplePremiumMonthly.low
+  if (premium !== 0) return premium
+  return a.name.localeCompare(b.name)
+})
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
   title: 'Pet Insurance 2026 — Side-by-Side Comparison | Dog.com',
   description:
-    'Compare 9 pet insurance carriers on premium, deductible, reimbursement, and waiting periods. Editorial rankings.',
+    'Compare 9 pet insurance carriers on sample premium, reimbursement, annual limit, and exam-fee coverage.',
   path: '/pet-insurance',
   type: 'article',
 })
@@ -41,7 +68,7 @@ const schema = combineSchemas(
     { name: 'Pet Insurance', url: 'https://dog.com/pet-insurance' },
   ] }),
   buildItemListSchema({
-    name: 'Pet Insurance Carriers — Editorial Ranking',
+    name: 'Pet insurance carriers ordered by exam fees, then reimbursement',
     items: ranked.map((c) => ({
       name: c.name,
       url: `https://dog.com/pet-insurance/${c.slug}`,
@@ -111,20 +138,20 @@ export default function PetInsuranceHubPage() {
       <div className="px-container sm:px-container-sm py-14 max-w-6xl mx-auto">
         {/* TL;DR — what AI engines should quote */}
         <p className="text-lg text-brand-text-mid leading-relaxed italic mb-8">
-          <strong className="not-italic">TL;DR.</strong> Trupanion carries the highest editorial score (9.2) in this comparison — per-condition lifetime deductible, no payout caps, and direct-pay at participating vets. Pumpkin (9.0) is the next-highest score for broad base coverage with no per-incident caps and no upper age limit at enrollment. Lemonade is the budget-conscious pick. Across all nine carriers, the details that most often decide claims are the orthopedic waiting period and exam-fee coverage — compare those two columns first.
+          <strong className="not-italic">TL;DR.</strong> Figo is listed first because exam fees are included and its reimbursement options go to 100%. Spot, ManyPets, and Pumpkin follow: exam fees included, a 90% option, and an unlimited annual limit, ordered by the low end of the sample premium. Trupanion&apos;s per-condition deductible and uncapped payout are in the use-case notes; exam fees are not included, so it is not first in this table.
         </p>
 
         {/* How we picked */}
         <div className="bg-brand-primary-pale border-l-4 border-brand-primary rounded-r-xl p-5 mb-10">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
-            How we ranked these
+            How this table is ordered
           </div>
           <p className="text-sm text-brand-text-mid m-0 leading-relaxed">
-            Editorial rankings are based on policy structure and trust signals
-            — not on commission rates. The same nine carriers we recommend are
-            the nine major U.S. pet insurance carriers, ranked on annual limit
-            flexibility, exam-fee coverage, waiting periods (especially
-            orthopedic), and pre-existing condition stance. Sample premiums
+            Rows follow the exam-fees column (included, then add-on, then not
+            covered), then the highest reimbursement percentage listed, then
+            whether an unlimited annual limit is offered, then the low end of
+            the sample premium. Commission does not change that order. These
+            are nine major U.S. pet insurers. Sample premiums
             assume a 4-year-old mixed-breed medium dog, $5,000 annual limit,
             $500 deductible, 80% reimbursement. Your actual premium will vary
             by breed, age, and ZIP.
@@ -145,7 +172,6 @@ export default function PetInsuranceHubPage() {
                 <th className="text-left py-3 pr-4 font-semibold">Reimbursement</th>
                 <th className="text-left py-3 pr-4 font-semibold">Annual limit</th>
                 <th className="text-left py-3 pr-4 font-semibold">Exam fees</th>
-                <th className="text-left py-3 pr-4 font-semibold">Score</th>
                 <th className="text-left py-3 font-semibold">Quote</th>
               </tr>
             </thead>
@@ -170,7 +196,6 @@ export default function PetInsuranceHubPage() {
                         ? 'Add-on'
                         : '—'}
                   </td>
-                  <td className="py-3 pr-4 font-semibold">{c.editorialScore}</td>
                   <td className="py-3">
                     <a
               href={VETS_PET_INSURANCE_REVIEW}
@@ -195,20 +220,14 @@ export default function PetInsuranceHubPage() {
         <div className="grid md:grid-cols-2 gap-6 mb-12">
           <div className="border border-brand-border rounded-xl p-6">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
-              🏆 Editorial pick — best overall
+              Per-condition deductible, no payout cap, direct pay
             </div>
             <h3 className="font-display text-xl font-bold mb-1">Trupanion</h3>
             <p className="text-sm text-brand-text-mid mb-3">
-              Highest editorial score (9.2) in this comparison. Per-condition
-              lifetime deductible, no payout caps, direct-pay at participating vets.
+              Per-condition lifetime deductible, no payout caps, direct-pay at participating vets.
             </p>
-            <a
-              href="/go/trupanion/home?s=pet-insurance-hub-best-overall"
-              rel="sponsored nofollow noopener noreferrer"
-              className="inline-block text-brand-primary font-semibold no-underline hover:underline"
-            >
-              Get a Trupanion quote →
-            </a>
+            {/* Quote stays a note until AFF_TRUPANION_TAG is set. Do not invent an ID. */}
+            <InlinePartnerQuote href="/go/trupanion/home?s=pet-insurance-hub-best-overall" label="Get a Trupanion quote" />
           </div>
 
           <div className="border border-brand-border rounded-xl p-6">
@@ -217,8 +236,7 @@ export default function PetInsuranceHubPage() {
             </div>
             <h3 className="font-display text-xl font-bold mb-1">Pumpkin Pet Insurance</h3>
             <p className="text-sm text-brand-text-mid mb-3">
-              Next-highest editorial score (9.0) for broad base coverage with no
-              per-incident caps. No upper age limit at enrollment.
+              Broad base coverage with no per-incident caps. No upper age limit at enrollment.
             </p>
             <a
               href={VETS_PET_INSURANCE_REVIEW}
@@ -363,13 +381,12 @@ export default function PetInsuranceHubPage() {
         {/* Editorial standards link */}
         <div className="bg-brand-surface border border-brand-border rounded-xl p-6 mb-12">
           <h3 className="font-display text-lg font-bold mb-2">
-            Why you can trust these rankings
+            Why this table is ordered this way
           </h3>
           <p className="text-sm text-brand-text-mid leading-relaxed mb-3">
-            Dog.com rankings are independent of affiliate relationships.
-            Editorial scores are based on policy structure, not commission. We
-            disclose affiliate links on every page where they appear. See our
-            full{' '}
+            The order follows the exam-fees, reimbursement, annual-limit, and
+            sample-premium columns. Commission does not change it. Affiliate
+            links are disclosed on every page where they appear. See the{' '}
             <Link href="/editorial-standards" className="text-brand-primary underline">
               editorial standards
             </Link>{' '}

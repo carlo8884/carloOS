@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, PrimaryHop, RelatedLinks, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "When to Take Your Pet to the Vet — A Decision Guide | Vets.co", description: "Some signs warrant watchful waiting; others need same-day or emergency care. Learn which symptoms mean it is time to call the vet and which cannot wait.", path: '/guides/when-to-go-to-the-vet', type: 'article' })
@@ -15,6 +16,10 @@ export default function WhenToGoPage() {
       <SchemaScript schema={schema} />
       <ArticleLayout siteId="vets-co"
         hero={{ title: 'When to Take Your Pet to the Vet', subtitle: 'Pet owners constantly face the same question: is this something to watch, something to call about, or something that cannot wait? This decision guide sorts common signs into watchful waiting, same-day care, and emergency care — and gives clear rules for when to escalate — so you can act with confidence rather than worry.', category: 'Owner Guide', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '8 min',}}
+        heroHop={<>
+          <PrimaryHop href="/go/amazon-brand/pet+first+aid+kit?s=tools-er-vs-clinic" label="Search Amazon for a pet first-aid kit" />
+          <HopDisclosure tone="on-dark" siteId="vets-co" href="/go/amazon-brand/pet+first+aid+kit?s=tools-er-vs-clinic" />
+        </>}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Guides', href: '/guides' }, { name: 'When to Go to the Vet', href: '/guides/when-to-go-to-the-vet' }]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -26,7 +31,7 @@ export default function WhenToGoPage() {
               </div>
             ))}
           </div>
-          <RelatedLinks title="Related Guides" links={[{ label: 'ER vs Clinic vs Telehealth (tool)', href: '/tools/er-vs-clinic' }, { label: 'Emergency Signs', href: '/health/emergency-signs' }, { label: 'ER vs. Urgent Care', href: '/guides/er-vs-urgent-care' }, { label: 'What to Expect at the Vet', href: '/guides/what-to-expect-at-the-vet' }]} />
+          <RelatedLinks title="Related Guides" links={[{ label: 'Cat Grimace Scale', href: '/tools/cat-grimace-scale' }, { label: 'ER vs Clinic vs Telehealth (tool)', href: '/tools/er-vs-clinic' }, { label: 'Emergency Signs', href: '/health/emergency-signs' }, { label: 'ER vs. Urgent Care', href: '/guides/er-vs-urgent-care' }, { label: 'What to Expect at the Vet', href: '/guides/what-to-expect-at-the-vet' }]} />
 
         </>}
       >
@@ -40,6 +45,7 @@ export default function WhenToGoPage() {
 
           <h2>The Three Buckets</h2>
           <p>Most situations sort into three categories. <strong>Watchful waiting</strong> suits mild, isolated signs in a pet that is otherwise bright, eating, drinking, and acting normally. <strong>Same-day or urgent care</strong> is for problems that are not immediately life-threatening but should not wait days. <strong>Emergency care</strong> is for time-critical, life-threatening situations. Sorting a sign into the right bucket — and erring toward caution when unsure — is the core skill of responsible pet ownership.</p>
+          <p>For a cat that is quiet rather than collapsed, the <a href="/tools/cat-grimace-scale" className="text-brand-primary hover:underline">cat grimace scale</a> is a structured way to look at ear, eye, and whisker position before you decide which bucket you are in. It does not diagnose.</p>
 
           <h2>Signs You Can Often Watch Briefly</h2>
           <p>For a pet that remains alert, eating, and behaving normally, mild and isolated signs can sometimes be monitored for a short, defined period: a single soft stool, one episode of mild vomiting, brief minor stiffness that resolves, or a small superficial scrape. Watch closely, and seek care if the sign persists beyond a day or two, worsens, or is joined by other symptoms. This watchful approach is never appropriate for very young or very old pets, or those with serious underlying conditions.</p>
@@ -53,51 +59,25 @@ export default function WhenToGoPage() {
           <h2>When You Are Not Sure</h2>
           <p>Uncertainty is common, and there is a simple rule: when in doubt, call. Your veterinary clinic, or an emergency hospital after hours, can help you decide whether to watch, come in, or treat the situation as an emergency, often with a few questions over the phone. Describing the sign, when it started, and how your pet is otherwise doing helps them advise you. It is always better to ask and be reassured than to wait on something serious.</p>
 
-          <h2 id="kit">Home-care kit</h2>
-          <p>
-            Everyday physical supplies that match the
-            watchful-waiting, same-day, and
-            when-unsure-call copy on this page — a
-            48-hour digital kitchen timer so a mild
-            isolated sign is a counted day-or-two
-            window, a lined telephone message pad so
-            the clinic call records the sign, when it
-            started, and how the pet is otherwise
-            doing, and a medium hard-sided plastic
-            pet carrier so a same-day visit is a
-            ready crate. These are educational
-            home-care / monitoring / transport tools,
-            not a ranked product list, not a
-            substitute for veterinary care, and not
-            a treatment. 72-hour digital countdown
-            timers already live on
-            dog-vaccinations-guide. 12-hour mechanical
-            kitchen timers already live on
-            senior-bloodwork-guide. Pocket spiral
-            memo pads already live on
-            vomiting-diarrhea-pets. Soft-sided
-            vet-visit carriers already live on
-            dog.com heartworm prevention. Wire
-            basket dog muzzles, quilted disposable
-            underpads, and handheld AA LED
-            flashlights already live on
-            emergency-signs. This page does not claim
-            hands-on testing. </p>
+          <h2 id="kit">Supplies named on this page</h2>
+          <p>A pet first-aid kit covers the supplies for a clinic trip. A lined telephone message pad is where you write the sign, when it started, and how the pet is otherwise doing before you call. A medium hard-sided plastic pet carrier is the crate for a same-day visit. These are home-care and transport tools, not a treatment and not a ranked product list.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/pet+first+aid+kit?s=tools-er-vs-clinic", "/go/amazon-brand/lined+telephone+message+pad?s=guides-when-to-go-to-the-vet", "/go/amazon-brand/medium+hard+sided+plastic+pet+carrier?s=guides-when-to-go-to-the-vet"]} />
 
-          {/* Money path — live amazon-brand search hops
-              (48-hour digital kitchen timer /
+          {/* Shop note — live amazon-brand search buttons
+              (pet first-aid kit already on the
+              ER-vs-clinic tool /
               lined telephone message pad /
               medium hard-sided plastic pet carrier).
               These are educational home-care /
               monitoring / transport tools, not a
               ranked product list, not a substitute
-              for veterinary care, no Rx / first-aid
-              kit / thermometer / muzzle / underpad
-              ASIN hops.
+              for veterinary care, no Rx / thermometer /
+              muzzle / underpad product page buttons.
+              The kitchen-timer button is not on this
+              triage guide.
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or an empty link. Amazon searches only —
               unused vs #1092
               single+stainless+floor+dog+bowl /
               wobble+dog+food+dispenser /
@@ -135,9 +115,9 @@ export default function WhenToGoPage() {
               emergency-signs muzzle / underpads /
               flashlight, vomiting memo-pad,
               vaccinations 72-hour timer.
-              First-aid kits, digital pet
-              thermometers, and prescriptions
-              are not shoppable hops. */}
+              Digital pet thermometers and
+              prescriptions are not shoppable buttons
+              on this guide. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
@@ -145,8 +125,8 @@ export default function WhenToGoPage() {
             <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/48+hour+digital+kitchen+timer?s=guides-when-to-go-to-the-vet"
-                amazonLabel="Browse 48-hour digital kitchen timers on Amazon →"
+                amazonHref="/go/amazon-brand/pet+first+aid+kit?s=tools-er-vs-clinic"
+                amazonLabel="Browse pet first-aid kits on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/lined+telephone+message+pad?s=guides-when-to-go-to-the-vet"

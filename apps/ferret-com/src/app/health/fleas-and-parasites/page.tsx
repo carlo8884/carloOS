@@ -10,6 +10,7 @@ import {
   DropCap,
   CrossPortfolioCard,
   ArticleSourcesList,
+  LastUpdated,
 } from '@carloOS/ui'
 
 const SOURCES = [
@@ -20,7 +21,7 @@ const SOURCES = [
   },
   {
     label: "Merck Veterinary Manual — Parasitic Diseases of Ferrets: flea control, ear mites, heartworm prevention, and antiparasitic safety",
-    url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/parasitic-diseases-of-ferrets",
+    url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/infectious-diseases-of-ferrets",
     publisher: "Merck Veterinary Manual",
   },
   {
@@ -130,7 +131,7 @@ export default function FerretFleasParasitesPage() {
           <>
             <TableOfContents
               items={[
-                { label: 'TL;DR', href: '#tldr' },
+                { label: '', href: '#tldr' },
                 { label: 'Why Size Changes Everything', href: '#size' },
                 { label: 'Fleas', href: '#fleas' },
                 { label: 'Mites', href: '#mites' },
@@ -167,6 +168,7 @@ export default function FerretFleasParasitesPage() {
             publishedAt="2026-06-01"
             updatedAt="2026-06-01"
           />
+          <LastUpdated date="2026-10-09" />
 
           <DropCap>
             Parasite control in a ferret is not just dog-or-cat parasite control
@@ -177,8 +179,7 @@ export default function FerretFleasParasitesPage() {
             the margins are not.
           </DropCap>
 
-          <h2 id="tldr">TL;DR</h2>
-          <p>
+                    <p>
             Ferrets are affected by fleas, mites (especially{' '}
             <a href="/health/ear-mites">ear mites</a>), heartworm, and intestinal
             parasites. Their small size raises the stakes: fleas can cause

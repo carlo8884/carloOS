@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -125,6 +126,7 @@ export default function EMSPage() {
             updatedAt="2026-09-06"
             reviewedBy="Editorial team"
           />
+          <LastUpdated date="2026-10-09" />
 
           <h2 id="what">What Is EMS</h2>
           <p>Equine metabolic syndrome describes a horse with insulin dysregulation and an elevated risk of laminitis, frequently in combination with generalized obesity or localized fat deposits over the crest of the neck, the tailhead, behind the shoulder, and around the sheath or mammary region. The syndrome was formalized in the early 2000s and refined by the Equine Endocrinology Group, which publishes the consensus diagnostic and management guidance veterinarians follow.</p>
@@ -147,36 +149,20 @@ export default function EMSPage() {
 
           <h2 id="diet">Dietary Management</h2>
           <ul>
-            <li><strong>Restrict non-structural carbohydrate (NSC).</strong> Aim for forage under roughly 10 to 12 percent NSC; soaking hay for 30 to 60 minutes leaches out a meaningful fraction of sugar. Test hay when possible. An equine forage NSC hay-test kit is how that sugar is measured instead of guessed — it is not a hay-soaking bag (that lives on heaves) and not a lidded 5-gallon soaking pail (that lives on choke).</li>
-            <li><strong>Eliminate grain and treats</strong> for the affected horse; replace with a low-calorie ration balancer to supply vitamins and minerals without sugar and starch. This page does not hop ration balancers or high-fat feeds — those already live on the nutrition pages and stay a veterinary ration, not a shoppable treatment.</li>
-            <li><strong>Control pasture access</strong> with a grazing muzzle, a dry lot, or strip grazing. Pasture sugar peaks on sunny afternoons after cool nights and during spring and autumn flushes. Portable strip-grazing step-in posts are how that access is a movable strip instead of a full-field binge — they are not a grazing muzzle (those live on laminitis and pasture-management) and not electric tape (that lives on fencing-safety).</li>
-            <li><strong>Feed by weight, not volume</strong> -- typically 1.5 percent of ideal (not current) bodyweight per day in forage dry matter for weight loss, never below 1.25 percent without veterinary supervision. A digital hanging hay-bale scale is how that ration is weighed instead of scooped by eye — it is not a feed-scoop scale (that lives on the feed calculator) and not a horse weight tape (those live on the weight and age calculators).</li>
-            <li><strong>Use slow feeders</strong> to extend a restricted ration and reduce the long fasting gaps that promote ulcers. This page does not hop hay nets or hay boxes — those already live on the feed calculator and turnout-vs-stabling.</li>
+            <li><strong>Restrict non-structural carbohydrate (NSC).</strong> Aim for forage under roughly 10 to 12 percent NSC; soaking hay for 30 to 60 minutes leaches out a meaningful fraction of sugar. Test hay when possible. An equine forage NSC hay-test kit is how that sugar is measured instead of guessed — it is not a hay-soaking bag and not a lidded 5-gallon soaking pail.</li>
+            <li><strong>Eliminate grain and treats</strong> for the affected horse; replace with a low-calorie ration balancer to supply vitamins and minerals without sugar and starch.</li>
+            <li><strong>Control pasture access</strong> with a grazing muzzle, a dry lot, or strip grazing. Pasture sugar peaks on sunny afternoons after cool nights and during spring and autumn flushes. Portable strip-grazing step-in posts are how that access is a movable strip instead of a full-field binge — they are not a grazing muzzle and not electric tape.</li>
+            <li><strong>Feed by weight, not volume</strong> -- typically 1.5 percent of ideal (not current) bodyweight per day in forage dry matter for weight loss, never below 1.25 percent without veterinary supervision. A digital hanging hay-bale scale is how that ration is weighed instead of scooped by eye — it is not a feed-scoop scale and not a horse weight tape.</li>
+            <li><strong>Use slow feeders</strong> to extend a restricted ration and reduce the long fasting gaps that promote ulcers.</li>
           </ul>
 
-          <h2 id="kit">Diet-management kit</h2>
+          <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Everyday physical supplies that match the
-            feed-by-weight, test-hay, and strip-grazing
-            copy on this page — a digital hanging hay-bale
-            scale so the ration is weighed instead of
-            scooped by eye, an equine forage NSC hay-test
-            kit so forage sugar is measured instead of
-            guessed, and portable strip-grazing step-in
-            posts so pasture access is a movable strip. These are educational diet-management tools,
-            not a ranked product list, not a substitute
-            for veterinary care, and not metformin,
-            pergolide, or a diagnosis. Hay-soaking bags already live on
-            heaves. Slow-feeder hay nets already live on
-            the feed calculator. Weight tapes already live
-            on the weight and age calculators. This
-            page does not hop medications, vaccines, or
-            insulin-test kits sold as treatments. This
-            page does not claim hands-on testing. </p>
+            Keep these on hand: a digital hanging hay-bale scale so the ration is weighed instead of scooped by eye, an equine forage NSC hay-test kit so forage sugar is measured instead of guessed, and portable strip-grazing step-in posts so pasture access is a movable strip. These are educational diet-management tools, not a ranked product list, not a substitute for veterinary care, and not metformin, pergolide, or a diagnosis. </p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/digital+hanging+hay+bale+scale?s=health-ems", "/go/amazon-brand/equine+forage+nsc+hay+test+kit?s=health-ems", "/go/amazon-brand/portable+strip+grazing+step+in+posts?s=health-ems"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (digital hanging hay bale scale /
               equine forage nsc hay test kit /
               portable strip grazing step in posts).
@@ -184,9 +170,9 @@ export default function EMSPage() {
               tools, not a ranked product list, not a
               substitute for veterinary care, no Rx /
               metformin / pergolide / grazing-muzzle /
-              hay-soaking-bag / ration-balancer ASIN hops.
+              hay-soaking-bag / ration-balancer product page buttons.
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or an empty link. Amazon searches only —
               unused vs #1104
               portable+3+sided+horse+run+in+shelter /
               labeled+stackable+horse+grooming+caddy /
@@ -227,7 +213,7 @@ export default function EMSPage() {
               horse+feed+scoop+scale /
               horse+weight+tape.
               Medications and prescriptions
-              are not shoppable hops. */}
+              are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
@@ -258,13 +244,17 @@ export default function EMSPage() {
           <h2 id="faq">Frequently Asked Questions</h2>
           <FAQAccordion items={FAQS} />
 
-          <h2 id="references">References</h2>
-          <ol className="text-sm text-brand-text-mid">
-            <li>Equine Endocrinology Group. “Recommendations for the Diagnosis and Management of Equine Metabolic Syndrome,” current edition. sites.tufts.edu/equineendogroup.</li>
-            <li>Frank N, Geor RJ, Bailey SR, Durham AE, Johnson PJ. “Equine Metabolic Syndrome.” Journal of Veterinary Internal Medicine, 2010; 24(3):467–475.</li>
-            <li>Durham AE, Frank N, McGowan CM, et al. “ECEIM Consensus Statement on Equine Metabolic Syndrome.” Journal of Veterinary Internal Medicine, 2019; 33(2):335–349.</li>
-            <li>American Association of Equine Practitioners. “Equine Metabolic Syndrome” owner resources. aaep.org.</li>
-          </ol>
+          <div id="references">
+            <ArticleSourcesList
+              title="References"
+              sources={[
+              { label: "Equine Endocrinology Group. “Recommendations for the Diagnosis and Management of Equine Metabolic Syndrome,” current edition. sites.tufts.edu/equineendogroup.", url: "https://sites.tufts.edu/equineendogroup/", publisher: "Equine Endocrinology Group" },
+              { label: "Frank N, Geor RJ, Bailey SR, Durham AE, Johnson PJ. “Equine Metabolic Syndrome.” Journal of Veterinary Internal Medicine, 2010; 24(3):467–475.", url: "https://onlinelibrary.wiley.com/journal/19391676", publisher: "Journal of Veterinary Internal Medicine" },
+              { label: "Durham AE, Frank N, McGowan CM, et al. “ECEIM Consensus Statement on Equine Metabolic Syndrome.” Journal of Veterinary Internal Medicine, 2019; 33(2):335–349.", url: "https://onlinelibrary.wiley.com/journal/19391676", publisher: "Journal of Veterinary Internal Medicine" },
+              { label: "American Association of Equine Practitioners. “Equine Metabolic Syndrome” owner resources. aaep.org.", url: "https://aaep.org/", publisher: "AAEP" },
+              ]}
+            />
+          </div>
         </div>
       </ArticleLayout>
     </>

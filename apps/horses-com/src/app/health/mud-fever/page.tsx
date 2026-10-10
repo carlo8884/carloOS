@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -117,6 +118,7 @@ export default function MudFeverPage() {
             updatedAt="2026-09-06"
             reviewedBy="Editorial team"
           />
+          <LastUpdated date="2026-10-09" />
 
           <h2 id="what">What Is Mud Fever</h2>
           <p>Mud fever is dermatitis -- skin inflammation -- on the back of the pastern and the heel, and sometimes higher up the leg. When the skin is repeatedly wetted, it softens and its protective barrier breaks down, allowing organisms (often the same Dermatophilus congolensis behind rain rot, plus other bacteria and sometimes mites or fungal involvement) to colonize and inflame it. The result is scabbing, crusting, and soreness in the lower limb.</p>
@@ -138,41 +140,20 @@ export default function MudFeverPage() {
 
           <h2 id="prevention">Prevention</h2>
           <ul>
-            <li><strong>Provide dry standing.</strong> Rotate muddy paddocks, use hardstanding or gravel around gates and water, and give horses a dry place to stand. A heavy-duty paddock mud grid is how that gate and water standing becomes a drained pad instead of a wet bowl — it is not ice grit (that lives on winter-care), not a stall rubber mat (that lives on the stall-bedding calculator), and not deep-sand stall bedding (that lives on laminitis).</li>
-            <li><strong>Keep legs dry.</strong> Avoid washing legs constantly in winter; if you must wash off mud, dry thoroughly afterward. Full-length horse turnout boots are how the pastern stays out of mud instead of soaking in it — they are not fly boots (those live on fly-control), not shipping boots (those live on trailering), not hoof boots (those live on hoof-care-basics), and not a hoof-soaking boot (that lives on abscess).</li>
-            <li><strong>Manage feathers</strong> in heavily feathered breeds, keeping them clean and dry and watching for mites. This page does not hop clippers — those live on body-clipping.</li>
+            <li><strong>Provide dry standing.</strong> Rotate muddy paddocks, use hardstanding or gravel around gates and water, and give horses a dry place to stand. A heavy-duty paddock mud grid is how that gate and water standing becomes a drained pad instead of a wet bowl — it is not ice grit, not a stall rubber mat, and not deep-sand stall bedding.</li>
+            <li><strong>Keep legs dry.</strong> Avoid washing legs constantly in winter; if you must wash off mud, dry thoroughly afterward. Full-length horse turnout boots are how the pastern stays out of mud instead of soaking in it — they are not fly boots, not shipping boots, not hoof boots, and not a hoof-soaking boot.</li>
+            <li><strong>Manage feathers</strong> in heavily feathered breeds, keeping them clean and dry and watching for mites.</li>
             <li><strong>Check legs daily</strong> in wet weather so early lesions are caught and treated before they spread.</li>
           </ul>
 
-          <h2 id="kit">Dry-leg kit</h2>
+          <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Everyday physical supplies that match the
-            dry-standing, keep-legs-dry, and dry-thoroughly
-            copy on this page — a heavy-duty paddock mud
-            grid so gate and water standing is a drained
-            pad, full-length horse turnout boots so the
-            pastern stays out of mud, and a waffle-weave
-            horse leg towel so a necessary wash is dried.
-            These are educational dry-leg tools, not a
-            ranked product list, not a substitute for
-            veterinary care, and not an antimicrobial
-            cream or a diagnosis. Fly boots already live
-            on fly-control. Shipping boots already live
-            on trailering. Hoof boots already live on
-            hoof-care-basics. Soaking boots already live
-            on abscess. Stall rubber mats already live on
-            the stall-bedding calculator. Ice grit already
-            lives on winter-care. Clippers already live on
-            body-clipping. Cotton foaling towels already
-            live on the gestation calculator. This page
-            does not hop antimicrobial wash, barrier
-            cream, mite treatments, or systemic drugs.
-            This page does not claim hands-on testing.
+            Keep these on hand: a heavy-duty paddock mud grid so gate and water standing is a drained pad, full-length horse turnout boots so the pastern stays out of mud, and a waffle-weave horse leg towel so a necessary wash is dried. These are educational dry-leg tools, not a ranked product list, not a substitute for veterinary care, and not an antimicrobial cream or a diagnosis.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/heavy+duty+paddock+mud+grid?s=health-mud-fever", "/go/amazon-brand/full+length+horse+turnout+boots?s=health-mud-fever", "/go/amazon-brand/waffle+weave+horse+leg+towel?s=health-mud-fever"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (heavy duty paddock mud grid /
               full length horse turnout boots /
               waffle weave horse leg towel).
@@ -180,9 +161,9 @@ export default function MudFeverPage() {
               tools, not a ranked product list, not a
               substitute for veterinary care, no Rx /
               vaccine / antimicrobial / fly-boot /
-              shipping-boot / soaking-boot ASIN hops.
+              shipping-boot / soaking-boot product page buttons.
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or an empty link. Amazon searches only —
               unused vs #1102
               irish+knit+horse+cooler /
               wool+exercise+quarter+sheet /
@@ -215,7 +196,7 @@ export default function MudFeverPage() {
               horse+clippers (body-clipping),
               clean+cotton+towels (gestation).
               Medications and prescriptions
-              are not shoppable hops. */}
+              are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
@@ -240,12 +221,16 @@ export default function MudFeverPage() {
           <h2 id="faq">Frequently Asked Questions</h2>
           <FAQAccordion items={FAQS} />
 
-          <h2 id="references">References</h2>
-          <ol className="text-sm text-brand-text-mid">
-            <li>Scott DW, Miller WH. Equine Dermatology, 2nd ed., Elsevier, 2011.</li>
-            <li>Yu AA. “Equine Pastern Dermatitis.” Veterinary Clinics of North America: Equine Practice, 2013; 29(3):577–588.</li>
-            <li>American Association of Equine Practitioners. “Scratches / Pastern Dermatitis” owner resources. aaep.org.</li>
-          </ol>
+          <div id="references">
+            <ArticleSourcesList
+              title="References"
+              sources={[
+              { label: "Scott DW, Miller WH. Equine Dermatology, 2nd ed., Elsevier, 2011.", url: "https://www.elsevier.com/", publisher: "Elsevier" },
+              { label: "Yu AA. “Equine Pastern Dermatitis.” Veterinary Clinics of North America: Equine Practice, 2013; 29(3):577–588.", url: "https://www.vetequine.theclinics.com/", publisher: "Veterinary Clinics of North America: Equine Practice" },
+              { label: "American Association of Equine Practitioners. “Scratches / Pastern Dermatitis” owner resources. aaep.org.", url: "https://aaep.org/", publisher: "AAEP" },
+              ]}
+            />
+          </div>
         </div>
       </ArticleLayout>
     </>

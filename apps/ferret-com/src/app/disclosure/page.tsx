@@ -91,8 +91,8 @@ export default function DisclosurePage() {
           Every page on Ferret.com that contains affiliate links carries a
           disclosure either at the top of the page (above the first affiliate
           link) or in the page footer, in addition to the site-wide footer
-          disclosure. Affiliate clicks route through our internal redirect
-          (<code>/go/[vendor]/[sku]</code>) for auditability.
+          disclosure. Affiliate clicks go through our click counter
+          so we can see which pages send people to a retailer.
         </p>
 
         <h2>Programs We Participate In</h2>
@@ -139,11 +139,10 @@ export default function DisclosurePage() {
             through and complete a purchase.
           </li>
           <li>
-            Newsletter sponsorships. Sponsorships are clearly labeled inside
-            the newsletter; sponsors have no input on editorial content.
+            No newsletter is currently sent, so there is no sponsored newsletter.
           </li>
           <li>
-            Display advertising via a third-party ad network.
+            No display ads are currently served.
           </li>
         </ol>
 

@@ -1,14 +1,15 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfContents, CrossPortfolioCard, StockImage, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import Link from 'next/link'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfContents, CrossPortfolioCard, StockImage, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import { BreedHealthCard } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 
 const SOURCES = [
+  { label: 'Cornell University College of Veterinary Medicine: Degenerative Myelopathy', url: 'https://www.vet.cornell.edu/departments-centers-and-institutes/riney-canine-health-center/canine-health-information/degenerative-myelopathy', publisher: 'Cornell University' },
   { label: 'Orthopedic Foundation for Animals (OFA): Hip Dysplasia — German Shepherd Statistics', url: 'https://www.ofa.org/diseases/hip-dysplasia/', publisher: 'OFA' },
-  { label: 'Merck Veterinary Manual: Degenerative Myelopathy in Dogs', url: 'https://www.merckvetmanual.com/nervous-system/spinal-cord-diseases/degenerative-myelopathy-in-dogs', publisher: 'Merck Vet Manual' },
-  { label: 'AVMA: Degenerative Myelopathy and Hip Dysplasia in Dogs', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/common-health-conditions-dogs', publisher: 'AVMA' },
   { label: 'Awano T et al. Genome-wide association analysis reveals a SOD1 mutation in canine degenerative myelopathy that resembles amyotrophic lateral sclerosis. Proc Natl Acad Sci. 2009;106(8):2794-2799.', publisher: 'PNAS' },
 ]
 
@@ -156,55 +157,15 @@ export default function GermanShepherdHealthPage() {
 
         <h2 id="kit">A Simple German Shepherd Mobility-Watch Kit</h2>
           <p>
-            Three everyday physical supplies match the
-            DM assisted-walking, worn-nail, and hip-support
-            copy above: a dog assisted-walking sling so
-            physical rehabilitation — range of motion
-            exercises and assisted walking — can continue
-            as progressive hindlimb weakness and wobbling
-            appear from age 7+ (dog wheelchairs and carts
-            still belong with a rehabilitation specialist
-            after the hindlimbs fail), dog hind-paw booties
-            so worn nails on the rear paws — the classic
-            early clue from dragging of the rear feet —
-            stay visible and protected between exams, and
-            a dog hip brace so hip-dysplasia stiffness
-            after rest, bunny-hopping, and hindlimb
-            lameness have everyday support while weight
-            control remains the most impactful single
-            intervention. These are household mobility-watch
-            tools, not treatments. They do not diagnose DM,
-            they do not replace SOD1 DNA testing, they do
-            not replace OFA hip films, they do not treat
-            EPI with powdered pancreatic enzymes, they do
-            not prevent GDV, and they are not cyclosporine,
-            tacrolimus, or a ranked clinical product list. Silicone dog grooming gloves, analog bathroom
-            scales, dog dental finger brushes, resting
-            respiratory rate notebooks, one-minute kitchen
-            timers, step-in padded dog harnesses, pet
-            medical records binders, AM/PM weekly pill
-            organizers, digital hanging luggage scales,
-            LED medical penlights, pet emergency contact
-            cards, folding pet stretchers, vaccination
-            record books, seat-belt tethers, foldable
-            waterproof puppy mats, mosquito dunks, a
-            monthly pill organizer, a soft-sided vet-visit
-            carrier, a gum-color assessment chart, recovery
-            food, a feeding syringe, digital pet scales,
-            dog wheelchairs, rear-support harnesses,
-            belly-support harnesses, knee braces,
-            waterproof dog booties, orthopedic dog beds,
-            dog ramps, and joint-support treats already
-            live on other pages. This page does not claim
-            hands-on testing. </p>
+            Keep these on hand: range of motion exercises and assisted walking — can continue as progressive hindlimb weakness and wobbling appear from age 7+ (dog wheelchairs and carts still belong with a rehabilitation specialist after the hindlimbs fail), dog hind-paw booties so worn nails on the rear paws — the classic early clue from dragging of the rear feet — stay visible and protected between exams, and a dog hip brace so hip-dysplasia stiffness after rest, bunny-hopping, and hindlimb lameness have everyday support while weight control remains the most impactful single intervention. These are household mobility-watch tools, not treatments. They do not diagnose DM, they do not replace SOD1 DNA testing, they do not replace OFA hip films, they do not treat EPI with powdered pancreatic enzymes, they do not prevent GDV, and they are not cyclosporine, tacrolimus, or a ranked clinical product list. </p>
 
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/dog+assisted+walking+sling?s=health-german-shepherd-health", "/go/amazon-brand/dog+hind+paw+booties?s=health-german-shepherd-health", "/go/amazon-brand/dog+hip+brace?s=health-german-shepherd-health"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (dog assisted-walking sling / dog hind-paw
               booties / dog hip brace). ShopCtas hides
-              empty Chewy; never href="#" or PLACEHOLDER.
-              Category searches only — unused vs #1048
+              empty Chewy; never href="#" or an empty link.
+              Amazon searches only — unused vs #1048
               silicone dog grooming glove / analog
               bathroom scale / dog dental finger brush,
               #1047 resting respiratory rate notebook /
@@ -236,8 +197,8 @@ export default function GermanShepherdHealthPage() {
               dog+ramp / joint+support+dog+treats, and
               soft+dog+carrier / soft+pet+carrier.
               Pancreatic enzymes, cyclosporine,
-              tacrolimus, and Rx ASINs are not
-              shoppable hops. */}
+              tacrolimus, and prescription brands are not
+              shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
@@ -259,6 +220,7 @@ export default function GermanShepherdHealthPage() {
           </div>
           </div>
 
+        <p>Joint supplements for this breed are compared in the <Link href="/reviews/best-joint-supplements">joint supplement review</Link>.</p>
         <h2 id="faq">FAQ</h2>
         <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
 

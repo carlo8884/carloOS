@@ -9,7 +9,6 @@ import {
   CalloutBox,
   ArticleByline,
   DropCap,
-  AffiliateDisclosure,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -38,7 +37,6 @@ const articleSchema = buildArticleSchema({
   publishedAt: '2026-06-01T00:00:00Z',
   modifiedAt: '2026-06-01T00:00:00Z',
 })
-
 
 const FAQS = [
   {
@@ -110,7 +108,7 @@ export default function SilverFerretsPage() {
 
           </>
         }
-      
+
         relatedLinks={[
           { title: 'Ferret Colors Hub', href: '/colors' },
           { title: 'Ferret Colors & Patterns', href: '/colors/ferret-colors-and-patterns' },
@@ -262,26 +260,7 @@ export default function SilverFerretsPage() {
 
           <p className="text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated ferret silver frost-coat chart /
-              ferret fridge silver-vs-dew card /
-              mustelid silver reference handbook).
-              Educational kitchen searches only; no Rx /
-              vaccine / aging hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs tools / reviews /
-              diet / care / behavior / health / ownership /
-              colors-hub / first-year-schedule /
-              colors-and-patterns / sable-ferrets /
-              albino-ferrets / dew-ferrets /
-              cinnamon-ferrets / champagne-ferrets /
-              chocolate-ferrets / black-ferrets kitchen
-              kits and child finger+toothbrush /
-              carnivore+care hops. Directory import left
-              untouched.
-              Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop supplies

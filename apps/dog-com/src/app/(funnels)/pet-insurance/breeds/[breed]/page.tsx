@@ -79,7 +79,7 @@ function CarrierCard({
   return (
     <div className={`rounded-xl p-6 border ${accent}`}>
       <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
-        {variant === 'recommended' ? '🏆 Recommended' : 'Alternate'} · Editorial score {c.editorialScore}/10
+        {variant === 'recommended' ? '🏆 Recommended' : 'Alternate'}
       </div>
       <h3 className="font-display text-xl font-bold mb-1">{c.name}</h3>
       <p className="text-sm text-brand-text-mid mb-3">{c.tagline}</p>
@@ -169,7 +169,7 @@ export default async function BreedInsurancePage({
   const faqs = [
     {
       question: `Which pet insurance is a good fit for ${b.breedName}s?`,
-      answer: `${recommended.name} is our editorial pick for ${b.breedName}s. ${b.recommendedReason} See sample premiums of $${b.sampleMonthlyPremium[0]}–$${b.sampleMonthlyPremium[1]}/mo and full coverage details below.`,
+      answer: `${recommended.name} — ${b.recommendedReason} See sample premiums of $${b.sampleMonthlyPremium[0]}–$${b.sampleMonthlyPremium[1]}/mo and full coverage details below.`,
     },
     {
       question: `What hereditary conditions affect ${b.breedName}s?`,
@@ -202,8 +202,7 @@ export default async function BreedInsurancePage({
         </h1>
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">
           {b.breedName}s face {b.keyConditions.length} key hereditary
-          conditions. Our editorial pick for the right carrier is{' '}
-          {recommended.name} — {b.recommendedReason}
+          conditions. {recommended.name} — {b.recommendedReason}
         </p>
       </div>
 
@@ -221,7 +220,7 @@ export default async function BreedInsurancePage({
 
       <div className="px-container sm:px-container-sm py-14 max-w-5xl mx-auto">
         {/* Quick facts */}
-        <div className="grid sm:grid-cols-4 gap-3 mb-10">
+        <div className="grid sm:grid-cols-3 gap-3 mb-10">
           <div className="bg-brand-surface border border-brand-border rounded-xl p-4">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-1">
               Size
@@ -242,14 +241,6 @@ export default async function BreedInsurancePage({
             </div>
             <div className="font-display text-lg font-bold">
               ${b.sampleMonthlyPremium[0]}–${b.sampleMonthlyPremium[1]}/mo
-            </div>
-          </div>
-          <div className="bg-brand-surface border border-brand-border rounded-xl p-4">
-            <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-1">
-              Editorial score
-            </div>
-            <div className="font-display text-lg font-bold">
-              {recommended.editorialScore}/10
             </div>
           </div>
         </div>

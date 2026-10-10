@@ -1,14 +1,15 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 
 const SOURCES = [
-  { label: 'Merck Veterinary Manual: Gastric Dilation and Volvulus in Small Animals', url: 'https://www.merckvetmanual.com/digestive-system/diseases-of-the-stomach-and-intestines-in-small-animals/gastric-dilation-and-volvulus-in-small-animals', publisher: 'Merck Vet Manual' },
+  { label: 'Merck Veterinary Manual: Gastric Dilation and Volvulus in Small Animals', url: 'https://www.merckvetmanual.com/digestive-system/surgical-problems-of-the-gastrointestinal-tract-in-small-animals/gastric-dilation-and-volvulus-in-small-animals', publisher: 'Merck Vet Manual' },
   { label: 'Glickman LT et al. Non-dietary risk factors for gastric dilatation-volvulus in large and giant breed dogs. J Am Vet Med Assoc. 2000;217(10):1492-1499.', publisher: 'JAVMA' },
-  { label: 'AVMA: Bloat (Gastric Dilatation and Volvulus) in Dogs', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/bloat-dogs', publisher: 'AVMA' },
   { label: 'Brockman DJ et al. Canine gastric dilatation-volvulus syndrome in a veterinary critical care unit: 295 cases (1986-1992). J Am Vet Med Assoc. 1995;207(4):460-464.', publisher: 'JAVMA' },
+  { label: 'Cornell University College of Veterinary Medicine, Riney Canine Health Center: Gastric dilatation-volvulus', url: 'https://www.vet.cornell.edu/departments-centers-and-institutes/riney-canine-health-center/canine-health-topics/gastric-dilatation-volvulus-gdv-or-bloat', publisher: 'Cornell University' },
 ]
 
 
@@ -22,7 +23,7 @@ const FAQS = [
   { question: 'How long does a dog with bloat have without treatment?', answer: 'GDV is fatal without emergency surgery, typically within 4–6 hours of onset. Time is measured in hours: the twisted stomach traps gas, cuts off blood supply to the stomach wall, obstructs venous return to the heart, and rapidly causes cardiovascular shock. If you suspect GDV, the page above says it directly — stop reading, call ahead, and go to the emergency vet now.' },
   { question: 'Which dog breeds are most at risk of GDV?', answer: 'Large, deep-chested breeds with a chest depth-to-width ratio greater than 1.4. Great Danes carry the highest risk — a lifetime GDV risk of approximately 37% (Glickman et al., JAVMA 2000). Standard Poodles, German Shepherds, Irish and Gordon Setters, Weimaraners, Saint Bernards, Irish Wolfhounds, Bloodhounds, Dobermans, Rottweilers, and other large breeds are also at significantly elevated risk.' },
   { question: 'Can bloat in dogs be prevented?', answer: 'Risk can be meaningfully reduced: feed twice daily rather than once (once-daily feeding is a documented risk factor), slow a fast eater with a wobble food dispenser rather than a gulp-from-the-bowl meal, keep the meal at floor level rather than in a raised bowl (the Glickman 2000 cohort associated elevated feeders with higher GDV risk), hold activity for a visible half-hour after a meal, and know your dog\'s breed risk. The most definitive option is prophylactic gastropexy — surgically attaching the stomach to the abdominal wall so it cannot twist. It can be done laparoscopically at the time of spay or neuter for roughly $300–500, versus $5,000–15,000+ for emergency GDV treatment. Ask your vet whether your dog\'s breed is a candidate.' },
-  { question: 'Can a dog survive GDV with surgery?', answer: 'Yes — with prompt treatment at a well-equipped emergency facility, survival rates are 80–95%. Survival drops significantly with delayed treatment or when the stomach wall tissue has been deprived of blood long enough to become necrotic. This is why acting on the first sign (unproductive retching) rather than waiting matters so much.' },
+  { question: 'Can a dog survive GDV with surgery?', answer: 'Merck Veterinary Manual reports an overall mortality rate of approximately 25–30% for gastric dilatation-volvulus, and a key-point mortality rate of 20–45% in treated animals. Clinical signs lasting more than 6 hours, and extensive gastric necrosis, are poor prognostic factors (https://www.merckvetmanual.com/digestive-system/surgical-problems-of-the-gastrointestinal-tract-in-small-animals/gastric-dilation-and-volvulus-in-small-animals). Cornell University College of Veterinary Medicine reports a survival rate greater than 80 percent with medical and surgical intervention (https://www.vet.cornell.edu/departments-centers-and-institutes/riney-canine-health-center/canine-health-topics/gastric-dilatation-volvulus-gdv-or-bloat). Prompt surgery at a well-equipped emergency facility is what gives a dog a chance.' },
 ]
 
 const combined = combineSchemas(schema, med, buildFAQSchema({ questions: FAQS.map(f => ({ question: f.question, answer: f.answer })) }))
@@ -57,7 +58,7 @@ export default function GdvPage() {
           <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
 
         </>}
-       priceAsOf="2026-09-05">
+       priceAsOf="2026-10-08">
         <div className="carloOS-article">
 
           <div style={{ background: 'rgba(200,74,42,0.06)', border: '1px solid rgba(200,74,42,0.25)', borderRadius: '10px', padding: '16px 20px', marginBottom: '24px' }}>
@@ -85,49 +86,29 @@ export default function GdvPage() {
 
           <h2>Treatment</h2>
           <p>Emergency stabilization: IV fluids, pain management, gastric decompression (passing a tube to release gas or trocharization through the body wall). Emergency surgery: the stomach is repositioned and sutured to the body wall to prevent re-rotation (gastropexy). Non-viable stomach tissue is resected if blood supply was compromised long enough to cause necrosis. The spleen may require removal if compromised.</p>
-          <p>Survival rates with prompt treatment at well-equipped emergency facilities: 80–95%. Survival rates with delayed treatment or compromised stomach tissue: significantly lower. Cost: $5,000–15,000+ depending on severity and institution.</p>
+          <p>Typical range, not a quote. The emergency surgery figures in this section and the next are typical US clinic ranges dated 2026-10-08.</p>
+          <p>Merck Veterinary Manual reports an overall mortality rate of approximately 25–30% for gastric dilatation-volvulus, and a key-point mortality rate of 20–45% in treated animals. Signs lasting more than 6 hours, and extensive gastric necrosis, are poor prognostic factors (<a className="break-all" href="https://www.merckvetmanual.com/digestive-system/surgical-problems-of-the-gastrointestinal-tract-in-small-animals/gastric-dilation-and-volvulus-in-small-animals">https://www.merckvetmanual.com/digestive-system/surgical-problems-of-the-gastrointestinal-tract-in-small-animals/gastric-dilation-and-volvulus-in-small-animals</a>). Cornell University College of Veterinary Medicine reports a survival rate greater than 80 percent with medical and surgical intervention (<a className="break-all" href="https://www.vet.cornell.edu/departments-centers-and-institutes/riney-canine-health-center/canine-health-topics/gastric-dilatation-volvulus-gdv-or-bloat">https://www.vet.cornell.edu/departments-centers-and-institutes/riney-canine-health-center/canine-health-topics/gastric-dilatation-volvulus-gdv-or-bloat</a>). Cost: $5,000–15,000+ depending on severity and institution.</p>
 
           <h2>Prevention — Prophylactic Gastropexy</h2>
+          <p>Typical range, not a quote. The add-on figures in the next paragraph are those same clinic ranges, dated 2026-10-08.</p>
           <p>Prophylactic gastropexy is a surgical procedure that permanently attaches the stomach to the abdominal wall, preventing the torsion (twisting) component of GDV. It does not prevent the stomach from dilating (the first stage) but eliminates the life-threatening second stage. It can be performed laparoscopically (minimally invasive) at the time of spay or neuter, adding $300–500 to the procedure cost.</p>
-          <p>For any large or giant breed dog — particularly Great Danes, Standard Poodles, Setters, Weimaraners, and German Shepherds — the conversation about prophylactic gastropexy should happen at the spay/neuter appointment. The cost-benefit calculation strongly favors the procedure for high-risk breeds: a $400 prophylactic surgery versus a $10,000+ emergency procedure if GDV occurs.</p>
+          <p>Typical range, not a quote. The emergency-procedure figures in the next paragraph are those same clinic ranges, dated 2026-10-08.</p>
+          <p>For any large or giant breed dog — particularly Great Danes, Standard Poodles, Setters, Weimaraners, and German Shepherds — the conversation about prophylactic gastropexy should happen at the spay/neuter appointment. The cost-benefit calculation strongly favors the procedure for high-risk breeds: a $300–$600 prophylactic surgery versus a $8,000–$12,000+ emergency procedure if GDV occurs.</p>
           <p>Ask your vet: <em>"Is my dog's breed a candidate for prophylactic gastropexy? Can it be performed with the spay/neuter?"</em></p>
           <p>Household feeding-management tools can sit alongside that gastropexy conversation after a veterinarian has talked through breed risk. A single stainless floor dog bowl keeps a deep-chested dog&rsquo;s meal at floor level instead of on a stand. A wobble dog food dispenser slows a fast eater without a maze bowl or a raised slow-feeder. A 30-minute sand hourglass timer keeps post-meal rest visible so activity stays off the half-hour after a meal. These are household tools, not treatments. They do not prevent simple gas bloating, they do not replace prophylactic gastropexy, they do not treat GDV, and they do not change the go-now emergency if the dog is retching without producing anything.</p>
 
           <h2 id="kit">A Simple Dog Bloat / GDV Home-Care Kit</h2>
           <p>
-            Three everyday physical supplies match the
-            elevated-feeder-debate, slow-feeding, and
-            post-meal-rest copy above: a single
-            stainless floor dog bowl so a deep-chested
-            dog eats at floor level instead of from a
-            raised feeder, a wobble dog food dispenser
-            so a fast eater cannot gulp a bowl in
-            seconds, and a 30-minute sand hourglass
-            timer so fetch and yard sprints stay off
-            the half-hour after a meal. These are
-            household home-care tools, not treatments. They do not diagnose GDV, they do not
-            replace prophylactic gastropexy, they do
-            not replace the emergency vet, and they
-            are not a ranked product list. Maze
-            slow-feed dog bowls, slow-feeder dog bowls,
-            raised dog bowls, adjustable-height dog
-            bowls, elevated slow-feeder bowls, timed
-            automatic dog feeders, puzzle feeders,
-            Northmate interactive feeders, lick mats,
-            snuffle mats, indoor dog house-lines, 6-ft
-            dog leashes, dog long-line leashes, first-aid
-            kits, and emergency-contact cards already
-            live on other pages. This page does not claim
-            hands-on testing. </p>
+            Keep these on hand: single stainless floor dog bowl, wobble dog food dispenser, and 30 minute sand hourglass timer. These are household home-care tools, not treatments. They do not diagnose GDV, they do not replace prophylactic gastropexy, they do not replace the emergency vet, and they are not a ranked product list. </p>
 
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/single+stainless+floor+dog+bowl?s=health-dog-bloat-gvd", "/go/amazon-brand/wobble+dog+food+dispenser?s=health-dog-bloat-gvd", "/go/amazon-brand/30+minute+sand+hourglass+timer?s=health-dog-bloat-gvd"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (single stainless floor dog bowl /
               wobble dog food dispenser / 30-minute
               sand hourglass timer). ShopCtas hides
               empty Chewy; never href="#" or
-              PLACEHOLDER. Category searches only —
+              an empty link. Amazon searches only —
               unused vs #1091
               letter+size+thermal+laminating+pouches /
               72+hour+digital+countdown+timer /
@@ -150,8 +131,8 @@ export default function GdvPage() {
               slow+feeder+dog+bowl /
               elevated+slow+feeder+bowl+dog /
               raised+dog+bowl / puzzle+feeder+dog /
-              interactive+dog+feeder hops. Rx ASINs
-              are not shoppable hops. */}
+              interactive+dog+feeder buttons. prescription brands
+              are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
@@ -174,6 +155,7 @@ export default function GdvPage() {
           </div>
 
           <h2 id="faq">FAQ</h2>
+          <p>The prevention question below repeats those same clinic ranges, dated 2026-10-04.</p>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
 
           <ArticleSourcesList sources={SOURCES} />

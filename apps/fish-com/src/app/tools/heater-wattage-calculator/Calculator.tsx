@@ -44,6 +44,9 @@ export default function HeaterWattageCalculator() {
 
   return (
     <div>
+      {!inputError && result && result.hint === 'heat' && result.watts > 0 ? (
+        <ResultPick linkFirst siteId="fish-com" pick={heaterFromStockWatts(result.heaterPick)} />
+      ) : null}
       <CalcCard>
         <UnitToggle
           value={tempUnit}
@@ -89,7 +92,7 @@ export default function HeaterWattageCalculator() {
             onChange={setTargetTemp}
             unit={`°${tempUnit}`}
             step={0.5}
-            hint={tempUnit === 'F' ? 'Tropical: 76–82°F · Discus: 84°F · Cold water: skip heater' : 'Tropical: 24–28°C · Discus: 29°C'}
+            hint={tempUnit === 'F' ? 'Mixed-tank planning figure: 76–82°F · Discus: 78–86°F · Cold water: skip heater' : 'Mixed-tank planning figure: 24–28°C · Discus: 26–30°C'}
             error={targetError}
           />
         </div>
@@ -140,8 +143,21 @@ export default function HeaterWattageCalculator() {
         <ResultMeaning>
           That wattage is the heater size for this temperature lift. It is not a guarantee the tank stays at the target if the room gets colder than the number you entered.
         </ResultMeaning>
-        <ResultPick siteId="fish-com" pick={heaterFromStockWatts(result.heaterPick)} />
         </>
+      )}
+      {!inputError && result && (
+        <ul className="mt-4 space-y-2 text-sm">
+          <li>
+            <a href="/reviews/winter-heater-sizing-guide" className="inline-block max-w-full whitespace-normal text-brand-primary underline underline-offset-2">
+              Aquarium heater size for a cold room
+            </a>
+          </li>
+          <li>
+            <a href="/reviews/best-display-tank-heater-guide" className="inline-block max-w-full whitespace-normal text-brand-primary underline underline-offset-2">
+              Best heater for a display tank
+            </a>
+          </li>
+        </ul>
       )}
     </div>
   )

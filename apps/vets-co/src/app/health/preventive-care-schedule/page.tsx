@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, ShopCtas, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Dog Preventive Care Schedule — Puppy, Adult | Vets.co', description: 'Complete dog preventive care schedule. Puppy vaccines and deworming, adult annual maintenance, and the enhanced senior screening protocol from age 7+.', path: '/health/preventive-care-schedule', type: 'article' })
@@ -34,6 +35,7 @@ export default function PreventiveCareSchedulePage() {
 </>}
       >
         <div className="carloOS-article">
+          <LastUpdated date="2026-10-09" />
 
           <h2>Puppy Schedule (Birth to 16 Weeks)</h2>
           <div className="overflow-x-auto mb-6">
@@ -54,7 +56,7 @@ export default function PreventiveCareSchedulePage() {
               </tbody>
             </table>
           </div>
-          <p>A wall-mounted magnetic monthly planner is how those 6–8, 10–12, and 14–16 week slots stay visible between visits — it is not a hardcover weekly appointment planner (that lives on pain-management-dogs), not a dry-erase monthly calendar (that lives on dog.com Addison&apos;s), and not an analog wall clock. It does not set a vaccine date. A waterproof rear seat hammock is how a not-yet-crate-trained puppy gets to those three booster visits without hopping a dog seat-belt tether or a soft-sided vet-visit carrier. Household ride and calendar gear does not replace the veterinarian who decides DA2PP, rabies, or when heartworm prevention starts.</p>
+          <p>A wall-mounted magnetic monthly planner is how those 6–8, 10–12, and 14–16 week slots stay visible between visits — it is not a hardcover weekly appointment planner, not a dry-erase monthly calendar, and not an analog wall clock. It does not set a vaccine date. A waterproof rear seat hammock is how a not-yet-crate-trained puppy gets to those three booster visits without hopping a dog seat-belt tether or a soft-sided vet-visit carrier. Household ride and calendar gear does not replace the veterinarian who decides DA2PP, rabies, or when heartworm prevention starts.</p>
 
           <h2>Adult Dog Schedule (1–7 Years)</h2>
           <div className="overflow-x-auto mb-6">
@@ -99,127 +101,19 @@ export default function PreventiveCareSchedulePage() {
           <h2>Year-Round Parasite Prevention</h2>
           <p><strong>Heartworm:</strong> Monthly oral preventives (Heartgard, Sentinel, Interceptor Plus) or 6-month injectable ProHeart 6/12. Annual heartworm antigen test required for all dogs on prevention — to detect infection before starting prevention and to verify ongoing efficacy. A dog that misses doses or has a lapse in coverage should be tested before restarting prevention.</p>
 
-          <h2 id="kit">Visit-cadence kit</h2>
+          <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Everyday physical supplies that match the
-            puppy-series, adult-annual, and senior
-            every-6-months copy on this page — a
-            wall-mounted magnetic monthly planner so
-            the next wellness slot stays on the fridge,
-            a waterproof rear seat hammock so the
-            clinic ride does not soak the back seat,
-            and a folding four-wheel dog stroller so a
-            senior with a six-month mobility
-            assessment can still make the lobby.
-            These are household cadence and clinic-trip
-            tools, not treatments. They do not replace
-            a vaccine, a heartworm test, a fecal exam,
-            or a veterinarian-chosen preventive, and
-            they are not a ranked product list.
-            Hardcover weekly appointment planners
-            already live on pain-management-dogs.
-            Dry-erase monthly calendars already live
-            on dog.com Addison&apos;s. Dog seat-belt
-            tethers already live on dog.com
-            vaccinations. Soft-sided vet-visit
-            carriers already live on dog.com
-            heartworm-prevention. Heartgard,
-            Sentinel, Interceptor, ProHeart, Bravecto,
-            NexGard, Simparica, and other Rx ASINs
-            are not shoppable hops. This page does
-            not claim hands-on testing.
+            Keep these on hand: a wall-mounted magnetic monthly planner so the next wellness slot stays on the fridge, a waterproof rear seat hammock so the clinic ride does not soak the back seat, and a folding four-wheel dog stroller so a senior with a six-month mobility assessment can still make the lobby. These are household cadence and clinic-trip tools, not treatments. They do not replace a vaccine, a heartworm test, a fecal exam, or a veterinarian-chosen preventive, and they are not a ranked product list. Heartgard, Sentinel, Interceptor, ProHeart, Bravecto, NexGard, Simparica, and other prescription brands are not product links.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/wall+mounted+magnetic+monthly+planner?s=health-preventive-care-schedule", "/go/amazon-brand/waterproof+rear+seat+hammock?s=health-preventive-care-schedule", "/go/amazon-brand/folding+four+wheel+dog+stroller?s=health-preventive-care-schedule"]} />
 
-          {/* Money path — live amazon-brand search hops
-              (wall-mounted magnetic monthly planner /
-              waterproof rear seat hammock /
-              folding four-wheel dog stroller).
-              These are educational cadence /
-              clinic-trip tools, not a ranked product
-              list, not a substitute for veterinary
-              care, no Rx / Heartgard / Bravecto /
-              NexGard / Simparica / ProHeart ASIN hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
-              unused vs #1083
-              14+inch+manual+reel+lawn+mower /
-              zippered+waterproof+dog+duvet+cover /
-              handheld+led+magnifying+glass, #1082
-              large+platform+digital+bathroom+scale /
-              quilted+dog+winter+coat /
-              weekly+pill+organizer+with+alarms, #1081
-              sterile+saline+eye+wash /
-              padded+elizabethan+collar+dog /
-              dog+blind+halo+harness, #1080
-              letter+size+plastic+file+box /
-              plug+in+heated+pet+mat /
-              battery+motion+sensor+night+light, #1079
-              elevated+mesh+dog+cot /
-              clear+adhesive+non+slip+stair+treads /
-              hardcover+weekly+appointment+planner, #1078
-              2+liter+plastic+graduated+pitcher /
-              extra+large+bolster+dog+lounge /
-              a5+hardcover+dot+grid+notebook, #1077
-              narrow+neck+glass+water+carafe /
-              2+quart+stainless+saucepan+with+lid /
-              pocket+spiral+memo+pad, #1076
-              pet+toothbrush+and+enzymatic+toothpaste+kit /
-              vohc+dental+chews+for+dogs /
-              vohc+accepted+dental+water+additive, #1075
-              egg+crate+foam+dog+kennel+pad /
-              carpeted+wooden+pet+steps /
-              wide+platform+veterinary+floor+scale, #1074
-              wire+basket+dog+muzzle /
-              quilted+disposable+underpads /
-              handheld+aa+led+flashlight, #1073
-              double+door+wire+dog+crate /
-              pet+safe+kennel+disinfectant+spray /
-              analog+wall+clock+with+second+hand, #1072
-              tick+removal+hook /
-              fine+tooth+flea+comb /
-              laminated+tick+identification+card, #1071
-              letter+size+expanding+file+organizer /
-              sterile+urine+specimen+cup /
-              12+hour+mechanical+kitchen+timer,
-              dog.com Addison's
-              dry+erase+monthly+calendar,
-              dog.com vaccinations
-              dog+seat+belt+tether,
-              dog.com heartworm-prevention
-              soft+sided+vet+visit+carrier,
-              dog.com wellness-exam
-              fecal+sample+collection+kit.
-              Heartgard, Bravecto, NexGard, Simparica,
-              ProHeart, and Rx ASINs are not
-              shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the visit-cadence kit
+              Shop these supplies
             </div>
             <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page puppy-series, adult-annual, and
-              senior every-6-months copy — a
-              wall-mounted magnetic monthly planner, a
-              waterproof rear seat hammock, and a
-              folding four-wheel dog stroller.
-              Everyday cadence and clinic-trip
-              supplies only. They are not a ranked
-              product list, they are not a substitute
-              for a veterinarian-chosen vaccine or
-              preventive, they are not a #1083 reel-
-              mower / duvet-cover / magnifier hop,
-              they are not a #1079 hardcover-planner
-              hop, they are not a dry-erase monthly
-              calendar hop, they are not a seat-belt
-              tether / soft-sided-carrier hop, they
-              are not a Heartgard / Bravecto / NexGard
-              hop, and they do not replace a
-              veterinarian. Vets.co earns a commission
-              on qualifying purchases at no extra cost
-              to you.
+              Keep these on hand: a wall-mounted magnetic monthly planner, a waterproof rear seat hammock, and a folding four-wheel dog stroller. Everyday cadence and clinic-trip supplies only.
             </p>
             <div className="flex flex-col gap-3">
               <ShopCtas

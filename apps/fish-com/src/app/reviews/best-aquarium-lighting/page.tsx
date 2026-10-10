@@ -1,11 +1,12 @@
 import type { Metadata } from 'next'
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import Link from 'next/link'
 import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildItemListSchema, buildProductSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Best Aquarium Lights 2026 — Planted Tank, Reef & FOWLR | Fish.com', description: 'Aquarium lights compared on published PAR output, spectrum quality, and reliability. Fluval 3.0, Hygger, Finnex, and Kessil ranked for planted freshwater, reef.', path: '/reviews/best-aquarium-lighting', type: 'article' })
 const articleSchema = buildArticleSchema({ siteId: 'fish-com', title: 'Best Aquarium Lights 2026', description: 'Aquarium lights compared on published PAR output, spectrum, and reliability — planted, reef, and fish-only tanks.', url: 'https://fish.com/reviews/best-aquarium-lighting', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' })
-const hyggerSchema = buildProductSchema({ name: 'Hygger 957 LED Aquarium Light', description: '7-channel programmable LED with strong PAR efficiency for planted tanks — Fish.com Best Planted (Budget) pick.', url: 'https://fish.com/reviews/best-aquarium-lighting#hygger', imageUrl: '', ratingValue: 9.2, reviewCount: 1 })
+const hyggerSchema = buildProductSchema({ name: 'Hygger 957 LED Aquarium Light', description: '7-channel programmable LED with strong PAR efficiency for planted tanks — Fish.com Best Planted (Budget) pick.', url: 'https://fish.com/go/amazon-brand/hygger+957?s=reviews-best-aquarium-lighting', imageUrl: '' })
 const schema = combineSchemas(articleSchema, hyggerSchema)
 
 const PICKS = [
@@ -19,7 +20,7 @@ const PICKS = [
 // PICKS. No aggregateRating, no fabricated specs (QC §1.4).
 const itemList = buildItemListSchema({
   name: 'Best Aquarium Lights 2026',
-  items: PICKS.map((p) => ({ name: p.name, url: `https://fish.com/reviews/best-aquarium-lighting${p.href}` })),
+  items: PICKS.map((p) => ({ name: p.name, url: ({ "Hygger 957": "https://fish.com/go/amazon-brand/hygger+957?s=reviews-best-aquarium-lighting", "Fluval Plant 3.0": "https://fish.com/go/amazon/B083QP62MP?s=reviews-best-aquarium-lighting", "Kessil A360X": "https://fish.com/go/amazon-brand/kessil+a360x?s=reviews-best-aquarium-lighting", "Nicrew Classic LED+": "https://fish.com/go/amazon/B07F6XD2FH?s=reviews-best-aquarium-lighting" }[p.name] ?? `https://fish.com/reviews/best-aquarium-lighting${p.href}`) })),
 })
 
 export default function BestAquariumLightingPage() {
@@ -29,8 +30,12 @@ export default function BestAquariumLightingPage() {
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-4">Buyer's Guide</span>
         <h1 className="font-display font-bold text-white tracking-tight leading-tight mb-4 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Aquarium Lights 2026</h1>
-        <PriceAsOf date="2026-10-04" tone="dark" />
-        <PrimaryHop href='/go/amazon-brand/hygger+957?s=reviews-best-aquarium-lighting' label='Check price of the Hygger 957 on Amazon' />
+        <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">The Hygger 957 is the top budget planted light because seven channels are adjustable at a lower price than the premium lights.</p>
+        <PriceAsOf date="2026-10-08" tone="dark" />
+        <div data-fold="offer">
+          <PrimaryHop href='/go/amazon-brand/hygger+957?s=reviews-best-aquarium-lighting' label='Check price of the Hygger 957 on Amazon' />
+          <HopDisclosure tone="on-dark" siteId="fish-com" href="/go/amazon-brand/hygger+957?s=reviews-best-aquarium-lighting" />
+        </div>
         <p className="text-lg font-normal text-white/55 max-w-2xl leading-relaxed">Lighting requirements vary dramatically: a planted tank needs high PAR at the right spectrum; a reef needs intense, programmable full-spectrum light; a fish-only tank needs the bare minimum. Rankings draw on published PAR meter readings.</p>
       </div>
       <QuickPicks items={PICKS} />
@@ -51,7 +56,7 @@ export default function BestAquariumLightingPage() {
               siteId="fish-com"
               nextHref="/tools/co2-calculator"
               nextLabel="Size CO2 if this light is in the high-PAR band"
-              nextBlurb="The callout is the PAR rule — 20–50 for low-tech planted, 50–100+ for high-tech with CO2, 150–350+ for SPS. The CO2 calculator is the drop-checker target for the high-PAR planted case. The hop below is the same Hygger 957 search already on this page."
+              nextBlurb="The callout is the PAR rule — 20–50 for low-tech planted, 50–100+ for high-tech with CO2, 150–350+ for SPS. The CO2 calculator is the drop-checker target for the high-PAR planted case. The button below opens the same Hygger 957 search on Amazon."
               resourceHref="/go/amazon-brand/hygger+957?s=reviews-best-aquarium-lighting"
               resourceLabel="Browse Hygger 957 aquarium lights on Amazon →"
             />
@@ -68,19 +73,19 @@ export default function BestAquariumLightingPage() {
               specs={[{ label: 'PAR at 20"', value: '60–80+ (high setting)', highlight: 'good' }, { label: 'Control', value: 'Bluetooth app', highlight: 'good' }, { label: 'Spectrum', value: 'Best measured quality', highlight: 'good' }, { label: 'Best For', value: 'Medium-high tech planted' }, { label: 'Build Quality', value: 'Premium aluminum' }]}
               pros={['Among the highest published PAR output for planted tanks in this comparison', 'App control with natural lighting programs', 'Strong published spectrum quality', 'Premium aluminum construction', 'Storm/cloud effects']}
               cons={['$150–200 price point', 'Bluetooth only — short range', 'Overkill for low-tech setups']}
-              price="$150–200" ctaText="Shop Fluval Plant 3.0 →" ctaHref="/go/amazon-brand/fluval+plant+3.0?s=reviews-best-aquarium-lighting" ctaAffiliateProgram="amazon" ctaAffiliateProduct="fluval-plant-3" />
+              price="$150–200" ctaText="Shop Fluval Plant 3.0 on Amazon →" ctaHref="/go/amazon/B083QP62MP?s=reviews-best-aquarium-lighting" ctaAffiliateProgram="amazon" ctaAffiliateProduct="fluval-plant-3" /> {/* last updated 2026-10-09 */}
             <ReviewCard id="kessil" badge="Best Reef" name="Kessil A360X Tuna Blue" subtitle="Dense Matrix LED · Shimmer effect · Established reef-growth track record · Wi-Fi" score={9.3}
               description={<p>Kessil's Dense Matrix LED technology produces the characteristic shimmering effect that mimics natural ocean light — important for reef aesthetics and observed to improve coral polyp extension. The A360X covers a 24" square footprint adequately at SPS-capable PAR levels (150–300+ PAR at 12" depth at moderate settings). Wi-Fi control with the Kessil app. The proprietary Dense Matrix design concentrates LED chips rather than spreading them, producing better color mixing and the shimmer effect. Premium price is justified for serious reef tanks; for fish-only-with-live-rock setups, the Nicrew is adequate at a fraction of the cost.</p>}
               specs={[{ label: 'PAR at 12"', value: '150–300+ (SPS capable)', highlight: 'good' }, { label: 'Technology', value: 'Dense Matrix LED', highlight: 'good' }, { label: 'Shimmer effect', value: 'Yes', highlight: 'good' }, { label: 'Control', value: 'Wi-Fi app' }, { label: 'Best For', value: 'Mixed reef, SPS coral' }]}
               pros={['Among the strongest shimmer effects in this comparison', 'SPS-capable PAR output', 'Excellent color rendering', 'Wi-Fi programmable', 'Established reef-growth track record among reefkeepers']}
               cons={['$400–500 price point', 'Single-point light (may need 2 for wider tanks)', 'Overkill for fish-only or LPS-only']}
-              price="$400–500" ctaText="Shop Kessil A360X →" ctaHref="/go/amazon-brand/kessil+a360x?s=reviews-best-aquarium-lighting" ctaAffiliateProgram="amazon" ctaAffiliateProduct="kessil-a360x" />
+              price="$400–500" ctaText="Shop Kessil A360X on Amazon →" ctaHref="/go/amazon-brand/kessil+a360x?s=reviews-best-aquarium-lighting" ctaAffiliateProgram="amazon" ctaAffiliateProduct="kessil-a360x" />
             <ReviewCard id="nicrew" badge="Best Fish-Only" name="Nicrew Classic LED+" subtitle="Fish-only tanks · Budget · Reliable · No plant growth needed" score={8.5}
               description={<p>For fish-only (FO) or fish-only-with-live-rock (FOWLR) setups where light is purely aesthetic — not for plant or coral growth — the Nicrew Classic LED+ delivers clean white and blue spectrum for fish display at the lowest price in the category. It makes fish colors pop (the blue channel specifically enhances fish coloration) without the cost of a planted or reef fixture. PAR output is low (~15–25 at 12") — adequate for display, not for photosynthetic organisms. Build quality is acceptable; unit lifespan typically 2–3 years, which is acceptable at its price point.</p>}
               specs={[{ label: 'PAR output', value: 'Low (display only)' }, { label: 'Price', value: 'Budget', highlight: 'good' }, { label: 'Best For', value: 'Fish-only, FOWLR' }, { label: 'Not For', value: 'Plants or corals', highlight: 'warn' }]}
               pros={['Lowest price of any recommended light', 'Good fish color rendering', 'Simple timer built-in', 'Adequate for fish-only display']}
               cons={['Not for planted or reef tanks', '2–3 year lifespan typical', 'No app control or programmability']}
-              price="$20–35" ctaText="Shop Nicrew LED →" ctaHref="/go/amazon-brand/nicrew+classic+led?s=reviews-best-aquarium-lighting" ctaAffiliateProgram="amazon" ctaAffiliateProduct="nicrew-led" />
+              price="$20–35" ctaText="Shop Nicrew LED on Amazon →" ctaHref="/go/amazon/B07F6XD2FH?s=reviews-best-aquarium-lighting" ctaAffiliateProgram="amazon" ctaAffiliateProduct="nicrew-led" /> {/* last updated 2026-10-09 */}
             <div className="mt-10">
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-3">Who should buy which light</h2>
               <p className="text-sm text-brand-text-mid leading-relaxed mb-4">
@@ -105,7 +110,7 @@ export default function BestAquariumLightingPage() {
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">Medium-to-high tech plants, including a CO2 tank</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#fluval" className="text-brand-primary">Fluval Plant 3.0</a><TableShopLink href={"/go/amazon-brand/fluval+plant+3.0?s=reviews-best-aquarium-lighting"} product={"Fluval Plant 3.0"} /></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#fluval" className="text-brand-primary">Fluval Plant 3.0</a><TableShopLink href={"/go/amazon/B083QP62MP?s=reviews-best-aquarium-lighting"} product={"Fluval Plant 3.0"} /></td>
                       <td className="p-3 text-brand-text-mid">Best Planted (Premium). Bluetooth app. PAR 60–80+ at 20&quot; on the high setting. $150–200</td>
                       <td className="p-3 text-brand-text-mid">A low-tech tank. The card calls that overkill. Bluetooth range is short</td>
                     </tr>
@@ -117,14 +122,14 @@ export default function BestAquariumLightingPage() {
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">Fish-only or fish-only-with-live-rock display light</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#nicrew" className="text-brand-primary">Nicrew Classic LED+</a><TableShopLink href={"/go/amazon-brand/nicrew+classic+led?s=reviews-best-aquarium-lighting"} product={"Nicrew Classic LED+"} /></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#nicrew" className="text-brand-primary">Nicrew Classic LED+</a><TableShopLink href={"/go/amazon/B07F6XD2FH?s=reviews-best-aquarium-lighting"} product={"Nicrew Classic LED+"} /></td>
                       <td className="p-3 text-brand-text-mid">Best Fish-Only. Display PAR about 15–25 at 12&quot;. $20–35</td>
                       <td className="p-3 text-brand-text-mid">Plants or corals. The card says it is not for photosynthetic growth, and typical life is 2–3 years</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-05" />
+              <ComparisonFoot updated="2026-10-09" />
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Which light fits which tank</h2>
               <FAQAccordion items={[
                 {
@@ -152,7 +157,7 @@ export default function BestAquariumLightingPage() {
                 </div>
               ))}
             </div>
-            <RelatedLinks title="Related Guides" links={[{ label: 'Tank Setup Guide', href: '/setup' }, { label: 'Best Aquarium Filters', href: '/reviews/best-aquarium-filters' }, { label: 'Water Chemistry', href: '/water-parameters' }]} />
+            <RelatedLinks title="Related Guides" links={[{ label: 'November and December gifts', href: '/reviews/november-december-gift-guide' }, { label: 'Tank Setup Guide', href: '/setup' }, { label: 'Best Aquarium Filters', href: '/reviews/best-aquarium-filters' }, { label: 'Water Chemistry', href: '/water-parameters' }]} />
 
           </aside>
         </div>

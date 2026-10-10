@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, StockImage, RelatedLinks, TableOfContents, FAQAccordion, DropCap, CrossPortfolioCard, ArticleSourcesList, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, StockImage, RelatedLinks, TableOfContents, FAQAccordion, DropCap, CrossPortfolioCard, ArticleSourcesList, ShopCtas, PrimaryHop, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 
@@ -12,7 +13,7 @@ const SOURCES = [
   },
   {
     label: "Merck Veterinary Manual — Endocrine Diseases of Ferrets: insulinoma overview, clinical signs, diagnosis, and treatment",
-    url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/endocrine-diseases-of-ferrets",
+    url: "https://www.merckvetmanual.com/all-other-pets/ferrets/hormonal-disorders-of-ferrets",
     publisher: "Merck Veterinary Manual",
   },
   {
@@ -84,7 +85,7 @@ const FAQS = [
   {
     question: 'Can diet prevent insulinoma in ferrets?',
     answer:
-      'There is no proven prevention. The leading working hypothesis in the exotic-pet literature is that chronic dietary carbohydrate drives sustained insulin demand and eventual beta-cell change — the evidence is associational rather than experimentally proven. The consistent recommendation from the American Ferret Association and exotic-pet veterinary references is to minimize dietary carbohydrate from kithood onward: a high-protein, low-carbohydrate diet and no sugary treats.',
+      'There is no proven prevention. The leading working hypothesis in the exotic-pet literature is that chronic dietary carbohydrate drives sustained insulin demand and eventual beta-cell change — the evidence is associational rather than experimentally proven. Minimizing dietary carbohydrate from kithood — a high-protein, low-carbohydrate diet and no sugary treats — is a planning choice on this page. It is not a fetched American Ferret Association cutoff. The Merck Veterinary Manual states that ferrets require protein of 35%–40%, and that carbohydrate (under 25%) and fiber (under 2.5%) proportions of the diet should be relatively low.',
   },
   {
     question: 'What is the treatment ladder for ferret insulinoma?',
@@ -104,7 +105,7 @@ const FAQS = [
   {
     question: 'Why does my ferret crash again after I give it sugar for low blood sugar?',
     answer:
-      'Pure sugar produces a rebound. The ferret’s remaining functional beta cells respond to the glucose load with another insulin spike, and the crisis can recur within roughly 20-40 minutes. That is why oral sugar (Karo syrup, honey) is only the rescue step for a ferret that cannot safely swallow food — once the ferret is alert, it should be offered a protein-and-fat meal, which is its primary metabolic substrate and stabilizes glucose for longer. Sugar buys minutes; protein buys the window to get to a veterinarian. Crisis-level hypoglycemia still warrants inpatient evaluation even after an apparent recovery at home.',
+      'Pure sugar can produce a rebound. The ferret’s remaining functional beta cells can respond to the glucose load with another insulin spike. This page does not cite a minute range for that rebound. Oral sugar (Karo syrup, honey) is only the rescue step for a ferret that cannot safely swallow food — once the ferret is alert, offer a protein-and-fat meal. Sugar buys a short window; protein is the next step while you get to a veterinarian. Crisis-level hypoglycemia still warrants inpatient evaluation even after an apparent recovery at home.',
   },
   {
     question: 'Is a ferret hypoglycemic episode an emergency?',
@@ -123,6 +124,10 @@ export default function FerretInsulinomaPage() {
       <ArticleLayout
         siteId="ferret-com"
         contentType="health"
+        heroHop={<>
+          <PrimaryHop href="/go/amazon-brand/carnivore+care+critical+care+formula?s=health-insulinoma" label="Search Amazon for a carnivore-care critical-care formula" />
+          <HopDisclosure tone="on-dark" siteId="ferret-com" href="/go/amazon-brand/carnivore+care+critical+care+formula?s=health-insulinoma" />
+        </>}
         hero={{
           title: 'Insulinoma in Ferrets',
           subtitle:
@@ -141,7 +146,7 @@ export default function FerretInsulinomaPage() {
           <>
             <TableOfContents
               items={[
-                { label: 'TL;DR', href: '#tldr' },
+                { label: '', href: '#tldr' },
                 { label: 'What It Is', href: '#pathophys' },
                 { label: 'Who Gets It', href: '#epidemiology' },
                 { label: 'Clinical Signs', href: '#signs' },
@@ -161,6 +166,7 @@ export default function FerretInsulinomaPage() {
             <RelatedLinks
               title="Related Guides"
               links={[
+                { label: 'Ferret Age Calculator', href: '/tools/ferret-age-calculator' },
                 { label: 'Adrenal Disease', href: '/health/adrenal-disease' },
                 { label: 'Emergency Warning Signs', href: '/health/emergency-warning-signs' },
                 { label: 'Protein & Fat Requirements', href: '/diet/protein-and-fat-requirements' },
@@ -174,8 +180,9 @@ export default function FerretInsulinomaPage() {
               <h3 className="font-display text-base font-bold text-brand-white mb-2">
                 Cover this condition before it&apos;s diagnosed
               </h3>
+              <p>Costs vary by clinic and region. Ask an exotic veterinarian for an estimate.</p>
               <p className="text-xs text-white/60 mb-3 leading-relaxed">
-                Insulinoma surgery + lifelong management runs $2,000–$5,000.
+                Insulinoma surgery plus lifelong management is often a large bill. Ask an exotic veterinarian for an estimate.
                 Exotic-pet insurance covers it — but ONLY if enrolled before
                 symptoms appear.
               </p>
@@ -199,6 +206,7 @@ export default function FerretInsulinomaPage() {
           { title: 'Emergency Warning Signs', href: '/health/emergency-warning-signs' },
           { title: 'Ferret Diet Hub', href: '/diet' },
           { title: 'Weight Management', href: '/diet/weight-management' },
+          { title: 'Ferret Age Calculator', href: '/tools/ferret-age-calculator' },
         ]}
  priceAsOf="2026-05-30">
         <div className="carloOS-article">
@@ -213,6 +221,7 @@ export default function FerretInsulinomaPage() {
             updatedAt="2026-09-05"
             reviewedBy="Editorial team"
           />
+          <LastUpdated date="2026-10-09" />
 
           <DropCap>
             Insulinoma is the disease most ferret owners eventually learn the
@@ -223,8 +232,7 @@ export default function FerretInsulinomaPage() {
             well-established. Recognizing it early is what changes the outlook.
           </DropCap>
 
-          <h2 id="tldr">TL;DR</h2>
-          <p>
+                    <p>
             Insulinoma is a functional tumor of the pancreatic beta cells that
             secretes insulin without regard to the normal feedback loop,
             producing chronic, intermittent hypoglycemia. It is the most
@@ -256,7 +264,14 @@ export default function FerretInsulinomaPage() {
             Insulinoma is most commonly diagnosed in ferrets aged roughly 3 to 7 years, although cases are reported in younger and older animals. There is no consistent sex predisposition in the published literature. In North American pet ferret populations — most of which originate from a small number of large commercial breeders — case series suggest insulinoma is encountered in a substantial fraction of middle-aged animals seen by exotic-mammal specialists.
           </p>
           <p>
-            The leading working hypothesis for the unusually high prevalence in domestic ferrets is chronic dietary carbohydrate exposure driving sustained insulin demand and eventual beta-cell hyperplasia. The American Ferret Association (AFA) and exotic-pet veterinary references both flag minimizing dietary carbohydrate as the primary lifestyle-level risk-reduction strategy. The evidence is associational rather than experimentally proven.
+            The{' '}
+            <a href="/tools/ferret-age-calculator" className="text-brand-primary underline underline-offset-2">
+              Ferret Age Calculator
+            </a>{' '}
+            places a calendar age on the same life-stage bands, so a 3-to-7-year window is a stage label rather than a surprise.
+          </p>
+          <p>
+            The leading working hypothesis for the unusually high prevalence in domestic ferrets is chronic dietary carbohydrate exposure driving sustained insulin demand and eventual beta-cell hyperplasia. Minimizing dietary carbohydrate is a planning choice on this page, not a fetched American Ferret Association cutoff. The Merck Veterinary Manual states that ferrets require protein of 35%–40%, and that carbohydrate (under 25%) and fiber (under 2.5%) proportions of the diet should be relatively low (<a href="https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/management-of-ferrets">Merck Veterinary Manual</a>). The evidence is associational rather than experimentally proven.
           </p>
 
           <h2 id="signs">Clinical Signs — Easy to Miss</h2>
@@ -444,20 +459,20 @@ export default function FerretInsulinomaPage() {
             The products below are supportive-nutrition tools used alongside veterinary treatment — they do NOT treat or cure insulinoma. Insulinoma requires diagnosis and a management plan from a veterinarian experienced with ferrets.
           </p>
           <p>
-            A high-calorie, protein- and fat-based critical-care supplement (such as Oxbow Carnivore Care) is commonly used in ferret convalescent feeding — as a between-meal supplement and as the food offered during or after a hypoglycemic episode, because it avoids the rebound insulin spike that pure sugar causes. It is syringe- or spoon-fed and does not treat insulinoma; use it only as a nutritional support tool under your veterinarian&apos;s guidance. A carnivore-care critical-care formula is that recovery powder in a searchable category — it is not a kibble hop and not a brand ASIN. Chicken meat baby food is the high-value protein meal the crisis protocol names once the ferret can swallow — it is not a sugary treat and not a Karo bottle. </p>
+            A high-calorie, protein- and fat-based critical-care supplement (such as Oxbow Carnivore Care) is commonly used in ferret convalescent feeding — as a between-meal supplement and as the food offered during or after a hypoglycemic episode, because it avoids the rebound insulin spike that pure sugar causes. It is syringe- or spoon-fed and does not treat insulinoma; use it only as a nutritional support tool under your veterinarian&apos;s guidance. A carnivore-care critical-care formula is that recovery powder in a searchable category. Chicken meat baby food is the high-value protein meal the crisis protocol names once the ferret can swallow — it is not a sugary treat and not a Karo bottle. </p>
 
           <h2 id="kit">Insulinoma support kit</h2>
           <p>
-            Everyday physical supplies that match the supportive-nutrition and crisis-meal copy on this page — a carnivore-care critical-care formula so a ferret can take frequent protein-and-fat meals by syringe or spoon, chicken meat baby food as the swallow-safe protein meal after a crash, and a silicone-tip oral dosing syringe so that formula is given by mouth. These are household feeding tools, not treatments. They do not diagnose or treat insulinoma, they do not replace prednisolone or diazoxide prescribed by a veterinarian, they do not set a glucose number, and they are not a ranked product list. This page does not claim hands-on testing. </p>
+            Keep these on hand: a carnivore-care critical-care formula so a ferret can take frequent protein-and-fat meals by syringe or spoon, chicken meat baby food as the swallow-safe protein meal after a crash, and a silicone-tip oral dosing syringe so that formula is given by mouth. These are household feeding tools, not treatments. They do not diagnose or treat insulinoma, they do not replace prednisolone or diazoxide prescribed by a veterinarian, they do not set a glucose number, and they are not a ranked product list. </p>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/carnivore+care+critical+care+formula?s=health-insulinoma", "/go/amazon-brand/chicken+meat+baby+food?s=health-insulinoma", "/go/amazon-brand/silicone+tip+oral+dosing+syringe?s=health-insulinoma"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (carnivore-care critical-care formula /
               chicken meat baby food /
               silicone-tip oral dosing syringe).
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or an empty link. Amazon searches only —
               unused vs #1065 hay-box / stall-guard /
               hemp-bedding, #1064 thrush-antiseptic /
               folding-hoof-pick / stall-sweet-lime, #1063
@@ -476,7 +491,7 @@ export default function FerretInsulinomaPage() {
               ferret+electrolytes+recovery+food,
               high+protein+ferret+food+kibble.
               Insulin syringes, compounded insulin, and
-              Rx ASINs are not shoppable hops. */}
+              prescription brands are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, FormEvent } from 'react'
-import { dogInquireFormVisible, vetsInquireFormVisible } from '@carloOS/config/capture-flags'
+import { inquireFormDefaultOpen } from '@carloOS/config/capture-flags'
 import { isJunkEmail, isJunkLabel, isJunkMessage, isJunkOffer, isJunkPhone } from '@carloOS/config/form-guard'
 import { INQUIRE_FALLBACK_HREF, inquireFailureLead } from '../inquire-copy'
 
@@ -32,7 +32,7 @@ export function InquireForm({
   const [showFallback, setShowFallback] = useState(false)
   const isPro = intent === 'pro-application'
   const onCard = variant === 'card'
-  const formOpen = open ?? defaultInquireOpen(siteName)
+  const formOpen = open ?? inquireFormDefaultOpen(siteName)
 
   if (!formOpen) {
     const guide = closedGuide(siteName, isPro)
@@ -86,10 +86,11 @@ export function InquireForm({
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ ...data, siteName, intent }),
       })
-      if (!res.ok) {
+      const body = (await res.json().catch(() => ({}))) as { ok?: boolean; error?: string }
+      if (!res.ok || body.ok !== true) {
         setStatus('error')
         setShowFallback(true)
-        setErrorMsg(inquireFailureLead(res.status))
+        setErrorMsg(inquireFailureLead(body.error === 'unconfigured' ? 503 : res.status))
         return
       }
       setStatus('sent')
@@ -188,17 +189,26 @@ export function InquireForm({
   )
 }
 
-function defaultInquireOpen(siteName: string): boolean {
-  if (siteName === 'Dog.com') return dogInquireFormVisible()
-  if (siteName === 'Vets.co') return vetsInquireFormVisible()
-  return true
-}
-
 function closedGuide(siteName: string, isPro: boolean): { href: string; label: string } {
   if (siteName === 'Vets.co') {
     return isPro
       ? { href: '/find-a-vet', label: 'Find a vet' }
       : { href: '/reviews/best-pet-insurance', label: 'Pet insurance comparison' }
+  }
+  if (siteName === 'Ferret.com') {
+    return isPro
+      ? { href: '/ownership/ferret-supplies-checklist', label: 'Ferret supplies checklist' }
+      : { href: '/ownership/first-week-checklist', label: 'First-week checklist' }
+  }
+  if (siteName === 'Fish.com') {
+    return isPro
+      ? { href: '/tools/stocking-calculator', label: 'Stocking calculator' }
+      : { href: '/reviews', label: 'Fish reviews' }
+  }
+  if (siteName === 'Horses.com') {
+    return isPro
+      ? { href: '/ownership/boarding-options', label: 'Boarding options' }
+      : { href: '/ownership/cost-of-owning-a-horse', label: 'Cost of owning a horse' }
   }
   return isPro
     ? { href: '/training/trainer-credentials', label: 'Trainer credentials' }

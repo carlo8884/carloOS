@@ -1,11 +1,11 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, PrimaryHop, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata, ArticleSourcesList, LastUpdated, ComparisonFoot } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'vets-co',
   title: 'AskVet Chat vs Chewy Connect | Vets.co',
-  description: 'AskVet is a $30 chat subscription. Chewy Connect is included with Chewy+. Neither replaces an emergency clinic.',
+  description: 'AskVet does not print a flat monthly chat price. The licensed-vet video visit is $49.99. Neither is emergency care.',
   path: '/reviews/askvet-vs-chewy-connect-guide',
   type: 'article',
 })
@@ -13,7 +13,7 @@ export const metadata: Metadata = buildMetadata({
 const schema = buildArticleSchema({
   siteId: 'vets-co',
   title: 'AskVet chat or Chewy Connect',
-  description: 'AskVet for a chat subscription, or Chewy Connect for people who already shop at Chewy. Scores are on the telehealth page.',
+  description: 'AskVet for a chat subscription, or Chewy Connect for people who already shop at Chewy. The notes are on the telehealth page.',
   url: 'https://vets.co/reviews/askvet-vs-chewy-connect-guide',
   imageUrl: '',
   authorName: 'Vets.co Editorial',
@@ -24,11 +24,11 @@ const schema = buildArticleSchema({
 const FAQS = [
   {
     question: 'What does the telehealth page say AskVet includes?',
-    answer: 'AskVet scores 8.8 and is marked Best Subscription. The page lists chat only, unlimited consultations at $30 a month, a typical wait under 5 minutes, general practice rather than specialists, and limited prescriptions.',
+    answer: 'AskVet is marked Best Subscription. The telehealth card on this site lists chat only. The current askvet.app pages, fetched 2026-10-08, do not print a visit type. See the carrier\'s current terms for a monthly chat price. General practice rather than specialists, and limited prescriptions. This page does not publish a wait time.',
   },
   {
     question: 'What does Chewy Connect include?',
-    answer: 'Chewy Connect with a Vet scores 8.4. The page says it is included with Chewy+ at $19.99 a month, which also covers free shipping and other benefits. Consults are video and chat, hours are extended, and a prescription can be filled through Chewy’s pharmacy. The page says it is less useful if you do not already want Chewy+.',
+    answer: 'Free chat is with a veterinary technician and comes with a Chewy account. A licensed-vet video visit is separate and is not offered in every state. A prescription from that visit can be filled through Chewy.',
   },
   {
     question: 'Can either service replace the emergency clinic?',
@@ -43,13 +43,19 @@ export default function AskVetVsChewyConnectGuidePage() {
       schema={schema}
       hero={{
         title: 'AskVet chat or Chewy Connect',
-        subtitle: 'Unlimited chat for a flat monthly fee, or telehealth included with a Chewy+ membership. Prices below are the ones on the telehealth page.',
         category: 'Buyer guide',
         authorName: 'Vets.co Editorial',
         publishedAt: 'October 2026',
         readTime: '6 min',
       }}
-      heroHop={<PrimaryHop href="/go/askvet/telehealth?s=reviews-askvet-vs-connect-guide" label="Visit AskVet" />}
+      heroHop={
+        <>
+          <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">AskVet is the top pick the telehealth page marks Best Subscription.</p>
+          <div data-fold="offer">
+          <PrimaryHop href="/go/askvet/telehealth?s=reviews-askvet-vs-connect-guide" label="Open AskVet" />
+        </div>
+        </>
+      }
       breadcrumbs={[
         { name: 'Home', href: '/' },
         { name: 'Reviews', href: '/reviews' },
@@ -62,23 +68,88 @@ export default function AskVetVsChewyConnectGuidePage() {
             { label: 'Reviews hub', href: '/reviews' },
             { label: 'Telehealth services', href: '/telehealth' },
             { label: 'ER vs clinic', href: '/tools/er-vs-clinic' },
+            { label: 'Vetster vs AskVet', href: '/reviews/vetster-vs-askvet-guide' },
           ]}
         />
       }
-      priceAsOf="2026-10-04"
+      priceAsOf="2026-10-07"
     >
       <div className="carloOS-article">
-        <p>Scores below are the ones on the <Link href="/telehealth">telehealth page</Link>. AskVet is the subscription. Chewy Connect with a Vet is for people who already use Chewy. <Link href="/reviews/vetster-vs-chewy-connect-guide">Vetster versus Chewy Connect</Link> is the video-visit comparison, not this chat subscription.</p>
+          <LastUpdated date="2026-10-10" />
+        <EmailCapture
+          variant="inline"
+          siteId="vets-co"
+          addressOnly
+          title="Shopping checklist"
+          ctaText="Copy checklist"
+          source="reviews-askvet-vs-connect-guide"
+          checklist={[
+            "The page says it is less useful if you do not already want Chewy+.",
+            "The telehealth page says a crisis needs an emergency clinic, not a video or chat appointment.",
+            "Vetster, the overall pick on that page, is a separate comparison.",
+            "Chewy Connect with a Vet is for people who already use Chewy.",
+            "Chewy Connect with a Vet is Best for Chewy Customers.",
+            "Consults are video and chat, during extended hours.",
+          ]}
+        />
+        <p>AskVet is the subscription. Chewy Connect with a Vet is for people who already use Chewy. <Link href="/reviews/vetster-vs-chewy-connect-guide">Vetster versus Chewy Connect</Link> is the video-visit comparison, not this chat subscription. AskVet is also set beside Vetster in <Link href="/reviews/vetster-vs-askvet-guide">Vetster versus AskVet</Link>.</p>
         <h2>What the page says about AskVet</h2>
-        <p>AskVet is Best Subscription, score 8.8. Consults are chat only, with no video exam. The printed price is $30 a month for unlimited consultations. A typical wait is under 5 minutes. Specialists are general practice only. Prescriptions are limited. The page says the subscription fits frequent questions, such as a new puppy, a senior pet, several pets, or a chronic condition, and that chat limits how much of a physical problem can be assessed.</p>
+        <p>AskVet is Best Subscription. The telehealth card on this site marks it chat-only. The current askvet.app pages, fetched 2026-10-08, do not print a visit type. See the carrier&apos;s current terms for a monthly chat price. This page does not publish a wait time. Specialists are general practice only. Prescriptions are limited. The page says the subscription fits frequent questions, such as a new puppy, a senior pet, several pets, or a chronic condition, and that the card says a chat format limits how much of a physical problem can be assessed.</p>
         <h2>What the page says about Chewy Connect</h2>
-        <p>Chewy Connect with a Vet is Best for Chewy Customers, score 8.4. It is included with Chewy+ at $19.99 a month, which the page also ties to free shipping and other membership benefits. Consults are video and chat, during extended hours. A prescription from Connect can be filled through Chewy and shipped. The page says the telehealth access is a bonus on a membership you already want for shipping, and that specialist access is thinner than Vetster.</p>
+        <p>Chewy Connect with a Vet is Best for Chewy Customers. Free chat is with a veterinary technician and comes with a Chewy account. A prescription from the licensed-vet video visit can be filled through Chewy and shipped. Specialist access is thinner than Vetster.</p>
+        <p>The licensed-vet video visit is $49.99.</p>
         <p>If you are deciding between a video visit, a clinic, and an emergency hospital, use the <Link href="/tools/er-vs-clinic">ER versus clinic tool</Link>. Neither service on this page replaces emergency care.</p>
         <h2>Who should open which service</h2>
-        <p>Open AskVet when you want unlimited chat for a flat $30 and you do not need video. Open Chewy Connect when you already pay for Chewy+ and you want the pharmacy tied to that account. If the pet is in crisis, go to an emergency clinic. Do not wait on a chat queue.</p>
-        <p>The link above opens AskVet, the same link as on the telehealth page. The price you see there is the service’s price.</p>
+        <p>Open AskVet when you want the subscription the telehealth page marks Best Subscription. See the carrier&apos;s current terms for the monthly price. Open Chewy Connect when you already pay for Chewy+ and you want the pharmacy tied to that account. If the pet is in crisis, go to an emergency clinic. Do not wait on a chat queue.</p>
+        <p>The telehealth card on this site marks AskVet chat-only. The current askvet.app pages, fetched 2026-10-08, do not print a visit type. The telehealth page says the subscription fits frequent questions, such as a new puppy, a senior pet, or a chronic condition.</p>
+        <div className="my-6 max-w-full min-w-0">
+          <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
+            <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+            <thead>
+              <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
+                <th scope="col" className="p-3 font-bold text-brand-dark">AskVet</th>
+                <th scope="col" className="p-3 font-bold text-brand-dark">Chewy Connect</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Role</th>
+                <td className="p-3">Best Subscription</td>
+                <td className="p-3">Best for Chewy Customers</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Format</th>
+                <td className="p-3">Chat only. The current pages do not print a visit type</td>
+                <td className="p-3">Free chat with a veterinary technician and a Chewy account. The licensed-vet video visit is separate</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Who you reach</th>
+                <td className="p-3">General practice. Prescriptions are limited</td>
+                <td className="p-3">A veterinary technician for free chat. A prescription from the licensed-vet video visit can be filled through Chewy</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Limit</th>
+                <td className="p-3">A chat format limits how much of a physical problem can be assessed</td>
+                <td className="p-3">The licensed-vet video visit is not offered in every state. Specialist access is thinner than Vetster</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Price line</th>
+                <td className="p-3">See the carrier’s current terms for a monthly chat price</td>
+                <td className="p-3">The licensed-vet video price is the one printed on this page</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <ComparisonFoot updated="2026-10-10" />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
+                <ArticleSourcesList
+            title="Sources"
+            sources={[
+            { label: "askvet.app/", url: "https://askvet.app/", publisher: "askvet.app" },
+            ]}
+          />
       </div>
     </ArticleLayout>
   )

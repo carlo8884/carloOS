@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { AffiliateDisclosure, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ReviewCard, ScoreMethodology, ShopCtas, TableOfContents } from '@carloOS/ui'
+import { ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ReviewCard, ShopCtas, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -91,6 +92,7 @@ export default function GrainConcentratesPage() {
           <RelatedLinks
             title="Related Reading"
             links={[
+              { label: "Daily feed calculator", href: "/tools/horse-feed-calculator" },
               { label: "Forage Basics", href: "/nutrition/forage-basics" },
               { label: "Ration Balancers", href: "/nutrition/ration-balancers" },
               { label: "Equine Colic", href: "/health/colic" },
@@ -120,10 +122,10 @@ export default function GrainConcentratesPage() {
 
           <h2 id="rules">Safe Feeding Rules</h2>
           <ul>
-            <li><strong>Forage first.</strong> Build the diet on forage and add concentrates only to fill a real gap.</li>
+            <li><strong>Forage first.</strong> Build the diet on forage and add concentrates only to fill a real gap. The <a href="/tools/horse-feed-calculator">daily feed calculator</a> estimates that forage base from bodyweight.</li>
             <li><strong>Limit starch per meal.</strong> Keep individual grain meals small; split a daily concentrate ration into several feeds rather than one or two large ones. Stackable rubber horse feed tubs are how those split meals stay pre-portioned — they are not a flu-page round rubber feed pan and not choke-page feed-tub rocks.</li>
-            <li><strong>Feed by weight, not scoops.</strong> A scoop of pellets and a scoop of oats weigh very differently; weigh the feed. A tabletop digital horse grain scale is how you weigh a meal without guessing — it is not a horse-feed-scoop-scale (that lives on the feed calculator), not a hanging hay-bale scale (that lives on EMS), and not a livestock barn scale (that lives on the weight calculator).</li>
-            <li><strong>Change gradually</strong> over a week or more to protect the hindgut microbes. A rodent-proof metal horse feed bin keeps one bag&apos;s ration clean and consistent so the horse is not switched onto spoiled or mixed leftover grain — it is not an airtight pet-food bin (that lives on dog/vets pages).</li>
+            <li><strong>Feed by weight, not scoops.</strong> A scoop of pellets and a scoop of oats weigh very differently; weigh the feed. A tabletop digital horse grain scale is how you weigh a meal without guessing — it is not a horse-feed-scoop-scale, not a hanging hay-bale scale, and not a livestock barn scale.</li>
+            <li><strong>Change gradually</strong> over a week or more to protect the hindgut microbes. A rodent-proof metal horse feed bin keeps one bag&apos;s ration clean and consistent so the horse is not switched onto spoiled or mixed leftover grain — it is not an airtight pet-food bin.</li>
             <li><strong>Feed at consistent times</strong> and never feed grain to a hot, exhausted, or stressed horse.</li>
             <li><strong>Prefer fat and fiber</strong> over high starch when adding calories.</li>
           </ul>
@@ -131,34 +133,19 @@ export default function GrainConcentratesPage() {
           <h2 id="tag">Reading the Feed Tag</h2>
           <p>Commercial feeds carry a guaranteed analysis and feeding directions. Look at the protein, fat, and fiber percentages, and -- important for metabolic and laminitis-prone horses -- the non-structural carbohydrate (NSC, the sugar plus starch). Crucially, the bag&apos;s feeding rate is calibrated to deliver the formulated nutrients only if you feed the recommended amount; feeding far less than directed shortchanges the horse on vitamins and minerals, which is exactly where a ration balancer fits instead. See the ration balancers guide.</p>
 
-          <h2 id="kit">Barn grain-weighing kit</h2>
+          <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Everyday physical supplies that match the
-            weigh-not-scoop, split-small-meals, and
-            keep-grain-consistent copy on this page — a
-            tabletop digital horse grain scale so
-            concentrates are weighed rather than scooped,
-            stackable rubber horse feed tubs so a daily
-            ration is split into several small meals, and
-            a rodent-proof metal horse feed bin so grain
-            stays clean and the ration does not drift. These are educational barn tools, not a ranked
-            product list, not a substitute for veterinary
-            or nutritionist care, and not a feed-scoop-scale
-            (that lives on the feed calculator), a hanging
-            hay-bale scale (that lives on EMS), or a
-            livestock barn scale (that lives on the weight
-            calculator). This page does not claim hands-on
-            testing. </p>
+            Keep these on hand: a tabletop digital horse grain scale so concentrates are weighed rather than scooped, stackable rubber horse feed tubs so a daily ration is split into several small meals, and a rodent-proof metal horse feed bin so grain stays clean and the ration does not drift. These are educational barn tools, not a ranked product list, not a substitute for veterinary or nutritionist care, and not a feed-scoop-scale, a hanging hay-bale scale, or a livestock barn scale. </p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/tabletop+digital+horse+grain+scale?s=nutrition-grain", "/go/amazon-brand/stackable+rubber+horse+feed+tubs?s=nutrition-grain", "/go/amazon-brand/rodent+proof+metal+horse+feed+bin?s=nutrition-grain", "/go/amazon-brand/complete+pelleted+horse+feed+formulated?s=nutrition-grain-and-concentrates", "/go/amazon-brand/low+starch+senior+horse+feed?s=nutrition-grain-and-concentrates"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (tabletop digital horse grain scale /
               stackable rubber horse feed tubs /
               rodent proof metal horse feed bin).
               Educational barn tools only; no Rx /
-              vaccine ASIN hops. ShopCtas hides empty
-              Chewy; never href="#" or PLACEHOLDER.
+              vaccine product page buttons. ShopCtas hides empty
+              Chewy; never href="#" or an empty link.
               Unused vs #1111
               horse+hay+probe+moisture+tester /
               equine+hay+core+sampler /
@@ -200,16 +187,14 @@ export default function GrainConcentratesPage() {
           </div>
 
           <h2 id="picks">Feed Picks — Safe Concentrates for Working Horses</h2>
-          <p>When concentrates are genuinely needed, formulated complete feeds offer more consistent nutrition and safer starch levels than plain cereal grain. These are general nutrition options for horses with real energy gaps -- working horses, hard keepers, and youngstock. Always feed in small, frequent meals, build forage first, and work with your veterinarian or nutritionist to confirm the ration is appropriate. This is a documented-spec comparison drawing on standard US equestrian retail; this page does not claim hands-on testing.</p>
+          <p>When concentrates are genuinely needed, formulated complete feeds offer more consistent nutrition and safer starch levels than plain cereal grain. These are general nutrition options for horses with real energy gaps -- working horses, hard keepers, and youngstock. Always feed in small, frequent meals, build forage first, and work with your veterinarian or nutritionist to confirm the ration is appropriate.</p>
 
-          <ScoreMethodology />
 
           <ReviewCard
             id="complete-horse-feed"
             badge="Working Horse / All-Round"
             name="Formulated Complete Horse Feed (Pellet or Textured)"
             subtitle="Balanced concentrate for horses needing more than forage provides"
-            score={8.5}
             winner
             description={<>
               <p>Formulated complete feeds combine controlled amounts of grain with protein, vitamins, and minerals in a consistent ratio, offering more reliable nutrition per serving than plain oats or corn. The key is feeding at the label rate -- too little shortchanges vitamins and minerals, and the whole ration must be built around adequate forage. Split daily amounts into multiple small meals to keep starch per meal low. Match the feed to the horse&apos;s actual workload rather than over-feeding energy.</p>
@@ -222,8 +207,9 @@ export default function GrainConcentratesPage() {
             ]}
             pros={['Consistent nutrient delivery per serving', 'More balanced than plain grain', 'Widely available']}
             cons={['Shortchanges nutrients if underfed', 'Must be split into small meals', 'Overkill for idle horses — use a balancer instead']}
-            price="$20–50 per 50 lb"
-            ctaText="Search on Amazon →"
+            price="see current price per 50 lb"
+            priceNote="dated 2026-06-12."
+            ctaText="Search formulated complete pelleted horse feed on Amazon →"
             ctaHref="/go/amazon-brand/complete+pelleted+horse+feed+formulated?s=nutrition-grain-and-concentrates"
             ctaAffiliateProgram="amazon"
             ctaAffiliateProduct="complete-horse-feed"
@@ -234,7 +220,6 @@ export default function GrainConcentratesPage() {
             badge="Low-Starch Option"
             name="Low-NSC / Senior Feed"
             subtitle="Reduced-starch concentrate for metabolic, senior, or starch-sensitive horses"
-            score={8.3}
             description={<>
               <p>Low-NSC feeds are designed to deliver energy through fat and digestible fiber rather than starch and sugar -- a safer profile for older horses with dental decline, horses prone to tying-up, and metabolic horses that need more than a pure balancer but cannot tolerate high grain. Still fed at the label rate in small meals alongside forage. Build the full plan with your veterinarian or nutritionist, especially for metabolic or insulin-dysregulated horses.</p>
               <p>Most relevant for seniors, horses with metabolic considerations, and horses sensitive to starch who still need more caloric support than a balancer alone.</p>
@@ -246,8 +231,9 @@ export default function GrainConcentratesPage() {
             ]}
             pros={['Lower starch and sugar than standard feeds', 'Supports condition in sensitive horses', 'Often softens well for seniors']}
             cons={['Use under veterinary or nutritionist guidance for metabolic horses', 'Not a replacement for forage', 'Higher cost per bag']}
-            price="$30–60 per 50 lb"
-            ctaText="Search on Amazon →"
+            price="see current price per 50 lb"
+            priceNote="dated 2026-06-12."
+            ctaText="Search low-starch senior horse feed on Amazon →"
             ctaHref="/go/amazon-brand/low+starch+senior+horse+feed?s=nutrition-grain-and-concentrates"
             ctaAffiliateProgram="amazon"
             ctaAffiliateProduct="low-starch-horse-feed"

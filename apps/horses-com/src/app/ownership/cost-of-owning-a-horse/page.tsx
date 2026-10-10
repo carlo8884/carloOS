@@ -1,5 +1,7 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { AffiliateDisclosure, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, CrossSiteHelp, FAQAccordion, RelatedLinks, ShopCtas, TableOfContents } from '@carloOS/ui'
+import Link from 'next/link'
+import { ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, CrossSiteHelp, FAQAccordion, RelatedLinks, ShopCtas, TableOfContents, PrimaryHop } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
@@ -62,6 +64,10 @@ export default function CostOfOwningPage() {
           { title: 'Buying Your First Horse', href: '/ownership/buying-your-first-horse' },
           { title: 'Horse Cost of Ownership Calculator', href: '/tools/horse-cost-calculator', category: 'Tools' },
         ]}
+        heroHop={<>
+          <PrimaryHop href="/go/amazon-brand/plastic+horse+feed+scoop?s=ownership-cost-of-owning-a-horse" label="Search Amazon for a horse feed scoop" />
+          <HopDisclosure tone="on-dark" siteId="horses-com" href="/go/amazon-brand/plastic+horse+feed+scoop?s=ownership-cost-of-owning-a-horse" />
+        </>}
         hero={{
           title: "The Cost of Owning a Horse",
           subtitle:
@@ -84,7 +90,7 @@ export default function CostOfOwningPage() {
             { label: "Routine Health and Farrier", href: "#routine" },
             { label: "Hidden and Emergency Costs", href: "#hidden" },
             { label: "Budgeting Honestly", href: "#budget" },
-            { label: "Ownership budget supplies", href: "#kit" },
+            { label: "Next step", href: "#cost-next" },
             { label: "FAQ", href: "#faq" },
             { label: "References", href: "#references" },
           ]} />
@@ -109,38 +115,12 @@ export default function CostOfOwningPage() {
             updatedAt="2026-09-06"
             reviewedBy="Editorial team"
           />
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the horse-ownership budget worksheet
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Horse-ownership budget worksheet
-            </h2>
-
-          </div>
-
           <h2 id="purchase">Purchase vs Upkeep</h2>
           <p>The purchase price of a horse ranges from free or a few hundred for an unbroke or older horse to many thousands or far more for a trained competition prospect. But the purchase is a one-time cost, while upkeep is forever. The annual cost of keeping a horse routinely exceeds the purchase price of an ordinary horse within the first year, and a low or zero purchase price often signals a horse that will cost more in training, rehabilitation, or veterinary care. Budget for the keeping, not the buying.</p>
           
 
           <h2 id="recurring">The Big Recurring Costs</h2>
           <p>The largest ongoing expense is usually keep -- either board (paying a facility to house and care for the horse) or, if you keep the horse at home, the combined cost of land, fencing, shelter, hay, bedding, and your labor. Feed and forage are a major year-round cost, rising in winter when hay does the work that grass does in summer. Together, keep and feed dominate the monthly budget, which is why the choice of how to keep a horse is the single biggest financial decision after buying.</p>
-          <p>
-            A horse keep / feed / farrier cost log binder
-            is how board or home-keep, hay and forage,
-            and the recurring farrier cycle stay in one
-            ledger instead of three separate receipts —
-            it is not an equine farrier log book (that
-            lives on farrier-schedule and records trim
-            dates, not dollar amounts), not a horse
-            boarding contract document binder (that lives
-            on boarding-options), and not a horse
-            pre-purchase exam records binder (that lives
-            on buying-your-first-horse). This page does
-            not hop hay tarps, hay racks, or feed bins
-            already pinned on boarding and nutrition
-            pages.
-          </p>
 
           <h2 id="routine">Routine Health and Farrier</h2>
           <ul>
@@ -150,17 +130,6 @@ export default function CostOfOwningPage() {
             <li><strong>Insurance</strong> where chosen, as a recurring premium (see the insurance guide).</li>
             <li><strong>Tack, rugs, and equipment</strong> with ongoing replacement and maintenance.</li>
           </ul>
-          <p>
-            The same horse keep / feed / farrier cost log
-            binder is also how the 6-to-8-week farrier
-            invoice and the routine veterinary line sit
-            beside keep and feed — without turning this
-            page into a farrier-log hop, a flood-light
-            hop, a vaccine hop, or a clinic-directory
-            listing. Educational owner cost records only.
-            This page does not claim hands-on testing.
-          </p>
-
           <h2 id="hidden">Hidden and Emergency Costs</h2>
           <p>The costs that catch owners out are the unpredictable ones. A colic surgery, a serious lameness workup with imaging, or a long course of treatment can run into thousands quickly, and emergencies do not wait for payday. Other less-obvious costs include lessons and training, competition fees and travel, supplements and special feeds for a horse with a condition, and the eventual costs of caring for an aging horse and, ultimately, end-of-life. A horse with no contingency fund behind it is a financial risk to its own welfare.</p>
           <CrossSiteHelp
@@ -176,95 +145,27 @@ export default function CostOfOwningPage() {
 
           <h2 id="budget">Budgeting Honestly</h2>
           <p>The responsible approach is to total the realistic monthly keep, feed, farrier, and routine veterinary costs for your area, then add a genuine emergency fund (or insurance) for the inevitable unexpected vet bill. Get real local figures from boarding facilities, farriers, and veterinarians rather than guessing, and budget for the worst year, not the best. Many experienced owners advise treating affordability as the first question in horse ownership, because a horse the owner cannot afford to keep well is a welfare problem waiting to happen.</p>
-          <p>
-            The same horse ownership monthly budget
-            worksheet is how those local keep, feed,
-            farrier, and routine veterinary figures are
-            totaled before the purchase — and the same
-            equine emergency fund expense tracker
-            notebook is how the worst-year contingency
-            sits beside that monthly total. Educational
-            owner budgeting tools only. They are not a
-            substitute for a veterinarian or accountant. </p>
+          <p>Educational owner budgeting tools only. They are not a substitute for a veterinarian or accountant.</p>
 
-          <h2 id="kit">Ownership budget supplies</h2>
-
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
-
-          {/* Money path — live amazon-brand search hops
-              (horse ownership monthly budget worksheet /
-              equine emergency fund expense tracker
-              notebook /
-              horse keep / feed / farrier cost log
-              binder).
-              Educational owner searches only; no Rx /
-              vaccine ASIN hops. ShopCtas hides empty
-              Chewy; never href="#" or PLACEHOLDER.
-              Unused vs #1132
-              laminated+equine+vet+interview+checklist /
-              horse+after+hours+emergency+cover+question+card /
-              horse+veterinary+history+vcpr+records+folder, #1131
-              first+horse+buyer+visit+field+notebook /
-              laminated+first+horse+tryout+walkthrough+checklist /
-              horse+pre+purchase+exam+records+binder, #1130
-              laminated+horse+boarding+facility+walkthrough+checklist /
-              horse+boarding+contract+document+binder /
-              waterproof+horse+hay+bale+storage+tarp, #1129
-              sterile+saline+wound+flush+horse /
-              nonstick+wound+dressing+pads+horse /
-              equine+bandage+scissors, #1128
-              laminated+horse+barn+calculator+tools+chart /
-              horse+stall+door+measurement+card /
-              equine+calculator+reference+handbook, #1127
-              laminated+horse+barn+owner+guides+chart /
-              horse+stall+door+owner+guides+card /
-              equine+owner+guides+reference+handbook, #1126
-              laminated+horse+barn+daily+care+chart /
-              horse+stall+door+care+card /
-              equine+husbandry+reference+handbook, #1125
-              laminated+horse+barn+emergency+triage+chart /
-              horse+stall+door+vital+signs+card /
-              equine+health+reference+handbook, #1124
-              laminated+horse+barn+forage+first+chart /
-              horse+stall+door+ration+card /
-              equine+nutrition+reference+handbook,
-              grimace / emergency
-              equine+first+aid+kit /
-              digital+veterinary+thermometer /
-              vet+wrap+bandage /
-              poultice,
-              cost-calculator
-              horse+barn+first+aid+kit /
-              horse+halter+lead+rope,
-              farrier-schedule
-              cordless+barn+flood+light /
-              equine+farrier+log+book,
-              flu
-              weatherproof+storage+clipboard,
-              trailering
-              horse+shipping+boots /
-              horse+trailer+ties,
-              helmet-guide
-              ASTM+SEI+horse+riding+helmet. */}
+          <h2 id="cost-next">Next step</h2>
+          <HopDisclosure siteId="horses-com" href="/go/amazon-brand/horse+feed+scoop+scale?s=ownership-cost-of-owning-a-horse" />
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop related supplies
+              Next step
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Feed and forage are a year-round cost. The calculator turns the ranges on this page into a monthly figure. A feed scoop and scale measures the hay and grain that figure includes.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/horse+ownership+monthly+budget+worksheet?s=ownership-cost-of-owning-a-horse"
-                amazonLabel="Browse horse ownership monthly budget worksheets on Amazon →"
+                amazonHref="/go/amazon-brand/horse+feed+scoop+scale?s=ownership-cost-of-owning-a-horse"
+                amazonLabel="Browse horse feed scoops and scales on Amazon"
               />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/equine+emergency+fund+expense+tracker+notebook?s=ownership-cost-of-owning-a-horse"
-                amazonLabel="Browse equine emergency fund expense tracker notebooks on Amazon →"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/horse+keep+feed+farrier+cost+log+binder?s=ownership-cost-of-owning-a-horse"
-                amazonLabel="Browse horse keep / feed / farrier cost log binders on Amazon →"
-              />
-          </div>
+              <Link
+                href="/tools/horse-cost-calculator"
+                className="inline-block bg-brand-primary text-white font-semibold px-5 py-2.5 rounded-md no-underline hover:bg-brand-primary-dark text-center"
+              >
+                Estimate board, feed, and farrier cost →
+              </Link>
+            </div>
           </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>

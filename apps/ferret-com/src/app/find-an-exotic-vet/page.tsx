@@ -99,7 +99,7 @@ export default function FindAnExoticVetPage() {
           <>
             <TableOfContents
               items={[
-                { label: 'TL;DR', href: '#tldr' },
+                { label: '', href: '#tldr' },
                 { label: 'Why a General Vet May Not Be Enough', href: '#why' },
                 { label: 'Directories to Check', href: '#directories' },
                 { label: 'Questions to Ask a Clinic', href: '#questions' },
@@ -155,8 +155,7 @@ export default function FindAnExoticVetPage() {
             them, is worth doing before your ferret is ever unwell.
           </DropCap>
 
-          <h2 id="tldr">TL;DR</h2>
-          <p>
+                    <p>
             Look for an exotic-pet veterinarian — ideally an AEMV member or
             an ABVP Exotic Companion Mammal diplomate — using the directories
             below. Before you commit, call and ask how many ferrets the clinic

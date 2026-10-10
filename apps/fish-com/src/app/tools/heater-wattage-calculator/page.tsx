@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -10,6 +11,7 @@ import {
   RelatedLinks,
   ArticleByline,
   JourneyNext,
+  PrimaryHop,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
 import {
@@ -36,7 +38,7 @@ const schema = buildHowToSchema({
   totalTime: 'PT2M',
   steps: [
     { name: 'Find the temperature delta', text: 'Subtract the coldest typical room temperature from your target tank temperature.' },
-    { name: 'Apply 3 W per gallon per 10°F', text: 'Multiply tank gallons × 3 × (delta / 10) to get a baseline heater wattage requirement.' },
+    { name: 'Apply 3 W per gallon per 10°F', text: 'Planning figure, not a manufacturer chart: multiply tank gallons × 3 × (delta / 10), then apply the insulation factor and 25% headroom.' },
     { name: 'Add 25% headroom', text: 'Heaters age and lose efficiency. Cold snaps push beyond typical room lows. Adding 25% prevents undershoot during winter.' },
     { name: 'Split into two heaters for large tanks', text: 'On tanks 40 gallons and up, two smaller heaters are safer than one large one. They fail safer and give redundancy.' },
     { name: 'Use a controller', text: 'For tanks over 75 gallons or with sensitive species, a dedicated controller (Inkbird, Ranco) prevents stuck-heater disasters.' },
@@ -66,7 +68,7 @@ const softwareApplicationSchema = {
     'Built-in 25% headroom for heater aging and cold snaps',
     'Dual-heater split recommendation for tanks 40 gallons and up',
     'External-controller guidance for sensitive species and large systems',
-    'Links to existing Amazon heater hops (Eheim Jager, Aqueon Pro)',
+    'Links to existing Amazon heater buttons (Eheim Jager, Aqueon Pro)',
   ],
   publisher: {
     '@type': 'Organization',
@@ -94,7 +96,7 @@ const FAQS = [
   },
   {
     question: 'What temperature should I keep tropical fish at?',
-    answer: '76–80°F (24–27°C) is the standard tropical range. Specific exceptions: discus 84–86°F, German blue rams 80–82°F, white cloud minnows below 72°F. Most tetras, rasboras, livebearers, and gouramis do fine anywhere in 76–80°F.',
+    answer: '76–80°F (24–27°C) is a planning figure for a mixed tropical tank, not a species band. Published exceptions: FishBase lists Symphysodon aequifasciatus at 26–30°C, which is 78–86°F (https://www.fishbase.se/summary/Symphysodon-aequifasciatus.html); FishBase lists Mikrogeophagus ramirezi at 27–30°C, which is 80–86°F (https://www.fishbase.se/summary/Mikrogeophagus-ramirezi.html); FishBase lists Tanichthys albonubes at 18–22°C, which is 64–72°F (https://www.fishbase.se/summary/Tanichthys-albonubes.html).',
   },
 ]
 
@@ -110,6 +112,15 @@ export default function HeaterWattageCalculatorPage() {
   return (
     <ArticleLayout
       siteId="fish-com"
+      heroExtra={
+        <div id="calculator" className="mb-4 [&_.text-brand-primary]:!text-brand-dark">
+          <Calculator />
+          <div className="mt-6" data-fold="offer">
+            <PrimaryHop href="/go/amazon-brand/eheim+jager+heater?s=tools-heater-wattage-calculator" label="Search Amazon for an Eheim Jager heater" />
+            <HopDisclosure siteId="fish-com" href="/go/amazon-brand/eheim+jager+heater?s=tools-heater-wattage-calculator" tone="on-dark" />
+          </div>
+        </div>
+      }
       hero={{
         title: 'Aquarium Heater Wattage Calculator',
         subtitle: 'Size your aquarium heater correctly based on tank volume, room temperature, and target temperature. With redundancy guidance for large tanks.',
@@ -161,15 +172,13 @@ export default function HeaterWattageCalculatorPage() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationSchema) }}
         />
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2026-05-01T00:00:00Z" updatedAt="2026-09-03T00:00:00Z" reviewedBy="Editorial team" />
-        <h2 id="calculator">The Calculator</h2>
-        <Calculator />
         <JourneyNext
           siteId="fish-com"
           nextHref="/reviews/best-aquarium-heaters"
           nextLabel="Read the heater review before you buy"
           nextBlurb="The wattage is the size. The review compares Eheim Jager, Cobalt, Hydor, and Aqueon on the same tanks. One search below is the Eheim Jager this page already uses as the reference heater."
           resourceHref="/go/amazon-brand/eheim+jager+heater?s=tools-heater-wattage-calculator"
-          resourceLabel="Shop Eheim Jager heaters on Amazon →"
+          resourceLabel="Browse Eheim Jager heaters on Amazon →"
         />
 
         <h2 id="chart">Quick Reference — Wattage by Tank Size</h2>

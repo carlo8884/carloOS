@@ -10,7 +10,7 @@ import {
   DropCap,
   CrossPortfolioCard,
   ArticleSourcesList,
-  AffiliateDisclosure,
+  LastUpdated,
 } from '@carloOS/ui'
 
 const SOURCES = [
@@ -21,12 +21,12 @@ const SOURCES = [
   },
   {
     label: "Merck Veterinary Manual — Respiratory Diseases of Ferrets: influenza transmission, clinical signs, supportive management, and zoonotic risk",
-    url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/respiratory-diseases-of-ferrets",
+    url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/infectious-diseases-of-ferrets",
     publisher: "Merck Veterinary Manual",
   },
   {
-    label: "CDC — Influenza in Ferrets: ferret susceptibility to human influenza strains and household-transmission considerations",
-    url: "https://www.cdc.gov/flu/other/index.htm",
+    label: "CDC — About Influenza A in Animals, including ferrets",
+    url: "https://www.cdc.gov/flu-in-animals/about/index.html",
     publisher: "CDC",
   },
   {
@@ -74,7 +74,6 @@ const medSchema = buildMedicalWebPageSchema({
   authorName: 'Ferret.com Editorial',
   lastReviewed: '2026-06-01',
 })
-
 
 const FAQS = [
   {
@@ -131,7 +130,7 @@ export default function FerretInfluenzaPage() {
           <>
             <TableOfContents
               items={[
-                { label: 'TL;DR', href: '#tldr' },
+                { label: '', href: '#tldr' },
                 { label: 'Why Ferrets Catch Our Flu', href: '#why' },
                 { label: 'Signs to Watch For', href: '#signs' },
                 { label: 'When It Becomes Serious', href: '#serious' },
@@ -153,7 +152,7 @@ export default function FerretInfluenzaPage() {
 
           </>
         }
-      
+
         relatedLinks={[
           { title: 'Ferret Health Hub', href: '/health' },
           { title: 'Canine Distemper in Ferrets', href: '/health/canine-distemper-in-ferrets' },
@@ -167,6 +166,7 @@ export default function FerretInfluenzaPage() {
             publishedAt="2026-06-01"
             updatedAt="2026-06-01"
           />
+          <LastUpdated date="2026-10-09" />
 
           <DropCap>
             Influenza is one of the few illnesses you can quite literally share
@@ -177,8 +177,7 @@ export default function FerretInfluenzaPage() {
             model for human influenza for the better part of a century.
           </DropCap>
 
-          <h2 id="tldr">TL;DR</h2>
-          <p>
+                    <p>
             Ferrets are highly susceptible to human influenza viruses, and
             transmission runs in both directions between ferrets and people. In
             healthy adult ferrets the flu is usually a mild, self-limiting
@@ -297,21 +296,7 @@ export default function FerretInfluenzaPage() {
             organized at the <a href="/health">health hub</a>.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated ferret flu-share chart /
-              ferret fridge two-way card /
-              mustelid influenza-hygiene handbook).
-              No existing product hop to keep.
-              Educational kitchen searches only; no Rx /
-              vaccine / aging hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs health-hub /
-              distemper / GI / emergency hops. Ferret
-              aging stays held.
-              Do not re-open #1165 / what-to-expect. */}
-          
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
 

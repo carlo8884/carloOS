@@ -59,7 +59,7 @@ const GLOSSARY: Group[] = [
       { term: 'By-product', def: 'Animal parts other than skeletal muscle, which can include nutritious organ meat. Quality depends on the source; named by-products are more transparent than generic ones.' },
       { term: 'Grain-free / DCM', def: 'Grain-free diets replace grains with legumes or potatoes. The FDA has investigated a possible link between some grain-free diets and canine dilated cardiomyopathy (DCM); the picture remains unresolved.' },
       { term: 'Life stage', def: 'The nutrient profile a food is formulated for — growth (puppy), adult maintenance, or all life stages — with large-breed puppy formulas adding controlled calcium for skeletal development.' },
-      { term: 'The 10% treat rule', def: 'A rule of thumb that treats should make up no more than about 10% of a dog’s daily calories so the complete-and-balanced diet still does its job.' },
+      { term: 'The 10% treat rule', def: 'The WSAVA guide to treats for dogs states that treats should make up no more than 10% of a dog’s daily calorie intake (https://wsava.org/wp-content/uploads/2025/11/WSAVA_GuidetoTreats_Dogs_251107.pdf), so the complete-and-balanced diet still does its job.' },
     ],
   },
   {

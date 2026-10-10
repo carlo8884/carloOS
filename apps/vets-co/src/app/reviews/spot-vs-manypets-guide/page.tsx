@@ -1,6 +1,11 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, ArticleLayout, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, InlinePartnerQuote, RelatedLinks, buildArticleSchema, buildMetadata, PrimaryHop, ArticleSourcesList, LastUpdated, ComparisonFoot, EmailCapture } from '@carloOS/ui'
+import { HopDisclosure } from '../../../components/HopDisclosure'
+
+// Request-time env. An unset AFF_SPOT_TAG keeps the quote as a note.
+// A set tag switches this control back to /go.
+export const dynamic = 'force-dynamic'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'vets-co',
@@ -24,11 +29,11 @@ const schema = buildArticleSchema({
 const FAQS = [
   {
     question: 'Which policy does the fine-print page mark as the winner?',
-    answer: 'Spot, scored 8.2 and marked Customizable. The review lists adjustable limits, exam fees often covered, and an optional preventive add-on. The price line is quote-based. The preventive add-on is not insurance.',
+    answer: 'Spot, marked Customizable. The review lists adjustable limits, exam fees often covered, and an optional preventive add-on. The price line is quote-based. The preventive add-on is not insurance.',
   },
   {
     question: 'When does that page point to ManyPets?',
-    answer: 'When you want one comprehensive plan instead of several structures. ManyPets scores 8.0. The review lists a single plan, pay-then-claim, and relatively clear fine print. Availability varies by state. The price line is also quote-based.',
+    answer: 'When you want one comprehensive plan instead of several structures. ManyPets. The review lists a single plan, pay-then-claim, and relatively clear fine print. Availability varies by state. The price line is also quote-based.',
   },
   {
     question: 'Does this page publish a monthly premium?',
@@ -37,18 +42,27 @@ const FAQS = [
 ]
 
 export default function SpotVsManyPetsGuidePage() {
+  const spotHref = '/go/spot/home?s=reviews-spot-vs-manypets-guide'
   return (
     <ArticleLayout
       siteId="vets-co"
       schema={schema}
       hero={{
         title: 'Spot or ManyPets',
-        subtitle: 'Adjustable limits and a single comprehensive plan are different documents to read. Scores below are the ones on the fine-print page. Neither price line is a premium.',
         category: 'Buyer guide',
         authorName: 'Vets.co Editorial',
         publishedAt: 'October 2026',
         readTime: '6 min',
       }}
+      heroHop={
+        <>
+          <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">Spot is the top pick when you want adjustable limits on one policy instead of a single comprehensive plan.</p>
+          <div data-fold="offer">
+          <PrimaryHop href="/go/spot/home?s=reviews-spot-vs-manypets-guide" label="Get a Spot quote" />
+          <HopDisclosure tone="on-dark" siteId="vets-co" href="/go/spot/home?s=reviews-spot-vs-manypets-guide" />
+        </div>
+        </>
+      }
       breadcrumbs={[
         { name: 'Home', href: '/' },
         { name: 'Reviews', href: '/reviews' },
@@ -66,18 +80,81 @@ export default function SpotVsManyPetsGuidePage() {
       }
     >
       <div className="carloOS-article">
-        <p>The <Link href="/insurance/reading-the-fine-print">fine-print page</Link> already puts Spot and ManyPets side by side as two sample policies to read, and it points to the <Link href="/reviews/best-pet-insurance">insurance review</Link> for the wider comparison. Those scores are editorial scores, not shopper star ratings. Neither product prints a monthly premium.</p>
+          <LastUpdated date="2026-10-10" />
+        <p>The <Link href="/insurance/reading-the-fine-print">fine-print page</Link> already puts Spot and ManyPets side by side as two sample policies to read, and it points to the <Link href="/reviews/best-pet-insurance">insurance review</Link> for the wider comparison. Neither product prints a monthly premium.</p>
         <h2>What the review says about Spot</h2>
-        <p>Spot is Customizable, score 8.2, and the winner on that page. Limits are adjustable. Exam fees are often covered. Preventive care is an optional add-on, and the review says that add-on is not insurance. The price line is quote-based. The cons say to read the waiting-period terms. Nothing here fills in a waiting-period length the review left unread.</p>
+        <p>Spot is Customizable and the winner on that page. Limits are adjustable. Exam fees are often covered. Preventive care is an optional add-on, and the review says that add-on is not insurance. The price line is quote-based. The cons say to read the waiting-period terms. Nothing here fills in a waiting-period length the review left unread.</p>
         <h2>What the review says about ManyPets</h2>
-        <p>ManyPets is Straightforward Terms, score 8.0. The plan is a single comprehensive policy rather than a tier maze. The model is pay-then-claim. The review calls the fine print relatively clear and says availability varies by state. The price line is quote-based. Fewer structures to mix and match is the tradeoff in the review.</p>
+        <p>ManyPets is Straightforward Terms. The plan is a single comprehensive policy rather than a tier maze. The model is pay-then-claim. The review calls the fine print relatively clear and says availability varies by state. The price line is quote-based. Fewer structures to mix and match is the tradeoff in the review.</p>
         <h2>Who should read which policy</h2>
         <p>Open the Spot sample when you want several limit and deductible combinations on one carrier, and treat the preventive add-on as separate from the insurance. Open the ManyPets sample when one comprehensive plan is easier to read, and confirm the state actually offers it. On both, read waiting periods, exclusions, exam-fee language, and the annual limit in the sample policy. Do not treat either quote-based line as a price from this page.</p>
-        <AffiliateDisclosure variant="inline" siteId="vets-co" />
         <p>The link below opens the Spot quote from the fine-print page. The price you see there is the carrier&apos;s quote, not a figure from this page.</p>
-        <p><a className="font-semibold text-brand-primary" href="/go/spot/home?s=reviews-spot-vs-manypets-guide">Get a Spot quote →</a></p>
+        <HopDisclosure siteId="vets-co" href={spotHref} />
+        <p><InlinePartnerQuote href={spotHref} label="Get a Spot quote" /></p>
+        <div className="my-6 max-w-full min-w-0">
+          <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
+            <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+            <thead>
+              <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
+                <th scope="col" className="p-3 font-bold text-brand-dark">Spot</th>
+                <th scope="col" className="p-3 font-bold text-brand-dark">ManyPets</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Role</th>
+                <td className="p-3">Customizable, and the winner on that page</td>
+                <td className="p-3">Straightforward Terms</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Plan shape</th>
+                <td className="p-3">Adjustable limits. Exam fees are often covered</td>
+                <td className="p-3">One comprehensive plan. Pay, then claim</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Add-on</th>
+                <td className="p-3">Optional preventive care. The review says that add-on is not insurance</td>
+                <td className="p-3">Fewer structures to mix and match</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Fine print</th>
+                <td className="p-3">Read the waiting-period terms. The length is not filled in here</td>
+                <td className="p-3">Relatively clear. Availability varies by state</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Price line</th>
+                <td className="p-3">Quote-based</td>
+                <td className="p-3">Quote-based</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <ComparisonFoot updated="2026-10-10" />
+        <EmailCapture
+          variant="inline"
+          siteId="vets-co"
+          addressOnly
+          title="Shopping checklist"
+          ctaText="Copy checklist"
+          source="reviews-spot-vs-manypets-guide"
+          checklist={[
+            "Preventive care is an optional add-on, and the review says that add-on is not insurance.",
+            "The cons say to read the waiting-period terms.",
+            "The review calls the fine print relatively clear and says availability varies by state.",
+            "On both, read waiting periods, exclusions, exam-fee language, and the annual limit in the sample policy.",
+            "Do not treat either quote-based line as a price from this page.",
+          ]}
+        />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
+                <ArticleSourcesList
+            title="Sources"
+            sources={[
+            { label: "ManyPets", url: "https://manypets.com/", publisher: "ManyPets" },
+            { label: "Spot", url: "https://www.spotpet.com/", publisher: "Spot" },
+            ]}
+          />
       </div>
     </ArticleLayout>
   )

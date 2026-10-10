@@ -1,12 +1,12 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 
 const SOURCES = [
-  { label: 'Merck Veterinary Manual: Pyotraumatic Dermatitis (Hot Spots) in Dogs', url: 'https://www.merckvetmanual.com/integumentary-system/bacterial-skin-diseases/pyotraumatic-dermatitis-in-dogs', publisher: 'Merck Vet Manual' },
-  { label: 'AVMA: Skin Conditions in Dogs — Hot Spots and Pyoderma', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/common-health-conditions-dogs', publisher: 'AVMA' },
+  { label: 'Merck Veterinary Manual: Pyoderma in Dogs and Cats, including acute moist dermatitis (hot spots)', url: 'https://www.merckvetmanual.com/integumentary-system/pyoderma/pyoderma-in-dogs-and-cats', publisher: 'Merck Vet Manual' },
   { label: 'AAHA: Dermatology Guidelines — Secondary Pyoderma and Self-Trauma Management', url: 'https://www.aaha.org/aaha-guidelines/dermatology/', publisher: 'AAHA' },
   { label: 'Olivry T et al. A systematic review of randomized controlled trials for prevention or treatment of atopic dermatitis in dogs. Vet Dermatol. 2010;21(3):210-222.', publisher: 'Vet Dermatology' },
 ]
@@ -67,17 +67,17 @@ export default function DogHotSpotsPage() {
           <h2>Preventing Recurrence</h2>
           <p>Hot spots that recur despite appropriate treatment indicate an unaddressed underlying trigger. The most common unaddressed triggers: year-round flea prevention not being used consistently (flea allergy in a warm climate requires year-round prevention), environmental or food allergy not being managed, and ear infections not being fully cleared (dogs with chronic ear infections repeatedly scratch at the ear base and develop hot spots there). Addressing the trigger — allergy workup, strict flea prevention, ear disease management — prevents recurrence.</p>
 
-          <h2 id="kit">Hot-spot e-collar kit</h2>
-          <p>Everyday physical supplies that match the home-care copy above — an e-collar (cone) so the dog cannot lick, scratch, or bite the lesion, plus a soft cone alternative for dogs that tolerate it. Chlorhexidine, betadine, Vetericyn / Genesis / Malacetic sprays, hydrocortisone, Cytopoint, Apoquel, corticosteroids, and systemic antibiotics stay educational copy only — this page never hops medicated sprays, brand ASINs, or medications. This page does not claim hands-on testing.</p>
+          <h2 id="kit">Supplies named on this page</h2>
+          <p>Keep these on hand: pet recovery cone and soft recovery cone dog. Chlorhexidine, betadine, Vetericyn / Genesis / Malacetic sprays, hydrocortisone, Cytopoint, Apoquel, corticosteroids, and systemic antibiotics stay educational copy only — this page does not link to medicated sprays, named brands, or medications.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/pet+recovery+cone?s=health-dog-hot-spots", "/go/amazon-brand/soft+recovery+cone+dog?s=health-dog-hot-spots"]} />
 
-          {/* Money path — live amazon-brand search hops (e-collar / soft cone).
-              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-              Category searches only — reuse live sister queries from
+          {/* Shop note — live amazon-brand search buttons (e-collar / soft cone).
+              ShopCtas hides empty Chewy; never href="#" or an empty link.
+              Amazon searches only — reuse live sister queries from
               vets telehealth / insurance tools (pet+recovery+cone) and
               dog grimace-scale (soft+recovery+cone+dog). Chlorhexidine,
-              Vetericyn-style sprays, and Rx meds are not shoppable hops. */}
+              Vetericyn-style sprays, and Rx meds are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

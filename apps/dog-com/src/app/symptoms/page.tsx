@@ -18,13 +18,12 @@
  * Trust-bar (QC-STANDARDS.md §1):
  *   - Byline is "Dog.com Editorial" — no fabricated DVM credentials
  *   - No first-person hands-on claims
- *   - Affiliate disclosure sits above kitchen-kit hops; Chewy stays omitted
+ *   - Affiliate disclosure sits above kitchen-kit buttons; Chewy stays omitted
  */
 
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
-  AffiliateDisclosure,
   buildMetadata,
   buildBreadcrumbSchema,
   buildFAQSchema,
@@ -426,24 +425,10 @@ export default function SymptomsHubPage() {
       </div>
 
       <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
-        
+
         <div className="max-w-content-wide mt-6">
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
         </div>
 
-        {/* Money path — live amazon-brand search hops
-            (laminated dog symptoms triage chart /
-            dog fridge symptoms library card /
-            canine symptoms reference handbook).
-            Educational kitchen searches only; no Rx /
-            vaccine / flea hops.
-            ShopCtas hides empty Chewy; never href="#"
-            or PLACEHOLDER. Unused vs tools / reviews /
-            nutrition / training / guides / breeds /
-            conditions kitchen kits and child
-            wound+care+gauze / digital+pet+thermometer
-            hops.
-            Do not re-open #1165 / what-to-expect. */}
               </section>
 
       <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="footer" />

@@ -1,14 +1,14 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 
 const SOURCES = [
-  { label: 'Merck Veterinary Manual: Vomiting in Small Animals', url: 'https://www.merckvetmanual.com/digestive-system/vomiting-in-small-animals/vomiting-in-small-animals', publisher: 'Merck Vet Manual' },
-  { label: 'AVMA: Vomiting in Dogs — When to See a Vet', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/common-health-conditions-dogs', publisher: 'AVMA' },
+  { label: 'Merck Veterinary Manual: Vomiting in Small Animals', url: 'https://www.merckvetmanual.com/dog-owners/digestive-disorders-of-dogs/vomiting-in-dogs', publisher: 'Merck Vet Manual' },
   { label: 'AAHA: Emergency Signs — Vomiting and GI Emergencies', url: 'https://www.aaha.org/aaha-guidelines/emergency-and-critical-care/emergency-and-critical-care-guidelines/', publisher: 'AAHA' },
-  { label: 'Merck Veterinary Manual: Gastric Dilation and Volvulus — Emergency Presentation', url: 'https://www.merckvetmanual.com/digestive-system/diseases-of-the-stomach-and-intestines-in-small-animals/gastric-dilation-and-volvulus-in-small-animals', publisher: 'Merck Vet Manual' },
+  { label: 'Merck Veterinary Manual: Gastric Dilation and Volvulus — Emergency Presentation', url: 'https://www.merckvetmanual.com/digestive-system/surgical-problems-of-the-gastrointestinal-tract-in-small-animals/gastric-dilation-and-volvulus-in-small-animals', publisher: 'Merck Vet Manual' },
 ]
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Vomiting — Acute vs Chronic, Yellow Bile | Dog.com', description: 'Dog vomiting guide. Acute vs chronic, yellow bile in the morning, and the signs that make vomiting an emergency. When to treat at home vs see a vet immediately.', path: '/health/dog-vomiting', type: 'article' })
@@ -67,17 +67,17 @@ export default function DogVomitingPage() {
           <p><strong>Emergency — go immediately:</strong> Unproductive retching (especially large breeds — GDV), blood in vomit, severe lethargy, vomiting after foreign body ingestion, distended abdomen, pale gums, puppy that cannot keep anything down.</p>
 
           <h2 id="kit">Bland-diet prep kit</h2>
-          <p>Everyday kitchen supplies that match the home-monitor copy above — a mini rice cooker so you can make a small batch of plain white rice after the 6–12 hour withhold, plus glass meal-prep containers for leftover bland-diet portions and the small bedtime snack used for bilious vomiting. These are prep tools, not treatments. They do not stop vomiting, they do not replace fasting or veterinary examination, and they do not treat GDV, obstruction, pancreatitis, or parvovirus. Anti-nausea medication (Cerenia / maropitant and similar), prescription GI diets (Hill&apos;s i/d, Royal Canin Gastrointestinal, and similar), probiotics, and plain canned pumpkin stay educational copy only — probiotics and pumpkin stay on the sister <a href="/health/dog-diarrhea">dog diarrhea</a> page. Slow-feeder bowls stay on <a href="/health/dog-obesity">dog obesity</a>. Bailey chairs and upright feeding chairs stay on <a href="/health/megaesophagus">megaesophagus</a>. Elevated bowls stay off this page. This page does not claim hands-on testing.</p>
+          <p>Keep these on hand: a mini rice cooker so you can make a small batch of plain white rice after the 6–12 hour withhold, plus glass meal-prep containers for leftover bland-diet portions and the small bedtime snack used for bilious vomiting. These are prep tools, not treatments. They do not stop vomiting, they do not replace fasting or veterinary examination, and they do not treat GDV, obstruction, pancreatitis, or parvovirus. Anti-nausea medication (Cerenia / maropitant and similar), prescription GI diets (Hill&apos;s i/d, Royal Canin Gastrointestinal, and similar), probiotics, and plain canned pumpkin stay educational copy only — probiotics and pumpkin stay on the sister <a href="/health/dog-diarrhea">dog diarrhea</a> page. Slow-feeder bowls stay on <a href="/health/dog-obesity">dog obesity</a>. Bailey chairs and upright feeding chairs stay on <a href="/health/megaesophagus">megaesophagus</a>. Elevated bowls stay off this page.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/mini+rice+cooker?s=health-dog-vomiting", "/go/amazon-brand/glass+meal+prep+containers?s=health-dog-vomiting"]} />
 
-          {/* Money path — live amazon-brand search hops (mini
+          {/* Shop note — live amazon-brand search buttons (mini
               rice cooker / glass meal-prep containers). ShopCtas
-              hides empty Chewy; never href="#" or PLACEHOLDER.
-              Category searches only. Anti-nausea Rx, prescription
+              hides empty Chewy; never href="#" or an empty link.
+              Amazon searches only. Anti-nausea Rx, prescription
               GI diets, probiotics, pumpkin, slow-feeders,
               elevated bowls, and Bailey chairs are not
-              shoppable hops. */}
+              shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

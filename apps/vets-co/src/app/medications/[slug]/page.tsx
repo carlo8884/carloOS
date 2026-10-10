@@ -10,7 +10,6 @@ import {
   combineSchemas,
   SchemaScript,
   CrossPortfolioCard,
-  AffiliateDisclosure
 } from '@carloOS/ui'
 import { Medications, MedicationsBySlug, type Medication } from '../../../data/medications'
 
@@ -162,9 +161,6 @@ export default function MedicationPage({ params }: PageProps) {
 
         {/* TL;DR */}
         <section className="bg-brand-surface border border-brand-border rounded-xl p-6 mb-8 not-prose">
-          <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-2">
-            TL;DR
-          </div>
           <p className="text-brand-text-mid leading-relaxed m-0">{tldr(m)}</p>
         </section>
 
@@ -398,12 +394,11 @@ export default function MedicationPage({ params }: PageProps) {
           </p>
         </section>
 
-        {/* Money path — live amazon-brand kitchen hops
+        {/* Shop note — live amazon-brand kitchen buttons
             matching on-page uses / side-effects /
             monitoring / FDA-CVM-Plumb's copy. Unique vs
             the medications hub kitchen. Educational
             only — never a dose, never an Rx product. */}
-        <AffiliateDisclosure variant="inline" siteId="vets-co" />
 
         {/* Cross-portfolio recommendations */}
         <div className="not-prose mt-10">

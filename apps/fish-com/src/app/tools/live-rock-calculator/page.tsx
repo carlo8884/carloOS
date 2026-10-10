@@ -77,7 +77,7 @@ export default function LiveRockPage() {
       siteId="fish-com"
       hero={{
         title: 'Live Rock Pounds per Gallon',
-        subtitle: 'The saltwater setup page’s 1–1.5 pounds of live rock per gallon.',
+        subtitle: 'Planning range from this site’s saltwater setup page: 1–1.5 pounds of live rock per gallon, not a published reef standard.',
         category: 'Tools',
         categoryHref: '/tools',
         publishedAt: 'October 2026',

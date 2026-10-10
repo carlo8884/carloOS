@@ -1,0 +1,471 @@
+#!/usr/bin/env node
+/**
+ * Required CI check: internal or generated shop voice must not
+ * appear in customer-facing copy on the five earning sites
+ * (dog-com, fish-com, horses-com, vets-co, ferret-com).
+ *
+ * The phrases are the ones removed in Rounds 204–209: inventory
+ * asides ("already live on", "does not hop", "(those live on …)"),
+ * hop numbers (#1168), TL;DR labels, slug-shaped shop labels
+ * ("Deductibles-reimbursement kit", "Shop the visit-cadence kit"),
+ * "not a … hop" / "not a reason to hop" asides, any other
+ * customer-facing "hop" or "hops" that means an affiliate link
+ * ("The hop below", "never hops", "not shoppable hops"), shop
+ * or dev jargon (ASIN, category search, SKU, slug, query,
+ * affiliate ID, partner held, partner ID, "tag needed", placeholder,
+ * shoppable, internal
+ * redirect, invented inventory), the owner's name, handle, or
+ * Gmail address, and visible stub text (TODO, FIXME, lorem,
+ * placeholder). Real-word uses stay on the
+ * allowlist: three-legged hop, war-dance hop, treat hopper, a horse
+ * that "will not bear weight on a limb, hops,", pinned ears, mucosal
+ * or racing integrity, and breed, microchip, or OFA registries.
+ *
+ * Comments, imports, code identifiers, (funnels), and components/visual
+ * are not customer copy.
+ * Exit 0 if clean, 1 if any forbidden phrase appears.
+ */
+import { readFileSync, readdirSync } from 'node:fs'
+import { join } from 'node:path'
+import { pathToFileURL } from 'node:url'
+
+export const SITES = ['dog-com', 'fish-com', 'horses-com', 'vets-co', 'ferret-com']
+
+/**
+ * Internal wording for a held partner. A held row shows the retailer or
+ * brand name with no link, never these phrases. Shared with the built-HTML
+ * scan in held-partner-hrefs.mjs.
+ */
+export const HELD_COPY_PATTERN =
+  /\bpartner[- ]IDs?\b|\b(?:partner|tag|ID|affiliate)\s+(?:is\s+)?needed\b|\b(?:partner|vendor|retailer|affiliate)\s+tags?\b|\b(?:ID|tag)\s+is\s+(?:set|unset|missing)\b|\bpartner\s+(?:is\s+)?held\b|\bheld\s+partners?\b|\bstays ready for when\b/i
+
+export const RULES = [
+  { id: 'already-live', pattern: /already lives? on/i, reason: 'Internal inventory aside ("already live on")' },
+  { id: 'does-not-hop', pattern: /does not hop/i, reason: 'Internal hop aside ("does not hop")' },
+  { id: 'lives-on', pattern: /\((?:that|those) lives? on/i, reason: 'Internal page-slug aside ("(those live on …)")' },
+  { id: 'hop-number', pattern: /#1\d{3}(?!\d)/, reason: 'Internal hop number (#1168)' },
+  { id: 'tldr', pattern: /TL;DR/i, reason: 'Generated label (TL;DR)' },
+  { id: 'not-published', pattern: /Not published on this page/i, reason: 'Internal publishing aside' },
+  { id: 'this-comparison', pattern: /this comparison is/i, reason: 'Generated comparison aside' },
+  { id: 'link-above', pattern: /the link above/i, reason: 'Generated link aside' },
+  { id: 'match-copy', pattern: /that match the\s+.{0,220}?copy/i, reason: 'Generated "match the … copy" shop voice' },
+  { id: 'on-page-copy', pattern: /on-page\s+.{0,80}?copy/i, reason: 'Generated "on-page copy" shop voice' },
+  { id: 'hands-on-testing', pattern: /hands-on testing/i, reason: 'Internal testing aside' },
+  { id: 'slug-kit', pattern: />\s*[A-Za-z0-9]+(?:-[A-Za-z0-9]+)+\s+kit\s*</, reason: 'Slug used as a shop label ("deductibles-reimbursement kit")' },
+  { id: 'shop-slug-kit', pattern: />\s*Shop the\s+[A-Za-z0-9]+(?:-[A-Za-z0-9]+)+\s+kit\s*</i, reason: 'Shop label built from a page slug' },
+  { id: 'not-a-hop', pattern: /not (?:an?|the)\s+(?:(?!\bnot\b)[^.;]){0,200}?\bhop\b/i, reason: 'Internal "not a … hop" aside' },
+  { id: 'reason-to-hop', pattern: /not a reason to hop/i, reason: 'Internal "not a reason to hop" aside' },
+  { id: 'customer-hop', pattern: /\bhops?\b/i, reason: 'Customer-facing "hop" or "hops" outside the real-word allowlist' },
+  {
+    id: 'shop-jargon',
+    pattern: /\bASINs?\b|\bcategory[- ]searches?\b|\bSKUs?\b|\bslugs?\b|\bquer(?:y|ies)\b|\bquery strings?\b|\baffiliate IDs?\b|\b(?:partner held|held partners?)\b|\bpinned\b|\bintegrity\b|\bregistr(?:y|ies)\b|\bshoppable\b|\bplaceholders?\b|\binternal redirects?\b|\binvented inventory\b|\bon-page\b|\[sku\]/i,
+    reason: 'Shop or dev jargon outside the real-word allowlist',
+  },
+  {
+    id: 'held-partner-copy',
+    pattern: HELD_COPY_PATTERN,
+    reason: 'Internal held-partner wording ("partner ID", "tag needed", "until … is set") in customer copy',
+  },
+  {
+    id: 'shop-cta',
+    pattern: /\bCTAs?\b/,
+    reason: 'Customer-facing "CTA" label',
+  },
+  {
+    id: 'owner-identity',
+    pattern: /\bCarlo\b|\bcarlo8884\b|(?<![A-Za-z])gmail\.com/i,
+    reason: 'Owner name, handle, or Gmail address in customer copy',
+  },
+  {
+    id: 'stub-copy',
+    pattern: /\b(?:TODO|FIXME|lorem|placeholders?)\b/i,
+    reason: 'Visible stub text (TODO, FIXME, lorem, or placeholder)',
+  },
+]
+
+export function stripComments(src) {
+  return src
+    .replace(/\{\/\*[\s\S]*?\*\/\}/g, ' ')
+    .replace(/\/\*[\s\S]*?\*\//g, ' ')
+    .replace(/(^|[^:"'`])\/\/[^\n]*/gm, '$1')
+}
+
+/** Apostrophe entities hide the semicolon from clause scanners. */
+export function decodeEntities(src) {
+  return src.replace(/&(?:apos|rsquo|lsquo|#39);/g, "'")
+}
+
+/** Real words and gait, not affiliate links. */
+export const HOP_ALLOWLIST = [
+  /\bthree-legged hops?\b/gi,
+  /\bwar-dance hops?\b/gi,
+  /\btreat hoppers?\b/gi,
+  /will not bear weight on a limb, hops,/gi,
+]
+
+/** Visible copy with code identifiers and the real-word allowlist removed. */
+export function customerHopHay(src) {
+  let s = decodeEntities(stripComments(src))
+  s = s.replace(/^\s*import\b[^\n]*/gm, ' ')
+  s = s.replace(/[?&]hop=/g, ' ')
+  s = s.replace(/\baffiliate-hop\b/g, ' ')
+  s = s.replace(/\bdata-[\w-]*hop\w*/gi, ' ')
+  s = s.replace(/\bHop[A-Z]\w*/g, ' ')
+  s = s.replace(/\b(?:pick|next|shop|primary|resource)Hop\b/g, ' ')
+  s = s.replace(/\bhop\s*\??\s*:/g, ' ')
+  s = s.replace(/\bhop\s*=\s*\{/g, ' ')
+  s = s.replace(/\{\s*hop\s*\}/g, ' ')
+  s = s.replace(/\bhop\b(?=\s*[,})])/g, ' ')
+  for (const re of HOP_ALLOWLIST) {
+    re.lastIndex = 0
+    s = s.replace(re, ' ')
+  }
+  return s.replace(/\s+/g, ' ')
+}
+
+function blank(src, re) {
+  re.lastIndex = 0
+  return src.replace(re, ' ')
+}
+
+/** Ears, play, and restraint — not a pinned product. */
+export const PINNED_ALLOWLIST = [
+  /\bpinned(?:,\s*or\s+rotated|\s+flat|\s+ears|\s+against|\s+too\s+hard|\s+painfully)\b/gi,
+  /\b(?:not|being|or|and)\s+pinned\b/gi,
+  /\bears\s+pinned\b/gi,
+  /\bPinned\s+ears\b/g,
+]
+
+/** Editorial, mucosal, and racing integrity — not a formula check. */
+export const INTEGRITY_ALLOWLIST = [
+  /\beditorial-integrity\b/gi,
+  /\bmucosal integrity\b/gi,
+  /\bHorseracing Integrity(?: and Safety (?:Act|Authority))?\b/g,
+  /\bintegrity (?:reforms|rules|standards|processes|programs|and welfare|and safety|of competition|of every race|of a result|of the race|in medication)\b/gi,
+  /\b(?:point of integrity|Integrity Reforms)\b/g,
+  /\b(?:protect|upholds?|guard) the integrity\b/gi,
+  /\bthe integrity (?:that|of|and)\b/gi,
+  /\bintegrity of (?:competition|every race|a result|the race)\b/gi,
+  /\bsafety,\s*integrity,\s*and the welfare\b/gi,
+  /\bconsistency and integrity\b/gi,
+  /\bintegrity-[\w-]+/g,
+  /Racing Roles · Integrity/g,
+  /kicker:\s*'Integrity'/g,
+]
+
+/**
+ * Breed, microchip, and health registries — not our carrier notes.
+ * "carrier registry" and "verified registry" stay banned.
+ */
+export const REGISTRY_ALLOWLIST = [
+  /\bbreed[\s-]+registr(?:y|ies)\b/gi,
+  /\bbreed['’]s\s+registr(?:y|ies)\b/gi,
+  /\bmulti-registry\b/gi,
+  /\bno single registry\b/gi,
+  /\bMulti-registry\b/g,
+  /\bstock-horse registries\b/gi,
+  /\bWarmblood registries\b/gi,
+  /\[\s*'Registry'/g,
+  /\btype Registry\b/g,
+  /\bRegistry\s+type\b/g,
+  /\bregistry\s*:/g,
+  /\.registry\b/g,
+  /\bHealth & Registry\b/g,
+  /\bOFA\b(?:(?!\bregistr(?:y|ies)\b)[\s\S]){0,140}\bregistr(?:y|ies)\b/gi,
+  /\b(?:AQHA|USTA|TWHBEA|Pintabian|CAER)\b(?:(?!\bregistr(?:y|ies)\b)[\s\S]){0,140}\bregistr(?:y|ies)\b/gi,
+  /\b(?:Jockey Club|Standardbred|Thoroughbred|Warmblood|stud book|Stud Book)\b(?:(?!\bregistr(?:y|ies)\b)[\s\S]){0,100}\bregistr(?:y|ies)\b/gi,
+  /\b(?:microchip|implant)\b(?:(?!\bregistr(?:y|ies)\b)[\s\S]){0,100}\bregistr(?:y|ies)\b/gi,
+  /\bchip\b(?:(?!\bregistr(?:y|ies)\b)[\s\S]){0,90}\bregistr(?:y|ies)\b/gi,
+  /\bregistr(?:y|ies)\b(?:(?!\.)[\s\S]){0,60}\b(?:database|record|fees|implant|information)\b/gi,
+  /\b(?:which|its|an out-of-date|major)\s+registr(?:y|ies)\b/gi,
+  /\b(?:contact|Identify|identify|claim) the registry\b/gi,
+  /\b(?:in|to|a|the) registry\b/gi,
+  /\bregistry (?:data|database|fees|record|information|implant)\b/gi,
+  /\bveterinary board(?: public)? registr(?:y|ies)\b/gi,
+  /\b(?:closed|clear-eyed|single-breed|largest equine|largest single-breed|formalized|own|racing-only)\s+registry\b/gi,
+  /\brules and registry\b/gi,
+  /\bU\.S\. — registry\b/g,
+  /\bbreeds\s*—\s*registry\b/gi,
+  /\([^)\n]{0,48}\)\s*registr(?:y|ies)\b/gi,
+  /\bRegistries differ\b/g,
+  /\bmost registry\b/gi,
+  /\bof the registry\b/gi,
+  /\bNone \(registry\b/g,
+  /\bSlug bait\b/g,
+]
+
+/** Visible copy with code identifiers and real-word uses removed. */
+export function customerJargonHay(src) {
+  let s = decodeEntities(stripComments(src))
+  s = s.replace(/^\s*import\b[^\n]*/gm, ' ')
+  const code = [
+    /\bslugs?\s*:/g,
+    /\.slugs?\b/g,
+    /\$\{[^}\n]*\bslugs?\b[^}\n]*\}/g,
+    /\[slugs?\]/g,
+    /\{\s*slugs?\s*\}/g,
+    /\(\s*slugs?\s*\)/g,
+    /\bslugs?\s*[,)=]/g,
+    /[,=(]\s*slugs?\b/g,
+    /\bslugs?\s*(?:===|!==|=>|\?)/g,
+    /\?\s*slugs?\b/g,
+    /\bslugs?\s*\|/g,
+    /\|\s*slugs?\b/g,
+    /\bslugs?\s+as\b/g,
+    /\bas\s+slugs?\b/g,
+    /\bof\s+slugs?\b/g,
+    /\bconst\s+slugs?\b/g,
+    /\bSLUGS?\b/g,
+    /`[^`]*\bslugs?\b[^`]*`/g,
+    /\bskus?\s*:/gi,
+    /\.skus?\b/gi,
+    /\{[^}\n]*\.sku[^}\n]*\}/gi,
+    /\b(?:const|let|return|function)\s+query\b/g,
+    /\bquery\s*[:=,)}\]`?]/g,
+    /\bquery\.(?=[A-Za-z])/g,
+    /[({[,]\s*query\b/g,
+    /\.query\b/g,
+    /\bplaceholders?\s*=/gi,
+    /\bplaceholders?\s*\?:/gi,
+    /\{\s*placeholders?\s*\}/gi,
+    /\bplaceholders?\b(?=\s*[,)])/gi,
+    /[?&]hop=PLACEHOLDER/g,
+    /\bschema\s*=/g,
+    /\{schema\}/g,
+    /\bsource\s*=\s*["'][^"']*["']/g,
+    /\bpartnerQuoteHeld\b/g,
+    /\baffiliateAngle\b/g,
+  ]
+  for (const re of code) s = blank(s, re)
+  for (const re of [...PINNED_ALLOWLIST, ...INTEGRITY_ALLOWLIST, ...REGISTRY_ALLOWLIST]) s = blank(s, re)
+  return s
+}
+
+/** Visible copy with the Monte Carlo aquarium plant removed. */
+export function customerOwnerHay(src) {
+  return decodeEntities(stripComments(src)).replace(/\bmonte carlo\b/gi, ' ')
+}
+
+export function scanSource(src) {
+  const visible = stripComments(src)
+  const flat = decodeEntities(visible).replace(/\s+/g, ' ')
+  const hits = []
+  for (const rule of RULES) {
+    const hay = rule.id === 'customer-hop'
+      ? customerHopHay(src)
+      : rule.id === 'shop-jargon' || rule.id === 'shop-cta' || rule.id === 'stub-copy'
+        ? customerJargonHay(src)
+        : rule.id === 'owner-identity'
+          ? customerOwnerHay(src)
+          : rule.id === 'slug-kit' || rule.id === 'shop-slug-kit'
+            ? visible
+            : flat
+    if (rule.pattern.test(hay)) {
+      const match = hay.match(rule.pattern)
+      hits.push({
+        id: rule.id,
+        reason: rule.reason,
+        snippet: (match ? match[0] : '').replace(/\s+/g, ' ').slice(0, 140),
+      })
+    }
+  }
+  return hits
+}
+
+/** Known-bad samples must fail. Known-good samples must pass. */
+export function selfCheck() {
+  const bad = [
+    'Those treats already live on the other guide.',
+    'The scale already lives on dog.com.',
+    'This page does not hop medications.',
+    'It is not a legal pad (that lives on how-to-afford-vet-care).',
+    'They are not fly boots (those live on fly-control).',
+    'They are not a #1170 divider hop.',
+    'TL;DR. Figo is listed first.',
+    'Not published on this page.',
+    'This comparison is a planning table.',
+    'Use the link above.',
+    'notes that match the forage copy on this page',
+    'searches match the on-page deductible copy',
+    'This page does not claim hands-on testing.',
+    '<h2 id="kit">Deductibles-reimbursement kit</h2>',
+    '<div>Shop the visit-cadence kit</div>',
+    'A preset heater is sized for a nano — it is not an Eheim Jager hop.',
+    'Mapping a flinch is an observation, not a reason to hop a grooming glove.',
+    'It is not a Hill&apos;s w/d or Royal Canin Diabetic hop.',
+    'The hop below is the same wire crate already on this page.',
+    'Same dental-chew hop used on the dental review.',
+    'This page never hops medications.',
+    'Clinic prescriptions are not shoppable hops.',
+    'Water additives and brand ASINs stay educational copy only.',
+    'Shoppable weight-check kit via Amazon category searches.',
+    'Calming chews are a category search, not a ranked SKU.',
+    'The button below is the same search, not a new query.',
+    'Each priority maps to a published attribute in our carrier registry.',
+    'The verified registry marks Lemonade for younger pets.',
+    'These are placeholder listings — not real practices.',
+    'Clicking a link routes through our internal redirect.',
+    'Every affiliate link routes through /go/[vendor]/[sku].',
+    'Not invented inventory.',
+    'The affiliate ID is on the hop.',
+    'Quotes stay partner held until the inbox is live.',
+    'Pass the query string through to the retailer.',
+    'The page slug is not a label.',
+    'Real CTA wires when the directory loads.',
+    'Real listings will populate after Carlo selects a verified data source.',
+    'Write the editor at owner@gmail.com about this page.',
+    'The note is signed carlo8884.',
+    'TODO: replace this sentence before launch.',
+    'FIXME the dosage line.',
+    'lorem ipsum dolor sit amet, sample body copy.',
+    'The button href is PLACEHOLDER.',
+    'SmartPak Cosequin — partner ID needed',
+    'partner ID needed',
+    'Check price at Wysong stays ready for when the Wysong partner ID is set.',
+    'The visit link stays off until that tag is set.',
+    'Tag needed',
+  ]
+  const good = [
+    'Pack a pet first-aid kit for the clinic ride.',
+    'Then shop the day-one kit.',
+    'The written emergency plan that lives on the tack-room wall.',
+    'A <strong>H</strong>urt score for pain.',
+    'Shop these supplies',
+    '<h2 id="kit">Supplies named on this page</h2>',
+    'The button below opens the same wire crate search on Amazon.',
+    'The same dental-chew button is on the dental review.',
+    'An apple wedger is how carrots go in as sticks — it is not a treat hopper.',
+    'Skipping or three-legged hop',
+    'A sideways war-dance hop that signals play.',
+    'A horse that will not bear weight on a limb, hops, or is suspected of a fracture is an emergency.',
+    'hop?: ReactNode',
+    '{hop}',
+    'import { x } from "./affiliate-hop"',
+    'data-primary-hop="1"',
+    'https://example.com/?hop=PLACEHOLDER',
+    '{/* The hop below stays in a comment */}\n<p>Pack a first-aid kit.</p>',
+    'Baking soda is a grocery bicarbonate.',
+    'Ears flattened, pinned, or rotated tightly back.',
+    'Pinned ears and a tight eye are on the horse grimace scale.',
+    'One ferret is being pinned against its will.',
+    'Our editorial-integrity contract controls recommendations.',
+    'Early feeding supports mucosal integrity.',
+    'The Horseracing Integrity and Safety Act established a federal authority.',
+    'Stewards protect the integrity of every race.',
+    'Common in Labradors per OFA registry data.',
+    'Assembled from veterinary references and breed registries.',
+    'The number must be linked to your address in a registry.',
+    'A registered microchip is not a registry implant.',
+    'Some links on this page are affiliate links.',
+    'placeholder="e.g. 2"',
+    "slug: 'labrador'",
+    '{schema}',
+    'const query = firstQuery(searchParams?.q)',
+    'sku: "epigen-90"',
+    '{/* Carlo review stays in a comment */}\n<p>Pack a first-aid kit.</p>',
+    'import type { SiteId } from "@carloOS/config"',
+    'className="carloOS-article"',
+    'Email editorial@dog.com with the page address.',
+    'dogmail.com stays a domain name.',
+    'Carpets include dwarf hairgrass and monte carlo.',
+    'Available from SmartPak',
+    'Available from the brand',
+    'holdWithoutPartnerId={true}',
+    'Ear tag and microchip are both permanent ID.',
+  ]
+  const errors = []
+  for (const sample of bad) {
+    if (scanSource(sample).length === 0) errors.push(`missed bad sample: ${sample}`)
+  }
+  for (const sample of good) {
+    const hits = scanSource(sample)
+    if (hits.length) errors.push(`flagged good sample (${hits.map((h) => h.id).join(', ')}): ${sample}`)
+  }
+  return errors
+}
+
+function walk(dir, out = []) {
+  for (const e of readdirSync(dir, { withFileTypes: true })) {
+    const p = join(dir, e.name)
+    if (e.isDirectory()) {
+      if (['node_modules', '.next', '.turbo', '(funnels)', 'visual'].includes(e.name)) continue
+      walk(p, out)
+    } else if (/\.tsx?$/.test(e.name)) {
+      out.push(p)
+    }
+  }
+  return out
+}
+
+function main() {
+  const fixtureErrors = selfCheck()
+  if (fixtureErrors.length) {
+    console.error('FAIL: internal-voice self-check')
+    for (const err of fixtureErrors) console.error(`  ${err}`)
+    process.exit(1)
+  }
+
+  const root = process.cwd()
+  const files = []
+  for (const site of SITES) walk(join(root, 'apps', site, 'src'), files)
+
+  const hits = []
+  const bySite = Object.fromEntries(SITES.map((site) => [site, 0]))
+  for (const file of files) {
+    const rel = file.replace(root + '/', '')
+    // Other rules stay on TSX. TS data and route modules are scanned for
+    // customer-facing hop/hops only, so a blurb in a .ts file cannot hide.
+    let found = scanSource(readFileSync(file, 'utf8'))
+    if (file.endsWith('.ts')) {
+      found = found.filter((hit) =>
+        hit.id === 'customer-hop' ||
+        hit.id === 'shop-jargon' ||
+        hit.id === 'shop-cta' ||
+        hit.id === 'owner-identity' ||
+        hit.id === 'stub-copy')
+    }
+    if (/\/(?:dashboard|admin)\//.test(rel) || rel.endsWith('/affiliate-routes.ts')) {
+      found = found.filter((hit) =>
+        hit.id !== 'shop-jargon' &&
+        hit.id !== 'shop-cta' &&
+        hit.id !== 'owner-identity' &&
+        hit.id !== 'stub-copy')
+    }
+    const site = SITES.find((s) => rel.startsWith(`apps/${s}/`))
+    if (found.length && site) bySite[site] += found.length
+    for (const hit of found) hits.push({ file: rel, ...hit })
+  }
+
+  // Shared components render held-partner rows on every site. Only the
+  // held-partner wording rule applies there; other rules stay on app copy.
+  const shared = []
+  walk(join(root, 'packages', 'ui', 'src'), shared)
+  walk(join(root, 'packages', 'config'), shared)
+  for (const file of shared) {
+    if (/\.test\.tsx?$/.test(file)) continue
+    const rel = file.replace(root + '/', '')
+    for (const hit of scanSource(readFileSync(file, 'utf8'))) {
+      if (hit.id === 'held-partner-copy') hits.push({ file: rel, ...hit })
+    }
+  }
+
+  if (hits.length) {
+    console.log(`## Internal voice: ${hits.length} hit${hits.length === 1 ? '' : 's'}\n`)
+    for (const h of hits) {
+      console.log(`${h.file}`)
+      console.log(`  reason: ${h.reason}`)
+      console.log(`  line:   ${h.snippet}`)
+      console.log()
+    }
+    console.error(`FAIL: ${hits.length} internal-voice phrase(s).`)
+    process.exit(1)
+  }
+
+  console.log('## Internal voice: clean')
+  console.log(`\nPASS: scanned ${files.length} customer-facing TS/TSX files on the five earning sites and ${shared.length} shared package files; 0 hits.`)
+  console.log('Per site:', JSON.stringify(bySite))
+}
+
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
+  main()
+}

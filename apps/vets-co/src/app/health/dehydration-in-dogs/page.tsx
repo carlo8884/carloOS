@@ -1,11 +1,11 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, ShopCtas, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Dehydration in Dogs — Signs, Skin Turgor Test | Vets.co', description: 'How to assess dehydration in dogs using the skin turgor test and gum assessment. When dehydration is mild (oral fluids OK) vs severe (IV fluids needed).', path: '/health/dehydration-in-dogs', type: 'article' })
 const SOURCES = [
-  { label: 'Merck Veterinary Manual: Fluid Therapy in Small Animals', url: 'https://www.merckvetmanual.com/emergency-medicine-and-critical-care/fluid-therapy/fluid-therapy-in-small-animals', publisher: 'Merck Vet Manual' },
-  { label: 'AVMA: Dehydration in Pets', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/dehydration-pets', publisher: 'AVMA' },
+  { label: 'Merck Veterinary Manual: Fluid Therapy in Small Animals', url: 'https://www.merckvetmanual.com/therapeutics/fluid-therapy/fluid-therapy-in-animals', publisher: 'Merck Vet Manual' },
   { label: 'AAHA: Emergency and Critical Care Guidelines', url: 'https://www.aaha.org/aaha-guidelines/emergency-and-critical-care/', publisher: 'AAHA' },
 ]
 const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Dehydration in Dogs', description: 'Signs, skin turgor test, and IV fluids decision guide for dog dehydration.', url: 'https://vets.co/health/dehydration-in-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-09-05T00:00:00Z' ,
@@ -44,6 +44,7 @@ export default function DehydrationPage() {
         <div className="carloOS-article">
 
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-09-05T00:00:00Z" reviewedBy="Editorial team" />
+          <LastUpdated date="2026-10-09" />
 
           <h2>The Skin Turgor Test</h2>
           <p>The skin turgor test assesses skin elasticity — dehydration reduces skin elasticity as fluid is lost from subcutaneous tissues. Technique: grasp a fold of skin on the back of the neck or between the shoulder blades. Gently lift and then release. In a well-hydrated dog, the skin snaps back immediately to its normal position. In a dehydrated dog, the skin returns slowly ("tenting") or remains raised for a moment before settling. The slower the return, the more significant the dehydration.</p>
@@ -62,38 +63,18 @@ export default function DehydrationPage() {
           <p>In-clinic IV fluid therapy (Lactated Ringer's solution, 0.9% NaCl, or Plasmalyte depending on the electrolyte status) corrects dehydration rapidly and allows monitoring of the response. The fluid type, rate, and volume are calculated by the veterinarian based on the degree of dehydration, bodyweight, and concurrent conditions. Most moderately dehydrated dogs respond well to several hours of IV fluids and can go home the same day.</p>
           <p>Subcutaneous (under-the-skin) fluid therapy is a technique some veterinarians teach owners of dogs with chronic conditions (kidney disease, diabetes) that require regular fluid supplementation. It is not appropriate for acute significant dehydration but is valuable for preventing dehydration in dogs with chronic water regulation problems.</p>
 
-          <h2 id="kit">Home-sip kit</h2>
+          <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Everyday physical supplies that match the
-            mild-case oral-fluid copy on this page — an
-            unflavored pediatric electrolyte to dilute
-            50/50 with water, a kitchen liquid-measuring
-            pitcher for that mix, and a shallow lipped
-            dog saucer for frequent small sips. These are
-            household tools, not treatments. They do not
-            treat moderate or severe dehydration, they do
-            not replace a veterinarian, and they are not
-            Pedialyte brand ASINs, IV fluid bags, SQ
-            giving sets, Lactated Ringer&rsquo;s, or 0.9%
-            NaCl. This is not the UTI page and it does
-            not hop a stainless-steel fountain, washable
-            pee pad, or weighted ceramic bowl. It is not
-            the dog water-intake calculator and it does
-            not hop a ceramic pet bowl, dog water
-            fountain, travel bottle, or kitchen measuring
-            cup. It is not the heat-stroke page and it
-            does not hop cool-water towels or a
-            thermometer. This page does not claim
-            hands-on testing.
+            Keep these on hand: an unflavored pediatric electrolyte to dilute 50/50 with water, a kitchen liquid-measuring pitcher for that mix, and a shallow lipped dog saucer for frequent small sips. These are household tools, not treatments. They do not treat moderate or severe dehydration, they do not replace a veterinarian, and they are not Pedialyte product pages, IV fluid bags, SQ giving sets, Lactated Ringer&rsquo;s, or 0.9% NaCl.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/unflavored+pediatric+electrolyte?s=health-dehydration-in-dogs", "/go/amazon-brand/kitchen+liquid+measuring+pitcher?s=health-dehydration-in-dogs", "/go/amazon-brand/shallow+lipped+dog+saucer?s=health-dehydration-in-dogs"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (unflavored pediatric electrolyte / kitchen
               liquid-measuring pitcher / shallow lipped dog
               saucer). ShopCtas hides empty Chewy; never
-              href="#" or PLACEHOLDER. Category searches only
+              href="#" or an empty link. Amazon searches only
               — unused vs #848–#1037 dog+water+fountain,
               stainless+steel+dog+fountain,
               heavy+ceramic+pet+water+bowl,
@@ -102,7 +83,7 @@ export default function DehydrationPage() {
               washable+dog+pee+pads, horse+electrolytes,
               ferret+electrolytes+recovery+food, and
               cool+water+towels. IV / SQ fluids and Pedialyte
-              brand ASINs are not shoppable hops. */}
+              named brands are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

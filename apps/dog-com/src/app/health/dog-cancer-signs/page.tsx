@@ -1,15 +1,16 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 
 const SOURCES = [
+  { label: 'Merck Veterinary Manual: Tumors of the Skin in Dogs', url: 'https://www.merckvetmanual.com/dog-owners/skin-disorders-of-dogs/tumors-of-the-skin-in-dogs', publisher: 'Merck Vet Manual' },
   { label: 'Morris Animal Foundation: Golden Retriever Lifetime Study — Cancer Prevalence', url: 'https://www.morrisanimalfoundation.org/golden-retriever-lifetime-study', publisher: 'Morris Animal Foundation' },
-  { label: 'AVMA: Cancer in Animals — Warning Signs and Risk Factors', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/cancer-animals', publisher: 'AVMA' },
+  { label: 'AVMA: Cancer in Animals — Warning Signs and Risk Factors', url: 'https://www.avma.org/resources/pet-owners/petcare/cancer-pets', publisher: 'AVMA' },
   { label: 'American College of Veterinary Internal Medicine (ACVIM): Oncology — Canine Cancer Resources', url: 'https://www.acvim.org/resources-tools/animal-owners', publisher: 'ACVIM Oncology' },
-  { label: 'Merck Veterinary Manual: Overview of Tumors of the Skin and Soft Tissues in Dogs', url: 'https://www.merckvetmanual.com/integumentary-system/tumors-of-the-skin-and-soft-tissues-in-dogs-and-cats', publisher: 'Merck Vet Manual' },
 ]
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: '12 Warning Signs of Cancer in Dogs — Early Detection Guide | Dog.com', description: '12 cancer warning signs in dogs. Lumps that need aspiration, unexplained weight loss, and bleeding from body openings are the most critical early signals.', path: '/health/dog-cancer-signs', type: 'article' })
@@ -81,58 +82,15 @@ export default function DogCancerSignsPage() {
 
           <h2 id="kit">A Simple Cancer-Signs Early-Detection Kit</h2>
           <p>
-            Three everyday physical supplies match the
-            lymph-node palpation, unexplained-weight-loss,
-            and oral-examination copy above: a silicone dog
-            grooming glove so a weekly coat-and-node check
-            can feel the nodes under the jaw, in front of
-            the shoulders, in the groin, and behind the
-            knees plus any new lump or bump — do not take a
-            wait-and-see approach; fine needle aspiration
-            is what identifies the cell type — an analog
-            bathroom scale so progressive weight loss not
-            explained by reduced calorie intake can be
-            logged between wellness exams (hold-to-weigh
-            the dog; unintended loss of more than 10% of
-            body weight warrants investigation), and a dog
-            dental finger brush so a weekly lip-lift can
-            catch oral odor from tissue necrosis, difficulty
-            eating or swallowing, or a visible oral mass
-            (melanoma, squamous cell carcinoma, fibrosarcoma)
-            before the next appointment. These are household
-            early-detection tools, not treatments. They do
-            not diagnose cancer, they do not replace fine
-            needle aspiration, they do not replace lymph
-            node palpation, abdominal palpation, or oral
-            examination by a veterinarian, they do not
-            treat lymphoma, hemangiosarcoma, osteosarcoma,
-            or mast cell tumors, and they are not
-            chemotherapy, Tanovea, or a ranked oncology
-            product list. Resting respiratory rate
-            notebooks, one-minute kitchen timers, step-in
-            padded dog harnesses, pet medical records
-            binders, AM/PM weekly pill organizers, digital
-            hanging luggage scales, LED medical penlights,
-            pet emergency contact cards, folding pet
-            stretchers, vaccination record books, seat-belt
-            tethers, foldable waterproof puppy mats,
-            mosquito dunks, a monthly pill organizer, a
-            soft-sided vet-visit carrier, a gum-color
-            assessment chart, recovery food, a feeding
-            syringe, digital pet scales, digital puppy
-            scales, kitchen gram scales, portion-control
-            food scales, hanging luggage scales, and
-            high-value vet-visit treats already live on
-            other pages. This page does not claim
-            hands-on testing. </p>
+            Keep these on hand: do not take a wait-and-see approach; fine needle aspiration is what identifies the cell type — an analog bathroom scale so progressive weight loss not explained by reduced calorie intake can be logged between wellness exams (hold-to-weigh the dog; unintended loss of more than 10% of body weight warrants investigation), and a dog dental finger brush so a weekly lip-lift can catch oral odor from tissue necrosis, difficulty eating or swallowing, or a visible oral mass (melanoma, squamous cell carcinoma, fibrosarcoma) before the next appointment. These are household early-detection tools, not treatments. They do not diagnose cancer, they do not replace fine needle aspiration, they do not replace lymph node palpation, abdominal palpation, or oral examination by a veterinarian, they do not treat lymphoma, hemangiosarcoma, osteosarcoma, or mast cell tumors, and they are not chemotherapy, Tanovea, or a ranked oncology product list. </p>
 
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/silicone+dog+grooming+glove?s=health-dog-cancer-signs", "/go/amazon-brand/analog+bathroom+scale?s=health-dog-cancer-signs", "/go/amazon-brand/dog+dental+finger+brush?s=health-dog-cancer-signs"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (silicone dog grooming glove / analog
               bathroom scale / dog dental finger brush).
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or an empty link. Amazon searches only —
               unused vs #1047 resting respiratory rate
               notebook / one-minute kitchen timer /
               step-in padded dog harness, #1046 pet
@@ -157,8 +115,8 @@ export default function DogCancerSignsPage() {
               digital pet thermometers, and
               soft+dog+carrier / soft+pet+carrier.
               Chemotherapy, Tanovea, Hill's / Royal
-              Canin oncology diets, and Rx ASINs are
-              not shoppable hops. */}
+              Canin oncology diets, and prescription brands are
+              not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import {
   buildMetadata,
@@ -5,7 +6,6 @@ import {
   RelatedLinks,
   CrossPortfolioCard,
   ArticleByline,
-  AffiliateDisclosure,
   ShopCtas,
 } from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
@@ -146,7 +146,6 @@ export default function ResourceGuardingPage() {
             before biting is more dangerous than the dog that growls first. Punishing the behavior
             without changing the emotional trigger creates a dog that bites without warning.
           </p>
-          
 
           <h2>Assessing Severity</h2>
           <p>
@@ -192,7 +191,6 @@ export default function ResourceGuardingPage() {
               practice the trade game to ensure the behavior generalizes.
             </li>
           </ol>
-          
 
           <h2>Management During Training</h2>
           <p>
@@ -202,14 +200,6 @@ export default function ResourceGuardingPage() {
             gates to separate guarding contexts. Management is not a substitute for training, but it
             prevents practice of the guarding behavior during the training period.
           </p>
-          <p>
-            A dog food-bowl safety question card is how feed-the-dog-in-a-separate-room,
-            pick-up-high-value-chews-when-guests-arrive, and baby-gates-to-separate-guarding-contexts
-            stay posted — it is not a single stainless floor dog bowl (that lives on dog-bloat-gvd),
-            not a heavy ceramic pet food bowl (that lives on ferret toxic-foods), not a slow-feeder
-            dog bowl (that lives on dog-obesity / calorie-calculator), not an extra-tall baby gate
-            (that lives on new-puppy-checklist), and not a walk-through pet gate (that lives on
-            pancreatitis). </p>
 
           <h2>When to Get Professional Help</h2>
           <p>
@@ -221,20 +211,8 @@ export default function ResourceGuardingPage() {
             only a veterinary behaviorist can appropriately evaluate and prescribe.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href="/go/amazon-brand/dry+dog+food?s=training-resource-guarding" />
 
-          {/* Shop leftover kit — unused vs #1150
-              laminated+dog+off+leash+recall+proofing+checklist /
-              dog+20+to+30+foot+long+line+question+card /
-              dog+recall+cue+never+punish+watch+log+notebook, #1149
-              laminated+horse+snaffle+vs+curb+bit+checklist /
-              horse+bit+width+and+wrinkle+fit+question+card /
-              horse+bit+hand+severity+watch+log+notebook,
-              basic-commands puppy+training+treats / dog+training+clicker / dog+long+line+leash,
-              bloat single+stainless+floor+dog+bowl,
-              obesity / calorie-calculator slow+feeder+dog+bowl,
-              new-puppy extra+tall+baby+gate,
-              pancreatitis walk+through+pet+gate. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
               Shop related supplies
@@ -243,16 +221,9 @@ export default function ResourceGuardingPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/dry+dog+food?s=training-resource-guarding"
-                amazonLabel="Shop on Amazon"
+                amazonLabel="Browse dry dog food on Amazon →"
               />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/dog+food+bowl+safety+question+card?s=training-resource-guarding"
-                amazonLabel="Browse dog food-bowl safety question cards on Amazon →"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/dog+resource+guarding+never+punish+growl+watch+log+notebook?s=training-resource-guarding"
-                amazonLabel="Browse dog resource-guarding never-punish-growl watch log notebooks on Amazon →"
-              />
+
           </div>
           </div>
         </div>

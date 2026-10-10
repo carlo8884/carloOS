@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, ArticleLayout, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, QuietPartnerLink, RelatedLinks, ShopCtas, buildArticleSchema, buildMetadata, ArticleSourcesList, LastUpdated, ComparisonFoot, EmailCapture } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
@@ -13,7 +13,7 @@ export const metadata: Metadata = buildMetadata({
 const schema = buildArticleSchema({
   siteId: 'horses-com',
   title: 'Cosequin ASU Plus or Platinum CJ',
-  description: 'The joint-supplement review already scores Cosequin ASU Plus for the ASU formula and Platinum CJ as the comprehensive tub.',
+  description: 'The joint-supplement review already lists Cosequin ASU Plus for the ASU formula and Platinum CJ as the comprehensive tub.',
   url: 'https://horses.com/reviews/cosequin-vs-platinum-guide',
   imageUrl: '',
   authorName: 'Horses.com Editorial',
@@ -24,11 +24,11 @@ const schema = buildArticleSchema({
 const FAQS = [
   {
     question: 'Which supplement does the joint review mark as the winner?',
-    answer: 'Nutramax Cosequin ASU Plus, scored 8.9 and marked Best Evidence (ASU). The review lists ASU, glucosamine HCl, and chondroitin sulfate, an NASC Quality Seal, and $60–95 per 30-day supply.',
+    answer: 'Nutramax Cosequin ASU Plus, marked Best Evidence (ASU). The review lists ASU, glucosamine HCl, and chondroitin sulfate, an NASC Quality Seal, and $60–95 per 30-day supply.',
   },
   {
     question: 'When does the review point to Platinum Performance CJ?',
-    answer: 'For a performance horse when the owner wants one comprehensive formula. Platinum CJ scores 9.0. It lists glucosamine, chondroitin, MSM, HA, ASU, CMO, and omega-3, at $130–180 per 30-day supply.',
+    answer: 'For a performance horse when the owner wants one comprehensive formula. The current page lists, per 2 scoops, glucosamine sulfate 8,820 mg, MSM 8,200 mg, ASU 2,000 mg, boswellia 1,400 mg, cetyl myristoleate 275 mg, and hyaluronic acid 90 mg. It does not list chondroitin. Omega-3 on that page is flax oil. The printed price is $130–180 per 30-day supply.',
   },
   {
     question: 'Does either product replace joint injections?',
@@ -39,12 +39,12 @@ const FAQS = [
 export default function CosequinVsPlatinumGuidePage() {
   return (
     <ArticleLayout
-      priceAsOf="2026-10-04"
+      priceAsOf="2026-10-09"
       siteId="horses-com"
       schema={schema}
       hero={{
         title: 'Cosequin ASU Plus or Platinum CJ',
-        subtitle: 'An ASU maintenance tub and a comprehensive performance formula are different purchases. Prices and scores below are the ones on the joint-supplement review. No dose is added here.',
+        subtitle: 'An ASU maintenance tub and a comprehensive performance formula are different purchases. Prices below are the ones on the joint-supplement review. No dose is added here.',
         category: 'Buyer guide',
         authorName: 'Horses.com Editorial',
         publishedAt: 'October 2026',
@@ -62,23 +62,82 @@ export default function CosequinVsPlatinumGuidePage() {
             { label: 'Reviews hub', href: '/reviews' },
             { label: 'Joint supplements', href: '/supplements/joint-supplements' },
             { label: 'Best equine supplements', href: '/reviews/best-equine-supplements' },
+            { label: 'Cosequin vs Equithrive', href: '/reviews/cosequin-vs-equithrive-guide' },
           ]}
         />
       }
     >
       <div className="carloOS-article">
-        <p>The <Link href="/supplements/joint-supplements">joint-supplement review</Link> already scores Nutramax Cosequin ASU Plus as the ASU pick and Platinum Performance CJ as the comprehensive pick. Those scores are editorial scores, not shopper star ratings. Milligram amounts are the ones the review already prints.</p>
+          <LastUpdated date="2026-10-10" />
+        <p>The <Link href="/supplements/joint-supplements">joint-supplement review</Link> already lists Nutramax Cosequin ASU Plus as the ASU pick and Platinum Performance CJ as the comprehensive pick. Cosequin milligrams differ by powder and pellets — check the label. Platinum CJ does not list chondroitin.</p>
         <h2>What the review says about Cosequin</h2>
-        <p>Nutramax Cosequin ASU Plus is Best Evidence (ASU), score 8.9, and the winner. The listed actives are ASU, glucosamine HCl, and chondroitin sulfate. NASC Quality Seal is listed as yes, and the review says ingredient amounts are disclosed on the label. The printed price is $60–95 per 30-day supply. It is for maintenance and an early osteoarthritis adjunct. The review says it is not a substitute for intra-articular or systemic medication when that is indicated.</p>
+        <p>Nutramax Cosequin ASU Plus is Best Evidence (ASU) and the winner. The current Cosequin ASU Plus page lists glucosamine, MSM, chondroitin, and ASU plus other ingredients (<a href="https://www.cosequin.com/product/horses/cosequin-asu-plus">Cosequin ASU Plus page</a>). Milligrams differ for powder and pellets — check the label. The initial period is 2–4 weeks. The printed price is $60–95 per 30-day supply.</p>
         <h2>What the review says about Platinum</h2>
-        <p>Platinum Performance CJ is Best Comprehensive, score 9.0. It lists glucosamine, chondroitin, MSM, HA, ASU, CMO, and omega-3 on the wellness-formula base. The printed price is $130–180 per 30-day supply, and the review calls it the premium supplement with the highest typical order value in the category. It is for a performance horse on an integrated supplement plan. The downsides include cost, some Tier 3 ingredients in the formula, and auto-ship lock-in.</p>
+        <p>Platinum Performance CJ is Best Comprehensive. The current page lists, per 2 scoops, glucosamine sulfate 8,820 mg, MSM 8,200 mg, ASU 2,000 mg, boswellia 1,400 mg, cetyl myristoleate 275 mg, and hyaluronic acid 90 mg. It does not list chondroitin. Omega-3 on that page is flax oil. The printed price is $130–180 per 30-day supply.</p>
         <h2>Who should buy which tub</h2>
         <p>Buy Cosequin ASU Plus when the job is the ASU formula with disclosed amounts, at the $60–95 band. Buy Platinum CJ when you want one tub that already stacks the longer ingredient list, and the $130–180 band is acceptable. Neither product is a replacement for veterinary joint treatment.</p>
-        <AffiliateDisclosure variant="inline" siteId="horses-com" />
-        <p>The link below opens the Cosequin ASU Plus page from the joint review. The price there is the retailer's, not a quote from this page.</p>
-        <p><a className="font-semibold text-brand-primary" href="/go/smartpak/cosequin-asu-plus?s=reviews-cosequin-vs-platinum-guide">Compare Cosequin ASU Plus at SmartPak →</a></p>
+        <ShopCtas
+          amazonHref="/go/amazon-brand/cosequin+asu+plus?s=reviews-cosequin-vs-platinum-guide"
+          amazonLabel="Browse Cosequin ASU Plus on Amazon"
+        />
+        <QuietPartnerLink href="/go/smartpak/cosequin-asu-plus?s=reviews-cosequin-vs-platinum-guide" label="Compare Cosequin ASU Plus at SmartPak →" />
+        <div className="my-6 max-w-full min-w-0">
+          <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
+            <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+            <thead>
+              <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
+                <th scope="col" className="p-3 font-bold text-brand-dark">Cosequin ASU Plus</th>
+                <th scope="col" className="p-3 font-bold text-brand-dark">Platinum CJ</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Role</th>
+                <td className="p-3">Best Evidence (ASU), and the winner</td>
+                <td className="p-3">Best Comprehensive</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">What the page lists</th>
+                <td className="p-3">Glucosamine, MSM, chondroitin, and ASU, plus other ingredients. Milligrams differ for powder and pellets</td>
+                <td className="p-3">Per 2 scoops: glucosamine sulfate, MSM, ASU, boswellia, cetyl myristoleate, and hyaluronic acid. No chondroitin</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Also on the page</th>
+                <td className="p-3">Initial period is 2–4 weeks</td>
+                <td className="p-3">Omega-3 on that page is flax oil</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Not a replacement for</th>
+                <td className="p-3">Intra-articular medication when synovitis or active osteoarthritis is documented</td>
+                <td className="p-3">Veterinary joint treatment</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <ComparisonFoot updated="2026-10-10" />
+        <EmailCapture
+          variant="inline"
+          siteId="horses-com"
+          addressOnly
+          title="Shopping checklist"
+          ctaText="Copy checklist"
+          source="reviews-cosequin-vs-platinum-guide"
+          checklist={[
+            "Milligrams differ for powder and pellets — check the label.",
+            "The initial period is 2–4 weeks.",
+            "Platinum CJ does not list chondroitin.",
+            "Omega-3 on that page is flax oil.",
+            "Neither product is a replacement for veterinary joint treatment.",
+          ]}
+        />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
+                <ArticleSourcesList title="Sources"
+            sources={[
+            { label: 'Cosequin ASU Plus', url: 'https://www.cosequin.com/product/horses/cosequin-asu-plus', publisher: 'Cosequin' },
+            ]}
+          />
       </div>
     </ArticleLayout>
   )

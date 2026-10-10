@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -131,21 +132,8 @@ export default function EnduranceRidingPage() {
             <li>Nagy A, et al. Research on endurance horse elimination, metabolism, and recovery, various.</li>
           </ol>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href="/go/amazon-brand/horse+electrolytes?s=discipline-endurance" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated horse vet-gate recovery chart /
-              horse stall-door Tevis 100 card /
-              equine AERC limited-distance handbook).
-              No existing product hop to keep.
-              Educational barn searches only; no Rx /
-              vaccine / flea / heartworm / nsaid hops
-              and no electrolyte kit hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs trail-riding
-              AERC-endurance handbook / western-pleasure
-              hops.
-              Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
@@ -154,7 +142,7 @@ export default function EnduranceRidingPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/horse+electrolytes?s=discipline-endurance"
-                amazonLabel="Shop on Amazon"
+                amazonLabel="Browse horse electrolytes on Amazon →"
               />
           </div>
           </div>

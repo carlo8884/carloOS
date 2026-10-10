@@ -1,11 +1,12 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, RelatedLinks, ShopCtas, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Spay & Neuter — Benefits, Timing | Vets.co', description: 'Spay and neuter benefits, optimal timing, and why the answer is more nuanced for large breeds. Pyometra prevention, cancer risk reduction.', path: '/health/spay-neuter-benefits', type: 'article' })
 const SOURCES = [
   { label: 'AVMA: Spaying and Neutering Your Pet', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/spaying-and-neutering', publisher: 'AVMA' },
-  { label: 'Merck Veterinary Manual: Reproductive Physiology of Dogs', url: 'https://www.merckvetmanual.com/reproductive-system/reproductive-diseases-of-the-female-dog-and-cat/reproductive-physiology-of-the-dog', publisher: 'Merck Vet Manual' },
+  { label: 'Merck Veterinary Manual: Reproductive Physiology of Dogs', url: 'https://www.merckvetmanual.com/dog-owners/reproductive-disorders-of-dogs/management-of-reproduction-in-dogs', publisher: 'Merck Vet Manual' },
   { label: 'Hart BL et al. Front Vet Sci 2020 — Neutering and Health Outcomes', url: 'https://www.frontiersin.org/articles/10.3389/fvets.2020.00388/full', publisher: 'Frontiers in Veterinary Science' },
 ]
 const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Spay & Neuter Guide', description: 'Benefits, timing, and breed-specific considerations for spay and neuter in dogs.', url: 'https://vets.co/health/spay-neuter-benefits', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-09-05T00:00:00Z' ,
@@ -44,6 +45,7 @@ export default function SpayNeuterPage() {
 </>}
       >
         <div className="carloOS-article">
+          <LastUpdated date="2026-10-09" />
 
           <h2>Benefits of Spaying (Females)</h2>
           <p><strong>Pyometra prevention:</strong> Pyometra — life-threatening uterine infection — affects approximately 25% of intact female dogs by age 10. It requires emergency surgery in most cases and carries significant mortality risk in older or ill dogs. Spaying eliminates this risk entirely.</p>
@@ -65,31 +67,18 @@ export default function SpayNeuterPage() {
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
 
-          <h2 id="kit">Post-neuter calorie-cut kit</h2>
+          <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Everyday physical supplies that match the
-            after-surgery portion copy on this page —
-            an adjustable sliding dog-food scoop so the
-            20–25% cut is a set mark, reusable dog-food
-            portion cups so the smaller daily ration is
-            pre-measured for the whole household, and a
-            dog weight-log book so monthly body
-            condition stays written down. These are
-            household tools, not treatments. They do
-            not treat obesity, they do not replace a
-            veterinarian or a weight-management plan,
-            and they are not a ranked product list. This page
-            does not hop medications. This page does
-            not claim hands-on testing. </p>
+            Keep these on hand: an adjustable sliding dog-food scoop so the 20–25% cut is a set mark, reusable dog-food portion cups so the smaller daily ration is pre-measured for the whole household, and a dog weight-log book so monthly body condition stays written down. These are household tools, not treatments. They do not treat obesity, they do not replace a veterinarian or a weight-management plan, and they are not a ranked product list. </p>
 
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/adjustable+sliding+dog+food+scoop?s=health-spay-neuter-benefits", "/go/amazon-brand/reusable+dog+food+portion+cups?s=health-spay-neuter-benefits", "/go/amazon-brand/dog+weight+log+book?s=health-spay-neuter-benefits"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (adjustable sliding dog-food scoop /
               reusable dog-food portion cups /
               dog weight-log book).
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or an empty link. Amazon searches only —
               unused vs #1058 digital+handheld+stopwatch /
               waterproof+field+notebook /
               foam+table+edge+bumper, #1057
@@ -103,8 +92,8 @@ export default function SpayNeuterPage() {
               male+dog+belly+band /
               heavy+duty+dog+exercise+pen, and
               weight-management kitchen+gram+scale /
-              portion+control+food+scale hops. Rx
-              ASINs are not shoppable hops. */}
+              portion+control+food+scale buttons. Rx
+              product pages are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

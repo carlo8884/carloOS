@@ -10,7 +10,7 @@ import {
   DropCap,
   CrossPortfolioCard,
   ArticleSourcesList,
-  AffiliateDisclosure,
+  LastUpdated,
 } from '@carloOS/ui'
 
 const SOURCES = [
@@ -21,7 +21,7 @@ const SOURCES = [
   },
   {
     label: "Merck Veterinary Manual — Anesthesia and Analgesia for Exotic Mammals: ferret-specific pre-anesthetic fasting, induction, and monitoring considerations",
-    url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/routine-health-care-of-ferrets",
+    url: "https://www.merckvetmanual.com/all-other-pets/ferrets/routine-health-care-for-ferrets",
     publisher: "Merck Veterinary Manual",
   },
   {
@@ -74,7 +74,6 @@ const medSchema = buildMedicalWebPageSchema({
   authorName: 'Ferret.com Editorial',
   lastReviewed: '2026-06-01',
 })
-
 
 const FAQS = [
   {
@@ -131,7 +130,7 @@ export default function FerretAnesthesiaRiskPage() {
           <>
             <TableOfContents
               items={[
-                { label: 'TL;DR', href: '#tldr' },
+                { label: '', href: '#tldr' },
                 { label: 'Why Ferrets Are Different', href: '#different' },
                 { label: 'The Short-Fast Rule', href: '#fasting' },
                 { label: 'Blood Sugar & Temperature', href: '#homeostasis' },
@@ -154,7 +153,7 @@ export default function FerretAnesthesiaRiskPage() {
 
           </>
         }
-      
+
         relatedLinks={[
           { title: 'Ferret Health Hub', href: '/health' },
           { title: 'Adrenal Disease', href: '/health/adrenal-disease' },
@@ -168,6 +167,7 @@ export default function FerretAnesthesiaRiskPage() {
             publishedAt="2026-06-01"
             updatedAt="2026-06-01"
           />
+          <LastUpdated date="2026-10-09" />
 
           <DropCap>
             Sooner or later most ferrets face anesthesia — for a dental
@@ -179,8 +179,7 @@ export default function FerretAnesthesiaRiskPage() {
             small size leaves a narrow margin for mistakes.
           </DropCap>
 
-          <h2 id="tldr">TL;DR</h2>
-          <p>
+                    <p>
             Ferret anesthesia is generally safe in experienced hands but carries
             species-specific risks. Ferrets lose body heat fast, are prone to
             low blood sugar (especially given the high background rate of
@@ -316,21 +315,7 @@ export default function FerretAnesthesiaRiskPage() {
             neuter</a> all rest on this same anesthetic foundation.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated ferret short-fast chart /
-              ferret fridge glucose-temp card /
-              mustelid anesthesia-clinic handbook).
-              No existing product hop to keep.
-              Educational kitchen searches only; no Rx /
-              vaccine / flea / heartworm / nsaid / aging hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs health-hub /
-              signs-of-pain / ear-mites / heart-disease hops. Ferret
-              aging stays held.
-              Do not re-open #1165 / what-to-expect. */}
-          
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
 

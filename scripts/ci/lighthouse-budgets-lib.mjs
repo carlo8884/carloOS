@@ -46,6 +46,35 @@ export const MONEY_PAGES = {
   ],
 }
 
+/** Gift guide, search, and the not-found document. Not a replacement for MONEY_PAGES. */
+export const LAYOUT_PAGES = {
+  'dog-com': [
+    'reviews/november-december-gift-guide',
+    'search',
+    'this-page-does-not-exist',
+  ],
+  'fish-com': [
+    'reviews/november-december-gift-guide',
+    'search',
+    'this-page-does-not-exist',
+  ],
+  'horses-com': [
+    'reviews/november-december-gift-guide',
+    'search',
+    'this-page-does-not-exist',
+  ],
+  'vets-co': [
+    'reviews/november-december-gift-guide',
+    'search',
+    'this-page-does-not-exist',
+  ],
+  'ferret-com': [
+    'reviews/november-december-gift-guide',
+    'search',
+    'this-page-does-not-exist',
+  ],
+}
+
 export const SITE_PORTS = {
   'dog-com': 3310,
   'fish-com': 3311,

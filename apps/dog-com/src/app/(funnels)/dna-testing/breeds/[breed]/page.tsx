@@ -130,7 +130,7 @@ export default async function BreedDnaPage({
         {/* Recommended test */}
         <div className="bg-brand-primary-pale border-l-4 border-brand-primary rounded-r-xl p-6 mb-10">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
-            Our recommendation for {b.breedName}s
+            Test that screens the conditions listed for {b.breedName}s
           </div>
           <h2 className="font-display text-2xl font-bold mb-2">
             {recommendedTest.name}
@@ -186,7 +186,7 @@ export default async function BreedDnaPage({
               <div className="font-display text-lg font-bold mb-1">{a.name}</div>
               <div className="text-sm text-brand-text-mid mb-2">{a.tagline}</div>
               <div className="text-xs text-brand-primary font-semibold">
-                Score: {a.editorialScore}/10 →
+                See this test →
               </div>
             </Link>
           ))}

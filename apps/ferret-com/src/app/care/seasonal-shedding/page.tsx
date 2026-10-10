@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import {
   buildMetadata,
@@ -10,7 +11,6 @@ import {
   DropCap,
   CrossPortfolioCard,
   ArticleSourcesList,
-  AffiliateDisclosure,
   ShopCtas,
 } from '@carloOS/ui'
 import {
@@ -202,7 +202,7 @@ export default function FerretSeasonalSheddingPage() {
               more or less evenly. You can often pull a gentle tuft free with
               your fingers, and loose fur appears on bedding, clothing, and any
               surface the ferret rests on.
-            </li>
+             <a href="/care/bedding-and-litter-types">Bedding and litter types</a> is the bedding that fur is landing on.</li>
             <li>
               <strong>A short, intense window.</strong> The heaviest shedding
               concentrates into roughly one to three weeks, then tapers as the
@@ -227,7 +227,9 @@ export default function FerretSeasonalSheddingPage() {
             fine-toothed metal comb, used in short, gentle sessions, lifts dead
             coat efficiently. Most ferrets tolerate brushing better when it is
             paired with a high-value treat and kept brief — a minute or two at
-            a time rather than a long session.
+            a time rather than a long session. The{' '}
+            <a href="/reviews/fall-molt-brush-guide">fall molt brushing guide</a>{' '}
+            covers the slicker brush for the autumn coat change.
           </p>
           <ul>
             <li>
@@ -338,25 +340,18 @@ export default function FerretSeasonalSheddingPage() {
 
           <h2 id="kit">Molt grooming kit</h2>
           <p>
-            Everyday physical supplies that match the coat-blow copy above —
-            a soft slicker brush and a fine-toothed metal comb for the short
-            daily sessions that lift dead coat before the ferret swallows it,
-            plus a reusable lint roller for hammocks and hard surfaces between
-            washes. Hairball / petroleum laxative pastes stay a vet
-            conversation, not a shop hop. These are not a treatment for adrenal disease
-            or a GI blockage and not a diagnosis. This page does not claim
-            hands-on testing. </p>
+            Keep these on hand: a soft slicker brush and a fine-toothed metal comb for the short daily sessions that lift dead coat before the ferret swallows it, plus a reusable lint roller for hammocks and hard surfaces between washes. Hairball / petroleum laxative pastes stay a vet conversation. These are not a treatment for adrenal disease or a GI blockage and not a diagnosis. </p>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/soft+slicker+brush+small+animal?s=care-seasonal-shedding", "/go/amazon-brand/fine+tooth+metal+comb?s=care-seasonal-shedding", "/go/amazon-brand/reusable+lint+roller?s=care-seasonal-shedding"]} />
 
-          {/* Money path — live amazon-brand search hops (slicker / metal
+          {/* Shop note — live amazon-brand search buttons (slicker / metal
               comb / lint roller). ShopCtas hides empty Chewy; never
-              href="#" or PLACEHOLDER. Category searches only — unused vs
+              href="#" or an empty link. Amazon searches only — unused vs
               #993–#1025 dog slicker-brush-dog-grooming, puppy shampoo+
               clippers+slicker combo, horse curry/dandy/body brushes,
               ferret lickable-treat paste, sleep sacks, and #1025 dental
-              finger-toothbrush / infant-toothbrush / dental-wipe hops.
-              Hairball pastes, shampoos, and medications are not hops. */}
+              finger-toothbrush / infant-toothbrush / dental-wipe buttons.
+              Hairball pastes, shampoos, and medications are not buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

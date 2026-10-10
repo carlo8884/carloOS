@@ -1,6 +1,7 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { TableShopLink, ComparisonFoot, PrimaryHop, FAQAccordion, buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, ReviewCard, ScoreMethodology, AffiliateDisclosure, StockImage, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
-import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript, buildItemListSchema} from '@carloOS/ui'
+import { TableShopLink, ComparisonFoot, EmailCapture, FAQAccordion, buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, ReviewCard, StockImage, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
+import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript, buildItemListSchema, QuietPartnerLink} from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -46,7 +47,15 @@ export default function WholePreyVsKibblePage() {
       <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="ferret-com"
-        heroHop={<PrimaryHop href='/go/wysong/epigen-90?s=diet-whole-prey-vs-kibble' label='Check price of Wysong Epigen 90 from Wysong' />}
+        heroHop={
+          <>
+            <HopDisclosure siteId="ferret-com" href="/go/amazon/B019W9VXZK?s=whole-prey-vs-kibble" />
+            <div className="mb-4" data-primary-hop="true">
+              <a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" data-shop-placement="hero" href="/go/amazon/B019W9VXZK?s=whole-prey-vs-kibble">Check price of Wysong Epigen 90 on Amazon →</a>
+            </div>
+            <QuietPartnerLink tone="dark" href="/go/wysong/epigen-90?s=diet-whole-prey-vs-kibble" label="Check price of Wysong Epigen 90 from Wysong" />
+          </>
+        }
         hero={{
           title: 'Whole-Prey vs Kibble for Ferrets',
           subtitle:
@@ -92,7 +101,7 @@ export default function WholePreyVsKibblePage() {
             <CrossPortfolioCard currentSite="ferret-com" contentType="diet" variant="sidebar" />
           </>
         }
-      
+
         relatedLinks={[
           { title: 'Ferret Diet Hub', href: '/diet' },
           { title: 'Raw Feeding Guide', href: '/diet/raw-feeding-guide' },
@@ -101,7 +110,7 @@ export default function WholePreyVsKibblePage() {
           { title: 'Transitioning Foods', href: '/diet/transitioning-foods' },
           { title: 'Ferret Starter Kit', href: '/ferret-starter-kit' },
         ]}
- priceAsOf="2026-10-04">
+ priceAsOf="2026-10-07">
         <div className="carloOS-article">
           <StockImage
             manifestKey="ferret-com:diet-raw-vs-kibble"
@@ -116,10 +125,26 @@ export default function WholePreyVsKibblePage() {
             updatedAt="2026-06-01"
             reviewedBy="Editorial team"
           />
+          <EmailCapture
+            variant="inline"
+            siteId="ferret-com"
+            addressOnly
+            title="Shopping checklist"
+            ctaText="Copy checklist"
+            source="diet-whole-prey-vs-kibble"
+            checklist={[
+              "Skip it when you want the dental abrasion of whole prey.",
+              "The card says kibble gives less of that, and the price is premium.",
+              "Frozen feeder mice and chicks are the whole-prey pick.",
+              "The card says the price varies by size and quantity, intact bone covers calcium balance, and a freezer is required.",
+              "Skip it with no freezer, or if you will not handle raw prey carefully.",
+              "Whole-prey cost is not a fixed figure on this page.",
+            ]}
+          />
 
           <h2 id="models">The Two Models</h2>
           <p>
-            Ferrets (<em>Mustela putorius furo</em>) are obligate carnivores descended from the European polecat. In the wild, their relatives eat whole small prey — rodents, rabbits, birds — consuming muscle, organ, bone, and a small amount of fur. Two feeding philosophies attempt to meet that requirement in a domestic setting. The <strong>whole-prey / raw model</strong> feeds animal tissue directly: whole frozen-thawed prey, or a "frankenprey" assembly of muscle meat, organ, and raw meaty bone. The <strong>commercial-kibble model</strong> feeds a dry, shelf-stable formula engineered to hit the ferret macronutrient profile from rendered animal ingredients.
+            Ferrets (<em>Mustela putorius furo</em>) are obligate carnivores descended from the European polecat. In the wild, their relatives eat whole small prey — rodents, rabbits, birds — consuming muscle, organ, bone, and a small amount of fur. Two feeding philosophies attempt to meet that requirement in a domestic setting. The <strong>whole-prey / raw model</strong> feeds animal tissue directly: whole frozen-thawed prey, or a "frankenprey" assembly of muscle meat, organ, and raw meaty bone. The <strong>commercial-kibble model</strong> feeds a dry, shelf-stable formula engineered to hit the ferret macronutrient profile from rendered animal ingredients. <a href="/diet/best-ferret-kibble">The ferret kibble guide</a> compares the dry formulas in that commercial model.
           </p>
           <p>
             Most experienced keepers land somewhere on a spectrum rather than at a pure extreme: kibble as a convenient base with raw or whole-prey supplementation, or a primarily raw diet with kibble kept on hand for travel and boarding. Understanding the trade-offs lets you place yourself on that spectrum deliberately.
@@ -139,6 +164,7 @@ export default function WholePreyVsKibblePage() {
           </p>
 
           <h2 id="cost">Cost</h2>
+          <p>Those figures are typical US ranges dated 2026-10-05.</p>
           <p>
             Cost depends heavily on sourcing. Premium low-carb kibble runs roughly $30–50 per 5 lb bag and a single ferret eats modestly, so monthly kibble cost is usually contained. Whole-prey diets vary enormously: buying frozen whole prey in bulk from a reptile-feeder supplier can be cost-competitive, while boutique pre-made raw or small-quantity organ purchases can cost considerably more. Neither model is reliably cheaper; the variable is how much sourcing effort you are willing to invest. For the full ownership budget picture, see <a href="/ownership/cost-of-owning-a-ferret">cost of owning a ferret</a>.
           </p>
@@ -163,20 +189,7 @@ export default function WholePreyVsKibblePage() {
             There is no single correct answer, but a few defensible patterns emerge. For a first-time owner without an exotic-mammal vet already lined up, a high-quality low-carb kibble is the lower-risk starting point — it is forgiving, safe, and nutritionally reliable. For a committed keeper with freezer space and good kitchen discipline, a well-balanced raw or whole-prey diet is the closest match to ferret physiology and may pay dividends in dental health and stool quality. A pragmatic middle path — premium kibble as a base, with whole-prey or raw supplementation a few times a week — captures much of the upside of both while keeping a safe, convenient fallback. Whatever you choose, transition gradually: ferrets imprint on food in their first six months and resist change later (see <a href="/diet/kit-vs-adult-feeding">kit vs adult feeding</a>).
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated ferret prey-vs-kibble chart /
-              ferret fridge diet-model card /
-              mustelid diet-model reference handbook).
-              Keep existing Wysong + Chewy review hops.
-              Educational kitchen searches only; no Rx /
-              vaccine / aging hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs diet-hub /
-              kibble / label / protein-fat kitchen kits. Ferret
-              aging stays held.
-              Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
@@ -184,7 +197,7 @@ export default function WholePreyVsKibblePage() {
             <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/wysong+ferret+food?s=whole-prey-vs-kibble"
+                amazonHref="/go/amazon/B019W9VXZK?s=whole-prey-vs-kibble"
                 amazonLabel="Check price of Wysong ferret food on Amazon"
               />
           </div>
@@ -194,37 +207,36 @@ export default function WholePreyVsKibblePage() {
           <p>
             If the comparison above leaves you leaning one way, here is a defensible starting point for each model — and, for the pragmatic middle path, both together: a premium low-carb kibble as the base with frozen whole prey for supplementation. These are documented-spec selections, not hands-on tests.
           </p>
-          <ScoreMethodology />
-          <ReviewCard
+          <ReviewCard quietUntilTag
             id="wysong-epigen-90"
             badge="Kibble Model"
             name="Wysong Epigen 90"
             subtitle="Starch-free premium kibble — the lower-risk base diet"
-            score={9.3}
             winner
             description={
-              <p>The lowest-carbohydrate commercial kibble in wide ferret-keeping use, and the lower-risk starting point for a first-time owner. Shelf-stable, easy to free-feed, and trivial to hand to a sitter — the convenience advantages that make kibble the practical default — while still landing close to the obligate-carnivore macro window. Also the natural base for the middle-path approach.</p>
+              <p>The current Wysong Epigen 90 page lists crude protein minimum 63% and crude fat minimum 16%. Those are guaranteed-analysis figures as printed, not a dry-matter conversion. The page markets the food as starch-free. Carbohydrate is not on the guaranteed analysis — check the label. Shelf-stable and easy to free-feed, which is why kibble stays the practical default for a first-time owner.</p>
             }
             specs={[
-              { label: 'Carbohydrate', value: 'Single digits', highlight: 'good' },
+              { label: 'Carbohydrate', value: 'Not on the guaranteed analysis. Check the label.' },
               { label: 'Convenience', value: 'High — shelf-stable', highlight: 'good' },
               { label: 'Food-safety risk', value: 'Low', highlight: 'good' },
               { label: 'Distribution', value: 'Direct + specialty pet retail' },
             ]}
-            pros={['Lowest commercial carb load in wide ferret use', 'Shelf-stable and sitter-friendly', 'Nutritionally consistent batch to batch', 'Good base for the middle path']}
+            pros={['Carbohydrate is not on the guaranteed analysis. Check the label.', 'Shelf-stable and sitter-friendly', 'Nutritionally consistent batch to batch', 'Marketed as starch-free']}
             cons={['Premium price', 'Less dental abrasion than whole prey']}
             price="$30–50 / 5 lb"
+            priceNote="dated 2026-10-05."
             ctaText="Check price of Wysong Epigen 90 from Wysong"
             ctaHref="/go/wysong/epigen-90?s=diet-whole-prey-vs-kibble"
             ctaAffiliateProgram="wysong"
             ctaAffiliateProduct="epigen-90"
           />
-          <ReviewCard
+          <p>If the kibble choice is this bag or the chain-shelf Marshall Premium, the <a href="/reviews/wysong-vs-marshall-kibble-guide">Wysong versus Marshall guide</a> prints both guaranteed analyses. Carbohydrate is not on either label.</p>
+          <ReviewCard quietUntilTag
             id="frozen-feeder-prey"
             badge="Whole-Prey Model"
             name="Frozen Feeder Mice & Chicks (Reptile-Feeder Grade)"
             subtitle="Pre-balanced whole prey for the raw model or middle-path supplementation"
-            score={8.4}
             description={
               <p>For the committed keeper with freezer space and kitchen discipline, frozen whole prey is the closest match to ferret physiology — intact muscle, organ, and bone in natural proportions, with the dental and stool-quality benefits raw feeders report. It also serves the middle path well as a few-times-a-week supplement on top of a kibble base. Freeze for at least 30 days, thaw in the refrigerator, and follow the food-safety discipline in our <a href="/diet/raw-feeding-guide">raw feeding guide</a>.</p>
             }
@@ -237,14 +249,14 @@ export default function WholePreyVsKibblePage() {
             pros={['Best biological match', 'Natural calcium-to-phosphorus ratio', 'Strong dental abrasion', 'Works as a supplement or a sole diet']}
             cons={['Requires freezer space and handling discipline', 'Higher food-safety burden', 'Sourcing effort']}
             price="Varies by size and quantity"
-            ctaText="Check price of frozen feeder mice and chicks on Chewy"
+            ctaText="Check price of frozen reptile feeder mice and chicks on Amazon"
             ctaHref="/go/chewy-brand/frozen+feeder+mice+reptile?s=diet-whole-prey-vs-kibble"
             ctaAffiliateProgram="chewy-brand"
             ctaAffiliateProduct="frozen-feeder-mice"
           />
 
           <h2 id="who">Who should buy which</h2>
-          <p>The two cards already split shelf-stable kibble from frozen prey. Price and the handling limit are the ones on those cards. Scores are this page&apos;s editorial scores, not customer star ratings.</p>
+          <p>The two cards already split shelf-stable kibble from frozen prey. Price and the handling limit are the ones on those cards. </p>
           <div className="overflow-x-auto my-6 max-w-full">
             <table className="w-full text-sm border-collapse table-fixed sm:table-auto min-w-0 sm:min-w-[36rem] [&_th]:break-words [&_td]:break-words">
               <thead>
@@ -258,7 +270,7 @@ export default function WholePreyVsKibblePage() {
               <tbody>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 text-brand-text-mid">A shelf-stable base a sitter can feed</td>
-                  <td className="p-3 font-bold text-brand-dark"><a href="#wysong-epigen-90" className="text-brand-primary">Wysong Epigen 90</a><TableShopLink href={"/go/wysong/epigen-90?s=diet-whole-prey-vs-kibble"} product={"Wysong Epigen 90"} /></td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#wysong-epigen-90" className="text-brand-primary">Wysong Epigen 90</a><TableShopLink quietUntilTag href={"/go/wysong/epigen-90?s=diet-whole-prey-vs-kibble"} product={"Wysong Epigen 90"} /></td>
                   <td className="p-3 text-brand-text-mid">Kibble model. Starch-free. $30–50 / 5 lb</td>
                   <td className="p-3 text-brand-text-mid">You want the dental abrasion of whole prey. The card says kibble gives less of that, and the price is premium</td>
                 </tr>
@@ -271,17 +283,18 @@ export default function WholePreyVsKibblePage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-05" />
+          <ComparisonFoot updated="2026-10-08" />
 
           <h2 id="faq">FAQ</h2>
+          <p>Those figures are typical US ranges dated 2026-10-05.</p>
           <FAQAccordion items={[
             {
               question: 'Which option does this page pick for a shelf-stable base a sitter can feed?',
-              answer: 'Wysong Epigen 90, scored 9.3 and marked Kibble Model. The card prints $30–50 / 5 lb, single-digit carbohydrate, and distribution as direct plus specialty pet retail. The button goes to Wysong. Skip it when you want the dental abrasion of whole prey. The card says kibble gives less of that, and the price is premium.',
+              answer: 'Wysong Epigen 90, marked Kibble Model. The card prints $30–50 / 5 lb. The current page lists crude protein minimum 63% and crude fat minimum 16% as printed. Carbohydrate is not on the guaranteed analysis. Distribution is direct plus specialty pet retail. The button goes to Wysong. Skip it when you want the dental abrasion of whole prey. The card says kibble gives less of that, and the bag price is higher than the retail mid-tier card.',
             },
             {
               question: 'Which option does this page pick for whole prey as the diet or as a supplement?',
-              answer: 'Frozen feeder mice and chicks, scored 8.4. The card says the price varies by size and quantity, intact bone covers calcium balance, and a freezer is required. The button goes to Chewy. Skip it with no freezer, or if you will not handle raw prey carefully. The card flags food safety and sourcing.',
+              answer: 'Frozen feeder mice and chicks are the whole-prey pick. The card says the price varies by size and quantity, intact bone covers calcium balance, and a freezer is required. The button goes to Amazon. Skip it with no freezer, or if you will not handle raw prey carefully. The card flags food safety and sourcing.',
             },
             {
               question: 'What does this page say premium low-carb kibble costs?',

@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import {
   buildMetadata,
@@ -5,7 +6,6 @@ import {
   FAQAccordion,
   RelatedLinks, CrossPortfolioCard,
   TableOfContents,
-  AffiliateDisclosure,
   ShopCtas,
   JourneyNext,
 } from '@carloOS/ui'
@@ -138,7 +138,7 @@ export default function DogMicrochippingPage() {
             reviewedBy="Editorial team"
           />
 
-          <CalloutBox variant="evidence" title="TL;DR — What you need to know">
+          <CalloutBox variant="evidence" title="What you need to know">
             <p>
               <strong>A microchip is a permanent ID, not a tracker.</strong> It is a passive RFID transponder the size of a grain of rice, implanted under the skin between the shoulder blades. When a shelter or vet scans a found dog, the chip transmits a unique number.
             </p>
@@ -199,7 +199,7 @@ export default function DogMicrochippingPage() {
             siteId="dog-com"
             nextHref="/tools/new-puppy-checklist"
             nextLabel="Add the collar tag and chip to the puppy checklist"
-            nextBlurb="The callout is the registration rule — a chip with no current phone number does nothing. The new-puppy checklist is the day-one pack list, including the ID tag and the first-visit chip. The hop below is the same engraved collar-ID search already on this page."
+            nextBlurb="The callout is the registration rule — a chip with no current phone number does nothing. The new-puppy checklist is the day-one pack list, including the ID tag and the first-visit chip. The button below opens the same engraved collar-ID search on Amazon."
             resourceHref="/go/amazon-brand/engraved+dog+collar+id+tags?s=guides-dog-microchipping"
             resourceLabel="Browse engraved dog collar ID tags on Amazon →"
           />
@@ -207,7 +207,7 @@ export default function DogMicrochippingPage() {
           <h2 id="vs-gps">Microchip vs GPS Tracker — Different Tools</h2>
           <p>
             Microchips and GPS trackers are frequently confused, but they solve different problems and the best practice for many owners is to use both.
-          </p>
+           Live-location trackers, which a microchip is not, are compared in the <a href="/reviews/best-dog-gps-tracker" className="text-brand-primary underline">GPS tracker review</a>.</p>
           <div className="overflow-x-auto my-6">
             <table className="w-full text-sm border-collapse">
               <thead>
@@ -274,16 +274,16 @@ export default function DogMicrochippingPage() {
 
           <h2 id="kit">A Simple Home-Verification and Collar-ID Kit</h2>
           <p>
-            Three everyday physical supplies match the registration and reunion copy above: an ISO pet microchip scanner so you can read the number at home and confirm the registry record, engraved dog collar ID tags so a neighbor can call you without a scanner, and a silent slide-on pet ID tag that stays on the collar if a hanging tag comes off. These are identification tools. They do not implant a chip, they do not track a dog in real time, they are not a clinic implant kit, and they do not replace a registered microchip or a veterinary scan of a found dog. This page does not claim hands-on testing. </p>
+            These are identification tools. They do not implant a chip, they do not track a dog in real time, they are not a clinic implant kit, and they do not replace a registered microchip or a veterinary scan of a found dog. </p>
 
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/iso+pet+microchip+scanner?s=guides-dog-microchipping", "/go/amazon-brand/engraved+dog+collar+id+tags?s=guides-dog-microchipping", "/go/amazon-brand/pet+id+tag+slide+on?s=guides-dog-microchipping"]} />
 
-          {/* Money path — live amazon-brand search hops (microchip registration kit).
-              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-              Category searches only — everyday physical supplies matching
+          {/* Shop note — live amazon-brand search buttons (microchip registration kit).
+              ShopCtas hides empty Chewy; never href="#" or an empty link.
+              Amazon searches only — everyday physical supplies matching
               on-page iso-pet-microchip-scanner / engraved-dog-collar-id-tags /
               pet-id-tag-slide-on copy, not GPS trackers, clinic implant kits,
-              or generic dog+id+tag+collar hops already used elsewhere. */}
+              or generic dog+id+tag+collar buttons already used elsewhere. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
@@ -306,15 +306,17 @@ export default function DogMicrochippingPage() {
           </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>
+          <p>Those figures are typical US ranges dated 2026-10-04.</p>
           <FAQAccordion
             items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))}
             allowMultiple
+            includeSchema={false}
           />
 
           <ArticleSourcesList
             title="References"
             sources={[
-              { label: 'Microchipping of Animals FAQ', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/microchipping-animals-faq', publisher: 'AVMA' },
+              { label: 'Microchipping of Animals FAQ', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/microchips-reunite-pets-families/microchipping-faq', publisher: 'AVMA' },
               { label: 'Lord LK et al. — Characterization of animals with microchips entering animal shelters (JAVMA 235:160–167, 2009)', url: 'https://avmajournals.avma.org/view/journals/javma/235/2/javma.235.2.160.xml', publisher: 'JAVMA' },
               { label: 'Universal Pet Microchip Lookup Tool', url: 'https://www.petmicrochiplookup.org/', publisher: 'AAHA' },
               { label: 'Identification of Dogs — Microchips and Collars', url: 'https://www.merckvetmanual.com/dog-owners', publisher: 'Merck Veterinary Manual' },

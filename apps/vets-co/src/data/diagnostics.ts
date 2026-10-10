@@ -81,7 +81,7 @@ export interface Diagnostic {
 const ACVIM = 'https://www.acvim.org/resources-tools/animal-owners'
 const AAHA = 'https://www.aaha.org/for-pet-parents/find-an-aaha-accredited-animal-hospital-near-me/'
 const ACVR = 'https://www.acvr.org/page/pet-owners'
-const ACVD = 'https://www.acvd.org/page/PetOwners'
+const ACVD = 'https://acvd.org/'
 const MERCK = 'https://www.merckvetmanual.com/'
 
 export const Diagnostics: Diagnostic[] = [
@@ -914,7 +914,7 @@ export const Diagnostics: Diagnostic[] = [
       {
         result: 'Congenital heart defect (patent ductus arteriosus, pulmonic stenosis, etc.)',
         interpretation:
-          'Identified in young pets, usually as a workup of a heart murmur. Many congenital defects are treatable — PDA closure has near-100% success rates. Refer to cardiology promptly while the patient is young.',
+          'Identified in young pets, usually as a workup of a heart murmur. Many congenital defects are treatable. McNamara et al. (JAVMA 2023) reported survival to discharge of 97% after surgical ligation of a left-to-right PDA in 417 dogs (https://pubmed.ncbi.nlm.nih.gov/36977484/). ACVS reports a surgical ligation complication rate under 5 percent, and fewer than 2 percent of dogs need a second procedure to close the ductus completely (https://www.acvs.org/small-animal/patent-ductus-arteriosus-pda-in-small-animals/). Refer to cardiology promptly while the patient is young.',
         urgency: 'urgent',
       },
       {

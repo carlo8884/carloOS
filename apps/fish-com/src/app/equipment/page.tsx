@@ -1,8 +1,8 @@
+import { HopDisclosure } from '../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
   buildMetadata,
-  AffiliateDisclosure,
   ShopCtas,
   JourneyNext,
   buildBreadcrumbSchema,
@@ -132,15 +132,15 @@ export default function EquipmentHubPage() {
           siteId="fish-com"
           nextHref="/tools/filter-gph-calculator"
           nextLabel="Size the filter for your gallons"
-          nextBlurb="The six categories are the buyer map, not a sized kit. Use the filter GPH calculator next so the hang-on-back or canister is rated for the tank before you shop the rest. The hop below is the same AquaClear HOB search already on this page."
+          nextBlurb="The six categories are the buyer map, not a sized kit. Use the filter GPH calculator next so the hang-on-back or canister is rated for the tank before you shop the rest. The button below opens the same AquaClear HOB search on Amazon."
           resourceHref="/go/amazon-brand/aquaclear+70+filter?s=equipment-hub"
-          resourceLabel="Browse hang-on-back filters on Amazon →"
+          resourceLabel="Browse AquaClear 70 filters on Amazon →"
         />
 
-        {/* Money path — live amazon-brand search hops (equipment kit).
-            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-            Category searches only — not a ranked list. */}
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        {/* Shop note — live amazon-brand search buttons (equipment kit).
+            ShopCtas hides empty Chewy; never href="#" or an empty link.
+            Amazon searches only — not a ranked list. */}
+        <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/aquaclear+70+filter?s=equipment-hub", "/go/amazon-brand/fluval+307+canister+filter?s=equipment-hub", "/go/amazon-brand/eheim+jager+heater?s=equipment-hub", "/go/amazon-brand/aquarium+digital+thermometer?s=equipment-hub", "/go/amazon-brand/seachem+prime+water+conditioner?s=equipment-hub", "/go/amazon-brand/api+freshwater+master+test+kit?s=equipment-hub", "/go/amazon-brand/aquarium+gravel+vacuum+siphon?s=equipment-hub"]} />
         <div className="mt-6 p-5 border border-brand-border rounded-xl bg-brand-surface max-w-content-wide mx-auto">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
             Shop aquarium equipment
@@ -149,7 +149,7 @@ export default function EquipmentHubPage() {
             with a heater rated for the tank, a separate digital thermometer to
             verify the dial, Seachem Prime (or another dechlorinator) at every
             fill, the API Master Test Kit so you can see ammonia/nitrite/nitrate,
-            and a gravel vacuum for water changes. Same HOB hop used on the{' '}
+            and a gravel vacuum for water changes. The same HOB button is on the{' '}
             <Link
               href="/tools/stocking-calculator"
               className="text-brand-primary no-underline hover:underline"
@@ -163,21 +163,21 @@ export default function EquipmentHubPage() {
             >
               filter GPH calculator
             </Link>
-            . Same heater hop used on the{' '}
+            . The same heater button is on the{' '}
             <Link
               href="/tools/heater-wattage-calculator"
               className="text-brand-primary no-underline hover:underline"
             >
               heater wattage calculator
             </Link>
-            . Same Prime and gravel-vacuum hops used on the{' '}
+            . The same Prime and gravel-vacuum buttons are on the{' '}
             <Link
               href="/tools/water-change-calculator"
               className="text-brand-primary no-underline hover:underline"
             >
               water-change calculator
             </Link>
-            . Same test-kit hop used on the{' '}
+            . The same test-kit button is on the{' '}
             <Link
               href="/reviews/best-water-test-kits"
               className="text-brand-primary no-underline hover:underline"
@@ -188,20 +188,19 @@ export default function EquipmentHubPage() {
             <Link href="/reviews" className="text-brand-primary no-underline hover:underline">
               equipment reviews
             </Link>
-            . Fish.com earns a commission on qualifying purchases at no extra
-            cost to you.</p>
+            .</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/aquaclear+70+filter?s=equipment-hub"
-              amazonLabel="Browse hang-on-back filters on Amazon →"
+              amazonLabel="Browse AquaClear 70 filters on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/fluval+307+canister+filter?s=equipment-hub"
-              amazonLabel="Browse canister filters on Amazon →"
+              amazonLabel="Browse Fluval 307 canister filters on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/eheim+jager+heater?s=equipment-hub"
-              amazonLabel="Browse aquarium heaters on Amazon →"
+              amazonLabel="Browse Eheim Jager heaters on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+digital+thermometer?s=equipment-hub"
@@ -209,7 +208,7 @@ export default function EquipmentHubPage() {
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/seachem+prime+water+conditioner?s=equipment-hub"
-              amazonLabel="Browse dechlorinator / Seachem Prime on Amazon →"
+              amazonLabel="Browse Seachem Prime water conditioner on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/api+freshwater+master+test+kit?s=equipment-hub"
@@ -217,7 +216,7 @@ export default function EquipmentHubPage() {
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+gravel+vacuum+siphon?s=equipment-hub"
-              amazonLabel="Browse gravel vacuums on Amazon →"
+              amazonLabel="Browse gravel vacuum siphons on Amazon →"
             />
           </div>
           <p className="text-2xs text-brand-text-light mt-3">

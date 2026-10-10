@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, CalloutBox, AffiliateDisclosure, CrossSiteHelp } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, CalloutBox, CrossSiteHelp, ComparisonFoot, LastUpdated } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
@@ -79,7 +79,7 @@ export default function FerretInsuranceBasicsPage() {
 
           </>
         }
-      
+
         relatedLinks={[
           { title: 'Ferret Ownership Hub', href: '/ownership' },
           { title: 'Cost of Owning a Ferret', href: '/ownership/cost-of-owning-a-ferret' },
@@ -94,6 +94,7 @@ export default function FerretInsuranceBasicsPage() {
             updatedAt="2026-06-01"
             reviewedBy="Editorial team"
           />
+          <LastUpdated date="2026-10-10" />
 
           <CalloutBox variant="info" title="Educational only">
             <p>
@@ -179,6 +180,38 @@ export default function FerretInsuranceBasicsPage() {
             <a href="/ownership/is-a-ferret-right-for-you">is a ferret right for
             you?</a>.
           </p>
+          <div className="my-6 max-w-full min-w-0">
+            <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
+              <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+              <thead>
+                <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Insurance</th>
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Savings fund</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">What it does</th>
+                  <td className="p-3">Smooths a large, unpredictable bill into predictable premiums</td>
+                  <td className="p-3">Keeps every dollar under your control, with no exclusions or claims process</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Where it misses</th>
+                  <td className="p-3">You pay whether you claim, and exclusions may blunt value for the diseases ferrets get</td>
+                  <td className="p-3">No protection if a major bill lands before the fund has grown</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">When to have it</th>
+                  <td className="p-3">In place before a problem appears. A policy bought after signs of adrenal or insulinoma disease generally will not cover that disease</td>
+                  <td className="p-3">A plan for senior-year costs when a policy, a fund, or both is the individual decision</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <ComparisonFoot updated="2026-10-10" />
+          <h2>Who should use which</h2>
+          <p>Use insurance when you want the bill smoothed and the policy is already in place before signs appear. Use a savings fund when you want control and no claims process, and you can accept the gap while the fund grows. Neither is universally right, and a combination is still an individual decision.</p>
           <CrossSiteHelp
             href={crossSiteHref('vets-co', '/guides/emergency-vet-costs')}
             label="Emergency vet costs, explained"
@@ -208,22 +241,7 @@ export default function FerretInsuranceBasicsPage() {
             condition level.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated ferret cover-exclude chart /
-              ferret fridge waiting-period card /
-              mustelid vet-fund handbook).
-              No existing product hop to keep.
-              Educational kitchen searches only; no Rx /
-              vaccine / aging hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs ownership-hub /
-              travel / other-pets / kids kitchen kits.
-              Ferret.com does not sell insurance. Ferret
-              aging stays held.
-              Do not re-open #1165 / what-to-expect. */}
-          
           <h2 id="sources">Sources</h2>
           <p>
             Disease incidence in middle-aged and older ferrets — insulinoma,

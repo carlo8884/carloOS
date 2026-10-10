@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, RelatedLinks, ArticleSourcesList, AffiliateDisclosure, ShopCtas, JourneyNext } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, RelatedLinks, ArticleSourcesList, ShopCtas, JourneyNext } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox, FAQAccordion } from '@carloOS/ui'
 
@@ -75,7 +76,7 @@ export default function GhKhPage() {
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-09-05T00:00:00Z" reviewedBy="Editorial team" />
 
         <p className="text-lg text-brand-text-mid leading-relaxed italic mb-6">
-          <strong className="not-italic">TL;DR.</strong> GH (general hardness) measures dissolved calcium and magnesium; KH (carbonate hardness) measures the carbonate/bicarbonate that buffers pH. They are independent parameters — a tank can be high in one and low in the other. One degree of hardness equals 17.9 ppm CaCO₃. Soft water runs 0–6 dGH, hard water 12+ dGH; for a stable community buffer, keep KH at or above roughly 4 dKH. Crushed coral or aragonite raise both GH and KH together; baking soda raises KH only; diluting with RO water lowers both. Change hardness slowly — over days, not minutes.
+          GH (general hardness) measures dissolved calcium and magnesium; KH (carbonate hardness) measures the carbonate/bicarbonate that buffers pH. They are independent parameters — a tank can be high in one and low in the other. One degree of hardness equals 17.9 ppm CaCO₃. Soft water runs 0–6 dGH, hard water 12+ dGH; for a stable community buffer, keep KH at or above roughly 4 dKH. Crushed coral or aragonite raise both GH and KH together; baking soda raises KH only; diluting with RO water lowers both. Change hardness slowly — over days, not minutes.
         </p>
 
         <h2>Two Different Measurements</h2>
@@ -132,7 +133,7 @@ export default function GhKhPage() {
           siteId="fish-com"
           nextHref="/water-parameters"
           nextLabel="Test GH and KH against this week's parameter table"
-          nextBlurb="The table is the hardness bands — soft vs hard, and what KH does to pH. The water-parameters hub is the weekly order so you measure both, not a single strip number. The hop below is the same crushed-coral search already on this page, for raising GH and KH slowly when the reading is low."
+          nextBlurb="The table is the hardness bands — soft vs hard, and what KH does to pH. The water-parameters hub is the weekly order so you measure both, not a single strip number. The button below opens the same crushed-coral search on Amazon, for raising GH and KH slowly when the reading is low."
           resourceHref="/go/amazon-brand/crushed+coral+aquarium?s=setup-gh-kh-water-hardness"
           resourceLabel="Browse crushed coral for aquariums on Amazon →"
         />
@@ -201,32 +202,21 @@ export default function GhKhPage() {
 
         <p>For the wider picture of pH, ammonia, and nitrate, see the <a href="/setup/water-chemistry-guide">water chemistry guide</a>, and to choose a kit that reads GH and KH accurately as drop tests rather than coarse strips, see our <a href="/reviews/best-water-test-kits">best water test kits</a> guide.</p>
 
-          <h2 id="kit">Hardness-adjust kit</h2>
+          <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Everyday physical supplies that match the raise-and-lower copy
-            above — crushed coral in the filter so both GH and KH climb
-            slowly, a GH remineralizer when you only need calcium and
-            magnesium, and Indian almond leaves when a blackwater biotope
-            should lose KH and pH through tannins. API freshwater master
-            test kits, Seachem Prime, Flourish Excel, aquasoil, pressurized
-            CO2 gear, Seiryu stone, spiderwood, algae scrapers, light
-            timers, and root tabs stay off this kit — those hops already
-            live on the setup hub, CO2 calculator, planted-tank, and
-            #1020–#1022 pages. Baking soda is a grocery bicarbonate, not a
-            shop hop. These are not a treatment for a pH crash and not a
-            diagnosis. This page does not claim hands-on testing.
+            Keep these on hand: crushed coral in the filter so both GH and KH climb slowly, a GH remineralizer when you only need calcium and magnesium, and Indian almond leaves when a blackwater biotope should lose KH and pH through tannins. Baking soda is a grocery bicarbonate. These are not a treatment for a pH crash and not a diagnosis.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="fish-com" />
+          <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/crushed+coral+aquarium?s=setup-gh-kh-water-hardness", "/go/amazon-brand/aquarium+gh+remineralizer?s=setup-gh-kh-water-hardness", "/go/amazon-brand/indian+almond+leaves+aquarium?s=setup-gh-kh-water-hardness"]} />
 
-          {/* Money path — live amazon-brand search hops (crushed coral /
+          {/* Shop note — live amazon-brand search buttons (crushed coral /
               GH remineralizer / Indian almond leaves). ShopCtas hides
-              empty Chewy; never href="#" or PLACEHOLDER. Category
+              empty Chewy; never href="#" or an empty link. Category
               searches only — unused vs #993–#1026 setup-hub filter /
               heater / API-freshwater-master / Prime, #1020 Seiryu /
               spiderwood, #1021 scrapers, #1022 light-timer / root-tabs,
-              planted aquasoil, and CO2 regulator / Flourish Excel hops.
-              Test kits and medications are not hops. */}
+              planted aquasoil, and CO2 regulator / Flourish Excel buttons.
+              Test kits and medications are not buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

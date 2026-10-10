@@ -1,13 +1,13 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfContents, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfContents, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 
 const SOURCES = [
-  { label: 'AVMA: Behavior Problems in Pets — Anxiety and Fear', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/behavior-problems-pets', publisher: 'AVMA' },
+  { label: 'Merck Veterinary Manual: Behavior Problems in Dogs', url: 'https://www.merckvetmanual.com/dog-owners/behavior-of-dogs/behavior-problems-in-dogs', publisher: 'Merck Vet Manual' },
   { label: 'American College of Veterinary Behaviorists (ACVB): Canine Anxiety and Fear-Related Behaviors', url: 'https://www.dacvb.org', publisher: 'ACVB' },
-  { label: 'Merck Veterinary Manual: Behavioral Disorders of Dogs', url: 'https://www.merckvetmanual.com/behavior/behavioral-disorders-of-dogs', publisher: 'Merck Vet Manual' },
   { label: 'FDA: Reconcile (fluoxetine) Approved for Separation Anxiety in Dogs', url: 'https://www.fda.gov/animal-veterinary', publisher: 'FDA' },
 ]
 
@@ -51,7 +51,7 @@ export default function DogAnxietyPage() {
 
           <h2 id="noise">Noise Phobia</h2>
           <p>Thunder, fireworks, and gunshots are the most common noise phobias. Noise phobia often worsens over time without treatment — each exposure sensitizes the dog further. Signs during noise events: hiding, trembling, panting, hypersalivation, destruction, escaping (noise phobia is a leading cause of dogs going missing during July 4th). Do not force the dog to "face it" — flooding anxiety without systematic desensitization makes it worse.</p>
-          <p>During events: provide a safe hiding space (dogs self-select small dark spaces — a crate covered with a blanket, a closet), white noise to mask some sound, pressure wraps (Thundershirt — moderate evidence for anxiety reduction). Situational medication (trazodone, gabapentin, sileo — dexmedetomidine oromucosal gel specifically approved for noise phobia) prescribed in advance for known events can significantly reduce suffering. Ask your vet for a "noise phobia kit" before July 4th or hunting season.</p>
+          <p>During events: provide a safe hiding space (dogs self-select small dark spaces — a crate covered with a blanket, a closet), white noise to mask some sound, pressure wraps (Thundershirt — moderate evidence for anxiety reduction). Situational medication (trazodone, gabapentin, sileo — dexmedetomidine oromucosal gel specifically approved for noise phobia) prescribed in advance for known events can significantly reduce suffering. Ask your vet for a "noise phobia kit" before July 4th or hunting season. Wire and plastic crates for that covered hiding space are compared in the <a href="/reviews/best-dog-crates" className="text-brand-primary underline">crate review</a>.</p>
 
           <h2 id="generalized">Generalized Anxiety</h2>
           <p>Some dogs have anxiety that is not situation-specific — they are chronically vigilant, have difficulty settling, startle easily, and show anxiety across many contexts. This is often genetic and may be present from early puppyhood. Generalized anxiety in dogs is analogous to generalized anxiety disorder in humans. Daily medication (SSRIs — fluoxetine; TCAs — clomipramine; SARI — trazodone) is typically the most effective intervention, combined with behavioral modification and environmental enrichment.</p>
@@ -62,19 +62,19 @@ export default function DogAnxietyPage() {
           <h2 id="medication">When Medication Helps</h2>
           <p>Anxiety is a medical condition with neurobiological underpinnings. For moderate to severe anxiety, medication is not a shortcut or a crutch — it is a tool that reduces the neurological arousal enough to allow learning to occur. Without medication, a severely anxious dog may be unable to engage with behavioral modification at all. Daily medication (fluoxetine is <a href="https://www.fda.gov/animal-veterinary" rel="noopener" target="_blank" className="text-brand-primary hover:underline">FDA</a>-approved for separation anxiety in dogs as Reconcile) takes 4–6 weeks to reach full effect. Situational medications (trazodone, gabapentin) work within 1–2 hours for acute events. Discuss both options with your veterinarian.</p>
 
-          <h2 id="kit">Noise-phobia safe-space kit</h2>
-          <p>Everyday physical supplies that match the noise-phobia copy above — a pressure wrap (Thundershirt is named as the example product type), a covered crate or other small dark hiding space dogs self-select, and white noise to mask some sound. Fluoxetine / Reconcile, clomipramine, trazodone, gabapentin, and Sileo (dexmedetomidine oromucosal gel) stay educational copy only — this page never hops medications, brand ASINs, or prescription products. This page does not claim hands-on testing.</p>
+          <h2 id="kit">Supplies named on this page</h2>
+          <p>Keep these on hand: a pressure wrap (Thundershirt is named as the example product type), a covered crate or other small dark hiding space dogs self-select, and white noise to mask some sound. Fluoxetine / Reconcile, clomipramine, trazodone, gabapentin, and Sileo (dexmedetomidine oromucosal gel) stay educational copy only — this page does not link to medications, named brands, or prescription products.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/dog+anxiety+wrap?s=health-dog-anxiety", "/go/amazon-brand/dog+crate+cover?s=health-dog-anxiety", "/go/amazon-brand/white+noise+machine?s=health-dog-anxiety"]} />
 
-          {/* Money path — live amazon-brand search hops (pressure wrap /
+          {/* Shop note — live amazon-brand search buttons (pressure wrap /
               covered crate / white noise). ShopCtas hides empty Chewy;
-              never href="#" or PLACEHOLDER. Category searches only —
+              never href="#" or an empty link. Amazon searches only —
               reuse live sister query from crate-size + crate-training
               (dog+crate+cover). Pressure-wrap and white-noise searches
-              match on-page named gear; they are not brand ASINs.
+              match on-page named gear; they are not named brands.
               Fluoxetine / Reconcile, trazodone, gabapentin, Sileo, and
-              clomipramine are not shoppable hops. */}
+              clomipramine are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
@@ -83,7 +83,7 @@ export default function DogAnxietyPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/dog+anxiety+wrap?s=health-dog-anxiety"
-                amazonLabel="Browse pressure wraps on Amazon →"
+                amazonLabel="Browse anxiety wraps on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/dog+crate+cover?s=health-dog-anxiety"

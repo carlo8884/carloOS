@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -9,9 +10,9 @@ import {
   TableOfContents,
   RelatedLinks,
   ArticleByline,
-  AffiliateDisclosure,
   ShopCtas,
   JourneyNext,
+  PrimaryHop,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
 
@@ -38,7 +39,7 @@ const schema = buildHowToSchema({
     },
     {
       name: 'Pick the tank style',
-      text: 'Community and planted tanks typically want 4–6× turnover; goldfish 6–10×; cichlids 8–10×; reef display return plus powerheads 10–20×.',
+      text: 'These turnover bands are planning figures, not a published standard: community and planted 4–6×; goldfish 6–10×; cichlids 8–10×; reef display return plus powerheads 10–20×.',
     },
     {
       name: 'Multiply gallons by the band',
@@ -72,7 +73,7 @@ const softwareApplicationSchema = {
     'Turnover bands for community, planted, goldfish, cichlid, and reef tanks',
     'GPH range from gallons × min/max turnover',
     'Filter-class hint (nano sponge / HOB / canister / sump)',
-    'Links to existing Amazon filter and nano-tank hops',
+    'Links to existing Amazon filter and nano-tank buttons',
   ],
   publisher: {
     '@type': 'Organization',
@@ -85,7 +86,7 @@ const FAQS = [
   {
     question: 'How many GPH does my aquarium filter need?',
     answer:
-      'Multiply tank gallons by a turnover band for the style of tank. Community freshwater is usually 4–6 times the tank volume per hour (a 20-gallon tank → about 80–120 GPH). Goldfish and other messy fish need more; reef tanks need still more when you count powerheads. Buy above the manufacturer “rated for X gallons” label.',
+      'Multiply tank gallons by a turnover band for the style of tank. The bands are planning figures: community freshwater 4–6 times the tank volume per hour (a 20-gallon tank → about 80–120 GPH). Goldfish and other messy fish use a higher planning band; reef tanks use a higher one when you count powerheads. Buy above the manufacturer “rated for X gallons” label.',
   },
   {
     question: 'Is the inch-per-gallon rule the same as filter GPH?',
@@ -100,7 +101,7 @@ const FAQS = [
   {
     question: 'What filter do I need for a 10-gallon nano tank?',
     answer:
-      'A 10-gallon community tank at 4–6× wants about 40–60 GPH. A sponge filter or a small hang-on-back is enough if you keep the bioload honest. Purpose-built nano kits (the same hops as the nano-tank review) often include a filter already sized for that volume.',
+      'A 10-gallon community tank at 4–6× wants about 40–60 GPH. A sponge filter or a small hang-on-back is enough if you keep the bioload honest. Purpose-built nano kits (the same buttons as the nano-tank review) often include a filter already sized for that volume.',
   },
   {
     question: 'Does more GPH let me keep more fish?',
@@ -121,6 +122,15 @@ export default function FilterGphCalculatorPage() {
   return (
     <ArticleLayout
       siteId="fish-com"
+      heroExtra={
+        <div id="calculator" className="mb-4 [&_.text-brand-primary]:!text-brand-dark">
+          <Calculator />
+          <div className="mt-6" data-fold="offer">
+            <PrimaryHop href="/go/amazon-brand/aquaclear+70+filter?s=tools-filter-gph-calculator" label="Search Amazon for an AquaClear 70 filter" />
+            <HopDisclosure siteId="fish-com" href="/go/amazon-brand/aquaclear+70+filter?s=tools-filter-gph-calculator" tone="on-dark" />
+          </div>
+        </div>
+      }
       hero={{
         title: 'Aquarium Filter GPH Calculator',
         subtitle:
@@ -149,7 +159,7 @@ export default function FilterGphCalculatorPage() {
           <TableOfContents
             items={[
               { label: 'The calculator', href: '#calculator' },
-              { label: 'Shop a filter kit', href: '#shop' },
+              { label: 'Shop these supplies', href: '#shop' },
               { label: 'Turnover by tank style', href: '#bands' },
               { label: 'Rated-for vs real GPH', href: '#rated' },
               { label: 'FAQ', href: '#faq' },
@@ -183,47 +193,45 @@ export default function FilterGphCalculatorPage() {
           updatedAt="2026-09-03T00:00:00Z"
           reviewedBy="Editorial team"
         />
-        <h2 id="calculator">The Calculator</h2>
-        <Calculator />
         <JourneyNext
           siteId="fish-com"
           nextHref="/tools/heater-wattage-calculator"
           nextLabel="Size the heater for the same gallons"
-          nextBlurb="The GPH range is flow, not temperature. Size the heater for this volume next so the same tank is not under-heated while the filter turns it over. The hop below is the same AquaClear HOB search already on this page."
+          nextBlurb="The GPH range is flow, not temperature. Size the heater for this volume next so the same tank is not under-heated while the filter turns it over. The button below opens the same AquaClear HOB search on Amazon."
           resourceHref="/go/amazon-brand/aquaclear+70+filter?s=tools-filter-gph-calculator"
-          resourceLabel="Shop AquaClear HOB filters on Amazon →"
+          resourceLabel="Browse AquaClear 70 filters on Amazon →"
         />
 
-        {/* Money path — live amazon-brand search hops (HOB / canister / media /
+        {/* Shop note — live amazon-brand search buttons (HOB / canister / media /
             sponge / powerhead). ShopCtas hides empty Chewy; never href="#"
-            or PLACEHOLDER. HOB / canister / sponge queries match filter reviews
+            or an empty link. HOB / canister / sponge queries match filter reviews
             and the stocking calculator. */}
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/aquaclear+70+filter?s=tools-filter-gph-calculator", "/go/amazon-brand/fluval+307+canister+filter?s=tools-filter-gph-calculator", "/go/amazon-brand/aquarium+filter+media?s=tools-filter-gph-calculator", "/go/amazon-brand/aquarium+sponge+filter?s=tools-filter-gph-calculator", "/go/amazon-brand/aquarium+powerhead?s=tools-filter-gph-calculator"]} />
         <div id="shop" className="mb-8 rounded-xl border border-brand-border bg-brand-surface p-5">
           <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Shop a filter kit
+            Shop these supplies
           </div>
           <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/aquaclear+70+filter?s=tools-filter-gph-calculator"
-              amazonLabel="Shop AquaClear HOB filters on Amazon →"
+              amazonLabel="Browse AquaClear 70 filters on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/fluval+307+canister+filter?s=tools-filter-gph-calculator"
-              amazonLabel="Shop Fluval canister filters on Amazon →"
+              amazonLabel="Browse Fluval 307 canister filters on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+filter+media?s=tools-filter-gph-calculator"
-              amazonLabel="Shop filter media on Amazon →"
+              amazonLabel="Browse filter media on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+sponge+filter?s=tools-filter-gph-calculator"
-              amazonLabel="Shop sponge filters on Amazon →"
+              amazonLabel="Browse sponge filters on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+powerhead?s=tools-filter-gph-calculator"
-              amazonLabel="Shop aquarium powerheads on Amazon →"
+              amazonLabel="Browse aquarium powerheads on Amazon →"
             />
           </div>
         </div>

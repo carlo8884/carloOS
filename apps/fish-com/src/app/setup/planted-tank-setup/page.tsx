@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, RelatedLinks, AffiliateDisclosure, JourneyNext } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, RelatedLinks, JourneyNext } from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Planted Aquarium Setup Guide — Substrate, Lighting | Fish.com', description: 'How to set up a planted freshwater aquarium. Substrate selection, lighting intensity for plant growth, CO2 injection, fertilization.', path: '/setup/planted-tank-setup', type: 'article' })
@@ -19,17 +20,7 @@ const SOURCES = [
     url: "https://www.epa.gov/sites/default/files/2015-09/documents/submerged_aquatic_vegetation.pdf",
     publisher: "U.S. Environmental Protection Agency",
   },
-  {
-    label: "Aquatic Plant Management: Use of Aquatic Herbicides and Control Methods",
-    url: "https://extension.umd.edu/resource/aquatic-plant-management",
-    publisher: "University of Maryland Extension",
-  },
-  {
-    label: "Algae in Freshwater Aquariums: Causes and Biological Control",
-    url: "https://edis.ifas.ufl.edu/publication/FA048",
-    publisher: "University of Florida IFAS Extension",
-  },
-]
+    ]
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Planted Aquarium Setup Guide', description: 'Substrate, lighting, CO2, and fertilization for planted freshwater aquariums.', url: 'https://fish.com/setup/planted-tank-setup', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-09-06T00:00:00Z' ,
   citation: SOURCES,
 })
@@ -71,11 +62,11 @@ export default function PlantedTankSetupPage() {
 
           <h2>Low-Tech vs High-Tech — Choose Before You Buy Anything</h2>
           <p><strong>Low-tech planted tank:</strong> No CO2 injection. Easy plants only (Java fern, Anubias, Cryptocoryne, mosses, hornwort). Standard lighting (moderate PAR). All-in-one liquid fertilizer once weekly. Lower maintenance. Still beautiful — most of the famous Dutch aquascapes and natural-style tanks use low-tech or medium-tech approaches. Appropriate for beginners and most hobbyists.</p>
-          <p><strong>High-tech planted tank:</strong> Pressurized CO2 injection (CO2 is the primary limiting factor for plant growth). High-intensity lighting (80+ PAR at substrate). Advanced fertilization. Grows carpeting species (Hemianthus callitrichoides, Eleocharis, Glossostigma), demanding stem plants, and delicate foreground plants. Requires more daily monitoring (CO2 levels, fertilizer adjustments, algae management). Significantly more equipment investment ($200–500+ for CO2 system). Appropriate for experienced hobbyists willing to invest time and money.</p>
+          <p><strong>High-tech planted tank:</strong> Pressurized CO2 injection (CO2 is the primary limiting factor for plant growth). High-intensity lighting (80+ PAR at substrate). Advanced fertilization. Grows carpeting species (Hemianthus callitrichoides, Eleocharis, Glossostigma), demanding stem plants, and delicate foreground plants. Requires more daily monitoring (CO2 levels, fertilizer adjustments, algae management). Significantly more equipment investment (see current price for CO2 system). Appropriate for experienced hobbyists willing to invest time and money.</p>
 
           <h2>Substrate</h2>
           <p><strong>Low-tech:</strong> Most easy plants are epiphytes (Java fern, Anubias) that attach to hardscape rather than rooting in substrate — substrate type is less critical. Fine gravel, sand, or a basic planted substrate all work. Avoid large coarse gravel for plants you want to root.</p>
-          <p><strong>High-tech / root-feeding plants:</strong> ADA Aqua Soil Amazonia is the benchmark — highly nutritious, perfect buffering for soft acidic water, excellent plant growth. Expensive (~$30–50/9L bag) and softens water significantly (pH 6.0–6.5). Fluval Stratum and CaribSea Eco-Complete are more affordable alternatives with good results.</p>
+          <p><strong>High-tech / root-feeding plants:</strong> ADA Aqua Soil Amazonia is the benchmark — highly nutritious, perfect buffering for soft acidic water, excellent plant growth. Expensive (see current price bag) and softens water significantly (pH 6.0–6.5). Fluval Stratum and CaribSea Eco-Complete are more affordable alternatives with good results.</p>
 
           <h2>Lighting — PAR Is What Matters</h2>
           <p>PAR (Photosynthetically Active Radiation) measures the light intensity actually usable by plants. Wattage is meaningless — LED efficiency varies enormously. A PAR meter (or referencing community-tested data at the Planted Tank forums) gives the real number at the substrate level.</p>
@@ -92,16 +83,16 @@ export default function PlantedTankSetupPage() {
           siteId="fish-com"
           nextHref="/setup/aquarium-cycling-guide"
           nextLabel="Cycle the planted tank before you stock it"
-          nextBlurb="Plants take up nutrients and can shorten a cycle, but ammonia and nitrite still have to read zero before fish go in. Use the cycling guide next. The hop below is the same planted-setup CO2 search already on this page."
+          nextBlurb="Plants take up nutrients and can shorten a cycle, but ammonia and nitrite still have to read zero before fish go in. Use the cycling guide next. The button below opens the same planted-setup CO2 search on Amazon."
           resourceHref="/go/amazon-brand/planted%20aquarium%20setup%20co2?s=setup-planted-tank-setup"
           resourceLabel="Browse planted-tank CO2 setup gear on Amazon →"
         />
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        <HopDisclosure siteId="fish-com" href="/go/amazon-brand/planted%20aquarium%20setup%20co2?s=setup-planted-tank-setup" />
           <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Planted Tank Setup — Where to Shop</div>
-          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse the gear referenced in this guide on Amazon. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
+          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse the gear referenced in this guide on Amazon.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
-            <a href="/go/amazon-brand/planted%20aquarium%20setup%20co2?s=setup-planted-tank-setup" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Amazon →</a>
+            <a href="/go/amazon-brand/planted%20aquarium%20setup%20co2?s=setup-planted-tank-setup" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px', maxWidth: '100%', whiteSpace: 'normal' }}>Browse planted-tank CO2 setup gear on Amazon →</a>
           </div>
           <ArticleSourcesList sources={SOURCES} />
         </div>

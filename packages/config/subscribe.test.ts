@@ -55,7 +55,11 @@ describe('handleSubscribePost', () => {
         return new Response('{"success":"true"}', { status: 200 })
       },
     })
-    assert.equal(closed.status, 503)
+    assert.equal(closed.status, 200)
+    assert.notEqual(closed.status, 503)
+    assert.equal(closed.body.ok, false)
+    assert.match(closed.body.message || '', /not connected/)
+    assert.doesNotMatch(closed.body.message || '', /saved|subscribed|received/i)
     assert.equal(called, false)
     const rejected = await handleSubscribePost(
       new Request('https://fish.com/api/subscribe', {
@@ -77,14 +81,17 @@ describe('handleSubscribePost', () => {
     assert.doesNotMatch(rejected.body.message || '', /saved|subscribed|received/i)
   })
 
-  it('returns 503 when inbox env is empty — never fake success', async () => {
+  it('returns ok:false when inbox env is empty — never 503, never fake success', async () => {
     const req = new Request('https://dog.com/api/subscribe', {
       method: 'POST',
       body: JSON.stringify({ email: 'owner@example.com', source: 'homepage-under-hero' }),
     })
     const result = await handleSubscribePost(req, { site: 'dog.com', env: {} })
-    assert.equal(result.status, 503)
-    assert.equal(result.body.ok, undefined)
+    assert.equal(result.status, 200)
+    assert.notEqual(result.status, 503)
+    assert.equal(result.body.ok, false)
+    assert.match(result.body.message || '', /not connected/)
+    assert.doesNotMatch(result.body.message || '', /saved|subscribed|received/i)
   })
 
   it('posts to FormSubmit when inbox is set', async () => {

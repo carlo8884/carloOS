@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { AffiliateDisclosure, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ReviewCard, ScoreMethodology, ShopCtas, TableOfContents } from '@carloOS/ui'
+import { ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ReviewCard, ShopCtas, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -94,6 +95,7 @@ export default function PerformanceFeedingPage() {
               { label: "Salt and Electrolytes", href: "/nutrition/salt-and-electrolytes" },
               { label: "Tying-Up", href: "/health/tying-up" },
               { label: "Equine Gastric Ulcers", href: "/health/equine-ulcers" },
+              { label: "Daily feed calculator", href: "/tools/horse-feed-calculator" },
               { label: "Grain and Concentrates", href: "/nutrition/grain-and-concentrates" },
             ]}
           />
@@ -110,37 +112,16 @@ export default function PerformanceFeedingPage() {
           />
           <div className="mb-8">
             <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the nylon-horse-hay-bag,
-              horse-feed-grade-vegetable-oil, and
-              marked-horse-grain-scoop notes that match
-              the forage-before-work, fat-and-fiber
-              fuel, and rest-day concentrate-cut copy
-              on this page — a nylon horse hay bag so
-              a small forage portion hangs before work
-              and buffers stomach acid (not a hay
-              soaking bag, not a slow-feeder hay net,
-              not a wall-mounted hay rack), horse
-              feed-grade vegetable oil so cool fat
-              calories are added without a starch spike
-              (not the stabilized-rice-bran ReviewCard,
-              not a high-fat performance-feed
-              ReviewCard), and a marked horse grain
-              scoop so concentrate is cut on rest days
-              to the work the horse is actually doing
-              (not a tabletop digital grain scale, not
-              a feed-scoop scale). Educational barn
-              checklist, not a treatment, and not a
-              substitute for calling the veterinarian.
-              No spam.
+              Keep these on hand: a nylon horse hay bag so a small forage portion hangs before work and buffers stomach acid (not a hay soaking bag, not a slow-feeder hay net, not a wall-mounted hay rack), horse feed-grade vegetable oil so cool fat calories are added without a starch spike (not the stabilized-rice-bran ReviewCard, not a high-fat performance-feed ReviewCard), and a marked horse grain scoop so concentrate is cut on rest days to the work the horse is actually doing (not a tabletop digital grain scale, not a feed-scoop scale). Educational barn checklist, not a treatment, and not a substitute for calling the veterinarian.
             </p>
 
           </div>
 
           <h2 id="energy">Match Energy to Work</h2>
-          <p>The starting point is honest workload assessment. The energy needs of a horse in light schooling are far below those of an upper-level eventer, endurance horse, or racehorse, and overfeeding energy to a horse not doing the work makes it fat and hot, while underfeeding a hard-working horse erodes condition and performance. Feed the work the horse is actually doing, adjusting as the training load rises and falls through the season. A marked horse grain scoop is how that rest-day and light-work concentrate cut is measured in the barn — it is not a tabletop digital horse grain scale (that lives on the grain page) and not a horse feed-scoop scale (those live on the feed calculators).</p>
+          <p>The starting point is honest workload assessment. The energy needs of a horse in light schooling are far below those of an upper-level eventer, endurance horse, or racehorse, and overfeeding energy to a horse not doing the work makes it fat and hot, while underfeeding a hard-working horse erodes condition and performance. Feed the work the horse is actually doing, adjusting as the training load rises and falls through the season. A marked horse grain scoop is how that rest-day and light-work concentrate cut is measured in the barn — it is not a tabletop digital horse grain scale and not a horse feed-scoop scale.</p>
 
           <h2 id="sources">Energy Sources</h2>
-          <p>Energy can come from fiber, fat, or starch and sugar, and the mix matters. Fiber (forage and super-fibers) provides slow-release energy and gut health and should remain the base. Fat (oil, rice bran) gives dense, cool, slow-burning energy ideal for endurance and for adding calories without fizz. Horse feed-grade vegetable oil is that cool fat top-dress — it is not the stabilized rice-bran fat-supplement ReviewCard below and not a high-fat performance-feed ReviewCard. Starch and sugar from grain provide rapid, readily available energy useful for short, intense efforts, but carry the gut and behavioral risks of high-grain feeding -- so they are used judiciously, not as the default fuel.</p>
+          <p>Energy can come from fiber, fat, or starch and sugar, and the mix matters. Fiber (forage and super-fibers) provides slow-release energy and gut health and should remain the base. The <a href="/tools/horse-feed-calculator">daily feed calculator</a> estimates that forage base from bodyweight before fat or grain is added. Fat (oil, rice bran) gives dense, cool, slow-burning energy ideal for endurance and for adding calories without fizz. Horse feed-grade vegetable oil is that cool fat top-dress — it is not the stabilized rice-bran fat-supplement ReviewCard below and not a high-fat performance-feed ReviewCard. Starch and sugar from grain provide rapid, readily available energy useful for short, intense efforts, but carry the gut and behavioral risks of high-grain feeding -- so they are used judiciously, not as the default fuel. <a href="/reviews/best-equine-supplements">The equine supplement guide</a> compares that fat supplement.</p>
 
           <h2 id="protein">Protein and Electrolytes</h2>
           <p>Working horses need adequate quality protein to build and repair muscle, though protein is a building block rather than a primary fuel and excess is wasteful. More pressing is electrolyte replacement: performance horses lose large volumes of salty sweat, and replacing sodium, chloride, and potassium maintains hydration, recovery, the drive to drink, and muscle function, while helping prevent tying-up. Baseline salt plus work-matched electrolytes is essential. See the salt and electrolytes guide.</p>
@@ -148,7 +129,7 @@ export default function PerformanceFeedingPage() {
           <h2 id="timing">Feeding Around Work</h2>
           <ul>
             <li><strong>Do not work hard immediately after a large grain meal</strong> as it can affect blood flow and comfort; allow time after concentrate feeding.</li>
-            <li><strong>Keep forage before work</strong> -- a small amount of forage in the stomach buffers acid and helps prevent ulcers during exercise. A nylon horse hay bag is how that small pre-work forage portion hangs at the stall or trailer — it is not a hay soaking bag (that lives on heaves), not a slow-feeder hay net (that lives on forage-basics), and not a wall-mounted hay rack (that lives on forage-basics).</li>
+            <li><strong>Keep forage before work</strong> -- a small amount of forage in the stomach buffers acid and helps prevent ulcers during exercise. A nylon horse hay bag is how that small pre-work forage portion hangs at the stall or trailer — it is not a hay soaking bag, not a slow-feeder hay net, and not a wall-mounted hay rack.</li>
             <li><strong>Rehydrate and replace electrolytes</strong> promptly after hard work and sweating.</li>
             <li><strong>Reintroduce feed sensibly</strong> to a hot horse -- cool it down, let it drink, and offer forage before concentrates.</li>
             <li><strong>Adjust on rest days</strong> by reducing concentrate energy to lower tying-up risk on days off. A marked horse grain scoop is the barn tool that rest-day concentrate cut is measured with — it is not a tabletop digital grain scale and not a feed-scoop scale.</li>
@@ -159,118 +140,17 @@ export default function PerformanceFeedingPage() {
 
           <h2 id="kit">Performance feeding supplies</h2>
           <p>
-            Everyday physical supplies that match the
-            forage-before-work, fat-and-fiber fuel, and
-            rest-day concentrate-cut copy on this page —
-            a nylon horse hay bag so a small forage
-            portion hangs before work and buffers
-            stomach acid, horse feed-grade vegetable
-            oil so cool fat calories are added without
-            a starch spike, and a marked horse grain
-            scoop so concentrate is cut on rest days
-            to the work the horse is actually doing.
-            These are educational barn searches, not a
-            ranked product list, not a substitute for
-            veterinary care, and not a hay-soaking-bag
-            hop (that lives on heaves), a slow-feeder
-            hay-net hop (that lives on forage-basics),
-            a wall-mounted hay-rack hop (that lives on
-            forage-basics), a chopped-forage hop (that
-            lives on feeding-senior-horses), a digital
-            grain-scale hop (that lives on grain), or
-            the rice-bran / high-fat-feed ReviewCards
-            below. This page does not hop medications
-            or vaccines. This page does not claim
-            hands-on testing.
+            Keep these on hand: a nylon horse hay bag so a small forage portion hangs before work and buffers stomach acid, horse feed-grade vegetable oil so cool fat calories are added without a starch spike, and a marked horse grain scoop so concentrate is cut on rest days to the work the horse is actually doing.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/nylon+horse+hay+bag?s=nutrition-feeding-the-performance-horse", "/go/amazon-brand/horse+feed+grade+vegetable+oil?s=nutrition-feeding-the-performance-horse", "/go/amazon-brand/marked+horse+grain+scoop?s=nutrition-feeding-the-performance-horse", "/go/amazon-brand/stabilized+rice+bran+horse+fat+supplement?s=nutrition-performance-horse", "/go/amazon-brand/performance+horse+feed+high+fat?s=nutrition-performance-horse"]} />
 
-          {/* Money path — live amazon-brand search hops
-              (nylon horse hay bag /
-              horse feed-grade vegetable oil /
-              marked horse grain scoop).
-              Educational barn searches only; no Rx /
-              vaccine ASIN hops. ShopCtas hides empty
-              Chewy; never href="#" or PLACEHOLDER.
-              Unused vs #1116
-              horse+chopped+forage /
-              horse+feed+soaking+tub /
-              horse+corner+feeder, #1115
-              equine+toxic+plant+identification+field+guide /
-              horse+pasture+walk+weed+identification+handbook /
-              horse+paddock+tree+guard+fencing, #1114
-              flat+back+horse+water+bucket /
-              heated+horse+water+bucket /
-              electrolyte+for+horses, #1113
-              orchard+grass+hay+horse /
-              alfalfa+hay+bales+horse /
-              timothy+alfalfa+mixed+hay+horse, #1112
-              tabletop+digital+horse+grain+scale /
-              stackable+rubber+horse+feed+tubs /
-              rodent+proof+metal+horse+feed+bin, #1111
-              horse+hay+probe+moisture+tester /
-              equine+hay+core+sampler /
-              wall+mounted+horse+hay+rack, #1110
-              plain+white+horse+salt+block /
-              salt+first+horse+electrolyte+powder /
-              wide+mouth+horse+water+bucket, #1108
-              automatic+horse+waterer, #1105
-              digital+hanging+hay+bale+scale /
-              equine+forage+nsc+hay+test+kit /
-              portable+strip+grazing+step+in+posts,
-              horse+tank+heater
-              (winter-care),
-              color+coded+flat+back+horse+buckets
-              (strangles),
-              horse+electrolytes
-              (emergency / grimace-scale),
-              horse+electric+tape / horse+fence+mesh /
-              horse+electric+rope / electric+fence+tester
-              (fencing-safety),
-              horse+grazing+muzzle / soil+test+kit
-              (pasture-management),
-              portable+horse+paddock+panels
-              (osteoarthritis),
-              stabilized+rice+bran+horse+fat+supplement /
-              performance+horse+feed+high+fat
-              (kept on the ReviewCards below),
-              horse+hay+cubes / horse+mash
-              (dental),
-              lidded+5+gallon+feed+soaking+pail /
-              large+smooth+feed+tub+rocks
-              (choke),
-              horse+hay+soaking+bag / horse+hay+steamer
-              (heaves),
-              slow+feeder+hay+net+horse
-              (forage ReviewCard),
-              small+hole+slow+feeder+hay+net+horse
-              (easy-keeper),
-              equine+slow+feeder+hay+box
-              (turnout),
-              molasses+free+beet+pulp+shreds+horse /
-              beet+pulp+pellets+horse+feed
-              (beet-pulp). */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop performance feeding supplies
             </div>
             <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page forage-before-work, fat-and-fiber
-              fuel, and rest-day concentrate-cut copy —
-              a nylon horse hay bag, horse feed-grade
-              vegetable oil, and a marked horse grain
-              scoop. Educational barn searches only.
-              They are not a ranked product list, they
-              are not a hay-soaking-bag or slow-feeder
-              hay-net hop, they are not a chopped-forage
-              hop, they are not the rice-bran or
-              high-fat-feed ReviewCards, and they do
-              not replace a veterinarian. Horses.com
-              earns a commission on qualifying
-              purchases at no extra cost to you. Empty
-              Chewy buttons stay hidden.
+              Keep these on hand: a nylon horse hay bag, horse feed-grade vegetable oil, and a marked horse grain scoop. Educational barn searches only. They are not a ranked product list, they are not the rice-bran or high-fat feed below, and they do not replace a veterinarian.
             </p>
             <div className="flex flex-col gap-3">
               <ShopCtas
@@ -289,16 +169,14 @@ export default function PerformanceFeedingPage() {
           </div>
 
           <h2 id="picks">Product Picks — General Nutrition Supports for Performance Horses</h2>
-          <p>A few widely-available general nutrition supports for performance horses -- fat-based calorie additions and a general conditioning supplement. These support the overall feeding plan described above; they are not treatments for lameness, disease, or diagnosed deficiencies. Build the full ration with your veterinarian or equine nutritionist. This is a documented-spec comparison drawing on standard US equestrian retail; this page does not claim hands-on testing.</p>
+          <p>A few widely-available general nutrition supports for performance horses -- fat-based calorie additions and a general conditioning supplement. These support the overall feeding plan described above; they are not treatments for lameness, disease, or diagnosed deficiencies. Build the full ration with your veterinarian or equine nutritionist.</p>
 
-          <ScoreMethodology />
 
           <ReviewCard
             id="performance-fat-supplement"
             badge="Fat-Based Calorie Source"
             name="Stabilized Rice Bran or High-Fat Supplement"
             subtitle="Cool, dense calorie addition for hard-working horses"
-            score={8.6}
             winner
             description={<>
               <p>Fat-based calorie supplements -- stabilized rice bran and comparable high-fat feeds -- add dense, slow-burning energy to a working horse&apos;s ration without the starch spike of additional grain. This &ldquo;cool&rdquo; energy supports sustained work and helps maintain condition through a hard season without the excitability and gut risks of high starch. Introduced gradually; used alongside adequate forage and a balanced diet. General nutrition support only -- not a therapeutic product.</p>
@@ -311,8 +189,9 @@ export default function PerformanceFeedingPage() {
             ]}
             pros={['Dense energy without starch spike', 'Cool energy -- suits excitable horses', 'Supports condition through hard work']}
             cons={['Introduce gradually to avoid loose droppings', 'Not a complete feed', 'High-fat supplements can go rancid -- choose stabilized form']}
-            price="$25–50 per 25–40 lb"
-            ctaText="Search on Amazon →"
+            price="see current price per 25–40 lb"
+            priceNote="dated 2026-06-12."
+            ctaText="Search a stabilized rice bran fat supplement on Amazon →"
             ctaHref="/go/amazon-brand/stabilized+rice+bran+horse+fat+supplement?s=nutrition-performance-horse"
             ctaAffiliateProgram="amazon"
             ctaAffiliateProduct="horse-fat-supplement"
@@ -323,7 +202,6 @@ export default function PerformanceFeedingPage() {
             badge="Performance Complete Feed"
             name="High-Performance Horse Feed"
             subtitle="Formulated concentrate for horses with high energy demands"
-            score={8.4}
             description={<>
               <p>Performance-formulated horse feeds combine fat, fiber, and controlled starch with higher protein and targeted vitamins and minerals to support the demands of training and competition. They are designed to fill the energy and nutrient gap beyond what forage and a balancer can cover at high workloads. Feed at the label rate in multiple small meals; always pair with adequate forage and match the ration to the actual workload, not the label maximum. Build the full plan with your veterinarian or nutritionist.</p>
               <p>General nutrition support for: horses in regular, demanding work -- show horses, eventers, endurance horses, and working horses under consistent training load.</p>
@@ -335,8 +213,9 @@ export default function PerformanceFeedingPage() {
             ]}
             pros={['Targeted nutrition for higher work demands', 'Consistent energy delivery', 'Formulated to reduce gut risk vs plain grain']}
             cons={['Overfeeding a low-work horse causes fat and excitability', 'Must be split into small meals', 'Adjust promptly on rest days']}
-            price="$35–75 per 50 lb"
-            ctaText="Search on Amazon →"
+            price="see current price per 50 lb"
+            priceNote="dated 2026-06-12."
+            ctaText="Search high-fat performance horse feed on Amazon →"
             ctaHref="/go/amazon-brand/performance+horse+feed+high+fat?s=nutrition-performance-horse"
             ctaAffiliateProgram="amazon"
             ctaAffiliateProduct="performance-horse-feed"

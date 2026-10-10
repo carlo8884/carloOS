@@ -1,11 +1,13 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { liveAnchorHref } from '@carloOS/config/affiliate-hop'
+import { ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata, ArticleSourcesList, LastUpdated, ComparisonFoot } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'vets-co',
   title: 'Vetster vs AskVet Telehealth | Vets.co',
-  description: 'Pay per video visit versus a $30 chat subscription. Prices and limits are the ones on the telehealth page. Neither replaces an emergency clinic.',
+  description: 'Vetster single visits start at $102. AskVet does not print a flat monthly chat price. Neither is emergency care.',
   path: '/reviews/vetster-vs-askvet-guide',
   type: 'article',
 })
@@ -24,11 +26,11 @@ const schema = buildArticleSchema({
 const FAQS = [
   {
     question: 'Which service does the telehealth page pick for video?',
-    answer: 'Vetster. The review lists video and chat, licensed veterinarians, specialists, pay-per-consult pricing of $50–100, no monthly fee, and an editorial score of 9.2. Prescriptions depend on the jurisdiction.',
+    answer: 'Vetster. The review lists video and chat, licensed veterinarians, and specialists. Prescriptions depend on the jurisdiction. The single-visit figure is on the telehealth card.',
   },
   {
-    question: 'What does the AskVet plan include at $30 a month?',
-    answer: 'Unlimited chat, a typical wait under five minutes, general practice rather than specialists, and limited prescriptions. There is no video. The score in the review is 8.8.',
+    question: 'What does the AskVet plan include?',
+    answer: 'The current AskVet page does not print a flat monthly chat price. See the carrier\'s current terms. There is no video. Prescriptions are limited.',
   },
   {
     question: 'Can either service replace the emergency clinic?',
@@ -37,9 +39,11 @@ const FAQS = [
 ]
 
 export default function VetsterVsAskvetGuidePage() {
+  const visitHref = '/go/vetster/telehealth?s=reviews-vetster-vs-askvet-guide'
+  const visit = liveAnchorHref(visitHref)
   return (
     <ArticleLayout
-      priceAsOf="2026-10-04"
+      priceAsOf="2026-10-07"
       siteId="vets-co"
       schema={schema}
       hero={{
@@ -63,21 +67,29 @@ export default function VetsterVsAskvetGuidePage() {
             { label: 'Telehealth comparison', href: '/telehealth' },
             { label: 'ER vs clinic', href: '/tools/er-vs-clinic' },
             { label: 'Best pet insurance', href: '/reviews/best-pet-insurance' },
+            { label: 'Vetster vs Chewy Connect', href: '/reviews/vetster-vs-chewy-connect-guide' },
+            { label: 'AskVet vs Chewy Connect', href: '/reviews/askvet-vs-chewy-connect-guide' },
           ]}
         />
       }
     >
       <div className="carloOS-article">
+          <LastUpdated date="2026-10-10" />
         <p>The <Link href="/telehealth">telehealth comparison</Link> ranks Vetster, AskVet, and Chewy Connect. Vetster versus AskVet is the choice between paying for a visit and paying for a month of chat. If the pet is in crisis, neither policy applies. The page lists pale or blue gums, breathing difficulty, collapse, suspected poisoning, severe injury, and a cat that cannot urinate as reasons to go to an emergency clinic. The <Link href="/tools/er-vs-clinic">ER versus clinic tool</Link> is the setting check. This guide is for a question that can wait for a screen.</p>
         <h2>Vetster</h2>
-        <p>Vetster is the best overall pick, scored 9.2. Consults are video and chat. The review says veterinarians are licensed in the owner&apos;s jurisdiction, which is what makes a prescription valid where state rules allow. Specialists are listed, including behavior, dermatology, and internal medicine. You pay per consult, $50–100, with no monthly fee. Typical wait is under 15 minutes, and the review says peak hours can run longer. The con is the higher price per visit compared with a subscription.</p>
+        <p>Vetster is the best overall pick. Consults are video and chat. Vetster&apos;s help article, updated 2025-12-18, says it verifies an active license in the veterinarian&apos;s jurisdiction before they go live. It does not say the veterinarian is licensed where the owner is, or that a prescription is therefore valid. Specialists are listed, including behavior, dermatology, and internal medicine. This page does not publish a wait time. The con is a higher per-visit figure than a chat plan.</p>
+        <p>Single visits start at $102. Plus is $12/month, billed annually.</p>
         <h2>AskVet</h2>
-        <p>AskVet is the subscription option, scored 8.8. The price in the review is $30 a month for unlimited chat. Typical wait is under five minutes. There is no video, specialists are general practice, and prescriptions are limited. The review says that is a reasonable trade when the questions are frequent: a new puppy, a senior pet, several pets, or a chronic condition you already understand and need to ask about. It is a weak substitute when you needed someone to look at the animal.</p>
+        <p>AskVet is the subscription option. See the carrier&apos;s current terms for a monthly chat price. The current askvet.app pages do not print a visit type. Specialists are listed as general practice, and prescriptions are limited. The review says that is a reasonable trade when the questions are frequent: a new puppy, a senior pet, several pets, or a chronic condition you already understand and need to ask about. It is a weak substitute when you needed someone to look at the animal.</p>
         <h2>Who should use which</h2>
-        <p>Use Vetster when you want video, a specialist, or a prescription the review says is jurisdiction-dependent. Use AskVet when the questions are frequent and chat is enough, and $30 a month is cheaper than repeating a $50–100 visit. If you already pay for Chewy+, the other option on the telehealth page is Chewy Connect, included with that membership, and it is a poor reason to join Chewy+ by itself. Chewy is not the comparison this page is settling.</p>
-        <AffiliateDisclosure variant="inline" siteId="vets-co" />
-        <p>The link below opens Vetster from the telehealth page, for a video visit.</p>
-        <p><a className="font-semibold text-brand-primary" href="/go/vetster/telehealth?s=reviews-vetster-vs-askvet-guide">Visit Vetster →</a></p>
+        <p>Use Vetster when you want video, a specialist, or a prescription the review says is jurisdiction-dependent. Use AskVet when the questions are frequent and chat is enough. See the carrier&apos;s current terms before comparing a monthly chat price with a single visit. Chewy lists the licensed-vet video price on the telehealth page. Chewy is not the comparison this page is settling.</p>
+        <HopDisclosure siteId="vets-co" href={visitHref} showQuietNote={false} />
+        <p>A video visit is not emergency care.</p>
+        {visit ? (
+          <p><a className="font-semibold text-brand-primary" href={visit} rel="sponsored noopener">Visit Vetster →</a></p>
+        ) : (
+          <p><Link href="/telehealth" className="font-semibold text-brand-primary">Compare telehealth services →</Link></p>
+        )}
         <EmailCapture
           variant="inline"
           siteId="vets-co"
@@ -87,13 +99,59 @@ export default function VetsterVsAskvetGuidePage() {
           source="reviews-vetster-vs-askvet-guide"
           checklist={[
             'Use Vetster when you want video, a specialist, or a prescription the review says is jurisdiction-dependent.',
-            'Use AskVet when the questions are frequent and chat is enough, and $30 a month is cheaper than repeating a $50–100 visit.',
-            'If you already pay for Chewy+, the other option on the telehealth page is Chewy Connect, included with that membership, and it is a poor reason to join Chewy+ by itself.',
+            'Single visits start at $102. Plus is $12/month, billed annually. AskVet: see the carrier\'s current terms.',
+            'The licensed-vet video visit is $49.99.',
             'Visit Vetster',
           ]}
         />
+        <div className="my-6 max-w-full min-w-0">
+          <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
+            <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+            <thead>
+              <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
+                <th scope="col" className="p-3 font-bold text-brand-dark">Vetster</th>
+                <th scope="col" className="p-3 font-bold text-brand-dark">AskVet</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Role</th>
+                <td className="p-3">Best overall</td>
+                <td className="p-3">Subscription</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Format</th>
+                <td className="p-3">Video and chat</td>
+                <td className="p-3">Chat. The current pages do not print a visit type</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Who you reach</th>
+                <td className="p-3">Verifies an active license in the veterinarian’s jurisdiction before they go live. Specialists include behavior, dermatology, and internal medicine</td>
+                <td className="p-3">General practice. Prescriptions are limited</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Price line</th>
+                <td className="p-3">A higher per-visit figure than a chat plan</td>
+                <td className="p-3">See the carrier’s current terms for a monthly chat price</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Use it when</th>
+                <td className="p-3">You want video, a specialist, or a prescription the review says is jurisdiction-dependent</td>
+                <td className="p-3">The questions are frequent and chat is enough</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <ComparisonFoot updated="2026-10-10" />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
+                <ArticleSourcesList
+            title="Sources"
+            sources={[
+            { label: "Vetster help article", url: "https://help.vetster.com/en/articles/13184184-how-are-licenses-verified", publisher: "Vetster" },
+            ]}
+          />
       </div>
     </ArticleLayout>
   )

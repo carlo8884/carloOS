@@ -1,12 +1,13 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, RelatedLinks, CrossPortfolioCard, StockImage , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
+import { ShopCtas, buildMetadata, ArticleLayout, RelatedLinks, CrossPortfolioCard, StockImage , ArticleSourcesList } from '@carloOS/ui'
 import { FAQAccordion, SchemaScript, buildArticleSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 
 const SOURCES = [
   { label: "Paracheirodon innesi — Seriously Fish species profile", url: "https://www.seriouslyfish.com/species/paracheirodon-innesi/", publisher: "Seriously Fish" },
   { label: "Paracheirodon innesi — FishBase species record", url: "https://www.fishbase.se/summary/Paracheirodon-innesi.html", publisher: "FishBase" },
-  { label: "Neon Tetra Disease (Pleistophora hyphessobryconis) — Merck Veterinary Manual", url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/aquarium-fish/microsporidiosis-in-fish", publisher: "Merck Vet Manual" },
+  { label: "Neon Tetra Disease (Pleistophora hyphessobryconis) — Merck Veterinary Manual", url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/aquarium-fish/parasitic-diseases-of-fish", publisher: "Merck Vet Manual" },
   { label: "Weitzman, S.H. & Fink, S.V. Characidae. In: Checklist of the Freshwater Fishes of South and Central America. EDIPUCRS, 2003.", publisher: "EDIPUCRS" },
 ]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Neon Tetra Care Guide — School Size, NTD | Fish.com', description: 'Neon tetras are the best-known aquarium fish. Schools of 15+ in planted tanks are spectacular. Neon tetra disease has no cure', path: '/species/neon-tetra', type: 'article' })
@@ -65,17 +66,17 @@ export default function NeonTetraPage() {
     <ArticleLayout siteId="fish-com"
       hero={{ title: 'Neon Tetra Care Guide', subtitle: 'Paracheirodon innesi — the neon tetra may be the most recognizable aquarium fish in existence. The electric blue stripe and vivid red tail have made it a fixture in the hobby since the 1930s. In groups of 15+ in a well-planted tank, the school creates a living light display that no other fish replicates at their size and price point.', category: 'Species Guide', authorName: 'Fish.com Editorial', publishedAt: 'May 2025', readTime: '8 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Neon Tetra', href: '/species/neon-tetra' }]}
-      relatedLinks={[{ title: "Species Hub", href: "/species", category: "Species" }, { title: "Cardinal Tetra", href: "/species/cardinal-tetra", category: "Species Guide" }, { title: "Ember Tetra", href: "/species/ember-tetra", category: "Species Guide" }, { title: "Betta Fish", href: "/species/betta-fish", category: "Species Guide" }]}
+      relatedLinks={[{ title: "Species Hub", href: "/species", category: "Species" }, { title: "Cardinal Tetra", href: "/species/cardinal-tetra", category: "Species Guide" }, { title: "Ember Tetra", href: "/species/ember-tetra", category: "Species Guide" }, { title: "Tank Volume Calculator", href: "/tools/aquarium-volume-calculator", category: "Tool" }, { title: "Betta Fish", href: "/species/betta-fish", category: "Species Guide" }]}
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Quick Stats</div>
-          {[['Scientific name', 'Paracheirodon innesi'], ['Adult size', '1.25 inches'], ['Temperature', '68–79°F (cooler preferred)'], ['pH', '5.5–7.0 (soft acidic optimal)'], ['School size', '10 min — 15-20+ for display'], ['Cardinal vs neon', 'Cardinal tetra larger, more vivid red'], ['Lifespan', '5–10 years in good conditions']].map(([k, v]) => (
+          {[['Scientific name', 'Paracheirodon innesi'], ['Adult size', '1.25 inches'], ['Temperature', '68–79°F (https://www.fishbase.se/summary/Paracheirodon-innesi.html)'], ['pH', '5.5–7.0 (soft acidic optimal)'], ['School size', '10 min — 15-20+ for display'], ['Cardinal vs neon', 'Cardinal tetra larger, more vivid red'], ['Lifespan', '5–10 years in good conditions']].map(([k, v]) => (
             <div key={k} className="flex justify-between py-1.5 border-b border-brand-border text-xs last:border-0">
-              <span className="text-brand-text-light">{k}</span><span className="font-bold text-brand-dark text-right max-w-[55%]">{v}</span>
+              <span className="text-brand-text-light">{k}</span><span className="font-bold text-brand-dark text-right max-w-[55%] break-all">{v}</span>
             </div>
           ))}
         </div>
-        <RelatedLinks title="Related Species" links={[{ label: 'Cardinal Tetra', href: '/species/cardinal-tetra' }, { label: 'Ember Tetra', href: '/species/ember-tetra' }, { label: 'Planted Tank Setup', href: '/setup/planted-tank-setup' }]} />
+        <RelatedLinks title="Related Species" links={[{ label: 'Tank Volume Calculator', href: '/tools/aquarium-volume-calculator' }, { label: 'Cardinal Tetra', href: '/species/cardinal-tetra' }, { label: 'Ember Tetra', href: '/species/ember-tetra' }, { label: 'Planted Tank Setup', href: '/setup/planted-tank-setup' }]} />
             <CrossPortfolioCard currentSite="fish-com" contentType="species" variant="sidebar" />
 
       </>}
@@ -98,7 +99,7 @@ export default function NeonTetraPage() {
         </CalloutBox>
 
         <h2>Display — The School of 20</h2>
-        <p>The visual impact of neon tetras scales dramatically with school size. Ten neons are pleasant. Twenty neons in a densely planted 30-gallon with dark substrate and good lighting are breathtaking — the school moves as a single organism, the blue stripe and red tail catching light from every angle simultaneously. The school cohesion (how tightly the fish school) also increases with group size — larger schools produce the coordinated, flowing movement behavior that is the most visually compelling aspect of schooling fish.</p>
+        <p>The visual impact of neon tetras scales dramatically with school size. Ten neons are pleasant. Twenty neons in a densely planted 30-gallon with dark substrate and good lighting are breathtaking — the school moves as a single organism, the blue stripe and red tail catching light from every angle simultaneously. The <a href="/tools/aquarium-volume-calculator" className="text-brand-primary hover:underline">tank volume calculator</a> checks that 30-gallon figure from the tank&apos;s length, width, and height. The school cohesion (how tightly the fish school) also increases with group size — larger schools produce the coordinated, flowing movement behavior that is the most visually compelling aspect of schooling fish.</p>
         <p>Tank setup for best display: dark substrate (black sand), green plants creating visual contrast against which the blue-red stripe stands out (Java fern, Anubias, Rotala), moderate lighting, and a dark background. Tannins (Indian almond leaves, driftwood, peat) darken the water slightly, mimic the fish's natural blackwater environment, and produce the slightly acidic conditions that intensify their color.</p>
 
         <h2>Neon vs Cardinal Tetra</h2>
@@ -114,12 +115,12 @@ export default function NeonTetraPage() {
           includeSchema={false}
           allowMultiple
         />
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        <HopDisclosure siteId="fish-com" href="/go/amazon-brand/neon%20tetra%20tank%20setup?s=species-neon-tetra" />
           <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Neon Tetra — Tank Setup</div>
-          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for neon tetra care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
+          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for neon tetra care.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
-            <a href="/go/amazon-brand/neon%20tetra%20tank%20setup?s=species-neon-tetra" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop Neon Tetra Setup on Amazon →</a>
+            <ShopCtas amazonHref="/go/amazon-brand/neon%20tetra%20tank%20setup?s=species-neon-tetra" amazonLabel="Browse neon tetra tank setups on Amazon →" />
           </div>
         </div>
 

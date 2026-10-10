@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, LastUpdated, ComparisonFoot } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 
@@ -18,6 +18,7 @@ export default function Page() {
     <>
       <SchemaScript schema={schema} />
       <ArticleLayout siteId="vets-co"
+        heroHop={<a href="/insurance/how-pet-insurance-works" className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline mb-5">How pet insurance works</a>}
         hero={{ title: 'How Does the Pet Insurance Claims Process Work?', subtitle: 'Pet insurance is almost always reimbursement-based: you pay the vet in full, submit the itemized invoice, and the insurer pays you back your share of the eligible amount after the deductible. Here is the process step by step, and what speeds it up.', category: 'Insurance Q&A', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '6 min' }}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Insurance', href: '/insurance' }, { name: 'Questions', href: '/insurance/questions' }, { name: 'Claims Process', href: '/insurance/questions/how-does-the-claims-process-work' }]}
         sidebar={<>
@@ -36,13 +37,14 @@ export default function Page() {
       >
         <div className="carloOS-article">
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-11T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
+          <LastUpdated date="2026-10-10" />
 
           <CalloutBox variant="info" title="The short answer">
             Pet insurance is almost always <strong>reimbursement-based</strong>: you pay the veterinarian in full, then submit the itemized invoice (and sometimes records) to the insurer, which pays you back your reimbursement percentage of the eligible amount after your deductible is met. Processing usually takes a few days to a few weeks; some insurers offer faster app-based claims or, with select vets, direct pay.
           </CalloutBox>
 
           <h2>The Reimbursement Model</h2>
-          <p>The single most important thing to understand about pet insurance claims is that the model is reimbursement, not direct billing. Unlike human health insurance, where the provider usually bills the insurer, the standard pet insurance flow has you pay your veterinarian the full amount at the time of care and then seek reimbursement afterward. This means you need access to the funds to cover the bill upfront, even for a large emergency — a practical reality worth planning for before you ever file a claim.</p>
+          <p>The single most important thing to understand about pet insurance claims is that the model is reimbursement, not direct billing. Unlike human health insurance, where the provider usually bills the insurer, the standard pet insurance flow has you pay your veterinarian the full amount at the time of care and then seek reimbursement afterward. This means you need access to the funds to cover the bill upfront, even for a large emergency — a practical reality worth planning for before you ever file a claim. <a href="/insurance/how-pet-insurance-works">How pet insurance works</a> walks through that pay-then-reimburse flow.</p>
           <p>A small and growing number of insurers, working with select clinics, support direct payment so you only owe your portion at checkout. That is convenient when available, but it remains the exception. Assume you will pay first and be reimbursed later unless your insurer and your clinic explicitly support direct pay.</p>
 
           <h2>The Steps, in Order</h2>
@@ -50,13 +52,39 @@ export default function Page() {
 
           <h2>Deductibles: Annual vs. Per-Incident</h2>
           <p>How your deductible is structured changes your real out-of-pocket, especially in a year with multiple claims. An <strong>annual deductible</strong> is met once per policy year and then resets at renewal — after you have paid it across all eligible claims, the rest of the year is reimbursed subject to your percentage and limit. A <strong>per-incident deductible</strong> applies separately to each new condition, so two unrelated problems each carry their own deductible. Annual deductibles are generally easier to predict; confirm which your policy uses before you assume how a multi-claim year will play out.</p>
+          <div className="my-6 max-w-full min-w-0">
+            <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
+              <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+              <thead>
+                <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Annual deductible</th>
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Per-incident deductible</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">When it is met</th>
+                  <td className="p-3">Once per policy year, then it resets at renewal</td>
+                  <td className="p-3">Separately for each new condition</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Several claims in a year</th>
+                  <td className="p-3">After it is met, the rest of the year is reimbursed subject to the percentage and the limit</td>
+                  <td className="p-3">Two unrelated problems each carry their own deductible</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <ComparisonFoot updated="2026-10-10" />
+          <h2>Who should check which deductible</h2>
+          <p>Confirm which structure the policy uses before you assume a year with several claims. An annual deductible is the simpler one to predict. A per-incident deductible repeats for each new condition.</p>
 
           <h2>What Speeds a Claim Up</h2>
           <p>The biggest determinant of how fast you are paid is the completeness of your submission. A digital claim with a clear itemized invoice and any requested records moves quickly; a claim missing documentation stalls while the insurer follows up. Linking a bank account for direct deposit removes the mailing delay on the payout. Some insurers advertise faster app-based claims with same- or next-day decisions on simple submissions, and a few, as noted, offer direct pay with partner clinics. When comparing carriers, claim experience and payout speed are differences worth weighing — our <a href="/reviews/best-pet-insurance">best pet insurance comparison</a> notes where they diverge.</p>
 
           <h2 id="next-steps">Next Steps</h2>
           <p>Understanding the claim flow is most useful when paired with the numbers — what you will actually be reimbursed on a given bill, and whether a policy is worth it for your situation.</p>
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
           <ul>
             <li>Estimate net out-of-pocket on a representative bill with the <a href="/tools/insurance-reimbursement-estimator">reimbursement estimator</a>.</li>
             <li>Weigh the overall decision with the <a href="/tools/pet-insurance-worth-it-calculator">worth-it calculator</a>.</li>
@@ -76,9 +104,7 @@ export default function Page() {
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
 
-          <ArticleSourcesList sources={[
-            { label: 'A Consumer’s Guide to Pet Insurance (claims and reimbursement)', url: 'https://content.naic.org/cipr-topics/pet-insurance', publisher: 'NAIC' },
-            { label: 'State of the Industry Report (claims handling)', url: 'https://naphia.org/state-of-the-industry/', publisher: 'NAPHIA' },
+          <ArticleSourcesList title="Sources" sources={[
             { label: 'Sample carrier claim-process and deductible disclosures', publisher: 'General carrier policy disclosures (not an endorsement)' },
           ]} />
         </div>

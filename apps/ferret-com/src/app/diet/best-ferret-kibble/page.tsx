@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
-import { TableShopLink, ComparisonFoot, PrimaryHop, buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, QuickPicks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
-import { buildArticleSchema, buildFAQSchema, buildItemListSchema, buildMedicalWebPageSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import Link from 'next/link'
+import { HopDisclosure } from '../../../components/HopDisclosure'
+import { TableShopLink, ComparisonFoot, EmailCapture, buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, QuickPicks, CrossPortfolioCard, ShopCtas, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
+import { buildArticleSchema, buildFAQSchema, buildItemListSchema, buildMedicalWebPageSchema, buildProductSchema, combineSchemas, SchemaScript, QuietPartnerLink} from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -34,15 +36,14 @@ const med = buildMedicalWebPageSchema({
   lastReviewed: '2026-06-01',
 })
 
-// GEO: ItemList of the three kibbles that fit the profile + an editorial
-// Product/Review per pick. reviewRating maps each card's on-page disclosed
-// editorial score (via ScoreMethodology); name + reviewBody come only from this
-// page's ReviewCard content. No aggregateRating, no fabricated specs (QC §1.4).
+// GEO: ItemList of the three kibbles that fit the profile plus a product
+// review per pick. The name and review body come only from this page's
+// ReviewCard content. No aggregate rating and no fabricated specs (QC §1.4).
 const itemList = buildItemListSchema({
   name: 'Ferret Kibbles That Fit the Profile',
   items: [
-    { name: 'Wysong Epigen 90', url: `${PAGE_URL}#wysong-epigen-90` },
-    { name: 'Marshall Premium Ferret Diet', url: `${PAGE_URL}#marshall-premium-diet` },
+    { name: 'Wysong Epigen 90', url: 'https://ferret.com/go/wysong/epigen-90?s=diet-best-ferret-kibble' },
+    { name: 'Marshall Premium Ferret Diet', url: 'https://ferret.com/go/marshall/premium-ferret-diet?s=diet-best-ferret-kibble' },
     { name: 'Carniwhole Ferret Food', url: `${PAGE_URL}#carniwhole` },
   ],
 })
@@ -50,25 +51,22 @@ const itemList = buildItemListSchema({
 const products = [
   buildProductSchema({
     name: 'Wysong Epigen 90',
-    description: 'Starch-free, animal-first, lowest commercial carb load in wide ferret use',
-    url: `${PAGE_URL}#wysong-epigen-90`,
-    ratingValue: 9.3,
+    description: 'Current page lists crude protein minimum 63% and crude fat minimum 16%, and markets the food as starch-free. Carbohydrate is not on the guaranteed analysis.',
+    url: 'https://ferret.com/go/wysong/epigen-90?s=diet-best-ferret-kibble',
     reviewAuthorName: 'Ferret.com Editorial',
-    reviewBody: 'The lowest-carbohydrate commercial kibble in wide ferret-keeping use. The panel reads as named meats and organ meats, and the starch-free system drives carbohydrate by difference into the low single digits — the default choice when insulinoma risk is the priority. Premium price and not always stocked in chain pet aisles.',
+    reviewBody: 'The current Wysong Epigen 90 page lists crude protein minimum 63% and crude fat minimum 16%. Those are guaranteed-analysis figures as printed, not a dry-matter conversion. The page markets the food as starch-free. Carbohydrate is not on the guaranteed analysis — check the label. Premium price and not always stocked in chain pet aisles.',
   }),
   buildProductSchema({
     name: 'Marshall Premium Ferret Diet',
     description: 'Ferret-specific formulation, widely stocked, in-range macros',
-    url: `${PAGE_URL}#marshall-premium-diet`,
-    ratingValue: 8.0,
+    url: 'https://ferret.com/go/marshall/premium-ferret-diet?s=diet-best-ferret-kibble',
     reviewAuthorName: 'Ferret.com Editorial',
-    reviewBody: 'The reference mid-tier ferret kibble in US pet retail — formulated specifically for ferrets, with protein and fat in the working ferret range. The panel is imperfect (some plant protein) but acceptable for healthy adults, and it is the most likely appropriate brand to find on a chain shelf at short notice.',
+    reviewBody: 'The current Marshall Premium Ferret Diet page lists crude protein minimum 38% and crude fat minimum 18%. Those are guaranteed-analysis figures as printed, not a dry-matter conversion. Carbohydrate is not on the guaranteed analysis — check the label.',
   }),
   buildProductSchema({
     name: 'Carniwhole Ferret Food',
     description: 'Direct-to-consumer, published macros, subscription-shipped',
     url: `${PAGE_URL}#carniwhole`,
-    ratingValue: 8.2,
     reviewAuthorName: 'Ferret.com Editorial',
     reviewBody: 'A direct-to-consumer ferret food favoured by keepers who want ingredient transparency and a fresher product than long-shelf-stable kibble. It publishes its ingredient and macronutrient panel and ships on a subscription model; the trade-off is subscription logistics, no retail backup, and a shorter community track record.',
   }),
@@ -78,7 +76,7 @@ const FAQS = [
   {
     question: 'What is the best food for ferrets?',
     answer:
-      'There is no single "best" brand — the best food is whichever formulation matches the obligate-carnivore profile: named animal proteins and animal fats in the first 3-5 ingredients, roughly 32-40% protein and 18-22% fat on a dry-matter basis, and carbohydrate by difference as low as possible (the published target is under 3%; premium starch-free formulas land in the low single digits). Read the panel, not the marketing on the front of the bag.',
+      'There is no single "best" brand — the best food is whichever formulation matches the obligate-carnivore profile: named animal proteins and animal fats in the first 3-5 ingredients, roughly 32-40% protein and 18-22% fat on a dry-matter basis, and carbohydrate by difference as low as possible. Under 3% carbohydrate is a planning figure, not a cutoff stated by Merck. The Merck Veterinary Manual states that ferrets require protein of 35%–40%, and that carbohydrate (under 25%) and fiber (under 2.5%) proportions of the diet should be relatively low. The current Wysong page does not print carbohydrate, so check the label. Read the panel, not the marketing on the front of the bag.',
   },
   {
     question: 'How do I know how much carbohydrate is in ferret food?',
@@ -108,7 +106,7 @@ const combined = combineSchemas(schema, med, itemList, faqSchema, ...products)
 // Near-top jump links — fed by the SAME three picks as the ItemList schema
 // above (same names, same anchors). Labels mirror each ReviewCard's badge.
 const QUICK_PICKS = [
-  { label: 'Premium Tier', name: 'Wysong Epigen 90', subtitle: 'Starch-free · Lowest carb load', href: '#wysong-epigen-90' },
+  { label: 'Premium Tier', name: 'Wysong Epigen 90', subtitle: 'Marketed starch-free. Carbohydrate: check the label', href: '#wysong-epigen-90', pickHop: '/go/wysong/epigen-90?s=diet-best-ferret-kibble' },
   { label: 'Mid Tier', name: 'Marshall Premium Ferret Diet', subtitle: 'Ferret-specific · Widely stocked', href: '#marshall-premium-diet' },
   { label: 'Direct-to-Consumer', name: 'Carniwhole Ferret Food', subtitle: 'Published macros · Subscription', href: '#carniwhole' },
 ]
@@ -119,7 +117,22 @@ export default function BestFerretKibblePage() {
       <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="ferret-com"
-        heroHop={<PrimaryHop href='/go/wysong/epigen-90?s=diet-best-ferret-kibble' label='Check price of Wysong Epigen 90 at Wysong' />}
+        heroExtra={
+          <>
+          <div className="[&_.text-brand-primary]:!text-brand-dark">
+            <QuickPicks items={QUICK_PICKS} quietUntilTag embedded />
+          </div>
+          </>
+        }
+        heroHop={
+          <>
+            <HopDisclosure siteId="ferret-com" href="/go/amazon/B019W9VXZK?s=best-ferret-kibble" />
+            <div className="mb-4" data-primary-hop="true">
+              <a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" data-shop-placement="hero" href="/go/amazon/B019W9VXZK?s=best-ferret-kibble">Check price of Wysong Epigen 90 on Amazon →</a>
+            </div>
+            <QuietPartnerLink tone="dark" href="/go/wysong/epigen-90?s=diet-best-ferret-kibble" label="Check price of Wysong Epigen 90 at Wysong" />
+          </>
+        }
         hero={{
           title: 'How to Choose a Ferret Kibble',
           subtitle:
@@ -152,6 +165,10 @@ export default function BestFerretKibblePage() {
             <RelatedLinks
               title="Related Guides"
               links={[
+                { label: 'November and December gifts', href: '/reviews/november-december-gift-guide' },
+                { label: 'Label calculator', href: '/tools/label-calculator' },
+                { label: 'Ferret Body Condition Score', href: '/tools/ferret-body-condition-score' },
+                { label: 'Wysong vs Carniwhole', href: '/reviews/wysong-vs-carniwhole-guide' },
                 { label: 'Whole-Prey vs Kibble', href: '/diet/whole-prey-vs-kibble' },
                 { label: 'Protein & Fat Requirements', href: '/diet/protein-and-fat-requirements' },
                 { label: 'Kit vs Adult Feeding', href: '/diet/kit-vs-adult-feeding' },
@@ -162,8 +179,9 @@ export default function BestFerretKibblePage() {
             <CrossPortfolioCard currentSite="ferret-com" contentType="diet" variant="sidebar" />
           </>
         }
-      
+
         relatedLinks={[
+          { title: 'Ferret Body Condition Score', href: '/tools/ferret-body-condition-score' },
           { title: 'Ferret Diet Hub', href: '/diet' },
           { title: 'Reading Food Labels', href: '/diet/reading-food-labels' },
           { title: 'Protein & Fat Requirements', href: '/diet/protein-and-fat-requirements' },
@@ -171,7 +189,7 @@ export default function BestFerretKibblePage() {
           { title: 'Transitioning Foods', href: '/diet/transitioning-foods' },
           { title: 'Ferret Starter Kit', href: '/ferret-starter-kit' },
         ]}
- priceAsOf="2026-10-04">
+ priceAsOf="2026-10-07">
         <div className="carloOS-article">
           <ArticleByline
             siteName="Ferret.com Editorial"
@@ -179,8 +197,31 @@ export default function BestFerretKibblePage() {
             updatedAt="2026-06-11"
             reviewedBy="Editorial team"
           />
+          <LastUpdated date="2026-10-10" />
+          <EmailCapture
+            variant="inline"
+            siteId="ferret-com"
+            addressOnly
+            title="Shopping checklist"
+            ctaText="Copy checklist"
+            source="diet-best-ferret-kibble"
+            checklist={[
+              "Read the panel, not the marketing on the front of the bag.",
+              "Chicken meal is rendered, water-removed chicken and is actually more protein-dense by weight than fresh chicken, which is roughly 70% water.",
+              "A panel reading \"chicken, chicken meal, turkey meal, chicken fat\" is a good sign.",
+              "The red flags are grains or plant-protein concentrates (corn gluten meal, pea protein, soybean meal) at the top of the panel.",
+              "Ferrets imprint on the textures and smells of food during their first six months and become reluctant to accept anything unfamiliar afterward.",
+              "The defense is rotating among two or three acceptable brands from kithood.",
+            ]}
+          />
 
-          <QuickPicks items={QUICK_PICKS} />
+
+
+          <p>
+            Kibble choice and body condition are different questions. The{' '}
+            <Link href="/tools/ferret-body-condition-score">ferret body condition score</Link>{' '}
+            is how to look at rib and waist cover once the diet is in the bowl.
+          </p>
 
           <h2 id="panel">Read the Panel First</h2>
           <p>
@@ -192,7 +233,7 @@ export default function BestFerretKibblePage() {
 
           <h2 id="macros">The Macronutrient Window</h2>
           <p>
-            The profile cited across exotic-pet veterinary references is roughly 32–40% protein, 18–22% fat, and under 3% carbohydrate, all on a dry-matter basis, with supplemental taurine and fiber under 3%. Guaranteed-analysis labels report "as fed" rather than dry-matter, and they rarely list carbohydrate at all. You estimate carbohydrate <em>by difference</em>: subtract the listed protein, fat, moisture, ash, and fiber percentages from 100. Many supermarket "ferret" kibbles land at 15–30% carbohydrate by difference — that is a defect, not a feature. The full target window and the reasoning behind it are covered in <a href="/diet/protein-and-fat-requirements">protein and fat requirements</a>.
+            A working window on this site is roughly 32–40% protein and 18–22% fat on a dry-matter basis, with supplemental taurine. The Merck Veterinary Manual states that ferrets require protein of 35%–40%, and that carbohydrate (under 25%) and fiber (under 2.5%) proportions of the diet should be relatively low (<a href="https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/management-of-ferrets">Merck Veterinary Manual</a>). Under 3% carbohydrate, and fiber under 3%, are planning figures on this page, not a cutoff stated by Merck. Guaranteed-analysis labels report "as fed" rather than dry-matter, and they rarely list carbohydrate at all. You estimate carbohydrate <em>by difference</em>: subtract the listed protein, fat, moisture, ash, and fiber percentages from 100. Many supermarket "ferret" kibbles land at 15–30% carbohydrate by difference — that is a defect, not a feature. The full target window and the reasoning behind it are covered in <a href="/diet/protein-and-fat-requirements">protein and fat requirements</a>.
           </p>
 
           <h2 id="tiers">The Three Tiers</h2>
@@ -200,7 +241,7 @@ export default function BestFerretKibblePage() {
             Commercial options sort into three broad tiers. The goal is to land on a formulation whose panel matches the obligate-carnivore profile, then stay consistent.
           </p>
           <p>
-            <strong>Premium — animal-first, low-carb, grain-free.</strong> Starch-free or near-starch-free formulas whose panels read as named meats and organ meats, with carbohydrate by difference in the low single digits. The default choice when insulinoma risk is a concern (see <a href="/health/insulinoma">insulinoma in ferrets</a>). Higher price point and not always stocked in chain pet aisles.
+            <strong>Premium — animal-first.</strong> The current Wysong page markets Epigen 90 as starch-free and prints crude protein minimum 63% and crude fat minimum 16%. Carbohydrate is not on that guaranteed analysis, so check the label. The default choice when insulinoma risk is a concern (see <a href="/health/insulinoma">insulinoma in ferrets</a>). Higher price point and not always stocked in chain pet aisles. How that low-carb kibble fits the rest of the diet is in the <a href="/care/diet-basics" className="text-brand-primary underline">diet basics guide</a>.
           </p>
           <p>
             <strong>Mid — ferret-specific, mostly acceptable.</strong> Diets formulated specifically for ferrets rather than adapted from cat food, with protein and fat in the working ferret range. Panels are imperfect — some plant protein, some grain — but acceptable for healthy adults, affordable, and widely stocked.
@@ -228,29 +269,21 @@ export default function BestFerretKibblePage() {
             Change foods over 7–14 days, mixing an increasing proportion of the new kibble into the old. Abrupt changes can cause loose stool, and a fixated ferret may simply stop eating, which is dangerous given how quickly ferrets can become hypoglycemic. If a ferret refuses the new food entirely, slow down further and consider crushing a little new kibble into a meat-based gravy to introduce the smell. Never let a ferret go without eating for an extended period during a transition.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated ferret kibble-panel chart /
-              ferret fridge carb-by-difference card /
-              mustelid kibble-panel reference handbook).
-              Keep existing Wysong / Marshall / Carniwhole
-              review hops. Educational kitchen searches
-              only; no Rx / vaccine / aging hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs diet-hub /
-              training / play-aggression kitchen kits. Ferret
-              aging stays held.
-              Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
             </div>
             <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
+            <p className="mb-4 text-sm font-semibold leading-snug">
+              <Link href="/diet/reading-food-labels" className="inline-block max-w-full whitespace-normal text-brand-primary underline underline-offset-2">
+                Read a ferret food label before you buy →
+              </Link>
+            </p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/wysong+ferret+food?s=best-ferret-kibble"
-                amazonLabel="Shop on Amazon"
+                amazonHref="/go/amazon/B019W9VXZK?s=best-ferret-kibble"
+                amazonLabel="Check price of Wysong Epigen 90 on Amazon →"
               />
           </div>
           </div>
@@ -259,62 +292,60 @@ export default function BestFerretKibblePage() {
           <p>
             Three commercial dry diets whose published ingredient and macronutrient panels line up with the animal-first, low-carbohydrate window described above. This is a documented-spec comparison, not a hands-on test: inclusion reflects published panels and adoption patterns in keeper communities and at exotic-mammal shelters, not a lab evaluation.
           </p>
-          <ScoreMethodology />
-          <ReviewCard
+          <ReviewCard quietUntilTag
             id="wysong-epigen-90"
             badge="Premium Tier"
             name="Wysong Epigen 90"
-            subtitle="Starch-free, animal-first, lowest commercial carb load in wide ferret use"
-            score={9.3}
+            subtitle="Crude protein min. 63%, crude fat min. 16%, as printed. Carbohydrate is not on the analysis."
             winner
             description={
-              <p>The lowest-carbohydrate commercial kibble in wide ferret-keeping use. The panel reads as named meats and organ meats, and the starch-free system drives carbohydrate by difference into the low single digits. The default choice when insulinoma risk is the priority. Premium price per pound, and not always stocked in chain pet aisles.</p>
+              <p>The current Wysong Epigen 90 page lists crude protein minimum 63% and crude fat minimum 16%. Those are guaranteed-analysis figures as printed, not a dry-matter conversion. The page markets the food as starch-free. Carbohydrate is not on the guaranteed analysis — check the label. Premium price per pound, and not always stocked in chain pet aisles.</p>
             }
             specs={[
-              { label: 'Protein (dry-matter)', value: '~60%', highlight: 'good' },
-              { label: 'Fat (dry-matter)', value: '~16%' },
-              { label: 'Carbohydrate', value: 'Single digits', highlight: 'good' },
-              { label: 'Grain-free', value: 'Yes', highlight: 'good' },
+              { label: 'Crude protein (as printed)', value: 'Min. 63%', highlight: 'good' },
+              { label: 'Crude fat (as printed)', value: 'Min. 16%' },
+              { label: 'Carbohydrate', value: 'Not on the guaranteed analysis. Check the label.' },
+              { label: 'Starch-free', value: 'Marketed on the current page. Check the label.', highlight: 'good' },
               { label: 'Distribution', value: 'Direct + specialty pet retail' },
             ]}
-            pros={['Lowest commercial carb load in wide ferret use', 'Animal-first throughout', 'Starch-free system', 'Suitable for insulinoma-prone adults']}
+            pros={['Current page lists crude protein minimum 63%', 'Marketed as starch-free', 'Check the label for carbohydrate']}
             cons={['Premium price', 'Not always stocked at supermarket pet aisles']}
             price="$30–50 / 5 lb"
+            priceNote="dated 2026-10-04."
             ctaText="Check price of Wysong Epigen 90 at Wysong"
             ctaHref="/go/wysong/epigen-90?s=diet-best-ferret-kibble"
             ctaAffiliateProgram="wysong"
             ctaAffiliateProduct="epigen-90"
           />
-          <ReviewCard
+          <ReviewCard quietUntilTag
             id="marshall-premium-diet"
             badge="Mid Tier"
             name="Marshall Premium Ferret Diet"
             subtitle="Ferret-specific formulation, widely stocked, in-range macros"
-            score={8.0}
             description={
-              <p>The reference mid-tier ferret kibble in US pet retail — formulated specifically for ferrets rather than adapted from cat food, with a protein and fat profile in the working ferret range. The ingredient panel is imperfect (some plant protein) but acceptable for healthy adults, and the per-pound price is materially lower than the premium tier. The most likely appropriate brand to find on a chain shelf at short notice.</p>
+              <p>The current Marshall Premium Ferret Diet page lists crude protein minimum 38% and crude fat minimum 18%. Those are guaranteed-analysis figures as printed, not a dry-matter conversion. Carbohydrate is not on the guaranteed analysis — check the label. It is the most likely of these two bags to find on a chain shelf at short notice.</p>
             }
             specs={[
-              { label: 'Protein (dry-matter)', value: '~38%', highlight: 'good' },
-              { label: 'Fat (dry-matter)', value: '~20%', highlight: 'good' },
-              { label: 'Carbohydrate', value: 'Mid teens', highlight: 'warn' },
+              { label: 'Crude protein (as printed)', value: 'Min. 38%', highlight: 'good' },
+              { label: 'Crude fat (as printed)', value: 'Min. 18%', highlight: 'good' },
+              { label: 'Carbohydrate', value: 'Not on the guaranteed analysis. Check the label.' },
               { label: 'Ferret-specific', value: 'Yes', highlight: 'good' },
               { label: 'Distribution', value: 'National chain pet retail' },
             ]}
             pros={['Ferret-specific formulation', 'Widely available', 'Affordable per pound', 'Long manufacturer track record in ferret retail']}
-            cons={['Higher carb than premium tier', 'Plant protein in ingredient list']}
+            cons={['Carbohydrate is not on the guaranteed analysis. Check the label.', 'Check the ingredient list on the current bag']}
             price="$15–25 / 4 lb"
+            priceNote="dated 2026-10-04."
             ctaText="Find Marshall Premium Ferret Diet"
             ctaHref="/go/marshall/premium-ferret-diet?s=diet-best-ferret-kibble"
             ctaAffiliateProgram="marshall"
             ctaAffiliateProduct="premium-ferret-diet"
           />
-          <ReviewCard
+          <ReviewCard quietUntilTag
             id="carniwhole"
             badge="Direct-to-Consumer"
             name="Carniwhole Ferret Food"
             subtitle="Direct-to-consumer, published macros, subscription-shipped"
-            score={8.2}
             description={
               <p>A direct-to-consumer ferret food favoured by keepers who want ingredient transparency and a fresher product than long-shelf-stable kibble. Carniwhole publishes its ingredient and macronutrient panel and ships on a subscription model. Appeal: transparency and freshness. Trade-off: subscription logistics, no retail backup, and a shorter community track record than Marshall or Wysong.</p>
             }
@@ -330,7 +361,7 @@ export default function BestFerretKibblePage() {
           />
 
           <h2 id="who">Who should buy which kibble</h2>
-          <p>Protein, carb notes, price, and the stocking limit are already on the three cards. This table only lines those facts up. Scores are this page&apos;s editorial scores, not customer star ratings.</p>
+          <p>Protein, carb notes, price, and the stocking limit are already on the three cards. This table only lines those facts up.</p>
           <div className="overflow-x-auto my-6 max-w-full">
             <table className="w-full text-sm border-collapse table-fixed sm:table-auto min-w-0 sm:min-w-[36rem] [&_th]:break-words [&_td]:break-words">
               <thead>
@@ -343,16 +374,16 @@ export default function BestFerretKibblePage() {
               </thead>
               <tbody>
                 <tr className="border-b border-brand-border">
-                  <td className="p-3 text-brand-text-mid">The lowest commercial carb load in wide ferret use</td>
-                  <td className="p-3 font-bold text-brand-dark"><a href="#wysong-epigen-90" className="text-brand-primary">Wysong Epigen 90</a><TableShopLink href={"/go/wysong/epigen-90?s=diet-best-ferret-kibble"} product={"Wysong Epigen 90"} /></td>
-                  <td className="p-3 text-brand-text-mid">Premium Tier. About 60% protein, 16% fat, carbs in the single digits. $30–50 / 5 lb</td>
+                  <td className="p-3 text-brand-text-mid">Crude protein min. 63% and crude fat min. 16%, as printed. Carbohydrate is not on the analysis</td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#wysong-epigen-90" className="text-brand-primary">Wysong Epigen 90</a><TableShopLink quietUntilTag href={"/go/wysong/epigen-90?s=diet-best-ferret-kibble"} product={"Wysong Epigen 90"} /></td>
+                  <td className="p-3 text-brand-text-mid">Wysong. Crude protein min. 63%, crude fat min. 16%, as printed. Carbohydrate is not on the guaranteed analysis. $30–50 / 5 lb</td>
                   <td className="p-3 text-brand-text-mid">You need a bag from a supermarket aisle tonight. The card says it is not always stocked there</td>
                 </tr>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 text-brand-text-mid">A ferret-specific bag you can find in chain retail</td>
-                  <td className="p-3 font-bold text-brand-dark"><a href="#marshall-premium-diet" className="text-brand-primary">Marshall Premium</a><TableShopLink href={"/go/marshall/premium-ferret-diet?s=diet-best-ferret-kibble"} product={"Marshall Premium"} /></td>
-                  <td className="p-3 text-brand-text-mid">Mid Tier. About 38% protein, 20% fat, carbs in the mid teens. $15–25 / 4 lb</td>
-                  <td className="p-3 text-brand-text-mid">Insulinoma risk is the priority. The card puts carbohydrate higher than the premium tier, and the panel includes plant protein</td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#marshall-premium-diet" className="text-brand-primary">Marshall Premium</a><TableShopLink quietUntilTag href={"/go/marshall/premium-ferret-diet?s=diet-best-ferret-kibble"} product={"Marshall Premium"} /></td>
+                  <td className="p-3 text-brand-text-mid">Mid Tier. Crude protein min. 38%, crude fat min. 18%, as printed. Carbohydrate is not on the guaranteed analysis. $15–25 / 4 lb</td>
+                  <td className="p-3 text-brand-text-mid">Insulinoma risk is the priority. Neither guaranteed analysis prints carbohydrate. Check both labels</td>
                 </tr>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 text-brand-text-mid">A direct subscription with a published animal-first panel</td>
@@ -363,8 +394,9 @@ export default function BestFerretKibblePage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-05" />
+          <ComparisonFoot updated="2026-10-10" />
 
+          <p>Wysong and Marshall, the two kibbles on this page, are compared in the <Link href="/reviews/wysong-vs-marshall-kibble-guide">Wysong versus Marshall guide</Link>. Wysong and Carniwhole are set side by side in the <Link href="/reviews/wysong-vs-carniwhole-guide">Wysong versus Carniwhole guide</Link>.</p>
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
 
@@ -375,6 +407,13 @@ export default function BestFerretKibblePage() {
           <p className="text-sm text-brand-text-light">
             This page describes how to evaluate a diet, not a prescription for an individual animal. A ferret with a diagnosed condition should have diet decisions supervised by a veterinarian familiar with ferrets.
           </p>
+                  <ArticleSourcesList title="Sources"
+            sources={[
+            { label: "American Ferret Association", url: "https://www.ferret.org/", publisher: "AFA" },
+            { label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery", url: "https://www.elsevier.com/books/ferrets-rabbits-and-rodents/quesenberry/978-1-4160-6621-7", publisher: "Elsevier" },
+            { label: 'Merck Veterinary Manual: management of ferrets', url: 'https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/management-of-ferrets', publisher: 'Merck Veterinary Manual' },
+            ]}
+          />
         </div>
       </ArticleLayout>
     </>

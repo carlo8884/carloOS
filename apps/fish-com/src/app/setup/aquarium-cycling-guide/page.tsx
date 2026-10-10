@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import { HubMoneyLinks } from '@carloOS/ui'
 import type { Metadata } from 'next'
 import Link from 'next/link'
@@ -12,7 +13,6 @@ import {
   buildFAQSchema,
   combineSchemas,
   ArticleByline,
-  AffiliateDisclosure,
   ArticleSourcesList,
   JourneyNext,
 } from '@carloOS/ui'
@@ -37,12 +37,7 @@ const SOURCES = [
     url: "https://aem.asm.org/content/67/12/5768",
     publisher: "Applied and Environmental Microbiology",
   },
-  {
-    label: "Water Quality for Pond Aquaculture — Nitrogen Cycle",
-    url: "https://www.uaex.uada.edu/environment-nature/water/ponds/nitrogen-cycle.aspx",
-    publisher: "University of Arkansas Cooperative Extension",
-  },
-  {
+    {
     label: "Chloramine in Drinking Water and Its Effect on Aquatic Animals",
     url: "https://srac.tamu.edu/serveFactSheet/140",
     publisher: "Southern Regional Aquaculture Center (SRAC)",
@@ -231,7 +226,7 @@ export default function CyclingGuidePage() {
           <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
 
           <p className="text-lg text-brand-text-mid leading-relaxed italic mb-6">
-            <strong className="not-italic">TL;DR.</strong> Cycling a fish tank means growing two bacterial colonies (Nitrosomonas and Nitrospira) that convert ammonia to nitrite to nitrate. Fishless cycling with pure ammonium chloride dosed to 2 ppm takes 4–6 weeks alone, 1–3 weeks with a real bottled bacteria starter, or 24–72 hours with seeded media. The cycle is complete when 2 ppm of ammonia drops to 0/0 within 24 hours. Plan the calendar with the{' '}
+            Cycling a fish tank means growing two bacterial colonies (Nitrosomonas and Nitrospira) that convert ammonia to nitrite to nitrate. Fishless cycling with pure ammonium chloride dosed to 2 ppm takes 4–6 weeks alone, 1–3 weeks with a real bottled bacteria starter, or 24–72 hours with seeded media. The cycle is complete when 2 ppm of ammonia drops to 0/0 within 24 hours. Plan the calendar with the{' '}
             <Link href="/tools/aquarium-cycling-estimator" className="text-brand-primary no-underline hover:underline">
               aquarium cycling time estimator
             </Link>
@@ -474,7 +469,7 @@ export default function CyclingGuidePage() {
             mature canister, or a colonized bioball brings the actual bacterial colony, not a
             slurry hoping to grow into one. With seeded media a new tank can be ready to stock
             in 24–72 hours.
-          </p>
+           Canisters that hold that mature media are compared in the <a href="/reviews/best-canister-filters" className="text-brand-primary underline">canister filter review</a>.</p>
 
           <h2>When Your Tank Is Cycled — The Exact Reads</h2>
           <p>The cycle is complete when all three of the following hold for two consecutive doses:</p>
@@ -516,12 +511,12 @@ export default function CyclingGuidePage() {
             includeSchema={false}
             allowMultiple
           />
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        <HopDisclosure siteId="fish-com" href="/go/amazon-brand/ammonia%20nitrite%20nitrate%20test%20kit?s=setup-aquarium-cycling-guide" />
           <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Tank Cycling Essentials — Where to Shop</div>
-          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse the gear referenced in this guide on Amazon. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
+          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse the gear referenced in this guide on Amazon.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
-            <a href="/go/amazon-brand/ammonia%20nitrite%20nitrate%20test%20kit?s=setup-aquarium-cycling-guide" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Amazon →</a>
+            <a href="/go/amazon-brand/ammonia%20nitrite%20nitrate%20test%20kit?s=setup-aquarium-cycling-guide" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px', maxWidth: '100%', whiteSpace: 'normal' }}>Browse ammonia/nitrite/nitrate test kits on Amazon →</a>
           </div>
           <ArticleSourcesList sources={SOURCES} />
         </div>

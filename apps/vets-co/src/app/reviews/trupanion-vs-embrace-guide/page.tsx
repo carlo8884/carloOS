@@ -1,6 +1,11 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, ArticleLayout, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, InlinePartnerQuote, PrimaryHop, RelatedLinks, buildArticleSchema, buildMetadata, ArticleSourcesList, LastUpdated, ComparisonFoot, EmailCapture } from '@carloOS/ui'
+import { HopDisclosure } from '../../../components/HopDisclosure'
+
+// Request-time env, same as the insurance comparison. A set partner tag
+// renders the quote link; an unset tag stays a disabled button.
+export const dynamic = 'force-dynamic'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'vets-co',
@@ -24,11 +29,11 @@ const schema = buildArticleSchema({
 const FAQS = [
   {
     question: 'Which carrier does the insurance review mark as the winner?',
-    answer: 'Trupanion, scored 9.4 and marked Best Overall. The review lists direct vet payment, 90% reimbursement, unlimited payouts, a per-condition deductible, and $65–120 a month. Wellness is not included.',
+    answer: 'Trupanion, marked Best Overall. The review lists direct vet payment, 90% reimbursement, unlimited payouts, and a per-condition deductible. Wellness is not included. See the carrier\'s current terms for the monthly price.',
   },
   {
     question: 'When does the review point to Embrace?',
-    answer: 'When you want a wellness add-on beside accident and illness coverage. Embrace scores 8.8. The review lists a wellness add-on, reimbursement of 70–90%, a diminishing deductible, a 6-month orthopedic waiting period, and $45–95 a month plus the add-on.',
+    answer: 'When you want a wellness add-on beside accident and illness coverage. Embrace. The review lists a wellness add-on and reimbursement of 70%, 80%, or 90%. The deductible program and the orthopedic waiting period: see the carrier\'s current terms.',
   },
   {
     question: 'Are the monthly figures a quote?',
@@ -39,17 +44,24 @@ const FAQS = [
 export default function TrupanionVsEmbraceGuidePage() {
   return (
     <ArticleLayout
-      priceAsOf="2026-10-04"
+      priceAsOf="2026-10-07"
       siteId="vets-co"
       schema={schema}
       hero={{
         title: 'Trupanion or Embrace',
-        subtitle: 'Direct vet payment and a wellness add-on are different reasons to open a sample policy. Prices and scores below are the ones on the insurance review, not a quote for your pet.',
+        subtitle: 'Direct vet payment and a wellness add-on are different reasons to open a sample policy. Prices below are the ones on the insurance review, not a quote for your pet.',
         category: 'Buyer guide',
         authorName: 'Vets.co Editorial',
         publishedAt: 'October 2026',
         readTime: '6 min',
       }}
+      heroHop={
+        <>
+          <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">Trupanion is Best Overall because the policy pays the clinic at checkout.</p>
+          <PrimaryHop href="/go/trupanion/home?s=reviews-trupanion-vs-embrace-guide" label="Get a Trupanion quote" holdWithoutPartnerId />
+        </>
+      }
+      heroExtra={<HopDisclosure siteId="vets-co" href="/go/trupanion/home?s=reviews-trupanion-vs-embrace-guide" noteClassName="mt-3 mb-0 text-xs leading-relaxed text-white/80" />}
       breadcrumbs={[
         { name: 'Home', href: '/' },
         { name: 'Reviews', href: '/reviews' },
@@ -61,25 +73,89 @@ export default function TrupanionVsEmbraceGuidePage() {
           links={[
             { label: 'Reviews hub', href: '/reviews' },
             { label: 'Best pet insurance', href: '/reviews/best-pet-insurance' },
+            { label: 'Trupanion vs Healthy Paws', href: '/reviews/trupanion-vs-healthy-paws-guide' },
+            { label: 'Trupanion vs Figo', href: '/reviews/trupanion-vs-figo-guide' },
+            { label: 'Healthy Paws vs Embrace', href: '/reviews/healthy-paws-vs-embrace-guide' },
             { label: 'Reimbursement estimator', href: '/tools/insurance-reimbursement-estimator' },
           ]}
         />
       }
     >
       <div className="carloOS-article">
-        <p>The <Link href="/reviews/best-pet-insurance">pet insurance review</Link> already scores Trupanion for direct payment at the clinic and Embrace for owners who want routine care on an add-on. Those scores are editorial scores, not shopper star ratings. The monthly bands are the figures printed in the review, not a quote for your pet.</p>
+          <LastUpdated date="2026-10-10" />
+        <p>The <Link href="/reviews/best-pet-insurance">pet insurance review</Link> already scores Trupanion for direct payment at the clinic and Embrace for owners who want routine care on an add-on. The monthly bands are the figures printed in the review, not a quote for your pet.</p>
         <h2>What the review says about Trupanion</h2>
-        <p>Trupanion is Best Overall, score 9.4, and the winner. It lists 90% reimbursement, unlimited payouts, direct vet payment, and a per-condition deductible. Wellness is not included. The printed price band is $65–120 a month. The downsides are higher premiums and no wellness coverage. The review says Trupanion is the carrier whose policy pays the clinic at checkout rather than the pay-and-wait model.</p>
+        <p>Trupanion is Best Overall and the winner. It lists 90% reimbursement, unlimited payouts, direct vet payment, and a per-condition deductible. Wellness is not included. See the carrier&apos;s current terms for the monthly price. The downsides are higher premiums and no wellness coverage. The review says Trupanion is the carrier whose policy pays the clinic at checkout rather than the pay-and-wait model.</p>
         <h2>What the review says about Embrace</h2>
-        <p>Embrace is Wellness Included, score 8.8. The wellness add-on covers vaccines, heartworm testing, dental cleanings, and annual exams. The deductible diminishes by $50 each claim-free year. Reimbursement in the review is 70–90%. The orthopedic waiting period is 6 months. The printed price is $45–95 a month plus the wellness add-on. The review also says the plan options are more complex.</p>
+        <p>Embrace is Wellness Included. The Wellness Rewards page, fetched 2026-10-08, lists wellness exams, vaccinations, flea, tick, and heartworm prevention, and preventative dental cleaning. Our notes mark that coverage as a standalone add-on. Reimbursement in the review is 70%, 80%, or 90%. The deductible program and the orthopedic waiting period: see the carrier&apos;s current terms. The review also says the plan options are more complex.</p>
         <p>To see what a deductible and a reimbursement percent do to a sample bill, use the <Link href="/tools/insurance-reimbursement-estimator">reimbursement estimator</Link>. This page does not run a new example.</p>
         <h2>Who should read which policy</h2>
-        <p>Open the Trupanion sample when direct payment at checkout, 90% reimbursement, and unlimited payouts are the terms you need to confirm, and you are not buying the policy for wellness. Open the Embrace sample when the wellness add-on is the reason, and read the 6-month orthopedic wait before you enroll. Enroll before a condition is in the record. The insurance review says a condition noted before enrollment can be excluded. Healthy Paws is another option on that review, for fast reimbursement, and it is not this comparison.</p>
-        <AffiliateDisclosure variant="inline" siteId="vets-co" />
-        <p>The link below opens the Trupanion quote from the insurance review. The price you see there is the carrier&apos;s quote, not a figure from this page.</p>
-        <p><a className="font-semibold text-brand-primary" href="/go/trupanion/home?s=reviews-trupanion-vs-embrace-guide">Get a Trupanion quote →</a></p>
+        <p>Open the Trupanion sample when direct payment at checkout, 90% reimbursement, and unlimited payouts are the terms you need to confirm, and you are not buying the policy for wellness. Open the Embrace sample when the wellness add-on is the reason, and read the orthopedic waiting period on the carrier page before you enroll. Enroll before a condition is in the record. The insurance review says a condition noted before enrollment can be excluded. Healthy Paws is another option on that review, for fast reimbursement, and it is not this comparison.</p>
+        <HopDisclosure siteId="vets-co" href="/go/trupanion/home?s=reviews-trupanion-vs-embrace-guide" showQuietNote={false} />
+        <p><InlinePartnerQuote href="/go/trupanion/home?s=reviews-trupanion-vs-embrace-guide" label="Get a Trupanion quote →" holdWithoutPartnerId /></p>
+        <div className="my-6 max-w-full min-w-0">
+          <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
+            <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+            <thead>
+              <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
+                <th scope="col" className="p-3 font-bold text-brand-dark">Trupanion</th>
+                <th scope="col" className="p-3 font-bold text-brand-dark">Embrace</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Role</th>
+                <td className="p-3">Best Overall</td>
+                <td className="p-3">Wellness Included</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Also on the page</th>
+                <td className="p-3">Direct vet payment at checkout. Higher premiums</td>
+                <td className="p-3">Plan options are more complex</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Reimbursement</th>
+                <td className="p-3">90 percent. Unlimited payouts</td>
+                <td className="p-3">70%, 80%, or 90%</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Deductible</th>
+                <td className="p-3">Per condition</td>
+                <td className="p-3">See the carrier’s current terms</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Wellness</th>
+                <td className="p-3">Not included</td>
+                <td className="p-3">Standalone add-on: exams, vaccines, flea, tick, heartworm, and preventative dental</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <ComparisonFoot updated="2026-10-10" />
+        <EmailCapture
+          variant="inline"
+          siteId="vets-co"
+          addressOnly
+          title="Shopping checklist"
+          ctaText="Copy checklist"
+          source="reviews-trupanion-vs-embrace-guide"
+          checklist={[
+            "Trupanion is Best Overall because the policy pays the clinic at checkout.",
+            "Wellness is not included.",
+            "Reimbursement in the review is 70%, 80%, or 90%.",
+            "Enroll before a condition is in the record.",
+            "The insurance review says a condition noted before enrollment can be excluded.",
+            "A quote depends on the pet, the ZIP code, and the plan options.",
+          ]}
+        />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
+                <ArticleSourcesList title="Sources"
+            sources={[
+            { label: 'Embrace Wellness Rewards', url: 'https://www.embracepetinsurance.com/coverage/wellness-rewards', publisher: 'Embrace' },
+            ]}
+          />
       </div>
     </ArticleLayout>
   )

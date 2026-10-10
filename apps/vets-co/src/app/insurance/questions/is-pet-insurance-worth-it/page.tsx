@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, LastUpdated, ComparisonFoot } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
-import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
+import { ArticleByline, CalloutBox } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Is Pet Insurance Worth It? An Honest Answer | Vets.co', description: 'Pet insurance is protection against rare, large vet bills — not a way to save money on average. When it makes sense, when it does not, and how to decide.', path: '/insurance/questions/is-pet-insurance-worth-it', type: 'article' })
 
@@ -19,10 +19,12 @@ export default function Page() {
       <SchemaScript schema={schema} />
       <ArticleLayout siteId="vets-co"
         priceAsOf="2026-06-11"
+        heroHop={<a href="/tools/pet-insurance-worth-it-calculator" className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline mb-5">Worth-it calculator</a>}
         hero={{ title: 'Is Pet Insurance Worth It?', subtitle: 'Pet insurance is protection against rare, large vet bills — not a way to save money on average. It is most worth it if you could not easily absorb a sudden five-figure emergency and you enroll while your pet is young. Here is the honest math, both sides.', category: 'Insurance Q&A', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '8 min' }}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Insurance', href: '/insurance' }, { name: 'Questions', href: '/insurance/questions' }, { name: 'Worth It?', href: '/insurance/questions/is-pet-insurance-worth-it' }]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
+            <p>Those figures are typical US ranges dated 2026-06-11.</p>
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">The Honest Frame</div>
             {[['Most worth it', 'If a $5k–$10k bill would hurt'], ['Least useful', 'For recouping routine costs'], ['Real product', 'Risk transfer, not savings'], ['Best move', 'Run your own breakeven']].map(([p, d]) => (
               <div key={p} className="py-2 border-b border-brand-border last:border-0">
@@ -37,7 +39,9 @@ export default function Page() {
       >
         <div className="carloOS-article">
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-11T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
+          <LastUpdated date="2026-10-10" />
 
+          <p>Those figures are typical US ranges dated 2026-06-11.</p>
           <CalloutBox variant="info" title="The short answer">
             Pet insurance is <strong>protection against rare, large vet bills — not a way to save money on average.</strong> It is most worth it when you could not comfortably absorb a sudden $5,000–$10,000 emergency from savings and you enroll while your pet is young and healthy. It is least useful as a way to recoup predictable routine costs. The honest answer is to run the breakeven for your own situation rather than rely on a blanket yes or no.
           </CalloutBox>
@@ -47,6 +51,7 @@ export default function Page() {
           <p>Seen that way, the real product is peace of mind and the avoidance of what veterinary teams sometimes call &ldquo;economic euthanasia&rdquo; — having to decline treatment for a pet that could be saved because the cost is out of reach. For many owners, removing that scenario is worth more than the expected-value arithmetic suggests.</p>
 
           <h2>The Case For</h2>
+          <p>Those figures are typical US ranges dated 2026-06-11.</p>
           <p>Insurance makes the most sense when a single large bill would genuinely strain your finances. Emergency surgery, cancer treatment, or the management of a serious chronic condition can run from several thousand dollars into five figures. If absorbing a $5,000–$10,000 bill from savings would force a hard choice, insurance does exactly what it is designed to do: it caps your exposure to that worst case at a known monthly cost. The case is strongest when you also enroll early, locking in coverage before any condition becomes a pre-existing exclusion.</p>
 
           <h2>The Case Against</h2>
@@ -57,10 +62,41 @@ export default function Page() {
 
           <h2>The Alternative: A Pet Emergency Fund</h2>
           <p>For the disciplined, a dedicated pet emergency fund is a legitimate alternative. It works if you fund it consistently and you are not hit with a large bill early, before the balance is meaningful. The trade-off is timing risk: insurance covers from the end of the waiting period, while a fund only protects you once it is large enough. Some owners split the difference — a modest fund for routine surprises plus insurance for the catastrophic tail. There is no universally correct answer, only the one that fits your finances and your tolerance for a bad-luck year.</p>
+          <div className="my-6 max-w-full min-w-0">
+            <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
+              <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+              <thead>
+                <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Insurance</th>
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Emergency fund</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">What it does</th>
+                  <td className="p-3">Risk transfer. A rare bill becomes a predictable monthly cost</td>
+                  <td className="p-3">Works if you fund it consistently and the bill arrives after the balance is meaningful</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Where it misses</th>
+                  <td className="p-3">The average policyholder pays in more than they get back. Not a way to save on routine costs</td>
+                  <td className="p-3">An early emergency can arrive before the fund is large enough</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">When this page says to use it</th>
+                  <td className="p-3">When a large bill would strain finances, and you enroll while the pet is young and healthy</td>
+                  <td className="p-3">When you could pay a large bill and you actually keep the account funded</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <ComparisonFoot updated="2026-10-10" />
+          <h2>Who should use which</h2>
+          <p>Use insurance when a large bill would force a hard choice and you can enroll before a condition exists. Use a fund when you will fund it and a large bill would not change your life. Some owners keep a modest fund for routine surprises and insurance for the catastrophic tail.</p>
 
           <h2 id="next-steps">Run Your Own Breakeven</h2>
           <p>Because the right answer depends on your finances, your pet, and a quote you have in hand, the most useful next step is to model it rather than accept a blanket verdict.</p>
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
           <ul>
             <li>Run the <a href="/tools/pet-insurance-worth-it-calculator">&ldquo;is pet insurance worth it?&rdquo; calculator</a> — it turns a quote into the breakeven cost level at which a policy pays for itself.</li>
             <li>If you decide to buy, compare carriers in our <a href="/reviews/best-pet-insurance">best pet insurance comparison</a>.</li>
@@ -78,13 +114,9 @@ export default function Page() {
           </div>
 
           <h2>FAQ</h2>
+          <p>Those figures are typical US ranges dated 2026-06-11.</p>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
 
-          <ArticleSourcesList sources={[
-            { label: 'A Consumer’s Guide to Pet Insurance', url: 'https://content.naic.org/cipr-topics/pet-insurance', publisher: 'NAIC' },
-            { label: 'State of the Industry Report (claims and premium data)', url: 'https://naphia.org/state-of-the-industry/', publisher: 'NAPHIA' },
-            { label: 'Consumer guidance on insurance and emergency savings', url: 'https://www.consumerfinance.gov/', publisher: 'CFPB' },
-          ]} />
         </div>
       </ArticleLayout>
 

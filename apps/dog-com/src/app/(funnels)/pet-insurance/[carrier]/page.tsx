@@ -160,9 +160,6 @@ export default async function CarrierPage({
       <div className="px-container sm:px-container-sm py-14 max-w-5xl mx-auto">
         {/* TL;DR */}
         <div className="bg-brand-primary-pale border-l-4 border-brand-primary rounded-r-xl p-5 mb-10">
-          <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
-            Editorial Score: {c.editorialScore}/10
-          </div>
           <p className="text-sm text-brand-text-mid m-0 leading-relaxed">
             <strong>{c.editorialNote}</strong>
           </p>
@@ -365,7 +362,7 @@ export default async function CarrierPage({
               <div className="font-display text-lg font-bold mb-1">{o.name}</div>
               <div className="text-sm text-brand-text-mid mb-2">{o.tagline}</div>
               <div className="text-xs text-brand-primary font-semibold">
-                Score: {o.editorialScore}/10 →
+                See this carrier →
               </div>
             </Link>
           ))}

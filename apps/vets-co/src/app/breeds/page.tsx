@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, StockImage } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, StockImage } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'vets-co',
@@ -15,7 +15,6 @@ const breadcrumbSchema = buildBreadcrumbSchema({
     { name: 'Breeds', url: 'https://vets.co/breeds' },
   ],
 })
-
 
 const BREEDS = [
   { name: 'Labrador Retriever', slug: 'labrador-health', desc: 'Hip dysplasia, exercise-induced collapse, obesity risk.' },
@@ -90,24 +89,10 @@ export default function BreedsHubPage() {
       </div>
 
       <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
-        
+
         <div className="max-w-content-wide mt-6">
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
         </div>
 
-        {/* Money path — live amazon-brand search hops
-            (laminated pet breeds screening chart /
-            pet fridge breeds library card /
-            veterinary breeds reference handbook).
-            Educational kitchen searches only; no Rx /
-            vaccine / flea hops.
-            ShopCtas hides empty Chewy; never href="#"
-            or PLACEHOLDER. Unused vs tools / insurance /
-            reviews / health / guides kitchen kits and
-            child analog+indoor+hygrometer /
-            four+tab+dividers /
-            flexible+sewing+tape hops.
-            Do not re-open #1165 / what-to-expect. */}
               </section>
 
     </>

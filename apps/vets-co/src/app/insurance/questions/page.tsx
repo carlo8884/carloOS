@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, PriceAsOf } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, PriceAsOf, LastUpdated, ArticleSourcesList } from '@carloOS/ui'
 import { HubMasthead } from '../../../components/HubMasthead'
 
 export const metadata: Metadata = buildMetadata({
@@ -61,6 +61,7 @@ export default function InsuranceQuestionsHubPage() {
         />
         <div className="px-container-sm sm:px-container pt-6">
           <PriceAsOf date="2026-06-11" />
+        <LastUpdated date="2026-10-06" />
         </div>
         <nav aria-label="Breadcrumb" className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
           <Link href="/" className="hover:text-brand-primary no-underline">Home</Link><span>›</span>
@@ -85,6 +86,7 @@ export default function InsuranceQuestionsHubPage() {
 
         <div className="px-container-sm sm:px-container pb-14 pt-8">
           <h2 className="font-display text-xl font-bold text-brand-dark mb-4 pb-3 border-b border-brand-border">The 8 most-asked questions</h2>
+          <p className="text-sm text-brand-text-mid mb-4">Those figures are typical US ranges dated 2026-06-11.</p>
           <div className="grid sm:grid-cols-2 gap-4">
             {QUESTIONS.map((item) => (
               <Link key={item.href} href={item.href} className="block bg-brand-white border border-brand-border rounded-lg p-5 no-underline hover:border-brand-primary transition-colors">
@@ -96,6 +98,12 @@ export default function InsuranceQuestionsHubPage() {
           </div>
         </div>
       </>
+          <ArticleSourcesList
+            title="Sources"
+            sources={[
+            { label: "A Consumer's Guide to Pet Insurance", url: "https://content.naic.org/cipr-topics/pet-insurance", publisher: "NAIC" },
+            ]}
+          />
     </>
   )
 }

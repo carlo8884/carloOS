@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, CalloutBox, ReviewCard, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, CalloutBox, ReviewCard, CrossPortfolioCard, ShopCtas, ComparisonFoot, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -79,7 +80,7 @@ export default function TransitioningFoodsPage() {
             <CrossPortfolioCard currentSite="ferret-com" contentType="diet" variant="sidebar" />
           </>
         }
-      
+
         relatedLinks={[
           { title: 'Ferret Diet Hub', href: '/diet' },
           { title: 'Best Ferret Kibble', href: '/diet/best-ferret-kibble' },
@@ -94,6 +95,7 @@ export default function TransitioningFoodsPage() {
             updatedAt="2026-06-01"
             reviewedBy="Editorial team"
           />
+          <LastUpdated date="2026-10-10" />
           <div className="mb-8">
             <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
 
@@ -124,12 +126,38 @@ export default function TransitioningFoodsPage() {
             increasing increments over one to two weeks — slower for a fixated
             ferret. A workable starting schedule:
           </p>
-          <ol>
-            <li><strong>Days 1-3:</strong> roughly three parts old food to one part new, mixed together.</li>
-            <li><strong>Days 4-7:</strong> about half old, half new.</li>
-            <li><strong>Days 8-11:</strong> roughly one part old to three parts new.</li>
-            <li><strong>Day 12 onward:</strong> fully on the new food, assuming stool and appetite have stayed normal.</li>
-          </ol>
+          <div className="my-6 max-w-full min-w-0">
+            <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
+              <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+              <thead>
+                <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Days</th>
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Mix</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Days 1 to 3</th>
+                  <td className="p-3">Roughly three parts old food to one part new, mixed together</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Days 4 to 7</th>
+                  <td className="p-3">About half old, half new</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Days 8 to 11</th>
+                  <td className="p-3">Roughly one part old to three parts new</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Day 12 onward</th>
+                  <td className="p-3">Fully on the new food, if stool and appetite have stayed normal</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <ComparisonFoot updated="2026-10-10" />
+          <h2>Who should slow which step</h2>
+          <p>A fixated ferret goes slower than the one-to-two-week schedule. If the ferret picks out only the old food or develops loose stool, hold the current ratio for a few extra days. Day 12 is only for a ferret whose stool and appetite stayed normal.</p>
           <p>
             If at any stage the ferret picks out only the old food or develops
             loose stool, hold at the current ratio for a few extra days before
@@ -198,21 +226,8 @@ export default function TransitioningFoodsPage() {
             <li><strong>Lethargy, weakness, or weight loss</strong> — stop and contact an exotic-pet veterinarian; these can signal more than a fussy palate.</li>
           </ul>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/ferret+kibble?s=transitioning-foods", "/go/chewy-brand/meat+based+food+topper+sugar+free?s=diet-transitioning-foods"]} />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated ferret food-transition chart /
-              ferret fridge mix-ratio card /
-              mustelid food-transition handbook).
-              Keep existing Chewy meat-topper review hop.
-              Educational kitchen searches only; no Rx /
-              vaccine / aging hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs diet-hub /
-              safe-treats / kit-adult kitchen kits.
-              Directory import left untouched. Ferret
-              aging stays held.
-              Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop supplies
@@ -221,15 +236,15 @@ export default function TransitioningFoodsPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/ferret+kibble?s=transitioning-foods"
-                amazonLabel="Shop on Amazon"
+                amazonLabel="Browse ferret kibble on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/ferret+kibble?s=transitioning-foods"
-                amazonLabel="Shop on Amazon"
+                amazonLabel="Browse ferret kibble on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/ferret+kibble?s=transitioning-foods"
-                amazonLabel="Shop on Amazon"
+                amazonLabel="Browse ferret kibble on Amazon →"
               />
             </div>
           </div>
@@ -238,13 +253,11 @@ export default function TransitioningFoodsPage() {
           <p>
             A meat-based, sugar-free topper or broth over the new food is one of the most reliable tricks for coaxing a hesitant ferret to start eating it. The key is a clean panel — animal protein, no added sugar or grain. Documented-spec selection, not a hands-on test.
           </p>
-          <ScoreMethodology />
           <ReviewCard
             id="meat-topper"
             badge="Transition Aid"
             name="Meat-Based Food Topper / Gravy (Sugar-Free)"
             subtitle="Animal-protein topper to coax a reluctant eater onto new food"
-            score={8.1}
             description={
               <p>A meat-based topper or broth, drizzled over the new food, lends the familiar smell of meat to an unfamiliar kibble and can tip a hesitant ferret into trying it. Choose a single-protein, sugar-free formulation — skip anything sweetened with molasses, honey, or fruit, per our <a href="/diet/safe-treats">safe treats guide</a>. Use a small amount and count it against the day's intake; the topper is a bridge, not a meal.</p>
             }
@@ -256,8 +269,9 @@ export default function TransitioningFoodsPage() {
             ]}
             pros={['Lends familiar meat aroma to new food', 'Sugar-free options widely available', 'Useful for medication and recovery feeding too']}
             cons={['Calorie-dense — portion carefully', 'Read the panel; many toppers are sweetened']}
-            price="$5–12"
-            ctaText="Find a Meat-Based Topper"
+            price="see current price"
+            priceNote="dated 2026-06-01."
+            ctaText="Find a sugar-free meat-based topper on Amazon"
             ctaHref="/go/chewy-brand/meat+based+food+topper+sugar+free?s=diet-transitioning-foods"
             ctaAffiliateProgram="chewy-brand"
             ctaAffiliateProduct="meat-based-food-topper"

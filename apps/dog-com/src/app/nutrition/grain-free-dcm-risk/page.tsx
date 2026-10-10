@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, RelatedLinks, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, RelatedLinks, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
@@ -58,7 +59,7 @@ export default function GrainFreeDCMPage() {
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
 
         <p className="text-lg text-brand-text-mid leading-relaxed italic mb-6">
-          <strong className="not-italic">TL;DR.</strong> The FDA investigated more than 500 reports of dilated cardiomyopathy (DCM) in dogs eating grain-free diets, most with peas, lentils, or potatoes as primary ingredients. The link is an association, not proven causation — but most veterinary cardiologists now recommend avoiding high-legume grain-free formulas. Switch to a WSAVA-compliant brand (Royal Canin, Purina Pro Plan, Hill&apos;s) unless your vet directs otherwise.
+          The FDA investigated more than 500 reports of dilated cardiomyopathy (DCM) in dogs eating grain-free diets, most with peas, lentils, or potatoes as primary ingredients. The link is an association, not proven causation. This page does not cite a cardiology consensus that tells owners to avoid those formulas. A cautious reading is to skip high-legume grain-free diets unless a veterinarian has a reason to use one. Switch to a WSAVA-compliant brand (Royal Canin, Purina Pro Plan, Hill&apos;s) unless your vet directs otherwise.
         </p>
 
         <h2>What Is DCM?</h2>
@@ -77,7 +78,7 @@ export default function GrainFreeDCMPage() {
 
         <div style={{ background: 'rgba(200,149,42,0.06)', border: '1px solid rgba(200,149,42,0.18)', borderRadius: '10px', padding: '18px 22px', margin: '24px 0' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--brand-warning)', marginBottom: '8px' }}>Important Caveat</div>
-          <p style={{ fontSize: '14px', color: 'var(--brand-text-mid)', margin: 0, lineHeight: 1.65 }}>The FDA investigation was not a controlled study — it was a passive surveillance report. It established an association between grain-free diets and DCM, not causation. The exact mechanism is not fully understood. However, the association is consistent enough that most veterinary cardiologists now recommend avoiding high-legume grain-free diets unless there is a documented medical reason to use them.</p>
+          <p style={{ fontSize: '14px', color: 'var(--brand-text-mid)', margin: 0, lineHeight: 1.65 }}>The FDA investigation was not a controlled study — it was a passive surveillance report. It established an association between grain-free diets and DCM, not causation. The exact mechanism is not fully understood. The association is enough for a cautious reading: skip high-legume grain-free diets unless a veterinarian has a documented reason to use one. This page does not cite a cardiology consensus statement.</p>
         </div>
 
         <h2>What Mechanisms Are Proposed?</h2>
@@ -92,7 +93,7 @@ export default function GrainFreeDCMPage() {
         <h2>What to Do</h2>
         <p><strong>If your dog is currently eating a grain-free diet:</strong></p>
         <ul>
-          <li>Switch to a diet meeting WSAVA guidelines — Royal Canin, Purina Pro Plan, Hill&apos;s Science Diet, or Iams are the brands most commonly recommended by board-certified veterinary nutritionists. These companies employ veterinary nutritionists, conduct feeding trials, and invest in ongoing research.</li>
+          <li>Switch to a diet meeting WSAVA guidelines. Royal Canin, Purina Pro Plan, Hill&apos;s Science Diet, and Iams are examples of brands that employ veterinary nutritionists, conduct feeding trials, and publish research. Which diet fits a specific dog is a question for a veterinarian — this page does not rank a most-recommended brand.</li>
           <li>Grains (rice, corn, wheat, barley, oats) in dog food are not the problem the grain-free marketing suggests. Dogs digest grain well, and there is no evidence that grains cause the health problems the grain-free marketing implies.</li>
           <li>If your dog has been eating a high-legume grain-free diet for more than a year, discuss a cardiac evaluation with your veterinarian — particularly if you own a breed with higher DCM risk (Golden Retriever, Cocker Spaniel, Labrador, Doberman).</li>
         </ul>
@@ -101,21 +102,10 @@ export default function GrainFreeDCMPage() {
 
         <h2>Should I Stop Feeding Grain-Free Dog Food?</h2>
         <p>The grain-free market was built primarily on marketing rather than nutritional science — the premise that dogs cannot digest grain or that grain-free is inherently more &quot;natural&quot; lacks scientific support. The subsequent FDA investigation revealing a potential link to serious cardiac disease is a significant concern that warrants caution.</p>
-        <p>Our recommendation: choose a WSAVA-compliant food from a company that employs veterinary nutritionists and conducts feeding trials. See our <a href="/reviews/best-dry-dog-food">Best Dry Dog Food guide</a> for ranked options.</p>
+        <p>A cautious next step is a diet from a company that employs veterinary nutritionists, conducts feeding trials, and publishes research. Royal Canin, Purina Pro Plan, Hill&apos;s Science Diet, and Iams are examples of that pattern, not a ranking. Which diet fits a specific dog is a question for a veterinarian. See the <a href="/reviews/best-dry-dog-food">Best Dry Dog Food guide</a> for the comparison.</p>
 
-        <AffiliateDisclosure variant="inline" siteId="dog-com" />
+        <HopDisclosure siteId="dog-com" href="/go/amazon-brand/royal+canin+dog+food?s=nutrition-grain-free" />
 
-        {/* Money path — live amazon-brand search hops
-            (laminated dog FDA-DCM chart /
-            dog fridge high-legume card /
-            canine taurine-switch handbook).
-            No existing product hop to keep.
-            Educational kitchen searches only; no Rx /
-            vaccine / flea / heartworm / nsaid hops.
-            ShopCtas hides empty Chewy; never href="#"
-            or PLACEHOLDER. Unused vs wsava-explained /
-            reading-food-labels / dog-treats-guide hops.
-            Do not re-open #1165 / what-to-expect. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
             Shop related supplies
@@ -124,7 +114,7 @@ export default function GrainFreeDCMPage() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/royal+canin+dog+food?s=nutrition-grain-free"
-              amazonLabel="Shop on Amazon"
+              amazonLabel="Browse Royal Canin dog food on Amazon →"
             />
           </div>
         </div>

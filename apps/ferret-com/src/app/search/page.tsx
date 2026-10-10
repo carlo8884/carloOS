@@ -1,11 +1,12 @@
 import type { Metadata } from 'next'
-import { buildMetadata, MissedPage } from '@carloOS/ui'
+import { buildMetadata, rankSearch, SiteSearch, type SearchEntry } from '@carloOS/ui'
+import index from '../../data/search-index.json'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
   title: 'Ferret care search',
   description:
-    'When a Ferret.com search has no match, start with diet, cage setup, enrichment, or the cage size calculator.',
+    'Search Ferret.com care guides, reviews, comparisons, and tools. A search with no match starts with diet, cage setup, or the cage size calculator.',
   path: '/search',
   noIndex: true,
 })
@@ -15,7 +16,9 @@ export default function SearchPage({
 }: {
   searchParams?: { q?: string | string[] }
 }) {
-  return <MissedPage siteId="ferret-com" kind="search" query={firstQuery(searchParams?.q)} />
+  const query = firstQuery(searchParams?.q)
+  const hits = rankSearch(index.entries as SearchEntry[], query)
+  return <SiteSearch siteId="ferret-com" query={query} results={hits.slice(0, 20)} total={hits.length} />
 }
 
 function firstQuery(q: string | string[] | undefined): string {

@@ -1,12 +1,13 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, RelatedReads, ReviewCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { PrimaryHop, buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, RelatedReads, ReviewCard, ShopCtas, ArticleSourcesList, LastUpdated, ComparisonFoot } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "When to Enroll Your Pet in Insurance | Vets.co", description: "The best time to get pet insurance is when your pet is young and healthy. Learn why enrolling early matters, and how to think about insuring senior pets.", path: '/insurance/when-to-enroll', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'vets-co', title: 'When to Enroll Your Pet in Insurance', description: 'Why early enrollment matters and how to approach insuring puppies, kittens, adults, and senior pets.', url: 'https://vets.co/insurance/when-to-enroll', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-09-06T00:00:00Z' })
 const FAQS = [
   { question: "What is the best age to get pet insurance?", answer: "The best time is as young as possible — typically once a puppy or kitten can be enrolled, often around 6 to 8 weeks depending on the insurer. Young pets have no pre-existing conditions to exclude, qualify for the lowest premiums, and lock in coverage before any hereditary or chronic conditions appear. Enrolling early does not mean you will claim early; it means that when a condition eventually develops, it will be covered rather than excluded as pre-existing." },
-  { question: "Is it worth insuring an older pet?", answer: "It can be, though the calculus changes. Senior pets cost more to insure and are more likely to have pre-existing conditions that get excluded, but they are also far more likely to need expensive care, and many insurers still offer coverage with no upper age limit for new enrollment. For a senior pet with a relatively clean record, insurance can still protect against new, unrelated conditions. Compare carriers that accept older pets, and read carefully how pre-existing conditions are handled." },
+  { question: "Is it worth insuring an older pet?", answer: "It can be, though the calculus changes. Senior pets cost more to insure and are more likely to have pre-existing conditions that get excluded, but they are also far more likely to need expensive care, Pets Best’s FAQ, fetched 2026-10-08, says there is no upper age limit, and a dog or cat can enroll at any age over 7 weeks. For a senior pet with a relatively clean record, insurance can still protect against new, unrelated conditions. Read carefully how pre-existing conditions are handled.", source: "https://www.petsbest.com/faq" },
   { question: "Should I wait until my pet is sick to buy insurance?", answer: "No — this is the most common and costly mistake. Once a pet shows signs of a condition, that condition becomes pre-existing and will be excluded permanently, which is exactly when coverage would have mattered most. Insurance only works when purchased before problems arise, because it pools the risk of future unknown events. Buying after symptoms appear leaves you paying premiums for a policy that excludes your pet's main health issue." },
 ]
 export default function WhenToEnrollPage() {
@@ -14,6 +15,8 @@ export default function WhenToEnrollPage() {
     <>
       <SchemaScript schema={schema} />
       <ArticleLayout siteId="vets-co"
+        heroHop={<PrimaryHop href="/go/amazon-brand/monthly+desk+pad+calendar?s=insurance-when-to-enroll" label="Browse monthly desk pad calendars on Amazon →" />}
+        heroExtra={<HopDisclosure siteId="vets-co" href="/go/amazon-brand/monthly+desk+pad+calendar?s=insurance-when-to-enroll" tone="on-dark" />}
         hero={{ title: 'When to Enroll Your Pet', subtitle: 'There is a clear answer to when you should buy pet insurance: as early as possible, while your pet is young and healthy. Because pre-existing conditions are permanently excluded and premiums rise with age, the day you enroll largely determines the lifetime value of your coverage. Here is how to think about timing at every life stage.', category: 'Insurance Guide', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '8 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Insurance', href: '/insurance' }, { name: 'When to Enroll', href: '/insurance/when-to-enroll' }]}
         sidebar={<>
@@ -33,59 +36,72 @@ export default function WhenToEnrollPage() {
         <div className="carloOS-article">
 
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-09-06T00:00:00Z" reviewedBy="Editorial team" />
+          <LastUpdated date="2026-10-10" />
 
           <CalloutBox variant="info" title="Enroll before you need it, not when you need it">
             Insurance is a bet against future unknowns. The moment a condition becomes known, it can no longer be insured. The practical rule is simple: enroll while your pet is healthy, even if that feels premature, because that is the only window in which full coverage is available.
           </CalloutBox>
 
           <h2>Why Earlier Is Almost Always Better</h2>
-          <p>Two forces make early enrollment advantageous. First, pre-existing conditions are excluded permanently, so the longer you wait, the more conditions can accumulate and be locked out. Second, premiums are lowest for young pets and rise with age as claim likelihood increases. A monthly desk pad calendar is how the enroll-this-month date stays a written square instead of a remembered intention — it is not a hardcover weekly appointment planner (that lives on pain-management-dogs), not a wall-mounted magnetic monthly planner (that lives on preventive-care-schedule), and not a 48-hour digital kitchen timer (that lives on when-to-go-to-the-vet). Enrolling a healthy puppy or kitten captures the lowest premium and the broadest possible coverage, and it means that when an expensive condition eventually appears — as it often does later in life — it will be covered rather than excluded.</p>
+          <p>Two forces make early enrollment advantageous. First, pre-existing conditions are excluded permanently, so the longer you wait, the more conditions can accumulate and be locked out. Second, premiums are lowest for young pets and rise with age as claim likelihood increases. A monthly desk pad calendar is how the enroll-this-month date stays a written square instead of a remembered intention — it is not a hardcover weekly appointment planner, not a wall-mounted magnetic monthly planner, and not a 48-hour digital kitchen timer. Enrolling a healthy puppy or kitten captures the lowest premium and the broadest possible coverage, and it means that when an expensive condition eventually appears — as it often does later in life — it will be covered rather than excluded. <a href="/insurance/what-pet-insurance-covers">What pet insurance covers</a> is the exclusion list that wait creates.</p>
 
           <h2>Puppies and Kittens</h2>
-          <p>Most insurers allow enrollment from around six to eight weeks of age. This is the ideal moment: the pet has no medical history to exclude, premiums are at their lowest, and waiting periods will pass long before most conditions arise. A self-inking date stamp is how the enrollment day and the first wellness-exam day stay stamped facts on the desk-pad square — it is not a 72-hour digital countdown timer (that lives on dog-vaccinations-guide) and it is not a 12-hour mechanical kitchen timer (that lives on senior-bloodwork-guide). New owners sometimes hesitate because a young pet seems unlikely to need care, but that is precisely the point — coverage purchased during health is what pays out during later illness.</p>
+          <p>Most insurers allow enrollment from around six to eight weeks of age. This is the ideal moment: the pet has no medical history to exclude, premiums are at their lowest, and waiting periods will pass long before most conditions arise. A self-inking date stamp is how the enrollment day and the first wellness-exam day stay stamped facts on the desk-pad square — it is not a 72-hour digital countdown timer and it is not a 12-hour mechanical kitchen timer. New owners sometimes hesitate because a young pet seems unlikely to need care, but that is precisely the point — coverage purchased during health is what pays out during later illness.</p>
 
           <h2>Adult Pets</h2>
           <p>Enrolling an adult pet is still worthwhile, especially if the medical record is clean. The earlier within adulthood you act, the fewer conditions will have appeared. An owner adopting a young adult dog or cat should enroll promptly, before the routine wear of life produces the first documented symptom that could become an exclusion. The same early-bird logic applies; it is simply later in the timeline. The same desk pad calendar is where that enroll-this-month square is marked so the wait does not become another year.</p>
 
           <h2>Senior Pets</h2>
-          <p>Insuring a senior pet is more nuanced. Premiums are higher, and seniors are more likely to carry pre-existing conditions that will be excluded. However, seniors are also the most likely to need costly care, and many insurers accept new enrollments with no upper age limit. For a senior with a relatively clean history, a policy can still protect against new, unrelated illnesses. The key is to compare carriers that welcome older pets and to read carefully how they define and exclude pre-existing conditions.</p>
+          <p data-source="https://www.petsbest.com/faq">Insuring a senior pet is more nuanced. Premiums are higher, and seniors are more likely to carry pre-existing conditions that will be excluded. However, seniors are also the most likely to need costly care, Pets Best’s FAQ, fetched 2026-10-08, says there is no upper age limit, and a dog or cat can enroll at any age over 7 weeks. For a senior with a relatively clean history, a policy can still protect against new, unrelated illnesses. The key is to compare carriers that welcome older pets and to read carefully how they define and exclude pre-existing conditions.</p>
 
           <h2>Adopted and Rescue Pets</h2>
-          <p>For adopted pets with unknown histories, enroll as soon as possible after adoption and after an initial veterinary exam. Establishing coverage early limits the window in which undocumented conditions might later be deemed pre-existing. A letter-size file jacket is how the adoption papers and the new-pet exam notes stay one sleeve until enrollment is done — it is not a letter-size poly envelope (that lives on how-pet-insurance-works), not a kraft two-pocket folder (that lives on choosing-a-veterinarian), and not letter-size hanging file folders (that live on how-to-afford-vet-care). Schedule the enrollment around the new-pet exam so you understand your pet&apos;s baseline health and can choose appropriate coverage from the start.</p>
+          <p>For adopted pets with unknown histories, enroll as soon as possible after adoption and after an initial veterinary exam. Establishing coverage early limits the window in which undocumented conditions might later be deemed pre-existing. A letter-size file jacket is how the adoption papers and the new-pet exam notes stay one sleeve until enrollment is done — it is not a letter-size poly envelope, not a kraft two-pocket folder, and not letter-size hanging file folders. Schedule the enrollment around the new-pet exam so you understand your pet&apos;s baseline health and can choose appropriate coverage from the start.</p>
+          <div className="my-6 max-w-full min-w-0">
+            <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
+              <caption className="text-left font-semibold text-brand-dark p-3">Life stage, from the sentences on this page</caption>
+              <thead>
+                <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Stage</th>
+                  <th scope="col" className="p-3 font-bold text-brand-dark">What the record does</th>
+                  <th scope="col" className="p-3 font-bold text-brand-dark">When to enroll</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Puppy or kitten</th>
+                  <td className="p-3">No medical history to exclude. Premiums are at their lowest. Waiting periods pass before most conditions arise</td>
+                  <td className="p-3">From about six to eight weeks, while the pet is healthy</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Adult</th>
+                  <td className="p-3">Still worthwhile when the record is clean. Earlier in adulthood means fewer conditions have appeared</td>
+                  <td className="p-3">Promptly, before the first documented symptom becomes an exclusion</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Senior</th>
+                  <td className="p-3">Premiums are higher, and existing conditions are more likely to be excluded. Seniors are also the most likely to need costly care</td>
+                  <td className="p-3">When the history is relatively clean, against new unrelated illness</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Adopted</th>
+                  <td className="p-3">Unknown history. Early coverage limits the window in which an undocumented condition is later called pre-existing</td>
+                  <td className="p-3">As soon as possible after adoption and after an initial exam</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <ComparisonFoot updated="2026-10-10" />
+          <h2>Who should enroll at which stage</h2>
+          <p>Enroll a puppy or kitten while the record is empty. Enroll an adult before the first documented symptom. Enroll a senior with a relatively clean history against new illness. Enroll an adopted pet right after the new-pet exam.</p>
 
-          <h2 id="kit">When-to-enroll kit</h2>
+          <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Everyday physical supplies that match the
-            enroll-while-healthy, puppy-or-kitten,
-            and adopted-pet-exam copy on this page —
-            a monthly desk pad calendar so the
-            enroll-this-month and waiting-period
-            window stay a written date, a self-inking
-            date stamp so the enrollment day and
-            new-pet exam day stay stamped facts, and
-            a letter-size file jacket so adoption
-            and exam paperwork stay one sleeve until
-            coverage starts. These are educational
-            enrollment-timing / paperwork tools, not
-            a ranked product list, not a substitute
-            for veterinary care, and not a
-            treatment. Four-column accounting pads,
-            letter-size poly envelopes, and desktop
-            receipt organizers already live on
-            how-pet-insurance-works. Reporter
-            notebooks, kraft two-pocket folders, and
-            pocket-size address books already live
-            on choosing-a-veterinarian. Hardcover
-            weekly appointment planners already live
-            on pain-management-dogs. This page does
-            not hop medications or insurance brands
-            as Amazon searches. This page does not
-            claim hands-on testing.
+            Keep these on hand: a monthly desk pad calendar so the enroll-this-month and waiting-period window stay a written date, a self-inking date stamp so the enrollment day and new-pet exam day stay stamped facts, and a letter-size file jacket so adoption and exam paperwork stay one sleeve until coverage starts. These are educational enrollment-timing / paperwork tools, not a ranked product list, not a substitute for veterinary care, and not a treatment.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/monthly+desk+pad+calendar?s=insurance-when-to-enroll", "/go/amazon-brand/self+inking+date+stamp?s=insurance-when-to-enroll", "/go/amazon-brand/letter+size+file+jacket?s=insurance-when-to-enroll"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (monthly desk pad calendar /
               self-inking date stamp /
               letter-size file jacket).
@@ -94,9 +110,9 @@ export default function WhenToEnrollPage() {
               not a ranked product list, not a
               substitute for veterinary care, no Rx
               / first-aid kit / thermometer /
-              carrier / insurance-brand ASIN hops.
+              carrier / insurance-brand product page buttons.
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or an empty link. Amazon searches only —
               unused vs #1168
               four+column+accounting+pad /
               letter+size+poly+envelope /
@@ -117,7 +133,7 @@ export default function WhenToEnrollPage() {
               wall+mounted+magnetic+monthly+planner.
               Carrier quote CTAs stay on
               /go/lemonade and /go/pets-best —
-              not amazon-brand hops. */}
+              not amazon-brand buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
@@ -140,17 +156,16 @@ export default function WhenToEnrollPage() {
           </div>
 
           <h2 id="quote">Carriers to Quote Early</h2>
-          <p>Because premiums are lowest and exclusions fewest when pets are young, the practical move is to get a quote now rather than wait. The two below are worth pricing across life stages; for the full side-by-side, see our <a href="/reviews/best-pet-insurance">best pet insurance comparison</a>. Read each policy&apos;s pre-existing-condition definition before enrolling.</p>
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <p>Because premiums are lowest and exclusions fewest when pets are young, the practical move is to get a quote now rather than wait. The two below are worth pricing across life stages; for the full side-by-side, see our <a href="/reviews/best-pet-insurance">best pet insurance comparison</a>. Read each policy&apos;s pre-existing-condition definition before enrolling. The <a href="/tools/pet-insurance-worth-it-calculator">worth-it calculator</a> turns today&apos;s quote into the eligible-cost level where the premium pays for itself.</p>
+          <HopDisclosure siteId="vets-co" href={["/go/lemonade/home?s=insurance-when-to-enroll", "/go/pets-best/home?s=insurance-when-to-enroll"]} />
           <ReviewCard
             id="lemonade"
             badge="Young-Pet Value"
             name="Lemonade Pet"
-            subtitle="Often competitive premiums for young, healthy pets"
-            score={8.4}
+            subtitle="Listed for owners with younger pets"
             winner
             description={
-              <p>App-first accident-and-illness coverage that often prices competitively for young, healthy pets — the enrollment window where premiums are lowest and few conditions are excluded. Availability varies by state; confirm your location and read the pre-existing-condition language when you quote.</p>
+              <p>Lemonade’s FAQ, fetched 2026-10-08, says signing up while a pet is young and healthy means they are not denied coverage at renewal because of age. Our notes mark Lemonade for owners with younger pets. Availability varies by state; confirm your location and read the pre-existing-condition language when you quote.</p>
             }
             specs={[
               { label: 'Best for', value: 'Young pets', highlight: 'good' },
@@ -170,9 +185,8 @@ export default function WhenToEnrollPage() {
             badge="Flexible Plans"
             name="Pets Best"
             subtitle="Multiple plan tiers, no upper age limit on enrollment"
-            score={8.2}
             description={
-              <p>Offers several plan tiers and accepts new enrollments without an upper age limit, which makes it worth quoting for both puppies and older adopted pets. Useful when you are comparing how premium scales with age. As always, the pre-existing-condition definition determines what a late enrollment will and will not cover.</p>
+              <p data-source="https://www.petsbest.com/faq">Pets Best’s FAQ, fetched 2026-10-08, says there is no upper age limit, and a dog or cat can enroll at any age over 7 weeks. That is why it is worth quoting for both puppies and older adopted pets. Useful when you are comparing how premium scales with age. As always, the pre-existing-condition definition determines what a late enrollment will and will not cover.</p>
             }
             specs={[
               { label: 'Plan tiers', value: 'Multiple', highlight: 'good' },
@@ -190,6 +204,12 @@ export default function WhenToEnrollPage() {
 
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
+                  <ArticleSourcesList title="Sources"
+            sources={[
+            { label: 'Pets Best FAQ', url: 'https://www.petsbest.com/faq', publisher: 'Pets Best' },
+            { label: 'Lemonade pet insurance FAQ', url: 'https://www.lemonade.com/pet/explained/lemonade-pet-insurance-faq/', publisher: 'Lemonade' },
+            ]}
+          />
         </div>
       </ArticleLayout>
       <RelatedReads siteId="vets-co" path="/insurance/when-to-enroll" />

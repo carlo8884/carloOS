@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -132,17 +133,17 @@ export default function PastureManagementPage() {
           <p>Lush pasture is high in the sugars that trigger laminitis in susceptible horses. Spring and autumn flushes, and sunny afternoons after cool nights, are the high-risk windows. At-risk horses need restricted grazing through grazing muzzles, strip grazing, dry lots, or turnout at lower-sugar times. Pasture management for an easy-keeping pony is as much about limiting intake as growing grass.</p>
 
           <h2 id="kit">Pasture Kit</h2>
-          <p>Everyday physical supplies that match the restricted-grazing and soil-management copy above — a grazing muzzle for laminitis-prone horses and ponies, plus a soil test kit so liming and fertilizing follow a pH and nutrient reading rather than a guess. Electric tape for strip grazing stays on the fencing-safety page. Fans, slow feeders, electrolytes, hoof picks, hoof boots, and stall forks stay off this kit — those already ship on other care pages. Fertilizer, lime, herbicide, and poisonous-plant treatments stay off it too. These are not a treatment for laminitis or a diagnosis. This page does not claim hands-on testing.</p>
+          <p>Keep these on hand: a grazing muzzle for laminitis-prone horses and ponies, plus a soil test kit so liming and fertilizing follow a pH and nutrient reading rather than a guess. Electric tape for strip grazing stays on the fencing-safety page. Fans, slow feeders, electrolytes, hoof picks, hoof boots, and stall forks stay off this kit — those already ship on other care pages. Fertilizer, lime, herbicide, and poisonous-plant treatments stay off it too. These are not a treatment for laminitis or a diagnosis.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/horse+grazing+muzzle?s=care-pasture-management", "/go/amazon-brand/soil+test+kit?s=care-pasture-management"]} />
 
-          {/* Money path — live amazon-brand search hops (pasture kit).
-              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-              Category searches only — everyday physical supplies matching
+          {/* Shop note — live amazon-brand search buttons (pasture kit).
+              ShopCtas hides empty Chewy; never href="#" or an empty link.
+              Amazon searches only — everyday physical supplies matching
               on-page grazing-muzzle / soil-testing copy, not strip-grazing
               electric tape (fencing-safety), fans, slow feeders,
               electrolytes, hoof gear, stall forks, fertilizer, or
-              medication hops. */}
+              medication buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

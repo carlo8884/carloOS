@@ -1,10 +1,11 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import {
   buildMetadata,
   ArticleLayout, CrossPortfolioCard,
   RelatedLinks,
   FAQAccordion,
-  AffiliateDisclosure,
   ShopCtas,
   CrossSiteHelp,
 } from '@carloOS/ui'
@@ -92,7 +93,7 @@ export default function VetsPomeranianHealthPage() {
     <>
       <SchemaScript schema={combinedSchema} />
       <ArticleLayout
-        priceAsOf="2026-05-28"
+        priceAsOf="2026-10-04"
         siteId="vets-co"
         contentType="breed"
         hero={{
@@ -136,8 +137,7 @@ export default function VetsPomeranianHealthPage() {
             reviewedBy="Editorial team"
           />
 
-          <h2>TL;DR</h2>
-          <p>
+                    <p>
             The Pomeranian is a small (typically 3–7 lb), long-lived (12–16 years) toy spitz with a well-documented
             cluster of breed-predispositions: patellar luxation, tracheal collapse, dental crowding and periodontal
             disease, alopecia X (Black Skin Disease), congenital heart defects (particularly patent ductus
@@ -296,40 +296,23 @@ export default function VetsPomeranianHealthPage() {
           </p>
 
           <h2>Pet Insurance for a Pomeranian</h2>
+          <p>Those figures are typical US ranges dated 2026-10-04.</p>
           <p>
             Pomeranians live long, which is wonderful — and which also means a long window for chronic disease
             costs to accumulate. Patellar luxation correction runs roughly $2,000–4,000 per knee; PDA closure
             $3,500–5,500; tracheal stenting at a referral center commonly $4,500–7,500; lifetime dental
-            care can easily exceed $5,000. Insurance bought before the first symptoms appear typically covers
+            care can easily run $4,000–$7,000. Insurance bought before the first symptoms appear typically covers
             these as accident/illness with no breed exclusion. See our 2026 comparison:{' '}
             <a href="/reviews/best-pet-insurance">best pet insurance →</a>.
           </p>
 
-          <h2 id="kit">Pomeranian-health kit</h2>
+          <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Everyday physical supplies that match the
-            trachea, PDA, and alopecia X copy on
-            this page — an analog indoor hygrometer
-            so heat-and-humidity cough triggers stay
-            a written reading, a 6-column columnar
-            pad so patellar grade, murmur, dental
-            score, and body condition stay one
-            well-visit row, and an undated daily
-            planner so thyroid / ACTH / LDDS dates
-            stay written before anyone accepts
-            alopecia X. These are educational
-            Pomeranian-health / paperwork tools, not
-            a ranked product list, not a substitute
-            for veterinary care, and not a
-            treatment. Academic-year planners,
-            8-column columnar pads, and newsprint
-            sketch pads already live on
-            husky-health. This page
-            does not claim hands-on testing. </p>
+            Keep these on hand: an analog indoor hygrometer so heat-and-humidity cough triggers stay a written reading, a 6-column columnar pad so patellar grade, murmur, dental score, and body condition stay one well-visit row, and an undated daily planner so thyroid / ACTH / LDDS dates stay written before anyone accepts alopecia X. These are educational Pomeranian-health / paperwork tools, not a ranked product list, not a substitute for veterinary care, and not a treatment. </p>
 
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/analog+indoor+hygrometer?s=breeds-pomeranian-health", "/go/amazon-brand/6+column+columnar+pad?s=breeds-pomeranian-health", "/go/amazon-brand/undated+daily+planner?s=breeds-pomeranian-health"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (analog indoor hygrometer /
               6-column columnar pad /
               undated daily planner).
@@ -338,9 +321,9 @@ export default function VetsPomeranianHealthPage() {
               tools, not a ranked product list, not
               a substitute for veterinary care, no
               Rx / first-aid kit / thermometer /
-              carrier / insurance-brand ASIN hops.
+              carrier / insurance-brand product page buttons.
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or an empty link. Amazon searches only —
               unused vs #1182
               academic+year+planner /
               8+column+columnar+pad /
@@ -379,10 +362,13 @@ export default function VetsPomeranianHealthPage() {
           >
             The Dog.com Pomeranian page is the owner-side guide for this breed: size, temperament, and everyday care.
           </CrossSiteHelp>
+          <p>Harnesses for this breed are compared in the <Link href={crossSiteHref('dog-com', '/reviews/best-dog-harnesses')}>dog harness review</Link>.</p>
+          <p>Dental chews for this breed are compared in the <Link href={crossSiteHref('dog-com', '/reviews/best-dental-chews')}>dental chew review</Link>.</p>
           <h2>FAQ</h2>
           <FAQAccordion
             items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))}
             allowMultiple
+            includeSchema={false}
           />
 
           <h2>Sources & Further Reading</h2>

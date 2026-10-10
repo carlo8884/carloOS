@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -9,7 +10,7 @@ import {
   RelatedLinks,
   ArticleByline,
   ArticleSourcesList,
-  AffiliateDisclosure,
+
   ShopCtas,
   JourneyNext,
 } from '@carloOS/ui'
@@ -104,22 +105,22 @@ const FAQS = [
   {
     question: 'What fish can live with bettas?',
     answer:
-      'Peaceful, short-finned, non-nipping fish that share the betta’s warm tropical range (76–82°F) are the safest tank mates: corydoras, kuhli loaches, ember and neon tetras, harlequin rasboras, and otocinclus, plus snails and (with adult shrimp) cherry shrimp. Avoid fin-nippers like tiger barbs and zebra danios, and never keep two male bettas together. Success still depends on the betta’s individual temperament and a tank of at least 10 gallons.',
+      'FishBase lists Betta splendens as tropical, 24–30°C (about 75–86°F). Seriously Fish lists 22–30°C (72–86°F) and describes the species as not a community fish. This page does not publish a safest-mate roster or a 10-gallon minimum. Fin-nipping species and a second male betta are poor company; watch the individual fish.',
   },
   {
     question: 'Can goldfish live with tropical fish?',
     answer:
-      'Generally no. Goldfish are coldwater fish that do best around 60–74°F, while most tropical community fish need 76–80°F. Keeping them together forces one species to live outside its comfortable range year-round, which stresses the fish and shortens their lives. Goldfish also grow large and will eat fish small enough to fit in their mouths. Keep goldfish in a dedicated coldwater setup.',
+      'FishBase lists Carassius auratus as subtropical, with a recorded range of 0–41°C, and Betta splendens as tropical at 24–30°C. Those ranges do not overlap comfortably, so goldfish and tropical community fish are a poor mix. Goldfish also grow large enough to eat fish that fit in their mouths. Keep goldfish in their own setup. A preferred 60–74°F band is not what FishBase records.',
   },
   {
     question: 'Are tiger barbs aggressive?',
     answer:
-      'Tiger barbs are not predators, but they are notorious fin-nippers, especially in small groups. They will harass slow, long-finned fish like bettas, angelfish, and fancy guppies. Keeping them in a larger group of 8 or more spreads the nipping behavior within their own school and reduces — but does not eliminate — the risk to long-finned tank mates.',
+      'Tiger barbs are widely kept as fin-nippers around long-finned fish such as bettas, angelfish, and fancy guppies. A school size of eight is not backed by a primary source on this page. Treat group size as husbandry judgment: a larger school may spread nipping inside the group, and it does not make long-finned tank mates safe.',
   },
   {
     question: 'Why are African cichlids hard to find tank mates for?',
     answer:
-      'African cichlids are aggressive, territorial, and prefer hard, alkaline water — a combination that conflicts with most soft-water community fish. They are typically kept in species-specific or all-cichlid setups built around their aggression and water chemistry rather than mixed into a peaceful community tank.',
+      'African cichlids are aggressive, territorial fish and a poor mix with peaceful community species. A hard, alkaline water requirement is not cited from a species page on this tool, so do not treat water chemistry as settled here. Check the species profile before you mix them.',
   },
   {
     question: 'Does tank size change whether two fish are compatible?',
@@ -158,7 +159,7 @@ export default function TankMateCompatibilityPage() {
           <TableOfContents
             items={[
               { label: 'The checker', href: '#checker' },
-              { label: 'Shop a pairing kit', href: '#shop' },
+              { label: 'Shop these supplies', href: '#shop' },
               { label: 'Quick answer', href: '#answer' },
               { label: 'Common pairings', href: '#pairings' },
               { label: 'How compatibility is judged', href: '#methodology' },
@@ -216,23 +217,23 @@ export default function TankMateCompatibilityPage() {
           siteId="fish-com"
           nextHref="/setup/quarantine-tank-guide"
           nextLabel="Quarantine a new fish before it joins the display"
-          nextBlurb="A Compatible verdict is temperament, not a green light to drop livestock in today. Run new fish in a bare-bottom quarantine tank for 4–6 weeks. The hop below is the same quarantine/hospital search already in the shop list."
+          nextBlurb="A Compatible verdict is temperament, not a green light to drop livestock in today. Run new fish in a bare-bottom quarantine tank for 4–6 weeks. The button below opens the same quarantine/hospital search on Amazon."
           resourceHref="/go/amazon-brand/aquarium+quarantine+hospital+tank?s=tools-tank-mate-compatibility"
-          resourceLabel="Shop quarantine / hospital tanks on Amazon →"
+          resourceLabel="Browse hospital and quarantine tanks on Amazon →"
         />
 
-        {/* Money path — live amazon-brand search hops (divider / quarantine / caves / food / test kit / net).
-            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER. */}
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        {/* Shop note — live amazon-brand search buttons (divider / quarantine / caves / food / test kit / net).
+            ShopCtas hides empty Chewy; never href="#" or an empty link. */}
+        <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/aquarium+quarantine+hospital+tank?s=tools-tank-mate-compatibility", "/go/amazon-brand/aquarium+tank+divider?s=tools-tank-mate-compatibility", "/go/amazon-brand/aquarium+decorations+caves+hiding+spots?s=tools-tank-mate-compatibility", "/go/amazon-brand/tropical+community+fish+food?s=tools-tank-mate-compatibility", "/go/amazon-brand/api+freshwater+master+test+kit?s=tools-tank-mate-compatibility", "/go/amazon-brand/aquarium+fish+net+acclimation+kit?s=tools-tank-mate-compatibility"]} />
         <div id="shop" className="mb-8 rounded-xl border border-brand-border bg-brand-surface p-5">
           <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Shop a pairing kit
+            Shop these supplies
           </div>
           <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
             Test the water before you add a new fish. If a pairing lands on Caution or Not
             recommended, a tank divider or a small quarantine tank lets you separate fish
             without tearing the display down; caves and hiding spots cut aggression in a
-            mix that can work. Same Amazon hops used with the{' '}
+            mix that can work. The same Amazon buttons go with the{' '}
             <Link
               href="/setup/quarantine-tank-guide"
               className="text-brand-primary no-underline hover:underline"
@@ -253,32 +254,32 @@ export default function TankMateCompatibilityPage() {
             >
               water-test kit review
             </Link>
-            . Fish.com earns a commission on qualifying purchases at no extra cost to you.
+            .
           </p>
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+tank+divider?s=tools-tank-mate-compatibility"
-              amazonLabel="Shop aquarium tank dividers on Amazon →"
+              amazonLabel="Browse tank dividers on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+quarantine+hospital+tank?s=tools-tank-mate-compatibility"
-              amazonLabel="Shop quarantine / hospital tanks on Amazon →"
+              amazonLabel="Browse hospital and quarantine tanks on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+decorations+caves+hiding+spots?s=tools-tank-mate-compatibility"
-              amazonLabel="Shop caves and hiding spots on Amazon →"
+              amazonLabel="Browse aquarium decorations, caves, and hiding spots on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/tropical+community+fish+food?s=tools-tank-mate-compatibility"
-              amazonLabel="Shop species-appropriate fish food on Amazon →"
+              amazonLabel="Browse tropical community fish food on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/api+freshwater+master+test+kit?s=tools-tank-mate-compatibility"
-              amazonLabel="Shop aquarium test kits on Amazon →"
+              amazonLabel="Browse API Master Test Kit on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+fish+net+acclimation+kit?s=tools-tank-mate-compatibility"
-              amazonLabel="Shop nets and acclimation kits on Amazon →"
+              amazonLabel="Browse fish nets and acclimation kits on Amazon →"
             />
           </div>
         </div>
@@ -301,12 +302,12 @@ export default function TankMateCompatibilityPage() {
               <tr className="border-b border-brand-border/50">
                 <td className="py-2 pr-4">Betta + Neon Tetra</td>
                 <td className="py-2 pr-4">Compatible</td>
-                <td className="py-2">Peaceful, share warm range; keep tetras in a school of 6+.</td>
+                <td className="py-2">Checker verdict only: can work if the tetras stay schooled and the betta is not aggressive. Not a published safest-mate rule.</td>
               </tr>
               <tr className="border-b border-brand-border/50">
                 <td className="py-2 pr-4">Betta + Corydoras</td>
                 <td className="py-2 pr-4">Compatible</td>
-                <td className="py-2">Peaceful bottom-dwellers stay out of the betta&apos;s way.</td>
+                <td className="py-2">Checker verdict only: bottom-dwellers often stay out of the way. Watch the individual betta.</td>
               </tr>
               <tr className="border-b border-brand-border/50">
                 <td className="py-2 pr-4">Betta + Tiger Barb</td>
@@ -326,7 +327,7 @@ export default function TankMateCompatibilityPage() {
               <tr className="border-b border-brand-border/50">
                 <td className="py-2 pr-4">African Cichlid + community fish</td>
                 <td className="py-2 pr-4">Not recommended</td>
-                <td className="py-2">Aggressive, territorial, and wants hard alkaline water.</td>
+                <td className="py-2">Aggressive and territorial; a poor mix with peaceful community fish.</td>
               </tr>
               <tr className="border-b border-brand-border/50">
                 <td className="py-2 pr-4">Guppy + Platy</td>
@@ -357,8 +358,12 @@ export default function TankMateCompatibilityPage() {
         </p>
         <ul>
           <li>
-            <strong>Temperature range.</strong> Each species has a comfortable range. A coldwater fish (goldfish) paired
-            with tropical fish is a hard incompatibility; a narrow overlap raises a caution.
+            <strong>Temperature range.</strong> Where a species has a FishBase environment line, the checker uses that
+            °C band, widened to whole °F so the band is not tighter than the page. Bristlenose uses the Seriously Fish
+            21–26°C line (stated there as 70–79°F) because FishBase&apos;s Ancistrus cirrhosus page has no temperature.
+            Betta splendens is FishBase 24–30°C. Goldfish stays on the coldwater flag; the FishBase 0–41°C record is not
+            used as a preferred band. Mystery snails, cherry shrimp, and the generic African-cichlid row have no single
+            species temperature page, so those verdicts do not print a degree range.
           </li>
           <li>
             <strong>Temperament &amp; territory.</strong> Aggressive species (oscar, African cichlid) typically harass
@@ -373,8 +378,8 @@ export default function TankMateCompatibilityPage() {
             larger than its tank mate will eventually eat it.
           </li>
           <li>
-            <strong>Water hardness.</strong> Hard-water specialists (African cichlids) and soft-water fish (cardinal and
-            neon tetras) can&apos;t both be kept at their ideal parameters, so one is chronically stressed.
+            <strong>Water hardness.</strong> This checker can flag a hardness mismatch. That flag is planning guidance.
+            A hard, alkaline number for African cichlids is not cited from a species page here.
           </li>
         </ul>
         <p>
@@ -394,24 +399,94 @@ export default function TankMateCompatibilityPage() {
           title="Sources"
           sources={[
             {
-              label: 'Aquarium fish compatibility and community tank stocking',
-              publisher: 'The Spruce Pets',
-              url: 'https://www.thesprucepets.com/freshwater-aquarium-fish-4162163',
+              label: 'FishBase — Betta splendens: tropical, 24–30°C',
+              publisher: 'FishBase',
+              url: 'https://www.fishbase.se/summary/Betta-splendens.html',
             },
             {
-              label: 'Betta fish care and tank mates',
-              publisher: 'The Spruce Pets',
-              url: 'https://www.thesprucepets.com/betta-fish-4162276',
+              label: 'FishBase — Carassius auratus: subtropical, 0–41°C',
+              publisher: 'FishBase',
+              url: 'https://www.fishbase.se/summary/Carassius-auratus.html',
             },
             {
-              label: 'Goldfish are coldwater fish: temperature requirements',
+              label: 'Seriously Fish — Betta splendens: 22–30°C, not a community fish',
               publisher: 'Seriously Fish',
-              url: 'https://www.seriouslyfish.com/',
+              url: 'https://www.seriouslyfish.com/species/betta-splendens/',
             },
             {
-              label: 'African cichlid water parameters and aggression',
+              label: 'FishBase — Paracheirodon innesi (neon tetra): tropical, 20–26°C',
+              publisher: 'FishBase',
+              url: 'https://www.fishbase.se/summary/Paracheirodon-innesi.html',
+            },
+            {
+              label: 'FishBase — Paracheirodon axelrodi (cardinal tetra): tropical, 23–27°C',
+              publisher: 'FishBase',
+              url: 'https://www.fishbase.se/summary/Paracheirodon-axelrodi.html',
+            },
+            {
+              label: 'FishBase — Poecilia reticulata (guppy): tropical, 18–28°C',
+              publisher: 'FishBase',
+              url: 'https://www.fishbase.se/summary/Poecilia-reticulata.html',
+            },
+            {
+              label: 'FishBase — Poecilia sphenops (molly): tropical, 18–28°C',
+              publisher: 'FishBase',
+              url: 'https://www.fishbase.se/summary/Poecilia-sphenops.html',
+            },
+            {
+              label: 'FishBase — Xiphophorus maculatus (platy): tropical, 18–25°C',
+              publisher: 'FishBase',
+              url: 'https://www.fishbase.se/summary/Xiphophorus-maculatus.html',
+            },
+            {
+              label: 'FishBase — Xiphophorus hellerii (swordtail): tropical, 22–28°C',
+              publisher: 'FishBase',
+              url: 'https://www.fishbase.se/summary/Xiphophorus-hellerii.html',
+            },
+            {
+              label: 'FishBase — Pterophyllum scalare (angelfish): tropical, 24–30°C',
+              publisher: 'FishBase',
+              url: 'https://www.fishbase.se/summary/Pterophyllum-scalare.html',
+            },
+            {
+              label: 'FishBase — Corydoras aeneus (bronze corydoras): subtropical, 25–28°C',
+              publisher: 'FishBase',
+              url: 'https://www.fishbase.se/summary/Corydoras-aeneus.html',
+            },
+            {
+              label: 'Seriously Fish — Ancistrus cf. cirrhosus (common bristlenose): 21–26°C, 70–79°F',
               publisher: 'Seriously Fish',
-              url: 'https://www.seriouslyfish.com/',
+              url: 'https://www.seriouslyfish.com/species/ancistrus-cf-cirrhosus/',
+            },
+            {
+              label: 'FishBase — Trigonostigma heteromorpha (harlequin rasbora): tropical, 22–25°C',
+              publisher: 'FishBase',
+              url: 'https://www.fishbase.se/summary/Trigonostigma-heteromorpha.html',
+            },
+            {
+              label: 'FishBase — Danio rerio (zebra danio): tropical, 18–24°C',
+              publisher: 'FishBase',
+              url: 'https://www.fishbase.se/summary/Danio-rerio.html',
+            },
+            {
+              label: 'FishBase — Trichogaster lalius (dwarf gourami): tropical, 25–28°C',
+              publisher: 'FishBase',
+              url: 'https://www.fishbase.se/summary/Trichogaster-lalius.html',
+            },
+            {
+              label: 'FishBase — Pangio kuhlii (kuhli loach): tropical, 24–30°C',
+              publisher: 'FishBase',
+              url: 'https://www.fishbase.se/summary/Pangio-kuhlii.html',
+            },
+            {
+              label: 'FishBase — Puntigrus tetrazona (tiger barb): tropical, 20–26°C',
+              publisher: 'FishBase',
+              url: 'https://www.fishbase.se/summary/Puntigrus-tetrazona.html',
+            },
+            {
+              label: 'FishBase — Astronotus ocellatus (oscar): tropical, 22–25°C',
+              publisher: 'FishBase',
+              url: 'https://www.fishbase.se/summary/Astronotus-ocellatus.html',
             },
           ]}
         />

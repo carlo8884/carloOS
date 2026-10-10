@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { StockImage,
+import { ShopCtas, StockImage,
   buildMetadata,
   ArticleLayout,
   RelatedLinks, CrossPortfolioCard,
@@ -11,7 +12,6 @@ import { StockImage,
   ArticleByline,
   DropCap,
   CalloutBox,
-  AffiliateDisclosure,
   ArticleSourcesList,
 } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
@@ -118,7 +118,7 @@ export default function CardinalTetraPage() {
           { name: 'Species', href: '/species' },
           { name: 'Cardinal Tetra', href: '/species/cardinal-tetra' },
         ]}
-        relatedLinks={[{ title: 'Species Hub', href: '/species', category: 'Species' }, { title: 'Neon Tetra', href: '/species/neon-tetra', category: 'Species Guide' }, { title: 'Ember Tetra', href: '/species/ember-tetra', category: 'Species Guide' }, { title: 'Angelfish', href: '/species/angelfish', category: 'Species Guide' }]}
+        relatedLinks={[{ title: 'Species Hub', href: '/species', category: 'Species' }, { title: 'Neon Tetra', href: '/species/neon-tetra', category: 'Species Guide' }, { title: 'Ember Tetra', href: '/species/ember-tetra', category: 'Species Guide' }, { title: 'Tank Volume Calculator', href: '/tools/aquarium-volume-calculator', category: 'Tool' }, { title: 'Angelfish', href: '/species/angelfish', category: 'Species Guide' }]}
         sidebar={
           <>
             <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -129,7 +129,7 @@ export default function CardinalTetraPage() {
                 ['Scientific name', 'Paracheirodon axelrodi'],
                 ['Origin', 'Rio Negro, Orinoco (S. America)'],
                 ['Adult size', '2 in / 5 cm'],
-                ['Temperature', '75–82°F'],
+                ['Temperature', '73–81°F (https://www.fishbase.se/summary/Paracheirodon-axelrodi.html)'],
                 ['pH', '5.0–7.0 (soft acidic)'],
                 ['GH', '1–8 dGH'],
                 ['Min tank', '20 gal long for a school of 10+'],
@@ -142,7 +142,7 @@ export default function CardinalTetraPage() {
                   className="flex justify-between py-1.5 border-b border-brand-border text-xs last:border-0"
                 >
                   <span className="text-brand-text-light">{k}</span>
-                  <span className="font-bold text-brand-dark text-right max-w-[55%]">{v}</span>
+                  <span className="font-bold text-brand-dark text-right max-w-[55%] break-all">{v}</span>
                 </div>
               ))}
             </div>
@@ -162,7 +162,7 @@ export default function CardinalTetraPage() {
                   className="flex justify-between py-1.5 border-b border-brand-border text-xs last:border-0"
                 >
                   <span className="text-brand-text-light">{k}</span>
-                  <span className="font-bold text-brand-dark text-right max-w-[55%]">{v}</span>
+                  <span className="font-bold text-brand-dark text-right max-w-[55%] break-all">{v}</span>
                 </div>
               ))}
             </div>
@@ -171,6 +171,7 @@ export default function CardinalTetraPage() {
               links={[
                 { label: 'Neon Tetra Care', href: '/species/neon-tetra' },
                 { label: 'Discus Care', href: '/species/discus' },
+                { label: 'Tank Volume Calculator', href: '/tools/aquarium-volume-calculator' },
                 { label: 'Planted Tank Setup', href: '/setup/planted-tank-setup' },
                 { label: 'Find an Aquarium Vet (WAVMA)', href: crossSiteHref('vets-co', '/find-a-vet/aquarium') },
               ]}
@@ -189,10 +190,10 @@ export default function CardinalTetraPage() {
           />
         <StockImage manifestKey="fish-com:species-cardinal-tetra" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A cardinal tetra in a home aquarium." priority />
 
-          <CalloutBox variant="note" title="TL;DR">
+          <CalloutBox variant="note" title="In short">
             Cardinal tetras (Paracheirodon axelrodi) are blackwater micro-carnivores from
             the Rio Negro and Orinoco basins. They need soft, warm, acidic water
-            (75–82°F, pH 5.0–7.0, GH 1–8) and schools of at least ten fish in a
+            (73–81°F, FishBase Paracheirodon axelrodi, <a className="break-all" href="https://www.fishbase.se/summary/Paracheirodon-axelrodi.html">https://www.fishbase.se/summary/Paracheirodon-axelrodi.html</a>, pH 5.0–7.0, GH 1–8) and schools of at least ten fish in a
             heavily planted tank. Wild-caught stock from Project Piaba is often more
             vivid than farm-bred stock but requires strict four-week quarantine.
             Peaceful with other small soft-water community fish; classic discus
@@ -253,7 +254,7 @@ export default function CardinalTetraPage() {
           </p>
           <ul>
             <li>
-              <strong>Temperature:</strong> 75–82°F. The species range
+              <strong>Temperature:</strong> 73–81°F (<a className="break-all" href="https://www.fishbase.se/summary/Paracheirodon-axelrodi.html">https://www.fishbase.se/summary/Paracheirodon-axelrodi.html</a>). The species range
               overlaps discus, which is why the two are classic biotope mates.
             </li>
             <li>
@@ -294,7 +295,9 @@ export default function CardinalTetraPage() {
             skittish, hide constantly, and rarely display their full color. Ten
             is the welfare minimum; fifteen to twenty in a 20-gallon-long or
             larger planted tank is the practical sweet spot for both fish
-            welfare and visual impact. School cohesion — the tightness of
+            welfare and visual impact. The{' '}
+            <a href="/tools/aquarium-volume-calculator" className="text-brand-primary hover:underline">tank volume calculator</a>{' '}
+            checks that gallon figure from the tank&apos;s length, width, and height. It does not pick a long footprint. A 20-gallon-long is still the tank this section asks for. School cohesion — the tightness of
             coordinated movement that gives the school its visual signature
             — increases meaningfully with group size up to roughly 30 fish.
           </p>
@@ -320,8 +323,7 @@ export default function CardinalTetraPage() {
           </p>
           <p>
             <strong>Excellent tank mates:</strong> discus (classic), German
-            blue rams, Apistogramma dwarf cichlids, corydoras catfish
-            (especially C. sterbai for the warmer temperature overlap), Amano
+            blue rams, Apistogramma dwarf cichlids, corydoras catfish, Amano
             and cherry shrimp (adult shrimp; juvenile shrimp may be eaten),
             otocinclus, hatchetfish, pencilfish, other small tetras (ember,
             green neon, rummynose).
@@ -412,12 +414,12 @@ export default function CardinalTetraPage() {
               referral directory.
             </li>
           </ul>
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        <HopDisclosure siteId="fish-com" href="/go/amazon-brand/cardinal%20tetra%20tank%20setup?s=species-cardinal-tetra" />
           <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Cardinal Tetra — Tank Setup</div>
-          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for cardinal tetra care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
+          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for cardinal tetra care.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
-            <a href="/go/amazon-brand/cardinal%20tetra%20tank%20setup?s=species-cardinal-tetra" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop Cardinal Tetra Setup on Amazon →</a>
+            <ShopCtas amazonHref="/go/amazon-brand/cardinal%20tetra%20tank%20setup?s=species-cardinal-tetra" amazonLabel="Browse cardinal tetra tank setups on Amazon →" />
           </div>
         </div>
 

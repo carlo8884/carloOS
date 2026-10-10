@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import {
   buildMetadata,
@@ -10,11 +11,10 @@ import {
   ArticleByline,
   DropCap,
   ReviewCard,
-  ScoreMethodology,
-  AffiliateDisclosure,
   ShopCtas,
   CrossPortfolioCard,
   ArticleSourcesList,
+  LastUpdated,
 } from '@carloOS/ui'
 
 const SOURCES = [
@@ -25,7 +25,7 @@ const SOURCES = [
   },
   {
     label: "Merck Veterinary Manual — Management of Older Ferrets: monitoring cadence, common senior-ferret diseases, and quality-of-life indicators",
-    url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/routine-health-care-of-ferrets",
+    url: "https://www.merckvetmanual.com/all-other-pets/ferrets/routine-health-care-for-ferrets",
     publisher: "Merck Veterinary Manual",
   },
   {
@@ -125,6 +125,14 @@ export default function FerretAgingPage() {
       <ArticleLayout
         siteId="ferret-com"
         contentType="health"
+        heroHop={
+          <>
+            <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/ferret+kibble?s=health-aging" />
+            <div className="mb-4" data-primary-hop="true">
+              <a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" data-shop-placement="hero" href="/go/amazon-brand/ferret+kibble?s=health-aging">Browse ferret kibble on Amazon →</a>
+            </div>
+          </>
+        }
         hero={{
           title: 'Aging Ferret Care',
           subtitle:
@@ -207,6 +215,7 @@ export default function FerretAgingPage() {
             publishedAt="2026-05-28"
             updatedAt="2026-05-28"
           />
+          <LastUpdated date="2026-10-09" />
 
           <DropCap>
             The senior years are where the structural decisions made earlier
@@ -219,8 +228,7 @@ export default function FerretAgingPage() {
             cleanly.
           </DropCap>
 
-          <h2 id="tldr">TL;DR</h2>
-          <p>
+                    <p>
             Domestic ferrets live an average of 5-8 years. Senior care
             typically begins at age 4-5, with formal protocols by age 5.
             Disease incidence rises sharply for insulinoma, adrenal disease,
@@ -552,7 +560,6 @@ export default function FerretAgingPage() {
             the household.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
 
           <h2 id="picks">Supportive Care Picks</h2>
           <CalloutBox variant="warning" title="Supportive supplies, not treatment">
@@ -561,18 +568,16 @@ export default function FerretAgingPage() {
             </p>
           </CalloutBox>
           <p>
-            Two items that come up consistently in senior-ferret hospice and palliative-care guidance: a floor-level soft sleeping setup, and a meat-based recovery diet for ferrets who are eating less. This is a documented-spec comparison; the page does not claim hands-on testing.
+            Two items that come up consistently in senior-ferret hospice and palliative-care guidance: a floor-level soft sleeping setup, and a meat-based recovery diet for ferrets who are eating less.
           </p>
-          <ScoreMethodology />
-          <ReviewCard
+          <ReviewCard quietUntilTag
             id="floor-level-hammock"
             badge="Senior Comfort"
             name="Floor-Level Fleece Sleep Sack / Low Hammock"
             subtitle="Soft, low-entry sleep setup so an arthritic senior does not have to climb"
-            score={8.5}
             winner
             description={
-              <p>Most ferrets sleep in elevated hammocks throughout their adult lives. Arthritic and frail seniors often stop being able to climb into them comfortably and either give up sleeping in the hammock (and sleep on hard cage floor) or fall when trying. A floor-level soft sleep sack — a fleece "cube" or pillow-style bed — fixes the comfort problem. Multiple sleeping spots at floor level around the home and inside the cage is one of the highest-impact husbandry changes a senior-ferret keeper can make.</p>
+              <p>Marshall's floor sleep-sack product page no longer resolves. This button opens Marshall's current leisure-lounge search. Most ferrets sleep in elevated hammocks throughout their adult lives. Arthritic and frail seniors often stop being able to climb into them comfortably and either give up sleeping in the hammock (and sleep on hard cage floor) or fall when trying. A floor-level soft sleep sack — a fleece "cube" or pillow-style bed — fixes the comfort problem. Multiple sleeping spots at floor level around the home and inside the cage is one of the highest-impact husbandry changes a senior-ferret keeper can make. <a href="/reviews/best-ferret-cage">The ferret cage guide</a> compares the cage those lower ramps belong on.</p>
             }
             specs={[
               { label: 'Placement', value: 'Floor / cage-bottom', highlight: 'good' },
@@ -582,29 +587,29 @@ export default function FerretAgingPage() {
             ]}
             pros={['Eliminates climbing requirement for arthritic seniors', 'Soft on bony pressure points (common in weight-losing seniors)', 'Multiple cheap units mean spots in every room', 'Machine washable']}
             cons={['Fleece picks up shed hair quickly — frequent wash', 'Some seniors still prefer their old hammock — offer both']}
-            price="$10–25 each"
-            ctaText="Find ferret floor sleep sacks"
-            ctaHref="/go/marshall/ferret-floor-sleep-sack?s=health-aging-ferret-care"
+            price="see current price each"
+            priceNote="dated 2026-05-31."
+            ctaText="Find Marshall leisure lounges"
+            ctaHref="/go/marshall/leisure+lounge?s=health-aging-ferret-care"
             ctaAffiliateProgram="marshall"
-            ctaAffiliateProduct="ferret-floor-sleep-sack"
+            ctaAffiliateProduct="leisure+lounge"
           />
 
-          {/* Money path — live amazon-brand kitchen hops
+          {/* Shop note — live amazon-brand kitchen buttons
               matching on-page HHHHHMM / monitoring /
               Merck-AEMV copy. Unique vs the ferret
               health-hub kitchen. Keep the existing
               Marshall floor-sleep-sack CTA. Educational
-              only — never a flea hop, never an Rx. */}
+              only — never a flea button, never an Rx. */}
           <div className="not-prose my-10 rounded-xl border border-brand-border bg-brand-surface p-6">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
             </div>
             <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
-            <AffiliateDisclosure variant="inline" siteId="ferret-com" />
             <div className="flex flex-col gap-3 mt-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/ferret+kibble?s=health-aging"
-                amazonLabel="Shop on Amazon"
+                amazonLabel="Browse ferret kibble on Amazon →"
               />
           </div>
           </div>

@@ -49,7 +49,7 @@ test('money pages send security headers and the hub search still runs', async ({
     const hub = await page.goto(target.hub, { waitUntil: 'commit' })
     expect(hub?.status(), target.hub).toBe(200)
     expect(hub?.headers()['content-security-policy'], target.hub).toContain("form-action 'self'")
-    const search = page.locator('form[role="search"] input')
+    const search = page.getByTestId('hub-search').locator('input')
     await expect(search, target.hub).toBeVisible()
     await search.fill(target.query)
     await expect(search).toHaveValue(target.query)

@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -6,9 +7,9 @@ import {
   FAQAccordion,
   RelatedLinks, CrossPortfolioCard,
   TableOfContents,
-  AffiliateDisclosure,
   ShopCtas,
   JourneyNext,
+  PrimaryHop,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -101,6 +102,10 @@ export default function DogFirstAidKitPage() {
       <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="dog-com"
+        heroHop={<>
+          <PrimaryHop href="/go/amazon-brand/digital+pet+thermometer?s=guides-first-aid-kit" label="Search Amazon for a digital pet thermometer" />
+          <HopDisclosure siteId="dog-com" href="/go/amazon-brand/digital+pet+thermometer?s=guides-first-aid-kit" tone="on-dark" />
+        </>}
         hero={{
           title: 'Dog First Aid Kit & Emergency Preparedness — The Owner Checklist',
           subtitle:
@@ -156,7 +161,7 @@ export default function DogFirstAidKitPage() {
             reviewedBy="Editorial team"
           />
 
-          <CalloutBox variant="evidence" title="TL;DR — Be ready before you need to be">
+          <CalloutBox variant="evidence" title="Be ready before you need to be">
             <p>
               <strong>Build a kit:</strong> wound and bandaging supplies, a muzzle, gloves, a thermometer, a towel, your dog&rsquo;s records and photo, and only veterinarian-approved medications.
             </p>
@@ -195,15 +200,15 @@ export default function DogFirstAidKitPage() {
             siteId="dog-com"
             nextHref="/guides/how-to-take-dogs-temperature"
             nextLabel="Practice a temperature reading before you need one"
-            nextBlurb="The kit list is the packing order. A digital thermometer only helps if you already know this dog's normal. Take a calm-day reading next. The hop below is the same digital pet thermometer search already on this page."
+            nextBlurb="The kit list is the packing order. A digital thermometer only helps if you already know this dog's normal. Take a calm-day reading next. The button below opens the same digital pet thermometer search on Amazon."
             resourceHref="/go/amazon-brand/digital+pet+thermometer?s=guides-first-aid-kit"
             resourceLabel="Browse digital pet thermometers on Amazon →"
           />
 
-          {/* Money path — live amazon-brand search hops (first-aid / emergency-prep kit).
-              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-              Category searches only — educational kit supplies, not medications, not a ranked list. */}
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          {/* Shop note — live amazon-brand search buttons (first-aid / emergency-prep kit).
+              ShopCtas hides empty Chewy; never href="#" or an empty link.
+              Amazon searches only — educational kit supplies, not medications, not a ranked list. */}
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/wound+care+gauze?s=guides-first-aid-kit", "/go/amazon-brand/vetrap+cohesive+bandage?s=guides-first-aid-kit", "/go/amazon-brand/digital+pet+thermometer?s=guides-first-aid-kit", "/go/amazon-brand/saline+wound+flush?s=guides-first-aid-kit", "/go/amazon-brand/soft+dog+muzzle?s=guides-first-aid-kit", "/go/amazon-brand/soft+dog+carrier?s=guides-first-aid-kit"]} />
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
               Shop first-aid kit supplies
@@ -216,7 +221,7 @@ export default function DogFirstAidKitPage() {
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/vetrap+cohesive+bandage?s=guides-first-aid-kit"
-                amazonLabel="Browse cohesive bandage wrap on Amazon →"
+                amazonLabel="Browse Vetrap cohesive bandage on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/digital+pet+thermometer?s=guides-first-aid-kit"
@@ -299,15 +304,16 @@ export default function DogFirstAidKitPage() {
           <FAQAccordion
             items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))}
             allowMultiple
+            includeSchema={false}
           />
 
           <ArticleSourcesList
             title="References"
             sources={[
-              { label: 'Pet First Aid — Be Prepared', url: 'https://www.avma.org/resources-tools/pet-owners/emergencycare/pet-first-aid-tips', publisher: 'AVMA' },
-              { label: 'Animal Poison Control Center', url: 'https://www.aspca.org/pet-care/animal-poison-control', publisher: 'ASPCA' },
-              { label: 'Poisoning in Dogs — First Aid and Emergency Care', url: 'https://www.merckvetmanual.com/dog-owners/emergencies/poisoning-in-dogs', publisher: 'Merck Veterinary Manual' },
-              { label: 'Disaster Preparedness for Pets', url: 'https://www.avma.org/resources-tools/pet-owners/emergencycare/disaster-preparedness', publisher: 'AVMA' },
+              { label: 'Pet First Aid — Be Prepared', url: 'https://www.avma.org/resources-tools/pet-owners/emergencycare/first-aid-tips-pet-owners', publisher: 'AVMA' },
+              { label: 'Merck Veterinary Manual: Household Hazards', url: 'https://www.merckvetmanual.com/special-pet-topics/poisoning/household-hazards', publisher: 'Merck Vet Manual' },
+              { label: 'Animal Poison Control Center', url: 'https://www.aspca.org/pet-care/aspca-poison-control', publisher: 'ASPCA' },
+              { label: 'Disaster Preparedness for Pets', url: 'https://www.avma.org/resources-tools/pet-owners/emergency-care/pets-and-disasters', publisher: 'AVMA' },
             ]}
           />
         </div>

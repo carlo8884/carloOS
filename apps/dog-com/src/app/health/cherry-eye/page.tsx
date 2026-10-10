@@ -1,13 +1,12 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 
 const SOURCES = [
-  { label: 'Merck Veterinary Manual: Cherry Eye (Prolapsed Nictitating Membrane Gland)', url: 'https://www.merckvetmanual.com/eye-and-ear/ophthalmology/cherry-eye-in-dogs', publisher: 'Merck Vet Manual' },
-  { label: 'American College of Veterinary Ophthalmologists (ACVO): Ocular Conditions in Dogs', url: 'https://www.acvo.org/general-public-2/eye-conditions', publisher: 'ACVO' },
-  { label: 'AVMA: Eye Problems in Dogs', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/common-health-conditions-dogs', publisher: 'AVMA' },
+  { label: 'American College of Veterinary Ophthalmologists (ACVO): Ocular Conditions in Dogs', url: 'https://www.acvo.org/common-conditions', publisher: 'ACVO' },
   { label: 'Mazzucchelli S et al. Retrospective study of 155 dogs undergoing pocket technique for correction of prolapse of the nictitating membrane gland. Vet Rec. 2012;170(4):95.', publisher: 'Vet Record' },
 ]
 
@@ -21,8 +20,8 @@ const combined = combineSchemas(schema, med)
 
 const FAQS = [
   { question: 'Can I push cherry eye back in myself?', answer: 'Manual replacement is a temporary measure at best. The connective tissue that holds the gland in place is weakened or absent in dogs that develop cherry eye — pushing the gland back will not restore that attachment. Most manually replaced glands re-prolapse within days to weeks. The only permanent solution is surgical correction, ideally performed by an ophthalmologist. Some veterinarians will show owners a temporary replacement technique to use until surgery can be scheduled, but this should not replace surgical correction.' },
-  { question: 'Can cherry eye be left untreated?', answer: 'Cherry eye can be left untreated without immediate danger in most cases — it is not acutely painful. However, the exposed gland dries out, becomes chronically inflamed, and loses functional tissue over time. Long-term consequences: reduced tear production (the prolapsed gland produces approximately 30-50% of total tear film), which can lead to keratoconjunctivitis sicca (dry eye) requiring lifelong medication. Early surgical correction preserves more glandular function. Leaving cherry eye untreated long-term is not recommended.' },
-  { question: 'Does cherry eye come back after surgery?', answer: 'With the pocket technique (gland replacement and suturing), re-prolapse rates are 5-20% depending on technique and surgeon experience. With gland removal (excision), re-prolapse cannot occur but dry eye is a significant long-term consequence as 30-50% of tear production is removed. The pocket technique is preferred for this reason — the gland is preserved even at the cost of some recurrence risk.' },
+  { question: 'Can cherry eye be left untreated?', answer: 'Cherry eye can be left untreated without immediate danger in most cases — it is not acutely painful. However, the exposed gland dries out, becomes chronically inflamed, and loses functional tissue over time. Long-term consequences: reduced tear production (the prolapsed gland produces a substantial share of the tear film), which can lead to keratoconjunctivitis sicca (dry eye) requiring lifelong medication. Early surgical correction preserves more glandular function. Leaving cherry eye untreated long-term is not recommended.' },
+  { question: 'Does cherry eye come back after surgery?', answer: 'With the pocket technique (gland replacement and suturing), re-prolapse can still happen and depends on technique and surgeon experience. With gland removal (excision), re-prolapse cannot occur but dry eye is a significant long-term consequence as a substantial share of tear production is removed. The pocket technique is preferred for this reason — the gland is preserved even at the cost of some recurrence risk.' },
 ]
 
 export default function CherryEyePage() {
@@ -48,7 +47,7 @@ export default function CherryEyePage() {
         <div className="carloOS-article">
 
           <h2>What Cherry Eye Is</h2>
-          <p>Dogs have a third eyelid (nictitating membrane) in the inner corner of each eye. Inside this membrane sits a gland — the nictitating membrane gland (also called the third eyelid gland or Harderian gland) — that produces approximately 30–50% of the dog's total tear film. This gland is held in place by a small ligament and connective tissue. In dogs genetically predisposed to cherry eye, this anchoring system is weak or malformed — the gland pops out of position and becomes visible as a red, fleshy oval mass at the inner corner of the eye.</p>
+          <p>Dogs have a third eyelid (nictitating membrane) in the inner corner of each eye. Inside this membrane sits a gland — the nictitating membrane gland (also called the third eyelid gland or Harderian gland) — that produces a substantial share of the dog's tear film. This gland is held in place by a small ligament and connective tissue. In dogs genetically predisposed to cherry eye, this anchoring system is weak or malformed — the gland pops out of position and becomes visible as a red, fleshy oval mass at the inner corner of the eye.</p>
           <p>Cherry eye most commonly occurs in young dogs (under 2 years) and may affect one or both eyes. It is not immediately painful, though the exposed gland becomes chronically irritated and inflamed, and the dog may paw at the eye. A soft e-collar (soft cone / recovery collar) keeps paws off the prolapsed gland while you wait for surgery or during post-op recovery — it does not treat cherry eye, and it does not replace surgical correction. Ask your veterinarian whether a soft e-collar fits this dog. The mass is easily visible — owners notice it suddenly and often describe it as appearing overnight.</p>
 
           <h2>Why Manual Replacement Doesn't Work</h2>
@@ -56,24 +55,24 @@ export default function CherryEyePage() {
           <p>Manual replacement is sometimes used as a short-term bridge to surgery — a veterinarian may show an owner how to temporarily reduce the prolapse to keep the gland moist until a surgical appointment. This is not a substitute for surgery. Some veterinarians also recommend a dog eye wipe (or sterile saline eye wash) as a short-term way to keep the exposed gland from drying out until that appointment — a moisture bridge, not a medication, not cyclosporine or tacrolimus, and not a substitute for surgery.</p>
 
           <h2>Surgical Options</h2>
-          <p><strong>Pocket technique (gland replacement and anchoring):</strong> The preferred approach. The gland is repositioned and sutured into a pocket created in the nictitating membrane, securing it in place. The gland is preserved — maintaining its tear-producing function. Re-prolapse rate: approximately 5–20% depending on technique and breed. Bulldog-type breeds have higher re-prolapse rates due to the severity of the underlying anatomical weakness. Recommended to be performed by a veterinary ophthalmologist (<a href="https://acvo.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">DACVO</a>) for best outcomes.</p>
-          <p><strong>Gland excision (removal):</strong> Removal of the prolapsed gland entirely. Eliminates re-prolapse risk but removes 30–50% of tear production capacity. The long-term consequence: keratoconjunctivitis sicca (KCS/dry eye) — insufficient tear production causing chronic eye inflammation, corneal damage, and the need for lifelong cyclosporine or tacrolimus eye drops (immunosuppressive drops that stimulate remaining tear production). This approach is now generally considered outdated for cherry eye and should only be considered when gland replacement has repeatedly failed and the gland itself has become too damaged to function.</p>
+          <p><strong>Pocket technique (gland replacement and anchoring):</strong> The preferred approach. The gland is repositioned and sutured into a pocket created in the nictitating membrane, securing it in place. The gland is preserved — maintaining its tear-producing function. Re-prolapse can still happen; the risk depends on technique and breed. Bulldog-type breeds have higher re-prolapse rates due to the severity of the underlying anatomical weakness. Recommended to be performed by a veterinary ophthalmologist (<a href="https://acvo.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">DACVO</a>) for best outcomes.</p>
+          <p><strong>Gland excision (removal):</strong> Removal of the prolapsed gland entirely. Eliminates re-prolapse risk but removes a substantial share of tear production. The long-term consequence: keratoconjunctivitis sicca (KCS/dry eye) — insufficient tear production causing chronic eye inflammation, corneal damage, and the need for lifelong cyclosporine or tacrolimus eye drops (immunosuppressive drops that stimulate remaining tear production). This approach is now generally considered outdated for cherry eye and should only be considered when gland replacement has repeatedly failed and the gland itself has become too damaged to function.</p>
 
           <h2>When to See an Ophthalmologist</h2>
           <p>Cherry eye surgery can be performed by general practice veterinarians with appropriate training, but referral to a board-certified veterinary ophthalmologist (DACVO) produces better outcomes — lower re-prolapse rates, better preservation of glandular function. For brachycephalic breeds (Bulldogs, French Bulldogs) where re-prolapse rates are higher and ocular complications are more common, ophthalmologist referral is particularly advisable. Pet insurance typically covers cherry eye surgery as it is a medical condition rather than cosmetic.</p>
 
-          <h2 id="kit">Recovery-collar kit</h2>
-          <p>Everyday physical supplies that match the pawing-and-moisture copy above — a soft e-collar (soft cone / recovery collar) so the dog cannot paw the prolapsed gland while waiting for surgery or during post-op recovery, plus dog eye wipes to keep the exposed gland from drying out as a short moisture bridge. These are home-setup aids, not treatments. Cyclosporine, tacrolimus, other Rx eye drops, NSAIDs, and supplements stay educational copy only — this page never hops medications, Rx drops, or brand ASINs. Hot-spot recovery cones stay on the sister <a href="/health/dog-hot-spots">dog-hot-spots</a> page. Recovery crates, belly-support harnesses, and wheelchairs stay on <a href="/health/intervertebral-disc-disease">IVDD</a>. Knee braces and rear-support harnesses stay on <a href="/health/dog-luxating-patella">luxating patella</a>. This page does not claim hands-on testing.</p>
+          <h2 id="kit">Supplies named on this page</h2>
+          <p>Keep these on hand: a soft e-collar (soft cone / recovery collar) so the dog cannot paw the prolapsed gland while waiting for surgery or during post-op recovery, plus dog eye wipes to keep the exposed gland from drying out as a short moisture bridge. These are home-setup aids, not treatments. Cyclosporine, tacrolimus, other Rx eye drops, NSAIDs, and supplements stay educational copy only — this page does not link to medications, Rx drops, or named brands. Hot-spot recovery cones stay on the sister <a href="/health/dog-hot-spots">dog-hot-spots</a> page. Recovery crates, belly-support harnesses, and wheelchairs stay on <a href="/health/intervertebral-disc-disease">IVDD</a>. Knee braces and rear-support harnesses stay on <a href="/health/dog-luxating-patella">luxating patella</a>.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/soft+e+collar+dog?s=health-cherry-eye", "/go/amazon-brand/dog+eye+wipes?s=health-cherry-eye"]} />
 
-          {/* Money path — live amazon-brand search hops (soft
+          {/* Shop note — live amazon-brand search buttons (soft
               e-collar / dog eye wipes). ShopCtas hides empty
-              Chewy; never href="#" or PLACEHOLDER. Category
+              Chewy; never href="#" or an empty link. Category
               searches only. Cyclosporine, tacrolimus, other Rx
               eye drops, NSAIDs, supplements, hot-spot recovery
               cones, IVDD crates / harnesses / wheelchairs, and
-              luxating-patella braces are not shoppable hops. */}
+              luxating-patella braces are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

@@ -46,7 +46,7 @@ test('hub groups, jump links, and search at 375px', async ({ page }, testInfo) =
     await jumps.first().click()
     await expect(page.locator(firstHref!)).toBeVisible()
 
-    const search = page.locator('form[role="search"] input')
+    const search = page.getByTestId('hub-search').locator('input')
     await search.fill(target.query)
     await expect(page.getByRole('heading', { name: target.hiddenHeading, exact: true })).toBeHidden()
     await expect(page.locator('[data-hub-item]:visible').first()).toBeVisible()

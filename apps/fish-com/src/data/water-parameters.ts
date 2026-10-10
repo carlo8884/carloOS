@@ -547,7 +547,7 @@ export const PARAMETERS: WaterParameter[] = [
         setup: 'Planted / soft-water freshwater',
         target: '72–78 °F (22–26 °C)',
         notes:
-          'Slightly cooler at the low end favors plant growth and CO2 solubility. Discus and rams run at 82–86 °F (28–30 °C).',
+          'Slightly cooler at the low end favors plant growth and CO2 solubility. Discus run at 78–86°F (https://www.fishbase.se/summary/Symphysodon-aequifasciatus.html). Rams run at 80–86°F (https://www.fishbase.se/summary/Mikrogeophagus-ramirezi.html).',
       },
       {
         setup: 'Reef / marine',
@@ -582,8 +582,8 @@ export const PARAMETERS: WaterParameter[] = [
       'For sustained tropical-room scenarios, aquarium chillers are the published long-term solution.',
     ],
     speciesSensitivity: [
-      'Goldfish, white cloud minnows, hillstream loaches, and many danios are coldwater species kept below 72 °F.',
-      'Discus, rams, and many wild-caught soft-water species need warm 82–86 °F water.',
+      'Goldfish are kept cooler than a tropical community. White clouds: FishBase lists Tanichthys albonubes at 18–22°C, which is 64–72°F (https://www.fishbase.se/summary/Tanichthys-albonubes.html). Hillstream loaches: Seriously Fish lists Sewellia lineolata at 20–24°C, which this page converts to 68–76°F (https://www.seriouslyfish.com/species/sewellia-lineolata/).',
+      'Discus: FishBase lists Symphysodon aequifasciatus at 26–30°C, which is 78–86°F (https://www.fishbase.se/summary/Symphysodon-aequifasciatus.html). Rams: FishBase lists Mikrogeophagus ramirezi at 27–30°C, which is 80–86°F (https://www.fishbase.se/summary/Mikrogeophagus-ramirezi.html).',
       'Reef corals — particularly SPS — show stress within 2–3 °F of their established baseline.',
     ],
     commonMistakes: [

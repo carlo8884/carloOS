@@ -1,10 +1,11 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, ShopCtas, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Cognitive Dysfunction Syndrome in Dogs — Dog Dementia Signs | Vets.co', description: 'CDS (dog dementia) affects 22% of dogs 9-11 years. Disorientation, sleep disruption, house soiling, and anxiety. Purina Bright Mind, Anipryl.', path: '/health/cognitive-dysfunction', type: 'article' })
 const SOURCES = [
-  { label: 'Merck Veterinary Manual: Cognitive Dysfunction Syndrome in Dogs', url: 'https://www.merckvetmanual.com/behavior/behavior-of-dogs/cognitive-dysfunction-syndrome-in-dogs', publisher: 'Merck Vet Manual' },
+  { label: 'Cornell University College of Veterinary Medicine: Cognitive Dysfunction Syndrome', url: 'https://www.vet.cornell.edu/departments-centers-and-institutes/riney-canine-health-center/canine-health-topics/cognitive-dysfunction-syndrome', publisher: 'Cornell University' },
   { label: 'Madari A et al. Assessment of severity and progression of canine cognitive dysfunction syndrome using the CAnine DEmentia Scale (CADES). Appl Anim Behav Sci. 2015;171:138-145.', publisher: 'Applied Animal Behaviour Science' },
   { label: 'Landsberg GM et al. Cognitive dysfunction syndrome: a disease of canine and feline brain aging. Vet Clin Small Anim. 2012;42(4):749-768.', publisher: 'Veterinary Clinics of North America' },
 ]
@@ -44,6 +45,7 @@ export default function CognitiveDysfunctionPage() {
         <div className="carloOS-article">
 
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-09-05T00:00:00Z" reviewedBy="Editorial team" />
+          <LastUpdated date="2026-10-09" />
 
           <h2>The DISHAA Framework</h2>
           <DropCap>The DISHAA acronym provides a standardized clinical assessment for CDS — Disorientation, Interactions (changes), Sleep/wake cycle changes, Housetraining regression, Activity changes, and Anxiety. Any 1–2 signs from different categories suggest possible CDS; 3+ signs across multiple categories is highly consistent with the diagnosis. The DISHAA assessment is completed by the owner based on observations at home — it provides more clinically relevant information than what the veterinarian observes in the exam room (dogs often appear more alert during veterinary visits due to the stimulation).</DropCap>
@@ -67,41 +69,24 @@ export default function CognitiveDysfunctionPage() {
           <h2>Nighttime Management</h2>
           <p>Nighttime restlessness and vocalization is one of the most disruptive CDS signs for owners. The dog wanders, vocalizes, or appears confused at night — often the only time the owner is aware something is wrong. Management: melatonin as above, maintaining a consistent bedtime routine, keeping the dog in the bedroom where human presence is reassuring, night lights (disorientation is worse in darkness), and ensuring the dog is not in pain (pain can disrupt sleep in senior dogs independent of CDS — pain management may dramatically improve nighttime behavior).</p>
 
-          <h2 id="kit">Home-support kit</h2>
+          <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Everyday physical supplies that match the
-            enrichment and nighttime-management copy on
-            this page — a plug-in night light for the hall
-            the dog walks at night, a sniff box with new
-            objects for short scent sessions, and a senior
-            food-puzzle toy for brief enrichment. These are
-            household tools, not treatments. They do not
-            treat CDS, they do not replace a veterinarian,
-            and they are not Bright Mind brand ASINs,
-            Anipryl (selegiline), melatonin, or fish-oil
-            supplements. This is not the Dog.com
-            senior-dog-care page and it does not hop senior
-            dog food, joint-support treats, or a
-            portion-control scale. It is not the anxiety-in-dogs
-            page and it does not hop an anxiety vest,
-            pheromone diffuser, or heartbeat comfort toy.
-            It is not a puzzle-feeder or snuffle-mat hop.
-            This page does not claim hands-on testing.
+            Keep these on hand: a plug-in night light for the hall the dog walks at night, a sniff box with new objects for short scent sessions, and a senior food-puzzle toy for brief enrichment. These are household tools, not treatments. They do not treat CDS, they do not replace a veterinarian, and they are not Bright Mind product pages, Anipryl (selegiline), melatonin, or fish-oil supplements.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/plug+in+night+light?s=health-cognitive-dysfunction", "/go/amazon-brand/dog+sniff+box?s=health-cognitive-dysfunction", "/go/amazon-brand/senior+dog+food+puzzle?s=health-cognitive-dysfunction"]} />
 
-          {/* Money path — live amazon-brand search hops (plug-in
+          {/* Shop note — live amazon-brand search buttons (plug-in
               night light / sniff box / senior food-puzzle).
               ShopCtas hides empty Chewy; never href="#" or
-              PLACEHOLDER. Category searches only — unused vs
+              an empty link. Amazon searches only — unused vs
               #848–#1036 puzzle+feeder+dog, snuffle+mat+dog+enrichment,
               senior+dog+food, joint+support+dog+treats,
               portion+control+food+scale+dog, anxiety+vest+dog,
               pheromone+diffuser+dog, and
               dog+heartbeat+comfort+toy. Bright Mind, Anipryl
               (selegiline), melatonin, and fish-oil
-              supplements are not shoppable hops. */}
+              supplements are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

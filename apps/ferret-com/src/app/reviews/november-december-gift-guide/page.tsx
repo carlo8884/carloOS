@@ -1,6 +1,7 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, ArticleLayout, ComparisonFoot, FAQAccordion, RelatedLinks, TableShopLink, buildArticleSchema, buildFAQSchema, buildMetadata, combineSchemas } from '@carloOS/ui'
+import { ArticleLayout, BelowFoldPhoto, ComparisonFoot, FAQAccordion, RelatedLinks, TableShopLink, buildArticleSchema, buildFAQSchema, buildMetadata, combineSchemas, ArticleSourcesList, LastUpdated, EmailCapture } from '@carloOS/ui'
 
 const PATH = '/reviews/november-december-gift-guide'
 const SOURCE = 'reviews-november-december-gift-guide'
@@ -46,6 +47,14 @@ export default function NovemberDecemberGiftGuidePage() {
     <ArticleLayout
       siteId="ferret-com"
       schema={combineSchemas(schema, faqSchema)}
+      heroHop={
+        <>
+          <HopDisclosure siteId="ferret-com" href={`/go/amazon/B001NJ0DAY?s=${SOURCE}`} />
+          <div className="mb-4" data-primary-hop="true">
+            <a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" data-shop-placement="hero" href={`/go/amazon/B001NJ0DAY?s=${SOURCE}`}>Browse a Critter Nation double unit on Amazon →</a>
+          </div>
+        </>
+      }
       hero={{
         title: 'November and December ferret gifts',
         subtitle: 'Dollar bands copied from cards that already name a product and a shop link. This page does not turn a $ symbol into a dollar price.',
@@ -73,6 +82,7 @@ export default function NovemberDecemberGiftGuidePage() {
       priceAsOf="2026-10-04"
     >
       <div className="carloOS-article">
+          <LastUpdated date="2026-10-10" />
         <p>November and December gifts for a ferret are usually a small supply, a bag of food, or a cage someone has already measured. The <Link href="/reviews">reviews hub</Link> points at those pages. This guide only lists cards that print a dollar band and a shop link. The cage review’s $, $$, and $$$ tiers stay symbols. Inventing a dollar range for those symbols would be a new price, and this page does not do that.</p>
         <p>Seasonal coat and harness fit already have guides. The <Link href="/reviews/fall-molt-brush-guide">fall molt guide</Link> is the brush page. The <Link href="/reviews/winter-harness-fit-guide">winter harness guide</Link> is the fit check. They are not repeated as new products here.</p>
         <h2>Printed bands under $20</h2>
@@ -82,8 +92,7 @@ export default function NovemberDecemberGiftGuidePage() {
         <h2>Printed cage band</h2>
         <p>The cage-setup page prints the MidWest Critter Nation double unit at $200–280. That is the dollar band this page can cite for a cage. The cage review still explains bar spacing and which household that style of cage is for. Measure the room before you order a double unit as a surprise.</p>
         <h2>Who should get which printed band</h2>
-        <p>A litter pan, a sleep sack, a treat pack, or a bottle of shampoo is the small gift. A bag of kibble is the gift when the ferret already eats that food. A double unit is the large gift, and only when the cage page’s spacing and footprint already fit the room. The shop link is the hop already on that card, with this page named as the source.</p>
-        <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+        <p>A litter pan, a sleep sack, a treat pack, or a bottle of shampoo is the small gift. A bag of kibble is the gift when the ferret already eats that food. A double unit is the large gift, and only when the cage page’s spacing and footprint already fit the room. The shop link is the button already on that card, with this page named as the source.</p>
         <div className="overflow-x-auto max-w-full min-w-0">
           <table className="w-full text-sm border-collapse table-fixed sm:table-auto min-w-0 sm:min-w-[36rem] [&_th]:break-words [&_td]:break-words">
             <thead>
@@ -101,40 +110,64 @@ export default function NovemberDecemberGiftGuidePage() {
               </tr>
               <tr className="border-b border-brand-border">
                 <td className="p-3">$8–14</td>
-                <td className="p-3 font-bold">Marshall ferret shampoo<TableShopLink href={`/go/marshall/ferret-shampoo-original?s=${SOURCE}`} product="Marshall ferret shampoo" /></td>
+                <td className="p-3 font-bold">Marshall ferret shampoo<TableShopLink quietUntilTag href={`/go/marshall/ferret+shampoo?s=${SOURCE}`} product="Marshall ferret shampoo" /></td>
                 <td className="p-3"><Link href="/care/bathing-and-grooming">Grooming page</Link></td>
               </tr>
               <tr className="border-b border-brand-border">
                 <td className="p-3">$8–15 a pack</td>
-                <td className="p-3 font-bold">Wysong freeze-dried treats<TableShopLink href={`/go/wysong/freeze-dried-treats?s=${SOURCE}`} product="Wysong freeze-dried treats" /></td>
+                <td className="p-3 font-bold">Wysong freeze-dried treats<TableShopLink quietUntilTag href={`/go/wysong/freeze-dried-treats?s=${SOURCE}`} product="Wysong freeze-dried treats" /></td>
                 <td className="p-3"><Link href="/diet/safe-treats">Treat page</Link></td>
               </tr>
               <tr className="border-b border-brand-border">
                 <td className="p-3">$10–20</td>
-                <td className="p-3 font-bold">Marshall sleep sack<TableShopLink href={`/go/marshall/ferret-sleep-sack?s=${SOURCE}`} product="Marshall sleep sack" /></td>
+                <td className="p-3 font-bold">Marshall sleep sack<TableShopLink quietUntilTag href={`/go/marshall/ferret+hammock?s=${SOURCE}`} product="Marshall sleep sack" /></td>
                 <td className="p-3"><Link href="/care/cage-setup">Cage setup</Link></td>
               </tr>
               <tr className="border-b border-brand-border">
                 <td className="p-3">$15–25 for 4 pounds</td>
-                <td className="p-3 font-bold">Marshall Premium<TableShopLink href={`/go/marshall/premium-ferret-diet?s=${SOURCE}`} product="Marshall Premium" /></td>
+                <td className="p-3 font-bold">Marshall Premium<TableShopLink quietUntilTag href={`/go/marshall/premium-ferret-diet?s=${SOURCE}`} product="Marshall Premium" /></td>
                 <td className="p-3"><Link href="/diet/best-ferret-kibble">Kibble review</Link></td>
               </tr>
               <tr className="border-b border-brand-border">
                 <td className="p-3">$30–50 for 5 pounds</td>
-                <td className="p-3 font-bold">Wysong Epigen 90<TableShopLink href={`/go/wysong/epigen-90?s=${SOURCE}`} product="Wysong Epigen 90" /></td>
+                <td className="p-3 font-bold">Wysong Epigen 90<TableShopLink quietUntilTag href={`/go/wysong/epigen-90?s=${SOURCE}`} product="Wysong Epigen 90" /></td>
                 <td className="p-3"><Link href="/diet/best-ferret-kibble">Kibble review</Link></td>
               </tr>
               <tr className="border-b border-brand-border">
                 <td className="p-3">$200–280</td>
-                <td className="p-3 font-bold">Critter Nation double unit<TableShopLink href={`/go/amazon-brand/midwest+critter+nation+double+unit?s=${SOURCE}`} product="Critter Nation double unit" /></td>
+                <td className="p-3 font-bold">Critter Nation double unit<TableShopLink href={`/go/amazon/B001NJ0DAY?s=${SOURCE}`} product="Critter Nation double unit" /></td>
                 <td className="p-3"><Link href="/care/cage-setup">Cage setup</Link></td>
               </tr>
             </tbody>
           </table>
         </div>
-        <ComparisonFoot updated="2026-10-05" />
+        <ComparisonFoot updated="2026-10-10" />
+        <EmailCapture
+          variant="inline"
+          siteId="ferret-com"
+          addressOnly
+          title="Shopping checklist"
+          ctaText="Copy checklist"
+          source="reviews-november-december-gift-guide"
+          checklist={[
+            "A bag of kibble is the gift when the ferret already eats that food.",
+            "Read the kibble review before you switch a food in December.",
+            "A sudden bag change is not a small gift.",
+            "The cage review still explains bar spacing and which household that style of cage is for.",
+            "Measure the room before you order a double unit as a surprise.",
+          ]}
+        />
         <h2>Questions</h2>
-        <FAQAccordion items={FAQS} />
+        <FAQAccordion items={FAQS} includeSchema={false} />
+        <BelowFoldPhoto siteId="ferret-com" />
+                <ArticleSourcesList
+            title="Sources"
+            sources={[
+            { label: "Wysong", url: "https://www.wysong.net/", publisher: "Wysong" },
+            { label: "Marshall Pet Products", url: "https://www.marshallpet.com/", publisher: "Marshall Pet Products" },
+            { label: "Kaytee", url: "https://www.kaytee.com/", publisher: "Kaytee" },
+            ]}
+          />
       </div>
     </ArticleLayout>
   )

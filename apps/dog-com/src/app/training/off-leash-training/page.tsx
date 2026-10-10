@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import {
   buildMetadata,
@@ -5,7 +6,6 @@ import {
   RelatedLinks,
   CrossPortfolioCard,
   ArticleByline,
-  AffiliateDisclosure,
   ShopCtas,
 } from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
@@ -149,7 +149,6 @@ export default function OffLeashTrainingPage() {
             absolute rule of recall training is: never call your dog to you for anything they perceive as
             unpleasant, and never punish a dog for coming to you, regardless of how long it took.
           </p>
-          
 
           <h2>The Long Line — The Training Tool</h2>
           <p>
@@ -166,13 +165,6 @@ export default function OffLeashTrainingPage() {
             consider off-leash. The long line phase in each new location takes minutes to hours, not days. It
             is the investment that prevents the dog from disappearing when you finally drop the leash.
           </p>
-          <p>
-            A dog 20-to-30-foot long-line question card is how
-            a-twenty-to-thirty-foot-long-line-on-a-back-clip-harness,
-            gather-the-line-hand-over-hand-no-jerking, and long-line-first-in-every-new-environment stay
-            posted — it is not a dog+long+line+leash hop (that lives on basic-commands), not a 6-ft dog leash
-            (that lives on loose-leash-walking), not an indoor dog house-line (that lives on dog-bloat-gvd),
-            and not a 2-foot nylon traffic lead (that lives on heartworm). </p>
 
           <h2>Breed Reality — Not All Dogs Can Be Off-Leash</h2>
           <p>
@@ -201,22 +193,9 @@ export default function OffLeashTrainingPage() {
             repetition to maintain the expectation that recall sometimes produces a jackpot. Keep the recall
             a game the dog actively wants to play.
           </p>
-          
 
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href="/go/amazon-brand/dog+harness?s=training-off-leash-training" />
 
-          {/* Shop leftover kit — unused vs #1149
-              laminated+horse+snaffle+vs+curb+bit+checklist /
-              horse+bit+width+and+wrinkle+fit+question+card /
-              horse+bit+hand+severity+watch+log+notebook, #1148
-              laminated+horse+peacock+vs+breakaway+stirrup+checklist /
-              horse+stirrup+width+inch+clearance+question+card /
-              horse+stirrup+drag+entrapment+watch+log+notebook,
-              basic-commands dog+long+line+leash,
-              loose-leash / leash-reactivity 6+ft+dog+leash /
-              front+clip+no+pull+dog+harness,
-              bloat indoor+dog+house+line,
-              heartworm 2+foot+nylon+traffic+lead. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
               Shop related supplies
@@ -225,16 +204,9 @@ export default function OffLeashTrainingPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/dog+harness?s=training-off-leash-training"
-                amazonLabel="Shop on Amazon"
+                amazonLabel="Browse dog harness on Amazon →"
               />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/dog+20+to+30+foot+long+line+question+card?s=training-off-leash-training"
-                amazonLabel="Browse dog 20-to-30-foot long-line question cards on Amazon →"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/dog+recall+cue+never+punish+watch+log+notebook?s=training-off-leash-training"
-                amazonLabel="Browse dog recall-cue never-punish watch log notebooks on Amazon →"
-              />
+
           </div>
           </div>
         </div>

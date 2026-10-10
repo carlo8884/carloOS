@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import {
   buildMetadata,
@@ -10,22 +11,22 @@ import {
   DropCap,
   CrossPortfolioCard,
   ArticleSourcesList,
-  AffiliateDisclosure,
   ShopCtas,
+  LastUpdated,
 } from '@carloOS/ui'
 
 const SOURCES = [
+  {
+    label: "Merck Veterinary Manual — Helicobacter mustelae gastritis and gastric ulcers in ferrets",
+    url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/infectious-diseases-of-ferrets",
+    publisher: "Merck Veterinary Manual",
+  },
   {
     label: "Quesenberry KE, Carpenter JW (eds.). Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery. 4th ed. Saunders/Elsevier — ferret gastrointestinal disease and Helicobacter mustelae chapters.",
     url: "https://www.elsevier.com/books/ferrets-rabbits-and-rodents/quesenberry/978-1-4160-6621-7",
     publisher: "Elsevier/Saunders",
   },
-  {
-    label: "Merck Veterinary Manual — Digestive Diseases of Ferrets: gastric ulceration, Helicobacter mustelae, and treatment approaches",
-    url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/digestive-diseases-of-ferrets",
-    publisher: "Merck Veterinary Manual",
-  },
-  {
+    {
     label: "Association of Exotic Mammal Veterinarians (AEMV) — practitioner directory and continuing-education content on ferret gastrointestinal medicine",
     url: "https://aemv.org",
     publisher: "AEMV",
@@ -75,7 +76,6 @@ const medSchema = buildMedicalWebPageSchema({
   authorName: 'Ferret.com Editorial',
   lastReviewed: '2026-06-01',
 })
-
 
 const FAQS = [
   {
@@ -132,7 +132,7 @@ export default function FerretUlcersPage() {
           <>
             <TableOfContents
               items={[
-                { label: 'TL;DR', href: '#tldr' },
+                { label: '', href: '#tldr' },
                 { label: 'What Causes Them', href: '#causes' },
                 { label: 'Signs to Watch For', href: '#signs' },
                 { label: 'Diagnosis', href: '#diagnosis' },
@@ -154,7 +154,7 @@ export default function FerretUlcersPage() {
 
           </>
         }
-      
+
         relatedLinks={[
           { title: 'Ferret Health Hub', href: '/health' },
           { title: 'Ferret Diarrhea Causes', href: '/health/ferret-diarrhea-causes' },
@@ -168,6 +168,7 @@ export default function FerretUlcersPage() {
             publishedAt="2026-06-01"
             updatedAt="2026-06-01"
           />
+          <LastUpdated date="2026-10-09" />
 
           <DropCap>
             A ferret with a stomach ulcer often tells you in a language that is
@@ -179,8 +180,7 @@ export default function FerretUlcersPage() {
             is the closest ferret analog to the human ulcer story.
           </DropCap>
 
-          <h2 id="tldr">TL;DR</h2>
-          <p>
+                    <p>
             Gastric ulcers are common in ferrets and frequently linked to{' '}
             <em>Helicobacter mustelae</em>, a stomach bacterium analogous to{' '}
             <em>H. pylori</em> in people; stress and concurrent illness also
@@ -313,20 +313,8 @@ export default function FerretUlcersPage() {
             the <a href="/health">health hub</a>.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/ferret+litter?s=ferret-ulcers" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated ferret tarry-stool chart /
-              ferret fridge bruxism-watch card /
-              mustelid helicobacter-ulcer handbook).
-              No existing product hop to keep.
-              Educational kitchen searches only; no Rx /
-              vaccine / flea / heartworm / nsaid / aging hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs health-hub /
-              spay-neuter / diarrhea / lymphoma hops. Ferret
-              aging stays held.
-              Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
@@ -335,7 +323,7 @@ export default function FerretUlcersPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/ferret+litter?s=ferret-ulcers"
-                amazonLabel="Shop on Amazon"
+                amazonLabel="Browse ferret litter on Amazon →"
               />
           </div>
           </div>

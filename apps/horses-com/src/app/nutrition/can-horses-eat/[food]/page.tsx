@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
@@ -12,7 +13,6 @@ import {
   RelatedLinks,
   CrossPortfolioCard,
   ArticleByline,
-  AffiliateDisclosure,
   ShopCtas,
 } from '@carloOS/ui'
 import { HORSE_FOODS, getHorseFood, getRelatedFoods, foodFaqs, VERDICT_META, type FoodEntry } from '../../../../data/foods'
@@ -165,7 +165,7 @@ export default async function CanHorsesEatFoodPage({ params }: PageProps) {
           <>
             <h2 id="serve">How to serve it safely</h2>
             <p>{entry.safePrep}</p>
-            {entry.quantity ? <p><strong>How much:</strong> {entry.quantity} Treats stay small alongside a forage-first diet — see <Link href="/nutrition/forage-basics">forage basics</Link> and, for sugar-sensitive horses, <Link href="/health/laminitis">laminitis</Link>. A nonslip horse barn cutting board is how an approved treat is cut to a choke-safe size before it is offered — it is not a marked horse grain scoop (that lives on feeding-the-performance-horse) and not a small rubber horse mixing pan (that lives on ration-balancers).</p> : null}
+            {entry.quantity ? <p><strong>How much:</strong> {entry.quantity} Treats stay small alongside a forage-first diet — see <Link href="/nutrition/forage-basics">forage basics</Link> and, for sugar-sensitive horses, <Link href="/health/laminitis">laminitis</Link>. A nonslip horse barn cutting board is how an approved treat is cut to a choke-safe size before it is offered — it is not a marked horse grain scoop and not a small rubber horse mixing pan.</p> : null}
           </>
         ) : null}
 
@@ -189,91 +189,15 @@ export default async function CanHorsesEatFoodPage({ params }: PageProps) {
         </p>
 
         <p className="text-sm text-gray-500 mt-2">
-          See also: <Link href="/nutrition/toxic-plants">toxic plants for horses</Link>, <Link href="/health/colic">equine colic</Link>, <Link href="/health/laminitis">laminitis</Link>, and the full <Link href="/nutrition/can-horses-eat">can-horses-eat list</Link>. An airtight labeled horse treat canister is how only pre-checked safe treats sit sealed and labeled away from kitchen leftovers — it is not a rodent-proof metal horse feed bin (that lives on grain). A nylon horse waist treat pouch is how a measured handful of pre-approved treats leaves the kitchen instead of chocolate or avocado — it is not a low-sugar horse-treat hop (that lives on feeding-the-easy-keeper). </p>
+          See also: <Link href="/nutrition/toxic-plants">toxic plants for horses</Link>, <Link href="/health/colic">equine colic</Link>, <Link href="/health/laminitis">laminitis</Link>, and the full <Link href="/nutrition/can-horses-eat">can-horses-eat list</Link>. An airtight labeled horse treat canister is how only pre-checked safe treats sit sealed and labeled away from kitchen leftovers — it is not a rodent-proof metal horse feed bin. A nylon horse waist treat pouch is how a measured handful of pre-approved treats leaves the kitchen instead of chocolate or avocado. </p>
 
         <h2 id="kit">Treat-safety supplies</h2>
         <p>
-          Everyday physical supplies that match the
-          keep-kitchen-leftovers-out-of-the-barn,
-          cut-treats-to-a-safe-size, and
-          carry-a-measured-handful copy on this page —
-          an airtight labeled horse treat canister so
-          only pre-checked safe treats sit sealed and
-          labeled away from kitchen leftovers, a
-          nonslip horse barn cutting board so an
-          approved treat is cut to a choke-safe size
-          before it is offered, and a nylon horse
-          waist treat pouch so a measured handful of
-          pre-approved treats leaves the kitchen
-          instead of whatever is on the counter.
-          These are educational barn searches, not a
-          ranked product list, not a substitute for
-          veterinary care, not a toxic-food or poison
-          hop, not a rodent-proof metal feed-bin hop
-          (that lives on grain), not a marked-grain-scoop
-          hop (that lives on feeding-the-performance-horse),
-          and not a low-sugar-horse-treat hop (that
-          lives on feeding-the-easy-keeper). This page
-          does not hop medications or vaccines. This
-          page does not claim hands-on testing.
+          Keep these on hand: an airtight labeled horse treat canister so only pre-checked safe treats sit sealed and labeled away from kitchen leftovers, a nonslip horse barn cutting board so an approved treat is cut to a choke-safe size before it is offered, and a nylon horse waist treat pouch so a measured handful of pre-approved treats leaves the kitchen instead of whatever is on the counter.
         </p>
 
-        <AffiliateDisclosure variant="inline" siteId="horses-com" />
+        <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/airtight+labeled+horse+treat+canister?s=can-horses-eat", "/go/amazon-brand/nonslip+horse+barn+cutting+board?s=can-horses-eat", "/go/amazon-brand/nylon+horse+waist+treat+pouch?s=can-horses-eat"]} />
 
-        {/* Money path — live amazon-brand search hops
-            (airtight labeled horse treat canister /
-            nonslip horse barn cutting board /
-            nylon horse waist treat pouch).
-            Educational barn searches only; no Rx /
-            vaccine ASIN hops. ShopCtas hides empty
-            Chewy; never href="#" or PLACEHOLDER.
-            Unused vs #1121
-            fine+mesh+horse+feed+colander /
-            long+handled+horse+feed+mixing+paddle /
-            silicone+horse+feed+tub+scraper +
-            molasses+free+beet+pulp+shreds+horse /
-            beet+pulp+pellets+horse+feed, #1120
-            compact+digital+gram+scale+horse+feed /
-            molasses+free+chaff+horse /
-            small+rubber+horse+mixing+pan +
-            purina+enrich+plus+ration+balancer /
-            triple+crown+30+ration+balancer /
-            nutrena+empower+topline+balancer, #1119
-            horse+alfalfa+cubes /
-            soy+hull+pellets+horse+feed /
-            over+door+horse+feed+bucket +
-            stabilized+rice+bran+horse+supplement /
-            high+fat+low+starch+horse+feed, #1118
-            portable+horse+hay+flake+scale /
-            horse+hay+soaking+tub /
-            low+sugar+horse+treats, #1117
-            nylon+horse+hay+bag /
-            horse+feed+grade+vegetable+oil /
-            marked+horse+grain+scoop, #1116
-            horse+chopped+forage /
-            horse+feed+soaking+tub /
-            horse+corner+feeder, #1115
-            equine+toxic+plant+identification+field+guide /
-            horse+pasture+walk+weed+identification+handbook /
-            horse+paddock+tree+guard+fencing, #1114
-            flat+back+horse+water+bucket /
-            heated+horse+water+bucket /
-            electrolyte+for+horses, #1113
-            orchard+grass+hay+horse /
-            alfalfa+hay+bales+horse /
-            timothy+alfalfa+mixed+hay+horse, #1112
-            tabletop+digital+horse+grain+scale /
-            stackable+rubber+horse+feed+tubs /
-            rodent+proof+metal+horse+feed+bin, #1111
-            horse+hay+probe+moisture+tester /
-            equine+hay+core+sampler /
-            wall+mounted+horse+hay+rack, #1110
-            plain+white+horse+salt+block /
-            salt+first+horse+electrolyte+powder /
-            wide+mouth+horse+water+bucket, #1105
-            digital+hanging+hay+bale+scale /
-            equine+forage+nsc+hay+test+kit /
-            portable+strip+grazing+step+in+posts. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
             Shop related supplies
@@ -296,7 +220,7 @@ export default async function CanHorsesEatFoodPage({ params }: PageProps) {
         </div>
 
         <h2 id="faq">Frequently asked questions</h2>
-        <FAQAccordion items={faqs} />
+        <FAQAccordion items={faqs} includeSchema={false} />
 
         <p className="text-xs text-gray-500 mt-6">
           <em>General educational information from the Horses.com editorial team, based on established equine veterinary and nutrition references (ASPCA Animal Poison Control, Merck Veterinary Manual, the Equine Endocrinology Group, and equine clinical-nutrition literature). Not a substitute for veterinary advice — individual horses vary. Horses cannot vomit, and colic, choke, and laminitis are emergencies. For a suspected poisoning, call ASPCA Animal Poison Control at 888-426-4435 (24/7, fee applies) or your veterinarian.</em>

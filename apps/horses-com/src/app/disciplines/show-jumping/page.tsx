@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -10,7 +11,6 @@ import {
   ArticleByline,
   DropCap,
   CalloutBox,
-  AffiliateDisclosure,
   ShopCtas,
 } from '@carloOS/ui'
 import {
@@ -129,7 +129,7 @@ export default function ShowJumpingPage() {
         ]}
         sidebar={<>
           <TableOfContents items={[
-            { label: 'TL;DR', href: '#tldr' },
+            { label: '', href: '#tldr' },
             { label: 'History &amp; Origins', href: '#history' },
             { label: 'Course Design Fundamentals', href: '#course' },
             { label: 'Levels — Crossrails to Grand Prix', href: '#levels' },
@@ -162,8 +162,7 @@ export default function ShowJumpingPage() {
             updatedAt="2026-05-28"
           />
 
-          <h2 id="tldr">TL;DR</h2>
-          <ul>
+                    <ul>
             <li><strong>What it is:</strong> a numbered course of jumps ridden against the clock under USEF Jumper and FEI Jumping rules; the horse with the fewest faults (and, in the jump-off, the fastest time) wins.</li>
             <li><strong>Scoring:</strong> 4 faults per knockdown; 4 faults per first refusal; time faults for exceeding the time allowed; elimination on the second refusal (current FEI rules).</li>
             <li><strong>Levels:</strong> from Schooling and Crossrails (2&apos;0″–2&apos;6″) through 1.60 m FEI Grand Prix and the Olympics.</li>
@@ -296,7 +295,7 @@ export default function ShowJumpingPage() {
           </ul>
 
           <h2 id="faq">Frequently Asked Questions</h2>
-          <FAQAccordion items={FAQS} />
+          <FAQAccordion items={FAQS} includeSchema={false} />
 
           <h2 id="references">References</h2>
           <ol className="text-sm text-brand-text-mid">
@@ -312,20 +311,8 @@ export default function ShowJumpingPage() {
             <li>Winter Equestrian Festival (Wellington International). Competition calendar and results. wef.cmthorse.com.</li>
           </ol>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href="/go/amazon-brand/close+contact+saddle?s=discipline-show-jumping" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated horse jumper-course chart /
-              horse stall-door USEF jumper level card /
-              equine open-front-boot handbook).
-              No existing product hop to keep.
-              Educational barn searches only; no Rx /
-              vaccine / flea / heartworm / nsaid hops
-              and no jump-saddle kit hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs dressage /
-              trail-riding hops.
-              Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
@@ -334,7 +321,7 @@ export default function ShowJumpingPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/close+contact+saddle?s=discipline-show-jumping"
-                amazonLabel="Shop on Amazon"
+                amazonLabel="Browse close-contact saddles on Amazon →"
               />
           </div>
           </div>

@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -8,7 +9,6 @@ import {
   combineSchemas,
   SchemaScript,
   FAQAccordion,
-  AffiliateDisclosure,
   CrossPortfolioCard,
   ShopCtas,
 } from '@carloOS/ui'
@@ -86,7 +86,7 @@ const appSchema = {
     'Ferret years to human years using a banded planning model (not multiply-by-seven)',
     'Life stage: kit, young adult, mature, senior',
     'Stage-appropriate husbandry notes grounded in Ferret.com lifespan and aging-care copy',
-    'Shoppable life-stage kit via Amazon category searches (ferret food, senior ferret food, digital pet scale, ferret hammock, carrier)',
+    'Shop the life-stage kit via Amazon searches (ferret food, senior ferret food, digital pet scale, ferret hammock, carrier)',
   ],
   publisher: { '@type': 'Organization', name: 'Ferret.com Editorial', url: 'https://ferret.com' },
 }
@@ -185,15 +185,15 @@ export default function FerretAgeCalculatorPage() {
         </div>
       </section>
 
-      {/* Money path — live amazon-brand search hops (life-stage kit).
-          ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-          Category searches only — not a ranked list, not a diagnosis. */}
+      {/* Shop note — live amazon-brand search buttons (life-stage kit).
+          ShopCtas hides empty Chewy; never href="#" or an empty link.
+          Amazon searches only — not a ranked list, not a diagnosis. */}
       <section id="ferret-age-kit" className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <div className="max-w-2xl">
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/ferret+food?s=tools-ferret-age-calculator", "/go/amazon-brand/senior+ferret+food?s=tools-ferret-age-calculator", "/go/amazon-brand/digital+pet+scale?s=tools-ferret-age-calculator", "/go/amazon-brand/ferret+hammock?s=tools-ferret-age-calculator", "/go/amazon-brand/ferret+carrier?s=tools-ferret-age-calculator"]} />
           <div className="mt-4 rounded-xl border border-brand-border bg-brand-white p-5">
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Shop a life-stage kit
+              Shop these supplies
             </div>
             <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
@@ -239,7 +239,6 @@ export default function FerretAgeCalculatorPage() {
               talk to a licensed vet on a screen rather than waiting for a gap
               to become an ER visit.
             </p>
-            <AffiliateDisclosure variant="inline" siteId="ferret-com" className="mb-3 text-2xs" />
             <div className="flex flex-col gap-2 sm:flex-row sm:flex-wrap">
               <Link
                 href={crossSiteHref('vets-co', '/reviews/best-pet-insurance')}
@@ -345,6 +344,8 @@ export default function FerretAgeCalculatorPage() {
               { label: 'Readiness Quiz', href: '/tools/readiness-quiz', note: 'Score household fit, then pack the day-one kit' },
               { label: 'Is This a Ferret Emergency?', href: '/tools/is-this-a-ferret-emergency', note: 'Conservative sign-list urgency read, not a diagnosis' },
               { label: 'Ferret Grimace Scale', href: '/tools/ferret-grimace-scale', note: 'Facial pain-watch for seniors and sore ferrets — not a diagnosis' },
+              { label: 'Insulinoma in Ferrets', href: '/health/insulinoma', note: 'The middle-age disease this stage chart is meant to catch earlier' },
+              { label: 'The Cost of Owning a Ferret', href: '/ownership/cost-of-owning-a-ferret', note: 'Startup and the 6–10 year budget behind the age' },
               { label: 'Ferret Lifespan', href: '/colors/ferret-lifespan', note: 'Typical 5–8 year life and the stage bands' },
               { label: 'Aging Ferret Care', href: '/health/aging-ferret-care', note: 'Senior monitoring from around 4–5+' },
               { label: 'Senior Ferret Nutrition', href: '/diet/senior-ferret-nutrition', note: 'Protein stays high; eating gets harder' },

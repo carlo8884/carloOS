@@ -53,7 +53,8 @@ else if (/email|address|phone/i.test(signup[0])) hits.push('guide_signup_submit 
 if (!/if \(!addressOnly\) return/.test(capture)) hits.push('guide_signup_submit must stay on the guide address form')
 if (!/guideAddressCaptureEnabled\(/.test(capture)) hits.push('guide address form must stay behind NEXT_PUBLIC_GUIDE_ADDRESS_CAPTURE')
 if (!/fetch\('\/api\/subscribe'/.test(capture)) hits.push('address storage must stay ready')
-if (!/addressOnly && !guideAddressCaptureEnabled\(\)/.test(capture)) hits.push('address form must hide when the flag is off')
+if (!/emailCaptureSurface\(/.test(capture)) hits.push('paused sites must use emailCaptureSurface')
+if (!/guideAddress: guideAddressCaptureEnabled\(\)/.test(capture)) hits.push('address form must hide when the flag is off')
 
 for (const name of ['guide_checklist_copy', 'guide_checklist_print']) {
   const call = checklist.match(new RegExp(`trackEvent\\(\\s*'${name}'\\s*,\\s*\\{[^}]*\\}\\s*\\)`))
@@ -70,6 +71,8 @@ if (!/IntersectionObserver/.test(journey)) hits.push('hop_view does not use Inte
 if (!/querySelectorAll\('a\[href\*="\/go\/"\]'\)/.test(journey)) hits.push('single-hop pages are not observed')
 if (!/anchors\.length === 1/.test(journey)) hits.push('hop_view must ignore pages with several unmarked hops')
 if (!/trackEvent\(\s*'affiliate_click'/.test(click)) hits.push('affiliate_click missing from the click listener')
+if (!/trackEvent\(\s*'hop_click'/.test(click)) hits.push('hop_click missing from the click listener')
+if (!/card_id:\s*click\.slot/.test(click)) hits.push('hop_click missing card_id')
 if (!/\.\.\.experimentEventParams\(\)/.test(click)) hits.push('affiliate_click missing experiment params')
 const experiments = read('packages/ui/src/lib/experiments.ts')
 if (!/NEXT_PUBLIC_EXPERIMENT_CRATE_HOP_LABEL/.test(experiments)) hits.push('crate hop experiment flag is undocumented')

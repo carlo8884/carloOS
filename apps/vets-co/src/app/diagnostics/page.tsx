@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
-  AffiliateDisclosure,
   buildMetadata,
   buildBreadcrumbSchema,
   buildFAQSchema,
@@ -9,7 +8,7 @@ import {
   FAQAccordion,
   SchemaScript,
   StockImage,
-  PriceAsOf
+  PriceAsOf,
 } from '@carloOS/ui'
 import { Diagnostics, type Diagnostic, type DiagnosticCategory } from '../../data/diagnostics'
 
@@ -207,7 +206,7 @@ export default function DiagnosticsHubPage() {
             $300-2,000. Most accident-and-illness pet insurance plans reimburse diagnostics ordered
             to investigate a symptom once the policy is active and waiting periods clear — but
             pre-existing conditions are excluded. Result interpretation always belongs to your
-            veterinarian. All cost figures are typical US ranges and are not guaranteed.
+            veterinarian. All cost figures are typical US ranges dated 2026-06-14 and are not guaranteed.
           </p>
         </section>
 
@@ -221,7 +220,7 @@ export default function DiagnosticsHubPage() {
             veterinarian orders it, how it is performed, what preparation it requires, how long it
             takes, typical US cost ranges, what results mean in plain language, what comes next,
             and how pet insurance typically covers the workup. Cost ranges are{' '}
-            <strong>typical US figures</strong> and are not guaranteed. Result interpretation
+            <strong>typical US figures</strong> dated 2026-06-14 and are not guaranteed. Result interpretation
             always depends on your pet&apos;s clinical picture — your veterinarian&apos;s
             interpretation supersedes any general guidance here.
           </p>
@@ -354,6 +353,7 @@ export default function DiagnosticsHubPage() {
           >
             Common questions about pet diagnostics
           </h2>
+          <p>Those figures are typical US ranges dated 2026-06-14.</p>
           <FAQAccordion items={HUB_FAQS} includeSchema={false} />
           <p className="text-xs text-brand-text-light mt-4 leading-relaxed max-w-3xl">
             For deeper coverage, see how diagnostic costs factor into{' '}
@@ -384,6 +384,7 @@ export default function DiagnosticsHubPage() {
             <div className="font-display font-bold text-brand-dark text-base mb-2">
               Compare Pet Insurance 2026
             </div>
+            <p>Those figures are typical US ranges dated 2026-06-14.</p>
             <p className="text-xs text-brand-text-mid m-0 leading-relaxed">
               Diagnostic workups commonly run $300-2,000. Most accident-and-illness plans cover
               diagnostics after waiting periods clear — pre-existing conditions are excluded, so
@@ -409,22 +410,10 @@ export default function DiagnosticsHubPage() {
       </div>
 
       <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
-                
+
         <div className="max-w-content-wide mt-6">
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
         </div>
 
-        {/* Money path — live amazon-brand search hops
-            (laminated pet diagnostics test-map chart /
-            pet fridge diagnostics library card /
-            veterinary diagnostics reference handbook).
-            Educational kitchen searches only; no Rx /
-            vaccine / flea hops.
-            ShopCtas hides empty Chewy; never href="#"
-            or PLACEHOLDER. Unused vs tools / insurance /
-            reviews / health / guides / breeds kitchen
-            kits and child sterile+urine+specimen+cup hops.
-            Do not re-open #1165 / what-to-expect. */}
               </section>
     </>
   )

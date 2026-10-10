@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { StockImage, buildMetadata, ArticleLayout, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
+import { ShopCtas, StockImage, buildMetadata, ArticleLayout, RelatedLinks, CrossPortfolioCard , ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema, FAQAccordion, SchemaScript, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 
@@ -66,9 +67,9 @@ export default function BronzeCorydorasPage() {
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Quick Stats</div>
-          {[['Scientific name', 'Corydoras aeneus'], ['Adult size', '2.5–3 inches'], ['Temperature', '72–79°F'], ['pH', '6.0–7.8'], ['Group size', '6 minimum, more is better'], ['Substrate', 'Sand or smooth fine gravel'], ['Lifespan', '5–10 years']].map(([k, v]) => (
+          {[['Scientific name', 'Corydoras aeneus'], ['Adult size', '2.5–3 inches'], ['Temperature', '77–83°F (https://www.fishbase.se/summary/Corydoras-aeneus.html)'], ['pH', '6.0–7.8'], ['Group size', '6 minimum, more is better'], ['Substrate', 'Sand or smooth fine gravel'], ['Lifespan', '5–10 years']].map(([k, v]) => (
             <div key={k} className="flex justify-between py-1.5 border-b border-brand-border text-xs last:border-0">
-              <span className="text-brand-text-light">{k}</span><span className="font-bold text-brand-dark text-right max-w-[55%]">{v}</span>
+              <span className="text-brand-text-light">{k}</span><span className="font-bold text-brand-dark text-right max-w-[55%] break-all">{v}</span>
             </div>
           ))}
         </div>
@@ -99,12 +100,12 @@ export default function BronzeCorydorasPage() {
         <p>Despite their reputation as "cleaner fish," corydoras are not scavengers that survive on leftovers — they require their own food. Offer sinking pellets, wafers, frozen bloodworms, and live or frozen foods after the lights dim. To trigger breeding, condition a group well and perform a large, cooler water change to simulate the rainy season. Females deposit adhesive eggs onto glass and plants in the classic "T-position" embrace. Eggs hatch in three to five days, and fry are easy to raise on powdered foods and microworms.</p>
         <h2>Frequently Asked Questions</h2>
         <FAQAccordion items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answerText }))} includeSchema={false} allowMultiple />
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        <HopDisclosure siteId="fish-com" href="/go/amazon-brand/corydoras%20tank%20setup?s=species-bronze-corydoras" />
           <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Bronze Corydoras — Tank Setup</div>
-          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, sand substrate, and sinking food sized for corydoras care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
+          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, sand substrate, and sinking food sized for corydoras care.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
-            <a href="/go/amazon-brand/corydoras%20tank%20setup?s=species-bronze-corydoras" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop Corydoras Setup on Amazon →</a>
+            <ShopCtas amazonHref="/go/amazon-brand/corydoras%20tank%20setup?s=species-bronze-corydoras" amazonLabel="Browse corydoras tank setups on Amazon →" />
           </div>
         </div>
         <ArticleSourcesList sources={SOURCES} />

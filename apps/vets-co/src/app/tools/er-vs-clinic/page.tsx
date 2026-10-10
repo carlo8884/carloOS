@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -8,7 +9,7 @@ import {
   combineSchemas,
   SchemaScript,
   FAQAccordion,
-  AffiliateDisclosure,
+  PrimaryHop,
   ShopCtas,
   JourneyNext,
   CrossPortfolioCard,
@@ -29,7 +30,7 @@ export const metadata: Metadata = buildMetadata({
 const SOURCES = [
   {
     label: 'AVMA: Emergency Care for Your Pet',
-    url: 'https://www.avma.org/resources-tools/pet-owners/petcare/emergency-care-your-pet',
+    url: 'https://www.avma.org/resources-tools/pet-owners/emergency-care',
     publisher: 'AVMA',
   },
   {
@@ -39,7 +40,7 @@ const SOURCES = [
   },
   {
     label: 'ASPCA Animal Poison Control Center',
-    url: 'https://www.aspca.org/pet-care/animal-poison-control',
+    url: 'https://www.aspca.org/pet-care/aspca-poison-control',
     publisher: 'ASPCA',
   },
 ]
@@ -95,7 +96,7 @@ const softwareApplicationSchema = {
     'Conservative ER / clinic / telehealth setting',
     'No all-clear result — mixed selections resolve upward',
     'Poison-control number when ingestion is selected',
-    'Shoppable pet emergency-prep kit via Amazon category searches (pet first-aid kit, digital pet thermometer, soft pet carrier, styptic powder, wound-care gauze)',
+    'Shop the pet emergency-prep kit via Amazon searches (pet first-aid kit, digital pet thermometer, soft pet carrier, styptic powder, wound-care gauze)',
   ],
   publisher: { '@type': 'Organization', name: 'Vets.co Editorial', url: 'https://vets.co' },
 }
@@ -159,6 +160,10 @@ export default function ErVsClinicPage() {
           >
             ER vs Clinic vs Telehealth
           </h1>
+          <div data-fold="offer">
+            <PrimaryHop href="/go/amazon-brand/pet+first+aid+kit?s=tools-er-vs-clinic" label="Search Amazon for a pet first-aid kit" />
+            <HopDisclosure tone="on-dark" siteId="vets-co" href="/go/amazon-brand/pet+first+aid+kit?s=tools-er-vs-clinic" />
+          </div>
           <p className="text-lg text-white/55 leading-relaxed max-w-2xl">
             Where should this go — emergency hospital now, clinic tomorrow, or a licensed vet on
             a screen? Select the signs. The tool returns the more urgent setting. It does not
@@ -215,15 +220,15 @@ export default function ErVsClinicPage() {
         />
       </section>
 
-      {/* Money path — live amazon-brand search hops (pet emergency-prep / first-aid kit).
-          ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-          Category searches only — not a ranked list, not a diagnosis. */}
+      {/* Shop note — live amazon-brand search buttons (pet emergency-prep / first-aid kit).
+          ShopCtas hides empty Chewy; never href="#" or an empty link.
+          Amazon searches only — not a ranked list, not a diagnosis. */}
       <section id="pet-emergency-prep-kit" className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <div className="max-w-2xl">
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/pet+first+aid+kit?s=tools-er-vs-clinic", "/go/amazon-brand/digital+pet+thermometer?s=tools-er-vs-clinic", "/go/amazon-brand/soft+pet+carrier?s=tools-er-vs-clinic", "/go/amazon-brand/styptic+powder?s=tools-er-vs-clinic", "/go/amazon-brand/wound+care+gauze?s=tools-er-vs-clinic"]} />
           <div className="mt-4 rounded-xl border border-brand-border bg-brand-white p-5">
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Shop a pet emergency-prep kit
+              Shop these supplies
             </div>
             <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
@@ -263,7 +268,6 @@ export default function ErVsClinicPage() {
               Once the pet is stable, the editorial insurance comparison explains how accident and
               illness policies treat those bills — it does not re-rank carriers for this page.
             </p>
-            <AffiliateDisclosure variant="inline" siteId="vets-co" className="mb-3 text-2xs" />
             <Link
               href="/reviews/best-pet-insurance"
               className="inline-block bg-brand-primary text-white font-semibold text-sm px-4 py-2 rounded-md no-underline hover:bg-brand-primary-dark"
@@ -290,7 +294,7 @@ export default function ErVsClinicPage() {
             <Link href="/emergency-triage-card" className="text-brand-primary underline-offset-2 hover:underline">
               emergency triage card
             </Link>
-            , plus a third bucket for licensed telehealth when the pet is stable.
+            , plus a third bucket for licensed telehealth when the pet is stable. Licensed telehealth for that stable-pet bucket is the <a href="/telehealth" className="text-brand-primary underline">telehealth guide</a>.
           </p>
           <p className="mb-4 text-base leading-relaxed text-brand-text-mid">
             For a cat-specific sign-list urgency read (go now / same-day / monitor), use{' '}

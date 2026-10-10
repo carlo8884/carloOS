@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 /**
  * Dynamic disease-page template for Fish.com.
  *
@@ -29,7 +30,6 @@ import {
   CalloutBox,
   CrossPortfolioCard,
   ArticleByline,
-  AffiliateDisclosure,
   ShopCtas,
 } from '@carloOS/ui'
 import type { FAQItem } from '@carloOS/ui'
@@ -246,7 +246,7 @@ export default async function DiseasePage({ params }: PageProps) {
         <>
           <TableOfContents
             items={[
-              { label: 'TL;DR', href: '#tldr' },
+              { label: '', href: '#tldr' },
               { label: 'At a Glance', href: '#at-a-glance' },
               { label: 'Symptoms', href: '#symptoms' },
               { label: 'Causes', href: '#causes' },
@@ -284,7 +284,7 @@ export default async function DiseasePage({ params }: PageProps) {
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2026-05-28T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
 
         <p id="tldr">
-          <strong style={{ color: urgency.color }}>TL;DR — {urgency.label}.</strong> {buildTldr(disease)}
+          <strong style={{ color: urgency.color }}>{urgency.label}.</strong> {buildTldr(disease)}
         </p>
 
         {disease.mortality === 'Severe' && (
@@ -442,17 +442,17 @@ export default async function DiseasePage({ params }: PageProps) {
             Shop related supplies
           </div>
           <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
-          <AffiliateDisclosure variant="inline" siteId="fish-com" />
+          <HopDisclosure siteId="fish-com" href="/go/amazon-brand/aquarium+filter?s=health-spoke" />
           <div className="flex flex-col gap-3 mt-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+filter?s=health-spoke"
-              amazonLabel="Shop on Amazon"
+              amazonLabel="Browse aquarium filters on Amazon →"
             />
           </div>
         </div>
 
         <h2 id="faq">FAQ</h2>
-        <FAQAccordion items={faqItems} />
+        <FAQAccordion items={faqItems} includeSchema={false} />
 
         <h2 id="sources">Sources</h2>
         <ul>

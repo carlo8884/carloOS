@@ -1,4 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import {
   buildMetadata,
   ArticleLayout,
@@ -9,8 +11,6 @@ import {
   ArticleByline,
   DropCap,
   ReviewCard,
-  ScoreMethodology,
-  AffiliateDisclosure,
   ArticleSourcesList,
   CrossPortfolioCard,
 } from '@carloOS/ui'
@@ -298,22 +298,24 @@ export default function FerretStressSignsPage() {
             <a href="/behavior/dead-sleep-explained">dead-sleep explainer</a>.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
 
           <h2 id="supplies">Comfort and Enrichment Supplies</h2>
           <p>
-            Environmental stress is often improved by providing a quiet, enclosed sleeping space and reliable enrichment. Two items that address the most common environmental causes — inadequate sleep hiding spots and under-stimulation. This is a documented-spec comparison based on published product details; this page does not claim hands-on testing.
+            Environmental stress is often improved by providing a quiet, enclosed sleeping space and reliable enrichment. Two items that address the most common environmental causes — inadequate sleep hiding spots and under-stimulation.
           </p>
           <p className="text-sm font-medium border border-amber-300 bg-amber-50 rounded p-3 my-4">
             Comfort supplies do not treat adrenal disease, insulinoma, or other medical conditions. Work with an exotic-pet veterinarian for diagnosis and treatment.
           </p>
-          <ScoreMethodology />
-          <ReviewCard
+          <p className="mb-4 text-sm font-semibold leading-snug">
+            <Link href="/care/exercise-and-enrichment" className="inline-block max-w-full whitespace-normal text-brand-primary underline underline-offset-2">
+              Pair the sleep sack with an out-of-cage routine →
+            </Link>
+          </p>
+          <ReviewCard quietUntilTag
             id="ferret-sleep-sack"
             badge="Sleep Comfort"
             name="Ferret Sleep Sack / Hammock"
             subtitle="Enclosed fleece sleeping pouch — quiet, dark, enclosed resting space"
-            score={8.4}
             winner
             description={
               <p>Ferrets sleep 14-18 hours a day and are most settled when they have a fully enclosed, dark, soft place to do it. A fleece sleep sack or hanging hammock with an enclosed top satisfies this better than open bedding. Many stressed ferrets improve when given a dedicated enclosed sleeping space separate from the busier areas of the cage. Washable fleece, sized for a ferret to curl inside rather than on top of.</p>
@@ -326,34 +328,36 @@ export default function FerretStressSignsPage() {
             ]}
             pros={['Enclosed darkness supports deep sleep', 'Washable fleece', 'Pairs well with a consistent sleep-and-play routine', 'Low cost']}
             cons={['Some ferrets prefer open hammocks — try both to see what your ferret uses', 'Fleece attracts hair — wash weekly']}
-            price="$8–18"
-            ctaText="Find ferret sleep sacks"
-            ctaHref="/go/amazon-brand/ferret+sleep+sack+fleece?s=behavior-stress-signs"
-            ctaAffiliateProgram="amazon-brand"
-            ctaAffiliateProduct="ferret+sleep+sack+fleece"
+            price="see current price"
+            priceNote="dated 2026-06-04."
+            ctaText="Browse ferret hammocks on Amazon"
+            ctaHref="/go/amazon-brand/ferret+hammock?s=behavior-stress-signs"
+            ctaAffiliateProgram="amazon"
+            ctaAffiliateProduct="ferret+hammock"
           />
-          <ReviewCard
+          <HopDisclosure siteId="ferret-com" href="/go/marshall/ferret+play+tunnel?s=behavior-stress-signs" />
+          <ReviewCard quietUntilTag
             id="ferret-tunnel-stress"
             badge="Enrichment"
-            name="Marshall Pop-N-Play Tunnel Set"
-            subtitle="Pop-up fabric tunnels — the single highest-return enrichment item for under-stimulated ferrets"
-            score={8.6}
+            name="Marshall play tunnel"
+            subtitle="Check the current listing for construction, openings, and storage"
             description={
-              <p>Under-stimulation is one of the most common causes of ferret stress. The tunnel circuit is the enrichment item most reliably used across play sessions, because it taps the burrowing instinct directly. A ferret with regular tunnel access is less likely to show bar-biting and pacing — the stereotypies most strongly linked to boredom stress. This is an enrichment item, not a treatment; persistent stress after environmental improvement still warrants a vet visit.</p>
+              <p>Marshall's Pop-N-Play tunnel product page no longer resolves. This button opens Marshall's current play-tunnel search. Under-stimulation is one of the most common causes of ferret stress. The tunnel circuit is the enrichment item most reliably used across play sessions, because it taps the burrowing instinct directly. A ferret with regular tunnel access is less likely to show bar-biting and pacing — the stereotypies most strongly linked to boredom stress. This is an enrichment item, not a treatment; persistent stress after environmental improvement still warrants a vet visit.</p>
             }
             specs={[
-              { label: 'Construction', value: 'Pop-up fabric with internal wire' },
+              { label: 'Construction', value: 'Check the current listing' },
               { label: 'Drive targeted', value: 'Burrowing / tunnelling', highlight: 'good' },
-              { label: 'Connectivity', value: 'Multi-tunnel chain' },
-              { label: 'Washable', value: 'Yes', highlight: 'good' },
+              { label: 'Connectivity', value: 'Check the current listing' },
+              { label: 'Washable', value: 'Check the current listing' },
             ]}
-            pros={['Addresses under-stimulation directly', 'Highest enrichment value per dollar for most ferrets', 'Washable', 'Chainable for longer circuits']}
+            pros={['Opens the current Marshall play-tunnel search', 'Check the current listing before you buy']}
             cons={['Does not address social loneliness — a tunnel is not a companion', 'Fabric wears in heavy-chewer households']}
-            price="$15–30"
-            ctaText="Find Marshall Pop-N-Play tunnels"
-            ctaHref="/go/marshall/pop-n-play-tunnel?s=behavior-stress-signs"
+            price="see current price"
+            priceNote="dated 2026-06-04."
+            ctaText="Find Marshall play tunnels"
+            ctaHref="/go/marshall/ferret+play+tunnel?s=behavior-stress-signs"
             ctaAffiliateProgram="marshall"
-            ctaAffiliateProduct="pop-n-play-tunnel"
+            ctaAffiliateProduct="ferret+play+tunnel"
           />
 
           <h2 id="faq">FAQ</h2>

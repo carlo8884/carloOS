@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import {
   buildMetadata,
@@ -5,7 +6,6 @@ import {
   RelatedLinks,
   CrossPortfolioCard,
   ArticleByline,
-  AffiliateDisclosure,
   ShopCtas,
 } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
@@ -121,7 +121,7 @@ export default function TrainingRedFlagsPage() {
           aversive methods).&quot; This is not a fringe position — it is the consensus of the
           professional veterinary behavior community.
         </p>
-        
+
         {RED_FLAGS.map((r, i) => (
           <div
             key={r.flag}
@@ -158,44 +158,9 @@ export default function TrainingRedFlagsPage() {
           these questions. See our full <a href="/training/trainer-credentials">trainer credentials
           guide →</a>
         </p>
-        <p>
-          A dog force-free trainer interview question card is how what-tools-do-you-use,
-          what-do-you-do-when-a-dog-doesnt-respond, and cpdt-ka-cpdt-ksa-cbcc-ka-or-caab stay posted
-          — it is not a dog aggression type-and-function question card (that lives on
-          dog-aggression), not a dog food-bowl safety question card (that lives on
-          resource-guarding), not a dog 20-to-30-foot long-line question card (that lives on
-          off-leash-training), and not a horse bit width-and-wrinkle fit question card (that lives
-          on bits-guide). </p>
-        <p>
-          Force-free alternatives already named on this page replace the aversive tools above: a
-          front-clip harness (PetSafe Easy Walk, Ruffwear Front Range) reduces pulling without neck
-          pain; a treat pouch and a clicker keep reinforcement ready so the trainer never reaches
-          for a shock, prong, choke, or alpha-roll. A dog Easy Walk / Ruffwear Front Range watch log
-          notebook is how front-clip-harnesses-petsafe-easy-walk-ruffwear-front-range,
-          reduce-pulling-without-this-mechanism, and force-free-methods stay written down — it is
-          not a dog aggression never-alpha-roll watch log notebook (that lives on dog-aggression),
-          not a dog resource-guarding never-punish-growl watch log notebook (that lives on
-          resource-guarding), not a dog recall-cue never-punish watch log notebook (that lives on
-          off-leash-training), and not a horse bit hand-severity watch log notebook (that lives on
-          bits-guide). </p>
 
-        <AffiliateDisclosure variant="inline" siteId="dog-com" />
+        <HopDisclosure siteId="dog-com" href="/go/amazon-brand/dog+harness?s=training-red-flags" />
 
-        {/* Shop leftover kit — unused vs #1152
-            laminated+dog+aggression+warning+signal+sequence+checklist /
-            dog+aggression+type+and+function+question+card /
-            dog+aggression+never+alpha+roll+watch+log+notebook, #1151
-            laminated+dog+resource+guarding+trade+game+checklist /
-            dog+food+bowl+safety+question+card /
-            dog+resource+guarding+never+punish+growl+watch+log+notebook, #1150
-            laminated+dog+off+leash+recall+proofing+checklist /
-            dog+20+to+30+foot+long+line+question+card /
-            dog+recall+cue+never+punish+watch+log+notebook, #1149
-            laminated+horse+snaffle+vs+curb+bit+checklist /
-            horse+bit+width+and+wrinkle+fit+question+card /
-            horse+bit+hand+severity+watch+log+notebook,
-            leash-reactivity / loose-leash front+clip+no+pull+dog+harness,
-            marker-training dog+training+treat+pouch+belt+clip / dog+training+clicker. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
             Shop related supplies
@@ -204,16 +169,9 @@ export default function TrainingRedFlagsPage() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/dog+harness?s=training-red-flags"
-              amazonLabel="Shop on Amazon"
+              amazonLabel="Browse dog harness on Amazon →"
             />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/dog+force+free+trainer+interview+question+card?s=training-red-flags"
-              amazonLabel="Browse dog force-free trainer interview question cards on Amazon →"
-            />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/dog+easy+walk+ruffwear+front+range+watch+log+notebook?s=training-red-flags"
-              amazonLabel="Browse dog Easy Walk / Ruffwear Front Range watch log notebooks on Amazon →"
-            />
+
           </div>
         </div>
       </div>

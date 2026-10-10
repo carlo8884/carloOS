@@ -1,12 +1,13 @@
 'use client'
 
+import { HopDisclosure } from '../../../components/HopDisclosure'
 /**
  * New Puppy Checklist -- /tools/new-puppy-checklist
  *
  * Client checklist builder. The owner picks expected adult size, age at
  * pickup, indoor/outdoor, crate-training status, and budget tier. The tool
  * returns a checkable first-week list grouped into stages (before pickup,
- * first 48 hours, first month, vet and paperwork), with Amazon search hops
+ * first 48 hours, first month, vet and paperwork), with Amazon search buttons
  * on every gear item.
  *
  * Husbandry / shopping guidance only -- not a veterinary plan. Vaccine,
@@ -15,7 +16,7 @@
 
 import { useMemo, useState } from 'react'
 import Link from 'next/link'
-import { AffiliateDisclosure, ResultMeaning, ShopCtas } from '@carloOS/ui'
+import { ResultMeaning, ShopCtas } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 
 
@@ -67,7 +68,7 @@ function foodHop(size: Size): { href: string; label: string } {
   if (size === 'large' || size === 'giant') {
     return {
       href: amazonHop('royal+canin+large+breed+puppy'),
-      label: 'Browse large-breed puppy food on Amazon →',
+      label: 'Browse Royal Canin large-breed puppy food on Amazon →',
     }
   }
   if (size === 'small') {
@@ -113,7 +114,7 @@ function buildList(
       essential: true,
       gear: true,
       shopHref: amazonHop('wire+dog+crate+with+divider+panel'),
-      shopLabel: 'Browse crates on Amazon →',
+      shopLabel: 'Browse wire crates with a divider panel on Amazon →',
       links: [
         { href: '/reviews/best-dog-crates', label: 'Best dog crates' },
         { href: '/tools/dog-crate-size-calculator', label: 'Crate size calculator' },
@@ -145,7 +146,7 @@ function buildList(
       essential: true,
       gear: true,
       shopHref: amazonHop('northmate+green+interactive+feeder'),
-      shopLabel: 'Browse slow-feeder bowls on Amazon →',
+      shopLabel: 'Search Amazon for Northmate Green',
       links: [{ href: '/reviews/best-slow-feeder-bowls', label: 'Best slow-feeder bowls' }],
     },
     {
@@ -169,7 +170,7 @@ function buildList(
       essential: true,
       gear: true,
       shopHref: amazonHop('julius+k9+idc+powerharness'),
-      shopLabel: 'Browse harnesses on Amazon →',
+      shopLabel: 'Browse Julius-K9 harnesses on Amazon →',
       links: [
         { href: '/reviews/best-dog-harnesses', label: 'Best dog harnesses' },
         { href: '/tools/harness-collar-size', label: 'Harness & collar size' },
@@ -201,7 +202,7 @@ function buildList(
       essential: true,
       gear: true,
       shopHref: amazonHop('enzymatic+pet+stain+odor+cleaner'),
-      shopLabel: 'Browse enzymatic pet cleaners on Amazon →',
+      shopLabel: 'Browse enzymatic stain and odor cleaner on Amazon →',
       links: [{ href: '/training/house-training', label: 'House-training guide' }],
     },
     {
@@ -239,7 +240,7 @@ function buildList(
       essential: false,
       gear: true,
       shopHref: amazonHop('extra+tall+baby+gate+dog'),
-      shopLabel: 'Browse indoor dog gates on Amazon →',
+      shopLabel: 'Browse extra-tall baby gates on Amazon →',
       links: [],
     })
   }
@@ -266,7 +267,7 @@ function buildList(
       essential: setting === 'outdoor',
       gear: true,
       shopHref: amazonHop('dog+shade+canopy+outdoor'),
-      shopLabel: 'Browse outdoor dog shade on Amazon →',
+      shopLabel: 'Browse shade canopies on Amazon →',
       links: [],
     })
   }
@@ -344,7 +345,7 @@ function buildList(
       essential: budget !== 'essentials',
       gear: true,
       shopHref: amazonHop('puppy+shampoo+nail+clippers+slicker+brush'),
-      shopLabel: 'Browse puppy grooming basics on Amazon →',
+      shopLabel: 'Browse puppy shampoo, nail clippers, and a slicker brush on Amazon →',
       links: [],
     },
     {
@@ -379,7 +380,7 @@ function buildList(
       essential: size === 'small' || size === 'medium',
       gear: true,
       shopHref: amazonHop('soft+sided+pet+carrier'),
-      shopLabel: 'Browse pet carriers on Amazon →',
+      shopLabel: 'Browse soft-sided pet carriers on Amazon →',
       links: [],
     },
     {
@@ -435,9 +436,9 @@ function resultShop(
     return {
       heading: 'Start with an adult-size crate and a divider',
       blurb:
-        'The crate is the one item that is cheaper to buy once, sized to the adult dog. A wire crate with a divider is the same hop used on the crate-size calculator. This list is shopping guidance, not a training prescription — pair it with the crate-size calculator before you order.',
+        'The crate is the one item that is cheaper to buy once, sized to the adult dog. A wire crate with a divider is the same button used on the crate-size calculator. This list is shopping guidance, not a training prescription — pair it with the crate-size calculator before you order.',
       href: amazonHop('wire+dog+crate+with+divider+panel'),
-      label: 'Browse crates on Amazon →',
+      label: 'Browse wire crates with a divider panel on Amazon →',
     }
   }
   if (setting === 'outdoor') {
@@ -455,7 +456,7 @@ function resultShop(
       blurb:
         'Large and giant puppies do better on a large-breed puppy formula with controlled calcium. Keep the breeder or shelter food for the first days, then transition slowly. Ask your veterinarian which formula fits this dog — this tool does not rank brands.',
       href: amazonHop('royal+canin+large+breed+puppy'),
-      label: 'Browse large-breed puppy food on Amazon →',
+      label: 'Browse Royal Canin large-breed puppy food on Amazon →',
     }
   }
   return {
@@ -463,7 +464,7 @@ function resultShop(
     blurb:
       'A flat collar is for the ID tag; a well-fitted harness is for walks. Size it with the harness calculator and use the same Julius-K9 search already used on the harness tool. This list is not a training plan.',
     href: amazonHop('julius+k9+idc+powerharness'),
-    label: 'Browse harnesses on Amazon →',
+    label: 'Browse Julius-K9 harnesses on Amazon →',
   }
 }
 
@@ -659,14 +660,14 @@ export default function NewPuppyChecklist() {
           {shop.heading}
         </p>
         <p className="mt-1 text-sm leading-relaxed text-brand-text-mid">{shop.blurb}</p>
-        <AffiliateDisclosure variant="inline" siteId="dog-com" className="my-3" />
+        <HopDisclosure siteId="dog-com" href={shop.href} />
         <ShopCtas amazonHref={shop.href} amazonLabel={shop.label} />
       </div>
 
       <p className="mt-4 text-2xs leading-snug text-brand-text-light">
         Shopping guidance, not a veterinary plan. Vaccine timing, parasite prevention, and spay or
-        neuter timing are decisions for your veterinarian. Amazon links are category searches — not
-        a ranked product list and not invented inventory.
+        neuter timing are decisions for your veterinarian. Amazon links are Amazon searches — not
+        a ranked product list and not made-up products.
       </p>
     </div>
   )

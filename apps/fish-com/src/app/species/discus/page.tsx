@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { StockImage, buildMetadata, ArticleLayout, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
+import { ShopCtas, StockImage, buildMetadata, ArticleLayout, RelatedLinks, CrossPortfolioCard , ArticleSourcesList } from '@carloOS/ui'
 import { FAQAccordion, SchemaScript, buildArticleSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 
@@ -9,7 +10,7 @@ const SOURCES = [
   { label: "Bleher, H. Bleher's Discus. Aquapress, 2006.", publisher: "Aquapress" },
   { label: "Kullander, S.O. & Ferreira, E.J.G. A Review of the South American Cichlid Genus Cichla. Ichthyological Exploration of Freshwaters, 2006.", publisher: "Ichthyological Exploration of Freshwaters" },
 ]
-export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Discus Care Guide — Soft Warm Water, Daily Changes | Fish.com', description: 'Discus are the most demanding freshwater fish. 82-86°F, pH 5.5-6.8, daily or large water changes, and high protein diet.', path: '/species/discus', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Discus Care Guide — Soft Warm Water, Daily Changes | Fish.com', description: 'Discus are the most demanding freshwater fish. pH 5.5-6.8, daily or large water changes, and high protein diet.', path: '/species/discus', type: 'article' })
 const articleSchema = buildArticleSchema({ siteId: 'fish-com', title: 'Discus Care Guide', description: 'Water requirements, daily water changes, and disease prevention for Symphysodon discus.', url: 'https://fish.com/species/discus', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' ,
   citation: SOURCES,
 })
@@ -25,9 +26,9 @@ const FAQS = [
   {
     question: 'What temperature do discus need?',
     answer:
-      '82–86°F, with the warmer end preferred. This limits tankmates to species that share warm-water preferences: cardinal tetras, rummy nose tetras, Corydoras sterbai, and some other Amazonian species. Standard community fish such as neons, platies, and most cories are incompatible with discus temperatures.',
+      'FishBase lists Symphysodon aequifasciatus at 26–30°C, which is 78–86°F (https://www.fishbase.se/summary/Symphysodon-aequifasciatus.html). Cardinal tetras overlap only the low end of this band. Standard community fish such as neons, platies, and most cories do not share this whole band.',
     answerText:
-      '82-86F, warmer end preferred. Compatible tankmates are limited to warm-water species like cardinal tetras, rummy nose tetras, and Corydoras sterbai.',
+      'FishBase lists Symphysodon aequifasciatus at 26–30°C, which is 78–86°F (https://www.fishbase.se/summary/Symphysodon-aequifasciatus.html). Cardinal tetras overlap only the low end of this band.',
   },
   {
     question: 'How often do discus need water changes?',
@@ -69,9 +70,9 @@ export default function DiscusPage() {
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Discus Requirements</div>
-          {[['Temperature', '82–86°F — warm end critical'], ['pH', '5.5–6.8 — soft acidic'], ['GH', 'Under 8 — soft water'], ['Water changes', '30-50% daily or EOD'], ['Min tank', '55 gallons for 6 discus'], ['Group size', 'Minimum 6 — reduces aggression'], ['Diet', 'Beef heart, bloodworms, high protein'], ['Experience', 'Advanced — not a first cichlid']].map(([k, v]) => (
+          {[['Temperature', '78–86°F (https://www.fishbase.se/summary/Symphysodon-aequifasciatus.html)'], ['pH', '5.5–6.8 — soft acidic'], ['GH', 'Under 8 — soft water'], ['Water changes', '30-50% daily or EOD'], ['Min tank', '55 gallons for 6 discus'], ['Group size', 'Minimum 6 — reduces aggression'], ['Diet', 'Beef heart, bloodworms, high protein'], ['Experience', 'Advanced — not a first cichlid']].map(([k, v]) => (
             <div key={k} className="flex justify-between py-1.5 border-b border-brand-border text-xs last:border-0">
-              <span className="text-brand-text-light">{k}</span><span className="font-bold text-brand-dark text-right max-w-[55%]">{v}</span>
+              <span className="text-brand-text-light">{k}</span><span className="font-bold text-brand-dark text-right max-w-[55%] break-all">{v}</span>
             </div>
           ))}
         </div>
@@ -86,20 +87,21 @@ export default function DiscusPage() {
 
         <h2>Why Discus Are Advanced</h2>
         <DropCap>Discus are sensitive to water quality in a way that most fish are not — they show stress responses at nitrate levels that most community fish handle easily, they are susceptible to pathogens that hardy fish resist, and they require water parameters (soft, warm, acidic) that require active management in most US households with hard tap water. The daily or every-other-day water changes required to maintain discus — large volume, temperature-matched — represent a significant time commitment. A discus keeper does water changes the way a planted tank keeper doses fertilizers: consistently, on schedule, without exception.</DropCap>
-        <p>The cost: quality wild-caught discus run $60–150+ per fish. Tank-bred discus from quality breeders run $30–80+. A group of 6 discus in an appropriate tank represents $200–600+ in fish alone before any equipment is purchased. If they die from inadequate water quality, that loss is significant. Research thoroughly before purchasing.</p>
+        <p>These livestock ranges are dated 2026-05-25.</p>
+        <p>The cost: quality wild-caught discus run see current price per fish. Tank-bred discus from quality breeders run see current price. A group of 6 discus in an appropriate tank represents see current price in fish alone before any equipment is purchased. If they die from inadequate water quality, that loss is significant. Research thoroughly before purchasing.</p>
 
         <h2>Water — The Critical Foundation</h2>
-        <p>Target: pH 5.5–6.8, GH under 8, temperature 82–86°F. Most US tap water is too hard and too alkaline. RO/DI water remineralized with Seachem Equilibrium (to achieve GH 4–6 with minimal KH, allowing peat or CO2 to set a stable low pH) is the most reliable approach. Indian almond leaves and peat filtration add tannins that lower pH naturally and provide beneficial compounds. A discus-specific water conditioner (Seachem Discus Trace, Aquavitro Synthesis) replenishes trace minerals removed by RO.</p>
+        <p>Target: pH 5.5–6.8, GH under 8, temperature 78–86°F (FishBase lists Symphysodon aequifasciatus at 26–30°C, which is 78–86°F (<a className="break-all" href="https://www.fishbase.se/summary/Symphysodon-aequifasciatus.html">https://www.fishbase.se/summary/Symphysodon-aequifasciatus.html</a>)). Most US tap water is too hard and too alkaline. RO/DI water remineralized with Seachem Equilibrium (to achieve GH 4–6 with minimal KH, allowing peat or CO2 to set a stable low pH) is the most reliable approach. Indian almond leaves and peat filtration add tannins that lower pH naturally and provide beneficial compounds. A discus-specific water conditioner (Seachem Discus Trace, Aquavitro Synthesis) replenishes trace minerals removed by RO.</p>
         <p><strong>Water change protocol:</strong> The standard discus keeper approach is 30–50% water changes daily or every other day. This maintains pristine water quality and simulates the natural dilution of the soft, rain-fed rivers discus inhabit. The water added must be pre-heated to tank temperature — cold water additions cause temperature shock that immediately stresses discus and triggers disease. Pre-heated RO water stored in large containers (30–50 gallon trash cans with a heater) simplifies daily changes.</p>
 
         <h2>Temperature — Warmer Than Most</h2>
-        <p>82–86°F is the correct range — the warmer end is preferred by most discus keepers and is appropriate for the wild fish's native habitat in the Amazon basin. At this temperature, the metabolism of beneficial bacteria is also higher, processing waste faster. The challenge: most community fish do not thrive at 84°F. Discus-compatible tankmates are limited to species that share warm water preferences: cardinal tetras, rummy nose tetras, Corydoras sterbai (the one cory species that tolerates warm water), and some other Amazonian species. Standard community fish (neons, platies, most cories) are incompatible with discus temperatures.</p>
+        <p>FishBase lists Symphysodon aequifasciatus at 26–30°C, which is 78–86°F (<a className="break-all" href="https://www.fishbase.se/summary/Symphysodon-aequifasciatus.html">https://www.fishbase.se/summary/Symphysodon-aequifasciatus.html</a>). Most community fish do not share this whole band. Cardinal tetras overlap only the low end. Standard community fish (neons, platies, most cories) do not share it.</p>
 
         <h2>Diet — High Protein Required</h2>
         <p>Discus are omnivorous but protein-forward. The traditional discus staple: beef heart mix — ground beef heart (fat removed) combined with frozen seafood, spinach, and vitamins, formed into thin sheets and frozen. Commercial alternatives: Hikari Discus Bio-Gold, NLS Discus Formula, Sera Discus Granules. Frozen bloodworms are eagerly accepted and valuable for conditioning. Feed 3–4 times daily — discus need frequent feeding due to their high metabolism. Remove uneaten food within 10 minutes to maintain water quality.</p>
 
         <CalloutBox variant="tip" title="Pre-heat your change water">
-          Cold water additions cause temperature shock that immediately stresses discus and triggers disease. Store the daily change volume in heated containers (30–50 gallon drums with a heater set to tank temperature) so every refill is already at 84°F when it arrives.
+          Cold water additions cause temperature shock that immediately stresses discus and triggers disease. Store the daily change volume in heated containers (30–50 gallon drums with a heater set to tank temperature) so every refill is already at the tank temperature when it arrives.
         </CalloutBox>
 
         <h2>Disease — The Primary Challenge</h2>
@@ -107,7 +109,7 @@ export default function DiscusPage() {
         <p><strong>Hexamita/Spironucleus (hole-in-the-head):</strong> Causes pitting lesions on the head and lateral line. Common in discus stressed by poor water quality. Treated with metronidazole (Seachem MetroPlex in food and water). Prevention: pristine water quality and stress reduction.</p>
 
         <h2>Group Dynamics</h2>
-        <p>Discus are cichlids — they establish social hierarchies. A group of 6+ distributes aggression across the group so no single fish bears the full burden. Fewer than 6 often results in 1–2 dominant fish relentlessly harassing the submissive fish until they stop eating and die. 6 minimum; 8–10 in a 75+ gallon tank allows stable hierarchies to form. Remove any fish that is being singled out for persistent aggression — isolated from the group, dark in color, and refusing food.</p>
+        <p>Discus are cichlids — they establish social hierarchies. A group of 6+ distributes aggression across the group so no single fish bears the full burden. Fewer than 6 often results in 1–2 dominant fish relentlessly harassing the submissive fish until they stop eating and die. 6 minimum; 8–10 in a 75+ gallon tank allows stable hierarchies to form. The <a href="/tools/aquarium-volume-calculator" className="text-brand-primary hover:underline">tank volume calculator</a> checks that gallon figure from the tank&apos;s measurements before the group goes in. Remove any fish that is being singled out for persistent aggression — isolated from the group, dark in color, and refusing food.</p>
 
         <h2>Frequently Asked Questions</h2>
         <FAQAccordion
@@ -119,12 +121,12 @@ export default function DiscusPage() {
           includeSchema={false}
           allowMultiple
         />
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        <HopDisclosure siteId="fish-com" href="/go/amazon-brand/discus%20tank%20setup?s=species-discus" />
           <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Discus — Tank Setup</div>
-          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for discus care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
+          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for discus care.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
-            <a href="/go/amazon-brand/discus%20tank%20setup?s=species-discus" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop Discus Setup on Amazon →</a>
+            <ShopCtas amazonHref="/go/amazon-brand/discus%20tank%20setup?s=species-discus" amazonLabel="Browse discus tank setups on Amazon →" />
           </div>
         </div>
 

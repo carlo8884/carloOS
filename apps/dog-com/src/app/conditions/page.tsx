@@ -26,7 +26,7 @@
  *   - Byline is "Dog.com Editorial — sourced from cited references"
  *   - No fabricated DVM credentials, no first-person hands-on claims
  *   - No AI-generated humans
- *   - Affiliate disclosure sits above kitchen-kit hops; Chewy stays omitted
+ *   - Affiliate disclosure sits above kitchen-kit buttons; Chewy stays omitted
  *   - Every condition resolves to a real reference page; link-check.mjs
  *     verifies this in CI
  */
@@ -34,7 +34,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
-  AffiliateDisclosure,
   buildMetadata,
   buildBreadcrumbSchema,
   buildFAQSchema,
@@ -132,7 +131,7 @@ const FAQ_ITEMS: Array<{ question: string; answer: string }> = [
   {
     question: 'Which dog conditions are most commonly diagnosed?',
     answer:
-      'The most common diagnoses in general veterinary practice are osteoarthritis (about 1 in 5 adult dogs), periodontal disease (the most prevalent disease in adult dogs), atopic dermatitis, allergic otitis externa, obesity, and benign mass lesions. Senior dogs add chronic kidney disease, mitral valve disease, hypothyroidism, and Cushing\'s disease to the top of the list. Each condition above is highlighted at the top of this page.',
+      'Conditions that show up often in general practice include osteoarthritis, periodontal disease, atopic dermatitis, allergic otitis externa, obesity, and benign mass lesions. Anderson et al. (Scientific Reports, 2018) estimated the annual period prevalence of appendicular osteoarthritis at 2.5% in 455,557 UK primary-care dogs (https://www.nature.com/articles/s41598-018-23940-z). This page does not cite a prevalence percent for the other conditions on that list. Senior dogs add chronic kidney disease, mitral valve disease, hypothyroidism, and Cushing\'s disease to the list. Each condition above is highlighted at the top of this page.',
   },
   {
     question: 'What dog conditions are immediate emergencies?',
@@ -474,23 +473,10 @@ export default function ConditionsHubPage() {
       </div>
 
       <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
-        
+
         <div className="max-w-content-wide mt-6">
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
         </div>
 
-        {/* Money path — live amazon-brand search hops
-            (laminated dog conditions body-system chart /
-            dog fridge conditions library card /
-            canine conditions reference handbook).
-            Educational kitchen searches only; no Rx /
-            vaccine / flea hops.
-            ShopCtas hides empty Chewy; never href="#"
-            or PLACEHOLDER. Unused vs tools / reviews /
-            nutrition / training / guides / breeds kitchen
-            kits and child dog+cooling+mat /
-            pet+ear+cleaner hops.
-            Do not re-open #1165 / what-to-expect. */}
               </section>
     </>
   )

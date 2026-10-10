@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { StockImage, buildMetadata, ArticleLayout, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
+import { ShopCtas, StockImage, buildMetadata, ArticleLayout, RelatedLinks, CrossPortfolioCard , ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema, FAQAccordion, SchemaScript, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
@@ -9,7 +10,7 @@ const SOURCES = [
   { label: "Kullander, S.O. Cichlidae. In: Checklist of the Freshwater Fishes of South and Central America. EDIPUCRS, 2003.", publisher: "EDIPUCRS" },
   { label: "Keenleyside, M.H.A. Diversity and Adaptation in Fish Behaviour. Springer-Verlag, 1979.", publisher: "Springer-Verlag" },
 ]
-export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'German Blue Ram Care Guide — Soft Acidic Water, Pairs | Fish.com', description: 'German Blue Rams need soft, warm, acidic water (pH 5.5-7.0, 80-86°F). One of the most beautiful dwarf cichlids — also one of the most demanding.', path: '/species/blue-ram', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'German Blue Ram Care Guide — Soft Acidic Water, Pairs | Fish.com', description: 'German Blue Rams need soft, warm, acidic water (pH 5.5-7.0). One of the most beautiful dwarf cichlids — also one of the most demanding.', path: '/species/blue-ram', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'German Blue Ram Care Guide', description: 'Soft acidic water requirements, pair bonding, and breeding for Mikrogeophagus ramirezi.', url: 'https://fish.com/species/blue-ram', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' ,
   citation: SOURCES,
 })
@@ -18,9 +19,9 @@ const FAQS = [
   {
     question: 'What water parameters do German blue rams need?',
     answer:
-      'Blue rams require soft, acidic, warm water: pH 5.5–7.0 (ideally 6.0–6.8), GH under 8 (preferably 3–6), and temperature 80–86°F. These are physiological requirements, not preferences — rams kept in hard, alkaline tap water (pH 7.5–8.0, GH 15+) show chronic stress and shortened lifespans. If your tap water is hard, mix it with RO/DI water to reach the target range.',
+      'Blue rams require soft, acidic, warm water: pH 5.5–7.0 (ideally 6.0–6.8), GH under 8 (preferably 3–6), and temperature 80–86°F. FishBase lists Mikrogeophagus ramirezi at 27–30°C, which is 80–86°F (https://www.fishbase.se/summary/Mikrogeophagus-ramirezi.html). These are physiological requirements, not preferences — rams kept in hard, alkaline tap water (pH 7.5–8.0, GH 15+) show chronic stress and shortened lifespans. If your tap water is hard, mix it with RO/DI water to reach the target range.',
     answerText:
-      'Blue rams need soft acidic water: pH 5.5-7.0 (ideally 6.0-6.8), GH under 8, and 80-86F. Hard alkaline tap water causes chronic stress and a shorter lifespan. Mix with RO/DI water if your tap is hard.',
+      'Blue rams need soft acidic water: pH 5.5-7.0 (ideally 6.0-6.8), GH under 8, and 80-86F (https://www.fishbase.se/summary/Mikrogeophagus-ramirezi.html). Hard alkaline tap water causes chronic stress and a shorter lifespan. Mix with RO/DI water if your tap is hard.',
   },
   {
     question: 'What size tank do blue rams need?',
@@ -32,9 +33,9 @@ const FAQS = [
   {
     question: 'Why do blue rams need such warm water?',
     answer:
-      'Their optimal range of 80–86°F is significantly warmer than the 72–78°F most community fish prefer, reflecting their native warm blackwater habitat in the Llanos of Venezuela and Colombia. Tankmates must also tolerate 80–82°F — cardinal tetras and Corydoras sterbai are classic matches, while neon tetras, platies, and mollies are stressed long-term at those temperatures.',
+      'FishBase lists Mikrogeophagus ramirezi at 27–30°C, which is 80–86°F (https://www.fishbase.se/summary/Mikrogeophagus-ramirezi.html). That band is warmer than the 72–78°F most community fish prefer. Cardinal tetras overlap only the low end of this band. Neon tetras are stressed at 80°F.',
     answerText:
-      'Their optimal range is 80-86F, warmer than the 72-78F most community fish prefer. Tankmates must tolerate 80-82F; cardinal tetras and Corydoras sterbai are classic matches.',
+      'FishBase lists Mikrogeophagus ramirezi at 27–30°C, which is 80–86°F (https://www.fishbase.se/summary/Mikrogeophagus-ramirezi.html). That is warmer than the 72-78F most community fish prefer. Cardinal tetras overlap only the low end of this band.',
   },
   {
     question: 'How long do German blue rams live?',
@@ -66,9 +67,9 @@ export default function BlueRamPage() {
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Quick Stats</div>
-          {[['Scientific name', 'Mikrogeophagus ramirezi'], ['Difficulty', 'Intermediate — water chemistry critical'], ['Adult size', '3 inches'], ['pH', '5.5–7.0 — soft acidic required'], ['Temperature', '80–86°F (warmer than most)'], ['Min tank', '20 gallons (pair)'], ['Lifespan', '2–4 years'], ['GH', 'Under 8 dGH — soft water']].map(([k, v]) => (
+          {[['Scientific name', 'Mikrogeophagus ramirezi'], ['Difficulty', 'Intermediate — water chemistry critical'], ['Adult size', '3 inches'], ['pH', '5.5–7.0 — soft acidic required'], ['Temperature', '80–86°F (https://www.fishbase.se/summary/Mikrogeophagus-ramirezi.html)'], ['Min tank', '20 gallons (pair)'], ['Lifespan', '2–4 years'], ['GH', 'Under 8 dGH — soft water']].map(([k, v]) => (
             <div key={k} className="flex justify-between py-1.5 border-b border-brand-border text-xs last:border-0">
-              <span className="text-brand-text-light">{k}</span><span className="font-bold text-brand-dark text-right max-w-[55%]">{v}</span>
+              <span className="text-brand-text-light">{k}</span><span className="font-bold text-brand-dark text-right max-w-[55%] break-all">{v}</span>
             </div>
           ))}
         </div>
@@ -81,11 +82,11 @@ export default function BlueRamPage() {
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
         <StockImage manifestKey="fish-com:species-blue-ram" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A blue ram cichlid in a home aquarium." priority />
         <h2>Water Chemistry — Why Most Blue Rams Die</h2>
-        <p>The German Blue Ram's native habitat is the Llanos of Venezuela and Colombia — warm, blackwater rivers and pools with extremely soft, acidic water. The parameters they require reflect this origin: pH 5.5–7.0 (ideally 6.0–6.8), GH under 8 (preferably 3–6), and temperature 80–86°F. These are not adjustable preferences — they are physiological requirements. Blue rams kept in hard alkaline tap water (pH 7.5–8.0, GH 15+) that characterizes much of the US will show chronic stress, compromised immune function, and shortened lifespans. Most "blue rams die easily" experiences are water chemistry mismatches.</p>
+        <p>The German Blue Ram's native habitat is the Llanos of Venezuela and Colombia — warm, blackwater rivers and pools with extremely soft, acidic water. The parameters they require reflect this origin: pH 5.5–7.0 (ideally 6.0–6.8), GH under 8 (preferably 3–6), and temperature 80–86°F (FishBase lists Mikrogeophagus ramirezi at 27–30°C, which is 80–86°F (<a className="break-all" href="https://www.fishbase.se/summary/Mikrogeophagus-ramirezi.html">https://www.fishbase.se/summary/Mikrogeophagus-ramirezi.html</a>)). These are not adjustable preferences — they are physiological requirements. Blue rams kept in hard alkaline tap water (pH 7.5–8.0, GH 15+) that characterizes much of the US will show chronic stress, compromised immune function, and shortened lifespans. Most "blue rams die easily" experiences are water chemistry mismatches.</p>
         <p><strong>Water preparation for blue rams:</strong> If your tap water is hard, mix with RO/DI water to achieve the target GH and pH. A 50/50 RO/tap mix is a starting point — test the result and adjust. Alternatively, use full RO water remineralized with Seachem Equilibrium (adds GH without raising KH) to achieve GH 5–8 with minimal KH, which allows CO2 or driftwood tannins to set a low, stable pH. Peat filtration and Indian almond leaves add tannins that lower pH and provide antibacterial properties beneficial to rams.</p>
 
         <h2>Temperature — Warmer Than Most Community Fish</h2>
-        <p>80–86°F is the optimal range for German Blue Rams. This is significantly warmer than the 72–78°F that most community fish prefer. The conflict: tankmates must also tolerate 80–82°F. Cardinal tetras (native to the same warm blackwater rivers) are the classic tankmate — they thrive at 80°F and share the soft acidic water requirement. Corydoras sterbai is the one Corydoras species that tolerates 80°F+ comfortably. Standard tropical fish (neon tetras, platies, mollies) at 80°F will be under thermal stress over the long term.</p>
+        <p>FishBase lists Mikrogeophagus ramirezi at 27–30°C, which is 80–86°F (<a className="break-all" href="https://www.fishbase.se/summary/Mikrogeophagus-ramirezi.html">https://www.fishbase.se/summary/Mikrogeophagus-ramirezi.html</a>). That band is warmer than the 72–78°F most community fish prefer. Cardinal tetras overlap only the low end of this band. Neon tetras are stressed at 80°F.</p>
 
         <h2>Tank-Bred vs Wild-Caught</h2>
         <p>Most blue rams sold in fish stores are tank-bred in Southeast Asia under conditions quite different from their native habitat — often harder, warmer, and with antibiotics added to maintain health during shipping. These tank-bred rams have some tolerance for conditions outside the ideal range, but they have a shorter lifespan (often 1–2 years in suboptimal conditions) than rams kept in appropriate parameters (3–4 years). Wild-caught rams and rams from specialized breeders (who maintain soft acidic water) are more sensitive initially but produce better, longer-lived adults when the correct environment is maintained.</p>
@@ -101,12 +102,12 @@ export default function BlueRamPage() {
         <p>A compatible pair in good condition in appropriate water conditions will spawn regularly — depositing eggs on a flat surface (broad leaf, flat stone, or directly on the substrate) in a cleared spawning site. Both parents guard the eggs and fry. Fry are tiny — fed infusoria or baby brine shrimp. Many first spawns fail as the pair learns parenting; experienced pairs are reliable parents. The challenge is fry survival in a community tank — other fish eat fry readily, and even the parents may eat fry if stressed.</p>
         <h2>Frequently Asked Questions</h2>
         <FAQAccordion items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answerText }))} includeSchema={false} allowMultiple />
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        <HopDisclosure siteId="fish-com" href="/go/amazon-brand/blue%20ram%20tank%20setup?s=species-blue-ram" />
           <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Blue Ram — Tank Setup</div>
-          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for blue ram care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
+          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for blue ram care.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
-            <a href="/go/amazon-brand/blue%20ram%20tank%20setup?s=species-blue-ram" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop Blue Ram Setup on Amazon →</a>
+            <ShopCtas amazonHref="/go/amazon-brand/blue%20ram%20tank%20setup?s=species-blue-ram" amazonLabel="Browse blue ram tank setups on Amazon →" />
           </div>
         </div>
 

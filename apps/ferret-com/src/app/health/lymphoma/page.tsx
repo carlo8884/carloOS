@@ -10,7 +10,7 @@ import {
   DropCap,
   CrossPortfolioCard,
   ArticleSourcesList,
-  AffiliateDisclosure,
+  LastUpdated,
 } from '@carloOS/ui'
 
 const SOURCES = [
@@ -44,7 +44,6 @@ import {
 } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 
-
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
   title: 'Lymphoma in Ferrets — Signs, Chemotherapy & Prognosis | Ferret.com',
@@ -76,7 +75,6 @@ const medSchema = buildMedicalWebPageSchema({
   authorName: 'Ferret.com Editorial',
   lastReviewed: '2026-05-29',
 })
-
 
 const FAQS = [
   {
@@ -139,7 +137,7 @@ export default function FerretLymphomaPage() {
           <>
             <TableOfContents
               items={[
-                { label: 'TL;DR', href: '#tldr' },
+                { label: '', href: '#tldr' },
                 { label: 'What It Is', href: '#what' },
                 { label: 'Who Gets It', href: '#epidemiology' },
                 { label: 'Clinical Signs', href: '#signs' },
@@ -168,6 +166,7 @@ export default function FerretLymphomaPage() {
               <h3 className="font-display text-base font-bold text-brand-white mb-2">
                 Cover this condition before it&apos;s diagnosed
               </h3>
+              <p>Those figures are typical US ranges dated 2026-05-30.</p>
               <p className="text-xs text-white/60 mb-3 leading-relaxed">
                 Lymphoma chemotherapy in ferrets can exceed $4,000-8,000 over
                 a treatment course. Exotic-pet insurance covers it — but ONLY
@@ -185,7 +184,7 @@ export default function FerretLymphomaPage() {
 
           </>
         }
-      
+
         relatedLinks={[
           { title: 'Ferret Health Hub', href: '/health' },
           { title: 'Adrenal Disease', href: '/health/adrenal-disease' },
@@ -200,6 +199,7 @@ export default function FerretLymphomaPage() {
             updatedAt="2026-05-29"
             reviewedBy="Editorial team"
           />
+          <LastUpdated date="2026-10-09" />
 
           <DropCap>
             Ferret lymphoma is the cancer that does not have a single
@@ -211,8 +211,7 @@ export default function FerretLymphomaPage() {
             substantially with which form the ferret has.
           </DropCap>
 
-          <h2 id="tldr">TL;DR</h2>
-          <p>
+                    <p>
             Lymphoma is among the top three ferret cancers (alongside
             insulinoma and adrenal disease). Presentations range from
             visible enlarged lymph nodes through slow weight loss to
@@ -560,21 +559,7 @@ export default function FerretLymphomaPage() {
             ranges above are orientation, not prediction.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated ferret lump-weight chart /
-              ferret fridge senior-cbc card /
-              mustelid lymphoma-workup handbook).
-              No existing product hop to keep.
-              Educational kitchen searches only; no Rx /
-              vaccine / flea / heartworm / nsaid / aging hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs health-hub /
-              anesthesia / signs-of-pain / ear-mites hops. Ferret
-              aging stays held.
-              Do not re-open #1165 / what-to-expect. */}
-          
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
 

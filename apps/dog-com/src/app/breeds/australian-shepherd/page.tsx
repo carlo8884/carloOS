@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { AffiliateDisclosure, buildMetadata, ArticleLayout, FAQAccordion, BreedHealthCard, RelatedLinks, ShopCtas, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, BreedHealthCard, RelatedLinks, ShopCtas, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 
@@ -48,6 +49,7 @@ export default function AustralianShepherdPage() {
 
         <p>The working story starts in the American West: Basque herding dogs that arrived via Australia were reshaped into today&apos;s Aussie — that 10-hour mountain-herd history is why a household Australian Shepherd still needs 1.5–2+ hours of vigorous work, not a crate-only afternoon. Australian Shepherds are typically first-time-owner friendly — YES-typically — when the household accepts the MDR1 DNA test before any listed drug, the 2-hour work floor, and heel-nipping management around children.</p>
 
+        <p>Typical range, not a quote. Those figures are typical US ranges dated 2026-10-04.</p>
         <BreedHealthCard name="MDR1 Gene Mutation (Drug Sensitivity)" riskLevel="high"
           description="The MDR1 (ABCB1) gene mutation affects approximately 50% of Australian Shepherds and causes sensitivity to multiple drugs that are safe in dogs without the mutation. The MDR1 protein (P-glycoprotein) normally pumps drugs out of the brain — dogs with two mutant copies of the gene lack this protective mechanism, allowing normal doses of certain drugs to accumulate to toxic levels in the brain. The classic example: ivermectin at the low doses used for routine heartworm prevention is safe in all dogs; at the higher doses used in some parasite treatments, MDR1-affected dogs suffer neurological toxicity and death. This affects dozens of drugs including loperamide (Imodium), certain anesthetic agents, and some chemotherapy drugs."
           signs={['Drug-specific: ataxia, blindness, seizures, coma after exposure to affected drugs', 'Signs appear within hours of drug administration']}
@@ -70,16 +72,17 @@ export default function AustralianShepherdPage() {
             Shop related supplies
           </div>
           <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href="/go/amazon-brand/dog+crate?s=breed-aussie" />
           <div className="flex flex-col gap-3 mt-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/dog+crate?s=breed-aussie"
-              amazonLabel="Shop on Amazon"
+              amazonLabel="Browse dog crate on Amazon →"
             />
           </div>
         </div>
 
         <h2>Frequently Asked Questions</h2>
+        <p>Typical range, not a quote. Those figures are typical US ranges dated 2026-10-04.</p>
         <FAQAccordion items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
       </div>
     </ArticleLayout>

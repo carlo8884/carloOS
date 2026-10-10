@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas, ComparisonFoot, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -106,6 +107,7 @@ export default function TurnoutStablingPage() {
             updatedAt="2026-09-05"
             reviewedBy="Editorial team"
           />
+          <LastUpdated date="2026-10-10" />
 
           <h2 id="built">What the Horse Is Built For</h2>
           <p>Free-living horses spend most of the day and night moving slowly while grazing, covering many miles, in the company of other horses. Their digestive system, feet, joints, and minds are all adapted to near-constant movement and trickle-feeding. Any management system is, in effect, a compromise against this baseline, and the more a routine departs from it, the more the owner must actively compensate.</p>
@@ -121,6 +123,33 @@ export default function TurnoutStablingPage() {
 
           <h2 id="stabling">When Stabling Is Justified</h2>
           <p>Stabling has legitimate uses: box rest prescribed for injury or after surgery, protection from severe weather where shelter is otherwise lacking, restricting grazing for laminitis-prone horses, managing the summer pasture-associated form of asthma, keeping competition horses clean and to a routine, and safety where turnout is genuinely unsafe. The key is that stabling should serve a real need, with its downsides actively offset, rather than being the unexamined default.</p>
+          <div className="my-6 max-w-full min-w-0">
+            <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
+              <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+              <thead>
+                <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Turnout</th>
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Stabling</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">What it matches</th>
+                  <td className="p-3">Near-constant movement, trickle feeding, and company</td>
+                  <td className="p-3">A real need: box rest, severe weather, restricted grazing, summer asthma, a competition routine, or unsafe turnout</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">What it changes</th>
+                  <td className="p-3">Supports gut motility, joints, and hooves, and lowers ulcer and dust exposure</td>
+                  <td className="p-3">Offset the downsides. It should not be the unexamined default</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <ComparisonFoot updated="2026-10-10" />
+          <h2>Who should turn out or stable</h2>
+          <p>Keep the horse out when the routine can stay close to movement, forage, and company. Stable when box rest, weather, laminitis grazing, summer asthma, a competition routine, or unsafe turnout is the real reason, and offset the confinement.</p>
 
           <h2 id="risks">Risks of Too Much Confinement</h2>
           <ul>
@@ -134,17 +163,17 @@ export default function TurnoutStablingPage() {
           <h2 id="balance">Finding the Balance</h2>
           <p>For most horses, maximizing turnout and minimizing unnecessary stabling is the healthiest default, with stabling used deliberately for genuine needs. When a horse must be stabled, the downsides are softened by providing near-continuous forage (slow feeders), companionship and a view of other horses, good ventilation and low-dust bedding, and as much daily movement as possible. The right balance is individual -- shaped by the horse, the climate, the facilities, and the horse&apos;s job -- but the bias of the evidence is toward more turnout, not less.</p>
 
-          <h2 id="kit">Stall-offset kit</h2>
-          <p>Everyday physical supplies that match the near-continuous-forage, companionship, and low-dust-bedding copy on this page — an equine slow-feeder hay box so a stabled horse still trickle-feeds instead of standing empty between flakes, a nylon equine stall guard so the horse can see and ideally touch neighbors through an open door, and hemp equine stall bedding so the stall bed stays low-dust instead of aggravating airways. These are household barn tools, not treatments. They do not diagnose or treat colic, ulcers, heaves, or stereotypies, they do not replace a veterinarian, and they are not a ranked product list. This page does not claim hands-on testing.</p>
+          <h2 id="kit">Supplies named on this page</h2>
+          <p>Keep these on hand: an equine slow-feeder hay box so a stabled horse still trickle-feeds instead of standing empty between flakes, a nylon equine stall guard so the horse can see and ideally touch neighbors through an open door, and hemp equine stall bedding so the stall bed stays low-dust instead of aggravating airways. These are household barn tools, not treatments. They do not diagnose or treat colic, ulcers, heaves, or stereotypies, they do not replace a veterinarian, and they are not a ranked product list.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/equine+slow+feeder+hay+box?s=care-turnout-vs-stabling", "/go/amazon-brand/nylon+equine+stall+guard?s=care-turnout-vs-stabling", "/go/amazon-brand/hemp+equine+stall+bedding?s=care-turnout-vs-stabling"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (equine slow-feeder hay box /
               nylon equine stall guard /
               hemp equine stall bedding).
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or an empty link. Amazon searches only —
               unused vs #1064 thrush-antiseptic /
               folding-hoof-pick / stall-sweet-lime, #1063
               foam-pads / sand-bedding / easy-keeper-muzzle,
@@ -158,7 +187,7 @@ export default function TurnoutStablingPage() {
               pine+shavings / wood+pellet / stall+rubber+mats
               / horse+stall+fan / horse+stall+screen /
               horse+turnout+sheet / horse+grazing+muzzle.
-              Rx ASINs are not shoppable hops. */}
+              prescription brands are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

@@ -1,14 +1,14 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, AffiliateDisclosure, ArticleSourcesList, ShopCtas, JourneyNext } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, ArticleSourcesList, ShopCtas, JourneyNext, PrimaryHop } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
 const SOURCES = [
-  { label: "Nitrogenous Waste and the Nitrogen Cycle in Aquariums — UF/IFAS Extension FA-16.", url: "https://edis.ifas.ufl.edu/publication/FA016", publisher: "UF/IFAS Extension" },
+  { label: "Francis-Floyd, R. et al. Ammonia in Aquatic Systems — UF/IFAS FA031 (current home of FA-16).", url: "https://ask.ifas.ufl.edu/publication/FA031", publisher: "UF/IFAS Extension" },
   { label: "Timmons, M.B. and Ebeling, J.M. Recirculating Aquaculture, 3rd ed. Ithaca Publishing, 2013.", publisher: "Ithaca Publishing" },
-  { label: "Francis-Floyd, R. Ammonia Toxicosis in Fish — UF/IFAS Extension FA-36.", url: "https://edis.ifas.ufl.edu/publication/FA036", publisher: "UF/IFAS Extension" },
-  { label: "Russo, R.C. and Thurston, R.V. Toxicity of ammonia, nitrite, and nitrate to fishes. Aquaculture and Water Quality, 1991.", publisher: "World Aquaculture Society" },
+    { label: "Russo, R.C. and Thurston, R.V. Toxicity of ammonia, nitrite, and nitrate to fishes. Aquaculture and Water Quality, 1991.", publisher: "World Aquaculture Society" },
 ]
 
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'New Tank Syndrome — Ammonia Spike, Cycling | Fish.com', description: 'New tank syndrome kills fish through ammonia poisoning. Fishless cycling with ammonia takes 4-6 weeks.', path: '/health/new-tank-syndrome', type: 'article' })
@@ -18,6 +18,10 @@ const schema = buildArticleSchema({ siteId: 'fish-com', title: 'New Tank Syndrom
 export default function NewTankSyndromePage() {
   return (
     <ArticleLayout siteId="fish-com"
+      heroHop={<>
+        <PrimaryHop href="/go/amazon-brand/api+freshwater+master+test+kit?s=health-new-tank-syndrome" label="Search Amazon for the API Freshwater Master Test Kit" />
+        <HopDisclosure siteId="fish-com" href="/go/amazon-brand/api+freshwater+master+test+kit?s=health-new-tank-syndrome" tone="on-dark" />
+      </>}
       hero={{ title: 'New Tank Syndrome', subtitle: 'New tank syndrome describes the ammonia and nitrite toxicity that kills fish in an uncycled aquarium. The nitrogen cycle — the establishment of beneficial bacteria that convert fish waste to less harmful compounds — takes 4–8 weeks to complete in a new tank. Fish added before this cycle is established are poisoned by their own waste.', category: 'Fish Health', authorName: 'Fish.com Editorial', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Aquarium Health', href: '/health' }, { name: 'New Tank Syndrome', href: '/health/new-tank-syndrome' }]}
       schema={schema}
@@ -55,7 +59,7 @@ export default function NewTankSyndromePage() {
           <li>Cycle is complete when: ammonia added to 2 ppm drops to 0 within 24 hours, AND nitrite drops to 0 within 24 hours simultaneously</li>
           <li>Do a large water change to reduce nitrate, then add fish</li>
         </ol>
-        <p>Timeline: 4–8 weeks without seeding, 1–3 weeks with quality bottled bacteria. Seeded media from an established tank (a sponge filter, substrate, or filter media moved from a cycled tank to the new one) dramatically accelerates the cycle — sometimes to days rather than weeks.</p>
+        <p>Timeline: 4–8 weeks without seeding, 1–3 weeks with quality bottled bacteria. Seeded media from an established tank (a sponge filter, substrate, or filter media moved from a cycled tank to the new one) dramatically accelerates the cycle — sometimes to days rather than weeks. Sponge filters and media you can move from a cycled tank are compared in the <a href="/reviews/best-aquarium-filters" className="text-brand-primary underline">filter review</a>.</p>
 
         <h2>Fish-In Cycling — Emergency Protocol</h2>
         <p>Already added fish before reading this? The fish-in emergency protocol buys time while the cycle establishes:</p>
@@ -73,18 +77,18 @@ export default function NewTankSyndromePage() {
           siteId="fish-com"
           nextHref="/setup/aquarium-cycling-guide"
           nextLabel="Run the fishless cycle to 0/0"
-          nextBlurb="The emergency protocol buys time. The cycling guide is the measurable next step — dose ammonia, test daily, and do not add more fish until both ammonia and nitrite stay at 0 ppm 24 hours after a 2 ppm dose. The hop below is the same API Master Test Kit search already on this page."
+          nextBlurb="The emergency protocol buys time. The cycling guide is the measurable next step — dose ammonia, test daily, and do not add more fish until both ammonia and nitrite stay at 0 ppm 24 hours after a 2 ppm dose. The button below opens the same API Master Test Kit search on Amazon."
           resourceHref="/go/amazon-brand/api+freshwater+master+test+kit?s=health-new-tank-syndrome"
           resourceLabel="Browse API Master Test Kit on Amazon →"
         />
 
-        {/* Money path — live amazon-brand search hops (fishless-cycle + fish-in kit).
-            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-            Category searches only — not a ranked list. No medication hops. */}
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        {/* Shop note — live amazon-brand search buttons (fishless-cycle + fish-in kit).
+            ShopCtas hides empty Chewy; never href="#" or an empty link.
+            Amazon searches only — not a ranked list. No medication buttons. */}
+        <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/api+freshwater+master+test+kit?s=health-new-tank-syndrome", "/go/amazon-brand/seachem+prime+water+conditioner?s=health-new-tank-syndrome", "/go/amazon-brand/dr+tims+ammonium+chloride?s=health-new-tank-syndrome", "/go/amazon-brand/tetra+safestart+plus?s=health-new-tank-syndrome", "/go/amazon-brand/aquarium+sponge+filter?s=health-new-tank-syndrome"]} />
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
-            Shop a new-tank cycling kit
+            Shop these supplies
           </div>
           <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">A liquid master kit is how you see ammonia, nitrite, and nitrate
             through fishless cycling and through the fish-in emergency
@@ -94,7 +98,7 @@ export default function NewTankSyndromePage() {
             A measured ammonium-chloride source is how you run a fishless
             cycle. Bottled nitrifiers shorten the wait; a seeded sponge
             filter is the fastest media transfer from an established tank.
-            Same test-kit hop used on the{' '}
+            The same test-kit button is on the{' '}
             <Link
               href="/reviews/best-water-test-kits"
               className="text-brand-primary no-underline hover:underline"
@@ -108,7 +112,7 @@ export default function NewTankSyndromePage() {
             >
               nitrogen-cycle guide
             </Link>
-            . Same Prime hop used on the{' '}
+            . The same Prime button is on the{' '}
             <Link
               href="/tools/water-change-calculator"
               className="text-brand-primary no-underline hover:underline"
@@ -119,8 +123,8 @@ export default function NewTankSyndromePage() {
             <Link href="/setup" className="text-brand-primary no-underline hover:underline">
               aquarium setup guide
             </Link>
-            . Same ammonium-chloride, bottled-bacteria, and sponge-filter
-            hops used on the{' '}
+            . The same ammonium-chloride, bottled-bacteria, and sponge-filter
+            buttons are on the{' '}
             <Link
               href="/tools/aquarium-cycling-estimator"
               className="text-brand-primary no-underline hover:underline"
@@ -135,9 +139,7 @@ export default function NewTankSyndromePage() {
               nitrogen-cycle guide
             </Link>
             . They are not a ranked product list, they are not medications,
-            and they do not treat, reverse, or cure new-tank syndrome.
-            Fish.com earns a commission on qualifying purchases at no extra
-            cost to you.</p>
+            and they do not treat, reverse, or cure new-tank syndrome.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/api+freshwater+master+test+kit?s=health-new-tank-syndrome"
@@ -145,15 +147,15 @@ export default function NewTankSyndromePage() {
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/seachem+prime+water+conditioner?s=health-new-tank-syndrome"
-              amazonLabel="Browse dechlorinator / Seachem Prime on Amazon →"
+              amazonLabel="Browse Seachem Prime water conditioner on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/dr+tims+ammonium+chloride?s=health-new-tank-syndrome"
-              amazonLabel="Browse fishless-cycling ammonia on Amazon →"
+              amazonLabel="Browse Dr. Tim's ammonium chloride on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/tetra+safestart+plus?s=health-new-tank-syndrome"
-              amazonLabel="Browse bottled bacteria starter on Amazon →"
+              amazonLabel="Browse Tetra SafeStart Plus on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+sponge+filter?s=health-new-tank-syndrome"

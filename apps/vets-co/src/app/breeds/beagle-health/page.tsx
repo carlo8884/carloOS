@@ -1,10 +1,11 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import {
   buildMetadata,
   ArticleLayout, CrossPortfolioCard,
   RelatedLinks,
   FAQAccordion,
-  AffiliateDisclosure,
   ShopCtas,
   CrossSiteHelp,
 } from '@carloOS/ui'
@@ -136,8 +137,7 @@ export default function VetsBeagleHealthPage() {
             reviewedBy="Editorial team"
           />
 
-          <h2>TL;DR</h2>
-          <p>
+                    <p>
             The Beagle is a medium-small (20–30 lb), long-lived (12–15 years) scent hound with a focused set
             of predispositions: idiopathic epilepsy (the Beagle is a model breed in canine epilepsy
             research), Musladin-Lueke Syndrome, Imerslund-Gräsbeck Syndrome (selective cobalamin
@@ -170,12 +170,7 @@ export default function VetsBeagleHealthPage() {
               'Generalized tonic-clonic seizure (collapse, paddling, urination)',
               'Focal seizures: fly-biting, sudden chewing, staring episodes, transient behavior change',
               'Post-ictal phase: disorientation, blindness, ataxia lasting minutes to hours',
-              'Cluster seizures (≥2 in 24 h) or seizure >5 min — emergency',
-            ]}
-            management="Document seizures (date, duration, video). An analog stopwatch is how that duration stays a written count against the five-minute emergency line — it is not a mechanical kitchen timer (that lives on german-shepherd-health) and not a 48-hour digital kitchen timer (that lives on when-to-go-to-the-vet). Blank index cards are how each seizure stays one dated card — they are not ruled index cards (that live on questions-to-ask-your-vet), not a top-bound steno pad (that lives on german-shepherd-health), and not a bound composition book (that lives on labrador-health). Bloodwork, urinalysis and bile-acids to exclude metabolic causes; MRI and CSF analysis to exclude structural causes when indicated. Start chronic antiepileptic medication per ACVIM thresholds — commonly phenobarbital or levetiracetam, with potassium bromide as add-on. Refer cluster seizures, status epilepticus or drug-refractory cases to ACVIM neurology."
-            guideHref="/find-a-vet"
-            guideLabel="Find a veterinary neurologist →"
-          />
+              'Cluster seizures (≥2 in 24 h) or seizure >5 min — emergency', ]} management="Document seizures (date, duration, video). An analog stopwatch is how that duration stays a written count against the five-minute emergency line — it is not a mechanical kitchen timer and not a 48-hour digital kitchen timer. Blank index cards are how each seizure stays one dated card — they are not ruled index cards, not a top-bound steno pad, and not a bound composition book. Bloodwork, urinalysis and bile-acids to exclude metabolic causes; MRI and CSF analysis to exclude structural causes when indicated. Start chronic antiepileptic medication per ACVIM thresholds — commonly phenobarbital or levetiracetam, with potassium bromide as add-on. Refer cluster seizures, status epilepticus or drug-refractory cases to ACVIM neurology." guideHref="/find-a-vet" guideLabel="Find a veterinary neurologist →" />
 
           <CalloutBox variant="evidence" title="ACVIM 2016 Consensus on Canine Epilepsy">
             Podell M, Volk HA, Berendt M et al. <em>2015 ACVIM Small Animal Consensus Statement on Seizure
@@ -233,7 +228,7 @@ export default function VetsBeagleHealthPage() {
               'No abdominal tuck from the side',
               'Reduced exercise tolerance, reluctant to walk',
             ]}
-            management={'Measure every meal — never free-feed. A recipe-card box is how those measured meals stay one card per ration — it is not a four-tab divider (that lives on french-bulldog-health), not a weekly checklist notepad (that lives on french-bulldog-health), and not a hardcover weekly appointment planner. Body condition score monthly; target BCS 4–5. Subtract treats from the daily ration. Use puzzle feeders and snuffle mats to slow intake and provide enrichment. Prescription weight-loss diets (e.g., Hill\'s Metabolic, Royal Canin Satiety) for dogs that do not lose on portion control alone.'}
+            management={'Measure every meal — never free-feed. A recipe-card box is how those measured meals stay one card per ration — it is not a four-tab divider, not a weekly checklist notepad, and not a hardcover weekly appointment planner. Body condition score monthly; target BCS 4–5. Subtract treats from the daily ration. Use puzzle feeders and snuffle mats to slow intake and provide enrichment. Prescription weight-loss diets (e.g., Hill\'s Metabolic, Royal Canin Satiety) for dogs that do not lose on portion control alone.'}
           />
 
           <BreedHealthCard
@@ -297,45 +292,24 @@ export default function VetsBeagleHealthPage() {
           </p>
 
           <h2>Pet Insurance for a Beagle</h2>
+          <p>Costs vary by clinic and region. Ask your veterinarian for an estimate.</p>
           <p>
-            Lifetime antiepileptic medication, periodic drug-level monitoring and emergency cluster-seizure
-            care commonly total $4,000–8,000 over a Beagle&apos;s lifetime. Acute glaucoma management with
-            enucleation or intraocular procedures can run $2,500–5,000 per eye. Hypothyroidism medical
+            Lifetime antiepileptic medication, periodic drug-level monitoring, and emergency cluster-seizure
+            care are often a large multi-year bill. Acute glaucoma management with
+            enucleation or an intraocular procedure is often a large bill for that eye. Hypothyroidism medical
             therapy is comparatively inexpensive but lifelong. Insurance bought before symptoms appear
             typically covers these as accident/illness with no breed exclusion. See our 2026 comparison:{' '}
             <a href="/reviews/best-pet-insurance">best pet insurance →</a>.
           </p>
 
-          <h2 id="kit">Beagle-health kit</h2>
+          <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Everyday physical supplies that match the
-            epilepsy, obesity, and screening copy on
-            this page — an analog stopwatch so
-            seizure duration stays a written count
-            against the five-minute emergency line,
-            blank index cards so each seizure
-            stays one dated card, and a recipe-card
-            box so measured meals stay one card per
-            ration. These are educational
-            Beagle-health / paperwork tools, not a
-            ranked product list, not a substitute
-            for veterinary care, and not a
-            treatment. Four-tab dividers, analog
-            outdoor thermometers, and weekly
-            checklist notepads already live on
-            french-bulldog-health. Top-bound steno
-            pads, mechanical kitchen timers, and
-            self-adhesive file-folder labels already
-            live on german-shepherd-health. This
-            page does not hop medications, enzymes,
-            or insurance brands as Amazon searches.
-            This page does not claim hands-on
-            testing.
+            Keep these on hand: an analog stopwatch so seizure duration stays a written count against the five-minute emergency line, blank index cards so each seizure stays one dated card, and a recipe-card box so measured meals stay one card per ration. These are educational Beagle-health / paperwork tools, not a ranked product list, not a substitute for veterinary care, and not a treatment.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/analog+stopwatch?s=breeds-beagle-health", "/go/amazon-brand/blank+index+cards?s=breeds-beagle-health", "/go/amazon-brand/recipe+card+box?s=breeds-beagle-health"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (analog stopwatch /
               blank index cards /
               recipe-card box).
@@ -344,9 +318,9 @@ export default function VetsBeagleHealthPage() {
               not a ranked product list, not a
               substitute for veterinary care, no
               Rx / first-aid kit / thermometer /
-              carrier / insurance-brand ASIN hops.
+              carrier / insurance-brand product page buttons.
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or an empty link. Amazon searches only —
               unused vs #1178
               four+tab+dividers /
               analog+outdoor+thermometer /
@@ -385,10 +359,12 @@ export default function VetsBeagleHealthPage() {
           >
             The Dog.com Beagle page is the owner-side guide for this breed: size, temperament, and everyday care.
           </CrossSiteHelp>
+          <p>Joint supplements for this breed are compared in the <Link href={crossSiteHref('dog-com', '/reviews/best-joint-supplements')}>joint supplement review</Link>.</p>
           <h2>FAQ</h2>
           <FAQAccordion
             items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))}
             allowMultiple
+            includeSchema={false}
           />
 
           <h2>Sources & Further Reading</h2>
@@ -398,7 +374,7 @@ export default function VetsBeagleHealthPage() {
             <li>Fyfe JC, Hemker SL, Venta PJ et al. Selective intestinal cobalamin malabsorption with proteinuria (Imerslund-Gräsbeck syndrome) in juvenile Beagles. <em>J Vet Intern Med.</em> 2014;28(2):356–362.</li>
             <li><a href="https://www.akcchf.org/" rel="noopener" target="_blank" className="text-brand-primary hover:underline">AKC Canine Health Foundation</a> — Beagle-funded research summaries.</li>
             <li><a href="https://ofa.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">Orthopedic Foundation for Animals (OFA)</a> — hip, thyroid and eye registries.</li>
-            <li><a href="https://www.wsava.org/global-guidelines/global-nutrition-guidelines/" rel="noopener" target="_blank" className="text-brand-primary hover:underline">WSAVA Global Nutrition Guidelines</a> — obesity as a disease.</li>
+            <li><a href="https://wsava.org/global-guidelines/global-nutrition-guidelines/" rel="noopener" target="_blank" className="text-brand-primary hover:underline">WSAVA Global Nutrition Guidelines</a> — obesity as a disease.</li>
           </ul>
         </div>
       </ArticleLayout>

@@ -1,5 +1,7 @@
 'use client'
 
+import { HopDisclosure } from '../../../components/HopDisclosure'
+import Link from 'next/link'
 /**
  * Ferret Body Condition Score (BCS) Assessor -- /tools/ferret-body-condition-score
  *
@@ -15,7 +17,7 @@
  */
 
 import { useMemo, useState } from 'react'
-import { AffiliateDisclosure, ResultMeaning } from '@carloOS/ui'
+import { ResultMeaning } from '@carloOS/ui'
 
 interface Option {
   label: string
@@ -28,7 +30,7 @@ interface Question {
   options: Option[]
 }
 
-// Options map to points on the same 1–9 planning scale as the dog/cat BCS
+// Planning figure. Options map to points on the same 1–9 scale as the dog/cat BCS
 // tools (5 = ideal midpoint). Descriptors are ferret-specific.
 const QUESTIONS: Question[] = [
   {
@@ -225,6 +227,11 @@ export default function FerretBCSCalculator() {
           <ResultMeaning>
             The score is the rounded average of the three checks on the 9-point scale. It is a hands-on estimate for an exotic-mammal veterinarian to confirm.
           </ResultMeaning>
+          <p className="mt-3 text-sm">
+            <Link href="/diet/best-ferret-kibble" className="font-semibold text-brand-primary underline">
+              Compare ferret kibble next
+            </Link>
+          </p>
         </div>
       ) : null}
 
@@ -237,7 +244,14 @@ export default function FerretBCSCalculator() {
             {result.shop.heading}
           </p>
           <p className="mt-1 text-sm leading-relaxed text-brand-text-mid">{result.shop.blurb}</p>
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" className="my-3" />
+          <HopDisclosure siteId="ferret-com" href={result.shop.href} />
+          <a
+            href={result.shop.href}
+            rel="sponsored noopener"
+            className="inline-block max-w-full whitespace-normal text-left rounded bg-brand-dark px-4 py-2.5 text-sm font-bold text-white no-underline"
+          >
+            {result.shop.label}
+          </a>
         </div>
       ) : (
         <p className="mt-2 text-sm text-brand-text-light">

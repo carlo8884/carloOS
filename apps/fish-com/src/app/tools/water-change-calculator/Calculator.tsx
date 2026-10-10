@@ -9,7 +9,7 @@
  *   2. Dilution — existing nitrate/TDS/GH/salinity math (CI-pinned).
  *
  * Product-maintenance guidance only. No medical or disease claims.
- * Shop hops reuse live amazon-brand queries (Python-style changer, gravel
+ * Shop buttons reuse live amazon-brand queries (Python-style changer, gravel
  * vacuum, API Master Test Kit) — no invented review URLs.
  */
 
@@ -104,14 +104,14 @@ function computeDilution(gal: number, c: number, t: number, s: number): Dilution
 function volumeShop(removeGal: number): { query: string; cta: string; heading: string } {
   if (removeGal >= 20) {
     return {
-      query: 'python water changer',
+      query: 'python+water+changer',
       cta: 'Browse Python-style water changers on Amazon',
       heading: 'A hose-to-sink changer makes large weekly changes faster',
     }
   }
   return {
-    query: 'aquarium gravel vacuum siphon water dechlorinator',
-    cta: 'Browse gravel vacuums on Amazon',
+    query: 'aquarium+gravel+vacuum+siphon',
+    cta: 'Browse gravel vacuum siphons on Amazon',
     heading: 'A gravel-vacuum siphon handles this change in one pass',
   }
 }
@@ -324,7 +324,7 @@ export default function WaterChangeCalculator() {
           note={
             <>
               <strong className="text-white/90">{load.tip}</strong>{' '}
-              Match temperature within 2°F and dose dechlorinator before new water touches the tank.
+              A planning figure is to match temperature within about 2°F. Dose dechlorinator before new water touches the tank.
               Single changes over 50% raise the risk of a parameter swing — split those across two days.
               This is maintenance math, not veterinary advice.
             </>
@@ -341,10 +341,11 @@ export default function WaterChangeCalculator() {
       {mode === 'volume' && volume && volume.kind === 'ok' && (
         <ResultCTA
           heading={shop.heading}
+          guideHref="/setup/water-chemistry-guide"
+          guideLabel="Read the water chemistry guide"
           blurb={
             <>
-              Same Amazon hops used on water-test and fin-rot maintenance pages — no invented SKUs.
-              Fish.com earns a commission on qualifying purchases at no extra cost to you.
+              The same Amazon buttons are on water-test and fin-rot maintenance pages — no made-up products.
             </>
           }
           query={shop.query}
@@ -379,7 +380,7 @@ export default function WaterChangeCalculator() {
               </>
             ) : (
               <>
-                Match temperature within 2°F before adding new water. Always dose dechlorinator for tap water before it touches the tank.
+                A planning figure is to match temperature within about 2°F before adding new water. Always dose dechlorinator for tap water before it touches the tank.
               </>
             )
           }
@@ -394,13 +395,15 @@ export default function WaterChangeCalculator() {
 
       {mode === 'dilution' && dilution && dilution.kind === 'ok' && (
         <ResultCTA
-          heading="Shop a liquid test kit before the next change"
+          heading="Shop these supplies"
+          guideHref="/setup/water-chemistry-guide"
+          guideLabel="Read the water chemistry guide"
           blurb={
             <>
-              Dilution math is only as good as the reading. The same API Freshwater Master Test Kit hop used on the water-test review.
+              Dilution math is only as good as the reading. The same API Freshwater Master Test Kit button is on the water-test review.
             </>
           }
-          query="api freshwater master test kit"
+          query="api+freshwater+master+test+kit"
           cta="Browse API Master Test Kit on Amazon"
           source="tools-water-change-calculator"
         />

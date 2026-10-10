@@ -14,6 +14,7 @@
  * established OTTB retraining principles.
  */
 
+import { HopDisclosure } from '../../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -24,7 +25,6 @@ import {
   RelatedLinks,
   TableOfContents,
   FAQAccordion,
-  AffiliateDisclosure,
   ShopCtas,
   buildArticleSchema,
   buildFAQSchema,
@@ -170,7 +170,7 @@ export default function OttbInTrailAndPleasurePage() {
           <p>A successful trail and pleasure transition is measured in calmness, confidence, and soundness rather than ribbons. Some OTTBs become bombproof all-day trail horses; others are happiest with lighter, familiar work. A freshly retired, green OTTB is generally not an ideal first horse, but one already brought through letdown, foundation flatwork, and initial trail exposure by an aftercare organization or professional can be a wonderful and affordable partner for a less experienced rider. Patient, step-by-step progression with an OTTB-experienced trainer is the reliable route. For the rehoming and welfare side, including the Thoroughbred Aftercare Alliance, see the broader <Link href="/racing/off-track-thoroughbred-aftercare">aftercare reference</Link>.</p>
 
           <h2 id="faq">Frequently Asked Questions</h2>
-          <FAQAccordion items={FAQS} />
+          <FAQAccordion items={FAQS} includeSchema={false} />
 
           <h2 id="references">References</h2>
           <ol className="text-sm text-brand-text-mid">
@@ -179,19 +179,8 @@ export default function OttbInTrailAndPleasurePage() {
             <li>American Association of Equine Practitioners (AAEP). Pre-purchase examination guidelines. aaep.org.</li>
           </ol>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href="/go/amazon-brand/horse+reins?s=ottb-in-trail-and-pleasure" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated horse OTTB trail-confidence chart /
-              horse stall-door graduated-exposure card /
-              equine OTTB calm-pleasure handbook).
-              No existing product hop to keep.
-              Educational barn searches only; no Rx /
-              vaccine / flea / heartworm / nsaid hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs ottb-in-dressage /
-              disciplines-trail-riding hops.
-              Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
@@ -200,7 +189,7 @@ export default function OttbInTrailAndPleasurePage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/horse+reins?s=ottb-in-trail-and-pleasure"
-                amazonLabel="Shop on Amazon"
+                amazonLabel="Browse horse reins on Amazon →"
               />
           </div>
           </div>

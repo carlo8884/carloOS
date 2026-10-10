@@ -230,6 +230,11 @@ export default function TriageHelper() {
             >
               Find your nearest emergency vet →
             </Link>
+            <p className="mt-3 text-sm">
+              <Link href="/guides/er-vs-urgent-care" className="font-semibold text-brand-primary underline">
+                Compare an ER visit with urgent care
+              </Link>
+            </p>
 
             <p className="mt-3 text-xs text-brand-text-light m-0">
               Suspect poisoning? Call ASPCA Animal Poison Control:{' '}

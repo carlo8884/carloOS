@@ -10,21 +10,21 @@ import {
   DropCap,
   CrossPortfolioCard,
   ArticleSourcesList,
-  AffiliateDisclosure,
+  LastUpdated,
 } from '@carloOS/ui'
 
 const SOURCES = [
+  {
+    label: "Merck Veterinary Manual — dilated cardiomyopathy in ferrets",
+    url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/noninfectious-diseases-of-ferrets",
+    publisher: "Merck Veterinary Manual",
+  },
   {
     label: "Quesenberry KE, Carpenter JW (eds.). Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery. 4th ed. Saunders/Elsevier — ferret cardiology chapter covering dilated cardiomyopathy, valvular disease, and echocardiographic diagnosis.",
     url: "https://www.elsevier.com/books/ferrets-rabbits-and-rodents/quesenberry/978-1-4160-6621-7",
     publisher: "Elsevier/Saunders",
   },
-  {
-    label: "Merck Veterinary Manual — Cardiovascular and Hematopoietic Diseases of Ferrets: cardiomyopathy types, clinical signs, and management",
-    url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/cardiovascular-and-hematopoietic-diseases-of-ferrets",
-    publisher: "Merck Veterinary Manual",
-  },
-  {
+    {
     label: "Association of Exotic Mammal Veterinarians (AEMV) — practitioner directory and continuing-education content on ferret cardiac medicine",
     url: "https://aemv.org",
     publisher: "AEMV",
@@ -74,7 +74,6 @@ const medSchema = buildMedicalWebPageSchema({
   authorName: 'Ferret.com Editorial',
   lastReviewed: '2026-06-01',
 })
-
 
 const FAQS = [
   {
@@ -131,7 +130,7 @@ export default function FerretHeartDiseasePage() {
           <>
             <TableOfContents
               items={[
-                { label: 'TL;DR', href: '#tldr' },
+                { label: '', href: '#tldr' },
                 { label: 'Types of Heart Disease', href: '#types' },
                 { label: 'Why It Hides', href: '#hides' },
                 { label: 'Signs to Watch For', href: '#signs' },
@@ -154,7 +153,7 @@ export default function FerretHeartDiseasePage() {
 
           </>
         }
-      
+
         relatedLinks={[
           { title: 'Ferret Health Hub', href: '/health' },
           { title: 'Aging Ferret Care', href: '/health/aging-ferret-care' },
@@ -168,6 +167,7 @@ export default function FerretHeartDiseasePage() {
             publishedAt="2026-06-01"
             updatedAt="2026-06-01"
           />
+          <LastUpdated date="2026-10-09" />
 
           <DropCap>
             Heart disease in ferrets rarely announces itself. The earliest
@@ -179,8 +179,7 @@ export default function FerretHeartDiseasePage() {
             stamina changes seriously and asking a vet to listen to the heart.
           </DropCap>
 
-          <h2 id="tldr">TL;DR</h2>
-          <p>
+                    <p>
             The most common heart disease in pet ferrets is dilated
             cardiomyopathy, a weakening and enlargement of the heart muscle;
             valvular disease and, less often, hypertrophic cardiomyopathy also
@@ -332,21 +331,7 @@ export default function FerretHeartDiseasePage() {
             veterinarian.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated ferret stamina-map chart /
-              ferret fridge breathing-rate card /
-              mustelid cardio-echo handbook).
-              No existing product hop to keep.
-              Educational kitchen searches only; no Rx /
-              vaccine / heartworm / aging hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs health-hub /
-              influenza / distemper / GI hops. Ferret
-              aging stays held.
-              Do not re-open #1165 / what-to-expect. */}
-          
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
 

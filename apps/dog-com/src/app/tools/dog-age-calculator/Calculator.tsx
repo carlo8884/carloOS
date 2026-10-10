@@ -1,8 +1,11 @@
 'use client'
 
+import { HopDisclosure } from '../../../components/HopDisclosure'
+import Link from 'next/link'
+
 /**
  * Dog Age in Human Years Calculator -- /tools/dog-age-calculator
- * Client compute component. Implements the AVMA/AAHA-style banded model.
+ * Planning life-stage model, not an AVMA or AAHA chart.
  *
  * Formula (exact):
  *   age <= 1  : human = age * 15
@@ -15,7 +18,7 @@
  */
 
 import { useMemo, useState } from 'react'
-import { AffiliateDisclosure, ResultMeaning, ToolError, numberFieldError } from '@carloOS/ui'
+import { ResultMeaning, ToolError, numberFieldError } from '@carloOS/ui'
 
 type SizeCategory = 'small' | 'medium' | 'large' | 'giant'
 
@@ -42,7 +45,7 @@ function computeHumanAge(dogAge: number, perYear: number): number {
 function getLifeStage(dogAge: number, size: SizeCategory): string {
   if (dogAge < 1) return 'Puppy'
   if (dogAge < 2) return 'Adolescent'
-  // Senior thresholds approximate AVMA/AAHA-style guidance; larger dogs age faster
+  // Senior thresholds are a planning figure, not an AVMA or AAHA chart.
   const seniorAge = size === 'giant' ? 6 : size === 'large' ? 7 : size === 'medium' ? 8 : 9
   const matureAge = size === 'giant' ? 4 : size === 'large' ? 5 : size === 'medium' ? 6 : 7
   if (dogAge >= seniorAge) return 'Senior'
@@ -188,6 +191,11 @@ export default function DogAgeCalculator() {
       <ResultMeaning>
         That human-year number is a size-banded estimate of equivalent age, not a health assessment.
       </ResultMeaning>
+      <p className="mt-3 text-sm">
+        <Link href="/guides/dog-body-condition-score" className="font-semibold text-brand-primary underline">
+          Score body condition next
+        </Link>
+      </p>
 
       {/* Formula reference row */}
       <div className="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-3">
@@ -229,7 +237,14 @@ export default function DogAgeCalculator() {
             {shop.heading}
           </p>
           <p className="mt-1 text-sm leading-relaxed text-brand-text-mid">{shop.blurb}</p>
-          <AffiliateDisclosure variant="inline" siteId="dog-com" className="my-3" />
+          <HopDisclosure siteId="dog-com" href={shop.href} />
+          <a
+            href={shop.href}
+            rel="sponsored noopener"
+            className="inline-block max-w-full whitespace-normal text-left rounded bg-brand-dark px-4 py-2.5 text-sm font-bold text-white no-underline"
+          >
+            {shop.label}
+          </a>
         </div>
       ) : null}
 
@@ -239,7 +254,7 @@ export default function DogAgeCalculator() {
         age&nbsp;&gt;&nbsp;2&nbsp;yr: 24&nbsp;+&nbsp;size-factor&nbsp;&times;&nbsp;(age&nbsp;-&nbsp;2).
         Size factors after age&nbsp;2: Small&nbsp;4, Medium&nbsp;5, Large&nbsp;5, Giant&nbsp;6
         human years per calendar year.
-        Model consistent with AVMA and AAHA-style published life-stage frameworks.
+        These size factors are planning figures, not an AVMA or AAHA chart.
       </p>
     </div>
   )

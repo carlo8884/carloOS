@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, AffiliateDisclosure, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, QuietPartnerLink, RelatedLinks, TableOfContents, FAQAccordion, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -138,6 +138,7 @@ export default function EquineUlcersPage() {
             updatedAt="2026-09-06"
             reviewedBy="Editorial team"
           />
+          <LastUpdated date="2026-10-09" />
 
           <div id="key-facts" className="bg-brand-primary-pale border-l-4 border-brand-primary rounded-r-xl p-5 my-6 not-prose">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Key Facts — Equine Gastric Ulcers</div>
@@ -197,7 +198,7 @@ export default function EquineUlcersPage() {
               </tbody>
             </table>
           </div>
-          <p className="text-xs text-brand-text-mid">Comparison summarizes the on-page discussion; dosing and medication choices must be set by your veterinarian after gastroscopy.</p>
+          <p className="text-xs text-brand-text-mid">Comparison summarizes the sections above; dosing and medication choices must be set by your veterinarian after gastroscopy.</p>
 
           <h2 id="prevalence">Prevalence by Discipline</h2>
           <p>Documented EGUS prevalence varies sharply with discipline, training intensity, and population studied. Key published rates:</p>
@@ -305,7 +306,6 @@ export default function EquineUlcersPage() {
 
           <p><strong>Tier 6 — Aloe vera, slippery elm, marshmallow root:</strong> Anecdotal use is common; controlled trials are essentially absent in horses. A controlled trial of aloe vera vs omeprazole (Bush J et al., <em>Equine Veterinary Journal</em>, 2018) found omeprazole significantly more effective. These products may be benign but should not replace evidence-based therapy.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
           <div
             style={{
               background: 'var(--brand-surface, #f8f8f8)',
@@ -339,43 +339,14 @@ export default function EquineUlcersPage() {
               pectin-lecithin blends, sea-buckthorn formulations, hindgut buffers) are widely
               available through equestrian retailers. Tier 1 drugs (omeprazole / GastroGard /
               UlcerGard, sucralfate, misoprostol) are prescription — work with your veterinarian
-              for those, not a retail search. Horses.com earns an affiliate commission on
-              qualifying purchases — at no extra cost to you; commission does not influence
-              the editorial evidence ladder above.
+              for those, not a retail search.
+            </p>
+            <p style={{ fontSize: '13.5px', margin: '0 0 12px', lineHeight: 1.55 }}>
+              <a href="/nutrition/forage-basics">Read the forage basics guide</a> for the hay access this page treats as the management step. Prescription omeprazole stays with the veterinarian.
             </p>
             <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
-              <a
-                href="/go/smartpak/home?s=health-equine-ulcers"
-                rel="sponsored noopener"
-                style={{
-                  display: 'inline-block',
-                  padding: '8px 14px',
-                  background: 'var(--brand-primary, #c0392b)',
-                  color: 'white',
-                  fontSize: '13px',
-                  fontWeight: 600,
-                  textDecoration: 'none',
-                  borderRadius: '4px',
-                }}
-              >
-                Shop ulcer-care supplements at SmartPak →
-              </a>
-              <a
-                href="/go/dover/home?s=health-equine-ulcers"
-                rel="sponsored noopener"
-                style={{
-                  display: 'inline-block',
-                  padding: '8px 14px',
-                  background: 'var(--brand-dark, #2c3e50)',
-                  color: 'white',
-                  fontSize: '13px',
-                  fontWeight: 600,
-                  textDecoration: 'none',
-                  borderRadius: '4px',
-                }}
-              >
-                Shop ulcer-care supplements at Dover →
-              </a>
+              <QuietPartnerLink href="/go/smartpak/home?s=health-equine-ulcers" label="Shop ulcer-care supplements at SmartPak →" />
+              <QuietPartnerLink href="/go/dover/home?s=health-equine-ulcers" label="Shop ulcer-care supplements at Dover →" />
             </div>
           </div>
 
@@ -385,25 +356,29 @@ export default function EquineUlcersPage() {
           <p>Routine scheduling: gastroscopy is appropriate for any horse with chronic poor performance, unexplained weight loss, recurrent low-grade colic, or significant behavior change under saddle in the absence of an obvious lameness or tack-fit explanation.</p>
 
           <h2 id="faq">Frequently Asked Questions</h2>
-          <FAQAccordion items={FAQS} />
+          <FAQAccordion items={FAQS} includeSchema={false} />
 
           <p>For related reference material, see the <a href="/health">equine health hub</a>, the overlap with <a href="/health/colic">colic</a> (recurrent low-grade colic is a common ulcer sign), forage strategy in <a href="/nutrition/forage-basics">forage basics</a>, and meal sizing for working horses in <a href="/nutrition/feeding-the-performance-horse">feeding the performance horse</a>.</p>
 
-          <h2 id="references">References</h2>
-          <ol className="text-sm text-brand-text-mid">
-            <li>Sykes BW, Hewetson M, Hepburn RJ, Luthersson N, Tamzali Y. &ldquo;European College of Equine Internal Medicine Consensus Statement — Equine Gastric Ulcer Syndrome in Adult Horses.&rdquo; <em>Journal of Veterinary Internal Medicine</em>, 2015; 29:1288–1299.</li>
-            <li>Sykes BW et al. ECEIM Consensus Statement (updated 2024) on EGGD pathophysiology and management. <em>Journal of Veterinary Internal Medicine</em>, 2024.</li>
-            <li>Murray MJ, Schusser GF, Pipers FS, Gross SJ. &ldquo;Factors Associated with Gastric Lesions in Thoroughbred Racehorses.&rdquo; <em>Equine Veterinary Journal</em>, 1996; 28(5):368–374.</li>
-            <li>Andrews FM, Nadeau JA. &ldquo;Clinical Syndromes of Gastric Ulceration in Foals and Mature Horses.&rdquo; <em>Equine Veterinary Journal Supplement</em>, 1999; 29:30–33.</li>
-            <li>Nadeau JA, Andrews FM, Patton CS, Argenzio RA, Mathew AG, Saxton AM. &ldquo;Effect of Hydrochloric, Acetic, Butyric, and Propionic Acids on Pathogenesis of Ulcers in the Nonglandular Portion of the Stomach of Horses.&rdquo; <em>American Journal of Veterinary Research</em>, 2003; 64(4):404–412.</li>
-            <li>Lybbert TC, Gibbs PG, Cohen ND, et al. &ldquo;Feeding Alfalfa Hay to Exercising Horses Reduces the Severity of Gastric Squamous Mucosal Ulceration.&rdquo; <em>Journal of Animal Science</em>, 2007.</li>
-            <li>Nieto JE, Spier S, Pipers FS, et al. &ldquo;Comparison of Paste and Suspension Formulations of Omeprazole.&rdquo; <em>American Journal of Veterinary Research</em>, 2002; 63(11):1567–1573.</li>
-            <li>Doucet MY, Bertone AL, Hendrickson D, et al. &ldquo;Comparison of Efficacy and Safety of Paste Formulations of Firocoxib and Phenylbutazone in Horses with Naturally Occurring Osteoarthritis.&rdquo; <em>Equine Veterinary Journal</em>, 2008.</li>
-            <li>Tamzali Y, Marguet C, Priymenko N, Lyazrhi F. &ldquo;Prevalence of Gastric Ulcer Syndrome in High-Level Endurance Horses.&rdquo; <em>Equine Veterinary Journal</em>, 2011; 43(2):141–144.</li>
-            <li>Nieto JE, Snyder JR, Vatistas NJ, Jones JH. &ldquo;Gastric Ulcers in Endurance Horses.&rdquo; <em>Journal of Veterinary Internal Medicine</em>, 2004; 18(4):524–527.</li>
-            <li>Bush J, van den Boom R, Franklin S. &ldquo;Comparison of Aloe Vera and Omeprazole in the Treatment of Equine Gastric Ulcer Syndrome.&rdquo; <em>Equine Veterinary Journal</em>, 2018; 50(1):34–40.</li>
-            <li>American Association of Equine Practitioners. &ldquo;Gastric Ulcers in Horses,&rdquo; client education resource. aaep.org.</li>
-          </ol>
+          <div id="references">
+            <ArticleSourcesList
+              title="References"
+              sources={[
+              { label: "Sykes BW, Hewetson M, Hepburn RJ, Luthersson N, Tamzali Y. \"European College of Equine Internal Medicine Consensus Statement — Equine Gastric Ulcer Syndrome in Adult Horses.\" Journal of Veterinary Internal Medicine, 2015; 29:1288–1299.", url: "https://onlinelibrary.wiley.com/journal/19391676", publisher: "Journal of Veterinary Internal Medicine" },
+              { label: "Sykes BW et al. ECEIM Consensus Statement (updated 2024) on EGGD pathophysiology and management. Journal of Veterinary Internal Medicine, 2024.", url: "https://onlinelibrary.wiley.com/journal/19391676", publisher: "Journal of Veterinary Internal Medicine" },
+              { label: "Murray MJ, Schusser GF, Pipers FS, Gross SJ. \"Factors Associated with Gastric Lesions in Thoroughbred Racehorses.\" Equine Veterinary Journal, 1996; 28(5):368–374.", url: "https://beva.onlinelibrary.wiley.com/journal/20423306", publisher: "Equine Veterinary Journal" },
+              { label: "Andrews FM, Nadeau JA. \"Clinical Syndromes of Gastric Ulceration in Foals and Mature Horses.\" Equine Veterinary Journal Supplement, 1999; 29:30–33.", url: "https://beva.onlinelibrary.wiley.com/journal/20423306", publisher: "Equine Veterinary Journal" },
+              { label: "Nadeau JA, Andrews FM, Patton CS, Argenzio RA, Mathew AG, Saxton AM. \"Effect of Hydrochloric, Acetic, Butyric, and Propionic Acids on Pathogenesis of Ulcers in the Nonglandular Portion of the Stomach of Horses.\" American Journal of Veterinary Research, 2003; 64(4):404–412.", url: "https://avmajournals.avma.org/view/journals/ajvr/ajvr-overview.xml", publisher: "American Journal of Veterinary Research" },
+              { label: "Lybbert TC, Gibbs PG, Cohen ND, et al. \"Feeding Alfalfa Hay to Exercising Horses Reduces the Severity of Gastric Squamous Mucosal Ulceration.\" Journal of Animal Science, 2007.", url: "https://academic.oup.com/jas", publisher: "Journal of Animal Science" },
+              { label: "Nieto JE, Spier S, Pipers FS, et al. \"Comparison of Paste and Suspension Formulations of Omeprazole.\" American Journal of Veterinary Research, 2002; 63(11):1567–1573.", url: "https://avmajournals.avma.org/view/journals/ajvr/ajvr-overview.xml", publisher: "American Journal of Veterinary Research" },
+              { label: "Doucet MY, Bertone AL, Hendrickson D, et al. \"Comparison of Efficacy and Safety of Paste Formulations of Firocoxib and Phenylbutazone in Horses with Naturally Occurring Osteoarthritis.\" Equine Veterinary Journal, 2008.", url: "https://beva.onlinelibrary.wiley.com/journal/20423306", publisher: "Equine Veterinary Journal" },
+              { label: "Tamzali Y, Marguet C, Priymenko N, Lyazrhi F. \"Prevalence of Gastric Ulcer Syndrome in High-Level Endurance Horses.\" Equine Veterinary Journal, 2011; 43(2):141–144.", url: "https://beva.onlinelibrary.wiley.com/journal/20423306", publisher: "Equine Veterinary Journal" },
+              { label: "Nieto JE, Snyder JR, Vatistas NJ, Jones JH. \"Gastric Ulcers in Endurance Horses.\" Journal of Veterinary Internal Medicine, 2004; 18(4):524–527.", url: "https://onlinelibrary.wiley.com/journal/19391676", publisher: "Journal of Veterinary Internal Medicine" },
+              { label: "Bush J, van den Boom R, Franklin S. \"Comparison of Aloe Vera and Omeprazole in the Treatment of Equine Gastric Ulcer Syndrome.\" Equine Veterinary Journal, 2018; 50(1):34–40.", url: "https://beva.onlinelibrary.wiley.com/journal/20423306", publisher: "Equine Veterinary Journal" },
+              { label: "American Association of Equine Practitioners. \"Gastric Ulcers in Horses,\" client education resource. aaep.org.", url: "https://aaep.org/", publisher: "AAEP" },
+              ]}
+            />
+          </div>
         </div>
       </ArticleLayout>
     </>

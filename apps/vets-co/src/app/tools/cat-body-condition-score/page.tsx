@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -7,7 +8,6 @@ import {
   buildHowToSchema,
   ArticleLayout,
   FAQAccordion,
-  AffiliateDisclosure,
   ShopCtas,
   TableOfContents,
   RelatedLinks,
@@ -60,7 +60,7 @@ const softwareApplicationSchema = {
     'Three guided checks: rib palpation, waist from above, abdominal fat pad',
     'Primordial-pouch caveat (a normal belly flap mistaken for fat)',
     'Interpretation: underweight, ideal, overweight, obese, with safe next steps',
-    'Shoppable weight-management kit via Amazon category searches (digital pet scale, measuring tape, weight-management cat food, puzzle feeder, interactive cat toy)',
+    'Shop the weight-management kit via Amazon searches (digital pet scale, measuring tape, weight-management cat food, puzzle feeder, interactive cat toy)',
   ],
   publisher: { '@type': 'Organization', name: 'Vets.co Editorial', url: 'https://vets.co' },
 }
@@ -87,7 +87,7 @@ const FAQS = [
   {
     question: 'How do I know if my cat is overweight?',
     answer:
-      'Three checks: you should be able to feel the ribs with light pressure, see a waist behind the ribs from above, and find only a small abdominal fat pad. If the ribs are hard to feel, the waist has disappeared and the back looks oval, and the belly carries a firm fat pad, your cat is likely overweight. As a rule of thumb, each BCS point above 5 is roughly 10% over ideal body weight.',
+      'Three checks from the WSAVA 9-point cat chart: ribs felt with light pressure, a waist behind the ribs, and only a small abdominal fat pad. If the ribs are hard to feel, the waist has disappeared, and the belly carries a firm fat pad, the cat is above the chart’s ideal of 4 to 5 of 9. The chart does not state a percent of body weight per point. A score of 6 of 9 may be acceptable in some cats, especially older cats.',
   },
   {
     question: 'My cat has a hanging belly — is that fat?',
@@ -189,14 +189,14 @@ export default function CatBodyConditionScorePage() {
         </p>
         <CatBodyConditionScore />
 
-        {/* Money path — live amazon-brand search hops (weight-management kit).
-            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-            Category searches only — not a ranked list, not a diagnosis. */}
+        {/* Shop note — live amazon-brand search buttons (weight-management kit).
+            ShopCtas hides empty Chewy; never href="#" or an empty link.
+            Amazon searches only — not a ranked list, not a diagnosis. */}
         <div id="cat-bcs-kit" className="mt-8 mb-8">
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/digital+pet+scale?s=tools-cat-body-condition-score", "/go/amazon-brand/measuring+tape?s=tools-cat-body-condition-score", "/go/amazon-brand/weight+management+cat+food?s=tools-cat-body-condition-score", "/go/amazon-brand/puzzle+feeder?s=tools-cat-body-condition-score", "/go/amazon-brand/interactive+cat+toy?s=tools-cat-body-condition-score"]} />
           <div className="mt-4 rounded-xl border border-brand-border bg-brand-surface p-5">
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Shop a weight-management kit
+              Shop these supplies
             </div>
             <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
@@ -260,11 +260,12 @@ export default function CatBodyConditionScorePage() {
 
         <h2 id="how">How it works</h2>
         <p>
-          The WSAVA 9-point feline scale rests on three observations. At an ideal score of 4–5 the ribs
-          are easily felt under a thin layer of fat, a waist is visible from above, and only a minimal
-          abdominal fat pad is present. As fat is gained, the ribs become harder to feel, the waist
-          disappears, and the abdomen rounds and firms. Each point above 5 represents roughly 10% over
-          ideal body weight, so a score of 7 is about 20% overweight and a 9 is roughly 40%+.
+          How we calculate: the three checks follow the{' '}
+          <a href="https://wsava.org/wp-content/uploads/2025/06/WSAVA_BCSCat_BCSCat_Nutrition_250612.pdf" className="text-brand-primary hover:underline">WSAVA 9-point cat chart</a>.
+          At 4 to 5 of 9 the ribs are felt under a thin layer of fat, a waist is visible, and the
+          abdominal fat pad is minimal. A 6 of 9 may be acceptable in some cats, especially older cats.
+          Rounding the average of the three checks is a planning figure. The chart does not state a
+          percent of body weight per point.
         </p>
         <p>
           One feline-specific caution is built into the tool: the <strong>primordial pouch</strong>, a
@@ -286,7 +287,7 @@ export default function CatBodyConditionScorePage() {
 
         <h2 id="sources">Sources</h2>
         <ul>
-          <li>WSAVA Global Nutrition Committee — Body Condition Score (cat) chart, 9-point scale.</li>
+          <li>WSAVA Global Nutrition Committee — Body Condition Score (cat) chart, 9-point scale. https://wsava.org/wp-content/uploads/2025/06/WSAVA_BCSCat_BCSCat_Nutrition_250612.pdf</li>
           <li>AAHA — Weight Management Guidelines for Dogs and Cats.</li>
           <li>WSAVA Global Nutrition Committee — Muscle Condition Score guidance (companion assessment).</li>
         </ul>

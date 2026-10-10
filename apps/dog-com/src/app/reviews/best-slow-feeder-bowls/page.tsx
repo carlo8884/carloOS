@@ -1,22 +1,23 @@
 import type { Metadata } from 'next'
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import Link from 'next/link'
-import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
+import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, EmailCapture, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, CrossPortfolioCard, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript, buildItemListSchema} from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Slow Feeder Bowls for Dogs 2026 — Anti-Bloat | Dog.com', description: 'Best slow feeder bowls ranked for large breed and deep-chested dogs at risk for bloat. Outward Hound, Northmate.', path: '/reviews/best-slow-feeder-bowls', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Slow Feeder Bowls for Dogs 2026', description: 'Anti-bloat slow feeder bowls and puzzle feeders ranked.', url: 'https://dog.com/reviews/best-slow-feeder-bowls', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' })
-const outwardSchema = buildProductSchema({ name: 'Outward Hound Fun Feeder Slo Bowl', description: 'Ridge-pattern slow feeder bowl that extends mealtime 10x over standard bowls.', url: 'https://outwardhound.com', imageUrl: '', ratingValue: 9.2, reviewCount: 1 })
+const outwardSchema = buildProductSchema({ name: 'Outward Hound Fun Feeder Slo Bowl', description: 'Ridge-pattern slow feeder bowl that extends mealtime 10x over standard bowls.', url: 'https://dog.com/go/chewy-brand/outward+hound+fun+feeder?s=reviews-best-slow-feeder-bowls', imageUrl: '' })
 const allSchemas = combineSchemas(schema, outwardSchema)
 
 const PICKS = [
-  { label: 'Best Overall', name: 'Outward Hound Fun Feeder', subtitle: 'Ridge pattern · 10x slower · Easy clean · All sizes', href: '#outward-hound' },
+  { label: 'Best Overall', name: 'Outward Hound Fun Feeder', subtitle: 'Ridge pattern · 10x slower · Easy clean · All sizes', href: '#outward-hound', pickHop: '/go/chewy-brand/outward+hound+fun+feeder?s=reviews-best-slow-feeder-bowls' },
   { label: 'Best Puzzle', name: 'Northmate Green Interactive', subtitle: 'Grass-pattern · Scatter feeding · Enrichment', href: '#northmate' },
   { label: 'Best for Large Breeds', name: 'LickiMat Splash', subtitle: 'Spread food · Calm eating · Anti-anxiety', href: '#lickimat' },
 ]
 
 const itemList = buildItemListSchema({
   name: "Best Slow Feeder Bowls for Dogs 2026",
-  items: PICKS.map((pick) => ({ name: pick.name, url: `https://dog.com/reviews/best-slow-feeder-bowls${pick.href}` })),
+  items: PICKS.map((pick) => ({ name: pick.name, url: ({ 'Outward Hound Fun Feeder': 'https://dog.com/go/chewy-brand/outward+hound+fun+feeder?s=reviews-best-slow-feeder-bowls', 'Northmate Green Interactive': 'https://dog.com/go/amazon-brand/northmate+green+interactive+feeder?s=reviews-best-slow-feeder-bowls', 'LickiMat Splash': 'https://dog.com/go/chewy-brand/lickimat+splash?s=reviews-best-slow-feeder-bowls' }[pick.name] ?? `https://dog.com/reviews/best-slow-feeder-bowls${pick.href}`) })),
 })
 export default function BestSlowFeederBowlsPage() {
   return (
@@ -25,8 +26,25 @@ export default function BestSlowFeederBowlsPage() {
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">🐾 Buyer's Guide</span>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Slow Feeder Bowls for Dogs 2026</h1>
-        <PriceAsOf date="2026-10-04" tone="dark" />
-        <PrimaryHop href='/go/chewy-brand/outward+hound+fun+feeder?s=reviews-best-slow-feeder-bowls' label='Check price of the Outward Hound Fun Feeder on Chewy' />
+        <PriceAsOf date="2026-10-05" tone="dark" />
+        <PrimaryHop href='/go/chewy-brand/outward+hound+fun+feeder?s=reviews-best-slow-feeder-bowls' label='Check price of the Outward Hound Fun Feeder on Amazon' />
+        <HopDisclosure siteId="dog-com" href="/go/chewy-brand/outward+hound+fun+feeder?s=reviews-best-slow-feeder-bowls" />
+        <EmailCapture
+          variant="inline"
+          siteId="dog-com"
+          addressOnly
+          title="Shopping checklist"
+          ctaText="Copy checklist"
+          source="reviews-best-slow-feeder-bowls"
+          checklist={[
+            "The Outward Hound Fun Feeder, marked Best Overall.",
+            "Kibble wedges in the ridges, and some dogs flip the bowl.",
+            "The Northmate Green, marked Best Puzzle Feeder.",
+            "The LickiMat Splash, marked Best for Anxiety.",
+            "Fast eaters swallow air, which contributes to bloat risk in large breeds.",
+            "Slow feeders extend mealtime 5–10x, reduce gulping, and provide mental stimulation.",
+          ]}
+        />
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">Fast eaters swallow air, which contributes to bloat risk in large breeds. Slow feeders extend mealtime 5–10x, reduce gulping, and provide mental stimulation. A slow feeder bowl can meaningfully reduce bloat risk.</p>
       </div>
       <QuickPicks items={PICKS} />
@@ -46,41 +64,43 @@ export default function BestSlowFeederBowlsPage() {
               siteId="dog-com"
               nextHref="/nutrition/how-much-to-feed"
               nextLabel="Split the daily amount before you pick a maze"
-              nextBlurb="The callout is the bloat rule — twice-daily feeding plus a slow feeder, not one giant gulp. How-much-to-feed is the next step so each bowl actually holds a smaller half-ration. The hop below is the same Northmate search already on this page."
+              nextBlurb="The callout is the bloat rule — twice-daily feeding plus a slow feeder, not one giant gulp. How-much-to-feed is the next step so each bowl actually holds a smaller half-ration. The button below opens the same Northmate search on Amazon."
               resourceHref="/go/amazon-brand/northmate+green+interactive+feeder?s=reviews-best-slow-feeder-bowls"
-              resourceLabel="Browse Northmate Green interactive feeders on Amazon →"
+              resourceLabel="Search Amazon for Northmate Green"
             />
-            <ScoreMethodology />
-            <AffiliateDisclosure variant="inline" siteId="dog-com" />
-            <ReviewCard id="outward-hound" badge="Best Overall" name="Outward Hound Fun Feeder Slo Bowl" subtitle="Ridge and maze pattern · Extends mealtime 10x · Dishwasher safe · 5 sizes" score={9.2} winner
+            <HopDisclosure siteId="dog-com" href={["/go/chewy-brand/outward+hound+fun+feeder?s=reviews-best-slow-feeder-bowls", "/go/amazon-brand/northmate+green+interactive+feeder?s=reviews-best-slow-feeder-bowls", "/go/chewy-brand/lickimat+splash?s=reviews-best-slow-feeder-bowls"]} />
+            <ReviewCard id="outward-hound" badge="Best Overall" name="Outward Hound Fun Feeder Slo Bowl" subtitle="Ridge and maze pattern · Extends mealtime 10x · Dishwasher safe · 5 sizes" winner
               description={<p>The Outward Hound Fun Feeder is a widely used slow feeder and earns its reputation. The maze-like ridge pattern forces dogs to eat around obstacles, extending a typical mealtime from 30 seconds to 5–10 minutes. Available in 5 sizes from small breeds to large. Dishwasher safe (top rack). Non-slip base. The maze pattern is complex enough to slow even determined fast eaters — dogs that flip simpler bowls or eat around obstacles in other designs struggle more with the Fun Feeder's tight ridges. The main limitation: kibble can get wedged in tight ridges and require brushing to fully clean.</p>}
               specs={[{ label: 'Mealtime extension', value: '10x typical', highlight: 'good' }, { label: 'Sizes', value: '5 (mini to large breed)', highlight: 'good' }, { label: 'Dishwasher safe', value: 'Yes — top rack', highlight: 'good' }, { label: 'Non-slip base', value: 'Yes' }]}
               pros={['Strong mealtime extension among bowls compared here', '5 sizes for all breeds', 'Dishwasher safe', 'Affordable', 'Durable']}
               cons={['Tight ridges can trap kibble — requires scrubbing', 'Some dogs flip the bowl (use a mat under it)']}
               price="$10–18"
-              ctaText="Shop Outward Hound →"
+              priceNote="dated 2026-10-05."
+              ctaText="Shop Outward Hound Fun Feeder on Amazon →"
               ctaHref="/go/chewy-brand/outward+hound+fun+feeder?s=reviews-best-slow-feeder-bowls"
               ctaAffiliateProgram="chewy-brand"
               ctaAffiliateProduct="outward+hound+fun+feeder"
             />
-            <ReviewCard id="northmate" badge="Best Puzzle Feeder" name="Northmate Green Interactive Feeder" subtitle="Grass-pattern scatter feeding · Mental enrichment · Works on floor" score={9.0}
+            <ReviewCard id="northmate" badge="Best Puzzle Feeder" name="Northmate Green Interactive Feeder" subtitle="Grass-pattern scatter feeding · Mental enrichment · Works on floor"
               description={<p>The Northmate Green mimics foraging by hiding kibble in a grass-like silicone mat. Dogs sniff and nose through the "grass" to find individual pieces — engaging natural foraging behavior while dramatically slowing eating. The enrichment value is higher than a simple maze bowl — dogs using the Northmate Green are more mentally tired after meals, which has a calming effect. Flat design means no tipping. Easy to rinse. The floor-level design works well for low-mobility senior dogs who cannot comfortably eat from a raised bowl.</p>}
               specs={[{ label: 'Design', value: 'Grass pattern scatter feeder', highlight: 'good' }, { label: 'Enrichment', value: 'High — foraging behavior', highlight: 'good' }, { label: 'Flat design', value: 'Cannot tip over', highlight: 'good' }, { label: 'Best for', value: 'Enrichment-focused feeding' }]}
               pros={['High enrichment value', 'Cannot tip over', 'Easy to clean', 'Works with wet food too', 'Calming effect from foraging']}
               cons={['More expensive than basic slow bowls', 'Kibble can get stuck deep in grass segments']}
               price="$25–35"
-              ctaText="Shop Northmate Green →"
+              priceNote="dated 2026-10-05."
+              ctaText="Search Amazon for Northmate Green"
               ctaHref="/go/amazon-brand/northmate+green+interactive+feeder?s=reviews-best-slow-feeder-bowls"
               ctaAffiliateProgram="amazon-brand"
               ctaAffiliateProduct="northmate+green+interactive+feeder"
             />
-            <ReviewCard id="lickimat" badge="Best for Anxiety" name="LickiMat Splash" subtitle="Spread wet food · Licking reduces anxiety · Dishwasher safe" score={8.9}
+            <ReviewCard id="lickimat" badge="Best for Anxiety" name="LickiMat Splash" subtitle="Spread wet food · Licking reduces anxiety · Dishwasher safe"
               description={<p>LickiMats work differently from ridge bowls — wet food, peanut butter (xylitol-free), plain yogurt, or canned pumpkin is spread across the mat's textured surface. Dogs lick repeatedly to clean the mat. Licking is a natural stress-reducing behavior — it releases endorphins and has a measurably calming effect. LickiMat feeding before grooming, bath time, vet visits, or thunderstorms reduces anxiety significantly in many dogs. Not appropriate for kibble — designed for spreadable foods.</p>}
               specs={[{ label: 'Food type', value: 'Wet/spreadable only' }, { label: 'Anxiety reduction', value: 'Yes — licking is calming', highlight: 'good' }, { label: 'Dishwasher safe', value: 'Yes', highlight: 'good' }, { label: 'Best use', value: 'Pre-stress events, meal enrichment' }]}
               pros={['Calming licking behavior', 'Dishwasher safe', 'Works for enrichment during stressful events', 'Freezable for longer duration']}
               cons={['Wet food only — not for dry kibble feeders', 'Smaller capacity than bowl feeders']}
               price="$10–15"
-              ctaText="Shop LickiMat →"
+              priceNote="dated 2026-10-05."
+              ctaText="Shop LickiMat Splash on Amazon →"
               ctaHref="/go/chewy-brand/lickimat+splash?s=reviews-best-slow-feeder-bowls"
               ctaAffiliateProgram="chewy-brand"
               ctaAffiliateProduct="lickimat+splash"
@@ -88,7 +108,7 @@ export default function BestSlowFeederBowlsPage() {
             <div className="mt-10">
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-3">Who should buy which feeder</h2>
               <p className="text-sm text-brand-text-mid leading-relaxed mb-4">
-                Three feeders have review cards. The job, the price, and the food type are already on those cards. Scores are this page&apos;s editorial scores, not customer star ratings.
+                Three feeders have review cards. The job, the price, and the food type are already on those cards.
               </p>
               <div className="overflow-x-auto max-w-full min-w-0 mb-8">
                 <table className="w-full text-sm border-collapse table-fixed sm:table-auto min-w-0 sm:min-w-[36rem] [&_th]:break-words [&_td]:break-words">
@@ -109,7 +129,7 @@ export default function BestSlowFeederBowlsPage() {
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">Foraging enrichment, or a floor-level feeder a senior can use</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#northmate" className="text-brand-primary">Northmate Green</a><TableShopLink href={"/go/amazon-brand/northmate+green+interactive+feeder?s=reviews-best-slow-feeder-bowls"} product={"Northmate Green"} /></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#northmate" className="text-brand-primary">Northmate Green</a><TableShopLink href={"/go/amazon-brand/northmate+green+interactive+feeder?s=reviews-best-slow-feeder-bowls"} product={"Northmate Green"} label="Search Amazon for Northmate Green" /></td>
                       <td className="p-3 text-brand-text-mid">Best Puzzle Feeder. Flat, so it cannot tip. Works with wet food. $25–35</td>
                       <td className="p-3 text-brand-text-mid">You want the cheapest maze bowl. Kibble can stick deep in the grass segments</td>
                     </tr>
@@ -122,20 +142,20 @@ export default function BestSlowFeederBowlsPage() {
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-05" />
+              <ComparisonFoot updated="2026-10-09" />
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Which feeder fits which meal</h2>
               <FAQAccordion items={[
                 {
                   question: 'Which feeder does this page pick for a dog that gulps kibble?',
-                  answer: 'The Outward Hound Fun Feeder, scored 9.2 and marked Best Overall. The card lists maze ridges, five sizes, a top-rack dishwasher, and a printed price of $10–18. Kibble wedges in the ridges, and some dogs flip the bowl.',
+                  answer: 'The Outward Hound Fun Feeder, marked Best Overall. The card lists maze ridges, five sizes, a top-rack dishwasher, and a printed price of $10–18. Kibble wedges in the ridges, and some dogs flip the bowl.',
                 },
                 {
                   question: 'Which feeder does this page pick for foraging or a senior?',
-                  answer: 'The Northmate Green, scored 9.0 and marked Best Puzzle Feeder. The card says it is flat so it cannot tip, it works with wet food, and the printed price is $25–35. Kibble can stick deep in the grass segments.',
+                  answer: 'The Northmate Green, marked Best Puzzle Feeder. The card says it is flat so it cannot tip, it works with wet food, and the printed price is $25–35. Kibble can stick deep in the grass segments.',
                 },
                 {
                   question: 'Which feeder does this page pick before a stressful event?',
-                  answer: 'The LickiMat Splash, scored 8.9 and marked Best for Anxiety. The card says it takes wet or spreadable food only, is dishwasher safe and freezable, and the printed price is $10–15. It is not a kibble bowl.',
+                  answer: 'The LickiMat Splash, marked Best for Anxiety. The card says it takes wet or spreadable food only, is dishwasher safe and freezable, and the printed price is $10–15. It is not a kibble bowl.',
                 },
               ]} />
             </div>

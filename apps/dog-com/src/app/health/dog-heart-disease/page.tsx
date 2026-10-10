@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleSourcesList, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleSourcesList, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 
@@ -22,7 +23,7 @@ export default function DogHeartDiseasePage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="dog-com"
-        hero={{ title: 'Heart Disease in Dogs', subtitle: 'Heart disease is the leading cause of death in dogs over 10 years. Roughly 10% of dogs seen in general practice have some form of cardiac disease (BSAVA Manual of Canine and Feline Cardiorespiratory Medicine). Most cases are managed, not cured — but excellent management extends comfortable, good-quality life for years.', category: 'Dog Health', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '11 min',}}
+        hero={{ title: 'Heart Disease in Dogs', subtitle: 'Heart disease is common in older dogs. Most cases are managed, not cured — management can extend comfortable, good-quality life for years.', category: 'Dog Health', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '11 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Dog Health', href: '/health' }, { name: 'Heart Disease', href: '/health/dog-heart-disease' }]}
         relatedLinks={[{ title: 'Dog Health Hub', href: '/health', category: 'Hub' }, { title: 'Dog Kidney Disease', href: '/health/dog-kidney-disease', category: 'Dog Health' }, { title: 'Senior Dog Care', href: '/health/senior-dog-care', category: 'Dog Health' }, { title: 'Dog Symptoms Guide', href: '/health/dog-symptoms-guide', category: 'Dog Health' }]}
         sidebar={<>
@@ -31,13 +32,14 @@ export default function DogHeartDiseasePage() {
           <div className="bg-brand-dark rounded-lg p-5 mb-4">
             <div className="text-xs uppercase tracking-wide text-brand-primary mb-1 font-bold">Heart Disease + Insurance</div>
             <h3 className="font-display text-base font-bold text-brand-white mb-2">Cardiac care is a lifetime cost</h3>
-            <p className="text-xs text-white/60 mb-3 leading-relaxed">Lifetime cardiac medication + cardiology specialist visits commonly exceed $8,000. Insurance covers it — but only if enrolled before diagnosis.</p>
+            <p className="text-xs text-white/60 mb-3 leading-relaxed">Typical range, not a quote. Those lifetime figures are typical US clinic ranges dated 2026-10-04.</p>
+            <p className="text-xs text-white/60 mb-3 leading-relaxed">Lifetime cardiac medication + cardiology specialist visits commonly run $6,000–$12,000 or more. Insurance covers it — but only if enrolled before diagnosis.</p>
             <a href={crossSiteHref('vets-co', '/reviews/best-pet-insurance')} className="inline-block text-xs font-bold text-brand-primary hover:underline">Compare pet insurance →</a>
           </div>
           <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
 
         </>}
-       priceAsOf="2026-05-30">
+       priceAsOf="2026-10-04">
         <div className="carloOS-article">
 
           <h2 id="mmvd">Myxomatous Mitral Valve Disease (MMVD)</h2>
@@ -94,35 +96,15 @@ export default function DogHeartDiseasePage() {
           <p>Advanced or refractory CHF may also include: torsemide (more potent diuretic), sildenafil (for pulmonary hypertension), digoxin (for rate control in atrial fibrillation), and in some cases thoracocentesis (draining pleural fluid) or abdominocentesis (draining ascites). A veterinary cardiologist is the appropriate specialist to guide CHF management — these medication combinations and their adjustments require cardiac expertise.</p>
 
           <h2 id="kit">A Simple Heart-Disease Home-Watch Kit</h2>
-          <p>
-            Three everyday physical supplies match the
-            resting-respiratory-rate, one-minute count, and
-            exercise-intolerance walk copy above: a resting
-            respiratory rate notebook so weekly sleeping-breath
-            counts stay in one log — a sustained rise above the
-            dog&apos;s usual baseline is an early warning of
-            decompensation before visible distress — a one-minute
-            kitchen timer so the count is a full minute while the
-            dog is sleeping or fully at rest (one rise and fall of
-            the chest is one breath; over 30 breaths per minute at
-            rest is abnormal), and a step-in padded dog harness for
-            short, controlled walks when exercise intolerance
-            shows up, so a collar does not press a coughing chest. These are household log-and-walk tools, not treatments. They do not diagnose a murmur, they do not replace
-            echocardiography, they do not start pimobendan, they
-            do not replace a veterinarian-directed cardiac diet
-            (Hill&apos;s h/d, Royal Canin Cardiac), they do not
-            treat left-sided or right-sided CHF, and they are not
-            Vetmedin, furosemide, enalapril, or spironolactone. This page does
-            not hop medications. This page does not claim
-            hands-on testing. </p>
+          <p>Keep these on hand: one minute kitchen timer and step in padded dog harness. These are household log-and-walk tools, not treatments. They do not diagnose a murmur, they do not replace echocardiography, they do not start pimobendan, they do not replace a veterinarian-directed cardiac diet (Hill&apos;s h/d, Royal Canin Cardiac), they do not treat left-sided or right-sided CHF, and they are not Vetmedin, furosemide, enalapril, or spironolactone.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/one+minute+kitchen+timer?s=health-dog-heart-disease", "/go/amazon-brand/step+in+padded+dog+harness?s=health-dog-heart-disease"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (resting respiratory rate notebook / one-minute
               kitchen timer / step-in padded dog harness).
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or an empty link. Amazon searches only —
               unused vs #1046 pet medical records binder /
               AM/PM weekly pill organizer / digital hanging
               luggage scale, #1045 LED medical penlight /
@@ -140,18 +122,14 @@ export default function DogHeartDiseasePage() {
               thermometers, and soft+dog+carrier /
               soft+pet+carrier. Vetmedin, furosemide,
               enalapril, Hill's h/d, Royal Canin Cardiac,
-              and Rx ASINs are not shoppable hops. */}
+              and prescription brands are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
             </div>
             <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
-              <ShopCtas
-                amazonHref="/go/amazon-brand/resting+respiratory+rate+notebook?s=health-dog-heart-disease"
-                amazonLabel="Browse resting respiratory rate notebooks on Amazon →"
-              />
-              <ShopCtas
+<ShopCtas
                 amazonHref="/go/amazon-brand/one+minute+kitchen+timer?s=health-dog-heart-disease"
                 amazonLabel="Browse one-minute kitchen timers on Amazon →"
               />
@@ -167,11 +145,7 @@ export default function DogHeartDiseasePage() {
 
           <ArticleSourcesList
             sources={[
-              {
-                label: 'BSAVA Manual of Canine and Feline Cardiorespiratory Medicine (2nd ed.) — cardiac disease prevalence in general practice',
-                publisher: 'British Small Animal Veterinary Association',
-              },
-              {
+                            {
                 label: 'ACVIM Consensus Guidelines for the Diagnosis and Treatment of Myxomatous Mitral Valve Disease in Dogs — staging criteria and pimobendan thresholds',
                 url: 'https://onlinelibrary.wiley.com/doi/10.1111/jvim.15488',
                 publisher: 'J Vet Intern Med (Boswood et al., 2019)',
@@ -193,7 +167,7 @@ export default function DogHeartDiseasePage() {
               },
               {
                 label: 'FDA Investigation: Potential Dietary Causes of DCM in Dogs',
-                url: 'https://www.fda.gov/animal-veterinary/news-events/fda-investigation-potential-link-between-certain-diets-and-canine-dilated-cardiomyopathy',
+                url: 'https://www.fda.gov/animal-veterinary/outbreaks-and-advisories/fda-investigation-potential-link-between-certain-diets-and-canine-dilated-cardiomyopathy',
                 publisher: 'U.S. Food and Drug Administration',
               },
             ]}

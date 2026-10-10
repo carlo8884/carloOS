@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -11,7 +12,6 @@ import {
   DropCap,
   CrossPortfolioCard,
   ArticleSourcesList,
-  AffiliateDisclosure,
   ShopCtas,
 } from '@carloOS/ui'
 import {
@@ -33,7 +33,7 @@ export const metadata: Metadata = buildMetadata({
 const SOURCES = [
   {
     label: "ASPCA Animal Poison Control Center — toxic substance database and species-specific guidance",
-    url: "https://www.aspca.org/pet-care/animal-poison-control",
+    url: "https://www.aspca.org/pet-care/aspca-poison-control",
     publisher: "ASPCA",
   },
   {
@@ -132,7 +132,7 @@ export default function FerretToxicFoodsPage() {
           <>
             <TableOfContents
               items={[
-                { label: 'TL;DR', href: '#tldr' },
+                { label: '', href: '#tldr' },
                 { label: 'The Top-Tier Toxic Foods', href: '#toptier' },
                 { label: 'Foods to Avoid as Treats', href: '#avoid' },
                 { label: 'Household Toxins', href: '#household' },
@@ -191,8 +191,7 @@ export default function FerretToxicFoodsPage() {
             crisis.
           </DropCap>
 
-          <h2 id="tldr">TL;DR</h2>
-          <p>
+                    <p>
             Top-tier toxic: chocolate, xylitol, onions/garlic,
             grapes/raisins. Common avoid-as-treats: sugary fruits,
             dairy, peanut butter (xylitol risk), bread and grain
@@ -340,10 +339,10 @@ export default function FerretToxicFoodsPage() {
             risk below.
           </p>
 
-          {/* Money path — live amazon-brand search hops (safe treats / bowls / bottles).
-              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-              Category searches only — educational food-safety gear, not medications, not a ranked list. */}
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          {/* Shop note — live amazon-brand search buttons (safe treats / bowls / bottles).
+              ShopCtas hides empty Chewy; never href="#" or an empty link.
+              Amazon searches only — educational food-safety gear, not medications, not a ranked list. */}
+          <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/ferret+safe+treats?s=care-toxic-foods", "/go/amazon-brand/freeze+dried+raw+ferret+treats?s=care-toxic-foods", "/go/amazon-brand/heavy+ceramic+pet+food+bowl?s=care-toxic-foods", "/go/amazon-brand/ferret+water+bottle?s=care-toxic-foods", "/go/amazon-brand/ferret+chew+toys?s=care-toxic-foods"]} />
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
               Shop safe-treat and feeding gear
@@ -356,11 +355,11 @@ export default function FerretToxicFoodsPage() {
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/freeze+dried+raw+ferret+treats?s=care-toxic-foods"
-                amazonLabel="Browse freeze-dried meat treats on Amazon →"
+                amazonLabel="Browse freeze-dried raw ferret treats on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/heavy+ceramic+pet+food+bowl?s=care-toxic-foods"
-                amazonLabel="Browse ceramic food bowls on Amazon →"
+                amazonLabel="Browse heavy ceramic food bowls on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/ferret+water+bottle?s=care-toxic-foods"
@@ -523,6 +522,7 @@ export default function FerretToxicFoodsPage() {
             For any suspected ingestion of a toxic substance or a
             foreign body:
           </p>
+          <p>Those figures are typical US ranges dated 2026-05-29.</p>
           <ol>
             <li>
               <strong>Identify the substance if possible.</strong>
@@ -539,8 +539,8 @@ export default function FerretToxicFoodsPage() {
               <strong>If your vet is unavailable, call poison
               control.</strong> ASPCA APCC (888-426-4435) or Pet
               Poison Helpline (855-764-7661). Both are 24/7. Both
-              charge a per-case consultation fee (roughly $75-90 as
-              of 2026). They will give species-specific guidance,
+              charge a per-case consultation fee (see current price).
+              They will give species-specific guidance,
               answer questions about decontamination, and provide a
               case number that downstream vets can reference.
             </li>

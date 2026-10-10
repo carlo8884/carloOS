@@ -1,5 +1,7 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, FAQAccordion, CrossPortfolioCard, ArticleSourcesList, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import Link from 'next/link'
+import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, FAQAccordion, CrossPortfolioCard, ArticleSourcesList, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -202,30 +204,20 @@ export default function IntroducingSecondFerretPage() {
 
           <h2 id="kit">Quarantine &amp; bonding kit</h2>
           <p>
-            Everyday physical supplies that match the quarantine, scent-swap,
-            and neutral-ground copy on this page — an extra small-animal
-            travel kennel so the newcomer&apos;s quarantine check-up stays
-            in its own box, a scent-swap fleece sleep pouch so bedding can
-            move between cages before any face-to-face meeting, and a
-            portable small-animal playpen so the first sessions happen on
-            unfamiliar ground neither ferret owns. These are household
-            introduction tools, not treatments. They do not guarantee a
-            pairing, they do not replace a veterinary quarantine check,
-            they do not skip the separate-room window, and they are not a
-            ranked product list. Hard-sided ferret carriers, soft pet
-            carriers, top-loading small-animal carriers, ferret sleep
-            sacks, fleece small-animal bonding pouches, ferret hammocks,
-            Critter Nation cages, and puppy playpens already live on
-            other pages. This page does not claim hands-on testing. </p>
+            Keep these on hand: an extra small-animal travel kennel so the newcomer&apos;s quarantine check-up stays in its own box, a scent-swap fleece sleep pouch so bedding can move between cages before any face-to-face meeting, and a portable small-animal playpen so the first sessions happen on unfamiliar ground neither ferret owns. These are household introduction tools, not treatments. They do not guarantee a pairing, they do not replace a veterinary quarantine check, they do not skip the separate-room window, and they are not a ranked product list. </p>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/extra+small+animal+travel+kennel?s=care-introducing-a-second-ferret", "/go/amazon-brand/portable+small+animal+playpen?s=care-introducing-a-second-ferret"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (extra small-animal travel kennel /
-              scent-swap fleece sleep pouch /
               portable small-animal playpen).
+              The scent-swap fleece sleep pouch
+              stays in the copy. That exact Amazon
+              search is empty, and tighter queries
+              open guinea-pig snuggle sacks, so
+              this page has no pouch button.
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or an empty link. Amazon searches only —
               unused vs #1067 small-animal-rabies-
               certificate-holder / top-loading-small-
               animal-carrier / fleece-small-animal-
@@ -246,8 +238,8 @@ export default function IntroducingSecondFerretPage() {
               pet+glucometer / light+corn+syrup,
               pet+oral+feeding+syringe.
               Vaccines, Nobivac, IMRAB, diphenhydramine,
-              insulin syringes, and Rx ASINs are not
-              shoppable hops. */}
+              insulin syringes, and prescription brands are not
+              shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
@@ -259,16 +251,13 @@ export default function IntroducingSecondFerretPage() {
                 amazonLabel="Browse extra small-animal travel kennels on Amazon →"
               />
               <ShopCtas
-                amazonHref="/go/amazon-brand/scent+swap+fleece+sleep+pouch?s=care-introducing-a-second-ferret"
-                amazonLabel="Browse scent-swap fleece sleep pouches on Amazon →"
-              />
-              <ShopCtas
                 amazonHref="/go/amazon-brand/portable+small+animal+playpen?s=care-introducing-a-second-ferret"
                 amazonLabel="Browse portable small-animal playpens on Amazon →"
               />
           </div>
           </div>
 
+          <p>A second cage for the quarantine period is compared in the <Link href="/reviews/best-ferret-cage">ferret cage review</Link>.</p>
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
 

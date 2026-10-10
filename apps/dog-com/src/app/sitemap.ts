@@ -1,5 +1,7 @@
 import { MetadataRoute } from 'next'
 import { DOG_FOODS } from '../data/foods'
+import { INSURANCE_BREEDS } from '../data/insurance-by-breed'
+import { CARRIERS } from '../data/insurance-carriers'
 import { directorySitemapEntries, directorySitemapIds } from '@carloOS/config/directory'
 import directoryListings from '../data/directory-listings.json'
 
@@ -27,8 +29,24 @@ export default function sitemap(props?: { id?: number | string }): MetadataRoute
     priority: 0.70,
   }))
 
+  const breedHubs: MetadataRoute.Sitemap = INSURANCE_BREEDS.map((b) => ({
+    url: `https://dog.com/pet-insurance/breeds/${b.slug}`,
+    lastModified: now,
+    changeFrequency: 'monthly' as const,
+    priority: 0.70,
+  }))
+
+  const carrierPages: MetadataRoute.Sitemap = CARRIERS.map((c) => ({
+    url: `https://dog.com/pet-insurance/${c.slug}`,
+    lastModified: now,
+    changeFrequency: 'monthly' as const,
+    priority: 0.70,
+  }))
+
   return [
     ...canDogsEatRoutes,
+    ...breedHubs,
+    ...carrierPages,
     { url: 'https://dog.com', lastModified: now, changeFrequency: 'daily', priority: 1.00 },
     { url: 'https://dog.com/directory', lastModified: now, changeFrequency: 'weekly', priority: 0.70 },
     { url: 'https://dog.com/breeds', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
@@ -230,7 +248,6 @@ export default function sitemap(props?: { id?: number | string }): MetadataRoute
     { url: 'https://dog.com/reviews/best-heartworm-prevention', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://dog.com/reviews/best-joint-supplements', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://dog.com/reviews/best-large-breed-dog-food', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
-    { url: 'https://dog.com/reviews/best-pet-insurance', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://dog.com/reviews/best-slow-feeder-bowls', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://dog.com/symptoms', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
     { url: 'https://dog.com/training', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },

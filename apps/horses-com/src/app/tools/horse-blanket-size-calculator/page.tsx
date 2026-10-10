@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import {
   buildArticleSchema,
@@ -9,9 +10,9 @@ import {
   TableOfContents,
   RelatedLinks,
   CrossPortfolioCard,
-  AffiliateDisclosure,
   ShopCtas,
   JourneyNext,
+  PrimaryHop,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
 
@@ -108,6 +109,15 @@ export default function HorseBlanketSizeCalculatorPage() {
         { title: 'Horse Weight Calculator', href: '/tools/horse-weight-calculator', category: 'Tools' },
         { title: 'Tack Guide', href: '/tack', category: 'Tack' },
       ]}
+      heroHop={<>
+        <PrimaryHop href="/go/amazon-brand/waterproof+turnout+horse+blanket+winter?s=tools-horse-blanket-size-calculator" label="Search Amazon for a waterproof turnout blanket" />
+        <HopDisclosure tone="on-dark" siteId="horses-com" href="/go/amazon-brand/waterproof+turnout+horse+blanket+winter?s=tools-horse-blanket-size-calculator" />
+      </>}
+      heroExtra={
+        <div id="calculator" className="mb-4 [&_.text-brand-primary]:!text-brand-dark">
+          <Calculator />
+        </div>
+      }
       hero={{
         title: 'Horse Blanket Size Calculator',
         subtitle:
@@ -128,7 +138,7 @@ export default function HorseBlanketSizeCalculatorPage() {
           <TableOfContents
             items={[
               { label: 'The calculator', href: '#calculator' },
-              { label: 'Shop a blanket-fit kit', href: '#shop' },
+              { label: 'Shop these supplies', href: '#shop' },
               { label: 'How to measure', href: '#measure' },
               { label: 'Size vs. weight', href: '#weight' },
               { label: 'FAQ', href: '#faq' },
@@ -157,51 +167,48 @@ export default function HorseBlanketSizeCalculatorPage() {
           tail), in inches — round that to the nearest standard 3-inch size and you have the blanket size. A horse that
           measures 78 inches takes a 78-inch blanket (about 155 cm in European sizing).
         </p>
-
-        <h2 id="calculator">The calculator</h2>
         <p>
           Enter your chest-to-tail measurement in inches or centimetres. The calculator rounds to the nearest standard
           US/UK size and gives the approximate EU/cm equivalent and the size category.
         </p>
-        <Calculator />
         <JourneyNext
           siteId="horses-com"
           nextHref="/tack/blanket-weights"
           nextLabel="Pick fill weight after you have the size"
           nextBlurb="The calculator is the chest-to-tail size. Fill weight is a second decision — sheet, light, medium, or heavy — from climate, clip, and shelter. Shop the size you just measured; do not guess from a stall-door card."
-          resourceHref="/go/amazon-brand/winter+horse+blanket?s=tools-horse-blanket-size-calculator"
+          resourceHref="/go/amazon-brand/waterproof+turnout+horse+blanket+winter?s=tools-horse-blanket-size-calculator"
           resourceLabel="Browse winter horse blankets on Amazon →"
         />
 
-        {/* Money path — live amazon-brand search hops (winter blanket / turnout /
+        {/* Shop note — live amazon-brand search buttons (winter blanket / turnout /
             stable / tape / cooler). ShopCtas hides empty Chewy; never href="#"
-            or PLACEHOLDER. Measuring-tape query matches horse-weight-calculator. */}
-        <AffiliateDisclosure variant="inline" siteId="horses-com" />
+            or an empty link. Measuring-tape query matches horse-weight-calculator. */}
+        <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/waterproof+turnout+horse+blanket+winter?s=tools-horse-blanket-size-calculator", "/go/amazon-brand/horse+turnout+sheet?s=tools-horse-blanket-size-calculator", "/go/amazon-brand/horse+stable+blanket?s=tools-horse-blanket-size-calculator", "/go/amazon-brand/horse+measuring+tape?s=tools-horse-blanket-size-calculator", "/go/amazon-brand/horse+fleece+cooler?s=tools-horse-blanket-size-calculator"]} />
         <div id="shop" className="mb-8 rounded-xl border border-brand-border bg-brand-surface p-5">
           <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Shop a blanket-fit kit
+            Shop these supplies
           </div>
           <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
-              amazonHref="/go/amazon-brand/winter+horse+blanket?s=tools-horse-blanket-size-calculator"
-              amazonLabel="Shop winter horse blankets on Amazon →"
+              amazonHref="/go/amazon-brand/waterproof+turnout+horse+blanket+winter?s=tools-horse-blanket-size-calculator"
+              amazonLabel="Browse winter horse blankets on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/horse+turnout+sheet?s=tools-horse-blanket-size-calculator"
-              amazonLabel="Shop turnout sheets on Amazon →"
+              amazonLabel="Browse horse turnout sheets on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/horse+stable+blanket?s=tools-horse-blanket-size-calculator"
-              amazonLabel="Shop stable blankets on Amazon →"
+              amazonLabel="Browse horse stable blankets on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/horse+measuring+tape?s=tools-horse-blanket-size-calculator"
-              amazonLabel="Shop horse measuring tapes on Amazon →"
+              amazonLabel="Browse horse measuring tapes on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/horse+fleece+cooler?s=tools-horse-blanket-size-calculator"
-              amazonLabel="Shop fleece coolers on Amazon →"
+              amazonLabel="Browse horse fleece coolers on Amazon →"
             />
           </div>
         </div>

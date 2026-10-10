@@ -1,7 +1,13 @@
 import type { Metadata } from 'next'
-import { TableShopLink, ComparisonFoot, PrimaryHop, buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ReviewCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { HopDisclosure } from '../../../components/HopDisclosure'
+import { TableShopLink, ComparisonFoot, EmailCapture, PrimaryHop, buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ReviewCard, ShopCtas, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
+
+// Request-time env, same as the insurance comparison. A set partner tag
+// renders the quote link; an unset tag stays a disabled button.
+export const dynamic = 'force-dynamic'
+
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "What Pet Insurance Covers (and Doesn't) | Vets.co", description: "Accident and illness plans cover injuries, illness, surgery, diagnostics, and often hereditary conditions. Learn what is typically covered and what is excluded.", path: '/insurance/what-pet-insurance-covers', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'vets-co', title: "What Pet Insurance Covers and Doesn't", description: 'A breakdown of covered conditions, common exclusions, and plan types in pet insurance.', url: 'https://vets.co/insurance/what-pet-insurance-covers', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-09-06T00:00:00Z' })
 const FAQS = [
@@ -14,7 +20,11 @@ export default function WhatCoversPage() {
     <>
       <SchemaScript schema={schema} />
       <ArticleLayout siteId="vets-co"
-        heroHop={<PrimaryHop href='/go/embrace/home?s=insurance-what-pet-insurance-covers' label='Get an Embrace quote →' />}
+        heroHop={<>
+          <PrimaryHop href='/go/embrace/home?s=insurance-what-pet-insurance-covers' label='Get an Embrace quote →' holdWithoutPartnerId />
+          <PrimaryHop href="/go/amazon-brand/3+tab+dividers?s=insurance-what-pet-insurance-covers" label="Browse 3-tab dividers on Amazon →" />
+        </>}
+        heroExtra={<HopDisclosure siteId="vets-co" href={["/go/embrace/home?s=insurance-what-pet-insurance-covers", "/go/amazon-brand/3+tab+dividers?s=insurance-what-pet-insurance-covers"]} tone="on-dark" />}
         hero={{ title: "What Pet Insurance Covers (and Doesn't)", subtitle: 'Most pet insurance sold today is accident-and-illness coverage, which pays toward unexpected injuries and diseases — but every policy has exclusions, and the differences between plans live in the details. Knowing what is typically covered, what is usually excluded, and where plans diverge lets you choose coverage that fits your pet.', category: 'Insurance Guide', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '8 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Insurance', href: '/insurance' }, { name: 'What It Covers', href: '/insurance/what-pet-insurance-covers' }]}
         sidebar={<>
@@ -34,59 +44,50 @@ export default function WhatCoversPage() {
         <div className="carloOS-article">
 
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-09-06T00:00:00Z" reviewedBy="Editorial team" />
+          <LastUpdated date="2026-10-10" />
+          <EmailCapture
+            variant="inline"
+            siteId="vets-co"
+            addressOnly
+            title="Shopping checklist"
+            ctaText="Copy checklist"
+            source="insurance-what-pet-insurance-covers"
+            checklist={[
+              "These are predictable, budgetable costs, and insurance is designed for unexpected expenses.",
+              "This is a meaningful difference between plans, especially for purebred dogs with known genetic risks.",
+              "Always confirm in the policy wording, because coverage of hereditary conditions and the associated waiting periods vary by insurer.",
+              "Routine cleanings are usually excluded unless you add a wellness rider.",
+              "Because dental coverage is one of the most inconsistent areas across insurers, it is worth reading the specific policy language carefully.",
+              "Pet insurance comes in three broad forms.",
+            ]}
+          />
+
 
           <CalloutBox variant="info" title="Read the policy, not the marketing">
             Two plans advertised as comprehensive can differ enormously in waiting periods, hereditary-condition coverage, dental rules, and exam-fee handling. The marketing page tells you what is covered in broad strokes; the policy document tells you what is actually covered. Always read the sample policy before enrolling.
           </CalloutBox>
 
           <h2>The Three Plan Types</h2>
-          <p>Pet insurance comes in three broad forms. <strong>Accident-only</strong> plans cover injuries — fractures, lacerations, swallowed objects, toxin ingestion — and are the cheapest, suiting young or budget-constrained owners who want catastrophe protection. <strong>Accident-and-illness</strong> plans, the most common, add coverage for diseases ranging from infections to cancer, and are what most people mean by pet insurance. <strong>Wellness add-ons</strong> are optional riders that reimburse routine care; they are budgeting tools rather than true insurance. A 3-tab divider set is how those three categories stay labeled instead of one unmarked stack — it is not a letter-size file jacket (that lives on when-to-enroll), not a kraft two-pocket folder (that lives on choosing-a-veterinarian), and not letter-size hanging file folders (that live on how-to-afford-vet-care).</p>
+          <p>Pet insurance comes in three broad forms. <strong>Accident-only</strong> plans cover injuries — fractures, lacerations, swallowed objects, toxin ingestion — and are the cheapest, suiting young or budget-constrained owners who want catastrophe protection. <strong>Accident-and-illness</strong> plans, the most common, add coverage for diseases ranging from infections to cancer, and are what most people mean by pet insurance. <strong>Wellness add-ons</strong> are optional riders that reimburse routine care; they are budgeting tools rather than true insurance. A 3-tab divider set is how those three categories stay labeled instead of one unmarked stack.</p>
 
           <h2>What Is Typically Covered</h2>
-          <p>A standard accident-and-illness policy generally covers diagnostics (bloodwork, imaging, biopsies), surgery and hospitalization, prescription medications related to a covered condition, emergency and specialist care, cancer treatment, and treatment for chronic illnesses. Many modern plans also cover hereditary and congenital conditions, behavioral therapy, and alternative therapies, though these vary by insurer. The unifying principle is that the condition must be unexpected and not pre-existing.</p>
+          <p>A standard accident-and-illness policy generally covers diagnostics (bloodwork, imaging, biopsies), surgery and hospitalization, prescription medications related to a covered condition, emergency and specialist care, cancer treatment, and treatment for chronic illnesses. Many modern plans also cover hereditary and congenital conditions, behavioral therapy, and alternative therapies, though these vary by insurer. The unifying principle is that the condition must be unexpected and not pre-existing. How a condition that showed signs before enrollment is treated is in the <a href="/insurance/pre-existing-conditions" className="text-brand-primary underline">pre-existing conditions guide</a>.</p>
 
           <h2>What Is Usually Excluded</h2>
-          <p>Common exclusions include pre-existing conditions (anything showing signs before the policy or during waiting periods), routine and preventive care unless a wellness rider is added, breeding and pregnancy costs, cosmetic or elective procedures, and food or supplements. Some plans exclude or limit specific hereditary conditions for certain breeds, or impose waiting periods for orthopedic issues. An assorted highlighter set is how typical coverage and usual exclusions stay marked on the sample policy — it is not 3x3 sticky notes (that live on questions-to-ask-your-vet), not a yellow legal pad (that lives on how-to-afford-vet-care), and not a four-column accounting pad (that lives on how-pet-insurance-works). Reading the exclusions list is as important as reading the coverage list.</p>
+          <p>Common exclusions include pre-existing conditions (anything showing signs before the policy or during waiting periods), routine and preventive care unless a wellness rider is added, breeding and pregnancy costs, cosmetic or elective procedures, and food or supplements. Some plans exclude or limit specific hereditary conditions for certain breeds, or impose waiting periods for orthopedic issues. An assorted highlighter set is how typical coverage and usual exclusions stay marked on the sample policy. Reading the exclusions list is as important as reading the coverage list.</p>
 
           <h2>Where Plans Diverge</h2>
-          <p>The biggest differences between plans tend to be in four areas: whether exam or consultation fees are reimbursed, how hereditary and congenital conditions are handled, the length of waiting periods (especially for orthopedic conditions), and dental coverage rules. Removable page flags are how those exam-fee, hereditary, dental, and waiting-period clauses stay flagged on the sample policy — they are not a monthly desk pad calendar (that lives on when-to-enroll), not a self-inking date stamp (that lives on when-to-enroll), and not letter-size sheet protectors (that live on questions-to-ask-your-vet). Two plans can look identical in headline coverage yet differ by thousands of dollars in a real claim because of these details. This is why side-by-side comparison of policy documents, not advertisements, is essential.</p>
+          <p>The biggest differences between plans tend to be in four areas: whether exam or consultation fees are reimbursed, how hereditary and congenital conditions are handled, the length of waiting periods (especially for orthopedic conditions), and dental coverage rules. Removable page flags are how those exam-fee, hereditary, dental, and waiting-period clauses stay flagged on the sample policy . Two plans can look identical in headline coverage yet differ by thousands of dollars in a real claim because of these details. This is why side-by-side comparison of policy documents, not advertisements, is essential.</p>
 
           <h2>Matching Coverage to Your Pet</h2>
           <p>A young mixed-breed dog with no known risks may be well served by a straightforward accident-and-illness plan. A purebred with documented hereditary risk benefits from a plan that clearly covers those conditions with short waiting periods. An owner focused purely on catastrophe protection might choose accident-and-illness with a high deductible and high limit and skip the wellness rider. Understanding what each plan type covers — and excludes — lets you align coverage with your pet's specific risk profile.</p>
 
-          <h2 id="kit">What-pet-insurance-covers kit</h2>
-          <p>
-            Everyday physical supplies that match the
-            accident-only, accident-and-illness, and
-            exam-fee copy on this page — a 3-tab
-            divider set so accident-only,
-            accident-and-illness, and wellness
-            add-on stay three labeled categories, an
-            assorted highlighter set so typical
-            coverage and usual exclusions stay
-            marked on the sample policy, and
-            removable page flags so exam-fee,
-            hereditary, dental, and waiting-period
-            clauses stay flagged where plans
-            diverge. These are educational coverage /
-            paperwork tools, not a ranked product
-            list, not a substitute for veterinary
-            care, and not a treatment. Monthly desk
-            pad calendars, self-inking date stamps,
-            and letter-size file jackets already
-            live on when-to-enroll. Four-column
-            accounting pads, letter-size poly
-            envelopes, and desktop receipt
-            organizers already live on
-            how-pet-insurance-works. This page does
-            not hop medications or insurance brands
-            as Amazon searches. This page does not
-            claim hands-on testing.
-          </p>
+          <h2 id="kit">Supplies for reading a policy</h2>
+          <p>A 3-tab divider set keeps accident-only, accident-and-illness, and a wellness add-on as three labeled categories. An assorted highlighter set marks typical coverage and usual exclusions on a sample policy. Removable page flags mark exam-fee, hereditary, dental, and waiting-period clauses. These are paperwork tools, not a treatment and not a ranked product list.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/3+tab+dividers?s=insurance-what-pet-insurance-covers", "/go/amazon-brand/assorted+highlighter+set?s=insurance-what-pet-insurance-covers", "/go/amazon-brand/removable+page+flags?s=insurance-what-pet-insurance-covers"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (3-tab dividers /
               assorted highlighter set /
               removable page flags).
@@ -95,9 +96,9 @@ export default function WhatCoversPage() {
               not a ranked product list, not a
               substitute for veterinary care, no Rx
               / first-aid kit / thermometer /
-              carrier / insurance-brand ASIN hops.
+              carrier / insurance-brand product page buttons.
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or an empty link. Amazon searches only —
               unused vs #1169
               monthly+desk+pad+calendar /
               self+inking+date+stamp /
@@ -122,7 +123,7 @@ export default function WhatCoversPage() {
               wall+mounted+magnetic+monthly+planner.
               Carrier quote CTAs stay on
               /go/embrace and /go/lemonade —
-              not amazon-brand hops. */}
+              not amazon-brand buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
@@ -145,14 +146,13 @@ export default function WhatCoversPage() {
           </div>
 
           <h2 id="quote">Insurers With Different Coverage Models</h2>
-          <p>What a plan covers — and whether wellness or preventive care can be added — varies by insurer. The two below take different approaches to that question; for the full side-by-side, see our <a href="/reviews/best-pet-insurance">best pet insurance comparison</a>. Always read the policy&apos;s coverage and exclusions before enrolling.</p>
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <p>What a plan covers — and whether wellness or preventive care can be added — varies by insurer. The two below take different approaches to that question; for the full side-by-side, see our <a href="/reviews/best-pet-insurance">best pet insurance comparison</a>. Always read the policy&apos;s coverage and exclusions before enrolling. The <a href="/tools/pet-insurance-worth-it-calculator">worth-it calculator</a> turns a quote into the eligible-cost level where that policy pays for itself. Enter illness and accident costs only.</p>
+          <HopDisclosure siteId="vets-co" href={["/go/embrace/home?s=insurance-what-pet-insurance-covers", "/go/lemonade/home?s=insurance-what-pet-insurance-covers"]} />
           <ReviewCard
             id="embrace"
             badge="Wellness Add-On"
             name="Embrace"
             subtitle="Accident-and-illness with an optional wellness rewards plan"
-            score={8.6}
             winner
             description={
               <p>An accident-and-illness insurer that also offers an optional Wellness Rewards plan, which can reimburse routine care that standard insurance excludes — useful if you want both catastrophic protection and help with preventive costs. Coverage and exclusions still apply to the core policy; read them when you quote.</p>
@@ -166,7 +166,7 @@ export default function WhatCoversPage() {
             cons={['Wellness add-on is a budgeted benefit, not insurance', 'Standard exclusions apply']}
             price="Quote-based"
             ctaText="Get a Quote →"
-            ctaHref="/go/embrace/home?s=insurance-what-pet-insurance-covers"
+            ctaHref="/go/embrace/home?s=insurance-what-pet-insurance-covers" holdWithoutPartnerId
             ctaAffiliateProgram="embrace"
             ctaAffiliateProduct="home"
           />
@@ -175,7 +175,6 @@ export default function WhatCoversPage() {
             badge="App-First"
             name="Lemonade Pet"
             subtitle="Accident-and-illness with optional preventive packages"
-            score={8.3}
             description={
               <p>An app-first insurer offering accident-and-illness coverage with optional preventive-care packages bundled on top. The digital claims flow is a draw for owners who want fast, app-based submission. Availability varies by state; confirm coverage details and exclusions for your location when you quote.</p>
             }
@@ -194,7 +193,7 @@ export default function WhatCoversPage() {
           />
 
           <h2 id="who">Who should quote which</h2>
-          <p>Both cards are quote-based. Wellness and preventive extras are already described as add-ons, not the insurance policy. Scores are this page&apos;s editorial scores, not customer star ratings.</p>
+          <p>Both cards are quote-based. Wellness and preventive extras are already described as add-ons, not the insurance policy.</p>
           <div className="overflow-x-auto my-6 max-w-full">
             <table className="w-full text-sm border-collapse table-fixed sm:table-auto min-w-0 sm:min-w-[36rem] [&_th]:break-words [&_td]:break-words">
               <thead>
@@ -208,7 +207,7 @@ export default function WhatCoversPage() {
               <tbody>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 text-brand-text-mid">Accident-and-illness plus an optional wellness rewards plan</td>
-                  <td className="p-3 font-bold text-brand-dark"><a href="#embrace" className="text-brand-primary">Embrace</a><TableShopLink href={"/go/embrace/home?s=insurance-what-pet-insurance-covers"} product={"Embrace"} /></td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#embrace" className="text-brand-primary">Embrace</a><TableShopLink href={"/go/embrace/home?s=insurance-what-pet-insurance-covers"} product={"Embrace"} holdWithoutPartnerId /></td>
                   <td className="p-3 text-brand-text-mid">Wellness Add-On. Optional wellness plan. Diminishing deductible. Quote-based</td>
                   <td className="p-3 text-brand-text-mid">The wellness add-on is a budgeted benefit, not insurance. Standard exclusions apply</td>
                 </tr>
@@ -221,10 +220,16 @@ export default function WhatCoversPage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-05" />
+          <ComparisonFoot updated="2026-10-10" />
 
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
+                  <ArticleSourcesList
+            title="Sources"
+            sources={[
+            { label: "Embrace", url: "https://www.embracepetinsurance.com/", publisher: "Embrace" },
+            ]}
+          />
         </div>
       </ArticleLayout>
     </>

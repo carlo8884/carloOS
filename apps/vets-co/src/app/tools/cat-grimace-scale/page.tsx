@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -8,7 +9,6 @@ import {
   buildFAQSchema,
   ArticleLayout,
   FAQAccordion,
-  AffiliateDisclosure,
   ShopCtas,
   TableOfContents,
   RelatedLinks,
@@ -61,7 +61,7 @@ const softwareApplicationSchema = {
     'Estimated grimace total out of 10 with the ≈4/10 analgesia threshold',
     'Calibrated interpretation: minimal signs, some signs, or signs consistent with pain',
     'Safety guidance: never give human painkillers to cats; defer to a veterinarian',
-    'Shoppable observation kit via Amazon category searches (soft carrier, pet first-aid kit, calming pheromone diffuser, digital pet thermometer, cozy recovery bed)',
+    'Shop the observation kit via Amazon searches (soft carrier, pet first-aid kit, calming pheromone diffuser, digital pet thermometer, cozy recovery bed)',
   ],
   publisher: { '@type': 'Organization', name: 'Vets.co Editorial', url: 'https://vets.co' },
 }
@@ -194,14 +194,14 @@ export default function CatGrimaceScalePage() {
         </p>
         <CatGrimaceScale />
 
-        {/* Money path — live amazon-brand search hops (observation / comfort kit).
-            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-            Category searches only — not a ranked list, not a diagnosis. */}
+        {/* Shop note — live amazon-brand search buttons (observation / comfort kit).
+            ShopCtas hides empty Chewy; never href="#" or an empty link.
+            Amazon searches only — not a ranked list, not a diagnosis. */}
         <div id="cat-grimace-kit" className="mt-8 mb-8">
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/soft+cat+carrier?s=tools-cat-grimace-scale", "/go/amazon-brand/pet+first+aid+kit?s=tools-cat-grimace-scale", "/go/amazon-brand/calming+pheromone+diffuser?s=tools-cat-grimace-scale", "/go/amazon-brand/digital+pet+thermometer?s=tools-cat-grimace-scale", "/go/amazon-brand/cat+recovery+bed?s=tools-cat-grimace-scale"]} />
           <div className="mt-4 rounded-xl border border-brand-border bg-brand-surface p-5">
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Shop a pain-watch observation kit
+              Shop these supplies
             </div>
             <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
@@ -304,7 +304,7 @@ export default function CatGrimaceScalePage() {
         </ul>
 
         <h2 id="faq">Frequently asked questions</h2>
-        <FAQAccordion items={FAQS} />
+        <FAQAccordion items={FAQS} includeSchema={false} />
       </div>
     </ArticleLayout>
   )

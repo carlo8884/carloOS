@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -9,7 +10,6 @@ import {
   FAQAccordion,
   CrossPortfolioCard,
   ArticleSourcesList,
-  AffiliateDisclosure,
   ShopCtas,
 } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
@@ -173,11 +173,11 @@ export default function EarCleaningPage() {
             This page describes supplies editorially and does not recommend a specific product to purchase.
           </p>
 
-          {/* Money path — live amazon-brand search hops (ear-grooming supplies).
-              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-              Category searches only — educational gear, not medications, not a ranked list.
+          {/* Shop note — live amazon-brand search buttons (ear-grooming supplies).
+              ShopCtas hides empty Chewy; never href="#" or an empty link.
+              Amazon searches only — educational gear, not medications, not a ranked list.
               No prescription mite treatments, no hydrogen peroxide, no alcohol. */}
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/pet+ear+cleaner?s=care-ear-cleaning", "/go/amazon-brand/cotton+pads?s=care-ear-cleaning", "/go/amazon-brand/ferret+lickable+treat+paste?s=care-ear-cleaning"]} />
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop ear-grooming supplies

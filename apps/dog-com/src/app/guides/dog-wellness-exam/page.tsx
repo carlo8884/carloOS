@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import {
   buildMetadata,
@@ -5,7 +6,6 @@ import {
   FAQAccordion,
   RelatedLinks, CrossPortfolioCard,
   TableOfContents,
-  AffiliateDisclosure,
   ShopCtas,
   JourneyNext,
 } from '@carloOS/ui'
@@ -139,7 +139,7 @@ export default function DogWellnessExamPage() {
             reviewedBy="Editorial team"
           />
 
-          <CalloutBox variant="evidence" title="TL;DR — What you need to know">
+          <CalloutBox variant="evidence" title="What you need to know">
             <p>
               <strong>Frequency:</strong> annual for healthy adults, twice yearly for seniors, a frequent series for puppies (per AAHA Canine Life Stage Guidelines).
             </p>
@@ -170,7 +170,7 @@ export default function DogWellnessExamPage() {
             siteId="dog-com"
             nextHref="/training/puppy-schedule"
             nextLabel="Set the daily puppy schedule around those visits"
-            nextBlurb="The list is the visit-frequency rule — a puppy series every few weeks, annual for healthy adults, twice yearly for seniors. The puppy-schedule tool is the day-to-day plan between those appointments. The hop below is the same fecal-sample collection-kit search already on this page."
+            nextBlurb="The list is the visit-frequency rule — a puppy series every few weeks, annual for healthy adults, twice yearly for seniors. The puppy-schedule tool is the day-to-day plan between those appointments. The button below opens the same fecal-sample collection-kit search on Amazon."
             resourceHref="/go/amazon-brand/fecal+sample+collection+kit?s=guides-dog-wellness-exam"
             resourceLabel="Browse fecal-sample collection kits on Amazon →"
           />
@@ -245,15 +245,15 @@ export default function DogWellnessExamPage() {
 
           <h2 id="kit">A Simple Wellness-Visit Kit</h2>
           <p>
-            Three everyday physical supplies match the prepare and low-stress copy above: a fecal-sample collection kit so a fresh stool sample is ready if the clinic asks for one, leak-proof specimen bags so the sample does not leak in the car or at the desk, and high-value vet-visit treats reserved for the exam room so handling stays easier. These are appointment-prep tools. They do not diagnose intestinal parasites, they do not replace the fecal test the veterinarian runs, they are not a first-aid wound kit, and they are not vaccines, heartworm tests, or medications. Home temperature checks stay on the <a href="/guides/how-to-take-dogs-temperature" className="text-brand-primary hover:underline">vital signs guide</a>. This page does not claim hands-on testing. </p>
+            Keep these on hand: fecal sample collection kit, leak proof specimen bags, and high value vet visit treats. These are appointment-prep tools. They do not diagnose intestinal parasites, they do not replace the fecal test the veterinarian runs, they are not a first-aid wound kit, and they are not vaccines, heartworm tests, or medications. Home temperature checks stay on the <a href="/guides/how-to-take-dogs-temperature" className="text-brand-primary hover:underline">vital signs guide</a>. </p>
 
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/fecal+sample+collection+kit?s=guides-dog-wellness-exam", "/go/amazon-brand/leak+proof+specimen+bags?s=guides-dog-wellness-exam", "/go/amazon-brand/high+value+vet+visit+treats?s=guides-dog-wellness-exam"]} />
 
-          {/* Money path — live amazon-brand search hops (wellness-visit kit).
-              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-              Category searches only — everyday physical supplies matching
+          {/* Shop note — live amazon-brand search buttons (wellness-visit kit).
+              ShopCtas hides empty Chewy; never href="#" or an empty link.
+              Amazon searches only — everyday physical supplies matching
               on-page fecal-sample-collection-kit / leak-proof-specimen-bags /
-              high-value-vet-visit-treats copy, not first-aid wound hops,
+              high-value-vet-visit-treats copy, not first-aid wound buttons,
               house-training poop bags, or puppy-training treats. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
@@ -280,6 +280,7 @@ export default function DogWellnessExamPage() {
           <FAQAccordion
             items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))}
             allowMultiple
+            includeSchema={false}
           />
 
           <ArticleSourcesList
@@ -288,7 +289,7 @@ export default function DogWellnessExamPage() {
               { label: 'AAHA Canine Life Stage Guidelines', url: 'https://www.aaha.org/aaha-guidelines/life-stage-canine-2019/life-stage-canine-2019/', publisher: 'AAHA' },
               { label: 'Your Pet’s Annual Wellness Examination', url: 'https://www.avma.org/resources-tools/pet-owners/petcare', publisher: 'AVMA' },
               { label: 'AAHA Accreditation — What It Means', url: 'https://www.aaha.org/for-pet-parents/find-an-aaha-accredited-animal-hospital-near-me/', publisher: 'AAHA' },
-              { label: 'Routine Health Care of Dogs', url: 'https://www.merckvetmanual.com/dog-owners/routine-care-and-breeding-of-dogs/routine-health-care-of-dogs', publisher: 'Merck Veterinary Manual' },
+              { label: 'Routine Health Care of Dogs', url: 'https://www.merckvetmanual.com/dog-owners/routine-care-of-dogs/routine-health-care-of-dogs', publisher: 'Merck Veterinary Manual' },
             ]}
           />
         </div>

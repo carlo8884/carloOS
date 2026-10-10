@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { StockImage, buildMetadata, ArticleLayout, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
+import { ShopCtas, StockImage, buildMetadata, ArticleLayout, RelatedLinks, CrossPortfolioCard , ArticleSourcesList } from '@carloOS/ui'
 import { FAQAccordion, SchemaScript, buildArticleSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
@@ -69,9 +70,9 @@ export default function OscarPage() {
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Quick Stats</div>
-          {[['Scientific name', 'Astronotus ocellatus'], ['Adult size', '12–18 inches'], ['Min tank', '75 gallons (1 oscar)'], ['Two oscars', '125+ gallons minimum'], ['Temperature', '74–81°F'], ['pH', '6.0–8.0 (adaptable)'], ['Lifespan', '10–15 years'], ['HITH', 'Most common disease — preventable']].map(([k, v]) => (
+          {[['Scientific name', 'Astronotus ocellatus'], ['Adult size', '12–18 inches'], ['Min tank', '75 gallons (1 oscar)'], ['Two oscars', '125+ gallons minimum'], ['Temperature', '71–77°F (https://www.fishbase.se/summary/Astronotus-ocellatus.html)'], ['pH', '6.0–8.0 (adaptable)'], ['Lifespan', '10–15 years'], ['HITH', 'Most common disease — preventable']].map(([k, v]) => (
             <div key={k} className="flex justify-between py-1.5 border-b border-brand-border text-xs last:border-0">
-              <span className="text-brand-text-light">{k}</span><span className="font-bold text-brand-dark text-right max-w-[55%]">{v}</span>
+              <span className="text-brand-text-light">{k}</span><span className="font-bold text-brand-dark text-right max-w-[55%] break-all">{v}</span>
             </div>
           ))}
         </div>
@@ -84,8 +85,8 @@ export default function OscarPage() {
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
         <StockImage manifestKey="fish-com:species-oscar" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="An oscar in a home aquarium." priority />
         <h2>Tank Size — The Most Common Mistake</h2>
-        <p>Oscars are sold as juveniles (2–4 inches) in fish stores and grow to 12–18 inches within 12–18 months at the rate of approximately 1 inch per month in good conditions. A 30-gallon tank that seems spacious for a 3-inch juvenile is severely cramped for an 18-inch adult — and oscars do not stop growing until conditions limit them (stunted fish are unhealthy fish). Minimum tank for one oscar: 75 gallons. For two oscars: 125+ gallons. Two oscars in a 75-gallon tank will eventually result in one dead oscar when they reach territorial adult size.</p>
-        <p>The waste production of a 15-inch oscar is significant — comparable to a heavily stocked community tank alone. Heavy filtration is required: canister filter rated for 3-4× tank volume, or multiple filters. Weekly 25-30% water changes are the baseline — Oscars in poor water quality develop HITH (see below) and their immune function declines. The tank maintenance commitment scales with the fish size.</p>
+        <p>Oscars are sold as juveniles (2–4 inches) in fish stores and grow to 12–18 inches within 12–18 months at the rate of approximately 1 inch per month in good conditions. A 30-gallon tank that seems spacious for a 3-inch juvenile is severely cramped for an 18-inch adult — and oscars do not stop growing until conditions limit them (stunted fish are unhealthy fish). Minimum tank for one oscar: 75 gallons. For two oscars: 125+ gallons. Two oscars in a 75-gallon tank will eventually result in one dead oscar when they reach territorial adult size. The <a href="/tools/aquarium-volume-calculator" className="text-brand-primary hover:underline">tank volume calculator</a> checks whether the tank you have is actually 75 gallons before a juvenile grows into it.</p>
+        <p>The waste production of a 15-inch oscar is significant — comparable to a heavily stocked community tank alone. Heavy filtration is required: canister filter rated for 3-4× tank volume, or multiple filters. The <a href="/tools/filter-gph-calculator" className="text-brand-primary hover:underline">filter GPH calculator</a> uses its own cichlid turnover band for that gallon figure. Weekly 25-30% water changes are the baseline — Oscars in poor water quality develop HITH (see below) and their immune function declines. The tank maintenance commitment scales with the fish size.</p>
 
         <h2>HITH — Hole in the Head Disease</h2>
         <p>Hole-in-the-Head (HITH), also called Head and Lateral Line Erosion (HLLE), is the most common disease in captive oscars and cichlids generally. It presents as pitting lesions on the head and along the lateral line — small holes that can expand into significant tissue erosion. The appearance — small craters on the head — is unmistakable.</p>
@@ -109,12 +110,12 @@ export default function OscarPage() {
           includeSchema={false}
           allowMultiple
         />
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        <HopDisclosure siteId="fish-com" href="/go/amazon-brand/oscar%20tank%20setup?s=species-oscar" />
           <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Oscar — Tank Setup</div>
-          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for oscar care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
+          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for oscar care.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
-            <a href="/go/amazon-brand/oscar%20tank%20setup?s=species-oscar" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop Oscar Setup on Amazon →</a>
+            <ShopCtas amazonHref="/go/amazon-brand/oscar%20tank%20setup?s=species-oscar" amazonLabel="Browse oscar tank setups on Amazon →" />
           </div>
         </div>
 

@@ -28,7 +28,7 @@ The triage card tells you which numbers to collect. This email tells you how.
 
 **The one piece of equipment we think every household should own:** a pet-specific digital thermometer kept in a labelled drawer. The human ones work; the pet-specific ones are faster and quieter, which matters at 2 a.m. on a stressed dog.
 
-[Get a pet-specific digital thermometer on Amazon →](https://vets.co/go/amazon/iproven-pet-thermometer)
+[Get a pet-specific digital thermometer on Amazon →](https://vets.co/go/amazon-brand/iproven+pet+thermometer?s=email-emergency-triage)
 
 These four numbers, written on a sticky note, accelerate the phone triage with your vet by minutes. In an emergency, minutes are the unit that matters.
 

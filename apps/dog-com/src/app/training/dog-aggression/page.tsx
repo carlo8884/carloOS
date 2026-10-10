@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import {
   buildMetadata,
@@ -5,7 +6,6 @@ import {
   RelatedLinks,
   CrossPortfolioCard,
   ArticleByline,
-  AffiliateDisclosure,
   ShopCtas,
 } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
@@ -111,7 +111,6 @@ export default function DogAggressionPage() {
           sequence and creates dogs that bite without warning. Growling is communication. It should be
           respected, not punished.
         </p>
-        
 
         <h2>Types of Aggression</h2>
         <p>
@@ -147,13 +146,6 @@ export default function DogAggressionPage() {
           other dogs. May be selective (dog-sex specific, unfamiliar dogs only, same-household dogs) or
           generalized. History, context, and the specific presentation determine intervention.
         </p>
-        <p>
-          A dog aggression type-and-function question card is how
-          fear-based-aggression-is-the-most-common, redirected-aggression, and
-          rule-out-pain-first-in-any-new-onset-aggression stay posted — it is not a dog food-bowl
-          safety question card (that lives on resource-guarding), not a dog 20-to-30-foot long-line
-          question card (that lives on off-leash-training), and not a horse bit width-and-wrinkle fit
-          question card (that lives on bits-guide). </p>
 
         <h2>What Dominance Theory Gets Wrong</h2>
         <p>
@@ -166,15 +158,6 @@ export default function DogAggressionPage() {
           &quot;winning&quot; confrontations, physical corrections) cause significant harm: they
           increase anxiety, suppress warning signals, damage the human-dog relationship, and
           consistently make aggression more dangerous.
-        </p>
-        <p>
-          A dog aggression never-alpha-roll watch log notebook is how
-          dominance-theory-has-been-thoroughly-refuted, alpha-rolls, and
-          physical-corrections-consistently-make-aggression-more-dangerous stay written down — it is
-          not a dog resource-guarding never-punish-growl watch log notebook (that lives on
-          resource-guarding), not a dog recall-cue never-punish watch log notebook (that lives on
-          off-leash-training), and not a horse bit hand-severity watch log notebook (that lives on
-          bits-guide).
         </p>
 
         <h2>When Professional Help Is Required</h2>
@@ -189,19 +172,8 @@ export default function DogAggressionPage() {
           alone.
         </p>
 
-        <AffiliateDisclosure variant="inline" siteId="dog-com" />
+        <HopDisclosure siteId="dog-com" href="/go/amazon-brand/dog+leash?s=training-dog-aggression" />
 
-        {/* Shop leftover kit — unused vs #1151
-            laminated+dog+resource+guarding+trade+game+checklist /
-            dog+food+bowl+safety+question+card /
-            dog+resource+guarding+never+punish+growl+watch+log+notebook, #1150
-            laminated+dog+off+leash+recall+proofing+checklist /
-            dog+20+to+30+foot+long+line+question+card /
-            dog+recall+cue+never+punish+watch+log+notebook, #1149
-            laminated+horse+snaffle+vs+curb+bit+checklist /
-            horse+bit+width+and+wrinkle+fit+question+card /
-            horse+bit+hand+severity+watch+log+notebook,
-            basic-commands puppy+training+treats / dog+training+clicker / dog+long+line+leash. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
             Shop related supplies
@@ -210,16 +182,9 @@ export default function DogAggressionPage() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/dog+leash?s=training-dog-aggression"
-              amazonLabel="Shop on Amazon"
+              amazonLabel="Browse dog leash on Amazon →"
             />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/dog+aggression+type+and+function+question+card?s=training-dog-aggression"
-              amazonLabel="Browse dog aggression type-and-function question cards on Amazon →"
-            />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/dog+aggression+never+alpha+roll+watch+log+notebook?s=training-dog-aggression"
-              amazonLabel="Browse dog aggression never-alpha-roll watch log notebooks on Amazon →"
-            />
+
           </div>
         </div>
       </div>

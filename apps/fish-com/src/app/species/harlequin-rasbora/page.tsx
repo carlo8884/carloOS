@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { StockImage, buildMetadata, ArticleLayout, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
+import { ShopCtas, StockImage, buildMetadata, ArticleLayout, RelatedLinks, CrossPortfolioCard , ArticleSourcesList } from '@carloOS/ui'
 import { FAQAccordion, SchemaScript, buildArticleSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
@@ -32,7 +33,7 @@ const FAQS = [
   {
     question: 'What water conditions do harlequin rasboras need?',
     answer:
-      'They come from soft, acidic blackwater habitats (pH 5.5–6.5, GH under 5) in Malaysia, Thailand, Singapore, and Sumatra, but adapt to a much wider range in captivity — pH up to 7.5 and GH up to 15 — and thrive in standard community parameters at 73–82°F. Color intensifies in slightly soft, slightly acidic water with tannins from almond leaves, botanicals, or driftwood.',
+      'They come from soft, acidic blackwater habitats (pH 5.5–6.5, GH under 5) in Malaysia, Thailand, Singapore, and Sumatra, but adapt to a much wider range in captivity — pH up to 7.5 and GH up to 15 — and thrive in standard community parameters at 71–77°F (https://www.fishbase.se/summary/Trigonostigma-heteromorpha.html). Color intensifies in slightly soft, slightly acidic water with tannins from almond leaves, botanicals, or driftwood.',
     answerText:
       'Adaptable: pH up to 7.5, GH up to 15, 73-82F. Color intensifies in soft, slightly acidic water with tannins.',
   },
@@ -46,7 +47,7 @@ const FAQS = [
   {
     question: 'How long do harlequin rasboras live?',
     answer:
-      'Five to eight years — a substantial lifespan compared with the 2–3 years of many nano species. Hardiness across a range of water conditions is part of why they rank among the most recommended community schooling fish.',
+      'Five to eight years — a substantial lifespan compared with the 2–3 years of many nano species. They stay hardy across a range of water conditions, which is why they are a common community schooling fish.',
     answerText:
       '5-8 years, notably longer than the 2-3 years typical of many nano species.',
   },
@@ -68,9 +69,9 @@ export default function HarlequinPage() {
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Quick Stats</div>
-          {[['Scientific name', 'Trigonostigma heteromorpha'], ['Adult size', '1.75 inches'], ['Temperature', '73–82°F'], ['pH', '5.5–7.5 (prefers soft acidic)'], ['Group', '10 min — 15+ for best display'], ['Compatibility', 'Peaceful with all community fish'], ['Lifespan', '5–8 years']].map(([k, v]) => (
+          {[['Scientific name', 'Trigonostigma heteromorpha'], ['Adult size', '1.75 inches'], ['Temperature', '71–77°F (https://www.fishbase.se/summary/Trigonostigma-heteromorpha.html)'], ['pH', '5.5–7.5 (prefers soft acidic)'], ['Group', '10 min — 15+ for best display'], ['Compatibility', 'Peaceful with all community fish'], ['Lifespan', '5–8 years']].map(([k, v]) => (
             <div key={k} className="flex justify-between py-1.5 border-b border-brand-border text-xs last:border-0">
-              <span className="text-brand-text-light">{k}</span><span className="font-bold text-brand-dark text-right max-w-[55%]">{v}</span>
+              <span className="text-brand-text-light">{k}</span><span className="font-bold text-brand-dark text-right max-w-[55%] break-all">{v}</span>
             </div>
           ))}
         </div>
@@ -83,11 +84,11 @@ export default function HarlequinPage() {
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
         <StockImage manifestKey="fish-com:species-harlequin-rasbora" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A harlequin rasbora in a home aquarium." priority />
         <h2>Why Harlequins Are the Benchmark Community Schooler</h2>
-        <p>Among the dozens of small schooling fish available to aquarists, harlequin rasboras consistently rank as one of the most recommended because they combine everything a community tank needs: genuine peacefulness (no fin-nipping, no aggression toward any other species), hardiness across a range of water conditions (adaptable from soft acidic Southeast Asian parameters to standard community tap water), a substantial lifespan (5–8 years versus the 2–3 years of many nano species), and the visual impact of their distinctive black triangle against a warm copper-orange body that becomes more vivid as the school grows.</p>
+        <p>Among the dozens of small schooling fish available to aquarists, harlequin rasboras are a common community schooler because they combine everything a community tank needs: genuine peacefulness (no fin-nipping, no aggression toward any other species), hardiness across a range of water conditions (adaptable from soft acidic Southeast Asian parameters to standard community tap water), a substantial lifespan (5–8 years versus the 2–3 years of many nano species), and the visual impact of their distinctive black triangle against a warm copper-orange body that becomes more vivid as the school grows.</p>
         <p>A single harlequin rasbora is unremarkable. Eight harlequin rasboras are pleasant. Twenty harlequin rasboras moving as a cohesive school through a planted midground is one of the most satisfying things in the freshwater hobby — the school rotates and banks together, each fish's patch catching the light differently as they turn.</p>
 
         <h2>Water and Care</h2>
-        <p>Harlequins come from the slow, tea-colored, soft, acidic waters of Malaysia, Thailand, Singapore, and Sumatra — blackwater environments with pH 5.5–6.5, GH under 5, heavy tannin staining. In captivity they adapt to a much wider range (pH up to 7.5, GH up to 15) and thrive in standard community parameters. Color intensifies in slightly soft, slightly acidic water with tannins (Indian almond leaves, botanicals, or driftwood) — the orange deepens and the black triangle becomes more distinct. Temperature 73–82°F — they tolerate the same range as most tropical community fish.</p>
+        <p>Harlequins come from the slow, tea-colored, soft, acidic waters of Malaysia, Thailand, Singapore, and Sumatra — blackwater environments with pH 5.5–6.5, GH under 5, heavy tannin staining. In captivity they adapt to a much wider range (pH up to 7.5, GH up to 15) and thrive in standard community parameters. Color intensifies in slightly soft, slightly acidic water with tannins (Indian almond leaves, botanicals, or driftwood) — the orange deepens and the black triangle becomes more distinct. Temperature 71–77°F (<a className="break-all" href="https://www.fishbase.se/summary/Trigonostigma-heteromorpha.html">https://www.fishbase.se/summary/Trigonostigma-heteromorpha.html</a>) — they tolerate the same range as most tropical community fish.</p>
 
         <h2>Tankmates</h2>
         <p>Universally compatible. They do not fin-nip (unlike tiger barbs or some serpae tetras), they do not bother corydoras, shrimp, or snails, and they are fast enough to avoid being eaten by larger fish in the typical community tank. Ideal companions: Corydoras of any species (same soft-water preferences), cherry and neocardinia shrimp (harlequins ignore adult shrimp and most shrimplets), otocinclus, any peaceful dwarf cichlid (apistogramma, German blue ram), betta fish (harlequins are fast and peaceful — one of the more betta-compatible schoolers), and other rasbora species.</p>
@@ -104,12 +105,12 @@ export default function HarlequinPage() {
           includeSchema={false}
           allowMultiple
         />
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        <HopDisclosure siteId="fish-com" href="/go/amazon-brand/harlequin%20rasbora%20tank%20setup?s=species-harlequin-rasbora" />
           <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Harlequin Rasbora — Tank Setup</div>
-          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for harlequin rasbora care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
+          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for harlequin rasbora care.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
-            <a href="/go/amazon-brand/harlequin%20rasbora%20tank%20setup?s=species-harlequin-rasbora" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop Harlequin Rasbora Setup on Amazon →</a>
+            <ShopCtas amazonHref="/go/amazon-brand/harlequin%20rasbora%20tank%20setup?s=species-harlequin-rasbora" amazonLabel="Browse harlequin rasbora tank setups on Amazon →" />
           </div>
         </div>
 

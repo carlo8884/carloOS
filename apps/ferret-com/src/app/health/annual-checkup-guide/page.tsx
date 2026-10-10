@@ -1,4 +1,5 @@
-import { HubMoneyLinks } from '@carloOS/ui'
+import { HopDisclosure } from '../../../components/HopDisclosure'
+import { HubMoneyLinks, LastUpdated } from '@carloOS/ui'
 import type { Metadata } from 'next'
 import {
   buildMetadata,
@@ -11,7 +12,6 @@ import {
   DropCap,
   CrossPortfolioCard,
   ArticleSourcesList,
-  AffiliateDisclosure,
   ShopCtas,
 } from '@carloOS/ui'
 
@@ -23,7 +23,7 @@ const SOURCES = [
   },
   {
     label: "Merck Veterinary Manual — Routine Health Care of Ferrets: examination cadence, screening bloodwork, vaccination schedules, and common age-associated conditions",
-    url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/routine-health-care-of-ferrets",
+    url: "https://www.merckvetmanual.com/all-other-pets/ferrets/routine-health-care-for-ferrets",
     publisher: "Merck Veterinary Manual",
   },
   {
@@ -77,12 +77,11 @@ const medSchema = buildMedicalWebPageSchema({
   lastReviewed: '2026-06-01',
 })
 
-
 const FAQS = [
   {
     question: 'How often should a ferret see the vet?',
     answer:
-      "A healthy young adult ferret should have a wellness exam at least once a year. From around age three onward, most exotic-pet veterinarians recommend twice-yearly visits, because the common middle-aged ferret diseases — insulinoma, adrenal disease, lymphoma, dental and heart disease — develop and progress quickly, and a six-month interval catches them earlier. Kits need a series of early visits for their vaccination schedule.",
+      "A healthy young adult ferret should have a wellness exam at least once a year. From around age three, a six-month interval is a planning figure on this page, not a fetched veterinary standard. Insulinoma, adrenal disease, lymphoma, and dental or heart disease can move quickly, so a shorter gap is a reasonable planning choice. Kits need a series of early visits for their vaccination schedule.",
   },
   {
     question: 'What does a ferret wellness exam include?',
@@ -160,7 +159,7 @@ export default function FerretAnnualCheckupGuidePage() {
 
           </>
         }
-      
+
         relatedLinks={[
           { title: 'Ferret Health Hub', href: '/health' },
           { title: 'Vaccinations', href: '/health/vaccinations' },
@@ -174,6 +173,7 @@ export default function FerretAnnualCheckupGuidePage() {
             publishedAt="2026-06-01"
             updatedAt="2026-06-01"
           />
+          <LastUpdated date="2026-10-08" />
 
           <DropCap>
             Ferrets live fast and develop disease young. By the time a ferret
@@ -339,20 +339,8 @@ export default function FerretAnnualCheckupGuidePage() {
             </li>
           </ul>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/ferret+litter?s=annual-checkup-guide" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated ferret checkup-map chart /
-              ferret fridge exam-prep card /
-              mustelid annual-exam handbook).
-              No existing product hop to keep.
-              Educational kitchen searches only; no Rx /
-              vaccine / aging hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs health-hub /
-              insurance / dental toothbrush hops. Ferret
-              aging stays held.
-              Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
@@ -361,7 +349,7 @@ export default function FerretAnnualCheckupGuidePage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/ferret+litter?s=annual-checkup-guide"
-                amazonLabel="Shop on Amazon"
+                amazonLabel="Browse ferret litter on Amazon →"
               />
           </div>
           </div>

@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -8,8 +9,11 @@ import {
   TableOfContents,
   CrossPortfolioCard,
   ArticleSourcesList,
-  AffiliateDisclosure,
   ShopCtas,
+  ComparisonFoot,
+  EmailCapture,
+  PrimaryHop,
+  TableShopLink,
 } from '@carloOS/ui'
 import { buildArticleSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
@@ -59,6 +63,10 @@ export default function BeddingAndLitterTypesPage() {
       <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="ferret-com"
+        heroHop={<>
+          <PrimaryHop href="/go/amazon-brand/ferret+hammock?s=care-bedding-and-litter-types" label="Search Amazon for a ferret hammock" />
+          <HopDisclosure tone="on-dark" siteId="ferret-com" href="/go/amazon-brand/ferret+hammock?s=care-bedding-and-litter-types" />
+        </>}
         hero={{
           title: 'Bedding & Litter Types',
           subtitle:
@@ -81,6 +89,7 @@ export default function BeddingAndLitterTypesPage() {
                 { label: 'Bedding That Works', href: '#bedding-good' },
                 { label: 'Bedding to Avoid', href: '#bedding-bad' },
                 { label: 'Litter Materials', href: '#litter' },
+                { label: 'Who should buy which', href: '#who' },
                 { label: 'Litter to Avoid', href: '#litter-bad' },
                 { label: 'Washing & Replacement', href: '#washing' },
                 { label: 'Sources', href: '#sources' },
@@ -115,15 +124,22 @@ export default function BeddingAndLitterTypesPage() {
             updatedAt="2026-09-04"
             reviewedBy="Editorial team"
           />
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the bedding and litter list
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Ferret bedding &amp; litter shopping list
-            </h2>
-
-          </div>
+          <EmailCapture
+            variant="inline"
+            siteId="ferret-com"
+            addressOnly
+            title="Ferret bedding and litter list"
+            ctaText="Save my address"
+            source="care-bedding-and-litter-types"
+            checklist={[
+              'The correct bedding is enclosed fabric, washable, and free of loose fibers a ferret can swallow.',
+              'Sleep sacks and cube beds best satisfy the burrowing drive.',
+              'Hammocks are the default daytime sleeping spot. Pair an open hammock with an enclosed sack.',
+              'Recycled paper pellets are the default litter: low dust, and benign if a small amount is swallowed.',
+              'Clumping clay litter is a firm avoid because it can clump in the gut.',
+              'Wash fabric bedding about weekly with a fragrance-free detergent, and retire it when seams fray.',
+            ]}
+          />
 
           <h2 id="instincts">The Two Instincts That Decide Everything</h2>
           <p>
@@ -169,21 +185,65 @@ export default function BeddingAndLitterTypesPage() {
             Whatever the material, the pan shape matters as much as the fill: a corner pan with a high back wall and a low front lip works with the ferret's instinct, as covered in our <a href="/care/litter-training">litter training</a> guide.
           </p>
 
-          {/* Money path — live amazon-brand search hops (bedding / litter gear).
-              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-              Category searches only — educational gear, not medications, not a ranked list.
+          {/* Shop note — live amazon-brand search buttons (bedding / litter gear).
+              ShopCtas hides empty Chewy; never href="#" or an empty link.
+              Amazon searches only — educational gear, not medications, not a ranked list.
               No cedar, pine shavings, or clumping-clay products. */}
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <h2 id="who">Who should buy which</h2>
+          <p>These rows match the materials above. The shop links are the same Amazon searches as the box below, not a ranked brand list.</p>
+          <div className="overflow-x-auto my-6 max-w-full">
+            <table className="w-full text-sm border-collapse table-fixed sm:table-auto min-w-0 sm:min-w-[36rem] [&_th]:break-words [&_td]:break-words">
+              <thead>
+                <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                  <th className="p-3 font-bold text-brand-dark">If you need</th>
+                  <th className="p-3 font-bold text-brand-dark">Buy</th>
+                  <th className="p-3 font-bold text-brand-dark">Already on this page</th>
+                  <th className="p-3 font-bold text-brand-dark">Skip it when</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-brand-border">
+                  <td className="p-3 text-brand-text-mid">An enclosed nest a ferret can crawl inside</td>
+                  <td className="p-3 font-bold text-brand-dark">Fleece sleep sack</td>
+                  <td className="p-3 text-brand-text-mid">Sleep sacks best satisfy the burrowing drive. Wash weekly and retire the sack when seams fray</td>
+                  <td className="p-3 text-brand-text-mid">Cedar, pine shavings, paper-pulp bedding, or loose terrycloth. Those are in the avoid list</td>
+                </tr>
+                <tr className="border-b border-brand-border">
+                  <td className="p-3 text-brand-text-mid">A daytime lounge in the upper third of the cage</td>
+                  <td className="p-3 font-bold text-brand-dark">Ferret hammock<TableShopLink href="/go/amazon-brand/ferret+hammock?s=care-bedding-and-litter-types" product="Ferret hammock" label="Ferret hammock on Amazon" /></td>
+                  <td className="p-3 text-brand-text-mid">Hammocks are the default daytime spot. Pair an open hammock with an enclosed sack</td>
+                  <td className="p-3 text-brand-text-mid">There is nowhere to hang one, or the hammock would be the only bed</td>
+                </tr>
+                <tr className="border-b border-brand-border">
+                  <td className="p-3 text-brand-text-mid">A washable cover for each cage level</td>
+                  <td className="p-3 font-bold text-brand-dark">Fleece liner<TableShopLink href="/go/amazon-brand/ferret+fleece+liner?s=care-bedding-and-litter-types" product="Fleece liner" label="Fleece liner on Amazon" /></td>
+                  <td className="p-3 text-brand-text-mid">Fleece does not fray into ingestible threads the way looser fabrics do. Keep a spare set</td>
+                  <td className="p-3 text-brand-text-mid">The fabric is loosely woven, a chunky knit, or terrycloth</td>
+                </tr>
+                <tr className="border-b border-brand-border">
+                  <td className="p-3 text-brand-text-mid">Litter that stays safer if a small amount is swallowed</td>
+                  <td className="p-3 font-bold text-brand-dark">Recycled paper pellets<TableShopLink href="/go/amazon-brand/recycled+paper+pellet+litter?s=care-bedding-and-litter-types" product="Recycled paper pellets" label="Recycled paper pellets on Amazon" /></td>
+                  <td className="p-3 text-brand-text-mid">The default safe choice on this page: low dust, and benign if a small amount is swallowed</td>
+                  <td className="p-3 text-brand-text-mid">Clumping clay, silica crystal, or a scented cat litter</td>
+                </tr>
+                <tr className="border-b border-brand-border">
+                  <td className="p-3 text-brand-text-mid">A pan that matches corner elimination</td>
+                  <td className="p-3 font-bold text-brand-dark">High-back corner pan<TableShopLink href="/go/amazon-brand/ferret+corner+litter+pan?s=care-bedding-and-litter-types" product="High-back corner pan" label="High-back corner pan on Amazon" /></td>
+                  <td className="p-3 text-brand-text-mid">A high back wall and a low front lip. The pan shape matters as much as the fill</td>
+                  <td className="p-3 text-brand-text-mid">A low open tray the ferret can back out of</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <ComparisonFoot updated="2026-10-10" />
+
+          <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/ferret+hammock?s=care-bedding-and-litter-types", "/go/amazon-brand/ferret+fleece+liner?s=care-bedding-and-litter-types", "/go/amazon-brand/recycled+paper+pellet+litter?s=care-bedding-and-litter-types", "/go/amazon-brand/ferret+corner+litter+pan?s=care-bedding-and-litter-types"]} />
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop bedding and litter
             </div>
             <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
-              <ShopCtas
-                amazonHref="/go/amazon-brand/ferret+sleep+sack+fleece?s=care-bedding-and-litter-types"
-                amazonLabel="Browse ferret sleep sacks and cube beds on Amazon →"
-              />
               <ShopCtas
                 amazonHref="/go/amazon-brand/ferret+hammock?s=care-bedding-and-litter-types"
                 amazonLabel="Browse ferret hammocks on Amazon →"
@@ -198,7 +258,7 @@ export default function BeddingAndLitterTypesPage() {
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/ferret+corner+litter+pan?s=care-bedding-and-litter-types"
-                amazonLabel="Browse high-back corner litter pans on Amazon →"
+                amazonLabel="Browse high-back corner ferret litter pans on Amazon →"
               />
           </div>
             <p className="text-2xs text-brand-text-light mt-3">
@@ -227,7 +287,7 @@ export default function BeddingAndLitterTypesPage() {
 
           <h2 id="washing">Washing and Replacement Cadence</h2>
           <p>
-            Fabric bedding should be washed roughly weekly, more often for sleep sacks the ferret nests in heavily. Use a fragrance-free detergent and skip fabric softener and dryer sheets, whose residues can irritate skin and airways. Rotate a spare set in so the cage is never without bedding.
+            Fabric bedding should be washed roughly weekly, more often for sleep sacks the ferret nests in heavily. Use a fragrance-free detergent and skip fabric softener and dryer sheets, whose residues can irritate skin and airways. Rotate a spare set in so the cage is never without bedding. Why that weekly wash carries more of the odor load than bathing the ferret is in the <a href="/care/bathing-and-grooming" className="text-brand-primary underline">bathing and grooming guide</a>.
           </p>
           <p>
             Inspect bedding at every wash and retire it when fleece thins, seams fray, or chew holes appear — typically every few months with regular laundering. A frayed sack is an ingestion hazard, not a frugal save.
@@ -236,6 +296,7 @@ export default function BeddingAndLitterTypesPage() {
             Litter pans want a daily spot-clean and a full empty-and-wipe weekly. Ferrets are fastidious about their corners; a pan left dirty is the fastest way to teach a ferret to eliminate beside it instead. For the placement and multi-pan strategy that makes litter actually work, see <a href="/care/litter-training">litter training</a>, and for how bedding and litter zones fit a tall cage, our <a href="/care/multi-level-housing">multi-level housing</a> guide.
           </p>
 
+          <p>The litter materials above are compared in the <Link href="/reviews/best-ferret-litter">ferret litter review</Link>.</p>
           <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>

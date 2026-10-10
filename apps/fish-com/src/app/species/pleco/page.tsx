@@ -1,11 +1,11 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { StockImage, buildMetadata, ArticleLayout, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
+import { ShopCtas, StockImage, buildMetadata, ArticleLayout, RelatedLinks, CrossPortfolioCard , ArticleSourcesList } from '@carloOS/ui'
 import { FAQAccordion, SchemaScript, buildArticleSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
 const SOURCES = [
-  { label: "Hypostomus plecostomus — Seriously Fish species profile", url: "https://www.seriouslyfish.com/species/hypostomus-plecostomus/", publisher: "Seriously Fish" },
-  { label: "Hypostomus plecostomus — FishBase species record", url: "https://www.fishbase.se/summary/Hypostomus-plecostomus.html", publisher: "FishBase" },
+    { label: "Hypostomus plecostomus — FishBase species record", url: "https://www.fishbase.se/summary/Hypostomus-plecostomus.html", publisher: "FishBase" },
   { label: "Armbruster, J.W. Phylogenetic relationships of the suckermouth armored catfishes (Loricariidae). Zoological Journal of the Linnean Society, 2004.", publisher: "Zoological Journal of the Linnean Society" },
   { label: "Reis, R.E. et al. Checklist of the Freshwater Fishes of South and Central America. EDIPUCRS, 2003.", publisher: "EDIPUCRS" },
 ]
@@ -119,12 +119,12 @@ export default function PlecoPage() {
           includeSchema={false}
           allowMultiple
         />
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        <HopDisclosure siteId="fish-com" href="/go/amazon-brand/pleco%20tank%20setup?s=species-pleco" />
           <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Pleco — Tank Setup</div>
-          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for pleco care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
+          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for pleco care.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
-            <a href="/go/amazon-brand/pleco%20tank%20setup?s=species-pleco" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop Pleco Setup on Amazon →</a>
+            <ShopCtas amazonHref="/go/amazon-brand/pleco%20tank%20setup?s=species-pleco" amazonLabel="Browse pleco tank setups on Amazon →" />
           </div>
         </div>
 

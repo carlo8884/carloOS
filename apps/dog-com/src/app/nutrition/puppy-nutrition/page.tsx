@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleByline, AffiliateDisclosure, JourneyNext } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleByline, JourneyNext, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 
@@ -38,22 +39,23 @@ export default function PuppyNutritionPage() {
           siteId="dog-com"
           nextHref="/nutrition/how-much-to-feed"
           nextLabel="Turn the bag guideline into a portion"
-          nextBlurb="Large-breed formula is which bag. How much to feed is the starting scoop, then body-condition scoring. The hop below is the same large-breed AAFCO search already on this page — not a new query."
+          nextBlurb="Large-breed formula is which bag. How much to feed is the starting scoop, then body-condition scoring. The button below opens the same large-breed AAFCO search on Amazon — not a different search."
           resourceHref="/go/amazon-brand/large+breed+puppy+dry+dog+food+aafco?s=nutrition-puppy"
-          resourceLabel="Shop large-breed puppy food on Amazon →"
+          resourceLabel="Shop AAFCO large-breed puppy food on Amazon →"
         />
 
-        <AffiliateDisclosure variant="inline" siteId="dog-com" />
+        <HopDisclosure siteId="dog-com" href={["/go/chewy-brand/purina+pro+plan+puppy+large+breed+dry+dog+food?s=nutrition-puppy", "/go/amazon-brand/large+breed+puppy+dry+dog+food+aafco?s=nutrition-puppy"]} />
 
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">Buyer&apos;s Guide — Puppy Food</div>
           <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Look for an AAFCO statement that says &ldquo;growth&rdquo; or &ldquo;all life stages.&rdquo; Large breed puppies need a formula explicitly labeled for large breeds. Purina Pro Plan, Royal Canin, and Hill&apos;s Science Diet all have board-certified veterinary nutritionists on staff.</p>
-          <div className="flex flex-wrap gap-3">
-            <a href="/go/chewy-brand/purina+pro+plan+puppy+large+breed+dry+dog+food?s=nutrition-puppy" rel="sponsored nofollow noopener noreferrer" target="_blank" className="inline-flex items-center gap-2 px-4 py-2.5 bg-brand-primary text-white text-sm font-semibold rounded-lg hover:bg-brand-primary-dark transition-colors no-underline">
-              Shop Puppy Food on Chewy →
-            </a>
-            <a href="/go/amazon-brand/large+breed+puppy+dry+dog+food+aafco?s=nutrition-puppy" rel="sponsored nofollow noopener noreferrer" target="_blank" className="inline-flex items-center gap-2 px-4 py-2.5 border border-brand-primary text-brand-primary text-sm font-semibold rounded-lg hover:bg-brand-primary-pale transition-colors no-underline">
-              Shop on Amazon →
+          <div className="flex flex-col gap-3">
+            <ShopCtas
+              amazonHref="/go/chewy-brand/purina+pro+plan+puppy+large+breed+dry+dog+food?s=nutrition-puppy"
+              amazonLabel="Browse purina pro plan puppy large breed dry dog food on Amazon →"
+            />
+            <a href="/go/amazon-brand/large+breed+puppy+dry+dog+food+aafco?s=nutrition-puppy" rel="sponsored nofollow noopener noreferrer" target="_blank" className="inline-flex max-w-full items-center gap-2 px-4 py-2.5 border border-brand-primary text-brand-primary text-sm font-semibold rounded-lg hover:bg-brand-primary-pale transition-colors no-underline whitespace-normal text-left">
+              Shop AAFCO large-breed puppy food on Amazon →
             </a>
           </div>
           <p className="text-2xs text-brand-text-light mt-3">See also: <a href="/reviews/best-dog-food-for-puppies" className="text-brand-primary hover:underline no-underline">Best Dog Food for Puppies 2026</a></p>

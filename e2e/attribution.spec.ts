@@ -5,15 +5,15 @@ import { AMAZON_TAG } from './tags'
 const pagePath: Record<string, string> = {
   'dog-com': '/reviews/best-puppy-crate-guide',
   'fish-com': '/reviews/hob-vs-canister-guide',
-  'horses-com': '/ownership/horse-insurance',
+  'horses-com': '/ownership/leasing-a-horse',
   'vets-co': '/reviews/trupanion-vs-healthy-paws-guide',
   'ferret-com': '/reviews/vest-vs-h-harness-guide',
 }
 
 const amazonHop: Record<string, string> = {
   'dog-com': '/go/amazon-brand/midwest+icrate+dog+crate?s=reviews-best-puppy-crate-guide',
-  'fish-com': '/go/amazon-brand/aquaclear+70+filter?s=reviews-hob-vs-canister-guide',
-  'horses-com': '/go/amazon-brand/horse+insurance+policy+document+binder?s=ownership-horse-insurance',
+  'fish-com': '/go/amazon/B0DCGB5T4Y?s=reviews-hob-vs-canister-guide',
+  'horses-com': '/go/amazon-brand/equine+supplement?s=ownership-leasing-a-horse',
   'vets-co': '/go/amazon-brand/pet+first+aid+kit?s=telehealth',
   'ferret-com': '/go/amazon-brand/ferret+vest+harness+jacket+escape+proof?s=reviews-vest-vs-h-harness-guide',
 }
@@ -56,14 +56,44 @@ test('money-page hop records site, source, and partner, and Amazon hops stay tag
     for (const entry of layer) {
       const list = Array.isArray(entry) ? entry : Array.from(entry as ArrayLike<unknown>)
       if (list[0] === 'event' && list[1] === 'affiliate_click' && list[2] && typeof list[2] === 'object') {
-        return list[2] as { site?: string; source?: string; partner?: string }
+        return list[2] as { site?: string; page?: string; source?: string; partner?: string; vendor?: string }
       }
     }
     return null
   })
   expect(params?.site).toBe(site)
+  expect(params?.page).toBe(pagePath[site])
   expect(params?.source).toBe(source)
   expect(params?.partner).toBe(partner)
+  expect(params?.vendor).toBe(partner)
 
-  await expectHop(page.request, amazonHop[site], ['https://amazon.com/s?k=', `tag=${AMAZON_TAG}`])
+  const expectedCard = await link.evaluate((el) => {
+    const anchor = el as HTMLAnchorElement
+    if (anchor.closest('#empty-search-guides, #missed-guides')) return 'search-recovery'
+    const card = anchor.closest('[data-review-card]')
+    if (card instanceof HTMLElement && card.id) return card.id
+    const marked = anchor.closest('[data-shop-placement]')?.getAttribute('data-shop-placement')
+    if (anchor.closest('[data-result-pick]')) return 'result'
+    if (anchor.closest('[data-primary-hop]') || marked === 'hero') return 'hero'
+    if (anchor.closest('table') || marked === 'table') return 'table'
+    if (marked === 'quick-pick') return 'quick-pick'
+    if (anchor.closest('[data-guide-checklist]')) return 'guide'
+    return marked || 'card'
+  })
+  const hopClick = await page.evaluate(() => {
+    const layer = (window as unknown as { dataLayer?: unknown[] }).dataLayer ?? []
+    for (const entry of layer) {
+      const list = Array.isArray(entry) ? entry : Array.from(entry as ArrayLike<unknown>)
+      if (list[0] === 'event' && list[1] === 'hop_click' && list[2] && typeof list[2] === 'object') {
+        return list[2] as { card_id?: string }
+      }
+    }
+    return null
+  })
+  expect(hopClick?.card_id).toBe(expectedCard)
+
+  const amazonShape = amazonHop[site].includes('/go/amazon/')
+    ? [`https://amazon.com/dp/${amazonHop[site].split('/')[3]?.split('?')[0]}`, `tag=${AMAZON_TAG}`]
+    : ['https://amazon.com/s?k=', `tag=${AMAZON_TAG}`]
+  await expectHop(page.request, amazonHop[site], amazonShape)
 })

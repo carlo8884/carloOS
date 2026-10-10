@@ -1,12 +1,13 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { StockImage, buildMetadata, ArticleLayout, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
+import { ShopCtas, StockImage, buildMetadata, ArticleLayout, RelatedLinks, CrossPortfolioCard , ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema, FAQAccordion, SchemaScript, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
 const SOURCES = [
   { label: "Melanotaenia boesemani — Seriously Fish species profile", url: "https://www.seriouslyfish.com/species/melanotaenia-boesemani/", publisher: "Seriously Fish" },
   { label: "Melanotaenia boesemani — FishBase species record", url: "https://www.fishbase.se/summary/Melanotaenia-boesemani.html", publisher: "FishBase" },
-  { label: "Melanotaenia boesemani — IUCN Red List", url: "https://www.iucnredlist.org/species/13023/3410174", publisher: "IUCN Red List" },
+  { label: "Melanotaenia boesemani — IUCN Red List", url: "https://www.iucnredlist.org/species/13058/147682045", publisher: "IUCN Red List" },
   { label: "Allen, G.R. & Cross, N.J. Rainbowfishes of Australia and Papua New Guinea. TFH Publications, 1982.", publisher: "TFH Publications" },
 ]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Boesemani Rainbowfish Care Guide — Blue-Orange Split | Fish.com', description: 'Boesemani rainbowfish are the most popular rainbowfish — vivid blue-purple front, orange-red rear. Locale-pure breeding matters.', path: '/species/boesemani-rainbowfish', type: 'article' })
@@ -25,9 +26,9 @@ const FAQS = [
   {
     question: 'What water parameters do Boesemani rainbowfish need?',
     answer:
-      'Boesemani come from Lake Ajamaru in West Papua, a hard, alkaline lake (GH 14–20, pH 7.5–8.5). They show their best color and health at pH 7.2–8.0, GH 10–18, KH 6–10, and a temperature of 72–82°F. This makes them ideal for hard-water areas where soft-water species struggle, and the blue coloration in particular intensifies in harder, more alkaline water.',
+      'Boesemani come from Lake Ajamaru in West Papua, a hard, alkaline lake (GH 14–20, pH 7.5–8.5). They show their best color and health at pH 7.2–8.0, GH 10–18, KH 6–10. FishBase lists Melanotaenia boesemani at 27–30°C, which is 80–86°F (https://www.fishbase.se/summary/Melanotaenia-boesemani.html). This makes them ideal for hard-water areas where soft-water species struggle, and the blue coloration in particular intensifies in harder, more alkaline water.',
     answerText:
-      'Boesemani prefer hard alkaline water like their native Lake Ajamaru: pH 7.2-8.0, GH 10-18, KH 6-10, and 72-82F. Harder water intensifies their blue color.',
+      'Boesemani prefer hard alkaline water like their native Lake Ajamaru: pH 7.2-8.0, GH 10-18, KH 6-10. FishBase lists Melanotaenia boesemani at 27–30°C, which is 80–86°F (https://www.fishbase.se/summary/Melanotaenia-boesemani.html). Harder water intensifies their blue color.',
   },
   {
     question: 'How many Boesemani rainbowfish should I keep together?',
@@ -46,9 +47,9 @@ const FAQS = [
   {
     question: 'What fish are compatible with Boesemani rainbowfish?',
     answer:
-      'Other hard-water community fish: Corydoras paleatus (one of the few cories tolerating harder water), other rainbowfish species, hillstream loaches, and larger rasboras. They are not compatible with fish requiring soft, acidic water such as discus and most tetras.',
+      'Other hard-water community fish: Corydoras paleatus (one of the few cories tolerating harder water), other rainbowfish species, and larger rasboras. Hillstream loaches do not share this temperature band. They are not compatible with fish requiring soft, acidic water such as discus and most tetras.',
     answerText:
-      'Compatible with hard-water fish: Corydoras paleatus, other rainbowfish, hillstream loaches, larger rasboras. Not compatible with soft-water species like discus or most tetras.',
+      'Compatible with hard-water fish: Corydoras paleatus, other rainbowfish and larger rasboras. Hillstream loaches do not share this temperature band. Not compatible with soft-water species like discus or most tetras.',
   },
 ]
 
@@ -66,9 +67,9 @@ export default function BoesemaniPage() {
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Quick Stats</div>
-          {[['Scientific name', 'Melanotaenia boesemani'], ['Adult size', '3.5-4.5 inches (males larger)'], ['Temperature', '72–82°F'], ['pH', '7.0–8.0'], ['GH', '8-18 — harder water preferred'], ['Group', '8+ — 10-12 ideal'], ['Lifespan', '5-8 years']].map(([k, v]) => (
+          {[['Scientific name', 'Melanotaenia boesemani'], ['Adult size', '3.5-4.5 inches (males larger)'], ['Temperature', '80–86°F (https://www.fishbase.se/summary/Melanotaenia-boesemani.html)'], ['pH', '7.0–8.0'], ['GH', '8-18 — harder water preferred'], ['Group', '8+ — 10-12 ideal'], ['Lifespan', '5-8 years']].map(([k, v]) => (
             <div key={k} className="flex justify-between py-1.5 border-b border-brand-border text-xs last:border-0">
-              <span className="text-brand-text-light">{k}</span><span className="font-bold text-brand-dark text-right max-w-[55%]">{v}</span>
+              <span className="text-brand-text-light">{k}</span><span className="font-bold text-brand-dark text-right max-w-[55%] break-all">{v}</span>
             </div>
           ))}
         </div>
@@ -96,12 +97,12 @@ export default function BoesemaniPage() {
         <p>Boesemani rainbowfish come from a very restricted native range — Lake Ajamaru and a few connected lakes in West Papua. Wild populations have declined due to aquarium collection pressure in the past (most current aquarium fish are captive-bred, significantly reducing wild collection). Responsible breeding by hobbyists maintains genetic diversity in captive populations and reduces pressure on wild stocks. When purchasing, captive-bred fish from reputable breeders are preferable to wild-caught imports.</p>
         <h2>Frequently Asked Questions</h2>
         <FAQAccordion items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answerText }))} includeSchema={false} allowMultiple />
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        <HopDisclosure siteId="fish-com" href="/go/amazon-brand/boesemani%20rainbowfish%20tank%20setup?s=species-boesemani-rainbowfish" />
           <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Boesemani Rainbowfish — Tank Setup</div>
-          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for boesemani rainbowfish care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
+          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for boesemani rainbowfish care.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
-            <a href="/go/amazon-brand/boesemani%20rainbowfish%20tank%20setup?s=species-boesemani-rainbowfish" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop Boesemani Rainbowfish Setup on Amazon →</a>
+            <ShopCtas amazonHref="/go/amazon-brand/boesemani%20rainbowfish%20tank%20setup?s=species-boesemani-rainbowfish" amazonLabel="Browse Boesemani rainbowfish tank setups on Amazon →" />
           </div>
         </div>
 

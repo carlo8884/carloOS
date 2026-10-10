@@ -1,12 +1,13 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { StockImage, buildMetadata, ArticleLayout, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
+import { ShopCtas, StockImage, buildMetadata, ArticleLayout, RelatedLinks, CrossPortfolioCard , ArticleSourcesList } from '@carloOS/ui'
 import { FAQAccordion, SchemaScript, buildArticleSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
 const SOURCES = [
   { label: "Trichogaster lalius — Seriously Fish species profile", url: "https://www.seriouslyfish.com/species/trichogaster-lalius/", publisher: "Seriously Fish" },
   { label: "Trichogaster lalius — FishBase species record", url: "https://www.fishbase.se/summary/Trichogaster-lalius.html", publisher: "FishBase" },
-  { label: "Dwarf Gourami Iridovirus (DGIV) — Merck Veterinary Manual", url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/aquarium-fish/iridoviral-diseases-in-fish", publisher: "Merck Vet Manual" },
+  { label: "Dwarf Gourami Iridovirus (DGIV) — Merck Veterinary Manual", url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/aquarium-fish/viral-diseases-of-fish", publisher: "Merck Vet Manual" },
   { label: "Riehl, R. & Baensch, H.A. Aquarium Atlas Vol 1. Baensch, 1991.", publisher: "Baensch" },
 ]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Dwarf Gourami Care Guide — DGD Virus, Honey Gourami | Fish.com', description: 'Dwarf gouramis are colorful but disease-prone. DGD (Dwarf Gourami Disease) is incurable and widespread. Honey gouramis are the hardier alternative.', path: '/species/dwarf-gourami', type: 'article' })
@@ -39,7 +40,7 @@ const FAQS = [
   {
     question: 'What tank conditions do dwarf gouramis need?',
     answer:
-      'Temperature of 76–82°F and pH 6.0–7.5, with calm water and no strong surface agitation. As labyrinth fish they breathe atmospheric air at the surface, so the tank needs a cover that keeps the air above the water warm and humid while leaving a gap for air access. Heavily planted tanks with floating plants such as frogbit or water lettuce suit them well.',
+      'Temperature of 77–83°F (https://www.fishbase.se/summary/Trichogaster-lalius.html) and pH 6.0–7.5, with calm water and no strong surface agitation. As labyrinth fish they breathe atmospheric air at the surface, so the tank needs a cover that keeps the air above the water warm and humid while leaving a gap for air access. Heavily planted tanks with floating plants such as frogbit or water lettuce suit them well.',
     answerText:
       '76-82F, pH 6.0-7.5, calm water, and a covered tank with warm humid air above the surface — they are labyrinth fish that breathe atmospheric air.',
   },
@@ -93,7 +94,7 @@ export default function DwarfGouramiPage() {
         <p>Trichogaster chuna (honey gourami) is the hardier, more disease-resistant smaller gourami that most aquarists who have lost dwarf gouramis to DGD eventually switch to. Males develop golden-yellow to orange coloration with a dark ventral stripe when comfortable and in good condition — not as vivid as the electric dwarf gourami colors, but genuinely attractive. Females are silver-tan. Honey gouramis are smaller (1.5 inches), more peaceful, and more disease-resistant than dwarf gouramis. They are an excellent community centerpiece fish for 10-20 gallon planted tanks.</p>
 
         <h2>Tank Requirements and Behavior</h2>
-        <p>Both species are labyrinth fish — like bettas, they breathe atmospheric air through a labyrinth organ and must have access to the water surface. Ensure the tank has a cover (to maintain warm, humid air above the water surface — breathing cold air stresses labyrinth fish) but leave a gap for air access. No strong surface agitation — they prefer calm water. Both species appreciate heavily planted tanks with floating plants (frogbit, water lettuce) that provide surface cover and diffused lighting. Temperature 76–82°F. pH 6.0–7.5.</p>
+        <p>Both species are labyrinth fish — like bettas, they breathe atmospheric air through a labyrinth organ and must have access to the water surface. Ensure the tank has a cover (to maintain warm, humid air above the water surface — breathing cold air stresses labyrinth fish) but leave a gap for air access. No strong surface agitation — they prefer calm water. Both species appreciate heavily planted tanks with floating plants (frogbit, water lettuce) that provide surface cover and diffused lighting. Temperature 77–83°F (<a className="break-all" href="https://www.fishbase.se/summary/Trichogaster-lalius.html">https://www.fishbase.se/summary/Trichogaster-lalius.html</a>). pH 6.0–7.5.</p>
         <p>Males of both species are territorial toward other males of the same species — do not keep two males together in a community tank unless the tank is 30+ gallons with significant visual breaks. A single male (or a male-female pair) is appropriate for most community setups. Compatible with virtually all peaceful community fish — harlequin rasboras, corydoras, cherry shrimp, tetras.</p>
 
         <h2>Bubble Nest Building</h2>
@@ -108,12 +109,12 @@ export default function DwarfGouramiPage() {
           includeSchema={false}
           allowMultiple
         />
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        <HopDisclosure siteId="fish-com" href="/go/amazon-brand/dwarf%20gourami%20tank%20setup?s=species-dwarf-gourami" />
           <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Dwarf Gourami — Tank Setup</div>
-          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for dwarf gourami care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
+          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for dwarf gourami care.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
-            <a href="/go/amazon-brand/dwarf%20gourami%20tank%20setup?s=species-dwarf-gourami" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop Dwarf Gourami Setup on Amazon →</a>
+            <ShopCtas amazonHref="/go/amazon-brand/dwarf%20gourami%20tank%20setup?s=species-dwarf-gourami" amazonLabel="Browse dwarf gourami tank setups on Amazon →" />
           </div>
         </div>
 

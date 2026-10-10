@@ -1,5 +1,7 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { TableShopLink, ComparisonFoot, buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, StockImage, ReviewCard, ScoreMethodology, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import Link from 'next/link'
+import { TableShopLink, ComparisonFoot, buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, StockImage, ReviewCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -61,6 +63,14 @@ export default function HaltersLeadRopesPage() {
           { title: 'Buying Your First Horse', href: '/ownership/buying-your-first-horse' },
           { title: 'Reading Horse Body Language', href: '/ownership/reading-body-language' },
         ]}
+        heroHop={
+          <>
+            <HopDisclosure siteId="horses-com" href="/go/amazon-brand/nylon+horse+halter?s=halters-and-lead-ropes" />
+            <div className="mb-4" data-primary-hop="true">
+              <a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" data-shop-placement="hero" href="/go/amazon-brand/nylon+horse+halter?s=halters-and-lead-ropes">Browse nylon horse halters on Amazon →</a>
+            </div>
+          </>
+        }
         hero={{
           title: "Halters and Lead Ropes",
           subtitle:
@@ -90,6 +100,7 @@ export default function HaltersLeadRopesPage() {
           <RelatedLinks
             title="Related Reading"
             links={[
+              { label: "November and December gifts", href: "/reviews/november-december-gift-guide" },
               { label: "Trailering and Transport", href: "/care/trailering" },
               { label: "Reading Body Language", href: "/ownership/reading-body-language" },
               { label: "Fencing and Safety", href: "/care/fencing-safety" },
@@ -120,12 +131,9 @@ export default function HaltersLeadRopesPage() {
 
           <h2 id="ropevsflat">Rope vs Flat Halters</h2>
           <p>Rope halters are thin and knotted, concentrating pressure on small points of the head, which makes them effective communication tools in skilled hands for groundwork and training. Flat (webbing or leather) halters spread pressure over a broader area and are gentler for everyday leading and tying. Rope halters are generally not left on or used for tying in the same way, because their thin material can cause injury under sudden force and many do not break. Match the halter to the task and the handler&apos;s skill.</p>
-          <p>
-            A horse rope-vs-flat-halter task question card is how &quot;rope halters are for skilled groundwork, flat halters spread pressure for everyday leading and tying, and rope halters are generally not used for tying&quot; stays posted — it is not a horse-boot impact-not-tendon-support question card (that lives on boots-and-wraps), not a saddle-pad sweat-pattern dry-spot question card (that lives on saddle-pads), not a riding helmet certification-label question card (that lives on helmet-guide), and not a horse handler kick-zone safety question card (that lives on reading-body-language). This page does not invent clinic listings. </p>
 
           <h2 id="turnout">Turnout Halter Dangers</h2>
           <p>Turning a horse out in a strong, non-breakable halter is a recognized hazard: a halter can catch on a fence post, gate, branch, or the horse&apos;s own hoof when scratching, trapping the horse, which then panics and can suffer severe injury or death. The safest practice is to turn horses out without a halter where catching allows; where a halter must be left on, use a breakaway halter or one with a leather crownpiece that will give way under force. Never turn a horse out in a fixed nylon halter that cannot break.</p>
-          
 
           <h2 id="leads">Lead Ropes</h2>
           <p>Lead ropes attach to the halter and come in cotton, nylon, and poly materials, with various clips (a strong trigger or bull snap is common). A good lead is long enough to handle and tie safely, soft enough not to burn the hands, and fitted with a reliable clip. Avoid wrapping a lead rope around the hand -- a spooking horse can cause serious rope burns or pull a handler off their feet -- and instead fold the slack and hold it so it can be released.</p>
@@ -138,22 +146,17 @@ export default function HaltersLeadRopesPage() {
             <li><strong>Tie at the right height and length</strong> -- around wither height and short enough that the horse cannot get a leg over the rope.</li>
             <li><strong>Never tie by the bit or reins</strong> and never leave a tied horse unattended for long.</li>
           </ul>
-          <p>
-            A horse quick-release wither-height tie log notebook is how quick-release-or-panic-snap, baler-twine-breakaway-loop, wither-height-and-short-enough-that-the-horse-cannot-get-a-leg-over-the-rope, and fold-the-slack-never-wrap-the-lead-around-the-hand stay written down — it is not a horse-boot grit-rub clean-dry log notebook (that lives on boots-and-wraps), not a saddle-pad clean-dry rotation log notebook (that lives on saddle-pads), not a riding helmet impact-retirement log notebook (that lives on helmet-guide), and not a horse pain-demeanor change-log notebook (that lives on reading-body-language). </p>
 
           <h2 id="picks">Halter and Lead Picks</h2>
-          <p>A few widely-stocked options covering the everyday flat halter, a safer turnout halter, and a serviceable lead rope. These are physical handling tools, not training shortcuts — a halter and lead are only as safe as the handling and tying practices described above. This is a documented-spec comparison drawing on standard US equestrian retail; this page does not claim hands-on testing.</p>
+          <p>A few widely-stocked options covering the everyday flat halter, a safer turnout halter, and a serviceable lead rope. These are physical handling tools, not training shortcuts — a halter and lead are only as safe as the handling and tying practices described above.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
-          <ScoreMethodology />
 
-          <ReviewCard
+          <ReviewCard quietUntilTag
             id="flat-nylon-halter"
             badge="Everyday"
             name="Adjustable Flat Nylon Halter"
             subtitle="The inexpensive, durable barn workhorse"
-            score={8.2}
             description={<>
               <p>An adjustable flat nylon halter is the standard everyday halter: strong, washable, inexpensive, and available in every size from foal to draft. Its strength is the point for leading and tying in hand — but that same strength is why it should never be left on a turned-out horse (see the turnout section above).</p>
               <p>Reasonable choice for: in-hand leading, grooming, and tying under supervision. Keep an adjustable throat and noseband for a correct fit.</p>
@@ -166,18 +169,18 @@ export default function HaltersLeadRopesPage() {
             pros={['Inexpensive and very durable', 'Washable, available in all sizes', 'Strong for in-hand handling']}
             cons={['Does not break — unsafe for turnout', 'Hardware can rub if poorly fitted']}
             price="$10–25"
-            ctaText="Compare at SmartPak →"
+            priceNote="dated 2026-10-04."
+            ctaText="Compare an adjustable nylon halter at SmartPak →"
             ctaHref="/go/smartpak/adjustable-nylon-halter?s=tack-halters"
             ctaAffiliateProgram="smartpak"
             ctaAffiliateProduct="adjustable-nylon-halter"
           />
 
-          <ReviewCard
+          <ReviewCard quietUntilTag
             id="breakaway-halter"
             badge="Safer Turnout"
             name="Leather-Crown Breakaway Halter"
             subtitle="Designed to give way if the horse is caught"
-            score={8.7}
             winner
             description={<>
               <p>A breakaway halter pairs a strong nylon body with a leather crownpiece or a breakable tab that gives way under force, so a horse that catches the halter on a post or hoof can free itself rather than panic and injure itself. It is the sensible compromise when a horse must be left haltered in turnout.</p>
@@ -191,18 +194,18 @@ export default function HaltersLeadRopesPage() {
             pros={['Breaks under force to free a caught horse', 'Much safer than fixed nylon in turnout', 'Replaceable crownpieces on many models']}
             cons={['Leather crown needs periodic replacement', 'Pricier than a plain nylon halter']}
             price="$25–55"
-            ctaText="Compare at Dover Saddlery →"
+            priceNote="dated 2026-10-04."
+            ctaText="Compare a leather-crown breakaway halter at Dover Saddlery →"
             ctaHref="/go/dover/leather-crown-breakaway-halter?s=tack-halters"
             ctaAffiliateProgram="dover"
             ctaAffiliateProduct="leather-crown-breakaway-halter"
           />
 
-          <ReviewCard
+          <ReviewCard quietUntilTag
             id="cotton-lead-rope"
             badge="Lead Rope"
             name="Cotton Lead Rope with Bull Snap"
             subtitle="Soft on the hands, strong at the clip"
-            score={8.3}
             description={<>
               <p>A soft cotton or poly lead rope with a strong trigger or bull snap is long enough to handle and tie safely and soft enough not to burn the hands. Fold the slack rather than wrapping it around your hand so a spooking horse cannot trap you (see the lead-rope section above).</p>
               <p>Most relevant as the everyday lead for every halter in the barn; keep a spare on the stable door.</p>
@@ -215,14 +218,15 @@ export default function HaltersLeadRopesPage() {
             pros={['Soft enough to avoid rope burn', 'Strong, reliable snap', 'Long enough to tie safely']}
             cons={['Cotton frays over years of use', 'Cheap snaps can fail — check the clip']}
             price="$8–22"
-            ctaText="Compare at SmartPak →"
+            priceNote="dated 2026-10-04."
+            ctaText="Compare a cotton lead rope with bull snap at SmartPak →"
             ctaHref="/go/smartpak/cotton-lead-rope-bull-snap?s=tack-halters"
             ctaAffiliateProgram="smartpak"
             ctaAffiliateProduct="cotton-lead-rope-bull-snap"
           />
 
           <h2 id="who">Who should buy which</h2>
-          <p>The three cards already name the job, the price, and the turnout limit. This table only lines those facts up. Scores are this page&apos;s editorial scores, not customer star ratings.</p>
+          <p>The three cards already name the job, the price, and the turnout limit. This table only lines those facts up.</p>
           <div className="overflow-x-auto my-6 max-w-full">
             <table className="w-full text-sm border-collapse table-fixed sm:table-auto min-w-0 sm:min-w-[36rem] [&_th]:break-words [&_td]:break-words">
               <thead>
@@ -236,121 +240,47 @@ export default function HaltersLeadRopesPage() {
               <tbody>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 text-brand-text-mid">Leading, grooming, and tying while someone is there</td>
-                  <td className="p-3 font-bold text-brand-dark"><a href="#flat-nylon-halter" className="text-brand-primary">Adjustable flat nylon halter</a><TableShopLink href={"/go/smartpak/adjustable-nylon-halter?s=tack-halters"} product={"Adjustable flat nylon halter"} /></td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#flat-nylon-halter" className="text-brand-primary">Adjustable flat nylon halter</a><TableShopLink quietUntilTag href={"/go/smartpak/adjustable-nylon-halter?s=tack-halters"} product={"Adjustable flat nylon halter"} /></td>
                   <td className="p-3 text-brand-text-mid">Everyday. Adjustable crown and noseband. $10–25</td>
                   <td className="p-3 text-brand-text-mid">Turnout. The card says it does not break, so it is unsafe to leave on a horse alone</td>
                 </tr>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 text-brand-text-mid">A halter that has to stay on in the field</td>
-                  <td className="p-3 font-bold text-brand-dark"><a href="#breakaway-halter" className="text-brand-primary">Leather-crown breakaway</a><TableShopLink href={"/go/dover/leather-crown-breakaway-halter?s=tack-halters"} product={"Leather-crown breakaway"} /></td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#breakaway-halter" className="text-brand-primary">Leather-crown breakaway</a><TableShopLink quietUntilTag href={"/go/dover/leather-crown-breakaway-halter?s=tack-halters"} product={"Leather-crown breakaway"} /></td>
                   <td className="p-3 text-brand-text-mid">Safer turnout. Leather crown or breakable tab. $25–55</td>
                   <td className="p-3 text-brand-text-mid">You will not replace the leather crown. The card says it wears and costs more than plain nylon</td>
                 </tr>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 text-brand-text-mid">A lead that is soft in the hand and long enough to tie</td>
-                  <td className="p-3 font-bold text-brand-dark"><a href="#cotton-lead-rope" className="text-brand-primary">Cotton lead with a bull snap</a><TableShopLink href={"/go/smartpak/cotton-lead-rope-bull-snap?s=tack-halters"} product={"Cotton lead with a bull snap"} /></td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#cotton-lead-rope" className="text-brand-primary">Cotton lead with a bull snap</a><TableShopLink quietUntilTag href={"/go/smartpak/cotton-lead-rope-bull-snap?s=tack-halters"} product={"Cotton lead with a bull snap"} /></td>
                   <td className="p-3 text-brand-text-mid">Lead rope. Trigger or bull snap. Fold the slack. $8–22</td>
                   <td className="p-3 text-brand-text-mid">The clip is a cheap one you have not checked. The card says those snaps can fail, and cotton frays over years</td>
                 </tr>
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-05" />
+          <ComparisonFoot updated="2026-10-09" />
 
-          {/* Shop leftover kit — unused vs #1142
-              laminated+horse+leg+bandage+bow+technique+checklist /
-              horse+boot+impact+not+tendon+support+question+card /
-              horse+boot+grit+rub+clean+dry+log+notebook, #1141
-              laminated+saddle+pad+cannot+fix+fit+checklist /
-              saddle+pad+sweat+pattern+dry+spot+question+card /
-              saddle+pad+clean+dry+rotation+log+notebook, #1140
-              laminated+riding+helmet+fit+and+replace+checklist /
-              riding+helmet+certification+label+question+card /
-              riding+helmet+impact+retirement+log+notebook, #1139
-              laminated+first+horse+90+day+week+by+week+checklist /
-              first+horse+ground+manners+cue+card /
-              first+horse+tack+room+emergency+plan+card, #1138
-              laminated+senior+horse+age+related+change+checklist /
-              senior+horse+weight+and+joint+watch+notebook /
-              senior+horse+quality+of+life+score+card, #1137
-              laminated+horse+ear+eye+tail+signal+checklist /
-              horse+handler+kick+zone+safety+question+card /
-              horse+pain+demeanor+change+log+notebook, #1136
-              laminated+pre+purchase+exam+stage+walkthrough+checklist /
-              horse+pre+purchase+exam+findings+decision+worksheet /
-              horse+buyer+vet+briefing+question+card, #1135
-              horse+lease+agreement+document+binder /
-              laminated+horse+lease+walkthrough+checklist /
-              horse+full+vs+partial+lease+cost+share+worksheet, #1134
-              horse+insurance+policy+document+binder /
-              laminated+horse+insurance+claims+checklist /
-              horse+mortality+vs+major+medical+decision+worksheet, #1133
-              horse+ownership+monthly+budget+worksheet /
-              equine+emergency+fund+expense+tracker+notebook /
-              horse+keep+feed+farrier+cost+log+binder, #1132
-              laminated+equine+vet+interview+checklist /
-              horse+after+hours+emergency+cover+question+card /
-              horse+veterinary+history+vcpr+records+folder, #1131
-              first+horse+buyer+visit+field+notebook /
-              laminated+first+horse+tryout+walkthrough+checklist /
-              horse+pre+purchase+exam+records+binder, #1130
-              laminated+horse+boarding+facility+walkthrough+checklist /
-              horse+boarding+contract+document+binder /
-              waterproof+horse+hay+bale+storage+tarp, #1129
-              sterile+saline+wound+flush+horse /
-              nonstick+wound+dressing+pads+horse /
-              equine+bandage+scissors,
-              cost-calculator
-              horse+halter+lead+rope,
-              trailering
-              horse+shipping+boots /
-              horse+shipping+wraps /
-              horse+trailer+ties,
-              saddle-fit-basics
-              horse+saddle+pad /
-              horse+sheepskin+half+pad /
-              horse+saddle+shims /
-              horse+girth+cinch,
-              horse-size-for-rider
-              ASTM+SEI+horse+riding+helmet,
-              grimace / first-aid
-              ice+boot+cold+therapy+wrap /
-              vet+wrap /
-              equine+first+aid+kit,
-              #1128
-              laminated+horse+barn+calculator+tools+chart /
-              horse+stall+door+measurement+card /
-              equine+calculator+reference+handbook, #1127
-              laminated+horse+barn+owner+guides+chart /
-              horse+stall+door+owner+guides+card /
-              equine+owner+guides+reference+handbook, #1126
-              laminated+horse+barn+daily+care+chart /
-              horse+stall+door+care+card /
-              equine+husbandry+reference+handbook, #1125
-              laminated+horse+barn+emergency+triage+chart /
-              horse+stall+door+vital+signs+card /
-              equine+health+reference+handbook. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
             </div>
             <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
+            <p className="mb-4 text-sm font-semibold leading-snug">
+              <a href="/care/fencing-safety" className="inline-block max-w-full whitespace-normal text-brand-primary underline underline-offset-2">
+                Read fencing and safety before you leave a halter on →
+              </a>
+            </p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/equestrian+riding+helmet?s=halters-and-lead-ropes"
-                amazonLabel="Shop on Amazon"
+                amazonHref="/go/amazon-brand/nylon+horse+halter?s=halters-and-lead-ropes"
+                amazonLabel="Browse nylon horse halters on Amazon →"
               />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/horse+rope+vs+flat+halter+task+question+card?s=halters-and-lead-ropes"
-                amazonLabel="Browse horse rope-vs-flat-halter task question cards on Amazon →"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/horse+quick+release+wither+height+tie+log+notebook?s=halters-and-lead-ropes"
-                amazonLabel="Browse horse quick-release wither-height tie log notebooks on Amazon →"
-              />
+
           </div>
           </div>
 
+          <p>Nylon and breakaway halters are compared in the <Link href="/reviews/nylon-vs-breakaway-halter-guide">nylon versus breakaway halter guide</Link>.</p>
           <h2 id="faq">Frequently Asked Questions</h2>
           <FAQAccordion items={FAQS} />
 

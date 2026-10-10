@@ -1,12 +1,12 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, RelatedLinks, ShopCtas, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Ear Infections in Dogs — Causes, Signs, Treatment | Vets.co", description: "Recurrent ear infections in dogs usually point to an underlying cause like allergies. Learn the signs, why infections recur, and how to manage them.", path: '/health/ear-infections-dogs', type: 'article' })
 const SOURCES = [
   { label: 'AAHA: Otitis Management Guidelines', url: 'https://www.aaha.org/aaha-guidelines/otitis/', publisher: 'AAHA' },
-  { label: 'Merck Veterinary Manual: Otitis Externa in Dogs', url: 'https://www.merckvetmanual.com/ear-disorders/diseases-of-the-outer-ear/otitis-externa-in-dogs', publisher: 'Merck Vet Manual' },
-  { label: 'AVMA: Ear Infections in Dogs', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/ear-infections-dogs', publisher: 'AVMA' },
+  { label: 'Merck Veterinary Manual: Otitis Externa in Dogs', url: 'https://www.merckvetmanual.com/dog-owners/ear-disorders-of-dogs/ear-infections-and-otitis-externa-in-dogs', publisher: 'Merck Vet Manual' },
 ]
 const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Ear Infections in Dogs', description: 'Causes, signs, and management of canine otitis externa and ear infections.', url: 'https://vets.co/health/ear-infections-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-09-05T00:00:00Z' ,
   citation: SOURCES,
@@ -48,6 +48,7 @@ export default function EarInfectionsDogsPage() {
       >
         <div className="carloOS-article">
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-09-05T00:00:00Z" reviewedBy="Editorial team" />
+          <LastUpdated date="2026-10-09" />
 
           <CalloutBox variant="info" title="Recurrence means look deeper">
             A dog that gets ear infection after ear infection does not have bad luck — it has an unaddressed underlying cause, most often allergies. Breaking the cycle requires identifying and managing that cause, not just clearing each infection as it appears.
@@ -71,36 +72,22 @@ export default function EarInfectionsDogsPage() {
           <h2>Prevention</h2>
           <p>Prevention is tailored to the dog. For allergic dogs, allergy management is the foundation. General measures include drying ears after swimming and bathing, routine cleaning with a veterinarian-recommended cleaner for wax-prone dogs, and avoiding over-cleaning healthy ears. A dog ear-cleaner solution a veterinarian has recommended loosens wax in the L-shaped canal; cotton balls for dog ears wipe the visible canal and flap after the dog shakes — cotton swabs stay out of the canal. Dog ear-drying powder after a swim or bath helps leftover moisture leave the canal instead of sitting warm and wet. Staying ahead of the underlying cause is what keeps prone dogs comfortable and out of the recurring-infection cycle.</p>
 
-          <h2 id="kit">Home ear-care kit</h2>
+          <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Everyday physical supplies that match the prevention copy
-            on this page — a dog ear-cleaner solution a veterinarian
-            has recommended for wax-prone ears, cotton balls for dog
-            ears to wipe the visible canal and flap after the dog
-            shakes, and dog ear-drying powder after swimming or
-            bathing. These are household tools, not treatments. They
-            do not treat an active infection, they do not replace a
-            veterinarian or cytology, and they are not prescription
-            ear drops, leftover medication, vinegar, peroxide, or
-            cotton swabs. This is not the sister Dog.com weekly
-            ear-cleaning page and it does not hop a generic pet ear
-            cleaner or bare cotton-ball search. It is not the
-            Labrador swim-ear page and it does not hop a
-            microfiber dog towel or dog ear-drying solution. This
-            page does not claim hands-on testing.
+            Keep these on hand: a dog ear-cleaner solution a veterinarian has recommended for wax-prone ears, cotton balls for dog ears to wipe the visible canal and flap after the dog shakes, and dog ear-drying powder after swimming or bathing. These are household tools, not treatments. They do not treat an active infection, they do not replace a veterinarian or cytology, and they are not prescription ear drops, leftover medication, vinegar, peroxide, or cotton swabs.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/dog+ear+cleaner+solution?s=health-ear-infections-dogs", "/go/amazon-brand/cotton+balls+for+dog+ears?s=health-ear-infections-dogs", "/go/amazon-brand/dog+ear+drying+powder?s=health-ear-infections-dogs"]} />
 
-          {/* Money path — live amazon-brand search hops (dog ear-cleaner
+          {/* Shop note — live amazon-brand search buttons (dog ear-cleaner
               solution / cotton balls for dog ears / dog ear-drying
               powder). ShopCtas hides empty Chewy; never href="#" or
-              PLACEHOLDER. Category searches only — unused vs #848–#1033
+              an empty link. Amazon searches only — unused vs #848–#1033
               pet+ear+cleaner, cotton+balls, cotton+pads,
               dog+ear+drying+solution, UTI fountain/pads/bowl, and
               kennel-cough harness/humidifier/crate. Prescription
               ear drops, leftover medication, and cotton swabs are
-              not shoppable hops. */}
+              not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

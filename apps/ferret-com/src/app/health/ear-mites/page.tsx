@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import {
   buildMetadata,
@@ -10,22 +11,22 @@ import {
   DropCap,
   CrossPortfolioCard,
   ArticleSourcesList,
-  AffiliateDisclosure,
   ShopCtas,
+  LastUpdated,
 } from '@carloOS/ui'
 
 const SOURCES = [
+  {
+    label: "Merck Veterinary Manual — Otodectes cynotis ear mites in ferrets",
+    url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/infectious-diseases-of-ferrets",
+    publisher: "Merck Veterinary Manual",
+  },
   {
     label: "Quesenberry KE, Carpenter JW (eds.). Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery. 4th ed. Saunders/Elsevier — ferret dermatology and ectoparasite chapters.",
     url: "https://www.elsevier.com/books/ferrets-rabbits-and-rodents/quesenberry/978-1-4160-6621-7",
     publisher: "Elsevier/Saunders",
   },
-  {
-    label: "Merck Veterinary Manual — Ear Mites in Ferrets: Otodectes cynotis diagnosis, treatment, and household decontamination",
-    url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/musculoskeletal-and-neurologic-diseases-of-ferrets",
-    publisher: "Merck Veterinary Manual",
-  },
-  {
+    {
     label: "Association of Exotic Mammal Veterinarians (AEMV) — ferret dermatology and ectoparasitology continuing-education resources",
     url: "https://aemv.org",
     publisher: "AEMV",
@@ -75,7 +76,6 @@ const medSchema = buildMedicalWebPageSchema({
   authorName: 'Ferret.com Editorial',
   lastReviewed: '2026-06-01',
 })
-
 
 const FAQS = [
   {
@@ -132,7 +132,7 @@ export default function FerretEarMitesPage() {
           <>
             <TableOfContents
               items={[
-                { label: 'TL;DR', href: '#tldr' },
+                { label: '', href: '#tldr' },
                 { label: 'What Ear Mites Are', href: '#what' },
                 { label: 'Signs to Watch For', href: '#signs' },
                 { label: 'How Vets Diagnose It', href: '#diagnosis' },
@@ -154,7 +154,7 @@ export default function FerretEarMitesPage() {
 
           </>
         }
-      
+
         relatedLinks={[
           { title: 'Ferret Health Hub', href: '/health' },
           { title: 'Ear Cleaning', href: '/care/ear-cleaning' },
@@ -168,6 +168,7 @@ export default function FerretEarMitesPage() {
             publishedAt="2026-06-01"
             updatedAt="2026-06-01"
           />
+          <LastUpdated date="2026-10-09" />
 
           <DropCap>
             A ferret that suddenly starts shaking its head, scratching at its
@@ -179,8 +180,7 @@ export default function FerretEarMitesPage() {
             health problems to confirm and clear.
           </DropCap>
 
-          <h2 id="tldr">TL;DR</h2>
-          <p>
+                    <p>
             Ear mites in ferrets are caused by <em>Otodectes cynotis</em>, the
             same mite seen in dogs and cats. Signs are head-shaking, ear
             scratching, and abundant dark waxy debris. Diagnosis is a quick
@@ -327,20 +327,8 @@ export default function FerretEarMitesPage() {
             links the rest of the ferret health library.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/ferret+cage?s=ear-mites" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated ferret coffee-grounds chart /
-              ferret fridge household-treat card /
-              mustelid otodectes-swab handbook).
-              No existing product hop to keep.
-              Educational kitchen searches only; no Rx /
-              vaccine / flea / heartworm / aging hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs health-hub /
-              heart-disease / influenza / distemper hops. Ferret
-              aging stays held.
-              Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
@@ -349,7 +337,7 @@ export default function FerretEarMitesPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/ferret+cage?s=ear-mites"
-                amazonLabel="Shop on Amazon"
+                amazonLabel="Browse ferret cages on Amazon →"
               />
           </div>
           </div>

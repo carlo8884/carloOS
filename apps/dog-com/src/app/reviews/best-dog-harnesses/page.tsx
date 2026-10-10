@@ -1,16 +1,17 @@
 import type { Metadata } from 'next'
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import Link from 'next/link'
-import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
+import { TableShopLink, RelatedReads, ComparisonFoot, EmailCapture, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, CrossPortfolioCard, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript, buildItemListSchema} from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Dog Harnesses 2026 — Front-Clip, Back-Clip | Dog.com', description: 'Best dog harnesses ranked by type: front-clip for pullers, back-clip for calm walkers, and escape-proof for determined dogs.', path: '/reviews/best-dog-harnesses', category: 'Equipment Reviews', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Dog Harnesses 2026', description: 'Front-clip, back-clip, and escape-proof harnesses ranked.', url: 'https://dog.com/reviews/best-dog-harnesses', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' })
-const easyWalkSchema = buildProductSchema({ name: 'PetSafe Easy Walk Harness', description: 'Front-clip harness that redirects pullers without pain. Best no-pull harness.', url: 'https://petsafe.net', imageUrl: '', ratingValue: 9.3, reviewCount: 1 })
-const ruffwearSchema = buildProductSchema({ name: 'Ruffwear Front Range Harness', description: 'Premium two-clip hiking and outdoor harness with padded chest piece.', url: 'https://ruffwear.com', imageUrl: '', ratingValue: 9.2, reviewCount: 1 })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Dog Harnesses 2026', description: 'Front-clip, back-clip, and escape-proof harnesses ranked.', url: 'https://dog.com/reviews/best-dog-harnesses', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-07T00:00:00Z' })
+const easyWalkSchema = buildProductSchema({ name: 'PetSafe Easy Walk Harness', description: 'Front-clip harness that redirects pullers without pain. Best no-pull harness.', url: 'https://dog.com/go/chewy-brand/petsafe+easy+walk+harness?s=reviews-best-dog-harnesses', imageUrl: '' })
+const ruffwearSchema = buildProductSchema({ name: 'Ruffwear Front Range Harness', description: 'Premium two-clip hiking and outdoor harness with padded chest piece.', url: 'https://dog.com/go/chewy-brand/ruffwear+front+range+harness?s=reviews-best-dog-harnesses', imageUrl: '' })
 const allSchemas = combineSchemas(schema, easyWalkSchema, ruffwearSchema)
 
 const PICKS = [
-  { label: 'Best No-Pull', name: 'PetSafe Easy Walk', subtitle: 'Front-clip · Redirects pulling · No pain', href: '#easy-walk' },
+  { label: 'Best No-Pull', name: 'PetSafe Easy Walk', subtitle: 'Front-clip · Redirects pulling · No pain', href: '#easy-walk', pickHop: '/go/chewy-brand/petsafe+easy+walk+harness?s=reviews-best-dog-harnesses' },
   { label: 'Best Outdoor', name: 'Ruffwear Front Range', subtitle: 'Two-clip · Padded · Hiking-rated', href: '#ruffwear' },
   { label: 'Best Escape-Proof', name: 'Julius-K9 IDC Powerharness', subtitle: 'Heavy-duty · Escape-resistant · Velcro patches', href: '#julius' },
   { label: 'Best for Puppies', name: 'PetSafe Sure-Fit', subtitle: 'Adjustable · Grows with puppy', href: '#puppy' },
@@ -18,7 +19,7 @@ const PICKS = [
 
 const itemList = buildItemListSchema({
   name: "Best Dog Harnesses 2026",
-  items: PICKS.map((pick) => ({ name: pick.name, url: `https://dog.com/reviews/best-dog-harnesses${pick.href}` })),
+  items: PICKS.map((pick) => ({ name: pick.name, url: ({ "PetSafe Easy Walk": "https://dog.com/go/chewy-brand/petsafe+easy+walk+harness?s=reviews-best-dog-harnesses", "Ruffwear Front Range": "https://dog.com/go/chewy-brand/ruffwear+front+range+harness?s=reviews-best-dog-harnesses", "Julius-K9 IDC Powerharness": "https://dog.com/go/amazon/B0B21KVSNV?s=reviews-best-dog-harnesses" }[pick.name] ?? `https://dog.com/reviews/best-dog-harnesses${pick.href}`) })),
 })
 export default function BestDogHarnessesPage() {
   return (
@@ -27,8 +28,29 @@ export default function BestDogHarnessesPage() {
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">🐕 Buyer's Guide</span>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Dog Harnesses 2026</h1>
-        <PriceAsOf date="2026-10-04" tone="dark" />
-        <PrimaryHop href='/go/chewy-brand/petsafe+easy+walk+harness?s=reviews-best-dog-harnesses' label='Check price of the PetSafe Easy Walk harness on Chewy' />
+        <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">The PetSafe Easy Walk is the top harness because a front clip turns a pull to the side.</p>
+        <PriceAsOf date="2026-10-05" tone="dark" />
+        <div data-fold="offer">
+          <PrimaryHop href='/go/chewy-brand/petsafe+easy+walk+harness?s=reviews-best-dog-harnesses' label='Check price of the PetSafe Easy Walk harness on Amazon' />
+        <HopDisclosure tone="on-dark" siteId="dog-com" href="/go/chewy-brand/petsafe+easy+walk+harness?s=reviews-best-dog-harnesses" />
+        </div>
+        <EmailCapture
+          variant="inline"
+          siteId="dog-com"
+          addressOnly
+          title="Shopping checklist"
+          ctaText="Copy checklist"
+          source="reviews-best-dog-harnesses"
+          checklist={[
+            "The PetSafe Easy Walk, marked Best No-Pull.",
+            "It is not the pick for a dog with shoulder or elbow issues, and the fit has to be right or it rotates.",
+            "The Ruffwear Front Range, marked Best Outdoor.",
+            "It is bulkier and more expensive than a casual harness.",
+            "The Julius-K9 IDC Powerharness, marked Best Escape-Proof.",
+            "It is not a no-pull harness, and it is heavy for a small dog.",
+          ]}
+        />
+
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">The right harness depends on why you need it — pulling management, outdoor activity, or escape prevention. These are three fundamentally different tools.</p>
       </div>
       <QuickPicks items={PICKS} />
@@ -48,42 +70,44 @@ export default function BestDogHarnessesPage() {
               siteId="dog-com"
               nextHref="/tools/harness-collar-size"
               nextLabel="Size the chest and neck before you pick a clip"
-              nextBlurb="The callout is the clip rule — front-clip for pullers, back-clip for dogs that already walk well. The harness-size calculator is the next step so the chest band actually sits where the clip can work. The link below searches Amazon for the Julius-K9 IDC Powerharness, the same search as on this page."
-              resourceHref="/go/amazon-brand/julius+k9+idc+powerharness?s=reviews-best-dog-harnesses"
+              nextBlurb="The callout is the clip rule — front-clip for pullers, back-clip for dogs that already walk well. The harness-size calculator is the next step so the chest band actually sits where the clip can work. The link below opens the Julius-K9 IDC Powerharness product page on Amazon, the same product as on this page."
+              resourceHref="/go/amazon/B0B21KVSNV?s=reviews-best-dog-harnesses"
               resourceLabel="Browse Julius-K9 IDC Powerharness on Amazon →"
             />
-            <ScoreMethodology />
-            <AffiliateDisclosure variant="inline" siteId="dog-com" />
-            <ReviewCard id="easy-walk" badge="Best No-Pull" name="PetSafe Easy Walk Harness" subtitle="Front-clip · Martingale loop · Immediate pulling reduction" score={9.3} winner
+            <HopDisclosure siteId="dog-com" href={["/go/chewy-brand/petsafe+easy+walk+harness?s=reviews-best-dog-harnesses", "/go/chewy-brand/ruffwear+front+range+harness?s=reviews-best-dog-harnesses", "/go/amazon/B0B21KVSNV?s=reviews-best-dog-harnesses"]} />
+            <ReviewCard id="easy-walk" badge="Best No-Pull" name="PetSafe Easy Walk Harness" subtitle="Front-clip · Martingale loop · Immediate pulling reduction" winner
               description={<p>The Easy Walk is a widely recommended front-clip harness by trainers and veterinary behaviorists. The martingale loop at the chest creates gentle pressure when the dog pulls — the directional correction redirects forward momentum to the side without pain, choke, or discomfort. Effectiveness is immediate in most dogs — pulling behavior reduces significantly within the first walk. Not suitable for dogs with existing shoulder or elbow issues (front-clip pressure can aggravate). Available at all pet stores, easily adjustable, machine washable.</p>}
               specs={[{ label: 'Clip position', value: 'Front-clip (chest)', highlight: 'good' }, { label: 'Mechanism', value: 'Martingale redirection', highlight: 'good' }, { label: 'Best for', value: 'Pullers, reactive walkers' }, { label: 'Price', value: '$20–30', highlight: 'good' }]}
               pros={['Immediate pulling reduction', 'Affordable', 'Widely available', 'Trainer and behaviorist recommended', 'No pain mechanism']}
               cons={['Not for dogs with shoulder issues', 'Can rotate on small barrel-chested breeds', 'Needs correct fit to work']}
               price="$20–30"
-              ctaText="Check price of the PetSafe Easy Walk harness on Chewy"
+              priceNote="dated 2026-10-05."
+              ctaText="Check price of the PetSafe Easy Walk harness on Amazon"
               ctaHref="/go/chewy-brand/petsafe+easy+walk+harness?s=reviews-best-dog-harnesses"
               ctaAffiliateProgram="chewy-brand"
               ctaAffiliateProduct="petsafe+easy+walk+harness"
             />
-            <ReviewCard id="ruffwear" badge="Best Outdoor" name="Ruffwear Front Range Harness" subtitle="Two-clip (front + back) · Padded chest and belly · Reflective · Hiking-rated" score={9.2}
+            <ReviewCard id="ruffwear" badge="Best Outdoor" name="Ruffwear Front Range Harness" subtitle="Two-clip (front + back) · Padded chest and belly · Reflective · Hiking-rated"
               description={<p>Ruffwear builds outdoor gear for dogs and the Front Range is their flagship harness — padded chest piece, aluminum V-ring at the back for normal walking, and a leash attachment loop at the front for pulling management. The padding is meaningful for long hiking days. Reflective trim for low-light visibility. Two leash attachment points allow switching between pulling management (front) and general walking (back). Built to last — Ruffwear gear is well-constructed with quality hardware. More expensive than the PetSafe Easy Walk but significantly more durable for active outdoor use.</p>}
               specs={[{ label: 'Clips', value: 'Front + back (two-clip)', highlight: 'good' }, { label: 'Padding', value: 'Padded chest and belly', highlight: 'good' }, { label: 'Durability', value: 'Outdoor/hiking rated', highlight: 'good' }, { label: 'Reflective', value: 'Yes' }]}
               pros={['Two-clip versatility', 'Padded for long wear', 'Strong build quality', 'Reflective trim', 'Top outdoor pick in this comparison']}
               cons={['Expensive ($40-55)', 'Overkill for casual walkers', 'Bulkier than minimalist options']}
               price="$40–55"
-              ctaText="Shop Ruffwear Front Range →"
+              priceNote="dated 2026-10-05."
+              ctaText="Shop Ruffwear Front Range harness on Amazon →"
               ctaHref="/go/chewy-brand/ruffwear+front+range+harness?s=reviews-best-dog-harnesses"
               ctaAffiliateProgram="chewy-brand"
               ctaAffiliateProduct="ruffwear+front+range+harness"
             />
-            <ReviewCard id="julius" badge="Best Escape-Proof" name="Julius-K9 IDC Powerharness" subtitle="Heavy-duty stitching · Multiple adjustment points · Velcro ID patches" score={9.0}
+            <ReviewCard id="julius" badge="Best Escape-Proof" name="Julius-K9 IDC Powerharness" subtitle="Heavy-duty stitching · Multiple adjustment points · Velcro ID patches"
               description={<p>For dogs that back out of or destroy harnesses — the Julius-K9 IDC Powerharness is the industry standard for escape prevention and durability. Used by working dogs internationally. The chest and back straps are wide and padded, multiple adjustment points allow precise fit, and the hardware is rated for the forces a large dog can generate. The Velcro side patches accept custom ID patches. Not a no-pull harness (back clip only) — its value is durability and escape resistance, not pulling management. For escape-prone dogs used alongside leash training.</p>}
               specs={[{ label: 'Escape resistance', value: 'Among the strongest in class', highlight: 'good' }, { label: 'Construction', value: 'Heavy-duty, working-dog rated', highlight: 'good' }, { label: 'ID patches', value: 'Velcro — customizable' }, { label: 'Clip position', value: 'Back-clip only' }]}
               pros={['Among the strongest escape resistance available', 'Working-dog durability', 'Multiple adjustment points', 'ID patch capability', 'Handle on back']}
               cons={['Back-clip only — not for pullers', 'Heavy and bulky for small dogs', 'More expensive than casual alternatives']}
               price="$40–70"
-              ctaText="Shop Julius-K9 →"
-              ctaHref="/go/amazon-brand/julius+k9+idc+powerharness?s=reviews-best-dog-harnesses"
+              priceNote="dated 2026-10-05."
+              ctaText="Shop Julius-K9 IDC Powerharness on Amazon →"
+              ctaHref="/go/amazon/B0B21KVSNV?s=reviews-best-dog-harnesses"
               ctaAffiliateProgram="amazon-brand"
               ctaAffiliateProduct="julius+k9+idc+powerharness"
             />
@@ -117,27 +141,27 @@ export default function BestDogHarnessesPage() {
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">Backs out of or destroys harnesses</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#julius" className="text-brand-primary">Julius-K9 IDC</a><TableShopLink href={"/go/amazon-brand/julius+k9+idc+powerharness?s=reviews-best-dog-harnesses"} product={"Julius-K9 IDC"} /></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#julius" className="text-brand-primary">Julius-K9 IDC</a><TableShopLink href={"/go/amazon/B0B21KVSNV?s=reviews-best-dog-harnesses"} product={"Julius-K9 IDC"} /></td>
                       <td className="p-3 text-brand-text-mid">Back-clip only. $40–70</td>
                       <td className="p-3 text-brand-text-mid">Not a no-pull harness. Heavy for a small dog</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-05" />
+              <ComparisonFoot updated="2026-10-09" />
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Which harness fits which dog</h2>
               <FAQAccordion items={[
                 {
                   question: 'Which harness does this page pick for a dog that pulls?',
-                  answer: 'The PetSafe Easy Walk, scored 9.3 and marked Best No-Pull. The card lists a front clip and a printed price of $20–30. It is not the pick for a dog with shoulder or elbow issues, and the fit has to be right or it rotates.',
+                  answer: 'The PetSafe Easy Walk, marked Best No-Pull. The card lists a front clip and a printed price of $20–30. It is not the pick for a dog with shoulder or elbow issues, and the fit has to be right or it rotates.',
                 },
                 {
                   question: 'Which harness does this page pick for hiking?',
-                  answer: 'The Ruffwear Front Range, scored 9.2 and marked Best Outdoor. The card lists front and back clips and a printed price of $40–55. It is bulkier and more expensive than a casual harness.',
+                  answer: 'The Ruffwear Front Range, marked Best Outdoor. The card lists front and back clips and a printed price of $40–55. It is bulkier and more expensive than a casual harness.',
                 },
                 {
                   question: 'Which harness does this page pick when a dog backs out?',
-                  answer: 'The Julius-K9 IDC Powerharness, scored 9.0 and marked Best Escape-Proof. The card lists a back clip only and a printed price of $40–70. It is not a no-pull harness, and it is heavy for a small dog.',
+                  answer: 'The Julius-K9 IDC Powerharness, marked Best Escape-Proof. The card lists a back clip only and a printed price of $40–70. It is not a no-pull harness, and it is heavy for a small dog.',
                 },
               ]} />
             </div>
@@ -152,7 +176,7 @@ export default function BestDogHarnessesPage() {
                 </div>
               ))}
             </div>
-            <RelatedLinks title="Related Guides" links={[{ label: 'All Dog Reviews', href: '/reviews' }, { label: 'Harness & Collar Size', href: '/tools/harness-collar-size' }, { label: 'Leash Reactivity', href: '/training/leash-reactivity' }, { label: 'Best Dog Crates', href: '/reviews/best-dog-crates' }, { label: 'Training Red Flags', href: '/training/training-red-flags' }]} />
+            <RelatedLinks title="Related Guides" links={[{ label: 'All Dog Reviews', href: '/reviews' }, { label: 'November and December gifts', href: '/reviews/november-december-gift-guide' }, { label: 'Harness & Collar Size', href: '/tools/harness-collar-size' }, { label: 'Leash Reactivity', href: '/training/leash-reactivity' }, { label: 'Best Dog Crates', href: '/reviews/best-dog-crates' }, { label: 'Training Red Flags', href: '/training/training-red-flags' }]} />
 
           </aside>
         </div>

@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, CrossPortfolioCard, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, CrossPortfolioCard, TableOfContents, FAQAccordion, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -20,7 +21,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Horses.com Editorial',
   publishedAt: '2026-05-28T00:00:00Z',
-  modifiedAt: '2026-09-04T00:00:00Z',
+  modifiedAt: '2026-10-07T00:00:00Z',
 })
 
 const medSchema = buildMedicalWebPageSchema({
@@ -29,7 +30,7 @@ const medSchema = buildMedicalWebPageSchema({
     'Equine dental health — anatomy, annual maintenance, dental floats, wolf teeth, EOTRH, and clinical signs of disease.',
   url: 'https://horses.com/guides/equine-dental-care',
   authorName: 'Horses.com Editorial',
-  lastReviewed: '2026-05-28',
+  lastReviewed: '2026-10-07',
 })
 
 const combined = combineSchemas(articleSchema, medSchema)
@@ -80,9 +81,9 @@ const FAQS = [
   {
     question: 'What does a typical dental visit cost?',
     answer:
-      'Approximate US costs for a standard adult-horse dental visit (regional variation): $150-300 for a sedated float without complications, including sedation. Add $50-150 for wolf-tooth extraction. Radiographs add $50-200 depending on number of views. Extraction of diseased cheek teeth or incisors is a separate, more involved procedure and can range from $200 for a simple incisor to over $1,000 for a difficult standing cheek-tooth extraction. EOTRH treatment requiring extraction of multiple incisors is typically $800-2,000+.',
+      'The AAEP Decade One and VMG fee survey, published in 2023 from fees about a year old at publication, lists a maintenance float at $50–$225 and an extended float at $70–$232. Sedation is a separate fee. Two wolf teeth are $15–$250. An incisor extraction is $50–$300 per tooth and a molar extraction is $27–$700 per tooth. Colorado State University hospital lists an exam and float at $567–$670 and a simple extraction starting at $1,854. Standalone radiographs are a separate fee, and a multi-tooth EOTRH extraction is often a large bill because the survey prices single teeth. Ask the veterinarian for an estimate. Typical US range, checked Oct 2026; varies by clinic and region. dated 2026-10-07.',
     answerText:
-      'Standard sedated adult float: $150-300. Wolf-tooth extraction adds $50-150. Radiographs add $50-200. Diseased-tooth extraction ranges $200-1,000+ depending on complexity. EOTRH extractions typically $800-2,000+.',
+      'The AAEP Decade One and VMG fee survey (published 2023; fees about a year old then) lists a maintenance float at $50–$225, an extended float at $70–$232, two wolf teeth at $15–$250, an incisor extraction at $50–$300 per tooth, and a molar extraction at $27–$700 per tooth. Sedation is separate. Colorado State University hospital lists an exam and float at $567–$670 and a simple extraction starting at $1,854. Standalone radiographs are a separate fee. A multi-tooth EOTRH extraction is often a large bill; ask the veterinarian. Typical US range, checked Oct 2026; varies by clinic and region. dated 2026-10-07.',
   },
 ]
 
@@ -91,7 +92,7 @@ export default function EquineDentalCarePage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout
-        priceAsOf="2026-05-28"
+        priceAsOf="2026-10-07"
         siteId="horses-com"
         relatedLinks={[
           { title: 'Guides Hub', href: '/guides', category: 'Guides' },
@@ -289,14 +290,15 @@ export default function EquineDentalCarePage() {
           <p>The deciduous premolars (&ldquo;caps&rdquo;) should shed as the permanent premolars erupt beneath them. Retained caps can cause pain, malocclusion, and bit resistance in young horses. Removal at routine dental examination is straightforward.</p>
 
           <h2 id="cost">Cost &amp; Choosing a Practitioner</h2>
-          <p>Approximate US costs for routine equine dentistry (regional variation; includes farm call):</p>
+          <p>Per-procedure ranges below are from the AAEP Decade One and VMG fee survey (published 2023; the fees were about a year old at publication) and from the Colorado State University equine dentistry hospital page. Sedation and the farm call are separate charges. Typical US range, checked Oct 2026; varies by clinic and region. dated 2026-10-07.</p>
           <ul>
-            <li><strong>Sedated annual float, no complications:</strong> $150–300.</li>
-            <li><strong>Wolf-tooth extraction (added to a routine visit):</strong> $50–150 total.</li>
-            <li><strong>Standing cheek-tooth extraction:</strong> $400–1,500 depending on complexity.</li>
-            <li><strong>EOTRH incisor extraction (multiple teeth):</strong> $800–2,500+ depending on number of teeth and complexity.</li>
-            <li><strong>Dental radiographs (intraoral):</strong> $50–200 depending on number of views.</li>
-            <li><strong>Sinus surgery (advanced sinusitis from tooth root):</strong> $1,500–5,000+.</li>
+            <li><strong>Maintenance float, no complications:</strong> $50–$225. Sedation is extra. An extended float is $70–$232. dated 2026-10-07.</li>
+            <li><strong>Wolf-tooth extraction, two teeth:</strong> $15–$250. dated 2026-10-07.</li>
+            <li><strong>Incisor extraction:</strong> $50–$300 per tooth. dated 2026-10-07.</li>
+            <li><strong>Molar extraction:</strong> $27–$700 per tooth in the survey. A simple hospital extraction at Colorado State University starts at $1,854. dated 2026-10-07.</li>
+            <li><strong>EOTRH incisor extraction (multiple teeth):</strong> often a large bill. The survey prices single teeth, not a multi-tooth package. Ask the veterinarian for an estimate.</li>
+            <li><strong>Dental radiographs (intraoral):</strong> a separate fee. The survey does not print a standalone view price. Ask the veterinarian for an estimate.</li>
+            <li><strong>Sinus surgery from a tooth root:</strong> Colorado State University lists an extraction with sinus surgery starting at $4,635. dated 2026-10-07.</li>
           </ul>
 
           <p><strong>Choosing a practitioner:</strong> equine dentistry is now a specialty. Look for a veterinarian who performs dentistry as a regular part of practice, ideally with continuing-education hours in equine dentistry. The American Veterinary Dental College (AVDC) certifies board-certified veterinary dentists; the equine specialty within AVDC is small but growing. The International Association of Equine Dentistry (IAED) certifies non-veterinary equine dental practitioners, who in some jurisdictions can work alongside or under the supervision of licensed veterinarians. State veterinary practice acts vary on what non-veterinary dental practitioners can legally do — sedation and extractions everywhere require a licensed veterinarian.</p>
@@ -304,15 +306,15 @@ export default function EquineDentalCarePage() {
           <p>Questions worth asking a prospective dental practitioner: How long is a typical visit? Do you use sedation routinely? Do you use a full-mouth speculum? Do you take radiographs when indicated? What is your protocol for finding and addressing periodontal disease? Are you a licensed veterinarian, or are you working under veterinary supervision? Practitioners whose answers don&apos;t include sedation, speculum, examination, and radiograph capability are working at a lower standard than the AVDC and AAEP recommend.</p>
 
           <h2 id="kit">Dental-Care Kit</h2>
-          <p>Everyday physical supplies that match the post-float recovery copy above — soaked hay cubes or a mash for the first day if significant work was done. These are not treatments for sharp points, EOTRH, wolf teeth, periodontal disease, or any dental diagnosis; quidding, weight loss, nasal discharge, or reluctance to be bridled belongs with a dental veterinarian, not a bag of cubes. Sedation, floating equipment, and hard treats (apples, carrots) are procedure work or diagnostic signs, not a retail kit. This page does not claim hands-on testing.</p>
+          <p>Keep these on hand: soaked hay cubes or a mash for the first day if significant work was done. These are not treatments for sharp points, EOTRH, wolf teeth, periodontal disease, or any dental diagnosis; quidding, weight loss, nasal discharge, or reluctance to be bridled belongs with a dental veterinarian, not a bag of cubes. Sedation, floating equipment, and hard treats (apples, carrots) are procedure work or diagnostic signs, not a retail kit.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/horse+hay+cubes?s=guides-equine-dental-care", "/go/amazon-brand/horse+mash?s=guides-equine-dental-care"]} />
 
-          {/* Money path — live amazon-brand search hops (dental-care kit).
-              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-              Category searches only — everyday physical supplies matching
+          {/* Shop note — live amazon-brand search buttons (dental-care kit).
+              ShopCtas hides empty Chewy; never href="#" or an empty link.
+              Amazon searches only — everyday physical supplies matching
               on-page post-float soft-feed copy (soaked hay cubes, mashes),
-              not medication, floating-procedure, or invented-kit hops.
+              not medication, floating-procedure, or invented-kit buttons.
               Apple sauce, syringes, oral paste, floats, and speculums are
               not named as shoppable owner supplies on this page. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
@@ -333,11 +335,14 @@ export default function EquineDentalCarePage() {
           </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>
+          <p>Typical US range, checked Oct 2026; varies by clinic and region. dated 2026-10-07.</p>
           <FAQAccordion items={FAQS} />
 
           <h2 id="references">References</h2>
           <ol className="text-sm text-brand-text-mid">
             <li>American Association of Equine Practitioners. &ldquo;Dental Care&rdquo; — Owner Resource and Practitioner Guidelines. aaep.org.</li>
+            <li>American Association of Equine Practitioners and Veterinary Management Groups. Decade One combined fee survey, published 2023. https://aaep.org/wp-content/uploads/2024/02/Decade-One-VMG-Combined-Fee-Survey.pdf</li>
+            <li>Colorado State University Veterinary Teaching Hospital. Equine dentistry and oral surgery estimates. https://csuveterinaryhealth.org/services/equine-dentistry-and-oral-surgery/</li>
             <li>American Veterinary Dental College. Position statements and practice standards for equine dentistry. avdc.org.</li>
             <li>Easley J, Dixon PM, Schumacher J (eds). <em>Equine Dentistry</em>, 3rd edition. Saunders Elsevier, 2010 — the standard textbook reference for equine dental medicine.</li>
             <li>Dixon PM, Dacre I. &ldquo;A Review of Equine Dental Disorders.&rdquo; <em>Veterinary Journal</em>, 2005; 169(2):165–187.</li>

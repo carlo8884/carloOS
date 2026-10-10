@@ -1,6 +1,7 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildFAQSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, buildFAQSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { FERRET_FOODS, FERRET_FOOD_CATEGORIES, VERDICT_META } from '../../../data/foods'
 
 export const metadata: Metadata = buildMetadata({
@@ -117,20 +118,8 @@ export default function CanFerretsEatHubPage() {
 
       <div className="px-container-sm sm:px-container pb-8">
         <div className="max-w-content-wide">
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/ferret+kibble?s=can-ferrets-eat" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated ferret meat-egg chart /
-              ferret fridge plant-sugar card /
-              mustelid food-safety handbook).
-              No existing product hop to keep.
-              Educational kitchen searches only; no Rx /
-              vaccine / flea / heartworm / nsaid / aging hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs diet-hub /
-              ulcers / spay-neuter hops. Ferret
-              aging stays held.
-              Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
@@ -139,7 +128,7 @@ export default function CanFerretsEatHubPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/ferret+kibble?s=can-ferrets-eat"
-                amazonLabel="Shop on Amazon"
+                amazonLabel="Browse ferret kibble on Amazon →"
               />
           </div>
           </div>

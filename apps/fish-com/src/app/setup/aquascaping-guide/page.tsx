@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import { HubMoneyLinks } from '@carloOS/ui'
 import type { Metadata } from 'next'
 import {
@@ -5,7 +6,6 @@ import {
   ArticleLayout,
   RelatedLinks,
   ArticleSourcesList,
-  AffiliateDisclosure,
   ShopCtas,
   JourneyNext,
 } from '@carloOS/ui'
@@ -16,7 +16,7 @@ const SOURCES = [
   { label: "Kasselmann, C. Aquarium Plants. Krieger Publishing, 2003.", publisher: "Krieger Publishing" },
   { label: "Walstad, D.L. Ecology of the Planted Aquarium, 3rd ed. Echinodorus Publishing, 2013.", publisher: "Echinodorus Publishing" },
   { label: "Amano, T. Nature Aquarium World, Book 1. TFH Publications, 1994.", publisher: "TFH Publications" },
-  { label: "Aquatic Plants for the Aquarium — UF/IFAS Extension, FA-16", url: "https://edis.ifas.ufl.edu/publication/FA016", publisher: "UF/IFAS Extension" },
+  { label: "Francis-Floyd, R. et al. Ammonia in Aquatic Systems — UF/IFAS FA031 (current home of FA-16).", url: "https://ask.ifas.ufl.edu/publication/FA031", publisher: "UF/IFAS Extension" },
 ]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Aquascaping Guide — Layout, Hardscape & Composition | Fish.com', description: "Aquascaping fundamentals: the rule of thirds, golden ratio, iwagumi and nature-style layouts, hardscape selection, and foreground-to-background planting.", path: '/setup/aquascaping-guide', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Aquascaping Guide', description: 'Composition principles, layout styles, hardscape, and planting structure for aquascaping.', url: 'https://fish.com/setup/aquascaping-guide', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-09-05T00:00:00Z' ,
@@ -69,21 +69,21 @@ export default function AquascapingGuidePage() {
           siteId="fish-com"
           nextHref="/setup/planted-tank-setup"
           nextLabel="Build the planted tank equipment and substrate next"
-          nextBlurb="The scape is decided before plants go in — slope the substrate, set the hardscape, then plant in zones. The planted-tank setup guide is the filter, light, and substrate order. The hop below is the same Seiryu-stone search already on this page."
+          nextBlurb="The scape is decided before plants go in — slope the substrate, set the hardscape, then plant in zones. The planted-tank setup guide is the filter, light, and substrate order. The button below opens the same Seiryu-stone search on Amazon."
           resourceHref="/go/amazon-brand/aquarium+seiryu+stone?s=setup-aquascaping-guide"
-          resourceLabel="Browse aquarium Seiryu stone on Amazon →"
+          resourceLabel="Browse Seiryu stone on Amazon →"
         />
 
         <h2 id="kit">Aquascape hardscape kit</h2>
-        <p>Everyday physical supplies that match the hardscape copy above — aquarium Seiryu stone for the textured rock skeleton, plus aquarium spiderwood driftwood for the wood lines. These are layout materials, not a ranked product list and not a first-tank filter / heater / test-kit order. Filters, heaters, digital thermometers, Seachem Prime, API Master Test Kit, gravel vacuums, aquasoil, substrate vacuums, and pressurized CO2 gear stay off this kit — those already ship on the setup hub, equipment hub, planted-tank guide, and CO2 calculator. This page does not claim hands-on testing.</p>
+        <p>Keep these on hand: aquarium Seiryu stone for the textured rock skeleton, plus aquarium spiderwood driftwood for the wood lines. These are layout materials, not a ranked product list and not a first-tank filter / heater / test-kit order. Filters, heaters, digital thermometers, Seachem Prime, API Master Test Kit, gravel vacuums, aquasoil, substrate vacuums, and pressurized CO2 gear stay off this kit — those already ship on the setup hub, equipment hub, planted-tank guide, and CO2 calculator.</p>
 
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/aquarium+seiryu+stone?s=setup-aquascaping-guide", "/go/amazon-brand/aquarium+spiderwood+driftwood?s=setup-aquascaping-guide"]} />
 
-        {/* Money path — live amazon-brand search hops (aquascape hardscape kit).
-            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-            Category searches only — everyday physical supplies matching
+        {/* Shop note — live amazon-brand search buttons (aquascape hardscape kit).
+            ShopCtas hides empty Chewy; never href="#" or an empty link.
+            Amazon searches only — everyday physical supplies matching
             on-page Seiryu-stone / spiderwood-driftwood copy, not first-tank
-            filter / heater / test-kit / CO2 hops. */}
+            filter / heater / test-kit / CO2 buttons. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
             Shop related supplies
@@ -92,11 +92,11 @@ export default function AquascapingGuidePage() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+seiryu+stone?s=setup-aquascaping-guide"
-              amazonLabel="Browse aquarium Seiryu stone on Amazon →"
+              amazonLabel="Browse Seiryu stone on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+spiderwood+driftwood?s=setup-aquascaping-guide"
-              amazonLabel="Browse aquarium spiderwood driftwood on Amazon →"
+              amazonLabel="Browse spiderwood driftwood on Amazon →"
             />
           </div>
         </div>

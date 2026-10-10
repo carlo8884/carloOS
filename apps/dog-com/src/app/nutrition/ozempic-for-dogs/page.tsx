@@ -5,7 +5,7 @@ import { buildArticleSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
   title: 'Ozempic for Dogs? GLP-1 Weight-Loss Drugs Explained | Dog.com',
-  description: 'No Ozempic-style drug is FDA-approved for dogs. What GLP-1 pet therapies are in trials, why off-label use is risky, and the proven vet weight-loss alternatives.',
+  description: 'No Ozempic-style drug is FDA-approved for dogs. What GLP-1 pet therapies are in trials, why off-label use is risky, and the available calorie plan.',
   path: '/nutrition/ozempic-for-dogs',
   type: 'article',
 })
@@ -66,7 +66,7 @@ export default function OzempicForDogsPage() {
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2026-06-15T00:00:00Z" updatedAt="2026-06-15T00:00:00Z" reviewedBy="Editorial team" />
 
         <h2 id="short">The Short Answer</h2>
-        <p><strong>As of 2026, there is no Ozempic for dogs.</strong> No GLP-1 weight-loss drug — semaglutide or otherwise — is FDA-approved for canine use. The first weight-loss therapy designed for pets is in early clinical trials (in cats, not dogs), and any approval is years away. Giving a dog human Ozempic or Wegovy is not a shortcut; it is an unstudied, potentially dangerous off-label use that veterinarians do not endorse. For the overweight dog in front of you today, a structured calorie and exercise plan — covered in our <a href="/nutrition/weight-management">weight management protocol</a> — remains the proven, first-line approach.</p>
+        <p><strong>As of 2026, there is no Ozempic for dogs.</strong> No GLP-1 weight-loss drug — semaglutide or otherwise — is FDA-approved for canine use. The first weight-loss therapy designed for pets is in early clinical trials (in cats, not dogs), and any approval is years away. Giving a dog human Ozempic or Wegovy is not a shortcut; it is an unstudied, potentially dangerous off-label use that veterinarians do not endorse. For the overweight dog in front of you today, a structured calorie and exercise plan — covered in our <a href="/nutrition/weight-management">weight management protocol</a> — remains the available first-line approach.</p>
         <p>That said, the science is moving, and the question is reasonable. Roughly 59% of US dogs are overweight or obese (Association for Pet Obesity Prevention), and obesity measurably shortens canine lifespan. Here is where things actually stand.</p>
 
         <h2 id="development">What's Actually in Development</h2>
@@ -93,7 +93,7 @@ export default function OzempicForDogsPage() {
         <h2 id="works">What Actually Works Today</h2>
         <p>While the drug pipeline matures, the tools that reliably reduce canine weight already exist — and for most dogs they are more effective than any medication would be:</p>
         <ul>
-          <li><strong>Calorie-controlled feeding.</strong> Feeding to <em>ideal</em> body weight rather than current weight, measured by a kitchen scale, is the single highest-impact lever. Our <a href="/tools/dog-calorie-calculator">calorie calculator</a> estimates a starting target, and the <a href="/nutrition/weight-management">weight management protocol</a> walks through safe loss rates (1–2% of body weight per month).</li>
+          <li><strong>Calorie-controlled feeding.</strong> Feeding to <em>ideal</em> body weight rather than current weight, measured by a kitchen scale, is the single highest-impact lever. Our <a href="/tools/dog-calorie-calculator">calorie calculator</a> estimates a starting target, and the <a href="/nutrition/weight-management">weight management protocol</a> walks through a planning figure for loss (1–2% of body weight per month).</li>
           <li><strong>Veterinary weight-management diets.</strong> Prescription formulas (Hill's Metabolic, Royal Canin Satiety, Purina OM) are designed to preserve satiety and muscle while cutting calorie density, and outperform simple portion-cutting in studies. See <a href="/nutrition/prescription-diets">prescription diets explained</a>.</li>
           <li><strong>Dirlotapide (Slentrol).</strong> The one FDA-approved canine weight-loss drug, reserved for cases where diet and exercise are insufficient — used strictly under veterinary supervision, not as a first step.</li>
           <li><strong>Structured exercise.</strong> Not a primary weight-loss driver on its own, but essential for preserving muscle mass during calorie restriction. Swimming and flat low-impact walks are ideal for overweight, joint-stressed dogs.</li>
@@ -107,10 +107,10 @@ export default function OzempicForDogsPage() {
           <li><strong>Loop in your veterinarian</strong> before starting any medication or prescription diet — and before assuming a future drug is the answer for your dog.</li>
           <li><strong>Ignore the "Ozempic for dogs" shortcuts.</strong> Until an FDA-approved canine product exists, the trend is a headline, not a treatment.</li>
         </ol>
-        <p>We will update this page as the OKV-119 trials report out and as the veterinary GLP-1 picture changes. For now, the honest answer is that the proven path — calories, diet quality, and movement — is also the available one.</p>
+        <p>We will update this page as the OKV-119 trials report out and as the veterinary GLP-1 picture changes. For now, the honest answer is that the available path — calories, diet quality, and movement — is the one you can use now.</p>
 
         <h2 id="faq">Frequently Asked Questions</h2>
-        <FAQAccordion items={FAQS} />
+        <FAQAccordion items={FAQS} includeSchema={false} />
 
         <p className="text-sm text-gray-500 mt-8"><em>This article is general educational information from the Dog.com editorial team and is not veterinary advice. Drug-approval status and trial timelines reflect publicly reported information as of June 2026 and may change. Always consult your veterinarian before changing your dog's diet or starting any medication.</em></p>
       </div>

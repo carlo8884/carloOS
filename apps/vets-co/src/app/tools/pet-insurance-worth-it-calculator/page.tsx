@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -8,7 +9,7 @@ import {
   ArticleLayout,
   FAQAccordion,
   ArticleSourcesList,
-  AffiliateDisclosure,
+
   ShopCtas,
   TableOfContents,
   RelatedLinks,
@@ -32,7 +33,7 @@ export const metadata: Metadata = buildMetadata({
 const SOURCES = [
   {
     label: 'State of the Industry Report — aggregate premium, claim, and policy-count data for North America',
-    url: 'https://naphia.org/state-of-the-industry/',
+    url: 'https://naphia.org/news/naphia-news/soi-report-2025/',
     publisher: 'NAPHIA (North American Pet Health Insurance Association)',
   },
   {
@@ -122,7 +123,8 @@ const FAQS = [
   {
     question: 'Is pet insurance worth it?',
     answer:
-      'It depends on three things: your pet\'s breed and age risk profile, your cash buffer for an emergency, and your tolerance for a low-probability large bill. Mathematically, like all insurance, pet insurance has a negative expected value at the average claim level — that is how carriers stay solvent — so in a typical low-cost year a policy does not pay for itself. Its value is risk protection: it converts a rare $5,000–$15,000 emergency or chronic-condition course into a predictable monthly cost. If you could comfortably absorb a five-figure vet bill from savings, self-insuring is a defensible choice; if that bill would force a hard decision about your pet\'s care, insurance is doing exactly the job it is designed for. Use the breakeven line above to see, for a specific quote, the eligible-cost level at which the policy pays for itself.',
+      'Example: ' +
+      'It depends on three things: your pet\'s breed and age risk profile, your cash buffer for an emergency, and your tolerance for a low-probability large bill. Mathematically, like all insurance, pet insurance has a negative expected value at the average claim level — that is how carriers stay solvent — so in a typical low-cost year a policy does not pay for itself. Its value is risk protection: it converts Example: a rare $5,000–$15,000 emergency or chronic-condition course into a predictable monthly cost. If you could comfortably absorb a five-figure vet bill from savings, self-insuring is a defensible choice; if that bill would force a hard decision about your pet\'s care, insurance is doing exactly the job it is designed for. Use the breakeven line above to see, for a specific quote, the eligible-cost level at which the policy pays for itself.',
   },
   {
     question: 'At what age is pet insurance not worth it?',
@@ -147,14 +149,15 @@ const FAQS = [
   {
     question: 'What is a realistic expected vet-cost number to enter?',
     answer:
-      'Enter only eligible illness and accident costs — routine wellness is usually excluded. For a healthy mid-life dog or cat with no chronic conditions, a few hundred dollars a year is typical. A single non-routine workup (imaging, bloodwork, a treatment course) can run $1,000–$2,000. One major incident — a foreign-body surgery, a cruciate repair, a serious illness — commonly lands in the $3,000–$8,000 range, and cancer care or emergency hospitalization can exceed $10,000–$15,000. Because the catastrophic scenarios are rare but ruinous, the decision to insure is mostly about the right tail, not the average. The scenario presets above span that range.',
+      'Example: ' +
+      'Enter only eligible illness and accident costs — routine wellness is usually excluded. For a healthy mid-life dog or cat with no chronic conditions, a few hundred dollars a year is typical. A single non-routine workup (imaging, bloodwork, a treatment course) Example: can run $1,000–$2,000. One major incident — a foreign-body surgery, a cruciate repair, a serious illness — commonly lands in the $3,000–$8,000 range, and cancer care or emergency hospitalization can exceed $10,000–$15,000. Because the catastrophic scenarios are rare but ruinous, the decision to insure is mostly about the right tail, not the average. The scenario presets above span that range.',
   },
 ]
 
 export default function PetInsuranceWorthItPage() {
   return (
     <ArticleLayout
-      priceAsOf="2026-06-11"
+      priceAsOf="2026-10-07"
       siteId="vets-co"
       hero={{
         title: 'Is Pet Insurance Worth It?',
@@ -226,7 +229,7 @@ export default function PetInsuranceWorthItPage() {
           typical owner pays a little more in premiums than they get back in claims; that gap is how carriers stay
           solvent and pool the risk of rare, expensive events. So in most individual years a policy does <em>not</em>
           pay for itself, and that is by design. Its real value is protection against the right tail: the
-          $5,000–$15,000 emergency surgery, cancer course, or chronic condition that would otherwise force a hard
+          Example: $5,000–$15,000 emergency surgery, cancer course, or chronic condition that would otherwise force a hard
           decision about your pet&apos;s care.
         </p>
         <p>
@@ -252,7 +255,6 @@ export default function PetInsuranceWorthItPage() {
             links per QC §1. Links are internal review/finder pages — no /go routes,
             no carrier "buy" CTA, no superlatives. */}
         <div id="next-step" className="mt-6 rounded-lg border border-brand-border bg-brand-surface p-5 sm:p-6">
-          <AffiliateDisclosure variant="inline" siteId="vets-co" className="mb-4" />
           <p className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary-dark mb-2">Next step</p>
           <p className="text-sm font-semibold text-brand-text-dark mb-1">
             You have a breakeven number — now pressure-test it against real policies.
@@ -287,16 +289,16 @@ export default function PetInsuranceWorthItPage() {
 
         <InsuranceWellnessShop source="tools-pet-insurance-worth-it-calculator" />
 
-        {/* Money path — complementary amazon-brand search hops (home-care prep
+        {/* Shop note — complementary amazon-brand search buttons (home-care prep
             beside an insurance decision). ShopCtas hides empty Chewy; never
-            href="#" or PLACEHOLDER. Category searches only — not a ranked
+            href="#" or an empty link. Amazon searches only — not a ranked
             list. InsuranceWellnessShop above stays as-is; this block does not
             re-rank Trupanion / Healthy Paws / Embrace. */}
         <div id="insurance-home-care-kit" className="mt-8 mb-8">
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/pet+first+aid+kit?s=tools-pet-insurance-worth-it-calculator", "/go/amazon-brand/digital+pet+thermometer?s=tools-pet-insurance-worth-it-calculator", "/go/amazon-brand/digital+pet+scale?s=tools-pet-insurance-worth-it-calculator", "/go/amazon-brand/pet+recovery+cone?s=tools-pet-insurance-worth-it-calculator", "/go/amazon-brand/pet+calming+aid?s=tools-pet-insurance-worth-it-calculator"]} />
           <div className="mt-4 rounded-xl border border-brand-border bg-brand-surface p-5">
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Shop a home-care prep kit
+              Shop these supplies
             </div>
             <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">A first-aid kit, a digital thermometer, a pet scale, a recovery
               cone, and a calming aid are the home-care items owners often keep
@@ -318,8 +320,7 @@ export default function PetInsuranceWorthItPage() {
               >
                 telehealth
               </Link>
-              . Vets.co earns a commission on qualifying purchases at no extra
-              cost to you.</p>
+              .</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/pet+first+aid+kit?s=tools-pet-insurance-worth-it-calculator"
@@ -346,24 +347,16 @@ export default function PetInsuranceWorthItPage() {
         </div>
 
         <h2 id="example">A worked breakeven example</h2>
-        <p>
-          Suppose a quote of <strong>$45/month</strong> ($540/year) with a <strong>$250 annual deductible</strong>,{' '}
-          <strong>80% reimbursement</strong>, and a <strong>$10,000 annual cap</strong>. Reimbursement applies only to
-          costs above the deductible, at 80%, so the policy pays for itself at the eligible-cost level where:
-        </p>
+        <p>These amounts are an example, not a live quote.</p>
+        <p>Example: Suppose a quote of <strong>$45/month</strong> ($540/year) with a <strong>$250 annual deductible</strong>, 80% reimbursement, and a <strong>$10,000 annual cap</strong>. Reimbursement applies only to costs above the deductible, at 80%, so the policy pays for itself at the eligible-cost level where deductible + (annual premium ÷ reimbursement %) equals the breakeven. <a href="/insurance/deductibles-reimbursement">Deductibles and reimbursement</a> explains the deductible and rate this estimate uses.</p>
         <ul>
           <li><strong>breakeven</strong> = deductible + (annual premium ÷ reimbursement %)</li>
-          <li>= $250 + ($540 ÷ 0.80)</li>
-          <li>= $250 + $675 = <strong>$925</strong></li>
+          <li>Example: = $250 + ($540 ÷ 0.80)</li>
+          <li>Example: = $250 + $675 = <strong>$925</strong></li>
         </ul>
-        <p>
-          So this policy pays for itself once eligible vet costs clear about <strong>$925</strong> in the year. Below
-          that, you pay more in premium than you get back. Worked the other way: in a $300 healthy year the policy
-          reimburses just ($300 − $250) × 80% = <strong>$40</strong> against $540 of premium — a $500 net cost, the
-          expected outcome in a quiet year. In a $6,000 one-incident year it reimburses ($6,000 − $250) × 80% ={' '}
-          <strong>$4,600</strong> against $540 of premium — a $4,060 net benefit. That asymmetry — small predictable cost most years, large
-          payout in the bad year — is the whole point of insurance, and exactly what the breakeven line makes visible.
-        </p>
+        <p>Example: This policy pays for itself once eligible vet costs clear about <strong>$925</strong> in the year. Below that, you pay more in premium than you get back.</p>
+        <p>Example: In a $300 healthy year the policy reimburses just ($300 − $250) × 80% = <strong>$40</strong> against $540 of premium — a $500 net cost, the expected outcome in a quiet year.</p>
+        <p>Example: In a $6,000 one-incident year it reimburses ($6,000 − $250) × 80% = <strong>$4,600</strong> against $540 of premium — a $4,060 net benefit. That asymmetry — a small predictable cost most years, a large payout in the bad year — is the whole point of insurance, and exactly what the breakeven line makes visible.</p>
 
         <h2 id="methodology">Methodology &amp; limits</h2>
         <p>

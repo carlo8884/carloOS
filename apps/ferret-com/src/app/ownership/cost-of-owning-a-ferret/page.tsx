@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, AffiliateDisclosure, ShopCtas, CrossSiteHelp } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, ShopCtas, CrossSiteHelp } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
@@ -80,7 +81,7 @@ export default function CostOfOwningAFerretPage() {
 
           </>
         }
-      
+
         relatedLinks={[
           { title: 'Ferret Ownership Hub', href: '/ownership' },
           { title: 'Ferret Insurance Basics', href: '/ownership/ferret-insurance-basics' },
@@ -164,8 +165,7 @@ export default function CostOfOwningAFerretPage() {
               covers the same categories.
             </p>
             <p className="mt-3 text-2xs leading-relaxed text-brand-text-light">
-              The starter essentials page includes affiliate links; we may earn a commission at no extra
-              cost to you, and we never accept payment for favorable placement.{' '}
+              The starter essentials page includes shop links, and we never accept payment for favorable placement.{' '}
               <a href="/disclosure" className="font-medium text-brand-primary underline-offset-2 hover:underline">Disclosure</a>.
             </p>
             <a
@@ -176,21 +176,8 @@ export default function CostOfOwningAFerretPage() {
             </a>
           </div>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/ferret+kibble?s=cost-of-owning-a-ferret"]} />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated ferret startup-budget chart /
-              ferret fridge monthly-cost card /
-              mustelid cost-planning handbook).
-              No existing product hop to keep.
-              Educational kitchen searches only; no Rx /
-              vaccine / aging hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs ownership-hub /
-              first-week / supplies / cost-calculator
-              kitchen kits. Directory import left
-              untouched.
-              Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
@@ -199,7 +186,7 @@ export default function CostOfOwningAFerretPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/ferret+kibble?s=cost-of-owning-a-ferret"
-                amazonLabel="Shop on Amazon"
+                amazonLabel="Browse ferret kibble on Amazon →"
               />
           </div>
           </div>

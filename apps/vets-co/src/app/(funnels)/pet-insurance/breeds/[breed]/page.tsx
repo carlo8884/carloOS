@@ -151,21 +151,21 @@ export default async function BreedInsuranceHub({ params }: PageParams) {
         </p>
       </section>
 
-      {/* ─── State-by-state index ─────────────────────────────────────────── */}
+      {/* ─── State regulatory notes ──────────────────────────────────────── */}
       <section className="mt-12">
         <h2 className="font-display text-2xl font-bold mb-3">
-          {b.breedName} Insurance by State
+          Regulatory notes by state
         </h2>
         <p className="text-brand-text-mid leading-relaxed mb-5">
-          Premiums and consumer protections vary by state. Pick your state for
-          a {s_name(b.breedName)} insurance breakdown specific to where you
-          live:
+          The carrier recommendation on this page is the same in every state.
+          Premium direction and the consumer-protection note for a state are
+          on that state hub.
         </p>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2">
           {States.map((s) => (
             <Link
               key={s.slug}
-              href={`/pet-insurance/breeds/${b.slug}/${s.slug}`}
+              href={`/pet-insurance/states/${s.slug}`}
               className="text-sm px-3 py-2 border border-brand-border rounded hover:border-brand-primary hover:text-brand-primary transition-colors"
             >
               {s.name}
@@ -174,12 +174,6 @@ export default async function BreedInsuranceHub({ params }: PageParams) {
         </div>
       </section>
 
-      {/* ─── Lead magnet ──────────────────────────────────────────────────── */}
     </article>
   )
-}
-
-// Small helper so the JSX above reads cleanly — possessive form of breed name
-function s_name(breedName: string): string {
-  return breedName.endsWith('s') ? `${breedName}'` : `${breedName}'s`
 }

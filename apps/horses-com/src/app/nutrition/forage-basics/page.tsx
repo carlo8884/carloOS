@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { AffiliateDisclosure, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ReviewCard, ShopCtas, StockImage, TableOfContents } from '@carloOS/ui'
+import { ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ReviewCard, ShopCtas, StockImage, TableOfContents, PrimaryHop } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -61,6 +62,10 @@ export default function ForageBasicsPage() {
           { title: 'Equine Gastric Ulcers', href: '/health/equine-ulcers' },
           { title: 'Equine Colic', href: '/health/colic' },
         ]}
+        heroHop={<>
+          <PrimaryHop href="/go/amazon-brand/slow+feeder+hay+net+horse?s=nutrition-forage-basics" label="Search Amazon for a slow-feeder hay net" />
+          <HopDisclosure tone="on-dark" siteId="horses-com" href="/go/amazon-brand/slow+feeder+hay+net+horse?s=nutrition-forage-basics" />
+        </>}
         hero={{
           title: "Equine Forage Basics",
           subtitle:
@@ -91,6 +96,7 @@ export default function ForageBasicsPage() {
           <RelatedLinks
             title="Related Reading"
             links={[
+              { label: "Daily feed calculator", href: "/tools/horse-feed-calculator" },
               { label: "Hay Types Compared", href: "/nutrition/hay-types" },
               { label: "Grain and Concentrates", href: "/nutrition/grain-and-concentrates" },
               { label: "Equine Colic", href: "/health/colic" },
@@ -123,14 +129,13 @@ export default function ForageBasicsPage() {
           <h2 id="trickle">Trickle Feeding</h2>
           <p>Because the horse&apos;s stomach produces acid continuously whether or not it is eating, long gaps without forage leave acid splashing against an empty stomach -- a direct route to gastric ulcers. Trickle feeding (free-choice forage, or slow-feeder hay nets that extend a ration over many hours) keeps something in the stomach to buffer acid and matches the horse&apos;s natural feeding pattern. For easy keepers, slow feeders let you restrict calories without imposing long fasts.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/slow+feeder+hay+net+horse?s=nutrition-forage-basics", "/go/amazon-brand/horse+hay+probe+moisture+tester?s=nutrition-forage", "/go/amazon-brand/equine+hay+core+sampler?s=nutrition-forage", "/go/amazon-brand/wall+mounted+horse+hay+rack?s=nutrition-forage"]} />
 
           <ReviewCard
             id="hay-nets"
             badge="Trickle Feeding"
             name="Slow-Feeder Hay Net"
             subtitle="Extends a hay ration so the horse eats over many hours"
-            score={8.5}
             description={<>
               <p>Slow-feeder hay nets stretch a measured forage ration across the day, which keeps something in the stomach to buffer acid and matches the horse&apos;s natural trickle-feeding pattern. For easy keepers they also let you restrict calories without imposing long fasts. This is a general management aid, not a treatment. Confirm the ration with your veterinarian or equine nutritionist.</p>
             </>}
@@ -142,7 +147,8 @@ export default function ForageBasicsPage() {
             pros={['Keeps forage in front of the horse longer', 'Helps prevent ulcer-causing fasts', 'Useful on a measured ration']}
             cons={['Introduce gradually', 'Hole size matters for intake rate', 'Not a substitute for adequate forage']}
             price="$20–40"
-            ctaText="Search hay nets on Amazon →"
+            priceNote="dated 2026-09-02."
+            ctaText="Search slow-feeder hay nets on Amazon →"
             ctaHref="/go/amazon-brand/slow+feeder+hay+net+horse?s=nutrition-forage-basics"
             ctaAffiliateProgram="amazon"
             ctaAffiliateProduct="slow-feeder-hay-net"
@@ -150,40 +156,26 @@ export default function ForageBasicsPage() {
 
           <h2 id="quality">Forage Quality</h2>
           <ul>
-            <li><strong>Cleanliness</strong> -- forage should be free of dust, mold, and weeds; moldy hay causes respiratory disease and colic. A horse hay-probe moisture tester is how you check a bale before it is stored or fed — it is not a hanging hay-bale scale (that lives on EMS) and not a hay steamer or soaking bag (those live on heaves).</li>
+            <li><strong>Cleanliness</strong> -- forage should be free of dust, mold, and weeds; moldy hay causes respiratory disease and colic. A horse hay-probe moisture tester is how you check a bale before it is stored or fed — it is not a hanging hay-bale scale and not a hay steamer or soaking bag.</li>
             <li><strong>Maturity at cutting</strong> -- earlier-cut forage is more digestible and higher in nutrients; very stemmy late-cut hay is largely filler.</li>
             <li><strong>Type</strong> -- grass versus legume (such as alfalfa) changes calories, protein, and calcium; match to the horse.</li>
-            <li><strong>Sugar and starch content</strong> -- matters greatly for laminitis-prone and metabolic horses; testing or soaking controls it. An equine hay-core sampler is how you pull a representative sample for the lab — it is not an EMS forage-NSC hay-test kit and not a timothy-hay hop (that lives on the feed calculator).</li>
+            <li><strong>Sugar and starch content</strong> -- matters greatly for laminitis-prone and metabolic horses; testing or soaking controls it. An equine hay-core sampler is how you pull a representative sample for the lab — it is not an EMS forage-NSC hay-test kit.</li>
             <li><strong>Consistency</strong> -- change forage gradually, since the hindgut microbes need time to adapt.</li>
-            <li><strong>Keep forage off the ground</strong> -- a wall-mounted horse hay rack keeps a flake out of dirt, urine, and trampling so the horse is not eating contaminated forage. It is not a slow-feeder hay net (that lives in the ReviewCard above), not a small-hole net (that lives on easy-keeper), and not an equine slow-feeder hay box (that lives on turnout).</li>
+            <li><strong>Keep forage off the ground</strong> -- a wall-mounted horse hay rack keeps a flake out of dirt, urine, and trampling so the horse is not eating contaminated forage. It is not a slow-feeder hay net (that lives in the ReviewCard above), not a small-hole net, and not an equine slow-feeder hay box.</li>
           </ul>
 
-          <h2 id="kit">Barn forage-quality kit</h2>
+          <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Everyday physical supplies that match the
-            cleanliness, representative-sample, and
-            keep-forage-off-the-ground copy on this page — a
-            horse hay-probe moisture tester so moldy forage
-            is not stored or fed, an equine hay-core sampler
-            so a lab sample is representative rather than a
-            grab of the top flake, and a wall-mounted horse
-            hay rack so forage stays off dirty ground. These
-            are educational barn tools, not a ranked product
-            list, not a substitute for veterinary or
-            nutritionist care, and not a hanging hay-bale
-            scale, an EMS forage-NSC hay-test kit, or
-            strip-grazing posts (those live on EMS). This
-            page does not hop medications or vaccines. This
-            page does not claim hands-on testing.
+            Keep these on hand: a horse hay-probe moisture tester so moldy forage is not stored or fed, an equine hay-core sampler so a lab sample is representative rather than a grab of the top flake, and a wall-mounted horse hay rack so forage stays off dirty ground. These are educational barn tools, not a ranked product list, not a substitute for veterinary or nutritionist care, and not a hanging hay-bale scale, an EMS forage-NSC hay-test kit, or strip-grazing posts.
           </p>
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (horse hay probe moisture tester /
               equine hay core sampler /
               wall mounted horse hay rack).
               Educational barn tools only; no Rx /
-              vaccine ASIN hops. ShopCtas hides empty
-              Chewy; never href="#" or PLACEHOLDER.
+              vaccine product page buttons. ShopCtas hides empty
+              Chewy; never href="#" or an empty link.
               Unused vs #1110
               plain+white+horse+salt+block /
               salt+first+horse+electrolyte+powder /

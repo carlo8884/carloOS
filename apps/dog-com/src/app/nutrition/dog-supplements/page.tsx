@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, RelatedLinks, TableOfContents, CrossPortfolioCard , ArticleByline, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, RelatedLinks, TableOfContents, CrossPortfolioCard , ArticleByline, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Supplements — What Works, What\'s Overhyped | Dog.com', description: 'Evidence-graded guide to dog supplements. Fish oil, joint supplements, probiotics, and more — what the research actually shows and what\'s pure marketing.', path: '/nutrition/dog-supplements', type: 'article' })
@@ -7,7 +8,7 @@ const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Dog Supplements �
 
 const SUPPLEMENTS = [
   { name: 'Fish Oil (EPA/DHA Omega-3)', evidence: 'strong' as const, dose: '20–55 mg combined EPA/DHA per kg body weight daily', brands: 'Nordic Naturals, Grizzly Salmon Oil, plain fish oil capsules', summary: 'The best-evidenced supplement in veterinary medicine. Documented benefits: anti-inflammatory for arthritis, skin and coat improvement, potential cardiovascular benefit, and emerging evidence for cognitive support in senior dogs. Use marine-source fish oil (EPA and DHA), not flaxseed oil (ALA — dogs convert this inefficiently). Quality matters: look for third-party tested products for heavy metal content. Do not exceed recommended dose — fish oil is a blood thinner at high doses.' },
-  { name: 'Glucosamine & Chondroitin', evidence: 'moderate' as const, dose: 'Per product label (NASC seal); confirm the weight-based amount with your vet', brands: 'Cosequin DS, Dasuquin, Nutramax products (NASC seal)', summary: 'Widely recommended in veterinary practice for joint support. Evidence is moderate — some studies show meaningful reduction in arthritis signs; others show minimal effect vs placebo. The clinical reality: many dogs seem to respond, and the safety profile is excellent. Worth trying for dogs with diagnosed arthritis or joint disease. Look for the NASC (National Animal Supplement Council) quality seal. Give for 4–6 weeks before evaluating effect — onset is gradual. Dasuquin (with avocado/soybean unsaponifiables) has slightly better evidence than basic glucosamine-only products.' },
+  { name: 'Glucosamine & Chondroitin', evidence: 'moderate' as const, dose: 'Per product label (NASC seal); confirm the weight-based amount with your vet', brands: 'Cosequin DS, Dasuquin, Nutramax products (NASC seal)', summary: 'Often used in veterinary practice for joint support. This page does not name a trial that shows a meaningful reduction versus placebo, and it does not rank Dasuquin above glucosamine-only products. Look for the NASC (National Animal Supplement Council) quality seal. Give for 4–6 weeks before judging the effect — onset is gradual.' },
   { name: 'Probiotics', evidence: 'moderate' as const, dose: 'Species-specific product per label', brands: 'Purina Fortiflora, Nutramax Proviable, Vetri-Science Probiotics', summary: 'Canine-specific probiotics have documented benefit for acute diarrhea and may support immune function. Human probiotic strains are different from canine strains and have much weaker evidence in dogs. Use veterinary-specific products (Fortiflora is the most studied). Situational usefulness is clearer than long-term daily use: after antibiotic treatment, during GI upset, in dogs with chronic GI sensitivity. Evidence for routine daily use in healthy dogs is weaker.' },
   { name: 'CBD / Cannabis Products', evidence: 'emerging' as const, dose: 'Research ongoing — no established veterinary dose', brands: 'Various — quality control highly variable', summary: 'A 2020 Colorado State University study found CBD reduced seizure frequency in epileptic dogs at controlled research-protocol doses. A 2018 Cornell study showed pain reduction in arthritic dogs. The evidence base is early but promising. Major caveats: the veterinary CBD market has minimal quality control — many products don\'t contain what the label claims. If trying CBD, use a product with a Certificate of Analysis from a third-party lab. Do not use THC-containing products — THC is toxic to dogs. Discuss with your vet before use.' },
   { name: 'Vitamin E', evidence: 'situational' as const, dose: 'Under veterinary guidance only', brands: 'Any quality human vitamin E', summary: 'Not needed for dogs on a complete and balanced commercial diet — supplementation can cause toxicity. Situational use: dogs on homemade raw diets (may be deficient) or specific skin conditions where a vet has recommended it. Do not supplement vitamin E without a specific clinical reason.' },
@@ -72,19 +73,8 @@ export default function DogSupplementsPage() {
           )
         })}
 
-        <AffiliateDisclosure variant="inline" siteId="dog-com" />
+        <HopDisclosure siteId="dog-com" href="/go/amazon-brand/purina+dog+food?s=nutrition-supplements" />
 
-        {/* Money path — live amazon-brand search hops
-            (laminated dog NASC-seal chart /
-            dog fridge EPA-DHA card /
-            canine fish-oil handbook).
-            No existing product hop to keep.
-            Educational kitchen searches only; no Rx /
-            vaccine / flea / heartworm / nsaid hops.
-            ShopCtas hides empty Chewy; never href="#"
-            or PLACEHOLDER. Unused vs raw-diet-risks /
-            grain-free-dcm / wsava-explained hops.
-            Do not re-open #1165 / what-to-expect. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
             Shop related supplies
@@ -93,7 +83,7 @@ export default function DogSupplementsPage() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/purina+dog+food?s=nutrition-supplements"
-              amazonLabel="Shop on Amazon"
+              amazonLabel="Browse Purina dog food on Amazon →"
             />
           </div>
         </div>

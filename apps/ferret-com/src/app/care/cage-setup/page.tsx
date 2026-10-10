@@ -1,5 +1,7 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, StockImage, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
+import Link from 'next/link'
+import { buildMetadata, ArticleLayout, ArticleByline, StockImage, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -48,7 +50,7 @@ const FAQS = [
   {
     question: 'What size cage does a ferret need?',
     answer:
-      'The American Ferret Association recommends a minimum floor area of roughly 24 x 24 inches with at least 18 inches of height per ferret, with a strong preference for multi-level cages. In practice, most two-ferret households settle on a 36 x 24-inch or larger footprint with at least three levels. Bar spacing matters more than total size for safety: one inch or less for adults, half an inch or less for kits.',
+      'The 24 x 24 inch floor and 18 inch height are a planning figure, not a fetched published standard. Two ferrets usually want about 36 x 24 inches with three levels, also a planning figure. Bar spacing matters more than total size for safety: one inch or less for adults, half an inch or less for kits, as a planning note.',
   },
   {
     question: 'Can ferrets live in a cage all the time?',
@@ -83,6 +85,14 @@ export default function FerretCageSetupPage() {
       <ArticleLayout
         siteId="ferret-com"
         contentType="care"
+        heroHop={
+          <>
+            <HopDisclosure siteId="ferret-com" href="/go/amazon/B001NJ0DAY?s=care-cage-setup" />
+            <div className="mb-4" data-primary-hop="true">
+              <a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" data-shop-placement="hero" href="/go/amazon/B001NJ0DAY?s=care-cage-setup">Browse a Critter Nation double unit on Amazon →</a>
+            </div>
+          </>
+        }
         hero={{
           title: 'Ferret Cage Setup',
           subtitle:
@@ -117,6 +127,7 @@ export default function FerretCageSetupPage() {
             <RelatedLinks
               title="Related Guides"
               links={[
+                { label: 'November and December gifts', href: '/reviews/november-december-gift-guide' },
                 { label: 'Cage Size Calculator', href: '/tools/cage-size-calculator' },
                 { label: 'Diet Basics', href: '/care/diet-basics' },
                 { label: 'Insulinoma', href: '/health/insulinoma' },
@@ -151,10 +162,10 @@ export default function FerretCageSetupPage() {
 
           <h2 id="sizing">Cage Sizing and Bar Spacing</h2>
           <p>
-            The American Ferret Association recommends a minimum cage floor area of roughly 24 × 24 inches with a minimum height of 18 inches per ferret, with strong preference for multi-level cages that increase usable habitat without growing the footprint. For two ferrets — and the practical default is two ferrets, because ferrets are social and a single ferret in an empty household is an under-stimulated ferret — most keepers settle on a 36 × 24-inch or larger footprint with at least three levels. To turn those minimums into an L × W × H for your headcount and level count, use the <a href="/tools/cage-size-calculator">cage size calculator</a>.
+            The 24 × 24 inch floor and 18 inch height per ferret are a planning figure, not a fetched published standard. Multi-level cages add usable habitat without growing the footprint. For two ferrets — and the practical default is two ferrets, because ferrets are social and a single ferret in an empty household is an under-stimulated ferret — a 36 × 24-inch footprint with at least three levels is the same kind of planning figure. To turn those notes into an L × W × H for your headcount and level count, use the <a href="/tools/cage-size-calculator">cage size calculator</a>.
           </p>
           <p>
-            Bar spacing matters more than total cage size for safety. <strong>One inch or less</strong> is the working ceiling for adult ferrets; <strong>half an inch or less</strong> is appropriate for kits, who can squeeze through openings that look implausibly small. A ferret can fit through any opening that its skull will pass through; the body deforms around the skeleton. Bars wider than one inch are how kits escape from "ferret-safe" cages.
+            Bar spacing matters more than total cage size for safety. <strong>One inch or less</strong> is the working ceiling for adult ferrets; <strong>half an inch or less</strong> is appropriate for kits, who can squeeze through openings that look implausibly small. A ferret can fit through any opening that its skull will pass through; the body deforms around the skeleton. Bars wider than one inch are how kits escape from "ferret-safe" cages. This is a planning figure, not a manufacturer specification.
           </p>
           <p>
             Other cage hardware to check on first inspection: door latches that a ferret cannot operate (ferrets are skilled at opening simple cam-latches and slide-bolts; carabiner-secured doors are standard), no large gaps where shelves meet walls, and a fully removable bottom tray for cleaning. Wire-floor cages are a defect — ferret feet are not designed for grid flooring, and bumblefoot and chronic foot abrasion are documented in the exotic-pet veterinary literature in ferrets housed on wire. The floor should be solid plastic or covered with a fitted liner.
@@ -191,7 +202,7 @@ export default function FerretCageSetupPage() {
           <ul>
             <li><strong>Use corner-shaped litter boxes</strong> (triangular, raised back walls). Marshall and Kaytee both sell ferret-appropriate models.</li>
             <li><strong>Multiple boxes — one per cage level, plus one or two in each room</strong> the ferret has free access to. A ferret 20 feet from the nearest box will not return to the cage to use it.</li>
-            <li><strong>No clumping clay litter.</strong> Sodium bentonite is dangerous if ingested. Use paper-pellet litter (Yesterday’s News, CareFresh) or non-aromatic wood pellets.</li>
+            <li><strong>No clumping clay litter.</strong> Sodium bentonite is dangerous if ingested. Use paper-pellet litter (CareFresh, or another recycled-paper pellet still being made) or non-aromatic wood pellets. Purina discontinued Yesterday’s News on April 20, 2022. <a href="/reviews/best-ferret-litter">The ferret litter guide</a> compares the paper and wood pellets named here.</li>
             <li><strong>Spot-clean daily, full-replace weekly.</strong> A ferret unhappy with the box will eliminate immediately outside it.</li>
             <li><strong>Reinforce, do not punish.</strong> Treat (high-protein, not sugary) when the box is used. On misses, clean with enzymatic cleaner and move the soiled paper into the box — the scent cue teaches the location.</li>
           </ul>
@@ -238,14 +249,11 @@ export default function FerretCageSetupPage() {
           <p>
             Two cages that come up consistently in keeper communities and at exotic-mammal shelters. Both are widely available; each fills a different price/use niche.
           </p>
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
-          <ScoreMethodology />
-          <ReviewCard
+          <ReviewCard quietUntilTag
             id="critter-nation"
             badge="Best Overall"
             name="MidWest Critter Nation Double Unit (Model 162)"
-            subtitle="Two-level, 36×25×62 inches, 1/2-inch bar spacing on lower portion"
-            score={9.4}
+            subtitle="Two-level, 36×25×62 inches. The manufacturer page does not print bar spacing"
             winner
             description={
               <p>The default recommendation across the ferret-keeper community. Originally designed for rats and similar small mammals, the Critter Nation’s footprint, height, and bar spacing all land in the right zone for ferrets. Two large solid-floor levels with a connecting ramp, full-width double doors on each level (excellent access for cleaning and for getting a stubborn ferret out), and casters for moving the cage. Single-level (Model 161) and three-level expansion options exist. Expect to spend an afternoon on assembly.</p>
@@ -253,88 +261,89 @@ export default function FerretCageSetupPage() {
             specs={[
               { label: 'Dimensions', value: '36×25×62 in (double unit)' },
               { label: 'Levels', value: '2 large, solid PVC floor', highlight: 'good' },
-              { label: 'Bar Spacing', value: '~0.5 in (kit-safe)', highlight: 'good' },
+              { label: 'Bar Spacing', value: 'Not printed on the manufacturer page', highlight: 'warn' },
               { label: 'Door Access', value: 'Full-width double doors per level', highlight: 'good' },
               { label: 'Assembly', value: 'Multi-hour, two-person preferred', highlight: 'warn' },
             ]}
-            pros={['Bar spacing kit-safe out of the box', 'Excellent door access', 'Casters for moving', 'Solid floor — no wire-floor injuries', 'Modular — add a single-unit on top']}
+            pros={['Confirm bar spacing on the box', 'Excellent door access', 'Casters for moving', 'Solid floor — no wire-floor injuries', 'Modular — add a single-unit on top']}
             cons={['Heavy and large — measure before buying', 'Assembly is non-trivial', 'Ramp can be slippery without fleece cover']}
-            price="$200–280"
-            ctaText="Find Critter Nation cages"
-            ctaHref="/go/amazon-brand/midwest+critter+nation+double+unit?s=care-cage-setup"
+            price="see current price"
+            priceNote="dated 2026-05-31."
+            ctaText="Find Midwest Critter Nation double unit cages on Amazon"
+            ctaHref="/go/amazon/B001NJ0DAY?s=care-cage-setup"
             ctaAffiliateProgram="amazon-brand"
             ctaAffiliateProduct="midwest+critter+nation+double+unit"
           />
-          <ReviewCard
+          <ReviewCard quietUntilTag
             id="marshall"
             badge="Best Starter"
-            name="Marshall Designer Ferret Cage"
-            subtitle="Smaller footprint, three levels, ships with hammocks and starter accessories"
-            score={8.2}
+            name="Marshall ferret cage"
+            subtitle="Current mansion listings are two levels. Accessories are not included."
             description={
-              <p>Marshall is the most familiar brand to anyone who has bought a ferret at a US pet retailer, and their starter cage is genuinely workable as a first cage for one or two ferrets. Three levels, ferret-appropriate bar spacing, and an included hammock, ramp covers, and litter pan reduce the per-item shopping list. The trade-off is footprint: the Marshall is materially smaller than the Critter Nation, and most keepers eventually upgrade as they add ferrets or want more enrichment space.</p>
+              <p>Marshall's Designer Ferret Cage product page no longer resolves. This button opens Marshall's current cage search. Marshall is the most familiar brand to anyone who has bought a ferret at a US pet retailer, and a starter cage can still work as a first cage for one or two ferrets. Check bar spacing and footprint on the current listing. A smaller starter cage is often outgrown once a second ferret arrives.</p>
             }
             specs={[
-              { label: 'Dimensions', value: '~30×18×40 in' },
-              { label: 'Levels', value: '3', highlight: 'good' },
-              { label: 'Bar Spacing', value: '~0.5 in', highlight: 'good' },
-              { label: 'Included Accessories', value: 'Hammock, ramp covers, pan', highlight: 'good' },
-              { label: 'Long-term Capacity', value: 'One ferret comfortably; two tight', highlight: 'warn' },
+              { label: 'Dimensions', value: 'Check the current listing' },
+              { label: 'Levels', value: 'Two levels on the current mansion listing', highlight: 'good' },
+              { label: 'Bar Spacing', value: 'Confirm ferret-safe spacing on the listing', highlight: 'good' },
+              { label: 'Included Accessories', value: 'Not included. The listing says to add napsacks, lounges, and hammocks.' },
+              { label: 'Long-term Capacity', value: 'Compare footprint before adding a second ferret', highlight: 'warn' },
             ]}
-            pros={['Ferret-appropriate bar spacing', 'Ships with starter accessories', 'Footprint fits smaller apartments', 'Widely available in US pet retail']}
+            pros={['Check bar spacing on the listing', 'Accessories are sold separately', 'Footprint fits smaller apartments', 'Widely available in US pet retail']}
             cons={['Outgrown by a two-ferret household', 'Smaller pan area than Critter Nation', 'Plastic shelf wear in heavy-use households']}
-            price="$140–200"
+            price="see current price"
+            priceNote="dated 2026-05-31."
             ctaText="Find Marshall ferret cages"
-            ctaHref="/go/marshall/designer-ferret-cage?s=care-cage-setup"
+            ctaHref="/go/marshall/ferret+cage?s=care-cage-setup"
             ctaAffiliateProgram="marshall"
-            ctaAffiliateProduct="designer-ferret-cage"
+            ctaAffiliateProduct="ferret+cage"
           />
 
           <h2 id="bedding-picks">Bedding Picks</h2>
           <p>
             Two bedding/accessories that come up consistently across ferret keeper communities. Hammocks and fleece sleep sacks are the default resting surface; a corner litter pan with low entry is the practical complement.
           </p>
-          <ReviewCard
+          <ReviewCard quietUntilTag
             id="marshall-sleep-sack"
             badge="Top Pick"
-            name="Marshall Ferret Sleep Sack & Hammock Set"
-            subtitle="Enclosed sleep sack + hammock — the standard ferret bedding duo"
-            score={9.0}
+            name="Marshall hammock and nap sack"
+            subtitle="Separate listings. A hammock and a nap sack do not ship as one set."
             description={
-              <p>Marshall makes the most widely stocked ferret-specific sleep sacks and hammocks in US pet retail. The enclosed sack satisfies the burrowing drive; the open hammock provides an elevated perch for lighter sleep. Machine washable fleece. Ships as a set, so both the sleeping and lounging needs are covered in one purchase. Replace when fleece thins or seams fray — usually every 3–6 months with regular washing.</p>
+              <p>Marshall's ferret sleep-sack product page no longer resolves. This button opens Marshall's current hammock search. The current hanging nap sack and banana hammock are separate listings, not one set. The nap-sack page says fleece with a built-in hide, nylon straps, and machine washable. The hammock page says soft fleece that clips to the cage. Check which listing the search returns.</p>
             }
             pros={['Ferret-specific sizing', 'Machine washable', 'Satisfies burrowing instinct', 'Widely available for quick replacement']}
             cons={['Fleece thins over time', 'Some ferrets chew the fabric']}
-            price="$10–20"
+            price="see current price"
+            priceNote="dated 2026-05-31."
             ctaText="Find Marshall hammocks & sacks"
-            ctaHref="/go/marshall/ferret-sleep-sack?s=care-cage-setup"
+            ctaHref="/go/marshall/ferret+hammock?s=care-cage-setup"
             ctaAffiliateProgram="marshall"
-            ctaAffiliateProduct="ferret-sleep-sack"
+            ctaAffiliateProduct="ferret+hammock"
           />
-          <ReviewCard
+          <ReviewCard quietUntilTag
             id="kaytee-litter-pan"
             badge="Essential"
             name="Kaytee Corner Ferret Litter Pan"
             subtitle="Corner-shaped, high back wall, low-entry front lip"
-            score={8.8}
             description={
               <p>A ferret corner pan needs three things: corner-shaped to fit into the natural elimination spot, high back wall so litter stays in, and a low front lip the ferret can step over without difficulty. The Kaytee ferret pan hits all three and is widely available in US pet retail. Get one per cage level plus one or two for the free-roam room — the multi-pan strategy is the single biggest variable in litter training success.</p>
             }
             pros={['Corner-shaped — fits ferret instinct', 'Low front lip for easy entry', 'High back wall reduces scatter', 'Widely available, inexpensive']}
             cons={['Smaller ferrets can sometimes push it out of corner', 'Needs daily spot-clean']}
-            price="$5–12"
-            ctaText="Find Kaytee corner pans"
+            price="see current price"
+            priceNote="dated 2026-05-31."
+            ctaText="Find Kaytee corner ferret litter pans on Amazon"
             ctaHref="/go/chewy-brand/kaytee+corner+ferret+litter+pan?s=care-cage-setup"
             ctaAffiliateProgram="chewy-brand"
             ctaAffiliateProduct="kaytee+corner+ferret+litter+pan"
           />
 
+          <p>Cage models for this setup are compared in the <Link href="/reviews/best-ferret-cage">ferret cage review</Link>.</p>
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
 
           <ArticleSourcesList sources={SOURCES} />
-          <p className="text-sm text-brand-text-light">
-            Affiliate disclosure: Ferret.com may earn a commission on qualifying purchases made through links on this page. Editorial picks are based on documented product specifications and community-reported reliability; commission does not influence inclusion.
+          <p className="text-sm text-brand-text-light"> Editorial picks are based on documented product specifications and community-reported reliability.
           </p>
         </div>
       </ArticleLayout>

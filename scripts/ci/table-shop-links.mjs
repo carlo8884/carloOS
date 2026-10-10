@@ -4,9 +4,14 @@
  * a /go hop on its review card also has a TableShopLink to that same hop.
  * Rows with no shop hop (prescription names, unscored products) stay as
  * in-page anchors. No new /go targets.
+ *
+ * Held partners: the shared row components render the retailer or brand
+ * name with no link (heldShopText), never "partner ID needed" or other
+ * internal wording.
  */
 import { readFileSync, readdirSync, statSync } from 'node:fs'
 import { join } from 'node:path'
+import { HELD_COPY_PATTERN, stripComments } from './internal-voice.mjs'
 
 const ROOT = process.cwd()
 const APPS = ['dog-com', 'fish-com', 'horses-com', 'vets-co', 'ferret-com']
@@ -67,9 +72,32 @@ for (const app of APPS) {
   }
 }
 
+/** Shared components that render a held-partner row or card. */
+export const HELD_ROW_COMPONENTS = [
+  'TableShopLink.tsx',
+  'ReviewCard.tsx',
+  'QuietPartnerLink.tsx',
+  'ResultPick.tsx',
+  'PrimaryHop.tsx',
+]
+
+export function heldRowProblems(name, src) {
+  const out = []
+  const visible = stripComments(src)
+  const phrase = visible.match(HELD_COPY_PATTERN)
+  if (phrase) out.push(`packages/ui/src/components/${name}: internal held-partner wording "${phrase[0]}"`)
+  if (!/\bheldShopText\(/.test(visible)) out.push(`packages/ui/src/components/${name}: held row does not use heldShopText`)
+  return out
+}
+
+for (const name of HELD_ROW_COMPONENTS) {
+  const src = readFileSync(join(ROOT, 'packages/ui/src/components', name), 'utf8')
+  hits.push(...heldRowProblems(name, src))
+}
+
 if (hits.length) {
   console.error(`FAIL: ${hits.length} table shop-link problem(s)`)
   for (const hit of hits) console.error('  ' + hit)
   process.exit(1)
 }
-console.log('PASS: comparison rows with an existing shop hop link to that hop.')
+console.log('PASS: comparison rows with an existing shop hop link to that hop; held rows show neutral retailer text.')

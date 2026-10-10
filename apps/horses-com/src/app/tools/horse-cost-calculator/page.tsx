@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -13,7 +14,6 @@ import {
   TableOfContents,
   RelatedLinks,
   CrossPortfolioCard,
-  AffiliateDisclosure,
   ShopCtas,
   JourneyNext,
   CrossSiteHelp,
@@ -80,7 +80,7 @@ const softwareApplicationSchema = {
     'Board-type presets (full / partial / pasture / self-care) with 2026 US range guidance',
     'Farrier costed on a ~6-week cycle (~8.7 visits/year)',
     'Monthly and annual totals with a per-category breakdown table',
-    'Interactive first-horse startup kit with Amazon shop hops',
+    'Interactive first-horse startup kit with Amazon shop buttons',
     'Estimates framed against large regional and individual variation',
   ],
   publisher: { '@type': 'Organization', name: 'Horses.com Editorial', url: 'https://horses.com' },
@@ -137,7 +137,7 @@ const schema = combineSchemas(howToSchema, breadcrumbSchema, articleSchema)
 export default function HorseCostCalculatorPage() {
   return (
     <ArticleLayout
-      priceAsOf="2026-06-11"
+      priceAsOf="2026-10-05"
       siteId="horses-com"
       relatedLinks={[
         { title: 'Cost of Owning a Horse (Guide)', href: '/ownership/cost-of-owning-a-horse', category: 'Ownership' },
@@ -212,11 +212,11 @@ export default function HorseCostCalculatorPage() {
           <strong>The quick answer:</strong> for most US owners, keeping one horse costs roughly{' '}
           <strong>$300&ndash;1,000+ per month</strong>, or about{' '}
           <strong>$4,000&ndash;12,000+ per year</strong>, before emergencies. Boarding is the largest and
-          most variable piece (commonly $150&ndash;1,200+/mo); on top of it you budget for feed and hay,
+          most variable piece (commonly $150&ndash;1,200+/mo). On top of it you budget for feed and hay,
           a farrier every ~6 weeks, routine vet care with annual dental and vaccines, and optionally
           insurance. One-time startup &mdash; tack, the pre-purchase exam, and the horse itself &mdash;
           sits outside the monthly number. The calculator below builds your own estimate from editable
-          inputs.
+          inputs. Typical US ranges, last updated 2026-10-05; local prices vary.
         </p>
 
         <h2 id="calculator">The calculator</h2>
@@ -233,39 +233,39 @@ export default function HorseCostCalculatorPage() {
           nextLabel="Walk the first 90 days before you buy"
           nextBlurb="The calculator is the monthly number. The first-horse roadmap is the sequence — tryout, PPE, first farrier, first week of handling — so the budget is attached to a plan. The day-one kit below is the husbandry starter, not a ranked list."
           resourceHref="/go/amazon-brand/horse+halter+lead+rope?s=tools-horse-cost-calculator"
-          resourceLabel="Browse horse halters and leads on Amazon →"
+          resourceLabel="Browse horse halters and lead ropes on Amazon →"
         />
         <p>
           Once you have a monthly number, pack the day-one kit that fills the one-time
-          tack line. The six-item list below is a husbandry starting point — halter and
-          lead, grooming kit, hoof pick, feed scoop or scale, barn first-aid kit, and a
-          fly mask — not a ranked product list and not a substitute for the tack your
-          barn or trainer specifies.
+          tack line. The list below is a husbandry starting point — halter and lead,
+          grooming kit, feed scoop or scale, barn first-aid kit, and a fly mask — plus
+          the hoof-care guide. It is not a ranked product list and not a substitute for
+          the tack your barn or trainer specifies.
         </p>
         <StartupKit />
 
-        <AffiliateDisclosure variant="inline" siteId="horses-com" />
+        <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/horse+halter+lead+rope?s=tools-horse-cost-calculator", "/go/amazon-brand/horse+grooming+kit?s=tools-horse-cost-calculator", "/go/amazon-brand/horse+feed+scoop+scale?s=tools-horse-cost-calculator", "/go/amazon-brand/horse+barn+first+aid+kit?s=tools-horse-cost-calculator", "/go/amazon-brand/horse+fly+mask?s=tools-horse-cost-calculator"]} />
         <div className="mb-8 rounded-xl border border-brand-border bg-brand-surface p-5">
           <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
             Shop related supplies
           </div>
-          <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">The six-item list above is a husbandry starting point — halter and lead,
-            grooming kit, hoof pick, feed scoop, barn first-aid, fly mask — not a ranked
-            product list. Same Amazon search hops as the checklist rows. Horses.com earns
-            a commission on qualifying purchases at no extra cost to you. </p>
+          <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">Halter and lead, grooming kit, feed scoop, barn first-aid, and fly mask are
+            Amazon searches for those categories. Hoof care is the guide. </p>
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/horse+halter+lead+rope?s=tools-horse-cost-calculator"
-              amazonLabel="Browse horse halters and leads on Amazon →"
+              amazonLabel="Browse horse halters and lead ropes on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/horse+grooming+kit?s=tools-horse-cost-calculator"
               amazonLabel="Browse horse grooming kits on Amazon →"
             />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/horse+hoof+pick?s=tools-horse-cost-calculator"
-              amazonLabel="Browse hoof picks on Amazon →"
-            />
+            <Link
+              href="/care/hoof-care-basics"
+              className="inline-block bg-brand-primary text-white font-semibold px-5 py-2.5 rounded-md no-underline hover:bg-brand-primary-dark text-center"
+            >
+              Read hoof-care basics →
+            </Link>
             <ShopCtas
               amazonHref="/go/amazon-brand/horse+feed+scoop+scale?s=tools-horse-cost-calculator"
               amazonLabel="Browse feed scoops and scales on Amazon →"
@@ -284,7 +284,7 @@ export default function HorseCostCalculatorPage() {
         <h2 id="categories">What goes into the cost of a horse</h2>
         <p>
           A horse budget is the sum of a handful of recurring categories plus a one-time startup. Seeded
-          defaults reflect commonly published 2026 US ranges; treat them as a starting point, not a quote.
+          defaults reflect commonly published 2026 US ranges dated 2026-10-05; treat them as a starting point, not a quote.
         </p>
         <ul>
           <li>
@@ -355,14 +355,14 @@ export default function HorseCostCalculatorPage() {
             },
             {
               label:
-                'Penn State Extension — Horse Stable Management & the costs of horse ownership (board, feed, farrier, health-care budgeting).',
-              url: 'https://extension.psu.edu/horses-and-horse-stables',
+                'Penn State Extension — Equine.',
+              url: 'https://extension.psu.edu/animals-and-livestock/equine',
               publisher: 'Penn State Extension',
             },
             {
               label:
-                'University of Minnesota Extension — Horse care and management (routine health, dental, and vaccination scheduling).',
-              url: 'https://extension.umn.edu/horse-care-and-management',
+                'University of Minnesota Extension — Horse.',
+              url: 'https://extension.umn.edu/agriculture/animals-and-livestock/horse',
               publisher: 'UMN Extension',
             },
             {
@@ -380,6 +380,7 @@ export default function HorseCostCalculatorPage() {
         </p>
 
         <h2 id="faq">FAQ</h2>
+        <p>Those figures are typical US ranges dated 2026-10-05.</p>
         <FAQAccordion
           items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))}
           includeSchema

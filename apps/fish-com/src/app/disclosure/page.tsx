@@ -88,8 +88,8 @@ export default function DisclosurePage() {
           On Fish.com, every page that contains affiliate links carries a
           disclosure either at the top of the page (above the first affiliate
           link) or in the page footer, in addition to the site-wide footer
-          disclosure. Clicking an affiliate link on Fish.com routes through
-          our internal redirect (<code>/go/[vendor]/[sku]</code>) before
+          disclosure. Clicking an affiliate link on Fish.com goes through
+          our click counter before
           landing on the retailer.
         </p>
 
@@ -129,8 +129,7 @@ export default function DisclosurePage() {
 
         <h2>How We Make Money</h2>
         <p>
-          Fish.com&apos;s revenue today comes from three sources, in
-          approximate order of size:
+          Fish.com accounts for money on this page as follows:
         </p>
         <ol>
           <li>
@@ -138,15 +137,11 @@ export default function DisclosurePage() {
             when readers click through to a retailer and complete a purchase.
           </li>
           <li>
-            Newsletter sponsorships. Sponsorships are clearly labeled inside
-            the newsletter; the sponsor has no input on the surrounding
-            editorial content. We do not accept sponsors for on-site
-            editorial pages.
+            No newsletter is currently sent, so there is no sponsored newsletter.
+            We do not accept sponsors for on-site editorial pages.
           </li>
           <li>
-            Display advertising via a third-party ad network. Ads are served
-            programmatically; we have no direct relationship with the
-            individual brands shown.
+            No display ads are currently served.
           </li>
         </ol>
 
@@ -179,7 +174,7 @@ export default function DisclosurePage() {
           <li>
             <strong>We do not use undisclosed affiliate links.</strong> Every
             page with affiliate links has a disclosure. Every affiliate link
-            routes through <code>/go/[vendor]/[sku]</code>.
+            goes through our click counter.
           </li>
         </ul>
 

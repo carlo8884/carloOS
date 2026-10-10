@@ -170,7 +170,7 @@ export default function RacingHistorySpokePage({ params }: { params: { slug: str
           ))}
 
           <h2 id="faq">Frequently Asked Questions</h2>
-          <FAQAccordion items={spoke.faq} />
+          <FAQAccordion items={spoke.faq} includeSchema={false} />
 
           <h2 id="references">References</h2>
           <ol className="text-sm text-brand-text-mid">

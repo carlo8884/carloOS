@@ -121,12 +121,12 @@ export function PetInsuranceWorthItCalculator() {
 
   const paidForItself = result !== null && result.netVsPremium > 0
   const tone = paidForItself
-    ? 'border-emerald-700/40 bg-emerald-950/30 text-emerald-200'
-    : 'border-amber-700/40 bg-amber-950/30 text-amber-200'
+    ? 'border-emerald-700 bg-emerald-950 text-emerald-200 [&_p]:!text-emerald-200 [&_strong]:!text-emerald-200'
+    : 'border-amber-700 bg-amber-950 text-amber-200 [&_p]:!text-amber-200 [&_strong]:!text-amber-200'
 
   return (
     <div className="rounded-lg border border-brand-border bg-brand-surface p-6 sm:p-8">
-      <PriceAsOf date="2026-06-11" />
+      <PriceAsOf date="2026-10-07" />
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
         <div>
           <label htmlFor="wi-premium" className="mb-2 block text-sm font-medium text-brand-text-mid">
@@ -143,7 +143,7 @@ export function PetInsuranceWorthItCalculator() {
             className="w-full rounded border border-brand-border bg-brand-surface px-3 py-2 text-brand-text-dark"
           />
           <p className="mt-1 text-xs text-brand-text-mid">
-            Typical accident-and-illness premiums run roughly $25–$70/mo for dogs and $12–$40/mo for cats, rising with age and breed. Use the carrier&apos;s quote for your pet.
+            Premiums rise with age and breed. Use the carrier&apos;s quote for your pet.
           </p>
           {premiumError && <ToolError>{premiumError}</ToolError>}
         </div>
@@ -162,7 +162,7 @@ export function PetInsuranceWorthItCalculator() {
             onChange={(e) => setDeductibleRaw(e.target.value)}
             className="w-full rounded border border-brand-border bg-brand-surface px-3 py-2 text-brand-text-dark"
           />
-          <p className="mt-1 text-xs text-brand-text-mid">Most carriers offer $100–$1,000. You pay this before reimbursement begins.</p>
+          <p className="mt-1 text-xs text-brand-text-mid">Carriers publish their own deductible. You pay this before reimbursement begins.</p>
           {deductibleError && <ToolError>{deductibleError}</ToolError>}
         </div>
 
@@ -220,7 +220,7 @@ export function PetInsuranceWorthItCalculator() {
             step={100}
             value={eligibleCosts}
             onChange={(e) => setEligibleCosts(Number(e.target.value))}
-            className="w-full accent-brand-primary"
+            className="block h-11 w-full cursor-pointer accent-brand-primary"
           />
           <div className="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-4">
             {COST_SCENARIOS.map((s) => (

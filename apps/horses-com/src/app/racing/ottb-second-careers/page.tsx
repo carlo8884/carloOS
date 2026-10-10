@@ -23,9 +23,10 @@
  * under saddle, discipline aptitude).
  */
 
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { PremiumMasthead } from '@/components/PremiumMasthead'
 
 export const metadata: Metadata = buildMetadata({
@@ -215,18 +216,9 @@ export default function OttbSecondCareersHubPage() {
         </div>
 
         <div className="max-w-content-wide mt-6">
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href="/go/amazon-brand/horse+reins?s=ottb-second-careers-hub" />
         </div>
 
-        {/* Money path — live amazon-brand search hops
-            (laminated horse OTTB discipline-ladder chart /
-            horse stall-door foundation-flatwork card /
-            equine letdown-to-restart handbook).
-            Educational barn searches only; no Rx hops.
-            ShopCtas hides empty Chewy; never href="#"
-            or PLACEHOLDER. Unused vs ottb-aftercare /
-            handicap hops. Do not
-            re-open #1165 / what-to-expect. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-content-wide">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
             Shop related supplies
@@ -235,7 +227,7 @@ export default function OttbSecondCareersHubPage() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/horse+reins?s=ottb-second-careers-hub"
-              amazonLabel="Shop on Amazon"
+              amazonLabel="Browse horse reins on Amazon →"
             />
           </div>
         </div>

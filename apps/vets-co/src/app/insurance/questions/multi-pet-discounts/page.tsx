@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, LastUpdated, ComparisonFoot } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 
@@ -19,6 +19,7 @@ export default function Page() {
       <SchemaScript schema={schema} />
       <ArticleLayout siteId="vets-co"
         priceAsOf="2026-06-11"
+        heroHop={<a href="/reviews/best-pet-insurance" className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline mb-5">Best pet insurance comparison</a>}
         hero={{ title: 'Are There Multi-Pet Pet Insurance Discounts?', subtitle: 'Most insurers offer a multi-pet discount of roughly 5–10% per additional pet on the same account. It is a real but modest saving — coverage terms, limits, and claim handling matter far more than the discount when you insure more than one pet.', category: 'Insurance Q&A', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '5 min' }}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Insurance', href: '/insurance' }, { name: 'Questions', href: '/insurance/questions' }, { name: 'Multi-Pet Discounts', href: '/insurance/questions/multi-pet-discounts' }]}
         sidebar={<>
@@ -37,6 +38,7 @@ export default function Page() {
       >
         <div className="carloOS-article">
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-11T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
+          <LastUpdated date="2026-10-10" />
 
           <CalloutBox variant="info" title="The short answer">
             Most insurers offer a <strong>multi-pet discount of roughly 5–10%</strong> per additional pet on the same account. It is a genuine but modest saving, and it should not be the deciding factor — coverage terms, annual limits, and claim handling matter far more than the discount.
@@ -52,10 +54,41 @@ export default function Page() {
 
           <h2>When Bundling Does Make Sense</h2>
           <p>Bundling is genuinely worth taking when a single carrier is already the right choice for each of your pets on the merits. If the insurer&apos;s terms, limits, and claim reputation suit every animal in the household, then the discount and the single-account convenience are pure upside — there is no reason to split policies across carriers just to avoid bundling. The point is not to avoid multi-pet discounts but to make sure they are a consequence of a good coverage decision rather than the cause of a compromised one.</p>
+          <div className="my-6 max-w-full min-w-0">
+            <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
+              <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+              <thead>
+                <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Coverage first</th>
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Discount first</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">What decides</th>
+                  <td className="p-3">Annual limit, deductible, reimbursement, exclusions, and claim handling</td>
+                  <td className="p-3">The multi-pet percentage, commonly five to ten percent per additional pet</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">When pets differ</th>
+                  <td className="p-3">Match each pet, then use the discount as a tiebreaker</td>
+                  <td className="p-3">Forcing both onto one carrier can leave one pet with the wrong policy</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">When bundling is upside</th>
+                  <td className="p-3">The same insurer already fits every animal</td>
+                  <td className="p-3">A small discount on a policy that caps payouts too low is a false economy</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <ComparisonFoot updated="2026-10-10" />
+          <h2>Who should use the discount</h2>
+          <p>Use the discount when the same carrier already fits every pet. Do not let it choose the carrier. Match coverage first.</p>
 
           <h2 id="next-steps">Next Steps</h2>
           <p>Because coverage fit matters more than the discount, the most useful next step is to compare carriers on terms and claim handling, then check which of your front-runners offers multi-pet pricing.</p>
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
           <ul>
             <li>Compare carriers on limits, exclusions, and claim handling in our <a href="/reviews/best-pet-insurance">best pet insurance comparison</a>.</li>
             <li>Narrow the field by the features each pet needs with the <a href="/tools/insurance-finder">pet insurance coverage finder</a>.</li>
@@ -75,9 +108,7 @@ export default function Page() {
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
 
-          <ArticleSourcesList sources={[
-            { label: 'A Consumer’s Guide to Pet Insurance', url: 'https://content.naic.org/cipr-topics/pet-insurance', publisher: 'NAIC' },
-            { label: 'State of the Industry Report (plan features and discounts)', url: 'https://naphia.org/state-of-the-industry/', publisher: 'NAPHIA' },
+          <ArticleSourcesList title="Sources" sources={[
             { label: 'Sample carrier multi-pet discount disclosures', publisher: 'General carrier policy disclosures (not an endorsement)' },
           ]} />
         </div>

@@ -1,13 +1,12 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 
 const SOURCES = [
-  { label: 'Merck Veterinary Manual: Otitis Externa in Dogs and Cats', url: 'https://www.merckvetmanual.com/eye-and-ear/ear-diseases/otitis-externa-in-dogs-and-cats', publisher: 'Merck Vet Manual' },
-  { label: 'ACVIM: Otitis Externa — Diagnosis and Management', url: 'https://www.acvim.org/Portals/0/PDF/consensus/otitis_consensus.pdf', publisher: 'ACVIM' },
-  { label: 'AVMA: Ear Infections in Dogs (Otitis Externa)', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/common-health-conditions-dogs', publisher: 'AVMA' },
+  { label: 'Merck Veterinary Manual: Otitis Externa in Dogs and Cats', url: 'https://www.merckvetmanual.com/ear-disorders/otitis-externa/otitis-externa-in-animals', publisher: 'Merck Vet Manual' },
   { label: 'Nuttall T et al. Trends in antimicrobial resistance in canine and feline otitis externa and skin infections. J Small Anim Pract. 2019;60(12):728-739.', publisher: 'JSAP' },
 ]
 
@@ -75,17 +74,17 @@ export default function DogEarInfectionsPage() {
           <h2>High-Risk Breeds</h2>
           <p>Breeds with heavy, pendulous ears (Cocker Spaniels, Basset Hounds, Bloodhounds) trap moisture and have reduced airflow — predisposing to chronic infections. Breeds with hairy ear canals (Poodles, Schnauzers) may benefit from hair removal by a groomer or veterinarian to improve ventilation. Breeds with allergies (Goldens, Labradors, Frenchies, Bulldogs) are predisposed because ear infection is commonly an allergy manifestation.</p>
 
-          <h2 id="kit">Weekly ear-cleaning kit</h2>
-          <p>Everyday physical supplies that match the home-care copy above — a veterinary ear cleaner to fill the canal, then a cotton ball to wipe the visible canal and ear flap after the dog shakes. Cotton swabs stay out of the canal. Prescription ear drops, parasiticide brands (Revolution, Bravecto), and brand ASINs (Virbac Epi-Otic, Douxo Ear) stay educational copy only — this page never hops Rx drops, parasiticide brands, or medications. This page does not claim hands-on testing.</p>
+          <h2 id="kit">Supplies named on this page</h2>
+          <p>Keep these on hand: a veterinary ear cleaner to fill the canal, then a cotton ball to wipe the visible canal and ear flap after the dog shakes. Cotton swabs stay out of the canal. Prescription ear drops, parasiticide brands (Revolution, Bravecto), and named brands (Virbac Epi-Otic, Douxo Ear) stay educational copy only — this page does not link to Rx drops, parasiticide brands, or medications.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/pet+ear+cleaner?s=health-dog-ear-infections", "/go/amazon-brand/cotton+balls?s=health-dog-ear-infections"]} />
 
-          {/* Money path — live amazon-brand search hops (weekly ear-cleaning kit).
-              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-              Category searches only — reuse the live sister query from
+          {/* Shop note — live amazon-brand search buttons (weekly ear-cleaning kit).
+              ShopCtas hides empty Chewy; never href="#" or an empty link.
+              Amazon searches only — reuse the live sister query from
               ferret.com ear-cleaning (pet+ear+cleaner). Cotton balls
               match on-page wipe copy. Prescription ear drops,
-              parasiticide brands, and brand ASINs are not shoppable hops. */}
+              parasiticide brands, and named brands are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, AffiliateDisclosure, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -79,7 +80,7 @@ export default function SupplementsAndVitaminsPage() {
             <CrossPortfolioCard currentSite="ferret-com" contentType="diet" variant="sidebar" />
           </>
         }
-      
+
         relatedLinks={[
           { title: 'Ferret Diet Hub', href: '/diet' },
           { title: 'Reading Food Labels', href: '/diet/reading-food-labels' },
@@ -128,20 +129,8 @@ export default function SupplementsAndVitaminsPage() {
             There are real, condition-specific reasons a veterinarian may prescribe a supplement — supporting an ill or recovering ferret, addressing a confirmed deficiency, or supporting a ferret with a chronic disease. In those cases follow the veterinary recommendation precisely, including the product and amount specified. The principle is simply that supplements should answer a defined need identified by someone who has examined the animal, not a vague wish to do something extra.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/ferret+kibble?s=supplements-and-vitamins" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated ferret supplement-caution chart /
-              ferret fridge coat-oil card /
-              mustelid supplement-reference handbook).
-              No existing product hop to keep.
-              Educational kitchen searches only; no Rx /
-              vaccine / aging hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs diet-hub /
-              senior-nutrition / protein-fat kitchen kits. Ferret
-              aging stays held.
-              Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
@@ -150,7 +139,7 @@ export default function SupplementsAndVitaminsPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/ferret+kibble?s=supplements-and-vitamins"
-                amazonLabel="Shop on Amazon"
+                amazonLabel="Browse ferret kibble on Amazon →"
               />
           </div>
           </div>

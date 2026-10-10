@@ -1,14 +1,14 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CalloutBox, PullQuote, ArticleByline, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CalloutBox, PullQuote, ArticleByline, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 
 const SOURCES = [
+  { label: 'AVMA: Vaccinating Your Pet', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/vaccinations', publisher: 'AVMA' },
   { label: 'WSAVA: Vaccination Guidelines for the Owners and Breeders of Dogs and Cats', url: 'https://wsava.org/committees/vaccination-guidelines-group/', publisher: 'WSAVA' },
   { label: 'AAHA: Canine Vaccination Guidelines (2022)', url: 'https://www.aaha.org/aaha-guidelines/vaccination-canine-configuration/vaccination-canine/', publisher: 'AAHA' },
-  { label: 'AVMA: Vaccination Basics for Dogs and Cats', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/vaccination-basics', publisher: 'AVMA' },
-  { label: 'Merck Veterinary Manual: Overview of Vaccination Programs for Dogs', url: 'https://www.merckvetmanual.com/dog-owners/disorders-affecting-multiple-body-systems-of-dogs/vaccination-of-dogs', publisher: 'Merck Vet Manual' },
 ]
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Vaccination Schedule — Core, Non-Core | Dog.com', description: 'Complete dog vaccination guide. Core vaccines every dog needs, non-core vaccines by lifestyle, titer testing to avoid over-vaccination.', path: '/health/dog-vaccinations', type: 'article' })
@@ -68,7 +68,7 @@ export default function DogVaccinationsPage() {
           <p>Core vaccines protect against diseases that are severe, widely distributed, or transmissible to humans. The <a href="https://wsava.org/committees/vaccination-guidelines-group/" rel="noopener" target="_blank" className="text-brand-primary hover:underline">WSAVA</a> guidelines define four core canine vaccines:</p>
           <ul>
             <li><strong>Rabies:</strong> Required by law in virtually all US states. Fatal in dogs and humans. Initial vaccine at 12–16 weeks, booster at 1 year, then every 1–3 years per state law and product label.</li>
-            <li><strong>DA2PP (Distemper/Adenovirus/Parvovirus/Parainfluenza):</strong> A combination vaccine protecting against four diseases. Distemper causes severe neurological disease. Parvovirus causes fatal hemorrhagic gastroenteritis, particularly in puppies. Puppy series starting at 6–8 weeks, every 3–4 weeks until 16 weeks, booster at 1 year, then every 3 years in adult dogs with documented prior vaccination.</li>
+            <li><strong>DA2PP (Distemper, Adenovirus, Parvovirus, Parainfluenza):</strong> A combination vaccine protecting against four diseases. Distemper causes severe neurological disease. Parvovirus causes fatal hemorrhagic gastroenteritis, particularly in puppies. Puppy series starting at 6–8 weeks, every 3–4 weeks until 16 weeks, booster at 1 year, then every 3 years in adult dogs with documented prior vaccination.</li>
           </ul>
 
           <h2>Puppy Vaccination Schedule</h2>
@@ -101,32 +101,15 @@ export default function DogVaccinationsPage() {
 
           <h2 id="kit">A Simple Vaccine-Record-and-Clinic-Trip Kit</h2>
           <p>
-            Three everyday physical supplies match the
-            puppy-series, documented-history / titer, and
-            30–60 minute observation copy above: a pet
-            vaccination record book so the 6–8, 10–12, and
-            14–16 week dates, adult boosters, and titer
-            printouts stay in one official history, a dog
-            seat-belt tether for the repeated clinic trips
-            that series requires, and a foldable waterproof
-            puppy mat for waiting after vaccines while
-            watching for a reaction. These are household
-            record-and-logistics tools, not treatments. They do not vaccinate a dog, they do not
-            replace a veterinarian-administered core or
-            lifestyle vaccine, they do not replace a titer
-            blood test, and they are not Nobivac, DA2PP,
-            Bordetella, rabies, Lyme, or influenza
-            products. This page
-            does not hop vaccines or medications. This
-            page does not claim hands-on testing. </p>
+            Keep these on hand: pet vaccination record book, dog seat belt tether, and foldable waterproof puppy mat. These are household record-and-logistics tools, not treatments. They do not vaccinate a dog, they do not replace a veterinarian-administered core or lifestyle vaccine, they do not replace a titer blood test, and they are not Nobivac, DA2PP, Bordetella, rabies, Lyme, or influenza products. </p>
 
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/pet+vaccination+record+book?s=health-dog-vaccinations", "/go/amazon-brand/dog+seat+belt+tether?s=health-dog-vaccinations", "/go/amazon-brand/foldable+waterproof+puppy+mat?s=health-dog-vaccinations"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (pet vaccination record book / dog seat-belt
               tether / foldable waterproof puppy mat).
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or an empty link. Amazon searches only —
               unused vs #1043 mosquito dunks / monthly
               pill organizer / soft-sided vet-visit
               carrier, #1042 gum-chart / recovery-food /
@@ -138,7 +121,7 @@ export default function DogVaccinationsPage() {
               Nobivac, DA2PP, Bordetella, rabies, Lyme,
               influenza, Heartgard, Interceptor,
               Simparica, ProHeart, flea+tick meds, and
-              Rx ASINs are not shoppable hops. */}
+              prescription brands are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

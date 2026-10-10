@@ -1,5 +1,7 @@
 'use client'
 
+import { HopDisclosure } from '../../../components/HopDisclosure'
+
 /**
  * Dog Body Condition Score (BCS) Assessor -- /tools/dog-body-condition-score
  *
@@ -12,7 +14,7 @@
  */
 
 import { useMemo, useState } from 'react'
-import { AffiliateDisclosure, ResultMeaning, ToolError } from '@carloOS/ui'
+import { ResultMeaning, ToolError } from '@carloOS/ui'
 
 interface Option {
   label: string
@@ -26,6 +28,7 @@ interface Question {
 }
 
 // Options map to points on the WSAVA 1-9 scale (5 = ideal midpoint).
+// The three-question average is a planning figure, not a copy of the WSAVA chart.
 const QUESTIONS: Question[] = [
   {
     id: 'ribs',
@@ -116,7 +119,7 @@ function resultShop(tone: Band['tone']): {
         blurb:
           'An underweight score is a reason to call your veterinarian before changing the diet — unexplained thinness can mean parasites, dental pain, or illness. A kitchen / pet scale lets you record what you are already feeding so the vet can review it. This tool does not set a target weight or diagnose a cause.',
         href: `/go/amazon-brand/digital+gram+scale+kitchen+pet?s=${SHOP_SOURCE}`,
-        label: 'Browse portion-control food scales on Amazon →',
+        label: 'Browse digital gram scales on Amazon →',
       }
     case 'good':
       return {
@@ -233,7 +236,14 @@ export default function DogBCSCalculator() {
             {result.shop.heading}
           </p>
           <p className="mt-1 text-sm leading-relaxed text-brand-text-mid">{result.shop.blurb}</p>
-          <AffiliateDisclosure variant="inline" siteId="dog-com" className="my-3" />
+          <HopDisclosure siteId="dog-com" href={result.shop.href} />
+          <a
+            href={result.shop.href}
+            rel="sponsored noopener"
+            className="inline-block max-w-full whitespace-normal text-left rounded bg-brand-dark px-4 py-2.5 text-sm font-bold text-white no-underline"
+          >
+            {result.shop.label}
+          </a>
         </div>
       ) : (
         <ToolError>Answer all three body-condition questions to see a score.</ToolError>

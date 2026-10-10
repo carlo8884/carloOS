@@ -1,13 +1,13 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, RelatedLinks, ShopCtas, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, DropCap, PullQuote, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Cushing's Disease in Dogs — PUPD, Pot Belly | Vets.co", description: "Cushing's disease (hyperadrenocorticism) causes a classic PUPD-pot belly-panting presentation. PDH vs adrenal tumor, LDDS test, and trilostane management.", path: '/health/cushing-disease-dogs', type: 'article' })
 const SOURCES = [
   { label: 'Behrend EN et al. Diagnosis of Spontaneous Canine Hyperadrenocorticism: 2012 ACVIM Consensus Statement. J Vet Intern Med. 2013;27(6):1292-1304.', publisher: 'ACVIM / JVIM' },
   { label: 'Feldman EC, Nelson RW. Canine hyperadrenocorticism. In: Canine and Feline Endocrinology and Reproduction. 3rd ed. Saunders, 2004.', publisher: 'Saunders' },
-  { label: 'Merck Veterinary Manual: Hyperadrenocorticism in Animals', url: 'https://www.merckvetmanual.com/endocrine-system/the-adrenal-glands/hyperadrenocorticism-in-animals', publisher: 'Merck Vet Manual' },
-  { label: 'AVMA: Cushing\'s Disease in Dogs', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/cushings-disease', publisher: 'AVMA' },
+  { label: 'Merck Veterinary Manual: Hyperadrenocorticism in Animals', url: 'https://www.merckvetmanual.com/endocrine-system/the-adrenal-glands/cushing-syndrome-hyperadrenocorticism-in-animals', publisher: 'Merck Vet Manual' },
   { label: 'Ramsey IK. Trilostane in dogs. Vet Clin North Am Small Anim Pract. 2010;40(2):269-283.', publisher: 'Vet Clin North Am' },
 ]
 const schema = buildArticleSchema({ siteId: 'vets-co', title: "Cushing's Disease in Dogs", description: "PDH vs adrenal tumor, LDDS testing, and trilostane treatment for canine hyperadrenocorticism.", url: 'https://vets.co/health/cushing-disease-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-05T00:00:00Z' ,
@@ -15,7 +15,6 @@ const schema = buildArticleSchema({ siteId: 'vets-co', title: "Cushing's Disease
 })
 const med = buildMedicalWebPageSchema({ name: "Cushing's Disease in Dogs", description: "Signs, testing, and trilostane treatment for canine hyperadrenocorticism.", url: 'https://vets.co/health/cushing-disease-dogs', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-05' })
 const combined = combineSchemas(schema, med)
-
 
 const FAQS = [
   { question: "How is Cushing's disease different from diabetes?", answer: "Both cause excessive thirst and urination (PU/PD), but Cushing's disease is driven by excess cortisol from an adrenal or pituitary tumor, while diabetes is a failure of glucose regulation from insulin deficiency or resistance. In Cushing's, blood glucose is usually normal or mildly elevated (cortisol is a glucose-raising hormone), but it is not the primary finding. The two conditions can co-occur: Cushing's is a recognized cause of insulin resistance that can trigger or worsen diabetes. Distinguishing and treating both simultaneously is a clinical challenge that requires specialist input." },
@@ -55,6 +54,7 @@ export default function CushingsPage() {
         <div className="carloOS-article">
 
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-06-05T00:00:00Z" reviewedBy="Editorial team" />
+          <LastUpdated date="2026-10-09" />
 
           <DropCap>Pituitary-dependent hyperadrenocorticism (PDH) accounts for approximately 85% of Cushing's cases: a tumor (usually a small microadenoma) in the pituitary gland overproduces ACTH, which chronically overstimulates both adrenal glands to produce excess cortisol, resulting in bilateral adrenal hyperplasia. The remaining 15% is adrenal-dependent — a tumor in one adrenal gland autonomously overproduces cortisol regardless of pituitary input, and the opposite adrenal gland atrophies from suppressed ACTH. The distinction matters because it determines whether surgery is the definitive treatment.</DropCap>
 
@@ -79,81 +79,16 @@ export default function CushingsPage() {
             The 2012 ACVIM Consensus Statement on canine hyperadrenocorticism cites the LDDS test as the recommended first-line screening test, with approximately 85-95% sensitivity for PDH. Post-ACTH cortisol monitoring targets for trilostane therapy are 1-5 microg/dL at 4-6 hours post-pill; values below 1 microg/dL indicate overdosing risk and values above 9 microg/dL indicate inadequate control.
           </CalloutBox>
 
-          <p>Monitoring: ACTH stimulation test 10-14 days after starting or dose adjusting, then every 3-6 months when stable. Pre-pill cortisol (measured just before the morning trilostane dose) is an increasingly used monitoring approach. Between those clinic visits, a 2-liter plastic graduated pitcher is how PU/PD stays a number — fill the bowl from the marked pitcher once and you can see whether overnight drinking jumped instead of guessing from a refilled bowl. It is not a narrow-neck glass water carafe, not a gallon gravity dog-waterer, and not a kitchen liquid-measuring pitcher. It does not treat Cushing&apos;s and it does not replace an LDDS or ACTH stimulation test. An A5 hardcover dot-grid notebook is how those pours, plus panting, pot-belly shape, and energy, stay dated observations you can hand the veterinarian at the next recheck — not a pocket spiral memo pad and not a waterproof field notebook. Signs of adrenal crisis from trilostane overdose — vomiting, diarrhea, lethargy, weakness, shaking — are a medical emergency requiring IV fluids and steroid supplementation.</p>
+          <p>Monitoring: ACTH stimulation test 10-14 days after starting or dose adjusting, then every 3-6 months when stable. Pre-pill cortisol (measured just before the morning trilostane dose) is an increasingly used monitoring approach. Between those clinic visits, a 2-liter plastic graduated pitcher is how PU/PD stays a number — fill the bowl from the marked pitcher once and you can see whether overnight drinking jumped instead of guessing from a refilled bowl. It is not a narrow-neck glass water carafe, not a gallon gravity dog-waterer, and not a kitchen liquid-measuring pitcher. It does not treat Cushing&apos;s and it does not replace an LDDS or ACTH stimulation test. Signs of adrenal crisis from trilostane overdose — vomiting, diarrhea, lethargy, weakness, shaking — are a medical emergency requiring IV fluids and steroid supplementation.</p>
 
           <h2>Iatrogenic Cushing's — Steroid-Induced</h2>
           <p>Chronic administration of corticosteroids (prednisone, dexamethasone, methylprednisolone — including long-acting injections) suppresses the hypothalamic-pituitary-adrenal axis and can produce all the classic Cushing's signs — PU/PD, pot belly, panting, hair loss, thin skin — indistinguishable from natural Cushing's. The ALP elevation on chemistry from corticosteroids (steroid-induced ALP) is often the first laboratory clue. Treatment: gradual corticosteroid tapering under veterinary guidance (never stop abruptly — the adrenals have become suppressed and need time to recover). LDDS and ACTH stimulation results will be abnormal while corticosteroids are being tapered — testing during taper is unreliable for diagnosis of natural Cushing's. Muscle wasting plus fat redistribution is why the pot belly looks like weight gain while the legs thin. An extra-large bolster dog lounge is comfort for that shape — a low-sided lounge they can sink into without climbing, not an egg-crate foam kennel pad and not an orthopedic dog bed. It does not treat hyperadrenocorticism.</p>
 
           <h2 id="kit">Home monitoring kit</h2>
-          <p>
-            Everyday physical supplies that match the
-            PU/PD water-intake, pot-belly comfort, and
-            symptom-log copy on this page — a 2-liter
-            plastic graduated pitcher so excessive
-            drinking is a measured pour, an extra-large
-            bolster dog lounge so pot-belly and
-            muscle-loss dogs can rest without climbing,
-            and an A5 hardcover dot-grid notebook so
-            thirst, panting, and energy stay dated
-            observations for the next ACTH recheck.
-            These are educational home-care and
-            monitoring tools, not a ranked product
-            list, not a substitute for veterinary
-            care, and not a treatment for Cushing&apos;s,
-            adrenal crisis, or iatrogenic steroid
-            excess. Trilostane, Vetoryl, mitotane,
-            Lysodren, and human steroids are not
-            shoppable hops. Narrow-neck glass water
-            carafes, 2-quart stainless saucepans, and
-            pocket spiral memo pads already live on
-            vomiting-diarrhea-pets. Gallon gravity
-            dog-waterers, extra-large disposable pee
-            pads, and cooling bandanas already live on
-            dog.com Cushing&apos;s. This page does not
-            claim hands-on testing.
-          </p>
+          <p>Keep these on hand: 2 liter plastic graduated pitcher and extra large bolster dog lounge. These are educational home-care and monitoring tools, not a ranked product list, not a substitute for veterinary care, and not a treatment for Cushing&apos;s, adrenal crisis, or iatrogenic steroid excess. Trilostane, Vetoryl, mitotane, Lysodren, and human steroids are not product links.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/2+liter+plastic+graduated+pitcher?s=health-cushing-disease-dogs", "/go/amazon-brand/extra+large+bolster+dog+lounge?s=health-cushing-disease-dogs"]} />
 
-          {/* Money path — live amazon-brand search hops
-              (2-liter plastic graduated pitcher /
-              extra-large bolster dog lounge /
-              A5 hardcover dot-grid notebook).
-              These are educational home-care /
-              monitoring tools, not a ranked product
-              list, not a substitute for veterinary
-              care, no Rx / trilostane / Vetoryl /
-              mitotane / human-med ASIN hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
-              unused vs #1077
-              narrow+neck+glass+water+carafe /
-              2+quart+stainless+saucepan+with+lid /
-              pocket+spiral+memo+pad, #1076
-              pet+toothbrush+and+enzymatic+toothpaste+kit /
-              vohc+dental+chews+for+dogs /
-              vohc+accepted+dental+water+additive, #1075
-              egg+crate+foam+dog+kennel+pad /
-              carpeted+wooden+pet+steps /
-              wide+platform+veterinary+floor+scale, #1074
-              wire+basket+dog+muzzle /
-              quilted+disposable+underpads /
-              handheld+aa+led+flashlight, #1073
-              double+door+wire+dog+crate /
-              pet+safe+kennel+disinfectant+spray /
-              analog+wall+clock+with+second+hand, #1072
-              tick+removal+hook /
-              fine+tooth+flea+comb /
-              laminated+tick+identification+card, #1071
-              letter+size+expanding+file+organizer /
-              sterile+urine+specimen+cup /
-              12+hour+mechanical+kitchen+timer,
-              dog.com Cushing's
-              gallon+gravity+dog+waterer /
-              extra+large+disposable+dog+pee+pads /
-              dog+cooling+bandana.
-              Trilostane, Vetoryl, mitotane, Lysodren,
-              and Rx ASINs are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
@@ -168,11 +103,7 @@ export default function CushingsPage() {
                 amazonHref="/go/amazon-brand/extra+large+bolster+dog+lounge?s=health-cushing-disease-dogs"
                 amazonLabel="Browse extra-large bolster dog lounges on Amazon →"
               />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/a5+hardcover+dot+grid+notebook?s=health-cushing-disease-dogs"
-                amazonLabel="Browse A5 hardcover dot-grid notebooks on Amazon →"
-              />
-          </div>
+              </div>
           </div>
 
           <h2>FAQ</h2>

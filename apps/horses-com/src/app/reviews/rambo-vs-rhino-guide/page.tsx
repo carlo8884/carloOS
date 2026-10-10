@@ -1,11 +1,12 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { ArticleLayout, EmailCapture, FAQAccordion, QuietPartnerLink, RelatedLinks, buildArticleSchema, buildMetadata, PrimaryHop, ArticleSourcesList, LastUpdated, ComparisonFoot } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: 'Rambo vs Rhino, Same Brand | Horses.com',
-  description: 'Horseware Rambo Original versus Rhino Original: denier, fill, hardware, and price already on the winter blanket review. No new specs.',
+  description: 'Horseware Rambo Original versus Rhino Plus: denier, fill, and the printed price already on the winter blanket review. No new specs.',
   path: '/reviews/rambo-vs-rhino-guide',
   type: 'article',
 })
@@ -13,7 +14,7 @@ export const metadata: Metadata = buildMetadata({
 const schema = buildArticleSchema({
   siteId: 'horses-com',
   title: 'Rambo vs Rhino, same brand',
-  description: 'When the Rambo Original is the long-term turnout and when the Rhino is the step down.',
+  description: 'When the Rambo Original is the long-term turnout and when Rhino Plus is the step down.',
   url: 'https://horses.com/reviews/rambo-vs-rhino-guide',
   imageUrl: '',
   authorName: 'Horses.com Editorial',
@@ -24,32 +25,40 @@ const schema = buildArticleSchema({
 const FAQS = [
   {
     question: 'What does the blanket review say the Rambo costs extra for?',
-    answer: 'The Rambo Original listing says a new one retails 50 to 80 percent higher than an equivalent fill-weight blanket from a value-tier brand. The shell is 1000-denier ballistic nylon, with fill options of 0, 100, 200, and 400 grams. The editorial score is 9.4.',
+    answer: 'The Rambo Original listing says a new one retails 50 to 80 percent higher than an equivalent fill-weight blanket from a value-tier brand. The shell is 1000-denier ballistic nylon, with fill options of 0, 100, 200, and 400 grams. ',
   },
   {
     question: 'How is the Rhino specified differently?',
-    answer: 'The Rhino Original lists a 1200-denier ripstop shell, fill options of 0, 100, and 250 grams, polymer surcingle hardware, a price of $180–260, and a score of 9.0. The review says ripstop blankets of this line commonly last 3 to 5 seasons in active turnout.',
+    answer: 'The Rhino Plus listing uses a 1000D polypropylene outer, medium and heavy Vari-Layer fills including 450 grams, and a V-front. The printed price on the blanket card is still $180–260. The same Dover search still lists a Rhino Original turnout sheet. Confirm hardware on the listing.',
   },
   {
     question: 'Which one if shoulder rubs are already a problem?',
-    answer: 'The Rhino listing lists shoulder rub on some heavily built horses as a con, and polymer hardware as less durable than Rambo stainless. Read the fit section on the blanket review before you treat either name as a size.',
+    answer: 'Confirm hardware on the Rhino Plus listing, and read the fit section on the blanket review before you treat either name as a size. A short shoulder still rubs.',
   },
 ]
 
 export default function RamboVsRhinoGuidePage() {
   return (
     <ArticleLayout
-      priceAsOf="2026-10-04"
+      priceAsOf="2026-10-07"
       siteId="horses-com"
       schema={schema}
       hero={{
         title: 'Rambo vs Rhino, same brand',
-        subtitle: 'Both are Horseware. The blanket review already separates the ballistic reference blanket from the ripstop step down. Denier, fill, and price below are the ones on the blanket review.',
         category: 'Buyer guide',
         authorName: 'Horses.com Editorial',
         publishedAt: 'October 2026',
         readTime: '6 min',
       }}
+      heroHop={
+        <>
+          <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">Buy the Rambo Original when you want the ballistic shell kept for years, and the Rhino Plus when you want the current filled Horseware blanket.</p>
+          <div data-fold="offer">
+          <PrimaryHop href="/go/amazon-brand/horseware+rambo+original+turnout+blanket?s=reviews-rambo-vs-rhino-guide" label="Browse the Horseware Rambo Original turnout blanket on Amazon" />
+          <HopDisclosure tone="on-dark" siteId="horses-com" href="/go/amazon-brand/horseware+rambo+original+turnout+blanket?s=reviews-rambo-vs-rhino-guide" />
+        </div>
+        </>
+      }
       breadcrumbs={[
         { name: 'Home', href: '/' },
         { name: 'Reviews', href: '/reviews' },
@@ -61,6 +70,7 @@ export default function RamboVsRhinoGuidePage() {
           links={[
             { label: 'Reviews hub', href: '/reviews' },
             { label: 'Best winter blankets', href: '/reviews/best-winter-horse-blankets' },
+            { label: 'Weatherbeeta vs Amigo', href: '/reviews/weatherbeeta-vs-amigo-guide' },
             { label: 'Blanket size calculator', href: '/tools/horse-blanket-size-calculator' },
             { label: 'Blanketing', href: '/care/blanketing' },
           ]}
@@ -68,16 +78,18 @@ export default function RamboVsRhinoGuidePage() {
       }
     >
       <div className="carloOS-article">
-        <p>The <Link href="/reviews/best-winter-horse-blankets">winter blanket review</Link> treats the Horseware Rambo Original as the premium reference and the Horseware Rhino Original as the modern standard under it. They are not the same shell. <Link href="/reviews/rambo-vs-schneiders-guide">Rambo versus Schneiders</Link> is the heavy-winter comparison, not this same-brand step down. Measure the horse with the <Link href="/tools/horse-blanket-size-calculator">blanket size calculator</Link> before either name matters. A blanket that is short in the shoulder rubs, whichever logo is on the neck.</p>
+          <LastUpdated date="2026-10-10" />
+        <p>The <Link href="/reviews/best-winter-horse-blankets">winter blanket review</Link> treats the Horseware Rambo Original as the long-term reference and the Horseware Rhino Plus as the current filled step down. They are not the same shell. <Link href="/reviews/rambo-vs-schneiders-guide">Rambo versus Schneiders</Link> is the heavy-winter comparison, not this same-brand step down. Measure the horse with the <Link href="/tools/horse-blanket-size-calculator">blanket size calculator</Link> before either name matters. A blanket that is short in the shoulder rubs, whichever logo is on the neck.</p>
         <h2>Rambo Original</h2>
-        <p>The Rambo listing, scored 9.4, specifies a 1000-denier ballistic nylon shell and fill weights of 0, 100, 200, and 400 grams. The review credits the leg-arch shoulder with the cut that defined the category, and it says owners report blankets still in service after many winters. The explicit tradeoff is price: a new Rambo retails 50 to 80 percent more than the equivalent fill from a value-tier brand. The listing&apos;s hardware contrast, repeated on the Rhino listing, is stainless on the Rambo versus polymer on the Rhino. Buy the Rambo when you expect to keep the horse long enough that replacing a blanket every couple of winters costs more than the premium.</p>
-        <h2>Rhino Original</h2>
-        <p>The Rhino listing, scored 9.0, specifies 1200-denier ripstop, fills of 0, 100, and 250 grams, and a price of $180–260. Hardware is polymer with T-bar buckles. The warranty in the review is one year. The review calls this the cost-quality point for someone replacing a worn value blanket: stronger than the budget brands, cheaper than the Rambo. It also lists shoulder rub on some heavily built horses, and polymer hardware that will not match stainless for years of frozen straps.</p>
+        <p>The Rambo listing specifies a 1000-denier ballistic nylon shell and fill weights of 0, 100, 200, and 400 grams. The review credits the leg-arch shoulder with the cut that defined the category, and it says owners report blankets still in service after many winters. The explicit tradeoff is price: a new Rambo retails 50 to 80 percent more than the equivalent fill from a value-tier brand. The Rambo listing specifies stainless hardware. Confirm hardware on the Rhino Plus listing. Buy the Rambo when you expect to keep the horse long enough that replacing a blanket every couple of winters costs more than the premium.</p>
+        <h2>Rhino Plus</h2>
+        <p>The Rhino Plus listing uses a 1000D polypropylene outer, medium and heavy Vari-Layer fills including 450 grams, and a V-front. The printed price on the blanket card is still $180–260. The same Dover search still lists a Rhino Original turnout sheet. Horseware lists a 3-year waterproofness guarantee on Rhino Plus when the blanket is registered. Confirm hardware on the listing. The review calls this the step down from the Rambo for someone replacing a worn value blanket.</p>
         <h2>Who should buy which</h2>
-        <p>Buy the Rambo if the horse stays in your program for years and you want the ballistic shell and the stainless hardware the review contrasts with the Rhino. Buy the Rhino if you want Horseware&apos;s cut at the printed $180–260 band and you accept polymer hardware and a shorter warranty. Neither product is the heavy-winter specification. A clipped horse in a northern, sub-zero climate is the Schneiders StormShield job on the same review, not a mid-weight choice between these two. The <Link href="/reviews/best-blanket-for-clipped-horse-guide">clipped-horse blanket guide</Link> stays with that blanket.</p>
-        <AffiliateDisclosure variant="inline" siteId="horses-com" />
-        <p>The link below is the Rambo search from the blanket review, for a blanket you expect to keep for years.</p>
-        <p><a className="font-semibold text-brand-primary" href="/go/smartpak/rambo-original-turnout?s=reviews-rambo-vs-rhino-guide">Check price of the Horseware Rambo Original on SmartPak</a></p>
+        <p>Buy the Rambo if the horse stays in your program for years and you want the ballistic shell and the stainless hardware the review contrasts with the Rhino. Buy the Rhino Plus if you want the current filled Horseware step down at the printed $180–260 band. Confirm hardware on the listing. Neither product is the heavy-winter specification. A clipped horse in a northern, sub-zero climate is the Schneiders StormShield job on the same review, not a mid-weight choice between these two. The <Link href="/reviews/best-blanket-for-clipped-horse-guide">clipped-horse blanket guide</Link> stays with that blanket.</p>
+        <HopDisclosure siteId="horses-com" href="/go/amazon-brand/horseware+rambo+original+turnout+blanket?s=reviews-rambo-vs-rhino-guide" />
+        <p>The link below is the turnout-blanket search from the blanket review, for a blanket you expect to keep for years.</p>
+        <p><a className="font-semibold text-brand-primary" href="/go/amazon-brand/horseware+rambo+original+turnout+blanket?s=reviews-rambo-vs-rhino-guide">Browse the Horseware Rambo Original turnout blanket on Amazon →</a></p>
+        <QuietPartnerLink href="/go/smartpak/rambo-original-turnout?s=reviews-rambo-vs-rhino-guide" label="Check price of the Horseware Rambo Original on SmartPak" />
         <EmailCapture
           variant="inline"
           siteId="horses-com"
@@ -87,14 +99,61 @@ export default function RamboVsRhinoGuidePage() {
           source="reviews-rambo-vs-rhino-guide"
           checklist={[
             'Buy the Rambo if the horse stays in your program for years and you want the ballistic shell and the stainless hardware the review contrasts with the Rhino.',
-            'Buy the Rhino if you want Horseware\'s cut at the printed $180–260 band and you accept polymer hardware and a shorter warranty.',
+            'Buy the Rhino Plus if you want the current filled Horseware step down at the printed $180–260 band. Confirm hardware on the listing.',
             'Neither product is the heavy-winter specification.',
             'A clipped horse in a northern, sub-zero climate is the Schneiders StormShield job on the same review, not a mid-weight choice between these two.',
             'Check price of the Horseware Rambo Original on SmartPak',
           ]}
         />
+        <div className="my-6 max-w-full min-w-0">
+          <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
+            <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+            <thead>
+              <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
+                <th scope="col" className="p-3 font-bold text-brand-dark">Rambo Original</th>
+                <th scope="col" className="p-3 font-bold text-brand-dark">Rhino Plus</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Role</th>
+                <td className="p-3">Long-term turnout reference</td>
+                <td className="p-3">Current filled step down</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Shell</th>
+                <td className="p-3">1000-denier ballistic nylon</td>
+                <td className="p-3">1000D polypropylene outer</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Fill</th>
+                <td className="p-3">0, 100, 200, and 400 grams</td>
+                <td className="p-3">Medium and heavy Vari-Layer fills, including 450 grams</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Front and hardware</th>
+                <td className="p-3">Leg-arch shoulder. Stainless hardware</td>
+                <td className="p-3">V-front. Confirm hardware on the listing</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Also on the page</th>
+                <td className="p-3">Owners report blankets still in service after many winters. A new one retails 50 to 80 percent more than an equivalent fill from a value-tier brand</td>
+                <td className="p-3">A 3-year waterproofness guarantee when the blanket is registered</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <ComparisonFoot updated="2026-10-10" />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
+                <ArticleSourcesList
+            title="Sources"
+            sources={[
+            { label: "Horseware", url: "https://www.horseware.com/", publisher: "Horseware" },
+            { label: "SmartPak", url: "https://www.smartpakequine.com/", publisher: "SmartPak" },
+            ]}
+          />
       </div>
     </ArticleLayout>
   )

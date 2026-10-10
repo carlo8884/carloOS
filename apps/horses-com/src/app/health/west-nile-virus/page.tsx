@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -74,7 +75,7 @@ export default function WestNilePage() {
         hero={{
           title: "West Nile Virus in Horses",
           subtitle:
-            "West Nile virus is a mosquito-borne disease that can cause severe, sometimes fatal neurologic illness in horses. Since it arrived and spread across North America, horses have proven to be among the most affected domestic species. There is no specific cure once a horse is infected, which is exactly why it is one of the core vaccines every horse should receive. This is reference material, not a substitute for veterinary care.",
+            "West Nile virus is a mosquito-borne disease that can cause severe, sometimes fatal neurologic illness in horses. Since it arrived and spread across North America, horses are among the domestic species the virus hits hard. There is no specific cure once a horse is infected, which is exactly why it is one of the core vaccines every horse should receive. This is reference material, not a substitute for veterinary care.",
           category: "Equine Health",
           authorName: 'Horses.com Editorial',
           authorAvatar: '☘',
@@ -118,6 +119,7 @@ export default function WestNilePage() {
             updatedAt="2026-09-06"
             reviewedBy="Editorial team"
           />
+          <LastUpdated date="2026-10-09" />
 
           <h2 id="what">What Is West Nile Virus</h2>
           <p>West Nile virus is a flavivirus maintained in nature in a cycle between birds and mosquitoes. Birds are the amplifying hosts; mosquitoes that feed on infected birds can then transmit the virus to mammals, including horses and people. In horses the virus can cross into the nervous system and cause encephalomyelitis -- inflammation of the brain and spinal cord -- with serious neurologic consequences.</p>
@@ -142,34 +144,19 @@ export default function WestNilePage() {
 
           <h2 id="mosquito">Mosquito Control</h2>
           <ul>
-            <li><strong>Eliminate standing water</strong> where mosquitoes breed -- empty and scrub troughs, fix drainage, and remove containers that hold water. A long-handle stock-tank brush is how a trough is dumped and scrubbed instead of left as a green breeding bowl — it is not a color-coded flat-back bucket (that lives on strangles), not a lidded 5-gallon feed-soaking pail (that lives on choke), and not a mosquito dunk (that lives on dog heartworm prevention).</li>
-            <li><strong>Reduce dawn and dusk exposure</strong> when many vector mosquitoes feed, using stabling and fans. 20-foot barn mosquito netting is how dusk stabling becomes a mesh wall instead of an open doorway — it is not a stall fan or stall screen (those live on the vaccination-schedule guide).</li>
+            <li><strong>Eliminate standing water</strong> where mosquitoes breed -- empty and scrub troughs, fix drainage, and remove containers that hold water. A long-handle stock-tank brush is how a trough is dumped and scrubbed instead of left as a green breeding bowl — it is not a color-coded flat-back bucket, not a lidded 5-gallon feed-soaking pail, and not a mosquito dunk.</li>
+            <li><strong>Reduce dawn and dusk exposure</strong> when many vector mosquitoes feed, using stabling and fans. 20-foot barn mosquito netting is how dusk stabling becomes a mesh wall instead of an open doorway — it is not a stall fan or stall screen.</li>
             <li><strong>Use fly and mosquito repellents and sheets</strong> appropriate for horses during mosquito season. A fine-mesh horse mosquito sheet is how overnight turnout is covered without hopping the fly-control fly sheet or the sweet-itch rug.</li>
-            <li><strong>Keep vaccination current</strong> as the primary defense, since control measures alone cannot eliminate exposure. This page does not hop vaccines, needles, or ranked vaccine products — those decisions stay with the veterinarian and the vaccination-schedule guide.</li>
+            <li><strong>Keep vaccination current</strong> as the primary defense, since control measures alone cannot eliminate exposure.</li>
           </ul>
 
-          <h2 id="kit">Mosquito-control kit</h2>
+          <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Everyday physical supplies that match the
-            empty-and-scrub-troughs, dawn-and-dusk
-            stabling, and mosquito-sheets copy on this
-            page — a long-handle stock-tank brush so
-            standing water is dumped and the trough is
-            scrubbed, 20-foot barn mosquito netting so dusk
-            stabling is a mesh wall instead of an open
-            doorway, and a fine-mesh horse mosquito sheet
-            so overnight turnout is covered. These are
-            educational mosquito-control tools, not a
-            ranked product list, not a substitute for
-            veterinary care, and not a treatment or a
-            vaccine. Stall fans and stall screens already
-            live on the vaccination-schedule guide. This page does not
-            hop vaccines, antibiotics, or needles. This
-            page does not claim hands-on testing. </p>
+            Keep these on hand: a long-handle stock-tank brush so standing water is dumped and the trough is scrubbed, 20-foot barn mosquito netting so dusk stabling is a mesh wall instead of an open doorway, and a fine-mesh horse mosquito sheet so overnight turnout is covered. These are educational mosquito-control tools, not a ranked product list, not a substitute for veterinary care, and not a treatment or a vaccine. </p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/long+handle+stock+tank+brush?s=health-wnv", "/go/amazon-brand/20+foot+barn+mosquito+netting?s=health-wnv", "/go/amazon-brand/fine+mesh+horse+mosquito+sheet?s=health-wnv"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (long handle stock tank brush /
               20 foot barn mosquito netting /
               fine mesh horse mosquito sheet).
@@ -177,9 +164,9 @@ export default function WestNilePage() {
               tools, not a ranked product list, not a
               substitute for veterinary care, no Rx /
               vaccine / stall-fan / fly-sheet /
-              mosquito-dunk ASIN hops.
+              mosquito-dunk product page buttons.
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or an empty link. Amazon searches only —
               unused vs #1099
               30+foot+cotton+lunge+line /
               leather+chain+lead+shank+horse /
@@ -207,7 +194,7 @@ export default function WestNilePage() {
               horse+sweet+itch+rug /
               horse+sweet+itch+hood (sweet-itch).
               Vaccines and prescriptions
-              are not shoppable hops. */}
+              are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
@@ -232,12 +219,16 @@ export default function WestNilePage() {
           <h2 id="faq">Frequently Asked Questions</h2>
           <FAQAccordion items={FAQS} />
 
-          <h2 id="references">References</h2>
-          <ol className="text-sm text-brand-text-mid">
-            <li>Long MT. “West Nile Virus and Equine Encephalitis Viruses.” Veterinary Clinics of North America: Equine Practice, 2014; 30(3):523–542.</li>
-            <li>Centers for Disease Control and Prevention. “West Nile Virus” surveillance and veterinary resources. cdc.gov.</li>
-            <li>American Association of Equine Practitioners. “West Nile Virus Vaccination Guidelines” (core vaccine). aaep.org.</li>
-          </ol>
+          <div id="references">
+            <ArticleSourcesList
+              title="References"
+              sources={[
+              { label: "Long MT. “West Nile Virus and Equine Encephalitis Viruses.” Veterinary Clinics of North America: Equine Practice, 2014; 30(3):523–542.", url: "https://www.vetequine.theclinics.com/", publisher: "Veterinary Clinics of North America: Equine Practice" },
+              { label: "Centers for Disease Control and Prevention. “West Nile Virus” surveillance and veterinary resources. cdc.gov.", url: "https://www.cdc.gov/west-nile-virus/", publisher: "CDC" },
+              { label: "American Association of Equine Practitioners. “West Nile Virus Vaccination Guidelines” (core vaccine). aaep.org.", url: "https://aaep.org/", publisher: "AAEP" },
+              ]}
+            />
+          </div>
         </div>
       </ArticleLayout>
     </>

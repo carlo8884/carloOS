@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
@@ -9,7 +10,7 @@ const SOURCES = [
   { label: 'AVDC: American Veterinary Dental College — Periodontal Disease in Dogs', url: 'https://afd.avdc.org', publisher: 'AVDC' },
   { label: 'WSAVA Global Dental Guidelines — Home Care and Professional Dental Cleaning', url: 'https://wsava.org/global-guidelines/dental-guidelines/', publisher: 'WSAVA' },
   { label: 'AAHA: Dental Care Guidelines for Dogs and Cats', url: 'https://www.aaha.org/aaha-guidelines/dental-care-guidelines/dental-care-guidelines/', publisher: 'AAHA' },
-  { label: 'Veterinary Oral Health Council (VOHC): Accepted Products for Plaque and Tartar Control in Dogs', url: 'http://www.vohc.org/pets.html', publisher: 'VOHC' },
+  { label: 'Veterinary Oral Health Council (VOHC): Accepted Products for Plaque and Tartar Control in Dogs', url: 'https://vohc.org/accepted-products/', publisher: 'VOHC' },
 ]
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Dental Care Guide — Daily Brushing, VOHC Products | Dog.com', description: 'Over 80% of dogs have periodontal disease by age 3 (AVDC/AAHA). Daily toothbrushing is the most effective intervention.', path: '/health/dog-dental-care', type: 'article' })
@@ -38,7 +39,7 @@ export default function DogDentalCarePage() {
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">VOHC-Accepted Products</div>
             <p className="text-xs text-brand-text-mid leading-relaxed m-0 mb-3">The Veterinary Oral Health Council (VOHC) seal means a product has been clinically tested and demonstrated efficacy for plaque or tartar control.</p>
-            {[['Greenies', 'Dental chew — proven plaque reduction'], ['Vetradent water additive', 'Daily water additive — VOHC accepted'], ['CET Enzymatic Toothpaste', 'Toothpaste for brushing'], ['Whimzees', 'Dental chew alternative to Greenies'], ['Hill\'s t/d', 'Prescription dental diet — mechanical action']].map(([p, d]) => (
+            {[['Greenies', 'Dental chew — VOHC-accepted plaque or tartar evidence'], ['Vetradent water additive', 'Daily water additive — VOHC accepted'], ['CET Enzymatic Toothpaste', 'Toothpaste for brushing'], ['Whimzees', 'Dental chew alternative to Greenies'], ['Hill\'s t/d', 'Prescription dental diet — mechanical action']].map(([p, d]) => (
               <div key={p} className="py-1 border-b border-brand-border last:border-0">
                 <div className="text-xs font-bold text-brand-dark">{p}</div>
                 <div className="text-2xs text-brand-text-light">{d}</div>
@@ -79,18 +80,18 @@ export default function DogDentalCarePage() {
           <h2>Why Professional Cleaning Is Still Necessary</h2>
           <p>Home dental care slows the progression of periodontal disease and extends the interval between professional cleanings — but it does not eliminate the need. Plaque becomes tartar (calculus) at the gum line and below it — in areas the brush cannot reach. Professional cleaning under anesthesia with full-mouth radiographs is required annually or every 1-2 years (depending on the dog's dental disease progression rate) even with excellent home care. Think of home care as maintaining the cleaning, not replacing it.</p>
 
-          <h2 id="kit">Daily dental-care kit</h2>
-          <p>Everyday physical supplies that match the home-care copy above — a soft-bristled toothbrush and enzymatic toothpaste for daily brushing, plus VOHC-accepted dental chews as a brushing adjunct. Water additives, Hill&apos;s t/d and other prescription dental diets, human fluoride toothpaste, and brand ASINs (CET, Vetradent, Greenies, Whimzees) stay educational copy only — this page never hops Rx food, brand ASINs, or medications. This page does not claim hands-on testing.</p>
+          <h2 id="kit">Supplies named on this page</h2>
+          <p>Keep these on hand: a soft-bristled toothbrush and enzymatic toothpaste for daily brushing, plus VOHC-accepted dental chews as a brushing adjunct. Water additives, Hill&apos;s t/d and other prescription dental diets, human fluoride toothpaste, and named brands (CET, Vetradent, Greenies, Whimzees) stay educational copy only — this page does not link to Rx food, named brands, or medications.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/soft+pet+toothbrush?s=health-dog-dental-care", "/go/amazon-brand/enzymatic+pet+toothpaste?s=health-dog-dental-care", "/go/amazon-brand/dental+chews+dog?s=health-dog-dental-care"]} />
 
-          {/* Money path — live amazon-brand search hops (daily dental kit).
-              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-              Category searches only — reuse live sister queries from
+          {/* Shop note — live amazon-brand search buttons (daily dental kit).
+              ShopCtas hides empty Chewy; never href="#" or an empty link.
+              Amazon searches only — reuse live sister queries from
               vets.co dental-cleaning-guide (soft+pet+toothbrush,
               enzymatic+pet+toothpaste) and the dog health hub
               (dental+chews+dog). Prescription dental diets and brand
-              ASINs are not shoppable hops. */}
+              product pages are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

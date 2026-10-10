@@ -28,6 +28,7 @@ import {
   ArticleByline,
   CalloutBox,
   RelatedLinks,
+  LastUpdated,
 } from '@carloOS/ui'
 import {
   BreedHealthRecords,
@@ -540,8 +541,9 @@ export default async function BreedHealthPage({ params }: PageProps) {
             </li>
           ))}
         </ul>
+        <LastUpdated date="2026-10-08" />
         <p className="text-sm text-brand-text-light italic">
-          Last reviewed: 2026-05-29. Editorial — sourced from the cited
+          Editorial — sourced from the cited
           references above. Not a veterinary consultation.
         </p>
       </ArticleLayout>

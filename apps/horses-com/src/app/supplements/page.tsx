@@ -1,6 +1,7 @@
+import { HopDisclosure } from '../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, ShopCtas, DirectoryPlacesCta } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, ShopCtas, DirectoryPlacesCta } from '@carloOS/ui'
 import listings from '../../data/directory-listings.json'
 
 export const metadata: Metadata = buildMetadata({
@@ -111,19 +112,9 @@ export default function SupplementsHubPage() {
         </h2>
 
         <div className="max-w-3xl mt-6">
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href="/go/amazon-brand/equine+supplement?s=supplements-hub" />
         </div>
 
-        {/* Money path — live amazon-brand search hops
-            (laminated horse barn supplements category
-            chart / horse stall-door supplements label
-            card / equine supplements reference
-            handbook). Educational barn searches only;
-            no Rx / vaccine / Platinum-CJ hops.
-            ShopCtas hides empty Chewy; never href="#"
-            or PLACEHOLDER. Unused vs tools / reviews /
-            nutrition kitchen kits and child
-            platinum+performance+CJ hop. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-3xl">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
             Shop related supplies
@@ -132,7 +123,7 @@ export default function SupplementsHubPage() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/equine+supplement?s=supplements-hub"
-              amazonLabel="Shop on Amazon"
+              amazonLabel="Browse equine supplements on Amazon →"
             />
           </div>
         </div>

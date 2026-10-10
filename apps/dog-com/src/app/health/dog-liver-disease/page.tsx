@@ -1,13 +1,13 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfContents, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfContents, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 
 const SOURCES = [
-  { label: 'Merck Veterinary Manual: Hepatic Disease in Dogs', url: 'https://www.merckvetmanual.com/digestive-system/hepatic-disease-in-small-animals/hepatic-disease-in-dogs', publisher: 'Merck Vet Manual' },
+  { label: 'Merck Veterinary Manual: Disorders of the Liver and Gallbladder in Dogs', url: 'https://www.merckvetmanual.com/dog-owners/digestive-disorders-of-dogs/disorders-of-the-liver-and-gallbladder-in-dogs', publisher: 'Merck Vet Manual' },
   { label: 'ACVIM: Consensus Statement on the Diagnosis and Management of Chronic Hepatitis in Dogs', url: 'https://www.acvim.org', publisher: 'ACVIM' },
-  { label: 'AVMA: Liver Disease in Dogs', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/common-health-conditions-dogs', publisher: 'AVMA' },
   { label: 'Center SA et al. S-adenosylmethionine (SAMe) in hepatic disease. J Vet Intern Med. 2002;16(2):131-140.', publisher: 'JVIM' },
 ]
 
@@ -60,50 +60,15 @@ export default function DogLiverDiseasePage() {
 
           <h2 id="kit">A Simple Liver-Enzyme Watch Kit</h2>
           <p>
-            Three everyday physical supplies match the
-            enzyme-monitoring, hepatoprotective-support
-            routine, and cachexia weight-tracking copy
-            above: a pet medical records binder so ALT
-            and ALP printouts, bile-acids results, and
-            jaundice-watch notes stay in one history
-            (the trend over time matters more than a
-            single value), an AM/PM weekly pill organizer
-            for the SAMe / silymarin timing the
-            veterinarian sets — not a Denamarin brand
-            hop and not a prescription — and a digital
-            hanging luggage scale for cachexia weight
-            tracking between rechecks when a floor pet
-            scale is not already in the house. These are
-            household record-and-routine tools, not
-            treatments. They do not interpret liver
-            enzymes, they do not replace a veterinarian
-            directed diet (highly digestible protein
-            such as egg, cottage cheese, or poultry;
-            protein restriction only for hepatic
-            encephalopathy), they do not replace a
-            biopsy or a bile-acids test, they do not
-            treat jaundice, ascites, or a portosystemic
-            shunt, and they are not Hill&apos;s l/d,
-            Royal Canin Hepatic, lactulose, or
-            Denamarin. LED medical penlights, pet
-            emergency contact cards, folding pet
-            stretchers, vaccination record books,
-            seat-belt tethers, foldable waterproof
-            puppy mats, mosquito dunks, a monthly pill
-            organizer, a soft-sided vet-visit carrier,
-            a gum-color assessment chart, recovery food,
-            a feeding syringe, digital pet scales, and
-            high-value vet-visit treats already live
-            on other pages. This page does not claim
-            hands-on testing. </p>
+            Keep these on hand: a pet medical records binder, an AM/PM weekly pill organizer, and a digital hanging luggage scale for cachexia weight tracking between rechecks when a floor pet scale is not already in the house. These are household record-and-routine tools, not treatments. They do not interpret liver enzymes, they do not replace a veterinarian directed diet (highly digestible protein such as egg, cottage cheese, or poultry; protein restriction only for hepatic encephalopathy), they do not replace a biopsy or a bile-acids test, they do not treat jaundice, ascites, or a portosystemic shunt, and they are not Hill&apos;s l/d, Royal Canin Hepatic, lactulose, or Denamarin. </p>
 
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/pet+medical+records+binder?s=health-dog-liver-disease", "/go/amazon-brand/am+pm+weekly+pill+organizer?s=health-dog-liver-disease", "/go/amazon-brand/digital+hanging+luggage+scale?s=health-dog-liver-disease"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (pet medical records binder / AM/PM weekly
               pill organizer / digital hanging luggage
               scale). ShopCtas hides empty Chewy; never
-              href="#" or PLACEHOLDER. Category searches
+              href="#" or an empty link. Amazon searches
               only — unused vs #1045 LED medical
               penlight / pet emergency contact card /
               folding pet stretcher, #1044 pet
@@ -121,8 +86,8 @@ export default function DogLiverDiseasePage() {
               soft+pet+carrier. Denamarin, Hill's l/d,
               Royal Canin Hepatic, lactulose, Heartgard,
               Interceptor, Simparica, ProHeart, vaccine
-              brands, and Rx ASINs are not shoppable
-              hops. */}
+              brands, and prescription brands are not shoppable
+              buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

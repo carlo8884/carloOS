@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleByline, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleByline, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Raw Diet Risks for Dogs — Pathogens, AAFCO | Dog.com', description: 'Raw dog diets: Salmonella, Listeria, Campylobacter contamination, AAFCO completeness gaps, household risk, bone hazards, and harm-reduction guidance.', path: '/nutrition/raw-diet-risks', type: 'article' })
@@ -7,7 +8,7 @@ const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Raw Diet Risks fo
 const med = buildMedicalWebPageSchema({ name: 'Raw Diet Risks for Dogs', description: 'Evidence on pathogen contamination, AAFCO completeness, and household risk in raw dog feeding.', url: 'https://dog.com/nutrition/raw-diet-risks', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-28' })
 const FAQS = [
   { question: 'Do veterinary professional organizations actually recommend against raw diets?', answer: 'Yes. The WSAVA Global Nutrition Committee, the AVMA (American Veterinary Medical Association), the AAHA (American Animal Hospital Association), the CDC, and the FDA Center for Veterinary Medicine have all published statements advising against feeding raw or undercooked animal-source protein to pets, primarily citing zoonotic pathogen risk and, secondarily, nutritional adequacy concerns. Specific policy text is linked from each organization\'s website (avma.org, aaha.org, wsava.org).' },
-  { question: 'How prevalent is Salmonella contamination in commercial raw dog food?', answer: 'Survey studies vary by sample and method. An FDA Center for Veterinary Medicine survey of commercial raw pet foods (2010–2012) reported Salmonella in roughly 1 in 5 raw samples tested (the agency reported a figure near 24 percent in that survey), with Listeria monocytogenes also frequently detected. Multiple subsequent academic surveys in the Veterinary Record, Journal of Food Protection, and PLOS ONE have reported broadly consistent contamination rates. Cooked commercial diets have shown far lower detection rates in comparable surveys.' },
+  { question: 'How prevalent is Salmonella contamination in commercial raw dog food?', answer: 'Survey results vary by sample and method. An FDA Center for Veterinary Medicine survey of commercial raw pet foods found Salmonella, and Listeria monocytogenes, in raw samples. This page does not reprint a percent from that survey. Cooked commercial diets have shown lower detection in comparable work. This page does not name a single paper for a rate.' },
   { question: 'Can my dog shed Salmonella from a raw diet even if it looks healthy?', answer: 'Yes — this is the most important point for household risk assessment. Published studies (for example, Finley et al., Canadian Veterinary Journal 2007) have shown that dogs fed raw diets can shed Salmonella in their feces for extended periods without clinical signs. Subclinical shedding is well documented and is the basis for the CDC and AVMA guidance on households with vulnerable members.' },
   { question: 'What about freeze-dried or HPP-treated raw — are those safer?', answer: 'High-pressure processing (HPP) is a non-thermal pasteurization step used by some commercial raw manufacturers. Published evaluations show HPP substantially reduces vegetative pathogen loads, though it is not equivalent to cooking and does not inactivate all microorganisms. Freeze-drying alone does not reliably kill Salmonella or Listeria. Pet owners weighing risk should look for explicit HPP labelling and request the manufacturer\'s pathogen testing protocol.' },
   { question: 'Are cooked bones safer than raw bones?', answer: 'No — the FDA has issued a specific consumer update advising against giving dogs cooked bones of any kind. Cooking causes bones to dry and splinter, increasing the risk of mouth and esophageal lacerations, gastrointestinal perforation, and obstruction. Raw recreational bones (weight-bearing femurs and similar) carry their own well-documented risks of slab fractures of the carnassial teeth. Neither is considered safe by the AVMA or by board-certified veterinary dentists.' },
@@ -128,19 +129,8 @@ export default function RawDietRisksPage() {
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
 
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href="/go/amazon-brand/dry+dog+food?s=nutrition-raw-risks" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated dog raw-salmonella chart /
-              dog fridge zoonotic-risk card /
-              canine HPP-raw handbook).
-              No existing product hop to keep.
-              Educational kitchen searches only; no Rx /
-              vaccine / flea / heartworm / nsaid hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs grain-free-dcm /
-              wsava-explained / reading-food-labels hops.
-              Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
@@ -149,7 +139,7 @@ export default function RawDietRisksPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/dry+dog+food?s=nutrition-raw-risks"
-                amazonLabel="Shop on Amazon"
+                amazonLabel="Browse dry dog food on Amazon →"
               />
           </div>
           </div>

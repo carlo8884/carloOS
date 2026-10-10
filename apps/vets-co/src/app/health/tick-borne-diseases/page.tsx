@@ -1,12 +1,12 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, ShopCtas, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Tick-Borne Diseases in Dogs — Lyme, Anaplasmosis | Vets.co', description: 'Four tick-borne diseases dogs face: Lyme, Anaplasmosis, Ehrlichiosis, and Rocky Mountain Spotted Fever. Signs, geographic distribution.', path: '/health/tick-borne-diseases', type: 'article' })
 const SOURCES = [
   { label: 'CDC: Lyme Disease', url: 'https://www.cdc.gov/lyme/', publisher: 'CDC' },
-  { label: 'Merck Veterinary Manual: Lyme Disease in Dogs', url: 'https://www.merckvetmanual.com/generalized-conditions/lyme-disease/lyme-disease-in-dogs', publisher: 'Merck Vet Manual' },
-  { label: 'AVMA: Tick-Borne Diseases in Dogs', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/tick-paralysis', publisher: 'AVMA' },
+  { label: 'Merck Veterinary Manual: Lyme Disease in Dogs', url: 'https://www.merckvetmanual.com/infectious-diseases/lyme-borreliosis/lyme-borreliosis-in-animals', publisher: 'Merck Vet Manual' },
   { label: 'Companion Animal Parasite Council: Tick-Borne Disease', url: 'https://capcvet.org/guidelines/ticks/', publisher: 'CAPC' },
 ]
 const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Tick-Borne Diseases in Dogs', description: 'Lyme disease, Anaplasmosis, Ehrlichiosis, and RMSF in dogs — signs and treatment.', url: 'https://vets.co/health/tick-borne-diseases', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-09-05T00:00:00Z' ,
@@ -44,6 +44,7 @@ export default function TickBornePage() {
 </>}
       >
         <div className="carloOS-article">
+          <LastUpdated date="2026-10-09" />
 
           <h2>Lyme Disease (Borrelia burgdorferi)</h2>
           <p><strong>Tick vector:</strong> Ixodes scapularis (black-legged tick / deer tick) primarily; Ixodes pacificus on the West Coast. Requires 24–48 hours of tick attachment for transmission — emphasizing prompt tick removal. A tick-removal hook is how an attached tick comes off as a whole instead of a squeezed body — it is not a generic tick remover and not a first-aid tick-removal tool. A fine-tooth flea comb is how ears, armpits, groin, and the collar line get a pass after a walk in grass or woods, before that 24–48 hour window closes. These are household check tools, not treatments. They do not prevent Lyme, they do not replace a veterinarian-recommended preventive, and they do not interpret a 4Dx result. <strong>Geographic distribution:</strong> Northeast, Upper Midwest, and Pacific Northwest — highest prevalence in these regions, but expanding range. <strong>Signs in dogs:</strong> Fever, lethargy, shifting-leg lameness (the joint pain can move from leg to leg), reduced appetite. Lyme nephritis — a serious kidney complication — occurs in a subset of affected dogs, particularly Labrador Retrievers and Golden Retrievers, causing protein-losing nephropathy that can lead to kidney failure. <strong>Testing:</strong> The 4Dx SNAP test detects Lyme antibodies as part of the annual heartworm test. A positive Lyme antibody test means the dog has been exposed — many seropositive dogs never develop clinical disease. <strong>Treatment:</strong> Veterinarians may prescribe doxycycline, typically for about 30 days; the dose must be determined by a veterinarian. <strong>Prevention:</strong> Tick prevention (isoxazoline class products most effective) + Lyme vaccination in tick-endemic regions.</p>
@@ -61,16 +62,15 @@ export default function TickBornePage() {
           <p>The annual heartworm test (4Dx SNAP) also detects antibodies for Lyme, Anaplasma, and Ehrlichia — three tick-borne diseases in a single test with the heartworm antigen test. This is one of the primary reasons the 4Dx is standard of care rather than a simple heartworm test — it provides meaningful surveillance for tick-borne disease simultaneously. A positive result on the 4Dx does not automatically mean treatment is needed — many seropositive dogs have been exposed but not clinically affected. A positive 4Dx in a dog with clinical signs is a significant finding warranting treatment. A positive 4Dx in a completely healthy dog warrants a urine protein:creatinine ratio (to screen for Lyme nephritis) and a full workup conversation with your veterinarian about whether treatment is indicated.</p>
           
 
-          <h2 id="kit">Dog tick-check kit</h2>
-          
+          <h2 id="kit">Supplies named on this page</h2>
+          <p>Keep these on hand: tick removal hook, fine tooth flea comb, and dog flea and tick. They are not a treatment and they do not replace a veterinarian.</p>
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/tick+removal+hook?s=health-tick-borne-diseases", "/go/amazon-brand/fine+tooth+flea+comb?s=health-tick-borne-diseases", "/go/amazon-brand/dog+flea+and+tick?s=health-tick-borne-diseases"]} />
 
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
-
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (tick-removal hook / fine-tooth flea comb /
               laminated tick identification card).
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or an empty link. Amazon searches only —
               unused vs #1071
               letter+size+expanding+file+organizer /
               sterile+urine+specimen+cup /
@@ -104,7 +104,7 @@ export default function TickBornePage() {
               pet+first+aid+kit, led+medical+penlight.
               Doxycycline, isoxazolines, Lyme vaccine,
               Frontline, NexGard, Bravecto, Simparica,
-              and Rx ASINs are not shoppable hops. */}
+              and prescription brands are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
@@ -121,7 +121,7 @@ export default function TickBornePage() {
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/dog+flea+and+tick?s=health-tick-borne-diseases"
-                amazonLabel="Shop on Amazon"
+                amazonLabel="Browse dog flea and tick on Amazon →"
               />
           </div>
           </div>

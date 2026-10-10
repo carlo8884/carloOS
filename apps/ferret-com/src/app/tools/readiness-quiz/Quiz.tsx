@@ -72,7 +72,7 @@ const QUESTIONS: Question[] = [
   {
     id: 'budget_setup',
     text: 'Are you prepared for the one-time setup cost (cage, supplies, initial vet care) and ongoing yearly costs?',
-    subtext: 'Setup typically runs $400-$600+; ongoing care is commonly $400-$800+ per year per ferret, not including illness.',
+    subtext: 'Setup is often several hundred dollars, and yearly care is an ongoing bill per ferret, not including illness. Ask an exotic veterinarian what owners in your area pay.',
     choices: [
       { label: 'Yes, I have budgeted for setup and yearly care', score: 3 },
       { label: 'I can manage it, but it will be tight', score: 1 },
@@ -82,9 +82,9 @@ const QUESTIONS: Question[] = [
   {
     id: 'budget_vet',
     text: 'Can you set aside an emergency fund or carry exotic-pet insurance?',
-    subtext: 'Adrenal disease, insulinoma, and gastrointestinal blockages are common in ferrets. Treatment often runs $1,000-$3,000+ per episode. This is not a rare edge case.',
+    subtext: 'Adrenal disease, insulinoma, and gastrointestinal blockages are common in ferrets. Treatment is often a large bill per episode. This is not a rare edge case. Ask an exotic veterinarian for an estimate.',
     choices: [
-      { label: 'Yes, I can maintain a $1,500+ emergency fund or carry insurance', score: 3 },
+      { label: 'Yes, I can keep an emergency fund for a large vet bill, or carry insurance', score: 3 },
       { label: 'Possibly, with planning', score: 1 },
       { label: 'No, unexpected vet costs would be a serious problem', score: 0 },
     ],
@@ -250,6 +250,7 @@ export default function Quiz() {
   return (
     <div className="rounded-lg border border-brand-border bg-brand-surface p-6 sm:p-8">
       <PriceAsOf date="2026-06-02" />
+      <p className="mb-4 text-sm text-brand-text-mid">Those figures are typical US ranges dated 2026-06-02.</p>
       {!submitted ? (
         <>
           <div className="mb-6 flex items-center gap-3">
@@ -366,7 +367,7 @@ export default function Quiz() {
                 Retake the quiz
               </button>
               <span className="text-brand-border">|</span>
-              <span className="text-xs text-brand-text-light">Score: {score} / 30</span>
+              <span className="text-xs text-brand-text-light">{score} of 30 checklist points ready</span>
             </div>
 
             <p className="mt-6 text-xs text-brand-text-light leading-relaxed">

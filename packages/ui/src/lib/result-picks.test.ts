@@ -62,28 +62,34 @@ test('Eheim stock watts stay inside 25W to 300W', () => {
   }
 })
 
-test('blanket size uses the review inches, and other lengths stay on the Rambo listing', () => {
+test('blanket size uses the review inches, and other lengths use the existing winter-blanket search', () => {
   assert.equal(roundBlanketInches(76.4), 75)
   assert.equal(roundBlanketInches(76.5), 78)
   assert.equal(roundBlanketInches(82.4), 81)
   assert.equal(roundBlanketInches(82.6), 84)
   assert.equal(roundBlanketInches(40), 48)
   assert.equal(roundBlanketInches(100), 90)
-  for (const size of [75, 78, 81, 84]) {
+  for (const size of [75, 78]) {
     const pick = blanketPick(size, 'tools-horse-blanket-size-calculator')
-    assert.match(pick.href, new RegExp(`${size}\\+inch`))
-    assert.match(pick.label, /Rambo Original/)
+    assert.match(pick.href, new RegExp(`turnout\\+blanket\\+${size}\\+inch`))
+    assert.match(pick.label, /Search Amazon for/)
+  }
+  for (const size of [81, 84]) {
+    const pick = blanketPick(size, 'tools-horse-blanket-size-calculator')
+    assert.equal(pick.href, '/reviews/best-winter-horse-blankets')
+    assert.match(pick.label, /winter blanket review/)
   }
   const other = blanketPick(69, 'tools-horse-weight-calculator')
-  assert.match(other.href, /smartpak\/rambo-original-turnout/)
+  assert.match(other.href, /amazon-brand\/waterproof\+turnout\+horse\+blanket\+winter\?s=tools-horse-blanket-size-calculator/)
+  assert.doesNotMatch(other.href, /smartpak/)
   assert.match(other.detail, /69 inches/)
   assert.match(other.detail, /does not print/)
 })
 
 test('ferret cage pick follows the review count', () => {
-  assert.match(ferretCagePick(1).href, /kaytee/)
+  assert.match(ferretCagePick(1).href, /B008FONT2Y/)
   assert.match(ferretCagePick(2).detail, /pair or trio/)
-  assert.match(ferretCagePick(3).href, /ferret\+nation/)
+  assert.match(ferretCagePick(3).href, /B0054U8UGW/)
   assert.match(ferretCagePick(4).detail, /1–4/)
   assert.doesNotMatch(ferretCagePick(4).detail, /past that card/)
   assert.match(ferretCagePick(5).detail, /past that card/)
@@ -165,16 +171,21 @@ test('forage pick keeps Standlee and changes the dry-matter line', () => {
   assert.match(idle.detail, /does not print a bag size/)
 })
 
-test('horse age assigns the joint card only to the senior stage', () => {
-  assert.match(horseAgePick('Senior').href, /cosequin-asu-plus/)
+test('horse age senior uses the existing senior-feed search', () => {
+  assert.equal(
+    horseAgePick('Senior').href,
+    '/go/amazon-brand/senior+horse+feed?s=tools-horse-age-calculator',
+  )
   assert.equal(horseAgePick('Adult').href, '/reviews/best-equine-supplements')
   assert.equal(horseAgePick('Foal').href, '/reviews/best-equine-supplements')
   assert.match(horseAgePick('Young').detail, /young/)
+  assert.equal(/smartpak|cosequin/i.test(horseAgePick('Senior').href), false)
 })
 
 test('cat food grams follow the calorie page searches', () => {
   assert.match(catFoodAmountPick('Weight loss (vet-supervised)', 40).href, /kitchen\+gram\+scale/)
-  assert.match(catFoodAmountPick('Kitten', 80).href, /measured\+cat\+food/)
+  assert.match(catFoodAmountPick('Kitten', 80).href, /cat\+food\+measuring\+scoop\+grams/)
+  assert.match(catFoodAmountPick('Kitten', 80).label, /Search Amazon for/)
   assert.match(catFoodAmountPick('Neutered indoor adult', 55).href, /slow\+feeder\+cat\+bowl/)
   assert.match(catFoodAmountPick('Kitten', 80).detail, /80 grams/)
 })
@@ -182,7 +193,7 @@ test('cat food grams follow the calorie page searches', () => {
 test('horse water switches bucket only when the stall can freeze', () => {
   const open = horseWaterPick(false, '5.0', '10.0')
   const frozen = horseWaterPick(true, '5.0', '10.0')
-  assert.match(open.href, /flat\+back\+horse\+water\+bucket/)
+  assert.equal(open.href, '/nutrition/water-requirements')
   assert.match(frozen.href, /heated\+horse\+water\+bucket/)
   assert.match(open.detail, /5\.0–10\.0/)
   assert.match(frozen.detail, /does not raise the band/)
@@ -190,22 +201,23 @@ test('horse water switches bucket only when the stall can freeze', () => {
 
 test('live rock keeps one starter kit and states the pounds', () => {
   const pick = liveRockPick(40, '40', '60')
-  assert.match(pick.href, /saltwater\+reef\+tank\+starter\+kit\?s=tools-live-rock-calculator/)
+  assert.equal(pick.href, '/setup/saltwater-tank-setup')
   assert.match(pick.detail, /40-gallon/)
   assert.match(pick.detail, /40–60 lb/)
 })
 
-test('ferret label cards follow single digits and mid teens only', () => {
-  assert.match(ferretLabelPick(4.2).href, /\/go\/wysong\/epigen-90/)
-  assert.match(ferretLabelPick(14).href, /\/go\/marshall\/premium-ferret-diet/)
-  assert.equal(ferretLabelPick(11).href, '/diet/best-ferret-kibble')
-  assert.equal(ferretLabelPick(22).href, '/diet/best-ferret-kibble')
-  assert.match(ferretLabelPick(9.9).detail, /single digits/)
+test('ferret label results stay on the review because carbohydrate is not printed', () => {
+  for (const carb of [4.2, 9.9, 11, 14, 22]) {
+    const pick = ferretLabelPick(carb)
+    assert.equal(pick.href, '/diet/best-ferret-kibble')
+    assert.match(pick.detail, /do not print carbohydrate/)
+    assert.match(pick.detail, /Check the label/)
+  }
 })
 
 test('body-length blanket pick does not treat the weight as the size', () => {
   const pick = blanketPick(78, 'tools-horse-weight-calculator', 'body-length')
-  assert.match(pick.href, /78\+inch/)
+  assert.match(pick.href, /turnout\+blanket\+78\+inch/)
   assert.match(pick.detail, /does not set a blanket size/)
   assert.match(pick.detail, /chest-to-tail/)
 })

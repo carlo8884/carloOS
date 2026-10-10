@@ -1,7 +1,13 @@
 import type { Metadata } from 'next'
-import { TableShopLink, ComparisonFoot, PrimaryHop, buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ReviewCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { HopDisclosure } from '../../../components/HopDisclosure'
+import { TableShopLink, ComparisonFoot, EmailCapture, PrimaryHop, buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ReviewCard, ShopCtas, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
+
+// Request-time env, same as the insurance comparison. A set partner tag
+// renders the quote link; an unset tag stays a disabled button.
+export const dynamic = 'force-dynamic'
+
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Pet Insurance Deductibles & Reimbursement Explained | Vets.co", description: "Annual vs. per-condition deductibles, reimbursement rates, and annual limits all shape your real cost. Learn how to balance premium against out-of-pocket risk.", path: '/insurance/deductibles-reimbursement', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Pet Insurance Deductibles and Reimbursement', description: 'How deductibles, reimbursement rates, and annual limits interact to determine your real cost.', url: 'https://vets.co/insurance/deductibles-reimbursement', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-09-06T00:00:00Z' })
 const FAQS = [
@@ -14,8 +20,11 @@ export default function DeductiblesPage() {
     <>
       <SchemaScript schema={schema} />
       <ArticleLayout siteId="vets-co"
-        priceAsOf="2026-09-06"
-        heroHop={<PrimaryHop href='/go/healthy-paws/home?s=insurance-deductibles-reimbursement' label='Get a Healthy Paws quote →' />}
+        heroHop={<>
+          <PrimaryHop href='/go/healthy-paws/home?s=insurance-deductibles-reimbursement' label='Get a Healthy Paws quote →' holdWithoutPartnerId />
+          <PrimaryHop href="/go/amazon-brand/quad+ruled+graph+pad?s=insurance-deductibles-reimbursement" label="Browse quad-ruled graph pads on Amazon →" />
+        </>}
+        heroExtra={<HopDisclosure siteId="vets-co" href={["/go/healthy-paws/home?s=insurance-deductibles-reimbursement", "/go/amazon-brand/quad+ruled+graph+pad?s=insurance-deductibles-reimbursement"]} tone="on-dark" />}
         hero={{ title: 'Deductibles and Reimbursement', subtitle: 'The deductible, reimbursement rate, and annual limit together determine what a pet insurance policy actually costs you when you file a claim. These three settings trade off against your monthly premium, and understanding how they interact lets you tune a policy to your budget and risk tolerance rather than guessing.', category: 'Insurance Guide', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '8 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Insurance', href: '/insurance' }, { name: 'Deductibles & Reimbursement', href: '/insurance/deductibles-reimbursement' }]}
         sidebar={<>
@@ -35,58 +44,53 @@ export default function DeductiblesPage() {
         <div className="carloOS-article">
 
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-09-06T00:00:00Z" reviewedBy="Editorial team" />
+          <LastUpdated date="2026-10-10" />
+          <EmailCapture
+            variant="inline"
+            siteId="vets-co"
+            addressOnly
+            title="Shopping checklist"
+            ctaText="Copy checklist"
+            source="insurance-deductibles-reimbursement"
+            checklist={[
+              "An annual deductible is paid once per policy year, after which all covered claims for the rest of the year are reimbursed without further deductible.",
+              "Annual deductibles are simpler and common; per-condition deductibles can favor pets with long-term chronic diseases.",
+              "Which is better depends on whether your pet faces many small problems or one ongoing condition.",
+              "A higher deductible lowers your monthly premium, but it raises the amount you pay out of pocket before reimbursement begins.",
+              "If your pet has frequent moderate expenses, a lower deductible may cost less in total despite the higher premium.",
+              "The right choice depends on your cash reserves and how you expect to use the policy.",
+            ]}
+          />
+
 
           <CalloutBox variant="info" title="Optimize for the worst case, not the average">
             Because the purpose of insurance is to protect against rare catastrophic bills, it usually pays to prioritize a high annual limit and an acceptable reimbursement rate, then set the deductible at whatever level keeps the premium affordable. Skimping on the limit to lower the premium defeats the point.
           </CalloutBox>
 
           <h2>The Deductible</h2>
-          <p>The deductible is the amount you pay out of pocket before the insurer begins reimbursing. It comes in two structures. An <strong>annual deductible</strong> is met once per policy year; after that, all covered claims that year are reimbursed without further deductible. A <strong>per-condition deductible</strong> applies once per new condition but does not reset each year, which can favor pets with chronic, recurring illnesses. A higher deductible lowers your premium but increases what you pay before coverage activates. A paid rubber stamp is how a reimbursed invoice stays marked after the pay-then-claim lands — it is not a self-inking date stamp (that lives on when-to-enroll), not a desktop receipt organizer (that lives on how-pet-insurance-works), and not a four-column accounting pad (that lives on how-pet-insurance-works).</p>
+          <p>The deductible is the amount you pay out of pocket before the insurer begins reimbursing. It comes in two structures. An <strong>annual deductible</strong> is met once per policy year; after that, all covered claims that year are reimbursed without further deductible. A <strong>per-condition deductible</strong> applies once per new condition but does not reset each year, which can favor pets with chronic, recurring illnesses. A higher deductible lowers your premium but increases what you pay before coverage activates. A paid rubber stamp is how a reimbursed invoice stays marked after the pay-then-claim lands — it is not a self-inking date stamp, not a desktop receipt organizer, and not a four-column accounting pad.</p>
 
           <h2>The Reimbursement Rate</h2>
           <p>After the deductible, the insurer reimburses a fixed percentage of covered costs — commonly 70%, 80%, or 90% — and you pay the remainder. A higher reimbursement rate reduces your share of each claim but raises your premium. For owners who want minimal surprise during a large claim, a 90% rate is attractive; for those prioritizing a low premium, 70% with a high annual limit can be a sensible trade.</p>
 
           <h2>The Annual Limit</h2>
-          <p>The annual limit is the maximum the insurer will reimburse in a policy year, ranging from modest caps to unlimited. This number defines your catastrophe protection. A serious illness or major surgery can run into five figures, and a low annual limit can be exhausted in a single event, leaving you fully exposed thereafter. A handheld tally counter is how remaining annual-limit headroom stays a counted number instead of a remembered quote — it is not a basic desktop calculator (that lives on emergency-vet-costs), not a locking cash box with a key (that lives on emergency-vet-costs), and not a cash envelope budget system (that lives on how-to-afford-vet-care). Because protecting against exactly these rare, ruinous bills is the core reason to insure, the annual limit deserves close attention.</p>
+          <p>The annual limit is the maximum the insurer will reimburse in a policy year, ranging from modest caps to unlimited. This number defines your catastrophe protection. A serious illness or major surgery can run into five figures, and a low annual limit can be exhausted in a single event, leaving you fully exposed thereafter. A handheld tally counter is how remaining annual-limit headroom stays a counted number instead of a remembered quote — it is not a basic desktop calculator, not a locking cash box with a key, and not a cash envelope budget system. Because protecting against exactly these rare, ruinous bills is the core reason to insure, the annual limit deserves close attention.</p>
 
           <h2>How They Interact</h2>
-          <p>These three settings trade off against your premium. Lowering the deductible, raising the reimbursement rate, or raising the annual limit each increases the premium; doing the opposite reduces it. The art is balancing predictable monthly cost against your exposure when a claim hits. Working an example through — pick a hypothetical $5,000 bill and calculate your out-of-pocket under different combinations — quickly reveals which structure fits your finances. A quad-ruled graph pad is how that $5,000 bill, the deductible, the reimbursement rate, and the leftover limit stay plotted combinations — it is not a four-column accounting pad (that lives on how-pet-insurance-works), not a yellow legal pad (that lives on how-to-afford-vet-care), and not ruled index cards (that live on questions-to-ask-your-vet).</p>
+          <p>Those figures are typical US ranges dated 2026-09-06.</p>
+          <p>These three settings trade off against your premium. Lowering the deductible, raising the reimbursement rate, or raising the annual limit each increases the premium; doing the opposite reduces it. The art is balancing predictable monthly cost against your exposure when a claim hits. Working an example through — pick a hypothetical five-thousand-dollar bill and calculate your out-of-pocket under different combinations — quickly reveals which structure fits your finances. That worked example, with the deductible changing what you pay, is in the <a href="/tools/pet-insurance-worth-it-calculator" className="text-brand-primary underline">worth-it calculator</a>. A quad-ruled graph pad is how that five-thousand-dollar bill, the deductible, the reimbursement rate, and the leftover limit stay plotted combinations — it is not a four-column accounting pad, not a yellow legal pad, and not ruled index cards.</p>
 
           <h2>Choosing Your Settings</h2>
           <p>Start from your cash reality. If you keep an emergency fund and want catastrophe protection, choose a high annual limit, a moderate reimbursement rate, and a higher deductible to keep the premium down. If even moderate bills strain your budget, lean toward a lower deductible and higher reimbursement rate, accepting a higher premium for smoother costs. Either way, avoid sacrificing the annual limit, since that is the protection you are really buying.</p>
 
-          <h2 id="kit">Deductibles-reimbursement kit</h2>
+          <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Everyday physical supplies that match the
-            deductible, reimbursement-rate, and
-            annual-limit copy on this page — a
-            quad-ruled graph pad so the sample bill,
-            deductible, reimbursement rate, and
-            leftover limit stay plotted combinations,
-            a paid rubber stamp so reimbursed
-            invoices stay marked after the
-            pay-then-claim lands, and a handheld
-            tally counter so remaining annual-limit
-            headroom stays a counted number. These
-            are educational deductible /
-            reimbursement tools, not a ranked
-            product list, not a substitute for
-            veterinary care, and not a treatment.
-            3-tab dividers, assorted highlighter
-            sets, and removable page flags already
-            live on what-pet-insurance-covers.
-            Monthly desk pad calendars, self-inking
-            date stamps, and letter-size file
-            jackets already live on when-to-enroll.
-            This page does not hop medications or
-            insurance brands as Amazon searches.
-            This page does not claim hands-on
-            testing.
+            Keep these on hand: a quad-ruled graph pad so the sample bill, deductible, reimbursement rate, and leftover limit stay plotted combinations, a paid rubber stamp so reimbursed invoices stay marked after the pay-then-claim lands, and a handheld tally counter so remaining annual-limit headroom stays a counted number. These are educational deductible / reimbursement tools, not a ranked product list, not a substitute for veterinary care, and not a treatment.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/quad+ruled+graph+pad?s=insurance-deductibles-reimbursement", "/go/amazon-brand/paid+rubber+stamp?s=insurance-deductibles-reimbursement", "/go/amazon-brand/handheld+tally+counter?s=insurance-deductibles-reimbursement"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (quad-ruled graph pad /
               paid rubber stamp /
               handheld tally counter).
@@ -95,9 +99,9 @@ export default function DeductiblesPage() {
               not a ranked product list, not a
               substitute for veterinary care, no Rx
               / first-aid kit / thermometer /
-              carrier / insurance-brand ASIN hops.
+              carrier / insurance-brand product page buttons.
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or an empty link. Amazon searches only —
               unused vs #1170
               3+tab+dividers /
               assorted+highlighter+set /
@@ -114,29 +118,13 @@ export default function DeductiblesPage() {
               wall+mounted+magnetic+monthly+planner.
               Carrier quote CTAs stay on
               /go/healthy-paws and /go/pets-best —
-              not amazon-brand hops. */}
+              not amazon-brand buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the deductibles-reimbursement kit
+              Shop these supplies
             </div>
             <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page deductible, reimbursement-rate,
-              and annual-limit copy — a quad-ruled
-              graph pad, a paid rubber stamp, and a
-              handheld tally counter. Educational
-              deductible / reimbursement tools only.
-              They are not a ranked product list,
-              they are not a substitute for
-              veterinary care, they are not a #1170
-              3-tab-divider / highlighter /
-              page-flag hop, they are not a #1169
-              monthly-desk-pad / date-stamp /
-              file-jacket hop, they are not a
-              financing-brand or insurance-brand hop,
-              and they do not replace a veterinarian.
-              Vets.co earns a commission on qualifying
-              purchases at no extra cost to you.
+              Keep these on hand: a quad-ruled graph pad, a paid rubber stamp, and a handheld tally counter. Educational deductible / reimbursement tools only.
             </p>
             <div className="flex flex-col gap-3">
               <ShopCtas
@@ -156,13 +144,12 @@ export default function DeductiblesPage() {
 
           <h2 id="quote">Model the Levers on Real Quotes</h2>
           <p>The fastest way to see how deductible, reimbursement rate, and annual limit move your premium is to run the same pet through a couple of carriers and adjust the sliders. The two below let you do that; for the full side-by-side, see our <a href="/reviews/best-pet-insurance">best pet insurance comparison</a>.</p>
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/healthy-paws/home?s=insurance-deductibles-reimbursement", "/go/pets-best/home?s=insurance-deductibles-reimbursement"]} />
           <ReviewCard
             id="healthy-paws"
             badge="Simple Levers"
             name="Healthy Paws"
             subtitle="One plan, you set the deductible and reimbursement rate"
-            score={8.7}
             winner
             description={
               <p>A single accident-and-illness plan where you choose the deductible and reimbursement rate, which makes the lever trade-offs easy to model. Known for fast reimbursement on the pay-then-claim model. Confirm the annual-limit structure when you quote — that is the catastrophe protection you are really buying.</p>
@@ -176,7 +163,7 @@ export default function DeductiblesPage() {
             cons={['No wellness add-on', 'Confirm annual-limit structure']}
             price="Quote-based"
             ctaText="Get a Quote →"
-            ctaHref="/go/healthy-paws/home?s=insurance-deductibles-reimbursement"
+            ctaHref="/go/healthy-paws/home?s=insurance-deductibles-reimbursement" holdWithoutPartnerId
             ctaAffiliateProgram="healthy-paws"
             ctaAffiliateProduct="home"
           />
@@ -185,9 +172,8 @@ export default function DeductiblesPage() {
             badge="Tiered Options"
             name="Pets Best"
             subtitle="Multiple deductible and reimbursement combinations"
-            score={8.2}
             description={
-              <p>Offers several plan tiers with a range of deductible and reimbursement combinations, which is helpful when you want to compare how each lever shifts the premium. Run a hypothetical large bill through different settings to find the structure that matches your cash reality.</p>
+              <p data-source="https://www.petsbest.com/faq">Offers several plan tiers with a range of deductible and reimbursement combinations, which is helpful when you want to compare how each lever shifts the premium. Pets Best’s FAQ, fetched 2026-10-08, says there is no upper age limit. Run a hypothetical large bill through different settings to find the structure that matches your cash reality.</p>
             }
             specs={[
               { label: 'Plan tiers', value: 'Multiple', highlight: 'good' },
@@ -204,7 +190,7 @@ export default function DeductiblesPage() {
           />
 
           <h2 id="who">Who should quote which</h2>
-          <p>Both cards are quote-based. The lever and the limit below are the ones already on the cards. Scores are this page&apos;s editorial scores, not customer star ratings.</p>
+          <p>Both cards are quote-based. The lever and the limit below are the ones already on the cards. For a longer look at the pair, see <a href="/reviews/healthy-paws-vs-pets-best-guide">Healthy Paws vs Pets Best</a>.</p>
           <div className="overflow-x-auto my-6 max-w-full">
             <table className="w-full text-sm border-collapse table-fixed sm:table-auto min-w-0 sm:min-w-[36rem] [&_th]:break-words [&_td]:break-words">
               <thead>
@@ -218,7 +204,7 @@ export default function DeductiblesPage() {
               <tbody>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 text-brand-text-mid">One accident-and-illness plan, and you set the deductible and rate</td>
-                  <td className="p-3 font-bold text-brand-dark"><a href="#healthy-paws" className="text-brand-primary">Healthy Paws</a><TableShopLink href={"/go/healthy-paws/home?s=insurance-deductibles-reimbursement"} product={"Healthy Paws"} /></td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#healthy-paws" className="text-brand-primary">Healthy Paws</a><TableShopLink href={"/go/healthy-paws/home?s=insurance-deductibles-reimbursement"} product={"Healthy Paws"} holdWithoutPartnerId /></td>
                   <td className="p-3 text-brand-text-mid">Simple Levers. Single plan. Fast reimbursement. Quote-based</td>
                   <td className="p-3 text-brand-text-mid">No wellness add-on. Confirm the annual-limit structure on the quote</td>
                 </tr>
@@ -226,15 +212,20 @@ export default function DeductiblesPage() {
                   <td className="p-3 text-brand-text-mid">Several deductible and reimbursement combinations to compare</td>
                   <td className="p-3 font-bold text-brand-dark"><a href="#pets-best" className="text-brand-primary">Pets Best</a><TableShopLink href={"/go/pets-best/home?s=insurance-deductibles-reimbursement"} product={"Pets Best"} /></td>
                   <td className="p-3 text-brand-text-mid">Tiered Options. Multiple plan tiers. Pay-then-claim. Quote-based</td>
-                  <td className="p-3 text-brand-text-mid">More options to compare. Standard exclusions apply. The card also notes no upper age limit</td>
+                  <td className="p-3 text-brand-text-mid" data-source="https://www.petsbest.com/faq">More options to compare. Standard exclusions apply. Pets Best’s FAQ, fetched 2026-10-08, says there is no upper age limit</td>
                 </tr>
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-05" />
+          <ComparisonFoot updated="2026-10-10" />
 
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
+                  <ArticleSourcesList title="Sources"
+            sources={[
+            { label: 'Pets Best FAQ', url: 'https://www.petsbest.com/faq', publisher: 'Pets Best' },
+            ]}
+          />
         </div>
       </ArticleLayout>
     </>

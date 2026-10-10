@@ -66,7 +66,8 @@ function recommend(answers: Answers): {
 } {
   // Heuristic scoring based on answers.
   const scored = CARRIERS.map((c) => {
-    let score = c.editorialScore
+    // Start at zero. Carrier order on the hub is the table columns, not a stored score.
+    let score = 0
 
     // Age fit
     if (answers.ageStage === 'senior') {
@@ -230,16 +231,12 @@ export default function QuizClient() {
               </p>
             </div>
 
-            <div className="grid sm:grid-cols-2 gap-4 mb-8">
+            <div className="mb-8">
               <div className="bg-brand-surface border border-brand-border rounded-xl p-4">
                 <div className="text-xs text-brand-text-light mb-1">Sample premium</div>
                 <div className="font-display text-lg font-bold">
                   ${result.top.samplePremiumMonthly.low}–${result.top.samplePremiumMonthly.high}/mo
                 </div>
-              </div>
-              <div className="bg-brand-surface border border-brand-border rounded-xl p-4">
-                <div className="text-xs text-brand-text-light mb-1">Editorial score</div>
-                <div className="font-display text-lg font-bold">{result.top.editorialScore}/10</div>
               </div>
             </div>
 
@@ -271,7 +268,7 @@ export default function QuizClient() {
                   <div className="font-display text-lg font-bold mb-1">{a.name}</div>
                   <div className="text-sm text-brand-text-mid mb-2">{a.tagline}</div>
                   <div className="text-xs text-brand-primary font-semibold">
-                    Score: {a.editorialScore}/10 →
+                    See this carrier →
                   </div>
                 </Link>
               ))}

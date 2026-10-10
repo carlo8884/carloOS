@@ -1,11 +1,13 @@
 'use client'
 
+import { HopDisclosure } from '../../../components/HopDisclosure'
+import Link from 'next/link'
 /**
  * Horse Size for Rider Calculator -- /tools/horse-size-for-rider
  * Client compute component. Suggests a horse bodyweight range and an
  * approximate height (hands) band from rider weight, height, and discipline,
- * using the widely cited welfare guideline that rider + tack should fall
- * roughly within 15–20% of the horse's bodyweight.
+ * using a planning figure that rider + tack falls roughly within 15–20%
+ * of the horse's bodyweight. That band is not a fetched welfare standard.
  *
  * This is EDUCATIONAL GUIDANCE, not a rule and not veterinary advice. The
  * percentage is a guideline, not a hard cutoff; the right horse depends on its
@@ -14,7 +16,7 @@
  */
 
 import { useMemo, useState } from 'react'
-import { AffiliateDisclosure, ResultMeaning, ToolError, numberFieldError } from '@carloOS/ui'
+import { ResultMeaning, ToolError, numberFieldError } from '@carloOS/ui'
 
 type Unit = 'imperial' | 'metric'
 
@@ -291,7 +293,7 @@ export default function Calculator() {
           </p>
           <p className="mt-1 text-xs text-brand-text-mid">
             {result
-              ? 'so rider + tack stays within ~15–20% of bodyweight'
+              ? 'planning figure: rider + tack within about 15–20% of bodyweight'
               : 'Enter rider weight to estimate'}
           </p>
         </div>
@@ -309,9 +311,16 @@ export default function Calculator() {
       </div>}
 
       {result && (
+        <>
         <ResultMeaning>
           This range is the horse bodyweight that keeps rider plus tack near 15–20 percent, a welfare planning guide rather than a hard fitting rule.
         </ResultMeaning>
+        <p className="mt-3 text-sm">
+          <Link href="/guides/saddle-fit-basics" className="font-semibold text-brand-primary underline">
+            Read saddle-fit basics
+          </Link>
+        </p>
+        </>
       )}
 
       {result && (
@@ -319,8 +328,8 @@ export default function Calculator() {
           <p>
             <strong className="text-brand-text-dark">How this was worked out.</strong> Rider weight{' '}
             {round(result.riderLb, 1).toLocaleString()} lb + tack {result.tackLb} lb ({discOption.label.split(' (')[0]}) ={' '}
-            {round(result.combinedLb, 1).toLocaleString()} lb carried. Dividing by the welfare guideline
-            (rider + tack ≤ 15–20% of bodyweight) gives a horse of roughly{' '}
+            {round(result.combinedLb, 1).toLocaleString()} lb carried. Dividing by this planning figure
+            (rider + tack within about 15–20% of bodyweight) gives a horse of roughly{' '}
             {round(result.upperHorseLb).toLocaleString()} lb at the 20% end up to{' '}
             {round(result.conservativeHorseLb).toLocaleString()} lb at the more conservative 15% end.
           </p>
@@ -374,7 +383,24 @@ export default function Calculator() {
               </>
             )}
           </p>
-          <AffiliateDisclosure variant="inline" siteId="horses-com" className="my-3" />
+          <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/western+horse+saddle?s=tools-horse-size-for-rider", "/go/amazon-brand/english+horse+saddle?s=tools-horse-size-for-rider", "/go/amazon-brand/ASTM+SEI+horse+riding+helmet?s=tools-horse-size-for-rider"]} />
+          <a
+            href={
+              discipline === 'western'
+                ? '/go/amazon-brand/western+horse+saddle?s=tools-horse-size-for-rider'
+                : discipline === 'english'
+                  ? '/go/amazon-brand/english+horse+saddle?s=tools-horse-size-for-rider'
+                  : '/go/amazon-brand/ASTM+SEI+horse+riding+helmet?s=tools-horse-size-for-rider'
+            }
+            rel="sponsored noopener"
+            className="inline-block max-w-full whitespace-normal text-left rounded bg-brand-dark px-4 py-2.5 text-sm font-bold text-white no-underline"
+          >
+            {discipline === 'western'
+              ? 'Browse Western saddles on Amazon →'
+              : discipline === 'english'
+                ? 'Browse English saddles on Amazon →'
+                : 'Browse ASTM/SEI riding helmets on Amazon →'}
+          </a>
         </div>
       )}
 

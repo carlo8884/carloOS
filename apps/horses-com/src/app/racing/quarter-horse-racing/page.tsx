@@ -10,6 +10,7 @@
  * Authorities: AQHA, AAEP
  */
 
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import {
   buildMetadata,
@@ -19,7 +20,6 @@ import {
   RelatedLinks,
   TableOfContents,
   FAQAccordion,
-  AffiliateDisclosure,
   ShopCtas,
   buildArticleSchema,
   SchemaScript,
@@ -187,19 +187,8 @@ export default function QuarterHorseRacingPage() {
             <li>American Association of Equine Practitioners (AAEP). Equine athlete welfare. aaep.org.</li>
           </ol>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href="/go/amazon-brand/horse+driving+harness?s=racing-quarter-horse-racing" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated horse Quarter Horse sprint-yard chart /
-              horse stall-door AQHA racing card /
-              equine Quarter Horse sprint handbook).
-              No existing product hop to keep.
-              Educational barn searches only; no Rx /
-              vaccine / flea / heartworm / nsaid hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs harness-racing /
-              thoroughbred-flat-racing hops.
-              Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
@@ -208,7 +197,7 @@ export default function QuarterHorseRacingPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/horse+driving+harness?s=racing-quarter-horse-racing"
-                amazonLabel="Shop on Amazon"
+                amazonLabel="Browse driving harnesses on Amazon →"
               />
           </div>
           </div>

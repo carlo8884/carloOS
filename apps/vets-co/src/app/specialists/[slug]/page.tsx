@@ -34,7 +34,6 @@ import {
   ArticleLayout,
   CalloutBox,
   CrossPortfolioCard,
-  AffiliateDisclosure,
   RelatedLinks,
   SidebarCard,
 } from '@carloOS/ui'
@@ -156,7 +155,7 @@ export default function SpecialistPage({ params }: PageProps) {
 
   return (
     <ArticleLayout
-      priceAsOf="2026-05-30"
+      priceAsOf="2026-10-04"
       siteId="vets-co"
       schema={combined}
       hero={{
@@ -304,6 +303,7 @@ export default function SpecialistPage({ params }: PageProps) {
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
             Pet Insurance & Chronic Specialist Care
           </div>
+          <p>Those figures are typical US ranges dated 2026-10-04.</p>
           <div className="font-display font-bold text-brand-dark text-lg mb-2">
             Chronic specialist visits can cost $3,000–15,000 annually
           </div>
@@ -420,6 +420,7 @@ export default function SpecialistPage({ params }: PageProps) {
 
       {/* FAQs */}
       <h2 id="faqs">Frequently Asked Questions</h2>
+      <p>Those figures are typical US ranges dated 2026-10-04.</p>
       <div className="not-prose space-y-4">
         {faqs.map((q) => (
           <details
@@ -467,18 +468,13 @@ export default function SpecialistPage({ params }: PageProps) {
         </p>
       </section>
 
-      {/* Money path — live amazon-brand search hops
+      {/* Shop note — live amazon-brand search buttons
           matching on-page when-to-see / typical-US-cost /
           board-certification copy. Unique vs the
           specialists hub kitchen + diagnostics-spoke
           kitchen. Educational only — not a ranked
           clinic list. */}
-      <div className="not-prose my-10 rounded-xl border border-brand-border bg-brand-surface p-6">
-        <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-          Shop related supplies
-        </div>
-                <AffiliateDisclosure variant="inline" siteId="vets-co" />
-      </div>
+      
 
       {/* Back to hub */}
       <div className="mt-10 pt-8 border-t border-brand-border not-prose">

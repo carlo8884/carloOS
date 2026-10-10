@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, CrossPortfolioCard, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, CrossPortfolioCard, TableOfContents, FAQAccordion, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -20,7 +21,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Horses.com Editorial',
   publishedAt: '2026-05-28T00:00:00Z',
-  modifiedAt: '2026-09-04T00:00:00Z',
+  modifiedAt: '2026-10-07T00:00:00Z',
 })
 
 const medSchema = buildMedicalWebPageSchema({
@@ -29,7 +30,7 @@ const medSchema = buildMedicalWebPageSchema({
     'AAEP core and risk-based equine vaccines, scheduling by life stage, and rationale for each.',
   url: 'https://horses.com/guides/equine-vaccination-schedule',
   authorName: 'Horses.com Editorial',
-  lastReviewed: '2026-05-28',
+  lastReviewed: '2026-10-07',
 })
 
 const combined = combineSchemas(articleSchema, medSchema)
@@ -91,7 +92,7 @@ export default function VaccinationSchedulePage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout
-        priceAsOf="2026-05-28"
+        priceAsOf="2026-10-07"
         siteId="horses-com"
         relatedLinks={[
           { title: 'Guides Hub', href: '/guides', category: 'Guides' },
@@ -296,30 +297,30 @@ export default function VaccinationSchedulePage() {
           </ul>
 
           <h2 id="cost">Cost &amp; Logistics</h2>
-          <p>Approximate US costs for a typical adult horse on a standard schedule (varies regionally; includes farm-call charge):</p>
+          <p>Per-dose vaccine ranges below are from the AAEP Decade One and VMG fee survey (published 2023; the fees were about a year old at publication). The farm call is a separate charge and is not included. Broodmare, annual, and competition package totals are not printed in the survey. Typical US range, checked Oct 2026; varies by clinic and region. dated 2026-10-07.</p>
 
           <ul>
-            <li><strong>Spring core combination (5-way: EEE/WEE/WNV/tetanus + rabies):</strong> $50–90 vaccine cost + farm call.</li>
-            <li><strong>Flu/EHV booster:</strong> $25–45 per vaccination.</li>
-            <li><strong>Strangles vaccine:</strong> $25–45 per vaccination (intranasal slightly higher).</li>
-            <li><strong>PHF vaccine:</strong> $30–50 per vaccination.</li>
-            <li><strong>Broodmare full protocol:</strong> $200–400 across the gestation period.</li>
-            <li><strong>Annual basic adult schedule:</strong> $100–200 typical for a pleasure horse on closed-farm management.</li>
-            <li><strong>Annual competition horse schedule:</strong> $250–500 typical including biannual flu/EHV.</li>
+            <li><strong>Eastern and Western encephalitis, tetanus, and West Nile vaccine:</strong> $33.50–$87 per dose. Rabies vaccine is $9.14–$55 per dose. dated 2026-10-07.</li>
+            <li><strong>Influenza and rhinopneumonitis vaccine:</strong> $29–$74.20 per dose. dated 2026-10-07.</li>
+            <li><strong>Strangles vaccine, intranasal:</strong> $26–$85 per dose. dated 2026-10-07.</li>
+            <li><strong>Potomac horse fever vaccine:</strong> $25–$71 per dose. dated 2026-10-07.</li>
+            <li><strong>Broodmare full protocol:</strong> often several hundred dollars across gestation. The survey prices single vaccines, not a broodmare package. Ask the veterinarian for an estimate.</li>
+            <li><strong>Annual basic adult schedule:</strong> often a few hundred dollars for a pleasure horse. The survey does not print a package total. Ask the veterinarian for an estimate.</li>
+            <li><strong>Annual competition horse schedule:</strong> often higher than a basic schedule because influenza and rhinopneumonitis vaccines are repeated. The survey does not print a package total. Ask the veterinarian for an estimate.</li>
           </ul>
 
           <p>Practical logistics: many veterinary practices offer barn-call discounts when multiple horses are vaccinated in one visit. Sharing a farm call with neighbors or boarders reduces per-horse cost. Maintain vaccination records (paper or digital — many practices offer online records); USEF and FEI competition both require documented vaccination records.</p>
 
           <h2 id="kit">Related supplies</h2>
-          <p>Everyday physical supplies that match the PHF endemic-region management copy above — stall fans and stall screens. The vaccine does not eliminate risk; reducing pasture or turnout near water and using stall fans/screens is barn management, not a vaccination. These are not vaccines, not a vaccination or prescription kit, and not treatments for Potomac horse fever, encephalitis, West Nile, rabies, tetanus, influenza, EHV, or strangles. Needles, combination products, and documented vaccination records belong with the veterinarian and the official USEF / FEI record — not a retail Amazon kit. This page does not claim hands-on testing.</p>
+          <p>Keep these on hand: stall fans and stall screens. The vaccine does not eliminate risk; reducing pasture or turnout near water and using stall fans/screens is barn management, not a vaccination. These are not vaccines, not a vaccination or prescription kit, and not treatments for Potomac horse fever, encephalitis, West Nile, rabies, tetanus, influenza, EHV, or strangles. Needles, combination products, and documented vaccination records belong with the veterinarian and the official USEF / FEI record — not a retail Amazon kit.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/horse+stall+fan?s=guides-equine-vaccination-schedule", "/go/amazon-brand/horse+stall+screen?s=guides-equine-vaccination-schedule"]} />
 
-          {/* Money path — live amazon-brand search hops (barn kit).
-              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-              Category searches only — everyday physical supplies matching
+          {/* Shop note — live amazon-brand search buttons (barn kit).
+              ShopCtas hides empty Chewy; never href="#" or an empty link.
+              Amazon searches only — everyday physical supplies matching
               on-page PHF stall-fan / stall-screen copy, not vaccine,
-              medication, needle, or invented-kit hops.
+              medication, needle, or invented-kit buttons.
               Vaccines, needles, epinephrine, FEI passports, and fly spray
               are not named as shoppable owner supplies on this page. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
@@ -345,6 +346,7 @@ export default function VaccinationSchedulePage() {
           <h2 id="references">References</h2>
           <ol className="text-sm text-brand-text-mid">
             <li>American Association of Equine Practitioners. &ldquo;Vaccination Guidelines for Adult Horses,&rdquo; &ldquo;Vaccination Guidelines for Foals,&rdquo; and &ldquo;Vaccination Guidelines for Broodmares.&rdquo; aaep.org.</li>
+            <li>American Association of Equine Practitioners and Veterinary Management Groups. Decade One combined fee survey, published 2023. https://aaep.org/wp-content/uploads/2024/02/Decade-One-VMG-Combined-Fee-Survey.pdf</li>
             <li>American Association of Equine Practitioners. &ldquo;Core Vaccination Guidelines&rdquo; — specific guidance for tetanus, EEE, WEE, West Nile virus, and rabies. aaep.org.</li>
             <li>American Association of Equine Practitioners. &ldquo;Risk-Based Vaccination Guidelines&rdquo; — specific guidance for equine influenza, EHV, strangles, PHF, botulism, rotavirus, anthrax, and leptospirosis. aaep.org.</li>
             <li>USDA APHIS Veterinary Services. &ldquo;Equine Herpesvirus Myeloencephalopathy (EHM) Disease Information.&rdquo; aphis.usda.gov.</li>

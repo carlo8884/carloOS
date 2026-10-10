@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, FAQAccordion, AffiliateDisclosure, ShopCtas, CrossSiteHelp } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, FAQAccordion, ShopCtas, CrossSiteHelp } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { BreedHealthCard } from '@carloOS/ui'
@@ -40,7 +41,7 @@ const FAQS = [
   {
     question: 'When should I get pet insurance for a French Bulldog?',
     answer:
-      'Before any symptoms develop, before the first veterinary visit. Several insurers have breed exclusions for BOAS-related conditions if the dog is enrolled after symptoms appear, and BOAS surgery ($2,500–5,000) and IVDD decompression ($5,000–10,000) are common outcomes in this breed within the first 5 years — not rare worst-case scenarios.',
+      'Before any symptoms develop, before the first veterinary visit. Read the hereditary and pre-existing terms on the quote itself — this page does not state which insurers exclude BOAS. BOAS surgery ($2,500–5,000) and IVDD decompression ($5,000–10,000) are costs owners of this breed often plan for.',
   },
 ]
 
@@ -52,7 +53,7 @@ export default function VetsFrenchBulldogHealthPage() {
     <>
       <SchemaScript schema={combinedSchemaAll} />
       <ArticleLayout
-      priceAsOf="2026-06-11"
+      priceAsOf="2026-10-05"
       siteId="vets-co"
       contentType="breed"
       hero={{ title: 'French Bulldog Health — A Veterinarian\'s Perspective', subtitle: 'French Bulldogs have the highest per-dog veterinary costs of any breed. The conditions are largely predictable, many are manageable, and some are preventable with early intervention. Here\'s what every Frenchie owner needs to know.', category: 'Breed Health Guide', authorName: 'Vets.co Editorial', publishedAt: 'May 2025', readTime: '10 min',}}
@@ -70,7 +71,7 @@ export default function VetsFrenchBulldogHealthPage() {
 
         <div style={{ background: 'rgba(200,74,42,0.05)', border: '1px solid rgba(200,74,42,0.18)', borderRadius: '10px', padding: '16px 20px', marginBottom: '24px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#C84A2A', marginBottom: '8px' }}>Insurance Note</div>
-          <p style={{ fontSize: '14px', color: 'var(--brand-text-mid)', margin: 0, lineHeight: 1.65 }}>French Bulldogs are the most expensive breed to insure — and the one that most needs it. Several insurers have breed exclusions for BOAS-related conditions if enrolled after symptoms appear. Enroll before any symptoms develop, before the first veterinary visit. Do not delay.</p>
+          <p style={{ fontSize: '14px', color: 'var(--brand-text-mid)', margin: 0, lineHeight: 1.65 }}>French Bulldogs are the most expensive breed to insure — and the one that most needs it. Read each policy&apos;s hereditary and pre-existing terms — this page does not state which insurers exclude BOAS. Enroll before any symptoms develop, before the first veterinary visit. Do not delay.</p>
         </div>
 
         <BreedHealthCard name="BOAS — Brachycephalic Obstructive Airway Syndrome" riskLevel="very-high" description="BOAS is not a disease — it is the anatomical consequence of breeding for extreme flat-faced features. Stenotic nares (narrow nostrils), elongated soft palate, hypoplastic trachea, and everted laryngeal saccules collectively obstruct airflow. Most French Bulldogs have some degree of BOAS. Many are living in a state of chronic respiratory compromise that owners normalize because it has always been present." signs={['Noisy breathing at rest', 'Snoring', 'Exercise intolerance — tires quickly, heavy breathing after minimal exertion', 'Blue-tinged gums during exertion (emergency)', 'Retching, gagging, vomiting regurgitated food']} management="BOAS grading assessment (BOAS grade 0–III) by a specialist. Grade II–III: strongly consider surgical correction (nostril widening, soft palate shortening, saccule removal). Surgery before 2 years produces the best outcomes. Weight management is also critical — every pound of extra weight makes breathing harder. Never allow a French Bulldog to exercise in heat." guideHref="/find-a-vet" guideLabel="Find a soft tissue surgery specialist →" />
@@ -87,42 +88,22 @@ export default function VetsFrenchBulldogHealthPage() {
         <CalloutBox variant="evidence" title="Operate before age 2 when possible">
           Surgical correction of stenotic nares, elongated soft palate, and everted saccules produces the best outcomes when performed before age 2 — the soft palate and surrounding tissues have undergone less secondary remodeling. If your Frenchie is still young and is BOAS Grade II–III, the assessment is worth scheduling sooner rather than later.
         </CalloutBox>
-        <p>Surgical correction before 2 years produces the best outcomes because the soft palate and other tissues haven&apos;t undergone as much secondary remodeling. Four-tab dividers are how those BOAS grades 0–III stay four labeled stacks after the specialist assessment — they are not 3-tab dividers (that live on what-pet-insurance-covers), not removable page flags (that live on what-pet-insurance-covers), and not self-adhesive file-folder labels (that live on german-shepherd-health). If your Frenchie is still young: get the assessment now.</p>
-        <p>Limit outdoor time in temperatures above 70°F, particularly if humid, and walk in early morning or after sunset in summer. An analog outdoor thermometer is how that 70°F outdoor limit stays a written cutoff — it is not a mechanical kitchen timer (that lives on german-shepherd-health), not a 48-hour digital kitchen timer (that lives on when-to-go-to-the-vet), and not a dog-com cooling-mat or cooling-vest hop. Clean skin folds 2–3 times weekly and dry thoroughly. A weekly checklist notepad is how that fold-cleaning cadence stays a dated list — it is not a hardcover weekly appointment planner, not a monthly desk pad calendar (that lives on when-to-enroll), and not an 18-month wall calendar (that lives on golden-retriever-health).</p>
+        <p>Surgical correction before 2 years produces the best outcomes because the soft palate and other tissues haven&apos;t undergone as much secondary remodeling. Four-tab dividers are how those BOAS grades 0–III stay four labeled stacks after the specialist assessment — they are not 3-tab dividers, not removable page flags, and not self-adhesive file-folder labels. If your Frenchie is still young: get the assessment now.</p>
+        <p>Limit outdoor time in temperatures above 70°F, particularly if humid, and walk in early morning or after sunset in summer. An analog outdoor thermometer is how that 70°F outdoor limit stays a written cutoff — it is not a mechanical kitchen timer, not a 48-hour digital kitchen timer. Clean skin folds 2–3 times weekly and dry thoroughly. A weekly checklist notepad is how that fold-cleaning cadence stays a dated list — it is not a hardcover weekly appointment planner, not a monthly desk pad calendar, and not an 18-month wall calendar.</p>
 
         <h2>Insurance — Non-Negotiable for This Breed</h2>
-        <p>BOAS surgery: $2,500–5,000. IVDD decompression: $5,000–10,000. These are not rare worst-case scenarios — they are common outcomes in this breed within the first 5 years. Insurance with no breed exclusions for brachycephalic conditions (Trupanion, Healthy Paws) and enrollment before symptoms appear is the difference between being able to treat these conditions and facing impossible decisions. See the <a href="/reviews/best-pet-insurance">full insurance comparison →</a></p>
+        <p>Those figures are typical US ranges dated 2026-10-05.</p>
+        <p>BOAS surgery: $2,500–5,000. IVDD decompression: $5,000–10,000. These are not rare worst-case scenarios — they are common outcomes in this breed within the first 5 years.</p>
+        <p>Enroll before symptoms appear and compare hereditary and spinal terms on the quote itself. This page does not name a carrier. See the <a href="/reviews/best-pet-insurance">full insurance comparison →</a></p>
 
-        <h2 id="kit">French-bulldog-health kit</h2>
+        <h2 id="kit">Supplies named on this page</h2>
         <p>
-          Everyday physical supplies that match the
-          BOAS, IVDD, and heat-risk copy on this
-          page — four-tab dividers so BOAS grades
-          0–III stay four labeled stacks, an analog
-          outdoor thermometer so the 70°F outdoor
-          limit stays a written cutoff, and a
-          weekly checklist notepad so fold-cleaning
-          two-to-three times a week stays a dated
-          list. These are educational
-          French-bulldog-health / paperwork tools,
-          not a ranked product list, not a
-          substitute for veterinary care, and not
-          a treatment. Top-bound steno pads,
-          mechanical kitchen timers, and
-          self-adhesive file-folder labels already
-          live on german-shepherd-health. Dot-grid
-          notebooks, paint-chip sample cards, and
-          18-month wall calendars already live on
-          golden-retriever-health. This page does
-          not hop cooling mats, cooling vests,
-          medications, or insurance brands as
-          Amazon searches. This page does not
-          claim hands-on testing.
+          Keep these on hand: four-tab dividers so BOAS grades 0–III stay four labeled stacks, an analog outdoor thermometer so the 70°F outdoor limit stays a written cutoff, and a weekly checklist notepad so fold-cleaning two-to-three times a week stays a dated list. These are educational French-bulldog-health / paperwork tools, not a ranked product list, not a substitute for veterinary care, and not a treatment.
         </p>
 
-        <AffiliateDisclosure variant="inline" siteId="vets-co" />
+        <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/four+tab+dividers?s=breeds-french-bulldog-health", "/go/amazon-brand/analog+outdoor+thermometer?s=breeds-french-bulldog-health", "/go/amazon-brand/weekly+checklist+notepad?s=breeds-french-bulldog-health"]} />
 
-        {/* Money path — live amazon-brand search hops
+        {/* Shop note — live amazon-brand search buttons
             (four-tab dividers /
             analog outdoor thermometer /
             weekly checklist notepad).
@@ -131,9 +112,9 @@ export default function VetsFrenchBulldogHealthPage() {
             tools, not a ranked product list, not
             a substitute for veterinary care, no
             Rx / first-aid kit / thermometer /
-            carrier / insurance-brand ASIN hops.
+            carrier / insurance-brand product page buttons.
             ShopCtas hides empty Chewy; never href="#"
-            or PLACEHOLDER. Category searches only —
+            or an empty link. Amazon searches only —
             unused vs #1177
             top+bound+steno+pad /
             mechanical+kitchen+timer /
@@ -147,26 +128,10 @@ export default function VetsFrenchBulldogHealthPage() {
             dog+cooling+vest. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-            Shop the French-bulldog-health kit
+            Shop these supplies
           </div>
           <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-            These Amazon category searches match the
-            on-page BOAS, IVDD, and heat-risk copy
-            — four-tab dividers, an analog outdoor
-            thermometer, and a weekly checklist
-            notepad. Educational
-            French-bulldog-health / paperwork
-            tools only. They are not a ranked
-            product list, they are not a
-            substitute for veterinary care, they
-            are not a #1177 steno-pad / kitchen-
-            timer / file-label hop, they are not a
-            dog-com Frenchie cooling hop, they are
-            not a financing-brand or insurance-
-            brand hop, and they do not replace a
-            veterinarian. Vets.co earns a
-            commission on qualifying purchases at
-            no extra cost to you.
+            Keep these on hand: four-tab dividers, an analog outdoor thermometer, and a weekly checklist notepad. Educational French-bulldog-health / paperwork tools only.
           </p>
           <div className="flex flex-col gap-3">
             <ShopCtas
@@ -194,9 +159,11 @@ export default function VetsFrenchBulldogHealthPage() {
           The Dog.com French Bulldog page is the owner-side guide for this breed: size, temperament, and everyday care.
         </CrossSiteHelp>
         <h2>FAQ</h2>
+        <p>Those figures are typical US ranges dated 2026-10-05.</p>
         <FAQAccordion
           items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))}
           allowMultiple
+          includeSchema={false}
         />
       </div>
     </ArticleLayout>

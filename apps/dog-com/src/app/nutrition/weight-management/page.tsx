@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleByline, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleByline, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Weight Management — Safe Weight Loss Protocol | Dog.com', description: 'Roughly 59% of US dogs are overweight (APOP 2022 survey). Safe caloric reduction, body condition scoring, exercise protocols.', path: '/nutrition/weight-management', type: 'article' })
@@ -12,11 +13,11 @@ export default function WeightManagementPage() {
       contentType="nutrition"
       hero={{ title: 'Dog Weight Management', subtitle: 'Roughly 59% of US dogs are overweight or obese (APOP 2022 survey) — a number that has risen every year for two decades. Obesity shortens lifespan, accelerates joint disease, increases cancer risk, and reduces quality of life. Here\'s the protocol.', category: 'Nutrition', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Nutrition', href: '/nutrition' }, { name: 'Weight Management', href: '/nutrition/weight-management' }]}
-      relatedLinks={[{ title: 'Dog Nutrition Hub', href: '/nutrition', category: 'Hub' }, { title: 'How Much to Feed', href: '/nutrition/how-much-to-feed', category: 'Nutrition' }, { title: 'Prescription Diets', href: '/nutrition/prescription-diets', category: 'Nutrition' }, { title: 'Ozempic for Dogs? GLP-1 Drugs', href: '/nutrition/ozempic-for-dogs', category: 'Nutrition' }, { title: 'Best Dry Dog Food', href: '/reviews/best-dry-dog-food', category: 'Reviews' }]}
+      relatedLinks={[{ title: 'Dog Nutrition Hub', href: '/nutrition', category: 'Hub' }, { title: 'How Much to Feed', href: '/nutrition/how-much-to-feed', category: 'Nutrition' }, { title: 'Calorie Calculator', href: '/tools/dog-calorie-calculator', category: 'Tool' }, { title: 'Prescription Diets', href: '/nutrition/prescription-diets', category: 'Nutrition' }, { title: 'Ozempic for Dogs? GLP-1 Drugs', href: '/nutrition/ozempic-for-dogs', category: 'Nutrition' }, { title: 'Best Dry Dog Food', href: '/reviews/best-dry-dog-food', category: 'Reviews' }]}
       schema={schema}
       sidebar={<>
         <TableOfContents items={[{ label: 'Is My Dog Overweight?', href: '#assess' }, { label: 'Why Weight Matters', href: '#why' }, { label: 'Safe Caloric Reduction', href: '#reduction' }, { label: 'Weight Management Diets', href: '#diets' }, { label: 'Exercise Protocol', href: '#exercise' }, { label: 'Tracking Progress', href: '#tracking' }]} />
-        <RelatedLinks title="Related" links={[{ label: 'How Much to Feed', href: '/nutrition/how-much-to-feed' }, { label: 'Best Dry Dog Food 2026', href: '/reviews/best-dry-dog-food' }, { label: 'Senior Dog Care', href: '/health/senior-dog-care' }]} />
+        <RelatedLinks title="Related" links={[{ label: 'How Much to Feed', href: '/nutrition/how-much-to-feed' }, { label: 'Calorie Calculator', href: '/tools/dog-calorie-calculator' }, { label: 'Best Dry Dog Food 2026', href: '/reviews/best-dry-dog-food' }, { label: 'Senior Dog Care', href: '/health/senior-dog-care' }]} />
         <CrossPortfolioCard currentSite="dog-com" contentType="nutrition" variant="sidebar" />
 
       </>}
@@ -41,20 +42,20 @@ export default function WeightManagementPage() {
         </ul>
 
         <h2 id="reduction">Safe Caloric Reduction Protocol</h2>
-        <p>Safe weight loss is 1–2% of body weight per month. Faster loss risks muscle mass depletion (which reduces metabolism, making further loss harder) and, in cats, hepatic lipidosis (not typically a risk in dogs but worth noting the principle of too-fast loss).</p>
+        <p>A loss of 1–2% of body weight per month is a planning figure on this page. Faster loss risks muscle mass depletion (which reduces metabolism, making further loss harder) and, in cats, hepatic lipidosis (not typically a risk in dogs but worth noting the principle of too-fast loss).</p>
         <ol>
           <li><strong>Get a baseline weight:</strong> Weigh your dog at a veterinary clinic or pet store scale. Record it.</li>
           <li><strong>Calculate ideal weight:</strong> Work with your veterinarian if unsure. The dog&apos;s current body condition score suggests how far off ideal you are.</li>
-          <li><strong>Calculate target caloric intake:</strong> Feed based on ideal body weight, not current weight. Use the RER formula (70 × ideal weight in kg^0.75) × appropriate life stage factor (1.0 for weight loss, lower than maintenance). Most dogs lose weight on 60–80% of their calculated maintenance calorie intake at ideal weight.</li>
+          <li><strong>Calculate target caloric intake:</strong> Feed based on ideal body weight, not current weight. Use the RER formula (70 × ideal weight in kg^0.75) × appropriate life stage factor (1.0 for weight loss, lower than maintenance). Most dogs lose weight on 60–80% of their calculated maintenance calorie intake at ideal weight. The <a href="/tools/dog-calorie-calculator">calorie calculator</a> applies that weight-loss factor to the dog&apos;s target weight.</li>
           <li><strong>Measure everything:</strong> Use a kitchen scale, not volume measurements. Calories in a cup of kibble vary by 30–40% depending on how the cup is filled. Treats count — track them and subtract from daily allocation.</li>
-          <li><strong>Monitor monthly:</strong> Weigh at the same time (pre-meal, post-elimination) on the same scale each month. Adjust intake by 10% if not losing at target rate, or if losing faster than 2% per month (too fast).</li>
+          <li><strong>Monitor monthly:</strong> Weigh at the same time (pre-meal, post-elimination) on the same scale each month. Adjust intake by 10% if not losing at target rate, or if losing faster than the planning figure of 2% per month (too fast).</li>
         </ol>
 
         <h2 id="diets">Weight Management Diets</h2>
-        <p><strong>Prescription weight management diets:</strong> Hill&apos;s Prescription Diet Metabolic, Royal Canin Satiety Support, and Purina Pro Plan Veterinary Diets OM are the most-studied prescription weight management options. These are specifically formulated to reduce caloric density while maintaining satiety (high fiber) and preserving muscle mass (high protein). Proven to produce greater weight loss than regular reduced-portion feeding of maintenance food in clinical studies.</p>
+        <p><strong>Prescription weight management diets:</strong> Hill&apos;s Prescription Diet Metabolic, Royal Canin Satiety Support, and Purina Pro Plan Veterinary Diets OM are the most-studied prescription weight management options. These are specifically formulated to reduce caloric density while maintaining satiety (high fiber) and preserving muscle mass (high protein). This page does not cite a trial that shows greater weight loss than a measured maintenance ration.</p>
         <p><strong>Over-the-counter weight management foods:</strong> Hill&apos;s Science Diet Perfect Weight and Purina Pro Plan Weight Management are the OTC options with the best evidence base. Avoid random &quot;lite&quot; or &quot;weight control&quot; labels without WSAVA-compliant manufacturer credentials behind them.</p>
         <p><strong>Adding green beans or pumpkin:</strong> Adding plain canned green beans (no sodium added) to existing food increases volume without meaningfully increasing calories — reduces the sensation of deprivation for dogs that wolf their food. Not a substitute for a proper weight management plan but a useful adjunct for food-motivated dogs.</p>
-        <p><strong>What about weight-loss drugs?</strong> GLP-1 drugs like Ozempic have reshaped human weight loss, and pet versions are now in development — but none is FDA-approved for dogs, and human formulations are not safe to use off-label. For where that science actually stands, see <a href="/nutrition/ozempic-for-dogs">Ozempic for dogs: what the GLP-1 trend means</a>. For today, the calorie-and-exercise protocol on this page remains the proven, first-line approach.</p>
+        <p><strong>What about weight-loss drugs?</strong> GLP-1 drugs like Ozempic have reshaped human weight loss, and pet versions are now in development — but none is FDA-approved for dogs, and human formulations are not safe to use off-label. For where that science actually stands, see <a href="/nutrition/ozempic-for-dogs">Ozempic for dogs: what the GLP-1 trend means</a>. For today, the calorie-and-exercise protocol on this page remains the available first-line approach.</p>
 
         <h2 id="exercise">Exercise Protocol for Overweight Dogs</h2>
         <p>Exercise alone rarely produces meaningful weight loss in dogs — the numbers simply don&apos;t support it. A 50-lb dog burns approximately 25–35 calories per mile walked. Reducing food intake by 100 kcal/day produces far more weight loss than adding walking. That said, exercise is essential for health during weight loss because it preserves muscle mass (calories from food restriction are not all from fat — muscle is also catabolized without exercise stimulus).</p>
@@ -64,25 +65,14 @@ export default function WeightManagementPage() {
         <ul>
           <li>Weigh monthly, same conditions (time, scale, pre-meal)</li>
           <li>BCS at each weigh-in — as fat decreases, ribs become more palpable, waist becomes more defined</li>
-          <li>Adjust intake by 10% if not meeting the 1–2%/month target</li>
+          <li>Adjust intake by 10% if not meeting the planning figure of 1–2% of body weight per month</li>
           <li>Recheck with your veterinarian at 3-month intervals during active weight loss — bloodwork may need to be monitored depending on the dog&apos;s health status</li>
           <li>Target: reach ideal weight, then recalculate maintenance intake at the new weight and maintain indefinitely</li>
         </ul>
         <p>Weight management is lifelong, not temporary. A dog that loses weight on a restricted diet and then returns to previous intake will regain the weight. Maintenance monitoring — BCS monthly, weight every 3 months — is the correct long-term approach.</p>
 
-        <AffiliateDisclosure variant="inline" siteId="dog-com" />
+        <HopDisclosure siteId="dog-com" href="/go/amazon-brand/royal+canin+dog+food?s=nutrition-weight" />
 
-        {/* Money path — live amazon-brand search hops
-            (laminated dog rib-waist chart /
-            dog fridge kcal-scale card /
-            canine low-impact-walk handbook).
-            No existing product hop to keep.
-            Educational kitchen searches only; no Rx /
-            vaccine / flea / heartworm / nsaid hops.
-            ShopCtas hides empty Chewy; never href="#"
-            or PLACEHOLDER. Unused vs feeding-frequency /
-            how-much-to-feed / safe-human-foods hops.
-            Do not re-open #1165 / what-to-expect. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
             Shop related supplies
@@ -91,7 +81,7 @@ export default function WeightManagementPage() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/royal+canin+dog+food?s=nutrition-weight"
-              amazonLabel="Shop on Amazon"
+              amazonLabel="Browse Royal Canin dog food on Amazon →"
             />
           </div>
         </div>

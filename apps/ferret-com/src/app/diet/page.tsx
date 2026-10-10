@@ -1,6 +1,7 @@
+import { HopDisclosure } from '../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, ShopCtas, StockImage } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, ShopCtas, StockImage } from '@carloOS/ui'
 import { HubHero } from '../../components/HubHero'
 
 export const metadata: Metadata = buildMetadata({
@@ -52,7 +53,7 @@ const DIET_CARDS: DietCard[] = [
     eyebrow: 'Macronutrients',
     title: 'Protein & Fat Requirements',
     description:
-      'The published macronutrient window for ferrets: 32–40% protein, 18–22% fat, under 3% carbohydrate, taurine, and why dry-matter basis matters.',
+      'Protein, fat, and carbohydrate targets. Under 3% carbohydrate is a planning figure.',
   },
   {
     slug: 'safe-treats',
@@ -200,7 +201,7 @@ export default function DietHubPage() {
               href: '/diet/protein-and-fat-requirements',
               eyebrow: 'Macronutrients',
               title: 'Protein & Fat Requirements',
-              desc: 'The published macronutrient window: 32–40% protein, 18–22% fat, under 3% carbs — and why dry-matter basis matters.',
+              desc: 'Protein, fat, and carbohydrate targets. Under 3% carbohydrate is a planning figure.',
               manifestKey: 'ferret-com:care-diet-basics',
               imageAlt: 'A ferret near its food bowl — protein and fat macronutrient requirements',
             },
@@ -399,27 +400,9 @@ export default function DietHubPage() {
         <p className="max-w-content-wide text-sm text-brand-text-mid leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
 
         <div className="max-w-content-wide mt-6">
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/ferret+kibble?s=diet-hub" />
         </div>
 
-        {/* Money path — live amazon-brand search hops
-            (laminated ferret diet feeding chart /
-            ferret fridge diet label card /
-            mustelid diet reference handbook).
-            Educational kitchen searches only; no Rx /
-            vaccine / kibble-SKU hops.
-            ShopCtas hides empty Chewy; never href="#"
-            or PLACEHOLDER. Unused vs tools-hub
-            laminated+ferret+calculator+tools+chart /
-            ferret+fridge+measurement+card /
-            mustelid+calculator+reference+handbook,
-            reviews-hub
-            laminated+ferret+reviews+buyer+guide+chart /
-            ferret+fridge+reviews+comparison+card /
-            mustelid+reviews+reference+handbook,
-            and child digital+gram+scale /
-            heavy+ceramic+pet+water+bowl hops.
-            No directory import on this page. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-content-wide">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
             Shop related supplies
@@ -428,7 +411,7 @@ export default function DietHubPage() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/ferret+kibble?s=diet-hub"
-              amazonLabel="Shop on Amazon"
+              amazonLabel="Browse ferret kibble on Amazon →"
             />
           </div>
         </div>

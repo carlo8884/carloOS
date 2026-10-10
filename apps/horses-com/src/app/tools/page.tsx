@@ -1,6 +1,7 @@
+import { HopDisclosure } from '../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildArticleSchema, AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, ShopCtas } from '@carloOS/ui'
+import { buildArticleSchema, buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, ShopCtas } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
@@ -38,7 +39,7 @@ const TOOLS = [
   {
     href: '/tools/horse-weight-calculator',
     title: 'Horse Weight Calculator',
-    desc: 'Estimate bodyweight from heart girth and body length using the standard weight-tape formula. Instant lbs and kg, with pony, draft, and foal adjustments.',
+    desc: 'Estimate bodyweight from heart girth and body length with Carroll & Huntington 1988. Pony and draft divisors are a planning figure.',
     tag: 'Calculator',
   },
   {
@@ -80,13 +81,13 @@ const TOOLS = [
   {
     href: '/tools/horse-cost-calculator',
     title: 'Horse Cost of Ownership Calculator',
-    desc: 'Estimate monthly and annual keeping costs — board, feed, farrier, vet, insurance — then pack a shoppable first-horse startup kit (halter, grooming, hoof pick, scoop, barn first-aid, fly mask).',
+    desc: 'Estimate monthly and annual keeping costs — board, feed, farrier, vet, insurance — then pack a first-horse startup kit (halter, grooming, hoof pick, scoop, barn first-aid, fly mask).',
     tag: 'Budgeting',
   },
   {
     href: '/tools/horse-size-for-rider',
     title: 'Horse Size for Rider Calculator',
-    desc: 'What size horse should you ride? Suggests a horse weight range and approximate height band from rider weight, height, and discipline, using the 15–20% carrying guideline — then shop the rider-fit tack set (saddle, pad, girth, stirrups, ASTM/SEI helmet, weight tape). Guidance, not a rule.',
+    desc: 'What size horse should you ride? Suggests a weight range and height band from rider weight, height, and discipline. The 15–20% carrying band is a planning figure, not a published welfare standard.',
     tag: 'Fit',
   },
   {
@@ -181,36 +182,9 @@ export default function ToolsHub() {
         </h2>
 
         <div className="max-w-content-wide mt-6">
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href="/go/amazon-brand/horse+hoof+pick?s=tools-hub" />
         </div>
 
-        {/* Money path — live amazon-brand search hops
-            (laminated horse barn calculator-tools chart /
-            horse stall-door measurement card /
-            equine calculator reference handbook).
-            Educational barn searches only; no Rx /
-            vaccine ASIN hops. ShopCtas hides empty
-            Chewy; never href="#" or PLACEHOLDER.
-            Unused vs #1127
-            laminated+horse+barn+owner+guides+chart /
-            horse+stall+door+owner+guides+card /
-            equine+owner+guides+reference+handbook, #1126
-            laminated+horse+barn+daily+care+chart /
-            horse+stall+door+care+card /
-            equine+husbandry+reference+handbook, #1125
-            laminated+horse+barn+emergency+triage+chart /
-            horse+stall+door+vital+signs+card /
-            equine+health+reference+handbook, #1124
-            laminated+horse+barn+forage+first+chart /
-            horse+stall+door+ration+card /
-            equine+nutrition+reference+handbook, #1123
-            laminated+horse+barn+treat+safety+chart /
-            lidded+horse+barn+treat+tote /
-            horse+barn+treat+prep+shears, tool children
-            horse+weight+tape / horse+measuring+stick /
-            horse+body+condition+score+chart /
-            horse+measuring+tape /
-            livestock+barn+scale. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-content-wide">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
             Shop related supplies
@@ -219,7 +193,7 @@ export default function ToolsHub() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/horse+hoof+pick?s=tools-hub"
-              amazonLabel="Shop on Amazon"
+              amazonLabel="Browse horse hoof picks on Amazon →"
             />
           </div>
         </div>

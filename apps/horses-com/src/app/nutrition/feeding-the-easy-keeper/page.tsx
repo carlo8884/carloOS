@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { AffiliateDisclosure, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ReviewCard, ScoreMethodology, ShopCtas, TableOfContents } from '@carloOS/ui'
+import { ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ReviewCard, ShopCtas, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -95,6 +96,7 @@ export default function EasyKeeperPage() {
               { label: "Equine Metabolic Syndrome", href: "/health/equine-metabolic-syndrome" },
               { label: "Equine Laminitis", href: "/health/laminitis" },
               { label: "Ration Balancers", href: "/nutrition/ration-balancers" },
+              { label: "Daily feed calculator", href: "/tools/horse-feed-calculator" },
               { label: "Body Condition Score Tool", href: "/tools/body-condition-score" },
             ]}
           />
@@ -118,122 +120,33 @@ export default function EasyKeeperPage() {
 
           <h2 id="calories">Controlling Calories and Sugar</h2>
           <ul>
-            <li><strong>Feed by weight, not eye.</strong> Weigh the hay; for weight loss, vets often start around 1.5 percent of ideal bodyweight in forage dry matter, not dropping below about 1.25 percent without supervision. A portable horse hay flake scale is how that restricted flake is weighed at the stall — it is not a digital hanging hay-bale scale (that lives on EMS), not a tabletop digital horse grain scale (that lives on grain), and not a horse feed-scoop scale (those live on the feed calculators).</li>
-            <li><strong>Choose low-sugar forage</strong> and soak hay for 30 to 60 minutes to leach out water-soluble carbohydrate. A horse hay soaking tub is the barn tub that flake sits in, then drains — it is not a hay soaking bag (that lives on heaves), not a horse feed soaking tub (that lives on feeding-senior-horses), and not a lidded 5-gallon feed-soaking pail (that lives on choke).</li>
+            <li><strong>Feed by weight, not eye.</strong> Weigh the hay; for weight loss, vets often start around 1.5 percent of ideal bodyweight in forage dry matter, not dropping below about 1.25 percent without supervision. The <a href="/tools/horse-feed-calculator">daily feed calculator</a> applies that percent to the horse&apos;s weight. A portable horse hay flake scale is how that restricted flake is weighed at the stall — it is not a digital hanging hay-bale scale, not a tabletop digital horse grain scale, and not a horse feed-scoop scale.</li>
+            <li><strong>Choose low-sugar forage</strong> and soak hay for 30 to 60 minutes to leach out water-soluble carbohydrate. A horse hay soaking tub is the barn tub that flake sits in, then drains — it is not a hay soaking bag, not a horse feed soaking tub, and not a lidded 5-gallon feed-soaking pail.</li>
             <li><strong>Cut the grain</strong> -- easy keepers rarely need any concentrate; calorie-dense feeds are the first thing to remove.</li>
-            <li><strong>Restrict grazing</strong> with a grazing muzzle, strip grazing, a dry lot, or turnout at lower-sugar times of day. Grazing muzzles already live on pasture-management and laminitis. Strip-grazing step-in posts already live on EMS.</li>
-            <li><strong>Skip the treats</strong> or use low-sugar options sparingly. Low-sugar horse treats are that occasional reward — they are not a grain hop (those live on grain) and not the low-NSC ration-balancer ReviewCard below.</li>
+            <li><strong>Restrict grazing</strong> with a grazing muzzle, strip grazing, a dry lot, or turnout at lower-sugar times of day.</li>
+            <li><strong>Skip the treats</strong> or use low-sugar options sparingly. Low-sugar horse treats are that occasional reward. They are not the low-NSC ration balancer below.</li>
           </ul>
 
           <h2 id="slow">Slow Feeding</h2>
           <p>The dilemma with easy keepers is that simply feeding less imposes long fasts that cause ulcers, boredom, and stress behaviors, and a stressed horse may even gain weight. Slow feeders -- small-hole hay nets and slow-feed systems -- spread a restricted ration over many hours, so the horse trickle-feeds, keeps its gut healthy and its mind occupied, yet still eats a controlled total. This is the key to humane weight management.</p>
 
           <h2 id="balancer">Balancing Nutrients</h2>
-          <p>A diet of restricted, soaked, low-quality forage can fall short on protein, vitamins, and minerals (soaking also leaches some nutrients). The answer is a low-calorie ration balancer or a vitamin-mineral supplement, which supplies what is missing in a tiny, low-sugar serving without adding meaningful calories. This lets you keep calories low while keeping the diet nutritionally complete. See the ration balancers guide.</p>
+          <p>A diet of restricted, soaked, low-quality forage can fall short on protein, vitamins, and minerals (soaking also leaches some nutrients). The answer is a low-calorie ration balancer or a vitamin-mineral supplement, which supplies what is missing in a tiny, low-sugar serving without adding meaningful calories. This lets you keep calories low while keeping the diet nutritionally complete. See the ration balancers guide. <a href="/reviews/best-equine-supplements">The equine supplement guide</a> compares that ration balancer and vitamin-mineral supplement.</p>
 
           <h2 id="exercise">Exercise and Monitoring</h2>
           <p>When the horse is sound, exercise both burns calories and improves insulin sensitivity, making it a powerful ally in weight management. Combine the dietary plan with regular work suited to the horse&apos;s fitness. Track progress objectively with body condition scoring and a weigh tape rather than the eye, which adapts to a fat horse over time; score regularly with the body-condition tool. Crash dieting is dangerous in horses, so aim for steady, gradual loss under veterinary guidance.</p>
 
           <h2 id="kit">Easy-keeper feeding supplies</h2>
           <p>
-            Everyday physical supplies that match the
-            weigh-the-hay, soak-to-leach-sugar, and
-            skip-the-treats copy on this page — a
-            portable horse hay flake scale so a
-            restricted ration is weighed flake by
-            flake instead of scooped by eye, a horse
-            hay soaking tub so a flake sits in water
-            30 to 60 minutes and drains so
-            water-soluble carbohydrate leaches out,
-            and low-sugar horse treats so the
-            occasional reward is not a starch spike. These are educational barn searches, not a
-            ranked product list, not a substitute for
-            veterinary care, and not a hanging
-            hay-bale-scale hop (that lives on EMS), a
-            tabletop grain-scale hop (that lives on
-            grain), a hay-soaking-bag hop (that lives
-            on heaves), a feed-soaking-tub hop (that
-            lives on feeding-senior-horses), a
-            grazing-muzzle hop (that lives on
-            pasture-management), a nylon-hay-bag hop
-            (that lives on feeding-the-performance-horse),
-            or the small-hole-net / low-NSC-balancer
-            ReviewCards below. This page does
-            not claim hands-on testing. </p>
+            Keep these on hand: a portable horse hay flake scale so a restricted ration is weighed flake by flake instead of scooped by eye, a horse hay soaking tub so a flake sits in water 30 to 60 minutes and drains so water-soluble carbohydrate leaches out, and low-sugar horse treats so the occasional reward is not a starch spike. </p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/portable+horse+hay+flake+scale?s=nutrition-feeding-the-easy-keeper", "/go/amazon-brand/horse+hay+soaking+tub?s=nutrition-feeding-the-easy-keeper", "/go/amazon-brand/low+sugar+horse+treats?s=nutrition-feeding-the-easy-keeper", "/go/amazon-brand/small+hole+slow+feeder+hay+net+horse?s=nutrition-easy-keeper", "/go/amazon-brand/low+nsc+ration+balancer+easy+keeper+horse?s=nutrition-easy-keeper"]} />
 
-          {/* Money path — live amazon-brand search hops
-              (portable horse hay flake scale /
-              horse hay soaking tub /
-              low sugar horse treats).
-              Educational barn searches only; no Rx /
-              vaccine ASIN hops. ShopCtas hides empty
-              Chewy; never href="#" or PLACEHOLDER.
-              Unused vs #1117
-              nylon+horse+hay+bag /
-              horse+feed+grade+vegetable+oil /
-              marked+horse+grain+scoop, #1116
-              horse+chopped+forage /
-              horse+feed+soaking+tub /
-              horse+corner+feeder, #1115
-              equine+toxic+plant+identification+field+guide /
-              horse+pasture+walk+weed+identification+handbook /
-              horse+paddock+tree+guard+fencing, #1114
-              flat+back+horse+water+bucket /
-              heated+horse+water+bucket /
-              electrolyte+for+horses, #1113
-              orchard+grass+hay+horse /
-              alfalfa+hay+bales+horse /
-              timothy+alfalfa+mixed+hay+horse, #1112
-              tabletop+digital+horse+grain+scale /
-              stackable+rubber+horse+feed+tubs /
-              rodent+proof+metal+horse+feed+bin, #1111
-              horse+hay+probe+moisture+tester /
-              equine+hay+core+sampler /
-              wall+mounted+horse+hay+rack, #1110
-              plain+white+horse+salt+block /
-              salt+first+horse+electrolyte+powder /
-              wide+mouth+horse+water+bucket, #1108
-              automatic+horse+waterer, #1105
-              digital+hanging+hay+bale+scale /
-              equine+forage+nsc+hay+test+kit /
-              portable+strip+grazing+step+in+posts,
-              horse+tank+heater
-              (winter-care),
-              color+coded+flat+back+horse+buckets
-              (strangles),
-              horse+electrolytes
-              (emergency / grimace-scale),
-              horse+electric+tape / horse+fence+mesh /
-              horse+electric+rope / electric+fence+tester
-              (fencing-safety),
-              horse+grazing+muzzle / soil+test+kit
-              (pasture-management),
-              portable+horse+paddock+panels
-              (osteoarthritis),
-              small+hole+slow+feeder+hay+net+horse /
-              low+nsc+ration+balancer+easy+keeper+horse
-              (kept on the ReviewCards below),
-              horse+hay+cubes / horse+mash
-              (dental),
-              lidded+5+gallon+feed+soaking+pail /
-              large+smooth+feed+tub+rocks
-              (choke),
-              horse+hay+soaking+bag / horse+hay+steamer
-              (heaves),
-              slow+feeder+hay+net+horse
-              (forage ReviewCard),
-              equine+slow+feeder+hay+box
-              (turnout),
-              molasses+free+beet+pulp+shreds+horse /
-              beet+pulp+pellets+horse+feed
-              (beet-pulp). */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
             </div>
-            
+
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/portable+horse+hay+flake+scale?s=nutrition-feeding-the-easy-keeper"
@@ -251,16 +164,14 @@ export default function EasyKeeperPage() {
           </div>
 
           <h2 id="picks">Product Picks — Slow-Feed and Weight-Management Supports</h2>
-          <p>Two widely-used general management tools for easy keepers: slow-feeder hay nets to extend eating time without long fasts, and a low-calorie ration balancer to fill nutrition gaps in a restricted diet. These are management aids, not treatments for laminitis, metabolic syndrome, or any diagnosed condition. For metabolic horses coordinate the full plan with your veterinarian. This is a documented-spec comparison drawing on standard US equestrian retail; this page does not claim hands-on testing.</p>
+          <p>Two widely-used general management tools for easy keepers: slow-feeder hay nets to extend eating time without long fasts, and a low-calorie ration balancer to fill nutrition gaps in a restricted diet. These are management aids, not treatments for laminitis, metabolic syndrome, or any diagnosed condition. For metabolic horses coordinate the full plan with your veterinarian.</p>
 
-          <ScoreMethodology />
 
           <ReviewCard
             id="slow-feeder-hay-net"
             badge="Slow-Feed Management"
             name="Small-Hole Slow-Feeder Hay Net"
             subtitle="Extends eating time to prevent long fasts on a restricted ration"
-            score={8.7}
             winner
             description={<>
               <p>Small-hole slow-feeder hay nets are one of the most practically useful tools for managing easy keepers. By making the horse work slightly harder for each bite, they can extend a measured hay ration from one or two hours of eating to six or more, preventing the long fasts that cause ulcers and stress behaviors in a calorie-restricted horse. The horse stays occupied and trickle-feeding while total intake remains controlled. A straightforward, inexpensive general management aid.</p>
@@ -273,8 +184,9 @@ export default function EasyKeeperPage() {
             ]}
             pros={['Prevents ulcer-causing long fasts on restriction', 'Extends eating time naturally', 'Inexpensive and durable']}
             cons={['Horse must be introduced gradually', 'Some horses figure out faster methods', 'Hole size selection matters']}
-            price="$20–40"
-            ctaText="Search on Amazon →"
+            price="see current price"
+            priceNote="dated 2026-06-12."
+            ctaText="Search a small-hole slow-feeder hay net on Amazon →"
             ctaHref="/go/amazon-brand/small+hole+slow+feeder+hay+net+horse?s=nutrition-easy-keeper"
             ctaAffiliateProgram="amazon"
             ctaAffiliateProduct="slow-feeder-hay-net"
@@ -285,7 +197,6 @@ export default function EasyKeeperPage() {
             badge="Nutrient Balance on Restriction"
             name="Low-Calorie Ration Balancer"
             subtitle="Fills vitamin and mineral gaps in a low-calorie easy-keeper diet"
-            score={8.6}
             description={<>
               <p>A low-calorie, low-sugar ration balancer supplies protein, vitamins, and minerals in a tiny daily serving -- exactly what an easy keeper on a restricted, soaked, or low-quality hay ration needs to stay nutritionally complete without adding calories. Look for a balancer labeled low-NSC (non-structural carbohydrate) or specifically formulated for easy keepers or metabolic horses. Feed at the label rate; choose appropriately for the forage type. Coordinate with your veterinarian, especially for insulin-dysregulated or PPID horses.</p>
               <p>General nutrition support for: easy keepers and metabolic horses on forage-only or calorie-restricted diets needing balanced micronutrition in a low-calorie serving.</p>
@@ -297,8 +208,9 @@ export default function EasyKeeperPage() {
             ]}
             pros={['Fills nutrition gaps without calories', 'Low sugar and starch for metabolic horses', 'Small serving is economical']}
             cons={['Use under veterinary guidance for metabolic horses', 'Not a calorie source for hard keepers', 'Match to forage type']}
-            price="$30–55 per 25–30 lb"
-            ctaText="Search on Amazon →"
+            price="see current price per 25–30 lb"
+            priceNote="dated 2026-06-12."
+            ctaText="Search a low-NSC easy-keeper ration balancer on Amazon →"
             ctaHref="/go/amazon-brand/low+nsc+ration+balancer+easy+keeper+horse?s=nutrition-easy-keeper"
             ctaAffiliateProgram="amazon"
             ctaAffiliateProduct="low-calorie-balancer"

@@ -1,4 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import {
   buildMetadata,
   ArticleLayout,
@@ -9,8 +11,6 @@ import {
   ArticleByline,
   DropCap,
   ReviewCard,
-  ScoreMethodology,
-  AffiliateDisclosure,
   CrossPortfolioCard,
   ArticleSourcesList,
   ShopCtas,
@@ -69,12 +69,11 @@ const articleSchema = buildArticleSchema({
   citation: SOURCES,
 })
 
-
 const FAQS = [
   {
     question: 'Can ferrets actually be litter-trained?',
     answer:
-      "Yes, but with caveats. A ferret can reliably be trained to use a litter pan around 80-90% of the time in normal conditions. They are not as fastidious as cats; the remaining 10-20% accidents — particularly in unfamiliar rooms, in corners far from a pan, or when startled — are typical and not a training failure. The American Ferret Association and standard exotic-pet behavior references describe this as the realistic ceiling.",
+      "Yes, but with caveats. A ferret can learn to use a litter pan and still miss, especially in an unfamiliar room, in a corner far from a pan, or when startled. This page does not cite a success percent. Misses are part of ferret litter training, not automatic proof the training failed.",
   },
   {
     question: 'How many litter pans do I need?',
@@ -84,7 +83,7 @@ const FAQS = [
   {
     question: 'What kind of litter should I use?',
     answer:
-      "Use paper-pellet litter (Yesterday's News, CareFRESH, or equivalent recycled-paper products) or low-dust wood-pellet (kiln-dried pine pellets sold as horse-stall bedding). Avoid clay, clumping, and cedar-shavings litters. Clay clumps in the ferret's airways and digestive tract if licked off paws; clumping varieties can cause intestinal blockages; cedar contains aromatic oils that are documented respiratory irritants in small mammals.",
+      "Use recycled-paper pellet litter (CareFRESH or an equivalent paper pellet still being made) or low-dust wood-pellet (kiln-dried pine pellets sold as horse-stall bedding). Purina discontinued Yesterday's News on April 20, 2022. Avoid clay, clumping, and cedar-shavings litters. Clay clumps in the ferret's airways and digestive tract if licked off paws; clumping varieties can cause intestinal blockages; cedar contains aromatic oils that are documented respiratory irritants in small mammals.",
   },
   {
     question: 'How long does litter training take?',
@@ -106,7 +105,6 @@ const faqSchema = buildFAQSchema({ questions: FAQS })
 
 const combined = combineSchemas(articleSchema, faqSchema)
 
-
 export default function FerretLitterTrainingPage() {
   return (
     <>
@@ -114,6 +112,14 @@ export default function FerretLitterTrainingPage() {
       <ArticleLayout
         siteId="ferret-com"
         contentType="care"
+        heroHop={
+          <>
+            <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/ferret+litter?s=litter-training" />
+            <div className="mb-4" data-primary-hop="true">
+              <a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" data-shop-placement="hero" href="/go/amazon-brand/ferret+litter?s=litter-training">Browse ferret litter on Amazon →</a>
+            </div>
+          </>
+        }
         hero={{
           title: 'Ferret Litter Training',
           subtitle:
@@ -132,7 +138,7 @@ export default function FerretLitterTrainingPage() {
           <>
             <TableOfContents
               items={[
-                { label: 'TL;DR', href: '#tldr' },
+                { label: '', href: '#tldr' },
                 { label: 'How Ferret Elimination Works', href: '#behavior' },
                 { label: 'Pan Placement Strategy', href: '#placement' },
                 { label: 'Substrate Choice', href: '#substrate' },
@@ -158,7 +164,7 @@ export default function FerretLitterTrainingPage() {
 
           </>
         }
-      
+
         relatedLinks={[
           { title: 'Ferret Care Hub', href: '/care' },
           { title: 'Litter Box Troubleshooting', href: '/behavior/litter-box-troubleshooting' },
@@ -184,8 +190,7 @@ export default function FerretLitterTrainingPage() {
             even the best-trained ferret will look like a training failure.
           </DropCap>
 
-          <h2 id="tldr">TL;DR</h2>
-          <p>
+                    <p>
             Ferrets naturally back into corners to eliminate. Place a
             corner-shaped pan in every corner the ferret uses and the
             training largely happens on its own. Use paper-pellet or
@@ -265,7 +270,7 @@ export default function FerretLitterTrainingPage() {
             occupy more floor area; a small cat pan turned with its short
             side against the wall is a workable alternative. High-walled
             covered pans are not recommended — they trap odor and many
-            ferrets refuse them.
+            ferrets refuse them. <a href="/reviews/best-ferret-litter">The ferret litter guide</a> compares the litter that goes in that corner pan.
           </p>
 
           <CalloutBox variant="tip" title="The corner test">
@@ -285,11 +290,11 @@ export default function FerretLitterTrainingPage() {
           </p>
           <ul>
             <li>
-              <strong>Recycled paper pellet litter</strong> (Yesterday&apos;s
-              News, CareFRESH original, or equivalent). Low dust, low
-              tracking, no clumping. The default recommendation across
-              exotic-pet veterinary practice. Slightly more expensive than
-              wood pellets per pound but very ferret-tolerant.
+              <strong>Recycled paper pellet litter</strong> (CareFRESH
+              original, or an equivalent paper pellet still being made).
+              Purina discontinued Yesterday&apos;s News on April 20, 2022.
+              Low dust, low tracking, no clumping. Slightly more expensive
+              than wood pellets per pound but very ferret-tolerant.
             </li>
             <li>
               <strong>Kiln-dried softwood pellets</strong> — pine pellets
@@ -502,20 +507,7 @@ export default function FerretLitterTrainingPage() {
             </p>
           </CalloutBox>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated ferret corner-pan-map chart /
-              ferret fridge paper-pellet card /
-              mustelid litter-training handbook).
-              Keep existing Marshall + Chewy review hops.
-              Educational kitchen searches only; no Rx /
-              vaccine / aging hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs care-hub /
-              litter-box / bathing kitchen kits. Ferret
-              aging stays held.
-              Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
@@ -524,49 +516,47 @@ export default function FerretLitterTrainingPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/ferret+litter?s=litter-training"
-                amazonLabel="Shop on Amazon"
+                amazonLabel="Browse ferret litter on Amazon →"
               />
           </div>
           </div>
 
           <h2 id="picks">Pan and Litter Picks</h2>
           <p>
-            Two staples that line up with the substrate and pan-shape recommendations above. This is a documented-spec comparison drawing on widely-stocked products in US pet retail; this page does not claim hands-on testing.
+            Two staples that line up with the substrate and pan-shape recommendations above.
           </p>
-          <ScoreMethodology />
-          <ReviewCard
+          <ReviewCard quietUntilTag
             id="marshall-corner-pan"
             badge="Pan Shape Default"
-            name="Marshall Lock-N-Litter Corner Pan"
-            subtitle="Triangular ferret-corner pan, low entry lip, raised splash guard"
-            score={8.8}
+            name="Marshall Lock-On Litter Pan"
+            subtitle="Locks onto a cage. Low entrance. Shape and size count are not on the listing."
             winner
             description={
-              <p>The reference ferret corner pan in US pet retail. Triangular footprint fits the natural corner-elimination behaviour, the entry lip is low enough for unsteady or senior ferrets to step over, and the raised back wall contains splashes. Marshall sells this in a few sizes; the standard size fits most multi-level cages and most floor placements outside the cage.</p>
+              <p>The older Lock-N-Litter product page no longer resolves. This button opens Marshall's current lock-on litter pan search. The current Lock-On Litter Pan page says it locks on to almost any cage, the entrance is low, and it unscrews for cleaning. That page does not say the pan is triangular, does not mention a splash guard, and does not list a size count. Check the listing.</p>
             }
             specs={[
-              { label: 'Shape', value: 'Triangular corner', highlight: 'good' },
-              { label: 'Entry lip', value: 'Low (ferret-appropriate)', highlight: 'good' },
-              { label: 'Back wall', value: 'Raised splash guard', highlight: 'good' },
-              { label: 'Cage attach', value: 'Yes (lock-down lip)' },
-              { label: 'Sizes', value: 'Standard + small' },
+              { label: 'Shape', value: 'Check the listing' },
+              { label: 'Entry', value: 'Low entrance', highlight: 'good' },
+              { label: 'Back wall', value: 'Check the listing' },
+              { label: 'Cage attach', value: 'Locks on to almost any cage', highlight: 'good' },
+              { label: 'Sizes', value: 'Check the listing' },
             ]}
-            pros={['Matches corner-elimination behaviour', 'Low entry for unsteady or senior ferrets', 'Splash containment', 'Multiple sizes', 'Widely stocked in US pet retail']}
+            pros={['Low entrance', 'Locks onto a cage', 'Unscrews for cleaning', 'Check shape and size on the listing']}
             cons={['Splashes can still reach the wall behind a heavily-used pan', 'Plastic surface shows wear in heavy households']}
-            price="$10–18"
-            ctaText="Find Marshall Lock-N-Litter pans"
-            ctaHref="/go/marshall/lock-n-litter-pan?s=care-litter-training"
+            price="see current price"
+            priceNote="dated 2026-05-31."
+            ctaText="Find Marshall lock-on litter pans"
+            ctaHref="/go/marshall/lock+on+litter+pan?s=care-litter-training"
             ctaAffiliateProgram="marshall"
-            ctaAffiliateProduct="lock-n-litter-pan"
+            ctaAffiliateProduct="lock+on+litter+pan"
           />
-          <ReviewCard
-            id="yesterdays-news"
+          <ReviewCard quietUntilTag
+            id="recycled-paper-pellet"
             badge="Substrate Default"
-            name="Yesterday's News Recycled Paper-Pellet Litter"
+            name="Recycled paper-pellet litter"
             subtitle="Low-dust, non-clumping, non-aromatic paper-pellet substrate"
-            score={9.0}
             description={
-              <p>The default substrate recommended across exotic-pet veterinary practice and ferret-keeper communities. Recycled paper pellets do not produce respiratory-irritant dust, do not clump on contact with moisture (no GI obstruction risk if ingested), and are not aromatic (no phenolic concerns). Slightly more expensive per pound than kiln-dried wood pellets, but ferret tolerance and household odour control are both notably better.</p>
+              <p>Recycled paper pellets do not produce respiratory-irritant dust, do not clump on contact with moisture (no GI obstruction risk if ingested), and are not aromatic (no phenolic concerns). Purina discontinued Yesterday&apos;s News on April 20, 2022. This search is for a recycled paper pellet still being made.</p>
             }
             specs={[
               { label: 'Material', value: 'Recycled paper pellet', highlight: 'good' },
@@ -577,13 +567,15 @@ export default function FerretLitterTrainingPage() {
             ]}
             pros={['Lowest dust profile in widely-stocked litters', 'No ingestion-obstruction risk', 'No respiratory-irritant aromatics', 'Strong odour control', 'Available in most US chain pet retail']}
             cons={['Pricier per pound than kiln-dried wood pellet', 'Larger bag is heavy to carry']}
-            price="$12–25 / 15-30 lb"
-            ctaText="Find Yesterday's News paper-pellet litter"
-            ctaHref="/go/chewy-brand/yesterdays+news+paper+pellet+litter?s=care-litter-training"
+            price="see current price / 15-30 lb"
+            priceNote="dated 2026-05-31."
+            ctaText="Open the recycled paper-pellet search."
+            ctaHref="/go/chewy-brand/recycled+paper+pellet+litter+non+clumping?s=care-litter-training"
             ctaAffiliateProgram="chewy-brand"
-            ctaAffiliateProduct="yesterdays+news+paper+pellet+litter"
+            ctaAffiliateProduct="recycled+paper+pellet+litter+non+clumping"
           />
 
+          <p>The litters in this routine are compared in the <Link href="/reviews/best-ferret-litter">ferret litter review</Link>.</p>
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
 

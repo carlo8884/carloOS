@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -7,7 +8,6 @@ import {
   TableOfContents,
   CrossPortfolioCard,
   ArticleByline,
-  AffiliateDisclosure,
   ShopCtas,
   JourneyNext,
 } from '@carloOS/ui'
@@ -33,11 +33,11 @@ export default function LooseLeashPage() {
         contentType="training"
         hero={{ title: 'Loose Leash Walking', subtitle: 'Pulling on leash is one of the most common reasons dogs are surrendered. It is also one of the most fixable. The method that works is simple: forward motion only happens when the leash is loose.', category: 'Dog Training', authorName: 'Dog.com Editorial', authorAvatar: '🐕', publishedAt: 'May 2025', readTime: '9 min' }}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Training', href: '/training' }, { name: 'Loose Leash Walking', href: '/training/loose-leash-walking' }]}
-        relatedLinks={[{ title: 'Dog Training Hub', href: '/training', category: 'Hub' }, { title: 'Leash Reactivity', href: '/training/leash-reactivity', category: 'Training' }, { title: 'Basic Dog Commands', href: '/training/basic-commands', category: 'Training' }, { title: 'Best Dog Harnesses', href: '/reviews/best-dog-harnesses', category: 'Reviews' }]}
+        relatedLinks={[{ title: 'Dog Training Hub', href: '/training', category: 'Hub' }, { title: 'Leash Reactivity', href: '/training/leash-reactivity', category: 'Training' }, { title: 'Basic Dog Commands', href: '/training/basic-commands', category: 'Training' }, { title: 'Best Dog Harnesses', href: '/reviews/best-dog-harnesses', category: 'Reviews' }, { title: 'Front-clip vs back-clip', href: '/reviews/front-clip-vs-back-clip-guide', category: 'Reviews' }]}
         schema={schema}
         sidebar={<>
           <TableOfContents items={[{ label: 'Why Dogs Pull', href: '#why' }, { label: 'Stop-and-Wait Method', href: '#stop' }, { label: '180-Degree Turn', href: '#turn' }, { label: 'Equipment', href: '#equipment' }, { label: 'Common Mistakes', href: '#mistakes' }]} />
-          <RelatedLinks title="Related Guides" links={[{ label: 'Leash Reactivity', href: '/training/leash-reactivity' }, { label: 'Best Dog Harnesses', href: '/reviews/best-dog-harnesses' }, { label: 'Basic Commands', href: '/training/basic-commands' }]} />
+          <RelatedLinks title="Related Guides" links={[{ label: 'Leash Reactivity', href: '/training/leash-reactivity' }, { label: 'Front-clip vs back-clip', href: '/reviews/front-clip-vs-back-clip-guide' }, { label: 'Best Dog Harnesses', href: '/reviews/best-dog-harnesses' }, { label: 'Basic Commands', href: '/training/basic-commands' }]} />
           <CrossPortfolioCard currentSite="dog-com" contentType="training" variant="sidebar" />
 
         </>}
@@ -64,24 +64,24 @@ export default function LooseLeashPage() {
             siteId="dog-com"
             nextHref="/tools/harness-collar-size"
             nextLabel="Size the front-clip harness before the next walk"
-            nextBlurb="Stop-and-wait only works if the leash is loose when the dog is beside you. Size the harness first, then use a front-clip so a pull turns the dog sideways instead of dragging you forward. The hop below is the same front-clip harness search already on this page."
+            nextBlurb="Stop-and-wait only works if the leash is loose when the dog is beside you. Size the harness first, then use a front-clip so a pull turns the dog sideways instead of dragging you forward. The button below opens the same front-clip harness search on Amazon."
             resourceHref="/go/amazon-brand/front+clip+no+pull+dog+harness?s=training-loose-leash-walking"
-            resourceLabel="Browse no-pull harnesses on Amazon →"
+            resourceLabel="Browse front-clip no-pull harnesses on Amazon →"
           />
 
-          {/* Money path — live amazon-brand search hops (loose-leash kit).
-              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-              Category searches only — not a ranked list. */}
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          {/* Shop note — live amazon-brand search buttons (loose-leash kit).
+              ShopCtas hides empty Chewy; never href="#" or an empty link.
+              Amazon searches only — not a ranked list. */}
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/front+clip+no+pull+dog+harness?s=training-loose-leash-walking", "/go/amazon-brand/6+ft+dog+leash?s=training-loose-leash-walking", "/go/amazon-brand/dog+training+treat+pouch+belt+clip?s=training-loose-leash-walking", "/go/amazon-brand/puppy+training+treats?s=training-loose-leash-walking"]} />
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
-              Shop a loose-leash kit
+              Shop these supplies
             </div>
             
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/front+clip+no+pull+dog+harness?s=training-loose-leash-walking"
-                amazonLabel="Browse no-pull harnesses on Amazon →"
+                amazonLabel="Browse front-clip no-pull harnesses on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/6+ft+dog+leash?s=training-loose-leash-walking"
@@ -89,7 +89,7 @@ export default function LooseLeashPage() {
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/dog+training+treat+pouch+belt+clip?s=training-loose-leash-walking"
-                amazonLabel="Browse treat pouches on Amazon →"
+                amazonLabel="Browse belt-clip treat pouches on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/puppy+training+treats?s=training-loose-leash-walking"
@@ -105,7 +105,11 @@ export default function LooseLeashPage() {
               <Link href="/reviews/best-dog-harnesses" className="text-brand-primary hover:underline">
                 Best Dog Harnesses 2026
               </Link>
-              {' '}guide for side-by-side comparisons.
+              {' '}guide. The{' '}
+              <Link href="/reviews/front-clip-vs-back-clip-guide" className="text-brand-primary hover:underline">
+                front-clip versus back-clip guide
+              </Link>
+              {' '}says front-clip only when the dog pulls, and a back-clip when the dog already walks well.
             </p>
           </div>
 

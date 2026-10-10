@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { StockImage,
+import { ShopCtas, StockImage,
   buildMetadata,
   ArticleLayout,
   RelatedLinks, CrossPortfolioCard,
@@ -8,7 +9,6 @@ import { StockImage,
   buildArticleSchema,
   buildFAQSchema,
   combineSchemas,
-  AffiliateDisclosure,
   ArticleByline,
   ArticleSourcesList,
 } from '@carloOS/ui'
@@ -75,9 +75,9 @@ const FAQS = [
   {
     question: 'What water do swordtails need?',
     answer:
-      'Hard, slightly alkaline water. Target GH 10–25 dGH, KH 6–18 dKH, pH 7.2–8.4, temperature 70–78°F. They do badly in the soft, acidic water that suits tetras and discus. Most municipal hard-water supplies in the US Southwest and Midwest are already in range without remineralization.',
+      'Hard, slightly alkaline water. Target GH 10–25 dGH, KH 6–18 dKH, pH 7.2–8.4, temperature 71–83°F (https://www.fishbase.se/summary/Xiphophorus-hellerii.html). They do badly in the soft, acidic water that suits tetras and discus. Most municipal hard-water supplies in the US Southwest and Midwest are already in range without remineralization.',
     answerText:
-      'Hard, slightly alkaline water. GH 10-25, KH 6-18, pH 7.2-8.4, temperature 70-78F. They do badly in soft acidic water.',
+      'Hard, slightly alkaline water. GH 10-25, KH 6-18, pH 7.2-8.4, temperature 71–83°F (https://www.fishbase.se/summary/Xiphophorus-hellerii.html). They do badly in soft acidic water.',
   },
   {
     question: 'Will swordtails eat their own fry?',
@@ -121,7 +121,7 @@ export default function SwordtailPage() {
           { name: 'Species', href: '/species' },
           { name: 'Swordtail', href: '/species/swordtail-fish' },
         ]}
-        relatedLinks={[{ title: 'Species Hub', href: '/species', category: 'Species' }, { title: 'Molly Fish', href: '/species/molly-fish', category: 'Species Guide' }, { title: 'Platy Fish', href: '/species/platy-fish', category: 'Species Guide' }, { title: 'Guppy', href: '/species/guppy', category: 'Species Guide' }]}
+        relatedLinks={[{ title: 'Species Hub', href: '/species', category: 'Species' }, { title: 'Molly Fish', href: '/species/molly-fish', category: 'Species Guide' }, { title: 'Platy Fish', href: '/species/platy-fish', category: 'Species Guide' }, { title: 'Guppy', href: '/species/guppy', category: 'Species Guide' }, { title: 'Tank Volume Calculator', href: '/tools/aquarium-volume-calculator', category: 'Tool' }]}
         sidebar={
           <>
             <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -131,7 +131,7 @@ export default function SwordtailPage() {
               {[
                 ['Scientific name', 'Xiphophorus hellerii'],
                 ['Adult size', '4–5 in. (males with sword)'],
-                ['Temperature', '70–78°F'],
+                ['Temperature', '71–83°F (https://www.fishbase.se/summary/Xiphophorus-hellerii.html)'],
                 ['pH', '7.2–8.4 — hard alkaline'],
                 ['GH / KH', '10–25 / 6–18 dGH/dKH'],
                 ['Diet', 'Omnivore — flake + greens'],
@@ -144,7 +144,7 @@ export default function SwordtailPage() {
                   className="flex justify-between py-1.5 border-b border-brand-border text-xs last:border-0"
                 >
                   <span className="text-brand-text-light">{k}</span>
-                  <span className="font-bold text-brand-dark text-right max-w-[55%]">{v}</span>
+                  <span className="font-bold text-brand-dark text-right max-w-[55%] break-all">{v}</span>
                 </div>
               ))}
             </div>
@@ -154,6 +154,7 @@ export default function SwordtailPage() {
                 { label: 'Platy Fish', href: '/species/platy-fish' },
                 { label: 'Guppy Care', href: '/species/guppy' },
                 { label: 'Molly Fish', href: '/species/molly-fish' },
+                { label: 'Tank Volume Calculator', href: '/tools/aquarium-volume-calculator' },
                 { label: 'Water Chemistry', href: '/setup/water-chemistry-guide' },
               ]}
             />
@@ -263,7 +264,7 @@ export default function SwordtailPage() {
           <h2>Water and Tank Setup</h2>
           <p>
             Target hard, alkaline water: GH 10–25 dGH, KH 6–18 dKH, pH 7.2–8.4, temperature
-            70–78°F. Most US municipal water in the Southwest, Midwest, and Texas Hill Country
+            71–83°F (<a className="break-all" href="https://www.fishbase.se/summary/Xiphophorus-hellerii.html">https://www.fishbase.se/summary/Xiphophorus-hellerii.html</a>). Most US municipal water in the Southwest, Midwest, and Texas Hill Country
             falls into that range without intervention. In soft-water regions, remineralize RO
             water with a livebearer-targeted salt blend (Seachem Equilibrium plus a KH source
             such as Seachem Alkaline Buffer) or add aragonite sand or crushed coral to the filter.
@@ -271,7 +272,9 @@ export default function SwordtailPage() {
           <p>
             Tank size: 30 US gallons is the working minimum for a trio (one male, two females).
             Larger groups need more horizontal swimming length than depth — 48-inch tanks
-            (40-gallon breeder, 55-gallon) suit them better than 30-inch cubes. Plant heavily on
+            (40-gallon breeder, 55-gallon) suit them better than 30-inch cubes. The{' '}
+            <a href="/tools/aquarium-volume-calculator" className="text-brand-primary hover:underline">tank volume calculator</a>{' '}
+            turns those length, width, and height measurements into gallons. Plant heavily on
             the sides and back, leave the middle open for swimming, and float water sprite,
             frogbit, or hornwort across the top to give fry a survival corridor.
           </p>
@@ -362,12 +365,12 @@ export default function SwordtailPage() {
             includeSchema={false}
             allowMultiple
           />
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        <HopDisclosure siteId="fish-com" href="/go/amazon-brand/swordtail%20fish%20tank%20setup?s=species-swordtail-fish" />
           <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Swordtail Fish — Tank Setup</div>
-          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for swordtail fish care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
+          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for swordtail fish care.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
-            <a href="/go/amazon-brand/swordtail%20fish%20tank%20setup?s=species-swordtail-fish" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop Swordtail Fish Setup on Amazon →</a>
+            <ShopCtas amazonHref="/go/amazon-brand/swordtail%20fish%20tank%20setup?s=species-swordtail-fish" amazonLabel="Browse swordtail fish tank setups on Amazon →" />
           </div>
         </div>
 

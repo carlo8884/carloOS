@@ -222,8 +222,16 @@ export default function Calculator() {
             <ResultMeaning>
               This setting is the most urgent match among the signs you selected. It is a triage aid, not a diagnosis.
             </ResultMeaning>
-            <ResultPick siteId="vets-co" pick={careSettingPick(setting)} />
+            {!careSettingPick(setting).href.startsWith('/go/') ? (
+              <ResultPick siteId="vets-co" pick={careSettingPick(setting)} />
+            ) : null}
 
+            <Link
+              href="/guides/when-to-go-to-the-vet"
+              className="mt-4 inline-block max-w-full font-semibold text-brand-primary underline underline-offset-2"
+            >
+              Watch vs same-day vs emergency
+            </Link>
             {setting === 'er' ? (
               <div className="mt-4 flex flex-col gap-2">
                 <Link

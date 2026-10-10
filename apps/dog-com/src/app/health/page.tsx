@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -10,7 +11,6 @@ import {
   CrossPortfolioCard,
   FAQAccordion,
   DirectoryPlacesCta,
-  AffiliateDisclosure,
   ShopCtas,
   JourneyNext,
   type FAQItem,
@@ -317,7 +317,7 @@ export default function DogHealthHubPage() {
             siteId="dog-com"
             nextHref="/tools/is-this-a-dog-emergency"
             nextLabel="If a sign is happening now, run the emergency sign-list"
-            nextBlurb="The table is the library order — ER now, same-day, vet visit, or monitor. If a worrying sign is in front of you, skip the browse and use the emergency sign-list. The hop below is the same first-aid kit search already on this page, for packing on a calm day."
+            nextBlurb="The table is the library order — ER now, same-day, vet visit, or monitor. If a worrying sign is in front of you, skip the browse and use the emergency sign-list. The button below opens the same first-aid kit search on Amazon, for packing on a calm day."
             resourceHref="/go/amazon-brand/pet+first+aid+kit?s=health-hub"
             resourceLabel="Browse pet first-aid kits on Amazon →"
           />
@@ -344,10 +344,10 @@ export default function DogHealthHubPage() {
           </div>
         ))}
 
-        {/* Money path — live amazon-brand search hops (health-library kit).
-            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-            Category searches only — not a ranked list. No medication hops. */}
-        <AffiliateDisclosure variant="inline" siteId="dog-com" />
+        {/* Shop note — live amazon-brand search buttons (health-library kit).
+            ShopCtas hides empty Chewy; never href="#" or an empty link.
+            Amazon searches only — not a ranked list. No medication buttons. */}
+        <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/pet+first+aid+kit?s=health-hub", "/go/amazon-brand/digital+pet+thermometer?s=health-hub", "/go/amazon-brand/soft+dog+carrier?s=health-hub", "/go/amazon-brand/dental+chews+dog?s=health-hub", "/go/amazon-brand/orthopedic+dog+bed?s=health-hub"]} />
         <div className="mt-6 p-5 border border-brand-border rounded-xl bg-brand-surface max-w-content-wide">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
             Shop dog health gear
@@ -371,7 +371,7 @@ export default function DogHealthHubPage() {
             >
               senior dog care guide
             </Link>
-            . Same first-aid-kit, thermometer, and carrier hops used on the{' '}
+            . The same first-aid-kit, thermometer, and carrier buttons are on the{' '}
             <Link
               href="/tools/is-this-a-dog-emergency"
               className="text-brand-primary no-underline hover:underline"
@@ -385,24 +385,22 @@ export default function DogHealthHubPage() {
             >
               first-aid kit guide
             </Link>
-            . Same dental-chew hop used on the{' '}
+            . The same dental-chew button is on the{' '}
             <Link
               href="/tools/dog-age-calculator"
               className="text-brand-primary no-underline hover:underline"
             >
               dog age calculator
             </Link>
-            . Same orthopedic-bed hop used on the{' '}
+            . The same orthopedic-bed button is on the{' '}
             <Link
               href="/tools/dog-grimace-scale"
               className="text-brand-primary no-underline hover:underline"
             >
               dog grimace scale
             </Link>
-            . The hops below are not a ranked product list, they are not
-            medications, and they do not treat, reverse, or cure disease.
-            Dog.com earns a commission on qualifying purchases at no extra
-            cost to you.</p>
+            . The buttons below are not a ranked product list, they are not
+            medications, and they do not treat, reverse, or cure disease.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/pet+first+aid+kit?s=health-hub"

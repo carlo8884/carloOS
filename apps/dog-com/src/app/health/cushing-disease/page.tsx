@@ -1,13 +1,13 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfContents, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfContents, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 
 const SOURCES = [
-  { label: 'Merck Veterinary Manual: Hyperadrenocorticism (Cushing\'s Disease) in Dogs', url: 'https://www.merckvetmanual.com/endocrine-system/the-adrenal-glands/hyperadrenocorticism-in-dogs', publisher: 'Merck Vet Manual' },
+  { label: 'Merck Veterinary Manual: Hyperadrenocorticism (Cushing\'s Disease) in Dogs', url: 'https://www.merckvetmanual.com/endocrine-system/the-adrenal-glands/cushing-syndrome-hyperadrenocorticism-in-animals', publisher: 'Merck Vet Manual' },
   { label: 'ACVIM: Diagnosis and Treatment of Hyperadrenocorticism in Dogs — Consensus Guidelines', url: 'https://www.acvim.org', publisher: 'ACVIM' },
-  { label: 'AVMA: Cushing\'s Disease (Hyperadrenocorticism) in Dogs', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/common-health-conditions-dogs', publisher: 'AVMA' },
   { label: 'Feldman EC et al. Use of low- and high-dose dexamethasone tests for distinguishing pituitary-dependent from adrenal tumor hyperadrenocorticism in dogs. J Am Vet Med Assoc. 1996;209(4):772-775.', publisher: 'JAVMA' },
 ]
 
@@ -47,7 +47,8 @@ export default function CushingDiseasePage() {
           <div className="bg-brand-dark rounded-lg p-5 mb-4">
             <div className="text-xs uppercase tracking-wide text-brand-primary mb-1 font-bold">Cushing&apos;s + Insurance</div>
             <h3 className="font-display text-base font-bold text-brand-white mb-2">Cortisol control is lifelong</h3>
-            <p className="text-xs text-white/60 mb-3 leading-relaxed">Cushing&apos;s management — trilostane/mitotane, ACTH-stim recheck panels, endocrinology consults — typically runs $3,000-$8,000+ over the dog&apos;s lifetime. Insurance covers it if enrolled before diagnosis.</p>
+            <p className="text-xs text-white/60 mb-3 leading-relaxed">Typical range, not a quote. Costs vary by clinic and region. Ask your veterinarian for an estimate.</p>
+            <p className="text-xs text-white/60 mb-3 leading-relaxed">Cushing&apos;s management — trilostane or mitotane, ACTH-stim rechecks, and endocrinology consults — is often a large lifelong bill. Ask your veterinarian for an estimate. Insurance covers it if enrolled before diagnosis.</p>
             <a href={crossSiteHref('vets-co', '/reviews/best-pet-insurance')} className="inline-block text-xs font-bold text-brand-primary hover:underline">Compare pet insurance →</a>
           </div>
           <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
@@ -80,38 +81,16 @@ export default function CushingDiseasePage() {
 
           <h2 id="kit">A Simple Cushing&apos;s Thirst-and-Comfort Kit</h2>
           <p>
-            Three everyday physical supplies match the
-            thirst, nighttime-urination, and panting copy
-            above: a gallon gravity dog waterer so a dog
-            with polyuria/polydipsia (drinking and
-            urinating dramatically more, sometimes
-            needing to go outside multiple times at
-            night) has a refill that lasts overnight, extra-large
-            disposable dog pee pads so those nighttime
-            trips have an indoor backup when the door
-            cannot open fast enough, and a dog cooling
-            bandana so excessive panting has a physical
-            cool-down layer instead of a cooling mat or
-            cooling vest already used on other pages. These are household comfort and monitoring
-            tools, not treatments. They do not diagnose
-            Cushing&apos;s, they do not replace UCCR / LDDS
-            / ACTH stimulation testing, they do not set
-            or adjust a trilostane dose, they do not
-            replace 10–14-day and every-3-month ACTH
-            monitoring, and they are not Vetoryl,
-            Lysodren, mitotane, prednisone, insulin, or
-            a ranked endocrine product list. This
-            page does not hop medications. This page
-            does not claim hands-on testing. </p>
+            Keep these on hand: gallon gravity dog waterer, extra large disposable dog pee pads, and dog cooling bandana. These are household comfort and monitoring tools, not treatments. They do not diagnose Cushing&apos;s, they do not replace UCCR / LDDS / ACTH stimulation testing, they do not set or adjust a trilostane dose, they do not replace 10–14-day and every-3-month ACTH monitoring, and they are not Vetoryl, Lysodren, mitotane, prednisone, insulin, or a ranked endocrine product list. </p>
 
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/gallon+gravity+dog+waterer?s=health-cushing-disease", "/go/amazon-brand/extra+large+disposable+dog+pee+pads?s=health-cushing-disease", "/go/amazon-brand/dog+cooling+bandana?s=health-cushing-disease"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (gallon gravity dog waterer / extra-large
               disposable dog pee pads / dog cooling
               bandana). ShopCtas hides empty Chewy;
-              never href="#" or PLACEHOLDER.
-              Category searches only — unused vs #1051
+              never href="#" or an empty link.
+              Amazon searches only — unused vs #1051
               self-warming dog mat / fleece dog sweater
               / dog slicker brush, #1050 dog lymph-node
               anatomy chart / foam dog stairs / dog ear
@@ -132,8 +111,8 @@ export default function CushingDiseasePage() {
               dog+cooling+vest, and
               soft+dog+carrier / soft+pet+carrier.
               Trilostane, Vetoryl, Lysodren, mitotane,
-              prednisone, insulin, and Rx ASINs are not
-              shoppable hops. */}
+              prednisone, insulin, and prescription brands are not
+              shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

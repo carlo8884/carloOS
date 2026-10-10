@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -5,7 +6,7 @@ import {
   EmailCapture,
   FAQAccordion,
   buildBreadcrumbSchema,
-  AffiliateDisclosure,
+  PrimaryHop,
   ShopCtas,
   PriceAsOf
 } from '@carloOS/ui'
@@ -61,7 +62,7 @@ const FAQS = [
   },
   {
     question: 'Are there affiliate links?',
-    answer: 'Amazon category searches for kit items sit on this web page below the triage content and are disclosed inline. There is no emailed card or course with affiliate links.',
+    answer: 'Amazon searches for kit items sit on this web page below the triage content and are disclosed inline. There is no emailed card or course with affiliate links.',
   },
   {
     question: 'Does this work for puppies and kittens?',
@@ -185,8 +186,12 @@ export default function EmergencyTriageCardPage() {
             Pet Emergency<br />
             <span className="text-brand-primary">Triage Guide.</span>
           </h1>
-          <PriceAsOf date="2026-05-28" tone="dark" />
-          <p className="text-lg font-light text-white/65 leading-relaxed max-w-xl mb-8">When a pet symptom is ER-immediate, when it
+          <div data-fold="offer">
+            <PrimaryHop href="/go/amazon-brand/pet+first+aid+kit?s=emergency-triage" label="Search Amazon for a pet first-aid kit" />
+            <HopDisclosure tone="on-dark" siteId="vets-co" href="/go/amazon-brand/pet+first+aid+kit?s=emergency-triage" />
+          </div>
+          <PriceAsOf date="2026-10-04" tone="dark" />
+          <p className="text-lg font-light text-white/65 leading-relaxed max-w-xl mb-8">This page is not a veterinarian. If your pet may be in danger, contact a vet. When a pet symptom is ER-immediate, when it
             is same-day vet, and when it is safe to monitor at home. Species-specific vitals for
             dogs, cats, ferrets, and rabbits. Built from AVMA, AAHA, and VECCS guidance. No email signup required.</p>
           <ul className="text-sm text-white/70 space-y-2 mb-6 max-w-md">
@@ -313,6 +318,7 @@ export default function EmergencyTriageCardPage() {
           <h2 className="font-display font-bold text-brand-dark text-3xl tracking-tight mb-3">
             Common owner over-worry scenarios
           </h2>
+          <p>Those figures are typical US ranges dated 2026-10-04.</p>
           <p className="text-base text-brand-text-mid max-w-2xl leading-relaxed mb-10">
             A reasonable ER visit in the US runs $400–$1,200 before treatment. The list below
             covers things that look frightening but, on their own, almost never need an ER trip.
@@ -333,7 +339,7 @@ export default function EmergencyTriageCardPage() {
             None of the above is medical advice for your specific animal. When in doubt, call —
             ASPCA Animal Poison Control (888-426-4435) and Pet Poison Helpline (855-764-7661) are
             both available 24/7 for a fee, and a 10-minute call is dramatically cheaper than a
-            $900 unnecessary ER visit.
+            $700–$1,100 unnecessary ER visit.
           </p>
         </div>
       </section>
@@ -348,6 +354,7 @@ export default function EmergencyTriageCardPage() {
           <h2 className="font-display font-bold text-brand-dark text-3xl tracking-tight mb-3">
             Build the kit once. Replace expired items every 12 months.
           </h2>
+          <p>Those figures are typical US ranges dated 2026-10-04.</p>
           <p className="text-base text-brand-text-mid max-w-2xl leading-relaxed mb-10">
             A pet first-aid kit costs $40–$70 to assemble from scratch and is the cheapest
             emergency-prep purchase you will ever make. Items below align with AVMA pet first-aid
@@ -386,16 +393,16 @@ export default function EmergencyTriageCardPage() {
         </div>
       </section>
 
-      {/* Money path — live amazon-brand search hops (first-aid kit items on this page).
-          ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-          Category searches only — not a ranked list. Hops stay on this web page;
+      {/* Shop note — live amazon-brand search buttons (first-aid kit items on this page).
+          ShopCtas hides empty Chewy; never href="#" or an empty link.
+          Amazon searches only — not a ranked list. Hops stay on this web page;
           the printable card body has no affiliate links. */}
       <section id="pet-first-aid-kit-shop" className="bg-brand-surface px-container-sm sm:px-container py-section">
         <div className="max-w-2xl mx-auto">
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/pet+first+aid+kit?s=emergency-triage", "/go/amazon-brand/digital+pet+thermometer?s=emergency-triage", "/go/amazon-brand/styptic+powder?s=emergency-triage", "/go/amazon-brand/tick+removal+tool?s=emergency-triage", "/go/amazon-brand/vetrap+cohesive+bandage?s=emergency-triage"]} />
           <div className="mt-4 rounded-xl border border-brand-border bg-brand-white p-5">
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Shop the kit items
+              Shop these supplies
             </div>
             
             <div className="flex flex-col gap-3">
@@ -475,7 +482,8 @@ This is a triage aid, not a diagnosis. When unsure, call your vet or the nearest
           <h2 className="font-display font-bold text-brand-dark text-3xl tracking-tight mb-8">
             How this works
           </h2>
-          <FAQAccordion items={FAQS} />
+          <p>Those figures are typical US ranges dated 2026-10-04.</p>
+          <FAQAccordion items={FAQS} includeSchema={false} />
 
           <div className="mt-12 pt-8 border-t border-brand-border text-sm text-brand-text-mid">
             <p className="mb-2">Related reference on Vets.co:</p>

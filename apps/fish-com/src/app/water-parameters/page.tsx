@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../components/HopDisclosure'
 /**
  * /water-parameters — Fish.com reference authority hub.
  *
@@ -25,7 +26,6 @@ import {
   buildBreadcrumbSchema,
   FAQAccordion,
   CalloutBox,
-  AffiliateDisclosure,
   ShopCtas,
   JourneyNext,
 } from '@carloOS/ui'
@@ -271,15 +271,15 @@ export default function WaterParametersHubPage() {
           siteId="fish-com"
           nextHref="/tools/water-change-calculator"
           nextLabel="Turn this week's nitrate into gallons to remove"
-          nextBlurb="The table is the weekly test order. When nitrate is high, the water-change calculator turns tank gallons and percent into a measurable pull. The hop below is the same API Master Test Kit search already on this page."
+          nextBlurb="The table is the weekly test order. When nitrate is high, the water-change calculator turns tank gallons and percent into a measurable pull. The button below opens the same API Master Test Kit search on Amazon."
           resourceHref="/go/amazon-brand/api+freshwater+master+test+kit?s=water-parameters"
           resourceLabel="Browse API Master Test Kit on Amazon →"
         />
 
-        {/* Money path — live amazon-brand search hops (test + water-change kit).
-            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-            Category searches only — not a ranked list. */}
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        {/* Shop note — live amazon-brand search buttons (test + water-change kit).
+            ShopCtas hides empty Chewy; never href="#" or an empty link.
+            Amazon searches only — not a ranked list. */}
+        <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/api+freshwater+master+test+kit?s=water-parameters", "/go/amazon-brand/seachem+prime+water+conditioner?s=water-parameters", "/go/amazon-brand/aquarium+gravel+vacuum+siphon?s=water-parameters", "/go/amazon-brand/python+water+changer?s=water-parameters", "/go/amazon-brand/aquarium+digital+thermometer?s=water-parameters"]} />
         <div className="mt-6 p-5 border border-brand-border rounded-xl bg-brand-surface">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
             Shop water-parameter testing gear
@@ -289,7 +289,7 @@ export default function WaterParametersHubPage() {
             Seachem Prime (or another dechlorinator) at every fill, a gravel
             vacuum or Python-style changer for the weekly water change that
             exports nitrate, and a separate digital thermometer so temperature
-            is not just the heater dial. Same test-kit hop used on the{' '}
+            is not just the heater dial. The same test-kit button is on the{' '}
             <Link
               href="/tools/stocking-calculator"
               className="text-brand-primary no-underline hover:underline"
@@ -303,14 +303,14 @@ export default function WaterParametersHubPage() {
             >
               water-test kit review
             </Link>
-            . Same Prime, gravel-vacuum, and Python hops used on the{' '}
+            . The same Prime, gravel-vacuum, and Python buttons are on the{' '}
             <Link
               href="/tools/water-change-calculator"
               className="text-brand-primary no-underline hover:underline"
             >
               water-change calculator
             </Link>
-            . Same thermometer hop used on the{' '}
+            . The same thermometer button is on the{' '}
             <Link href="/setup" className="text-brand-primary no-underline hover:underline">
               aquarium setup guide
             </Link>
@@ -325,8 +325,7 @@ export default function WaterParametersHubPage() {
             >
               water-test kit reviews
             </Link>
-            . Fish.com earns a commission on qualifying purchases at no extra
-            cost to you.</p>
+            .</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/api+freshwater+master+test+kit?s=water-parameters"
@@ -334,11 +333,11 @@ export default function WaterParametersHubPage() {
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/seachem+prime+water+conditioner?s=water-parameters"
-              amazonLabel="Browse dechlorinator / Seachem Prime on Amazon →"
+              amazonLabel="Browse Seachem Prime water conditioner on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+gravel+vacuum+siphon?s=water-parameters"
-              amazonLabel="Browse gravel vacuums on Amazon →"
+              amazonLabel="Browse gravel vacuum siphons on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/python+water+changer?s=water-parameters"
@@ -560,7 +559,7 @@ export default function WaterParametersHubPage() {
           <h2 className="font-display font-bold text-brand-dark text-2xl mb-5">
             Water-parameter FAQ
           </h2>
-          <FAQAccordion items={FAQ_ITEMS} />
+          <FAQAccordion items={FAQ_ITEMS} includeSchema={false} />
         </div>
       </div>
 

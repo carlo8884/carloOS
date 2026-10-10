@@ -1,6 +1,7 @@
+import { HopDisclosure } from '../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, ShopCtas, CrossPortfolioCard, DirectoryPlacesCta } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, ShopCtas, CrossPortfolioCard, DirectoryPlacesCta } from '@carloOS/ui'
 import listings from '../../data/directory-listings.json'
 import { PremiumMasthead } from '../../components/PremiumMasthead'
 
@@ -158,19 +159,9 @@ export default function TackHubPage() {
         </h2>
 
         <div className="max-w-3xl mt-6">
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href="/go/amazon-brand/horse+snaffle+bit?s=tack-hub" />
         </div>
 
-        {/* Money path — live amazon-brand search hops
-            (laminated horse barn tack section-map
-            chart / horse stall-door tack fit card /
-            equine tack reference handbook).
-            Educational barn searches only; no Rx /
-            vaccine / child-SKU hops.
-            ShopCtas hides empty Chewy; never href="#"
-            or PLACEHOLDER. Unused vs tools / reviews /
-            supplements / nutrition / care kitchen kits
-            and child snaffle / helmet / girth hops. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-3xl">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
             Shop related supplies
@@ -179,7 +170,7 @@ export default function TackHubPage() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/horse+snaffle+bit?s=tack-hub"
-              amazonLabel="Shop on Amazon"
+              amazonLabel="Browse horse snaffle bit on Amazon →"
             />
           </div>
         </div>

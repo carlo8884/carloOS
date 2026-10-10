@@ -1,13 +1,14 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, PrimaryHop, RelatedLinks, ShopCtas, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: '14 Dog Emergency Signs — When to Go to the Vet Right Now | Vets.co', description: '14 signs that require emergency veterinary care immediately. Pale gums, unproductive retching, seizures, and more', path: '/health/emergency-signs', type: 'article' })
 const SOURCES = [
-  { label: 'AVMA: Emergency Care for Your Pet', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/emergency-care-your-pet', publisher: 'AVMA' },
+  { label: 'AVMA: Emergency Care for Your Pet', url: 'https://www.avma.org/resources-tools/pet-owners/emergency-care', publisher: 'AVMA' },
   { label: 'AAHA: Emergency and Critical Care Guidelines', url: 'https://www.aaha.org/aaha-guidelines/emergency-and-critical-care/', publisher: 'AAHA' },
-  { label: 'ASPCA Animal Poison Control Center', url: 'https://www.aspca.org/pet-care/animal-poison-control', publisher: 'ASPCA' },
+  { label: 'ASPCA Animal Poison Control Center', url: 'https://www.aspca.org/pet-care/aspca-poison-control', publisher: 'ASPCA' },
 ]
 const schema = buildArticleSchema({ siteId: 'vets-co', title: '14 Dog Emergency Signs', description: 'Veterinary emergency signs requiring immediate care — Reference guide.', url: 'https://vets.co/health/emergency-signs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-09-05T00:00:00Z' ,
   citation: SOURCES,
@@ -20,7 +21,7 @@ const EMERGENCY_SIGNS = [
   { sign: 'Sudden collapse or inability to stand', detail: 'Acute collapse with no obvious injury may indicate internal hemorrhage (splenic rupture), cardiac arrhythmia, hypoglycemia, or neurological emergency. Emergency vet immediately. A wire basket dog muzzle is how a collapsed or painful dog can be moved without a bite to the person carrying them — it is not a soft fabric muzzle, not a grazing muzzle, and not a treatment. Put it on only if the dog is conscious enough to accept it; never delay the drive to hunt for gear.' },
   { sign: 'Difficulty breathing — labored, rapid, or open-mouth breathing', detail: 'Respiratory distress from any cause (fluid around lungs, airway obstruction, pneumonia, cardiac failure) requires emergency care. Dogs do not pant in distress — open-mouth labored breathing at rest is an emergency.' },
   { sign: 'Seizure lasting more than 2-3 minutes (status epilepticus)', detail: 'A single brief seizure in a known epileptic dog may not be an immediate emergency. A first seizure, cluster seizures (multiple in 24 hours), or a seizure lasting more than 2–3 minutes (status epilepticus) is an emergency requiring immediate intervention. After the seizure, a wire basket dog muzzle is how the confused, mouthy recovery ride stays safer for the person driving — it is not a seizure treatment and it does not go on during the seizure itself.' },
-  { sign: 'Suspected toxin ingestion', detail: 'Call the ASPCA Animal Poison Control Center (888-426-4435) immediately. Do not wait for symptoms. Many toxins have a narrow treatment window — induced vomiting is most effective within 30–60 minutes of ingestion. Time is critical. This page does not hop a pet emergency toxin kit; that hop already lives elsewhere.' },
+  { sign: 'Suspected toxin ingestion', detail: 'Call the ASPCA Animal Poison Control Center (888-426-4435) immediately. Do not wait for symptoms. Many toxins have a narrow treatment window — induced vomiting is most effective within 30–60 minutes of ingestion. Time is critical. Call the poison hotline rather than waiting on a home kit.' },
   { sign: 'Eye injury or sudden vision loss', detail: 'Corneal ulcers, penetrating eye injuries, and glaucoma (sudden increased eye pressure with a visibly enlarged or red eye) require same-day veterinary care. Glaucoma causes permanent vision loss within hours without treatment.' },
   { sign: 'Urinary obstruction — straining without producing urine', detail: 'Male dogs and cats that strain to urinate without producing urine may have a blocked urethra — a life-threatening emergency. Bladder rupture and fatal hyperkalemia can occur within 24–48 hours.' },
   { sign: 'Suspected fracture or major wound', detail: 'Visible bone, wounds penetrating the body cavity, or inability to bear any weight after trauma requires emergency evaluation. Quilted disposable underpads are how blood or wound fluid stays off the car seat and the hallway on the way out the door — they are not puppy training pads, not washable pee pads, not extra-large disposable dog pee pads, and not a first-aid kit. They do not stop bleeding and they do not replace pressure from a veterinarian. A wire basket dog muzzle is how a fractured, painful dog can be lifted without a bite.' },
@@ -36,6 +37,10 @@ export default function EmergencySignsPage() {
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="vets-co"
         hero={{ title: '14 Dog Emergency Signs', subtitle: 'Some signs warrant waiting until your regular vet opens. These do not. Print this page and keep it accessible. In a true emergency, knowing these signs before they happen is the difference between a treatment outcome and a fatality.', category: 'Emergency Guide', authorName: 'Vets.co Editorial', publishedAt: 'May 2025', readTime: '8 min',}}
+        heroHop={<>
+          <PrimaryHop href="/go/amazon-brand/handheld+aa+led+flashlight?s=health-emergency-signs" label="Search Amazon for a handheld AA LED flashlight" />
+          <HopDisclosure tone="on-dark" siteId="vets-co" href="/go/amazon-brand/handheld+aa+led+flashlight?s=health-emergency-signs" />
+        </>}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Emergency Signs', href: '/health/emergency-signs' }]}
         relatedLinks={[
           { title: 'Health Conditions', href: '/health', category: 'Hub' },
@@ -49,14 +54,15 @@ export default function EmergencySignsPage() {
             <p className="text-xs text-brand-text-mid leading-relaxed m-0 mb-3">Call ahead while driving — the vet can prepare for your arrival. ASPCA Poison Control: <strong>888-426-4435</strong></p>
             <Link href="/find-a-vet" className="block w-full text-center bg-brand-danger text-white text-xs font-bold py-2.5 rounded-lg no-underline hover:opacity-90">Find Emergency Vet →</Link>
           </div>
-          <RelatedLinks title="Related Guides" links={[{ label: 'ER vs Clinic vs Telehealth', href: '/tools/er-vs-clinic' }, { label: 'Bloat (GDV) in Dogs', href: '/health/bloat-gdv-dogs' }, { label: 'Pain Signs in Dogs', href: '/health/pain-signs-dogs' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
+          <RelatedLinks title="Related Guides" links={[{ label: 'ER vs Clinic vs Telehealth', href: '/tools/er-vs-clinic' }, { label: 'Bloat (GDV) in Dogs', href: '/health/bloat-gdv-dogs' }, { label: 'Pain Signs in Dogs', href: '/health/pain-signs-dogs' }, { label: 'Emergency Vet Costs', href: '/guides/emergency-vet-costs' }, { label: 'How to Afford Vet Care', href: '/guides/how-to-afford-vet-care' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
 
                   <CrossPortfolioCard currentSite="vets-co" contentType="health" variant="sidebar" />
 </>}
       >
         <div className="carloOS-article">
+          <LastUpdated date="2026-10-09" />
 
-          <p className="text-base text-brand-text-mid leading-relaxed mb-8">When in doubt: call your emergency vet and describe what you are seeing. A 2-minute call is far better than waiting and watching something become life-threatening. Emergency vets would rather you call unnecessarily than delay a critical situation. These 14 signs should prompt an immediate call and drive. Household prep gear — a wire basket dog muzzle, quilted disposable underpads, a handheld AA LED flashlight — is how the ride stays safer and cleaner. It does not treat GDV, it does not replace the clinic, and it is not a reason to delay the drive.</p>
+          <p className="text-base text-brand-text-mid leading-relaxed mb-8">This page is not a veterinarian. If your dog may be in danger, contact a vet. When in doubt: call your emergency vet and describe what you are seeing. A 2-minute call is far better than waiting and watching something become life-threatening. Emergency vets would rather you call unnecessarily than delay a critical situation. These 14 signs should prompt an immediate call and drive. Household prep gear — a wire basket dog muzzle, quilted disposable underpads, a handheld AA LED flashlight — is how the ride stays safer and cleaner. It does not treat GDV, it does not replace the clinic, and it is not a reason to delay the drive.</p>
           {EMERGENCY_SIGNS.map((item, i) => (
             <div key={item.sign} className="flex gap-4 mb-5 p-5 rounded-xl border border-brand-border bg-brand-surface">
               <span className="font-display font-black text-brand-danger text-2xl flex-shrink-0 leading-none mt-0.5">{String(i + 1).padStart(2, '0')}</span>
@@ -67,97 +73,16 @@ export default function EmergencySignsPage() {
             </div>
           ))}
 
-          <h2 id="kit">14-sign emergency-prep kit</h2>
-          <p>
-            Everyday household, travel, and monitoring
-            supplies that match the 14 emergency signs
-            on this page — a wire basket dog muzzle so
-            a collapsed, fractured, or post-seizure
-            dog can be lifted without a bite, quilted
-            disposable underpads so blood, vomit, or
-            wound fluid stays off the car seat and the
-            hallway, and a handheld AA LED flashlight
-            so pale, white, blue, or gray gums get a
-            look at night. These are educational prep
-            tools, not treatments. They do not treat
-            GDV, they do not stop internal bleeding,
-            they do not replace the ASPCA poison
-            hotline, and they are not a ranked product
-            list. Soft dog carriers, soft-sided crates,
-            first-aid kits, medical penlights, folding
-            pet stretchers, gum-color assessment
-            charts, puppy training pads, washable pee
-            pads, extra-large disposable dog pee pads,
-            and pet emergency toxin kits already live
-            on other pages. This page does not claim hands-on testing. </p>
+          <h2 id="kit">Supplies named on this page</h2>
+          <p>A wire basket dog muzzle lets you move a collapsed, fractured, or post-seizure dog with less risk of a bite. Quilted disposable underpads keep blood, vomit, or wound fluid off the car seat. A handheld AA LED flashlight is how you check gum color at night. These are prep tools, not treatments. They do not treat bloat, they do not stop bleeding, and they do not replace the ASPCA poison hotline or a veterinarian.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/wire+basket+dog+muzzle?s=health-emergency-signs", "/go/amazon-brand/quilted+disposable+underpads?s=health-emergency-signs", "/go/amazon-brand/handheld+aa+led+flashlight?s=health-emergency-signs"]} />
 
-          {/* Money path — live amazon-brand search hops
-              (wire basket dog muzzle /
-              quilted disposable underpads /
-              handheld AA LED flashlight).
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
-              unused vs #1073
-              double+door+wire+dog+crate /
-              pet+safe+kennel+disinfectant+spray /
-              analog+wall+clock+with+second+hand, #1072
-              tick+removal+hook /
-              fine+tooth+flea+comb /
-              laminated+tick+identification+card, #1071
-              letter+size+expanding+file+organizer /
-              sterile+urine+specimen+cup /
-              12+hour+mechanical+kitchen+timer, #1069
-              wire+small+animal+single+story+cage /
-              non+slip+suction+bathtub+mat /
-              stainless+steel+small+animal+crock, #1068
-              extra+small+animal+travel+kennel /
-              scent+swap+fleece+sleep+pouch /
-              portable+small+animal+playpen, #1067
-              small+animal+rabies+certificate+holder /
-              top+loading+small+animal+carrier /
-              fleece+small+animal+bonding+pouch, #1066
-              carnivore-care / baby-food / silicone
-              dosing syringe, #1059
-              adjustable+sliding+dog+food+scoop /
-              reusable+dog+food+portion+cups /
-              dog+weight+log+book, #1058
-              digital+handheld+stopwatch /
-              waterproof+field+notebook /
-              foam+table+edge+bumper, #1057
-              automatic+timed+dog+feeder /
-              maze+slow+feed+dog+bowl /
-              indoor+dog+house+line, #1056
-              disposable+female+dog+diapers /
-              inflatable+dog+collar /
-              hard+sided+airline+dog+crate,
-              tick+remover, tick+removal+tool,
-              reusable+lint+roller,
-              fine+tooth+metal+comb,
-              pet+first+aid+kit, led+medical+penlight,
-              dog+recovery+crate,
-              soft+sided+dog+crate,
-              wire+dog+crate+with+divider+panel,
-              heavy+duty+dog+exercise+pen,
-              cool+mist+humidifier,
-              digital+pet+thermometer,
-              accelerated+hydrogen+peroxide+disinfectant,
-              soft+dog+carrier,
-              pet+emergency+kit+dog+toxin,
-              soft+dog+muzzle,
-              folding+pet+stretcher,
-              puppy+training+pads,
-              washable+dog+pee+pads,
-              extra+large+disposable+dog+pee+pads,
-              dog+gum+color+assessment+chart.
-              Vaccine, antibiotic, and Rx ASINs are
-              not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
             </div>
-            
+
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/wire+basket+dog+muzzle?s=health-emergency-signs"
@@ -174,6 +99,7 @@ export default function EmergencySignsPage() {
           </div>
           </div>
 
+          <p>These 14 signs are a reason to drive, not a reason to price the visit first. After the pet is stable, the <a href="/guides/emergency-vet-costs">emergency vet costs</a> guide explains why that bill runs higher than a daytime appointment, and <a href="/guides/how-to-afford-vet-care">how to afford vet care</a> covers payment options.</p>
           <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>

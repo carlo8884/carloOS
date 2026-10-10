@@ -6,6 +6,12 @@
  */
 import Link from 'next/link'
 import type { SiteId } from '@carloOS/config'
+import {
+  consultLink,
+  hopCommissionReady,
+  partnerQuoteHeld,
+  visibleShopHref,
+} from '@carloOS/config/affiliate-hop'
 import { AffiliateDisclosure } from './AffiliateDisclosure'
 import { ShopCtas } from './ShopCtas'
 
@@ -14,8 +20,9 @@ export interface JourneyNextProps {
   nextHref: string
   nextLabel: string
   nextBlurb: string
-  resourceHref: string
-  resourceLabel: string
+  /** Omit both when the page no longer has a shop button for this step. */
+  resourceHref?: string
+  resourceLabel?: string
 }
 
 export function JourneyNext({
@@ -26,6 +33,12 @@ export function JourneyNext({
   resourceHref,
   resourceLabel,
 }: JourneyNextProps) {
+  const consult = resourceHref ? consultLink(resourceHref) : null
+  const visible = !resourceHref || (consult && !consult.attributed) ? null : visibleShopHref(resourceHref)
+  const live = Boolean(visible && hopCommissionReady(visible))
+  const quiet = Boolean(
+    resourceHref && !live && (partnerQuoteHeld(resourceHref) || Boolean(consult && !consult.attributed)),
+  )
   return (
     <aside
       id="journey-next"
@@ -40,8 +53,13 @@ export function JourneyNext({
         </Link>
       </p>
       <p className="mt-2 text-sm leading-relaxed text-brand-text-mid">{nextBlurb}</p>
-      <AffiliateDisclosure variant="inline" siteId={siteId} className="my-3" />
-      <ShopCtas amazonHref={resourceHref} amazonLabel={resourceLabel} />
+      {live ? <AffiliateDisclosure variant="inline" siteId={siteId} className="my-3" /> : null}
+      {quiet ? (
+        <p data-quote-note className="my-3 text-xs leading-relaxed text-brand-text-mid">
+          Quotes open on the carrier&apos;s site.
+        </p>
+      ) : null}
+      {resourceHref ? <ShopCtas amazonHref={resourceHref} amazonLabel={resourceLabel ?? ''} /> : null}
     </aside>
   )
 }

@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "How to Choose a Veterinarian — A Practical Guide | Vets.co", description: "Accreditation, communication, services, location, and emergency arrangements all matter when choosing a vet. Here is how to find the right clinic for your pet.", path: '/guides/choosing-a-veterinarian', type: 'article' })
@@ -39,54 +40,26 @@ export default function ChoosingVetPage() {
           </CalloutBox>
 
           <h2>Credentials and Accreditation</h2>
-          <p>Start with the fundamentals. All practicing veterinarians are licensed, but voluntary accreditation — most notably AAHA accreditation in the United States — indicates a practice has chosen to meet several hundred quality benchmarks for medical care, equipment, and safety. Because veterinary practices are not required to be accredited, this voluntary step is a meaningful signal of commitment to standards. A reporter notebook is how those accreditation and specialist-referral notes stay written during a tour instead of reconstructed later — it is not a spiral notebook (that lives on what-to-expect-at-the-vet), not a yellow legal pad (that lives on how-to-afford-vet-care), and not ruled index cards (that live on questions-to-ask-your-vet). Consider it alongside the practice&apos;s areas of focus and whether specialists are on staff or available by referral.</p>
+          <p>Start with the fundamentals. All practicing veterinarians are licensed, but voluntary accreditation — most notably AAHA accreditation in the United States — indicates a practice has chosen to meet several hundred quality benchmarks for medical care, equipment, and safety. Because veterinary practices are not required to be accredited, this voluntary step is a meaningful signal of commitment to standards. Consider it alongside the practice&apos;s areas of focus and whether specialists are on staff or available by referral.</p>
 
           <h2>Communication and Approach</h2>
-          <p>Good medicine depends on good communication. Notice whether the team explains conditions and options clearly, answers questions patiently, and respects your involvement in decisions. Observe how your pet is handled — a calm, fear-aware approach reduces stress and is increasingly a hallmark of quality practices. The same reporter notebook holds those communication impressions next to the accreditation notes so the comfort you felt is a written record, not a vague feeling. The comfort and trust you feel with a team matters for the years of care ahead, so weigh your own impressions heavily.</p>
+          <p>Good medicine depends on good communication. Notice whether the team explains conditions and options clearly, answers questions patiently, and respects your involvement in decisions. Observe how your pet is handled — a calm, fear-aware approach reduces stress and is increasingly a hallmark of quality practices. The comfort and trust you feel with a team matters for the years of care ahead, so weigh your own impressions heavily.</p>
 
           <h2>Services and Capabilities</h2>
-          <p>Match the practice&apos;s services to your pet&apos;s likely needs. Ask what diagnostics and treatments are offered in-house, whether they handle surgery and dentistry, and how they manage referrals to specialists for complex cases. A kraft two-pocket folder keeps the in-house-services list in one pocket and the referral / specialty notes in the other so the scope comparison stays a file — it is not letter-size hanging file folders (that live on how-to-afford-vet-care), not a letter-size accordion file folder (that lives on cost-of-veterinary-care), and not letter-size sheet protectors (that live on questions-to-ask-your-vet). A general practice that refers promptly and communicates well with specialists serves most pets fully; specialty needs may warrant a clinic with broader capabilities. Knowing the scope helps you understand when your pet can be cared for in one place and when a referral is the right step.</p>
+          <p>Match the practice&apos;s services to your pet&apos;s likely needs. Ask what diagnostics and treatments are offered in-house, whether they handle surgery and dentistry, and how they manage referrals to specialists for complex cases. A kraft two-pocket folder keeps the in-house-services list in one pocket and the referral / specialty notes in the other so the scope comparison stays a file . A general practice that refers promptly and communicates well with specialists serves most pets fully; specialty needs may warrant a clinic with broader capabilities. Knowing the scope helps you understand when your pet can be cared for in one place and when a referral is the right step.</p>
 
           <h2>Location and Logistics</h2>
           <p>Practical factors carry real weight. A conveniently located clinic makes routine visits easier and is valuable in an emergency, particularly for pets that find travel stressful. Consider hours, appointment availability, communication channels, and payment options, including whether they accept pet insurance reimbursement workflows and offer estimates. These logistics shape how easy it is to actually get care when you need it. The same kraft two-pocket folder holds hours and payment-option notes with the services list so a second clinic tour is compared on paper, not from memory.</p>
 
           <h2>Emergency Arrangements</h2>
-          <p>Find out how the practice handles after-hours emergencies before you ever face one. Some clinics offer extended or emergency hours; others refer to a dedicated emergency hospital overnight and on weekends. Either way, identify your nearest 24-hour emergency facility in advance and keep its details handy. Pairing a trusted general practice for routine care with a known emergency option gives you coverage across every scenario. Our find-a-vet directory can help you locate options in your area.</p>
+          <p>Find out how the practice handles after-hours emergencies before you ever face one. Some clinics offer extended or emergency hours; others refer to a dedicated emergency hospital overnight and on weekends. Either way, identify your nearest 24-hour emergency facility in advance and keep its details handy. Pairing a trusted general practice for routine care with a known emergency option gives you coverage across every scenario. The find-a-vet guide explains how to choose a clinic. It is not a live clinic list.</p>
 
-          <h2 id="kit">Choosing-a-veterinarian kit</h2>
-          <p>
-            Everyday physical supplies that match the
-            accreditation, communication, services,
-            location, and emergency-arrangement copy
-            on this page — a reporter notebook so
-            tour impressions stay written during the
-            wellness visit, a kraft two-pocket folder
-            so clinic notes and the after-hours
-            hospital card stay separate pockets, and
-            a pocket-size address book so the 24-hour
-            emergency facility stays a named number.
-            These are educational clinic-comparison /
-            paperwork tools, not a ranked product
-            list, not a substitute for veterinary
-            care, and not a treatment. Spiral
-            notebooks, cooler bags, and clipboards
-            with storage already live on
-            what-to-expect-at-the-vet. Ruled index
-            cards, 3x3 sticky notes, and letter-size
-            sheet protectors already live on
-            questions-to-ask-your-vet. Yellow legal
-            pads and hanging file folders already
-            live on how-to-afford-vet-care. Car visor
-            document holders already live on
-            ER-vs-urgent-care. This page does not
-            hop medications, financing brands, or
-            insurance brands. This page does not
-            claim hands-on testing.
-          </p>
+          <h2 id="kit">Supplies for comparing clinics</h2>
+          <p>A kraft two-pocket folder keeps clinic notes in one pocket and the after-hours hospital card in the other. A pocket-size address book is where the 24-hour emergency facility stays a named number. These are paperwork tools, not a treatment and not a ranked product list.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/kraft+two+pocket+folder?s=guides-choosing-a-veterinarian", "/go/amazon-brand/pocket+size+address+book?s=guides-choosing-a-veterinarian"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (reporter notebook /
               kraft two-pocket folder /
               pocket-size address book).
@@ -96,9 +69,9 @@ export default function ChoosingVetPage() {
               substitute for veterinary care, no Rx
               / first-aid kit / thermometer /
               carrier / insurance-brand /
-              financing-brand ASIN hops.
+              financing-brand product page buttons.
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or an empty link. Amazon searches only —
               unused vs #1166
               ruled+index+cards /
               3x3+sticky+notes /
@@ -125,18 +98,14 @@ export default function ChoosingVetPage() {
               car+visor+document+holder.
               First-aid kits, digital pet
               thermometers, and prescriptions
-              are not shoppable hops. */}
+              are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
             </div>
             <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
-              <ShopCtas
-                amazonHref="/go/amazon-brand/reporter+notebook?s=guides-choosing-a-veterinarian"
-                amazonLabel="Browse reporter notebooks on Amazon →"
-              />
-              <ShopCtas
+<ShopCtas
                 amazonHref="/go/amazon-brand/kraft+two+pocket+folder?s=guides-choosing-a-veterinarian"
                 amazonLabel="Browse kraft two-pocket folders on Amazon →"
               />

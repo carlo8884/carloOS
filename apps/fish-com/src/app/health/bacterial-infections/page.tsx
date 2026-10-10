@@ -1,6 +1,7 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, AffiliateDisclosure, ArticleSourcesList, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, ArticleSourcesList, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 
@@ -8,7 +9,7 @@ const SOURCES = [
   { label: "Bacterial Diseases of Fish — Merck Veterinary Manual", url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/aquarium-fish/bacterial-diseases-of-fish", publisher: "Merck Vet Manual" },
   { label: "Noga, E.J. Fish Disease: Diagnosis and Treatment, 2nd ed. Wiley-Blackwell, 2010.", publisher: "Wiley-Blackwell" },
   { label: "Yanong, R.P.E. Aeromonas Infections in Fish — UF/IFAS Extension FA-TP-174.", url: "https://edis.ifas.ufl.edu/publication/FA174", publisher: "UF/IFAS Extension" },
-  { label: "Francis-Floyd, R. Stress — Its Role in Fish Disease — UF/IFAS Extension FA-43.", url: "https://edis.ifas.ufl.edu/publication/FA043", publisher: "UF/IFAS Extension" },
+  { label: "Francis-Floyd, R. Stress — Its Role in Fish Disease — UF/IFAS Circular 919 / FA005.", url: "https://ask.ifas.ufl.edu/publication/FA005", publisher: "UF/IFAS Extension" },
 ]
 
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Bacterial Infections in Aquarium Fish — Signs & Treatment | Fish.com', description: "How to recognize and treat bacterial infections in fish: ulcers, red streaks, septicemia, and mouth fungus. Why water quality is almost always the root cause.", path: '/health/bacterial-infections', type: 'article' })
@@ -62,20 +63,20 @@ export default function BacterialInfectionsPage() {
         <h2>Prevention</h2>
         <p>Because these infections are opportunistic, prevention is overwhelmingly a matter of husbandry. Keep ammonia and nitrite at zero and nitrate low through a fully established <a href="/health/nitrogen-cycle-explained">nitrogen cycle</a> and regular water changes. Quarantine every new arrival to avoid importing both pathogens and stress. Avoid overcrowding and incompatible tankmates that cause chronic stress and injury. Feed a varied, high-quality diet to support immune function. A fish kept in clean, stable water at appropriate density very rarely succumbs to the bacteria that are always swimming alongside it.</p>
 
-        {/* Money path — live amazon-brand search hops (water-first / hospital-tank kit).
-            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-            Category searches only — not a ranked list. No medication hops. */}
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        {/* Shop note — live amazon-brand search buttons (water-first / hospital-tank kit).
+            ShopCtas hides empty Chewy; never href="#" or an empty link.
+            Amazon searches only — not a ranked list. No medication buttons. */}
+        <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/api+freshwater+master+test+kit?s=health-bacterial-infections", "/go/amazon-brand/aquarium+quarantine+hospital+tank+net?s=health-bacterial-infections", "/go/amazon-brand/aquarium+sponge+filter?s=health-bacterial-infections", "/go/amazon-brand/eheim+jager+heater?s=health-bacterial-infections", "/go/amazon-brand/aquarium+digital+thermometer?s=health-bacterial-infections"]} />
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
-            Shop a water-first hospital-tank kit
+            Shop these supplies
           </div>
           <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Fix the water first — a liquid master kit is how you see ammonia,
             nitrite, and nitrate that let opportunistic bacteria take hold.
             Isolate in a spare hospital tank with a seeded sponge filter so
             treatment stays off the display biofilter, a heater rated for the
             tank, and a separate digital thermometer so the dial is not the
-            only reading. Same test-kit hop used on the{' '}
+            only reading. The same test-kit button is on the{' '}
             <Link
               href="/health/fish-disease-guide"
               className="text-brand-primary no-underline hover:underline"
@@ -89,7 +90,7 @@ export default function BacterialInfectionsPage() {
             >
               water-test kit review
             </Link>
-            . Same hospital-tank hop used on the{' '}
+            . The same hospital-tank button is on the{' '}
             <Link
               href="/tools/fish-disease-symptom-checker"
               className="text-brand-primary no-underline hover:underline"
@@ -100,21 +101,19 @@ export default function BacterialInfectionsPage() {
             <Link href="/health/dropsy-treatment" className="text-brand-primary no-underline hover:underline">
               dropsy guide
             </Link>
-            . Same sponge-filter hop used on the{' '}
+            . The same sponge-filter button is on the{' '}
             <Link
               href="/tools/aquarium-cycling-estimator"
               className="text-brand-primary no-underline hover:underline"
             >
               cycling estimator
             </Link>
-            . Same heater and thermometer hops used on the{' '}
+            . The same heater and thermometer buttons are on the{' '}
             <Link href="/setup" className="text-brand-primary no-underline hover:underline">
               aquarium setup guide
             </Link>
             . They are not a ranked product list, they are not medications,
-            and they do not treat, reverse, or cure bacterial infections.
-            Fish.com earns a commission on qualifying purchases at no extra
-            cost to you.</p>
+            and they do not treat, reverse, or cure bacterial infections.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/api+freshwater+master+test+kit?s=health-bacterial-infections"
@@ -130,7 +129,7 @@ export default function BacterialInfectionsPage() {
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/eheim+jager+heater?s=health-bacterial-infections"
-              amazonLabel="Browse aquarium heaters on Amazon →"
+              amazonLabel="Browse Eheim Jager heaters on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+digital+thermometer?s=health-bacterial-infections"

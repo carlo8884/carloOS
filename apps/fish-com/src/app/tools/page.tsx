@@ -1,6 +1,7 @@
+import { HopDisclosure } from '../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildArticleSchema, AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, SchemaScript, DirectoryPlacesCta, ShopCtas } from '@carloOS/ui'
+import { buildArticleSchema, buildMetadata, buildBreadcrumbSchema, SchemaScript, DirectoryPlacesCta, ShopCtas } from '@carloOS/ui'
 import listings from '../../data/directory-listings.json'
 import { HubMasthead } from '../../components/HubMasthead'
 
@@ -17,7 +18,6 @@ const breadcrumbSchema = buildBreadcrumbSchema({
     { name: 'Tools', url: 'https://fish.com/tools' },
   ],
 })
-
 
 const TOOLS = [
   {
@@ -202,21 +202,9 @@ export default function ToolsHub() {
         </h2>
 
         <div className="max-w-content-wide mt-6">
-          <AffiliateDisclosure variant="inline" siteId="fish-com" />
+          <HopDisclosure siteId="fish-com" href="/go/amazon-brand/eheim+aquarium+heater?s=tools-hub" />
         </div>
 
-        {/* Money path — live amazon-brand search hops
-            (laminated aquarium calculator-tools chart /
-            aquarium rim measurement card /
-            aquarist calculator reference handbook).
-            Educational stand searches only; no Rx hops.
-            ShopCtas hides empty Chewy; never href="#" or
-            PLACEHOLDER. Unused vs equipment-hub /
-            setup-aquarium aquaclear+70+filter /
-            fluval+307+canister+filter / eheim+jager+heater /
-            api+freshwater+master+test+kit /
-            seachem+prime+water+conditioner, stocking
-            aquarium+sand, volume aquarium+stand. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-content-wide">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
             Shop related supplies
@@ -225,7 +213,7 @@ export default function ToolsHub() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/eheim+aquarium+heater?s=tools-hub"
-              amazonLabel="Shop on Amazon"
+              amazonLabel="Browse Eheim aquarium heaters on Amazon →"
             />
           </div>
         </div>

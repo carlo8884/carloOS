@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { StockImage, buildMetadata, ArticleLayout, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
+import { ShopCtas, StockImage, buildMetadata, ArticleLayout, RelatedLinks, CrossPortfolioCard , ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema, FAQAccordion, SchemaScript, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
@@ -39,9 +40,9 @@ const FAQS = [
   {
     question: 'What water parameters do ember tetras need?',
     answer:
-      'They prefer soft, slightly acidic water (pH 5.5–7.0) and tolerate a temperature range of 73–82°F, compatible with most planted tank setups. They are hardy once established and tolerate standard community parameters reasonably well, though the soft acidic end of their range produces better color and breeding behavior.',
+      'They prefer soft, slightly acidic water (pH 5.5–7.0). FishBase lists Hyphessobrycon amandae at 24–28°C, which is 75–83°F (https://www.fishbase.se/summary/Hyphessobrycon-amandae.html). The band is compatible with most planted tank setups. They are hardy once established and tolerate standard community parameters reasonably well, though the soft acidic end of their range produces better color and breeding behavior.',
     answerText:
-      'Ember tetras prefer soft, slightly acidic water (pH 5.5-7.0) at 73-82F. They are hardy, but the soft acidic end of the range gives better color and breeding.',
+      'Ember tetras prefer soft, slightly acidic water (pH 5.5-7.0). FishBase lists Hyphessobrycon amandae at 24–28°C, which is 75–83°F (https://www.fishbase.se/summary/Hyphessobrycon-amandae.html). They are hardy, but the soft acidic end of the range gives better color and breeding.',
   },
   {
     question: 'What do ember tetras eat?',
@@ -66,9 +67,9 @@ export default function EmberTetraPage() {
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Quick Stats</div>
-          {[['Scientific name', 'Hyphessobrycon amandae'], ['Adult size', '0.8 inches — very nano'], ['Min school', '10 — 20+ for best display'], ['Temperature', '73–82°F'], ['pH', '5.5–7.0 preferred'], ['Shrimp safe', 'Yes — ignores adult shrimp'], ['Min tank', '5 gallons (10+ recommended)']].map(([k, v]) => (
+          {[['Scientific name', 'Hyphessobrycon amandae'], ['Adult size', '0.8 inches — very nano'], ['Min school', '10 — 20+ for best display'], ['Temperature', '75–83°F (https://www.fishbase.se/summary/Hyphessobrycon-amandae.html)'], ['pH', '5.5–7.0 preferred'], ['Shrimp safe', 'Yes — ignores adult shrimp'], ['Min tank', '5 gallons (10+ recommended)']].map(([k, v]) => (
             <div key={k} className="flex justify-between py-1.5 border-b border-brand-border text-xs last:border-0">
-              <span className="text-brand-text-light">{k}</span><span className="font-bold text-brand-dark text-right max-w-[55%]">{v}</span>
+              <span className="text-brand-text-light">{k}</span><span className="font-bold text-brand-dark text-right max-w-[55%] break-all">{v}</span>
             </div>
           ))}
         </div>
@@ -88,16 +89,16 @@ export default function EmberTetraPage() {
         <p>Ember tetras are one of the few fish reliably safe with cherry shrimp colonies, including shrimplets. At 0.8 inches, adult ember tetras cannot eat adult cherry shrimp, and their predatory drive toward tiny prey items appears limited — most aquarists report ember tetras ignoring shrimp completely. They are a popular choice for shrimp-focused planted tanks that want some fish movement without the shrimp predation risk of most species. Verify with your own fish individually, but the reputation for shrimp safety is well-established in the community.</p>
 
         <h2>Water and Care</h2>
-        <p>Ember tetras prefer soft, slightly acidic water (pH 5.5–7.0) and tolerate a temperature range of 73–82°F — compatible with most planted tank setups. They are hardy once established and tolerate standard community parameters reasonably well, though the soft acidic end of their range produces better color and breeding behavior. They are active, confident fish in groups — more reclusive and less colorful when kept in small numbers.</p>
+        <p>Ember tetras prefer soft, slightly acidic water (pH 5.5–7.0). FishBase lists Hyphessobrycon amandae at 24–28°C, which is 75–83°F (<a className="break-all" href="https://www.fishbase.se/summary/Hyphessobrycon-amandae.html">https://www.fishbase.se/summary/Hyphessobrycon-amandae.html</a>). The band is compatible with most planted tank setups. They are hardy once established and tolerate standard community parameters reasonably well, though the soft acidic end of their range produces better color and breeding behavior. They are active, confident fish in groups — more reclusive and less colorful when kept in small numbers.</p>
         <p>Feeding: very small food — they are 0.8 inches with a proportionally tiny mouth. Micro pellets (crushed fine), micro-size live foods (micro worms, baby brine shrimp), and very small flake. They compete well at feeding time within their small size class but will be outcompeted by larger, faster fish — keep with similarly sized species or provide targeted feeding near the bottom where ember tetras forage.</p>
         <h2>Frequently Asked Questions</h2>
         <FAQAccordion items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answerText }))} includeSchema={false} allowMultiple />
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        <HopDisclosure siteId="fish-com" href="/go/amazon-brand/ember%20tetra%20tank%20setup?s=species-ember-tetra" />
           <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Ember Tetra — Tank Setup</div>
-          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for ember tetra care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
+          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for ember tetra care.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
-            <a href="/go/amazon-brand/ember%20tetra%20tank%20setup?s=species-ember-tetra" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop Ember Tetra Setup on Amazon →</a>
+            <ShopCtas amazonHref="/go/amazon-brand/ember%20tetra%20tank%20setup?s=species-ember-tetra" amazonLabel="Browse ember tetra tank setups on Amazon →" />
           </div>
         </div>
 

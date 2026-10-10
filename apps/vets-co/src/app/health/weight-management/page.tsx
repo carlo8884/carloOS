@@ -1,18 +1,20 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import Link from 'next/link'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, PrimaryHop, RelatedLinks, ShopCtas, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Dog Weight Management — BCS Scoring, Calorie Math | Vets.co', description: 'How to assess your dog\'s body condition score, calculate calorie targets for weight loss, choose appropriate food, and when to use prescription weight…', path: '/health/weight-management', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Weight Management in Dogs and Cats | Vets.co', description: 'Dog body-condition scoring and a calorie example. Cats use the body condition score tool and the cat calorie calculator.', path: '/health/weight-management', type: 'article' })
 const SOURCES = [
   { label: 'AAHA: Nutritional Assessment Guidelines', url: 'https://www.aaha.org/aaha-guidelines/nutritional-assessment/', publisher: 'AAHA' },
   { label: 'WSAVA: Global Nutrition Guidelines', url: 'https://wsava.org/global-guidelines/global-nutrition-guidelines/', publisher: 'WSAVA' },
   { label: 'Kealy RD et al. JAVMA 2002 — Effects of Diet Restriction on Life Span and Age-Related Changes', url: 'https://pubmed.ncbi.nlm.nih.gov/12420743/', publisher: 'Journal of the American Veterinary Medical Association' },
 ]
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Dog Weight Management Guide', description: 'Body condition scoring, calorie calculation, and prescription diets for dog weight management.', url: 'https://vets.co/health/weight-management', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-09-04T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Weight Management in Dogs and Cats', description: 'Dog body-condition scoring and a calorie example. Cats use the body condition score tool and the cat calorie calculator.', url: 'https://vets.co/health/weight-management', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-05T00:00:00Z' ,
   citation: SOURCES,
 })
-const med = buildMedicalWebPageSchema({ name: 'Dog Weight Management', description: 'BCS scoring, calorie targets, and dietary management for overweight dogs.', url: 'https://vets.co/health/weight-management', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-07' })
+const med = buildMedicalWebPageSchema({ name: 'Weight Management in Dogs and Cats', description: 'Dog body-condition scoring and a calorie example. Cat checks use the body condition score tool and the cat calorie calculator.', url: 'https://vets.co/health/weight-management', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-07' })
 const combined = combineSchemas(schema, med)
 
 export default function WeightManagementPage() {
@@ -20,10 +22,16 @@ export default function WeightManagementPage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: 'Dog Weight Management', subtitle: 'Roughly 59% of US dogs are overweight or obese (APOP 2022 survey). Excess weight is not a cosmetic issue — it is the leading modifiable risk factor for arthritis, diabetes, respiratory disease, cardiac stress, reduced mobility, and shortened lifespan in dogs. A dog at ideal body weight lives on average ~1.8 years longer than the same dog kept overweight (Kealy et al., Purina Lifespan Study, JAVMA 2002).', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', publishedAt: 'May 2025', readTime: '9 min',}}
+        hero={{ title: 'Weight Management in Dogs and Cats', subtitle: 'Roughly 59% of US dogs are overweight or obese (APOP 2022 survey). Excess weight is not a cosmetic issue — it is the leading modifiable risk factor for arthritis, diabetes, respiratory disease, cardiac stress, reduced mobility, and shortened lifespan in dogs. A dog at ideal body weight lives on average ~1.8 years longer than the same dog kept overweight (Kealy et al., Purina Lifespan Study, JAVMA 2002). That survey figure is for dogs. Cat checks are the tools linked below, not this dog example.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', publishedAt: 'May 2025', readTime: '9 min',}}
+        heroHop={<>
+          <PrimaryHop href="/go/amazon-brand/digital+pet+scale?s=health-weight-management" label="Search Amazon for a digital pet scale" />
+          <HopDisclosure tone="on-dark" siteId="vets-co" href="/go/amazon-brand/digital+pet+scale?s=health-weight-management" />
+        </>}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Weight Management', href: '/health/weight-management' }]}
         relatedLinks={[
+          { title: 'Daily Cat Food Grams', href: '/tools/cat-food-amount-calculator', category: 'Tool' },
           { title: 'Cat Body Condition Score Tool', href: '/tools/cat-body-condition-score', category: 'Tool' },
+          { title: 'Cat Calorie Calculator', href: '/tools/cat-calorie-calculator', category: 'Tool' },
           { title: 'Health Conditions', href: '/health', category: 'Hub' },
           { title: 'Arthritis in Dogs', href: '/health/arthritis-in-dogs', category: 'Veterinary Guide' },
           { title: 'Senior Dog Care', href: '/health/senior-pet-care', category: 'Veterinary Guide' },
@@ -39,17 +47,34 @@ export default function WeightManagementPage() {
               </div>
             ))}
           </div>
-          <RelatedLinks title="Related Guides" links={[{ label: 'Arthritis in Dogs', href: '/health/arthritis-in-dogs' }, { label: 'Senior Dog Care', href: '/health/senior-pet-care' }, { label: 'Find a Vet', href: '/find-a-vet' }]} />
+          <RelatedLinks title="Related Guides" links={[{ label: 'Cat body condition score', href: '/tools/cat-body-condition-score' }, { label: 'Cat calorie calculator', href: '/tools/cat-calorie-calculator' }, { label: 'Daily cat food grams', href: '/tools/cat-food-amount-calculator' }, { label: 'Arthritis in Dogs', href: '/health/arthritis-in-dogs' }, { label: 'Senior Dog Care', href: '/health/senior-pet-care' }, { label: 'Find a Vet', href: '/find-a-vet' }]} />
 
                   <CrossPortfolioCard currentSite="vets-co" contentType="health" variant="sidebar" />
 </>}
       >
         <div className="carloOS-article">
+          <LastUpdated date="2026-10-09" />
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
               Keep the kitchen-scale portioning notes
             </p>
 
+          </div>
+
+          <h2>Cats use different tools</h2>
+          <p>The scoring steps and the calorie example below are for a dog. A cat is not that example. The <Link href="/tools/cat-body-condition-score">cat body condition score</Link> tool uses rib, waist, and abdominal-pad checks on a 1–9 scale. The <Link href="/tools/cat-calorie-calculator">cat calorie calculator</Link> uses feline life-stage factors, not the dog formula on this page. That calculator says a rapid cut in an overweight cat can trigger hepatic lipidosis, so a veterinarian sets the target and the rate of change.</p>
+          <div id="cat-weight-next" className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Cat next step
+            </div>
+            <div className="flex flex-col gap-3">
+              <Link href="/tools/cat-body-condition-score" className="inline-block bg-brand-primary text-white font-semibold px-5 py-2.5 rounded-md no-underline hover:bg-brand-primary-dark">
+                Score a cat →
+              </Link>
+              <Link href="/tools/cat-calorie-calculator" className="inline-block bg-brand-primary text-white font-semibold px-5 py-2.5 rounded-md no-underline hover:bg-brand-primary-dark">
+                Estimate cat calories →
+              </Link>
+            </div>
           </div>
 
           <h2>Body Condition Score — Assess Your Dog Accurately</h2>
@@ -79,20 +104,20 @@ export default function WeightManagementPage() {
           <p><strong>Measure food precisely.</strong> Use a kitchen scale, not a measuring cup — cups vary by 20–30% depending on how tightly packed. A kitchen scale that measures in grams eliminates this variability. Weigh every meal.</p>
           <p><strong>Count treats.</strong> Treats are calories. Ten medium-sized training treats per day for a small dog may represent 15–20% of daily caloric allowance. Either eliminate treats or switch to very low-calorie options (small pieces of carrot, cucumber, green beans) and count them against the daily total.</p>
           <p><strong>All family members must comply.</strong> One person covertly giving extra food or treats eliminates the deficit. Weight management requires household-wide consistency. Identify who is feeding extra and address it directly — it is the most common reason veterinary weight management fails.</p>
-          <p><strong>Weigh monthly.</strong> Expect 1–2% body weight loss per month — faster loss causes muscle loss. Monthly weigh-ins on the same scale track progress and identify when adjustment is needed. If not losing weight after 4 weeks of strict compliance, reduce food by another 10%.</p>
+          <p><strong>Weigh monthly.</strong> A loss of 1–2% of body weight per month is a planning figure on this page — faster loss causes muscle loss. Monthly weigh-ins on the same scale track progress and identify when adjustment is needed. If not losing weight after 4 weeks of strict compliance, reduce food by another 10%.</p>
 
           <h2 id="kit">Kitchen-scale portioning kit</h2>
-          <p>Everyday physical supplies that match the portioning copy above — a kitchen scale that measures in grams, plus a portion-control food scale for weighing every meal. Measuring cups stay off this kit: the copy says they vary by 20–30%. Carrot, cucumber, and green-bean pieces named as low-calorie treat swaps are produce, not a retail treat hop. Prescription weight-management diets (Hill&apos;s Metabolic, Royal Canin Satiety, Purina Pro Plan Overweight Management) stay educational copy only — this page never hops Rx food, brand ASINs, or medication. This page does not claim hands-on testing.</p>
+          <p>Keep these on hand: a kitchen scale that measures in grams, plus a portion-control food scale for weighing every meal. Measuring cups stay off this kit: the copy says they vary by 20–30%. Carrot, cucumber, and green-bean pieces named as low-calorie treat swaps are produce. Prescription weight-management diets (Hill&apos;s Metabolic, Royal Canin Satiety, Purina Pro Plan Overweight Management) stay educational copy only — this page does not link to Rx food, named brands, or medication.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/kitchen+gram+scale?s=health-weight-management", "/go/amazon-brand/portion+control+food+scale+dog?s=health-weight-management"]} />
 
-          {/* Money path — live amazon-brand search hops (kitchen / food gram scale).
-              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-              Category searches only — reuse live sister queries from the
+          {/* Shop note — live amazon-brand search buttons (kitchen / food gram scale).
+              ShopCtas hides empty Chewy; never href="#" or an empty link.
+              Amazon searches only — reuse live sister queries from the
               dog calorie calculator (kitchen+gram+scale) and dog
               ideal-weight / BCS tools (portion+control+food+scale+dog).
-              Measuring cups, commercial treat ASINs, prescription WM
-              diets, and medication are not shoppable hops. */}
+              Measuring cups, commercial treat product pages, prescription WM
+              diets, and medication are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

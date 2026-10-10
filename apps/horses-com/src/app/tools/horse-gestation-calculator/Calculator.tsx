@@ -177,6 +177,14 @@ export default function Calculator() {
         </div>
       )}
 
+      {result && (
+        <p className="mt-4 text-sm">
+          <a href="/tools/horse-feed-calculator" className="inline-block max-w-full whitespace-normal font-semibold text-brand-primary underline underline-offset-2">
+            Next: plan the mare&apos;s ration
+          </a>
+        </p>
+      )}
+
       <p className="mt-4 text-sm text-brand-text-mid">
         Mare gestation varies with the individual, the season, and the breed.
         Spring-conceived foals tend to gestate slightly longer than

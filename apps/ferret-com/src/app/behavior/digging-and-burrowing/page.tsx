@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import {
   buildMetadata,
@@ -9,8 +10,6 @@ import {
   ArticleByline,
   DropCap,
   ReviewCard,
-  ScoreMethodology,
-  AffiliateDisclosure,
   ArticleSourcesList,
   CrossPortfolioCard,
   ShopCtas,
@@ -60,7 +59,6 @@ const articleSchema = buildArticleSchema({
   citation: SOURCES,
 })
 
-
 const FAQS = [
   {
     question: 'Why does my ferret dig at the corner of the carpet?',
@@ -87,13 +85,20 @@ const faqSchema = buildFAQSchema({ questions: FAQS })
 
 const combined = combineSchemas(articleSchema, faqSchema)
 
-
 export default function FerretDiggingBurrowingPage() {
   return (
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="ferret-com"
+        heroHop={
+          <>
+            <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/ferret+litter?s=digging-and-burrowing" />
+            <div className="mb-4" data-primary-hop="true">
+              <a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" data-shop-placement="hero" href="/go/amazon-brand/ferret+litter?s=digging-and-burrowing">Browse ferret litter on Amazon →</a>
+            </div>
+          </>
+        }
         hero={{
           title: 'Ferret Digging and Burrowing — The Polecat in the Living Room',
           subtitle:
@@ -135,7 +140,7 @@ export default function FerretDiggingBurrowingPage() {
             <CrossPortfolioCard currentSite="ferret-com" contentType="behavior" variant="sidebar" />
           </>
         }
-      
+
         relatedLinks={[
           { title: 'Ferret Behavior Hub', href: '/behavior' },
           { title: 'DIY Enrichment Toys', href: '/behavior/diy-enrichment-toys' },
@@ -288,18 +293,7 @@ export default function FerretDiggingBurrowingPage() {
             usually settle it.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated ferret dig-box chart /
-              ferret fridge dig-filler card /
-              mustelid dig-burrow reference handbook).
-              Educational kitchen searches only; no Rx /
-              vaccine / aging hops.
-              Existing Marshall tunnel + Chewy ball-pit
-              hops stay below. ShopCtas never href="#"
-              or PLACEHOLDER.
-              Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop supplies
@@ -308,55 +302,53 @@ export default function FerretDiggingBurrowingPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/ferret+litter?s=digging-and-burrowing"
-                amazonLabel="Shop on Amazon"
+                amazonLabel="Browse ferret litter on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/ferret+litter?s=digging-and-burrowing"
-                amazonLabel="Shop on Amazon"
+                amazonLabel="Browse ferret litter on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/ferret+litter?s=digging-and-burrowing"
-                amazonLabel="Shop on Amazon"
+                amazonLabel="Browse ferret litter on Amazon →"
               />
             </div>
           </div>
 
           <h2 id="picks">Dig Box and Tunnel Picks</h2>
           <p>
-            Two purchases that address the digging instinct directly — a tunnel set for the burrowing side and a ball pit for the dig-box side. This is a documented-spec comparison based on published product details and keeper community use patterns; this page does not claim hands-on testing.
+            Two purchases that address the digging instinct directly — a tunnel set for the burrowing side and a ball pit for the dig-box side.
           </p>
-          <ScoreMethodology />
-          <ReviewCard
+          <ReviewCard quietUntilTag
             id="marshall-pop-n-play-dig"
             badge="Tunnel Set"
-            name="Marshall Pop-N-Play Tunnel Set"
-            subtitle="Pop-up fabric tunnels sized for ferrets, machine washable, chainable"
-            score={8.6}
+            name="Marshall play tunnel"
+            subtitle="Check the current listing for construction, openings, and storage"
             winner
             description={
-              <p>The dig instinct is half about excavation and half about tunnelling through tight spaces. A ferret that has a tunnel circuit available will often spend its digging energy on the tunnel rather than the carpet. The Marshall Pop-N-Play set pops up in seconds, stores flat, and chains to itself for longer circuits. Machine washable, which matters for a floor-level item collecting dander and dust.</p>
+              <p>Marshall's Pop-N-Play tunnel product page no longer resolves. This button opens Marshall's current play-tunnel search. The dig instinct is half about excavation and half about tunnelling through tight spaces. A ferret that has a tunnel circuit available will often spend its digging energy on the tunnel rather than the carpet. The current Ele-Fun Nap & Play listing is a plush tunnel with several openings, and that page says it is machine washable. It does not print a chain, a wire frame, or flat storage. Other results in this search can differ. Check the listing.</p>
             }
             specs={[
-              { label: 'Construction', value: 'Pop-up fabric with internal wire' },
-              { label: 'Sizing', value: 'Ferret-appropriate diameter', highlight: 'good' },
-              { label: 'Connectivity', value: 'Multi-tunnel chain' },
-              { label: 'Washable', value: 'Yes', highlight: 'good' },
-              { label: 'Storage', value: 'Folds flat' },
+              { label: 'Construction', value: 'Check the current listing' },
+              { label: 'Sizing', value: 'Check the current listing' },
+              { label: 'Connectivity', value: 'Check the current listing' },
+              { label: 'Washable', value: 'Check the current listing' },
+              { label: 'Storage', value: 'Check the current listing' },
             ]}
-            pros={['Highest enrichment value per dollar for tunnelling ferrets', 'Chainable for longer circuits', 'Machine washable', 'Pop-up + foldable storage']}
-            cons={['Fabric wears in heavy-chewer households', 'Internal wire is a defect risk if exposed — inspect periodically']}
-            price="$15–30"
-            ctaText="Find Marshall Pop-N-Play tunnels"
-            ctaHref="/go/marshall/pop-n-play-tunnel?s=behavior-digging-burrowing"
+            pros={['Opens the current Marshall play-tunnel search', 'Check whether the listing is machine washable']}
+            cons={['Fabric can wear in a heavy-chewer household', 'Check the listing for any internal wire before you buy']}
+            price="see current price"
+            priceNote="dated 2026-06-04."
+            ctaText="Find Marshall play tunnels"
+            ctaHref="/go/marshall/ferret+play+tunnel?s=behavior-digging-burrowing"
             ctaAffiliateProgram="marshall"
-            ctaAffiliateProduct="pop-n-play-tunnel"
+            ctaAffiliateProduct="ferret+play+tunnel"
           />
-          <ReviewCard
+          <ReviewCard quietUntilTag
             id="ball-pit-fill-dig"
             badge="Dig Box Fill"
             name="Ferret-Safe Ball Pit Balls"
             subtitle="Hollow plastic balls for a dig-box or ball pit — cheap, washable, ingest-safe"
-            score={8.0}
             description={
               <p>Hollow plastic ball-pit balls are one of the most reliable dig-box fills: they move with satisfying give, cannot be ingested in chunks, and clean easily. A standard storage tote filled with a bag of these creates a dig pit that most ferrets prefer to carpet edges. Rotate fill type weekly for novelty; alternating with rice or river rocks keeps the dig box interesting.</p>
             }
@@ -367,9 +359,10 @@ export default function FerretDiggingBurrowingPage() {
             ]}
             pros={['Low ingest risk', 'Ferrets enjoy the give and movement', 'Cheap and replaceable', 'Easy to wash']}
             cons={['Balls migrate outside the tote — keep near a sweep-friendly surface', 'No texture variety — best rotated with rice or rocks']}
-            price="$10–20 / bag"
-            ctaText="Find ferret-safe ball pit balls"
-            ctaHref="/go/chewy-brand/small-pet-ball-pit-balls?s=behavior-digging-burrowing"
+            price="see current price / bag"
+            priceNote="dated 2026-06-04."
+            ctaText="Find ferret-safe ball pit balls on Amazon"
+            ctaHref="/go/chewy-brand/small+pet+ball+pit+balls?s=behavior-digging-burrowing"
             ctaAffiliateProgram="chewy-brand"
             ctaAffiliateProduct="small-pet-ball-pit-balls"
           />

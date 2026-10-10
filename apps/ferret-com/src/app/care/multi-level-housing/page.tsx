@@ -1,5 +1,7 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleSourcesList, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import Link from 'next/link'
+import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleSourcesList, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -111,7 +113,7 @@ export default function MultiLevelHousingPage() {
             A ferret evaluates a space in three dimensions. In the wild, the European polecat — the ancestor of the domestic ferret — moves through burrow systems, root tangles, and stacked cover, not open floor. That instinct survives in the pet: given a choice between a wide flat cage and a tall narrow one of equal volume, most ferrets use the tall one more completely, climbing between levels dozens of times a day.
           </p>
           <p>
-            This has a practical consequence. The American Ferret Association recommends a minimum of roughly 24 × 24 inches of floor with at least 18 inches of height per ferret, but strongly prefers multi-level designs because stacking levels multiplies usable habitat without enlarging the cage's footprint in your room. A 36 × 24-inch base with three levels offers far more functional territory than a single 36 × 24-inch floor — and it does so in the same amount of floor space, which is the binding constraint in most apartments and homes. The <a href="/tools/cage-size-calculator">cage size calculator</a> turns those constants into an L × W × H for your headcount and level count.
+            This has a practical consequence. The 24 × 24 inch floor and 18 inch height per ferret are a planning figure, not a fetched published standard. Stacking levels multiplies usable habitat without enlarging the cage's footprint in your room. A 36 × 24-inch base with three levels is the same kind of planning figure, and it uses the same floor space, which is the binding constraint in most apartments and homes. The <a href="/tools/cage-size-calculator">cage size calculator</a> turns those notes into an L × W × H for your headcount and level count.
           </p>
           <p>
             The right mental model is a small vertical apartment: a ground floor with the litter and access doors, a middle floor with food and water, and an upper floor of hammocks and sleep sacks where the ferret actually spends most of its sleeping hours. Each level does a job, and ramps connect them.
@@ -176,21 +178,16 @@ export default function MultiLevelHousingPage() {
 
           <h2 id="kit">Vertical-Housing Kit</h2>
           <p>
-            Everyday physical supplies that match the ramp-safety and door-security
-            copy above — fleece ramp covers for traction, PVC sheet as a hard
-            ramp liner, cable ties to pin both ends of a ramp, and locking
-            carabiners so a ferret cannot work a cam-latch. These are not a
-            treatment for a fracture and not a diagnosis. This page does not
-            claim hands-on testing. </p>
+            Keep these on hand: fleece ramp covers for traction, PVC sheet as a hard ramp liner, cable ties to pin both ends of a ramp, and locking carabiners so a ferret cannot work a cam-latch. These are not a treatment for a fracture and not a diagnosis. </p>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/fleece+ramp+cover?s=care-multi-level-housing", "/go/amazon-brand/pvc+sheet?s=care-multi-level-housing", "/go/amazon-brand/cable+ties?s=care-multi-level-housing", "/go/amazon-brand/locking+carabiner?s=care-multi-level-housing"]} />
 
-          {/* Money path — live amazon-brand search hops (vertical-housing kit).
-              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-              Category searches only — everyday physical supplies matching
+          {/* Shop note — live amazon-brand search buttons (vertical-housing kit).
+              ShopCtas hides empty Chewy; never href="#" or an empty link.
+              Amazon searches only — everyday physical supplies matching
               on-page ramp-cover / PVC-sheet / cable-tie / carabiner copy,
               not Critter Nation, sleep sacks, corner pans, tunnels, or
-              medication hops. */}
+              medication buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
@@ -216,6 +213,7 @@ export default function MultiLevelHousingPage() {
           </div>
           </div>
 
+          <p>Multi-level cages are compared in the <Link href="/reviews/best-ferret-cage">ferret cage review</Link>.</p>
           <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>

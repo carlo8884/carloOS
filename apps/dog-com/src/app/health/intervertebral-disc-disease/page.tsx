@@ -1,13 +1,14 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import Link from 'next/link'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 
 const SOURCES = [
-  { label: 'Merck Veterinary Manual: Intervertebral Disk Disease in Dogs and Cats', url: 'https://www.merckvetmanual.com/nervous-system/spinal-cord-diseases/intervertebral-disk-disease-in-dogs-and-cats', publisher: 'Merck Vet Manual' },
+  { label: 'Merck Veterinary Manual: Disorders of the Spinal Column and Cord in Dogs', url: 'https://www.merckvetmanual.com/dog-owners/brain-spinal-cord-and-nerve-disorders-of-dogs/disorders-of-the-spinal-column-and-cord-in-dogs', publisher: 'Merck Vet Manual' },
   { label: 'ACVS: American College of Veterinary Surgeons — Intervertebral Disc Disease', url: 'https://www.acvs.org/small-animal/intervertebral-disc-disease', publisher: 'ACVS' },
-  { label: 'AVMA: Intervertebral Disc Disease (IVDD) in Dogs', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/common-health-conditions-dogs', publisher: 'AVMA' },
   { label: 'Brisson BA. Intervertebral disc disease in dogs. Vet Clin North Am Small Anim Pract. 2010;40(5):829-858.', publisher: 'Vet Clinics Small Animal Practice' },
 ]
 
@@ -83,17 +84,17 @@ export default function IVDDPage() {
           <p>When a Grade 3–5 dog cannot walk yet, a dog wheelchair (mobility cart) lets the dog move without loading the healing spine. Ask the rehabilitation therapist whether a cart fits this recovery stage — it is a mobility aid, not a substitute for crate rest, surgery when indicated, or bladder care. Orthopedic beds and dog ramps stay on the sister <a href="/health/dog-arthritis">dog.com arthritis</a> page. A dog knee brace and a rear-support harness stay on <a href="/health/dog-luxating-patella">dog-luxating-patella</a>. Traction rugs and raised bowls stay on <a href={crossSiteHref('vets-co', '/health/arthritis-in-dogs')}>vets.co arthritis-in-dogs</a>.</p>
 
           <h2 id="kit">Crate-rest mobility kit</h2>
-          <p>Everyday physical supplies that match the crate-rest and mobility copy above — a recovery crate for the 4–6 week Grade 1 confinement window, a belly-support harness that lifts the torso so the spine stays level on brief toilet walks, plus a dog wheelchair (mobility cart) when a Grade 3–5 dog cannot walk yet. These are home-setup aids, not treatments. NSAIDs, joint supplements, and prescription pain medications stay educational copy only — this page never hops medications, supplements, or brand diets. Orthopedic beds and dog ramps stay on the sister <a href="/health/dog-arthritis">dog.com arthritis</a> page. A dog knee brace and a rear-support harness stay on <a href="/health/dog-luxating-patella">dog-luxating-patella</a>. Traction rugs and raised bowls stay on <a href={crossSiteHref('vets-co', '/health/arthritis-in-dogs')}>vets.co arthritis-in-dogs</a>. This page does not claim hands-on testing.</p>
+          <p>Keep these on hand: a recovery crate for the 4–6 week Grade 1 confinement window, a belly-support harness that lifts the torso so the spine stays level on brief toilet walks, plus a dog wheelchair (mobility cart) when a Grade 3–5 dog cannot walk yet. These are home-setup aids, not treatments. NSAIDs, joint supplements, and prescription pain medications stay educational copy only — this page does not link to medications, supplements, or brand diets. Orthopedic beds and dog ramps stay on the sister <a href="/health/dog-arthritis">dog.com arthritis</a> page. A dog knee brace and a rear-support harness stay on <a href="/health/dog-luxating-patella">dog-luxating-patella</a>. Traction rugs and raised bowls stay on <a href={crossSiteHref('vets-co', '/health/arthritis-in-dogs')}>vets.co arthritis-in-dogs</a>.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/dog+recovery+crate?s=health-intervertebral-disc-disease", "/go/amazon-brand/dog+belly+support+harness?s=health-intervertebral-disc-disease", "/go/amazon-brand/dog+wheelchair+mobility+cart?s=health-intervertebral-disc-disease"]} />
 
-          {/* Money path — live amazon-brand search hops (recovery
+          {/* Shop note — live amazon-brand search buttons (recovery
               crate / belly-support harness / wheelchair). ShopCtas
-              hides empty Chewy; never href="#" or PLACEHOLDER.
-              Category searches only. NSAIDs, joint supplements,
+              hides empty Chewy; never href="#" or an empty link.
+              Amazon searches only. NSAIDs, joint supplements,
               orthopedic beds, dog ramps, knee braces, rear-support
               harnesses, traction rugs, and raised bowls are not
-              shoppable hops. */}
+              shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
@@ -115,6 +116,7 @@ export default function IVDDPage() {
           </div>
           </div>
 
+          <p>Crates for the rest period are compared in the <Link href="/reviews/best-dog-crates">dog crate review</Link>.</p>
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
 

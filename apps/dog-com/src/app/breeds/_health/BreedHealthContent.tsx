@@ -23,7 +23,6 @@
 
 import Link from 'next/link'
 import {
-  AffiliateDisclosure,
   ArticleLayout,
   ArticleByline,
   CalloutBox,
@@ -279,6 +278,7 @@ export function BreedHealthContent({ slug }: { slug: string }) {
         <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
           Cost reality check
         </div>
+        <p>Typical range, not a quote. Those figures are typical US ranges dated 2026-06-13.</p>
         <h3 className="font-display font-bold text-brand-dark text-lg mb-2 mt-0">
           Many breed-specific conditions cost $3,000–12,000 to manage.
         </h3>
@@ -391,13 +391,12 @@ export function BreedHealthContent({ slug }: { slug: string }) {
         </Link>
       </p>
 
-      {/* Money path — live amazon-brand kitchen hops
+      {/* Shop note — live amazon-brand kitchen buttons
           matching on-page issue-frequency / OFA-CHIC
           screening / AVMA-breed-club copy. Unique vs
           the health-spoke + breeds-hub kitchens.
-          Educational only — never a vaccine hop,
-          never an Rx hop. */}
-      <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          Educational only — never a vaccine button,
+          never an Rx button. */}
 
       {/* ── Section: FAQs ─────────────────────────────────────────────────── */}
       <h2 id="faqs">Frequently Asked Questions</h2>

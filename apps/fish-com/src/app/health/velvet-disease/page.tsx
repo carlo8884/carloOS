@@ -1,14 +1,15 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, AffiliateDisclosure, ArticleSourcesList, ShopCtas, JourneyNext } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, ArticleSourcesList, ShopCtas, JourneyNext } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
 const SOURCES = [
-  { label: "Amyloodinium ocellatum (Velvet Disease) — Merck Veterinary Manual", url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/aquarium-fish/amyloodinium-ocellatum-in-fish", publisher: "Merck Vet Manual" },
+  { label: "Amyloodinium ocellatum (Velvet Disease) — Merck Veterinary Manual", url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/aquarium-fish/parasitic-diseases-of-fish", publisher: "Merck Vet Manual" },
   { label: "Noga, E.J. Fish Disease: Diagnosis and Treatment, 2nd ed. Wiley-Blackwell, 2010.", publisher: "Wiley-Blackwell" },
   { label: "Yanong, R.P.E. Cryptobia iubilans and Other Diplomonadina of Fish — UF/IFAS Extension FA-28.", url: "https://edis.ifas.ufl.edu/publication/FA028", publisher: "UF/IFAS Extension" },
-  { label: "Francis-Floyd, R. Stress — Its Role in Fish Disease — UF/IFAS Extension FA-43.", url: "https://edis.ifas.ufl.edu/publication/FA043", publisher: "UF/IFAS Extension" },
+  { label: "Francis-Floyd, R. Stress — Its Role in Fish Disease — UF/IFAS Circular 919 / FA005.", url: "https://ask.ifas.ufl.edu/publication/FA005", publisher: "UF/IFAS Extension" },
 ]
 
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Velvet Disease in Fish — Gold Dust Appearance | Fish.com', description: 'Velvet (Oodinium) is a parasite that looks like gold dust on the fish surface. Highly contagious. Treat with copper or chloroquine phosphate', path: '/health/velvet-disease', type: 'article' })
@@ -47,7 +48,7 @@ export default function VelvetDiseasePage() {
           siteId="fish-com"
           nextHref="/health/fish-disease-guide"
           nextLabel="Sort velvet from other look-alikes"
-          nextBlurb="Gold dust under a flashlight is velvet, not ich. The next useful page is the disease hub — so you can sort parasitic, bacterial, and water-quality look-alikes before treating. Isolate first; copper stays hospital-tank only. The hop below is the same quarantine / hospital-tank search already on this page."
+          nextBlurb="Gold dust under a flashlight is velvet, not ich. The next useful page is the disease hub — so you can sort parasitic, bacterial, and water-quality look-alikes before treating. Isolate first; copper stays hospital-tank only. The button below opens the same quarantine / hospital-tank search on Amazon."
           resourceHref="/go/amazon-brand/aquarium+quarantine+hospital+tank+net?s=health-velvet"
           resourceLabel="Browse quarantine / hospital tanks on Amazon →"
         />
@@ -63,10 +64,10 @@ export default function VelvetDiseasePage() {
         <h2>Saltwater Velvet (Amyloodinium) — More Dangerous</h2>
         <p>Amyloodinium ocellatum in marine aquariums is significantly more lethal than freshwater Piscinoodinium. It progresses faster, the dinospore infective stage is shorter, and it can kill a full tank of fish within 48-72 hours of first visible signs. Marine velvet is an emergency — treatment must begin immediately. The same copper or chloroquine phosphate protocols apply, in a quarantine tank separate from any invertebrates or coral.</p>
 
-        {/* Money path — live amazon-brand search hops (temp-and-blackout kit).
-            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-            Category searches only — not a ranked list. No medication hops. */}
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        {/* Shop note — live amazon-brand search buttons (temp-and-blackout kit).
+            ShopCtas hides empty Chewy; never href="#" or an empty link.
+            Amazon searches only — not a ranked list. No medication buttons. */}
+        <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/eheim+jager+heater?s=health-velvet", "/go/amazon-brand/aquarium+digital+thermometer?s=health-velvet", "/go/amazon-brand/aquarium+sponge+filter?s=health-velvet", "/go/amazon-brand/aquarium+quarantine+hospital+tank+net?s=health-velvet"]} />
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
             Shop temp-and-blackout husbandry gear
@@ -75,7 +76,7 @@ export default function VelvetDiseasePage() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/eheim+jager+heater?s=health-velvet"
-              amazonLabel="Browse aquarium heaters on Amazon →"
+              amazonLabel="Browse Eheim Jager heaters on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+digital+thermometer?s=health-velvet"

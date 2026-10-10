@@ -15,6 +15,7 @@
 'use client'
 
 import manifestData from '../data/image-manifest.json'
+import { displaySize } from '../lib/display-size'
 import { ImageCard, type ImageCardAspect, type ImageCardVariant } from './ImageCard'
 
 interface ManifestEntry {
@@ -77,6 +78,11 @@ export interface StockImageProps {
    * is on the credit's title, never a nested <a>. Default false.
    */
   subtleCredit?: boolean
+  /**
+   * Below-the-fold slot: explicit manifest dimensions (capped), no priority,
+   * so next/image lazy-loads an AVIF or WebP instead of a `fill` hero.
+   */
+  belowFold?: boolean
 }
 
 export function StockImage({
@@ -88,6 +94,7 @@ export function StockImage({
   variant = 'inline',
   priority = false,
   subtleCredit = false,
+  belowFold = false,
 }: StockImageProps) {
   // Prefer the primary key; if it isn't synced yet, try the fallback key so
   // the slot still renders a real, on-brand photo instead of the placeholder.
@@ -154,6 +161,8 @@ export function StockImage({
     ? `Source: ${providerLabel}`
     : `Photo: ${entry.photographer} via ${providerLabel}`
 
+  const size = belowFold ? displaySize(entry.width, entry.height) : null
+
   return (
     <ImageCard
       src={entry.url}
@@ -163,8 +172,10 @@ export function StockImage({
       creditUrl={entry.sourceUrl}
       aspect={aspect}
       variant={variant}
-      priority={priority}
+      priority={belowFold ? false : priority}
       subtleCredit={subtleCredit}
+      width={size?.width}
+      height={size?.height}
     />
   )
 }

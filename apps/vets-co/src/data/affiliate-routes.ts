@@ -140,7 +140,7 @@ export const affiliateRoutes: Record<string, AffiliateRoute> = {
     // only on products). Destination is the Connect-with-a-Vet page.
     // Empty /go/chewy 302s to Chewy home via the shared hop helper.
     name: 'Chewy Connect with a Vet (Telehealth)',
-    template: 'https://chewy.com/connect-with-a-vet?refid=PLACEHOLDER&campaign={sku}',
+    template: 'https://www.chewy.com/pethealth/connect-with-a-vet?refid=PLACEHOLDER&campaign={sku}',
     requiresSku: false,
   },
   'amazon-brand': {

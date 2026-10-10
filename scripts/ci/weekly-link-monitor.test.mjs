@@ -7,7 +7,14 @@ import {
   classifyRedirectChain,
   classifyStatus,
   goHrefsFromSource,
+  cardShopHrefs,
+  citationProbeReadsBody,
+  emailShopHrefs,
+  EMAIL_SEARCH_VENDORS,
+  isEmptySearchHtml,
+  isRetailerSearchUrl,
   missingShopSource,
+  shopSearchVerdict,
   renderReport,
   tableShopHrefs,
 } from './weekly-link-monitor-lib.mjs'
@@ -119,9 +126,79 @@ test('the shop section is part of the report and does not mention anyone', () =>
   })
   assert.match(body, /FAIL=1/)
   assert.match(body, /## Comparison-table and gift-guide shop links/)
+  assert.match(body, /ReviewCard, and ShopCtas/)
   assert.match(body, /Hidden Chewy hops with no tag: 1/)
   assert.match(body, /november-december-gift-guide/)
   assert.equal(/(^|\s)@/.test(body), false)
+})
+
+test('review cards and shop buttons are part of the empty-search probe', () => {
+  const src = `
+    <ReviewCard ctaHref="/go/amazon-brand/eheim+jager+heater?s=reviews-best-aquarium-heaters" />
+    <ShopCtas amazonHref="/go/amazon-brand/aqueon+pro+heater?s=reviews-best-aquarium-heaters" />
+    <ShopCtas chewyHref="/go/chewy-brand/dog+harness?s=reviews-best-dog-harnesses" />
+  `
+  assert.deepEqual(cardShopHrefs(src), [
+    '/go/amazon-brand/eheim+jager+heater?s=reviews-best-aquarium-heaters',
+    '/go/amazon-brand/aqueon+pro+heater?s=reviews-best-aquarium-heaters',
+    '/go/chewy-brand/dog+harness?s=reviews-best-dog-harnesses',
+  ])
+})
+
+test('the shop probe fails a real empty search and keeps 503 and 429 blocked', () => {
+  const empty = '<span>No results for your search query. </span>'
+  assert.equal(shopSearchVerdict([200], '', empty).kind, 'fail')
+  assert.equal(shopSearchVerdict([200], '', empty).detail, 'empty search')
+  assert.equal(shopSearchVerdict([301, 200], '', empty + 'data-asin="B00TEST01"'.repeat(8)).kind, 'ok')
+  assert.equal(shopSearchVerdict([503], '', empty).kind, 'blocked')
+  assert.equal(shopSearchVerdict([429], '', empty).kind, 'blocked')
+  assert.equal(shopSearchVerdict([403], '', empty).kind, 'blocked')
+  assert.equal(shopSearchVerdict([200], '', '<title>Robot Check</title>No results for your search query').kind, 'ok')
+})
+
+test('citation probe body-reads retailer searches the shop probe does not already cover', () => {
+  const search = 'https://www.amazon.com/s?k=atc+refractometer&tag=test-20'
+  const product = 'https://www.amazon.com/dp/B000000000'
+  const article = 'https://avma.org/resources/pet-owners'
+  assert.equal(isRetailerSearchUrl(search), true)
+  assert.equal(isRetailerSearchUrl(product), false)
+  assert.equal(isRetailerSearchUrl(article), false)
+  assert.equal(isRetailerSearchUrl('https://www.chewy.com/s?query=dog+harness'), true)
+  assert.equal(isRetailerSearchUrl('https://www.smartpakequine.com/search/search?SearchTerm=halter'), true)
+  const covered = new Set([search])
+  assert.equal(citationProbeReadsBody(search, covered), false)
+  assert.equal(citationProbeReadsBody('https://www.amazon.com/s?k=tropic+marin+classic+salt&tag=test-20', covered), true)
+  assert.equal(citationProbeReadsBody(product, covered), false)
+  const empty = '<span>No results for your search query. </span>'
+  assert.equal(shopSearchVerdict([200], '', empty).detail, 'empty search')
+  assert.equal(shopSearchVerdict([503], '', empty).kind, 'blocked')
+  assert.equal(shopSearchVerdict([429], '', empty).kind, 'blocked')
+})
+
+test('an empty Amazon search is not a rate-limit page', () => {
+  assert.equal(
+    isEmptySearchHtml('<span>No results for your search query. </span>', 2),
+    true,
+  )
+  assert.equal(
+    isEmptySearchHtml('<span>No results for your search query. </span>' + 'data-asin="B00"'.repeat(8), 8),
+    false,
+  )
+  assert.equal(isEmptySearchHtml('HTTP 503 Service Unavailable', 0), false)
+  assert.equal(isEmptySearchHtml('<title>Robot Check</title>No results for your search query', 0), false)
+})
+
+test('email retailer searches keep the source query', () => {
+  const hrefs = emailShopHrefs(
+    '[Get it](https://fish.com/go/amazon-brand/api+freshwater+master+test+kit?s=email-cycling-guide)\n[Skip](https://dog.com/go/chewy/connect)',
+  )
+  assert.deepEqual(hrefs, [
+    '/go/amazon-brand/api+freshwater+master+test+kit?s=email-cycling-guide',
+    '/go/chewy/connect',
+  ])
+  assert.equal(EMAIL_SEARCH_VENDORS.has('amazon-brand'), true)
+  assert.equal(EMAIL_SEARCH_VENDORS.has('chewy'), false)
+  assert.equal(missingShopSource(hrefs[0]), false)
 })
 
 test('the workflow files one issue and cannot assign or request review', () => {

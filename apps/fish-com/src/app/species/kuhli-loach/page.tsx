@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { StockImage, buildMetadata, ArticleLayout, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
+import { ShopCtas, StockImage, buildMetadata, ArticleLayout, RelatedLinks, CrossPortfolioCard , ArticleSourcesList } from '@carloOS/ui'
 import { FAQAccordion, SchemaScript, buildArticleSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
@@ -46,7 +47,7 @@ const FAQS = [
   {
     question: 'How long do kuhli loaches live?',
     answer:
-      'Ten or more years with proper care. They prefer soft, slightly acidic water (pH 6.0–7.0) at 75–82°F but adapt to neutral community conditions. Check filter inlets and lid gaps before adding them — kuhli loaches can squeeze through extremely small openings, so use a pre-filter sponge on intakes.',
+      'Ten or more years with proper care. They prefer soft, slightly acidic water (pH 6.0–7.0) at 75–86°F (https://www.fishbase.se/summary/Pangio-kuhlii.html) but adapt to neutral community conditions. Check filter inlets and lid gaps before adding them — kuhli loaches can squeeze through extremely small openings, so use a pre-filter sponge on intakes.',
     answerText:
       '10+ years with proper care, in soft slightly acidic water at 75-82F. Cover filter inlets and lid gaps — they squeeze through tiny openings.',
   },
@@ -68,9 +69,9 @@ export default function KuhliLoachPage() {
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Quick Stats</div>
-          {[['Size', '3–4 inches'], ['Group', '6+ required'], ['Substrate', 'Fine sand — essential'], ['Activity', 'Nocturnal — rarely visible daytime'], ['Temperature', '75–86°F'], ['pH', '5.5–7.0 (soft acidic preferred)'], ['Lifespan', '10+ years']].map(([k, v]) => (
+          {[['Size', '3–4 inches'], ['Group', '6+ required'], ['Substrate', 'Fine sand — essential'], ['Activity', 'Nocturnal — rarely visible daytime'], ['Temperature', '75–86°F (https://www.fishbase.se/summary/Pangio-kuhlii.html)'], ['pH', '5.5–7.0 (soft acidic preferred)'], ['Lifespan', '10+ years']].map(([k, v]) => (
             <div key={k} className="flex justify-between py-1.5 border-b border-brand-border text-xs last:border-0">
-              <span className="text-brand-text-light">{k}</span><span className="font-bold text-brand-dark text-right max-w-[55%]">{v}</span>
+              <span className="text-brand-text-light">{k}</span><span className="font-bold text-brand-dark text-right max-w-[55%] break-all">{v}</span>
             </div>
           ))}
         </div>
@@ -96,7 +97,7 @@ export default function KuhliLoachPage() {
         <p>Bottom scavengers that eat sinking foods. Primary: sinking micro pellets (Hikari Micro Wafers), sinking algae wafers, and frozen foods that reach the bottom — frozen bloodworms (they go wild for these), frozen daphnia, frozen brine shrimp. Feed at lights-out so they can find food without competition from surface and mid-water feeders. They will also scavenge any uneaten food that reaches the bottom — a useful cleanup function. They do not eat hair algae or soft algae the way plecos and otocinclus do — their feeding is scavenging-based, not algae-grazing.</p>
 
         <h2>Water Parameters and Compatibility</h2>
-        <p>Prefer soft, slightly acidic water (pH 6.0–7.0) with good warmth (75–82°F). Adaptable to neutral community tank conditions. Compatible with virtually all peaceful community fish — they occupy bottom territory that does not overlap with mid-water or surface fish. Compatible with peaceful shrimp (they may eat very small shrimp but ignore adult cherry shrimp and larger). Avoid aggressive cichlids and any fish large enough to eat a 4-inch loach.</p>
+        <p>Prefer soft, slightly acidic water (pH 6.0–7.0) with good warmth (75–86°F, <a className="break-all" href="https://www.fishbase.se/summary/Pangio-kuhlii.html">https://www.fishbase.se/summary/Pangio-kuhlii.html</a>). Adaptable to neutral community tank conditions. Compatible with virtually all peaceful community fish — they occupy bottom territory that does not overlap with mid-water or surface fish. Compatible with peaceful shrimp (they may eat very small shrimp but ignore adult cherry shrimp and larger). Avoid aggressive cichlids and any fish large enough to eat a 4-inch loach.</p>
         <p>Warning: kuhli loaches can squeeze through extremely small gaps in tank lids and equipment — check for any openings in filter inlets (use a pre-filter sponge) and lid gaps before adding them. They will find any gap and explore it.</p>
         <h2>Frequently Asked Questions</h2>
         <FAQAccordion
@@ -108,12 +109,12 @@ export default function KuhliLoachPage() {
           includeSchema={false}
           allowMultiple
         />
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        <HopDisclosure siteId="fish-com" href="/go/amazon-brand/kuhli%20loach%20tank%20setup?s=species-kuhli-loach" />
           <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Kuhli Loach — Tank Setup</div>
-          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for kuhli loach care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
+          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for kuhli loach care.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
-            <a href="/go/amazon-brand/kuhli%20loach%20tank%20setup?s=species-kuhli-loach" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop Kuhli Loach Setup on Amazon →</a>
+            <ShopCtas amazonHref="/go/amazon-brand/kuhli%20loach%20tank%20setup?s=species-kuhli-loach" amazonLabel="Browse kuhli loach tank setups on Amazon →" />
           </div>
         </div>
 

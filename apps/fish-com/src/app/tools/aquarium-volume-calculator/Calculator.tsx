@@ -97,6 +97,9 @@ export default function VolumeCalculator() {
 
   return (
     <div>
+      {!inputError && result && result.grossUSGal > 0 ? (
+        <ResultPick linkFirst siteId="fish-com" pick={heaterFromGallons(result.netUSGal)} />
+      ) : null}
       <CalcCard>
         <div className="grid sm:grid-cols-2 gap-x-6 gap-y-0">
           <div className="col-span-full">
@@ -166,7 +169,7 @@ export default function VolumeCalculator() {
             min={1}
             max={100}
             step={1}
-            hint="Most tanks fill to ~92% of gross volume (substrate, decor, freeboard)."
+            hint="A 92% fill is a planning figure for substrate, decor, and freeboard, not a measured displacement."
             error={fillError}
           />
         </div>
@@ -199,7 +202,14 @@ export default function VolumeCalculator() {
         <ResultMeaning>
           Net volume is the water you can put in at this fill level. Size stocking, filtration, and the heater from that number, not from the empty glass.
         </ResultMeaning>
-        <ResultPick siteId="fish-com" pick={heaterFromGallons(result.netUSGal)} />
+        <p className="mt-4 text-sm font-semibold leading-snug">
+          <a
+            href="/reviews/best-aquarium-filters"
+            className="inline-block max-w-full whitespace-normal text-brand-primary underline underline-offset-2"
+          >
+            Read the aquarium filter review
+          </a>
+        </p>
         </>
       )}
     </div>

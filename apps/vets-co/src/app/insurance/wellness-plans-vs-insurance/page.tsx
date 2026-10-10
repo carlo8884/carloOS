@@ -1,8 +1,14 @@
 import type { Metadata } from 'next'
-import { TableShopLink, ComparisonFoot, PrimaryHop, buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ReviewCard, AffiliateDisclosure } from '@carloOS/ui'
+import { TableShopLink, ComparisonFoot, PrimaryHop, EmailCapture, buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ReviewCard, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import { InsuranceWellnessShop } from '../../../components/InsuranceWellnessShop'
 import { buildArticleSchema, SchemaScript, buildItemListSchema, combineSchemas} from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
+
+// Request-time env, same as the insurance comparison. A set partner tag
+// renders the quote link; an unset tag stays a disabled button.
+export const dynamic = 'force-dynamic'
+
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Wellness Plans vs. Pet Insurance — What's the Difference | Vets.co", description: "Wellness plans budget for routine care; insurance protects against unexpected bills. Learn the difference and when each makes sense for your pet.", path: '/insurance/wellness-plans-vs-insurance', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'vets-co', title: "Wellness Plans vs. Pet Insurance", description: 'The difference between wellness plans and insurance, and when each makes sense.', url: 'https://vets.co/insurance/wellness-plans-vs-insurance', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' })
 const FAQS = [
@@ -13,8 +19,8 @@ const FAQS = [
 const itemList = buildItemListSchema({
   name: "Wellness Plans vs. Pet Insurance",
   items: [
-    { name: "Embrace", url: "https://vets.co/insurance/wellness-plans-vs-insurance#embrace" },
-    { name: "Pumpkin Pet Insurance", url: "https://vets.co/insurance/wellness-plans-vs-insurance#pumpkin" },
+    { name: "Embrace", url: "https://vets.co/go/embrace/home?s=insurance-wellness-plans-vs-insurance" },
+    { name: "Pumpkin Pet Insurance", url: "https://vets.co/go/pumpkin/home?s=insurance-wellness-plans-vs-insurance" },
   ],
 })
 export default function WellnessVsInsurancePage() {
@@ -22,7 +28,8 @@ export default function WellnessVsInsurancePage() {
     <>
       <SchemaScript schema={combineSchemas(schema, itemList)} />
       <ArticleLayout siteId="vets-co"
-        heroHop={<PrimaryHop href='/go/embrace/home?s=insurance-wellness-plans-vs-insurance' label='Get an Embrace quote →' />}
+        heroHop={<PrimaryHop href='/go/embrace/home?s=insurance-wellness-plans-vs-insurance' label='Get an Embrace quote →' holdWithoutPartnerId />}
+        heroExtra={<HopDisclosure siteId="vets-co" noteClassName="mt-3 mb-0 text-xs leading-relaxed text-white/80" href={['/go/embrace/home?s=insurance-wellness-plans-vs-insurance', '/go/pumpkin/home?s=insurance-wellness-plans-vs-insurance']} />}
         hero={{ title: "Wellness Plans vs. Pet Insurance", subtitle: 'Wellness plans and pet insurance are often confused, but they solve opposite problems. A wellness plan budgets for the routine care you know is coming; insurance protects against the unexpected, expensive care you hope never arrives. Knowing the difference helps you spend on the protection that actually matters for your situation.', category: 'Insurance Guide', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '8 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Insurance', href: '/insurance' }, { name: 'Wellness vs. Insurance', href: '/insurance/wellness-plans-vs-insurance' }]}
         sidebar={<>
@@ -41,6 +48,23 @@ export default function WellnessVsInsurancePage() {
       >
         <div className="carloOS-article">
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
+          <LastUpdated date="2026-10-08" />
+          <EmailCapture
+            variant="inline"
+            siteId="vets-co"
+            addressOnly
+            title="Shopping checklist"
+            ctaText="Copy checklist"
+            source="insurance-wellness-plans-vs-insurance"
+            checklist={[
+              "Pet insurance covers unexpected, large expenses from accidents and illness.",
+              "They solve different problems: wellness plans spread the cost of care you know is coming, while insurance protects against costs you cannot predict.",
+              "Many owners use both, or use insurance plus a personal savings plan for routine care.",
+              "Generally, a wellness plan returns roughly what you pay into it over a year, sometimes a little more with bundled discounts.",
+              "They are not a way to come out significantly ahead financially.",
+              "Most veterinary and financial advisers suggest prioritizing accident-and-illness insurance over a wellness plan.",
+            ]}
+          />
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
               Keep the distinction
@@ -71,14 +95,12 @@ export default function WellnessVsInsurancePage() {
           <p>If you can only choose one, most owners are best served by accident-and-illness insurance, since it guards against the expenses that force the hardest decisions. Layer a wellness plan on top only if its structure genuinely helps you stay current on preventive care. Whatever you choose, keep the two functions distinct in your mind: budget for what you can predict, and insure against what you cannot.</p>
 
           <h2 id="quote">Insurers That Offer Both</h2>
-          <p>If you want catastrophe insurance with an optional wellness or preventive layer on top, some carriers bundle both — keeping the two functions distinct, as above. The two below take that approach; for the full side-by-side, see our <a href="/reviews/best-pet-insurance">best pet insurance comparison</a>. Remember a wellness add-on is a budgeting benefit, not insurance.</p>
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <p>If you want catastrophe insurance with an optional wellness or preventive layer on top, some carriers bundle both — keeping the two functions distinct, as above. The two below take that approach; for the full side-by-side, see our <a href="/reviews/best-pet-insurance">best pet insurance comparison</a>. Remember a wellness add-on is a budgeting benefit, not insurance. The <a href="/tools/pet-insurance-worth-it-calculator">worth-it calculator</a> is for the accident-and-illness premium, and it tells you to leave routine wellness out of the eligible-cost figure.</p>
           <ReviewCard
             id="embrace"
             badge="Insurance + Wellness"
             name="Embrace"
             subtitle="Accident-and-illness plus an optional Wellness Rewards plan"
-            score={8.6}
             winner
             description={
               <p>Pairs core accident-and-illness insurance with an optional Wellness Rewards plan that reimburses routine care insurance excludes — a clean way to get both functions from one carrier while keeping them distinct. The wellness piece is a budgeted allowance, not insurance; the insurance piece is what guards against the big bills.</p>
@@ -92,7 +114,7 @@ export default function WellnessVsInsurancePage() {
             cons={['Wellness add-on is not insurance', 'Adds to monthly cost']}
             price="Quote-based"
             ctaText="Get a Quote →"
-            ctaHref="/go/embrace/home?s=insurance-wellness-plans-vs-insurance"
+            ctaHref="/go/embrace/home?s=insurance-wellness-plans-vs-insurance" holdWithoutPartnerId
             ctaAffiliateProgram="embrace"
             ctaAffiliateProduct="home"
           />
@@ -101,7 +123,6 @@ export default function WellnessVsInsurancePage() {
             badge="Preventive Bundle"
             name="Pumpkin Pet Insurance"
             subtitle="Accident-and-illness with an optional preventive essentials package"
-            score={8.2}
             description={
               <p>Offers accident-and-illness coverage with an optional preventive-care package that refunds routine services like vaccines and wellness exams. Like any wellness layer, treat it as predictable-cost budgeting rather than catastrophe protection. Compare the insurance terms — annual limit, reimbursement, exclusions — alongside the preventive package value.</p>
             }
@@ -136,7 +157,7 @@ export default function WellnessVsInsurancePage() {
               <tbody>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 text-brand-text-mid">You want one carrier for catastrophe cover plus a wellness allowance</td>
-                  <td className="p-3 font-bold text-brand-dark"><a href="#embrace" className="text-brand-primary">Embrace</a><TableShopLink href={"/go/embrace/home?s=insurance-wellness-plans-vs-insurance"} product={"Embrace"} /></td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#embrace" className="text-brand-primary">Embrace</a><TableShopLink href={"/go/embrace/home?s=insurance-wellness-plans-vs-insurance"} product={"Embrace"} holdWithoutPartnerId /></td>
                   <td className="p-3 text-brand-text-mid">Accident and illness, optional Wellness Rewards, pay-then-claim</td>
                   <td className="p-3 text-brand-text-mid">The rewards plan reimburses routine care. It is not the insurance</td>
                 </tr>
@@ -155,10 +176,16 @@ export default function WellnessVsInsurancePage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-05" />
+          <ComparisonFoot updated="2026-10-09" />
 
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
+                  <ArticleSourcesList
+            title="Sources"
+            sources={[
+            { label: "Embrace", url: "https://www.embracepetinsurance.com/", publisher: "Embrace" },
+            ]}
+          />
         </div>
       </ArticleLayout>
     </>

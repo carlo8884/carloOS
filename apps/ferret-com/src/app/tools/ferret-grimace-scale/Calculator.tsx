@@ -222,7 +222,13 @@ export default function FerretGrimaceScale() {
                 Find an exotic vet →
               </Link>
             </div>
-          ) : null}
+          ) : (
+            <p className="mt-3 text-sm">
+              <Link href="/health/signs-of-pain" className="font-semibold text-brand-primary underline">
+                Read signs of pain in ferrets
+              </Link>
+            </p>
+          )}
         </div>
       ) : (
         <p className="mt-2 text-sm text-brand-text-light">

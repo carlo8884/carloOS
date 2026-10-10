@@ -7,7 +7,8 @@
   "exports": {
     ".": "./src/index.ts",
     "./server": "./src/server/affiliate-hop.ts",
-    "./inquire": "./src/server/inquire.ts"
+    "./inquire": "./src/server/inquire.ts",
+    "./analytics": "./src/server/analytics-route.ts"
   },
   "peerDependencies": {
     "next": ">=14.0.0",

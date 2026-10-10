@@ -1,6 +1,7 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, ArticleLayout, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, RelatedLinks, ShopCtas, buildArticleSchema, buildMetadata, PrimaryHop, ArticleSourcesList, LastUpdated, ComparisonFoot, EmailCapture } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -13,7 +14,7 @@ export const metadata: Metadata = buildMetadata({
 const schema = buildArticleSchema({
   siteId: 'ferret-com',
   title: 'Ferret Nation or the Prevue Feisty Ferret',
-  description: 'The cage review already scores the Ferret Nation double for a long-term home and the Prevue Feisty Ferret as the smaller value cage.',
+  description: 'The cage review already lists the Ferret Nation double for a long-term home and the Prevue Feisty Ferret as the smaller value cage.',
   url: 'https://ferret.com/reviews/ferret-nation-vs-prevue-guide',
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
@@ -24,11 +25,11 @@ const schema = buildArticleSchema({
 const FAQS = [
   {
     question: 'Which cage does the cage review mark as the winner?',
-    answer: 'The Ferret Nation / Critter Nation double unit, scored 9.5 and marked Best Overall. The review lists about 0.5 inch bar spacing, full-width doors, a modular stack, and a price tier of $$$. It is the long-term pick for one to four ferrets.',
+    answer: 'The Ferret Nation / Critter Nation double unit, marked Best Overall. The manufacturer page does not print a bar-spacing figure. It says the full-width double doors open for cleaning and feeding (fetched 2026-10-08). The review lists a modular stack and a price tier of $$$. It is the long-term pick for one to four ferrets.',
   },
   {
     question: 'When does the review point to the Prevue Feisty Ferret?',
-    answer: 'When the double unit is too big or too expensive, for one or two ferrets. Prevue scores 8.4. The review lists ferret-appropriate spacing, shelves and ramps, and a mid price tier of $$. It is not expandable.',
+    answer: 'When the double unit is too big or too expensive, for one or two ferrets. The review lists ferret-appropriate spacing, shelves and ramps, and a mid price tier of $$. It is not expandable.',
   },
   {
     question: 'Do the wire shelves still need a cover?',
@@ -43,12 +44,20 @@ export default function FerretNationVsPrevueGuidePage() {
       schema={schema}
       hero={{
         title: 'Ferret Nation or the Prevue Feisty Ferret',
-        subtitle: 'A long-term colony cage and a smaller pair cage are different footprints. Scores below are the ones on the cage review. Prices there are tiers, not dollar amounts.',
         category: 'Buyer guide',
         authorName: 'Ferret.com Editorial',
         publishedAt: 'October 2026',
         readTime: '6 min',
       }}
+      heroHop={
+        <>
+          <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">The Ferret Nation double is the long-term cage for a small group.</p>
+          <div data-fold="offer">
+          <PrimaryHop href="/go/amazon/B0054U8UGW?s=reviews-ferret-nation-vs-prevue-guide" label="Browse Ferret Nation / Critter Nation double units on Amazon" />
+          <HopDisclosure siteId="ferret-com" href="/go/amazon/B0054U8UGW?s=reviews-ferret-nation-vs-prevue-guide" />
+        </div>
+        </>
+      }
       breadcrumbs={[
         { name: 'Home', href: '/' },
         { name: 'Reviews', href: '/reviews' },
@@ -60,25 +69,91 @@ export default function FerretNationVsPrevueGuidePage() {
           links={[
             { label: 'Reviews hub', href: '/reviews' },
             { label: 'Best ferret cage', href: '/reviews/best-ferret-cage' },
+            { label: 'Kaytee vs Prevue', href: '/reviews/kaytee-vs-prevue-guide' },
+            { label: 'Kaytee vs Ferret Nation', href: '/reviews/kaytee-vs-ferret-nation-guide' },
             { label: 'Cage size calculator', href: '/tools/cage-size-calculator' },
           ]}
         />
       }
     >
       <div className="carloOS-article">
-        <p>The <Link href="/reviews/best-ferret-cage">cage review</Link> already scores the Ferret Nation / Critter Nation double as the overall pick and the Prevue Feisty Ferret as the value pick. Those scores are editorial scores, not shopper star ratings. Prices in the review are tiers, not dollar amounts. Nothing here turns those tiers into a dollar price.</p>
+          <LastUpdated date="2026-10-10" />
+        <p>The <Link href="/reviews/best-ferret-cage">cage review</Link> already lists the Ferret Nation / Critter Nation double as the overall pick and the Prevue Feisty Ferret as the value pick. Prices in the review are tiers, not dollar amounts. Nothing here turns those tiers into a dollar price.</p>
         <h2>What the review says about Ferret Nation</h2>
-        <p>The Ferret Nation / Critter Nation double unit is Best Overall, score 9.5, and the winner. Bar spacing in the review is about 0.5 inch. Front access is full-width doors. Levels are modular and stackable. Pans are deep and leak-proof. It is meant for one to four ferrets. The price tier is $$$. Cons: premium price, heavy and large once assembled, and wire shelves need covering.</p>
+        <p>The Ferret Nation / Critter Nation double unit is Best Overall and the winner. The <a href="https://www.midwesthomes4pets.com/product/small-animal/habitats-cages/ferret-nation/">manufacturer page</a> does not print a bar-spacing figure. It says the full-width double doors open for cleaning and feeding (fetched 2026-10-08). Levels are modular and stackable. Pans are deep and leak-proof. It is meant for one to four ferrets. The price tier is $$$. Cons: premium price, heavy and large once assembled, and wire shelves need covering.</p>
         <h2>What the review says about Prevue</h2>
-        <p>The Prevue Pet Products Feisty Ferret Cage is Best Value, score 8.4. Bar spacing is listed as ferret-appropriate, not as a second inch measurement. It includes multiple shelves and ramps. The price tier is $$. It is meant for one to two ferrets. Cons: smaller than a double modular unit, wire shelves need covering, and it is not expandable.</p>
+        <p>The Prevue Pet Products Feisty Ferret Cage is Best Value. Bar spacing is listed as ferret-appropriate, not as a second inch measurement. It includes multiple shelves and ramps. The price tier is $$. It is meant for one to two ferrets. Cons: smaller than a double modular unit, wire shelves need covering, and it is not expandable.</p>
         <p>The <Link href="/tools/cage-size-calculator">cage-size calculator</Link> is the step for floor space. Use that calculator for the length before you order. The Kaytee multi-level cage is a third option, price tier $, for one ferret with daily out-time.</p>
         <h2>Who should buy which cage</h2>
         <p>Buy the Ferret Nation double when one to four ferrets will live in it long term and you can accept the weight and the $$$ tier. Buy the Prevue when the household is one or two ferrets and the double unit is too big or too expensive. Cover wire shelves and ramps on either cage, and check the spacing on the exact model.</p>
-        <AffiliateDisclosure variant="inline" siteId="ferret-com" />
-        <p>The link below searches for the Ferret Nation double unit, the same search as on the cage review.</p>
-        <p><a className="font-semibold text-brand-primary" href="/go/amazon-brand/ferret+nation+critter+nation+double+unit?s=reviews-ferret-nation-vs-prevue-guide">Browse Ferret Nation / Critter Nation double units on Amazon →</a></p>
+        <ShopCtas
+          amazonHref="/go/amazon/B000QFMYWQ?s=reviews-ferret-nation-vs-prevue-guide"
+          amazonLabel="Check price of the Prevue Feisty Ferret cage on Amazon"
+        />
+        <HopDisclosure siteId="ferret-com" href="/go/amazon/B0054U8UGW?s=reviews-ferret-nation-vs-prevue-guide" />
+        <p>The link below opens the Ferret Nation double unit on Amazon, the same product as on the cage review.</p>
+        <p><a className="font-semibold text-brand-primary" href="/go/amazon/B0054U8UGW?s=reviews-ferret-nation-vs-prevue-guide">Browse Ferret Nation / Critter Nation double units on Amazon →</a></p>
+        <div className="my-6 max-w-full min-w-0">
+          <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
+            <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+            <thead>
+              <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
+                <th scope="col" className="p-3 font-bold text-brand-dark">Ferret Nation double</th>
+                <th scope="col" className="p-3 font-bold text-brand-dark">Prevue Feisty Ferret</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Role</th>
+                <td className="p-3">Best Overall, and the winner</td>
+                <td className="p-3">Best Value</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Fit</th>
+                <td className="p-3">One to four ferrets. Modular and stackable</td>
+                <td className="p-3">One or two ferrets. Not expandable</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">What the page lists</th>
+                <td className="p-3">Full-width double doors. Deep leak-proof pans. No bar-spacing figure on the manufacturer page</td>
+                <td className="p-3">Ferret-appropriate spacing. Shelves and ramps</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Price tier</th>
+                <td className="p-3">$$$</td>
+                <td className="p-3">$$</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Shelves and ramps</th>
+                <td className="p-3">Cover wire shelves and ramps</td>
+                <td className="p-3">Cover wire shelves and ramps</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <ComparisonFoot updated="2026-10-10" />
+        <EmailCapture
+          variant="inline"
+          siteId="ferret-com"
+          addressOnly
+          title="Shopping checklist"
+          ctaText="Copy checklist"
+          source="reviews-ferret-nation-vs-prevue-guide"
+          checklist={[
+            "Levels are modular and stackable.",
+            "Pans are deep and leak-proof.",
+            "Buy the Prevue when the household is one or two ferrets and the double unit is too big or too expensive.",
+            "Cover wire shelves and ramps on either cage, and check the spacing on the exact model.",
+          ]}
+        />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
+                <ArticleSourcesList title="Sources"
+            sources={[
+            { label: 'Ferret Nation cage', url: 'https://www.midwesthomes4pets.com/product/small-animal/habitats-cages/ferret-nation/', publisher: 'Midwest Homes for Pets' },
+            ]}
+          />
       </div>
     </ArticleLayout>
   )

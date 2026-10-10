@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -8,7 +9,6 @@ import {
   combineSchemas,
   SchemaScript,
   FAQAccordion,
-  AffiliateDisclosure,
   CrossPortfolioCard,
   ShopCtas,
   JourneyNext,
@@ -157,43 +157,43 @@ export default function HarnessCollarSizePage() {
         <span>›</span>
         <span className="text-brand-text-mid font-medium">Harness &amp; Collar Size</span>
       </nav>
-      <section className="bg-brand-surface px-container-sm sm:px-container py-section">
+      <section className="bg-brand-surface px-container-sm sm:px-container pt-0 pb-section">
         <div className="max-w-5xl">
           <Calculator />
           <JourneyNext
             siteId="dog-com"
             nextHref="/tools/new-puppy-checklist"
             nextLabel="Pack the day-one kit with the sized harness"
-            nextBlurb="The calculator is a size band, not a brand. Add the harness to the new-puppy checklist, then size the crate for adult length. The hop below is the same Julius-K9 harness search already on this page."
+            nextBlurb="The calculator is a size band, not a brand. Add the harness to the new-puppy checklist, then size the crate for adult length. The button below opens the same Julius-K9 harness search on Amazon."
             resourceHref="/go/amazon-brand/julius+k9+idc+powerharness?s=tools-harness-collar-size"
-            resourceLabel="Browse harnesses on Amazon →"
+            resourceLabel="Browse Julius-K9 IDC Powerharness on Amazon →"
           />
         </div>
       </section>
 
-      {/* Money path — live amazon-brand search hops (walk kit).
-          ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-          Category searches only — not a ranked list, not a brand guarantee. */}
+      {/* Shop note — live amazon-brand search buttons (walk kit).
+          ShopCtas hides empty Chewy; never href="#" or an empty link.
+          Amazon searches only — not a ranked list, not a brand guarantee. */}
       <section id="walk-kit" className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <div className="max-w-2xl">
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/julius+k9+idc+powerharness?s=tools-harness-collar-size", "/go/amazon-brand/flat+buckle+nylon+dog+collar?s=tools-harness-collar-size", "/go/amazon-brand/dog+measuring+tape+body+condition+chart?s=tools-harness-collar-size", "/go/amazon-brand/dog+leash?s=tools-harness-collar-size", "/go/amazon-brand/front+clip+no+pull+dog+harness?s=tools-harness-collar-size"]} />
           <div className="mt-4 rounded-xl border border-brand-border bg-brand-white p-5">
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Shop a walk kit
+              Shop these supplies
             </div>
             <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/julius+k9+idc+powerharness?s=tools-harness-collar-size"
-                amazonLabel="Browse harnesses on Amazon →"
+                amazonLabel="Browse Julius-K9 IDC Powerharness on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/flat+buckle+nylon+dog+collar?s=tools-harness-collar-size"
-                amazonLabel="Browse collars on Amazon →"
+                amazonLabel="Browse flat buckle nylon collars on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/dog+measuring+tape+body+condition+chart?s=tools-harness-collar-size"
-                amazonLabel="Browse measuring tapes on Amazon →"
+                amazonLabel="Browse dog measuring tapes and body condition charts on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/dog+leash?s=tools-harness-collar-size"
@@ -201,7 +201,7 @@ export default function HarnessCollarSizePage() {
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/front+clip+no+pull+dog+harness?s=tools-harness-collar-size"
-                amazonLabel="Browse front-clip harnesses on Amazon →"
+                amazonLabel="Browse front-clip no-pull harnesses on Amazon →"
               />
           </div>
           </div>

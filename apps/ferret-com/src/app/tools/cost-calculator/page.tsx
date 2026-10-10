@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -8,8 +9,8 @@ import {
   combineSchemas,
   SchemaScript,
   FAQAccordion,
-  AffiliateDisclosure,
   CrossPortfolioCard,
+  JourneyNext,
   ShopCtas,
   PriceAsOf,
   CrossSiteHelp,
@@ -50,7 +51,7 @@ const FAQS = [
   {
     question: 'Why should I budget extra for ferret health?',
     answer:
-      'Ferrets are prone to several conditions whose treatment is not optional once they appear. Adrenal disease, insulinoma, and gastrointestinal foreign-body blockages are among the most common, and diagnosis plus treatment (hormone panels, surgery, ongoing medication) frequently runs into the thousands of dollars. Because these are common rather than rare, most exotic-pet veterinarians recommend keeping a dedicated emergency fund or carrying exotic-pet insurance rather than treating these as unlikely events.',
+      'Ferrets are prone to several conditions whose treatment is not optional once they appear. Adrenal disease, insulinoma, and gastrointestinal foreign-body blockages are among the most common, and diagnosis plus treatment (hormone panels, surgery, ongoing medication) frequently runs into the thousands of dollars. A dedicated emergency fund is a planning choice for those bills. This page does not cite a veterinary recommendation to buy insurance, and it does not open a quote.',
     answerText:
       'Adrenal disease, insulinoma, and blockages are common in ferrets and treatment is not optional — often thousands of dollars. Keep an emergency fund or carry exotic-pet insurance.',
   },
@@ -186,21 +187,29 @@ export default function CostCalculatorPage() {
       <section className="bg-brand-surface px-container-sm sm:px-container py-10 sm:py-12">
         <div className="max-w-5xl">
           <CostCalculator />
+          <JourneyNext
+            siteId="ferret-com"
+            nextHref="/diet/best-ferret-kibble"
+            nextLabel="Read the kibble guide before you price food"
+            nextBlurb="Food is one of the three lines in the first-year total. The kibble guide compares published panels, and The button below opens the food search on Amazon."
+            resourceHref="/go/amazon-brand/high+protein+ferret+food+kibble?s=tools-cost-calculator"
+            resourceLabel="Browse high-protein ferret kibble on Amazon →"
+          />
         </div>
       </section>
 
-      {/* Money path — live amazon-brand search hops (food / litter / cage / accessories).
-          Reuses queries already shipped on ferret reviews + care + behavior.
-          ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER. */}
+      {/* Shop note — kibble search plus the Ferret Nation double unit.
+          Reuses the kibble query and the cage ASIN already shipped on ferret reviews.
+          ShopCtas hides empty Chewy; never href="#" or an empty link. */}
       <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <div className="max-w-2xl">
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/high+protein+ferret+food+kibble?s=tools-cost-calculator", "/go/amazon/B0054U8UGW?s=tools-cost-calculator"]} />
           <div className="mt-4 rounded-xl border border-brand-border bg-brand-white p-5">
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
               Shop the setup
             </div>
             <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
-              The first-year number is mostly cage, food, and litter. Same Amazon hops used on the{' '}
+              The first-year number is mostly cage, food, and litter. The Amazon buttons still on this page are the kibble search and the Ferret Nation / Critter Nation double unit, the same ones used on the{' '}
               <Link href="/reviews/best-ferret-cage" className="text-brand-primary underline-offset-2 hover:underline">
                 cage review
               </Link>
@@ -212,30 +221,19 @@ export default function CostCalculatorPage() {
               <Link href="/diet/best-ferret-kibble" className="text-brand-primary underline-offset-2 hover:underline">
                 kibble guide
               </Link>
-              . Paper or wood pellet — never clumping clay. Ferret.com earns a commission on
-              qualifying purchases at no extra cost to you.
+              . Paper or wood pellet — never clumping clay.
             </p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/high+protein+ferret+food+kibble?s=tools-cost-calculator"
-                amazonLabel="Browse ferret food on Amazon →"
+                amazonLabel="Browse high-protein ferret kibble on Amazon →"
               />
               <ShopCtas
-                amazonHref="/go/amazon-brand/compressed+wood+pellet+litter+heat+treated+non+clumping?s=tools-cost-calculator"
-                amazonLabel="Browse wood pellet litter on Amazon →"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/ferret+nation+critter+nation+double+unit?s=tools-cost-calculator"
-                amazonLabel="Browse multi-level cages on Amazon →"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/ferret+sleep+sack+fleece?s=tools-cost-calculator"
-                amazonLabel="Browse cage accessories on Amazon →"
+                amazonHref="/go/amazon/B0054U8UGW?s=tools-cost-calculator"
+                amazonLabel="Browse Ferret Nation / Critter Nation double units on Amazon →"
               />
           </div>
           </div>
-          <p className="mt-3 text-xs text-brand-text-light">We may earn a commission if you buy through an Amazon link — at no extra cost to you, and we never
-            rank by commission.</p>
           <p className="mt-4 text-sm leading-relaxed text-brand-text-mid">
             Size pans with the{' '}
             <Link href="/tools/litter-planner" className="text-brand-primary underline-offset-2 hover:underline">

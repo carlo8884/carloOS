@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -81,7 +82,7 @@ export default function IsAFerretRightForYouPage() {
 
           </>
         }
-      
+
         relatedLinks={[
           { title: 'Ferret Ownership Hub', href: '/ownership' },
           { title: 'Readiness Quiz & New-Owner Kit', href: '/tools/readiness-quiz' },
@@ -141,20 +142,8 @@ export default function IsAFerretRightForYouPage() {
             A ferret is likely a <strong>poor fit</strong> if: you want a low-maintenance, cage-bound, or hands-off pet; a large vet bill would be financially impossible; you are sensitive to animal odor; you live somewhere ferrets are banned or your lease forbids them; you keep small prey animals you could not fully separate; or you are not certain you can commit for the animal&apos;s whole life. None of these make you a bad person — they just point to a different pet. Score the same factors in the <a href="/tools/readiness-quiz">readiness quiz</a>, then pack the day-one kit — or use the <a href="/ownership/first-week-checklist">first-week checklist</a> once a ferret is coming home.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/ferret+litter?s=is-a-ferret-right-for-you" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated ferret fit-check chart /
-              ferret fridge time-money-odor card /
-              mustelid fit-decision handbook).
-              No existing product hop to keep.
-              Educational kitchen searches only; no Rx /
-              vaccine / aging hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs ownership-hub /
-              adoption / cost / first-week kitchen kits. Ferret
-              aging stays held.
-              Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
@@ -163,7 +152,7 @@ export default function IsAFerretRightForYouPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/ferret+litter?s=is-a-ferret-right-for-you"
-                amazonLabel="Shop on Amazon"
+                amazonLabel="Browse ferret litter on Amazon →"
               />
           </div>
           </div>

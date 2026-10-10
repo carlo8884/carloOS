@@ -46,7 +46,7 @@ const FAQS = [
   {
     question: 'Do crate dimensions vary between brands?',
     answer:
-      'Yes. The 18/22/24/30/36/42/48-inch sizes are an industry convention, but the internal width and height differ between manufacturers, and a crate\'s stated size is usually its external length. Always check the specific crate\'s internal measurements against the minimums this calculator gives you before buying.',
+      'The inch table in this calculator is a planning figure, not a published manufacturer chart. Internal width and height differ between brands, and a stated size is often the external length. Check the crate\'s internal measurements against the minimums before buying.',
   },
 ]
 
@@ -73,7 +73,7 @@ const appSchema = {
     'Recommended standard crate size (18–48 inch line) with size class',
     'Inches or centimetres',
     'Puppy guidance: size to adult dimensions and use a divider',
-    'One next step: the crate review, plus a wire-crate-with-divider search',
+    'One next step: the crate review, plus a MidWest iCrate search',
   ],
   publisher: { '@type': 'Organization', name: 'Dog.com Editorial', url: 'https://dog.com' },
 }
@@ -129,7 +129,7 @@ export default function DogCrateSizeCalculatorPage() {
     <>
       <SchemaScript schema={schema} />
 
-      <section className="bg-brand-dark px-container-sm sm:px-container py-10 sm:py-14 relative overflow-hidden">
+      <section className="bg-brand-dark px-container-sm sm:px-container pt-10 pb-4 sm:py-14 relative overflow-hidden">
         <div
           className="absolute inset-0 opacity-10"
           style={{ backgroundImage: 'radial-gradient(ellipse at 30% 50%, rgba(90, 110, 140, 0.5) 0%, transparent 60%)' }}
@@ -165,7 +165,7 @@ export default function DogCrateSizeCalculatorPage() {
       </nav>
 
 
-      <section className="bg-brand-surface px-container-sm sm:px-container py-section">
+      <section className="bg-brand-surface px-container-sm sm:px-container pt-0 pb-section">
         <div className="max-w-5xl">
           <Calculator />
         </div>
@@ -173,9 +173,9 @@ export default function DogCrateSizeCalculatorPage() {
           siteId="dog-com"
           nextHref="/reviews/best-dog-crates"
           nextLabel="Compare wire, airline, and heavy-duty crates"
-          nextBlurb="The calculator is the internal size. The crate review ranks the wire, airline, and heavy-duty styles that meet it. One search below is a wire crate with a divider — the usual match for a growing puppy."
-          resourceHref="/go/amazon-brand/wire+dog+crate+with+divider+panel?s=tools-dog-crate-size"
-          resourceLabel="Browse wire crates with a divider on Amazon →"
+          nextBlurb="The calculator is the internal size. The crate review ranks the wire, airline, and heavy-duty styles that meet it. One search below is the MidWest iCrate, the divider wire crate that review leads with."
+          resourceHref="/go/amazon-brand/midwest+icrate+dog+crate?s=tools-dog-crate-size"
+          resourceLabel="Browse MidWest iCrate dog crates on Amazon →"
         />
         <div className="max-w-2xl mt-8">
           <EmailCapture

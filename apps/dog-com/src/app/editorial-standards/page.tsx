@@ -38,7 +38,7 @@ export default function EditorialStandardsPage() {
           A short account of the site is on <Link href="/about" className="text-brand-primary hover:underline">About</Link>.
         </p>
         <h2>What Dog.com Is</h2>
-        <p>Dog.com is a consumer-facing reference site about dogs — breed profiles, health overviews, nutrition guidance, product comparisons, and training basics. Articles are written by the Dog.com editorial team and draw on publicly available sources: peer-reviewed veterinary research, professional veterinary organisations (such as the <a href="https://wsava.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">WSAVA</a>, <a href="https://avma.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">AVMA</a>, <a href="https://acvim.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">ACVIM</a>, and <a href="https://afd.avdc.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">AVDC</a>), manufacturer documentation, and reputable industry reporting.</p>
+        <p>Dog.com is a consumer-facing reference site about dogs — breed profiles, health overviews, nutrition guidance, product comparisons, and training basics. Articles are written by the Dog.com editorial team and draw on publicly available sources: peer-reviewed veterinary research, professional veterinary organisations (such as the <a href="https://wsava.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">WSAVA</a>, <a href="https://www.avma.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">AVMA</a>, <a href="https://www.acvim.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">ACVIM</a>, and <a href="https://afd.avdc.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">AVDC</a>), manufacturer documentation, and reputable industry reporting.</p>
         <p>Dog.com is <strong>not</strong> a veterinary practice and is not a substitute for one. Our articles are not individually authored or signed off by a licensed veterinarian. If you need medical advice for a specific animal, please consult your own vet.</p>
 
         <h2>How We Research and Write</h2>
@@ -46,7 +46,7 @@ export default function EditorialStandardsPage() {
           <li><strong>Sources are cited where it matters.</strong> When a recommendation reflects a published guideline or study, we name the guideline or study so you can verify it yourself.</li>
           <li><strong>Current guidance.</strong> Where consensus guidance exists (WSAVA nutrition, AAHA preventive care, VOHC dental, etc.) we follow it rather than folk wisdom.</li>
           <li><strong>We say when evidence is thin.</strong> If a topic is contested or under-studied, we say so instead of pretending certainty.</li>
-          <li><strong>Honest scope.</strong> We don&apos;t claim hands-on testing we haven&apos;t done. Product write-ups are based on published reviews, manufacturer specifications, ingredient analysis, and aggregated owner feedback.</li>
+          <li><strong>Honest scope.</strong> Product write-ups are based on published reviews, manufacturer specifications, ingredient analysis, and aggregated owner feedback.</li>
         </ul>
 
         <h2>Affiliate Independence</h2>

@@ -1,7 +1,9 @@
-import { NextResponse } from "next/server"
-export async function GET() {
-  return NextResponse.json({ error: "Analytics not yet available" }, { status: 503 })
+import { handleAnalyticsRequest } from '@carloOS/ui/analytics'
+
+export function GET() {
+  return handleAnalyticsRequest()
 }
-export async function POST() {
-  return NextResponse.json({ error: "Analytics not yet available" }, { status: 503 })
+
+export function POST() {
+  return handleAnalyticsRequest()
 }

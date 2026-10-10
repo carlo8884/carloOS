@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import {
   buildMetadata,
@@ -11,8 +12,8 @@ import {
   CrossPortfolioCard,
   ArticleSourcesList,
   StockImage,
-  AffiliateDisclosure,
   ShopCtas,
+  LastUpdated,
 } from '@carloOS/ui'
 
 const SOURCES = [
@@ -23,18 +24,13 @@ const SOURCES = [
   },
   {
     label: "Merck Veterinary Manual — Preventive Care of Ferrets: vaccination schedules, distemper and rabies products, and adverse-reaction management",
-    url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/routine-health-care-of-ferrets",
+    url: "https://www.merckvetmanual.com/all-other-pets/ferrets/routine-health-care-for-ferrets",
     publisher: "Merck Veterinary Manual",
   },
   {
     label: "Association of Exotic Mammal Veterinarians (AEMV) — ferret preventive-medicine and vaccination continuing-education materials",
     url: "https://aemv.org",
     publisher: "AEMV",
-  },
-  {
-    label: "American Veterinary Medical Association (AVMA) — rabies vaccination compendium and guidance for ferrets as companion exotic species",
-    url: "https://www.avma.org/resources-tools/pet-owners/petcare/ferrets",
-    publisher: "AVMA",
   },
 ]
 import {
@@ -140,7 +136,7 @@ export default function FerretVaccinationsPage() {
           <>
             <TableOfContents
               items={[
-                { label: 'TL;DR', href: '#tldr' },
+                { label: '', href: '#tldr' },
                 { label: 'The Two Core Vaccines', href: '#core' },
                 { label: 'Canine Distemper (CDV)', href: '#cdv' },
                 { label: 'Rabies', href: '#rabies' },
@@ -188,6 +184,7 @@ export default function FerretVaccinationsPage() {
             updatedAt="2026-09-05"
             reviewedBy="Editorial team"
           />
+          <LastUpdated date="2026-10-09" />
 
           <DropCap>
             Ferret vaccination is one of the small number of preventive
@@ -200,8 +197,7 @@ export default function FerretVaccinationsPage() {
             reaction profiles, and both warrant doing on schedule.
           </DropCap>
 
-          <h2 id="tldr">TL;DR</h2>
-          <p>
+                    <p>
             Ferrets need two vaccines: canine distemper virus (CDV) and
             rabies. Kit series: CDV at approximately 8, 11, and 14 weeks;
             rabies at 12-16 weeks. Annual boosters for life. Use the
@@ -472,7 +468,7 @@ export default function FerretVaccinationsPage() {
           <p>
             Kit-series days are repeated clinic trips (roughly 8, 11,
             and 14 weeks, plus a separate rabies visit). A top-loading
-            small-animal carrier is the clinic-trip box for those hops
+            small-animal carrier is the clinic-trip box for those buttons
             and for the ride straight home after the 30–60 minute
             in-clinic observation — not a loose ferret on a lap, and
             not a leftover dog airline crate. A fleece small-animal
@@ -505,27 +501,16 @@ export default function FerretVaccinationsPage() {
 
           <h2 id="kit">Vaccine-day travel kit</h2>
           <p>
-            Everyday physical supplies that match the clinic-trip, legal-
-            certificate, and post-vaccine observation copy on this page —
-            a small-animal rabies-certificate holder so the signed rabies
-            certificate and CVI stay with the ferret for interstate or
-            local compliance checks, a top-loading small-animal carrier
-            so kit-series clinic hops and the ride straight home stay
-            contained, and a fleece small-animal bonding pouch so the
-            30–60 minute in-clinic observation and the quiet ride home
-            after a mild reaction stay wrapped, not loose on a lap. These are household travel tools, not treatments. They do
-            not vaccinate a ferret, they do not replace a USDA-licensed
-            product chosen by a veterinarian, they do not set a
-            premedication dose, and they are not a ranked product list. This page does not claim hands-on testing. </p>
+            Keep these on hand: a small-animal rabies-certificate holder so the signed rabies certificate and CVI stay with the ferret for interstate or local compliance checks, a top-loading small-animal carrier so kit-series clinic buttons and the ride straight home stay contained, and a fleece small-animal bonding pouch so the 30–60 minute in-clinic observation and the quiet ride home after a mild reaction stay wrapped, not loose on a lap. These are household travel tools, not treatments. They do not vaccinate a ferret, they do not replace a USDA-licensed product chosen by a veterinarian, they do not set a premedication dose, and they are not a ranked product list. </p>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/small+animal+rabies+certificate+holder?s=health-vaccinations", "/go/amazon-brand/top+loading+small+animal+carrier?s=health-vaccinations", "/go/amazon-brand/fleece+small+animal+bonding+pouch?s=health-vaccinations"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (small-animal rabies-certificate holder /
               top-loading small-animal carrier /
               fleece small-animal bonding pouch).
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or an empty link. Amazon searches only —
               unused vs #1066 carnivore-care / baby-food /
               silicone dosing syringe, #1065 hay-box /
               stall-guard / hemp-bedding, #1064
@@ -543,8 +528,8 @@ export default function FerretVaccinationsPage() {
               pet+glucometer / light+corn+syrup,
               pet+oral+feeding+syringe.
               Vaccines, Nobivac, IMRAB, diphenhydramine,
-              insulin syringes, and Rx ASINs are not
-              shoppable hops. */}
+              insulin syringes, and prescription brands are not
+              shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

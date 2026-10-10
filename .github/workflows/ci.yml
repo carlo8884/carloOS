@@ -30,6 +30,18 @@ jobs:
           cache: 'npm'
       - name: GROK.md stub guard
         run: node scripts/ci/content-stub-guard.mjs && node --test scripts/ci/content-stub-guard.test.mjs scripts/ci/grok-direct-push-guard.test.mjs
+      - name: Amazon ASIN hop guard
+        run: node scripts/ci/amazon-asin-guard.mjs && node --test scripts/ci/amazon-asin-guard.test.mjs
+      - name: Amazon service-search guard
+        run: node scripts/ci/service-search.mjs && node --test scripts/ci/service-search.test.mjs
+      - name: Chewy product-id hop guard
+        run: node scripts/ci/chewy-id-guard.mjs && node --test scripts/ci/chewy-id-guard.test.mjs
+      - name: Insurance registry parity
+        run: node scripts/ci/insurance-registry-parity.mjs && node --test scripts/ci/insurance-registry-parity.test.mjs
+      - name: Price stamp age
+        run: node scripts/ci/price-stamp-age.mjs && node --test scripts/ci/price-stamp-age.test.mjs
+      - name: Sitemap index
+        run: node scripts/ci/sitemap-index.mjs
       - uses: actions/cache@v4
         with:
           path: .turbo
@@ -41,11 +53,15 @@ jobs:
           path: node_modules/.cache/google-fonts
           key: google-fonts-${{ runner.os }}-${{ hashFiles('apps/**/src/app/layout.tsx', 'scripts/ci/patch-google-font-fetch.cjs') }}
           restore-keys: google-fonts-${{ runner.os }}-
-      - run: node --test scripts/ci/google-font-fetch.test.mjs scripts/ci/weekly-link-monitor.test.mjs scripts/ci/stale-price-report.test.mjs scripts/ci/item-list.test.mjs scripts/ci/lighthouse-budgets.test.mjs scripts/ci/about-policy.test.mjs scripts/ci/quote-prep.test.mjs
+      - run: node --test scripts/ci/google-font-fetch.test.mjs scripts/ci/live-link-sweep.test.mjs scripts/ci/weekly-link-monitor.test.mjs scripts/ci/stale-price-report.test.mjs scripts/ci/hop-topic-match.test.mjs scripts/ci/search-hop-label.test.mjs scripts/ci/hop-species-match.test.mjs scripts/ci/best-year-match.test.mjs scripts/ci/item-list.test.mjs scripts/ci/lighthouse-budgets.test.mjs scripts/ci/about-policy.test.mjs scripts/ci/quote-prep.test.mjs scripts/ci/email-click-source.test.mjs scripts/launch-smoke.test.mjs
       - run: node scripts/ci/item-list.mjs
-      - run: node --import tsx --test packages/config/form-guard.test.ts packages/config/subscribe.test.ts packages/config/site-origin.test.ts packages/config/capture-flags.test.ts packages/config/indexing.test.ts packages/config/security-headers.test.ts packages/config/affiliate-id-matrix.test.ts packages/config/affiliate-hop.test.ts packages/config/table-shop-link.test.ts packages/ui/src/server/inquire.test.ts packages/ui/src/lib/hub-search.test.ts packages/ui/src/data/missed-page.test.ts packages/ui/src/lib/guide-checklist.test.ts packages/ui/src/lib/result-picks.test.ts packages/ui/src/lib/cross-site-help.test.ts packages/ui/src/lib/experiments.test.ts scripts/ci/cross-site-links.test.mjs scripts/ci/new-calculators.test.ts
+      - run: node --import tsx --test packages/config/form-guard.test.ts packages/config/subscribe.test.ts packages/config/site-origin.test.ts packages/config/capture-flags.test.ts packages/config/indexing.test.ts packages/config/apex-redirect.test.ts packages/config/security-headers.test.ts packages/config/affiliate-id-matrix.test.ts packages/config/affiliate-hop.test.ts packages/config/table-shop-link.test.ts packages/ui/src/server/inquire.test.ts packages/ui/src/server/analytics-route.test.ts packages/ui/src/lib/hub-search.test.ts packages/ui/src/data/missed-page.test.ts packages/ui/src/lib/site-search.test.ts scripts/ci/zero-result-search-report.test.mjs packages/ui/src/components/nav-search.test.ts packages/ui/src/components/below-fold-photo.test.ts packages/ui/src/lib/guide-checklist.test.ts packages/ui/src/lib/result-picks.test.ts packages/ui/src/lib/cross-site-help.test.ts packages/ui/src/lib/experiments.test.ts packages/ui/src/lib/amazon-browse-label.test.ts packages/ui/src/lib/affiliate-click.test.ts scripts/ci/cross-site-links.test.mjs scripts/ci/new-calculators.test.ts scripts/ci/insurance-finder-lock.test.ts scripts/ci/held-partner-hrefs.test.mjs scripts/ci/block-in-paragraph.test.mjs
       - run: npx turbo type-check
       - run: npx turbo build
+      - name: Held partner hrefs
+        run: node --import tsx scripts/ci/held-partner-hrefs.mjs
+      - name: Block elements inside paragraphs
+        run: node scripts/ci/block-in-paragraph.mjs
       - name: Install Playwright Chromium
         run: npx playwright install --with-deps chromium
       - name: Money journey smoke tests

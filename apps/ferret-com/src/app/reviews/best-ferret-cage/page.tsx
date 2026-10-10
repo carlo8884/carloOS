@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
-import { TableShopLink, ComparisonFoot, PrimaryHop, buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, QuickPicks, ScoreMethodology, ArticleSourcesList, CrossPortfolioCard, AffiliateDisclosure } from '@carloOS/ui'
+import { HopDisclosure } from '../../../components/HopDisclosure'
+import { TableShopLink, ComparisonFoot, EmailCapture, PrimaryHop, buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, QuickPicks, ArticleSourcesList, CrossPortfolioCard, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, buildItemListSchema, buildProductSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -14,6 +15,7 @@ export const metadata: Metadata = buildMetadata({
 const PAGE_URL = 'https://ferret.com/reviews/best-ferret-cage'
 
 const SOURCES = [
+  { label: 'Ferret Nation cage', url: 'https://www.midwesthomes4pets.com/product/small-animal/habitats-cages/ferret-nation/', publisher: 'Midwest Homes for Pets' },
   { label: 'Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery (housing chapter)', publisher: 'Quesenberry & Carpenter, Saunders/Elsevier' },
   { label: 'Ferret housing and husbandry guidance', publisher: 'American Ferret Association' },
   { label: 'Ferret care and housing standards', publisher: 'House Rabbit Society / exotic-mammal rescue consensus' },
@@ -23,7 +25,7 @@ const schema = buildArticleSchema({
   siteId: 'ferret-com',
   title: 'Best Ferret Cage: Bar Spacing, Floor Space & Safety',
   description:
-    'A criteria-led buyer guide to multi-level ferret cages — bar spacing, usable floor space per ferret, ramp and shelf safety — with three editorial picks scored against those standards.',
+    'A criteria-led buyer guide to multi-level ferret cages — bar spacing, usable floor space per ferret, ramp and shelf safety — with three editorial picks compared on those standards.',
   url: PAGE_URL,
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
@@ -42,40 +44,36 @@ const breadcrumbSchema = buildBreadcrumbSchema({
 })
 
 // GEO: ItemList of the three cages that meet the criteria + an editorial
-// Product/Review per pick. reviewRating maps each card's on-page disclosed
-// editorial score (via ScoreMethodology); name + reviewBody come only from this
-// page's ReviewCard content. No aggregateRating, no fabricated specs (QC §1.4).
+// Product/Review per pick. No numeric rating. Name + reviewBody come only from
+// this page's ReviewCard content. No aggregateRating, no fabricated specs (QC §1.4).
 const itemList = buildItemListSchema({
   name: 'Multi-Level Ferret Cages That Meet the Criteria',
   items: [
-    { name: 'Ferret Nation / Critter Nation Double Unit', url: `${PAGE_URL}#ferret-nation` },
-    { name: 'Prevue Pet Products Feisty Ferret Cage', url: `${PAGE_URL}#prevue-feisty` },
-    { name: 'Kaytee Multi-Level Ferret Home', url: `${PAGE_URL}#kaytee-multilevel` },
+    { name: 'Ferret Nation / Critter Nation Double Unit', url: 'https://ferret.com/go/amazon/B0054U8UGW?s=reviews-best-ferret-cage' },
+    { name: 'Prevue Pet Products Feisty Ferret Cage', url: 'https://ferret.com/go/amazon/B000QFMYWQ?s=reviews-best-ferret-cage' },
+    { name: 'Kaytee Multi-Level Ferret Home', url: 'https://ferret.com/go/amazon/B008FONT2Y?s=reviews-best-ferret-cage' },
   ],
 })
 
 const products = [
   buildProductSchema({
     name: 'Ferret Nation / Critter Nation Double Unit',
-    description: 'Half-inch bar spacing, full-width front doors, deep pans, expandable two-storey footprint',
-    url: `${PAGE_URL}#ferret-nation`,
-    ratingValue: 9.5,
+    description: 'Full-width front doors, deep pans, expandable two-storey footprint. Confirm bar spacing on the box.',
+    url: 'https://ferret.com/go/amazon/B0054U8UGW?s=reviews-best-ferret-cage',
     reviewAuthorName: 'Ferret.com Editorial',
-    reviewBody: 'The reference multi-ferret cage in the keeping community. Half-inch wire spacing, full-width double doors that open the entire front for cleaning and handling, deep leak-proof pans, and a modular design that stacks to a second storey. The trade-offs are price, weight, and the assembly footprint — but on the safety criteria it is the clearest pick.',
+    reviewBody: 'The reference multi-ferret cage in the keeping community. The manufacturer page says the full-width double doors open the entire front for cleaning and feeding, and it does not print a bar-spacing figure (fetched 2026-10-08). Deep leak-proof pans, and a modular design that stacks to a second storey. The trade-offs are price, weight, and the assembly footprint.',
   }),
   buildProductSchema({
     name: 'Prevue Pet Products Feisty Ferret Cage',
     description: 'Ferret-appropriate bar spacing, multiple solid shelves and ramps, mid-tier price',
-    url: `${PAGE_URL}#prevue-feisty`,
-    ratingValue: 8.4,
+    url: 'https://ferret.com/go/amazon/B000QFMYWQ?s=reviews-best-ferret-cage',
     reviewAuthorName: 'Ferret.com Editorial',
     reviewBody: 'A purpose-built ferret cage with appropriate wire spacing, several solid shelves and ramps, and a price below the modular systems. Floor space suits one to two ferrets comfortably; the wire shelf edges benefit from fleece or linoleum covering. A strong value pick where the larger modular units are out of budget or out of room.',
   }),
   buildProductSchema({
     name: 'Kaytee Multi-Level Ferret Home',
     description: 'Entry-level multi-level cage, widely stocked, suited to a single ferret with daily out-time',
-    url: `${PAGE_URL}#kaytee-multilevel`,
-    ratingValue: 7.6,
+    url: 'https://ferret.com/go/amazon/B008FONT2Y?s=reviews-best-ferret-cage',
     reviewAuthorName: 'Ferret.com Editorial',
     reviewBody: 'A widely stocked entry-level multi-level cage. Bar spacing is in range and it carries shelves and ramps, but the footprint suits a single ferret with generous daily out-of-cage time rather than a pair living in it full-time. The most likely appropriate cage to find at a chain store at short notice; verify the spacing on the specific model before buying.',
   }),
@@ -90,7 +88,7 @@ const FAQS = [
   {
     question: 'What bar spacing is safe for a ferret cage?',
     answer:
-      'Bar spacing of roughly half an inch (~0.5 in on the Ferret Nation card) is the target used on this page. Ferrets are escape artists with a flexible skeleton — the rule of thumb is that if a ferret can fit its head through a gap, the rest of the body will follow. Spacing wider than about an inch risks both escape and a limb or head becoming trapped. Always confirm the spacing on the exact model, as a "small animal" cage marketed for rabbits or guinea pigs often has bars too far apart.',
+      'The Ferret Nation manufacturer page does not print a bar-spacing figure (fetched 2026-10-08). Confirm the spacing on the exact model. Ferrets are escape artists with a flexible skeleton — if a ferret can fit its head through a gap, the rest of the body will follow. A cage marketed for rabbits or guinea pigs often has bars too far apart.',
   },
   {
     question: 'Are wire-floor or wire-shelf cages bad for ferrets?',
@@ -113,7 +111,7 @@ const faqSchema = buildFAQSchema({ questions: FAQS })
 const combined = combineSchemas(schema, breadcrumbSchema, itemList, faqSchema, ...products)
 
 const QUICK_PICKS = [
-  { label: 'Best Overall', name: 'Ferret Nation Double Unit', subtitle: 'Half-inch bars · Modular · Full-front doors', href: '#ferret-nation' },
+  { label: 'Best Overall', name: 'Ferret Nation Double Unit', subtitle: 'Modular · Full-front doors · Confirm bar spacing', href: '#ferret-nation', pickHop: '/go/amazon/B0054U8UGW?s=reviews-best-ferret-cage' },
   { label: 'Best Value', name: 'Prevue Feisty Ferret', subtitle: 'Ferret-spaced · Shelves + ramps', href: '#prevue-feisty' },
   { label: 'Entry / Single Ferret', name: 'Kaytee Multi-Level', subtitle: 'Widely stocked · One ferret + out-time', href: '#kaytee-multilevel' },
 ]
@@ -125,17 +123,24 @@ export default function BestFerretCagePage() {
       <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="ferret-com"
-        heroHop={<PrimaryHop href='/go/amazon-brand/ferret+nation+critter+nation+double+unit?s=reviews-best-ferret-cage' label='Check price of the Ferret Nation double unit on Amazon' />}
         hero={{
           title: 'Best Ferret Cage: Bar Spacing, Floor Space & Safety',
-          subtitle:
-            'A ferret cage is the one purchase where getting the specifications wrong has a direct safety cost — too-wide bars let a ferret escape or trap a limb, too little floor space stresses a pair, and unsafe ramps cause falls. This guide ranks multi-level cages on the criteria that matter, then names three that meet them.',
           category: 'Buyer Guides',
           authorName: 'Ferret.com Editorial',
           publishedAt: 'June 2026',
           readTime: '11 min',
         }}
-        breadcrumbs={[
+        heroHop={
+        <>
+          <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">The Ferret Nation double unit is the top cage for a small group.</p>
+          <div data-fold="offer">
+          <PrimaryHop href='/go/amazon/B0054U8UGW?s=reviews-best-ferret-cage' label='Check price of the Ferret Nation double unit on Amazon' />
+          <HopDisclosure siteId="ferret-com" href="/go/amazon/B0054U8UGW?s=reviews-best-ferret-cage" />
+        </div>
+        </>
+      }
+      heroExtra={<><QuickPicks items={QUICK_PICKS} embedded /></>}
+      breadcrumbs={[
           { name: 'Home', href: '/' },
           { name: 'Reviews', href: '/reviews' },
           { name: 'Best Ferret Cage', href: '/reviews/best-ferret-cage' },
@@ -160,6 +165,9 @@ export default function BestFerretCagePage() {
               links={[
                 { label: 'Cage Setup', href: '/care/cage-setup' },
                 { label: 'Cage Size Calculator', href: '/tools/cage-size-calculator' },
+                { label: 'Ferret Nation vs Prevue', href: '/reviews/ferret-nation-vs-prevue-guide' },
+                { label: 'Kaytee vs Ferret Nation', href: '/reviews/kaytee-vs-ferret-nation-guide' },
+                { label: 'Kaytee vs Prevue', href: '/reviews/kaytee-vs-prevue-guide' },
                 { label: 'Multi-Level Housing', href: '/care/multi-level-housing' },
                 { label: 'Cage Cleaning Routine', href: '/care/cage-cleaning-routine' },
                 { label: 'Bedding & Litter Types', href: '/care/bedding-and-litter-types' },
@@ -187,13 +195,29 @@ export default function BestFerretCagePage() {
             updatedAt="2026-06-11"
             reviewedBy="Editorial team"
           />
+          <LastUpdated date="2026-10-10" />
+          <EmailCapture
+            variant="inline"
+            siteId="ferret-com"
+            addressOnly
+            title="Shopping checklist"
+            ctaText="Copy checklist"
+            source="reviews-best-ferret-cage"
+            checklist={[
+              "The cage is for sleeping, eating, litter, and water \u2014 not for living full-time.",
+              "The Ferret Nation manufacturer page does not print a bar-spacing figure. Confirm the spacing on the box.",
+              "Spacing wider than about an inch risks both escape and a limb or head becoming trapped.",
+              "Always confirm the spacing on the exact model, as a \"small animal\" cage marketed for rabbits or guinea pigs often has bars too far apart.",
+              "Bare wire floors and shelves can cause foot and hock irritation and, over time, sores.",
+              "Most experienced keepers line every wire level for this reason.",
+            ]}
+          />
 
-          <QuickPicks items={QUICK_PICKS} embedded />
 
           <p>
             More than any other ferret purchase, the cage is where specifications are safety. A ferret is a long,
             flexible, intensely curious carnivore that treats any gap as an invitation and any height as a challenge.
-            The cages that fail ferrets are not the ugly ones — they are the ones with bars half an inch too far apart,
+            The cages that fail ferrets are not the ugly ones — they are the ones with bars too far apart,
             the ones marketed to rabbit owners, the ones with bare wire ramps that catch a foot. This guide is built
             around the four criteria that decide whether a cage is appropriate, then ranks three widely available
             multi-level cages against them. It is a criteria comparison drawn from published specifications and keeper
@@ -209,13 +233,14 @@ export default function BestFerretCagePage() {
             clean it and get the ferret in and out). Height and number of levels are secondary: a tall cage with a
             single small footprint is worse than a wide one with two solid levels. Everything below expands on these,
             and the full husbandry context lives in our <a href="/care/cage-setup">cage setup</a> and{' '}
-            <a href="/care/multi-level-housing">multi-level housing</a> references.
+            <a href="/care/multi-level-housing">multi-level housing</a> references. The first two cages are set side by side in{' '}
+            <a href="/reviews/ferret-nation-vs-prevue-guide">Ferret Nation vs Prevue</a>.
           </p>
 
           <h2 id="bar-spacing">Bar Spacing — The Escape-and-Injury Variable</h2>
           <p>
-            The single most important number on a cage spec sheet is wire spacing. The widely cited target for ferrets
-            is roughly half an inch (~0.5 in on the Ferret Nation card). The reasoning is simple and unforgiving: a ferret&rsquo;s
+            The single most important number on a cage spec sheet is wire spacing. The Ferret Nation manufacturer
+            page does not print a bar-spacing figure (<a href="https://www.midwesthomes4pets.com/product/small-animal/habitats-cages/ferret-nation/">Ferret Nation manufacturer page</a>, fetched 2026-10-08). Confirm it on the box. The reasoning is simple and unforgiving: a ferret&rsquo;s
             skull is the widest fixed part of its body, and if the head fits through a gap, the spine and ribs will
             compress and follow. Spacing much wider than that creates two distinct hazards — escape, and entrapment,
             where a ferret pushes its head through and cannot back out, or wedges a leg. Both are common reasons ferrets
@@ -240,7 +265,7 @@ export default function BestFerretCagePage() {
             Multiple levels are the efficient way to add usable area without a larger footprint, but only if the levels
             are solid (or solidly covered) and connected by safe ramps. Two generous solid levels beat four cramped wire
             ones. Remember that the cage is the bedroom, not the house: even a large cage does not replace the several
-            hours of daily supervised out-of-cage time every ferret needs.
+            hours of daily supervised out-of-cage time every ferret needs. Those hours out of the cage are covered in the <a href="/care/exercise-and-enrichment" className="text-brand-primary underline">exercise and enrichment guide</a>.
           </p>
 
           <h2 id="ramps">Ramp & Shelf Safety</h2>
@@ -271,31 +296,29 @@ export default function BestFerretCagePage() {
             and shelter communities, not a hands-on durability test. Verify the bar spacing on the exact model you buy,
             and plan to cover wire shelves and ramps regardless of which you choose.
           </p>
-          <ScoreMethodology />
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <HopDisclosure siteId="ferret-com" href={["/go/amazon/B0054U8UGW?s=reviews-best-ferret-cage", "/go/amazon/B000QFMYWQ?s=reviews-best-ferret-cage", "/go/amazon/B008FONT2Y?s=reviews-best-ferret-cage"]} />
 
           <ReviewCard
             id="ferret-nation"
             badge="Best Overall"
             name="Ferret Nation / Critter Nation Double Unit"
-            subtitle="Half-inch bar spacing, full-width front doors, deep pans, expandable two-storey footprint"
-            score={9.5}
+            subtitle="Full-width front doors, deep pans, expandable two-storey footprint. Confirm bar spacing on the box."
             winner
             description={
-              <p>The reference multi-ferret cage in the keeping community. Half-inch wire spacing, full-width double doors that open the entire front for cleaning and handling, deep leak-proof pans, and a modular design that stacks to a second storey for a pair or trio. The trade-offs are price, weight, and the assembly footprint — but on every safety criterion it is the clearest pick, which is why it dominates shelter and breeder setups.</p>
+              <p>The reference multi-ferret cage in the keeping community. The manufacturer page says the full-width double doors open the entire front for cleaning and feeding, and it does not print a bar-spacing figure (<a href="https://www.midwesthomes4pets.com/product/small-animal/habitats-cages/ferret-nation/">Ferret Nation manufacturer page</a>, fetched 2026-10-08). Deep leak-proof pans, and a modular design that stacks to a second storey for a pair or trio. The trade-offs are price, weight, and the assembly footprint.</p>
             }
             specs={[
-              { label: 'Bar spacing', value: '~0.5 in', highlight: 'good' },
+              { label: 'Bar spacing', value: 'Confirm on the box' },
               { label: 'Levels', value: 'Modular (stackable)', highlight: 'good' },
               { label: 'Front access', value: 'Full-width doors', highlight: 'good' },
               { label: 'Pans', value: 'Deep, leak-proof', highlight: 'good' },
               { label: 'Best for', value: '1–4 ferrets' },
             ]}
-            pros={['Ferret-correct half-inch spacing', 'Full-front doors for easy cleaning', 'Modular — expands with the colony', 'Deep pull-out pans', 'Community reference standard']}
+            pros={['Confirm bar spacing on the box', 'Full-front doors for easy cleaning', 'Modular — expands with the colony', 'Deep pull-out pans', 'Community reference standard']}
             cons={['Premium price', 'Heavy and large assembled', 'Wire shelves need covering']}
             price="$$$"
             ctaText="Check price of the Ferret Nation double unit on Amazon"
-            ctaHref="/go/amazon-brand/ferret+nation+critter+nation+double+unit?s=reviews-best-ferret-cage"
+            ctaHref="/go/amazon/B0054U8UGW?s=reviews-best-ferret-cage"
             ctaAffiliateProgram="amazon-brand"
             ctaAffiliateProduct="ferret-nation-double-unit"
           />
@@ -305,7 +328,6 @@ export default function BestFerretCagePage() {
             badge="Best Value"
             name="Prevue Pet Products Feisty Ferret Cage"
             subtitle="Ferret-appropriate bar spacing, multiple solid shelves and ramps, mid-tier price"
-            score={8.4}
             description={
               <p>A purpose-built ferret cage with appropriate wire spacing, several shelves and ramps, and a price well below the modular systems. The floor space suits one to two ferrets comfortably, and the included shelves give vertical usable area; as with any wire cage, the shelf edges and ramps benefit from fleece or linoleum covering. A strong value pick when the larger modular units are out of budget or out of room.</p>
             }
@@ -318,8 +340,8 @@ export default function BestFerretCagePage() {
             pros={['Purpose-built for ferrets', 'Several shelves and ramps included', 'Lower price than modular systems', 'Good single-or-pair footprint']}
             cons={['Smaller than a double modular unit', 'Wire shelves need covering', 'Not expandable']}
             price="$$"
-            ctaText="Find Prevue Feisty Ferret Cage"
-            ctaHref="/go/amazon-brand/prevue+feisty+ferret+cage?s=reviews-best-ferret-cage"
+            ctaText="Find Prevue Feisty Ferret Cage on Amazon"
+            ctaHref="/go/amazon/B000QFMYWQ?s=reviews-best-ferret-cage"
             ctaAffiliateProgram="amazon-brand"
             ctaAffiliateProduct="prevue-feisty-ferret-cage"
           />
@@ -329,7 +351,6 @@ export default function BestFerretCagePage() {
             badge="Entry / Single Ferret"
             name="Kaytee Multi-Level Ferret Home"
             subtitle="Entry-level multi-level cage, widely stocked, suited to a single ferret with daily out-time"
-            score={7.6}
             description={
               <p>A widely stocked entry-level multi-level cage. Bar spacing is in range and it carries shelves and ramps, but the footprint suits a single ferret with generous daily out-of-cage time rather than a pair living in it full-time. It is the most likely appropriate cage to find at a chain store at short notice — verify the spacing on the specific model, and treat it as a starter cage you may outgrow if you add a second ferret.</p>
             }
@@ -342,8 +363,8 @@ export default function BestFerretCagePage() {
             pros={['Widely available', 'Affordable entry point', 'Multi-level layout', 'Good first cage for a single ferret']}
             cons={['Tighter footprint than the others', 'Confirm spacing per model', 'May be outgrown with a second ferret']}
             price="$"
-            ctaText="Find Kaytee Multi-Level Ferret Home"
-            ctaHref="/go/amazon-brand/kaytee+multi+level+ferret+home?s=reviews-best-ferret-cage"
+            ctaText="Find Kaytee Multi-Level Ferret Home on Amazon"
+            ctaHref="/go/amazon/B008FONT2Y?s=reviews-best-ferret-cage"
             ctaAffiliateProgram="amazon-brand"
             ctaAffiliateProduct="kaytee-multi-level-ferret-home"
           />
@@ -365,31 +386,31 @@ export default function BestFerretCagePage() {
               <tbody>
                 <tr className="border-b border-brand-border">
                   <td className="p-3">One to four ferrets, and the cage is the long-term home</td>
-                  <td className="p-3 font-bold"><a href="#ferret-nation">Ferret Nation / Critter Nation double</a><TableShopLink href={"/go/amazon-brand/ferret+nation+critter+nation+double+unit?s=reviews-best-ferret-cage"} product={"Ferret Nation / Critter Nation double"} /></td>
-                  <td className="p-3">Best overall. About 0.5 in bar spacing. Full-width doors. Price tier $$$</td>
+                  <td className="p-3 font-bold"><a href="#ferret-nation">Ferret Nation / Critter Nation double</a><TableShopLink href={"/go/amazon/B0054U8UGW?s=reviews-best-ferret-cage"} product={"Ferret Nation / Critter Nation double"} /></td>
+                  <td className="p-3">Best overall. Confirm bar spacing on the box. Full-width doors. Price tier $$$</td>
                   <td className="p-3">Heavy, large, and the wire shelves still need covering</td>
                 </tr>
                 <tr className="border-b border-brand-border">
                   <td className="p-3">One or two ferrets, and the double unit is too big or too expensive</td>
-                  <td className="p-3 font-bold"><a href="#prevue-feisty">Prevue Feisty Ferret</a><TableShopLink href={"/go/amazon-brand/prevue+feisty+ferret+cage?s=reviews-best-ferret-cage"} product={"Prevue Feisty Ferret"} /></td>
+                  <td className="p-3 font-bold"><a href="#prevue-feisty">Prevue Feisty Ferret</a><TableShopLink href={"/go/amazon/B000QFMYWQ?s=reviews-best-ferret-cage"} product={"Prevue Feisty Ferret"} /></td>
                   <td className="p-3">Best value. Ferret-appropriate spacing. Mid price tier $$</td>
                   <td className="p-3">Not expandable, and smaller than the double modular unit</td>
                 </tr>
                 <tr className="border-b border-brand-border">
                   <td className="p-3">One ferret, with generous daily out-of-cage time</td>
-                  <td className="p-3 font-bold"><a href="#kaytee-multilevel">Kaytee Multi-Level</a><TableShopLink href={"/go/amazon-brand/kaytee+multi+level+ferret+home?s=reviews-best-ferret-cage"} product={"Kaytee Multi-Level"} /></td>
+                  <td className="p-3 font-bold"><a href="#kaytee-multilevel">Kaytee Multi-Level</a><TableShopLink href={"/go/amazon/B008FONT2Y?s=reviews-best-ferret-cage"} product={"Kaytee Multi-Level"} /></td>
                   <td className="p-3">Entry pick. Spacing in range if you verify the model. Price tier $</td>
                   <td className="p-3">Too tight for a pair living in it full-time</td>
                 </tr>
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-05" />
+          <ComparisonFoot updated="2026-10-10" />
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
 
-          <ArticleSourcesList sources={SOURCES} />
+          <ArticleSourcesList title="Sources" sources={SOURCES} />
 
           <p className="text-sm text-brand-text-light">
             This guide describes how to evaluate a cage against published husbandry criteria; it is not individualized

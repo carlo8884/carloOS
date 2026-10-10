@@ -1,13 +1,13 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 
 const SOURCES = [
-  { label: 'Merck Veterinary Manual: Mange in Dogs', url: 'https://www.merckvetmanual.com/integumentary-system/mange/overview-of-mange', publisher: 'Merck Vet Manual' },
-  { label: 'CAPC: Companion Animal Parasite Council — Sarcoptic Mange and Demodex', url: 'https://capcvet.org/guidelines/external-parasites/', publisher: 'CAPC' },
-  { label: 'AVMA: Mange (Sarcoptic and Demodectic) in Dogs', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/common-health-conditions-dogs', publisher: 'AVMA' },
+  { label: 'Merck Veterinary Manual: Mange in Dogs', url: 'https://www.merckvetmanual.com/integumentary-system/mange/overview-of-mange-in-animals', publisher: 'Merck Vet Manual' },
+  { label: 'CAPC: Companion Animal Parasite Council — Sarcoptic Mite', url: 'https://capcvet.org/guidelines/sarcoptic-mite/', publisher: 'CAPC' },
   { label: 'Mueller RS et al. A review of topical therapy for skin infections with bacteria and yeast. Vet Dermatol. 2012;23(4):330-341.', publisher: 'Vet Dermatology' },
 ]
 
@@ -77,17 +77,17 @@ export default function DogMangePage() {
           <p><strong>Generalized demodicosis:</strong> Extensive hair loss affecting the entire body, often with secondary bacterial infection (pyoderma). Can occur in juveniles or adults. In adult-onset generalized demodicosis — any dog over 18 months developing new generalized demodex — an underlying cause of immune suppression must be investigated: Cushing's disease, hypothyroidism, diabetes mellitus, neoplasia, immunosuppressive medications. Treating the skin without addressing the underlying cause results in treatment failure.</p>
           <p><strong>Treatment:</strong> Isoxazoline products (Bravecto, NexGard, Simparica) are highly effective — they have revolutionized demodectic mange treatment and are now the standard of care. Monthly or every-3-month dosing continues until two consecutive negative skin scrapings are achieved. Traditional treatments (amitraz dips, oral ivermectin) are still used in some cases. Secondary bacterial pyoderma requires concurrent antibiotic treatment. Treatment duration: typically 3–6 months for generalized cases.</p>
 
-          <h2 id="kit">Bedding-wash kit</h2>
-          <p>Everyday physical supplies that match the household-wash copy above — a washable dog bed cover so bedding can go in the laundry after a sarcoptic diagnosis, plus pet-safe laundry detergent for that wash. These are household-management aids, not treatments. They do not kill mites, they do not replace isoxazoline therapy, and they do not treat demodectic immune disease. Bravecto / NexGard / Simparica / Credelio, Revolution / selamectin, ivermectin, amitraz dips, chlorhexidine / medicated shampoo, and recovery cones stay educational copy only — this page never hops parasiticide brands, brand ASINs, medicated shampoo, or clinical gear. This page does not claim hands-on testing.</p>
+          <h2 id="kit">Supplies named on this page</h2>
+          <p>Keep these on hand: a washable dog bed cover so bedding can go in the laundry after a sarcoptic diagnosis, plus pet-safe laundry detergent for that wash. These are household-management aids, not treatments. They do not kill mites, they do not replace isoxazoline therapy, and they do not treat demodectic immune disease. Bravecto / NexGard / Simparica / Credelio, Revolution / selamectin, ivermectin, amitraz dips, chlorhexidine / medicated shampoo, and recovery cones stay educational copy only — this page does not link to parasiticide brands, named brands, medicated shampoo, or clinical gear.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/washable+dog+bed+cover?s=health-dog-mange", "/go/amazon-brand/pet+safe+laundry+detergent?s=health-dog-mange"]} />
 
-          {/* Money path — live amazon-brand search hops (washable
+          {/* Shop note — live amazon-brand search buttons (washable
               dog bed cover / pet-safe laundry detergent). ShopCtas
-              hides empty Chewy; never href="#" or PLACEHOLDER.
-              Category searches only. Isoxazoline parasiticide
+              hides empty Chewy; never href="#" or an empty link.
+              Amazon searches only. Isoxazoline parasiticide
               brands, ivermectin, amitraz, medicated shampoo, and
-              recovery cones are not shoppable hops. */}
+              recovery cones are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

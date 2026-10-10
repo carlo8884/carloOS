@@ -1,16 +1,12 @@
-import { HubMoneyLinks } from '@carloOS/ui'
+import { HopDisclosure } from '../../../components/HopDisclosure'
+import { ShopCtas, HubMoneyLinks } from '@carloOS/ui'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, RelatedLinks, AffiliateDisclosure, JourneyNext } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, RelatedLinks, JourneyNext } from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Quarantine Tank Guide — Setup, Duration | Fish.com', description: 'A quarantine tank prevents 80% of disease introductions to established aquariums. 4-6 week minimum, bare bottom, how to treat proactively.', path: '/setup/quarantine-tank-guide', type: 'article' })
 const SOURCES = [
-  {
-    label: "Ichthyophthirius multifiliis (Ich): Biology, Pathology, and Control",
-    url: "https://edis.ifas.ufl.edu/publication/FA026",
-    publisher: "University of Florida IFAS Extension",
-  },
-  {
+    {
     label: "Fish Disease Diagnosis and Treatment — Quarantine Procedures",
     url: "https://srac.tamu.edu/serveFactSheet/473",
     publisher: "Southern Regional Aquaculture Center (SRAC)",
@@ -25,12 +21,7 @@ const SOURCES = [
     url: "https://www.sciencedirect.com/science/article/pii/S0044848617303769",
     publisher: "Aquaculture (peer-reviewed)",
   },
-  {
-    label: "Biosecurity Practices for Aquarium Fish: Quarantine and Disease Prevention",
-    url: "https://edis.ifas.ufl.edu/publication/FA032",
-    publisher: "University of Florida IFAS Extension",
-  },
-]
+  ]
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Quarantine Tank Guide', description: 'Setup, minimum duration, and prophylactic treatment protocol for quarantining new fish.', url: 'https://fish.com/setup/quarantine-tank-guide', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-09-06T00:00:00Z' ,
   citation: SOURCES,
 })
@@ -64,12 +55,13 @@ export default function QuarantineGuidePage() {
           <RelatedLinks title="Related Guides" links={[{ label: 'Best Aquarium Filters', href: '/reviews/best-aquarium-filters' }, { label: 'Best Aquarium Heaters', href: '/reviews/best-aquarium-heaters' }, { label: 'Fish Disease Guide', href: '/health/fish-disease-guide' }, { label: 'Ich Treatment', href: '/health/ich-treatment' }]} />
 
         </>}
-       priceAsOf="2026-05-28">
+       priceAsOf="2026-10-04">
         <div className="carloOS-article">
           <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-09-06T00:00:00Z" reviewedBy="Editorial team" />
 
           <h2>Why Most Aquarists Skip It — And Why They Regret It</h2>
-          <DropCap>The logic for skipping quarantine: the fish looks healthy, setting up a separate tank is effort, and most fish survive the introduction. This logic holds until it doesn't — until a new fish introduces ich to a reef tank and wipes out $2,000 in coral and fish, or a single columnaris-infected livebearer kills an entire community tank over 72 hours, or a new discus introduces Capillaria to a carefully maintained discus colony. The cost of one disease introduction reliably exceeds the cost of quarantine infrastructure by a significant margin.</DropCap>
+          <DropCap>The logic for skipping quarantine: the fish looks healthy, setting up a separate tank is effort, and most fish survive the introduction. This logic holds until it doesn't — until a new fish introduces ich to a reef tank and wipes out $1,500–$2,500 in coral and fish, or a single columnaris-infected livebearer kills an entire community tank over 72 hours, or a new discus introduces Capillaria to a carefully maintained discus colony. The cost of one disease introduction reliably exceeds the cost of quarantine infrastructure by a significant margin.</DropCap>
+          <p>This equipment range is dated 2026-10-04.</p>
           <p>The psychological barrier is effort and space. The practical solution: a single 10-gallon tank stored in a closet or garage, a sponge filter always running in the main tank to seed it, a heater and thermometer. Total space: 18 inches × 10 inches. Total ongoing effort when not in use: approximately zero. The infrastructure cost ($30–60) amortizes over every subsequent fish purchase for years.</p>
 
           <h2>The Seeded Sponge Filter — Solving the Cycle Problem</h2>
@@ -95,16 +87,16 @@ export default function QuarantineGuidePage() {
           siteId="fish-com"
           nextHref="/health/ich-treatment"
           nextLabel="Know the ich protocol before spots show"
-          nextBlurb="Four weeks is the observation window. Ich is the disease that most often appears in that window. The hop below is the same quarantine-tank kit search already on this page — not a new query."
+          nextBlurb="Four weeks is the observation window. Ich is the disease that most often appears in that window. The button below opens the same quarantine-tank kit search on Amazon — not a different search."
           resourceHref="/go/amazon-brand/quarantine%20tank%20kit%20aquarium?s=setup-quarantine-tank-guide"
-          resourceLabel="Shop quarantine tank kits on Amazon →"
+          resourceLabel="Browse quarantine tank kits on Amazon →"
         />
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        <HopDisclosure siteId="fish-com" href="/go/amazon-brand/quarantine%20tank%20kit%20aquarium?s=setup-quarantine-tank-guide" />
           <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Quarantine Tank Essentials — Where to Shop</div>
-          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse the gear referenced in this guide on Amazon. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
+          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse the gear referenced in this guide on Amazon.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
-            <a href="/go/amazon-brand/quarantine%20tank%20kit%20aquarium?s=setup-quarantine-tank-guide" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Amazon →</a>
+            <ShopCtas amazonHref="/go/amazon-brand/quarantine%20tank%20kit%20aquarium?s=setup-quarantine-tank-guide" amazonLabel="Browse quarantine tank kits on Amazon →" />
           </div>
           <ArticleSourcesList sources={SOURCES} />
         </div>

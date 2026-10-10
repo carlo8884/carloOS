@@ -1,9 +1,9 @@
+import { HopDisclosure } from '../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, ShopCtas, StockImage, CrossPortfolioCard, DirectoryPlacesCta, HubSearch, HubJumpNav } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, ShopCtas, StockImage, CrossPortfolioCard, DirectoryPlacesCta, HubSearch, HubJumpNav } from '@carloOS/ui'
 import listings from '../../data/directory-listings.json'
 import { crossSiteHref } from '@carloOS/config'
-
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Product Reviews 2026 — Ranked & Compared | Dog.com', description: 'Dog product reviews with honest editorial criteria. Pet insurance, dog food, flea prevention, beds, crates — ranked with honest editorial criteria.', path: '/reviews' })
 
@@ -13,7 +13,6 @@ const breadcrumbSchema = buildBreadcrumbSchema({
     { name: 'Reviews', url: 'https://dog.com/reviews' },
   ],
 })
-
 
 const REVIEW_GROUPS = [
   { id: 'dog-reviews-food', label: 'Food', intro: 'Dry food, life-stage foods, the slow feeder bowl, and the fresh-versus-kibble page.' },
@@ -39,7 +38,7 @@ const REVIEWS = [
   { title: 'Best Slow Feeder Bowls for Dogs 2026', desc: 'Anti-bloat slow feeder bowls ranked for large breed and deep-chested dogs', href: '/reviews/best-slow-feeder-bowls', group: 'dog-reviews-food' },
   { title: 'Best Dental Chews for Dogs 2026', desc: 'VOHC-accepted dental chews — Greenies, Virbac CET, Whimzees ranked', href: '/reviews/best-dental-chews', group: 'dog-reviews-dental' },
   { title: 'Best Joint Supplements for Dogs 2026', desc: 'Cosequin, Dasuquin, and other glucosamine/chondroitin supplements ranked', href: '/reviews/best-joint-supplements', group: 'dog-reviews-joints' },
-  { title: 'Best Dog GPS Trackers 2026', desc: 'Fi Series 3, Whistle Go Explore, and Tractive ranked for accuracy and battery life', href: '/reviews/best-dog-gps-tracker', group: 'dog-reviews-tracking' },
+  { title: 'Best Dog GPS Trackers 2026', desc: 'Fi Series 3+ is the current collar. Tractive is the budget pick. Whistle shut down on August 31, 2025.', href: '/reviews/best-dog-gps-tracker', group: 'dog-reviews-tracking' },
   { title: 'Best Large Breed Dog Food 2026', desc: 'WSAVA-compliant foods for 50+ lb dogs — Royal Canin, Purina Pro Plan ranked', href: '/reviews/best-large-breed-dog-food', group: 'dog-reviews-food' },
   { title: 'Best Senior Dog Food 2026', desc: 'Purina Pro Plan Bright Mind, Hill\'s Science Diet Senior compared', href: '/reviews/best-dog-food-senior', group: 'dog-reviews-food' },
   { title: 'Best Dog Harnesses 2026', desc: 'Front-clip, back-clip, and escape-proof harnesses ranked by type', href: '/reviews/best-dog-harnesses', group: 'dog-reviews-walking' },
@@ -55,8 +54,8 @@ const REVIEWS = [
   { title: 'Cosequin vs Dasuquin', desc: 'Glucosamine and chondroitin, or the same base plus ASU. Scores are the ones on the joint review', href: '/reviews/cosequin-vs-dasuquin-guide', badge: 'Joints', group: 'dog-reviews-joints' },
   { title: 'Fi Series 3 vs Tractive', desc: 'Three-month battery and escape alerts, or the lowest printed monthly fee. Scores are the ones on the GPS review', href: '/reviews/fi-vs-tractive-guide', badge: 'Tracking', group: 'dog-reviews-tracking' },
   { title: 'Outward Hound vs Northmate', desc: 'A maze slow bowl, or a flat grass feeder that cannot tip. Scores are the ones on the slow-feeder review', href: '/reviews/outward-hound-vs-northmate-guide', badge: 'Nutrition', group: 'dog-reviews-food' },
-  { title: 'Holiday Scraps and a Locking Trash Can', desc: 'The pancreatitis page already names turkey skin and ham fat. The hop is the locking can on that page', href: '/reviews/holiday-scraps-trash-can-guide', badge: 'Season', group: 'dog-reviews-season' },
-  { title: 'Holiday Chocolate and the Toxicity Calculator', desc: 'Any ingestion is a call. The hop is the first-aid kit the calculator page already links', href: '/reviews/holiday-chocolate-calculator-guide', badge: 'Season', group: 'dog-reviews-season' },
+  { title: 'Holiday Scraps and a Locking Trash Can', desc: 'The pancreatitis page already names turkey skin and ham fat. The button below is the locking can on that page', href: '/reviews/holiday-scraps-trash-can-guide', badge: 'Season', group: 'dog-reviews-season' },
+  { title: 'Holiday Chocolate and the Toxicity Calculator', desc: 'Any ingestion is a call. The button below is the first-aid kit the calculator page already links', href: '/reviews/holiday-chocolate-calculator-guide', badge: 'Season', group: 'dog-reviews-season' },
   { title: 'November and December Dog Gifts', desc: 'Chews, bowls, harnesses, a crate, a bed, and a tracker, grouped by the price bands already on those cards', href: '/reviews/november-december-gift-guide', badge: 'Season', group: 'dog-reviews-season' },
 ]
 
@@ -115,7 +114,7 @@ export default function DogReviewsPage() {
           ))}
         </div>
         <div className="mt-10 text-center">
-          <p className="text-sm text-brand-text-light mb-2">Affiliate Disclosure: We earn commissions on purchases. Rankings are editorially independent.</p>
+          <p className="text-sm text-brand-text-light mb-2">Rankings are editorially independent.</p>
           <Link href="/editorial-standards" className="text-xs font-semibold text-brand-primary no-underline hover:underline">Read our editorial standards →</Link>
         </div>
       </div>
@@ -150,22 +149,9 @@ export default function DogReviewsPage() {
         <p className="max-w-content-wide text-sm text-brand-text-mid leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
 
         <div className="max-w-content-wide mt-6">
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href="/go/amazon-brand/royal+canin+dog+food?s=reviews-hub" />
         </div>
 
-        {/* Money path — live amazon-brand search hops
-            (laminated dog reviews buyer-guide chart /
-            dog fridge reviews comparison card /
-            canine reviews reference handbook).
-            Educational kitchen searches only; no Rx /
-            vaccine / flea / heartworm ASIN hops.
-            ShopCtas hides empty Chewy; never href="#"
-            or PLACEHOLDER. Unused vs tools-hub
-            laminated+dog+calculator+tools+chart /
-            dog+fridge+measurement+card /
-            canine+calculator+reference+handbook,
-            child reviews wire+dog+crate /
-            dog+harness / dog+gps. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-content-wide">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
             Shop related supplies
@@ -174,7 +160,7 @@ export default function DogReviewsPage() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/royal+canin+dog+food?s=reviews-hub"
-              amazonLabel="Shop on Amazon"
+              amazonLabel="Browse Royal Canin dog food on Amazon →"
             />
           </div>
         </div>

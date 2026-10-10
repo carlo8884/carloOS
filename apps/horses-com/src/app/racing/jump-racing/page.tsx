@@ -20,7 +20,6 @@ import {
   RelatedLinks,
   TableOfContents,
   FAQAccordion,
-  AffiliateDisclosure,
   buildArticleSchema,
   SchemaScript,
 } from '@carloOS/ui'
@@ -175,19 +174,7 @@ export default function JumpRacingPage() {
             <li>The Jockey Club. Thoroughbred registration and the American Stud Book. jockeyclub.com.</li>
           </ol>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated horse hurdle-steeplechase chart /
-              horse stall-door NSA jump-racing card /
-              equine timber-fence handbook).
-              No existing product hop to keep.
-              Educational barn searches only; no Rx /
-              vaccine / flea / heartworm / nsaid hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs quarter-horse-racing /
-              harness-racing hops.
-              Do not re-open #1165 / what-to-expect. */}
                   </div>
       </ArticleLayout>
     </>

@@ -1,10 +1,11 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import {
   buildMetadata,
   ArticleLayout, CrossPortfolioCard,
   RelatedLinks,
   FAQAccordion,
-  AffiliateDisclosure,
   ShopCtas,
   CrossSiteHelp,
 } from '@carloOS/ui'
@@ -92,7 +93,7 @@ export default function VetsYorkshireTerrierHealthPage() {
     <>
       <SchemaScript schema={combinedSchema} />
       <ArticleLayout
-        priceAsOf="2026-05-28"
+        priceAsOf="2026-10-04"
         siteId="vets-co"
         contentType="breed"
         hero={{
@@ -136,8 +137,7 @@ export default function VetsYorkshireTerrierHealthPage() {
             reviewedBy="Editorial team"
           />
 
-          <h2>TL;DR</h2>
-          <p>
+                    <p>
             The Yorkshire Terrier is a small (4–7 lb), long-lived (12–15 years) toy terrier with a tightly
             defined cluster of breed predispositions: congenital portosystemic shunt, patellar luxation,
             tracheal collapse, very high rates of periodontal disease, hereditary cataracts and retinal
@@ -172,7 +172,7 @@ export default function VetsYorkshireTerrierHealthPage() {
               'Stunted growth, copper-colored irises (occasional)',
               'Prolonged anesthetic recovery — major red flag',
             ]}
-            management="Bile-acids screening before any anesthetic event in a puppy Yorkie — a fasting and post-prandial pair. A two-column ledger pad is how that pair stays one written row — it is not a four-column accounting pad (that lives on how-pet-insurance-works), not a quad-ruled graph pad (that lives on deductibles-reimbursement), and not a weekly checklist notepad (that lives on french-bulldog-health). If elevated, refer to ACVIM internal medicine for abdominal ultrasound, CT angiography, or scintigraphy. Surgical attenuation (ameroid constrictor, cellophane banding, thin-film banding) at a referral hospital is curative in most extrahepatic cases. Medical management (low-protein hepatic diet, lactulose, antibiotics) bridges to surgery and is the long-term plan when surgery is not feasible."
+            management="Bile-acids screening before any anesthetic event in a puppy Yorkie — a fasting and post-prandial pair. A two-column ledger pad is how that pair stays one written row — it is not a four-column accounting pad, not a quad-ruled graph pad, and not a weekly checklist notepad. If elevated, refer to ACVIM internal medicine for abdominal ultrasound, CT angiography, or scintigraphy. Surgical attenuation (ameroid constrictor, cellophane banding, thin-film banding) at a referral hospital is curative in most extrahepatic cases. Medical management (low-protein hepatic diet, lactulose, antibiotics) bridges to surgery and is the long-term plan when surgery is not feasible."
             guideHref="/find-a-vet"
             guideLabel="Find an internal medicine specialist →"
           />
@@ -220,7 +220,7 @@ export default function VetsYorkshireTerrierHealthPage() {
               'Red, bleeding, receding gums',
               'Dropping food, pawing at face, chewing on one side',
             ]}
-            management="Daily home brushing with veterinary toothpaste. A 30-day habit-tracker pad is how that daily brushing stays a dated streak — it is not a hardcover weekly appointment planner, not a monthly desk pad calendar (that lives on when-to-enroll), and not an 18-month wall calendar (that lives on golden-retriever-health). VOHC-accepted dental chews/water additives as adjuncts. Annual oral exam; professional cleaning under anesthesia with full-mouth dental radiographs when indicated. Extract retained deciduous canines at spay/neuter."
+            management="Daily home brushing with veterinary toothpaste. A 30-day habit-tracker pad is how that daily brushing stays a dated streak — it is not a hardcover weekly appointment planner, not a monthly desk pad calendar, and not an 18-month wall calendar. VOHC-accepted dental chews/water additives as adjuncts. Annual oral exam; professional cleaning under anesthesia with full-mouth dental radiographs when indicated. Extract retained deciduous canines at spay/neuter."
           />
 
           <BreedHealthCard
@@ -233,7 +233,7 @@ export default function VetsYorkshireTerrierHealthPage() {
               'Seizure or collapse — EMERGENCY',
               'Following any stressor (vaccine, travel, GI upset, surgery)',
             ]}
-            management="Feed 4 small meals daily until ≥4 months old. An hourly desk pad is how those four small meals stay timed blocks — it is not a monthly desk pad calendar (that lives on when-to-enroll), not a mechanical kitchen timer (that lives on german-shepherd-health), and not a recipe-card box (that lives on beagle-health). Keep corn syrup or oral glucose gel at home and when traveling. Apply a pea-sized amount of corn syrup to the gums while transporting to an emergency hospital for any episode of weakness, seizure or unresponsiveness."
+            management="Feed 4 small meals daily until ≥4 months old. An hourly desk pad is how those four small meals stay timed blocks — it is not a monthly desk pad calendar, not a mechanical kitchen timer, and not a recipe-card box. Keep corn syrup or oral glucose gel at home and when traveling. Apply a pea-sized amount of corn syrup to the gums while transporting to an emergency hospital for any episode of weakness, seizure or unresponsiveness."
           />
 
           <BreedHealthCard
@@ -290,44 +290,23 @@ export default function VetsYorkshireTerrierHealthPage() {
           </p>
 
           <h2>Pet Insurance for a Yorkshire Terrier</h2>
+          <p>Those figures are typical US ranges dated 2026-10-04.</p>
           <p>
             Surgical attenuation of a single extrahepatic shunt at a referral center commonly runs
             $4,500–8,000; patellar luxation correction $2,000–4,000 per knee; tracheal stenting
-            $4,500–7,500; lifetime dental care can easily exceed $6,000. Insurance bought before
+            $4,500–7,500; lifetime dental care can easily run $5,000–$8,000. Insurance bought before
             symptoms appear typically covers these as accident/illness with no breed exclusion. See our
             2026 comparison: <a href="/reviews/best-pet-insurance">best pet insurance →</a>.
           </p>
 
-          <h2 id="kit">Yorkshire-terrier-health kit</h2>
+          <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Everyday physical supplies that match the
-            PSS, dental, and hypoglycemia copy on
-            this page — a two-column ledger pad so
-            the fasting and post-prandial bile-acids
-            pair stays one written row, a 30-day
-            habit-tracker pad so daily brushing
-            stays a dated streak, and an hourly
-            desk pad so the four small meals until
-            four months stay timed blocks. These
-            are educational Yorkshire-terrier-health
-            / paperwork tools, not a ranked product
-            list, not a substitute for veterinary
-            care, and not a treatment. Analog
-            stopwatches, blank index cards, and
-            recipe-card boxes already live on
-            beagle-health. Four-tab dividers, analog
-            outdoor thermometers, and weekly
-            checklist notepads already live on
-            french-bulldog-health. This page does
-            not hop harnesses, toothpaste,
-            medications, or insurance brands as
-            Amazon searches. This page does not
-            claim hands-on testing.
+            Keep these on hand: a two-column ledger pad so the fasting and post-prandial bile-acids pair stays one written row, a 30-day habit-tracker pad so daily brushing stays a dated streak, and an hourly desk pad so the four small meals until four months stay timed blocks. These are educational Yorkshire-terrier-health / paperwork tools, not a ranked product list, not a substitute for veterinary care, and not a treatment.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/two+column+ledger+pad?s=breeds-yorkshire-terrier-health", "/go/amazon-brand/30+day+habit+tracker+pad?s=breeds-yorkshire-terrier-health", "/go/amazon-brand/hourly+desk+pad?s=breeds-yorkshire-terrier-health"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (two-column ledger pad /
               30-day habit-tracker pad /
               hourly desk pad).
@@ -336,9 +315,9 @@ export default function VetsYorkshireTerrierHealthPage() {
               tools, not a ranked product list, not
               a substitute for veterinary care, no
               Rx / first-aid kit / thermometer /
-              carrier / insurance-brand ASIN hops.
+              carrier / insurance-brand product page buttons.
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or an empty link. Amazon searches only —
               unused vs #1179
               analog+stopwatch /
               blank+index+cards /
@@ -377,10 +356,13 @@ export default function VetsYorkshireTerrierHealthPage() {
           >
             The Dog.com Yorkshire Terrier page is the owner-side guide for this breed: size, temperament, and everyday care.
           </CrossSiteHelp>
+          <p>Harnesses for this breed are compared in the <Link href={crossSiteHref('dog-com', '/reviews/best-dog-harnesses')}>dog harness review</Link>.</p>
+          <p>Dental chews for this breed are compared in the <Link href={crossSiteHref('dog-com', '/reviews/best-dental-chews')}>dental chew review</Link>.</p>
           <h2>FAQ</h2>
           <FAQAccordion
             items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))}
             allowMultiple
+            includeSchema={false}
           />
 
           <h2>Sources & Further Reading</h2>

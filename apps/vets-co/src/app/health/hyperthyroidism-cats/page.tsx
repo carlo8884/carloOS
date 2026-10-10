@@ -1,12 +1,12 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, RelatedLinks, ShopCtas, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Hyperthyroidism in Cats — Signs & Treatment Options | Vets.co", description: "Feline hyperthyroidism causes weight loss with a ravenous appetite in older cats. Compare radioiodine, medication, diet, and surgery treatment options.", path: '/health/hyperthyroidism-cats', type: 'article' })
 const SOURCES = [
-  { label: 'Merck Veterinary Manual: Hyperthyroidism in Cats', url: 'https://www.merckvetmanual.com/endocrine-system/the-thyroid-gland/hyperthyroidism-in-cats', publisher: 'Merck Vet Manual' },
-  { label: 'AVMA: Hyperthyroidism in Cats', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/hyperthyroidism-cats', publisher: 'AVMA' },
-  { label: 'AAFP: Feline Hyperthyroidism Guidelines', url: 'https://catvets.com/guidelines/practice-guidelines/hyperthyroidism/', publisher: 'American Association of Feline Practitioners' },
+  { label: 'Merck Veterinary Manual: Hyperthyroidism in Cats', url: 'https://www.merckvetmanual.com/endocrine-system/the-thyroid-gland/hyperthyroidism-in-animals', publisher: 'Merck Vet Manual' },
+  { label: 'AAFP: Feline Hyperthyroidism Guidelines', url: 'https://catvets.com/resource/management-of-feline-hyperthyroidism-guidelines/', publisher: 'American Association of Feline Practitioners' },
 ]
 const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Hyperthyroidism in Cats', description: 'Signs, diagnosis, and the four treatment options for feline hyperthyroidism.', url: 'https://vets.co/health/hyperthyroidism-cats', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' ,
   citation: SOURCES,
@@ -49,6 +49,7 @@ export default function HyperthyroidismCatsPage() {
         <div className="carloOS-article">
 
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
+          <LastUpdated date="2026-10-09" />
 
           <CalloutBox variant="info" title="Hyperthyroidism can mask kidney disease">
             Excess thyroid hormone increases blood flow through the kidneys, which can make kidney values look better than they truly are. When hyperthyroidism is treated, underlying kidney disease may become apparent. This is why veterinarians monitor kidney values closely before and after treatment — it changes the plan, not whether to treat. A kitchen food scale, grooming glove, and measuring cup do not diagnose thyroid or kidney disease and they do not replace that bloodwork.
@@ -58,7 +59,7 @@ export default function HyperthyroidismCatsPage() {
           <p>In the vast majority of cases, one or both thyroid glands in the neck develop a benign nodular overgrowth that produces excess thyroid hormone. Thyroid hormone sets the body's metabolic rate, so an excess revs every system. The heart works harder, often thickening over time; metabolism races, burning through body reserves; and the nervous system becomes overstimulated. Malignant thyroid tumors are rare in cats. Left untreated, the disease damages the heart and other organs, which is why prompt treatment matters even though the underlying tumor is usually benign.</p>
 
           <h2>Recognizing the Signs</h2>
-          <p>The hallmark is weight loss despite a strong, often voracious appetite in a cat over about 10 years old. Owners frequently describe a cat that is suddenly demanding food, drinking and urinating more, restless or hyperactive at night, and increasingly vocal. The coat may look unkempt. Some cats vomit or have loose stools. A subset shows the opposite picture — apathy and poor appetite — which can make diagnosis trickier. Any unexplained weight loss in a senior cat warrants thyroid testing. A silicone cat grooming glove is how an unkempt coat stays a felt weekly check — it is not a silicone dog grooming glove (that lives on dog.com cancer-signs) and it is not a dog slicker brush (that lives on dog.com hypothyroidism). An 8-ounce glass liquid measuring cup is how drinking more becomes a measured pour into the bowl — it is not a kitchen measuring cup (that lives on dog water-intake), not a kitchen liquid measuring pitcher (that lives on dehydration), not a 2-liter plastic graduated pitcher (that lives on Cushing&apos;s), not a cat water fountain (that lives on FLUTD), and not a wide-rim stainless cat water bowl (that lives on kidney-disease-cats). Household scales, gloves, and cups do not diagnose hyperthyroidism and they do not replace a T4 test.</p>
+          <p>The hallmark is weight loss despite a strong, often voracious appetite in a cat over about 10 years old. Owners frequently describe a cat that is suddenly demanding food, drinking and urinating more, restless or hyperactive at night, and increasingly vocal. The coat may look unkempt. Some cats vomit or have loose stools. A subset shows the opposite picture — apathy and poor appetite — which can make diagnosis trickier. Any unexplained weight loss in a senior cat warrants thyroid testing. A silicone cat grooming glove is how an unkempt coat stays a felt weekly check — it is not a silicone dog grooming glove and it is not a dog slicker brush. An 8-ounce glass liquid measuring cup is how drinking more becomes a measured pour into the bowl — it is not a kitchen measuring cup, not a kitchen liquid measuring pitcher, not a 2-liter plastic graduated pitcher, not a cat water fountain, and not a wide-rim stainless cat water bowl. Household scales, gloves, and cups do not diagnose hyperthyroidism and they do not replace a T4 test.</p>
 
           <h2>How It Is Diagnosed</h2>
           <p>Diagnosis usually rests on a blood test showing elevated total T4 alongside consistent signs. In borderline cases, repeat testing or additional thyroid tests resolve the picture, because other illnesses can suppress T4 into the normal range. A full workup also checks the heart, blood pressure, and kidney values, since these organs are commonly affected and influence which treatment is safest.</p>
@@ -70,33 +71,15 @@ export default function HyperthyroidismCatsPage() {
           <p><strong>Surgery:</strong> surgical removal of affected thyroid tissue, effective but now less common given the availability and safety of radioiodine.</p>
 
           <h2>Choosing a Treatment</h2>
-          <p>The best option depends on the individual cat — age, kidney function, heart status, household feeding logistics, and budget. Radioiodine offers a cure and freedom from daily medication; medication offers flexibility and a low entry cost; diet suits specific situations. Your veterinarian weighs these factors with you. Whatever the path, the goal is to bring thyroid levels into the normal range and protect the heart and kidneys from ongoing damage. Methimazole, Felimazole, Hill&apos;s y/d, and I-131 are clinic prescriptions and hospital treatments, not shoppable hops. The kitchen scale, grooming glove, and measuring cup are household consistency tools. They do not replace the veterinarian who chooses the protocol.</p>
+          <p>The best option depends on the individual cat — age, kidney function, heart status, household feeding logistics, and budget. Radioiodine offers a cure and freedom from daily medication; medication offers flexibility and a low entry cost; diet suits specific situations. Your veterinarian weighs these factors with you. Whatever the path, the goal is to bring thyroid levels into the normal range and protect the heart and kidneys from ongoing damage. Methimazole, Felimazole, Hill&apos;s y/d, and I-131 are clinic prescriptions and hospital treatments, not product links. The kitchen scale, grooming glove, and measuring cup are household consistency tools. They do not replace the veterinarian who chooses the protocol.</p>
 
-          <h2 id="kit">Home-care kit</h2>
+          <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Everyday physical supplies that match the
-            weight-loss-with-ravenous-appetite, unkempt-coat,
-            and increased-thirst copy on this page — a
-            small digital kitchen food scale so the extra
-            food a senior hyperthyroid cat is finishing is
-            a dated gram portion, a silicone cat grooming
-            glove so an unkempt coat stays a felt weekly
-            check, and an 8-ounce glass liquid measuring
-            cup so drinking more is a measured pour. These are educational home-care and monitoring
-            tools, not a ranked product list, not a
-            substitute for veterinary care, and not a
-            treatment for hyperthyroidism. Methimazole,
-            Felimazole, Hill&apos;s y/d, and I-131 are
-            clinic prescriptions, not shoppable hops. Large platform digital bathroom scales already
-            live on hypothyroidism-dogs. Silicone dog grooming gloves already live on
-            dog.com cancer-signs. Wide-rim
-            stainless cat water bowls already live on
-            kidney-disease-cats. This page does not claim
-            hands-on testing. </p>
+            Keep these on hand: a small digital kitchen food scale so the extra food a senior hyperthyroid cat is finishing is a dated gram portion, a silicone cat grooming glove so an unkempt coat stays a felt weekly check, and an 8-ounce glass liquid measuring cup so drinking more is a measured pour. These are educational home-care and monitoring tools, not a ranked product list, not a substitute for veterinary care, and not a treatment for hyperthyroidism. Methimazole, Felimazole, Hill&apos;s y/d, and I-131 are clinic prescriptions, not product links. </p>
 
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/small+digital+kitchen+food+scale?s=health-hyperthyroidism-cats", "/go/amazon-brand/silicone+cat+grooming+glove?s=health-hyperthyroidism-cats", "/go/amazon-brand/8+ounce+glass+liquid+measuring+cup?s=health-hyperthyroidism-cats"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (small digital kitchen food scale /
               silicone cat grooming glove /
               8-ounce glass liquid measuring cup).
@@ -104,9 +87,9 @@ export default function HyperthyroidismCatsPage() {
               monitoring / lifestyle tools, not a
               ranked product list, not a substitute
               for veterinary care, no Rx / methimazole /
-              Felimazole / Hill's y/d / I-131 ASIN hops.
+              Felimazole / Hill's y/d / I-131 product page buttons.
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or an empty link. Amazon searches only —
               unused vs #1087
               heavy+gauge+48+inch+dog+crate /
               2+foot+nylon+traffic+lead /
@@ -158,7 +141,7 @@ export default function HyperthyroidismCatsPage() {
               monthly+pill+organizer /
               soft+sided+vet+visit+carrier.
               Methimazole, Felimazole, Hill's y/d,
-              and I-131 are not shoppable hops. */}
+              and I-131 are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

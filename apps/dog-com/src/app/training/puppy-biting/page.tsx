@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -6,7 +7,7 @@ import {
   RelatedLinks,
   CrossPortfolioCard,
   ArticleByline,
-  AffiliateDisclosure,
+
   ShopCtas,
   JourneyNext,
 } from '@carloOS/ui'
@@ -69,25 +70,25 @@ export default function PuppyBitingPage() {
           siteId="dog-com"
           nextHref="/training/puppy-schedule"
           nextLabel="Put the 90-minute awake window on the puppy schedule"
-          nextBlurb="Ouch-and-pause only works if the puppy can still regulate. After 90 minutes awake, crate for a nap before the next play bout. The hop below is the same stuffable Kong search already on this page."
+          nextBlurb="Ouch-and-pause only works if the puppy can still regulate. After 90 minutes awake, crate for a nap before the next play bout. The button below opens the same stuffable Kong search on Amazon."
           resourceHref="/go/amazon-brand/kong+classic+dog+toy+stuffable?s=training-puppy-biting"
-          resourceLabel="Browse stuffable Kong toys on Amazon →"
+          resourceLabel="Browse stuffable Kong classic toys on Amazon →"
         />
 
-        {/* Money path — live amazon-brand search hops (nipping / teething kit).
-            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-            Category searches only — not a ranked list. */}
-        <AffiliateDisclosure variant="inline" siteId="dog-com" />
+        {/* Shop note — live amazon-brand search buttons (nipping / teething kit).
+            ShopCtas hides empty Chewy; never href="#" or an empty link.
+            Amazon searches only — not a ranked list. */}
+        <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/kong+classic+dog+toy+stuffable?s=training-puppy-biting", "/go/amazon-brand/puppy+chew+toys?s=training-puppy-biting", "/go/amazon-brand/puppy+teething+toys?s=training-puppy-biting", "/go/amazon-brand/bitter+apple+spray+dog?s=training-puppy-biting"]} />
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
-            Shop a nipping kit
+            Shop these supplies
           </div>
           <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Redirection only works if an appropriate chew is within reach —
             puppy chew toys and teething toys give the mouth something legal
             to do instead of hands. A stuffable Kong occupies the same
             mouth-need during crate naps. Bitter spray is a furniture
             deterrent category, not a substitute for the two-phase protocol.
-            Same teething-toy hop used on the{' '}
+            The same teething-toy button is on the{' '}
             <Link
               href="/tools/new-puppy-checklist"
               className="text-brand-primary no-underline hover:underline"
@@ -101,7 +102,7 @@ export default function PuppyBitingPage() {
             >
               dog age calculator
             </Link>
-            . Same Kong hop used on the{' '}
+            . The same Kong button is on the{' '}
             <Link
               href="/training/separation-anxiety"
               className="text-brand-primary no-underline hover:underline"
@@ -109,8 +110,7 @@ export default function PuppyBitingPage() {
               separation-anxiety guide
             </Link>
             . They are not a ranked product list and they do not replace the
-            ouch-and-pause protocol. Dog.com earns a commission on qualifying
-            purchases at no extra cost to you.</p>
+            ouch-and-pause protocol.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/puppy+chew+toys?s=training-puppy-biting"
@@ -122,11 +122,11 @@ export default function PuppyBitingPage() {
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/kong+classic+dog+toy+stuffable?s=training-puppy-biting"
-              amazonLabel="Browse stuffable Kong toys on Amazon →"
+              amazonLabel="Browse stuffable Kong classic toys on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/bitter+apple+spray+dog?s=training-puppy-biting"
-              amazonLabel="Browse bitter sprays on Amazon →"
+              amazonLabel="Browse bitter apple spray on Amazon →"
             />
           </div>
           <p className="text-2xs text-brand-text-light mt-3">

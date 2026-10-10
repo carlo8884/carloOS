@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, ReviewCard, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, ReviewCard, CrossPortfolioCard, ShopCtas, ComparisonFoot, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -39,6 +40,14 @@ export default function KitVsAdultFeedingPage() {
       <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="ferret-com"
+        heroHop={
+          <>
+            <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/marshall+ferret+food?s=kit-vs-adult-feeding" />
+            <div className="mb-4" data-primary-hop="true">
+              <a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" data-shop-placement="hero" href="/go/amazon-brand/marshall+ferret+food?s=kit-vs-adult-feeding">Browse Marshall ferret food on Amazon →</a>
+            </div>
+          </>
+        }
         hero={{
           title: 'Kit vs Adult Ferret Feeding',
           subtitle:
@@ -80,7 +89,7 @@ export default function KitVsAdultFeedingPage() {
             <CrossPortfolioCard currentSite="ferret-com" contentType="diet" variant="sidebar" />
           </>
         }
-      
+
         relatedLinks={[
           { title: 'Ferret Diet Hub', href: '/diet' },
           { title: 'Protein & Fat Requirements', href: '/diet/protein-and-fat-requirements' },
@@ -95,6 +104,7 @@ export default function KitVsAdultFeedingPage() {
             updatedAt="2026-06-01"
             reviewedBy="Editorial team"
           />
+          <LastUpdated date="2026-10-10" />
 
           <h2 id="kit">Weaning & the Kit Period</h2>
           <p>
@@ -115,6 +125,38 @@ export default function KitVsAdultFeedingPage() {
           <p>
             By around six months to a year, growth slows and the ferret settles into adult maintenance feeding. Healthy adults are typically free-fed — they self-regulate and graze 8–10 times a day — on a diet that hits the standard ferret macronutrient window. Restricted or scheduled feeding is generally discouraged for adults, partly because it can precipitate hypoglycemic episodes in a ferret with subclinical insulinoma. This is the stage to keep an eye on body condition and the normal seasonal weight swing (see <a href="/diet/weight-management">weight management</a>).
           </p>
+          <div className="my-6 max-w-full min-w-0">
+            <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
+              <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+              <thead>
+                <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Kit, first six months</th>
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Adult</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">What feeding does</th>
+                  <td className="p-3">Imprints smell and texture. Rotate two or three appropriate kibbles</td>
+                  <td className="p-3">Free-fed maintenance. Grazes 8 to 10 times a day</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">What to keep available</th>
+                  <td className="p-3">High-calorie, high-protein, animal-based food, free-choice. Sometimes lightly moistened at first</td>
+                  <td className="p-3">A diet in the standard ferret window. Restricted meals are discouraged</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Risk on this page</th>
+                  <td className="p-3">One kibble can fix the diet. A recall can leave a ferret that will not eat</td>
+                  <td className="p-3">Scheduled feeding can precipitate hypoglycemia if insulinoma is subclinical</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <ComparisonFoot updated="2026-10-10" />
+          <h2>Who should feed which stage</h2>
+          <p>Kits need variety inside the carnivore profile so later switches are possible. Adults stay on free-choice maintenance. A senior, from around age five, may need softened kibble, and a diet change with a diagnosis belongs with a veterinarian who sees ferrets.</p>
 
           <h2 id="senior">Senior Feeding</h2>
           <p>
@@ -126,20 +168,7 @@ export default function KitVsAdultFeedingPage() {
             Reproducing females have the highest nutritional demands of any life stage. A pregnant or lactating jill needs abundant high-protein, high-fat, calorie-dense food available free-choice to support the litter and her own condition, sitting at or above the top of the ferret macronutrient range. Underfeeding at this stage risks both the jill and the kits. Breeding-stage nutrition is specialized, and anyone breeding ferrets should work with a veterinarian and experienced mentor rather than relying on general guidance.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated ferret kit-imprint chart /
-              ferret fridge imprint-window card /
-              mustelid kit-adult feeding handbook).
-              Keep existing Marshall review hop.
-              Educational kitchen searches only; no Rx /
-              vaccine / aging hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs diet-hub /
-              whole-prey / protein-fat kitchen kits. Ferret
-              aging stays held.
-              Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
@@ -148,7 +177,7 @@ export default function KitVsAdultFeedingPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/marshall+ferret+food?s=kit-vs-adult-feeding"
-                amazonLabel="Shop on Amazon"
+                amazonLabel="Browse Marshall ferret food on Amazon →"
               />
           </div>
           </div>
@@ -157,30 +186,30 @@ export default function KitVsAdultFeedingPage() {
           <p>
             Whichever life stage your ferret is in, a ferret-specific kibble that hits the macronutrient window is a sound foundation — and rotating two or three such diets from kithood is the best defense against food fixation. The pick below is one widely stocked option; pair it with a second appropriate brand for variety. Documented-spec selection, not a hands-on test.
           </p>
-          <ScoreMethodology />
-          <ReviewCard
+          <ReviewCard quietUntilTag
             id="marshall-premium-diet"
             badge="Ferret-Specific Diet"
             name="Marshall Premium Ferret Diet"
             subtitle="Ferret-formulated, widely stocked, a sound rotation staple"
-            score={8.0}
             description={
-              <p>Formulated specifically for ferrets rather than adapted from cat food, with protein and fat in the working ferret range. Useful across life stages — moistened lightly for weaning kits, free-fed for adults — and a sensible component of the two-to-three-brand rotation this page recommends to prevent food fixation. The ingredient panel is imperfect (some plant protein) but acceptable for healthy animals, and it is widely available at short notice.</p>
+              <p>The current Marshall Premium Ferret Diet page lists crude protein minimum 38% and crude fat minimum 18%. Those are guaranteed-analysis figures as printed, not a dry-matter conversion. Carbohydrate is not on the guaranteed analysis — check the label. Useful across life stages — moistened lightly for weaning kits, free-fed for adults — and a component of the two-to-three-brand rotation this page recommends.</p>
             }
             specs={[
-              { label: 'Protein (dry-matter)', value: '~38%', highlight: 'good' },
-              { label: 'Fat (dry-matter)', value: '~20%', highlight: 'good' },
+              { label: 'Crude protein (as printed)', value: 'Min. 38%', highlight: 'good' },
+              { label: 'Crude fat (as printed)', value: 'Min. 18%', highlight: 'good' },
               { label: 'Ferret-specific', value: 'Yes', highlight: 'good' },
               { label: 'Distribution', value: 'National chain pet retail' },
             ]}
             pros={['Ferret-specific formulation', 'Works across life stages', 'Widely available for rotation', 'Affordable per pound']}
-            cons={['Higher carb than premium tier', 'Plant protein in ingredient list — rotate with a premium diet']}
-            price="$15–25 / 4 lb"
+            cons={['Carbohydrate is not on the guaranteed analysis. Check the label.', 'Check the ingredient list on the current bag']}
+            price="see current price / 4 lb"
+            priceNote="dated 2026-06-01."
             ctaText="Find Marshall Premium Ferret Diet"
             ctaHref="/go/marshall/premium-ferret-diet?s=diet-kit-vs-adult-feeding"
             ctaAffiliateProgram="marshall"
             ctaAffiliateProduct="premium-ferret-diet"
           />
+          <p>The other bag in that rotation, when you want the one marketed as starch-free, is Wysong Epigen 90. The <a href="/reviews/wysong-vs-marshall-kibble-guide">Wysong versus Marshall guide</a> prints both guaranteed analyses. Carbohydrate is not on either label.</p>
 
           <h2 id="sources">Sources</h2>
           <p>

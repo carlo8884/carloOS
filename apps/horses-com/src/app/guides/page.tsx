@@ -1,6 +1,7 @@
+import { HopDisclosure } from '../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildArticleSchema, AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, CrossPortfolioCard, DirectoryPlacesCta, ShopCtas, HubSearch, HubJumpNav } from '@carloOS/ui'
+import { buildArticleSchema, buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, CrossPortfolioCard, DirectoryPlacesCta, ShopCtas, HubSearch, HubJumpNav } from '@carloOS/ui'
 import listings from '../../data/directory-listings.json'
 import { PremiumMasthead } from '../../components/PremiumMasthead'
 
@@ -134,33 +135,9 @@ export default function GuidesHubPage() {
         </h2>
 
         <div className="max-w-content-wide mt-6">
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href="/go/amazon-brand/horse+saddle?s=guides-hub" />
         </div>
 
-        {/* Money path — live amazon-brand search hops
-            (laminated horse barn owner-guides chart /
-            horse stall-door owner-guides card /
-            equine owner-guides reference handbook).
-            Educational barn searches only; no Rx /
-            vaccine ASIN hops. ShopCtas hides empty
-            Chewy; never href="#" or PLACEHOLDER.
-            Unused vs #1126
-            laminated+horse+barn+daily+care+chart /
-            horse+stall+door+care+card /
-            equine+husbandry+reference+handbook, #1125
-            laminated+horse+barn+emergency+triage+chart /
-            horse+stall+door+vital+signs+card /
-            equine+health+reference+handbook, #1124
-            laminated+horse+barn+forage+first+chart /
-            horse+stall+door+ration+card /
-            equine+nutrition+reference+handbook, #1123
-            laminated+horse+barn+treat+safety+chart /
-            lidded+horse+barn+treat+tote /
-            horse+barn+treat+prep+shears, guide children
-            horse+saddle+pad / horse+sheepskin+half+pad /
-            horse+saddle+shims / horse+girth+cinch /
-            horse+hay+cubes / horse+mash /
-            horse+stall+fan / horse+stall+screen. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-content-wide">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
             Shop related supplies
@@ -169,7 +146,7 @@ export default function GuidesHubPage() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/horse+saddle?s=guides-hub"
-              amazonLabel="Shop on Amazon"
+              amazonLabel="Browse horse saddles on Amazon →"
             />
           </div>
         </div>

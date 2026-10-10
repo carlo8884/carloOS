@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -10,7 +11,7 @@ import {
   ArticleByline,
   DropCap,
   CalloutBox,
-  AffiliateDisclosure,
+
   ShopCtas,
   JourneyNext,
 } from '@carloOS/ui'
@@ -127,24 +128,24 @@ export default function PositiveReinforcementPage() {
           siteId="dog-com"
           nextHref="/training/marker-training"
           nextLabel="Run the 10-rule marker protocol"
-          nextBlurb="Charging the marker is the start, not the session plan. Use the marker-training guide next so click-then-treat stays inside the 2-second window on real behaviors. The hop below is the same clicker search already on this page."
+          nextBlurb="Charging the marker is the start, not the session plan. Use the marker-training guide next so click-then-treat stays inside the 2-second window on real behaviors. The button below opens the same clicker search on Amazon."
           resourceHref="/go/amazon-brand/dog+training+clicker?s=training-positive-reinforcement"
           resourceLabel="Browse dog training clickers on Amazon →"
         />
 
-        {/* Money path — live amazon-brand search hops (reward / marker kit).
-            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-            Category searches only — not a ranked list. */}
-        <AffiliateDisclosure variant="inline" siteId="dog-com" />
+        {/* Shop note — live amazon-brand search buttons (reward / marker kit).
+            ShopCtas hides empty Chewy; never href="#" or an empty link.
+            Amazon searches only — not a ranked list. */}
+        <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/dog+training+clicker?s=training-positive-reinforcement", "/go/amazon-brand/puppy+training+treats?s=training-positive-reinforcement", "/go/amazon-brand/dog+training+treat+pouch+belt+clip?s=training-positive-reinforcement"]} />
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
-            Shop a reward-based training kit
+            Shop these supplies
           </div>
           <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">High-value, pea-sized treats and a belt-clip pouch keep the
             reinforcer inside the 2-second window. A clicker (or a verbal
             &quot;yes&quot;) marks the exact moment so you can deliver the food a
-            beat later without losing the association. Same clicker, treat,
-            and pouch hops used on the{' '}
+            beat later without losing the association. The same clicker, treat,
+            and pouch buttons are on the{' '}
             <Link
               href="/training/marker-training"
               className="text-brand-primary no-underline hover:underline"
@@ -158,7 +159,7 @@ export default function PositiveReinforcementPage() {
             >
               basic-commands guide
             </Link>
-            . Same treat hop used on the{' '}
+            . The same training-treat button is on the{' '}
             <Link
               href="/training/house-training"
               className="text-brand-primary no-underline hover:underline"
@@ -173,8 +174,7 @@ export default function PositiveReinforcementPage() {
               puppy schedule
             </Link>
             . They are not a ranked product list and they do not replace
-            matching the reinforcer to the task. Dog.com earns a commission
-            on qualifying purchases at no extra cost to you. </p>
+            matching the reinforcer to the task. </p>
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/puppy+training+treats?s=training-positive-reinforcement"
@@ -186,7 +186,7 @@ export default function PositiveReinforcementPage() {
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/dog+training+treat+pouch+belt+clip?s=training-positive-reinforcement"
-              amazonLabel="Browse treat pouches on Amazon →"
+              amazonLabel="Browse belt-clip treat pouches on Amazon →"
             />
           </div>
           <p className="text-2xs text-brand-text-light mt-3">

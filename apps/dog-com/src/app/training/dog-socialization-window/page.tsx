@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -10,7 +11,7 @@ import {
   ArticleByline,
   DropCap,
   CalloutBox,
-  AffiliateDisclosure,
+
   ShopCtas,
   JourneyNext,
 } from '@carloOS/ui'
@@ -170,7 +171,7 @@ export default function DogSocializationWindowPage() {
             reviewedBy="Editorial team"
           />
 
-          <CalloutBox variant="evidence" title="TL;DR — The science in one box">
+          <CalloutBox variant="evidence" title="The science in one box">
             <p>
               <strong>The window:</strong> approximately 3–14 weeks of age, peak sensitivity 6–8 weeks (AVSAB, veterinary behavior textbooks).
             </p>
@@ -227,26 +228,26 @@ export default function DogSocializationWindowPage() {
             siteId="dog-com"
             nextHref="/training/puppy-schedule"
             nextLabel="Put the 100+ exposures on a daily schedule"
-            nextBlurb="The window is 3–14 weeks. The next useful page is the puppy schedule — short, food-paired sessions plus crate alone-time. The hop below is the same wire-crate-with-divider search already on this page."
+            nextBlurb="The window is 3–14 weeks. The next useful page is the puppy schedule — short, food-paired sessions plus crate alone-time. The button below opens the same wire-crate-with-divider search on Amazon."
             resourceHref="/go/amazon-brand/wire+dog+crate+with+divider+panel?s=training-socialization-window"
-            resourceLabel="Browse crates on Amazon →"
+            resourceLabel="Browse wire crates with a divider panel on Amazon →"
           />
 
-          {/* Money path — live amazon-brand search hops (socialization-window kit).
-              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-              Category searches only — not a ranked list. */}
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          {/* Shop note — live amazon-brand search buttons (socialization-window kit).
+              ShopCtas hides empty Chewy; never href="#" or an empty link.
+              Amazon searches only — not a ranked list. */}
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/wire+dog+crate+with+divider+panel?s=training-socialization-window", "/go/amazon-brand/puppy+training+treats?s=training-socialization-window", "/go/amazon-brand/soft+dog+carrier?s=training-socialization-window", "/go/amazon-brand/puppy+grooming+kit?s=training-socialization-window"]} />
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
-              Shop a socialization-window kit
+              Shop these supplies
             </div>
             <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">High-value, pea-sized treats pair every new person, surface, and
               handling session with a positive outcome. A wire crate with a
               divider is the alone-time den on the checklist. A soft carrier
               (or sling) is the carry-and-expose tool for high-traffic places
               before the vaccine series finishes. A puppy grooming kit turns
-              daily paw / ear / mouth handling into a food-paired habit. Same
-              treat hop used on the{' '}
+              daily paw / ear / mouth handling into a food-paired habit. The same
+              training-treat button is on the{' '}
               <Link
                 href="/training/puppy-schedule"
                 className="text-brand-primary no-underline hover:underline"
@@ -260,7 +261,7 @@ export default function DogSocializationWindowPage() {
               >
                 house-training guide
               </Link>
-              . Same crate hop used on the{' '}
+              . The same crate button is on the{' '}
               <Link
                 href="/training/crate-training"
                 className="text-brand-primary no-underline hover:underline"
@@ -274,7 +275,7 @@ export default function DogSocializationWindowPage() {
               >
                 new-puppy checklist
               </Link>
-              . Same soft-carrier hop used on the{' '}
+              . The same soft-carrier button is on the{' '}
               <Link
                 href="/which-pet"
                 className="text-brand-primary no-underline hover:underline"
@@ -282,8 +283,7 @@ export default function DogSocializationWindowPage() {
                 which-pet guide
               </Link>
               . They are not a ranked product list and they do not replace
-              staying under threshold. Dog.com earns a commission on qualifying
-              purchases at no extra cost to you.</p>
+              staying under threshold.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/puppy+training+treats?s=training-socialization-window"
@@ -291,7 +291,7 @@ export default function DogSocializationWindowPage() {
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/wire+dog+crate+with+divider+panel?s=training-socialization-window"
-                amazonLabel="Browse crates on Amazon →"
+                amazonLabel="Browse wire crates with a divider panel on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/soft+dog+carrier?s=training-socialization-window"
@@ -420,6 +420,7 @@ export default function DogSocializationWindowPage() {
           <FAQAccordion
             items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))}
             allowMultiple
+            includeSchema={false}
           />
 
           <CalloutBox variant="info" title="References">

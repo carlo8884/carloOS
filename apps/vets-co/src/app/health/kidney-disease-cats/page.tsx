@@ -1,14 +1,14 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, RelatedLinks, ShopCtas, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, DropCap, PullQuote, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Chronic Kidney Disease in Cats — Stages, Diet, Outlook | Vets.co", description: "Chronic kidney disease is the most common serious illness in older cats. IRIS staging, renal diets, fluid therapy, and prognosis explained.", path: '/health/kidney-disease-cats', type: 'article' })
 const SOURCES = [
-  { label: 'IRIS (International Renal Interest Society): CKD Staging and Substaging Guidelines', url: 'https://www.iris-kidney.com/guidelines/staging.html', publisher: 'IRIS' },
+  { label: 'Merck Veterinary Manual: Renal Dysfunction in Dogs and Cats', url: 'https://www.merckvetmanual.com/urinary-system/noninfectious-diseases-of-the-urinary-system-in-small-animals/renal-dysfunction-in-dogs-and-cats', publisher: 'Merck Vet Manual' },
+  { label: 'IRIS (International Renal Interest Society): CKD Staging and Substaging Guidelines', url: 'https://www.iris-kidney.com/iris-staging-system', publisher: 'IRIS' },
   { label: 'Sparkes AH et al. ISFM Consensus Guidelines on the Diagnosis and Management of Feline CKD. J Feline Med Surg. 2016;18(3):219-239.', publisher: 'J Feline Med Surg' },
-  { label: 'Merck Veterinary Manual: Chronic Kidney Disease in Cats', url: 'https://www.merckvetmanual.com/urinary-system/noninfectious-diseases-of-the-urinary-system-in-small-animals/chronic-kidney-disease-in-small-animals', publisher: 'Merck Vet Manual' },
   { label: 'Brown SA et al. Beneficial effects of chronic administration of dietary omega-3 polyunsaturated fatty acids in dogs with renal insufficiency. J Lab Clin Med. 1998;131(5):447-455.', publisher: 'J Lab Clin Med' },
-  { label: 'AVMA: Chronic Kidney Disease in Cats', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/kidney-disease-cats', publisher: 'AVMA' },
 ]
 const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Chronic Kidney Disease in Cats', description: 'IRIS staging, diet, fluid therapy, and prognosis for feline chronic kidney disease.', url: 'https://vets.co/health/kidney-disease-cats', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' ,
   citation: SOURCES,
@@ -54,6 +54,7 @@ export default function KidneyDiseaseCatsPage() {
         <div className="carloOS-article">
 
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-05T00:00:00Z" reviewedBy="Editorial team" />
+          <LastUpdated date="2026-10-09" />
 
           <CalloutBox variant="info" title="Early detection changes the outcome">
             The SDMA blood marker can detect kidney decline when as little as 25% of function is lost, far earlier than creatinine, which only rises after roughly 75% is lost. Annual or twice-yearly bloodwork in cats over 7 is the most effective tool for catching CKD while management is most effective.
@@ -62,7 +63,7 @@ export default function KidneyDiseaseCatsPage() {
           <DropCap>The kidneys filter waste, balance fluids and electrolytes, regulate blood pressure, and support red blood cell production. In chronic kidney disease, functional kidney tissue (nephrons) is gradually lost and replaced by scar tissue. The decline is irreversible and tends to progress over months to years. Because cats compensate well, they often show no signs until a large fraction of kidney function is already gone — which is why screening older cats is so valuable.</DropCap>
 
           <h2>Signs to Watch For</h2>
-          <p>Early CKD is quiet. The first changes owners notice are usually increased thirst and urination, as the failing kidneys can no longer concentrate urine. Larger or more frequent litter clumps and an emptier water bowl are common early clues. A high-sided jumbo cat litter box is how those larger clumps stay a seen clue instead of a tracked scatter on the floor — it is not an extra cat litter box (that lives on FLUTD) and it is not a covered top-entry box that hides the clump. Household bowls and boxes do not diagnose CKD and they do not replace SDMA or creatinine. As disease advances, cats lose weight and muscle, eat less, develop a dull coat, may vomit, and become lethargic. Bad breath with a chemical odor, mouth ulcers, and dehydration appear in later stages. Any older cat losing weight or drinking more should be tested promptly.</p>
+          <p>Early CKD is quiet. The first changes owners notice are usually increased thirst and urination, as the failing kidneys can no longer concentrate urine. Larger or more frequent litter clumps and an emptier water bowl are common early clues. A high-sided jumbo cat litter box is how those larger clumps stay a seen clue instead of a tracked scatter on the floor — it is not an extra cat litter box and it is not a covered top-entry box that hides the clump. Household bowls and boxes do not diagnose CKD and they do not replace SDMA or creatinine. As disease advances, cats lose weight and muscle, eat less, develop a dull coat, may vomit, and become lethargic. Bad breath with a chemical odor, mouth ulcers, and dehydration appear in later stages. Any older cat losing weight or drinking more should be tested promptly.</p>
 
           <h2>Staging With IRIS</h2>
           <p>Veterinarians stage CKD using the International Renal Interest Society (IRIS) system, based primarily on blood creatinine and SDMA, then substaged by urine protein and blood pressure. Staging guides treatment and prognosis: a stage 2 cat may need only a renal diet and monitoring, while a stage 4 cat needs intensive support. Staging is repeated over time to track progression and adjust care.</p>
@@ -74,10 +75,10 @@ export default function KidneyDiseaseCatsPage() {
           />
 
           <h2>Managing the Disease</h2>
-          <p>Management targets the consequences of kidney failure rather than reversing it. The core elements are a therapeutic renal diet (restricted phosphorus, controlled protein), aggressive hydration through encouraging water intake and often subcutaneous fluids, and control of phosphorus with binders when diet alone is insufficient. High blood pressure and urinary protein loss are treated with veterinarian-prescribed medications, with the specific drug and dose determined by your vet. Anemia, nausea, and potassium imbalances are addressed as they arise. Fluid bags, needles, syringes, and phosphate binders are clinic prescriptions, not shoppable hops. The water bowl, warming plate, and litter box are household consistency tools. They do not replace the veterinarian who stages the cat and chooses the fluids.</p>
+          <p>Management targets the consequences of kidney failure rather than reversing it. The core elements are a therapeutic renal diet (restricted phosphorus, controlled protein), aggressive hydration through encouraging water intake and often subcutaneous fluids, and control of phosphorus with binders when diet alone is insufficient. High blood pressure and urinary protein loss are treated with veterinarian-prescribed medications, with the specific drug and dose determined by your vet. Anemia, nausea, and potassium imbalances are addressed as they arise. Fluid bags, needles, syringes, and phosphate binders are clinic prescriptions, not product links. The water bowl, warming plate, and litter box are household consistency tools. They do not replace the veterinarian who stages the cat and chooses the fluids.</p>
 
           <h2>Diet Is Central</h2>
-          <p>Phosphorus control through diet is one of the best-supported interventions in feline CKD and is linked to longer survival. Renal diets also reduce the protein waste the kidneys must clear and counter the acidosis that makes cats feel ill. Because appetite is fragile in CKD cats, getting them to eat the renal diet — through gradual transition, warming food, and offering different forms — is a practical priority worth real effort. It does not set a phosphorus target and it is not a Hill&apos;s k/d or Royal Canin Renal hop.</p>
+          <p>Phosphorus control through diet is one of the best-supported interventions in feline CKD and is linked to longer survival. Renal diets also reduce the protein waste the kidneys must clear and counter the acidosis that makes cats feel ill. Because appetite is fragile in CKD cats, getting them to eat the renal diet — through gradual transition, warming food, and offering different forms — is a practical priority worth real effort. It does not set a phosphorus target. Hill&apos;s k/d and Royal Canin Renal stay educational copy only.</p>
 
           <CalloutBox variant="evidence" title="ISFM consensus: phosphorus restriction and survival">
             The International Society of Feline Medicine consensus guidelines cite dietary phosphorus restriction as one of the interventions with the most consistent evidence for slowing CKD progression and improving survival in cats with stage 2 and 3 disease. Phosphate binders are recommended when dietary restriction alone fails to achieve target serum phosphorus levels.
@@ -86,32 +87,13 @@ export default function KidneyDiseaseCatsPage() {
           <h2>Quality of Life and Prognosis</h2>
           <p>CKD is a marathon, not a sprint. Many cats diagnosed early live comfortably for years with diet and hydration support, with periodic rechecks to adjust treatment. The focus throughout is quality of life: a cat that is eating, hydrated, comfortable, and engaged is doing well regardless of bloodwork numbers. Honest, ongoing conversations with your veterinary team about how your cat is actually doing day to day guide both treatment intensity and, eventually, end-of-life decisions. The water bowl, warming plate, and litter box do not replace those conversations.</p>
 
-          <h2 id="kit">Home-care kit</h2>
+          <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Everyday physical supplies that match the
-            water-bowl, warming-food, and litter-clump
-            copy on this page — a wide-rim stainless
-            cat water bowl so an emptier bowl is a
-            seen refill, an electric pet-food warming
-            plate so the renal diet is warmed food the
-            cat will actually try, and a high-sided
-            jumbo cat litter box so larger or more
-            frequent clumps stay a seen early clue. These are educational home-care and
-            monitoring tools, not a ranked product
-            list, not a substitute for veterinary
-            care, and not a treatment for CKD. Hill&apos;s k/d, Royal Canin Renal,
-            phosphate binders, SQ fluid bags, needles,
-            and syringes are not shoppable hops. Insulated pet water bowls and airtight
-            locking pet-food bins already live on
-            diabetes. Heated pet mats already live on
-            senior-pet-care. Ceramic pet water bowls
-            and dog water fountains already live on
-            dog.com kidney-disease. This page does
-            not claim hands-on testing. </p>
+            Keep these on hand: a wide-rim stainless cat water bowl so an emptier bowl is a seen refill, an electric pet-food warming plate so the renal diet is warmed food the cat will actually try, and a high-sided jumbo cat litter box so larger or more frequent clumps stay a seen early clue. These are educational home-care and monitoring tools, not a ranked product list, not a substitute for veterinary care, and not a treatment for CKD. Hill&apos;s k/d, Royal Canin Renal, phosphate binders, SQ fluid bags, needles, and syringes are not product links. </p>
 
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/wide+rim+stainless+cat+water+bowl?s=health-kidney-disease-cats", "/go/amazon-brand/electric+pet+food+warming+plate?s=health-kidney-disease-cats", "/go/amazon-brand/high+sided+jumbo+cat+litter+box?s=health-kidney-disease-cats"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (wide-rim stainless cat water bowl /
               electric pet-food warming plate /
               high-sided jumbo cat litter box).
@@ -120,9 +102,9 @@ export default function KidneyDiseaseCatsPage() {
               ranked product list, not a substitute
               for veterinary care, no Rx / Hill's k/d /
               Royal Canin Renal / phosphate-binder /
-              SQ-fluid / needle / syringe ASIN hops.
+              SQ-fluid / needle / syringe product page buttons.
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or an empty link. Amazon searches only —
               unused vs #1085
               digital+pet+glucose+log+notebook /
               insulated+pet+water+bowl /
@@ -152,7 +134,7 @@ export default function KidneyDiseaseCatsPage() {
               Hill's k/d, Royal Canin Renal,
               phosphate binders, SQ fluid bags,
               needles, and syringes are not
-              shoppable hops. */}
+              shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

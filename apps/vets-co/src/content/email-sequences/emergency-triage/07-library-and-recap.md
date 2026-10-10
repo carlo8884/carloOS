@@ -64,7 +64,7 @@ If the triage card or this series saved you a single unnecessary ER visit — or
 
 A few of the links in this series — particularly to insurance comparisons and some first-aid supplies referenced elsewhere on the site — are affiliate-aware, which means we may earn a small commission at no cost to you. That funds the writing and the editorial process. We disclose this on every page that contains affiliate links, per the [FTC affiliate disclosure](https://vets.co/legal/affiliate-disclosure).
 
-We don't recommend products we wouldn't put in our own pet's first-aid kit, and we explicitly call out when a product we'd benefit from recommending isn't worth it. The triage card itself contains no affiliate content. The series body is informational. The few affiliate touchpoints exist so that this remains free.
+We don't recommend a product just because a commission is available, and we explicitly call out when a product we'd benefit from recommending isn't worth it. The triage card itself contains no affiliate content. The series body is informational. The few affiliate touchpoints exist so that this remains free.
 
 ## The closing thought
 

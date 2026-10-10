@@ -1,11 +1,12 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, AffiliateDisclosure, ArticleSourcesList, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, ArticleSourcesList, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
 const SOURCES = [
-  { label: "Monogenean Flukes (Gyrodactylus, Dactylogyrus) — Merck Veterinary Manual", url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/aquarium-fish/monogenean-flukes-in-fish", publisher: "Merck Vet Manual" },
+  { label: "Monogenean Flukes (Gyrodactylus, Dactylogyrus) — Merck Veterinary Manual", url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/aquarium-fish/parasitic-diseases-of-fish", publisher: "Merck Vet Manual" },
   { label: "Shinn, A.P. et al. Fish parasites — pathobiology and protection. CABI, 2012.", publisher: "CABI" },
   { label: "Noga, E.J. Fish Disease: Diagnosis and Treatment, 2nd ed. Wiley-Blackwell, 2010.", publisher: "Wiley-Blackwell" },
   { label: "Yanong, R.P.E. Use of Chemicals in Aquaculture in the United States — UF/IFAS Extension FA-54.", url: "https://edis.ifas.ufl.edu/publication/FA054", publisher: "UF/IFAS Extension" },
@@ -64,13 +65,13 @@ export default function FlukesPage() {
         <h2>Distinguishing From Other Conditions</h2>
         <p>If fish are flashing and showing respiratory signs in an established, previously healthy tank: test water quality first (ammonia, nitrite, nitrate, pH). Water quality issues are more common than parasites and should be ruled out before medicating. If water quality is normal: consider velvet (use flashlight check) and flukes (no reliable visual identification without microscopy — treat based on clinical presentation and ruling out other causes). A combined treatment addressing both gill/body flukes (praziquantel) and external protozoa (copper or salt) in a hospital tank is appropriate when the cause is unclear and the fish's condition is declining.</p>
 
-        {/* Money path — live amazon-brand search hops (quarantine / water-first kit).
-            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-            Category searches only — not a ranked list. No medication hops. */}
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        {/* Shop note — live amazon-brand search buttons (quarantine / water-first kit).
+            ShopCtas hides empty Chewy; never href="#" or an empty link.
+            Amazon searches only — not a ranked list. No medication buttons. */}
+        <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/api+freshwater+master+test+kit?s=health-gill-flukes", "/go/amazon-brand/aquarium+quarantine+hospital+tank+net?s=health-gill-flukes", "/go/amazon-brand/aquarium+sponge+filter?s=health-gill-flukes"]} />
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
-            Shop a quarantine / water-first kit
+            Shop these supplies
           </div>
           <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Prevention on this page is prophylactic treatment during
             quarantine of every new fish — flukes are microscopic and often
@@ -79,8 +80,8 @@ export default function FlukesPage() {
             see ammonia, nitrite, and nitrate before you medicate. A spare
             quarantine / hospital tank is how you run that watch and the
             combined hospital-tank protocol without dropping the display. A
-            seeded sponge filter keeps that holding water moving. Same
-            test-kit hop used on the{' '}
+            seeded sponge filter keeps that holding water moving. The same
+            test-kit button is on the{' '}
             <Link
               href="/health/fish-disease-guide"
               className="text-brand-primary no-underline hover:underline"
@@ -94,7 +95,7 @@ export default function FlukesPage() {
             >
               water-test kit review
             </Link>
-            . Same hospital-tank hop used on the{' '}
+            . The same hospital-tank button is on the{' '}
             <Link
               href="/tools/fish-disease-symptom-checker"
               className="text-brand-primary no-underline hover:underline"
@@ -105,18 +106,17 @@ export default function FlukesPage() {
             <Link href="/health/fish-lice-anchor-worm" className="text-brand-primary no-underline hover:underline">
               fish lice &amp; anchor worm guide
             </Link>
-            . Same sponge-filter hop used on the{' '}
+            . The same sponge-filter button is on the{' '}
             <Link
               href="/tools/aquarium-cycling-estimator"
               className="text-brand-primary no-underline hover:underline"
             >
               cycling estimator
             </Link>
-            . Heater and thermometer hops stay off this page — gill-flukes
-            copy has no heat method. The hops below are not a ranked product
+            . Heater and thermometer buttons stay off this page — gill-flukes
+            copy has no heat method. The buttons below are not a ranked product
             list, they are not medications, and they do not treat, reverse,
-            or cure Gyrodactylus or Dactylogyrus. Fish.com earns a
-            commission on qualifying purchases at no extra cost to you.</p>
+            or cure Gyrodactylus or Dactylogyrus.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/api+freshwater+master+test+kit?s=health-gill-flukes"

@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -92,6 +93,8 @@ export default function BodyClippingPage() {
               { label: "Blanketing Guide", href: "/care/blanketing" },
               { label: "Winter Care", href: "/care/winter-care" },
               { label: "Grooming the Horse", href: "/care/grooming" },
+              { label: "Best blanket for a clipped horse", href: "/reviews/best-blanket-for-clipped-horse-guide" },
+              { label: "Blanket size calculator", href: "/tools/horse-blanket-size-calculator" },
               { label: "Blanket Weights Explained", href: "/tack/blanket-weights" },
             ]}
           />
@@ -126,18 +129,18 @@ export default function BodyClippingPage() {
           <p>Clipping is done on a clean, dry horse with well-maintained, sharp, properly tensioned clippers and clean blades, working against the direction of hair growth in long overlapping strokes. The blades and motor get hot, so they need regular oiling, cooling, and cleaning to clip well and avoid burning the horse. A calm horse, good lighting, and patience matter; nervous or unhandled horses may need professional clipping or, on veterinary advice, sedation. Take care around ticklish and bony areas.</p>
 
           <h2 id="aftercare">Aftercare</h2>
-          <p>A clipped horse has lost its insulation and must be rugged appropriately for the weather and the extent of the clip, with weights adjusted as conditions change -- see the blanketing and blanket-weights guides. Clipped horses also benefit from extra warmth after washing and from coolers that wick moisture. Watch for the horse being too cold (shivering, tucked up) or too hot under rugs, and groom regularly, since clipping exposes the skin and a clipped coat shows dirt and rubs more readily.</p>
+          <p>A clipped horse has lost its insulation and must be rugged appropriately for the weather and the extent of the clip, with weights adjusted as conditions change -- see the blanketing and blanket-weights guides. The <a href="/reviews/best-blanket-for-clipped-horse-guide">clipped-horse blanket guide</a> names the heavy-winter turnout from the blanket review, and when that rug is too much for a milder climate. Measure chest to buttock with the <a href="/tools/horse-blanket-size-calculator">blanket size calculator</a> before ordering. Clipped horses also benefit from extra warmth after washing and from coolers that wick moisture. Watch for the horse being too cold (shivering, tucked up) or too hot under rugs, and groom regularly, since clipping exposes the skin and a clipped coat shows dirt and rubs more readily.</p>
 
           <h2 id="kit">Clipping Kit</h2>
-          <p>Everyday physical supplies that match the technique and aftercare copy above — well-maintained, sharp, properly tensioned clippers, clean blades, clipper oil for regular oiling and cooling, and coolers that wick moisture after a wash. Rugs and blanket weights stay on the blanketing guide; veterinary sedation for a nervous horse stays with a veterinarian. These are not a treatment for PPID, overheating, or a skin condition. This page does not claim hands-on testing.</p>
+          <p>Keep these on hand: well-maintained, sharp, properly tensioned clippers, clean blades, clipper oil for regular oiling and cooling, and coolers that wick moisture after a wash. Rugs and blanket weights stay on the blanketing guide; veterinary sedation for a nervous horse stays with a veterinarian. These are not a treatment for PPID, overheating, or a skin condition.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/horse+clippers?s=care-body-clipping", "/go/amazon-brand/horse+clipper+blades?s=care-body-clipping", "/go/amazon-brand/horse+clipper+oil?s=care-body-clipping", "/go/amazon-brand/horse+fleece+cooler?s=care-body-clipping"]} />
 
-          {/* Money path — live amazon-brand search hops (clipping kit).
-              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-              Category searches only — everyday physical supplies matching
+          {/* Shop note — live amazon-brand search buttons (clipping kit).
+              ShopCtas hides empty Chewy; never href="#" or an empty link.
+              Amazon searches only — everyday physical supplies matching
               on-page clipper / blade / oil / cooler copy, not rugs
-              (blanketing page), medication, or sedation hops. */}
+              (blanketing page), medication, or sedation buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

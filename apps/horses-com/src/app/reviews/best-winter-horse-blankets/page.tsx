@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import Link from 'next/link'
-import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, CrossPortfolioCard, RelatedLinks, ScoreMethodology, AffiliateDisclosure, FAQAccordion, PriceAsOf} from '@carloOS/ui'
+import { TableShopLink, RelatedReads, ComparisonFoot, EmailCapture, buildMetadata, ReviewCard, QuickPicks, CrossPortfolioCard, RelatedLinks, FAQAccordion, PriceAsOf, LastUpdated, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, buildBreadcrumbSchema, SchemaScript, buildItemListSchema} from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -24,16 +25,16 @@ const articleSchema = buildArticleSchema({
   modifiedAt: '2026-05-28T00:00:00Z',
 })
 
-const ramboSchema = buildProductSchema({ name: 'Horseware Rambo Original Turnout', description: '1000-denier ballistic nylon waterproof turnout blanket.', url: 'https://www.smartpakequine.com', imageUrl: '', ratingValue: 9.4, reviewCount: 1 })
-const rhinoSchema = buildProductSchema({ name: 'Horseware Rhino Original Turnout', description: 'Waterproof and breathable turnout blanket with shoulder gussets.', url: 'https://www.smartpakequine.com', imageUrl: '', ratingValue: 9.0, reviewCount: 1 })
-const schneidersSchema = buildProductSchema({ name: 'Schneiders StormShield Euro Turnout', description: 'Heavyweight ballistic turnout blanket built for harsh winters.', url: 'https://www.sstack.com', imageUrl: '', ratingValue: 9.2, reviewCount: 1 })
-const smartpakSchema = buildProductSchema({ name: 'SmartPak Ultimate Turnout', description: 'House-brand waterproof turnout blanket with shoulder gussets.', url: 'https://www.smartpakequine.com', imageUrl: '', ratingValue: 8.7, reviewCount: 1 })
-const weatherbeetaSchema = buildProductSchema({ name: 'Weatherbeeta ComFiTec Plus Dynamic II', description: 'Mid-tier waterproof turnout with memory foam wither relief.', url: 'https://www.doversaddlery.com', imageUrl: '', ratingValue: 8.6, reviewCount: 1 })
-const amigoSchema = buildProductSchema({ name: 'Horseware Amigo Bravo 12 Plus', description: 'Value-tier ballistic turnout from Horseware&apos;s Amigo line.', url: 'https://www.doversaddlery.com', imageUrl: '', ratingValue: 8.5, reviewCount: 1 })
+const ramboSchema = buildProductSchema({ name: 'Horseware Rambo Original Turnout', description: '1000-denier ballistic nylon waterproof turnout blanket.', url: 'https://horses.com/go/smartpak/rambo-original-turnout?s=reviews-best-winter-horse-blankets', imageUrl: '' })
+const rhinoSchema = buildProductSchema({ name: 'Horseware Rhino Plus', description: 'Current Horseware mid-tier filled turnout. The same Dover search still lists a Rhino Original sheet.', url: 'https://horses.com/go/dover/rhino-original-turnout?s=reviews-best-winter-horse-blankets', imageUrl: '' })
+const schneidersSchema = buildProductSchema({ name: 'Schneiders StormShield Euro Turnout', description: 'Heavyweight ballistic turnout blanket built for harsh winters.', url: 'https://horses.com/go/schneider/stormshield-euro-turnout?s=reviews-best-winter-horse-blankets', imageUrl: '' })
+const smartpakSchema = buildProductSchema({ name: 'SmartPak Ultimate Turnout', description: 'Redesigned house-brand turnout. The current SmartPak listing describes a 1680D outer.', url: 'https://horses.com/go/smartpak/ultimate-turnout?s=reviews-best-winter-horse-blankets', imageUrl: '' })
+const weatherbeetaSchema = buildProductSchema({ name: 'Weatherbeeta ComFiTec Plus Dynamic II', description: 'Mid-tier waterproof turnout with memory foam wither relief.', url: 'https://horses.com/go/dover/weatherbeeta-comfitec-plus-dynamic?s=reviews-best-winter-horse-blankets', imageUrl: '' })
+const amigoSchema = buildProductSchema({ name: 'Horseware Amigo Bravo 12 Plus', description: "Value-tier ballistic turnout from Horseware's Amigo line.", url: 'https://horses.com/go/ridingwarehouse/amigo-bravo-12-plus?s=reviews-best-winter-horse-blankets', imageUrl: '' })
 const allSchemas = combineSchemas(articleSchema, ramboSchema, rhinoSchema, schneidersSchema, smartpakSchema, weatherbeetaSchema, amigoSchema)
 
 const PICKS = [
-  { label: 'Best Premium Turnout', emoji: '🏆', name: 'Horseware Rambo Original', subtitle: '1000-denier ballistic · Leg-arch design · Built to last seasons', href: '#rambo' },
+  { label: 'Best Premium Turnout', emoji: '🏆', name: 'Horseware Rambo Original', subtitle: '1000-denier ballistic · Leg-arch design · Built to last seasons', href: '#rambo', pickHop: '/go/smartpak/rambo-original-turnout?s=reviews-best-winter-horse-blankets' },
   { label: 'Best Heavy Winter', emoji: '❄', name: 'Schneiders StormShield Euro', subtitle: '1680-denier · Heavyweight fill · Harsh-winter specification', href: '#schneiders' },
   { label: 'Best Value', emoji: '◎', name: 'Amigo Bravo 12 Plus', subtitle: '1000-denier ballistic · Horseware build at value tier', href: '#amigo' },
   { label: 'Best Mid-Tier', emoji: '⭐', name: 'Weatherbeeta ComFiTec Plus', subtitle: 'Memory-foam wither · 1200-denier · Strong mid-price option', href: '#weatherbeeta' },
@@ -41,16 +42,16 @@ const PICKS = [
 
 const SPEC_TABLE = [
   { brand: 'Rambo Original', shopHref: '/go/smartpak/rambo-original-turnout?s=reviews-best-winter-horse-blankets', denier: '1000D ballistic', fill: '0/100/200/400 g', neck: 'High neck + leg arch', hardware: 'Stainless surcingle, T-bar' },
-  { brand: 'Rhino Original', shopHref: '/go/dover/rhino-original-turnout?s=reviews-best-winter-horse-blankets', denier: '1200D ripstop', fill: '0/100/250 g', neck: 'Standard or V-front', hardware: 'Polymer surcingle, T-bar' },
+  { brand: 'Rhino Plus', shopHref: '/go/dover/rhino-original-turnout?s=reviews-best-winter-horse-blankets', denier: '1000D polypropylene', fill: 'Medium Vari-Layer and heavy 450 g', neck: 'V-front', hardware: 'Confirm on the listing' },
   { brand: 'StormShield Euro', shopHref: '/go/schneider/stormshield-euro-turnout?s=reviews-best-winter-horse-blankets', denier: '1680D ballistic', fill: '300/360 g', neck: 'Full neck, deep gussets', hardware: 'Stainless, double surcingle' },
-  { brand: 'SmartPak Ultimate', shopHref: '/go/smartpak/ultimate-turnout?s=reviews-best-winter-horse-blankets', denier: '1200D ripstop', fill: '180/220/360 g', neck: 'Standard, shoulder gussets', hardware: 'Polymer surcingle' },
+  { brand: 'SmartPak Ultimate', shopHref: '/go/smartpak/ultimate-turnout?s=reviews-best-winter-horse-blankets', denier: '1680D', fill: 'Standard, high neck, and combo neck', neck: 'Standard, high neck, combo neck', hardware: 'Quick-clip front' },
   { brand: 'Weatherbeeta ComFiTec', shopHref: '/go/dover/weatherbeeta-comfitec-plus-dynamic?s=reviews-best-winter-horse-blankets', denier: '1200D ripstop', fill: '0/100/220/360 g', neck: 'Memory-foam wither', hardware: 'Polymer surcingle, snap front' },
   { brand: 'Amigo Bravo 12 Plus', shopHref: '/go/ridingwarehouse/amigo-bravo-12-plus?s=reviews-best-winter-horse-blankets', denier: '1000D ballistic', fill: '0/100/250 g', neck: 'Standard', hardware: 'Polymer surcingle, T-bar' },
 ]
 
 const itemList = buildItemListSchema({
   name: "Best Winter Horse Blankets 2026",
-  items: PICKS.map((pick) => ({ name: pick.name, url: `https://horses.com/reviews/best-winter-horse-blankets${pick.href}` })),
+  items: PICKS.map((pick) => ({ name: pick.name, url: ({ "Horseware Rambo Original": "https://horses.com/go/smartpak/rambo-original-turnout?s=reviews-best-winter-horse-blankets", "Schneiders StormShield Euro": "https://horses.com/go/schneider/stormshield-euro-turnout?s=reviews-best-winter-horse-blankets", "Amigo Bravo 12 Plus": "https://horses.com/go/ridingwarehouse/amigo-bravo-12-plus?s=reviews-best-winter-horse-blankets", "Weatherbeeta ComFiTec Plus": "https://horses.com/go/dover/weatherbeeta-comfitec-plus-dynamic?s=reviews-best-winter-horse-blankets" }[pick.name] ?? `https://horses.com/reviews/best-winter-horse-blankets${pick.href}`) })),
 })
 export default function BestWinterBlanketsPage() {
   return (
@@ -61,14 +62,38 @@ export default function BestWinterBlanketsPage() {
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-4 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>
           Best Winter Horse Blankets 2026
         </h1>
-        <PriceAsOf date="2026-10-03" tone="dark" />
-        <PrimaryHop href='/go/smartpak/rambo-original-turnout?s=reviews-best-winter-horse-blankets' label='Check price of the Horseware Rambo Original on SmartPak' />
+        <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">The Horseware Rambo Original is the top turnout because the 1000-denier ballistic shell is the blanket owners keep for seasons.</p>
+        <PriceAsOf date="2026-10-07" tone="dark" />
+        <LastUpdated date="2026-10-10" tone="dark" />
+        <div data-fold="offer">
+          <HopDisclosure siteId="horses-com" href="/go/amazon/B09JWTFTGY?s=reviews-best-winter-horse-blankets" tone="on-dark" />
+        <div className="mb-4" data-primary-hop="true">
+          <a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" data-shop-placement="hero" href="/go/amazon/B09JWTFTGY?s=reviews-best-winter-horse-blankets">Check price of the Horseware Rambo Original on Amazon →</a>
+        </div>
+        </div>
+        <EmailCapture
+          variant="inline"
+          siteId="horses-com"
+          addressOnly
+          title="Shopping checklist"
+          ctaText="Copy checklist"
+          source="reviews-best-winter-horse-blankets"
+          checklist={[
+            "Schneiders StormShield Euro is the harsh-winter card.",
+            "The card calls it a heavyweight ballistic blanket.",
+            "Horseware Rambo Original is the premium multi-season turnout.",
+            "Horseware Amigo Bravo 12 Plus is the value card.",
+            "The page describes it as a 1000-denier Horseware blanket at a lower price than the Rambo Original.",
+            "Turnout, stable, and liner-system blankets ranked by denier, fill weight, neck shape, and hardware durability.",
+          ]}
+        />
+
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">
           Turnout, stable, and liner-system blankets ranked by denier, fill weight, neck shape, and hardware durability. The category-defining brands compared against the value-tier alternatives that actually compete with them.
         </p>
       </div>
 
-      <QuickPicks items={PICKS} />
+      <QuickPicks items={PICKS} quietUntilTag />
 
       <nav aria-label="Breadcrumb" className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2 flex-wrap">
         <Link href="/" className="hover:text-brand-primary no-underline">Home</Link><span>›</span>
@@ -85,9 +110,6 @@ export default function BestWinterBlanketsPage() {
                 A healthy adult horse with a full winter coat, dry shelter, and adequate forage tolerates temperatures down to approximately −15&deg;C (5&deg;F) without supplemental warmth (Cymbaluk NF &amp; Christison GI, <em>Canadian Veterinary Journal</em>, 1989). Blanketing decisions should be driven by clipped horses, body-condition-compromised horses, elderly horses, horses in wet-and-windy weather without shelter, and horses transitioning between climates. Blanketing a horse that does not need a blanket reduces natural thermoregulation, can suppress winter coat growth, and creates rub-and-shoulder-restriction issues that are easily avoided. See the AAEP &ldquo;To Blanket or Not to Blanket&rdquo; client guidance for the framework.
               </p>
             </div>
-
-            <ScoreMethodology />
-            <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
             <h2>The Blanket Categories</h2>
 
@@ -113,12 +135,13 @@ export default function BestWinterBlanketsPage() {
             <ul>
               <li><strong>600D:</strong> light-duty, value-tier, expect 1–2 seasons in active pasture turnout.</li>
               <li><strong>1000D ballistic nylon:</strong> the durability sweet spot. Horseware&apos;s 1000D Rambo shells regularly last 5–8 seasons of pasture turnout.</li>
-              <li><strong>1200D ripstop:</strong> the common mid-tier specification (Rhino, Weatherbeeta ComFiTec, SmartPak Ultimate). Ripstop weave provides good tear resistance at slightly lower abrasion resistance than ballistic.</li>
-              <li><strong>1680D ballistic:</strong> heavy-duty (Schneiders StormShield, Horseware Rambo Supreme). Built for the most punishing turnout situations.</li>
+              <li><strong>1000D polypropylene:</strong> Horseware Rhino Plus, the filled blanket this Dover search lists now. It is a different shell from the 1000D ballistic Rambo.</li>
+              <li><strong>1200D ripstop:</strong> the Weatherbeeta ComFiTec mid-tier specification. Ripstop weave provides good tear resistance at slightly lower abrasion resistance than ballistic.</li>
+              <li><strong>1680D:</strong> heavy-duty StormShield turnouts, and the current SmartPak Ultimate listing, which describes a 1680D outer. Built for harder turnout than a 1200D ripstop shell.</li>
             </ul>
 
             <h3>Fill weight</h3>
-            <p>Insulation is graded by grams per square meter of fill material — usually a polyester batting. The standard system: 0 g (sheet), 100 g (light), 200–220 g (medium), 300–400+ g (heavy). Fill weight is not a temperature rating in itself — what matters is fill weight plus horse&apos;s coat condition (full, body-clipped, trace-clipped) plus shelter availability plus the individual horse&apos;s thermoregulation. The most reliable real-world guide: medium-weight (200 g) is the right answer for most clipped horses in most US climates between approximately −5 and +10&deg;C.</p>
+            <p>Insulation is graded by grams per square meter of fill material — usually a polyester batting. The standard system: 0 g (sheet), 100 g (light), 200–220 g (medium), 300–400+ g (heavy). Fill weight is not a temperature rating in itself — what matters is fill weight plus horse&apos;s coat condition (full, body-clipped, trace-clipped) plus shelter availability plus the individual horse&apos;s thermoregulation. The most reliable real-world guide: medium-weight (200 g) is the right answer for most clipped horses in most US climates between approximately −5 and +10&deg;C. Gram fill for that range is walked through in the <a href="/tack/blanket-weights" className="text-brand-primary underline">blanket-weights guide</a>.</p>
 
             <h3>Neck shape</h3>
             <p>Three common neck designs, each suiting different horse conformations:</p>
@@ -146,7 +169,7 @@ export default function BestWinterBlanketsPage() {
                 <tbody>
                   {SPEC_TABLE.map(row => (
                     <tr key={row.brand} className="border-b border-brand-border">
-                      <td className="p-3 font-bold text-brand-dark">{row.brand}<TableShopLink href={row.shopHref} product={row.brand} /></td>
+                      <td className="p-3 font-bold text-brand-dark">{row.brand}<TableShopLink href={row.shopHref} quietUntilTag product={row.brand} /></td>
                       <td className="p-3 text-brand-text-mid">{row.denier}</td>
                       <td className="p-3 text-brand-text-mid">{row.fill}</td>
                       <td className="p-3 text-brand-text-mid">{row.neck}</td>
@@ -159,12 +182,11 @@ export default function BestWinterBlanketsPage() {
 
             <h2>Reviewed Blankets</h2>
 
-            <ReviewCard
+            <ReviewCard quietUntilTag
               id="rambo"
               badge="Best Premium Turnout"
               name="Horseware Rambo Original Turnout"
               subtitle="1000-denier ballistic · Leg-arch shoulder · Premium build standard"
-              score={9.4}
               winner
               description={<>
                 <p>The Rambo Original is the established premium reference in the category. Horseware (Ireland) introduced the design that defined the modern turnout blanket — the V-front leg-arch shoulder gusset that allows free movement without producing the shoulder rub that wrecks lesser blankets. The 1000-denier ballistic nylon shell is among the most durable in the standard mid-weight market; multi-season use in active pasture turnout is commonly reported, with many owners reporting Rambo Originals still in service after 7+ winters.</p>
@@ -180,44 +202,44 @@ export default function BestWinterBlanketsPage() {
               pros={['Multi-season durability (5–8 years typical)', 'V-front cut reduces shoulder rub', 'Stainless hardware tolerates ice and cold', 'Lifetime tear-repair program', 'Resells well used']}
               cons={['Premium price tier', 'Less generous shoulder room than some competitors for very wide horses', 'Color/pattern range smaller than Rhino']}
               price="$280–420"
+              priceNote="dated 2026-10-03."
               ctaText="Check price of the Horseware Rambo Original on SmartPak"
               ctaHref="/go/smartpak/rambo-original-turnout?s=reviews-best-winter-horse-blankets"
               ctaAffiliateProgram="smartpak"
               ctaAffiliateProduct="rambo-original-turnout"
             />
 
-            <ReviewCard
+            <ReviewCard quietUntilTag
               id="rhino"
               badge="Best Modern Standard"
-              name="Horseware Rhino Original Turnout"
-              subtitle="1200-denier ripstop · Modern Horseware design · Strong mainstream choice"
-              score={9.0}
+              name="Horseware Rhino Plus"
+              subtitle="1000D polypropylene · Current filled Rhino · Same Dover search"
               description={<>
-                <p>The Rhino Original is Horseware&apos;s mid-tier turnout — the same brand engineering as the Rambo Original at a lower price point, using a 1200D ripstop shell instead of the 1000D ballistic. Ripstop is genuinely strong (the perpendicular ripstop weave resists tear propagation), and in practice Rhino blankets last 3–5 seasons in active turnout. The neck cut is the modern Horseware standard with optional V-front; the hardware is polymer rather than stainless on most models.</p>
-                <p>For most owners replacing a worn-out value-tier blanket, the Rhino sits at the cost-quality sweet spot — meaningfully better than the budget brands, meaningfully cheaper than the Rambo.</p>
+                <p>Horseware&apos;s current filled turnouts in this Dover search are Rhino Plus blankets. The same search still lists a Rhino Original turnout sheet. Rhino Plus uses a 1000D polypropylene outer over a waterproof barrier layer, not the older 1200D ripstop shell.</p>
+                <p>Horseware lists a 3-year waterproofness guarantee on Rhino Plus when the blanket is registered. The Rhino Plus neck cut is a V-front. Confirm hardware on the listing before you order.</p>
               </>}
               specs={[
-                { label: 'Shell denier', value: '1200D ripstop' },
-                { label: 'Fill options', value: '0 g / 100 g / 250 g' },
-                { label: 'Neck cut', value: 'Standard, V-front available' },
-                { label: 'Hardware', value: 'Polymer surcingle, T-bar buckles' },
-                { label: 'Warranty', value: '1-year manufacturer' },
+                { label: 'Shell denier', value: '1000D polypropylene' },
+                { label: 'Fill options', value: 'Medium Vari-Layer and heavy 450 g' },
+                { label: 'Neck cut', value: 'V-front' },
+                { label: 'Hardware', value: 'Confirm on the listing' },
+                { label: 'Warranty', value: '3-year waterproofness guarantee when registered' },
               ]}
-              pros={['Strong durability for the price', 'Wide size range', 'Established brand reputation', 'Resells well used']}
-              cons={['Polymer hardware less durable than Rambo stainless', 'Shorter warranty than premium tier', 'Some shoulder rub on heavily-built horses']}
+              pros={['Current filled Rhino in this Dover search', '1000D polypropylene outer', 'V-front neck', 'Waterproofness guarantee when registered']}
+              cons={['Rhino Original in this search is a sheet, not this filled blanket', 'Confirm hardware on the listing', 'Shoulder fit still has to be checked on the horse']}
               price="$180–260"
-              ctaText="Shop at Dover Saddlery →"
+              priceNote="dated 2026-10-03."
+              ctaText="Shop Horseware Rhino turnouts at Dover Saddlery →"
               ctaHref="/go/dover/rhino-original-turnout?s=reviews-best-winter-horse-blankets"
               ctaAffiliateProgram="dover"
               ctaAffiliateProduct="rhino-original-turnout"
             />
 
-            <ReviewCard
+            <ReviewCard quietUntilTag
               id="schneiders"
               badge="Best Heavy Winter"
               name="Schneiders StormShield Euro Turnout"
               subtitle="1680-denier ballistic · 300+ g heavy fill · Harsh-winter specification"
-              score={9.2}
               description={<>
                 <p>Schneiders (Ohio, US) built its reputation on heavyweight winter blankets for the Midwest and Northeast climates that demand more than the standard mid-weight specification. The StormShield Euro turnout uses a 1680D ballistic shell — heavier than the Rambo Original — and a deep, full-neck cut with extended gussets. Available with very heavy fills (300 g, 360 g, and beyond) appropriate for the most clipped horses in sub-zero conditions.</p>
                 <p>For mid-Atlantic and Southern US riders, this much blanket is genuine overkill — the lighter Horseware and Weatherbeeta options handle the climate. For New England, Upper Midwest, Mountain West, and Canadian riders managing clipped competition horses in winter, the StormShield specification matches the climate.</p>
@@ -232,44 +254,44 @@ export default function BestWinterBlanketsPage() {
               pros={['Heaviest mainstream specification available', 'Built for sub-zero sustained cold', 'Full neck cut reduces draft', 'Double belly surcingle stays in place', 'Reputable US-based brand']}
               cons={['Overkill for milder climates', 'Heavy to handle wet', 'Higher price tier']}
               price="$300–460"
-              ctaText="Shop at Schneiders →"
+              priceNote="dated 2026-10-03."
+              ctaText="Shop the Schneiders StormShield Euro at Schneiders →"
               ctaHref="/go/schneider/stormshield-euro-turnout?s=reviews-best-winter-horse-blankets"
               ctaAffiliateProgram="schneider"
               ctaAffiliateProduct="stormshield-euro-turnout"
             />
 
-            <ReviewCard
+            <ReviewCard quietUntilTag
               id="smartpak"
               badge="Best House Brand"
               name="SmartPak Ultimate Turnout"
-              subtitle="1200-denier ripstop · Shoulder gussets · SmartPak quality at house-brand pricing"
-              score={8.7}
+              subtitle="1680D outer · Redesigned line · Standard, high neck, and combo neck"
               description={<>
-                <p>SmartPak&apos;s house-brand Ultimate Turnout has matured over multiple generations into a credible competitor to the mainstream Horseware Rhino. The 1200D ripstop shell is the same denier as the Rhino; the shoulder-gusset design borrows the leg-arch principle; the fill weights run 180 g, 220 g, and 360 g across the line.</p>
-                <p>The SmartPak advantage is the SmartPak return policy — house-brand blankets can be returned and exchanged through their guarantee program in a way that brand-name blankets cannot, which is genuinely useful for the first-blanket buyer who doesn&apos;t yet know exactly what fit the horse needs.</p>
+                <p>The current SmartPak search lists the SmartPak Ultimate Horse Turnout Blanket at $279.95–299.95, dated 2026-10-07, plus high-neck and combo-neck versions. SmartPak redesigned the line at the end of 2025.</p>
+                <p>The current product description describes a 1680D outer with a Teflon coating, not the older 1200D ripstop shell. SmartPak&apos;s warranty page describes a 10-year durability guarantee, with a replacement limit of 3 replacements and 1 per year. Confirm the live price on the listing.</p>
               </>}
               specs={[
-                { label: 'Shell denier', value: '1200D ripstop' },
-                { label: 'Fill options', value: '0 g / 180 g / 220 g / 360 g' },
-                { label: 'Neck cut', value: 'Standard, shoulder gussets' },
-                { label: 'Hardware', value: 'Polymer surcingle' },
-                { label: 'Return policy', value: 'SmartPak guarantee', highlight: 'good' },
+                { label: 'Shell denier', value: '1680D outer', highlight: 'good' },
+                { label: 'Versions', value: 'Standard, high neck, and combo neck' },
+                { label: 'Neck cut', value: 'Standard, high neck, combo neck' },
+                { label: 'Hardware', value: 'Quick-clip front' },
+                { label: 'Warranty', value: '10-year durability guarantee, replacement limit' },
               ]}
-              pros={['Strong house-brand value', 'SmartPak return / exchange guarantee', 'Wide fill-weight range', 'Available with SmartPak auto-ship blanket-pack programs']}
-              cons={['Newer brand, less long-term track record than Horseware', 'Polymer hardware', 'Fewer V-front options']}
-              price="$160–230"
-              ctaText="Shop at SmartPak →"
+              pros={['Current SmartPak search result', '1680D outer on the current listing', 'High-neck and combo-neck versions in the same search', 'Durability guarantee with a stated replacement limit']}
+              cons={['Older 1200D fill weights are not on the current listing', 'Confirm the live price before you order', 'Fit still has to be checked on the horse']}
+              price="$279.95–299.95"
+              priceNote="dated 2026-10-07."
+              ctaText="Shop the SmartPak Ultimate Turnout at SmartPak →"
               ctaHref="/go/smartpak/ultimate-turnout?s=reviews-best-winter-horse-blankets"
               ctaAffiliateProgram="smartpak"
               ctaAffiliateProduct="ultimate-turnout"
             />
 
-            <ReviewCard
+            <ReviewCard quietUntilTag
               id="weatherbeeta"
               badge="Best Mid-Tier"
               name="Weatherbeeta ComFiTec Plus Dynamic II"
               subtitle="1200-denier ripstop · Memory-foam wither relief · Strong feature set"
-              score={8.6}
               description={<>
                 <p>Weatherbeeta (UK) is the broadest-line mid-tier blanket manufacturer, with the ComFiTec line as its mainstream turnout offering. The Plus Dynamic II adds a memory-foam wither-relief panel — a genuinely useful feature for horses whose conformation produces wither rubs under conventional turnouts — and a deep tail flap for additional rear coverage. Multiple fill options across the line.</p>
                 <p>Weatherbeeta sizing runs slightly different from Horseware (UK sizing convention), and the brand carries a heavier hand than Rambo of the same denier — measure carefully and consider the trial period at the retailer.</p>
@@ -284,20 +306,20 @@ export default function BestWinterBlanketsPage() {
               pros={['Memory-foam wither relief is a genuine differentiator', 'Wide fill-weight range', 'Established UK brand with US distribution', 'Competitive price point']}
               cons={['Snap-front hardware less robust than T-bar in ice', 'Sizing runs differently from Horseware (verify size)', 'Some color/pattern combinations marked up significantly']}
               price="$170–280"
-              ctaText="Shop at Dover Saddlery →"
+              priceNote="dated 2026-10-03."
+              ctaText="Shop the Weatherbeeta ComFiTec Plus Dynamic II at Dover Saddlery →"
               ctaHref="/go/dover/weatherbeeta-comfitec-plus-dynamic?s=reviews-best-winter-horse-blankets"
               ctaAffiliateProgram="dover"
               ctaAffiliateProduct="weatherbeeta-comfitec-plus-dynamic"
             />
 
-            <ReviewCard
+            <ReviewCard quietUntilTag
               id="amigo"
               badge="Best Value"
               name="Horseware Amigo Bravo 12 Plus Turnout"
               subtitle="1000-denier ballistic · Horseware build at the value tier"
-              score={8.5}
               description={<>
-                <p>The Amigo line is Horseware&apos;s value sub-brand — same factory and design lineage as Rambo and Rhino at a lower price point, using simpler hardware and a less premium liner. The Bravo 12 Plus uses a 1000D ballistic shell (matching the Rambo Original&apos;s shell denier) with polymer hardware, a less-padded interior lining, and standard neck cut. Real-world durability runs 2–4 seasons in active pasture turnout, occasionally longer.</p>
+                <p>The Amigo line is Horseware&apos;s value sub-brand — same factory and design lineage as Rambo and Rhino at a lower price point, using simpler hardware and a less premium liner. The Bravo 12 Plus uses a 1000D ballistic shell (matching the Rambo Original&apos;s shell denier) with polymer hardware, a less-padded interior lining, and standard neck cut. Real-world durability runs 2–4 seasons in active pasture turnout, occasionally longer. <a href="/reviews/weatherbeeta-vs-amigo-guide">Weatherbeeta vs Amigo</a> sets the Amigo beside the mid-tier Weatherbeeta.</p>
                 <p>For the price-conscious owner who wants the Horseware engineering without the premium tag, the Amigo line is the most defensible value-tier choice in the category. For the owner who keeps horses for decades, the Rambo total-cost-per-season math wins despite the higher up-front cost.</p>
               </>}
               specs={[
@@ -310,7 +332,8 @@ export default function BestWinterBlanketsPage() {
               pros={['Horseware build at value pricing', 'Same shell denier as Rambo Original', 'Wide availability', 'Resells well used']}
               cons={['Polymer hardware not as durable as Rambo stainless', 'Less padded interior than premium tier', 'Standard neck cut may produce shoulder rub on some horses']}
               price="$130–190"
-              ctaText="Shop at Riding Warehouse →"
+              priceNote="dated 2026-10-03."
+              ctaText="Shop the Horseware Amigo Bravo 12 Plus at Riding Warehouse →"
               ctaHref="/go/ridingwarehouse/amigo-bravo-12-plus?s=reviews-best-winter-horse-blankets"
               ctaAffiliateProgram="ridingwarehouse"
               ctaAffiliateProduct="amigo-bravo-12-plus"
@@ -331,44 +354,44 @@ export default function BestWinterBlanketsPage() {
                 <tbody>
                   <tr className="border-b border-brand-border">
                     <td className="p-3 text-brand-text-mid">Long-term turnout, and you want the reference blanket</td>
-                    <td className="p-3 font-bold text-brand-dark"><a href="#rambo" className="text-brand-primary">Rambo Original</a><TableShopLink href={"/go/smartpak/rambo-original-turnout?s=reviews-best-winter-horse-blankets"} product={"Rambo Original"} /></td>
+                    <td className="p-3 font-bold text-brand-dark"><a href="#rambo" className="text-brand-primary">Rambo Original</a><TableShopLink quietUntilTag href={"/go/smartpak/rambo-original-turnout?s=reviews-best-winter-horse-blankets"} product={"Rambo Original"} /></td>
                     <td className="p-3 text-brand-text-mid">Best premium turnout. 1000D ballistic. Fill 0 / 100 / 200 / 400 g</td>
                     <td className="p-3 text-brand-text-mid">The card says a new one costs 50–80% more than a value-tier equivalent</td>
                   </tr>
                   <tr className="border-b border-brand-border">
                     <td className="p-3 text-brand-text-mid">Replacing a worn value blanket, and Rambo is more than you need</td>
-                    <td className="p-3 font-bold text-brand-dark"><a href="#rhino" className="text-brand-primary">Rhino Original</a><TableShopLink href={"/go/dover/rhino-original-turnout?s=reviews-best-winter-horse-blankets"} product={"Rhino Original"} /></td>
-                    <td className="p-3 text-brand-text-mid">Best modern standard. 1200D ripstop. $180–260. Polymer hardware</td>
-                    <td className="p-3 text-brand-text-mid">Shorter warranty than the premium tier. Shoulder rub on some heavily built horses</td>
+                    <td className="p-3 font-bold text-brand-dark"><a href="#rhino" className="text-brand-primary">Rhino Plus</a><TableShopLink quietUntilTag href={"/go/dover/rhino-original-turnout?s=reviews-best-winter-horse-blankets"} product={"Rhino Plus"} /></td>
+                    <td className="p-3 text-brand-text-mid">Best modern standard. 1000D polypropylene. $180–260. Confirm hardware on the listing</td>
+                    <td className="p-3 text-brand-text-mid">Confirm hardware on the listing. The waterproofness guarantee applies when the blanket is registered</td>
                   </tr>
                   <tr className="border-b border-brand-border">
                     <td className="p-3 text-brand-text-mid">Clipped horse in a northern or sub-zero winter</td>
-                    <td className="p-3 font-bold text-brand-dark"><a href="#schneiders" className="text-brand-primary">Schneiders StormShield Euro</a><TableShopLink href={"/go/schneider/stormshield-euro-turnout?s=reviews-best-winter-horse-blankets"} product={"Schneiders StormShield Euro"} /></td>
+                    <td className="p-3 font-bold text-brand-dark"><a href="#schneiders" className="text-brand-primary">Schneiders StormShield Euro</a><TableShopLink quietUntilTag href={"/go/schneider/stormshield-euro-turnout?s=reviews-best-winter-horse-blankets"} product={"Schneiders StormShield Euro"} /></td>
                     <td className="p-3 text-brand-text-mid">Best heavy winter. 1680D. 300 g / 360 g fills. $300–460</td>
                     <td className="p-3 text-brand-text-mid">Overkill in a mild climate, and heavy to handle when wet</td>
                   </tr>
                   <tr className="border-b border-brand-border">
                     <td className="p-3 text-brand-text-mid">First blanket, and you may need to exchange the fit</td>
-                    <td className="p-3 font-bold text-brand-dark"><a href="#smartpak" className="text-brand-primary">SmartPak Ultimate</a><TableShopLink href={"/go/smartpak/ultimate-turnout?s=reviews-best-winter-horse-blankets"} product={"SmartPak Ultimate"} /></td>
-                    <td className="p-3 text-brand-text-mid">Best house brand. 1200D. Fills include 180 / 220 / 360 g. $160–230. Return guarantee</td>
-                    <td className="p-3 text-brand-text-mid">Shorter track record than Horseware. Polymer hardware</td>
+                    <td className="p-3 font-bold text-brand-dark"><a href="#smartpak" className="text-brand-primary">SmartPak Ultimate</a><TableShopLink quietUntilTag href={"/go/smartpak/ultimate-turnout?s=reviews-best-winter-horse-blankets"} product={"SmartPak Ultimate"} /></td>
+                    <td className="p-3 text-brand-text-mid">Best house brand. 1680D outer. Standard, high neck, and combo neck. $279.95–299.95</td>
+                    <td className="p-3 text-brand-text-mid">Confirm the live price on the listing. The card describes a quick-clip front</td>
                   </tr>
                   <tr className="border-b border-brand-border">
                     <td className="p-3 text-brand-text-mid">Wither rubs under a conventional turnout</td>
-                    <td className="p-3 font-bold text-brand-dark"><a href="#weatherbeeta" className="text-brand-primary">Weatherbeeta ComFiTec Plus Dynamic II</a><TableShopLink href={"/go/dover/weatherbeeta-comfitec-plus-dynamic?s=reviews-best-winter-horse-blankets"} product={"Weatherbeeta ComFiTec Plus Dynamic II"} /></td>
+                    <td className="p-3 font-bold text-brand-dark"><a href="#weatherbeeta" className="text-brand-primary">Weatherbeeta ComFiTec Plus Dynamic II</a><TableShopLink quietUntilTag href={"/go/dover/weatherbeeta-comfitec-plus-dynamic?s=reviews-best-winter-horse-blankets"} product={"Weatherbeeta ComFiTec Plus Dynamic II"} /></td>
                     <td className="p-3 text-brand-text-mid">Best mid-tier. Memory-foam wither panel. 1200D ripstop</td>
                     <td className="p-3 text-brand-text-mid">UK sizing differs from Horseware. Measure, and use the retailer trial period</td>
                   </tr>
                   <tr className="border-b border-brand-border">
                     <td className="p-3 text-brand-text-mid">Horseware shell durability at a lower price</td>
-                    <td className="p-3 font-bold text-brand-dark"><a href="#amigo" className="text-brand-primary">Amigo Bravo 12 Plus</a><TableShopLink href={"/go/ridingwarehouse/amigo-bravo-12-plus?s=reviews-best-winter-horse-blankets"} product={"Amigo Bravo 12 Plus"} /></td>
+                    <td className="p-3 font-bold text-brand-dark"><a href="#amigo" className="text-brand-primary">Amigo Bravo 12 Plus</a><TableShopLink quietUntilTag href={"/go/ridingwarehouse/amigo-bravo-12-plus?s=reviews-best-winter-horse-blankets"} product={"Amigo Bravo 12 Plus"} /></td>
                     <td className="p-3 text-brand-text-mid">Best value. Same shell denier as the Rambo Original, per that card. $130–190. Polymer hardware</td>
                     <td className="p-3 text-brand-text-mid">Polymer hardware is less durable than Rambo stainless. Standard neck can rub some shoulders</td>
                   </tr>
                 </tbody>
               </table>
             </div>
-            <ComparisonFoot updated="2026-10-05" />
+            <ComparisonFoot updated="2026-10-10" />
 
             <h2>The Layering System Approach</h2>
             <p>The alternative to owning four different weight-specific turnouts: one waterproof sheet shell plus a set of liners in graduated weights. The layering math:</p>
@@ -381,7 +404,7 @@ export default function BestWinterBlanketsPage() {
             <p>The Bucas, Horseware, and Schneiders liner systems are the most established. The upfront cost (shell + 3 liners) approaches the cost of owning two weight-specific turnouts; the system is most valuable when the horse moves between climates or when stalling habits change frequently. For most one-climate, one-horse owners, weight-specific turnouts are simpler and cheaper to manage.</p>
 
             <h2>Fitting a Winter Blanket</h2>
-            <p>Blanket size is measured from the center of the chest, along the side of the horse, to the point of the rump or buttock. US sizing is in inches (75, 78, 81, 84); European sizing is in cm (165, 175, 185). The most common fit error is buying a blanket too small — a blanket that pulls back on the shoulders restricts movement and produces rubs. When in doubt, size up by 3 inches; a slightly large blanket can be belted snug, but a too-small blanket cannot be enlarged.</p>
+            <p>Blanket size is measured from the center of the chest, along the side of the horse, to the point of the rump or buttock. US sizing is in inches (75, 78, 81, 84); European sizing is in cm (165, 175, 185). Enter that chest-to-buttock measurement in the <a href="/tools/horse-blanket-size-calculator">blanket size calculator</a> for the standard US size and the approximate EU centimeter equivalent. The most common fit error is buying a blanket too small — a blanket that pulls back on the shoulders restricts movement and produces rubs. When in doubt, size up by 3 inches; a slightly large blanket can be belted snug, but a too-small blanket cannot be enlarged.</p>
 
             <p>Common fit problems and remedies:</p>
             <ul>
@@ -402,7 +425,7 @@ export default function BestWinterBlanketsPage() {
             </ul>
 
             <h2>Affiliate Disclosure</h2>
-            <p>Horses.com participates in affiliate programs with SmartPak Equine, Dover Saddlery, Schneiders Saddlery, Riding Warehouse, and Amazon Associates. We may earn commission on purchases made through links on this page. Affiliate participation does not influence the assessments or rankings — the same products would receive the same rankings on the same data regardless of program participation. See our editorial standards page for the full policy.</p>
+            <p>Horses.com participates in affiliate programs with SmartPak Equine, Dover Saddlery, Schneiders Saddlery, Riding Warehouse, and Amazon Associates. We may be paid when you buy through links on this page. Affiliate participation does not influence the assessments or rankings — the same products would receive the same rankings on the same data regardless of program participation. See our editorial standards page for the full policy.</p>
 
             <h2>References</h2>
             <ol className="text-sm text-brand-text-mid">
@@ -422,15 +445,11 @@ export default function BestWinterBlanketsPage() {
               <FAQAccordion items={[
                 {
                   question: 'Which turnout does this page pick for a harsh winter?',
-                  answer: 'Schneiders StormShield Euro, scored 9.2. The card calls it a heavyweight ballistic blanket. Horseware Rambo Original, scored 9.4, is the premium multi-season turnout, not the heavy-winter specialist.',
+                  answer: 'Schneiders StormShield Euro is the harsh-winter card. The card calls it a heavyweight ballistic blanket. Horseware Rambo Original is the premium multi-season turnout.',
                 },
                 {
                   question: 'What is the value pick on this page?',
-                  answer: 'Horseware Amigo Bravo 12 Plus, scored 8.5. The page describes it as a 1000-denier Horseware blanket at a lower price than the Rambo Original.',
-                },
-                {
-                  question: 'Do the scores on this page come from customer reviews?',
-                  answer: 'No. Each number is this page\'s editorial score for denier, fill, neck shape, and hardware. It is not an average of owner ratings.',
+                  answer: 'Horseware Amigo Bravo 12 Plus is the value card. The page describes it as a 1000-denier Horseware blanket at a lower price than the Rambo Original.',
                 },
               ]} />
             </div>
@@ -441,7 +460,7 @@ export default function BestWinterBlanketsPage() {
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">By Use Case</div>
               {[
                 ['Premium, multi-season', 'Rambo Original'],
-                ['Mainstream turnout', 'Rhino Original'],
+                ['Mainstream turnout', 'Rhino Plus'],
                 ['Heavy winter, clipped', 'Schneiders StormShield'],
                 ['Mid-tier value', 'Weatherbeeta ComFiTec Plus'],
                 ['First-time buyer, easy returns', 'SmartPak Ultimate'],
@@ -456,6 +475,10 @@ export default function BestWinterBlanketsPage() {
             <RelatedLinks
               title="Related Guides"
               links={[
+                { label: 'November and December gifts', href: '/reviews/november-december-gift-guide' },
+                { label: 'Rambo vs Rhino', href: '/reviews/rambo-vs-rhino-guide' },
+                { label: 'Rambo vs Schneiders', href: '/reviews/rambo-vs-schneiders-guide' },
+                { label: 'Weatherbeeta vs Amigo', href: '/reviews/weatherbeeta-vs-amigo-guide' },
                 { label: 'Saddle Fit Basics', href: '/guides/saddle-fit-basics' },
                 { label: 'Joint Supplements', href: '/supplements/joint-supplements' },
                 { label: 'Quarter Horse Guide', href: '/breeds/quarter-horse' },
@@ -468,6 +491,13 @@ export default function BestWinterBlanketsPage() {
         </div>
       </div>
       <RelatedReads siteId="horses-com" path="/reviews/best-winter-horse-blankets" />
+          <ArticleSourcesList
+            title="Sources"
+            sources={[
+            { label: "American Association of Equine Practitioners owner resources", url: "https://aaep.org/", publisher: "AAEP" },
+            { label: "Canadian Veterinary Journal", url: "https://www.canadianveterinarians.net/", publisher: "CVMA" },
+            ]}
+          />
     </>
   )
 }

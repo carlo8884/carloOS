@@ -83,16 +83,62 @@ for (const site of SITES) {
   if (!layout.includes(`<AffiliateClickListener site="${site}" />`)) {
     hits.push(`${site}: layout is missing AffiliateClickListener`)
   }
+  if (!layout.includes('<HopEarnsProvider')) {
+    hits.push(`${site}: layout is missing HopEarnsProvider`)
+  }
+  if (!/HopEarnsProvider amazon=\{Boolean\(process\.env\.AFF_AMAZON_TAG/.test(layout)) {
+    hits.push(`${site}: layout must pass the server Amazon tag into HopEarnsProvider`)
+  }
 }
 
 const listener = readFileSync(join(ROOT, 'packages/ui/src/components/AffiliateClickListener.tsx'), 'utf8')
 if (!/trackEvent\(\s*'affiliate_click'/.test(listener)) hits.push('AffiliateClickListener does not fire affiliate_click')
-for (const field of ['site', 'source', 'partner']) {
+if (!/trackEvent\(\s*'hop_click'/.test(listener)) hits.push('AffiliateClickListener does not fire hop_click')
+if (!/card_id:\s*click\.slot/.test(listener)) hits.push('hop_click is missing card_id')
+for (const field of ['site:', 'page:', 'source:', 'partner:', 'vendor:', 'product:', 'placement:', 'slot:', 'destination_type:', 'destination:']) {
   if (!listener.includes(field)) hits.push(`AffiliateClickListener event is missing ${field}`)
+}
+if (!listener.includes('search-recovery')) hits.push('AffiliateClickListener does not slot empty-search suggestions')
+if (!listener.includes('now - lastAt < 1200')) hits.push('AffiliateClickListener does not collapse a double click')
+
+const clickLib = readFileSync(join(ROOT, 'packages/ui/src/lib/affiliate-click.ts'), 'utf8')
+if (!/vendor:\s*partner/.test(clickLib)) hits.push('affiliate click payload does not send vendor')
+if (!/'ep\.vendor':\s*fields\.partner/.test(clickLib)) hits.push('email /go collect does not send ep.vendor')
+if (!/'ep\.slot':\s*'email landing'/.test(clickLib)) hits.push('email /go collect does not send ep.slot')
+if (!/ep\.card_id',\s*'email landing'/.test(clickLib)) hits.push('email /go hop_click does not send ep.card_id')
+if (!/'ep\.destination_type':/.test(clickLib)) hits.push('email /go collect does not send ep.destination_type')
+if (!/'ep\.destination':/.test(clickLib)) hits.push('email /go collect does not send ep.destination')
+
+const resolver = readFileSync(join(ROOT, 'packages/config/affiliate-hop.ts'), 'utf8')
+if (!/split\('PLACEHOLDER'\)\.join\(tag\)/.test(resolver)) {
+  hits.push('Amazon redirect no longer substitutes the Associates tag')
+}
+
+for (const file of ['packages/ui/src/components/ShopCtas.tsx', 'packages/ui/src/components/PrimaryHop.tsx', 'packages/ui/src/components/ReviewCard.tsx', 'packages/ui/src/components/TableShopLink.tsx']) {
+  const src = readFileSync(join(ROOT, file), 'utf8')
+  const note = src.indexOf('data-affiliate-disclosure="hop"')
+  const button = note < 0 ? -1 : src.indexOf('data-shop-placement=', note)
+  if (note < 0 || button < 0) {
+    hits.push(`${file}: Associates line must be marked and sit above the shop button`)
+  }
+}
+
+const reviewCard = readFileSync(join(ROOT, 'packages/ui/src/components/ReviewCard.tsx'), 'utf8')
+if (!reviewCard.includes("rel={editorial ? undefined : 'nofollow sponsored noopener'}")) {
+  hits.push('ReviewCard new-tab shop button must set noopener')
+}
+
+const shopCtas = readFileSync(join(ROOT, 'packages/ui/src/components/ShopCtas.tsx'), 'utf8')
+if (!shopCtas.includes('useAmazonEarns()')) {
+  hits.push('ShopCtas must take the Associates line from the server earns flag')
+}
+if (!/amazonFromServer !== null/.test(shopCtas)) {
+  hits.push('ShopCtas must prefer the server earns flag over a browser env read')
 }
 
 const goHandler = readFileSync(join(ROOT, 'packages/ui/src/server/affiliate-hop.ts'), 'utf8')
 if (!/event:\s*'affiliate_click'/.test(goHandler)) hits.push('/go handler does not log affiliate_click')
+if (!/emailLandingHopClickUrl/.test(goHandler)) hits.push('/go handler does not send hop_click for a direct email hit')
 for (const field of ['site:', 'source', 'vendor']) {
   if (!goHandler.includes(field)) hits.push(`/go handler log is missing ${field}`)
 }
@@ -102,4 +148,4 @@ if (hits.length) {
   for (const hit of hits) console.error('  ' + hit)
   process.exit(1)
 }
-console.log('PASS: money-page hops carry a source, and affiliate_click records site, source, and partner.')
+console.log('PASS: money-page hops carry a source, affiliate_click records site, page, and vendor, and Amazon redirects substitute the Associates tag.')

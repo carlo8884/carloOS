@@ -1,5 +1,7 @@
 'use client'
 
+import { HopDisclosure } from '../../../components/HopDisclosure'
+
 /**
  * Dog Ideal Weight Calculator -- /tools/dog-ideal-weight-calculator
  *
@@ -24,7 +26,7 @@
  */
 
 import { useMemo, useState } from 'react'
-import { AffiliateDisclosure, ResultMeaning, ToolError, numberFieldError, PriceAsOf} from '@carloOS/ui'
+import { ResultMeaning, ToolError, numberFieldError, PriceAsOf} from '@carloOS/ui'
 import { Breeds } from '../../../data/breeds'
 
 type Unit = 'lb' | 'kg'
@@ -91,7 +93,7 @@ interface BcsResult {
 }
 
 function bcsEstimate(currentLb: number, score: number): BcsResult {
-  // Each BCS point above 5/9 ≈ ~10% over ideal body weight (standard heuristic).
+  // Planning figure: each BCS point above 5/9 ≈ 10% over ideal. Not a fetched study.
   const idealLb = currentLb / (1 + 0.1 * (score - 5))
   const opt = BCS_OPTIONS.find((o) => o.score === score)!
   return { idealLb, deltaLb: currentLb - idealLb, band: opt.band }
@@ -111,7 +113,7 @@ function resultShop(band: BcsResult['band'] | null): {
       blurb:
         'An under-ideal estimate is a reason to call your veterinarian before adding calories — unexplained thinness can mean parasites, dental pain, or illness. A kitchen / pet scale lets you record what you are already feeding so the vet can review it. This tool does not set a target weight or diagnose a cause.',
       href: `/go/amazon-brand/digital+gram+scale+kitchen+pet?s=${SHOP_SOURCE}`,
-      label: 'Browse kitchen / pet scales on Amazon →',
+      label: 'Browse digital gram scales on Amazon →',
     }
   }
   if (band === 'over') {
@@ -137,7 +139,7 @@ function resultShop(band: BcsResult['band'] | null): {
     blurb:
       'A breed range is a starting band, not a target your veterinarian set. A digital kitchen / pet scale is how you record current weight and meals so the BCS estimate is based on a real number. Ask your veterinarian for a target weight — this tool does not diagnose a weight problem.',
     href: `/go/amazon-brand/digital+gram+scale+kitchen+pet?s=${SHOP_SOURCE}`,
-    label: 'Browse kitchen / pet scales on Amazon →',
+    label: 'Browse digital gram scales on Amazon →',
   }
 }
 
@@ -353,8 +355,8 @@ export default function DogIdealWeightCalculator() {
       {/* Disclaimer */}
       <div className="mt-6 rounded border border-amber-700/40 bg-amber-950/20 p-4 text-sm text-amber-900">
         <span className="font-semibold">An estimate, not a target your vet set.</span>{' '}
-        Breed ranges are AKC-standard adult bands, and the body-condition estimate uses the standard
-        heuristic that each BCS point above the ideal (4–5/9) is roughly 10% over ideal body weight.
+        Breed ranges are AKC-standard adult bands, and the body-condition estimate uses a planning
+        figure: each BCS point above the ideal (4–5/9) is roughly 10% over ideal body weight.
         Healthy weight depends on frame, sex, age, and muscle, so two dogs of the same breed can sit
         at different points in the range. Your veterinarian can set a target weight for your
         individual dog and rule out a medical cause for weight change.
@@ -368,13 +370,20 @@ export default function DogIdealWeightCalculator() {
           {shop.heading}
         </p>
         <p className="mt-1 text-sm leading-relaxed text-brand-text-mid">{shop.blurb}</p>
-        <AffiliateDisclosure variant="inline" siteId="dog-com" className="my-3" />
+        <HopDisclosure siteId="dog-com" href={shop.href} />
+        <a
+          href={shop.href}
+          rel="sponsored noopener"
+          className="inline-block max-w-full whitespace-normal text-left rounded bg-brand-dark px-4 py-2.5 text-sm font-bold text-white no-underline"
+        >
+          {shop.label}
+        </a>
       </div>
 
       <p className="mt-4 text-xs text-brand-text-light">
         Method: healthy range = AKC-standard adult weight band for the selected breed (or a
         size-class band for a mixed/unlisted dog). Estimated ideal weight ≈ current weight ÷ (1 +
-        0.10 × (BCS − 5)), the standard veterinary body-condition heuristic. BCS is scored on the
+        0.10 × (BCS − 5)). That 10% step is a planning figure, not a fetched study. BCS uses the
         9-point WSAVA scale.
       </p>
     </div>

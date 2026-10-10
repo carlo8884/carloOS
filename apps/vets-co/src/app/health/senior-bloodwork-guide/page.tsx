@@ -1,11 +1,12 @@
-import { HubMoneyLinks } from '@carloOS/ui'
+import { HopDisclosure } from '../../../components/HopDisclosure'
+import { HubMoneyLinks, LastUpdated } from '@carloOS/ui'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Senior Dog Bloodwork Guide — What Each Test Finds | Vets.co', description: 'What your senior dog\'s bloodwork actually measures. CBC, chemistry panel, urinalysis, SDMA, and thyroid explained', path: '/health/senior-bloodwork-guide', type: 'article' })
 const SOURCES = [
-  { label: 'Merck Veterinary Manual: Routine Laboratory Tests', url: 'https://www.merckvetmanual.com/special-subjects/clinical-pathology-and-procedures/laboratory-diagnosis-blood-chemistry-profile', publisher: 'Merck Vet Manual' },
+  { label: 'Merck Veterinary Manual: Routine Laboratory Tests', url: 'https://www.merckvetmanual.com/clinical-pathology-and-procedures/diagnostic-procedures-for-the-private-practice-laboratory/clinical-biochemistry', publisher: 'Merck Vet Manual' },
   { label: 'AAHA: Senior Care Guidelines for Dogs and Cats', url: 'https://www.aaha.org/aaha-guidelines/senior-care-configuration/', publisher: 'AAHA' },
   { label: 'IRIS: SDMA and Early Kidney Disease Detection', url: 'https://www.iris-kidney.com/', publisher: 'International Renal Interest Society' },
 ]
@@ -34,6 +35,7 @@ export default function SeniorBloodworkPage() {
 </>}
       >
         <div className="carloOS-article">
+          <LastUpdated date="2026-10-09" />
 
           <h2>Complete Blood Count (CBC)</h2>
           <p>The CBC evaluates the cellular components of blood — the cells that carry oxygen, fight infection, and enable clotting. Key values:</p>
@@ -61,32 +63,18 @@ export default function SeniorBloodworkPage() {
           <p><strong>Glucose in urine (glucosuria):</strong> Glucose should not be in urine. Glucosuria indicates either blood glucose above the renal threshold (diabetes) or — in the absence of hyperglycemia — primary renal glucosuria (renal tubular disease).</p>
           <p><strong>Bacteria and white cells:</strong> Urinary tract infection. Culture and sensitivity testing should be performed on any urine showing bacterial growth to guide antibiotic selection — empirical antibiotic treatment without culture misses resistant organisms. When the clinic asks for a home free-catch sample to travel with the dog, a sterile urine specimen cup is that container — a first-morning catch with a lid, not a fecal-sample collection kit, not a leak-proof specimen bag, and not a clinic cystocentesis. It does not replace culture technique the laboratory requires, and it does not treat a UTI.</p>
 
-          <h2 id="kit">Senior-dog bloodwork-visit kit</h2>
+          <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Everyday physical supplies that match the
-            serial-panel, urinalysis, and fasting-glucose
-            copy on this page — a letter-size expanding
-            file organizer so CBC, chemistry, and SDMA
-            printouts stay in date order, a sterile
-            urine specimen cup so a first-morning
-            free-catch sample can travel with the dog
-            when the clinic asks for a home urinalysis,
-            and a 12-hour mechanical kitchen timer so
-            the pre-chemistry food hold is a set window. These are household visit-prep tools, not
-            treatments. They do not interpret labs, they
-            do not diagnose CKD or diabetes, they do not
-            replace a veterinarian, and they are not a
-            ranked product list. This page does
-            not hop diagnosis kits that imply treatment. This page does not claim hands-on testing. </p>
+            Keep these on hand: a letter-size expanding file organizer so CBC, chemistry, and SDMA printouts stay in date order, a sterile urine specimen cup so a first-morning free-catch sample can travel with the dog when the clinic asks for a home urinalysis, and a 12-hour mechanical kitchen timer so the pre-chemistry food hold is a set window. These are household visit-prep tools, not treatments. They do not interpret labs, they do not diagnose CKD or diabetes, they do not replace a veterinarian, and they are not a ranked product list. </p>
 
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/letter+size+expanding+file+organizer?s=health-senior-bloodwork-guide", "/go/amazon-brand/sterile+urine+specimen+cup?s=health-senior-bloodwork-guide", "/go/amazon-brand/12+hour+mechanical+kitchen+timer?s=health-senior-bloodwork-guide"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (letter-size expanding file organizer /
               sterile urine specimen cup /
               12-hour mechanical kitchen timer).
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or an empty link. Amazon searches only —
               unused vs #1069
               wire+small+animal+single+story+cage /
               non+slip+suction+bathtub+mat /
@@ -121,8 +109,8 @@ export default function SeniorBloodworkPage() {
               portion+control+food+scale+dog,
               pet+glucometer.
               Levothyroxine, Soloxine, Thyro-Tabs,
-              Hill's, Royal Canin, and Rx ASINs are
-              not shoppable hops. */}
+              Hill's, Royal Canin, and prescription brands are
+              not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

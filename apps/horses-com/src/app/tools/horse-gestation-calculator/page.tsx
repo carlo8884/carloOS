@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -11,7 +12,6 @@ import {
   TableOfContents,
   RelatedLinks,
   CrossPortfolioCard,
-  AffiliateDisclosure,
   ShopCtas,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
@@ -74,7 +74,7 @@ const softwareApplicationSchema = {
     'Average equine gestation of ~340 days (default)',
     'Early/late foaling window of 320–362 days',
     'Optional custom gestation length per mare or breed',
-    'Interactive foaling-kit checklist with Amazon shop hops',
+    'Interactive foaling-kit checklist with Amazon shop buttons',
     'Estimate framed against ultrasound confirmation',
     'Defers foaling management to a veterinarian',
   ],
@@ -229,20 +229,20 @@ export default function HorseGestationCalculatorPage() {
         </p>
         <FoalingKit />
 
-        <AffiliateDisclosure variant="inline" siteId="horses-com" />
+        <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/digital+equine+thermometer?s=tools-horse-gestation-calculator", "/go/amazon-brand/iodine+navel+dip+foal?s=tools-horse-gestation-calculator", "/go/amazon-brand/foaling+alarm?s=tools-horse-gestation-calculator"]} />
         <div className="mb-8 rounded-xl border border-brand-border bg-brand-surface p-5">
           <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Shop the kit
+            Shop these supplies
           </div>
           <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/digital+equine+thermometer?s=tools-horse-gestation-calculator"
-              amazonLabel="Browse equine thermometers on Amazon →"
+              amazonLabel="Browse digital equine thermometers on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/iodine+navel+dip+foal?s=tools-horse-gestation-calculator"
-              amazonLabel="Browse foal navel dip on Amazon →"
+              amazonLabel="Browse foal iodine navel dip on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/foaling+alarm?s=tools-horse-gestation-calculator"
@@ -331,8 +331,8 @@ export default function HorseGestationCalculatorPage() {
             },
             {
               label:
-                'Penn State Extension — Breeding the mare: gestation and foaling.',
-              url: 'https://extension.psu.edu/horses',
+                'Penn State Extension — Equine.',
+              url: 'https://extension.psu.edu/animals-and-livestock/equine',
               publisher: 'Penn State Extension',
             },
           ]}

@@ -1,6 +1,7 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas, CrossSiteHelp } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas, CrossSiteHelp } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { BreedHealthCard } from '@carloOS/ui'
@@ -22,7 +23,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Vets.co Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
-  modifiedAt: '2026-06-11T00:00:00Z',
+  modifiedAt: '2026-10-07T00:00:00Z',
 })
 
 const medicalSchema = buildMedicalWebPageSchema({
@@ -30,7 +31,7 @@ const medicalSchema = buildMedicalWebPageSchema({
   description: 'Managing Golden Retriever cancer risk with payout data and case-cost ranges.',
   url: 'https://vets.co/breeds/golden-retriever-health',
   authorName: 'Vets.co Editorial',
-  lastReviewed: '2026-06-11',
+  lastReviewed: '2026-10-07',
 })
 
 const FAQS = [
@@ -57,7 +58,7 @@ const FAQS = [
   {
     question: 'Is pet insurance worth it for a Golden Retriever?',
     answer:
-      'With a 60%+ lifetime cancer rate, the expected-value calculation is unambiguous: hemangiosarcoma treatment runs $8,000–18,000 and lymphoma chemotherapy $5,000–15,000. The non-negotiable rule is to enroll before the first veterinary appointment — any condition noted in records before enrollment becomes an excluded pre-existing condition on most policies.',
+      'With a 60%+ lifetime cancer rate, the expected-value calculation is unambiguous: Cornell University Hospital for Animals says radiation therapy is approximately $2,500–$7,000, a chemotherapy course over three to six months runs from several hundred dollars to several thousand, and major surgery starts around $500 and rises with the procedure. A February 2025 Dog Cancer Foundation summary of Veterinary Cancer Society figures puts an oncology consultation at $100–$250 and chemotherapy at $150–$600 per dose. NC State Veterinary Hospital lists bone-tumor stereotactic radiation at about $7,500–$8,500 and palliative radiation at about $800–$1,500. Typical US range, checked Oct 2026; varies by clinic and region. dated 2026-10-07. The non-negotiable rule is to enroll before the first veterinary appointment — any condition noted in records before enrollment becomes an excluded pre-existing condition on most policies.',
   },
 ]
 
@@ -69,7 +70,7 @@ export default function VetsGoldenRetrieverHealthPage() {
     <>
       <SchemaScript schema={combinedSchemaAll} />
       <ArticleLayout
-      priceAsOf="2026-06-11"
+      priceAsOf="2026-10-07"
       siteId="vets-co"
       contentType="breed"
       hero={{
@@ -134,8 +135,8 @@ export default function VetsGoldenRetrieverHealthPage() {
         <ul>
           <li><strong>Annual wellness from year 1–5:</strong> Full physical, vaccines as indicated, annual bloodwork from year 3</li>
           <li><strong>From age 6:</strong> Annual abdominal ultrasound added — the most impactful change in monitoring for hemangiosarcoma. Annual echocardiogram if any murmur detected. Full bloodwork including chemistry, CBC, urinalysis.</li>
-          <li><strong>From age 8:</strong> Every 6 months for everything. Goldens change faster than annual monitoring captures in the senior years. Blood pressure measurement added. An 18-month wall calendar is how that age-6 ultrasound and these every-6-month senior visits stay written on one longer horizon — it is not a monthly desk pad calendar (that lives on when-to-enroll), not a hardcover weekly appointment planner, and not a wall-mounted magnetic monthly planner.</li>
-          <li><strong>Monthly at home:</strong> Lymph node check, gum color baseline awareness, body weight, body condition scoring. A dot-grid notebook is how the jaw, shoulder, groin, and behind-the-knee node check stays a four-site monthly map — it is not a spiral notebook (that lives on what-to-expect-at-the-vet), not a reporter notebook (that lives on choosing-a-veterinarian), not a bound composition book (that lives on labrador-health), and not a dog-com lymph-node anatomy chart. Paint-chip sample cards are how the gum-color baseline stays a pink-versus-pale comparison — they are not round color-coding labels (that live on breed-specific-risk), not an assorted highlighter set (that lives on what-pet-insurance-covers), and not a dog-com gum-color assessment chart.</li>
+          <li><strong>From age 8:</strong> Every 6 months for everything. Goldens change faster than annual monitoring captures in the senior years. Blood pressure measurement added. An 18-month wall calendar is how that age-6 ultrasound and these every-6-month senior visits stay written on one longer horizon — it is not a monthly desk pad calendar, not a hardcover weekly appointment planner, and not a wall-mounted magnetic monthly planner.</li>
+          <li>Monthly at home: Lymph node check, gum color baseline awareness, body weight, body condition scoring. Paint-chip sample cards are how the gum-color baseline stays a pink-versus-pale comparison — they are not round color-coding labels, not an assorted highlighter set, and not a dog-com gum-color assessment chart.</li>
         </ul>
 
         <h2 id="specialist">When to Refer to a Specialist</h2>
@@ -148,33 +149,17 @@ export default function VetsGoldenRetrieverHealthPage() {
         <p>Use the <Link href="/find-a-vet">specialist finder</Link> to locate board-certified specialists near you.</p>
 
         <h2 id="insurance">Pet Insurance — My Honest Recommendation</h2>
-        <p>Pet insurance is widely recommended for new Golden Retriever owners for one reason: with a 60%+ lifetime cancer rate, the expected value calculation is unambiguous. Hemangiosarcoma treatment runs $8,000–18,000. Lymphoma chemotherapy runs $5,000–15,000. Orthopedic surgery for hip dysplasia: $3,500–7,000 per joint.</p>
+        <p>Typical US range, checked Oct 2026; varies by clinic and region. dated 2026-10-07.</p>
+        <p>Pet insurance is widely recommended for new Golden Retriever owners because the lifetime cancer rate is high and hip disease is common. Cornell University Hospital for Animals says radiation therapy is approximately $2,500–$7,000, a chemotherapy course over three to six months runs from several hundred dollars to several thousand, and major surgery starts around $500 and rises with the procedure. A February 2025 Dog Cancer Foundation summary of Veterinary Cancer Society figures puts an oncology consultation at $100–$250 and chemotherapy at $150–$600 per dose. NC State Veterinary Hospital lists bone-tumor stereotactic radiation at about $7,500–$8,500 and palliative radiation at about $800–$1,500. University of Missouri Veterinary Health Center lists a total hip replacement consult at $2,000–$2,500, surgery at $8,500–$10,000 per hip, and follow-up at $600–$700. Each hip is quoted separately. Typical US range, checked Oct 2026; varies by clinic and region. dated 2026-10-07.</p>
         <p>The non-negotiable rule: <strong>enroll before the first appointment.</strong> Any condition noted in records before enrollment becomes a pre-existing condition and is excluded. A puppy with a murmur noted at the first exam has a cardiac exclusion for life on most policies. Enroll the week you get the dog, before the first vet visit.</p>
-        <p>For Goldens specifically, well-rated picks include Trupanion (direct vet payment, no per-incident limits, 90% reimbursement) or Healthy Paws (fast claims processing per the carrier, no payout limits). See the <Link href="/reviews/best-pet-insurance">full comparison →</Link></p>
+        <p>This page does not name a recommended carrier. See the <Link href="/reviews/best-pet-insurance">full comparison →</Link></p>
 
-        <h2 id="kit">Golden-retriever-health kit</h2>
-        <p>
-          Everyday physical supplies that match the
-          lymphoma, hemangiosarcoma, and
-          life-stage-monitoring copy on this page
-          — a dot-grid notebook so the monthly
-          jaw, shoulder, groin, and behind-the-
-          knee node check stays a four-site map,
-          paint-chip sample cards so the gum-
-          color baseline stays a pink-versus-pale
-          comparison, and an 18-month wall
-          calendar so the age-6 ultrasound and
-          age-8 every-6-month visits stay written
-          on one longer horizon. These are
-          educational Golden-retriever-health /
-          paperwork tools, not a ranked product
-          list, not a substitute for veterinary
-          care, and not a treatment. This page does not
-          claim hands-on testing. </p>
+        <h2 id="kit">Supplies named on this page</h2>
+        <p>Keep these on hand: paint chip sample cards and 18 month wall calendar. These are educational Golden-retriever-health / paperwork tools, not a ranked product list, not a substitute for veterinary care, and not a treatment.</p>
 
-        <AffiliateDisclosure variant="inline" siteId="vets-co" />
+        <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/paint+chip+sample+cards?s=breeds-golden-retriever-health", "/go/amazon-brand/18+month+wall+calendar?s=breeds-golden-retriever-health"]} />
 
-        {/* Money path — live amazon-brand search hops
+        {/* Shop note — live amazon-brand search buttons
             (dot-grid notebook /
             paint-chip sample cards /
             18-month wall calendar).
@@ -183,9 +168,9 @@ export default function VetsGoldenRetrieverHealthPage() {
             tools, not a ranked product list, not
             a substitute for veterinary care, no
             Rx / first-aid kit / thermometer /
-            carrier / insurance-brand ASIN hops.
+            carrier / insurance-brand product page buttons.
             ShopCtas hides empty Chewy; never href="#"
-            or PLACEHOLDER. Category searches only —
+            or an empty link. Amazon searches only —
             unused vs #1175
             flexible+sewing+tape+measure /
             bound+composition+book /
@@ -207,11 +192,7 @@ export default function VetsGoldenRetrieverHealthPage() {
           </div>
           <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
           <div className="flex flex-col gap-3">
-            <ShopCtas
-              amazonHref="/go/amazon-brand/dot+grid+notebook?s=breeds-golden-retriever-health"
-              amazonLabel="Browse dot-grid notebooks on Amazon →"
-            />
-            <ShopCtas
+<ShopCtas
               amazonHref="/go/amazon-brand/paint+chip+sample+cards?s=breeds-golden-retriever-health"
               amazonLabel="Browse paint-chip sample cards on Amazon →"
             />
@@ -232,9 +213,11 @@ export default function VetsGoldenRetrieverHealthPage() {
           The Dog.com Golden Retriever page is the owner-side guide for this breed: size, temperament, and everyday care.
         </CrossSiteHelp>
         <h2 id="faq">FAQ</h2>
+        <p>Typical US range, checked Oct 2026; varies by clinic and region. dated 2026-10-07.</p>
         <FAQAccordion
           items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))}
           allowMultiple
+          includeSchema={false}
         />
       </div>
     </ArticleLayout>

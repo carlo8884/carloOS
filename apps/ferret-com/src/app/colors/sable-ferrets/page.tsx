@@ -9,7 +9,6 @@ import {
   CalloutBox,
   ArticleByline,
   DropCap,
-  AffiliateDisclosure,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -38,7 +37,6 @@ const articleSchema = buildArticleSchema({
   publishedAt: '2026-06-01T00:00:00Z',
   modifiedAt: '2026-06-01T00:00:00Z',
 })
-
 
 const FAQS = [
   {
@@ -110,7 +108,7 @@ export default function SableFerretsPage() {
 
           </>
         }
-      
+
         relatedLinks={[
           { title: 'Ferret Colors Hub', href: '/colors' },
           { title: 'Ferret Colors & Patterns', href: '/colors/ferret-colors-and-patterns' },
@@ -250,22 +248,7 @@ export default function SableFerretsPage() {
             exotic-mammal vet visit.
           </p>
 
-                    
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated ferret sable bandit-mask chart /
-              ferret fridge sable-vs-black-sable card /
-              mustelid sable reference handbook).
-              Educational kitchen searches only; no Rx /
-              vaccine / aging hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs tools / reviews /
-              diet / care / behavior / health / ownership /
-              colors-hub / first-year-schedule /
-              colors-and-patterns kitchen kits and child
-              finger+toothbrush / carnivore+care hops.
-              Do not re-open #1165 / what-to-expect. */}
                   </div>
       </ArticleLayout>
     </>

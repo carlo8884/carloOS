@@ -1,11 +1,12 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, AffiliateDisclosure, ArticleSourcesList, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, ArticleSourcesList, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
 const SOURCES = [
-  { label: "Columnaris Disease (Flavobacterium columnare) — Merck Veterinary Manual", url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/aquarium-fish/columnaris-disease-in-fish", publisher: "Merck Vet Manual" },
+  { label: "Columnaris Disease (Flavobacterium columnare) — Merck Veterinary Manual", url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/aquarium-fish/bacterial-diseases-of-fish", publisher: "Merck Vet Manual" },
   { label: "Sheppard, B.J., Phillips, B.A. and Lapatra, S.E. Columnaris Disease — UF/IFAS Extension FA-31.", url: "https://edis.ifas.ufl.edu/publication/FA031", publisher: "UF/IFAS Extension" },
   { label: "Noga, E.J. Fish Disease: Diagnosis and Treatment, 2nd ed. Wiley-Blackwell, 2010.", publisher: "Wiley-Blackwell" },
   { label: "Yanong, R.P.E. Use of Chemicals in Aquaculture in the United States — UF/IFAS Extension FA-54.", url: "https://edis.ifas.ufl.edu/publication/FA054", publisher: "UF/IFAS Extension" },
@@ -64,21 +65,21 @@ export default function ColumnarisguidePage() {
         <h2>Water Quality and Prevention</h2>
         <p>Columnaris, like most bacterial fish diseases, opportunistically infects fish that are stressed or immunocompromised. The most common predisposing factor: elevated nitrate, ammonia, or nitrite. Overcrowding, rough handling (net injuries), shipping stress, and oxygen-poor water all increase vulnerability. Prevention: pristine water quality, avoid overcrowding, acclimate fish carefully to minimize handling stress, and quarantine new fish before adding to established tanks.</p>
 
-        {/* Money path — live amazon-brand search hops (water-first / hospital-tank kit).
-            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-            Category searches only — not a ranked list. No medication hops. */}
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        {/* Shop note — live amazon-brand search buttons (water-first / hospital-tank kit).
+            ShopCtas hides empty Chewy; never href="#" or an empty link.
+            Amazon searches only — not a ranked list. No medication buttons. */}
+        <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/api+freshwater+master+test+kit?s=health-columnaris", "/go/amazon-brand/aquarium+quarantine+hospital+tank+net?s=health-columnaris", "/go/amazon-brand/aquarium+sponge+filter?s=health-columnaris", "/go/amazon-brand/eheim+jager+heater?s=health-columnaris", "/go/amazon-brand/aquarium+digital+thermometer?s=health-columnaris"]} />
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
-            Shop a water-first hospital-tank kit
+            Shop these supplies
           </div>
           <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Fix the water first — a liquid master kit is how you see ammonia,
             nitrite, and nitrate that let columnaris take hold. Isolate in a
             spare hospital tank with a seeded sponge filter so treatment stays
             off the display biofilter, a heater rated for the tank so you can
             hold 72°F or lower when the species tolerates it, and a separate
-            digital thermometer so the dial is not the only reading. Same
-            test-kit hop used on the{' '}
+            digital thermometer so the dial is not the only reading. The same
+            test-kit button is on the{' '}
             <Link
               href="/health/fish-disease-guide"
               className="text-brand-primary no-underline hover:underline"
@@ -92,7 +93,7 @@ export default function ColumnarisguidePage() {
             >
               water-test kit review
             </Link>
-            . Same hospital-tank hop used on the{' '}
+            . The same hospital-tank button is on the{' '}
             <Link
               href="/tools/fish-disease-symptom-checker"
               className="text-brand-primary no-underline hover:underline"
@@ -103,20 +104,19 @@ export default function ColumnarisguidePage() {
             <Link href="/health/bacterial-infections" className="text-brand-primary no-underline hover:underline">
               bacterial infections guide
             </Link>
-            . Same sponge-filter hop used on the{' '}
+            . The same sponge-filter button is on the{' '}
             <Link
               href="/tools/aquarium-cycling-estimator"
               className="text-brand-primary no-underline hover:underline"
             >
               cycling estimator
             </Link>
-            . Same heater and thermometer hops used on the{' '}
+            . The same heater and thermometer buttons are on the{' '}
             <Link href="/setup" className="text-brand-primary no-underline hover:underline">
               aquarium setup guide
             </Link>
             . They are not a ranked product list, they are not medications,
-            and they do not treat, reverse, or cure columnaris. Fish.com earns
-            a commission on qualifying purchases at no extra cost to you.</p>
+            and they do not treat, reverse, or cure columnaris.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/api+freshwater+master+test+kit?s=health-columnaris"
@@ -132,7 +132,7 @@ export default function ColumnarisguidePage() {
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/eheim+jager+heater?s=health-columnaris"
-              amazonLabel="Browse aquarium heaters on Amazon →"
+              amazonLabel="Browse Eheim Jager heaters on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+digital+thermometer?s=health-columnaris"

@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas, PrimaryHop, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -72,6 +73,10 @@ export default function ChokePage() {
           { title: 'Forage Basics', href: '/nutrition/forage-basics' },
           { title: 'Is This a Horse Emergency?', href: '/tools/is-this-a-horse-emergency' },
         ]}
+        heroHop={<>
+          <PrimaryHop href="/go/amazon-brand/lidded+5+gallon+feed+soaking+pail?s=health-choke" label="Search Amazon for a lidded feed-soaking pail" />
+          <HopDisclosure tone="on-dark" siteId="horses-com" href="/go/amazon-brand/lidded+5+gallon+feed+soaking+pail?s=health-choke" />
+        </>}
         hero={{
           title: "Choke in Horses",
           subtitle:
@@ -126,6 +131,7 @@ export default function ChokePage() {
             updatedAt="2026-09-05"
             reviewedBy="Editorial team"
           />
+          <LastUpdated date="2026-10-09" />
 
           <h2 id="what">What Choke Is</h2>
           <p>In horses, choke means an obstruction of the esophagus -- the muscular tube carrying food from the throat to the stomach -- not of the windpipe. Because the airway is usually unaffected, a choking horse can typically still breathe, which distinguishes it from human choking. The obstruction prevents the horse from swallowing, so saliva and feed back up and may spill out of the nose and mouth.</p>
@@ -150,33 +156,20 @@ export default function ChokePage() {
 
           <h2 id="prevention">Prevention</h2>
           <ul>
-            <li><strong>Soak feeds that swell or pack</strong> such as beet pulp and dry pellets, especially for fast or older eaters. A lidded 5-gallon feed-soaking pail is how that mash stays fully wet before it hits the tub — it is not a hay-soaking bag (that lives on heaves), not a hay steamer, and not a mash hop (that lives on equine dental care).</li>
-            <li><strong>Slow down greedy eaters</strong> with large smooth stones in the feed tub, slow feeders, or spreading feed out. Large smooth feed-tub rocks are how a bolting eater works around obstacles instead of packing a dry mouthful — they are not a slow-feeder hay net (that lives on the feed calculator and forage-basics), not a small-hole hay net (that lives on the easy-keeper page), and not an equine slow-feeder hay box (that lives on turnout-vs-stabling).</li>
+            <li><strong>Soak feeds that swell or pack</strong> such as beet pulp and dry pellets, especially for fast or older eaters. A lidded 5-gallon feed-soaking pail is how that mash stays fully wet before it hits the tub — it is not a hay-soaking bag, not a hay steamer.</li>
+            <li><strong>Slow down greedy eaters</strong> with large smooth stones in the feed tub, slow feeders, or spreading feed out. Large smooth feed-tub rocks are how a bolting eater works around obstacles instead of packing a dry mouthful — they are not a slow-feeder hay net, not a small-hole hay net, and not an equine slow-feeder hay box.</li>
             <li><strong>Maintain dental care</strong> so the horse can chew properly; poor dentition is a leading risk factor. See the <a href="/guides/equine-dental-care">equine dental-care guide</a>.</li>
-            <li><strong>Cut treats small</strong> and feed at ground level to encourage natural chewing and swallowing. An apple wedger slicer is how apples and carrots go in as sticks, not coins — it is not a treat hopper and not a dental hay-cube hop.</li>
+            <li><strong>Cut treats small</strong> and feed at ground level to encourage natural chewing and swallowing. An apple wedger slicer is how apples and carrots go in as sticks, not coins — it is not a treat hopper.</li>
             <li><strong>Wait after sedation</strong> before feeding, since sedation impairs swallowing.</li>
           </ul>
 
-          <h2 id="kit">Soak-and-slow-feed kit</h2>
+          <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Everyday physical supplies that match the
-            soak-feeds-that-swell, slow-down-greedy-eaters,
-            and cut-treats-small copy on this page — a
-            lidded 5-gallon feed-soaking pail so beet pulp
-            and dry pellets soak fully before they hit the
-            tub, large smooth feed-tub rocks so a bolting
-            eater works around obstacles instead of packing
-            a dry mouthful, and an apple wedger slicer so
-            apples and carrots go in as sticks, not coins. These are educational feeding-management tools,
-            not a ranked product list, not a substitute for
-            veterinary care, and not a treatment. Small-hole hay nets already live
-            on the easy-keeper page. Beet-pulp shreds and pellets already live
-            on the beet-pulp page. This page does not claim
-            hands-on testing. </p>
+            Keep these on hand: a lidded 5-gallon feed-soaking pail so beet pulp and dry pellets soak fully before they hit the tub, large smooth feed-tub rocks so a bolting eater works around obstacles instead of packing a dry mouthful, and an apple wedger slicer so apples and carrots go in as sticks, not coins. These are educational feeding-management tools, not a ranked product list, not a substitute for veterinary care, and not a treatment. </p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/lidded+5+gallon+feed+soaking+pail?s=health-choke", "/go/amazon-brand/large+smooth+feed+tub+rocks?s=health-choke", "/go/amazon-brand/apple+wedger+slicer?s=health-choke"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (lidded 5-gallon feed-soaking pail /
               large smooth feed-tub rocks /
               apple wedger slicer).
@@ -184,9 +177,9 @@ export default function ChokePage() {
               tools, not a ranked product list, not a
               substitute for veterinary care, no Rx /
               first-aid kit / thermometer / hay-net /
-              hay-soaking-bag / mash ASIN hops.
+              hay-soaking-bag / mash product page buttons.
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or an empty link. Amazon searches only —
               unused vs #1093
               48+hour+digital+kitchen+timer /
               lined+telephone+message+pad /
@@ -209,7 +202,7 @@ export default function ChokePage() {
               beet+pulp+pellets+horse+feed.
               First-aid kits, digital equine
               thermometers, and prescriptions
-              are not shoppable hops. */}
+              are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
@@ -234,12 +227,16 @@ export default function ChokePage() {
           <h2 id="faq">Frequently Asked Questions</h2>
           <FAQAccordion items={FAQS} />
 
-          <h2 id="references">References</h2>
-          <ol className="text-sm text-brand-text-mid">
-            <li>Feige K, Schwarzwald C, Furst A, Kaser-Hotz B. “Esophageal Obstruction in Horses.” Equine Veterinary Education and related reviews.</li>
-            <li>Reed SM, Bayly WM, Sellon DC. Equine Internal Medicine, 4th ed., Elsevier, 2018 (esophageal disease).</li>
-            <li>American Association of Equine Practitioners. “Choke in Horses” owner resources. aaep.org.</li>
-          </ol>
+          <div id="references">
+            <ArticleSourcesList
+              title="References"
+              sources={[
+              { label: "Feige K, Schwarzwald C, Furst A, Kaser-Hotz B. “Esophageal Obstruction in Horses.” Equine Veterinary Education and related reviews.", url: "https://beva.onlinelibrary.wiley.com/journal/20423292", publisher: "Equine Veterinary Education" },
+              { label: "Reed SM, Bayly WM, Sellon DC. Equine Internal Medicine, 4th ed., Elsevier, 2018 (esophageal disease).", url: "https://www.elsevier.com/", publisher: "Elsevier" },
+              { label: "American Association of Equine Practitioners. “Choke in Horses” owner resources. aaep.org.", url: "https://aaep.org/", publisher: "AAEP" },
+              ]}
+            />
+          </div>
         </div>
       </ArticleLayout>
     </>

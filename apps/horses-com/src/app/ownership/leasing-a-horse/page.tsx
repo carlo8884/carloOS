@@ -1,5 +1,7 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { AffiliateDisclosure, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ShopCtas, TableOfContents } from '@carloOS/ui'
+import Link from 'next/link'
+import { ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ShopCtas, TableOfContents, ComparisonFoot, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -82,7 +84,7 @@ export default function LeasingHorsePage() {
             { label: "On-Site vs Off-Site", href: "#location" },
             { label: "The Lease Agreement", href: "#agreement" },
             { label: "Pros and Cons", href: "#proscons" },
-            { label: "Lease paperwork", href: "#kit" },
+            { label: "Next step", href: "#kit" },
             { label: "FAQ", href: "#faq" },
             { label: "References", href: "#references" },
           ]} />
@@ -106,47 +108,45 @@ export default function LeasingHorsePage() {
             updatedAt="2026-09-06"
             reviewedBy="Editorial team"
           />
+          <LastUpdated date="2026-10-10" />
 
           <h2 id="what">What a Lease Is</h2>
           <p>A horse lease is an arrangement in which a rider gets the use of a horse they do not own, in exchange for covering some or all of its costs and following agreed conditions. The owner keeps ownership but offloads some cost and ensures the horse is ridden; the lessee gets riding time and experience without buying. Leasing is widely used as a stepping stone toward ownership, as a way to ride more than lessons allow, and as a flexible option for outgrown or temporarily idle horses.</p>
-          <p>
-            A horse lease agreement document binder
-            is how the term, fee, cost split,
-            permitted use, veterinary decisions,
-            insurance, and early-end conditions
-            stay in writing instead of living in
-            a text thread — it is not a horse
-            boarding contract document binder
-            (that lives on boarding-options and
-            records yard fees, not a lease of the
-            horse), not a horse insurance policy
-            document binder (that lives on
-            horse-insurance), and not a horse
-            pre-purchase exam records binder
-            (that lives on buying-your-first-horse). </p>
 
           <h2 id="types">Full vs Partial Lease</h2>
           <p>The two broad types differ by how much of the horse the lessee gets. In a full lease, the lessee has the horse essentially to themselves and typically covers all or most of its costs -- board, farrier, routine vet, and so on -- almost like temporary ownership. In a partial or share lease (often a half lease), the lessee rides on certain days and shares the costs proportionally with the owner or other sharers. Partial leases suit riders wanting regular riding at a fraction of full cost.</p>
-          <p>
-            A horse full vs partial lease
-            cost-share worksheet is how full-lease
-            versus half-lease riding days and who
-            pays board, farrier, and routine vet
-            stay on one page before anyone
-            commits — it is not a horse ownership
-            monthly budget worksheet (that lives
-            on cost-of-owning-a-horse and totals
-            forever keep, not a shared lease),
-            not a horse mortality vs major-medical
-            decision worksheet (that lives on
-            horse-insurance), and not an equine
-            emergency fund expense tracker
-            notebook (that lives on
-            cost-of-owning-a-horse). This page
-            does not hop keep-feed-farrier cost
-            logs, farrier log books, or VCPR
-            records folders already pinned
-            elsewhere. </p>
+          <div className="my-6 max-w-full min-w-0">
+            <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
+              <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+              <thead>
+                <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Full lease</th>
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Partial lease</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Use</th>
+                  <td className="p-3">The horse essentially to yourself</td>
+                  <td className="p-3">Certain days, shared with the owner or other sharers</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Costs</th>
+                  <td className="p-3">All or most: board, farrier, and routine vet</td>
+                  <td className="p-3">Shared proportionally</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Where the horse usually stays</th>
+                  <td className="p-3">Off-site is more typical, with more independence and more responsibility</td>
+                  <td className="p-3">On-site is common, so the routine stays put</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <ComparisonFoot updated="2026-10-10" />
+          <h2>Who should lease which way</h2>
+          <p>Choose a full lease when you want something close to temporary ownership and can cover most of the costs. Choose a partial lease when you want regular riding at a fraction of that cost. Put the cost split in the written agreement either way.</p>
 
           <h2 id="location">On-Site vs Off-Site</h2>
           <p>Leases also differ by where the horse stays. In an on-site lease the horse remains at its current barn, which is common for partial leases and keeps the owner close and the routine stable. In an off-site lease the lessee moves the horse to their own yard, more typical of a full lease and giving more independence but also more responsibility. The location affects cost, oversight, and how much the owner stays involved in the horse&apos;s daily life.</p>
@@ -160,111 +160,31 @@ export default function LeasingHorsePage() {
             <li><strong>Address veterinary decisions and emergencies</strong> -- who decides and who pays in an emergency or for major treatment.</li>
             <li><strong>Cover insurance and liability</strong> and the conditions for ending the lease early.</li>
           </ul>
-          <p>
-            The same horse lease agreement
-            document binder is how those five
-            written clauses stay with the lease
-            instead of living in a phone photo
-            roll — it is not a horse keep /
-            feed / farrier cost log binder
-            (that lives on
-            cost-of-owning-a-horse), not a
-            horse veterinary history / VCPR
-            records folder (that lives on
-            choosing-a-vet), and not a horse
-            insurance policy document binder
-            (that lives on horse-insurance). This
-            page does not invent clinic
-            listings. </p>
+          <p>Put the term, fee, cost split, permitted use, veterinary decisions, insurance, and early-end conditions in the written agreement. This page does not shop a lease binder. The <a href="/tools/horse-cost-calculator">horse cost calculator</a> prices the costs a lease still has to cover, and the <a href="/ownership/horse-insurance">horse insurance guide</a> is the insurance clause.</p>
 
           <h2 id="proscons">Pros and Cons</h2>
           <p>Leasing lets a rider gain experience, ride regularly, and try the responsibilities of ownership at lower cost and risk, with the flexibility to walk away at the end of the term -- ideal for testing whether you are ready to buy. The downsides are that you do not own the horse and may have to give it up, you ride within the owner&apos;s rules, and a poorly defined arrangement can lead to disputes over costs, care decisions, and an injured horse. A good lease rests on a fair, specific, written agreement and a trustworthy owner.</p>
           
 
-          <h2 id="kit">Lease paperwork</h2>
-          
-
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
-
-          {/* Money path — live amazon-brand search hops
-              (horse lease agreement document binder /
-              laminated horse lease walkthrough checklist /
-              horse full vs partial lease cost-share
-              worksheet).
-              Educational owner searches only; no Rx /
-              vaccine ASIN hops. ShopCtas hides empty
-              Chewy; never href="#" or PLACEHOLDER.
-              Unused vs #1134
-              horse+insurance+policy+document+binder /
-              laminated+horse+insurance+claims+checklist /
-              horse+mortality+vs+major+medical+decision+worksheet, #1133
-              horse+ownership+monthly+budget+worksheet /
-              equine+emergency+fund+expense+tracker+notebook /
-              horse+keep+feed+farrier+cost+log+binder, #1132
-              laminated+equine+vet+interview+checklist /
-              horse+after+hours+emergency+cover+question+card /
-              horse+veterinary+history+vcpr+records+folder, #1131
-              first+horse+buyer+visit+field+notebook /
-              laminated+first+horse+tryout+walkthrough+checklist /
-              horse+pre+purchase+exam+records+binder, #1130
-              laminated+horse+boarding+facility+walkthrough+checklist /
-              horse+boarding+contract+document+binder /
-              waterproof+horse+hay+bale+storage+tarp, #1129
-              sterile+saline+wound+flush+horse /
-              nonstick+wound+dressing+pads+horse /
-              equine+bandage+scissors, #1128
-              laminated+horse+barn+calculator+tools+chart /
-              horse+stall+door+measurement+card /
-              equine+calculator+reference+handbook, #1127
-              laminated+horse+barn+owner+guides+chart /
-              horse+stall+door+owner+guides+card /
-              equine+owner+guides+reference+handbook, #1126
-              laminated+horse+barn+daily+care+chart /
-              horse+stall+door+care+card /
-              equine+husbandry+reference+handbook, #1125
-              laminated+horse+barn+emergency+triage+chart /
-              horse+stall+door+vital+signs+card /
-              equine+health+reference+handbook, #1124
-              laminated+horse+barn+forage+first+chart /
-              horse+stall+door+ration+card /
-              equine+nutrition+reference+handbook,
-              grimace / emergency
-              equine+first+aid+kit /
-              digital+veterinary+thermometer /
-              vet+wrap+bandage /
-              poultice,
-              cost-calculator
-              horse+barn+first+aid+kit /
-              horse+halter+lead+rope,
-              farrier-schedule
-              cordless+barn+flood+light /
-              equine+farrier+log+book,
-              flu
-              weatherproof+storage+clipboard,
-              trailering
-              horse+shipping+boots /
-              horse+trailer+ties,
-              helmet-guide
-              ASTM+SEI+horse+riding+helmet. */}
-          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+          <h2 id="kit">Next step</h2>
+          <HopDisclosure siteId="horses-com" href="/go/amazon-brand/equine+supplement?s=ownership-leasing-a-horse" />
+          <div id="lease-next" className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop related supplies
+              Next step
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">A lease still has to name who pays for supplements. This page does not shop a lease binder. The cost calculator is the rest of that split.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/horse+lease+agreement+document+binder?s=ownership-leasing-a-horse"
-                amazonLabel="Browse horse lease agreement document binders on Amazon →"
-              />
-              <ShopCtas
                 amazonHref="/go/amazon-brand/equine+supplement?s=ownership-leasing-a-horse"
-                amazonLabel="Shop equine supplements on Amazon"
+                amazonLabel="Browse equine supplement on Amazon →"
               />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/horse+full+vs+partial+lease+cost+share+worksheet?s=ownership-leasing-a-horse"
-                amazonLabel="Browse horse full vs partial lease cost-share worksheets on Amazon →"
-              />
-          </div>
+              <Link
+                href="/tools/horse-cost-calculator"
+                className="inline-block bg-brand-primary text-white font-semibold px-5 py-2.5 rounded-md no-underline hover:bg-brand-primary-dark"
+              >
+                Estimate the costs a lease still has to cover →
+              </Link>
+            </div>
           </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>

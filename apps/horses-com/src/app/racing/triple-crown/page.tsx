@@ -13,6 +13,7 @@
  * year-by-year statistics.
  */
 
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import {
   buildMetadata,
@@ -22,7 +23,6 @@ import {
   RelatedLinks,
   TableOfContents,
   FAQAccordion,
-  AffiliateDisclosure,
   ShopCtas,
   buildArticleSchema,
   SchemaScript,
@@ -242,19 +242,8 @@ export default function TripleCrownPage() {
             <li>Daily Racing Form. Historical use of the term &quot;Triple Crown&quot; (Charles Hatton). drf.com.</li>
           </ol>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href="/go/amazon-brand/horse+blanket?s=racing-triple-crown" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated horse derby-preakness-belmont chart /
-              horse stall-door Belmont test card /
-              equine thirteen-winner handbook).
-              No existing product hop to keep.
-              Educational barn searches only; no Rx /
-              vaccine / flea / heartworm / nsaid hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs race-types /
-              racing-for-newcomers hops.
-              Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
@@ -263,7 +252,7 @@ export default function TripleCrownPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/horse+blanket?s=racing-triple-crown"
-                amazonLabel="Shop on Amazon"
+                amazonLabel="Browse horse blankets on Amazon →"
               />
           </div>
           </div>

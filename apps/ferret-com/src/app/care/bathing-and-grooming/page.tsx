@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import { TableShopLink, ComparisonFoot,
   buildMetadata,
@@ -10,8 +11,6 @@ import { TableShopLink, ComparisonFoot,
   ArticleByline,
   DropCap,
   ReviewCard,
-  ScoreMethodology,
-  AffiliateDisclosure,
   CrossPortfolioCard,
   ArticleSourcesList,
   ShopCtas,
@@ -70,7 +69,6 @@ const articleSchema = buildArticleSchema({
   citation: SOURCES,
 })
 
-
 const FAQS = [
   {
     question: 'How often should I bathe my ferret?',
@@ -107,7 +105,6 @@ const faqSchema = buildFAQSchema({ questions: FAQS })
 
 const combined = combineSchemas(articleSchema, faqSchema)
 
-
 export default function FerretBathingGroomingPage() {
   return (
     <>
@@ -115,6 +112,14 @@ export default function FerretBathingGroomingPage() {
       <ArticleLayout
         siteId="ferret-com"
         contentType="care"
+        heroHop={
+          <>
+            <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/ferret+kibble?s=bathing-and-grooming" />
+            <div className="mb-4" data-primary-hop="true">
+              <a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" data-shop-placement="hero" href="/go/amazon-brand/ferret+kibble?s=bathing-and-grooming">Browse ferret kibble on Amazon →</a>
+            </div>
+          </>
+        }
         hero={{
           title: 'Ferret Bathing and Grooming',
           subtitle:
@@ -133,7 +138,7 @@ export default function FerretBathingGroomingPage() {
           <>
             <TableOfContents
               items={[
-                { label: 'TL;DR', href: '#tldr' },
+                { label: '', href: '#tldr' },
                 { label: 'Where the Smell Comes From', href: '#smell' },
                 { label: 'Bathing Frequency', href: '#frequency' },
                 { label: 'How to Bathe Safely', href: '#how' },
@@ -159,7 +164,7 @@ export default function FerretBathingGroomingPage() {
 
           </>
         }
-      
+
         relatedLinks={[
           { title: 'Ferret Care Hub', href: '/care' },
           { title: 'Ear Cleaning', href: '/care/ear-cleaning' },
@@ -194,8 +199,7 @@ export default function FerretBathingGroomingPage() {
             to look like at baseline.
           </DropCap>
 
-          <h2 id="tldr">TL;DR</h2>
-          <p>
+                    <p>
             Ferrets need bathing at most every 2-3 months — frequent
             bathing makes them smell worse, not better. Use a
             ferret-specific or unscented kitten shampoo. Clean ears every
@@ -286,7 +290,7 @@ export default function FerretBathingGroomingPage() {
             alter coat smell). The smell load in a ferret household is
             mostly from accumulated oils in bedding, not from the
             ferret itself.
-          </p>
+           <a href="/care/bedding-and-litter-types">Bedding and litter types</a> is the bedding in that weekly wash.</p>
 
           <h2 id="how">How to Bathe Safely</h2>
           <ol>
@@ -515,21 +519,7 @@ export default function FerretBathingGroomingPage() {
             </p>
           </CalloutBox>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated ferret bath-less-frequency chart /
-              ferret fridge shampoo-choice card /
-              mustelid grooming-reference handbook).
-              Keep existing Marshall + Chewy review hops.
-              Educational kitchen searches only; no Rx /
-              vaccine / aging hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs care-hub /
-              supplies / seasonal-shedding kitchen kits.
-              Directory import left untouched. Ferret
-              aging stays held.
-              Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop supplies
@@ -538,54 +528,57 @@ export default function FerretBathingGroomingPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/ferret+kibble?s=bathing-and-grooming"
-                amazonLabel="Shop on Amazon"
+                amazonLabel="Browse ferret kibble on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/ferret+kibble?s=bathing-and-grooming"
-                amazonLabel="Shop on Amazon"
+                amazonLabel="Browse ferret kibble on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/ferret+kibble?s=bathing-and-grooming"
-                amazonLabel="Shop on Amazon"
+                amazonLabel="Browse ferret kibble on Amazon →"
               />
             </div>
           </div>
 
           <h2 id="picks">Grooming Kit Picks</h2>
           <p>
-            A minimal kit that covers occasional bathing, monthly ear cleaning, and every-2–3-week nail trims. This is a documented-spec comparison drawing on widely-stocked products in US pet retail and the shampoo and ear-product categories referenced in standard exotic-pet practice; the page does not claim hands-on testing. Avoid any shampoo containing tea tree oil — it is toxic to ferrets.
+            A minimal kit that covers occasional bathing, monthly ear cleaning, and every-2–3-week nail trims. Avoid any shampoo containing tea tree oil — it is toxic to ferrets.
           </p>
-          <ScoreMethodology />
-          <ReviewCard
+          <p className="mb-4 text-sm font-semibold leading-snug">
+            <a href="/care/odor-and-scent-control" className="inline-block max-w-full whitespace-normal text-brand-primary underline underline-offset-2">
+              Read the odor guide before you add a bath →
+            </a>
+          </p>
+          <ReviewCard quietUntilTag
             id="marshall-ferret-shampoo"
             badge="Shampoo Default"
             name="Marshall Ferret Shampoo (Original / Fragrance-Free)"
             subtitle="Ferret-specific pH-balanced shampoo, no tea tree"
-            score={8.5}
             winner
             description={
-              <p>Marshall's standard ferret shampoo line — pH-balanced for ferret skin and free of the tea tree oil that the company sometimes includes in other variants. Pick the original or fragrance-free SKUs and avoid any version with tea tree on the ingredient list. The first-line shampoo across exotic-pet ferret practice and a sensible default for the every-2–3-month bathing schedule.</p>
+              <p>Marshall's original ferret-shampoo product page no longer resolves. This button opens Marshall's current shampoo search. Marshall's standard ferret shampoo line — pH-balanced for ferret skin and free of the tea tree oil that the company sometimes includes in other variants. Pick the original or fragrance-free versions and avoid any version with tea tree on the ingredient list. The first-line shampoo across exotic-pet ferret practice and a sensible default for the every-2–3-month bathing schedule.</p>
             }
             specs={[
               { label: 'pH', value: 'Ferret-appropriate', highlight: 'good' },
-              { label: 'Tea tree oil', value: 'None (in this SKU)', highlight: 'good' },
+              { label: 'Tea tree oil', value: 'None (in this version)', highlight: 'good' },
               { label: 'Fragrance', value: 'None or mild' },
               { label: 'Distribution', value: 'National chain pet retail' },
             ]}
-            pros={['Ferret-specific formulation', 'pH-balanced', 'Original / fragrance-free SKUs available', 'Widely stocked']}
+            pros={['Ferret-specific formulation', 'pH-balanced', 'Original / fragrance-free versions available', 'Widely stocked']}
             cons={['Marshall also sells tea-tree variants — read the label every time', 'Bottle is small for the price']}
             price="$8–14"
+            priceNote="dated 2026-10-04."
             ctaText="Find Marshall ferret shampoo"
-            ctaHref="/go/marshall/ferret-shampoo-original?s=care-bathing-and-grooming"
+            ctaHref="/go/marshall/ferret+shampoo?s=care-bathing-and-grooming"
             ctaAffiliateProgram="marshall"
-            ctaAffiliateProduct="ferret-shampoo-original"
+            ctaAffiliateProduct="ferret+shampoo"
           />
-          <ReviewCard
+          <ReviewCard quietUntilTag
             id="pet-ear-cleaner"
             badge="Ear Care"
             name="Vet-Approved Pet Ear Cleaner (Epi-Otic style)"
             subtitle="Gentle pet ear cleaner used in exotic-pet practice"
-            score={8.4}
             description={
               <p>A standard veterinary ear cleaner is the right tool for routine ferret ear cleaning every 2–4 weeks. Apply to a cotton ball or gauze pad — never directly into the canal — and wipe the visible ear flap and canal entrance. Do not use human ear products, alcohol, or hydrogen peroxide. If you see dark coffee-ground debris (possible ear mites) or coloured discharge, stop and book an exotic-pet vet visit before continuing home cleaning.</p>
             }
@@ -597,13 +590,18 @@ export default function FerretBathingGroomingPage() {
             pros={['Used in exotic-pet practice for ferret ear cleaning', 'Gentle on ferret canal', 'Available without prescription on most pet retailers']}
             cons={['Not a treatment for ear mites or infection — those need a vet', 'Bottle is small relative to long-term use']}
             price="$10–20"
+            priceNote="dated 2026-10-04."
           />
-          <ReviewCard
+          <p className="mb-4 text-sm font-semibold leading-snug">
+            <a href="/care/nail-trimming" className="inline-block max-w-full whitespace-normal text-brand-primary underline underline-offset-2">
+              Read the nail-trim guide before you buy clippers →
+            </a>
+          </p>
+          <ReviewCard quietUntilTag
             id="pet-nail-kit"
             badge="Nail Care"
             name="Small-Pet Nail Clippers + Styptic Powder"
             subtitle="Small clippers sized for ferret nails plus styptic for accidents"
-            score={8.0}
             description={
               <p>Ferret nails are non-retractable and grow continuously — every 2–3 weeks is the standard trim cadence. Use small pet nail clippers (not human clippers; the geometry is wrong). Keep styptic powder (Kwik Stop or equivalent) on hand for the occasional quick — apply a small amount to the bleeding end and bleeding stops within seconds. The belly-treat two-person method described in the nail-trim section above keeps the ferret cooperative.</p>
             }
@@ -615,14 +613,15 @@ export default function FerretBathingGroomingPage() {
             pros={['Right tool geometry for ferret nails', 'Quick-styptic stops accidents in seconds', 'One-time purchase, lasts years']}
             cons={['Cheap clippers go dull quickly — buy reasonable mid-tier', 'First few trims with a new ferret are stressful regardless of tool']}
             price="$10–18"
-            ctaText="Find small-pet nail clippers"
+            priceNote="dated 2026-10-04."
+            ctaText="Find small-pet nail clippers and styptic powder on Amazon"
             ctaHref="/go/chewy-brand/small+pet+nail+clipper+styptic+powder?s=care-bathing-and-grooming"
             ctaAffiliateProgram="chewy-brand"
             ctaAffiliateProduct="small+pet+nail+clipper+styptic+powder"
           />
 
           <h2 id="who">Who should buy which</h2>
-          <p>The three grooming cards already name the tool, the price, and what it does not treat. This table only lines those facts up. Scores are this page&apos;s editorial scores, not customer star ratings.</p>
+          <p>The three grooming cards already name the tool, the price, and what it does not treat. This table only lines those facts up.</p>
           <div className="overflow-x-auto my-6 max-w-full">
             <table className="w-full text-sm border-collapse table-fixed sm:table-auto min-w-0 sm:min-w-[36rem] [&_th]:break-words [&_td]:break-words">
               <thead>
@@ -636,7 +635,7 @@ export default function FerretBathingGroomingPage() {
               <tbody>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 text-brand-text-mid">A ferret shampoo without tea tree</td>
-                  <td className="p-3 font-bold text-brand-dark"><a href="#marshall-ferret-shampoo" className="text-brand-primary">Marshall Ferret Shampoo</a><TableShopLink href={"/go/marshall/ferret-shampoo-original?s=care-bathing-and-grooming"} product={"Marshall Ferret Shampoo"} /></td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#marshall-ferret-shampoo" className="text-brand-primary">Marshall Ferret Shampoo</a><TableShopLink quietUntilTag href={"/go/marshall/ferret+shampoo?s=care-bathing-and-grooming"} product={"Marshall Ferret Shampoo"} /></td>
                   <td className="p-3 text-brand-text-mid">Shampoo Default. Original or fragrance-free. pH-balanced. $8–14</td>
                   <td className="p-3 text-brand-text-mid">The bottle is a tea-tree variant. The card says read the label every time</td>
                 </tr>
@@ -655,7 +654,7 @@ export default function FerretBathingGroomingPage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-05" />
+          <ComparisonFoot updated="2026-10-09" />
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />

@@ -11,6 +11,7 @@
  * Byline: Horses.com Editorial (no fabricated credentials).
  */
 
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import {
   ArticleLayout,
   ArticleByline,
@@ -18,7 +19,6 @@ import {
   RelatedLinks,
   TableOfContents,
   FAQAccordion,
-  AffiliateDisclosure,
   ShopCtas,
   buildArticleSchema,
   buildFAQSchema,
@@ -164,19 +164,8 @@ export function NewcomerSpokePage({ spoke }: { spoke: NewcomerSpoke }) {
 
           {spoke.slug === 'how-to-read-a-race-card' ? (
             <>
-              <AffiliateDisclosure variant="inline" siteId="horses-com" />
+              <HopDisclosure siteId="horses-com" href="/go/amazon-brand/daily+racing+form?s=racing-for-newcomers-how-to-read-a-race-card" />
 
-              {/* Money path — live amazon-brand search hops
-                  (laminated horse race-card-field chart /
-                  horse stall-door form-line card /
-                  equine program-literacy handbook).
-                  No existing product hop to keep.
-                  Educational barn searches only; no Rx /
-                  vaccine / flea / heartworm / nsaid hops.
-                  ShopCtas hides empty Chewy; never href="#"
-                  or PLACEHOLDER. Unused vs racing-for-newcomers
-                  hub / racing-bloodstock hops.
-                  Do not re-open #1165 / what-to-expect. */}
               <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
                   Shop related supplies
@@ -185,7 +174,7 @@ export function NewcomerSpokePage({ spoke }: { spoke: NewcomerSpoke }) {
                 <div className="flex flex-col gap-3">
                   <ShopCtas
                     amazonHref="/go/amazon-brand/daily+racing+form?s=racing-for-newcomers-how-to-read-a-race-card"
-                    amazonLabel="Shop on Amazon"
+                    amazonLabel="Browse Daily Racing Form on Amazon →"
                   />
           </div>
               </div>
@@ -194,19 +183,8 @@ export function NewcomerSpokePage({ spoke }: { spoke: NewcomerSpoke }) {
 
           {spoke.slug === 'a-day-at-the-races' ? (
             <>
-              <AffiliateDisclosure variant="inline" siteId="horses-com" />
+              <HopDisclosure siteId="horses-com" href="/go/amazon-brand/horse+racing+binoculars?s=racing-for-newcomers-a-day-at-the-races" />
 
-              {/* Money path — live amazon-brand search hops
-                  (laminated horse raceday-paddock-ring chart /
-                  horse stall-door call-to-post card /
-                  equine raceday-etiquette handbook).
-                  No existing product hop to keep.
-                  Educational barn searches only; no Rx /
-                  vaccine / flea / heartworm / nsaid hops.
-                  ShopCtas hides empty Chewy; never href="#"
-                  or PLACEHOLDER. Unused vs how-to-read-a-race-card
-                  / racing-for-newcomers hub hops.
-                  Do not re-open #1165 / what-to-expect. */}
               <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
                   Shop related supplies
@@ -215,7 +193,7 @@ export function NewcomerSpokePage({ spoke }: { spoke: NewcomerSpoke }) {
                 <div className="flex flex-col gap-3">
                   <ShopCtas
                     amazonHref="/go/amazon-brand/horse+racing+binoculars?s=racing-for-newcomers-a-day-at-the-races"
-                    amazonLabel="Shop on Amazon"
+                    amazonLabel="Browse racing binoculars on Amazon →"
                   />
           </div>
               </div>
@@ -224,19 +202,8 @@ export function NewcomerSpokePage({ spoke }: { spoke: NewcomerSpoke }) {
 
           {spoke.slug === 'understanding-racing-silks' ? (
             <>
-              <AffiliateDisclosure variant="inline" siteId="horses-com" />
+              <HopDisclosure siteId="horses-com" href="/go/amazon-brand/jockey+racing+silks?s=racing-for-newcomers-understanding-racing-silks" />
 
-              {/* Money path — live amazon-brand search hops
-                  (laminated horse owner-silks-pattern chart /
-                  horse stall-door saddlecloth-number card /
-                  equine racing-colours-register handbook).
-                  No existing product hop to keep.
-                  Educational barn searches only; no Rx /
-                  vaccine / flea / heartworm / nsaid hops.
-                  ShopCtas hides empty Chewy; never href="#"
-                  or PLACEHOLDER. Unused vs a-day-at-the-races
-                  / how-to-read-a-race-card / newcomers-hub hops.
-                  Do not re-open #1165 / what-to-expect. */}
               <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
                   Shop related supplies
@@ -245,7 +212,7 @@ export function NewcomerSpokePage({ spoke }: { spoke: NewcomerSpoke }) {
                 <div className="flex flex-col gap-3">
                   <ShopCtas
                     amazonHref="/go/amazon-brand/jockey+racing+silks?s=racing-for-newcomers-understanding-racing-silks"
-                    amazonLabel="Shop on Amazon"
+                    amazonLabel="Browse jockey racing silks on Amazon →"
                   />
           </div>
               </div>

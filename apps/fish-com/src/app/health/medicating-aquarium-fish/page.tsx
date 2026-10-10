@@ -1,13 +1,14 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, AffiliateDisclosure, ArticleSourcesList, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, ArticleSourcesList, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 
 const SOURCES = [
   { label: "Yanong, R.P.E. Use of Chemicals in Aquaculture in the United States — UF/IFAS Extension FA-54.", url: "https://edis.ifas.ufl.edu/publication/FA054", publisher: "UF/IFAS Extension" },
   { label: "Noga, E.J. Fish Disease: Diagnosis and Treatment, 2nd ed. Wiley-Blackwell, 2010.", publisher: "Wiley-Blackwell" },
-  { label: "Treating Sick Fish — Merck Veterinary Manual", url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/aquarium-fish/treating-sick-fish", publisher: "Merck Vet Manual" },
+  { label: "Treating Sick Fish — Merck Veterinary Manual", url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/aquarium-fish/overview-of-aquarium-fish", publisher: "Merck Vet Manual" },
   { label: "Yanong, R.P.E. Disease Management in Recirculating Aquaculture Systems — UF/IFAS Extension FA-107.", url: "https://edis.ifas.ufl.edu/publication/FA107", publisher: "UF/IFAS Extension" },
 ]
 
@@ -47,7 +48,7 @@ export default function MedicatingFishPage() {
         <DropCap>The most important rule of fish medication is that it should rarely be the first response. A great many problems that prompt a trip to the medication shelf — clamped fins, lethargy, a touch of fin erosion, rapid breathing — are caused by water quality or stress, not by a pathogen that a drug can fix. Dosing such a fish does nothing for the real cause while exposing it, and the beneficial bacteria in the filter, to chemicals it did not need. The disciplined sequence is: observe and identify the likely problem, test and correct the water, remove any obvious stressor, and only then medicate if a specific pathogen is genuinely indicated. Shotgunning multiple medications at an undiagnosed fish is one of the surest ways to kill it.</DropCap>
 
         <h2>The Hospital Tank</h2>
-        <p>Wherever possible, medication should happen in a separate hospital tank rather than the main display. Treating in the display exposes healthy fish, invertebrates, and plants to drugs they do not need; many medications are toxic to shrimp, snails, and scaleless fish, and some stain silicone and decor permanently. Dosing the display also risks the biological filter, since several antibacterial medications kill the nitrifying bacteria the tank depends on, potentially triggering an ammonia spike on top of the original illness. A simple bare hospital tank with a heater, a gentle sponge filter, and a hiding place lets you isolate the patient, dose precisely, and perform large water changes between treatments without harming the rest of your livestock.</p>
+        <p>Wherever possible, medication should happen in a separate hospital tank rather than the main display. Treating in the display exposes healthy fish, invertebrates, and plants to drugs they do not need; many medications are toxic to shrimp, snails, and scaleless fish, and some stain silicone and decor permanently. Dosing the display also risks the biological filter, since several antibacterial medications kill the nitrifying bacteria the tank depends on, potentially triggering an ammonia spike on top of the original illness. A simple bare hospital tank with a heater, a gentle sponge filter, and a hiding place lets you isolate the patient, dose precisely, and perform large water changes between treatments without harming the rest of your livestock. <a href="/reviews/best-aquarium-heaters">The heater guide</a> compares the hospital-tank heater that holds treatment temperature.</p>
 
         <CalloutBox variant="warning" title="Remove carbon and protect your filter">
           Activated carbon adsorbs medications and renders them useless — remove chemical filtration before dosing. Be aware that some antibacterials kill nitrifying bacteria; treating in a hospital tank protects your display's biological filter from a crash.
@@ -62,13 +63,13 @@ export default function MedicatingFishPage() {
         <h2>Finishing and Follow-Up</h2>
         <p>Complete the full recommended course of any medication even if the fish appears to recover early — stopping short allows survivors to rebound and, with antibiotics, breeds resistant strains. After treatment, run fresh carbon to strip residual medication from the hospital tank, and continue excellent water quality during recovery. Reintroduce a recovered fish to the display only when fully healed and after observing it for any relapse. Throughout, remember that the surest way to need medication rarely is to prevent disease in the first place through stable water, sensible stocking, and a robust <a href="/setup/quarantine-tank-guide">quarantine routine</a>.</p>
 
-        {/* Money path — live amazon-brand search hops (hospital-tank dosing kit).
-            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-            Category searches only — not a ranked list. No medication hops. */}
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        {/* Shop note — live amazon-brand search buttons (hospital-tank dosing kit).
+            ShopCtas hides empty Chewy; never href="#" or an empty link.
+            Amazon searches only — not a ranked list. No medication buttons. */}
+        <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/api+freshwater+master+test+kit?s=health-medicating-fish", "/go/amazon-brand/aquarium+quarantine+hospital+tank+net?s=health-medicating-fish", "/go/amazon-brand/aquarium+sponge+filter?s=health-medicating-fish", "/go/amazon-brand/eheim+jager+heater?s=health-medicating-fish"]} />
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
-            Shop a hospital-tank dosing kit
+            Shop these supplies
           </div>
           <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Medication is last, not first. A liquid master kit is how you
             see ammonia, nitrite, and nitrate before any dose — strips are
@@ -77,7 +78,7 @@ export default function MedicatingFishPage() {
             with a seeded sponge filter so treatment stays off the display
             biofilter and aeration holds as medications drop dissolved
             oxygen. A heater rated for the hospital tank is how you hold a
-            stable treatment temperature. Same test-kit hop used on the{' '}
+            stable treatment temperature. The same test-kit button is on the{' '}
             <Link
               href="/health/bacterial-infections"
               className="text-brand-primary no-underline hover:underline"
@@ -91,7 +92,7 @@ export default function MedicatingFishPage() {
             >
               water-test kit review
             </Link>
-            . Same hospital-tank hop used on the{' '}
+            . The same hospital-tank button is on the{' '}
             <Link
               href="/setup/quarantine-tank-guide"
               className="text-brand-primary no-underline hover:underline"
@@ -102,7 +103,7 @@ export default function MedicatingFishPage() {
             <Link href="/health/fin-rot" className="text-brand-primary no-underline hover:underline">
               fin-rot guide
             </Link>
-            . Same sponge-filter hop used on the{' '}
+            . The same sponge-filter button is on the{' '}
             <Link
               href="/tools/aquarium-cycling-estimator"
               className="text-brand-primary no-underline hover:underline"
@@ -113,7 +114,7 @@ export default function MedicatingFishPage() {
             <Link href="/health/ich-treatment" className="text-brand-primary no-underline hover:underline">
               ich treatment guide
             </Link>
-            . Same heater hop used on the{' '}
+            . The same heater button is on the{' '}
             <Link href="/setup" className="text-brand-primary no-underline hover:underline">
               aquarium setup guide
             </Link>
@@ -122,11 +123,10 @@ export default function MedicatingFishPage() {
               fish disease guide
             </Link>
             . There is no live aquarium+air+pump search key on sister
-            pages — the sponge-filter hop is the aeration stand-in, same
-            as ich and velvet. The hops below are not a ranked product
+            pages — the sponge-filter button is the aeration stand-in, same
+            as ich and velvet. The buttons below are not a ranked product
             list, they are not medications, and they do not treat,
-            reverse, or cure disease. Fish.com earns a commission on
-            qualifying purchases at no extra cost to you. </p>
+            reverse, or cure disease. </p>
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/api+freshwater+master+test+kit?s=health-medicating-fish"
@@ -142,7 +142,7 @@ export default function MedicatingFishPage() {
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/eheim+jager+heater?s=health-medicating-fish"
-              amazonLabel="Browse aquarium heaters on Amazon →"
+              amazonLabel="Browse Eheim Jager heaters on Amazon →"
             />
           </div>
           <p className="text-2xs text-brand-text-light mt-3">

@@ -198,7 +198,7 @@ export const Specialties: Specialty[] = [
       },
       {
         name: 'FDA Investigation: Potential Link Between Certain Diets and Canine DCM',
-        url: 'https://www.fda.gov/animal-veterinary/news-events/fda-investigation-potential-link-between-certain-diets-and-canine-dilated-cardiomyopathy',
+        url: 'https://www.fda.gov/animal-veterinary/outbreaks-and-advisories/fda-investigation-potential-link-between-certain-diets-and-canine-dilated-cardiomyopathy',
       },
       { name: 'AVMA — American Veterinary Medical Association', url: AVMA },
       { name: 'NAPHIA — North American Pet Health Insurance Association', url: NAPHIA },
@@ -309,10 +309,6 @@ export const Specialties: Specialty[] = [
       { name: 'ACVIM — American College of Veterinary Internal Medicine', url: ACVIM },
       { name: 'Veterinary Cancer Society', url: 'https://vetcancersociety.org/' },
       { name: 'AVMA — American Veterinary Medical Association', url: AVMA },
-      {
-        name: 'Withrow & MacEwen\'s Small Animal Clinical Oncology (Elsevier) — standard reference textbook',
-        url: 'https://www.elsevier.com/books/withrow-and-macewens-small-animal-clinical-oncology/9780323594967',
-      },
       { name: 'NAPHIA — North American Pet Health Insurance Association', url: NAPHIA },
     ],
   },
@@ -535,10 +531,6 @@ export const Specialties: Specialty[] = [
     ],
     citedSources: [
       { name: 'ACVO — American College of Veterinary Ophthalmologists', url: ACVO },
-      {
-        name: 'ACVO Genetics Committee — Ocular Disorders Presumed to be Inherited in Purebred Dogs',
-        url: 'https://www.acvo.org/genetics',
-      },
       { name: 'OFA — Companion Animal Eye Registry (CAER)', url: 'https://www.ofa.org/diseases/eye-certification' },
       { name: 'AVMA — American Veterinary Medical Association', url: AVMA },
       { name: 'NAPHIA — North American Pet Health Insurance Association', url: NAPHIA },
@@ -1109,7 +1101,7 @@ export const Specialties: Specialty[] = [
       'Emergency and critical care is what most pet-insurance plans were designed to cover. Most accident-and-illness plans reimburse ER exam fees, hospitalization, surgery, and ICU care once the policy is active and any waiting period has passed. Annual maximum limits are the most important variable — a multi-day ICU stay for sepsis, GDV, or trauma can exhaust low-cap plans quickly. Plans with higher annual maximums (or no annual cap) protect best against catastrophic ER costs.',
     howToFindOne: [
       'Find and save the address and phone number of your nearest 24-hour emergency veterinary hospital before you need it — searching during a crisis costs time.',
-      'For toxin exposure, call ASPCA Animal Poison Control at 888-426-4435 ($75 consultation) or Pet Poison Helpline at 855-764-7661 before driving — they will tell you what to do en route.',
+      'For toxin exposure, call ASPCA Animal Poison Control at 888-426-4435 ($65–$95 consultation) or Pet Poison Helpline at 855-764-7661 before driving — they will tell you what to do en route.',
       'Use the ACVECC "Find an ECC Specialist" directory to identify specialty hospitals near you with board-certified critical care.',
       'Many ERs do not have board-certified DACVECC criticalists on every shift — for known-complex cases, ask which hours a criticalist is on duty.',
       'Verify "DACVECC" board certification for the criticalist who will be primary on a complex ICU case.',
@@ -1128,7 +1120,7 @@ export const Specialties: Specialty[] = [
         name: 'Veterinary Emergency and Critical Care Society (VECCS)',
         url: 'https://veccs.org/',
       },
-      { name: 'ASPCA Animal Poison Control Center', url: 'https://www.aspca.org/pet-care/animal-poison-control' },
+      { name: 'ASPCA Animal Poison Control Center', url: 'https://www.aspca.org/pet-care/aspca-poison-control' },
       { name: 'AVMA — American Veterinary Medical Association', url: AVMA },
       { name: 'NAPHIA — North American Pet Health Insurance Association', url: NAPHIA },
     ],

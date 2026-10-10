@@ -44,9 +44,18 @@ test('an insurance home hop stays /home and names a quote', () => {
   assert.equal(link?.label, 'Trupanion quote')
 })
 
-test('a Chewy Connect hop stays hidden until a Chewy tag exists', () => {
+test('a Chewy Connect hop is not swapped to AskVet while the tag is unset', () => {
   assert.equal(tableShopLink('/go/chewy/connect?s=telehealth', 'Chewy Connect', empty), null)
   const live = tableShopLink('/go/chewy/connect?s=telehealth', 'Chewy Connect', { AFF_CHEWY_TAG: 'live' })
   assert.equal(live?.href, '/go/chewy/connect?s=telehealth')
   assert.equal(live?.label, 'Chewy Connect on Chewy')
+})
+
+test('a Chewy pharmacy hop falls back to the clinic finder until a Chewy tag exists', () => {
+  assert.deepEqual(tableShopLink('/go/chewy-pharmacy/heartgard?s=rx', 'Heartgard', empty), {
+    href: '/find-a-vet',
+    label: 'Find a clinic that can prescribe →',
+  })
+  const live = tableShopLink('/go/chewy-pharmacy/heartgard?s=rx', 'Heartgard', { AFF_CHEWY_TAG: 'live' })
+  assert.equal(live?.href, '/go/chewy-pharmacy/heartgard?s=rx')
 })

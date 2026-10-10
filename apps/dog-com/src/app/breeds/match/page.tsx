@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import {
   ArticleLayout,
@@ -7,7 +8,6 @@ import {
   buildFAQSchema,
   buildMetadata,
   combineSchemas,
-  AffiliateDisclosure,
   ShopCtas,
 } from '@carloOS/ui'
 import Link from 'next/link'
@@ -188,7 +188,6 @@ export default function BreedMatchPage() {
               a complete, life-stage-appropriate food is the foundation of long-term
               health. Compare formulas, or read up on the breed before you commit.
             </p>
-            <AffiliateDisclosure variant="inline" siteId="dog-com" className="mb-3 text-2xs" />
             <div className="flex flex-wrap gap-3">
               <Link
                 href="/reviews/best-dry-dog-food"
@@ -206,22 +205,22 @@ export default function BreedMatchPage() {
           </div>
         </section>
 
-        {/* Money path — live amazon-brand kitchen hops
+        {/* Shop note — live amazon-brand kitchen buttons
             matching on-page seven-question / honest-tier /
             AKC-ASPCA copy. Unique vs the dog breeds hub
             + breed-insurance hub kitchens. Educational
-            only — never a crate hop, never a first-aid
-            hop, never an email gate. */}
+            only — never a crate button, never a first-aid
+            button, never an email gate. */}
         <div className="not-prose mb-12 rounded-xl border border-brand-border bg-brand-surface p-6">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
             Shop related supplies
           </div>
           <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href="/go/amazon-brand/dog+food?s=breed-match" />
           <div className="flex flex-col gap-3 mt-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/dog+food?s=breed-match"
-              amazonLabel="Shop on Amazon"
+              amazonLabel="Browse dog food on Amazon →"
             />
           </div>
         </div>

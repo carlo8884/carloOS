@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import { directoryClaimPrefill } from '@carloOS/config'
 import { vetsInquireCaptureEnabled } from '@carloOS/config/capture-flags'
 import { buildMetadata, ArticleLayout, InquireForm} from '@carloOS/ui'
@@ -53,10 +54,11 @@ export default function JoinProPage({
           />
         </div>
 
-        <h2>Owners: get a note when claimed pages exist</h2>
+        <h2>Looking for care</h2>
         <p>
           Clinic applications stay on this page only when the inbox is connected.
-          Owners looking for care should use the directory.
+          Owners looking for care should use{' '}
+          <Link href="/find-a-vet">the directory</Link>.
         </p>
       </div>
     </ArticleLayout>

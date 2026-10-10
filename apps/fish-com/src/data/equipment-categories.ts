@@ -111,7 +111,7 @@ export const EquipmentCategories: EquipmentCategory[] = [
     ],
     howToChoose: [
       'Size by bioload, not by tank volume alone. Heavily stocked goldfish tanks need 2× the filter rating; lightly stocked planted tanks need less.',
-      'Look for refillable media baskets over proprietary cartridges — proprietary cartridges add ~$60/year in recurring spend.',
+      'Look for refillable media baskets over proprietary cartridges — proprietary cartridges add ~$40–$80/year in recurring spend.',
       'Aim for filter turnover of 4–6× tank volume per hour for community freshwater, 8–10× for saltwater, and 10–20× for reef tanks.',
       'For shrimp or fry tanks, sponge filters are the only safe option — every other intake will suck in inhabitants.',
       'Choose a filter rated one size up from your tank size. Manufacturer ratings assume optimistic stocking.',
@@ -563,7 +563,7 @@ export const EquipmentCategories: EquipmentCategory[] = [
         bestFor:
           'Reef hobbyists prioritizing alkalinity precision and competitive aquascapers monitoring phosphate. Removes color-matching subjectivity.',
         drawbacks:
-          'Significant upfront cost ($45–$70 per parameter handheld; $400+ for multi-parameter photometers). Reagent sachets are recurring spend.',
+          'Significant upfront cost ($45–$70 per parameter handheld; $300–$500+ for multi-parameter photometers). Reagent sachets are recurring spend.',
       },
       {
         type: 'Test strips',

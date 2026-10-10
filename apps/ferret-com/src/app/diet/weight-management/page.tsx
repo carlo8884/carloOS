@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, ReviewCard, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, ReviewCard, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -128,19 +129,17 @@ export default function WeightManagementPage() {
             A simple kitchen or small-pet scale lets you track weight in grams, which is far more sensitive than judging by eye. Weighing every week or two and noting the trend turns a vague impression into data: a steady seasonal curve looks very different from a sudden drop, and having a baseline makes it easy to flag a meaningful change early. For a senior ferret or one with a known condition, regular weighing is one of the cheapest and most useful monitoring tools an owner has.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/digital+gram+scale+kitchen+pet?s=diet-weight-management" />
 
           <h2 id="picks">A Scale for Tracking</h2>
           <p>
             Tracking weight in grams is far more sensitive than judging by eye, and it turns a vague impression into a trend line that flags a meaningful change early. A small digital kitchen or pet scale with a gram readout and a tare function is all you need. Documented-spec selection, not a hands-on test.
           </p>
-          <ScoreMethodology />
           <ReviewCard
             id="digital-gram-scale"
             badge="Tracking Tool"
             name="Digital Gram Scale (Kitchen / Small-Pet)"
             subtitle="Gram-precision weighing with tare — catches trends a hand cannot"
-            score={8.7}
             winner
             description={
               <p>A compact digital scale that reads in grams lets you weigh a ferret every week or two and log the trend. A tare function lets you zero out a small container or towel so a wriggly ferret stays put on the platform. For a senior ferret or one with a known condition, this is one of the cheapest and most useful monitoring tools an owner has — steady seasonal curves look very different from a sudden drop.</p>
@@ -153,8 +152,9 @@ export default function WeightManagementPage() {
             ]}
             pros={['Gram precision catches small trends', 'Tare helps with a moving ferret', 'Inexpensive and long-lasting', 'Doubles as a kitchen scale']}
             cons={['Small platform — pair with a container', 'Cheap units vary in accuracy']}
-            price="$10–20"
-            ctaText="Find a Digital Gram Scale"
+            price="see current price"
+            priceNote="dated 2026-06-01."
+            ctaText="Find a Digital Gram Scale on Amazon"
             ctaHref="/go/amazon-brand/digital+gram+scale+kitchen+pet?s=diet-weight-management"
             ctaAffiliateProgram="amazon-brand"
             ctaAffiliateProduct="digital-gram-scale"

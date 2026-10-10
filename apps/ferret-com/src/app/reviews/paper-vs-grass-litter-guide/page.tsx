@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, PrimaryHop, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata, ArticleSourcesList, LastUpdated, ComparisonFoot } from '@carloOS/ui'
+import { HopDisclosure } from '../../../components/HopDisclosure'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -13,7 +14,7 @@ export const metadata: Metadata = buildMetadata({
 const schema = buildArticleSchema({
   siteId: 'ferret-com',
   title: 'Paper pellets or grass pellets',
-  description: 'Recycled paper pellets as the default, or grass pellets as the softer alternative. Scores are on the litter review.',
+  description: 'Recycled paper pellets as the default, or grass pellets as the softer alternative. The notes are on the litter review.',
   url: 'https://ferret.com/reviews/paper-vs-grass-litter-guide',
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
@@ -24,11 +25,11 @@ const schema = buildArticleSchema({
 const FAQS = [
   {
     question: 'Which litter does the review pick overall?',
-    answer: 'Recycled paper pellet litter, scored 9.2. The review lists very low dust, no clumping, a soft feel underfoot, moderate odor control, and a mid price tier. You change the pan rather than scoop and top it up. Lighter pellets can scatter.',
+    answer: 'Recycled paper pellet litter is the paper pick. The review lists very low dust, no clumping, a soft feel underfoot, moderate odor control, and a mid price tier. You change the pan rather than scoop and top it up. Lighter pellets can scatter.',
   },
   {
     question: 'When does the review point to grass pellets?',
-    answer: 'When a ferret dislikes the feel of paper or wood. Pelleted grass scores 7.8. The review lists low dust, no clumping, a soft texture, moderate odor control, and a mid price tier. Wet pellets break down faster, so the pan may need changing more often than wood.',
+    answer: 'When a ferret dislikes the feel of paper or wood. The review lists low dust, no clumping, a soft texture, moderate odor control, and a mid price tier. Wet pellets break down faster, so the pan may need changing more often than wood.',
   },
   {
     question: 'Is wood pellet litter in this comparison?',
@@ -49,7 +50,8 @@ export default function PaperVsGrassLitterGuidePage() {
         publishedAt: 'October 2026',
         readTime: '6 min',
       }}
-      heroHop={<PrimaryHop href="/go/chewy-brand/yesterdays+news+recycled+paper+pellet+litter+non+clumping?s=reviews-paper-vs-grass-litter-guide" label="Check price of Yesterday's News paper pellet litter on Chewy" />}
+      heroHop={<PrimaryHop href="/go/chewy-brand/recycled+paper+pellet+litter+non+clumping?s=reviews-paper-vs-grass-litter-guide" label="Open the recycled paper-pellet search." />}
+      heroExtra={<HopDisclosure siteId="ferret-com" href="/go/chewy-brand/recycled+paper+pellet+litter+non+clumping?s=reviews-paper-vs-grass-litter-guide" />}
       breadcrumbs={[
         { name: 'Home', href: '/' },
         { name: 'Reviews', href: '/reviews' },
@@ -61,23 +63,92 @@ export default function PaperVsGrassLitterGuidePage() {
           links={[
             { label: 'Reviews hub', href: '/reviews' },
             { label: 'Best ferret litter', href: '/reviews/best-ferret-litter' },
+            { label: 'Wood vs grass litter', href: '/reviews/wood-vs-grass-litter-guide' },
             { label: 'Litter planner', href: '/tools/litter-planner' },
           ]}
         />
       }
     >
       <div className="carloOS-article">
-        <p>Prices and scores below are the ones on the <Link href="/reviews/best-ferret-litter">litter review</Link>. Recycled paper pellets are the default. Pelleted grass is the softer alternative. Paper versus heat-treated wood is a different pair, on the <Link href="/reviews/paper-vs-wood-litter-guide">paper versus wood guide</Link>.</p>
+          <LastUpdated date="2026-10-10" />
+        <EmailCapture
+          variant="inline"
+          siteId="ferret-com"
+          addressOnly
+          title="Shopping checklist"
+          ctaText="Copy checklist"
+          source="reviews-paper-vs-grass-litter-guide"
+          checklist={[
+            "Recycled paper pellet litter is the paper pick.",
+            "The review lists very low dust, no clumping, a soft feel underfoot, moderate odor control, and a mid price tier.",
+            "You change the pan rather than scoop and top it up.",
+            "When a ferret dislikes the feel of paper or wood.",
+            "The review lists low dust, no clumping, a soft texture, moderate odor control, and a mid price tier.",
+            "Wet pellets break down faster, so the pan may need changing more often than wood.",
+          ]}
+        />
+        <p>Prices below are the ones on the <Link href="/reviews/best-ferret-litter">litter review</Link>. Recycled paper pellets are the default. Pelleted grass is the softer alternative. Paper versus heat-treated wood is a different pair, on the <Link href="/reviews/paper-vs-wood-litter-guide">paper versus wood guide</Link>. Pelleted grass is set beside wood pellets in the <Link href="/reviews/wood-vs-grass-litter-guide">wood versus grass guide</Link>.</p>
         <h2>What the review says about paper pellets</h2>
-        <p>Recycled paper pellet litter is Best Overall, score 9.2, and the winner. Dust is very low. It does not clump. The review says it is soft enough that ferrets accept it, with no clumping agent to swallow and no fine respiratory dust. Odor control is moderate compared with a perfumed cat litter. You change the pan rather than scoop and top it up. Lighter pellets can scatter. The price tier in the review is the mid tier. The review’s shop search is Yesterday’s News recycled paper pellets.</p>
+        <p>Recycled paper pellet litter is Best Overall and the winner. Dust is very low. It does not clump. The review says it is soft enough that ferrets accept it, with no clumping agent to swallow and no fine respiratory dust. Odor control is moderate compared with a perfumed cat litter. You change the pan rather than scoop and top it up. Lighter pellets can scatter. The price tier in the review is the mid tier. The review’s paper-pellet button opens a recycled paper-pellet search. Purina discontinued Yesterday’s News on April 20, 2022.</p>
         <h2>What the review says about grass pellets</h2>
-        <p>Pelleted grass or other plant fiber is the soft alternative, score 7.8. Dust is low. It does not clump. The review says some ferrets prefer it to wood, odor control is moderate, and wet pellets break down faster, so the pan may need changing more often than wood. Tracking is lighter. The price tier is also the mid tier. The review calls it useful mainly when a ferret dislikes the texture of paper or wood pellets.</p>
+        <p>Pelleted grass or other plant fiber is the soft alternative. Dust is low. It does not clump. The review says some ferrets prefer it to wood, odor control is moderate, and wet pellets break down faster, so the pan may need changing more often than wood. Tracking is lighter. The price tier is also the mid tier. The review calls it useful mainly when a ferret dislikes the texture of paper or wood pellets.</p>
         <p>The <Link href="/tools/litter-planner">litter planner</Link> sizes the paper-pellet default for the number of ferrets. It does not switch the litter to wood or grass by count.</p>
         <h2>Who should buy which litter</h2>
         <p>Buy paper pellets when you want the litter the review calls the default: very low dust, non-clumping, and widely available. Buy grass pellets when texture is the complaint and you can change the pan more often. Do not buy a clumping cat litter for either job. Heat-treated wood pellets stay on the odor comparison, and only as compressed low-phenol pellets, never as aromatic shavings.</p>
-        <p>The link above searches for Yesterday’s News paper pellets, the same search as on the litter review. The sale price can differ from the tier in that review.</p>
+        <p>Paper pellets are the pick because the review calls them the low-dust default. Purina discontinued Yesterday’s News on April 20, 2022. The sale price can differ from the tier in that review.</p>
+        <div className="my-6 max-w-full min-w-0">
+          <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
+            <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+            <thead>
+              <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
+                <th scope="col" className="p-3 font-bold text-brand-dark">Recycled paper pellets</th>
+                <th scope="col" className="p-3 font-bold text-brand-dark">Grass pellets</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Role</th>
+                <td className="p-3">Best Overall, and the winner</td>
+                <td className="p-3">Soft alternative</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Dust</th>
+                <td className="p-3">Very low</td>
+                <td className="p-3">Low</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Clumping</th>
+                <td className="p-3">Does not clump</td>
+                <td className="p-3">Does not clump</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Odor</th>
+                <td className="p-3">Moderate</td>
+                <td className="p-3">Moderate</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Pan</th>
+                <td className="p-3">Change the pan rather than scoop and top it up. Lighter pellets can scatter</td>
+                <td className="p-3">Wet pellets break down faster, so the pan may need changing more often than wood</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Price tier</th>
+                <td className="p-3">Mid</td>
+                <td className="p-3">Mid</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <ComparisonFoot updated="2026-10-10" />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
+                <ArticleSourcesList
+            title="Sources"
+            sources={[
+            { label: "Purina", url: "https://www.purina.com/", publisher: "Purina" },
+            ]}
+          />
       </div>
     </ArticleLayout>
   )

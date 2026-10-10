@@ -1,11 +1,11 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, PrimaryHop, RelatedLinks, ShopCtas, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Seizures in Dogs — What to Do, Causes, Epilepsy | Vets.co", description: "A seizure is frightening but rarely an immediate emergency unless prolonged. Learn what to do during a seizure, common causes, and how epilepsy is managed.", path: '/health/seizures-in-dogs', type: 'article' })
 const SOURCES = [
-  { label: 'Merck Veterinary Manual: Seizures and Epilepsy in Dogs', url: 'https://www.merckvetmanual.com/nervous-system/seizure-disorders/seizure-disorders-in-dogs', publisher: 'Merck Vet Manual' },
-  { label: 'AVMA: Epilepsy in Pets', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/epilepsy-pets', publisher: 'AVMA' },
+  { label: 'Merck Veterinary Manual: Epilepsy in Small Animals', url: 'https://www.merckvetmanual.com/nervous-system/epilepsy-in-small-animals/epilepsy-in-small-animals', publisher: 'Merck Vet Manual' },
   { label: 'International Veterinary Epilepsy Task Force: Consensus Statements', url: 'https://bmcvetres.biomedcentral.com/articles/supplements/volume-11-supplement-1', publisher: 'BMC Veterinary Research' },
 ]
 const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Seizures in Dogs', description: 'What to do during a seizure, common causes, and management of canine epilepsy.', url: 'https://vets.co/health/seizures-in-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-09-05T00:00:00Z' ,
@@ -24,6 +24,10 @@ export default function SeizuresPage() {
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="vets-co"
         hero={{ title: 'Seizures in Dogs', subtitle: 'A seizure is one of the most frightening things an owner can witness, but knowing what to do — and what not to do — makes a real difference. Most single seizures are brief and not immediately life-threatening, though all warrant veterinary evaluation. Understanding the causes, the danger signs, and how epilepsy is managed helps you respond calmly and protect your dog.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '9 min',}}
+        heroHop={<>
+          <PrimaryHop href="/go/amazon-brand/digital+handheld+stopwatch?s=health-seizures-in-dogs" label="Search Amazon for a digital handheld stopwatch" />
+          <HopDisclosure tone="on-dark" siteId="vets-co" href="/go/amazon-brand/digital+handheld+stopwatch?s=health-seizures-in-dogs" />
+        </>}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Seizures', href: '/health/seizures-in-dogs' }]}
         relatedLinks={[
           { title: 'Health Conditions', href: '/health', category: 'Hub' },
@@ -49,6 +53,7 @@ export default function SeizuresPage() {
         <div className="carloOS-article">
 
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-09-05T00:00:00Z" reviewedBy="Editorial team" />
+          <LastUpdated date="2026-10-09" />
 
           <CalloutBox variant="warning" title="A seizure over five minutes is an emergency">
             A seizure lasting more than about five minutes, or repeated seizures without full recovery in between, is a medical emergency. Prolonged seizure activity can cause dangerous overheating and brain injury. Go to an emergency hospital immediately. For a single brief seizure, schedule prompt veterinary evaluation rather than treating it as an immediate emergency.
@@ -69,47 +74,21 @@ export default function SeizuresPage() {
 
           <h2>Managing Epilepsy</h2>
           <p>When seizures are frequent or severe enough to warrant treatment, the aim is control rather than cure. Anti-seizure medication, with the specific drug and dose determined and monitored by your veterinarian, reduces the frequency and severity of seizures to an acceptable level. Owners help by giving medication consistently, keeping a seizure diary of dates, durations, and possible triggers, and reporting changes. Many dogs with well-managed epilepsy enjoy a normal quality of life. Sudden discontinuation of seizure medication can be dangerous, so changes are always made under veterinary guidance.</p>
-          <p>A waterproof field notebook is how that seizure diary stays in one place — dates, stopwatch durations, and possible triggers — so the next clinic visit has a written log instead of a remembered guess. It is not a medical-records binder, not a vaccination record book, and not a resting-respiratory-rate notebook. It does not replace bloodwork, it does not replace medication, and it is not a ranked product. Ask your veterinarian what to record.</p>
+          <p>It does not replace bloodwork, it does not replace medication, and it is not a ranked product. Ask your veterinarian what to record.</p>
 
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
 
           <h2 id="kit">Seizure observation kit</h2>
-          <p>
-            Everyday physical supplies that match the
-            first-minutes and diary copy on this page —
-            a digital handheld stopwatch so start and
-            length are timed, a waterproof field
-            notebook so the seizure diary of dates,
-            durations, and possible triggers stays
-            writable after a messy event, and a foam
-            table-edge bumper so hard or sharp
-            furniture is padded before the next
-            seizure. These are household tools, not
-            treatments. They do not treat epilepsy,
-            they do not replace a veterinarian or
-            anti-seizure medication, and they are not
-            a ranked product list. Soft throw
-            blankets, crate bumper pads, interlocking
-            foam floor tiles, one-minute kitchen
-            timers, resting-respiratory-rate
-            notebooks, pet medical-records binders,
-            vaccination record books, first-aid kits,
-            emergency-contact cards, folding
-            stretchers, LED penlights, and
-            medical-alert collar tags already live on
-            other pages. This page does not hop
-            medications. This page does not claim
-            hands-on testing.
-          </p>
+          <p>Keep these on hand: digital handheld stopwatch and foam table edge bumper. These are household tools, not treatments. They do not treat epilepsy, they do not replace a veterinarian or anti-seizure medication, and they are not a ranked product list.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/digital+handheld+stopwatch?s=health-seizures-in-dogs", "/go/amazon-brand/foam+table+edge+bumper?s=health-seizures-in-dogs"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (digital handheld stopwatch / waterproof
               field notebook / foam table-edge bumper).
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or an empty link. Amazon searches only —
               unused vs #1028 soft+throw+blanket /
               dog+crate+bumper+pads /
               interlocking+foam+floor+tiles, #1057
@@ -127,40 +106,17 @@ export default function SeizuresPage() {
               pet+emergency+contact+card /
               folding+pet+stretcher, #1044
               pet+vaccination+record+book, and #1053
-              dog+medical+alert+collar+tag hops. Rx
-              ASINs are not shoppable hops. */}
+              dog+medical+alert+collar+tag buttons. Rx
+              product pages are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the dog seizure observation kit
+              Shop these supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page first-minutes and diary copy — a
-              digital handheld stopwatch, a waterproof
-              field notebook, and a foam table-edge
-              bumper. Everyday physical supplies only.
-              They are not a ranked product list, they
-              are not an anticonvulsant or medication
-              hop, they are not the #1028 throw-blanket
-              / crate-bumper / foam-tile hops, they are
-              not the #1057 timed-feeder / maze-bowl /
-              house-line hops, they are not the #1047
-              respiratory-notebook / kitchen-timer /
-              harness hops, they are not first-aid-kit,
-              thermometer, penlight, stretcher, or
-              medical-alert-tag hops, and they do not
-              replace a veterinarian. Vets.co earns a
-              commission on qualifying purchases at no
-              extra cost to you.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">These searches open Amazon results for a digital handheld stopwatch and a foam table-edge bumper. They are household supplies, not medication and not a substitute for a veterinarian.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/digital+handheld+stopwatch?s=health-seizures-in-dogs"
                 amazonLabel="Browse digital handheld stopwatches on Amazon →"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/waterproof+field+notebook?s=health-seizures-in-dogs"
-                amazonLabel="Browse waterproof field notebooks on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/foam+table+edge+bumper?s=health-seizures-in-dogs"

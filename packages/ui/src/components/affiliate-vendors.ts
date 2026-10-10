@@ -12,6 +12,7 @@
  */
 
 import type { Vendor } from './AffiliateLink'
+import { amazonAssociateTag } from '@carloOS/config/affiliate-hop'
 
 interface VendorConfig {
   /**
@@ -75,12 +76,10 @@ export const VENDORS: Record<Vendor, VendorConfig> = {
     label: 'Amazon',
     category: 'pet-supplies',
     buildUrl: (sku) => {
-      const tag = env('AFF_AMAZON_TAG', 'carloos-20')
-      // SKU may be an ASIN or a search query
-      if (/^B0[A-Z0-9]{8}$/.test(sku)) {
-        return `https://www.amazon.com/dp/${sku}?tag=${tag}`
-      }
-      return `https://www.amazon.com/s?k=${encodeURIComponent(sku)}&tag=${tag}`
+      const tag = amazonAssociateTag()
+      const withTag = (url: string) => (tag ? `${url}${url.includes('?') ? '&' : '?'}tag=${encodeURIComponent(tag)}` : url)
+      if (/^B0[A-Z0-9]{8}$/.test(sku)) return withTag(`https://www.amazon.com/dp/${sku}`)
+      return withTag(`https://www.amazon.com/s?k=${encodeURIComponent(sku)}`)
     },
   },
   furhaven: {

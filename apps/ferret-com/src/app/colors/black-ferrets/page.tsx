@@ -9,7 +9,6 @@ import {
   CalloutBox,
   ArticleByline,
   DropCap,
-  AffiliateDisclosure,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -38,7 +37,6 @@ const articleSchema = buildArticleSchema({
   publishedAt: '2026-05-30T00:00:00Z',
   modifiedAt: '2026-05-30T00:00:00Z',
 })
-
 
 const FAQS = [
   {
@@ -110,7 +108,7 @@ export default function BlackFerretsPage() {
 
           </>
         }
-      
+
         relatedLinks={[
           { title: 'Ferret Colors Hub', href: '/colors' },
           { title: 'Ferret Colors & Patterns', href: '/colors/ferret-colors-and-patterns' },
@@ -273,25 +271,7 @@ export default function BlackFerretsPage() {
 
           <p className="text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated ferret black jet-coat chart /
-              ferret fridge black-vs-sable card /
-              mustelid black reference handbook).
-              Educational kitchen searches only; no Rx /
-              vaccine / aging hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs tools / reviews /
-              diet / care / behavior / health / ownership /
-              colors-hub / first-year-schedule /
-              colors-and-patterns / sable-ferrets /
-              albino-ferrets / dew-ferrets /
-              cinnamon-ferrets / champagne-ferrets /
-              chocolate-ferrets kitchen kits and child
-              finger+toothbrush / carnivore+care hops. Ferret
-              aging stays held.
-              Do not re-open #1165 / what-to-expect. */}
                   </div>
       </ArticleLayout>
     </>

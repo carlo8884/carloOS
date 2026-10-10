@@ -136,7 +136,6 @@ export default function StateVetFinderPage({ params }: PageProps) {
         )}
         {/* TL;DR */}
         <section className="bg-brand-surface border border-brand-border rounded-xl p-6 mb-10">
-          <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-2">TL;DR</div>
           <p className="text-brand-text-mid leading-relaxed m-0">
             Most pet-owner health needs in {state.name} are handled by a general practice (GP) veterinarian — wellness exams, vaccines, routine illness, and most chronic conditions. Build a relationship with a GP vet you trust before you need them urgently. For after-hours emergencies, identify your nearest 24-hour emergency veterinary hospital and save the number now. For complex cases, board-certified specialists handle what GPs refer out. Verify credentials through your state veterinary medical board and recognized specialty colleges (ACVIM, ACVS, others).
           </p>
@@ -244,6 +243,7 @@ export default function StateVetFinderPage({ params }: PageProps) {
           </h2>
           <div className="bg-brand-danger/5 border border-brand-danger/20 rounded-xl p-6 mb-5">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-danger mb-3">If You Suspect Poisoning</div>
+            <p>Those figures are typical US ranges dated 2026-10-04.</p>
             <p className="text-sm text-brand-text-mid m-0 mb-2 leading-relaxed">
               Call <a href="tel:8884264435" className="font-bold text-brand-dark hover:underline">ASPCA Animal Poison Control: 888-426-4435</a> (24/7, $70–100 consultation fee). They can advise whether to induce vomiting, what to monitor for, and whether to transport to an ER.
             </p>

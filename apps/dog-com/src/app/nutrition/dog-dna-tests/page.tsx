@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleByline, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleByline, FAQAccordion, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -25,7 +26,7 @@ const FAQS = [
   },
   {
     question: 'Embark vs Wisdom Panel — which is better?',
-    answer: 'Both are established consumer dog-DNA brands that offer breed identification and health-screening tiers, and both are reasonable choices; the "better" one depends on what you want. As a category, the trade-offs owners weigh are reference-database size and the breadth of the health panel, the depth of breed and relative-finder features, whether you need a basic breed-only tier or a comprehensive health screen, and price. Compare the specific tier you are considering on the number of genetic conditions screened, breed-database breadth, and what is actually included, rather than relying on the brand name alone. Dog.com does not take affiliate commissions on test kits, and this comparison is editorial.',
+    answer: 'Both are established consumer dog-DNA brands that offer breed identification and health-screening tiers, and both are reasonable choices; the "better" one depends on what you want. As a category, the trade-offs owners weigh are reference-database size and the breadth of the health panel, the depth of breed and relative-finder features, whether you need a basic breed-only tier or a comprehensive health screen, and price. Compare the specific tier you are considering on the number of genetic conditions screened, breed-database breadth, and what is actually included, rather than relying on the brand name alone. Dog.com does not take affiliate commissions on test kits.',
   },
   {
     question: 'Should I tell my vet about my dog\'s DNA results?',
@@ -106,7 +107,7 @@ export default function DogDnaTestsPage() {
           <li><strong>Features beyond breed and health.</strong> Relative-finder, trait, and ancestry-depth features differ. Decide which you actually care about.</li>
           <li><strong>Tier and price fit.</strong> Both sell a basic breed-focused option and a more comprehensive breed-plus-health option. Match the tier to your goal — curiosity versus clinical screening — and compare prices at that tier.</li>
         </ul>
-        <p><em>Dog.com does not earn affiliate commissions on DNA test kits, and this comparison is editorial.</em> The honest bottom line: for most owners either brand will answer the breed question well, and the deciding factor is usually health-panel scope and price for the tier you want.</p>
+        <p><em>Dog.com does not take a commission on DNA test kits.</em> The honest bottom line: for most owners either brand will answer the breed question well, and the deciding factor is usually health-panel scope and price for the tier you want.</p>
 
         <h2 id="now">What to Do With Your Results</h2>
         <p>A few calibrated next steps once the report lands:</p>
@@ -119,24 +120,12 @@ export default function DogDnaTestsPage() {
         <p>For a broader look at how DNA testing fits into responsible dog ownership, see our <a href="/dna-testing">DNA testing overview</a>.</p>
 
         <h2 id="faq">Frequently Asked Questions</h2>
-        <FAQAccordion items={FAQS} />
+        <FAQAccordion items={FAQS} includeSchema={false} />
 
         <p className="text-sm text-gray-500 mt-8"><em>This article is general educational information from the Dog.com editorial team and is not veterinary advice. Test capabilities and database sizes reflect publicly reported information as of June 2026 and may change; figures are described qualitatively where exact numbers vary by provider and tier. Always consult your veterinarian before acting on any genetic-screening result.</em></p>
 
-        <AffiliateDisclosure variant="inline" siteId="dog-com" />
+        <HopDisclosure siteId="dog-com" href="/go/amazon-brand/dry+dog+food?s=nutrition-dna-tests" />
 
-        {/* Money path — live amazon-brand search hops
-            (laminated dog cheek-swab chart /
-            dog fridge breed-estimate card /
-            canine MDR1-vet handbook).
-            No existing product hop to keep.
-            Educational kitchen searches only; no Rx /
-            vaccine / flea / heartworm / nsaid hops
-            and no Embark / Wisdom Panel kit hops.
-            ShopCtas hides empty Chewy; never href="#"
-            or PLACEHOLDER. Unused vs elimination-diet /
-            dog-supplements / raw-diet-risks hops.
-            Do not re-open #1165 / what-to-expect. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
             Shop related supplies
@@ -145,7 +134,7 @@ export default function DogDnaTestsPage() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/dry+dog+food?s=nutrition-dna-tests"
-              amazonLabel="Shop on Amazon"
+              amazonLabel="Browse dry dog food on Amazon →"
             />
           </div>
         </div>

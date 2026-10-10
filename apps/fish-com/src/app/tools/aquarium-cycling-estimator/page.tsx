@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -9,7 +10,7 @@ import {
   TableOfContents,
   RelatedLinks,
   ArticleByline,
-  AffiliateDisclosure,
+
   ShopCtas,
   JourneyNext,
 } from '@carloOS/ui'
@@ -146,7 +147,7 @@ export default function AquariumCyclingEstimatorPage() {
           <TableOfContents
             items={[
               { label: 'The estimator', href: '#estimator' },
-              { label: 'Shop a cycling kit', href: '#shop' },
+              { label: 'Shop these supplies', href: '#shop' },
               { label: 'Method comparison', href: '#methods' },
               { label: 'Methodology &amp; limits', href: '#methodology' },
               { label: 'Sources', href: '#sources' },
@@ -189,21 +190,21 @@ export default function AquariumCyclingEstimatorPage() {
           siteId="fish-com"
           nextHref="/tools/stocking-calculator"
           nextLabel="Sketch a slim-inch ceiling before you stock"
-          nextBlurb="The week range is an estimate. Confirm 0/0 with a liquid kit before livestock, then use the stocking calculator as a slim-inch bioload ceiling — not a species headcount. The hop below is the same API Master Test Kit search already on this page."
+          nextBlurb="The week range is an estimate. Confirm 0/0 with a liquid kit before livestock, then use the stocking calculator as a slim-inch bioload ceiling — not a species headcount. The button below opens the same API Master Test Kit search on Amazon."
           resourceHref="/go/amazon-brand/api+freshwater+master+test+kit?s=tools-aquarium-cycling-estimator"
-          resourceLabel="Shop API Master Test Kit on Amazon →"
+          resourceLabel="Browse API Master Test Kit on Amazon →"
         />
 
-        {/* Money path — live amazon-brand search hops (test kit / bottled bacteria / ammonia / sponge).
-            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER. */}
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        {/* Shop note — live amazon-brand search buttons (test kit / bottled bacteria / ammonia / sponge).
+            ShopCtas hides empty Chewy; never href="#" or an empty link. */}
+        <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/api+freshwater+master+test+kit?s=tools-aquarium-cycling-estimator", "/go/amazon-brand/tetra+safestart+plus?s=tools-aquarium-cycling-estimator", "/go/amazon-brand/dr+tims+ammonium+chloride?s=tools-aquarium-cycling-estimator", "/go/amazon-brand/aquarium+sponge+filter?s=tools-aquarium-cycling-estimator"]} />
         <div id="shop" className="mb-8 rounded-xl border border-brand-border bg-brand-surface p-5">
           <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Shop a cycling kit
+            Shop these supplies
           </div>
           <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
             A liquid master kit is the only way to confirm 0 ppm ammonia and 0 ppm nitrite; bottled
-            nitrifiers and a measured ammonia source shorten a fishless cycle. Same Amazon hops used
+            nitrifiers and a measured ammonia source shorten a fishless cycle. Same Amazon buttons used
             on the{' '}
             <Link
               href="/reviews/best-water-test-kits"
@@ -218,35 +219,36 @@ export default function AquariumCyclingEstimatorPage() {
             >
               aquarium cycling guide
             </Link>
-            . Fish.com earns a commission on qualifying purchases at no extra cost to you.
+            .
           </p>
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/api+freshwater+master+test+kit?s=tools-aquarium-cycling-estimator"
-              amazonLabel="Shop API Master Test Kit on Amazon →"
+              amazonLabel="Browse API Master Test Kit on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/tetra+safestart+plus?s=tools-aquarium-cycling-estimator"
-              amazonLabel="Shop bottled bacteria starter on Amazon →"
+              amazonLabel="Browse Tetra SafeStart Plus on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/dr+tims+ammonium+chloride?s=tools-aquarium-cycling-estimator"
-              amazonLabel="Shop fishless-cycling ammonia on Amazon →"
+              amazonLabel="Browse Dr. Tim's ammonium chloride on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+sponge+filter?s=tools-aquarium-cycling-estimator"
-              amazonLabel="Shop sponge filters on Amazon →"
+              amazonLabel="Browse sponge filters on Amazon →"
             />
           </div>
         </div>
 
         <h2 id="methods">Method comparison</h2>
+        <p>The day ranges in this table are planning figures, not a measured cycle time for your tank.</p>
         <div style={{ overflowX: 'auto', marginBottom: '24px' }}>
           <table className="w-full text-sm border-collapse">
             <thead>
               <tr className="border-b border-brand-border">
                 <th className="text-left py-2 pr-4 font-semibold text-brand-dark">Method</th>
-                <th className="text-left py-2 pr-4 font-semibold text-brand-dark">Typical time</th>
+                <th className="text-left py-2 pr-4 font-semibold text-brand-dark">Planning window</th>
                 <th className="text-left py-2 font-semibold text-brand-dark">Best for</th>
               </tr>
             </thead>

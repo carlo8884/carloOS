@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -10,7 +11,6 @@ import {
   ArticleByline,
   DropCap,
   CalloutBox,
-  AffiliateDisclosure,
   ShopCtas,
 } from '@carloOS/ui'
 import {
@@ -129,7 +129,7 @@ export default function DressagePage() {
         ]}
         sidebar={<>
           <TableOfContents items={[
-            { label: 'TL;DR', href: '#tldr' },
+            { label: '', href: '#tldr' },
             { label: 'History &amp; Origins', href: '#history' },
             { label: 'The Training Pyramid', href: '#pyramid' },
             { label: 'Levels — Intro to Grand Prix', href: '#levels' },
@@ -166,8 +166,7 @@ export default function DressagePage() {
             updatedAt="2026-05-28"
           />
 
-          <h2 id="tldr">TL;DR</h2>
-          <ul>
+                    <ul>
             <li><strong>What it is:</strong> the systematic gymnastic training of the riding horse, judged against a written test in a standard 20×60 m (or 20×40 m for lower levels) arena.</li>
             <li><strong>Framework:</strong> the training pyramid — <em>rhythm → relaxation → contact → impulsion → straightness → collection</em>.</li>
             <li><strong>Levels:</strong> six US national levels (Introductory through Fourth) and four FEI levels (Prix St. Georges, Intermediate I and II, Grand Prix), plus FEI Young Rider and Under-25 tracks.</li>
@@ -298,7 +297,7 @@ export default function DressagePage() {
           <p>The sport has a deep international roster; among the riders whose names recur in modern coverage are Charlotte Dujardin (GBR, multiple Olympic medals on Valegro), Isabell Werth (GER, the most-decorated dressage rider in Olympic history), Steffen Peters (USA, multiple Olympic appearances), and Laura Graves (USA, World Cup finalist with Verdades). Historical figures whose teaching shapes the modern sport include Reiner Klimke, Nuno Oliveira, Egon von Neindorff, and the long line of riders trained at the Spanish Riding School in Vienna.</p>
 
           <h2 id="faq">Frequently Asked Questions</h2>
-          <FAQAccordion items={FAQS} />
+          <FAQAccordion items={FAQS} includeSchema={false} />
 
           <h2 id="references">References</h2>
           <ol className="text-sm text-brand-text-mid">
@@ -314,20 +313,8 @@ export default function DressagePage() {
             <li>Spanish Riding School of Vienna. Public educational materials on classical riding (continuously operating since 1572). srs.at.</li>
           </ol>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href="/go/amazon-brand/dressage+saddle?s=discipline-dressage" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated horse training-pyramid chart /
-              horse stall-door USDF level card /
-              equine double-bridle handbook).
-              No existing product hop to keep.
-              Educational barn searches only; no Rx /
-              vaccine / flea / heartworm / nsaid hops
-              and no Weymouth kit hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs trail-riding /
-              racing-hub hops.
-              Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
@@ -336,7 +323,7 @@ export default function DressagePage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/dressage+saddle?s=discipline-dressage"
-                amazonLabel="Shop on Amazon"
+                amazonLabel="Browse dressage saddles on Amazon →"
               />
           </div>
           </div>

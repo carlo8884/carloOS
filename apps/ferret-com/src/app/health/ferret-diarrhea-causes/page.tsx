@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import {
   buildMetadata,
@@ -10,22 +11,22 @@ import {
   DropCap,
   CrossPortfolioCard,
   ArticleSourcesList,
-  AffiliateDisclosure,
   ShopCtas,
+  LastUpdated,
 } from '@carloOS/ui'
 
 const SOURCES = [
+  {
+    label: "Merck Veterinary Manual — infectious gastrointestinal disease in ferrets, including Helicobacter mustelae and Lawsonia",
+    url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/infectious-diseases-of-ferrets",
+    publisher: "Merck Veterinary Manual",
+  },
   {
     label: "Quesenberry KE, Carpenter JW (eds.). Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery. 4th ed. Saunders/Elsevier — ferret gastroenterology, epizootic catarrhal enteritis (ECE), Helicobacter, and inflammatory bowel disease chapters.",
     url: "https://www.elsevier.com/books/ferrets-rabbits-and-rodents/quesenberry/978-1-4160-6621-7",
     publisher: "Elsevier/Saunders",
   },
-  {
-    label: "Merck Veterinary Manual — Digestive Diseases of Ferrets: diarrhea causes including ECE, proliferative bowel disease, Helicobacter, and foreign bodies",
-    url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/digestive-diseases-of-ferrets",
-    publisher: "Merck Veterinary Manual",
-  },
-  {
+    {
     label: "Association of Exotic Mammal Veterinarians (AEMV) — practitioner directory and continuing-education content on ferret gastrointestinal disease",
     url: "https://aemv.org",
     publisher: "AEMV",
@@ -76,7 +77,6 @@ const medSchema = buildMedicalWebPageSchema({
   authorName: 'Ferret.com Editorial',
   lastReviewed: '2026-06-01',
 })
-
 
 const FAQS = [
   {
@@ -161,7 +161,7 @@ export default function FerretDiarrheaCausesPage() {
 
           </>
         }
-      
+
         relatedLinks={[
           { title: 'Ferret Health Hub', href: '/health' },
           { title: 'Gastrointestinal Blockage', href: '/health/gastrointestinal-blockage' },
@@ -175,6 +175,7 @@ export default function FerretDiarrheaCausesPage() {
             publishedAt="2026-06-01"
             updatedAt="2026-06-01"
           />
+          <LastUpdated date="2026-10-07" />
 
           <DropCap>
             Diarrhea is one of the most common reasons ferrets are brought to the
@@ -357,20 +358,8 @@ export default function FerretDiarrheaCausesPage() {
             diet as needed — all at the clinician&apos;s direction.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/ferret+oral+electrolyte+solution?s=ferret-diarrhea-causes" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated ferret stool-clue chart /
-              ferret fridge dehydrate-watch card /
-              mustelid enteritis-clue handbook).
-              No existing product hop to keep.
-              Educational kitchen searches only; no Rx /
-              vaccine / flea / heartworm / nsaid / aging hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs health-hub /
-              lymphoma / anesthesia / signs-of-pain hops. Ferret
-              aging stays held.
-              Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
@@ -379,7 +368,7 @@ export default function FerretDiarrheaCausesPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/ferret+oral+electrolyte+solution?s=ferret-diarrhea-causes"
-                amazonLabel="Shop on Amazon"
+                amazonLabel="Browse ferret oral electrolyte solution on Amazon →"
               />
           </div>
           </div>

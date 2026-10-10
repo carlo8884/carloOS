@@ -3,9 +3,10 @@
  * Full content baked in. Uses BreedHealthCard for health conditions.
  */
 
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, buildMetadata, RelatedLinks, CrossPortfolioCard, ShopCtas, StockImage, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, RelatedLinks, CrossPortfolioCard, ShopCtas, StockImage, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { BreedHealthCard } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
@@ -194,22 +195,22 @@ export default function GoldenRetrieverBreedPage() {
 
             <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
               <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-                Shop the Golden Retriever home kit
+                Shop these supplies
               </div>
               <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
-              <AffiliateDisclosure variant="inline" siteId="dog-com" />
+              <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/dog+crate?s=breed-golden-retriever", "/go/amazon-brand/dog+slicker+brush+golden+double+coat?s=breed-golden-retriever"]} />
               <div className="flex flex-col gap-3 mt-3">
                 <ShopCtas
                   amazonHref="/go/amazon-brand/dog+crate?s=breed-golden-retriever"
-                  amazonLabel="Shop on Amazon"
+                  amazonLabel="Browse dog crate on Amazon →"
                 />
                 <ShopCtas
                   amazonHref="/go/amazon-brand/dog+slicker+brush+golden+double+coat?s=breed-golden-retriever"
-                  amazonLabel="Browse slickers for the Golden double coat on Amazon →"
+                  amazonLabel="Browse slicker brushes for the Golden double coat on Amazon →"
                 />
                 <ShopCtas
                   amazonHref="/go/amazon-brand/dog+crate?s=breed-golden-retriever"
-                  amazonLabel="Shop on Amazon"
+                  amazonLabel="Browse dog crate on Amazon →"
                 />
               </div>
             </div>

@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -91,6 +92,7 @@ export default function WinterCarePage() {
             links={[
               { label: "Blanketing Guide", href: "/care/blanketing" },
               { label: "Best Winter Horse Blankets", href: "/reviews/best-winter-horse-blankets" },
+              { label: "Blanket size calculator", href: "/tools/horse-blanket-size-calculator" },
               { label: "Water Requirements", href: "/nutrition/water-requirements" },
               { label: "Equine Colic", href: "/health/colic" },
             ]}
@@ -114,7 +116,7 @@ export default function WinterCarePage() {
           <p>Forage is the horse&apos;s internal furnace -- the microbial fermentation of fiber in the hindgut generates heat. In cold weather, increasing hay (rather than grain) is the most effective way to help a horse stay warm. Free-choice or near-continuous good-quality hay keeps the fermentation going and the horse warm through the night. As a rough rule, intake needs rise as temperatures fall below the horse&apos;s comfort zone, so winter hay bills climb.</p>
 
           <h2 id="shelter">Shelter and Blanketing</h2>
-          <p>What horses most need is shelter from wind and wet, which strip the coat&apos;s insulation, rather than from cold air. A three-sided run-in shed, a windbreak, or tree cover lets a horse with a full coat and forage cope with severe cold. Blanketing is justified for clipped, old, sick, or underweight horses, or where shelter is lacking in prolonged cold and wet -- but an unclipped, sheltered, well-fed horse often needs no rug. See the blanketing guide.</p>
+          <p>What horses most need is shelter from wind and wet, which strip the coat&apos;s insulation, rather than from cold air. A three-sided run-in shed, a windbreak, or tree cover lets a horse with a full coat and forage cope with severe cold. Blanketing is justified for clipped, old, sick, or underweight horses, or where shelter is lacking in prolonged cold and wet -- but an unclipped, sheltered, well-fed horse often needs no rug. See the <a href="/care/blanketing">blanketing guide</a> before buying a rug. If a rug is warranted, the <a href="/reviews/best-winter-horse-blankets">winter blanket guide</a> compares fills, and the <a href="/tools/horse-blanket-size-calculator">blanket size calculator</a> turns a chest-to-buttock measurement into a US size.</p>
 
           <h2 id="footing">Footing, Ice, and Mud</h2>
           <ul>
@@ -128,15 +130,15 @@ export default function WinterCarePage() {
           <p>A thick winter coat hides weight loss, so a horse can quietly drop condition under a fluffy or blanketed exterior. Put hands on the horse regularly -- feel the ribs, topline, and hindquarters rather than relying on the eye -- and use body condition scoring through the winter. Catching a horse losing condition early lets you increase forage or investigate before spring reveals a thin horse under the coat.</p>
 
           <h2 id="kit">Winter-Care Kit</h2>
-          <p>Everyday physical supplies that match the water and footing copy above — a tank heater so troughs stay unfrozen, grit or sand for ice around gates and high-traffic areas, and snow pads or studs when the farrier conversation is about working horses in winter. These are not treatments for impaction colic, mud fever, or a horse that is losing condition under a winter coat; reduced drinking, persistent mud-related skin trouble, or unexplained weight loss belongs with your veterinarian, not a heater or a bag of grit. Blanketing decisions live on the blanketing guide. This page does not claim hands-on testing.</p>
+          <p>Keep these on hand: a tank heater so troughs stay unfrozen, grit or sand for ice around gates and high-traffic areas, and snow pads or studs when the farrier conversation is about working horses in winter. These are not treatments for impaction colic, mud fever, or a horse that is losing condition under a winter coat; reduced drinking, persistent mud-related skin trouble, or unexplained weight loss belongs with your veterinarian, not a heater or a bag of grit. Blanketing decisions live on the blanketing guide.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/horse+tank+heater?s=care-winter-care", "/go/amazon-brand/ice+grit?s=care-winter-care", "/go/amazon-brand/horse+snow+pads?s=care-winter-care", "/go/amazon-brand/horse+shoe+studs?s=care-winter-care"]} />
 
-          {/* Money path — live amazon-brand search hops (winter-care kit).
-              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-              Category searches only — everyday physical supplies matching
+          {/* Shop note — live amazon-brand search buttons (winter-care kit).
+              ShopCtas hides empty Chewy; never href="#" or an empty link.
+              Amazon searches only — everyday physical supplies matching
               on-page tank-heater / grit / snow-pad / stud copy, not colic
-              or mud-fever diagnosis hops. Blankets stay on /care/blanketing. */}
+              or mud-fever diagnosis buttons. Blankets stay on /care/blanketing. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

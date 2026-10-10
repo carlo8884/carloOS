@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import {
   buildMetadata,
@@ -9,7 +10,6 @@ import {
   ArticleByline,
   DropCap,
   StockImage,
-  AffiliateDisclosure,
   ArticleSourcesList,
   CrossPortfolioCard,
   ShopCtas,
@@ -69,7 +69,6 @@ const articleSchema = buildArticleSchema({
   citation: SOURCES,
 })
 
-
 const FAQS = [
   {
     question: 'How long does litter training a ferret take?',
@@ -105,7 +104,6 @@ const FAQS = [
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
 const combined = combineSchemas(articleSchema, faqSchema)
-
 
 export default function FerretTrainingBondingPage() {
   return (
@@ -154,7 +152,7 @@ export default function FerretTrainingBondingPage() {
             <CrossPortfolioCard currentSite="ferret-com" contentType="behavior" variant="sidebar" />
           </>
         }
-      
+
         relatedLinks={[
           { title: 'Ferret Behavior Hub', href: '/behavior' },
           { title: 'Leash & Harness Training', href: '/behavior/leash-and-harness-training' },
@@ -187,8 +185,7 @@ export default function FerretTrainingBondingPage() {
             from the first day in the home.
           </DropCap>
 
-          <h2 id="tldr">TL;DR</h2>
-          <p>
+                    <p>
             Ferrets train quickly to litter boxes, bite inhibition, and
             harness/leash work, but the methods differ from dog training in
             several specifics. Use food-reward operant conditioning with
@@ -219,8 +216,10 @@ export default function FerretTrainingBondingPage() {
               is unlikely to return to it.
             </li>
             <li>
-              <strong>Paper-pellet litter</strong> (Yesterday&apos;s News,
-              CareFresh) or non-aromatic wood pellets. No clumping clay
+              <strong>Paper-pellet litter</strong> (CareFresh, or
+              another recycled-paper pellet still being made) or
+              non-aromatic wood pellets. Purina discontinued
+              Yesterday&apos;s News on April 20, 2022. No clumping clay
               (sodium bentonite ingestion risk) and no aromatic softwood
               shavings (respiratory irritation).
             </li>
@@ -365,7 +364,9 @@ export default function FerretTrainingBondingPage() {
             and a collar tight enough to be safe is tight enough to be
             uncomfortable; a collar comfortable enough to wear is loose
             enough to slip off. Lost-ferret recovery rates are poor; a slip
-            outdoors is a high-cost mistake.
+            outdoors is a high-cost mistake. For the trade-offs between the
+            two styles, see{' '}
+            <a href="/reviews/vest-vs-h-harness-guide">vest vs H-style harness</a>.
           </p>
           <p>Sizing and fit:</p>
           <ul>
@@ -554,20 +555,8 @@ export default function FerretTrainingBondingPage() {
             exotic-pet vet visit before pursuing a training-only solution.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/ferret+litter?s=training-and-bonding" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated ferret training-map chart /
-              ferret fridge harness-vs-collar card /
-              mustelid training-bonding reference handbook).
-              Educational kitchen searches only; no Rx /
-              vaccine / aging hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs behavior-hub /
-              play-aggression / litter-box kitchen kits
-              and child sleep-sack / snuffle-mat hops. Ferret
-              aging stays held.
-              Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
@@ -576,7 +565,7 @@ export default function FerretTrainingBondingPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/ferret+litter?s=training-and-bonding"
-                amazonLabel="Shop on Amazon"
+                amazonLabel="Browse ferret litter on Amazon →"
               />
           </div>
           </div>

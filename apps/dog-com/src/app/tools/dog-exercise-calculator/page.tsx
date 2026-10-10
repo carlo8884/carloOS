@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -8,8 +9,8 @@ import {
   combineSchemas,
   SchemaScript,
   FAQAccordion,
-  AffiliateDisclosure,
   CrossPortfolioCard,
+  JourneyNext,
   ShopCtas,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
@@ -73,7 +74,7 @@ const appSchema = {
     'Energy-level ranges from low to working-breed',
     'Puppy “5 minutes per month of age” joint-safe guideline',
     'Senior low-impact adjustment and heat/health cautions',
-    'Shoppable walk-gear kit via Amazon category searches',
+    'Shop the walk-gear kit via Amazon searches',
   ],
   publisher: { '@type': 'Organization', name: 'Dog.com Editorial', url: 'https://dog.com' },
 }
@@ -145,15 +146,23 @@ export default function DogExerciseCalculatorPage() {
       <section className="bg-brand-surface px-container-sm sm:px-container py-section">
         <div className="max-w-5xl">
           <Calculator />
+          <JourneyNext
+            siteId="dog-com"
+            nextHref="/tools/dog-calorie-calculator"
+            nextLabel="Match this walk to a daily portion"
+            nextBlurb="The minute target is the outing. The calorie calculator turns body weight and life stage into a daily portion so the walk and the bowl use the same plan. The button below opens the leash search on Amazon."
+            resourceHref="/go/amazon-brand/dog+leash?s=tools-dog-exercise"
+            resourceLabel="Browse dog leashes on Amazon →"
+          />
         </div>
       </section>
 
-      {/* Money path — live amazon-brand search hops (walk / play kit).
-          ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-          Category searches only — not a ranked list, not a workout plan. */}
+      {/* Shop note — live amazon-brand search buttons (walk / play kit).
+          ShopCtas hides empty Chewy; never href="#" or an empty link.
+          Amazon searches only — not a ranked list, not a workout plan. */}
       <section id="dog-exercise-kit" className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <div className="max-w-2xl">
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/dog+leash?s=tools-dog-exercise", "/go/amazon-brand/julius+k9+idc+powerharness?s=tools-dog-exercise", "/go/amazon-brand/front+clip+no+pull+dog+harness?s=tools-dog-exercise", "/go/amazon-brand/kong+classic+dog+toy+stuffable?s=tools-dog-exercise", "/go/amazon-brand/dog+fetch+toys?s=tools-dog-exercise", "/go/amazon-brand/fi+series+3+dog+collar?s=tools-dog-exercise"]} />
           <div className="mt-4 rounded-xl border border-brand-border bg-brand-white p-5">
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
               Shop walk gear
@@ -166,15 +175,15 @@ export default function DogExerciseCalculatorPage() {
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/julius+k9+idc+powerharness?s=tools-dog-exercise"
-                amazonLabel="Browse Julius-K9 harnesses on Amazon →"
+                amazonLabel="Browse Julius-K9 IDC Powerharness on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/front+clip+no+pull+dog+harness?s=tools-dog-exercise"
-                amazonLabel="Browse no-pull harnesses on Amazon →"
+                amazonLabel="Browse front-clip no-pull harnesses on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/kong+classic+dog+toy+stuffable?s=tools-dog-exercise"
-                amazonLabel="Browse Kong fetch / stuffable toys on Amazon →"
+                amazonLabel="Browse Kong classic fetch / stuffable toys on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/dog+fetch+toys?s=tools-dog-exercise"
@@ -182,7 +191,7 @@ export default function DogExerciseCalculatorPage() {
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/fi+series+3+dog+collar?s=tools-dog-exercise"
-                amazonLabel="Browse Fi activity / GPS collars on Amazon →"
+                amazonLabel="Browse Fi Series 3 activity / GPS collars on Amazon →"
               />
           </div>
           </div>

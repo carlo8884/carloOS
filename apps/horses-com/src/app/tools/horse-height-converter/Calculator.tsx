@@ -1,5 +1,8 @@
 'use client'
 
+import { HopDisclosure } from '../../../components/HopDisclosure'
+import Link from 'next/link'
+
 /**
  * Horse Height Converter -- /tools/horse-height-converter
  * Client compute component. Converts horse height between hands, inches, and
@@ -21,7 +24,8 @@
  */
 
 import { useMemo, useState } from 'react'
-import { AffiliateDisclosure, ResultMeaning, ShopCtas, ToolError, numberFieldError } from '@carloOS/ui'
+import { ResultMeaning, ShopCtas, ToolError, numberFieldError } from '@carloOS/ui'
+import { fromInches, type HandsResult } from './model'
 
 function wholeNumberFieldError(raw: string, label: string, min: number, max: number): string | null {
   const base = numberFieldError(raw, label, min, max)
@@ -34,34 +38,6 @@ const CM_PER_INCH = 2.54
 const IN_PER_HAND = 4
 
 type Mode = 'hands' | 'inches' | 'cm'
-
-interface Result {
-  inches: number
-  cm: number
-  hands: number
-  handInches: number
-  /** hands.inches notation string, e.g. "15.2" */
-  handsNotation: string
-  isPony: boolean
-}
-
-function fromInches(totalInches: number): Result {
-  const hands = Math.floor(totalInches / IN_PER_HAND)
-  // Remaining inches as whole-inch remainder for the hands.inches label.
-  const remainder = totalInches - hands * IN_PER_HAND
-  // Round the displayed remainder to the nearest whole inch (0-3) for notation.
-  const handInches = Math.round(remainder)
-  // 14.2hh (58 in) is the pony cutoff: <= 14.2hh = pony.
-  const isPony = totalInches <= 58
-  return {
-    inches: totalInches,
-    cm: totalInches * CM_PER_INCH,
-    hands,
-    handInches,
-    handsNotation: `${hands}.${handInches}`,
-    isPony,
-  }
-}
 
 function round1(n: number): number {
   return Math.round(n * 10) / 10
@@ -79,7 +55,7 @@ export default function Calculator() {
   const cmError = mode === 'cm' ? numberFieldError(cm, 'height', 51, 224, 'cm') : null
   const inputError = handsError || extraError || inchesError || cmError
 
-  const result = useMemo<Result | null>(() => {
+  const result = useMemo<HandsResult | null>(() => {
     if (inputError) return null
     if (mode === 'hands') {
       const h = parseInt(handsWhole, 10)
@@ -255,23 +231,29 @@ export default function Calculator() {
       </div>}
 
       {result && (
+        <>
         <ResultMeaning>
           These three figures are the same withers height in hands, inches, and centimetres.
         </ResultMeaning>
+        <p className="mt-3 text-sm">
+          <Link href="/guides/saddle-fit-basics" className="font-semibold text-brand-primary underline">
+            Read saddle-fit basics
+          </Link>
+        </p>
+        </>
       )}
 
       {result && (
         <p className="mt-4 text-sm text-brand-text-mid">
           {result.isPony ? (
             <>
-              At <strong>{result.handsNotation}hh</strong> (14.2hh or under), this
-              animal is classified as a <strong>pony</strong> under the standard
-              definition.
+              {round1(result.inches)} in is 14.2hh (58 in) or under, so this animal
+              is classified as a <strong>pony</strong>.
             </>
           ) : (
             <>
-              At <strong>{result.handsNotation}hh</strong> (over 14.2hh), this animal
-              is classified as a <strong>horse</strong> under the standard definition.
+              {round1(result.inches)} in is over 14.2hh (58 in), so this animal
+              is classified as a <strong>horse</strong>.
             </>
           )}
         </p>
@@ -290,7 +272,7 @@ export default function Calculator() {
             A measuring stick with a level is how you confirm that number at the withers
             on hard, level ground — the same method used for official measurement.
           </p>
-          <AffiliateDisclosure variant="inline" siteId="horses-com" className="my-3" />
+          <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/horse+measuring+stick?s=tools-horse-height-converter"]} />
           <ShopCtas
             amazonHref="/go/amazon-brand/horse+measuring+stick?s=tools-horse-height-converter"
             amazonLabel="Browse horse measuring sticks on Amazon →"

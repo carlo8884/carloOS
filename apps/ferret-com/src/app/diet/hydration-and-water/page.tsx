@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, ReviewCard, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, ReviewCard, CrossPortfolioCard, PrimaryHop, ComparisonFoot, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -39,6 +40,10 @@ export default function HydrationAndWaterPage() {
       <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="ferret-com"
+        heroHop={<>
+          <PrimaryHop href="/go/amazon-brand/heavy+wide+ceramic+pet+bowl?s=diet-hydration-and-water" label="Search Amazon for a heavy ceramic water bowl" />
+          <HopDisclosure tone="on-dark" siteId="ferret-com" href="/go/amazon-brand/heavy+wide+ceramic+pet+bowl?s=diet-hydration-and-water" />
+        </>}
         hero={{
           title: 'Ferret Hydration & Water',
           subtitle:
@@ -95,6 +100,7 @@ export default function HydrationAndWaterPage() {
             updatedAt="2026-06-01"
             reviewedBy="Editorial team"
           />
+          <LastUpdated date="2026-10-10" />
 
           <h2 id="bowl-bottle">Bowl vs Bottle</h2>
           <p>
@@ -103,6 +109,38 @@ export default function HydrationAndWaterPage() {
           <p>
             A sipper bottle is useful as a <strong>backup</strong> — it stays clean and spill-free — but should not be the only water source. The classic failure mode is a clogged or air-locked ball valve in a warm room: the ferret appears to have "water available" while actually getting none. If you use a bottle, check daily that it actually dispenses, and ideally offer a bowl as well.
           </p>
+          <div className="my-6 max-w-full min-w-0">
+            <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
+              <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+              <thead>
+                <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Bowl</th>
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Sipper bottle</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">How they drink</th>
+                  <td className="p-3">Lap naturally and in volume</td>
+                  <td className="p-3">A ball valve releases water a drop at a time</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Where it misses</th>
+                  <td className="p-3">Ferrets dig and tip. Use a heavy, low, wide ceramic dish, or one that clips to the bars, and refresh it more than once a day</td>
+                  <td className="p-3">A clogged or air-locked valve can look like water while giving none</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Role</th>
+                  <td className="p-3">The source most ferrets drink from more readily</td>
+                  <td className="p-3">A clean, spill-free backup. Check daily. Not the only source</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <ComparisonFoot updated="2026-10-10" />
+          <h2>Who should use which</h2>
+          <p>Use a heavy bowl as the water they lap from. Keep a sipper bottle only as a backup, and check that it dispenses. Do not leave a bottle as the only source.</p>
 
           <h2 id="intake">How Much Water</h2>
           <p>
@@ -129,19 +167,17 @@ export default function HydrationAndWaterPage() {
             Clean, fresh water at all times is the standard. Refresh bowls daily and wash them regularly to prevent biofilm. Tap water that is safe for people is generally fine for ferrets; there is no need for special water unless your local supply has a known problem, in which case the same filtration you would use yourself is appropriate. The priority is simply that the water is present, clean, and actually accessible.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/heavy+ceramic+pet+water+bowl?s=diet-hydration-and-water", "/go/amazon-brand/small+animal+sipper+water+bottle?s=diet-hydration-and-water"]} />
 
           <h2 id="picks">Bowl & Bottle Picks</h2>
           <p>
             The setup this page recommends is a heavy ceramic bowl as the primary water source, with a sipper bottle kept as a clean spill-free backup. Two options that fit that pattern, selected on published specs rather than a hands-on test.
           </p>
-          <ScoreMethodology />
           <ReviewCard
             id="ceramic-water-bowl"
             badge="Primary Source"
             name="Heavy Ceramic Pet Water Bowl"
             subtitle="Low, wide, tip-resistant — lets a ferret lap naturally"
-            score={8.8}
             winner
             description={
               <p>A heavy, low, wide-based ceramic dish is the primary water source most ferrets prefer — it lets them lap in volume the way a sipper bottle cannot, and the weight resists the digging and tipping ferrets are prone to. Refresh at least daily and wash regularly to prevent biofilm. A bar-clip version helps if your ferret still manages to flip a free-standing bowl.</p>
@@ -154,8 +190,9 @@ export default function HydrationAndWaterPage() {
             ]}
             pros={['Lets a ferret drink in natural volume', 'Heavy base resists tipping', 'Easy to clean, no biofilm traps', 'No mechanical valve to clog']}
             cons={['Ferrets may still dig in it', 'Needs refreshing more than once a day']}
-            price="$8–18"
-            ctaText="Find a Heavy Ceramic Bowl"
+            price="see current price"
+            priceNote="dated 2026-06-01."
+            ctaText="Find a heavy ceramic water bowl on Amazon"
             ctaHref="/go/amazon-brand/heavy+ceramic+pet+water+bowl?s=diet-hydration-and-water"
             ctaAffiliateProgram="amazon-brand"
             ctaAffiliateProduct="heavy-ceramic-water-bowl"
@@ -165,7 +202,6 @@ export default function HydrationAndWaterPage() {
             badge="Backup Source"
             name="Small-Animal Sipper Water Bottle"
             subtitle="Clean, spill-free backup — never the only source"
-            score={7.5}
             description={
               <p>A sipper bottle earns its place as a clean, spill-free backup, not as the sole water supply. The ball valve dispenses slowly and can clog or air-lock in a warm room — the classic failure mode where a ferret looks like it has water but is getting none. If you use one, check daily that it actually dispenses and pair it with the ceramic bowl above.</p>
             }
@@ -177,8 +213,9 @@ export default function HydrationAndWaterPage() {
             ]}
             pros={['Stays clean and spill-free', 'Good travel and backup option', 'Easy cage mounting']}
             cons={['Slow drop-by-drop delivery', 'Ball valve can clog or air-lock', 'Must be checked daily — not a sole source']}
-            price="$6–12"
-            ctaText="Find a Sipper Water Bottle"
+            price="see current price"
+            priceNote="dated 2026-06-01."
+            ctaText="Find a Sipper Water Bottle on Amazon"
             ctaHref="/go/amazon-brand/small+animal+sipper+water+bottle?s=diet-hydration-and-water"
             ctaAffiliateProgram="amazon-brand"
             ctaAffiliateProduct="small-animal-water-bottle"

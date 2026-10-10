@@ -212,6 +212,9 @@ export default function AdminDashboard() {
         const res = await fetch(`${site.url}/api/analytics?site=${site.id}&days=${days}`)
         if (!res.ok) throw new Error(`HTTP ${res.status}`)
         const metrics = await res.json()
+        if (!metrics || metrics.ok === false || typeof metrics.total_views !== 'number') {
+          throw new Error('analytics off')
+        }
         setSiteData(prev => ({ ...prev, [site.id]: { id: site.id, status: 'ok', metrics } }))
       } catch (err) {
         setSiteData(prev => ({

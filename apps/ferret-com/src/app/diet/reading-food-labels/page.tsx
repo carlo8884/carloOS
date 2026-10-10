@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, CalloutBox, ReviewCard, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, CalloutBox, ReviewCard, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -39,6 +40,14 @@ export default function ReadingFoodLabelsPage() {
       <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="ferret-com"
+        heroHop={
+          <>
+            <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/wysong+ferret+food?s=reading-food-labels" />
+            <div className="mb-4" data-primary-hop="true">
+              <a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" data-shop-placement="hero" href="/go/amazon-brand/wysong+ferret+food?s=reading-food-labels">Browse Wysong ferret food on Amazon →</a>
+            </div>
+          </>
+        }
         hero={{
           title: 'Reading Ferret Food Labels',
           subtitle:
@@ -70,6 +79,7 @@ export default function ReadingFoodLabelsPage() {
             <RelatedLinks
               title="Related Guides"
               links={[
+                { label: 'Label calculator', href: '/tools/label-calculator' },
                 { label: 'Choosing a Ferret Kibble', href: '/diet/best-ferret-kibble' },
                 { label: 'Protein & Fat Requirements', href: '/diet/protein-and-fat-requirements' },
                 { label: 'Transitioning Foods', href: '/diet/transitioning-foods' },
@@ -80,7 +90,7 @@ export default function ReadingFoodLabelsPage() {
             <CrossPortfolioCard currentSite="ferret-com" contentType="diet" variant="sidebar" />
           </>
         }
-      
+
         relatedLinks={[
           { title: 'Ferret Diet Hub', href: '/diet' },
           { title: 'Protein & Fat Requirements', href: '/diet/protein-and-fat-requirements' },
@@ -199,20 +209,7 @@ export default function ReadingFoodLabelsPage() {
             <li><strong>Vague descriptors</strong> — &quot;meat by-products&quot; or &quot;animal digest&quot; without a named species.</li>
           </ul>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated ferret label-split chart /
-              ferret fridge dry-matter card /
-              mustelid food-label reference handbook).
-              Keep existing Wysong review hop.
-              Educational kitchen searches only; no Rx /
-              vaccine / aging hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs diet-hub /
-              kibble / training kitchen kits. Ferret
-              aging stays held.
-              Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
@@ -221,40 +218,40 @@ export default function ReadingFoodLabelsPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/wysong+ferret+food?s=reading-food-labels"
-                amazonLabel="Shop on Amazon"
+                amazonLabel="Browse Wysong ferret food on Amazon →"
               />
           </div>
           </div>
 
           <h2 id="picks">A Clean-Panel Example</h2>
           <p>
-            To see what a panel that passes all the checks above looks like, here is one commercial diet whose published ingredient list reads as named animal proteins with no grain or plant-protein filler. Included on its documented panel as a worked example, not a hands-on test — apply the same reading method to any food you consider.
+            To see what a panel that passes the checks above looks like, here is one commercial diet whose printed ingredient list leads with chicken meal, organic chicken, and meat protein isolate and does not name wheat, corn, rice, or soy. The same list names chia seeds, dried apple fiber, and inulin, so it is not free of plant ingredients. No sugar is named on that list. Included on its documented panel as a worked example, not a hands-on test — apply the same reading method to any food you consider.
           </p>
-          <ScoreMethodology />
-          <ReviewCard
+          <ReviewCard quietUntilTag
             id="wysong-epigen-90"
             badge="Clean Panel"
             name="Wysong Epigen 90"
-            subtitle="Named-meat panel, no grain, single-digit carbohydrate by difference"
-            score={9.1}
+            subtitle="Current guaranteed analysis: crude protein min. 63%, crude fat min. 16%. Carbohydrate is not printed."
             winner
             description={
-              <p>A worked example of a panel that survives every check on this page: animal proteins lead, there is no grain or plant-protein concentrate splitting the list, no added sugar, and the carbohydrate-by-difference estimate lands in the single digits. Read it as a template for what a good ferret panel looks like, then hold any other bag to the same standard using the method above.</p>
+              <p>A worked example of a current bag, not a measured carbohydrate result. The current Wysong Epigen 90 page lists crude protein minimum 63% and crude fat minimum 16%. Those are guaranteed-analysis figures as printed, not a dry-matter conversion. The page markets the food as starch-free. Carbohydrate is not on the guaranteed analysis — check the label. Use the method above on any other bag, and check that label.</p>
             }
             specs={[
               { label: 'Leading ingredients', value: 'Named meats', highlight: 'good' },
-              { label: 'Grain', value: 'None', highlight: 'good' },
-              { label: 'Added sugar', value: 'None', highlight: 'good' },
-              { label: 'Carbohydrate by difference', value: 'Single digits', highlight: 'good' },
+              { label: 'Grain named', value: 'Wheat, corn, rice, and soy are not named', highlight: 'good' },
+              { label: 'Added sugar', value: 'No sugar is named on the printed list', highlight: 'good' },
+              { label: 'Carbohydrate', value: 'Not on the guaranteed analysis. Check the label.' },
             ]}
-            pros={['Named-meat ingredient panel', 'No grain or plant-protein filler', 'No added sugar', 'Clear worked example of a clean label']}
+            pros={['Named-meat ingredient panel', 'Printed list does not name wheat, corn, rice, or soy', 'No sugar is named on the printed list', 'The list also names chia, apple fiber, and inulin']}
             cons={['Premium price', 'Not always stocked at supermarket pet aisles']}
-            price="$30–50 / 5 lb"
+            price="see current price / 5 lb"
+            priceNote="dated 2026-06-01."
             ctaText="Find Wysong Epigen 90"
             ctaHref="/go/wysong/epigen-90?s=diet-reading-food-labels"
             ctaAffiliateProgram="wysong"
             ctaAffiliateProduct="epigen-90"
           />
+          <p>If the other bag in the aisle is Marshall Premium, the <a href="/reviews/wysong-vs-marshall-kibble-guide">Wysong versus Marshall guide</a> prints both guaranteed analyses. Carbohydrate is not on either label. Skip Marshall when insulinoma risk is why you are choosing a food.</p>
 
           <h2 id="sources">Sources</h2>
           <p>

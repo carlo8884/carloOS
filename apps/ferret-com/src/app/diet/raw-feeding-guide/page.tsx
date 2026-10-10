@@ -1,6 +1,7 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import { HubMoneyLinks } from '@carloOS/ui'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, CrossPortfolioCard, ShopCtas, ComparisonFoot, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -113,7 +114,7 @@ export default function RawFeedingGuidePage() {
             <CrossPortfolioCard currentSite="ferret-com" contentType="diet" variant="sidebar" />
           </>
         }
-      
+
         relatedLinks={[
           { title: 'Ferret Diet Hub', href: '/diet' },
           { title: 'Whole Prey vs. Kibble', href: '/diet/whole-prey-vs-kibble' },
@@ -128,6 +129,7 @@ export default function RawFeedingGuidePage() {
             updatedAt="2026-06-11"
             reviewedBy="Editorial team"
           />
+          <LastUpdated date="2026-10-10" />
 
           <h2 id="why">Why Raw</h2>
           <p>
@@ -138,6 +140,38 @@ export default function RawFeedingGuidePage() {
           <p>
             There are two raw approaches. <strong>Whole prey</strong> means feeding intact, appropriately sized animals — frozen-thawed mice, rats, day-old chicks, quail. Its advantage is that the prey arrives pre-balanced: muscle, organ, and bone are present in the proportions nature supplies, so you do not have to engineer the ratio yourself. <strong>Frankenprey</strong> means assembling a balanced diet from separately purchased parts — muscle meat, organ, and raw meaty bone — to approximate whole prey. Frankenprey offers more control and easier sourcing of familiar meats, at the cost of having to get the ratio right yourself.
           </p>
+          <div className="my-6 max-w-full min-w-0">
+            <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
+              <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+              <thead>
+                <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Whole prey</th>
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Frankenprey</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">What you feed</th>
+                  <td className="p-3">Intact, appropriately sized animals: mice, rats, day-old chicks, or quail</td>
+                  <td className="p-3">Muscle meat, organ, and raw meaty bone bought separately</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Balance</th>
+                  <td className="p-3">Muscle, organ, and bone arrive in the proportions the prey supplies</td>
+                  <td className="p-3">You have to get the ratio right yourself</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Trade-off</th>
+                  <td className="p-3">You do not engineer the ratio</td>
+                  <td className="p-3">More control, and easier sourcing of familiar meats</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <ComparisonFoot updated="2026-10-10" />
+          <h2>Who should feed which</h2>
+          <p>Feed whole prey when you want the balance to arrive with the animal. Feed frankenprey when familiar meats are easier to source and you will keep the ratio right. A poorly assembled raw diet can be worse than a good commercial kibble.</p>
 
           <h2 id="ratio">The Frankenprey Ratio</h2>
           <p>
@@ -164,20 +198,8 @@ export default function RawFeedingGuidePage() {
             Ferrets imprint on food early and resist change later (see <a href="/diet/kit-vs-adult-feeding">kit vs adult feeding</a>), so a kibble-raised adult may not recognize raw meat as food at first. Introduce it gradually: warm the meat slightly to release aroma, offer small pieces alongside the familiar diet, and consider a meat-based gravy or a smear on the lips to trigger interest. Patience matters — never let a ferret skip meals for long, as ferrets can become hypoglycemic quickly. Confirm calcium and taurine adequacy with a veterinarian familiar with ferrets before committing to raw as a sole diet.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/ferret+kibble?s=raw-feeding-guide", "/go/chewy-brand/frozen+feeder+mice+reptile?s=diet-raw-feeding-guide"]} />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated ferret frankenprey-ratio chart /
-              ferret fridge freeze-thaw card /
-              mustelid raw-feeding handbook).
-              Keep existing Chewy feeder-prey review hop.
-              Educational kitchen searches only; no Rx /
-              vaccine / aging hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs diet-hub /
-              transitioning / whole-prey kitchen kits. Ferret
-              aging stays held.
-              Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
@@ -186,7 +208,7 @@ export default function RawFeedingGuidePage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/ferret+kibble?s=raw-feeding-guide"
-                amazonLabel="Shop on Amazon"
+                amazonLabel="Browse ferret kibble on Amazon →"
               />
           </div>
           </div>
@@ -195,13 +217,11 @@ export default function RawFeedingGuidePage() {
           <p>
             For keepers who want the whole-prey route, frozen feeder prey from a reptile-feeder supplier is the usual starting point — it arrives pre-balanced and lets you skip engineering the frankenprey ratio yourself. Buy sizes appropriate to a ferret, confirm the supplier handling standards, and follow the freezing protocol above. These are buying-guidance options, not a hands-on test.
           </p>
-          <ScoreMethodology />
           <ReviewCard
             id="frozen-feeder-prey"
             badge="Whole-Prey Source"
             name="Frozen Feeder Mice & Chicks (Reptile-Feeder Grade)"
             subtitle="Pre-balanced whole prey, frozen, sized for a ferret"
-            score={8.4}
             description={
               <p>Frozen whole feeder prey — mice, rat pups, day-old chicks — sold for reptile and exotic feeding. The advantage for a ferret keeper is that intact prey supplies muscle, organ, and bone in natural proportions, so calcium-to-phosphorus balance is built in. Freeze for at least 30 days before feeding, thaw in the refrigerator, and choose a size appropriate to a ferret rather than a large reptile.</p>
             }
@@ -214,7 +234,7 @@ export default function RawFeedingGuidePage() {
             pros={['Pre-balanced — no ratio engineering', 'Natural calcium-to-phosphorus ratio', 'Cost-effective in bulk', 'Excellent dental abrasion']}
             cons={['Requires freezer space', 'Not for squeamish households', 'Must verify supplier handling standards']}
             price="Varies by size and quantity"
-            ctaText="Browse Frozen Feeder Prey"
+            ctaText="Browse frozen reptile feeder mice on Amazon"
             ctaHref="/go/chewy-brand/frozen+feeder+mice+reptile?s=diet-raw-feeding-guide"
             ctaAffiliateProgram="chewy-brand"
             ctaAffiliateProduct="frozen-feeder-mice"

@@ -1,14 +1,15 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, AffiliateDisclosure, ArticleSourcesList, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, ArticleSourcesList, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
 const SOURCES = [
-  { label: "Fin Rot in Aquarium Fish — Merck Veterinary Manual", url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/aquarium-fish/fin-rot-in-fish", publisher: "Merck Vet Manual" },
+  { label: "Fin Rot in Aquarium Fish — Merck Veterinary Manual", url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/aquarium-fish/bacterial-diseases-of-fish", publisher: "Merck Vet Manual" },
   { label: "Noga, E.J. Fish Disease: Diagnosis and Treatment, 2nd ed. Wiley-Blackwell, 2010.", publisher: "Wiley-Blackwell" },
   { label: "Yanong, R.P.E. Aeromonas Infections in Fish — UF/IFAS Extension FA-TP-174.", url: "https://edis.ifas.ufl.edu/publication/FA174", publisher: "UF/IFAS Extension" },
-  { label: "Francis-Floyd, R. Stress — Its Role in Fish Disease — UF/IFAS Extension FA-43.", url: "https://edis.ifas.ufl.edu/publication/FA043", publisher: "UF/IFAS Extension" },
+  { label: "Francis-Floyd, R. Stress — Its Role in Fish Disease — UF/IFAS Circular 919 / FA005.", url: "https://ask.ifas.ufl.edu/publication/FA005", publisher: "UF/IFAS Extension" },
 ]
 
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Fin Rot in Fish — Causes, Bacterial vs Fungal | Fish.com', description: 'Fin rot is almost always caused by poor water quality. Fraying, ragged edges progressing toward the body. Treatment: water quality first.', path: '/health/fin-rot', type: 'article' })
@@ -71,13 +72,13 @@ export default function FinRotPage() {
         <h2>Fin Rot in Bettas — The Specific Case</h2>
         <p>Bettas are disproportionately affected by fin rot because: they are often kept in small, under-filtered tanks where water quality degrades quickly, their long fins are easily damaged by rough decorations or fin-nipping fish, and their elaborate fins provide more surface area for infection. Betta fin rot treatment follows the same protocol — but tank size and filtration upgrade is the most important preventive measure. A betta in a 5-gallon properly filtered tank rarely develops fin rot; a betta in an unfiltered 1-gallon bowl frequently does.</p>
 
-        {/* Money path — live amazon-brand search hops (water-first / isolate / gravel-vacuum kit).
-            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-            Category searches only — not a ranked list. No medication hops. */}
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        {/* Shop note — live amazon-brand search buttons (water-first / isolate / gravel-vacuum kit).
+            ShopCtas hides empty Chewy; never href="#" or an empty link.
+            Amazon searches only — not a ranked list. No medication buttons. */}
+        <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/api+freshwater+master+test+kit?s=health-fin-rot", "/go/amazon-brand/aquarium+quarantine+hospital+tank+net?s=health-fin-rot", "/go/amazon-brand/aquarium+sponge+filter?s=health-fin-rot", "/go/amazon-brand/aquarium+gravel+vacuum+siphon?s=health-fin-rot"]} />
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
-            Shop a water-first isolate kit
+            Shop these supplies
           </div>
           <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Fin rot is almost always a water-quality problem. A liquid master
             kit is how you see ammonia, nitrite, and nitrate before you treat
@@ -85,8 +86,7 @@ export default function FinRotPage() {
             fish in a spare hospital tank with a seeded sponge filter so
             treatment stays off the display biofilter. A gravel vacuum is how
             you pull accumulated waste from the substrate during water
-            changes so the ammonia spike does not recur. Same test-kit hop
-            used on the{' '}
+            changes so the ammonia spike does not recur. The same test-kit button is on the{' '}
             <Link
               href="/health/bacterial-infections"
               className="text-brand-primary no-underline hover:underline"
@@ -100,7 +100,7 @@ export default function FinRotPage() {
             >
               water-test kit review
             </Link>
-            . Same hospital-tank hop used on the{' '}
+            . The same hospital-tank button is on the{' '}
             <Link
               href="/tools/fish-disease-symptom-checker"
               className="text-brand-primary no-underline hover:underline"
@@ -111,14 +111,14 @@ export default function FinRotPage() {
             <Link href="/health/columnaris" className="text-brand-primary no-underline hover:underline">
               columnaris guide
             </Link>
-            . Same sponge-filter hop used on the{' '}
+            . The same sponge-filter button is on the{' '}
             <Link
               href="/tools/aquarium-cycling-estimator"
               className="text-brand-primary no-underline hover:underline"
             >
               cycling estimator
             </Link>
-            . Same gravel-vacuum hop used on the{' '}
+            . The same gravel-vacuum button is on the{' '}
             <Link
               href="/tools/water-change-calculator"
               className="text-brand-primary no-underline hover:underline"
@@ -129,11 +129,10 @@ export default function FinRotPage() {
             <Link href="/setup" className="text-brand-primary no-underline hover:underline">
               aquarium setup guide
             </Link>
-            . Heater and thermometer hops stay off this page — fin-rot copy
-            has no heat method. The hops below are not a ranked product
+            . Heater and thermometer buttons stay off this page — fin-rot copy
+            has no heat method. The buttons below are not a ranked product
             list, they are not medications, and they do not treat, reverse,
-            or cure fin rot. Fish.com earns a commission on qualifying
-            purchases at no extra cost to you. </p>
+            or cure fin rot. </p>
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/api+freshwater+master+test+kit?s=health-fin-rot"
@@ -149,7 +148,7 @@ export default function FinRotPage() {
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+gravel+vacuum+siphon?s=health-fin-rot"
-              amazonLabel="Browse gravel vacuums on Amazon →"
+              amazonLabel="Browse gravel vacuum siphons on Amazon →"
             />
           </div>
           <p className="text-2xs text-brand-text-light mt-3">

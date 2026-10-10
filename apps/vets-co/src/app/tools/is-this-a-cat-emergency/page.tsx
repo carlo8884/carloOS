@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -9,9 +10,9 @@ import {
   combineSchemas,
   SchemaScript,
   FAQAccordion,
-  AffiliateDisclosure,
   ArticleSourcesList,
   CrossPortfolioCard,
+  PrimaryHop,
   ShopCtas,
 } from '@carloOS/ui'
 import TriageHelper from './TriageHelper'
@@ -25,10 +26,9 @@ export const metadata: Metadata = buildMetadata({
 })
 
 const SOURCES = [
-  { label: 'AVMA: Emergency Care for Pets — Warning Signs', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/emergencies-pets', publisher: 'AVMA' },
-  { label: 'Merck Veterinary Manual: Emergency and Critical Care Overview for Small Animals', url: 'https://www.merckvetmanual.com/emergency-medicine-and-critical-care/critical-care-medicine/overview-of-critical-care-medicine', publisher: 'Merck Vet Manual' },
+  { label: 'AVMA: Emergency Care for Pets — Warning Signs', url: 'https://www.avma.org/resources-tools/pet-owners/emergency-care', publisher: 'AVMA' },
   { label: 'AAHA: Emergency and Critical Care Standards', url: 'https://www.aaha.org/aaha-guidelines/emergency-and-critical-care/emergency-and-critical-care-guidelines/', publisher: 'AAHA' },
-  { label: 'ASPCA Animal Poison Control Center: Pet Poison Information', url: 'https://www.aspca.org/pet-care/animal-poison-control', publisher: 'ASPCA' },
+  { label: 'ASPCA Animal Poison Control Center: Pet Poison Information', url: 'https://www.aspca.org/pet-care/aspca-poison-control', publisher: 'ASPCA' },
   { label: 'Cornell Feline Health Center: Feline Lower Urinary Tract Disease', url: 'https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/feline-lower-urinary-tract-disease', publisher: 'Cornell Feline Health Center' },
 ]
 
@@ -92,7 +92,7 @@ const appSchema = {
     'Conservative urgency read: go now, same-day vet, or monitor closely',
     '15 feline signs drawn from veterinary emergency-medicine criteria',
     'Always rounds toward more care; no all-clear result',
-    'Shoppable cat emergency-prep kit via Amazon category searches (pet first-aid kit, digital pet thermometer, soft cat carrier, styptic powder, wound-care gauze)',
+    'Shop the cat emergency-prep kit via Amazon searches (pet first-aid kit, digital pet thermometer, soft cat carrier, styptic powder, wound-care gauze)',
   ],
 }
 
@@ -165,9 +165,14 @@ export default function IsThisACatEmergencyPage() {
           >
             Is This a Cat Emergency?
           </h1>
+          <div data-fold="offer">
+            <PrimaryHop href="/go/amazon-brand/pet+first+aid+kit?s=tools-is-this-a-cat-emergency" label="Search Amazon for a pet first-aid kit" />
+            <HopDisclosure tone="on-dark" siteId="vets-co" href="/go/amazon-brand/pet+first+aid+kit?s=tools-is-this-a-cat-emergency" />
+          </div>
           <p className="text-lg text-white/55 leading-relaxed max-w-2xl">
             Check the feline signs you are seeing and get a conservative urgency read — go now, same-day vet, or
             monitor closely — using emergency-vs-wait criteria from veterinary emergency medicine.
+            This page is not a veterinarian. If your cat may be in danger, contact a vet.
             This tool helps you decide how urgently to seek care. It does not diagnose your cat.
           </p>
         </div>
@@ -232,15 +237,15 @@ export default function IsThisACatEmergencyPage() {
         </div>
       </section>
 
-      {/* Money path — live amazon-brand search hops (cat emergency-prep / first-aid kit).
-          ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-          Category searches only — not a ranked list, not a diagnosis. */}
+      {/* Shop note — live amazon-brand search buttons (cat emergency-prep / first-aid kit).
+          ShopCtas hides empty Chewy; never href="#" or an empty link.
+          Amazon searches only — not a ranked list, not a diagnosis. */}
       <section id="cat-emergency-prep-kit" className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <div className="max-w-2xl">
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/pet+first+aid+kit?s=tools-is-this-a-cat-emergency", "/go/amazon-brand/digital+pet+thermometer?s=tools-is-this-a-cat-emergency", "/go/amazon-brand/soft+cat+carrier?s=tools-is-this-a-cat-emergency", "/go/amazon-brand/styptic+powder?s=tools-is-this-a-cat-emergency", "/go/amazon-brand/wound+care+gauze?s=tools-is-this-a-cat-emergency"]} />
           <div className="mt-4 rounded-xl border border-brand-border bg-brand-white p-5">
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Shop a cat emergency-prep kit
+              Shop these supplies
             </div>
             <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
@@ -284,7 +289,6 @@ export default function IsThisACatEmergencyPage() {
               breathing, not a blocked bladder — talk to a licensed vet on a screen rather than waiting
               for a gap to become an ER visit.
             </p>
-            <AffiliateDisclosure variant="inline" siteId="vets-co" className="mb-3 text-2xs" />
             <div className="flex flex-col gap-2 sm:flex-row sm:flex-wrap">
               <Link
                 href="/reviews/best-pet-insurance"

@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, RelatedLinks, CrossPortfolioCard, ArticleByline, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, RelatedLinks, CrossPortfolioCard, ArticleByline, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Human Foods Safe for Dogs — What Can Dogs Actually Eat? | Dog.com', description: 'Complete list of human foods that are safe to share with dogs — with portion guidance and which preparations to avoid. research-based.', path: '/nutrition/safe-human-foods', type: 'article' })
@@ -28,7 +29,7 @@ const PREPARATION_RULES = [
   'No cooking oils — fat content triggers pancreatitis. Boil or bake instead.',
   'No xylitol — check any product label that contains "sugar-free" or sweeteners.',
   'Cooked over raw — for meat especially. Some raw fish is dangerous.',
-  'Small portions — all human foods are additions to a complete diet, not substitutes. Should not exceed 10% of daily caloric intake.',
+  'Small portions — all human foods are additions to a complete diet, not substitutes. The WSAVA guide to treats for dogs states that treats should make up no more than 10% of a dog\'s daily calorie intake (https://wsava.org/wp-content/uploads/2025/11/WSAVA_GuidetoTreats_Dogs_251107.pdf).',
   'Introduce one food at a time — allows identification of sensitivities.',
 ]
 
@@ -57,7 +58,7 @@ export default function SafeHumanFoodsPage() {
 
         <div style={{ background: 'rgba(42,106,58,0.06)', border: '1px solid rgba(42,106,58,0.15)', borderRadius: '10px', padding: '16px 20px', marginBottom: '24px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#2A6A3A', marginBottom: '8px' }}>The 10% Rule</div>
-          <p style={{ fontSize: '14px', color: 'var(--brand-text-mid)', margin: 0, lineHeight: 1.65 }}>All treats and supplemental foods — including safe human foods — should not exceed 10% of your dog&apos;s daily caloric intake. A dog eating 400 kcal/day should get no more than 40 kcal from treats and extras. Exceeding this creates nutritional imbalance and excess calories.</p>
+          <p style={{ fontSize: '14px', color: 'var(--brand-text-mid)', margin: 0, lineHeight: 1.65 }}>The WSAVA guide to treats for dogs states that treats should make up no more than 10% of a dog&apos;s daily calorie intake (<a href="https://wsava.org/wp-content/uploads/2025/11/WSAVA_GuidetoTreats_Dogs_251107.pdf">WSAVA treat guide</a>). As an example of that ceiling, 10% of a 400 kcal day is 40 kcal. Exceeding the ceiling can unbalance the diet and add calories.</p>
         </div>
 
         <h2>Universal Preparation Rules</h2>
@@ -86,19 +87,8 @@ export default function SafeHumanFoodsPage() {
         <h2>The Always-Check List</h2>
         <p>Before sharing any human food product (not a whole food): check every ingredient for xylitol, grapes, raisins, onion powder, garlic powder, and macadamia nuts. Many products contain these in forms that aren&apos;t obvious — protein bars, certain breads, trail mixes, flavored yogurts, and packaged foods frequently contain one or more of these. When in doubt, consult the <a href="/nutrition/toxic-foods">toxic foods guide</a> or call your vet.</p>
 
-        <AffiliateDisclosure variant="inline" siteId="dog-com" />
+        <HopDisclosure siteId="dog-com" href="/go/amazon-brand/plain+boiled+chicken+for+dogs?s=nutrition-safe-foods" />
 
-        {/* Money path — live amazon-brand search hops
-            (laminated dog ten-percent-treat chart /
-            dog fridge plain-prep card /
-            canine safe-share handbook).
-            No existing product hop to keep.
-            Educational kitchen searches only; no Rx /
-            vaccine / flea / heartworm / nsaid hops.
-            ShopCtas hides empty Chewy; never href="#"
-            or PLACEHOLDER. Unused vs toxic-foods /
-            can-dogs-eat / nutrition-hub hops.
-            Do not re-open #1165 / what-to-expect. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
             Shop related supplies
@@ -107,7 +97,7 @@ export default function SafeHumanFoodsPage() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/plain+boiled+chicken+for+dogs?s=nutrition-safe-foods"
-              amazonLabel="Shop on Amazon"
+              amazonLabel="Browse plain boiled chicken for dogs on Amazon →"
             />
           </div>
         </div>

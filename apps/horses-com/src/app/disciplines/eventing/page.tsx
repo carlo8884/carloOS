@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -10,7 +11,6 @@ import {
   ArticleByline,
   DropCap,
   CalloutBox,
-  AffiliateDisclosure,
   ShopCtas,
 } from '@carloOS/ui'
 import {
@@ -129,7 +129,7 @@ export default function EventingPage() {
         ]}
         sidebar={<>
           <TableOfContents items={[
-            { label: 'TL;DR', href: '#tldr' },
+            { label: '', href: '#tldr' },
             { label: 'History &amp; Origins', href: '#history' },
             { label: 'The Three Phases', href: '#phases' },
             { label: 'Levels — BN to CCI5*', href: '#levels' },
@@ -162,8 +162,7 @@ export default function EventingPage() {
             updatedAt="2026-05-28"
           />
 
-          <h2 id="tldr">TL;DR</h2>
-          <ul>
+                    <ul>
             <li><strong>What it is:</strong> a single combined-test competition of three phases — dressage, cross-country, and show jumping — judged on a combined penalty score; lowest score wins.</li>
             <li><strong>Format:</strong> One-Day (all three phases in one day at lower levels) or Three-Day (one phase per day, traditional format).</li>
             <li><strong>Levels:</strong> Beginner Novice through Advanced nationally (USEA); CCI1* through CCI5* internationally (FEI), each in -L (long) or -S (short) format.</li>
@@ -255,7 +254,7 @@ export default function EventingPage() {
           <p>BETA Level 3 (purple-tag) body protector is mandatory for cross-country at every USEA and FEI level. Air vests worn over (never instead of) a Level 3 body protector are increasingly common; they inflate when the rider is separated from the horse via a lanyard. Air vests are not a substitute for the foam-shell Level 3 vest.</p>
 
           <h3>Boots and protective gear</h3>
-          <p>Cross-country boots are typically substantial wraparound boots that protect the cannon, fetlock, and (for hind boots) the pastern. Common types include cross-country specific boots from manufacturers such as Woof, Eskadron, LeMieux, or Premier Equine; the design specifications are full coverage of the cannon and fetlock, durable shell, and (often) moisture-wicking liner. Bell boots over the hooves prevent overreach injuries.</p>
+          <p>Cross-country boots are typically substantial wraparound boots that protect the cannon, fetlock, and (for hind boots) the pastern. Common types include cross-country specific boots from manufacturers such as Woof, Eskadron, LeMieux, or Premier Equine; the design specifications are full coverage of the cannon and fetlock, durable shell, and (often) moisture-wicking liner. Bell boots over the hooves prevent overreach injuries. <a href="/tack/boots-and-wraps">The boots and wraps guide</a> compares those cross-country boots.</p>
 
           <h2 id="safety">Safety Evolution</h2>
 
@@ -286,7 +285,7 @@ export default function EventingPage() {
           </ul>
 
           <h2 id="faq">Frequently Asked Questions</h2>
-          <FAQAccordion items={FAQS} />
+          <FAQAccordion items={FAQS} includeSchema={false} />
 
           <h2 id="references">References</h2>
           <ol className="text-sm text-brand-text-mid">
@@ -302,20 +301,8 @@ export default function EventingPage() {
             <li>US Pony Clubs. Pony Club Eventing curriculum and rated competition pathway. ponyclub.org.</li>
           </ol>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href="/go/amazon-brand/dressage+saddle?s=discipline-eventing" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated horse USEA eventing-level chart /
-              horse stall-door CCI5* event card /
-              equine frangible-pin handbook).
-              No existing product hop to keep.
-              Educational barn searches only; no Rx /
-              vaccine / flea / heartworm / nsaid hops
-              and no jump-saddle kit hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs show-jumping /
-              dressage hops.
-              Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
@@ -324,7 +311,7 @@ export default function EventingPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/dressage+saddle?s=discipline-eventing"
-                amazonLabel="Shop on Amazon"
+                amazonLabel="Browse dressage saddles on Amazon →"
               />
           </div>
           </div>

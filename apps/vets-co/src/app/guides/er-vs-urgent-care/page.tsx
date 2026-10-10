@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, AffiliateDisclosure } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, PrimaryHop, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "ER vs. Urgent Care vs. Regular Vet — Where to Go | Vets.co", description: "Knowing whether to go to the emergency hospital, an urgent care clinic, or your regular vet saves time, money, and sometimes lives. Here is how to decide.", path: '/guides/er-vs-urgent-care', type: 'article' })
@@ -15,6 +16,10 @@ export default function ERvsUrgentPage() {
       <SchemaScript schema={schema} />
       <ArticleLayout siteId="vets-co"
         hero={{ title: 'ER vs. Urgent Care vs. Regular Vet', subtitle: 'When something is wrong with your pet, knowing where to go — the emergency hospital, an urgent care clinic, or your regular veterinarian — saves time, money, and sometimes your pet\'s life. This guide explains what each setting is for and how to match the severity and timing of a problem to the right level of care.', category: 'Owner Guide', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '8 min',}}
+        heroHop={<>
+          <PrimaryHop href="/go/amazon-brand/pet+first+aid+kit?s=guides-er-vs-urgent-care" label="Search Amazon for a pet first-aid kit" />
+          <HopDisclosure tone="on-dark" siteId="vets-co" href="/go/amazon-brand/pet+first+aid+kit?s=guides-er-vs-urgent-care" />
+        </>}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Guides', href: '/guides' }, { name: 'ER vs. Urgent Care', href: '/guides/er-vs-urgent-care' }]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -26,7 +31,7 @@ export default function ERvsUrgentPage() {
               </div>
             ))}
           </div>
-          <RelatedLinks title="Related Guides" links={[{ label: 'ER vs Clinic vs Telehealth (tool)', href: '/tools/er-vs-clinic' }, { label: 'When to Go to the Vet', href: '/guides/when-to-go-to-the-vet' }, { label: 'Emergency Vet Costs', href: '/guides/emergency-vet-costs' }, { label: 'Emergency Signs', href: '/health/emergency-signs' }]} />
+          <RelatedLinks title="Related Guides" links={[{ label: 'Is This a Cat Emergency?', href: '/tools/is-this-a-cat-emergency' }, { label: 'ER vs Clinic vs Telehealth (tool)', href: '/tools/er-vs-clinic' }, { label: 'When to Go to the Vet', href: '/guides/when-to-go-to-the-vet' }, { label: 'Emergency Vet Costs', href: '/guides/emergency-vet-costs' }, { label: 'Emergency Signs', href: '/health/emergency-signs' }]} />
 
         </>}
       >
@@ -40,6 +45,7 @@ export default function ERvsUrgentPage() {
 
           <h2>The Three Levels of Care</h2>
           <p>Pet healthcare, like human healthcare, has tiers. Your <strong>regular veterinarian</strong> handles routine wellness, preventive care, chronic disease management, and many acute but stable problems during business hours. <strong>Urgent care</strong> clinics address same-day problems that are not life-threatening but should not wait days. The <strong>emergency hospital</strong> handles critical, time-sensitive situations around the clock with intensive-care capability. Matching the problem to the right tier gets your pet appropriate care efficiently.</p>
+          <p>If the patient is a cat and you are still sorting emergency from urgent, the <a href="/tools/is-this-a-cat-emergency" className="text-brand-primary hover:underline">Is This a Cat Emergency?</a> tool applies the same buckets to common cat signs. It does not replace a clinic call.</p>
 
           <h2>When to Go to the Emergency Hospital</h2>
           <p>Some situations are unambiguous emergencies: difficulty breathing, severe or uncontrolled bleeding, collapse, suspected bloat, a male cat unable to urinate, seizures that repeat or do not stop, suspected poisoning, major trauma, and rapid deterioration. These cannot safely wait for a regular appointment and warrant going straight to a 24-hour emergency hospital. When a serious sign leaves you uncertain, treat it as an emergency, because the consequences of underreacting can be irreversible.</p>
@@ -54,36 +60,10 @@ export default function ERvsUrgentPage() {
           <p>In the moment, two questions guide you: how severe is this, and how fast is it changing? Severe or rapidly worsening signs point to the emergency hospital. Urgent but stable problems suit urgent care or a same-day visit with your regular vet. Stable, non-urgent issues belong at your regular clinic. Keep the contact details for all three handy in advance — your regular vet, a nearby urgent care if available, and the nearest 24-hour emergency hospital — so you are not searching during a crisis.</p>
 
           <h2 id="kit">Three-clinic contact kit</h2>
-          <p>
-            Everyday physical supplies that match the
-            keep-contact-details-for-all-three-handy
-            copy on this page — credit-card-size
-            laminating pouches so regular-vet /
-            urgent-care / 24-hour-ER numbers stay a
-            pocket card, a small magnetic dry-erase
-            board so those three numbers stay on the
-            fridge, and a car visor document holder so
-            the nearest ER address rides in the car. These are educational contact / planning
-            tools, not a ranked product list, not a
-            substitute for veterinary care, and not a
-            treatment. Letter-size thermal laminating
-            pouches already live on
-            dog-vaccinations-guide. Wall-mounted magnetic
-            monthly planners already live on
-            preventive-care-schedule. Hardcover weekly
-            appointment planners already live on
-            pain-management-dogs. Medium hard-sided
-            plastic pet carriers and lined telephone
-            message pads already live on
-            when-to-go-to-the-vet. Wire basket dog muzzles, quilted
-            disposable underpads, and handheld AA LED
-            flashlights already live on
-            emergency-signs. This page does not claim
-            hands-on testing. </p>
+          <p>Credit-card-size laminating pouches keep the regular vet, urgent care, and 24-hour ER numbers as a pocket card. A small magnetic dry-erase board keeps those three numbers on the fridge. A car visor document holder keeps the nearest ER address in the car. These are planning tools, not a treatment and not a ranked product list.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (credit-card-size laminating pouches /
               small magnetic dry-erase board /
               car visor document holder).
@@ -91,9 +71,9 @@ export default function ERvsUrgentPage() {
               tools, not a ranked product list, not a
               substitute for veterinary care, no Rx /
               first-aid kit / thermometer / carrier
-              ASIN hops.
+              product page buttons.
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or an empty link. Amazon searches only —
               unused vs #1093
               48+hour+digital+kitchen+timer /
               lined+telephone+message+pad /
@@ -121,13 +101,8 @@ export default function ERvsUrgentPage() {
               handheld+aa+led+flashlight.
               First-aid kits, digital pet
               thermometers, and prescriptions
-              are not shoppable hops. */}
-          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
-            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop related supplies
-            </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
-          </div>
+              are not shoppable buttons. */}
+          
 
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />

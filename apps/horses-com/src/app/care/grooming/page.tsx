@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, StockImage, ReviewCard, ScoreMethodology, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, StockImage, ReviewCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -60,6 +61,14 @@ export default function GroomingPage() {
           { title: 'Body Clipping', href: '/care/body-clipping' },
           { title: 'Rain Rot', href: '/health/rain-rot' },
         ]}
+        heroHop={
+          <>
+            <HopDisclosure siteId="horses-com" href="/go/amazon-brand/horse+curry+comb?s=care-grooming" />
+            <div className="mb-4" data-primary-hop="true">
+              <a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" data-shop-placement="hero" href="/go/amazon-brand/horse+curry+comb?s=care-grooming">Browse a horse curry comb on Amazon →</a>
+            </div>
+          </>
+        }
         hero={{
           title: "Grooming a Horse",
           subtitle:
@@ -132,13 +141,12 @@ export default function GroomingPage() {
           <p>Run your hands as well as the brushes over the horse. Feel for heat, swelling, cuts, lumps, and reactions to pressure; check the legs and feet carefully; and note anything new. Catching a small wound, a filling leg, or a developing girth gall during grooming turns a potential problem into a quick fix. The pre-ride groom is also the moment to confirm the horse is sound and comfortable before tacking up.</p>
 
           <h2 id="kit-picks">Grooming Kit Picks</h2>
-          <p>A few widely-stocked, non-medical grooming tools that cover the core kit described above. These are everyday physical supplies — brushes, combs, and a hoof pick — not treatments for a skin condition; any rash, scabbing, or persistent irritation belongs with your veterinarian, not a brush. This is a documented-spec comparison drawing on standard US equestrian retail; this page does not claim hands-on testing.</p>
+          <p>A few widely-stocked, non-medical grooming tools that cover the core kit described above. These are everyday physical supplies — brushes, combs, and a hoof pick — not treatments for a skin condition; any rash, scabbing, or persistent irritation belongs with your veterinarian, not a brush.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
-          {/* Money path — live amazon-brand search hops (grooming kit).
-              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-              Category searches only — everyday physical supplies matching
+          {/* Shop note — live amazon-brand search buttons (grooming kit).
+              ShopCtas hides empty Chewy; never href="#" or an empty link.
+              Amazon searches only — everyday physical supplies matching
               on-page kit copy, not rain-rot / sweet-itch treatments. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
@@ -169,14 +177,12 @@ export default function GroomingPage() {
           </div>
           </div>
 
-          <ScoreMethodology />
 
-          <ReviewCard
+          <ReviewCard quietUntilTag
             id="rubber-curry-comb"
             badge="Core Kit"
             name="Rubber Curry Comb"
             subtitle="The workhorse first step of any grooming routine"
-            score={8.6}
             winner
             description={<>
               <p>A rubber or jelly curry comb used in circular motions lifts caked mud, dander, and loose hair to the surface of the coat and gives the skin a stimulating massage. It is the single most useful tool in the kit and the natural first step before brushing.</p>
@@ -189,19 +195,19 @@ export default function GroomingPage() {
             ]}
             pros={['Lifts mud and loose hair effectively', 'Stimulates circulation', 'Inexpensive and durable']}
             cons={['Not for the face or bony areas', 'Soft versions wear faster in heavy mud']}
-            price="$6–18"
-            ctaText="Compare at SmartPak →"
+            price="see current price"
+            priceNote="dated 2026-06-07."
+            ctaText="Compare a rubber curry comb at SmartPak →"
             ctaHref="/go/smartpak/rubber-curry-comb?s=care-grooming"
             ctaAffiliateProgram="smartpak"
             ctaAffiliateProduct="rubber-curry-comb"
           />
 
-          <ReviewCard
+          <ReviewCard quietUntilTag
             id="dandy-body-brush-set"
             badge="Brush Set"
             name="Dandy and Body Brush Set"
             subtitle="Flick dirt away, then finish and lay the coat"
-            score={8.4}
             description={<>
               <p>A stiff-bristled dandy brush flicks away the dirt the curry comb has lifted, while a soft body brush removes fine dust, lays the coat, and is gentle enough for the face and bony areas. Owning both covers the bulk of the grooming routine.</p>
               <p>Most relevant for a complete everyday kit; keep the body brush clean with a metal curry to get the best finish.</p>
@@ -213,19 +219,19 @@ export default function GroomingPage() {
             ]}
             pros={['Covers two routine steps', 'Body brush is face-safe', 'Lays the coat for a clean finish']}
             cons={['Natural-bristle versions cost more', 'Dandy brush too stiff for sensitive skin']}
-            price="$15–40"
-            ctaText="Compare at Dover Saddlery →"
+            price="see current price"
+            priceNote="dated 2026-06-07."
+            ctaText="Compare a dandy and body brush set at Dover Saddlery →"
             ctaHref="/go/dover/dandy-body-brush-set?s=care-grooming"
             ctaAffiliateProgram="dover"
             ctaAffiliateProduct="dandy-body-brush-set"
           />
 
-          <ReviewCard
+          <ReviewCard quietUntilTag
             id="hoof-pick-brush"
             badge="Feet"
             name="Hoof Pick with Brush"
             subtitle="Pick out the feet first, every single time"
-            score={8.5}
             description={<>
               <p>Picking out the feet is the first and most important step of grooming and the routine moment to check for thrush, stones, and loose shoes. A hoof pick with an integrated stiff brush clears packed debris and then sweeps the sole clean so you can actually see the foot.</p>
               <p>Most relevant for every horse owner; keep one in the grooming kit and a spare by the stable door.</p>
@@ -237,8 +243,9 @@ export default function GroomingPage() {
             ]}
             pros={['Brush clears the sole for inspection', 'Inexpensive and essential', 'Surfaces thrush and stones early']}
             cons={['Plastic handles can snap under hard use', 'Easy to misplace — keep a spare']}
-            price="$5–15"
-            ctaText="Compare at SmartPak →"
+            price="see current price"
+            priceNote="dated 2026-06-07."
+            ctaText="Compare a hoof pick with brush at SmartPak →"
             ctaHref="/go/smartpak/hoof-pick-with-brush?s=care-grooming"
             ctaAffiliateProgram="smartpak"
             ctaAffiliateProduct="hoof-pick-with-brush"

@@ -177,16 +177,31 @@ export default function HomePage() {
           <div className="flex items-end justify-between gap-4 flex-wrap mb-4">
             <div className="flex items-center gap-3">
               <span aria-hidden="true" className="h-px w-8" style={{ background: 'var(--brand-accent)' }} />
-              <span className="text-2xs font-bold uppercase tracking-eyebrow" style={{ color: 'var(--brand-accent)' }}>Why this site</span>
+              <Link href="/editorial-standards" className="group flex items-center gap-2.5 no-underline">
+                <div className={`relative h-9 w-14 shrink-0 overflow-hidden rounded-md ${FILL_IMAGE}`}>
+                  <StockImage manifestKey="horses-com:hero" fallbackKey="horses-com:hero" alt="Horses running through a grassy field" aspect="4:3" variant="inline" subtleCredit />
+                </div>
+                <span className="text-2xs font-bold uppercase tracking-eyebrow group-hover:underline" style={{ color: '#7a5520' }}>Why this site</span>
+              </Link>
             </div>
             <Link href="/editorial-standards" className="group flex items-center gap-3 overflow-hidden rounded-md no-underline" style={{ background: 'var(--brand-white)', border: '1px solid var(--brand-border)' }}>
-              <span className={`relative h-14 w-20 shrink-0 overflow-hidden ${FILL_IMAGE}`}>
+              <div className={`relative h-14 w-20 shrink-0 overflow-hidden ${FILL_IMAGE}`}>
                 <StockImage manifestKey="horses-com:hero" fallbackKey="horses-com:hero" alt="Horses running through a grassy field" aspect="4:3" variant="inline" subtleCredit />
-              </span>
-              <span className="pr-3 py-2">
-                <span className="block font-display font-bold text-sm leading-tight" style={{ color: 'var(--brand-text-dark)' }}>Editorial standards</span>
-                <span className="block text-xs mt-0.5" style={{ color: 'var(--brand-text-mid)' }}>Citation-anchored, signed on the page.</span>
-              </span>
+              </div>
+              <div className="pr-3 py-2">
+                <div className="mb-1 flex items-center gap-2">
+                  <div className={`relative h-7 w-10 shrink-0 overflow-hidden rounded-md ${FILL_IMAGE}`}>
+                    <StockImage manifestKey="horses-com:hero" fallbackKey="horses-com:hero" alt="Horses running through a grassy field" aspect="4:3" variant="inline" subtleCredit />
+                  </div>
+                  <span className="block font-display font-bold text-sm leading-tight" style={{ color: 'var(--brand-text-dark)' }}>Editorial standards</span>
+                </div>
+                <span className="mt-0.5 flex items-center gap-2 text-xs" style={{ color: 'var(--brand-text-mid)' }}>
+                  <div className={`relative h-6 w-9 shrink-0 overflow-hidden rounded-md ${FILL_IMAGE}`}>
+                    <StockImage manifestKey="horses-com:hero" fallbackKey="horses-com:hero" alt="" aspect="4:3" variant="inline" />
+                  </div>
+                  <span>Citation-anchored, signed on the page.</span>
+                </span>
+              </div>
             </Link>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
@@ -196,8 +211,18 @@ export default function HomePage() {
                   <StockImage manifestKey={item.imageKey} fallbackKey="horses-com:hero" alt={item.imageAlt} aspect="16:9" variant="inline" subtleCredit />
                 </div>
                 <div className="p-3.5">
-                  <div className="font-display font-bold text-sm leading-tight" style={{ color: 'var(--brand-text-dark)' }}>{item.label}</div>
-                  <p className="text-xs leading-relaxed mt-1" style={{ color: 'var(--brand-text-mid)' }}>{item.note}</p>
+                  <div className="mb-1 flex items-center gap-2">
+                    <div className={`relative h-7 w-10 shrink-0 overflow-hidden rounded-md ${FILL_IMAGE}`}>
+                      <StockImage manifestKey={item.imageKey} fallbackKey="horses-com:hero" alt={item.imageAlt} aspect="4:3" variant="inline" subtleCredit />
+                    </div>
+                    <div className="font-display font-bold text-sm leading-tight" style={{ color: 'var(--brand-text-dark)' }}>{item.label}</div>
+                  </div>
+                  <div className="mt-1 flex items-start gap-2 text-xs leading-relaxed" style={{ color: 'var(--brand-text-mid)' }}>
+                    <div className={`relative mt-0.5 h-6 w-9 shrink-0 overflow-hidden rounded-md ${FILL_IMAGE}`}>
+                      <StockImage manifestKey={item.imageKey} fallbackKey="horses-com:hero" alt="" aspect="4:3" variant="inline" />
+                    </div>
+                    <span>{item.note}</span>
+                  </div>
                 </div>
               </Link>
             ))}
@@ -210,18 +235,33 @@ export default function HomePage() {
             <div>
               <div className="flex items-center gap-3 mb-3">
                 <span aria-hidden="true" className="h-px w-8" style={{ background: 'var(--brand-accent)' }} />
-                <span className="text-2xs font-bold uppercase tracking-eyebrow" style={{ color: 'var(--brand-accent)' }}>By Category</span>
+                <Link href="/breeds" className="group flex items-center gap-2.5 no-underline">
+                  <div className={`relative h-9 w-14 shrink-0 overflow-hidden rounded-md ${FILL_IMAGE}`}>
+                    <StockImage manifestKey="horses-com:category-breeds" fallbackKey="horses-com:hero" alt="A horse standing in profile, showing conformation" aspect="4:3" variant="inline" subtleCredit />
+                  </div>
+                  <span className="text-2xs font-bold uppercase tracking-eyebrow group-hover:underline" style={{ color: '#7a5520' }}>By Category</span>
+                </Link>
               </div>
               <h2 className="font-display font-bold tracking-tight text-3xl sm:text-4xl text-brand-text-dark">Where to start</h2>
             </div>
             <Link href="/breeds" className="group flex items-center gap-3 overflow-hidden rounded-md no-underline" style={{ background: 'var(--brand-white)', border: '1px solid var(--brand-border)' }}>
-              <span className={`relative h-16 w-24 shrink-0 overflow-hidden ${FILL_IMAGE}`}>
+              <div className={`relative h-16 w-24 shrink-0 overflow-hidden ${FILL_IMAGE}`}>
                 <StockImage manifestKey="horses-com:category-breeds" fallbackKey="horses-com:hero" alt="A horse standing in profile, showing conformation" aspect="4:3" variant="inline" subtleCredit />
-              </span>
-              <span className="pr-3 py-2">
-                <span className="block font-display font-bold text-sm leading-tight" style={{ color: 'var(--brand-text-dark)' }}>All breed guides</span>
-                <span className="block text-xs mt-0.5" style={{ color: 'var(--brand-text-mid)' }}>Conformation and genetic panels.</span>
-              </span>
+              </div>
+              <div className="pr-3 py-2">
+                <div className="mb-1 flex items-center gap-2">
+                  <div className={`relative h-7 w-10 shrink-0 overflow-hidden rounded-md ${FILL_IMAGE}`}>
+                    <StockImage manifestKey="horses-com:category-breeds" fallbackKey="horses-com:hero" alt="A horse standing in profile, showing conformation" aspect="4:3" variant="inline" subtleCredit />
+                  </div>
+                  <span className="block font-display font-bold text-sm leading-tight" style={{ color: 'var(--brand-text-dark)' }}>All breed guides</span>
+                </div>
+                <span className="mt-0.5 flex items-center gap-2 text-xs" style={{ color: 'var(--brand-text-mid)' }}>
+                  <div className={`relative h-6 w-9 shrink-0 overflow-hidden rounded-md ${FILL_IMAGE}`}>
+                    <StockImage manifestKey="horses-com:category-breeds" fallbackKey="horses-com:hero" alt="" aspect="4:3" variant="inline" />
+                  </div>
+                  <span>Conformation and genetic panels.</span>
+                </span>
+              </div>
             </Link>
           </div>
           <DisciplineFilter />
@@ -234,7 +274,12 @@ export default function HomePage() {
                 <div className="flex flex-col flex-1 p-6">
                   <div className="mb-3" style={{ color: 'var(--brand-primary)' }}><CategoryIconSvg name={cat.icon} /></div>
                   <h3 className="font-display font-bold text-xl leading-snug mb-2" style={{ color: 'var(--brand-text-dark)' }}>{cat.title}</h3>
-                  <p className="text-sm leading-relaxed mb-4" style={{ color: 'var(--brand-text-mid)' }}>{cat.desc}</p>
+                  <div className="mb-4 flex items-start gap-2 text-sm leading-relaxed" style={{ color: 'var(--brand-text-mid)' }}>
+                    <span className={`relative mt-0.5 h-6 w-9 shrink-0 overflow-hidden rounded-md ${FILL_IMAGE}`}>
+                      <StockImage manifestKey={cat.manifestKey} fallbackKey="horses-com:hero" alt="" aspect="4:3" variant="inline" />
+                    </span>
+                    <span>{cat.desc}</span>
+                  </div>
                   <span className="mt-auto inline-flex items-center text-xs font-semibold uppercase tracking-eyebrow" style={{ color: 'var(--brand-primary)' }}>Read <span aria-hidden="true" className="ml-1.5 transition-transform group-hover:translate-x-0.5">→</span></span>
                 </div>
               </Link>
@@ -248,18 +293,33 @@ export default function HomePage() {
             <div>
               <div className="flex items-center gap-3 mb-3">
                 <span aria-hidden="true" className="h-px w-8" style={{ background: 'var(--brand-accent)' }} />
-                <span className="text-2xs font-bold uppercase tracking-eyebrow" style={{ color: 'var(--brand-accent)' }}>Popular on Horses.com</span>
+                <Link href="/breeds/quarter-horse" className="group flex items-center gap-2.5 no-underline">
+                  <div className={`relative h-9 w-14 shrink-0 overflow-hidden rounded-md ${FILL_IMAGE}`}>
+                    <StockImage manifestKey="horses-com:featured-quarter-horse" fallbackKey="horses-com:hero" alt="An American Quarter Horse and rider schooling" aspect="4:3" variant="inline" subtleCredit />
+                  </div>
+                  <span className="text-2xs font-bold uppercase tracking-eyebrow group-hover:underline" style={{ color: '#7a5520' }}>Popular on Horses.com</span>
+                </Link>
               </div>
               <h2 className="font-display font-bold tracking-tight text-3xl sm:text-4xl text-brand-text-dark">Where owners start most</h2>
             </div>
             <Link href="/breeds/quarter-horse" className="group flex items-center gap-3 overflow-hidden rounded-md no-underline" style={{ background: 'var(--brand-surface)', border: '1px solid var(--brand-border)' }}>
-              <span className={`relative h-16 w-24 shrink-0 overflow-hidden ${FILL_IMAGE}`}>
+              <div className={`relative h-16 w-24 shrink-0 overflow-hidden ${FILL_IMAGE}`}>
                 <StockImage manifestKey="horses-com:featured-quarter-horse" fallbackKey="horses-com:hero" alt="An American Quarter Horse and rider schooling" aspect="4:3" variant="inline" subtleCredit />
-              </span>
-              <span className="pr-3 py-2">
-                <span className="block font-display font-bold text-sm leading-tight" style={{ color: 'var(--brand-text-dark)' }}>Quarter Horse guide</span>
-                <span className="block text-xs mt-0.5" style={{ color: 'var(--brand-text-mid)' }}>The breed owners open first.</span>
-              </span>
+              </div>
+              <div className="pr-3 py-2">
+                <div className="mb-1 flex items-center gap-2">
+                  <div className={`relative h-7 w-10 shrink-0 overflow-hidden rounded-md ${FILL_IMAGE}`}>
+                    <StockImage manifestKey="horses-com:featured-quarter-horse" fallbackKey="horses-com:hero" alt="An American Quarter Horse and rider schooling" aspect="4:3" variant="inline" subtleCredit />
+                  </div>
+                  <span className="block font-display font-bold text-sm leading-tight" style={{ color: 'var(--brand-text-dark)' }}>Quarter Horse guide</span>
+                </div>
+                <span className="mt-0.5 flex items-center gap-2 text-xs" style={{ color: 'var(--brand-text-mid)' }}>
+                  <div className={`relative h-6 w-9 shrink-0 overflow-hidden rounded-md ${FILL_IMAGE}`}>
+                    <StockImage manifestKey="horses-com:featured-quarter-horse" fallbackKey="horses-com:hero" alt="" aspect="4:3" variant="inline" />
+                  </div>
+                  <span>The breed owners open first.</span>
+                </span>
+              </div>
             </Link>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -271,7 +331,12 @@ export default function HomePage() {
                 <div className="flex flex-col flex-1 p-6">
                   <div className="text-2xs font-bold uppercase tracking-eyebrow mb-2" style={{ color: 'var(--brand-primary)' }}>{guide.eyebrow}</div>
                   <h3 className="font-display font-bold text-xl leading-snug mb-2" style={{ color: 'var(--brand-text-dark)' }}>{guide.title}</h3>
-                  <p className="text-sm leading-relaxed mb-4" style={{ color: 'var(--brand-text-mid)' }}>{guide.desc}</p>
+                  <div className="mb-4 flex items-start gap-2 text-sm leading-relaxed" style={{ color: 'var(--brand-text-mid)' }}>
+                    <span className={`relative mt-0.5 h-6 w-9 shrink-0 overflow-hidden rounded-md ${FILL_IMAGE}`}>
+                      <StockImage manifestKey={guide.manifestKey} fallbackKey="horses-com:hero" alt="" aspect="4:3" variant="inline" />
+                    </span>
+                    <span>{guide.desc}</span>
+                  </div>
                 </div>
               </Link>
             ))}
@@ -290,18 +355,31 @@ export default function HomePage() {
               </div>
               <div>
                 <div className="flex items-end justify-between gap-3 flex-wrap mb-3">
-                  <div className="flex items-center gap-2.5">
+                  <Link href="/tools/body-condition-score" className="group flex items-center gap-2.5 no-underline">
                     <span className="w-6 h-0.5 bg-brand-primary" />
-                    <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">Try it · Henneke body condition score</span>
-                  </div>
-                  <Link href="/tools/body-condition-score" className="group flex items-center gap-3 overflow-hidden rounded-md no-underline" style={{ background: 'var(--brand-surface)', border: '1px solid var(--brand-border)' }}>
-                    <span className={`relative h-12 w-16 shrink-0 overflow-hidden ${FILL_IMAGE}`}>
+                    <div className={`relative h-9 w-14 shrink-0 overflow-hidden rounded-md ${FILL_IMAGE}`}>
                       <StockImage manifestKey="horses-com:tool-bcs-calculator" fallbackKey="horses-com:hero" alt="A horse standing square for body condition assessment" aspect="4:3" variant="inline" subtleCredit />
-                    </span>
-                    <span className="pr-3 py-1.5">
-                      <span className="block font-display font-bold text-sm leading-tight" style={{ color: 'var(--brand-text-dark)' }}>Body condition tool</span>
-                      <span className="block text-xs mt-0.5" style={{ color: 'var(--brand-text-mid)' }}>Six checkpoints, 1–9 score.</span>
-                    </span>
+                    </div>
+                    <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary group-hover:underline">Try it · Henneke body condition score</span>
+                  </Link>
+                  <Link href="/tools/body-condition-score" className="group flex items-center gap-3 overflow-hidden rounded-md no-underline" style={{ background: 'var(--brand-surface)', border: '1px solid var(--brand-border)' }}>
+                    <div className={`relative h-12 w-16 shrink-0 overflow-hidden ${FILL_IMAGE}`}>
+                      <StockImage manifestKey="horses-com:tool-bcs-calculator" fallbackKey="horses-com:hero" alt="A horse standing square for body condition assessment" aspect="4:3" variant="inline" subtleCredit />
+                    </div>
+                    <div className="pr-3 py-1.5">
+                      <div className="mb-1 flex items-center gap-2">
+                        <div className={`relative h-7 w-10 shrink-0 overflow-hidden rounded-md ${FILL_IMAGE}`}>
+                          <StockImage manifestKey="horses-com:tool-bcs-calculator" fallbackKey="horses-com:hero" alt="A horse standing square for body condition assessment" aspect="4:3" variant="inline" subtleCredit />
+                        </div>
+                        <span className="block font-display font-bold text-sm leading-tight" style={{ color: 'var(--brand-text-dark)' }}>Body condition tool</span>
+                      </div>
+                      <span className="mt-0.5 flex items-center gap-2 text-xs" style={{ color: 'var(--brand-text-mid)' }}>
+                        <span className={`relative h-6 w-9 shrink-0 overflow-hidden rounded-md ${FILL_IMAGE}`}>
+                          <StockImage manifestKey="horses-com:tool-bcs-calculator" fallbackKey="horses-com:hero" alt="" aspect="4:3" variant="inline" />
+                        </span>
+                        <span>Six checkpoints, 1–9 score.</span>
+                      </span>
+                    </div>
                   </Link>
                 </div>
                 <h2 className="font-display font-bold text-brand-dark tracking-tight mb-3" style={{ fontSize: 'clamp(24px, 3vw, 38px)' }}>Is your horse the right weight?</h2>
@@ -310,9 +388,9 @@ export default function HomePage() {
               </div>
               <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
                 <Link href="/tools" className="group mb-3 flex items-center gap-3 no-underline">
-                  <span className={`relative h-12 w-16 shrink-0 overflow-hidden rounded-md ring-1 ring-brand-border ${FILL_IMAGE}`}>
+                  <div className={`relative h-12 w-16 shrink-0 overflow-hidden rounded-md ring-1 ring-brand-border ${FILL_IMAGE}`}>
                     <StockImage manifestKey="horses-com:category-guides" fallbackKey="horses-com:hero" alt="A horse and rider working in the arena" aspect="4:3" variant="inline" subtleCredit />
-                  </span>
+                  </div>
                   <span>
                     <span className="block text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light">More free calculators</span>
                     <span className="block text-sm font-semibold text-brand-primary group-hover:underline">Tools hub, on the page</span>
@@ -326,9 +404,9 @@ export default function HomePage() {
                     { href: '/tools', label: 'Browse the tools hub', imageKey: 'horses-com:category-guides', imageAlt: 'A horse and rider working in the arena' },
                   ].map((tool) => (
                     <Link key={tool.href} href={tool.href} className="group flex items-center gap-3 text-brand-primary no-underline hover:underline">
-                      <span className={`relative h-12 w-16 shrink-0 overflow-hidden rounded-md ring-1 ring-brand-border ${FILL_IMAGE}`}>
+                      <div className={`relative h-12 w-16 shrink-0 overflow-hidden rounded-md ring-1 ring-brand-border ${FILL_IMAGE}`}>
                         <StockImage manifestKey={tool.imageKey} fallbackKey="horses-com:hero" alt={tool.imageAlt} aspect="4:3" variant="inline" subtleCredit />
-                      </span>
+                      </div>
                       <span>{tool.label} →</span>
                     </Link>
                   ))}
@@ -344,18 +422,33 @@ export default function HomePage() {
             <div>
               <div className="flex items-center gap-3 mb-3">
                 <span aria-hidden="true" className="h-px w-8" style={{ background: 'var(--brand-accent)' }} />
-                <span className="text-2xs font-bold uppercase tracking-eyebrow" style={{ color: 'var(--brand-accent)' }}>Cornerstone Articles</span>
+                <Link href="/health/equine-ulcers" className="group flex items-center gap-2.5 no-underline">
+                  <div className={`relative h-9 w-14 shrink-0 overflow-hidden rounded-md ${FILL_IMAGE}`}>
+                    <StockImage manifestKey="horses-com:category-care" fallbackKey="horses-com:hero" alt="A horse receiving routine care" aspect="4:3" variant="inline" subtleCredit />
+                  </div>
+                  <span className="text-2xs font-bold uppercase tracking-eyebrow group-hover:underline" style={{ color: '#7a5520' }}>Cornerstone Articles</span>
+                </Link>
               </div>
               <h2 className="font-display font-bold tracking-tight text-3xl sm:text-4xl text-brand-text-dark">Reference, maintained</h2>
             </div>
             <Link href="/health/equine-ulcers" className="group flex items-center gap-3 overflow-hidden rounded-md no-underline" style={{ background: 'var(--brand-white)', border: '1px solid var(--brand-border)' }}>
-              <span className={`relative h-16 w-24 shrink-0 overflow-hidden ${FILL_IMAGE}`}>
+              <div className={`relative h-16 w-24 shrink-0 overflow-hidden ${FILL_IMAGE}`}>
                 <StockImage manifestKey="horses-com:category-care" fallbackKey="horses-com:hero" alt="A horse receiving routine care" aspect="4:3" variant="inline" subtleCredit />
-              </span>
-              <span className="pr-3 py-2">
-                <span className="block font-display font-bold text-sm leading-tight" style={{ color: 'var(--brand-text-dark)' }}>Equine health</span>
-                <span className="block text-xs mt-0.5" style={{ color: 'var(--brand-text-mid)' }}>When-to-call thresholds, no invented clinicians.</span>
-              </span>
+              </div>
+              <div className="pr-3 py-2">
+                <div className="mb-1 flex items-center gap-2">
+                  <div className={`relative h-7 w-10 shrink-0 overflow-hidden rounded-md ${FILL_IMAGE}`}>
+                    <StockImage manifestKey="horses-com:category-care" fallbackKey="horses-com:hero" alt="A horse receiving routine care" aspect="4:3" variant="inline" subtleCredit />
+                  </div>
+                  <span className="block font-display font-bold text-sm leading-tight" style={{ color: 'var(--brand-text-dark)' }}>Equine health</span>
+                </div>
+                <span className="mt-0.5 flex items-center gap-2 text-xs" style={{ color: 'var(--brand-text-mid)' }}>
+                  <div className={`relative h-6 w-9 shrink-0 overflow-hidden rounded-md ${FILL_IMAGE}`}>
+                    <StockImage manifestKey="horses-com:category-care" fallbackKey="horses-com:hero" alt="" aspect="4:3" variant="inline" />
+                  </div>
+                  <span>When-to-call thresholds, no invented clinicians.</span>
+                </span>
+              </div>
             </Link>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -365,7 +458,12 @@ export default function HomePage() {
                 <div className="p-7 lg:p-8">
                   <div className="text-2xs font-bold uppercase tracking-eyebrow mb-3" style={{ color: 'var(--brand-primary)' }}>{art.eyebrow}</div>
                   <h3 className="font-display font-bold text-2xl leading-tight mb-3" style={{ color: 'var(--brand-text-dark)' }}>{art.title}</h3>
-                  <p className="text-base leading-relaxed mb-5" style={{ color: 'var(--brand-text-mid)' }}>{art.teaser}</p>
+                  <div className="mb-5 flex items-start gap-2 text-base leading-relaxed" style={{ color: 'var(--brand-text-mid)' }}>
+                    <span className={`relative mt-1 h-7 w-10 shrink-0 overflow-hidden rounded-md ${FILL_IMAGE}`}>
+                      <StockImage manifestKey={art.imageKey} fallbackKey="horses-com:hero" alt="" aspect="4:3" variant="inline" />
+                    </span>
+                    <span>{art.teaser}</span>
+                  </div>
                   <span className="text-xs font-semibold uppercase tracking-eyebrow" style={{ color: 'var(--brand-text-light)' }}>{art.readTime} read</span>
                 </div>
               </Link>

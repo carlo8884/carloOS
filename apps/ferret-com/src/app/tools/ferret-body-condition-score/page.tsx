@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -8,7 +9,6 @@ import {
   combineSchemas,
   SchemaScript,
   FAQAccordion,
-  AffiliateDisclosure,
   CrossPortfolioCard,
   ShopCtas,
 } from '@carloOS/ui'
@@ -87,7 +87,7 @@ const appSchema = {
     'Three guided checks: rib/spine palpation, waist from above, belly from the side',
     'Seasonal weight-swing caveat (autumn fat / spring slim-down)',
     'Interpretation: underweight, ideal, overweight, obese, with vet-deferring next steps',
-    'Shoppable BCS kit via Amazon category searches (ferret food, senior ferret food, digital pet scale, ferret hammock, carrier)',
+    'Shop the BCS kit via Amazon searches (ferret food, senior ferret food, digital pet scale, ferret hammock, carrier)',
   ],
   publisher: { '@type': 'Organization', name: 'Ferret.com Editorial', url: 'https://ferret.com' },
 }
@@ -180,15 +180,15 @@ export default function FerretBodyConditionScorePage() {
         </div>
       </section>
 
-      {/* Money path — live amazon-brand search hops (BCS / weight-management kit).
-          ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-          Category searches only — not a ranked list, not a diagnosis. */}
+      {/* Shop note — live amazon-brand search buttons (BCS / weight-management kit).
+          ShopCtas hides empty Chewy; never href="#" or an empty link.
+          Amazon searches only — not a ranked list, not a diagnosis. */}
       <section id="ferret-bcs-kit" className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <div className="max-w-2xl">
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/ferret+food?s=tools-ferret-body-condition-score", "/go/amazon-brand/senior+ferret+food?s=tools-ferret-body-condition-score", "/go/amazon-brand/digital+pet+scale?s=tools-ferret-body-condition-score", "/go/amazon-brand/ferret+hammock?s=tools-ferret-body-condition-score", "/go/amazon-brand/ferret+carrier?s=tools-ferret-body-condition-score"]} />
           <div className="mt-4 rounded-xl border border-brand-border bg-brand-white p-5">
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Shop a BCS / weight-management kit
+              Shop these supplies
             </div>
             <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
@@ -234,7 +234,6 @@ export default function FerretBodyConditionScorePage() {
               to a licensed vet on a screen rather than waiting for a gap to
               become an ER visit.
             </p>
-            <AffiliateDisclosure variant="inline" siteId="ferret-com" className="mb-3 text-2xs" />
             <div className="flex flex-col gap-2 sm:flex-row sm:flex-wrap">
               <Link
                 href={crossSiteHref('vets-co', '/reviews/best-pet-insurance')}

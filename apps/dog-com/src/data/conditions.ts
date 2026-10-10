@@ -127,7 +127,7 @@ export const CONDITIONS: Condition[] = [
     bodySystem: 'Orthopedic',
     severity: 'chronic-manageable',
     briefDescription:
-      'Affects approximately 1 in 5 adult dogs and is the most common cause of chronic pain in the species. Multimodal management — weight control, NSAIDs, rehabilitation — substantially improves quality of life.',
+      'Anderson et al. (Scientific Reports, 2018) estimated the annual period prevalence of appendicular osteoarthritis at 2.5% in UK primary-care dogs (https://www.nature.com/articles/s41598-018-23940-z). Multimodal management — weight control, NSAIDs, rehabilitation — is the usual plan.',
     learnMoreHref: '/health/dog-arthritis',
     highlighted: true,
   },
@@ -835,7 +835,7 @@ export const CONDITIONS: Condition[] = [
     bodySystem: 'Infectious',
     severity: 'emergency',
     briefDescription:
-      'Highly contagious enteric virus of unvaccinated puppies. With aggressive inpatient supportive care, survival rates reach 75–90%; untreated parvovirus carries 50–90% mortality.',
+      'Highly contagious enteric virus of unvaccinated puppies. Merck Veterinary Manual: the survival rate is greater than 90% with aggressive hospital treatment, and 70–90% survive with appropriate supportive care (https://www.merckvetmanual.com/digestive-system/infectious-diseases-of-the-gastrointestinal-tract-in-small-animals/canine-parvovirus-infection-parvoviral-enteritis-in-dogs).',
     learnMoreHref: '/health/parvovirus',
     highlighted: true,
   },

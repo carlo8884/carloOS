@@ -32,6 +32,10 @@ export default function AboutPage() {
           <p>
             Vets.co is a reference for pet owners. The pages cover insurance comparisons, telehealth visit models, and care topics drawn from published guidelines. The editorial team writes them. Vets.co is not a veterinary practice, and a licensed veterinarian does not sign the rankings. There is no named author and no hands-on trial behind a ranking.
           </p>
+          <h2>How pages are researched</h2>
+          <p>
+            Health pages cite the primary sources used for that page. Prices on money pages carry the date they were checked. Affiliate links are disclosed on the page and on the disclosure. There is no veterinarian reviewer. Pages are researched from cited veterinary sources and are not a substitute for a veterinarian.
+          </p>
           <h2>How picks are made</h2>
           <p>
             Insurance tables use the contract terms, reimbursement model, and quote path already written on each carrier card. The method is on{' '}

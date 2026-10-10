@@ -1,6 +1,7 @@
+import { HopDisclosure } from '../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, ShopCtas, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, ShopCtas, CrossPortfolioCard } from '@carloOS/ui'
 import { PremiumMasthead } from '../../components/PremiumMasthead'
 
 export const metadata: Metadata = buildMetadata({
@@ -150,20 +151,9 @@ export default function OwnershipHubPage() {
         <h2 id="kit" className="font-display font-bold text-brand-dark text-xl mb-4 max-w-content-wide">Related supplies</h2>
 
         <div className="max-w-content-wide mt-6">
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href="/go/amazon-brand/horse+first+aid+kit?s=ownership-hub" />
         </div>
 
-        {/* Money path — live amazon-brand search hops
-            (laminated horse barn ownership section-map chart /
-            horse stall-door ownership prep card /
-            equine ownership reference handbook).
-            Educational kitchen searches only; no Rx hops.
-            ShopCtas hides empty Chewy; never href="#"
-            or PLACEHOLDER. Unused vs tools / reviews /
-            supplements / tack / nutrition / care /
-            health / guides kitchen kits and child
-            ownership+monthly+budget / bandage+scissors
-            hops. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-content-wide">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
             Shop related supplies
@@ -172,7 +162,7 @@ export default function OwnershipHubPage() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/horse+first+aid+kit?s=ownership-hub"
-              amazonLabel="Shop on Amazon"
+              amazonLabel="Browse horse first-aid kits on Amazon →"
             />
           </div>
         </div>

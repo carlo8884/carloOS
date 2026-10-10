@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -119,12 +120,13 @@ export default function NavicularPage() {
             updatedAt="2026-09-06"
             reviewedBy="Editorial team"
           />
+          <LastUpdated date="2026-10-09" />
 
           <h2 id="anatomy">The Anatomy</h2>
           <p>The navicular bone is a small, boat-shaped bone (hence the name, from the Latin for little ship) that sits behind the coffin joint, deep in the heel. The deep digital flexor tendon glides over its lower surface like a rope over a pulley, cushioned by the navicular bursa. Together the bone, bursa, deep digital flexor tendon, and supporting ligaments form the podotrochlear apparatus. Navicular syndrome is pain arising anywhere within this apparatus.</p>
 
           <h2 id="causes">What Causes It</h2>
-          <p>Rather than a single disease, navicular syndrome reflects chronic biomechanical overload of the heel region. Contributing factors include conformation (small feet relative to body size, long-toe low-heel hoof balance, upright or broken-back pastern axis), the demands of athletic work that loads the heel (jumping, hard stops, circles), and degenerative changes in the bone and soft tissues. MRI studies show that much of the pain comes from the deep digital flexor tendon and the supporting ligaments, not only the bone itself.</p>
+          <p>Rather than a single disease, navicular syndrome reflects chronic biomechanical overload of the heel region. Contributing factors include conformation (small feet relative to body size, long-toe low-heel hoof balance, upright or broken-back pastern axis), the demands of athletic work that loads the heel (jumping, hard stops, circles), and degenerative changes in the bone and soft tissues. Pain can come from the deep digital flexor tendon and the supporting ligaments, not only the bone itself. Dyson et al. (Equine Veterinary Journal 2005) reviewed MRI in 199 horses with foot pain localized by nerve blocks: deep digital flexor tendonitis was the most common injury, in 59% of horses (primary in 33%, and with navicular bone injury in 14%). Collateral ligament desmitis of the distal interphalangeal joint was second, in 31% (<a href="https://pubmed.ncbi.nlm.nih.gov/15779622/">Dyson et al., Equine Veterinary Journal 2005</a>).</p>
 
           <h2 id="signs">Clinical Signs</h2>
           <ul>
@@ -139,7 +141,7 @@ export default function NavicularPage() {
           <p>Diagnosis begins with a lameness examination, including flexion tests and hoof testers. Diagnostic nerve blocks -- a palmar digital block that desensitizes the heel -- localize the pain to the caudal foot. Radiographs assess the navicular bone for degenerative change, but normal radiographs do not rule out the syndrome. MRI is the reference standard, distinguishing tendon, ligament, bursa, and bone lesions and guiding targeted treatment. This is a veterinary diagnostic workup, not something an owner can confirm at home.</p>
 
           <h2 id="farriery">Farriery</h2>
-          <p>Corrective farriery is the foundation of management. The goals are to restore hoof balance, ease breakover, support the heel, and shorten the lever arm on the deep digital flexor tendon. Common approaches include rolled or rocker toes, bar shoes or heart-bar shoes, wedge pads to adjust the pastern axis, and shortening a long toe. A steel heart-bar horseshoe is how heel support stays a physical bar under the frog instead of a guessed pad stack — it is not a foam sole-support pad (that lives on laminitis), not a riding hoof boot (that lives on hoof-care-basics), and not a snow pad (that lives on winter-care). A 3-degree leather wedge pad is how a broken-back pastern axis is lifted instead of left long-toe low-heel — it is not an equine foam sole-support pad and not a hoof-soaking boot (that lives on abscess). A rocker-toe steel horseshoe is how breakover shortens so the deep digital flexor tendon is not levered over a long toe — it is not a portable farrier hoof stand (that lives on the farrier-schedule page) and not a shoe stud (that lives on winter-care). The right prescription depends on the individual foot and on imaging, so the farrier and veterinarian work together.</p>
+          <p>Corrective farriery is the foundation of management. The goals are to restore hoof balance, ease breakover, support the heel, and shorten the lever arm on the deep digital flexor tendon. Common approaches include rolled or rocker toes, bar shoes or heart-bar shoes, wedge pads to adjust the pastern axis, and shortening a long toe. A steel heart-bar horseshoe is how heel support stays a physical bar under the frog instead of a guessed pad stack — it is not a foam sole-support pad, not a riding hoof boot, and not a snow pad. A 3-degree leather wedge pad is how a broken-back pastern axis is lifted instead of left long-toe low-heel — it is not an equine foam sole-support pad and not a hoof-soaking boot. A rocker-toe steel horseshoe is how breakover shortens so the deep digital flexor tendon is not levered over a long toe — it is not a portable farrier hoof stand and not a shoe stud. The right prescription depends on the individual foot and on imaging, so the farrier and veterinarian work together.</p>
 
           <h2 id="medical">Medical Management</h2>
           <p>Beyond farriery, veterinarians may prescribe anti-inflammatory medication, intra-articular or navicular-bursa medication, and bisphosphonate drugs that target bone remodeling in selected cases -- all under veterinary direction. Controlled exercise, appropriate footing, and weight management support the plan. Surgical options such as palmar digital neurectomy exist for refractory cases but are a last resort with their own risks.</p>
@@ -149,31 +151,11 @@ export default function NavicularPage() {
 
           <h2 id="kit">Farriery kit</h2>
           <p>
-            Everyday physical supplies that match the
-            bar-shoes-or-heart-bar-shoes, wedge-pads, and
-            rolled-or-rocker-toes copy on this page — a
-            steel heart-bar horseshoe so heel support is a
-            physical bar under the frog, a 3-degree leather
-            wedge pad so a broken-back pastern axis is
-            lifted, and a rocker-toe steel horseshoe so
-            breakover shortens instead of levering the
-            deep digital flexor tendon over a long toe. These are educational farriery tools, not a
-            ranked product list, not a substitute for
-            veterinary or farrier care, and not a shoeing
-            prescription. Riding hoof boots already live on
-            hoof-care-basics. Soaking boots already live
-            on abscess. Snow pads and shoe studs already
-            live on winter-care. Farrier log books, hoof
-            stands, and barn flood lights already live on
-            the farrier-schedule page. This page does not
-            hop anti-inflammatory medication,
-            bisphosphonates, nerve-block kits, MRI, or
-            neurectomy gear. This page does not claim
-            hands-on testing. </p>
+            Keep these on hand: a steel heart-bar horseshoe so heel support is a physical bar under the frog, a 3-degree leather wedge pad so a broken-back pastern axis is lifted, and a rocker-toe steel horseshoe so breakover shortens instead of levering the deep digital flexor tendon over a long toe. These are educational farriery tools, not a ranked product list, not a substitute for veterinary or farrier care, and not a shoeing prescription. </p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/steel+heart+bar+horseshoe?s=health-navicular", "/go/amazon-brand/3+degree+leather+wedge+pad?s=health-navicular", "/go/amazon-brand/rocker+toe+steel+horseshoe?s=health-navicular"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (steel heart bar horseshoe /
               3 degree leather wedge pad /
               rocker toe steel horseshoe).
@@ -181,9 +163,9 @@ export default function NavicularPage() {
               tools, not a ranked product list, not a
               substitute for veterinary or farrier care,
               no Rx / vaccine / foam-sole-support /
-              soaking-boot / snow-pad ASIN hops.
+              soaking-boot / snow-pad product page buttons.
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or an empty link. Amazon searches only —
               unused vs #1100
               long+handle+stock+tank+brush /
               20+foot+barn+mosquito+netting /
@@ -219,7 +201,7 @@ export default function NavicularPage() {
               cordless+barn+flood+light
               (farrier-schedule).
               Medications and prescriptions
-              are not shoppable hops. */}
+              are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
@@ -244,13 +226,17 @@ export default function NavicularPage() {
           <h2 id="faq">Frequently Asked Questions</h2>
           <FAQAccordion items={FAQS} />
 
-          <h2 id="references">References</h2>
-          <ol className="text-sm text-brand-text-mid">
-            <li>Dyson SJ. “Navicular Disease and Other Soft Tissue Causes of Palmar Foot Pain.” In: Diagnosis and Management of Lameness in the Horse, 2nd ed., Elsevier, 2011.</li>
-            <li>Waguespack RW, Hanson RR. “Navicular Syndrome in Equine Patients.” Compendium: Continuing Education for Veterinarians, 2010; 32(12):E1–E13.</li>
-            <li>Dyson S, Murray R. “Magnetic Resonance Imaging Evaluation of the Foot in Horses with Foot Pain.” Equine Veterinary Journal, 2007; 39(4):340–343.</li>
-            <li>American Association of Equine Practitioners. “Navicular Syndrome” owner resources. aaep.org.</li>
-          </ol>
+          <div id="references">
+            <ArticleSourcesList
+              title="References"
+              sources={[
+              { label: "Dyson SJ. “Navicular Disease and Other Soft Tissue Causes of Palmar Foot Pain.” In: Diagnosis and Management of Lameness in the Horse, 2nd ed., Elsevier, 2011.", url: "https://www.elsevier.com/", publisher: "Elsevier" },
+              { label: "Waguespack RW, Hanson RR. “Navicular Syndrome in Equine Patients.” Compendium: Continuing Education for Veterinarians, 2010; 32(12):E1–E13." },
+              { label: "Dyson S, Murray R. “Magnetic Resonance Imaging Evaluation of the Foot in Horses with Foot Pain.” Equine Veterinary Journal, 2007; 39(4):340–343.", url: "https://beva.onlinelibrary.wiley.com/journal/20423306", publisher: "Equine Veterinary Journal" },
+              { label: "American Association of Equine Practitioners. “Navicular Syndrome” owner resources. aaep.org.", url: "https://aaep.org/", publisher: "AAEP" },
+              ]}
+            />
+          </div>
         </div>
       </ArticleLayout>
     </>

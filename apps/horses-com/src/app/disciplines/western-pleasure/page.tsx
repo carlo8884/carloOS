@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -10,7 +11,6 @@ import {
   ArticleByline,
   DropCap,
   CalloutBox,
-  AffiliateDisclosure,
   ShopCtas,
 } from '@carloOS/ui'
 import {
@@ -129,7 +129,7 @@ export default function WesternPleasurePage() {
         ]}
         sidebar={<>
           <TableOfContents items={[
-            { label: 'TL;DR', href: '#tldr' },
+            { label: '', href: '#tldr' },
             { label: 'History &amp; Origins', href: '#history' },
             { label: 'How a Class is Judged', href: '#judging' },
             { label: 'The Slow-Pleasure Controversy', href: '#controversy' },
@@ -162,8 +162,7 @@ export default function WesternPleasurePage() {
             updatedAt="2026-05-28"
           />
 
-          <h2 id="tldr">TL;DR</h2>
-          <ul>
+                    <ul>
             <li><strong>What it is:</strong> a rail class judged on manners and way of going at walk, jog, and lope in both directions of the arena.</li>
             <li><strong>Governing bodies:</strong> AQHA, APHA, ApHC, and POA for the stock-horse breed shows; USEF Western for cross-breed competition.</li>
             <li><strong>Key rule:</strong> per AQHA SHW340, the lope must be a three-beat gait with cadence and the horse must travel with natural carriage (not below the withers).</li>
@@ -282,7 +281,7 @@ export default function WesternPleasurePage() {
           </ul>
 
           <h2 id="faq">Frequently Asked Questions</h2>
-          <FAQAccordion items={FAQS} />
+          <FAQAccordion items={FAQS} includeSchema={false} />
 
           <h2 id="references">References</h2>
           <ol className="text-sm text-brand-text-mid">
@@ -298,20 +297,8 @@ export default function WesternPleasurePage() {
             <li>AQHA Professional Horsemen Program. aqha.com.</li>
           </ol>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href="/go/amazon-brand/horse+saddle+pad?s=discipline-western-pleasure" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated horse AQHA pleasure-gait chart /
-              horse stall-door AQHA World Show card /
-              equine SHW340 lope handbook).
-              No existing product hop to keep.
-              Educational barn searches only; no Rx /
-              vaccine / flea / heartworm / nsaid hops
-              and no silver-saddle kit hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs eventing /
-              show-jumping hops.
-              Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
@@ -320,7 +307,7 @@ export default function WesternPleasurePage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/horse+saddle+pad?s=discipline-western-pleasure"
-                amazonLabel="Shop on Amazon"
+                amazonLabel="Browse horse saddle pads on Amazon →"
               />
           </div>
           </div>

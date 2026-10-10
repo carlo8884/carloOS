@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleByline, FAQAccordion, AffiliateDisclosure, ShopCtas, PrimaryHop, ComparisonFoot } from '@carloOS/ui'
+import { HopDisclosure } from '../../../components/HopDisclosure'
+import { buildMetadata, ArticleLayout, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleByline, FAQAccordion, ShopCtas, PrimaryHop, ComparisonFoot } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -53,6 +54,7 @@ export default function FreshDogFoodWorthItPage() {
       contentType="review"
       hero={{ title: 'Is Fresh Dog Food Worth It? Fresh vs Kibble', subtitle: 'Fresh and gently-cooked dog food has grown into one of the fastest-rising categories in pet nutrition. Here is a calibrated buyer\'s guide: what "fresh" really means, how it compares to kibble and raw on nutrition, cost, convenience and safety, who benefits most, and how to judge a brand on substance instead of marketing.', category: 'Reviews', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'June 2026', readTime: '9 min' }}
       heroHop={<PrimaryHop href="/go/amazon-brand/dry+dog+food?s=reviews-fresh-food" label="Check price of dry dog food on Amazon" />}
+      heroExtra={<HopDisclosure siteId="dog-com" href="/go/amazon-brand/dry+dog+food?s=reviews-fresh-food" />}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Reviews', href: '/reviews' }, { name: 'Fresh Dog Food Worth It', href: '/reviews/fresh-dog-food-worth-it' }]}
       relatedLinks={[{ title: 'Dog Reviews Hub', href: '/reviews', category: 'Hub' }, { title: 'Dog Nutrition Hub', href: '/nutrition', category: 'Nutrition' }, { title: 'WSAVA Guidelines Explained', href: '/nutrition/wsava-explained', category: 'Nutrition' }, { title: 'Reading a Dog Food Label', href: '/nutrition/reading-food-labels', category: 'Nutrition' }, { title: 'Raw Diet Pros & Cons', href: '/nutrition/raw-diet-risks', category: 'Nutrition' }]}
       schema={schema}
@@ -68,7 +70,7 @@ export default function FreshDogFoodWorthItPage() {
 
         <h2 id="short">The Short Answer</h2>
         <p>Fresh, gently-cooked dog food is one of the fastest-growing categories in pet nutrition — fresh-food sales have grown sharply since the early 2020s as more owners look for higher-moisture, less-processed options. But growth is not the same as necessity. <strong>For most healthy dogs, fresh food is a reasonable upgrade in palatability and transparency, not a medical requirement.</strong> A complete-and-balanced fresh diet and a quality kibble from a <a href="/nutrition/wsava-explained">WSAVA-aligned manufacturer</a> can both meet a dog&apos;s nutritional needs.</p>
-        <p>The real question is not &ldquo;fresh or kibble&rdquo; in the abstract — it is whether <em>this</em> fresh product is complete and balanced, made by a company with real nutritional oversight, and worth its ongoing cost for <em>your</em> dog. This guide walks through how to answer that.</p>
+        <p>The real question is not &ldquo;fresh or kibble&rdquo; in the abstract — it is whether <em>this</em> fresh product is complete and balanced, made by a company with real nutritional oversight, and worth its ongoing cost for <em>your</em> dog. This guide walks through how to answer that. Kibble on the other side of that question is compared in the <a href="/reviews/best-dry-dog-food" className="text-brand-primary underline">dry dog food review</a>.</p>
 
         <h2 id="what">What &ldquo;Fresh&rdquo; and &ldquo;Gently Cooked&rdquo; Actually Mean</h2>
         <p>&ldquo;Fresh&rdquo; and &ldquo;gently cooked&rdquo; are marketing descriptors, not regulated nutrition categories. In practice they usually describe:</p>
@@ -111,23 +113,23 @@ export default function FreshDogFoodWorthItPage() {
             <tbody>
               <tr className="border-b border-brand-border">
                 <td className="p-3 text-brand-text-mid">Picky, drinks little, or the household wants ingredient transparency and can pay the premium</td>
-                <td className="p-3 font-bold text-brand-dark">Fresh, gently cooked</td>
+                <td className="p-3 font-bold text-brand-dark">Fresh, gently cooked<a href="/nutrition/reading-food-labels" className="mt-1 block text-xs font-semibold text-brand-primary underline underline-offset-2">Read the AAFCO statement</a></td>
                 <td className="p-3 text-brand-text-mid">The list above. No brand and no dollar price is printed</td>
               </tr>
               <tr className="border-b border-brand-border">
                 <td className="p-3 text-brand-text-mid">A healthy dog already thriving on kibble</td>
-                <td className="p-3 font-bold text-brand-dark">Stay on that kibble</td>
+                <td className="p-3 font-bold text-brand-dark">Stay on that kibble<a href="/go/amazon-brand/dry+dog+food?s=reviews-fresh-food" rel="sponsored noopener" className="mt-1 block text-xs font-semibold text-brand-primary underline underline-offset-2">Check price of dry dog food on Amazon</a></td>
                 <td className="p-3 text-brand-text-mid">The page says there is no medical obligation to change. The button searches Amazon for dry dog food</td>
               </tr>
               <tr className="border-b border-brand-border">
                 <td className="p-3 text-brand-text-mid">A diagnosed medical condition</td>
-                <td className="p-3 font-bold text-brand-dark">A veterinary therapeutic diet</td>
+                <td className="p-3 font-bold text-brand-dark">A veterinary therapeutic diet<a href="/nutrition/prescription-diets" className="mt-1 block text-xs font-semibold text-brand-primary underline underline-offset-2">Prescription diets</a></td>
                 <td className="p-3 text-brand-text-mid">Format matters less than the condition. The page says to talk to a veterinarian</td>
               </tr>
             </tbody>
           </table>
         </div>
-        <ComparisonFoot updated="2026-10-05" />
+        <ComparisonFoot updated="2026-10-07" />
 
         <h2 id="evaluate">How to Evaluate a Fresh Brand</h2>
         <p>Cut through the marketing with four checks — the same substance-over-packaging approach we apply to any food:</p>
@@ -143,24 +145,12 @@ export default function FreshDogFoodWorthItPage() {
         <p>The disciplined approach is the same one that applies to kibble: insist on a complete-and-balanced AAFCO diet from a manufacturer with real nutritional oversight, portion by calories rather than habit, and let any medical condition — not the trend — drive special diets. If your dog is healthy and thriving, the &ldquo;best&rdquo; food is the complete, balanced one you can reliably afford and your dog will eat. Talk to your veterinarian before any major diet change.</p>
 
         <h2 id="faq">Frequently Asked Questions</h2>
-        <FAQAccordion items={FAQS} />
+        <FAQAccordion items={FAQS} includeSchema={false} />
 
         <p className="text-sm text-gray-500 mt-8"><em>This article is general educational information from the Dog.com editorial team and is not veterinary advice. Category-growth figures reflect publicly reported industry trends and are described qualitatively where exact figures vary. Always consult your veterinarian before changing your dog&apos;s diet.</em></p>
 
-        <AffiliateDisclosure variant="inline" siteId="dog-com" />
+        <HopDisclosure siteId="dog-com" href="/go/amazon-brand/dry+dog+food?s=reviews-fresh-food" />
 
-        {/* Money path — live amazon-brand search hops
-            (laminated dog fresh-vs-kibble chart /
-            dog fridge fresh-thaw card /
-            canine gently-cooked handbook).
-            No existing product hop to keep.
-            Educational kitchen searches only; no Rx /
-            vaccine / flea / heartworm / nsaid hops
-            and no Farmer's Dog / Ollie kit hops.
-            ShopCtas hides empty Chewy; never href="#"
-            or PLACEHOLDER. Unused vs dog-dna-tests /
-            elimination-diet / dog-supplements hops.
-            Do not re-open #1165 / what-to-expect. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
             Shop related supplies

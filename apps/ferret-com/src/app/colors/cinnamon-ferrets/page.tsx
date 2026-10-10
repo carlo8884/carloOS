@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import {
   buildMetadata,
@@ -9,7 +10,6 @@ import {
   CalloutBox,
   ArticleByline,
   DropCap,
-  AffiliateDisclosure,
   ShopCtas,
 } from '@carloOS/ui'
 import {
@@ -39,7 +39,6 @@ const articleSchema = buildArticleSchema({
   publishedAt: '2026-06-01T00:00:00Z',
   modifiedAt: '2026-06-01T00:00:00Z',
 })
-
 
 const FAQS = [
   {
@@ -111,7 +110,7 @@ export default function CinnamonFerretsPage() {
 
           </>
         }
-      
+
         relatedLinks={[
           { title: 'Ferret Colors Hub', href: '/colors' },
           { title: 'Ferret Colors & Patterns', href: '/colors/ferret-colors-and-patterns' },
@@ -253,24 +252,8 @@ export default function CinnamonFerretsPage() {
           <h2 id="kit">Related supplies</h2>
           <p>Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/ferret+cage?s=cinnamon-ferrets" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated ferret cinnamon brick-coat chart /
-              ferret fridge cinnamon-vs-brown card /
-              mustelid cinnamon reference handbook).
-              Educational kitchen searches only; no Rx /
-              vaccine / aging hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs tools / reviews /
-              diet / care / behavior / health / ownership /
-              colors-hub / first-year-schedule /
-              colors-and-patterns / sable-ferrets /
-              albino-ferrets / dew-ferrets kitchen kits
-              and child finger+toothbrush /
-              carnivore+care hops. Directory import left
-              untouched.
-              Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
@@ -279,7 +262,7 @@ export default function CinnamonFerretsPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/ferret+cage?s=cinnamon-ferrets"
-                amazonLabel="Shop on Amazon"
+                amazonLabel="Browse ferret cages on Amazon →"
               />
           </div>
           </div>

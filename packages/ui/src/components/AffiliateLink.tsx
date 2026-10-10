@@ -220,6 +220,7 @@ export function AffiliateLink({
         rel ??
         (newTab ? 'sponsored nofollow noopener noreferrer' : 'sponsored nofollow')
       }
+      data-shop-placement="card"
       data-vendor={vendor}
       data-sku={sku}
       data-source={source}

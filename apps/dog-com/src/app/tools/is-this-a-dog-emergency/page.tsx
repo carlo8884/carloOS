@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -9,7 +10,6 @@ import {
   combineSchemas,
   SchemaScript,
   FAQAccordion,
-  AffiliateDisclosure,
   ArticleSourcesList,
   CrossPortfolioCard,
   ShopCtas,
@@ -27,10 +27,10 @@ export const metadata: Metadata = buildMetadata({
 })
 
 const SOURCES = [
-  { label: 'AVMA: Emergency Care for Pets — Warning Signs', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/emergencies-pets', publisher: 'AVMA' },
-  { label: 'Merck Veterinary Manual: Emergency and Critical Care Overview for Small Animals', url: 'https://www.merckvetmanual.com/emergency-medicine-and-critical-care/critical-care-medicine/overview-of-critical-care-medicine', publisher: 'Merck Vet Manual' },
+  { label: 'Merck Veterinary Manual: Initial Triage and Resuscitation of Small Animal Emergency Patients', url: 'https://www.merckvetmanual.com/emergency-medicine-and-critical-care/evaluation-and-initial-treatment-of-small-animal-emergency-patients/initial-triage-and-resuscitation-of-small-animal-emergency-patients', publisher: 'Merck Vet Manual' },
+  { label: 'AVMA: Emergency Care for Pets — Warning Signs', url: 'https://www.avma.org/resources-tools/pet-owners/emergency-care', publisher: 'AVMA' },
   { label: 'AAHA: Emergency and Critical Care Standards', url: 'https://www.aaha.org/aaha-guidelines/emergency-and-critical-care/emergency-and-critical-care-guidelines/', publisher: 'AAHA' },
-  { label: 'ASPCA Animal Poison Control Center: Pet Poison Information', url: 'https://www.aspca.org/pet-care/animal-poison-control', publisher: 'ASPCA' },
+  { label: 'ASPCA Animal Poison Control Center: Pet Poison Information', url: 'https://www.aspca.org/pet-care/aspca-poison-control', publisher: 'ASPCA' },
 ]
 
 const FAQS = [
@@ -86,7 +86,7 @@ const appSchema = {
     'Conservative urgency read: go now, same-day vet, or monitor closely',
     '15 signs drawn from veterinary emergency-medicine criteria',
     'Always rounds toward more care; no all-clear result',
-    'Shoppable emergency-prep kit via Amazon category searches (pet first-aid kit, digital pet thermometer, soft carrier, styptic powder, tick remover)',
+    'Shop the emergency-prep kit via Amazon searches (pet first-aid kit, digital pet thermometer, soft carrier, styptic powder, tick remover)',
   ],
 }
 
@@ -218,15 +218,15 @@ export default function IsThisADogEmergencyPage() {
         </div>
       </section>
 
-      {/* Money path — live amazon-brand search hops (emergency-prep / first-aid kit).
-          ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-          Category searches only — not a ranked list, not a diagnosis. */}
+      {/* Shop note — live amazon-brand search buttons (emergency-prep / first-aid kit).
+          ShopCtas hides empty Chewy; never href="#" or an empty link.
+          Amazon searches only — not a ranked list, not a diagnosis. */}
       <section id="dog-emergency-prep-kit" className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <div className="max-w-2xl">
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/pet+first+aid+kit?s=tools-is-this-a-dog-emergency", "/go/amazon-brand/digital+pet+thermometer?s=tools-is-this-a-dog-emergency", "/go/amazon-brand/soft+dog+carrier?s=tools-is-this-a-dog-emergency", "/go/amazon-brand/styptic+powder?s=tools-is-this-a-dog-emergency", "/go/amazon-brand/tick+remover?s=tools-is-this-a-dog-emergency"]} />
           <div className="mt-4 rounded-xl border border-brand-border bg-brand-white p-5">
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Shop a dog emergency-prep kit
+              Shop these supplies
             </div>
             <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
@@ -270,7 +270,6 @@ export default function IsThisADogEmergencyPage() {
               breathing, not uncontrolled bleeding — talk to a licensed vet on a screen rather than waiting
               for a gap to become an ER visit.
             </p>
-            <AffiliateDisclosure variant="inline" siteId="dog-com" className="mb-3 text-2xs" />
             <div className="flex flex-col gap-2 sm:flex-row sm:flex-wrap">
               <Link
                 href={crossSiteHref('vets-co', '/reviews/best-pet-insurance')}

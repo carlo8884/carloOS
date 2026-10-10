@@ -6,7 +6,52 @@
  */
 
 import type { ReactNode } from 'react'
-import { isChewyHop, visibleShopHref } from '@carloOS/config/affiliate-hop'
+import { heldShopText, hopCommissionReady, isChewyHop, liveAnchorHref, partnerLinkQuiet, partnerQuoteHeld, partnerTagReady, shopCtaLabel, tableShopLink, visitNextStep } from '@carloOS/config/affiliate-hop'
+import { HeldQuoteNext } from './HeldQuoteNext'
+
+const EARNING_PICK_SITES = new Set(['dog-com', 'fish-com', 'horses-com', 'vets-co', 'ferret-com'])
+
+/** Names the product and the retailer the pick hop actually opens. */
+function QuickPickShopLink({ href, name, shopLabel, quietUntilTag = false }: { href?: string; name: string; shopLabel?: string; quietUntilTag?: boolean }) {
+  if (!href || !name.trim()) return null
+  if (!EARNING_PICK_SITES.has(process.env.NEXT_PUBLIC_SITE_ID ?? '')) return null
+  const hop = liveAnchorHref(href)
+  if (!hop) {
+    if (!href?.startsWith('/go/')) return null
+    return (
+      <span className="relative z-10 ml-2 text-2xs font-semibold normal-case tracking-normal text-brand-text-light">
+        {heldShopText(href)}
+      </span>
+    )
+  }
+  void quietUntilTag
+  const built = tableShopLink(href, name.trim())
+  if (!built) return null
+  return (
+    <a
+      href={hop}
+      data-shop-placement="quick-pick"
+      rel="sponsored noopener"
+      className="relative z-10 ml-2 text-2xs font-semibold normal-case tracking-normal text-brand-dark underline underline-offset-2"
+    >
+      {shopLabel || `Check price of ${built.label}`}
+    </a>
+  )
+}
+
+/** Small method link beside a Best Overall label. Same line as the badge so the shop row does not move down. */
+function HowWePickLink({ label }: { label?: string }) {
+  if (label !== 'Best Overall') return null
+  if (!EARNING_PICK_SITES.has(process.env.NEXT_PUBLIC_SITE_ID ?? '')) return null
+  return (
+    <a
+      href="/how-we-pick"
+      className="relative z-10 ml-2 text-2xs font-semibold normal-case tracking-normal text-brand-text-light underline underline-offset-2 whitespace-nowrap"
+    >
+      How we pick
+    </a>
+  )
+}
 
 interface Spec {
   label: string
@@ -21,8 +66,8 @@ interface ReviewCardProps {
   name: string
   subtitle?: string
 
-  /** Score out of 10 */
-  score: number
+  /** Score out of 10. Omit when the page does not publish a score. */
+  score?: number
 
   description: ReactNode
 
@@ -36,6 +81,10 @@ interface ReviewCardProps {
 
   ctaText?: string
   ctaHref?: string
+  /** Keep a Trupanion, Healthy Paws, or Embrace quote visible but disabled until its tag is set. */
+  holdWithoutPartnerId?: boolean
+  /** Held product partners stay on the card as a note until their own tag is set. */
+  quietUntilTag?: boolean
   ctaAffiliateProgram?: string
   ctaAffiliateProduct?: string
 
@@ -66,6 +115,8 @@ export function ReviewCard({
   priceNote,
   ctaText = 'Check Price →',
   ctaHref,
+  holdWithoutPartnerId = false,
+  quietUntilTag = false,
   ctaAffiliateProgram,
   ctaAffiliateProduct,
   editorial,
@@ -73,19 +124,27 @@ export function ReviewCard({
   id,
 }: ReviewCardProps) {
   const rawHref = ctaHref && ctaHref !== '#' ? ctaHref : undefined
-  const href = visibleShopHref(rawHref)
+  const href = liveAnchorHref(rawHref)
+  const quiet = Boolean(
+    rawHref?.startsWith('/go/') && !href && (quietUntilTag || partnerLinkQuiet(rawHref)),
+  )
+  const visit = !href ? visitNextStep(rawHref) : null
+  const held = Boolean(
+    rawHref &&
+      !href &&
+      !quiet &&
+      !visit &&
+      (partnerQuoteHeld(rawHref) ||
+        (holdWithoutPartnerId && !partnerTagReady(rawHref)) ||
+        rawHref.startsWith('/go/')),
+  )
   const chewyCta = isChewyHop(href ?? '')
   const program = chewyCta
     ? ctaAffiliateProgram
     : href?.includes('/go/amazon')
       ? 'amazon'
       : ctaAffiliateProgram
-  // Same honesty rule as PrimaryHop: a Chewy hop that falls back to Amazon
-  // must not keep an "on Chewy" label.
-  const label =
-    /\/go\/amazon/.test(href ?? '') && /chewy/i.test(rawHref ?? '')
-      ? ctaText.replace(/\bon Chewy\b/i, 'on Amazon')
-      : ctaText
+  const label = shopCtaLabel(rawHref, ctaText)
   return (
     <div
       id={id}
@@ -100,8 +159,9 @@ export function ReviewCard({
       <div className="flex items-start justify-between gap-5 mb-5">
         <div className="flex-1 min-w-0">
           {badge && (
-            <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
+            <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2 break-words">
               {badgeEmoji} {badge}
+              <HowWePickLink label={badge} />
             </div>
           )}
           <h2 className="font-display text-2xl font-black text-brand-dark tracking-tight mb-1 break-words">
@@ -112,13 +172,14 @@ export function ReviewCard({
           )}
         </div>
 
-        {/* Score */}
-        <div className="text-center bg-brand-surface rounded-lg px-4 py-3 flex-shrink-0">
-          <span className="font-display text-4xl font-bold text-brand-primary leading-none block">
-            {score.toFixed(1)}
-          </span>
-          <span className="text-2xs text-brand-text-light mt-1 block">Editor Score</span>
-        </div>
+        {score != null && (
+          <div className="text-center bg-brand-surface rounded-lg px-4 py-3 flex-shrink-0">
+            <span className="font-display text-4xl font-bold text-brand-primary leading-none block">
+              {score.toFixed(1)}
+            </span>
+            <span className="text-2xs text-brand-text-light mt-1 block">Editor Score</span>
+          </div>
+        )}
       </div>
 
       {/* Description */}
@@ -185,40 +246,56 @@ export function ReviewCard({
       )}
 
       {/* Footer: price + CTA */}
-      {(price || href) && (
-        <div className="flex flex-col items-stretch sm:flex-row sm:items-end sm:justify-between pt-5 border-t border-brand-border mt-2 gap-4 min-w-0">
-          {price && (
-            <div>
-              <div className="text-2xs uppercase tracking-wide text-brand-text-light mb-1">
-                {priceLabel}
+      {(price || href || held || quiet || visit) && (
+        <div className="pt-5 border-t border-brand-border mt-2 min-w-0">
+          {href && !editorial && href.startsWith('/go/') && hopCommissionReady(href) ? (
+            <p className="text-2xs text-brand-text-light mb-2" data-affiliate-disclosure="hop">
+              {/\/go\/amazon/.test(href)
+                ? 'As an Amazon Associate we earn from qualifying purchases.'
+                : 'We earn a commission if you purchase — no extra cost to you.'}
+            </p>
+          ) : null}
+          <div className="flex flex-col items-stretch sm:flex-row sm:items-end sm:justify-between gap-4 min-w-0">
+            {price && (
+              <div>
+                <div className="text-2xs uppercase tracking-wide text-brand-text-light mb-1">
+                  {priceLabel}
+                </div>
+                <div className="font-display text-xl font-bold text-brand-dark">{price}</div>
+                {priceNote && (
+                  <div className="text-2xs text-brand-text-light mt-1">{priceNote}</div>
+                )}
               </div>
-              <div className="font-display text-xl font-bold text-brand-dark">{price}</div>
-              {priceNote && (
-                <div className="text-2xs text-brand-text-light mt-1">{priceNote}</div>
-              )}
-            </div>
-          )}
+            )}
 
-          {href && (
-            <a
-              href={href}
-              className="inline-flex items-center justify-center bg-brand-primary text-brand-white text-sm font-bold px-6 py-3 rounded no-underline hover:bg-brand-primary-light transition-colors duration-200 max-w-full text-center whitespace-normal"
-              data-program={editorial ? undefined : program}
-              data-product={editorial ? undefined : ctaAffiliateProduct}
-              rel={editorial ? undefined : 'nofollow sponsored'}
-              target={editorial ? undefined : '_blank'}
-            >
-              {label}
-            </a>
-          )}
+            {quiet ? (
+              <span className="text-sm leading-relaxed text-brand-text-light">
+                {heldShopText(rawHref)}
+              </span>
+            ) : visit ? (
+              <a
+                href={visit.href}
+                className="inline-flex items-center justify-center text-sm font-bold text-brand-primary underline underline-offset-2 max-w-full text-left whitespace-normal"
+              >
+                {visit.label}
+              </a>
+            ) : held ? (
+              <HeldQuoteNext />
+            ) : href ? (
+              <a
+                href={href}
+                data-shop-placement={!editorial && (href.startsWith('/go/') || href.startsWith('http')) ? 'card' : undefined}
+                className="inline-flex items-center justify-center bg-brand-primary text-brand-white text-sm font-bold px-6 py-3 rounded no-underline hover:bg-brand-primary-light transition-colors duration-200 max-w-full text-center whitespace-normal"
+                data-program={editorial ? undefined : program}
+                data-product={editorial ? undefined : ctaAffiliateProduct}
+                rel={editorial ? undefined : 'nofollow sponsored noopener'}
+                target={editorial ? undefined : '_blank'}
+              >
+                {label}
+              </a>
+            ) : null}
+          </div>
         </div>
-      )}
-
-      {/* Affiliate note — suppressed for editorial (non-commercial) CTAs, e.g. clinical products */}
-      {href && !editorial && (
-        <p className="text-2xs text-brand-text-light mt-2">
-          We earn a commission if you purchase — no extra cost to you.
-        </p>
       )}
     </div>
   )
@@ -232,14 +309,20 @@ interface QuickPickItem {
   name: string
   subtitle?: string
   href: string
+  /** Existing product hop for the Best Overall card. Other labels ignore it. */
+  pickHop?: string
+  /** Visible quick-pick wording when the hop is a search, not a product page. */
+  pickShopLabel?: string
 }
 
 interface QuickPicksProps {
   items: QuickPickItem[]
   title?: string
+  /** Held product pick hops stay as a note until their own tag is set. */
+  quietUntilTag?: boolean
 }
 
-export function QuickPicks({ items, title = 'Jump to Your Pick', embedded = false }: QuickPicksProps & { embedded?: boolean }) {
+export function QuickPicks({ items, title = 'Jump to Your Pick', embedded = false, quietUntilTag = false }: QuickPicksProps & { embedded?: boolean }) {
   return (
     <div className={embedded
       ? 'bg-brand-surface border border-brand-border rounded-lg py-5 px-4 mb-6'
@@ -249,19 +332,23 @@ export function QuickPicks({ items, title = 'Jump to Your Pick', embedded = fals
       </div>
       <div className={embedded ? 'grid grid-cols-1 gap-3' : 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3'}>
         {items.map((item) => (
-          <a
+          <div
             key={item.href}
-            href={item.href}
-            className="block bg-brand-white border border-brand-border rounded-lg p-3.5 no-underline hover:border-brand-primary transition-colors duration-200"
+            className="relative block bg-brand-white border border-brand-border rounded-lg p-3.5 hover:border-brand-primary transition-colors duration-200"
           >
+            <a href={item.href} aria-label={`${item.label}: ${item.name}`} className="absolute inset-0 rounded-lg" />
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-1.5 break-words">
               {item.emoji} {item.label}
+              <HowWePickLink label={item.label} />
+              <QuickPickShopLink href={item.pickHop} name={item.name} shopLabel={item.pickShopLabel} quietUntilTag={quietUntilTag} />
             </div>
-            <div className="text-sm font-bold text-brand-dark mb-0.5">{item.name}</div>
-            {item.subtitle && (
-              <div className="text-xs text-brand-text-light">{item.subtitle}</div>
-            )}
-          </a>
+            <div className="pointer-events-none">
+              <div className="text-sm font-bold text-brand-dark mb-0.5">{item.name}</div>
+              {item.subtitle && (
+                <div className="text-xs text-brand-text-light">{item.subtitle}</div>
+              )}
+            </div>
+          </div>
         ))}
       </div>
     </div>

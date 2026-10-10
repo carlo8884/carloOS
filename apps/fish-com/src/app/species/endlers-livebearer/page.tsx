@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { StockImage, buildMetadata, ArticleLayout, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
+import { ShopCtas, StockImage, buildMetadata, ArticleLayout, RelatedLinks, CrossPortfolioCard , ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema, FAQAccordion, SchemaScript, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 
@@ -25,9 +26,9 @@ const FAQS = [
   {
     question: 'What water parameters do Endlers livebearers need?',
     answer:
-      'Endlers thrive in the same harder, slightly alkaline water that suits guppies and other livebearers: pH 7.0–8.0 with moderate hardness, at a temperature of 72–80°F. Soft, acidic blackwater conditions are not ideal. They are otherwise undemanding as long as the tank is cycled and nitrate is kept in check.',
+      'Endlers thrive in the same harder, slightly alkaline water that suits guppies and other livebearers: pH 7.0–8.0 with moderate hardness. Seriously Fish lists Poecilia wingei at 24–30°C, which is 75–86°F (https://www.seriouslyfish.com/species/poecilia-wingei/). Soft, acidic blackwater conditions are not ideal. They are otherwise undemanding as long as the tank is cycled and nitrate is kept in check.',
     answerText:
-      'Endlers prefer harder, slightly alkaline water: pH 7.0-8.0, moderate hardness, and 72-80F. Soft acidic water is not ideal. Keep the tank cycled with low nitrate.',
+      'Endlers prefer harder, slightly alkaline water: pH 7.0-8.0, moderate hardness. Seriously Fish lists Poecilia wingei at 24–30°C, which is 75–86°F (https://www.seriouslyfish.com/species/poecilia-wingei/). Soft acidic water is not ideal. Keep the tank cycled with low nitrate.',
   },
   {
     question: 'What size tank do Endlers livebearers need?',
@@ -46,9 +47,9 @@ const FAQS = [
   {
     question: 'What are good tankmates for Endlers livebearers?',
     answer:
-      'Other small, calm species: pygmy corydoras, otocinclus, small rasboras, and dwarf shrimp such as cherry shrimp. Avoid anything large enough to view a one-inch fish as a snack.',
+      'Other small, calm species: pygmy corydoras, small rasboras, and dwarf shrimp such as cherry shrimp. Otocinclus overlap only the low end of this band. Avoid anything large enough to view a one-inch fish as a snack.',
     answerText:
-      'Pair Endlers with small, calm species: pygmy corydoras, otocinclus, small rasboras, and cherry shrimp. Avoid fish large enough to eat a one-inch fish.',
+      'Pair Endlers with small, calm species: pygmy corydoras, small rasboras, and cherry shrimp. Otocinclus overlap only the low end of this band. Avoid fish large enough to eat a one-inch fish.',
   },
 ]
 
@@ -66,9 +67,9 @@ export default function EndlersLivebearerPage() {
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Quick Stats</div>
-          {[['Scientific name', 'Poecilia wingei'], ['Adult size', '1 inch (males smaller)'], ['Temperature', '72–80°F'], ['pH', '7.0–8.0 (harder water)'], ['Tank size', '10 gallons'], ['Reproduction', 'Livebearer — very prolific'], ['Lifespan', '2–3 years']].map(([k, v]) => (
+          {[['Scientific name', 'Poecilia wingei'], ['Adult size', '1 inch (males smaller)'], ['Temperature', '75–86°F (https://www.seriouslyfish.com/species/poecilia-wingei/)'], ['pH', '7.0–8.0 (harder water)'], ['Tank size', '10 gallons'], ['Reproduction', 'Livebearer — very prolific'], ['Lifespan', '2–3 years']].map(([k, v]) => (
             <div key={k} className="flex justify-between py-1.5 border-b border-brand-border text-xs last:border-0">
-              <span className="text-brand-text-light">{k}</span><span className="font-bold text-brand-dark text-right max-w-[55%]">{v}</span>
+              <span className="text-brand-text-light">{k}</span><span className="font-bold text-brand-dark text-right max-w-[55%] break-all">{v}</span>
             </div>
           ))}
         </div>
@@ -96,15 +97,15 @@ export default function EndlersLivebearerPage() {
         <p>Like all livebearers, Endlers give birth to free-swimming fry rather than laying eggs, and they breed relentlessly. A single female can produce a brood every three to four weeks. In a densely planted tank with floating cover, enough fry survive predation to sustain a self-replenishing colony with no intervention at all. This abundance is a feature for hobbyists who enjoy watching a population thrive, but it does require either a plan for the surplus or a males-only tank to prevent runaway numbers.</p>
 
         <h2>Tankmates and Setup</h2>
-        <p>Endlers are perfectly peaceful and pair well with other small, calm species: pygmy corydoras, otocinclus, small rasboras, and dwarf shrimp such as cherry shrimp. Avoid anything large enough to view a one-inch fish as a snack. A heavily planted tank with fine-leaved and floating plants offers fry cover and shows off the males' colors against a green backdrop. Feed small, frequent meals of quality flake, micro-pellets, and frozen baby brine shrimp.</p>
+        <p>Endlers are perfectly peaceful and pair well with other small, calm species: pygmy corydoras, small rasboras, and dwarf shrimp such as cherry shrimp. Otocinclus overlap only the low end of this band. Avoid anything large enough to view a one-inch fish as a snack. A heavily planted tank with fine-leaved and floating plants offers fry cover and shows off the males' colors against a green backdrop. Feed small, frequent meals of quality flake, micro-pellets, and frozen baby brine shrimp.</p>
         <h2>Frequently Asked Questions</h2>
         <FAQAccordion items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answerText }))} includeSchema={false} allowMultiple />
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        <HopDisclosure siteId="fish-com" href="/go/amazon-brand/endlers%20livebearer%20nano%20tank%20setup?s=species-endlers-livebearer" />
           <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Endler&apos;s Livebearer — Tank Setup</div>
-          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse nano tanks, sponge filters, heaters, live plants, and food sized for Endler&apos;s livebearer care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
+          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse nano tanks, sponge filters, heaters, live plants, and food sized for Endler&apos;s livebearer care.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
-            <a href="/go/amazon-brand/endlers%20livebearer%20nano%20tank%20setup?s=species-endlers-livebearer" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop Endler&apos;s Setup on Amazon →</a>
+            <ShopCtas amazonHref="/go/amazon-brand/endlers%20livebearer%20nano%20tank%20setup?s=species-endlers-livebearer" amazonLabel="Browse endlers livebearer nano tank setups on Amazon →" />
           </div>
         </div>
         <ArticleSourcesList sources={SOURCES} />

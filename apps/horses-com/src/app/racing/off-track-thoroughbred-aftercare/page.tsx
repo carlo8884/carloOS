@@ -10,6 +10,7 @@
  * Authorities: Thoroughbred Aftercare Alliance, AAEP, The Jockey Club
  */
 
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import {
   buildMetadata,
@@ -19,7 +20,6 @@ import {
   RelatedLinks,
   TableOfContents,
   FAQAccordion,
-  AffiliateDisclosure,
   ShopCtas,
   buildArticleSchema,
   SchemaScript,
@@ -200,19 +200,8 @@ export default function OttbAftercarePage() {
             <li>Equibase. North American Thoroughbred racing records database. equibase.com.</li>
           </ol>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href="/go/amazon-brand/horse+saddle?s=racing-ottb-aftercare" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated horse TAA aftercare-directory chart /
-              horse stall-door OTTB letdown card /
-              equine Thoroughbred Makeover handbook).
-              No existing product hop to keep.
-              Educational barn searches only; no Rx /
-              vaccine / flea / heartworm / nsaid hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs breeders-cup /
-              triple-crown hops.
-              Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
@@ -221,7 +210,7 @@ export default function OttbAftercarePage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/horse+saddle?s=racing-ottb-aftercare"
-                amazonLabel="Shop on Amazon"
+                amazonLabel="Browse horse saddles on Amazon →"
               />
           </div>
           </div>

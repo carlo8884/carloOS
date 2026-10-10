@@ -1,11 +1,12 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, AffiliateDisclosure, ArticleSourcesList, ShopCtas, JourneyNext } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, ArticleSourcesList, ShopCtas, JourneyNext, PrimaryHop } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
 const SOURCES = [
-  { label: "Ichthyophthirius multifiliis (Ich) — Merck Veterinary Manual", url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/aquarium-fish/ichthyophthirius-multifiliis-in-fish", publisher: "Merck Vet Manual" },
+  { label: "Ichthyophthirius multifiliis (Ich) — Merck Veterinary Manual", url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/aquarium-fish/parasitic-diseases-of-fish", publisher: "Merck Vet Manual" },
   { label: "Noga, E.J. Fish Disease: Diagnosis and Treatment, 2nd ed. Wiley-Blackwell, 2010.", publisher: "Wiley-Blackwell" },
   { label: "Ich (White Spot Disease) Treatment Guide — UF/IFAS Extension FA-28", url: "https://edis.ifas.ufl.edu/publication/FA028", publisher: "UF/IFAS Extension" },
   { label: "Dickerson, H.W. Ichthyophthirius multifiliis and Cryptocaryon irritans. Fish Diseases and Disorders Vol 1, CABI, 2006.", publisher: "CABI" },
@@ -17,6 +18,10 @@ const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Ich Treatment Gu
 export default function IchTreatmentPage() {
   return (
     <ArticleLayout siteId="fish-com"
+      heroHop={<>
+        <PrimaryHop href="/go/amazon-brand/eheim+jager+heater?s=health-ich" label="Search Amazon for an Eheim Jager heater" />
+        <HopDisclosure siteId="fish-com" href="/go/amazon-brand/eheim+jager+heater?s=health-ich" tone="on-dark" />
+      </>}
       hero={{ title: 'Ich Treatment Guide', subtitle: 'Ichthyophthirius multifiliis — "ich" or white spot disease — is the most common disease in aquarium fish. The characteristic white salt-grain spots are visible on the body and fins. Treatment is straightforward once you understand the parasite\'s life cycle: only one stage can be killed by treatment, and that window must be exploited for 10-14 days minimum.', category: 'Fish Health', authorName: 'Fish.com Editorial', publishedAt: 'May 2025', readTime: '9 min' }}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Aquarium Health', href: '/health' }, { name: 'Ich Treatment', href: '/health/ich-treatment' }]}
       schema={schema}
@@ -45,13 +50,14 @@ export default function IchTreatmentPage() {
 
         <h2>The Heat Method</h2>
         <p>Raising temperature to 82-86°F (if the species tolerates it) accelerates the ich life cycle dramatically — the entire cycle from trophont to theront is completed in 3-4 days rather than 10-14 days, and the theront's viability window at high temperature is reduced. Maintain the elevated temperature for a minimum of 10 days after the last visible spot to ensure all life cycle stages are complete. Increase aeration — warmer water holds less oxygen. Not appropriate for cold-water fish (goldfish, white clouds) or temperature-sensitive species (discus tolerate high temps; delicate species may not).</p>
+        <p>Heaters that hold a treatment temperature are compared in the <Link href="/reviews/best-aquarium-heaters">aquarium heater review</Link>.</p>
         <JourneyNext
           siteId="fish-com"
           nextHref="/health/velvet-disease"
           nextLabel="Rule out velvet before you stop treating"
-          nextBlurb="Ich is salt-grain white spots. Velvet is a gold dust that needs a flashlight. The heat method still needs a heater you can hold at 82–86°F — the hop below is the same heater search already on this page."
+          nextBlurb="Ich is salt-grain white spots. Velvet is a gold dust that needs a flashlight. The heat method still needs a heater you can hold at 82–86°F — The button below opens the same heater search on Amazon."
           resourceHref="/go/amazon-brand/eheim+jager+heater?s=health-ich"
-          resourceLabel="Browse aquarium heaters on Amazon →"
+          resourceLabel="Browse Eheim Jager heaters on Amazon →"
         />
 
         <h2>Chemical Treatments</h2>
@@ -62,10 +68,10 @@ export default function IchTreatmentPage() {
         <h2>After Treatment — Prevention</h2>
         <p>Ich enters tanks from: new fish (quarantine all new fish — the most reliable prevention), aquatic plants from infected systems, water from pet store bags, and equipment moved between tanks. Once successfully treated, the tank is ich-free — but there is no lasting immunity. New introductions restart the risk. The parasite cannot survive in an established tank without a fish host for more than 48 hours at room temperature — a fish-out "fallow" period of 4-6 weeks in the display tank (all fish moved to a hospital tank for treatment) reliably clears ich from the display environment.</p>
 
-        {/* Money path — live amazon-brand search hops (heat-method kit).
-            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-            Category searches only — not a ranked list. No medication hops. */}
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        {/* Shop note — live amazon-brand search buttons (heat-method kit).
+            ShopCtas hides empty Chewy; never href="#" or an empty link.
+            Amazon searches only — not a ranked list. No medication buttons. */}
+        <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/eheim+jager+heater?s=health-ich", "/go/amazon-brand/aquarium+digital+thermometer?s=health-ich", "/go/amazon-brand/aquarium+sponge+filter?s=health-ich", "/go/amazon-brand/aquarium+quarantine+hospital+tank+net?s=health-ich"]} />
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
             Shop heat-method husbandry gear
@@ -74,7 +80,7 @@ export default function IchTreatmentPage() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/eheim+jager+heater?s=health-ich"
-              amazonLabel="Browse aquarium heaters on Amazon →"
+              amazonLabel="Browse Eheim Jager heaters on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+digital+thermometer?s=health-ich"

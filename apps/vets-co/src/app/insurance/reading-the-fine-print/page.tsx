@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ReviewCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { PrimaryHop, buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ReviewCard, ShopCtas, ArticleSourcesList, LastUpdated, ComparisonFoot } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Reading Pet Insurance Fine Print — What to Check | Vets.co", description: "Waiting periods, exam-fee coverage, payout schedules, and exclusions hide in the policy document. Use this checklist to read a pet insurance policy properly.", path: '/insurance/reading-the-fine-print', type: 'article' })
@@ -14,6 +15,8 @@ export default function FinePrintPage() {
     <>
       <SchemaScript schema={schema} />
       <ArticleLayout siteId="vets-co"
+        heroHop={<PrimaryHop href="/go/amazon-brand/full+page+magnifier?s=insurance-reading-the-fine-print" label="Browse full-page magnifiers on Amazon →" />}
+        heroExtra={<HopDisclosure siteId="vets-co" href="/go/amazon-brand/full+page+magnifier?s=insurance-reading-the-fine-print" tone="on-dark" />}
         hero={{ title: 'Reading the Fine Print', subtitle: 'The difference between a plan that pays when you need it and one that disappoints lives in the policy document, not the marketing page. Waiting periods, payout structures, exam-fee handling, and the exclusions list quietly determine your real coverage. This checklist walks through what to read before you sign.', category: 'Insurance Guide', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '8 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Insurance', href: '/insurance' }, { name: 'Reading the Fine Print', href: '/insurance/reading-the-fine-print' }]}
         sidebar={<>
@@ -33,16 +36,74 @@ export default function FinePrintPage() {
         <div className="carloOS-article">
 
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-09-06T00:00:00Z" reviewedBy="Editorial team" />
+          <LastUpdated date="2026-10-10" />
 
           <CalloutBox variant="info" title="Always read the sample policy">
             Reputable insurers publish a sample policy document. Read it before enrolling — not the summary, the actual document. The differences that matter in a real claim are almost always in the detailed terms, not the headline coverage.
           </CalloutBox>
 
           <h2>Waiting Periods</h2>
-          <p>Every policy imposes a waiting period after enrollment before coverage starts, and anything arising during it is excluded as pre-existing. Accident waiting periods are typically short, illness periods longer, and orthopedic conditions can carry the longest waits — six months or more with some insurers. For breeds prone to cruciate or hip disease, a long orthopedic waiting period is a major consideration. A full-page magnifier is how those orthopedic-wait clauses stay readable on the sample policy — it is not an assorted highlighter set (that lives on what-pet-insurance-covers), not removable page flags (that live on what-pet-insurance-covers), and not a self-inking date stamp (that lives on when-to-enroll). Check the length of each waiting period and whether the insurer offers a way to shorten the orthopedic wait, such as an exam.</p>
+          <p>Every policy imposes a waiting period after enrollment before coverage starts, and anything arising during it is excluded as pre-existing. Accident waiting periods are typically short, illness periods longer, and orthopedic conditions can carry the longest waits — six months or more with some insurers. For breeds prone to cruciate or hip disease, a long orthopedic waiting period is a major consideration. A full-page magnifier is how those orthopedic-wait clauses stay readable on the sample policy — it is not an assorted highlighter set, not removable page flags, and not a self-inking date stamp. Check the length of each waiting period and whether the insurer offers a way to shorten the orthopedic wait, such as an exam. <a href="/insurance/what-pet-insurance-covers">What pet insurance covers</a> is where those waiting-period exclusions are spelled out.</p>
+          <div className="my-6 max-w-full min-w-0">
+            <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
+              <caption className="text-left font-semibold text-brand-dark p-3">Waiting periods, from the sentences on this page</caption>
+              <thead>
+                <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Wait</th>
+                  <th scope="col" className="p-3 font-bold text-brand-dark">What this page says</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Accident</th>
+                  <td className="p-3">Typically short</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Illness</th>
+                  <td className="p-3">Longer than the accident wait</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Orthopedic</th>
+                  <td className="p-3">Can be the longest. Six months or more with some insurers. A major consideration for cruciate or hip risk</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
 
           <h2>How the Plan Pays</h2>
-          <p>There are two payout models. Most modern plans reimburse a percentage of your actual covered costs. A minority use a benefit schedule, capping payment for each condition or procedure at a fixed amount regardless of the real bill — which can leave large gaps even when a claim is covered. An adjustable copyholder is how two sample policies stay propped for a side-by-side payout-model read — it is not a letter-size file jacket (that lives on when-to-enroll), not a kraft two-pocket folder (that lives on choosing-a-veterinarian), and not a clipboard with storage (that lives on what-to-expect-at-the-vet). Confirm the plan reimburses actual costs, and be wary of unusually cheap plans that quietly use a benefit schedule.</p>
+          <p>There are two payout models. Most modern plans reimburse a percentage of your actual covered costs. A minority use a benefit schedule, capping payment for each condition or procedure at a fixed amount regardless of the real bill — which can leave large gaps even when a claim is covered. An adjustable copyholder is how two sample policies stay propped for a side-by-side payout-model read — it is not a letter-size file jacket, not a kraft two-pocket folder, and not a clipboard with storage. Confirm the plan reimburses actual costs, and be wary of unusually cheap plans that quietly use a benefit schedule.</p>
+          <div className="my-6 max-w-full min-w-0">
+            <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
+              <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+              <thead>
+                <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Percentage of actual costs</th>
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Benefit schedule</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">How common</th>
+                  <td className="p-3">Most modern plans</td>
+                  <td className="p-3">A minority</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">What comes back</th>
+                  <td className="p-3">A percentage of the covered costs</td>
+                  <td className="p-3">A fixed amount for each condition or procedure, regardless of the real bill</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">The gap</th>
+                  <td className="p-3">Confirm the plan reimburses actual costs</td>
+                  <td className="p-3">Can leave large gaps even when the claim is covered</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <ComparisonFoot updated="2026-10-10" />
+          <h2>Who should compare which term</h2>
+          <p>Compare the orthopedic wait, and whether the plan pays a percentage of the bill or a schedule. Anything that starts during a waiting period is excluded as pre-existing. A cheap plan that uses a schedule is the one this page says to read twice.</p>
 
           <h2>Exam Fees and Ancillary Costs</h2>
           <p>Some insurers reimburse the exam or consultation fee; others exclude it. Over a chronic condition requiring repeated rechecks, this adds up. Look also at how the plan handles prescription medications, hospitalization, specialist and emergency care, alternative therapies, and behavioral treatment. These ancillary inclusions and exclusions distinguish otherwise-similar plans and can swing the value substantially for a pet with ongoing needs.</p>
@@ -53,37 +114,14 @@ export default function FinePrintPage() {
           <h2>Practical Reading Strategy</h2>
           <p>Approach the policy with a checklist: waiting periods (especially orthopedic), payout model (percentage vs. schedule), exam-fee coverage, annual limit, and the full exclusions list. Compare two or three plans on these same points side by side rather than on price alone. A few minutes reading the fine print before enrollment prevents the far more painful discovery, during a claim, that the coverage you thought you had does not apply.</p>
 
-          <h2 id="kit">Reading-the-fine-print kit</h2>
+          <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Everyday physical supplies that match the
-            waiting-period, payout-model, and
-            exclusions-list copy on this page — a
-            full-page magnifier so orthopedic
-            waiting-period clauses stay readable on
-            the sample policy, an adjustable
-            copyholder so two sample policies stay
-            propped for a side-by-side read, and a
-            line-reader strip so the exclusions
-            list stays followed line by line. These
-            are educational fine-print / reading
-            tools, not a ranked product list, not a
-            substitute for veterinary care, and not
-            a treatment. Quad-ruled graph pads,
-            paid rubber stamps, and handheld tally
-            counters already live on
-            deductibles-reimbursement. 3-tab
-            dividers, assorted highlighter sets,
-            and removable page flags already live
-            on what-pet-insurance-covers. This
-            page does not hop medications or
-            insurance brands as Amazon searches.
-            This page does not claim hands-on
-            testing.
+            Keep these on hand: a full-page magnifier so orthopedic waiting-period clauses stay readable on the sample policy, an adjustable copyholder so two sample policies stay propped for a side-by-side read, and a line-reader strip so the exclusions list stays followed line by line. These are educational fine-print / reading tools, not a ranked product list, not a substitute for veterinary care, and not a treatment.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/full+page+magnifier?s=insurance-reading-the-fine-print", "/go/amazon-brand/adjustable+copyholder?s=insurance-reading-the-fine-print", "/go/amazon-brand/reading+guide+strip+overlay+line+reader?s=insurance-reading-the-fine-print"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (full-page magnifier /
               adjustable copyholder /
               line-reader strip).
@@ -92,9 +130,9 @@ export default function FinePrintPage() {
               not a ranked product list, not a
               substitute for veterinary care, no Rx
               / first-aid kit / thermometer /
-              carrier / insurance-brand ASIN hops.
+              carrier / insurance-brand product page buttons.
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or an empty link. Amazon searches only —
               unused vs #1171
               quad+ruled+graph+pad /
               paid+rubber+stamp /
@@ -111,7 +149,7 @@ export default function FinePrintPage() {
               wall+mounted+magnetic+monthly+planner.
               Carrier quote CTAs stay on
               /go/spot and /go/manypets —
-              not amazon-brand hops. */}
+              not amazon-brand buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
@@ -127,21 +165,20 @@ export default function FinePrintPage() {
                 amazonLabel="Browse adjustable copyholders on Amazon →"
               />
               <ShopCtas
-                amazonHref="/go/amazon-brand/line+reader+strip?s=insurance-reading-the-fine-print"
+                amazonHref="/go/amazon-brand/reading+guide+strip+overlay+line+reader?s=insurance-reading-the-fine-print"
                 amazonLabel="Browse line-reader strips on Amazon →"
               />
           </div>
           </div>
 
           <h2 id="quote">Compare Two or Three Policies</h2>
-          <p>The practical reading strategy above works best applied to real sample policies. Pull quotes from a couple of carriers and compare them on the same points — waiting periods, payout model, exam-fee coverage, annual limit, and the exclusions list. The two below are useful starting points; for the full side-by-side, see our <a href="/reviews/best-pet-insurance">best pet insurance comparison</a>.</p>
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <p>The practical reading strategy above works best applied to real sample policies. Pull quotes from a couple of carriers and compare them on the same points — waiting periods, payout model, exam-fee coverage, annual limit, and the exclusions list. The two below are useful starting points; for the full side-by-side, see our <a href="/reviews/best-pet-insurance">best pet insurance comparison</a>. After the quote and the exclusions list, the <a href="/tools/pet-insurance-worth-it-calculator">worth-it calculator</a> turns that premium into the eligible-cost level where the policy pays for itself.</p>
+          <HopDisclosure siteId="vets-co" href={["/go/spot/home?s=insurance-reading-the-fine-print", "/go/manypets/home?s=insurance-reading-the-fine-print"]} />
           <ReviewCard
             id="spot"
             badge="Customizable"
             name="Spot Pet Insurance"
             subtitle="Adjustable limits and an optional preventive add-on"
-            score={8.2}
             winner
             description={
               <p>Offers a range of annual-limit and deductible combinations plus an optional preventive-care add-on, which gives you several policy structures to read side by side. Use the fine-print checklist above — waiting periods, exam-fee coverage, exclusions — to compare its sample policy against another carrier before enrolling.</p>
@@ -161,21 +198,20 @@ export default function FinePrintPage() {
           />
           <ReviewCard
             id="manypets"
-            badge="Straightforward Terms"
+            badge="Not taking new US policies"
             name="ManyPets"
-            subtitle="Single comprehensive plan, clearer fine print"
-            score={8.0}
+            subtitle="See the carrier's current terms"
             description={
-              <p>Built around a single comprehensive plan rather than a tier maze, which can make the fine print easier to read and compare. Still apply the checklist — confirm waiting periods, bilateral and hereditary terms, and the annual limit. A clear sample policy is exactly what you want when learning to read coverage documents.</p>
+              <p>ManyPets has stopped selling new US policies. This card does not print a deductible, a reimbursement percent, an annual limit, a waiting period, or an exam-fee rule as a current offer. See the carrier&apos;s current terms.</p>
             }
             specs={[
-              { label: 'Plan', value: 'Single comprehensive' },
-              { label: 'Fine print', value: 'Relatively clear', highlight: 'good' },
-              { label: 'Model', value: 'Pay-then-claim' },
+              { label: 'New US policies', value: 'Not for sale', highlight: 'warn' },
+              { label: 'Plan terms', value: 'See the carrier\'s current terms' },
+              { label: 'Model', value: 'See the carrier\'s current terms' },
             ]}
-            pros={['Simpler single plan to read', 'Clear sample policy', 'Covers many conditions']}
-            cons={['Fewer structures to mix and match', 'Availability varies by state']}
-            price="Quote-based"
+            pros={['The carrier page states that new US sales have stopped']}
+            cons={['Do not treat an old sample policy as a current offer', 'See the carrier\'s current terms']}
+            price="See the carrier's current terms"
             ctaText="Visit ManyPets →"
             ctaHref="/go/manypets/home?s=insurance-reading-the-fine-print"
             ctaAffiliateProgram="manypets"
@@ -184,6 +220,13 @@ export default function FinePrintPage() {
 
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
+                  <ArticleSourcesList
+            title="Sources"
+            sources={[
+            { label: "ManyPets", url: "https://manypets.com/", publisher: "ManyPets" },
+            { label: "Spot", url: "https://www.spotpet.com/", publisher: "Spot" },
+            ]}
+          />
         </div>
       </ArticleLayout>
     </>

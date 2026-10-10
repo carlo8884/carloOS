@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { StockImage,
+import { ShopCtas, StockImage,
   buildMetadata,
   ArticleLayout,
   RelatedLinks, CrossPortfolioCard,
@@ -11,7 +12,6 @@ import { StockImage,
   ArticleByline,
   DropCap,
   CalloutBox,
-  AffiliateDisclosure,
   ArticleSourcesList,
 } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
@@ -86,9 +86,9 @@ const FAQS = [
   {
     question: 'Can platies live in an unheated tank?',
     answer:
-      'Platies tolerate a wider temperature range than most tropical fish — FishBase lists 65–80°F — so a room that stays consistently above 68°F may not strictly require a heater. But "tolerate" is not "thrive": below 72°F, platies eat less, color fades, and the immune system slows. A small adjustable heater holding 74–78°F is inexpensive insurance and recommended for any platy tank.',
+      'FishBase lists Xiphophorus maculatus at 18–25°C, which is 64–77°F (https://www.fishbase.se/summary/Xiphophorus-maculatus.html). A room that stays inside that band may not strictly require a heater. A small adjustable heater is still useful if the room drops below the band.',
     answerText:
-      'They tolerate 65-80°F but thrive at 74-78°F. A heater is recommended even though they can survive briefly without one.',
+      'FishBase lists 18–25°C, 64–77°F (https://www.fishbase.se/summary/Xiphophorus-maculatus.html).',
   },
 ]
 
@@ -118,7 +118,7 @@ export default function PlatyPage() {
           { name: 'Species', href: '/species' },
           { name: 'Platy Fish', href: '/species/platy-fish' },
         ]}
-        relatedLinks={[{ title: 'Species Hub', href: '/species', category: 'Species' }, { title: 'Guppy', href: '/species/guppy', category: 'Species Guide' }, { title: 'Molly Fish', href: '/species/molly-fish', category: 'Species Guide' }, { title: 'Swordtail Fish', href: '/species/swordtail-fish', category: 'Species Guide' }]}
+        relatedLinks={[{ title: 'Species Hub', href: '/species', category: 'Species' }, { title: 'Guppy', href: '/species/guppy', category: 'Species Guide' }, { title: 'Molly Fish', href: '/species/molly-fish', category: 'Species Guide' }, { title: 'Swordtail Fish', href: '/species/swordtail-fish', category: 'Species Guide' }, { title: 'Tank Volume Calculator', href: '/tools/aquarium-volume-calculator', category: 'Tool' }]}
         sidebar={
           <>
             <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -129,7 +129,7 @@ export default function PlatyPage() {
                 ['Scientific name', 'Xiphophorus maculatus'],
                 ['Origin', 'Mexico, Belize, Guatemala'],
                 ['Adult size', '2.5 in (females larger)'],
-                ['Temperature', '65–80°F (74–78°F ideal)'],
+                ['Temperature', '64–77°F (https://www.fishbase.se/summary/Xiphophorus-maculatus.html)'],
                 ['pH', '7.0–8.2 (hard alkaline)'],
                 ['GH', '10–25 dGH'],
                 ['Min tank', '10 gal — 20 gal for a group'],
@@ -142,7 +142,7 @@ export default function PlatyPage() {
                   className="flex justify-between py-1.5 border-b border-brand-border text-xs last:border-0"
                 >
                   <span className="text-brand-text-light">{k}</span>
-                  <span className="font-bold text-brand-dark text-right max-w-[55%]">{v}</span>
+                  <span className="font-bold text-brand-dark text-right max-w-[55%] break-all">{v}</span>
                 </div>
               ))}
             </div>
@@ -163,7 +163,7 @@ export default function PlatyPage() {
                   className="flex justify-between py-1.5 border-b border-brand-border text-xs last:border-0"
                 >
                   <span className="text-brand-text-light">{k}</span>
-                  <span className="font-bold text-brand-dark text-right max-w-[55%]">{v}</span>
+                  <span className="font-bold text-brand-dark text-right max-w-[55%] break-all">{v}</span>
                 </div>
               ))}
             </div>
@@ -173,6 +173,7 @@ export default function PlatyPage() {
                 { label: 'Guppy Care', href: '/species/guppy' },
                 { label: 'Molly Fish Care', href: '/species/molly-fish' },
                 { label: 'Swordtail Care', href: '/species/swordtail-fish' },
+                { label: 'Tank Volume Calculator', href: '/tools/aquarium-volume-calculator' },
                 { label: 'Aquarium Cycling Guide', href: '/setup/aquarium-cycling-guide' },
                 { label: 'Find an Aquarium Vet (WAVMA)', href: crossSiteHref('vets-co', '/find-a-vet/aquarium') },
               ]}
@@ -191,7 +192,7 @@ export default function PlatyPage() {
           />
         <StockImage manifestKey="fish-com:species-platy-fish" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A platy in a home aquarium." priority />
 
-          <CalloutBox variant="note" title="TL;DR">
+          <CalloutBox variant="note" title="In short">
             Platies (Xiphophorus maculatus) are the textbook beginner
             livebearer: hardy, adaptable to hard alkaline tap water,
             peaceful in community tanks, and available in dozens of color
@@ -219,7 +220,7 @@ export default function PlatyPage() {
           </DropCap>
           <p>
             Beyond chemistry, platies are forgiving in temperature
-            (functional from 65°F to 80°F), accept any standard tropical
+            (FishBase 64–77°F, <a className="break-all" href="https://www.fishbase.se/summary/Xiphophorus-maculatus.html">https://www.fishbase.se/summary/Xiphophorus-maculatus.html</a>), accept any standard tropical
             food (flake, micro pellet, frozen, freeze-dried), coexist
             peacefully with virtually all non-aggressive community fish,
             and reach sexual maturity reliably enough that captive
@@ -306,7 +307,10 @@ export default function PlatyPage() {
           <p>
             Ten gallons is the practical minimum for a small group;
             twenty gallons supports a healthy mixed-age population without
-            stocking pressure. A standard sponge filter or hang-on-back
+            stocking pressure. The{' '}
+            <a href="/tools/aquarium-volume-calculator" className="text-brand-primary hover:underline">tank volume calculator</a>{' '}
+            checks those gallon figures from the tank&apos;s length, width, and height.
+            A standard sponge filter or hang-on-back
             handles the bioload easily. Substrate is unimportant for
             platies themselves — they are mid-to-upper water column fish
             — but matters for plants and any bottom-dwelling tankmates.
@@ -429,12 +433,12 @@ export default function PlatyPage() {
               practice referral directory.
             </li>
           </ul>
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        <HopDisclosure siteId="fish-com" href="/go/amazon-brand/platy%20fish%20tank%20setup?s=species-platy-fish" />
           <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Platy Fish — Tank Setup</div>
-          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for platy fish care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
+          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for platy fish care.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
-            <a href="/go/amazon-brand/platy%20fish%20tank%20setup?s=species-platy-fish" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop Platy Fish Setup on Amazon →</a>
+            <ShopCtas amazonHref="/go/amazon-brand/platy%20fish%20tank%20setup?s=species-platy-fish" amazonLabel="Browse platy fish tank setups on Amazon →" />
           </div>
         </div>
 

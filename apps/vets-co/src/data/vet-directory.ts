@@ -31,7 +31,7 @@ export interface StateRow {
   /** Display name. */
   name: string
   /** Number of mock vet records in this state. Real counts arrive after
-   * Carlo selects a data source. */
+   * a verified data source is selected. */
   vetCount: number
 }
 

@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -124,6 +125,7 @@ export default function TyingUpPage() {
             updatedAt="2026-09-06"
             reviewedBy="Editorial team"
           />
+          <LastUpdated date="2026-10-09" />
 
           <h2 id="what">What Is Tying-Up</h2>
           <p>Tying-up is the breakdown of skeletal muscle (rhabdomyolysis) in connection with exercise. Damaged muscle cells release their contents -- including the enzyme creatine kinase and the protein myoglobin -- into the bloodstream. The horse experiences cramping, stiffness, and pain, classically over the large muscles of the hindquarters and back. In severe episodes, myoglobin can overload and injure the kidneys, turning the urine dark.</p>
@@ -144,38 +146,27 @@ export default function TyingUpPage() {
           </ul>
 
           <h2 id="emergency">Why It Is Urgent</h2>
-          <p>A severe episode is an emergency. Forcing a tying-up horse to keep moving worsens muscle damage, and the myoglobin released by damaged muscle can injure the kidneys, especially if the horse is dehydrated. Prompt veterinary care -- rest, fluids to protect the kidneys, pain relief, and monitoring of muscle enzymes -- limits the damage. Never trailer or work a horse through an acute episode. An Irish-knit horse cooler is how a horse that must stay still stays warm and dry instead of standing in a sweat-soaked sheet — it is not a soft fleece equine cooler (that lives on colic), not a horse fleece cooler (those live on body-clipping and the blanket-size calculator), and not a turnout blanket (that lives on blanketing).</p>
+          <p>A severe episode is an emergency. Forcing a tying-up horse to keep moving worsens muscle damage, and the myoglobin released by damaged muscle can injure the kidneys, especially if the horse is dehydrated. Prompt veterinary care -- rest, fluids to protect the kidneys, pain relief, and monitoring of muscle enzymes -- limits the damage. Never trailer or work a horse through an acute episode. An Irish-knit horse cooler is how a horse that must stay still stays warm and dry instead of standing in a sweat-soaked sheet — it is not a soft fleece equine cooler, not a horse fleece cooler, and not a turnout blanket.</p>
 
           <h2 id="diagnosis">Diagnosis</h2>
           <p>A veterinarian confirms tying-up by measuring muscle enzymes (creatine kinase and AST) in the blood, which rise markedly with muscle damage. For recurrent cases, the workup may include an exercise challenge test, muscle biopsy, and genetic testing for PSSM type 1 (the GYS1 mutation) to distinguish the underlying cause, which directs the long-term plan.</p>
 
           <h2 id="management">Management</h2>
           <ul>
-            <li><strong>Match diet to the cause.</strong> PSSM and RER horses do best on a low-starch, low-sugar, high-fat ration with energy from fat and fiber rather than grain. This page does not hop rice-bran pellets, high-fat performance feed, or ration balancers — those already live on the nutrition pages and stay a veterinary ration, not a shoppable treatment.</li>
+            <li><strong>Match diet to the cause.</strong> PSSM and RER horses do best on a low-starch, low-sugar, high-fat ration with energy from fat and fiber rather than grain.</li>
             <li><strong>Keep exercise consistent.</strong> Daily turnout and a regular work program without sudden days off on full feed are central to preventing recurrence.</li>
-            <li><strong>Maintain hydration and electrolytes</strong> around hard work and in hot weather. Loose plain white salt is how daily sodium is measured into the ration instead of hoped-for on a lick — it is not an equine salt lick (that lives on the feed calculator), not a bottled horse-electrolytes hop (those live on the emergency tool and grimace scale), and not a tank heater (that lives on winter-care).</li>
+            <li><strong>Maintain hydration and electrolytes</strong> around hard work and in hot weather. Loose plain white salt is how daily sodium is measured into the ration instead of hoped-for on a lick. It is not an equine salt lick and not a tank heater.</li>
             <li><strong>Reduce stress</strong> in nervous RER-type horses with routine and calm handling.</li>
-            <li><strong>Warm up and cool down gradually</strong> and build fitness progressively rather than in big jumps. A wool exercise quarter sheet is how that warmup stays on the muscle instead of a cold walk-out — it is not a turnout sheet (that lives on the blanket-size calculator), not a waterproof sheet (that lives on blanketing), and not a fleece cooler.</li>
+            <li><strong>Warm up and cool down gradually</strong> and build fitness progressively rather than in big jumps. A wool exercise quarter sheet is how that warmup stays on the muscle instead of a cold walk-out — it is not a turnout sheet, not a waterproof sheet, and not a fleece cooler.</li>
           </ul>
 
-          <h2 id="kit">Rest-and-routine kit</h2>
+          <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Everyday physical supplies that match the
-            keep-warm-and-calm, warm-up-and-cool-down, and
-            hydration-and-electrolytes copy on this page —
-            an Irish-knit horse cooler so a horse that must
-            stay still stays warm, a wool exercise quarter
-            sheet so the warmup starts on the muscle, and
-            loose plain white salt so daily sodium is
-            measured into the ration. These are educational
-            rest-and-routine tools, not a ranked product
-            list, not a substitute for veterinary care, and
-            not a diet or medication prescription. Salt licks already
-            live on the feed calculator. This page does not claim hands-on testing. </p>
+            Keep these on hand: an Irish-knit horse cooler so a horse that must stay still stays warm, a wool exercise quarter sheet so the warmup starts on the muscle, and loose plain white salt so daily sodium is measured into the ration. These are educational rest-and-routine tools, not a ranked product list, not a substitute for veterinary care, and not a diet or medication prescription. </p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/irish+knit+horse+cooler?s=health-tying-up", "/go/amazon-brand/wool+exercise+quarter+sheet?s=health-tying-up", "/go/amazon-brand/loose+plain+white+salt+horse?s=health-tying-up"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (irish knit horse cooler /
               wool exercise quarter sheet /
               loose plain white salt horse).
@@ -183,9 +174,9 @@ export default function TyingUpPage() {
               tools, not a ranked product list, not a
               substitute for veterinary care, no Rx /
               vaccine / fleece-cooler / salt-lick /
-              electrolyte-paste ASIN hops.
+              electrolyte-paste product page buttons.
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or an empty link. Amazon searches only —
               unused vs #1101
               steel+heart+bar+horseshoe /
               3+degree+leather+wedge+pad /
@@ -218,7 +209,7 @@ export default function TyingUpPage() {
               high+fat+low+starch+horse+feed
               (nutrition pages).
               Medications and prescriptions
-              are not shoppable hops. */}
+              are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
@@ -243,13 +234,17 @@ export default function TyingUpPage() {
           <h2 id="faq">Frequently Asked Questions</h2>
           <FAQAccordion items={FAQS} />
 
-          <h2 id="references">References</h2>
-          <ol className="text-sm text-brand-text-mid">
-            <li>Valberg SJ. “Exertional Rhabdomyolysis in the Horse.” Veterinary Clinics of North America: Equine Practice and related reviews.</li>
-            <li>MacLeay JM, et al. “Recurrent Exertional Rhabdomyolysis in Thoroughbred Racehorses.” American Journal of Veterinary Research.</li>
-            <li>McCue ME, Valberg SJ, et al. “Glycogen Synthase (GYS1) Mutation and PSSM.” Genomics, 2008; 91(5):458–466.</li>
-            <li>American Association of Equine Practitioners. “Tying-Up / Exertional Rhabdomyolysis” owner resources. aaep.org.</li>
-          </ol>
+          <div id="references">
+            <ArticleSourcesList
+              title="References"
+              sources={[
+              { label: "Valberg SJ. “Exertional Rhabdomyolysis in the Horse.” Veterinary Clinics of North America: Equine Practice and related reviews.", url: "https://www.vetequine.theclinics.com/", publisher: "Veterinary Clinics of North America: Equine Practice" },
+              { label: "MacLeay JM, et al. “Recurrent Exertional Rhabdomyolysis in Thoroughbred Racehorses.” American Journal of Veterinary Research.", url: "https://avmajournals.avma.org/view/journals/ajvr/ajvr-overview.xml", publisher: "American Journal of Veterinary Research" },
+              { label: "McCue ME, Valberg SJ, et al. “Glycogen Synthase (GYS1) Mutation and PSSM.” Genomics, 2008; 91(5):458–466.", url: "https://www.sciencedirect.com/journal/genomics", publisher: "Genomics" },
+              { label: "American Association of Equine Practitioners. “Tying-Up / Exertional Rhabdomyolysis” owner resources. aaep.org.", url: "https://aaep.org/", publisher: "AAEP" },
+              ]}
+            />
+          </div>
         </div>
       </ArticleLayout>
     </>

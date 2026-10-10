@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import {
   buildMetadata,
@@ -11,22 +12,22 @@ import {
   CrossPortfolioCard,
   ArticleSourcesList,
   StockImage,
-  AffiliateDisclosure,
   ShopCtas,
+  LastUpdated,
 } from '@carloOS/ui'
 
 const SOURCES = [
+  {
+    label: "Merck Veterinary Manual — foreign-body obstruction in ferrets",
+    url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/noninfectious-diseases-of-ferrets",
+    publisher: "Merck Veterinary Manual",
+  },
   {
     label: "Quesenberry KE, Carpenter JW (eds.). Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery. 4th ed. Saunders/Elsevier — ferret gastrointestinal and soft-tissue surgery chapters covering foreign-body obstruction.",
     url: "https://www.elsevier.com/books/ferrets-rabbits-and-rodents/quesenberry/978-1-4160-6621-7",
     publisher: "Elsevier/Saunders",
   },
-  {
-    label: "Merck Veterinary Manual — Digestive Diseases of Ferrets: foreign-body obstruction, diagnosis, and surgical management",
-    url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/digestive-diseases-of-ferrets",
-    publisher: "Merck Veterinary Manual",
-  },
-  {
+    {
     label: "Association of Exotic Mammal Veterinarians (AEMV) — exotic-mammal surgical standards and ferret anesthesia guidelines",
     url: "https://aemv.org",
     publisher: "AEMV",
@@ -77,7 +78,6 @@ const medSchema = buildMedicalWebPageSchema({
   authorName: 'Ferret.com Editorial',
   lastReviewed: '2026-06-01',
 })
-
 
 const FAQS = [
   {
@@ -134,7 +134,7 @@ export default function FerretGIBlockagePage() {
           <>
             <TableOfContents
               items={[
-                { label: 'TL;DR', href: '#tldr' },
+                { label: '', href: '#tldr' },
                 { label: 'Why Ferrets Are at Risk', href: '#risk' },
                 { label: 'Warning Signs', href: '#signs' },
                 { label: 'Diagnosis', href: '#diagnosis' },
@@ -156,7 +156,7 @@ export default function FerretGIBlockagePage() {
 
           </>
         }
-      
+
         relatedLinks={[
           { title: 'Ferret Health Hub', href: '/health' },
           { title: 'Emergency Warning Signs', href: '/health/emergency-warning-signs' },
@@ -177,6 +177,7 @@ export default function FerretGIBlockagePage() {
             publishedAt="2026-06-01"
             updatedAt="2026-06-01"
           />
+          <LastUpdated date="2026-10-09" />
 
           <DropCap>
             Ask an exotic-mammal surgeon what they remove from ferret intestines
@@ -188,8 +189,7 @@ export default function FerretGIBlockagePage() {
             species.
           </DropCap>
 
-          <h2 id="tldr">TL;DR</h2>
-          <p>
+                    <p>
             Gastrointestinal blockage in ferrets is usually caused by swallowed
             foreign objects (especially soft rubber and foam) or, less often,
             hairballs (trichobezoars). The ferret intestine is narrow, so even
@@ -349,20 +349,8 @@ export default function FerretGIBlockagePage() {
             <a href="/health">health hub</a>.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/ferret+cage?s=gastrointestinal-blockage" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated ferret GI-proof chart /
-              ferret fridge rubber-foam card /
-              mustelid GI-blockage handbook).
-              No existing product hop to keep.
-              Educational kitchen searches only; no Rx /
-              vaccine / aging hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs health-hub /
-              emergency / vet-visit / checkup hops. Ferret
-              aging stays held.
-              Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
@@ -371,7 +359,7 @@ export default function FerretGIBlockagePage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/ferret+cage?s=gastrointestinal-blockage"
-                amazonLabel="Shop on Amazon"
+                amazonLabel="Browse ferret cages on Amazon →"
               />
           </div>
           </div>

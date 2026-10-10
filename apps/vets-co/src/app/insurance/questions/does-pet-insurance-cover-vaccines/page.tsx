@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, LastUpdated, ComparisonFoot } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 
@@ -19,6 +19,7 @@ export default function Page() {
       <SchemaScript schema={schema} />
       <ArticleLayout siteId="vets-co"
         priceAsOf="2026-06-11"
+        heroHop={<a href="/tools/pet-insurance-worth-it-calculator" className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline mb-5">Worth-it calculator</a>}
         hero={{ title: 'Does Pet Insurance Cover Vaccines?', subtitle: 'Standard accident-and-illness pet insurance does not cover vaccines or other routine care. Vaccines are reimbursed only if you add an optional wellness plan — and whether that add-on is worth it comes down to simple arithmetic, not the marketing.', category: 'Insurance Q&A', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '6 min' }}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Insurance', href: '/insurance' }, { name: 'Questions', href: '/insurance/questions' }, { name: 'Vaccines', href: '/insurance/questions/does-pet-insurance-cover-vaccines' }]}
         sidebar={<>
@@ -37,6 +38,7 @@ export default function Page() {
       >
         <div className="carloOS-article">
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-11T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
+          <LastUpdated date="2026-10-10" />
 
           <CalloutBox variant="info" title="The short answer">
             Standard accident-and-illness pet insurance does <strong>not</strong> cover vaccines or other routine, preventive care. Vaccines are reimbursed only if you add an optional wellness or routine-care plan for an extra monthly cost. The core policy pays for unexpected illness and injury — not predictable annual care.
@@ -44,6 +46,7 @@ export default function Page() {
 
           <h2>Why the Core Policy Excludes Vaccines</h2>
           <p>The product most owners buy is an accident-and-illness (A&amp;I) policy, and it is built around one idea: insuring against the unexpected. A broken leg, a swallowed sock, a cancer diagnosis, a sudden infection — these are unpredictable, potentially expensive events, which is exactly what insurance exists to cover. Vaccines do not fit that definition. They are scheduled, predictable, and relatively inexpensive, which is why every standard policy excludes them by design.</p>
+          <p>Those figures are typical US ranges dated 2026-06-11.</p>
           <p>This is not a loophole or a gap an insurer forgot to close. Insuring a known, recurring cost cannot make that cost cheaper; it can only add an administrative layer on top of it. If a policy reimbursed a $30 vaccine, the premium would simply have to rise by at least $30 to fund it, plus the insurer&apos;s overhead. Excluding predictable care is what keeps the premium attached to genuine risk, which is the whole point of the product.</p>
 
           <h2>What a Wellness Add-On Actually Does</h2>
@@ -55,14 +58,45 @@ export default function Page() {
           <p>The right answer is personal: a multi-pet household that bundles every preventive each year may find the math close to neutral, while an owner who shops around for low-cost vaccine clinics will usually come out ahead skipping the rider and budgeting directly. To pressure-test the broader buy decision, the <a href="/tools/pet-insurance-worth-it-calculator">worth-it calculator</a> can frame how routine versus catastrophic costs factor into the overall value of a policy.</p>
 
           <h2>What to Check on a Quote</h2>
-          <p>When you request a quote and see a wellness option, three details decide whether it is structured well. First, confirm the wellness plan is a clearly separate line item from the A&amp;I premium, so you can see exactly what the routine-care layer costs. Second, look for the annual reimbursement cap per category — a plan that caps vaccine reimbursement at a low figure may not cover a full puppy or kitten vaccine series. Third, check whether the wellness allowance rolls over or resets each year, and whether there is any waiting period before routine claims are eligible. These small print details, not the headline price, determine whether the rider does what you expect.</p>
+          <p>When you request a quote and see a wellness option, three details decide whether it is structured well. First, confirm the wellness plan is a clearly separate line item from the A&amp;I premium, so you can see exactly what the routine-care layer costs. Second, look for the annual reimbursement cap per category — a plan that caps vaccine reimbursement at a low figure may not cover a full puppy or kitten vaccine series. Third, check whether the wellness allowance rolls over or resets each year, and whether there is any waiting period before routine claims are eligible. These small print details, not the headline price, determine whether the rider does what you expect. <a href="/insurance/how-pet-insurance-works">How pet insurance works</a> is the accident-and-illness policy this wellness line sits beside.</p>
 
           <h2>The Practical Takeaway</h2>
           <p>If your goal is protection against a large, unexpected vet bill, the core accident-and-illness policy is the product to focus on, and vaccines are simply outside its scope. If your goal is to spread predictable annual care into level payments, a wellness add-on can do that — but only add it after checking that the math and the per-category caps make sense for your pet. The two products solve different problems, and conflating them is the most common reason owners feel let down at claim time.</p>
+          <div className="my-6 max-w-full min-w-0">
+            <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
+              <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+              <thead>
+                <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Accident-and-illness policy</th>
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Wellness add-on</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">What it is for</th>
+                  <td className="p-3">Unexpected illness and injury</td>
+                  <td className="p-3">Predictable annual care, including vaccines</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Vaccines</th>
+                  <td className="p-3">Not covered. They are scheduled and excluded by design</td>
+                  <td className="p-3">Reimbursed only up to a capped amount per category</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">What it is not</th>
+                  <td className="p-3">Not a way to pay for the annual exam or preventives</td>
+                  <td className="p-3">A budgeting tool, not unlimited insurance, and not designed to generate savings</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <ComparisonFoot updated="2026-10-10" />
+          <h2>Who should buy which layer</h2>
+          <p>Buy the core policy when the goal is a large unexpected bill. Add wellness only after the per-category caps and the premium match what you already spend on routine care. Vaccines stay off the core policy either way.</p>
 
           <h2 id="next-steps">Next Steps</h2>
           <p>Most owners researching vaccines are early in the buy decision. The most useful next move is to model the overall value of a policy on your numbers and to compare how carriers structure their wellness options.</p>
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
           <ul>
             <li>Run the <a href="/tools/pet-insurance-worth-it-calculator">&ldquo;is pet insurance worth it?&rdquo; calculator</a> to see the breakeven cost level for your pet.</li>
             <li>Compare carriers and their wellness add-ons in our <a href="/reviews/best-pet-insurance">best pet insurance comparison</a>.</li>
@@ -82,9 +116,7 @@ export default function Page() {
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
 
-          <ArticleSourcesList sources={[
-            { label: 'A Consumer’s Guide to Pet Insurance', url: 'https://content.naic.org/cipr-topics/pet-insurance', publisher: 'NAIC' },
-            { label: 'State of the Industry Report (coverage-type definitions)', url: 'https://naphia.org/state-of-the-industry/', publisher: 'NAPHIA' },
+          <ArticleSourcesList title="Sources" sources={[
             { label: 'Sample accident-and-illness and wellness policy documents', publisher: 'General carrier policy disclosures (not an endorsement)' },
           ]} />
         </div>

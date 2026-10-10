@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import {
   buildMetadata,
@@ -6,7 +7,6 @@ import {
   TableOfContents,
   CrossPortfolioCard,
   ArticleByline,
-  AffiliateDisclosure,
   ShopCtas,
 } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
@@ -82,7 +82,6 @@ export default function TrainerCredentialsPage() {
             </div>
           </div>
         ))}
-        
 
         <h2 id="red-flags">Red Flags to Walk Away From</h2>
         {RED_FLAGS.map(r => (
@@ -103,16 +102,6 @@ export default function TrainerCredentialsPage() {
           <li>Will I be learning to train my dog, or are you training the dog for me?</li>
         </ul>
         <p>A trainer who becomes defensive, evasive, or dismissive of these questions is not the right trainer for you. Qualified professionals welcome questions about their methods and credentials.</p>
-        <p>
-          A dog CPDT-KA hiring interview question card is how what-credentials-do-you-hold,
-          are-they-current, and will-i-be-learning-to-train-my-dog stay posted — it is not a dog
-          force-free trainer interview question card (that lives on training-red-flags), not a dog
-          aggression type-and-function question card (that lives on dog-aggression), not a dog
-          food-bowl safety question card (that lives on resource-guarding), and not a dog
-          20-to-30-foot long-line question card (that lives on off-leash-training). This page does
-          not hop shock collars, e-collars, prong collars, choke chains, or alpha-roll gear, and it
-          does not hop invented ASINs.
-        </p>
 
         <h2 id="match">Matching Credential to Problem</h2>
         <ul>
@@ -122,31 +111,9 @@ export default function TrainerCredentialsPage() {
           <li><strong>Separation anxiety:</strong> Certified Separation Anxiety Trainer (CSAT) specialty credential — ask specifically; general trainers often lack SA-specific protocol training</li>
           <li><strong>Severe anxiety, aggression requiring medication:</strong> DACVB — the only behavior professional who can prescribe</li>
         </ul>
-        <p>
-          A dog trainer session-observation watch log notebook is how
-          can-i-observe-a-session-with-another-client, training-the-dog-while-excluding-the-owner,
-          and veterinary-reference-required stay written down — it is not a dog Easy Walk /
-          Ruffwear Front Range watch log notebook (that lives on training-red-flags), not a dog
-          aggression never-alpha-roll watch log notebook (that lives on dog-aggression), not a dog
-          resource-guarding never-punish-growl watch log notebook (that lives on resource-guarding),
-          and not a dog recall-cue never-punish watch log notebook (that lives on
-          off-leash-training). </p>
 
-        <AffiliateDisclosure variant="inline" siteId="dog-com" />
+        <HopDisclosure siteId="dog-com" href="/go/amazon-brand/dog+leash?s=training-trainer-credentials" />
 
-        {/* Shop leftover kit — unused vs #1153
-            laminated+dog+training+red+flags+checklist /
-            dog+force+free+trainer+interview+question+card /
-            dog+easy+walk+ruffwear+front+range+watch+log+notebook, #1152
-            laminated+dog+aggression+warning+signal+sequence+checklist /
-            dog+aggression+type+and+function+question+card /
-            dog+aggression+never+alpha+roll+watch+log+notebook, #1151
-            laminated+dog+resource+guarding+trade+game+checklist /
-            dog+food+bowl+safety+question+card /
-            dog+resource+guarding+never+punish+growl+watch+log+notebook, #1150
-            laminated+dog+off+leash+recall+proofing+checklist /
-            dog+20+to+30+foot+long+line+question+card /
-            dog+recall+cue+never+punish+watch+log+notebook. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
             Shop related supplies
@@ -155,16 +122,9 @@ export default function TrainerCredentialsPage() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/dog+leash?s=training-trainer-credentials"
-              amazonLabel="Shop on Amazon"
+              amazonLabel="Browse dog leash on Amazon →"
             />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/dog+cpdt+ka+hiring+interview+question+card?s=training-trainer-credentials"
-              amazonLabel="Browse dog CPDT-KA hiring interview question cards on Amazon →"
-            />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/dog+trainer+session+observation+watch+log+notebook?s=training-trainer-credentials"
-              amazonLabel="Browse dog trainer session-observation watch log notebooks on Amazon →"
-            />
+
           </div>
         </div>
       </div>

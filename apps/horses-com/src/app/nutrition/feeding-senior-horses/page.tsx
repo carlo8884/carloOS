@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { AffiliateDisclosure, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ReviewCard, ScoreMethodology, ShopCtas, TableOfContents } from '@carloOS/ui'
+import { ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ReviewCard, ShopCtas, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -95,6 +96,7 @@ export default function SeniorFeedingPage() {
               { label: "Cushing's / PPID", href: "/health/cushings-ppid" },
               { label: "Best Equine Supplements", href: "/reviews/best-equine-supplements" },
               { label: "Joint Supplements", href: "/supplements/joint-supplements" },
+              { label: "Daily feed calculator", href: "/tools/horse-feed-calculator" },
               { label: "Senior Horse Care", href: "/ownership/senior-horse-care" },
             ]}
           />
@@ -114,10 +116,10 @@ export default function SeniorFeedingPage() {
           <p>As horses age, several things shift together: teeth wear down and chewing becomes less effective, digestion of fiber and protein becomes somewhat less efficient, the ability to maintain condition declines, and chronic conditions such as PPID become common. Some seniors become hard keepers needing more support, while others -- especially those with PPID and regional fat -- stay overweight and need restriction. The diet must be tailored to the individual aging horse, not a single senior template.</p>
 
           <h2 id="teeth">Dental Decline</h2>
-          <p>Dental wear is the single biggest feeding change in old age. Worn, loose, or missing teeth make a horse unable to chew long-stem hay effectively, leading to quidding (dropping balls of half-chewed hay), weight loss, and choke risk from poorly chewed feed. Regular dental care helps, but eventually many seniors cannot manage hay and need forage in a form they can process. Watching for quidding and weight loss is the cue to adapt the forage.</p>
+          <p>Dental wear is the single biggest feeding change in old age. Worn, loose, or missing teeth make a horse unable to chew long-stem hay effectively, leading to quidding (dropping balls of half-chewed hay), weight loss, and choke risk from poorly chewed feed. Regular dental care helps, but eventually many seniors cannot manage hay and need forage in a form they can process. Watching for quidding and weight loss is the cue to adapt the forage. If the horse can still eat long-stem hay, the <a href="/tools/horse-feed-calculator">daily feed calculator</a> estimates that forage from bodyweight. Soaked cubes and mashes change the form, not the need for a weighed target.</p>
 
           <h2 id="feeds">Senior Feeds and Hay Replacers</h2>
-          <p>Senior horses that cannot chew hay well can be maintained on soaked, easily chewed forage and complete senior feeds. Soaked hay cubes, chopped forage, soaked beet pulp, and complete senior feeds (designed to be the whole ration, including forage replacement) provide digestible fiber the horse can manage. These are usually fed soaked into a mash for horses with poor teeth, in several small meals a day. The goal is to keep fiber intake high in a chewable form. Horse chopped forage is that chewable hay-replacer fiber — it is not a dental-page hay-cube hop and not a beet-pulp shred or pellet hop (those live on the beet-pulp page). A horse feed soaking tub is how cubes and complete senior feed sit in water until they become a mash a poor-toothed horse can eat — it is not a lidded 5-gallon feed-soaking pail (that lives on the choke page), not stackable rubber feed tubs (those live on the grain page), and not a hay soaking bag (that lives on heaves).</p>
+          <p>Senior horses that cannot chew hay well can be maintained on soaked, easily chewed forage and complete senior feeds. Soaked hay cubes, chopped forage, soaked beet pulp, and complete senior feeds (designed to be the whole ration, including forage replacement) provide digestible fiber the horse can manage. These are usually fed soaked into a mash for horses with poor teeth, in several small meals a day. The goal is to keep fiber intake high in a chewable form. Horse chopped forage is that chewable hay-replacer fiber. A horse feed soaking tub is how cubes and complete senior feed sit in water until they become a mash a poor-toothed horse can eat — it is not a lidded 5-gallon feed-soaking pail, not stackable rubber feed tubs, and not a hay soaking bag.</p>
 
           <h2 id="protein">Protein and Condition</h2>
           <p>Older horses often need good-quality, digestible protein to maintain muscle and topline, which can decline with age, and the senior feeds designed for them reflect this. Loss of topline and a pot-bellied, sway-backed look can reflect age, reduced protein efficiency, or PPID. Maintaining condition in a thin senior means combining digestible fiber calories, adequate quality protein, and treatment of any underlying disease rather than simply adding starch.</p>
@@ -127,8 +129,8 @@ export default function SeniorFeedingPage() {
 
           <h2 id="practical">Practical Feeding</h2>
           <ul>
-            <li><strong>Feed several small meals</strong> a day, soaked for horses with poor teeth. A horse feed soaking tub is the barn tub those soaked meals are prepared in — it is not a wide-mouth mixing bucket (that lives on the salt page).</li>
-            <li><strong>Feed separately</strong> so a slow-eating senior is not bullied off its food by younger herdmates. A horse corner feeder is that separate stall station — it is not a wall-mounted hay rack (that lives on forage-basics), not a slow-feeder hay net (that lives on the forage ReviewCard), and not an equine slow-feeder hay box (that lives on turnout).</li>
+            <li><strong>Feed several small meals</strong> a day, soaked for horses with poor teeth. A horse feed soaking tub is the barn tub those soaked meals are prepared in — it is not a wide-mouth mixing bucket.</li>
+            <li><strong>Feed separately</strong> so a slow-eating senior is not bullied off its food by younger herdmates. A horse corner feeder is that separate stall station — it is not a wall-mounted hay rack, not a slow-feeder hay net, and not an equine slow-feeder hay box.</li>
             <li><strong>Keep dental care current</strong> and watch for quidding as a sign to change the forage.</li>
             <li><strong>Provide free-choice water and salt</strong> and ensure the senior is drinking, as dehydration risk rises with age.</li>
             <li><strong>Monitor condition closely</strong> with body condition scoring, since a thick or PPID coat hides weight change.</li>
@@ -136,93 +138,11 @@ export default function SeniorFeedingPage() {
 
           <h2 id="kit">Senior feeding supplies</h2>
           <p>
-            Everyday physical supplies that match the
-            chewable-forage, soak-into-a-mash, and
-            feed-separately copy on this page — horse
-            chopped forage so a senior that cannot chew
-            long-stem hay still gets digestible fiber,
-            a horse feed soaking tub so cubes and
-            complete senior feed soak into a mash for
-            poor teeth, and a horse corner feeder so a
-            slow-eating senior is not bullied off its
-            meal. These are educational barn searches,
-            not a ranked product list, not a substitute
-            for veterinary care, and not a dental
-            hay-cube / mash hop (those live on equine
-            dental care), a beet-pulp hop (that lives
-            on the beet-pulp page), a lidded 5-gallon
-            soaking-pail hop (that lives on choke), a
-            stackable feed-tub hop (that lives on
-            grain), or a slow-feeder hay-net hop (that
-            lives on forage-basics). This page does
-            not hop medications or vaccines. This
-            page does not claim hands-on testing.
+            Keep these on hand: horse chopped forage so a senior that cannot chew long-stem hay still gets digestible fiber, a horse feed soaking tub so cubes and complete senior feed soak into a mash for poor teeth, and a horse corner feeder so a slow-eating senior is not bullied off its meal.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/horse+chopped+forage?s=nutrition-feeding-senior-horses", "/go/amazon-brand/horse+feed+soaking+tub?s=nutrition-feeding-senior-horses", "/go/amazon-brand/horse+corner+feeder?s=nutrition-feeding-senior-horses", "/go/amazon-brand/complete+senior+horse+feed+soakable?s=nutrition-senior-horses", "/go/amazon-brand/horse+topline+amino+acid+supplement+lysine?s=nutrition-senior-horses"]} />
 
-          {/* Money path — live amazon-brand search hops
-              (horse chopped forage /
-              horse feed soaking tub /
-              horse corner feeder).
-              Educational barn searches only; no Rx /
-              vaccine ASIN hops. ShopCtas hides empty
-              Chewy; never href="#" or PLACEHOLDER.
-              Unused vs #1115
-              equine+toxic+plant+identification+field+guide /
-              horse+pasture+walk+weed+identification+handbook /
-              horse+paddock+tree+guard+fencing, #1114
-              flat+back+horse+water+bucket /
-              heated+horse+water+bucket /
-              electrolyte+for+horses, #1113
-              orchard+grass+hay+horse /
-              alfalfa+hay+bales+horse /
-              timothy+alfalfa+mixed+hay+horse, #1112
-              tabletop+digital+horse+grain+scale /
-              stackable+rubber+horse+feed+tubs /
-              rodent+proof+metal+horse+feed+bin, #1111
-              horse+hay+probe+moisture+tester /
-              equine+hay+core+sampler /
-              wall+mounted+horse+hay+rack, #1110
-              plain+white+horse+salt+block /
-              salt+first+horse+electrolyte+powder /
-              wide+mouth+horse+water+bucket, #1108
-              automatic+horse+waterer, #1105
-              digital+hanging+hay+bale+scale /
-              equine+forage+nsc+hay+test+kit /
-              portable+strip+grazing+step+in+posts,
-              horse+tank+heater
-              (winter-care),
-              color+coded+flat+back+horse+buckets
-              (strangles),
-              horse+electrolytes
-              (emergency / grimace-scale),
-              horse+electric+tape / horse+fence+mesh /
-              horse+electric+rope / electric+fence+tester
-              (fencing-safety),
-              horse+grazing+muzzle / soil+test+kit
-              (pasture-management),
-              portable+horse+paddock+panels
-              (osteoarthritis),
-              complete+senior+horse+feed+soakable /
-              horse+topline+amino+acid+supplement+lysine
-              (kept on the ReviewCards below),
-              horse+hay+cubes / horse+mash
-              (dental),
-              lidded+5+gallon+feed+soaking+pail /
-              large+smooth+feed+tub+rocks
-              (choke),
-              horse+hay+soaking+bag / horse+hay+steamer
-              (heaves),
-              slow+feeder+hay+net+horse
-              (forage ReviewCard),
-              small+hole+slow+feeder+hay+net+horse
-              (easy-keeper),
-              equine+slow+feeder+hay+box
-              (turnout),
-              molasses+free+beet+pulp+shreds+horse /
-              beet+pulp+pellets+horse+feed
-              (beet-pulp). */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
@@ -245,16 +165,14 @@ export default function SeniorFeedingPage() {
           </div>
 
           <h2 id="picks">Product Picks — General Nutrition Supports for Senior Horses</h2>
-          <p>A few widely-available general nutrition options for aging horses: a complete senior feed and a topline/condition supplement. These support the feeding approach described above and are not treatments for PPID, dental disease, or any diagnosed condition. For PPID horses, coordinate with your veterinarian before selecting a senior feed, as some are not low-NSC. This is a documented-spec comparison drawing on standard US equestrian retail; this page does not claim hands-on testing.</p>
+          <p>A few widely-available general nutrition options for aging horses: a complete senior feed and a topline/condition supplement. These support the feeding approach described above and are not treatments for PPID, dental disease, or any diagnosed condition. For PPID horses, coordinate with your veterinarian before selecting a senior feed, as some are not low-NSC. <a href="/reviews/best-equine-supplements">The equine supplement guide</a> compares that topline supplement.</p>
 
-          <ScoreMethodology />
 
           <ReviewCard
             id="senior-complete-feed"
             badge="Senior Complete Feed"
             name="Complete Senior Horse Feed"
             subtitle="Hay-replacer-level complete feed for horses with dental decline"
-            score={8.7}
             winner
             description={<>
               <p>Complete senior horse feeds are formulated to replace hay as well as concentrate -- intended to supply all forage and nutrient requirements in a soft, easily soaked form that a horse with poor teeth can eat. Fed at the full label rate, they provide fiber, protein, vitamins, and minerals without requiring the horse to chew long-stem hay. They are widely used as the primary ration for seniors that can no longer manage hay. Note: some senior feeds are higher in sugar and starch than ideal for PPID or insulin-dysregulated horses -- read the guaranteed analysis and confirm with your veterinarian for those horses.</p>
@@ -267,8 +185,9 @@ export default function SeniorFeedingPage() {
             ]}
             pros={['Replaces hay for horses with severe dental wear', 'Soaks easily into palatable mash', 'Complete nutrition at full feed rate']}
             cons={['Some brands higher in NSC — check for PPID horses', 'Expensive at full hay-replacement rate', 'Must be fed at label rate to deliver promised nutrition']}
-            price="$30–60 per 50 lb"
-            ctaText="Search on Amazon →"
+            price="see current price per 50 lb"
+            priceNote="dated 2026-06-12."
+            ctaText="Search soakable complete senior horse feed on Amazon →"
             ctaHref="/go/amazon-brand/complete+senior+horse+feed+soakable?s=nutrition-senior-horses"
             ctaAffiliateProgram="amazon"
             ctaAffiliateProduct="senior-complete-feed"
@@ -279,7 +198,6 @@ export default function SeniorFeedingPage() {
             badge="Topline and Condition"
             name="Amino Acid / Topline Support Supplement"
             subtitle="Quality protein support for aging horses losing topline on forage"
-            score={8.4}
             description={<>
               <p>Topline and amino-acid supplements for horses supply quality protein building blocks -- typically lysine, methionine, and threonine -- to support muscle maintenance and topline condition in horses that may be getting adequate calories but still losing topline due to age-related protein efficiency decline. They work alongside adequate forage and calories, not as a substitute for them. General nutrition support only -- loss of topline in a senior horse with PPID or other diagnosed disease needs veterinary attention, not just a supplement.</p>
               <p>General nutrition support for: older horses losing topline despite adequate calorie intake, where protein quality in the forage is suspected to be a limiting factor.</p>
@@ -291,8 +209,9 @@ export default function SeniorFeedingPage() {
             ]}
             pros={['Amino-acid-targeted for topline', 'Low calorie load', 'Easy to add to existing feed']}
             cons={['Not a substitute for calories if horse is genuinely underweight', 'Does not replace PPID diagnosis and treatment', 'Match to overall ration']}
-            price="$30–55 per 5–10 lb"
-            ctaText="Search on Amazon →"
+            price="see current price per 5–10 lb"
+            priceNote="dated 2026-06-12."
+            ctaText="Search a horse topline amino acid supplement with lysine on Amazon →"
             ctaHref="/go/amazon-brand/horse+topline+amino+acid+supplement+lysine?s=nutrition-senior-horses"
             ctaAffiliateProgram="amazon"
             ctaAffiliateProduct="senior-topline-supplement"

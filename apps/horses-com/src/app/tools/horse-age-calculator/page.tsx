@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -8,7 +9,6 @@ import {
   combineSchemas,
   SchemaScript,
   FAQAccordion,
-  AffiliateDisclosure,
   CrossPortfolioCard,
   ShopCtas,
 } from '@carloOS/ui'
@@ -86,7 +86,7 @@ const appSchema = {
     'Horse years to human years using a banded planning model (not multiply-by-seven)',
     'Life stage: foal, young, adult, senior',
     'Stage-appropriate husbandry notes grounded in Horses.com senior-care and feeding copy',
-    'Shoppable life-stage kit via Amazon category searches (horse feed, senior horse feed, weight tape, fly mask, hoof pick)',
+    'Shop the life-stage kit via Amazon searches (horse feed, senior horse feed, weight tape, fly mask, hoof pick)',
   ],
   publisher: { '@type': 'Organization', name: 'Horses.com Editorial', url: 'https://horses.com' },
 }
@@ -185,15 +185,15 @@ export default function HorseAgeCalculatorPage() {
         </div>
       </section>
 
-      {/* Money path — live amazon-brand search hops (life-stage kit).
-          ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-          Category searches only — not a ranked list, not a diagnosis. */}
+      {/* Shop note — live amazon-brand search buttons (life-stage kit).
+          ShopCtas hides empty Chewy; never href="#" or an empty link.
+          Amazon searches only — not a ranked list, not a diagnosis. */}
       <section id="horse-age-kit" className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <div className="max-w-2xl">
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/horse+feed?s=tools-horse-age-calculator", "/go/amazon-brand/senior+horse+feed?s=tools-horse-age-calculator", "/go/amazon-brand/horse+weight+tape?s=tools-horse-age-calculator", "/go/amazon-brand/horse+fly+mask?s=tools-horse-age-calculator"]} />
           <div className="mt-4 rounded-xl border border-brand-border bg-brand-white p-5">
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Shop a life-stage kit
+              Shop these supplies
             </div>
             <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
@@ -212,10 +212,6 @@ export default function HorseAgeCalculatorPage() {
               <ShopCtas
                 amazonHref="/go/amazon-brand/horse+fly+mask?s=tools-horse-age-calculator"
                 amazonLabel="Browse horse fly masks on Amazon →"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/horse+hoof+pick?s=tools-horse-age-calculator"
-                amazonLabel="Browse horse hoof picks on Amazon →"
               />
           </div>
           </div>
@@ -239,7 +235,6 @@ export default function HorseAgeCalculatorPage() {
               talk to a licensed vet on a screen rather than waiting for a gap
               to become an ER haul.
             </p>
-            <AffiliateDisclosure variant="inline" siteId="horses-com" className="mb-3 text-2xs" />
             <div className="flex flex-col gap-2 sm:flex-row sm:flex-wrap">
               <Link
                 href={crossSiteHref('vets-co', '/reviews/best-pet-insurance')}

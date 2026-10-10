@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import Link from 'next/link'
-import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, FAQAccordion, JourneyNext, PriceAsOf} from '@carloOS/ui'
+import { TableShopLink, RelatedReads, ComparisonFoot, EmailCapture, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, FAQAccordion, JourneyNext, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildItemListSchema, buildFAQSchema, buildProductSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -19,25 +20,25 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Fish.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
-  modifiedAt: '2026-06-07T00:00:00Z',
+  modifiedAt: '2026-10-07T00:00:00Z',
 })
 
 const PICKS = [
-  { label: 'Best HOB', name: 'Aquaclear 70', subtitle: 'Most biological capacity · Quiet · Refillable', href: '#aquaclear' },
+  { label: 'Best HOB', name: 'Aquaclear 70', subtitle: 'Most biological capacity · Quiet · Refillable', href: '#aquaclear', pickHop: '/go/amazon/B0DCGB5T4Y?s=reviews-best-aquarium-filters' },
   { label: 'Best Canister', name: 'Fluval 307', subtitle: 'Best for 50–70 gal · Near-silent', href: '#fluval' },
   { label: 'Best Sponge', name: 'Hikari Bacto-Surge', subtitle: 'Nano tanks · Breeding · Shrimp', href: '#sponge' },
   { label: 'Best Budget HOB', name: 'Aqueon QuietFlow 30', subtitle: '$25–40 · Widely available', href: '#aqueon' },
 ]
 
-const productSchema0 = buildProductSchema({ name: 'AquaClear 70 Power Filter', description: 'Hang-on-back aquarium filter with refillable media basket for up to 70 gallons.', url: 'https://fluvalaquatics.com', imageUrl: '', ratingValue: 9.4, reviewCount: 1 })
-const productSchema1 = buildProductSchema({ name: 'Fluval 307 Canister Filter', description: 'Near-silent canister filter for 40-70 gallon aquariums.', url: 'https://fluvalaquatics.com', imageUrl: '', ratingValue: 9.2, reviewCount: 1 })
+const productSchema0 = buildProductSchema({ name: 'AquaClear 70 Power Filter', description: 'Hang-on-back aquarium filter with refillable media basket for up to 70 gallons.', url: 'https://fish.com/go/amazon/B0DCGB5T4Y?s=reviews-best-aquarium-filters', imageUrl: '' })
+const productSchema1 = buildProductSchema({ name: 'Fluval 307 Canister Filter', description: 'Near-silent canister filter for 40-70 gallon aquariums.', url: 'https://fish.com/go/amazon/B07JH4JHTC?s=reviews-best-aquarium-filters', imageUrl: '' })
 const allSchemas = combineSchemas(schema, productSchema0, productSchema1)
 
 // GEO: ItemList of the ranked picks. Names + URLs come only from this page's
 // PICKS. No aggregateRating, no fabricated specs (QC §1.4).
 const itemList = buildItemListSchema({
   name: 'Best Aquarium Filters 2026',
-  items: PICKS.map((p) => ({ name: p.name, url: `https://fish.com/reviews/best-aquarium-filters${p.href}` })),
+  items: PICKS.map((p) => ({ name: p.name, url: ({ "Aquaclear 70": "https://fish.com/go/amazon/B0DCGB5T4Y?s=reviews-best-aquarium-filters", "Fluval 307": "https://fish.com/go/amazon/B07JH4JHTC?s=reviews-best-aquarium-filters", "Hikari Bacto-Surge": "https://fish.com/go/amazon-brand/hikari+bacto+surge+sponge+filter?s=reviews-best-aquarium-filters", "Aqueon QuietFlow 30": "https://fish.com/go/amazon/B000SP65OC?s=reviews-best-aquarium-filters" }[p.name] ?? `https://fish.com/reviews/best-aquarium-filters${p.href}`) })),
 })
 
 // FAQ content derived from this page's comparison criteria and type guide only.
@@ -59,13 +60,36 @@ export default function BestAquariumFiltersPage() {
           style={{ fontSize: 'clamp(24px, 4vw, 46px)' }}>
           Best Aquarium Filters 2026 — HOB, Canister & Sponge Ranked
         </h1>
-        <PriceAsOf date="2026-10-04" tone="dark" />
-        <PrimaryHop href='/go/amazon-brand/aquaclear+70+filter?s=reviews-best-aquarium-filters' label='Check price of the AquaClear 70 on Amazon' />
+        <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">The AquaClear 70 is the top aquarium filter because the basket holds foam, carbon, and ceramic rings you refill.</p>
+        <PriceAsOf date="2026-10-07" tone="dark" />
+        <div data-fold="offer">
+          <PrimaryHop href='/go/amazon/B0DCGB5T4Y?s=reviews-best-aquarium-filters' label='Check price of the AquaClear 70 filter on Amazon' />
+        <HopDisclosure tone="on-dark" siteId="fish-com" href="/go/amazon/B0DCGB5T4Y?s=reviews-best-aquarium-filters" />
+        </div>
+        <EmailCapture
+          variant="inline"
+          siteId="fish-com"
+          addressOnly
+          title="Shopping checklist"
+          ctaText="Copy checklist"
+          source="reviews-best-aquarium-filters"
+          checklist={[
+            "Hang-on-back (HOB) filters suit 10\u201375 gallon tanks and are the easiest to maintain \u2014 the most common choice for beginners and intermediate keepers.",
+            "Canister filters suit 50+ gallon tanks with superior biological capacity and near-silent operation, at a higher price and a more involved cleaning day.",
+            "An HOB like the AquaClear 70 needs a monthly media rinse and a quarterly impeller cleaning, or flow drops noticeably.",
+            "A canister like the Fluval 307 typically goes 3\u20136 months between cleanings because the larger media volume takes longer to clog.",
+            "Sponge filters get a monthly squeeze \u2014 always in old tank water, never tap water, which kills the beneficial bacteria the filter exists to house.",
+            "That combination is why sponge filters are also the standard choice for hospital and quarantine tanks.",
+          ]}
+        />
+
+        <div className="[&_.text-brand-primary]:!text-brand-dark">
+          <QuickPicks items={PICKS} embedded />
+        </div>
         <p className="text-lg font-normal text-white/55 max-w-2xl leading-relaxed">
-          The filter is where your beneficial bacteria live — it is the most important piece of equipment in your tank. The picks below compare biological capacity, flow accuracy, and long-term reliability across the major hang-on-back, canister, and sponge options.
+          The filter is where your beneficial bacteria live — it is the most important piece of equipment in your tank. The bacteria that colonize that media are the subject of the <a href="/health/nitrogen-cycle-explained" className="underline text-white">nitrogen cycle guide</a>. The picks below compare biological capacity, flow accuracy, and long-term reliability across the major hang-on-back, canister, and sponge options.
         </p>
       </div>
-      <QuickPicks items={PICKS} />
       <nav aria-label="Breadcrumb" className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
         <Link href="/" className="hover:text-brand-primary no-underline">Home</Link><span>›</span>
         <Link href="/reviews" className="hover:text-brand-primary no-underline">Reviews</Link><span>›</span>
@@ -92,19 +116,17 @@ export default function BestAquariumFiltersPage() {
               siteId="fish-com"
               nextHref="/tools/filter-gph-calculator"
               nextLabel="Size the filter GPH before you pick a model"
-              nextBlurb="The callout is the type rule — HOB for 10–75 gallons, canister for 50+, sponge for nano and fry. The filter-GPH calculator is the turnover range for this tank. The link below searches Amazon for the AquaClear 70, the same search as on this page."
-              resourceHref="/go/amazon-brand/aquaclear+70+filter?s=reviews-best-aquarium-filters"
+              nextBlurb="The callout is the type rule — HOB for 10–75 gallons, canister for 50+, sponge for nano and fry. The filter-GPH calculator is the turnover range for this tank. The link below opens the AquaClear 70 product page on Amazon, the same product as on this page."
+              resourceHref="/go/amazon/B0DCGB5T4Y?s=reviews-best-aquarium-filters"
               resourceLabel="Browse AquaClear 70 hang-on-back filters on Amazon →"
             />
 
-            <ScoreMethodology />
-            <AffiliateDisclosure variant="inline" siteId="fish-com" />
+            <HopDisclosure siteId="fish-com" href={["/go/amazon/B0DCGB5T4Y?s=reviews-best-aquarium-filters", "/go/amazon/B07JH4JHTC?s=reviews-best-aquarium-filters", "/go/amazon-brand/hikari+bacto+surge+sponge+filter?s=reviews-best-aquarium-filters", "/go/amazon/B000SP65OC?s=reviews-best-aquarium-filters"]} />
             <ReviewCard
               id="aquaclear"
               badge="Best HOB Overall"
               name="AquaClear 70 Power Filter"
               subtitle="Refillable media basket · Most biological capacity in HOB class · Quiet"
-              score={9.4}
               winner
               description={<div>
                 <p>The AquaClear 70 is widely considered the benchmark HOB filter for a reason: its media basket is among the largest in the hang-on-back class — 3 separate chambers for mechanical (foam), chemical (carbon), and biological (BioMax ceramic rings) filtration. The refillable design means you control the media rather than paying for proprietary cartridges. The sponge alone provides exceptional biological filtration surface area.</p>
@@ -113,16 +135,17 @@ export default function BestAquariumFiltersPage() {
               specs={[
                 { label: 'Type', value: 'Hang-on-back' },
                 { label: 'Flow Rate', value: '300 GPH', highlight: 'good' },
-                { label: 'For Tanks', value: 'Up to 70 gallons' },
+                { label: 'For Tanks', value: '40–70 US gallons' },
                 { label: 'Media', value: 'Refillable — any media', highlight: 'good' },
                 { label: 'Noise', value: 'Low (at correct level)', highlight: 'good' },
                 { label: 'Maintenance', value: 'Monthly rinse, quarterly impeller' },
               ]}
-              pros={['Among the largest media baskets in its class', 'Refillable — no proprietary cartridge lock-in', 'Excellent biological capacity', 'Adjustable flow', 'Proven 30+ year track record']}
+              pros={['Among the largest media baskets in its class', 'Refillable — no proprietary cartridge lock-in', 'Excellent biological capacity', 'Adjustable flow', 'A long-running product line']}
               cons={['Impeller needs quarterly cleaning', 'Noisier if water level drops', 'Larger footprint than competitors']}
               price="$45–70"
-              ctaText="Check price of the AquaClear 70 on Amazon"
-              ctaHref="/go/amazon-brand/aquaclear+70+filter?s=reviews-best-aquarium-filters"
+              priceNote="dated 2026-10-04."
+              ctaText="Check price of the AquaClear 70 filter on Amazon"
+              ctaHref="/go/amazon/B0DCGB5T4Y?s=reviews-best-aquarium-filters"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="aquaclear-70"
             />
@@ -132,12 +155,11 @@ export default function BestAquariumFiltersPage() {
               badge="Best Canister"
               name="Fluval 307 Canister Filter"
               subtitle="Near-silent · Excellent biological capacity · Self-priming"
-              score={9.2}
-              description={<p>The Fluval 307 is the correct choice for tanks 40–70 gallons requiring high biological filtration. At 303 GPH with a media volume of 780g, it outperforms most HOB filters at this tank size. The self-priming mechanism (push-button) makes startup and post-maintenance restart simple. Near-silent operation — the 307 runs quieter than most HOBs. The maintenance cycle is longer (every 3–6 months vs monthly for HOBs) because the large media volume takes longer to clog. The tradeoff: cleaning day is more involved.</p>}
+              description={<p>The Fluval 307 is the canister for tanks in the 40–70 US gallon range. Pump output is 303 US GPH. Filter circulation is 206 US GPH. Basket volume is 3.1 L. The self-priming mechanism (push-button) makes startup and post-maintenance restart simple. Near-silent operation — the 307 runs quieter than most HOBs. The maintenance cycle is longer (every 3–6 months vs monthly for HOBs) because the large media volume takes longer to clog. The tradeoff: cleaning day is more involved.</p>}
               specs={[
                 { label: 'Type', value: 'Canister' },
-                { label: 'Flow Rate', value: '303 GPH', highlight: 'good' },
-                { label: 'For Tanks', value: 'Up to 70 gallons' },
+                { label: 'Flow Rate', value: 'Pump output 303 US GPH. Circulation 206 US GPH.', highlight: 'good' },
+                { label: 'For Tanks', value: '40–70 US gallons' },
                 { label: 'Noise', value: 'Near-silent', highlight: 'good' },
                 { label: 'Self-Priming', value: 'Yes — button', highlight: 'good' },
                 { label: 'Cleaning', value: 'Every 3–6 months' },
@@ -145,8 +167,9 @@ export default function BestAquariumFiltersPage() {
               pros={['Near-silent operation', 'Superior biological capacity vs HOB', 'Self-priming button', 'Longer cleaning intervals', 'Fluval build quality']}
               cons={['More complex to clean than HOB', 'Higher price than equivalent HOB', 'Under-cabinet space required']}
               price="$120–160"
-              ctaText="Shop Fluval 307 →"
-              ctaHref="/go/amazon-brand/fluval+307+canister+filter?s=reviews-best-aquarium-filters"
+              priceNote="dated 2026-10-04."
+              ctaText="Shop Fluval 307 canister filter on Amazon →"
+              ctaHref="/go/amazon/B07JH4JHTC?s=reviews-best-aquarium-filters"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="fluval-307"
             />
@@ -156,7 +179,6 @@ export default function BestAquariumFiltersPage() {
               badge="Best Sponge Filter"
               name="Hikari Bacto-Surge Sponge Filter"
               subtitle="Nano tanks · Shrimp · Breeding setups · Safe for fry"
-              score={9.0}
               description={<p>Sponge filters are the correct choice for: shrimp tanks (no intake risk), breeding setups (fry cannot be sucked in), nano tanks under 20 gallons, and hospital/quarantine tanks. The Hikari Bacto-Surge has excellent sponge surface area for biological filtration and runs off an air pump (sold separately). The gentle flow is ideal for low-flow species (bettas, small tetras) and shrimp. Cleaning is the easiest of any filter type: squeeze the sponge in old tank water, reinstall. Never use tap water — it kills the beneficial bacteria.</p>}
               specs={[
                 { label: 'Type', value: 'Sponge (air-driven)' },
@@ -169,7 +191,8 @@ export default function BestAquariumFiltersPage() {
               pros={['Safe for shrimp and fry', 'Excellent biological surface area', 'Easy cleaning', 'Low cost', 'Quiet']}
               cons={['Requires separate air pump', 'Not suitable for larger tanks alone', 'Less mechanical filtration than HOB']}
               price="$10–20"
-              ctaText="Shop Hikari Sponge →"
+              priceNote="dated 2026-10-04."
+              ctaText="Shop Hikari Bacto-Surge sponge filters on Amazon →"
               ctaHref="/go/amazon-brand/hikari+bacto+surge+sponge+filter?s=reviews-best-aquarium-filters"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="hikari-sponge"
@@ -180,11 +203,10 @@ export default function BestAquariumFiltersPage() {
               badge="Best Budget HOB"
               name="Aqueon QuietFlow 30"
               subtitle="$25–40 · LED indicator light · Widely available"
-              score={8.3}
               description={<p>The Aqueon QuietFlow 30 is the most widely available budget HOB filter — found at every pet store, reliable, and functional for smaller tanks. The LED indicator light that signals when the cartridge needs replacement is a useful feature for beginners. Main limitation: the proprietary cartridge system requires purchasing Aqueon replacement cartridges rather than custom media. For beginners who prefer a simpler maintenance workflow, this is a minor concern. For keepers who want to optimize biological filtration, upgrade to the AquaClear.</p>}
               specs={[
                 { label: 'Price', value: '$25–40', highlight: 'good' },
-                { label: 'For Tanks', value: 'Up to 30 gallons' },
+                { label: 'For Tanks', value: 'See the manufacturer\'s current page' },
                 { label: 'Indicator', value: 'LED cartridge alert', highlight: 'good' },
                 { label: 'Media', value: 'Proprietary cartridge', highlight: 'warn' },
                 { label: 'Availability', value: 'Every pet store', highlight: 'good' },
@@ -192,8 +214,9 @@ export default function BestAquariumFiltersPage() {
               pros={['Lowest price of the HOBs in this comparison', 'Widely available', 'LED maintenance indicator', 'Simple setup']}
               cons={['Proprietary cartridge lock-in', 'Lower biological capacity than AquaClear', 'Can be noisy if impeller collects debris']}
               price="$25–40"
-              ctaText="Shop Aqueon QuietFlow →"
-              ctaHref="/go/amazon-brand/aqueon+quietflow+30?s=reviews-best-aquarium-filters"
+              priceNote="dated 2026-10-04."
+              ctaText="Shop Aqueon QuietFlow on Amazon →"
+              ctaHref="/go/amazon/B000SP65OC?s=reviews-best-aquarium-filters"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="aqueon-quietflow-30"
             />
@@ -214,14 +237,14 @@ export default function BestAquariumFiltersPage() {
                   <tbody>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">About 30–70 gallons, and you want refillable media</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#aquaclear" className="text-brand-primary">AquaClear 70</a><TableShopLink href={"/go/amazon-brand/aquaclear+70+filter?s=reviews-best-aquarium-filters"} product={"AquaClear 70"} /></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#aquaclear" className="text-brand-primary">AquaClear 70</a><TableShopLink href={"/go/amazon/B0DCGB5T4Y?s=reviews-best-aquarium-filters"} product={"AquaClear 70"} /></td>
                       <td className="p-3 text-brand-text-mid">Best HOB. 300 GPH. Up to 70 gallons. $45–70</td>
                       <td className="p-3 text-brand-text-mid">Impeller needs cleaning every 3–4 months or flow drops</td>
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">40–70 gallons with a high bioload, and cabinet space</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#fluval" className="text-brand-primary">Fluval 307</a><TableShopLink href={"/go/amazon-brand/fluval+307+canister+filter?s=reviews-best-aquarium-filters"} product={"Fluval 307"} /></td>
-                      <td className="p-3 text-brand-text-mid">Best canister. 303 GPH. Near-silent. $120–160</td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#fluval" className="text-brand-primary">Fluval 307</a><TableShopLink href={"/go/amazon/B07JH4JHTC?s=reviews-best-aquarium-filters"} product={"Fluval 307"} /></td>
+                      <td className="p-3 text-brand-text-mid">Best canister. Pump output 303 US GPH. Circulation 206 US GPH. Near-silent. $120–160</td>
                       <td className="p-3 text-brand-text-mid">Cleaning day is more involved than a hang-on-back</td>
                     </tr>
                     <tr className="border-b border-brand-border">
@@ -231,15 +254,15 @@ export default function BestAquariumFiltersPage() {
                       <td className="p-3 text-brand-text-mid">Not enough mechanical filtration to run a larger tank alone</td>
                     </tr>
                     <tr className="border-b border-brand-border">
-                      <td className="p-3 text-brand-text-mid">Up to 30 gallons, and you want the cheapest widely stocked HOB</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#aqueon" className="text-brand-primary">Aqueon QuietFlow 30</a><TableShopLink href={"/go/amazon-brand/aqueon+quietflow+30?s=reviews-best-aquarium-filters"} product={"Aqueon QuietFlow 30"} /></td>
+                      <td className="p-3 text-brand-text-mid">See the manufacturer's current page for the gallon rating, and you want the cheapest widely stocked HOB</td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#aqueon" className="text-brand-primary">Aqueon QuietFlow 30</a><TableShopLink href={"/go/amazon/B000SP65OC?s=reviews-best-aquarium-filters"} product={"Aqueon QuietFlow 30"} /></td>
                       <td className="p-3 text-brand-text-mid">Best budget HOB. $25–40. Proprietary cartridge</td>
                       <td className="p-3 text-brand-text-mid">Less biological capacity than the AquaClear. Cartridge lock-in</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-05" />
+              <ComparisonFoot updated="2026-10-09" />
             </div>
             <h2 className="font-display font-bold text-brand-dark text-xl mt-10 mb-4">Frequently Asked Questions</h2>
             <FAQAccordion items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
@@ -263,6 +286,7 @@ export default function BestAquariumFiltersPage() {
               ))}
             </div>
             <RelatedLinks title="Related Guides" links={[
+              { label: 'November and December gifts', href: '/reviews/november-december-gift-guide' },
               { label: 'Tank Setup Guide', href: '/setup' },
               { label: 'Nitrogen Cycle', href: '/health/nitrogen-cycle-explained' },
               { label: 'Water Chemistry', href: '/water-parameters' },

@@ -18,7 +18,6 @@ import {
   RelatedLinks,
   TableOfContents,
   FAQAccordion,
-  AffiliateDisclosure,
   buildArticleSchema,
   combineSchemas,
   SchemaScript,
@@ -185,19 +184,7 @@ export default function MaidenRacesPage() {
             </p>
           </div>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated horse breaking-maiden chart /
-              horse stall-door maiden-special-weight card /
-              equine maiden proving-ground handbook).
-              No existing product hop to keep.
-              Educational barn searches only; no Rx /
-              vaccine / flea / heartworm / nsaid hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs race-types hub /
-              understanding-race-types hops.
-              Do not re-open #1165 / what-to-expect. */}
                   </div>
       </ArticleLayout>
     </>

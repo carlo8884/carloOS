@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -7,7 +8,7 @@ import {
   TableOfContents,
   CrossPortfolioCard,
   ArticleByline,
-  AffiliateDisclosure,
+
   ShopCtas,
   JourneyNext,
 } from '@carloOS/ui'
@@ -114,22 +115,22 @@ export default function PuppySchedulePage() {
           siteId="dog-com"
           nextHref="/nutrition/puppy-nutrition"
           nextLabel="Match meals on this schedule to a puppy formula"
-          nextBlurb="The sample day tells you when to feed. Puppy nutrition is what goes in the bowl — especially large-breed calcium limits. The food hop below is the same search already in the shop list, not a new query."
+          nextBlurb="The sample day tells you when to feed. Puppy nutrition is what goes in the bowl — especially large-breed calcium limits. The button below is the same search already in the shop list, not a different search."
           resourceHref="/go/amazon-brand/puppy+food?s=training-puppy-schedule"
           resourceLabel="Browse puppy food on Amazon →"
         />
 
-        {/* Money path — live amazon-brand search hops (schedule essentials).
-            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-            Category searches only — not a ranked list. */}
-        <AffiliateDisclosure variant="inline" siteId="dog-com" />
+        {/* Shop note — live amazon-brand search buttons (schedule essentials).
+            ShopCtas hides empty Chewy; never href="#" or an empty link.
+            Amazon searches only — not a ranked list. */}
+        <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/puppy+food?s=training-puppy-schedule", "/go/amazon-brand/wire+dog+crate+with+divider+panel?s=training-puppy-schedule", "/go/amazon-brand/puppy+training+treats?s=training-puppy-schedule", "/go/amazon-brand/enzymatic+pet+stain+odor+cleaner?s=training-puppy-schedule"]} />
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
             Shop schedule essentials
           </div>
           <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">A few supplies make the schedule easier to run: a wire crate with a divider
             (safe nap space), age-appropriate puppy food, high-value training treats, and
-            an enzymatic cleaner for accidents. Same crate / food / treat hops used on the{' '}
+            an enzymatic cleaner for accidents. The same crate / food / treat buttons are on the{' '}
             <Link
               href="/tools/new-puppy-checklist"
               className="text-brand-primary no-underline hover:underline"
@@ -137,12 +138,11 @@ export default function PuppySchedulePage() {
               new-puppy checklist
             </Link>
             . They are not a ranked product list and they do not replace the first vet
-            visit. Size the crate before you order. Dog.com earns a commission on
-            qualifying purchases at no extra cost to you.</p>
+            visit. Size the crate before you order.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/wire+dog+crate+with+divider+panel?s=training-puppy-schedule"
-              amazonLabel="Browse crates on Amazon →"
+              amazonLabel="Browse wire crates with a divider panel on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/puppy+food?s=training-puppy-schedule"
@@ -154,7 +154,7 @@ export default function PuppySchedulePage() {
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/enzymatic+pet+stain+odor+cleaner?s=training-puppy-schedule"
-              amazonLabel="Browse enzymatic pet cleaners on Amazon →"
+              amazonLabel="Browse enzymatic stain and odor cleaner on Amazon →"
             />
           </div>
           <p className="text-2xs text-brand-text-light mt-3">

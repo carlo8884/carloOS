@@ -1,6 +1,7 @@
+import { HopDisclosure } from '../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, ShopCtas, CrossPortfolioCard, DirectoryPlacesCta, PriceAsOf, HubSearch, HubJumpNav } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, ShopCtas, CrossPortfolioCard, DirectoryPlacesCta, PriceAsOf, HubSearch, HubJumpNav, LastUpdated } from '@carloOS/ui'
 import listings from '../../data/directory-listings.json'
 import { PremiumMasthead } from '../../components/PremiumMasthead'
 
@@ -22,7 +23,7 @@ const breadcrumbSchema = buildBreadcrumbSchema({
 const REVIEW_GROUPS = [
   { id: 'horses-reviews-supplements', label: 'Supplements', intro: 'Joint, hoof, and gastric supplement pages, plus the comparisons that use those cards.' },
   { id: 'horses-reviews-blankets', label: 'Blankets and winter', intro: 'Turnout and stable blanket pages, fill-weight notes, and the winter water page.' },
-  { id: 'horses-reviews-tack', label: 'Tack', intro: 'The saddle-pad comparison, plus halter and boot comparisons from the tack pages. None of them fix saddle fit.' },
+  { id: 'horses-reviews-tack', label: 'Tack', intro: 'The saddle-pad comparison, plus halter, boot, and helmet comparisons from the tack pages. None of them fix saddle fit.' },
   { id: 'horses-reviews-season', label: 'Season', intro: 'November and December gifts taken from price bands already on the halter, boot, and blanket cards.' },
 ]
 
@@ -30,14 +31,14 @@ const REVIEWS = [
   {
     slug: 'best-equine-supplements',
     group: 'horses-reviews-supplements',
-    title: 'Best Equine Supplements 2025',
+    title: 'Best Equine Supplements 2026',
     description:
       'Joint, hoof, and gastric supplements ranked against the published equine veterinary evidence.',
   },
   {
     slug: 'best-winter-horse-blankets',
     group: 'horses-reviews-blankets',
-    title: 'Best Winter Horse Blankets 2025',
+    title: 'Best Winter Horse Blankets 2026',
     description:
       'Turnout and stable blankets compared for denier, fill weight, and fit — for clipped horses and harsh climates.',
   },
@@ -46,7 +47,7 @@ const REVIEWS = [
     group: 'horses-reviews-blankets',
     title: 'Rambo vs Rhino, Same Brand',
     description:
-      'Horseware Rambo Original versus Rhino Original on denier, fill, hardware, and the prices already in the blanket review.',
+      'Horseware Rambo Original versus Rhino Plus on denier, fill, and the prices already in the blanket review.',
   },
   {
     slug: 'weatherbeeta-vs-amigo-guide',
@@ -112,18 +113,25 @@ const REVIEWS = [
       'Interference protection for the cannon, or overreach protection for the heel. Neither supports a tendon.',
   },
   {
+    slug: 'troxel-spirit-vs-charles-owen-ayr8-guide',
+    group: 'horses-reviews-tack',
+    title: 'Troxel Spirit vs Charles Owen AYR8 Plus',
+    description:
+      'An entry ASTM/SEI schooling helmet, or a multi-standard show helmet. Both retire after a significant impact.',
+  },
+  {
     slug: 'blanket-weight-by-temperature-guide',
     group: 'horses-reviews-blankets',
     title: 'Blanket Weight by Temperature',
     description:
-      'The fill bands already on the winter blanket review, and the Rambo hop for the medium band.',
+      'The fill bands already on the winter blanket review, and the Rambo button for the medium band.',
   },
   {
     slug: 'winter-water-unfrozen-guide',
     group: 'horses-reviews-blankets',
     title: 'Keep Horse Water Unfrozen',
     description:
-      'Icy water and dry hay are the winter colic pattern already published. The hop is the heated bucket.',
+      'Icy water and dry hay are the winter colic pattern already published. The button below is the heated bucket.',
   },
   {
     slug: 'november-december-gift-guide',
@@ -154,8 +162,23 @@ export default function HorsesReviewsPage() {
         title="Horses.com Reviews"
         subtitle="Editorial reviews of the gear and supplements equestrians actually buy, ranked using published veterinary evidence and rider reports — never paid placement."
       />
+      <section className="bg-brand-surface px-container-sm sm:px-container pt-6 pb-2">
+        <h2 id="kit" className="font-display font-bold text-brand-dark text-xl mb-3 max-w-3xl">
+          Related supplies
+        </h2>
+        <div className="max-w-3xl">
+          <HopDisclosure siteId="horses-com" href="/go/amazon-brand/horse+blanket?s=reviews-hub" />
+        </div>
+        <div className="mt-4 mb-2 max-w-3xl">
+          <ShopCtas
+            amazonHref="/go/amazon-brand/horse+blanket?s=reviews-hub"
+            amazonLabel="Browse horse blankets on Amazon →"
+          />
+        </div>
+      </section>
       <div className="px-container-sm sm:px-container pt-6">
         <PriceAsOf date="2026-10-04" />
+        <LastUpdated date="2026-10-10" />
       </div>
 
       <nav className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
@@ -204,42 +227,6 @@ export default function HorsesReviewsPage() {
           </section>
         ))}
       </div>
-
-      <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
-        <h2 id="kit" className="font-display font-bold text-brand-dark text-xl mb-4 max-w-3xl">
-          Related supplies
-        </h2>
-
-        <div className="max-w-3xl mt-6">
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
-        </div>
-
-        {/* Money path — live amazon-brand search hops
-            (laminated horse barn reviews buyer-guide
-            chart / horse stall-door reviews comparison
-            card / equine reviews reference handbook).
-            Educational barn searches only; no Rx /
-            vaccine / supplement-SKU hops.
-            ShopCtas hides empty Chewy; never href="#"
-            or PLACEHOLDER. Unused vs tools-hub
-            laminated+horse+barn+calculator+tools+chart /
-            horse+stall+door+measurement+card /
-            equine+calculator+reference+handbook
-            and child platinum+performance /
-            kentucky+equine+research hops. */}
-        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-3xl">
-          <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-            Shop related supplies
-          </div>
-          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
-          <div className="flex flex-col gap-3">
-            <ShopCtas
-              amazonHref="/go/amazon-brand/horse+blanket?s=reviews-hub"
-              amazonLabel="Shop on Amazon"
-            />
-          </div>
-        </div>
-      </section>
 
       <DirectoryPlacesCta listings={listings} noun="licensed equine professionals" />
       <CrossPortfolioCard currentSite="horses-com" contentType="gear" variant="footer" />

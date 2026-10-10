@@ -217,7 +217,7 @@ const labradorRetriever: BreedHealthRecord = {
     },
   ],
   sourceCitations: [
-    { ref: 'ofa-stats', label: 'Orthopedic Foundation for Animals — Hip and Elbow Statistics by Breed', url: 'https://ofa.org/diseases/breed-statistics/' },
+    { ref: 'ofa-stats', label: 'Orthopedic Foundation for Animals — Hip and Elbow Statistics by Breed', url: 'https://ofa.org/diseases/disease-statistics/' },
     { ref: 'chic-lab', label: 'OFA CHIC — Labrador Retriever Club Required Panel', url: 'https://ofa.org/chic-programs/' },
     { ref: 'pomc-study', label: 'Raffan E. et al., "A Deletion in the Canine POMC Gene Is Associated With Weight and Appetite in Obesity-Prone Labrador Retriever Dogs," Cell Metabolism (2016)', url: 'https://www.cell.com/cell-metabolism/fulltext/S1550-4131(16)30163-2' },
     { ref: 'akc-lab', label: 'American Kennel Club — Labrador Retriever Breed Standard', url: 'https://www.akc.org/dog-breeds/labrador-retriever/' },
@@ -494,7 +494,7 @@ const germanShepherd: BreedHealthRecord = {
     },
   ],
   sourceCitations: [
-    { ref: 'ofa-stats', label: 'Orthopedic Foundation for Animals — Breed Statistics', url: 'https://ofa.org/diseases/breed-statistics/' },
+    { ref: 'ofa-stats', label: 'Orthopedic Foundation for Animals — Breed Statistics', url: 'https://ofa.org/diseases/disease-statistics/' },
     { ref: 'chic-gsd', label: 'OFA CHIC — German Shepherd Dog Club of America Required Panel', url: 'https://ofa.org/chic-programs/' },
     { ref: 'gsdca-health', label: 'German Shepherd Dog Club of America — Health Committee', url: 'https://www.gsdca.org/health/' },
     { ref: 'akc-gsd', label: 'American Kennel Club — German Shepherd Breed Standard', url: 'https://www.akc.org/dog-breeds/german-shepherd-dog/' },
@@ -906,7 +906,7 @@ const bulldog: BreedHealthRecord = {
   ],
   sourceCitations: [
     { ref: 'chic-bulldog', label: 'OFA CHIC — Bulldog Club of America Required Panel', url: 'https://ofa.org/chic-programs/' },
-    { ref: 'ofa-stats', label: 'Orthopedic Foundation for Animals — Breed Statistics', url: 'https://ofa.org/diseases/breed-statistics/' },
+    { ref: 'ofa-stats', label: 'Orthopedic Foundation for Animals — Breed Statistics', url: 'https://ofa.org/diseases/disease-statistics/' },
     { ref: 'bca-health', label: 'Bulldog Club of America — Health Committee', url: 'https://www.bulldogclubofamerica.org/health/' },
     { ref: 'akc-bulldog', label: 'American Kennel Club — Bulldog Breed Standard', url: 'https://www.akc.org/dog-breeds/bulldog/' },
   ],
@@ -1037,7 +1037,6 @@ const beagle: BreedHealthRecord = {
   ],
   sourceCitations: [
     { ref: 'chic-beagle', label: 'OFA CHIC — National Beagle Club Required Panel', url: 'https://ofa.org/chic-programs/' },
-    { ref: 'nbc-health', label: 'National Beagle Club of America — Health Information', url: 'https://nationalbeagleclub.org/health/' },
     { ref: 'akc-beagle', label: 'American Kennel Club — Beagle Breed Standard', url: 'https://www.akc.org/dog-breeds/beagle/' },
   ],
 }
@@ -1171,7 +1170,6 @@ const yorkshireTerrier: BreedHealthRecord = {
   ],
   sourceCitations: [
     { ref: 'chic-yorkie', label: 'OFA CHIC — Yorkshire Terrier Club of America Required Panel', url: 'https://ofa.org/chic-programs/' },
-    { ref: 'ytca-health', label: 'Yorkshire Terrier Club of America — Health Information', url: 'https://ytca.org/health/' },
     { ref: 'akc-yorkie', label: 'American Kennel Club — Yorkshire Terrier Breed Standard', url: 'https://www.akc.org/dog-breeds/yorkshire-terrier/' },
   ],
 }

@@ -230,6 +230,11 @@ export default function TriageHelper() {
             >
               Find a ferret-capable emergency vet →
             </Link>
+            <p className="mt-3 text-sm">
+              <Link href="/health/vet-visit-prep" className="font-semibold text-brand-primary underline">
+                Prepare for the vet visit
+              </Link>
+            </p>
 
             <p className="mt-3 text-xs text-brand-text-light m-0">
               Suspect poisoning? Call ASPCA Animal Poison Control:{' '}

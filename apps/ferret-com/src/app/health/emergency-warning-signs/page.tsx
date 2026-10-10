@@ -11,7 +11,7 @@ import {
   CrossPortfolioCard,
   ArticleSourcesList,
   StockImage,
-  AffiliateDisclosure,
+  LastUpdated,
 } from '@carloOS/ui'
 
 const SOURCES = [
@@ -22,7 +22,7 @@ const SOURCES = [
   },
   {
     label: "Merck Veterinary Manual — Emergency Care of Ferrets: hypoglycemic crisis, respiratory distress, urinary obstruction, and other can-wait vs cannot-wait presentations",
-    url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/routine-health-care-of-ferrets",
+    url: "https://www.merckvetmanual.com/all-other-pets/ferrets/routine-health-care-for-ferrets",
     publisher: "Merck Veterinary Manual",
   },
   {
@@ -76,7 +76,6 @@ const medSchema = buildMedicalWebPageSchema({
   authorName: 'Ferret.com Editorial',
   lastReviewed: '2026-06-01',
 })
-
 
 const FAQS = [
   {
@@ -133,7 +132,7 @@ export default function FerretEmergencySignsPage() {
           <>
             <TableOfContents
               items={[
-                { label: 'TL;DR', href: '#tldr' },
+                { label: '', href: '#tldr' },
                 { label: 'Why Ferrets Crash Fast', href: '#fast' },
                 { label: 'The Can’t-Wait List', href: '#redflags' },
                 { label: 'What Each Can Mean', href: '#meaning' },
@@ -155,7 +154,7 @@ export default function FerretEmergencySignsPage() {
 
           </>
         }
-      
+
         relatedLinks={[
           { title: 'Ferret Health Hub', href: '/health' },
           { title: 'Is This a Ferret Emergency?', href: '/tools/is-this-a-ferret-emergency' },
@@ -177,6 +176,8 @@ export default function FerretEmergencySignsPage() {
             publishedAt="2026-06-01"
             updatedAt="2026-06-01"
           />
+          <LastUpdated date="2026-10-09" />
+          <p>This page is not a veterinarian. If your ferret may be in danger, contact a vet.</p>
 
           <DropCap>
             Ferrets are stoic, small, and quick to decline — a combination that
@@ -187,8 +188,7 @@ export default function FerretEmergencySignsPage() {
             entry.
           </DropCap>
 
-          <h2 id="tldr">TL;DR</h2>
-          <p>
+                    <p>
             Ferrets hide illness and deteriorate quickly, so several signs
             warrant immediate veterinary care rather than watchful waiting:
             collapse or sudden weakness, seizures or stargazing, labored or
@@ -305,26 +305,8 @@ export default function FerretEmergencySignsPage() {
             <a href="/health">health hub</a>.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated ferret cant-wait chart /
-              ferret fridge crash-list card /
-              mustelid er-ready handbook).
-              No existing product hop to keep.
-              Educational kitchen searches only; no Rx /
-              vaccine / aging hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs health-hub /
-              vet-visit / checkup / first-aid tool hops. Ferret
-              aging stays held.
-              Do not re-open #1165 / what-to-expect. */}
-          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
-            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop related supplies
-            </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
-          </div>
+          
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />

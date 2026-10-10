@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
@@ -12,7 +13,6 @@ import {
   RelatedLinks,
   CrossPortfolioCard,
   ArticleByline,
-  AffiliateDisclosure,
   ShopCtas,
 } from '@carloOS/ui'
 import { DOG_FOODS, getDogFood, getRelatedFoods, foodFaqs, VERDICT_META, type FoodEntry } from '../../../../data/foods'
@@ -157,7 +157,7 @@ export default async function CanDogsEatFoodPage({ params }: PageProps) {
           <>
             <h2 id="serve">How to serve it safely</h2>
             <p>{entry.safePrep}</p>
-            {entry.quantity ? <p><strong>How much:</strong> {entry.quantity} Treats should stay within about 10% of your dog’s daily calories — see <Link href="/nutrition/how-much-to-feed">how much to feed your dog</Link>.</p> : null}
+            {entry.quantity ? <p><strong>How much:</strong> {entry.quantity} The WSAVA guide to treats for dogs states that treats should make up no more than 10% of a dog’s daily calorie intake (<a href="https://wsava.org/wp-content/uploads/2025/11/WSAVA_GuidetoTreats_Dogs_251107.pdf">WSAVA treat guide</a>). See <Link href="/nutrition/how-much-to-feed">how much to feed your dog</Link>.</p> : null}
           </>
         ) : null}
 
@@ -189,17 +189,17 @@ export default async function CanDogsEatFoodPage({ params }: PageProps) {
             Shop related supplies
           </div>
           <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href="/go/amazon-brand/dog+food?s=can-dogs-eat-food" />
           <div className="flex flex-col gap-3 mt-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/dog+food?s=can-dogs-eat-food"
-              amazonLabel="Shop on Amazon"
+              amazonLabel="Browse dog food on Amazon →"
             />
           </div>
         </div>
 
         <h2 id="faq">Frequently asked questions</h2>
-        <FAQAccordion items={faqs} />
+        <FAQAccordion items={faqs} includeSchema={false} />
 
         <p className="text-xs text-gray-500 mt-6">
           <em>General educational information from the Dog.com editorial team, based on established veterinary toxicology references (ASPCA Animal Poison Control, Pet Poison Helpline, and veterinary literature). Not a substitute for veterinary advice — individual dogs vary. For a suspected poisoning, call ASPCA Animal Poison Control at 888-426-4435 (24/7, fee applies) or your veterinarian.</em>

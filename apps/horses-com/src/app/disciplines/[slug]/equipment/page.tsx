@@ -27,6 +27,7 @@
  *     APHA / ApHC / AERC / NATRC sources.
  */
 
+import { HopDisclosure } from '../../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
@@ -41,7 +42,6 @@ import {
   TableOfContents,
   ArticleByline,
   CalloutBox,
-  AffiliateDisclosure,
   ShopCtas,
 } from '@carloOS/ui'
 import {
@@ -312,7 +312,7 @@ export default async function DisciplineEquipmentPage({ params }: PageProps) {
           {/* ─── 7. Beginner Budget Kit ──────────────────────────── */}
           <h2 id="budget">Beginner Budget Kit (USD)</h2>
           <p>
-            Off-the-shelf market observations for the 2025-2026 season. Custom
+            Off-the-shelf market observations. Custom
             saddles, custom tall boots, and FEI-spec competition wardrobes sit
             well outside these bands.
           </p>
@@ -346,11 +346,7 @@ export default async function DisciplineEquipmentPage({ params }: PageProps) {
           {/* ─── 8. Brands to Know ───────────────────────────────── */}
           <h2 id="brands">Brands to Know</h2>
           <p>
-            Reference list of makers and brands that consistently appear in{' '}
-            {data.disciplineName.toLowerCase()} tack-shop, saddler, and
-            competition-vendor lists. This is not an endorsement and does not
-            reflect hands-on testing — use it as a starting point for your own
-            research and on-farm fitting.
+            Reference list of makers and brands that consistently appear in{' '} {data.disciplineName.toLowerCase()} tack-shop, saddler, and competition-vendor lists.
           </p>
           <ul>
             {data.brandsToConsider.map((b) => (
@@ -423,20 +419,8 @@ export default async function DisciplineEquipmentPage({ params }: PageProps) {
 
           {data.slug === 'dressage' ? (
             <>
-              <AffiliateDisclosure variant="inline" siteId="horses-com" />
+              <HopDisclosure siteId="horses-com" href="/go/amazon-brand/albion+dressage+saddle?s=discipline-equipment-dressage" />
 
-              {/* Money path — live amazon-brand search hops
-                  (laminated horse plain-flap dressage-saddle chart /
-                  horse stall-door white-square-pad card /
-                  equine snaffle-eggbutt-bridle handbook).
-                  No existing product hop to keep.
-                  Educational barn searches only; no Rx /
-                  vaccine / flea / heartworm / nsaid hops.
-                  ShopCtas hides empty Chewy; never href="#"
-                  or PLACEHOLDER. Unused vs /disciplines/dressage
-                  overview / how-thoroughbred-sales-work hops.
-                  Directory import left untouched.
-                  Do not re-open #1165 / what-to-expect. */}
               <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
                   Shop dressage equipment
@@ -445,7 +429,7 @@ export default async function DisciplineEquipmentPage({ params }: PageProps) {
                 <div className="flex flex-col gap-3">
                   <ShopCtas
                     amazonHref="/go/amazon-brand/albion+dressage+saddle?s=discipline-equipment-dressage"
-                    amazonLabel="Shop on Amazon"
+                    amazonLabel="Browse Albion dressage saddles on Amazon →"
                   />
 </div>
               </div>
@@ -454,20 +438,8 @@ export default async function DisciplineEquipmentPage({ params }: PageProps) {
 
           {data.slug === 'show-jumping' ? (
             <>
-              <AffiliateDisclosure variant="inline" siteId="horses-com" />
+              <HopDisclosure siteId="horses-com" href="/go/amazon-brand/pessoa+close+contact+saddle?s=discipline-equipment-show-jumping" />
 
-              {/* Money path — live amazon-brand search hops
-                  (laminated horse close-contact forward-flap chart /
-                  horse stall-door shaped-jump-pad card /
-                  equine figure-eight-grackle-bridle handbook).
-                  No existing product hop to keep.
-                  Educational barn searches only; no Rx /
-                  vaccine / flea / heartworm / nsaid hops.
-                  ShopCtas hides empty Chewy; never href="#"
-                  or PLACEHOLDER. Unused vs /disciplines/show-jumping
-                  overview / dressage-equipment hops.
-                  Directory import left untouched.
-                  Do not re-open #1165 / what-to-expect. */}
               <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
                   Shop show-jumping equipment
@@ -476,7 +448,7 @@ export default async function DisciplineEquipmentPage({ params }: PageProps) {
                 <div className="flex flex-col gap-3">
                   <ShopCtas
                     amazonHref="/go/amazon-brand/pessoa+close+contact+saddle?s=discipline-equipment-show-jumping"
-                    amazonLabel="Shop on Amazon"
+                    amazonLabel="Browse Pessoa close-contact saddles on Amazon →"
                   />
 </div>
               </div>
@@ -485,20 +457,8 @@ export default async function DisciplineEquipmentPage({ params }: PageProps) {
 
           {data.slug === 'eventing' ? (
             <>
-              <AffiliateDisclosure variant="inline" siteId="horses-com" />
+              <HopDisclosure siteId="horses-com" href="/go/amazon-brand/county+eventer+saddle?s=discipline-equipment-eventing" />
 
-              {/* Money path — live amazon-brand search hops
-                  (laminated horse BETA-level-three-protector chart /
-                  horse stall-door medical-armband card /
-                  equine stud-kit-xc handbook).
-                  No existing product hop to keep.
-                  Educational barn searches only; no Rx /
-                  vaccine / flea / heartworm / nsaid hops.
-                  ShopCtas hides empty Chewy; never href="#"
-                  or PLACEHOLDER. Unused vs /disciplines/eventing
-                  overview / show-jumping-equipment hops.
-                  Directory import left untouched.
-                  Do not re-open #1165 / what-to-expect. */}
               <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
                   Shop eventing equipment
@@ -507,7 +467,7 @@ export default async function DisciplineEquipmentPage({ params }: PageProps) {
                 <div className="flex flex-col gap-3">
                   <ShopCtas
                     amazonHref="/go/amazon-brand/county+eventer+saddle?s=discipline-equipment-eventing"
-                    amazonLabel="Shop on Amazon"
+                    amazonLabel="Browse County eventer saddles on Amazon →"
                   />
 </div>
               </div>
@@ -516,20 +476,8 @@ export default async function DisciplineEquipmentPage({ params }: PageProps) {
 
           {data.slug === 'western-pleasure' ? (
             <>
-              <AffiliateDisclosure variant="inline" siteId="horses-com" />
+              <HopDisclosure siteId="horses-com" href="/go/amazon-brand/circle+y+western+show+saddle?s=discipline-equipment-western-pleasure" />
 
-              {/* Money path — live amazon-brand search hops
-                  (laminated horse silver-mounted show-saddle chart /
-                  horse stall-door wool-felt-show-blanket card /
-                  equine curb-shank-eight-five handbook).
-                  No existing product hop to keep.
-                  Educational barn searches only; no Rx /
-                  vaccine / flea / heartworm / nsaid hops.
-                  ShopCtas hides empty Chewy; never href="#"
-                  or PLACEHOLDER. Unused vs /disciplines/western-pleasure
-                  overview / eventing-equipment hops.
-                  Directory import left untouched.
-                  Do not re-open #1165 / what-to-expect. */}
               <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
                   Shop western pleasure equipment
@@ -538,7 +486,7 @@ export default async function DisciplineEquipmentPage({ params }: PageProps) {
                 <div className="flex flex-col gap-3">
                   <ShopCtas
                     amazonHref="/go/amazon-brand/circle+y+western+show+saddle?s=discipline-equipment-western-pleasure"
-                    amazonLabel="Shop on Amazon"
+                    amazonLabel="Browse Circle Y western show saddles on Amazon →"
                   />
 </div>
               </div>
@@ -547,20 +495,8 @@ export default async function DisciplineEquipmentPage({ params }: PageProps) {
 
           {data.slug === 'reining' ? (
             <>
-              <AffiliateDisclosure variant="inline" siteId="horses-com" />
+              <HopDisclosure siteId="horses-com" href="/go/amazon-brand/circle+y+reining+saddle?s=discipline-equipment-reining" />
 
-              {/* Money path — live amazon-brand search hops
-                  (laminated horse undercut-pommel reining-saddle chart /
-                  horse stall-door sliding-plate card /
-                  equine skid-boot-nrha handbook).
-                  No existing product hop to keep.
-                  Educational barn searches only; no Rx /
-                  vaccine / flea / heartworm / nsaid hops.
-                  ShopCtas hides empty Chewy; never href="#"
-                  or PLACEHOLDER. Unused vs /disciplines/reining
-                  overview / western-pleasure-equipment hops.
-                  Directory import left untouched.
-                  Do not re-open #1165 / what-to-expect. */}
               <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
                   Shop reining equipment
@@ -569,7 +505,7 @@ export default async function DisciplineEquipmentPage({ params }: PageProps) {
                 <div className="flex flex-col gap-3">
                   <ShopCtas
                     amazonHref="/go/amazon-brand/circle+y+reining+saddle?s=discipline-equipment-reining"
-                    amazonLabel="Shop on Amazon"
+                    amazonLabel="Browse Circle Y reining saddles on Amazon →"
                   />
 </div>
               </div>
@@ -578,20 +514,8 @@ export default async function DisciplineEquipmentPage({ params }: PageProps) {
 
           {data.slug === 'trail-riding' ? (
             <>
-              <AffiliateDisclosure variant="inline" siteId="horses-com" />
+              <HopDisclosure siteId="horses-com" href="/go/amazon-brand/wintec+trail+saddle?s=discipline-equipment-trail-riding" />
 
-              {/* Money path — live amazon-brand search hops
-                  (laminated horse flex-tree trail-saddle chart /
-                  horse stall-door halter-bridle-combo card /
-                  equine pommel-cantle-bag handbook).
-                  No existing product hop to keep.
-                  Educational barn searches only; no Rx /
-                  vaccine / flea / heartworm / nsaid hops.
-                  ShopCtas hides empty Chewy; never href="#"
-                  or PLACEHOLDER. Unused vs /disciplines/trail-riding
-                  overview / reining-equipment hops.
-                  Directory import left untouched.
-                  Do not re-open #1165 / what-to-expect. */}
               <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
                   Shop trail-riding equipment
@@ -600,7 +524,7 @@ export default async function DisciplineEquipmentPage({ params }: PageProps) {
                 <div className="flex flex-col gap-3">
                   <ShopCtas
                     amazonHref="/go/amazon-brand/wintec+trail+saddle?s=discipline-equipment-trail-riding"
-                    amazonLabel="Shop on Amazon"
+                    amazonLabel="Browse Wintec trail saddles on Amazon →"
                   />
 </div>
               </div>

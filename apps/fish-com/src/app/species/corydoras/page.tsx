@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { StockImage,
+import { ShopCtas, StockImage,
   buildMetadata,
   ArticleLayout,
   RelatedLinks, CrossPortfolioCard,
@@ -11,13 +12,14 @@ import { StockImage,
   ArticleByline,
   DropCap,
   CalloutBox,
-  AffiliateDisclosure,
   ArticleSourcesList,
 } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 
 
 const SOURCES = [
+  { label: "Corydoras sterbai — FishBase species record", url: "https://www.fishbase.se/summary/Corydoras-sterbai.html", publisher: "FishBase" },
+  { label: "Corydoras aeneus — FishBase species record", url: "https://www.fishbase.se/summary/Corydoras-aeneus.html", publisher: "FishBase" },
   { label: "Corydoras paleatus — Seriously Fish species profile", url: "https://www.seriouslyfish.com/species/corydoras-paleatus/", publisher: "Seriously Fish" },
   { label: "Corydoras — FishBase genus overview", url: "https://www.fishbase.se/identification/SpeciesList.php?genus=corydoras", publisher: "FishBase" },
   { label: "Reis, R.E. Systematics of the Neotropical Catfish Family Corydoradinae. Ichthyological Explorations of Freshwaters, 1997.", publisher: "Ichthyological Explorations of Freshwaters" },
@@ -63,11 +65,11 @@ const FAQS = [
       'No — sharp gravel damages barbels. Use fine sand (pool filter sand is ideal). Smooth sub-2mm gravel is a distant second option.',
   },
   {
-    question: 'Which corydoras species is best for a warm-water tank?',
+    question: 'Is Corydoras sterbai a warm-water corydoras?',
     answer:
-      'Corydoras sterbai. Most corydoras prefer cooler tropical water (72–78°F) — too cool for discus, German blue rams, and most warm-water community species. C. sterbai is the well-documented exception, comfortable up to 82–84°F, making it the only corydoras commonly recommended for discus and warm-water Amazonian biotopes. Sterbai is distinctly spotted; do not confuse it with the visually similar but warm-intolerant C. haraldschultzi.',
+      'FishBase lists Corydoras aeneus at 25–28°C, which is 77–83°F (https://www.fishbase.se/summary/Corydoras-aeneus.html). FishBase lists Corydoras sterbai at 21–25°C, which is 69–77°F (https://www.fishbase.se/summary/Corydoras-sterbai.html). Sterbai is the cooler of the two, so this page does not recommend it for a discus tank. Sterbai is distinctly spotted; do not confuse it with C. haraldschultzi.',
     answerText:
-      'C. sterbai handles 82-84°F comfortably and is the standard corydoras for discus and warm-water tanks. Do not confuse with C. haraldschultzi.',
+      'FishBase lists Corydoras aeneus at 25–28°C, which is 77–83°F (https://www.fishbase.se/summary/Corydoras-aeneus.html). FishBase lists Corydoras sterbai at 21–25°C, which is 69–77°F (https://www.fishbase.se/summary/Corydoras-sterbai.html). Sterbai is cooler, not a discus match.',
   },
   {
     question: 'Do corydoras eat algae?',
@@ -129,7 +131,7 @@ export default function CorydorasPage() {
                 ['Genus', 'Corydoras (170+ species)'],
                 ['Origin', 'South America (Amazon, Orinoco)'],
                 ['Adult size', '1–3.5 in by species'],
-                ['Temperature', '72–78°F (sterbai to 84°F)'],
+                ['Temperature', '77–83°F (https://www.fishbase.se/summary/Corydoras-aeneus.html)'],
                 ['pH', '6.5–7.5 (most species)'],
                 ['GH', '2–15 dGH'],
                 ['Substrate', 'Smooth sand — non-negotiable'],
@@ -142,7 +144,7 @@ export default function CorydorasPage() {
                   className="flex justify-between py-1.5 border-b border-brand-border text-xs last:border-0"
                 >
                   <span className="text-brand-text-light">{k}</span>
-                  <span className="font-bold text-brand-dark text-right max-w-[55%]">{v}</span>
+                  <span className="font-bold text-brand-dark text-right max-w-[55%] break-all">{v}</span>
                 </div>
               ))}
             </div>
@@ -155,7 +157,7 @@ export default function CorydorasPage() {
                 ['Albino (C. aeneus)', '3 in · Color morph of bronze'],
                 ['Pepper (C. paleatus)', '2.5 in · Cooler tolerant'],
                 ['Panda (C. panda)', '2 in · Black/white pattern'],
-                ['Sterbai (C. sterbai)', '2.7 in · Warm tolerant 84°F'],
+                ['Sterbai (C. sterbai)', '2.7 in · 69–77°F (https://www.fishbase.se/summary/Corydoras-sterbai.html)'],
                 ['Pygmy (C. pygmaeus)', '1 in · Mid-water swimmer'],
               ].map(([k, v]) => (
                 <div
@@ -163,7 +165,7 @@ export default function CorydorasPage() {
                   className="flex justify-between py-1.5 border-b border-brand-border text-xs last:border-0"
                 >
                   <span className="text-brand-text-light">{k}</span>
-                  <span className="font-bold text-brand-dark text-right max-w-[55%]">{v}</span>
+                  <span className="font-bold text-brand-dark text-right max-w-[55%] break-all">{v}</span>
                 </div>
               ))}
             </div>
@@ -191,7 +193,7 @@ export default function CorydorasPage() {
           />
         <StockImage manifestKey="fish-com:species-corydoras" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A corydoras catfish in a home aquarium." priority />
 
-          <CalloutBox variant="note" title="TL;DR">
+          <CalloutBox variant="note" title="In short">
             Corydoras catfish are peaceful South American bottom-dwellers
             that require three things to thrive: smooth sand substrate
             (sharp gravel damages their sensory barbels), a school of at
@@ -287,9 +289,10 @@ export default function CorydorasPage() {
             </li>
             <li>
               <strong>Sterbai corydoras (C. sterbai):</strong> Heavily
-              spotted, with red-orange pectoral fin spines. The standard
-              corydoras for warm-water tanks (handles 82–84°F) — the
-              only common cory commonly recommended for discus tanks.
+              spotted, with red-orange pectoral fin spines. FishBase lists
+              Corydoras sterbai at 21–25°C, which is 69–77°F (
+              <a className="break-all" href="https://www.fishbase.se/summary/Corydoras-sterbai.html">https://www.fishbase.se/summary/Corydoras-sterbai.html</a>
+              ). Sterbai is the cooler of the two, so this page does not recommend it for a discus tank.
             </li>
             <li>
               <strong>Albino corydoras:</strong> Albino color morph of
@@ -320,7 +323,7 @@ export default function CorydorasPage() {
               <strong>Filtration:</strong> Standard tropical filtration
               (sponge filter, hang-on-back, or canister). Corydoras
               appreciate moderate water flow with calm zones.
-            </li>
+             <a href="/reviews/best-aquarium-filters">The filter guide</a> compares the sponge, hang-on-back, and canister named here.</li>
             <li>
               <strong>Plants and decor:</strong> Broad-leaved plants
               (Anubias, Java fern, Amazon sword) for cover, some
@@ -386,8 +389,7 @@ export default function CorydorasPage() {
             <strong>Excellent tank mates:</strong> tetras (neon,
             cardinal, ember, rummynose, black skirt), small barbs
             (cherry, rosy), rasboras (harlequin, chili), gouramis
-            (peaceful species), discus and rams (C. sterbai only —
-            warm-water match), livebearers (platies, mollies in
+            (peaceful species), livebearers (platies, mollies in
             unsalted tanks, guppies), bettas in larger tanks, dwarf
             cichlids (Apistogramma, Bolivian rams), Amano and
             neocaridina shrimp (adults safe).
@@ -395,9 +397,9 @@ export default function CorydorasPage() {
           <p>
             <strong>Avoid:</strong> aggressive cichlids (oscars, jack
             dempseys, mbuna), large fin-nippers, fish large enough to
-            eat a 2-3 inch catfish, and any species that requires
+            eat a 2-3 inch catfish, any species that requires
             salted water (corydoras do not tolerate aquarium salt
-            well).
+            well), and discus or German blue rams with Corydoras sterbai.
           </p>
 
           <h2>Common Health Issues</h2>
@@ -483,12 +485,12 @@ export default function CorydorasPage() {
               practice referral directory.
             </li>
           </ul>
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        <HopDisclosure siteId="fish-com" href="/go/amazon-brand/corydoras%20tank%20setup?s=species-corydoras" />
           <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Corydoras — Tank Setup</div>
-          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for corydoras care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
+          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for corydoras care.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
-            <a href="/go/amazon-brand/corydoras%20tank%20setup?s=species-corydoras" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop Corydoras Setup on Amazon →</a>
+            <ShopCtas amazonHref="/go/amazon-brand/corydoras%20tank%20setup?s=species-corydoras" amazonLabel="Browse corydoras tank setups on Amazon →" />
           </div>
         </div>
 

@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -69,6 +70,14 @@ export default function SafeTreatsPage() {
       <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="ferret-com"
+        heroHop={
+          <>
+            <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/wysong+ferret+food?s=safe-treats" />
+            <div className="mb-4" data-primary-hop="true">
+              <a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" data-shop-placement="hero" href="/go/amazon-brand/wysong+ferret+food?s=safe-treats">Browse Wysong ferret food on Amazon →</a>
+            </div>
+          </>
+        }
         hero={{
           title: 'Safe Treats for Ferrets',
           subtitle:
@@ -111,7 +120,7 @@ export default function SafeTreatsPage() {
             <CrossPortfolioCard currentSite="ferret-com" contentType="diet" variant="sidebar" />
           </>
         }
-      
+
         relatedLinks={[
           { title: 'Ferret Diet Hub', href: '/diet' },
           { title: 'Toxic Foods', href: '/care/toxic-foods' },
@@ -167,20 +176,7 @@ export default function SafeTreatsPage() {
             A high-value meat treat is the most effective reward for litter and bite training and for building trust with a new ferret. A meat-based paste is especially useful because it is delivered slowly and holds a ferret's attention. Used this way — small, frequent, meat-based — treats earn their place. The temptation to reach for the convenient sugary products on the shelf is exactly what to resist.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated ferret safe-treat chart /
-              ferret fridge no-sugar-treat card /
-              mustelid treat-safety reference handbook).
-              Keep existing Wysong freeze-dried-treats hop.
-              Educational kitchen searches only; no Rx /
-              vaccine / aging hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs diet-hub /
-              kit-adult / whole-prey kitchen kits. Ferret
-              aging stays held.
-              Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
@@ -189,7 +185,7 @@ export default function SafeTreatsPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/wysong+ferret+food?s=safe-treats"
-                amazonLabel="Shop on Amazon"
+                amazonLabel="Browse Wysong ferret food on Amazon →"
               />
           </div>
           </div>
@@ -198,13 +194,11 @@ export default function SafeTreatsPage() {
           <p>
             A single-ingredient freeze-dried meat treat is the cleanest way to honour the one rule above — no sugar, no grain, just animal protein. This is a documented-spec selection based on published ingredient panels, not a hands-on test.
           </p>
-          <ScoreMethodology />
-          <ReviewCard
+          <ReviewCard quietUntilTag
             id="wysong-freeze-dried-treats"
             badge="Meat-Based Treat"
             name="Wysong Single-Ingredient Freeze-Dried Treats"
             subtitle="Single-protein freeze-dried treat, no added sugar or grain"
-            score={8.6}
             description={
               <p>A freeze-dried treat whose ingredient panel is a single named animal protein — the structure this page recommends. No molasses, honey, fruit, or grain fillers. High-value and palatable, which makes it useful for litter and recall training as well as bonding. Use sparingly: treats sit on top of the base diet, not in place of it.</p>
             }
@@ -216,7 +210,8 @@ export default function SafeTreatsPage() {
             ]}
             pros={['Single-ingredient animal protein', 'No added sugar or grain', 'High-value training reward', 'Long shelf life']}
             cons={['Pricier per ounce than bulk treats', 'Still calorie-dense — portion carefully']}
-            price="$8–15 / pack"
+            price="see current price / pack"
+            priceNote="dated 2026-06-01."
             ctaText="Find Wysong Freeze-Dried Treats"
             ctaHref="/go/wysong/freeze-dried-treats?s=diet-safe-treats"
             ctaAffiliateProgram="wysong"

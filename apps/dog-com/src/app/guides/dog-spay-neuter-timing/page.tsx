@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import {
   buildMetadata,
@@ -5,7 +6,6 @@ import {
   FAQAccordion,
   RelatedLinks, CrossPortfolioCard,
   TableOfContents,
-  AffiliateDisclosure,
   ShopCtas,
   JourneyNext,
 } from '@carloOS/ui'
@@ -143,7 +143,7 @@ export default function DogSpayNeuterTimingPage() {
             reviewedBy="Editorial team"
           />
 
-          <CalloutBox variant="evidence" title="TL;DR — The current consensus">
+          <CalloutBox variant="evidence" title="The current consensus">
             <p>
               <strong>Old advice:</strong> spay/neuter at 6 months — universal.
             </p>
@@ -224,7 +224,7 @@ export default function DogSpayNeuterTimingPage() {
             siteId="dog-com"
             nextHref="/tools/puppy-weight-predictor"
             nextLabel="Estimate adult size before you lock the timing"
-            nextBlurb="The callout is the size-timing rule — 6–9 months for most small breeds, wait until growth-plate closure (about 12–24 months) for many large and giant breeds. The puppy-weight predictor is the adult-size estimate that sorts this dog into that band. The hop below is the same heavy-duty exercise-pen search already on this page."
+            nextBlurb="The callout is the size-timing rule — 6–9 months for most small breeds, wait until growth-plate closure (about 12–24 months) for many large and giant breeds. The puppy-weight predictor is the adult-size estimate that sorts this dog into that band. The button below opens the same heavy-duty exercise-pen search on Amazon."
             resourceHref="/go/amazon-brand/heavy+duty+dog+exercise+pen?s=guides-dog-spay-neuter-timing"
             resourceLabel="Browse heavy-duty dog exercise pens on Amazon →"
           />
@@ -333,40 +333,24 @@ export default function DogSpayNeuterTimingPage() {
 
           <h2 id="kit">A Simple Intact-Dog Management Kit</h2>
           <p>
-            Three everyday physical supplies match the
-            delayed-timing lifestyle copy above: washable
-            dog heat pants so the bloody phase of a heat
-            cycle does not soak furniture, a male dog
-            belly band that contains indoor marking while
-            you keep working the outdoor toilet plan, and
-            a heavy-duty dog exercise pen when the yard
-            is not fully fenced. These are household
-            management tools, not treatments. They do not
-            prevent pregnancy, they do not replace a
-            locked gate or a veterinary timing
-            conversation, they are not a recovery cone or
-            surgical recovery suit, and they are not a
-            crate, GPS collar, or first-aid kit. This
-            page does not hop recovery cones, crates,
-            baby gates, or medications. This page does
-            not claim hands-on testing.
+            Keep these on hand: washable dog heat pants, male dog belly band, and heavy duty dog exercise pen. These are household management tools, not treatments. They do not prevent pregnancy, they do not replace a locked gate or a veterinary timing conversation, they are not a recovery cone or surgical recovery suit, and they are not a crate, GPS collar, or first-aid kit.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/washable+dog+heat+pants?s=guides-dog-spay-neuter-timing", "/go/amazon-brand/male+dog+belly+band?s=guides-dog-spay-neuter-timing", "/go/amazon-brand/heavy+duty+dog+exercise+pen?s=guides-dog-spay-neuter-timing"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (washable dog heat pants / male dog belly
               band / heavy-duty dog exercise pen).
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or an empty link. Amazon searches only —
               unused vs #848–#1040 washable+dog+pee+pads,
               washable+dog+bed+cover, pet+recovery+cone,
               soft+recovery+cone+dog, soft+e+collar+dog,
               soft+recovery+collar+dog,
               dog+recovery+crate, wire+dog+crate,
               extra+tall+baby+gate, engraved+dog+collar,
-              and GPS collar hops. Prescription and med
-              ASINs are not shoppable hops. */}
+              and GPS collar buttons. Prescription and med
+              product pages are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
@@ -392,6 +376,7 @@ export default function DogSpayNeuterTimingPage() {
           <FAQAccordion
             items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))}
             allowMultiple
+            includeSchema={false}
           />
 
           <CalloutBox variant="info" title="References">

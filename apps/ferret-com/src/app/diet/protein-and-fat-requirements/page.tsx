@@ -1,12 +1,13 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
   title: 'Ferret Protein & Fat Requirements — Macronutrient Targets | Ferret.com',
   description:
-    'The macronutrient window for ferrets: 32–40% protein, 18–22% fat, under 3% carbohydrate, taurine, and why dry-matter basis changes how you read a label.',
+    'Ferret protein, fat, and carbohydrate targets. The carbohydrate section cites Merck; under 3% carbohydrate is a planning figure.',
   path: '/diet/protein-and-fat-requirements',
   type: 'article',
 })
@@ -46,7 +47,7 @@ const FAQS = [
   {
     question: 'Why is carbohydrate bad for ferrets?',
     answer:
-      'Ferrets have a short gut (roughly five times body length, 3-4 hour transit) with no functional cecum, so they cannot use carbohydrate as a primary fuel — and beyond wasted calories, chronic dietary carbohydrate is the leading working hypothesis for elevated insulinoma risk: sustained carbohydrate intake drives repeated insulin secretion, thought over years to contribute to pancreatic beta-cell stress and tumor formation. The target is under 3%, ideally under 2%; many commercial "ferret" foods land at 15-30% by difference.',
+      'Ferrets have a short gut (roughly five times body length, 3-4 hour transit) with no functional cecum, so they cannot use carbohydrate as a primary fuel — and beyond wasted calories, chronic dietary carbohydrate is the leading working hypothesis for elevated insulinoma risk: sustained carbohydrate intake drives repeated insulin secretion, thought over years to contribute to pancreatic beta-cell stress and tumor formation. The Merck Veterinary Manual states that ferrets require protein of 35%–40%, and that carbohydrate (under 25%) and fiber (under 2.5%) proportions of the diet should be relatively low. Under 3% carbohydrate, ideally under 2%, is a planning figure on this page. Merck does not state that cutoff. Many commercial "ferret" foods land at 15-30% by difference.',
   },
   {
     question: 'Do ferrets need taurine?',
@@ -69,6 +70,14 @@ export default function ProteinAndFatRequirementsPage() {
       <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="ferret-com"
+        heroHop={
+          <>
+            <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/wysong+ferret+food?s=protein-and-fat-requirements" />
+            <div className="mb-4" data-primary-hop="true">
+              <a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" data-shop-placement="hero" href="/go/amazon-brand/wysong+ferret+food?s=protein-and-fat-requirements">Browse Wysong ferret food on Amazon →</a>
+            </div>
+          </>
+        }
         hero={{
           title: 'Ferret Protein & Fat Requirements',
           subtitle:
@@ -112,7 +121,7 @@ export default function ProteinAndFatRequirementsPage() {
             <CrossPortfolioCard currentSite="ferret-com" contentType="diet" variant="sidebar" />
           </>
         }
-      
+
         relatedLinks={[
           { title: 'Ferret Diet Hub', href: '/diet' },
           { title: 'Reading Food Labels', href: '/diet/reading-food-labels' },
@@ -132,7 +141,7 @@ export default function ProteinAndFatRequirementsPage() {
 
           <h2 id="why">Why the Numbers Are What They Are</h2>
           <p>
-            Ferrets are obligate carnivores with a short gastrointestinal tract — roughly five times body length — a transit time of about three to four hours, and no functional cecum. They cannot ferment plant fiber for energy or use carbohydrate as a primary fuel. Everything in the macronutrient profile below follows from that physiology: the food must be dense in animal protein and animal fat to be fully digested within a short transit window, and it must be nearly free of plant carbohydrate. The targets here are drawn from standard exotic-pet veterinary references.
+            Ferrets are obligate carnivores with a short gastrointestinal tract — roughly five times body length — a transit time of about three to four hours, and no functional cecum. They cannot ferment plant fiber for energy or use carbohydrate as a primary fuel. Everything in the macronutrient profile below follows from that physiology: the food must be dense in animal protein and animal fat to be fully digested within a short transit window, and it must be nearly free of plant carbohydrate. Protein and fat ranges below are a working window on this page. The carbohydrate section cites the Merck Veterinary Manual, and the tighter cutoff is a planning figure.
           </p>
 
           <h2 id="protein">Protein: 32–40% (Dry-Matter Basis)</h2>
@@ -145,9 +154,9 @@ export default function ProteinAndFatRequirementsPage() {
             Fat is a ferret's primary energy substrate, and the typical target is 18–22% on a dry-matter basis, again animal-sourced. Ferrets thrive on a relatively high-fat diet and self-regulate intake well, grazing many small meals a day. Fat also carries fat-soluble vitamins and supports coat condition. Active ferrets, growing kits, and underweight animals benefit from the upper end; sedentary or overweight ferrets may need the lower end paired with portion attention (see <a href="/diet/weight-management">weight management</a>).
           </p>
 
-          <h2 id="carbs">Carbohydrate: Under 3%</h2>
+          <h2 id="carbs">Carbohydrate</h2>
           <p>
-            The carbohydrate target is under 3%, ideally under 2%. This is the number most commercial "ferret" foods miss — many land at 15–30% carbohydrate by difference because extruded kibble requires some binding starch and cheaper formulas lean heavily on grain. Beyond being wasted calories, chronic dietary carbohydrate is the leading working hypothesis for elevated insulinoma risk in ferrets: sustained carbohydrate intake drives repeated insulin secretion, which over years is thought to contribute to pancreatic beta-cell stress and tumor formation. The clinical picture is covered in <a href="/health/insulinoma">insulinoma in ferrets</a>.
+            The Merck Veterinary Manual states that ferrets require protein of 35%–40%, and that carbohydrate (under 25%) and fiber (under 2.5%) proportions of the diet should be relatively low (<a href="https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/management-of-ferrets">Merck Veterinary Manual</a>). Under 3% carbohydrate, ideally under 2%, is a planning figure on this page. Merck does not state that cutoff. Commercial "ferret" foods often miss even the wider Merck proportion — many land at 15–30% carbohydrate by difference because extruded kibble requires some binding starch and cheaper formulas lean heavily on grain. Beyond being wasted calories, chronic dietary carbohydrate is the leading working hypothesis for elevated insulinoma risk in ferrets: sustained carbohydrate intake drives repeated insulin secretion, which over years is thought to contribute to pancreatic beta-cell stress and tumor formation. The clinical picture is covered in <a href="/health/insulinoma">insulinoma in ferrets</a>.
           </p>
 
           <h2 id="taurine">Taurine</h2>
@@ -157,7 +166,7 @@ export default function ProteinAndFatRequirementsPage() {
 
           <h2 id="fiber">Fiber & Ash</h2>
           <p>
-            Fiber should be under about 3%. Higher fiber slows gut transit beyond what the ferret tract is built for and reduces digestibility. "Ash" on a label refers to total mineral content; a moderate figure is normal and reflects the bone and mineral content of animal ingredients. Neither fiber nor ash is a headline number, but very high fiber is a sign of plant fillers.
+            The same Merck page states that fiber proportions of the diet should be relatively low (under 2.5%) (<a href="https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/management-of-ferrets">Merck Veterinary Manual</a>). Fiber under about 3% is a planning figure on this page. Higher fiber slows gut transit beyond what the ferret tract is built for and reduces digestibility. "Ash" on a label refers to total mineral content; a moderate figure is normal and reflects the bone and mineral content of animal ingredients. Neither fiber nor ash is a headline number, but very high fiber is a sign of plant fillers.
           </p>
 
           <h2 id="dry-matter">Dry-Matter vs As-Fed</h2>
@@ -165,20 +174,7 @@ export default function ProteinAndFatRequirementsPage() {
             The targets above are stated on a <strong>dry-matter basis</strong> — water removed — but kibble labels report a guaranteed analysis on an <strong>as-fed basis</strong>, including moisture. For dry kibble (around 8–10% moisture) the two are close, so an as-fed protein figure of roughly 36% corresponds to a dry-matter figure in the high 30s or low 40s. For anything moist — raw, canned, or fresh prey at 65–75% water — the difference is dramatic, and comparing as-fed numbers across wet and dry foods is meaningless. Carbohydrate is almost never printed; estimate it by difference, subtracting protein, fat, moisture, ash, and fiber from 100. The method for applying all of this at the shelf is in <a href="/diet/best-ferret-kibble">how to choose a ferret kibble</a>.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated ferret protein-fat chart /
-              ferret fridge macro-window card /
-              mustelid macro-target reference handbook).
-              Keep existing Wysong review hop.
-              Educational kitchen searches only; no Rx /
-              vaccine / aging hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs diet-hub /
-              kibble / label / training kitchen kits. Ferret
-              aging stays held.
-              Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
@@ -187,40 +183,40 @@ export default function ProteinAndFatRequirementsPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/wysong+ferret+food?s=protein-and-fat-requirements"
-                amazonLabel="Shop on Amazon"
+                amazonLabel="Browse Wysong ferret food on Amazon →"
               />
           </div>
           </div>
 
           <h2 id="picks">A Diet That Hits the Window</h2>
           <p>
-            The numbers above are abstract until you map them onto a real product. The diet below is a worked example of a commercial kibble whose published panel lands close to the high-protein, very-low-carbohydrate target — included on its documented spec, not a hands-on test. The full evaluation method is in <a href="/diet/best-ferret-kibble">how to choose a ferret kibble</a>.
+            The numbers above are abstract until you map them onto a real product. The diet below is a worked example of a commercial kibble included on its documented spec, not a hands-on test. Crude protein minimum 63% is above the floor on this page. Carbohydrate is not on the guaranteed analysis. The full evaluation method is in <a href="/diet/best-ferret-kibble">how to choose a ferret kibble</a>.
           </p>
-          <ScoreMethodology />
-          <ReviewCard
+          <ReviewCard quietUntilTag
             id="wysong-epigen-90"
             badge="Hits the Window"
             name="Wysong Epigen 90"
-            subtitle="Animal-first, starch-free — protein high, carbohydrate in single digits"
-            score={9.2}
+            subtitle="Animal-first. The current page markets it as starch-free and prints crude protein minimum 63%."
             winner
             description={
-              <p>A worked example of the target window in a real product: protein well above the 32–40% floor, animal-sourced throughout, and carbohydrate by difference driven into the low single digits by a starch-free system. It illustrates what the abstract targets on this page look like on an actual ingredient panel, and it is the default low-carb choice when insulinoma risk is the priority.</p>
+              <p>The current Wysong Epigen 90 page lists crude protein minimum 63% and crude fat minimum 16%. Those are guaranteed-analysis figures as printed, not a dry-matter conversion. The page markets the food as starch-free. Carbohydrate is not on the guaranteed analysis — check the label. Crude protein minimum 63% is above the 32–40% floor on this page. Carbohydrate is not printed, so do not treat the bag as a measured carbohydrate example.</p>
             }
             specs={[
-              { label: 'Protein (dry-matter)', value: '~60%', highlight: 'good' },
-              { label: 'Fat (dry-matter)', value: '~16%' },
-              { label: 'Carbohydrate', value: 'Single digits', highlight: 'good' },
+              { label: 'Crude protein (as printed)', value: 'Min. 63%', highlight: 'good' },
+              { label: 'Crude fat (as printed)', value: 'Min. 16%' },
+              { label: 'Carbohydrate', value: 'Not on the guaranteed analysis. Check the label.' },
               { label: 'Taurine', value: 'Supplemented', highlight: 'good' },
             ]}
-            pros={['Lands inside the target macro window', 'Lowest commercial carb load in wide ferret use', 'Animal-first throughout', 'Starch-free system']}
+            pros={['Crude protein min. 63% is above the 32–40% floor on this page. Crude fat min. 16% is under the 18–22% window.', 'Carbohydrate is not on the guaranteed analysis. Check the label.', 'Animal-first throughout', 'Marketed as starch-free']}
             cons={['Premium price', 'Not always stocked at supermarket pet aisles']}
-            price="$30–50 / 5 lb"
+            price="see current price / 5 lb"
+            priceNote="dated 2026-06-01."
             ctaText="Find Wysong Epigen 90"
             ctaHref="/go/wysong/epigen-90?s=diet-protein-and-fat-requirements"
             ctaAffiliateProgram="wysong"
             ctaAffiliateProduct="epigen-90"
           />
+          <p>The chain-shelf bag next to this one is Marshall Premium. The <a href="/reviews/wysong-vs-marshall-kibble-guide">Wysong versus Marshall guide</a> prints both guaranteed analyses and says to skip Marshall when insulinoma risk is why you are choosing a food.</p>
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />

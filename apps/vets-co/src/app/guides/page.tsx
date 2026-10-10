@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildArticleSchema, AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, StockImage, HubSearch, HubJumpNav } from '@carloOS/ui'
+import { buildArticleSchema, buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, StockImage, HubSearch, HubJumpNav } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Vet Visit & Cost-of-Care Guides | Vets.co', description: 'Practical guides to the cost of veterinary care, what to expect at the vet, emergency vs. ER visits, and getting the most from every appointment.', path: '/guides' })
 
@@ -10,7 +10,6 @@ const breadcrumbSchema = buildBreadcrumbSchema({
     { name: 'Guides', url: 'https://vets.co/guides' },
   ],
 })
-
 
 const SECTIONS = [
   { id: 'vets-guides-cost', category: 'Cost of Care', intro: 'What care costs and how owners pay for it.', items: [{ title: 'What Vet Care Really Costs', href: '/guides/cost-of-veterinary-care', badge: 'Start Here' }, { title: 'How to Afford Vet Care', href: '/guides/how-to-afford-vet-care' }, { title: 'Emergency Vet Costs Explained', href: '/guides/emergency-vet-costs' }] },
@@ -95,23 +94,10 @@ export default function VetsGuidesHubPage() {
       </div>
 
       <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
-        
+
         <div className="max-w-content-wide mt-6">
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
         </div>
 
-        {/* Money path — live amazon-brand search hops
-            (laminated pet guides section-map chart /
-            pet fridge guides prep card /
-            veterinary guides reference handbook).
-            Educational kitchen searches only; no Rx /
-            vaccine / flea hops.
-            ShopCtas hides empty Chewy; never href="#"
-            or PLACEHOLDER. Unused vs tools / insurance /
-            reviews / health kitchen kits and child
-            spiral+notebook / household+budget+workbook
-            hops.
-            Do not re-open #1165 / what-to-expect. */}
               </section>
     </>
   </>

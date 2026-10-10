@@ -1,5 +1,7 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { AffiliateDisclosure, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ShopCtas, TableOfContents } from '@carloOS/ui'
+import Link from 'next/link'
+import { ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ShopCtas, TableOfContents, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -118,6 +120,7 @@ export default function OsteoarthritisPage() {
             updatedAt="2026-09-06"
             reviewedBy="Editorial team"
           />
+          <LastUpdated date="2026-10-09" />
 
           <h2 id="what">What Is Osteoarthritis</h2>
           <p>A healthy joint is lined with articular cartilage -- a slick, resilient surface that lets bone glide on bone -- and lubricated by joint (synovial) fluid. Osteoarthritis begins when that cartilage is damaged by wear, repetitive concussion, injury, or inflammation. The damaged cartilage releases enzymes that degrade it further, the joint inflames, the surrounding bone responds by forming new growth (osteophytes), and the cycle becomes self-sustaining. The result is pain, stiffness, and progressive loss of motion.</p>
@@ -143,45 +146,29 @@ export default function OsteoarthritisPage() {
 
           <h2 id="management">Management at Home</h2>
           <ul>
-            <li><strong>Keep the horse moving.</strong> Consistent low-impact exercise and turnout maintain joint health better than stall rest; long warm-ups loosen stiff joints before work. A compact set of portable paddock panels can keep a stiff horse on a small turnout loop when a huge field is too deep or icy — this page does not hop NSAIDs, Adequan, or joint injectables.</li>
-            <li><strong>Manage weight.</strong> Excess bodyweight multiplies joint load; lean is kinder to arthritic joints. Body-condition scoring lives on the weight-management and EMS pages; this hop set stays on motion and footing, not another hanging scale.</li>
+            <li><strong>Keep the horse moving.</strong> Consistent low-impact exercise and turnout maintain joint health better than stall rest; long warm-ups loosen stiff joints before work.</li>
+            <li><strong>Manage weight.</strong> Excess bodyweight multiplies joint load; lean is kinder to arthritic joints. Body-condition scoring lives on the weight-management and EMS pages; these buttons stay on motion and footing, not another hanging scale.</li>
             <li><strong>Choose footing carefully.</strong> Deep, even, forgiving footing reduces concussion; avoid hard or uneven ground. A tow-behind arena drag or harrow is the barn tool that levels a working surface after rain — not a ranked clinical product.</li>
-            <li><strong>Maintain farriery</strong> on a tight schedule to keep the foot balanced and reduce abnormal joint loading. Heart-bar, wedge, and rocker shoes already hop on the navicular page; this page does not re-ship farrier hardware.</li>
-            <li><strong>Consider oral joint supplements</strong> as a long-term adjunct, recognizing that the evidence is mixed; see the <a href="/supplements/joint-supplements">joint supplement guide</a>. Cotton polo wraps for a long, even warm-up are barn gear, not a joint-supplement hop.</li>
+            <li><strong>Maintain farriery</strong> on a tight schedule to keep the foot balanced and reduce abnormal joint loading. Heart-bar, wedge, and rocker shoes already appear on the navicular page; this page does not re-ship farrier hardware.</li>
+            <li><strong>Consider oral joint supplements</strong> as a long-term adjunct, recognizing that the evidence is mixed; see the <a href="/supplements/joint-supplements">joint supplement guide</a>. Cotton polo wraps for a long, even warm-up are barn gear.</li>
           </ul>
 
-          <h2 id="kit">Keep-moving kit</h2>
+          <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Everyday physical supplies that match the
-            choose-footing, long-warm-up, and keep-moving
-            copy on this page — a tow-behind arena drag
-            or harrow so the working surface stays even
-            after rain, cotton polo exercise wraps so a
-            long warm-up is even and protected, and
-            portable paddock panels so a stiff horse
-            still has a small turnout loop. These are
-            educational keep-moving tools, not a ranked
-            product list, not a substitute for veterinary
-            care, and not Adequan, Legend, NSAIDs, or a
-            diagnosis. Joint supplements already live on
-            the joint-supplement guide. Farrier stands and log books already live on
-            the farrier-schedule page. This
-            page does not hop medications, vaccines, or
-            injectable joint products. This page does
-            not claim hands-on testing. </p>
+            Keep these on hand: a tow-behind arena drag or harrow so the working surface stays even after rain, cotton polo exercise wraps so a long warm-up is even and protected, and portable paddock panels so a stiff horse still has a small turnout loop. These are educational keep-moving tools, not a ranked product list, not a substitute for veterinary care, and not Adequan, Legend, NSAIDs, or a diagnosis. </p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/tow+behind+arena+drag+harrow?s=health-osteoarthritis", "/go/amazon-brand/cotton+horse+polo+exercise+wraps?s=health-osteoarthritis", "/go/amazon-brand/portable+horse+paddock+panels?s=health-osteoarthritis"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (tow behind arena drag harrow /
               cotton horse polo exercise wraps /
               portable horse paddock panels).
               These are educational keep-moving
               tools, not a ranked product list, not a
               substitute for veterinary care, no Rx /
-              Adequan / NSAID / joint-supplement ASIN hops.
+              Adequan / NSAID / joint-supplement product page buttons.
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or an empty link. Amazon searches only —
               unused vs #1105
               digital+hanging+hay+bale+scale /
               equine+forage+nsc+hay+test+kit /
@@ -222,7 +209,7 @@ export default function OsteoarthritisPage() {
               portable+farrier+hoof+stand
               (farrier-schedule).
               Medications and prescriptions
-              are not shoppable hops. */}
+              are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
@@ -244,16 +231,21 @@ export default function OsteoarthritisPage() {
           </div>
           </div>
 
+          <p>Joint supplements discussed for this condition are compared in the <Link href="/reviews/best-equine-supplements">equine supplement review</Link>.</p>
           <h2 id="faq">Frequently Asked Questions</h2>
           <FAQAccordion items={FAQS} />
 
-          <h2 id="references">References</h2>
-          <ol className="text-sm text-brand-text-mid">
-            <li>McIlwraith CW, Frisbie DD, Kawcak CE. “The Horse as a Model of Naturally Occurring Osteoarthritis.” Bone &amp; Joint Research, 2012; 1(11):297–309.</li>
-            <li>Goodrich LR, Nixon AJ. “Medical Treatment of Osteoarthritis in the Horse — A Review.” Veterinary Journal, 2006; 171(1):51–69.</li>
-            <li>Frisbie DD, Kawcak CE, Werpy NM, et al. Evaluation of intra-articular therapies, multiple studies. Equine Veterinary Journal, 2007–2013.</li>
-            <li>American Association of Equine Practitioners. “Arthritis / Degenerative Joint Disease” owner resources. aaep.org.</li>
-          </ol>
+          <div id="references">
+            <ArticleSourcesList
+              title="References"
+              sources={[
+              { label: "McIlwraith CW, Frisbie DD, Kawcak CE. “The Horse as a Model of Naturally Occurring Osteoarthritis.” Bone & Joint Research, 2012; 1(11):297–309.", url: "https://boneandjoint.org.uk/journal/bjr", publisher: "Bone & Joint Research" },
+              { label: "Goodrich LR, Nixon AJ. “Medical Treatment of Osteoarthritis in the Horse — A Review.” Veterinary Journal, 2006; 171(1):51–69.", url: "https://www.sciencedirect.com/journal/the-veterinary-journal", publisher: "The Veterinary Journal" },
+              { label: "Frisbie DD, Kawcak CE, Werpy NM, et al. Evaluation of intra-articular therapies, multiple studies. Equine Veterinary Journal, 2007–2013.", url: "https://beva.onlinelibrary.wiley.com/journal/20423306", publisher: "Equine Veterinary Journal" },
+              { label: "American Association of Equine Practitioners. “Arthritis / Degenerative Joint Disease” owner resources. aaep.org.", url: "https://aaep.org/", publisher: "AAEP" },
+              ]}
+            />
+          </div>
         </div>
       </ArticleLayout>
     </>

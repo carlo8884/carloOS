@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -8,8 +9,8 @@ import {
   combineSchemas,
   SchemaScript,
   FAQAccordion,
-  AffiliateDisclosure,
   CrossPortfolioCard,
+  JourneyNext,
   ShopCtas,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
@@ -28,23 +29,23 @@ const FAQS = [
   {
     question: 'How is a cat’s daily calorie need calculated?',
     answer:
-      'The starting point is the same Resting Energy Requirement (RER) used for dogs: 70 multiplied by body weight in kilograms raised to the power of 0.75. Cats then use different Daily Energy Requirement (DER) factors than dogs. A typical neutered indoor adult uses 1.2 × RER; an intact indoor adult uses 1.4; outdoor or highly active cats use 1.4–1.6; kittens use 2.5; a vet-supervised weight-loss plan uses 0.8. These are WSAVA/AAHA-style published estimates. Individual cats vary, and a veterinarian-assigned body condition score is how the number gets calibrated.',
+      'Healthy adult maintenance follows the WSAVA July 2020 chart, which cites the 2006 NRC: 100 times kg to the power 0.67 for a lean adult, and 130 times kg to the power 0.40 for an obese-prone adult. Other multipliers, including 1.2 for a neutered indoor adult, are planning figures on 70 times kg to the power 0.75. They are not rows on that chart. Body condition still belongs with a veterinarian.',
     answerText:
-      'RER = 70 x (weight in kg)^0.75. DER = feline life-stage factor x RER. Neutered indoor adults typically use 1.2; intact indoor 1.4; outdoor/active 1.4–1.6; kittens 2.5; vet-supervised weight loss 0.8.',
+      'Lean adult: 100 x kg^0.67. Obese-prone adult: 130 x kg^0.40 (WSAVA July 2020, citing 2006 NRC). Neutered indoor 1.2, intact indoor 1.4, outdoor/active 1.4–1.6, kitten 2.5, and weight loss 0.8 are planning figures on 70 x kg^0.75.',
   },
   {
     question: 'Why are cat factors lower than dog calorie factors?',
     answer:
-      'Cats are smaller, often less active, and — once neutered and kept indoors — have a lower maintenance multiplier than a typical neutered adult dog (1.6 × RER). Published feline DER factors cluster around 1.0–1.4 for indoor adults. Using a dog MER factor on a cat overestimates the bowl and is a common path to weight gain.',
+      'The WSAVA July 2020 adult equations are not the dog chart. A lean cat uses 100 times kg to the power 0.67, and an obese-prone cat uses 130 times kg to the power 0.40. The 1.2 neutered-indoor multiplier on this page is a planning figure on 70 times kg to the power 0.75, not a published feline row. Using a dog maintenance factor on a cat overestimates the bowl.',
     answerText:
-      'Neutered indoor cats typically use 1.2 × RER, not the 1.6 dog factor. Applying dog MER to a cat overestimates calories.',
+      'Lean and obese-prone adults use the WSAVA July 2020 equations, not a 1.2 or 1.6 multiplier. The 1.2 neutered-indoor row is a planning figure.',
   },
   {
     question: 'Does indoor vs outdoor or neuter status change the number?',
     answer:
-      'Yes. Neutering lowers adult maintenance need; indoor, sedentary cats sit at the low end of the range; outdoor or highly active cats sit higher. That is why this tool lists combined options — neutered indoor, intact indoor, neutered outdoor/active, intact outdoor/active — instead of a single “adult cat” slider. If you are unsure, start with neutered indoor adult (1.2) and let body condition over 4–6 weeks decide whether to move up or down.',
+      'The cited adult paths are lean and obese-prone, from the WSAVA July 2020 chart. Neutered indoor (1.2), intact indoor (1.4), and outdoor or active (1.4–1.6) are planning figures on resting energy, not rows on that chart. If you are unsure which planning row to use, start with lean adult and let body condition over 4–6 weeks decide whether to move.',
     answerText:
-      'Neuter status and indoor vs outdoor both change the DER factor. Neutered indoor is 1.2; intact indoor 1.4; outdoor/active 1.4–1.6.',
+      'Lean and obese-prone adults are the cited chart. Neutered indoor 1.2, intact indoor 1.4, and outdoor or active 1.4–1.6 are planning figures.',
   },
   {
     question: 'What weight should I enter — current or target?',
@@ -63,16 +64,18 @@ const FAQS = [
   {
     question: 'Why does this calculator say “estimate” and not “prescription”?',
     answer:
-      'Calorie formulas give a population-level starting point, not an individual prescription. Metabolic rate depends on lean mass, thyroid status, temperature, and individual variation that no formula captures. Studies show variation of 30% or more around the mean even within the same life stage. Feed near the estimate, then adjust over 4–6 weeks based on body condition score. A veterinarian should confirm the target weight and review any significant calorie restriction — especially the 0.8 × RER weight-loss factor.',
+      'Calorie formulas give a population-level starting point, not an individual prescription. Metabolic rate depends on lean mass, thyroid status, temperature, and individual variation. The WSAVA Nutritional Assessment Guidelines state that energy requirements can vary by 50% in either direction for cats. Feed near the estimate, then adjust over 4–6 weeks based on body condition score. A veterinarian should confirm the target weight and review any significant calorie restriction — especially the 0.8 × RER weight-loss factor.',
     answerText:
-      'Formula estimates have 30%+ individual variation. Use as a starting point, then adjust over 4–6 weeks based on body condition score and veterinary guidance. Not a diagnosis or a diet plan.',
+      'The WSAVA Nutritional Assessment Guidelines state that energy requirements can vary by 50% in either direction for cats. Adjust over 4–6 weeks using body condition and veterinary guidance. Not a diagnosis or a diet plan.',
+    source: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC11107980/',
   },
   {
     question: 'Do treats count toward the daily calorie target?',
     answer:
-      'Yes. Treats should stay within about 10% of daily calories — dental treats, squeeze-ups, and table scraps all count. Subtract treat calories from the DER estimate before you portion the bowl. Weigh meals on a kitchen gram scale rather than a measuring cup: cups over-portion depending on how they are filled. A slow-feeder bowl or interactive feeder can stretch a measured ration without adding calories.',
+      'Yes. The WSAVA guide to treats for cats states that treats should make up no more than 10% of a cat\'s daily calorie intake. That 10% is not a row on the WSAVA July 2020 calorie chart. Subtract treat calories from the estimate before you portion the bowl. Weigh meals on a kitchen gram scale rather than a measuring cup. A slow-feeder bowl or interactive feeder can stretch a measured ration without adding calories.',
     answerText:
-      'Keep treats to about 10% of daily calories. Weigh meals on a kitchen gram scale; measuring cups often over-portion.',
+      'The WSAVA guide to treats for cats states that treats should make up no more than 10% of a cat\'s daily calorie intake. Weigh meals on a kitchen gram scale.',
+    source: 'https://wsava.org/wp-content/uploads/2025/11/WSAVA_GuidetoTreats_Cats_251107.pdf',
   },
 ]
 
@@ -89,7 +92,7 @@ const appSchema = {
   '@type': 'SoftwareApplication',
   name: 'Cat Calorie Calculator',
   description:
-    'Free cat calorie calculator using the standard RER formula (70 x kg^0.75) and WSAVA/AAHA-style feline DER factors for indoor vs outdoor, neuter status, and life stage. Outputs kcal/day and optional cups/day.',
+    'Free cat calorie calculator using the standard RER formula (70 x kg^0.75) and the WSAVA July 2020 adult chart; other multipliers are planning figures for indoor vs outdoor, neuter status, and life stage. Outputs kcal/day and optional cups/day.',
   url: 'https://vets.co/tools/cat-calorie-calculator',
   applicationCategory: 'HealthApplication',
   operatingSystem: 'Web',
@@ -101,7 +104,7 @@ const appSchema = {
     'DER factors for indoor vs outdoor, neuter status, and life stage',
     'Optional cups-per-day from the food-label kcal/cup',
     'Vet-supervised weight-loss factor (0.8) with hepatic-lipidosis caution',
-    'Shoppable portioning kit via Amazon category searches (measured cat food, kitchen gram scale, slow-feeder bowl, interactive feeder, low-calorie treats)',
+    'Shop the portioning kit via Amazon searches (gram measuring spoon, kitchen gram scale, slow-feeder bowl, interactive feeder, low-calorie treats)',
   ],
   publisher: { '@type': 'Organization', name: 'Vets.co Editorial', url: 'https://vets.co' },
 }
@@ -109,7 +112,7 @@ const appSchema = {
 const howToSchema = buildHowToSchema({
   name: 'How to calculate a cat’s daily calorie needs',
   description:
-    'Estimate daily calorie requirements (RER and DER) using the standard veterinary formula and WSAVA/AAHA-style feline life-stage, neuter, and indoor/outdoor factors.',
+    'Estimate daily calorie requirements (RER and DER) using the standard veterinary formula and the WSAVA July 2020 adult chart (2006 NRC); other multipliers are planning figures.',
   url: 'https://vets.co/tools/cat-calorie-calculator',
   steps: [
     {
@@ -126,7 +129,7 @@ const howToSchema = buildHowToSchema({
     },
     {
       name: 'Use as a starting point and monitor',
-      text: 'Feed near the estimate for 4–6 weeks, then adjust up or down by about 10% based on your cat’s body condition score. Confirm any significant calorie restriction with your veterinarian. This is a planning / wellness reference, not a diagnosis or a diet plan.',
+      text: 'Feed near the estimate for 4–6 weeks, then adjust up or down by about 10% based on your cat’s body condition score. That 10% adjustment is a planning figure, not a row in the WSAVA treat guide. Confirm any significant calorie restriction with your veterinarian. This is a planning / wellness reference, not a diagnosis or a diet plan.',
     },
   ],
 })
@@ -134,7 +137,7 @@ const howToSchema = buildHowToSchema({
 const articleSchema = buildArticleSchema({
   siteId: 'vets-co',
   title: 'Cat Calorie Calculator',
-  description: 'Estimate your cat\'s daily calorie needs using the standard RER formula and WSAVA/AAHA-style feline DER factors — indoor vs outdoor, neuter status, and life stage. Enter weight, pick the matching option, and get kcal/day — plus optional cups/day if you enter your food\'s calorie density.',
+  description: 'Estimate your cat\'s daily calorie needs using the standard RER formula and the WSAVA July 2020 adult chart; other multipliers are planning figures — indoor vs outdoor, neuter status, and life stage. Enter weight, pick the matching option, and get kcal/day — plus optional cups/day if you enter your food\'s calorie density.',
   url: 'https://vets.co/tools/cat-calorie-calculator',
   imageUrl: '',
   authorName: 'Vets.co Editorial',
@@ -167,8 +170,8 @@ export default function CatCalorieCalculatorPage() {
             Cat Calorie Calculator
           </h1>
           <p className="text-base text-white/60 leading-relaxed max-w-2xl">
-            Estimate your cat&apos;s daily calorie needs using the standard RER formula and
-            WSAVA/AAHA-style feline DER factors — indoor vs outdoor, neuter status, and life stage.
+            Estimate your cat&apos;s daily calorie needs with the WSAVA July 2020 adult chart.
+            Other life-stage multipliers are planning figures.
             Enter weight, pick the matching option, and get kcal/day — plus optional cups/day if you
             enter your food&apos;s calorie density.
           </p>
@@ -202,14 +205,22 @@ export default function CatCalorieCalculatorPage() {
       <section className="bg-brand-surface px-container-sm sm:px-container py-10 sm:py-12">
         <div className="max-w-4xl">
           <Calculator />
+          <JourneyNext
+            siteId="vets-co"
+            nextHref="/tools/cat-body-condition-score"
+            nextLabel="Check the number against body condition"
+            nextBlurb="The calorie target is a starting scoop. Body condition is whether that scoop is right. A kitchen gram scale is how you weigh that scoop."
+            resourceHref="/go/amazon-brand/kitchen+gram+scale?s=tools-cat-calorie-calculator"
+            resourceLabel="Browse kitchen gram scales on Amazon →"
+          />
         </div>
       </section>
 
-      {/* Money path — live amazon-brand search hops (food / scale / feeders / treats).
-          ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER. */}
+      {/* Shop note — live amazon-brand search buttons (food / scale / feeders / treats).
+          ShopCtas hides empty Chewy; never href="#" or an empty link. */}
       <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <div className="max-w-2xl">
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/cat+food+measuring+scoop+grams?s=tools-cat-calorie-calculator", "/go/amazon-brand/kitchen+gram+scale?s=tools-cat-calorie-calculator", "/go/amazon-brand/slow+feeder+cat+bowl?s=tools-cat-calorie-calculator", "/go/amazon-brand/interactive+cat+feeder?s=tools-cat-calorie-calculator", "/go/amazon-brand/low+calorie+cat+treats?s=tools-cat-calorie-calculator"]} />
           <div className="mt-4 rounded-xl border border-brand-border bg-brand-white p-5">
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
               Shop portions
@@ -217,8 +228,8 @@ export default function CatCalorieCalculatorPage() {
             <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/measured+cat+food?s=tools-cat-calorie-calculator"
-                amazonLabel="Browse measured cat food on Amazon →"
+                amazonHref="/go/amazon-brand/cat+food+measuring+scoop+grams?s=tools-cat-calorie-calculator"
+                amazonLabel="Search Amazon for a gram measuring spoon"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/kitchen+gram+scale?s=tools-cat-calorie-calculator"
@@ -247,7 +258,7 @@ export default function CatCalorieCalculatorPage() {
               cat body condition score
             </Link>{' '}
             tool. Weight-loss cats should use a veterinarian-set target weight, not the current
-            overweight number. The dog twin of this math lives on{' '}
+            overweight number. The same kind of calculator for dogs is{' '}
             <a
               href={crossSiteHref('dog-com', '/tools/dog-calorie-calculator')}
               className="text-brand-primary underline-offset-2 hover:underline"
@@ -273,14 +284,11 @@ export default function CatCalorieCalculatorPage() {
             The formulas behind the estimate
           </h2>
           <p className="mb-4 text-base leading-relaxed text-brand-text-mid">
-            The calculator uses two standard equations. First, Resting Energy Requirement (RER):
-            70 multiplied by the cat&apos;s body weight in kilograms raised to the power of 0.75.
-            RER is the baseline energy a cat needs at rest. Second, Daily Energy Requirement (DER):
-            a feline life-stage factor multiplied by RER. The factors — 1.2 for a neutered indoor
-            adult, 1.4 for intact indoor, 1.4–1.6 for outdoor or highly active cats, 2.5 for
-            kittens, 1.1 for a senior indoor cat, 1.0 for obese-prone indoor, and 0.8 for a
-            supervised weight-loss plan — are the standard values cited in WSAVA Global Nutrition
-            Guidelines and AAHA Nutritional Assessment Guidelines. They are not dog MER factors.
+            Healthy adult maintenance uses the WSAVA July 2020 chart, which cites the 2006 NRC:
+            100 &times; kg^0.67 for a lean adult and 130 &times; kg^0.40 for an obese-prone adult.
+            The other multipliers — 1.2 neutered indoor, 1.4 intact indoor, 1.4 and 1.6 outdoor,
+            2.5 kitten, 1.1 senior, 1.0 obese-prone indoor, and 0.8 weight loss — are planning figures
+            on RER = 70 &times; kg^0.75. They are not rows on that chart, and they are not dog factors.
           </p>
           <p className="mb-4 text-base leading-relaxed text-brand-text-mid">
             For how feeding amount intersects with body condition scoring, use the{' '}
@@ -352,6 +360,7 @@ export default function CatCalorieCalculatorPage() {
           <h2 className="font-display text-lg font-bold text-brand-dark mb-4">Related Tools &amp; Reviews</h2>
           <div className="grid sm:grid-cols-2 gap-3">
             {[
+              { label: 'Daily cat food grams', href: '/tools/cat-food-amount-calculator', note: 'Turn the kcal result into grams from the label' },
               { label: 'Cat Body Condition Score', href: '/tools/cat-body-condition-score', note: 'Calibrate the kcal target to rib feel and waist' },
               { label: 'Cat Age Calculator', href: '/tools/cat-age-calculator', note: 'Match portions to AAFP/AAHA life stage' },
               { label: 'Cat Grimace Scale', href: '/tools/cat-grimace-scale', note: 'Facial pain-watch — not a diagnosis' },

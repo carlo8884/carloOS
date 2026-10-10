@@ -1,7 +1,7 @@
+import { HopDisclosure } from '../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import {
-  AffiliateDisclosure,
+import { PrimaryHop,
   buildMetadata,
   buildBreadcrumbSchema,
   combineSchemas,
@@ -202,13 +202,20 @@ export default function SymptomsHubPage() {
         imageAlt="A veterinarian examining a pet during a check-up"
         primaryCta={{ href: '/find-a-vet', label: 'Find a vet' }}
         secondaryCta={{ href: '/health/emergency-signs', label: 'Emergency signs' }}
+        hop={
+          <>
+            <PrimaryHop href="/go/amazon-brand/digital+pet+thermometer?s=symptoms" label="Search Amazon for a digital pet thermometer" />
+            <HopDisclosure tone="on-dark" siteId="vets-co" href="/go/amazon-brand/digital+pet+thermometer?s=symptoms" />
+          </>
+        }
       />
       <div className="px-container-sm sm:px-container pt-6 pb-2 bg-brand-surface border-b border-brand-border">
         <p className="text-xs text-brand-text-light max-w-3xl leading-relaxed">
           Triage guidance drawn from current{' '}
-          <a href="https://avma.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">AVMA</a>,{' '}
+          <a href="https://www.avma.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">AVMA</a>,{' '}
           <a href="https://aaha.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">AAHA</a>, and{' '}
-          <a href="https://acvim.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">ACVIM</a> guidance.
+          <a href="https://www.acvim.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">ACVIM</a> guidance.
+          This page is not a veterinarian. If your pet may be in danger, contact a vet.
         </p>
       </div>
 
@@ -422,23 +429,10 @@ export default function SymptomsHubPage() {
       </div>
 
       <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
-        
+
         <div className="max-w-content-wide mt-6">
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
         </div>
 
-        {/* Money path — live amazon-brand search hops
-            (laminated pet symptoms triage chart /
-            pet fridge symptoms library card /
-            veterinary symptoms reference handbook).
-            Educational kitchen searches only; no Rx /
-            vaccine / flea hops.
-            ShopCtas hides empty Chewy; never href="#"
-            or PLACEHOLDER. Unused vs tools / insurance /
-            reviews / health / guides / breeds /
-            diagnostics kitchen kits and child
-            pet+first+aid+kit hops.
-            Do not re-open #1165 / what-to-expect. */}
               </section>
     </>
   )

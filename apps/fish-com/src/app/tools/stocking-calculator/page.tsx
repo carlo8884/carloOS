@@ -109,6 +109,13 @@ export default function StockingCalculatorPage() {
   return (
     <ArticleLayout
       siteId="fish-com"
+      heroExtra={
+        <div id="calculator" className="mb-4 [&_.text-brand-primary]:!text-brand-dark">
+          <StockingWaterProvider>
+            <Calculator />
+          </StockingWaterProvider>
+        </div>
+      }
       hero={{
         title: 'Aquarium Stocking Calculator',
         subtitle: 'A rough slim-inch / bioload ceiling from tank volume, surface area, filtration, and aquascape style — not a species count, and not the inch-per-gallon rule.',
@@ -164,15 +171,13 @@ export default function StockingCalculatorPage() {
 
 
         <StockingWaterProvider>
-          <h2 id="calculator">The Calculator</h2>
-          <Calculator />
           <JourneyNext
             siteId="fish-com"
             nextHref="/reviews/best-aquarium-filters"
             nextLabel="Match a filter to this ceiling"
             nextBlurb="The number is a slim-inch bioload ceiling, not a species count. Filtration is one of the inputs, so the filter review is the next page. One search below is the AquaClear 70 hang-on-back filter that review leads with."
             resourceHref="/go/amazon-brand/aquaclear+70+filter?s=tools-stocking-calculator"
-            resourceLabel="Browse AquaClear 70 filters on Amazon →"
+            resourceLabel="Browse AquaClear 70 hang-on-back filters on Amazon →"
           />
           <div className="mb-8">
             <EmailCapture
@@ -250,7 +255,7 @@ Use the calculator on this page for the estimate.
         </ul>
         <p>
           Treat the result as a <strong>ceiling</strong>. Plan around 60–80% of it so parameters stay stable when something goes wrong. Confirm the load with a water test as you add fish.
-        </p>
+         Test kits for that check are compared in the <a href="/reviews/best-water-test-kits" className="text-brand-primary underline">water test kit review</a>.</p>
 
         <h2 id="by-size">Planning Bands by Tank Size</h2>
         <p>

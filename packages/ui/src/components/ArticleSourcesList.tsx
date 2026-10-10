@@ -19,7 +19,12 @@
  *   />
  *
  * Spec: ops/handoffs/2026-06-05-visual-coo-editorial-system-spec.md s0 + s2.5
+ *
+ * A held-partner host stays plain text. The label and publisher remain.
+ * That citation is not a live shop link.
  */
+
+import { liveAnchorHref } from '@carloOS/config/affiliate-hop'
 
 export interface ArticleSource {
   /** Human-readable citation label -- e.g. "WSAVA Vaccination Guidelines 2022" */
@@ -62,7 +67,9 @@ export function ArticleSourcesList({
       </h2>
 
       <ol className="list-none m-0 p-0 space-y-2">
-        {sources.map((source, index) => (
+        {sources.map((source, index) => {
+          const href = source.url ? liveAnchorHref(source.url) : undefined
+          return (
           <li
             key={index}
             className="flex gap-3 text-xs text-brand-text-light leading-relaxed py-1.5 border-b border-brand-border last:border-b-0"
@@ -77,9 +84,9 @@ export function ArticleSourcesList({
 
             {/* Citation content */}
             <span className="flex-1">
-              {source.url ? (
+              {href ? (
                 <a
-                  href={source.url}
+                  href={href}
                   target="_blank"
                   rel="noopener noreferrer nofollow"
                   className="text-brand-text-mid hover:text-brand-primary underline-offset-2 hover:underline"
@@ -96,7 +103,8 @@ export function ArticleSourcesList({
               )}
             </span>
           </li>
-        ))}
+          )
+        })}
       </ol>
     </section>
   )

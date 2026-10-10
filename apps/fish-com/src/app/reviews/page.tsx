@@ -1,6 +1,7 @@
+import { HopDisclosure } from '../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, SchemaScript, combineSchemas, ShopCtas, DirectoryPlacesCta, HubSearch, HubJumpNav } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, SchemaScript, combineSchemas, ShopCtas, DirectoryPlacesCta, HubSearch, HubJumpNav } from '@carloOS/ui'
 import listings from '../../data/directory-listings.json'
 import { HubMasthead } from '../../components/HubMasthead'
 
@@ -143,14 +144,14 @@ const REVIEWS = [
   },
   {
     title: 'Heater Size for a Cold Room',
-    desc: 'The wattage calculator’s winter case, including the 25 percent headroom. The hop is the Eheim Jager.',
+    desc: 'The wattage calculator’s winter case, including the 25 percent headroom. The button below is the Eheim Jager.',
     href: '/reviews/winter-heater-sizing-guide',
     group: 'fish-reviews-heat',
     badge: 'Season',
   },
   {
     title: 'Winter Light Hours for a Planted Tank',
-    desc: 'Shorter days do not change the 6 to 8 hour photoperiod. The hop is the light timer.',
+    desc: 'Shorter days do not change the 6 to 8 hour photoperiod. The button below is the light timer.',
     href: '/reviews/winter-photoperiod-guide',
     group: 'fish-reviews-lighting',
     badge: 'Season',
@@ -232,8 +233,7 @@ export default function FishReviewsPage() {
         {/* AFFILIATE DISCLOSURE */}
         <div className="mt-10 text-center">
           <p className="text-sm text-brand-text-light mb-2">
-            Affiliate disclosure: Fish.com earns commissions on purchases made through our links. Rankings are editorially
-            independent — affiliate relationships have no influence on scores or placement.
+            Rankings are editorially independent — affiliate relationships have no influence on scores or placement.
           </p>
           <Link href="/editorial-standards" className="text-xs font-semibold text-brand-primary no-underline hover:underline">
             Read our editorial standards →
@@ -268,22 +268,9 @@ export default function FishReviewsPage() {
         </h2>
 
         <div className="max-w-content-wide mt-6">
-          <AffiliateDisclosure variant="inline" siteId="fish-com" />
+          <HopDisclosure siteId="fish-com" href="/go/amazon-brand/eheim+aquarium+heater?s=reviews-hub" />
         </div>
 
-        {/* Money path — live amazon-brand search hops
-            (laminated aquarium reviews buyer-guide
-            chart / aquarium rim reviews comparison
-            card / aquarist reviews reference
-            handbook). Educational stand searches only;
-            no Rx / child-SKU hops.
-            ShopCtas hides empty Chewy; never href="#"
-            or PLACEHOLDER. Unused vs tools-hub
-            laminated+aquarium+calculator+tools+chart /
-            aquarium+rim+measurement+card /
-            aquarist+calculator+reference+handbook
-            and child aquaclear+70 / fluval+307 /
-            eheim+jager / hygger+957 hops. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-content-wide">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
             Shop related supplies
@@ -292,7 +279,7 @@ export default function FishReviewsPage() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/eheim+aquarium+heater?s=reviews-hub"
-              amazonLabel="Shop on Amazon"
+              amazonLabel="Browse Eheim aquarium heaters on Amazon →"
             />
           </div>
         </div>

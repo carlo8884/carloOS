@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -8,9 +9,9 @@ import {
   combineSchemas,
   SchemaScript,
   FAQAccordion,
-  AffiliateDisclosure,
   CrossPortfolioCard,
   ShopCtas,
+  PrimaryHop,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
 
@@ -166,53 +167,46 @@ export default function LitterPlannerPage() {
         </div>
       </section>
 
-      <section className="bg-brand-surface px-container-sm sm:px-container py-section">
+      <section className="bg-brand-surface px-container-sm sm:px-container pt-4 pb-section">
         <div className="max-w-5xl">
           <Calculator />
+          <div className="mt-6" data-fold="offer">
+            <PrimaryHop href="/go/amazon-brand/ferret+corner+litter+pan?s=tools-litter-planner" label="Search Amazon for a high-back corner litter pan" />
+            <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/ferret+corner+litter+pan?s=tools-litter-planner" />
+          </div>
         </div>
       </section>
 
-      {/* Money path — live amazon-brand search hops (wood / grass pellet / corner pan).
+      {/* Shop note — live amazon-brand search buttons (wood / grass pellet / corner pan).
           Wood + grass reuse the litter-review queries already on this page.
-          Corner pan reuses the cage-size calculator hop. ShopCtas hides empty
-          Chewy; never href="#" or PLACEHOLDER. */}
+          Corner pan reuses the cage-size calculator button. ShopCtas hides empty
+          Chewy; never href="#" or an empty link. */}
       <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <div className="max-w-2xl">
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/ferret+corner+litter+pan?s=tools-litter-planner" />
           <div className="mt-4 rounded-xl border border-brand-border bg-brand-white p-5">
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
               Shop the litter and pans
             </div>
-            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">Same Amazon hops as the{' '}
+            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">Heat-treated wood pellets or grass pellets are the types on the{' '}
               <Link href="/reviews/best-ferret-litter" className="text-brand-primary underline-offset-2 hover:underline">
                 ferret litter review
               </Link>
-              — heat-treated wood pellets or grass pellets — plus the high-back
-              corner pan hop already used on the{' '}
+              . The button still on this page is the high-back
+              corner pan button already used on the{' '}
               <Link href="/tools/cage-size-calculator" className="text-brand-primary underline-offset-2 hover:underline">
                 cage size calculator
               </Link>
-              . Paper-pellet (Yesterday&apos;s News class) is the default type;
-              shop the review for the criteria. These are category searches, not
-              a ranked product list. Ferret.com earns a commission on qualifying
-              purchases at no extra cost to you.</p>
+              . Paper pellets are the default type on the review. Purina discontinued Yesterday&apos;s News on April 20, 2022.
+              Shop the review for the criteria. These are Amazon searches, not
+              a ranked product list.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/compressed+wood+pellet+litter+heat+treated+non+clumping?s=tools-litter-planner"
-                amazonLabel="Browse wood pellet litter on Amazon →"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/small+animal+grass+pellet+litter+non+clumping?s=tools-litter-planner"
-                amazonLabel="Browse grass pellet litter on Amazon →"
-              />
-              <ShopCtas
                 amazonHref="/go/amazon-brand/ferret+corner+litter+pan?s=tools-litter-planner"
-                amazonLabel="Browse high-back corner pans on Amazon →"
+                amazonLabel="Browse high-back corner ferret litter pans on Amazon →"
               />
           </div>
           </div>
-          <p className="mt-3 text-xs text-brand-text-light">We may earn a commission if you buy through an Amazon link — at no extra cost to you, and we never
-            rank by commission.</p>
         </div>
       </section>
 

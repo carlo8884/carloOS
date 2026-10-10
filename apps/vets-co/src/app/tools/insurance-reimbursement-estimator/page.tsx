@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -9,11 +10,12 @@ import {
   TableOfContents,
   RelatedLinks,
   CrossPortfolioCard,
-  AffiliateDisclosure,
+
   ShopCtas,
 } from '@carloOS/ui'
 import { InsuranceReimbursementEstimator } from '../../../components/visual/InsuranceReimbursementEstimator'
 import { InsuranceWellnessShop } from '../../../components/InsuranceWellnessShop'
+import { liveAnchorHref } from '@carloOS/config/affiliate-hop'
 
 const URL = 'https://vets.co/tools/insurance-reimbursement-estimator'
 
@@ -105,7 +107,7 @@ const FAQS = [
   {
     question: 'What expected annual claims number should I use?',
     answer:
-      'For a typical mid-life healthy dog or cat with no chronic conditions, $0-$1,000 in covered claims per year is common. For a senior pet, a young pet still in the high-injury age band, or a breed prone to expensive conditions (hip dysplasia, dilated cardiomyopathy, brachycephalic syndrome, certain cancers), $2,000-$8,000 per year is realistic. The decision to insure is largely about catastrophic protection — a $10,000-$15,000 surgery or chronic-condition course is the scenario insurance is best at.',
+      'Example: For a typical mid-life healthy dog or cat with no chronic conditions, $0-$1,000 in covered claims per year is common. For a senior pet, a young pet still in the high-injury age band, or a breed prone to expensive conditions (hip dysplasia, dilated cardiomyopathy, brachycephalic syndrome, certain cancers), $2,000-$8,000 per year is realistic. The decision to insure is largely about catastrophic protection — a $10,000-$15,000 surgery or chronic-condition course is the scenario insurance is best at.',
   },
   {
     question: 'Why does the calculator sometimes show a negative net benefit?',
@@ -123,6 +125,8 @@ const articleSchema = buildArticleSchema({
   authorName: 'Vets.co Editorial',
 })
 export default function InsuranceReimbursementEstimatorPage() {
+  const lemonadeHref = '/go/lemonade/estimator?s=insurance-reimbursement-estimator'
+  const lemonadeLink = liveAnchorHref(lemonadeHref)
   return (
     <ArticleLayout
       priceAsOf="2026-05-31"
@@ -196,9 +200,8 @@ export default function InsuranceReimbursementEstimatorPage() {
             as a standalone affiliate box. Trust-first: the primary path is the
             neutral, no-carrier-picked comparison (no disclosure needed); the
             optional quote path is an affiliate /go link, disclosed subtly and
-            framed as "run a live quote," never "buy the best." */}
+            framed as a visit to the carrier page, never "buy the best" or a quote this calculator generates. */}
         <div id="next-step" className="mt-6 rounded-lg border border-brand-border bg-brand-surface p-5 sm:p-6">
-          <AffiliateDisclosure variant="inline" siteId="vets-co" className="mb-4" />
           <p className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary-dark mb-2">Next step</p>
           <p className="text-sm font-semibold text-brand-text-dark mb-1">
             You have an estimate — now check it against real policies.
@@ -213,39 +216,39 @@ export default function InsuranceReimbursementEstimatorPage() {
             >
               Compare plans on published terms →
             </Link>
-            <Link
-              href="/go/lemonade/estimator?s=insurance-reimbursement-estimator"
-              className="inline-block shrink-0 px-5 py-2.5 border border-brand-border text-brand-text-dark text-sm font-semibold rounded hover:border-brand-primary transition-colors text-center"
-              rel="sponsored nofollow"
-            >
-              Run a live quote
-            </Link>
+            {lemonadeLink ? (
+              <Link
+                href={lemonadeLink}
+                className="inline-block shrink-0 px-5 py-2.5 border border-brand-border text-brand-text-dark text-sm font-semibold rounded hover:border-brand-primary transition-colors text-center"
+                rel="sponsored nofollow"
+              >
+                Visit Lemonade Pet
+              </Link>
+            ) : null}
           </div>
+          <HopDisclosure siteId="vets-co" href={lemonadeHref} />
           <p className="mt-3 text-2xs text-brand-text-mid leading-relaxed">
-            Our comparison ranks carriers on published coverage terms — we never accept payment for favorable placement. &ldquo;Run a live quote&rdquo; is an affiliate link; we may earn a commission at no extra cost to you.{' '}
-            <Link href="/disclosure" className="font-semibold text-brand-primary hover:underline no-underline">
-              Disclosure →
-            </Link>
+            Our comparison ranks carriers on published coverage terms — we never accept payment for favorable placement. This calculator does not generate a quote.
           </p>
         </div>
 
         <InsuranceWellnessShop source="tools-insurance-reimbursement-estimator" />
 
-        {/* Money path — complementary amazon-brand search hops (home-care prep
+        {/* Shop note — complementary amazon-brand search buttons (home-care prep
             beside a reimbursement estimate). ShopCtas hides empty Chewy; never
-            href="#" or PLACEHOLDER. Category searches only — not a ranked
+            href="#" or an empty link. Amazon searches only — not a ranked
             list. InsuranceWellnessShop above stays as-is; this block does not
             re-rank Trupanion / Healthy Paws / Embrace. */}
         <div id="insurance-home-care-kit" className="mt-8 mb-8">
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/pet+first+aid+kit?s=tools-insurance-reimbursement-estimator", "/go/amazon-brand/digital+pet+thermometer?s=tools-insurance-reimbursement-estimator", "/go/amazon-brand/digital+pet+scale?s=tools-insurance-reimbursement-estimator", "/go/amazon-brand/pet+recovery+cone?s=tools-insurance-reimbursement-estimator", "/go/amazon-brand/pet+calming+aid?s=tools-insurance-reimbursement-estimator"]} />
           <div className="mt-4 rounded-xl border border-brand-border bg-brand-surface p-5">
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Shop a home-care prep kit
+              Shop these supplies
             </div>
             <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">A first-aid kit, a digital thermometer, a pet scale, a recovery
               cone, and a calming aid are the home-care items owners often keep
               on hand while they run a reimbursement estimate — and after a
-              claim, while a pet recovers. These are Amazon category searches,
+              claim, while a pet recovers. These are Amazon searches,
               not a ranked product list and not a treatment plan.
               Accident-and-illness quotes stay on the{' '}
               <Link
@@ -262,8 +265,7 @@ export default function InsuranceReimbursementEstimatorPage() {
               >
                 telehealth
               </Link>
-              . Vets.co earns a commission on qualifying purchases at no extra
-              cost to you.</p>
+              .</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/pet+first+aid+kit?s=tools-insurance-reimbursement-estimator"
@@ -298,7 +300,7 @@ export default function InsuranceReimbursementEstimatorPage() {
           <li><strong>Net benefit</strong> — money saved (positive) or extra paid (negative) by having insurance at this claim level.</li>
         </ul>
         <p>
-          Move the &quot;expected covered claims&quot; slider to see where the policy breaks even and where it starts paying off. Most policies break even somewhere between $1,500 and $4,000 in annual claims, depending on the deductible and reimbursement %.
+          Move the &quot;expected covered claims&quot; slider to see where the policy breaks even and where it starts paying off. Example: Most policies break even somewhere between $1,500 and $4,000 in annual claims, depending on the deductible and reimbursement %.
         </p>
 
         <h2 id="methodology">Methodology &amp; limits</h2>

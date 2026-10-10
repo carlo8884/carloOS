@@ -1,11 +1,12 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, PrimaryHop, RelatedLinks, ShopCtas, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Parvovirus in Puppies — Signs, Treatment, Prevention | Vets.co", description: "Canine parvovirus is a contagious, life-threatening illness in unvaccinated puppies. Learn the signs, why it is an emergency, and how vaccination prevents it.", path: '/health/parvovirus-in-puppies', type: 'article' })
 const SOURCES = [
   { label: 'AVMA: Canine Parvovirus', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/canine-parvovirus', publisher: 'AVMA' },
-  { label: 'Merck Veterinary Manual: Canine Parvovirus', url: 'https://www.merckvetmanual.com/generalized-conditions/canine-parvovirus/overview-of-canine-parvovirus', publisher: 'Merck Vet Manual' },
+  { label: 'Merck Veterinary Manual: Canine Parvovirus', url: 'https://www.merckvetmanual.com/digestive-system/infectious-diseases-of-the-gastrointestinal-tract-in-small-animals/canine-parvovirus-infection-parvoviral-enteritis-in-dogs', publisher: 'Merck Vet Manual' },
   { label: 'AAHA: Canine Vaccination Guidelines (DA2PP)', url: 'https://www.aaha.org/aaha-guidelines/vaccination-canine-configuration/', publisher: 'AAHA' },
 ]
 const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Parvovirus in Puppies', description: 'Signs, treatment, and prevention of canine parvovirus.', url: 'https://vets.co/health/parvovirus-in-puppies', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-09-05T00:00:00Z' ,
@@ -24,6 +25,10 @@ export default function ParvoPage() {
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="vets-co"
         hero={{ title: 'Parvovirus in Puppies', subtitle: 'Canine parvovirus is one of the most serious infectious diseases a puppy can face — highly contagious, environmentally hardy, and frequently fatal without prompt intensive care. It is also almost entirely preventable through vaccination. Recognizing the signs early and acting immediately gives an affected puppy the best chance of survival.', category: 'Emergency Guide', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '8 min',}}
+        heroHop={<>
+          <PrimaryHop href="/go/amazon-brand/accelerated+hydrogen+peroxide+disinfectant?s=health-parvovirus-in-puppies" label="Search Amazon for accelerated hydrogen peroxide disinfectant" />
+          <HopDisclosure tone="on-dark" siteId="vets-co" href="/go/amazon-brand/accelerated+hydrogen+peroxide+disinfectant?s=health-parvovirus-in-puppies" />
+        </>}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Parvovirus', href: '/health/parvovirus-in-puppies' }]}
         relatedLinks={[
           { title: 'Health Conditions', href: '/health', category: 'Hub' },
@@ -48,6 +53,7 @@ export default function ParvoPage() {
       >
         <div className="carloOS-article">
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-09-05T00:00:00Z" reviewedBy="Editorial team" />
+          <LastUpdated date="2026-10-09" />
 
           <CalloutBox variant="warning" title="Suspected parvo is an emergency">
             A puppy with vomiting, bloody diarrhea, and sudden lethargy needs emergency veterinary care immediately. Parvo progresses fast and is often fatal without prompt intensive treatment. Early hospitalization dramatically improves survival, so do not wait to see if the puppy improves on its own.
@@ -70,17 +76,17 @@ export default function ParvoPage() {
           <p>Household bleach and many grocery cleaners do not reliably inactivate parvovirus on every surface. After a confirmed or suspected case — or when you are cleaning a yard, kennel, or crate a sick puppy used — reach for an accelerated hydrogen peroxide disinfectant labeled for canine parvovirus, put on disposable shoe covers before you walk the contaminated area so you do not track the virus into the house, and use a pump sprayer for outdoor soil, concrete, and run panels the spray bottle cannot cover. These are cleanup tools. They do not treat a sick puppy and they do not replace the vaccine series.</p>
 
           <h2 id="kit">Home cleanup kit</h2>
-          <p>Everyday physical supplies that match the prevention-cleanup copy above — an accelerated hydrogen peroxide disinfectant labeled for canine parvovirus on hard surfaces, disposable shoe covers so you do not walk the virus from a contaminated yard or kennel into the house, and a pump sprayer for outdoor soil and concrete. These are cleanup tools, not treatments. They do not kill the virus in a sick puppy, they do not replace hospitalization or the vaccine series, and they do not make a public park safe. Three-percent first-aid hydrogen peroxide (the chocolate-toxicity hop), enzymatic odor cleaners, grocery bleach, IV fluids, anti-nausea medication, and vaccines stay educational copy only. This page does not claim hands-on testing.</p>
+          <p>Keep these on hand: an accelerated hydrogen peroxide disinfectant labeled for canine parvovirus on hard surfaces, disposable shoe covers so you do not walk the virus from a contaminated yard or kennel into the house, and a pump sprayer for outdoor soil and concrete. These are cleanup tools, not treatments. They do not kill the virus in a sick puppy, they do not replace hospitalization or the vaccine series, and they do not make a public park safe. Three-percent first-aid hydrogen peroxide (the chocolate-toxicity button), enzymatic odor cleaners, grocery bleach, IV fluids, anti-nausea medication, and vaccines stay educational copy only.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/accelerated+hydrogen+peroxide+disinfectant?s=health-parvovirus-in-puppies", "/go/amazon-brand/disposable+shoe+covers?s=health-parvovirus-in-puppies", "/go/amazon-brand/pump+sprayer?s=health-parvovirus-in-puppies"]} />
 
-          {/* Money path — live amazon-brand search hops (AHP
+          {/* Shop note — live amazon-brand search buttons (AHP
               disinfectant / disposable shoe covers / pump
               sprayer). ShopCtas hides empty Chewy; never
-              href="#" or PLACEHOLDER. Category searches only.
+              href="#" or an empty link. Amazon searches only.
               3% first-aid peroxide, enzymatic cleaners,
               vaccines, IV fluids, and anti-nausea Rx are not
-              shoppable hops. */}
+              shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

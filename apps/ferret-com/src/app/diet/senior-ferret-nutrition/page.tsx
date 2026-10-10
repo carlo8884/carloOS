@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, CalloutBox, ReviewCard, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, CalloutBox, ReviewCard, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -39,6 +40,14 @@ export default function SeniorFerretNutritionPage() {
       <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="ferret-com"
+        heroHop={
+          <>
+            <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/wysong+ferret+food?s=senior-ferret-nutrition" />
+            <div className="mb-4" data-primary-hop="true">
+              <a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" data-shop-placement="hero" href="/go/amazon-brand/wysong+ferret+food?s=senior-ferret-nutrition">Browse Wysong ferret food on Amazon →</a>
+            </div>
+          </>
+        }
         hero={{
           title: 'Senior Ferret Nutrition',
           subtitle:
@@ -80,7 +89,7 @@ export default function SeniorFerretNutritionPage() {
             <CrossPortfolioCard currentSite="ferret-com" contentType="diet" variant="sidebar" />
           </>
         }
-      
+
         relatedLinks={[
           { title: 'Ferret Diet Hub', href: '/diet' },
           { title: 'Aging Ferret Care', href: '/health/aging-ferret-care' },
@@ -201,20 +210,7 @@ export default function SeniorFerretNutritionPage() {
             attention.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated ferret senior-protein chart /
-              ferret fridge soak-soften card /
-              mustelid senior-nutrition handbook).
-              Keep existing Wysong review hop.
-              Educational kitchen searches only; no Rx /
-              vaccine / aging hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs diet-hub /
-              raw-feeding / protein-fat kitchen kits. Ferret
-              aging stays held.
-              Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
@@ -223,7 +219,7 @@ export default function SeniorFerretNutritionPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/wysong+ferret+food?s=senior-ferret-nutrition"
-                amazonLabel="Shop on Amazon"
+                amazonLabel="Browse Wysong ferret food on Amazon →"
               />
           </div>
           </div>
@@ -232,30 +228,30 @@ export default function SeniorFerretNutritionPage() {
           <p>
             For a senior ferret that needs protein kept high but finds hard kibble difficult, a high-protein, low-carb diet that soaks down to a soft mash is a practical answer — it preserves the macronutrient profile while easing a sore mouth. Documented-spec selection, not a hands-on test; any diet change for a senior with a diagnosis should be cleared with a veterinarian first.
           </p>
-          <ScoreMethodology />
-          <ReviewCard
+          <ReviewCard quietUntilTag
             id="wysong-epigen-90"
             badge="Senior-Friendly Kibble"
             name="Wysong Epigen 90"
             subtitle="High-protein, low-carb kibble that softens cleanly when soaked"
-            score={9.0}
             description={
-              <p>A starch-free, animal-first kibble with protein high and carbohydrate in the single digits — the profile a healthy senior ferret should stay on rather than the reduced-protein senior formulas borrowed from dog and cat lines. It soaks down to a soft mash in warm water, which makes it manageable for a ferret with worn or missing teeth while keeping protein intake up. Reluctance to eat hard food still warrants a dental exam, not just a softer bowl.</p>
+              <p>The current Wysong Epigen 90 page lists crude protein minimum 63% and crude fat minimum 16%. Those are guaranteed-analysis figures as printed, not a dry-matter conversion. The page markets the food as starch-free. Carbohydrate is not on the guaranteed analysis — check the label. A healthy senior can stay on that bag rather than a reduced-protein senior formula borrowed from dog and cat lines. It soaks down to a soft mash in warm water, which makes it manageable for a ferret with worn or missing teeth while keeping protein intake up. Reluctance to eat hard food still warrants a dental exam, not just a softer bowl.</p>
             }
             specs={[
-              { label: 'Protein (dry-matter)', value: '~60%', highlight: 'good' },
-              { label: 'Carbohydrate', value: 'Single digits', highlight: 'good' },
+              { label: 'Crude protein (as printed)', value: 'Min. 63%', highlight: 'good' },
+              { label: 'Carbohydrate', value: 'Not on the guaranteed analysis. Check the label.' },
               { label: 'Softens when soaked', value: 'Yes', highlight: 'good' },
               { label: 'Distribution', value: 'Direct + specialty pet retail' },
             ]}
             pros={['Keeps senior protein high', 'Softens cleanly for sore mouths', 'Low-carb — suits insulinoma-prone seniors', 'Animal-first panel']}
             cons={['Premium price', 'Not a substitute for a dental exam']}
-            price="$30–50 / 5 lb"
+            price="see current price / 5 lb"
+            priceNote="dated 2026-06-01."
             ctaText="Find Wysong Epigen 90"
             ctaHref="/go/wysong/epigen-90?s=diet-senior-ferret-nutrition"
             ctaAffiliateProgram="wysong"
             ctaAffiliateProduct="epigen-90"
           />
+          <p>The chain-shelf alternative is Marshall Premium. The <a href="/reviews/wysong-vs-marshall-kibble-guide">Wysong versus Marshall guide</a> prints both guaranteed analyses and says to skip Marshall when insulinoma risk is why you are choosing a food.</p>
 
           <h2 id="sources">Sources</h2>
           <p>

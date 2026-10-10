@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleSourcesList, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleSourcesList, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, DropCap, PullQuote, CalloutBox } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
@@ -37,7 +38,8 @@ export default function DogKidneyPage() {
           <div className="bg-brand-dark rounded-lg p-5 mb-4">
             <div className="text-xs uppercase tracking-wide text-brand-primary mb-1 font-bold">Kidney Disease + Insurance</div>
             <h3 className="font-display text-base font-bold text-brand-white mb-2">CKD is a multi-year claim profile</h3>
-            <p className="text-xs text-white/60 mb-3 leading-relaxed">Chronic kidney disease -- Rx kidney diet, fluid therapy, recheck bloodwork every 1-3 months -- runs $4,000-$10,000+ over the staged progression. Insurance with no chronic-claim reset is the right structure.</p>
+            <p className="text-xs text-white/60 mb-3 leading-relaxed">Typical range, not a quote. Costs vary by clinic and region. Ask your veterinarian for an estimate.</p>
+            <p className="text-xs text-white/60 mb-3 leading-relaxed">Chronic kidney disease — a kidney diet, fluid therapy, and recheck bloodwork every 1–3 months — is often a large bill across the staged progression. Ask your veterinarian for an estimate. Insurance with no chronic-claim reset is the right structure.</p>
             <a href={crossSiteHref('vets-co', '/reviews/best-pet-insurance')} className="inline-block text-xs font-bold text-brand-primary hover:underline">Compare pet insurance &rarr;</a>
           </div>
           <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
@@ -96,21 +98,21 @@ export default function DogKidneyPage() {
           <p>Stage 1-2: every 3-6 months -- bloodwork (creatinine, SDMA, phosphorus, BUN, electrolytes), urinalysis with UPC, blood pressure. Stage 3: every 3 months. Stage 4: every 1-3 months depending on stability. Blood pressure monitoring is essential -- systemic hypertension is common in CKD and accelerates both renal and cardiac disease. When blood pressure is persistently elevated, the veterinarian may prescribe antihypertensive therapy (amlodipine is commonly used in dogs). Proteinuria (assessed via UPC ratio) is another parameter the veterinarian evaluates when deciding whether medications to reduce intraglomerular pressure -- such as ACE inhibitors -- are appropriate; these decisions are individualized based on staging, labs, and the dog's overall clinical picture.</p>
 
           <h2 id="kit">CKD hydration kit</h2>
-          <p>Everyday physical supplies that match the hydration copy above — a pet water fountain (moving water encourages more drinking in many dogs) and extra water bowls placed around the house. Hill&apos;s k/d, Royal Canin Renal, Purina NF, intestinal phosphate binders, subcutaneous fluids, amlodipine, and ACE inhibitors stay educational copy only — this page never hops prescription renal diets, brand diet ASINs, binders, fluids, or medications. This page does not claim hands-on testing.</p>
+          <p>Keep these on hand: a pet water fountain (moving water encourages more drinking in many dogs) and extra water bowls placed around the house. Hill&apos;s k/d, Royal Canin Renal, Purina NF, intestinal phosphate binders, subcutaneous fluids, amlodipine, and ACE inhibitors stay educational copy only — this page does not link to prescription renal diets, named diet brands, binders, fluids, or medications.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/dog+water+fountain?s=health-dog-kidney-disease", "/go/amazon-brand/heavy+ceramic+pet+water+bowl?s=health-dog-kidney-disease"]} />
 
-          {/* Money path — live amazon-brand search hops (fountain / extra
+          {/* Shop note — live amazon-brand search buttons (fountain / extra
               water bowls). ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only — reuse live sister
+              or an empty link. Amazon searches only — reuse live sister
               queries from the dog water-intake calculator
               (dog+water+fountain, heavy+ceramic+pet+water+bowl).
               Prescription renal diets, phosphate binders, subcutaneous
               fluids, and antihypertensive / ACE-inhibitor medications
-              are not shoppable hops. */}
+              are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the CKD hydration kit
+              Shop these supplies
             </div>
             <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
@@ -120,7 +122,7 @@ export default function DogKidneyPage() {
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/heavy+ceramic+pet+water+bowl?s=health-dog-kidney-disease"
-                amazonLabel="Browse ceramic pet water bowls on Amazon →"
+                amazonLabel="Browse heavy ceramic water bowls on Amazon →"
               />
             </div>
           </div>
@@ -130,9 +132,10 @@ export default function DogKidneyPage() {
 
           <ArticleSourcesList
             sources={[
+              { label: 'Merck Veterinary Manual: Renal Dysfunction in Dogs and Cats', url: 'https://www.merckvetmanual.com/urinary-system/noninfectious-diseases-of-the-urinary-system-in-small-animals/renal-dysfunction-in-dogs-and-cats', publisher: 'Merck Vet Manual' },
               {
                 label: 'IRIS Staging of CKD -- International Renal Interest Society consensus staging and treatment guidelines',
-                url: 'https://www.iris-kidney.com/guidelines/staging.html',
+                url: 'https://www.iris-kidney.com/iris-staging-system',
                 publisher: 'IRIS (International Renal Interest Society)',
               },
               {
@@ -145,12 +148,7 @@ export default function DogKidneyPage() {
                 url: 'https://onlinelibrary.wiley.com/doi/10.1111/jvim.13398',
                 publisher: 'J Vet Intern Med (Yerramilli et al., 2016)',
               },
-              {
-                label: 'Merck Veterinary Manual -- Chronic Kidney Disease in Small Animals',
-                url: 'https://www.merckvetmanual.com/urinary-system/noninfectious-diseases-of-the-urinary-system-in-small-animals/chronic-kidney-disease-in-small-animals',
-                publisher: 'Merck Veterinary Manual',
-              },
-            ]}
+                          ]}
           />
         </div>
       </ArticleLayout>

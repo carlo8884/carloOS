@@ -1,11 +1,12 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, ArticleLayout, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, QuietPartnerLink, RelatedLinks, buildArticleSchema, buildMetadata, PrimaryHop, ArticleSourcesList, LastUpdated, ComparisonFoot, EmailCapture } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
   title: 'Wysong Epigen 90 vs Marshall Kibble | Ferret.com',
-  description: 'Which ferret kibble to buy: Wysong Epigen 90 for the lower carb load, or Marshall Premium when you need a bag from chain retail.',
+  description: 'Wysong Epigen 90 is marketed as starch-free. Carbohydrate is not on the label. Marshall Premium is the chain-retail bag.',
   path: '/reviews/wysong-vs-marshall-kibble-guide',
   type: 'article',
 })
@@ -13,7 +14,7 @@ export const metadata: Metadata = buildMetadata({
 const schema = buildArticleSchema({
   siteId: 'ferret-com',
   title: 'Wysong Epigen 90 or Marshall Premium',
-  description: 'The kibble review already scores Wysong Epigen 90 for the lower carb load and Marshall Premium for chain retail.',
+  description: 'The kibble review lists Wysong Epigen 90 as starch-free on the current page. Carbohydrate is not on the guaranteed analysis.',
   url: 'https://ferret.com/reviews/wysong-vs-marshall-kibble-guide',
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
@@ -24,11 +25,11 @@ const schema = buildArticleSchema({
 const FAQS = [
   {
     question: 'Which kibble does the diet review mark as the winner?',
-    answer: 'Wysong Epigen 90, scored 9.3 and marked Premium Tier. The review lists about 60% protein and 16% fat on a dry-matter basis, carbohydrate in the single digits, a starch-free panel, and $30–50 for 5 lb.',
+    answer: 'Wysong Epigen 90, marked the top row. The current page lists crude protein minimum 63% and crude fat minimum 16% as printed, not as dry matter. Carbohydrate is not on the guaranteed analysis. The page markets the food as starch-free. The printed price is $30–50 for 5 lb.',
   },
   {
     question: 'When does the review point to Marshall Premium?',
-    answer: 'When you need a ferret-specific bag from chain retail. Marshall scores 8.0. The review lists about 38% protein, 20% fat, carbohydrate in the mid teens, and $15–25 for 4 lb. The panel includes some plant protein.',
+    answer: 'When you need a ferret-specific bag from chain retail. The current page lists crude protein minimum 38% and crude fat minimum 18% as printed, not as dry matter. Carbohydrate is not on the guaranteed analysis. Check the ingredient list. The printed price is $15–25 for 4 lb.',
   },
   {
     question: 'Does this page add a third food?',
@@ -43,12 +44,20 @@ export default function WysongVsMarshallKibbleGuidePage() {
       schema={schema}
       hero={{
         title: 'Wysong Epigen 90 or Marshall Premium',
-        subtitle: 'The lowest commercial carb load and a chain-shelf bag are different purchases. Percentages, prices, and scores below are the ones on the kibble review.',
         category: 'Buyer guide',
         authorName: 'Ferret.com Editorial',
         publishedAt: 'October 2026',
         readTime: '6 min',
       }}
+      heroHop={
+        <>
+          <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">Wysong Epigen 90 is the top kibble because the bag lists 63 percent protein and is marketed as starch-free.</p>
+          <div data-fold="offer">
+          <PrimaryHop href="/go/amazon/B019W9VXZK?s=reviews-wysong-vs-marshall-kibble-guide" label="Check price of Wysong Epigen 90 on Amazon" />
+          <HopDisclosure siteId="ferret-com" href="/go/amazon/B019W9VXZK?s=reviews-wysong-vs-marshall-kibble-guide" />
+        </div>
+        </>
+      }
       breadcrumbs={[
         { name: 'Home', href: '/' },
         { name: 'Reviews', href: '/reviews' },
@@ -64,21 +73,86 @@ export default function WysongVsMarshallKibbleGuidePage() {
           ]}
         />
       }
-     priceAsOf="2026-10-04">
+     priceAsOf="2026-10-07">
       <div className="carloOS-article">
-        <p>The <Link href="/diet/best-ferret-kibble">kibble review</Link> already scores Wysong Epigen 90 as the premium, lower-carb pick and Marshall Premium as the mid-tier bag you are more likely to find in a chain aisle. Those scores are editorial scores, not shopper star ratings. The percentages below are the ones printed in the review.</p>
+          <LastUpdated date="2026-10-10" />
+        <p>The <Link href="/diet/best-ferret-kibble">kibble review</Link> already lists Wysong Epigen 90 as the premium pick the current page markets as starch-free, and Marshall Premium as the mid-tier bag you are more likely to find in a chain aisle. Carbohydrate is not on either guaranteed analysis. The percentages below are the ones printed in the review.</p>
         <h2>What the review says about Wysong</h2>
-        <p>Wysong Epigen 90 is Premium Tier, score 9.3, and the winner. Protein is about 60% on a dry-matter basis. Fat is about 16%. Carbohydrate is in the single digits. The review calls the formula starch-free and animal-first, and it is the default when insulinoma risk is the priority. The printed price is $30–50 for 5 lb. Distribution is direct and specialty retail. The review says it is not always stocked in chain pet aisles.</p>
+        <p>Wysong Epigen 90 is the top row and the winner. The current Wysong Epigen 90 page lists crude protein minimum 63% and crude fat minimum 16%. Those are guaranteed-analysis figures as printed, not a dry-matter conversion. The page markets the food as starch-free. Carbohydrate is not on the guaranteed analysis — check the label. The printed price is $30–50 for 5 lb. Distribution is direct and specialty retail, and it is not always stocked in chain pet aisles.</p>
         <h2>What the review says about Marshall</h2>
-        <p>Marshall Premium Ferret Diet is Mid Tier, score 8.0. Protein is about 38% on a dry-matter basis. Fat is about 20%. Carbohydrate is in the mid teens, which the review marks higher than the premium tier. The formula is ferret-specific, and the panel includes some plant protein. The printed price is $15–25 for 4 lb. Distribution is national chain pet retail.</p>
+        <p>Marshall Premium Ferret Diet is the mid-tier card. The current page lists crude protein minimum 38% and crude fat minimum 18%. Those are guaranteed-analysis figures as printed, not a dry-matter conversion. Carbohydrate is not on the guaranteed analysis — check the label.</p>
+        <p>The printed price is $15–25 for 4 lb. Distribution is national chain pet retail.</p>
         <p>The <Link href="/tools/food-evaluator">food evaluator</Link> is the place to check a guaranteed analysis you already have. Bring a guaranteed analysis you already have. Nothing here adds a new worksheet. The same review has a Carniwhole listing with no retail backup. This guide does not send you there.</p>
         <h2>Who should buy which bag</h2>
-        <p>Buy Wysong Epigen 90 when the lower commercial carb load is the priority and you can order it or find it at a specialty shop. Buy Marshall Premium when you need a ferret-specific bag from a chain aisle tonight, and you have read the higher carbohydrate and the plant protein on that listing. Skip Marshall when insulinoma risk is the reason you are choosing a food.</p>
-        <AffiliateDisclosure variant="inline" siteId="ferret-com" />
-        <p>The link below opens Wysong Epigen 90 from the kibble review. The price there is the retailer's.</p>
-        <p><a className="font-semibold text-brand-primary" href="/go/wysong/epigen-90?s=reviews-wysong-vs-marshall-kibble-guide">Check price of Wysong Epigen 90 at Wysong</a></p>
+        <p>Buy Wysong Epigen 90 when you want the bag the current page markets as starch-free and you can order it or find it at a specialty shop. Carbohydrate is not on that guaranteed analysis — check the label. Buy Marshall Premium when you need a ferret-specific bag from a chain aisle tonight. Carbohydrate is not on that guaranteed analysis either — check the label. Skip Marshall when insulinoma risk is the reason you are choosing a food.</p>
+        <HopDisclosure siteId="ferret-com" href="/go/amazon/B019W9VXZK?s=reviews-wysong-vs-marshall-kibble-guide" />
+        <p>The link below opens the Wysong Epigen 90 product page already used on the diet pages. The price there is the retailer's.</p>
+        <p><a className="font-semibold text-brand-primary" href="/go/amazon/B019W9VXZK?s=reviews-wysong-vs-marshall-kibble-guide">Check price of Wysong Epigen 90 on Amazon →</a></p>
+        <QuietPartnerLink href="/go/wysong/epigen-90?s=reviews-wysong-vs-marshall-kibble-guide" label="Check price of Wysong Epigen 90 at Wysong" />
+        <div className="my-6 max-w-full min-w-0">
+          <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
+            <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+            <thead>
+              <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
+                <th scope="col" className="p-3 font-bold text-brand-dark">Wysong Epigen 90</th>
+                <th scope="col" className="p-3 font-bold text-brand-dark">Marshall Premium</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Role</th>
+                <td className="p-3">Top row, and the winner</td>
+                <td className="p-3">Mid-tier card</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Protein, as printed</th>
+                <td className="p-3">Crude protein minimum 63%</td>
+                <td className="p-3">Crude protein minimum 38%</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Fat, as printed</th>
+                <td className="p-3">Crude fat minimum 16%</td>
+                <td className="p-3">Crude fat minimum 18%</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Carbohydrate</th>
+                <td className="p-3">Not on the guaranteed analysis. Marketed as starch-free</td>
+                <td className="p-3">Not on the guaranteed analysis. Check the ingredient list</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Where you find it</th>
+                <td className="p-3">Direct and specialty retail</td>
+                <td className="p-3">National chain pet retail</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <ComparisonFoot updated="2026-10-10" />
+        <EmailCapture
+          variant="inline"
+          siteId="ferret-com"
+          addressOnly
+          title="Shopping checklist"
+          ctaText="Copy checklist"
+          source="reviews-wysong-vs-marshall-kibble-guide"
+          checklist={[
+            "Those are guaranteed-analysis figures as printed, not a dry-matter conversion.",
+            "Carbohydrate is not on the guaranteed analysis — check the label.",
+            "Distribution is direct and specialty retail, and it is not always stocked in chain pet aisles.",
+            "Buy Marshall Premium when you need a ferret-specific bag from a chain aisle tonight.",
+            "Skip Marshall when insulinoma risk is the reason you are choosing a food.",
+          ]}
+        />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
+                <ArticleSourcesList
+            title="Sources"
+            sources={[
+            { label: "Wysong", url: "https://www.wysong.net/", publisher: "Wysong" },
+            { label: "Marshall Pet Products", url: "https://www.marshallpet.com/", publisher: "Marshall Pet Products" },
+            ]}
+          />
       </div>
     </ArticleLayout>
   )

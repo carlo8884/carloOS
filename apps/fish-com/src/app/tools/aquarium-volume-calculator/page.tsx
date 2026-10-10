@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -9,7 +10,7 @@ import {
   TableOfContents,
   RelatedLinks,
   ArticleByline,
-  AffiliateDisclosure,
+
   ShopCtas,
   JourneyNext,
 } from '@carloOS/ui'
@@ -32,8 +33,8 @@ const schema = buildHowToSchema({
   steps: [
     { name: 'Measure dimensions', text: 'Measure the inside length, width (front to back), and height of the tank in inches or centimeters.' },
     { name: 'Pick the right formula', text: 'For rectangular and cube tanks, multiply length × width × height. For cylinder tanks use π × radius² × height. For hex tanks use 0.866 × width² × height.' },
-    { name: 'Convert cubic inches to gallons', text: 'Divide cubic inches by 231 for US gallons, by 277.42 for UK gallons, or by 61.02 for liters.' },
-    { name: 'Subtract for displacement', text: 'Net water volume is about 90–92% of gross volume after substrate, decor, and freeboard. Use this number for stocking and dosing.' },
+    { name: 'Convert cubic inches to gallons', text: 'Divide cubic inches by 231, the US liquid gallon, for US gallons; by 277.42, the imperial gallon, for UK gallons; or by 61.02 for liters.' },
+    { name: 'Subtract for displacement', text: 'A 90–92% net-water allowance for substrate, decor, and freeboard is a planning figure, not a measured displacement. Use the gross gallons when you need the tank’s stated capacity.' },
   ],
 })
 
@@ -58,7 +59,7 @@ const softwareApplicationSchema = {
     'Supports rectangular, cube, bow-front, hexagonal, and cylinder tank shapes',
     'Outputs US gallons, UK (imperial) gallons, and liters simultaneously',
     'Inputs in inches or centimeters',
-    'Adjustable net-water fill factor (default 92%) for substrate and freeboard',
+    'Adjustable net-water fill factor (default 92%, a planning figure) for substrate and freeboard',
     'Common-size reference table from 5 to 180 US gallons',
   ],
   publisher: {
@@ -103,6 +104,11 @@ export default function VolumeCalculatorPage() {
   return (
     <ArticleLayout
       siteId="fish-com"
+      heroExtra={
+        <div id="calculator" className="mb-4 [&_.text-brand-primary]:!text-brand-dark">
+          <Calculator />
+        </div>
+      }
       hero={{
         title: 'Aquarium Volume Calculator',
         subtitle: 'Convert tank dimensions to US gallons, UK gallons, and liters. Supports rectangular, bow-front, cube, hexagonal, and cylinder tanks with realistic water-fill adjustment.',
@@ -152,20 +158,18 @@ export default function VolumeCalculatorPage() {
         />
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2026-05-01T00:00:00Z" updatedAt="2026-09-03T00:00:00Z" reviewedBy="Editorial team" />
 
-        <h2 id="calculator">The Calculator</h2>
-        <Calculator />
         <JourneyNext
           siteId="fish-com"
           nextHref="/tools/filter-gph-calculator"
           nextLabel="Size the filter from those gallons"
-          nextBlurb="Gross gallons are not a kit. Use the filter GPH calculator next so the hang-on-back or canister is rated 1.5–2× the net volume before you shop the stand. The hop below is the same filter-by-gallon search already on this page."
+          nextBlurb="Gross gallons are not a kit. Use the filter GPH calculator next so the hang-on-back or canister is rated 1.5–2× the net volume before you shop the stand. The button below opens the same filter-by-gallon search on Amazon."
           resourceHref="/go/amazon-brand/aquarium+filter+gallon?s=tools-aquarium-volume"
-          resourceLabel="Shop filters sized to gallons on Amazon →"
+          resourceLabel="Browse aquarium filters on Amazon →"
         />
 
-        {/* Money path — live amazon-brand search hops (glass / acrylic / stand / substrate / heater / filter).
-            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER. */}
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        {/* Shop note — live amazon-brand search buttons (glass / acrylic / stand / substrate / heater / filter).
+            ShopCtas hides empty Chewy; never href="#" or an empty link. */}
+        <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/aquarium+filter+gallon?s=tools-aquarium-volume", "/go/amazon-brand/glass+aquarium+tank+gallon?s=tools-aquarium-volume", "/go/amazon-brand/acrylic+aquarium+tank?s=tools-aquarium-volume", "/go/amazon-brand/aquarium+stand?s=tools-aquarium-volume", "/go/amazon-brand/aquarium+substrate+gravel+bags?s=tools-aquarium-volume", "/go/amazon-brand/aquarium+heater+tank+size?s=tools-aquarium-volume"]} />
         <div id="shop" className="mb-8 rounded-xl border border-brand-border bg-brand-surface p-5">
           <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
             Shop tanks and stands
@@ -173,7 +177,7 @@ export default function VolumeCalculatorPage() {
           <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
             Gallons set the glass or acrylic tank you buy, the stand that can hold the filled
             weight, substrate bag count, heater watts, and a filter rated at or above that
-            volume. Same Amazon hops used with the{' '}
+            volume. The same Amazon buttons go with the{' '}
             <Link
               href="/tools/heater-wattage-calculator"
               className="text-brand-primary no-underline hover:underline"
@@ -194,32 +198,32 @@ export default function VolumeCalculatorPage() {
             >
               aquarium filter review
             </Link>
-            . Fish.com earns a commission on qualifying purchases at no extra cost to you.
+            .
           </p>
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/glass+aquarium+tank+gallon?s=tools-aquarium-volume"
-              amazonLabel="Shop glass tanks by gallon on Amazon →"
+              amazonLabel="Browse glass aquarium tanks on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/acrylic+aquarium+tank?s=tools-aquarium-volume"
-              amazonLabel="Shop acrylic tanks on Amazon →"
+              amazonLabel="Browse acrylic aquarium tanks on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+stand?s=tools-aquarium-volume"
-              amazonLabel="Shop aquarium stands on Amazon →"
+              amazonLabel="Browse aquarium stands on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+substrate+gravel+bags?s=tools-aquarium-volume"
-              amazonLabel="Shop substrate bags sized to volume on Amazon →"
+              amazonLabel="Browse substrate gravel bags on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+heater+tank+size?s=tools-aquarium-volume"
-              amazonLabel="Shop heaters by tank size on Amazon →"
+              amazonLabel="Browse aquarium heaters by tank size on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+filter+gallon?s=tools-aquarium-volume"
-              amazonLabel="Shop filters sized to gallons on Amazon →"
+              amazonLabel="Browse aquarium filters on Amazon →"
             />
           </div>
         </div>
@@ -243,10 +247,8 @@ export default function VolumeCalculatorPage() {
           Manufacturers advertise <strong>gross volume</strong>: pure geometry, no decor, water filled to the rim. Your real tank is a different number.
         </p>
         <p>
-          Substrate alone usually displaces 5–8% of capacity — size the bed with the{' '}
-          <Link href="/tools/substrate-calculator">substrate calculator</Link>. Hardscape (driftwood, rock) can take another 3–5%. And you never fill water to the brim
-          — you leave 1–2 inches of freeboard. Net water volume — what you should use for dosing meds, calculating water changes, and stocking — is
-          usually <strong>88–92% of gross</strong>. Our calculator defaults to 92%, which is realistic for a planted tank with moderate hardscape.
+          Substrate, hardscape, and freeboard all take space out of the advertised gallons. Size the bed with the{' '}
+          <Link href="/tools/substrate-calculator">substrate calculator</Link>. This page does not cite a measured displacement percent. The 90–92% net-water allowance, including the 92% default, is a planning figure.
         </p>
 
         <h2 id="sizes">Common Tank Sizes (Reference)</h2>

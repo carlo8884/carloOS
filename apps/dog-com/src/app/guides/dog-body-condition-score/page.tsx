@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import {
   buildMetadata,
@@ -5,7 +6,6 @@ import {
   FAQAccordion,
   RelatedLinks, CrossPortfolioCard,
   TableOfContents,
-  AffiliateDisclosure,
   ShopCtas,
 } from '@carloOS/ui'
 import {
@@ -98,7 +98,7 @@ export default function DogBodyConditionScorePage() {
           { name: 'Guides', href: '/guides' },
           { name: 'Dog Body Condition Score', href: '/guides/dog-body-condition-score' },
         ]}
-        relatedLinks={[{ title: 'Body Condition Score Tool', href: '/tools/dog-body-condition-score', category: 'Tools' }, { title: 'Dog Guides Hub', href: '/guides', category: 'Hub' }, { title: 'How Much to Feed', href: '/nutrition/how-much-to-feed', category: 'Nutrition' }, { title: 'Weight Management', href: '/nutrition/weight-management', category: 'Nutrition' }, { title: 'Spay/Neuter Timing', href: '/guides/dog-spay-neuter-timing', category: 'Guides' }]}
+        relatedLinks={[{ title: 'Dog Calorie Calculator', href: '/tools/dog-calorie-calculator', category: 'Tools' }, { title: 'Dog Age Calculator', href: '/tools/dog-age-calculator', category: 'Tools' }, { title: 'Body Condition Score Tool', href: '/tools/dog-body-condition-score', category: 'Tools' }, { title: 'Dog Guides Hub', href: '/guides', category: 'Hub' }, { title: 'How Much to Feed', href: '/nutrition/how-much-to-feed', category: 'Nutrition' }, { title: 'Weight Management', href: '/nutrition/weight-management', category: 'Nutrition' }, { title: 'Spay/Neuter Timing', href: '/guides/dog-spay-neuter-timing', category: 'Guides' }]}
         sidebar={
           <>
             <TableOfContents
@@ -118,6 +118,8 @@ export default function DogBodyConditionScorePage() {
             <RelatedLinks
               title="Related Guides"
               links={[
+                { label: 'Dog Age Calculator', href: '/tools/dog-age-calculator' },
+                { label: 'Dog Calorie Calculator', href: '/tools/dog-calorie-calculator' },
                 { label: 'Dog Obesity — Health Risks & Weight Loss Plan', href: '/health/dog-obesity' },
                 { label: 'How Much to Feed', href: '/nutrition/how-much-to-feed' },
                 { label: 'Weight Management Diets', href: '/nutrition/weight-management' },
@@ -138,7 +140,7 @@ export default function DogBodyConditionScorePage() {
             reviewedBy="Editorial team"
           />
 
-          <CalloutBox variant="evidence" title="TL;DR — What you need to know">
+          <CalloutBox variant="evidence" title="What you need to know">
             <p>
               <strong>Use the 1–9 scale.</strong> Aim for BCS 4–5. Check monthly: feel for ribs with light pressure, look down from above for a waist, look from the side for an abdominal tuck. Breed matters — sighthounds look bony at ideal weight, brachycephalics look stocky.
             </p>
@@ -156,6 +158,20 @@ export default function DogBodyConditionScorePage() {
           </p>
           <p>
             The point of BCS is to give owners and clinicians a shared, repeatable language for body composition. &ldquo;She is at a 7&rdquo; communicates more than &ldquo;she has gained a couple of pounds&rdquo; — and it tells you which direction the feeding plan needs to move.
+          </p>
+          <p>
+            Once the score says the feeding plan should change, the{' '}
+            <a href="/tools/dog-calorie-calculator" className="text-brand-primary underline underline-offset-2">
+              Dog Calorie Calculator
+            </a>{' '}
+            turns that direction into a starting daily energy estimate.
+          </p>
+          <p>
+            Age in years is a different number from body condition. The{' '}
+            <a href="/tools/dog-age-calculator" className="text-brand-primary hover:underline">
+              Dog Age Calculator
+            </a>{' '}
+            converts a birthday into human-year equivalents. It does not score fat cover.
           </p>
 
           <h2 id="scale">The 1–9 Scale, Score by Score</h2>
@@ -319,35 +335,17 @@ export default function DogBodyConditionScorePage() {
 
           <h2 id="kit">A Simple BCS Tracking Kit</h2>
           <p>
-            Three everyday physical supplies match the monthly
-            scoring copy above: a soft measuring tape for pets
-            so girth and pelvic-circumference checks stay
-            consistent month to month, a dog body condition
-            score chart poster as the visual 1–9 reference
-            next to the hands-on rib / waist / tuck tests, and
-            single-ingredient lean dog treats so the treat
-            calorie audit is not mixed table scraps. These
-            are household scoring tools, not treatments. They
-            do not replace a veterinarian&rsquo;s BCS, they
-            are not a prescription weight-management diet,
-            and they are not the dog-obesity digital pet
-            scale or slow-feeder bowl. They are not the
-            calorie / ideal-weight / BCS-tool kitchen gram
-            scale, portion-control food scale, or combined
-            measuring-tape-plus-chart hop. They are not the
-            pancreatitis digital pet-food portion scale,
-            low-fat digestive-care food, or lean low-fat
-            treats. This page does not claim hands-on testing.
+            These are household scoring tools, not treatments. They do not replace a veterinarian&rsquo;s BCS, they are not a prescription weight-management diet, and they are not the dog-obesity digital pet scale or slow-feeder bowl. They are not the pancreatitis digital pet-food portion scale, low-fat digestive-care food, or lean low-fat treats.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/soft+measuring+tape+for+pets?s=guides-dog-body-condition-score", "/go/amazon-brand/dog+body+condition+score+chart+poster?s=guides-dog-body-condition-score", "/go/amazon-brand/single+ingredient+lean+dog+treats?s=guides-dog-body-condition-score"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (soft measuring tape for pets / dog body
               condition score chart poster / single-
               ingredient lean dog treats). ShopCtas hides
-              empty Chewy; never href="#" or PLACEHOLDER.
-              Category searches only — unused vs #848–#1039
+              empty Chewy; never href="#" or an empty link.
+              Amazon searches only — unused vs #848–#1039
               digital+pet+scale, slow+feeder+dog+bowl,
               kitchen+gram+scale,
               portion+control+food+scale+dog,
@@ -360,8 +358,8 @@ export default function DogBodyConditionScorePage() {
               stainless+steel+dog+fountain,
               washable+dog+pee+pads, and
               weighted+ceramic+dog+water+bowl.
-              Prescription WM diets and med ASINs are
-              not shoppable hops. */}
+              Prescription WM diets and med product pages are
+              not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
@@ -374,7 +372,7 @@ export default function DogBodyConditionScorePage() {
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/dog+body+condition+score+chart+poster?s=guides-dog-body-condition-score"
-                amazonLabel="Browse dog BCS chart posters on Amazon →"
+                amazonLabel="Browse dog body condition score chart posters on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/single+ingredient+lean+dog+treats?s=guides-dog-body-condition-score"
@@ -387,6 +385,7 @@ export default function DogBodyConditionScorePage() {
           <FAQAccordion
             items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))}
             allowMultiple
+            includeSchema={false}
           />
 
           <CalloutBox variant="info" title="References">

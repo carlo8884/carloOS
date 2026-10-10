@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -9,7 +10,6 @@ import {
   SchemaScript,
   FAQAccordion,
   CrossPortfolioCard,
-  AffiliateDisclosure,
   ShopCtas,
   JourneyNext,
 } from '@carloOS/ui'
@@ -74,7 +74,7 @@ const appSchema = {
     'Three guided checks: rib palpation, waist from above, abdominal tuck from the side',
     'Plain-English interpretation: underweight, ideal, overweight, obese',
     'Next-step guidance with a defer-to-vet note',
-    'Shoppable BCS / weight-management kit via Amazon category searches',
+    'Shop the BCS / weight-management kit via Amazon searches',
   ],
   publisher: { '@type': 'Organization', name: 'Dog.com Editorial', url: 'https://dog.com' },
 }
@@ -161,28 +161,28 @@ export default function DogBodyConditionScorePage() {
             siteId="dog-com"
             nextHref="/tools/dog-ideal-weight-calculator"
             nextLabel="Turn the score into a target weight"
-            nextBlurb="BCS is the rib, waist, and tuck check. The ideal-weight calculator turns that score into a number to aim for — then the vet confirms it. Weigh the bowl; the hop below is the same portion-control scale search already on this page."
+            nextBlurb="BCS is the rib, waist, and tuck check. The ideal-weight calculator turns that score into a number to aim for — then the vet confirms it. Weigh the bowl; The button below opens the same portion-control scale search on Amazon."
             resourceHref="/go/amazon-brand/portion+control+food+scale+dog?s=tools-dog-bcs"
             resourceLabel="Browse portion-control food scales on Amazon →"
           />
         </div>
       </section>
 
-      {/* Money path — live amazon-brand search hops (BCS / weight-management kit).
-          ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-          Category searches only — not a ranked list, not a diagnosis. */}
+      {/* Shop note — live amazon-brand search buttons (BCS / weight-management kit).
+          ShopCtas hides empty Chewy; never href="#" or an empty link.
+          Amazon searches only — not a ranked list, not a diagnosis. */}
       <section id="bcs-weight-kit" className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <div className="max-w-2xl">
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/dog+measuring+tape+body+condition+chart?s=tools-dog-bcs", "/go/amazon-brand/elevated+slow+feeder+bowl+dog?s=tools-dog-bcs", "/go/amazon-brand/portion+control+food+scale+dog?s=tools-dog-bcs", "/go/amazon-brand/puzzle+feeder+dog?s=tools-dog-bcs", "/go/amazon-brand/joint+support+dog+treats?s=tools-dog-bcs", "/go/amazon-brand/weight+management+dog+food?s=tools-dog-bcs"]} />
           <div className="mt-4 rounded-xl border border-brand-border bg-brand-white p-5">
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Shop a BCS / weight-management kit
+              Shop these supplies
             </div>
             <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/dog+measuring+tape+body+condition+chart?s=tools-dog-bcs"
-                amazonLabel="Browse dog measuring tapes and BCS charts on Amazon →"
+                amazonLabel="Browse dog measuring tapes and body condition charts on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/elevated+slow+feeder+bowl+dog?s=tools-dog-bcs"

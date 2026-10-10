@@ -39,10 +39,10 @@ export default function EditorialStandardsPage() {
       <p>Primary sources first. We prefer peer-reviewed veterinary literature, regulatory bodies (FDA CVM, AAFCO, state veterinary boards), recognized professional associations (AVMA, AAHA, WSAVA, AAEP, AEMV), breed and species clubs with documented health programs, and original manufacturer disclosures. Secondary sources are used only as pointers to the primary source.</p>
 
       <h2>Authorship</h2>
-      <p>Articles are bylined by the Horses.com editorial team. Where a specific reviewer or contributor has subject-matter expertise, that credential is named in the byline. We do not impersonate clinical credentials our authors do not hold. “Editorial team” is our default attribution.</p>
+      <p>Articles are bylined by the Horses.com editorial team. There is no veterinarian reviewer. We do not invent clinical credentials. “Editorial team” is the attribution on these pages.</p>
 
       <h2>Fact-Checking</h2>
-      <p>Every article is reviewed against its cited sources before publication. Numbers, dosages, and clinical claims are checked against primary sources. Where evidence is mixed or evolving, we say so rather than overstate certainty.</p>
+      <p>Claims are checked against the sources cited on the page. Prices on money pages carry the date they were checked. There is no veterinarian reviewer, and these pages are not a substitute for a veterinarian. Where evidence is mixed or evolving, we say so rather than overstate certainty.</p>
 
       <h2>Editorial Independence</h2>
       <p>We accept affiliate revenue (see <Link href="/disclosure" className="text-brand-primary no-underline hover:underline">/disclosure</Link>) but never accept paid placement that would alter editorial rankings on a buyer guide. We do not accept gifts of products in exchange for favorable coverage. Rankings on our review pages reflect the editorial team’s judgment based on the criteria stated on each page.</p>

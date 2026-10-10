@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -7,7 +8,7 @@ import {
   TableOfContents,
   CrossPortfolioCard,
   ArticleByline,
-  AffiliateDisclosure,
+
   ShopCtas,
   JourneyNext,
 } from '@carloOS/ui'
@@ -186,23 +187,23 @@ export default function BasicCommandsPage() {
           siteId="dog-com"
           nextHref="/training/puppy-schedule"
           nextLabel="Put the 3–5 minute sessions on the puppy schedule"
-          nextBlurb="Sit through leave-it only stick if they happen every day in a short window. Put those sessions on the puppy schedule before the next walk. The hop below is the same puppy-training-treats search already on this page."
+          nextBlurb="Sit through leave-it only stick if they happen every day in a short window. Put those sessions on the puppy schedule before the next walk. The button below opens the same puppy-training-treats search on Amazon."
           resourceHref="/go/amazon-brand/puppy+training+treats?s=training-basic-commands"
           resourceLabel="Browse puppy training treats on Amazon →"
         />
 
-        {/* Money path — live amazon-brand search hops (five-command kit).
-            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-            Category searches only — not a ranked list. */}
-        <AffiliateDisclosure variant="inline" siteId="dog-com" />
+        {/* Shop note — live amazon-brand search buttons (five-command kit).
+            ShopCtas hides empty Chewy; never href="#" or an empty link.
+            Amazon searches only — not a ranked list. */}
+        <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/puppy+training+treats?s=training-basic-commands", "/go/amazon-brand/dog+training+treat+pouch+belt+clip?s=training-basic-commands", "/go/amazon-brand/dog+training+clicker?s=training-basic-commands", "/go/amazon-brand/dog+long+line+leash?s=training-basic-commands"]} />
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
-            Shop a five-command kit
+            Shop these supplies
           </div>
           <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Soft, pea-sized treats and a belt-clip pouch keep rewards in the
             1–2 second window. Pair them with a clicker (or a verbal &quot;yes&quot;)
-            and a 15–30 foot long line for recall before you go off-leash. Same
-            treat hop used on the{' '}
+            and a 15–30 foot long line for recall before you go off-leash. The same
+            training-treat button is on the{' '}
             <Link
               href="/training/house-training"
               className="text-brand-primary no-underline hover:underline"
@@ -217,8 +218,7 @@ export default function BasicCommandsPage() {
               puppy schedule
             </Link>
             . They are not a ranked product list and they do not replace the
-            teaching order. Dog.com earns a commission on qualifying purchases
-            at no extra cost to you.</p>
+            teaching order.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/puppy+training+treats?s=training-basic-commands"
@@ -226,7 +226,7 @@ export default function BasicCommandsPage() {
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/dog+training+treat+pouch+belt+clip?s=training-basic-commands"
-              amazonLabel="Browse treat pouches on Amazon →"
+              amazonLabel="Browse belt-clip treat pouches on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/dog+training+clicker?s=training-basic-commands"

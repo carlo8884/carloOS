@@ -1,10 +1,11 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import {
   buildMetadata,
   ArticleLayout, CrossPortfolioCard,
   RelatedLinks,
   FAQAccordion,
-  AffiliateDisclosure,
   ShopCtas,
   CrossSiteHelp,
 } from '@carloOS/ui'
@@ -136,8 +137,7 @@ export default function VetsHuskyHealthPage() {
             reviewedBy="Editorial team"
           />
 
-          <h2>TL;DR</h2>
-          <p>
+                    <p>
             The Siberian Husky is a medium (35–60 lb), athletic (12–15 year) working sled-dog breed with a
             distinctive cluster of predispositions: hereditary cataracts, progressive retinal atrophy and
             corneal dystrophy (the three classical Husky eye diseases); zinc-responsive dermatosis (a
@@ -240,7 +240,8 @@ export default function VetsHuskyHealthPage() {
           <BreedHealthCard
             name="Gastric Dilatation-Volvulus (GDV / Bloat)"
             riskLevel="moderate"
-            description="GDV is the most time-critical canine emergency. The stomach fills with gas (dilatation) and then twists on itself (volvulus), cutting off blood supply and causing rapid cardiovascular collapse. Deep-chested breeds are over-represented; the Siberian Husky has a moderately deep chest and appears in the at-risk lists. Without emergency surgery, mortality is near 100% — with timely surgery, mortality is approximately 10–18% in published series."
+            description="GDV is the most time-critical canine emergency. The stomach fills with gas (dilatation) and then twists on itself (volvulus), cutting off blood supply and causing rapid cardiovascular collapse. Deep-chested breeds are over-represented; the Siberian Husky has a moderately deep chest and appears in the at-risk lists. Merck Veterinary Manual lists overall GDV mortality at approximately 25–30%, and 20–45% in treated animals. Cornell reports survival greater than 80 percent with treatment."
+            sourceUrl="https://www.merckvetmanual.com/digestive-system/surgical-problems-of-the-gastrointestinal-tract-in-small-animals/gastric-dilation-and-volvulus-in-small-animals"
             signs={[
               'Unproductive retching — trying to vomit without producing — EMERGENCY',
               'Hard, distended abdomen',
@@ -309,47 +310,24 @@ export default function VetsHuskyHealthPage() {
           </p>
 
           <h2>Pet Insurance for a Siberian Husky</h2>
+          <p>Costs vary by clinic and region. Ask your veterinarian for an estimate.</p>
           <p>
-            Bilateral phacoemulsification for cataracts at a referral hospital commonly runs $3,500–6,000;
-            emergency GDV surgery $5,000–8,000; lifelong oral zinc and dermatology management for
-            zinc-responsive dermatosis $1,000–3,000 across a normal Husky lifespan; lifelong
+            Bilateral cataract surgery at a referral hospital is often a large bill;
+            emergency GDV surgery is often a large emergency bill; lifelong oral zinc and dermatology management for
+            zinc-responsive dermatosis is an ongoing bill across a normal Husky lifespan; lifelong
             levothyroxine for hypothyroidism is comparatively inexpensive. Insurance bought before symptoms
             appear typically covers these as accident/illness with no breed exclusion. See our 2026
             comparison: <a href="/reviews/best-pet-insurance">best pet insurance →</a>.
           </p>
 
-          <h2 id="kit">Siberian-husky-health kit</h2>
+          <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Everyday physical supplies that match the
-            ACVO, GDV, and zinc-dermatosis copy on
-            this page — an academic-year planner so
-            the annual CAER eye exam stays one dated
-            visit covering cataracts, PRA, and
-            corneal dystrophy, an 8-column columnar
-            pad so eyes, hips, thyroid, gastropexy,
-            and platelet review stay one written
-            row, and a newsprint sketch pad so
-            facial crusting sites and PRA furniture-
-            layout cues stay drawn, not guessed.
-            These are educational Siberian-husky-
-            health / paperwork tools, not a ranked
-            product list, not a substitute for
-            veterinary care, and not a treatment.
-            13-column analysis pads, desk blotter
-            pads, and numbered log books already
-            live on chihuahua-health. Two-column
-            ledger pads, 30-day habit-tracker pads,
-            and hourly desk pads already live on
-            yorkshire-terrier-health. This page does
-            not hop zinc supplements, levothyroxine,
-            harnesses, or insurance brands as Amazon
-            searches. This page does not claim
-            hands-on testing.
+            Keep these on hand: an academic-year planner so the annual CAER eye exam stays one dated visit covering cataracts, PRA, and corneal dystrophy, an 8-column columnar pad so eyes, hips, thyroid, gastropexy, and platelet review stay one written row, and a newsprint sketch pad so facial crusting sites and PRA furniture- layout cues stay drawn, not guessed. These are educational Siberian-husky- health / paperwork tools, not a ranked product list, not a substitute for veterinary care, and not a treatment.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/academic+year+planner?s=breeds-husky-health", "/go/amazon-brand/8+column+columnar+pad?s=breeds-husky-health", "/go/amazon-brand/newsprint+sketch+pad?s=breeds-husky-health"]} />
 
-          {/* Money path — live amazon-brand search hops
+          {/* Shop note — live amazon-brand search buttons
               (academic-year planner /
               8-column columnar pad /
               newsprint sketch pad).
@@ -358,9 +336,9 @@ export default function VetsHuskyHealthPage() {
               tools, not a ranked product list, not
               a substitute for veterinary care, no
               Rx / first-aid kit / thermometer /
-              carrier / insurance-brand ASIN hops.
+              carrier / insurance-brand product page buttons.
               ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
+              or an empty link. Amazon searches only —
               unused vs #1181
               13+column+analysis+pad /
               desk+blotter+pad /
@@ -399,14 +377,18 @@ export default function VetsHuskyHealthPage() {
           >
             The Dog.com Siberian Husky page is the owner-side guide for this breed: size, temperament, and everyday care.
           </CrossSiteHelp>
+          <p>Joint supplements for this breed are compared in the <Link href={crossSiteHref('dog-com', '/reviews/best-joint-supplements')}>joint supplement review</Link>.</p>
           <h2>FAQ</h2>
           <FAQAccordion
             items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))}
             allowMultiple
+            includeSchema={false}
           />
 
           <h2>Sources & Further Reading</h2>
           <ul>
+            <li><a href="https://www.merckvetmanual.com/digestive-system/surgical-problems-of-the-gastrointestinal-tract-in-small-animals/gastric-dilation-and-volvulus-in-small-animals" rel="noopener" target="_blank" className="text-brand-primary hover:underline">Merck Veterinary Manual: gastric dilatation-volvulus</a></li>
+            <li><a href="https://www.vet.cornell.edu/departments-centers-and-institutes/riney-canine-health-center/canine-health-topics/gastric-dilatation-volvulus-gdv-or-bloat" rel="noopener" target="_blank" className="text-brand-primary hover:underline">Cornell Riney Canine Health Center: gastric dilatation-volvulus</a></li>
             <li><a href="https://www.shca.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">Siberian Husky Club of America</a> — Health Foundation breed health resources.</li>
             <li><a href="https://www.acvo.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">American College of Veterinary Ophthalmologists (ACVO)</a> — Blue Book of breed-related eye disease.</li>
             <li><a href="https://ofa.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">Orthopedic Foundation for Animals (OFA)</a> — hip and CAER eye registries.</li>

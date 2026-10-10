@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../components/HopDisclosure'
 /**
  * Horses.com Breeds Index — /breeds
  *
@@ -8,7 +9,7 @@
 
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, ShopCtas, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, ShopCtas, CrossPortfolioCard } from '@carloOS/ui'
 import { PremiumMasthead } from '../../components/PremiumMasthead'
 import { Breeds, groupBreedsByType, type BreedType } from '../../data/breeds'
 
@@ -146,21 +147,9 @@ export default function BreedsIndexPage() {
         <h2 id="kit" className="font-display font-bold text-brand-dark text-xl mb-4 max-w-content-wide">Related supplies</h2>
 
         <div className="max-w-content-wide mt-6">
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href="/go/amazon-brand/horse+saddle?s=breeds-hub" />
         </div>
 
-        {/* Money path — live amazon-brand search hops
-            (laminated horse barn breeds profile chart /
-            horse stall-door breeds library card /
-            equine breeds reference handbook).
-            Educational kitchen searches only; no Rx /
-            vaccine / flea hops.
-            ShopCtas hides empty Chewy; never href="#"
-            or PLACEHOLDER. Unused vs tools / reviews /
-            supplements / tack / ownership kitchen kits
-            and child horse+curry+comb / horse+hoof+pick
-            hops.
-            Do not re-open #1165 / what-to-expect. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-content-wide">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
             Shop related supplies
@@ -169,7 +158,7 @@ export default function BreedsIndexPage() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/horse+saddle?s=breeds-hub"
-              amazonLabel="Shop on Amazon"
+              amazonLabel="Browse horse saddles on Amazon →"
             />
           </div>
         </div>

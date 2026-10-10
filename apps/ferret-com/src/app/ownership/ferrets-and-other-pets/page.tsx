@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -78,7 +79,7 @@ export default function FerretsAndOtherPetsPage() {
 
           </>
         }
-      
+
         relatedLinks={[
           { title: 'Ferret Ownership Hub', href: '/ownership' },
           { title: 'Multi-Ferret Introductions', href: '/behavior/multi-ferret-introductions' },
@@ -124,20 +125,8 @@ export default function FerretsAndOtherPetsPage() {
             Whatever the other animal, the principles are the same. Start with scent and barrier introductions before any direct contact, keep the first face-to-face meetings short and closely supervised, ensure the ferret has a safe space to retreat to, and never force interaction. Progress only as fast as both animals stay calm, and accept that some pairings simply will not work — a high-prey-drive dog or a prey animal may never be safe with a ferret, and recognizing that early is part of responsible ownership.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/ferret+litter?s=ferrets-and-other-pets" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated ferret prey-compat chart /
-              ferret fridge intro-barrier card /
-              mustelid cross-species handbook).
-              No existing product hop to keep.
-              Educational kitchen searches only; no Rx /
-              vaccine / aging hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs ownership-hub /
-              kids / fit-check / adoption kitchen kits. Ferret
-              aging stays held.
-              Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
@@ -146,7 +135,7 @@ export default function FerretsAndOtherPetsPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/ferret+litter?s=ferrets-and-other-pets"
-                amazonLabel="Shop on Amazon"
+                amazonLabel="Browse ferret litter on Amazon →"
               />
           </div>
           </div>

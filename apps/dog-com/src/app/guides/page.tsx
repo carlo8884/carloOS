@@ -1,6 +1,7 @@
+import { HopDisclosure } from '../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildArticleSchema, AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, ShopCtas, StockImage, CrossPortfolioCard, DirectoryPlacesCta, HubSearch, HubJumpNav } from '@carloOS/ui'
+import { buildArticleSchema, buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, ShopCtas, StockImage, CrossPortfolioCard, DirectoryPlacesCta, HubSearch, HubJumpNav } from '@carloOS/ui'
 import listings from '../../data/directory-listings.json'
 
 export const metadata: Metadata = buildMetadata({
@@ -16,7 +17,6 @@ const breadcrumbSchema = buildBreadcrumbSchema({
     { name: 'Guides', url: 'https://dog.com/guides' },
   ],
 })
-
 
 const GUIDE_GROUPS = [
   { id: 'dog-guides-foundational', label: 'Foundational', intro: 'Body condition and microchipping.' },
@@ -171,19 +171,9 @@ export default function GuidesHubPage() {
         <h2 id="kit" className="font-display font-bold text-brand-dark text-xl mb-4 max-w-content-wide">Related supplies</h2>
 
         <div className="max-w-content-wide mt-6">
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href="/go/amazon-brand/dog+first+aid+kit?s=guides-hub" />
         </div>
 
-        {/* Money path — live amazon-brand search hops
-            (laminated dog guides section-map chart /
-            dog fridge guides prep card /
-            canine guides reference handbook).
-            Educational kitchen searches only; no Rx hops.
-            ShopCtas hides empty Chewy; never href="#"
-            or PLACEHOLDER. Unused vs tools / reviews /
-            nutrition / training kitchen kits and child
-            wound+care+gauze / digital+pet+thermometer
-            hops. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-content-wide">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
             Shop related supplies
@@ -192,7 +182,7 @@ export default function GuidesHubPage() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/dog+first+aid+kit?s=guides-hub"
-              amazonLabel="Shop on Amazon"
+              amazonLabel="Browse dog first aid kit on Amazon →"
             />
           </div>
         </div>

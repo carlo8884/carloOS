@@ -1,12 +1,13 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { StockImage, buildMetadata, ArticleLayout, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
+import { ShopCtas, StockImage, buildMetadata, ArticleLayout, RelatedLinks, CrossPortfolioCard , ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema, FAQAccordion, SchemaScript, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
 const SOURCES = [
   { label: "Danio margaritatus — Seriously Fish species profile", url: "https://www.seriouslyfish.com/species/danio-margaritatus/", publisher: "Seriously Fish" },
   { label: "Danio margaritatus — FishBase species record", url: "https://www.fishbase.se/summary/Danio-margaritatus.html", publisher: "FishBase" },
-  { label: "Danio margaritatus — IUCN Red List assessment", url: "https://www.iucnredlist.org/species/166497/6220811", publisher: "IUCN Red List" },
+  { label: "Danio margaritatus — IUCN Red List assessment", url: "https://www.iucnredlist.org/species/168409/1186232", publisher: "IUCN Red List" },
   { label: "Roberts, T.R. The Celestial Pearl Danio, a new genus and species of colourful minute Cyprinid fish from Myanmar. Raffles Bulletin of Zoology, 2007.", publisher: "Raffles Bulletin of Zoology" },
 ]
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Celestial Pearl Danio: Tank, Diet & Basics | Fish.com', description: 'Celestial pearl danios are 1-inch jewels for nano tanks. Spotted pattern, stunning males, peaceful community fish. Groups of 8+ required.', path: '/species/celestial-pearl-danio', type: 'article' })
@@ -32,9 +33,9 @@ const FAQS = [
   {
     question: 'What water parameters do celestial pearl danios need?',
     answer:
-      'They prefer soft, slightly acidic water — pH 6.5–7.5 and GH under 10 — with a temperature of 73–79°F. They are robust once established, adapt well to standard community parameters, and tolerate moderate hardness. Dark substrate and dense planting intensify their coloration dramatically.',
+      'They prefer soft, slightly acidic water — pH 6.5–7.5 and GH under 10. Seriously Fish lists Danio margaritatus at 20–26°C, which is 68–79°F (https://www.seriouslyfish.com/species/danio-margaritatus/). They are robust once established, adapt well to standard community parameters, and tolerate moderate hardness. Dark substrate and dense planting intensify their coloration dramatically.',
     answerText:
-      'CPD prefer soft, slightly acidic water: pH 6.5-7.5, GH under 10, and 73-79F. They adapt well to community parameters; dark substrate and dense planting intensify their color.',
+      'CPD prefer soft, slightly acidic water: pH 6.5-7.5, GH under 10. Seriously Fish lists Danio margaritatus at 20–26°C, which is 68–79°F (https://www.seriouslyfish.com/species/danio-margaritatus/). They adapt well to community parameters; dark substrate and dense planting intensify their color.',
   },
   {
     question: 'How can I tell male and female celestial pearl danios apart?',
@@ -66,9 +67,9 @@ export default function CPDPage() {
       sidebar={<>
         <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Quick Stats</div>
-          {[['Scientific name', 'Danio margaritatus'], ['Adult size', '1 inch'], ['Min group', '8 — 10-12 ideal'], ['Temperature', '73–79°F'], ['pH', '6.5–7.5'], ['Min tank', '10 gallons'], ['Breeding', 'Plant spawner — breeds readily']].map(([k, v]) => (
+          {[['Scientific name', 'Danio margaritatus'], ['Adult size', '1 inch'], ['Min group', '8 — 10-12 ideal'], ['Temperature', '68–79°F (https://www.seriouslyfish.com/species/danio-margaritatus/)'], ['pH', '6.5–7.5'], ['Min tank', '10 gallons'], ['Breeding', 'Plant spawner — breeds readily']].map(([k, v]) => (
             <div key={k} className="flex justify-between py-1.5 border-b border-brand-border text-xs last:border-0">
-              <span className="text-brand-text-light">{k}</span><span className="font-bold text-brand-dark text-right max-w-[55%]">{v}</span>
+              <span className="text-brand-text-light">{k}</span><span className="font-bold text-brand-dark text-right max-w-[55%] break-all">{v}</span>
             </div>
           ))}
         </div>
@@ -84,18 +85,18 @@ export default function CPDPage() {
         <p>CPD males are significantly more colorful than females — the iridescent pearlescent spots are vivid and the fin coloration (red-orange with bold black edges) is dramatic, especially during display. Females are rounder-bodied with less intense fin coloration. Males display to each other and to females in tight, circling, fin-flared behavioral exchanges that are one of the most engaging micro-fish behaviors available. In a group of 8-10 with a 3:2 female-to-male ratio, the display is near-constant and makes the tank feel alive.</p>
 
         <h2>Water Requirements and Care</h2>
-        <p>CPD prefer soft, slightly acidic water (pH 6.5–7.5, GH under 10) — similar to other Southeast Asian fish but not as exacting as crystal shrimp. They adapt well to standard community tank parameters and tolerate moderate hardness. Temperature 73–79°F. Not as sensitive as their nano size might suggest — they are robust once established in appropriate conditions. Dark substrate and dense planting intensify their coloration dramatically compared to bare or light-substrate setups.</p>
+        <p>CPD prefer soft, slightly acidic water (pH 6.5–7.5, GH under 10) — similar to other Southeast Asian fish but not as exacting as crystal shrimp. They adapt well to standard community tank parameters and tolerate moderate hardness. Seriously Fish lists Danio margaritatus at 20–26°C, which is 68–79°F (<a className="break-all" href="https://www.seriouslyfish.com/species/danio-margaritatus/">https://www.seriouslyfish.com/species/danio-margaritatus/</a>). Not as sensitive as their nano size might suggest — they are robust once established in appropriate conditions. Dark substrate and dense planting intensify their coloration dramatically compared to bare or light-substrate setups.</p>
 
         <h2>Breeding — Self-Sustaining in Planted Tanks</h2>
         <p>CPD breed readily among Java moss and fine-leaved plants. Eggs are scattered in vegetation; the parents show mild interest in eating eggs but in dense planting, enough survive to produce periodic batches of fry. Fry are tiny and feed initially on infusoria and micro-organisms naturally present in established planted tanks. A 10-gallon planted CPD colony will produce fry periodically without any deliberate breeding intervention — the population self-sustains at a manageable level.</p>
         <h2>Frequently Asked Questions</h2>
         <FAQAccordion items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answerText }))} includeSchema={false} allowMultiple />
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        <HopDisclosure siteId="fish-com" href="/go/amazon-brand/celestial%20pearl%20danio%20tank%20setup?s=species-celestial-pearl-danio" />
           <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Celestial Pearl Danio — Tank Setup</div>
-          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for celestial pearl danio care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
+          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for celestial pearl danio care.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
-            <a href="/go/amazon-brand/celestial%20pearl%20danio%20tank%20setup?s=species-celestial-pearl-danio" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop Celestial Pearl Danio Setup on Amazon →</a>
+            <ShopCtas amazonHref="/go/amazon-brand/celestial%20pearl%20danio%20tank%20setup?s=species-celestial-pearl-danio" amazonLabel="Browse celestial pearl danio tank setups on Amazon →" />
           </div>
         </div>
 

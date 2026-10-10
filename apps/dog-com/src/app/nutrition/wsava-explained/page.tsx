@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, RelatedLinks, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, RelatedLinks, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 
@@ -58,7 +59,7 @@ export default function WSAVAExplainedPage() {
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
 
         <p className="text-lg text-brand-text-mid leading-relaxed italic mb-6">
-          <strong className="not-italic">TL;DR.</strong> The World Small Animal Veterinary Association (WSAVA) does not certify dog foods; it publishes six questions for evaluating the manufacturer behind a food — whether the company employs board-certified nutritionists, runs feeding trials, owns its plants, and supports its formulas with research. Royal Canin, Hill&apos;s, and Purina Pro Plan consistently answer those questions yes.
+          The World Small Animal Veterinary Association (WSAVA) does not certify dog foods; it publishes six questions for evaluating the manufacturer behind a food — whether the company employs board-certified nutritionists, runs feeding trials, owns its plants, and supports its formulas with research. Royal Canin, Hill&apos;s, and Purina Pro Plan consistently answer those questions yes.
         </p>
 
         <h2>What Are WSAVA Guidelines?</h2>
@@ -95,19 +96,8 @@ export default function WSAVAExplainedPage() {
         <h2>The Bottom Line</h2>
         <p>When choosing a dog food: start with the manufacturer, not the bag. Ask the WSAVA questions or verify that the brand employs board-certified nutritionists and conducts AAFCO feeding trials. Then look at the specific formula for your dog&apos;s life stage and any health conditions. See our <a href="/reviews/best-dry-dog-food">complete dog food rankings</a> for the top options evaluated against WSAVA criteria.</p>
 
-        <AffiliateDisclosure variant="inline" siteId="dog-com" />
+        <HopDisclosure siteId="dog-com" href="/go/amazon-brand/royal+canin+dog+food?s=nutrition-wsava" />
 
-        {/* Money path — live amazon-brand search hops
-            (laminated dog WSAVA-six chart /
-            dog fridge manufacturer-first card /
-            canine DACVN-staff handbook).
-            No existing product hop to keep.
-            Educational kitchen searches only; no Rx /
-            vaccine / flea / heartworm / nsaid hops.
-            ShopCtas hides empty Chewy; never href="#"
-            or PLACEHOLDER. Unused vs reading-food-labels /
-            dog-treats-guide / weight-management hops.
-            Do not re-open #1165 / what-to-expect. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
             Shop related supplies
@@ -116,7 +106,7 @@ export default function WSAVAExplainedPage() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/royal+canin+dog+food?s=nutrition-wsava"
-              amazonLabel="Shop on Amazon"
+              amazonLabel="Browse Royal Canin dog food on Amazon →"
             />
           </div>
         </div>

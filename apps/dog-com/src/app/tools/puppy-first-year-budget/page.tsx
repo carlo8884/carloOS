@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -9,7 +10,6 @@ import {
   SchemaScript,
   FAQAccordion,
   CrossSiteHelp,
-  AffiliateDisclosure,
   CrossPortfolioCard,
   ShopCtas,
   JourneyNext,
@@ -157,35 +157,35 @@ export default function PuppyFirstYearBudgetPage() {
         <span>›</span>
         <span className="text-brand-text-mid font-medium">Puppy First-Year Budget</span>
       </nav>
-      <section className="bg-brand-surface px-container-sm sm:px-container py-section">
+      <section className="bg-brand-surface px-container-sm sm:px-container pt-3 pb-section">
         <div className="max-w-5xl">
           <Calculator />
           <JourneyNext
             siteId="dog-com"
             nextHref="/tools/dog-crate-size-calculator"
             nextLabel="Size the crate once for adult length"
-            nextBlurb="The budget is a planning range. The crate is usually the largest gear line — buy adult length once and use a divider. The hop below is the same wire-crate-with-divider search already on this page."
+            nextBlurb="The budget is a planning range. The crate is usually the largest gear line — buy adult length once and use a divider. The button below opens the same wire-crate-with-divider search on Amazon."
             resourceHref="/go/amazon-brand/wire+dog+crate+with+divider+panel?s=tools-puppy-first-year-budget"
-            resourceLabel="Browse crates on Amazon →"
+            resourceLabel="Browse wire crates with a divider panel on Amazon →"
           />
         </div>
       </section>
 
-      {/* Money path — live amazon-brand search hops (first-year kit).
-          ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-          Category searches only — not a ranked list, not a quote. */}
+      {/* Shop note — live amazon-brand search buttons (first-year kit).
+          ShopCtas hides empty Chewy; never href="#" or an empty link.
+          Amazon searches only — not a ranked list, not a quote. */}
       <section id="puppy-budget-kit" className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <div className="max-w-2xl">
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/wire+dog+crate+with+divider+panel?s=tools-puppy-first-year-budget", "/go/amazon-brand/puppy+food?s=tools-puppy-first-year-budget", "/go/amazon-brand/digital+gram+scale+kitchen+pet?s=tools-puppy-first-year-budget", "/go/amazon-brand/puppy+training+pads?s=tools-puppy-first-year-budget"]} />
           <div className="mt-4 rounded-xl border border-brand-border bg-brand-white p-5">
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Shop a first-year puppy kit
+              Shop these supplies
             </div>
             <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/wire+dog+crate+with+divider+panel?s=tools-puppy-first-year-budget"
-                amazonLabel="Browse crates on Amazon →"
+                amazonLabel="Browse wire crates with a divider panel on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/puppy+food?s=tools-puppy-first-year-budget"
@@ -193,7 +193,7 @@ export default function PuppyFirstYearBudgetPage() {
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/digital+gram+scale+kitchen+pet?s=tools-puppy-first-year-budget"
-                amazonLabel="Browse kitchen / pet scales on Amazon →"
+                amazonLabel="Browse digital gram scales on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/puppy+training+pads?s=tools-puppy-first-year-budget"
@@ -231,7 +231,7 @@ export default function PuppyFirstYearBudgetPage() {
             it before the first birthday. Buying an adult-size crate once (with a divider) is cheaper
             than replacing crates as the puppy grows. Spay or neuter timing is a veterinary decision —
             budget for it in year one unless your veterinarian has a documented reason to wait.
-          </p>
+           <a href="/reviews/best-dog-crates">The crate guide</a> compares that adult-size crate.</p>
           <p className="mb-4 text-base leading-relaxed text-brand-text-mid">
             The{' '}
             <Link href="/breeds" className="text-brand-primary underline-offset-2 hover:underline">
