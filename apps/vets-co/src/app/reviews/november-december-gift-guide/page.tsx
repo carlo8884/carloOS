@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import Link from 'next/link'
-import { ArticleLayout, BelowFoldPhoto, ComparisonFoot, FAQAccordion, RelatedLinks, TableShopLink, buildArticleSchema, buildFAQSchema, buildMetadata, combineSchemas, PrimaryHop, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
+import { ArticleLayout, BelowFoldPhoto, ComparisonFoot, FAQAccordion, RelatedLinks, TableShopLink, buildArticleSchema, buildFAQSchema, buildMetadata, combineSchemas, PrimaryHop, ArticleSourcesList, LastUpdated, EmailCapture } from '@carloOS/ui'
 
 const PATH = '/reviews/november-december-gift-guide'
 const SOURCE = 'reviews-november-december-gift-guide'
@@ -86,7 +86,7 @@ export default function NovemberDecemberGiftGuidePage() {
       priceAsOf="2026-10-07"
     >
       <div className="carloOS-article">
-          <LastUpdated date="2026-10-09" />
+          <LastUpdated date="2026-10-10" />
         <p>The costs to plan in November and December are the insurance and visit bands already printed here. The <Link href="/reviews">reviews hub</Link> is where those cards live. This page groups the printed bands so a reader can see a monthly chat fee next to a monthly premium and a per-visit video fee. It does not enroll anyone, and it does not turn a band into a quote.</p>
         <p>Holiday leftovers and holiday emergency bills already have their own pages. Fatty leftovers stay on the <Link href="/reviews/holiday-leftovers-low-fat-guide">leftovers guide</Link>. Why a holiday emergency visit costs more stays on the <Link href="/reviews/holiday-emergency-visit-guide">emergency-visit guide</Link>. None of the links below is a substitute for an in-person emergency.</p>
         <h2>Printed monthly bands</h2>
@@ -133,7 +133,22 @@ export default function NovemberDecemberGiftGuidePage() {
             </tbody>
           </table>
         </div>
-        <ComparisonFoot updated="2026-10-09" />
+        <ComparisonFoot updated="2026-10-10" />
+        <EmailCapture
+          variant="inline"
+          siteId="vets-co"
+          addressOnly
+          title="Shopping checklist"
+          ctaText="Copy checklist"
+          source="reviews-november-december-gift-guide"
+          checklist={[
+            "Open the AskVet card when the question is a chat subscription.",
+            "Open Vetster when the question is a video visit paid per consult.",
+            "Open Healthy Paws, Embrace, or Trupanion when the question is an accident-and-illness policy.",
+            "Read the waiting period and the deductible on the insurance review before you treat any of those bands as the price you will pay.",
+            "A quote still depends on the pet and the zip code.",
+          ]}
+        />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} includeSchema={false} />
         <BelowFoldPhoto siteId="vets-co" />

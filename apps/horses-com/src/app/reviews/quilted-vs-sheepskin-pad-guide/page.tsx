@@ -1,7 +1,7 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, QuietPartnerLink, RelatedLinks, buildArticleSchema, buildMetadata, PrimaryHop, ArticleSourcesList, LastUpdated, ComparisonFoot } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, QuietPartnerLink, RelatedLinks, buildArticleSchema, buildMetadata, PrimaryHop, ArticleSourcesList, LastUpdated, ComparisonFoot, EmailCapture } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
@@ -76,7 +76,7 @@ export default function QuiltedVsSheepskinPadGuidePage() {
       }
     >
       <div className="carloOS-article">
-          <LastUpdated date="2026-10-09" />
+          <LastUpdated date="2026-10-10" />
         <p>The <Link href="/tack/saddle-pads">saddle-pad review</Link> already lists a quilted cotton all-purpose pad for everyday English schooling and a sheepskin half pad for friction under a saddle that fits. Neither pad corrects saddle fit.</p>
         <h2>What the review says about the quilted pad</h2>
         <p>The Quilted Cotton All-Purpose Pad is Everyday English and the winner. Material is quilted cotton. Care is machine washable. The printed price is $20–45. The review calls it inexpensive enough to keep several in rotation so a clean, dry pad is available. Cons: no structural fit correction, and it wears faster than wool or felt.</p>
@@ -122,7 +122,21 @@ export default function QuiltedVsSheepskinPadGuidePage() {
             </tbody>
           </table>
         </div>
-        <ComparisonFoot updated="2026-10-09" />
+        <ComparisonFoot updated="2026-10-10" />
+        <EmailCapture
+          variant="inline"
+          siteId="horses-com"
+          addressOnly
+          title="Shopping checklist"
+          ctaText="Copy checklist"
+          source="reviews-quilted-vs-sheepskin-pad-guide"
+          checklist={[
+            "Neither pad corrects saddle fit.",
+            "Buy the quilted cotton pad for daily schooling under a saddle that already fits, and keep more than one so a dry pad is always available.",
+            "Buy the sheepskin half pad when friction or wicking at the edges is the extra job, still under a fitting saddle.",
+            "If the saddle is the wrong width, the page sends you to a saddle fitter, not to a thicker pad.",
+          ]}
+        />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
                 <ArticleSourcesList
