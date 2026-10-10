@@ -19,6 +19,7 @@ export default function Page() {
       <SchemaScript schema={schema} />
       <ArticleLayout siteId="vets-co"
         priceAsOf="2026-06-11"
+        heroHop={<a href="/reviews/best-pet-insurance" className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline mb-5">Best pet insurance comparison</a>}
         hero={{ title: 'Are There Multi-Pet Pet Insurance Discounts?', subtitle: 'Most insurers offer a multi-pet discount of roughly 5–10% per additional pet on the same account. It is a real but modest saving — coverage terms, limits, and claim handling matter far more than the discount when you insure more than one pet.', category: 'Insurance Q&A', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '5 min' }}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Insurance', href: '/insurance' }, { name: 'Questions', href: '/insurance/questions' }, { name: 'Multi-Pet Discounts', href: '/insurance/questions/multi-pet-discounts' }]}
         sidebar={<>
@@ -37,7 +38,7 @@ export default function Page() {
       >
         <div className="carloOS-article">
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-11T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-08" />
+          <LastUpdated date="2026-10-10" />
 
           <CalloutBox variant="info" title="The short answer">
             Most insurers offer a <strong>multi-pet discount of roughly 5–10%</strong> per additional pet on the same account. It is a genuine but modest saving, and it should not be the deciding factor — coverage terms, annual limits, and claim handling matter far more than the discount.

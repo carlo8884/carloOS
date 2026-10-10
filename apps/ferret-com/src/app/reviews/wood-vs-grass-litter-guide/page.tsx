@@ -41,6 +41,7 @@ export default function WoodVsGrassLitterGuidePage() {
     <ArticleLayout
       siteId="ferret-com"
       schema={schema}
+      heroHop={<a href="/reviews/best-ferret-litter" className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline mb-5">Litter review</a>}
       hero={{
         title: 'Wood pellets or grass pellets',
         subtitle: 'Heat-treated wood when odor is the priority, or a softer grass pellet. Dust, odor, and the wood caveat below are the ones on the litter review.',
@@ -66,7 +67,7 @@ export default function WoodVsGrassLitterGuidePage() {
       }
     >
       <div className="carloOS-article">
-          <LastUpdated date="2026-10-09" />
+          <LastUpdated date="2026-10-10" />
         <EmailCapture
           variant="inline"
           siteId="ferret-com"
@@ -136,7 +137,7 @@ export default function WoodVsGrassLitterGuidePage() {
             </tbody>
           </table>
         </div>
-        <ComparisonFoot updated="2026-10-09" />
+        <ComparisonFoot updated="2026-10-10" />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
       </div>
