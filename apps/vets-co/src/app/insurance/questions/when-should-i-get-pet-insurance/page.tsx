@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, LastUpdated } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, LastUpdated, ComparisonFoot } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 
@@ -55,6 +55,34 @@ export default function Page() {
 
           <h2>Enrollment-Age Limits and Senior Surcharges</h2>
           <p>Some insurers set a maximum enrollment age or apply senior surcharges to pets enrolled later in life, particularly for certain breeds. Coverage purchased while a pet is young usually continues into old age even as premiums rise, whereas trying to start a brand-new policy on a senior pet can mean higher prices, more exclusions from an already-populated record, or, occasionally, limited options. This is another reason the enroll-early decision compounds: it is easier and cheaper to maintain continuous coverage than to begin it late.</p>
+          <div className="my-6 max-w-full min-w-0">
+            <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
+              <caption className="text-left font-semibold text-brand-dark p-3">Timing, from the sentences on this page</caption>
+              <thead>
+                <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                  <th scope="col" className="p-3 font-bold text-brand-dark">When</th>
+                  <th scope="col" className="p-3 font-bold text-brand-dark">What this page says</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Young and healthy</th>
+                  <td className="p-3">A clean record covers the widest range of future problems. The premium starts lower and stays continuous into the senior years</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Waiting period</th>
+                  <td className="p-3">Coverage is not instant. Commonly a few days for accidents, around fourteen days for illness, and often months for orthopedic conditions. Anything that arises in the gap is excluded</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">A new policy late</th>
+                  <td className="p-3">Higher prices, more exclusions from a populated record, or limited options. Maintaining continuous coverage is easier than beginning it late</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <ComparisonFoot updated="2026-10-10" />
+          <h2>Who should start when</h2>
+          <p>Start while the pet is young and healthy. Enroll before a worrying symptom, because a condition that shows up in the waiting period is not paid. Do not wait to open a first policy on a senior record.</p>
 
           <h2 id="next-steps">Next Steps</h2>
           <p>If your pet is young and healthy, the highest-value move is simply to start coverage soon. Pair that with a clear-eyed read on whether the protection fits your finances.</p>

@@ -1,7 +1,7 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import { HubMoneyLinks } from '@carloOS/ui'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas, StockImage } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas, StockImage, ComparisonFoot, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -107,6 +107,7 @@ export default function BitsGuidePage() {
             updatedAt="2026-09-06"
             reviewedBy="Editorial team"
           />
+          <LastUpdated date="2026-10-10" />
 
           <h2 id="how">How a Bit Works</h2>
           <p>A bit communicates through pressure on sensitive structures of the head: the bars (the toothless gum between incisors and molars where the mouthpiece rests), the tongue, the lips and corners of the mouth, and -- with leverage bits -- the poll and chin groove. Rein pressure is transmitted through the bit to these points, and the horse learns to respond by yielding to and seeking relief from that pressure. Because these structures are sensitive, the bit must be matched to the horse and used with educated hands.</p>
@@ -115,6 +116,33 @@ export default function BitsGuidePage() {
 
           <h2 id="families">Snaffle vs Curb</h2>
           <p>All bits fall broadly into two action families. A snaffle applies direct pressure -- the rein pressure equals the pressure on the mouth, acting mainly on the corners of the lips, tongue, and bars, with no leverage. A curb is a leverage bit: it has shanks (cheekpieces) and usually a curb chain, so rein pressure is multiplied and acts on the bars, tongue, poll, and chin groove. Longer shanks increase leverage. A double bridle carries both a small snaffle (bradoon) and a curb together for refined communication in advanced dressage.</p>
+          <div className="my-6 max-w-full min-w-0">
+            <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
+              <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+              <thead>
+                <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Snaffle</th>
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Curb</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Action</th>
+                  <td className="p-3">Direct pressure. Rein pressure equals the pressure on the mouth. No leverage</td>
+                  <td className="p-3">Leverage. Shanks and usually a curb chain multiply rein pressure. Longer shanks increase it</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Where it acts</th>
+                  <td className="p-3">Corners of the lips, tongue, and bars</td>
+                  <td className="p-3">Bars, tongue, poll, and chin groove</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <ComparisonFoot updated="2026-10-10" />
+          <h2>Who should use which bit</h2>
+          <p>Use a snaffle when the cue should equal the rein. Use a curb when the trained communication is leverage on the poll and chin as well as the mouth. A double bridle carries both, for advanced dressage. Match the bit to the horse and to educated hands.</p>
 
           <h2 id="mouthpieces">Mouthpieces</h2>
           <ul>

@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas, ComparisonFoot, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -108,6 +108,7 @@ export default function DewormingProgramPage() {
             updatedAt="2026-09-05"
             reviewedBy="Editorial team"
           />
+          <LastUpdated date="2026-10-10" />
 
           <h2 id="old">Why the Old Approach Failed</h2>
           <p>For decades owners rotated dewormers on a fixed calendar regardless of whether a horse carried a meaningful worm burden. This blanket dosing exposed parasite populations to drugs constantly, selecting hard for resistance, while treating many horses that did not need it. With no new classes of equine dewormer on the horizon, the parasitology community -- led by the AAEP guidelines -- shifted to a targeted, evidence-led model.</p>
@@ -117,6 +118,33 @@ export default function DewormingProgramPage() {
 
           <h2 id="shedders">High vs Low Shedders</h2>
           <p>A consistent finding across studies is that a minority of horses shed the majority of eggs. Roughly speaking, a small fraction of horses are high shedders responsible for most pasture contamination, while many are low shedders that need only minimal treatment. Identifying high shedders by FEC lets you target dewormers where they matter, slowing resistance and cutting unnecessary dosing.</p>
+          <div className="my-6 max-w-full min-w-0">
+            <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
+              <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+              <thead>
+                <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
+                  <th scope="col" className="p-3 font-bold text-brand-dark">High shedder</th>
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Low shedder</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Who they are</th>
+                  <td className="p-3">A small fraction of horses, responsible for most pasture contamination</td>
+                  <td className="p-3">Many horses, who need only minimal treatment</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">What to do</th>
+                  <td className="p-3">Identify them with a fecal egg count and target the dewormer there</td>
+                  <td className="p-3">Skip the unnecessary dose. That is how resistance slows</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <ComparisonFoot updated="2026-10-10" />
+          <h2>Who should be treated which way</h2>
+          <p>Treat the high shedder the fecal egg count identifies. Give the low shedder only minimal treatment. Do not rotate dewormers on a fixed calendar for horses that do not need it.</p>
 
           <h2 id="parasites">Key Parasites</h2>
           <ul>
