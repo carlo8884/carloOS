@@ -187,6 +187,23 @@ describe('resolveAffiliateHop', () => {
       shopCtaLabel('/go/chewy/connect?s=telehealth', 'Check Chewy Connect price on Chewy', {}),
       'Check Chewy Connect price on Chewy',
     )
+    const paper = '/go/chewy-brand/recycled+paper+pellet+litter+non+clumping?s=reviews-best-ferret-litter'
+    assert.equal(
+      shopCtaLabel(paper, 'Open the recycled paper-pellet search.', {}),
+      'Open the recycled paper-pellet search on Amazon.',
+    )
+    assert.equal(
+      shopCtaLabel(paper, 'Open the recycled paper-pellet search.', { AFF_CHEWY_BRAND_TAG: 'live' }),
+      'Open the recycled paper-pellet search on Chewy.',
+    )
+    assert.equal(
+      shopCtaLabel('/go/amazon-brand/ferret+hammock?s=care-bedding-and-litter-types', 'Ferret hammock →', {}),
+      'Ferret hammock on Amazon →',
+    )
+    assert.equal(
+      shopCtaLabel('/go/trupanion/home?s=reviews-best-pet-insurance', 'Get a Trupanion quote →', {}),
+      'Get a Trupanion quote →',
+    )
   })
 
   it('keeps Dog insurance quotes on the Vets.co review', () => {
