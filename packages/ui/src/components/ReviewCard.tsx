@@ -247,53 +247,55 @@ export function ReviewCard({
 
       {/* Footer: price + CTA */}
       {(price || href || held || quiet || visit) && (
-        <div className="flex flex-col items-stretch sm:flex-row sm:items-end sm:justify-between pt-5 border-t border-brand-border mt-2 gap-4 min-w-0">
-          {price && (
-            <div>
-              <div className="text-2xs uppercase tracking-wide text-brand-text-light mb-1">
-                {priceLabel}
-              </div>
-              <div className="font-display text-xl font-bold text-brand-dark">{price}</div>
-              {priceNote && (
-                <div className="text-2xs text-brand-text-light mt-1">{priceNote}</div>
-              )}
-            </div>
-          )}
-
-          {quiet ? (
-            <span className="text-sm leading-relaxed text-brand-text-light">
-              {ctaText.replace(/\s*→\s*$/, '').trim()} — partner ID needed
-            </span>
-          ) : visit ? (
-            <a
-              href={visit.href}
-              className="inline-flex items-center justify-center text-sm font-bold text-brand-primary underline underline-offset-2 max-w-full text-left whitespace-normal"
-            >
-              {visit.label}
-            </a>
-          ) : held ? (
-            <HeldQuoteNext />
-          ) : href ? (
-            <a
-              href={href}
-              data-shop-placement={!editorial && (href.startsWith('/go/') || href.startsWith('http')) ? 'card' : undefined}
-              className="inline-flex items-center justify-center bg-brand-primary text-brand-white text-sm font-bold px-6 py-3 rounded no-underline hover:bg-brand-primary-light transition-colors duration-200 max-w-full text-center whitespace-normal"
-              data-program={editorial ? undefined : program}
-              data-product={editorial ? undefined : ctaAffiliateProduct}
-              rel={editorial ? undefined : 'nofollow sponsored'}
-              target={editorial ? undefined : '_blank'}
-            >
-              {label}
-            </a>
+        <div className="pt-5 border-t border-brand-border mt-2 min-w-0">
+          {href && !editorial && href.startsWith('/go/') && hopCommissionReady(href) ? (
+            <p className="text-2xs text-brand-text-light mb-2" data-affiliate-disclosure="hop">
+              {/\/go\/amazon/.test(href)
+                ? 'As an Amazon Associate we earn from qualifying purchases.'
+                : 'We earn a commission if you purchase — no extra cost to you.'}
+            </p>
           ) : null}
-        </div>
-      )}
+          <div className="flex flex-col items-stretch sm:flex-row sm:items-end sm:justify-between gap-4 min-w-0">
+            {price && (
+              <div>
+                <div className="text-2xs uppercase tracking-wide text-brand-text-light mb-1">
+                  {priceLabel}
+                </div>
+                <div className="font-display text-xl font-bold text-brand-dark">{price}</div>
+                {priceNote && (
+                  <div className="text-2xs text-brand-text-light mt-1">{priceNote}</div>
+                )}
+              </div>
+            )}
 
-      {/* Affiliate note — suppressed for editorial (non-commercial) CTAs, e.g. clinical products */}
-      {href && !editorial && href.startsWith('/go/') && hopCommissionReady(href) && (
-        <p className="text-2xs text-brand-text-light mt-2">
-          We earn a commission if you purchase — no extra cost to you.
-        </p>
+            {quiet ? (
+              <span className="text-sm leading-relaxed text-brand-text-light">
+                {ctaText.replace(/\s*→\s*$/, '').trim()} — partner ID needed
+              </span>
+            ) : visit ? (
+              <a
+                href={visit.href}
+                className="inline-flex items-center justify-center text-sm font-bold text-brand-primary underline underline-offset-2 max-w-full text-left whitespace-normal"
+              >
+                {visit.label}
+              </a>
+            ) : held ? (
+              <HeldQuoteNext />
+            ) : href ? (
+              <a
+                href={href}
+                data-shop-placement={!editorial && (href.startsWith('/go/') || href.startsWith('http')) ? 'card' : undefined}
+                className="inline-flex items-center justify-center bg-brand-primary text-brand-white text-sm font-bold px-6 py-3 rounded no-underline hover:bg-brand-primary-light transition-colors duration-200 max-w-full text-center whitespace-normal"
+                data-program={editorial ? undefined : program}
+                data-product={editorial ? undefined : ctaAffiliateProduct}
+                rel={editorial ? undefined : 'nofollow sponsored'}
+                target={editorial ? undefined : '_blank'}
+              >
+                {label}
+              </a>
+            ) : null}
+          </div>
+        </div>
       )}
     </div>
   )
