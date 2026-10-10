@@ -37,14 +37,19 @@ export function PrimaryHop({
     const visit = visitNextStep(href)
     if (visit) {
       return (
-        <p className="mb-5 m-0" data-primary-hop="held">
-          <a
-            href={visit.href}
-            className="inline-block max-w-full whitespace-normal text-left text-sm font-bold text-white underline underline-offset-2"
-          >
-            {visit.label}
-          </a>
-        </p>
+        <>
+          <p className="mb-5 text-sm leading-relaxed text-white/75 m-0" data-primary-hop="held">
+            {heldShopText(href)}
+          </p>
+          <p className="mb-5 m-0">
+            <a
+              href={visit.href}
+              className="inline-block max-w-full whitespace-normal text-left text-sm font-bold text-white underline underline-offset-2"
+            >
+              {visit.label}
+            </a>
+          </p>
+        </>
       )
     }
     return (

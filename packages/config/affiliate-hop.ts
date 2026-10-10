@@ -186,7 +186,7 @@ export function tableShopLink(
 }
 
 /** Brands with a held /go hop but no product-row label above. */
-const HELD_BRAND: Record<string, string> = { carniwhole: 'Carniwhole' }
+const HELD_BRAND: Record<string, string> = { carniwhole: 'Carniwhole', vetster: 'Vetster', askvet: 'AskVet' }
 
 /**
  * Customer text for a /go hop that has no live link yet: the retailer or
