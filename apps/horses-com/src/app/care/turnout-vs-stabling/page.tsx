@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas, ComparisonFoot, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -107,6 +107,7 @@ export default function TurnoutStablingPage() {
             updatedAt="2026-09-05"
             reviewedBy="Editorial team"
           />
+          <LastUpdated date="2026-10-10" />
 
           <h2 id="built">What the Horse Is Built For</h2>
           <p>Free-living horses spend most of the day and night moving slowly while grazing, covering many miles, in the company of other horses. Their digestive system, feet, joints, and minds are all adapted to near-constant movement and trickle-feeding. Any management system is, in effect, a compromise against this baseline, and the more a routine departs from it, the more the owner must actively compensate.</p>
@@ -122,6 +123,33 @@ export default function TurnoutStablingPage() {
 
           <h2 id="stabling">When Stabling Is Justified</h2>
           <p>Stabling has legitimate uses: box rest prescribed for injury or after surgery, protection from severe weather where shelter is otherwise lacking, restricting grazing for laminitis-prone horses, managing the summer pasture-associated form of asthma, keeping competition horses clean and to a routine, and safety where turnout is genuinely unsafe. The key is that stabling should serve a real need, with its downsides actively offset, rather than being the unexamined default.</p>
+          <div className="my-6 max-w-full min-w-0">
+            <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
+              <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+              <thead>
+                <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Turnout</th>
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Stabling</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">What it matches</th>
+                  <td className="p-3">Near-constant movement, trickle feeding, and company</td>
+                  <td className="p-3">A real need: box rest, severe weather, restricted grazing, summer asthma, a competition routine, or unsafe turnout</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">What it changes</th>
+                  <td className="p-3">Supports gut motility, joints, and hooves, and lowers ulcer and dust exposure</td>
+                  <td className="p-3">Offset the downsides. It should not be the unexamined default</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <ComparisonFoot updated="2026-10-10" />
+          <h2>Who should turn out or stable</h2>
+          <p>Keep the horse out when the routine can stay close to movement, forage, and company. Stable when box rest, weather, laminitis grazing, summer asthma, a competition routine, or unsafe turnout is the real reason, and offset the confinement.</p>
 
           <h2 id="risks">Risks of Too Much Confinement</h2>
           <ul>

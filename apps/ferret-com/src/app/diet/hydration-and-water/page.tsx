@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, ReviewCard, CrossPortfolioCard, PrimaryHop } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, ReviewCard, CrossPortfolioCard, PrimaryHop, ComparisonFoot, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -100,6 +100,7 @@ export default function HydrationAndWaterPage() {
             updatedAt="2026-06-01"
             reviewedBy="Editorial team"
           />
+          <LastUpdated date="2026-10-10" />
 
           <h2 id="bowl-bottle">Bowl vs Bottle</h2>
           <p>
@@ -108,6 +109,38 @@ export default function HydrationAndWaterPage() {
           <p>
             A sipper bottle is useful as a <strong>backup</strong> — it stays clean and spill-free — but should not be the only water source. The classic failure mode is a clogged or air-locked ball valve in a warm room: the ferret appears to have "water available" while actually getting none. If you use a bottle, check daily that it actually dispenses, and ideally offer a bowl as well.
           </p>
+          <div className="my-6 max-w-full min-w-0">
+            <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
+              <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+              <thead>
+                <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Bowl</th>
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Sipper bottle</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">How they drink</th>
+                  <td className="p-3">Lap naturally and in volume</td>
+                  <td className="p-3">A ball valve releases water a drop at a time</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Where it misses</th>
+                  <td className="p-3">Ferrets dig and tip. Use a heavy, low, wide ceramic dish, or one that clips to the bars, and refresh it more than once a day</td>
+                  <td className="p-3">A clogged or air-locked valve can look like water while giving none</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Role</th>
+                  <td className="p-3">The source most ferrets drink from more readily</td>
+                  <td className="p-3">A clean, spill-free backup. Check daily. Not the only source</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <ComparisonFoot updated="2026-10-10" />
+          <h2>Who should use which</h2>
+          <p>Use a heavy bowl as the water they lap from. Keep a sipper bottle only as a backup, and check that it dispenses. Do not leave a bottle as the only source.</p>
 
           <h2 id="intake">How Much Water</h2>
           <p>
