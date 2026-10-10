@@ -1,7 +1,7 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata, PrimaryHop, LastUpdated } from '@carloOS/ui'
+import { ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata, PrimaryHop, LastUpdated, ComparisonFoot } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
@@ -80,12 +80,44 @@ export default function WinterWaterUnfrozenGuidePage() {
       }
     >
       <div className="carloOS-article">
-          <LastUpdated date="2026-10-08" />
+          <LastUpdated date="2026-10-10" />
         <p>The <Link href="/nutrition/water-requirements">water requirements page</Link> puts a number on ordinary drinking and then says winter is when the number fails. An idle adult horse drinks roughly 20 to 40 liters a day, about 5 to 10 gallons, in temperate conditions, with more in heat, work, dry forage, or lactation, and less on lush grass. The same page says too little water dries the gut into an impaction. That pattern is most common in winter, when icy water suppresses drinking just as the horse moves onto dry hay. The instruction is free-choice water that is available, unfrozen, and palatable, not a fixed bucket count.</p>
         <h2>What winter care adds</h2>
         <p>The <Link href="/care/winter-care">winter care page</Link> says the same thing in management language: horses drink less when water is icy, and reduced intake plus dry winter forage is a leading cause of impaction colic. Keeping water unfrozen, and offering slightly warmed water, is one of the most important winter tasks on that page. Heat for the horse itself, on the same page, comes from more hay, because fiber fermentation in the hindgut produces heat. Grain is not the warmth plan. A thick coat also hides weight loss, so the page says to feel the ribs rather than trust the eye.</p>
         <h2>Bucket or tank heater</h2>
         <p>Two different supplies already exist, and this page links one of them. The water page links a heated horse water bucket for the stall, next to a flat-back bucket and an electrolyte search. The winter-care kit links a horse tank heater for troughs that freeze, and it says that heater is not a treatment for impaction colic. Reduced drinking still belongs with a veterinarian. Neither product replaces walking out and checking that the water is actually open.</p>
+        <div className="my-6 max-w-full min-w-0">
+          <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
+            <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+            <thead>
+              <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
+                <th scope="col" className="p-3 font-bold text-brand-dark">Heated stall bucket</th>
+                <th scope="col" className="p-3 font-bold text-brand-dark">Horse tank heater</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Where it is used</th>
+                <td className="p-3">Stall, next to a flat-back bucket</td>
+                <td className="p-3">Troughs that freeze</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">What this page links</th>
+                <td className="p-3">The heated horse water bucket search already on the water page</td>
+                <td className="p-3">Stays on the winter-care page</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Limit</th>
+                <td className="p-3">Does not replace walking out and checking that the water is open</td>
+                <td className="p-3">Not a treatment for impaction colic. Reduced drinking still belongs with a veterinarian</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <ComparisonFoot updated="2026-10-10" />
+        <h2>Who should buy which heater</h2>
+        <p>Use the heated stall bucket when the water is in a stall. Leave the tank heater on the winter-care page for troughs that freeze. Neither product replaces checking that the water is actually open.</p>
         <HopDisclosure siteId="horses-com" href="/go/amazon-brand/heated+horse+water+bucket?s=reviews-winter-water-unfrozen-guide" />
         <p>The link below searches for a heated horse water bucket, the same search as on the water page. The tank heater stays on the winter-care page.</p>
         <p><a className="font-semibold text-brand-primary" href="/go/amazon-brand/heated+horse+water+bucket?s=reviews-winter-water-unfrozen-guide">Browse heated horse water buckets on Amazon →</a></p>
