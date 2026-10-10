@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, LastUpdated } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, LastUpdated, ComparisonFoot } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 
@@ -52,6 +52,33 @@ export default function Page() {
 
           <h2>Deductibles: Annual vs. Per-Incident</h2>
           <p>How your deductible is structured changes your real out-of-pocket, especially in a year with multiple claims. An <strong>annual deductible</strong> is met once per policy year and then resets at renewal — after you have paid it across all eligible claims, the rest of the year is reimbursed subject to your percentage and limit. A <strong>per-incident deductible</strong> applies separately to each new condition, so two unrelated problems each carry their own deductible. Annual deductibles are generally easier to predict; confirm which your policy uses before you assume how a multi-claim year will play out.</p>
+          <div className="my-6 max-w-full min-w-0">
+            <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
+              <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+              <thead>
+                <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Annual deductible</th>
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Per-incident deductible</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">When it is met</th>
+                  <td className="p-3">Once per policy year, then it resets at renewal</td>
+                  <td className="p-3">Separately for each new condition</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Several claims in a year</th>
+                  <td className="p-3">After it is met, the rest of the year is reimbursed subject to the percentage and the limit</td>
+                  <td className="p-3">Two unrelated problems each carry their own deductible</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <ComparisonFoot updated="2026-10-10" />
+          <h2>Who should check which deductible</h2>
+          <p>Confirm which structure the policy uses before you assume a year with several claims. An annual deductible is the simpler one to predict. A per-incident deductible repeats for each new condition.</p>
 
           <h2>What Speeds a Claim Up</h2>
           <p>The biggest determinant of how fast you are paid is the completeness of your submission. A digital claim with a clear itemized invoice and any requested records moves quickly; a claim missing documentation stalls while the insurer follows up. Linking a bank account for direct deposit removes the mailing delay on the payout. Some insurers advertise faster app-based claims with same- or next-day decisions on simple submissions, and a few, as noted, offer direct pay with partner clinics. When comparing carriers, claim experience and payout speed are differences worth weighing — our <a href="/reviews/best-pet-insurance">best pet insurance comparison</a> notes where they diverge.</p>

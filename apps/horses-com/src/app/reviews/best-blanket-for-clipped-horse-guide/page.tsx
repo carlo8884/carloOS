@@ -115,6 +115,35 @@ export default function ClippedHorseBlanketGuidePage() {
         <ComparisonFoot updated="2026-10-10" />
         <h2>Layering, if the horse changes climates</h2>
         <p>The review offers a second pattern: one waterproof shell plus liners. The shell alone is a sheet. Shell plus a 100-gram liner is light cool weather. Shell plus 200 grams is mid-weight. Stacking the 100 and the 200 is the heavyweight equivalent in that system. Bucas, Horseware, and Schneiders are the liner systems the review names. The upfront cost of a shell plus three liners approaches two weight-specific turnouts. The review says the system earns its keep when the horse moves between climates, and that a one-climate barn is usually simpler with one turnout of the right fill.</p>
+        <div className="my-6 max-w-full min-w-0">
+          <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
+            <caption className="text-left font-semibold text-brand-dark p-3">Liner stack, from the sentences on this page</caption>
+            <thead>
+              <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                <th scope="col" className="p-3 font-bold text-brand-dark">Stack</th>
+                <th scope="col" className="p-3 font-bold text-brand-dark">What the review calls it</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Shell alone</th>
+                <td className="p-3">A sheet</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Shell plus 100 grams</th>
+                <td className="p-3">Light cool weather</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Shell plus 200 grams</th>
+                <td className="p-3">Mid-weight</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">100 plus 200 grams</th>
+                <td className="p-3">The heavyweight equivalent in that system</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
         <h2>Who should buy which blanket</h2>
         <p>Buy the StormShield when the horse is clipped and the winter matches the northern climates on that listing. Buy a lighter turnout, or a liner stack, when the review has already called the heavy fill overkill.</p>
         <HopDisclosure siteId="horses-com" href="/go/amazon-brand/schneiders+stormshield+heavyweight+horse+blanket?s=reviews-best-blanket-for-clipped-horse-guide" />
