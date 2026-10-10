@@ -82,7 +82,7 @@ export default function VetsterVsAskvetGuidePage() {
         <h2>Who should use which</h2>
         <p>Use Vetster when you want video, a specialist, or a prescription the review says is jurisdiction-dependent. Use AskVet when the questions are frequent and chat is enough. See the carrier&apos;s current terms before comparing a monthly chat price with a single visit. Chewy lists the licensed-vet video price on the telehealth page. Chewy is not the comparison this page is settling.</p>
         <HopDisclosure siteId="vets-co" href={visitHref} showQuietNote={false} />
-        <p>The video visit stays on this page as a note until that partner ID is set. It is not emergency care.</p>
+        <p>A video visit is not emergency care.</p>
         {visit ? (
           <p><a className="font-semibold text-brand-primary" href={visit} rel="sponsored noopener">Visit Vetster →</a></p>
         ) : (

@@ -185,6 +185,19 @@ export function tableShopLink(
   return { href: visible, label }
 }
 
+/** Brands with a held /go hop but no product-row label above. */
+const HELD_BRAND: Record<string, string> = { carniwhole: 'Carniwhole' }
+
+/**
+ * Customer text for a /go hop that has no live link yet: the retailer or
+ * brand name only, never internal wording. No href is rendered with it.
+ */
+export function heldShopText(href: string | undefined): string {
+  const vendor = href?.match(/^\/go\/([^/?#]+)/)?.[1]?.toLowerCase() ?? ''
+  const retailer = SHOP_RETAILER[vendor] ?? HELD_BRAND[vendor]
+  return retailer ? `Available from ${retailer}` : 'Available from the brand'
+}
+
 const DEFAULT_HOME = 'https://www.amazon.com'
 
 /** Vendors whose `/home` sku means the storefront, not a product slug. */
