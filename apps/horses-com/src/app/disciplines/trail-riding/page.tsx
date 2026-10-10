@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import {
   buildMetadata,
   ArticleLayout,
@@ -10,6 +11,7 @@ import {
   ArticleByline,
   DropCap,
   CalloutBox,
+  ShopCtas,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -276,6 +278,12 @@ export default function TrailRidingPage() {
           <CalloutBox variant="warning" title="Helmets are non-negotiable">
             <p>An ASTM/SEI-certified helmet is mandatory on any ride at any speed. AERC and NATRC require helmets on all competitive rides. Trail riding takes place in unpredictable terrain with footing variations, wildlife encounters, and other trail users — falls happen even on calm horses. Helmet use on recreational trail rides is the single most-impactful personal safety decision a trail rider can make. <a href="/tack/helmet-guide">The helmet guide</a> compares the ASTM/SEI helmets this ride requires.</p>
           </CalloutBox>
+
+          <HopDisclosure siteId="horses-com" href="/go/amazon-brand/ASTM+SEI+horse+riding+helmet?s=discipline-trail-riding" />
+          <ShopCtas
+            amazonHref="/go/amazon-brand/ASTM+SEI+horse+riding+helmet?s=discipline-trail-riding"
+            amazonLabel="Search Amazon for ASTM/SEI riding helmets"
+          />
 
           <h3>What to carry</h3>
           <ul>
