@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Script from 'next/script'
 import { Playfair_Display, DM_Sans } from 'next/font/google'
-import { Nav, Footer, DisplayAds, buildMetadata, EmailUnderHero, Ga4Loader, AffiliateClickListener, JourneyEvents } from '@carloOS/ui'
+import { Nav, Footer, DisplayAds, buildMetadata, EmailUnderHero, Ga4Loader, AffiliateClickListener, JourneyEvents, HopEarnsProvider } from '@carloOS/ui'
 import { displayAds } from '../data/display-ads'
 import { HomeEmailCapture } from '../components/HomeEmailCapture'
 import { EmailCaptureGate } from '../components/EmailCaptureGate'
@@ -67,6 +67,7 @@ export default function RootLayout({
         />
       </head>
       <body>
+        <HopEarnsProvider amazon={Boolean(process.env.AFF_AMAZON_TAG || process.env.AFF_AMAZON_BRAND_TAG)}>
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:top-2 focus:left-2 focus:bg-brand-primary focus:text-white focus:px-4 focus:py-2 focus:rounded"
@@ -94,6 +95,7 @@ export default function RootLayout({
         <Script src={SKIMLINKS_SRC} strategy="lazyOnload" />
 
         <DisplayAds config={displayAds} />
+        </HopEarnsProvider>
       </body>
     </html>
   )

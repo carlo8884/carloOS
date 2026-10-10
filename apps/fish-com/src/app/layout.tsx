@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { Cormorant_Garamond, Inter } from 'next/font/google'
-import { Nav, Footer, buildMetadata, DisplayAds, EmailUnderHero, Ga4Loader, AffiliateClickListener, JourneyEvents } from '@carloOS/ui'
+import { Nav, Footer, buildMetadata, DisplayAds, EmailUnderHero, Ga4Loader, AffiliateClickListener, JourneyEvents, HopEarnsProvider } from '@carloOS/ui'
 import { displayAds } from '../data/display-ads'
 import { HomeEmailCapture } from '../components/HomeEmailCapture'
 import { EmailCaptureGate } from '../components/EmailCaptureGate'
@@ -37,6 +37,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${cormorant.variable} ${inter.variable} font-vars`}>
       <body>
+        <HopEarnsProvider amazon={Boolean(process.env.AFF_AMAZON_TAG || process.env.AFF_AMAZON_BRAND_TAG)}>
         <Ga4Loader measurementId={GA_ID} />
         <AffiliateClickListener site="fish-com" />
         <JourneyEvents site="fish-com" />
@@ -51,6 +52,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </main>
         <Footer siteId="fish-com" showAffiliateDisclosure />
         <DisplayAds config={displayAds} />
+        </HopEarnsProvider>
       </body>
     </html>
   )

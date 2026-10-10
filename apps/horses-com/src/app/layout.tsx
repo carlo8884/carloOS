@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { Playfair_Display, Source_Sans_3 } from 'next/font/google'
-import { Nav, Footer, buildMetadata, buildOrganizationSchema, SchemaScript, DisplayAds, Ga4Loader, AffiliateClickListener, JourneyEvents } from '@carloOS/ui'
+import { Nav, Footer, buildMetadata, buildOrganizationSchema, SchemaScript, DisplayAds, Ga4Loader, AffiliateClickListener, JourneyEvents, HopEarnsProvider } from '@carloOS/ui'
 import { displayAds } from '../data/display-ads'
 import { HomeEmailCapture } from '../components/HomeEmailCapture'
 import { EmailCaptureGate } from '../components/EmailCaptureGate'
@@ -62,6 +62,7 @@ export default function RootLayout({
       className={`${playfair.variable} ${sourceSans.variable} font-vars`}
     >
       <body>
+        <HopEarnsProvider amazon={Boolean(process.env.AFF_AMAZON_TAG || process.env.AFF_AMAZON_BRAND_TAG)}>
         <SchemaScript schema={organizationSchema} />
         <Ga4Loader measurementId={GA_ID} customMap />
         <AffiliateClickListener site="horses-com" />
@@ -85,6 +86,7 @@ export default function RootLayout({
             NEXT_PUBLIC_MEDIAVINE_PUBLISHER_ID env var.
             Per csro-dir-2026-W22-011. */}
         <DisplayAds config={displayAds} />
+        </HopEarnsProvider>
       </body>
     </html>
   )

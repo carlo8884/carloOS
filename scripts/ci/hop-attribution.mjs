@@ -83,6 +83,12 @@ for (const site of SITES) {
   if (!layout.includes(`<AffiliateClickListener site="${site}" />`)) {
     hits.push(`${site}: layout is missing AffiliateClickListener`)
   }
+  if (!layout.includes('<HopEarnsProvider')) {
+    hits.push(`${site}: layout is missing HopEarnsProvider`)
+  }
+  if (!/HopEarnsProvider amazon=\{Boolean\(process\.env\.AFF_AMAZON_TAG/.test(layout)) {
+    hits.push(`${site}: layout must pass the server Amazon tag into HopEarnsProvider`)
+  }
 }
 
 const listener = readFileSync(join(ROOT, 'packages/ui/src/components/AffiliateClickListener.tsx'), 'utf8')
@@ -115,6 +121,14 @@ for (const file of ['packages/ui/src/components/ShopCtas.tsx', 'packages/ui/src/
   if (note < 0 || button < 0) {
     hits.push(`${file}: Associates line must be marked and sit above the shop button`)
   }
+}
+
+const shopCtas = readFileSync(join(ROOT, 'packages/ui/src/components/ShopCtas.tsx'), 'utf8')
+if (!shopCtas.includes('useAmazonEarns()')) {
+  hits.push('ShopCtas must take the Associates line from the server earns flag')
+}
+if (!/amazonFromServer !== null/.test(shopCtas)) {
+  hits.push('ShopCtas must prefer the server earns flag over a browser env read')
 }
 
 const goHandler = readFileSync(join(ROOT, 'packages/ui/src/server/affiliate-hop.ts'), 'utf8')
