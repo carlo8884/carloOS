@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, EmailCapture, FAQAccordion, InlinePartnerQuote, RelatedLinks, buildArticleSchema, buildMetadata, ArticleSourcesList, LastUpdated, ComparisonFoot } from '@carloOS/ui'
+import { ArticleLayout, EmailCapture, FAQAccordion, InlinePartnerQuote, PrimaryHop, RelatedLinks, buildArticleSchema, buildMetadata, ArticleSourcesList, LastUpdated, ComparisonFoot } from '@carloOS/ui'
 import { HopDisclosure } from '../../../components/HopDisclosure'
 
 // Request-time env, same as the insurance comparison. A set Trupanion tag
@@ -55,6 +55,13 @@ export default function TrupanionVsHealthyPawsGuidePage() {
         publishedAt: 'October 2026',
         readTime: '6 min',
       }}
+      heroHop={
+        <>
+          <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">Trupanion is the best-overall pick because it pays the clinic at checkout.</p>
+          <PrimaryHop href="/go/trupanion/home?s=reviews-trupanion-vs-healthy-paws-guide" label="Get a Trupanion quote" holdWithoutPartnerId />
+        </>
+      }
+      heroExtra={<HopDisclosure siteId="vets-co" href="/go/trupanion/home?s=reviews-trupanion-vs-healthy-paws-guide" noteClassName="mt-3 mb-0 text-xs leading-relaxed text-white/80" />}
       breadcrumbs={[
         { name: 'Home', href: '/' },
         { name: 'Reviews', href: '/reviews' },
@@ -73,7 +80,7 @@ export default function TrupanionVsHealthyPawsGuidePage() {
       }
     >
       <div className="carloOS-article">
-          <LastUpdated date="2026-10-09" />
+          <LastUpdated date="2026-10-10" />
         <p>The <Link href="/reviews/best-pet-insurance">pet insurance review</Link> ranks Trupanion, Healthy Paws, and Embrace on published contract terms. This guide is only the first two, because that is the choice between direct pay and fast reimbursement. Enroll before a condition is written into the record. The review says every insurer can exclude what is already documented. Model a bill in the <Link href="/tools/insurance-reimbursement-estimator">reimbursement estimator</Link> before you treat a monthly range as what you will pay.</p>
         <h2>Trupanion</h2>
         <p>The Trupanion listing is the best-overall pick. It lists 90 percent reimbursement, unlimited payouts, and payment to the clinic at checkout rather than a submit-and-wait claim. The deductible is per condition, which the review says favors a chronic disease once that deductible is met. Wellness is not included. See the carrier&apos;s current terms for the monthly price. The cons are the higher premium and the missing wellness layer. The review says this is the carrier whose contract obligates direct payment. It does not say every clinic has the software integration turned on. Ask the clinic.</p>
@@ -144,7 +151,7 @@ export default function TrupanionVsHealthyPawsGuidePage() {
             </tbody>
           </table>
         </div>
-        <ComparisonFoot updated="2026-10-09" />
+        <ComparisonFoot updated="2026-10-10" />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
                 <ArticleSourcesList title="Sources"

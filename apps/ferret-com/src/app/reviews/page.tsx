@@ -219,8 +219,20 @@ export default function ReviewsHubPage() {
         imageAlt="Ferret housing and gear reference"
         cta={{ href: '/reviews/best-ferret-cage', label: 'Start with the cage' }}
       />
+      <section className="bg-brand-surface px-container-sm sm:px-container pt-6 pb-2">
+        <h2 id="kit" className="font-display font-bold text-brand-dark text-xl mb-3 max-w-content-wide">Related supplies</h2>
+        <div className="max-w-content-wide">
+          <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/ferret+kibble?s=reviews-hub" />
+        </div>
+        <div className="mt-4 mb-2 max-w-content-wide">
+          <ShopCtas
+            amazonHref="/go/amazon-brand/ferret+kibble?s=reviews-hub"
+            amazonLabel="Browse ferret kibble on Amazon →"
+          />
+        </div>
+      </section>
       <div className="px-container-sm sm:px-container pt-6">
-        <LastUpdated date="2026-10-09" />
+        <LastUpdated date="2026-10-10" />
       </div>
 
       {/* Breadcrumb */}
@@ -389,27 +401,6 @@ export default function ReviewsHubPage() {
         ))}
         </div>
       </div>
-      <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
-        <h2 id="kit" className="font-display font-bold text-brand-dark text-xl mb-4 max-w-content-wide">Related supplies</h2>
-
-        <div className="max-w-content-wide mt-6">
-          <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/ferret+kibble?s=reviews-hub" />
-        </div>
-
-        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-content-wide">
-          <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-            Shop related supplies
-          </div>
-          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
-          <div className="flex flex-col gap-3">
-            <ShopCtas
-              amazonHref="/go/amazon-brand/ferret+kibble?s=reviews-hub"
-              amazonLabel="Browse ferret kibble on Amazon →"
-            />
-          </div>
-        </div>
-      </section>
-
       <DirectoryPlacesCta listings={listings} noun="licensed exotic-mammal professionals" />
 
     </>

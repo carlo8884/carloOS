@@ -49,7 +49,7 @@ export default function RamboVsSchneidersGuidePage() {
         publishedAt: 'October 2026',
         readTime: '6 min',
       }}
-      heroHop={<><HopDisclosure siteId="horses-com" href="/go/amazon-brand/horse+turnout+blanket?s=reviews-rambo-vs-schneiders-guide" /><a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" href="/go/amazon-brand/horse+turnout+blanket?s=reviews-rambo-vs-schneiders-guide">Browse horse turnout blankets on Amazon →</a></>}
+      heroHop={<><HopDisclosure siteId="horses-com" href="/go/amazon-brand/horseware+rambo+original+turnout+blanket?s=reviews-rambo-vs-schneiders-guide" /><a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" href="/go/amazon-brand/horseware+rambo+original+turnout+blanket?s=reviews-rambo-vs-schneiders-guide">Browse the Horseware Rambo Original turnout blanket on Amazon →</a></>}
       heroExtra={<QuietPartnerLink tone="dark" href="/go/smartpak/rambo-original-turnout?s=reviews-rambo-vs-schneiders-guide" label="Check price of the Horseware Rambo Original on SmartPak" />}
       breadcrumbs={[
         { name: 'Home', href: '/' },
@@ -69,7 +69,7 @@ export default function RamboVsSchneidersGuidePage() {
       priceAsOf="2026-10-05"
     >
       <div className="carloOS-article">
-          <LastUpdated date="2026-10-09" />
+          <LastUpdated date="2026-10-10" />
         <EmailCapture
           variant="inline"
           siteId="horses-com"
@@ -134,7 +134,7 @@ export default function RamboVsSchneidersGuidePage() {
             </tbody>
           </table>
         </div>
-        <ComparisonFoot updated="2026-10-09" />
+        <ComparisonFoot updated="2026-10-10" />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
                 <ArticleSourcesList

@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, RelatedReads, ReviewCard, ShopCtas, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
+import { PrimaryHop, buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, RelatedReads, ReviewCard, ShopCtas, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "When to Enroll Your Pet in Insurance | Vets.co", description: "The best time to get pet insurance is when your pet is young and healthy. Learn why enrolling early matters, and how to think about insuring senior pets.", path: '/insurance/when-to-enroll', type: 'article' })
@@ -15,6 +15,8 @@ export default function WhenToEnrollPage() {
     <>
       <SchemaScript schema={schema} />
       <ArticleLayout siteId="vets-co"
+        heroHop={<PrimaryHop href="/go/amazon-brand/monthly+desk+pad+calendar?s=insurance-when-to-enroll" label="Browse monthly desk pad calendars on Amazon →" />}
+        heroExtra={<HopDisclosure siteId="vets-co" href="/go/amazon-brand/monthly+desk+pad+calendar?s=insurance-when-to-enroll" tone="on-dark" />}
         hero={{ title: 'When to Enroll Your Pet', subtitle: 'There is a clear answer to when you should buy pet insurance: as early as possible, while your pet is young and healthy. Because pre-existing conditions are permanently excluded and premiums rise with age, the day you enroll largely determines the lifetime value of your coverage. Here is how to think about timing at every life stage.', category: 'Insurance Guide', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '8 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Insurance', href: '/insurance' }, { name: 'When to Enroll', href: '/insurance/when-to-enroll' }]}
         sidebar={<>
@@ -34,7 +36,7 @@ export default function WhenToEnrollPage() {
         <div className="carloOS-article">
 
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-09-06T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-09" />
+          <LastUpdated date="2026-10-10" />
 
           <CalloutBox variant="info" title="Enroll before you need it, not when you need it">
             Insurance is a bet against future unknowns. The moment a condition becomes known, it can no longer be insured. The practical rule is simple: enroll while your pet is healthy, even if that feels premature, because that is the only window in which full coverage is available.

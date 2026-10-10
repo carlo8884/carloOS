@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, InlinePartnerQuote, RelatedLinks, buildArticleSchema, buildMetadata, ArticleSourcesList, LastUpdated, ComparisonFoot } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, InlinePartnerQuote, PrimaryHop, RelatedLinks, buildArticleSchema, buildMetadata, ArticleSourcesList, LastUpdated, ComparisonFoot } from '@carloOS/ui'
 import { HopDisclosure } from '../../../components/HopDisclosure'
 
 // Request-time env, same as the insurance comparison. A set partner tag
@@ -55,6 +55,13 @@ export default function TrupanionVsEmbraceGuidePage() {
         publishedAt: 'October 2026',
         readTime: '6 min',
       }}
+      heroHop={
+        <>
+          <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">Trupanion is Best Overall because the policy pays the clinic at checkout.</p>
+          <PrimaryHop href="/go/trupanion/home?s=reviews-trupanion-vs-embrace-guide" label="Get a Trupanion quote" holdWithoutPartnerId />
+        </>
+      }
+      heroExtra={<HopDisclosure siteId="vets-co" href="/go/trupanion/home?s=reviews-trupanion-vs-embrace-guide" noteClassName="mt-3 mb-0 text-xs leading-relaxed text-white/80" />}
       breadcrumbs={[
         { name: 'Home', href: '/' },
         { name: 'Reviews', href: '/reviews' },
@@ -72,7 +79,7 @@ export default function TrupanionVsEmbraceGuidePage() {
       }
     >
       <div className="carloOS-article">
-          <LastUpdated date="2026-10-09" />
+          <LastUpdated date="2026-10-10" />
         <p>The <Link href="/reviews/best-pet-insurance">pet insurance review</Link> already scores Trupanion for direct payment at the clinic and Embrace for owners who want routine care on an add-on. The monthly bands are the figures printed in the review, not a quote for your pet.</p>
         <h2>What the review says about Trupanion</h2>
         <p>Trupanion is Best Overall and the winner. It lists 90% reimbursement, unlimited payouts, direct vet payment, and a per-condition deductible. Wellness is not included. See the carrier&apos;s current terms for the monthly price. The downsides are higher premiums and no wellness coverage. The review says Trupanion is the carrier whose policy pays the clinic at checkout rather than the pay-and-wait model.</p>
@@ -122,7 +129,7 @@ export default function TrupanionVsEmbraceGuidePage() {
             </tbody>
           </table>
         </div>
-        <ComparisonFoot updated="2026-10-09" />
+        <ComparisonFoot updated="2026-10-10" />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
                 <ArticleSourcesList title="Sources"

@@ -20,8 +20,11 @@ export default function WhatCoversPage() {
     <>
       <SchemaScript schema={schema} />
       <ArticleLayout siteId="vets-co"
-        heroHop={<PrimaryHop href='/go/embrace/home?s=insurance-what-pet-insurance-covers' label='Get an Embrace quote →' holdWithoutPartnerId />}
-        heroExtra={<HopDisclosure siteId="vets-co" href="/go/embrace/home?s=insurance-what-pet-insurance-covers" />}
+        heroHop={<>
+          <PrimaryHop href='/go/embrace/home?s=insurance-what-pet-insurance-covers' label='Get an Embrace quote →' holdWithoutPartnerId />
+          <PrimaryHop href="/go/amazon-brand/3+tab+dividers?s=insurance-what-pet-insurance-covers" label="Browse 3-tab dividers on Amazon →" />
+        </>}
+        heroExtra={<HopDisclosure siteId="vets-co" href={["/go/embrace/home?s=insurance-what-pet-insurance-covers", "/go/amazon-brand/3+tab+dividers?s=insurance-what-pet-insurance-covers"]} tone="on-dark" />}
         hero={{ title: "What Pet Insurance Covers (and Doesn't)", subtitle: 'Most pet insurance sold today is accident-and-illness coverage, which pays toward unexpected injuries and diseases — but every policy has exclusions, and the differences between plans live in the details. Knowing what is typically covered, what is usually excluded, and where plans diverge lets you choose coverage that fits your pet.', category: 'Insurance Guide', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '8 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Insurance', href: '/insurance' }, { name: 'What It Covers', href: '/insurance/what-pet-insurance-covers' }]}
         sidebar={<>
@@ -41,7 +44,7 @@ export default function WhatCoversPage() {
         <div className="carloOS-article">
 
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-09-06T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-09" />
+          <LastUpdated date="2026-10-10" />
           <EmailCapture
             variant="inline"
             siteId="vets-co"
@@ -217,7 +220,7 @@ export default function WhatCoversPage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-09" />
+          <ComparisonFoot updated="2026-10-10" />
 
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />

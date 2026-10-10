@@ -103,10 +103,10 @@ export default function BestEquineSupplementsPage() {
         </h1>
         <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">Platinum Performance Equine is the top wellness supplement because one daily serving combines omega-3s, antioxidants, and amino acids.</p>
         <PriceAsOf date="2026-10-04" tone="dark" />
-        <LastUpdated date="2026-10-09" tone="dark" />
+        <LastUpdated date="2026-10-10" tone="dark" />
         <div data-fold="offer">
-          <HopDisclosure tone="on-dark" siteId="horses-com" href="/go/amazon/B0037PL6QW?s=reviews-best-equine-supplements" />
-          <PrimaryHop href="/go/amazon/B0037PL6QW?s=reviews-best-equine-supplements" label="Check price of KER EO-3 on Amazon" />
+          <HopDisclosure tone="on-dark" siteId="horses-com" href="/go/amazon-brand/platinum+performance+equine?s=reviews-best-equine-supplements" />
+          <PrimaryHop href="/go/amazon-brand/platinum+performance+equine?s=reviews-best-equine-supplements" label="Browse Platinum Performance Equine on Amazon" />
         </div>
         <EmailCapture
           variant="inline"
@@ -417,7 +417,7 @@ export default function BestEquineSupplementsPage() {
                 </tbody>
               </table>
             </div>
-            <ComparisonFoot updated="2026-10-09" />
+            <ComparisonFoot updated="2026-10-10" />
             <p>Hoof, calming, and weight-gain rows in the category table name products that do not have their own review cards here. Use those rows as a map, not as a reviewed pick.</p>
 
             <h2>What to Avoid</h2>

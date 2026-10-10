@@ -54,8 +54,8 @@ export default function ClippedHorseBlanketGuidePage() {
         <>
           <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">A clipped horse in a cold climate needs a heavyweight turnout, and the Schneiders StormShield lists a 1680-denier shell with 300-gram fill.</p>
           <div data-fold="offer">
-          <PrimaryHop href="/go/amazon-brand/horse+heavyweight+blanket?s=reviews-best-blanket-for-clipped-horse-guide" label="Browse heavyweight horse blankets on Amazon" />
-          <HopDisclosure tone="on-dark" siteId="horses-com" href="/go/amazon-brand/horse+heavyweight+blanket?s=reviews-best-blanket-for-clipped-horse-guide" />
+          <PrimaryHop href="/go/amazon-brand/schneiders+stormshield+heavyweight+horse+blanket?s=reviews-best-blanket-for-clipped-horse-guide" label="Browse the Schneiders StormShield heavyweight horse blanket on Amazon" />
+          <HopDisclosure tone="on-dark" siteId="horses-com" href="/go/amazon-brand/schneiders+stormshield+heavyweight+horse+blanket?s=reviews-best-blanket-for-clipped-horse-guide" />
         </div>
         </>
       }
@@ -77,7 +77,7 @@ export default function ClippedHorseBlanketGuidePage() {
       }
     >
       <div className="carloOS-article">
-          <LastUpdated date="2026-10-08" />
+          <LastUpdated date="2026-10-10" />
         <p>A clipped horse in January does not wear the same turnout as a hairy horse in a mild winter. The <Link href="/reviews/best-winter-horse-blankets">winter blanket review</Link> puts the heavy specification on the Schneiders StormShield Euro, and it tells milder climates to leave that blanket on the shelf. Size still comes first. A heavy blanket that pulls on the shoulder is a rub, not warmth. Use the <Link href="/tools/horse-blanket-size-calculator">blanket size calculator</Link> and the fit notes on the review.</p>
         <h2>The heavy blanket</h2>
         <p>The StormShield card lists a 1680-denier ballistic shell, heavier than the Rambo Original&apos;s 1000-denier shell, and fills of 300 and 360 grams. The neck is a full neck with a deep shoulder gusset. Hardware is stainless, with a double belly surcingle. The price in the review is $300–460. The review assigns it to New England, the Upper Midwest, the Mountain West, and Canadian winters, and to clipped competition horses in sustained cold. It does not publish a temperature cutoff beyond the climates and the “sub-zero” phrasing already on that listing.</p>
@@ -86,9 +86,9 @@ export default function ClippedHorseBlanketGuidePage() {
         <h2>Layering, if the horse changes climates</h2>
         <p>The review offers a second pattern: one waterproof shell plus liners. The shell alone is a sheet. Shell plus a 100-gram liner is light cool weather. Shell plus 200 grams is mid-weight. Stacking the 100 and the 200 is the heavyweight equivalent in that system. Bucas, Horseware, and Schneiders are the liner systems the review names. The upfront cost of a shell plus three liners approaches two weight-specific turnouts. The review says the system earns its keep when the horse moves between climates, and that a one-climate barn is usually simpler with one turnout of the right fill.</p>
         <p>Buy the StormShield when the horse is clipped and the winter matches the northern climates on that listing. Buy a lighter turnout, or a liner stack, when the review has already called the heavy fill overkill.</p>
-        <HopDisclosure siteId="horses-com" href="/go/amazon-brand/horse+heavyweight+blanket?s=reviews-best-blanket-for-clipped-horse-guide" />
+        <HopDisclosure siteId="horses-com" href="/go/amazon-brand/schneiders+stormshield+heavyweight+horse+blanket?s=reviews-best-blanket-for-clipped-horse-guide" />
         <p>The link below is the heavyweight turnout search already used on the blanket review.</p>
-        <p><a className="font-semibold text-brand-primary" href="/go/amazon-brand/horse+heavyweight+blanket?s=reviews-best-blanket-for-clipped-horse-guide">Browse heavyweight horse blankets on Amazon →</a></p>
+        <p><a className="font-semibold text-brand-primary" href="/go/amazon-brand/schneiders+stormshield+heavyweight+horse+blanket?s=reviews-best-blanket-for-clipped-horse-guide">Browse the Schneiders StormShield heavyweight horse blanket on Amazon →</a></p>
         <QuietPartnerLink href="/go/schneider/stormshield-euro-turnout?s=reviews-best-blanket-for-clipped-horse-guide" label="Shop the Schneiders StormShield Euro →" />
         <EmailCapture
           variant="inline"

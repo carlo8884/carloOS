@@ -20,8 +20,11 @@ export default function DeductiblesPage() {
     <>
       <SchemaScript schema={schema} />
       <ArticleLayout siteId="vets-co"
-        heroHop={<PrimaryHop href='/go/healthy-paws/home?s=insurance-deductibles-reimbursement' label='Get a Healthy Paws quote →' holdWithoutPartnerId />}
-        heroExtra={<HopDisclosure siteId="vets-co" href="/go/healthy-paws/home?s=insurance-deductibles-reimbursement" />}
+        heroHop={<>
+          <PrimaryHop href='/go/healthy-paws/home?s=insurance-deductibles-reimbursement' label='Get a Healthy Paws quote →' holdWithoutPartnerId />
+          <PrimaryHop href="/go/amazon-brand/quad+ruled+graph+pad?s=insurance-deductibles-reimbursement" label="Browse quad-ruled graph pads on Amazon →" />
+        </>}
+        heroExtra={<HopDisclosure siteId="vets-co" href={["/go/healthy-paws/home?s=insurance-deductibles-reimbursement", "/go/amazon-brand/quad+ruled+graph+pad?s=insurance-deductibles-reimbursement"]} tone="on-dark" />}
         hero={{ title: 'Deductibles and Reimbursement', subtitle: 'The deductible, reimbursement rate, and annual limit together determine what a pet insurance policy actually costs you when you file a claim. These three settings trade off against your monthly premium, and understanding how they interact lets you tune a policy to your budget and risk tolerance rather than guessing.', category: 'Insurance Guide', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '8 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Insurance', href: '/insurance' }, { name: 'Deductibles & Reimbursement', href: '/insurance/deductibles-reimbursement' }]}
         sidebar={<>
@@ -41,7 +44,7 @@ export default function DeductiblesPage() {
         <div className="carloOS-article">
 
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-09-06T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-09" />
+          <LastUpdated date="2026-10-10" />
           <EmailCapture
             variant="inline"
             siteId="vets-co"
@@ -214,7 +217,7 @@ export default function DeductiblesPage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-09" />
+          <ComparisonFoot updated="2026-10-10" />
 
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />

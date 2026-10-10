@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ReviewCard, ShopCtas, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
+import { PrimaryHop, buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ReviewCard, ShopCtas, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 
@@ -20,6 +20,8 @@ export default function BreedRiskPage() {
     <>
       <SchemaScript schema={schema} />
       <ArticleLayout siteId="vets-co"
+        heroHop={<PrimaryHop href="/go/amazon-brand/blank+pedigree+chart?s=insurance-breed-specific-risk" label="Browse blank pedigree charts on Amazon →" />}
+        heroExtra={<HopDisclosure siteId="vets-co" href="/go/amazon-brand/blank+pedigree+chart?s=insurance-breed-specific-risk" tone="on-dark" />}
         hero={{ title: 'Breed-Specific Insurance Risk', subtitle: 'Breed shapes both the conditions a pet is likely to face and how insurers price and structure coverage. For breeds with known predispositions — orthopedic disease in large breeds, airway problems in flat-faced breeds, cancer and cardiac risks in others — matching the policy to the breed\'s likely needs matters more than chasing the lowest premium.', category: 'Insurance Guide', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '8 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Insurance', href: '/insurance' }, { name: 'Breed-Specific Risk', href: '/insurance/breed-specific-risk' }]}
         sidebar={<>
@@ -39,7 +41,7 @@ export default function BreedRiskPage() {
         <div className="carloOS-article">
 
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-09-06T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-09" />
+          <LastUpdated date="2026-10-10" />
 
           <CalloutBox variant="info" title="Insure the risk you can predict">
             Breed predispositions are some of the most predictable risks in pet health. That predictability cuts both ways: insurers price for it, and you can plan for it. The owner who knows their breed's likely conditions and enrolls early, with appropriate terms, is best positioned.

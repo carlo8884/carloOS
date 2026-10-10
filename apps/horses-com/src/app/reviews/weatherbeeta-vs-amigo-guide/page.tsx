@@ -49,7 +49,7 @@ export default function WeatherbeetaVsAmigoGuidePage() {
         publishedAt: 'October 2026',
         readTime: '6 min',
       }}
-      heroHop={<><HopDisclosure siteId="horses-com" href="/go/amazon-brand/horse+turnout+blanket?s=reviews-weatherbeeta-vs-amigo-guide" /><a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" href="/go/amazon-brand/horse+turnout+blanket?s=reviews-weatherbeeta-vs-amigo-guide">Browse horse turnout blankets on Amazon →</a></>}
+      heroHop={<><HopDisclosure siteId="horses-com" href="/go/amazon-brand/weatherbeeta+comfitec+turnout+blanket?s=reviews-weatherbeeta-vs-amigo-guide" /><a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" href="/go/amazon-brand/weatherbeeta+comfitec+turnout+blanket?s=reviews-weatherbeeta-vs-amigo-guide">Browse the Weatherbeeta ComFiTec turnout blanket on Amazon →</a></>}
       heroExtra={<QuietPartnerLink tone="dark" href="/go/dover/weatherbeeta-comfitec-plus-dynamic?s=reviews-weatherbeeta-vs-amigo-guide" label="Shop the Weatherbeeta ComFiTec at Dover Saddlery" />}
       breadcrumbs={[
         { name: 'Home', href: '/' },
@@ -69,7 +69,7 @@ export default function WeatherbeetaVsAmigoGuidePage() {
       priceAsOf="2026-10-05"
     >
       <div className="carloOS-article">
-          <LastUpdated date="2026-10-09" />
+          <LastUpdated date="2026-10-10" />
         <EmailCapture
           variant="inline"
           siteId="horses-com"
@@ -134,7 +134,7 @@ export default function WeatherbeetaVsAmigoGuidePage() {
             </tbody>
           </table>
         </div>
-        <ComparisonFoot updated="2026-10-09" />
+        <ComparisonFoot updated="2026-10-10" />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
                 <ArticleSourcesList
