@@ -3,13 +3,16 @@
  * Fails when a rendered <a href> on dog, vets, fish, horses, or ferret
  * resolves to a held partner, or when a result-pick would render one.
  * An amazon-brand search is allowed, even when its words name a held brand.
- * A quiet note with no anchor is allowed.
+ * A held row with no anchor is allowed only when its visible text is neutral:
+ * the retailer or brand name, never "partner ID", "tag needed", or other
+ * internal wording (HELD_COPY_PATTERN in internal-voice.mjs).
  */
 import { readdir, readFile } from 'node:fs/promises'
 import { join, relative } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { heldVendorOfHref, liveAnchorHref } from '../../packages/config/affiliate-hop.ts'
 import * as picks from '../../packages/ui/src/lib/result-picks.ts'
+import { HELD_COPY_PATTERN } from './internal-voice.mjs'
 
 const ROOT = join(fileURLToPath(new URL('.', import.meta.url)), '../..')
 const SITES = ['dog-com', 'vets-co', 'fish-com', 'horses-com', 'ferret-com']
@@ -26,6 +29,13 @@ export function anchorHrefs(text) {
     if (href) hrefs.push(href)
   }
   return hrefs
+}
+
+/** Internal held-partner phrases in built page text, including RSC payloads. */
+export function heldCopyHits(text) {
+  const flat = text.replace(/\\u003c/gi, '<').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ')
+  const re = new RegExp(HELD_COPY_PATTERN.source, 'gi')
+  return [...flat.matchAll(re)].map((match) => match[0])
 }
 
 export function siteOfPath(file) {
@@ -134,6 +144,9 @@ export async function scanBuiltOutput(root = ROOT) {
         if (!vendor) continue
         failures.push({ site, vendor, href, file: relative(root, file) })
       }
+      for (const phrase of heldCopyHits(text)) {
+        failures.push({ site, vendor: 'internal-copy', href: phrase, file: relative(root, file) })
+      }
     }
   }
   return { failures, filesBySite }
@@ -173,17 +186,17 @@ async function main() {
   const pickFailures = scanResultPicks()
   console.log('Built HTML files scanned:')
   for (const site of SITES) console.log(`  ${site}  ${filesBySite[site]}`)
-  printCounts('Live held hrefs in built pages:', pageFailures)
+  printCounts('Live held hrefs or internal held copy in built pages:', pageFailures)
   printCounts('Live held result-pick hrefs:', pickFailures)
   const failures = [...pageFailures, ...pickFailures]
   if (failures.length > 0) {
     for (const row of failures.slice(0, 40)) {
       console.error(`${row.file}  ${row.vendor}  ${row.href}`)
     }
-    console.error(`held-partner-hrefs: ${failures.length} live held href(s)`)
+    console.error(`held-partner-hrefs: ${failures.length} live held href(s) or internal held-copy phrase(s)`)
     process.exit(1)
   }
-  console.log('held-partner-hrefs: no live held hrefs')
+  console.log('held-partner-hrefs: no live held hrefs and no internal held copy')
 }
 
 const isMain = process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1]
