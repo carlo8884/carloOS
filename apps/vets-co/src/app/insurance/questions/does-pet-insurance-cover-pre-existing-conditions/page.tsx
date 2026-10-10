@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, LastUpdated } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, LastUpdated, ComparisonFoot } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 
@@ -50,9 +50,66 @@ export default function Page() {
           <h2>Curable vs. Incurable</h2>
           <p>The most important distinction in this area is curable versus incurable. Incurable or chronic conditions — diabetes, allergies, heart disease, cancer, kidney disease, most orthopedic disease — are generally excluded for the life of the policy, at every carrier. Curable conditions — a single ear infection, a respiratory infection, a urinary tract infection that fully resolved — may become eligible again at some insurers after the pet has gone a defined symptom-free and treatment-free period, often six to eighteen months.</p>
           <p>Not every insurer offers this curable-condition pathway, and the symptom-free window varies, which makes it a genuine point of comparison rather than a universal rule. If your pet has a resolved past issue, the exact wording of an insurer&apos;s curable-condition policy can change whether that condition is ever coverable again — so read it before you assume.</p>
+          <div className="my-6 max-w-full min-w-0">
+            <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
+              <caption className="text-left font-semibold text-brand-dark p-3">Curable or not, from the sentences on this page</caption>
+              <thead>
+                <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Incurable</th>
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Curable</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Examples</th>
+                  <td className="p-3">Diabetes, allergies, heart disease, cancer, kidney disease, most orthopedic disease</td>
+                  <td className="p-3">A single ear infection, a respiratory infection, or a urinary tract infection that fully resolved</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Coverage</th>
+                  <td className="p-3">Generally excluded for the life of the policy, at every carrier</td>
+                  <td className="p-3">May become eligible again at some insurers after a symptom-free and treatment-free period, often six to eighteen months</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">What varies</th>
+                  <td className="p-3">The exclusion is the usual rule</td>
+                  <td className="p-3">Not every insurer offers the pathway, and the window varies. Read the wording before you assume</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
 
           <h2>Bilateral Exclusions</h2>
           <p>A subtle rule that catches many owners off guard involves bilateral conditions — problems affecting paired body parts such as cruciate ligaments, hips, or eyes. Many insurers treat an issue on one side as making the other side pre-existing too. So if your dog tore one cruciate ligament before enrollment, the matching knee may be excluded as well, on the reasoning that the underlying predisposition was already present. For breeds prone to orthopedic disease, how a policy handles bilateral conditions can matter more than the headline premium.</p>
+          <div className="my-6 max-w-full min-w-0">
+            <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
+              <caption className="text-left font-semibold text-brand-dark p-3">Bilateral rule, from the sentences on this page</caption>
+              <thead>
+                <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
+                  <th scope="col" className="p-3 font-bold text-brand-dark">What this page says</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Paired parts</th>
+                  <td className="p-3">Cruciate ligaments, hips, or eyes</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">The rule</th>
+                  <td className="p-3">Many insurers treat an issue on one side as making the other side pre-existing</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">The example</th>
+                  <td className="p-3">One torn cruciate before enrollment can exclude the matching knee, because the predisposition was already present</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <ComparisonFoot updated="2026-10-10" />
+          <h2>Who should read which clause</h2>
+          <p>Read the curable-condition window when a past issue fully resolved. Read the bilateral language when the breed is prone to joint or eye problems. An incurable condition on the record stays excluded for the life of the policy.</p>
 
           <h2>Why This Is the Reason to Enroll Early</h2>
           <p>Because pre-existing exclusions are permanent and broadly defined, every condition your pet develops before coverage starts becomes a permanent gap. Enrolling a young, healthy pet — before anything is on the record — maximizes what a policy can ever cover. Waiting until a pet shows symptoms, or worse until after a diagnosis, locks out coverage for exactly the conditions most likely to generate large bills. This is the single most consequential decision in pet insurance, and it favors acting sooner rather than later.</p>
