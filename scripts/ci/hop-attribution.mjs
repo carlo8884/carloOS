@@ -108,7 +108,7 @@ if (!/split\('PLACEHOLDER'\)\.join\(tag\)/.test(resolver)) {
   hits.push('Amazon redirect no longer substitutes the Associates tag')
 }
 
-for (const file of ['packages/ui/src/components/ShopCtas.tsx', 'packages/ui/src/components/PrimaryHop.tsx']) {
+for (const file of ['packages/ui/src/components/ShopCtas.tsx', 'packages/ui/src/components/PrimaryHop.tsx', 'packages/ui/src/components/ReviewCard.tsx']) {
   const src = readFileSync(join(ROOT, file), 'utf8')
   const note = src.indexOf('data-affiliate-disclosure="hop"')
   const button = note < 0 ? -1 : src.indexOf('data-shop-placement=', note)
