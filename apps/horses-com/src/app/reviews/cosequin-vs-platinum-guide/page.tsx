@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, QuietPartnerLink, RelatedLinks, buildArticleSchema, buildMetadata, ArticleSourcesList, LastUpdated, ComparisonFoot } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, QuietPartnerLink, RelatedLinks, ShopCtas, buildArticleSchema, buildMetadata, ArticleSourcesList, LastUpdated, ComparisonFoot } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
@@ -67,7 +67,7 @@ export default function CosequinVsPlatinumGuidePage() {
       }
     >
       <div className="carloOS-article">
-          <LastUpdated date="2026-10-09" />
+          <LastUpdated date="2026-10-10" />
         <p>The <Link href="/supplements/joint-supplements">joint-supplement review</Link> already lists Nutramax Cosequin ASU Plus as the ASU pick and Platinum Performance CJ as the comprehensive pick. Cosequin milligrams differ by powder and pellets — check the label. Platinum CJ does not list chondroitin.</p>
         <h2>What the review says about Cosequin</h2>
         <p>Nutramax Cosequin ASU Plus is Best Evidence (ASU) and the winner. The current Cosequin ASU Plus page lists glucosamine, MSM, chondroitin, and ASU plus other ingredients (<a href="https://www.cosequin.com/product/horses/cosequin-asu-plus">Cosequin ASU Plus page</a>). Milligrams differ for powder and pellets — check the label. The initial period is 2–4 weeks. The printed price is $60–95 per 30-day supply.</p>
@@ -75,6 +75,10 @@ export default function CosequinVsPlatinumGuidePage() {
         <p>Platinum Performance CJ is Best Comprehensive. The current page lists, per 2 scoops, glucosamine sulfate 8,820 mg, MSM 8,200 mg, ASU 2,000 mg, boswellia 1,400 mg, cetyl myristoleate 275 mg, and hyaluronic acid 90 mg. It does not list chondroitin. Omega-3 on that page is flax oil. The printed price is $130–180 per 30-day supply.</p>
         <h2>Who should buy which tub</h2>
         <p>Buy Cosequin ASU Plus when the job is the ASU formula with disclosed amounts, at the $60–95 band. Buy Platinum CJ when you want one tub that already stacks the longer ingredient list, and the $130–180 band is acceptable. Neither product is a replacement for veterinary joint treatment.</p>
+        <ShopCtas
+          amazonHref="/go/amazon-brand/cosequin+asu+plus?s=reviews-cosequin-vs-platinum-guide"
+          amazonLabel="Browse Cosequin ASU Plus on Amazon"
+        />
         <QuietPartnerLink href="/go/smartpak/cosequin-asu-plus?s=reviews-cosequin-vs-platinum-guide" label="Compare Cosequin ASU Plus at SmartPak →" />
         <div className="my-6 max-w-full min-w-0">
           <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
@@ -110,7 +114,7 @@ export default function CosequinVsPlatinumGuidePage() {
             </tbody>
           </table>
         </div>
-        <ComparisonFoot updated="2026-10-09" />
+        <ComparisonFoot updated="2026-10-10" />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
                 <ArticleSourcesList title="Sources"

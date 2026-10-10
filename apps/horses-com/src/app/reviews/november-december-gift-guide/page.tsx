@@ -73,7 +73,7 @@ export default function NovemberDecemberGiftGuidePage() {
       priceAsOf="2026-10-07"
     >
       <div className="carloOS-article">
-          <LastUpdated date="2026-10-09" />
+          <LastUpdated date="2026-10-10" />
         <p>November and December are blanket season in a lot of barns, and they are also when a lead rope or a pair of boots shows up as a gift. The <Link href="/reviews">reviews hub</Link> already prints those bands. This page sorts the one-time prices from the halter page, the boot page, and the winter blanket review. It does not call any row the gift of the year, and it does not invent a size chart.</p>
         <p>Supplement cards on the supplement review are monthly ranges. A monthly tub is a different kind of spending from a blanket you buy once. Those monthly figures stay on the <Link href="/reviews/best-equine-supplements">supplement review</Link>. Fill weight for a clipped horse stays on the <Link href="/reviews/blanket-weight-by-temperature-guide">blanket-weight guide</Link>.</p>
         <h2>Printed bands under $70</h2>
@@ -134,13 +134,13 @@ export default function NovemberDecemberGiftGuidePage() {
               </tr>
               <tr className="border-b border-brand-border">
                 <td className="p-3">$280–420</td>
-                <td className="p-3 font-bold">Rambo Original<TableShopLink quietUntilTag href={`/go/smartpak/rambo-original-turnout?s=${SOURCE}`} product="Rambo Original" /></td>
+                <td className="p-3 font-bold">Rambo Original<TableShopLink href={`/go/amazon/B09JWTFTGY?s=${SOURCE}`} product="Rambo Original" label="Rambo Original on Amazon" /></td>
                 <td className="p-3"><Link href="/reviews/best-winter-horse-blankets">Blanket review</Link></td>
               </tr>
             </tbody>
           </table>
         </div>
-        <ComparisonFoot updated="2026-10-09" />
+        <ComparisonFoot updated="2026-10-10" />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} includeSchema={false} />
         <BelowFoldPhoto siteId="horses-com" />
