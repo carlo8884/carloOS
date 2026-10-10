@@ -71,6 +71,8 @@ if (!/IntersectionObserver/.test(journey)) hits.push('hop_view does not use Inte
 if (!/querySelectorAll\('a\[href\*="\/go\/"\]'\)/.test(journey)) hits.push('single-hop pages are not observed')
 if (!/anchors\.length === 1/.test(journey)) hits.push('hop_view must ignore pages with several unmarked hops')
 if (!/trackEvent\(\s*'affiliate_click'/.test(click)) hits.push('affiliate_click missing from the click listener')
+if (!/trackEvent\(\s*'hop_click'/.test(click)) hits.push('hop_click missing from the click listener')
+if (!/card_id:\s*click\.slot/.test(click)) hits.push('hop_click missing card_id')
 if (!/\.\.\.experimentEventParams\(\)/.test(click)) hits.push('affiliate_click missing experiment params')
 const experiments = read('packages/ui/src/lib/experiments.ts')
 if (!/NEXT_PUBLIC_EXPERIMENT_CRATE_HOP_LABEL/.test(experiments)) hits.push('crate hop experiment flag is undocumented')

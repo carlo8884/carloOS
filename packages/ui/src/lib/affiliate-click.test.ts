@@ -3,7 +3,7 @@ import { readFileSync } from 'node:fs'
 import { join } from 'node:path'
 import { test } from 'node:test'
 import { fileURLToPath } from 'node:url'
-import { affiliateClickParams, emailLandingCollectUrl, shopPlacement } from './affiliate-click.ts'
+import { affiliateClickParams, emailLandingCollectUrl, emailLandingHopClickUrl, shopPlacement } from './affiliate-click.ts'
 
 const UI = join(fileURLToPath(new URL('.', import.meta.url)), '../components')
 
@@ -162,6 +162,27 @@ test('direct email /go hits build one GA4 collect URL from the existing measurem
   assert.equal(parsed.searchParams.get('ep.destination_type'), 'search')
   assert.equal(parsed.searchParams.get('ep.destination'), 'seachem prime')
   assert.equal(parsed.searchParams.get('ep.source'), 'email-cycling-guide')
+  const hop = emailLandingHopClickUrl('G-TESTONLY', {
+    site: 'fish-com',
+    page: '/go/amazon-brand/seachem+prime',
+    source: 'email-cycling-guide',
+    partner: 'amazon-brand',
+    product: 'seachem prime',
+    clientId: 'cid-test',
+  })
+  assert.ok(hop)
+  const hopUrl = new URL(hop)
+  assert.equal(hopUrl.searchParams.get('en'), 'hop_click')
+  assert.equal(hopUrl.searchParams.get('ep.card_id'), 'email landing')
+  assert.equal(hopUrl.searchParams.get('ep.partner'), 'amazon-brand')
+  assert.equal(emailLandingHopClickUrl('G-TESTONLY', {
+    site: 'fish-com',
+    page: '/go/amazon-brand/seachem+prime',
+    source: 'reviews-best-aquarium-heaters',
+    partner: 'amazon-brand',
+    product: 'seachem prime',
+    clientId: 'cid-test',
+  }), null)
 })
 
 test('an ASIN hop, a search hop, and a recovery suggestion name the destination', () => {

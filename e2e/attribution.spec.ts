@@ -67,6 +67,31 @@ test('money-page hop records site, source, and partner, and Amazon hops stay tag
   expect(params?.partner).toBe(partner)
   expect(params?.vendor).toBe(partner)
 
+  const expectedCard = await link.evaluate((el) => {
+    const anchor = el as HTMLAnchorElement
+    if (anchor.closest('#empty-search-guides, #missed-guides')) return 'search-recovery'
+    const card = anchor.closest('[data-review-card]')
+    if (card instanceof HTMLElement && card.id) return card.id
+    const marked = anchor.closest('[data-shop-placement]')?.getAttribute('data-shop-placement')
+    if (anchor.closest('[data-result-pick]')) return 'result'
+    if (anchor.closest('[data-primary-hop]') || marked === 'hero') return 'hero'
+    if (anchor.closest('table') || marked === 'table') return 'table'
+    if (marked === 'quick-pick') return 'quick-pick'
+    if (anchor.closest('[data-guide-checklist]')) return 'guide'
+    return marked || 'card'
+  })
+  const hopClick = await page.evaluate(() => {
+    const layer = (window as unknown as { dataLayer?: unknown[] }).dataLayer ?? []
+    for (const entry of layer) {
+      const list = Array.isArray(entry) ? entry : Array.from(entry as ArrayLike<unknown>)
+      if (list[0] === 'event' && list[1] === 'hop_click' && list[2] && typeof list[2] === 'object') {
+        return list[2] as { card_id?: string }
+      }
+    }
+    return null
+  })
+  expect(hopClick?.card_id).toBe(expectedCard)
+
   const amazonShape = amazonHop[site].includes('/go/amazon/')
     ? [`https://amazon.com/dp/${amazonHop[site].split('/')[3]?.split('?')[0]}`, `tag=${AMAZON_TAG}`]
     : ['https://amazon.com/s?k=', `tag=${AMAZON_TAG}`]

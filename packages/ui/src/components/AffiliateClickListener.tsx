@@ -3,9 +3,10 @@
 /**
  * One click listener for every /go hop and marked outbound partner link.
  * Shop buttons, review cards, tables, quick picks, and plain anchors record
- * the same affiliate_click: site, page path, slot (card id or hero / result /
- * table / search-recovery), destination type (ASIN, search, or other),
- * and the ASIN or query. Source, partner, and placement stay on the event.
+ * affiliate_click and hop_click. hop_click carries card_id: the review-card
+ * id, or hero / result / table / quick-pick / guide / search-recovery.
+ * Site, page path, destination type (ASIN, search, or other), and the ASIN
+ * or query stay on both events. Source, partner, and placement stay too.
  */
 import { useEffect } from 'react'
 import { affiliateClickParams } from '../lib/affiliate-click'
@@ -26,6 +27,7 @@ function slotId(anchor: HTMLAnchorElement, marked: string | null | undefined, re
 
 export function AffiliateClickListener({ site }: { site: string }) {
   useEffect(() => {
+    document.documentElement.dataset.hopClick = 'on'
     let lastKey = ''
     let lastAt = 0
     function onClick(event: MouseEvent) {
@@ -63,7 +65,7 @@ export function AffiliateClickListener({ site }: { site: string }) {
       if (key === lastKey && now - lastAt < 1200) return
       lastKey = key
       lastAt = now
-      trackEvent('affiliate_click', {
+      const payload = {
         site,
         page: click.page,
         source: click.source,
@@ -76,10 +78,18 @@ export function AffiliateClickListener({ site }: { site: string }) {
         destination_type: click.destination_type,
         destination: click.destination,
         ...experimentEventParams(),
+      }
+      trackEvent('affiliate_click', payload)
+      trackEvent('hop_click', {
+        ...payload,
+        card_id: click.slot,
       })
     }
     document.addEventListener('click', onClick, true)
-    return () => document.removeEventListener('click', onClick, true)
+    return () => {
+      delete document.documentElement.dataset.hopClick
+      document.removeEventListener('click', onClick, true)
+    }
   }, [site])
   return null
 }

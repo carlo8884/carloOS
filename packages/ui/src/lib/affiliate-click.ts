@@ -157,3 +157,26 @@ export function emailLandingCollectUrl(
   })
   return `https://www.google-analytics.com/g/collect?${params.toString()}`
 }
+
+/**
+ * Same email /go hit, second GA4 event. card_id matches the email slot.
+ * On-site shop clicks send hop_click from AffiliateClickListener instead.
+ */
+export function emailLandingHopClickUrl(
+  measurementId: string | undefined,
+  fields: {
+    site: string
+    page: string
+    source: string
+    partner: string
+    product: string
+    clientId: string
+  },
+): string | null {
+  const collect = emailLandingCollectUrl(measurementId, fields)
+  if (!collect) return null
+  const url = new URL(collect)
+  url.searchParams.set('en', 'hop_click')
+  url.searchParams.set('ep.card_id', 'email landing')
+  return url.toString()
+}
