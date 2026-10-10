@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, ReviewCard, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, ReviewCard, CrossPortfolioCard, ShopCtas, ComparisonFoot, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -104,6 +104,7 @@ export default function KitVsAdultFeedingPage() {
             updatedAt="2026-06-01"
             reviewedBy="Editorial team"
           />
+          <LastUpdated date="2026-10-10" />
 
           <h2 id="kit">Weaning & the Kit Period</h2>
           <p>
@@ -124,6 +125,38 @@ export default function KitVsAdultFeedingPage() {
           <p>
             By around six months to a year, growth slows and the ferret settles into adult maintenance feeding. Healthy adults are typically free-fed — they self-regulate and graze 8–10 times a day — on a diet that hits the standard ferret macronutrient window. Restricted or scheduled feeding is generally discouraged for adults, partly because it can precipitate hypoglycemic episodes in a ferret with subclinical insulinoma. This is the stage to keep an eye on body condition and the normal seasonal weight swing (see <a href="/diet/weight-management">weight management</a>).
           </p>
+          <div className="my-6 max-w-full min-w-0">
+            <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
+              <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+              <thead>
+                <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Kit, first six months</th>
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Adult</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">What feeding does</th>
+                  <td className="p-3">Imprints smell and texture. Rotate two or three appropriate kibbles</td>
+                  <td className="p-3">Free-fed maintenance. Grazes 8 to 10 times a day</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">What to keep available</th>
+                  <td className="p-3">High-calorie, high-protein, animal-based food, free-choice. Sometimes lightly moistened at first</td>
+                  <td className="p-3">A diet in the standard ferret window. Restricted meals are discouraged</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Risk on this page</th>
+                  <td className="p-3">One kibble can fix the diet. A recall can leave a ferret that will not eat</td>
+                  <td className="p-3">Scheduled feeding can precipitate hypoglycemia if insulinoma is subclinical</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <ComparisonFoot updated="2026-10-10" />
+          <h2>Who should feed which stage</h2>
+          <p>Kits need variety inside the carnivore profile so later switches are possible. Adults stay on free-choice maintenance. A senior, from around age five, may need softened kibble, and a diet change with a diagnosis belongs with a veterinarian who sees ferrets.</p>
 
           <h2 id="senior">Senior Feeding</h2>
           <p>

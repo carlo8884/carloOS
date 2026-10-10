@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { PrimaryHop, buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ReviewCard, ShopCtas, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
+import { PrimaryHop, buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ReviewCard, ShopCtas, ArticleSourcesList, LastUpdated, ComparisonFoot } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 
@@ -52,6 +52,38 @@ export default function PreExistingPage() {
 
           <h2>Curable vs. Incurable</h2>
           <p>Many insurers separate pre-existing conditions into curable and incurable. Incurable or chronic conditions — diabetes, allergies, heart disease, cancer, kidney disease — are generally excluded for the life of the policy. Curable conditions — a single ear infection, a respiratory infection, a urinary tract infection that fully resolved — may become eligible for coverage after the pet has gone a defined symptom-free and treatment-free period, often six to eighteen months. A red-and-blue checking pencil is how incurable vs curable stays marked on that record copy — it is not an assorted highlighter set, not a yellow legal pad, and not a four-column accounting pad. Whether an insurer offers this curable-condition pathway, and how long the waiting period is, varies and is worth comparing.</p>
+          <div className="my-6 max-w-full min-w-0">
+            <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
+              <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+              <thead>
+                <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Incurable</th>
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Curable</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Examples</th>
+                  <td className="p-3">Diabetes, allergies, heart disease, cancer, kidney disease</td>
+                  <td className="p-3">A single ear infection, a respiratory infection, or a urinary tract infection that fully resolved</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Coverage</th>
+                  <td className="p-3">Generally excluded for the life of the policy</td>
+                  <td className="p-3">May become eligible after a symptom-free and treatment-free period, often six to eighteen months</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">What varies</th>
+                  <td className="p-3">The exclusion is the usual rule for chronic conditions</td>
+                  <td className="p-3">Not every insurer offers the pathway, and the wait is not the same</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <ComparisonFoot updated="2026-10-10" />
+          <h2>Who should compare which pathway</h2>
+          <p>Compare whether the insurer offers a curable-condition pathway, and how long that symptom-free period is. An incurable condition stays excluded. A resolved infection may not.</p>
 
           <h2>Bilateral Conditions</h2>
           <p>A subtle but important rule involves bilateral conditions — those that can affect paired body parts, such as cruciate ligaments, hips, or eyes. Many insurers treat a problem on one side as making the other side pre-existing too. So if your dog tore one cruciate ligament before enrollment, the insurer may exclude the other knee as well, on the reasoning that the underlying predisposition was already present. A pressboard classification folder is how curable, incurable, and bilateral conditions stay three labeled sections — it is not 3-tab dividers, not hanging file folders, and not manila file folders. Reading how a policy handles bilateral conditions matters for breeds prone to orthopedic disease.</p>
