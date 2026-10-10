@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata, ArticleSourcesList, LastUpdated, ComparisonFoot } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, ShopCtas, buildArticleSchema, buildMetadata, ArticleSourcesList, LastUpdated, ComparisonFoot } from '@carloOS/ui'
 import { HopDisclosure } from '../../../components/HopDisclosure'
 
 export const metadata: Metadata = buildMetadata({
@@ -75,7 +75,7 @@ export default function KayteeVsFerretNationGuidePage() {
       }
     >
       <div className="carloOS-article">
-          <LastUpdated date="2026-10-09" />
+          <LastUpdated date="2026-10-10" />
         <EmailCapture
           variant="inline"
           siteId="ferret-com"
@@ -100,6 +100,10 @@ export default function KayteeVsFerretNationGuidePage() {
         <p>Floor space for the number of ferrets is on the <Link href="/tools/cage-size-calculator">cage-size calculator</Link>. Confirm bar spacing on the box. The manufacturer page does not print it.</p>
         <h2>Who should buy which cage</h2>
         <p>Buy the Kaytee when you have one ferret, daily out-of-cage time, and you can confirm the bar spacing on the box in the store. Buy the Ferret Nation double unit when you have a pair or you expect to add one, and you can fit the assembled footprint. Cover the wire on either cage. The Prevue Feisty Ferret remains the mid-price cage for one or two, and it is not this pair.</p>
+        <ShopCtas
+          amazonHref="/go/amazon/B008FONT2Y?s=reviews-kaytee-vs-ferret-nation-guide"
+          amazonLabel="Check price of the Kaytee Multi-Level Ferret Home on Amazon"
+        />
         <p>The Ferret Nation double is the group cage because the <a href="https://www.midwesthomes4pets.com/product/small-animal/habitats-cages/ferret-nation/">manufacturer page</a> says the full-width double doors open for cleaning and feeding (fetched 2026-10-08).</p>
         <div className="my-6 max-w-full min-w-0">
           <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
@@ -140,7 +144,7 @@ export default function KayteeVsFerretNationGuidePage() {
             </tbody>
           </table>
         </div>
-        <ComparisonFoot updated="2026-10-09" />
+        <ComparisonFoot updated="2026-10-10" />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
                 <ArticleSourcesList title="Sources"
