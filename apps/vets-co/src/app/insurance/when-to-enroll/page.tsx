@@ -79,7 +79,7 @@ export default function WhenToEnrollPage() {
                 </tr>
                 <tr className="border-b border-brand-border align-top">
                   <th scope="row" className="p-3 font-bold text-brand-dark text-left">Senior</th>
-                  <td className="p-3">Premiums are higher, and existing conditions are more likely to be excluded. Seniors are also the most likely to need costly care. This page’s Pets Best note says there is no upper age limit</td>
+                  <td className="p-3">Premiums are higher, and existing conditions are more likely to be excluded. Seniors are also the most likely to need costly care</td>
                   <td className="p-3">When the history is relatively clean, against new unrelated illness</td>
                 </tr>
                 <tr className="border-b border-brand-border align-top">
