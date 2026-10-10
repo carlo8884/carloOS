@@ -74,6 +74,8 @@ export default function HealthyPawsVsEmbraceGuidePage() {
           links={[
             { label: 'Reviews hub', href: '/reviews' },
             { label: 'Best pet insurance', href: '/reviews/best-pet-insurance' },
+            { label: 'Trupanion vs Healthy Paws', href: '/reviews/trupanion-vs-healthy-paws-guide' },
+            { label: 'Trupanion vs Embrace', href: '/reviews/trupanion-vs-embrace-guide' },
             { label: 'Is insurance worth it?', href: '/tools/pet-insurance-worth-it-calculator' },
           ]}
         />
@@ -81,7 +83,7 @@ export default function HealthyPawsVsEmbraceGuidePage() {
       priceAsOf="2026-10-07"
     >
       <div className="carloOS-article">
-          <LastUpdated date="2026-10-09" />
+          <LastUpdated date="2026-10-10" />
         <EmailCapture
           variant="inline"
           siteId="vets-co"
@@ -106,7 +108,7 @@ export default function HealthyPawsVsEmbraceGuidePage() {
         <p>Embrace is Wellness Included. The Wellness Rewards page, fetched 2026-10-08, lists wellness exams, vaccinations, flea, tick, and heartworm prevention, and preventative dental cleaning. Our notes mark that coverage as a standalone add-on. Reimbursement in the review is 70%, 80%, or 90%. The deductible program and the orthopedic waiting period: see the carrier&apos;s current terms. The review also says the plan options are more complex.</p>
         <p>To see what a deductible and a reimbursement percent do to a sample bill, use the <Link href="/tools/pet-insurance-worth-it-calculator">worth-it calculator</Link>.</p>
         <h2>Who should read which policy</h2>
-        <p>Open the Healthy Paws sample when the annual limit on the quote is the one you want and you want the claims page&apos;s processing window, and you are not buying the policy for a wellness add-on. Open the Embrace sample when the wellness add-on is the reason, and read the orthopedic waiting period on the carrier page before you enroll. Enroll before a condition is in the record. Trupanion, the direct-pay carrier on that review, is a separate comparison.</p>
+        <p>Open the Healthy Paws sample when the annual limit on the quote is the one you want and you want the claims page&apos;s processing window, and you are not buying the policy for a wellness add-on. Open the Embrace sample when the wellness add-on is the reason, and read the orthopedic waiting period on the carrier page before you enroll. Enroll before a condition is in the record. Trupanion, the direct-pay carrier on that review, is set beside <Link href="/reviews/trupanion-vs-healthy-paws-guide">Healthy Paws</Link> and <Link href="/reviews/trupanion-vs-embrace-guide">Embrace</Link> in separate guides.</p>
         <p>The Healthy Paws claims page, fetched 2026-10-08, says most claims are processed in 2 days. The Embrace Wellness Rewards page, fetched the same day, lists wellness exams, vaccinations, flea, tick, and heartworm prevention, and preventative dental cleaning.</p>
         <div className="my-6 max-w-full min-w-0">
           <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
@@ -147,7 +149,7 @@ export default function HealthyPawsVsEmbraceGuidePage() {
             </tbody>
           </table>
         </div>
-        <ComparisonFoot updated="2026-10-09" />
+        <ComparisonFoot updated="2026-10-10" />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
                 <ArticleSourcesList title="Sources"

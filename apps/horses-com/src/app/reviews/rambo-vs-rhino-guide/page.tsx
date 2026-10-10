@@ -70,6 +70,7 @@ export default function RamboVsRhinoGuidePage() {
           links={[
             { label: 'Reviews hub', href: '/reviews' },
             { label: 'Best winter blankets', href: '/reviews/best-winter-horse-blankets' },
+            { label: 'Weatherbeeta vs Amigo', href: '/reviews/weatherbeeta-vs-amigo-guide' },
             { label: 'Blanket size calculator', href: '/tools/horse-blanket-size-calculator' },
             { label: 'Blanketing', href: '/care/blanketing' },
           ]}

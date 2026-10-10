@@ -74,12 +74,14 @@ export default function TrupanionVsFigoGuidePage() {
             { label: 'Reviews hub', href: '/reviews' },
             { label: 'Breed-specific risk', href: '/insurance/breed-specific-risk' },
             { label: 'Best pet insurance', href: '/reviews/best-pet-insurance' },
+            { label: 'Trupanion vs Healthy Paws', href: '/reviews/trupanion-vs-healthy-paws-guide' },
+            { label: 'Trupanion vs Embrace', href: '/reviews/trupanion-vs-embrace-guide' },
           ]}
         />
       }
     >
       <div className="carloOS-article">
-          <LastUpdated date="2026-10-09" />
+          <LastUpdated date="2026-10-10" />
         <EmailCapture
           variant="inline"
           siteId="vets-co"
@@ -96,7 +98,7 @@ export default function TrupanionVsFigoGuidePage() {
             "That page names Trupanion and Figo as two carriers to quote when a breed has predictable expensive needs.",
           ]}
         />
-        <p>The notes below are the ones on the <Link href="/insurance/breed-specific-risk">breed-specific risk page</Link>. That page names Trupanion and Figo as two carriers to quote when a breed has predictable expensive needs. Other guides compare Trupanion with Healthy Paws or Embrace. Neither card prints a monthly premium.</p>
+        <p>The notes below are the ones on the <Link href="/insurance/breed-specific-risk">breed-specific risk page</Link>. That page names Trupanion and Figo as two carriers to quote when a breed has predictable expensive needs. Other guides compare Trupanion with <Link href="/reviews/trupanion-vs-healthy-paws-guide">Healthy Paws</Link> or <Link href="/reviews/trupanion-vs-embrace-guide">Embrace</Link>. Neither card prints a monthly premium.</p>
         <h2>What the page says about Trupanion</h2>
         <p>Trupanion is Unlimited Payouts and the winner on that page. The annual limit is unlimited, which the review ties to a major orthopedic or chronic-disease course that would exhaust a capped plan. Hereditary and congenital conditions are covered per policy terms. The deductible is a per-condition lifetime deductible. A direct-to-vet payment option is listed. Cons say premiums can run higher and there is no wellness add-on. The price line is quote-based. The page says to enroll as a puppy so breed-typical conditions are not later excluded as pre-existing. Our notes list no annual or lifetime payout caps and a per-condition lifetime deductible.</p>
         <h2>What the page says about Figo</h2>
@@ -148,7 +150,7 @@ export default function TrupanionVsFigoGuidePage() {
             </tbody>
           </table>
         </div>
-        <ComparisonFoot updated="2026-10-09" />
+        <ComparisonFoot updated="2026-10-10" />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
                 <ArticleSourcesList

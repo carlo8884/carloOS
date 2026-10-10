@@ -68,13 +68,14 @@ export default function VetsterVsChewyConnectGuidePage() {
             { label: 'Reviews hub', href: '/reviews' },
             { label: 'Telehealth services', href: '/telehealth' },
             { label: 'ER vs clinic', href: '/tools/er-vs-clinic' },
+            { label: 'Vetster vs AskVet', href: '/reviews/vetster-vs-askvet-guide' },
           ]}
         />
       }
       priceAsOf="2026-10-07"
     >
       <div className="carloOS-article">
-          <LastUpdated date="2026-10-09" />
+          <LastUpdated date="2026-10-10" />
         <EmailCapture
           variant="inline"
           siteId="vets-co"
@@ -91,7 +92,7 @@ export default function VetsterVsChewyConnectGuidePage() {
             "The page says that per-visit price is higher than a subscription.",
           ]}
         />
-        <p>Vetster is the overall service. Chewy Connect with a Vet is for people who already use Chewy. <Link href="/reviews/askvet-vs-chewy-connect-guide">AskVet versus Chewy Connect</Link> is the chat-subscription comparison, not this video visit.</p>
+        <p>Vetster is the overall service. Chewy Connect with a Vet is for people who already use Chewy. <Link href="/reviews/askvet-vs-chewy-connect-guide">AskVet versus Chewy Connect</Link> is the chat-subscription comparison, not this video visit. Vetster is also set beside AskVet in <Link href="/reviews/vetster-vs-askvet-guide">Vetster versus AskVet</Link>.</p>
         <h2>What the page says about Vetster</h2>
         <p>Vetster is Best Overall and the winner. The telehealth page on this site lists video and chat. Vetster’s help page, updated 2025-12-18 and fetched 2026-10-08, says it verifies an active license in the veterinarian’s jurisdiction before they go live. The telehealth page lists specialists, including behavior, dermatology, and internal medicine. This page does not publish a wait time. You pay per visit. The page says that per-visit figure is higher than a chat plan.</p>
         <p>Single visits start at $102. Plus is $12/month, billed annually.</p>
@@ -141,7 +142,7 @@ export default function VetsterVsChewyConnectGuidePage() {
             </tbody>
           </table>
         </div>
-        <ComparisonFoot updated="2026-10-09" />
+        <ComparisonFoot updated="2026-10-10" />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
                 <ArticleSourcesList

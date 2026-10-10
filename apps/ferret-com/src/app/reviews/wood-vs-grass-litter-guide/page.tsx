@@ -62,6 +62,8 @@ export default function WoodVsGrassLitterGuidePage() {
           links={[
             { label: 'Reviews hub', href: '/reviews' },
             { label: 'Ferret litter', href: '/reviews/best-ferret-litter' },
+            { label: 'Paper vs wood litter', href: '/reviews/paper-vs-wood-litter-guide' },
+            { label: 'Paper vs grass litter', href: '/reviews/paper-vs-grass-litter-guide' },
             { label: 'Litter planner', href: '/tools/litter-planner' },
           ]}
         />

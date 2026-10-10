@@ -85,12 +85,13 @@ export default function LemonadeVsPetsBestGuidePage() {
             { label: 'Reviews hub', href: '/reviews' },
             { label: 'When to enroll', href: '/insurance/when-to-enroll' },
             { label: 'Best pet insurance', href: '/reviews/best-pet-insurance' },
+            { label: 'Healthy Paws vs Pets Best', href: '/reviews/healthy-paws-vs-pets-best-guide' },
           ]}
         />
       }
     >
       <div className="carloOS-article">
-          <LastUpdated date="2026-10-09" />
+          <LastUpdated date="2026-10-10" />
         <EmailCapture
           variant="inline"
           siteId="vets-co"
@@ -107,7 +108,7 @@ export default function LemonadeVsPetsBestGuidePage() {
             "A preventive package is optional, and the review says that package is not insurance.",
           ]}
         />
-        <p>Lemonade and Pets Best are two carriers to quote early. The wider comparison is on the <Link href="/reviews/best-pet-insurance">insurance review</Link>. Neither product prints a monthly premium.</p>
+        <p>Lemonade and Pets Best are two carriers to quote early. Pets Best is also set beside Healthy Paws in <Link href="/reviews/healthy-paws-vs-pets-best-guide">Healthy Paws versus Pets Best</Link>. The wider comparison is on the <Link href="/reviews/best-pet-insurance">insurance review</Link>. Neither product prints a monthly premium.</p>
         <h2>What the review says about Lemonade</h2>
         <p>Lemonade Pet is Young-Pet Value and the winner on that page. Lemonade’s FAQ, fetched 2026-10-08, says signing up while a pet is young and healthy means they are not denied coverage at renewal because of age. Our notes mark Lemonade for owners with younger pets. Claims are app-based. Availability varies by state. A preventive package is optional, and the review says that package is not insurance. The price line is quote-based.</p>
         <h2>What the review says about Pets Best</h2>
@@ -154,7 +155,7 @@ export default function LemonadeVsPetsBestGuidePage() {
             </tbody>
           </table>
         </div>
-        <ComparisonFoot updated="2026-10-09" />
+        <ComparisonFoot updated="2026-10-10" />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
                 <ArticleSourcesList title="Sources"

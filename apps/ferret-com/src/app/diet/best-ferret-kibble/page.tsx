@@ -168,6 +168,7 @@ export default function BestFerretKibblePage() {
                 { label: 'November and December gifts', href: '/reviews/november-december-gift-guide' },
                 { label: 'Label calculator', href: '/tools/label-calculator' },
                 { label: 'Ferret Body Condition Score', href: '/tools/ferret-body-condition-score' },
+                { label: 'Wysong vs Carniwhole', href: '/reviews/wysong-vs-carniwhole-guide' },
                 { label: 'Whole-Prey vs Kibble', href: '/diet/whole-prey-vs-kibble' },
                 { label: 'Protein & Fat Requirements', href: '/diet/protein-and-fat-requirements' },
                 { label: 'Kit vs Adult Feeding', href: '/diet/kit-vs-adult-feeding' },
@@ -196,7 +197,7 @@ export default function BestFerretKibblePage() {
             updatedAt="2026-06-11"
             reviewedBy="Editorial team"
           />
-          <LastUpdated date="2026-10-09" />
+          <LastUpdated date="2026-10-10" />
           <EmailCapture
             variant="inline"
             siteId="ferret-com"
@@ -393,9 +394,9 @@ export default function BestFerretKibblePage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-09" />
+          <ComparisonFoot updated="2026-10-10" />
 
-          <p>Wysong and Marshall, the two kibbles on this page, are compared in the <Link href="/reviews/wysong-vs-marshall-kibble-guide">Wysong versus Marshall guide</Link>.</p>
+          <p>Wysong and Marshall, the two kibbles on this page, are compared in the <Link href="/reviews/wysong-vs-marshall-kibble-guide">Wysong versus Marshall guide</Link>. Wysong and Carniwhole are set side by side in the <Link href="/reviews/wysong-vs-carniwhole-guide">Wysong versus Carniwhole guide</Link>.</p>
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
 
