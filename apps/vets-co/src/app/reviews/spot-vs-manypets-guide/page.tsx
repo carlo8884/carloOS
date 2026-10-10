@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, InlinePartnerQuote, RelatedLinks, buildArticleSchema, buildMetadata, PrimaryHop, ArticleSourcesList, LastUpdated, ComparisonFoot } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, InlinePartnerQuote, RelatedLinks, buildArticleSchema, buildMetadata, PrimaryHop, ArticleSourcesList, LastUpdated, ComparisonFoot, EmailCapture } from '@carloOS/ui'
 import { HopDisclosure } from '../../../components/HopDisclosure'
 
 // Request-time env. An unset AFF_SPOT_TAG keeps the quote as a note.
@@ -80,7 +80,7 @@ export default function SpotVsManyPetsGuidePage() {
       }
     >
       <div className="carloOS-article">
-          <LastUpdated date="2026-10-09" />
+          <LastUpdated date="2026-10-10" />
         <p>The <Link href="/insurance/reading-the-fine-print">fine-print page</Link> already puts Spot and ManyPets side by side as two sample policies to read, and it points to the <Link href="/reviews/best-pet-insurance">insurance review</Link> for the wider comparison. Neither product prints a monthly premium.</p>
         <h2>What the review says about Spot</h2>
         <p>Spot is Customizable and the winner on that page. Limits are adjustable. Exam fees are often covered. Preventive care is an optional add-on, and the review says that add-on is not insurance. The price line is quote-based. The cons say to read the waiting-period terms. Nothing here fills in a waiting-period length the review left unread.</p>
@@ -130,7 +130,22 @@ export default function SpotVsManyPetsGuidePage() {
             </tbody>
           </table>
         </div>
-        <ComparisonFoot updated="2026-10-09" />
+        <ComparisonFoot updated="2026-10-10" />
+        <EmailCapture
+          variant="inline"
+          siteId="vets-co"
+          addressOnly
+          title="Shopping checklist"
+          ctaText="Copy checklist"
+          source="reviews-spot-vs-manypets-guide"
+          checklist={[
+            "Preventive care is an optional add-on, and the review says that add-on is not insurance.",
+            "The cons say to read the waiting-period terms.",
+            "The review calls the fine print relatively clear and says availability varies by state.",
+            "On both, read waiting periods, exclusions, exam-fee language, and the annual limit in the sample policy.",
+            "Do not treat either quote-based line as a price from this page.",
+          ]}
+        />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
                 <ArticleSourcesList

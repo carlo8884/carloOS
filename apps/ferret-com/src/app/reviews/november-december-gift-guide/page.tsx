@@ -1,7 +1,7 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, BelowFoldPhoto, ComparisonFoot, FAQAccordion, RelatedLinks, TableShopLink, buildArticleSchema, buildFAQSchema, buildMetadata, combineSchemas, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
+import { ArticleLayout, BelowFoldPhoto, ComparisonFoot, FAQAccordion, RelatedLinks, TableShopLink, buildArticleSchema, buildFAQSchema, buildMetadata, combineSchemas, ArticleSourcesList, LastUpdated, EmailCapture } from '@carloOS/ui'
 
 const PATH = '/reviews/november-december-gift-guide'
 const SOURCE = 'reviews-november-december-gift-guide'
@@ -82,7 +82,7 @@ export default function NovemberDecemberGiftGuidePage() {
       priceAsOf="2026-10-04"
     >
       <div className="carloOS-article">
-          <LastUpdated date="2026-10-09" />
+          <LastUpdated date="2026-10-10" />
         <p>November and December gifts for a ferret are usually a small supply, a bag of food, or a cage someone has already measured. The <Link href="/reviews">reviews hub</Link> points at those pages. This guide only lists cards that print a dollar band and a shop link. The cage review’s $, $$, and $$$ tiers stay symbols. Inventing a dollar range for those symbols would be a new price, and this page does not do that.</p>
         <p>Seasonal coat and harness fit already have guides. The <Link href="/reviews/fall-molt-brush-guide">fall molt guide</Link> is the brush page. The <Link href="/reviews/winter-harness-fit-guide">winter harness guide</Link> is the fit check. They are not repeated as new products here.</p>
         <h2>Printed bands under $20</h2>
@@ -141,7 +141,22 @@ export default function NovemberDecemberGiftGuidePage() {
             </tbody>
           </table>
         </div>
-        <ComparisonFoot updated="2026-10-09" />
+        <ComparisonFoot updated="2026-10-10" />
+        <EmailCapture
+          variant="inline"
+          siteId="ferret-com"
+          addressOnly
+          title="Shopping checklist"
+          ctaText="Copy checklist"
+          source="reviews-november-december-gift-guide"
+          checklist={[
+            "A bag of kibble is the gift when the ferret already eats that food.",
+            "Read the kibble review before you switch a food in December.",
+            "A sudden bag change is not a small gift.",
+            "The cage review still explains bar spacing and which household that style of cage is for.",
+            "Measure the room before you order a double unit as a surprise.",
+          ]}
+        />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} includeSchema={false} />
         <BelowFoldPhoto siteId="ferret-com" />

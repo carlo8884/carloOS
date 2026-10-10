@@ -1,7 +1,7 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, RelatedLinks, ShopCtas, buildArticleSchema, buildMetadata, PrimaryHop, ArticleSourcesList, LastUpdated, ComparisonFoot } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, RelatedLinks, ShopCtas, buildArticleSchema, buildMetadata, PrimaryHop, ArticleSourcesList, LastUpdated, ComparisonFoot, EmailCapture } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -131,6 +131,20 @@ export default function FerretNationVsPrevueGuidePage() {
           </table>
         </div>
         <ComparisonFoot updated="2026-10-10" />
+        <EmailCapture
+          variant="inline"
+          siteId="ferret-com"
+          addressOnly
+          title="Shopping checklist"
+          ctaText="Copy checklist"
+          source="reviews-ferret-nation-vs-prevue-guide"
+          checklist={[
+            "Levels are modular and stackable.",
+            "Pans are deep and leak-proof.",
+            "Buy the Prevue when the household is one or two ferrets and the double unit is too big or too expensive.",
+            "Cover wire shelves and ramps on either cage, and check the spacing on the exact model.",
+          ]}
+        />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
                 <ArticleSourcesList title="Sources"

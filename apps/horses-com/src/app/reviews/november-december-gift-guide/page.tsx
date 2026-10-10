@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, BelowFoldPhoto, ComparisonFoot, FAQAccordion, RelatedLinks, TableShopLink, buildArticleSchema, buildFAQSchema, buildMetadata, combineSchemas, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
+import { ArticleLayout, BelowFoldPhoto, ComparisonFoot, FAQAccordion, RelatedLinks, TableShopLink, buildArticleSchema, buildFAQSchema, buildMetadata, combineSchemas, ArticleSourcesList, LastUpdated, EmailCapture } from '@carloOS/ui'
 
 const PATH = '/reviews/november-december-gift-guide'
 const SOURCE = 'reviews-november-december-gift-guide'
@@ -141,6 +141,22 @@ export default function NovemberDecemberGiftGuidePage() {
           </table>
         </div>
         <ComparisonFoot updated="2026-10-10" />
+        <EmailCapture
+          variant="inline"
+          siteId="horses-com"
+          addressOnly
+          title="Shopping checklist"
+          ctaText="Copy checklist"
+          source="reviews-november-december-gift-guide"
+          checklist={[
+            "Measure before you order.",
+            "A blanket that does not fit is not a useful gift, even when the band looks right.",
+            "A breakaway is the gift when the horse is left haltered, which is the limit the halter card already states.",
+            "Bell boots are for overreach.",
+            "Brushing boots are for interference.",
+            "The boot page says neither one is tendon support.",
+          ]}
+        />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} includeSchema={false} />
         <BelowFoldPhoto siteId="horses-com" />

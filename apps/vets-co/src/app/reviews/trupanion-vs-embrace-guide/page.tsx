@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, InlinePartnerQuote, PrimaryHop, RelatedLinks, buildArticleSchema, buildMetadata, ArticleSourcesList, LastUpdated, ComparisonFoot } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, InlinePartnerQuote, PrimaryHop, RelatedLinks, buildArticleSchema, buildMetadata, ArticleSourcesList, LastUpdated, ComparisonFoot, EmailCapture } from '@carloOS/ui'
 import { HopDisclosure } from '../../../components/HopDisclosure'
 
 // Request-time env, same as the insurance comparison. A set partner tag
@@ -130,6 +130,22 @@ export default function TrupanionVsEmbraceGuidePage() {
           </table>
         </div>
         <ComparisonFoot updated="2026-10-10" />
+        <EmailCapture
+          variant="inline"
+          siteId="vets-co"
+          addressOnly
+          title="Shopping checklist"
+          ctaText="Copy checklist"
+          source="reviews-trupanion-vs-embrace-guide"
+          checklist={[
+            "Trupanion is Best Overall because the policy pays the clinic at checkout.",
+            "Wellness is not included.",
+            "Reimbursement in the review is 70%, 80%, or 90%.",
+            "Enroll before a condition is in the record.",
+            "The insurance review says a condition noted before enrollment can be excluded.",
+            "A quote depends on the pet, the ZIP code, and the plan options.",
+          ]}
+        />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
                 <ArticleSourcesList title="Sources"

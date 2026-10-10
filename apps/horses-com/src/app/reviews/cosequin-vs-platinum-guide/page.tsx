@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, QuietPartnerLink, RelatedLinks, ShopCtas, buildArticleSchema, buildMetadata, ArticleSourcesList, LastUpdated, ComparisonFoot } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, QuietPartnerLink, RelatedLinks, ShopCtas, buildArticleSchema, buildMetadata, ArticleSourcesList, LastUpdated, ComparisonFoot, EmailCapture } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
@@ -115,6 +115,21 @@ export default function CosequinVsPlatinumGuidePage() {
           </table>
         </div>
         <ComparisonFoot updated="2026-10-10" />
+        <EmailCapture
+          variant="inline"
+          siteId="horses-com"
+          addressOnly
+          title="Shopping checklist"
+          ctaText="Copy checklist"
+          source="reviews-cosequin-vs-platinum-guide"
+          checklist={[
+            "Milligrams differ for powder and pellets — check the label.",
+            "The initial period is 2–4 weeks.",
+            "Platinum CJ does not list chondroitin.",
+            "Omega-3 on that page is flax oil.",
+            "Neither product is a replacement for veterinary joint treatment.",
+          ]}
+        />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
                 <ArticleSourcesList title="Sources"
