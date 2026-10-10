@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, TableOfContents, ComparisonFoot, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -107,6 +107,7 @@ export default function PrePurchaseExamPage() {
             updatedAt="2026-09-06"
             reviewedBy="Editorial team"
           />
+          <LastUpdated date="2026-10-10" />
 
           <h2 id="purpose">What the Exam Is For</h2>
           <p>A pre-purchase exam is a veterinary assessment of a horse&apos;s current health and soundness, carried out for a prospective buyer to inform the buying decision. Its purpose is not to pass or fail the horse, nor to guarantee its future, but to identify any existing problems and assess the horse&apos;s suitability for the buyer&apos;s intended use. A jumping prospect and a quiet trail horse are judged against different demands, so the buyer&apos;s plans shape what matters in the findings.</p>
@@ -116,6 +117,33 @@ export default function PrePurchaseExamPage() {
 
           <h2 id="levels">Basic vs Extensive</h2>
           <p>Pre-purchase exams come in tiers. A basic (sometimes called two-stage) exam covers the resting examination and seeing the horse walk and trot, suitable for a low-value or low-demand purchase. A more extensive (five-stage) exam adds strenuous exercise to stress the heart, lungs, and limbs, a period of rest and re-examination, and a final trot-up to catch lameness that only shows after work. The level should match the horse&apos;s value and intended job, decided with your veterinarian.</p>
+          <div className="my-6 max-w-full min-w-0">
+            <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
+              <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+              <thead>
+                <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Basic exam</th>
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Extensive exam</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">What it includes</th>
+                  <td className="p-3">The resting examination, and seeing the horse walk and trot</td>
+                  <td className="p-3">Strenuous exercise, a rest and re-examination, and a final trot-up</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Who it fits</th>
+                  <td className="p-3">A low-value or low-demand purchase</td>
+                  <td className="p-3">When the horse’s value and intended job call for stressing the heart, lungs, and limbs</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <ComparisonFoot updated="2026-10-10" />
+          <h2>Who should book which exam</h2>
+          <p>Book the basic exam for a low-demand purchase. Book the extensive exam when the job needs the horse worked, rested, and trotted again. Decide the level with your veterinarian.</p>
 
           <h2 id="radiographs">Radiographs and Extras</h2>
           <p>Beyond the clinical exam, buyers can request additional diagnostics: radiographs of the feet, hocks, and other areas to look for bony change; ultrasound of soft tissues; blood tests (including, by agreement, storing a sample to test later for medication that might mask problems); endoscopy of the airway; and tests appropriate to the discipline. These add cost and are chosen based on the horse&apos;s value, age, intended use, and any findings from the clinical exam.</p>

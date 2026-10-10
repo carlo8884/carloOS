@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, LastUpdated } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, LastUpdated, ComparisonFoot } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 
@@ -56,6 +56,38 @@ export default function Page() {
           <h2>The Three Dials You Control</h2>
           <p>Unlike breed or age, the plan structure is fully in your hands, and three dials set the price. The <strong>deductible</strong> is the amount you pay before reimbursement begins; raising it lowers your premium because you absorb more of each claim. The <strong>reimbursement percentage</strong> is the share of the eligible bill the insurer pays back — ninety percent costs more than seventy. The <strong>annual limit</strong> is the cap on what the policy pays per year; an unlimited limit costs more than a five-thousand-dollar cap. Adjusting these is how you tune a quote to a monthly figure you can sustain.</p>
           <p>To see how these dials interact on a real bill, the <a href="/insurance/deductibles-reimbursement">deductibles and reimbursement guide</a> walks through worked examples, and the <a href="/tools/insurance-reimbursement-estimator">reimbursement estimator</a> shows net out-of-pocket on representative scenarios.</p>
+          <div className="my-6 max-w-full min-w-0">
+            <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
+              <caption className="text-left font-semibold text-brand-dark p-3">The three dials, from the sentences on this page</caption>
+              <thead>
+                <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Dial</th>
+                  <th scope="col" className="p-3 font-bold text-brand-dark">What it is</th>
+                  <th scope="col" className="p-3 font-bold text-brand-dark">How it moves the price</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Deductible</th>
+                  <td className="p-3">The amount you pay before reimbursement begins</td>
+                  <td className="p-3">Raising it lowers the premium, because you absorb more of each claim</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Reimbursement</th>
+                  <td className="p-3">The share of the eligible bill the insurer pays back</td>
+                  <td className="p-3">Ninety percent costs more than seventy</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Annual limit</th>
+                  <td className="p-3">The cap on what the policy pays per year</td>
+                  <td className="p-3">An unlimited limit costs more than a five-thousand-dollar cap</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <ComparisonFoot updated="2026-10-10" />
+          <h2>Who should turn which dial</h2>
+          <p>Raise the deductible when you can absorb more of each claim. Pay for a higher reimbursement when you want more of the eligible bill back. Choose the unlimited limit when a five-thousand-dollar cap is too low for the care you expect. Tune the three together to a monthly figure you can sustain.</p>
 
           <h2>Premiums Rise With Age</h2>
           <p>One number owners often miss is that the premium is not fixed for life. As a pet ages, its claims risk rises, and most insurers raise premiums at renewal to match — sometimes steeply in the senior years. The right way to budget is to assume the cost will increase over time, not to anchor on the first-year quote. This also reframes the enroll-early argument: you cannot escape age-based increases, but enrolling young locks in coverage before conditions become pre-existing exclusions and starts the premium from a lower base.</p>

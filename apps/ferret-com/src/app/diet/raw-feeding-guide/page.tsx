@@ -1,7 +1,7 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import { HubMoneyLinks } from '@carloOS/ui'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, CrossPortfolioCard, ShopCtas, ComparisonFoot, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -129,6 +129,7 @@ export default function RawFeedingGuidePage() {
             updatedAt="2026-06-11"
             reviewedBy="Editorial team"
           />
+          <LastUpdated date="2026-10-10" />
 
           <h2 id="why">Why Raw</h2>
           <p>
@@ -139,6 +140,38 @@ export default function RawFeedingGuidePage() {
           <p>
             There are two raw approaches. <strong>Whole prey</strong> means feeding intact, appropriately sized animals — frozen-thawed mice, rats, day-old chicks, quail. Its advantage is that the prey arrives pre-balanced: muscle, organ, and bone are present in the proportions nature supplies, so you do not have to engineer the ratio yourself. <strong>Frankenprey</strong> means assembling a balanced diet from separately purchased parts — muscle meat, organ, and raw meaty bone — to approximate whole prey. Frankenprey offers more control and easier sourcing of familiar meats, at the cost of having to get the ratio right yourself.
           </p>
+          <div className="my-6 max-w-full min-w-0">
+            <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
+              <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+              <thead>
+                <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Whole prey</th>
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Frankenprey</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">What you feed</th>
+                  <td className="p-3">Intact, appropriately sized animals: mice, rats, day-old chicks, or quail</td>
+                  <td className="p-3">Muscle meat, organ, and raw meaty bone bought separately</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Balance</th>
+                  <td className="p-3">Muscle, organ, and bone arrive in the proportions the prey supplies</td>
+                  <td className="p-3">You have to get the ratio right yourself</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Trade-off</th>
+                  <td className="p-3">You do not engineer the ratio</td>
+                  <td className="p-3">More control, and easier sourcing of familiar meats</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <ComparisonFoot updated="2026-10-10" />
+          <h2>Who should feed which</h2>
+          <p>Feed whole prey when you want the balance to arrive with the animal. Feed frankenprey when familiar meats are easier to source and you will keep the ratio right. A poorly assembled raw diet can be worse than a good commercial kibble.</p>
 
           <h2 id="ratio">The Frankenprey Ratio</h2>
           <p>
