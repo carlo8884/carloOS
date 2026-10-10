@@ -114,13 +114,28 @@ export function shopCtaLabel(
   const replacement = hiddenChewyReplacement(rawHref, env)
   if (replacement && visible === replacement.href) return replacement.label
   if (!visible || !label) return label
-  if (/\/go\/amazon/.test(visible) && /\bon Chewy\b/i.test(label)) {
-    return label.replace(/\bon Chewy\b/gi, 'on Amazon')
+  let named = label
+  if (/\/go\/amazon/.test(visible) && /\bon Chewy\b/i.test(named)) {
+    named = named.replace(/\bon Chewy\b/gi, 'on Amazon')
   }
-  if (/\/go\/chewy/.test(visible) && rawHref && isChewyHop(rawHref) && /\bon Amazon\b/i.test(label)) {
-    return label.replace(/\bon Amazon\b/gi, 'on Chewy')
+  if (/\/go\/chewy/.test(visible) && rawHref && isChewyHop(rawHref) && /\bon Amazon\b/i.test(named)) {
+    named = named.replace(/\bon Amazon\b/gi, 'on Chewy')
   }
-  return label
+  if (/\/go\/amazon/.test(visible)) return nameLiveRetailer(named, 'Amazon')
+  if (/\/go\/chewy/.test(visible)) return nameLiveRetailer(named, 'Chewy')
+  return named
+}
+
+/** A shop label that never names the store gets the retailer the hop actually opens. */
+function nameLiveRetailer(label: string, retailer: string): string {
+  if (new RegExp(`\\b${retailer}\\b`, 'i').test(label)) return label
+  const arrow = label.match(/\s*(?:→|->)\s*$/)
+  const tail = arrow?.[0] ?? ''
+  const core = (tail ? label.slice(0, -tail.length) : label).trimEnd()
+  const period = core.endsWith('.')
+  const body = (period ? core.slice(0, -1) : core).trimEnd()
+  const named = `${body} on ${retailer}`
+  return `${period ? `${named}.` : named}${tail}`
 }
 
 /** Display names for a product-row shop link. Unknown vendors are not labeled. */

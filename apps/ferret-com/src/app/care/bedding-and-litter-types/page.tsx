@@ -209,32 +209,32 @@ export default function BeddingAndLitterTypesPage() {
                 </tr>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 text-brand-text-mid">A daytime lounge in the upper third of the cage</td>
-                  <td className="p-3 font-bold text-brand-dark"><a href="/go/amazon-brand/ferret+hammock?s=care-bedding-and-litter-types" className="text-brand-primary underline">Ferret hammock</a></td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="/go/amazon-brand/ferret+hammock?s=care-bedding-and-litter-types" className="text-brand-primary underline">Ferret hammock on Amazon</a></td>
                   <td className="p-3 text-brand-text-mid">Hammocks are the default daytime spot. Pair an open hammock with an enclosed sack</td>
                   <td className="p-3 text-brand-text-mid">There is nowhere to hang one, or the hammock would be the only bed</td>
                 </tr>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 text-brand-text-mid">A washable cover for each cage level</td>
-                  <td className="p-3 font-bold text-brand-dark"><a href="/go/amazon-brand/ferret+fleece+liner?s=care-bedding-and-litter-types" className="text-brand-primary underline">Fleece liner</a></td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="/go/amazon-brand/ferret+fleece+liner?s=care-bedding-and-litter-types" className="text-brand-primary underline">Fleece liner on Amazon</a></td>
                   <td className="p-3 text-brand-text-mid">Fleece does not fray into ingestible threads the way looser fabrics do. Keep a spare set</td>
                   <td className="p-3 text-brand-text-mid">The fabric is loosely woven, a chunky knit, or terrycloth</td>
                 </tr>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 text-brand-text-mid">Litter that stays safer if a small amount is swallowed</td>
-                  <td className="p-3 font-bold text-brand-dark"><a href="/go/amazon-brand/recycled+paper+pellet+litter?s=care-bedding-and-litter-types" className="text-brand-primary underline">Recycled paper pellets</a></td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="/go/amazon-brand/recycled+paper+pellet+litter?s=care-bedding-and-litter-types" className="text-brand-primary underline">Recycled paper pellets on Amazon</a></td>
                   <td className="p-3 text-brand-text-mid">The default safe choice on this page: low dust, and benign if a small amount is swallowed</td>
                   <td className="p-3 text-brand-text-mid">Clumping clay, silica crystal, or a scented cat litter</td>
                 </tr>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 text-brand-text-mid">A pan that matches corner elimination</td>
-                  <td className="p-3 font-bold text-brand-dark"><a href="/go/amazon-brand/ferret+corner+litter+pan?s=care-bedding-and-litter-types" className="text-brand-primary underline">High-back corner pan</a></td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="/go/amazon-brand/ferret+corner+litter+pan?s=care-bedding-and-litter-types" className="text-brand-primary underline">High-back corner pan on Amazon</a></td>
                   <td className="p-3 text-brand-text-mid">A high back wall and a low front lip. The pan shape matters as much as the fill</td>
                   <td className="p-3 text-brand-text-mid">A low open tray the ferret can back out of</td>
                 </tr>
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-09" />
+          <ComparisonFoot updated="2026-10-10" />
 
           <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/ferret+hammock?s=care-bedding-and-litter-types", "/go/amazon-brand/ferret+fleece+liner?s=care-bedding-and-litter-types", "/go/amazon-brand/recycled+paper+pellet+litter?s=care-bedding-and-litter-types", "/go/amazon-brand/ferret+corner+litter+pan?s=care-bedding-and-litter-types"]} />
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
