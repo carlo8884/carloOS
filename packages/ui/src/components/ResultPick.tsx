@@ -1,5 +1,5 @@
 import type { SiteId } from '@carloOS/config'
-import { liveAnchorHref, partnerLinkQuiet, partnerNeededLabel, partnerQuoteHeld, shopCtaLabel, visitNextStep } from '@carloOS/config/affiliate-hop'
+import { heldShopText, liveAnchorHref, partnerLinkQuiet, partnerNeededLabel, partnerQuoteHeld, shopCtaLabel, visitNextStep } from '@carloOS/config/affiliate-hop'
 import type { MatchedPick } from '../lib/result-picks'
 import { AffiliateDisclosure } from './AffiliateDisclosure'
 import { HeldQuoteNext } from './HeldQuoteNext'
@@ -36,7 +36,7 @@ export function ResultPick({
   ) : quiet ? (
     <span data-partner-held="true" className="inline-block text-sm font-semibold text-brand-text-light">
       {partnerLinkQuiet(pick.href)
-        ? `${pick.label.replace(/\s*→\s*$/, '').trim()} — partner ID needed`
+        ? heldShopText(pick.href)
         : partnerNeededLabel(pick.label)}
     </span>
   ) : href ? (

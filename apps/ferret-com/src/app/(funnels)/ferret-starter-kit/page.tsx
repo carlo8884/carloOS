@@ -8,7 +8,7 @@ import {
   SchemaScript,
   AffiliateDisclosure,
 } from '@carloOS/ui'
-import { liveAnchorHref } from '@carloOS/config/affiliate-hop'
+import { heldShopText, liveAnchorHref } from '@carloOS/config/affiliate-hop'
 import { STARTER_KIT, BUDGET_SUMMARIES } from '../../../data/starter-kit'
 
 function KitPrice({
@@ -29,7 +29,7 @@ function KitPrice({
         data-partner-held={vendor}
         className="inline-block whitespace-nowrap text-center px-5 py-2.5 text-sm font-semibold text-brand-text-mid md:self-center"
       >
-        {name} — partner ID needed
+        {heldShopText(`/go/${vendor}`)}
       </span>
     )
   }

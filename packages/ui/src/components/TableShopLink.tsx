@@ -1,4 +1,4 @@
-import { hopCommissionReady, liveAnchorHref, partnerQuoteHeld, partnerTagReady, tableShopLink } from '@carloOS/config/affiliate-hop'
+import { heldShopText, hopCommissionReady, liveAnchorHref, partnerQuoteHeld, partnerTagReady, tableShopLink } from '@carloOS/config/affiliate-hop'
 import { HeldQuoteNext } from './HeldQuoteNext'
 
 /** One product row's tracked shop link. The href is an existing /go target. */
@@ -14,7 +14,7 @@ export function TableShopLink({
   /** Visible text when the generated “product on retailer” line would imply a product page. */
   label?: string
   holdWithoutPartnerId?: boolean
-  /** Held product partners stay in the row as a note until their own tag is set. */
+  /** Held product partners stay in the row as plain retailer text, with no link. */
   quietUntilTag?: boolean
 }) {
   const hop = liveAnchorHref(href)
@@ -29,7 +29,7 @@ export function TableShopLink({
     if (href.startsWith('/go/')) {
       return (
         <span data-partner-held="true" className="mt-1 block text-sm font-semibold text-brand-text-light">
-          {product} — partner ID needed
+          {heldShopText(href)}
         </span>
       )
     }

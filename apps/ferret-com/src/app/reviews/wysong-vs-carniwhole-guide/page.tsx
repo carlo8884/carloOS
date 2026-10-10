@@ -93,7 +93,7 @@ export default function WysongVsCarniwholeGuidePage() {
             "Wysong Epigen 90 is the premium pick against Carniwhole.",
           ]}
         />
-        <p>Prices below are the ones on the <Link href="/diet/best-ferret-kibble">kibble review</Link>, which compares published panels. Wysong against Marshall is a separate guide. Wysong Epigen 90 is the premium pick because the current page lists crude protein minimum 63% and crude fat minimum 16%. Carniwhole’s card has no shop link. The Wysong shop link stays on this page for when that partner ID is set.</p>
+        <p>Prices below are the ones on the <Link href="/diet/best-ferret-kibble">kibble review</Link>, which compares published panels. Wysong against Marshall is a separate guide. Wysong Epigen 90 is the premium pick because the current page lists crude protein minimum 63% and crude fat minimum 16%.</p>
         <h2>What the review says about Wysong Epigen 90</h2>
         <p>Wysong Epigen 90 is the top row and the winner. The current Wysong Epigen 90 page lists crude protein minimum 63% and crude fat minimum 16%. Those are guaranteed-analysis figures as printed, not a dry-matter conversion. The page markets the food as starch-free. Carbohydrate is not on the guaranteed analysis — check the label. It is sold direct and through specialty pet retail, and it may not be in a supermarket aisle. The printed price is $30–50 for 5 pounds. The Amazon search above is the one already used for this bag on the diet pages.</p>
         <p>Dry-matter math for a different label is the <Link href="/tools/label-calculator">label calculator</Link>, using the conversion on the label guide. Wysong’s panel stays the one printed above.</p>

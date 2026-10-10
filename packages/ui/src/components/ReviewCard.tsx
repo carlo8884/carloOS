@@ -6,7 +6,7 @@
  */
 
 import type { ReactNode } from 'react'
-import { hopCommissionReady, isChewyHop, liveAnchorHref, partnerLinkQuiet, partnerQuoteHeld, partnerTagReady, shopCtaLabel, tableShopLink, visitNextStep } from '@carloOS/config/affiliate-hop'
+import { heldShopText, hopCommissionReady, isChewyHop, liveAnchorHref, partnerLinkQuiet, partnerQuoteHeld, partnerTagReady, shopCtaLabel, tableShopLink, visitNextStep } from '@carloOS/config/affiliate-hop'
 import { HeldQuoteNext } from './HeldQuoteNext'
 
 const EARNING_PICK_SITES = new Set(['dog-com', 'fish-com', 'horses-com', 'vets-co', 'ferret-com'])
@@ -20,7 +20,7 @@ function QuickPickShopLink({ href, name, shopLabel, quietUntilTag = false }: { h
     if (!href?.startsWith('/go/')) return null
     return (
       <span className="relative z-10 ml-2 text-2xs font-semibold normal-case tracking-normal text-brand-text-light">
-        partner ID needed
+        {heldShopText(href)}
       </span>
     )
   }
@@ -270,7 +270,7 @@ export function ReviewCard({
 
             {quiet ? (
               <span className="text-sm leading-relaxed text-brand-text-light">
-                {ctaText.replace(/\s*→\s*$/, '').trim()} — partner ID needed
+                {heldShopText(rawHref)}
               </span>
             ) : visit ? (
               <a

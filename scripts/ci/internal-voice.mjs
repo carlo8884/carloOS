@@ -12,7 +12,8 @@
  * customer-facing "hop" or "hops" that means an affiliate link
  * ("The hop below", "never hops", "not shoppable hops"), shop
  * or dev jargon (ASIN, category search, SKU, slug, query,
- * affiliate ID, partner held, placeholder, shoppable, internal
+ * affiliate ID, partner held, partner ID, "tag needed", placeholder,
+ * shoppable, internal
  * redirect, invented inventory), the owner's name, handle, or
  * Gmail address, and visible stub text (TODO, FIXME, lorem,
  * placeholder). Real-word uses stay on the
@@ -29,6 +30,14 @@ import { join } from 'node:path'
 import { pathToFileURL } from 'node:url'
 
 export const SITES = ['dog-com', 'fish-com', 'horses-com', 'vets-co', 'ferret-com']
+
+/**
+ * Internal wording for a held partner. A held row shows the retailer or
+ * brand name with no link, never these phrases. Shared with the built-HTML
+ * scan in held-partner-hrefs.mjs.
+ */
+export const HELD_COPY_PATTERN =
+  /\bpartner[- ]IDs?\b|\b(?:partner|tag|ID|affiliate)\s+(?:is\s+)?needed\b|\b(?:partner|vendor|retailer|affiliate)\s+tags?\b|\b(?:ID|tag)\s+is\s+(?:set|unset|missing)\b|\bpartner\s+(?:is\s+)?held\b|\bheld\s+partners?\b|\bstays ready for when\b/i
 
 export const RULES = [
   { id: 'already-live', pattern: /already lives? on/i, reason: 'Internal inventory aside ("already live on")' },
@@ -51,6 +60,11 @@ export const RULES = [
     id: 'shop-jargon',
     pattern: /\bASINs?\b|\bcategory[- ]searches?\b|\bSKUs?\b|\bslugs?\b|\bquer(?:y|ies)\b|\bquery strings?\b|\baffiliate IDs?\b|\b(?:partner held|held partners?)\b|\bpinned\b|\bintegrity\b|\bregistr(?:y|ies)\b|\bshoppable\b|\bplaceholders?\b|\binternal redirects?\b|\binvented inventory\b|\bon-page\b|\[sku\]/i,
     reason: 'Shop or dev jargon outside the real-word allowlist',
+  },
+  {
+    id: 'held-partner-copy',
+    pattern: HELD_COPY_PATTERN,
+    reason: 'Internal held-partner wording ("partner ID", "tag needed", "until … is set") in customer copy',
   },
   {
     id: 'shop-cta',
@@ -305,6 +319,11 @@ export function selfCheck() {
     'FIXME the dosage line.',
     'lorem ipsum dolor sit amet, sample body copy.',
     'The button href is PLACEHOLDER.',
+    'SmartPak Cosequin — partner ID needed',
+    'partner ID needed',
+    'Check price at Wysong stays ready for when the Wysong partner ID is set.',
+    'The visit link stays off until that tag is set.',
+    'Tag needed',
   ]
   const good = [
     'Pack a pet first-aid kit for the clinic ride.',
@@ -349,6 +368,10 @@ export function selfCheck() {
     'Email editorial@dog.com with the page address.',
     'dogmail.com stays a domain name.',
     'Carpets include dwarf hairgrass and monte carlo.',
+    'Available from SmartPak',
+    'Available from the brand',
+    'holdWithoutPartnerId={true}',
+    'Ear tag and microchip are both permanent ID.',
   ]
   const errors = []
   for (const sample of bad) {
@@ -413,6 +436,19 @@ function main() {
     for (const hit of found) hits.push({ file: rel, ...hit })
   }
 
+  // Shared components render held-partner rows on every site. Only the
+  // held-partner wording rule applies there; other rules stay on app copy.
+  const shared = []
+  walk(join(root, 'packages', 'ui', 'src'), shared)
+  walk(join(root, 'packages', 'config'), shared)
+  for (const file of shared) {
+    if (/\.test\.tsx?$/.test(file)) continue
+    const rel = file.replace(root + '/', '')
+    for (const hit of scanSource(readFileSync(file, 'utf8'))) {
+      if (hit.id === 'held-partner-copy') hits.push({ file: rel, ...hit })
+    }
+  }
+
   if (hits.length) {
     console.log(`## Internal voice: ${hits.length} hit${hits.length === 1 ? '' : 's'}\n`)
     for (const h of hits) {
@@ -426,7 +462,7 @@ function main() {
   }
 
   console.log('## Internal voice: clean')
-  console.log(`\nPASS: scanned ${files.length} customer-facing TS/TSX files on the five earning sites; 0 hits.`)
+  console.log(`\nPASS: scanned ${files.length} customer-facing TS/TSX files on the five earning sites and ${shared.length} shared package files; 0 hits.`)
   console.log('Per site:', JSON.stringify(bySite))
 }
 
