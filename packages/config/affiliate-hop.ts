@@ -193,7 +193,7 @@ const HELD_BRAND: Record<string, string> = { carniwhole: 'Carniwhole', vetster: 
  * brand name only, never internal wording. No href is rendered with it.
  */
 export function heldShopText(href: string | undefined): string {
-  const vendor = href?.match(/^\/go\/([^/?#]+)/)?.[1]?.toLowerCase() ?? ''
+  const vendor = heldVendorOfHref(href) ?? href?.match(/^\/go\/([^/?#]+)/i)?.[1]?.toLowerCase() ?? ''
   const retailer = SHOP_RETAILER[vendor] ?? HELD_BRAND[vendor]
   return retailer ? `Available from ${retailer}` : 'Available from the brand'
 }
@@ -362,6 +362,7 @@ const HELD_PATH_VENDORS = new Set([
 ])
 
 const HELD_HOSTS = [
+  'smartpak.com',
   'smartpakequine.com',
   'doversaddlery.com',
   'schneidersaddlery.com',
@@ -387,22 +388,34 @@ const HELD_HOSTS = [
   'askvet.app',
 ]
 
-/** Vendor key for a rendered href, or null when the href is not a held partner. */
+/**
+ * Vendor key for a rendered href, or null when the href is not a held partner.
+ * Absolute, protocol-relative, mixed-case, encoded, and dot-segment forms all
+ * resolve the way a browser would before the held check.
+ */
 export function heldVendorOfHref(href: string | undefined): string | null {
   if (!href) return null
-  const pathVendor = href.match(/\/go\/([^/?#]+)/i)?.[1]?.toLowerCase() ?? ''
-  if (pathVendor === 'amazon' || pathVendor === 'amazon-brand') return null
-  if (HELD_PATH_VENDORS.has(pathVendor)) return pathVendor
-  let host = ''
+  let url: URL
   try {
-    host = new URL(href, 'https://local.invalid').hostname.replace(/^www\./, '').toLowerCase()
+    url = new URL(href.trim(), 'https://local.invalid')
   } catch {
     return null
   }
-  if (host === 'local.invalid' || host === 'amazon.com') return null
+  const host = url.hostname.replace(/^www\./, '').replace(/\.$/, '').toLowerCase()
   for (const held of HELD_HOSTS) {
     if (host === held || host.endsWith(`.${held}`)) return held
   }
+  let path = url.pathname
+  try {
+    path = decodeURIComponent(path)
+  } catch {
+    // keep the raw path
+  }
+  const pathVendor = path.match(/\/go\/+([^/]+)/i)?.[1]?.toLowerCase() ?? ''
+  if (HELD_PATH_VENDORS.has(pathVendor)) return pathVendor
+  const rawVendor = href.match(/\/go\/([^/?#]+)/i)?.[1]?.toLowerCase() ?? ''
+  if (rawVendor === 'amazon' || rawVendor === 'amazon-brand') return null
+  if (HELD_PATH_VENDORS.has(rawVendor)) return rawVendor
   return null
 }
 
@@ -422,11 +435,11 @@ export function liveAnchorHref(
   if (consult && !consult.attributed) return undefined
   const visible = visibleShopHref(href, env)
   if (!visible) return undefined
-  const vendor = visible.match(/^\/go\/([^/?#]+)/i)?.[1]?.toLowerCase() ?? ''
-  if (vendor === 'amazon' || vendor === 'amazon-brand') return visible
-  if (vendor && HELD_PATH_VENDORS.has(vendor) && resolveTag(vendor, env).tag.length === 0) return undefined
-  if (!vendor && heldVendorOfHref(visible)) return undefined
-  return visible
+  const held = heldVendorOfHref(visible)
+  if (!held) return visible
+  // A held /go hop goes live only once that vendor's tag is set. A held host never does.
+  if (HELD_PATH_VENDORS.has(held) && resolveTag(held, env).tag.length > 0) return visible
+  return undefined
 }
 
 export function partnerHome(vendor: string, template?: string): string {

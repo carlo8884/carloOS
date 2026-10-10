@@ -40,6 +40,47 @@ test('a held QuietPartnerLink has no link and neutral text', () => {
   assert.doesNotMatch(html, HELD_COPY_PATTERN)
 })
 
+test('QuietPartnerLink never renders an <a> for any held-partner href form', () => {
+  const held = [
+    ['https://www.smartpak.com/rambo-original-turnout', 'Available from the brand'],
+    ['http://www.doversaddlery.com/girths/', 'Available from the brand'],
+    ['//shop.smartpakequine.com/x?y=1', 'Available from the brand'],
+    ['/go/SmartPak/rambo-original-turnout', 'Available from SmartPak'],
+    ['/GO/dover/home', 'Available from Dover'],
+    ['/go/smartpak/', 'Available from SmartPak'],
+    ['/go/dover/home/?s=health-equine-ulcers', 'Available from Dover'],
+    ['/go/smart%70ak/rambo', 'Available from SmartPak'],
+    ['/go/amazon/../wysong/epigen-90', 'Available from Wysong'],
+    ['/go/schneider/stormshield-euro-turnout?s=x', 'Available from Schneiders'],
+    ['/go/ridingwarehouse/home', 'Available from Riding Warehouse'],
+    ['/go/marshall/x', 'Available from Marshall'],
+    ['/go/carniwhole/x', 'Available from Carniwhole'],
+    ['/go/chewy-brand/dog+food', 'Available from Chewy'],
+    ['/go/trupanion/home', 'Available from Trupanion'],
+    ['/go/vetster/telehealth', 'Available from Vetster'],
+    ['/go/askvet/telehealth', 'Available from AskVet'],
+  ]
+  for (const [href, text] of held) {
+    const html = renderToStaticMarkup(createElement(QuietPartnerLink, { href, label: 'Check price →' }))
+    assert.doesNotMatch(html, /<a\b/, href)
+    assert.match(html, new RegExp(text), href)
+    assert.doesNotMatch(html, HELD_COPY_PATTERN, href)
+  }
+})
+
+test('QuietPartnerLink keeps non-held hrefs as the same live link', () => {
+  for (const href of [
+    '/go/amazon/B000ABC123?s=x',
+    '/go/amazon-brand/smartpak+cosequin?s=x',
+    '/reviews/rambo-vs-rhino-guide',
+    'https://vets.co/reviews/best-pet-insurance',
+  ]) {
+    const html = renderToStaticMarkup(createElement(QuietPartnerLink, { href, label: 'Check price →' }))
+    assert.match(html, /<a\b/, href)
+    assert.ok(html.includes(`href="${href}"`), href)
+  }
+})
+
 test('a held ReviewCard footer has no shop link and neutral text', () => {
   const html = renderToStaticMarkup(
     createElement(ReviewCard, {
