@@ -126,7 +126,7 @@ export default function WaterRequirementsPage() {
           <p>Dehydration is one of the most consistently identified risk factors for colic, especially impaction colic, where dry gut contents block the bowel. The classic scenario is winter, when icy water suppresses drinking just as horses switch to dry hay -- a recipe for impaction. Keeping water available, unfrozen, and palatable is therefore one of the simplest and most effective colic-prevention measures an owner has.</p>
 
           <h2 id="quality">Water Quality</h2>
-          <p>Horses are fussy about water and will drink less if it is dirty, stagnant, too hot, too cold, or tainted. Troughs and buckets should be cleaned and refilled regularly, kept free of algae and droppings, and protected from freezing. Natural water sources should be checked for contamination and safe access. Poor water quality quietly reduces intake and raises colic risk just as surely as no water at all.</p>
+          <p>Horses are fussy about water and will drink less if it is dirty, stagnant, too hot, too cold, or tainted. Troughs and buckets should be cleaned and refilled regularly, kept free of algae and droppings, and protected from freezing (see <a href="/reviews/winter-water-unfrozen-guide">keeping horse water unfrozen in winter</a>). Natural water sources should be checked for contamination and safe access. Poor water quality quietly reduces intake and raises colic risk just as surely as no water at all.</p>
 
           <h2 id="encourage">Encouraging Drinking</h2>
           <ul>

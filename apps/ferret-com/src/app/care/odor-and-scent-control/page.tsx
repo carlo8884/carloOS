@@ -254,7 +254,9 @@ export default function FerretOdorScentControlPage() {
             <li>
               <strong>Use the right litter and enough boxes.</strong>{' '}
               Paper-pellet litter and adequate box numbers keep waste contained
-              and easy to remove before it off-gasses.
+              and easy to remove before it off-gasses. Our{' '}
+              <a href="/reviews/best-ferret-litter">ferret litter guide</a>{' '}
+              covers the litter options.
             </li>
             <li>
               <strong>Clean ears gently and on schedule.</strong> Wax buildup

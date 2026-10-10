@@ -146,7 +146,7 @@ export default function TelehealthPage() {
             <div className="mt-10">
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-3">Who should use which service</h2>
               <p className="text-sm text-brand-text-mid leading-relaxed mb-4">
-                Prices and limits are the ones on the cards. None of these replace an emergency visit. Pale gums, trouble breathing, collapse, suspected poisoning, or a cat that cannot urinate is an in-person emergency.
+                Prices and limits are the ones on the cards. None of these replace an emergency visit. Pale gums, trouble breathing, collapse, suspected poisoning, or a cat that cannot urinate is an in-person emergency. For a closer side-by-side of the first two services, see <Link href="/reviews/vetster-vs-askvet-guide" className="text-brand-primary font-medium hover:underline">Vetster vs AskVet</Link>.
               </p>
               <div className="overflow-x-auto max-w-full min-w-0">
                 <p>Those figures are typical US ranges dated 2026-10-05.</p>
@@ -181,7 +181,7 @@ export default function TelehealthPage() {
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-09" />
+              <ComparisonFoot updated="2026-10-10" />
             </div>
             <h2 className="font-display text-2xl font-bold text-brand-dark mt-12 mb-6">Frequently Asked Questions</h2>
             <p>Those figures are typical US ranges dated 2026-10-05.</p>

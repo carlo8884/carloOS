@@ -190,7 +190,7 @@ export default function DeductiblesPage() {
           />
 
           <h2 id="who">Who should quote which</h2>
-          <p>Both cards are quote-based. The lever and the limit below are the ones already on the cards.</p>
+          <p>Both cards are quote-based. The lever and the limit below are the ones already on the cards. For a longer look at the pair, see <a href="/reviews/healthy-paws-vs-pets-best-guide">Healthy Paws vs Pets Best</a>.</p>
           <div className="overflow-x-auto my-6 max-w-full">
             <table className="w-full text-sm border-collapse table-fixed sm:table-auto min-w-0 sm:min-w-[36rem] [&_th]:break-words [&_td]:break-words">
               <thead>

@@ -364,7 +364,9 @@ export default function FerretTrainingBondingPage() {
             and a collar tight enough to be safe is tight enough to be
             uncomfortable; a collar comfortable enough to wear is loose
             enough to slip off. Lost-ferret recovery rates are poor; a slip
-            outdoors is a high-cost mistake.
+            outdoors is a high-cost mistake. For the trade-offs between the
+            two styles, see{' '}
+            <a href="/reviews/vest-vs-h-harness-guide">vest vs H-style harness</a>.
           </p>
           <p>Sizing and fit:</p>
           <ul>
