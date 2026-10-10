@@ -128,6 +128,7 @@ export default function FerretCageSetupPage() {
               title="Related Guides"
               links={[
                 { label: 'November and December gifts', href: '/reviews/november-december-gift-guide' },
+                { label: 'Critter Nation vs Marshall', href: '/reviews/critter-nation-vs-marshall-cage-guide' },
                 { label: 'Cage Size Calculator', href: '/tools/cage-size-calculator' },
                 { label: 'Diet Basics', href: '/care/diet-basics' },
                 { label: 'Insulinoma', href: '/health/insulinoma' },
@@ -338,7 +339,7 @@ export default function FerretCageSetupPage() {
             ctaAffiliateProduct="kaytee+corner+ferret+litter+pan"
           />
 
-          <p>Cage models for this setup are compared in the <Link href="/reviews/best-ferret-cage">ferret cage review</Link>.</p>
+          <p>Cage models for this setup are compared in the <Link href="/reviews/best-ferret-cage">ferret cage review</Link>. The two cage cards above are set side by side in the <Link href="/reviews/critter-nation-vs-marshall-cage-guide">Critter Nation versus Marshall guide</Link>.</p>
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
 
