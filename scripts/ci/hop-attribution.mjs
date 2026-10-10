@@ -108,6 +108,15 @@ if (!/split\('PLACEHOLDER'\)\.join\(tag\)/.test(resolver)) {
   hits.push('Amazon redirect no longer substitutes the Associates tag')
 }
 
+for (const file of ['packages/ui/src/components/ShopCtas.tsx', 'packages/ui/src/components/PrimaryHop.tsx']) {
+  const src = readFileSync(join(ROOT, file), 'utf8')
+  const note = src.indexOf('data-affiliate-disclosure="hop"')
+  const button = note < 0 ? -1 : src.indexOf('data-shop-placement=', note)
+  if (note < 0 || button < 0) {
+    hits.push(`${file}: Associates line must be marked and sit above the shop button`)
+  }
+}
+
 const goHandler = readFileSync(join(ROOT, 'packages/ui/src/server/affiliate-hop.ts'), 'utf8')
 if (!/event:\s*'affiliate_click'/.test(goHandler)) hits.push('/go handler does not log affiliate_click')
 if (!/emailLandingHopClickUrl/.test(goHandler)) hits.push('/go handler does not send hop_click for a direct email hit')

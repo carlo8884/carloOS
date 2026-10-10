@@ -65,7 +65,7 @@ export function PrimaryHop({
   return (
     <div className="mb-5" data-primary-hop="true">
       {hop.startsWith('/go/') && hopCommissionReady(hop) ? (
-        <p className="text-xs text-white/80 mb-2">
+        <p className="text-xs text-white/80 mb-2" data-affiliate-disclosure="hop">
           {amazon
             ? 'As an Amazon Associate we earn from qualifying purchases.'
             : 'We may earn a commission from qualifying purchases.'}
