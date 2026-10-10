@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ReviewCard, ShopCtas, TableOfContents } from '@carloOS/ui'
+import { ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ReviewCard, ShopCtas, TableOfContents, ComparisonFoot, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -110,6 +110,7 @@ export default function RationBalancersPage() {
             updatedAt="2026-09-06"
             reviewedBy="Editorial team"
           />
+          <LastUpdated date="2026-10-10" />
 
           <h2 id="what">What a Ration Balancer Is</h2>
           <p>A ration balancer is a concentrated, low-calorie feed designed to supply protein, vitamins, and minerals in a small daily serving -- typically a few hundred grams rather than the kilograms of a regular feed. It is essentially a fortified top-up that balances a forage diet nutritionally without adding meaningful calories, sugar, or starch. Think of it as a multivitamin-and-protein source rather than an energy feed.</p>
@@ -128,6 +129,38 @@ export default function RationBalancersPage() {
 
           <h2 id="vs">Balancer vs Regular Feed</h2>
           <p>The crucial difference is calories and serving size. A regular fortified feed delivers its full vitamins and minerals only when you feed the larger recommended amount, which also delivers significant calories -- a problem for an easy keeper. Feed far less than the recommended rate, and you starve the horse of the very nutrients the feed was meant to provide. A balancer breaks that trade-off: full fortification in a tiny, low-calorie serving, so you can keep calories low and the diet complete.</p>
+          <div className="my-6 max-w-full min-w-0">
+            <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
+              <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+              <thead>
+                <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Regular fortified feed</th>
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Balancer</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">When the nutrients arrive</th>
+                  <td className="p-3">Only at the larger recommended amount, which also delivers significant calories</td>
+                  <td className="p-3">Full fortification in a tiny, low-calorie serving</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">If you feed less</th>
+                  <td className="p-3">You starve the horse of the nutrients the feed was meant to provide</td>
+                  <td className="p-3">Calories stay low and the diet stays complete</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Who it fits</th>
+                  <td className="p-3">Not the easy keeper who cannot eat the full serving</td>
+                  <td className="p-3">An easy keeper, a metabolic horse, or a good doer in light work</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <ComparisonFoot updated="2026-10-10" />
+          <h2>Who should feed which</h2>
+          <p>Feed the regular fortified feed only at the recommended amount. Feed a balancer when the horse needs the nutrients without those calories. Weigh the small serving. The balancer does not set the hay amount.</p>
 
           <h2 id="using">Using a Balancer</h2>
           <p>Feed a ration balancer at the manufacturer&apos;s recommended daily amount, alongside forage, to top up the diet. Because the serving is small — typically a few hundred grams rather than a scooped grain meal — weigh it on a compact digital gram scale instead of guessing. Mix the weighed serving with a handful of molasses-free chaff or soaked fiber to make it palatable and slow eating. Molasses-free chaff is that handful mixer — it is not chopped forage as a hay replacer and not molasses-free beet pulp shreds. Stir balancer and chaff in a small rubber horse mixing pan so the tiny serving is not lost in a deep tub — it is not a round rubber feed pan, not stackable rubber feed tubs, and not an over-door horse feed bucket. Choose a balancer appropriate to the horse and forage (some are formulated for grass forage, others for legume), and for metabolic horses a low-sugar, low-starch balancer. The balancer does not set the hay amount. The <a href="/tools/horse-feed-calculator">daily feed calculator</a> estimates forage from bodyweight before that small serving is added. As always, build the specifics with your veterinarian or an equine nutritionist.</p>
