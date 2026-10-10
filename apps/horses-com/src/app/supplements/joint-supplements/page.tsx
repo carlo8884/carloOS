@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import Link from 'next/link'
-import { TableShopLink, RelatedReads, ComparisonFoot, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, StockImage, PriceAsOf, QuietPartnerLink} from '@carloOS/ui'
+import { TableShopLink, RelatedReads, ComparisonFoot, ShopCtas, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, StockImage, PriceAsOf, QuietPartnerLink} from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, buildBreadcrumbSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -274,7 +274,11 @@ export default function JointSupplementsPage() {
               </table>
             </div>
             <p>The wider field around these joint products is in the <Link href="/reviews/best-equine-supplements">equine supplement review</Link>.</p>
-            <ComparisonFoot updated="2026-10-09" />
+            <ShopCtas
+              amazonHref="/go/amazon-brand/cosequin+asu+plus?s=supplements-joint-supplements"
+              amazonLabel="Browse Cosequin ASU Plus on Amazon"
+            />
+            <ComparisonFoot updated="2026-10-10" />
 
             <h2>How to Choose</h2>
             <p>The framework that maximizes the evidence-per-dollar in this category:</p>

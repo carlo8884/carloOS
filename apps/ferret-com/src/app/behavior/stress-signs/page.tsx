@@ -330,6 +330,10 @@ export default function FerretStressSignsPage() {
             cons={['Some ferrets prefer open hammocks — try both to see what your ferret uses', 'Fleece attracts hair — wash weekly']}
             price="see current price"
             priceNote="dated 2026-06-04."
+            ctaText="Browse ferret hammocks on Amazon"
+            ctaHref="/go/amazon-brand/ferret+hammock?s=behavior-stress-signs"
+            ctaAffiliateProgram="amazon"
+            ctaAffiliateProduct="ferret+hammock"
           />
           <HopDisclosure siteId="ferret-com" href="/go/marshall/ferret+play+tunnel?s=behavior-stress-signs" />
           <ReviewCard quietUntilTag
