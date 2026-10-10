@@ -36,6 +36,7 @@ const FOLD: { path: string; pick: string }[] = [
   { path: '/reviews/paper-vs-wood-litter-guide', pick: 'paper pellets' },
   { path: '/reviews/ferret-nation-vs-prevue-guide', pick: 'Ferret Nation' },
   { path: '/reviews/kaytee-vs-ferret-nation-guide', pick: 'Ferret Nation' },
+  { path: '/reviews/critter-nation-vs-marshall-cage-guide', pick: 'Critter Nation' },
 ]
 
 test.describe('money fold at 390', () => {
