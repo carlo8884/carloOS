@@ -79,6 +79,8 @@ export default function HealthyPawsVsPetsBestGuidePage() {
           title="Related"
           links={[
             { label: 'Reviews hub', href: '/reviews' },
+            { label: 'Best pet insurance', href: '/reviews/best-pet-insurance' },
+            { label: 'Lemonade vs Pets Best', href: '/reviews/lemonade-vs-pets-best-guide' },
             { label: 'Deductibles and reimbursement', href: '/insurance/deductibles-reimbursement' },
             { label: 'Quote prep checklist', href: '/tools/insurance-quote-prep' },
           ]}
@@ -86,7 +88,7 @@ export default function HealthyPawsVsPetsBestGuidePage() {
       }
     >
       <div className="carloOS-article">
-          <LastUpdated date="2026-10-09" />
+          <LastUpdated date="2026-10-10" />
         <EmailCapture
           variant="inline"
           siteId="vets-co"
@@ -103,7 +105,7 @@ export default function HealthyPawsVsPetsBestGuidePage() {
             "Trupanion, Lemonade, and Spot have their own guides.",
           ]}
         />
-        <p>Healthy Paws and Pets Best are two ways to set the same deductible and reimbursement levers. <Link href="/reviews/healthy-paws-vs-embrace-guide">Healthy Paws versus Embrace</Link> is the wellness-add-on comparison. Trupanion, Lemonade, and Spot have their own guides. Neither card prints a monthly premium.</p>
+        <p>Healthy Paws and Pets Best are two ways to set the same deductible and reimbursement levers. <Link href="/reviews/healthy-paws-vs-embrace-guide">Healthy Paws versus Embrace</Link> is the wellness-add-on comparison. Trupanion, <Link href="/reviews/lemonade-vs-pets-best-guide">Lemonade</Link>, and Spot have their own guides. Neither card prints a monthly premium.</p>
         <h2>What the page says about Healthy Paws</h2>
         <p>Healthy Paws is Simple Levers and the winner. The card describes a single accident-and-illness plan where you choose the deductible and the reimbursement rate. Reimbursement is listed as fast, on a pay-then-claim model. The cons say there is no wellness add-on and that you should confirm the annual-limit structure on the quote, because that limit is the catastrophe protection. The price line is quote-based. Healthy Paws is one accident-and-illness plan with a deductible and a reimbursement rate you set.</p>
         <h2>What the page says about Pets Best</h2>
@@ -150,7 +152,7 @@ export default function HealthyPawsVsPetsBestGuidePage() {
             </tbody>
           </table>
         </div>
-        <ComparisonFoot updated="2026-10-09" />
+        <ComparisonFoot updated="2026-10-10" />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
                 <ArticleSourcesList title="Sources"

@@ -67,6 +67,7 @@ export default function CosequinVsEquithriveGuidePage() {
           links={[
             { label: 'Reviews hub', href: '/reviews' },
             { label: 'Equine supplements', href: '/reviews/best-equine-supplements' },
+            { label: 'Cosequin vs Platinum', href: '/reviews/cosequin-vs-platinum-guide' },
             { label: 'Joint supplements', href: '/supplements/joint-supplements' },
           ]}
         />

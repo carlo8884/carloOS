@@ -143,7 +143,7 @@ export default function VetsPetInsurancePage() {
         <div className="grid lg:grid-cols-[1fr_270px] gap-12 min-w-0">
           <div className="min-w-0">
             <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-10-07T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-09" />
+          <LastUpdated date="2026-10-10" />
 
 
             <PullQuote variant="lead" quote="Enroll before your first vet visit. Every condition noted in records before enrollment may be permanently excluded as pre-existing." attribution="The single most important point on pet insurance" />
@@ -217,6 +217,7 @@ export default function VetsPetInsurancePage() {
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-3">Who should buy which policy</h2>
               <p className="text-sm text-brand-text-mid leading-relaxed mb-4" data-source="https://www.healthypawspetinsurance.com/pet-insurance-claims.html">
                 Reimbursement, limits, and prices below are the figures already on each card. They are not a quote. The Healthy Paws claims page says most claims are processed in 2 days. Enroll before a condition is in the medical record — every card on this page is subject to that rule.
+                The first two cards are set side by side in <Link href="/reviews/trupanion-vs-healthy-paws-guide" className="text-brand-primary underline">Trupanion vs Healthy Paws</Link>.
               </p>
               <div className="overflow-x-auto max-w-full min-w-0 mb-8">
                 <table className="w-full text-sm border-collapse table-fixed sm:table-auto min-w-0 sm:min-w-[36rem] [&_th]:break-words [&_td]:break-words">
@@ -250,7 +251,7 @@ export default function VetsPetInsurancePage() {
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-09" />
+              <ComparisonFoot updated="2026-10-10" />
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Questions this comparison answers</h2>
               <FAQAccordion items={[
                 {
@@ -268,6 +269,9 @@ export default function VetsPetInsurancePage() {
           <aside className="lg:sticky lg:top-24 lg:self-start flex flex-col gap-5">
             <RelatedLinks title="Related Guides" links={[
               { label: 'November and December costs', href: '/reviews/november-december-gift-guide' },
+              { label: 'Trupanion vs Healthy Paws', href: '/reviews/trupanion-vs-healthy-paws-guide' },
+              { label: 'Trupanion vs Embrace', href: '/reviews/trupanion-vs-embrace-guide' },
+              { label: 'Healthy Paws vs Embrace', href: '/reviews/healthy-paws-vs-embrace-guide' },
               { label: 'Insurance quote prep checklist', href: '/tools/insurance-quote-prep' },
               { label: 'Is Pet Insurance Worth It? (calculator)', href: '/tools/pet-insurance-worth-it-calculator' },
               { label: 'ER vs Clinic vs Telehealth', href: '/tools/er-vs-clinic' },

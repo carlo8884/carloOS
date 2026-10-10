@@ -64,7 +64,7 @@ export default function BestWinterBlanketsPage() {
         </h1>
         <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">The Horseware Rambo Original is the top turnout because the 1000-denier ballistic shell is the blanket owners keep for seasons.</p>
         <PriceAsOf date="2026-10-07" tone="dark" />
-        <LastUpdated date="2026-10-08" tone="dark" />
+        <LastUpdated date="2026-10-10" tone="dark" />
         <div data-fold="offer">
           <HopDisclosure siteId="horses-com" href="/go/amazon/B09JWTFTGY?s=reviews-best-winter-horse-blankets" tone="on-dark" />
         <div className="mb-4" data-primary-hop="true">
@@ -319,7 +319,7 @@ export default function BestWinterBlanketsPage() {
               name="Horseware Amigo Bravo 12 Plus Turnout"
               subtitle="1000-denier ballistic · Horseware build at the value tier"
               description={<>
-                <p>The Amigo line is Horseware&apos;s value sub-brand — same factory and design lineage as Rambo and Rhino at a lower price point, using simpler hardware and a less premium liner. The Bravo 12 Plus uses a 1000D ballistic shell (matching the Rambo Original&apos;s shell denier) with polymer hardware, a less-padded interior lining, and standard neck cut. Real-world durability runs 2–4 seasons in active pasture turnout, occasionally longer.</p>
+                <p>The Amigo line is Horseware&apos;s value sub-brand — same factory and design lineage as Rambo and Rhino at a lower price point, using simpler hardware and a less premium liner. The Bravo 12 Plus uses a 1000D ballistic shell (matching the Rambo Original&apos;s shell denier) with polymer hardware, a less-padded interior lining, and standard neck cut. Real-world durability runs 2–4 seasons in active pasture turnout, occasionally longer. <a href="/reviews/weatherbeeta-vs-amigo-guide">Weatherbeeta vs Amigo</a> sets the Amigo beside the mid-tier Weatherbeeta.</p>
                 <p>For the price-conscious owner who wants the Horseware engineering without the premium tag, the Amigo line is the most defensible value-tier choice in the category. For the owner who keeps horses for decades, the Rambo total-cost-per-season math wins despite the higher up-front cost.</p>
               </>}
               specs={[
@@ -391,7 +391,7 @@ export default function BestWinterBlanketsPage() {
                 </tbody>
               </table>
             </div>
-            <ComparisonFoot updated="2026-10-09" />
+            <ComparisonFoot updated="2026-10-10" />
 
             <h2>The Layering System Approach</h2>
             <p>The alternative to owning four different weight-specific turnouts: one waterproof sheet shell plus a set of liners in graduated weights. The layering math:</p>
@@ -476,6 +476,9 @@ export default function BestWinterBlanketsPage() {
               title="Related Guides"
               links={[
                 { label: 'November and December gifts', href: '/reviews/november-december-gift-guide' },
+                { label: 'Rambo vs Rhino', href: '/reviews/rambo-vs-rhino-guide' },
+                { label: 'Rambo vs Schneiders', href: '/reviews/rambo-vs-schneiders-guide' },
+                { label: 'Weatherbeeta vs Amigo', href: '/reviews/weatherbeeta-vs-amigo-guide' },
                 { label: 'Saddle Fit Basics', href: '/guides/saddle-fit-basics' },
                 { label: 'Joint Supplements', href: '/supplements/joint-supplements' },
                 { label: 'Quarter Horse Guide', href: '/breeds/quarter-horse' },

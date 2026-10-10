@@ -62,6 +62,7 @@ export default function CosequinVsPlatinumGuidePage() {
             { label: 'Reviews hub', href: '/reviews' },
             { label: 'Joint supplements', href: '/supplements/joint-supplements' },
             { label: 'Best equine supplements', href: '/reviews/best-equine-supplements' },
+            { label: 'Cosequin vs Equithrive', href: '/reviews/cosequin-vs-equithrive-guide' },
           ]}
         />
       }

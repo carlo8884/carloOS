@@ -160,6 +160,8 @@ export default function BestFerretHarnessPage() {
               title="Related Guides"
               links={[
                 { label: 'Leash & Harness Training', href: '/behavior/leash-and-harness-training' },
+                { label: 'Vest vs H-Style Harness', href: '/reviews/vest-vs-h-harness-guide' },
+                { label: 'H-Style vs Mesh Harness', href: '/reviews/h-style-vs-mesh-harness-guide' },
                 { label: 'Training & Bonding', href: '/behavior/training-and-bonding' },
                 { label: 'Travel & Carriers', href: '/care/travel-and-carriers' },
                 { label: 'Exercise & Enrichment', href: '/care/exercise-and-enrichment' },
@@ -186,7 +188,7 @@ export default function BestFerretHarnessPage() {
             updatedAt="2026-06-11"
             reviewedBy="Editorial team"
           />
-          <LastUpdated date="2026-10-09" />
+          <LastUpdated date="2026-10-10" />
           <EmailCapture
             variant="inline"
             siteId="ferret-com"
@@ -213,7 +215,8 @@ export default function BestFerretHarnessPage() {
             as the primary criteria, compares the two viable styles, and ranks three harnesses against them. It is a
             criteria comparison, not a hands-on durability test, and it pairs with our{' '}
             <a href="/behavior/leash-and-harness-training">leash and harness training</a> guide for the acclimation
-            side.
+            side. The two styles are set side by side in the{' '}
+            <a href="/reviews/vest-vs-h-harness-guide">vest vs H-style harness guide</a>.
           </p>
 
           <h2 id="criteria">The Criteria That Matter</h2>
@@ -386,7 +389,7 @@ export default function BestFerretHarnessPage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-09" />
+          <ComparisonFoot updated="2026-10-10" />
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />

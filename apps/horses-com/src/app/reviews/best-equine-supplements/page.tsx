@@ -495,6 +495,9 @@ export default function BestEquineSupplementsPage() {
               title="Related Guides"
               links={[
                 { label: 'Joint Supplements — Evidence Ladder', href: '/supplements/joint-supplements' },
+                { label: 'Cosequin vs Platinum', href: '/reviews/cosequin-vs-platinum-guide' },
+                { label: 'Cosequin vs Equithrive', href: '/reviews/cosequin-vs-equithrive-guide' },
+                { label: 'KER EO-3 vs Equithrive', href: '/reviews/ker-eo3-vs-equithrive-guide' },
                 { label: 'Equine Gastric Ulcers (EGUS)', href: '/health/equine-ulcers' },
                 { label: 'Equine Vaccination Schedule', href: '/guides/equine-vaccination-schedule' },
                 { label: 'Equine Dental Care', href: '/guides/equine-dental-care' },
