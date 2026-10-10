@@ -155,9 +155,23 @@ export default function HorsesReviewsPage() {
         title="Horses.com Reviews"
         subtitle="Editorial reviews of the gear and supplements equestrians actually buy, ranked using published veterinary evidence and rider reports — never paid placement."
       />
+      <section className="bg-brand-surface px-container-sm sm:px-container pt-6 pb-2">
+        <h2 id="kit" className="font-display font-bold text-brand-dark text-xl mb-3 max-w-3xl">
+          Related supplies
+        </h2>
+        <div className="max-w-3xl">
+          <HopDisclosure siteId="horses-com" href="/go/amazon-brand/horse+blanket?s=reviews-hub" />
+        </div>
+        <div className="mt-4 mb-2 max-w-3xl">
+          <ShopCtas
+            amazonHref="/go/amazon-brand/horse+blanket?s=reviews-hub"
+            amazonLabel="Browse horse blankets on Amazon →"
+          />
+        </div>
+      </section>
       <div className="px-container-sm sm:px-container pt-6">
         <PriceAsOf date="2026-10-04" />
-        <LastUpdated date="2026-10-09" />
+        <LastUpdated date="2026-10-10" />
       </div>
 
       <nav className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
@@ -206,29 +220,6 @@ export default function HorsesReviewsPage() {
           </section>
         ))}
       </div>
-
-      <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
-        <h2 id="kit" className="font-display font-bold text-brand-dark text-xl mb-4 max-w-3xl">
-          Related supplies
-        </h2>
-
-        <div className="max-w-3xl mt-6">
-          <HopDisclosure siteId="horses-com" href="/go/amazon-brand/horse+blanket?s=reviews-hub" />
-        </div>
-
-        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-3xl">
-          <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-            Shop related supplies
-          </div>
-          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
-          <div className="flex flex-col gap-3">
-            <ShopCtas
-              amazonHref="/go/amazon-brand/horse+blanket?s=reviews-hub"
-              amazonLabel="Browse horse blankets on Amazon →"
-            />
-          </div>
-        </div>
-      </section>
 
       <DirectoryPlacesCta listings={listings} noun="licensed equine professionals" />
       <CrossPortfolioCard currentSite="horses-com" contentType="gear" variant="footer" />

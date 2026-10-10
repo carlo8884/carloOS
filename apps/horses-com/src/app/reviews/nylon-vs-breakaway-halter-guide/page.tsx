@@ -58,7 +58,7 @@ export default function NylonVsBreakawayGuidePage() {
         <>
           <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">The leather-crown breakaway is the turnout pick because the crown gives way if a horse gets caught.</p>
           <div data-fold="offer">
-          <HopDisclosure tone="on-dark" siteId="horses-com" href="/go/amazon-brand/nylon+horse+halter?s=reviews-nylon-vs-breakaway-halter-guide" /><a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" href="/go/amazon-brand/nylon+horse+halter?s=reviews-nylon-vs-breakaway-halter-guide">Browse nylon horse halters on Amazon →</a>
+          <HopDisclosure tone="on-dark" siteId="horses-com" href="/go/amazon-brand/leather+crown+breakaway+horse+halter?s=reviews-nylon-vs-breakaway-halter-guide" /><a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" href="/go/amazon-brand/leather+crown+breakaway+horse+halter?s=reviews-nylon-vs-breakaway-halter-guide">Browse leather-crown breakaway horse halters on Amazon →</a>
         </div>
         </>
       }
@@ -80,7 +80,7 @@ export default function NylonVsBreakawayGuidePage() {
       priceAsOf="2026-10-08"
     >
       <div className="carloOS-article">
-          <LastUpdated date="2026-10-09" />
+          <LastUpdated date="2026-10-10" />
         <EmailCapture
           variant="inline"
           siteId="horses-com"
@@ -144,7 +144,7 @@ export default function NylonVsBreakawayGuidePage() {
             </tbody>
           </table>
         </div>
-        <ComparisonFoot updated="2026-10-09" />
+        <ComparisonFoot updated="2026-10-10" />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
       </div>

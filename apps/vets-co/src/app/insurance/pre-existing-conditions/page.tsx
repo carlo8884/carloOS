@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ReviewCard, ShopCtas, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
+import { PrimaryHop, buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ReviewCard, ShopCtas, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 
@@ -20,6 +20,8 @@ export default function PreExistingPage() {
     <>
       <SchemaScript schema={schema} />
       <ArticleLayout siteId="vets-co"
+        heroHop={<PrimaryHop href="/go/amazon-brand/pressboard+classification+folder?s=insurance-pre-existing-conditions" label="Browse pressboard classification folders on Amazon →" />}
+        heroExtra={<HopDisclosure siteId="vets-co" href="/go/amazon-brand/pressboard+classification+folder?s=insurance-pre-existing-conditions" tone="on-dark" />}
         hero={{ title: 'Pre-Existing Conditions, Explained', subtitle: 'The single most important concept in pet insurance is the pre-existing condition. Because insurers do not cover conditions that existed before coverage began, the value of a policy is largely set the day you enroll. Understanding how pre-existing conditions are defined — and why timing matters so much — is essential before buying.', category: 'Insurance Guide', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '8 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Insurance', href: '/insurance' }, { name: 'Pre-Existing Conditions', href: '/insurance/pre-existing-conditions' }]}
         sidebar={<>
@@ -39,7 +41,7 @@ export default function PreExistingPage() {
         <div className="carloOS-article">
 
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-09-06T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-09" />
+          <LastUpdated date="2026-10-10" />
 
           <CalloutBox variant="warning" title="Timing is everything">
             Every condition your pet develops before coverage starts becomes a permanent gap. This is why the most common piece of advice from veterinary teams is to enroll while a pet is young and healthy — not after the first worrying symptom appears.

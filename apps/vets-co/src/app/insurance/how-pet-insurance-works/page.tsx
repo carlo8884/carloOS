@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { TableShopLink, ComparisonFoot, EmailCapture, buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ReviewCard, ShopCtas, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
+import { TableShopLink, ComparisonFoot, EmailCapture, buildMetadata, ArticleLayout, FAQAccordion, PrimaryHop, RelatedLinks, ReviewCard, ShopCtas, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 
@@ -21,6 +21,8 @@ export default function HowPetInsuranceWorksPage() {
       <SchemaScript schema={schema} />
       <ArticleLayout siteId="vets-co"
         hero={{ title: 'How Pet Insurance Works', subtitle: 'Pet insurance is medical insurance for your dog or cat, and it works on a reimbursement model: you pay the vet, then the insurer pays you back a percentage of covered costs after a deductible. Four numbers — premium, deductible, reimbursement rate, and annual limit — define every policy. Once you understand how they interact, comparing plans becomes straightforward.', category: 'Insurance Guide', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '8 min',}}
+        heroHop={<PrimaryHop href="/go/trupanion/home?s=insurance-how-pet-insurance-works" label="Get a Trupanion quote" holdWithoutPartnerId />}
+        heroExtra={<HopDisclosure siteId="vets-co" href="/go/trupanion/home?s=insurance-how-pet-insurance-works" noteClassName="mt-3 mb-0 text-xs leading-relaxed text-white/80" />}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Insurance', href: '/insurance' }, { name: 'How It Works', href: '/insurance/how-pet-insurance-works' }]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -39,7 +41,7 @@ export default function HowPetInsuranceWorksPage() {
         <div className="carloOS-article">
 
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-09-06T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-09" />
+          <LastUpdated date="2026-10-10" />
 
           <CalloutBox variant="info" title="It protects against the big bills">
             Pet insurance is best thought of as protection against unexpected, large veterinary expenses — a torn ligament, a swallowed object, cancer, a chronic illness — not as a way to save money on routine care. The math works because it converts an unpredictable catastrophic risk into a predictable monthly cost.
@@ -225,7 +227,7 @@ export default function HowPetInsuranceWorksPage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-09" />
+          <ComparisonFoot updated="2026-10-10" />
 
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
