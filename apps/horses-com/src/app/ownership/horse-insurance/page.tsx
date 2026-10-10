@@ -62,6 +62,7 @@ export default function HorseInsurancePage() {
           { title: 'The Pre-Purchase Exam', href: '/ownership/pre-purchase-exam' },
           { title: 'Equine Health Hub', href: '/health' },
         ]}
+        heroHop={<a href="/tools/horse-cost-calculator" className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline mb-5">Horse cost calculator</a>}
         hero={{
           title: "Horse Insurance Explained",
           subtitle:
@@ -110,7 +111,7 @@ export default function HorseInsurancePage() {
             updatedAt="2026-10-06"
             reviewedBy="Editorial team"
           />
-          <LastUpdated date="2026-10-06" />
+          <LastUpdated date="2026-10-10" />
 
           <h2 id="why">Why Insure a Horse</h2>
           <p>Insurance exists because the big costs of horse ownership -- the loss of a valuable horse, an emergency surgery, a long course of treatment, or a claim from someone the horse injures -- can be financially devastating and arrive without warning. Insurance spreads that risk for a recurring premium. Whether it is worth it depends on the horse&apos;s value, the owner&apos;s finances, and their appetite for risk; some owners insure heavily, others self-insure by keeping an emergency fund instead.</p>
@@ -178,7 +179,7 @@ export default function HorseInsurancePage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-09" />
+          <ComparisonFoot updated="2026-10-10" />
 
           <h2 id="deciding">Exclusions and Deciding</h2>
           <p>Policies commonly list exclusions and conditions: pre-existing conditions, certain procedures, a duty to report illness, prior approval for treatment, and limits per condition or per year. Missing one can be grounds for a denial. Read the policy before relying on it. Whether to insure depends on the horse&apos;s value, what the owner can pay out of pocket, and the premium in the actual quote. This page does not compare premiums.</p>

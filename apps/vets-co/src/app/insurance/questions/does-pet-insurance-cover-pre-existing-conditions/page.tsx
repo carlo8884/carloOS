@@ -18,6 +18,7 @@ export default function Page() {
     <>
       <SchemaScript schema={schema} />
       <ArticleLayout siteId="vets-co"
+        heroHop={<a href="/insurance/pre-existing-conditions" className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline mb-5">Pre-existing conditions</a>}
         hero={{ title: 'Does Pet Insurance Cover Pre-Existing Conditions?', subtitle: 'No pet insurer covers pre-existing conditions — and that single rule is why timing matters more than carrier choice. Some insurers will re-cover curable conditions after a symptom-free window, but chronic disease stays excluded everywhere.', category: 'Insurance Q&A', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '7 min' }}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Insurance', href: '/insurance' }, { name: 'Questions', href: '/insurance/questions' }, { name: 'Pre-Existing Conditions', href: '/insurance/questions/does-pet-insurance-cover-pre-existing-conditions' }]}
         sidebar={<>
@@ -36,7 +37,7 @@ export default function Page() {
       >
         <div className="carloOS-article">
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-11T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-06" />
+          <LastUpdated date="2026-10-10" />
 
           <CalloutBox variant="warning" title="The short answer">
             No pet insurer covers pre-existing conditions — any condition with signs, symptoms, or a diagnosis <strong>before</strong> coverage starts or during the waiting period. Some insurers will re-cover a previously <em>curable</em> condition after a defined symptom-free window; chronic and incurable conditions stay permanently excluded everywhere.

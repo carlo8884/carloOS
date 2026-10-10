@@ -18,6 +18,7 @@ export default function Page() {
     <>
       <SchemaScript schema={schema} />
       <ArticleLayout siteId="vets-co"
+        heroHop={<a href="/insurance/when-to-enroll" className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline mb-5">When to enroll</a>}
         hero={{ title: 'When Should I Get Pet Insurance?', subtitle: 'Enroll as early as the insurer allows — often as young as six to eight weeks. Signing up while a pet is young and healthy locks in coverage before any condition becomes a permanent pre-existing exclusion, and starts your premium from a lower base.', category: 'Insurance Q&A', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '6 min' }}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Insurance', href: '/insurance' }, { name: 'Questions', href: '/insurance/questions' }, { name: 'When to Enroll', href: '/insurance/questions/when-should-i-get-pet-insurance' }]}
         sidebar={<>
@@ -36,7 +37,7 @@ export default function Page() {
       >
         <div className="carloOS-article">
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-11T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-08" />
+          <LastUpdated date="2026-10-10" />
 
           <CalloutBox variant="info" title="The short answer">
             Enroll <strong>as early as the insurer allows</strong> — many start coverage at six to eight weeks of age. Enrolling while a pet is young and healthy locks in coverage before any condition becomes a permanent pre-existing exclusion, and premiums start lower. There is no &ldquo;too late&rdquo; if your pet is healthy, but every year you wait risks a new note in the records becoming an exclusion.

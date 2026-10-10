@@ -18,6 +18,7 @@ export default function Page() {
     <>
       <SchemaScript schema={schema} />
       <ArticleLayout siteId="vets-co"
+        heroHop={<a href="/health/periodontal-disease-pets" className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline mb-5">Periodontal disease in pets</a>}
         hero={{ title: 'Does Pet Insurance Cover Dental?', subtitle: 'Most accident-and-illness policies cover dental disease and dental injuries — extractions, fractured teeth, periodontal treatment — but not routine cleanings. Many insurers also require evidence of annual dental care to keep dental claims eligible.', category: 'Insurance Q&A', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '6 min' }}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Insurance', href: '/insurance' }, { name: 'Questions', href: '/insurance/questions' }, { name: 'Dental', href: '/insurance/questions/does-pet-insurance-cover-dental' }]}
         sidebar={<>
@@ -36,7 +37,7 @@ export default function Page() {
       >
         <div className="carloOS-article">
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-11T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-08" />
+          <LastUpdated date="2026-10-10" />
 
           <CalloutBox variant="info" title="The short answer">
             Most accident-and-illness policies cover <strong>dental disease and dental injuries</strong> — extractions, fractured teeth, and treatment of periodontal disease — but <strong>not</strong> routine dental <strong>cleanings</strong>, which are preventive and sit in wellness-plan territory. Many insurers require evidence of annual dental exams or cleanings to keep dental-illness claims eligible, so read the dental clause.

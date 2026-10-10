@@ -19,6 +19,7 @@ export default function Page() {
       <SchemaScript schema={schema} />
       <ArticleLayout siteId="vets-co"
         priceAsOf="2026-06-11"
+        heroHop={<a href="/insurance/deductibles-reimbursement" className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline mb-5">Deductibles and reimbursement</a>}
         hero={{ title: 'How Much Does Pet Insurance Cost?', subtitle: 'Most dog accident-and-illness policies run roughly $30–$70 a month and cats $15–$40, but your price swings with species, breed, age, location, and the deductible, reimbursement rate, and limit you choose. Here is what actually moves the number.', category: 'Insurance Q&A', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '7 min' }}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Insurance', href: '/insurance' }, { name: 'Questions', href: '/insurance/questions' }, { name: 'Cost', href: '/insurance/questions/how-much-does-pet-insurance-cost' }]}
         sidebar={<>
@@ -38,7 +39,7 @@ export default function Page() {
       >
         <div className="carloOS-article">
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-11T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-08" />
+          <LastUpdated date="2026-10-10" />
 
           <CalloutBox variant="info" title="The short answer">
             Most dog accident-and-illness policies run roughly <strong>$30–$70 per month</strong> and cats roughly <strong>$15–$40 per month</strong> (2026 ranges drawn from industry averages), but your specific price swings with species, breed, age, location, and the deductible, reimbursement percentage, and annual limit you select. Treat any single &ldquo;average&rdquo; as a starting point, not a quote.

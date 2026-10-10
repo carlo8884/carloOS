@@ -18,6 +18,7 @@ export default function Page() {
     <>
       <SchemaScript schema={schema} />
       <ArticleLayout siteId="vets-co"
+        heroHop={<a href="/insurance/how-pet-insurance-works" className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline mb-5">How pet insurance works</a>}
         hero={{ title: 'How Does the Pet Insurance Claims Process Work?', subtitle: 'Pet insurance is almost always reimbursement-based: you pay the vet in full, submit the itemized invoice, and the insurer pays you back your share of the eligible amount after the deductible. Here is the process step by step, and what speeds it up.', category: 'Insurance Q&A', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '6 min' }}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Insurance', href: '/insurance' }, { name: 'Questions', href: '/insurance/questions' }, { name: 'Claims Process', href: '/insurance/questions/how-does-the-claims-process-work' }]}
         sidebar={<>
@@ -36,7 +37,7 @@ export default function Page() {
       >
         <div className="carloOS-article">
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-11T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-08" />
+          <LastUpdated date="2026-10-10" />
 
           <CalloutBox variant="info" title="The short answer">
             Pet insurance is almost always <strong>reimbursement-based</strong>: you pay the veterinarian in full, then submit the itemized invoice (and sometimes records) to the insurer, which pays you back your reimbursement percentage of the eligible amount after your deductible is met. Processing usually takes a few days to a few weeks; some insurers offer faster app-based claims or, with select vets, direct pay.

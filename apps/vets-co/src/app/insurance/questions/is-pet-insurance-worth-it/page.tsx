@@ -19,6 +19,7 @@ export default function Page() {
       <SchemaScript schema={schema} />
       <ArticleLayout siteId="vets-co"
         priceAsOf="2026-06-11"
+        heroHop={<a href="/tools/pet-insurance-worth-it-calculator" className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline mb-5">Worth-it calculator</a>}
         hero={{ title: 'Is Pet Insurance Worth It?', subtitle: 'Pet insurance is protection against rare, large vet bills — not a way to save money on average. It is most worth it if you could not easily absorb a sudden five-figure emergency and you enroll while your pet is young. Here is the honest math, both sides.', category: 'Insurance Q&A', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '8 min' }}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Insurance', href: '/insurance' }, { name: 'Questions', href: '/insurance/questions' }, { name: 'Worth It?', href: '/insurance/questions/is-pet-insurance-worth-it' }]}
         sidebar={<>
@@ -38,7 +39,7 @@ export default function Page() {
       >
         <div className="carloOS-article">
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-11T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-08" />
+          <LastUpdated date="2026-10-10" />
 
           <p>Those figures are typical US ranges dated 2026-06-11.</p>
           <CalloutBox variant="info" title="The short answer">
