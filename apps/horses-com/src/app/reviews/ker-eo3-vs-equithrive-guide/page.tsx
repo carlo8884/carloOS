@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata, ArticleSourcesList, LastUpdated, ComparisonFoot } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, ShopCtas, buildArticleSchema, buildMetadata, ArticleSourcesList, LastUpdated, ComparisonFoot } from '@carloOS/ui'
 import { HopDisclosure } from '../../../components/HopDisclosure'
 
 export const metadata: Metadata = buildMetadata({
@@ -70,7 +70,7 @@ export default function KerVsEquithriveGuidePage() {
       priceAsOf="2026-10-07"
     >
       <div className="carloOS-article">
-          <LastUpdated date="2026-10-09" />
+          <LastUpdated date="2026-10-10" />
         <EmailCapture
           variant="inline"
           siteId="horses-com"
@@ -95,6 +95,10 @@ export default function KerVsEquithriveGuidePage() {
         <p>Equithrive Original Pellets are Best Resveratrol. The active ingredient in the review is trans-resveratrol. The format is a pellet. The review says the brand carries an NASC seal, was founded by a veterinarian at the University of Kentucky, and lists no prohibited FEI or USEF ingredients. The printed price is $45–65 a month. It frames resveratrol as a complement to traditional joint ingredients, not a substitute, and says the evidence base is smaller than ASU or glucosamine. The common use it names is mild joint inflammation or support after an injection.</p>
         <h2>Who should buy which product</h2>
         <p>Buy EO-3 when the goal is marine DHA and EPA and you can handle a liquid in winter. Buy Equithrive when you want the resveratrol pellet beside a joint formula, not instead of one. Neither product replaces the Cosequin ASU Plus or Platinum Performance tubs on that review.</p>
+        <ShopCtas
+          amazonHref="/go/amazon/B07DM2314W?s=reviews-ker-eo3-vs-equithrive-guide"
+          amazonLabel="Check price of Equithrive Original Pellets on Amazon"
+        />
         <p>EO-3 is the pick when the goal is marine DHA and EPA in a liquid top-dress. The sale price can differ from the band above.</p>
         <div className="my-6 max-w-full min-w-0">
           <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
@@ -130,7 +134,7 @@ export default function KerVsEquithriveGuidePage() {
             </tbody>
           </table>
         </div>
-        <ComparisonFoot updated="2026-10-09" />
+        <ComparisonFoot updated="2026-10-10" />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
                 <ArticleSourcesList

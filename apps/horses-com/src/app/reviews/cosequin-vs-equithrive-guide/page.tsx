@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { HopDisclosure } from '../../../components/HopDisclosure'
-import { ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata, ArticleSourcesList, LastUpdated, ComparisonFoot } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, ShopCtas, buildArticleSchema, buildMetadata, ArticleSourcesList, LastUpdated, ComparisonFoot } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: 'Cosequin vs Equithrive for Joints | Horses.com',
@@ -98,6 +98,10 @@ export default function CosequinVsEquithriveGuidePage() {
         <p>Equithrive Original Pellets are Best Resveratrol. The active is trans-resveratrol. The current page says research-backed and FEI and USEF compliant. It does not print University of Kentucky equine trials — check the label for the resveratrol amount. The printed price is $45–65 a month. The review frames resveratrol as a complement to traditional joint ingredients, not a substitute.</p>
         <h2>Who should buy which product</h2>
         <p>Buy Cosequin ASU Plus when the horse has diagnosed osteoarthritis or significant work-related joint loading and you want the product the review ranks on published evidence. Buy Equithrive when you want the lower monthly band and you are adding resveratrol beside another joint product, not instead of one. A single broad wellness tub is Platinum Performance on the same review, not either product here.</p>
+        <ShopCtas
+          amazonHref="/go/amazon/B07DM2314W?s=reviews-cosequin-vs-equithrive-guide"
+          amazonLabel="Check price of Equithrive Original Pellets on Amazon"
+        />
         <p>Cosequin ASU Plus is the joint pick because the <a href="https://www.cosequin.com/product/horses/cosequin-asu-plus">current powder page</a> lists glucosamine, MSM, chondroitin, and ASU, and it also lists other ingredients (fetched 2026-10-08).</p>
         <div className="my-6 max-w-full min-w-0">
           <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
