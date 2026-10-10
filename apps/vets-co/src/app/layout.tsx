@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { Libre_Baskerville, Manrope } from 'next/font/google'
-import { Nav, Footer, buildMetadata, buildOrganizationSchema, SchemaScript, Ga4Loader, AffiliateClickListener, JourneyEvents } from '@carloOS/ui'
+import { Nav, Footer, buildMetadata, buildOrganizationSchema, SchemaScript, Ga4Loader, AffiliateClickListener, JourneyEvents, HopEarnsProvider } from '@carloOS/ui'
 import { HomeEmailCapture } from '../components/HomeEmailCapture'
 import { EmailCaptureGate } from '../components/EmailCaptureGate'
 import { EmailUnderHero } from '@carloOS/ui'
@@ -57,6 +57,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       className={`${baskerville.variable} ${manrope.variable} font-vars`}
     >
       <body>
+        <HopEarnsProvider amazon={Boolean(process.env.AFF_AMAZON_TAG || process.env.AFF_AMAZON_BRAND_TAG)}>
         <SchemaScript schema={organizationSchema} />
         <Ga4Loader measurementId={GA_ID} />
         <AffiliateClickListener site="vets-co" />
@@ -86,6 +87,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </EmailCaptureGate>
         </main>
         <Footer siteId="vets-co" showAffiliateDisclosure />
+        </HopEarnsProvider>
       </body>
     </html>
   )

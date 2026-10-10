@@ -4,12 +4,14 @@
  * Amazon + optional Chewy shop pair. Hides empty Chewy hops — never href="#".
  * Chewy-brand search queries fall back to amazon-brand until a Chewy tag is live.
  * Clicks are recorded by AffiliateClickListener (site, page, partner, product, placement).
- * The Associates line sits above the buttons. A generic "Shop on Amazon" label
- * is renamed from the search in amazonHref.
+ * The Associates line sits above the buttons. It follows the earns flag the
+ * server layout serialized, so hydration does not delete the sentence.
+ * A generic "Shop on Amazon" label is renamed from the search in amazonHref.
  */
 import type { CSSProperties } from 'react'
 import { liveAnchorHref, shopCtaLabel, visibleChewyHref, visibleShopHref } from '@carloOS/config/affiliate-hop'
 import { amazonButtonLabel } from '../lib/amazon-browse-label'
+import { useAmazonEarns } from './HopEarns'
 
 const amazonStyle: CSSProperties = {
   display: 'inline-block',
@@ -51,10 +53,15 @@ export function ShopCtas({
   const chewy = chewyVisible ? liveAnchorHref(chewyVisible) : undefined
   const label = shopCtaLabel(amazonHref, amazonButtonLabel(amazon ?? amazonHref, amazonLabel))
   const amazonAssociate = Boolean(amazon && /\/go\/amazon/i.test(amazon))
-  // Static env reads so the client bundle matches the server render.
-  const amazonTag = process.env.AFF_AMAZON_TAG || process.env.AFF_AMAZON_BRAND_TAG || ''
+  const amazonFromServer = useAmazonEarns()
+  // The server flag wins. Reading AFF_AMAZON_TAG here is empty in the browser
+  // and hydration removes the line the server rendered.
+  const amazonTagLive =
+    amazonFromServer !== null
+      ? amazonFromServer
+      : Boolean(process.env.AFF_AMAZON_TAG || process.env.AFF_AMAZON_BRAND_TAG)
   const chewyTag = process.env.AFF_CHEWY_TAG || process.env.AFF_CHEWY_BRAND_TAG || process.env.AFF_CHEWY_PHARMACY_TAG || ''
-  const amazonEarns = Boolean(amazonAssociate && amazonTag)
+  const amazonEarns = Boolean(amazonAssociate && amazonTagLive)
   const chewyEarns = Boolean(chewy && /\/go\/chewy/i.test(chewy) && chewyTag)
   if (!amazon && !chewy) return null
   const disclosure = amazonEarns || chewyEarns ? (
