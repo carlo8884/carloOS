@@ -138,7 +138,7 @@ export default function EquineUlcersPage() {
             updatedAt="2026-09-06"
             reviewedBy="Editorial team"
           />
-          <LastUpdated date="2026-10-10" />
+          <LastUpdated date="2026-10-09" />
 
           <div id="key-facts" className="bg-brand-primary-pale border-l-4 border-brand-primary rounded-r-xl p-5 my-6 not-prose">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Key Facts — Equine Gastric Ulcers</div>
