@@ -1,7 +1,7 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ShopCtas, TableOfContents } from '@carloOS/ui'
+import { ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ShopCtas, TableOfContents, ComparisonFoot, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -108,12 +108,45 @@ export default function LeasingHorsePage() {
             updatedAt="2026-09-06"
             reviewedBy="Editorial team"
           />
+          <LastUpdated date="2026-10-10" />
 
           <h2 id="what">What a Lease Is</h2>
           <p>A horse lease is an arrangement in which a rider gets the use of a horse they do not own, in exchange for covering some or all of its costs and following agreed conditions. The owner keeps ownership but offloads some cost and ensures the horse is ridden; the lessee gets riding time and experience without buying. Leasing is widely used as a stepping stone toward ownership, as a way to ride more than lessons allow, and as a flexible option for outgrown or temporarily idle horses.</p>
 
           <h2 id="types">Full vs Partial Lease</h2>
           <p>The two broad types differ by how much of the horse the lessee gets. In a full lease, the lessee has the horse essentially to themselves and typically covers all or most of its costs -- board, farrier, routine vet, and so on -- almost like temporary ownership. In a partial or share lease (often a half lease), the lessee rides on certain days and shares the costs proportionally with the owner or other sharers. Partial leases suit riders wanting regular riding at a fraction of full cost.</p>
+          <div className="my-6 max-w-full min-w-0">
+            <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
+              <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+              <thead>
+                <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Full lease</th>
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Partial lease</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Use</th>
+                  <td className="p-3">The horse essentially to yourself</td>
+                  <td className="p-3">Certain days, shared with the owner or other sharers</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Costs</th>
+                  <td className="p-3">All or most: board, farrier, and routine vet</td>
+                  <td className="p-3">Shared proportionally</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Where the horse usually stays</th>
+                  <td className="p-3">Off-site is more typical, with more independence and more responsibility</td>
+                  <td className="p-3">On-site is common, so the routine stays put</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <ComparisonFoot updated="2026-10-10" />
+          <h2>Who should lease which way</h2>
+          <p>Choose a full lease when you want something close to temporary ownership and can cover most of the costs. Choose a partial lease when you want regular riding at a fraction of that cost. Put the cost split in the written agreement either way.</p>
 
           <h2 id="location">On-Site vs Off-Site</h2>
           <p>Leases also differ by where the horse stays. In an on-site lease the horse remains at its current barn, which is common for partial leases and keeps the owner close and the routine stable. In an off-site lease the lessee moves the horse to their own yard, more typical of a full lease and giving more independence but also more responsibility. The location affects cost, oversight, and how much the owner stays involved in the horse&apos;s daily life.</p>
