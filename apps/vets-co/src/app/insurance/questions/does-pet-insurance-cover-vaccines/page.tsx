@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, LastUpdated } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, LastUpdated, ComparisonFoot } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 
@@ -62,6 +62,38 @@ export default function Page() {
 
           <h2>The Practical Takeaway</h2>
           <p>If your goal is protection against a large, unexpected vet bill, the core accident-and-illness policy is the product to focus on, and vaccines are simply outside its scope. If your goal is to spread predictable annual care into level payments, a wellness add-on can do that — but only add it after checking that the math and the per-category caps make sense for your pet. The two products solve different problems, and conflating them is the most common reason owners feel let down at claim time.</p>
+          <div className="my-6 max-w-full min-w-0">
+            <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
+              <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+              <thead>
+                <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Accident-and-illness policy</th>
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Wellness add-on</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">What it is for</th>
+                  <td className="p-3">Unexpected illness and injury</td>
+                  <td className="p-3">Predictable annual care, including vaccines</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Vaccines</th>
+                  <td className="p-3">Not covered. They are scheduled and excluded by design</td>
+                  <td className="p-3">Reimbursed only up to a capped amount per category</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">What it is not</th>
+                  <td className="p-3">Not a way to pay for the annual exam or preventives</td>
+                  <td className="p-3">A budgeting tool, not unlimited insurance, and not designed to generate savings</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <ComparisonFoot updated="2026-10-10" />
+          <h2>Who should buy which layer</h2>
+          <p>Buy the core policy when the goal is a large unexpected bill. Add wellness only after the per-category caps and the premium match what you already spend on routine care. Vaccines stay off the core policy either way.</p>
 
           <h2 id="next-steps">Next Steps</h2>
           <p>Most owners researching vaccines are early in the buy decision. The most useful next move is to model the overall value of a policy on your numbers and to compare how carriers structure their wellness options.</p>

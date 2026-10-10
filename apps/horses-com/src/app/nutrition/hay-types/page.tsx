@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ShopCtas, TableOfContents } from '@carloOS/ui'
+import { ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ShopCtas, TableOfContents, ComparisonFoot, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -108,6 +108,7 @@ export default function HayTypesPage() {
             updatedAt="2026-09-06"
             reviewedBy="Editorial team"
           />
+          <LastUpdated date="2026-10-10" />
 
           <h2 id="grass">Grass Hays</h2>
           <p>Grass hays are the everyday forage for most horses. Timothy is prized for its consistent quality and palatability; orchardgrass is soft, leafy, and well liked; bermudagrass (coastal) is common in the warm south; and meadow, brome, fescue, and ryegrass hays are used regionally. Grass hays are generally moderate in calories and protein and lower in calcium than legumes, making them a sensible base forage for the majority of horses, including easy keepers when sugar content is controlled. How many pounds of that hay to feed is a bodyweight question. The <a href="/tools/horse-feed-calculator">daily feed calculator</a> estimates it. Orchard-grass hay for horses is that everyday leafy grass base.</p>
@@ -117,6 +118,42 @@ export default function HayTypesPage() {
 
           <h2 id="mixed">Mixed Hays</h2>
           <p>Many hays are a mix of grass and legume -- for example a timothy-alfalfa or grass-clover blend -- which moderates the richness of pure legume while raising the nutrition of pure grass. Mixed hays are a practical middle ground for horses in moderate work or that need a little more than grass hay alone provides, and they are widely available baled together from mixed swards. A timothy-alfalfa mixed hay for horses is that middle ground — it is not a hanging hay-bale scale and not a wall-mounted hay rack.</p>
+          <div className="my-6 max-w-full min-w-0">
+            <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
+              <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+              <thead>
+                <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Grass hay</th>
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Legume hay</th>
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Mixed hay</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">What it is</th>
+                  <td className="p-3">Timothy, orchardgrass, bermudagrass, and regional grass hays</td>
+                  <td className="p-3">Alfalfa, with clover hays also used</td>
+                  <td className="p-3">Timothy-alfalfa or grass-clover, baled together</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Richness</th>
+                  <td className="p-3">Moderate calories and protein, lower calcium than legumes</td>
+                  <td className="p-3">Higher calories, protein, and calcium than grass</td>
+                  <td className="p-3">Less rich than pure legume, more than pure grass</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Who it fits</th>
+                  <td className="p-3">Everyday base for most horses, including easy keepers when sugar is controlled</td>
+                  <td className="p-3">Hard keepers, lactating mares, growing youngstock, and performance horses. Easy to overfeed to idle or metabolic horses</td>
+                  <td className="p-3">Moderate work, or a horse that needs a little more than grass alone</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <ComparisonFoot updated="2026-10-10" />
+          <h2>Who should buy which hay</h2>
+          <p>Use grass hay as the everyday base. Use legume hay when the horse needs condition, and keep it small for an idle or metabolic horse. Use a mix when grass alone is not enough and pure legume is too rich.</p>
 
           <h2 id="quality">Judging Quality</h2>
           <ul>

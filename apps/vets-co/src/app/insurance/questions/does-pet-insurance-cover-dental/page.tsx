@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, LastUpdated } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, LastUpdated, ComparisonFoot } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 
@@ -52,6 +52,38 @@ export default function Page() {
 
           <h2>What It Does Not Cover</h2>
           <p>Routine cleanings, polishing, and other purely preventive dental work are outside the core policy. If you want help with those predictable costs, the route is a wellness or routine-care add-on, which reimburses a capped annual allowance toward preventive care including cleanings. As with any wellness rider, whether it pays off is arithmetic — compare the premium to what you would spend on the cleanings it covers. The trade-offs are covered in our <a href="/insurance/wellness-plans-vs-insurance">wellness plans versus insurance</a> guide and in <a href="/insurance/questions/does-pet-insurance-cover-vaccines">does pet insurance cover vaccines</a>, which faces the same preventive-versus-unexpected divide.</p>
+          <div className="my-6 max-w-full min-w-0">
+            <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
+              <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+              <thead>
+                <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Dental disease or injury</th>
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Routine cleaning</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">What it is</th>
+                  <td className="p-3">Fractured tooth, abscess, advanced periodontal disease, or a tooth knocked loose</td>
+                  <td className="p-3">Scheduled cleaning and polishing</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Core policy</th>
+                  <td className="p-3">Generally eligible, subject to the deductible, reimbursement percentage, and annual limit</td>
+                  <td className="p-3">Outside the core policy, the same way vaccines and the annual exam are</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Where the help lives</th>
+                  <td className="p-3">The accident-and-illness policy, if the dental-care requirement is met</td>
+                  <td className="p-3">A wellness or routine-care add-on, with a capped annual allowance</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <ComparisonFoot updated="2026-10-10" />
+          <h2>Who should read which clause</h2>
+          <p>Read the dental clause before you assume treatment is covered. Disease and injury sit on the core policy. A cleaning sits on a wellness add-on. Many insurers still require an annual dental exam or cleaning before a later illness claim stays eligible.</p>
 
           <h2>The Dental-Care Requirement to Watch</h2>
           <p>The clause that most often trips owners up is the dental-maintenance requirement. Because periodontal disease is largely preventable, many insurers make dental-illness claims contingent on evidence that you have kept up with recommended dental care — usually an annual exam, sometimes a cleaning within a defined window. Skip that care, and a later dental claim may be reduced or denied on the grounds that the condition was foreseeable and could have been prevented. This is not universal, and the exact requirement varies, which is precisely why the dental clause is worth reading before you assume your pet&apos;s dental treatment is covered.</p>

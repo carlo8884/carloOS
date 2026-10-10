@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, ComparisonFoot, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -94,6 +94,7 @@ export default function AdoptionVsBuyingPage() {
             updatedAt="2026-06-01"
             reviewedBy="Editorial team"
           />
+          <LastUpdated date="2026-10-10" />
 
           <h2 id="sources-overview">The Three Sources</h2>
           <p>
@@ -129,6 +130,42 @@ export default function AdoptionVsBuyingPage() {
           <p>
             A reasonable default: if you are open to an adult and want to support ferret welfare, start with a rescue. If you specifically want a kit with known parentage and are willing to vet a breeder carefully, a reputable breeder is a strong choice. A pet store is the most convenient and often the cheapest entry point, with the least background information. Across all three, plan for the real cost of the years ahead — the veterinary line item dominates the lifetime total (see <a href="/ownership/cost-of-owning-a-ferret">cost of owning a ferret</a>).
           </p>
+          <div className="my-6 max-w-full min-w-0">
+            <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
+              <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+              <thead>
+                <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Rescue</th>
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Breeder</th>
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Pet store</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Who you get</th>
+                  <td className="p-3">Usually an adult. Often already altered and descented</td>
+                  <td className="p-3">A kit of known parentage, raised in a home</td>
+                  <td className="p-3">Usually a very young ferret, already altered and descented</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">What you can learn</th>
+                  <td className="p-3">Temperament assessed and known issues disclosed. Histories can still be unknown</td>
+                  <td className="p-3">Parents&apos; health, how kits were raised, and whether the breeder takes an animal back</td>
+                  <td className="p-3">The least visibility into background and early care</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">This page&apos;s default</th>
+                  <td className="p-3">Start here if you want an adult and to support welfare</td>
+                  <td className="p-3">If you want a kit and will vet the breeder</td>
+                  <td className="p-3">Most convenient and often the cheapest, with the least background</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <ComparisonFoot updated="2026-10-10" />
+          <h2>Who should start where</h2>
+          <p>Start with a rescue if you are open to an adult. Choose a breeder if you want a kit and will ask about the parents. A pet store is the convenient entry, with the least history. Confirm ferrets are legal where you live before any of the three.</p>
 
 
           <h2 id="sources">Sources</h2>
