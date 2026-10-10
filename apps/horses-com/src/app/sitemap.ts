@@ -182,6 +182,7 @@ export default function sitemap(props?: { id?: number | string }): MetadataRoute
     { url: 'https://horses.com/reviews/quilted-vs-sheepskin-pad-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://horses.com/reviews/nylon-vs-breakaway-halter-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://horses.com/reviews/brushing-boots-vs-bell-boots-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
+    { url: 'https://horses.com/reviews/troxel-spirit-vs-charles-owen-ayr8-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://horses.com/reviews/blanket-weight-by-temperature-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://horses.com/reviews/winter-water-unfrozen-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://horses.com/supplements', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },

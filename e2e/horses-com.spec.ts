@@ -35,6 +35,7 @@ const FOLD: { path: string; pick: string }[] = [
   { path: '/reviews/quilted-vs-sheepskin-pad-guide', pick: 'quilted cotton' },
   { path: '/reviews/rambo-vs-rhino-guide', pick: 'Rambo' },
   { path: '/reviews/brushing-boots-vs-bell-boots-guide', pick: 'brushing boots' },
+  { path: '/reviews/troxel-spirit-vs-charles-owen-ayr8-guide', pick: 'Troxel Spirit' },
   { path: '/reviews/blanket-weight-by-temperature-guide', pick: 'Rambo' },
   { path: '/reviews/nylon-vs-breakaway-halter-guide', pick: 'breakaway' },
   { path: '/reviews/winter-water-unfrozen-guide', pick: 'heated' },

@@ -23,7 +23,7 @@ const breadcrumbSchema = buildBreadcrumbSchema({
 const REVIEW_GROUPS = [
   { id: 'horses-reviews-supplements', label: 'Supplements', intro: 'Joint, hoof, and gastric supplement pages, plus the comparisons that use those cards.' },
   { id: 'horses-reviews-blankets', label: 'Blankets and winter', intro: 'Turnout and stable blanket pages, fill-weight notes, and the winter water page.' },
-  { id: 'horses-reviews-tack', label: 'Tack', intro: 'The saddle-pad comparison, plus halter and boot comparisons from the tack pages. None of them fix saddle fit.' },
+  { id: 'horses-reviews-tack', label: 'Tack', intro: 'The saddle-pad comparison, plus halter, boot, and helmet comparisons from the tack pages. None of them fix saddle fit.' },
   { id: 'horses-reviews-season', label: 'Season', intro: 'November and December gifts taken from price bands already on the halter, boot, and blanket cards.' },
 ]
 
@@ -111,6 +111,13 @@ const REVIEWS = [
     title: 'Brushing Boots vs Bell Boots',
     description:
       'Interference protection for the cannon, or overreach protection for the heel. Neither supports a tendon.',
+  },
+  {
+    slug: 'troxel-spirit-vs-charles-owen-ayr8-guide',
+    group: 'horses-reviews-tack',
+    title: 'Troxel Spirit vs Charles Owen AYR8 Plus',
+    description:
+      'An entry ASTM/SEI schooling helmet, or a multi-standard show helmet. Both retire after a significant impact.',
   },
   {
     slug: 'blanket-weight-by-temperature-guide',

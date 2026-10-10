@@ -104,6 +104,7 @@ export default function HelmetGuidePage() {
               { label: "Buying Your First Horse", href: "/ownership/buying-your-first-horse" },
               { label: "Trail Riding", href: "/disciplines/trail-riding" },
               { label: "Eventing", href: "/disciplines/eventing" },
+              { label: "Troxel Spirit vs Charles Owen AYR8", href: "/reviews/troxel-spirit-vs-charles-owen-ayr8-guide" },
             ]}
           />
           <CrossPortfolioCard currentSite="horses-com" contentType="equipment" variant="sidebar" />
@@ -220,7 +221,7 @@ export default function HelmetGuidePage() {
           />
 
           <h2 id="who">Who should buy which helmet</h2>
-          <p>Who each helmet is for is already on the three cards. Certification and a current fit matter more than the tier, and every helmet here is retired after a significant impact.</p>
+          <p>Who each helmet is for is already on the three cards. Certification and a current fit matter more than the tier, and every helmet here is retired after a significant impact. When the choice is the entry Troxel Spirit or the premium Charles Owen AYR8 Plus, the <a href="/reviews/troxel-spirit-vs-charles-owen-ayr8-guide" className="text-brand-primary underline">Troxel Spirit versus Charles Owen AYR8 guide</a> puts those two helmets side by side.</p>
           <div className="overflow-x-auto my-6 max-w-full">
             <table className="w-full text-sm border-collapse table-fixed sm:table-auto min-w-0 sm:min-w-[36rem] [&_th]:break-words [&_td]:break-words">
               <thead>
@@ -253,7 +254,7 @@ export default function HelmetGuidePage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-09" />
+          <ComparisonFoot updated="2026-10-10" />
 
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
