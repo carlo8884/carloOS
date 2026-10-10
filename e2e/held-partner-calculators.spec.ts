@@ -33,6 +33,7 @@ const TOOLS: Record<string, string[]> = {
     '/tools/cat-calorie-calculator',
     '/tools/cat-food-amount-calculator',
     '/tools/cat-grimace-scale',
+    '/tools/claim-helper',
     '/tools/er-vs-clinic',
     '/tools/insurance-finder',
     '/tools/insurance-quote-prep',
