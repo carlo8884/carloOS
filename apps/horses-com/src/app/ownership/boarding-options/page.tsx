@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ShopCtas, TableOfContents } from '@carloOS/ui'
+import { ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ShopCtas, TableOfContents, ComparisonFoot, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -108,6 +108,7 @@ export default function BoardingOptionsPage() {
             updatedAt="2026-09-06"
             reviewedBy="Editorial team"
           />
+          <LastUpdated date="2026-10-10" />
 
           <h2 id="spectrum">The Spectrum of Options</h2>
           <p>Boarding arrangements sit on a spectrum from most service to least. At one end, full-care board has the facility do all the daily work for a higher fee; at the other, self-care board provides only the space while you do everything; and keeping a horse at home gives total control and total responsibility. Between them lie partial and pasture board. The right choice depends on your time, budget, experience, facilities available, and how hands-on you want or need to be.</p>
@@ -123,6 +124,42 @@ export default function BoardingOptionsPage() {
 
           <h2 id="home">Keeping a Horse at Home</h2>
           <p>Keeping a horse at home offers maximum control and the joy of having the horse on your doorstep, but it is a serious undertaking: it requires suitable land, safe fencing and shelter, water, hay and bedding storage, and your labor every single day, year-round. Horses are herd animals, so a lone horse needs company. Home-keeping also means you are the first responder in every emergency. It can be rewarding and even economical with the right setup, but it is a lifestyle commitment, not just a saving.</p>
+          <div className="my-6 max-w-full min-w-0">
+            <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
+              <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+              <thead>
+                <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Full-care board</th>
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Self-care board</th>
+                  <th scope="col" className="p-3 font-bold text-brand-dark">At home</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Who does the daily work</th>
+                  <td className="p-3">The facility feeds, turns out, mucks, and supplies hay and bedding</td>
+                  <td className="p-3">You supply feed and bedding and do the daily care</td>
+                  <td className="p-3">You, every day, year-round</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Who it fits</th>
+                  <td className="p-3">Short on time or experience, or you want the facilities</td>
+                  <td className="p-3">Only if you can be there every day, including bad weather</td>
+                  <td className="p-3">Maximum control, and you are the first responder</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Trade-off</th>
+                  <td className="p-3">Higher fee and less control over how the horse is managed</td>
+                  <td className="p-3">Cheaper than full board, and it demands real horsemanship</td>
+                  <td className="p-3">Suitable land, safe fencing, shelter, and company</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <ComparisonFoot updated="2026-10-10" />
+          <h2>Who should board which way</h2>
+          <p>Choose full-care when you cannot be at the barn daily. Choose self-care only if you can be there every day. Keep the horse at home only with land, fencing, shelter, and company. Partial and pasture board sit between full-care and self-care.</p>
           <p>
             A waterproof horse hay-bale storage tarp is how home-kept hay and bedding stay dry instead of sitting in a leak — it is not a wall-mounted horse hay rack, not a nylon horse hay bag, and not a rodent-proof metal horse feed bin. </p>
 

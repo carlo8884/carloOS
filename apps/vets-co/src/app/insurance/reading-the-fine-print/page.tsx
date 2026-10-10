@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { PrimaryHop, buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ReviewCard, ShopCtas, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
+import { PrimaryHop, buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ReviewCard, ShopCtas, ArticleSourcesList, LastUpdated, ComparisonFoot } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Reading Pet Insurance Fine Print — What to Check | Vets.co", description: "Waiting periods, exam-fee coverage, payout schedules, and exclusions hide in the policy document. Use this checklist to read a pet insurance policy properly.", path: '/insurance/reading-the-fine-print', type: 'article' })
@@ -44,9 +44,66 @@ export default function FinePrintPage() {
 
           <h2>Waiting Periods</h2>
           <p>Every policy imposes a waiting period after enrollment before coverage starts, and anything arising during it is excluded as pre-existing. Accident waiting periods are typically short, illness periods longer, and orthopedic conditions can carry the longest waits — six months or more with some insurers. For breeds prone to cruciate or hip disease, a long orthopedic waiting period is a major consideration. A full-page magnifier is how those orthopedic-wait clauses stay readable on the sample policy — it is not an assorted highlighter set, not removable page flags, and not a self-inking date stamp. Check the length of each waiting period and whether the insurer offers a way to shorten the orthopedic wait, such as an exam. <a href="/insurance/what-pet-insurance-covers">What pet insurance covers</a> is where those waiting-period exclusions are spelled out.</p>
+          <div className="my-6 max-w-full min-w-0">
+            <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
+              <caption className="text-left font-semibold text-brand-dark p-3">Waiting periods, from the sentences on this page</caption>
+              <thead>
+                <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Wait</th>
+                  <th scope="col" className="p-3 font-bold text-brand-dark">What this page says</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Accident</th>
+                  <td className="p-3">Typically short</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Illness</th>
+                  <td className="p-3">Longer than the accident wait</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Orthopedic</th>
+                  <td className="p-3">Can be the longest. Six months or more with some insurers. A major consideration for cruciate or hip risk</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
 
           <h2>How the Plan Pays</h2>
           <p>There are two payout models. Most modern plans reimburse a percentage of your actual covered costs. A minority use a benefit schedule, capping payment for each condition or procedure at a fixed amount regardless of the real bill — which can leave large gaps even when a claim is covered. An adjustable copyholder is how two sample policies stay propped for a side-by-side payout-model read — it is not a letter-size file jacket, not a kraft two-pocket folder, and not a clipboard with storage. Confirm the plan reimburses actual costs, and be wary of unusually cheap plans that quietly use a benefit schedule.</p>
+          <div className="my-6 max-w-full min-w-0">
+            <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
+              <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+              <thead>
+                <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Percentage of actual costs</th>
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Benefit schedule</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">How common</th>
+                  <td className="p-3">Most modern plans</td>
+                  <td className="p-3">A minority</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">What comes back</th>
+                  <td className="p-3">A percentage of the covered costs</td>
+                  <td className="p-3">A fixed amount for each condition or procedure, regardless of the real bill</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">The gap</th>
+                  <td className="p-3">Confirm the plan reimburses actual costs</td>
+                  <td className="p-3">Can leave large gaps even when the claim is covered</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <ComparisonFoot updated="2026-10-10" />
+          <h2>Who should compare which term</h2>
+          <p>Compare the orthopedic wait, and whether the plan pays a percentage of the bill or a schedule. Anything that starts during a waiting period is excluded as pre-existing. A cheap plan that uses a schedule is the one this page says to read twice.</p>
 
           <h2>Exam Fees and Ancillary Costs</h2>
           <p>Some insurers reimburse the exam or consultation fee; others exclude it. Over a chronic condition requiring repeated rechecks, this adds up. Look also at how the plan handles prescription medications, hospitalization, specialist and emergency care, alternative therapies, and behavioral treatment. These ancillary inclusions and exclusions distinguish otherwise-similar plans and can swing the value substantially for a pet with ongoing needs.</p>
