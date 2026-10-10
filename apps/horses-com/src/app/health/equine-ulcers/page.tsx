@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, QuietPartnerLink, RelatedLinks, ShopCtas, TableOfContents, FAQAccordion, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, QuietPartnerLink, RelatedLinks, TableOfContents, FAQAccordion, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -284,10 +284,6 @@ export default function EquineUlcersPage() {
 
           <h3>Alfalfa</h3>
           <p>Alfalfa hay is genuinely protective against ESGD. The mechanism is twofold: alfalfa is higher in calcium and protein than grass hay, both of which buffer gastric acid, and alfalfa stimulates more saliva than equivalent grass hay (Lybbert TC et al., <em>Journal of Animal Science</em>, 2007; Nadeau JA et al., <em>Equine Veterinary Journal</em>, 2003). Practical application: an alfalfa flake fed 30 minutes before exercise (or replaced as approximately 30 percent of the forage ration) reduces ESGD risk significantly. Alfalfa is not without trade-offs — its calcium load can complicate ration balancing in young horses and stallions — but for an adult horse at risk of squamous ulcers, partial-alfalfa rations are evidence-based.</p>
-          <ShopCtas
-            amazonHref="/go/amazon-brand/alfalfa+hay+horse?s=health-equine-ulcers"
-            amazonLabel="Browse alfalfa hay for horses on Amazon"
-          />
 
           <h3>Reduce starch and sugar (NSC)</h3>
           <p>Concentrate meals should be kept below 2 g of starch/kg body weight per meal. For a 1,100 lb horse, that is approximately 1 kg of typical sweet feed per meal — a number that exceeds what many show and racing barns currently feed in a single meal. Splitting the same daily calorie load into more frequent smaller meals reduces VFA-mediated squamous injury. Replacing some starch calories with fat (vegetable oil, rice bran, stabilized rice bran) provides energy without the gastric injury cost.</p>
