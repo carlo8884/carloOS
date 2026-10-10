@@ -70,7 +70,7 @@ export default function NovemberDecemberGiftGuidePage() {
           ]}
         />
       }
-      priceAsOf="2026-10-07"
+      priceAsOf="2026-10-10"
     >
       <div className="carloOS-article">
           <LastUpdated date="2026-10-10" />
