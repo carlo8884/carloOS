@@ -140,7 +140,7 @@ const JOURNEYS: Record<string, Journey[]> = {
       name: 'cage calculator to cage review',
       start: '/tools/cage-size-calculator',
       startHeading: /Ferret Cage Size Calculator/,
-      link: /Compare the cages that meet this footprint/,
+      link: /Compare the cages the review recommends for your ferret count/,
       comparison: /\/reviews\/best-ferret-cage\/?$/,
       hop: '/go/amazon/B0054U8UGW?s=reviews-best-ferret-cage',
       hopIncludes: product('B0054U8UGW'),

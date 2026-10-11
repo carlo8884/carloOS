@@ -247,7 +247,7 @@ const JOURNEYS: Record<string, Journey[]> = {
       result: /Minimum footprint/,
       resultHop: 'B0054U8UGW',
       resultDestination: { host: 'amazon.com', product: ['b0054u8ugw'], forbid: ferretForbid },
-      guide: 'Compare the cages that meet this footprint',
+      guide: 'Compare the cages the review recommends for your ferret count',
       guideUrl: /\/reviews\/best-ferret-cage\/?$/,
       hop: 'B0054U8UGW',
       destination: { host: 'amazon.com', product: ['b0054u8ugw'], forbid: ferretForbid },
