@@ -118,6 +118,21 @@ test('vets fix telehealth picks: each quick pick repeats its card badge, name, a
   expect(names).toEqual(picks.map((p) => p.name))
 })
 
+test('vets fix claim links: claim helper links to the reimbursement estimator and carrier comparison', async ({ page }) => {
+  await page.goto('/tools/claim-helper')
+  const nextSteps = page.locator('h2#next-steps + ul')
+  for (const href of ['/tools/insurance-reimbursement-estimator', '/reviews/best-pet-insurance']) {
+    await expect(nextSteps.locator(`a[href="${href}"]`)).toHaveCount(1)
+    const res = await page.request.get(href, { maxRedirects: 0 })
+    expect(res.status()).toBe(200)
+  }
+  await expect(nextSteps.getByRole('link', { name: 'Pet Insurance Reimbursement Estimator' })).toBeVisible()
+  await expect(nextSteps.getByRole('link', { name: 'Best Pet Insurance 2026 — How the 11 Major Carriers Compare' })).toBeVisible()
+
+  await page.goto('/tools/insurance-reimbursement-estimator')
+  await expect(page.getByRole('link', { name: 'Pet Insurance Claim Helper' })).toHaveAttribute('href', '/tools/claim-helper')
+})
+
 const FOLD: { path: string; pick: string }[] = [
   { path: '/reviews/best-pet-insurance', pick: 'Trupanion' },
   { path: '/reviews/holiday-emergency-visit-guide', pick: 'Trupanion' },
