@@ -163,6 +163,7 @@ export default function InsuranceReimbursementEstimatorPage() {
             links={[
               { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' },
               { label: 'Is Pet Insurance Worth It?', href: '/tools/pet-insurance-worth-it-calculator' },
+              { label: 'Pet Insurance Claim Helper', href: '/tools/claim-helper' },
               { label: 'Pet Insurance Hub', href: '/pet-insurance' },
               { label: 'Talk to a vet (non-ER)', href: '/telehealth' },
               { label: 'Find a Vet', href: '/find-a-vet' },
