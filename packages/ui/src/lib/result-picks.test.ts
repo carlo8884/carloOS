@@ -93,6 +93,10 @@ test('ferret cage pick follows the review count', () => {
   assert.match(ferretCagePick(4).detail, /1–4/)
   assert.doesNotMatch(ferretCagePick(4).detail, /past that card/)
   assert.match(ferretCagePick(5).detail, /past that card/)
+  assert.match(ferretCagePick(1, false).href, /B008FONT2Y/)
+  assert.match(ferretCagePick(1, true).href, /B0054U8UGW/)
+  assert.match(ferretCagePick(1, true).detail, /under four hours/)
+  assert.match(ferretCagePick(2, true).detail, /pair or trio/)
 })
 
 test('filter pick follows the review gallon cards', () => {

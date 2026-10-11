@@ -24,6 +24,18 @@ test('cage guide, cage setup, tagged hop', async ({ page }) => {
   )
 })
 
+test('cage calculator: one ferret with short out-time gets the Ferret Nation, not the Kaytee', async ({ page }) => {
+  await page.goto('/tools/cage-size-calculator')
+  await page.locator('#cs-ferrets').fill('1')
+  const pick = page.locator('[data-result-pick]')
+
+  await page.getByRole('button', { name: '4 h', exact: true }).click()
+  await expect(pick.locator('a[href^="/go/amazon/"]')).toHaveAttribute('href', /B008FONT2Y/)
+
+  await page.getByRole('button', { name: '< 4 h', exact: true }).click()
+  await expect(pick.locator('a[href^="/go/amazon/"]')).toHaveAttribute('href', /B0054U8UGW/)
+  await expect(pick).toContainText('With under four hours out')
+})
 
 const FOLD: { path: string; pick: string }[] = [
   { path: '/reviews/best-ferret-cage', pick: 'Ferret Nation' },
