@@ -176,6 +176,20 @@ test('vets fix border collie: Lemonade pick drops unsourced fast-claims wording'
   await expect(page.locator('body')).toContainText("Lemonade's entry-tier premium fits a low-risk profile")
 })
 
+test('vets fix fast claims: deductibles page and Beagle pick use the sourced claims-page fact', async ({ page }) => {
+  const removed = /fast claims|fast reimbursement|fast in-app|lowest-claim/i
+  for (const path of ['/insurance/deductibles-reimbursement', '/pet-insurance/breeds/beagle']) {
+    await page.goto(path)
+    expect(await page.locator('body').innerText()).not.toMatch(removed)
+    const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
+    expect(ld).not.toMatch(removed)
+  }
+
+  await page.goto('/insurance/deductibles-reimbursement')
+  await expect(page.locator('#healthy-paws')).toContainText('Most claims in 2 days, per its claims page')
+  await expect(page.locator('#healthy-paws [data-source="https://www.healthypawspetinsurance.com/pet-insurance-claims.html"]')).toContainText('most claims are processed in 2 days')
+})
+
 const FOLD: { path: string; pick: string }[] = [
   { path: '/reviews/best-pet-insurance', pick: 'Trupanion' },
   { path: '/reviews/holiday-emergency-visit-guide', pick: 'Trupanion' },
