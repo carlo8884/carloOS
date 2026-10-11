@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout} from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, StockImage } from '@carloOS/ui'
 
 export const metadata: Metadata = {
   ...buildMetadata({
@@ -32,6 +32,9 @@ export default function TrainersIndexPage() {
       ]}
     >
       <div className="carloOS-article">
+        <div className="not-prose my-6 max-w-sm overflow-hidden rounded-xl border border-brand-border">
+          <StockImage manifestKey="dog-com:hero" alt="A dog and owner" aspect="16:9" subtleCredit />
+        </div>
         <p>
           This list is empty on purpose. Invented names, star ratings, and
           “featured trainers” would cheapen the domain. When a trainer has a
