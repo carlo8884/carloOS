@@ -276,7 +276,10 @@ export default function FerretDietBasicsPage() {
             subtitle="Animal-first. Marketed starch-free. The printed list does not name wheat, corn, rice, or soy."
             winner
             description={
-              <p>The current Wysong Epigen 90 page lists crude protein minimum 63% and crude fat minimum 16%. Those are guaranteed-analysis figures as printed, not a dry-matter conversion. The page markets the food as starch-free. Carbohydrate is not on the guaranteed analysis — check the label.</p>
+              <>
+                <p>The current Wysong Epigen 90 page lists crude protein minimum 63% and crude fat minimum 16%. Those are guaranteed-analysis figures as printed, not a dry-matter conversion. The page markets the food as starch-free. Carbohydrate is not on the guaranteed analysis — check the label.</p>
+                <p><a className="font-semibold text-brand-primary" href="/go/amazon/B019W9VXZK?s=diet-basics">Check price of Wysong Epigen 90 on Amazon →</a></p>
+              </>
             }
             specs={[
               { label: 'Crude protein (as printed)', value: 'Min. 63%', highlight: 'good' },

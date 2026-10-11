@@ -33,7 +33,7 @@ const FAQS = [
   },
   {
     question: 'Where is the double unit in this comparison?',
-    answer: 'The Ferret Nation or Critter Nation double unit is Best Overall on the cage review for one to four ferrets. That is a different comparison. These two are the smaller cages.',
+    answer: 'The Ferret Nation double unit is Best Overall on the cage review for one to four ferrets. That is a different comparison. These two are the smaller cages.',
   },
 ]
 
@@ -97,6 +97,10 @@ export default function KayteeVsPrevueGuidePage() {
         <ShopCtas
           amazonHref="/go/amazon/B008FONT2Y?s=reviews-kaytee-vs-prevue-guide"
           amazonLabel="Check price of the Kaytee Multi-Level Ferret Home on Amazon"
+        />
+        <ShopCtas
+          amazonHref="/go/amazon/B000QFMYWQ?s=reviews-kaytee-vs-prevue-guide"
+          amazonLabel="Check price of the Prevue Feisty Ferret cage on Amazon"
         />
         <p>The Prevue is the pick when the review sizes the floor for one or two ferrets and the cage does not need to expand later. Cover the wire shelves either way.</p>
         <div className="my-6 max-w-full min-w-0">

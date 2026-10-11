@@ -49,7 +49,7 @@ const breadcrumbSchema = buildBreadcrumbSchema({
 const itemList = buildItemListSchema({
   name: 'Multi-Level Ferret Cages That Meet the Criteria',
   items: [
-    { name: 'Ferret Nation / Critter Nation Double Unit', url: 'https://ferret.com/go/amazon/B0054U8UGW?s=reviews-best-ferret-cage' },
+    { name: 'Ferret Nation Double Unit', url: 'https://ferret.com/go/amazon/B0054U8UGW?s=reviews-best-ferret-cage' },
     { name: 'Prevue Pet Products Feisty Ferret Cage', url: 'https://ferret.com/go/amazon/B000QFMYWQ?s=reviews-best-ferret-cage' },
     { name: 'Kaytee Multi-Level Ferret Home', url: 'https://ferret.com/go/amazon/B008FONT2Y?s=reviews-best-ferret-cage' },
   ],
@@ -57,7 +57,7 @@ const itemList = buildItemListSchema({
 
 const products = [
   buildProductSchema({
-    name: 'Ferret Nation / Critter Nation Double Unit',
+    name: 'Ferret Nation Double Unit',
     description: 'Full-width front doors, deep pans, expandable two-storey footprint. Confirm bar spacing on the box.',
     url: 'https://ferret.com/go/amazon/B0054U8UGW?s=reviews-best-ferret-cage',
     reviewAuthorName: 'Ferret.com Editorial',
@@ -301,7 +301,7 @@ export default function BestFerretCagePage() {
           <ReviewCard
             id="ferret-nation"
             badge="Best Overall"
-            name="Ferret Nation / Critter Nation Double Unit"
+            name="Ferret Nation Double Unit"
             subtitle="Full-width front doors, deep pans, expandable two-storey footprint. Confirm bar spacing on the box."
             winner
             description={
@@ -386,7 +386,7 @@ export default function BestFerretCagePage() {
               <tbody>
                 <tr className="border-b border-brand-border">
                   <td className="p-3">One to four ferrets, and the cage is the long-term home</td>
-                  <td className="p-3 font-bold"><a href="#ferret-nation">Ferret Nation / Critter Nation double</a><TableShopLink href={"/go/amazon/B0054U8UGW?s=reviews-best-ferret-cage"} product={"Ferret Nation / Critter Nation double"} /></td>
+                  <td className="p-3 font-bold"><a href="#ferret-nation">Ferret Nation double</a><TableShopLink href={"/go/amazon/B0054U8UGW?s=reviews-best-ferret-cage"} product={"Ferret Nation double"} /></td>
                   <td className="p-3">Best overall. Confirm bar spacing on the box. Full-width doors. Price tier $$$</td>
                   <td className="p-3">Heavy, large, and the wire shelves still need covering</td>
                 </tr>

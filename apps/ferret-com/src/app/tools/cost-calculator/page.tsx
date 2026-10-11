@@ -209,7 +209,7 @@ export default function CostCalculatorPage() {
               Shop the setup
             </div>
             <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
-              The first-year number is mostly cage, food, and litter. The Amazon buttons still on this page are the kibble search and the Ferret Nation / Critter Nation double unit, the same ones used on the{' '}
+              The first-year number is mostly cage, food, and litter. The Amazon buttons still on this page are the kibble search and the Ferret Nation double unit, the same ones used on the{' '}
               <Link href="/reviews/best-ferret-cage" className="text-brand-primary underline-offset-2 hover:underline">
                 cage review
               </Link>
@@ -230,7 +230,7 @@ export default function CostCalculatorPage() {
               />
               <ShopCtas
                 amazonHref="/go/amazon/B0054U8UGW?s=tools-cost-calculator"
-                amazonLabel="Browse Ferret Nation / Critter Nation double units on Amazon →"
+                amazonLabel="Browse the Ferret Nation double unit on Amazon →"
               />
           </div>
           </div>

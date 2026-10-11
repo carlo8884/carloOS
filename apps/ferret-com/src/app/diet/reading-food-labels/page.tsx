@@ -234,7 +234,10 @@ export default function ReadingFoodLabelsPage() {
             subtitle="Current guaranteed analysis: crude protein min. 63%, crude fat min. 16%. Carbohydrate is not printed."
             winner
             description={
-              <p>A worked example of a current bag, not a measured carbohydrate result. The current Wysong Epigen 90 page lists crude protein minimum 63% and crude fat minimum 16%. Those are guaranteed-analysis figures as printed, not a dry-matter conversion. The page markets the food as starch-free. Carbohydrate is not on the guaranteed analysis — check the label. Use the method above on any other bag, and check that label.</p>
+              <>
+                <p>A worked example of a current bag, not a measured carbohydrate result. The current Wysong Epigen 90 page lists crude protein minimum 63% and crude fat minimum 16%. Those are guaranteed-analysis figures as printed, not a dry-matter conversion. The page markets the food as starch-free. Carbohydrate is not on the guaranteed analysis — check the label. Use the method above on any other bag, and check that label.</p>
+                <p><a className="font-semibold text-brand-primary" href="/go/amazon/B019W9VXZK?s=reading-food-labels">Check price of Wysong Epigen 90 on Amazon →</a></p>
+              </>
             }
             specs={[
               { label: 'Leading ingredients', value: 'Named meats', highlight: 'good' },

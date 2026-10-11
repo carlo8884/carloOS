@@ -118,7 +118,7 @@ export default function FerretLabelPage() {
             Next step
           </div>
           <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-            The kibble review quotes the printed guaranteed analyses. The Wysong shop link below is the existing Epigen 90 link. The calculator did not test that food, and a calculated carbohydrate is not that bag. Check the label.
+            The kibble review quotes the printed guaranteed analyses. The Epigen 90 links below open the same food the kibble review covers. The calculator did not test that food, and a calculated carbohydrate is not that bag. Check the label.
           </p>
           <div className="flex flex-col gap-3">
             <Link
@@ -127,13 +127,20 @@ export default function FerretLabelPage() {
             >
               Read the ferret kibble review →
             </Link>
-            <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/wysong+ferret+food?s=tools-label-calculator" />
+            <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/wysong+ferret+food?s=tools-label-calculator", "/go/amazon/B019W9VXZK?s=tools-label-calculator"]} />
             <a
               href="/go/amazon-brand/wysong+ferret+food?s=tools-label-calculator"
               rel="sponsored noopener"
               className="inline-block bg-brand-dark text-white font-semibold px-5 py-2.5 rounded-md no-underline"
             >
               Browse Wysong ferret food on Amazon →
+            </a>
+            <a
+              href="/go/amazon/B019W9VXZK?s=tools-label-calculator"
+              rel="sponsored noopener"
+              className="inline-block bg-brand-dark text-white font-semibold px-5 py-2.5 rounded-md no-underline"
+            >
+              Check price of Wysong Epigen 90 on Amazon →
             </a>
             <QuietPartnerLink href="/go/wysong/epigen-90?s=tools-label-calculator" label="Check price of Wysong Epigen 90 at Wysong" />
           </div>

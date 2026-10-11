@@ -135,13 +135,13 @@ export function ferretCagePick(count: number): MatchedPick {
   if (count <= 4) {
     return {
       href: '/go/amazon/B0054U8UGW?s=tools-cage-size-calculator',
-      label: 'Browse the Ferret Nation / Critter Nation double unit on Amazon',
+      label: 'Browse the Ferret Nation double unit on Amazon',
       detail: 'The cage review lists the Ferret Nation double for 1–4 ferrets, and the modular stack for a pair or trio.',
     }
   }
   return {
     href: '/go/amazon/B0054U8UGW?s=tools-cage-size-calculator',
-    label: 'Browse the Ferret Nation / Critter Nation double unit on Amazon',
+    label: 'Browse the Ferret Nation double unit on Amazon',
     detail: 'The cage review lists the Ferret Nation double for 1–4 ferrets. This count is past that card.',
   }
 }

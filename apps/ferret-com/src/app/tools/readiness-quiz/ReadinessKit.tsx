@@ -28,7 +28,7 @@ const KIT: KitItem[] = [
     detail:
       'A multi-level cage with solid floors (or fleece-covered wire) and bar spacing of one inch or less is the usual day-one habitat. Size the footprint with the cage-size calculator — the cage is the bedroom, not the house. Ferrets still need several hours of supervised out-of-cage time daily.',
     amazonHref: `/go/amazon/B0054U8UGW?s=${SOURCE}`,
-    amazonLabel: 'Browse Ferret Nation / Critter Nation double units on Amazon →',
+    amazonLabel: 'Browse the Ferret Nation double unit on Amazon →',
   },
   {
     id: 'litter',

@@ -12706,7 +12706,7 @@ const CALCULATORS = [
     id: 'ferret · best-ferret-cage hops',
     file: 'apps/ferret-com/src/app/reviews/best-ferret-cage/page.tsx',
     mustInclude: [
-      { re: /amazon\/B0054U8UGW\?s=reviews-best-ferret-cage/, label: 'existing Ferret Nation / Critter Nation amazon-brand hop kept (do not re-ship a new query)' },
+      { re: /amazon\/B0054U8UGW\?s=reviews-best-ferret-cage/, label: 'existing Ferret Nation double-unit hop kept (do not re-ship a new query)' },
       { re: /amazon\/B000QFMYWQ\?s=reviews-best-ferret-cage/, label: 'existing Prevue Feisty amazon-brand hop kept (do not re-ship a new query)' },
       { re: /amazon\/B008FONT2Y\?s=reviews-best-ferret-cage/, label: 'existing Kaytee Multi-Level amazon-brand hop kept (do not re-ship a new query)' },
       { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },

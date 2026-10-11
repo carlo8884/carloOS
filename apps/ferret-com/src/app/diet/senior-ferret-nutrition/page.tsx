@@ -234,7 +234,10 @@ export default function SeniorFerretNutritionPage() {
             name="Wysong Epigen 90"
             subtitle="High-protein, low-carb kibble that softens cleanly when soaked"
             description={
-              <p>The current Wysong Epigen 90 page lists crude protein minimum 63% and crude fat minimum 16%. Those are guaranteed-analysis figures as printed, not a dry-matter conversion. The page markets the food as starch-free. Carbohydrate is not on the guaranteed analysis — check the label. A healthy senior can stay on that bag rather than a reduced-protein senior formula borrowed from dog and cat lines. It soaks down to a soft mash in warm water, which makes it manageable for a ferret with worn or missing teeth while keeping protein intake up. Reluctance to eat hard food still warrants a dental exam, not just a softer bowl.</p>
+              <>
+                <p>The current Wysong Epigen 90 page lists crude protein minimum 63% and crude fat minimum 16%. Those are guaranteed-analysis figures as printed, not a dry-matter conversion. The page markets the food as starch-free. Carbohydrate is not on the guaranteed analysis — check the label. A healthy senior can stay on that bag rather than a reduced-protein senior formula borrowed from dog and cat lines. It soaks down to a soft mash in warm water, which makes it manageable for a ferret with worn or missing teeth while keeping protein intake up. Reluctance to eat hard food still warrants a dental exam, not just a softer bowl.</p>
+                <p><a className="font-semibold text-brand-primary" href="/go/amazon/B019W9VXZK?s=senior-ferret-nutrition">Check price of Wysong Epigen 90 on Amazon →</a></p>
+              </>
             }
             specs={[
               { label: 'Crude protein (as printed)', value: 'Min. 63%', highlight: 'good' },
