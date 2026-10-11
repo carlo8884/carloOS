@@ -123,8 +123,18 @@ export function blanketPick(
   }
 }
 
-/** Ferret-cage review: Kaytee for one ferret, Ferret Nation double for a pair or trio. */
-export function ferretCagePick(count: number): MatchedPick {
+/**
+ * Ferret-cage review: Kaytee for one ferret with generous out-time,
+ * Ferret Nation double for a pair or trio, or for one ferret with short out-time.
+ */
+export function ferretCagePick(count: number, playShort = false): MatchedPick {
+  if (count <= 1 && playShort) {
+    return {
+      href: '/go/amazon/B0054U8UGW?s=tools-cage-size-calculator',
+      label: 'Browse the Ferret Nation double unit on Amazon',
+      detail: 'The cage review assigns the Kaytee to a single ferret with generous daily out-of-cage time. With under four hours out, it lists the Ferret Nation double for 1–4 ferrets.',
+    }
+  }
   if (count <= 1) {
     return {
       href: '/go/amazon/B008FONT2Y?s=tools-cage-size-calculator',

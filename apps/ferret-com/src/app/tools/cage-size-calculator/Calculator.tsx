@@ -73,7 +73,7 @@ export default function CageSizeCalculator() {
   return (
     <div className="rounded-lg border border-brand-border bg-brand-surface p-6 sm:p-8">
       {result ? (
-        <ResultPick linkFirst siteId="ferret-com" pick={ferretCagePick(ferrets)} />
+        <ResultPick linkFirst siteId="ferret-com" pick={ferretCagePick(ferrets, result.playShort)} />
       ) : null}
       <div className="grid gap-6 sm:grid-cols-3">
         <div>
