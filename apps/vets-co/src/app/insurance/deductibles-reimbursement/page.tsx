@@ -44,7 +44,7 @@ export default function DeductiblesPage() {
         <div className="carloOS-article">
 
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-09-06T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-10" />
+          <LastUpdated date="2026-10-11" />
           <EmailCapture
             variant="inline"
             siteId="vets-co"
@@ -152,14 +152,14 @@ export default function DeductiblesPage() {
             subtitle="One plan, you set the deductible and reimbursement rate"
             winner
             description={
-              <p>A single accident-and-illness plan where you choose the deductible and reimbursement rate, which makes the lever trade-offs easy to model. Known for fast reimbursement on the pay-then-claim model. Confirm the annual-limit structure when you quote — that is the catastrophe protection you are really buying.</p>
+              <p data-source="https://www.healthypawspetinsurance.com/pet-insurance-claims.html">A single accident-and-illness plan where you choose the deductible and reimbursement rate, which makes the lever trade-offs easy to model. The Healthy Paws claims page, fetched 2026-10-08, says most claims are processed in 2 days. Confirm the annual-limit structure when you quote — that is the catastrophe protection you are really buying.</p>
             }
             specs={[
               { label: 'Plan', value: 'Single A&I' },
               { label: 'Adjustable', value: 'Deductible + rate', highlight: 'good' },
-              { label: 'Reimbursement', value: 'Fast', highlight: 'good' },
+              { label: 'Claims', value: 'Most in 2 days (per its claims page)' },
             ]}
-            pros={['Easy to model levers', 'Fast claims', 'Simple single plan']}
+            pros={['Easy to model levers', 'Most claims in 2 days, per its claims page', 'Simple single plan']}
             cons={['No wellness add-on', 'Confirm annual-limit structure']}
             price="Quote-based"
             ctaText="Get a Quote →"
@@ -205,7 +205,7 @@ export default function DeductiblesPage() {
                 <tr className="border-b border-brand-border">
                   <td className="p-3 text-brand-text-mid">One accident-and-illness plan, and you set the deductible and rate</td>
                   <td className="p-3 font-bold text-brand-dark"><a href="#healthy-paws" className="text-brand-primary">Healthy Paws</a><TableShopLink href={"/go/healthy-paws/home?s=insurance-deductibles-reimbursement"} product={"Healthy Paws"} holdWithoutPartnerId /></td>
-                  <td className="p-3 text-brand-text-mid">Simple Levers. Single plan. Fast reimbursement. Quote-based</td>
+                  <td className="p-3 text-brand-text-mid" data-source="https://www.healthypawspetinsurance.com/pet-insurance-claims.html">Simple Levers. Single plan. Most claims in 2 days, per its claims page. Quote-based</td>
                   <td className="p-3 text-brand-text-mid">No wellness add-on. Confirm the annual-limit structure on the quote</td>
                 </tr>
                 <tr className="border-b border-brand-border">
@@ -217,12 +217,13 @@ export default function DeductiblesPage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-10" />
+          <ComparisonFoot updated="2026-10-11" />
 
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
                   <ArticleSourcesList title="Sources"
             sources={[
+            { label: 'Healthy Paws claims', url: 'https://www.healthypawspetinsurance.com/pet-insurance-claims.html', publisher: 'Healthy Paws' },
             { label: 'Pets Best FAQ', url: 'https://www.petsbest.com/faq', publisher: 'Pets Best' },
             ]}
           />

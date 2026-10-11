@@ -176,19 +176,18 @@ test('vets fix border collie: Lemonade pick drops unsourced fast-claims wording'
   await expect(page.locator('body')).toContainText("Lemonade's entry-tier premium fits a low-risk profile")
 })
 
-test('vets fix hp reimbursement: Healthy Paws guides state the sourced 2-day claims fact, not fast reimbursement', async ({ page }) => {
-  for (const path of [
-    '/reviews/trupanion-vs-healthy-paws-guide',
-    '/reviews/healthy-paws-vs-embrace-guide',
-    '/reviews/healthy-paws-vs-pets-best-guide',
-  ]) {
+test('vets fix fast claims: deductibles page and Beagle pick use the sourced claims-page fact', async ({ page }) => {
+  const removed = /fast claims|fast reimbursement|fast in-app|lowest-claim/i
+  for (const path of ['/insurance/deductibles-reimbursement', '/pet-insurance/breeds/beagle']) {
     await page.goto(path)
-    const body = await page.locator('body').innerText()
-    expect(body).not.toMatch(/fast reimbursement|reimbursement back fast/i)
-    expect(body).toMatch(/most claims are processed in 2 days/i)
+    expect(await page.locator('body').innerText()).not.toMatch(removed)
     const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
-    expect(ld).not.toMatch(/fast reimbursement|reimbursement back fast/i)
+    expect(ld).not.toMatch(removed)
   }
+
+  await page.goto('/insurance/deductibles-reimbursement')
+  await expect(page.locator('#healthy-paws')).toContainText('Most claims in 2 days, per its claims page')
+  await expect(page.locator('#healthy-paws [data-source="https://www.healthypawspetinsurance.com/pet-insurance-claims.html"]')).toContainText('most claims are processed in 2 days')
 })
 
 const FOLD: { path: string; pick: string }[] = [
@@ -252,5 +251,20 @@ test('every review route rejects page-about-itself copy', async ({ page }) => {
   for (const path of reviewRoutes('vets-co')) {
     await page.goto(path, { waitUntil: 'domcontentloaded' })
     await expectMoneyCopy(page)
+  }
+})
+
+test('vets fix hp reimbursement: Healthy Paws guides state the sourced 2-day claims fact, not fast reimbursement', async ({ page }) => {
+  for (const path of [
+    '/reviews/trupanion-vs-healthy-paws-guide',
+    '/reviews/healthy-paws-vs-embrace-guide',
+    '/reviews/healthy-paws-vs-pets-best-guide',
+  ]) {
+    await page.goto(path)
+    const body = await page.locator('body').innerText()
+    expect(body).not.toMatch(/fast reimbursement|reimbursement back fast/i)
+    expect(body).toMatch(/most claims are processed in 2 days/i)
+    const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
+    expect(ld).not.toMatch(/fast reimbursement|reimbursement back fast/i)
   }
 })
