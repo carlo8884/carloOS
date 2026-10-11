@@ -186,7 +186,7 @@ export default function VetsPetInsurancePage() {
                 { label: 'Payout Limit', value: '$5,000, $7,000, or unlimited', highlight: 'good' },
                 { label: 'Deductible', value: 'Annual' },
               ]}
-              pros={['Claims page says most claims are processed in 2 days', 'Consistently strong customer satisfaction reputation', 'Unlimited is one of the limit choices', 'Good mobile app']}
+              pros={['Claims page says most claims are processed in 2 days','Unlimited is one of the limit choices', 'Good mobile app']}
               cons={['Direct Pay is the urgent exception on the claims page', 'No wellness add-on']}
               price="See the carrier's current terms"
               priceNote="dated 2026-10-07."

@@ -565,7 +565,7 @@ export default function FerretLitterTrainingPage() {
               { label: 'Aromatics', value: 'None', highlight: 'good' },
               { label: 'Odour control', value: 'Good' },
             ]}
-            pros={['Lowest dust profile in widely-stocked litters', 'No ingestion-obstruction risk', 'No respiratory-irritant aromatics', 'Strong odour control', 'Available in most US chain pet retail']}
+            pros={['Very low dust', 'No ingestion-obstruction risk', 'No respiratory-irritant aromatics', 'Strong odour control', 'Available in most US chain pet retail']}
             cons={['Pricier per pound than kiln-dried wood pellet', 'Larger bag is heavy to carry']}
             price="see current price / 15-30 lb"
             priceNote="dated 2026-05-31."

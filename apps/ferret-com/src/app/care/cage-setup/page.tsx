@@ -257,7 +257,7 @@ export default function FerretCageSetupPage() {
             subtitle="Two-level, 36×25×62 inches. The manufacturer page does not print bar spacing"
             winner
             description={
-              <p>The default recommendation across the ferret-keeper community. Originally designed for rats and similar small mammals, the Critter Nation’s footprint, height, and bar spacing all land in the right zone for ferrets. Two large solid-floor levels with a connecting ramp, full-width double doors on each level (excellent access for cleaning and for getting a stubborn ferret out), and casters for moving the cage. Single-level (Model 161) and three-level expansion options exist. Expect to spend an afternoon on assembly.</p>
+              <p>Originally designed for rats and similar small mammals, the Critter Nation’s footprint, height, and bar spacing all land in the right zone for ferrets. Two large solid-floor levels with a connecting ramp, full-width double doors on each level (access for cleaning and for getting a stubborn ferret out), and casters for moving the cage. Single-level (Model 161) and three-level expansion options exist. Expect to spend an afternoon on assembly.</p>
             }
             specs={[
               { label: 'Dimensions', value: '36×25×62 in (double unit)' },
@@ -266,7 +266,7 @@ export default function FerretCageSetupPage() {
               { label: 'Door Access', value: 'Full-width double doors per level', highlight: 'good' },
               { label: 'Assembly', value: 'Multi-hour, two-person preferred', highlight: 'warn' },
             ]}
-            pros={['Confirm bar spacing on the box', 'Excellent door access', 'Casters for moving', 'Solid floor — no wire-floor injuries', 'Modular — add a single-unit on top']}
+            pros={['Confirm bar spacing on the box', 'Full-width double doors per level', 'Casters for moving', 'Solid floor — no wire-floor injuries', 'Modular — add a single-unit on top']}
             cons={['Heavy and large — measure before buying', 'Assembly is non-trivial', 'Ramp can be slippery without fleece cover']}
             price="see current price"
             priceNote="dated 2026-05-31."

@@ -68,7 +68,7 @@ const products = [
     description: 'Direct-to-consumer, published macros, subscription-shipped',
     url: `${PAGE_URL}#carniwhole`,
     reviewAuthorName: 'Ferret.com Editorial',
-    reviewBody: 'A direct-to-consumer ferret food favoured by keepers who want ingredient transparency and a fresher product than long-shelf-stable kibble. It publishes its ingredient and macronutrient panel and ships on a subscription model; the trade-off is subscription logistics, no retail backup, and a shorter community track record.',
+    reviewBody: 'A direct-to-consumer ferret food for keepers who want ingredient transparency and a fresher product than long-shelf-stable kibble. It publishes its ingredient and macronutrient panel and ships on a subscription model; the trade-off is subscription logistics and no retail backup.',
   }),
 ]
 
@@ -197,7 +197,7 @@ export default function BestFerretKibblePage() {
             updatedAt="2026-06-11"
             reviewedBy="Editorial team"
           />
-          <LastUpdated date="2026-10-10" />
+          <LastUpdated date="2026-10-11" />
           <EmailCapture
             variant="inline"
             siteId="ferret-com"
@@ -332,7 +332,7 @@ export default function BestFerretKibblePage() {
               { label: 'Ferret-specific', value: 'Yes', highlight: 'good' },
               { label: 'Distribution', value: 'National chain pet retail' },
             ]}
-            pros={['Ferret-specific formulation', 'Widely available', 'Affordable per pound', 'Long manufacturer track record in ferret retail']}
+            pros={['Ferret-specific formulation', 'Widely available', 'Affordable per pound']}
             cons={['Carbohydrate is not on the guaranteed analysis. Check the label.', 'Check the ingredient list on the current bag']}
             price="$15–25 / 4 lb"
             priceNote="dated 2026-10-04."
@@ -347,7 +347,7 @@ export default function BestFerretKibblePage() {
             name="Carniwhole Ferret Food"
             subtitle="Direct-to-consumer, published macros, subscription-shipped"
             description={
-              <p>A direct-to-consumer ferret food favoured by keepers who want ingredient transparency and a fresher product than long-shelf-stable kibble. Carniwhole publishes its ingredient and macronutrient panel and ships on a subscription model. Appeal: transparency and freshness. Trade-off: subscription logistics, no retail backup, and a shorter community track record than Marshall or Wysong.</p>
+              <p>A direct-to-consumer ferret food for keepers who want ingredient transparency and a fresher product than long-shelf-stable kibble. Carniwhole publishes its ingredient and macronutrient panel and ships on a subscription model. Appeal: transparency and freshness. Trade-off: subscription logistics and no retail backup.</p>
             }
             specs={[
               { label: 'Protein source', value: 'Animal-first, named meats', highlight: 'good' },
@@ -356,7 +356,7 @@ export default function BestFerretKibblePage() {
               { label: 'Smaller-batch sourcing', value: 'Yes', highlight: 'good' },
             ]}
             pros={['Ingredient transparency', 'Fresh product', 'Animal-first panel', 'Direct support from a smaller brand']}
-            cons={['Subscription logistics', 'No retail backup', 'Shorter community track record than Marshall or Wysong']}
+            cons={['Subscription logistics', 'No retail backup']}
             price="Subscription pricing"
           />
 
@@ -389,12 +389,12 @@ export default function BestFerretKibblePage() {
                   <td className="p-3 text-brand-text-mid">A direct subscription with a published animal-first panel</td>
                   <td className="p-3 font-bold text-brand-dark"><a href="#carniwhole" className="text-brand-primary">Carniwhole</a></td>
                   <td className="p-3 text-brand-text-mid">Direct-to-Consumer. Named meats. Subscription pricing. No retail backup</td>
-                  <td className="p-3 text-brand-text-mid">You need a store backup. The card also notes a shorter track record than Marshall or Wysong</td>
+                  <td className="p-3 text-brand-text-mid">You need a store backup</td>
                 </tr>
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-10" />
+          <ComparisonFoot updated="2026-10-11" />
 
           <p>Wysong and Marshall, the two kibbles on this page, are compared in the <Link href="/reviews/wysong-vs-marshall-kibble-guide">Wysong versus Marshall guide</Link>. Wysong and Carniwhole are set side by side in the <Link href="/reviews/wysong-vs-carniwhole-guide">Wysong versus Carniwhole guide</Link>.</p>
           <h2 id="faq">FAQ</h2>

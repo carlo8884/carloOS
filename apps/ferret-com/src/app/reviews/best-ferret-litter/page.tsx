@@ -57,7 +57,7 @@ const products = [
     description: 'Low-dust, non-clumping, soft on feet — the default ferret litter',
     url: 'https://ferret.com/go/chewy-brand/recycled+paper+pellet+litter+non+clumping?s=reviews-best-ferret-litter',
     reviewAuthorName: 'Ferret.com Editorial',
-    reviewBody: 'The default recommendation. Recycled-paper pellets are low-dust, non-clumping, absorbent, and soft enough on the feet that ferrets accept them readily. They carry no clumping agents to swallow and no fine respiratory dust. The trade-off is moderate odor control versus heavily perfumed cat litters and the need to change rather than scoop-and-top-up — both acceptable given the safety profile.',
+    reviewBody: 'Our default pick. Recycled-paper pellets are low-dust, non-clumping, absorbent, and soft enough on the feet that ferrets accept them readily. They carry no clumping agents to swallow and no fine respiratory dust. The trade-off is moderate odor control versus heavily perfumed cat litters and the need to change rather than scoop-and-top-up — both acceptable given the safety profile.',
   }),
 ]
 
@@ -177,7 +177,7 @@ export default function BestFerretLitterPage() {
             updatedAt="2026-06-11"
             reviewedBy="Editorial team"
           />
-          <LastUpdated date="2026-10-10" />
+          <LastUpdated date="2026-10-11" />
           <EmailCapture
             variant="inline"
             siteId="ferret-com"
@@ -275,7 +275,7 @@ export default function BestFerretLitterPage() {
             subtitle="Low-dust, non-clumping, soft on feet — the default ferret litter"
             winner
             description={
-              <p>The default recommendation for ferrets. Recycled-paper pellets are low-dust, non-clumping, absorbent, and soft enough on the feet that ferrets accept them readily. There are no clumping agents to swallow and no fine respiratory dust. The trade-offs are moderate odor control versus heavily perfumed cat litters and the need to change rather than scoop-and-top-up — both easily acceptable given the safety profile. If you buy one litter without overthinking it, buy a current recycled-paper pellet. Purina discontinued Yesterday&apos;s News on April 20, 2022, and closed the plant that June. This search is for a recycled paper pellet still being sold.</p>
+              <p>Our default pick for ferrets. Recycled-paper pellets are low-dust, non-clumping, absorbent, and soft enough on the feet that ferrets accept them readily. There are no clumping agents to swallow and no fine respiratory dust. The trade-offs are moderate odor control versus heavily perfumed cat litters and the need to change rather than scoop-and-top-up — both easily acceptable given the safety profile. If you buy one litter without overthinking it, buy a current recycled-paper pellet. Purina discontinued Yesterday&apos;s News on April 20, 2022, and closed the plant that June. This search is for a recycled paper pellet still being sold.</p>
             }
             specs={[
               { label: 'Dust', value: 'Very low', highlight: 'good' },
@@ -369,7 +369,7 @@ export default function BestFerretLitterPage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-10" />
+          <ComparisonFoot updated="2026-10-11" />
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
