@@ -41,11 +41,12 @@ test('gift guides, search, and the not-found page are budgeted too', () => {
   }
 })
 
-test('the Vets.co claim helper is budgeted as a tool page', () => {
+test('the Vets.co claim helper and Ferret.com cage calculator are budgeted as tool pages', () => {
   assert.deepEqual(Object.keys(TOOL_PAGES), EARNING_SITES)
   assert.deepEqual(TOOL_PAGES['vets-co'], ['tools/claim-helper'])
+  assert.deepEqual(TOOL_PAGES['ferret-com'], ['tools/cage-size-calculator'])
   for (const site of EARNING_SITES) {
-    if (site !== 'vets-co') assert.deepEqual(TOOL_PAGES[site], [])
+    if (site !== 'vets-co' && site !== 'ferret-com') assert.deepEqual(TOOL_PAGES[site], [])
     for (const slug of TOOL_PAGES[site]) {
       assert.equal(MONEY_PAGES[site].includes(slug), false)
       assert.equal(LAYOUT_PAGES[site].includes(slug), false)
