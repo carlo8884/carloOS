@@ -20,6 +20,9 @@ const nextConfig = {
       { source: '/favicon.png', destination: '/apple-icon', permanent: true },
       { source: '/apple-touch-icon.png', destination: '/apple-icon', permanent: true },
       { source: '/apple-touch-icon-precomposed.png', destination: '/apple-icon', permanent: true },
+      // The old sample vet directory is gone; send visitors to the how-to-choose hub.
+      { source: '/vets', destination: '/find-a-vet', permanent: true },
+      { source: '/vets/:path*', destination: '/find-a-vet', permanent: true },
     ]
   },
 }
