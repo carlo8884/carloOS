@@ -1,4 +1,3 @@
-import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -11,7 +10,6 @@ import {
   FAQAccordion,
   CrossPortfolioCard,
   JourneyNext,
-  ShopCtas,
   PriceAsOf,
   CrossSiteHelp,
 } from '@carloOS/ui'
@@ -198,43 +196,9 @@ export default function CostCalculatorPage() {
         </div>
       </section>
 
-      {/* Shop note — kibble search plus the Ferret Nation double unit.
-          Reuses the kibble query and the cage ASIN already shipped on ferret reviews.
-          ShopCtas hides empty Chewy; never href="#" or an empty link. */}
       <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <div className="max-w-2xl">
-          <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/high+protein+ferret+food+kibble?s=tools-cost-calculator", "/go/amazon/B0054U8UGW?s=tools-cost-calculator"]} />
-          <div className="mt-4 rounded-xl border border-brand-border bg-brand-white p-5">
-            <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Shop the setup
-            </div>
-            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
-              The first-year number is mostly cage, food, and litter. The Amazon buttons still on this page are the kibble search and the Ferret Nation double unit, the same ones used on the{' '}
-              <Link href="/reviews/best-ferret-cage" className="text-brand-primary underline-offset-2 hover:underline">
-                cage review
-              </Link>
-              , the{' '}
-              <Link href="/reviews/best-ferret-litter" className="text-brand-primary underline-offset-2 hover:underline">
-                litter review
-              </Link>
-              , and the{' '}
-              <Link href="/diet/best-ferret-kibble" className="text-brand-primary underline-offset-2 hover:underline">
-                kibble guide
-              </Link>
-              . Paper or wood pellet — never clumping clay.
-            </p>
-            <div className="flex flex-col gap-3">
-              <ShopCtas
-                amazonHref="/go/amazon-brand/high+protein+ferret+food+kibble?s=tools-cost-calculator"
-                amazonLabel="Browse high-protein ferret kibble on Amazon →"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon/B0054U8UGW?s=tools-cost-calculator"
-                amazonLabel="Browse the Ferret Nation double unit on Amazon →"
-              />
-          </div>
-          </div>
-          <p className="mt-4 text-sm leading-relaxed text-brand-text-mid">
+          <p className="text-sm leading-relaxed text-brand-text-mid">
             Size pans with the{' '}
             <Link href="/tools/litter-planner" className="text-brand-primary underline-offset-2 hover:underline">
               litter planner
