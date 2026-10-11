@@ -6,7 +6,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'vets-co',
   title: 'Vet care search',
   description:
-    'Search Vets.co guides, reviews, comparisons, and tools. A search with no match starts with care costs, emergency fees, or the cat food calculator.',
+    'Search Vets.co guides, reviews, comparisons, and tools. A search with no match starts with pet insurance, telehealth, or the cat food calculator.',
   path: '/search',
   noIndex: true,
 })
