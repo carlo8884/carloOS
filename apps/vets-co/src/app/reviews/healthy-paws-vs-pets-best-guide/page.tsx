@@ -89,7 +89,7 @@ export default function HealthyPawsVsPetsBestGuidePage() {
       }
     >
       <div className="carloOS-article">
-          <LastUpdated date="2026-10-10" />
+          <LastUpdated date="2026-10-11" />
         <EmailCapture
           variant="inline"
           siteId="vets-co"
@@ -154,7 +154,7 @@ export default function HealthyPawsVsPetsBestGuidePage() {
             </tbody>
           </table>
         </div>
-        <ComparisonFoot updated="2026-10-10" />
+        <ComparisonFoot updated="2026-10-11" />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
                 <ArticleSourcesList title="Sources"
