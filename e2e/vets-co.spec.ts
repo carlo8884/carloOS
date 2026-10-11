@@ -188,6 +188,17 @@ test('vets fix fast claims: deductibles page and Beagle pick use the sourced cla
   await page.goto('/insurance/deductibles-reimbursement')
   await expect(page.locator('#healthy-paws')).toContainText('Most claims in 2 days, per its claims page')
   await expect(page.locator('#healthy-paws [data-source="https://www.healthypawspetinsurance.com/pet-insurance-claims.html"]')).toContainText('most claims are processed in 2 days')
+
+test('vets fix sample directory: /vets routes redirect to find-a-vet with no sample listings', async ({ page }) => {
+  for (const path of ['/vets', '/vets/california']) {
+    const res = await page.request.get(path, { maxRedirects: 0 })
+    expect(res.status(), path).toBe(308)
+    expect(res.headers()['location'], path).toMatch(/\/find-a-vet$/)
+  }
+
+  await page.goto('/vets/california/los-angeles')
+  await expect(page).toHaveURL(/\/find-a-vet$/)
+  expect(await page.locator('body').innerText()).not.toMatch(/Sample listing/i)
 })
 
 const FOLD: { path: string; pick: string }[] = [
