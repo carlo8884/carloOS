@@ -41,7 +41,7 @@ export default function PreExistingPage() {
         <div className="carloOS-article">
 
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-09-06T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-10" />
+          <LastUpdated date="2026-10-11" />
 
           <CalloutBox variant="warning" title="Timing is everything">
             Every condition your pet develops before coverage starts becomes a permanent gap. This is why the most common piece of advice from veterinary teams is to enroll while a pet is young and healthy — not after the first worrying symptom appears.
@@ -81,7 +81,7 @@ export default function PreExistingPage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-10" />
+          <ComparisonFoot updated="2026-10-11" />
           <h2>Who should compare which pathway</h2>
           <p>Compare whether the insurer offers a curable-condition pathway, and how long that symptom-free period is. An incurable condition stays excluded. A resolved infection may not.</p>
 
@@ -178,18 +178,18 @@ export default function PreExistingPage() {
           />
           <ReviewCard
             id="aspca"
-            badge="Established Carrier"
+            badge="Curable-condition terms"
             name="ASPCA Pet Health Insurance"
             subtitle="Accident-and-illness with curable pre-existing flexibility"
             description={
-              <p>An established accident-and-illness program that, per its policy terms, may cover certain curable pre-existing conditions after a symptom-free period. Worth comparing alongside Embrace if a past condition has resolved. As always, the policy&apos;s own definitions govern — read them before enrolling.</p>
+              <p>An accident-and-illness program that, per its policy terms, may cover certain curable pre-existing conditions after a symptom-free period. Worth comparing alongside Embrace if a past condition has resolved. As always, the policy&apos;s own definitions govern — read them before enrolling.</p>
             }
             specs={[
               { label: 'Curable conditions', value: 'May re-cover', highlight: 'good' },
               { label: 'Core', value: 'Accident and illness' },
               { label: 'Model', value: 'Pay-then-claim' },
             ]}
-            pros={['Curable-condition flexibility', 'Established program', 'Optional preventive add-on']}
+            pros={['Curable-condition flexibility', 'Optional preventive add-on']}
             cons={['Incurable conditions excluded', 'Read symptom-free terms carefully']}
             price="Quote-based"
             ctaText="Get a Quote →"
