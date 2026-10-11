@@ -145,6 +145,20 @@ test('ferret fix audit: kibble top pick card and quick pick link to the Wysong E
   await expectHop(page.request, hop, ['https://amazon.com/dp/B019W9VXZK', `tag=${AMAZON_TAG}`])
 })
 
+test('litter review and starter kit: shop links and JSON-LD use Amazon, not Chewy', async ({ page }) => {
+  await page.goto('/reviews/best-ferret-litter')
+  await expect(page.locator('[href*="/go/chewy"]')).toHaveCount(0)
+  const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
+  expect(ld).not.toContain('go/chewy')
+  expect(ld).toContain('https://ferret.com/go/amazon-brand/recycled+paper+pellet+litter+non+clumping')
+  const topPick = page.locator('#paper-pellet a[href^="/go/"]').first()
+  await expect(topPick).toHaveAttribute('href', /^\/go\/amazon/)
+
+  await page.goto('/ferret-starter-kit')
+  await expect(page.locator('body')).toContainText('Prevue Feisty Ferret')
+  await expect(page.locator('body')).not.toContainText(/numeric id|Chewy search/i)
+})
+
 test('every review route rejects page-about-itself copy', async ({ page }) => {
   test.setTimeout(240_000)
   for (const path of reviewRoutes('ferret-com')) {

@@ -1329,7 +1329,7 @@ const CALCULATORS = [
     mustInclude: [
       { re: /amazon-brand\/ferret\+litter/, label: 'on-page product Amazon search hop' },
       { re: /marshall\/ferret\+play\+tunnel\?s=behavior-digging-burrowing/, label: 'existing Marshall Pop-N-Play tunnel hop kept (not an empty leftover button)' },
-      { re: /chewy-brand\/small\+pet\+ball\+pit\+balls\?s=behavior-digging-burrowing/, label: 'existing Chewy ball-pit hop kept (not an empty leftover button)' },
+      { re: /amazon-brand\/small\+pet\+ball\+pit\+balls\?s=behavior-digging-burrowing/, label: 'ball-pit Amazon search hop kept (was Chewy; no Chewy account) (not an empty leftover button)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
@@ -1474,7 +1474,7 @@ const CALCULATORS = [
     mustInclude: [
       { re: /amazon\/B019W9VXZK/, label: 'on-page product Amazon search hop' },
       { re: /wysong\/epigen-90\?s=diet-whole-prey-vs-kibble/, label: 'existing Wysong Epigen 90 hop kept (not an empty leftover button)' },
-      { re: /chewy-brand\/frozen\+feeder\+mice\+reptile\?s=diet-whole-prey-vs-kibble/, label: 'existing Chewy frozen-feeder-prey hop kept (product-specific, not an empty leftover button)' },
+      { re: /amazon-brand\/frozen\+feeder\+mice\+reptile\?s=diet-whole-prey-vs-kibble/, label: 'frozen-feeder-prey Amazon search hop kept (was Chewy; no Chewy account) (product-specific, not an empty leftover button)' },
       { re: /amazonHref="\/go\/amazon\/B019W9VXZK/, label: 'ShopCtas amazon-brand hops only' },
       { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
@@ -1531,7 +1531,7 @@ const CALCULATORS = [
     file: 'apps/ferret-com/src/app/diet/transitioning-foods/page.tsx',
     mustInclude: [
       { re: /amazon-brand\/ferret\+kibble/, label: 'on-page product Amazon search hop' },
-      { re: /chewy-brand\/meat\+based\+food\+topper\+sugar\+free\?s=diet-transitioning-foods/, label: 'existing Chewy meat-topper hop kept (product-specific, not an empty leftover button)' },
+      { re: /amazon-brand\/meat\+based\+food\+topper\+sugar\+free\?s=diet-transitioning-foods/, label: 'meat-topper Amazon search hop kept (was Chewy; no Chewy account) (product-specific, not an empty leftover button)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
@@ -1550,7 +1550,7 @@ const CALCULATORS = [
     file: 'apps/ferret-com/src/app/diet/raw-feeding-guide/page.tsx',
     mustInclude: [
       { re: /amazon-brand\/ferret\+kibble/, label: 'on-page product Amazon search hop' },
-      { re: /chewy-brand\/frozen\+feeder\+mice\+reptile\?s=diet-raw-feeding-guide/, label: 'existing Chewy frozen-feeder-prey hop kept (product-specific, not an empty leftover button)' },
+      { re: /amazon-brand\/frozen\+feeder\+mice\+reptile\?s=diet-raw-feeding-guide/, label: 'frozen-feeder-prey Amazon search hop kept (was Chewy; no Chewy account) (product-specific, not an empty leftover button)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
@@ -1625,7 +1625,7 @@ const CALCULATORS = [
     mustInclude: [
       { re: /amazon-brand\/ferret\+kibble/, label: 'on-page product Amazon search hop' },
       { re: /marshall\/ferret\+shampoo\?s=care-bathing-and-grooming/, label: 'existing Marshall ferret-shampoo review hop kept (not an empty leftover button)' },
-      { re: /chewy-brand\/small\+pet\+nail\+clipper\+styptic\+powder\?s=care-bathing-and-grooming/, label: 'existing Chewy nail-clipper review hop kept (product-specific, not an empty leftover button)' },
+      { re: /amazon-brand\/small\+pet\+nail\+clipper\+styptic\+powder\?s=care-bathing-and-grooming/, label: 'nail-clipper review Amazon search hop kept (was Chewy; no Chewy account) (product-specific, not an empty leftover button)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
@@ -1645,7 +1645,7 @@ const CALCULATORS = [
     mustInclude: [
       { re: /amazon-brand\/ferret\+litter/, label: 'on-page product Amazon search hop' },
       { re: /marshall\/lock\+on\+litter\+pan\?s=care-litter-training/, label: 'existing Marshall Lock-N-Litter review hop kept (not an empty leftover button)' },
-      { re: /chewy-brand\/recycled\+paper\+pellet\+litter\+non\+clumping\?s=care-litter-training/, label: 'Chewy recycled paper-pellet search kept (Yesterday\'s News brand query retired)' },
+      { re: /amazon-brand\/recycled\+paper\+pellet\+litter\+non\+clumping\?s=care-litter-training/, label: 'Amazon recycled paper-pellet search kept (was Chewy; no Chewy account) (Yesterday\'s News brand query retired)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
@@ -1665,7 +1665,7 @@ const CALCULATORS = [
     mustInclude: [
       { re: /amazon-brand\/ferret\+cage/, label: 'on-page product Amazon search hop' },
       { re: /marshall\/ferret\+play\+tunnel\?s=care-exercise-and-enrichment/, label: 'existing Marshall Pop-N-Play review hop kept (not an empty leftover button)' },
-      { re: /chewy-brand\/small\+pet\+ball\+pit\+balls/, label: 'existing Chewy ball-pit review hop kept (product-specific, not an empty leftover button)' },
+      { re: /amazon-brand\/small\+pet\+ball\+pit\+balls/, label: 'ball-pit review Amazon search hop kept (was Chewy; no Chewy account) (product-specific, not an empty leftover button)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
@@ -12751,7 +12751,7 @@ const CALCULATORS = [
     file: 'apps/ferret-com/src/app/care/cage-setup/page.tsx',
     mustInclude: [
       { re: /amazon\/B001NJ0DAY\?s=care-cage-setup/, label: 'existing MidWest Critter Nation amazon-brand hop kept (do not re-ship a new query)' },
-      { re: /chewy-brand\/kaytee\+corner\+ferret\+litter\+pan\?s=care-cage-setup/, label: 'existing Kaytee corner-pan Chewy hop kept (not an empty leftover button)' },
+      { re: /amazon-brand\/kaytee\+corner\+ferret\+litter\+pan\?s=care-cage-setup/, label: 'Kaytee corner-pan Amazon search hop kept (was Chewy; no Chewy account) (not an empty leftover button)' },
       { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
@@ -12812,7 +12812,7 @@ const CALCULATORS = [
     id: 'ferret · best-ferret-litter hops',
     file: 'apps/ferret-com/src/app/reviews/best-ferret-litter/page.tsx',
     mustInclude: [
-      { re: /chewy-brand\/recycled\+paper\+pellet\+litter\+non\+clumping\?s=reviews-best-ferret-litter/, label: 'Chewy recycled paper-pellet search kept (Yesterday\'s News brand query retired)' },
+      { re: /amazon-brand\/recycled\+paper\+pellet\+litter\+non\+clumping\?s=reviews-best-ferret-litter/, label: 'Amazon recycled paper-pellet search kept (was Chewy; no Chewy account) (Yesterday\'s News brand query retired)' },
       { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [

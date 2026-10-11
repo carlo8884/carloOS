@@ -52,15 +52,15 @@ export const STARTER_KIT: KitCategory[] = [
         vendor: 'amazon-brand',
         sku: 'midwest+critter+nation+double+unit',
         rationale:
-          'The community-standard ferret cage. Two-level configuration, full-front access (huge for cleaning), removable shelves, locking casters. Big enough for 2 ferrets comfortably. The old product id is not on Amazon\'s current listing, so this opens the existing Critter Nation search.',
+          'The community-standard ferret cage. Two-level configuration, full-front access (huge for cleaning), removable shelves, locking casters. Big enough for 2 ferrets comfortably. The link opens an Amazon search for the Critter Nation double unit.',
         approxPriceUSD: 290,
       },
       {
         name: 'Prevue Pet Products Feisty Ferret Cage',
-        vendor: 'chewy-brand',
+        vendor: 'amazon-brand',
         sku: 'prevue+feisty+ferret',
         rationale:
-          'Cheaper alternative if budget is tight. Smaller interior — only suitable for one ferret with daily out-of-cage time of 4+ hours. Chewy\'s old numeric id for this cage is not a confirmed current page, so this opens a Prevue Feisty Ferret search.',
+          'Cheaper alternative if budget is tight. Smaller interior — only suitable for one ferret with daily out-of-cage time of 4+ hours. The link opens an Amazon search for the Prevue Feisty Ferret cage.',
         approxPriceUSD: 140,
       },
     ],
@@ -84,7 +84,7 @@ export const STARTER_KIT: KitCategory[] = [
         vendor: 'amazon-brand',
         sku: 'niteangel+ferret+hammock',
         rationale:
-          'Three-piece set: standard hammock + cocoon + crinkle tube. Reasonable starter set covering different sleep preferences. The old product id is not on Amazon\'s current listing, so this opens a Niteangel ferret hammock search.',
+          'Three-piece set: standard hammock + cocoon + crinkle tube. Reasonable starter set covering different sleep preferences. The link opens an Amazon search for Niteangel ferret hammocks.',
         approxPriceUSD: 25,
       },
     ],
@@ -97,10 +97,10 @@ export const STARTER_KIT: KitCategory[] = [
     picks: [
       {
         name: 'Recycled paper-pellet litter',
-        vendor: 'chewy-brand',
+        vendor: 'amazon-brand',
         sku: 'recycled+paper+pellet+litter+non+clumping',
         rationale:
-          "Paper pellets are low-dust and non-clumping. Purina discontinued Yesterday's News on April 20, 2022. This Chewy search is for a recycled paper pellet still being sold. A 30 lb bag lasts 1 ferret about 6-8 weeks.",
+          "Paper pellets are low-dust and non-clumping. Purina discontinued Yesterday's News on April 20, 2022. The link opens an Amazon search for recycled paper-pellet litter that is still sold. A 30 lb bag lasts 1 ferret about 6-8 weeks.",
         approxPriceUSD: 28,
       },
       {
@@ -148,7 +148,7 @@ export const STARTER_KIT: KitCategory[] = [
         vendor: 'amazon-brand',
         sku: 'lixit+quick+lock+water+bottle',
         rationale:
-          'Stainless-steel ball valve, glass body. The heavy-duty version of the standard rodent bottle. The old product id is not on Amazon\'s current listing, so this opens a Lixit Quick-Lock bottle search.',
+          'Stainless-steel ball valve, glass body. The heavy-duty version of the standard rodent bottle. The link opens an Amazon search for the Lixit Quick-Lock bottle.',
         approxPriceUSD: 18,
       },
       {
@@ -161,10 +161,10 @@ export const STARTER_KIT: KitCategory[] = [
       },
       {
         name: 'Kaytee Crinkle Tunnel (multipack)',
-        vendor: 'chewy-brand',
+        vendor: 'amazon-brand',
         sku: 'kaytee+crinkle+tunnel',
         rationale:
-          'Foldable nylon tunnel ferrets can play and sleep in. Multipack gives enough variety to rotate through. Chewy\'s old numeric id is not a confirmed current page, so this opens a Kaytee crinkle-tunnel search.',
+          'Foldable nylon tunnel ferrets can play and sleep in. Multipack gives enough variety to rotate through. The link opens an Amazon search for Kaytee crinkle tunnels.',
         approxPriceUSD: 16,
       },
     ],

@@ -250,8 +250,8 @@ export default function WholePreyVsKibblePage() {
             cons={['Requires freezer space and handling discipline', 'Higher food-safety burden', 'Sourcing effort']}
             price="Varies by size and quantity"
             ctaText="Check price of frozen reptile feeder mice and chicks on Amazon"
-            ctaHref="/go/chewy-brand/frozen+feeder+mice+reptile?s=diet-whole-prey-vs-kibble"
-            ctaAffiliateProgram="chewy-brand"
+            ctaHref="/go/amazon-brand/frozen+feeder+mice+reptile?s=diet-whole-prey-vs-kibble"
+            ctaAffiliateProgram="amazon-brand"
             ctaAffiliateProduct="frozen-feeder-mice"
           />
 
@@ -276,7 +276,7 @@ export default function WholePreyVsKibblePage() {
                 </tr>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 text-brand-text-mid">Whole prey as the diet or as a supplement to kibble</td>
-                  <td className="p-3 font-bold text-brand-dark"><a href="#frozen-feeder-prey" className="text-brand-primary">Frozen feeder mice and chicks</a><TableShopLink href={"/go/chewy-brand/frozen+feeder+mice+reptile?s=diet-whole-prey-vs-kibble"} product={"Frozen feeder mice and chicks"} /></td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#frozen-feeder-prey" className="text-brand-primary">Frozen feeder mice and chicks</a><TableShopLink href={"/go/amazon-brand/frozen+feeder+mice+reptile?s=diet-whole-prey-vs-kibble"} product={"Frozen feeder mice and chicks"} /></td>
                   <td className="p-3 text-brand-text-mid">Whole-prey model. Intact bone for calcium balance. Price varies by size and quantity</td>
                   <td className="p-3 text-brand-text-mid">No freezer, or you will not handle raw prey carefully. The card flags food safety and sourcing</td>
                 </tr>

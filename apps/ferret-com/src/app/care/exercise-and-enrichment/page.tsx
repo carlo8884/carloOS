@@ -574,8 +574,8 @@ export default function FerretExerciseEnrichmentPage() {
             price="see current price starter"
             priceNote="dated 2026-05-31."
             ctaText="Find ferret-safe ball-pit fill on Amazon"
-            ctaHref="/go/chewy-brand/small+pet+ball+pit+balls?s=care-exercise-and-enrichment"
-            ctaAffiliateProgram="chewy-brand"
+            ctaHref="/go/amazon-brand/small+pet+ball+pit+balls?s=care-exercise-and-enrichment"
+            ctaAffiliateProgram="amazon-brand"
             ctaAffiliateProduct="dig-box-balls"
           />
 

@@ -334,8 +334,8 @@ export default function FerretCageSetupPage() {
             price="see current price"
             priceNote="dated 2026-05-31."
             ctaText="Find Kaytee corner ferret litter pans on Amazon"
-            ctaHref="/go/chewy-brand/kaytee+corner+ferret+litter+pan?s=care-cage-setup"
-            ctaAffiliateProgram="chewy-brand"
+            ctaHref="/go/amazon-brand/kaytee+corner+ferret+litter+pan?s=care-cage-setup"
+            ctaAffiliateProgram="amazon-brand"
             ctaAffiliateProduct="kaytee+corner+ferret+litter+pan"
           />
 
