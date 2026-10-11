@@ -44,7 +44,7 @@ const FAQS = [
 const RANKED = ['Trupanion', 'Figo']
 const itemList = buildItemListSchema({
   name: 'Trupanion or Figo',
-  items: RANKED.map((name) => ({ name, url: ({ 'Trupanion': 'https://vets.co/go/trupanion/home?s=reviews-trupanion-vs-figo-guide' }[name] ?? 'https://vets.co/reviews/trupanion-vs-figo-guide') })),
+  items: RANKED.map((name) => ({ name, url: 'https://vets.co/reviews/trupanion-vs-figo-guide' })),
 })
 
 export default function TrupanionVsFigoGuidePage() {
@@ -81,7 +81,7 @@ export default function TrupanionVsFigoGuidePage() {
       }
     >
       <div className="carloOS-article">
-          <LastUpdated date="2026-10-10" />
+          <LastUpdated date="2026-10-11" />
         <EmailCapture
           variant="inline"
           siteId="vets-co"
@@ -150,7 +150,7 @@ export default function TrupanionVsFigoGuidePage() {
             </tbody>
           </table>
         </div>
-        <ComparisonFoot updated="2026-10-10" />
+        <ComparisonFoot updated="2026-10-11" />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
                 <ArticleSourcesList

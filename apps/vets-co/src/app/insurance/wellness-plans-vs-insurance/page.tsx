@@ -19,8 +19,8 @@ const FAQS = [
 const itemList = buildItemListSchema({
   name: "Wellness Plans vs. Pet Insurance",
   items: [
-    { name: "Embrace", url: "https://vets.co/go/embrace/home?s=insurance-wellness-plans-vs-insurance" },
-    { name: "Pumpkin Pet Insurance", url: "https://vets.co/go/pumpkin/home?s=insurance-wellness-plans-vs-insurance" },
+    { name: "Embrace", url: "https://vets.co/insurance/wellness-plans-vs-insurance#embrace" },
+    { name: "Pumpkin Pet Insurance", url: "https://vets.co/insurance/wellness-plans-vs-insurance#pumpkin" },
   ],
 })
 export default function WellnessVsInsurancePage() {
@@ -48,7 +48,7 @@ export default function WellnessVsInsurancePage() {
       >
         <div className="carloOS-article">
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-08" />
+          <LastUpdated date="2026-10-11" />
           <EmailCapture
             variant="inline"
             siteId="vets-co"
@@ -176,7 +176,7 @@ export default function WellnessVsInsurancePage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-09" />
+          <ComparisonFoot updated="2026-10-11" />
 
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />

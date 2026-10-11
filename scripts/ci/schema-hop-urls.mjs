@@ -1,6 +1,7 @@
 /**
  * Product and ItemList urls on the top commercial pages must be the hop
- * the page already shows. Ratings that are not backed by reviews stay out.
+ * the page already shows, or this page's own anchor for an element id that
+ * exists on the page. Ratings that are not backed by reviews stay out.
  */
 import { readFileSync } from 'node:fs'
 import { join, dirname } from 'node:path'
@@ -50,6 +51,27 @@ function productBlocks(src) {
   return blocks
 }
 
+/** `apps/vets-co/src/app/telehealth/page.tsx` → `https://vets.co/telehealth` */
+export function pageUrl(rel) {
+  const m = rel.match(/^apps\/([^/]+)\/src\/app\/(.*?)\/?page\.tsx$/)
+  if (!m) return null
+  const host = m[1].replace(/-(com|co)$/, '.$1')
+  const path = m[2].split('/').filter((seg) => !/^\(.*\)$/.test(seg)).join('/')
+  return `https://${host}/${path}`
+}
+
+/** Null when `url` is this page's own `#id` anchor and that id is on the page. */
+export function anchorProblem(rel, src, url) {
+  const own = pageUrl(rel)
+  const hash = url.indexOf('#')
+  if (!own || hash < 0 || url.slice(0, hash) !== own) return 'not this page'
+  const id = url.slice(hash + 1)
+  if (!id || !new RegExp(`\\bid=["']${id.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}["']`).test(src)) {
+    return `no element id "${id}" on the page`
+  }
+  return null
+}
+
 export function schemaHopProblems() {
   const problems = []
   const files = EXTRA.slice()
@@ -69,7 +91,8 @@ export function schemaHopProblems() {
       const url = block.match(/url:\s*'([^']+)'/)
       if (!url) continue
       if (!url[1].includes('/go/')) {
-        problems.push(`${rel}: product url is not the visible hop (${url[1]})`)
+        const anchor = anchorProblem(rel, src, url[1])
+        if (anchor) problems.push(`${rel}: product url is not the visible hop or an anchor on the page (${url[1]}: ${anchor})`)
         continue
       }
       const hop = url[1].slice(url[1].indexOf('/go/'))

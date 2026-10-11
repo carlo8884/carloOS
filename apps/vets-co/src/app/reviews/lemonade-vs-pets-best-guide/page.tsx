@@ -49,7 +49,7 @@ const RANKED = [
 ]
 const itemList = buildItemListSchema({
   name: 'Lemonade or Pets Best',
-  items: RANKED.map((name) => ({ name, url: ({ 'Lemonade': 'https://vets.co/go/lemonade/home?s=reviews-lemonade-vs-pets-best-guide' }[name] ?? 'https://vets.co/reviews/lemonade-vs-pets-best-guide') })),
+  items: RANKED.map((name) => ({ name, url: 'https://vets.co/reviews/lemonade-vs-pets-best-guide' })),
 })
 
 export default function LemonadeVsPetsBestGuidePage() {
@@ -91,7 +91,7 @@ export default function LemonadeVsPetsBestGuidePage() {
       }
     >
       <div className="carloOS-article">
-          <LastUpdated date="2026-10-10" />
+          <LastUpdated date="2026-10-11" />
         <EmailCapture
           variant="inline"
           siteId="vets-co"
@@ -155,7 +155,7 @@ export default function LemonadeVsPetsBestGuidePage() {
             </tbody>
           </table>
         </div>
-        <ComparisonFoot updated="2026-10-10" />
+        <ComparisonFoot updated="2026-10-11" />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
                 <ArticleSourcesList title="Sources"
