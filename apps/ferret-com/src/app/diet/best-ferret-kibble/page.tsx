@@ -106,7 +106,7 @@ const combined = combineSchemas(schema, med, itemList, faqSchema, ...products)
 // Near-top jump links — fed by the SAME three picks as the ItemList schema
 // above (same names, same anchors). Labels mirror each ReviewCard's badge.
 const QUICK_PICKS = [
-  { label: 'Premium Tier', name: 'Wysong Epigen 90', subtitle: 'Marketed starch-free. Carbohydrate: check the label', href: '#wysong-epigen-90', pickHop: '/go/wysong/epigen-90?s=diet-best-ferret-kibble' },
+  { label: 'Premium Tier', name: 'Wysong Epigen 90', subtitle: 'Marketed starch-free. Carbohydrate: check the label', href: '#wysong-epigen-90', pickHop: '/go/amazon/B019W9VXZK?s=best-ferret-kibble', pickShopLabel: 'Check price of Wysong Epigen 90 on Amazon' },
   { label: 'Mid Tier', name: 'Marshall Premium Ferret Diet', subtitle: 'Ferret-specific · Widely stocked', href: '#marshall-premium-diet' },
   { label: 'Direct-to-Consumer', name: 'Carniwhole Ferret Food', subtitle: 'Published macros · Subscription', href: '#carniwhole' },
 ]
@@ -312,10 +312,10 @@ export default function BestFerretKibblePage() {
             cons={['Premium price', 'Not always stocked at supermarket pet aisles']}
             price="$30–50 / 5 lb"
             priceNote="dated 2026-10-04."
-            ctaText="Check price of Wysong Epigen 90 at Wysong"
-            ctaHref="/go/wysong/epigen-90?s=diet-best-ferret-kibble"
-            ctaAffiliateProgram="wysong"
-            ctaAffiliateProduct="epigen-90"
+            ctaText="Check price of Wysong Epigen 90 on Amazon"
+            ctaHref="/go/amazon/B019W9VXZK?s=best-ferret-kibble"
+            ctaAffiliateProgram="amazon"
+            ctaAffiliateProduct="B019W9VXZK"
           />
           <ReviewCard quietUntilTag
             id="marshall-premium-diet"
@@ -375,7 +375,7 @@ export default function BestFerretKibblePage() {
               <tbody>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 text-brand-text-mid">Crude protein min. 63% and crude fat min. 16%, as printed. Carbohydrate is not on the analysis</td>
-                  <td className="p-3 font-bold text-brand-dark"><a href="#wysong-epigen-90" className="text-brand-primary">Wysong Epigen 90</a><TableShopLink quietUntilTag href={"/go/wysong/epigen-90?s=diet-best-ferret-kibble"} product={"Wysong Epigen 90"} /></td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#wysong-epigen-90" className="text-brand-primary">Wysong Epigen 90</a><TableShopLink href={"/go/amazon/B019W9VXZK?s=best-ferret-kibble"} product={"Wysong Epigen 90"} /></td>
                   <td className="p-3 text-brand-text-mid">Wysong. Crude protein min. 63%, crude fat min. 16%, as printed. Carbohydrate is not on the guaranteed analysis. $30–50 / 5 lb</td>
                   <td className="p-3 text-brand-text-mid">You need a bag from a supermarket aisle tonight. The card says it is not always stocked there</td>
                 </tr>
