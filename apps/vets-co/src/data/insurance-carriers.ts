@@ -446,7 +446,7 @@ export const CARRIERS: CarrierProfile[] = [
     ],
     pros: [
       'Only carrier on this list offering 100% reimbursement option',
-      '1-day accident waiting period (fastest in category)',
+      '1-day accident waiting period',
       'Pet Cloud app stores vet records + telehealth',
     ],
     cons: [
@@ -496,7 +496,6 @@ export const CARRIERS: CarrierProfile[] = [
       'Dental disease (not just dental accidents) covered',
       'Exam fees included',
       'Behavioral therapy included',
-      'Solid trust signal via The Dodo brand',
     ],
     cons: [
       'No vet direct pay',

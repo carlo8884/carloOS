@@ -41,7 +41,7 @@ export default function HowPetInsuranceWorksPage() {
         <div className="carloOS-article">
 
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-09-06T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-10" />
+          <LastUpdated date="2026-10-11" />
 
           <CalloutBox variant="info" title="It protects against the big bills">
             Pet insurance is best thought of as protection against unexpected, large veterinary expenses — a torn ligament, a swallowed object, cancer, a chronic illness — not as a way to save money on routine care. The math works because it converts an unpredictable catastrophic risk into a predictable monthly cost.
@@ -182,7 +182,7 @@ export default function HowPetInsuranceWorksPage() {
             name="Healthy Paws"
             subtitle="One simple accident-and-illness plan, fast claims"
             description={
-              <p>A single straightforward accident-and-illness plan with a reputation for fast reimbursement on the pay-then-claim model. No tiered plan maze — you choose the deductible and reimbursement rate. Confirm the annual limit structure when you quote, and enroll while your pet is young to lock in lower premiums.</p>
+              <p>A single straightforward accident-and-illness plan on the pay-then-claim model. No tiered plan maze — you choose the deductible and reimbursement rate. Confirm the annual limit structure when you quote, and enroll while your pet is young to lock in lower premiums.</p>
             }
             specs={[
               { label: 'Plan structure', value: 'Single A&I plan' },
@@ -227,7 +227,7 @@ export default function HowPetInsuranceWorksPage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-10" />
+          <ComparisonFoot updated="2026-10-11" />
 
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />

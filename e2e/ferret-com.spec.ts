@@ -104,6 +104,32 @@ test.describe('money fold at 390', () => {
   }
 })
 
+test('ferret fix superlatives: product cards drop unsourced reputation and superlative claims', async ({ page }) => {
+  const removed = /track record|favoured by keepers|reference multi-ferret cage|keeping community|Community reference standard|default recommendation|ferret-keeper community|Excellent door access|excellent access|Lowest dust profile|Starch-free premium kibble/i
+  for (const path of [
+    '/diet/best-ferret-kibble',
+    '/care/diet-basics',
+    '/reviews/wysong-vs-carniwhole-guide',
+    '/reviews/best-ferret-cage',
+    '/care/cage-setup',
+    '/care/litter-training',
+    '/reviews/best-ferret-litter',
+    '/diet/whole-prey-vs-kibble',
+  ]) {
+    await page.goto(path, { waitUntil: 'domcontentloaded' })
+    expect(await page.locator('body').innerText(), path).not.toMatch(removed)
+    const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
+    expect(ld, path).not.toMatch(removed)
+  }
+
+  await page.goto('/care/cage-setup')
+  await expect(page.locator('body')).toContainText('Full-width double doors per level')
+  await page.goto('/care/litter-training')
+  await expect(page.locator('body')).toContainText('Very low dust')
+  await page.goto('/diet/whole-prey-vs-kibble')
+  await expect(page.locator('body')).toContainText('Marketed as starch-free — the lower-risk base diet')
+})
+
 test('every review route rejects page-about-itself copy', async ({ page }) => {
   test.setTimeout(240_000)
   for (const path of reviewRoutes('ferret-com')) {

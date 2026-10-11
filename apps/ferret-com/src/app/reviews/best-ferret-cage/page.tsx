@@ -61,7 +61,7 @@ const products = [
     description: 'Full-width front doors, deep pans, expandable two-storey footprint. Confirm bar spacing on the box.',
     url: 'https://ferret.com/go/amazon/B0054U8UGW?s=reviews-best-ferret-cage',
     reviewAuthorName: 'Ferret.com Editorial',
-    reviewBody: 'The reference multi-ferret cage in the keeping community. The manufacturer page says the full-width double doors open the entire front for cleaning and feeding, and it does not print a bar-spacing figure (fetched 2026-10-08). Deep leak-proof pans, and a modular design that stacks to a second storey. The trade-offs are price, weight, and the assembly footprint.',
+    reviewBody: 'The manufacturer page says the full-width double doors open the entire front for cleaning and feeding, and it does not print a bar-spacing figure (fetched 2026-10-08). Deep leak-proof pans, and a modular design that stacks to a second storey. The trade-offs are price, weight, and the assembly footprint.',
   }),
   buildProductSchema({
     name: 'Prevue Pet Products Feisty Ferret Cage',
@@ -195,7 +195,7 @@ export default function BestFerretCagePage() {
             updatedAt="2026-06-11"
             reviewedBy="Editorial team"
           />
-          <LastUpdated date="2026-10-10" />
+          <LastUpdated date="2026-10-11" />
           <EmailCapture
             variant="inline"
             siteId="ferret-com"
@@ -305,7 +305,7 @@ export default function BestFerretCagePage() {
             subtitle="Full-width front doors, deep pans, expandable two-storey footprint. Confirm bar spacing on the box."
             winner
             description={
-              <p>The reference multi-ferret cage in the keeping community. The manufacturer page says the full-width double doors open the entire front for cleaning and feeding, and it does not print a bar-spacing figure (<a href="https://www.midwesthomes4pets.com/product/small-animal/habitats-cages/ferret-nation/">Ferret Nation manufacturer page</a>, fetched 2026-10-08). Deep leak-proof pans, and a modular design that stacks to a second storey for a pair or trio. The trade-offs are price, weight, and the assembly footprint.</p>
+              <p>The manufacturer page says the full-width double doors open the entire front for cleaning and feeding, and it does not print a bar-spacing figure (<a href="https://www.midwesthomes4pets.com/product/small-animal/habitats-cages/ferret-nation/">Ferret Nation manufacturer page</a>, fetched 2026-10-08). Deep leak-proof pans, and a modular design that stacks to a second storey for a pair or trio. The trade-offs are price, weight, and the assembly footprint.</p>
             }
             specs={[
               { label: 'Bar spacing', value: 'Confirm on the box' },
@@ -314,7 +314,7 @@ export default function BestFerretCagePage() {
               { label: 'Pans', value: 'Deep, leak-proof', highlight: 'good' },
               { label: 'Best for', value: '1–4 ferrets' },
             ]}
-            pros={['Confirm bar spacing on the box', 'Full-front doors for easy cleaning', 'Modular — expands with the colony', 'Deep pull-out pans', 'Community reference standard']}
+            pros={['Confirm bar spacing on the box', 'Full-front doors for easy cleaning', 'Modular — expands with the colony', 'Deep pull-out pans']}
             cons={['Premium price', 'Heavy and large assembled', 'Wire shelves need covering']}
             price="$$$"
             ctaText="Check price of the Ferret Nation double unit on Amazon"
@@ -405,7 +405,7 @@ export default function BestFerretCagePage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-10" />
+          <ComparisonFoot updated="2026-10-11" />
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />

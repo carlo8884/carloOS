@@ -211,7 +211,7 @@ export default function WholePreyVsKibblePage() {
             id="wysong-epigen-90"
             badge="Kibble Model"
             name="Wysong Epigen 90"
-            subtitle="Starch-free premium kibble — the lower-risk base diet"
+            subtitle="Marketed as starch-free — the lower-risk base diet"
             winner
             description={
               <p>The current Wysong Epigen 90 page lists crude protein minimum 63% and crude fat minimum 16%. Those are guaranteed-analysis figures as printed, not a dry-matter conversion. The page markets the food as starch-free. Carbohydrate is not on the guaranteed analysis — check the label. Shelf-stable and easy to free-feed, which is why kibble stays the practical default for a first-time owner.</p>
@@ -283,7 +283,7 @@ export default function WholePreyVsKibblePage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-08" />
+          <ComparisonFoot updated="2026-10-11" />
 
           <h2 id="faq">FAQ</h2>
           <p>Those figures are typical US ranges dated 2026-10-05.</p>

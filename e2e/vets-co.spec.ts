@@ -133,6 +133,26 @@ test('vets fix claim links: claim helper links to the reimbursement estimator an
   await expect(page.getByRole('link', { name: 'Pet Insurance Claim Helper' })).toHaveAttribute('href', '/tools/claim-helper')
 })
 
+test('vets fix superlatives: provider cards drop unsourced reputation and board-certified claims', async ({ page }) => {
+  const removed = /Board-certified vets available|customer satisfaction|reputation for fast reimbursement|fastest in category|Solid trust signal/i
+  for (const path of ['/telehealth', '/reviews/best-pet-insurance', '/insurance/how-pet-insurance-works']) {
+    await page.goto(path)
+    expect(await page.locator('body').innerText()).not.toMatch(removed)
+    const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
+    expect(ld).not.toMatch(removed)
+  }
+
+  await page.goto('/telehealth')
+  await expect(page.locator('#vetster')).toContainText('Video + chat · No monthly commitment')
+
+  await page.goto('/reviews/best-pet-insurance')
+  await expect(page.locator('#healthy-paws')).toContainText('Claims page says most claims are processed in 2 days')
+  await expect(page.locator('#healthy-paws')).toContainText('Unlimited is one of the limit choices')
+
+  await page.goto('/insurance/how-pet-insurance-works')
+  await expect(page.locator('#healthy-paws')).toContainText('A single straightforward accident-and-illness plan on the pay-then-claim model.')
+})
+
 const FOLD: { path: string; pick: string }[] = [
   { path: '/reviews/best-pet-insurance', pick: 'Trupanion' },
   { path: '/reviews/holiday-emergency-visit-guide', pick: 'Trupanion' },
