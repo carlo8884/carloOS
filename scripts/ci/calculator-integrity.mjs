@@ -6032,8 +6032,6 @@ const CALCULATORS = [
     file: 'apps/ferret-com/src/app/tools/cost-calculator/page.tsx',
     mustInclude: [
       { re: /amazon-brand\/high\+protein\+ferret\+food\+kibble\?s=tools-cost-calculator/, label: 'high-protein ferret food search hop (same query as kibble guide)' },
-      { re: /\/go\/amazon\/B0054U8UGW\?s=tools-cost-calculator/, label: 'Ferret Nation double-unit item hop (same ASIN as the cage review)' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -6042,7 +6040,20 @@ const CALCULATORS = [
       { re: /compressed\+wood\+pellet\+litter\+heat\+treated\+non\+clumping/, label: 'wood-pellet search dropped: first result was cat litter' },
       { re: /ferret\+sleep\+sack\+fleece/, label: 'sleep-sack search dropped: first result was a hanging hammock' },
     ],
-    why: 'Money path: under-hero capture with a concrete budget offer. The kibble button stays a category search. The cage button opens the Ferret Nation double unit already used on the cage review. Wood-pellet and sleep-sack searches stay off this page.',
+    why: 'Money path: under-hero capture with a concrete budget offer. The kibble journey hop stays a category search. The cage and food cards moved into Calculator.tsx so they follow the inputs. Wood-pellet and sleep-sack searches stay off this page.',
+  },
+  {
+    id: 'ferret · cost-calculator shop cards',
+    file: 'apps/ferret-com/src/app/tools/cost-calculator/Calculator.tsx',
+    mustInclude: [
+      { re: /ferretCostCagePick\(Number\(inputs\.ferrets\), housing\)/, label: 'cage card follows ferret count and housing' },
+      { re: /ferretCostFoodPick\(foodStyle\)/, label: 'food card follows food style' },
+    ],
+    mustExclude: [
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'no held Chewy hop' },
+      { re: /ShopCtas/, label: 'no static shop buttons that ignore the inputs' },
+    ],
+    why: 'Shop cards follow the inputs: the cage card is the cage review pick for the ferret count (Kaytee B008FONT2Y or Ferret Nation B0054U8UGW, ?s=tools-cost-calculator), a playpen plan reads the cage review instead, and a whole-prey plan reads the whole-prey guide instead of the kibble search.',
   },
   {
     id: 'ferret · litter-planner',

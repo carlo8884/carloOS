@@ -37,6 +37,29 @@ test('cage calculator: one ferret with short out-time gets the Ferret Nation, no
   await expect(pick).toContainText('With under four hours out')
 })
 
+test('cost calculator: cage and food cards follow ferret count, housing, and food style', async ({ page }) => {
+  await page.goto('/tools/cost-calculator')
+  const cage = page.locator('[data-cost-pick="cage"]')
+  const food = page.locator('[data-cost-pick="food"]')
+
+  await expect(cage.locator('a[href^="/go/amazon/"]')).toHaveAttribute('href', '/go/amazon/B0054U8UGW?s=tools-cost-calculator')
+
+  await page.locator('#cc-ferrets').fill('1')
+  await expect(cage.locator('a[href^="/go/amazon/"]')).toHaveAttribute('href', '/go/amazon/B008FONT2Y?s=tools-cost-calculator')
+
+  await page.getByRole('button', { name: 'Room / playpen', exact: true }).click()
+  await expect(cage.locator('a[href*="/go/"]')).toHaveCount(0)
+  await expect(cage.getByRole('link', { name: 'Read the ferret cage review' })).toHaveAttribute('href', '/reviews/best-ferret-cage')
+
+  await expect(food.locator('a[href^="/go/amazon-brand/"]')).toHaveAttribute(
+    'href',
+    '/go/amazon-brand/high+protein+ferret+food+kibble?s=tools-cost-calculator',
+  )
+  await page.getByRole('button', { name: 'Whole-prey / raw', exact: true }).click()
+  await expect(food.locator('a[href*="/go/"]')).toHaveCount(0)
+  await expect(food.getByRole('link', { name: 'Read whole-prey vs kibble for ferrets' })).toHaveAttribute('href', '/diet/whole-prey-vs-kibble')
+})
+
 const FOLD: { path: string; pick: string }[] = [
   { path: '/reviews/best-ferret-cage', pick: 'Ferret Nation' },
   { path: '/reviews/best-ferret-litter', pick: 'paper pellets' },

@@ -12,7 +12,15 @@
  */
 
 import { useMemo, useState } from 'react'
-import { ResultMeaning, ToolError, numberFieldError, PriceAsOf} from '@carloOS/ui'
+import {
+  ResultMeaning,
+  ResultPick,
+  ToolError,
+  numberFieldError,
+  PriceAsOf,
+  ferretCostCagePick,
+  ferretCostFoodPick,
+} from '@carloOS/ui'
 
 type Housing = 'starter' | 'multilevel' | 'room'
 type FoodStyle = 'kibble' | 'kibble-topper' | 'whole-prey'
@@ -311,6 +319,37 @@ export default function CostCalculator() {
         <ResultMeaning>
           First-year cost adds one-time setup to a year of recurring costs. These are editable planning figures, not a quote.
         </ResultMeaning>
+      )}
+
+      {/* Shop cards follow the inputs: ferret count and housing pick the cage card the
+          cage review assigns; food style picks the kibble search or the whole-prey guide. */}
+      {result && (
+        <div className="mt-6 rounded-xl border border-brand-border bg-brand-white p-5">
+          <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Shop the setup
+          </div>
+          <p className="mb-2 text-sm leading-relaxed text-brand-text-mid">
+            These cards follow the ferret count, housing, and food style above. The cage card uses the{' '}
+            <a href="/reviews/best-ferret-cage" className="text-brand-primary underline-offset-2 hover:underline">
+              cage review
+            </a>
+            ; the food card uses the{' '}
+            <a href="/diet/best-ferret-kibble" className="text-brand-primary underline-offset-2 hover:underline">
+              kibble guide
+            </a>
+            . For litter, see the{' '}
+            <a href="/reviews/best-ferret-litter" className="text-brand-primary underline-offset-2 hover:underline">
+              litter review
+            </a>
+            . Paper or wood pellet — never clumping clay.
+          </p>
+          <div data-cost-pick="cage">
+            <ResultPick siteId="ferret-com" pick={ferretCostCagePick(Number(inputs.ferrets), housing)} />
+          </div>
+          <div data-cost-pick="food">
+            <ResultPick siteId="ferret-com" pick={ferretCostFoodPick(foodStyle)} />
+          </div>
+        </div>
       )}
 
       <div className="mt-6 rounded border border-amber-700/40 bg-amber-950/20 p-4 text-sm text-amber-900">
