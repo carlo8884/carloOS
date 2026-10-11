@@ -133,6 +133,21 @@ test('vets fix claim links: claim helper links to the reimbursement estimator an
   await expect(page.getByRole('link', { name: 'Pet Insurance Claim Helper' })).toHaveAttribute('href', '/tools/claim-helper')
 })
 
+test('vets fix trupanion direct pay: no only-insurer claim, fast-claims labels, or established-carrier badge', async ({ page }) => {
+  const removed = /Only insurer|only one of the 11 major carriers|only carrier whose|Fast Reimbursement|fast claims|Established Carrier/i
+  for (const path of ['/reviews/best-pet-insurance', '/insurance/how-pet-insurance-works', '/insurance/pre-existing-conditions', '/tools/insurance-quote-prep']) {
+    await page.goto(path)
+    expect(await page.locator('body').innerText()).not.toMatch(removed)
+    const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
+    expect(ld).not.toMatch(removed)
+    await expect(page.locator('a[href*="trupanion.com"]')).toHaveCount(0)
+  }
+
+  await page.goto('/reviews/best-pet-insurance')
+  await expect(page.locator('#trupanion')).toContainText('Offers direct vet payment; check terms')
+  await expect(page.locator('#healthy-paws')).toContainText('Direct Pay can reimburse the vet when funding is urgent')
+})
+
 test('vets fix superlatives: provider cards drop unsourced reputation and board-certified claims', async ({ page }) => {
   const removed = /Board-certified vets available|customer satisfaction|reputation for fast reimbursement|fastest in category|Solid trust signal/i
   for (const path of ['/telehealth', '/reviews/best-pet-insurance', '/insurance/how-pet-insurance-works']) {

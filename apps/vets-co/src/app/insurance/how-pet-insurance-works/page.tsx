@@ -178,19 +178,19 @@ export default function HowPetInsuranceWorksPage() {
           />
           <ReviewCard
             id="healthy-paws"
-            badge="Fast Reimbursement"
+            badge="Most claims in 2 days"
             name="Healthy Paws"
-            subtitle="One simple accident-and-illness plan, fast claims"
+            subtitle="Most claims in 2 days, per its claims page · One accident-and-illness plan"
             description={
-              <p>A single straightforward accident-and-illness plan on the pay-then-claim model. No tiered plan maze — you choose the deductible and reimbursement rate. Confirm the annual limit structure when you quote, and enroll while your pet is young to lock in lower premiums.</p>
+              <p data-source="https://www.healthypawspetinsurance.com/pet-insurance-claims.html">The Healthy Paws claims page says most claims are processed in 2 days, and that Direct Pay can reimburse the vet when funding is urgent. A single straightforward accident-and-illness plan on the pay-then-claim model. No tiered plan maze — you choose the deductible and reimbursement rate. Confirm the annual limit structure when you quote, and enroll while your pet is young to lock in lower premiums.</p>
             }
             specs={[
               { label: 'Plan structure', value: 'Single A&I plan' },
-              { label: 'Reimbursement', value: 'Fast turnaround', highlight: 'good' },
+              { label: 'Claims Speed', value: 'Most in 2 days', highlight: 'good' },
               { label: 'Model', value: 'Pay-then-claim' },
             ]}
-            pros={['Simple single plan', 'Fast claim processing', 'Choose deductible and rate']}
-            cons={['No wellness add-on', 'No direct-vet payment']}
+            pros={['Simple single plan', 'Claims page says most claims are processed in 2 days', 'Choose deductible and rate']}
+            cons={['No wellness add-on', 'Direct Pay is the urgent exception on the claims page']}
             price="Quote-based"
             ctaText="Get a Quote →"
             ctaHref="/go/healthy-paws/home?s=insurance-how-pet-insurance-works"
@@ -221,8 +221,8 @@ export default function HowPetInsuranceWorksPage() {
                 <tr className="border-b border-brand-border">
                   <td className="p-3 text-brand-text-mid">You pay the clinic, then file, and want a single plan</td>
                   <td className="p-3 font-bold text-brand-dark"><a href="#healthy-paws" className="text-brand-primary">Healthy Paws</a><TableShopLink href={"/go/healthy-paws/home?s=insurance-how-pet-insurance-works"} product={"Healthy Paws"} holdWithoutPartnerId /></td>
-                  <td className="p-3 text-brand-text-mid">Fast Reimbursement. One accident-and-illness plan. You choose deductible and rate. Quote-based</td>
-                  <td className="p-3 text-brand-text-mid">No wellness add-on, and no direct payment to the vet</td>
+                  <td className="p-3 text-brand-text-mid" data-source="https://www.healthypawspetinsurance.com/pet-insurance-claims.html">Most claims in 2 days, per its claims page. One accident-and-illness plan. You choose deductible and rate. Quote-based</td>
+                  <td className="p-3 text-brand-text-mid">No wellness add-on. Direct Pay to the vet is the urgent exception on its claims page</td>
                 </tr>
               </tbody>
             </table>
@@ -236,6 +236,7 @@ export default function HowPetInsuranceWorksPage() {
             sources={[
             { label: "Trupanion", url: "https://www.trupanion.com/", publisher: "Trupanion" },
             { label: "Healthy Paws", url: "https://www.healthypawspetinsurance.com/", publisher: "Healthy Paws" },
+            { label: "Healthy Paws claims", url: "https://www.healthypawspetinsurance.com/pet-insurance-claims.html", publisher: "Healthy Paws" },
             ]}
           />
         </div>
