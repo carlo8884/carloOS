@@ -145,12 +145,18 @@ test('ferret fix audit: kibble top pick card and quick pick link to the Wysong E
   await expectHop(page.request, hop, ['https://amazon.com/dp/B019W9VXZK', `tag=${AMAZON_TAG}`])
 })
 
-test('kibble guide search data points at the Amazon hop or on-page picks', async ({ page }) => {
-  await page.goto('/diet/best-ferret-kibble', { waitUntil: 'domcontentloaded' })
+test('litter review and starter kit: shop links and JSON-LD use Amazon, not Chewy', async ({ page }) => {
+  await page.goto('/reviews/best-ferret-litter')
+  await expect(page.locator('[href*="/go/chewy"]')).toHaveCount(0)
   const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
-  expect(ld).not.toMatch(/ferret\.com\/go\/(wysong|marshall|carniwhole|chewy)/)
-  expect(ld).toContain('go/amazon/B019W9VXZK')
-  expect(ld).toContain('best-ferret-kibble#marshall-premium-diet')
+  expect(ld).not.toContain('go/chewy')
+  expect(ld).toContain('https://ferret.com/go/amazon-brand/recycled+paper+pellet+litter+non+clumping')
+  const topPick = page.locator('#paper-pellet a[href^="/go/"]').first()
+  await expect(topPick).toHaveAttribute('href', /^\/go\/amazon/)
+
+  await page.goto('/ferret-starter-kit')
+  await expect(page.locator('body')).toContainText('Prevue Feisty Ferret')
+  await expect(page.locator('body')).not.toContainText(/numeric id|Chewy search/i)
 })
 
 test('every review route rejects page-about-itself copy', async ({ page }) => {
@@ -159,4 +165,12 @@ test('every review route rejects page-about-itself copy', async ({ page }) => {
     await page.goto(path, { waitUntil: 'domcontentloaded' })
     await expectMoneyCopy(page)
   }
+})
+
+test('kibble guide search data points at the Amazon hop or on-page picks', async ({ page }) => {
+  await page.goto('/diet/best-ferret-kibble', { waitUntil: 'domcontentloaded' })
+  const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
+  expect(ld).not.toMatch(/ferret\.com\/go\/(wysong|marshall|carniwhole|chewy)/)
+  expect(ld).toContain('go/amazon/B019W9VXZK')
+  expect(ld).toContain('best-ferret-kibble#marshall-premium-diet')
 })

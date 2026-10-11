@@ -176,6 +176,32 @@ test('vets fix border collie: Lemonade pick drops unsourced fast-claims wording'
   await expect(page.locator('body')).toContainText("Lemonade's entry-tier premium fits a low-risk profile")
 })
 
+test('vets fix fast claims: deductibles page and Beagle pick use the sourced claims-page fact', async ({ page }) => {
+  const removed = /fast claims|fast reimbursement|fast in-app|lowest-claim/i
+  for (const path of ['/insurance/deductibles-reimbursement', '/pet-insurance/breeds/beagle']) {
+    await page.goto(path)
+    expect(await page.locator('body').innerText()).not.toMatch(removed)
+    const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
+    expect(ld).not.toMatch(removed)
+  }
+
+  await page.goto('/insurance/deductibles-reimbursement')
+  await expect(page.locator('#healthy-paws')).toContainText('Most claims in 2 days, per its claims page')
+  await expect(page.locator('#healthy-paws [data-source="https://www.healthypawspetinsurance.com/pet-insurance-claims.html"]')).toContainText('most claims are processed in 2 days')
+})
+
+test('vets fix sample directory: /vets routes redirect to find-a-vet with no sample listings', async ({ page }) => {
+  for (const path of ['/vets', '/vets/california']) {
+    const res = await page.request.get(path, { maxRedirects: 0 })
+    expect(res.status(), path).toBe(308)
+    expect(res.headers()['location'], path).toMatch(/\/find-a-vet$/)
+  }
+
+  await page.goto('/vets/california/los-angeles')
+  await expect(page).toHaveURL(/\/find-a-vet$/)
+  expect(await page.locator('body').innerText()).not.toMatch(/Sample listing/i)
+})
+
 const FOLD: { path: string; pick: string }[] = [
   { path: '/reviews/best-pet-insurance', pick: 'Trupanion' },
   { path: '/reviews/holiday-emergency-visit-guide', pick: 'Trupanion' },
@@ -237,5 +263,20 @@ test('every review route rejects page-about-itself copy', async ({ page }) => {
   for (const path of reviewRoutes('vets-co')) {
     await page.goto(path, { waitUntil: 'domcontentloaded' })
     await expectMoneyCopy(page)
+  }
+})
+
+test('vets fix hp reimbursement: Healthy Paws guides state the sourced 2-day claims fact, not fast reimbursement', async ({ page }) => {
+  for (const path of [
+    '/reviews/trupanion-vs-healthy-paws-guide',
+    '/reviews/healthy-paws-vs-embrace-guide',
+    '/reviews/healthy-paws-vs-pets-best-guide',
+  ]) {
+    await page.goto(path)
+    const body = await page.locator('body').innerText()
+    expect(body).not.toMatch(/fast reimbursement|reimbursement back fast/i)
+    expect(body).toMatch(/most claims are processed in 2 days/i)
+    const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
+    expect(ld).not.toMatch(/fast reimbursement|reimbursement back fast/i)
   }
 })

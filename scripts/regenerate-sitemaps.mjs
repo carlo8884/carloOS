@@ -125,14 +125,7 @@ const SITES = [
     domain: 'saddle.com',
     extraRoutes: SADDLE_BRAND_SLUGS.map((s) => `/brands/${s}`),
   },
-  {
-    id: 'vets-co',
-    domain: 'vets.co',
-    // /vets directory hub + [state]/[city] pages are noIndex placeholder/sample
-    // data until a verified data source lands ([state]/[city] are dynamic and
-    // already excluded; the bare /vets hub must be excluded explicitly). IR P1-1.
-    noIndexRoutes: ['/vets'],
-  },
+  { id: 'vets-co', domain: 'vets.co' },
   // Added 2026-05-31: extend coverage to the remaining 5 production sites
   // so sitemap regeneration is comprehensive post-mega-wave.
   {
