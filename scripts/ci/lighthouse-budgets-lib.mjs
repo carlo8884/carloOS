@@ -84,7 +84,7 @@ export const TOOL_PAGES = {
   'fish-com': [],
   'horses-com': [],
   'vets-co': ['tools/claim-helper'],
-  'ferret-com': [],
+  'ferret-com': ['tools/cage-size-calculator'],
 }
 
 export const SITE_PORTS = {
