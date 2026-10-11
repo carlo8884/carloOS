@@ -11,18 +11,15 @@
  * row (breed profile · health · pet insurance).
  */
 
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import Link from 'next/link'
-import {
-  QUESTIONS,
-  type Answers,
-  type QuestionKey,
-  type BreedFit,
-  type BreedFitResults,
-  getBreedFits,
-  isComplete,
-  progressPercent,
-} from './wizard-logic'
+import { QUESTIONS, type Answers, type QuestionKey, isComplete, progressPercent } from './wizard-questions'
+import type { BreedFit, BreedFitResults, getBreedFits as GetBreedFits } from './wizard-logic'
+
+// Scoring pulls in the full breed table. Load it as its own chunk after mount
+// so pages that render this stepper (and the 404, which shares the home
+// page's bundle) don't parse the breed data before first paint.
+const loadScoring = () => import('./wizard-logic').then((m) => m.getBreedFits)
 
 // ─── Inline SVG icons (no emoji per QC trust-bar styling) ───────────────────
 
@@ -83,10 +80,22 @@ export function BreedMatchWizard() {
   const currentQuestion = QUESTIONS[stepIdx]
   const isLast = stepIdx === QUESTIONS.length - 1
 
+  const [getBreedFits, setGetBreedFits] = useState<typeof GetBreedFits | null>(null)
+
+  useEffect(() => {
+    let live = true
+    loadScoring().then((fn) => {
+      if (live) setGetBreedFits(() => fn)
+    })
+    return () => {
+      live = false
+    }
+  }, [])
+
   const fitResults: BreedFitResults | null = useMemo(() => {
-    if (!showResults) return null
+    if (!showResults || !getBreedFits) return null
     return getBreedFits(answers)
-  }, [answers, showResults])
+  }, [answers, showResults, getBreedFits])
 
   function selectAnswer(key: QuestionKey, value: string) {
     const next: Answers = { ...answers, [key]: value }
