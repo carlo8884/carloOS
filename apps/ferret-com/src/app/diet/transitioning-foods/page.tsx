@@ -226,7 +226,7 @@ export default function TransitioningFoodsPage() {
             <li><strong>Lethargy, weakness, or weight loss</strong> — stop and contact an exotic-pet veterinarian; these can signal more than a fussy palate.</li>
           </ul>
 
-          <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/ferret+kibble?s=transitioning-foods", "/go/chewy-brand/meat+based+food+topper+sugar+free?s=diet-transitioning-foods"]} />
+          <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/ferret+kibble?s=transitioning-foods", "/go/amazon-brand/meat+based+food+topper+sugar+free?s=diet-transitioning-foods"]} />
 
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
@@ -272,8 +272,8 @@ export default function TransitioningFoodsPage() {
             price="see current price"
             priceNote="dated 2026-06-01."
             ctaText="Find a sugar-free meat-based topper on Amazon"
-            ctaHref="/go/chewy-brand/meat+based+food+topper+sugar+free?s=diet-transitioning-foods"
-            ctaAffiliateProgram="chewy-brand"
+            ctaHref="/go/amazon-brand/meat+based+food+topper+sugar+free?s=diet-transitioning-foods"
+            ctaAffiliateProgram="amazon-brand"
             ctaAffiliateProduct="meat-based-food-topper"
           />
 

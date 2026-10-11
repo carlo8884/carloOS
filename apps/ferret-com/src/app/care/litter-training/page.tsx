@@ -570,8 +570,8 @@ export default function FerretLitterTrainingPage() {
             price="see current price / 15-30 lb"
             priceNote="dated 2026-05-31."
             ctaText="Open the recycled paper-pellet search."
-            ctaHref="/go/chewy-brand/recycled+paper+pellet+litter+non+clumping?s=care-litter-training"
-            ctaAffiliateProgram="chewy-brand"
+            ctaHref="/go/amazon-brand/recycled+paper+pellet+litter+non+clumping?s=care-litter-training"
+            ctaAffiliateProgram="amazon-brand"
             ctaAffiliateProduct="recycled+paper+pellet+litter+non+clumping"
           />
 

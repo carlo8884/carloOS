@@ -362,8 +362,8 @@ export default function FerretDiggingBurrowingPage() {
             price="see current price / bag"
             priceNote="dated 2026-06-04."
             ctaText="Find ferret-safe ball pit balls on Amazon"
-            ctaHref="/go/chewy-brand/small+pet+ball+pit+balls?s=behavior-digging-burrowing"
-            ctaAffiliateProgram="chewy-brand"
+            ctaHref="/go/amazon-brand/small+pet+ball+pit+balls?s=behavior-digging-burrowing"
+            ctaAffiliateProgram="amazon-brand"
             ctaAffiliateProduct="small-pet-ball-pit-balls"
           />
 

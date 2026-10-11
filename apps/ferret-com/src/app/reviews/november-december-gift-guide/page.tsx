@@ -105,7 +105,7 @@ export default function NovemberDecemberGiftGuidePage() {
             <tbody>
               <tr className="border-b border-brand-border">
                 <td className="p-3">See current price</td>
-                <td className="p-3 font-bold">Kaytee corner litter pan<TableShopLink href={`/go/chewy-brand/kaytee+corner+ferret+litter+pan?s=${SOURCE}`} product="Kaytee corner litter pan" /></td>
+                <td className="p-3 font-bold">Kaytee corner litter pan<TableShopLink href={`/go/amazon-brand/kaytee+corner+ferret+litter+pan?s=${SOURCE}`} product="Kaytee corner litter pan" /></td>
                 <td className="p-3"><Link href="/care/cage-setup">Cage setup</Link></td>
               </tr>
               <tr className="border-b border-brand-border">

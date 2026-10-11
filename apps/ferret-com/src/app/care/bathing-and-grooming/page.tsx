@@ -615,8 +615,8 @@ export default function FerretBathingGroomingPage() {
             price="$10–18"
             priceNote="dated 2026-10-04."
             ctaText="Find small-pet nail clippers and styptic powder on Amazon"
-            ctaHref="/go/chewy-brand/small+pet+nail+clipper+styptic+powder?s=care-bathing-and-grooming"
-            ctaAffiliateProgram="chewy-brand"
+            ctaHref="/go/amazon-brand/small+pet+nail+clipper+styptic+powder?s=care-bathing-and-grooming"
+            ctaAffiliateProgram="amazon-brand"
             ctaAffiliateProduct="small+pet+nail+clipper+styptic+powder"
           />
 
@@ -647,7 +647,7 @@ export default function FerretBathingGroomingPage() {
                 </tr>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 text-brand-text-mid">Clippers sized for ferret nails, plus styptic</td>
-                  <td className="p-3 font-bold text-brand-dark"><a href="#pet-nail-kit" className="text-brand-primary">Small-pet clippers and styptic</a><TableShopLink href={"/go/chewy-brand/small+pet+nail+clipper+styptic+powder?s=care-bathing-and-grooming"} product={"Small-pet clippers and styptic"} /></td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#pet-nail-kit" className="text-brand-primary">Small-pet clippers and styptic</a><TableShopLink href={"/go/amazon-brand/small+pet+nail+clipper+styptic+powder?s=care-bathing-and-grooming"} product={"Small-pet clippers and styptic"} /></td>
                   <td className="p-3 text-brand-text-mid">Nail Care. Not human clippers. $10–18</td>
                   <td className="p-3 text-brand-text-mid">The clippers are the cheapest dull pair. The card says mid-tier lasts, and the first trims are still stressful</td>
                 </tr>

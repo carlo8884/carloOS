@@ -610,12 +610,12 @@ export default function FerretAdrenalDiseasePage() {
           <p className="text-sm font-medium text-brand-primary mb-3">
             The products below are comfort and general-care items for ferrets living with adrenal disease — they do NOT treat adrenal disease. Adrenal disease requires diagnosis and a treatment plan from a veterinarian experienced with ferrets.
           </p>
-          <p>A soft cotton receiving blanket is an extra warm layer for an alopecic or thin-skinned ferret — it is not a fleece sleep sack (that Chewy comfort card stays below), not a hammock, and not a heating pad. An activated-charcoal odor absorber is a cage-side filter for the intensified musky odor this page names — it is not an enzymatic cleaner and not a fragrance spray. These are household monitoring, comfort, and odor tools. They do not treat adrenal disease, they do not replace deslorelin or adrenalectomy, and they are not a ranked product list.</p>
+          <p>A soft cotton receiving blanket is an extra warm layer for an alopecic or thin-skinned ferret — it is not a fleece sleep sack (that one is further down this page), not a hammock, and not a heating pad. An activated-charcoal odor absorber is a cage-side filter for the intensified musky odor this page names — it is not an enzymatic cleaner and not a fragrance spray. These are household monitoring, comfort, and odor tools. They do not treat adrenal disease, they do not replace deslorelin or adrenalectomy, and they are not a ranked product list.</p>
 
           <h2 id="kit">Adrenal comfort kit</h2>
           <p>Keep these on hand: soft cotton receiving blanket and activated charcoal odor absorber. These are household comfort tools, not treatments. They do not diagnose or treat adrenal disease, they do not replace a deslorelin implant or adrenalectomy, they do not set a hormone-panel number, and they are not a ranked product list.</p>
 
-          <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/soft+cotton+receiving+blanket?s=health-adrenal-disease", "/go/amazon-brand/activated+charcoal+odor+absorber?s=health-adrenal-disease", "/go/chewy-brand/ferret+fleece+sleep+sack+hammock?s=health-adrenal-disease"]} />
+          <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/soft+cotton+receiving+blanket?s=health-adrenal-disease", "/go/amazon-brand/activated+charcoal+odor+absorber?s=health-adrenal-disease", "/go/amazon-brand/ferret+fleece+sleep+sack+hammock?s=health-adrenal-disease"]} />
 
           {/* Shop note — live amazon-brand search buttons
               (ruled marble composition notebook /
@@ -686,8 +686,8 @@ export default function FerretAdrenalDiseasePage() {
             price="see current price"
             priceNote="dated 2026-05-31."
             ctaText="Find ferret fleece sleep sack hammocks on Amazon"
-            ctaHref="/go/chewy-brand/ferret+fleece+sleep+sack+hammock?s=health-adrenal-disease"
-            ctaAffiliateProgram="chewy-brand"
+            ctaHref="/go/amazon-brand/ferret+fleece+sleep+sack+hammock?s=health-adrenal-disease"
+            ctaAffiliateProgram="amazon-brand"
             ctaAffiliateProduct="ferret+fleece+sleep+sack+hammock"
           />
 

@@ -50,8 +50,8 @@ export default function PaperVsGrassLitterGuidePage() {
         publishedAt: 'October 2026',
         readTime: '6 min',
       }}
-      heroHop={<PrimaryHop href="/go/chewy-brand/recycled+paper+pellet+litter+non+clumping?s=reviews-paper-vs-grass-litter-guide" label="Open the recycled paper-pellet search." />}
-      heroExtra={<HopDisclosure siteId="ferret-com" href="/go/chewy-brand/recycled+paper+pellet+litter+non+clumping?s=reviews-paper-vs-grass-litter-guide" />}
+      heroHop={<PrimaryHop href="/go/amazon-brand/recycled+paper+pellet+litter+non+clumping?s=reviews-paper-vs-grass-litter-guide" label="Open the recycled paper-pellet search." />}
+      heroExtra={<HopDisclosure siteId="ferret-com" href="/go/amazon-brand/recycled+paper+pellet+litter+non+clumping?s=reviews-paper-vs-grass-litter-guide" />}
       breadcrumbs={[
         { name: 'Home', href: '/' },
         { name: 'Reviews', href: '/reviews' },
