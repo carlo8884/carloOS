@@ -48,6 +48,30 @@ test('claim helper: add a line item, pick an insurer, see the summary', async ({
   await expect(page.locator('[data-calculator-result] a')).toHaveCount(0)
 })
 
+test('vets fix: Healthy Paws claim speed matches the cited claims page in picks and schema', async ({ page }) => {
+  await page.goto('/reviews/best-pet-insurance')
+  const card = page.locator('#healthy-paws')
+  await expect(card).toContainText('most claims are processed in 2 days')
+  const pick = page.locator('a[href="#healthy-paws"][aria-label="Fastest Reimbursement: Healthy Paws"]').locator('..')
+  await expect(pick).toContainText('Most claims in 2 days')
+  const body = await page.locator('body').innerText()
+  expect(body).not.toMatch(/~\s?2[- ]day|2-day average/i)
+
+  const ld = await page.locator('script[type="application/ld+json"]').allTextContents()
+  const nodes: { name?: string; description?: string }[] = []
+  const walk = (v: unknown) => {
+    if (Array.isArray(v)) v.forEach(walk)
+    else if (v && typeof v === 'object') {
+      nodes.push(v as { name?: string; description?: string })
+      Object.values(v).forEach(walk)
+    }
+  }
+  ld.forEach((text) => walk(JSON.parse(text)))
+  const healthyPaws = nodes.find((n) => n.name === 'Healthy Paws Pet Insurance')
+  expect(healthyPaws?.description).toContain('most claims are processed in 2 days')
+  expect(healthyPaws?.description).not.toMatch(/average|~/)
+})
+
 const FOLD: { path: string; pick: string }[] = [
   { path: '/reviews/best-pet-insurance', pick: 'Trupanion' },
   { path: '/reviews/holiday-emergency-visit-guide', pick: 'Trupanion' },

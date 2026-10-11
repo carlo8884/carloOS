@@ -59,7 +59,7 @@ const trupanionSchema = buildProductSchema({
 
 const healthyPawsSchema = buildProductSchema({
   name: 'Healthy Paws Pet Insurance',
-  description: 'Fast claims processing (per the carrier\'s stated ~2-day average). Healthy Paws lets you choose an annual reimbursement limit of $5,000, $7,000, or unlimited.',
+  description: 'The Healthy Paws claims page says most claims are processed in 2 days. The annual reimbursement limit is a choice, not automatically unlimited.',
   url: 'https://vets.co/go/healthy-paws/home?s=reviews-best-pet-insurance',
   imageUrl: '',
 })
@@ -76,7 +76,7 @@ const pageSchema = combineSchemas(schema, breadcrumbSchema, insurerListSchema, t
 
 const PICKS = [
   { label: 'Pays the vet directly', name: 'Trupanion', subtitle: 'Only insurer that pays the vet directly', href: '#trupanion' },
-  { label: 'Fastest Reimbursement', name: 'Healthy Paws', subtitle: '~2 day claims · Annual limit is a choice', href: '#healthy-paws' },
+  { label: 'Fastest Reimbursement', name: 'Healthy Paws', subtitle: 'Most claims in 2 days · Annual limit is a choice', href: '#healthy-paws' },
   { label: 'Wellness add-on', name: 'Embrace', subtitle: 'Routine care add-on available', href: '#embrace' },
 ]
 
@@ -143,7 +143,7 @@ export default function VetsPetInsurancePage() {
         <div className="grid lg:grid-cols-[1fr_270px] gap-12 min-w-0">
           <div className="min-w-0">
             <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-10-07T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-10" />
+          <LastUpdated date="2026-10-11" />
 
 
             <PullQuote variant="lead" quote="Enroll before your first vet visit. Every condition noted in records before enrollment may be permanently excluded as pre-existing." attribution="The single most important point on pet insurance" />
