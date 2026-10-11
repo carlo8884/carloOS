@@ -59,7 +59,7 @@ const trupanionSchema = buildProductSchema({
 
 const healthyPawsSchema = buildProductSchema({
   name: 'Healthy Paws Pet Insurance',
-  description: 'The Healthy Paws claims page says most claims are processed in 2 days. The annual reimbursement limit is a choice, not automatically unlimited.',
+  description: 'The Healthy Paws claims page (https://www.healthypawspetinsurance.com/pet-insurance-claims.html) says most claims are processed in 2 days. The annual reimbursement limit is a choice, not automatically unlimited.',
   url: 'https://vets.co/go/healthy-paws/home?s=reviews-best-pet-insurance',
   imageUrl: '',
 })
@@ -76,7 +76,7 @@ const pageSchema = combineSchemas(schema, breadcrumbSchema, insurerListSchema, t
 
 const PICKS = [
   { label: 'Pays the vet directly', name: 'Trupanion', subtitle: 'Only insurer that pays the vet directly', href: '#trupanion' },
-  { label: 'Fastest Reimbursement', name: 'Healthy Paws', subtitle: 'Most claims in 2 days · Annual limit is a choice', href: '#healthy-paws' },
+  { label: 'Fastest Reimbursement', name: 'Healthy Paws', subtitle: 'Most claims in 2 days · Annual limit is a choice', sourceUrl: 'https://www.healthypawspetinsurance.com/pet-insurance-claims.html', href: '#healthy-paws' },
   { label: 'Wellness add-on', name: 'Embrace', subtitle: 'Routine care add-on available', href: '#embrace' },
 ]
 
@@ -251,7 +251,7 @@ export default function VetsPetInsurancePage() {
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-10" />
+              <ComparisonFoot updated="2026-10-11" />
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Questions this comparison answers</h2>
               <FAQAccordion items={[
                 {
