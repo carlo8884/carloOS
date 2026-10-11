@@ -168,6 +168,14 @@ test('vets fix superlatives: provider cards drop unsourced reputation and board-
   await expect(page.locator('#healthy-paws')).toContainText('A single straightforward accident-and-illness plan on the pay-then-claim model.')
 })
 
+test('vets fix border collie: Lemonade pick drops unsourced fast-claims wording', async ({ page }) => {
+  await page.goto('/pet-insurance/breeds/border-collie')
+  expect(await page.locator('body').innerText()).not.toMatch(/fast claims/i)
+  const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
+  expect(ld).not.toMatch(/fast claims/i)
+  await expect(page.locator('body')).toContainText("Lemonade's entry-tier premium fits a low-risk profile")
+})
+
 const FOLD: { path: string; pick: string }[] = [
   { path: '/reviews/best-pet-insurance', pick: 'Trupanion' },
   { path: '/reviews/holiday-emergency-visit-guide', pick: 'Trupanion' },
