@@ -29,7 +29,8 @@ const schema = buildArticleSchema({
 const FAQS = [
   {
     question: 'Which carrier does the deductible page mark as the winner?',
-    answer: 'Healthy Paws, marked Simple Levers. The review lists one accident-and-illness plan, a deductible and reimbursement rate you set, and fast reimbursement. There is no wellness add-on. The price line is quote-based.',
+    answer: 'Healthy Paws, marked Simple Levers. The review lists one accident-and-illness plan, a deductible and reimbursement rate you set, and a pay-then-claim model. The Healthy Paws claims page says most claims are processed in 2 days. There is no wellness add-on. The price line is quote-based.',
+    source: 'https://www.healthypawspetinsurance.com/pet-insurance-claims.html',
   },
   {
     question: 'When does that page point to Pets Best?',
@@ -62,7 +63,7 @@ export default function HealthyPawsVsPetsBestGuidePage() {
       }}
       heroHop={
         <>
-          <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">Healthy Paws is the top pick because one accident-and-illness plan has two levers, the deductible and the reimbursement rate.</p>
+          <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">The deductible page marks Healthy Paws as its pick because one accident-and-illness plan has two levers, the deductible and the reimbursement rate.</p>
           <div data-fold="offer">
           <PrimaryHop href="/go/healthy-paws/home?s=reviews-healthy-paws-vs-pets-best-guide" label="Get a Healthy Paws quote" holdWithoutPartnerId />
           <HopDisclosure tone="on-dark" siteId="vets-co" href="/go/healthy-paws/home?s=reviews-healthy-paws-vs-pets-best-guide" noteClassName="mt-3 mb-0 text-xs leading-relaxed text-white/80" />
@@ -97,7 +98,8 @@ export default function HealthyPawsVsPetsBestGuidePage() {
           ctaText="Copy checklist"
           source="reviews-healthy-paws-vs-pets-best-guide"
           checklist={[
-            "The review lists one accident-and-illness plan, a deductible and reimbursement rate you set, and fast reimbursement.",
+            "The review lists one accident-and-illness plan, a deductible and reimbursement rate you set, and a pay-then-claim model.",
+            "The Healthy Paws claims page says most claims are processed in 2 days.",
             "When you want several plan tiers and a wider set of deductible and reimbursement combinations.",
             "Pets Best's FAQ, fetched 2026-10-08, says there is no upper age limit.",
             "The premium, reimbursement percent, and annual limit are on the carrier quote, which is where the deductible page leaves them.",
@@ -107,7 +109,7 @@ export default function HealthyPawsVsPetsBestGuidePage() {
         />
         <p>Healthy Paws and Pets Best are two ways to set the same deductible and reimbursement levers. <Link href="/reviews/healthy-paws-vs-embrace-guide">Healthy Paws versus Embrace</Link> is the wellness-add-on comparison. Trupanion, <Link href="/reviews/lemonade-vs-pets-best-guide">Lemonade</Link>, and Spot have their own guides. Neither card prints a monthly premium.</p>
         <h2>What the page says about Healthy Paws</h2>
-        <p>Healthy Paws is Simple Levers and the winner. The card describes a single accident-and-illness plan where you choose the deductible and the reimbursement rate. Reimbursement is listed as fast, on a pay-then-claim model. The cons say there is no wellness add-on and that you should confirm the annual-limit structure on the quote, because that limit is the catastrophe protection. The price line is quote-based. Healthy Paws is one accident-and-illness plan with a deductible and a reimbursement rate you set.</p>
+        <p data-source="https://www.healthypawspetinsurance.com/pet-insurance-claims.html">Healthy Paws is Simple Levers and the winner. The card describes a single accident-and-illness plan where you choose the deductible and the reimbursement rate. The model is pay-then-claim, and the Healthy Paws claims page, fetched 2026-10-08, says most claims are processed in 2 days. The cons say there is no wellness add-on and that you should confirm the annual-limit structure on the quote, because that limit is the catastrophe protection. The price line is quote-based. Healthy Paws is one accident-and-illness plan with a deductible and a reimbursement rate you set.</p>
         <h2>What the page says about Pets Best</h2>
         <p>Pets Best is Tiered Options. The card says several plan tiers offer a wide range of deductible and reimbursement combinations, which is the point when you want to see how each lever moves a premium. The model is pay-then-claim. Pets Best’s FAQ, fetched 2026-10-08, says there is no upper age limit. Cons say there are more options to compare and that standard exclusions apply. The price line is quote-based. The reimbursement percent is the one on this card, not a figure copied from another carrier.</p>
         <p>What to have ready before either quote is on the <Link href="/tools/insurance-quote-prep">quote-prep checklist</Link>: age, breed, pre-existing conditions, and the deductible and reimbursement choices.</p>
@@ -136,7 +138,7 @@ export default function HealthyPawsVsPetsBestGuidePage() {
               </tr>
               <tr className="border-b border-brand-border align-top">
                 <th scope="row" className="p-3 font-bold text-brand-dark text-left">Claims</th>
-                <td className="p-3">Pay, then claim. Reimbursement is listed as fast</td>
+                <td className="p-3">Pay, then claim. Most claims are processed in 2 days, per its claims page</td>
                 <td className="p-3">Pay, then claim</td>
               </tr>
               <tr className="border-b border-brand-border align-top">
@@ -157,6 +159,7 @@ export default function HealthyPawsVsPetsBestGuidePage() {
         <FAQAccordion items={FAQS} />
                 <ArticleSourcesList title="Sources"
             sources={[
+            { label: 'Healthy Paws claims', url: 'https://www.healthypawspetinsurance.com/pet-insurance-claims.html', publisher: 'Healthy Paws' },
             { label: 'Pets Best FAQ', url: 'https://www.petsbest.com/faq', publisher: 'Pets Best' },
             ]}
           />
