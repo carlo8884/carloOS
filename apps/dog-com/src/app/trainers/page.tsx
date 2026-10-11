@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout} from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, StockImage } from '@carloOS/ui'
 
 export const metadata: Metadata = {
   ...buildMetadata({
@@ -26,6 +26,16 @@ export default function TrainersIndexPage() {
         publishedAt: 'August 2026',
         readTime: '3 min',
       }}
+      heroExtra={
+        <div className="mt-6 max-w-2xl">
+          <StockImage
+            manifestKey="dog-com:category-training"
+            alt="A dog working on a training cue with its handler"
+            aspect="16:9"
+            subtleCredit
+          />
+        </div>
+      }
       breadcrumbs={[
         { name: 'Home', href: '/' },
         { name: 'Trainers', href: '/trainers' },

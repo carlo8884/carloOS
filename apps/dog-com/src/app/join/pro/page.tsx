@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { directoryClaimPrefill } from '@carloOS/config'
 import { dogInquireCaptureEnabled } from '@carloOS/config/capture-flags'
-import { buildMetadata, ArticleLayout, InquireForm} from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, InquireForm, StockImage } from '@carloOS/ui'
 import listings from '../../../data/directory-listings.json'
 
 export const metadata: Metadata = {
@@ -34,6 +34,16 @@ export default function JoinProPage({
         publishedAt: 'August 2026',
         readTime: '2 min',
       }}
+      heroExtra={
+        <div className="mt-6 max-w-2xl">
+          <StockImage
+            manifestKey="dog-com:category-training"
+            alt="A dog working on a training cue with its handler"
+            aspect="16:9"
+            subtleCredit
+          />
+        </div>
+      }
       breadcrumbs={[
         { name: 'Home', href: '/' },
         { name: 'Trainers', href: '/trainers' },
