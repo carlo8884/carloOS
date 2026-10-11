@@ -52,7 +52,7 @@ test('vets fix: Healthy Paws claim speed matches the cited claims page in picks 
   await page.goto('/reviews/best-pet-insurance')
   const card = page.locator('#healthy-paws')
   await expect(card).toContainText('most claims are processed in 2 days')
-  const pick = page.locator('a[href="#healthy-paws"][aria-label="Fastest Reimbursement: Healthy Paws"]').locator('..')
+  const pick = page.locator('a[href="#healthy-paws"][aria-label="Most claims in 2 days: Healthy Paws"]').locator('..')
   await expect(pick).toContainText('Most claims in 2 days')
   const body = await page.locator('body').innerText()
   expect(body).not.toMatch(/~\s?2[- ]day|2-day average/i)
@@ -70,6 +70,20 @@ test('vets fix: Healthy Paws claim speed matches the cited claims page in picks 
   const healthyPaws = nodes.find((n) => n.name === 'Healthy Paws Pet Insurance')
   expect(healthyPaws?.description).toContain('most claims are processed in 2 days')
   expect(healthyPaws?.description).not.toMatch(/average|~/)
+})
+
+test('vets fix hp label: Healthy Paws is labeled by its sourced claim speed, not as fastest', async ({ page }) => {
+  for (const path of ['/reviews/best-pet-insurance', '/reviews/trupanion-vs-healthy-paws-guide', '/reviews/healthy-paws-vs-embrace-guide']) {
+    await page.goto(path)
+    expect(await page.locator('body').innerText()).not.toMatch(/fastest[- ]reimbursement|faster reimbursement|fastest claims/i)
+  }
+
+  await page.goto('/reviews/best-pet-insurance')
+  await expect(page.locator('a[href="#healthy-paws"][aria-label="Most claims in 2 days: Healthy Paws"]')).toBeVisible()
+  await expect(page.locator('#healthy-paws')).toContainText('Most claims in 2 days')
+  await expect(page.locator('#healthy-paws')).toContainText('Claims page says most claims are processed in 2 days')
+  const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
+  expect(ld).not.toMatch(/fastest/i)
 })
 
 const FOLD: { path: string; pick: string }[] = [

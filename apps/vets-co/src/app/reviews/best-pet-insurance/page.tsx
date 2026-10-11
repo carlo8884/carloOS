@@ -76,7 +76,7 @@ const pageSchema = combineSchemas(schema, breadcrumbSchema, insurerListSchema, t
 
 const PICKS = [
   { label: 'Pays the vet directly', name: 'Trupanion', subtitle: 'Only insurer that pays the vet directly', href: '#trupanion' },
-  { label: 'Fastest Reimbursement', name: 'Healthy Paws', subtitle: 'Most claims in 2 days · Annual limit is a choice', sourceUrl: 'https://www.healthypawspetinsurance.com/pet-insurance-claims.html', href: '#healthy-paws' },
+  { label: 'Most claims in 2 days', name: 'Healthy Paws', subtitle: 'Per its claims page · Annual limit is a choice', sourceUrl: 'https://www.healthypawspetinsurance.com/pet-insurance-claims.html', href: '#healthy-paws' },
   { label: 'Wellness add-on', name: 'Embrace', subtitle: 'Routine care add-on available', href: '#embrace' },
 ]
 
@@ -177,7 +177,7 @@ export default function VetsPetInsurancePage() {
               ctaAffiliateProgram="trupanion" ctaAffiliateProduct="pet-insurance"
             />
 
-            <ReviewCard id="healthy-paws" badge="Fastest Reimbursement" name="Healthy Paws"
+            <ReviewCard id="healthy-paws" badge="Most claims in 2 days" name="Healthy Paws"
               subtitle="Most claims processed in 2 days · Notes list no wellness add-on"
               description={<p data-source="https://www.healthypawspetinsurance.com/pet-insurance-claims.html">The Healthy Paws claims page, fetched 2026-10-08, says most claims are processed in 2 days, and that Direct Pay can reimburse the vet when funding is urgent. The annual reimbursement limit is a choice. Healthy Paws lists $5,000, $7,000, or unlimited, dated 2026-10-09. The carrier page was fetched 2026-10-08. It is not automatically unlimited. Our notes list no wellness add-on.</p>}
               specs={[
@@ -186,7 +186,7 @@ export default function VetsPetInsurancePage() {
                 { label: 'Payout Limit', value: '$5,000, $7,000, or unlimited', highlight: 'good' },
                 { label: 'Deductible', value: 'Annual' },
               ]}
-              pros={['Among the fastest claims processing of major carriers', 'Consistently strong customer satisfaction reputation', 'Unlimited is one of the limit choices', 'Good mobile app']}
+              pros={['Claims page says most claims are processed in 2 days', 'Consistently strong customer satisfaction reputation', 'Unlimited is one of the limit choices', 'Good mobile app']}
               cons={['Direct Pay is the urgent exception on the claims page', 'No wellness add-on']}
               price="See the carrier's current terms"
               priceNote="dated 2026-10-07."
