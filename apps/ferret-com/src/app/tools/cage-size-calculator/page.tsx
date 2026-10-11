@@ -174,7 +174,7 @@ export default function CageSizeCalculatorPage() {
         <JourneyNext
           siteId="ferret-com"
           nextHref="/reviews/best-ferret-cage"
-          nextLabel="Compare the cages that meet this footprint"
+          nextLabel="Compare the cages the review recommends for your ferret count"
           nextBlurb="The calculator is the L×W×H footprint. The cage review ranks Ferret Nation, Prevue, and Kaytee against bar spacing and floor space. The link below opens the Ferret Nation double unit this page already uses as the multi-level example."
           resourceHref="/go/amazon/B0054U8UGW?s=tools-cage-size-calculator"
           resourceLabel="Browse the Ferret Nation double unit on Amazon →"

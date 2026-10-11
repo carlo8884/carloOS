@@ -195,7 +195,7 @@ export default function CageSizeCalculator() {
           href="/reviews/best-ferret-cage"
           className="mt-3 inline-block max-w-full font-semibold text-brand-primary underline underline-offset-2"
         >
-          Compare the cages that meet this footprint
+          Compare the cages the review recommends for your ferret count
         </a>
       </div>
       )}
