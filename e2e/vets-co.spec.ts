@@ -265,3 +265,18 @@ test('every review route rejects page-about-itself copy', async ({ page }) => {
     await expectMoneyCopy(page)
   }
 })
+
+test('vets fix hp reimbursement: Healthy Paws guides state the sourced 2-day claims fact, not fast reimbursement', async ({ page }) => {
+  for (const path of [
+    '/reviews/trupanion-vs-healthy-paws-guide',
+    '/reviews/healthy-paws-vs-embrace-guide',
+    '/reviews/healthy-paws-vs-pets-best-guide',
+  ]) {
+    await page.goto(path)
+    const body = await page.locator('body').innerText()
+    expect(body).not.toMatch(/fast reimbursement|reimbursement back fast/i)
+    expect(body).toMatch(/most claims are processed in 2 days/i)
+    const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
+    expect(ld).not.toMatch(/fast reimbursement|reimbursement back fast/i)
+  }
+})
