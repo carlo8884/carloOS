@@ -216,7 +216,7 @@ export default function FerretAdrenalDiseasePage() {
             publishedAt="2026-05-28"
             updatedAt="2026-09-06"
           />
-          <LastUpdated date="2026-10-09" />
+          <LastUpdated date="2026-10-11" />
 
           <DropCap>
             Adrenal disease is the diagnosis owners learn to expect somewhere in

@@ -654,7 +654,7 @@ export default function FerretBathingGroomingPage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-09" />
+          <ComparisonFoot updated="2026-10-11" />
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
