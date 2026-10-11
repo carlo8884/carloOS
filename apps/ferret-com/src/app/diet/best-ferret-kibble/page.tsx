@@ -42,8 +42,8 @@ const med = buildMedicalWebPageSchema({
 const itemList = buildItemListSchema({
   name: 'Ferret Kibbles That Fit the Profile',
   items: [
-    { name: 'Wysong Epigen 90', url: 'https://ferret.com/go/wysong/epigen-90?s=diet-best-ferret-kibble' },
-    { name: 'Marshall Premium Ferret Diet', url: 'https://ferret.com/go/marshall/premium-ferret-diet?s=diet-best-ferret-kibble' },
+    { name: 'Wysong Epigen 90', url: 'https://ferret.com/go/amazon/B019W9VXZK?s=best-ferret-kibble' },
+    { name: 'Marshall Premium Ferret Diet', url: `${PAGE_URL}#marshall-premium-diet` },
     { name: 'Carniwhole Ferret Food', url: `${PAGE_URL}#carniwhole` },
   ],
 })
@@ -52,14 +52,14 @@ const products = [
   buildProductSchema({
     name: 'Wysong Epigen 90',
     description: 'Current page lists crude protein minimum 63% and crude fat minimum 16%, and markets the food as starch-free. Carbohydrate is not on the guaranteed analysis.',
-    url: 'https://ferret.com/go/wysong/epigen-90?s=diet-best-ferret-kibble',
+    url: 'https://ferret.com/go/amazon/B019W9VXZK?s=best-ferret-kibble',
     reviewAuthorName: 'Ferret.com Editorial',
     reviewBody: 'The current Wysong Epigen 90 page lists crude protein minimum 63% and crude fat minimum 16%. Those are guaranteed-analysis figures as printed, not a dry-matter conversion. The page markets the food as starch-free. Carbohydrate is not on the guaranteed analysis — check the label. Premium price and not always stocked in chain pet aisles.',
   }),
   buildProductSchema({
     name: 'Marshall Premium Ferret Diet',
     description: 'Ferret-specific formulation, widely stocked, in-range macros',
-    url: 'https://ferret.com/go/marshall/premium-ferret-diet?s=diet-best-ferret-kibble',
+    url: `${PAGE_URL}#marshall-premium-diet`,
     reviewAuthorName: 'Ferret.com Editorial',
     reviewBody: 'The current Marshall Premium Ferret Diet page lists crude protein minimum 38% and crude fat minimum 18%. Those are guaranteed-analysis figures as printed, not a dry-matter conversion. Carbohydrate is not on the guaranteed analysis — check the label.',
   }),
