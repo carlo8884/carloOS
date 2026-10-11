@@ -7,6 +7,7 @@ import {
   FLOORS,
   LAYOUT_PAGES,
   MONEY_PAGES,
+  TOOL_PAGES,
   budgetProblems,
   needsRetry,
   scoreProblems,
@@ -38,6 +39,21 @@ test('gift guides, search, and the not-found page are budgeted too', () => {
       assert.equal(MONEY_PAGES[site].includes(slug), false)
     }
   }
+})
+
+test('the Vets.co claim helper and Ferret.com cage calculator are budgeted as tool pages', () => {
+  assert.deepEqual(Object.keys(TOOL_PAGES), EARNING_SITES)
+  assert.deepEqual(TOOL_PAGES['vets-co'], ['tools/claim-helper'])
+  assert.deepEqual(TOOL_PAGES['ferret-com'], ['tools/cage-size-calculator'])
+  for (const site of EARNING_SITES) {
+    if (site !== 'vets-co' && site !== 'ferret-com') assert.deepEqual(TOOL_PAGES[site], [])
+    for (const slug of TOOL_PAGES[site]) {
+      assert.equal(MONEY_PAGES[site].includes(slug), false)
+      assert.equal(LAYOUT_PAGES[site].includes(slug), false)
+    }
+  }
+  const runner = readFileSync(new URL('./lighthouse-budgets.mjs', import.meta.url), 'utf8')
+  assert.match(runner, /\.\.\.LAYOUT_PAGES\[site\], \.\.\.TOOL_PAGES\[site\]/)
 })
 
 test('budgets are not looser than the floors', () => {

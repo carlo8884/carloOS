@@ -10,9 +10,12 @@
  *
  * If the key isn't in the manifest yet, renders a neutral placeholder
  * (no broken images in production).
+ *
+ * Not a client component: it has no state or handlers, and as a client
+ * module the whole image manifest shipped in every page's JavaScript
+ * (the root layouts import the @carloOS/ui barrel). ImageCard stays the
+ * client boundary.
  */
-
-'use client'
 
 import manifestData from '../data/image-manifest.json'
 import { displaySize } from '../lib/display-size'

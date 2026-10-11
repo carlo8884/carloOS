@@ -123,26 +123,80 @@ export function blanketPick(
   }
 }
 
-/** Ferret-cage review: Kaytee for one ferret, Ferret Nation double for a pair or trio. */
-export function ferretCagePick(count: number): MatchedPick {
+/**
+ * Ferret-cage review: Kaytee for one ferret with generous out-time,
+ * Ferret Nation double for a pair or trio, or for one ferret with short out-time.
+ */
+export function ferretCagePick(
+  count: number,
+  playShort = false,
+  source = 'tools-cage-size-calculator',
+): MatchedPick {
+  if (count <= 1 && playShort) {
+    return {
+      href: `/go/amazon/B0054U8UGW?s=${source}`,
+      label: 'Browse the Ferret Nation double unit on Amazon',
+      detail: 'The cage review assigns the Kaytee to a single ferret with generous daily out-of-cage time. With under four hours out, it lists the Ferret Nation double for 1–4 ferrets.',
+    }
+  }
   if (count <= 1) {
     return {
-      href: '/go/amazon/B008FONT2Y?s=tools-cage-size-calculator',
+      href: `/go/amazon/B008FONT2Y?s=${source}`,
       label: 'Browse the Kaytee multi-level ferret home on Amazon',
       detail: 'The cage review assigns the Kaytee to a single ferret with daily out-time.',
     }
   }
   if (count <= 4) {
     return {
-      href: '/go/amazon/B0054U8UGW?s=tools-cage-size-calculator',
-      label: 'Browse the Ferret Nation / Critter Nation double unit on Amazon',
+      href: `/go/amazon/B0054U8UGW?s=${source}`,
+      label: 'Browse the Ferret Nation double unit on Amazon',
       detail: 'The cage review lists the Ferret Nation double for 1–4 ferrets, and the modular stack for a pair or trio.',
     }
   }
   return {
-    href: '/go/amazon/B0054U8UGW?s=tools-cage-size-calculator',
-    label: 'Browse the Ferret Nation / Critter Nation double unit on Amazon',
+    href: `/go/amazon/B0054U8UGW?s=${source}`,
+    label: 'Browse the Ferret Nation double unit on Amazon',
     detail: 'The cage review lists the Ferret Nation double for 1–4 ferrets. This count is past that card.',
+  }
+}
+
+export type FerretHousing = 'starter' | 'multilevel' | 'room'
+export type FerretFoodStyle = 'kibble' | 'kibble-topper' | 'whole-prey'
+
+/** Cost calculator cage card: the cage review by count. A playpen plan is not one tower, so it stays on the review. */
+export function ferretCostCagePick(count: number, housing: FerretHousing): MatchedPick {
+  if (housing === 'room') {
+    return {
+      href: '/reviews/best-ferret-cage',
+      label: 'Read the ferret cage review',
+      detail: 'This plan is playpen panels and a sleeping cage, not one large tower. The cage review picks multi-level cages, not playpen panels. It says a playpen rarely has the multi-level layout and deep pans ferrets need.',
+    }
+  }
+  return ferretCagePick(count, false, 'tools-cost-calculator')
+}
+
+/** Cost calculator food card: the kibble search unless the plan has no kibble line. */
+export function ferretCostFoodPick(food: FerretFoodStyle): MatchedPick {
+  if (food === 'whole-prey') {
+    return {
+      href: '/diet/whole-prey-vs-kibble',
+      label: 'Read whole-prey vs kibble for ferrets',
+      detail: 'This plan feeds frozen whole prey or commercial raw, so the kibble search is not its food line. The whole-prey vs kibble guide names frozen feeder mice and chicks as the whole-prey pick and says a freezer is required.',
+    }
+  }
+  const href = '/go/amazon-brand/high+protein+ferret+food+kibble?s=tools-cost-calculator'
+  const label = 'Browse high-protein ferret kibble on Amazon'
+  if (food === 'kibble-topper') {
+    return {
+      href,
+      label,
+      detail: 'This plan keeps kibble as the staple and adds freeze-dried meat as a topper. This search is the staple line. The kibble guide compares published panels.',
+    }
+  }
+  return {
+    href,
+    label,
+    detail: 'This plan feeds high-protein kibble. This search is the kibble guide\'s food search. The guide compares published panels.',
   }
 }
 

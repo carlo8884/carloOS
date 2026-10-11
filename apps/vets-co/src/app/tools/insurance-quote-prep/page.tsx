@@ -79,7 +79,7 @@ const GROUPS = [
         id: 'pay',
         label: 'Direct pay at checkout, or pay-then-claim?',
         detail:
-          'Most policies reimburse you after you pay the clinic. The carrier comparison says Trupanion is the only one of the 11 major carriers that pays the practice directly at checkout. Confirm that on the quote rather than assuming it.',
+          'Most policies reimburse you after you pay the clinic. The carrier comparison says Trupanion offers direct vet payment, and that Healthy Paws Direct Pay can reimburse the vet when funding is urgent. Confirm that on the quote rather than assuming it.',
       },
       {
         id: 'deductible-ask',

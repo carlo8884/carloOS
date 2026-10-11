@@ -776,14 +776,14 @@ export const INSURANCE_BREEDS: BreedInsuranceProfile[] = [
     dentalRisk: 'low',
     recommendedCarrier: 'lemonade-pet',
     recommendedReason:
-      'Border Collies are among the healthiest medium-size breeds — most claims are sports-injury and routine orthopedic. Lemonade\'s low premiums and fast claims match a low-risk profile; high-coverage Trupanion tier isn\'t justified actuarially.',
+      'Border Collies are among the healthiest medium-size breeds — most claims are sports-injury and routine orthopedic. Lemonade\'s entry-tier premium fits a low-risk profile; high-coverage Trupanion tier isn\'t justified actuarially.',
     alternateCarriers: ['embrace', 'figo'],
     sampleMonthlyPremium: [25, 55],
     keyCoverageNeeds: [
       'Affordable premium',
       'Coverage for sport/exercise injuries',
       'Hereditary condition coverage',
-      'Fast claims processing',
+      'Clear claim filing process',
     ],
   },
   {

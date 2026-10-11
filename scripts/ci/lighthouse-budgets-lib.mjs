@@ -75,6 +75,18 @@ export const LAYOUT_PAGES = {
   ],
 }
 
+/**
+ * Interactive tools. Each one ships client-side JavaScript that the money and
+ * layout pages don't load, so each is budgeted on its own.
+ */
+export const TOOL_PAGES = {
+  'dog-com': [],
+  'fish-com': [],
+  'horses-com': [],
+  'vets-co': ['tools/claim-helper'],
+  'ferret-com': ['tools/cage-size-calculator'],
+}
+
 export const SITE_PORTS = {
   'dog-com': 3310,
   'fish-com': 3311,

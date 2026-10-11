@@ -5,6 +5,8 @@ import {
   calorieFoodPick,
   careSettingPick,
   ferretCagePick,
+  ferretCostCagePick,
+  ferretCostFoodPick,
   filterFromGallons,
   harnessPick,
   heaterFromGallons,
@@ -93,6 +95,34 @@ test('ferret cage pick follows the review count', () => {
   assert.match(ferretCagePick(4).detail, /1–4/)
   assert.doesNotMatch(ferretCagePick(4).detail, /past that card/)
   assert.match(ferretCagePick(5).detail, /past that card/)
+  assert.match(ferretCagePick(1, false).href, /B008FONT2Y/)
+  assert.match(ferretCagePick(1, true).href, /B0054U8UGW/)
+  assert.match(ferretCagePick(1, true).detail, /under four hours/)
+  assert.match(ferretCagePick(2, true).detail, /pair or trio/)
+  assert.match(ferretCagePick(1).href, /\?s=tools-cage-size-calculator$/)
+  assert.match(ferretCagePick(2, false, 'tools-cost-calculator').href, /\?s=tools-cost-calculator$/)
+})
+
+test('cost calculator cage card follows count, and a playpen plan stays on the review', () => {
+  assert.equal(ferretCostCagePick(1, 'starter').href, '/go/amazon/B008FONT2Y?s=tools-cost-calculator')
+  assert.equal(ferretCostCagePick(2, 'multilevel').href, '/go/amazon/B0054U8UGW?s=tools-cost-calculator')
+  assert.match(ferretCostCagePick(5, 'starter').detail, /past that card/)
+  for (const count of [1, 2, 5]) {
+    const room = ferretCostCagePick(count, 'room')
+    assert.equal(room.href, '/reviews/best-ferret-cage')
+    assert.doesNotMatch(room.href, /\/go\//)
+    assert.match(room.detail, /playpen/)
+  }
+})
+
+test('cost calculator food card drops the kibble search for a whole-prey plan', () => {
+  const kibble = '/go/amazon-brand/high+protein+ferret+food+kibble?s=tools-cost-calculator'
+  assert.equal(ferretCostFoodPick('kibble').href, kibble)
+  assert.equal(ferretCostFoodPick('kibble-topper').href, kibble)
+  assert.match(ferretCostFoodPick('kibble-topper').detail, /topper/)
+  const prey = ferretCostFoodPick('whole-prey')
+  assert.equal(prey.href, '/diet/whole-prey-vs-kibble')
+  assert.match(prey.detail, /freezer/)
 })
 
 test('filter pick follows the review gallon cards', () => {

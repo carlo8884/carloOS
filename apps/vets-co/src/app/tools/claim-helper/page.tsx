@@ -155,6 +155,7 @@ export default function ClaimHelperPage() {
             items={[
               { label: 'Claim helper', href: '#helper' },
               { label: 'Denial reasons', href: '#denials' },
+              { label: 'Next steps', href: '#next-steps' },
               { label: 'Sources', href: '#sources' },
               { label: 'FAQ', href: '#faq' },
             ]}
@@ -167,6 +168,7 @@ export default function ClaimHelperPage() {
               { label: 'Pre-existing conditions', href: '/insurance/pre-existing-conditions' },
               { label: 'Reading the fine print', href: '/insurance/reading-the-fine-print' },
               { label: 'Reimbursement estimator', href: '/tools/insurance-reimbursement-estimator' },
+              { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' },
               { label: 'Insurance hub', href: '/insurance' },
             ]}
           />
@@ -178,7 +180,7 @@ export default function ClaimHelperPage() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationSchema) }}
         />
-        <LastUpdated date="2026-10-10" />
+        <LastUpdated date="2026-10-11" />
 
         <p>
           A claim moves faster when the insurer gets the paid, itemized invoice and any records it asks for the first
@@ -221,6 +223,22 @@ export default function ClaimHelperPage() {
           <Link href="/insurance/pre-existing-conditions" className="text-brand-primary">pre-existing conditions guide</Link>{' '}
           explain the terms that most often decide it.
         </p>
+
+        <h2 id="next-steps">Next steps</h2>
+        <ul>
+          <li>
+            <Link href="/tools/insurance-reimbursement-estimator" className="text-brand-primary">
+              Pet Insurance Reimbursement Estimator
+            </Link>
+            : estimates reimbursement and your out-of-pocket share from a carrier’s premium, deductible, reimbursement rate, annual cap, and expected covered claims.
+          </li>
+          <li>
+            <Link href="/reviews/best-pet-insurance" className="text-brand-primary">
+              Best Pet Insurance 2026 — How the 11 Major Carriers Compare
+            </Link>
+            : carriers compared on their published coverage terms, including how each one pays claims.
+          </li>
+        </ul>
 
         <div id="sources">
           <ArticleSourcesList sources={SOURCES} />

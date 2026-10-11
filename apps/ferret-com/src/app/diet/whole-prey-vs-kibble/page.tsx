@@ -211,7 +211,7 @@ export default function WholePreyVsKibblePage() {
             id="wysong-epigen-90"
             badge="Kibble Model"
             name="Wysong Epigen 90"
-            subtitle="Starch-free premium kibble — the lower-risk base diet"
+            subtitle="Marketed as starch-free — the lower-risk base diet"
             winner
             description={
               <p>The current Wysong Epigen 90 page lists crude protein minimum 63% and crude fat minimum 16%. Those are guaranteed-analysis figures as printed, not a dry-matter conversion. The page markets the food as starch-free. Carbohydrate is not on the guaranteed analysis — check the label. Shelf-stable and easy to free-feed, which is why kibble stays the practical default for a first-time owner.</p>
@@ -250,8 +250,8 @@ export default function WholePreyVsKibblePage() {
             cons={['Requires freezer space and handling discipline', 'Higher food-safety burden', 'Sourcing effort']}
             price="Varies by size and quantity"
             ctaText="Check price of frozen reptile feeder mice and chicks on Amazon"
-            ctaHref="/go/chewy-brand/frozen+feeder+mice+reptile?s=diet-whole-prey-vs-kibble"
-            ctaAffiliateProgram="chewy-brand"
+            ctaHref="/go/amazon-brand/frozen+feeder+mice+reptile?s=diet-whole-prey-vs-kibble"
+            ctaAffiliateProgram="amazon-brand"
             ctaAffiliateProduct="frozen-feeder-mice"
           />
 
@@ -276,14 +276,14 @@ export default function WholePreyVsKibblePage() {
                 </tr>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 text-brand-text-mid">Whole prey as the diet or as a supplement to kibble</td>
-                  <td className="p-3 font-bold text-brand-dark"><a href="#frozen-feeder-prey" className="text-brand-primary">Frozen feeder mice and chicks</a><TableShopLink href={"/go/chewy-brand/frozen+feeder+mice+reptile?s=diet-whole-prey-vs-kibble"} product={"Frozen feeder mice and chicks"} /></td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#frozen-feeder-prey" className="text-brand-primary">Frozen feeder mice and chicks</a><TableShopLink href={"/go/amazon-brand/frozen+feeder+mice+reptile?s=diet-whole-prey-vs-kibble"} product={"Frozen feeder mice and chicks"} /></td>
                   <td className="p-3 text-brand-text-mid">Whole-prey model. Intact bone for calcium balance. Price varies by size and quantity</td>
                   <td className="p-3 text-brand-text-mid">No freezer, or you will not handle raw prey carefully. The card flags food safety and sourcing</td>
                 </tr>
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-08" />
+          <ComparisonFoot updated="2026-10-11" />
 
           <h2 id="faq">FAQ</h2>
           <p>Those figures are typical US ranges dated 2026-10-05.</p>

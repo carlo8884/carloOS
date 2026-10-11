@@ -44,6 +44,8 @@ export {
   blanketPick,
   roundBlanketInches,
   ferretCagePick,
+  ferretCostCagePick,
+  ferretCostFoodPick,
   filterFromGallons,
   harnessPick,
   calorieFoodPick,

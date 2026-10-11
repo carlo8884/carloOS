@@ -6,7 +6,7 @@ import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } 
 import { HubMasthead } from '../../components/HubMasthead'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Best Pet Telehealth 2026 — Vetster, AskVet | Vets.co', description: 'Pet telehealth notes for Vetster, AskVet, and Chewy Connect. This page does not publish a scored ranking or a measured wait time.', path: '/telehealth', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Best Pet Telehealth 2026', description: 'Vetster, AskVet, and Chewy Connect listed by service type. This page does not publish a scored ranking or a measured wait time.', url: 'https://vets.co/telehealth', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-07T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Best Pet Telehealth 2026', description: 'Vetster, AskVet, and Chewy Connect listed by service type. This page does not publish a scored ranking or a measured wait time.', url: 'https://vets.co/telehealth', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-11T00:00:00Z' })
 
 // Per-service Product schemas — editorial Review ratings mirror the on-page
 // ReviewCard scores (no AggregateRating; see buildProductSchema contract).
@@ -24,9 +24,9 @@ const FAQS = [
 ]
 
 const PICKS = [
-  { label: 'Video and chat', name: 'Vetster', subtitle: 'Video + chat · Licensed DVMs', href: '#vetster' },
-  { label: 'Best Subscription', name: 'AskVet', subtitle: 'See the carrier\'s current terms', href: '#askvet' },
-  { label: 'Chewy Integration', name: 'Chewy Connect', subtitle: 'Linked to Chewy Rx', href: '#chewy' },
+  { label: 'Video and chat', name: 'Vetster', subtitle: 'Video + chat · No monthly commitment', href: '#vetster' },
+  { label: 'Best Subscription', name: 'AskVet', subtitle: 'Chat plan. See the carrier\'s current terms.', href: '#askvet' },
+  { label: 'Best for Chewy Customers', name: 'Chewy Connect with a Vet', subtitle: 'Free technician chat · Separate vet video visit', href: '#chewy' },
 ]
 
 export default function TelehealthPage() {
@@ -85,7 +85,7 @@ export default function TelehealthPage() {
               <p className="text-sm text-brand-text-mid leading-relaxed m-0">Telehealth is ideal for: minor illness assessment, medication questions, post-op monitoring, behavioral concerns, nutrition advice, deciding whether an in-person visit is needed. It cannot replace: physical examination, blood work, X-rays, surgery, emergency care. If your pet is in crisis, go to an emergency vet — do not wait for a telehealth appointment. Unsure which setting fits? Use the <Link href="/tools/er-vs-clinic" className="text-brand-primary font-medium hover:underline">ER vs clinic vs telehealth</Link> tool.</p>
             </div>
             <p>Those figures are typical US ranges dated 2026-10-05.</p>
-            <ReviewCard id="vetster" badge="Video and chat" name="Vetster" winner subtitle="Video + chat · Board-certified vets available · No monthly commitment"
+            <ReviewCard id="vetster" badge="Video and chat" name="Vetster" winner subtitle="Video + chat · No monthly commitment"
               description={<p>Vetster offers licensed veterinarians by video or chat. A wait time is not listed here. Vetster's help article, updated 2025-12-18, says it verifies an active license in the veterinarian's jurisdiction before they go live. It does not say the veterinarian is licensed where the owner is, or that a prescription is therefore valid. They offer both general practitioners and specialists (including veterinary behaviorists, dermatologists, and internal medicine specialists). A single visit does not require the Plus plan.</p>}
               specs={[{ label: 'Consultation Type', value: 'Video + chat', highlight: 'good' }, { label: 'Vet Credentials', value: 'Licensed DVMs required', highlight: 'good' }, { label: 'Wait Time', value: 'Not listed' }, { label: 'Specialists', value: 'Yes — multiple specialties', highlight: 'good' }, { label: 'Prescriptions', value: 'Yes (jurisdiction-dependent)' }, { label: 'Monthly Fee', value: 'Single visit or Plus' }]}
               pros={['Specialists available (behaviorists, dermatologists)', 'Rigorous licensing standards', 'A single visit does not require Plus', 'Prescription capability']}
@@ -181,7 +181,7 @@ export default function TelehealthPage() {
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-10" />
+              <ComparisonFoot updated="2026-10-11" />
             </div>
             <h2 className="font-display text-2xl font-bold text-brand-dark mt-12 mb-6">Frequently Asked Questions</h2>
             <p>Those figures are typical US ranges dated 2026-10-05.</p>

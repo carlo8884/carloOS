@@ -52,14 +52,14 @@ const insurerListSchema = {
 // Product schemas — single editorial review (reviewCount: 1 per honest-pattern used across the portfolio)
 const trupanionSchema = buildProductSchema({
   name: 'Trupanion Pet Insurance',
-  description: 'Only insurer that pays the veterinary practice directly at checkout. 90% reimbursement, unlimited payouts, per-condition deductible.',
+  description: 'Offers direct vet payment; check terms. 90% reimbursement, unlimited payouts, per-condition deductible.',
   url: 'https://vets.co/go/trupanion/home?s=reviews-best-pet-insurance',
   imageUrl: '',
 })
 
 const healthyPawsSchema = buildProductSchema({
   name: 'Healthy Paws Pet Insurance',
-  description: 'Fast claims processing (per the carrier\'s stated ~2-day average). Healthy Paws lets you choose an annual reimbursement limit of $5,000, $7,000, or unlimited.',
+  description: 'The Healthy Paws claims page (https://www.healthypawspetinsurance.com/pet-insurance-claims.html) says most claims are processed in 2 days. The annual reimbursement limit is a choice, not automatically unlimited.',
   url: 'https://vets.co/go/healthy-paws/home?s=reviews-best-pet-insurance',
   imageUrl: '',
 })
@@ -75,8 +75,8 @@ const embraceSchema = buildProductSchema({
 const pageSchema = combineSchemas(schema, breadcrumbSchema, insurerListSchema, trupanionSchema, healthyPawsSchema, embraceSchema)
 
 const PICKS = [
-  { label: 'Pays the vet directly', name: 'Trupanion', subtitle: 'Only insurer that pays the vet directly', href: '#trupanion' },
-  { label: 'Fastest Reimbursement', name: 'Healthy Paws', subtitle: '~2 day claims · Annual limit is a choice', href: '#healthy-paws' },
+  { label: 'Pays the vet directly', name: 'Trupanion', subtitle: 'Offers direct vet payment; check terms', href: '#trupanion' },
+  { label: 'Most claims in 2 days', name: 'Healthy Paws', subtitle: 'Per its claims page · Annual limit is a choice', sourceUrl: 'https://www.healthypawspetinsurance.com/pet-insurance-claims.html', href: '#healthy-paws' },
   { label: 'Wellness add-on', name: 'Embrace', subtitle: 'Routine care add-on available', href: '#embrace' },
 ]
 
@@ -92,7 +92,7 @@ export default function VetsPetInsurancePage() {
           style={{ fontSize: 'clamp(26px, 4vw, 48px)', lineHeight: 1.15, fontFamily: 'Georgia, "Times New Roman", serif' }}>
           Best Pet Insurance 2026 — How the 11 Major Carriers Compare
         </h1>
-        <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">Trupanion is the top pet insurance pick because it is the carrier that pays the clinic at checkout.</p>
+        <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">Trupanion is the top pet insurance pick because it offers direct vet payment at checkout; check terms.</p>
         <PriceAsOf date="2026-10-09" tone="dark" />
         <div data-fold="offer">
           <PrimaryHop href='/go/trupanion/home?s=reviews-best-pet-insurance' label='Get a Trupanion quote →' holdWithoutPartnerId />
@@ -114,17 +114,17 @@ export default function VetsPetInsurancePage() {
           ctaText="Copy checklist"
           source="reviews-best-pet-insurance"
           checklist={[
-            "Trupanion is the card for direct pay at checkout rather than pay-and-wait reimbursement.",
-            "Healthy Paws is the next card, for reimbursement speed.",
-            "Embrace is the card for owners who want a wellness add-on beside accident and illness coverage.",
+            "Trupanion offers direct pay at checkout rather than pay-and-wait reimbursement.",
+            "Healthy Paws is the option if you can pay the clinic first and claim after.",
+            "Embrace is the option for owners who want a wellness add-on beside accident and illness coverage.",
             "The page says the orthopedic waiting period is on the carrier page: see the carrier's current terms.",
-            "Trupanion is the only one of the 11 major carriers that pays the practice directly at checkout.",
+            "Trupanion offers direct vet payment; check terms. The Healthy Paws claims page says Direct Pay can reimburse the vet when funding is urgent.",
             "Every condition noted in records before enrollment may be classified as pre-existing and excluded.",
           ]}
         />
 
         <p className="text-lg text-white/55 max-w-2xl" style={{ lineHeight: 1.6, fontFamily: 'ui-sans-serif, system-ui, sans-serif' }}>
-          Trupanion is the only one of the 11 major carriers that pays the practice directly at checkout.
+          Trupanion offers direct vet payment; check terms. The Healthy Paws claims page says Direct Pay can reimburse the vet when funding is urgent.
         </p>
         <div className="mt-4 text-xs text-white/80">Vets.co Editorial · Updated Jun 2026</div>
       </div>
@@ -143,7 +143,7 @@ export default function VetsPetInsurancePage() {
         <div className="grid lg:grid-cols-[1fr_270px] gap-12 min-w-0">
           <div className="min-w-0">
             <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-10-07T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-10" />
+          <LastUpdated date="2026-10-11" />
 
 
             <PullQuote variant="lead" quote="Enroll before your first vet visit. Every condition noted in records before enrollment may be permanently excluded as pre-existing." attribution="The single most important point on pet insurance" />
@@ -151,7 +151,7 @@ export default function VetsPetInsurancePage() {
             <div className="bg-brand-primary-pale border-l-4 border-brand-primary rounded-r-lg p-5 mb-8">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Why It Matters</div>
               <p className="text-sm text-brand-text-mid leading-relaxed m-0">
-                The single most important point: <strong>enroll before your first vet visit</strong>. Every condition noted in records before enrollment may be classified as pre-existing and excluded. Owners commonly try to enroll after a diagnosis — at that point it&apos;s too late for that condition. The second most important thing: Trupanion is the only carrier whose policy contract obligates them to pay the veterinary practice directly at checkout (rather than the standard submit-receipt-and-wait reimbursement model). For major emergencies, this matters enormously.
+                The single most important point: <strong>enroll before your first vet visit</strong>. Every condition noted in records before enrollment may be classified as pre-existing and excluded. Owners commonly try to enroll after a diagnosis — at that point it&apos;s too late for that condition. The second most important thing: Trupanion offers direct vet payment (check terms) rather than the standard submit-receipt-and-wait reimbursement model, and the Healthy Paws claims page says Direct Pay can reimburse the vet when funding is urgent. For major emergencies, this matters enormously.
               </p>
             </div>
 
@@ -161,7 +161,7 @@ export default function VetsPetInsurancePage() {
 
             <ReviewCard id="trupanion" badge="Pays the vet directly" name="Trupanion" winner
               subtitle="Pays the vet directly · 90% reimbursement · No payout limits"
-              description={<p>Trupanion is the only insurer integrated with veterinary practice management software to pay the clinic directly at checkout — no claim form for you, no waiting for reimbursement. From the vet side, this is genuinely significant: it removes the financial barrier to needed care in the moment it matters most. Their 90% reimbursement rate and unlimited payouts are the coverage numbers on this card.</p>}
+              description={<p>Trupanion offers direct vet payment at checkout; check terms for whether your clinic takes it. When it applies, there is no claim form for you and no waiting for reimbursement. From the vet side, this is genuinely significant: it removes the financial barrier to needed care in the moment it matters most. Their 90% reimbursement rate and unlimited payouts are the coverage numbers on this card.</p>}
               specs={[
                 { label: 'Reimbursement', value: '90%', highlight: 'good' },
                 { label: 'Payout Limit', value: 'Unlimited', highlight: 'good' },
@@ -169,7 +169,7 @@ export default function VetsPetInsurancePage() {
                 { label: 'Deductible', value: 'Per-condition' },
                 { label: 'Wellness', value: 'Not included', highlight: 'warn' },
               ]}
-              pros={['Only insurer paying vet directly at time of service', '90% reimbursement', 'Unlimited payouts', 'Per-condition deductible favors chronic disease']}
+              pros={['Offers direct vet payment; check terms', '90% reimbursement', 'Unlimited payouts', 'Per-condition deductible favors chronic disease']}
               cons={['Higher premiums', 'No wellness coverage']}
               price="See the carrier's current terms"
               priceNote="dated 2026-10-05."
@@ -177,7 +177,7 @@ export default function VetsPetInsurancePage() {
               ctaAffiliateProgram="trupanion" ctaAffiliateProduct="pet-insurance"
             />
 
-            <ReviewCard id="healthy-paws" badge="Fastest Reimbursement" name="Healthy Paws"
+            <ReviewCard id="healthy-paws" badge="Most claims in 2 days" name="Healthy Paws"
               subtitle="Most claims processed in 2 days · Notes list no wellness add-on"
               description={<p data-source="https://www.healthypawspetinsurance.com/pet-insurance-claims.html">The Healthy Paws claims page, fetched 2026-10-08, says most claims are processed in 2 days, and that Direct Pay can reimburse the vet when funding is urgent. The annual reimbursement limit is a choice. Healthy Paws lists $5,000, $7,000, or unlimited, dated 2026-10-09. The carrier page was fetched 2026-10-08. It is not automatically unlimited. Our notes list no wellness add-on.</p>}
               specs={[
@@ -186,7 +186,7 @@ export default function VetsPetInsurancePage() {
                 { label: 'Payout Limit', value: '$5,000, $7,000, or unlimited', highlight: 'good' },
                 { label: 'Deductible', value: 'Annual' },
               ]}
-              pros={['Among the fastest claims processing of major carriers', 'Consistently strong customer satisfaction reputation', 'Unlimited is one of the limit choices', 'Good mobile app']}
+              pros={['Claims page says most claims are processed in 2 days','Unlimited is one of the limit choices', 'Good mobile app']}
               cons={['Direct Pay is the urgent exception on the claims page', 'No wellness add-on']}
               price="See the carrier's current terms"
               priceNote="dated 2026-10-07."
@@ -237,7 +237,7 @@ export default function VetsPetInsurancePage() {
                       <td className="p-3 text-brand-text-mid">Higher premiums. Wellness is not included. Deductible is per condition</td>
                     </tr>
                     <tr className="border-b border-brand-border">
-                      <td className="p-3 text-brand-text-mid">You can pay the clinic and want the reimbursement back fast</td>
+                      <td className="p-3 text-brand-text-mid">You can pay the clinic first and want most claims processed in about 2 days</td>
                       <td className="p-3 font-bold text-brand-dark"><a href="#healthy-paws" className="text-brand-primary">Healthy Paws</a><TableShopLink href={"/go/healthy-paws/home?s=reviews-best-pet-insurance"} product={"Healthy Paws"} holdWithoutPartnerId /></td>
                       <td className="p-3 text-brand-text-mid">Most claims processed in 2 days. Up to 90 percent. Annual limit is $5,000, $7,000, or unlimited. See the carrier's current terms for the monthly figure.</td>
                       <td className="p-3 text-brand-text-mid">Wellness is not in our notes. Deductible is annual</td>
@@ -251,12 +251,12 @@ export default function VetsPetInsurancePage() {
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-10" />
+              <ComparisonFoot updated="2026-10-11" />
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Questions this comparison answers</h2>
               <FAQAccordion items={[
                 {
                   question: 'Which carrier pays the clinic at checkout?',
-                  answer: 'Trupanion is the card for direct pay at checkout rather than pay-and-wait reimbursement. Healthy Paws is the next card, for reimbursement speed.',
+                  answer: 'Trupanion offers direct pay at checkout rather than pay-and-wait reimbursement; check terms. Healthy Paws is the option if you can pay the clinic first. Its claims page says most claims are processed in 2 days, and that Direct Pay can reimburse the vet when funding is urgent.',
                 },
                 {
                   question: 'Which plan on this page covers routine care?',

@@ -29,7 +29,7 @@ const FAQS = [
   },
   {
     question: 'When does the review point to Carniwhole?',
-    answer: 'When the keeper wants a direct-to-consumer bag with a published panel and a subscription shipment. The card says there is no retail backup and a shorter community track record than Wysong or Marshall. The price line is subscription pricing, not a dollar range.',
+    answer: 'When the keeper wants a direct-to-consumer bag with a published panel and a subscription shipment. The card says there is no retail backup. The price line is subscription pricing, not a dollar range.',
   },
   {
     question: 'Where is Marshall Premium?',
@@ -76,7 +76,7 @@ export default function WysongVsCarniwholeGuidePage() {
       priceAsOf="2026-10-07"
     >
       <div className="carloOS-article">
-          <LastUpdated date="2026-10-10" />
+          <LastUpdated date="2026-10-11" />
         <EmailCapture
           variant="inline"
           siteId="ferret-com"
@@ -87,7 +87,7 @@ export default function WysongVsCarniwholeGuidePage() {
           checklist={[
             "Wysong Epigen 90, marked Premium Tier and the winner.",
             "When the keeper wants a direct-to-consumer bag with a published panel and a subscription shipment.",
-            "The card says there is no retail backup and a shorter community track record than Wysong or Marshall.",
+            "The card says there is no retail backup.",
             "The price line is subscription pricing, not a dollar range.",
             "Marshall is the mid-tier card on the same kibble review.",
             "Wysong Epigen 90 is the premium pick against Carniwhole.",
@@ -98,7 +98,7 @@ export default function WysongVsCarniwholeGuidePage() {
         <p>Wysong Epigen 90 is the top row and the winner. The current Wysong Epigen 90 page lists crude protein minimum 63% and crude fat minimum 16%. Those are guaranteed-analysis figures as printed, not a dry-matter conversion. The page markets the food as starch-free. Carbohydrate is not on the guaranteed analysis — check the label. It is sold direct and through specialty pet retail, and it may not be in a supermarket aisle. The printed price is $30–50 for 5 pounds. The Amazon search above is the one already used for this bag on the diet pages.</p>
         <p>Dry-matter math for a different label is the <Link href="/tools/label-calculator">label calculator</Link>, using the conversion on the label guide. Wysong’s panel stays the one printed above.</p>
         <h2>What the review says about Carniwhole</h2>
-        <p>Carniwhole is Direct-to-Consumer. The card says keepers choose it for a published ingredient and macronutrient panel and a fresher product than long-shelf-stable kibble. Protein source is listed as animal-first named meats. Distribution is direct only, with no retail backup. Shipping is a subscription. Smaller-batch sourcing is listed as yes. Cons are subscription logistics, the missing retail backup, and a shorter community track record than Marshall or Wysong. The price line says subscription pricing. That is the price the review prints, not a dollar range.</p>
+        <p>Carniwhole is Direct-to-Consumer. The card describes it for keepers who want a published ingredient and macronutrient panel and a fresher product than long-shelf-stable kibble. Protein source is listed as animal-first named meats. Distribution is direct only, with no retail backup. Shipping is a subscription. Smaller-batch sourcing is listed as yes. Cons are subscription logistics and the missing retail backup. The price line says subscription pricing. That is the price the review prints, not a dollar range.</p>
         <h2>Who should buy which food</h2>
         <p>Buy Wysong when the printed guaranteed analysis and specialty or direct stocking are what you want, and the printed bag price is acceptable. Carbohydrate is not on that analysis — check the label. Buy Carniwhole when a subscription shipment and a direct-only panel are acceptable, including the chance you cannot pick the same bag up at a store. Marshall remains the mid-tier retail card on the other guide. Similar carbohydrate on an unknown label does not make that label into either of these bags.</p>
         <p>The sale price can differ from the printed Wysong band. Carniwhole’s price is whatever the subscription page shows, not a figure added here.</p>
@@ -126,12 +126,12 @@ export default function WysongVsCarniwholeGuidePage() {
               <tr className="border-b border-brand-border align-top">
                 <th scope="row" className="p-3 font-bold text-brand-dark text-left">How you buy it</th>
                 <td className="p-3">Direct and specialty retail. It may not be in a supermarket aisle</td>
-                <td className="p-3">Subscription only. No retail backup. Shorter community track record than Wysong or Marshall</td>
+                <td className="p-3">Subscription only. No retail backup</td>
               </tr>
             </tbody>
           </table>
         </div>
-        <ComparisonFoot updated="2026-10-10" />
+        <ComparisonFoot updated="2026-10-11" />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
                 <ArticleSourcesList

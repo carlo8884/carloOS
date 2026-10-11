@@ -48,6 +48,160 @@ test('claim helper: add a line item, pick an insurer, see the summary', async ({
   await expect(page.locator('[data-calculator-result] a')).toHaveCount(0)
 })
 
+test('vets fix: Healthy Paws claim speed matches the cited claims page in picks and schema', async ({ page }) => {
+  await page.goto('/reviews/best-pet-insurance')
+  const card = page.locator('#healthy-paws')
+  await expect(card).toContainText('most claims are processed in 2 days')
+  const pick = page.locator('a[href="#healthy-paws"][aria-label="Most claims in 2 days: Healthy Paws"]').locator('..')
+  await expect(pick).toContainText('Most claims in 2 days')
+  const body = await page.locator('body').innerText()
+  expect(body).not.toMatch(/~\s?2[- ]day|2-day average/i)
+
+  const ld = await page.locator('script[type="application/ld+json"]').allTextContents()
+  const nodes: { name?: string; description?: string }[] = []
+  const walk = (v: unknown) => {
+    if (Array.isArray(v)) v.forEach(walk)
+    else if (v && typeof v === 'object') {
+      nodes.push(v as { name?: string; description?: string })
+      Object.values(v).forEach(walk)
+    }
+  }
+  ld.forEach((text) => walk(JSON.parse(text)))
+  const healthyPaws = nodes.find((n) => n.name === 'Healthy Paws Pet Insurance')
+  expect(healthyPaws?.description).toContain('most claims are processed in 2 days')
+  expect(healthyPaws?.description).not.toMatch(/average|~/)
+})
+
+test('vets fix hp label: Healthy Paws is labeled by its sourced claim speed, not as fastest', async ({ page }) => {
+  for (const path of ['/reviews/best-pet-insurance', '/reviews/trupanion-vs-healthy-paws-guide', '/reviews/healthy-paws-vs-embrace-guide']) {
+    await page.goto(path)
+    expect(await page.locator('body').innerText()).not.toMatch(/fastest[- ]reimbursement|faster reimbursement|fastest claims/i)
+  }
+
+  await page.goto('/reviews/best-pet-insurance')
+  await expect(page.locator('a[href="#healthy-paws"][aria-label="Most claims in 2 days: Healthy Paws"]')).toBeVisible()
+  await expect(page.locator('#healthy-paws')).toContainText('Most claims in 2 days')
+  await expect(page.locator('#healthy-paws')).toContainText('Claims page says most claims are processed in 2 days')
+  const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
+  expect(ld).not.toMatch(/fastest/i)
+})
+
+test('vets fix telehealth picks: each quick pick repeats its card badge, name, and wording', async ({ page }) => {
+  await page.goto('/telehealth')
+  const picks = [
+    { id: 'vetster', label: 'Video and chat', name: 'Vetster', subtitle: 'Video + chat · No monthly commitment' },
+    { id: 'askvet', label: 'Best Subscription', name: 'AskVet', subtitle: "Chat plan. See the carrier's current terms." },
+    { id: 'chewy', label: 'Best for Chewy Customers', name: 'Chewy Connect with a Vet', subtitle: 'Free technician chat · Separate vet video visit' },
+  ]
+  for (const pick of picks) {
+    const tile = page.locator(`a[href="#${pick.id}"][aria-label="${pick.label}: ${pick.name}"]`).locator('..')
+    await expect(tile).toContainText(pick.subtitle)
+    const card = page.locator(`#${pick.id}`)
+    await expect(card).toContainText(pick.label)
+    await expect(card).toContainText(pick.name)
+    for (const part of pick.subtitle.split(' · ')) await expect(card).toContainText(part)
+  }
+  const tiles = page.locator('a[href^="#"][aria-label]').locator('..')
+  await expect(tiles.filter({ hasText: /Licensed DVMs|Linked to Chewy Rx|Chewy Integration/ })).toHaveCount(0)
+
+  const ld = await page.locator('script[type="application/ld+json"]').allTextContents()
+  const names: string[] = []
+  const walk = (v: unknown) => {
+    if (Array.isArray(v)) v.forEach(walk)
+    else if (v && typeof v === 'object') {
+      const node = v as { '@type'?: string; name?: string }
+      if (node['@type'] === 'Product' && node.name) names.push(node.name)
+      Object.values(v).forEach(walk)
+    }
+  }
+  ld.forEach((text) => walk(JSON.parse(text)))
+  expect(names).toEqual(picks.map((p) => p.name))
+})
+
+test('vets fix claim links: claim helper links to the reimbursement estimator and carrier comparison', async ({ page }) => {
+  await page.goto('/tools/claim-helper')
+  const nextSteps = page.locator('h2#next-steps + ul')
+  for (const href of ['/tools/insurance-reimbursement-estimator', '/reviews/best-pet-insurance']) {
+    await expect(nextSteps.locator(`a[href="${href}"]`)).toHaveCount(1)
+    const res = await page.request.get(href, { maxRedirects: 0 })
+    expect(res.status()).toBe(200)
+  }
+  await expect(nextSteps.getByRole('link', { name: 'Pet Insurance Reimbursement Estimator' })).toBeVisible()
+  await expect(nextSteps.getByRole('link', { name: 'Best Pet Insurance 2026 — How the 11 Major Carriers Compare' })).toBeVisible()
+
+  await page.goto('/tools/insurance-reimbursement-estimator')
+  await expect(page.getByRole('link', { name: 'Pet Insurance Claim Helper' })).toHaveAttribute('href', '/tools/claim-helper')
+})
+
+test('vets fix trupanion direct pay: no only-insurer claim, fast-claims labels, or established-carrier badge', async ({ page }) => {
+  const removed = /Only insurer|only one of the 11 major carriers|only carrier whose|Fast Reimbursement|fast claims|Established Carrier/i
+  for (const path of ['/reviews/best-pet-insurance', '/insurance/how-pet-insurance-works', '/insurance/pre-existing-conditions', '/tools/insurance-quote-prep']) {
+    await page.goto(path)
+    expect(await page.locator('body').innerText()).not.toMatch(removed)
+    const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
+    expect(ld).not.toMatch(removed)
+    await expect(page.locator('a[href*="trupanion.com"]')).toHaveCount(0)
+  }
+
+  await page.goto('/reviews/best-pet-insurance')
+  await expect(page.locator('#trupanion')).toContainText('Offers direct vet payment; check terms')
+  await expect(page.locator('#healthy-paws')).toContainText('Direct Pay can reimburse the vet when funding is urgent')
+})
+
+test('vets fix superlatives: provider cards drop unsourced reputation and board-certified claims', async ({ page }) => {
+  const removed = /Board-certified vets available|customer satisfaction|reputation for fast reimbursement|fastest in category|Solid trust signal/i
+  for (const path of ['/telehealth', '/reviews/best-pet-insurance', '/insurance/how-pet-insurance-works']) {
+    await page.goto(path)
+    expect(await page.locator('body').innerText()).not.toMatch(removed)
+    const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
+    expect(ld).not.toMatch(removed)
+  }
+
+  await page.goto('/telehealth')
+  await expect(page.locator('#vetster')).toContainText('Video + chat · No monthly commitment')
+
+  await page.goto('/reviews/best-pet-insurance')
+  await expect(page.locator('#healthy-paws')).toContainText('Claims page says most claims are processed in 2 days')
+  await expect(page.locator('#healthy-paws')).toContainText('Unlimited is one of the limit choices')
+
+  await page.goto('/insurance/how-pet-insurance-works')
+  await expect(page.locator('#healthy-paws')).toContainText('A single straightforward accident-and-illness plan on the pay-then-claim model.')
+})
+
+test('vets fix border collie: Lemonade pick drops unsourced fast-claims wording', async ({ page }) => {
+  await page.goto('/pet-insurance/breeds/border-collie')
+  expect(await page.locator('body').innerText()).not.toMatch(/fast claims/i)
+  const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
+  expect(ld).not.toMatch(/fast claims/i)
+  await expect(page.locator('body')).toContainText("Lemonade's entry-tier premium fits a low-risk profile")
+})
+
+test('vets fix fast claims: deductibles page and Beagle pick use the sourced claims-page fact', async ({ page }) => {
+  const removed = /fast claims|fast reimbursement|fast in-app|lowest-claim/i
+  for (const path of ['/insurance/deductibles-reimbursement', '/pet-insurance/breeds/beagle']) {
+    await page.goto(path)
+    expect(await page.locator('body').innerText()).not.toMatch(removed)
+    const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
+    expect(ld).not.toMatch(removed)
+  }
+
+  await page.goto('/insurance/deductibles-reimbursement')
+  await expect(page.locator('#healthy-paws')).toContainText('Most claims in 2 days, per its claims page')
+  await expect(page.locator('#healthy-paws [data-source="https://www.healthypawspetinsurance.com/pet-insurance-claims.html"]')).toContainText('most claims are processed in 2 days')
+})
+
+test('vets fix sample directory: /vets routes redirect to find-a-vet with no sample listings', async ({ page }) => {
+  for (const path of ['/vets', '/vets/california']) {
+    const res = await page.request.get(path, { maxRedirects: 0 })
+    expect(res.status(), path).toBe(308)
+    expect(res.headers()['location'], path).toMatch(/\/find-a-vet$/)
+  }
+
+  await page.goto('/vets/california/los-angeles')
+  await expect(page).toHaveURL(/\/find-a-vet$/)
+  expect(await page.locator('body').innerText()).not.toMatch(/Sample listing/i)
+})
+
 const FOLD: { path: string; pick: string }[] = [
   { path: '/reviews/best-pet-insurance', pick: 'Trupanion' },
   { path: '/reviews/holiday-emergency-visit-guide', pick: 'Trupanion' },
@@ -109,5 +263,20 @@ test('every review route rejects page-about-itself copy', async ({ page }) => {
   for (const path of reviewRoutes('vets-co')) {
     await page.goto(path, { waitUntil: 'domcontentloaded' })
     await expectMoneyCopy(page)
+  }
+})
+
+test('vets fix hp reimbursement: Healthy Paws guides state the sourced 2-day claims fact, not fast reimbursement', async ({ page }) => {
+  for (const path of [
+    '/reviews/trupanion-vs-healthy-paws-guide',
+    '/reviews/healthy-paws-vs-embrace-guide',
+    '/reviews/healthy-paws-vs-pets-best-guide',
+  ]) {
+    await page.goto(path)
+    const body = await page.locator('body').innerText()
+    expect(body).not.toMatch(/fast reimbursement|reimbursement back fast/i)
+    expect(body).toMatch(/most claims are processed in 2 days/i)
+    const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
+    expect(ld).not.toMatch(/fast reimbursement|reimbursement back fast/i)
   }
 })

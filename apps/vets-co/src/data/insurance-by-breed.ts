@@ -288,7 +288,7 @@ export const INSURANCE_BREEDS: BreedInsuranceProfile[] = [
     dentalRisk: 'moderate',
     recommendedCarrier: 'lemonade-pet',
     recommendedReason:
-      'Beagles are one of the lowest-claim breeds in the AKC top 50. Most claims are routine (ear infections, weight-related issues). Lemonade\'s low premiums and fast in-app claim processing match the risk profile — there\'s no need to pay Trupanion-level premiums for a healthy Beagle.',
+      'Beagles are rated low for chronic and orthopedic risk on this page. The conditions to plan for are ear infections, weight-related arthritis, epilepsy, IVDD, hypothyroidism, and cherry eye. Lemonade\'s entry-tier premium fits a low-risk profile. Confirm on the quote that chronic ear infections and epilepsy medication are covered.',
     alternateCarriers: ['figo', 'embrace'],
     sampleMonthlyPremium: [20, 45],
     keyCoverageNeeds: [
@@ -785,14 +785,14 @@ export const INSURANCE_BREEDS: BreedInsuranceProfile[] = [
     dentalRisk: 'low',
     recommendedCarrier: 'lemonade-pet',
     recommendedReason:
-      'Border Collies are among the healthiest medium-size breeds — most claims are sports-injury and routine orthopedic. Lemonade\'s low premiums and fast claims match a low-risk profile; high-coverage Trupanion tier isn\'t justified actuarially.',
+      'Border Collies are among the healthiest medium-size breeds — most claims are sports-injury and routine orthopedic. Lemonade\'s entry-tier premium fits a low-risk profile; high-coverage Trupanion tier isn\'t justified actuarially.',
     alternateCarriers: ['embrace', 'figo'],
     sampleMonthlyPremium: [25, 55],
     keyCoverageNeeds: [
       'Affordable premium',
       'Coverage for sport/exercise injuries',
       'Hereditary condition coverage',
-      'Fast claims processing',
+      'Clear claim filing process',
     ],
   },
   {

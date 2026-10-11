@@ -68,7 +68,7 @@ const products = [
     description: 'Direct-to-consumer, published macros, subscription-shipped',
     url: `${PAGE_URL}#carniwhole`,
     reviewAuthorName: 'Ferret.com Editorial',
-    reviewBody: 'A direct-to-consumer ferret food favoured by keepers who want ingredient transparency and a fresher product than long-shelf-stable kibble. It publishes its ingredient and macronutrient panel and ships on a subscription model; the trade-off is subscription logistics, no retail backup, and a shorter community track record.',
+    reviewBody: 'A direct-to-consumer ferret food for keepers who want ingredient transparency and a fresher product than long-shelf-stable kibble. It publishes its ingredient and macronutrient panel and ships on a subscription model; the trade-off is subscription logistics and no retail backup.',
   }),
 ]
 
@@ -106,7 +106,7 @@ const combined = combineSchemas(schema, med, itemList, faqSchema, ...products)
 // Near-top jump links — fed by the SAME three picks as the ItemList schema
 // above (same names, same anchors). Labels mirror each ReviewCard's badge.
 const QUICK_PICKS = [
-  { label: 'Premium Tier', name: 'Wysong Epigen 90', subtitle: 'Marketed starch-free. Carbohydrate: check the label', href: '#wysong-epigen-90', pickHop: '/go/wysong/epigen-90?s=diet-best-ferret-kibble' },
+  { label: 'Premium Tier', name: 'Wysong Epigen 90', subtitle: 'Marketed starch-free. Carbohydrate: check the label', href: '#wysong-epigen-90', pickHop: '/go/amazon/B019W9VXZK?s=best-ferret-kibble', pickShopLabel: 'Check price of Wysong Epigen 90 on Amazon' },
   { label: 'Mid Tier', name: 'Marshall Premium Ferret Diet', subtitle: 'Ferret-specific · Widely stocked', href: '#marshall-premium-diet' },
   { label: 'Direct-to-Consumer', name: 'Carniwhole Ferret Food', subtitle: 'Published macros · Subscription', href: '#carniwhole' },
 ]
@@ -197,7 +197,7 @@ export default function BestFerretKibblePage() {
             updatedAt="2026-06-11"
             reviewedBy="Editorial team"
           />
-          <LastUpdated date="2026-10-10" />
+          <LastUpdated date="2026-10-11" />
           <EmailCapture
             variant="inline"
             siteId="ferret-com"
@@ -312,10 +312,10 @@ export default function BestFerretKibblePage() {
             cons={['Premium price', 'Not always stocked at supermarket pet aisles']}
             price="$30–50 / 5 lb"
             priceNote="dated 2026-10-04."
-            ctaText="Check price of Wysong Epigen 90 at Wysong"
-            ctaHref="/go/wysong/epigen-90?s=diet-best-ferret-kibble"
-            ctaAffiliateProgram="wysong"
-            ctaAffiliateProduct="epigen-90"
+            ctaText="Check price of Wysong Epigen 90 on Amazon"
+            ctaHref="/go/amazon/B019W9VXZK?s=best-ferret-kibble"
+            ctaAffiliateProgram="amazon"
+            ctaAffiliateProduct="B019W9VXZK"
           />
           <ReviewCard quietUntilTag
             id="marshall-premium-diet"
@@ -332,7 +332,7 @@ export default function BestFerretKibblePage() {
               { label: 'Ferret-specific', value: 'Yes', highlight: 'good' },
               { label: 'Distribution', value: 'National chain pet retail' },
             ]}
-            pros={['Ferret-specific formulation', 'Widely available', 'Affordable per pound', 'Long manufacturer track record in ferret retail']}
+            pros={['Ferret-specific formulation', 'Widely available', 'Affordable per pound']}
             cons={['Carbohydrate is not on the guaranteed analysis. Check the label.', 'Check the ingredient list on the current bag']}
             price="$15–25 / 4 lb"
             priceNote="dated 2026-10-04."
@@ -347,7 +347,7 @@ export default function BestFerretKibblePage() {
             name="Carniwhole Ferret Food"
             subtitle="Direct-to-consumer, published macros, subscription-shipped"
             description={
-              <p>A direct-to-consumer ferret food favoured by keepers who want ingredient transparency and a fresher product than long-shelf-stable kibble. Carniwhole publishes its ingredient and macronutrient panel and ships on a subscription model. Appeal: transparency and freshness. Trade-off: subscription logistics, no retail backup, and a shorter community track record than Marshall or Wysong.</p>
+              <p>A direct-to-consumer ferret food for keepers who want ingredient transparency and a fresher product than long-shelf-stable kibble. Carniwhole publishes its ingredient and macronutrient panel and ships on a subscription model. Appeal: transparency and freshness. Trade-off: subscription logistics and no retail backup.</p>
             }
             specs={[
               { label: 'Protein source', value: 'Animal-first, named meats', highlight: 'good' },
@@ -356,7 +356,7 @@ export default function BestFerretKibblePage() {
               { label: 'Smaller-batch sourcing', value: 'Yes', highlight: 'good' },
             ]}
             pros={['Ingredient transparency', 'Fresh product', 'Animal-first panel', 'Direct support from a smaller brand']}
-            cons={['Subscription logistics', 'No retail backup', 'Shorter community track record than Marshall or Wysong']}
+            cons={['Subscription logistics', 'No retail backup']}
             price="Subscription pricing"
           />
 
@@ -375,7 +375,7 @@ export default function BestFerretKibblePage() {
               <tbody>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 text-brand-text-mid">Crude protein min. 63% and crude fat min. 16%, as printed. Carbohydrate is not on the analysis</td>
-                  <td className="p-3 font-bold text-brand-dark"><a href="#wysong-epigen-90" className="text-brand-primary">Wysong Epigen 90</a><TableShopLink quietUntilTag href={"/go/wysong/epigen-90?s=diet-best-ferret-kibble"} product={"Wysong Epigen 90"} /></td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#wysong-epigen-90" className="text-brand-primary">Wysong Epigen 90</a><TableShopLink href={"/go/amazon/B019W9VXZK?s=best-ferret-kibble"} product={"Wysong Epigen 90"} /></td>
                   <td className="p-3 text-brand-text-mid">Wysong. Crude protein min. 63%, crude fat min. 16%, as printed. Carbohydrate is not on the guaranteed analysis. $30–50 / 5 lb</td>
                   <td className="p-3 text-brand-text-mid">You need a bag from a supermarket aisle tonight. The card says it is not always stocked there</td>
                 </tr>
@@ -389,12 +389,12 @@ export default function BestFerretKibblePage() {
                   <td className="p-3 text-brand-text-mid">A direct subscription with a published animal-first panel</td>
                   <td className="p-3 font-bold text-brand-dark"><a href="#carniwhole" className="text-brand-primary">Carniwhole</a></td>
                   <td className="p-3 text-brand-text-mid">Direct-to-Consumer. Named meats. Subscription pricing. No retail backup</td>
-                  <td className="p-3 text-brand-text-mid">You need a store backup. The card also notes a shorter track record than Marshall or Wysong</td>
+                  <td className="p-3 text-brand-text-mid">You need a store backup</td>
                 </tr>
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-10" />
+          <ComparisonFoot updated="2026-10-11" />
 
           <p>Wysong and Marshall, the two kibbles on this page, are compared in the <Link href="/reviews/wysong-vs-marshall-kibble-guide">Wysong versus Marshall guide</Link>. Wysong and Carniwhole are set side by side in the <Link href="/reviews/wysong-vs-carniwhole-guide">Wysong versus Carniwhole guide</Link>.</p>
           <h2 id="faq">FAQ</h2>

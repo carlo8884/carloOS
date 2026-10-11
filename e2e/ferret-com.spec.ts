@@ -24,6 +24,41 @@ test('cage guide, cage setup, tagged hop', async ({ page }) => {
   )
 })
 
+test('cage calculator: one ferret with short out-time gets the Ferret Nation, not the Kaytee', async ({ page }) => {
+  await page.goto('/tools/cage-size-calculator')
+  await page.locator('#cs-ferrets').fill('1')
+  const pick = page.locator('[data-result-pick]')
+
+  await page.getByRole('button', { name: '4 h', exact: true }).click()
+  await expect(pick.locator('a[href^="/go/amazon/"]')).toHaveAttribute('href', /B008FONT2Y/)
+
+  await page.getByRole('button', { name: '< 4 h', exact: true }).click()
+  await expect(pick.locator('a[href^="/go/amazon/"]')).toHaveAttribute('href', /B0054U8UGW/)
+  await expect(pick).toContainText('With under four hours out')
+})
+
+test('cost calculator: cage and food cards follow ferret count, housing, and food style', async ({ page }) => {
+  await page.goto('/tools/cost-calculator')
+  const cage = page.locator('[data-cost-pick="cage"]')
+  const food = page.locator('[data-cost-pick="food"]')
+
+  await expect(cage.locator('a[href^="/go/amazon/"]')).toHaveAttribute('href', '/go/amazon/B0054U8UGW?s=tools-cost-calculator')
+
+  await page.locator('#cc-ferrets').fill('1')
+  await expect(cage.locator('a[href^="/go/amazon/"]')).toHaveAttribute('href', '/go/amazon/B008FONT2Y?s=tools-cost-calculator')
+
+  await page.getByRole('button', { name: 'Room / playpen', exact: true }).click()
+  await expect(cage.locator('a[href*="/go/"]')).toHaveCount(0)
+  await expect(cage.getByRole('link', { name: 'Read the ferret cage review' })).toHaveAttribute('href', '/reviews/best-ferret-cage')
+
+  await expect(food.locator('a[href^="/go/amazon-brand/"]')).toHaveAttribute(
+    'href',
+    '/go/amazon-brand/high+protein+ferret+food+kibble?s=tools-cost-calculator',
+  )
+  await page.getByRole('button', { name: 'Whole-prey / raw', exact: true }).click()
+  await expect(food.locator('a[href*="/go/"]')).toHaveCount(0)
+  await expect(food.getByRole('link', { name: 'Read whole-prey vs kibble for ferrets' })).toHaveAttribute('href', '/diet/whole-prey-vs-kibble')
+})
 
 const FOLD: { path: string; pick: string }[] = [
   { path: '/reviews/best-ferret-cage', pick: 'Ferret Nation' },
@@ -67,6 +102,61 @@ test.describe('money fold at 390', () => {
       await expectMoneyCopy(page)
     })
   }
+})
+
+test('ferret fix superlatives: product cards drop unsourced reputation and superlative claims', async ({ page }) => {
+  const removed = /track record|favoured by keepers|reference multi-ferret cage|keeping community|Community reference standard|default recommendation|ferret-keeper community|Excellent door access|excellent access|Lowest dust profile|Starch-free premium kibble/i
+  for (const path of [
+    '/diet/best-ferret-kibble',
+    '/care/diet-basics',
+    '/reviews/wysong-vs-carniwhole-guide',
+    '/reviews/best-ferret-cage',
+    '/care/cage-setup',
+    '/care/litter-training',
+    '/reviews/best-ferret-litter',
+    '/diet/whole-prey-vs-kibble',
+  ]) {
+    await page.goto(path, { waitUntil: 'domcontentloaded' })
+    expect(await page.locator('body').innerText(), path).not.toMatch(removed)
+    const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
+    expect(ld, path).not.toMatch(removed)
+  }
+
+  await page.goto('/care/cage-setup')
+  await expect(page.locator('body')).toContainText('Full-width double doors per level')
+  await page.goto('/care/litter-training')
+  await expect(page.locator('body')).toContainText('Very low dust')
+  await page.goto('/diet/whole-prey-vs-kibble')
+  await expect(page.locator('body')).toContainText('Marketed as starch-free — the lower-risk base diet')
+})
+
+test('ferret fix audit: kibble top pick card and quick pick link to the Wysong Epigen 90 Amazon ASIN', async ({ page }) => {
+  await page.goto('/diet/best-ferret-kibble')
+  const hop = '/go/amazon/B019W9VXZK?s=best-ferret-kibble'
+
+  const card = page.locator('#wysong-epigen-90')
+  await expect(card.getByRole('link', { name: /Check price of Wysong Epigen 90 on Amazon/ })).toHaveAttribute('href', hop)
+  await expect(card).not.toContainText('Available from Wysong')
+  await expect(page.locator('a[href^="/go/wysong"], a[href^="/go/marshall"]')).toHaveCount(0)
+
+  await expect(page.locator(`a[href="${hop}"]`).first()).toBeVisible()
+  expect(await page.locator(`a[href="${hop}"]`).count()).toBeGreaterThanOrEqual(3)
+
+  await expectHop(page.request, hop, ['https://amazon.com/dp/B019W9VXZK', `tag=${AMAZON_TAG}`])
+})
+
+test('litter review and starter kit: shop links and JSON-LD use Amazon, not Chewy', async ({ page }) => {
+  await page.goto('/reviews/best-ferret-litter')
+  await expect(page.locator('[href*="/go/chewy"]')).toHaveCount(0)
+  const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
+  expect(ld).not.toContain('go/chewy')
+  expect(ld).toContain('https://ferret.com/go/amazon-brand/recycled+paper+pellet+litter+non+clumping')
+  const topPick = page.locator('#paper-pellet a[href^="/go/"]').first()
+  await expect(topPick).toHaveAttribute('href', /^\/go\/amazon/)
+
+  await page.goto('/ferret-starter-kit')
+  await expect(page.locator('body')).toContainText('Prevue Feisty Ferret')
+  await expect(page.locator('body')).not.toContainText(/numeric id|Chewy search/i)
 })
 
 test('every review route rejects page-about-itself copy', async ({ page }) => {

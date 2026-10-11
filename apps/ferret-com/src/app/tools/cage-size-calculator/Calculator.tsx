@@ -73,7 +73,7 @@ export default function CageSizeCalculator() {
   return (
     <div className="rounded-lg border border-brand-border bg-brand-surface p-6 sm:p-8">
       {result ? (
-        <ResultPick linkFirst siteId="ferret-com" pick={ferretCagePick(ferrets)} />
+        <ResultPick linkFirst siteId="ferret-com" pick={ferretCagePick(ferrets, result.playShort)} />
       ) : null}
       <div className="grid gap-6 sm:grid-cols-3">
         <div>
@@ -195,7 +195,7 @@ export default function CageSizeCalculator() {
           href="/reviews/best-ferret-cage"
           className="mt-3 inline-block max-w-full font-semibold text-brand-primary underline underline-offset-2"
         >
-          Compare the cages that meet this footprint
+          Compare the cages the review recommends for your ferret count
         </a>
       </div>
       )}

@@ -276,7 +276,10 @@ export default function FerretDietBasicsPage() {
             subtitle="Animal-first. Marketed starch-free. The printed list does not name wheat, corn, rice, or soy."
             winner
             description={
-              <p>The current Wysong Epigen 90 page lists crude protein minimum 63% and crude fat minimum 16%. Those are guaranteed-analysis figures as printed, not a dry-matter conversion. The page markets the food as starch-free. Carbohydrate is not on the guaranteed analysis — check the label.</p>
+              <>
+                <p>The current Wysong Epigen 90 page lists crude protein minimum 63% and crude fat minimum 16%. Those are guaranteed-analysis figures as printed, not a dry-matter conversion. The page markets the food as starch-free. Carbohydrate is not on the guaranteed analysis — check the label.</p>
+                <p><a className="font-semibold text-brand-primary" href="/go/amazon/B019W9VXZK?s=diet-basics">Check price of Wysong Epigen 90 on Amazon →</a></p>
+              </>
             }
             specs={[
               { label: 'Crude protein (as printed)', value: 'Min. 63%', highlight: 'good' },
@@ -309,7 +312,7 @@ export default function FerretDietBasicsPage() {
               { label: 'Ferret-specific', value: 'Yes', highlight: 'good' },
               { label: 'Distribution', value: 'National chain pet retail' },
             ]}
-            pros={['Ferret-specific formulation', 'Widely available', 'Affordable per pound', 'Long manufacturer track record in ferret retail']}
+            pros={['Ferret-specific formulation', 'Widely available', 'Affordable per pound']}
             cons={['Carbohydrate is not on the guaranteed analysis. Check the label.', 'Check the ingredient list on the current bag']}
             price="see current price / 4 lb"
             priceNote="dated 2026-05-31."
@@ -324,7 +327,7 @@ export default function FerretDietBasicsPage() {
             name="Carniwhole Ferret Food"
             subtitle="Direct-to-consumer ferret food, published macros, subscription-shipped"
             description={
-              <p>A direct-to-consumer ferret food brand favoured by keepers who want ingredient transparency and a fresher product than long-shelf-stable commercial kibble. Carniwhole publishes its ingredient and macronutrient panel and ships on a subscription model. Appeal: transparency and freshness. Trade-off: subscription logistics and a shorter community track record than Marshall or Wysong.</p>
+              <p>A direct-to-consumer ferret food brand for keepers who want ingredient transparency and a fresher product than long-shelf-stable commercial kibble. Carniwhole publishes its ingredient and macronutrient panel and ships on a subscription model. Appeal: transparency and freshness. Trade-off: subscription logistics and no retail backup.</p>
             }
             specs={[
               { label: 'Protein source', value: 'Animal-first, named meats', highlight: 'good' },
@@ -333,7 +336,7 @@ export default function FerretDietBasicsPage() {
               { label: 'Smaller-batch sourcing', value: 'Yes', highlight: 'good' },
             ]}
             pros={['Ingredient transparency', 'Fresh product', 'Animal-first panel', 'Direct support from a smaller brand']}
-            cons={['Subscription logistics', 'No retail backup', 'Shorter community track record than Marshall or Wysong']}
+            cons={['Subscription logistics', 'No retail backup']}
             price="Subscription pricing"
           />
 

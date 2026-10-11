@@ -45,7 +45,7 @@ const breadcrumbSchema = buildBreadcrumbSchema({
 const itemList = buildItemListSchema({
   name: 'Ferret Litters That Meet the Criteria',
   items: [
-    { name: 'Recycled Paper Pellet Litter', url: 'https://ferret.com/go/chewy-brand/recycled+paper+pellet+litter+non+clumping?s=reviews-best-ferret-litter' },
+    { name: 'Recycled Paper Pellet Litter', url: 'https://ferret.com/go/amazon-brand/recycled+paper+pellet+litter+non+clumping?s=reviews-best-ferret-litter' },
     { name: 'Compressed Wood (Heat-Treated) Pellet Litter', url: 'https://ferret.com/reviews/best-ferret-litter#wood-pellet' },
     { name: 'Pelleted Grass / Plant-Fiber Litter', url: 'https://ferret.com/reviews/best-ferret-litter#grass-pellet' },
   ],
@@ -55,9 +55,9 @@ const products = [
   buildProductSchema({
     name: 'Recycled Paper Pellet Litter',
     description: 'Low-dust, non-clumping, soft on feet — the default ferret litter',
-    url: 'https://ferret.com/go/chewy-brand/recycled+paper+pellet+litter+non+clumping?s=reviews-best-ferret-litter',
+    url: 'https://ferret.com/go/amazon-brand/recycled+paper+pellet+litter+non+clumping?s=reviews-best-ferret-litter',
     reviewAuthorName: 'Ferret.com Editorial',
-    reviewBody: 'The default recommendation. Recycled-paper pellets are low-dust, non-clumping, absorbent, and soft enough on the feet that ferrets accept them readily. They carry no clumping agents to swallow and no fine respiratory dust. The trade-off is moderate odor control versus heavily perfumed cat litters and the need to change rather than scoop-and-top-up — both acceptable given the safety profile.',
+    reviewBody: 'Our default pick. Recycled-paper pellets are low-dust, non-clumping, absorbent, and soft enough on the feet that ferrets accept them readily. They carry no clumping agents to swallow and no fine respiratory dust. The trade-off is moderate odor control versus heavily perfumed cat litters and the need to change rather than scoop-and-top-up — both acceptable given the safety profile.',
   }),
 ]
 
@@ -93,7 +93,7 @@ const faqSchema = buildFAQSchema({ questions: FAQS })
 const combined = combineSchemas(schema, breadcrumbSchema, itemList, faqSchema, ...products)
 
 const QUICK_PICKS = [
-  { label: 'Best Overall', name: 'Recycled Paper Pellet', subtitle: 'Low-dust · Non-clumping · Soft', href: '#paper-pellet', pickHop: '/go/chewy-brand/recycled+paper+pellet+litter+non+clumping?s=reviews-best-ferret-litter' },
+  { label: 'Best Overall', name: 'Recycled Paper Pellet', subtitle: 'Low-dust · Non-clumping · Soft', href: '#paper-pellet', pickHop: '/go/amazon-brand/recycled+paper+pellet+litter+non+clumping?s=reviews-best-ferret-litter' },
   { label: 'Best for Odor', name: 'Heat-Treated Wood Pellet', subtitle: 'Phenol-free · Strong odor control', href: '#wood-pellet' },
   { label: 'Soft Alternative', name: 'Grass / Plant-Fiber Pellet', subtitle: 'Low-dust · Lighter tracking', href: '#grass-pellet' },
 ]
@@ -116,8 +116,8 @@ export default function BestFerretLitterPage() {
         <>
           <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">Recycled paper pellets are the top ferret litter because they do not clump and the dust stays low.</p>
           <div data-fold="offer">
-          <PrimaryHop href='/go/chewy-brand/recycled+paper+pellet+litter+non+clumping?s=reviews-best-ferret-litter' label="Open the recycled paper-pellet search." />
-          <HopDisclosure siteId="ferret-com" href="/go/chewy-brand/recycled+paper+pellet+litter+non+clumping?s=reviews-best-ferret-litter" />
+          <PrimaryHop href='/go/amazon-brand/recycled+paper+pellet+litter+non+clumping?s=reviews-best-ferret-litter' label="Open the recycled paper-pellet search." />
+          <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/recycled+paper+pellet+litter+non+clumping?s=reviews-best-ferret-litter" />
         </div>
         </>
       }
@@ -177,7 +177,7 @@ export default function BestFerretLitterPage() {
             updatedAt="2026-06-11"
             reviewedBy="Editorial team"
           />
-          <LastUpdated date="2026-10-10" />
+          <LastUpdated date="2026-10-11" />
           <EmailCapture
             variant="inline"
             siteId="ferret-com"
@@ -266,7 +266,7 @@ export default function BestFerretLitterPage() {
             category, choose a reputable pelleted product and confirm it is non-clumping and free of added clumping
             agents.
           </p>
-          <HopDisclosure siteId="ferret-com" href="/go/chewy-brand/recycled+paper+pellet+litter+non+clumping?s=reviews-best-ferret-litter" />
+          <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/recycled+paper+pellet+litter+non+clumping?s=reviews-best-ferret-litter" />
 
           <ReviewCard
             id="paper-pellet"
@@ -275,7 +275,7 @@ export default function BestFerretLitterPage() {
             subtitle="Low-dust, non-clumping, soft on feet — the default ferret litter"
             winner
             description={
-              <p>The default recommendation for ferrets. Recycled-paper pellets are low-dust, non-clumping, absorbent, and soft enough on the feet that ferrets accept them readily. There are no clumping agents to swallow and no fine respiratory dust. The trade-offs are moderate odor control versus heavily perfumed cat litters and the need to change rather than scoop-and-top-up — both easily acceptable given the safety profile. If you buy one litter without overthinking it, buy a current recycled-paper pellet. Purina discontinued Yesterday&apos;s News on April 20, 2022, and closed the plant that June. This search is for a recycled paper pellet still being sold.</p>
+              <p>Our default pick for ferrets. Recycled-paper pellets are low-dust, non-clumping, absorbent, and soft enough on the feet that ferrets accept them readily. There are no clumping agents to swallow and no fine respiratory dust. The trade-offs are moderate odor control versus heavily perfumed cat litters and the need to change rather than scoop-and-top-up — both easily acceptable given the safety profile. If you buy one litter without overthinking it, buy a current recycled-paper pellet. Purina discontinued Yesterday&apos;s News on April 20, 2022, and closed the plant that June. This search is for a recycled paper pellet still being sold.</p>
             }
             specs={[
               { label: 'Dust', value: 'Very low', highlight: 'good' },
@@ -288,8 +288,8 @@ export default function BestFerretLitterPage() {
             cons={['Moderate odor control', 'Change rather than scoop', 'Lighter pellets can scatter']}
             price="$$"
             ctaText="Open the recycled paper-pellet search."
-            ctaHref="/go/chewy-brand/recycled+paper+pellet+litter+non+clumping?s=reviews-best-ferret-litter"
-            ctaAffiliateProgram="chewy-brand"
+            ctaHref="/go/amazon-brand/recycled+paper+pellet+litter+non+clumping?s=reviews-best-ferret-litter"
+            ctaAffiliateProgram="amazon-brand"
             ctaAffiliateProduct="paper-pellet-litter"
           />
 
@@ -350,7 +350,7 @@ export default function BestFerretLitterPage() {
               <tbody>
                 <tr className="border-b border-brand-border">
                   <td className="p-3">A default that most ferrets accept</td>
-                  <td className="p-3 font-bold"><a href="#paper-pellet">Recycled paper pellets</a><TableShopLink href={"/go/chewy-brand/recycled+paper+pellet+litter+non+clumping?s=reviews-best-ferret-litter"} product={"Recycled paper pellets"} /></td>
+                  <td className="p-3 font-bold"><a href="#paper-pellet">Recycled paper pellets</a><TableShopLink href={"/go/amazon-brand/recycled+paper+pellet+litter+non+clumping?s=reviews-best-ferret-litter"} product={"Recycled paper pellets"} /></td>
                   <td className="p-3">Best overall. Very low dust. Soft. Price tier $$</td>
                   <td className="p-3">Moderate odor control. Change the box rather than scoop and top up</td>
                 </tr>
@@ -369,7 +369,7 @@ export default function BestFerretLitterPage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-10" />
+          <ComparisonFoot updated="2026-10-11" />
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
