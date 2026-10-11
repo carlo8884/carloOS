@@ -86,6 +86,38 @@ test('vets fix hp label: Healthy Paws is labeled by its sourced claim speed, not
   expect(ld).not.toMatch(/fastest/i)
 })
 
+test('vets fix telehealth picks: each quick pick repeats its card badge, name, and wording', async ({ page }) => {
+  await page.goto('/telehealth')
+  const picks = [
+    { id: 'vetster', label: 'Video and chat', name: 'Vetster', subtitle: 'Video + chat · No monthly commitment' },
+    { id: 'askvet', label: 'Best Subscription', name: 'AskVet', subtitle: "Chat plan. See the carrier's current terms." },
+    { id: 'chewy', label: 'Best for Chewy Customers', name: 'Chewy Connect with a Vet', subtitle: 'Free technician chat · Separate vet video visit' },
+  ]
+  for (const pick of picks) {
+    const tile = page.locator(`a[href="#${pick.id}"][aria-label="${pick.label}: ${pick.name}"]`).locator('..')
+    await expect(tile).toContainText(pick.subtitle)
+    const card = page.locator(`#${pick.id}`)
+    await expect(card).toContainText(pick.label)
+    await expect(card).toContainText(pick.name)
+    for (const part of pick.subtitle.split(' · ')) await expect(card).toContainText(part)
+  }
+  const tiles = page.locator('a[href^="#"][aria-label]').locator('..')
+  await expect(tiles.filter({ hasText: /Licensed DVMs|Linked to Chewy Rx|Chewy Integration/ })).toHaveCount(0)
+
+  const ld = await page.locator('script[type="application/ld+json"]').allTextContents()
+  const names: string[] = []
+  const walk = (v: unknown) => {
+    if (Array.isArray(v)) v.forEach(walk)
+    else if (v && typeof v === 'object') {
+      const node = v as { '@type'?: string; name?: string }
+      if (node['@type'] === 'Product' && node.name) names.push(node.name)
+      Object.values(v).forEach(walk)
+    }
+  }
+  ld.forEach((text) => walk(JSON.parse(text)))
+  expect(names).toEqual(picks.map((p) => p.name))
+})
+
 const FOLD: { path: string; pick: string }[] = [
   { path: '/reviews/best-pet-insurance', pick: 'Trupanion' },
   { path: '/reviews/holiday-emergency-visit-guide', pick: 'Trupanion' },
