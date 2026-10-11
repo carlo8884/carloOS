@@ -83,7 +83,7 @@ export default function HealthyPawsVsEmbraceGuidePage() {
       priceAsOf="2026-10-07"
     >
       <div className="carloOS-article">
-          <LastUpdated date="2026-10-10" />
+          <LastUpdated date="2026-10-11" />
         <EmailCapture
           variant="inline"
           siteId="vets-co"
@@ -102,7 +102,7 @@ export default function HealthyPawsVsEmbraceGuidePage() {
         />
         <p>Healthy Paws is the reimbursement-speed pick. Embrace is for owners who want routine care on an add-on. <Link href="/reviews/healthy-paws-vs-pets-best-guide">Healthy Paws versus Pets Best</Link> is the deductible-and-tier comparison, not this wellness add-on. Those bands are not a quote for your pet.</p>
         <h2>What the review says about Healthy Paws</h2>
-        <p>Healthy Paws is Fastest Reimbursement. Reimbursement is up to 90 percent. The Healthy Paws claims page, fetched 2026-10-08, says most claims are processed in 2 days, and that Direct Pay can reimburse the vet when funding is urgent. The deductible is annual. See the carrier&apos;s current terms for the monthly price. Our notes list no wellness add-on.</p>
+        <p>Healthy Paws is the reimbursement-speed pick. Reimbursement is up to 90 percent. The Healthy Paws claims page, fetched 2026-10-08, says most claims are processed in 2 days, and that Direct Pay can reimburse the vet when funding is urgent. The deductible is annual. See the carrier&apos;s current terms for the monthly price. Our notes list no wellness add-on.</p>
         <p>The annual limit is a choice of $5,000, $7,000, or unlimited.</p>
         <h2>What the review says about Embrace</h2>
         <p>Embrace is Wellness Included. The Wellness Rewards page, fetched 2026-10-08, lists wellness exams, vaccinations, flea, tick, and heartworm prevention, and preventative dental cleaning. Our notes mark that coverage as a standalone add-on. Reimbursement in the review is 70%, 80%, or 90%. The deductible program and the orthopedic waiting period: see the carrier&apos;s current terms. The review also says the plan options are more complex.</p>
@@ -123,7 +123,7 @@ export default function HealthyPawsVsEmbraceGuidePage() {
             <tbody>
               <tr className="border-b border-brand-border align-top">
                 <th scope="row" className="p-3 font-bold text-brand-dark text-left">Role</th>
-                <td className="p-3">Fastest reimbursement</td>
+                <td className="p-3">Most claims in 2 days, per its claims page</td>
                 <td className="p-3">Wellness add-on</td>
               </tr>
               <tr className="border-b border-brand-border align-top">
@@ -149,7 +149,7 @@ export default function HealthyPawsVsEmbraceGuidePage() {
             </tbody>
           </table>
         </div>
-        <ComparisonFoot updated="2026-10-10" />
+        <ComparisonFoot updated="2026-10-11" />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
                 <ArticleSourcesList title="Sources"
