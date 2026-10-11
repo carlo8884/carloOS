@@ -6,7 +6,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
   title: 'Ferret care search',
   description:
-    'Search Ferret.com care guides, reviews, comparisons, and tools. A search with no match starts with diet, cage setup, or the cage size calculator.',
+    'Search Ferret.com care guides, reviews, comparisons, and tools. A search with no match starts with cages, litter, kibble, or the cage size calculator.',
   path: '/search',
   noIndex: true,
 })
