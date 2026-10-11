@@ -12,7 +12,9 @@ Alternate if Vets.co is not the first public site. This file does not set env, D
 | Amazon tag in use | Pass | Hops read `AFF_AMAZON_TAG` and do not bake a second tag (`amazonAssociateTag` in `packages/config/affiliate-hop.ts`). The setter script's recorded tag is `boltonpets20-20`. This change does not set the env. |
 | GA4 firing | Pass | `apps/ferret-com/src/app/layout.tsx` mounts `Ga4Loader` with `NEXT_PUBLIC_GA_MEASUREMENT_ID` and `AffiliateClickListener` for `ferret-com`. A placeholder `G-XXXXXXXXXX` renders nothing. A real id loads gtag and the click listener sends one `affiliate_click`. This change does not set the id. |
 | Legal pages | Pass | `/about`, `/disclosure`, `/editorial-standards`, `/legal/privacy-policy`, `/legal/terms`, `/how-we-pick`. |
-| 404 and search recovery | Pass | `not-found.tsx` is `noindex` with canonical `https://ferret.com/` and `MissedPage` (search box plus buying guides). `/search` is `noIndex`. |
-| Lighthouse | Pass | Mobile budgets in `scripts/ci/lighthouse-budgets-lib.mjs` (performance at least 0.95, accessibility 1, CLS at most 0.05). Green on main `60e01f1d` ([lighthouse run](https://github.com/carlo8884/carloOS/actions/runs/37889882379)). This change does not loosen a budget. |
+| 404 and search recovery | Pass | `not-found.tsx` is `noindex` with canonical `https://ferret.com/` and `MissedPage` (search box plus buying guides). `/search` is `noIndex`. A search with no match shows `MissedPage` with the cage, litter, harness, and kibble guides, the bedding guide, and the cage size calculator (`packages/ui/src/data/missed-page.ts`). |
+| Lighthouse | Pass | Mobile budgets in `scripts/ci/lighthouse-budgets-lib.mjs` (performance at least 0.95, accessibility 1, CLS at most 0.05). Green on main `60e01f1d` ([lighthouse run](https://github.com/carlo8884/carloOS/actions/runs/37889882379)) and on `6b2e2860` ([lighthouse run](https://github.com/carlo8884/carloOS/actions/runs/38157243391)). This change does not loosen a budget. |
+
+Re-verified 2026-10-11 on `5b293d45`: `LAUNCH_FLIP_SITES=ferret-com node scripts/ci/launch-flip.mjs` ok, and `held-partner-hrefs.mjs` found 0 live held hrefs in 326 built ferret-com pages.
 
 Before DNS: set `SITE_INDEXABLE=ferret.com` on the Ferret project only, then redeploy. Leave Dog.com and Fish.com unset.
