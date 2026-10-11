@@ -130,6 +130,21 @@ test('ferret fix superlatives: product cards drop unsourced reputation and super
   await expect(page.locator('body')).toContainText('Marketed as starch-free — the lower-risk base diet')
 })
 
+test('ferret fix audit: kibble top pick card and quick pick link to the Wysong Epigen 90 Amazon ASIN', async ({ page }) => {
+  await page.goto('/diet/best-ferret-kibble')
+  const hop = '/go/amazon/B019W9VXZK?s=best-ferret-kibble'
+
+  const card = page.locator('#wysong-epigen-90')
+  await expect(card.getByRole('link', { name: /Check price of Wysong Epigen 90 on Amazon/ })).toHaveAttribute('href', hop)
+  await expect(card).not.toContainText('Available from Wysong')
+  await expect(page.locator('a[href^="/go/wysong"], a[href^="/go/marshall"]')).toHaveCount(0)
+
+  await expect(page.locator(`a[href="${hop}"]`).first()).toBeVisible()
+  expect(await page.locator(`a[href="${hop}"]`).count()).toBeGreaterThanOrEqual(3)
+
+  await expectHop(page.request, hop, ['https://amazon.com/dp/B019W9VXZK', `tag=${AMAZON_TAG}`])
+})
+
 test('every review route rejects page-about-itself copy', async ({ page }) => {
   test.setTimeout(240_000)
   for (const path of reviewRoutes('ferret-com')) {
