@@ -308,6 +308,8 @@ interface QuickPickItem {
   emoji?: string
   name: string
   subtitle?: string
+  /** Page the subtitle's figure is taken from, kept beside the claim. */
+  sourceUrl?: string
   href: string
   /** Existing product hop for the Best Overall card. Other labels ignore it. */
   pickHop?: string
@@ -345,7 +347,7 @@ export function QuickPicks({ items, title = 'Jump to Your Pick', embedded = fals
             <div className="pointer-events-none">
               <div className="text-sm font-bold text-brand-dark mb-0.5">{item.name}</div>
               {item.subtitle && (
-                <div className="text-xs text-brand-text-light">{item.subtitle}</div>
+                <div className="text-xs text-brand-text-light" data-source={item.sourceUrl}>{item.subtitle}</div>
               )}
             </div>
           </div>
