@@ -130,7 +130,7 @@ export default function NovemberDecemberGiftGuidePage() {
               </tr>
               <tr className="border-b border-brand-border">
                 <td className="p-3">$30–50 for 5 pounds</td>
-                <td className="p-3 font-bold">Wysong Epigen 90<TableShopLink quietUntilTag href={`/go/wysong/epigen-90?s=${SOURCE}`} product="Wysong Epigen 90" /></td>
+                <td className="p-3 font-bold">Wysong Epigen 90<TableShopLink href={`/go/amazon/B019W9VXZK?s=${SOURCE}`} product="Wysong Epigen 90" /></td>
                 <td className="p-3"><Link href="/diet/best-ferret-kibble">Kibble review</Link></td>
               </tr>
               <tr className="border-b border-brand-border">

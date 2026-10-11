@@ -199,7 +199,10 @@ export default function ProteinAndFatRequirementsPage() {
             subtitle="Animal-first. The current page markets it as starch-free and prints crude protein minimum 63%."
             winner
             description={
-              <p>The current Wysong Epigen 90 page lists crude protein minimum 63% and crude fat minimum 16%. Those are guaranteed-analysis figures as printed, not a dry-matter conversion. The page markets the food as starch-free. Carbohydrate is not on the guaranteed analysis — check the label. Crude protein minimum 63% is above the 32–40% floor on this page. Carbohydrate is not printed, so do not treat the bag as a measured carbohydrate example.</p>
+              <>
+                <p>The current Wysong Epigen 90 page lists crude protein minimum 63% and crude fat minimum 16%. Those are guaranteed-analysis figures as printed, not a dry-matter conversion. The page markets the food as starch-free. Carbohydrate is not on the guaranteed analysis — check the label. Crude protein minimum 63% is above the 32–40% floor on this page. Carbohydrate is not printed, so do not treat the bag as a measured carbohydrate example.</p>
+                <p><a className="font-semibold text-brand-primary" href="/go/amazon/B019W9VXZK?s=protein-and-fat-requirements">Check price of Wysong Epigen 90 on Amazon →</a></p>
+              </>
             }
             specs={[
               { label: 'Crude protein (as printed)', value: 'Min. 63%', highlight: 'good' },

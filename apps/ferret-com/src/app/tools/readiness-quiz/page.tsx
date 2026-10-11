@@ -212,7 +212,7 @@ export default function ReadinessQuizPage() {
             </div>
             <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
               The six-item list above is a husbandry starting point — cage, litter, food, hammock,
-              dig box, carrier — not a ranked product list. The Amazon buttons still on this page are the Ferret Nation / Critter Nation double unit, plus the kibble and carrier searches used on the{' '}
+              dig box, carrier — not a ranked product list. The Amazon buttons still on this page are the Ferret Nation double unit, plus the kibble and carrier searches used on the{' '}
               <Link href="/reviews/best-ferret-cage" className="text-brand-primary underline-offset-2 hover:underline">
                 cage review
               </Link>
@@ -229,7 +229,7 @@ export default function ReadinessQuizPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon/B0054U8UGW?s=tools-readiness-quiz"
-                amazonLabel="Browse Ferret Nation / Critter Nation double units on Amazon →"
+                amazonLabel="Browse the Ferret Nation double unit on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/high+protein+ferret+food+kibble?s=tools-readiness-quiz"
