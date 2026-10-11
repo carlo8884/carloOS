@@ -65,13 +65,13 @@ export function IconArrowRight({ className }: { className?: string }) {
   )
 }
 
-const PROBLEMS: { icon: React.ReactNode; title: string; desc: string; href: string; imageKey: string; imageAlt: string }[] = [
-  { icon: <ProblemIconCloud />, title: 'Cloudy water', desc: 'White/grey haze, bacterial bloom, or green water — what caused it and what fixes it.', href: '/setup/water-chemistry-guide', imageKey: 'fish-com:water-parameters-hero', imageAlt: 'Aquarium water testing tubes and reagents' },
-  { icon: <ProblemIconBubbles />, title: 'Fish gasping at the surface', desc: 'Low oxygen, high ammonia, gill irritation — triage and emergency actions.', href: '/health/fish-disease-guide', imageKey: 'fish-com:species-thumb-goldfish', imageAlt: 'A goldfish' },
-  { icon: <ProblemIconWarning />, title: 'Ammonia / nitrite spike', desc: 'Cycle crash, overstocking, dead fish, new-tank syndrome — what the readings mean.', href: '/health/new-tank-syndrome', imageKey: 'fish-com:cornerstone-cycling', imageAlt: 'A freshwater aquarium test kit being used to check water parameters' },
-  { icon: <ProblemIconLeaf />, title: 'Algae outbreak', desc: 'Green water, brown diatoms, black beard, hair algae — identify and treat by type.', href: '/setup/planted-tank-setup', imageKey: 'fish-com:category-planted', imageAlt: 'Lush aquatic plants in a planted aquarium' },
-  { icon: <ProblemIconCycle />, title: 'New tank cycling', desc: 'Fishless cycle, fish-in cycle, the nitrogen cycle in plain English — how long, what to test.', href: '/setup/aquarium-cycling-guide', imageKey: 'fish-com:glossary-hero', imageAlt: 'A clear planted aquarium' },
-  { icon: <ProblemIconFish />, title: 'Stocking & compatibility', desc: 'How many fish in your tank, who fights with whom, temperament + tank-size math.', href: '/tools/stocking-calculator', imageKey: 'fish-com:species-thumb-neon-tetra', imageAlt: 'Neon tetra fish in an aquarium' },
+const PROBLEMS: { icon: React.ReactNode; title: string; desc: string; href: string; imageKey: string; imageAlt: string; cta: string }[] = [
+  { icon: <ProblemIconCloud />, title: 'Cloudy water', desc: 'White/grey haze, bacterial bloom, or green water — what caused it and what fixes it.', href: '/setup/water-chemistry-guide', imageKey: 'fish-com:water-parameters-hero', imageAlt: 'Aquarium water testing tubes and reagents', cta: 'Fix the haze' },
+  { icon: <ProblemIconBubbles />, title: 'Fish gasping at the surface', desc: 'Low oxygen, high ammonia, gill irritation — triage and emergency actions.', href: '/health/fish-disease-guide', imageKey: 'fish-com:species-thumb-goldfish', imageAlt: 'A goldfish', cta: 'Triage the gasp' },
+  { icon: <ProblemIconWarning />, title: 'Ammonia / nitrite spike', desc: 'Cycle crash, overstocking, dead fish, new-tank syndrome — what the readings mean.', href: '/health/new-tank-syndrome', imageKey: 'fish-com:cornerstone-cycling', imageAlt: 'A freshwater aquarium test kit being used to check water parameters', cta: 'Read the spike' },
+  { icon: <ProblemIconLeaf />, title: 'Algae outbreak', desc: 'Green water, brown diatoms, black beard, hair algae — identify and treat by type.', href: '/setup/planted-tank-setup', imageKey: 'fish-com:category-planted', imageAlt: 'Lush aquatic plants in a planted aquarium', cta: 'Identify the algae' },
+  { icon: <ProblemIconCycle />, title: 'New tank cycling', desc: 'Fishless cycle, fish-in cycle, the nitrogen cycle in plain English — how long, what to test.', href: '/setup/aquarium-cycling-guide', imageKey: 'fish-com:glossary-hero', imageAlt: 'A clear planted aquarium', cta: 'Start the cycle' },
+  { icon: <ProblemIconFish />, title: 'Stocking & compatibility', desc: 'How many fish in your tank, who fights with whom, temperament + tank-size math.', href: '/tools/stocking-calculator', imageKey: 'fish-com:species-thumb-neon-tetra', imageAlt: 'Neon tetra fish in an aquarium', cta: 'Check the stock' },
 ]
 
 const CALCULATORS = [
@@ -170,7 +170,7 @@ export function HomeTriage() {
                   <h2 className="font-display font-bold text-white text-base leading-tight italic mb-2">{p.title}</h2>
                   <p className="text-xs text-white/55 leading-relaxed mb-3">{p.desc}</p>
                   <div className="inline-flex items-center gap-1.5 text-xs font-bold text-[#3aa4cc] group-hover:gap-2 transition-all">
-                    Start here
+                    {p.cta}
                     <IconArrowRight className="w-3.5 h-3.5" />
                   </div>
                 </div>
@@ -228,16 +228,14 @@ export function HomeTriage() {
                 <div className={`relative h-24 bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
                   <StockImage manifestKey={item.imageKey} alt={item.imageAlt} aspect="16:9" subtleCredit />
                 </div>
-                <div className="p-3.5">
-                  <div className="flex items-center gap-2.5 mb-1">
-                    <div className={`relative h-8 w-12 shrink-0 overflow-hidden rounded-md bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
+                <div className="p-4">
+                  <div className="mb-2 flex items-center gap-2">
+                    <div className={`relative h-7 w-10 shrink-0 overflow-hidden rounded-md bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
                       <StockImage manifestKey={item.imageKey} alt={item.imageAlt} aspect="4:3" />
                     </div>
-                    <div className="font-display font-bold text-brand-dark text-sm leading-tight italic group-hover:text-brand-primary">
-                      {item.label}
-                    </div>
+                    <div className="font-display font-bold text-brand-dark text-sm leading-tight italic group-hover:text-brand-primary">{item.label}</div>
                   </div>
-                  <div className="text-xs text-brand-text-mid mt-1 leading-relaxed flex items-start gap-2">
+                  <div className="text-xs text-brand-text-mid leading-relaxed flex items-start gap-2">
                     <div className={`relative mt-0.5 h-6 w-9 shrink-0 overflow-hidden rounded-md bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
                       <StockImage manifestKey={item.imageKey} alt="" aspect="4:3" />
                     </div>
@@ -250,65 +248,56 @@ export function HomeTriage() {
         </div>
       </section>
 
-      <section className="bg-brand-dark border-b border-white/10 px-container-sm sm:px-container py-6">
-        <div className="mb-4 flex items-end justify-between gap-4 flex-wrap">
-          <div className="max-w-3xl">
-            <div className="mb-2 flex items-center gap-2.5">
-              <span className="w-6 h-0.5 bg-brand-primary" />
-              <Link
-                href="/tools/aquarium-volume-calculator"
-                className="group flex items-center gap-2.5 no-underline"
-              >
-                <div className={`relative h-9 w-14 shrink-0 overflow-hidden rounded-md bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                  <StockImage manifestKey="fish-com:category-planted" alt="Lush aquatic plants in a planted aquarium" aspect="4:3" />
-                </div>
-                <span className="text-xs font-bold tracking-eyebrow uppercase text-[#3aa4cc] group-hover:text-white">Decide with math, not guesses</span>
-              </Link>
-            </div>
-            <div className="flex items-center gap-2.5">
-              <div className={`relative h-8 w-12 shrink-0 overflow-hidden rounded-md bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                <StockImage manifestKey="fish-com:category-planted" alt="Lush aquatic plants in a planted aquarium" aspect="4:3" />
+      <section className="bg-brand-dark px-container-sm sm:px-container py-section">
+        <div className="max-w-container mx-auto">
+          <div className="flex items-end justify-between mb-6 flex-wrap gap-4">
+            <div>
+              <div className="flex items-center gap-2.5 mb-3">
+                <span className="w-6 h-0.5 bg-brand-primary" />
+                <Link href="/tools" className="group flex items-center gap-2.5 no-underline">
+                  <div className={`relative h-9 w-14 shrink-0 overflow-hidden rounded-md bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
+                    <StockImage manifestKey="fish-com:tools-hero" alt="An aquarium water test kit" aspect="4:3" />
+                  </div>
+                  <span className="text-2xs font-bold tracking-eyebrow uppercase text-[#3aa4cc] group-hover:text-white">Decide with math, not guesses</span>
+                </Link>
               </div>
-              <div className="text-sm sm:text-base text-white font-semibold">6 free aquarist calculators — volume, stocking, heater wattage, water changes, CO₂, cycling</div>
+              <h2 className="font-display font-bold text-white tracking-tight text-3xl">6 free aquarist calculators</h2>
             </div>
-          </div>
-          <Link
-            href="/tools"
-            className="group flex items-center gap-3 overflow-hidden rounded-xl border border-white/10 bg-white/[0.05] no-underline hover:border-brand-primary transition-all"
-          >
-            <div className={`relative h-14 w-20 shrink-0 overflow-hidden bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-              <StockImage manifestKey="fish-com:species-thumb-betta" alt="A betta fish" aspect="4:3" subtleCredit />
-            </div>
-            <div className="pr-3 py-2">
-              <div className="mb-1 flex items-center gap-2">
-                <div className={`relative h-7 w-10 shrink-0 overflow-hidden rounded-md bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                  <StockImage manifestKey="fish-com:species-thumb-betta" alt="A betta fish" aspect="4:3" subtleCredit />
-                </div>
-                <div className="font-display font-bold text-white text-sm leading-tight italic group-hover:text-[#3aa4cc]">All calculators</div>
+            <Link
+              href="/tools"
+              className="group flex items-center gap-3 overflow-hidden rounded-xl border border-white/10 bg-white/[0.05] no-underline hover:border-brand-primary transition-all"
+            >
+              <div className={`relative h-14 w-20 shrink-0 overflow-hidden bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
+                <StockImage manifestKey="fish-com:tools-hero" alt="An aquarium water test kit" aspect="4:3" subtleCredit />
               </div>
-              <div className="text-xs text-white/55 mt-0.5 flex items-center gap-2">
-                <div className={`relative h-6 w-9 shrink-0 overflow-hidden rounded-md bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                  <StockImage manifestKey="fish-com:species-thumb-betta" alt="" aspect="4:3" />
+              <div className="pr-3 py-2">
+                <div className="mb-1 flex items-center gap-2">
+                  <div className={`relative h-7 w-10 shrink-0 overflow-hidden rounded-md bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
+                    <StockImage manifestKey="fish-com:tools-hero" alt="An aquarium water test kit" aspect="4:3" subtleCredit />
+                  </div>
+                  <div className="font-display font-bold text-white text-sm leading-tight italic group-hover:text-[#3aa4cc]">All calculators</div>
                 </div>
-                <span>Volume, stocking, heater, CO₂, cycling.</span>
-              </div>
-            </div>
-          </Link>
-        </div>
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
-          {CALCULATORS.map((c) => (
-            <Link key={c.href} href={c.href} className="group block overflow-hidden rounded-lg no-underline bg-white/[0.05] border border-white/10 hover:border-brand-primary transition-colors duration-200">
-              <div className={`relative h-16 bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                <StockImage manifestKey={c.imageKey} alt={c.imageAlt} aspect="16:9" subtleCredit />
-              </div>
-              <div className="flex items-center gap-2 px-2.5 py-2">
-                <div className={`relative h-7 w-10 shrink-0 overflow-hidden rounded-md bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                  <StockImage manifestKey={c.imageKey} alt={c.imageAlt} aspect="4:3" subtleCredit />
+                <div className="text-xs text-white/55 mt-0.5 flex items-center gap-2">
+                  <div className={`relative h-6 w-9 shrink-0 overflow-hidden rounded-md bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
+                    <StockImage manifestKey="fish-com:tools-hero" alt="" aspect="4:3" />
+                  </div>
+                  <span>Volume, stocking, heater, CO₂, cycling.</span>
                 </div>
-                <span className="text-xs font-semibold text-white leading-tight">{c.title}</span>
               </div>
             </Link>
-          ))}
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+            {CALCULATORS.map((c) => (
+              <Link key={c.href} href={c.href} className="group block overflow-hidden rounded-xl no-underline bg-white/[0.05] border border-white/[0.08] hover:bg-white/[0.1] hover:border-white/20 transition-all duration-200">
+                <div className={`relative h-20 bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
+                  <StockImage manifestKey={c.imageKey} alt={c.imageAlt} aspect="1:1" subtleCredit />
+                </div>
+                <div className="p-3">
+                  <div className="font-display font-bold text-white text-xs leading-tight italic group-hover:text-[#3aa4cc]">{c.title}</div>
+                </div>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
     </>
