@@ -131,10 +131,10 @@ export default function VetsPetInsurancePage() {
 
       <QuickPicks items={PICKS} />
 
-      <nav aria-label="Breadcrumb" className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
-        <Link href="/" className="hover:text-brand-primary no-underline">Home</Link>
+      <nav aria-label="Breadcrumb" className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex items-center gap-2">
+        <Link href="/" className="inline-flex min-h-6 items-center hover:text-brand-primary no-underline">Home</Link>
         <span>›</span>
-        <Link href="/reviews" className="hover:text-brand-primary no-underline">Reviews</Link>
+        <Link href="/reviews" className="inline-flex min-h-6 items-center hover:text-brand-primary no-underline">Reviews</Link>
         <span>›</span>
         <span className="text-brand-text-mid" aria-current="page">Best Pet Insurance</span>
       </nav>
@@ -232,19 +232,19 @@ export default function VetsPetInsurancePage() {
                   <tbody>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">You need the clinic paid at checkout</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#trupanion" className="text-brand-primary">Trupanion</a><TableShopLink href={"/go/trupanion/home?s=reviews-best-pet-insurance"} product={"Trupanion"} holdWithoutPartnerId /></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#trupanion" className="inline-flex min-h-6 items-center text-brand-primary">Trupanion</a><TableShopLink href={"/go/trupanion/home?s=reviews-best-pet-insurance"} product={"Trupanion"} holdWithoutPartnerId /></td>
                       <td className="p-3 text-brand-text-mid">Pays the vet directly. 90% reimbursement. Unlimited payouts. See the carrier's current terms for the monthly figure.</td>
                       <td className="p-3 text-brand-text-mid">Higher premiums. Wellness is not included. Deductible is per condition</td>
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">You can pay the clinic first and want most claims processed in about 2 days</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#healthy-paws" className="text-brand-primary">Healthy Paws</a><TableShopLink href={"/go/healthy-paws/home?s=reviews-best-pet-insurance"} product={"Healthy Paws"} holdWithoutPartnerId /></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#healthy-paws" className="inline-flex min-h-6 items-center text-brand-primary">Healthy Paws</a><TableShopLink href={"/go/healthy-paws/home?s=reviews-best-pet-insurance"} product={"Healthy Paws"} holdWithoutPartnerId /></td>
                       <td className="p-3 text-brand-text-mid">Most claims processed in 2 days. Up to 90 percent. Annual limit is $5,000, $7,000, or unlimited. See the carrier's current terms for the monthly figure.</td>
                       <td className="p-3 text-brand-text-mid">Wellness is not in our notes. Deductible is annual</td>
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">You want routine care budgeted beside accident and illness</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#embrace" className="text-brand-primary">Embrace</a><TableShopLink href={"/go/embrace/home?s=reviews-best-pet-insurance"} product={"Embrace"} holdWithoutPartnerId /></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#embrace" className="inline-flex min-h-6 items-center text-brand-primary">Embrace</a><TableShopLink href={"/go/embrace/home?s=reviews-best-pet-insurance"} product={"Embrace"} holdWithoutPartnerId /></td>
                       <td className="p-3 text-brand-text-mid">Wellness add-on. 70%, 80%, or 90%. See the carrier's current terms for the monthly figure.</td>
                       <td className="p-3 text-brand-text-mid">Orthopedic waiting period: see the carrier's current terms. More plan options to read</td>
                     </tr>

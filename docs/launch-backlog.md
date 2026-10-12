@@ -29,13 +29,13 @@ Audit base: `origin/main` at `14ba6f87e` (after #2619, #2620, #2621), and the pr
 
 | # | Site | Page | Problem | Fix | Check | Status |
 |---|---|---|---|---|---|---|
-| Q1 | Vets.co | `/pet-insurance/breeds/*` (data in `insurance-by-breed.ts`) | Breed picks state claim-frequency facts ("lowest-claim breed") without a source. The Beagle one is in T1. | Sweep the other breed entries for unsourced frequency or ranking claims, and reword them to cited conditions. | Grep plus e2e on 2 breed pages. | In this PR |
+| Q1 | Vets.co | `/pet-insurance/breeds/*` (data in `insurance-by-breed.ts`) | Breed picks state claim-frequency facts ("lowest-claim breed") without a source. The Beagle one is in T1. | Sweep the other breed entries for unsourced frequency or ranking claims, and reword them to cited conditions. | Grep plus e2e on 2 breed pages. | Done (#2630) |
 
 ## 4. Phone UX
 
 | # | Site | Page | Problem | Fix | Check | Status |
 |---|---|---|---|---|---|---|
-| P1 | Both | 17 top pages (home, insurance review, deductibles, claim helper, telehealth, estimator, find-a-vet, directory; Ferret home, cage, litter, kibble, starter kit, harness, tools, cage setup) | Checked at 390 px (iPhone 13) on the previews on 2026-10-11. No page scrolls sideways (scrollWidth equals viewport). A few links outside paragraphs are shorter than 24 px: 7 on `/telehealth`, 6 on `/reviews/best-pet-insurance`. | Find those links and pad them to a 24 px minimum height. | Re-run the 390 px check: 0 short tap targets on those two pages. | Open |
+| P1 | Both | 17 top pages (home, insurance review, deductibles, claim helper, telehealth, estimator, find-a-vet, directory; Ferret home, cage, litter, kibble, starter kit, harness, tools, cage setup) | Checked at 390 px (iPhone 13) on the previews on 2026-10-11. No page scrolls sideways (scrollWidth equals viewport). A few links outside paragraphs are shorter than 24 px: 7 on `/telehealth`, 6 on `/reviews/best-pet-insurance`. | Find those links and pad them to a 24 px minimum height. | Re-run the 390 px check: 0 short tap targets on those two pages. | In this PR |
 
 ## 5. Speed
 

@@ -65,7 +65,7 @@ export function AffiliateDisclosure({
             Disclosure
           </strong>
           Some links on this page are affiliate links — we may earn a commission at no extra cost to you. We never accept payment for favorable reviews.{' '}
-          <Link href={href} className="font-semibold text-brand-primary hover:underline no-underline">
+          <Link href={href} className="inline-flex min-h-6 items-center font-semibold text-brand-primary hover:underline no-underline">
             Read more →
           </Link>
         </aside>
@@ -93,7 +93,7 @@ export function AffiliateDisclosure({
         favorable reviews.{' '}
         <Link
           href={href}
-          className="font-semibold text-brand-primary hover:underline no-underline"
+          className="inline-flex min-h-6 items-center font-semibold text-brand-primary hover:underline no-underline"
         >
           Read our full disclosure &rarr;
         </Link>

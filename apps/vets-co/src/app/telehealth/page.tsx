@@ -162,19 +162,19 @@ export default function TelehealthPage() {
                   <tbody>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">Video, a specialist, or a prescription where state rules allow</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#vetster" className="text-brand-primary">Vetster</a><TableShopLink href={"/go/vetster/telehealth?s=telehealth"} product={"Vetster"} /></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#vetster" className="inline-flex min-h-6 items-center text-brand-primary">Vetster</a><TableShopLink href={"/go/vetster/telehealth?s=telehealth"} product={"Vetster"} /></td>
                       <td className="p-3 text-brand-text-mid">Video and chat. Single visits start at $102. Plus is $12/month, billed annually.</td>
                       <td className="p-3 text-brand-text-mid">Higher per visit than a subscription. Waits can stretch at peak hours</td>
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">Frequent chat questions, not a video exam</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#askvet" className="text-brand-primary">AskVet</a><TableShopLink href={"/go/askvet/telehealth?s=telehealth"} product={"AskVet"} /></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#askvet" className="inline-flex min-h-6 items-center text-brand-primary">AskVet</a><TableShopLink href={"/go/askvet/telehealth?s=telehealth"} product={"AskVet"} /></td>
                       <td className="p-3 text-brand-text-mid">Best subscription. See the carrier&apos;s current terms. This page does not publish a wait time</td>
                       <td className="p-3 text-brand-text-mid">The telehealth card marks chat only. askvet.app does not print a visit type. General practice. Prescriptions are limited</td>
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">You want Chewy&apos;s free technician chat or a vet video visit</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#chewy" className="text-brand-primary">Chewy Connect</a><TableShopLink href={"/go/chewy/connect?s=telehealth"} product={"Chewy Connect"} /></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#chewy" className="inline-flex min-h-6 items-center text-brand-primary">Chewy Connect</a><TableShopLink href={"/go/chewy/connect?s=telehealth"} product={"Chewy Connect"} /></td>
                       <td className="p-3 text-brand-text-mid">Free technician chat. Vet video is $49.99, dated 2026-10-07, and not in every state</td>
                       <td className="p-3 text-brand-text-mid">You need a specialist, or you are outside the states where Chewy offers the vet visit</td>
                     </tr>
@@ -197,9 +197,9 @@ export default function TelehealthPage() {
             <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">When to Go to Emergency Instead</div>
               <p className="text-xs text-brand-text-mid leading-relaxed">Pale/blue gums, breathing difficulty, collapse, suspected poisoning, severe injury, inability to urinate (cats), or any rapidly worsening condition requires in-person emergency care immediately.</p>
-              <Link href="/tools/er-vs-clinic" className="block mt-3 text-xs font-bold text-brand-primary no-underline hover:underline">ER vs clinic vs telehealth →</Link>
-              <Link href="/find-a-vet" className="block mt-2 text-xs font-bold text-brand-primary no-underline hover:underline">Find an emergency vet →</Link>
-              <Link href="/directory" className="block mt-2 text-xs font-bold text-brand-primary no-underline hover:underline">License-board directory →</Link>
+              <Link href="/tools/er-vs-clinic" className="block min-h-6 mt-3 text-xs font-bold text-brand-primary no-underline hover:underline">ER vs clinic vs telehealth →</Link>
+              <Link href="/find-a-vet" className="block min-h-6 mt-2 text-xs font-bold text-brand-primary no-underline hover:underline">Find an emergency vet →</Link>
+              <Link href="/directory" className="block min-h-6 mt-2 text-xs font-bold text-brand-primary no-underline hover:underline">License-board directory →</Link>
             </div>
           </aside>
         </div>
