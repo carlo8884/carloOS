@@ -563,3 +563,18 @@ test('ferret fix L10: health and guide Article dateModified matches the visible 
     for (const d of modified) expect(d, `${path} dateModified`).toBe(visible)
   }
 })
+
+test('ferret fix R5: bedding page hammock section is sourced and keeps the tagged hammock search', async ({ page, request }) => {
+  await page.goto('/care/bedding-and-litter-types', { waitUntil: 'domcontentloaded' })
+  await expect(page.locator('h2#hammocks')).toHaveText('Hammocks: Placement, Fabric and Upkeep')
+  await expect(page.locator('a[href="#hammocks"]').first()).toBeAttached()
+  const section = page.locator('h2#hammocks + p + ul')
+  await expect(section.locator('li')).toHaveCount(5)
+  await expect(section).toContainText('second or third level')
+  await expect(section).toContainText('loops, holes and loose strings')
+  for (const href of ['https://www.merckvetmanual.com/all-other-pets/ferrets/providing-a-home-for-a-ferret', 'https://vcahospitals.com/know-your-pet/ferrets---housing', 'https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf']) await expect(page.locator(`a[href="${href}"]`).first()).toBeAttached()
+  await expect(page.getByText(/commission/i).first()).toBeVisible()
+  const hop = await request.get('/go/amazon-brand/ferret+hammock?s=care-bedding-and-litter-types', { maxRedirects: 0 })
+  expect(hop.status()).toBe(302)
+  expect(hop.headers().location).toMatch(/^https:\/\/(www\.)?amazon\.com\/.*[?&]tag=/)
+})
