@@ -351,3 +351,12 @@ test('ferret fix P4: hub and legal breadcrumbs, legal footer and cost-calculator
     expect(await page.evaluate(() => document.documentElement.scrollWidth), path).toBeLessThanOrEqual(390)
   }
 })
+
+test('ferret fix M9: vest vs H-style guide has a shop link for both picks', async ({ page }) => {
+  await page.goto('/reviews/vest-vs-h-harness-guide', { waitUntil: 'domcontentloaded' })
+  const vest = '/go/amazon-brand/ferret+vest+harness+jacket+escape+proof?s=reviews-vest-vs-h-harness-guide'
+  const h = '/go/amazon-brand/ferret+h+style+harness+adjustable?s=reviews-vest-vs-h-harness-guide'
+  const table = await page.locator('#harness-table a[href^="/go/"]').evaluateAll((els) => els.map((el) => el.getAttribute('href')))
+  expect(table).toEqual([vest, h])
+  await expect(page.locator(`main a[href="${h}"]`)).toHaveCount(2)
+})
