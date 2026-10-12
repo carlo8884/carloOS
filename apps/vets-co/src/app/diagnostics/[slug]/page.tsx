@@ -67,7 +67,7 @@ const URGENCY_STYLE: Record<ResultUrgency, UrgencyStyle> = {
     label: 'Urgent',
     bg: 'bg-[#FFF8EC]',
     text: 'text-[#7A5A18]',
-    badgeBg: 'bg-[#C8952A]',
+    badgeBg: 'bg-[#946A1A]',
   },
   emergency: {
     label: 'Emergency',
