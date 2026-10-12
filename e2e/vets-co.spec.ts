@@ -209,7 +209,7 @@ const FOLD: { path: string; pick: string }[] = [
   { path: '/reviews/askvet-vs-chewy-connect-guide', pick: 'AskVet' },
   { path: '/reviews/healthy-paws-vs-embrace-guide', pick: 'Healthy Paws' },
   { path: '/reviews/healthy-paws-vs-pets-best-guide', pick: 'Healthy Paws' },
-  { path: '/reviews/november-december-gift-guide', pick: 'Trupanion' },
+  { path: '/reviews/november-december-gift-guide', pick: 'first-aid kit' },
   { path: '/reviews/vetster-vs-chewy-connect-guide', pick: 'Vetster' },
   { path: '/reviews/lemonade-vs-pets-best-guide', pick: 'Lemonade' },
   { path: '/reviews/spot-vs-manypets-guide', pick: 'Spot' },
@@ -362,4 +362,19 @@ test('vets fix Q3: comparison tables and carrier copy drop internal "from the se
     expect(html, path).not.toMatch(/\bour notes\b|\bnotes mark\b/i)
   }
   await expect(page.locator('caption', { hasText: 'At a glance' }).first()).toBeVisible()
+})
+
+test('vets fix Q2: holiday gift guide lists real gift picks with Amazon search buttons and no unattributed prices', async ({ page }) => {
+  await page.goto('/reviews/november-december-gift-guide', { waitUntil: 'domcontentloaded' })
+  const picks = ['pet-first-aid-kit', 'digital-pet-thermometer', 'digital-pet-scale', 'pet-recovery-cone', 'soft-cat-carrier']
+  for (const id of picks) {
+    const shop = page.locator(`#${id} a[href^="/go/"]`)
+    await expect(shop, id).toHaveCount(1)
+    await expect(shop, id).toHaveAttribute('href', /^\/go\/amazon-brand\/[a-z+]+\?s=reviews-november-december-gift-guide$/)
+  }
+  const text = await page.locator('main').innerText()
+  expect(text).not.toMatch(/\$\d/)
+  expect(text).not.toMatch(/printed band/i)
+  const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
+  expect(ld).not.toMatch(/\/go\/(trupanion|healthy-paws|embrace|vetster|askvet|chewy)\b/)
 })
