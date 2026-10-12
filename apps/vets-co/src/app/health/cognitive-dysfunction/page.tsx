@@ -9,7 +9,7 @@ const SOURCES = [
   { label: 'Madari A et al. Assessment of severity and progression of canine cognitive dysfunction syndrome using the CAnine DEmentia Scale (CADES). Appl Anim Behav Sci. 2015;171:138-145.', publisher: 'Applied Animal Behaviour Science' },
   { label: 'Landsberg GM et al. Cognitive dysfunction syndrome: a disease of canine and feline brain aging. Vet Clin Small Anim. 2012;42(4):749-768.', publisher: 'Veterinary Clinics of North America' },
 ]
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Cognitive Dysfunction Syndrome in Dogs', description: 'Signs, diagnosis, and management of canine cognitive dysfunction syndrome (dog dementia).', url: 'https://vets.co/health/cognitive-dysfunction', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-09-05T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Cognitive Dysfunction Syndrome in Dogs', description: 'Signs, diagnosis, and management of canine cognitive dysfunction syndrome (dog dementia).', url: 'https://vets.co/health/cognitive-dysfunction', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-12T00:00:00Z' ,
   citation: SOURCES,
 })
 const med = buildMedicalWebPageSchema({ name: 'Cognitive Dysfunction Syndrome in Dogs', description: 'Signs, diagnosis, and treatment of CDS — canine cognitive dysfunction.', url: 'https://vets.co/health/cognitive-dysfunction', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-07' })

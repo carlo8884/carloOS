@@ -10,7 +10,7 @@ const SOURCES = [
   { label: 'Companion Animal Parasite Council: Guidelines', url: 'https://capcvet.org/guidelines/', publisher: 'CAPC' },
   { label: 'American Heartworm Society: Prevention Guidelines', url: 'https://www.heartwormsociety.org/veterinary-resources/american-heartworm-society-guidelines', publisher: 'American Heartworm Society' },
 ]
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Dog Preventive Care Schedule', description: 'Puppy, adult, and senior preventive care timelines for dogs.', url: 'https://vets.co/health/preventive-care-schedule', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Dog Preventive Care Schedule', description: 'Puppy, adult, and senior preventive care timelines for dogs.', url: 'https://vets.co/health/preventive-care-schedule', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-12T00:00:00Z' ,
   citation: SOURCES,
 })
 const med = buildMedicalWebPageSchema({ name: 'Dog Preventive Care Schedule', description: 'Puppy through senior preventive care timelines for dogs.', url: 'https://vets.co/health/preventive-care-schedule', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-07' })
@@ -35,7 +35,7 @@ export default function PreventiveCareSchedulePage() {
 </>}
       >
         <div className="carloOS-article">
-          <LastUpdated date="2026-10-09" />
+          <LastUpdated date="2026-10-12" />
 
           <h2>Puppy Schedule (Birth to 16 Weeks)</h2>
           <div className="overflow-x-auto mb-6">

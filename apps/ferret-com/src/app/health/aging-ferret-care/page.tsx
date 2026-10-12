@@ -67,7 +67,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-05-28T00:00:00Z',
-  modifiedAt: '2026-05-28T00:00:00Z',
+  modifiedAt: '2026-10-12T00:00:00Z',
 
   citation: SOURCES,
 })
@@ -215,7 +215,7 @@ export default function FerretAgingPage() {
             publishedAt="2026-05-28"
             updatedAt="2026-05-28"
           />
-          <LastUpdated date="2026-10-11" />
+          <LastUpdated date="2026-10-12" />
 
           <DropCap>
             The senior years are where the structural decisions made earlier

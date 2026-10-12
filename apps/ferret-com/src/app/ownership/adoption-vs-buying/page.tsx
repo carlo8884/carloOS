@@ -20,7 +20,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-10-12T00:00:00Z',
 })
 
 const med = buildMedicalWebPageSchema({
@@ -94,7 +94,7 @@ export default function AdoptionVsBuyingPage() {
             updatedAt="2026-06-01"
             reviewedBy="Editorial team"
           />
-          <LastUpdated date="2026-10-10" />
+          <LastUpdated date="2026-10-12" />
 
           <h2 id="sources-overview">The Three Sources</h2>
           <p>

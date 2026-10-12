@@ -46,7 +46,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-05-28T00:00:00Z',
-  modifiedAt: '2026-09-05T00:00:00Z',
+  modifiedAt: '2026-10-12T00:00:00Z',
   speakable: true,
 
   citation: SOURCES,
@@ -221,7 +221,7 @@ export default function FerretInsulinomaPage() {
             updatedAt="2026-09-05"
             reviewedBy="Editorial team"
           />
-          <LastUpdated date="2026-10-09" />
+          <LastUpdated date="2026-10-12" />
 
           <DropCap>
             Insulinoma is the disease most ferret owners eventually learn the

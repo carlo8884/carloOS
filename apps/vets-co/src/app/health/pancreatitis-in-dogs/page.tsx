@@ -8,7 +8,7 @@ const SOURCES = [
   { label: 'Merck Veterinary Manual: Pancreatitis in Dogs', url: 'https://www.merckvetmanual.com/digestive-system/the-exocrine-pancreas/pancreatitis-in-dogs-and-cats', publisher: 'Merck Vet Manual' },
   { label: 'AAHA: Nutritional Assessment Guidelines', url: 'https://www.aaha.org/aaha-guidelines/nutritional-assessment/', publisher: 'AAHA' },
 ]
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Pancreatitis in Dogs', description: 'Causes, clinical signs, diagnosis, and recovery management of canine pancreatitis.', url: 'https://vets.co/health/pancreatitis-in-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-09-05T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Pancreatitis in Dogs', description: 'Causes, clinical signs, diagnosis, and recovery management of canine pancreatitis.', url: 'https://vets.co/health/pancreatitis-in-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-10-12T00:00:00Z' ,
   citation: SOURCES,
 })
 const med = buildMedicalWebPageSchema({ name: 'Pancreatitis in Dogs', description: 'Causes, signs, diagnosis, and management of pancreatitis in dogs.', url: 'https://vets.co/health/pancreatitis-in-dogs', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-01' })
@@ -49,7 +49,7 @@ export default function PancreatitisPage() {
         <div className="carloOS-article">
 
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-09-05T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-09" />
+          <LastUpdated date="2026-10-12" />
 
           <CalloutBox variant="warning" title="Repeated vomiting and pain are urgent">
             A dog that is repeatedly vomiting, refusing food, painful in the belly, or lethargic needs same-day veterinary evaluation. Severe pancreatitis can progress to dehydration, organ involvement, and a dangerous systemic inflammatory response. Early fluids and supportive care dramatically improve the outcome.

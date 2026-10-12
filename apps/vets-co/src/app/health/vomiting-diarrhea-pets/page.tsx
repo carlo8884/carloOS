@@ -9,7 +9,7 @@ const SOURCES = [
   { label: 'Merck Veterinary Manual: Disorders of the Stomach and Intestines in Dogs', url: 'https://www.merckvetmanual.com/dog-owners/digestive-disorders-of-dogs/disorders-of-the-stomach-and-intestines-in-dogs', publisher: 'Merck Vet Manual' },
   { label: 'AAHA: Nutritional Assessment Guidelines', url: 'https://www.aaha.org/aaha-guidelines/nutritional-assessment/', publisher: 'AAHA' },
 ]
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Vomiting and Diarrhea in Pets', description: 'Common causes of vomiting and diarrhea and the warning signs that warrant veterinary care.', url: 'https://vets.co/health/vomiting-diarrhea-pets', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-09-05T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Vomiting and Diarrhea in Pets', description: 'Common causes of vomiting and diarrhea and the warning signs that warrant veterinary care.', url: 'https://vets.co/health/vomiting-diarrhea-pets', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-10-12T00:00:00Z' ,
   citation: SOURCES,
 })
 const med = buildMedicalWebPageSchema({ name: 'Vomiting and Diarrhea in Pets', description: 'Causes and warning signs of vomiting and diarrhea in dogs and cats.', url: 'https://vets.co/health/vomiting-diarrhea-pets', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-01' })
@@ -50,7 +50,7 @@ export default function VomitingDiarrheaPage() {
         <div className="carloOS-article">
 
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-09-05T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-09" />
+          <LastUpdated date="2026-10-12" />
 
           <CalloutBox variant="warning" title="Blood, pain, or lethargy means call now">
             Vomiting or diarrhea containing blood, a painful or distended abdomen, repeated unproductive retching, profound lethargy, or refusal to eat or drink are not signs to watch — they warrant prompt veterinary care. So does any suspected ingestion of a toxin or foreign object.

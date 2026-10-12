@@ -63,7 +63,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-10-12T00:00:00Z',
   speakable: true,
 
   citation: SOURCES,
@@ -175,7 +175,7 @@ export default function FerretDiarrheaCausesPage() {
             publishedAt="2026-06-01"
             updatedAt="2026-06-01"
           />
-          <LastUpdated date="2026-10-07" />
+          <LastUpdated date="2026-10-12" />
 
           <DropCap>
             Diarrhea is one of the most common reasons ferrets are brought to the

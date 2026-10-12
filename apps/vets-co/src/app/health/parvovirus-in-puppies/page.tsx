@@ -9,7 +9,7 @@ const SOURCES = [
   { label: 'Merck Veterinary Manual: Canine Parvovirus', url: 'https://www.merckvetmanual.com/digestive-system/infectious-diseases-of-the-gastrointestinal-tract-in-small-animals/canine-parvovirus-infection-parvoviral-enteritis-in-dogs', publisher: 'Merck Vet Manual' },
   { label: 'AAHA: Canine Vaccination Guidelines (DA2PP)', url: 'https://www.aaha.org/aaha-guidelines/vaccination-canine-configuration/', publisher: 'AAHA' },
 ]
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Parvovirus in Puppies', description: 'Signs, treatment, and prevention of canine parvovirus.', url: 'https://vets.co/health/parvovirus-in-puppies', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-09-05T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Parvovirus in Puppies', description: 'Signs, treatment, and prevention of canine parvovirus.', url: 'https://vets.co/health/parvovirus-in-puppies', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-10-12T00:00:00Z' ,
   citation: SOURCES,
 })
 const med = buildMedicalWebPageSchema({ name: 'Parvovirus in Puppies', description: 'Signs, treatment, and prevention of canine parvovirus.', url: 'https://vets.co/health/parvovirus-in-puppies', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-01' })
@@ -53,7 +53,7 @@ export default function ParvoPage() {
       >
         <div className="carloOS-article">
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-09-05T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-09" />
+          <LastUpdated date="2026-10-12" />
 
           <CalloutBox variant="warning" title="Suspected parvo is an emergency">
             A puppy with vomiting, bloody diarrhea, and sudden lethargy needs emergency veterinary care immediately. Parvo progresses fast and is often fatal without prompt intensive treatment. Early hospitalization dramatically improves survival, so do not wait to see if the puppy improves on its own.

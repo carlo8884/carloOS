@@ -593,3 +593,54 @@ test('vets fix L8: best-of pages carry ItemList markup and no Product, Review or
     expect(lists[0].itemListElement.length).toBeGreaterThanOrEqual(3)
   }
 })
+
+test('vets fix L10: health and guide Article dateModified matches the visible Last updated date', async ({ request }) => {
+  const paths = [
+    '/health/anxiety-in-dogs',
+    '/health/weight-management',
+    '/health/pain-signs-dogs',
+    '/health/spay-neuter-benefits',
+    '/health/diabetes-in-dogs-cats',
+    '/health/seizures-in-dogs',
+    '/health/preventive-care-schedule',
+    '/health/hyperthyroidism-cats',
+    '/health/flea-tick-prevention',
+    '/health/pain-management-dogs',
+    '/health/kidney-disease-cats',
+    '/health/cognitive-dysfunction',
+    '/health/intestinal-parasites',
+    '/health/emergency-signs',
+    '/health/parvovirus-in-puppies',
+    '/health/heat-stroke-dogs',
+    '/health/leptospirosis',
+    '/health/tick-borne-diseases',
+    '/health/ear-infections-dogs',
+    '/health/hypothyroidism-dogs',
+    '/health/cushing-disease-dogs',
+    '/health/dental-cleaning-guide',
+    '/health/senior-bloodwork-guide',
+    '/health/allergic-reactions-dogs',
+    '/health/dog-vaccinations-guide',
+    '/health/feline-lower-urinary-tract-disease',
+    '/health/kennel-cough',
+    '/health/vomiting-diarrhea-pets',
+    '/health/senior-pet-care',
+    '/health/bloat-gdv-dogs',
+    '/health/heartworm-in-dogs',
+    '/health/dehydration-in-dogs',
+    '/health/arthritis-in-dogs',
+    '/health/urinary-tract-infection',
+    '/health/canine-influenza',
+    '/health/dog-eye-conditions',
+    '/health/pancreatitis-in-dogs',
+    '/health/periodontal-disease-pets',
+  ]
+  for (const path of paths) {
+    const html = await (await request.get(path)).text()
+    const visible = html.match(/Last updated <time dateTime="(\d{4}-\d{2}-\d{2})"/)?.[1]
+    const modified = [...html.matchAll(/"dateModified":"(\d{4}-\d{2}-\d{2})/g)].map((m) => m[1])
+    expect(visible, `${path} shows a Last updated date`).toBeTruthy()
+    expect(modified.length, `${path} has Article dateModified`).toBeGreaterThan(0)
+    for (const d of modified) expect(d, `${path} dateModified`).toBe(visible)
+  }
+})

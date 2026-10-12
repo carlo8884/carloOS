@@ -22,7 +22,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-11T00:00:00Z',
+  modifiedAt: '2026-10-12T00:00:00Z',
 })
 
 const med = buildMedicalWebPageSchema({
@@ -129,7 +129,7 @@ export default function RawFeedingGuidePage() {
             updatedAt="2026-06-11"
             reviewedBy="Editorial team"
           />
-          <LastUpdated date="2026-10-11" />
+          <LastUpdated date="2026-10-12" />
 
           <h2 id="why">Why Raw</h2>
           <p>

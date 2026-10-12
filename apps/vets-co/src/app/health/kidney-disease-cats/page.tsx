@@ -10,7 +10,7 @@ const SOURCES = [
   { label: 'Sparkes AH et al. ISFM Consensus Guidelines on the Diagnosis and Management of Feline CKD. J Feline Med Surg. 2016;18(3):219-239.', publisher: 'J Feline Med Surg' },
   { label: 'Brown SA et al. Beneficial effects of chronic administration of dietary omega-3 polyunsaturated fatty acids in dogs with renal insufficiency. J Lab Clin Med. 1998;131(5):447-455.', publisher: 'J Lab Clin Med' },
 ]
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Chronic Kidney Disease in Cats', description: 'IRIS staging, diet, fluid therapy, and prognosis for feline chronic kidney disease.', url: 'https://vets.co/health/kidney-disease-cats', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Chronic Kidney Disease in Cats', description: 'IRIS staging, diet, fluid therapy, and prognosis for feline chronic kidney disease.', url: 'https://vets.co/health/kidney-disease-cats', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-10-12T00:00:00Z' ,
   citation: SOURCES,
 })
 const med = buildMedicalWebPageSchema({ name: 'Chronic Kidney Disease in Cats', description: 'Staging, renal diet, fluid therapy, and outlook for feline CKD.', url: 'https://vets.co/health/kidney-disease-cats', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-01' })
@@ -54,7 +54,7 @@ export default function KidneyDiseaseCatsPage() {
         <div className="carloOS-article">
 
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-05T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-09" />
+          <LastUpdated date="2026-10-12" />
 
           <CalloutBox variant="info" title="Early detection changes the outcome">
             The SDMA blood marker can detect kidney decline when as little as 25% of function is lost, far earlier than creatinine, which only rises after roughly 75% is lost. Annual or twice-yearly bloodwork in cats over 7 is the most effective tool for catching CKD while management is most effective.

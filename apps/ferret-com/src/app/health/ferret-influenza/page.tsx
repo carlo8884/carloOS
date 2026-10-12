@@ -61,7 +61,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-10-12T00:00:00Z',
 
   citation: SOURCES,
 })
@@ -166,7 +166,7 @@ export default function FerretInfluenzaPage() {
             publishedAt="2026-06-01"
             updatedAt="2026-06-01"
           />
-          <LastUpdated date="2026-10-09" />
+          <LastUpdated date="2026-10-12" />
 
           <DropCap>
             Influenza is one of the few illnesses you can quite literally share

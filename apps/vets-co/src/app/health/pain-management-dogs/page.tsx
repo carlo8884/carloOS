@@ -11,7 +11,7 @@ const SOURCES = [
   { label: 'Merck Veterinary Manual: Pain Assessment and Management', url: 'https://www.merckvetmanual.com/therapeutics/pain-assessment-and-management/overview-of-pain-assessment-and-management-in-animals', publisher: 'Merck Vet Manual' },
   { label: 'Kealy et al., JAVMA 2000', url: 'https://doi.org/10.2460/javma.2000.217.1678', publisher: 'JAVMA' },
 ]
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Pain Management in Dogs', description: 'NSAIDs, gabapentin, Librela, and multimodal pain protocols for dogs.', url: 'https://vets.co/health/pain-management-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Pain Management in Dogs', description: 'NSAIDs, gabapentin, Librela, and multimodal pain protocols for dogs.', url: 'https://vets.co/health/pain-management-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-12T00:00:00Z' ,
   citation: SOURCES,
 })
 const med = buildMedicalWebPageSchema({ name: 'Pain Management in Dogs', description: 'Assessment and multimodal treatment of acute and chronic pain in dogs.', url: 'https://vets.co/health/pain-management-dogs', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-07' })
@@ -43,7 +43,7 @@ export default function PainManagementPage() {
 </>}
       >
         <div className="carloOS-article">
-          <LastUpdated date="2026-10-09" />
+          <LastUpdated date="2026-10-12" />
 
           <h2>Why Dogs Hide Pain — and How to See Through It</h2>
           <p>Dogs are descended from prey animals whose survival depended on not appearing weak — showing pain attracted predators. This evolutionary pressure remains: dogs with significant chronic pain often appear &quot;fine&quot; to casual observation while making behavioral adaptations that are the actual pain signal. The dog that used to bound up the stairs and now takes them slowly. The dog that stopped initiating play. The dog that gets up from rest with a brief hesitation before moving normally. These behavioral changes are pain signs that owners frequently attribute to &quot;slowing down with age&quot; — which is itself often a pain signal. An elevated mesh dog cot is rest for that hesitation — a low, open cot they can step onto and off without climbing out of a deep bed, not an extra-large bolster dog lounge and not an egg-crate foam kennel pad. It does not treat pain and it is not a substitute for a veterinary exam. Clear adhesive non-slip stair treads are how the existing staircase gets grip for the dog that now takes the stairs slowly — they are not carpeted wooden pet steps, not a dog ramp, and not a traction rug. A hardcover weekly appointment planner is how those rest and stair observations, plus a daily pain score, stay dated notes you can hand the veterinarian — not a pocket spiral memo pad.</p>
