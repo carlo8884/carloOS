@@ -377,4 +377,18 @@ test('vets fix Q2: holiday gift guide lists real gift picks with Amazon search b
   expect(text).not.toMatch(/printed band/i)
   const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
   expect(ld).not.toMatch(/\/go\/(trupanion|healthy-paws|embrace|vetster|askvet|chewy)\b/)
+test('vets fix P3: specialty table links, breed-health guide links and wellness table names are at least 24px tall at 390px', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 })
+  const checks: Array<[string, string]> = [
+    ['/specialists', 'th > a'],
+    ['/breeds/chihuahua-health', 'div.mt-3 > a.text-xs.font-bold'],
+    ['/insurance/wellness-plans-vs-insurance', 'td.font-bold > a'],
+  ]
+  for (const [path, selector] of checks) {
+    await page.goto(path, { waitUntil: 'domcontentloaded' })
+    const heights = await page.locator(`main ${selector}`).evaluateAll((els) => els.filter((el) => (el as HTMLElement).offsetParent).map((el) => el.getBoundingClientRect().height))
+    expect(heights.length, path).toBeGreaterThan(0)
+    expect(heights.filter((h) => h < 24), path).toEqual([])
+    expect(await page.evaluate(() => document.documentElement.scrollWidth), path).toBeLessThanOrEqual(390)
+  }
 })

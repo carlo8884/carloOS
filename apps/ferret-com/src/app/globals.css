@@ -172,3 +172,15 @@ p a { text-decoration-line: underline; text-underline-offset: 2px; }
   min-height: 24px;
   align-items: center;
 }
+
+/* Phone tap targets (P3, Ferret only): breadcrumb links, standalone table-cell links and the
+   "Compare exotic-pet insurance →" card link are at least 24px tall. */
+nav[aria-label="Breadcrumb"] a,
+nav.py-3.text-xs.bg-brand-surface > a,
+li.flex.items-center.gap-2 > a,
+td > a,
+.bg-brand-dark > a.inline-block.text-xs.font-bold {
+  display: inline-flex;
+  min-height: 24px;
+  align-items: center;
+}

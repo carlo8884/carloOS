@@ -149,3 +149,13 @@ img { max-width: 100%; height: auto; display: block; }
 .bg-brand-dark .text-brand-primary { color: #D6A14A; }
 .carloOS-article a { text-decoration-line: underline; text-underline-offset: 2px; }
 p a { text-decoration-line: underline; text-underline-offset: 2px; }
+
+/* Phone tap targets (P3, Vets.co only): standalone links in table header/name cells and the
+   breed-health "Find a veterinary … →" guide links are at least 24px tall. */
+th > a,
+td.font-bold > a,
+div.mt-3 > a.text-xs.font-bold {
+  display: inline-flex;
+  min-height: 24px;
+  align-items: center;
+}
