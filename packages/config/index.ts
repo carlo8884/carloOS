@@ -1311,7 +1311,7 @@ const RECOMMENDATIONS: Record<string, RecommendationSeed[]> = {
     { siteId: 'dog-com', siteName: 'Dog.com', headline: 'Best Pet Insurance', blurb: 'Compare pet insurance plans that cover chronic prescriptions — Lemonade, Embrace, Pets Best, Spot.', cta: 'Compare plans', path: '/reviews/best-pet-insurance' },
   ],
   'vets-co:specialty': [
-    { siteId: 'dog-com', siteName: 'Dog.com', headline: 'Pet Insurance Comparison', blurb: 'Specialist visits run $3,000–15,000/year. Find a plan that covers them.', cta: 'See comparison', path: '/reviews/best-pet-insurance' },
+    { siteId: 'dog-com', siteName: 'Dog.com', headline: 'Pet Insurance Comparison', blurb: 'Specialist care can add up over a year. Find a plan that covers it.', cta: 'See comparison', path: '/reviews/best-pet-insurance' },
   ],
   'vets-co:breed': [
     { siteId: 'dog-com', siteName: 'Dog.com', headline: 'Breed Care Guides', blurb: 'In-depth breed-specific care, feeding, and training resources.', cta: 'Browse breeds', path: '/breeds' },

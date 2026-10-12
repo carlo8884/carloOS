@@ -459,3 +459,11 @@ test('vets fix T10: diagnostics pages make no unsourced full-workup dollar range
     await expect(page.getByText('Diagnostic workups add up test by test').first()).toBeVisible()
   }
 })
+
+test('vets fix T9b: specialist pages carry no unsourced annual range in the cross-site promo', async ({ page }) => {
+  for (const path of ['/specialists', '/specialists/veterinary-cardiology']) {
+    await page.goto(path, { waitUntil: 'domcontentloaded' })
+    const text = await page.locator('body').innerText()
+    expect(text).not.toMatch(/3,000–15,000/)
+  }
+})
