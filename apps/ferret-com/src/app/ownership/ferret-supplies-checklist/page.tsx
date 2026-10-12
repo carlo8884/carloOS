@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, ShopCtas, ComparisonFoot, LastUpdated } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, ShopCtas, ComparisonFoot, LastUpdated, TableShopLink } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -97,7 +97,7 @@ export default function FerretSuppliesChecklistPage() {
             updatedAt="2026-06-01"
             reviewedBy="Editorial team"
           />
-          <LastUpdated date="2026-10-10" />
+          <LastUpdated date="2026-10-12" />
 
           <h2 id="priority">Buy First vs Later</h2>
           <p>
@@ -195,7 +195,7 @@ export default function FerretSuppliesChecklistPage() {
 
           <h2 id="compare">Compare the gear that already has a buyer guide</h2>
           <p>
-            This checklist stays category-level. The four buyer guides below already carry documented-criteria comparisons and <code>/go</code> buttons — use those instead of a dead shop page:
+            The table below has one Amazon link for each core item on this checklist. The four buyer guides compare the options in more depth:
           </p>
           <ul>
             <li><a href="/reviews/best-ferret-cage">Best ferret cage</a></li>
@@ -204,7 +204,53 @@ export default function FerretSuppliesChecklistPage() {
             <li><a href="/diet/best-ferret-kibble">Best ferret food</a></li>
           </ul>
 
-          <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/ferret+litter?s=ferret-supplies-checklist"]} />
+          <HopDisclosure siteId="ferret-com" href={["/go/amazon/B001NJ0DAY?s=ferret-supplies-checklist", "/go/amazon-brand/ferret+hammock?s=ferret-supplies-checklist", "/go/amazon-brand/ferret+fleece+liner?s=ferret-supplies-checklist", "/go/amazon-brand/ferret+corner+litter+pan?s=ferret-supplies-checklist", "/go/amazon-brand/recycled+paper+pellet+litter?s=ferret-supplies-checklist", "/go/amazon-brand/high+protein+ferret+food+kibble?s=ferret-supplies-checklist", "/go/amazon-brand/ferret+litter?s=ferret-supplies-checklist"]} />
+
+          <div id="shop-checklist" className="my-6 max-w-full min-w-0">
+            <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
+              <caption className="text-left font-semibold text-brand-dark p-3">Shop the core items</caption>
+              <thead>
+                <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Item</th>
+                  <th scope="col" className="p-3 font-bold text-brand-dark">On Amazon</th>
+                  <th scope="col" className="p-3 font-bold text-brand-dark">When</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Cage</th>
+                  <td className="p-3">Critter Nation double unit<TableShopLink href="/go/amazon/B001NJ0DAY?s=ferret-supplies-checklist" product="Critter Nation double unit" /></td>
+                  <td className="p-3">Before homecoming</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Hammock</th>
+                  <td className="p-3">Ferret hammock<TableShopLink href="/go/amazon-brand/ferret+hammock?s=ferret-supplies-checklist" product="Ferret hammock" /></td>
+                  <td className="p-3">Before homecoming</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Fleece bedding</th>
+                  <td className="p-3">Ferret fleece cage liner<TableShopLink href="/go/amazon-brand/ferret+fleece+liner?s=ferret-supplies-checklist" product="Ferret fleece cage liner" /></td>
+                  <td className="p-3">Before homecoming</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Litter pan</th>
+                  <td className="p-3">Ferret corner litter pan<TableShopLink href="/go/amazon-brand/ferret+corner+litter+pan?s=ferret-supplies-checklist" product="Ferret corner litter pan" /></td>
+                  <td className="p-3">Before homecoming</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Litter</th>
+                  <td className="p-3">Recycled paper pellet litter<TableShopLink href="/go/amazon-brand/recycled+paper+pellet+litter?s=ferret-supplies-checklist" product="Recycled paper pellet litter" /></td>
+                  <td className="p-3">Before homecoming</td>
+                </tr>
+                <tr className="border-b border-brand-border align-top">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Food</th>
+                  <td className="p-3">High-protein ferret kibble<TableShopLink href="/go/amazon-brand/high+protein+ferret+food+kibble?s=ferret-supplies-checklist" product="High-protein ferret kibble" /></td>
+                  <td className="p-3">Before homecoming</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="text-sm text-brand-text-mid">The Critter Nation link opens that cage&apos;s Amazon page. The other links open an Amazon search for the item type, not a single ranked product. The <a href="/care/cage-setup">cage setup</a> page explains why that cage is named. Check bar spacing on the <a href="/reviews/best-ferret-cage">cage guide</a> before you order.</p>
 
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
@@ -221,10 +267,10 @@ export default function FerretSuppliesChecklistPage() {
 
           <h2 id="sources">Sources</h2>
           <p>
-            Caging, bedding, litter safety, diet, and blockage-risk guidance reflect standard ferret-husbandry references and American Ferret Association recommendations, with clinical context from Quesenberry KE and Carpenter JW (eds.), <em>Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery</em> (Saunders/Elsevier). This is an editorial checklist; it recommends categories and features, not specific products or retailers. Locate primary sources by title.
+            Caging, bedding, litter safety, diet, and blockage-risk guidance reflect standard ferret-husbandry references and American Ferret Association recommendations, with clinical context from Quesenberry KE and Carpenter JW (eds.), <em>Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery</em> (Saunders/Elsevier). This is an editorial checklist; it recommends categories and features. The shop table links one Amazon search per category, plus the one cage the cage setup page names. Locate primary sources by title.
           </p>
           <p className="text-sm text-brand-text-light">
-            This page is general, non-commercial information. It does not endorse or sell any product. Choices about diet and any health-related supply should be confirmed with a veterinarian familiar with ferrets.
+            This page is general information, and it does not sell anything itself. Choices about diet and any health-related supply should be confirmed with a veterinarian familiar with ferrets.
           </p>
         </div>
       </ArticleLayout>
