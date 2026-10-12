@@ -487,3 +487,14 @@ test('vets fix T11: insurance funnel pages show the affiliate disclosure only wh
     expect(disclosures > 0, `${path}: ${hops} hops, ${disclosures} inline disclosures`).toBe(hops > 0)
   }
 })
+
+test('vets fix L1: sitemap lists every symptom, diagnostic, specialist, medication and find-a-vet state page linked from its hub', async ({ page }) => {
+  const xml = await (await page.request.get('/sitemap/0.xml')).text()
+  for (const [hub, prefix] of [['/symptoms', '/symptoms/'], ['/diagnostics', '/diagnostics/'], ['/specialists', '/specialists/'], ['/medications', '/medications/'], ['/find-a-vet', '/find-a-vet/']]) {
+    await page.goto(hub, { waitUntil: 'domcontentloaded' })
+    const hrefs = await page.locator(`a[href^="${prefix}"]`).evaluateAll((els) => [...new Set(els.map((el) => (el.getAttribute('href') || '').split(/[?#]/)[0].replace(/\/$/, '')))])
+    const detail = hrefs.filter((h) => h.split('/').length === 3 && !h.startsWith('/medications/can-i-give-my-dog'))
+    expect(detail.length, `${hub} detail links`).toBeGreaterThan(0)
+    for (const h of detail) expect(xml, `${h} in sitemap`).toContain(`<loc>https://vets.co${h}</loc>`)
+  }
+})
