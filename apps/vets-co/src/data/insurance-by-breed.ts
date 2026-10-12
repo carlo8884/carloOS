@@ -84,7 +84,7 @@ export const INSURANCE_BREEDS: BreedInsuranceProfile[] = [
     dentalRisk: 'low',
     recommendedCarrier: 'trupanion',
     recommendedReason:
-      'Hemangiosarcoma and lymphoma are on the Golden\'s condition list — treatment runs $5,000–20,000+. Trupanion has no annual or lifetime payout cap and uses a per-condition deductible, so a multi-year cancer claim hits the deductible once.',
+      'Hemangiosarcoma and lymphoma are on the Golden\'s condition list. Trupanion has no annual or lifetime payout cap and uses a per-condition deductible, so a multi-year cancer claim hits the deductible once.',
     alternateCarriers: ['healthy-paws', 'pumpkin-pet'],
     sampleMonthlyPremium: [50, 85],
     keyCoverageNeeds: [
@@ -113,7 +113,7 @@ export const INSURANCE_BREEDS: BreedInsuranceProfile[] = [
     dentalRisk: 'low',
     recommendedCarrier: 'pumpkin-pet',
     recommendedReason:
-      'Hip dysplasia and CCL rupture (~$3,500–$5,500 per side) are on the Lab\'s condition list. Pumpkin\'s orthopedic waiting period of 14 days or less means a Lab with early hip signs is covered before symptoms escalate. Critical when buying for a Lab puppy.',
+      'Hip dysplasia and CCL rupture are on the Lab\'s condition list. Pumpkin\'s orthopedic waiting period of 14 days or less means a Lab with early hip signs is covered before symptoms escalate. Critical when buying for a Lab puppy.',
     alternateCarriers: ['trupanion', 'spot'],
     sampleMonthlyPremium: [40, 75],
     keyCoverageNeeds: [
@@ -142,7 +142,7 @@ export const INSURANCE_BREEDS: BreedInsuranceProfile[] = [
     dentalRisk: 'high',
     recommendedCarrier: 'fetch-by-the-dodo',
     recommendedReason:
-      'Frenchies face a triple threat — BOAS surgery ($2,500–5,000), dental disease (their crowded brachycephalic jaw drives early periodontal loss), and skin/eye conditions. Fetch covers periodontal disease on the base plan.',
+      'Frenchies face a triple threat — BOAS surgery, dental disease (their crowded brachycephalic jaw drives early periodontal loss), and skin/eye conditions. Fetch covers periodontal disease on the base plan.',
     alternateCarriers: ['trupanion', 'pumpkin-pet'],
     sampleMonthlyPremium: [55, 95],
     keyCoverageNeeds: [
@@ -171,7 +171,7 @@ export const INSURANCE_BREEDS: BreedInsuranceProfile[] = [
     dentalRisk: 'low',
     recommendedCarrier: 'pumpkin-pet',
     recommendedReason:
-      'GSDs face hip and elbow dysplasia and bloat ($4,000–$6,000+ emergency surgery). Pumpkin\'s 14-day orthopedic wait covers a young GSD before screening films are even read, and the unlimited-payout option handles bloat plus subsequent DM care.',
+      'GSDs face hip and elbow dysplasia and bloat (an emergency surgery). Pumpkin\'s 14-day orthopedic wait covers a young GSD before screening films are even read, and the unlimited-payout option handles bloat plus subsequent DM care.',
     alternateCarriers: ['trupanion', 'embrace'],
     sampleMonthlyPremium: [45, 80],
     keyCoverageNeeds: [
@@ -317,7 +317,7 @@ export const INSURANCE_BREEDS: BreedInsuranceProfile[] = [
     dentalRisk: 'high',
     recommendedCarrier: 'pumpkin-pet',
     recommendedReason:
-      'Type I IVDD leads the Dachshund\'s condition list; emergency disc surgery costs $6,000–10,000. Pumpkin\'s 14-day orthopedic/neurological waiting period plus dental disease coverage addresses both IVDD and the periodontal disease on the same list.',
+      'Type I IVDD leads the Dachshund\'s condition list, and an episode can mean emergency disc surgery. Pumpkin\'s 14-day orthopedic/neurological waiting period plus dental disease coverage addresses both IVDD and the periodontal disease on the same list.',
     alternateCarriers: ['trupanion', 'fetch-by-the-dodo'],
     sampleMonthlyPremium: [35, 70],
     keyCoverageNeeds: [
@@ -346,7 +346,7 @@ export const INSURANCE_BREEDS: BreedInsuranceProfile[] = [
     dentalRisk: 'low',
     recommendedCarrier: 'trupanion',
     recommendedReason:
-      'Osteosarcoma (bone cancer) is on the Rottweiler\'s condition list. Amputation plus chemo runs $10,000–15,000. Trupanion\'s unlimited payout and per-condition deductible mean one cancer diagnosis doesn\'t cap or restart the deductible across a multi-year treatment.',
+      'Osteosarcoma (bone cancer) is on the Rottweiler\'s condition list, and treatment can include amputation plus chemo. Trupanion\'s unlimited payout and per-condition deductible mean one cancer diagnosis doesn\'t cap or restart the deductible across a multi-year treatment.',
     alternateCarriers: ['pumpkin-pet', 'healthy-paws'],
     sampleMonthlyPremium: [50, 90],
     keyCoverageNeeds: [
@@ -375,7 +375,7 @@ export const INSURANCE_BREEDS: BreedInsuranceProfile[] = [
     dentalRisk: 'high',
     recommendedCarrier: 'fetch-by-the-dodo',
     recommendedReason:
-      'Yorkies are rated high for dental risk on this page, with periodontal disease on their condition list, and full-mouth extractions cost $1,500–3,000. Fetch covers periodontal disease (not just dental trauma) on the base plan.',
+      'Yorkies are rated high for dental risk on this page, with periodontal disease on their condition list, and advanced cases can need full-mouth extractions. Fetch covers periodontal disease (not just dental trauma) on the base plan.',
     alternateCarriers: ['pumpkin-pet', 'embrace'],
     sampleMonthlyPremium: [25, 60],
     keyCoverageNeeds: [
@@ -522,7 +522,7 @@ export const INSURANCE_BREEDS: BreedInsuranceProfile[] = [
     dentalRisk: 'low',
     recommendedCarrier: 'pumpkin-pet',
     recommendedReason:
-      'Great Danes face bloat ($4,000–$6,000+ emergency surgery) and osteosarcoma. Pumpkin\'s 14-day orthopedic wait and unlimited-payout tier matter for a giant breed with rapid-growth conditions like hypertrophic osteodystrophy.',
+      'Great Danes face bloat (an emergency surgery) and osteosarcoma. Pumpkin\'s 14-day orthopedic wait and unlimited-payout tier matter for a giant breed with rapid-growth conditions like hypertrophic osteodystrophy.',
     alternateCarriers: ['trupanion', 'healthy-paws'],
     sampleMonthlyPremium: [60, 110],
     keyCoverageNeeds: [
@@ -843,7 +843,7 @@ export const INSURANCE_BREEDS: BreedInsuranceProfile[] = [
     dentalRisk: 'low',
     recommendedCarrier: 'pumpkin-pet',
     recommendedReason:
-      'Dalmatians\' unique uric acid metabolism drives urate stone formation — surgical removal runs $3,000–5,000. Pumpkin\'s base plan covers exam fees, diagnostics, and the urinary-tract specialty work this breed needs.',
+      'Dalmatians\' unique uric acid metabolism drives urate stone formation, and stones can need surgical removal. Pumpkin\'s base plan covers exam fees, diagnostics, and the urinary-tract specialty work this breed needs.',
     alternateCarriers: ['embrace', 'spot'],
     sampleMonthlyPremium: [35, 75],
     keyCoverageNeeds: [
@@ -872,7 +872,7 @@ export const INSURANCE_BREEDS: BreedInsuranceProfile[] = [
     dentalRisk: 'low',
     recommendedCarrier: 'pumpkin-pet',
     recommendedReason:
-      'Newfoundlands face cruciate ligament rupture ($4,500–6,000 per side) and subaortic stenosis (SAS). Pumpkin\'s 14-day orthopedic wait plus unlimited-payout tier fits a breed with both orthopedic and cardiac conditions on its list.',
+      'Newfoundlands face cruciate ligament rupture and subaortic stenosis (SAS). Pumpkin\'s 14-day orthopedic wait plus unlimited-payout tier fits a breed with both orthopedic and cardiac conditions on its list.',
     alternateCarriers: ['trupanion', 'healthy-paws'],
     sampleMonthlyPremium: [55, 105],
     keyCoverageNeeds: [
@@ -932,7 +932,7 @@ export const INSURANCE_BREEDS: BreedInsuranceProfile[] = [
     dentalRisk: 'high',
     recommendedCarrier: 'fetch-by-the-dodo',
     recommendedReason:
-      'Maltese have periodontal disease on their condition list, and crowding can lead to extractions costing $1,500–3,000. Fetch covers periodontal disease on the base plan, and exam-fee coverage matters for senior-year cardiac and tracheal monitoring.',
+      'Maltese have periodontal disease on their condition list, and crowding can lead to extractions. Fetch covers periodontal disease on the base plan, and exam-fee coverage matters for senior-year cardiac and tracheal monitoring.',
     alternateCarriers: ['lemonade-pet', 'embrace'],
     sampleMonthlyPremium: [25, 55],
     keyCoverageNeeds: [
