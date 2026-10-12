@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import {
   buildMetadata,
@@ -12,6 +13,7 @@ import {
   ArticleSourcesList,
   StockImage,
   LastUpdated,
+  ShopCtas,
 } from '@carloOS/ui'
 
 const SOURCES = [
@@ -298,7 +300,27 @@ export default function FerretEmergencySignsPage() {
               your ferret&apos;s usual energy, appetite, gum color, and stool
               makes the abnormal obvious sooner.
             </li>
+            <li>
+              <strong>Keep a carrier ready.</strong> A secure, ventilated
+              carrier lets you leave for the emergency hospital at once
+              instead of searching for one while your ferret is crashing.
+            </li>
           </ul>
+
+          <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/ferret+carrier?s=health-emergency-warning-signs" />
+
+          <div id="emergency-shop" className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop related supplies
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">This Amazon search link opens a search for a product this page discusses. It is not a ranked product list and it does not replace veterinary care.</p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/ferret+carrier?s=health-emergency-warning-signs"
+                amazonLabel="Search Amazon for a ferret carrier"
+              />
+            </div>
+          </div>
           <p>
             The full ferret health library — including the conditions behind
             most ferret emergencies — is organized at the{' '}

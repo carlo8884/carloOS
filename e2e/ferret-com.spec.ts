@@ -414,3 +414,10 @@ test('ferret fix M14: cage comparison tables have an exact-ASIN shop link for bo
     expect(table).toEqual([`/go/amazon/${a}?s=reviews-${slug}`, `/go/amazon/${b}?s=reviews-${slug}`])
   }
 })
+
+test('ferret fix M15: emergency warning signs page has a carrier shop link', async ({ page }) => {
+  await page.goto('/health/emergency-warning-signs', { waitUntil: 'domcontentloaded' })
+  const hop = '/go/amazon-brand/ferret+carrier?s=health-emergency-warning-signs'
+  await expect(page.locator(`#emergency-shop a[href="${hop}"]`)).toHaveCount(1)
+  await expect(page.getByText('Keep a carrier ready.')).toBeVisible()
+})
