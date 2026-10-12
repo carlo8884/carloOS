@@ -7,7 +7,6 @@ import {
   buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
-  AffiliateDisclosure,
 } from '@carloOS/ui'
 import {
   ALL_INSURANCE_BREEDS,
@@ -94,7 +93,6 @@ export default async function BreedInsuranceHub({ params }: PageParams) {
         option, the conditions that matter, and a state-by-state breakdown.
       </p>
 
-      <AffiliateDisclosure variant="inline" siteId="vets-co" />
 
       {/* ─── Editorial option ─────────────────────────────────────────────── */}
       {recommended && (

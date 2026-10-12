@@ -62,7 +62,9 @@ const combinedSchema = combineSchemas(
 export default function VetsCoInsuranceHub() {
   return (
     <>
-      <AffiliateDisclosure variant="inline" siteId="vets-co" />
+      {TOP_CARRIERS.some((c) => liveAnchorHref(`/go/${c.vendor}/home?s=vets-co-insurance-hub-${c.slug}`)) ? (
+        <AffiliateDisclosure variant="inline" siteId="vets-co" />
+      ) : null}
       <SchemaScript schema={combinedSchema} />
 
       <div className="bg-brand-dark px-container sm:px-container-sm py-14">

@@ -178,7 +178,9 @@ export default async function BreedStateInsurancePage({ params }: PageParams) {
         market means for your premium.
       </p>
 
-      <AffiliateDisclosure variant="inline" siteId="vets-co" />
+      {[recommendedCarrier, ...altCarriers].some((c) => c && liveAnchorHref(`/go/${c.vendor}/breed-${breed}-${state}`)) ? (
+        <AffiliateDisclosure variant="inline" siteId="vets-co" />
+      ) : null}
 
       {/* ─── Top recommendation ───────────────────────────────────────────── */}
       {recommendedCarrier && (
