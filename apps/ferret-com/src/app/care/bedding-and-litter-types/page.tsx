@@ -40,6 +40,21 @@ const SOURCES = [
     url: "https://www.ferret.org",
     publisher: "AFA",
   },
+  {
+    label: "Merck Veterinary Manual: Providing a Home for a Ferret",
+    url: "https://www.merckvetmanual.com/all-other-pets/ferrets/providing-a-home-for-a-ferret",
+    publisher: "Merck Veterinary Manual",
+  },
+  {
+    label: "VCA Animal Hospitals: Ferrets - Housing",
+    url: "https://vcahospitals.com/know-your-pet/ferrets---housing",
+    publisher: "VCA Animal Hospitals",
+  },
+  {
+    label: "Lafeber Vet: Care of the Pet Ferret (client handout)",
+    url: "https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf",
+    publisher: "Lafeber Company",
+  },
 ]
 const schema = buildArticleSchema({
   siteId: 'ferret-com',
@@ -50,7 +65,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-09-04T00:00:00Z',
+  modifiedAt: '2026-10-12T00:00:00Z',
 
   citation: SOURCES,
 })
@@ -87,6 +102,7 @@ export default function BeddingAndLitterTypesPage() {
               items={[
                 { label: 'The Two Instincts', href: '#instincts' },
                 { label: 'Bedding That Works', href: '#bedding-good' },
+                { label: 'Hammocks', href: '#hammocks' },
                 { label: 'Bedding to Avoid', href: '#bedding-bad' },
                 { label: 'Litter Materials', href: '#litter' },
                 { label: 'Who should buy which', href: '#who' },
@@ -121,7 +137,7 @@ export default function BeddingAndLitterTypesPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-09-04"
+            updatedAt="2026-10-12"
             reviewedBy="Editorial team"
           />
           <EmailCapture
@@ -156,6 +172,18 @@ export default function BeddingAndLitterTypesPage() {
             <li><strong>Fleece liners.</strong> Machine-washable fleece cut to fit each cage level. Fleece does not fray into ingestible threads the way looser-woven fabrics do, which is why it is the standard. Keep a second set so the cage is never bare on laundry day.</li>
             <li><strong>Fleece tunnels and tubes.</strong> Double as bedding and enrichment; many ferrets sleep in a tube as readily as a sack.</li>
             <li><strong>An old t-shirt or towel</strong> works in a pinch, but watch for loose threads and fraying hems — terrycloth loops can snag a claw or be chewed off and swallowed.</li>
+          </ul>
+
+          <h2 id="hammocks">Hammocks: Placement, Fabric and Upkeep</h2>
+          <p>
+            Ferrets sleep a lot: VCA puts it at 12 to 18 hours a day, and the Merck Veterinary Manual says up to 18. Most of that sleep happens in whatever bed you hang, so the hammock is worth setting up with care.
+          </p>
+          <ul>
+            <li><strong>Hang it high, away from the litter.</strong> VCA recommends placing hammocks on the second or third level of a multi-level cage, so the ferret sleeps above where it eats and uses the litter box.</li>
+            <li><strong>Give it a dark, enclosed option too.</strong> Merck notes ferrets prefer small, confined spaces to sleep and enjoy hammocks and fabric huts. VCA calls a dark, enclosed sleeping area critical. A covered or pouch-style hammock, or an open hammock next to a sleep sack, covers both.</li>
+            <li><strong>Check the fabric before you buy.</strong> Merck advises making sure the fabric will not unravel or be eaten. Lafeber&apos;s ferret care handout says cloth tubes, tents and hammocks should be free of loops, holes and loose strings that can catch a ferret&apos;s nails.</li>
+            <li><strong>Pull it if it gets chewed.</strong> VCA advises removing bedding a ferret is chewing, because swallowed fabric is a risk.</li>
+            <li><strong>Launder it on a schedule.</strong> Lafeber recommends washing bedding regularly to keep odor down. A second hammock means the cage is never without one on laundry day.</li>
           </ul>
 
           <h2 id="bedding-bad">Bedding to Avoid</h2>
@@ -235,7 +263,7 @@ export default function BeddingAndLitterTypesPage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-10" />
+          <ComparisonFoot updated="2026-10-12" />
 
           <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/ferret+hammock?s=care-bedding-and-litter-types", "/go/amazon-brand/ferret+fleece+liner?s=care-bedding-and-litter-types", "/go/amazon-brand/recycled+paper+pellet+litter?s=care-bedding-and-litter-types", "/go/amazon-brand/ferret+corner+litter+pan?s=care-bedding-and-litter-types"]} />
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
