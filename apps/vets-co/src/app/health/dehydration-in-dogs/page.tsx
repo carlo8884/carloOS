@@ -8,7 +8,7 @@ const SOURCES = [
   { label: 'Merck Veterinary Manual: Fluid Therapy in Small Animals', url: 'https://www.merckvetmanual.com/therapeutics/fluid-therapy/fluid-therapy-in-animals', publisher: 'Merck Vet Manual' },
   { label: 'AAHA: Emergency and Critical Care Guidelines', url: 'https://www.aaha.org/aaha-guidelines/emergency-and-critical-care/', publisher: 'AAHA' },
 ]
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Dehydration in Dogs', description: 'Signs, skin turgor test, and IV fluids decision guide for dog dehydration.', url: 'https://vets.co/health/dehydration-in-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-09-05T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Dehydration in Dogs', description: 'Signs, skin turgor test, and IV fluids decision guide for dog dehydration.', url: 'https://vets.co/health/dehydration-in-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-12T00:00:00Z' ,
   citation: SOURCES,
 })
 const med = buildMedicalWebPageSchema({ name: 'Dehydration in Dogs', description: 'Assessing and treating dehydration in dogs — skin turgor, gum assessment, and fluid therapy.', url: 'https://vets.co/health/dehydration-in-dogs', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-07' })
@@ -44,7 +44,7 @@ export default function DehydrationPage() {
         <div className="carloOS-article">
 
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-09-05T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-09" />
+          <LastUpdated date="2026-10-12" />
 
           <h2>The Skin Turgor Test</h2>
           <p>The skin turgor test assesses skin elasticity — dehydration reduces skin elasticity as fluid is lost from subcutaneous tissues. Technique: grasp a fold of skin on the back of the neck or between the shoulder blades. Gently lift and then release. In a well-hydrated dog, the skin snaps back immediately to its normal position. In a dehydrated dog, the skin returns slowly ("tenting") or remains raised for a moment before settling. The slower the return, the more significant the dehydration.</p>

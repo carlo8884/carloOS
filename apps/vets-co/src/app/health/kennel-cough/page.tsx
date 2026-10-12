@@ -9,7 +9,7 @@ const SOURCES = [
   { label: 'Merck Veterinary Manual: Canine Infectious Respiratory Disease', url: 'https://www.merckvetmanual.com/respiratory-system/respiratory-diseases-of-small-animals/kennel-cough', publisher: 'Merck Vet Manual' },
   { label: 'AAHA: Canine Vaccination Guidelines (Bordetella)', url: 'https://www.aaha.org/aaha-guidelines/vaccination-canine-configuration/', publisher: 'AAHA' },
 ]
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Kennel Cough in Dogs', description: 'Signs, treatment, and prevention of canine infectious respiratory disease (kennel cough).', url: 'https://vets.co/health/kennel-cough', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-09-05T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Kennel Cough in Dogs', description: 'Signs, treatment, and prevention of canine infectious respiratory disease (kennel cough).', url: 'https://vets.co/health/kennel-cough', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-10-12T00:00:00Z' ,
   citation: SOURCES,
 })
 const med = buildMedicalWebPageSchema({ name: 'Kennel Cough in Dogs', description: 'Signs, treatment, and prevention of kennel cough.', url: 'https://vets.co/health/kennel-cough', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-01' })
@@ -49,7 +49,7 @@ export default function KennelCoughPage() {
       >
         <div className="carloOS-article">
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-09-05T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-09" />
+          <LastUpdated date="2026-10-12" />
 
           <CalloutBox variant="info" title="Usually mild, but watch the vulnerable">
             In a healthy adult dog, kennel cough is typically a self-limiting nuisance that clears with rest. In puppies, seniors, and dogs with underlying disease, it can be more serious and occasionally leads to pneumonia, so these dogs warrant closer monitoring and a lower threshold for veterinary care.

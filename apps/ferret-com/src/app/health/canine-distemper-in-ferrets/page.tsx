@@ -56,7 +56,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-10-12T00:00:00Z',
   speakable: true,
 
   citation: SOURCES,
@@ -162,7 +162,7 @@ export default function FerretCanineDistemperPage() {
             publishedAt="2026-06-01"
             updatedAt="2026-06-01"
           />
-          <LastUpdated date="2026-10-09" />
+          <LastUpdated date="2026-10-12" />
 
           <DropCap>
             Of all the diseases a ferret can face, canine distemper is the one

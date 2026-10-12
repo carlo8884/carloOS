@@ -9,7 +9,7 @@ const SOURCES = [
   { label: 'AAHA: Senior Care Guidelines for Dogs and Cats', url: 'https://www.aaha.org/aaha-guidelines/senior-care-configuration/', publisher: 'AAHA' },
   { label: 'AVMA: Senior Pet Care', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/senior-pets', publisher: 'AVMA' },
 ]
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Senior Dog Care Guide', description: 'Biannual exams, screening protocols, and quality of life for senior dogs.', url: 'https://vets.co/health/senior-pet-care', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Senior Dog Care Guide', description: 'Biannual exams, screening protocols, and quality of life for senior dogs.', url: 'https://vets.co/health/senior-pet-care', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-12T00:00:00Z' ,
   citation: SOURCES,
 })
 const med = buildMedicalWebPageSchema({ name: 'Senior Dog Care', description: 'Veterinary care protocols and quality of life for aging dogs.', url: 'https://vets.co/health/senior-pet-care', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-07' })
@@ -45,7 +45,7 @@ export default function SeniorPetCarePage() {
         <div className="carloOS-article">
 
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-06-07T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-09" />
+          <LastUpdated date="2026-10-12" />
 
           <h2>Why Biannual Exams Matter</h2>
           <DropCap>A year in a senior dog&apos;s life corresponds to 5–7 human years. Conditions that develop gradually — dental disease, kidney disease, hypothyroidism, arthritis, cardiac disease, early cancer — can progress from manageable to advanced within one annual exam cycle. The standard of care for dogs 7+ is twice-yearly comprehensive examinations. This is not excessive — it is appropriate for the rate at which senior dogs&apos; health changes.</DropCap>

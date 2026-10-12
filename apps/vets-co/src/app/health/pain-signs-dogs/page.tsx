@@ -9,7 +9,7 @@ const SOURCES = [
   { label: 'AAHA: Pain Management Guidelines for Dogs and Cats', url: 'https://www.aaha.org/aaha-guidelines/pain-management/', publisher: 'AAHA' },
   { label: 'Merck Veterinary Manual: Signs of Pain in Animals', url: 'https://www.merckvetmanual.com/therapeutics/pain-assessment-and-management/overview-of-pain-assessment-and-management-in-animals', publisher: 'Merck Vet Manual' },
 ]
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Signs Your Dog Is in Pain', description: '14 pain indicators in dogs — subtle and obvious signs of chronic and acute pain.', url: 'https://vets.co/health/pain-signs-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-09-05T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Signs Your Dog Is in Pain', description: '14 pain indicators in dogs — subtle and obvious signs of chronic and acute pain.', url: 'https://vets.co/health/pain-signs-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-12T00:00:00Z' ,
   citation: SOURCES,
 })
 const med = buildMedicalWebPageSchema({ name: 'Signs Your Dog Is in Pain', description: 'Subtle and obvious pain indicators in dogs.', url: 'https://vets.co/health/pain-signs-dogs', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-07' })
@@ -57,7 +57,7 @@ export default function PainSignsPage() {
 </>}
       >
         <div className="carloOS-article">
-          <LastUpdated date="2026-10-09" />
+          <LastUpdated date="2026-10-12" />
 
           <p className="text-base text-brand-text-mid leading-relaxed mb-8">A stoic dog in chronic pain may show none of the classic &quot;pain&quot; behaviors — no whimpering, no limping, no obvious distress. They adapt. They stop doing things that hurt, move differently, interact less. The change from baseline is what matters. Know your dog&apos;s normal. Household observation gear — an egg-crate foam dog kennel pad, carpeted wooden pet steps, a wide-platform veterinary floor scale — is how posture, stair reluctance, restlessness, and weight change stay visible.</p>
           {SIGNS.map((item, i) => (

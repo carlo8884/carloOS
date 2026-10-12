@@ -8,7 +8,7 @@ const SOURCES = [
   { label: 'Merck Veterinary Manual: Hypothyroidism in Dogs', url: 'https://www.merckvetmanual.com/endocrine-system/the-thyroid-gland/hypothyroidism-in-animals', publisher: 'Merck Vet Manual' },
   { label: 'AAHA: Endocrine Disease in Dogs', url: 'https://www.aaha.org/aaha-guidelines/', publisher: 'AAHA' },
 ]
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Hypothyroidism in Dogs', description: 'Signs, diagnosis, and lifelong management of canine hypothyroidism.', url: 'https://vets.co/health/hypothyroidism-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Hypothyroidism in Dogs', description: 'Signs, diagnosis, and lifelong management of canine hypothyroidism.', url: 'https://vets.co/health/hypothyroidism-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-10-12T00:00:00Z' ,
   citation: SOURCES,
 })
 const med = buildMedicalWebPageSchema({ name: 'Hypothyroidism in Dogs', description: 'Clinical signs, testing, and treatment of canine hypothyroidism.', url: 'https://vets.co/health/hypothyroidism-dogs', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-01' })
@@ -49,7 +49,7 @@ export default function HypothyroidismDogsPage() {
         <div className="carloOS-article">
 
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-09" />
+          <LastUpdated date="2026-10-12" />
 
           <CalloutBox variant="info" title="Easy to miss, easy to treat">
             Because the signs develop slowly and look like aging, many hypothyroid dogs go undiagnosed for a long time. A simple blood test confirms it, and treatment is highly effective and affordable. If your middle-aged dog has slowed down and gained weight, ask your veterinarian about thyroid testing. A large platform digital bathroom scale is only a home weight-watch — it does not diagnose hypothyroidism and it is not a substitute for that blood test.

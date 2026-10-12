@@ -11,7 +11,7 @@ const SOURCES = [
   { label: 'WSAVA: Global Nutrition Guidelines', url: 'https://wsava.org/global-guidelines/global-nutrition-guidelines/', publisher: 'WSAVA' },
   { label: 'Kealy RD et al. JAVMA 2002 — Effects of Diet Restriction on Life Span and Age-Related Changes', url: 'https://pubmed.ncbi.nlm.nih.gov/12420743/', publisher: 'Journal of the American Veterinary Medical Association' },
 ]
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Weight Management in Dogs and Cats', description: 'Dog body-condition scoring and a calorie example. Cats use the body condition score tool and the cat calorie calculator.', url: 'https://vets.co/health/weight-management', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-05T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Weight Management in Dogs and Cats', description: 'Dog body-condition scoring and a calorie example. Cats use the body condition score tool and the cat calorie calculator.', url: 'https://vets.co/health/weight-management', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-12T00:00:00Z' ,
   citation: SOURCES,
 })
 const med = buildMedicalWebPageSchema({ name: 'Weight Management in Dogs and Cats', description: 'Dog body-condition scoring and a calorie example. Cat checks use the body condition score tool and the cat calorie calculator.', url: 'https://vets.co/health/weight-management', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-07' })
@@ -53,7 +53,7 @@ export default function WeightManagementPage() {
 </>}
       >
         <div className="carloOS-article">
-          <LastUpdated date="2026-10-09" />
+          <LastUpdated date="2026-10-12" />
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
               Keep the kitchen-scale portioning notes

@@ -65,7 +65,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-05-29T00:00:00Z',
-  modifiedAt: '2026-05-29T00:00:00Z',
+  modifiedAt: '2026-10-12T00:00:00Z',
 
   citation: SOURCES,
 })
@@ -182,7 +182,7 @@ export default function FerretVetVisitPrepPage() {
             updatedAt="2026-05-29"
             reviewedBy="Editorial team"
           />
-          <LastUpdated date="2026-10-09" />
+          <LastUpdated date="2026-10-12" />
 
           <DropCap>
             The single highest-leverage decision in ferret veterinary care

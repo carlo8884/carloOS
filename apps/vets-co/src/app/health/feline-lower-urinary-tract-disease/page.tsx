@@ -9,7 +9,7 @@ const SOURCES = [
   { label: 'AVMA: Feline Lower Urinary Tract Disease', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/feline-lower-urinary-tract-disease', publisher: 'AVMA' },
   { label: '2025 iCatCare / FelineVMA consensus guidelines on feline lower urinary tract disease', url: 'https://catvets.com/publication/2025-icatcare-consensus-guidelines-on-the-diagnosis-and-management-of-lower-urinary-tract-diseases-in-cats/', publisher: 'American Association of Feline Practitioners' },
 ]
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Feline Lower Urinary Tract Disease (FLUTD)', description: 'Signs, causes, and management of feline lower urinary tract disease.', url: 'https://vets.co/health/feline-lower-urinary-tract-disease', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-09-05T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Feline Lower Urinary Tract Disease (FLUTD)', description: 'Signs, causes, and management of feline lower urinary tract disease.', url: 'https://vets.co/health/feline-lower-urinary-tract-disease', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-10-12T00:00:00Z' ,
   citation: SOURCES,
 })
 const med = buildMedicalWebPageSchema({ name: 'Feline Lower Urinary Tract Disease', description: 'Recognition, causes, and management of FLUTD in cats.', url: 'https://vets.co/health/feline-lower-urinary-tract-disease', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-01' })
@@ -49,7 +49,7 @@ export default function FLUTDPage() {
       >
         <div className="carloOS-article">
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-09-05T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-09" />
+          <LastUpdated date="2026-10-12" />
 
           <CalloutBox variant="warning" title="A cat that cannot urinate is an emergency">
             If your cat — especially a male cat — is straining in the litter box and producing little or no urine, crying, vomiting, or hiding and lethargic, treat it as an emergency and seek veterinary care right away. A complete urethral obstruction can be fatal within a day. Do not wait until morning.

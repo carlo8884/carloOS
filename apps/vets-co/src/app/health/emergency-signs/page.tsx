@@ -10,7 +10,7 @@ const SOURCES = [
   { label: 'AAHA: Emergency and Critical Care Guidelines', url: 'https://www.aaha.org/aaha-guidelines/emergency-and-critical-care/', publisher: 'AAHA' },
   { label: 'ASPCA Animal Poison Control Center', url: 'https://www.aspca.org/pet-care/aspca-poison-control', publisher: 'ASPCA' },
 ]
-const schema = buildArticleSchema({ siteId: 'vets-co', title: '14 Dog Emergency Signs', description: 'Veterinary emergency signs requiring immediate care — Reference guide.', url: 'https://vets.co/health/emergency-signs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-09-05T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'vets-co', title: '14 Dog Emergency Signs', description: 'Veterinary emergency signs requiring immediate care — Reference guide.', url: 'https://vets.co/health/emergency-signs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-12T00:00:00Z' ,
   citation: SOURCES,
 })
 const med = buildMedicalWebPageSchema({ name: '14 Dog Emergency Signs', description: 'Signs requiring immediate emergency veterinary care.', url: 'https://vets.co/health/emergency-signs', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-07' })
@@ -60,7 +60,7 @@ export default function EmergencySignsPage() {
 </>}
       >
         <div className="carloOS-article">
-          <LastUpdated date="2026-10-09" />
+          <LastUpdated date="2026-10-12" />
 
           <p className="text-base text-brand-text-mid leading-relaxed mb-8">This page is not a veterinarian. If your dog may be in danger, contact a vet. When in doubt: call your emergency vet and describe what you are seeing. A 2-minute call is far better than waiting and watching something become life-threatening. Emergency vets would rather you call unnecessarily than delay a critical situation. These 14 signs should prompt an immediate call and drive. Household prep gear — a wire basket dog muzzle, quilted disposable underpads, a handheld AA LED flashlight — is how the ride stays safer and cleaner. It does not treat GDV, it does not replace the clinic, and it is not a reason to delay the drive.</p>
           {EMERGENCY_SIGNS.map((item, i) => (

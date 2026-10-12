@@ -522,3 +522,44 @@ test('ferret fix L8: best-of pages carry ItemList markup and no Product, Review 
     expect(lists[0].itemListElement.length).toBeGreaterThanOrEqual(3)
   }
 })
+
+test('ferret fix L10: health and guide Article dateModified matches the visible Last updated date', async ({ request }) => {
+  const paths = [
+    '/ownership/ferret-insurance-basics',
+    '/ownership/adoption-vs-buying',
+    '/diet/transitioning-foods',
+    '/diet/hydration-and-water',
+    '/diet/kit-vs-adult-feeding',
+    '/ownership/ferret-supplies-checklist',
+    '/diet/raw-feeding-guide',
+    '/colors/male-vs-female-ferrets',
+    '/health/ear-mites',
+    '/health/dental-disease',
+    '/health/ferret-influenza',
+    '/health/canine-distemper-in-ferrets',
+    '/health/signs-of-pain',
+    '/health/adrenal-disease',
+    '/health/gastrointestinal-blockage',
+    '/health/anesthesia-and-surgery-risk',
+    '/health/lymphoma',
+    '/health/fleas-and-parasites',
+    '/health/spaying-and-neutering',
+    '/health/ferret-ulcers',
+    '/health/emergency-warning-signs',
+    '/health/insulinoma',
+    '/health/aging-ferret-care',
+    '/health/annual-checkup-guide',
+    '/health/ferret-diarrhea-causes',
+    '/health/vaccinations',
+    '/health/heart-disease',
+    '/health/vet-visit-prep',
+  ]
+  for (const path of paths) {
+    const html = await (await request.get(path)).text()
+    const visible = html.match(/Last updated <time dateTime="(\d{4}-\d{2}-\d{2})"/)?.[1]
+    const modified = [...html.matchAll(/"dateModified":"(\d{4}-\d{2}-\d{2})/g)].map((m) => m[1])
+    expect(visible, `${path} shows a Last updated date`).toBeTruthy()
+    expect(modified.length, `${path} has Article dateModified`).toBeGreaterThan(0)
+    for (const d of modified) expect(d, `${path} dateModified`).toBe(visible)
+  }
+})

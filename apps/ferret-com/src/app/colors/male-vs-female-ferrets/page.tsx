@@ -36,7 +36,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-10-12T00:00:00Z',
 })
 
 const FAQS = [
@@ -123,7 +123,7 @@ export default function MaleVsFemaleFerretsPage() {
             publishedAt="2026-06-01"
             updatedAt="2026-06-01"
           />
-          <LastUpdated date="2026-10-10" />
+          <LastUpdated date="2026-10-12" />
           <div className="mb-8">
             <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
 

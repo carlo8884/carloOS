@@ -9,7 +9,7 @@ const SOURCES = [
   { label: 'AAHA: Dental Care Guidelines for Dogs and Cats', url: 'https://www.aaha.org/aaha-guidelines/dental-care-configuration/', publisher: 'AAHA' },
   { label: 'WSAVA: Dental Guidelines', url: 'https://wsava.org/global-guidelines/dental-guidelines/', publisher: 'WSAVA' },
 ]
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Periodontal Disease in Dogs and Cats', description: 'Causes, signs, and prevention of periodontal disease in pets.', url: 'https://vets.co/health/periodontal-disease-pets', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-09-05T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Periodontal Disease in Dogs and Cats', description: 'Causes, signs, and prevention of periodontal disease in pets.', url: 'https://vets.co/health/periodontal-disease-pets', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-10-12T00:00:00Z' ,
   citation: SOURCES,
 })
 const med = buildMedicalWebPageSchema({ name: 'Periodontal Disease in Dogs and Cats', description: 'Causes, signs, and prevention of dental disease in pets.', url: 'https://vets.co/health/periodontal-disease-pets', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-01' })
@@ -50,7 +50,7 @@ export default function PeriodontalDiseasePage() {
         <div className="carloOS-article">
 
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-09-05T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-09" />
+          <LastUpdated date="2026-10-12" />
 
           <CalloutBox variant="info" title="The disease lives below the gumline">
             What owners see — tartar on the visible tooth — is only the surface. Periodontal disease destroys the structures anchoring the tooth beneath the gum, where it causes pain and bone loss invisibly. This is why dental X-rays and cleaning under the gumline, which require anesthesia, are essential to real dental care.

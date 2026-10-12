@@ -8,7 +8,7 @@ const SOURCES = [
   { label: 'Merck Veterinary Manual: Epilepsy in Small Animals', url: 'https://www.merckvetmanual.com/nervous-system/epilepsy-in-small-animals/epilepsy-in-small-animals', publisher: 'Merck Vet Manual' },
   { label: 'International Veterinary Epilepsy Task Force: Consensus Statements', url: 'https://bmcvetres.biomedcentral.com/articles/supplements/volume-11-supplement-1', publisher: 'BMC Veterinary Research' },
 ]
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Seizures in Dogs', description: 'What to do during a seizure, common causes, and management of canine epilepsy.', url: 'https://vets.co/health/seizures-in-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-09-05T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Seizures in Dogs', description: 'What to do during a seizure, common causes, and management of canine epilepsy.', url: 'https://vets.co/health/seizures-in-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-10-12T00:00:00Z' ,
   citation: SOURCES,
 })
 const med = buildMedicalWebPageSchema({ name: 'Seizures in Dogs', description: 'What to do during a seizure, causes, and management of epilepsy.', url: 'https://vets.co/health/seizures-in-dogs', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-01' })
@@ -53,7 +53,7 @@ export default function SeizuresPage() {
         <div className="carloOS-article">
 
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-09-05T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-09" />
+          <LastUpdated date="2026-10-12" />
 
           <CalloutBox variant="warning" title="A seizure over five minutes is an emergency">
             A seizure lasting more than about five minutes, or repeated seizures without full recovery in between, is a medical emergency. Prolonged seizure activity can cause dangerous overheating and brain injury. Go to an emergency hospital immediately. For a single brief seizure, schedule prompt veterinary evaluation rather than treating it as an immediate emergency.
