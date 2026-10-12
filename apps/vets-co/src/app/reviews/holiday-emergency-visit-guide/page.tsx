@@ -10,7 +10,7 @@ export const dynamic = 'force-dynamic'
 export const metadata: Metadata = buildMetadata({
   siteId: 'vets-co',
   title: 'Why a Holiday Emergency Visit Costs More | Vets.co',
-  description: 'Emergency hospitals already staff holidays. The quote link is Trupanion on the insurance review, bought before a problem.',
+  description: 'Emergency hospitals already staff holidays. Compare pet insurance carriers on published terms on the insurance review, before a problem.',
   path: '/reviews/holiday-emergency-visit-guide',
   type: 'article',
 })
@@ -18,7 +18,7 @@ export const metadata: Metadata = buildMetadata({
 const schema = buildArticleSchema({
   siteId: 'vets-co',
   title: 'Why a holiday emergency visit costs more',
-  description: 'Holiday staffing is already part of the emergency-cost explanation. The quote link is the one on the insurance review.',
+  description: 'Holiday staffing is already part of the emergency-cost explanation. The carrier comparison is on the insurance review.',
   url: 'https://vets.co/reviews/holiday-emergency-visit-guide',
   imageUrl: '',
   authorName: 'Vets.co Editorial',
@@ -40,8 +40,8 @@ const FAQS = [
     answer: 'Insurance bought before any condition arises covers much of an emergency after the deductible. A savings fund covers the deductible, the unreimbursed share, and the deposit. This guide does not reprint a dollar figure and does not invent one.',
   },
   {
-    question: 'Is a quote link emergency care?',
-    answer: 'No. The link below opens the Trupanion quote from the insurance review. If a pet is already in crisis, the costs guide says go. A quote form is not emergency care.',
+    question: 'Is comparing insurance emergency care?',
+    answer: 'No. The link below opens the carrier comparison on the insurance review, where each quote opens on the carrier\'s own site. If a pet is already in crisis, the costs guide says go. A quote form is not emergency care.',
   },
 ]
 
@@ -59,9 +59,9 @@ export default function HolidayEmergencyVisitGuidePage() {
       }}
       heroHop={
         <>
-          <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">A holiday emergency visit costs more because the hospital keeps staff on duty overnight, and Trupanion is the policy that can pay the clinic at checkout.</p>
+          <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">A holiday emergency visit costs more because the hospital keeps staff on duty overnight, Compare carriers such as Trupanion on the insurance review before a problem.</p>
           <div data-fold="offer">
-          <PrimaryHop href="/go/trupanion/home?s=reviews-holiday-emergency-visit-guide" label="Get a Trupanion quote" />
+          <PrimaryHop href="/go/trupanion/home?s=reviews-holiday-emergency-visit-guide" label="See Trupanion plans" />
           <HopDisclosure tone="on-dark" siteId="vets-co" href="/go/trupanion/home?s=reviews-holiday-emergency-visit-guide" />
         </div>
         </>
@@ -90,7 +90,7 @@ export default function HolidayEmergencyVisitGuidePage() {
         <h2>What the page says to do first</h2>
         <p>The same guide tells owners not to delay a real emergency over cost. Difficulty breathing, severe bleeding, collapse, inability to urinate, or suspected bloat means go. Financial options are discussed once the pet is stable. For a case that is not immediately life-threatening, the page says the hospital provides a written plan and an estimate, often as a range, and that a deposit before treatment is standard. This guide does not reprint a dollar figure from any other page and does not invent one.</p>
         <h2>Where a quote fits</h2>
-        <p>Preparation on that page is insurance bought before any condition arises, which it says covers much of an emergency after the deductible, plus a savings fund for the deductible, the unreimbursed share, and the deposit. The <Link href="/reviews/best-pet-insurance">pet insurance review</Link> is where the plan comparison lives. Its primary quote link is Trupanion. Nothing here adds a premium, a reimbursement percentage, or a holiday exclusion. If a pet is already in crisis, the costs guide says go. A quote form is not emergency care.</p>
+        <p>Preparation on that page is insurance bought before any condition arises, which it says covers much of an emergency after the deductible, plus a savings fund for the deductible, the unreimbursed share, and the deposit. The <Link href="/reviews/best-pet-insurance">pet insurance review</Link> is where the plan comparison lives. Trupanion is one of the carriers compared there. Nothing here adds a premium, a reimbursement percentage, or a holiday exclusion. If a pet is already in crisis, the costs guide says go. A quote form is not emergency care.</p>
         <div className="my-6 max-w-full min-w-0">
           <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
             <caption className="text-left font-semibold text-brand-dark p-3">At a glance</caption>
@@ -105,7 +105,7 @@ export default function HolidayEmergencyVisitGuidePage() {
               <tr className="border-b border-brand-border align-top">
                 <th scope="row" className="p-3 font-bold text-brand-dark text-left">What to do</th>
                 <td className="p-3">Go. Difficulty breathing, severe bleeding, collapse, inability to urinate, or suspected bloat</td>
-                <td className="p-3">The Trupanion quote from the insurance review</td>
+                <td className="p-3">Compare carriers on the insurance review</td>
               </tr>
               <tr className="border-b border-brand-border align-top">
                 <th scope="row" className="p-3 font-bold text-brand-dark text-left">What the quote is</th>
@@ -121,10 +121,10 @@ export default function HolidayEmergencyVisitGuidePage() {
           </table>
         </div>
         <ComparisonFoot updated="2026-10-12" />
-        <h2>Who should open the quote</h2>
-        <p>Open the Trupanion quote before a problem. If a pet is already in crisis, the costs guide says go.</p>
+        <h2>Who should compare carriers</h2>
+        <p>Compare carriers on published terms before a problem. Quotes open on each carrier's own site. If a pet is already in crisis, the costs guide says go.</p>
         <HopDisclosure siteId="vets-co" href="/go/trupanion/home?s=reviews-holiday-emergency-visit-guide" showQuietNote={false} />
-        <p><InlinePartnerQuote href="/go/trupanion/home?s=reviews-holiday-emergency-visit-guide" label="Get a Trupanion quote →" /></p>
+        <p><InlinePartnerQuote href="/go/trupanion/home?s=reviews-holiday-emergency-visit-guide" label="See Trupanion plans →" /></p>
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
         <EmailCapture
@@ -138,8 +138,7 @@ export default function HolidayEmergencyVisitGuidePage() {
             'Difficulty breathing, severe bleeding, collapse, inability to urinate, or suspected bloat means go.',
             'If a pet is already in crisis, the costs guide says go.',
             'A quote form is not emergency care.',
-            'Its primary quote link is Trupanion.',
-            'Get a Trupanion quote',
+            'Compare carriers on the insurance review before a problem.',
           ]}
         />
                 <ArticleSourcesList

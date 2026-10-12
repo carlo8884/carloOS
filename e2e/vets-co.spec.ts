@@ -394,3 +394,19 @@ test('vets fix P3: specialty table links, breed-health guide links and wellness 
     expect(await page.evaluate(() => document.documentElement.scrollWidth), path).toBeLessThanOrEqual(390)
   }
 })
+
+test('vets fix Q4: holiday emergency guide copy matches the held compare-carriers button, not a Trupanion quote', async ({ page }) => {
+  await page.goto('/reviews/holiday-emergency-visit-guide', { waitUntil: 'domcontentloaded' })
+  const text = (await page.locator('main').innerText()).replace(/\s+/g, ' ')
+  expect(text).not.toMatch(/Open the Trupanion quote|link below opens the Trupanion quote|The Trupanion quote from the insurance review|Get a Trupanion quote/i)
+  expect(text).toContain('Compare carriers on the insurance review')
+  const description = await page.locator('meta[name="description"]').getAttribute('content')
+  expect(description).not.toMatch(/quote link is Trupanion/i)
+  // Held (no partner tag): the hero links to the comparison. With a tag set: the hero names plans, not a quote.
+  const offer = page.locator('[data-fold="offer"]')
+  if (await offer.locator('[data-primary-hop="held"]').count()) {
+    await expect(offer.locator('a[href="/reviews/best-pet-insurance"]')).toHaveText('Compare carriers on published terms')
+  } else {
+    await expect(offer.locator('a[href^="/go/trupanion"]').first()).toHaveText(/See Trupanion plans/)
+  }
+})

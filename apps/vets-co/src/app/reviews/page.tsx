@@ -46,7 +46,7 @@ const REVIEWS = [
     group: 'vets-reviews-insurance', badge: 'Insurance' },
   { title: 'Holiday Leftovers and a Low-Fat Dog Food', desc: 'The pancreatitis page’s holiday surge. Use the food button only after a veterinarian says the dog is ready', href: '/reviews/holiday-leftovers-low-fat-guide',
     group: 'vets-reviews-season', badge: 'Season' },
-  { title: 'Why a Holiday Emergency Visit Costs More', desc: 'Holidays are already inside the round-the-clock staffing explanation. The button below is the Trupanion quote', href: '/reviews/holiday-emergency-visit-guide',
+  { title: 'Why a Holiday Emergency Visit Costs More', desc: 'Holidays are already inside the round-the-clock staffing explanation. Compare carriers on the insurance review before a problem', href: '/reviews/holiday-emergency-visit-guide',
     group: 'vets-reviews-season', badge: 'Season' },
   { title: 'November and December Pet Care Costs', desc: 'Insurance and telehealth bands already printed on those cards. Not toys, and not a quote', href: '/reviews/november-december-gift-guide',
     group: 'vets-reviews-season', badge: 'Season' },
@@ -83,7 +83,7 @@ export default function VetsReviewsPage() {
       />
       <div className="px-container-sm sm:px-container pt-6">
         <PriceAsOf date="2026-06-06" />
-        <LastUpdated date="2026-10-11" />
+        <LastUpdated date="2026-10-12" />
       </div>
       <nav aria-label="Breadcrumb" className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
         <Link href="/" className="hover:text-brand-primary no-underline">Home</Link><span>›</span>
