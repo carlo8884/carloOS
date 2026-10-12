@@ -58,19 +58,9 @@ test('vets fix: Healthy Paws claim speed matches the cited claims page in picks 
   const body = await page.locator('body').innerText()
   expect(body).not.toMatch(/~\s?2[- ]day|2-day average/i)
 
-  const ld = await page.locator('script[type="application/ld+json"]').allTextContents()
-  const nodes: { name?: string; description?: string }[] = []
-  const walk = (v: unknown) => {
-    if (Array.isArray(v)) v.forEach(walk)
-    else if (v && typeof v === 'object') {
-      nodes.push(v as { name?: string; description?: string })
-      Object.values(v).forEach(walk)
-    }
-  }
-  ld.forEach((text) => walk(JSON.parse(text)))
-  const healthyPaws = nodes.find((n) => n.name === 'Healthy Paws Pet Insurance')
-  expect(healthyPaws?.description).toContain('most claims are processed in 2 days')
-  expect(healthyPaws?.description).not.toMatch(/average|~/)
+  // L8 removed the carrier Product nodes; the schema must still carry no averaged claim speed.
+  const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
+  expect(ld).not.toMatch(/~\s?2[- ]day|2-day average/i)
 })
 
 test('vets fix hp label: Healthy Paws is labeled by its sourced claim speed, not as fastest', async ({ page }) => {
@@ -110,8 +100,8 @@ test('vets fix telehealth picks: each quick pick repeats its card badge, name, a
   const walk = (v: unknown) => {
     if (Array.isArray(v)) v.forEach(walk)
     else if (v && typeof v === 'object') {
-      const node = v as { '@type'?: string; name?: string }
-      if (node['@type'] === 'Product' && node.name) names.push(node.name)
+      const node = v as { '@type'?: string; itemListElement?: { name?: string }[] }
+      if (node['@type'] === 'ItemList') for (const e of node.itemListElement ?? []) if (e.name) names.push(e.name)
       Object.values(v).forEach(walk)
     }
   }
