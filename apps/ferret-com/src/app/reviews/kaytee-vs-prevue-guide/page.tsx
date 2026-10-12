@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, ShopCtas, buildArticleSchema, buildMetadata, ArticleSourcesList, LastUpdated, ComparisonFoot } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, ShopCtas, buildArticleSchema, buildMetadata, ArticleSourcesList, LastUpdated, ComparisonFoot, TableShopLink } from '@carloOS/ui'
 import { HopDisclosure } from '../../../components/HopDisclosure'
 
 export const metadata: Metadata = buildMetadata({
@@ -103,7 +103,7 @@ export default function KayteeVsPrevueGuidePage() {
           amazonLabel="Check price of the Prevue Feisty Ferret cage on Amazon"
         />
         <p>The Prevue is the pick when the review sizes the floor for one or two ferrets and the cage does not need to expand later. Cover the wire shelves either way.</p>
-        <div className="my-6 max-w-full min-w-0">
+        <div id="cage-table" className="my-6 max-w-full min-w-0">
           <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
             <caption className="text-left font-semibold text-brand-dark p-3">At a glance</caption>
             <thead>
@@ -138,6 +138,11 @@ export default function KayteeVsPrevueGuidePage() {
                 <th scope="row" className="p-3 font-bold text-brand-dark text-left">Price tier</th>
                 <td className="p-3">Mid</td>
                 <td className="p-3">Lowest of the three cages on that review</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Shop</th>
+                <td className="p-3"><TableShopLink href="/go/amazon/B000QFMYWQ?s=reviews-kaytee-vs-prevue-guide" product="Prevue Feisty Ferret cage" label="Check price of the Prevue Feisty Ferret cage on Amazon" /></td>
+                <td className="p-3"><TableShopLink href="/go/amazon/B008FONT2Y?s=reviews-kaytee-vs-prevue-guide" product="Kaytee Multi-Level Ferret Home" label="Check price of the Kaytee Multi-Level Ferret Home on Amazon" /></td>
               </tr>
             </tbody>
           </table>

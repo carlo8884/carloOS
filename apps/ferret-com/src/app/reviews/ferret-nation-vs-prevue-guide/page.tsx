@@ -1,7 +1,7 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, RelatedLinks, ShopCtas, buildArticleSchema, buildMetadata, PrimaryHop, ArticleSourcesList, LastUpdated, ComparisonFoot, EmailCapture } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, RelatedLinks, ShopCtas, buildArticleSchema, buildMetadata, PrimaryHop, ArticleSourcesList, LastUpdated, ComparisonFoot, EmailCapture, TableShopLink } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -93,7 +93,7 @@ export default function FerretNationVsPrevueGuidePage() {
         <HopDisclosure siteId="ferret-com" href="/go/amazon/B0054U8UGW?s=reviews-ferret-nation-vs-prevue-guide" />
         <p>The link below opens the Ferret Nation double unit on Amazon, the same product as on the cage review.</p>
         <p><a className="font-semibold text-brand-primary" href="/go/amazon/B0054U8UGW?s=reviews-ferret-nation-vs-prevue-guide">Browse the Ferret Nation double unit on Amazon →</a></p>
-        <div className="my-6 max-w-full min-w-0">
+        <div id="cage-table" className="my-6 max-w-full min-w-0">
           <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
             <caption className="text-left font-semibold text-brand-dark p-3">At a glance</caption>
             <thead>
@@ -128,6 +128,11 @@ export default function FerretNationVsPrevueGuidePage() {
                 <th scope="row" className="p-3 font-bold text-brand-dark text-left">Shelves and ramps</th>
                 <td className="p-3">Cover wire shelves and ramps</td>
                 <td className="p-3">Cover wire shelves and ramps</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Shop</th>
+                <td className="p-3"><TableShopLink href="/go/amazon/B0054U8UGW?s=reviews-ferret-nation-vs-prevue-guide" product="Ferret Nation double unit" label="Check price of the Ferret Nation double unit on Amazon" /></td>
+                <td className="p-3"><TableShopLink href="/go/amazon/B000QFMYWQ?s=reviews-ferret-nation-vs-prevue-guide" product="Prevue Feisty Ferret cage" label="Check price of the Prevue Feisty Ferret cage on Amazon" /></td>
               </tr>
             </tbody>
           </table>
