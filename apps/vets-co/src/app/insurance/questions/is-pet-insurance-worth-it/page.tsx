@@ -9,7 +9,7 @@ const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Is Pet Insurance 
 
 const FAQS = [
   { question: 'Does pet insurance save money on average?', answer: 'For most pets in most years, no — and that is by design. Like any insurance, it is priced so the insurer covers claims, overhead, and a margin, which means the average policyholder pays in somewhat more than they get back. You come out ahead financially only if eligible claims over the pet’s life exceed total premiums and deductibles, which generally requires one or more major incidents. The product is risk transfer, not a savings vehicle.' },
-  { question: 'When is pet insurance most worth it?', answer: 'It is most worth it when two things are true: you could not comfortably absorb a sudden $5,000–$10,000 emergency from savings, and you enroll while your pet is young and healthy so coverage locks in before exclusions. Under those conditions it does exactly what insurance is for — it converts a rare, potentially devastating bill into a predictable monthly cost and removes the risk of having to decline treatment over money.' },
+  { question: 'When is pet insurance most worth it?', answer: 'It is most worth it when two things are true: you could not comfortably absorb a sudden large emergency bill from savings, and you enroll while your pet is young and healthy so coverage locks in before exclusions. Under those conditions it does exactly what insurance is for — it converts a rare, potentially devastating bill into a predictable monthly cost and removes the risk of having to decline treatment over money.' },
   { question: 'Is a pet emergency fund a good alternative?', answer: 'It can be, for a disciplined owner. A dedicated pet emergency fund works if you actually fund it consistently and your pet does not face a large bill before the fund is built. The risk is timing: an emergency in year one can arrive before the fund is large enough, whereas insurance covers from the moment the waiting period ends. Self-insuring rewards discipline and good luck; insurance trades a steady premium for protection against bad luck.' },
 ]
 
@@ -26,7 +26,7 @@ export default function Page() {
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
             <p>Those figures are typical US ranges dated 2026-06-11.</p>
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">The Honest Frame</div>
-            {[['Most worth it', 'If a $5k–$10k bill would hurt'], ['Least useful', 'For recouping routine costs'], ['Real product', 'Risk transfer, not savings'], ['Best move', 'Run your own breakeven']].map(([p, d]) => (
+            {[['Most worth it', 'If a big surprise bill would hurt'], ['Least useful', 'For recouping routine costs'], ['Real product', 'Risk transfer, not savings'], ['Best move', 'Run your own breakeven']].map(([p, d]) => (
               <div key={p} className="py-2 border-b border-brand-border last:border-0">
                 <div className="text-xs font-bold text-brand-dark">{p}</div>
                 <div className="text-2xs text-brand-text-light">{d}</div>
@@ -43,7 +43,7 @@ export default function Page() {
 
           <p>Those figures are typical US ranges dated 2026-06-11.</p>
           <CalloutBox variant="info" title="The short answer">
-            Pet insurance is <strong>protection against rare, large vet bills — not a way to save money on average.</strong> It is most worth it when you could not comfortably absorb a sudden $5,000–$10,000 emergency from savings and you enroll while your pet is young and healthy. It is least useful as a way to recoup predictable routine costs. The honest answer is to run the breakeven for your own situation rather than rely on a blanket yes or no.
+            Pet insurance is <strong>protection against rare, large vet bills — not a way to save money on average.</strong> It is most worth it when you could not comfortably absorb a sudden large emergency bill from savings and you enroll while your pet is young and healthy. It is least useful as a way to recoup predictable routine costs. The honest answer is to run the breakeven for your own situation rather than rely on a blanket yes or no.
           </CalloutBox>
 
           <h2>What the Product Actually Is</h2>
@@ -52,7 +52,7 @@ export default function Page() {
 
           <h2>The Case For</h2>
           <p>Those figures are typical US ranges dated 2026-06-11.</p>
-          <p>Insurance makes the most sense when a single large bill would genuinely strain your finances. Emergency surgery, cancer treatment, or the management of a serious chronic condition can run from several thousand dollars into five figures. If absorbing a $5,000–$10,000 bill from savings would force a hard choice, insurance does exactly what it is designed to do: it caps your exposure to that worst case at a known monthly cost. The case is strongest when you also enroll early, locking in coverage before any condition becomes a pre-existing exclusion.</p>
+          <p>Insurance makes the most sense when a single large bill would genuinely strain your finances. Emergency surgery, cancer treatment, or the management of a serious chronic condition can be expensive. If absorbing a large emergency bill from savings would force a hard choice, insurance does exactly what it is designed to do: it caps your exposure to that worst case at a known monthly cost. The case is strongest when you also enroll early, locking in coverage before any condition becomes a pre-existing exclusion.</p>
 
           <h2>The Case Against</h2>
           <p>For owners who could comfortably write a five-figure check without changing their lives, the calculus shifts. If a large bill is an inconvenience rather than a crisis, self-insuring through a dedicated emergency fund can be the more economical path — you keep the margin the insurer would have taken, provided you actually fund the account and your pet does not face a major bill before it is built. Insurance is also least useful as a way to recoup routine, predictable costs, which a wellness add-on smooths but rarely makes cheaper. None of this makes insurance a bad product; it makes it the wrong fit for a specific financial profile.</p>
