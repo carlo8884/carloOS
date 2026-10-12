@@ -478,3 +478,12 @@ test('vets fix T12: every Amazon hop on the main money pages redirects to amazon
     }
   }
 })
+
+test('vets fix T11: insurance funnel pages show the affiliate disclosure only when they have affiliate links', async ({ page }) => {
+  for (const path of ['/pet-insurance', '/pet-insurance/states/alabama', '/pet-insurance/breeds/abyssinian', '/pet-insurance/breeds/abyssinian/alabama']) {
+    await page.goto(path, { waitUntil: 'domcontentloaded' })
+    const hops = await page.locator('a[href^="/go/"]').count()
+    const disclosures = await page.locator('[data-affiliate-disclosure="inline"]').count()
+    expect(disclosures > 0, `${path}: ${hops} hops, ${disclosures} inline disclosures`).toBe(hops > 0)
+  }
+})
