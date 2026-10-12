@@ -513,3 +513,11 @@ test('vets fix L3: listed text meets WCAG AA contrast', async ({ page }) => {
     await expectAAContrast(page, selector)
   }
 })
+
+test('vets fix L4: trimmed titles fit 70 characters', async ({ page }) => {
+  for (const path of ['/tools/insurance-finder', '/reviews/best-pet-insurance', '/health/cognitive-dysfunction']) {
+    await page.goto(path, { waitUntil: 'domcontentloaded' })
+    const title = await page.title()
+    expect(title.length, `${path}: ${title}`).toBeLessThanOrEqual(70)
+  }
+})
