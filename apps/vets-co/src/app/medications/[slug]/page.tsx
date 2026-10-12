@@ -129,11 +129,11 @@ export default function MedicationPage({ params }: PageProps) {
 
       {/* Breadcrumb */}
       <nav aria-label="Breadcrumb" className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
-        <Link href="/" className="hover:text-brand-primary no-underline">
+        <Link href="/" className="inline-flex min-h-6 items-center hover:text-brand-primary no-underline">
           Home
         </Link>
         <span>›</span>
-        <Link href="/medications" className="hover:text-brand-primary no-underline">
+        <Link href="/medications" className="inline-flex min-h-6 items-center hover:text-brand-primary no-underline">
           Medications
         </Link>
         <span>›</span>
@@ -409,7 +409,7 @@ export default function MedicationPage({ params }: PageProps) {
         <div className="mt-10 pt-8 border-t border-brand-border not-prose">
           <Link
             href="/medications"
-            className="text-brand-primary text-sm font-bold no-underline hover:underline"
+            className="inline-flex min-h-6 items-center text-brand-primary text-sm font-bold no-underline hover:underline"
           >
             ← Back to all medications
           </Link>

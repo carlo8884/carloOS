@@ -81,8 +81,8 @@ export default function StateVetFinderPage({ params }: PageProps) {
 
       {/* Breadcrumb */}
       <nav aria-label="Breadcrumb" className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
-        <Link href="/" className="hover:text-brand-primary no-underline">Home</Link><span>›</span>
-        <Link href="/find-a-vet" className="hover:text-brand-primary no-underline">Find a Vet</Link><span>›</span>
+        <Link href="/" className="inline-flex min-h-6 items-center hover:text-brand-primary no-underline">Home</Link><span>›</span>
+        <Link href="/find-a-vet" className="inline-flex min-h-6 items-center hover:text-brand-primary no-underline">Find a Vet</Link><span>›</span>
         <span className="text-brand-text-mid">{state.name}</span>
       </nav>
 
@@ -251,7 +251,7 @@ export default function StateVetFinderPage({ params }: PageProps) {
               Alternative: <a href="tel:8557647661" className="font-bold text-brand-dark hover:underline">Pet Poison Helpline: 855-764-7661</a> (24/7, fee applies).
             </p>
           </div>
-          <Link href="/health/emergency-signs" className="text-brand-primary text-sm font-bold no-underline hover:underline">→ Full emergency signs guide (when to go now)</Link>
+          <Link href="/health/emergency-signs" className="inline-flex min-h-6 items-center text-brand-primary text-sm font-bold no-underline hover:underline">→ Full emergency signs guide (when to go now)</Link>
         </section>
 
         {/* Cross-link to cornerstones */}
@@ -294,7 +294,7 @@ export default function StateVetFinderPage({ params }: PageProps) {
 
         {/* Back to all states */}
         <div className="mt-10 pt-8 border-t border-brand-border">
-          <Link href="/find-a-vet" className="text-brand-primary text-sm font-bold no-underline hover:underline">← Back to Find a Vet</Link>
+          <Link href="/find-a-vet" className="inline-flex min-h-6 items-center text-brand-primary text-sm font-bold no-underline hover:underline">← Back to Find a Vet</Link>
         </div>
       </div>
     </>

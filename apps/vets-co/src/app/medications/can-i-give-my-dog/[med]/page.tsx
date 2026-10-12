@@ -134,7 +134,7 @@ export default async function CanIGiveMyDogMedPage({ params }: PageProps) {
         </div>
 
         <div className="rounded-lg border p-4 my-4" style={{ borderColor: 'var(--brand-primary)', background: 'var(--brand-primary-pale)' }}>
-          <strong>We don’t publish doses.</strong> The safe amount of any medication depends on your dog’s exact weight, age, other drugs, and health — and the wrong amount is dangerous. For dosing, ask your veterinarian or a <Link href="/telehealth">telehealth vet</Link>.
+          <p className="m-0"><strong>We don’t publish doses.</strong> The safe amount of any medication depends on your dog’s exact weight, age, other drugs, and health — and the wrong amount is dangerous. For dosing, ask your veterinarian or a <Link href="/telehealth">telehealth vet</Link>.</p>
         </div>
 
         <h2 id="why">Why</h2>

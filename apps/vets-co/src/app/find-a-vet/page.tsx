@@ -42,7 +42,7 @@ export default function FindAVetPage() {
         secondaryCta={{ href: '/directory', label: 'License directory' }}
       />
       <nav aria-label="Breadcrumb" className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
-        <Link href="/" className="hover:text-brand-primary no-underline">Home</Link><span>›</span>
+        <Link href="/" className="inline-flex min-h-6 items-center hover:text-brand-primary no-underline">Home</Link><span>›</span>
         <span className="text-brand-text-mid">Find a Vet</span>
       </nav>
 
@@ -108,7 +108,7 @@ export default function FindAVetPage() {
               <div className="text-xs text-brand-text-mid">ASPCA Animal Poison Control: <span className="font-bold text-brand-dark">888-426-4435</span> (24/7, $70–100 consultation fee)</div>
             </div>
           </div>
-          <Link href="/health/emergency-signs" className="text-brand-primary text-sm font-bold no-underline hover:underline">→ Full emergency signs guide (14 signs to know)</Link>
+          <Link href="/health/emergency-signs" className="inline-flex min-h-6 items-center text-brand-primary text-sm font-bold no-underline hover:underline">→ Full emergency signs guide (14 signs to know)</Link>
         </section>
 
         <section id="states" className="mb-16">

@@ -377,7 +377,7 @@ export default function DiagnosticPage({ params }: PageProps) {
           <div className="mt-10 pt-8 border-t border-brand-border not-prose">
             <Link
               href="/diagnostics"
-              className="text-brand-primary text-sm font-bold no-underline hover:underline"
+              className="inline-flex min-h-6 items-center text-brand-primary text-sm font-bold no-underline hover:underline"
             >
               ← Back to all diagnostic tests
             </Link>

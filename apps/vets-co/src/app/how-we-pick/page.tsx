@@ -23,13 +23,13 @@ export default function HowWePickPage() {
       <SchemaScript schema={breadcrumbSchema} />
       <div className="px-container-sm sm:px-container py-16 max-w-content mx-auto">
         <nav aria-label="Breadcrumb" className="text-xs text-brand-text-light flex gap-2 mb-8">
-          <Link href="/" className="hover:text-brand-primary no-underline">Home</Link>
+          <Link href="/" className="inline-flex min-h-6 items-center hover:text-brand-primary no-underline">Home</Link>
           <span>›</span>
           <span className="text-brand-text-mid">How we pick</span>
         </nav>
         <h1 className="font-display font-black text-brand-dark text-3xl tracking-tight mb-2">How we pick</h1>
         <p className="text-sm text-brand-text-light mb-10">
-          Last updated <time dateTime="2026-10-05">October 5, 2026</time>
+          Last updated <time dateTime="2026-10-12">October 12, 2026</time>
         </p>
         <div className="carloOS-article">
           <p>

@@ -225,7 +225,7 @@ export default function SpecialistPage({ params }: PageProps) {
               href={s.boardCertificationDirectoryUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xs font-semibold text-brand-primary no-underline hover:underline"
+              className="inline-flex min-h-6 items-center text-xs font-semibold text-brand-primary no-underline hover:underline"
             >
               Verify a specialist →
             </a>
@@ -479,7 +479,7 @@ export default function SpecialistPage({ params }: PageProps) {
       <div className="mt-10 pt-8 border-t border-brand-border not-prose">
         <Link
           href="/specialists"
-          className="text-brand-primary text-sm font-bold no-underline hover:underline"
+          className="inline-flex min-h-6 items-center text-brand-primary text-sm font-bold no-underline hover:underline"
         >
           ← All veterinary specialties
         </Link>
