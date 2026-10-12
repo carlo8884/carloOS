@@ -127,7 +127,7 @@ export default function NovemberDecemberGiftGuidePage() {
     >
       <div className="carloOS-article">
           <LastUpdated date="2026-10-12" />
-        <p>These are five practical gifts for someone with a dog or cat. Each one helps with home care or a vet visit: a first-aid kit, a thermometer, a scale, a recovery cone, and a carrier. Each button opens an Amazon search for that type of item. This is not a ranked list, and nothing here replaces veterinary care.</p>
+        <p>These are five practical gifts for someone with a dog or cat. Each one helps with home care or a vet visit: a first-aid kit, a thermometer, a scale, a recovery cone, and a carrier. Each button opens an Amazon search for that type of item. This is not a ranked list, and nothing here replaces veterinary care. The reasons below come from the American Veterinary Medical Association page <a href="https://www.avma.org/resources-tools/pet-owners/emergencycare/first-aid-tips-pet-owners">First aid tips for pet owners</a>.</p>
         <p>Holiday food and emergency bills have their own pages. Fatty leftovers are on the <Link href="/reviews/holiday-leftovers-low-fat-guide">leftovers guide</Link>. Why a holiday emergency visit can cost more is on the <Link href="/reviews/holiday-emergency-visit-guide">emergency-visit guide</Link>.</p>
         <HopDisclosure siteId="vets-co" href={GIFTS.map((g) => hop(g.query))} />
         {GIFTS.map((g) => (
