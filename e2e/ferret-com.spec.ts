@@ -229,3 +229,13 @@ test('ferret fix P1: cage review and home standalone links are at least 24px tal
     expect(links.filter(({ height }) => height < 24).map(({ text, height }) => `${text} (${height}px)`), path).toEqual([])
   }
 })
+
+test('ferret fix T6: grooming page drops unsourced vet-approved and practice-standard claims', async ({ page }) => {
+  const removed = /vet-approved|vet-recommended|exotic-pet practice|first-line/i
+  await page.goto('/care/bathing-and-grooming')
+  expect(await page.locator('body').innerText()).not.toMatch(removed)
+  const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
+  expect(ld).not.toMatch(removed)
+  await expect(page.locator('#pet-ear-cleaner')).toContainText('Pet Ear Cleaner (Epi-Otic style)')
+  await expect(page.locator('#marshall-ferret-shampoo')).toContainText('A sensible default for the every-2–3-month bathing schedule.')
+})
