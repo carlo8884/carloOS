@@ -324,3 +324,14 @@ test('ferret fix Q5: health pages use credited photos that load, not the removed
     expect(html, path).not.toMatch(/photo-1633627876960|photo-1604848698030/)
   }
 })
+
+test('ferret fix M8: first-week checklist has a shop table for the day-one setup, Amazon only', async ({ page }) => {
+  await page.goto('/ownership/first-week-checklist', { waitUntil: 'domcontentloaded' })
+  const links = page.locator('#shop-first-week a[href^="/go/"]')
+  await expect(links).toHaveCount(6)
+  for (const href of await links.evaluateAll((els) => els.map((el) => el.getAttribute('href') ?? ''))) {
+    expect(href).toMatch(/^\/go\/amazon(-brand)?\/[^?]+\?s=first-week-checklist$/)
+  }
+  await expect(page.locator('#shop-first-week a[href="/go/amazon/B001NJ0DAY?s=first-week-checklist"]')).toHaveCount(1)
+  expect(await page.locator('main').innerText()).not.toMatch(/with no links/i)
+})
