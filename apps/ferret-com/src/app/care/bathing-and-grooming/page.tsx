@@ -557,7 +557,7 @@ export default function FerretBathingGroomingPage() {
             subtitle="Ferret-specific pH-balanced shampoo, no tea tree"
             winner
             description={
-              <p>Marshall's original ferret-shampoo product page no longer resolves. This button opens Marshall's current shampoo search. Marshall's standard ferret shampoo line — pH-balanced for ferret skin and free of the tea tree oil that the company sometimes includes in other variants. Pick the original or fragrance-free versions and avoid any version with tea tree on the ingredient list. The first-line shampoo across exotic-pet ferret practice and a sensible default for the every-2–3-month bathing schedule.</p>
+              <p>Marshall's old page for its original ferret shampoo is gone. Look for Marshall's current ferret shampoos instead. Marshall's standard ferret shampoo line — pH-balanced for ferret skin and free of the tea tree oil that the company sometimes includes in other variants. Pick the original or fragrance-free versions and avoid any version with tea tree on the ingredient list. The first-line shampoo across exotic-pet ferret practice and a sensible default for the every-2–3-month bathing schedule.</p>
             }
             specs={[
               { label: 'pH', value: 'Ferret-appropriate', highlight: 'good' },

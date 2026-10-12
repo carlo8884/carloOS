@@ -215,7 +215,7 @@ export default function FerretAgingPage() {
             publishedAt="2026-05-28"
             updatedAt="2026-05-28"
           />
-          <LastUpdated date="2026-10-09" />
+          <LastUpdated date="2026-10-11" />
 
           <DropCap>
             The senior years are where the structural decisions made earlier
@@ -577,7 +577,7 @@ export default function FerretAgingPage() {
             subtitle="Soft, low-entry sleep setup so an arthritic senior does not have to climb"
             winner
             description={
-              <p>Marshall's floor sleep-sack product page no longer resolves. This button opens Marshall's current leisure-lounge search. Most ferrets sleep in elevated hammocks throughout their adult lives. Arthritic and frail seniors often stop being able to climb into them comfortably and either give up sleeping in the hammock (and sleep on hard cage floor) or fall when trying. A floor-level soft sleep sack — a fleece "cube" or pillow-style bed — fixes the comfort problem. Multiple sleeping spots at floor level around the home and inside the cage is one of the highest-impact husbandry changes a senior-ferret keeper can make. <a href="/reviews/best-ferret-cage">The ferret cage guide</a> compares the cage those lower ramps belong on.</p>
+              <p>Marshall's old floor sleep-sack page is gone. Look for Marshall's current leisure lounges instead. Most ferrets sleep in elevated hammocks throughout their adult lives. Arthritic and frail seniors often stop being able to climb into them comfortably and either give up sleeping in the hammock (and sleep on hard cage floor) or fall when trying. A floor-level soft sleep sack — a fleece "cube" or pillow-style bed — fixes the comfort problem. Multiple sleeping spots at floor level around the home and inside the cage is one of the highest-impact husbandry changes a senior-ferret keeper can make. <a href="/reviews/best-ferret-cage">The ferret cage guide</a> compares the cage those lower ramps belong on.</p>
             }
             specs={[
               { label: 'Placement', value: 'Floor / cage-bottom', highlight: 'good' },

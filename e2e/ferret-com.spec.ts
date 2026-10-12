@@ -174,3 +174,26 @@ test('kibble guide search data points at the Amazon hop or on-page picks', async
   expect(ld).toContain('go/amazon/B019W9VXZK')
   expect(ld).toContain('best-ferret-kibble#marshall-premium-diet')
 })
+
+test('ferret fix T4: starter kit, adrenal, and Marshall cards drop internal link wording', async ({ page }) => {
+  const internal = /numeric id|not a confirmed|stays below|comfort card|Chewy search|this card|no longer resolves|this button opens|this opens|results in this search|the search returns|kit link/i
+  for (const path of [
+    '/ferret-starter-kit',
+    '/health/adrenal-disease',
+    '/health/aging-ferret-care',
+    '/care/bathing-and-grooming',
+    '/care/cage-setup',
+    '/care/litter-training',
+    '/care/exercise-and-enrichment',
+    '/behavior/leash-and-harness-training',
+    '/behavior/diy-enrichment-toys',
+    '/behavior/stress-signs',
+    '/behavior/digging-and-burrowing',
+    '/reviews/critter-nation-vs-marshall-cage-guide',
+    '/reviews/paper-vs-grass-litter-guide',
+    '/diet/whole-prey-vs-kibble',
+  ]) {
+    await page.goto(path, { waitUntil: 'domcontentloaded' })
+    expect(await page.locator('body').innerText(), path).not.toMatch(internal)
+  }
+})

@@ -281,7 +281,7 @@ export default function FerretCageSetupPage() {
             name="Marshall ferret cage"
             subtitle="Current mansion listings are two levels. Accessories are not included."
             description={
-              <p>Marshall's Designer Ferret Cage product page no longer resolves. This button opens Marshall's current cage search. Marshall is the most familiar brand to anyone who has bought a ferret at a US pet retailer, and a starter cage can still work as a first cage for one or two ferrets. Check bar spacing and footprint on the current listing. A smaller starter cage is often outgrown once a second ferret arrives.</p>
+              <p>Marshall's old Designer Ferret Cage page is gone. Look for Marshall's current ferret cages instead. Marshall is the most familiar brand to anyone who has bought a ferret at a US pet retailer, and a starter cage can still work as a first cage for one or two ferrets. Check bar spacing and footprint on the current listing. A smaller starter cage is often outgrown once a second ferret arrives.</p>
             }
             specs={[
               { label: 'Dimensions', value: 'Check the current listing' },
@@ -310,7 +310,7 @@ export default function FerretCageSetupPage() {
             name="Marshall hammock and nap sack"
             subtitle="Separate listings. A hammock and a nap sack do not ship as one set."
             description={
-              <p>Marshall's ferret sleep-sack product page no longer resolves. This button opens Marshall's current hammock search. The current hanging nap sack and banana hammock are separate listings, not one set. The nap-sack page says fleece with a built-in hide, nylon straps, and machine washable. The hammock page says soft fleece that clips to the cage. Check which listing the search returns.</p>
+              <p>Marshall's old ferret sleep-sack page is gone. Look for Marshall's current hammocks and sleep sacks instead. The current hanging nap sack and banana hammock are separate listings, not one set. The nap-sack page says fleece with a built-in hide, nylon straps, and machine washable. The hammock page says soft fleece that clips to the cage. Check which one you are buying.</p>
             }
             pros={['Ferret-specific sizing', 'Machine washable', 'Satisfies burrowing instinct', 'Widely available for quick replacement']}
             cons={['Fleece thins over time', 'Some ferrets chew the fabric']}

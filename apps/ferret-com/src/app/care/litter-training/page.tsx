@@ -532,7 +532,7 @@ export default function FerretLitterTrainingPage() {
             subtitle="Locks onto a cage. Low entrance. Shape and size count are not on the listing."
             winner
             description={
-              <p>The older Lock-N-Litter product page no longer resolves. This button opens Marshall's current lock-on litter pan search. The current Lock-On Litter Pan page says it locks on to almost any cage, the entrance is low, and it unscrews for cleaning. That page does not say the pan is triangular, does not mention a splash guard, and does not list a size count. Check the listing.</p>
+              <p>Marshall's old Lock-N-Litter page is gone. Look for Marshall's current lock-on litter pans instead. The current Lock-On Litter Pan page says it locks on to almost any cage, the entrance is low, and it unscrews for cleaning. That page does not say the pan is triangular, does not mention a splash guard, and does not list a size count. Check the listing.</p>
             }
             specs={[
               { label: 'Shape', value: 'Check the listing' },

@@ -538,7 +538,7 @@ export default function FerretExerciseEnrichmentPage() {
             subtitle="Check the current listing for construction, openings, and storage"
             winner
             description={
-              <p>Marshall's Pop-N-Play tunnel product page no longer resolves. This button opens Marshall's current play-tunnel search. The current Ele-Fun Nap & Play listing is a plush tunnel with several openings, and that page says it is machine washable. It does not print a chain, a wire frame, or flat storage. Other results in this search can differ. Check the listing.</p>
+              <p>Marshall's old Pop-N-Play tunnel page is gone. Look for Marshall's current play tunnels instead. The current Ele-Fun Nap & Play listing is a plush tunnel with several openings, and that page says it is machine washable. It does not print a chain, a wire frame, or flat storage. Other Marshall tunnels can differ. Check the listing.</p>
             }
             specs={[
               { label: 'Construction', value: 'Check the current listing' },

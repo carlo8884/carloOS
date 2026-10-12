@@ -324,7 +324,7 @@ export default function LeashAndHarnessTrainingPage() {
             subtitle="Fully adjustable, quick-snap buckles, 48-inch lead on the current listing"
             winner
             description={
-              <p>This button opens Marshall's current harness-and-lead search. The current harness-and-lead page says the set is fully adjustable, uses quick-snap buckles, and includes a 48-inch lead. It does not print an H-style diagram or a 6-foot lead. Check the listing before you treat it as an H-harness.</p>
+              <p>Marshall sells this as a harness-and-lead set. The current harness-and-lead page says the set is fully adjustable, uses quick-snap buckles, and includes a 48-inch lead. It does not print an H-style diagram or a 6-foot lead. Check the listing before you treat it as an H-harness.</p>
             }
             specs={[
               { label: 'Style', value: 'Fully adjustable, quick-snap. H-style is not printed.', highlight: 'good' },
