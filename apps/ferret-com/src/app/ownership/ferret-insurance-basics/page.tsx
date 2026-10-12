@@ -209,7 +209,7 @@ export default function FerretInsuranceBasicsPage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-10" />
+          <ComparisonFoot updated="2026-10-12" />
           <h2>Who should use which</h2>
           <p>Use insurance when you want the bill smoothed and the policy is already in place before signs appear. Use a savings fund when you want control and no claims process, and you can accept the gap while the fund grows. Neither is universally right, and a combination is still an individual decision.</p>
           <CrossSiteHelp

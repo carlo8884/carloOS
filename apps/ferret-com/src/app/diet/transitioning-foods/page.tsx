@@ -155,7 +155,7 @@ export default function TransitioningFoodsPage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-11" />
+          <ComparisonFoot updated="2026-10-12" />
           <h2>Who should slow which step</h2>
           <p>A fixated ferret goes slower than the one-to-two-week schedule. If the ferret picks out only the old food or develops loose stool, hold the current ratio for a few extra days. Day 12 is only for a ferret whose stool and appetite stayed normal.</p>
           <p>

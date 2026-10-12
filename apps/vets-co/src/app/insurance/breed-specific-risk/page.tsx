@@ -41,7 +41,7 @@ export default function BreedRiskPage() {
         <div className="carloOS-article">
 
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-09-06T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-10" />
+          <LastUpdated date="2026-10-12" />
 
           <CalloutBox variant="info" title="Insure the risk you can predict">
             Breed predispositions are some of the most predictable risks in pet health. That predictability cuts both ways: insurers price for it, and you can plan for it. The owner who knows their breed's likely conditions and enrolls early, with appropriate terms, is best positioned.
@@ -81,7 +81,7 @@ export default function BreedRiskPage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-10" />
+          <ComparisonFoot updated="2026-10-12" />
           <h2>Who should read which term</h2>
           <p>Read the orthopedic wait and the bilateral rule when the breed is prone to joint disease. Prioritize a high annual limit, and hereditary coverage, when the breed has predictable expensive needs. Enroll early, because the breed-typical conditions are the ones that become exclusions if they appear first.</p>
 

@@ -75,7 +75,7 @@ export default function HStyleVsMeshGuidePage() {
       }
     >
       <div className="carloOS-article">
-          <LastUpdated date="2026-10-09" />
+          <LastUpdated date="2026-10-12" />
         <EmailCapture
           variant="inline"
           siteId="ferret-com"
@@ -134,7 +134,7 @@ export default function HStyleVsMeshGuidePage() {
             </tbody>
           </table>
         </div>
-        <ComparisonFoot updated="2026-10-09" />
+        <ComparisonFoot updated="2026-10-12" />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
       </div>

@@ -91,7 +91,7 @@ export default function LemonadeVsPetsBestGuidePage() {
       }
     >
       <div className="carloOS-article">
-          <LastUpdated date="2026-10-11" />
+          <LastUpdated date="2026-10-12" />
         <EmailCapture
           variant="inline"
           siteId="vets-co"
@@ -155,7 +155,7 @@ export default function LemonadeVsPetsBestGuidePage() {
             </tbody>
           </table>
         </div>
-        <ComparisonFoot updated="2026-10-11" />
+        <ComparisonFoot updated="2026-10-12" />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
                 <ArticleSourcesList title="Sources"

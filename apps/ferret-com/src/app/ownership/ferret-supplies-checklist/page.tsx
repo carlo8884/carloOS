@@ -124,7 +124,7 @@ export default function FerretSuppliesChecklistPage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-10" />
+          <ComparisonFoot updated="2026-10-12" />
           <h2>Who should buy which first</h2>
           <p>Buy the cage, bedding, litter, dishes, food, and carrier before the ferret comes home. Add grooming tools, toys, and tunnels in the first week or two. A single good cage matters more than a pile of accessories.</p>
 

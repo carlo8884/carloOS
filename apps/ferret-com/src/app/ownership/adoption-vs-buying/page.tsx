@@ -163,7 +163,7 @@ export default function AdoptionVsBuyingPage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-10" />
+          <ComparisonFoot updated="2026-10-12" />
           <h2>Who should start where</h2>
           <p>Start with a rescue if you are open to an adult. Choose a breeder if you want a kit and will ask about the parents. A pet store is the convenient entry, with the least history. Confirm ferrets are legal where you live before any of the three.</p>
 

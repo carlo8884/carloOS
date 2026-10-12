@@ -82,7 +82,7 @@ export default function TrupanionVsEmbraceGuidePage() {
       }
     >
       <div className="carloOS-article">
-          <LastUpdated date="2026-10-11" />
+          <LastUpdated date="2026-10-12" />
         <p>The <Link href="/reviews/best-pet-insurance">pet insurance review</Link> already scores Trupanion for direct payment at the clinic and Embrace for owners who want routine care on an add-on. The monthly bands are the figures printed in the review, not a quote for your pet.</p>
         <h2>What the review says about Trupanion</h2>
         <p>Trupanion is Best Overall and the winner. It lists 90% reimbursement, unlimited payouts, direct vet payment, and a per-condition deductible. Wellness is not included. See the carrier&apos;s current terms for the monthly price. The downsides are higher premiums and no wellness coverage. The review says Trupanion offers direct vet payment at checkout rather than the pay-and-wait model; check terms.</p>
@@ -132,7 +132,7 @@ export default function TrupanionVsEmbraceGuidePage() {
             </tbody>
           </table>
         </div>
-        <ComparisonFoot updated="2026-10-11" />
+        <ComparisonFoot updated="2026-10-12" />
         <EmailCapture
           variant="inline"
           siteId="vets-co"

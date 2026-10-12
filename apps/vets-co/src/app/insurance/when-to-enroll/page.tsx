@@ -36,7 +36,7 @@ export default function WhenToEnrollPage() {
         <div className="carloOS-article">
 
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-09-06T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-10" />
+          <LastUpdated date="2026-10-12" />
 
           <CalloutBox variant="info" title="Enroll before you need it, not when you need it">
             Insurance is a bet against future unknowns. The moment a condition becomes known, it can no longer be insured. The practical rule is simple: enroll while your pet is healthy, even if that feels premature, because that is the only window in which full coverage is available.
@@ -90,7 +90,7 @@ export default function WhenToEnrollPage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-10" />
+          <ComparisonFoot updated="2026-10-12" />
           <h2>Who should enroll at which stage</h2>
           <p>Enroll a puppy or kitten while the record is empty. Enroll an adult before the first documented symptom. Enroll a senior with a relatively clean history against new illness. Enroll an adopted pet right after the new-pet exam.</p>
 

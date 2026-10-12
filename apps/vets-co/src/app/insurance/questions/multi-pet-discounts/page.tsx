@@ -38,7 +38,7 @@ export default function Page() {
       >
         <div className="carloOS-article">
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-11T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-10" />
+          <LastUpdated date="2026-10-12" />
 
           <CalloutBox variant="info" title="The short answer">
             Most insurers offer a <strong>multi-pet discount of roughly 5–10%</strong> per additional pet on the same account. It is a genuine but modest saving, and it should not be the deciding factor — coverage terms, annual limits, and claim handling matter far more than the discount.
@@ -83,7 +83,7 @@ export default function Page() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-10" />
+          <ComparisonFoot updated="2026-10-12" />
           <h2>Who should use the discount</h2>
           <p>Use the discount when the same carrier already fits every pet. Do not let it choose the carrier. Match coverage first.</p>
 

@@ -154,7 +154,7 @@ export default function KitVsAdultFeedingPage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-10" />
+          <ComparisonFoot updated="2026-10-12" />
           <h2>Who should feed which stage</h2>
           <p>Kits need variety inside the carnivore profile so later switches are possible. Adults stay on free-choice maintenance. A senior, from around age five, may need softened kibble, and a diet change with a diagnosis belongs with a veterinarian who sees ferrets.</p>
 

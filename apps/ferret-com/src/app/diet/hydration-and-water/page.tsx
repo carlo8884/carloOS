@@ -138,7 +138,7 @@ export default function HydrationAndWaterPage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-10" />
+          <ComparisonFoot updated="2026-10-12" />
           <h2>Who should use which</h2>
           <p>Use a heavy bowl as the water they lap from. Keep a sipper bottle only as a backup, and check that it dispenses. Do not leave a bottle as the only source.</p>
 

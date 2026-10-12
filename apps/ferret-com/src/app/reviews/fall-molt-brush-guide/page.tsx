@@ -80,7 +80,7 @@ export default function FallMoltBrushGuidePage() {
       }
     >
       <div className="carloOS-article">
-          <LastUpdated date="2026-10-10" />
+          <LastUpdated date="2026-10-12" />
         <p>The <Link href="/care/bathing-and-grooming">bathing and grooming page</Link> describes two coat changes a year. The fall molt, about September through November, is the loss of the summer coat and the growth of a denser winter undercoat, over a similar two-to-four-week window as the spring shed. Normal, on that page, is diffuse shedding, an intact but thinner coat, and regrowth within weeks. Not normal is symmetric hair loss over the rump, tail base, or shoulders, or hair that does not grow back. Those patterns stay on the grooming page and are a reason to call a veterinarian, not a reason to buy a different brush.</p>
         <h2>What to do with the loose coat</h2>
         <p>The <Link href="/care/seasonal-shedding">seasonal shedding page</Link> says the job during a shed is to lift loose hair before the ferret swallows it. A soft slicker brush or a fine-toothed metal comb, in short sessions of a minute or two, is the method it names. Daily brushing during the peak captures more hair. Ferrets groom themselves and, unlike cats, do not reliably vomit hairballs. The page says a heavy shed raises the swallowed-hair load, and a hair mass can contribute to a gastrointestinal obstruction. A vet-recommended hairball remedy is the other step it names. This guide does not name a remedy brand.</p>
@@ -115,7 +115,7 @@ export default function FallMoltBrushGuidePage() {
             </tbody>
           </table>
         </div>
-        <ComparisonFoot updated="2026-10-10" />
+        <ComparisonFoot updated="2026-10-12" />
         <h2>Who should use which tool</h2>
         <p>Use either tool in short sessions during the fall molt. This page links the soft slicker. The comb and the lint roller stay on the shedding page. One warm-water bath can loosen a heavy shed. Do not repeat it.</p>
         <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/soft+slicker+brush+small+animal?s=reviews-fall-molt-brush-guide" />

@@ -249,7 +249,7 @@ export default function MaleVsFemaleFerretsPage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-10" />
+          <ComparisonFoot updated="2026-10-12" />
           <h2>Who should choose which</h2>
           <p>Choose the individual ferret you click with. Use sex as a size lever when you want a larger or smaller animal. Manage an intact jill’s heat with a veterinarian. Nearly all pet-store ferrets are already altered.</p>
 

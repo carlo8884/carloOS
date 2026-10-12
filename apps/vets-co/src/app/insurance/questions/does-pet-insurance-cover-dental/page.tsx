@@ -37,7 +37,7 @@ export default function Page() {
       >
         <div className="carloOS-article">
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-11T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-10" />
+          <LastUpdated date="2026-10-12" />
 
           <CalloutBox variant="info" title="The short answer">
             Most accident-and-illness policies cover <strong>dental disease and dental injuries</strong> — extractions, fractured teeth, and treatment of periodontal disease — but <strong>not</strong> routine dental <strong>cleanings</strong>, which are preventive and sit in wellness-plan territory. Many insurers require evidence of annual dental exams or cleanings to keep dental-illness claims eligible, so read the dental clause.
@@ -81,7 +81,7 @@ export default function Page() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-10" />
+          <ComparisonFoot updated="2026-10-12" />
           <h2>Who should read which clause</h2>
           <p>Read the dental clause before you assume treatment is covered. Disease and injury sit on the core policy. A cleaning sits on a wellness add-on. Many insurers still require an annual dental exam or cleaning before a later illness claim stays eligible.</p>
 

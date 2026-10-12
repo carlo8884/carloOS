@@ -38,7 +38,7 @@ export default function Page() {
       >
         <div className="carloOS-article">
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-11T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-10" />
+          <LastUpdated date="2026-10-12" />
 
           <CalloutBox variant="info" title="The short answer">
             Standard accident-and-illness pet insurance does <strong>not</strong> cover vaccines or other routine, preventive care. Vaccines are reimbursed only if you add an optional wellness or routine-care plan for an extra monthly cost. The core policy pays for unexpected illness and injury — not predictable annual care.
@@ -91,7 +91,7 @@ export default function Page() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-10" />
+          <ComparisonFoot updated="2026-10-12" />
           <h2>Who should buy which layer</h2>
           <p>Buy the core policy when the goal is a large unexpected bill. Add wellness only after the per-category caps and the premium match what you already spend on routine care. Vaccines stay off the core policy either way.</p>
 

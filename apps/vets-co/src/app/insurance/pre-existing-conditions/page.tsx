@@ -41,7 +41,7 @@ export default function PreExistingPage() {
         <div className="carloOS-article">
 
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-09-06T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-11" />
+          <LastUpdated date="2026-10-12" />
 
           <CalloutBox variant="warning" title="Timing is everything">
             Every condition your pet develops before coverage starts becomes a permanent gap. This is why the most common piece of advice from veterinary teams is to enroll while a pet is young and healthy — not after the first worrying symptom appears.
@@ -81,7 +81,7 @@ export default function PreExistingPage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-11" />
+          <ComparisonFoot updated="2026-10-12" />
           <h2>Who should compare which pathway</h2>
           <p>Compare whether the insurer offers a curable-condition pathway, and how long that symptom-free period is. An incurable condition stays excluded. A resolved infection may not.</p>
 

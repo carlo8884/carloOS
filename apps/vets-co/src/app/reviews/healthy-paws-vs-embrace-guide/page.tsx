@@ -83,7 +83,7 @@ export default function HealthyPawsVsEmbraceGuidePage() {
       priceAsOf="2026-10-07"
     >
       <div className="carloOS-article">
-          <LastUpdated date="2026-10-11" />
+          <LastUpdated date="2026-10-12" />
         <EmailCapture
           variant="inline"
           siteId="vets-co"
@@ -149,7 +149,7 @@ export default function HealthyPawsVsEmbraceGuidePage() {
             </tbody>
           </table>
         </div>
-        <ComparisonFoot updated="2026-10-11" />
+        <ComparisonFoot updated="2026-10-12" />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
                 <ArticleSourcesList title="Sources"

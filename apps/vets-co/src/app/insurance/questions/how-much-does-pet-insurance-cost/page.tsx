@@ -39,7 +39,7 @@ export default function Page() {
       >
         <div className="carloOS-article">
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-11T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-10" />
+          <LastUpdated date="2026-10-12" />
 
           <CalloutBox variant="info" title="The short answer">
             Most dog accident-and-illness policies run roughly <strong>$30–$70 per month</strong> and cats roughly <strong>$15–$40 per month</strong> (2026 ranges drawn from industry averages), but your specific price swings with species, breed, age, location, and the deductible, reimbursement percentage, and annual limit you select. Treat any single &ldquo;average&rdquo; as a starting point, not a quote.
@@ -85,7 +85,7 @@ export default function Page() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-10" />
+          <ComparisonFoot updated="2026-10-12" />
           <h2>Who should turn which dial</h2>
           <p>Raise the deductible when you can absorb more of each claim. Pay for a higher reimbursement when you want more of the eligible bill back. Choose the unlimited limit when a five-thousand-dollar cap is too low for the care you expect. Tune the three together to a monthly figure you can sustain.</p>
 

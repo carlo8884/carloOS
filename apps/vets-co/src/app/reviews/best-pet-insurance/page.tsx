@@ -143,7 +143,7 @@ export default function VetsPetInsurancePage() {
         <div className="grid lg:grid-cols-[1fr_270px] gap-12 min-w-0">
           <div className="min-w-0">
             <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-10-07T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-11" />
+          <LastUpdated date="2026-10-12" />
 
 
             <PullQuote variant="lead" quote="Enroll before your first vet visit. Every condition noted in records before enrollment may be permanently excluded as pre-existing." attribution="The single most important point on pet insurance" />
@@ -251,7 +251,7 @@ export default function VetsPetInsurancePage() {
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-11" />
+              <ComparisonFoot updated="2026-10-12" />
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Questions this comparison answers</h2>
               <FAQAccordion items={[
                 {

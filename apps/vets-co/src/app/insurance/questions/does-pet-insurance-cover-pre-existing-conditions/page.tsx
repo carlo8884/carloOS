@@ -37,7 +37,7 @@ export default function Page() {
       >
         <div className="carloOS-article">
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-11T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-10" />
+          <LastUpdated date="2026-10-12" />
 
           <CalloutBox variant="warning" title="The short answer">
             No pet insurer covers pre-existing conditions — any condition with signs, symptoms, or a diagnosis <strong>before</strong> coverage starts or during the waiting period. Some insurers will re-cover a previously <em>curable</em> condition after a defined symptom-free window; chronic and incurable conditions stay permanently excluded everywhere.
@@ -107,7 +107,7 @@ export default function Page() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-10" />
+          <ComparisonFoot updated="2026-10-12" />
           <h2>Who should read which clause</h2>
           <p>Read the curable-condition window when a past issue fully resolved. Read the bilateral language when the breed is prone to joint or eye problems. An incurable condition on the record stays excluded for the life of the policy.</p>
 

@@ -37,7 +37,7 @@ export default function Page() {
       >
         <div className="carloOS-article">
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-11T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-10" />
+          <LastUpdated date="2026-10-12" />
 
           <CalloutBox variant="info" title="The short answer">
             Pet insurance is almost always <strong>reimbursement-based</strong>: you pay the veterinarian in full, then submit the itemized invoice (and sometimes records) to the insurer, which pays you back your reimbursement percentage of the eligible amount after your deductible is met. Processing usually takes a few days to a few weeks; some insurers offer faster app-based claims or, with select vets, direct pay.
@@ -76,7 +76,7 @@ export default function Page() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-10" />
+          <ComparisonFoot updated="2026-10-12" />
           <h2>Who should check which deductible</h2>
           <p>Confirm which structure the policy uses before you assume a year with several claims. An annual deductible is the simpler one to predict. A per-incident deductible repeats for each new condition.</p>
 

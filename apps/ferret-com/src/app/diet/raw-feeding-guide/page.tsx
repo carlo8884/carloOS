@@ -169,7 +169,7 @@ export default function RawFeedingGuidePage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-11" />
+          <ComparisonFoot updated="2026-10-12" />
           <h2>Who should feed which</h2>
           <p>Feed whole prey when you want the balance to arrive with the animal. Feed frankenprey when familiar meats are easier to source and you will keep the ratio right. A poorly assembled raw diet can be worse than a good commercial kibble.</p>
 
