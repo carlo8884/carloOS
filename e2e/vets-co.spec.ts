@@ -343,3 +343,13 @@ test('vets fix P1: telehealth and insurance review have no standalone links unde
     expect(short, path).toEqual([])
   }
 })
+
+test('vets fix M4: telehealth JSON-LD points at on-page cards, not held Vetster or Chewy hops', async ({ page }) => {
+  await page.goto('/telehealth', { waitUntil: 'domcontentloaded' })
+  const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
+  expect(ld).not.toMatch(/\/go\/(vetster|chewy|askvet)\b/)
+  for (const id of ['vetster', 'askvet', 'chewy']) {
+    expect(ld).toContain(`https://vets.co/telehealth#${id}`)
+    await expect(page.locator(`#${id}`)).toHaveCount(1)
+  }
+})
