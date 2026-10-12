@@ -179,7 +179,7 @@ export default function FerretDentalDiseasePage() {
             updatedAt="2026-09-05"
             reviewedBy="Editorial team"
           />
-          <LastUpdated date="2026-10-09" />
+          <LastUpdated date="2026-10-12" />
 
           <DropCap>
             Open a healthy 2-year-old ferret&apos;s mouth and you will almost

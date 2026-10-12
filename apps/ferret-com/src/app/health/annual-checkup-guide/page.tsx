@@ -173,7 +173,7 @@ export default function FerretAnnualCheckupGuidePage() {
             publishedAt="2026-06-01"
             updatedAt="2026-06-01"
           />
-          <LastUpdated date="2026-10-08" />
+          <LastUpdated date="2026-10-12" />
 
           <DropCap>
             Ferrets live fast and develop disease young. By the time a ferret

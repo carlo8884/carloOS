@@ -166,7 +166,7 @@ export default function FerretSpayNeuterPage() {
             publishedAt="2026-06-01"
             updatedAt="2026-06-01"
           />
-          <LastUpdated date="2026-10-09" />
+          <LastUpdated date="2026-10-12" />
 
           <DropCap>
             In most companion species, spaying is about preventing unwanted
