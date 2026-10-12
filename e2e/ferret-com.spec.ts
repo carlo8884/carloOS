@@ -578,3 +578,18 @@ test('ferret fix R5: bedding page hammock section is sourced and keeps the tagge
   expect(hop.status()).toBe(302)
   expect(hop.headers().location).toMatch(/^https:\/\/(www\.)?amazon\.com\/.*[?&]tag=/)
 })
+
+test('ferret fix T13: exact-ASIN and search hops carry exactly the env tag, no raw Amazon links', async ({ page, request }) => {
+  const hops = new Set<string>(['/go/amazon/B0054U8UGW', '/go/amazon/B019W9VXZK?s=best-ferret-kibble'])
+  for (const path of ['/reviews/best-ferret-cage', '/care/bedding-and-litter-types']) {
+    await page.goto(path, { waitUntil: 'domcontentloaded' })
+    const hrefs = await page.locator('a[href]').evaluateAll((els) => els.map((el) => el.getAttribute('href') ?? ''))
+    expect(hrefs.filter((h) => /^https?:\/\/([^/]*\.)?(amazon\.com|amzn\.to|amzn\.com)\b/.test(h)), path).toEqual([])
+    for (const h of hrefs) if (h.startsWith('/go/amazon')) hops.add(h)
+  }
+  for (const h of hops) {
+    const res = await request.get(h, { maxRedirects: 0 })
+    expect(res.status(), h).toBe(302)
+    expect(new URL(res.headers().location).searchParams.getAll('tag'), h).toEqual([AMAZON_TAG])
+  }
+})

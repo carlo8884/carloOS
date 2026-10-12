@@ -763,3 +763,21 @@ test('vets fix P2: non-funnel breadcrumb, back and dosing links are at least 24p
     expect(short, path).toEqual([])
   }
 })
+
+test('vets fix T13: Amazon hops carry exactly the env tag, no raw Amazon links, no hard-coded tag in config', async ({ page, request }) => {
+  const { readFileSync } = await import('node:fs')
+  expect(readFileSync('packages/config/affiliate.ts', 'utf8')).not.toMatch(/carloOS-20|amazonLink|amazonSearchLink/)
+  const hops = new Set<string>()
+  for (const path of ['/guides/pet-first-aid-kit', '/guides/recovery-cone-e-collar', '/guides/how-to-give-your-pet-a-pill', '/telehealth']) {
+    await page.goto(path, { waitUntil: 'domcontentloaded' })
+    const hrefs = await page.locator('a[href]').evaluateAll((els) => els.map((el) => el.getAttribute('href') ?? ''))
+    expect(hrefs.filter((h) => /^https?:\/\/([^/]*\.)?(amazon\.com|amzn\.to|amzn\.com)\b/.test(h)), path).toEqual([])
+    for (const h of hrefs) if (h.startsWith('/go/amazon')) hops.add(h)
+  }
+  expect(hops.size).toBeGreaterThan(0)
+  for (const h of hops) {
+    const res = await request.get(h, { maxRedirects: 0 })
+    expect(res.status(), h).toBe(302)
+    expect(new URL(res.headers().location).searchParams.getAll('tag'), h).toEqual([AMAZON_TAG])
+  }
+})
