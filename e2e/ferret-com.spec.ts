@@ -369,3 +369,12 @@ test('ferret fix M10: paper vs wood litter guide has a shop link for both picks'
   expect(table).toEqual([paper, wood])
   await expect(page.locator(`main a[href="${wood}"]`)).toHaveCount(2)
 })
+
+test('ferret fix M11: fall molt brush guide has a shop link for both picks', async ({ page }) => {
+  await page.goto('/reviews/fall-molt-brush-guide', { waitUntil: 'domcontentloaded' })
+  const brush = '/go/amazon-brand/soft+slicker+brush+small+animal?s=reviews-fall-molt-brush-guide'
+  const comb = '/go/amazon-brand/fine+tooth+metal+comb?s=reviews-fall-molt-brush-guide'
+  const table = await page.locator('#molt-table a[href^="/go/"]').evaluateAll((els) => els.map((el) => el.getAttribute('href')))
+  expect(table).toEqual([brush, comb])
+  await expect(page.locator(`main a[href="${comb}"]`)).toHaveCount(2)
+})
