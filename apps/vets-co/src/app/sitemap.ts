@@ -90,6 +90,7 @@ export default function sitemap(props?: { id?: number | string }): MetadataRoute
     { url: 'https://vets.co/guides/emergency-vet-costs', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://vets.co/guides/er-vs-urgent-care', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://vets.co/guides/how-to-afford-vet-care', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
+    { url: 'https://vets.co/guides/pet-first-aid-kit', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://vets.co/guides/questions-to-ask-your-vet', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://vets.co/guides/what-to-expect-at-the-vet', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://vets.co/guides/when-to-go-to-the-vet', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
