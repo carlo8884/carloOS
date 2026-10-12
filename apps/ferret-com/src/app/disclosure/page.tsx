@@ -11,7 +11,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
   title: 'Affiliate Disclosure',
   description:
-    'How Ferret.com makes money: Amazon, Chewy, and ferret-specialty retailers (Marshall, Wysong). Editorial-integrity policy and contact info.',
+    'How Ferret.com makes money: Amazon Associates. Chewy, Marshall, and Wysong are not currently connected. Editorial-integrity policy and contact info.',
   path: '/disclosure',
   type: 'article',
 })
@@ -25,7 +25,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-05-29T00:00:00Z',
-  modifiedAt: '2026-05-29T00:00:00Z',
+  modifiedAt: '2026-10-11T00:00:00Z',
 })
 
 export default function DisclosurePage() {
@@ -37,7 +37,7 @@ export default function DisclosurePage() {
         subtitle:
           'How Ferret.com makes money, which affiliate programs we participate in, and the editorial-integrity contract that controls how affiliate relationships interact with our husbandry and health recommendations.',
         category: 'Legal & Transparency',
-        authorName: 'Ferret.com Editorial — last updated 2026-05-29',
+        authorName: 'Ferret.com Editorial — last updated 2026-10-11',
         publishedAt: 'May 2026',
         readTime: '6 min',
       }}
@@ -51,7 +51,7 @@ export default function DisclosurePage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-05-29"
-            updatedAt="2026-05-29"
+            updatedAt="2026-10-11"
             reviewedBy="Editorial team"
           />
 
@@ -111,19 +111,14 @@ export default function DisclosurePage() {
             Associate we earn from qualifying purchases.
           </li>
           <li>
-            <strong>Chewy Affiliate Program.</strong> Chewy carries a moderate
-            range of ferret-relevant items, mostly small-animal cages,
-            bedding, and a limited selection of ferret foods.
-          </li>
-          <li>
             <strong>Ferret-specialty retailers.</strong> Some of the most
             important products for ferret husbandry — high-meat-protein
             kibble formulations, ferret-safe vaccines (referrals to vets,
             not direct sales), and ferret-specific harnesses — come from
             ferret-specialty channels. Marshall Pet Products and Wysong are
             the two long-standing ferret-specialty operators we link to most
-            often. Some of these retailers operate affiliate programs; some
-            do not. We link to them either way when they are the right fit.
+            often. We are not currently connected to an affiliate program
+            with either. We link to them when they are the right fit.
           </li>
         </ul>
         <p>
@@ -135,8 +130,8 @@ export default function DisclosurePage() {
         <h2>How We Make Money</h2>
         <ol>
           <li>
-            Affiliate commissions from the programs above when readers click
-            through and complete a purchase.
+            Amazon Associates commissions when readers click through and
+            complete a qualifying purchase.
           </li>
           <li>
             No newsletter is currently sent, so there is no sponsored newsletter.

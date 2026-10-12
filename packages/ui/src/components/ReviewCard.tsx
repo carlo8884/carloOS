@@ -275,7 +275,7 @@ export function ReviewCard({
             ) : visit ? (
               <a
                 href={visit.href}
-                className="inline-flex items-center justify-center text-sm font-bold text-brand-primary underline underline-offset-2 max-w-full text-left whitespace-normal"
+                className="inline-flex min-h-6 items-center justify-center text-sm font-bold text-brand-primary underline underline-offset-2 max-w-full text-left whitespace-normal"
               >
                 {visit.label}
               </a>

@@ -1,7 +1,7 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, ShopCtas, buildArticleSchema, buildMetadata, PrimaryHop, ArticleSourcesList, LastUpdated, ComparisonFoot } from '@carloOS/ui'
+import { ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, ShopCtas, buildArticleSchema, buildMetadata, PrimaryHop, ArticleSourcesList, LastUpdated, ComparisonFoot, TableShopLink } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -19,7 +19,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-10-04T00:00:00Z',
-  modifiedAt: '2026-10-04T00:00:00Z',
+  modifiedAt: '2026-10-12T00:00:00Z',
 })
 
 const FAQS = [
@@ -78,7 +78,7 @@ export default function PaperVsWoodLitterGuidePage() {
       }
     >
       <div className="carloOS-article">
-          <LastUpdated date="2026-10-11" />
+          <LastUpdated date="2026-10-12" />
         <p>The <Link href="/reviews/best-ferret-litter">litter review</Link> refuses clumping cat litter and aromatic pine or cedar shavings, then compares three pelleted options that clear that bar. Paper versus wood is the everyday choice inside that safe set. Pelleted grass, the third option, is set beside paper in the <Link href="/reviews/paper-vs-grass-litter-guide">paper versus grass guide</Link>. Litter will not, by itself, fix ferret odor. Diet and the cleaning routine in the <Link href="/care/odor-and-scent-control">odor guide</Link> still do most of that work.</p>
         <h2>Paper pellets</h2>
         <p>Recycled paper pellets are the best overall pick. The review lists very low dust, no clumping agents, a soft feel underfoot, and moderate odor control. The price tier is $$. The cons are the moderate odor, changing the pan instead of scooping and topping up, and lighter pellets that can scatter. The review calls this the litter to buy if you are not trying to optimize a single trait.</p>
@@ -86,11 +86,15 @@ export default function PaperVsWoodLitterGuidePage() {
         <p>Compressed wood pellets are the odor pick. Odor control is the strongest of the safe options on the page. Dust is low once fines are sifted. The price tier is $. The caveat is the form of the wood. The review says aromatic raw cedar and pine shavings release phenols tied to respiratory irritation. The allowed product is heat-treated, low-phenol compressed pellets, not loose shavings. The pellets are harder underfoot than paper. If a ferret rejects that texture, pelleted grass is the other safe option, soft, low dust, moderate odor, and quicker to break down when wet.</p>
         <h2>Who should buy which</h2>
         <p>Buy paper pellets for most ferrets. Buy heat-treated wood pellets when smell is the problem you are willing to manage, and you will read the bag for heat treatment rather than a pine scent. Buy grass pellets only when the ferret refuses the other two textures. Do not “upgrade” any of them to a clumping, perfumed cat litter. The review treats that swap as trading a safety margin for a cosmetic one.</p>
-        <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/recycled+paper+pellet+litter+non+clumping?s=reviews-paper-vs-wood-litter-guide" />
-        <p>The link below is the recycled paper-pellet search from the review. Purina discontinued Yesterday’s News on April 20, 2022.</p>
+        <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/recycled+paper+pellet+litter+non+clumping?s=reviews-paper-vs-wood-litter-guide", "/go/amazon-brand/heat+treated+wood+pellet+litter?s=reviews-paper-vs-wood-litter-guide"]} />
+        <p>The links below are Amazon searches for each litter type from the review. Purina discontinued Yesterday’s News on April 20, 2022.</p>
         <ShopCtas
           amazonHref="/go/amazon-brand/recycled+paper+pellet+litter+non+clumping?s=reviews-paper-vs-wood-litter-guide"
           amazonLabel="Open the recycled paper-pellet search."
+        />
+        <ShopCtas
+          amazonHref="/go/amazon-brand/heat+treated+wood+pellet+litter?s=reviews-paper-vs-wood-litter-guide"
+          amazonLabel="Search Amazon for heat-treated wood pellet litter"
         />
         <EmailCapture
           variant="inline"
@@ -107,9 +111,9 @@ export default function PaperVsWoodLitterGuidePage() {
             'Find paper pellet litter on Amazon',
           ]}
         />
-        <div className="my-6 max-w-full min-w-0">
+        <div id="litter-table" className="my-6 max-w-full min-w-0">
           <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
-            <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+            <caption className="text-left font-semibold text-brand-dark p-3">At a glance</caption>
             <thead>
               <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
                 <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
@@ -148,10 +152,15 @@ export default function PaperVsWoodLitterGuidePage() {
                 <td className="p-3">$$</td>
                 <td className="p-3">$</td>
               </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Shop</th>
+                <td className="p-3"><TableShopLink href="/go/amazon-brand/recycled+paper+pellet+litter+non+clumping?s=reviews-paper-vs-wood-litter-guide" product="Recycled paper pellet litter" label="Search Amazon for recycled paper pellet litter" /></td>
+                <td className="p-3"><TableShopLink href="/go/amazon-brand/heat+treated+wood+pellet+litter?s=reviews-paper-vs-wood-litter-guide" product="Heat-treated wood pellet litter" label="Search Amazon for heat-treated wood pellet litter" /></td>
+              </tr>
             </tbody>
           </table>
         </div>
-        <ComparisonFoot updated="2026-10-11" />
+        <ComparisonFoot updated="2026-10-12" />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
                 <ArticleSourcesList

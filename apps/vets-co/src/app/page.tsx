@@ -787,7 +787,7 @@ export default function VetsHomePage() {
               </h2>
               <p
                 className="text-sm mt-2 max-w-xl"
-                style={{ color: 'rgba(255,255,255,0.60)' }}
+                style={{ color: 'rgba(255,255,255,0.75)' }}
               >
                 Interactive calculators, a printable triage card, and a plain-English
                 clinical glossary built for owners making decisions at the kitchen table.
@@ -846,7 +846,7 @@ export default function VetsHomePage() {
               </h3>
               <p
                 className="text-sm leading-relaxed mb-5"
-                style={{ color: 'rgba(255,255,255,0.60)' }}
+                style={{ color: 'rgba(255,255,255,0.75)' }}
               >
                 Enter premium, deductible, reimbursement rate, and annual cap to see your
                 real out-of-pocket cost before you compare plans. NAIC/NAPHIA math, no signup.
@@ -952,7 +952,7 @@ export default function VetsHomePage() {
               </h3>
               <p
                 className="text-sm leading-relaxed mb-5"
-                style={{ color: 'rgba(255,255,255,0.60)' }}
+                style={{ color: 'rgba(255,255,255,0.75)' }}
               >
                 Plain-English definitions for veterinary and insurance terms:
                 deductible, triage, bilateral conditions, ACVIM, referral, and 60+
@@ -1181,7 +1181,7 @@ export default function VetsHomePage() {
       >
         <p
           className="mx-auto max-w-container-wide text-2xs uppercase tracking-eyebrow"
-          style={{ color: 'rgba(255,255,255,0.60)' }}
+          style={{ color: 'rgba(255,255,255,0.75)' }}
         >
           Photography: contributors on{' '}
           <a

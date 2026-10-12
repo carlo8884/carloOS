@@ -9,7 +9,7 @@ import { ArticleByline, CalloutBox } from '@carloOS/ui'
 export const dynamic = 'force-dynamic'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Pet Insurance Deductibles & Reimbursement Explained | Vets.co", description: "Annual vs. per-condition deductibles, reimbursement rates, and annual limits all shape your real cost. Learn how to balance premium against out-of-pocket risk.", path: '/insurance/deductibles-reimbursement', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Pet Insurance Deductibles and Reimbursement', description: 'How deductibles, reimbursement rates, and annual limits interact to determine your real cost.', url: 'https://vets.co/insurance/deductibles-reimbursement', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-09-06T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Pet Insurance Deductibles and Reimbursement', description: 'How deductibles, reimbursement rates, and annual limits interact to determine your real cost.', url: 'https://vets.co/insurance/deductibles-reimbursement', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-10-12T00:00:00Z' })
 const FAQS = [
   { question: "What is the difference between an annual and a per-condition deductible?", answer: "An annual deductible is paid once per policy year, after which all covered claims for the rest of the year are reimbursed without further deductible. A per-condition deductible is paid once for each new condition, but then never again for that condition in future years — useful for chronic illnesses that recur annually. Annual deductibles are simpler and common; per-condition deductibles can favor pets with long-term chronic diseases. Which is better depends on whether your pet faces many small problems or one ongoing condition." },
   { question: "Does a higher deductible always save money?", answer: "A higher deductible lowers your monthly premium, but it raises the amount you pay out of pocket before reimbursement begins. It saves money overall only if you rarely claim or if you are using insurance purely as catastrophe protection and can absorb the deductible when a big bill arrives. If your pet has frequent moderate expenses, a lower deductible may cost less in total despite the higher premium. The right choice depends on your cash reserves and how you expect to use the policy." },
@@ -44,7 +44,7 @@ export default function DeductiblesPage() {
         <div className="carloOS-article">
 
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-09-06T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-11" />
+          <LastUpdated date="2026-10-12" />
           <EmailCapture
             variant="inline"
             siteId="vets-co"
@@ -217,7 +217,7 @@ export default function DeductiblesPage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-11" />
+          <ComparisonFoot updated="2026-10-12" />
 
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />

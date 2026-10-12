@@ -303,9 +303,8 @@ export default function SpecialistPage({ params }: PageProps) {
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
             Pet Insurance & Chronic Specialist Care
           </div>
-          <p>Those figures are typical US ranges dated 2026-10-04.</p>
           <div className="font-display font-bold text-brand-dark text-lg mb-2">
-            Chronic specialist visits can cost $3,000–15,000 annually
+            Chronic specialist care can add up over a year
           </div>
           <p className="text-sm text-brand-text-mid leading-relaxed mb-3 m-0">
             Pet-insurance plans differ widely in how they handle specialist consultations,

@@ -21,7 +21,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-10-12T00:00:00Z',
 })
 
 const med = buildMedicalWebPageSchema({
@@ -95,7 +95,7 @@ export default function TransitioningFoodsPage() {
             updatedAt="2026-06-01"
             reviewedBy="Editorial team"
           />
-          <LastUpdated date="2026-10-11" />
+          <LastUpdated date="2026-10-12" />
           <div className="mb-8">
             <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
 
@@ -128,7 +128,7 @@ export default function TransitioningFoodsPage() {
           </p>
           <div className="my-6 max-w-full min-w-0">
             <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
-              <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+              <caption className="text-left font-semibold text-brand-dark p-3">At a glance</caption>
               <thead>
                 <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
                   <th scope="col" className="p-3 font-bold text-brand-dark">Days</th>
@@ -155,7 +155,7 @@ export default function TransitioningFoodsPage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-11" />
+          <ComparisonFoot updated="2026-10-12" />
           <h2>Who should slow which step</h2>
           <p>A fixated ferret goes slower than the one-to-two-week schedule. If the ferret picks out only the old food or develops loose stool, hold the current ratio for a few extra days. Day 12 is only for a ferret whose stool and appetite stayed normal.</p>
           <p>

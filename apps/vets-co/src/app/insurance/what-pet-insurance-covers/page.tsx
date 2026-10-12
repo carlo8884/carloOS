@@ -9,7 +9,7 @@ import { ArticleByline, CalloutBox } from '@carloOS/ui'
 export const dynamic = 'force-dynamic'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "What Pet Insurance Covers (and Doesn't) | Vets.co", description: "Accident and illness plans cover injuries, illness, surgery, diagnostics, and often hereditary conditions. Learn what is typically covered and what is excluded.", path: '/insurance/what-pet-insurance-covers', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'vets-co', title: "What Pet Insurance Covers and Doesn't", description: 'A breakdown of covered conditions, common exclusions, and plan types in pet insurance.', url: 'https://vets.co/insurance/what-pet-insurance-covers', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-09-06T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'vets-co', title: "What Pet Insurance Covers and Doesn't", description: 'A breakdown of covered conditions, common exclusions, and plan types in pet insurance.', url: 'https://vets.co/insurance/what-pet-insurance-covers', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-10-12T00:00:00Z' })
 const FAQS = [
   { question: "Does pet insurance cover routine and wellness care?", answer: "Standard accident-and-illness policies generally do not cover routine wellness care such as annual exams, vaccinations, flea and tick prevention, or dental cleanings. These are predictable, budgetable costs, and insurance is designed for unexpected expenses. Many insurers offer optional wellness or preventive-care add-ons for an extra premium that reimburse some routine costs, but these typically return roughly what you pay in and are better viewed as a budgeting tool than true insurance." },
   { question: "Are hereditary and congenital conditions covered?", answer: "Many modern accident-and-illness plans do cover hereditary and congenital conditions — such as hip dysplasia or heart defects — provided they were not pre-existing before the policy began and any breed-specific waiting periods have passed. This is a meaningful difference between plans, especially for purebred dogs with known genetic risks. Always confirm in the policy wording, because coverage of hereditary conditions and the associated waiting periods vary by insurer." },
@@ -44,7 +44,7 @@ export default function WhatCoversPage() {
         <div className="carloOS-article">
 
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-09-06T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-10" />
+          <LastUpdated date="2026-10-12" />
           <EmailCapture
             variant="inline"
             siteId="vets-co"
@@ -220,7 +220,7 @@ export default function WhatCoversPage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-10" />
+          <ComparisonFoot updated="2026-10-12" />
 
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />

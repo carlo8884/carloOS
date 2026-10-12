@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata, ArticleSourcesList, LastUpdated, ComparisonFoot } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata, ArticleSourcesList, LastUpdated, ComparisonFoot, TableShopLink, ShopCtas } from '@carloOS/ui'
 import { HopDisclosure } from '../../../components/HopDisclosure'
 
 export const metadata: Metadata = buildMetadata({
@@ -19,7 +19,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-10-04T00:00:00Z',
-  modifiedAt: '2026-10-04T00:00:00Z',
+  modifiedAt: '2026-10-12T00:00:00Z',
 })
 
 const FAQS = [
@@ -70,7 +70,7 @@ export default function PaperVsGrassLitterGuidePage() {
       }
     >
       <div className="carloOS-article">
-          <LastUpdated date="2026-10-11" />
+          <LastUpdated date="2026-10-12" />
         <EmailCapture
           variant="inline"
           siteId="ferret-com"
@@ -89,16 +89,22 @@ export default function PaperVsGrassLitterGuidePage() {
         />
         <p>Prices below are the ones on the <Link href="/reviews/best-ferret-litter">litter review</Link>. Recycled paper pellets are the default. Pelleted grass is the softer alternative. Paper versus heat-treated wood is a different pair, on the <Link href="/reviews/paper-vs-wood-litter-guide">paper versus wood guide</Link>. Pelleted grass is set beside wood pellets in the <Link href="/reviews/wood-vs-grass-litter-guide">wood versus grass guide</Link>.</p>
         <h2>What the review says about paper pellets</h2>
-        <p>Recycled paper pellet litter is Best Overall and the winner. Dust is very low. It does not clump. The review says it is soft enough that ferrets accept it, with no clumping agent to swallow and no fine respiratory dust. Odor control is moderate compared with a perfumed cat litter. You change the pan rather than scoop and top it up. Lighter pellets can scatter. The price tier in the review is the mid tier. The review’s paper-pellet button opens a recycled paper-pellet search. Purina discontinued Yesterday’s News on April 20, 2022.</p>
+        <p>Recycled paper pellet litter is Best Overall and the winner. Dust is very low. It does not clump. The review says it is soft enough that ferrets accept it, with no clumping agent to swallow and no fine respiratory dust. Odor control is moderate compared with a perfumed cat litter. You change the pan rather than scoop and top it up. Lighter pellets can scatter. The price tier in the review is the mid tier. The review’s paper-pellet button opens an Amazon search for recycled paper-pellet litter. Purina discontinued Yesterday’s News on April 20, 2022.</p>
         <h2>What the review says about grass pellets</h2>
         <p>Pelleted grass or other plant fiber is the soft alternative. Dust is low. It does not clump. The review says some ferrets prefer it to wood, odor control is moderate, and wet pellets break down faster, so the pan may need changing more often than wood. Tracking is lighter. The price tier is also the mid tier. The review calls it useful mainly when a ferret dislikes the texture of paper or wood pellets.</p>
         <p>The <Link href="/tools/litter-planner">litter planner</Link> sizes the paper-pellet default for the number of ferrets. It does not switch the litter to wood or grass by count.</p>
         <h2>Who should buy which litter</h2>
         <p>Buy paper pellets when you want the litter the review calls the default: very low dust, non-clumping, and widely available. Buy grass pellets when texture is the complaint and you can change the pan more often. Do not buy a clumping cat litter for either job. Heat-treated wood pellets stay on the odor comparison, and only as compressed low-phenol pellets, never as aromatic shavings.</p>
         <p>Paper pellets are the pick because the review calls them the low-dust default. Purina discontinued Yesterday’s News on April 20, 2022. The sale price can differ from the tier in that review.</p>
-        <div className="my-6 max-w-full min-w-0">
+        <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/grass+pellet+litter+small+animal?s=reviews-paper-vs-grass-litter-guide" />
+        <p>For the grass pick, the link below is an Amazon search, not one product. Buy it when texture is the complaint and you can change the pan more often.</p>
+        <ShopCtas
+          amazonHref="/go/amazon-brand/grass+pellet+litter+small+animal?s=reviews-paper-vs-grass-litter-guide"
+          amazonLabel="Search Amazon for grass pellet litter"
+        />
+        <div id="litter-table" className="my-6 max-w-full min-w-0">
           <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
-            <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+            <caption className="text-left font-semibold text-brand-dark p-3">At a glance</caption>
             <thead>
               <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
                 <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
@@ -137,10 +143,15 @@ export default function PaperVsGrassLitterGuidePage() {
                 <td className="p-3">Mid</td>
                 <td className="p-3">Mid</td>
               </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Shop</th>
+                <td className="p-3"><TableShopLink href="/go/amazon-brand/recycled+paper+pellet+litter+non+clumping?s=reviews-paper-vs-grass-litter-guide" product="Recycled paper pellet litter" label="Search Amazon for recycled paper pellet litter" /></td>
+                <td className="p-3"><TableShopLink href="/go/amazon-brand/grass+pellet+litter+small+animal?s=reviews-paper-vs-grass-litter-guide" product="Grass pellet litter" label="Search Amazon for grass pellet litter" /></td>
+              </tr>
             </tbody>
           </table>
         </div>
-        <ComparisonFoot updated="2026-10-11" />
+        <ComparisonFoot updated="2026-10-12" />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
                 <ArticleSourcesList

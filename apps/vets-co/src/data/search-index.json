@@ -38,6 +38,12 @@
       "category": "guides"
     },
     {
+      "path": "/guides/pet-first-aid-kit",
+      "title": "Pet First-Aid Kit Checklist: What to Pack | Vets.co",
+      "description": "What a dog or cat first-aid kit should hold, from the AVMA and Merck Veterinary Manual checklists, and which items need a call to your vet first.",
+      "category": "guides"
+    },
+    {
       "path": "/guides/questions-to-ask-your-vet",
       "title": "Questions to Ask Your Vet — Get the Most From Every Visit | Vets.co",
       "description": "The right questions turn a rushed appointment into clear, confident care. Use this list to ask about diagnosis, treatment options, costs, and follow-up.",
@@ -87,7 +93,7 @@
     },
     {
       "path": "/reviews/best-pet-insurance",
-      "title": "Best Pet Insurance 2026 — How the 11 Major Carriers Compare | Vets.co",
+      "title": "Best Pet Insurance 2026 — 11 Major Carriers Compared | Vets.co",
       "description": "Pet insurance compared on direct-pay vs reimbursement, payout speed, pre-existing exclusions, and waiting periods. Sourced from carrier contracts.",
       "category": "reviews"
     },
@@ -106,7 +112,7 @@
     {
       "path": "/reviews/holiday-emergency-visit-guide",
       "title": "Why a Holiday Emergency Visit Costs More | Vets.co",
-      "description": "Emergency hospitals already staff holidays. The quote link is Trupanion on the insurance review, bought before a problem.",
+      "description": "Emergency hospitals already staff holidays. Compare pet insurance carriers on published terms on the insurance review, before a problem.",
       "category": "reviews"
     },
     {
@@ -123,8 +129,8 @@
     },
     {
       "path": "/reviews/november-december-gift-guide",
-      "title": "November and December Pet Care Costs | Vets.co",
-      "description": "November and December costs from the insurance and telehealth reviews, grouped by the monthly and per-visit bands those cards already print.",
+      "title": "Holiday Gift Guide: Practical Pet Health Supplies | Vets.co",
+      "description": "Five practical gifts for a pet owner: a first-aid kit, a digital thermometer, a pet scale, a recovery cone, and a soft carrier. Amazon search links.",
       "category": "reviews"
     },
     {
@@ -213,7 +219,7 @@
     },
     {
       "path": "/tools/insurance-finder",
-      "title": "Pet Insurance Coverage Finder — Compare Options That May Fit",
+      "title": "Pet Insurance Coverage Finder — Compare Plan Options",
       "description": "Filter pet insurance carriers by coverage priorities (exam fees, dental, wellness, unlimited limits) and compare published options. No quotes, scores, ranking.",
       "category": "tools"
     },

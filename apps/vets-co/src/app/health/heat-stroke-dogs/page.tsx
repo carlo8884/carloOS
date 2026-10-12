@@ -9,7 +9,7 @@ const SOURCES = [
   { label: 'AAHA: Hyperthermia in Companion Animals', url: 'https://www.aaha.org/aaha-guidelines/emergency-and-critical-care/', publisher: 'AAHA' },
   { label: 'Merck Veterinary Manual — What to Do in a Dog or Cat Emergency (heat stroke)', url: 'https://www.merckvetmanual.com/special-pet-topics/emergencies/what-to-do-in-a-dog-or-cat-emergency', publisher: 'Merck Veterinary Manual' },
 ]
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Heat Stroke in Dogs', description: 'Emergency recognition, first aid, and prevention of heat stroke in dogs.', url: 'https://vets.co/health/heat-stroke-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-09-04T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Heat Stroke in Dogs', description: 'Emergency recognition, first aid, and prevention of heat stroke in dogs.', url: 'https://vets.co/health/heat-stroke-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-12T00:00:00Z' ,
   citation: SOURCES,
 })
 const med = buildMedicalWebPageSchema({ name: 'Heat Stroke in Dogs', description: 'Heat stroke emergency — recognition, first aid cooling, and veterinary treatment.', url: 'https://vets.co/health/heat-stroke-dogs', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-07' })
@@ -47,7 +47,7 @@ export default function HeatStrokePage() {
 </>}
       >
         <div className="carloOS-article">
-          <LastUpdated date="2026-10-09" />
+          <LastUpdated date="2026-10-12" />
 
           <h2>The Car Problem — How It Happens</h2>
           <p>A parked car heats up fast, even with the windows cracked. A dog left in a parked car in warm weather for "just a few minutes" can be in danger faster than almost any owner anticipates. This is the most common cause of canine heat stroke — and it is entirely preventable by leaving the dog at home or using drive-through services when running errands.</p>

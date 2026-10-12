@@ -9,7 +9,7 @@ import { ArticleByline, CalloutBox } from '@carloOS/ui'
 export const dynamic = 'force-dynamic'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Pre-Existing Conditions & Pet Insurance Explained | Vets.co", description: "Pre-existing conditions are the most important pet insurance concept. Learn the difference between curable and incurable, and why enrolling early matters.", path: '/insurance/pre-existing-conditions', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Pre-Existing Conditions and Pet Insurance', description: 'How pre-existing conditions work in pet insurance, including curable vs. incurable distinctions.', url: 'https://vets.co/insurance/pre-existing-conditions', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-09-06T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Pre-Existing Conditions and Pet Insurance', description: 'How pre-existing conditions work in pet insurance, including curable vs. incurable distinctions.', url: 'https://vets.co/insurance/pre-existing-conditions', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-10-12T00:00:00Z' })
 const FAQS = [
   { question: "What counts as a pre-existing condition?", answer: "A pre-existing condition is any illness or injury that showed signs, was diagnosed, or was treated before the policy started or during its waiting period — even if it was not formally diagnosed at the time. Insurers review your pet's medical records to determine this. Importantly, a noted symptom can count even without a diagnosis: if your vet recorded limping months before you enrolled, a later cruciate diagnosis may be deemed pre-existing. This is why enrolling a healthy young pet, before any conditions appear, maximizes coverage." },
   { question: "What is the difference between curable and incurable pre-existing conditions?", answer: "Some insurers distinguish between curable and incurable pre-existing conditions. Incurable or chronic conditions — diabetes, allergies, heart disease, cancer — are typically excluded permanently. Curable conditions — such as a one-time ear infection, a respiratory infection, or a urinary tract infection — may become eligible for coverage after the pet has been symptom-free and treatment-free for a defined period, often six to eighteen months, depending on the insurer. Not all insurers offer this, so it is a meaningful point of comparison." },
@@ -41,7 +41,7 @@ export default function PreExistingPage() {
         <div className="carloOS-article">
 
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-09-06T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-11" />
+          <LastUpdated date="2026-10-12" />
 
           <CalloutBox variant="warning" title="Timing is everything">
             Every condition your pet develops before coverage starts becomes a permanent gap. This is why the most common piece of advice from veterinary teams is to enroll while a pet is young and healthy — not after the first worrying symptom appears.
@@ -54,7 +54,7 @@ export default function PreExistingPage() {
           <p>Many insurers separate pre-existing conditions into curable and incurable. Incurable or chronic conditions — diabetes, allergies, heart disease, cancer, kidney disease — are generally excluded for the life of the policy. Curable conditions — a single ear infection, a respiratory infection, a urinary tract infection that fully resolved — may become eligible for coverage after the pet has gone a defined symptom-free and treatment-free period, often six to eighteen months. A red-and-blue checking pencil is how incurable vs curable stays marked on that record copy — it is not an assorted highlighter set, not a yellow legal pad, and not a four-column accounting pad. Whether an insurer offers this curable-condition pathway, and how long the waiting period is, varies and is worth comparing.</p>
           <div className="my-6 max-w-full min-w-0">
             <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
-              <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+              <caption className="text-left font-semibold text-brand-dark p-3">At a glance</caption>
               <thead>
                 <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
                   <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
@@ -81,7 +81,7 @@ export default function PreExistingPage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-11" />
+          <ComparisonFoot updated="2026-10-12" />
           <h2>Who should compare which pathway</h2>
           <p>Compare whether the insurer offers a curable-condition pathway, and how long that symptom-free period is. An incurable condition stays excluded. A resolved infection may not.</p>
 

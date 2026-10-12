@@ -67,7 +67,7 @@ const URGENCY_STYLE: Record<ResultUrgency, UrgencyStyle> = {
     label: 'Urgent',
     bg: 'bg-[#FFF8EC]',
     text: 'text-[#7A5A18]',
-    badgeBg: 'bg-[#C8952A]',
+    badgeBg: 'bg-[#946A1A]',
   },
   emergency: {
     label: 'Emergency',
@@ -255,9 +255,8 @@ export default function DiagnosticPage({ params }: PageProps) {
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
                 Pet Insurance & Diagnostic Costs
               </div>
-              <p>Those figures are typical US ranges dated 2026-05-30.</p>
               <div className="font-display font-bold text-brand-dark text-lg mb-2">
-                Diagnostic workups commonly run $300-2,000
+                Diagnostic workups add up test by test
               </div>
               <p className="text-sm text-brand-text-mid m-0 leading-relaxed">
                 Pet insurance covers most diagnostic costs once your policy is active and waiting

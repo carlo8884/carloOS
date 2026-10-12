@@ -8,7 +8,7 @@ const SOURCES = [
   { label: 'AAHA: Otitis Management Guidelines', url: 'https://www.aaha.org/aaha-guidelines/otitis/', publisher: 'AAHA' },
   { label: 'Merck Veterinary Manual: Otitis Externa in Dogs', url: 'https://www.merckvetmanual.com/dog-owners/ear-disorders-of-dogs/ear-infections-and-otitis-externa-in-dogs', publisher: 'Merck Vet Manual' },
 ]
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Ear Infections in Dogs', description: 'Causes, signs, and management of canine otitis externa and ear infections.', url: 'https://vets.co/health/ear-infections-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-09-05T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Ear Infections in Dogs', description: 'Causes, signs, and management of canine otitis externa and ear infections.', url: 'https://vets.co/health/ear-infections-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-10-12T00:00:00Z' ,
   citation: SOURCES,
 })
 const med = buildMedicalWebPageSchema({ name: 'Ear Infections in Dogs', description: 'Causes, signs, and treatment of ear infections in dogs.', url: 'https://vets.co/health/ear-infections-dogs', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-01' })
@@ -48,7 +48,7 @@ export default function EarInfectionsDogsPage() {
       >
         <div className="carloOS-article">
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-09-05T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-09" />
+          <LastUpdated date="2026-10-12" />
 
           <CalloutBox variant="info" title="Recurrence means look deeper">
             A dog that gets ear infection after ear infection does not have bad luck — it has an unaddressed underlying cause, most often allergies. Breaking the cycle requires identifying and managing that cause, not just clearing each infection as it appears.

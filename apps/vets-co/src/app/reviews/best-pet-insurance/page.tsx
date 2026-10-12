@@ -2,14 +2,14 @@ import type { Metadata } from 'next'
 import { TableShopLink, RelatedReads, ComparisonFoot, EmailCapture, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, CalloutBox, PullQuote, ArticleByline, FAQAccordion, PriceAsOf, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import { InsuranceWellnessShop } from '../../../components/InsuranceWellnessShop'
-import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildArticleSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import Link from 'next/link'
 
 export const dynamic = 'force-dynamic'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'vets-co',
-  title: 'Best Pet Insurance 2026 — How the 11 Major Carriers Compare | Vets.co',
+  title: 'Best Pet Insurance 2026 — 11 Major Carriers Compared | Vets.co',
   description: 'Pet insurance compared on direct-pay vs reimbursement, payout speed, pre-existing exclusions, and waiting periods. Sourced from carrier contracts.',
   path: '/reviews/best-pet-insurance',
   type: 'article',
@@ -23,7 +23,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Vets.co Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
-  modifiedAt: '2026-10-07T00:00:00Z',
+  modifiedAt: '2026-10-12T00:00:00Z',
 })
 
 const breadcrumbSchema = buildBreadcrumbSchema({
@@ -43,36 +43,13 @@ const insurerListSchema = {
   url: 'https://vets.co/reviews/best-pet-insurance',
   numberOfItems: 3,
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Trupanion', url: 'https://vets.co/go/trupanion/home?s=reviews-best-pet-insurance' },
-    { '@type': 'ListItem', position: 2, name: 'Healthy Paws', url: 'https://vets.co/go/healthy-paws/home?s=reviews-best-pet-insurance' },
-    { '@type': 'ListItem', position: 3, name: 'Embrace', url: 'https://vets.co/go/embrace/home?s=reviews-best-pet-insurance' },
+    { '@type': 'ListItem', position: 1, name: 'Trupanion', url: 'https://vets.co/reviews/best-pet-insurance#trupanion' },
+    { '@type': 'ListItem', position: 2, name: 'Healthy Paws', url: 'https://vets.co/reviews/best-pet-insurance#healthy-paws' },
+    { '@type': 'ListItem', position: 3, name: 'Embrace', url: 'https://vets.co/reviews/best-pet-insurance#embrace' },
   ],
 }
 
-// Product schemas — single editorial review (reviewCount: 1 per honest-pattern used across the portfolio)
-const trupanionSchema = buildProductSchema({
-  name: 'Trupanion Pet Insurance',
-  description: 'Offers direct vet payment; check terms. 90% reimbursement, unlimited payouts, per-condition deductible.',
-  url: 'https://vets.co/go/trupanion/home?s=reviews-best-pet-insurance',
-  imageUrl: '',
-})
-
-const healthyPawsSchema = buildProductSchema({
-  name: 'Healthy Paws Pet Insurance',
-  description: 'The Healthy Paws claims page (https://www.healthypawspetinsurance.com/pet-insurance-claims.html) says most claims are processed in 2 days. The annual reimbursement limit is a choice, not automatically unlimited.',
-  url: 'https://vets.co/go/healthy-paws/home?s=reviews-best-pet-insurance',
-  imageUrl: '',
-})
-
-const embraceSchema = buildProductSchema({
-  name: 'Embrace Pet Insurance',
-  description: 'Wellness add-on available for routine and preventive care. Deductible program: see the carrier\'s current terms.',
-  // note: "highly customizable" is a calibrated descriptor, not an objective-superiority claim
-  url: 'https://vets.co/go/embrace/home?s=reviews-best-pet-insurance',
-  imageUrl: '',
-})
-
-const pageSchema = combineSchemas(schema, breadcrumbSchema, insurerListSchema, trupanionSchema, healthyPawsSchema, embraceSchema)
+const pageSchema = combineSchemas(schema, breadcrumbSchema, insurerListSchema)
 
 const PICKS = [
   { label: 'Pays the vet directly', name: 'Trupanion', subtitle: 'Offers direct vet payment; check terms', href: '#trupanion' },
@@ -131,10 +108,10 @@ export default function VetsPetInsurancePage() {
 
       <QuickPicks items={PICKS} />
 
-      <nav aria-label="Breadcrumb" className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
-        <Link href="/" className="hover:text-brand-primary no-underline">Home</Link>
+      <nav aria-label="Breadcrumb" className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex items-center gap-2">
+        <Link href="/" className="inline-flex min-h-6 items-center hover:text-brand-primary no-underline">Home</Link>
         <span>›</span>
-        <Link href="/reviews" className="hover:text-brand-primary no-underline">Reviews</Link>
+        <Link href="/reviews" className="inline-flex min-h-6 items-center hover:text-brand-primary no-underline">Reviews</Link>
         <span>›</span>
         <span className="text-brand-text-mid" aria-current="page">Best Pet Insurance</span>
       </nav>
@@ -143,7 +120,7 @@ export default function VetsPetInsurancePage() {
         <div className="grid lg:grid-cols-[1fr_270px] gap-12 min-w-0">
           <div className="min-w-0">
             <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-10-07T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-11" />
+          <LastUpdated date="2026-10-12" />
 
 
             <PullQuote variant="lead" quote="Enroll before your first vet visit. Every condition noted in records before enrollment may be permanently excluded as pre-existing." attribution="The single most important point on pet insurance" />
@@ -196,7 +173,7 @@ export default function VetsPetInsurancePage() {
 
             <ReviewCard id="embrace" badge="Wellness add-on" name="Embrace"
               subtitle="Wellness add-on · Deductible program: see the carrier's current terms"
-              description={<p>The Wellness Rewards page, fetched 2026-10-08, lists wellness exams, vaccinations, flea, tick, and heartworm prevention, and preventative dental cleaning. Our notes mark that coverage as a standalone add-on. The deductible program and the orthopedic waiting period: see the carrier's current terms. Reimbursement on the current dog page is 70%, 80%, or 90%.</p>}
+              description={<p>The Wellness Rewards page, fetched 2026-10-08, lists wellness exams, vaccinations, flea, tick, and heartworm prevention, and preventative dental cleaning. That coverage is a separate add-on, not part of the base policy. The deductible program and the orthopedic waiting period: see the carrier's current terms. Reimbursement on the current dog page is 70%, 80%, or 90%.</p>}
               specs={[
                 { label: 'Wellness', value: 'Add-on available', highlight: 'good' },
                 { label: 'Deductible', value: 'See the carrier\'s current terms' },
@@ -232,26 +209,26 @@ export default function VetsPetInsurancePage() {
                   <tbody>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">You need the clinic paid at checkout</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#trupanion" className="text-brand-primary">Trupanion</a><TableShopLink href={"/go/trupanion/home?s=reviews-best-pet-insurance"} product={"Trupanion"} holdWithoutPartnerId /></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#trupanion" className="inline-flex min-h-6 items-center text-brand-primary">Trupanion</a><TableShopLink href={"/go/trupanion/home?s=reviews-best-pet-insurance"} product={"Trupanion"} holdWithoutPartnerId /></td>
                       <td className="p-3 text-brand-text-mid">Pays the vet directly. 90% reimbursement. Unlimited payouts. See the carrier's current terms for the monthly figure.</td>
                       <td className="p-3 text-brand-text-mid">Higher premiums. Wellness is not included. Deductible is per condition</td>
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">You can pay the clinic first and want most claims processed in about 2 days</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#healthy-paws" className="text-brand-primary">Healthy Paws</a><TableShopLink href={"/go/healthy-paws/home?s=reviews-best-pet-insurance"} product={"Healthy Paws"} holdWithoutPartnerId /></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#healthy-paws" className="inline-flex min-h-6 items-center text-brand-primary">Healthy Paws</a><TableShopLink href={"/go/healthy-paws/home?s=reviews-best-pet-insurance"} product={"Healthy Paws"} holdWithoutPartnerId /></td>
                       <td className="p-3 text-brand-text-mid">Most claims processed in 2 days. Up to 90 percent. Annual limit is $5,000, $7,000, or unlimited. See the carrier's current terms for the monthly figure.</td>
-                      <td className="p-3 text-brand-text-mid">Wellness is not in our notes. Deductible is annual</td>
+                      <td className="p-3 text-brand-text-mid">No wellness add-on is listed. Deductible is annual</td>
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">You want routine care budgeted beside accident and illness</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#embrace" className="text-brand-primary">Embrace</a><TableShopLink href={"/go/embrace/home?s=reviews-best-pet-insurance"} product={"Embrace"} holdWithoutPartnerId /></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#embrace" className="inline-flex min-h-6 items-center text-brand-primary">Embrace</a><TableShopLink href={"/go/embrace/home?s=reviews-best-pet-insurance"} product={"Embrace"} holdWithoutPartnerId /></td>
                       <td className="p-3 text-brand-text-mid">Wellness add-on. 70%, 80%, or 90%. See the carrier's current terms for the monthly figure.</td>
                       <td className="p-3 text-brand-text-mid">Orthopedic waiting period: see the carrier's current terms. More plan options to read</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-11" />
+              <ComparisonFoot updated="2026-10-12" />
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Questions this comparison answers</h2>
               <FAQAccordion items={[
                 {

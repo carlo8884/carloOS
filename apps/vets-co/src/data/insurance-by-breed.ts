@@ -84,13 +84,13 @@ export const INSURANCE_BREEDS: BreedInsuranceProfile[] = [
     dentalRisk: 'low',
     recommendedCarrier: 'trupanion',
     recommendedReason:
-      'Goldens have a ~60% lifetime cancer rate driven by hemangiosarcoma and lymphoma — treatment runs $5,000–20,000+. Trupanion has no annual or lifetime payout cap and uses a per-condition deductible, so a multi-year cancer claim hits the deductible once. No other carrier protects this breed better against the worst-case scenario.',
+      'Hemangiosarcoma and lymphoma are on the Golden\'s condition list. Trupanion has no annual or lifetime payout cap and uses a per-condition deductible, so a multi-year cancer claim hits the deductible once.',
     alternateCarriers: ['healthy-paws', 'pumpkin-pet'],
     sampleMonthlyPremium: [50, 85],
     keyCoverageNeeds: [
       'Unlimited annual payout (cancer treatment exceeds $8,000–$15,000 limits)',
       'Hereditary and congenital condition coverage',
-      'Short orthopedic waiting period (hip/elbow dysplasia common)',
+      'Short orthopedic waiting period (hip/elbow dysplasia)',
       'Coverage for advanced diagnostics (CT, MRI, biopsy)',
     ],
   },
@@ -113,7 +113,7 @@ export const INSURANCE_BREEDS: BreedInsuranceProfile[] = [
     dentalRisk: 'low',
     recommendedCarrier: 'pumpkin-pet',
     recommendedReason:
-      'Labs are a common breed in hip dysplasia claims and CCL rupture (~$3,500–$5,500 per side). Pumpkin\'s 14-day orthopedic waiting period — vs. the industry-standard 6 months — means a Lab with early hip signs is covered before symptoms escalate. Critical when buying for a Lab puppy.',
+      'Hip dysplasia and CCL rupture are on the Lab\'s condition list. Pumpkin\'s orthopedic waiting period of 14 days or less means a Lab with early hip signs is covered before symptoms escalate. Critical when buying for a Lab puppy.',
     alternateCarriers: ['trupanion', 'spot'],
     sampleMonthlyPremium: [40, 75],
     keyCoverageNeeds: [
@@ -142,11 +142,11 @@ export const INSURANCE_BREEDS: BreedInsuranceProfile[] = [
     dentalRisk: 'high',
     recommendedCarrier: 'fetch-by-the-dodo',
     recommendedReason:
-      'Frenchies face a triple threat — BOAS surgery ($2,500–5,000), dental disease (their crowded brachycephalic jaw drives early periodontal loss), and skin/eye conditions. Fetch is one of the only carriers that covers periodontal disease on the base plan, plus behavioral therapy for anxiety common in the breed.',
+      'Frenchies face a triple threat — BOAS surgery, dental disease (their crowded brachycephalic jaw drives early periodontal loss), and skin/eye conditions. Fetch covers periodontal disease on the base plan.',
     alternateCarriers: ['trupanion', 'pumpkin-pet'],
     sampleMonthlyPremium: [55, 95],
     keyCoverageNeeds: [
-      'Dental disease coverage (most carriers exclude this)',
+      'Dental disease coverage',
       'BOAS surgery coverage with no breed exclusion clause',
       'IVDD surgical coverage ($6,000–10,000 per episode)',
       'Coverage for skin and eye chronic conditions',
@@ -171,14 +171,14 @@ export const INSURANCE_BREEDS: BreedInsuranceProfile[] = [
     dentalRisk: 'low',
     recommendedCarrier: 'pumpkin-pet',
     recommendedReason:
-      'GSDs have the highest hip dysplasia rate of any AKC breed and face bloat ($4,000–$6,000+ emergency surgery). Pumpkin\'s 14-day orthopedic wait covers a young GSD before screening films are even read, and the unlimited-payout option handles bloat plus subsequent DM care.',
+      'GSDs face hip and elbow dysplasia and bloat (an emergency surgery). Pumpkin\'s 14-day orthopedic wait covers a young GSD before screening films are even read, and the unlimited-payout option handles bloat plus subsequent DM care.',
     alternateCarriers: ['trupanion', 'embrace'],
     sampleMonthlyPremium: [45, 80],
     keyCoverageNeeds: [
       'Short orthopedic waiting period',
       'Emergency surgery coverage (bloat is time-critical)',
       'Coverage for ongoing neurological care (DM)',
-      'Exam fees included (frequent vet visits)',
+      'Exam fees included',
     ],
   },
   {
@@ -259,7 +259,7 @@ export const INSURANCE_BREEDS: BreedInsuranceProfile[] = [
     dentalRisk: 'high',
     recommendedCarrier: 'trupanion',
     recommendedReason:
-      'English Bulldogs have the shortest lifespan of any major breed (~8–10 yr) driven by stacked chronic conditions — BOAS, dermatology, hips, eyes. Trupanion\'s per-condition deductible and unlimited payout matter when a single dog files claims against 4–5 separate ongoing conditions over its life.',
+      'English Bulldogs have an 8–10 year lifespan on this page and stacked chronic conditions — BOAS, dermatology, hips, eyes. Trupanion\'s per-condition deductible and unlimited payout matter when a single dog files claims against 4–5 separate ongoing conditions over its life.',
     alternateCarriers: ['fetch-by-the-dodo', 'pumpkin-pet'],
     sampleMonthlyPremium: [60, 110],
     keyCoverageNeeds: [
@@ -317,11 +317,11 @@ export const INSURANCE_BREEDS: BreedInsuranceProfile[] = [
     dentalRisk: 'high',
     recommendedCarrier: 'pumpkin-pet',
     recommendedReason:
-      '~25% of Dachshunds will experience IVDD; emergency disc surgery costs $6,000–10,000 and most affected dogs need more than one episode. Pumpkin\'s 14-day orthopedic/neurological waiting period plus dental disease coverage hits both of the breed\'s top risks.',
+      'Type I IVDD leads the Dachshund\'s condition list, and an episode can mean emergency disc surgery. Pumpkin\'s 14-day orthopedic/neurological waiting period plus dental disease coverage addresses both IVDD and the periodontal disease on the same list.',
     alternateCarriers: ['trupanion', 'fetch-by-the-dodo'],
     sampleMonthlyPremium: [35, 70],
     keyCoverageNeeds: [
-      'IVDD surgical coverage (most likely large claim)',
+      'IVDD surgical coverage',
       'Short neurological/orthopedic waiting period',
       'Dental disease coverage',
       'Rehab and physical therapy coverage',
@@ -346,7 +346,7 @@ export const INSURANCE_BREEDS: BreedInsuranceProfile[] = [
     dentalRisk: 'low',
     recommendedCarrier: 'trupanion',
     recommendedReason:
-      'Rotts have the highest osteosarcoma rate of any AKC breed (~12% lifetime). Amputation plus chemo runs $10,000–15,000. Trupanion\'s unlimited payout and per-condition deductible mean one cancer diagnosis doesn\'t cap or restart the deductible across a multi-year treatment.',
+      'Osteosarcoma (bone cancer) is on the Rottweiler\'s condition list, and treatment can include amputation plus chemo. Trupanion\'s unlimited payout and per-condition deductible mean one cancer diagnosis doesn\'t cap or restart the deductible across a multi-year treatment.',
     alternateCarriers: ['pumpkin-pet', 'healthy-paws'],
     sampleMonthlyPremium: [50, 90],
     keyCoverageNeeds: [
@@ -375,7 +375,7 @@ export const INSURANCE_BREEDS: BreedInsuranceProfile[] = [
     dentalRisk: 'high',
     recommendedCarrier: 'fetch-by-the-dodo',
     recommendedReason:
-      'Yorkies have the worst dental risk profile of any AKC breed — 80%+ have periodontal disease by age 3, and full-mouth extractions cost $1,500–3,000. Fetch is one of very few carriers that cover periodontal disease (not just dental trauma) on the base plan.',
+      'Yorkies are rated high for dental risk on this page, with periodontal disease on their condition list, and advanced cases can need full-mouth extractions. Fetch covers periodontal disease (not just dental trauma) on the base plan.',
     alternateCarriers: ['pumpkin-pet', 'embrace'],
     sampleMonthlyPremium: [25, 60],
     keyCoverageNeeds: [
@@ -405,7 +405,7 @@ export const INSURANCE_BREEDS: BreedInsuranceProfile[] = [
     dentalRisk: 'moderate',
     recommendedCarrier: 'trupanion',
     recommendedReason:
-      'Boxers face a stacked cancer risk (mast cell tumors and lymphoma combined affect ~40% of the breed) plus inherited cardiomyopathy. Trupanion\'s unlimited payout handles oncology + cardiology in the same year, and the per-condition deductible favors lifelong cardiac monitoring.',
+      'Boxers face mast cell tumors and lymphoma plus inherited cardiomyopathy. Trupanion\'s unlimited payout handles oncology + cardiology in the same year, and the per-condition deductible favors lifelong cardiac monitoring.',
     alternateCarriers: ['healthy-paws', 'pumpkin-pet'],
     sampleMonthlyPremium: [50, 95],
     keyCoverageNeeds: [
@@ -434,7 +434,7 @@ export const INSURANCE_BREEDS: BreedInsuranceProfile[] = [
     dentalRisk: 'high',
     recommendedCarrier: 'fetch-by-the-dodo',
     recommendedReason:
-      'Poms\' tiny jaws drive crowding and severe periodontal disease by middle age — Fetch is the rare carrier covering periodontal disease on its base plan. The breed\'s tracheal collapse and patellar luxation are also well-covered.',
+      'Poms\' tiny jaws drive crowding, and periodontal disease is on their condition list. Fetch covers periodontal disease on its base plan.',
     alternateCarriers: ['pumpkin-pet', 'lemonade-pet'],
     sampleMonthlyPremium: [25, 55],
     keyCoverageNeeds: [
@@ -464,7 +464,7 @@ export const INSURANCE_BREEDS: BreedInsuranceProfile[] = [
     dentalRisk: 'high',
     recommendedCarrier: 'fetch-by-the-dodo',
     recommendedReason:
-      'Shih Tzus face brachycephalic airway issues plus the worst dental disease profile after Yorkies. Fetch covers periodontal disease — the most common claim for this breed — and eye-related emergencies including proptosis.',
+      'Shih Tzus face brachycephalic airway issues plus periodontal disease. Fetch covers periodontal disease and eye-related emergencies including proptosis.',
     alternateCarriers: ['pumpkin-pet', 'embrace'],
     sampleMonthlyPremium: [30, 65],
     keyCoverageNeeds: [
@@ -493,7 +493,7 @@ export const INSURANCE_BREEDS: BreedInsuranceProfile[] = [
     dentalRisk: 'low',
     recommendedCarrier: 'trupanion',
     recommendedReason:
-      'Dobermans have the highest DCM rate of any breed (~50% lifetime in some lines) — diagnosis triggers years of cardiology visits, Holter monitors, and medication. Trupanion\'s per-condition deductible means DCM hits the deductible once, then 90% reimbursement runs for life.',
+      'Dilated cardiomyopathy (DCM) leads the Doberman\'s condition list — diagnosis triggers years of cardiology visits, Holter monitors, and medication. Trupanion\'s per-condition deductible means DCM hits the deductible once, then 90% reimbursement runs for life.',
     alternateCarriers: ['healthy-paws', 'embrace'],
     sampleMonthlyPremium: [45, 85],
     keyCoverageNeeds: [
@@ -522,7 +522,7 @@ export const INSURANCE_BREEDS: BreedInsuranceProfile[] = [
     dentalRisk: 'low',
     recommendedCarrier: 'pumpkin-pet',
     recommendedReason:
-      'Great Danes top the bloat-mortality list (~40% lifetime risk, $4,000–$6,000+ emergency surgery) and have the highest osteosarcoma rate after Rottweilers. Pumpkin\'s 14-day orthopedic wait and unlimited-payout tier matter when this giant breed often files its first major claim before age 3.',
+      'Great Danes face bloat (an emergency surgery) and osteosarcoma. Pumpkin\'s 14-day orthopedic wait and unlimited-payout tier matter for a giant breed with rapid-growth conditions like hypertrophic osteodystrophy.',
     alternateCarriers: ['trupanion', 'healthy-paws'],
     sampleMonthlyPremium: [60, 110],
     keyCoverageNeeds: [
@@ -551,14 +551,14 @@ export const INSURANCE_BREEDS: BreedInsuranceProfile[] = [
     dentalRisk: 'low',
     recommendedCarrier: 'embrace',
     recommendedReason:
-      'Huskies are generally healthy — the dominant claim categories are ophthalmology and orthopedic. Ophthalmology specialist visits are covered on the Embrace base plan. The deductible reward: see the carrier\'s current terms.',
+      'Huskies are rated low for chronic risk on this page; their listed conditions are mostly eye disease (cataracts, PRA, corneal dystrophy) plus hip dysplasia. Ophthalmology specialist visits are covered on the Embrace base plan. The deductible reward: see the carrier\'s current terms.',
     alternateCarriers: ['lemonade-pet', 'pumpkin-pet'],
     sampleMonthlyPremium: [30, 65],
     keyCoverageNeeds: [
       'Ophthalmology coverage (cataracts, PRA)',
-      'Diminishing deductible (healthy mid-life)',
+      'Diminishing deductible',
       'Hereditary condition coverage',
-      'Affordable premium for a healthy breed',
+      'Affordable premium for a low-chronic-risk profile',
     ],
   },
   {
@@ -580,7 +580,7 @@ export const INSURANCE_BREEDS: BreedInsuranceProfile[] = [
     dentalRisk: 'high',
     recommendedCarrier: 'trupanion',
     recommendedReason:
-      'Nearly 100% of Cavaliers develop mitral valve disease by age 10 — a known, near-certain chronic cardiac condition needing lifelong meds and serial echos. Trupanion\'s per-condition deductible plus unlimited payout is the cleanest match for a breed where the expensive condition is predictable, not hypothetical.',
+      'Mitral valve disease leads the Cavalier\'s condition list — a chronic cardiac condition needing lifelong meds and serial echos. Trupanion\'s per-condition deductible plus unlimited payout fits lifelong cardiac management.',
     alternateCarriers: ['fetch-by-the-dodo', 'embrace'],
     sampleMonthlyPremium: [35, 80],
     keyCoverageNeeds: [
@@ -609,7 +609,7 @@ export const INSURANCE_BREEDS: BreedInsuranceProfile[] = [
     dentalRisk: 'low',
     recommendedCarrier: 'trupanion',
     recommendedReason:
-      'Bernese have the highest cancer-mortality rate of any AKC breed — histiocytic sarcoma alone accounts for ~25% of deaths. Combined with high orthopedic claims, the breed routinely exceeds any annual payout cap. Trupanion\'s unlimited payout and per-condition deductible are non-negotiable here.',
+      'Bernese face histiocytic sarcoma and osteosarcoma plus hip, elbow, and cruciate disease. Trupanion\'s unlimited payout and per-condition deductible fit a cancer-plus-orthopedic profile.',
     alternateCarriers: ['pumpkin-pet', 'healthy-paws'],
     sampleMonthlyPremium: [55, 110],
     keyCoverageNeeds: [
@@ -638,12 +638,12 @@ export const INSURANCE_BREEDS: BreedInsuranceProfile[] = [
     dentalRisk: 'low',
     recommendedCarrier: 'healthy-paws',
     recommendedReason:
-      'Vizslas are generally healthy with an above-average cancer rate as the main catastrophic risk. Healthy Paws offers an annual-limit choice that includes unlimited, which is the fit for worst-case oncology, while the annual deductible fits a typical year with only minor claims.',
+      'Vizslas are rated moderate for chronic risk on this page, with cancer (lymphoma, hemangiosarcoma) as the main catastrophic risk. Healthy Paws offers an annual-limit choice that includes unlimited, which is the fit for worst-case oncology.',
     alternateCarriers: ['embrace', 'lemonade-pet'],
     sampleMonthlyPremium: [30, 65],
     keyCoverageNeeds: [
       'Unlimited annual payout (for cancer risk)',
-      'Annual deductible (most years have few claims)',
+      'Annual deductible',
       'Neurology coverage (epilepsy)',
       'Hereditary condition coverage',
     ],
@@ -668,7 +668,7 @@ export const INSURANCE_BREEDS: BreedInsuranceProfile[] = [
     dentalRisk: 'low',
     recommendedCarrier: 'pumpkin-pet',
     recommendedReason:
-      'Bassets\' long-back/short-leg structure drives high IVDD and elbow dysplasia rates. Pumpkin\'s 14-day orthopedic/neurological waiting period covers a young Basset before disc issues surface, and exam fees on the base plan handle the breed\'s chronic ear and eye visits.',
+      'Bassets\' long-back/short-leg structure puts IVDD and elbow dysplasia on its condition list. Pumpkin\'s 14-day orthopedic/neurological waiting period covers a young Basset before disc issues surface, and exam fees on the base plan handle the breed\'s chronic ear and eye visits.',
     alternateCarriers: ['embrace', 'trupanion'],
     sampleMonthlyPremium: [35, 70],
     keyCoverageNeeds: [
@@ -697,7 +697,7 @@ export const INSURANCE_BREEDS: BreedInsuranceProfile[] = [
     dentalRisk: 'low',
     recommendedCarrier: 'embrace',
     recommendedReason:
-      'Collies are generally healthy with concentrated risk in hereditary eye disease and MDR1 drug reactions — both diagnostic-heavy rather than payout-heavy. Embrace covers prescription medication and hereditary conditions. Exam-fee coverage is optional. The deductible reward: see the carrier\'s current terms.',
+      'Collies are rated low for chronic risk on this page, with listed risk concentrated in hereditary eye disease and MDR1 drug reactions — both diagnostic-heavy rather than payout-heavy. Embrace covers prescription medication and hereditary conditions. Exam-fee coverage is optional. The deductible reward: see the carrier\'s current terms.',
     alternateCarriers: ['pumpkin-pet', 'lemonade-pet'],
     sampleMonthlyPremium: [30, 65],
     keyCoverageNeeds: [
@@ -727,7 +727,7 @@ export const INSURANCE_BREEDS: BreedInsuranceProfile[] = [
     dentalRisk: 'high',
     recommendedCarrier: 'fetch-by-the-dodo',
     recommendedReason:
-      'Pugs stack brachycephalic airway, eye emergencies, and periodontal disease. Fetch is one of the only carriers that covers periodontal disease on the base plan, and its exam-fee coverage matters for a breed whose owners visit the vet frequently for eye and skin issues.',
+      'Pugs stack brachycephalic airway, eye emergencies, and periodontal disease. Fetch covers periodontal disease on the base plan, and its exam-fee coverage matters for a breed with eye conditions on its list.',
     alternateCarriers: ['pumpkin-pet', 'trupanion'],
     sampleMonthlyPremium: [35, 75],
     keyCoverageNeeds: [
@@ -756,7 +756,7 @@ export const INSURANCE_BREEDS: BreedInsuranceProfile[] = [
     dentalRisk: 'high',
     recommendedCarrier: 'fetch-by-the-dodo',
     recommendedReason:
-      'Chihuahuas live the longest of any AKC breed, but their tiny jaws drive severe periodontal disease — annual cleanings and extractions add up. Fetch covers dental disease on the base plan, which becomes the dominant claim category over a 16-year lifespan.',
+      'Chihuahuas have a 14–16 year lifespan on this page, and their tiny jaws drive periodontal disease — annual cleanings and extractions add up. Fetch covers dental disease on the base plan, which matters over a 16-year lifespan.',
     alternateCarriers: ['lemonade-pet', 'embrace'],
     sampleMonthlyPremium: [20, 50],
     keyCoverageNeeds: [
@@ -785,7 +785,7 @@ export const INSURANCE_BREEDS: BreedInsuranceProfile[] = [
     dentalRisk: 'low',
     recommendedCarrier: 'lemonade-pet',
     recommendedReason:
-      'Border Collies are among the healthiest medium-size breeds — most claims are sports-injury and routine orthopedic. Lemonade\'s entry-tier premium fits a low-risk profile; high-coverage Trupanion tier isn\'t justified actuarially.',
+      'Border Collies are rated low for chronic risk on this page. The listed conditions to plan for are hip dysplasia, epilepsy, collie eye anomaly, and MDR1 drug sensitivity. Lemonade\'s entry-tier premium fits a low-risk profile.',
     alternateCarriers: ['embrace', 'figo'],
     sampleMonthlyPremium: [25, 55],
     keyCoverageNeeds: [
@@ -814,11 +814,11 @@ export const INSURANCE_BREEDS: BreedInsuranceProfile[] = [
     dentalRisk: 'moderate',
     recommendedCarrier: 'embrace',
     recommendedReason:
-      'Cockers\' top claim category is chronic recurrent otitis — frequent vet visits, repeated meds, occasional surgery. Embrace covers prescription medication on the base plan. Exam-fee coverage is optional. The deductible reward: see the carrier\'s current terms.',
+      'Chronic recurrent otitis leads the Cocker\'s condition list — frequent vet visits, repeated meds, occasional surgery. Embrace covers prescription medication on the base plan. Exam-fee coverage is optional. The deductible reward: see the carrier\'s current terms.',
     alternateCarriers: ['pumpkin-pet', 'fetch-by-the-dodo'],
     sampleMonthlyPremium: [30, 65],
     keyCoverageNeeds: [
-      'Exam fee coverage (frequent visits)',
+      'Exam fee coverage',
       'Prescription medication coverage',
       'Ophthalmology coverage',
       'Coverage for chronic ear surgeries',
@@ -843,7 +843,7 @@ export const INSURANCE_BREEDS: BreedInsuranceProfile[] = [
     dentalRisk: 'low',
     recommendedCarrier: 'pumpkin-pet',
     recommendedReason:
-      'Dalmatians\' unique uric acid metabolism drives urate stone formation — surgical removal runs $3,000–5,000 and many dogs have repeat episodes. Pumpkin\'s base plan covers exam fees, diagnostics, and the urinary-tract specialty work this breed needs.',
+      'Dalmatians\' unique uric acid metabolism drives urate stone formation, and stones can need surgical removal. Pumpkin\'s base plan covers exam fees, diagnostics, and the urinary-tract specialty work this breed needs.',
     alternateCarriers: ['embrace', 'spot'],
     sampleMonthlyPremium: [35, 75],
     keyCoverageNeeds: [
@@ -872,7 +872,7 @@ export const INSURANCE_BREEDS: BreedInsuranceProfile[] = [
     dentalRisk: 'low',
     recommendedCarrier: 'pumpkin-pet',
     recommendedReason:
-      'Newfoundlands\' giant frame drives high CCL rupture rates ($4,500–6,000 per side), and SAS is the leading inherited cardiac killer. Pumpkin\'s 14-day orthopedic wait plus unlimited-payout tier covers a breed that often files multiple large claims before age 5.',
+      'Newfoundlands face cruciate ligament rupture and subaortic stenosis (SAS). Pumpkin\'s 14-day orthopedic wait plus unlimited-payout tier fits a breed with both orthopedic and cardiac conditions on its list.',
     alternateCarriers: ['trupanion', 'healthy-paws'],
     sampleMonthlyPremium: [55, 105],
     keyCoverageNeeds: [
@@ -902,7 +902,7 @@ export const INSURANCE_BREEDS: BreedInsuranceProfile[] = [
     dentalRisk: 'high',
     recommendedCarrier: 'fetch-by-the-dodo',
     recommendedReason:
-      'Bostons stack brachy airway, eye issues, and high dental disease — three categories most budget carriers exclude or limit. Fetch covers dental disease and exam fees on the base plan, addressing the breed\'s top two claim drivers.',
+      'Bostons stack brachy airway, eye issues, and dental disease. Fetch covers dental disease and exam fees on the base plan.',
     alternateCarriers: ['pumpkin-pet', 'embrace'],
     sampleMonthlyPremium: [30, 65],
     keyCoverageNeeds: [
@@ -932,7 +932,7 @@ export const INSURANCE_BREEDS: BreedInsuranceProfile[] = [
     dentalRisk: 'high',
     recommendedCarrier: 'fetch-by-the-dodo',
     recommendedReason:
-      'Maltese have one of the highest periodontal disease rates of any toy breed — early-life crowding drives extractions costing $1,500–3,000. Fetch covers periodontal disease on the base plan, and exam-fee coverage matters for senior-year cardiac and tracheal monitoring.',
+      'Maltese have periodontal disease on their condition list, and crowding can lead to extractions. Fetch covers periodontal disease on the base plan, and exam-fee coverage matters for senior-year cardiac and tracheal monitoring.',
     alternateCarriers: ['lemonade-pet', 'embrace'],
     sampleMonthlyPremium: [25, 55],
     keyCoverageNeeds: [

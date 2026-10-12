@@ -36,7 +36,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-10-12T00:00:00Z',
 })
 
 const FAQS = [
@@ -123,7 +123,7 @@ export default function MaleVsFemaleFerretsPage() {
             publishedAt="2026-06-01"
             updatedAt="2026-06-01"
           />
-          <LastUpdated date="2026-10-10" />
+          <LastUpdated date="2026-10-12" />
           <div className="mb-8">
             <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
 
@@ -222,7 +222,7 @@ export default function MaleVsFemaleFerretsPage() {
           </p>
           <div className="my-6 max-w-full min-w-0">
             <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
-              <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+              <caption className="text-left font-semibold text-brand-dark p-3">At a glance</caption>
               <thead>
                 <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
                   <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
@@ -249,7 +249,7 @@ export default function MaleVsFemaleFerretsPage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-10" />
+          <ComparisonFoot updated="2026-10-12" />
           <h2>Who should choose which</h2>
           <p>Choose the individual ferret you click with. Use sex as a size lever when you want a larger or smaller animal. Manage an intact jill’s heat with a veterinarian. Nearly all pet-store ferrets are already altered.</p>
 

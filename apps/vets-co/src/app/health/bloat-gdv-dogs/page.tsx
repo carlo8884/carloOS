@@ -8,7 +8,7 @@ const SOURCES = [
   { label: 'Merck Veterinary Manual: Gastric Dilatation and Volvulus in Small Animals', url: 'https://www.merckvetmanual.com/digestive-system/surgical-problems-of-the-gastrointestinal-tract-in-small-animals/gastric-dilation-and-volvulus-in-small-animals', publisher: 'Merck Vet Manual' },
   { label: 'Glickman LT et al. Incidence of and breed-related risk factors for gastric dilatation-volvulus in dogs. JAVMA. 2000;216(1):40-45.', publisher: 'JAVMA' },
 ]
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Bloat (GDV) in Dogs', description: 'Emergency recognition, risk factors, and prevention of gastric dilatation-volvulus in dogs.', url: 'https://vets.co/health/bloat-gdv-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-09-05T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Bloat (GDV) in Dogs', description: 'Emergency recognition, risk factors, and prevention of gastric dilatation-volvulus in dogs.', url: 'https://vets.co/health/bloat-gdv-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-10-12T00:00:00Z' ,
   citation: SOURCES,
 })
 const med = buildMedicalWebPageSchema({ name: 'Bloat (Gastric Dilatation-Volvulus) in Dogs', description: 'Recognition, risk factors, and prevention of GDV in dogs.', url: 'https://vets.co/health/bloat-gdv-dogs', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-01' })
@@ -49,7 +49,7 @@ export default function BloatGDVPage() {
         <div className="carloOS-article">
 
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-09-05T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-09" />
+          <LastUpdated date="2026-10-12" />
 
           <CalloutBox variant="warning" title="This is a go-now emergency">
             If your dog has a swollen belly and is repeatedly trying to vomit without producing anything, go to an emergency veterinary hospital immediately. Do not wait to see if it passes. GDV is fatal within hours and there is no effective home treatment. Call ahead if you can so the team is ready.

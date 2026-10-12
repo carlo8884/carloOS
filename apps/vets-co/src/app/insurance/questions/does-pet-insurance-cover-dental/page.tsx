@@ -5,7 +5,7 @@ import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Does Pet Insurance Cover Dental? | Vets.co', description: 'Most accident-and-illness policies cover dental disease and injuries but not routine cleanings. Many require annual dental care to keep claims eligible.', path: '/insurance/questions/does-pet-insurance-cover-dental', type: 'article' })
 
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Does Pet Insurance Cover Dental?', description: 'What pet insurance covers for dental disease and injuries versus routine cleanings, and the dental-care requirements that keep claims eligible.', url: 'https://vets.co/insurance/questions/does-pet-insurance-cover-dental', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-11T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z', speakable: true })
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Does Pet Insurance Cover Dental?', description: 'What pet insurance covers for dental disease and injuries versus routine cleanings, and the dental-care requirements that keep claims eligible.', url: 'https://vets.co/insurance/questions/does-pet-insurance-cover-dental', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-11T00:00:00Z', modifiedAt: '2026-10-12T00:00:00Z', speakable: true })
 
 const FAQS = [
   { question: 'Does pet insurance cover dental cleanings?', answer: 'Not through the core policy. Routine dental cleanings are preventive care, which accident-and-illness policies exclude — the same way they exclude vaccines and annual exams. Cleanings are covered only if you add a wellness or routine-care plan, which reimburses a fixed annual allowance toward predictable care. The core policy covers dental disease and injury treatment, not the scheduled cleaning that helps prevent them.' },
@@ -37,7 +37,7 @@ export default function Page() {
       >
         <div className="carloOS-article">
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-11T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-10" />
+          <LastUpdated date="2026-10-12" />
 
           <CalloutBox variant="info" title="The short answer">
             Most accident-and-illness policies cover <strong>dental disease and dental injuries</strong> — extractions, fractured teeth, and treatment of periodontal disease — but <strong>not</strong> routine dental <strong>cleanings</strong>, which are preventive and sit in wellness-plan territory. Many insurers require evidence of annual dental exams or cleanings to keep dental-illness claims eligible, so read the dental clause.
@@ -54,7 +54,7 @@ export default function Page() {
           <p>Routine cleanings, polishing, and other purely preventive dental work are outside the core policy. If you want help with those predictable costs, the route is a wellness or routine-care add-on, which reimburses a capped annual allowance toward preventive care including cleanings. As with any wellness rider, whether it pays off is arithmetic — compare the premium to what you would spend on the cleanings it covers. The trade-offs are covered in our <a href="/insurance/wellness-plans-vs-insurance">wellness plans versus insurance</a> guide and in <a href="/insurance/questions/does-pet-insurance-cover-vaccines">does pet insurance cover vaccines</a>, which faces the same preventive-versus-unexpected divide.</p>
           <div className="my-6 max-w-full min-w-0">
             <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
-              <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+              <caption className="text-left font-semibold text-brand-dark p-3">At a glance</caption>
               <thead>
                 <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
                   <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
@@ -81,7 +81,7 @@ export default function Page() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-10" />
+          <ComparisonFoot updated="2026-10-12" />
           <h2>Who should read which clause</h2>
           <p>Read the dental clause before you assume treatment is covered. Disease and injury sit on the core policy. A cleaning sits on a wellness add-on. Many insurers still require an annual dental exam or cleaning before a later illness claim stays eligible.</p>
 

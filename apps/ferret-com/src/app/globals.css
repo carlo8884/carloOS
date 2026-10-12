@@ -165,3 +165,35 @@ h1, h2, h3, h4, h5, h6, .font-display {
 .bg-brand-dark .text-brand-primary { color: #C99D5F; }
 .carloOS-article a { text-decoration-line: underline; text-underline-offset: 2px; }
 p a { text-decoration-line: underline; text-underline-offset: 2px; }
+
+/* Phone tap target: "How we pick" eyebrow link in QuickPicks and ReviewCard is at least 24px tall (Ferret only). */
+.tracking-eyebrow > a[href="/how-we-pick"] {
+  display: inline-flex;
+  min-height: 24px;
+  align-items: center;
+}
+
+/* Phone tap targets (P3, Ferret only): breadcrumb links, standalone table-cell links and the
+   "Compare exotic-pet insurance →" card link are at least 24px tall. */
+nav[aria-label="Breadcrumb"] a,
+nav.py-3.text-xs.bg-brand-surface > a,
+li.flex.items-center.gap-2 > a,
+td > a,
+.bg-brand-dark > a.inline-block.text-xs.font-bold {
+  display: inline-flex;
+  min-height: 24px;
+  align-items: center;
+}
+
+/* Phone tap targets (P4, Ferret only): hub and legal breadcrumbs, legal footer links,
+   the cost-calculator note link and directory card / pager links. */
+nav > a.amber-link,
+nav.text-xs.flex.mb-8 > a,
+div.mt-12.border-t.flex > a,
+div.rounded.border > a.underline,
+div.text-xs > a.pointer-events-auto,
+nav.flex.gap-4.mt-8 > a {
+  display: inline-flex;
+  min-height: 24px;
+  align-items: center;
+}

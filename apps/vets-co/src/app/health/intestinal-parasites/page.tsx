@@ -10,7 +10,7 @@ const SOURCES = [
   { label: 'Companion Animal Parasite Council: Giardia', url: 'https://capcvet.org/guidelines/giardia/', publisher: 'CAPC' },
   { label: 'CDC: Toxocara (Roundworms) FAQs', url: 'https://www.cdc.gov/parasites/toxocariasis/gen_info/faqs.html', publisher: 'CDC' },
 ]
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Intestinal Parasites in Dogs', description: 'Roundworms, hookworms, whipworms, Giardia — testing, treatment, and zoonotic risk.', url: 'https://vets.co/health/intestinal-parasites', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Intestinal Parasites in Dogs', description: 'Roundworms, hookworms, whipworms, Giardia — testing, treatment, and zoonotic risk.', url: 'https://vets.co/health/intestinal-parasites', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-12T00:00:00Z' ,
   citation: SOURCES,
 })
 const med = buildMedicalWebPageSchema({ name: 'Intestinal Parasites in Dogs', description: 'Diagnosis and treatment of common intestinal parasites in dogs.', url: 'https://vets.co/health/intestinal-parasites', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-07' })
@@ -44,7 +44,7 @@ export default function IntestinalParasitesPage() {
 </>}
       >
         <div className="carloOS-article">
-          <LastUpdated date="2026-10-09" />
+          <LastUpdated date="2026-10-12" />
 
           <h2>Roundworms — The Most Common and Zoonotic</h2>
           <p>Toxocara canis (roundworm) is the most commonly found intestinal parasite in dogs and one of the most important zoonotic parasites worldwide. Adult roundworms live in the small intestine. Puppies are often infected in utero or through nursing — almost all puppies are born with roundworm larvae transmitted transplacentally. Clinical signs in heavily infected puppies: pot-bellied appearance, dull coat, diarrhea, and in severe cases, intestinal obstruction. Adult dogs with small burdens often show no signs.</p>

@@ -43,7 +43,7 @@ import {
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
-  title: 'Ferret Dental Disease — Brushing, Scaling, Periodontitis | Ferret.com',
+  title: 'Ferret Dental Disease — Brushing, Scaling, Gum Disease | Ferret.com',
   description:
     'Ferrets accumulate tartar fast and develop gingivitis by age 2-3. Daily brushing, annual scaling, the stages of periodontal disease, and the risk factors.',
   path: '/health/dental-disease',
@@ -59,7 +59,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-05-28T00:00:00Z',
-  modifiedAt: '2026-09-05T00:00:00Z',
+  modifiedAt: '2026-10-12T00:00:00Z',
 
   citation: SOURCES,
 })
@@ -179,7 +179,7 @@ export default function FerretDentalDiseasePage() {
             updatedAt="2026-09-05"
             reviewedBy="Editorial team"
           />
-          <LastUpdated date="2026-10-09" />
+          <LastUpdated date="2026-10-12" />
 
           <DropCap>
             Open a healthy 2-year-old ferret&apos;s mouth and you will almost

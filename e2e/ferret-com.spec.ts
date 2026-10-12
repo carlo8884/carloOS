@@ -1,4 +1,5 @@
 import { expect, test } from '@playwright/test'
+import { expectAAContrast } from './contrast'
 import { expectMoneyCopy, reviewRoutes } from './money-copy'
 import { expectHop } from './hop'
 import { AMAZON_TAG } from './tags'
@@ -164,5 +165,401 @@ test('every review route rejects page-about-itself copy', async ({ page }) => {
   for (const path of reviewRoutes('ferret-com')) {
     await page.goto(path, { waitUntil: 'domcontentloaded' })
     await expectMoneyCopy(page)
+  }
+})
+
+test('kibble guide search data points at the Amazon hop or on-page picks', async ({ page }) => {
+  await page.goto('/diet/best-ferret-kibble', { waitUntil: 'domcontentloaded' })
+  const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
+  expect(ld).not.toMatch(/ferret\.com\/go\/(wysong|marshall|carniwhole|chewy)/)
+  expect(ld).toContain('go/amazon/B019W9VXZK')
+  expect(ld).toContain('best-ferret-kibble#marshall-premium-diet')
+})
+
+test('ferret fix T4: starter kit, adrenal, and Marshall cards drop internal link wording', async ({ page }) => {
+  const internal = /numeric id|not a confirmed|stays below|comfort card|Chewy search|this card|no longer resolves|this button opens|this opens|results in this search|the search returns|kit link/i
+  for (const path of [
+    '/ferret-starter-kit',
+    '/health/adrenal-disease',
+    '/health/aging-ferret-care',
+    '/care/bathing-and-grooming',
+    '/care/cage-setup',
+    '/care/litter-training',
+    '/care/exercise-and-enrichment',
+    '/behavior/leash-and-harness-training',
+    '/behavior/diy-enrichment-toys',
+    '/behavior/stress-signs',
+    '/behavior/digging-and-burrowing',
+    '/reviews/critter-nation-vs-marshall-cage-guide',
+    '/reviews/paper-vs-grass-litter-guide',
+    '/diet/whole-prey-vs-kibble',
+  ]) {
+    await page.goto(path, { waitUntil: 'domcontentloaded' })
+    expect(await page.locator('body').innerText(), path).not.toMatch(internal)
+  }
+})
+
+test('ferret fix T5: disclosure pages do not claim the Chewy program, and keep the Amazon Associates statement', async ({ page }) => {
+  for (const path of ['/disclosure', '/legal/affiliate-disclosure']) {
+    await page.goto(path)
+    const body = await page.locator('main').innerText()
+    expect(body).not.toMatch(/Chewy Affiliate Program/i)
+    expect(body).not.toMatch(/participa\w*[^.]*\bChewy/i)
+    expect(body).toMatch(/As an Amazon Associate we earn from qualifying purchases/)
+    const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
+    expect(ld).not.toMatch(/participa\w*[^.]*\bChewy|Chewy Affiliate Program/i)
+  }
+})
+
+test('ferret fix P1: cage review and home standalone links are at least 24px tall at 390px', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 })
+  for (const [path, expected] of [
+    ['/reviews/best-ferret-cage', ['How we pick', 'How we pick']],
+    ['/', ['All ferret tools →', 'Gear buyer guides →']],
+  ] as const) {
+    await page.goto(path)
+    const links = await page.evaluate(() =>
+      Array.from(document.querySelectorAll('a[href]'))
+        .filter((a) => !a.closest('p, li'))
+        .map((a) => ({ text: a.textContent?.trim() ?? '', rect: a.getBoundingClientRect(), hidden: getComputedStyle(a).visibility === 'hidden' }))
+        .filter(({ rect, hidden }) => !hidden && rect.width > 1 && rect.height > 1)
+        .map(({ text, rect }) => ({ text, height: Math.round(rect.height * 10) / 10 })),
+    )
+    const named = links.filter(({ text }) => (expected as readonly string[]).includes(text))
+    expect(named.map(({ text }) => text).sort(), path).toEqual([...expected].sort())
+    expect(links.filter(({ height }) => height < 24).map(({ text, height }) => `${text} (${height}px)`), path).toEqual([])
+  }
+})
+
+test('ferret fix T6: grooming page drops unsourced vet-approved and practice-standard claims', async ({ page }) => {
+  const removed = /vet-approved|vet-recommended|exotic-pet practice|first-line/i
+  await page.goto('/care/bathing-and-grooming')
+  expect(await page.locator('body').innerText()).not.toMatch(removed)
+  const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
+  expect(ld).not.toMatch(removed)
+  await expect(page.locator('#pet-ear-cleaner')).toContainText('Pet Ear Cleaner (Epi-Otic style)')
+  await expect(page.locator('#marshall-ferret-shampoo')).toContainText('A sensible default for the every-2–3-month bathing schedule.')
+})
+
+test('ferret fix M5: wood litter and ear cleaner cards get one Amazon search button; held and unmatched cards stay unlinked', async ({ page }) => {
+  await page.goto('/reviews/best-ferret-litter')
+  for (const [id, query] of [
+    ['paper-pellet', 'recycled+paper+pellet+litter+non+clumping'],
+    ['wood-pellet', 'heat+treated+wood+pellet+litter'],
+  ] as const) {
+    const shop = page.locator(`#${id} a[href^="/go/"]`)
+    await expect(shop, id).toHaveCount(1)
+    await expect(shop, id).toHaveAttribute('href', `/go/amazon-brand/${query}?s=reviews-best-ferret-litter`)
+  }
+  // No Amazon search returned a non-clumping grass pellet litter, so this card stays without a button.
+  await expect(page.locator('#grass-pellet a[href^="/go/"]')).toHaveCount(0)
+  let ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
+  expect(ld.match(/ferret\.com\/go\/[^"\s]+/g)?.filter((hop) => !hop.startsWith('ferret.com/go/amazon-brand/')) ?? []).toEqual([])
+  expect(ld).toContain('best-ferret-litter#wood-pellet')
+
+  await page.goto('/care/bathing-and-grooming')
+  const ear = page.locator('#pet-ear-cleaner a[href^="/go/"]')
+  await expect(ear).toHaveCount(1)
+  await expect(ear).toHaveAttribute('href', '/go/amazon-brand/pet+ear+cleaner?s=care-bathing-and-grooming')
+  await expect(page.locator('#marshall-ferret-shampoo a[href^="/go/"]')).toHaveCount(0)
+  ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
+  expect(ld).not.toMatch(/\/go\/(marshall|chewy|wysong)\b/)
+})
+
+test('ferret fix Q3: comparison table caption reads "At a glance", not internal wording', async ({ page }) => {
+  await page.goto('/diet/kit-vs-adult-feeding', { waitUntil: 'domcontentloaded' })
+  expect(await page.content()).not.toMatch(/from the sentences on this page/i)
+  await expect(page.locator('caption', { hasText: 'At a glance' }).first()).toBeVisible()
+})
+
+test('ferret fix P3: insurance card link, tool breadcrumb and gift-guide table links are at least 24px tall at 390px', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 })
+  const checks: Array<[string, string]> = [
+    ['/health/adrenal-disease', 'a:has-text("Compare exotic-pet insurance")'],
+    ['/tools/litter-planner', 'nav.py-3.text-xs > a'],
+    ['/reviews/november-december-gift-guide', 'td > a'],
+  ]
+  for (const [path, selector] of checks) {
+    await page.goto(path, { waitUntil: 'domcontentloaded' })
+    const heights = await page.locator(selector).evaluateAll((els) => els.filter((el) => (el as HTMLElement).offsetParent).map((el) => el.getBoundingClientRect().height))
+    expect(heights.length, path).toBeGreaterThan(0)
+    expect(heights.filter((h) => h < 24), path).toEqual([])
+    expect(await page.evaluate(() => document.documentElement.scrollWidth), path).toBeLessThanOrEqual(390)
+  }
+})
+
+test('ferret fix M6: supplies checklist has an Amazon link for each core item and no "non-commercial" line', async ({ page }) => {
+  await page.goto('/ownership/ferret-supplies-checklist', { waitUntil: 'domcontentloaded' })
+  const hrefs = await page.locator('#shop-checklist a[href^="/go/"]').evaluateAll((els) => els.map((el) => el.getAttribute('href')))
+  expect(hrefs).toEqual([
+    '/go/amazon/B001NJ0DAY?s=ferret-supplies-checklist',
+    '/go/amazon-brand/ferret+hammock?s=ferret-supplies-checklist',
+    '/go/amazon-brand/ferret+fleece+liner?s=ferret-supplies-checklist',
+    '/go/amazon-brand/ferret+corner+litter+pan?s=ferret-supplies-checklist',
+    '/go/amazon-brand/recycled+paper+pellet+litter?s=ferret-supplies-checklist',
+    '/go/amazon-brand/high+protein+ferret+food+kibble?s=ferret-supplies-checklist',
+  ])
+  expect(await page.locator('main a[href^="/go/amazon"]').count()).toBeGreaterThanOrEqual(7)
+  const text = await page.locator('main').innerText()
+  expect(text).not.toMatch(/non-commercial|dead shop page/i)
+  expect(text).not.toContain('/go buttons')
+})
+
+test('ferret fix M7: H-style vs mesh guide has a shop link for both picks, in the table and the ItemList', async ({ page }) => {
+  await page.goto('/reviews/h-style-vs-mesh-harness-guide', { waitUntil: 'domcontentloaded' })
+  const h = '/go/amazon-brand/ferret+h+style+harness+adjustable?s=reviews-h-style-vs-mesh-harness-guide'
+  const mesh = '/go/amazon-brand/ferret+mesh+harness+leash+set?s=reviews-h-style-vs-mesh-harness-guide'
+  const table = await page.locator('#harness-table a[href^="/go/"]').evaluateAll((els) => els.map((el) => el.getAttribute('href')))
+  expect(table).toEqual([h, mesh])
+  await expect(page.locator(`main a[href="${mesh}"]`)).toHaveCount(2)
+  const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
+  const list = ld.slice(ld.indexOf('"ItemList"'))
+  expect(list).toContain(`https://ferret.com${h}`)
+  expect(list).toContain(`https://ferret.com${mesh}`)
+})
+
+test('ferret fix Q5: health pages use credited photos that load, not the removed Unsplash ids', async ({ page }) => {
+  for (const path of ['/health/adrenal-disease', '/health/aging-ferret-care']) {
+    await page.goto(path, { waitUntil: 'domcontentloaded' })
+    const html = await page.content()
+    expect(html, path).not.toMatch(/photo-1633627876960|photo-1604848698030/)
+  }
+})
+
+test('ferret fix M8: first-week checklist has a shop table for the day-one setup, Amazon only', async ({ page }) => {
+  await page.goto('/ownership/first-week-checklist', { waitUntil: 'domcontentloaded' })
+  const links = page.locator('#shop-first-week a[href^="/go/"]')
+  await expect(links).toHaveCount(6)
+  for (const href of await links.evaluateAll((els) => els.map((el) => el.getAttribute('href') ?? ''))) {
+    expect(href).toMatch(/^\/go\/amazon(-brand)?\/[^?]+\?s=first-week-checklist$/)
+  }
+  await expect(page.locator('#shop-first-week a[href="/go/amazon/B001NJ0DAY?s=first-week-checklist"]')).toHaveCount(1)
+  expect(await page.locator('main').innerText()).not.toMatch(/with no links/i)
+})
+
+test('ferret fix P4: hub and legal breadcrumbs, legal footer and cost-calculator links are at least 24px tall at 390px', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 })
+  const checks: Array<[string, string]> = [
+    ['/care', 'nav > a.amber-link'],
+    ['/legal/affiliate-disclosure', 'nav.text-xs.flex.mb-8 > a, div.mt-12.border-t.flex > a'],
+    ['/tools/cost-calculator', 'div.rounded.border > a.underline'],
+  ]
+  for (const [path, selector] of checks) {
+    await page.goto(path, { waitUntil: 'domcontentloaded' })
+    const heights = await page.locator(selector).evaluateAll((els) => els.filter((el) => (el as HTMLElement).offsetParent).map((el) => el.getBoundingClientRect().height))
+    expect(heights.length, path).toBeGreaterThan(0)
+    expect(heights.filter((h) => h < 24), path).toEqual([])
+    expect(await page.evaluate(() => document.documentElement.scrollWidth), path).toBeLessThanOrEqual(390)
+  }
+})
+
+test('ferret fix M9: vest vs H-style guide has a shop link for both picks', async ({ page }) => {
+  await page.goto('/reviews/vest-vs-h-harness-guide', { waitUntil: 'domcontentloaded' })
+  const vest = '/go/amazon-brand/ferret+vest+harness+jacket+escape+proof?s=reviews-vest-vs-h-harness-guide'
+  const h = '/go/amazon-brand/ferret+h+style+harness+adjustable?s=reviews-vest-vs-h-harness-guide'
+  const table = await page.locator('#harness-table a[href^="/go/"]').evaluateAll((els) => els.map((el) => el.getAttribute('href')))
+  expect(table).toEqual([vest, h])
+  await expect(page.locator(`main a[href="${h}"]`)).toHaveCount(2)
+})
+
+test('ferret fix M10: paper vs wood litter guide has a shop link for both picks', async ({ page }) => {
+  await page.goto('/reviews/paper-vs-wood-litter-guide', { waitUntil: 'domcontentloaded' })
+  const paper = '/go/amazon-brand/recycled+paper+pellet+litter+non+clumping?s=reviews-paper-vs-wood-litter-guide'
+  const wood = '/go/amazon-brand/heat+treated+wood+pellet+litter?s=reviews-paper-vs-wood-litter-guide'
+  const table = await page.locator('#litter-table a[href^="/go/"]').evaluateAll((els) => els.map((el) => el.getAttribute('href')))
+  expect(table).toEqual([paper, wood])
+  await expect(page.locator(`main a[href="${wood}"]`)).toHaveCount(2)
+})
+
+test('ferret fix M11: fall molt brush guide has a shop link for both picks', async ({ page }) => {
+  await page.goto('/reviews/fall-molt-brush-guide', { waitUntil: 'domcontentloaded' })
+  const brush = '/go/amazon-brand/soft+slicker+brush+small+animal?s=reviews-fall-molt-brush-guide'
+  const comb = '/go/amazon-brand/fine+tooth+metal+comb?s=reviews-fall-molt-brush-guide'
+  const table = await page.locator('#molt-table a[href^="/go/"]').evaluateAll((els) => els.map((el) => el.getAttribute('href')))
+  expect(table).toEqual([brush, comb])
+  await expect(page.locator(`main a[href="${comb}"]`)).toHaveCount(2)
+})
+
+test('ferret fix M12: winter harness fit guide has a shop link for both picks', async ({ page }) => {
+  await page.goto('/reviews/winter-harness-fit-guide', { waitUntil: 'domcontentloaded' })
+  const vest = '/go/amazon-brand/ferret+vest+harness+jacket+escape+proof?s=reviews-winter-harness-fit-guide'
+  const h = '/go/amazon-brand/ferret+h+style+harness+adjustable?s=reviews-winter-harness-fit-guide'
+  const table = await page.locator('#harness-table a[href^="/go/"]').evaluateAll((els) => els.map((el) => el.getAttribute('href')))
+  expect(table).toEqual([vest, h])
+  await expect(page.locator(`main a[href="${h}"]`)).toHaveCount(2)
+})
+
+test('ferret fix M13: paper and wood vs grass guides have a shop link for both picks', async ({ page }) => {
+  const pages: Array<[string, string]> = [
+    ['paper-vs-grass-litter-guide', '/go/amazon-brand/recycled+paper+pellet+litter+non+clumping?s=reviews-paper-vs-grass-litter-guide'],
+    ['wood-vs-grass-litter-guide', '/go/amazon-brand/heat+treated+wood+pellet+litter?s=reviews-wood-vs-grass-litter-guide'],
+  ]
+  for (const [slug, first] of pages) {
+    await page.goto(`/reviews/${slug}`, { waitUntil: 'domcontentloaded' })
+    const grass = `/go/amazon-brand/grass+pellet+litter+small+animal?s=reviews-${slug}`
+    const table = await page.locator('#litter-table a[href^="/go/"]').evaluateAll((els) => els.map((el) => el.getAttribute('href')))
+    expect(table).toEqual([first, grass])
+    await expect(page.locator(`main a[href="${grass}"]`)).toHaveCount(2)
+  }
+})
+
+test('ferret fix M14: cage comparison tables have an exact-ASIN shop link for both cages', async ({ page }) => {
+  const pages: Array<[string, string, string]> = [
+    ['ferret-nation-vs-prevue-guide', 'B0054U8UGW', 'B000QFMYWQ'],
+    ['kaytee-vs-ferret-nation-guide', 'B008FONT2Y', 'B0054U8UGW'],
+    ['kaytee-vs-prevue-guide', 'B000QFMYWQ', 'B008FONT2Y'],
+  ]
+  for (const [slug, a, b] of pages) {
+    await page.goto(`/reviews/${slug}`, { waitUntil: 'domcontentloaded' })
+    const table = await page.locator('#cage-table a[href^="/go/"]').evaluateAll((els) => els.map((el) => el.getAttribute('href')))
+    expect(table).toEqual([`/go/amazon/${a}?s=reviews-${slug}`, `/go/amazon/${b}?s=reviews-${slug}`])
+  }
+})
+
+test('ferret fix M15: emergency warning signs page has a carrier shop link', async ({ page }) => {
+  await page.goto('/health/emergency-warning-signs', { waitUntil: 'domcontentloaded' })
+  const hop = '/go/amazon-brand/ferret+carrier?s=health-emergency-warning-signs'
+  await expect(page.locator(`#emergency-shop a[href="${hop}"]`)).toHaveCount(1)
+  await expect(page.getByText('Keep a carrier ready.')).toBeVisible()
+})
+
+test('ferret fix T12: every Amazon hop on the main money pages redirects to amazon.com with the tag', async ({ page }) => {
+  for (const path of ['/ownership/ferret-supplies-checklist', '/ferret-starter-kit', '/ownership/first-week-checklist', '/care/cage-cleaning-routine', '/reviews/best-ferret-cage']) {
+    await page.goto(path, { waitUntil: 'domcontentloaded' })
+    const hops = await page.locator('a[href^="/go/amazon"]').evaluateAll((els) => [...new Set(els.map((el) => el.getAttribute('href') || ''))])
+    expect(hops.length, `${path} Amazon hops`).toBeGreaterThan(0)
+    for (const hop of hops) {
+      await expectHop(page.request, hop, ['https://amazon.com/', `tag=${AMAZON_TAG}`])
+    }
+  }
+})
+
+test('ferret fix L3: food evaluator verdict meets WCAG AA contrast', async ({ page }) => {
+  await page.goto('/', { waitUntil: 'networkidle' })
+  await expectAAContrast(page, '[class*="bg-emerald-50"] p, [class*="bg-amber-50"] p, [class*="bg-red-50"] p')
+})
+
+test('ferret fix L4: trimmed titles fit 70 characters and directory titles are whole and unique', async ({ page }) => {
+  const paths = ['/care/litter-training', '/care/ferret-proofing-your-home', '/behavior/dead-sleep-explained', '/diet', '/diet/raw-feeding-guide', '/diet/protein-and-fat-requirements', '/diet/supplements-and-vitamins', '/health/emergency-warning-signs', '/health/dental-disease', '/health/adrenal-disease', '/health/spaying-and-neutering', '/health/annual-checkup-guide', '/ownership/adoption-vs-buying', '/tools/food-evaluator', '/directory/broward-avian-exotic-animal-hospital-deerfield-beach-fl-ve-0007097', '/directory/broward-avian-exotic-animal-clinic-deerfield-beach-fl-ve-0004271']
+  const titles: string[] = []
+  for (const path of paths) {
+    await page.goto(path, { waitUntil: 'domcontentloaded' })
+    const title = await page.title()
+    expect(title.length, `${path}: ${title}`).toBeLessThanOrEqual(70)
+    titles.push(title)
+  }
+  const [hospital, clinic] = titles.slice(-2)
+  expect(hospital).toContain('Broward Avian & Exotic Animal Hospital')
+  expect(clinic).toContain('Broward Avian & Exotic Animal Clinic')
+})
+
+test('ferret fix L5: money-page Article dateModified matches the visible Last updated date', async ({ request }) => {
+  const paths = [
+    '/reviews/best-ferret-litter',
+    '/reviews/november-december-gift-guide',
+    '/reviews/wysong-vs-marshall-kibble-guide',
+    '/reviews/paper-vs-wood-litter-guide',
+    '/reviews/paper-vs-grass-litter-guide',
+    '/reviews/kaytee-vs-prevue-guide',
+    '/reviews/wysong-vs-carniwhole-guide',
+    '/reviews/best-ferret-harness',
+    '/reviews/fall-molt-brush-guide',
+    '/reviews/wood-vs-grass-litter-guide',
+    '/reviews/vest-vs-h-harness-guide',
+    '/reviews/best-ferret-cage',
+    '/reviews/kaytee-vs-ferret-nation-guide',
+    '/reviews/critter-nation-vs-marshall-cage-guide',
+    '/reviews/ferret-nation-vs-prevue-guide',
+    '/reviews/h-style-vs-mesh-harness-guide',
+    '/reviews/winter-harness-fit-guide',
+    '/diet/best-ferret-kibble',
+  ]
+  for (const path of paths) {
+    const html = await (await request.get(path)).text()
+    const visible = html.match(/Last updated <time dateTime="(\d{4}-\d{2}-\d{2})"/)?.[1]
+    const modified = [...html.matchAll(/"dateModified":"(\d{4}-\d{2}-\d{2})/g)].map((m) => m[1])
+    expect(visible, `${path} shows a Last updated date`).toBeTruthy()
+    expect(modified.length, `${path} has Article dateModified`).toBeGreaterThan(0)
+    for (const d of modified) expect(d, `${path} dateModified`).toBe(visible)
+  }
+})
+
+test('ferret fix L6: every FAQPage question on /diet/can-ferrets-eat is visible on the page', async ({ page }) => {
+  await page.goto('/diet/can-ferrets-eat', { waitUntil: 'domcontentloaded' })
+  const blocks = await page.locator('script[type="application/ld+json"]').allTextContents()
+  const questions: string[] = []
+  for (const block of blocks) {
+    const data = JSON.parse(block)
+    for (const node of Array.isArray(data) ? data : data['@graph'] ?? [data]) {
+      if (node['@type'] === 'FAQPage') for (const q of node.mainEntity) questions.push(q.name)
+    }
+  }
+  expect(questions.length).toBeGreaterThan(0)
+  for (const q of questions) await expect(page.locator('[data-faq="visible"]').getByText(q, { exact: true })).toBeVisible()
+})
+
+test('ferret fix L7: ArticleLayout breadcrumb items are absolute https://ferret.com URLs', async ({ request }) => {
+  const html = await (await request.get('/health/dental-disease')).text()
+  const blocks = [...html.matchAll(/<script type="application\/ld\+json">(.*?)<\/script>/gs)].map((m) => JSON.parse(m[1]))
+  const crumbs = blocks.flatMap((b) => (Array.isArray(b) ? b : b['@graph'] ?? [b])).filter((n) => n['@type'] === 'BreadcrumbList')
+  expect(crumbs.length).toBe(1)
+  const linked = crumbs[0].itemListElement.filter((e: { item?: string }) => e.item)
+  expect(linked.length).toBeGreaterThan(0)
+  for (const e of linked) expect(e.item.startsWith('https://ferret.com/'), e.item).toBe(true)
+})
+
+test('ferret fix L8: best-of pages carry ItemList markup and no Product, Review or Offer markup', async ({ request }) => {
+  const paths = ['/reviews/best-ferret-cage', '/reviews/best-ferret-harness', '/reviews/best-ferret-litter', '/diet/best-ferret-kibble']
+  for (const path of paths) {
+    const html = await (await request.get(path)).text()
+    const blocks = [...html.matchAll(/<script type="application\/ld\+json">(.*?)<\/script>/gs)].map((m) => m[1])
+    const json = blocks.join('\n')
+    for (const type of ['Product', 'Review', 'Offer', 'AggregateOffer', 'Rating']) {
+      expect(json.includes(`"@type":"${type}"`), `${path} has ${type} markup`).toBe(false)
+    }
+    const lists = blocks.flatMap((b) => { const d = JSON.parse(b); return Array.isArray(d) ? d : d['@graph'] ?? [d] }).filter((n) => n['@type'] === 'ItemList')
+    expect(lists.length, `${path} ItemList`).toBeGreaterThan(0)
+    expect(lists[0].itemListElement.length).toBeGreaterThanOrEqual(3)
+  }
+})
+
+test('ferret fix L10: health and guide Article dateModified matches the visible Last updated date', async ({ request }) => {
+  const paths = [
+    '/ownership/ferret-insurance-basics',
+    '/ownership/adoption-vs-buying',
+    '/diet/transitioning-foods',
+    '/diet/hydration-and-water',
+    '/diet/kit-vs-adult-feeding',
+    '/ownership/ferret-supplies-checklist',
+    '/diet/raw-feeding-guide',
+    '/colors/male-vs-female-ferrets',
+    '/health/ear-mites',
+    '/health/dental-disease',
+    '/health/ferret-influenza',
+    '/health/canine-distemper-in-ferrets',
+    '/health/signs-of-pain',
+    '/health/adrenal-disease',
+    '/health/gastrointestinal-blockage',
+    '/health/anesthesia-and-surgery-risk',
+    '/health/lymphoma',
+    '/health/fleas-and-parasites',
+    '/health/spaying-and-neutering',
+    '/health/ferret-ulcers',
+    '/health/emergency-warning-signs',
+    '/health/insulinoma',
+    '/health/aging-ferret-care',
+    '/health/annual-checkup-guide',
+    '/health/ferret-diarrhea-causes',
+    '/health/vaccinations',
+    '/health/heart-disease',
+    '/health/vet-visit-prep',
+  ]
+  for (const path of paths) {
+    const html = await (await request.get(path)).text()
+    const visible = html.match(/Last updated <time dateTime="(\d{4}-\d{2}-\d{2})"/)?.[1]
+    const modified = [...html.matchAll(/"dateModified":"(\d{4}-\d{2}-\d{2})/g)].map((m) => m[1])
+    expect(visible, `${path} shows a Last updated date`).toBeTruthy()
+    expect(modified.length, `${path} has Article dateModified`).toBeGreaterThan(0)
+    for (const d of modified) expect(d, `${path} dateModified`).toBe(visible)
   }
 })

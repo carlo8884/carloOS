@@ -50,7 +50,7 @@ const FAQS = [
   },
   {
     question: 'Why include a "when NOT to ER" section?',
-    answer: 'The most common ER mistake among owners is going in for something that did not require it, paying $400–$1,200, and depleting the budget needed for the next real emergency. Knowing the difference saves money and keeps your emergency fund available.',
+    answer: 'An ER trip for something that could have waited for a regular appointment uses up the budget you need for a real emergency. Knowing the difference saves money and keeps your emergency fund available.',
   },
   {
     question: 'Where do the vital sign ranges come from?',
@@ -357,7 +357,7 @@ export default function EmergencyTriageCardPage() {
           <p>Those figures are typical US ranges dated 2026-10-04.</p>
           <p className="text-base text-brand-text-mid max-w-2xl leading-relaxed mb-10">
             A pet first-aid kit costs $40–$70 to assemble from scratch and is the cheapest
-            emergency-prep purchase you will ever make. Items below align with AVMA pet first-aid
+            item on this card to prepare ahead of time. Items below align with AVMA pet first-aid
             guidance.
           </p>
 
@@ -431,7 +431,7 @@ export default function EmergencyTriageCardPage() {
         </div>
       </section>
       <section className="bg-brand-primary-pale border-y border-brand-border px-container-sm sm:px-container py-section">
-        <div className="max-w-content mx-auto text-center">
+        <div className="max-w-content mx-auto text-center [&_[data-email-capture=section]>p]:!text-brand-text-mid">
           <EmailCapture
             variant="section"
             siteId="vets-co"

@@ -20,7 +20,7 @@ const HUB_FAQS = [
   {
     question: 'How much does a full pet diagnostic workup cost?',
     answer:
-      'A complete workup — bloodwork plus urinalysis plus imaging plus cytology — commonly runs $300-2,000 in the United States, and complex referral workups can exceed that. Individual tests vary widely: an in-house urinalysis often starts near $40, while a board-certified echocardiogram or an advanced biopsy workup can reach $1,500 or more. The reference table on this page lists typical starting cost ranges per test. All figures are typical US ranges and are not guaranteed; your hospital, region, and case complexity determine the final cost.',
+      'A complete workup — bloodwork plus urinalysis plus imaging plus cytology — adds up the cost of each test, and complex referral workups cost more. Individual tests vary widely. The reference table on this page lists typical starting cost ranges per test. All figures are typical US ranges and are not guaranteed; your hospital, region, and case complexity determine the final cost.',
   },
   {
     question: 'Does pet insurance cover diagnostic tests?',
@@ -202,8 +202,8 @@ export default function DiagnosticsHubPage() {
             imaging</strong> (echocardiography for the heart), and <strong>tissue sampling</strong>{' '}
             (cytology and biopsy, the gold standard for diagnosing masses). A typical individual
             test ranges from about $40 for an in-house urinalysis to $1,500+ for a specialist
-            echocardiogram or advanced biopsy workup, and a complete workup commonly runs
-            $300-2,000. Most accident-and-illness pet insurance plans reimburse diagnostics ordered
+            echocardiogram or advanced biopsy workup, and a complete workup adds those
+            costs together. Most accident-and-illness pet insurance plans reimburse diagnostics ordered
             to investigate a symptom once the policy is active and waiting periods clear — but
             pre-existing conditions are excluded. Result interpretation always belongs to your
             veterinarian. All cost figures are typical US ranges dated 2026-06-14 and are not guaranteed.
@@ -233,8 +233,8 @@ export default function DiagnosticsHubPage() {
           </div>
           <p className="text-brand-text-mid leading-relaxed m-0 text-sm">
             A complete diagnostic workup — bloodwork plus urinalysis plus imaging plus
-            cytology — commonly runs $300-2,000 in the United States, and complex referral
-            workups can exceed that. Most accident-and-illness pet insurance plans cover
+            cytology — adds up the cost of each test, and complex referral
+            workups cost more. Most accident-and-illness pet insurance plans cover
             diagnostic costs once your policy is active and waiting periods are cleared.
             Pre-existing conditions are excluded, which is why enrollment timing matters.
           </p>
@@ -386,7 +386,7 @@ export default function DiagnosticsHubPage() {
             </div>
             <p>Those figures are typical US ranges dated 2026-06-14.</p>
             <p className="text-xs text-brand-text-mid m-0 leading-relaxed">
-              Diagnostic workups commonly run $300-2,000. Most accident-and-illness plans cover
+              Diagnostic workups add up test by test. Most accident-and-illness plans cover
               diagnostics after waiting periods clear — pre-existing conditions are excluded, so
               the time to enroll is before a chronic illness is diagnosed.
             </p>

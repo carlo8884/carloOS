@@ -5,7 +5,7 @@ import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'When Should I Get Pet Insurance? Best Age to Enroll | Vets.co', description: 'Enroll as early as the insurer allows — often 6–8 weeks. It locks in coverage before conditions become pre-existing exclusions and starts premiums lower.', path: '/insurance/questions/when-should-i-get-pet-insurance', type: 'article' })
 
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'When Should I Get Pet Insurance?', description: 'Why enrolling a young, healthy pet maximizes coverage, how waiting periods work, and what to know about enrollment-age limits.', url: 'https://vets.co/insurance/questions/when-should-i-get-pet-insurance', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-11T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z', speakable: true })
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'When Should I Get Pet Insurance?', description: 'Why enrolling a young, healthy pet maximizes coverage, how waiting periods work, and what to know about enrollment-age limits.', url: 'https://vets.co/insurance/questions/when-should-i-get-pet-insurance', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-11T00:00:00Z', modifiedAt: '2026-10-12T00:00:00Z', speakable: true })
 
 const FAQS = [
   { question: 'What is the best age to get pet insurance?', answer: 'As early as the insurer allows — many begin coverage at six to eight weeks of age. Enrolling while a pet is young and healthy locks in coverage before any condition becomes a permanent pre-existing exclusion, and premiums start lower. There is no single magic age beyond "as soon as practical," because every additional week without coverage is a week in which a new note in the records could become an exclusion.' },
@@ -37,7 +37,7 @@ export default function Page() {
       >
         <div className="carloOS-article">
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-11T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-10" />
+          <LastUpdated date="2026-10-12" />
 
           <CalloutBox variant="info" title="The short answer">
             Enroll <strong>as early as the insurer allows</strong> — many start coverage at six to eight weeks of age. Enrolling while a pet is young and healthy locks in coverage before any condition becomes a permanent pre-existing exclusion, and premiums start lower. There is no &ldquo;too late&rdquo; if your pet is healthy, but every year you wait risks a new note in the records becoming an exclusion.
@@ -57,7 +57,7 @@ export default function Page() {
           <p>Some insurers set a maximum enrollment age or apply senior surcharges to pets enrolled later in life, particularly for certain breeds. Coverage purchased while a pet is young usually continues into old age even as premiums rise, whereas trying to start a brand-new policy on a senior pet can mean higher prices, more exclusions from an already-populated record, or, occasionally, limited options. This is another reason the enroll-early decision compounds: it is easier and cheaper to maintain continuous coverage than to begin it late.</p>
           <div className="my-6 max-w-full min-w-0">
             <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
-              <caption className="text-left font-semibold text-brand-dark p-3">Timing, from the sentences on this page</caption>
+              <caption className="text-left font-semibold text-brand-dark p-3">Timing at a glance</caption>
               <thead>
                 <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
                   <th scope="col" className="p-3 font-bold text-brand-dark">When</th>
@@ -80,7 +80,7 @@ export default function Page() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-10" />
+          <ComparisonFoot updated="2026-10-12" />
           <h2>Who should start when</h2>
           <p>Start while the pet is young and healthy. Enroll before a worrying symptom, because a condition that shows up in the waiting period is not paid. Do not wait to open a first policy on a senior record.</p>
 

@@ -19,7 +19,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-10-04T00:00:00Z',
-  modifiedAt: '2026-10-04T00:00:00Z',
+  modifiedAt: '2026-10-12T00:00:00Z',
 })
 
 const FAQS = [
@@ -75,7 +75,7 @@ export default function WysongVsMarshallKibbleGuidePage() {
       }
      priceAsOf="2026-10-07">
       <div className="carloOS-article">
-          <LastUpdated date="2026-10-10" />
+          <LastUpdated date="2026-10-12" />
         <p>The <Link href="/diet/best-ferret-kibble">kibble review</Link> already lists Wysong Epigen 90 as the premium pick the current page markets as starch-free, and Marshall Premium as the mid-tier bag you are more likely to find in a chain aisle. Carbohydrate is not on either guaranteed analysis. The percentages below are the ones printed in the review.</p>
         <h2>What the review says about Wysong</h2>
         <p>Wysong Epigen 90 is the top row and the winner. The current Wysong Epigen 90 page lists crude protein minimum 63% and crude fat minimum 16%. Those are guaranteed-analysis figures as printed, not a dry-matter conversion. The page markets the food as starch-free. Carbohydrate is not on the guaranteed analysis — check the label. The printed price is $30–50 for 5 lb. Distribution is direct and specialty retail, and it is not always stocked in chain pet aisles.</p>
@@ -91,7 +91,7 @@ export default function WysongVsMarshallKibbleGuidePage() {
         <QuietPartnerLink href="/go/wysong/epigen-90?s=reviews-wysong-vs-marshall-kibble-guide" label="Check price of Wysong Epigen 90 at Wysong" />
         <div className="my-6 max-w-full min-w-0">
           <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
-            <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+            <caption className="text-left font-semibold text-brand-dark p-3">At a glance</caption>
             <thead>
               <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
                 <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
@@ -128,7 +128,7 @@ export default function WysongVsMarshallKibbleGuidePage() {
             </tbody>
           </table>
         </div>
-        <ComparisonFoot updated="2026-10-10" />
+        <ComparisonFoot updated="2026-10-12" />
         <EmailCapture
           variant="inline"
           siteId="ferret-com"

@@ -52,7 +52,7 @@ import { crossSiteHref } from '@carloOS/config'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
-  title: 'Adrenal Disease in Ferrets — Signs, Diagnosis, Treatment | Ferret.com',
+  title: 'Adrenal Disease in Ferrets — Signs and Treatment | Ferret.com',
   description:
     'Adrenal disease is the second most common middle-aged-ferret disease after insulinoma. Hormone-panel diagnosis, deslorelin implants, surgery, and prognosis.',
   path: '/health/adrenal-disease',
@@ -68,7 +68,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-05-28T00:00:00Z',
-  modifiedAt: '2026-09-06T00:00:00Z',
+  modifiedAt: '2026-10-12T00:00:00Z',
   speakable: true,
 
   citation: SOURCES,
@@ -216,7 +216,7 @@ export default function FerretAdrenalDiseasePage() {
             publishedAt="2026-05-28"
             updatedAt="2026-09-06"
           />
-          <LastUpdated date="2026-10-11" />
+          <LastUpdated date="2026-10-12" />
 
           <DropCap>
             Adrenal disease is the diagnosis owners learn to expect somewhere in

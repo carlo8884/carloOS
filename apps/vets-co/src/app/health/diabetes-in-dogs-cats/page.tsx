@@ -11,7 +11,7 @@ const SOURCES = [
   { label: 'AVMA: Diabetes in Pets', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/diabetes-pets', publisher: 'AVMA' },
   { label: 'Gilor C et al. Continuous Glucose Monitoring in Cats with Diabetes. J Vet Intern Med. 2016;30(4):1207-1217.', publisher: 'JVIM' },
 ]
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Diabetes Mellitus in Dogs and Cats', description: 'Clinical signs, diagnosis, insulin management, and monitoring of diabetes in dogs and cats.', url: 'https://vets.co/health/diabetes-in-dogs-cats', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Diabetes Mellitus in Dogs and Cats', description: 'Clinical signs, diagnosis, insulin management, and monitoring of diabetes in dogs and cats.', url: 'https://vets.co/health/diabetes-in-dogs-cats', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-10-12T00:00:00Z' ,
   citation: SOURCES,
 })
 const med = buildMedicalWebPageSchema({ name: 'Diabetes Mellitus in Dogs and Cats', description: 'Signs, diagnosis, insulin therapy, and monitoring of diabetes mellitus in pets.', url: 'https://vets.co/health/diabetes-in-dogs-cats', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-01' })
@@ -55,7 +55,7 @@ export default function DiabetesPage() {
         <div className="carloOS-article">
 
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-05T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-09" />
+          <LastUpdated date="2026-10-12" />
 
           <CalloutBox variant="warning" title="Diabetic ketoacidosis is an emergency">
             A diabetic pet that stops eating, vomits, becomes lethargic, or shows rapid breathing may be developing diabetic ketoacidosis (DKA) — a life-threatening metabolic emergency. Do not wait. Seek emergency veterinary care the same day. Never give insulin to a pet that is not eating without veterinary guidance, as this risks dangerous hypoglycemia.

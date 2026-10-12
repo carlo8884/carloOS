@@ -326,7 +326,7 @@ export default function FerretDiggingBurrowingPage() {
             subtitle="Check the current listing for construction, openings, and storage"
             winner
             description={
-              <p>Marshall's Pop-N-Play tunnel product page no longer resolves. This button opens Marshall's current play-tunnel search. The dig instinct is half about excavation and half about tunnelling through tight spaces. A ferret that has a tunnel circuit available will often spend its digging energy on the tunnel rather than the carpet. The current Ele-Fun Nap & Play listing is a plush tunnel with several openings, and that page says it is machine washable. It does not print a chain, a wire frame, or flat storage. Other results in this search can differ. Check the listing.</p>
+              <p>Marshall's old Pop-N-Play tunnel page is gone. Look for Marshall's current play tunnels instead. The dig instinct is half about excavation and half about tunnelling through tight spaces. A ferret that has a tunnel circuit available will often spend its digging energy on the tunnel rather than the carpet. The current Ele-Fun Nap & Play listing is a plush tunnel with several openings, and that page says it is machine washable. It does not print a chain, a wire frame, or flat storage. Other Marshall tunnels can differ. Check the listing.</p>
             }
             specs={[
               { label: 'Construction', value: 'Check the current listing' },

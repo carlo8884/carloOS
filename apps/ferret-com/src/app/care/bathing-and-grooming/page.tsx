@@ -83,7 +83,7 @@ const FAQS = [
   {
     question: 'How do I clean ferret ears?',
     answer:
-      "Use a vet-recommended pet ear cleaner (epi-otic or similar) and a cotton ball or soft gauze — never a cotton swab pushed into the canal. Every 2-4 weeks for most ferrets; some ferrets need more frequent cleaning, some less. The reddish-brown wax is normal in ferrets. Sudden change in wax volume, color (pale yellow, green), or odor warrants a vet visit — ear mites, bacterial infection, and yeast overgrowth all occur in ferrets.",
+      "Use a pet ear cleaner your exotic-pet vet suggests (Epi-Otic is one common type) and a cotton ball or soft gauze — never a cotton swab pushed into the canal. Every 2-4 weeks for most ferrets; some ferrets need more frequent cleaning, some less. The reddish-brown wax is normal in ferrets. Sudden change in wax volume, color (pale yellow, green), or odor warrants a vet visit — ear mites, bacterial infection, and yeast overgrowth all occur in ferrets.",
   },
   {
     question: 'How often do ferret nails need trimming?',
@@ -203,7 +203,7 @@ export default function FerretBathingGroomingPage() {
             Ferrets need bathing at most every 2-3 months — frequent
             bathing makes them smell worse, not better. Use a
             ferret-specific or unscented kitten shampoo. Clean ears every
-            2-4 weeks with vet-approved ear cleaner; never push cotton
+            2-4 weeks with a pet ear cleaner your vet suggests; never push cotton
             swabs into the canal. Trim nails every 2-3 weeks. Brush
             teeth daily or every other day. Twice-a-year seasonal coat
             changes are normal; bilateral hair loss that does not regrow
@@ -356,7 +356,7 @@ export default function FerretBathingGroomingPage() {
               <strong>Ferret-formulated shampoos.</strong> Marshall, 8-in-1,
               Critter Care, and similar products are pH-balanced for
               ferret skin and contain no harmful additives. The
-              first-line default.
+              default choice.
             </li>
             <li>
               <strong>Mild unscented kitten shampoo.</strong> Acceptable
@@ -382,8 +382,8 @@ export default function FerretBathingGroomingPage() {
           </p>
           <ol>
             <li>
-              <strong>Use a vet-recommended pet ear cleaner</strong>
-              (epi-otic or similar). Do not use human ear products,
+              <strong>Use a pet ear cleaner your exotic-pet vet suggests</strong>
+              (Epi-Otic is one common type). Do not use human ear products,
               alcohol, or hydrogen peroxide.
             </li>
             <li>
@@ -557,7 +557,7 @@ export default function FerretBathingGroomingPage() {
             subtitle="Ferret-specific pH-balanced shampoo, no tea tree"
             winner
             description={
-              <p>Marshall's original ferret-shampoo product page no longer resolves. This button opens Marshall's current shampoo search. Marshall's standard ferret shampoo line — pH-balanced for ferret skin and free of the tea tree oil that the company sometimes includes in other variants. Pick the original or fragrance-free versions and avoid any version with tea tree on the ingredient list. The first-line shampoo across exotic-pet ferret practice and a sensible default for the every-2–3-month bathing schedule.</p>
+              <p>Marshall's old page for its original ferret shampoo is gone. Look for Marshall's current ferret shampoos instead. Marshall's standard ferret shampoo line — pH-balanced for ferret skin and free of the tea tree oil that the company sometimes includes in other variants. Pick the original or fragrance-free versions and avoid any version with tea tree on the ingredient list. A sensible default for the every-2–3-month bathing schedule.</p>
             }
             specs={[
               { label: 'pH', value: 'Ferret-appropriate', highlight: 'good' },
@@ -577,20 +577,24 @@ export default function FerretBathingGroomingPage() {
           <ReviewCard quietUntilTag
             id="pet-ear-cleaner"
             badge="Ear Care"
-            name="Vet-Approved Pet Ear Cleaner (Epi-Otic style)"
-            subtitle="Gentle pet ear cleaner used in exotic-pet practice"
+            name="Pet Ear Cleaner (Epi-Otic style)"
+            subtitle="Gentle pet ear cleaner for routine wiping"
             description={
-              <p>A standard veterinary ear cleaner is the right tool for routine ferret ear cleaning every 2–4 weeks. Apply to a cotton ball or gauze pad — never directly into the canal — and wipe the visible ear flap and canal entrance. Do not use human ear products, alcohol, or hydrogen peroxide. If you see dark coffee-ground debris (possible ear mites) or coloured discharge, stop and book an exotic-pet vet visit before continuing home cleaning.</p>
+              <p>A gentle pet ear cleaner is the right tool for routine ferret ear cleaning every 2–4 weeks. Apply to a cotton ball or gauze pad — never directly into the canal — and wipe the visible ear flap and canal entrance. Do not use human ear products, alcohol, or hydrogen peroxide. If you see dark coffee-ground debris (possible ear mites) or coloured discharge, stop and book an exotic-pet vet visit before continuing home cleaning.</p>
             }
             specs={[
-              { label: 'Compatibility', value: 'Pet-safe, exotic-pet practice standard', highlight: 'good' },
+              { label: 'Type', value: 'Pet ear cleaner, no alcohol or peroxide' },
               { label: 'Application', value: 'Cotton ball / gauze (NOT in-canal swab)' },
               { label: 'Frequency', value: 'Every 2–4 weeks' },
             ]}
-            pros={['Used in exotic-pet practice for ferret ear cleaning', 'Gentle on ferret canal', 'Available without prescription on most pet retailers']}
+            pros={['Made for pet ears, not human ears', 'Wiped on with a cotton ball, not pushed into the canal', 'Available without prescription on most pet retailers']}
             cons={['Not a treatment for ear mites or infection — those need a vet', 'Bottle is small relative to long-term use']}
             price="$10–20"
             priceNote="dated 2026-10-04."
+            ctaText="Search Amazon for a pet ear cleaner"
+            ctaHref="/go/amazon-brand/pet+ear+cleaner?s=care-bathing-and-grooming"
+            ctaAffiliateProgram="amazon-brand"
+            ctaAffiliateProduct="pet+ear+cleaner"
           />
           <p className="mb-4 text-sm font-semibold leading-snug">
             <a href="/care/nail-trimming" className="inline-block max-w-full whitespace-normal text-brand-primary underline underline-offset-2">
@@ -641,7 +645,7 @@ export default function FerretBathingGroomingPage() {
                 </tr>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 text-brand-text-mid">Routine ear wiping every 2–4 weeks</td>
-                  <td className="p-3 font-bold text-brand-dark"><a href="#pet-ear-cleaner" className="text-brand-primary">Pet ear cleaner</a></td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#pet-ear-cleaner" className="text-brand-primary">Pet ear cleaner</a><TableShopLink href={"/go/amazon-brand/pet+ear+cleaner?s=care-bathing-and-grooming"} product={"Pet ear cleaner"} /></td>
                   <td className="p-3 text-brand-text-mid">Ear Care. Cotton ball or gauze, not an in-canal swab. $10–20</td>
                   <td className="p-3 text-brand-text-mid">Dark coffee-ground debris or colored discharge. The card says that needs a vet, not more cleaner</td>
                 </tr>
@@ -654,7 +658,7 @@ export default function FerretBathingGroomingPage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-11" />
+          <ComparisonFoot updated="2026-10-12" />
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />

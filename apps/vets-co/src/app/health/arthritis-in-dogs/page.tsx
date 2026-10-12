@@ -11,7 +11,7 @@ const SOURCES = [
   { label: 'Anderson KL et al. Estimated annual prevalence of appendicular osteoarthritis in UK primary-care dogs. Scientific Reports. 2018.', url: 'https://www.nature.com/articles/s41598-018-23940-z', publisher: 'Scientific Reports' },
   { label: 'Kealy RD et al. Evaluation of the effect of limited food consumption on radiographic evidence of osteoarthritis in dogs. JAVMA. 2000;217:1678-1680.', url: 'https://doi.org/10.2460/javma.2000.217.1678', publisher: 'JAVMA' },
 ]
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Arthritis in Dogs', description: 'Recognizing and managing osteoarthritis and joint pain in dogs.', url: 'https://vets.co/health/arthritis-in-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-09-04T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Arthritis in Dogs', description: 'Recognizing and managing osteoarthritis and joint pain in dogs.', url: 'https://vets.co/health/arthritis-in-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-10-12T00:00:00Z' ,
   citation: SOURCES,
 })
 const med = buildMedicalWebPageSchema({ name: 'Arthritis in Dogs', description: 'Signs, diagnosis, and multimodal management of canine osteoarthritis.', url: 'https://vets.co/health/arthritis-in-dogs', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-01' })
@@ -51,7 +51,7 @@ export default function ArthritisDogsPage() {
       >
         <div className="carloOS-article">
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-09-04T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-09" />
+          <LastUpdated date="2026-10-12" />
 
           <CalloutBox variant="info" title="Arthritis is treatable, not just inevitable">
             Many owners assume a stiff older dog is simply "slowing down" and that nothing can be done. In reality, osteoarthritis pain responds well to a structured plan. Dogs that seem to have lost their spark often become noticeably more active and engaged once their joint pain is properly managed.

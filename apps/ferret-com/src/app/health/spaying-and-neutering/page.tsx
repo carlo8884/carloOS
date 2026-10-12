@@ -45,7 +45,7 @@ import {
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
-  title: 'Spaying & Neutering Ferrets — Why Females Must Be Spayed | Ferret.com',
+  title: 'Spaying & Neutering Ferrets — Why Jills Must Be Spayed | Ferret.com',
   description:
     'Intact female ferrets risk fatal estrogen toxicity if not bred or spayed. The biology behind it, the early-spay-neuter debate, and descenting.',
   path: '/health/spaying-and-neutering',
@@ -61,7 +61,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-10-12T00:00:00Z',
 
   citation: SOURCES,
 })
@@ -166,7 +166,7 @@ export default function FerretSpayNeuterPage() {
             publishedAt="2026-06-01"
             updatedAt="2026-06-01"
           />
-          <LastUpdated date="2026-10-09" />
+          <LastUpdated date="2026-10-12" />
 
           <DropCap>
             In most companion species, spaying is about preventing unwanted

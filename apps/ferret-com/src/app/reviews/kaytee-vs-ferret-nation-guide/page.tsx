@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, ShopCtas, buildArticleSchema, buildMetadata, ArticleSourcesList, LastUpdated, ComparisonFoot } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, ShopCtas, buildArticleSchema, buildMetadata, ArticleSourcesList, LastUpdated, ComparisonFoot, TableShopLink } from '@carloOS/ui'
 import { HopDisclosure } from '../../../components/HopDisclosure'
 
 export const metadata: Metadata = buildMetadata({
@@ -19,7 +19,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-10-04T00:00:00Z',
-  modifiedAt: '2026-10-04T00:00:00Z',
+  modifiedAt: '2026-10-12T00:00:00Z',
 })
 
 const FAQS = [
@@ -75,7 +75,7 @@ export default function KayteeVsFerretNationGuidePage() {
       }
     >
       <div className="carloOS-article">
-          <LastUpdated date="2026-10-10" />
+          <LastUpdated date="2026-10-12" />
         <EmailCapture
           variant="inline"
           siteId="ferret-com"
@@ -109,9 +109,9 @@ export default function KayteeVsFerretNationGuidePage() {
           amazonLabel="Check price of the Ferret Nation double unit on Amazon"
         />
         <p>The Ferret Nation double is the group cage because the <a href="https://www.midwesthomes4pets.com/product/small-animal/habitats-cages/ferret-nation/">manufacturer page</a> says the full-width double doors open for cleaning and feeding (fetched 2026-10-08).</p>
-        <div className="my-6 max-w-full min-w-0">
+        <div id="cage-table" className="my-6 max-w-full min-w-0">
           <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
-            <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+            <caption className="text-left font-semibold text-brand-dark p-3">At a glance</caption>
             <thead>
               <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
                 <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
@@ -145,10 +145,15 @@ export default function KayteeVsFerretNationGuidePage() {
                 <td className="p-3">Entry</td>
                 <td className="p-3">Premium</td>
               </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Shop</th>
+                <td className="p-3"><TableShopLink href="/go/amazon/B008FONT2Y?s=reviews-kaytee-vs-ferret-nation-guide" product="Kaytee Multi-Level Ferret Home" label="Check price of the Kaytee Multi-Level Ferret Home on Amazon" /></td>
+                <td className="p-3"><TableShopLink href="/go/amazon/B0054U8UGW?s=reviews-kaytee-vs-ferret-nation-guide" product="Ferret Nation double unit" label="Check price of the Ferret Nation double unit on Amazon" /></td>
+              </tr>
             </tbody>
           </table>
         </div>
-        <ComparisonFoot updated="2026-10-10" />
+        <ComparisonFoot updated="2026-10-12" />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
                 <ArticleSourcesList title="Sources"

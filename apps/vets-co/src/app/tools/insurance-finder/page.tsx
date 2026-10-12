@@ -21,7 +21,7 @@ const REVIEWS_HREF = '/reviews/best-pet-insurance'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'vets-co',
-  title: 'Pet Insurance Coverage Finder — Compare Options That May Fit',
+  title: 'Pet Insurance Coverage Finder — Compare Plan Options',
   description:
     'Filter pet insurance carriers by coverage priorities (exam fees, dental, wellness, unlimited limits) and compare published options. No quotes, scores, ranking.',
   path: '/tools/insurance-finder',

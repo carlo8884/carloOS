@@ -294,7 +294,7 @@ export default function WholePreyVsKibblePage() {
             },
             {
               question: 'Which option does this page pick for whole prey as the diet or as a supplement?',
-              answer: 'Frozen feeder mice and chicks are the whole-prey pick. The card says the price varies by size and quantity, intact bone covers calcium balance, and a freezer is required. The button goes to Amazon. Skip it with no freezer, or if you will not handle raw prey carefully. The card flags food safety and sourcing.',
+              answer: 'Frozen feeder mice and chicks are the whole-prey pick. The card says the price varies by size and quantity, intact bone covers calcium balance, and a freezer is required. The button opens an Amazon search. Skip it with no freezer, or if you will not handle raw prey carefully. The card flags food safety and sourcing.',
             },
             {
               question: 'What does this page say premium low-carb kibble costs?',

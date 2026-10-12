@@ -1,7 +1,7 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildFAQSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, buildFAQSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript, CrossPortfolioCard, FAQAccordion, ShopCtas } from '@carloOS/ui'
 import { FERRET_FOODS, FERRET_FOOD_CATEGORIES, VERDICT_META } from '../../../data/foods'
 
 export const metadata: Metadata = buildMetadata({
@@ -134,6 +134,13 @@ export default function CanFerretsEatHubPage() {
           </div>
         </div>
       </div>
+
+      <section className="px-container-sm sm:px-container pb-12" data-faq="visible">
+        <div className="max-w-content-wide">
+          <h2 className="font-display font-bold text-brand-dark text-xl mb-4">Frequently asked questions</h2>
+          <FAQAccordion items={FAQS} includeSchema={false} />
+        </div>
+      </section>
 
       <section className="px-container-sm sm:px-container py-12" style={{ background: 'var(--brand-primary-pale)' }}>
         <div className="max-w-content-wide">

@@ -5,7 +5,7 @@ import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'How Much Does Pet Insurance Cost? | Vets.co', description: 'Dog policies typically run $30–$70/month and cats $15–$40, but price swings with species, breed, age, location, and the deductible and limit you pick.', path: '/insurance/questions/how-much-does-pet-insurance-cost', type: 'article' })
 
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'How Much Does Pet Insurance Cost?', description: 'Typical pet insurance price ranges and the deductible, reimbursement, and limit levers that move your premium.', url: 'https://vets.co/insurance/questions/how-much-does-pet-insurance-cost', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-11T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z', speakable: true })
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'How Much Does Pet Insurance Cost?', description: 'Typical pet insurance price ranges and the deductible, reimbursement, and limit levers that move your premium.', url: 'https://vets.co/insurance/questions/how-much-does-pet-insurance-cost', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-11T00:00:00Z', modifiedAt: '2026-10-12T00:00:00Z', speakable: true })
 
 const FAQS = [
   { question: 'Why is my quote higher than the average?', answer: 'Averages hide wide variation. Your quote rises with several factors at once: large breeds and brachycephalic or high-cancer-risk breeds cost more to insure, older pets cost more than puppies and kittens, and high-cost-of-veterinary-care regions push premiums up. The plan design matters too — a low deductible, a high reimbursement percentage, and an unlimited annual limit all raise the premium. A higher-than-average quote usually reflects one or more of these, not an error.' },
@@ -39,7 +39,7 @@ export default function Page() {
       >
         <div className="carloOS-article">
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-11T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-10" />
+          <LastUpdated date="2026-10-12" />
 
           <CalloutBox variant="info" title="The short answer">
             Most dog accident-and-illness policies run roughly <strong>$30–$70 per month</strong> and cats roughly <strong>$15–$40 per month</strong> (2026 ranges drawn from industry averages), but your specific price swings with species, breed, age, location, and the deductible, reimbursement percentage, and annual limit you select. Treat any single &ldquo;average&rdquo; as a starting point, not a quote.
@@ -58,7 +58,7 @@ export default function Page() {
           <p>To see how these dials interact on a real bill, the <a href="/insurance/deductibles-reimbursement">deductibles and reimbursement guide</a> walks through worked examples, and the <a href="/tools/insurance-reimbursement-estimator">reimbursement estimator</a> shows net out-of-pocket on representative scenarios.</p>
           <div className="my-6 max-w-full min-w-0">
             <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
-              <caption className="text-left font-semibold text-brand-dark p-3">The three dials, from the sentences on this page</caption>
+              <caption className="text-left font-semibold text-brand-dark p-3">The three dials at a glance</caption>
               <thead>
                 <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
                   <th scope="col" className="p-3 font-bold text-brand-dark">Dial</th>
@@ -85,7 +85,7 @@ export default function Page() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-10" />
+          <ComparisonFoot updated="2026-10-12" />
           <h2>Who should turn which dial</h2>
           <p>Raise the deductible when you can absorb more of each claim. Pay for a higher reimbursement when you want more of the eligible bill back. Choose the unlimited limit when a five-thousand-dollar cap is too low for the care you expect. Tune the three together to a monthly figure you can sustain.</p>
 

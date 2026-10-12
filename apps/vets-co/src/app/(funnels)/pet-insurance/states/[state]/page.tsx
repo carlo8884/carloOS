@@ -7,7 +7,6 @@ import {
   buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
-  AffiliateDisclosure,
 } from '@carloOS/ui'
 import { breedsForSpecies } from '../../../../../data/insurance-breeds-all'
 import { States } from '../../../../../data/states'
@@ -91,7 +90,6 @@ export default async function StateInsuranceHub({ params }: PageParams) {
         {s.name} owners.
       </p>
 
-      <AffiliateDisclosure variant="inline" siteId="vets-co" />
 
       {/* ─── Market context ───────────────────────────────────────────────── */}
       <section className="mt-10">

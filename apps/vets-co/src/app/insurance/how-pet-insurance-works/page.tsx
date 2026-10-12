@@ -9,7 +9,7 @@ import { ArticleByline, CalloutBox } from '@carloOS/ui'
 export const dynamic = 'force-dynamic'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "How Pet Insurance Works — A Plain-English Guide | Vets.co", description: "Pet insurance reimburses you for covered vet bills after a deductible. Learn how premiums, deductibles, reimbursement rates, and annual limits fit together.", path: '/insurance/how-pet-insurance-works', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'How Pet Insurance Works', description: 'A plain-English explanation of premiums, deductibles, reimbursement, and limits in pet insurance.', url: 'https://vets.co/insurance/how-pet-insurance-works', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-09-06T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'How Pet Insurance Works', description: 'A plain-English explanation of premiums, deductibles, reimbursement, and limits in pet insurance.', url: 'https://vets.co/insurance/how-pet-insurance-works', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-10-12T00:00:00Z' })
 const FAQS = [
   { question: "Do I pay the vet directly or does insurance pay them?", answer: "With most pet insurers, you pay the veterinary clinic in full at the time of the visit, then submit a claim and the insurer reimburses you afterward — typically within days to a couple of weeks. This reimbursement model is different from most human health insurance. A few insurers offer direct payment to participating veterinarians, which can ease the cash-flow burden of a large bill, but the standard model is pay-then-claim. Budgeting for that upfront cost is part of using pet insurance effectively." },
   { question: "What is a reimbursement rate?", answer: "After you meet your deductible, the insurer pays a set percentage of the remaining covered costs — commonly 70%, 80%, or 90% — and you cover the rest. This percentage is the reimbursement rate. A higher reimbursement rate means lower out-of-pocket costs per claim but a higher monthly premium. Choosing a reimbursement rate is a trade-off between predictable monthly cost and exposure during an expensive claim." },
@@ -41,7 +41,7 @@ export default function HowPetInsuranceWorksPage() {
         <div className="carloOS-article">
 
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-09-06T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-11" />
+          <LastUpdated date="2026-10-12" />
 
           <CalloutBox variant="info" title="It protects against the big bills">
             Pet insurance is best thought of as protection against unexpected, large veterinary expenses — a torn ligament, a swallowed object, cancer, a chronic illness — not as a way to save money on routine care. The math works because it converts an unpredictable catastrophic risk into a predictable monthly cost.
@@ -227,7 +227,7 @@ export default function HowPetInsuranceWorksPage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-11" />
+          <ComparisonFoot updated="2026-10-12" />
 
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />

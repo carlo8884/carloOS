@@ -2,18 +2,24 @@ import type { Metadata } from 'next'
 import { HopDisclosure } from '../../components/HopDisclosure'
 import Link from 'next/link'
 import { ArticleSourcesList, TableShopLink, RelatedReads, ComparisonFoot, EmailCapture, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, Breadcrumb, FAQAccordion, ShopCtas, PriceAsOf } from '@carloOS/ui'
-import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildArticleSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { HubMasthead } from '../../components/HubMasthead'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Best Pet Telehealth 2026 — Vetster, AskVet | Vets.co', description: 'Pet telehealth notes for Vetster, AskVet, and Chewy Connect. This page does not publish a scored ranking or a measured wait time.', path: '/telehealth', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Best Pet Telehealth 2026', description: 'Vetster, AskVet, and Chewy Connect listed by service type. This page does not publish a scored ranking or a measured wait time.', url: 'https://vets.co/telehealth', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-11T00:00:00Z' })
 
-// Per-service Product schemas — editorial Review ratings mirror the on-page
-// ReviewCard scores (no AggregateRating; see buildProductSchema contract).
-const vetsterSchema = buildProductSchema({ name: 'Vetster', description: 'Single visits start at $102. Plus is $12/month, billed annually.', url: 'https://vets.co/go/vetster/telehealth?s=telehealth', imageUrl: '', priceRange: '102' })
-const askVetSchema = buildProductSchema({ name: 'AskVet', description: 'The current askvet.app pages do not print a visit type. The current page does not print a flat monthly chat price.', url: 'https://vets.co/go/askvet/telehealth?s=telehealth', imageUrl: '', })
-const chewyConnectSchema = buildProductSchema({ name: 'Chewy Connect with a Vet', description: 'Free veterinary-technician chat with a Chewy account, plus a separate licensed-vet video visit that Chewy prices at $49.99 and does not offer in every state.', url: 'https://vets.co/go/chewy/connect?s=telehealth', imageUrl: '' })
-const combinedSchema = combineSchemas(schema, vetsterSchema, askVetSchema, chewyConnectSchema)
+// Services in the order shown. ItemList only: no Product, Review or Offer markup (no on-page score).
+const serviceList = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Pet telehealth services compared',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Vetster', url: 'https://vets.co/telehealth#vetster' },
+    { '@type': 'ListItem', position: 2, name: 'AskVet', url: 'https://vets.co/telehealth#askvet' },
+    { '@type': 'ListItem', position: 3, name: 'Chewy Connect with a Vet', url: 'https://vets.co/telehealth#chewy' },
+  ],
+}
+const combinedSchema = combineSchemas(schema, serviceList)
 
 const FAQS = [
   { question: 'Can a telehealth vet prescribe medication for my pet?', answer: 'It depends on your state. Most states require a veterinarian-client-patient relationship (VCPR) before a vet can prescribe, and many states only allow a VCPR to be established through an in-person exam. A minority of states permit establishing a VCPR remotely. Vetster\'s help article, updated 2025-12-18, says it verifies an active license in the veterinarian\'s jurisdiction before they go live. It does not say the veterinarian is licensed where the owner is, or that a prescription is therefore valid. Chat-only services are generally more limited. For refills of existing prescriptions, your regular clinic is usually the faster route.' },
@@ -162,26 +168,26 @@ export default function TelehealthPage() {
                   <tbody>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">Video, a specialist, or a prescription where state rules allow</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#vetster" className="text-brand-primary">Vetster</a><TableShopLink href={"/go/vetster/telehealth?s=telehealth"} product={"Vetster"} /></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#vetster" className="inline-flex min-h-6 items-center text-brand-primary">Vetster</a><TableShopLink href={"/go/vetster/telehealth?s=telehealth"} product={"Vetster"} /></td>
                       <td className="p-3 text-brand-text-mid">Video and chat. Single visits start at $102. Plus is $12/month, billed annually.</td>
                       <td className="p-3 text-brand-text-mid">Higher per visit than a subscription. Waits can stretch at peak hours</td>
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">Frequent chat questions, not a video exam</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#askvet" className="text-brand-primary">AskVet</a><TableShopLink href={"/go/askvet/telehealth?s=telehealth"} product={"AskVet"} /></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#askvet" className="inline-flex min-h-6 items-center text-brand-primary">AskVet</a><TableShopLink href={"/go/askvet/telehealth?s=telehealth"} product={"AskVet"} /></td>
                       <td className="p-3 text-brand-text-mid">Best subscription. See the carrier&apos;s current terms. This page does not publish a wait time</td>
                       <td className="p-3 text-brand-text-mid">The telehealth card marks chat only. askvet.app does not print a visit type. General practice. Prescriptions are limited</td>
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">You want Chewy&apos;s free technician chat or a vet video visit</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#chewy" className="text-brand-primary">Chewy Connect</a><TableShopLink href={"/go/chewy/connect?s=telehealth"} product={"Chewy Connect"} /></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#chewy" className="inline-flex min-h-6 items-center text-brand-primary">Chewy Connect</a><TableShopLink href={"/go/chewy/connect?s=telehealth"} product={"Chewy Connect"} /></td>
                       <td className="p-3 text-brand-text-mid">Free technician chat. Vet video is $49.99, dated 2026-10-07, and not in every state</td>
                       <td className="p-3 text-brand-text-mid">You need a specialist, or you are outside the states where Chewy offers the vet visit</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-11" />
+              <ComparisonFoot updated="2026-10-12" />
             </div>
             <h2 className="font-display text-2xl font-bold text-brand-dark mt-12 mb-6">Frequently Asked Questions</h2>
             <p>Those figures are typical US ranges dated 2026-10-05.</p>
@@ -197,9 +203,9 @@ export default function TelehealthPage() {
             <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">When to Go to Emergency Instead</div>
               <p className="text-xs text-brand-text-mid leading-relaxed">Pale/blue gums, breathing difficulty, collapse, suspected poisoning, severe injury, inability to urinate (cats), or any rapidly worsening condition requires in-person emergency care immediately.</p>
-              <Link href="/tools/er-vs-clinic" className="block mt-3 text-xs font-bold text-brand-primary no-underline hover:underline">ER vs clinic vs telehealth →</Link>
-              <Link href="/find-a-vet" className="block mt-2 text-xs font-bold text-brand-primary no-underline hover:underline">Find an emergency vet →</Link>
-              <Link href="/directory" className="block mt-2 text-xs font-bold text-brand-primary no-underline hover:underline">License-board directory →</Link>
+              <Link href="/tools/er-vs-clinic" className="block min-h-6 mt-3 text-xs font-bold text-brand-primary no-underline hover:underline">ER vs clinic vs telehealth →</Link>
+              <Link href="/find-a-vet" className="block min-h-6 mt-2 text-xs font-bold text-brand-primary no-underline hover:underline">Find an emergency vet →</Link>
+              <Link href="/directory" className="block min-h-6 mt-2 text-xs font-bold text-brand-primary no-underline hover:underline">License-board directory →</Link>
             </div>
           </aside>
         </div>

@@ -5,7 +5,7 @@ import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Does Pet Insurance Cover Vaccines? | Vets.co', description: 'Standard accident-and-illness pet insurance does not cover vaccines. Only an optional wellness plan reimburses routine care — here is how that math works.', path: '/insurance/questions/does-pet-insurance-cover-vaccines', type: 'article' })
 
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Does Pet Insurance Cover Vaccines?', description: 'Why accident-and-illness pet insurance excludes vaccines, and when an optional wellness plan is worth adding.', url: 'https://vets.co/insurance/questions/does-pet-insurance-cover-vaccines', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-11T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z', speakable: true })
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Does Pet Insurance Cover Vaccines?', description: 'Why accident-and-illness pet insurance excludes vaccines, and when an optional wellness plan is worth adding.', url: 'https://vets.co/insurance/questions/does-pet-insurance-cover-vaccines', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-11T00:00:00Z', modifiedAt: '2026-10-12T00:00:00Z', speakable: true })
 
 const FAQS = [
   { question: 'Does any pet insurance cover vaccines?', answer: 'Not through the core accident-and-illness policy. Vaccines are covered only when you add an optional wellness or routine-care plan — sometimes called a preventive rider — which reimburses a fixed annual allowance toward vaccines, exams, and other predictable care for an extra monthly cost. The base policy is designed to pay for the unexpected, not the scheduled.' },
@@ -38,7 +38,7 @@ export default function Page() {
       >
         <div className="carloOS-article">
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-11T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-10" />
+          <LastUpdated date="2026-10-12" />
 
           <CalloutBox variant="info" title="The short answer">
             Standard accident-and-illness pet insurance does <strong>not</strong> cover vaccines or other routine, preventive care. Vaccines are reimbursed only if you add an optional wellness or routine-care plan for an extra monthly cost. The core policy pays for unexpected illness and injury — not predictable annual care.
@@ -64,7 +64,7 @@ export default function Page() {
           <p>If your goal is protection against a large, unexpected vet bill, the core accident-and-illness policy is the product to focus on, and vaccines are simply outside its scope. If your goal is to spread predictable annual care into level payments, a wellness add-on can do that — but only add it after checking that the math and the per-category caps make sense for your pet. The two products solve different problems, and conflating them is the most common reason owners feel let down at claim time.</p>
           <div className="my-6 max-w-full min-w-0">
             <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
-              <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+              <caption className="text-left font-semibold text-brand-dark p-3">At a glance</caption>
               <thead>
                 <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
                   <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
@@ -91,7 +91,7 @@ export default function Page() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-10" />
+          <ComparisonFoot updated="2026-10-12" />
           <h2>Who should buy which layer</h2>
           <p>Buy the core policy when the goal is a large unexpected bill. Add wellness only after the per-category caps and the premium match what you already spend on routine care. Vaccines stay off the core policy either way.</p>
 

@@ -2,6 +2,10 @@ import { MetadataRoute } from 'next'
 import { PET_MEDS } from '../data/pet-meds'
 import { ALL_INSURANCE_BREEDS } from '../data/insurance-breeds-all'
 import { States } from '../data/states'
+import { Symptoms } from '../data/symptoms'
+import { Diagnostics } from '../data/diagnostics'
+import { Specialties } from '../data/specialties'
+import { Medications } from '../data/medications'
 import { directorySitemapEntries, directorySitemapIds } from '@carloOS/config/directory'
 import directoryListings from '../data/directory-listings.json'
 
@@ -45,7 +49,17 @@ export default function sitemap(props?: { id?: number | string }): MetadataRoute
     priority: 0.70,
   }))
 
+  // Indexable dynamic detail pages, from the same lists their generateStaticParams use.
+  const detailRoutes: MetadataRoute.Sitemap = [
+    ...Symptoms.map((x) => `https://vets.co/symptoms/${x.slug}`),
+    ...Diagnostics.map((x) => `https://vets.co/diagnostics/${x.slug}`),
+    ...Specialties.map((x) => `https://vets.co/specialists/${x.slug}`),
+    ...Medications.map((x) => `https://vets.co/medications/${x.slug}`),
+    ...States.map((x) => `https://vets.co/find-a-vet/${x.slug}`),
+  ].map((url) => ({ url, lastModified: now, changeFrequency: 'monthly' as const, priority: 0.70 }))
+
   return [
+    ...detailRoutes,
     ...canIGiveRoutes,
     ...breedHubs,
     ...stateHubs,
@@ -76,6 +90,7 @@ export default function sitemap(props?: { id?: number | string }): MetadataRoute
     { url: 'https://vets.co/guides/emergency-vet-costs', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://vets.co/guides/er-vs-urgent-care', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://vets.co/guides/how-to-afford-vet-care', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
+    { url: 'https://vets.co/guides/pet-first-aid-kit', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://vets.co/guides/questions-to-ask-your-vet', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://vets.co/guides/what-to-expect-at-the-vet', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://vets.co/guides/when-to-go-to-the-vet', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },

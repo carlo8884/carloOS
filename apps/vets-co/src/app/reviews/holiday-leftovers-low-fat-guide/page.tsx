@@ -19,7 +19,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Vets.co Editorial',
   publishedAt: '2026-10-04T00:00:00Z',
-  modifiedAt: '2026-10-04T00:00:00Z',
+  modifiedAt: '2026-10-12T00:00:00Z',
 })
 
 const FAQS = [
@@ -80,7 +80,7 @@ export default function HolidayLeftoversLowFatGuidePage() {
       }
     >
       <div className="carloOS-article">
-          <LastUpdated date="2026-10-10" />
+          <LastUpdated date="2026-10-12" />
         <p>The <Link href="/health/pancreatitis-in-dogs">pancreatitis page</Link> names a high-fat meal as the most recognized trigger, and then says many cases have no single cause. For a dog that has already had pancreatitis, prevention on that page is a consistent low-fat diet, no fatty table scraps, no rich treats, and a lean body weight. The holiday sentence is specific: owners should be especially careful around holidays, when fatty leftovers cause a predictable surge in cases.</p>
         <h2>When the low-fat food applies</h2>
         <p>The same page says household recovery-diet tools sit beside that advice only after a veterinarian has confirmed the dog is ready for a home low-fat plan. The low-fat digestive-care food is described as the same class of consistent recovery diet the page already names. It is not a leftover buffet and not a one-off bland meal. Lean low-fat treats are the substitute so bacon grease, holiday skin, and rich chews stay off the plate. A portion scale is the third tool on that page, and it stays there. None of them treats an acute episode. The page is explicit that these are not Hill&apos;s i/d Low Fat, Royal Canin Gastrointestinal Low Fat, or Purina EN prescription products.</p>
@@ -88,7 +88,7 @@ export default function HolidayLeftoversLowFatGuidePage() {
         <p>Typical signs on that page are vomiting, loss of appetite, abdominal pain, lethargy, and sometimes diarrhea or fever. A painful dog may hunch or take a praying posture. Mild cases can look like a simple upset. Severe cases are a very sick, dehydrated dog. The page says the signs overlap with other diseases, so a veterinarian has to confirm the diagnosis. If vomiting, belly pain, or refusal to eat returns, the instruction is to go in, not to reorder food.</p>
         <div className="my-6 max-w-full min-w-0">
           <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
-            <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+            <caption className="text-left font-semibold text-brand-dark p-3">At a glance</caption>
             <thead>
               <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
                 <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
@@ -115,7 +115,7 @@ export default function HolidayLeftoversLowFatGuidePage() {
             </tbody>
           </table>
         </div>
-        <ComparisonFoot updated="2026-10-10" />
+        <ComparisonFoot updated="2026-10-12" />
         <h2>Who should buy the low-fat food</h2>
         <p>Buy it only after a veterinarian has confirmed the dog is ready for a home low-fat plan. These household foods are not Hill&apos;s i/d Low Fat, Royal Canin Gastrointestinal Low Fat, or Purina EN. If vomiting, belly pain, or refusal to eat returns, go in.</p>
         <HopDisclosure siteId="vets-co" href="/go/amazon-brand/low+fat+digestive+care+dog+food?s=reviews-holiday-leftovers-low-fat-guide" />

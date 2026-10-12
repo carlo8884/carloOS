@@ -5,7 +5,7 @@ import { buildArticleSchema, buildFAQSchema, buildMedicalWebPageSchema, combineS
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
-  title: 'Ferret Protein & Fat Requirements — Macronutrient Targets | Ferret.com',
+  title: 'Ferret Protein & Fat Needs — Macronutrient Targets | Ferret.com',
   description:
     'Ferret protein, fat, and carbohydrate targets. The carbohydrate section cites Merck; under 3% carbohydrate is a planning figure.',
   path: '/diet/protein-and-fat-requirements',

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildFAQSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, buildFAQSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript, CrossPortfolioCard, FAQAccordion } from '@carloOS/ui'
 import { PET_MEDS, PET_MED_CATEGORIES, MED_VERDICT_META } from '../../../data/pet-meds'
 
 export const metadata: Metadata = buildMetadata({
@@ -116,6 +116,13 @@ export default function CanIGiveMyDogHubPage() {
           </p>
         </div>
       </div>
+
+      <section className="px-container-sm sm:px-container pb-12" data-faq="visible">
+        <div className="max-w-content-wide">
+          <h2 className="font-display font-bold text-brand-dark text-xl mb-4">Frequently asked questions</h2>
+          <FAQAccordion items={FAQS} includeSchema={false} />
+        </div>
+      </section>
 
       <section className="px-container-sm sm:px-container py-12" style={{ background: 'var(--brand-primary-pale)' }}>
         <div className="max-w-content-wide">

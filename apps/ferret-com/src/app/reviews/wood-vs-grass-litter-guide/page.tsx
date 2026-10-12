@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, ShopCtas, buildArticleSchema, buildMetadata, LastUpdated, ComparisonFoot } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, ShopCtas, buildArticleSchema, buildMetadata, LastUpdated, ComparisonFoot, TableShopLink } from '@carloOS/ui'
 import { HopDisclosure } from '../../../components/HopDisclosure'
 
 export const metadata: Metadata = buildMetadata({
@@ -19,7 +19,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-10-04T00:00:00Z',
-  modifiedAt: '2026-10-04T00:00:00Z',
+  modifiedAt: '2026-10-12T00:00:00Z',
 })
 
 const FAQS = [
@@ -70,7 +70,7 @@ export default function WoodVsGrassLitterGuidePage() {
       }
     >
       <div className="carloOS-article">
-          <LastUpdated date="2026-10-10" />
+          <LastUpdated date="2026-10-12" />
         <EmailCapture
           variant="inline"
           siteId="ferret-com"
@@ -102,9 +102,15 @@ export default function WoodVsGrassLitterGuidePage() {
           amazonHref="/go/amazon-brand/heat+treated+wood+pellet+litter?s=reviews-wood-vs-grass-litter-guide"
           amazonLabel="Search Amazon for heat-treated wood pellet litter"
         />
-        <div className="my-6 max-w-full min-w-0">
+        <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/grass+pellet+litter+small+animal?s=reviews-wood-vs-grass-litter-guide" />
+        <p>For the grass pick, the link below is an Amazon search, not one product. Buy it when the ferret dislikes wood or paper underfoot.</p>
+        <ShopCtas
+          amazonHref="/go/amazon-brand/grass+pellet+litter+small+animal?s=reviews-wood-vs-grass-litter-guide"
+          amazonLabel="Search Amazon for grass pellet litter"
+        />
+        <div id="litter-table" className="my-6 max-w-full min-w-0">
           <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
-            <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+            <caption className="text-left font-semibold text-brand-dark p-3">At a glance</caption>
             <thead>
               <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
                 <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
@@ -143,10 +149,15 @@ export default function WoodVsGrassLitterGuidePage() {
                 <td className="p-3">Lowest of the three litters</td>
                 <td className="p-3">Mid</td>
               </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Shop</th>
+                <td className="p-3"><TableShopLink href="/go/amazon-brand/heat+treated+wood+pellet+litter?s=reviews-wood-vs-grass-litter-guide" product="Heat-treated wood pellet litter" label="Search Amazon for heat-treated wood pellet litter" /></td>
+                <td className="p-3"><TableShopLink href="/go/amazon-brand/grass+pellet+litter+small+animal?s=reviews-wood-vs-grass-litter-guide" product="Grass pellet litter" label="Search Amazon for grass pellet litter" /></td>
+              </tr>
             </tbody>
           </table>
         </div>
-        <ComparisonFoot updated="2026-10-10" />
+        <ComparisonFoot updated="2026-10-12" />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
       </div>

@@ -5,7 +5,7 @@ import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'How Does the Pet Insurance Claims Process Work? | Vets.co', description: 'Pet insurance is almost always reimbursement-based: you pay the vet, submit the invoice, and the insurer pays back your share after the deductible.', path: '/insurance/questions/how-does-the-claims-process-work', type: 'article' })
 
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'How Does the Pet Insurance Claims Process Work?', description: 'The reimbursement-based pet insurance claim process step by step, plus deductible mechanics and what speeds payouts.', url: 'https://vets.co/insurance/questions/how-does-the-claims-process-work', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-11T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z', speakable: true })
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'How Does the Pet Insurance Claims Process Work?', description: 'The reimbursement-based pet insurance claim process step by step, plus deductible mechanics and what speeds payouts.', url: 'https://vets.co/insurance/questions/how-does-the-claims-process-work', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-11T00:00:00Z', modifiedAt: '2026-10-12T00:00:00Z', speakable: true })
 
 const FAQS = [
   { question: 'Do I have to pay the vet upfront?', answer: 'In most cases, yes. Pet insurance is overwhelmingly reimbursement-based: you settle the bill with your veterinarian in full, then submit the itemized invoice to the insurer, which pays you back your reimbursement percentage of the eligible amount after your deductible is met. A few insurers, with select vets, support direct payment so you only owe your share at checkout — but this is the exception, not the norm, so plan to cover the full bill first.' },
@@ -37,7 +37,7 @@ export default function Page() {
       >
         <div className="carloOS-article">
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-11T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-10" />
+          <LastUpdated date="2026-10-12" />
 
           <CalloutBox variant="info" title="The short answer">
             Pet insurance is almost always <strong>reimbursement-based</strong>: you pay the veterinarian in full, then submit the itemized invoice (and sometimes records) to the insurer, which pays you back your reimbursement percentage of the eligible amount after your deductible is met. Processing usually takes a few days to a few weeks; some insurers offer faster app-based claims or, with select vets, direct pay.
@@ -54,7 +54,7 @@ export default function Page() {
           <p>How your deductible is structured changes your real out-of-pocket, especially in a year with multiple claims. An <strong>annual deductible</strong> is met once per policy year and then resets at renewal — after you have paid it across all eligible claims, the rest of the year is reimbursed subject to your percentage and limit. A <strong>per-incident deductible</strong> applies separately to each new condition, so two unrelated problems each carry their own deductible. Annual deductibles are generally easier to predict; confirm which your policy uses before you assume how a multi-claim year will play out.</p>
           <div className="my-6 max-w-full min-w-0">
             <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
-              <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+              <caption className="text-left font-semibold text-brand-dark p-3">At a glance</caption>
               <thead>
                 <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
                   <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
@@ -76,7 +76,7 @@ export default function Page() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-10" />
+          <ComparisonFoot updated="2026-10-12" />
           <h2>Who should check which deductible</h2>
           <p>Confirm which structure the policy uses before you assume a year with several claims. An annual deductible is the simpler one to predict. A per-incident deductible repeats for each new condition.</p>
 
