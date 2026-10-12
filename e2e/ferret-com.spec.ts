@@ -1,4 +1,5 @@
 import { expect, test } from '@playwright/test'
+import { expectAAContrast } from './contrast'
 import { expectMoneyCopy, reviewRoutes } from './money-copy'
 import { expectHop } from './hop'
 import { AMAZON_TAG } from './tags'
@@ -431,4 +432,9 @@ test('ferret fix T12: every Amazon hop on the main money pages redirects to amaz
       await expectHop(page.request, hop, ['https://amazon.com/', `tag=${AMAZON_TAG}`])
     }
   }
+})
+
+test('ferret fix L3: food evaluator verdict meets WCAG AA contrast', async ({ page }) => {
+  await page.goto('/', { waitUntil: 'networkidle' })
+  await expectAAContrast(page, '[class*="bg-emerald-50"] p, [class*="bg-amber-50"] p, [class*="bg-red-50"] p')
 })

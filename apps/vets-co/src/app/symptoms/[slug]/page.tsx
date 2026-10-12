@@ -66,7 +66,7 @@ const TIER_STYLE: Record<UrgencyTier, TierStyle> = {
     bg: 'bg-[#FFF8EC]',
     border: 'border-[#C8952A]/40',
     text: 'text-[#7A5A18]',
-    badgeBg: 'bg-[#C8952A]',
+    badgeBg: 'bg-[#946A1A]',
     badgeText: 'text-white',
     cta: 'Call your primary vet today. Urgent-care or telehealth is reasonable if they cannot fit you in.',
   },

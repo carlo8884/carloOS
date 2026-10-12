@@ -78,9 +78,9 @@ export function InsuranceReimbursementEstimator() {
   const benefit = result?.netBenefit ?? 0
   const benefitTone =
     benefit > 0
-      ? 'border-emerald-700/40 bg-emerald-950/30 text-emerald-200'
+      ? 'border-emerald-700/40 bg-emerald-50 text-emerald-900'
       : benefit < 0
-        ? 'border-amber-700/40 bg-amber-950/30 text-amber-200'
+        ? 'border-amber-700/40 bg-amber-50 text-amber-900'
         : 'border-brand-border bg-brand-surface text-brand-text-dark'
 
   return (

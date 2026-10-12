@@ -431,7 +431,7 @@ export default function EmergencyTriageCardPage() {
         </div>
       </section>
       <section className="bg-brand-primary-pale border-y border-brand-border px-container-sm sm:px-container py-section">
-        <div className="max-w-content mx-auto text-center">
+        <div className="max-w-content mx-auto text-center [&_[data-email-capture=section]>p]:!text-brand-text-mid">
           <EmailCapture
             variant="section"
             siteId="vets-co"

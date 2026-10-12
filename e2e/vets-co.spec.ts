@@ -1,4 +1,5 @@
 import { expect, test } from '@playwright/test'
+import { expectAAContrast } from './contrast'
 import { expectMoneyCopy, reviewRoutes } from './money-copy'
 import { expectHop } from './hop'
 import { AMAZON_TAG, TRUPANION_TAG } from './tags'
@@ -496,5 +497,19 @@ test('vets fix L1: sitemap lists every symptom, diagnostic, specialist, medicati
     const detail = hrefs.filter((h) => h.split('/').length === 3 && !h.startsWith('/medications/can-i-give-my-dog'))
     expect(detail.length, `${hub} detail links`).toBeGreaterThan(0)
     for (const h of detail) expect(xml, `${h} in sitemap`).toContain(`<loc>https://vets.co${h}</loc>`)
+  }
+})
+
+test('vets fix L3: listed text meets WCAG AA contrast', async ({ page }) => {
+  const checks: Array<[string, string]> = [
+    ['/', 'p.text-sm.leading-relaxed.mb-5'],
+    ['/', '[class*="bg-emerald-50"] p, [class*="bg-amber-50"] p'],
+    ['/symptoms', 'span[class*="946A1A"]'],
+    ['/symptoms', 'p.text-sm.text-brand-text-mid.leading-relaxed'],
+    ['/emergency-triage-card', '[data-email-capture="section"] > p'],
+  ]
+  for (const [path, selector] of checks) {
+    await page.goto(path, { waitUntil: 'networkidle' })
+    await expectAAContrast(page, selector)
   }
 })
