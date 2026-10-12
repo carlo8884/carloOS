@@ -564,3 +564,17 @@ test('vets fix L5: money-page Article dateModified matches the visible Last upda
     for (const d of modified) expect(d, `${path} dateModified`).toBe(visible)
   }
 })
+
+test('vets fix L6: every FAQPage question on /medications/can-i-give-my-dog is visible on the page', async ({ page }) => {
+  await page.goto('/medications/can-i-give-my-dog', { waitUntil: 'domcontentloaded' })
+  const blocks = await page.locator('script[type="application/ld+json"]').allTextContents()
+  const questions: string[] = []
+  for (const block of blocks) {
+    const data = JSON.parse(block)
+    for (const node of Array.isArray(data) ? data : data['@graph'] ?? [data]) {
+      if (node['@type'] === 'FAQPage') for (const q of node.mainEntity) questions.push(q.name)
+    }
+  }
+  expect(questions.length).toBeGreaterThan(0)
+  for (const q of questions) await expect(page.locator('[data-faq="visible"]').getByText(q, { exact: true })).toBeVisible()
+})
