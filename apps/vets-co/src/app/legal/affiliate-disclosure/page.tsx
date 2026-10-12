@@ -27,10 +27,10 @@ export default function AffiliateDisclosurePage() {
         <span className="text-brand-text-mid">Affiliate Disclosure</span>
       </nav>
       <h1 className="font-display font-black text-brand-dark text-3xl tracking-tight mb-2">Affiliate Disclosure</h1>
-      <p className="text-sm text-brand-text-light mb-10">Last updated: May 2025</p>
+      <p className="text-sm text-brand-text-light mb-10">Last updated: October 2026</p>
       <div className="carloOS-article">
         <h2>FTC Required Statement</h2>
-        <p>Vets.co participates in affiliate programs including Amazon Associates and telehealth services including Vetster. Trupanion, Healthy Paws, and Embrace are not currently connected. When you click a product link on this site and make a qualifying purchase, we may earn a commission at no additional cost to you. As an Amazon Associate we earn from qualifying purchases. This relationship is disclosed in compliance with the U.S. Federal Trade Commission&apos;s 16 CFR Part 255 guidance on endorsements and testimonials.</p>
+        <p>Vets.co participates in the Amazon Associates program. Trupanion, Healthy Paws, Embrace, and veterinary telehealth services are not currently connected. When you click a product link on this site and make a qualifying purchase, we may earn a commission at no additional cost to you. As an Amazon Associate we earn from qualifying purchases. This relationship is disclosed in compliance with the U.S. Federal Trade Commission&apos;s 16 CFR Part 255 guidance on endorsements and testimonials.</p>
 
         <h2>How It Works</h2>
         <ul>
@@ -49,7 +49,7 @@ export default function AffiliateDisclosurePage() {
         </ul>
 
         <h2>Programs We Participate In</h2>
-        <p>Vets.co is a participant in Amazon Associates and telehealth services including Vetster. Trupanion, Healthy Paws, and Embrace are not currently connected. We may add or remove programs over time and will update this page accordingly. Adding a new affiliate program never retroactively changes existing rankings.</p>
+        <p>Vets.co is a participant in Amazon Associates. Trupanion, Healthy Paws, Embrace, and veterinary telehealth services (Vetster, AskVet, Chewy&apos;s Connect with a Vet) are not currently connected. We may add or remove programs over time and will update this page accordingly. Adding a new affiliate program never retroactively changes existing rankings.</p>
 
         <h2>Questions</h2>
         <p>If you spot a missing disclosure, an outdated affiliate link, or anything that looks like editorial bias toward a specific product or brand, please email legal@vets.co.</p>

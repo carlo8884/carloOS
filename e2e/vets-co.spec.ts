@@ -302,3 +302,14 @@ test('vets fix T4: fine-print ManyPets card drops internal card wording', async 
   const body = await page.locator('body').innerText()
   expect(body).not.toMatch(/this card does not print|this card|held partner|partner ID|tag needed/i)
 })
+
+test('vets fix T5: privacy and disclosure pages do not claim Chewy or telehealth programs, and keep the Amazon Associates statement', async ({ page }) => {
+  for (const path of ['/legal/privacy-policy', '/disclosure', '/legal/affiliate-disclosure']) {
+    await page.goto(path)
+    const body = await page.locator('main').innerText()
+    expect(body).not.toMatch(/participat\w*[^.]*\b(Chewy|Vetster|AskVet|telehealth)/i)
+    expect(body).not.toMatch(/referral fees from (Vetster|AskVet|Chewy)/i)
+    expect(body).toMatch(/As an Amazon Associate we earn from qualifying purchases/)
+    expect(body).toMatch(/telehealth services[^.]*are not currently connected/i)
+  }
+})

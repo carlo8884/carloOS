@@ -197,3 +197,15 @@ test('ferret fix T4: starter kit, adrenal, and Marshall cards drop internal link
     expect(await page.locator('body').innerText(), path).not.toMatch(internal)
   }
 })
+
+test('ferret fix T5: disclosure pages do not claim the Chewy program, and keep the Amazon Associates statement', async ({ page }) => {
+  for (const path of ['/disclosure', '/legal/affiliate-disclosure']) {
+    await page.goto(path)
+    const body = await page.locator('main').innerText()
+    expect(body).not.toMatch(/Chewy Affiliate Program/i)
+    expect(body).not.toMatch(/participa\w*[^.]*\bChewy/i)
+    expect(body).toMatch(/As an Amazon Associate we earn from qualifying purchases/)
+    const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
+    expect(ld).not.toMatch(/participa\w*[^.]*\bChewy|Chewy Affiliate Program/i)
+  }
+})
