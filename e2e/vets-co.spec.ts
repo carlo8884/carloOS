@@ -427,3 +427,10 @@ test('vets fix P4: home, health, find-a-vet, legal footer and directory links ar
     expect(await page.evaluate(() => document.documentElement.scrollWidth), path).toBeLessThanOrEqual(390)
   }
 })
+
+test('vets fix T7: emergency triage card drops the unsourced "cheapest" and "most common ER mistake" claims', async ({ page }) => {
+  await page.goto('/emergency-triage-card', { waitUntil: 'domcontentloaded' })
+  const html = await page.content()
+  expect(html).not.toMatch(/cheapest emergency-prep purchase|most common ER mistake/i)
+  expect(html).toContain('$40–$70')
+})
