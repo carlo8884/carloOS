@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, TableShopLink } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, TableShopLink, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -198,6 +198,18 @@ export default function FirstWeekChecklistPage() {
               </tbody>
             </table>
             <p className="mt-2 text-xs text-brand-text-mid">The cage link opens one Amazon product page; the other links open an Amazon search. They are not a ranked list and do not replace veterinary care.</p>
+          </div>
+
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Litter for training week
+            </div>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
+                amazonHref="/go/amazon-brand/ferret+litter?s=first-week-checklist"
+                amazonLabel="Browse ferret litter on Amazon →"
+              />
+            </div>
           </div>
 
           <h2 id="sources">Sources</h2>
