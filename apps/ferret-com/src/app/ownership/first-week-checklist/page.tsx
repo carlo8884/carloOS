@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, TableShopLink } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -106,10 +106,9 @@ export default function FirstWeekChecklistPage() {
             <p className="mt-2 text-base font-semibold text-brand-text-dark">See the starter essentials</p>
             <p className="mt-2 text-sm leading-relaxed text-brand-text-mid">
               The ferret starter essentials page collects the day-one core above — cage, bedding, litter,
-              food and water, and a carrier — in one place so nothing is missing on arrival day. For the
-              non-commercial reference version, the{' '}
+              food and water, and a carrier — in one place so nothing is missing on arrival day. The{' '}
               <a href="/ownership/ferret-supplies-checklist" className="text-brand-primary underline-offset-2 hover:underline">supplies checklist</a>{' '}
-              walks the same categories with no links.
+              walks the same categories item by item.
             </p>
             <p className="mt-3 text-2xs leading-relaxed text-brand-text-light">
               The starter essentials page includes shop links, and we never accept payment for favorable placement.{' '}
@@ -153,19 +152,52 @@ export default function FirstWeekChecklistPage() {
             If you already have ferrets, quarantine the newcomer separately for the first couple of weeks before introductions. This protects your resident ferrets from any transmissible illness the new arrival may be incubating and gives the newcomer space to settle. Handle resident ferrets and the newcomer with attention to hygiene between them, and introduce them gradually and under supervision once the quarantine period has passed without signs of illness.
           </p>
 
-          <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/ferret+litter?s=first-week-checklist"]} />
+          <HopDisclosure siteId="ferret-com" href={["/go/amazon/B001NJ0DAY?s=first-week-checklist", "/go/amazon-brand/ferret+hammock?s=first-week-checklist", "/go/amazon-brand/ferret+fleece+liner?s=first-week-checklist", "/go/amazon-brand/ferret+corner+litter+pan?s=first-week-checklist", "/go/amazon-brand/ferret+litter?s=first-week-checklist", "/go/amazon-brand/high+protein+ferret+food+kibble?s=first-week-checklist"]} />
 
-          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
-            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop related supplies
-            </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
-            <div className="flex flex-col gap-3">
-              <ShopCtas
-                amazonHref="/go/amazon-brand/ferret+litter?s=first-week-checklist"
-                amazonLabel="Browse ferret litter on Amazon →"
-              />
-          </div>
+          <div id="shop-first-week" className="my-6 overflow-x-auto max-w-full min-w-0 not-prose">
+            <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
+              <caption className="text-left font-semibold text-brand-dark p-3">Shop the first-week setup</caption>
+              <thead>
+                <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                  <th scope="col" className="p-3 font-bold text-brand-dark">Item</th>
+                  <th scope="col" className="p-3 font-bold text-brand-dark">On Amazon</th>
+                  <th scope="col" className="p-3 font-bold text-brand-dark">When</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-brand-border">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Cage</th>
+                  <td className="p-3">Critter Nation double unit<TableShopLink href="/go/amazon/B001NJ0DAY?s=first-week-checklist" product="Critter Nation double unit" /></td>
+                  <td className="p-3">Set up before arrival day</td>
+                </tr>
+                <tr className="border-b border-brand-border">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Hammock</th>
+                  <td className="p-3">Ferret hammock<TableShopLink href="/go/amazon-brand/ferret+hammock?s=first-week-checklist" product="Ferret hammock" /></td>
+                  <td className="p-3">A dark place to sleep on day 1</td>
+                </tr>
+                <tr className="border-b border-brand-border">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Fleece bedding</th>
+                  <td className="p-3">Ferret fleece cage liner<TableShopLink href="/go/amazon-brand/ferret+fleece+liner?s=first-week-checklist" product="Ferret fleece cage liner" /></td>
+                  <td className="p-3">Before arrival day</td>
+                </tr>
+                <tr className="border-b border-brand-border">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Litter pan</th>
+                  <td className="p-3">Ferret corner litter pan<TableShopLink href="/go/amazon-brand/ferret+corner+litter+pan?s=first-week-checklist" product="Ferret corner litter pan" /></td>
+                  <td className="p-3">Litter training, days 4–5</td>
+                </tr>
+                <tr className="border-b border-brand-border">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Litter</th>
+                  <td className="p-3">Ferret litter<TableShopLink href="/go/amazon-brand/ferret+litter?s=first-week-checklist" product="Ferret litter" /></td>
+                  <td className="p-3">Litter training, days 4–5</td>
+                </tr>
+                <tr className="border-b border-brand-border">
+                  <th scope="row" className="p-3 font-bold text-brand-dark text-left">Food</th>
+                  <td className="p-3">High-protein ferret kibble<TableShopLink href="/go/amazon-brand/high+protein+ferret+food+kibble?s=first-week-checklist" product="High-protein ferret kibble" /></td>
+                  <td className="p-3">From day 1</td>
+                </tr>
+              </tbody>
+            </table>
+            <p className="mt-2 text-xs text-brand-text-mid">The cage link opens one Amazon product page; the other links open an Amazon search. They are not a ranked list and do not replace veterinary care.</p>
           </div>
 
           <h2 id="sources">Sources</h2>
