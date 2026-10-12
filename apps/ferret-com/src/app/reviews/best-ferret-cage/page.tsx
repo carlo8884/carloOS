@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import { TableShopLink, ComparisonFoot, EmailCapture, PrimaryHop, buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, QuickPicks, ArticleSourcesList, CrossPortfolioCard, LastUpdated } from '@carloOS/ui'
-import { buildArticleSchema, buildFAQSchema, buildItemListSchema, buildProductSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildArticleSchema, buildFAQSchema, buildItemListSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -43,9 +43,7 @@ const breadcrumbSchema = buildBreadcrumbSchema({
   ],
 })
 
-// GEO: ItemList of the three cages that meet the criteria + an editorial
-// Product/Review per pick. No numeric rating. Name + reviewBody come only from
-// this page's ReviewCard content. No aggregateRating, no fabricated specs (QC §1.4).
+// ItemList of the picks in page order. No Product or Review markup: there is no on-page score (QC §1.4).
 const itemList = buildItemListSchema({
   name: 'Multi-Level Ferret Cages That Meet the Criteria',
   items: [
@@ -54,30 +52,6 @@ const itemList = buildItemListSchema({
     { name: 'Kaytee Multi-Level Ferret Home', url: 'https://ferret.com/go/amazon/B008FONT2Y?s=reviews-best-ferret-cage' },
   ],
 })
-
-const products = [
-  buildProductSchema({
-    name: 'Ferret Nation Double Unit',
-    description: 'Full-width front doors, deep pans, expandable two-storey footprint. Confirm bar spacing on the box.',
-    url: 'https://ferret.com/go/amazon/B0054U8UGW?s=reviews-best-ferret-cage',
-    reviewAuthorName: 'Ferret.com Editorial',
-    reviewBody: 'The manufacturer page says the full-width double doors open the entire front for cleaning and feeding, and it does not print a bar-spacing figure (fetched 2026-10-08). Deep leak-proof pans, and a modular design that stacks to a second storey. The trade-offs are price, weight, and the assembly footprint.',
-  }),
-  buildProductSchema({
-    name: 'Prevue Pet Products Feisty Ferret Cage',
-    description: 'Ferret-appropriate bar spacing, multiple solid shelves and ramps, mid-tier price',
-    url: 'https://ferret.com/go/amazon/B000QFMYWQ?s=reviews-best-ferret-cage',
-    reviewAuthorName: 'Ferret.com Editorial',
-    reviewBody: 'A purpose-built ferret cage with appropriate wire spacing, several solid shelves and ramps, and a price below the modular systems. Floor space suits one to two ferrets comfortably; the wire shelf edges benefit from fleece or linoleum covering. A strong value pick where the larger modular units are out of budget or out of room.',
-  }),
-  buildProductSchema({
-    name: 'Kaytee Multi-Level Ferret Home',
-    description: 'Entry-level multi-level cage, widely stocked, suited to a single ferret with daily out-time',
-    url: 'https://ferret.com/go/amazon/B008FONT2Y?s=reviews-best-ferret-cage',
-    reviewAuthorName: 'Ferret.com Editorial',
-    reviewBody: 'A widely stocked entry-level multi-level cage. Bar spacing is in range and it carries shelves and ramps, but the footprint suits a single ferret with generous daily out-of-cage time rather than a pair living in it full-time. The most likely appropriate cage to find at a chain store at short notice; verify the spacing on the specific model before buying.',
-  }),
-]
 
 const FAQS = [
   {
@@ -108,7 +82,7 @@ const FAQS = [
 ]
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
-const combined = combineSchemas(schema, breadcrumbSchema, itemList, faqSchema, ...products)
+const combined = combineSchemas(schema, breadcrumbSchema, itemList, faqSchema)
 
 const QUICK_PICKS = [
   { label: 'Best Overall', name: 'Ferret Nation Double Unit', subtitle: 'Modular · Full-front doors · Confirm bar spacing', href: '#ferret-nation', pickHop: '/go/amazon/B0054U8UGW?s=reviews-best-ferret-cage' },

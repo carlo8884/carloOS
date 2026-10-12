@@ -588,3 +588,18 @@ test('vets fix L7: ArticleLayout breadcrumb items are absolute https://vets.co U
   expect(linked.length).toBeGreaterThan(0)
   for (const e of linked) expect(e.item.startsWith('https://vets.co/'), e.item).toBe(true)
 })
+
+test('vets fix L8: best-of pages carry ItemList markup and no Product, Review or Offer markup', async ({ request }) => {
+  const paths = ['/reviews/best-pet-insurance', '/telehealth']
+  for (const path of paths) {
+    const html = await (await request.get(path)).text()
+    const blocks = [...html.matchAll(/<script type="application\/ld\+json">(.*?)<\/script>/gs)].map((m) => m[1])
+    const json = blocks.join('\n')
+    for (const type of ['Product', 'Review', 'Offer', 'AggregateOffer', 'Rating']) {
+      expect(json.includes(`"@type":"${type}"`), `${path} has ${type} markup`).toBe(false)
+    }
+    const lists = blocks.flatMap((b) => { const d = JSON.parse(b); return Array.isArray(d) ? d : d['@graph'] ?? [d] }).filter((n) => n['@type'] === 'ItemList')
+    expect(lists.length, `${path} ItemList`).toBeGreaterThan(0)
+    expect(lists[0].itemListElement.length).toBeGreaterThanOrEqual(3)
+  }
+})

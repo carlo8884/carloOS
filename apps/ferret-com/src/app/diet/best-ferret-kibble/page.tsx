@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import { TableShopLink, ComparisonFoot, EmailCapture, buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, QuickPicks, CrossPortfolioCard, ShopCtas, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
-import { buildArticleSchema, buildFAQSchema, buildItemListSchema, buildMedicalWebPageSchema, buildProductSchema, combineSchemas, SchemaScript, QuietPartnerLink} from '@carloOS/ui'
+import { buildArticleSchema, buildFAQSchema, buildItemListSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript, QuietPartnerLink} from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -36,9 +36,7 @@ const med = buildMedicalWebPageSchema({
   lastReviewed: '2026-06-01',
 })
 
-// GEO: ItemList of the three kibbles that fit the profile plus a product
-// review per pick. The name and review body come only from this page's
-// ReviewCard content. No aggregate rating and no fabricated specs (QC §1.4).
+// ItemList of the picks in page order. No Product or Review markup: there is no on-page score (QC §1.4).
 const itemList = buildItemListSchema({
   name: 'Ferret Kibbles That Fit the Profile',
   items: [
@@ -47,30 +45,6 @@ const itemList = buildItemListSchema({
     { name: 'Carniwhole Ferret Food', url: `${PAGE_URL}#carniwhole` },
   ],
 })
-
-const products = [
-  buildProductSchema({
-    name: 'Wysong Epigen 90',
-    description: 'Current page lists crude protein minimum 63% and crude fat minimum 16%, and markets the food as starch-free. Carbohydrate is not on the guaranteed analysis.',
-    url: 'https://ferret.com/go/amazon/B019W9VXZK?s=best-ferret-kibble',
-    reviewAuthorName: 'Ferret.com Editorial',
-    reviewBody: 'The current Wysong Epigen 90 page lists crude protein minimum 63% and crude fat minimum 16%. Those are guaranteed-analysis figures as printed, not a dry-matter conversion. The page markets the food as starch-free. Carbohydrate is not on the guaranteed analysis — check the label. Premium price and not always stocked in chain pet aisles.',
-  }),
-  buildProductSchema({
-    name: 'Marshall Premium Ferret Diet',
-    description: 'Ferret-specific formulation, widely stocked, in-range macros',
-    url: `${PAGE_URL}#marshall-premium-diet`,
-    reviewAuthorName: 'Ferret.com Editorial',
-    reviewBody: 'The current Marshall Premium Ferret Diet page lists crude protein minimum 38% and crude fat minimum 18%. Those are guaranteed-analysis figures as printed, not a dry-matter conversion. Carbohydrate is not on the guaranteed analysis — check the label.',
-  }),
-  buildProductSchema({
-    name: 'Carniwhole Ferret Food',
-    description: 'Direct-to-consumer, published macros, subscription-shipped',
-    url: `${PAGE_URL}#carniwhole`,
-    reviewAuthorName: 'Ferret.com Editorial',
-    reviewBody: 'A direct-to-consumer ferret food for keepers who want ingredient transparency and a fresher product than long-shelf-stable kibble. It publishes its ingredient and macronutrient panel and ships on a subscription model; the trade-off is subscription logistics and no retail backup.',
-  }),
-]
 
 const FAQS = [
   {
@@ -101,7 +75,7 @@ const FAQS = [
 ]
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
-const combined = combineSchemas(schema, med, itemList, faqSchema, ...products)
+const combined = combineSchemas(schema, med, itemList, faqSchema)
 
 // Near-top jump links — fed by the SAME three picks as the ItemList schema
 // above (same names, same anchors). Labels mirror each ReviewCard's badge.

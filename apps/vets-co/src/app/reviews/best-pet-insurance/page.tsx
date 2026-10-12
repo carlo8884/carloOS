@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { TableShopLink, RelatedReads, ComparisonFoot, EmailCapture, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, CalloutBox, PullQuote, ArticleByline, FAQAccordion, PriceAsOf, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import { InsuranceWellnessShop } from '../../../components/InsuranceWellnessShop'
-import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildArticleSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import Link from 'next/link'
 
 export const dynamic = 'force-dynamic'
@@ -49,30 +49,7 @@ const insurerListSchema = {
   ],
 }
 
-// Product schemas — single editorial review (reviewCount: 1 per honest-pattern used across the portfolio)
-const trupanionSchema = buildProductSchema({
-  name: 'Trupanion Pet Insurance',
-  description: 'Offers direct vet payment; check terms. 90% reimbursement, unlimited payouts, per-condition deductible.',
-  url: 'https://vets.co/reviews/best-pet-insurance#trupanion',
-  imageUrl: '',
-})
-
-const healthyPawsSchema = buildProductSchema({
-  name: 'Healthy Paws Pet Insurance',
-  description: 'The Healthy Paws claims page (https://www.healthypawspetinsurance.com/pet-insurance-claims.html) says most claims are processed in 2 days. The annual reimbursement limit is a choice, not automatically unlimited.',
-  url: 'https://vets.co/reviews/best-pet-insurance#healthy-paws',
-  imageUrl: '',
-})
-
-const embraceSchema = buildProductSchema({
-  name: 'Embrace Pet Insurance',
-  description: 'Wellness add-on available for routine and preventive care. Deductible program: see the carrier\'s current terms.',
-  // note: "highly customizable" is a calibrated descriptor, not an objective-superiority claim
-  url: 'https://vets.co/reviews/best-pet-insurance#embrace',
-  imageUrl: '',
-})
-
-const pageSchema = combineSchemas(schema, breadcrumbSchema, insurerListSchema, trupanionSchema, healthyPawsSchema, embraceSchema)
+const pageSchema = combineSchemas(schema, breadcrumbSchema, insurerListSchema)
 
 const PICKS = [
   { label: 'Pays the vet directly', name: 'Trupanion', subtitle: 'Offers direct vet payment; check terms', href: '#trupanion' },
