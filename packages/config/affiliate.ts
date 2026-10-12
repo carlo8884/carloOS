@@ -24,7 +24,7 @@ export interface AffiliateProgram {
 export const AFFILIATE_PROGRAMS: Record<string, AffiliateProgram> = {
   amazon: {
     name: 'Amazon Associates',
-    tag: 'carloOS-20', // Your Amazon Associates tag
+    tag: '', // Not hard-coded: hops read AFF_AMAZON_TAG (see affiliate-hop.ts)
     commission: '1–10% depending on category',
   },
   chewy: {
@@ -58,18 +58,6 @@ export const AFFILIATE_PROGRAMS: Record<string, AffiliateProgram> = {
     tag: 'carloOS',
     commission: '5–8%',
   },
-}
-
-// ── Amazon affiliate link builder ─────────────────────────────────────────────
-export function amazonLink(asin: string): string {
-  const tag = AFFILIATE_PROGRAMS.amazon.tag
-  return `https://www.amazon.com/dp/${asin}?tag=${tag}`
-}
-
-// ── Amazon search link builder ────────────────────────────────────────────────
-export function amazonSearchLink(query: string): string {
-  const tag = AFFILIATE_PROGRAMS.amazon.tag
-  return `https://www.amazon.com/s?k=${encodeURIComponent(query)}&tag=${tag}`
 }
 
 // ── Chewy affiliate link builder ──────────────────────────────────────────────
