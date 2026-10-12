@@ -591,6 +591,10 @@ export default function FerretBathingGroomingPage() {
             cons={['Not a treatment for ear mites or infection — those need a vet', 'Bottle is small relative to long-term use']}
             price="$10–20"
             priceNote="dated 2026-10-04."
+            ctaText="Search Amazon for a pet ear cleaner"
+            ctaHref="/go/amazon-brand/pet+ear+cleaner?s=care-bathing-and-grooming"
+            ctaAffiliateProgram="amazon-brand"
+            ctaAffiliateProduct="pet+ear+cleaner"
           />
           <p className="mb-4 text-sm font-semibold leading-snug">
             <a href="/care/nail-trimming" className="inline-block max-w-full whitespace-normal text-brand-primary underline underline-offset-2">
@@ -641,7 +645,7 @@ export default function FerretBathingGroomingPage() {
                 </tr>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 text-brand-text-mid">Routine ear wiping every 2–4 weeks</td>
-                  <td className="p-3 font-bold text-brand-dark"><a href="#pet-ear-cleaner" className="text-brand-primary">Pet ear cleaner</a></td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#pet-ear-cleaner" className="text-brand-primary">Pet ear cleaner</a><TableShopLink href={"/go/amazon-brand/pet+ear+cleaner?s=care-bathing-and-grooming"} product={"Pet ear cleaner"} /></td>
                   <td className="p-3 text-brand-text-mid">Ear Care. Cotton ball or gauze, not an in-canal swab. $10–20</td>
                   <td className="p-3 text-brand-text-mid">Dark coffee-ground debris or colored discharge. The card says that needs a vet, not more cleaner</td>
                 </tr>
@@ -654,7 +658,7 @@ export default function FerretBathingGroomingPage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-11" />
+          <ComparisonFoot updated="2026-10-12" />
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />

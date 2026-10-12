@@ -239,3 +239,28 @@ test('ferret fix T6: grooming page drops unsourced vet-approved and practice-sta
   await expect(page.locator('#pet-ear-cleaner')).toContainText('Pet Ear Cleaner (Epi-Otic style)')
   await expect(page.locator('#marshall-ferret-shampoo')).toContainText('A sensible default for the every-2–3-month bathing schedule.')
 })
+
+test('ferret fix M5: wood litter and ear cleaner cards get one Amazon search button; held and unmatched cards stay unlinked', async ({ page }) => {
+  await page.goto('/reviews/best-ferret-litter')
+  for (const [id, query] of [
+    ['paper-pellet', 'recycled+paper+pellet+litter+non+clumping'],
+    ['wood-pellet', 'heat+treated+wood+pellet+litter'],
+  ] as const) {
+    const shop = page.locator(`#${id} a[href^="/go/"]`)
+    await expect(shop, id).toHaveCount(1)
+    await expect(shop, id).toHaveAttribute('href', `/go/amazon-brand/${query}?s=reviews-best-ferret-litter`)
+  }
+  // No Amazon search returned a non-clumping grass pellet litter, so this card stays without a button.
+  await expect(page.locator('#grass-pellet a[href^="/go/"]')).toHaveCount(0)
+  let ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
+  expect(ld.match(/ferret\.com\/go\/[^"\s]+/g)?.filter((hop) => !hop.startsWith('ferret.com/go/amazon-brand/')) ?? []).toEqual([])
+  expect(ld).toContain('best-ferret-litter#wood-pellet')
+
+  await page.goto('/care/bathing-and-grooming')
+  const ear = page.locator('#pet-ear-cleaner a[href^="/go/"]')
+  await expect(ear).toHaveCount(1)
+  await expect(ear).toHaveAttribute('href', '/go/amazon-brand/pet+ear+cleaner?s=care-bathing-and-grooming')
+  await expect(page.locator('#marshall-ferret-shampoo a[href^="/go/"]')).toHaveCount(0)
+  ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
+  expect(ld).not.toMatch(/\/go\/(marshall|chewy|wysong)\b/)
+})
