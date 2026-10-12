@@ -328,3 +328,18 @@ test('vets fix Q1: breed insurance picks drop unsourced claim-frequency and rank
     expect(ld, path).not.toMatch(removed)
   }
 })
+
+test('vets fix P1: telehealth and insurance review have no standalone links under 24px at 390px', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 })
+  for (const path of ['/telehealth', '/reviews/best-pet-insurance']) {
+    await page.goto(path)
+    const short = await page.evaluate(() =>
+      Array.from(document.querySelectorAll('a[href]'))
+        .filter((a) => !a.closest('p, li'))
+        .map((a) => ({ text: a.textContent?.trim() ?? '', rect: a.getBoundingClientRect(), hidden: getComputedStyle(a).visibility === 'hidden' }))
+        .filter(({ rect, hidden }) => !hidden && rect.width > 1 && rect.height > 1 && rect.height < 24)
+        .map(({ text, rect }) => `${text} (${Math.round(rect.height * 10) / 10}px)`),
+    )
+    expect(short, path).toEqual([])
+  }
+})
