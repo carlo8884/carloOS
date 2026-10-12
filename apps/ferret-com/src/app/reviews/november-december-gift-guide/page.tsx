@@ -141,7 +141,7 @@ export default function NovemberDecemberGiftGuidePage() {
             </tbody>
           </table>
         </div>
-        <ComparisonFoot updated="2026-10-11" />
+        <ComparisonFoot updated="2026-10-12" />
         <EmailCapture
           variant="inline"
           siteId="ferret-com"

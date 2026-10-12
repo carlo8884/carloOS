@@ -405,7 +405,7 @@ export default function BestFerretCagePage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-11" />
+          <ComparisonFoot updated="2026-10-12" />
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />

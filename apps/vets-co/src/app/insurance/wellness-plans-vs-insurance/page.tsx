@@ -176,7 +176,7 @@ export default function WellnessVsInsurancePage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-11" />
+          <ComparisonFoot updated="2026-10-12" />
 
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />

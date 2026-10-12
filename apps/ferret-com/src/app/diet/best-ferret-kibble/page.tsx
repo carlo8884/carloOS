@@ -394,7 +394,7 @@ export default function BestFerretKibblePage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-11" />
+          <ComparisonFoot updated="2026-10-12" />
 
           <p>Wysong and Marshall, the two kibbles on this page, are compared in the <Link href="/reviews/wysong-vs-marshall-kibble-guide">Wysong versus Marshall guide</Link>. Wysong and Carniwhole are set side by side in the <Link href="/reviews/wysong-vs-carniwhole-guide">Wysong versus Carniwhole guide</Link>.</p>
           <h2 id="faq">FAQ</h2>
