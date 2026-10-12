@@ -450,3 +450,11 @@ test('vets fix T9: specialist pages make no unsourced annual specialist-cost cla
     await expect(page.getByText('Chronic specialist care can add up over a year').first()).toBeVisible()
   }
 })
+
+test('vets fix T9b: specialist pages carry no unsourced annual range in the cross-site promo', async ({ page }) => {
+  for (const path of ['/specialists', '/specialists/veterinary-cardiology']) {
+    await page.goto(path, { waitUntil: 'domcontentloaded' })
+    const text = await page.locator('body').innerText()
+    expect(text).not.toMatch(/3,000–15,000/)
+  }
+})
