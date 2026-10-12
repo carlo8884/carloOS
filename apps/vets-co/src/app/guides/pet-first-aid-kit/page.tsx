@@ -9,7 +9,7 @@ const SOURCE = 'guides-pet-first-aid-kit'
 export const metadata: Metadata = buildMetadata({
   siteId: 'vets-co',
   title: 'Pet First-Aid Kit Checklist: What to Pack | Vets.co',
-  description: 'What a dog or cat first-aid kit should hold, from the AVMA and Merck Veterinary Manual checklists, which items need a vet or poison control first, and how to keep it current.',
+  description: 'What a dog or cat first-aid kit should hold, from the AVMA and Merck Veterinary Manual checklists, and which items need a call to your vet first.',
   path: '/guides/pet-first-aid-kit',
   type: 'article',
 })
