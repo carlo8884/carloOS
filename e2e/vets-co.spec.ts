@@ -578,3 +578,13 @@ test('vets fix L6: every FAQPage question on /medications/can-i-give-my-dog is v
   expect(questions.length).toBeGreaterThan(0)
   for (const q of questions) await expect(page.locator('[data-faq="visible"]').getByText(q, { exact: true })).toBeVisible()
 })
+
+test('vets fix L7: ArticleLayout breadcrumb items are absolute https://vets.co URLs', async ({ request }) => {
+  const html = await (await request.get('/diagnostics/urinalysis')).text()
+  const blocks = [...html.matchAll(/<script type="application\/ld\+json">(.*?)<\/script>/gs)].map((m) => JSON.parse(m[1]))
+  const crumbs = blocks.flatMap((b) => (Array.isArray(b) ? b : b['@graph'] ?? [b])).filter((n) => n['@type'] === 'BreadcrumbList')
+  expect(crumbs.length).toBe(1)
+  const linked = crumbs[0].itemListElement.filter((e: { item?: string }) => e.item)
+  expect(linked.length).toBeGreaterThan(0)
+  for (const e of linked) expect(e.item.startsWith('https://vets.co/'), e.item).toBe(true)
+})

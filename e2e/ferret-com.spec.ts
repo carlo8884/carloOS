@@ -497,3 +497,13 @@ test('ferret fix L6: every FAQPage question on /diet/can-ferrets-eat is visible 
   expect(questions.length).toBeGreaterThan(0)
   for (const q of questions) await expect(page.locator('[data-faq="visible"]').getByText(q, { exact: true })).toBeVisible()
 })
+
+test('ferret fix L7: ArticleLayout breadcrumb items are absolute https://ferret.com URLs', async ({ request }) => {
+  const html = await (await request.get('/health/dental-disease')).text()
+  const blocks = [...html.matchAll(/<script type="application\/ld\+json">(.*?)<\/script>/gs)].map((m) => JSON.parse(m[1]))
+  const crumbs = blocks.flatMap((b) => (Array.isArray(b) ? b : b['@graph'] ?? [b])).filter((n) => n['@type'] === 'BreadcrumbList')
+  expect(crumbs.length).toBe(1)
+  const linked = crumbs[0].itemListElement.filter((e: { item?: string }) => e.item)
+  expect(linked.length).toBeGreaterThan(0)
+  for (const e of linked) expect(e.item.startsWith('https://ferret.com/'), e.item).toBe(true)
+})

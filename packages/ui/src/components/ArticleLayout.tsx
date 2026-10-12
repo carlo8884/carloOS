@@ -107,7 +107,7 @@ export function ArticleLayout({
 
       {/* Breadcrumb */}
       {breadcrumbs && breadcrumbs.length > 0 && (
-        <Breadcrumb items={breadcrumbs} />
+        <Breadcrumb items={breadcrumbs} siteId={siteId} />
       )}
 
       {/* Hero */}
