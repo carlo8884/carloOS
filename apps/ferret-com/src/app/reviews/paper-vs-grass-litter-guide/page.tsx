@@ -102,7 +102,8 @@ export default function PaperVsGrassLitterGuidePage() {
           amazonHref="/go/amazon-brand/grass+pellet+litter+small+animal?s=reviews-paper-vs-grass-litter-guide"
           amazonLabel="Search Amazon for grass pellet litter"
         />
-        <div id="litter-table" className="my-6 max-w-full min-w-0">          <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
+        <div id="litter-table" className="my-6 max-w-full min-w-0">
+          <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
             <caption className="text-left font-semibold text-brand-dark p-3">At a glance</caption>
             <thead>
               <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
