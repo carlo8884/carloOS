@@ -41,10 +41,10 @@ export const CAT_INSURANCE_BREEDS: BreedInsuranceProfile[] = [
     sizeCategory: 'large',
     lifespan: [12, 15],
     keyConditions: [
-      'Hypertrophic cardiomyopathy (HCM — Maine Coon-specific MYBPC3 mutation, ~30% of cats)',
-      'Hip dysplasia (one of the few cat breeds at meaningful risk)',
+      'Hypertrophic cardiomyopathy (HCM — Maine Coon-specific MYBPC3 mutation)',
+      'Hip dysplasia',
       'Spinal muscular atrophy (SMA)',
-      'Polycystic kidney disease (PKD, less common than Persian lineage)',
+      'Polycystic kidney disease (PKD)',
       'Periodontal disease',
     ],
     chronicRisk: 'high',
@@ -52,7 +52,7 @@ export const CAT_INSURANCE_BREEDS: BreedInsuranceProfile[] = [
     dentalRisk: 'moderate',
     recommendedCarrier: 'trupanion' as CarrierSlug,
     recommendedReason:
-      'Maine Coons have a well-documented HCM mutation that affects ~30% of the breed and a higher-than-typical orthopedic-claim profile. Trupanion has no annual or lifetime payout cap and uses a per-condition deductible — for a cat with both a cardiac and orthopedic claim history, this structure protects best against multi-year claim totals.',
+      'Maine Coons carry a breed-specific HCM mutation (MYBPC3) and are rated high for orthopedic risk on this page (hip dysplasia, SMA). Trupanion has no annual or lifetime payout cap and uses a per-condition deductible — for a cat with both a cardiac and orthopedic claim history, this structure fits multi-year claim totals.',
     alternateCarriers: ['pumpkin-pet', 'healthy-paws'] as [CarrierSlug, CarrierSlug],
     sampleMonthlyPremium: [30, 55],
     keyCoverageNeeds: [
@@ -68,7 +68,7 @@ export const CAT_INSURANCE_BREEDS: BreedInsuranceProfile[] = [
     sizeCategory: 'medium',
     lifespan: [12, 17],
     keyConditions: [
-      'Polycystic kidney disease (PKD-1 mutation; ~38% of Persians historically, lower in modern breeding lines)',
+      'Polycystic kidney disease (PKD-1 mutation)',
       'Brachycephalic airway syndrome',
       'Progressive retinal atrophy',
       'Dental malocclusion and periodontal disease (skull conformation)',
@@ -79,7 +79,7 @@ export const CAT_INSURANCE_BREEDS: BreedInsuranceProfile[] = [
     dentalRisk: 'high',
     recommendedCarrier: 'pumpkin-pet' as CarrierSlug,
     recommendedReason:
-      'Persians carry the most well-documented hereditary kidney disease in cats and have brachycephalic airway issues that often require dental/airway surgery. Pumpkin\'s base coverage includes hereditary conditions without rider add-ons and has strong dental coverage — Persians need both.',
+      'Persians carry the PKD-1 hereditary kidney disease mutation and have brachycephalic airway issues that can require dental/airway surgery. Pumpkin\'s base coverage includes hereditary conditions without rider add-ons and includes dental coverage — Persians need both.',
     alternateCarriers: ['trupanion', 'embrace'] as [CarrierSlug, CarrierSlug],
     sampleMonthlyPremium: [32, 60],
     keyCoverageNeeds: [
@@ -98,19 +98,19 @@ export const CAT_INSURANCE_BREEDS: BreedInsuranceProfile[] = [
       'Hypertrophic cardiomyopathy (Ragdoll-specific MYBPC3 mutation, different from Maine Coon mutation)',
       'Urinary tract issues (bladder stones, idiopathic cystitis)',
       'Periodontal disease',
-      'Feline mucopolysaccharidosis (rare but breed-prevalent)',
+      'Feline mucopolysaccharidosis',
     ],
     chronicRisk: 'high',
     orthopedicRisk: 'low',
     dentalRisk: 'moderate',
     recommendedCarrier: 'trupanion' as CarrierSlug,
     recommendedReason:
-      'Ragdolls have a documented HCM mutation distinct from Maine Coons. Cardiology workups and chronic cardiac medication add up quickly — Trupanion\'s per-condition deductible and no payout cap fit this profile.',
+      'Ragdolls carry an HCM mutation distinct from the Maine Coon\'s. Cardiology workups and chronic cardiac medication add up quickly — Trupanion\'s per-condition deductible and no payout cap fit this profile.',
     alternateCarriers: ['pumpkin-pet', 'healthy-paws'] as [CarrierSlug, CarrierSlug],
     sampleMonthlyPremium: [28, 50],
     keyCoverageNeeds: [
       'Cardiac specialist coverage (echocardiograms, cardiology consults)',
-      'Long-term medication coverage (cardiac meds are usually lifelong)',
+      'Long-term medication coverage (cardiac meds can be lifelong)',
       'Urinary tract issue coverage',
     ],
   },
@@ -131,7 +131,7 @@ export const CAT_INSURANCE_BREEDS: BreedInsuranceProfile[] = [
     dentalRisk: 'moderate',
     recommendedCarrier: 'pumpkin-pet' as CarrierSlug,
     recommendedReason:
-      'British Shorthairs share PKD risk with Persians and have a moderate cardiac risk profile. Pumpkin\'s hereditary condition coverage at base tier is a strong fit; the breed\'s longevity means insurance pays out across many years.',
+      'British Shorthairs share PKD risk with Persians and have a moderate cardiac risk profile. Pumpkin\'s hereditary condition coverage at base tier fits this profile; the breed\'s longevity means insurance pays out across many years.',
     alternateCarriers: ['embrace', 'trupanion'] as [CarrierSlug, CarrierSlug],
     sampleMonthlyPremium: [25, 45],
     keyCoverageNeeds: [
@@ -157,7 +157,7 @@ export const CAT_INSURANCE_BREEDS: BreedInsuranceProfile[] = [
     dentalRisk: 'low',
     recommendedCarrier: 'healthy-paws' as CarrierSlug,
     recommendedReason:
-      'Bengals are active, athletic cats prone to orthopedic injuries on top of breed-specific cardiac and ophthalmologic risks. Healthy Paws has unlimited annual benefits and short waiting periods that fit a high-activity breed.',
+      'Bengals have patellar luxation on their condition list on top of breed-specific cardiac and ophthalmologic risks. Healthy Paws offers an annual-limit choice that includes unlimited, which fits that mix.',
     alternateCarriers: ['pumpkin-pet', 'trupanion'] as [CarrierSlug, CarrierSlug],
     sampleMonthlyPremium: [28, 50],
     keyCoverageNeeds: [
@@ -173,7 +173,7 @@ export const CAT_INSURANCE_BREEDS: BreedInsuranceProfile[] = [
     sizeCategory: 'medium',
     lifespan: [8, 14],
     keyConditions: [
-      'Hypertrophic cardiomyopathy (HCM — high prevalence)',
+      'Hypertrophic cardiomyopathy (HCM)',
       'Hereditary myopathy (Sphynx-specific muscle weakness)',
       'Urticaria pigmentosa (skin condition)',
       'Periodontal disease (early onset; lack of fur correlates with grooming hygiene issues)',
@@ -184,7 +184,7 @@ export const CAT_INSURANCE_BREEDS: BreedInsuranceProfile[] = [
     dentalRisk: 'high',
     recommendedCarrier: 'pumpkin-pet' as CarrierSlug,
     recommendedReason:
-      'Sphynx cats have the highest HCM prevalence among cat breeds plus complex dermatologic needs. Pumpkin\'s hereditary coverage at base tier plus strong dental coverage fits this profile; the breed\'s shorter lifespan means insurance value materializes earlier.',
+      'Sphynx cats face HCM and hereditary myopathy plus complex dermatologic needs. Pumpkin\'s hereditary coverage at base tier plus dental coverage fits this profile; the breed\'s shorter lifespan means insurance value materializes earlier.',
     alternateCarriers: ['trupanion', 'embrace'] as [CarrierSlug, CarrierSlug],
     sampleMonthlyPremium: [35, 65],
     keyCoverageNeeds: [
@@ -201,7 +201,7 @@ export const CAT_INSURANCE_BREEDS: BreedInsuranceProfile[] = [
     lifespan: [15, 20],
     keyConditions: [
       'Amyloidosis (liver and kidney protein deposition)',
-      'Asthma (highest prevalence among cat breeds)',
+      'Asthma',
       'Progressive retinal atrophy',
       'Dental disease (skull conformation)',
       'Hyperesthesia syndrome',
@@ -211,7 +211,7 @@ export const CAT_INSURANCE_BREEDS: BreedInsuranceProfile[] = [
     dentalRisk: 'high',
     recommendedCarrier: 'embrace' as CarrierSlug,
     recommendedReason:
-      'Siamese cats have one of the longest cat lifespans (15-20 years), so insurance pays out across many years — the breed lives long enough for chronic conditions (amyloidosis, asthma) to materialize. Embrace\'s Healthy Pet Deductible decreases each claim-free year, ideal for a long-lived breed.',
+      'Siamese cats have a 15–20 year lifespan on this page, so insurance pays out across many years — the breed lives long enough for chronic conditions (amyloidosis, asthma) to materialize. Embrace\'s Healthy Pet Deductible decreases each claim-free year, ideal for a long-lived breed.',
     alternateCarriers: ['pumpkin-pet', 'trupanion'] as [CarrierSlug, CarrierSlug],
     sampleMonthlyPremium: [24, 45],
     keyCoverageNeeds: [
@@ -227,9 +227,9 @@ export const CAT_INSURANCE_BREEDS: BreedInsuranceProfile[] = [
     sizeCategory: 'medium',
     lifespan: [15, 20],
     keyConditions: [
-      'Generally healthy breed — fewer hereditary issues than most',
+      'No breed-specific hereditary condition listed',
       'Obesity tendency (insurance-relevant though not hereditary)',
-      'Urinary tract issues (relatively common in middle-aged Russian Blues)',
+      'Urinary tract issues',
       'Dental disease (older age)',
     ],
     chronicRisk: 'low',
@@ -237,12 +237,12 @@ export const CAT_INSURANCE_BREEDS: BreedInsuranceProfile[] = [
     dentalRisk: 'moderate',
     recommendedCarrier: 'lemonade-pet' as CarrierSlug,
     recommendedReason:
-      'Russian Blues are one of the healthiest cat breeds with relatively few hereditary issues. Lemonade\'s low entry premium is the best fit for a generally low-risk breed — paying high premiums for a healthy breed wastes coverage budget.',
+      'Russian Blues are rated low for chronic and orthopedic risk on this page, with no breed-specific hereditary condition listed. Lemonade\'s low entry premium fits a low-risk profile — paying high premiums for a healthy breed wastes coverage budget.',
     alternateCarriers: ['embrace', 'healthy-paws'] as [CarrierSlug, CarrierSlug],
     sampleMonthlyPremium: [18, 35],
     keyCoverageNeeds: [
       'Standard accident + illness coverage',
-      'Lower deductible (claims will be infrequent — high-deductible structure wastes premium)',
+      'Lower deductible',
     ],
   },
   {
@@ -262,7 +262,7 @@ export const CAT_INSURANCE_BREEDS: BreedInsuranceProfile[] = [
     dentalRisk: 'low',
     recommendedCarrier: 'trupanion' as CarrierSlug,
     recommendedReason:
-      'Scottish Folds carry an inherent musculoskeletal disorder from the fold-gene that causes progressive joint disease in nearly all individuals. Lifetime orthopedic and pain-management costs are high. Trupanion\'s per-condition deductible and no annual cap is the only carrier structure that protects against decade-long claim totals on a single condition.',
+      'Scottish Folds carry an inherent musculoskeletal disorder from the fold-gene that causes progressive joint disease. Lifetime orthopedic and pain-management costs are high. Trupanion\'s per-condition deductible and no annual cap fit decade-long claim totals on a single condition.',
     alternateCarriers: ['pumpkin-pet', 'healthy-paws'] as [CarrierSlug, CarrierSlug],
     sampleMonthlyPremium: [32, 60],
     keyCoverageNeeds: [
@@ -288,7 +288,7 @@ export const CAT_INSURANCE_BREEDS: BreedInsuranceProfile[] = [
     dentalRisk: 'low',
     recommendedCarrier: 'pumpkin-pet' as CarrierSlug,
     recommendedReason:
-      'Norwegian Forest Cats have hereditary conditions that span cardiac, metabolic, and orthopedic categories. Pumpkin\'s broad base coverage including hereditary conditions makes it the most cost-effective fit.',
+      'Norwegian Forest Cats have hereditary conditions that span cardiac, metabolic, and orthopedic categories. Pumpkin\'s broad base coverage including hereditary conditions fits this profile.',
     alternateCarriers: ['trupanion', 'embrace'] as [CarrierSlug, CarrierSlug],
     sampleMonthlyPremium: [25, 45],
     keyCoverageNeeds: [
@@ -306,7 +306,7 @@ export const CAT_INSURANCE_BREEDS: BreedInsuranceProfile[] = [
     keyConditions: [
       'Progressive retinal atrophy (PRA — Abyssinian-specific mutation)',
       'Pyruvate kinase deficiency (PK-Def)',
-      'Amyloidosis (less common than Siamese, still elevated)',
+      'Amyloidosis',
       'Patellar luxation',
     ],
     chronicRisk: 'moderate',
@@ -314,7 +314,7 @@ export const CAT_INSURANCE_BREEDS: BreedInsuranceProfile[] = [
     dentalRisk: 'low',
     recommendedCarrier: 'healthy-paws' as CarrierSlug,
     recommendedReason:
-      'Abyssinians have ophthalmologic and metabolic hereditary risks. Healthy Paws has unlimited annual benefits and short waiting periods — for a moderately high-risk active breed, this structure protects best.',
+      'Abyssinians have ophthalmologic and metabolic hereditary risks. Healthy Paws offers an annual-limit choice that includes unlimited, which fits a moderate-risk profile.',
     alternateCarriers: ['pumpkin-pet', 'embrace'] as [CarrierSlug, CarrierSlug],
     sampleMonthlyPremium: [25, 45],
     keyCoverageNeeds: [
@@ -329,7 +329,7 @@ export const CAT_INSURANCE_BREEDS: BreedInsuranceProfile[] = [
     sizeCategory: 'medium',
     lifespan: [15, 20],
     keyConditions: [
-      'Hypertrophic cardiomyopathy (HCM — in a small subset of bloodlines)',
+      'Hypertrophic cardiomyopathy (HCM — in some bloodlines)',
       'Obesity (general predisposition)',
       'Dental disease (older age)',
     ],
@@ -338,7 +338,7 @@ export const CAT_INSURANCE_BREEDS: BreedInsuranceProfile[] = [
     dentalRisk: 'moderate',
     recommendedCarrier: 'lemonade-pet' as CarrierSlug,
     recommendedReason:
-      'American Shorthairs are one of the longest-lived and lowest-hereditary-risk breeds. Lemonade\'s entry-tier premium is the best fit for a healthy breed; pay for higher coverage only if claims trend high.',
+      'American Shorthairs are rated low for chronic and orthopedic risk on this page, with a 15–20 year lifespan. Lemonade\'s entry-tier premium fits a low-risk profile; pay for higher coverage only if claims trend high.',
     alternateCarriers: ['embrace', 'healthy-paws'] as [CarrierSlug, CarrierSlug],
     sampleMonthlyPremium: [18, 35],
     keyCoverageNeeds: ['Standard accident + illness coverage', 'Dental coverage for older age'],
@@ -350,17 +350,17 @@ export const CAT_INSURANCE_BREEDS: BreedInsuranceProfile[] = [
     sizeCategory: 'medium',
     lifespan: [16, 18],
     keyConditions: [
-      'Diabetes mellitus (Burmese have one of the highest diabetes prevalences of any cat breed)',
+      'Diabetes mellitus',
       'Gangliosidosis (lipid storage disorder)',
       'Hypokalemia (Burmese-specific potassium deficiency)',
-      'Craniofacial defect (rare but breed-prevalent)',
+      'Craniofacial defect',
     ],
     chronicRisk: 'high',
     orthopedicRisk: 'low',
     dentalRisk: 'moderate',
     recommendedCarrier: 'trupanion' as CarrierSlug,
     recommendedReason:
-      'Burmese cats have the highest diabetes prevalence among cat breeds — lifelong insulin and monitoring costs accumulate quickly. Trupanion\'s per-condition deductible (paid once, then 90% coverage forever) is purpose-built for chronic conditions like diabetes.',
+      'Diabetes mellitus is on the Burmese condition list — lifelong insulin and monitoring costs accumulate quickly. Trupanion\'s per-condition deductible (paid once, then 90% coverage forever) is purpose-built for chronic conditions like diabetes.',
     alternateCarriers: ['pumpkin-pet', 'embrace'] as [CarrierSlug, CarrierSlug],
     sampleMonthlyPremium: [28, 50],
     keyCoverageNeeds: [
@@ -377,8 +377,8 @@ export const CAT_INSURANCE_BREEDS: BreedInsuranceProfile[] = [
     lifespan: [12, 16],
     keyConditions: [
       'Hypertrophic cardiomyopathy (HCM)',
-      'Congenital hypotrichosis (rare)',
-      'Spongiform degeneration (rare CNS condition)',
+      'Congenital hypotrichosis',
+      'Spongiform degeneration (CNS condition)',
       'Dental disease',
     ],
     chronicRisk: 'moderate',
@@ -386,7 +386,7 @@ export const CAT_INSURANCE_BREEDS: BreedInsuranceProfile[] = [
     dentalRisk: 'moderate',
     recommendedCarrier: 'embrace' as CarrierSlug,
     recommendedReason:
-      'Birmans have a moderate cardiac risk profile but are otherwise generally healthy. Embrace\'s Healthy Pet Deductible decreases for claim-free years — ideal for a breed where claims are likely sporadic rather than continuous.',
+      'Birmans are rated moderate for chronic risk on this page, with HCM as the listed cardiac condition. Embrace\'s Healthy Pet Deductible decreases for claim-free years.',
     alternateCarriers: ['pumpkin-pet', 'lemonade-pet'] as [CarrierSlug, CarrierSlug],
     sampleMonthlyPremium: [22, 42],
     keyCoverageNeeds: [
@@ -437,7 +437,7 @@ export const CAT_INSURANCE_BREEDS: BreedInsuranceProfile[] = [
     dentalRisk: 'high',
     recommendedCarrier: 'pumpkin-pet' as CarrierSlug,
     recommendedReason:
-      'Oriental Shorthairs share much of the Siamese hereditary risk profile (amyloidosis, asthma). Pumpkin\'s base coverage including hereditary conditions and strong dental coverage fits this profile.',
+      'Oriental Shorthairs share much of the Siamese hereditary risk profile (amyloidosis, asthma). Pumpkin\'s base coverage including hereditary conditions and dental coverage fits this profile.',
     alternateCarriers: ['embrace', 'trupanion'] as [CarrierSlug, CarrierSlug],
     sampleMonthlyPremium: [24, 45],
     keyCoverageNeeds: [
@@ -480,7 +480,7 @@ export const CAT_INSURANCE_BREEDS: BreedInsuranceProfile[] = [
     lifespan: [13, 17],
     keyConditions: [
       'Deafness (in white blue-eyed cats specifically)',
-      'Hypertrophic cardiomyopathy (rare)',
+      'Hypertrophic cardiomyopathy',
       'Ataxia (Turkish Angora-specific neurologic condition)',
       'Generally healthy otherwise',
     ],
@@ -489,7 +489,7 @@ export const CAT_INSURANCE_BREEDS: BreedInsuranceProfile[] = [
     dentalRisk: 'low',
     recommendedCarrier: 'embrace' as CarrierSlug,
     recommendedReason:
-      'Turkish Angoras are a generally healthy breed with breed-specific but rare conditions. Embrace\'s claim-free deductible decrease is a strong fit for a low-claim-frequency breed.',
+      'Turkish Angoras are rated low for chronic risk on this page, with a few breed-specific conditions. Embrace\'s claim-free deductible decrease fits that profile.',
     alternateCarriers: ['lemonade-pet', 'pumpkin-pet'] as [CarrierSlug, CarrierSlug],
     sampleMonthlyPremium: [20, 40],
     keyCoverageNeeds: ['Standard accident + illness', 'Neurology coverage if Ataxia history'],
@@ -511,7 +511,7 @@ export const CAT_INSURANCE_BREEDS: BreedInsuranceProfile[] = [
     dentalRisk: 'low',
     recommendedCarrier: 'trupanion' as CarrierSlug,
     recommendedReason:
-      'Manx cats with Manx syndrome require lifelong management of spinal, urinary, and intestinal issues. Trupanion\'s no-cap structure and per-condition deductible is the only carrier structure that holds up against decade-long claim totals for the syndrome cases.',
+      'Manx cats with Manx syndrome require lifelong management of spinal, urinary, and intestinal issues. Trupanion\'s no-cap structure and per-condition deductible fit decade-long claim totals for the syndrome cases.',
     alternateCarriers: ['pumpkin-pet', 'healthy-paws'] as [CarrierSlug, CarrierSlug],
     sampleMonthlyPremium: [30, 60],
     keyCoverageNeeds: [
@@ -527,16 +527,16 @@ export const CAT_INSURANCE_BREEDS: BreedInsuranceProfile[] = [
     sizeCategory: 'medium',
     lifespan: [12, 16],
     keyConditions: [
-      'Generally healthy breed (Siamese × Burmese hybrid — fewer hereditary issues than either parent)',
+      'Generally healthy breed (Siamese × Burmese hybrid)',
       'Dental disease',
-      'Asthma (moderate prevalence)',
+      'Asthma',
     ],
     chronicRisk: 'low',
     orthopedicRisk: 'low',
     dentalRisk: 'moderate',
     recommendedCarrier: 'lemonade-pet' as CarrierSlug,
     recommendedReason:
-      'Tonkinese cats benefit from hybrid vigor and are a low-claim-frequency breed. Lemonade\'s entry-tier premium fits the risk profile.',
+      'Tonkinese cats are rated low for chronic and orthopedic risk on this page. Lemonade\'s entry-tier premium fits the risk profile.',
     alternateCarriers: ['embrace', 'pumpkin-pet'] as [CarrierSlug, CarrierSlug],
     sampleMonthlyPremium: [18, 35],
     keyCoverageNeeds: ['Standard accident + illness', 'Dental coverage'],
@@ -557,7 +557,7 @@ export const CAT_INSURANCE_BREEDS: BreedInsuranceProfile[] = [
     dentalRisk: 'low',
     recommendedCarrier: 'pumpkin-pet' as CarrierSlug,
     recommendedReason:
-      'Ragamuffins share Ragdoll-lineage hereditary risks. Pumpkin\'s hereditary coverage at base tier is the most cost-effective fit.',
+      'Ragamuffins share Ragdoll-lineage hereditary risks. Pumpkin\'s hereditary coverage at base tier fits this profile.',
     alternateCarriers: ['trupanion', 'embrace'] as [CarrierSlug, CarrierSlug],
     sampleMonthlyPremium: [24, 45],
     keyCoverageNeeds: ['Hereditary condition coverage', 'Cardiac specialist access'],
@@ -569,8 +569,8 @@ export const CAT_INSURANCE_BREEDS: BreedInsuranceProfile[] = [
     sizeCategory: 'medium',
     lifespan: [13, 16],
     keyConditions: [
-      'Leukodystrophy (rare CNS disorder; some Egyptian Mau lines)',
-      'Heart murmurs (mostly innocent, but cardiac workup recommended)',
+      'Leukodystrophy (CNS disorder; some Egyptian Mau lines)',
+      'Heart murmurs (cardiac workup recommended)',
       'Generally healthy otherwise',
     ],
     chronicRisk: 'low',
@@ -578,7 +578,7 @@ export const CAT_INSURANCE_BREEDS: BreedInsuranceProfile[] = [
     dentalRisk: 'low',
     recommendedCarrier: 'lemonade-pet' as CarrierSlug,
     recommendedReason:
-      'Egyptian Maus are generally healthy with few hereditary issues. Lemonade\'s low premium is the best fit; pay for higher coverage only if specific risk factors are confirmed.',
+      'Egyptian Maus are rated low for chronic risk on this page. Lemonade\'s low premium fits that profile; pay for higher coverage only if specific risk factors are confirmed.',
     alternateCarriers: ['embrace', 'pumpkin-pet'] as [CarrierSlug, CarrierSlug],
     sampleMonthlyPremium: [20, 40],
     keyCoverageNeeds: ['Standard accident + illness'],
@@ -591,7 +591,7 @@ export const CAT_INSURANCE_BREEDS: BreedInsuranceProfile[] = [
     lifespan: [12, 20],
     keyConditions: [
       'Hypertrophic cardiomyopathy (in some lines)',
-      'Megaesophagus (rare but breed-prevalent)',
+      'Megaesophagus',
       'Pyruvate kinase deficiency (Abyssinian-lineage)',
     ],
     chronicRisk: 'moderate',
@@ -613,14 +613,14 @@ export const CAT_INSURANCE_BREEDS: BreedInsuranceProfile[] = [
     keyConditions: [
       'Generally healthy breed',
       'Dental disease (typical for older cats)',
-      'Periodic anemia (rare)',
+      'Periodic anemia',
     ],
     chronicRisk: 'low',
     orthopedicRisk: 'low',
     dentalRisk: 'moderate',
     recommendedCarrier: 'lemonade-pet' as CarrierSlug,
     recommendedReason:
-      'Ocicats are a vigorous hybrid breed with few hereditary issues. Lemonade fits the risk profile.',
+      'Ocicats are rated low for chronic risk on this page. Lemonade fits the risk profile.',
     alternateCarriers: ['embrace', 'pumpkin-pet'] as [CarrierSlug, CarrierSlug],
     sampleMonthlyPremium: [18, 35],
     keyCoverageNeeds: ['Standard accident + illness', 'Dental coverage'],
