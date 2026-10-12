@@ -441,3 +441,12 @@ test('vets fix T8: worth-it answer page makes no unsourced emergency dollar rang
   expect(text).not.toMatch(/\$5,000|\$5k|\$10,000|\$10k/)
   await expect(page.locator('main')).toContainText('a sudden large emergency bill from savings')
 })
+
+test('vets fix T9: specialist pages make no unsourced annual specialist-cost claim', async ({ page }) => {
+  for (const path of ['/specialists', '/specialists/veterinary-cardiology']) {
+    await page.goto(path, { waitUntil: 'domcontentloaded' })
+    const text = await page.locator('body').innerText()
+    expect(text).not.toContain('Chronic specialist visits can cost')
+    await expect(page.getByText('Chronic specialist care can add up over a year').first()).toBeVisible()
+  }
+})
