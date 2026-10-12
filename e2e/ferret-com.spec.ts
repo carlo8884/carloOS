@@ -209,3 +209,23 @@ test('ferret fix T5: disclosure pages do not claim the Chewy program, and keep t
     expect(ld).not.toMatch(/participa\w*[^.]*\bChewy|Chewy Affiliate Program/i)
   }
 })
+
+test('ferret fix P1: cage review and home standalone links are at least 24px tall at 390px', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 })
+  for (const [path, expected] of [
+    ['/reviews/best-ferret-cage', ['How we pick', 'How we pick']],
+    ['/', ['All ferret tools →', 'Gear buyer guides →']],
+  ] as const) {
+    await page.goto(path)
+    const links = await page.evaluate(() =>
+      Array.from(document.querySelectorAll('a[href]'))
+        .filter((a) => !a.closest('p, li'))
+        .map((a) => ({ text: a.textContent?.trim() ?? '', rect: a.getBoundingClientRect(), hidden: getComputedStyle(a).visibility === 'hidden' }))
+        .filter(({ rect, hidden }) => !hidden && rect.width > 1 && rect.height > 1)
+        .map(({ text, rect }) => ({ text, height: Math.round(rect.height * 10) / 10 })),
+    )
+    const named = links.filter(({ text }) => (expected as readonly string[]).includes(text))
+    expect(named.map(({ text }) => text).sort(), path).toEqual([...expected].sort())
+    expect(links.filter(({ height }) => height < 24).map(({ text, height }) => `${text} (${height}px)`), path).toEqual([])
+  }
+})
