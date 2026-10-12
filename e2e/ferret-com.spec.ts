@@ -317,6 +317,14 @@ test('ferret fix M7: H-style vs mesh guide has a shop link for both picks, in th
   expect(list).toContain(`https://ferret.com${mesh}`)
 })
 
+test('ferret fix Q5: health pages use credited photos that load, not the removed Unsplash ids', async ({ page }) => {
+  for (const path of ['/health/adrenal-disease', '/health/aging-ferret-care']) {
+    await page.goto(path, { waitUntil: 'domcontentloaded' })
+    const html = await page.content()
+    expect(html, path).not.toMatch(/photo-1633627876960|photo-1604848698030/)
+  }
+})
+
 test('ferret fix M8: first-week checklist has a shop table for the day-one setup, Amazon only', async ({ page }) => {
   await page.goto('/ownership/first-week-checklist', { waitUntil: 'domcontentloaded' })
   const links = page.locator('#shop-first-week a[href^="/go/"]')
