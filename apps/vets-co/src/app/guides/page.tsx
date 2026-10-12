@@ -14,7 +14,7 @@ const breadcrumbSchema = buildBreadcrumbSchema({
 const SECTIONS = [
   { id: 'vets-guides-cost', category: 'Cost of Care', intro: 'What care costs and how owners pay for it.', items: [{ title: 'What Vet Care Really Costs', href: '/guides/cost-of-veterinary-care', badge: 'Start Here' }, { title: 'How to Afford Vet Care', href: '/guides/how-to-afford-vet-care' }, { title: 'Emergency Vet Costs Explained', href: '/guides/emergency-vet-costs' }] },
   { id: 'vets-guides-visit', category: 'The Vet Visit', intro: 'What happens at an appointment and how to choose a clinic.', items: [{ title: 'What to Expect at the Vet', href: '/guides/what-to-expect-at-the-vet' }, { title: 'Questions to Ask Your Vet', href: '/guides/questions-to-ask-your-vet' }, { title: 'Choosing a Veterinarian', href: '/guides/choosing-a-veterinarian' }] },
-  { id: 'vets-guides-urgent', category: 'Urgent vs. Routine', intro: 'Which setting fits the situation.', items: [{ title: 'ER vs. Urgent Care vs. Regular Vet', href: '/guides/er-vs-urgent-care' }, { title: 'When to Go to the Vet', href: '/guides/when-to-go-to-the-vet' }] },
+  { id: 'vets-guides-urgent', category: 'Urgent vs. Routine', intro: 'Which setting fits the situation.', items: [{ title: 'ER vs. Urgent Care vs. Regular Vet', href: '/guides/er-vs-urgent-care' }, { title: 'When to Go to the Vet', href: '/guides/when-to-go-to-the-vet' }, { title: 'Pet First-Aid Kit Checklist', href: '/guides/pet-first-aid-kit' }] },
 ]
 
 const ALL_GUIDE_ITEMS = SECTIONS.flatMap((s) => s.items)

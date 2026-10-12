@@ -644,3 +644,31 @@ test('vets fix L10: health and guide Article dateModified matches the visible La
     for (const d of modified) expect(d, `${path} dateModified`).toBe(visible)
   }
 })
+
+test('vets fix R1: pet first-aid kit guide has the sourced checklist, tagged searches, disclosure, hub link and sitemap entry', async ({ page, request }) => {
+  await page.goto('/guides/pet-first-aid-kit', { waitUntil: 'domcontentloaded' })
+  await expect(page.locator('h1')).toContainText('Pet First-Aid Kit Checklist')
+  await expect(page.locator('#kit-table tbody tr')).toHaveCount(17)
+  await expect(page.locator('#kit-table')).toContainText('never on wounds')
+  const shop = await page.locator('main a[href^="/go/"]').evaluateAll((els) => [...new Set(els.map((el) => el.getAttribute('href')))])
+  expect(shop.sort()).toEqual([
+    '/go/amazon-brand/digital+pet+thermometer?s=guides-pet-first-aid-kit',
+    '/go/amazon-brand/pet+first+aid+kit?s=guides-pet-first-aid-kit',
+    '/go/amazon-brand/wound+care+gauze?s=guides-pet-first-aid-kit',
+  ])
+  await expect(page.getByText(/commission/i).first()).toBeVisible()
+  for (const href of ['https://www.avma.org/resources-tools/pet-owners/emergencycare/first-aid-tips-pet-owners', 'https://www.merckvetmanual.com/special-pet-topics/emergencies/first-aid-kit-for-a-pet']) {
+    await expect(page.locator(`a[href="${href}"]`).first()).toBeAttached()
+  }
+  const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
+  expect(ld).not.toMatch(/"@type":"(Product|Review|Offer|AggregateRating)"/)
+  for (const q of ['Should I buy a ready-made pet first-aid kit or build one?', 'How often should I check the kit?']) await expect(page.getByText(q, { exact: true })).toBeVisible()
+  const hop = await request.get('/go/amazon-brand/pet+first+aid+kit?s=guides-pet-first-aid-kit', { maxRedirects: 0 })
+  expect(hop.status()).toBe(302)
+  expect(hop.headers().location).toMatch(/^https:\/\/(www\.)?amazon\.com\/.*[?&]tag=/)
+
+  await page.goto('/guides', { waitUntil: 'domcontentloaded' })
+  await expect(page.locator('main a[href="/guides/pet-first-aid-kit"]')).toHaveCount(1)
+  const sitemap = await (await request.get('/sitemap/0.xml')).text()
+  expect(sitemap).toContain('<loc>https://vets.co/guides/pet-first-aid-kit</loc>')
+})
