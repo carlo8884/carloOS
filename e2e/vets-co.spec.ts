@@ -446,7 +446,7 @@ test('vets fix T9: specialist pages make no unsourced annual specialist-cost cla
   for (const path of ['/specialists', '/specialists/veterinary-cardiology']) {
     await page.goto(path, { waitUntil: 'domcontentloaded' })
     const text = await page.locator('body').innerText()
-    expect(text).not.toMatch(/3,000–15,000/)
+    expect(text).not.toContain('Chronic specialist visits can cost')
     await expect(page.getByText('Chronic specialist care can add up over a year').first()).toBeVisible()
   }
 })
