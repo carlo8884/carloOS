@@ -1,7 +1,7 @@
 import { expect, test } from '@playwright/test'
 import { expectMoneyCopy, reviewRoutes } from './money-copy'
 import { expectHop } from './hop'
-import { TRUPANION_TAG } from './tags'
+import { AMAZON_TAG, TRUPANION_TAG } from './tags'
 
 test('insurance review, then a carrier quote hop', async ({ page }) => {
   await page.goto('/reviews/best-pet-insurance')
@@ -465,5 +465,16 @@ test('vets fix T9b: specialist pages carry no unsourced annual range in the cros
     await page.goto(path, { waitUntil: 'domcontentloaded' })
     const text = await page.locator('body').innerText()
     expect(text).not.toMatch(/3,000–15,000/)
+  }
+})
+
+test('vets fix T12: every Amazon hop on the main money pages redirects to amazon.com with the tag', async ({ page }) => {
+  for (const path of ['/telehealth', '/tools/insurance-finder', '/tools/cat-calorie-calculator', '/medications']) {
+    await page.goto(path, { waitUntil: 'domcontentloaded' })
+    const hops = await page.locator('a[href^="/go/amazon"]').evaluateAll((els) => [...new Set(els.map((el) => el.getAttribute('href') || ''))])
+    expect(hops.length, `${path} Amazon hops`).toBeGreaterThan(0)
+    for (const hop of hops) {
+      await expectHop(page.request, hop, ['https://amazon.com/', `tag=${AMAZON_TAG}`])
+    }
   }
 })

@@ -421,3 +421,14 @@ test('ferret fix M15: emergency warning signs page has a carrier shop link', asy
   await expect(page.locator(`#emergency-shop a[href="${hop}"]`)).toHaveCount(1)
   await expect(page.getByText('Keep a carrier ready.')).toBeVisible()
 })
+
+test('ferret fix T12: every Amazon hop on the main money pages redirects to amazon.com with the tag', async ({ page }) => {
+  for (const path of ['/ownership/ferret-supplies-checklist', '/ferret-starter-kit', '/ownership/first-week-checklist', '/care/cage-cleaning-routine', '/reviews/best-ferret-cage']) {
+    await page.goto(path, { waitUntil: 'domcontentloaded' })
+    const hops = await page.locator('a[href^="/go/amazon"]').evaluateAll((els) => [...new Set(els.map((el) => el.getAttribute('href') || ''))])
+    expect(hops.length, `${path} Amazon hops`).toBeGreaterThan(0)
+    for (const hop of hops) {
+      await expectHop(page.request, hop, ['https://amazon.com/', `tag=${AMAZON_TAG}`])
+    }
+  }
+})
