@@ -11,9 +11,10 @@ const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Best Pet Teleheal
 // Per-service Product schemas — editorial Review ratings mirror the on-page
 // ReviewCard scores (no AggregateRating; see buildProductSchema contract).
 const vetsterSchema = buildProductSchema({ name: 'Vetster', description: 'Single visits start at $102. Plus is $12/month, billed annually.', url: 'https://vets.co/go/vetster/telehealth?s=telehealth', imageUrl: '', priceRange: '102' })
-const askVetSchema = buildProductSchema({ name: 'AskVet', description: 'The current askvet.app pages do not print a visit type. The current page does not print a flat monthly chat price.', url: 'https://vets.co/go/askvet/telehealth?s=telehealth', imageUrl: '', })
+const askVetSchema = buildProductSchema({ name: 'AskVet', description: 'The current askvet.app pages do not print a visit type. The current page does not print a flat monthly chat price.', url: 'https://vets.co/telehealth#askvet', imageUrl: '', })
 const chewyConnectSchema = buildProductSchema({ name: 'Chewy Connect with a Vet', description: 'Free veterinary-technician chat with a Chewy account, plus a separate licensed-vet video visit that Chewy prices at $49.99 and does not offer in every state.', url: 'https://vets.co/go/chewy/connect?s=telehealth', imageUrl: '' })
-const combinedSchema = combineSchemas(schema, vetsterSchema, askVetSchema, chewyConnectSchema)
+// Vetster and Chewy hops are held, so their schema urls point at the on-page cards.
+const combinedSchema = combineSchemas(schema, { ...vetsterSchema, url: 'https://vets.co/telehealth#vetster' }, askVetSchema, { ...chewyConnectSchema, url: 'https://vets.co/telehealth#chewy' })
 
 const FAQS = [
   { question: 'Can a telehealth vet prescribe medication for my pet?', answer: 'It depends on your state. Most states require a veterinarian-client-patient relationship (VCPR) before a vet can prescribe, and many states only allow a VCPR to be established through an in-person exam. A minority of states permit establishing a VCPR remotely. Vetster\'s help article, updated 2025-12-18, says it verifies an active license in the veterinarian\'s jurisdiction before they go live. It does not say the veterinarian is licensed where the owner is, or that a prescription is therefore valid. Chat-only services are generally more limited. For refills of existing prescriptions, your regular clinic is usually the faster route.' },
@@ -181,7 +182,7 @@ export default function TelehealthPage() {
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-11" />
+              <ComparisonFoot updated="2026-10-12" />
             </div>
             <h2 className="font-display text-2xl font-bold text-brand-dark mt-12 mb-6">Frequently Asked Questions</h2>
             <p>Those figures are typical US ranges dated 2026-10-05.</p>
