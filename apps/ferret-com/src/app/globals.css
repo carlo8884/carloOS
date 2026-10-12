@@ -184,3 +184,16 @@ td > a,
   min-height: 24px;
   align-items: center;
 }
+
+/* Phone tap targets (P4, Ferret only): hub and legal breadcrumbs, legal footer links,
+   the cost-calculator note link and directory card / pager links. */
+nav > a.amber-link,
+nav.text-xs.flex.mb-8 > a,
+div.mt-12.border-t.flex > a,
+div.rounded.border > a.underline,
+div.text-xs > a.pointer-events-auto,
+nav.flex.gap-4.mt-8 > a {
+  display: inline-flex;
+  min-height: 24px;
+  align-items: center;
+}
