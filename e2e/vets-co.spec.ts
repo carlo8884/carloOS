@@ -712,3 +712,38 @@ test('vets fix R3: /guides/how-to-give-your-pet-a-pill has the sourced guide, ta
   const sitemap = await (await request.get('/sitemap/0.xml')).text()
   expect(sitemap).toContain('<loc>https://vets.co/guides/how-to-give-your-pet-a-pill</loc>')
 })
+
+test('vets fix L12: issue #2676 dead source links replaced or removed, no held Chewy or Pets Best link rendered', async ({ page }) => {
+  const dead = [
+    'https://www.aaha.org/aaha-guidelines/emergency-and-critical-care/',
+    'https://www.aaha.org/aaha-guidelines/emergency-and-critical-care/emergency-and-critical-care-guidelines/',
+    'https://www.aaha.org/aaha-guidelines/otitis/',
+    'https://www.aaha.org/aaha-guidelines/pain-management-guidelines/',
+    'https://www.aaha.org/aaha-guidelines/dental-care-configuration/',
+    'https://www.aaha.org/aaha-guidelines/senior-care-configuration/',
+    'https://capcvet.org/guidelines/roundworms/',
+    'https://www.cdc.gov/parasites/toxocariasis/gen_info/faqs.html',
+  ]
+  const pages: Record<string, string[]> = {
+    '/health/emergency-signs': [], '/health/allergic-reactions-dogs': [], '/health/dehydration-in-dogs': [], '/health/heat-stroke-dogs': [],
+    '/health/ear-infections-dogs': [], '/tools/er-vs-clinic': [], '/tools/is-this-a-cat-emergency': [],
+    '/health/arthritis-in-dogs': ['https://www.aaha.org/wp-content/uploads/globalassets/02-guidelines/2022-pain-management/resources/2022-aaha-pain-management-guidelines-for-dog-and-cats_updated_060622.pdf'],
+    '/health/periodontal-disease-pets': ['https://www.aaha.org/resources/2019-aaha-dental-care-guidelines-for-dogs-and-cats/resource-center/'],
+    '/health/senior-bloodwork-guide': ['https://www.aaha.org/wp-content/uploads/globalassets/02-guidelines/2023-aaha-senior-care-guidelines-for-dogs-and-cats/resources/2023-aaha-senior-care-guidelines-for-dogs-and-cats.pdf'],
+    '/health/senior-pet-care': ['https://www.aaha.org/wp-content/uploads/globalassets/02-guidelines/2023-aaha-senior-care-guidelines-for-dogs-and-cats/resources/2023-aaha-senior-care-guidelines-for-dogs-and-cats.pdf'],
+    '/health/intestinal-parasites': ['https://capcvet.org/guidelines/ascarid/', 'https://www.cdc.gov/toxocariasis/about/index.html'],
+  }
+  for (const [path, fresh] of Object.entries(pages)) {
+    await page.goto(path, { waitUntil: 'domcontentloaded' })
+    for (const href of dead) await expect(page.locator(`a[href="${href}"]`), `${path} ${href}`).toHaveCount(0)
+    for (const href of fresh) await expect(page.locator(`a[href="${href}"]`).first(), `${path} ${href}`).toBeAttached()
+  }
+  await page.goto('/telehealth', { waitUntil: 'domcontentloaded' })
+  await expect(page.locator('#chewy')).toBeVisible()
+  await expect(page.locator('a[href*="/go/chewy"], a[href*="chewy.com"]')).toHaveCount(0)
+  for (const path of ['/insurance/deductibles-reimbursement', '/insurance/when-to-enroll']) {
+    await page.goto(path, { waitUntil: 'domcontentloaded' })
+    await expect(page.locator('#pets-best')).toBeVisible()
+    await expect(page.locator('a[href*="/go/pets-best"], a[href*="petsbest.com"]'), path).toHaveCount(0)
+  }
+})

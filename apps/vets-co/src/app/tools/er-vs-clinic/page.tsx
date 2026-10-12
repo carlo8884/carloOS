@@ -34,11 +34,6 @@ const SOURCES = [
     publisher: 'AVMA',
   },
   {
-    label: 'AAHA: Emergency and Critical Care Guidelines',
-    url: 'https://www.aaha.org/aaha-guidelines/emergency-and-critical-care/',
-    publisher: 'AAHA',
-  },
-  {
     label: 'ASPCA Animal Poison Control Center',
     url: 'https://www.aspca.org/pet-care/aspca-poison-control',
     publisher: 'ASPCA',
