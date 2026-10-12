@@ -1529,6 +1529,9 @@ export default function HomePage() {
             <Link
               href="/tools"
               style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                minHeight: '24px',
                 fontSize: '0.875rem',
                 fontWeight: 700,
                 color: 'var(--brand-amber)',
@@ -1541,6 +1544,9 @@ export default function HomePage() {
             <Link
               href="/reviews"
               style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                minHeight: '24px',
                 fontSize: '0.875rem',
                 fontWeight: 700,
                 color: 'var(--brand-amber)',
