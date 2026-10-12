@@ -166,3 +166,11 @@ test('every review route rejects page-about-itself copy', async ({ page }) => {
     await expectMoneyCopy(page)
   }
 })
+
+test('kibble guide search data points at the Amazon hop or on-page picks', async ({ page }) => {
+  await page.goto('/diet/best-ferret-kibble', { waitUntil: 'domcontentloaded' })
+  const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
+  expect(ld).not.toMatch(/ferret\.com\/go\/(wysong|marshall|carniwhole|chewy)/)
+  expect(ld).toContain('go/amazon/B019W9VXZK')
+  expect(ld).toContain('best-ferret-kibble#marshall-premium-diet')
+})
