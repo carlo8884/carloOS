@@ -34,7 +34,7 @@ const FAQS = [
 ]
 
 const schema = combineSchemas(
-  buildArticleSchema({ siteId: 'vets-co', title: 'Recovery Cone and E-Collar Guide', description: 'How to use a cone or e-collar after your dog or cat has surgery.', url: PAGE_URL, imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-10-12T00:00:00Z', modifiedAt: '2026-10-12T00:00:00Z', citation: SOURCES }),
+  buildArticleSchema({ siteId: 'vets-co', title: 'Recovery Cones and E-Collars', description: 'How to use a cone or e-collar after your dog or cat has surgery.', url: PAGE_URL, imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-10-12T00:00:00Z', modifiedAt: '2026-10-12T00:00:00Z', citation: SOURCES }),
   buildFAQSchema({ questions: FAQS }),
 )
 
