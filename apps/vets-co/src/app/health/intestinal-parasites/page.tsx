@@ -5,10 +5,10 @@ import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaSc
 import { ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Intestinal Parasites in Dogs — Roundworms, Hookworms | Vets.co', description: 'Annual fecal testing detects roundworms, hookworms, whipworms, coccidia, and Giardia before they cause clinical disease.', path: '/health/intestinal-parasites', type: 'article' })
 const SOURCES = [
-  { label: 'Companion Animal Parasite Council: Roundworms', url: 'https://capcvet.org/guidelines/roundworms/', publisher: 'CAPC' },
+  { label: 'Companion Animal Parasite Council: Ascarid (roundworm) guidelines', url: 'https://capcvet.org/guidelines/ascarid/', publisher: 'CAPC' },
   { label: 'Companion Animal Parasite Council: Hookworms', url: 'https://capcvet.org/guidelines/hookworms/', publisher: 'CAPC' },
   { label: 'Companion Animal Parasite Council: Giardia', url: 'https://capcvet.org/guidelines/giardia/', publisher: 'CAPC' },
-  { label: 'CDC: Toxocara (Roundworms) FAQs', url: 'https://www.cdc.gov/parasites/toxocariasis/gen_info/faqs.html', publisher: 'CDC' },
+  { label: 'CDC: About Toxocariasis', url: 'https://www.cdc.gov/toxocariasis/about/index.html', publisher: 'CDC' },
 ]
 const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Intestinal Parasites in Dogs', description: 'Roundworms, hookworms, whipworms, Giardia — testing, treatment, and zoonotic risk.', url: 'https://vets.co/health/intestinal-parasites', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-12T00:00:00Z' ,
   citation: SOURCES,

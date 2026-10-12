@@ -7,7 +7,7 @@ export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Art
 const SOURCES = [
   { label: 'WSAVA: Osteoarthritis in Dogs and Cats', url: 'https://wsava.org/global-guidelines/pain-guidelines/', publisher: 'WSAVA' },
   { label: 'Merck Veterinary Manual: Osteoarthritis in Dogs', url: 'https://www.merckvetmanual.com/musculoskeletal-system/osteoarthritis-in-dogs-and-cats/osteoarthritis-in-dogs-and-cats', publisher: 'Merck Vet Manual' },
-  { label: 'AAHA: Pain Management Guidelines', url: 'https://www.aaha.org/aaha-guidelines/pain-management-guidelines/', publisher: 'AAHA' },
+  { label: 'AAHA: 2022 Pain Management Guidelines for Dogs and Cats', url: 'https://www.aaha.org/wp-content/uploads/globalassets/02-guidelines/2022-pain-management/resources/2022-aaha-pain-management-guidelines-for-dog-and-cats_updated_060622.pdf', publisher: 'AAHA' },
   { label: 'Anderson KL et al. Estimated annual prevalence of appendicular osteoarthritis in UK primary-care dogs. Scientific Reports. 2018.', url: 'https://www.nature.com/articles/s41598-018-23940-z', publisher: 'Scientific Reports' },
   { label: 'Kealy RD et al. Evaluation of the effect of limited food consumption on radiographic evidence of osteoarthritis in dogs. JAVMA. 2000;217:1678-1680.', url: 'https://doi.org/10.2460/javma.2000.217.1678', publisher: 'JAVMA' },
 ]
