@@ -313,3 +313,18 @@ test('vets fix T5: privacy and disclosure pages do not claim Chewy or telehealth
     expect(body).toMatch(/telehealth services[^.]*are not currently connected/i)
   }
 })
+
+test('vets fix Q1: breed insurance picks drop unsourced claim-frequency and ranking wording', async ({ page }) => {
+  const removed = /lowest-claim|most-claimed|of any (AKC )?breed|among cat breeds|one of the (only|few|very few)|no other carrier|the rare carrier|most carriers|protects best|well-documented|industry-standard|\d+% (lifetime|of )/i
+  for (const [path, kept] of [
+    ['/pet-insurance/breeds/golden-retriever', "Hemangiosarcoma and lymphoma are on the Golden's condition list"],
+    ['/pet-insurance/breeds/maine-coon', 'Maine Coons carry a breed-specific HCM mutation (MYBPC3)'],
+  ]) {
+    await page.goto(path)
+    const body = await page.locator('main').innerText()
+    expect(body, path).not.toMatch(removed)
+    expect(body, path).toContain(kept)
+    const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
+    expect(ld, path).not.toMatch(removed)
+  }
+})
