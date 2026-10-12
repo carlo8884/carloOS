@@ -43,9 +43,9 @@ const insurerListSchema = {
   url: 'https://vets.co/reviews/best-pet-insurance',
   numberOfItems: 3,
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Trupanion', url: 'https://vets.co/go/trupanion/home?s=reviews-best-pet-insurance' },
-    { '@type': 'ListItem', position: 2, name: 'Healthy Paws', url: 'https://vets.co/go/healthy-paws/home?s=reviews-best-pet-insurance' },
-    { '@type': 'ListItem', position: 3, name: 'Embrace', url: 'https://vets.co/go/embrace/home?s=reviews-best-pet-insurance' },
+    { '@type': 'ListItem', position: 1, name: 'Trupanion', url: 'https://vets.co/reviews/best-pet-insurance#trupanion' },
+    { '@type': 'ListItem', position: 2, name: 'Healthy Paws', url: 'https://vets.co/reviews/best-pet-insurance#healthy-paws' },
+    { '@type': 'ListItem', position: 3, name: 'Embrace', url: 'https://vets.co/reviews/best-pet-insurance#embrace' },
   ],
 }
 
@@ -53,14 +53,14 @@ const insurerListSchema = {
 const trupanionSchema = buildProductSchema({
   name: 'Trupanion Pet Insurance',
   description: 'Offers direct vet payment; check terms. 90% reimbursement, unlimited payouts, per-condition deductible.',
-  url: 'https://vets.co/go/trupanion/home?s=reviews-best-pet-insurance',
+  url: 'https://vets.co/reviews/best-pet-insurance#trupanion',
   imageUrl: '',
 })
 
 const healthyPawsSchema = buildProductSchema({
   name: 'Healthy Paws Pet Insurance',
   description: 'The Healthy Paws claims page (https://www.healthypawspetinsurance.com/pet-insurance-claims.html) says most claims are processed in 2 days. The annual reimbursement limit is a choice, not automatically unlimited.',
-  url: 'https://vets.co/go/healthy-paws/home?s=reviews-best-pet-insurance',
+  url: 'https://vets.co/reviews/best-pet-insurance#healthy-paws',
   imageUrl: '',
 })
 
@@ -68,7 +68,7 @@ const embraceSchema = buildProductSchema({
   name: 'Embrace Pet Insurance',
   description: 'Wellness add-on available for routine and preventive care. Deductible program: see the carrier\'s current terms.',
   // note: "highly customizable" is a calibrated descriptor, not an objective-superiority claim
-  url: 'https://vets.co/go/embrace/home?s=reviews-best-pet-insurance',
+  url: 'https://vets.co/reviews/best-pet-insurance#embrace',
   imageUrl: '',
 })
 

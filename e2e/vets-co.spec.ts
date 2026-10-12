@@ -280,3 +280,17 @@ test('vets fix hp reimbursement: Healthy Paws guides state the sourced 2-day cla
     expect(ld).not.toMatch(/fast reimbursement|reimbursement back fast/i)
   }
 })
+
+test('vets fix: JSON-LD points at on-page cards, not held partner quote hops', async ({ page }) => {
+  for (const path of ['/reviews/best-pet-insurance', '/insurance/wellness-plans-vs-insurance']) {
+    await page.goto(path, { waitUntil: 'domcontentloaded' })
+    const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
+    const hops = ld.match(/vets\.co\/go\/[^"\s]+/g) ?? []
+    expect(hops.filter((hop) => !/^vets\.co\/go\/amazon(-brand)?\//.test(hop)), path).toEqual([])
+    if (path === '/reviews/best-pet-insurance') {
+      expect(ld).toContain('best-pet-insurance#trupanion')
+      expect(ld).toContain('best-pet-insurance#healthy-paws')
+      expect(ld).toContain('best-pet-insurance#embrace')
+    }
+  }
+})
