@@ -86,7 +86,8 @@ export default function WinterHarnessFitGuidePage() {
         <p>The <Link href="/reviews/vest-vs-h-harness-guide">vest versus H-style guide</Link> repeats the harness review&apos;s fit rule as one finger of slack, checked before the walk, with no unsupervised time in the harness. This page does not average one finger and two fingers into a third rule. Use the review&apos;s check on the review&apos;s harness, and the training page&apos;s check when you are following that page. Both say a loose harness is how a ferret backs out.</p>
         <h2>Which harness to shop</h2>
         <p>The vest is the escape-resistance pick on that guide, a broad panel over the chest and shoulders. The review says it can overheat a ferret in warm weather unless the panel is mesh. That warning is about heat, not about October. The H-style is the lighter harness the guide says to buy only if you will measure and recheck every outing. The main link on this page is the vest search from the harness review, the layout named when backing out is the problem. The H-style search is in the table and below. A coat change is the <Link href="/reviews/fall-molt-brush-guide">fall molt guide</Link>. It does not change the buckle.</p>
-        <div id="harness-table" className="my-6 max-w-full min-w-0">          <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
+        <div id="harness-table" className="my-6 max-w-full min-w-0">
+          <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
             <caption className="text-left font-semibold text-brand-dark p-3">At a glance</caption>
             <thead>
               <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">

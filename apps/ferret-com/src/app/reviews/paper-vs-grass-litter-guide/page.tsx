@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata, ArticleSourcesList, LastUpdated, ComparisonFoot } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata, ArticleSourcesList, LastUpdated, ComparisonFoot, TableShopLink, ShopCtas } from '@carloOS/ui'
 import { HopDisclosure } from '../../../components/HopDisclosure'
 
 export const metadata: Metadata = buildMetadata({
@@ -96,7 +96,13 @@ export default function PaperVsGrassLitterGuidePage() {
         <h2>Who should buy which litter</h2>
         <p>Buy paper pellets when you want the litter the review calls the default: very low dust, non-clumping, and widely available. Buy grass pellets when texture is the complaint and you can change the pan more often. Do not buy a clumping cat litter for either job. Heat-treated wood pellets stay on the odor comparison, and only as compressed low-phenol pellets, never as aromatic shavings.</p>
         <p>Paper pellets are the pick because the review calls them the low-dust default. Purina discontinued Yesterday’s News on April 20, 2022. The sale price can differ from the tier in that review.</p>
-        <div className="my-6 max-w-full min-w-0">
+        <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/grass+pellet+litter+small+animal?s=reviews-paper-vs-grass-litter-guide" />
+        <p>For the grass pick, the link below is an Amazon search, not one product. Buy it when texture is the complaint and you can change the pan more often.</p>
+        <ShopCtas
+          amazonHref="/go/amazon-brand/grass+pellet+litter+small+animal?s=reviews-paper-vs-grass-litter-guide"
+          amazonLabel="Search Amazon for grass pellet litter"
+        />
+        <div id="litter-table" className="my-6 max-w-full min-w-0">
           <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
             <caption className="text-left font-semibold text-brand-dark p-3">At a glance</caption>
             <thead>
@@ -136,6 +142,11 @@ export default function PaperVsGrassLitterGuidePage() {
                 <th scope="row" className="p-3 font-bold text-brand-dark text-left">Price tier</th>
                 <td className="p-3">Mid</td>
                 <td className="p-3">Mid</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Shop</th>
+                <td className="p-3"><TableShopLink href="/go/amazon-brand/recycled+paper+pellet+litter+non+clumping?s=reviews-paper-vs-grass-litter-guide" product="Recycled paper pellet litter" label="Search Amazon for recycled paper pellet litter" /></td>
+                <td className="p-3"><TableShopLink href="/go/amazon-brand/grass+pellet+litter+small+animal?s=reviews-paper-vs-grass-litter-guide" product="Grass pellet litter" label="Search Amazon for grass pellet litter" /></td>
               </tr>
             </tbody>
           </table>

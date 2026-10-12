@@ -86,7 +86,8 @@ export default function FallMoltBrushGuidePage() {
         <p>The <Link href="/care/seasonal-shedding">seasonal shedding page</Link> says the job during a shed is to lift loose hair before the ferret swallows it. A soft slicker brush or a fine-toothed metal comb, in short sessions of a minute or two, is the method it names. Daily brushing during the peak captures more hair. Ferrets groom themselves and, unlike cats, do not reliably vomit hairballs. The page says a heavy shed raises the swallowed-hair load, and a hair mass can contribute to a gastrointestinal obstruction. A vet-recommended hairball remedy is the other step it names. This guide does not name a remedy brand.</p>
         <h2>Baths stay limited</h2>
         <p>Both pages allow one warm-water bath to loosen a heavy shed and then say not to repeat it. Frequent bathing strips skin oils and can make the coat greasier. Most of the work is the brush. Shampoo stays on the grooming page. The lint roller stays on the shedding page. The links on this page are the soft slicker and fine-toothed comb searches from that page.</p>
-        <div id="molt-table" className="my-6 max-w-full min-w-0">          <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
+        <div id="molt-table" className="my-6 max-w-full min-w-0">
+          <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
             <caption className="text-left font-semibold text-brand-dark p-3">At a glance</caption>
             <thead>
               <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">

@@ -387,3 +387,17 @@ test('ferret fix M12: winter harness fit guide has a shop link for both picks', 
   expect(table).toEqual([vest, h])
   await expect(page.locator(`main a[href="${h}"]`)).toHaveCount(2)
 })
+
+test('ferret fix M13: paper and wood vs grass guides have a shop link for both picks', async ({ page }) => {
+  const pages: Array<[string, string]> = [
+    ['paper-vs-grass-litter-guide', '/go/amazon-brand/recycled+paper+pellet+litter+non+clumping?s=reviews-paper-vs-grass-litter-guide'],
+    ['wood-vs-grass-litter-guide', '/go/amazon-brand/heat+treated+wood+pellet+litter?s=reviews-wood-vs-grass-litter-guide'],
+  ]
+  for (const [slug, first] of pages) {
+    await page.goto(`/reviews/${slug}`, { waitUntil: 'domcontentloaded' })
+    const grass = `/go/amazon-brand/grass+pellet+litter+small+animal?s=reviews-${slug}`
+    const table = await page.locator('#litter-table a[href^="/go/"]').evaluateAll((els) => els.map((el) => el.getAttribute('href')))
+    expect(table).toEqual([first, grass])
+    await expect(page.locator(`main a[href="${grass}"]`)).toHaveCount(2)
+  }
+})
