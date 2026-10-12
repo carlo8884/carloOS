@@ -215,7 +215,7 @@ export default function FerretAgingPage() {
             publishedAt="2026-05-28"
             updatedAt="2026-05-28"
           />
-          <LastUpdated date="2026-10-12" />
+          <LastUpdated date="2026-10-11" />
 
           <DropCap>
             The senior years are where the structural decisions made earlier
