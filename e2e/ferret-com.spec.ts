@@ -264,3 +264,9 @@ test('ferret fix M5: wood litter and ear cleaner cards get one Amazon search but
   ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
   expect(ld).not.toMatch(/\/go\/(marshall|chewy|wysong)\b/)
 })
+
+test('ferret fix Q3: comparison table caption reads "At a glance", not internal wording', async ({ page }) => {
+  await page.goto('/diet/kit-vs-adult-feeding', { waitUntil: 'domcontentloaded' })
+  expect(await page.content()).not.toMatch(/from the sentences on this page/i)
+  await expect(page.locator('caption', { hasText: 'At a glance' }).first()).toBeVisible()
+})

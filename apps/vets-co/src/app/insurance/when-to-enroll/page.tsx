@@ -58,7 +58,7 @@ export default function WhenToEnrollPage() {
           <p>For adopted pets with unknown histories, enroll as soon as possible after adoption and after an initial veterinary exam. Establishing coverage early limits the window in which undocumented conditions might later be deemed pre-existing. A letter-size file jacket is how the adoption papers and the new-pet exam notes stay one sleeve until enrollment is done — it is not a letter-size poly envelope, not a kraft two-pocket folder, and not letter-size hanging file folders. Schedule the enrollment around the new-pet exam so you understand your pet&apos;s baseline health and can choose appropriate coverage from the start.</p>
           <div className="my-6 max-w-full min-w-0">
             <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
-              <caption className="text-left font-semibold text-brand-dark p-3">Life stage, from the sentences on this page</caption>
+              <caption className="text-left font-semibold text-brand-dark p-3">Life stage at a glance</caption>
               <thead>
                 <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
                   <th scope="col" className="p-3 font-bold text-brand-dark">Stage</th>
@@ -165,7 +165,7 @@ export default function WhenToEnrollPage() {
             subtitle="Listed for owners with younger pets"
             winner
             description={
-              <p>Lemonade’s FAQ, fetched 2026-10-08, says signing up while a pet is young and healthy means they are not denied coverage at renewal because of age. Our notes mark Lemonade for owners with younger pets. Availability varies by state; confirm your location and read the pre-existing-condition language when you quote.</p>
+              <p>Lemonade’s FAQ, fetched 2026-10-08, says signing up while a pet is young and healthy means they are not denied coverage at renewal because of age. That is why Lemonade is the pick for owners with younger pets. Availability varies by state; confirm your location and read the pre-existing-condition language when you quote.</p>
             }
             specs={[
               { label: 'Best for', value: 'Young pets', highlight: 'good' },

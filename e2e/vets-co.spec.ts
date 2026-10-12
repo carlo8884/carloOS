@@ -353,3 +353,13 @@ test('vets fix M4: telehealth JSON-LD points at on-page cards, not held Vetster 
     await expect(page.locator(`#${id}`)).toHaveCount(1)
   }
 })
+
+test('vets fix Q3: comparison tables and carrier copy drop internal "from the sentences on this page" and "our notes" wording', async ({ page }) => {
+  for (const path of ['/insurance/breed-specific-risk', '/reviews/lemonade-vs-pets-best-guide']) {
+    await page.goto(path, { waitUntil: 'domcontentloaded' })
+    const html = await page.content()
+    expect(html, path).not.toMatch(/from the sentences on this page/i)
+    expect(html, path).not.toMatch(/\bour notes\b|\bnotes mark\b/i)
+  }
+  await expect(page.locator('caption', { hasText: 'At a glance' }).first()).toBeVisible()
+})

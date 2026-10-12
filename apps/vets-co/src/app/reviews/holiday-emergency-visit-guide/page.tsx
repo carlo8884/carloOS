@@ -93,7 +93,7 @@ export default function HolidayEmergencyVisitGuidePage() {
         <p>Preparation on that page is insurance bought before any condition arises, which it says covers much of an emergency after the deductible, plus a savings fund for the deductible, the unreimbursed share, and the deposit. The <Link href="/reviews/best-pet-insurance">pet insurance review</Link> is where the plan comparison lives. Its primary quote link is Trupanion. Nothing here adds a premium, a reimbursement percentage, or a holiday exclusion. If a pet is already in crisis, the costs guide says go. A quote form is not emergency care.</p>
         <div className="my-6 max-w-full min-w-0">
           <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
-            <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+            <caption className="text-left font-semibold text-brand-dark p-3">At a glance</caption>
             <thead>
               <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
                 <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>

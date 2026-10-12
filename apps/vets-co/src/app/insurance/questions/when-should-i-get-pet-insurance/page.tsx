@@ -57,7 +57,7 @@ export default function Page() {
           <p>Some insurers set a maximum enrollment age or apply senior surcharges to pets enrolled later in life, particularly for certain breeds. Coverage purchased while a pet is young usually continues into old age even as premiums rise, whereas trying to start a brand-new policy on a senior pet can mean higher prices, more exclusions from an already-populated record, or, occasionally, limited options. This is another reason the enroll-early decision compounds: it is easier and cheaper to maintain continuous coverage than to begin it late.</p>
           <div className="my-6 max-w-full min-w-0">
             <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
-              <caption className="text-left font-semibold text-brand-dark p-3">Timing, from the sentences on this page</caption>
+              <caption className="text-left font-semibold text-brand-dark p-3">Timing at a glance</caption>
               <thead>
                 <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
                   <th scope="col" className="p-3 font-bold text-brand-dark">When</th>

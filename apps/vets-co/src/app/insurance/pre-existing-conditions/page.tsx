@@ -54,7 +54,7 @@ export default function PreExistingPage() {
           <p>Many insurers separate pre-existing conditions into curable and incurable. Incurable or chronic conditions — diabetes, allergies, heart disease, cancer, kidney disease — are generally excluded for the life of the policy. Curable conditions — a single ear infection, a respiratory infection, a urinary tract infection that fully resolved — may become eligible for coverage after the pet has gone a defined symptom-free and treatment-free period, often six to eighteen months. A red-and-blue checking pencil is how incurable vs curable stays marked on that record copy — it is not an assorted highlighter set, not a yellow legal pad, and not a four-column accounting pad. Whether an insurer offers this curable-condition pathway, and how long the waiting period is, varies and is worth comparing.</p>
           <div className="my-6 max-w-full min-w-0">
             <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
-              <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+              <caption className="text-left font-semibold text-brand-dark p-3">At a glance</caption>
               <thead>
                 <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
                   <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>

@@ -54,7 +54,7 @@ export default function BreedRiskPage() {
           <p>Large and giant breeds are prone to orthopedic disease (hip and elbow dysplasia, cruciate rupture), bloat, and some cardiac conditions. Brachycephalic breeds — those with flat faces — face airway problems, dental crowding, and eye issues. Many purebred lines carry specific hereditary conditions, from heart defects to eye and neurological disorders. Mixed-breed pets often enjoy broader genetic diversity and lower insurance costs, though they are not risk-free. Round color-coding labels are how those large, brachy, purebred, and mixed risk patterns stay marked — they are not 3-tab dividers, not removable page flags, and not 3x3 sticky notes. Knowing your breed's profile tells you which coverage details to scrutinize.</p>
           <div className="my-6 max-w-full min-w-0">
             <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
-              <caption className="text-left font-semibold text-brand-dark p-3">Breed patterns, from the sentences on this page</caption>
+              <caption className="text-left font-semibold text-brand-dark p-3">Breed patterns at a glance</caption>
               <thead>
                 <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
                   <th scope="col" className="p-3 font-bold text-brand-dark">Pattern</th>

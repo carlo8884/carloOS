@@ -52,7 +52,7 @@ export default function Page() {
           <p>Not every insurer offers this curable-condition pathway, and the symptom-free window varies, which makes it a genuine point of comparison rather than a universal rule. If your pet has a resolved past issue, the exact wording of an insurer&apos;s curable-condition policy can change whether that condition is ever coverable again — so read it before you assume.</p>
           <div className="my-6 max-w-full min-w-0">
             <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
-              <caption className="text-left font-semibold text-brand-dark p-3">Curable or not, from the sentences on this page</caption>
+              <caption className="text-left font-semibold text-brand-dark p-3">Curable or not, at a glance</caption>
               <thead>
                 <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
                   <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
@@ -84,7 +84,7 @@ export default function Page() {
           <p>A subtle rule that catches many owners off guard involves bilateral conditions — problems affecting paired body parts such as cruciate ligaments, hips, or eyes. Many insurers treat an issue on one side as making the other side pre-existing too. So if your dog tore one cruciate ligament before enrollment, the matching knee may be excluded as well, on the reasoning that the underlying predisposition was already present. For breeds prone to orthopedic disease, how a policy handles bilateral conditions can matter more than the headline premium.</p>
           <div className="my-6 max-w-full min-w-0">
             <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
-              <caption className="text-left font-semibold text-brand-dark p-3">Bilateral rule, from the sentences on this page</caption>
+              <caption className="text-left font-semibold text-brand-dark p-3">The bilateral rule at a glance</caption>
               <thead>
                 <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
                   <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>

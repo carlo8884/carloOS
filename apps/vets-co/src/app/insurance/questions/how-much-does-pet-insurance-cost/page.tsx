@@ -58,7 +58,7 @@ export default function Page() {
           <p>To see how these dials interact on a real bill, the <a href="/insurance/deductibles-reimbursement">deductibles and reimbursement guide</a> walks through worked examples, and the <a href="/tools/insurance-reimbursement-estimator">reimbursement estimator</a> shows net out-of-pocket on representative scenarios.</p>
           <div className="my-6 max-w-full min-w-0">
             <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
-              <caption className="text-left font-semibold text-brand-dark p-3">The three dials, from the sentences on this page</caption>
+              <caption className="text-left font-semibold text-brand-dark p-3">The three dials at a glance</caption>
               <thead>
                 <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
                   <th scope="col" className="p-3 font-bold text-brand-dark">Dial</th>

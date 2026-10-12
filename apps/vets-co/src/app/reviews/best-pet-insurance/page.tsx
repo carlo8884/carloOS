@@ -196,7 +196,7 @@ export default function VetsPetInsurancePage() {
 
             <ReviewCard id="embrace" badge="Wellness add-on" name="Embrace"
               subtitle="Wellness add-on · Deductible program: see the carrier's current terms"
-              description={<p>The Wellness Rewards page, fetched 2026-10-08, lists wellness exams, vaccinations, flea, tick, and heartworm prevention, and preventative dental cleaning. Our notes mark that coverage as a standalone add-on. The deductible program and the orthopedic waiting period: see the carrier's current terms. Reimbursement on the current dog page is 70%, 80%, or 90%.</p>}
+              description={<p>The Wellness Rewards page, fetched 2026-10-08, lists wellness exams, vaccinations, flea, tick, and heartworm prevention, and preventative dental cleaning. That coverage is a separate add-on, not part of the base policy. The deductible program and the orthopedic waiting period: see the carrier's current terms. Reimbursement on the current dog page is 70%, 80%, or 90%.</p>}
               specs={[
                 { label: 'Wellness', value: 'Add-on available', highlight: 'good' },
                 { label: 'Deductible', value: 'See the carrier\'s current terms' },
@@ -240,7 +240,7 @@ export default function VetsPetInsurancePage() {
                       <td className="p-3 text-brand-text-mid">You can pay the clinic first and want most claims processed in about 2 days</td>
                       <td className="p-3 font-bold text-brand-dark"><a href="#healthy-paws" className="inline-flex min-h-6 items-center text-brand-primary">Healthy Paws</a><TableShopLink href={"/go/healthy-paws/home?s=reviews-best-pet-insurance"} product={"Healthy Paws"} holdWithoutPartnerId /></td>
                       <td className="p-3 text-brand-text-mid">Most claims processed in 2 days. Up to 90 percent. Annual limit is $5,000, $7,000, or unlimited. See the carrier's current terms for the monthly figure.</td>
-                      <td className="p-3 text-brand-text-mid">Wellness is not in our notes. Deductible is annual</td>
+                      <td className="p-3 text-brand-text-mid">No wellness add-on is listed. Deductible is annual</td>
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">You want routine care budgeted beside accident and illness</td>

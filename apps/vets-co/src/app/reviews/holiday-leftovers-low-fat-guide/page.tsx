@@ -88,7 +88,7 @@ export default function HolidayLeftoversLowFatGuidePage() {
         <p>Typical signs on that page are vomiting, loss of appetite, abdominal pain, lethargy, and sometimes diarrhea or fever. A painful dog may hunch or take a praying posture. Mild cases can look like a simple upset. Severe cases are a very sick, dehydrated dog. The page says the signs overlap with other diseases, so a veterinarian has to confirm the diagnosis. If vomiting, belly pain, or refusal to eat returns, the instruction is to go in, not to reorder food.</p>
         <div className="my-6 max-w-full min-w-0">
           <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
-            <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+            <caption className="text-left font-semibold text-brand-dark p-3">At a glance</caption>
             <thead>
               <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
                 <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>

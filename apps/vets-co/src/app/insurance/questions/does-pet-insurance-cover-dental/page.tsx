@@ -54,7 +54,7 @@ export default function Page() {
           <p>Routine cleanings, polishing, and other purely preventive dental work are outside the core policy. If you want help with those predictable costs, the route is a wellness or routine-care add-on, which reimburses a capped annual allowance toward preventive care including cleanings. As with any wellness rider, whether it pays off is arithmetic — compare the premium to what you would spend on the cleanings it covers. The trade-offs are covered in our <a href="/insurance/wellness-plans-vs-insurance">wellness plans versus insurance</a> guide and in <a href="/insurance/questions/does-pet-insurance-cover-vaccines">does pet insurance cover vaccines</a>, which faces the same preventive-versus-unexpected divide.</p>
           <div className="my-6 max-w-full min-w-0">
             <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
-              <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+              <caption className="text-left font-semibold text-brand-dark p-3">At a glance</caption>
               <thead>
                 <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
                   <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>

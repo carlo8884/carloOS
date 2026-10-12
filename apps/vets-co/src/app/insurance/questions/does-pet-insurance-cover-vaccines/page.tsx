@@ -64,7 +64,7 @@ export default function Page() {
           <p>If your goal is protection against a large, unexpected vet bill, the core accident-and-illness policy is the product to focus on, and vaccines are simply outside its scope. If your goal is to spread predictable annual care into level payments, a wellness add-on can do that — but only add it after checking that the math and the per-category caps make sense for your pet. The two products solve different problems, and conflating them is the most common reason owners feel let down at claim time.</p>
           <div className="my-6 max-w-full min-w-0">
             <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
-              <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+              <caption className="text-left font-semibold text-brand-dark p-3">At a glance</caption>
               <thead>
                 <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
                   <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>

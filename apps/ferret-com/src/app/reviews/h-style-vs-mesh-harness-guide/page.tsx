@@ -102,7 +102,7 @@ export default function HStyleVsMeshGuidePage() {
         <p>Buy the adjustable H-style when you want the multi-point fit on the one the review lists first of these two cards and you will test the fit indoors before a walk. Buy the mesh set when you want the included leash and a lighter warm-weather H, and you accept fewer adjustment points. If the ferret already backs out of an H, the review’s escape-resistance card is the vest, not a second H. Measure the ferret either way. Do not walk a ferret unsupervised in either harness.</p>
         <div className="my-6 max-w-full min-w-0">
           <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
-            <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+            <caption className="text-left font-semibold text-brand-dark p-3">At a glance</caption>
             <thead>
               <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
                 <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>

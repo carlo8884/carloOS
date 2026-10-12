@@ -54,7 +54,7 @@ export default function Page() {
           <p>How your deductible is structured changes your real out-of-pocket, especially in a year with multiple claims. An <strong>annual deductible</strong> is met once per policy year and then resets at renewal — after you have paid it across all eligible claims, the rest of the year is reimbursed subject to your percentage and limit. A <strong>per-incident deductible</strong> applies separately to each new condition, so two unrelated problems each carry their own deductible. Annual deductibles are generally easier to predict; confirm which your policy uses before you assume how a multi-claim year will play out.</p>
           <div className="my-6 max-w-full min-w-0">
             <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
-              <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+              <caption className="text-left font-semibold text-brand-dark p-3">At a glance</caption>
               <thead>
                 <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
                   <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
