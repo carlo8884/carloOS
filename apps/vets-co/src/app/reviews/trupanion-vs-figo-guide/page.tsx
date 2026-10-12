@@ -81,7 +81,7 @@ export default function TrupanionVsFigoGuidePage() {
       }
     >
       <div className="carloOS-article">
-          <LastUpdated date="2026-10-11" />
+          <LastUpdated date="2026-10-12" />
         <EmailCapture
           variant="inline"
           siteId="vets-co"
@@ -100,7 +100,7 @@ export default function TrupanionVsFigoGuidePage() {
         />
         <p>The notes below are the ones on the <Link href="/insurance/breed-specific-risk">breed-specific risk page</Link>. That page names Trupanion and Figo as two carriers to quote when a breed has predictable expensive needs. Other guides compare Trupanion with <Link href="/reviews/trupanion-vs-healthy-paws-guide">Healthy Paws</Link> or <Link href="/reviews/trupanion-vs-embrace-guide">Embrace</Link>. Neither card prints a monthly premium.</p>
         <h2>What the page says about Trupanion</h2>
-        <p>Trupanion is Unlimited Payouts and the winner on that page. The annual limit is unlimited, which the review ties to a major orthopedic or chronic-disease course that would exhaust a capped plan. Hereditary and congenital conditions are covered per policy terms. The deductible is a per-condition lifetime deductible. A direct-to-vet payment option is listed. Cons say premiums can run higher and there is no wellness add-on. The price line is quote-based. The page says to enroll as a puppy so breed-typical conditions are not later excluded as pre-existing. Our notes list no annual or lifetime payout caps and a per-condition lifetime deductible.</p>
+        <p>Trupanion is Unlimited Payouts and the winner on that page. The annual limit is unlimited, which the review ties to a major orthopedic or chronic-disease course that would exhaust a capped plan. Hereditary and congenital conditions are covered per policy terms. The deductible is a per-condition lifetime deductible. A direct-to-vet payment option is listed. Cons say premiums can run higher and there is no wellness add-on. The price line is quote-based. The page says to enroll as a puppy so breed-typical conditions are not later excluded as pre-existing. Trupanion lists no annual or lifetime payout caps and a per-condition lifetime deductible.</p>
         <h2>What the page says about Figo</h2>
         <p>Figo is High-Limit Plans. The card says the carrier offers high and unlimited annual-limit tiers and app-based claims. The model is pay-then-claim. An optional wellness add-on is listed. Cons say to check orthopedic and bilateral terms, and that premiums scale with breed risk. The price line is quote-based. Waiting-period length stays whatever the breed-risk page and the sample policy say.</p>
         <p>The wider ranking of carriers that are not on this pair is the <Link href="/reviews/best-pet-insurance">insurance review</Link>. Early enrollment is the lever that page repeats. A quote still needs the pet’s age, breed, and medical history.</p>
@@ -108,7 +108,7 @@ export default function TrupanionVsFigoGuidePage() {
         <p>Start the Trupanion quote when an unlimited annual payout and direct-to-vet payment are the features you are comparing, and wellness coverage is not required. Start the Figo quote when you want high-limit tiers and an app claim flow, and you will read the orthopedic and bilateral language before you enroll. On both, confirm hereditary coverage in the sample policy rather than in a marketing line. Do not treat either quote-based line as a price from this page.</p>
         <div className="my-6 max-w-full min-w-0">
           <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
-            <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+            <caption className="text-left font-semibold text-brand-dark p-3">At a glance</caption>
             <thead>
               <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
                 <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
@@ -150,7 +150,7 @@ export default function TrupanionVsFigoGuidePage() {
             </tbody>
           </table>
         </div>
-        <ComparisonFoot updated="2026-10-11" />
+        <ComparisonFoot updated="2026-10-12" />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
                 <ArticleSourcesList

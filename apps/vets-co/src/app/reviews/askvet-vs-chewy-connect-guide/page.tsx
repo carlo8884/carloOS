@@ -75,7 +75,7 @@ export default function AskVetVsChewyConnectGuidePage() {
       priceAsOf="2026-10-07"
     >
       <div className="carloOS-article">
-          <LastUpdated date="2026-10-10" />
+          <LastUpdated date="2026-10-12" />
         <EmailCapture
           variant="inline"
           siteId="vets-co"
@@ -104,7 +104,7 @@ export default function AskVetVsChewyConnectGuidePage() {
         <p>The telehealth card on this site marks AskVet chat-only. The current askvet.app pages, fetched 2026-10-08, do not print a visit type. The telehealth page says the subscription fits frequent questions, such as a new puppy, a senior pet, or a chronic condition.</p>
         <div className="my-6 max-w-full min-w-0">
           <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
-            <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+            <caption className="text-left font-semibold text-brand-dark p-3">At a glance</caption>
             <thead>
               <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
                 <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
@@ -141,7 +141,7 @@ export default function AskVetVsChewyConnectGuidePage() {
             </tbody>
           </table>
         </div>
-        <ComparisonFoot updated="2026-10-10" />
+        <ComparisonFoot updated="2026-10-12" />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
                 <ArticleSourcesList

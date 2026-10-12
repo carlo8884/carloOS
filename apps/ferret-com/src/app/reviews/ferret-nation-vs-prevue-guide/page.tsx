@@ -77,7 +77,7 @@ export default function FerretNationVsPrevueGuidePage() {
       }
     >
       <div className="carloOS-article">
-          <LastUpdated date="2026-10-10" />
+          <LastUpdated date="2026-10-12" />
         <p>The <Link href="/reviews/best-ferret-cage">cage review</Link> already lists the Ferret Nation double as the overall pick and the Prevue Feisty Ferret as the value pick. Prices in the review are tiers, not dollar amounts. Nothing here turns those tiers into a dollar price.</p>
         <h2>What the review says about Ferret Nation</h2>
         <p>The Ferret Nation double unit is Best Overall and the winner. The <a href="https://www.midwesthomes4pets.com/product/small-animal/habitats-cages/ferret-nation/">manufacturer page</a> does not print a bar-spacing figure. It says the full-width double doors open for cleaning and feeding (fetched 2026-10-08). Levels are modular and stackable. Pans are deep and leak-proof. It is meant for one to four ferrets. The price tier is $$$. Cons: premium price, heavy and large once assembled, and wire shelves need covering.</p>
@@ -95,7 +95,7 @@ export default function FerretNationVsPrevueGuidePage() {
         <p><a className="font-semibold text-brand-primary" href="/go/amazon/B0054U8UGW?s=reviews-ferret-nation-vs-prevue-guide">Browse the Ferret Nation double unit on Amazon →</a></p>
         <div className="my-6 max-w-full min-w-0">
           <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
-            <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+            <caption className="text-left font-semibold text-brand-dark p-3">At a glance</caption>
             <thead>
               <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
                 <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
@@ -132,7 +132,7 @@ export default function FerretNationVsPrevueGuidePage() {
             </tbody>
           </table>
         </div>
-        <ComparisonFoot updated="2026-10-10" />
+        <ComparisonFoot updated="2026-10-12" />
         <EmailCapture
           variant="inline"
           siteId="ferret-com"

@@ -127,7 +127,7 @@ export default function KitVsAdultFeedingPage() {
           </p>
           <div className="my-6 max-w-full min-w-0">
             <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
-              <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+              <caption className="text-left font-semibold text-brand-dark p-3">At a glance</caption>
               <thead>
                 <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
                   <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
@@ -154,7 +154,7 @@ export default function KitVsAdultFeedingPage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-10" />
+          <ComparisonFoot updated="2026-10-12" />
           <h2>Who should feed which stage</h2>
           <p>Kits need variety inside the carnivore profile so later switches are possible. Adults stay on free-choice maintenance. A senior, from around age five, may need softened kibble, and a diet change with a diagnosis belongs with a veterinarian who sees ferrets.</p>
 

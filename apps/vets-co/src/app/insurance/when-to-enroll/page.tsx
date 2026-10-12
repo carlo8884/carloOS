@@ -36,7 +36,7 @@ export default function WhenToEnrollPage() {
         <div className="carloOS-article">
 
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-09-06T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-10" />
+          <LastUpdated date="2026-10-12" />
 
           <CalloutBox variant="info" title="Enroll before you need it, not when you need it">
             Insurance is a bet against future unknowns. The moment a condition becomes known, it can no longer be insured. The practical rule is simple: enroll while your pet is healthy, even if that feels premature, because that is the only window in which full coverage is available.
@@ -58,7 +58,7 @@ export default function WhenToEnrollPage() {
           <p>For adopted pets with unknown histories, enroll as soon as possible after adoption and after an initial veterinary exam. Establishing coverage early limits the window in which undocumented conditions might later be deemed pre-existing. A letter-size file jacket is how the adoption papers and the new-pet exam notes stay one sleeve until enrollment is done — it is not a letter-size poly envelope, not a kraft two-pocket folder, and not letter-size hanging file folders. Schedule the enrollment around the new-pet exam so you understand your pet&apos;s baseline health and can choose appropriate coverage from the start.</p>
           <div className="my-6 max-w-full min-w-0">
             <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
-              <caption className="text-left font-semibold text-brand-dark p-3">Life stage, from the sentences on this page</caption>
+              <caption className="text-left font-semibold text-brand-dark p-3">Life stage at a glance</caption>
               <thead>
                 <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
                   <th scope="col" className="p-3 font-bold text-brand-dark">Stage</th>
@@ -90,7 +90,7 @@ export default function WhenToEnrollPage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-10" />
+          <ComparisonFoot updated="2026-10-12" />
           <h2>Who should enroll at which stage</h2>
           <p>Enroll a puppy or kitten while the record is empty. Enroll an adult before the first documented symptom. Enroll a senior with a relatively clean history against new illness. Enroll an adopted pet right after the new-pet exam.</p>
 
@@ -165,7 +165,7 @@ export default function WhenToEnrollPage() {
             subtitle="Listed for owners with younger pets"
             winner
             description={
-              <p>Lemonade’s FAQ, fetched 2026-10-08, says signing up while a pet is young and healthy means they are not denied coverage at renewal because of age. Our notes mark Lemonade for owners with younger pets. Availability varies by state; confirm your location and read the pre-existing-condition language when you quote.</p>
+              <p>Lemonade’s FAQ, fetched 2026-10-08, says signing up while a pet is young and healthy means they are not denied coverage at renewal because of age. That is why Lemonade is the pick for owners with younger pets. Availability varies by state; confirm your location and read the pre-existing-condition language when you quote.</p>
             }
             specs={[
               { label: 'Best for', value: 'Young pets', highlight: 'good' },

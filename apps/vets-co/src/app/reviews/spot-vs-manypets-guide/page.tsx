@@ -80,7 +80,7 @@ export default function SpotVsManyPetsGuidePage() {
       }
     >
       <div className="carloOS-article">
-          <LastUpdated date="2026-10-10" />
+          <LastUpdated date="2026-10-12" />
         <p>The <Link href="/insurance/reading-the-fine-print">fine-print page</Link> already puts Spot and ManyPets side by side as two sample policies to read, and it points to the <Link href="/reviews/best-pet-insurance">insurance review</Link> for the wider comparison. Neither product prints a monthly premium.</p>
         <h2>What the review says about Spot</h2>
         <p>Spot is Customizable and the winner on that page. Limits are adjustable. Exam fees are often covered. Preventive care is an optional add-on, and the review says that add-on is not insurance. The price line is quote-based. The cons say to read the waiting-period terms. Nothing here fills in a waiting-period length the review left unread.</p>
@@ -93,7 +93,7 @@ export default function SpotVsManyPetsGuidePage() {
         <p><InlinePartnerQuote href={spotHref} label="Get a Spot quote" /></p>
         <div className="my-6 max-w-full min-w-0">
           <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
-            <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+            <caption className="text-left font-semibold text-brand-dark p-3">At a glance</caption>
             <thead>
               <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
                 <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
@@ -130,7 +130,7 @@ export default function SpotVsManyPetsGuidePage() {
             </tbody>
           </table>
         </div>
-        <ComparisonFoot updated="2026-10-10" />
+        <ComparisonFoot updated="2026-10-12" />
         <EmailCapture
           variant="inline"
           siteId="vets-co"

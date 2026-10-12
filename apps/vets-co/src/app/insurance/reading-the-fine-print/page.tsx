@@ -36,7 +36,7 @@ export default function FinePrintPage() {
         <div className="carloOS-article">
 
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-09-06T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-11" />
+          <LastUpdated date="2026-10-12" />
 
           <CalloutBox variant="info" title="Always read the sample policy">
             Reputable insurers publish a sample policy document. Read it before enrolling — not the summary, the actual document. The differences that matter in a real claim are almost always in the detailed terms, not the headline coverage.
@@ -46,7 +46,7 @@ export default function FinePrintPage() {
           <p>Every policy imposes a waiting period after enrollment before coverage starts, and anything arising during it is excluded as pre-existing. Accident waiting periods are typically short, illness periods longer, and orthopedic conditions can carry the longest waits — six months or more with some insurers. For breeds prone to cruciate or hip disease, a long orthopedic waiting period is a major consideration. A full-page magnifier is how those orthopedic-wait clauses stay readable on the sample policy — it is not an assorted highlighter set, not removable page flags, and not a self-inking date stamp. Check the length of each waiting period and whether the insurer offers a way to shorten the orthopedic wait, such as an exam. <a href="/insurance/what-pet-insurance-covers">What pet insurance covers</a> is where those waiting-period exclusions are spelled out.</p>
           <div className="my-6 max-w-full min-w-0">
             <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
-              <caption className="text-left font-semibold text-brand-dark p-3">Waiting periods, from the sentences on this page</caption>
+              <caption className="text-left font-semibold text-brand-dark p-3">Waiting periods at a glance</caption>
               <thead>
                 <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
                   <th scope="col" className="p-3 font-bold text-brand-dark">Wait</th>
@@ -74,7 +74,7 @@ export default function FinePrintPage() {
           <p>There are two payout models. Most modern plans reimburse a percentage of your actual covered costs. A minority use a benefit schedule, capping payment for each condition or procedure at a fixed amount regardless of the real bill — which can leave large gaps even when a claim is covered. An adjustable copyholder is how two sample policies stay propped for a side-by-side payout-model read — it is not a letter-size file jacket, not a kraft two-pocket folder, and not a clipboard with storage. Confirm the plan reimburses actual costs, and be wary of unusually cheap plans that quietly use a benefit schedule.</p>
           <div className="my-6 max-w-full min-w-0">
             <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
-              <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+              <caption className="text-left font-semibold text-brand-dark p-3">At a glance</caption>
               <thead>
                 <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
                   <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
@@ -101,7 +101,7 @@ export default function FinePrintPage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-11" />
+          <ComparisonFoot updated="2026-10-12" />
           <h2>Who should compare which term</h2>
           <p>Compare the orthopedic wait, and whether the plan pays a percentage of the bill or a schedule. Anything that starts during a waiting period is excluded as pre-existing. A cheap plan that uses a schedule is the one this page says to read twice.</p>
 

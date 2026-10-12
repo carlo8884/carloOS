@@ -38,7 +38,7 @@ export default function Page() {
       >
         <div className="carloOS-article">
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-11T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-10" />
+          <LastUpdated date="2026-10-12" />
 
           <CalloutBox variant="info" title="The short answer">
             Most insurers offer a <strong>multi-pet discount of roughly 5–10%</strong> per additional pet on the same account. It is a genuine but modest saving, and it should not be the deciding factor — coverage terms, annual limits, and claim handling matter far more than the discount.
@@ -56,7 +56,7 @@ export default function Page() {
           <p>Bundling is genuinely worth taking when a single carrier is already the right choice for each of your pets on the merits. If the insurer&apos;s terms, limits, and claim reputation suit every animal in the household, then the discount and the single-account convenience are pure upside — there is no reason to split policies across carriers just to avoid bundling. The point is not to avoid multi-pet discounts but to make sure they are a consequence of a good coverage decision rather than the cause of a compromised one.</p>
           <div className="my-6 max-w-full min-w-0">
             <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
-              <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+              <caption className="text-left font-semibold text-brand-dark p-3">At a glance</caption>
               <thead>
                 <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
                   <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
@@ -83,7 +83,7 @@ export default function Page() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-10" />
+          <ComparisonFoot updated="2026-10-12" />
           <h2>Who should use the discount</h2>
           <p>Use the discount when the same carrier already fits every pet. Do not let it choose the carrier. Match coverage first.</p>
 

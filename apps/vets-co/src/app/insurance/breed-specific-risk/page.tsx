@@ -41,7 +41,7 @@ export default function BreedRiskPage() {
         <div className="carloOS-article">
 
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-09-06T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-10" />
+          <LastUpdated date="2026-10-12" />
 
           <CalloutBox variant="info" title="Insure the risk you can predict">
             Breed predispositions are some of the most predictable risks in pet health. That predictability cuts both ways: insurers price for it, and you can plan for it. The owner who knows their breed's likely conditions and enrolls early, with appropriate terms, is best positioned.
@@ -54,7 +54,7 @@ export default function BreedRiskPage() {
           <p>Large and giant breeds are prone to orthopedic disease (hip and elbow dysplasia, cruciate rupture), bloat, and some cardiac conditions. Brachycephalic breeds — those with flat faces — face airway problems, dental crowding, and eye issues. Many purebred lines carry specific hereditary conditions, from heart defects to eye and neurological disorders. Mixed-breed pets often enjoy broader genetic diversity and lower insurance costs, though they are not risk-free. Round color-coding labels are how those large, brachy, purebred, and mixed risk patterns stay marked — they are not 3-tab dividers, not removable page flags, and not 3x3 sticky notes. Knowing your breed's profile tells you which coverage details to scrutinize.</p>
           <div className="my-6 max-w-full min-w-0">
             <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
-              <caption className="text-left font-semibold text-brand-dark p-3">Breed patterns, from the sentences on this page</caption>
+              <caption className="text-left font-semibold text-brand-dark p-3">Breed patterns at a glance</caption>
               <thead>
                 <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
                   <th scope="col" className="p-3 font-bold text-brand-dark">Pattern</th>
@@ -81,7 +81,7 @@ export default function BreedRiskPage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-10" />
+          <ComparisonFoot updated="2026-10-12" />
           <h2>Who should read which term</h2>
           <p>Read the orthopedic wait and the bilateral rule when the breed is prone to joint disease. Prioritize a high annual limit, and hereditary coverage, when the breed has predictable expensive needs. Enroll early, because the breed-typical conditions are the ones that become exclusions if they appear first.</p>
 

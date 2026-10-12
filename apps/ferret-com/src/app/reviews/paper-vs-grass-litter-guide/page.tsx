@@ -70,7 +70,7 @@ export default function PaperVsGrassLitterGuidePage() {
       }
     >
       <div className="carloOS-article">
-          <LastUpdated date="2026-10-11" />
+          <LastUpdated date="2026-10-12" />
         <EmailCapture
           variant="inline"
           siteId="ferret-com"
@@ -98,7 +98,7 @@ export default function PaperVsGrassLitterGuidePage() {
         <p>Paper pellets are the pick because the review calls them the low-dust default. Purina discontinued Yesterday’s News on April 20, 2022. The sale price can differ from the tier in that review.</p>
         <div className="my-6 max-w-full min-w-0">
           <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
-            <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+            <caption className="text-left font-semibold text-brand-dark p-3">At a glance</caption>
             <thead>
               <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
                 <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
@@ -140,7 +140,7 @@ export default function PaperVsGrassLitterGuidePage() {
             </tbody>
           </table>
         </div>
-        <ComparisonFoot updated="2026-10-11" />
+        <ComparisonFoot updated="2026-10-12" />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
                 <ArticleSourcesList

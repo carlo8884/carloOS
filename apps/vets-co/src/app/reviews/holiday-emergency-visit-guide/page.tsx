@@ -85,7 +85,7 @@ export default function HolidayEmergencyVisitGuidePage() {
       }
     >
       <div className="carloOS-article">
-          <LastUpdated date="2026-10-10" />
+          <LastUpdated date="2026-10-12" />
         <p>The <Link href="/guides/emergency-vet-costs">emergency vet costs guide</Link> says an emergency hospital is a different operation from a general practice. It keeps veterinarians and technicians on duty overnight, on weekends, and on holidays, and it keeps oxygen, blood products, and monitoring ready. That standing capacity is the cost. A holiday does not create a separate fee schedule on that page. It is already inside the round-the-clock sentence.</p>
         <h2>What the page says to do first</h2>
         <p>The same guide tells owners not to delay a real emergency over cost. Difficulty breathing, severe bleeding, collapse, inability to urinate, or suspected bloat means go. Financial options are discussed once the pet is stable. For a case that is not immediately life-threatening, the page says the hospital provides a written plan and an estimate, often as a range, and that a deposit before treatment is standard. This guide does not reprint a dollar figure from any other page and does not invent one.</p>
@@ -93,7 +93,7 @@ export default function HolidayEmergencyVisitGuidePage() {
         <p>Preparation on that page is insurance bought before any condition arises, which it says covers much of an emergency after the deductible, plus a savings fund for the deductible, the unreimbursed share, and the deposit. The <Link href="/reviews/best-pet-insurance">pet insurance review</Link> is where the plan comparison lives. Its primary quote link is Trupanion. Nothing here adds a premium, a reimbursement percentage, or a holiday exclusion. If a pet is already in crisis, the costs guide says go. A quote form is not emergency care.</p>
         <div className="my-6 max-w-full min-w-0">
           <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
-            <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+            <caption className="text-left font-semibold text-brand-dark p-3">At a glance</caption>
             <thead>
               <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
                 <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
@@ -120,7 +120,7 @@ export default function HolidayEmergencyVisitGuidePage() {
             </tbody>
           </table>
         </div>
-        <ComparisonFoot updated="2026-10-10" />
+        <ComparisonFoot updated="2026-10-12" />
         <h2>Who should open the quote</h2>
         <p>Open the Trupanion quote before a problem. If a pet is already in crisis, the costs guide says go.</p>
         <HopDisclosure siteId="vets-co" href="/go/trupanion/home?s=reviews-holiday-emergency-visit-guide" showQuietNote={false} />

@@ -132,7 +132,7 @@ export default function AdoptionVsBuyingPage() {
           </p>
           <div className="my-6 max-w-full min-w-0">
             <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
-              <caption className="text-left font-semibold text-brand-dark p-3">Side by side, from the sentences on this page</caption>
+              <caption className="text-left font-semibold text-brand-dark p-3">At a glance</caption>
               <thead>
                 <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
                   <th scope="col" className="p-3 font-bold text-brand-dark">Point</th>
@@ -163,7 +163,7 @@ export default function AdoptionVsBuyingPage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-10" />
+          <ComparisonFoot updated="2026-10-12" />
           <h2>Who should start where</h2>
           <p>Start with a rescue if you are open to an adult. Choose a breeder if you want a kit and will ask about the parents. A pet store is the convenient entry, with the least history. Confirm ferrets are legal where you live before any of the three.</p>
 
