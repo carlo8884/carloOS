@@ -286,3 +286,20 @@ test('ferret fix P3: insurance card link, tool breadcrumb and gift-guide table l
     expect(await page.evaluate(() => document.documentElement.scrollWidth), path).toBeLessThanOrEqual(390)
   }
 })
+
+test('ferret fix M6: supplies checklist has an Amazon link for each core item and no "non-commercial" line', async ({ page }) => {
+  await page.goto('/ownership/ferret-supplies-checklist', { waitUntil: 'domcontentloaded' })
+  const hrefs = await page.locator('#shop-checklist a[href^="/go/"]').evaluateAll((els) => els.map((el) => el.getAttribute('href')))
+  expect(hrefs).toEqual([
+    '/go/amazon/B001NJ0DAY?s=ferret-supplies-checklist',
+    '/go/amazon-brand/ferret+hammock?s=ferret-supplies-checklist',
+    '/go/amazon-brand/ferret+fleece+liner?s=ferret-supplies-checklist',
+    '/go/amazon-brand/ferret+corner+litter+pan?s=ferret-supplies-checklist',
+    '/go/amazon-brand/recycled+paper+pellet+litter?s=ferret-supplies-checklist',
+    '/go/amazon-brand/high+protein+ferret+food+kibble?s=ferret-supplies-checklist',
+  ])
+  expect(await page.locator('main a[href^="/go/amazon"]').count()).toBeGreaterThanOrEqual(7)
+  const text = await page.locator('main').innerText()
+  expect(text).not.toMatch(/non-commercial|dead shop page/i)
+  expect(text).not.toContain('/go buttons')
+})
