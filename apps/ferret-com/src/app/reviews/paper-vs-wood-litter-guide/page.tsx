@@ -1,7 +1,7 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, ShopCtas, buildArticleSchema, buildMetadata, PrimaryHop, ArticleSourcesList, LastUpdated, ComparisonFoot } from '@carloOS/ui'
+import { ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, ShopCtas, buildArticleSchema, buildMetadata, PrimaryHop, ArticleSourcesList, LastUpdated, ComparisonFoot, TableShopLink } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -86,11 +86,15 @@ export default function PaperVsWoodLitterGuidePage() {
         <p>Compressed wood pellets are the odor pick. Odor control is the strongest of the safe options on the page. Dust is low once fines are sifted. The price tier is $. The caveat is the form of the wood. The review says aromatic raw cedar and pine shavings release phenols tied to respiratory irritation. The allowed product is heat-treated, low-phenol compressed pellets, not loose shavings. The pellets are harder underfoot than paper. If a ferret rejects that texture, pelleted grass is the other safe option, soft, low dust, moderate odor, and quicker to break down when wet.</p>
         <h2>Who should buy which</h2>
         <p>Buy paper pellets for most ferrets. Buy heat-treated wood pellets when smell is the problem you are willing to manage, and you will read the bag for heat treatment rather than a pine scent. Buy grass pellets only when the ferret refuses the other two textures. Do not “upgrade” any of them to a clumping, perfumed cat litter. The review treats that swap as trading a safety margin for a cosmetic one.</p>
-        <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/recycled+paper+pellet+litter+non+clumping?s=reviews-paper-vs-wood-litter-guide" />
-        <p>The link below is the recycled paper-pellet search from the review. Purina discontinued Yesterday’s News on April 20, 2022.</p>
+        <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/recycled+paper+pellet+litter+non+clumping?s=reviews-paper-vs-wood-litter-guide", "/go/amazon-brand/heat+treated+wood+pellet+litter?s=reviews-paper-vs-wood-litter-guide"]} />
+        <p>The links below are Amazon searches for each litter type from the review. Purina discontinued Yesterday’s News on April 20, 2022.</p>
         <ShopCtas
           amazonHref="/go/amazon-brand/recycled+paper+pellet+litter+non+clumping?s=reviews-paper-vs-wood-litter-guide"
           amazonLabel="Open the recycled paper-pellet search."
+        />
+        <ShopCtas
+          amazonHref="/go/amazon-brand/heat+treated+wood+pellet+litter?s=reviews-paper-vs-wood-litter-guide"
+          amazonLabel="Search Amazon for heat-treated wood pellet litter"
         />
         <EmailCapture
           variant="inline"
@@ -107,7 +111,7 @@ export default function PaperVsWoodLitterGuidePage() {
             'Find paper pellet litter on Amazon',
           ]}
         />
-        <div className="my-6 max-w-full min-w-0">
+        <div id="litter-table" className="my-6 max-w-full min-w-0">
           <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
             <caption className="text-left font-semibold text-brand-dark p-3">At a glance</caption>
             <thead>
@@ -147,6 +151,11 @@ export default function PaperVsWoodLitterGuidePage() {
                 <th scope="row" className="p-3 font-bold text-brand-dark text-left">Price tier</th>
                 <td className="p-3">$$</td>
                 <td className="p-3">$</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Shop</th>
+                <td className="p-3"><TableShopLink href="/go/amazon-brand/recycled+paper+pellet+litter+non+clumping?s=reviews-paper-vs-wood-litter-guide" product="Recycled paper pellet litter" label="Search Amazon for recycled paper pellet litter" /></td>
+                <td className="p-3"><TableShopLink href="/go/amazon-brand/heat+treated+wood+pellet+litter?s=reviews-paper-vs-wood-litter-guide" product="Heat-treated wood pellet litter" label="Search Amazon for heat-treated wood pellet litter" /></td>
               </tr>
             </tbody>
           </table>
