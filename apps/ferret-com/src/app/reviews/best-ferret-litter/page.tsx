@@ -177,7 +177,7 @@ export default function BestFerretLitterPage() {
             updatedAt="2026-06-11"
             reviewedBy="Editorial team"
           />
-          <LastUpdated date="2026-10-11" />
+          <LastUpdated date="2026-10-12" />
           <EmailCapture
             variant="inline"
             siteId="ferret-com"
@@ -266,7 +266,7 @@ export default function BestFerretLitterPage() {
             category, choose a reputable pelleted product and confirm it is non-clumping and free of added clumping
             agents.
           </p>
-          <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/recycled+paper+pellet+litter+non+clumping?s=reviews-best-ferret-litter" />
+          <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/recycled+paper+pellet+litter+non+clumping?s=reviews-best-ferret-litter", "/go/amazon-brand/heat+treated+wood+pellet+litter?s=reviews-best-ferret-litter"]} />
 
           <ReviewCard
             id="paper-pellet"
@@ -311,6 +311,10 @@ export default function BestFerretLitterPage() {
             pros={['Best natural odor control of the safe options', 'Low dust once fines are removed', 'Economical', 'Non-clumping']}
             cons={['Must be heat-treated / low-phenol', 'Never use loose aromatic shavings', 'Harder underfoot than paper']}
             price="$"
+            ctaText="Search Amazon for heat-treated wood pellet litter"
+            ctaHref="/go/amazon-brand/heat+treated+wood+pellet+litter?s=reviews-best-ferret-litter"
+            ctaAffiliateProgram="amazon-brand"
+            ctaAffiliateProduct="heat-treated-wood-pellet-litter"
           />
 
           <ReviewCard
@@ -356,7 +360,7 @@ export default function BestFerretLitterPage() {
                 </tr>
                 <tr className="border-b border-brand-border">
                   <td className="p-3">Odor, and you will buy the heat-treated form only</td>
-                  <td className="p-3 font-bold"><a href="#wood-pellet">Compressed wood pellets</a></td>
+                  <td className="p-3 font-bold"><a href="#wood-pellet">Compressed wood pellets</a><TableShopLink href={"/go/amazon-brand/heat+treated+wood+pellet+litter?s=reviews-best-ferret-litter"} product={"Compressed wood pellets"} /></td>
                   <td className="p-3">Best for odor. Strong odor control. Price tier $</td>
                   <td className="p-3">Never loose aromatic pine or cedar shavings. Harder underfoot than paper</td>
                 </tr>
@@ -369,7 +373,7 @@ export default function BestFerretLitterPage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-11" />
+          <ComparisonFoot updated="2026-10-12" />
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
