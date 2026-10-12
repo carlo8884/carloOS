@@ -445,8 +445,8 @@ test('vets fix T8: worth-it answer page makes no unsourced emergency dollar rang
 test('vets fix T9: specialist pages make no unsourced annual specialist-cost claim', async ({ page }) => {
   for (const path of ['/specialists', '/specialists/veterinary-cardiology']) {
     await page.goto(path, { waitUntil: 'domcontentloaded' })
-    const text = await page.locator('main').innerText()
+    const text = await page.locator('body').innerText()
     expect(text).not.toMatch(/3,000–15,000/)
-    await expect(page.locator('main')).toContainText('Chronic specialist care can add up over a year')
+    await expect(page.getByText('Chronic specialist care can add up over a year').first()).toBeVisible()
   }
 })
