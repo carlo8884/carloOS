@@ -111,7 +111,7 @@ export default function TelehealthPage() {
               pros={['Free technician chat with a Chewy account', 'Licensed-vet video where Chewy offers it', 'A vet-visit prescription can be filled through Chewy']}
               cons={['Vet video is not available in every state', 'Free chat cannot prescribe', 'Less specialist access than Vetster']}
               priceNote="dated 2026-10-07."
-              price="$49.99 per vet video visit" ctaText="Check Chewy Connect on Chewy" ctaHref="/go/chewy/connect?s=telehealth" ctaAffiliateProgram="chewy" ctaAffiliateProduct="connect" />
+              price="$49.99 per vet video visit" />
 
             {/* Shop note — live amazon-brand search buttons (home-care prep kit).
                 ShopCtas hides empty Chewy; never href="#" or an empty link.

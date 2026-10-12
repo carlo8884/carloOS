@@ -5,7 +5,6 @@ import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaSc
 import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Ear Infections in Dogs — Causes, Signs, Treatment | Vets.co", description: "Recurrent ear infections in dogs usually point to an underlying cause like allergies. Learn the signs, why infections recur, and how to manage them.", path: '/health/ear-infections-dogs', type: 'article' })
 const SOURCES = [
-  { label: 'AAHA: Otitis Management Guidelines', url: 'https://www.aaha.org/aaha-guidelines/otitis/', publisher: 'AAHA' },
   { label: 'Merck Veterinary Manual: Otitis Externa in Dogs', url: 'https://www.merckvetmanual.com/dog-owners/ear-disorders-of-dogs/ear-infections-and-otitis-externa-in-dogs', publisher: 'Merck Vet Manual' },
 ]
 const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Ear Infections in Dogs', description: 'Causes, signs, and management of canine otitis externa and ear infections.', url: 'https://vets.co/health/ear-infections-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-10-12T00:00:00Z' ,

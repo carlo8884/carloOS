@@ -7,7 +7,7 @@ import { ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Senior Dog Bloodwork Guide — What Each Test Finds | Vets.co', description: 'What your senior dog\'s bloodwork actually measures. CBC, chemistry panel, urinalysis, SDMA, and thyroid explained', path: '/health/senior-bloodwork-guide', type: 'article' })
 const SOURCES = [
   { label: 'Merck Veterinary Manual: Routine Laboratory Tests', url: 'https://www.merckvetmanual.com/clinical-pathology-and-procedures/diagnostic-procedures-for-the-private-practice-laboratory/clinical-biochemistry', publisher: 'Merck Vet Manual' },
-  { label: 'AAHA: Senior Care Guidelines for Dogs and Cats', url: 'https://www.aaha.org/aaha-guidelines/senior-care-configuration/', publisher: 'AAHA' },
+  { label: 'AAHA: 2023 Senior Care Guidelines for Dogs and Cats', url: 'https://www.aaha.org/wp-content/uploads/globalassets/02-guidelines/2023-aaha-senior-care-guidelines-for-dogs-and-cats/resources/2023-aaha-senior-care-guidelines-for-dogs-and-cats.pdf', publisher: 'AAHA' },
   { label: 'IRIS: SDMA and Early Kidney Disease Detection', url: 'https://www.iris-kidney.com/', publisher: 'International Renal Interest Society' },
 ]
 const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Senior Dog Bloodwork — What Each Test Finds', description: 'What CBC, chemistry panel, urinalysis, SDMA, and T4 measure in senior dogs.', url: 'https://vets.co/health/senior-bloodwork-guide', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-12T00:00:00Z' ,
