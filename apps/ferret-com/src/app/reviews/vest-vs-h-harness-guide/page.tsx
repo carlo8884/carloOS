@@ -1,7 +1,7 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata, PrimaryHop, LastUpdated, ComparisonFoot } from '@carloOS/ui'
+import { ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata, PrimaryHop, LastUpdated, ComparisonFoot, TableShopLink } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -84,7 +84,7 @@ export default function VestVsHHarnessGuidePage() {
         <p>The adjustable H-style harness is a neck loop and a girth loop joined by a back strap. Several adjustment points are how you fit an animal with no neck. It is light, quick, and the $ price tier. The warning is the whole comparison: left even slightly loose, this is the easiest style to escape. Thin straps also spread less pressure than a vest. Buy it when you will dial the fit indoors and check it every outing, not when you want a harness that forgives a rushed buckle.</p>
         <h2>The bundle is a third thing</h2>
         <p>The mesh figure-H with a leash, is the entry bundle. Mesh helps in the heat, and the leash is in the package. Adjustment points are fewer and the buckles are lighter. The review calls it a starter, with an upgrade to the vest if the ferret is a true escape artist. It is not the vest, and it is not the fully adjustable H.</p>
-        <div className="my-6 max-w-full min-w-0">
+        <div id="harness-table" className="my-6 max-w-full min-w-0">
           <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
             <caption className="text-left font-semibold text-brand-dark p-3">At a glance</caption>
             <thead>
@@ -110,15 +110,21 @@ export default function VestVsHHarnessGuidePage() {
                 <td className="p-3">$$</td>
                 <td className="p-3">$</td>
               </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Shop</th>
+                <td className="p-3"><TableShopLink href="/go/amazon-brand/ferret+vest+harness+jacket+escape+proof?s=reviews-vest-vs-h-harness-guide" product="Vest harness" label="Search Amazon for a ferret vest harness" /></td>
+                <td className="p-3"><TableShopLink href="/go/amazon-brand/ferret+h+style+harness+adjustable?s=reviews-vest-vs-h-harness-guide" product="Adjustable H-style harness" label="Search Amazon for an H-style ferret harness" /></td>
+              </tr>
             </tbody>
           </table>
         </div>
         <ComparisonFoot updated="2026-10-12" />
         <h2>Who should buy which harness</h2>
         <p>Buy the vest if the ferret has already backed out of a harness or this is the first walk and you want the more secure layout. Buy the H-style if you will measure, test the fit indoors, and recheck it. Buy the mesh bundle only as a warm-weather starter you are willing to replace.</p>
-        <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/ferret+vest+harness+jacket+escape+proof?s=reviews-vest-vs-h-harness-guide" />
-        <p>The link below searches for the vest harness from the harness review.</p>
+        <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/ferret+vest+harness+jacket+escape+proof?s=reviews-vest-vs-h-harness-guide", "/go/amazon-brand/ferret+h+style+harness+adjustable?s=reviews-vest-vs-h-harness-guide"]} />
+        <p>The links below search Amazon for each harness style from the harness review.</p>
         <p><a className="font-semibold text-brand-primary" href="/go/amazon-brand/ferret+vest+harness+jacket+escape+proof?s=reviews-vest-vs-h-harness-guide">Find an escape-proof jacket ferret harness on Amazon →</a></p>
+        <p><a className="font-semibold text-brand-primary" href="/go/amazon-brand/ferret+h+style+harness+adjustable?s=reviews-vest-vs-h-harness-guide">Search Amazon for an adjustable H-style ferret harness →</a></p>
         <EmailCapture
           variant="inline"
           siteId="ferret-com"
