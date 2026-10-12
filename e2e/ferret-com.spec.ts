@@ -270,3 +270,19 @@ test('ferret fix Q3: comparison table caption reads "At a glance", not internal 
   expect(await page.content()).not.toMatch(/from the sentences on this page/i)
   await expect(page.locator('caption', { hasText: 'At a glance' }).first()).toBeVisible()
 })
+
+test('ferret fix P3: insurance card link, tool breadcrumb and gift-guide table links are at least 24px tall at 390px', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 })
+  const checks: Array<[string, string]> = [
+    ['/health/adrenal-disease', 'a:has-text("Compare exotic-pet insurance")'],
+    ['/tools/litter-planner', 'nav.py-3.text-xs > a'],
+    ['/reviews/november-december-gift-guide', 'td > a'],
+  ]
+  for (const [path, selector] of checks) {
+    await page.goto(path, { waitUntil: 'domcontentloaded' })
+    const heights = await page.locator(selector).evaluateAll((els) => els.filter((el) => (el as HTMLElement).offsetParent).map((el) => el.getBoundingClientRect().height))
+    expect(heights.length, path).toBeGreaterThan(0)
+    expect(heights.filter((h) => h < 24), path).toEqual([])
+    expect(await page.evaluate(() => document.documentElement.scrollWidth), path).toBeLessThanOrEqual(390)
+  }
+})
