@@ -401,3 +401,16 @@ test('ferret fix M13: paper and wood vs grass guides have a shop link for both p
     await expect(page.locator(`main a[href="${grass}"]`)).toHaveCount(2)
   }
 })
+
+test('ferret fix M14: cage comparison tables have an exact-ASIN shop link for both cages', async ({ page }) => {
+  const pages: Array<[string, string, string]> = [
+    ['ferret-nation-vs-prevue-guide', 'B0054U8UGW', 'B000QFMYWQ'],
+    ['kaytee-vs-ferret-nation-guide', 'B008FONT2Y', 'B0054U8UGW'],
+    ['kaytee-vs-prevue-guide', 'B000QFMYWQ', 'B008FONT2Y'],
+  ]
+  for (const [slug, a, b] of pages) {
+    await page.goto(`/reviews/${slug}`, { waitUntil: 'domcontentloaded' })
+    const table = await page.locator('#cage-table a[href^="/go/"]').evaluateAll((els) => els.map((el) => el.getAttribute('href')))
+    expect(table).toEqual([`/go/amazon/${a}?s=reviews-${slug}`, `/go/amazon/${b}?s=reviews-${slug}`])
+  }
+})
