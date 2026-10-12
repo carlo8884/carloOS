@@ -29,7 +29,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-11T00:00:00Z',
-  modifiedAt: '2026-06-11T00:00:00Z',
+  modifiedAt: '2026-10-12T00:00:00Z',
 
   citation: SOURCES,
 })
@@ -188,7 +188,7 @@ export default function BestFerretHarnessPage() {
             updatedAt="2026-06-11"
             reviewedBy="Editorial team"
           />
-          <LastUpdated date="2026-10-10" />
+          <LastUpdated date="2026-10-12" />
           <EmailCapture
             variant="inline"
             siteId="ferret-com"
@@ -389,7 +389,7 @@ export default function BestFerretHarnessPage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-10" />
+          <ComparisonFoot updated="2026-10-12" />
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />

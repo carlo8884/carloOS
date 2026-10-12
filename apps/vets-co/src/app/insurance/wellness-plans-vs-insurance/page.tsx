@@ -10,7 +10,7 @@ import { ArticleByline, CalloutBox } from '@carloOS/ui'
 export const dynamic = 'force-dynamic'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Wellness Plans vs. Pet Insurance — What's the Difference | Vets.co", description: "Wellness plans budget for routine care; insurance protects against unexpected bills. Learn the difference and when each makes sense for your pet.", path: '/insurance/wellness-plans-vs-insurance', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'vets-co', title: "Wellness Plans vs. Pet Insurance", description: 'The difference between wellness plans and insurance, and when each makes sense.', url: 'https://vets.co/insurance/wellness-plans-vs-insurance', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'vets-co', title: "Wellness Plans vs. Pet Insurance", description: 'The difference between wellness plans and insurance, and when each makes sense.', url: 'https://vets.co/insurance/wellness-plans-vs-insurance', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-10-12T00:00:00Z' })
 const FAQS = [
   { question: "Is a wellness plan the same as pet insurance?", answer: "No. A wellness plan is a payment or budgeting arrangement for predictable routine care — exams, vaccines, parasite prevention, dental cleanings — usually offered by a clinic or as an insurance add-on. Pet insurance covers unexpected, large expenses from accidents and illness. They solve different problems: wellness plans spread the cost of care you know is coming, while insurance protects against costs you cannot predict. Many owners use both, or use insurance plus a personal savings plan for routine care." },
   { question: "Do wellness plans save money?", answer: "Generally, a wellness plan returns roughly what you pay into it over a year, sometimes a little more with bundled discounts. Their main value is budgeting — converting several lump-sum visits into smaller, predictable payments — and encouraging owners to keep up with preventive care. They are not a way to come out significantly ahead financially. If you are disciplined about saving for routine care, you may not need one; if predictable monthly payments help you stay current on preventive care, they can be worthwhile." },
@@ -48,7 +48,7 @@ export default function WellnessVsInsurancePage() {
       >
         <div className="carloOS-article">
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-11" />
+          <LastUpdated date="2026-10-12" />
           <EmailCapture
             variant="inline"
             siteId="vets-co"
@@ -176,7 +176,7 @@ export default function WellnessVsInsurancePage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-11" />
+          <ComparisonFoot updated="2026-10-12" />
 
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />

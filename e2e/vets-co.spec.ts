@@ -521,3 +521,46 @@ test('vets fix L4: trimmed titles fit 70 characters', async ({ page }) => {
     expect(title.length, `${path}: ${title}`).toBeLessThanOrEqual(70)
   }
 })
+
+test('vets fix L5: money-page Article dateModified matches the visible Last updated date', async ({ request }) => {
+  const paths = [
+    '/insurance/deductibles-reimbursement',
+    '/insurance/breed-specific-risk',
+    '/insurance/reading-the-fine-print',
+    '/insurance/wellness-plans-vs-insurance',
+    '/insurance/pre-existing-conditions',
+    '/insurance/how-pet-insurance-works',
+    '/insurance/when-to-enroll',
+    '/insurance/what-pet-insurance-covers',
+    '/insurance/questions/multi-pet-discounts',
+    '/insurance/questions/does-pet-insurance-cover-dental',
+    '/insurance/questions/does-pet-insurance-cover-pre-existing-conditions',
+    '/insurance/questions/how-much-does-pet-insurance-cost',
+    '/insurance/questions/how-does-the-claims-process-work',
+    '/insurance/questions/does-pet-insurance-cover-vaccines',
+    '/insurance/questions/is-pet-insurance-worth-it',
+    '/insurance/questions/when-should-i-get-pet-insurance',
+    '/reviews/vetster-vs-chewy-connect-guide',
+    '/reviews/trupanion-vs-embrace-guide',
+    '/reviews/november-december-gift-guide',
+    '/reviews/trupanion-vs-figo-guide',
+    '/reviews/vetster-vs-askvet-guide',
+    '/reviews/lemonade-vs-pets-best-guide',
+    '/reviews/healthy-paws-vs-embrace-guide',
+    '/reviews/holiday-emergency-visit-guide',
+    '/reviews/holiday-leftovers-low-fat-guide',
+    '/reviews/trupanion-vs-healthy-paws-guide',
+    '/reviews/best-pet-insurance',
+    '/reviews/healthy-paws-vs-pets-best-guide',
+    '/reviews/askvet-vs-chewy-connect-guide',
+    '/reviews/spot-vs-manypets-guide',
+  ]
+  for (const path of paths) {
+    const html = await (await request.get(path)).text()
+    const visible = html.match(/Last updated <time dateTime="(\d{4}-\d{2}-\d{2})"/)?.[1]
+    const modified = [...html.matchAll(/"dateModified":"(\d{4}-\d{2}-\d{2})/g)].map((m) => m[1])
+    expect(visible, `${path} shows a Last updated date`).toBeTruthy()
+    expect(modified.length, `${path} has Article dateModified`).toBeGreaterThan(0)
+    for (const d of modified) expect(d, `${path} dateModified`).toBe(visible)
+  }
+})

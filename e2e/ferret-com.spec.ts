@@ -452,3 +452,34 @@ test('ferret fix L4: trimmed titles fit 70 characters and directory titles are w
   expect(hospital).toContain('Broward Avian & Exotic Animal Hospital')
   expect(clinic).toContain('Broward Avian & Exotic Animal Clinic')
 })
+
+test('ferret fix L5: money-page Article dateModified matches the visible Last updated date', async ({ request }) => {
+  const paths = [
+    '/reviews/best-ferret-litter',
+    '/reviews/november-december-gift-guide',
+    '/reviews/wysong-vs-marshall-kibble-guide',
+    '/reviews/paper-vs-wood-litter-guide',
+    '/reviews/paper-vs-grass-litter-guide',
+    '/reviews/kaytee-vs-prevue-guide',
+    '/reviews/wysong-vs-carniwhole-guide',
+    '/reviews/best-ferret-harness',
+    '/reviews/fall-molt-brush-guide',
+    '/reviews/wood-vs-grass-litter-guide',
+    '/reviews/vest-vs-h-harness-guide',
+    '/reviews/best-ferret-cage',
+    '/reviews/kaytee-vs-ferret-nation-guide',
+    '/reviews/critter-nation-vs-marshall-cage-guide',
+    '/reviews/ferret-nation-vs-prevue-guide',
+    '/reviews/h-style-vs-mesh-harness-guide',
+    '/reviews/winter-harness-fit-guide',
+    '/diet/best-ferret-kibble',
+  ]
+  for (const path of paths) {
+    const html = await (await request.get(path)).text()
+    const visible = html.match(/Last updated <time dateTime="(\d{4}-\d{2}-\d{2})"/)?.[1]
+    const modified = [...html.matchAll(/"dateModified":"(\d{4}-\d{2}-\d{2})/g)].map((m) => m[1])
+    expect(visible, `${path} shows a Last updated date`).toBeTruthy()
+    expect(modified.length, `${path} has Article dateModified`).toBeGreaterThan(0)
+    for (const d of modified) expect(d, `${path} dateModified`).toBe(visible)
+  }
+})

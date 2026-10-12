@@ -19,7 +19,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-10-04T00:00:00Z',
-  modifiedAt: '2026-10-04T00:00:00Z',
+  modifiedAt: '2026-10-12T00:00:00Z',
 })
 
 const FAQS = [

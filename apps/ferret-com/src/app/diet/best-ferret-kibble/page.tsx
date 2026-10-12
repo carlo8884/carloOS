@@ -24,7 +24,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-11T00:00:00Z',
+  modifiedAt: '2026-10-12T00:00:00Z',
 })
 
 const med = buildMedicalWebPageSchema({
@@ -197,7 +197,7 @@ export default function BestFerretKibblePage() {
             updatedAt="2026-06-11"
             reviewedBy="Editorial team"
           />
-          <LastUpdated date="2026-10-11" />
+          <LastUpdated date="2026-10-12" />
           <EmailCapture
             variant="inline"
             siteId="ferret-com"
@@ -394,7 +394,7 @@ export default function BestFerretKibblePage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-11" />
+          <ComparisonFoot updated="2026-10-12" />
 
           <p>Wysong and Marshall, the two kibbles on this page, are compared in the <Link href="/reviews/wysong-vs-marshall-kibble-guide">Wysong versus Marshall guide</Link>. Wysong and Carniwhole are set side by side in the <Link href="/reviews/wysong-vs-carniwhole-guide">Wysong versus Carniwhole guide</Link>.</p>
           <h2 id="faq">FAQ</h2>
