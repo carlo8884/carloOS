@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildItemListSchema, buildMetadata, combineSchemas, LastUpdated, ComparisonFoot } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildItemListSchema, buildMetadata, combineSchemas, LastUpdated, ComparisonFoot, TableShopLink } from '@carloOS/ui'
 import { HopDisclosure } from '../../../components/HopDisclosure'
 
 export const metadata: Metadata = buildMetadata({
@@ -40,7 +40,7 @@ const FAQS = [
 const RANKED = ['Adjustable H-Style Harness', 'Figure-H Mesh Harness']
 const itemList = buildItemListSchema({
   name: 'H-Style or Mesh Harness',
-  items: RANKED.map((name) => ({ name, url: ({ 'Adjustable H-Style Harness': 'https://ferret.com/go/amazon-brand/ferret+h+style+harness+adjustable?s=reviews-h-style-vs-mesh-harness-guide' }[name] ?? 'https://ferret.com/reviews/h-style-vs-mesh-harness-guide') })),
+  items: RANKED.map((name) => ({ name, url: ({ 'Adjustable H-Style Harness': 'https://ferret.com/go/amazon-brand/ferret+h+style+harness+adjustable?s=reviews-h-style-vs-mesh-harness-guide', 'Figure-H Mesh Harness': 'https://ferret.com/go/amazon-brand/ferret+mesh+harness+leash+set?s=reviews-h-style-vs-mesh-harness-guide' }[name] ?? 'https://ferret.com/reviews/h-style-vs-mesh-harness-guide') })),
 })
 
 export default function HStyleVsMeshGuidePage() {
@@ -97,10 +97,12 @@ export default function HStyleVsMeshGuidePage() {
         <p>The adjustable H-style is Best Adjustability. The card describes a neck loop and a girth loop joined by a back strap. Multiple adjustment points are how it fits a ferret that has effectively no neck, and a snug girth loop is what stops a backout. It is lightweight and quick to fit. The cons say an H-harness left even slightly loose is the easiest style to escape, thin straps spread less pressure than a vest, and the fit has to be checked every outing.</p>
         <h2>What the review says about the mesh set</h2>
         <p>The figure-H mesh harness with a leash is Entry / Bundle. The card calls it a breathable-mesh take on the H-harness, usually bundled with a matched leash, and the most common entry-level option. Breathable mesh is tied to warm weather. Limitations are fewer adjustment points and lighter buckles than a dedicated H-harness, so fit still has to be checked and the ferret is not left unsupervised. The review says it can be a starter set, with the understanding that an escape artist may need the vest instead.</p>
+        <p><a className="font-semibold text-brand-primary" href="/go/amazon-brand/ferret+mesh+harness+leash+set?s=reviews-h-style-vs-mesh-harness-guide">Search Amazon for a figure-H mesh harness and leash set →</a></p>
         <p>Fit itself is the one-finger rule on the harness review and on the <Link href="/reviews/vest-vs-h-harness-guide">vest comparison</Link>. Use that check before a walk. A winter refit is a separate seasonal guide.</p>
         <h2>Who should buy which harness</h2>
         <p>Buy the adjustable H-style when you want the multi-point fit on the one the review lists first of these two cards and you will test the fit indoors before a walk. Buy the mesh set when you want the included leash and a lighter warm-weather H, and you accept fewer adjustment points. If the ferret already backs out of an H, the review’s escape-resistance card is the vest, not a second H. Measure the ferret either way. Do not walk a ferret unsupervised in either harness.</p>
-        <div className="my-6 max-w-full min-w-0">
+        <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/ferret+h+style+harness+adjustable?s=reviews-h-style-vs-mesh-harness-guide", "/go/amazon-brand/ferret+mesh+harness+leash+set?s=reviews-h-style-vs-mesh-harness-guide"]} />
+        <div id="harness-table" className="my-6 max-w-full min-w-0">
           <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
             <caption className="text-left font-semibold text-brand-dark p-3">At a glance</caption>
             <thead>
@@ -125,6 +127,11 @@ export default function HStyleVsMeshGuidePage() {
                 <th scope="row" className="p-3 font-bold text-brand-dark text-left">What you get</th>
                 <td className="p-3">Lightweight and quick to fit</td>
                 <td className="p-3">Breathable mesh, usually bundled with a matched leash</td>
+              </tr>
+              <tr className="border-b border-brand-border align-top">
+                <th scope="row" className="p-3 font-bold text-brand-dark text-left">Shop</th>
+                <td className="p-3"><TableShopLink href="/go/amazon-brand/ferret+h+style+harness+adjustable?s=reviews-h-style-vs-mesh-harness-guide" product="Adjustable H-style harness" label="Search Amazon for an H-style ferret harness" /></td>
+                <td className="p-3"><TableShopLink href="/go/amazon-brand/ferret+mesh+harness+leash+set?s=reviews-h-style-vs-mesh-harness-guide" product="Figure-H mesh harness and leash set" label="Search Amazon for a mesh harness and leash set" /></td>
               </tr>
               <tr className="border-b border-brand-border align-top">
                 <th scope="row" className="p-3 font-bold text-brand-dark text-left">Limit</th>
