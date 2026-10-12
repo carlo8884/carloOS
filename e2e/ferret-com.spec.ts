@@ -335,3 +335,19 @@ test('ferret fix M8: first-week checklist has a shop table for the day-one setup
   await expect(page.locator('#shop-first-week a[href="/go/amazon/B001NJ0DAY?s=first-week-checklist"]')).toHaveCount(1)
   expect(await page.locator('main').innerText()).not.toMatch(/with no links/i)
 })
+
+test('ferret fix P4: hub and legal breadcrumbs, legal footer and cost-calculator links are at least 24px tall at 390px', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 })
+  const checks: Array<[string, string]> = [
+    ['/care', 'nav > a.amber-link'],
+    ['/legal/affiliate-disclosure', 'nav.text-xs.flex.mb-8 > a, div.mt-12.border-t.flex > a'],
+    ['/tools/cost-calculator', 'div.rounded.border > a.underline'],
+  ]
+  for (const [path, selector] of checks) {
+    await page.goto(path, { waitUntil: 'domcontentloaded' })
+    const heights = await page.locator(selector).evaluateAll((els) => els.filter((el) => (el as HTMLElement).offsetParent).map((el) => el.getBoundingClientRect().height))
+    expect(heights.length, path).toBeGreaterThan(0)
+    expect(heights.filter((h) => h < 24), path).toEqual([])
+    expect(await page.evaluate(() => document.documentElement.scrollWidth), path).toBeLessThanOrEqual(390)
+  }
+})

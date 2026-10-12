@@ -410,3 +410,20 @@ test('vets fix Q4: holiday emergency guide copy matches the held compare-carrier
     await expect(offer.locator('a[href^="/go/trupanion"]').first()).toHaveText(/See Trupanion plans/)
   }
 })
+
+test('vets fix P4: home, health, find-a-vet, legal footer and directory links are at least 24px tall at 390px', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 })
+  const checks: Array<[string, string]> = [
+    ['/', 'div.flex.items-baseline.justify-between > a.text-sm.font-semibold'],
+    ['/health', 'div.grid > a.text-sm.text-brand-primary'],
+    ['/find-a-vet', 'section.mb-16 > a.text-sm.font-bold'],
+    ['/legal/affiliate-disclosure', 'div.mt-12.border-t.flex > a'],
+  ]
+  for (const [path, selector] of checks) {
+    await page.goto(path, { waitUntil: 'domcontentloaded' })
+    const heights = await page.locator(selector).evaluateAll((els) => els.filter((el) => (el as HTMLElement).offsetParent).map((el) => el.getBoundingClientRect().height))
+    expect(heights.length, path).toBeGreaterThan(0)
+    expect(heights.filter((h) => h < 24), path).toEqual([])
+    expect(await page.evaluate(() => document.documentElement.scrollWidth), path).toBeLessThanOrEqual(390)
+  }
+})
