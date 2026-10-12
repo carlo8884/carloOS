@@ -177,7 +177,7 @@ export default function BestFerretLitterPage() {
             updatedAt="2026-06-11"
             reviewedBy="Editorial team"
           />
-          <LastUpdated date="2026-10-11" />
+          <LastUpdated date="2026-10-12" />
           <EmailCapture
             variant="inline"
             siteId="ferret-com"
