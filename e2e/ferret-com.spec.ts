@@ -302,6 +302,8 @@ test('ferret fix M6: supplies checklist has an Amazon link for each core item an
   const text = await page.locator('main').innerText()
   expect(text).not.toMatch(/non-commercial|dead shop page/i)
   expect(text).not.toContain('/go buttons')
+})
+
 test('ferret fix M7: H-style vs mesh guide has a shop link for both picks, in the table and the ItemList', async ({ page }) => {
   await page.goto('/reviews/h-style-vs-mesh-harness-guide', { waitUntil: 'domcontentloaded' })
   const h = '/go/amazon-brand/ferret+h+style+harness+adjustable?s=reviews-h-style-vs-mesh-harness-guide'
