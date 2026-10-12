@@ -67,7 +67,7 @@ const GIFTS = [
   },
 ] as const
 
-const hop = (query: string) => `/go/amazon-brand/${query}?s=${SOURCE}`
+const shopHref = (query: string) => `/go/amazon-brand/${query}?s=${SOURCE}`
 
 const FAQS = [
   {
@@ -102,8 +102,8 @@ export default function NovemberDecemberGiftGuidePage() {
         <>
           <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">Start with a pet first-aid kit: it is useful in any household with a dog or cat.</p>
           <div data-fold="offer">
-          <PrimaryHop href={hop('pet+first+aid+kit')} label="Search Amazon for pet first-aid kits" />
-          <HopDisclosure tone="on-dark" siteId="vets-co" href={hop('pet+first+aid+kit')} />
+          <PrimaryHop href={shopHref('pet+first+aid+kit')} label="Search Amazon for pet first-aid kits" />
+          <HopDisclosure tone="on-dark" siteId="vets-co" href={shopHref('pet+first+aid+kit')} />
         </div>
         </>
       }
@@ -129,13 +129,13 @@ export default function NovemberDecemberGiftGuidePage() {
           <LastUpdated date="2026-10-12" />
         <p>These are five practical gifts for someone with a dog or cat. Each one helps with home care or a vet visit: a first-aid kit, a thermometer, a scale, a recovery cone, and a carrier. Each button opens an Amazon search for that type of item. This is not a ranked list, and nothing here replaces veterinary care. The reasons below come from the American Veterinary Medical Association page <a href="https://www.avma.org/resources-tools/pet-owners/emergencycare/first-aid-tips-pet-owners">First aid tips for pet owners</a>.</p>
         <p>Holiday food and emergency bills have their own pages. Fatty leftovers are on the <Link href="/reviews/holiday-leftovers-low-fat-guide">leftovers guide</Link>. Why a holiday emergency visit can cost more is on the <Link href="/reviews/holiday-emergency-visit-guide">emergency-visit guide</Link>.</p>
-        <HopDisclosure siteId="vets-co" href={GIFTS.map((g) => hop(g.query))} />
+        <HopDisclosure siteId="vets-co" href={GIFTS.map((g) => shopHref(g.query))} />
         {GIFTS.map((g) => (
           <section key={g.id} id={g.id} className="mt-6">
             <h2>{g.name}</h2>
             <p>{g.why}</p>
             <p><strong>Good for:</strong> {g.who}</p>
-            <ShopCtas amazonHref={hop(g.query)} amazonLabel={`Search Amazon for ${g.name.toLowerCase()}s →`} />
+            <ShopCtas amazonHref={shopHref(g.query)} amazonLabel={`Search Amazon for ${g.name.toLowerCase()}s →`} />
           </section>
         ))}
         <h2>At a glance</h2>
@@ -148,12 +148,26 @@ export default function NovemberDecemberGiftGuidePage() {
               </tr>
             </thead>
             <tbody>
-              {GIFTS.map((g) => (
-                <tr key={g.id} className="border-b border-brand-border">
-                  <td className="p-3 font-bold"><a href={`#${g.id}`}>{g.name}</a><TableShopLink href={hop(g.query)} product={g.name} /></td>
-                  <td className="p-3">{g.who}</td>
-                </tr>
-              ))}
+              <tr className="border-b border-brand-border">
+                <td className="p-3 font-bold"><a href="#pet-first-aid-kit">Pet first-aid kit</a><TableShopLink href={`/go/amazon-brand/pet+first+aid+kit?s=${SOURCE}`} product="Pet first-aid kit" /></td>
+                <td className="p-3">{GIFTS[0].who}</td>
+              </tr>
+              <tr className="border-b border-brand-border">
+                <td className="p-3 font-bold"><a href="#digital-pet-thermometer">Digital pet thermometer</a><TableShopLink href={`/go/amazon-brand/digital+pet+thermometer?s=${SOURCE}`} product="Digital pet thermometer" /></td>
+                <td className="p-3">{GIFTS[1].who}</td>
+              </tr>
+              <tr className="border-b border-brand-border">
+                <td className="p-3 font-bold"><a href="#digital-pet-scale">Digital pet scale</a><TableShopLink href={`/go/amazon-brand/digital+pet+scale?s=${SOURCE}`} product="Digital pet scale" /></td>
+                <td className="p-3">{GIFTS[2].who}</td>
+              </tr>
+              <tr className="border-b border-brand-border">
+                <td className="p-3 font-bold"><a href="#pet-recovery-cone">Pet recovery cone</a><TableShopLink href={`/go/amazon-brand/pet+recovery+cone?s=${SOURCE}`} product="Pet recovery cone" /></td>
+                <td className="p-3">{GIFTS[3].who}</td>
+              </tr>
+              <tr className="border-b border-brand-border">
+                <td className="p-3 font-bold"><a href="#soft-cat-carrier">Soft cat carrier</a><TableShopLink href={`/go/amazon-brand/soft+cat+carrier?s=${SOURCE}`} product="Soft cat carrier" /></td>
+                <td className="p-3">{GIFTS[4].who}</td>
+              </tr>
             </tbody>
           </table>
         </div>
