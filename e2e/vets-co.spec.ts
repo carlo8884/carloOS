@@ -450,3 +450,12 @@ test('vets fix T9: specialist pages make no unsourced annual specialist-cost cla
     await expect(page.getByText('Chronic specialist care can add up over a year').first()).toBeVisible()
   }
 })
+
+test('vets fix T10: diagnostics pages make no unsourced full-workup dollar range', async ({ page }) => {
+  for (const path of ['/diagnostics', '/diagnostics/complete-blood-count-cbc']) {
+    await page.goto(path, { waitUntil: 'domcontentloaded' })
+    const text = await page.locator('body').innerText()
+    expect(text).not.toMatch(/300-2,000|300–2,000/)
+    await expect(page.getByText('Diagnostic workups add up test by test').first()).toBeVisible()
+  }
+})
