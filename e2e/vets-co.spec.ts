@@ -294,3 +294,11 @@ test('vets fix: JSON-LD points at on-page cards, not held partner quote hops', a
     }
   }
 })
+
+test('vets fix T4: fine-print ManyPets card drops internal card wording', async ({ page }) => {
+  await page.goto('/insurance/reading-the-fine-print', { waitUntil: 'domcontentloaded' })
+  const card = page.locator('#manypets')
+  await expect(card).toContainText('ManyPets has stopped selling new US policies')
+  const body = await page.locator('body').innerText()
+  expect(body).not.toMatch(/this card does not print|this card|held partner|partner ID|tag needed/i)
+})

@@ -76,7 +76,7 @@ export const STARTER_KIT: KitCategory[] = [
         vendor: 'marshall',
         sku: 'ferret+hammock',
         rationale:
-          'Hide-N-Sleep\'s product page no longer resolves. This opens Marshall\'s current hammock search. Ferrets still need an enclosed, washable fabric bed rather than the bare cage floor.',
+          'Marshall\'s old Hide-N-Sleep page is gone. Look for Marshall\'s current hammocks instead. Ferrets still need an enclosed, washable fabric bed rather than the bare cage floor.',
         approxPriceUSD: 18,
       },
       {
@@ -108,7 +108,7 @@ export const STARTER_KIT: KitCategory[] = [
         vendor: 'marshall',
         sku: 'high+back+litter+pan',
         rationale:
-          'The Hi-Corner product page no longer resolves. Marshall\'s current catalog lists a high-back litter pan, and this opens that search. The high back is the part that keeps ferrets from backing into a flat litter wall.',
+          'Marshall\'s old Hi-Corner page is gone. Marshall\'s current catalog lists a high-back litter pan. The high back is the part that keeps ferrets from backing into a flat litter wall.',
         approxPriceUSD: 14,
       },
     ],
@@ -117,7 +117,7 @@ export const STARTER_KIT: KitCategory[] = [
     slug: 'food',
     name: 'Food',
     whyItMatters:
-      "Ferrets are obligate carnivores. Minimum 35% protein, minimum 18% fat, NO corn/grain/fruit/vegetable as primary ingredient. Standard kibble brands marketed for ferrets often fail these thresholds — check the guaranteed analysis. Wysong Epigen 90 is the highest-protein commercial option still sold on Wysong. Marshall Premium is the widely available legacy choice. Carniwhole\'s site no longer resolves, so it is not a kit link.",
+      "Ferrets are obligate carnivores. Minimum 35% protein, minimum 18% fat, NO corn/grain/fruit/vegetable as primary ingredient. Standard kibble brands marketed for ferrets often fail these thresholds — check the guaranteed analysis. Wysong Epigen 90 is the highest-protein commercial option still sold on Wysong. Marshall Premium is the widely available legacy choice. Carniwhole\'s site no longer loads, so it is not on this list.",
     picks: [
       {
         name: 'Wysong Epigen 90 (Starch-Free Ferret/Dog/Cat)',
@@ -156,7 +156,7 @@ export const STARTER_KIT: KitCategory[] = [
         vendor: 'marshall',
         sku: 'ferret+shampoo',
         rationale:
-          'The older ferret-shampoo product page no longer resolves. This opens Marshall\'s current shampoo search. Use a ferret shampoo and read the label; dog and cat shampoos are the wrong pH.',
+          'Marshall\'s old ferret-shampoo page is gone. Look for Marshall\'s current ferret shampoos instead. Use a ferret shampoo and read the label; dog and cat shampoos are the wrong pH.',
         approxPriceUSD: 11,
       },
       {

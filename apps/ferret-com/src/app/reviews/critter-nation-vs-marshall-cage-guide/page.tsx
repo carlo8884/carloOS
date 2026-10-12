@@ -33,7 +33,7 @@ const FAQS = [
   },
   {
     question: 'Why is there no Marshall shop button on this page?',
-    answer: 'Marshall’s Designer Ferret Cage product page no longer resolves, and the cage-setup card only opens a cage search. This guide does not add a new shop link for it. The Marshall card on the cage-setup page is where that search lives.',
+    answer: 'Marshall’s old Designer Ferret Cage page is gone, so this guide does not link to it. The Marshall card on the cage-setup page covers Marshall’s current ferret cages.',
   },
 ]
 
@@ -81,7 +81,7 @@ export default function CritterNationVsMarshallCageGuidePage() {
       }
     >
       <div className="carloOS-article">
-          <LastUpdated date="2026-10-10" />
+          <LastUpdated date="2026-10-12" />
         <EmailCapture
           variant="inline"
           siteId="ferret-com"
@@ -102,7 +102,7 @@ export default function CritterNationVsMarshallCageGuidePage() {
         <h2>What the page says about Critter Nation</h2>
         <p>The MidWest Critter Nation Double Unit (Model 162) is Best Overall and the winner. The card lists 36×25×62 inches for the double unit, two large solid PVC floors with a connecting ramp, full-width double doors on each level, and casters for moving it. A single-level Model 161 and three-level expansion options exist. The manufacturer page does not print bar spacing, so confirm it on the box. The cons are a heavy, large cage you should measure for, assembly that takes several hours and is easier with two people, and a ramp that can be slippery without a fleece cover.</p>
         <h2>What the page says about Marshall</h2>
-        <p>The Marshall ferret cage is Best Starter. The card says Marshall’s Designer Ferret Cage product page no longer resolves, so its button opens Marshall’s current cage search. The current mansion listings are two levels, and accessories are not included. Check bar spacing and footprint on the current listing. The card says the footprint fits smaller apartments and the brand is widely available in US pet retail. The cons are that a two-ferret household outgrows it, the pan area is smaller than the Critter Nation’s, and plastic shelves wear in heavy-use households.</p>
+        <p>The Marshall ferret cage is Best Starter. Marshall’s old Designer Ferret Cage page is gone, so look for Marshall’s current ferret cages instead. The current mansion listings are two levels, and accessories are not included. Check bar spacing and footprint on the current listing. The card says the footprint fits smaller apartments and the brand is widely available in US pet retail. The cons are that a two-ferret household outgrows it, the pan area is smaller than the Critter Nation’s, and plastic shelves wear in heavy-use households.</p>
         <p>Floor space for the number of ferrets is on the <Link href="/tools/cage-size-calculator">cage-size calculator</Link>. The cage-setup page gives about 36 × 24 inches with three levels for two ferrets as a planning figure, not a published standard.</p>
         <h2>Who should buy which cage</h2>
         <p>Buy the Critter Nation when you have room for a 36×25×62 inch cage, want solid floors and full-width doors for cleaning, and may keep two ferrets. Buy a Marshall cage when you need a first cage for one ferret in a smaller apartment and can check bar spacing and footprint on the listing. Skip the Marshall when a second ferret is already planned. Skip the Critter Nation when you cannot measure the room or manage a multi-hour assembly.</p>
@@ -151,7 +151,7 @@ export default function CritterNationVsMarshallCageGuidePage() {
             </tbody>
           </table>
         </div>
-        <ComparisonFoot updated="2026-10-10" />
+        <ComparisonFoot updated="2026-10-12" />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
                 <ArticleSourcesList

@@ -342,7 +342,7 @@ export default function FerretStressSignsPage() {
             name="Marshall play tunnel"
             subtitle="Check the current listing for construction, openings, and storage"
             description={
-              <p>Marshall's Pop-N-Play tunnel product page no longer resolves. This button opens Marshall's current play-tunnel search. Under-stimulation is one of the most common causes of ferret stress. The tunnel circuit is the enrichment item most reliably used across play sessions, because it taps the burrowing instinct directly. A ferret with regular tunnel access is less likely to show bar-biting and pacing — the stereotypies most strongly linked to boredom stress. This is an enrichment item, not a treatment; persistent stress after environmental improvement still warrants a vet visit.</p>
+              <p>Marshall's old Pop-N-Play tunnel page is gone. Look for Marshall's current play tunnels instead. Under-stimulation is one of the most common causes of ferret stress. The tunnel circuit is the enrichment item most reliably used across play sessions, because it taps the burrowing instinct directly. A ferret with regular tunnel access is less likely to show bar-biting and pacing — the stereotypies most strongly linked to boredom stress. This is an enrichment item, not a treatment; persistent stress after environmental improvement still warrants a vet visit.</p>
             }
             specs={[
               { label: 'Construction', value: 'Check the current listing' },

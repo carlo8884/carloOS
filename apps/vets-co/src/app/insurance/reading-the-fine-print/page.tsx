@@ -36,7 +36,7 @@ export default function FinePrintPage() {
         <div className="carloOS-article">
 
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-09-06T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-10" />
+          <LastUpdated date="2026-10-12" />
 
           <CalloutBox variant="info" title="Always read the sample policy">
             Reputable insurers publish a sample policy document. Read it before enrolling — not the summary, the actual document. The differences that matter in a real claim are almost always in the detailed terms, not the headline coverage.
@@ -101,7 +101,7 @@ export default function FinePrintPage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-10" />
+          <ComparisonFoot updated="2026-10-12" />
           <h2>Who should compare which term</h2>
           <p>Compare the orthopedic wait, and whether the plan pays a percentage of the bill or a schedule. Anything that starts during a waiting period is excluded as pre-existing. A cheap plan that uses a schedule is the one this page says to read twice.</p>
 
@@ -202,7 +202,7 @@ export default function FinePrintPage() {
             name="ManyPets"
             subtitle="See the carrier's current terms"
             description={
-              <p>ManyPets has stopped selling new US policies. This card does not print a deductible, a reimbursement percent, an annual limit, a waiting period, or an exam-fee rule as a current offer. See the carrier&apos;s current terms.</p>
+              <p>ManyPets has stopped selling new US policies, so there is no current deductible, reimbursement percent, annual limit, waiting period, or exam-fee rule to list here. See the carrier&apos;s current terms.</p>
             }
             specs={[
               { label: 'New US policies', value: 'Not for sale', highlight: 'warn' },
