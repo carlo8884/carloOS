@@ -377,6 +377,8 @@ test('vets fix Q2: holiday gift guide lists real gift picks with Amazon search b
   expect(text).not.toMatch(/printed band/i)
   const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
   expect(ld).not.toMatch(/\/go\/(trupanion|healthy-paws|embrace|vetster|askvet|chewy)\b/)
+})
+
 test('vets fix P3: specialty table links, breed-health guide links and wellness table names are at least 24px tall at 390px', async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 })
   const checks: Array<[string, string]> = [
