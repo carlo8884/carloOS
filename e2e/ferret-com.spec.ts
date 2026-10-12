@@ -360,3 +360,12 @@ test('ferret fix M9: vest vs H-style guide has a shop link for both picks', asyn
   expect(table).toEqual([vest, h])
   await expect(page.locator(`main a[href="${h}"]`)).toHaveCount(2)
 })
+
+test('ferret fix M10: paper vs wood litter guide has a shop link for both picks', async ({ page }) => {
+  await page.goto('/reviews/paper-vs-wood-litter-guide', { waitUntil: 'domcontentloaded' })
+  const paper = '/go/amazon-brand/recycled+paper+pellet+litter+non+clumping?s=reviews-paper-vs-wood-litter-guide'
+  const wood = '/go/amazon-brand/heat+treated+wood+pellet+litter?s=reviews-paper-vs-wood-litter-guide'
+  const table = await page.locator('#litter-table a[href^="/go/"]').evaluateAll((els) => els.map((el) => el.getAttribute('href')))
+  expect(table).toEqual([paper, wood])
+  await expect(page.locator(`main a[href="${wood}"]`)).toHaveCount(2)
+})
