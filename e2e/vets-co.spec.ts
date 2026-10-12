@@ -209,7 +209,7 @@ const FOLD: { path: string; pick: string }[] = [
   { path: '/reviews/askvet-vs-chewy-connect-guide', pick: 'AskVet' },
   { path: '/reviews/healthy-paws-vs-embrace-guide', pick: 'Healthy Paws' },
   { path: '/reviews/healthy-paws-vs-pets-best-guide', pick: 'Healthy Paws' },
-  { path: '/reviews/november-december-gift-guide', pick: 'Trupanion' },
+  { path: '/reviews/november-december-gift-guide', pick: 'first-aid kit' },
   { path: '/reviews/vetster-vs-chewy-connect-guide', pick: 'Vetster' },
   { path: '/reviews/lemonade-vs-pets-best-guide', pick: 'Lemonade' },
   { path: '/reviews/spot-vs-manypets-guide', pick: 'Spot' },
