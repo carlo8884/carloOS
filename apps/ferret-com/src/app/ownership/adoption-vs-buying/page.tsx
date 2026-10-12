@@ -4,7 +4,7 @@ import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaSc
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
-  title: 'Adopting vs Buying a Ferret — Rescue, Breeder, Pet Store | Ferret.com',
+  title: 'Adopting vs Buying a Ferret — Rescue, Breeder, Store | Ferret.com',
   description:
     'Where to get a ferret compared: shelters and rescues, breeders, and farm-bred pet-store ferrets, on health, altering, descenting, and temperament.',
   path: '/ownership/adoption-vs-buying',

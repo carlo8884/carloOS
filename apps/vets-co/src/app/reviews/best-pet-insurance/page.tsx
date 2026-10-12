@@ -9,7 +9,7 @@ export const dynamic = 'force-dynamic'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'vets-co',
-  title: 'Best Pet Insurance 2026 — How the 11 Major Carriers Compare | Vets.co',
+  title: 'Best Pet Insurance 2026 — 11 Major Carriers Compared | Vets.co',
   description: 'Pet insurance compared on direct-pay vs reimbursement, payout speed, pre-existing exclusions, and waiting periods. Sourced from carrier contracts.',
   path: '/reviews/best-pet-insurance',
   type: 'article',

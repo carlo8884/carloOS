@@ -438,3 +438,17 @@ test('ferret fix L3: food evaluator verdict meets WCAG AA contrast', async ({ pa
   await page.goto('/', { waitUntil: 'networkidle' })
   await expectAAContrast(page, '[class*="bg-emerald-50"] p, [class*="bg-amber-50"] p, [class*="bg-red-50"] p')
 })
+
+test('ferret fix L4: trimmed titles fit 70 characters and directory titles are whole and unique', async ({ page }) => {
+  const paths = ['/care/litter-training', '/care/ferret-proofing-your-home', '/behavior/dead-sleep-explained', '/diet', '/diet/raw-feeding-guide', '/diet/protein-and-fat-requirements', '/diet/supplements-and-vitamins', '/health/emergency-warning-signs', '/health/dental-disease', '/health/adrenal-disease', '/health/spaying-and-neutering', '/health/annual-checkup-guide', '/ownership/adoption-vs-buying', '/tools/food-evaluator', '/directory/broward-avian-exotic-animal-hospital-deerfield-beach-fl-ve-0007097', '/directory/broward-avian-exotic-animal-clinic-deerfield-beach-fl-ve-0004271']
+  const titles: string[] = []
+  for (const path of paths) {
+    await page.goto(path, { waitUntil: 'domcontentloaded' })
+    const title = await page.title()
+    expect(title.length, `${path}: ${title}`).toBeLessThanOrEqual(70)
+    titles.push(title)
+  }
+  const [hospital, clinic] = titles.slice(-2)
+  expect(hospital).toContain('Broward Avian & Exotic Animal Hospital')
+  expect(clinic).toContain('Broward Avian & Exotic Animal Clinic')
+})

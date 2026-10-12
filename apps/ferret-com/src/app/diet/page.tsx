@@ -6,7 +6,7 @@ import { HubHero } from '../../components/HubHero'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
-  title: 'Ferret Diet & Nutrition — Feeding the Obligate Carnivore | Ferret.com',
+  title: 'Ferret Diet & Nutrition — Feeding a Carnivore | Ferret.com',
   description:
     'Evidence-based references on feeding ferrets: whole-prey vs kibble, raw feeding, protein and fat targets, treats, labels, life-stage, transitions, and weight.',
   path: '/diet',

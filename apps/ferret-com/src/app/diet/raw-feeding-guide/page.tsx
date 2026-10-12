@@ -6,7 +6,7 @@ import { buildArticleSchema, buildFAQSchema, buildMedicalWebPageSchema, combineS
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
-  title: 'Raw Feeding Guide for Ferrets — Frankenprey & Whole Prey | Ferret.com',
+  title: 'Raw Feeding for Ferrets — Frankenprey & Whole Prey | Ferret.com',
   description:
     'A practical raw-feeding reference for ferrets: frankenprey ratios, whole-prey sourcing, freezing protocols, calcium balance, and pathogen harm-reduction.',
   path: '/diet/raw-feeding-guide',

@@ -50,7 +50,7 @@
     },
     {
       "path": "/care/ferret-proofing-your-home",
-      "title": "Ferret-Proofing Your Home — Room-by-Room Hazard Checklist | Ferret.com",
+      "title": "Ferret-Proofing Your Home — Room-by-Room Checklist | Ferret.com",
       "description": "A room-by-room ferret-proofing guide: gap-blocking, recliner and appliance dangers, ingestion hazards, and building a safe free-roam space.",
       "category": "guides"
     },
@@ -68,7 +68,7 @@
     },
     {
       "path": "/care/litter-training",
-      "title": "Ferret Litter Training — Corner Pans & Multi-Pan Strategy | Ferret.com",
+      "title": "Ferret Litter Training — Corner Pans & Multiple Pans | Ferret.com",
       "description": "How to litter-train a ferret: corner-pan placement, the multi-pan rule, paper-pellet substrate, kit timeline, and how to fix regression.",
       "category": "guides"
     },
@@ -128,13 +128,13 @@
     },
     {
       "path": "/health/adrenal-disease",
-      "title": "Adrenal Disease in Ferrets — Signs, Diagnosis, Treatment | Ferret.com",
+      "title": "Adrenal Disease in Ferrets — Signs and Treatment | Ferret.com",
       "description": "Adrenal disease is the second most common middle-aged-ferret disease after insulinoma. Hormone-panel diagnosis, deslorelin implants, surgery, and prognosis.",
       "category": "guides"
     },
     {
       "path": "/ownership/adoption-vs-buying",
-      "title": "Adopting vs Buying a Ferret — Rescue, Breeder, Pet Store | Ferret.com",
+      "title": "Adopting vs Buying a Ferret — Rescue, Breeder, Store | Ferret.com",
       "description": "Where to get a ferret compared: shelters and rescues, breeders, and farm-bred pet-store ferrets, on health, altering, descenting, and temperament.",
       "category": "comparisons"
     },
@@ -284,7 +284,7 @@
     },
     {
       "path": "/tools/food-evaluator",
-      "title": "Ferret Food Evaluator — Is This Kibble Right for Ferrets? | Ferret.com",
+      "title": "Ferret Food Evaluator — Is This Kibble Right? | Ferret.com",
       "description": "Paste a guaranteed analysis. Protein, fat, fiber, and ash cutoffs are a planning figure, not a published profile.",
       "category": "tools"
     },

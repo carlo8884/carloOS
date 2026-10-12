@@ -20,7 +20,7 @@ const URL = 'https://ferret.com/tools/food-evaluator'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
-  title: 'Ferret Food Evaluator — Is This Kibble Right for Ferrets? | Ferret.com',
+  title: 'Ferret Food Evaluator — Is This Kibble Right? | Ferret.com',
   description: 'Paste a guaranteed analysis. Protein, fat, fiber, and ash cutoffs are a planning figure, not a published profile.',
   path: '/tools/food-evaluator',
 })

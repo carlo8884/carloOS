@@ -5,7 +5,7 @@ import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaSc
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
-  title: 'Ferret Supplements & Vitamins — What Helps, What to Skip | Ferret.com',
+  title: 'Ferret Supplements & Vitamins — Help or Skip | Ferret.com',
   description:
     'Which ferret supplements are useful, which are redundant on a complete diet, and which warrant caution: coat supplements, hairball pastes, and vitamin risks.',
   path: '/diet/supplements-and-vitamins',

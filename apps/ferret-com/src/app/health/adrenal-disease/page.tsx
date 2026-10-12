@@ -52,7 +52,7 @@ import { crossSiteHref } from '@carloOS/config'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
-  title: 'Adrenal Disease in Ferrets — Signs, Diagnosis, Treatment | Ferret.com',
+  title: 'Adrenal Disease in Ferrets — Signs and Treatment | Ferret.com',
   description:
     'Adrenal disease is the second most common middle-aged-ferret disease after insulinoma. Hormone-panel diagnosis, deslorelin implants, surgery, and prognosis.',
   path: '/health/adrenal-disease',

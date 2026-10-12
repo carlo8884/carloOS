@@ -43,7 +43,7 @@ import {
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
-  title: 'Ferret Dental Disease — Brushing, Scaling, Periodontitis | Ferret.com',
+  title: 'Ferret Dental Disease — Brushing, Scaling, Gum Disease | Ferret.com',
   description:
     'Ferrets accumulate tartar fast and develop gingivitis by age 2-3. Daily brushing, annual scaling, the stages of periodontal disease, and the risk factors.',
   path: '/health/dental-disease',
