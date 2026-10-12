@@ -369,3 +369,12 @@ test('ferret fix M10: paper vs wood litter guide has a shop link for both picks'
   expect(table).toEqual([paper, wood])
   await expect(page.locator(`main a[href="${wood}"]`)).toHaveCount(2)
 })
+
+test('ferret fix M12: winter harness fit guide has a shop link for both picks', async ({ page }) => {
+  await page.goto('/reviews/winter-harness-fit-guide', { waitUntil: 'domcontentloaded' })
+  const vest = '/go/amazon-brand/ferret+vest+harness+jacket+escape+proof?s=reviews-winter-harness-fit-guide'
+  const h = '/go/amazon-brand/ferret+h+style+harness+adjustable?s=reviews-winter-harness-fit-guide'
+  const table = await page.locator('#harness-table a[href^="/go/"]').evaluateAll((els) => els.map((el) => el.getAttribute('href')))
+  expect(table).toEqual([vest, h])
+  await expect(page.locator(`main a[href="${h}"]`)).toHaveCount(2)
+})
