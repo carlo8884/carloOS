@@ -93,7 +93,7 @@ export default function DataPartnershipsPage() {
       <SchemaScript schema={schema} />
 
       <nav aria-label="Breadcrumb" className="text-xs text-brand-text-light flex gap-2 mb-8">
-        <Link href="/" className="hover:text-brand-primary no-underline">
+        <Link href="/" className="inline-flex min-h-6 items-center hover:text-brand-primary no-underline">
           Home
         </Link>
         <span>›</span>

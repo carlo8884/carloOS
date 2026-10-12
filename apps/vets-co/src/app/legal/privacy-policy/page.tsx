@@ -25,7 +25,7 @@ export default function PrivacyPolicyPage() {
       <SchemaScript schema={breadcrumbSchema} />
       <div className="px-container-sm sm:px-container py-16 max-w-content mx-auto">
       <nav aria-label="Breadcrumb" className="text-xs text-brand-text-light flex gap-2 mb-8">
-        <Link href="/" className="hover:text-brand-primary no-underline">Home</Link>
+        <Link href="/" className="inline-flex min-h-6 items-center hover:text-brand-primary no-underline">Home</Link>
         <span>›</span>
         <span className="text-brand-text-mid">Privacy Policy</span>
       </nav>

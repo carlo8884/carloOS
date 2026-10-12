@@ -115,7 +115,7 @@ export default function VetsGlossaryPage() {
       </div>
 
       <nav className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
-        <Link href="/" className="hover:text-brand-primary no-underline">Vets.co</Link>
+        <Link href="/" className="inline-flex min-h-6 items-center hover:text-brand-primary no-underline">Vets.co</Link>
         <span>›</span>
         <span className="text-brand-text-mid font-medium">Glossary</span>
       </nav>

@@ -183,9 +183,9 @@ export default function CatCalorieCalculatorPage() {
         aria-label="Breadcrumb"
         className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2"
       >
-        <Link href="/" className="hover:text-brand-primary no-underline">Vets.co</Link>
+        <Link href="/" className="inline-flex min-h-6 items-center hover:text-brand-primary no-underline">Vets.co</Link>
         <span>&#8250;</span>
-        <Link href="/tools" className="hover:text-brand-primary no-underline">Tools</Link>
+        <Link href="/tools" className="inline-flex min-h-6 items-center hover:text-brand-primary no-underline">Tools</Link>
         <span>&#8250;</span>
         <span className="text-brand-text-mid font-medium">Cat Calorie Calculator</span>
       </nav>

@@ -133,7 +133,7 @@ export default function DiagnosticsHubPage() {
 
       {/* Breadcrumb */}
       <nav aria-label="Breadcrumb" className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
-        <Link href="/" className="hover:text-brand-primary no-underline">
+        <Link href="/" className="inline-flex min-h-6 items-center hover:text-brand-primary no-underline">
           Home
         </Link>
         <span>›</span>

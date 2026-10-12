@@ -747,3 +747,19 @@ test('vets fix L12: issue #2676 dead source links replaced or removed, no held C
     await expect(page.locator('a[href*="/go/pets-best"], a[href*="petsbest.com"]'), path).toHaveCount(0)
   }
 })
+
+test('vets fix P2: non-funnel breadcrumb, back and dosing links are at least 24px tall at 390px', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 })
+  for (const path of ['/about', '/find-a-vet/california', '/symptoms/dog-vomiting', '/medications/apoquel', '/medications/can-i-give-my-dog/ibuprofen', '/diagnostics/urinalysis', '/specialists/veterinary-cardiology', '/glossary', '/tools/er-vs-clinic', '/tools/cat-calorie-calculator', '/insurance/questions', '/legal/terms']) {
+    const res = await page.goto(path)
+    expect(res?.status(), path).toBe(200)
+    const short = await page.evaluate(() =>
+      Array.from(document.querySelectorAll('a[href]'))
+        .filter((a) => !a.closest('p, li'))
+        .map((a) => ({ text: a.textContent?.trim() ?? '', rect: a.getBoundingClientRect(), hidden: getComputedStyle(a).visibility === 'hidden' }))
+        .filter(({ rect, hidden }) => !hidden && rect.width > 1 && rect.height > 1 && rect.height < 24)
+        .map(({ text, rect }) => `${text} (${Math.round(rect.height * 10) / 10}px)`),
+    )
+    expect(short, path).toEqual([])
+  }
+})
