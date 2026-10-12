@@ -434,3 +434,10 @@ test('vets fix T7: emergency triage card drops the unsourced "cheapest" and "mos
   expect(html).not.toMatch(/cheapest emergency-prep purchase you will ever make|most common ER mistake/i)
   expect(html).toContain('$40–$70')
 })
+
+test('vets fix T8: worth-it answer page makes no unsourced emergency dollar range', async ({ page }) => {
+  await page.goto('/insurance/questions/is-pet-insurance-worth-it', { waitUntil: 'domcontentloaded' })
+  const text = await page.locator('main').innerText()
+  expect(text).not.toMatch(/\$5,000|\$5k|\$10,000|\$10k/)
+  await expect(page.locator('main')).toContainText('a sudden large emergency bill from savings')
+})
