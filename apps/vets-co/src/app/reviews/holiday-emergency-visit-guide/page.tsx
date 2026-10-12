@@ -61,7 +61,7 @@ export default function HolidayEmergencyVisitGuidePage() {
         <>
           <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">A holiday emergency visit costs more because the hospital keeps staff on duty overnight, Compare carriers such as Trupanion on the insurance review before a problem.</p>
           <div data-fold="offer">
-          <PrimaryHop href="/go/trupanion/home?s=reviews-holiday-emergency-visit-guide" label="Get a Trupanion quote" />
+          <PrimaryHop href="/go/trupanion/home?s=reviews-holiday-emergency-visit-guide" label="See Trupanion plans" />
           <HopDisclosure tone="on-dark" siteId="vets-co" href="/go/trupanion/home?s=reviews-holiday-emergency-visit-guide" />
         </div>
         </>
@@ -124,7 +124,7 @@ export default function HolidayEmergencyVisitGuidePage() {
         <h2>Who should compare carriers</h2>
         <p>Compare carriers on published terms before a problem. Quotes open on each carrier's own site. If a pet is already in crisis, the costs guide says go.</p>
         <HopDisclosure siteId="vets-co" href="/go/trupanion/home?s=reviews-holiday-emergency-visit-guide" showQuietNote={false} />
-        <p><InlinePartnerQuote href="/go/trupanion/home?s=reviews-holiday-emergency-visit-guide" label="Get a Trupanion quote →" /></p>
+        <p><InlinePartnerQuote href="/go/trupanion/home?s=reviews-holiday-emergency-visit-guide" label="See Trupanion plans →" /></p>
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
         <EmailCapture

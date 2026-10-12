@@ -83,7 +83,7 @@ export default function VetsReviewsPage() {
       />
       <div className="px-container-sm sm:px-container pt-6">
         <PriceAsOf date="2026-06-06" />
-        <LastUpdated date="2026-10-11" />
+        <LastUpdated date="2026-10-12" />
       </div>
       <nav aria-label="Breadcrumb" className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
         <Link href="/" className="hover:text-brand-primary no-underline">Home</Link><span>›</span>
