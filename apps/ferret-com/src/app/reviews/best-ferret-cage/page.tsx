@@ -18,7 +18,9 @@ const SOURCES = [
   { label: 'Ferret Nation cage', url: 'https://www.midwesthomes4pets.com/product/small-animal/habitats-cages/ferret-nation/', publisher: 'Midwest Homes for Pets' },
   { label: 'Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery (housing chapter)', publisher: 'Quesenberry & Carpenter, Saunders/Elsevier' },
   { label: 'Ferret housing and husbandry guidance', publisher: 'American Ferret Association' },
-  { label: 'Ferret care and housing standards', publisher: 'House Rabbit Society / exotic-mammal rescue consensus' },
+  { label: 'Merck Veterinary Manual: Management of Ferrets (housing)', url: 'https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/management-of-ferrets', publisher: 'Merck Veterinary Manual' },
+  { label: 'Lafeber Vet: Care of the Pet Ferret (client handout)', url: 'https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf', publisher: 'Lafeber Company' },
+  { label: 'VCA Animal Hospitals: Ferrets - Housing', url: 'https://vcahospitals.com/know-your-pet/ferrets---housing', publisher: 'VCA Animal Hospitals' },
   { label: 'Manufacturer product specifications (bar spacing, dimensions, pan depth)', publisher: 'Ferret Nation, Prevue Pet Products, Kaytee' },
 ]
 const schema = buildArticleSchema({
@@ -262,6 +264,11 @@ export default function BestFerretCagePage() {
             are notorious for learning to open simple catches, so a cage with positive-locking doors saves you from
             after-hours escapes.
           </p>
+
+          <h2 id="vet-references">What the veterinary references say</h2>
+          <p>The <a href="https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/management-of-ferrets">Merck Veterinary Manual</a> says ferret housing is ideally wire mesh with grids no wider than 1 inch, a sturdy floor and a door that locks, and that standard cages are not big enough on their own, so ferrets also need supervised time out of the cage.</p>
+          <p><a href="https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf">Lafeber&apos;s ferret care handout</a> puts the minimum cage for one or two ferrets at 24 x 24 x 18 inches, with bar spacing no wider than 1 inch (half an inch is better) and wire floor squares no larger than a quarter inch.</p>
+          <p><a href="https://vcahospitals.com/know-your-pet/ferrets---housing">VCA Animal Hospitals</a> gives the same 24 x 24 x 18 inch minimum and says to buy as large a cage as you can afford.</p>
 
           <h2 id="picks">Cages That Meet the Criteria</h2>
           <p>
