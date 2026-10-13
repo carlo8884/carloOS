@@ -1,7 +1,7 @@
 import { HopDisclosure } from '../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, ShopCtas, StockImage } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, ShopCtas, StockImage, FAQAccordion, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
 import { HubHero } from '../../components/HubHero'
 
 export const metadata: Metadata = buildMetadata({
@@ -128,6 +128,14 @@ const itemListSchema = {
 
 const ferretOwnershipSchema = combineSchemas(breadcrumbSchema, itemListSchema)
 
+const HUB_FAQS = [
+  { question: "How long do ferrets live?", answer: "On average 6 to 8 years (Lafeber Vet)." },
+  { question: "Are ferrets good with children and other pets?", answer: "They may not be the best pet for a family with young children, and any interaction with a young child should be supervised. Ferrets tend to get along with most cats and dogs but may not get along with birds, rabbits, rodents or lizards (Lafeber Vet)." },
+  { question: "Are ferrets legal everywhere?", answer: "No. Some states, counties and cities restrict ferret ownership or require permits, so research the laws where you live (Lafeber Vet)." },
+  { question: "How much time does a ferret need each day?", answer: "At least 2 to 4 hours outside the cage every day, supervised or in a ferret-proofed area (Merck Veterinary Manual)." },
+  { question: "Can ferrets catch the flu from people?", answer: "Yes. Ferrets can catch human influenza and pass it back. If you're sick, avoid handling your ferret, or wash your hands first and keep it away from your face (Lafeber Vet)." },
+]
+
 export default function OwnershipHubPage() {
   return (
     <>
@@ -159,6 +167,16 @@ export default function OwnershipHubPage() {
         <span>›</span>
         <span style={{ color: 'var(--brand-text-mid)', fontWeight: 500 }}>Ownership</span>
       </nav>
+
+      <div className="px-container-sm sm:px-container pt-8 max-w-4xl">
+        <LastUpdated date="2026-10-13" />
+        <div className="rounded-lg border-l-4 border-brand-primary bg-brand-white p-5 mt-4" data-testid="short-answer">
+          <h2 className="font-display text-lg font-bold mb-2">The short answer</h2>
+          <p className="text-base leading-relaxed text-brand-text-mid m-0">
+            A ferret can be a great pet for the right person: they live about 6 to 8 years, need annual vet care with distemper and rabies vaccines, and may not suit a family with young children. Some states, counties and cities restrict ferrets or require permits, so check local law first (<a href="https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf" className="text-brand-primary hover:underline">Lafeber Vet</a>). Expect to give at least 2 to 4 hours of supervised play outside the cage every day (<a href="https://www.merckvetmanual.com/all-other-pets/ferrets/providing-a-home-for-a-ferret" className="text-brand-primary hover:underline">Merck Veterinary Manual</a>).
+          </p>
+        </div>
+      </div>
 
       {/* Featured ownership spokes — three photo-backed pillar articles */}
       <div
@@ -388,6 +406,17 @@ export default function OwnershipHubPage() {
           ))}
         </ul>
       </div>
+
+      <section className="px-container-sm sm:px-container py-10">
+        <div className="max-w-content-wide">
+          <h2 id="faq" className="font-display text-xl font-bold text-brand-dark mb-4">Ferret ownership FAQ</h2>
+          <FAQAccordion items={HUB_FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
+          <ArticleSourcesList title="Sources" sources={[
+            { label: "Providing a Home for a Ferret", url: "https://www.merckvetmanual.com/all-other-pets/ferrets/providing-a-home-for-a-ferret", publisher: "Merck Veterinary Manual" },
+            { label: "Care of the Pet Ferret (owner handout)", url: "https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf", publisher: "Lafeber Vet" },
+          ]} />
+        </div>
+      </section>
 
       <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <h2 id="kit" className="font-display font-bold text-brand-dark text-xl mb-4 max-w-content-wide">Related supplies</h2>
