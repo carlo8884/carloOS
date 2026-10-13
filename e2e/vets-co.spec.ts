@@ -1109,3 +1109,13 @@ test('vets fix HB1: insurance hub answers first and has a sourced FAQ', async ({
   const ld = await page.locator('script[type="application/ld+json"]').allTextContents()
   expect(ld.filter((t) => t.includes('"FAQPage"')).length).toBe(1)
 })
+
+test('vets fix HB4: /guides hub answers first and has a sourced FAQ', async ({ page }) => {
+  await page.goto('/guides', { waitUntil: 'domcontentloaded' })
+  const box = page.getByTestId('short-answer')
+  await expect(box).toBeVisible()
+  await expect(box.locator('a[href="https://www.merckvetmanual.com/multimedia/table/when-to-see-a-veterinarian"]').first()).toBeVisible()
+  await expect(page.getByRole('heading', { name: 'Owner guides FAQ' })).toBeVisible()
+  const ld = await page.locator('script[type="application/ld+json"]').allTextContents()
+  expect(ld.filter((t) => t.includes('"FAQPage"')).length).toBe(1)
+})
