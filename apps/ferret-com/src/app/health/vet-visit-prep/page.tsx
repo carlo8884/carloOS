@@ -19,6 +19,16 @@ import { crossSiteHref } from '@carloOS/config'
 
 const SOURCES = [
   {
+    label: "Lafeber Company — Care of the Ferret (veterinary client handout): exam frequency",
+    url: "https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf",
+    publisher: "Lafeber",
+  },
+  {
+    label: "Merck Veterinary Manual — Providing a Home for a Ferret: temperature range and heat sensitivity",
+    url: "https://www.merckvetmanual.com/all-other-pets/ferrets/providing-a-home-for-a-ferret",
+    publisher: "Merck Veterinary Manual",
+  },
+  {
     label: "Quesenberry KE, Carpenter JW (eds.). Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery. 3rd ed. Saunders/Elsevier — ferret preventive care, physical examination, and diagnostic workup chapters. (general reference; not checked against this page)",
     url: "https://www.elsevier.com/books/ferrets-rabbits-and-rodents/quesenberry/978-1-4160-6621-7",
     publisher: "Elsevier/Saunders",
@@ -51,7 +61,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
   title: 'Ferret Vet Visit Prep — What to Expect, Bloodwork, Cost | Ferret.com',
   description:
-    'How to prep for a ferret annual or sick visit: finding an exotic-pet vet, carrier setup, bloodwork to expect, costs, fasting rules, and what to bring.',
+    'How to prep for a ferret annual or sick visit: finding an exotic-pet vet, carrier setup, bloodwork to expect, costs, feeding before visits, and what to bring.',
   path: '/health/vet-visit-prep',
   type: 'article',
 })
@@ -93,7 +103,7 @@ const FAQS = [
   {
     question: 'Should I fast my ferret before the visit?',
     answer:
-      "Usually no, with two exceptions. Healthy ferrets do not need to fast for routine exams or vaccines. If fasting bloodwork (specifically for insulinoma screening) is planned, follow the vet's instructions — typically a 3-4 hour fast, never longer because of hypoglycemia risk. If general anesthesia is planned (dental, surgery, imaging requiring sedation), the vet will give a specific short fasting window, typically 4-6 hours in ferrets — much shorter than the overnight fast used in dogs and cats.",
+      "Ask your vet. Ferrets have a high metabolism and a short digestive tract and need to eat frequently (Merck Veterinary Manual), so do not withhold food unless your vet tells you to. If bloodwork or anesthesia is planned, follow the fasting window your vet gives you exactly.",
   },
   {
     question: 'What should I bring with me to the vet?',
@@ -103,7 +113,7 @@ const FAQS = [
   {
     question: 'How often does a healthy adult ferret need to see the vet?',
     answer:
-      "Annually from age 1-3, every 6 months from age 3-5, every 3-6 months from age 5+. This reflects the rising disease incidence curve through middle age and into senior years. The pattern is described consistently across exotic-pet veterinary references including Quesenberry & Carpenter and the AAHA exotic-mammal preventive-care guidance.",
+      "Lafeber's Care of the Ferret recommends annual exams for pet ferrets, and says twice-yearly exams are a good idea from 3 years of age. Merck recommends annual rabies and canine distemper vaccination and an annual dental check. Your vet may suggest more frequent visits or extra tests for an older or sick ferret.",
   },
   {
     question: 'My ferret hates the carrier — how do I make travel less stressful?',
@@ -204,13 +214,11 @@ export default function FerretVetVisitPrepPage() {
             Use an exotic-pet vet, ideally an AEMV member or an ABVP
             Exotic Companion Mammal diplomate. Bring a familiar carrier,
             written notes on what you have observed, a current home
-            weight, and any prior records. Healthy ferrets do not need
-            to fast for routine visits; fast 3-4 hours only for specific
-            insulinoma bloodwork or per pre-anesthesia instructions.
+            weight, and any prior records. Don&apos;t withhold food unless
+            your vet tells you to; ferrets need to eat frequently (Merck).
             Costs vary widely by clinic, so ask for a written estimate
-            before bloodwork, dental work or surgery. Annual visits
-            through age 3, every 6 months age 3-5, every 3-6 months
-            beyond that.
+            before bloodwork, dental work or surgery. Plan on an
+            annual exam, and twice a year from age 3 (Lafeber).
           </p>
 
           <h2 id="vet">Finding the Right Vet</h2>
@@ -383,10 +391,11 @@ export default function FerretVetVisitPrepPage() {
             </li>
           </ul>
           <p>
-            Ferrets do not tolerate heat well. The carrier should never
-            be left in a hot car, even briefly. The cabin temperature
-            for transport should be on the cool side of comfortable for
-            a human — roughly 65-72°F.
+            Ferrets are sensitive to heat and humidity because they do
+            not have sweat glands; 65°F to 75°F (18°C to 23°C) is usually
+            comfortable (<a href="https://www.merckvetmanual.com/all-other-pets/ferrets/providing-a-home-for-a-ferret">Merck</a>). Keep the car within
+            that range and never leave the carrier in a hot car, even
+            briefly.
           </p>
 
           <h2 id="diagnostics">Expected Diagnostics</h2>
@@ -464,33 +473,23 @@ export default function FerretVetVisitPrepPage() {
           </CrossSiteHelp>
 
           <h2 id="cadence">Visit Cadence by Age</h2>
-          <p>
-            Standard exotic-pet practice cadence, adjusted for individual
-            findings:
-          </p>
           <ul>
             <li>
-              <strong>Kit (under 6 months).</strong> Multiple vaccine
-              visits per the kit schedule. First full exam at the time
-              of the first vaccine. Sterilization conversation (the
-              early-spay-and-neuter pattern in US commercial ferrets is
-              implicated in adrenal disease risk; later neutering is
-              available as a deliberate choice with private breeders).
+              <strong>Kits.</strong> A series of vaccine visits; Merck
+              advises a rabies vaccine from at least 16 weeks of age, and
+              your vet will set the distemper schedule
+              (<a href="https://www.merckvetmanual.com/all-other-pets/ferrets/routine-health-care-for-ferrets">Merck</a>).
             </li>
             <li>
-              <strong>Age 1-3.</strong> Annual wellness exam with baseline
-              bloodwork from the first annual onward.
+              <strong>Adults.</strong> An annual exam (<a href="https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf">Lafeber</a>),
+              with rabies and canine distemper vaccines and a teeth and gum
+              check each year (Merck).
             </li>
             <li>
-              <strong>Age 3-5.</strong> Every 6 months. Bloodwork at each
-              visit. Cardiac auscultation; consider adrenal hormone panel
-              if clinical signs emerge.
-            </li>
-            <li>
-              <strong>Age 5+.</strong> Every 3-6 months. Bloodwork at each
-              visit. Abdominal ultrasound annually. Hormone panel as
-              clinically indicated. The senior monitoring is described
-              in more detail in our <a href="/health/aging-ferret-care">aging ferret care page</a>.
+              <strong>From 3 years.</strong> Twice-yearly exams are a good
+              idea (Lafeber). Ask your vet which bloodwork or imaging your
+              ferret needs; the senior monitoring is described in more
+              detail in our <a href="/health/aging-ferret-care">aging ferret care page</a>.
             </li>
           </ul>
 
