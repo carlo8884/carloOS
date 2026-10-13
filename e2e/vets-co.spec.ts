@@ -969,3 +969,12 @@ test('vets fix AF9: senior care page leads with a sourced short answer and FAQ s
   const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
   expect(ld).toContain('"FAQPage"')
 })
+
+test('vets fix AF10: eye conditions page leads with a sourced short answer and FAQ schema', async ({ page }) => {
+  await page.goto('/health/dog-eye-conditions', { waitUntil: 'domcontentloaded' })
+  await expect(page.locator('.carloOS-article').filter({ hasText: 'Short answer' }).first()).toContainText('see a vet immediately')
+  await expect(page.locator('a[href="https://www.merckvetmanual.com/dog-owners/eye-disorders-of-dogs/glaucoma-in-dogs"]').first()).toBeAttached()
+  await expect(page.getByText('Is glaucoma in dogs an emergency?').first()).toBeVisible()
+  const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
+  expect(ld).toContain('"FAQPage"')
+})

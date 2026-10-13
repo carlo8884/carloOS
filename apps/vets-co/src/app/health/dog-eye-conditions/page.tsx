@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, ShopCtas, LastUpdated } from '@carloOS/ui'
+import { buildMetadata, FAQAccordion, ArticleLayout, CrossPortfolioCard, RelatedLinks, ShopCtas, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Eye Conditions in Dogs — Cherry Eye, Cataracts | Vets.co', description: 'Common dog eye conditions: cherry eye (corrected surgically, not removed), cataracts, glaucoma (emergency), and PRA (genetic).', path: '/health/dog-eye-conditions', type: 'article' })
@@ -11,11 +11,29 @@ const SOURCES = [
   { label: 'ACVO: Eye Conditions in Dogs', url: 'https://www.acvo.org/common-conditions', publisher: 'American College of Veterinary Ophthalmologists' },
   { label: 'White and Brennan', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC6163435/', publisher: 'PMC' },
 ]
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Eye Conditions in Dogs', description: 'Cherry eye, cataracts, glaucoma, and PRA — identification and treatment urgency.', url: 'https://vets.co/health/dog-eye-conditions', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-12T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Eye Conditions in Dogs', description: 'Cherry eye, cataracts, glaucoma, and PRA — identification and treatment urgency.', url: 'https://vets.co/health/dog-eye-conditions', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-13T00:00:00Z' ,
   citation: SOURCES,
 })
 const med = buildMedicalWebPageSchema({ name: 'Eye Conditions in Dogs', description: 'Cherry eye, cataracts, glaucoma, and progressive retinal atrophy in dogs.', url: 'https://vets.co/health/dog-eye-conditions', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-07' })
 const combined = combineSchemas(schema, med)
+const FAQS = [
+  {
+    "question": "Is glaucoma in dogs an emergency?",
+    "answer": "Yes. The Merck Veterinary Manual says a dog showing any signs of glaucoma should be seen by a veterinarian immediately, because eye pressure needs to come down as quickly as possible to minimize damage. Most glaucoma needs long-term management."
+  },
+  {
+    "question": "Why is glaucoma often missed in dogs?",
+    "answer": "Merck notes that early signs, such as sluggish or slightly dilated pupils, mild redness of the conjunctival veins, and early enlargement of the eye, are so subtle that owners often don't notice them. Vets measure eye pressure with a tonometer, often routinely in high-risk breeds."
+  },
+  {
+    "question": "Is cloudiness in an old dog's eye always a cataract?",
+    "answer": "No. Merck says cataracts should not be confused with the normal thickening and hardening of the central lens that happens in older animals. A cataract is a cloudy or opaque lens that blocks light and can range from mild vision loss to blindness; your vet can tell them apart."
+  },
+  {
+    "question": "How are cataracts treated in dogs?",
+    "answer": "Treatment generally means surgery to remove the affected lens, which Merck says is most likely to succeed before the cataract fully matures and before lens-induced inflammation sets in. Without surgery, keep up monitoring, because complications such as glaucoma can occur."
+  }
+]
 export default function DogEyeConditionsPage() {
   return (
     <>
@@ -45,8 +63,12 @@ export default function DogEyeConditionsPage() {
       >
         <div className="carloOS-article">
 
-          <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-06-07T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-12" />
+          <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-10-13T00:00:00Z" reviewedBy="Editorial team" />
+          <LastUpdated date="2026-10-13" />
+
+          <CalloutBox variant="info" title="Short answer">
+            <p>Sudden glaucoma is an emergency: signs include a dilated or slow-moving pupil, redness in the white of the eye, a cloudy or discolored cornea, and a firm eye, and Merck says a dog with any glaucoma signs should see a vet immediately. Cataracts make the lens cloudy and can lead to blindness. They are often inherited and can also follow diabetes, inflammation, or trauma, and are treated with surgery to remove the lens. Source: <a href="https://www.merckvetmanual.com/dog-owners/eye-disorders-of-dogs/glaucoma-in-dogs">Merck Veterinary Manual (dog owner version)</a>.</p>
+          </CalloutBox>
 
           <CalloutBox variant="warning" title="Red-flag list — same-day vet visit">
             Any sudden change in eye appearance — cloudy or bluish tint, a visibly enlarged globe, squinting and reluctance to open the eye, sudden bumping into furniture, eye trauma, or chemical exposure — needs same-day evaluation. Glaucoma can cause permanent vision loss within hours; corneal lacerations and lens luxations are surgical emergencies. A sterile saline eye wash is only a rinse for a chemical splash on the way to the clinic — it is not a medicated eye drop, not Optimmune, and not a substitute for that same-day exam.
@@ -97,6 +119,9 @@ export default function DogEyeConditionsPage() {
               />
           </div>
           </div>
+          <h2 id="faq">Frequently asked questions</h2>
+          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
+
 
           <ArticleSourcesList sources={SOURCES} />
         </div>
