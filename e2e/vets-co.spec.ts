@@ -1116,6 +1116,14 @@ test('vets fix HB4: /guides hub answers first and has a sourced FAQ', async ({ p
   await expect(box).toBeVisible()
   await expect(box.locator('a[href="https://www.merckvetmanual.com/multimedia/table/when-to-see-a-veterinarian"]').first()).toBeVisible()
   await expect(page.getByRole('heading', { name: 'Owner guides FAQ' })).toBeVisible()
+})
+
+test('vets fix HB2: medications hub answers first and has a sourced FAQ', async ({ page }) => {
+  await page.goto('/medications', { waitUntil: 'domcontentloaded' })
+  const box = page.getByTestId('short-answer')
+  await expect(box).toBeVisible()
+  await expect(box.locator('a[href="https://www.fda.gov/animal-veterinary/animal-health-literacy/get-facts-about-pain-relievers-pets"]')).toBeVisible()
+  await expect(page.locator('h2#faq')).toBeVisible()
   const ld = await page.locator('script[type="application/ld+json"]').allTextContents()
   expect(ld.filter((t) => t.includes('"FAQPage"')).length).toBe(1)
 })
