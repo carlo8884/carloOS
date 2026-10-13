@@ -1,7 +1,7 @@
 import { HopDisclosure } from '../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, ShopCtas, StockImage } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, ShopCtas, StockImage, FAQAccordion, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
 import { HubHero } from '../../components/HubHero'
 
 export const metadata: Metadata = buildMetadata({
@@ -135,6 +135,14 @@ const itemListSchema = {
 
 const ferretDietSchema = combineSchemas(breadcrumbSchema, itemListSchema)
 
+const HUB_FAQS = [
+  { question: "What should a ferret eat?", answer: "A commercial ferret food. Ferrets are strict carnivores that need a diet rich in animal protein (30% to 40%) and fat (15% to 20%) with little fiber, about 2% (Lafeber Vet)." },
+  { question: "Can ferrets eat fruit, vegetables or dairy?", answer: "Keep them out of the regular diet. Ferrets cannot digest fiber well, and the Merck Veterinary Manual advises against milk, dairy and sugary foods such as honey, raisins and fruit, which can worsen insulinoma, a common pancreatic tumor in ferrets." },
+  { question: "What treats are safe for ferrets?", answer: "Meat, eggs, and freeze-dried muscle or organ meat, kept to no more than 5% of daily calories (Merck Veterinary Manual). Never give bones or foods containing bones, which can injure the digestive tract (Lafeber Vet)." },
+  { question: "Can I feed my ferret dog food or cat food?", answer: "Dog food and vegetarian pet foods are inappropriate because of their high vegetable protein and fiber (Lafeber Vet). Ferret-specific foods now meet ferrets' needs better than cat or kitten foods (Merck Veterinary Manual)." },
+  { question: "How should I switch my ferret's food?", answer: "Gradually. Mix the new food into the usual food over several days, slowly increasing the amount, because ferrets don't react well to sudden diet changes (Merck Veterinary Manual)." },
+]
+
 export default function DietHubPage() {
   return (
     <>
@@ -166,6 +174,16 @@ export default function DietHubPage() {
         <span>›</span>
         <span style={{ color: 'var(--brand-text-mid)', fontWeight: 500 }}>Diet</span>
       </nav>
+
+      <div className="px-container-sm sm:px-container pt-8 max-w-4xl">
+        <LastUpdated date="2026-10-13" />
+        <div className="rounded-lg border-l-4 border-brand-primary bg-brand-white p-5 mt-4" data-testid="short-answer">
+          <h2 className="font-display text-lg font-bold mb-2">The short answer</h2>
+          <p className="text-base leading-relaxed text-brand-text-mid m-0">
+            Ferrets are strict carnivores. Feed a commercial ferret food high in animal protein and fat and low in fiber and carbohydrate, and keep food and fresh water available at all times (<a href="https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf" className="text-brand-primary hover:underline">Lafeber Vet</a>). Dry kibble is recommended. Avoid dairy, fruit, honey and other sugary or high-carbohydrate treats, and keep treats under 5% of daily calories (<a href="https://www.merckvetmanual.com/all-other-pets/ferrets/providing-a-home-for-a-ferret" className="text-brand-primary hover:underline">Merck Veterinary Manual</a>).
+          </p>
+        </div>
+      </div>
 
       {/* Featured diet spokes — three photo-backed pillar articles */}
       <div
@@ -394,6 +412,17 @@ export default function DietHubPage() {
           ))}
         </ul>
       </div>
+
+      <section className="px-container-sm sm:px-container py-10">
+        <div className="max-w-content-wide">
+          <h2 id="faq" className="font-display text-xl font-bold text-brand-dark mb-4">Ferret diet FAQ</h2>
+          <FAQAccordion items={HUB_FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
+          <ArticleSourcesList title="Sources" sources={[
+            { label: "Providing a Home for a Ferret", url: "https://www.merckvetmanual.com/all-other-pets/ferrets/providing-a-home-for-a-ferret", publisher: "Merck Veterinary Manual" },
+            { label: "Care of the Pet Ferret (owner handout)", url: "https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf", publisher: "Lafeber Vet" },
+          ]} />
+        </div>
+      </section>
 
       <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <h2 id="kit" className="font-display font-bold text-brand-dark text-xl mb-4 max-w-content-wide">Related supplies</h2>
