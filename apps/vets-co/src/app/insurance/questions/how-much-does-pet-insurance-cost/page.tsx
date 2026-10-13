@@ -3,9 +3,10 @@ import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfoli
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'How Much Does Pet Insurance Cost? | Vets.co', description: 'Dog policies typically run $30–$70/month and cats $15–$40, but price swings with species, breed, age, location, and the deductible and limit you pick.', path: '/insurance/questions/how-much-does-pet-insurance-cost', type: 'article' })
+// Cost figures: NAPHIA 2024 US averages, dated 2026-10-13.
+export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'How Much Does Pet Insurance Cost? | Vets.co', description: '2024 US average accident-and-illness premium: $62.44/month for dogs, $32.21 for cats (NAPHIA). What moves your price, and how to set the deductible.', path: '/insurance/questions/how-much-does-pet-insurance-cost', type: 'article' })
 
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'How Much Does Pet Insurance Cost?', description: 'Typical pet insurance price ranges and the deductible, reimbursement, and limit levers that move your premium.', url: 'https://vets.co/insurance/questions/how-much-does-pet-insurance-cost', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-11T00:00:00Z', modifiedAt: '2026-10-12T00:00:00Z', speakable: true })
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'How Much Does Pet Insurance Cost?', description: 'Typical pet insurance price ranges and the deductible, reimbursement, and limit levers that move your premium.', url: 'https://vets.co/insurance/questions/how-much-does-pet-insurance-cost', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-11T00:00:00Z', modifiedAt: '2026-10-13T00:00:00Z', speakable: true })
 
 const FAQS = [
   { question: 'Why is my quote higher than the average?', answer: 'Averages hide wide variation. Your quote rises with several factors at once: large breeds and brachycephalic or high-cancer-risk breeds cost more to insure, older pets cost more than puppies and kittens, and high-cost-of-veterinary-care regions push premiums up. The plan design matters too — a low deductible, a high reimbursement percentage, and an unlimited annual limit all raise the premium. A higher-than-average quote usually reflects one or more of these, not an error.' },
@@ -18,36 +19,36 @@ export default function Page() {
     <>
       <SchemaScript schema={schema} />
       <ArticleLayout siteId="vets-co"
-        priceAsOf="2026-06-11"
+        priceAsOf="2026-10-13"
         heroHop={<a href="/insurance/deductibles-reimbursement" className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline mb-5">Deductibles and reimbursement</a>}
-        hero={{ title: 'How Much Does Pet Insurance Cost?', subtitle: 'Most dog accident-and-illness policies run roughly $30–$70 a month and cats $15–$40, but your price swings with species, breed, age, location, and the deductible, reimbursement rate, and limit you choose. Here is what actually moves the number.', category: 'Insurance Q&A', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '7 min' }}
+        hero={{ title: 'How Much Does Pet Insurance Cost?', subtitle: 'The average US accident-and-illness premium in 2024 was $62.44 a month for dogs and $32.21 for cats (NAPHIA), but your price swings with species, breed, age, location, and the deductible, reimbursement rate, and limit you choose. Here is what actually moves the number.', category: 'Insurance Q&A', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '7 min' }}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Insurance', href: '/insurance' }, { name: 'Questions', href: '/insurance/questions' }, { name: 'Cost', href: '/insurance/questions/how-much-does-pet-insurance-cost' }]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">Typical Ranges (2026)</div>
-            {[['Dog A&I', 'Roughly $30–$70 / month'], ['Cat A&I', 'Roughly $15–$40 / month'], ['Biggest driver', 'Breed, age, location, plan design']].map(([p, d]) => (
+            {[['Dog A&I', 'Avg. $62.44 / month (2024)'], ['Cat A&I', 'Avg. $32.21 / month (2024)'], ['Biggest driver', 'Breed, age, location, plan design']].map(([p, d]) => (
               <div key={p} className="py-2 border-b border-brand-border last:border-0">
                 <div className="text-xs font-bold text-brand-dark">{p}</div>
                 <div className="text-2xs text-brand-text-light">{d}</div>
               </div>
             ))}
-            <p className="text-2xs text-brand-text-light mt-3 mb-0">These bands are typical US ranges dated 2026-06-11.</p>
+            <p className="text-2xs text-brand-text-light mt-3 mb-0">These are NAPHIA's 2024 US averages, dated 2026-10-13.</p>
           </div>
           <RelatedLinks title="Related Questions" links={[{ label: 'Is pet insurance worth it?', href: '/insurance/questions/is-pet-insurance-worth-it' }, { label: 'Are there multi-pet discounts?', href: '/insurance/questions/multi-pet-discounts' }, { label: 'Deductibles & Reimbursement', href: '/insurance/deductibles-reimbursement' }, { label: 'All insurance questions', href: '/insurance/questions' }]} />
           <CrossPortfolioCard currentSite="vets-co" contentType="health" variant="sidebar" />
         </>}
       >
         <div className="carloOS-article">
-          <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-11T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-12" />
+          <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-11T00:00:00Z" updatedAt="2026-10-13T00:00:00Z" reviewedBy="Editorial team" />
+          <LastUpdated date="2026-10-13" />
 
           <CalloutBox variant="info" title="The short answer">
-            Most dog accident-and-illness policies run roughly <strong>$30–$70 per month</strong> and cats roughly <strong>$15–$40 per month</strong> (2026 ranges drawn from industry averages), but your specific price swings with species, breed, age, location, and the deductible, reimbursement percentage, and annual limit you select. Treat any single &ldquo;average&rdquo; as a starting point, not a quote.
+            The average US accident-and-illness premium in 2024 was <strong>$62.44 a month for dogs</strong> and <strong>$32.21 a month for cats</strong> (<a href="https://naphia.org/news/naphia-news/soi-report-2025/">NAPHIA 2025 State of the Industry</a>), but your specific price swings with species, breed, age, location, and the deductible, reimbursement percentage, and annual limit you select. Treat any single &ldquo;average&rdquo; as a starting point, not a quote.
           </CalloutBox>
-          <p>The monthly bands in the short answer and the sidebar are typical US ranges dated 2026-06-11. They are not a quote for one pet.</p>
+          <p>The monthly figures in the short answer and the sidebar are NAPHIA's 2024 US averages, dated 2026-10-13. They are not a quote for one pet.</p>
 
           <h2>What the Typical Ranges Mean</h2>
-          <p>Published averages put a typical dog accident-and-illness policy in the range of about thirty to seventy dollars a month, and a typical cat policy lower, around fifteen to forty dollars. These figures, consistent with industry data such as NAPHIA&apos;s sector reporting, are useful for setting expectations but should not be mistaken for a personalized price. The spread inside those ranges is wide because a handful of factors push individual quotes well above or below the midpoint.</p>
+          <p>NAPHIA&apos;s 2025 report puts the 2024 US average accident-and-illness premium at $749.29 a year for dogs and $386.47 a year for cats. The <a href="https://content.naic.org/insurance-topics/pet-insurance">NAIC</a> notes the actual cost depends on species, breed, gender, age, location, and the coverages and deductible chosen. These averages are useful for setting expectations but should not be mistaken for a personalized price. The spread inside those ranges is wide because a handful of factors push individual quotes well above or below the midpoint.</p>
           <p>Cats cost less than dogs on average because they tend to have fewer and less expensive claims. Within dogs, the variation is large enough that two owners can receive quotes that differ by two- or three-fold for what looks like the same coverage, simply because their pets differ in the factors below.</p>
 
           <h2>What Moves Your Price</h2>
@@ -85,7 +86,7 @@ export default function Page() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-12" />
+          <ComparisonFoot updated="2026-10-13" />
           <h2>Who should turn which dial</h2>
           <p>Raise the deductible when you can absorb more of each claim. Pay for a higher reimbursement when you want more of the eligible bill back. Choose the unlimited limit when a five-thousand-dollar cap is too low for the care you expect. Tune the three together to a monthly figure you can sustain.</p>
 
@@ -118,6 +119,7 @@ export default function Page() {
 
           <ArticleSourcesList title="Sources" sources={[
             { label: 'NAPHIA 2025 State of the Industry Report', url: 'https://naphia.org/news/naphia-news/soi-report-2025/', publisher: 'NAPHIA' },
+            { label: 'Pet Insurance (consumer topic page)', url: 'https://content.naic.org/insurance-topics/pet-insurance', publisher: 'NAIC' },
             { label: 'Sample carrier rate and plan-design disclosures', publisher: 'General carrier policy disclosures (not an endorsement)' },
           ]} />
         </div>
