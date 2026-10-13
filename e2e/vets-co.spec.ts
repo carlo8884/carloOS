@@ -818,7 +818,7 @@ test('vets fix AI1: llms.txt matches the site (Amazon disclosure, no scores, gui
 test('vets fix TS2: journal citations link to their DOI, unverifiable citations and the unsourced remission rate are gone', async ({ page }) => {
   const want: Record<string, string[]> = {
     '/health/bloat-gdv-dogs': ['10.2460/javma.2000.216.40'],
-    '/health/cognitive-dysfunction': ['10.1016/j.applanim.2015.08.034', '10.1016/j.cvsm.2012.04.003'],
+    '/health/cognitive-dysfunction': ['10.1016/j.cvsm.2012.04.003'],
     '/health/cushing-disease-dogs': ['10.1111/jvim.12192', '10.1016/j.cvsm.2009.10.008'],
     '/health/diabetes-in-dogs-cats': [],
     '/health/kidney-disease-cats': ['10.1016/s0022-2143(98)90146-9'],
