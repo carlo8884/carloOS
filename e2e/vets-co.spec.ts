@@ -1118,6 +1118,15 @@ test('vets fix HB4: /guides hub answers first and has a sourced FAQ', async ({ p
   await expect(page.getByRole('heading', { name: 'Owner guides FAQ' })).toBeVisible()
 })
 
+test('vets fix HB3: find-a-vet hub answers first and has a sourced FAQ', async ({ page }) => {
+  await page.goto('/find-a-vet', { waitUntil: 'domcontentloaded' })
+  const box = page.getByTestId('short-answer')
+  await expect(box).toBeVisible()
+  await expect(box.locator('a[href="https://www.avma.org/education/veterinary-specialties"]')).toBeVisible()
+  await expect(page.getByRole('heading', { name: 'Finding a vet: FAQ' })).toBeVisible()
+  expect(await page.locator('main, body').first().innerText()).not.toMatch(/\$70/)
+})
+
 test('vets fix HB2: medications hub answers first and has a sourced FAQ', async ({ page }) => {
   await page.goto('/medications', { waitUntil: 'domcontentloaded' })
   const box = page.getByTestId('short-answer')
