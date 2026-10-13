@@ -213,7 +213,8 @@ export function buildArticleSchema(params: ArticleSchemaParams) {
     headline: params.title,
     description: params.description,
     url: params.url,
-    image: params.imageUrl,
+    // Omit image when no real image URL was passed; an empty string is invalid schema.
+    ...(params.imageUrl ? { image: params.imageUrl } : {}),
     ...(params.publishedAt ? { datePublished: params.publishedAt } : {}),
     ...(params.modifiedAt ? { dateModified: params.modifiedAt } : {}),
     author: {

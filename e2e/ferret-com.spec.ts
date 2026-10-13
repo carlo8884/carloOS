@@ -675,3 +675,11 @@ test('ferret fix AF2: grooming and nail pages lead with a sourced short answer t
 test('ferret fix SM1: sitemap lastmod is the stamped page date, and unstamped hubs carry none', async ({ request }) => {
   await expectStampedLastmod(request, ['/care/nail-trimming', '/care/bathing-and-grooming', '/behavior/biting-and-nipping'], ['/care'])
 })
+
+test('ferret fix SD2: Article schema omits image instead of shipping an empty string', async ({ request }) => {
+  for (const path of ['/behavior/biting-and-nipping', '/care/nail-trimming']) {
+    const html = await (await request.get(path)).text()
+    expect(html, path).toContain('"@type":"Article"')
+    expect(html, path).not.toContain('"image":""')
+  }
+})

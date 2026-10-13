@@ -904,3 +904,11 @@ test('vets fix AF4: dehydration, emergency signs and weight pages lead with sour
   await expect(page.locator('a[href="https://pubmed.ncbi.nlm.nih.gov/12420743/"]')).toHaveCount(0)
   await expect(page.locator('body')).not.toContainText('1.8 years longer')
 })
+
+test('vets fix SD2: Article schema omits image instead of shipping an empty string', async ({ request }) => {
+  for (const path of ['/breeds/beagle-health', '/health/heat-stroke-dogs']) {
+    const html = await (await request.get(path)).text()
+    expect(html, path).toContain('"@type":"Article"')
+    expect(html, path).not.toContain('"image":""')
+  }
+})
