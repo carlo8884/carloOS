@@ -797,6 +797,13 @@ test('ferret fix FA5: insurance basics leads with an NAIC/Merck short answer, FA
   expect(ld).toContain('"FAQPage"')
 })
 
+test('ferret fix FA7: supplies checklist leads with a Lafeber/Merck short answer and FAQ schema', async ({ page }) => {
+  await page.goto('/ownership/ferret-supplies-checklist', { waitUntil: 'domcontentloaded' })
+  await expect(page.locator('.carloOS-article').filter({ hasText: 'Short answer' }).first()).toContainText('24 × 24 × 18 inches')
+  await expect(page.locator('a[href="https://www.merckvetmanual.com/all-other-pets/ferrets/providing-a-home-for-a-ferret"]').first()).toBeAttached()
+  await expect(page.getByText('What litter is safe for ferrets?').first()).toBeVisible()
+})
+
 test('ferret fix FA6: adoption-vs-buying leads with a Lafeber/Merck short answer and FAQ schema', async ({ page }) => {
   await page.goto('/ownership/adoption-vs-buying', { waitUntil: 'domcontentloaded' })
   await expect(page.locator('.carloOS-article').filter({ hasText: 'Short answer' }).first()).toContainText('commercial farms')

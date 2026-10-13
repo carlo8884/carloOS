@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, ShopCtas, ComparisonFoot, LastUpdated, TableShopLink } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, ShopCtas, ComparisonFoot, LastUpdated, TableShopLink, CalloutBox, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -21,7 +21,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-10-12T00:00:00Z',
+  modifiedAt: '2026-10-13T00:00:00Z',
 })
 
 const med = buildMedicalWebPageSchema({
@@ -33,6 +33,24 @@ const med = buildMedicalWebPageSchema({
   lastReviewed: '2026-06-01',
 })
 const combined = combineSchemas(schema, med)
+
+const FAQS = [
+  {
+    question: 'How big should a ferret cage be?',
+    answer:
+      'Lafeber recommends a minimum of 24 × 24 × 18 inches for one to two ferrets, with bar spacing no wider than 1 inch (0.5 inch preferred) and securely latched doors. The Merck Veterinary Manual says a wire cage at least 3 feet wide by 3 feet deep by 2 feet high is sufficient.',
+  },
+  {
+    question: 'What litter is safe for ferrets?',
+    answer:
+      'Merck says a cat litter box cut down to size and cat litter may be used, but to avoid clumping cat litter because it may cause respiratory problems in ferrets.',
+  },
+  {
+    question: 'What bedding and toys should I avoid?',
+    answer:
+      'Merck warns that cedar releases oil that may be toxic to ferrets and that fabric bedding should not unravel or be eaten. Lafeber advises against latex rubber or foam toys, which are likely to be swallowed.',
+  },
+]
 
 export default function FerretSuppliesChecklistPage() {
   return (
@@ -67,6 +85,7 @@ export default function FerretSuppliesChecklistPage() {
                 { label: 'Travel & Enrichment', href: '#travel' },
                 { label: 'What to Avoid', href: '#avoid' },
                 { label: 'Compare gear', href: '#compare' },
+                { label: 'FAQ', href: '#faq' },
                 { label: 'Sources', href: '#sources' },
               ]}
             />
@@ -94,10 +113,15 @@ export default function FerretSuppliesChecklistPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-01"
+            updatedAt="2026-10-13"
             reviewedBy="Editorial team"
           />
-          <LastUpdated date="2026-10-12" />
+          <LastUpdated date="2026-10-13" />
+          <CalloutBox variant="info" title="Short answer">
+            <p>
+              Before day one: a secure cage (at least 24 × 24 × 18 inches for one to two ferrets, bars no wider than 1 inch, per <a href="https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf">Lafeber</a>), washable bedding or hammocks, a litter pan with non-clumping litter, sturdy food and water containers, food, and a carrier. Skip clumping litter, cedar, and latex or foam toys (<a href="https://www.merckvetmanual.com/all-other-pets/ferrets/providing-a-home-for-a-ferret">Merck Veterinary Manual</a>; Lafeber).
+            </p>
+          </CalloutBox>
 
           <h2 id="priority">Buy First vs Later</h2>
           <p>
@@ -124,7 +148,7 @@ export default function FerretSuppliesChecklistPage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-12" />
+          <ComparisonFoot updated="2026-10-13" />
           <h2>Who should buy which first</h2>
           <p>Buy the cage, bedding, litter, dishes, food, and carrier before the ferret comes home. Add grooming tools, toys, and tunnels in the first week or two. A single good cage matters more than a pile of accessories.</p>
 
@@ -265,7 +289,14 @@ export default function FerretSuppliesChecklistPage() {
           </div>
           </div>
 
+          <h2 id="faq">Frequently Asked Questions</h2>
+          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
+
           <h2 id="sources">Sources</h2>
+          <ul>
+            <li><a href="https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf">Lafeber Company: Care of the Ferret (2020)</a></li>
+            <li><a href="https://www.merckvetmanual.com/all-other-pets/ferrets/providing-a-home-for-a-ferret">Merck Veterinary Manual: Providing a Home for a Ferret</a></li>
+          </ul>
           <p>
             Caging, bedding, litter safety, diet, and blockage-risk guidance reflect standard ferret-husbandry references and American Ferret Association recommendations, with clinical context from Quesenberry KE and Carpenter JW (eds.), <em>Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery</em> (Saunders/Elsevier). This is an editorial checklist; it recommends categories and features. The shop table links one Amazon search per category, plus the one cage the cage setup page names. Locate primary sources by title.
           </p>
