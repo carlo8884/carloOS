@@ -1012,3 +1012,11 @@ test('ferret fix TX4: llms.txt and editorial standards label unchecked reference
   expect(text).toContain('general reference; not checked against this page')
   expect(text).not.toContain('grounded in the exotic-mammal veterinary literature')
 })
+
+test('ferret fix VP1: vet-visit prep drops unsourced cost ranges', async ({ page }) => {
+  await page.goto('/health/vet-visit-prep', { waitUntil: 'domcontentloaded' })
+  const text = (await page.locator('main').innerText()).replace(/\s+/g, ' ')
+  expect(text).not.toMatch(/\$\s?\d/)
+  expect(text).toMatch(/ask the clinic for a written estimate/i)
+  await expect(page.locator('h2#cost')).toHaveText('Costs: Ask for an Estimate')
+})
