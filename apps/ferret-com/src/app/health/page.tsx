@@ -67,7 +67,7 @@ const HEALTH_CARDS: HealthCard[] = [
     eyebrow: 'Preventive care',
     title: 'Vaccination Schedule',
     description:
-      'Canine distemper kit series at 8, 11, and 14 weeks plus annual booster. Rabies at 12+ weeks plus annual. Reaction signs and premedication protocol.',
+      'Canine distemper kit series at about 6–8, 10–12 and 14–16 weeks plus annual booster. Rabies from 16 weeks plus annual, never the same day as distemper. Reaction signs and premedication protocol.',
   },
   {
     slug: 'vet-visit-prep',

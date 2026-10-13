@@ -1,7 +1,7 @@
 import { HopDisclosure } from '../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, FAQAccordion, ShopCtas, StockImage } from '@carloOS/ui'
+import { buildMetadata, EmailCapture, FAQAccordion, ShopCtas, StockImage, LastUpdated, ArticleSourcesList } from '@carloOS/ui'
 import {
   buildArticleSchema,
   buildFAQSchema,
@@ -41,12 +41,12 @@ const FAQS = [
   {
     question: 'When is the right age to neuter or spay a ferret?',
     answer:
-      'Most ferrets sold through US pet stores are pre-altered before sale (usually at 5–6 weeks). If you have an intact ferret from a private breeder, the timing is more nuanced: jills left intact through a heat cycle without breeding are at risk of fatal aplastic anemia from sustained estrogen exposure, so altering or hormonal management is essential. Recent exotic-pet literature has also raised questions about whether pre-pubertal neuter contributes to the high adrenal disease incidence in US ferrets. Discuss timing with an exotic-pet vet.',
+      'Most ferrets sold through US pet stores are pre-altered before sale. If you have an intact ferret from a private breeder, the timing is more nuanced: jills left intact through a heat cycle without breeding are at risk of fatal aplastic anemia from sustained estrogen exposure, so altering or hormonal management is essential. Recent exotic-pet literature has also raised questions about whether pre-pubertal neuter contributes to the high adrenal disease incidence in US ferrets. Discuss timing with an exotic-pet vet.',
   },
   {
     question: 'Do indoor ferrets really need a rabies vaccine?',
     answer:
-      'In most US jurisdictions, yes — and not primarily because of disease risk inside the home. Rabies vaccination is the legal floor for managing any bite incident: an unvaccinated ferret that bites a person can face mandatory euthanasia or extended quarantine under public-health law, regardless of actual exposure risk. The USDA-licensed rabies vaccine for ferrets is a single dose at 12+ weeks, then annually. Confirm with your exotic-pet vet and local rules.',
+      'In many places, yes — rules vary by state and city, and the reason is not primarily because of disease risk inside the home. Rabies vaccination is the legal floor for managing any bite incident: an unvaccinated ferret that bites a person can face mandatory euthanasia or extended quarantine under public-health law, regardless of actual exposure risk. The USDA-licensed rabies vaccine for ferrets is a single dose at 12+ weeks, then annually. Confirm with your exotic-pet vet and local rules.',
   },
   {
     question: 'Why is dental disease so common in ferrets?',
@@ -56,7 +56,7 @@ const FAQS = [
   {
     question: 'How often should I trim my ferret\'s nails?',
     answer:
-      'Every 2–3 weeks for most ferrets. Nails grow fast and do not wear down indoors. Overgrown nails snag in fabric (a torn-nail injury risk) and change gait. The standard technique is "belly-up with a dab of salmon oil" — the ferret licks the oil while you clip. Stop at the pink quick.',
+      'Every 1 to 2 weeks, according to the Merck Veterinary Manual. Long claws catch in carpet and fabric and can be pulled out. Trim so the claw end sits parallel to the floor, avoid the dark vein in each claw, and keep styptic powder on hand in case it bleeds. A treat can distract your ferret while you clip (Lafeber Vet).',
   },
   {
     question: 'When should I start watching for insulinoma symptoms?',
@@ -93,7 +93,7 @@ const howToSchema = buildHowToSchema({
     },
     {
       name: 'Q3 — Dental Onset, Nail Routine, Boosters (Weeks 27-39)',
-      text: 'Daily dental brushing routine before tartar accumulates, 2-3 week nail-trim cadence, and second-year vaccine boosters per AFA / AEMV guidance.',
+      text: 'Daily dental brushing routine before tartar accumulates, 1–2 week nail-trim cadence (Merck), and annual vaccine boosters.',
     },
     {
       name: 'Q4 — Annual Vet Check and Year-Two Planning (Weeks 40-52)',
@@ -119,10 +119,9 @@ const QUARTERS = [
     bullets: [
       'Ferret-proof — gap-block any opening over 1 inch; remove rubber/foam items (a common cause of ferret surgery)',
       'First exotic-pet vet visit — meet-and-greet ideal before vaccinations',
-      'Canine distemper series — boosters at 6–8, 10–12, and 14–16 weeks (AFA / AEMV)',
-      'Rabies vaccine — single dose at 12+ weeks, USDA-licensed product',
+      'Canine distemper series — about 6–8, 10–12 and 14–16 weeks (Lafeber Vet)',
       'Litter training and feeding routine established',
-      'Sleep observation — kits sleep 18–20 hours per day',
+      'Sleep observation — ferrets sleep up to 18 hours a day (Merck)',
     ],
   },
   {
@@ -130,6 +129,7 @@ const QUARTERS = [
     weeks: 'Weeks 14–26',
     title: 'Neuter Decision and Foundation Habits',
     bullets: [
+      'Rabies vaccine — first dose at 16 weeks or older, never on the same day as distemper (Merck)',
       'Confirm alter status — most US pet-store ferrets are pre-altered; intact ferrets need a vet conversation',
       'Diet transition if needed — animal-first, low-carb kibble or vet-supervised whole-prey',
       'Harness training (optional) — short, indoor first, then quiet outdoor sessions',
@@ -143,7 +143,7 @@ const QUARTERS = [
     title: 'Dental Routine, Nail Cadence, Boosters',
     bullets: [
       'Daily or every-other-day tooth brushing with enzymatic pet toothpaste (never human toothpaste)',
-      'Nail trim every 2–3 weeks — "salmon oil on belly" technique',
+      'Nail trim every 1–2 weeks (Merck)',
       'Annual booster of canine distemper and rabies per vet recommendation',
       'Cage and enrichment audit — rotate toys, refresh bedding, check for chew damage',
       'Continued weight monitoring — body condition score',
@@ -171,7 +171,7 @@ const FIRST_YEAR_TEXT = [
     ...q.bullets.map((b) => `• ${b}`),
     '',
   ]),
-  'Vaccination dates are typical AFA / AEMV reference points; your exotic-pet vet sets the actual schedule.',
+  'Distemper timing follows Lafeber Vet; rabies timing, nail trims and sleep follow the Merck Veterinary Manual. Your exotic-pet vet sets the actual schedule.',
 ].join('\n')
 
 export default function FerretFirstYearSchedulePage() {
@@ -227,6 +227,16 @@ export default function FerretFirstYearSchedulePage() {
           </div>
         </div>
       </section>
+
+      <div className="px-container-sm sm:px-container pt-8 max-w-4xl">
+        <LastUpdated date="2026-10-13" />
+        <div className="rounded-lg border-l-4 border-brand-primary bg-brand-surface p-5 mt-4" data-testid="short-answer">
+          <h2 className="font-display text-lg font-bold mb-2">The short answer</h2>
+          <p className="text-base leading-relaxed text-brand-text-mid m-0">
+            In a ferret&apos;s first year, find a ferret-experienced vet before you need one, then plan a yearly exam and annual distemper and rabies vaccines. The first rabies shot comes at 16 weeks or older, never on the same day as distemper, and you should wait at the clinic 20 to 30 minutes after each vaccine (<a href="https://www.merckvetmanual.com/all-other-pets/ferrets/routine-health-care-for-ferrets" className="text-brand-primary hover:underline">Merck Veterinary Manual</a>). Pet-store kits usually start distemper vaccines at about 6 to 8 weeks, with boosters at about 10 to 12 and 14 to 16 weeks (<a href="https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf" className="text-brand-primary hover:underline">Lafeber Vet</a>). Trim nails every 1 to 2 weeks (<a href="https://www.merckvetmanual.com/all-other-pets/ferrets/routine-health-care-for-ferrets" className="text-brand-primary hover:underline">Merck</a>).
+          </p>
+        </div>
+      </div>
 
       <div className="px-container-sm sm:px-container pt-8">
         <StockImage manifestKey="ferret-com:first-year-hero" aspect="16:9" variant="wide" />
@@ -384,6 +394,13 @@ export default function FerretFirstYearSchedulePage() {
               amazonLabel="Browse ferret kibble on Amazon →"
             />
           </div>
+        </div>
+        <div className="max-w-content-wide mt-6">
+          <ArticleSourcesList title="Sources" sources={[
+            { label: 'Routine Health Care for Ferrets', url: 'https://www.merckvetmanual.com/all-other-pets/ferrets/routine-health-care-for-ferrets', publisher: 'Merck Veterinary Manual' },
+            { label: 'Providing a Home for a Ferret', url: 'https://www.merckvetmanual.com/all-other-pets/ferrets/providing-a-home-for-a-ferret', publisher: 'Merck Veterinary Manual' },
+            { label: 'Care of the Pet Ferret (owner handout)', url: 'https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf', publisher: 'Lafeber Vet' },
+          ]} />
         </div>
       </section>
     </>
