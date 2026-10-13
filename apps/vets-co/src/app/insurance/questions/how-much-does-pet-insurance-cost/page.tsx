@@ -120,7 +120,6 @@ export default function Page() {
           <ArticleSourcesList title="Sources" sources={[
             { label: 'NAPHIA 2025 State of the Industry Report', url: 'https://naphia.org/news/naphia-news/soi-report-2025/', publisher: 'NAPHIA' },
             { label: 'Pet Insurance (consumer topic page)', url: 'https://content.naic.org/insurance-topics/pet-insurance', publisher: 'NAIC' },
-            { label: 'Sample carrier rate and plan-design disclosures', publisher: 'General carrier policy disclosures (not an endorsement)' },
           ]} />
         </div>
       </ArticleLayout>
