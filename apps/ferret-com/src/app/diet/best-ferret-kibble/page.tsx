@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { HopDisclosure } from '../../../components/HopDisclosure'
-import { TableShopLink, ComparisonFoot, EmailCapture, buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, QuickPicks, CrossPortfolioCard, ShopCtas, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
+import { TableShopLink, ComparisonFoot, EmailCapture, buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, QuickPicks, CrossPortfolioCard, ShopCtas, ArticleSourcesList, LastUpdated, CalloutBox } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, buildItemListSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript} from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -171,6 +171,11 @@ export default function BestFerretKibblePage() {
             reviewedBy="Editorial team"
           />
           <LastUpdated date="2026-10-13" />
+          <CalloutBox variant="info" title="Short answer">
+            <p>
+              Pick a ferret-specific kibble with animal protein first. <a href="https://vcahospitals.com/know-your-pet/feeding-ferrets">VCA Animal Hospitals</a> says a good ferret diet has 32% to 40% protein and 10% to 15% fat, and ferrets cannot digest a diet with more than 4% fiber. This guide's working window runs higher on fat (18–22% on a dry-matter basis), so sources differ. Read the guaranteed analysis on the bag either way.
+            </p>
+          </CalloutBox>
           <EmailCapture
             variant="inline"
             siteId="ferret-com"
@@ -378,6 +383,7 @@ export default function BestFerretKibblePage() {
           </p>
                   <ArticleSourcesList title="Sources"
             sources={[
+            { label: "Feeding Ferrets", url: "https://vcahospitals.com/know-your-pet/feeding-ferrets", publisher: "VCA Animal Hospitals" },
             { label: "American Ferret Association", url: "https://www.ferret.org/", publisher: "AFA" },
             { label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery", url: "https://www.elsevier.com/books/ferrets-rabbits-and-rodents/quesenberry/978-1-4160-6621-7", publisher: "Elsevier" },
             { label: 'Merck Veterinary Manual: management of ferrets', url: 'https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/management-of-ferrets', publisher: 'Merck Veterinary Manual' },
