@@ -824,3 +824,18 @@ test('ferret fix FA8: cost page drops unsourced dollar ranges, uses Lafeber life
   const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
   expect(ld).toContain('"FAQPage"')
 })
+
+test('ferret fix KF1: kit-vs-adult feeding cites Apfelbach, VCA and Merck and drops unsourced ages', async ({ page }) => {
+  await page.goto('/diet/kit-vs-adult-feeding', { waitUntil: 'domcontentloaded' })
+  const body = page.locator('body')
+  await expect(body).not.toContainText('8–10 times a day')
+  await expect(body).not.toContainText('8 to 10 times a day')
+  await expect(body).not.toContainText('around age five')
+  await expect(body).not.toContainText('first roughly six months')
+  await expect(page.locator('.carloOS-article').filter({ hasText: 'Short answer' }).first()).toContainText('60 to 90 days')
+  await expect(page.locator('a[href="https://pubmed.ncbi.nlm.nih.gov/24924694/"]').first()).toBeVisible()
+  await expect(page.locator('a[href="https://vcahospitals.com/know-your-pet/feeding-ferrets"]').first()).toBeVisible()
+  await expect(page.getByText('Should I free-feed my ferret?').first()).toBeVisible()
+  const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
+  expect(ld).toContain('"FAQPage"')
+})
