@@ -931,3 +931,13 @@ test('ferret fix WY1: no page carries a /go/wysong href, even a held one', async
     expect(await page.content(), path).not.toContain('/go/wysong')
   }
 })
+
+test('ferret fix FY1: first-year schedule uses Lafeber and Merck, labels unchecked references', async ({ page }) => {
+  await page.goto('/first-year-schedule', { waitUntil: 'domcontentloaded' })
+  const body = page.locator('body')
+  await expect(body).not.toContainText('5–8 years')
+  await expect(body).not.toContainText('peaks between ages 4 and 7')
+  await expect(body).toContainText('6 to 8 years')
+  await expect(body).toContainText('General references, not checked against')
+  await expect(page.locator('a[href="https://www.merckvetmanual.com/all-other-pets/ferrets/routine-health-care-for-ferrets"]').first()).toBeVisible()
+})
