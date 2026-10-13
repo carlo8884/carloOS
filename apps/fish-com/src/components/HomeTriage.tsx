@@ -219,19 +219,11 @@ export function HomeTriage() {
                   <StockImage manifestKey={item.imageKey} alt={item.imageAlt} aspect="16:9" subtleCredit />
                 </div>
                 <div className="p-3.5">
-                  <div className="flex items-center gap-2.5 mb-1">
-                    <div className={`relative h-8 w-12 shrink-0 overflow-hidden rounded-md bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                      <StockImage manifestKey={item.imageKey} alt={item.imageAlt} aspect="4:3" />
-                    </div>
-                    <div className="font-display font-bold text-brand-dark text-sm leading-tight italic group-hover:text-brand-primary">
-                      {item.label}
-                    </div>
+                  <div className="font-display font-bold text-brand-dark text-sm leading-tight italic group-hover:text-brand-primary mb-1">
+                    {item.label}
                   </div>
-                  <div className="text-xs text-brand-text-mid mt-1 leading-relaxed flex items-start gap-2">
-                    <div className={`relative mt-0.5 h-6 w-9 shrink-0 overflow-hidden rounded-md bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                      <StockImage manifestKey={item.imageKey} alt="" aspect="4:3" />
-                    </div>
-                    <span>{item.note}</span>
+                  <div className="text-xs text-brand-text-mid leading-relaxed">
+                    {item.note}
                   </div>
                 </div>
               </Link>
