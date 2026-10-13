@@ -107,7 +107,6 @@ export default function Page() {
 
           <ArticleSourcesList title="Sources" sources={[
             { label: 'Pet Insurance (consumer topic page)', url: 'https://content.naic.org/insurance-topics/pet-insurance', publisher: 'NAIC' },
-            { label: 'Sample carrier claim-process and deductible disclosures', publisher: 'General carrier policy disclosures (not an endorsement)' },
           ]} />
         </div>
       </ArticleLayout>
