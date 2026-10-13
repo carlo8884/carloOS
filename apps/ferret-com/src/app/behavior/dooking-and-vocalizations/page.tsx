@@ -29,15 +29,15 @@ export const metadata: Metadata = buildMetadata({
 
 const SOURCES = [
   {
-    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — ferret behaviour and communication chapters",
+    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — ferret behaviour and communication chapters (general reference; not checked against this page)",
     publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
   },
   {
-    label: "Journal of Exotic Pet Medicine — articles on ferret behaviour and welfare assessment",
+    label: "Journal of Exotic Pet Medicine — articles on ferret behaviour and welfare assessment (general reference; not checked against this page)",
     publisher: "Elsevier",
   },
   {
-    label: "American Ferret Association (AFA) — ferret behaviour and communication owner guidance",
+    label: "American Ferret Association (AFA) — ferret behaviour and communication owner guidance (general reference; not checked against this page)",
     url: "https://www.ferret.org",
     publisher: "AFA",
   },
@@ -51,7 +51,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-10-13T00:00:00Z',
   speakable: true,
 
   citation: SOURCES,
@@ -141,7 +141,7 @@ export default function FerretVocalizationsPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-01"
+            updatedAt="2026-10-13"
           />
 
           <DropCap>

@@ -282,7 +282,7 @@ export default function FerretInsuranceBasicsPage() {
             Insurance structures (premiums, deductibles, reimbursement, waiting
             periods, pre-existing exclusions) reflect standard pet-insurance
             practice; specific terms vary by insurer and must be confirmed
-            directly. Locate primary publications by title.
+            directly. Locate primary publications by title. We have not checked this general reference against the claims on this page.
           </p>
           <p className="text-sm text-brand-text-light">
             This page is general educational information about how exotic-pet

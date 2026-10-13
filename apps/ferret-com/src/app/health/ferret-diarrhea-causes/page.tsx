@@ -22,17 +22,17 @@ const SOURCES = [
     publisher: "Merck Veterinary Manual",
   },
   {
-    label: "Quesenberry KE, Carpenter JW (eds.). Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery. 4th ed. Saunders/Elsevier — ferret gastroenterology, epizootic catarrhal enteritis (ECE), Helicobacter, and inflammatory bowel disease chapters.",
+    label: "Quesenberry KE, Carpenter JW (eds.). Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery. 3rd ed. Saunders/Elsevier — ferret gastroenterology, epizootic catarrhal enteritis (ECE), Helicobacter, and inflammatory bowel disease chapters. (general reference; not checked against this page)",
     url: "https://www.elsevier.com/books/ferrets-rabbits-and-rodents/quesenberry/978-1-4160-6621-7",
     publisher: "Elsevier/Saunders",
   },
     {
-    label: "Association of Exotic Mammal Veterinarians (AEMV) — practitioner directory and continuing-education content on ferret gastrointestinal disease",
+    label: "Association of Exotic Mammal Veterinarians (AEMV) — practitioner directory and continuing-education content on ferret gastrointestinal disease (general reference; not checked against this page)",
     url: "https://aemv.org",
     publisher: "AEMV",
   },
   {
-    label: "Journal of Exotic Pet Medicine — clinical reports on ferret enteritis, epizootic catarrhal enteritis, and gastrointestinal parasitism",
+    label: "Journal of Exotic Pet Medicine — clinical reports on ferret enteritis, epizootic catarrhal enteritis, and gastrointestinal parasitism (general reference; not checked against this page)",
     url: "https://www.sciencedirect.com/journal/journal-of-exotic-pet-medicine",
     publisher: "Journal of Exotic Pet Medicine",
   },
@@ -63,7 +63,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-10-12T00:00:00Z',
+  modifiedAt: '2026-10-13T00:00:00Z',
   speakable: true,
 
   citation: SOURCES,
@@ -173,9 +173,9 @@ export default function FerretDiarrheaCausesPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-01"
+            updatedAt="2026-10-13"
           />
-          <LastUpdated date="2026-10-12" />
+          <LastUpdated date="2026-10-13" />
 
           <DropCap>
             Diarrhea is one of the most common reasons ferrets are brought to the

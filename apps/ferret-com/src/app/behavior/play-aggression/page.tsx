@@ -36,15 +36,15 @@ const SOURCES = [
     publisher: "MSD Veterinary Manual",
   },
   {
-    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — ferret behaviour, social dynamics, and disease chapters",
+    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — ferret behaviour, social dynamics, and disease chapters (general reference; not checked against this page)",
     publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
   },
   {
-    label: "Journal of Exotic Pet Medicine — articles on ferret behaviour, play, and welfare",
+    label: "Journal of Exotic Pet Medicine — articles on ferret behaviour, play, and welfare (general reference; not checked against this page)",
     publisher: "Elsevier",
   },
   {
-    label: "American Ferret Association (AFA) — ferret play and social behaviour owner guidance",
+    label: "American Ferret Association (AFA) — ferret play and social behaviour owner guidance (general reference; not checked against this page)",
     url: "https://www.ferret.org",
     publisher: "AFA",
   },

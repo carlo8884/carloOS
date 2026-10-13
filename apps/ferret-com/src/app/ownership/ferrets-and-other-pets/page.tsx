@@ -165,7 +165,7 @@ export default function FerretsAndOtherPetsPage() {
             <li><a href="https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf">Lafeber Company, Care of the Pet Ferret (PDF)</a></li>
           </ul>
           <p>
-            Ferret prey-drive behavior, social housing, and quarantine practice are covered in Quesenberry KE and Carpenter JW (eds.), <em>Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery</em> (Saunders/Elsevier), and in American Ferret Association husbandry guidance. Cross-species compatibility reflects standard companion-animal behavioral references. Locate primary publications by title.
+            Ferret prey-drive behavior, social housing, and quarantine practice are covered in Quesenberry KE and Carpenter JW (eds.), <em>Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery</em> (Saunders/Elsevier), and in American Ferret Association husbandry guidance. Cross-species compatibility reflects standard companion-animal behavioral references. Locate primary publications by title. We have not checked this general reference against the claims on this page.
           </p>
           <p className="text-sm text-brand-text-light">
             This page is general information, not individualized advice. Cross-species introductions carry real risk; supervise closely and consult a veterinarian or qualified behavior professional if you are uncertain.

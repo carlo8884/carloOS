@@ -15,7 +15,7 @@ import {
 
 const SOURCES = [
   {
-    label: "Quesenberry KE, Carpenter JW (eds.). Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery. 4th ed. Saunders/Elsevier — ferret anesthesia, surgical protocols, and complication-risk chapters.",
+    label: "Quesenberry KE, Carpenter JW (eds.). Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery. 3rd ed. Saunders/Elsevier — ferret anesthesia, surgical protocols, and complication-risk chapters. (general reference; not checked against this page)",
     url: "https://www.elsevier.com/books/ferrets-rabbits-and-rodents/quesenberry/978-1-4160-6621-7",
     publisher: "Elsevier/Saunders",
   },
@@ -25,12 +25,12 @@ const SOURCES = [
     publisher: "Merck Veterinary Manual",
   },
   {
-    label: "Association of Exotic Mammal Veterinarians (AEMV) — anesthesia standards and continuing-education resources for exotic-mammal practitioners",
+    label: "Association of Exotic Mammal Veterinarians (AEMV) — anesthesia standards and continuing-education resources for exotic-mammal practitioners (general reference; not checked against this page)",
     url: "https://aemv.org",
     publisher: "AEMV",
   },
   {
-    label: "Journal of Exotic Pet Medicine — clinical reports on ferret anesthetic management, complication rates, and perioperative protocols",
+    label: "Journal of Exotic Pet Medicine — clinical reports on ferret anesthetic management, complication rates, and perioperative protocols (general reference; not checked against this page)",
     url: "https://www.sciencedirect.com/journal/journal-of-exotic-pet-medicine",
     publisher: "Journal of Exotic Pet Medicine",
   },
@@ -61,7 +61,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-10-12T00:00:00Z',
+  modifiedAt: '2026-10-13T00:00:00Z',
 
   citation: SOURCES,
 })
@@ -165,9 +165,9 @@ export default function FerretAnesthesiaRiskPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-01"
+            updatedAt="2026-10-13"
           />
-          <LastUpdated date="2026-10-12" />
+          <LastUpdated date="2026-10-13" />
 
           <DropCap>
             Sooner or later most ferrets face anesthesia — for a dental

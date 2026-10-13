@@ -15,7 +15,7 @@ import {
 
 const SOURCES = [
   {
-    label: "Quesenberry KE, Carpenter JW (eds.). Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery. 4th ed. Saunders/Elsevier — ferret oncology chapter covering lymphoma classification, workup, and treatment frameworks.",
+    label: "Quesenberry KE, Carpenter JW (eds.). Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery. 3rd ed. Saunders/Elsevier — ferret oncology chapter covering lymphoma classification, workup, and treatment frameworks. (general reference; not checked against this page)",
     url: "https://www.elsevier.com/books/ferrets-rabbits-and-rodents/quesenberry/978-1-4160-6621-7",
     publisher: "Elsevier/Saunders",
   },
@@ -25,12 +25,12 @@ const SOURCES = [
     publisher: "Merck Veterinary Manual",
   },
   {
-    label: "Association of Exotic Mammal Veterinarians (AEMV) — practitioner directory and continuing-education materials on ferret oncology",
+    label: "Association of Exotic Mammal Veterinarians (AEMV) — practitioner directory and continuing-education materials on ferret oncology (general reference; not checked against this page)",
     url: "https://aemv.org",
     publisher: "AEMV",
   },
   {
-    label: "Journal of Exotic Pet Medicine — clinical articles on ferret lymphoma immunophenotyping, CHOP-based chemotherapy, and treatment response",
+    label: "Journal of Exotic Pet Medicine — clinical articles on ferret lymphoma immunophenotyping, CHOP-based chemotherapy, and treatment response (general reference; not checked against this page)",
     url: "https://www.sciencedirect.com/journal/journal-of-exotic-pet-medicine",
     publisher: "Journal of Exotic Pet Medicine",
   },
@@ -62,7 +62,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-05-29T00:00:00Z',
-  modifiedAt: '2026-10-12T00:00:00Z',
+  modifiedAt: '2026-10-13T00:00:00Z',
 
   citation: SOURCES,
 })
@@ -196,10 +196,10 @@ export default function FerretLymphomaPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-05-29"
-            updatedAt="2026-05-29"
+            updatedAt="2026-10-13"
             reviewedBy="Editorial team"
           />
-          <LastUpdated date="2026-10-12" />
+          <LastUpdated date="2026-10-13" />
 
           <DropCap>
             Ferret lymphoma is the cancer that does not have a single

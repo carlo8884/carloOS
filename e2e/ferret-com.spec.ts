@@ -954,3 +954,11 @@ test('ferret fix TX2: find-a-vet drops the dead ferret-afa.org link and labels u
   await page.goto('/diet/best-ferret-kibble', { waitUntil: 'domcontentloaded' })
   await expect(page.locator('main')).toContainText('not checked these general references')
 })
+
+test('ferret fix TX1: generic textbook and journal citations are labelled as unchecked', async ({ page }) => {
+  for (const path of ['/behavior/biting-and-nipping', '/colors/ferret-lifespan', '/diet/weight-management', '/health/insulinoma']) {
+    await page.goto(path, { waitUntil: 'domcontentloaded' })
+    const text = (await page.locator('main').innerText()).replace(/\s+/g, ' ')
+    expect(text, path).toMatch(/not checked against this page|not checked this general reference against the claims on this page/)
+  }
+})

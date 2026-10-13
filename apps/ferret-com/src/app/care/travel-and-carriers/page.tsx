@@ -29,16 +29,16 @@ const SOURCES = [
   { label: 'Providing a Home for a Ferret', url: 'https://www.merckvetmanual.com/all-other-pets/ferrets/providing-a-home-for-a-ferret', publisher: 'Merck Veterinary Manual' },
   { label: 'Management of Ferrets', url: 'https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/management-of-ferrets', publisher: 'Merck Veterinary Manual' },
   {
-    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — thermoregulation and husbandry",
+    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — thermoregulation and husbandry (general reference; not checked against this page)",
     publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
   },
   {
-    label: "American Ferret Association (AFA) — owner education on travel, carrier safety, and temperature management",
+    label: "American Ferret Association (AFA) — owner education on travel, carrier safety, and temperature management (general reference; not checked against this page)",
     url: "https://www.ferret.org",
     publisher: "AFA",
   },
   {
-    label: "Association of Exotic Mammal Veterinarians (AEMV) — clinician resources on ferret husbandry and thermoregulation",
+    label: "Association of Exotic Mammal Veterinarians (AEMV) — clinician resources on ferret husbandry and thermoregulation (general reference; not checked against this page)",
     url: "https://www.aemv.org",
     publisher: "AEMV",
   },

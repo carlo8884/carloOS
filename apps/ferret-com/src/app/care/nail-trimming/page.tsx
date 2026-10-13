@@ -31,11 +31,11 @@ const SOURCES = [
     publisher: "Merck Veterinary Manual",
   },
   {
-    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — nail anatomy, grooming technique, and husbandry chapters",
+    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — nail anatomy, grooming technique, and husbandry chapters (general reference; not checked against this page)",
     publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
   },
   {
-    label: "American Ferret Association (AFA) — nail-trimming and grooming owner-education materials",
+    label: "American Ferret Association (AFA) — nail-trimming and grooming owner-education materials (general reference; not checked against this page)",
     url: "https://www.ferret.org",
     publisher: "AFA",
   },

@@ -31,7 +31,7 @@ export const metadata: Metadata = buildMetadata({
 
 const SOURCES = [
   {
-    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — ferret dermatology, photoperiod biology, and adrenal-disease chapters",
+    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — ferret dermatology, photoperiod biology, and adrenal-disease chapters (general reference; not checked against this page)",
     publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
   },
   {
@@ -39,11 +39,11 @@ const SOURCES = [
     publisher: "Elsevier",
   },
   {
-    label: "Journal of Exotic Pet Medicine — clinical reports on ferret hair loss, adrenal disease, and trichobezoar obstruction",
+    label: "Journal of Exotic Pet Medicine — clinical reports on ferret hair loss, adrenal disease, and trichobezoar obstruction (general reference; not checked against this page)",
     publisher: "Elsevier",
   },
   {
-    label: "American Ferret Association (AFA) — grooming and seasonal-care owner guidance",
+    label: "American Ferret Association (AFA) — grooming and seasonal-care owner guidance (general reference; not checked against this page)",
     url: "https://www.ferret.org",
     publisher: "AFA",
   },
@@ -57,7 +57,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-09-05T00:00:00Z',
+  modifiedAt: '2026-10-13T00:00:00Z',
 
   citation: SOURCES,
 })
@@ -158,7 +158,7 @@ export default function FerretSeasonalSheddingPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-09-05"
+            updatedAt="2026-10-13"
             reviewedBy="Editorial team"
           />
 

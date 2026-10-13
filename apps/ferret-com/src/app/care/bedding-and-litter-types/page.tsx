@@ -33,15 +33,15 @@ const SOURCES = [
   { label: "Lafeber Company, Care of the Pet Ferret (PDF)", url: "https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf", publisher: "Lafeber" },
   { label: "Merck Veterinary Manual: Providing a Home for a Ferret", url: "https://www.merckvetmanual.com/all-other-pets/ferrets/providing-a-home-for-a-ferret", publisher: "Merck Veterinary Manual" },
   {
-    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — GI foreign-body and respiratory-irritant chapters",
+    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — GI foreign-body and respiratory-irritant chapters (general reference; not checked against this page)",
     publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
   },
   {
-    label: "Journal of Exotic Pet Medicine — case literature on substrate-related complications in small mammals",
+    label: "Journal of Exotic Pet Medicine — case literature on substrate-related complications in small mammals (general reference; not checked against this page)",
     publisher: "Elsevier",
   },
   {
-    label: "American Ferret Association (AFA) — bedding and litter-material owner-education guidance",
+    label: "American Ferret Association (AFA) — bedding and litter-material owner-education guidance (general reference; not checked against this page)",
     url: "https://www.ferret.org",
     publisher: "AFA",
   },

@@ -293,7 +293,7 @@ export default function ReadingFoodLabelsPage() {
             <em>Veterinary Clinics of North America: Exotic Animal Practice</em>{' '}
             literature on ferret nutrition. Pet-food labeling conventions follow
             standard AAFCO ingredient and guaranteed-analysis rules. Locate
-            primary publications by title.
+            primary publications by title. We have not checked this general reference against the claims on this page.
           </p>
           <p className="text-sm text-brand-text-light">
             This page is general nutrition information, not individualized
