@@ -1003,6 +1003,16 @@ test('ferret fix SK2: starter kit insurance box cites Merck and NAIC, no unsourc
   await expect(box.locator('a[href="https://content.naic.org/insurance-topics/pet-insurance"]')).toBeVisible()
 })
 
+test('ferret fix TX4: llms.txt and editorial standards label unchecked references', async ({ page, request }) => {
+  const llms = await (await request.get('/llms.txt')).text()
+  expect(llms).toContain('general reference; not checked against this page')
+  expect(llms).not.toContain('two most-cited diseases')
+  await page.goto('/editorial-standards', { waitUntil: 'domcontentloaded' })
+  const text = (await page.locator('body').innerText()).replace(/\s+/g, ' ')
+  expect(text).toContain('general reference; not checked against this page')
+  expect(text).not.toContain('grounded in the exotic-mammal veterinary literature')
+})
+
 test('ferret fix VP1: vet-visit prep drops unsourced cost ranges', async ({ page }) => {
   await page.goto('/health/vet-visit-prep', { waitUntil: 'domcontentloaded' })
   const text = (await page.locator('main').innerText()).replace(/\s+/g, ' ')
