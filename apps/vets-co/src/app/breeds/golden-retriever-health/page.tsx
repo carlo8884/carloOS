@@ -31,7 +31,7 @@ const medicalSchema = buildMedicalWebPageSchema({
   description: 'Managing Golden Retriever cancer risk with payout data and case-cost ranges.',
   url: 'https://vets.co/breeds/golden-retriever-health',
   authorName: 'Vets.co Editorial',
-  lastReviewed: '2026-10-07',
+  lastReviewed: '2026-10-13',
 })
 
 const FAQS = [
@@ -58,7 +58,7 @@ const FAQS = [
   {
     question: 'Is pet insurance worth it for a Golden Retriever?',
     answer:
-      'With a 60%+ lifetime cancer rate, the expected-value calculation is unambiguous: Cornell University Hospital for Animals says radiation therapy is approximately $2,500–$7,000, a chemotherapy course over three to six months runs from several hundred dollars to several thousand, and major surgery starts around $500 and rises with the procedure. A February 2025 Dog Cancer Foundation summary of Veterinary Cancer Society figures puts an oncology consultation at $100–$250 and chemotherapy at $150–$600 per dose. NC State Veterinary Hospital lists bone-tumor stereotactic radiation at about $7,500–$8,500 and palliative radiation at about $800–$1,500. Typical US range, checked Oct 2026; varies by clinic and region. dated 2026-10-07. The non-negotiable rule is to enroll before the first veterinary appointment — any condition noted in records before enrollment becomes an excluded pre-existing condition on most policies.',
+      'Because cancer is the leading cause of death in surveyed US Goldens, the expected-value calculation is unambiguous: Cornell University Hospital for Animals says radiation therapy is approximately $2,500–$7,000, a chemotherapy course over three to six months runs from several hundred dollars to several thousand, and major surgery starts around $500 and rises with the procedure. A February 2025 Dog Cancer Foundation summary of Veterinary Cancer Society figures puts an oncology consultation at $100–$250 and chemotherapy at $150–$600 per dose. NC State Veterinary Hospital lists bone-tumor stereotactic radiation at about $7,500–$8,500 and palliative radiation at about $800–$1,500. Typical US range, checked Oct 2026; varies by clinic and region. dated 2026-10-13. The non-negotiable rule is to enroll before the first veterinary appointment — any condition noted in records before enrollment becomes an excluded pre-existing condition on most policies.',
   },
 ]
 
@@ -70,7 +70,7 @@ export default function VetsGoldenRetrieverHealthPage() {
     <>
       <SchemaScript schema={combinedSchemaAll} />
       <ArticleLayout
-      priceAsOf="2026-10-07"
+      priceAsOf="2026-10-13"
       siteId="vets-co"
       contentType="breed"
       hero={{
@@ -149,8 +149,8 @@ export default function VetsGoldenRetrieverHealthPage() {
         <p>Use the <Link href="/find-a-vet">specialist finder</Link> to locate board-certified specialists near you.</p>
 
         <h2 id="insurance">Pet Insurance — My Honest Recommendation</h2>
-        <p>Typical US range, checked Oct 2026; varies by clinic and region. dated 2026-10-07.</p>
-        <p>Pet insurance is widely recommended for new Golden Retriever owners because the lifetime cancer rate is high and hip disease is common. Cornell University Hospital for Animals says radiation therapy is approximately $2,500–$7,000, a chemotherapy course over three to six months runs from several hundred dollars to several thousand, and major surgery starts around $500 and rises with the procedure. A February 2025 Dog Cancer Foundation summary of Veterinary Cancer Society figures puts an oncology consultation at $100–$250 and chemotherapy at $150–$600 per dose. NC State Veterinary Hospital lists bone-tumor stereotactic radiation at about $7,500–$8,500 and palliative radiation at about $800–$1,500. University of Missouri Veterinary Health Center lists a total hip replacement consult at $2,000–$2,500, surgery at $8,500–$10,000 per hip, and follow-up at $600–$700. Each hip is quoted separately. Typical US range, checked Oct 2026; varies by clinic and region. dated 2026-10-07.</p>
+        <p>Typical US range, checked Oct 2026; varies by clinic and region. dated 2026-10-13.</p>
+        <p>Pet insurance is widely recommended for new Golden Retriever owners because cancer is the leading cause of death in the breed and hip disease is common. <a href="https://www.vet.cornell.edu/departments-centers-and-institutes/sprecher-institute-comparative-cancer-research/cancer-care-cornell-university-hospital-animals/cancer-management-frequently-asked-questions">Cornell University Hospital for Animals</a> says radiation therapy is approximately $2,500–$7,000, a chemotherapy course over three to six months runs from several hundred dollars to several thousand, and major surgery starts around $500 and rises with the procedure. A February 2025 <a href="https://www.dogcancerfoundation.org/blog/cost-dog-chemotherapy">Dog Cancer Foundation summary</a> of Veterinary Cancer Society figures puts an oncology consultation at $100–$250 and chemotherapy at $150–$600 per dose. <a href="https://hospital.cvm.ncsu.edu/services/small-animals/cancer-oncology/radiation-oncology/radiation-therapy-for-bone-cancer/">NC State Veterinary Hospital</a> lists bone-tumor stereotactic radiation at about $7,500–$8,500 and palliative radiation at about $800–$1,500. University of Missouri Veterinary Health Center lists a total hip replacement consult at $2,000–$2,500, surgery at $8,500–$10,000 per hip, and follow-up at $600–$700. Each hip is quoted separately. Typical US range, checked Oct 2026; varies by clinic and region. dated 2026-10-13.</p>
         <p>The non-negotiable rule: <strong>enroll before the first appointment.</strong> Any condition noted in records before enrollment becomes a pre-existing condition and is excluded. A puppy with a murmur noted at the first exam has a cardiac exclusion for life on most policies. Enroll the week you get the dog, before the first vet visit.</p>
         <p>This page does not name a recommended carrier. See the <Link href="/reviews/best-pet-insurance">full comparison →</Link></p>
 
@@ -213,7 +213,7 @@ export default function VetsGoldenRetrieverHealthPage() {
           The Dog.com Golden Retriever page is the owner-side guide for this breed: size, temperament, and everyday care.
         </CrossSiteHelp>
         <h2 id="faq">FAQ</h2>
-        <p>Typical US range, checked Oct 2026; varies by clinic and region. dated 2026-10-07.</p>
+        <p>Typical US range, checked Oct 2026; varies by clinic and region. dated 2026-10-13.</p>
         <FAQAccordion
           items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))}
           allowMultiple
