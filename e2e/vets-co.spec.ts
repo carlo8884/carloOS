@@ -1050,3 +1050,10 @@ test('vets fix PC1: senior bloodwork follows AAHA 6–12 months and the fecal FA
   await expect(page.locator('body')).toContainText('Sources differ.')
   await expect(page.locator('a[href*="2023-aaha-senior-care-guidelines-for-dogs-and-cats.pdf"]').first()).toBeAttached()
 })
+
+test('vets fix Q5: holiday emergency hero answer is two sentences, not a comma splice', async ({ page }) => {
+  await page.goto('/reviews/holiday-emergency-visit-guide', { waitUntil: 'domcontentloaded' })
+  const answer = (await page.locator('[data-fold="answer"]').innerText()).replace(/\s+/g, ' ')
+  expect(answer).not.toMatch(/, Compare/)
+  expect(answer).toContain('on duty overnight. Compare carriers')
+})
