@@ -3,6 +3,7 @@ import { expectAAContrast } from './contrast'
 import { expectMoneyCopy, reviewRoutes } from './money-copy'
 import { expectHop } from './hop'
 import { AMAZON_TAG, TRUPANION_TAG } from './tags'
+import { jsonLdProblems } from './jsonld'
 
 test('insurance review, then a carrier quote hop', async ({ page }) => {
   await page.goto('/reviews/best-pet-insurance')
@@ -831,4 +832,10 @@ test('vets fix TS2: journal citations link to their DOI, unverifiable citations 
     await page.goto(path, { waitUntil: 'domcontentloaded' })
     await expect(page.locator(`a[href="${href}"]`).first(), path).toBeAttached()
   }
+})
+
+test('vets fix SD1: rendered JSON-LD on key templates parses and has no structural errors', async ({ request }) => {
+  const problems: string[] = []
+  for (const path of ['/', '/health/kidney-disease-cats', '/breeds/beagle-health', '/guides/pet-first-aid-kit', '/tools', '/tools/er-vs-clinic', '/insurance', '/medications']) problems.push(...(await jsonLdProblems(request, path)))
+  expect(problems).toEqual([])
 })

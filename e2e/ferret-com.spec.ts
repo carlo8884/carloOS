@@ -3,6 +3,7 @@ import { expectAAContrast } from './contrast'
 import { expectMoneyCopy, reviewRoutes } from './money-copy'
 import { expectHop } from './hop'
 import { AMAZON_TAG } from './tags'
+import { jsonLdProblems } from './jsonld'
 
 test('cage guide, cage setup, tagged hop', async ({ page }) => {
   await page.goto('/reviews/best-ferret-cage')
@@ -645,4 +646,10 @@ test('ferret fix TS2: cage size and wood-litter claims are sourced, unsourced ph
   await expect(page.locator('body')).not.toContainText(/phenol/i)
   await expect(page.locator('h2#phenols')).toHaveText('Pine & Cedar Shavings')
   for (const href of ['https://www.merckvetmanual.com/all-other-pets/ferrets/providing-a-home-for-a-ferret', 'https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/management-of-ferrets']) await expect(page.locator(`h2#phenols + p a[href="${href}"]`)).toHaveCount(1)
+})
+
+test('ferret fix SD1: rendered JSON-LD on key templates parses and has no structural errors', async ({ request }) => {
+  const problems: string[] = []
+  for (const path of ['/', '/reviews/best-ferret-cage', '/behavior/biting-and-nipping', '/tools/cage-size-calculator', '/diet/best-ferret-kibble', '/first-year-schedule']) problems.push(...(await jsonLdProblems(request, path)))
+  expect(problems).toEqual([])
 })

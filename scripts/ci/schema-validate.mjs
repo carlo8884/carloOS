@@ -41,7 +41,7 @@
  *   • HowTo: name, description, url, step array present
  *
  * ─── Conservative design ─────────────────────────────────────────────────────
- * This gate runs in REPORT-ONLY mode (ENFORCE = false, exit 0 always).
+ * This gate is enforced (ENFORCE = true): any finding exits 1.
  * It was rolled out against main (commit verified clean, 0 structural
  * findings) but kept report-only because the inline scan uses regex-based
  * JS-to-JSON parsing — complex multi-variable combineSchemas() patterns are
@@ -49,7 +49,7 @@
  * true once the first real finding has been reviewed and confirmed
  * actionable across all sites.
  *
- * Exit code: 0 (always — report-only mode, matching orphan-check pattern)
+ * Exit code: 1 on any finding, 0 when clean.
  *
  * Per CLAUDE.md §5: COO owns scripts/ci/*.mjs.
  * Per QC-STANDARDS.md §2.5 and §2.10: schema must validate and must not
@@ -63,7 +63,7 @@ const ROOT = process.cwd()
 // ─── ENFORCE flag ─────────────────────────────────────────────────────────────
 // false = report findings but exit 0 (report-only mode — safe for PRs)
 // true  = exit 1 on any structural finding (flip after first clean review)
-const ENFORCE = false
+const ENFORCE = true
 
 const APPS = [
   'dog-com',
