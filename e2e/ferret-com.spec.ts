@@ -893,3 +893,11 @@ test('ferret fix BT1: biting page answers first from Merck and drops unsourced c
   const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
   expect(ld).toContain('What should I do right after my ferret nips?')
 })
+
+test('ferret fix PA1: play-aggression page answers first and cites the MSD Veterinary Manual', async ({ page }) => {
+  await page.goto('/behavior/play-aggression', { waitUntil: 'domcontentloaded' })
+  await expect(page.locator('.carloOS-article').filter({ hasText: 'Short answer' }).first()).toContainText('Usually it is play')
+  await expect(page.locator('a[href="https://www.msdvetmanual.com/all-other-pets/ferrets/special-considerations-for-ferrets"]').first()).toBeVisible()
+  const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
+  expect(ld).toContain('"FAQPage"')
+})
