@@ -872,3 +872,11 @@ test('ferret fix MR1: no page carries a /go/marshall href, even a held one', asy
     expect(await page.content(), path).not.toContain('/go/marshall')
   }
 })
+
+test('ferret fix PA1: play-aggression page answers first and cites the MSD Veterinary Manual', async ({ page }) => {
+  await page.goto('/behavior/play-aggression', { waitUntil: 'domcontentloaded' })
+  await expect(page.locator('.carloOS-article').filter({ hasText: 'Short answer' }).first()).toContainText('Usually it is play')
+  await expect(page.locator('a[href="https://www.msdvetmanual.com/all-other-pets/ferrets/special-considerations-for-ferrets"]').first()).toBeVisible()
+  const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
+  expect(ld).toContain('"FAQPage"')
+})
