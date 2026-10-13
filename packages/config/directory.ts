@@ -218,9 +218,10 @@ export function directoryClaimPrefill(
 export function directorySitemapEntries(
   siteUrl: string,
   listings: DirectoryListing[],
-  now = new Date(),
+  /** Unused: listings carry no per-row date, so these URLs omit <lastmod> rather than claim the build time. */
+  _now?: Date,
   sitemapId = 1,
-): Array<{ url: string; lastModified: Date; changeFrequency: 'weekly'; priority: number }> {
+): Array<{ url: string; changeFrequency: 'weekly'; priority: number }> {
   const origin = siteUrl.replace(/\/$/, '')
   // Index URL is committed as a literal in each sitemap.ts (sitemap-drift).
   // id 1 = imported places only. id ≥ 2 = listing shards (all imported slugs).
@@ -229,13 +230,11 @@ export function directorySitemapEntries(
     return [
       ...places.states.map((state) => ({
         url: `${origin}${directoryStatePath(state.slug)}`,
-        lastModified: now,
         changeFrequency: 'weekly' as const,
         priority: 0.55,
       })),
       ...places.cities.map((city) => ({
         url: `${origin}${directoryCityPath(city.stateSlug, city.citySlug)}`,
-        lastModified: now,
         changeFrequency: 'weekly' as const,
         priority: 0.5,
       })),
@@ -244,7 +243,6 @@ export function directorySitemapEntries(
   const start = (sitemapId - 2) * DIRECTORY_SITEMAP_DETAIL_CAP
   return listings.slice(start, start + DIRECTORY_SITEMAP_DETAIL_CAP).map((row) => ({
     url: `${origin}${directoryListingPath(row)}`,
-    lastModified: now,
     changeFrequency: 'weekly' as const,
     priority: 0.4,
   }))

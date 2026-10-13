@@ -684,6 +684,12 @@ test('ferret fix SD2: Article schema omits image instead of shipping an empty st
   }
 })
 
+test('ferret fix SM2: directory sitemap shard carries no build-time lastmod', async ({ request }) => {
+  const xml = await (await request.get('/sitemap/1.xml')).text()
+  expect(xml).toContain('<loc>https://ferret.com/directory/')
+  expect(xml).not.toContain('<lastmod>')
+})
+
 test('ferret fix AF5: diet pages lead with sourced short answers, FAQ schema, and linked sources', async ({ page }) => {
   const cases: Array<[string, string, string, string]> = [
     ['/diet/hydration-and-water', 'Rinse bottles daily', 'Why are ferrets prone to dehydration?', 'https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf'],

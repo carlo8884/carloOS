@@ -929,3 +929,11 @@ test('vets fix AF7: parasites and cognitive dysfunction pages lead with sourced 
   await page.goto('/health/intestinal-parasites', { waitUntil: 'domcontentloaded' })
   await expect(page.locator('body')).not.toContainText('fecal testing at least annually')
 })
+
+test('vets fix SM2: directory sitemap shards carry no build-time lastmod', async ({ request }) => {
+  for (const id of [1, 2]) {
+    const xml = await (await request.get(`/sitemap/${id}.xml`)).text()
+    expect(xml, `sitemap ${id}`).toContain('<loc>https://vets.co/directory/')
+    expect(xml, `sitemap ${id}`).not.toContain('<lastmod>')
+  }
+})
