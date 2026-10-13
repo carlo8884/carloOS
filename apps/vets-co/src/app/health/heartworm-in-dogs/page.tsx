@@ -8,7 +8,6 @@ export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Hea
 const SOURCES = [
   { label: 'American Heartworm Society: Current Canine Guidelines (2018 revision)', url: 'https://www.heartwormsociety.org/veterinary-resources/american-heartworm-society-guidelines', publisher: 'American Heartworm Society' },
   { label: 'Merck Veterinary Manual: Heartworm Disease', url: 'https://www.merckvetmanual.com/dog-owners/heart-and-blood-vessel-disorders-of-dogs/heartworm-disease-in-dogs', publisher: 'Merck Vet Manual' },
-  { label: 'Atkins CE et al. Guidelines for the diagnosis, prevention and management of heartworm infection in dogs. J Vet Intern Med. 2010;24(4):713-733.', publisher: 'JVIM' },
   { label: 'AVMA: Heartworm Disease', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/heartworm-disease', publisher: 'AVMA' },
   { label: 'Parasites & Vectors (2026): US clinic-transaction cost of canine heartworm treatment and prevention', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC13491753/', publisher: 'Parasites & Vectors' },
   { label: 'ASPCA Pro: Emancipet high-volume heartworm treatment costs', url: 'https://www.aspcapro.org/resource/improving-access-heartworm-treatment', publisher: 'ASPCA Pro' },
