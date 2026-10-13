@@ -886,6 +886,25 @@ test('vets fix AF3: influenza, allergic reaction and tick-borne pages open with 
   await expect(page.locator('body')).not.toContainText(/incubation period is 2–4 days|recover in 2–4 weeks|less prevalent than H3N2/)
 })
 
+test('vets fix AF4: dehydration, emergency signs and weight pages lead with sourced short answers, FAQ schema, and the correct Kealy citation', async ({ page }) => {
+  const cases: Array<[string, string, string, string]> = [
+    ['/health/dehydration-in-dogs', 'thick saliva', 'How do I check my dog for dehydration at home?', 'https://www.akc.org/expert-advice/health/warning-signs-dehydration-dogs/'],
+    ['/health/emergency-signs', 'not eating or drinking for 24 hours', 'When is a seizure an emergency?', 'https://www.merckvetmanual.com/multimedia/table/when-to-see-a-veterinarian'],
+    ['/health/weight-management', '59% of dogs and 61% of cats', 'Do leaner dogs live longer?', 'https://pubmed.ncbi.nlm.nih.gov/11991408/'],
+  ]
+  for (const [path, short, question, href] of cases) {
+    await page.goto(path, { waitUntil: 'domcontentloaded' })
+    await expect(page.locator('.carloOS-article').filter({ hasText: 'Short answer' }).first(), path).toContainText(short)
+    await expect(page.locator(`a[href="${href}"]`).first(), path).toBeAttached()
+    await expect(page.getByText(question).first(), path).toBeVisible()
+    const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
+    expect(ld, path).toContain('"FAQPage"')
+  }
+  await page.goto('/health/weight-management', { waitUntil: 'domcontentloaded' })
+  await expect(page.locator('a[href="https://pubmed.ncbi.nlm.nih.gov/12420743/"]')).toHaveCount(0)
+  await expect(page.locator('body')).not.toContainText('1.8 years longer')
+})
+
 test('vets fix SD2: Article schema omits image instead of shipping an empty string', async ({ request }) => {
   for (const path of ['/breeds/beagle-health', '/health/heat-stroke-dogs']) {
     const html = await (await request.get(path)).text()
