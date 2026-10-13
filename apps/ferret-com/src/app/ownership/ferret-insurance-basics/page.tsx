@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, CalloutBox, CrossSiteHelp, ComparisonFoot, LastUpdated } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, CalloutBox, CrossSiteHelp, ComparisonFoot, LastUpdated, FAQAccordion } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
@@ -21,7 +21,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-10-12T00:00:00Z',
+  modifiedAt: '2026-10-13T00:00:00Z',
 })
 
 const med = buildMedicalWebPageSchema({
@@ -33,6 +33,24 @@ const med = buildMedicalWebPageSchema({
   lastReviewed: '2026-06-01',
 })
 const combined = combineSchemas(schema, med)
+
+const FAQS = [
+  {
+    question: 'Is pet insurance available for ferrets?',
+    answer:
+      'Some insurers cover ferrets, but fewer than cover cats and dogs. The NAIC notes that policies are usually broken down by type of pet, so first confirm that a policy covers ferrets in your state.',
+  },
+  {
+    question: 'Will insurance cover a condition my ferret already has?',
+    answer:
+      'Usually not. The NAIC says most pet insurance companies exclude pre-existing conditions and many have waiting periods before benefits begin, so a policy helps only if it starts before signs appear.',
+  },
+  {
+    question: 'Why do ferret owners think about insurance at all?',
+    answer:
+      'Merck notes that tumors are commonly diagnosed in ferrets, and about half come from the endocrine and blood-forming (hemolymphatic) systems. Workups and treatment for those conditions are where costs build up, which is why owners compare insurance with a dedicated savings fund.',
+  },
+]
 
 export default function FerretInsuranceBasicsPage() {
   return (
@@ -64,6 +82,7 @@ export default function FerretInsuranceBasicsPage() {
                 { label: 'Common Exclusions', href: '#exclusions' },
                 { label: 'Insurance vs. a Savings Fund', href: '#vssavings' },
                 { label: 'Questions to Ask', href: '#questions' },
+                { label: 'FAQ', href: '#faq' },
                 { label: 'Sources', href: '#sources' },
               ]}
             />
@@ -91,10 +110,15 @@ export default function FerretInsuranceBasicsPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-01"
+            updatedAt="2026-10-13"
             reviewedBy="Editorial team"
           />
-          <LastUpdated date="2026-10-12" />
+          <LastUpdated date="2026-10-13" />
+          <CalloutBox variant="info" title="Short answer">
+            <p>
+              Ferret insurance exists but fewer insurers offer it than for cats and dogs. Most pet insurance excludes pre-existing conditions and many policies have waiting periods (<a href="https://content.naic.org/insurance-topics/pet-insurance">NAIC</a>), so it helps only if bought before illness. Tumors are commonly diagnosed in ferrets (<a href="https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/neoplasia-of-ferrets">Merck Veterinary Manual</a>), which is the risk a policy or a savings fund is meant to absorb.
+            </p>
+          </CalloutBox>
 
           <CalloutBox variant="info" title="Educational only">
             <p>
@@ -209,7 +233,7 @@ export default function FerretInsuranceBasicsPage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-12" />
+          <ComparisonFoot updated="2026-10-13" />
           <h2>Who should use which</h2>
           <p>Use insurance when you want the bill smoothed and the policy is already in place before signs appear. Use a savings fund when you want control and no claims process, and you can accept the gap while the fund grows. Neither is universally right, and a combination is still an individual decision.</p>
           <CrossSiteHelp
@@ -242,7 +266,14 @@ export default function FerretInsuranceBasicsPage() {
           </p>
 
 
+          <h2 id="faq">Frequently Asked Questions</h2>
+          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
+
           <h2 id="sources">Sources</h2>
+          <ul>
+            <li><a href="https://content.naic.org/insurance-topics/pet-insurance">NAIC: Pet Insurance (insurance topic page, updated April 2025)</a></li>
+            <li><a href="https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/neoplasia-of-ferrets">Merck Veterinary Manual: Neoplasia of Ferrets</a></li>
+          </ul>
           <p>
             Disease incidence in middle-aged and older ferrets — insulinoma,
             adrenal disease, lymphoma, dental disease — is documented in

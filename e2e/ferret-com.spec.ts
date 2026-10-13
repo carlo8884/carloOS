@@ -776,6 +776,15 @@ test('ferret fix FA4: legality page cites CDFW and Hawaii agriculture with FAQ s
   await expect(page.locator('a[href="https://dab.hawaii.gov/pi/pq/import-program/animal-guidelines/"]').first()).toBeAttached()
   await expect(page.locator('body')).not.toContainText('New York City and Washington')
   await expect(page.getByText('Which US states ban pet ferrets?').first()).toBeVisible()
+})
+
+test('ferret fix FA5: insurance basics leads with an NAIC/Merck short answer, FAQ schema, and names no insurer', async ({ page }) => {
+  await page.goto('/ownership/ferret-insurance-basics', { waitUntil: 'domcontentloaded' })
+  await expect(page.locator('.carloOS-article').filter({ hasText: 'Short answer' }).first()).toContainText('pre-existing conditions')
+  await expect(page.locator('a[href="https://content.naic.org/insurance-topics/pet-insurance"]').first()).toBeAttached()
+  await expect(page.getByText('Will insurance cover a condition my ferret already has?').first()).toBeVisible()
+  const text = await page.locator('.carloOS-article').first().innerText()
+  for (const held of ['Trupanion', 'Pets Best']) expect(text).not.toContain(held)
   const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
   expect(ld).toContain('"FAQPage"')
 })
