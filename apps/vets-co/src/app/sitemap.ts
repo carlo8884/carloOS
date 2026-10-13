@@ -1,4 +1,5 @@
 import { MetadataRoute } from 'next'
+import { withStampedDates } from '../sitemap-dates'
 import { PET_MEDS } from '../data/pet-meds'
 import { ALL_INSURANCE_BREEDS } from '../data/insurance-breeds-all'
 import { States } from '../data/states'
@@ -20,6 +21,12 @@ export function generateSitemaps() {
 }
 
 export default function sitemap(props?: { id?: number | string }): MetadataRoute.Sitemap {
+  const id = Number(props?.id ?? 0)
+  const entries = curatedSitemap(props)
+  return id >= 1 ? entries : withStampedDates(entries)
+}
+
+function curatedSitemap(props?: { id?: number | string }): MetadataRoute.Sitemap {
   const id = Number(props?.id ?? 0)
   const now = new Date()
   // id 1 = city/state places; id >= 2 = every imported listing URL (sharded).
