@@ -865,3 +865,23 @@ test('vets fix AF1: heat stroke, leptospirosis and UTI pages open with a sourced
 test('vets fix SM1: sitemap lastmod is the stamped page date, and unstamped hubs carry none', async ({ request }) => {
   await expectStampedLastmod(request, ['/health/heat-stroke-dogs', '/health/kidney-disease-cats', '/breeds/beagle-health'], ['/how-we-pick', '/symptoms/dog-vomiting'])
 })
+
+test('vets fix AF3: influenza, allergic reaction and tick-borne pages open with a sourced short answer and carry FAQ schema', async ({ page }) => {
+  const cases: Array<[string, string, string]> = [
+    ['/health/canine-influenza', 'most dogs recover in 2 to 3 weeks', 'Do antibiotics treat dog flu?'],
+    ['/health/allergic-reactions-dogs', 'Anaphylaxis is different', 'What are the signs of anaphylaxis in a dog?'],
+    ['/health/tick-borne-diseases', 'at least 24 hours', 'Can my dog give me Lyme disease?'],
+  ]
+  for (const [path, short, question] of cases) {
+    await page.goto(path, { waitUntil: 'domcontentloaded' })
+    const box = page.locator('.carloOS-article').filter({ hasText: 'Short answer' }).first()
+    await expect(box, path).toContainText(short)
+    await expect(page.locator('.carloOS-article a[href^="https://www.merckvetmanual.com/"]').first(), path).toBeAttached()
+    await expect(page.getByText(question).first(), path).toBeVisible()
+    const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
+    expect(ld, path).toContain('"FAQPage"')
+    expect(ld, path).toContain(question)
+  }
+  await page.goto('/health/canine-influenza', { waitUntil: 'domcontentloaded' })
+  await expect(page.locator('body')).not.toContainText(/incubation period is 2–4 days|recover in 2–4 weeks|less prevalent than H3N2/)
+})
