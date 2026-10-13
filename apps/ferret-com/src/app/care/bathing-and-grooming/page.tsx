@@ -193,7 +193,7 @@ export default function FerretBathingGroomingPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-05-29"
-            updatedAt="2026-05-29"
+            updatedAt="2026-10-13"
             reviewedBy="Editorial team"
           />
           <div className="mb-8">
@@ -583,10 +583,6 @@ export default function FerretBathingGroomingPage() {
             cons={['Marshall also sells tea-tree variants — read the label every time', 'Bottle is small for the price']}
             price="$8–14"
             priceNote="dated 2026-10-04."
-            ctaText="Find Marshall ferret shampoo"
-            ctaHref="/go/marshall/ferret+shampoo?s=care-bathing-and-grooming"
-            ctaAffiliateProgram="marshall"
-            ctaAffiliateProduct="ferret+shampoo"
           />
           <ReviewCard quietUntilTag
             id="pet-ear-cleaner"
@@ -653,7 +649,7 @@ export default function FerretBathingGroomingPage() {
               <tbody>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 text-brand-text-mid">A ferret shampoo without tea tree</td>
-                  <td className="p-3 font-bold text-brand-dark"><a href="#marshall-ferret-shampoo" className="text-brand-primary">Marshall Ferret Shampoo</a><TableShopLink quietUntilTag href={"/go/marshall/ferret+shampoo?s=care-bathing-and-grooming"} product={"Marshall Ferret Shampoo"} /></td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#marshall-ferret-shampoo" className="text-brand-primary">Marshall Ferret Shampoo</a></td>
                   <td className="p-3 text-brand-text-mid">Shampoo Default. Original or fragrance-free. pH-balanced. $8–14</td>
                   <td className="p-3 text-brand-text-mid">The bottle is a tea-tree variant. The card says read the label every time</td>
                 </tr>

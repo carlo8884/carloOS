@@ -54,7 +54,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-10-13T00:00:00Z',
 
   citation: SOURCES,
 })
@@ -152,7 +152,7 @@ export default function FerretDiggingBurrowingPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-01"
+            updatedAt="2026-10-13"
           />
           <div className="mb-8">
             <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
@@ -339,10 +339,6 @@ export default function FerretDiggingBurrowingPage() {
             cons={['Fabric can wear in a heavy-chewer household', 'Check the listing for any internal wire before you buy']}
             price="see current price"
             priceNote="dated 2026-06-04."
-            ctaText="Find Marshall play tunnels"
-            ctaHref="/go/marshall/ferret+play+tunnel?s=behavior-digging-burrowing"
-            ctaAffiliateProgram="marshall"
-            ctaAffiliateProduct="ferret+play+tunnel"
           />
           <ReviewCard quietUntilTag
             id="ball-pit-fill-dig"

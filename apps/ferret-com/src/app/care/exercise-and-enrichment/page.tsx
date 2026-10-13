@@ -64,7 +64,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-05-28T00:00:00Z',
-  modifiedAt: '2026-05-28T00:00:00Z',
+  modifiedAt: '2026-10-13T00:00:00Z',
 
   citation: SOURCES,
 })
@@ -185,7 +185,7 @@ export default function FerretExerciseEnrichmentPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-05-28"
-            updatedAt="2026-05-28"
+            updatedAt="2026-10-13"
           />
 
           <DropCap>
@@ -555,10 +555,6 @@ export default function FerretExerciseEnrichmentPage() {
             cons={['Fabric can wear in a heavy-chewer household', 'Check the listing for any internal wire before you buy']}
             price="see current price"
             priceNote="dated 2026-05-31."
-            ctaText="Find Marshall play tunnels"
-            ctaHref="/go/marshall/ferret+play+tunnel?s=care-exercise-and-enrichment"
-            ctaAffiliateProgram="marshall"
-            ctaAffiliateProduct="ferret+play+tunnel"
           />
           <ReviewCard quietUntilTag
             id="dig-box-supplies"

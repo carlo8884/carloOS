@@ -1,4 +1,3 @@
-import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -59,7 +58,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-10-13T00:00:00Z',
 
   citation: SOURCES,
 })
@@ -151,7 +150,7 @@ export default function FerretStressSignsPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-01"
+            updatedAt="2026-10-13"
           />
 
           <DropCap>
@@ -335,7 +334,6 @@ export default function FerretStressSignsPage() {
             ctaAffiliateProgram="amazon"
             ctaAffiliateProduct="ferret+hammock"
           />
-          <HopDisclosure siteId="ferret-com" href="/go/marshall/ferret+play+tunnel?s=behavior-stress-signs" />
           <ReviewCard quietUntilTag
             id="ferret-tunnel-stress"
             badge="Enrichment"
@@ -354,10 +352,6 @@ export default function FerretStressSignsPage() {
             cons={['Does not address social loneliness — a tunnel is not a companion', 'Fabric wears in heavy-chewer households']}
             price="see current price"
             priceNote="dated 2026-06-04."
-            ctaText="Find Marshall play tunnels"
-            ctaHref="/go/marshall/ferret+play+tunnel?s=behavior-stress-signs"
-            ctaAffiliateProgram="marshall"
-            ctaAffiliateProduct="ferret+play+tunnel"
           />
 
           <h2 id="faq">FAQ</h2>

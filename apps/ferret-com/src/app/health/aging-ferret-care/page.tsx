@@ -67,7 +67,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-05-28T00:00:00Z',
-  modifiedAt: '2026-10-12T00:00:00Z',
+  modifiedAt: '2026-10-13T00:00:00Z',
 
   citation: SOURCES,
 })
@@ -213,9 +213,9 @@ export default function FerretAgingPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-05-28"
-            updatedAt="2026-05-28"
+            updatedAt="2026-10-13"
           />
-          <LastUpdated date="2026-10-12" />
+          <LastUpdated date="2026-10-13" />
 
           <DropCap>
             The senior years are where the structural decisions made earlier
@@ -589,10 +589,6 @@ export default function FerretAgingPage() {
             cons={['Fleece picks up shed hair quickly — frequent wash', 'Some seniors still prefer their old hammock — offer both']}
             price="see current price each"
             priceNote="dated 2026-05-31."
-            ctaText="Find Marshall leisure lounges"
-            ctaHref="/go/marshall/leisure+lounge?s=health-aging-ferret-care"
-            ctaAffiliateProgram="marshall"
-            ctaAffiliateProduct="leisure+lounge"
           />
 
           {/* Shop note — live amazon-brand kitchen buttons
