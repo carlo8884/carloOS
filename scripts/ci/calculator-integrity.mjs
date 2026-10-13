@@ -1412,7 +1412,6 @@ const CALCULATORS = [
     file: 'apps/ferret-com/src/app/diet/best-ferret-kibble/page.tsx',
     mustInclude: [
       { re: /amazon\/B019W9VXZK/, label: 'on-page product Amazon search hop' },
-      { re: /wysong\/epigen-90\?s=diet-best-ferret-kibble/, label: 'existing Wysong Epigen 90 hop kept (not an empty leftover button)' },
       { re: /Carniwhole Ferret Food/, label: 'Carniwhole card kept; visit hop removed because carniwhole.com does not resolve' },
       { re: /amazonHref="\/go\/amazon\/B019W9VXZK/, label: 'ShopCtas amazon-brand hops only' },
       { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
@@ -1433,7 +1432,6 @@ const CALCULATORS = [
     file: 'apps/ferret-com/src/app/diet/reading-food-labels/page.tsx',
     mustInclude: [
       { re: /amazon-brand\/wysong\+ferret\+food/, label: 'on-page product Amazon search hop' },
-      { re: /wysong\/epigen-90\?s=diet-reading-food-labels/, label: 'existing Wysong Epigen 90 hop kept (not an empty leftover button)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
@@ -1452,7 +1450,6 @@ const CALCULATORS = [
     file: 'apps/ferret-com/src/app/diet/protein-and-fat-requirements/page.tsx',
     mustInclude: [
       { re: /amazon-brand\/wysong\+ferret\+food/, label: 'on-page product Amazon search hop' },
-      { re: /wysong\/epigen-90\?s=diet-protein-and-fat-requirements/, label: 'existing Wysong Epigen 90 hop kept (not an empty leftover button)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
@@ -1471,7 +1468,6 @@ const CALCULATORS = [
     file: 'apps/ferret-com/src/app/diet/whole-prey-vs-kibble/page.tsx',
     mustInclude: [
       { re: /amazon\/B019W9VXZK/, label: 'on-page product Amazon search hop' },
-      { re: /wysong\/epigen-90\?s=diet-whole-prey-vs-kibble/, label: 'existing Wysong Epigen 90 hop kept (not an empty leftover button)' },
       { re: /amazon-brand\/frozen\+feeder\+mice\+reptile\?s=diet-whole-prey-vs-kibble/, label: 'frozen-feeder-prey Amazon search hop kept (was Chewy; no Chewy account) (product-specific, not an empty leftover button)' },
       { re: /amazonHref="\/go\/amazon\/B019W9VXZK/, label: 'ShopCtas amazon-brand hops only' },
       { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
@@ -1509,7 +1505,6 @@ const CALCULATORS = [
     file: 'apps/ferret-com/src/app/diet/safe-treats/page.tsx',
     mustInclude: [
       { re: /amazon-brand\/wysong\+ferret\+food/, label: 'on-page product Amazon search hop' },
-      { re: /wysong\/freeze-dried-treats\?s=diet-safe-treats/, label: 'existing Wysong freeze-dried-treats hop kept (not an empty leftover button)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
@@ -1566,7 +1561,6 @@ const CALCULATORS = [
     file: 'apps/ferret-com/src/app/diet/senior-ferret-nutrition/page.tsx',
     mustInclude: [
       { re: /amazon-brand\/wysong\+ferret\+food/, label: 'on-page product Amazon search hop' },
-      { re: /wysong\/epigen-90\?s=diet-senior-ferret-nutrition/, label: 'existing Wysong Epigen 90 hop kept (not an empty leftover button)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
@@ -1696,7 +1690,6 @@ const CALCULATORS = [
     file: 'apps/ferret-com/src/app/care/diet-basics/page.tsx',
     mustInclude: [
       { re: /amazon-brand\/wysong\+ferret\+food/, label: 'on-page product Amazon search hop' },
-      { re: /wysong\/epigen-90\?s=care-diet-basics/, label: 'existing Wysong Epigen 90 review hop kept (not an empty leftover button)' },
       { re: /Carniwhole Ferret Food/, label: 'Carniwhole card kept; visit hop removed because carniwhole.com does not resolve' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
@@ -12898,7 +12891,6 @@ const CALCULATORS = [
     file: 'apps/ferret-com/src/app/tools/label-calculator/page.tsx',
     mustInclude: [
       { re: /href="\/diet\/best-ferret-kibble"/, label: 'kibble review is the matching guide' },
-      { re: /\/go\/wysong\/epigen-90\?s=tools-label-calculator/, label: 'existing Wysong Epigen 90 hop, product and retailer named' },
       { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [{ re: /we tested/, label: 'no hands-on claim' }],

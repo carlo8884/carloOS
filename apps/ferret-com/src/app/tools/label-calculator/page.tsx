@@ -8,7 +8,6 @@ import {
   buildArticleSchema,
   buildHowToSchema,
   buildMetadata,
-  QuietPartnerLink,
 } from '@carloOS/ui'
 import LabelCalculator from './Calculator'
 
@@ -142,7 +141,6 @@ export default function FerretLabelPage() {
             >
               Check price of Wysong Epigen 90 on Amazon →
             </a>
-            <QuietPartnerLink href="/go/wysong/epigen-90?s=tools-label-calculator" label="Check price of Wysong Epigen 90 at Wysong" />
           </div>
         </div>
         <h2>Worked conversion</h2>

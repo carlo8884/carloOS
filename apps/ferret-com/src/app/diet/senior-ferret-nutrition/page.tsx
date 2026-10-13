@@ -268,10 +268,6 @@ export default function SeniorFerretNutritionPage() {
             cons={['Premium price', 'Not a substitute for a dental exam']}
             price="see current price / 5 lb"
             priceNote="dated 2026-06-01."
-            ctaText="Find Wysong Epigen 90"
-            ctaHref="/go/wysong/epigen-90?s=diet-senior-ferret-nutrition"
-            ctaAffiliateProgram="wysong"
-            ctaAffiliateProduct="epigen-90"
           />
           <p>The chain-shelf alternative is Marshall Premium. The <a href="/reviews/wysong-vs-marshall-kibble-guide">Wysong versus Marshall guide</a> prints both guaranteed analyses and says to skip Marshall when insulinoma risk is why you are choosing a food.</p>
 

@@ -1,8 +1,13 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { HopDisclosure } from '../../../components/HopDisclosure'
+<<<<<<< HEAD
 import { TableShopLink, ComparisonFoot, EmailCapture, buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, QuickPicks, CrossPortfolioCard, ShopCtas, ArticleSourcesList, LastUpdated, CalloutBox } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, buildItemListSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript, QuietPartnerLink} from '@carloOS/ui'
+=======
+import { TableShopLink, ComparisonFoot, EmailCapture, buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, QuickPicks, CrossPortfolioCard, ShopCtas, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
+import { buildArticleSchema, buildFAQSchema, buildItemListSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript} from '@carloOS/ui'
+>>>>>>> origin/main
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -104,7 +109,6 @@ export default function BestFerretKibblePage() {
             <div className="mb-4" data-primary-hop="true">
               <a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" data-shop-placement="hero" href="/go/amazon/B019W9VXZK?s=best-ferret-kibble">Check price of Wysong Epigen 90 on Amazon →</a>
             </div>
-            <QuietPartnerLink tone="dark" href="/go/wysong/epigen-90?s=diet-best-ferret-kibble" label="Check price of Wysong Epigen 90 at Wysong" />
           </>
         }
         hero={{

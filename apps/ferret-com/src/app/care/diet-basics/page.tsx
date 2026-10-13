@@ -292,10 +292,6 @@ export default function FerretDietBasicsPage() {
             cons={['Premium price', 'Not always stocked at supermarket pet aisles']}
             price="see current price / 5 lb"
             priceNote="dated 2026-05-31."
-            ctaText="Find Wysong Epigen 90"
-            ctaHref="/go/wysong/epigen-90?s=care-diet-basics"
-            ctaAffiliateProgram="wysong"
-            ctaAffiliateProduct="epigen-90"
           />
           <ReviewCard quietUntilTag
             id="marshall-premium-diet"
