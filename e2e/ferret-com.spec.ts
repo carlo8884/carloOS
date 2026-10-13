@@ -631,3 +631,9 @@ test('ferret fix TS1: money review sources are verifiable, vague aggregate citat
     expect(ld, path).not.toMatch(vague)
   }
 })
+
+test('ferret fix AI1: llms.txt lists the money reviews and every linked path resolves', async ({ request }) => {
+  const t = await (await request.get('/llms.txt')).text()
+  for (const p of ['/reviews/best-ferret-cage', '/reviews/best-ferret-litter', '/reviews/best-ferret-harness', '/diet/best-ferret-kibble', '/how-we-pick']) expect(t).toContain(p)
+  for (const m of t.matchAll(/\]\(https:\/\/ferret\.com(\/[^)]*)\)/g)) expect((await request.get(m[1])).status(), m[1]).toBe(200)
+})
