@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, ReviewCard, CrossPortfolioCard, PrimaryHop, ComparisonFoot, LastUpdated } from '@carloOS/ui'
+import { buildMetadata, FAQAccordion, CalloutBox, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, ReviewCard, CrossPortfolioCard, PrimaryHop, ComparisonFoot, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -21,7 +21,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-10-12T00:00:00Z',
+  modifiedAt: '2026-10-13T00:00:00Z',
 })
 
 const med = buildMedicalWebPageSchema({
@@ -33,6 +33,20 @@ const med = buildMedicalWebPageSchema({
   lastReviewed: '2026-06-01',
 })
 const combined = combineSchemas(schema, med)
+const FAQS = [
+  {
+    "question": "Should a ferret drink from a bowl or a bottle?",
+    "answer": "Either can work. Lafeber's care sheet says to provide water in a heavy ceramic crock or a water bottle at a height the ferret can reach comfortably, and the Merck Veterinary Manual notes that ferrets often tip over bowls, so use sturdy containers or ones that attach to the cage."
+  },
+  {
+    "question": "How often should I clean a ferret's water bottle?",
+    "answer": "Lafeber advises rinsing water bottles daily and cleaning them regularly."
+  },
+  {
+    "question": "Why are ferrets prone to dehydration?",
+    "answer": "The Merck Veterinary Manual says ferrets are sensitive to heat and humidity because they have no sweat glands, and that they easily overheat and become dehydrated. Food and fresh water should be available at all times."
+  }
+]
 
 export default function HydrationAndWaterPage() {
   return (
@@ -97,10 +111,14 @@ export default function HydrationAndWaterPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-01"
+            updatedAt="2026-10-13"
             reviewedBy="Editorial team"
           />
-          <LastUpdated date="2026-10-12" />
+          <LastUpdated date="2026-10-13" />
+
+          <CalloutBox variant="info" title="Short answer">
+            <p>Keep clean, fresh water available at all times, in a heavy ceramic crock or a water bottle placed at a height your ferret can reach comfortably. Rinse bottles daily and clean them regularly. Ferrets often tip bowls, so use sturdy containers or ones that attach to the cage. Ferrets have no sweat glands and overheat and become dehydrated easily, so water matters most in warm weather. Source: <a href="https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf">Lafeber Care of the Pet Ferret</a>.</p>
+          </CalloutBox>
 
           <h2 id="bowl-bottle">Bowl vs Bottle</h2>
           <p>
@@ -138,7 +156,7 @@ export default function HydrationAndWaterPage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-12" />
+          <ComparisonFoot updated="2026-10-13" />
           <h2>Who should use which</h2>
           <p>Use a heavy bowl as the water they lap from. Keep a sipper bottle only as a backup, and check that it dispenses. Do not leave a bottle as the only source.</p>
 
@@ -221,7 +239,14 @@ export default function HydrationAndWaterPage() {
             ctaAffiliateProduct="small-animal-water-bottle"
           />
 
+          <h2 id="faq">Frequently asked questions</h2>
+          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
+
           <h2 id="sources">Sources</h2>
+          <ul>
+            <li><a href="https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf">Lafeber Company, Care of the Pet Ferret (PDF)</a></li>
+            <li><a href="https://www.merckvetmanual.com/all-other-pets/ferrets/providing-a-home-for-a-ferret">Merck Veterinary Manual: Providing a Home for a Ferret</a></li>
+          </ul>
           <p>
             Hydration, heat-stress vulnerability, and dietary-moisture considerations are covered in Quesenberry KE and Carpenter JW (eds.), <em>Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery</em> (Saunders/Elsevier), and Carpenter JW, <em>Exotic Animal Formulary</em>. Dehydration assessment reflects standard small-mammal clinical references. Locate primary publications by title.
           </p>
