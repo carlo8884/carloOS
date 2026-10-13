@@ -1027,3 +1027,10 @@ test('vets fix BR1: breed percentages match fetched sources', async ({ page }) =
   await expect(page.locator('.carloOS-article').first()).not.toContainText('23% of pet Labs')
   await expect(page.locator('a[href="https://pubmed.ncbi.nlm.nih.gov/27157046/"]').first()).toBeAttached()
 })
+
+test('vets fix BR3: Pomeranian periodontal claim matches Merck', async ({ page }) => {
+  await page.goto('/breeds/pomeranian-health', { waitUntil: 'domcontentloaded' })
+  await expect(page.locator('body')).not.toContainText('By age 3, the majority of toy-breed dogs')
+  await expect(page.locator('body')).toContainText('up to 80% of dogs have some level of periodontal disease by age 2')
+  await expect(page.locator('a[href="https://www.merckvetmanual.com/digestive-system/dentistry-in-small-animals/periodontal-disease-in-small-animals"]').first()).toBeAttached()
+})
