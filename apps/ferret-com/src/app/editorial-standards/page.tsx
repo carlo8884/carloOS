@@ -17,7 +17,7 @@ const breadcrumbSchema = buildBreadcrumbSchema({
 })
 
 export default function EditorialStandardsPage() {
-  const lastUpdated = 'June 2026'
+  const lastUpdated = 'October 13, 2026'
   return (
     <div className="px-container-sm sm:px-container py-16 max-w-content mx-auto">
       <SchemaScript schema={breadcrumbSchema} />
@@ -35,7 +35,7 @@ export default function EditorialStandardsPage() {
 
       <h2>Sources We Cite</h2>
       <p>Primary sources first. We prefer peer-reviewed veterinary literature, regulatory bodies (FDA CVM, AAFCO, state veterinary boards), recognized professional associations (AVMA, AAHA, WSAVA, AAEP, AEMV), breed and species clubs with documented health programs, and original manufacturer disclosures. Secondary sources are used only as pointers to the primary source.</p>
-      <p>Our ferret husbandry and health content is grounded in the exotic-mammal veterinary literature — principally Quesenberry &amp; Carpenter, <em>Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery</em>; the <em>Journal of Exotic Pet Medicine</em>; and <em>Veterinary Clinics of North America: Exotic Animal Practice</em> — alongside the American Ferret Association (AFA) and the Association of Exotic Mammal Veterinarians (AEMV). Ferret.com publishes general reference, not individualized veterinary advice; work with an exotic-pet vet for clinical decisions.</p>
+      <p>Our ferret pages cite sources we have fetched and checked, chiefly the Merck Veterinary Manual, VCA Animal Hospitals and the Lafeber ferret care handout, linked on each page. Some pages also list background reading we have not checked against that page, such as Quesenberry &amp; Carpenter, <em>Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery</em>; the <em>Journal of Exotic Pet Medicine</em>; <em>Veterinary Clinics of North America: Exotic Animal Practice</em>; the American Ferret Association (AFA); and the Association of Exotic Mammal Veterinarians (AEMV). Those entries are labelled &ldquo;general reference; not checked against this page.&rdquo; Ferret.com publishes general reference, not individualized veterinary advice; work with an exotic-pet vet for clinical decisions.</p>
 
       <h2>Authorship</h2>
       <p>Articles are bylined by the Ferret.com editorial team. There is no veterinarian reviewer. We do not invent clinical credentials. “Editorial team” is the attribution on these pages.</p>
