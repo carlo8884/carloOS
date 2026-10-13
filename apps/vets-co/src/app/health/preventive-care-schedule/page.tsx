@@ -9,6 +9,7 @@ const SOURCES = [
   { label: 'Companion Animal Parasite Council: Ascarid (roundworm) guidelines', url: 'https://capcvet.org/guidelines/ascarid/', publisher: 'CAPC' },
   { label: 'AAHA: Canine Vaccination Guidelines', url: 'https://www.aaha.org/aaha-guidelines/vaccination-canine-configuration/', publisher: 'AAHA' },
   { label: 'WSAVA: Vaccination Guidelines for Dogs and Cats', url: 'https://wsava.org/global-guidelines/vaccination-guidelines/', publisher: 'WSAVA' },
+  { label: 'AAHA: 2023 Senior Care Guidelines for Dogs and Cats', url: 'https://www.aaha.org/wp-content/uploads/globalassets/02-guidelines/2023-aaha-senior-care-guidelines-for-dogs-and-cats/resources/2023-aaha-senior-care-guidelines-for-dogs-and-cats.pdf', publisher: 'AAHA' },
   { label: 'Companion Animal Parasite Council: Guidelines', url: 'https://capcvet.org/guidelines/', publisher: 'CAPC' },
   { label: 'American Heartworm Society: Prevention Guidelines', url: 'https://www.heartwormsociety.org/veterinary-resources/american-heartworm-society-guidelines', publisher: 'American Heartworm Society' },
 ]
@@ -32,7 +33,7 @@ const FAQS = [
   },
   {
     "question": "How often should my dog have a fecal test?",
-    "answer": "The Companion Animal Parasite Council (CAPC) recommends testing for intestinal parasites at least four times in a puppy's first year and at least two times per year in adult dogs, depending on health and lifestyle."
+    "answer": "Sources differ. The Companion Animal Parasite Council (CAPC) recommends testing at least four times in a puppy's first year and at least two times per year in adult dogs, depending on health and lifestyle. The Merck Veterinary Manual's dog-owner guide describes a fecal test once a year, and AAHA's 2023 senior care guidelines suggest 1 to 4 times a year for senior dogs depending on preventive use and lifestyle. Ask your veterinarian which fits your dog."
   }
 ]
 export default function PreventiveCareSchedulePage() {
@@ -109,7 +110,9 @@ export default function PreventiveCareSchedulePage() {
               <tbody>
                 {[
                   ['Every 6 months', 'Comprehensive physical exam · Weight and BCS · Pain and mobility assessment · Cognitive function screening · Dental evaluation'],
-                  ['Annually', 'CBC + comprehensive chemistry + urinalysis (including SDMA for early kidney disease) · T4 (thyroid) · Blood pressure measurement · Heartworm test · Fecal exam'],
+                  ['Every 6–12 months (AAHA)', 'CBC + comprehensive chemistry + urinalysis (including SDMA for early kidney disease)'],
+                  ['Annually', 'T4 (thyroid) · Blood pressure measurement · Heartworm test'],
+                  ['1–4 times a year (AAHA)', 'Fecal exam, depending on preventive use and lifestyle'],
                   ['From age 7 (large breeds)', 'Abdominal ultrasound annually (splenic hemangiosarcoma screening for Golden Retrievers, Labs, GSDs) · Thoracic radiographs annually from age 8'],
                   ['Cardiac breeds', 'Cavalier King Charles — cardiologist evaluation annually · Boxers — annual 24-hr Holter monitor · Dobermans — annual echo + Holter'],
                 ].map(([freq, items]) => (
