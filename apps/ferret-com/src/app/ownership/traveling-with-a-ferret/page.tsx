@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, CalloutBox, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, CalloutBox, ShopCtas, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -21,7 +21,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-10-13T00:00:00Z',
 })
 
 const med = buildMedicalWebPageSchema({
@@ -33,6 +33,24 @@ const med = buildMedicalWebPageSchema({
   lastReviewed: '2026-06-01',
 })
 const combined = combineSchemas(schema, med)
+
+const FAQS = [
+  {
+    question: 'What kind of carrier does a ferret need?',
+    answer:
+      'The Merck Veterinary Manual says a plastic cat carrier is sufficient for taking a ferret to the veterinarian. Choose one with a secure latch and ventilation, and belt it in or wedge it on the floor so it cannot slide.',
+  },
+  {
+    question: 'What temperature should the car be for a ferret?',
+    answer:
+      'Merck gives 65°F to 75°F (18°C to 23°C) as usually comfortable for ferrets, and notes they handle cold better than heat. Keep the cabin in that range and the carrier out of direct sun.',
+  },
+  {
+    question: 'Can I leave a ferret in a parked car for a few minutes?',
+    answer:
+      'No. Merck notes ferrets are highly susceptible to heatstroke because they cannot sweat. A parked car heats up quickly, so take the ferret with you or leave it at home.',
+  },
+]
 
 export default function TravelingWithAFerretPage() {
   return (
@@ -64,6 +82,7 @@ export default function TravelingWithAFerretPage() {
                 { label: 'Car Travel', href: '#car' },
                 { label: 'Air Travel & Legality', href: '#air' },
                 { label: 'When to Leave Them Home', href: '#home' },
+                { label: 'FAQ', href: '#faq' },
                 { label: 'Sources', href: '#sources' },
               ]}
             />
@@ -91,9 +110,14 @@ export default function TravelingWithAFerretPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-01"
+            updatedAt="2026-10-13"
             reviewedBy="Editorial team"
           />
+          <CalloutBox variant="info" title="Short answer">
+            <p>
+              Use a secure, ventilated carrier (a plastic cat carrier is sufficient, per the <a href="https://www.merckvetmanual.com/all-other-pets/ferrets/routine-health-care-for-ferrets">Merck Veterinary Manual</a>), keep the car at about 65°F to 75°F (<a href="https://www.merckvetmanual.com/all-other-pets/ferrets/providing-a-home-for-a-ferret">Merck</a>), and never leave a ferret in a parked car: ferrets cannot sweat and are highly susceptible to heatstroke (<a href="https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/management-of-ferrets">Merck</a>).
+            </p>
+          </CalloutBox>
 
           <h2 id="decide">Before You Decide to Travel</h2>
           <p>
@@ -196,7 +220,15 @@ export default function TravelingWithAFerretPage() {
           </div>
           </div>
 
+          <h2 id="faq">Frequently Asked Questions</h2>
+          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
+
           <h2 id="sources">Sources</h2>
+          <ul>
+            <li><a href="https://www.merckvetmanual.com/all-other-pets/ferrets/routine-health-care-for-ferrets">Merck Veterinary Manual: Routine Health Care for Ferrets</a></li>
+            <li><a href="https://www.merckvetmanual.com/all-other-pets/ferrets/providing-a-home-for-a-ferret">Merck Veterinary Manual: Providing a Home for a Ferret</a></li>
+            <li><a href="https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/management-of-ferrets">Merck Veterinary Manual: Management of Ferrets</a></li>
+          </ul>
           <p>
             Ferret heat sensitivity and thermoregulation, along with general
             husbandry and stress considerations, are documented in Quesenberry KE
