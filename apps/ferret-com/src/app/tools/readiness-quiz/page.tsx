@@ -160,6 +160,18 @@ export default function ReadinessQuizPage() {
 
       <section className="bg-brand-surface px-container-sm sm:px-container py-section">
         <div className="max-w-2xl mb-8">
+          <div className="rounded-lg border-l-4 border-brand-primary bg-brand-white p-5 mb-6" data-testid="short-answer">
+            <h2 className="font-display text-lg font-bold mb-2">The short answer</h2>
+            <p className="text-base leading-relaxed text-brand-text-mid m-0">
+              A ferret is right for you if you can commit for the long term (ferrets live an average of 6 to 8 years,
+              per <a href="https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf">Lafeber&apos;s Care of the Ferret</a>),
+              have a vet who knows ferrets nearby plus an after-hours clinic that treats them
+              (<a href="https://www.merckvetmanual.com/all-other-pets/ferrets/routine-health-care-for-ferrets">Merck</a>),
+              and can provide secure housing for the times your ferret is alone or unsupervised
+              (<a href="https://www.merckvetmanual.com/all-other-pets/ferrets/providing-a-home-for-a-ferret">Merck</a>).
+              Check that ferrets are allowed where you live before you start. The quiz below works through each factor.
+            </p>
+          </div>
           <p className="text-base leading-relaxed text-brand-text-mid">
             Ferret ownership suits a specific kind of household: one with daily time for supervised
             out-of-cage play, a housing situation that allows the animal, access to an exotic-animal
