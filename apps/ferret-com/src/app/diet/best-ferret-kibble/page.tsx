@@ -24,7 +24,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-10-12T00:00:00Z',
+  modifiedAt: '2026-10-13T00:00:00Z',
 })
 
 const med = buildMedicalWebPageSchema({
@@ -168,10 +168,10 @@ export default function BestFerretKibblePage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-11"
+            updatedAt="2026-10-13"
             reviewedBy="Editorial team"
           />
-          <LastUpdated date="2026-10-12" />
+          <LastUpdated date="2026-10-13" />
           <EmailCapture
             variant="inline"
             siteId="ferret-com"
@@ -310,10 +310,6 @@ export default function BestFerretKibblePage() {
             cons={['Carbohydrate is not on the guaranteed analysis. Check the label.', 'Check the ingredient list on the current bag']}
             price="$15–25 / 4 lb"
             priceNote="dated 2026-10-04."
-            ctaText="Find Marshall Premium Ferret Diet"
-            ctaHref="/go/marshall/premium-ferret-diet?s=diet-best-ferret-kibble"
-            ctaAffiliateProgram="marshall"
-            ctaAffiliateProduct="premium-ferret-diet"
           />
           <ReviewCard quietUntilTag
             id="carniwhole"
@@ -355,7 +351,7 @@ export default function BestFerretKibblePage() {
                 </tr>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 text-brand-text-mid">A ferret-specific bag you can find in chain retail</td>
-                  <td className="p-3 font-bold text-brand-dark"><a href="#marshall-premium-diet" className="text-brand-primary">Marshall Premium</a><TableShopLink quietUntilTag href={"/go/marshall/premium-ferret-diet?s=diet-best-ferret-kibble"} product={"Marshall Premium"} /></td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#marshall-premium-diet" className="text-brand-primary">Marshall Premium</a></td>
                   <td className="p-3 text-brand-text-mid">Mid Tier. Crude protein min. 38%, crude fat min. 18%, as printed. Carbohydrate is not on the guaranteed analysis. $15–25 / 4 lb</td>
                   <td className="p-3 text-brand-text-mid">Insulinoma risk is the priority. Neither guaranteed analysis prints carbohydrate. Check both labels</td>
                 </tr>
@@ -368,7 +364,7 @@ export default function BestFerretKibblePage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-12" />
+          <ComparisonFoot updated="2026-10-13" />
 
           <p>Wysong and Marshall, the two kibbles on this page, are compared in the <Link href="/reviews/wysong-vs-marshall-kibble-guide">Wysong versus Marshall guide</Link>. Wysong and Carniwhole are set side by side in the <Link href="/reviews/wysong-vs-carniwhole-guide">Wysong versus Carniwhole guide</Link>.</p>
           <h2 id="faq">FAQ</h2>

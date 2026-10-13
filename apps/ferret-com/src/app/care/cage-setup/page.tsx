@@ -41,7 +41,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-05-28T00:00:00Z',
-  modifiedAt: '2026-06-11T00:00:00Z',
+  modifiedAt: '2026-10-13T00:00:00Z',
 
   citation: SOURCES,
 })
@@ -163,7 +163,7 @@ export default function FerretCageSetupPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-05-28"
-            updatedAt="2026-06-11"
+            updatedAt="2026-10-13"
             reviewedBy="Editorial team"
           />
 
@@ -300,10 +300,6 @@ export default function FerretCageSetupPage() {
             cons={['Outgrown by a two-ferret household', 'Smaller pan area than Critter Nation', 'Plastic shelf wear in heavy-use households']}
             price="see current price"
             priceNote="dated 2026-05-31."
-            ctaText="Find Marshall ferret cages"
-            ctaHref="/go/marshall/ferret+cage?s=care-cage-setup"
-            ctaAffiliateProgram="marshall"
-            ctaAffiliateProduct="ferret+cage"
           />
 
           <h2 id="bedding-picks">Bedding Picks</h2>
@@ -322,10 +318,6 @@ export default function FerretCageSetupPage() {
             cons={['Fleece thins over time', 'Some ferrets chew the fabric']}
             price="see current price"
             priceNote="dated 2026-05-31."
-            ctaText="Find Marshall hammocks & sacks"
-            ctaHref="/go/marshall/ferret+hammock?s=care-cage-setup"
-            ctaAffiliateProgram="marshall"
-            ctaAffiliateProduct="ferret+hammock"
           />
           <ReviewCard quietUntilTag
             id="kaytee-litter-pan"
