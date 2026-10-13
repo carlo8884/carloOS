@@ -31,6 +31,11 @@ export const metadata: Metadata = buildMetadata({
 
 const SOURCES = [
   {
+    label: "Special Considerations for Ferrets (Biting)",
+    url: "https://www.msdvetmanual.com/all-other-pets/ferrets/special-considerations-for-ferrets",
+    publisher: "MSD Veterinary Manual",
+  },
+  {
     label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — ferret behaviour, social dynamics, and disease chapters",
     publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
   },
@@ -58,7 +63,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-10-13T00:00:00Z',
 
   citation: SOURCES,
 })
@@ -147,8 +152,14 @@ export default function FerretPlayAggressionPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-01"
+            updatedAt="2026-10-13"
           />
+
+          <CalloutBox variant="info" title="Short answer">
+            <p>
+              Usually it is play. The <a href="https://www.msdvetmanual.com/all-other-pets/ferrets/special-considerations-for-ferrets">MSD Veterinary Manual</a> notes that biting is part of natural ferret behavior, that ferrets bite as part of play, and that they play with people in the same rough manner they play with each other, recommending a brief time-out after a nip. Our rule of thumb for two ferrets: if both keep coming back for more and no one screams continuously or draws blood, let them play.
+            </p>
+          </CalloutBox>
 
           <DropCap>
             The first time you watch two bonded ferrets play, you may be
