@@ -969,3 +969,14 @@ test('vets fix AF9: senior care page leads with a sourced short answer and FAQ s
   const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
   expect(ld).toContain('"FAQPage"')
 })
+
+test('vets fix CD1: dog dementia prevalence matches the cited Neilson 2001 abstract', async ({ page }) => {
+  for (const path of ['/health/cognitive-dysfunction', '/health/senior-pet-care']) {
+    await page.goto(path, { waitUntil: 'domcontentloaded' })
+    const body = page.locator('body')
+    await expect(body, path).toContainText('68% of dogs aged 15–16')
+    await expect(body, path).not.toContainText('22% of dogs')
+    await expect(body, path).not.toContainText('Madari')
+    await expect(page.locator('a[href="https://pubmed.ncbi.nlm.nih.gov/11394831/"]').first(), path).toBeAttached()
+  }
+})
