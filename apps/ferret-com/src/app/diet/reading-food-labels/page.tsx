@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, CalloutBox, ReviewCard, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, CalloutBox, ReviewCard, CrossPortfolioCard, ShopCtas, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -21,7 +21,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-10-13T00:00:00Z',
 })
 
 const med = buildMedicalWebPageSchema({
@@ -33,6 +33,24 @@ const med = buildMedicalWebPageSchema({
   lastReviewed: '2026-06-01',
 })
 const combined = combineSchemas(schema, med)
+
+const FAQS = [
+  {
+    question: 'What protein and fat should a ferret food have?',
+    answer:
+      'Lafeber Company\u2019s ferret care sheet says ferrets need a diet rich in animal protein (30% to 40%) and fat (15% to 20%) with small amounts of fiber (about 2%). The Merck Veterinary Manual gives 35% to 40% protein.',
+  },
+  {
+    question: 'Why compare foods on a dry-matter basis?',
+    answer:
+      'The guaranteed analysis is printed as-fed, including water. Dividing each nutrient by the dry fraction (100 minus moisture) lets you compare a kibble with a wet food fairly.',
+  },
+  {
+    question: 'Should a ferret food be low in carbohydrate and fiber?',
+    answer:
+      'Yes. Merck says ferrets need diets low in carbohydrate, moderate in fat and high in protein, and Lafeber notes ferrets cannot digest fiber, so it should never be an important part of the diet.',
+  },
+]
 
 export default function ReadingFoodLabelsPage() {
   return (
@@ -73,6 +91,7 @@ export default function ReadingFoodLabelsPage() {
                 { label: 'Carbohydrate by Difference', href: '#carbs' },
                 { label: 'Red-Flag Ingredients', href: '#red-flags' },
                 { label: 'A Clean-Panel Example', href: '#picks' },
+                { label: 'FAQ', href: '#faq' },
                 { label: 'Sources', href: '#sources' },
               ]}
             />
@@ -102,9 +121,14 @@ export default function ReadingFoodLabelsPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-01"
+            updatedAt="2026-10-13"
             reviewedBy="Editorial team"
           />
+          <CalloutBox variant="info" title="Short answer">
+            <p>
+              Look for named animal protein first on the ingredient list, then convert the guaranteed analysis to dry matter. Ferrets need a diet rich in animal protein (30% to 40%) and fat (15% to 20%) with about 2% fiber (<a href="https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf">Lafeber</a>), low in carbohydrate (<a href="https://www.merckvetmanual.com/all-other-pets/ferrets/providing-a-home-for-a-ferret">Merck Veterinary Manual</a>).
+            </p>
+          </CalloutBox>
 
           <h2 id="why">Why the Label Matters</h2>
           <p>
@@ -193,10 +217,10 @@ export default function ReadingFoodLabelsPage() {
           <p>
             Pet-food labels almost never list carbohydrate, but you can estimate
             it. Add the percentages for protein, fat, fiber, moisture, and ash
-            (ash is roughly 6-8% if not listed), then subtract the total from 100.
+            (if ash is not listed, ask the manufacturer for it), then subtract the total from 100.
             What remains is the carbohydrate by difference. For an obligate
-            carnivore you want this number low — ferret diets aim for carbohydrate
-            well under 10% on a dry-matter basis, and lower is better. A high
+            carnivore you want this number low — the Merck Veterinary Manual says ferrets
+            require diets low in carbohydrate, so lower is better. A high
             estimated carbohydrate is one of the clearest signals that a food was
             built around grain rather than meat.
           </p>
@@ -256,7 +280,15 @@ export default function ReadingFoodLabelsPage() {
           />
           <p>If the other bag in the aisle is Marshall Premium, the <a href="/reviews/wysong-vs-marshall-kibble-guide">Wysong versus Marshall guide</a> prints both guaranteed analyses. Carbohydrate is not on either label. Skip Marshall when insulinoma risk is why you are choosing a food.</p>
 
+          <h2 id="faq">Frequently Asked Questions</h2>
+          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
+
           <h2 id="sources">Sources</h2>
+          <ul>
+            <li><a href="https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf">Lafeber Company: Care of the Ferret (2020)</a></li>
+            <li><a href="https://www.merckvetmanual.com/all-other-pets/ferrets/providing-a-home-for-a-ferret">Merck Veterinary Manual: Providing a Home for a Ferret</a></li>
+            <li><a href="https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/management-of-ferrets">Merck Veterinary Manual: Management of Ferrets</a></li>
+          </ul>
           <p>
             Ferret macronutrient targets, the dry-matter conversion, and the
             carbohydrate-by-difference method are drawn from Quesenberry KE and

@@ -741,3 +741,13 @@ test('ferret fix OG1: og:image renders a real 1200x630 PNG', async ({ page, requ
   expect(body.readUInt32BE(16)).toBe(1200)
   expect(body.readUInt32BE(20)).toBe(630)
 })
+
+test('ferret fix FA2: food-label page leads with a Lafeber/Merck short answer and FAQ schema', async ({ page }) => {
+  await page.goto('/diet/reading-food-labels', { waitUntil: 'domcontentloaded' })
+  await expect(page.locator('.carloOS-article').filter({ hasText: 'Short answer' }).first()).toContainText('30% to 40%')
+  await expect(page.locator('a[href="https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf"]').first()).toBeAttached()
+  await expect(page.locator('body')).not.toContainText('ash is roughly 6-8%')
+  await expect(page.getByText('What protein and fat should a ferret food have?').first()).toBeVisible()
+  const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
+  expect(ld).toContain('"FAQPage"')
+})
