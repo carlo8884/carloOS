@@ -631,3 +631,13 @@ test('ferret fix TS1: money review sources are verifiable, vague aggregate citat
     expect(ld, path).not.toMatch(vague)
   }
 })
+
+test('ferret fix TS2: cage size and wood-litter claims are sourced, unsourced phenol and floor-space lines gone', async ({ page }) => {
+  await page.goto('/reviews/best-ferret-cage', { waitUntil: 'domcontentloaded' })
+  await expect(page.locator('body')).not.toContainText(/two feet by three feet|common community guideline/)
+  await expect(page.getByText(/24 x 24 x 18 inches/).first()).toBeAttached()
+  await page.goto('/reviews/best-ferret-litter', { waitUntil: 'domcontentloaded' })
+  await expect(page.locator('body')).not.toContainText(/phenol/i)
+  await expect(page.locator('h2#phenols')).toHaveText('Pine & Cedar Shavings')
+  for (const href of ['https://www.merckvetmanual.com/all-other-pets/ferrets/providing-a-home-for-a-ferret', 'https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/management-of-ferrets']) await expect(page.locator(`h2#phenols + p a[href="${href}"]`)).toHaveCount(1)
+})

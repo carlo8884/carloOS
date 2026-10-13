@@ -5,10 +5,10 @@ import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaSc
 import { ArticleByline, CalloutBox, DropCap, PullQuote, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Cushing's Disease in Dogs — PUPD, Pot Belly | Vets.co", description: "Cushing's disease (hyperadrenocorticism) causes a classic PUPD-pot belly-panting presentation. PDH vs adrenal tumor, LDDS test, and trilostane management.", path: '/health/cushing-disease-dogs', type: 'article' })
 const SOURCES = [
-  { label: 'Behrend EN et al. Diagnosis of Spontaneous Canine Hyperadrenocorticism: 2012 ACVIM Consensus Statement. J Vet Intern Med. 2013;27(6):1292-1304.', publisher: 'ACVIM / JVIM' },
+  { label: 'Behrend EN et al. Diagnosis of Spontaneous Canine Hyperadrenocorticism: 2012 ACVIM Consensus Statement. J Vet Intern Med. 2013;27(6):1292-1304.', url: 'https://doi.org/10.1111/jvim.12192', publisher: 'ACVIM / JVIM' },
   { label: 'Feldman EC, Nelson RW. Canine hyperadrenocorticism. In: Canine and Feline Endocrinology and Reproduction. 3rd ed. Saunders, 2004.', publisher: 'Saunders' },
   { label: 'Merck Veterinary Manual: Hyperadrenocorticism in Animals', url: 'https://www.merckvetmanual.com/endocrine-system/the-adrenal-glands/cushing-syndrome-hyperadrenocorticism-in-animals', publisher: 'Merck Vet Manual' },
-  { label: 'Ramsey IK. Trilostane in dogs. Vet Clin North Am Small Anim Pract. 2010;40(2):269-283.', publisher: 'Vet Clin North Am' },
+  { label: 'Ramsey IK. Trilostane in dogs. Vet Clin North Am Small Anim Pract. 2010;40(2):269-283.', url: 'https://doi.org/10.1016/j.cvsm.2009.10.008', publisher: 'Vet Clin North Am' },
 ]
 const schema = buildArticleSchema({ siteId: 'vets-co', title: "Cushing's Disease in Dogs", description: "PDH vs adrenal tumor, LDDS testing, and trilostane treatment for canine hyperadrenocorticism.", url: 'https://vets.co/health/cushing-disease-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-12T00:00:00Z' ,
   citation: SOURCES,
