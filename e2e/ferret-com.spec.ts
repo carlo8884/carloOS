@@ -902,6 +902,17 @@ test('ferret fix PA1: play-aggression page answers first and cites the MSD Veter
   expect(ld).toContain('"FAQPage"')
 })
 
+test('ferret fix SK1: starter kit drops the rehoming claim and answers first from Merck', async ({ page }) => {
+  await page.goto('/ferret-starter-kit', { waitUntil: 'domcontentloaded' })
+  const body = page.locator('body')
+  await expect(body).not.toContainText('rehome within 90 days')
+  await expect(page.locator('article').filter({ hasText: 'Short answer' }).first()).toContainText('3 feet wide')
+  await expect(page.locator('a[href="https://www.merckvetmanual.com/all-other-pets/ferrets/providing-a-home-for-a-ferret"]').first()).toBeVisible()
+  const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
+  expect(ld.match(/"FAQPage"/g)?.length).toBe(1)
+  expect(ld).toContain('What size cage does a ferret need?')
+})
+
 test('ferret fix WY1: no page carries a /go/wysong href, even a held one', async ({ page }) => {
   for (const path of [
     '/care/diet-basics',
