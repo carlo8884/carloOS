@@ -1,7 +1,7 @@
 import { HopDisclosure } from '../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildArticleSchema, buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, ShopCtas, StockImage } from '@carloOS/ui'
+import { buildArticleSchema, buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, ShopCtas, StockImage, FAQAccordion, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -107,6 +107,12 @@ const articleSchema = buildArticleSchema({
 })
 const combinedSchema = combineSchemas(breadcrumbSchema, itemListSchema, articleSchema)
 
+const HUB_FAQS = [
+  { question: "Can these tools tell me if my ferret is sick?", answer: "No. The emergency checker and grimace scale help you decide how quickly to call a vet, but none of the tools replaces an exam. For trouble breathing, seizures, collapse, heavy bleeding or no food or water for 24 hours, go to a vet immediately (Merck Veterinary Manual)." },
+  { question: "What should a ferret food label show?", answer: "Ferrets are strict carnivores that need a diet rich in animal protein (30% to 40%) and fat (15% to 20%) with about 2% fiber (Lafeber Vet). Avoid foods high in plant protein, carbohydrate or sugar (Merck Veterinary Manual)." },
+  { question: "How long do ferrets live?", answer: "On average 6 to 8 years (Lafeber Vet), which is the range to keep in mind when using the age calculator." },
+]
+
 export default function ToolsHub() {
   return (
     <>
@@ -140,6 +146,16 @@ export default function ToolsHub() {
         <span className="text-brand-text-mid font-medium">Tools</span>
       </nav>
 
+      <div className="px-container-sm sm:px-container pt-8 max-w-4xl">
+        <LastUpdated date="2026-10-13" />
+        <div className="rounded-lg border-l-4 border-brand-primary bg-brand-white p-5 mt-4" data-testid="short-answer">
+          <h2 className="font-display text-lg font-bold mb-2">The short answer</h2>
+          <p className="text-base leading-relaxed text-brand-text-mid m-0">
+            These free tools help with food labels, costs, cage setup and how fast to seek care; they don&apos;t diagnose. If your ferret has trouble breathing, heavy bleeding, a seizure, collapse, pale or blue gums, or hasn&apos;t eaten or drunk for 24 hours, go to a vet immediately instead of using a tool (<a href="https://www.merckvetmanual.com/multimedia/table/when-to-see-a-veterinarian" className="text-brand-primary hover:underline">Merck Veterinary Manual</a>). The food tools check labels against a ferret&apos;s needs as a strict carnivore: a diet rich in animal protein and fat with little fiber (<a href="https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf" className="text-brand-primary hover:underline">Lafeber Vet</a>).
+          </p>
+        </div>
+      </div>
+
       <div className="px-container-sm sm:px-container pt-8">
         <StockImage manifestKey="ferret-com:tools-hero" aspect="16:9" variant="wide" priority />
       </div>
@@ -171,6 +187,18 @@ export default function ToolsHub() {
               <p className="text-sm leading-relaxed text-brand-text-mid">{tool.desc}</p>
             </Link>
           ))}
+        </div>
+      </section>
+
+      <section className="px-container-sm sm:px-container py-10">
+        <div className="max-w-content-wide">
+          <h2 id="faq" className="font-display text-xl font-bold text-brand-dark mb-4">Ferret tools FAQ</h2>
+          <FAQAccordion items={HUB_FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
+          <ArticleSourcesList title="Sources" sources={[
+            { label: "When to See a Veterinarian (general guidance for pets)", url: "https://www.merckvetmanual.com/multimedia/table/when-to-see-a-veterinarian", publisher: "Merck Veterinary Manual" },
+            { label: "Providing a Home for a Ferret", url: "https://www.merckvetmanual.com/all-other-pets/ferrets/providing-a-home-for-a-ferret", publisher: "Merck Veterinary Manual" },
+            { label: "Care of the Pet Ferret (owner handout)", url: "https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf", publisher: "Lafeber Vet" },
+          ]} />
         </div>
       </section>
 
