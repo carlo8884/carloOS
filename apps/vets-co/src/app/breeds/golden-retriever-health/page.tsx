@@ -23,7 +23,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Vets.co Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
-  modifiedAt: '2026-10-07T00:00:00Z',
+  modifiedAt: '2026-10-13T00:00:00Z',
 })
 
 const medicalSchema = buildMedicalWebPageSchema({
@@ -38,7 +38,7 @@ const FAQS = [
   {
     question: 'How common is cancer in Golden Retrievers?',
     answer:
-      'More than 60% of Golden Retrievers will develop cancer in their lifetime. The two cancers that kill most Goldens are hemangiosarcoma and lymphoma. Neither is currently curable, but both can be managed more effectively with earlier detection, and treatment meaningfully extends quality life — which is why proactive monitoring is the primary medical responsibility of Golden ownership.',
+      'Cancer is the leading cause of death in Golden Retrievers: in a 1998 Golden Retriever Club of America survey, cancer caused 61% of the 420 deaths recorded (Golden Retriever Lifetime Study cohort profile, 2022). The two cancers that kill most Goldens are hemangiosarcoma and lymphoma. Neither is currently curable, but both can be managed more effectively with earlier detection, and treatment meaningfully extends quality life — which is why proactive monitoring is the primary medical responsibility of Golden ownership.',
   },
   {
     question: 'What cancer screening should a Golden Retriever have?',
@@ -53,7 +53,7 @@ const FAQS = [
   {
     question: 'How do I check my Golden Retriever for lymphoma at home?',
     answer:
-      'Learn to check the lymph nodes monthly — at the jaw, shoulders, groin, and behind the knees. Lymphoma is usually detectable before crisis, and firm bilateral swelling of multiple nodes warrants veterinary evaluation within the week, not the month. With chemotherapy (CHOP protocol), remission rates run 60–90%, with median survival of 12–14 months with treatment.',
+      'Learn to check the lymph nodes monthly — at the jaw, shoulders, groin, and behind the knees. Lymphoma is usually detectable before crisis, and firm bilateral swelling of multiple nodes warrants veterinary evaluation within the week, not the month. With combination chemotherapy (CHOP-based protocols), the Merck Veterinary Manual gives an initial response rate of 90% or more and median survival of about 12 months for B-cell lymphoma and 6–8 months for T-cell lymphoma.',
   },
   {
     question: 'Is pet insurance worth it for a Golden Retriever?',
@@ -107,10 +107,10 @@ export default function VetsGoldenRetrieverHealthPage() {
     >
       <div className="carloOS-article">
 
-        <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-09-06T00:00:00Z" reviewedBy="Editorial team" />
+        <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-10-13T00:00:00Z" reviewedBy="Editorial team" />
 
         <h2 id="cancer">The Cancer Reality — What I Tell Every New Golden Owner</h2>
-        <p>More than 60% of Golden Retrievers will develop cancer in their lifetime. I say this at every new Golden puppy appointment, because I want owners to understand from the beginning that proactive monitoring is not optional — it is the primary medical responsibility of Golden ownership.</p>
+        <p>Cancer is the leading cause of death in Golden Retrievers. In a 1998 Golden Retriever Club of America survey, cancer caused 61% of the 420 deaths recorded, and a necropsy study of 652 Goldens at a US veterinary teaching hospital found 65% cancer-related mortality; UK and Scandinavian studies found lower rates (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9182714/">Golden Retriever Lifetime Study cohort profile</a>). For lymphoma, CHOP-based chemotherapy has an initial response rate of 90% or more, with median survival of about 12 months for B-cell and 6–8 months for T-cell disease (<a href="https://www.merckvetmanual.com/circulatory-system/lymphoma-in-dogs/lymphoma-in-dogs">Merck Veterinary Manual</a>). I say this at every new Golden puppy appointment, because I want owners to understand from the beginning that proactive monitoring is not optional — it is the primary medical responsibility of Golden ownership.</p>
         <p>The two cancers that kill most Goldens are hemangiosarcoma and lymphoma. Both can be managed more effectively with earlier detection. Neither is currently curable, but treatment meaningfully extends quality life. And monitoring can catch them before the crisis presentation that brings owners in when options have narrowed significantly.</p>
 
         <BreedHealthCard
@@ -126,7 +126,7 @@ export default function VetsGoldenRetrieverHealthPage() {
         <BreedHealthCard
           name="Lymphoma"
           riskLevel="very-high"
-          description="Cancer of lymphocytes. Usually detectable before crisis — learn to check lymph nodes monthly. Firm bilateral swelling of multiple nodes warrants same-week evaluation. Chemotherapy (CHOP protocol) achieves 60–90% remission rates. Median survival 12–14 months with treatment."
+          description="Cancer of lymphocytes. Usually detectable before crisis — learn to check lymph nodes monthly. Firm bilateral swelling of multiple nodes warrants same-week evaluation. Combination chemotherapy (CHOP-based) has an initial response rate of 90% or more (Merck Veterinary Manual). Median survival is about 12 months for B-cell and 6–8 months for T-cell lymphoma."
           signs={['Enlarged lymph nodes (jaw, shoulders, groin, behind knees)', 'Weight loss', 'Lethargy', 'Decreased appetite']}
           management="Monthly lymph node check at home. Any firm bilateral swelling: evaluation within the week, not the month."
         />
