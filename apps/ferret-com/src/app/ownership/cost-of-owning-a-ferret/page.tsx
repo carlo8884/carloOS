@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, ShopCtas, CrossSiteHelp } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, ShopCtas, CrossSiteHelp, CalloutBox, FAQAccordion } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
@@ -22,7 +22,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-10-13T00:00:00Z',
 })
 
 const med = buildMedicalWebPageSchema({
@@ -35,6 +35,24 @@ const med = buildMedicalWebPageSchema({
 })
 const combined = combineSchemas(schema, med)
 
+const FAQS = [
+  {
+    question: 'What is the biggest cost of owning a ferret?',
+    answer:
+      'Veterinary care, especially later in life. Merck notes that tumors are commonly diagnosed in ferrets, and about half come from the endocrine and blood-forming systems, so diagnostics and treatment in the senior years usually outweigh food and litter.',
+  },
+  {
+    question: 'What routine vet costs should I plan for every year?',
+    answer:
+      'The Merck Veterinary Manual recommends a yearly examination and vaccinations for pet ferrets, including annual rabies and canine distemper vaccines. Lafeber suggests twice-yearly exams for ferrets 3 years or older.',
+  },
+  {
+    question: 'How many years should I budget for?',
+    answer:
+      'Lafeber gives an average lifespan of 6 to 8 years, so plan for care across that whole span, with the larger veterinary costs weighted toward the later years.',
+  },
+]
+
 export default function CostOfOwningAFerretPage() {
   return (
     <>
@@ -44,7 +62,7 @@ export default function CostOfOwningAFerretPage() {
         hero={{
           title: 'The Cost of Owning a Ferret',
           subtitle:
-            'Ferrets are inexpensive to acquire and deceptively expensive to keep well. The animal itself is the smallest line on the budget; the cage, the food, and above all the veterinary care over a 6–10 year life are what add up. This page lays out startup and recurring costs honestly, including the surgery line item that catches most owners by surprise.',
+            'Ferrets are inexpensive to acquire and deceptively expensive to keep well. The animal itself is the smallest line on the budget; the cage, the food, and above all the veterinary care over a 6 to 8 year life are what add up. This page lays out startup and recurring costs honestly, including the surgery line item that catches most owners by surprise.',
           category: 'Ownership & Lifestyle',
           authorName: 'Ferret.com Editorial',
           publishedAt: 'June 2026',
@@ -66,6 +84,7 @@ export default function CostOfOwningAFerretPage() {
                 { label: 'The Big One: Disease & Surgery', href: '#surgery' },
                 { label: 'Legality Before You Spend', href: '#legality' },
                 { label: 'Lifetime Total', href: '#lifetime' },
+                { label: 'FAQ', href: '#faq' },
                 { label: 'Sources', href: '#sources' },
               ]}
             />
@@ -93,9 +112,14 @@ export default function CostOfOwningAFerretPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-01"
+            updatedAt="2026-10-13"
             reviewedBy="Editorial team"
           />
+          <CalloutBox variant="info" title="Short answer">
+            <p>
+              The ferret itself is the smallest cost. Plan for a cage and supplies up front, modest food and litter costs, a yearly exam with rabies and distemper vaccines (<a href="https://www.merckvetmanual.com/all-other-pets/ferrets/routine-health-care-for-ferrets">Merck Veterinary Manual</a>), and larger veterinary bills in later years, since tumors are commonly diagnosed in ferrets (<a href="https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/neoplasia-of-ferrets">Merck</a>). Ferrets live an average of 6 to 8 years (<a href="https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf">Lafeber</a>). We do not print dollar figures because prices vary by region and clinic.
+            </p>
+          </CalloutBox>
 
           <h2 id="numbers">How to Read These Numbers</h2>
           <p>
@@ -112,7 +136,7 @@ export default function CostOfOwningAFerretPage() {
             <li><strong>Initial supplies</strong> — bedding and hammocks, litter boxes, food and water dishes, a carrier, litter, starter food, and enrichment/toys. Individually small, collectively meaningful.</li>
           </ul>
           <p>
-            A complete first-week setup, including the animal, generally represents a several-hundred-dollar commitment before any vet visit. The <a href="/ownership/first-week-checklist">first-week checklist</a> covers what actually needs buying up front versus what can wait.
+            A complete first-week setup, including the animal, is a real up-front commitment before any vet visit; price the cage and supplies locally, because costs vary by region and retailer. The <a href="/ownership/first-week-checklist">first-week checklist</a> covers what actually needs buying up front versus what can wait.
           </p>
 
           <h2 id="recurring">Recurring Monthly Costs</h2>
@@ -132,7 +156,7 @@ export default function CostOfOwningAFerretPage() {
 
           <h2 id="surgery">The Big One: Disease & Surgery</h2>
           <p>
-            This is the line item that turns ferret ownership from inexpensive to genuinely costly, and the one new owners most often overlook. Middle-aged and older ferrets have a high incidence of conditions that require diagnostics, ongoing medication, or surgery — insulinoma and adrenal disease above all, plus lymphoma and dental disease (see the <a href="/health">Health</a> hub). Diagnostic workups, hormone implants, surgical procedures, and long-term medical management can each run into hundreds or thousands of dollars. Many experienced owners treat a dedicated veterinary savings fund — or exotic-pet insurance where available — as a non-optional part of ferret ownership.             Planning for this is the difference between a hard situation and an impossible one.
+            This is the line item that turns ferret ownership from inexpensive to genuinely costly, and the one new owners most often overlook. Middle-aged and older ferrets have a high incidence of conditions that require diagnostics, ongoing medication, or surgery — insulinoma and adrenal disease above all, plus lymphoma and dental disease (see the <a href="/health">Health</a> hub). Diagnostic workups, hormone implants, surgical procedures, and long-term medical management can each be costly; ask a ferret-experienced veterinarian for local estimates before you need them. Many experienced owners treat a dedicated veterinary savings fund — or exotic-pet insurance where available — as a non-optional part of ferret ownership.             Planning for this is the difference between a hard situation and an impossible one.
           </p>
           <CrossSiteHelp
             href={crossSiteHref('vets-co', '/guides/emergency-vet-costs')}
@@ -151,7 +175,7 @@ export default function CostOfOwningAFerretPage() {
 
           <h2 id="lifetime">Lifetime Total</h2>
           <p>
-            Over a 6–10 year lifespan, the recurring food and litter costs are real but modest; the veterinary costs are what dominate the lifetime total, and they are heavily back-loaded into the senior years when chronic disease becomes likely. A useful mental model: the cheapest year of ferret ownership is usually the first healthy adult year, and the most expensive years are the last ones. Budget so that a senior ferret's medical needs are a planning question, not a crisis.
+            Over an average 6 to 8 year lifespan, the recurring food and litter costs are real but modest; the veterinary costs are what dominate the lifetime total, and they are heavily back-loaded into the senior years when chronic disease becomes likely. A useful mental model: the cheapest year of ferret ownership is usually the first healthy adult year, and the most expensive years are the last ones. Budget so that a senior ferret's medical needs are a planning question, not a crisis.
           </p>
 
           <div className="not-prose my-8 rounded-lg border border-brand-border bg-brand-primary-pale/30 p-6">
@@ -191,7 +215,15 @@ export default function CostOfOwningAFerretPage() {
           </div>
           </div>
 
+          <h2 id="faq">Frequently Asked Questions</h2>
+          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
+
           <h2 id="sources">Sources</h2>
+          <ul>
+            <li><a href="https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf">Lafeber Company: Care of the Ferret (2020)</a></li>
+            <li><a href="https://www.merckvetmanual.com/all-other-pets/ferrets/routine-health-care-for-ferrets">Merck Veterinary Manual: Routine Health Care for Ferrets</a></li>
+            <li><a href="https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/neoplasia-of-ferrets">Merck Veterinary Manual: Neoplasia of Ferrets</a></li>
+          </ul>
           <p>
             Disease incidence in middle-aged and older ferrets — insulinoma, adrenal disease, lymphoma, dental disease — is documented in Quesenberry KE and Carpenter JW (eds.), <em>Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery</em> (Saunders/Elsevier). Vaccination and routine-care expectations follow standard exotic-mammal veterinary practice. Cost figures are general planning ranges, not quotes, and vary by region and provider. Locate primary publications by title.
           </p>

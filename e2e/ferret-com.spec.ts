@@ -812,3 +812,15 @@ test('ferret fix FA6: adoption-vs-buying leads with a Lafeber/Merck short answer
   const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
   expect(ld).toContain('"FAQPage"')
 })
+
+test('ferret fix FA8: cost page drops unsourced dollar ranges, uses Lafeber lifespan, and has FAQ schema', async ({ page }) => {
+  await page.goto('/ownership/cost-of-owning-a-ferret', { waitUntil: 'domcontentloaded' })
+  const body = page.locator('body')
+  await expect(body).not.toContainText('several-hundred-dollar')
+  await expect(body).not.toContainText('hundreds or thousands of dollars')
+  await expect(body).not.toContainText('6–10 year')
+  await expect(page.locator('.carloOS-article').filter({ hasText: 'Short answer' }).first()).toContainText('6 to 8 years')
+  await expect(page.getByText('What is the biggest cost of owning a ferret?').first()).toBeVisible()
+  const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
+  expect(ld).toContain('"FAQPage"')
+})
