@@ -973,6 +973,14 @@ test('ferret fix TX1: generic textbook and journal citations are labelled as unc
   }
 })
 
+test('ferret fix TX3: health hub labels unchecked general references', async ({ page }) => {
+  await page.goto('/health', { waitUntil: 'domcontentloaded' })
+  const text = (await page.locator('main').innerText()).replace(/\s+/g, ' ')
+  expect(text).toMatch(/Clinical Medicine and Surgery\. \(general reference; not checked against this page\)/)
+  expect(text).toMatch(/Association of Exotic Mammal Veterinarians \(general reference; not checked against this page\)/)
+  expect(text).toContain('background reading we have not checked against this page')
+})
+
 test('ferret fix SK2: starter kit insurance box cites Merck and NAIC, no unsourced surgery cost', async ({ page }) => {
   await page.goto('/ferret-starter-kit', { waitUntil: 'domcontentloaded' })
   const box = page.locator('section', { hasText: 'Insurance Before Symptoms' })
