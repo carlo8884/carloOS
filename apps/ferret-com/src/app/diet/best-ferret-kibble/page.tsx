@@ -1,13 +1,8 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { HopDisclosure } from '../../../components/HopDisclosure'
-<<<<<<< HEAD
 import { TableShopLink, ComparisonFoot, EmailCapture, buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, QuickPicks, CrossPortfolioCard, ShopCtas, ArticleSourcesList, LastUpdated, CalloutBox } from '@carloOS/ui'
-import { buildArticleSchema, buildFAQSchema, buildItemListSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript, QuietPartnerLink} from '@carloOS/ui'
-=======
-import { TableShopLink, ComparisonFoot, EmailCapture, buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, QuickPicks, CrossPortfolioCard, ShopCtas, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, buildItemListSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript} from '@carloOS/ui'
->>>>>>> origin/main
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
