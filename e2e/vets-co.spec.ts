@@ -969,3 +969,12 @@ test('vets fix AF9: senior care page leads with a sourced short answer and FAQ s
   const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
   expect(ld).toContain('"FAQPage"')
 })
+
+test('vets fix AF11: pain management page leads with a sourced short answer and FAQ schema', async ({ page }) => {
+  await page.goto('/health/pain-management-dogs', { waitUntil: 'domcontentloaded' })
+  await expect(page.locator('.carloOS-article').filter({ hasText: 'Short answer' }).first()).toContainText('giving pain medicine regularly is usually best')
+  await expect(page.locator('a[href="https://www.merckvetmanual.com/special-pet-topics/pain-management/pain-treatment-in-animals"]').first()).toBeAttached()
+  await expect(page.getByText('Is it normal for my dog to sleep a lot after surgery?').first()).toBeVisible()
+  const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
+  expect(ld).toContain('"FAQPage"')
+})
