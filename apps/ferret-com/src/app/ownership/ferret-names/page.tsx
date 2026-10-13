@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, FAQAccordion, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -20,8 +20,15 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-10-13T00:00:00Z',
 })
+
+const FAQS = [
+  { question: 'How do I choose a name for my ferret?', answer: 'Pick a short name with a clear, distinct sound, usually one or two syllables, and use it consistently. Many owners spend a few days watching the ferret first, then choose a name that fits its personality or coat colour.' },
+  { question: 'Will my ferret learn its name?', answer: 'It varies. Many ferrets learn to recognise their name, especially when it is paired with a treat or playtime, but ferrets are independent and easily distracted, so expect a flick of attention rather than reliable recall.' },
+  { question: 'What are good names for a pair of ferrets?', answer: 'Pairing names suit ferrets kept in twos, for example Yin & Yang, Salt & Pepper, Mac & Cheese, Thelma & Louise, or Fred & George.' },
+  { question: 'What are good names for a white or albino ferret?', answer: 'Popular choices include Snowy, Casper, Marshmallow, Pearl, Ghost, Cotton and Blanco. For dark sable or black ferrets, try Shadow, Onyx, Smokey, Pepper, Bear, Sable or Midnight.' },
+]
 
 export default function FerretNamesPage() {
   return (
@@ -54,6 +61,7 @@ export default function FerretNamesPage() {
                 { label: 'Classic & Elegant Names', href: '#classic' },
                 { label: 'Do Ferrets Learn Their Names?', href: '#respond' },
                 { label: 'A Note on the Vocabulary', href: '#vocab' },
+                { label: 'FAQ', href: '#faq' },
               ]}
             />
             <RelatedLinks
@@ -80,9 +88,10 @@ export default function FerretNamesPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-01"
+            updatedAt="2026-10-13"
             reviewedBy="Editorial team"
           />
+          <LastUpdated date="2026-10-13" />
 
           <h2 id="how">How to Choose</h2>
           <p>
@@ -118,6 +127,9 @@ export default function FerretNamesPage() {
           <p>
             If you are new to ferrets, you will quickly encounter terms like <em>hob</em> (an intact male), <em>jill</em> (a female), and <em>kit</em> (a baby) — and you may find them turning up in name themes. The full glossary of ferret-keeping vocabulary, including the wonderful terms for a ferret's behaviors, is on the <a href="/ownership/ferret-glossary">ferret glossary</a> page.
           </p>
+
+          <h2 id="faq">FAQ</h2>
+          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
         </div>
       </ArticleLayout>
     </>

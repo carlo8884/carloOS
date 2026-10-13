@@ -1002,3 +1002,11 @@ test('ferret fix SK2: starter kit insurance box cites Merck and NAIC, no unsourc
   await expect(box.locator('a[href="https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/neoplasia-of-ferrets"]')).toBeVisible()
   await expect(box.locator('a[href="https://content.naic.org/insurance-topics/pet-insurance"]')).toBeVisible()
 })
+
+test('ferret fix FN1: ferret names page has a FAQ with FAQPage schema', async ({ page }) => {
+  await page.goto('/ownership/ferret-names', { waitUntil: 'domcontentloaded' })
+  await expect(page.locator('h2#faq')).toBeVisible()
+  await expect(page.getByText('Will my ferret learn its name?').first()).toBeVisible()
+  const ld = await page.locator('script[type="application/ld+json"]').allTextContents()
+  expect(ld.filter((t) => t.includes('"FAQPage"')).length).toBe(1)
+})
