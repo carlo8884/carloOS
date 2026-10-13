@@ -840,6 +840,16 @@ test('ferret fix KF1: kit-vs-adult feeding cites Apfelbach, VCA and Merck and dr
   expect(ld).toContain('"FAQPage"')
 })
 
+test('ferret fix SC1: can-ferrets-eat food pages emit Article and FAQPage schema', async ({ page }) => {
+  for (const path of ['/diet/can-ferrets-eat/chocolate', '/diet/can-ferrets-eat/chicken', '/diet/can-ferrets-eat/banana']) {
+    await page.goto(path, { waitUntil: 'domcontentloaded' })
+    const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
+    expect(ld, path).toContain('"Article"')
+    expect(ld.match(/"FAQPage"/g)?.length, path).toBe(1)
+    expect(ld, path).toContain('Can ferrets eat')
+  }
+})
+
 test('ferret fix LS1: lifespan page answers first with Lafeber 6 to 8 years', async ({ page }) => {
   await page.goto('/colors/ferret-lifespan', { waitUntil: 'domcontentloaded' })
   const body = page.locator('body')
