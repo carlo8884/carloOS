@@ -6,7 +6,7 @@ delay_after_signup: 56 days
 tag: first-year-schedule
 ---
 
-Insulinoma is the most common neoplasm reported in domestic ferrets. It is a functional tumor of the pancreatic beta cells that produces inappropriate insulin, causing chronic hypoglycemia. Most ferrets are diagnosed between ages 3 and 7 (Quesenberry &amp; Carpenter, *Ferrets, Rabbits, and Rodents*; *Veterinary Clinics of North America: Exotic Animal Practice*).
+Insulinoma is the most common neoplasm reported in domestic ferrets. It is a functional tumor of the pancreatic beta cells that produces inappropriate insulin, causing chronic hypoglycemia.
 
 You will not see insulinoma in the first year. What you build in the first year is the foundation that lets you catch it early when the watch window opens.
 
@@ -36,7 +36,7 @@ You will not see insulinoma in the first year. What you build in the first year 
 
 ---
 
-*Sources: Quesenberry &amp; Carpenter, Ferrets, Rabbits, and Rodents; Veterinary Clinics of North America: Exotic Animal Practice; Journal of Exotic Pet Medicine; Association of Exotic Mammal Veterinarians (AEMV) endocrine statements.*
+*Sources: Quesenberry &amp; Carpenter, Ferrets, Rabbits, and Rodents; Veterinary Clinics of North America: Exotic Animal Practice; Journal of Exotic Pet Medicine; Association of Exotic Mammal Veterinarians (AEMV) endocrine statements (general references; not checked against this email).*
 
 *This email is general reference. Diagnosis and treatment of insulinoma require an exotic-pet veterinarian working from clinical signs, bloodwork, and individual context.*
 

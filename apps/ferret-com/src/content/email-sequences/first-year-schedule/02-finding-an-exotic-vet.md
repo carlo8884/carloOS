@@ -33,6 +33,6 @@ The single most consequential first-year decision is which veterinarian sees you
 
 ---
 
-*Sources: Association of Exotic Mammal Veterinarians (AEMV); American College of Zoological Medicine (ACZM); American Ferret Association (AFA); Quesenberry &amp; Carpenter, Ferrets, Rabbits, and Rodents.*
+*Sources: Association of Exotic Mammal Veterinarians (AEMV); American College of Zoological Medicine (ACZM); American Ferret Association (AFA); Quesenberry &amp; Carpenter, Ferrets, Rabbits, and Rodents (general references; not checked against this email).*
 
 *Unsubscribe any time — link below.*

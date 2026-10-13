@@ -26,7 +26,7 @@ This is not a cat with a faster metabolism. It is a different species with mater
 
 ---
 
-**The published macros (Quesenberry & Carpenter; *Exotic Animal Formulary*)**
+**The published macros (Quesenberry & Carpenter; *Exotic Animal Formulary*; general references, not checked against this email)**
 
 - **Protein: 32–40% on a dry-matter basis**, primarily animal-sourced (chicken, turkey, lamb, fish meal). Plant proteins (corn gluten meal, soy protein, pea protein) are poorly utilised — a red flag on an ingredient panel.
 - **Fat: 18–22% on a dry-matter basis**, animal-sourced. Fat is the ferret's primary energy substrate.

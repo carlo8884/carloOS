@@ -1028,3 +1028,20 @@ test('ferret fix VP1: vet-visit prep drops unsourced cost ranges', async ({ page
   expect(text).toMatch(/ask the clinic for a written estimate/i)
   await expect(page.locator('h2#cost')).toHaveText('Costs: Ask for an Estimate')
 })
+
+test('ferret fix TX5: email sequences and food data label unchecked references', async () => {
+  const fs = await import('node:fs')
+  const path = await import('node:path')
+  const root = path.resolve(__dirname, '../apps/ferret-com/src')
+  const dirs = ['content/email-sequences/first-year-schedule', 'content/email-sequences/ferret-keeper']
+  const files = dirs.flatMap((d) => fs.readdirSync(path.join(root, d)).filter((f) => f.endsWith('.md')).map((f) => path.join(root, d, f)))
+  files.push(path.join(root, 'data/foods.ts'))
+  for (const file of files) {
+    for (const line of fs.readFileSync(file, 'utf8').split('\n')) {
+      if (/Quesenberry|Journal of Exotic Pet Medicine|Veterinary Clinics of North America/.test(line) && !line.trim().startsWith('*') && !line.trim().startsWith('//')) {
+        expect(line, file).toMatch(/not checked against this (email|entry)|have not been checked/)
+      }
+      if (/^\*Sources/.test(line)) expect(line, file).toContain('not checked against this email')
+    }
+  }
+})
