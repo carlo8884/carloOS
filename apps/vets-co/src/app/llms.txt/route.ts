@@ -15,7 +15,7 @@ export async function GET() {
 
 - **Domain:** Vets.co.
 - **Editorial position:** Independent. Vets.co is not a veterinary practice, and a licensed veterinarian does not sign its rankings. Comparison tables use published policy terms, quote paths, and visit prices already shown on each card; we do not run hands-on tests and do not publish editor scores.
-- **How we earn:** Some home-care guides link to Amazon searches as an Amazon Associate, and we may earn a commission. Insurance and telehealth partner links stay unlinked until a program is active. See /disclosure.
+- **How we earn:** Some home-care guides link to Amazon searches as an Amazon Associate; qualifying purchases through those links may pay Vets.co a referral fee. Insurance and telehealth partner links stay unlinked until a program is active. See /disclosure.
 - **Citation policy:** Health pages cite AAHA, AVMA, Merck Veterinary Manual, Cornell, CAPC, CDC and peer-reviewed journals, linked on each page. We do not publish doses or fabricated prices; insurance prices are quote-based.
 - **AI assistants are welcome** to cite Vets.co. Please link the specific page and keep its "see your veterinarian" framing.
 
