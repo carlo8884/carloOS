@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, TableShopLink, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, TableShopLink, ShopCtas, CalloutBox, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -21,7 +21,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-10-13T00:00:00Z',
 })
 
 const med = buildMedicalWebPageSchema({
@@ -33,6 +33,24 @@ const med = buildMedicalWebPageSchema({
   lastReviewed: '2026-06-01',
 })
 const combined = combineSchemas(schema, med)
+
+const FAQS = [
+  {
+    question: 'Does a new ferret need a vet visit right away?',
+    answer:
+      'The Merck Veterinary Manual recommends a yearly examination and vaccinations for pet ferrets. Booking that first exam soon after the ferret comes home confirms its vaccination status and gives you a ferret-experienced veterinarian before an emergency.',
+  },
+  {
+    question: 'What vaccines does a new ferret need?',
+    answer:
+      'Ferrets should be vaccinated against canine distemper and rabies. Lafeber says pet-store ferrets usually get their first vaccine at about 6 to 8 weeks, with boosters by 10 to 12 weeks and at about 14 to 16 weeks, then annually. Merck advises not giving both vaccines on the same day and staying at the clinic 20 to 30 minutes afterward to watch for reactions.',
+  },
+  {
+    question: 'Do I need a permit to keep a ferret?',
+    answer:
+      'It depends on where you live. Lafeber notes that some states, counties, and cities restrict ferret ownership or require permits, so check local rules before you bring one home.',
+  },
+]
 
 export default function FirstWeekChecklistPage() {
   return (
@@ -65,6 +83,7 @@ export default function FirstWeekChecklistPage() {
                 { label: 'Days 6–7: Expanding Trust', href: '#day67' },
                 { label: 'The Vet Visit', href: '#vet' },
                 { label: 'Quarantine for Multi-Ferret Homes', href: '#quarantine' },
+                { label: 'FAQ', href: '#faq' },
                 { label: 'Sources', href: '#sources' },
               ]}
             />
@@ -92,9 +111,14 @@ export default function FirstWeekChecklistPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-01"
+            updatedAt="2026-10-13"
             reviewedBy="Editorial team"
           />
+          <CalloutBox variant="info" title="Short answer">
+            <p>
+              Before day one, check local ferret rules (some places restrict ownership or require permits, per <a href="https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf">Lafeber</a>). In the first week, book an exam with a ferret-experienced veterinarian; the <a href="https://www.merckvetmanual.com/all-other-pets/ferrets/routine-health-care-for-ferrets">Merck Veterinary Manual</a> recommends yearly exams and vaccination against rabies and canine distemper.
+            </p>
+          </CalloutBox>
 
           <h2 id="before">Before You Bring It Home</h2>
           <p>
@@ -212,7 +236,14 @@ export default function FirstWeekChecklistPage() {
             </div>
           </div>
 
+          <h2 id="faq">Frequently Asked Questions</h2>
+          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
+
           <h2 id="sources">Sources</h2>
+          <ul>
+            <li><a href="https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf">Lafeber Company: Care of the Ferret (2020)</a></li>
+            <li><a href="https://www.merckvetmanual.com/all-other-pets/ferrets/routine-health-care-for-ferrets">Merck Veterinary Manual: Routine Health Care for Ferrets</a></li>
+          </ul>
           <p>
             New-ferret acclimation, early training, quarantine practice, and wellness-exam recommendations are drawn from Quesenberry KE and Carpenter JW (eds.), <em>Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery</em> (Saunders/Elsevier), and American Ferret Association owner guidance. Vaccination expectations follow standard exotic-mammal veterinary practice. Locate primary publications by title.
           </p>

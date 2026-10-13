@@ -40,7 +40,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Vets.co Editorial',
   publishedAt: '2026-05-28T00:00:00Z',
-  modifiedAt: '2026-05-28T00:00:00Z',
+  modifiedAt: '2026-10-13T00:00:00Z',
 })
 
 const medicalSchema = buildMedicalWebPageSchema({
@@ -133,7 +133,7 @@ export default function VetsPomeranianHealthPage() {
           <ArticleByline
             siteName="Vets.co Editorial"
             publishedAt="2026-05-28T00:00:00Z"
-            updatedAt="2026-09-06T00:00:00Z"
+            updatedAt="2026-10-13T00:00:00Z"
             reviewedBy="Editorial team"
           />
 
@@ -193,7 +193,7 @@ export default function VetsPomeranianHealthPage() {
           <BreedHealthCard
             name="Dental Disease (Crowding & Periodontal)"
             riskLevel="very-high"
-            description="The Pomeranian carries a standard 42-tooth dentition in a miniaturized jaw, producing crowding, rotation and retained deciduous teeth. The American Veterinary Dental College recognizes periodontal disease as the most common disease of small-breed dogs. By age 3, the majority of toy-breed dogs have radiographic evidence of periodontal disease."
+            description="The Pomeranian carries a standard 42-tooth dentition in a miniaturized jaw, producing crowding, rotation and retained deciduous teeth. The Merck Veterinary Manual reports that up to 80% of dogs have some level of periodontal disease by age 2, and lists toy breeds as a risk factor."
             signs={[
               'Bad breath (halitosis is not normal)',
               'Brown tartar at the gumline',
@@ -375,6 +375,7 @@ export default function VetsPomeranianHealthPage() {
           <ul>
             <li><a href="https://ofa.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">Orthopedic Foundation for Animals (OFA)</a> — patellar and cardiac breed statistics.</li>
             <li><a href="https://www.ofa.org/diseases/eye-certification" rel="noopener" target="_blank" className="text-brand-primary hover:underline">ACVO / OFA Eye Certification Registry</a> — breed eye exam database.</li>
+            <li><a href="https://www.merckvetmanual.com/digestive-system/dentistry-in-small-animals/periodontal-disease-in-small-animals" rel="noopener" target="_blank" className="text-brand-primary hover:underline">Merck Veterinary Manual: Periodontal Disease in Small Animals</a> — prevalence by age 2; toy breeds as a risk factor.</li>
             <li><a href="https://avdc.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">American Veterinary Dental College (AVDC)</a> — periodontal disease in small breeds.</li>
             <li><a href="https://www.acvim.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">American College of Veterinary Internal Medicine (ACVIM)</a> — cardiology and internal medicine consensus statements.</li>
             <li>Maddison, Page & Church, <em>Small Animal Clinical Pharmacology</em>, 2nd ed., Saunders, on toy-breed pharmacology.</li>

@@ -748,6 +748,31 @@ test('ferret fix FA2: food-label page leads with a Lafeber/Merck short answer an
   await expect(page.locator('a[href="https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf"]').first()).toBeAttached()
   await expect(page.locator('body')).not.toContainText('ash is roughly 6-8%')
   await expect(page.getByText('What protein and fat should a ferret food have?').first()).toBeVisible()
+})
+
+test('ferret fix FA3: kids and first-week pages lead with Lafeber/Merck short answers and FAQ schema', async ({ page }) => {
+  const cases: Array<[string, string, string]> = [
+    ['/ownership/ferrets-with-kids', 'should always be monitored', 'Are ferrets good pets for families with young children?'],
+    ['/ownership/first-week-checklist', 'rabies and canine distemper', 'What vaccines does a new ferret need?'],
+  ]
+  for (const [path, short, question] of cases) {
+    await page.goto(path, { waitUntil: 'domcontentloaded' })
+    await expect(page.locator('.carloOS-article').filter({ hasText: 'Short answer' }).first(), path).toContainText(short)
+    await expect(page.locator('a[href="https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf"]').first(), path).toBeAttached()
+    await expect(page.getByText(question).first(), path).toBeVisible()
+    const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
+    expect(ld, path).toContain('"FAQPage"')
+  }
+  await page.goto('/ownership/ferrets-with-kids', { waitUntil: 'domcontentloaded' })
+  await expect(page.locator('body')).not.toContainText('6–10 year life')
+})
+test('ferret fix FA4: legality page cites CDFW and Hawaii agriculture with FAQ schema', async ({ page }) => {
+  await page.goto('/ownership/ferret-legality-by-state', { waitUntil: 'domcontentloaded' })
+  await expect(page.locator('.carloOS-article').filter({ hasText: 'Short answer' }).first()).toContainText('California')
+  await expect(page.locator('a[href="https://wildlife.ca.gov/Living-with-Wildlife/Restricted-Species"]').first()).toBeAttached()
+  await expect(page.locator('a[href="https://dab.hawaii.gov/pi/pq/import-program/animal-guidelines/"]').first()).toBeAttached()
+  await expect(page.locator('body')).not.toContainText('New York City and Washington')
+  await expect(page.getByText('Which US states ban pet ferrets?').first()).toBeVisible()
   const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
   expect(ld).toContain('"FAQPage"')
 })
