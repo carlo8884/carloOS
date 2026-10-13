@@ -33,6 +33,16 @@ export const metadata: Metadata = buildMetadata({
 
 const SOURCES = [
   {
+    label: "Routine Health Care for Ferrets (claw trimming, ear care, dental care)",
+    url: "https://www.merckvetmanual.com/all-other-pets/ferrets/routine-health-care-for-ferrets",
+    publisher: "Merck Veterinary Manual",
+  },
+  {
+    label: "Care of the Pet Ferret (bathing frequency and odor)",
+    url: "https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf",
+    publisher: "Lafeber Vet",
+  },
+  {
     label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed.",
     publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
   },
@@ -64,7 +74,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-05-29T00:00:00Z',
-  modifiedAt: '2026-05-29T00:00:00Z',
+  modifiedAt: '2026-10-13T00:00:00Z',
 
   citation: SOURCES,
 })
@@ -73,7 +83,7 @@ const FAQS = [
   {
     question: 'How often should I bathe my ferret?',
     answer:
-      "At most every 2-3 months, and many ferrets do better with even less frequent bathing. The musky ferret smell comes from sebaceous glands in the skin, not from surface dirt. Bathing strips skin oils; the body responds by overproducing them, which makes the ferret smell more strongly within 1-2 days of a bath, not less. The single most common mistake new ferret owners make is bathing weekly to manage smell and creating the exact problem they are trying to solve.",
+      "No more than two to four times a year, per Lafeber's ferret care sheet. Ferrets have a natural musky odor that bathing cannot remove; frequent baths dry the coat and skin, and the skin glands then work harder to replace the lost oils, so a ferret smells stronger for a few days after a bath. Washing bedding regularly does more for odor, because most of the musky oil ends up on cloth. The single most common mistake new ferret owners make is bathing weekly to manage smell and creating the exact problem they are trying to solve.",
   },
   {
     question: 'What shampoo should I use?',
@@ -83,17 +93,17 @@ const FAQS = [
   {
     question: 'How do I clean ferret ears?',
     answer:
-      "Use a pet ear cleaner your exotic-pet vet suggests (Epi-Otic is one common type) and a cotton ball or soft gauze — never a cotton swab pushed into the canal. Every 2-4 weeks for most ferrets; some ferrets need more frequent cleaning, some less. The reddish-brown wax is normal in ferrets. Sudden change in wax volume, color (pale yellow, green), or odor warrants a vet visit — ear mites, bacterial infection, and yeast overgrowth all occur in ferrets.",
+      "Use a pet ear cleaner your exotic-pet vet suggests (Epi-Otic is one common type) and a cotton ball or soft gauze — never a cotton swab pushed into the canal. The Merck Veterinary Manual suggests cleaning most ferrets' ears about once a month. Reddish wax buildup is common in ferrets. Sudden change in wax volume, color (pale yellow, green), or odor warrants a vet visit — ear mites, bacterial infection, and yeast overgrowth all occur in ferrets.",
   },
   {
     question: 'How often do ferret nails need trimming?',
     answer:
-      "Every 2-3 weeks for most ferrets. Ferret nails are non-retractable and grow continuously. Untrimmed nails snag on fabric and carpet (a common cause of injury), grow into footpads in extreme cases, and make the ferret reluctant to walk on smooth floors. The two-person method — one person holds the ferret on its back with a smear of meat-based recovery diet on its belly to distract it, the other clips — works for most ferrets after a few sessions.",
+      "Every 1 to 2 weeks, according to the Merck Veterinary Manual; ferret claws are very sharp and get harder to trim when left long. Ferrets should never be declawed. Untrimmed nails snag on fabric and carpet (a common cause of injury), grow into footpads in extreme cases, and make the ferret reluctant to walk on smooth floors. The two-person method — one person holds the ferret on its back with a smear of meat-based recovery diet on its belly to distract it, the other clips — works for most ferrets after a few sessions.",
   },
   {
     question: 'Do ferret teeth need brushing?',
     answer:
-      "Yes, ideally. Periodontal disease is one of the most common chronic conditions in adult ferrets and a major source of pain and weight loss in seniors. A pet-toothpaste-on-finger or a soft small toothbrush every 1-2 days produces measurably better dental outcomes over a ferret's lifetime than no dental care at all. Annual dental scaling under anesthesia by an exotic-pet vet is the gold standard once tartar accumulates. See our dental disease page for the full protocol.",
+      "Yes, ideally. Periodontal disease is one of the most common chronic conditions in adult ferrets and a major source of pain and weight loss in seniors. Merck notes that brushing with a pet toothpaste and feeding dry ferret food help limit plaque; never use fluoride human toothpaste, which is not meant to be swallowed. Have a vet check teeth and gums yearly; a full dental cleaning needs general anesthesia. See our dental disease page for the full protocol.",
   },
   {
     question: 'My ferret is shedding heavily — is that normal?',
@@ -123,7 +133,7 @@ export default function FerretBathingGroomingPage() {
         hero={{
           title: 'Ferret Bathing and Grooming',
           subtitle:
-            'The defining feature of ferret grooming is that less is more. The musky smell new owners are trying to bathe away is produced by skin glands that respond to bathing by overproducing — the more you bathe, the worse it gets. The right routine is small, infrequent, and consistent: occasional bath, regular ear and nail care, daily teeth, and recognition of when the coat is signaling a medical problem.',
+            'The defining feature of ferret grooming is that less is more. The musky smell new owners are trying to bathe away is produced by skin glands that respond to bathing by overproducing — the more you bathe, the worse it gets. The right routine is small, infrequent, and consistent: occasional bath, regular ear and nail care, regular tooth brushing, and recognition of when the coat is signaling a medical problem.',
           category: 'Ferret Care',
           authorName: 'Ferret.com Editorial',
           publishedAt: 'May 2026',
@@ -202,12 +212,14 @@ export default function FerretBathingGroomingPage() {
           </DropCap>
 
                     <p>
-            Ferrets need bathing at most every 2-3 months — frequent
-            bathing makes them smell worse, not better. Use a
-            ferret-specific or unscented kitten shampoo. Clean ears every
-            2-4 weeks with a pet ear cleaner your vet suggests; never push cotton
-            swabs into the canal. Trim nails every 2-3 weeks. Brush
-            teeth daily or every other day. Twice-a-year seasonal coat
+            <strong>Short answer:</strong> bathe a ferret no more than two to
+            four times a year, because frequent baths make it smell
+            stronger, not weaker (<a href="https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf">Lafeber</a>). Trim
+            nails every 1 to 2 weeks, clean ears about once a month,
+            and brush teeth with a pet toothpaste, never a fluoride
+            human one (<a href="https://www.merckvetmanual.com/all-other-pets/ferrets/routine-health-care-for-ferrets">Merck Veterinary Manual</a>).
+            Use a ferret-specific or unscented kitten shampoo, and
+            never push cotton swabs into the ear canal. Twice-a-year seasonal coat
             changes are normal; bilateral hair loss that does not regrow
             is not — see an exotic-pet vet to rule out adrenal disease.
           </p>
@@ -263,9 +275,9 @@ export default function FerretBathingGroomingPage() {
           </p>
           <ul>
             <li>
-              <strong>Healthy adult ferret:</strong> every 2-3 months
-              maximum. Many ferrets are happiest with one to two baths
-              per year.
+              <strong>Healthy adult ferret:</strong> no more than two to
+              four baths a year (Lafeber). Many ferrets are happiest
+              with fewer.
             </li>
             <li>
               <strong>Senior ferret:</strong> typically less, not more —
@@ -379,8 +391,8 @@ export default function FerretBathingGroomingPage() {
           <h2 id="ears">Ear Cleaning</h2>
           <p>
             Ferret ear wax is normally reddish-brown and may be
-            present in moderate quantity. Cleaning every 2-4 weeks
-            prevents accumulation that can predispose to infection.
+            present in moderate quantity. Merck suggests cleaning most
+            ferrets' ears about once a month.
           </p>
           <ol>
             <li>
@@ -418,7 +430,7 @@ export default function FerretBathingGroomingPage() {
           <h2 id="nails">Nail Trimming</h2>
           <p>
             Ferret nails are non-retractable, grow continuously, and
-            need trimming every 2-3 weeks. The two-person belly-treat
+            need trimming every 1 to 2 weeks (Merck). The two-person belly-treat
             method works well:
           </p>
           <ol>
@@ -545,7 +557,7 @@ export default function FerretBathingGroomingPage() {
 
           <h2 id="picks">Grooming Kit Picks</h2>
           <p>
-            A minimal kit that covers occasional bathing, monthly ear cleaning, and every-2–3-week nail trims. Avoid any shampoo containing tea tree oil — it is toxic to ferrets.
+            A minimal kit that covers occasional bathing, monthly ear cleaning, and nail trims every 1 to 2 weeks. Avoid any shampoo containing tea tree oil — it is toxic to ferrets.
           </p>
           <p className="mb-4 text-sm font-semibold leading-snug">
             <a href="/care/odor-and-scent-control" className="inline-block max-w-full whitespace-normal text-brand-primary underline underline-offset-2">
@@ -559,7 +571,7 @@ export default function FerretBathingGroomingPage() {
             subtitle="Ferret-specific pH-balanced shampoo, no tea tree"
             winner
             description={
-              <p>Marshall's old page for its original ferret shampoo is gone. Look for Marshall's current ferret shampoos instead. Marshall's standard ferret shampoo line — pH-balanced for ferret skin and free of the tea tree oil that the company sometimes includes in other variants. Pick the original or fragrance-free versions and avoid any version with tea tree on the ingredient list. A sensible default for the every-2–3-month bathing schedule.</p>
+              <p>Marshall's old page for its original ferret shampoo is gone. Look for Marshall's current ferret shampoos instead. Marshall's standard ferret shampoo line — pH-balanced for ferret skin and free of the tea tree oil that the company sometimes includes in other variants. Pick the original or fragrance-free versions and avoid any version with tea tree on the ingredient list. A sensible default for a ferret bathed only a few times a year.</p>
             }
             specs={[
               { label: 'pH', value: 'Ferret-appropriate', highlight: 'good' },
@@ -582,12 +594,12 @@ export default function FerretBathingGroomingPage() {
             name="Pet Ear Cleaner (Epi-Otic style)"
             subtitle="Gentle pet ear cleaner for routine wiping"
             description={
-              <p>A gentle pet ear cleaner is the right tool for routine ferret ear cleaning every 2–4 weeks. Apply to a cotton ball or gauze pad — never directly into the canal — and wipe the visible ear flap and canal entrance. Do not use human ear products, alcohol, or hydrogen peroxide. If you see dark coffee-ground debris (possible ear mites) or coloured discharge, stop and book an exotic-pet vet visit before continuing home cleaning.</p>
+              <p>A gentle pet ear cleaner is the right tool for routine ferret ear cleaning about once a month. Apply to a cotton ball or gauze pad — never directly into the canal — and wipe the visible ear flap and canal entrance. Do not use human ear products, alcohol, or hydrogen peroxide. If you see dark coffee-ground debris (possible ear mites) or coloured discharge, stop and book an exotic-pet vet visit before continuing home cleaning.</p>
             }
             specs={[
               { label: 'Type', value: 'Pet ear cleaner, no alcohol or peroxide' },
               { label: 'Application', value: 'Cotton ball / gauze (NOT in-canal swab)' },
-              { label: 'Frequency', value: 'Every 2–4 weeks' },
+              { label: 'Frequency', value: 'About monthly' },
             ]}
             pros={['Made for pet ears, not human ears', 'Wiped on with a cotton ball, not pushed into the canal', 'Available without prescription on most pet retailers']}
             cons={['Not a treatment for ear mites or infection — those need a vet', 'Bottle is small relative to long-term use']}
@@ -609,12 +621,12 @@ export default function FerretBathingGroomingPage() {
             name="Small-Pet Nail Clippers + Styptic Powder"
             subtitle="Small clippers sized for ferret nails plus styptic for accidents"
             description={
-              <p>Ferret nails are non-retractable and grow continuously — every 2–3 weeks is the standard trim cadence. Use small pet nail clippers (not human clippers; the geometry is wrong). Keep styptic powder (Kwik Stop or equivalent) on hand for the occasional quick — apply a small amount to the bleeding end and bleeding stops within seconds. The belly-treat two-person method described in the nail-trim section above keeps the ferret cooperative.</p>
+              <p>Ferret nails are non-retractable and grow continuously — Merck recommends a trim every 1 to 2 weeks. Small pet nail clippers work well, and Merck notes human nail clippers can also be used. Keep styptic powder (Kwik Stop or equivalent) on hand for the occasional quick — apply a small amount to the bleeding end and bleeding stops within seconds. The belly-treat two-person method described in the nail-trim section above keeps the ferret cooperative.</p>
             }
             specs={[
               { label: 'Clipper size', value: 'Small-pet (not human)' },
               { label: 'Styptic included or compatible', value: 'Yes' },
-              { label: 'Frequency', value: 'Every 2–3 weeks' },
+              { label: 'Frequency', value: 'Every 1–2 weeks' },
             ]}
             pros={['Right tool geometry for ferret nails', 'Quick-styptic stops accidents in seconds', 'One-time purchase, lasts years']}
             cons={['Cheap clippers go dull quickly — buy reasonable mid-tier', 'First few trims with a new ferret are stressful regardless of tool']}
@@ -646,7 +658,7 @@ export default function FerretBathingGroomingPage() {
                   <td className="p-3 text-brand-text-mid">The bottle is a tea-tree variant. The card says read the label every time</td>
                 </tr>
                 <tr className="border-b border-brand-border">
-                  <td className="p-3 text-brand-text-mid">Routine ear wiping every 2–4 weeks</td>
+                  <td className="p-3 text-brand-text-mid">Routine ear wiping about once a month</td>
                   <td className="p-3 font-bold text-brand-dark"><a href="#pet-ear-cleaner" className="text-brand-primary">Pet ear cleaner</a><TableShopLink href={"/go/amazon-brand/pet+ear+cleaner?s=care-bathing-and-grooming"} product={"Pet ear cleaner"} /></td>
                   <td className="p-3 text-brand-text-mid">Ear Care. Cotton ball or gauze, not an in-canal swab. $10–20</td>
                   <td className="p-3 text-brand-text-mid">Dark coffee-ground debris or colored discharge. The card says that needs a vet, not more cleaner</td>
@@ -660,7 +672,7 @@ export default function FerretBathingGroomingPage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-12" />
+          <ComparisonFoot updated="2026-10-13" />
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />

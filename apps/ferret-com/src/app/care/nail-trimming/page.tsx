@@ -13,7 +13,7 @@ import {
   ArticleSourcesList,
   ShopCtas,
 } from '@carloOS/ui'
-import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { CalloutBox, buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -25,6 +25,11 @@ export const metadata: Metadata = buildMetadata({
 })
 
 const SOURCES = [
+  {
+    label: "Routine Health Care for Ferrets — claw trimming",
+    url: "https://www.merckvetmanual.com/all-other-pets/ferrets/routine-health-care-for-ferrets",
+    publisher: "Merck Veterinary Manual",
+  },
   {
     label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — nail anatomy, grooming technique, and husbandry chapters",
     publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
@@ -44,7 +49,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-09-04T00:00:00Z',
+  modifiedAt: '2026-10-13T00:00:00Z',
 
   citation: SOURCES,
 })
@@ -73,7 +78,7 @@ const FAQS = [
   {
     question: 'Can I use human nail clippers on a ferret?',
     answer:
-      'They can work on the smallest nails but tend to crush rather than cleanly cut. The standard tool is a small clipper made for cats, kittens, or small dogs — scissor-style or small guillotine-style — which is the right scale for a ferret nail. Good lighting matters more than the clipper itself, because the whole technique depends on seeing the quick.',
+      'Yes. The Merck Veterinary Manual says a nail clipper made for humans may be used. Many keepers prefer a small clipper made for cats or kittens, which is also the right scale for a ferret nail. Good lighting matters more than the clipper itself, because the whole technique depends on seeing the quick.',
   },
 ]
 const faqSchema = buildFAQSchema({ questions: FAQS })
@@ -144,9 +149,13 @@ export default function NailTrimmingPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-09-04"
+            updatedAt="2026-10-13"
             reviewedBy="Editorial team"
           />
+
+          <CalloutBox variant="info" title="Short answer">
+            <p>Trim a ferret&apos;s claws every 1 to 2 weeks. Cut at an angle that leaves the claw end parallel to the floor when the ferret stands, and avoid the dark vein inside each claw. If you nick it, apply styptic powder right away. Never declaw a ferret; it needs its claws to walk and grasp. Source: <a href="https://www.merckvetmanual.com/all-other-pets/ferrets/routine-health-care-for-ferrets">Merck Veterinary Manual</a>.</p>
+          </CalloutBox>
 
           <h2 id="why">Why Ferrets Need Regular Trims — and How Often</h2>
           <p>
@@ -166,7 +175,7 @@ export default function NailTrimmingPage() {
 
           <h2 id="tools">Tools</h2>
           <ul>
-            <li><strong>A small nail clipper.</strong> Clippers made for cats, small dogs, or kittens — scissor-style or small guillotine-style — are the right scale for a ferret nail. Human nail clippers can work for the smallest nails but tend to crush rather than cleanly cut. A dedicated small-pet clipper is the standard tool.</li>
+            <li><strong>A small nail clipper.</strong> Clippers made for cats, small dogs, or kittens — scissor-style or small guillotine-style — are the right scale for a ferret nail. Merck notes a human nail clipper may also be used.</li>
             <li><strong>Good lighting</strong> so you can see the quick. This matters more than the clipper itself.</li>
             <li><strong>Styptic powder</strong> on hand as a safety net for a nicked quick. Cornstarch is a household stand-in if you have no styptic powder.</li>
             <li><strong>A distraction treat</strong> — discussed below — which for most keepers is the single thing that makes the whole job easy.</li>
