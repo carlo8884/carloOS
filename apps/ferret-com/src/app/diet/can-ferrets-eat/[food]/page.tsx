@@ -67,7 +67,7 @@ export default async function CanFerretsEatFoodPage({ params }: PageProps) {
     imageUrl: '',
     authorName: 'Ferret.com Editorial',
     publishedAt: '2026-06-15T00:00:00Z',
-    modifiedAt: '2026-06-15T00:00:00Z',
+    modifiedAt: '2026-10-13T00:00:00Z',
   })
   const faqs = foodFaqs(entry)
   const schema = combineSchemas(articleSchema, buildFAQSchema({ questions: faqs }))
@@ -75,6 +75,7 @@ export default async function CanFerretsEatFoodPage({ params }: PageProps) {
   return (
     <ArticleLayout
       siteId="ferret-com"
+      schema={schema}
       hero={{
         title: `Can Ferrets Eat ${entry.name}?`,
         subtitle: entry.shortAnswer,
@@ -128,7 +129,7 @@ export default async function CanFerretsEatFoodPage({ params }: PageProps) {
       }
     >
       <div className="carloOS-article">
-        <ArticleByline siteName="Ferret.com Editorial" publishedAt="2026-06-15T00:00:00Z" updatedAt="2026-06-15T00:00:00Z" reviewedBy="Editorial team" />
+        <ArticleByline siteName="Ferret.com Editorial" publishedAt="2026-06-15T00:00:00Z" updatedAt="2026-10-13T00:00:00Z" reviewedBy="Editorial team" />
 
         <div className="rounded-lg border p-5 my-4" style={{ borderColor: meta.color, background: meta.tone === 'good' ? '#f0fdf4' : meta.tone === 'warn' ? '#fffbeb' : '#fef2f2' }}>
           <span className="text-2xs font-bold uppercase tracking-eyebrow text-brand-text-light">Verdict</span>

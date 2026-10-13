@@ -839,3 +839,13 @@ test('ferret fix KF1: kit-vs-adult feeding cites Apfelbach, VCA and Merck and dr
   const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
   expect(ld).toContain('"FAQPage"')
 })
+
+test('ferret fix SC1: can-ferrets-eat food pages emit Article and FAQPage schema', async ({ page }) => {
+  for (const path of ['/diet/can-ferrets-eat/chocolate', '/diet/can-ferrets-eat/chicken', '/diet/can-ferrets-eat/banana']) {
+    await page.goto(path, { waitUntil: 'domcontentloaded' })
+    const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
+    expect(ld, path).toContain('"Article"')
+    expect(ld.match(/"FAQPage"/g)?.length, path).toBe(1)
+    expect(ld, path).toContain('Can ferrets eat')
+  }
+})
