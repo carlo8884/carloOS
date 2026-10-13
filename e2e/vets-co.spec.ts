@@ -1016,3 +1016,14 @@ test('vets fix AF13: preventive care schedule leads with a sourced short answer 
   const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
   expect(ld).toContain('"FAQPage"')
 })
+
+test('vets fix BR1: breed percentages match fetched sources', async ({ page }) => {
+  await page.goto('/breeds/golden-retriever-health', { waitUntil: 'domcontentloaded' })
+  await expect(page.locator('.carloOS-article').first()).not.toContainText('More than 60% of Golden Retrievers will develop cancer')
+  await expect(page.locator('.carloOS-article').first()).not.toContainText('60–90%')
+  await expect(page.locator('a[href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9182714/"]').first()).toBeAttached()
+  await expect(page.locator('a[href="https://www.merckvetmanual.com/circulatory-system/lymphoma-in-dogs/lymphoma-in-dogs"]').first()).toBeAttached()
+  await page.goto('/breeds/labrador-health', { waitUntil: 'domcontentloaded' })
+  await expect(page.locator('.carloOS-article').first()).not.toContainText('23% of pet Labs')
+  await expect(page.locator('a[href="https://pubmed.ncbi.nlm.nih.gov/27157046/"]').first()).toBeAttached()
+})
