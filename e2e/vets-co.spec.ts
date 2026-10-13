@@ -1057,3 +1057,17 @@ test('vets fix Q5: holiday emergency hero answer is two sentences, not a comma s
   expect(answer).not.toMatch(/, Compare/)
   expect(answer).toContain('on duty overnight. Compare carriers')
 })
+
+test('vets fix IQ1: insurance cost and pre-existing answers match NAPHIA and NAIC', async ({ page }) => {
+  await page.goto('/insurance/questions/how-much-does-pet-insurance-cost', { waitUntil: 'domcontentloaded' })
+  let text = (await page.locator('main').innerText()).replace(/\s+/g, ' ')
+  expect(text).not.toMatch(/\$30–\$70|\$15–\$40|thirty to seventy/)
+  expect(text).toContain('$62.44')
+  expect(text).toContain('$32.21')
+  await expect(page.locator('a[href="https://naphia.org/news/naphia-news/soi-report-2025/"]').first()).toBeVisible()
+  await page.goto('/insurance/questions/does-pet-insurance-cover-pre-existing-conditions', { waitUntil: 'domcontentloaded' })
+  text = (await page.locator('main').innerText()).replace(/\s+/g, ' ')
+  expect(text).not.toMatch(/No pet insurer covers|excluded everywhere/)
+  expect(text).toContain('Most pet insurance companies exclude pre-existing conditions')
+  await expect(page.locator('a[href="https://content.naic.org/insurance-topics/pet-insurance"]').first()).toBeVisible()
+})

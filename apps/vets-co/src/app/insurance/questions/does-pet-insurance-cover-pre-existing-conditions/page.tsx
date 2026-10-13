@@ -3,13 +3,13 @@ import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfoli
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Does Pet Insurance Cover Pre-Existing Conditions? | Vets.co', description: 'No pet insurer covers pre-existing conditions, though some re-cover curable ones after a symptom-free window. Why enrolling early matters most.', path: '/insurance/questions/does-pet-insurance-cover-pre-existing-conditions', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Does Pet Insurance Cover Pre-Existing Conditions? | Vets.co', description: 'Most pet insurers exclude pre-existing conditions (NAIC), though some re-cover curable ones after a symptom-free window. Why enrolling early matters most.', path: '/insurance/questions/does-pet-insurance-cover-pre-existing-conditions', type: 'article' })
 
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Does Pet Insurance Cover Pre-Existing Conditions?', description: 'How pre-existing conditions are defined and excluded, the curable-versus-incurable distinction, and why enrolling early matters.', url: 'https://vets.co/insurance/questions/does-pet-insurance-cover-pre-existing-conditions', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-11T00:00:00Z', modifiedAt: '2026-10-12T00:00:00Z', speakable: true })
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Does Pet Insurance Cover Pre-Existing Conditions?', description: 'How pre-existing conditions are defined and excluded, the curable-versus-incurable distinction, and why enrolling early matters.', url: 'https://vets.co/insurance/questions/does-pet-insurance-cover-pre-existing-conditions', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-11T00:00:00Z', modifiedAt: '2026-10-13T00:00:00Z', speakable: true })
 
 const FAQS = [
   { question: 'Can I insure a pet that already has a condition?', answer: 'Yes. You can still buy a policy for a pet with an existing condition — the policy simply will not pay claims related to that specific condition. New, unrelated illnesses and injuries can still be covered. A dog with managed hypothyroidism, for example, can still be insured against a future cruciate injury or cancer. The exclusion is condition-specific, not a blanket denial, so coverage often still has real value.' },
-  { question: 'Do any insurers cover curable pre-existing conditions?', answer: 'Some do. A number of insurers distinguish curable from incurable pre-existing conditions and will resume covering a curable issue — such as a one-time ear infection or urinary tract infection — once the pet has been symptom-free and treatment-free for a defined period, commonly six to eighteen months depending on the insurer. Chronic or incurable conditions like diabetes, allergies, and most orthopedic disease stay permanently excluded everywhere.' },
+  { question: 'Do any insurers cover curable pre-existing conditions?', answer: 'Some do. A number of insurers distinguish curable from incurable pre-existing conditions and will resume covering a curable issue — such as a one-time ear infection or urinary tract infection — once the pet has been symptom-free and treatment-free for a defined period that varies by insurer. Chronic or incurable conditions are generally not re-covered; read the policy wording.' },
   { question: 'What is a bilateral exclusion?', answer: 'A bilateral exclusion applies to paired body parts — knees, elbows, eyes, hips. If one side had a problem before coverage began, many insurers treat the matching side as pre-existing too, on the reasoning that the underlying predisposition was already present. This matters most for breeds prone to orthopedic disease, where an injury to one cruciate ligament can exclude the other knee from coverage.' },
 ]
 
@@ -19,7 +19,7 @@ export default function Page() {
       <SchemaScript schema={schema} />
       <ArticleLayout siteId="vets-co"
         heroHop={<a href="/insurance/pre-existing-conditions" className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline mb-5">Pre-existing conditions</a>}
-        hero={{ title: 'Does Pet Insurance Cover Pre-Existing Conditions?', subtitle: 'No pet insurer covers pre-existing conditions — and that single rule is why timing matters more than carrier choice. Some insurers will re-cover curable conditions after a symptom-free window, but chronic disease stays excluded everywhere.', category: 'Insurance Q&A', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '7 min' }}
+        hero={{ title: 'Does Pet Insurance Cover Pre-Existing Conditions?', subtitle: 'Most pet insurers exclude pre-existing conditions, according to the NAIC — which is why timing matters more than carrier choice. Some insurers will re-cover curable conditions after a symptom-free window; chronic disease generally stays excluded.', category: 'Insurance Q&A', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '7 min' }}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Insurance', href: '/insurance' }, { name: 'Questions', href: '/insurance/questions' }, { name: 'Pre-Existing Conditions', href: '/insurance/questions/does-pet-insurance-cover-pre-existing-conditions' }]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -36,16 +36,16 @@ export default function Page() {
         </>}
       >
         <div className="carloOS-article">
-          <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-11T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-12" />
+          <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-11T00:00:00Z" updatedAt="2026-10-13T00:00:00Z" reviewedBy="Editorial team" />
+          <LastUpdated date="2026-10-13" />
 
           <CalloutBox variant="warning" title="The short answer">
-            No pet insurer covers pre-existing conditions — any condition with signs, symptoms, or a diagnosis <strong>before</strong> coverage starts or during the waiting period. Some insurers will re-cover a previously <em>curable</em> condition after a defined symptom-free window; chronic and incurable conditions stay permanently excluded everywhere.
+            Most pet insurance companies exclude pre-existing conditions, as well as hereditary or congenital conditions, and many have waiting periods before benefits begin (<a href="https://content.naic.org/insurance-topics/pet-insurance">NAIC</a>). A pre-existing condition is generally one with signs, symptoms, or a diagnosis <strong>before</strong> coverage starts or during the waiting period. Some insurers will re-cover a previously <em>curable</em> condition after a defined symptom-free window; chronic and incurable conditions generally stay excluded.
           </CalloutBox>
 
           <h2>What Counts as Pre-Existing</h2>
           <p>A pre-existing condition is any illness or injury that showed signs, was diagnosed, or was treated before your policy started — including anything that emerged during the waiting period after enrollment. Insurers establish this by reviewing your pet&apos;s veterinary records when you file a claim, and a formal diagnosis is not required: a documented symptom can be enough. If your records note limping months before you enrolled, a later cruciate diagnosis may be classed as pre-existing and excluded. This is why the value of a policy is largely set the day you buy it.</p>
-          <p>Because every insurer reviews records at claim time, an undisclosed prior note can lead to a denied claim even if you did not realize it was relevant. The exclusion is not a judgment about honesty; it is how the product is designed. Insurance covers the unknown, and a condition already on the record is, by definition, known.</p>
+          <p>Because insurers review records at claim time, an undisclosed prior note can lead to a denied claim even if you did not realize it was relevant. The exclusion is not a judgment about honesty; it is how the product is designed. Insurance covers the unknown, and a condition already on the record is, by definition, known.</p>
 
           <h2>Curable vs. Incurable</h2>
           <p>The most important distinction in this area is curable versus incurable. Incurable or chronic conditions — diabetes, allergies, heart disease, cancer, kidney disease, most orthopedic disease — are generally excluded for the life of the policy, at every carrier. Curable conditions — a single ear infection, a respiratory infection, a urinary tract infection that fully resolved — may become eligible again at some insurers after the pet has gone a defined symptom-free and treatment-free period, often six to eighteen months.</p>
@@ -107,7 +107,7 @@ export default function Page() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-12" />
+          <ComparisonFoot updated="2026-10-13" />
           <h2>Who should read which clause</h2>
           <p>Read the curable-condition window when a past issue fully resolved. Read the bilateral language when the breed is prone to joint or eye problems. An incurable condition on the record stays excluded for the life of the policy.</p>
 
@@ -139,6 +139,7 @@ export default function Page() {
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
 
           <ArticleSourcesList title="Sources" sources={[
+            { label: 'Pet Insurance (consumer topic page)', url: 'https://content.naic.org/insurance-topics/pet-insurance', publisher: 'NAIC' },
             { label: 'Sample carrier policy documents (curable vs. incurable, bilateral exclusions)', publisher: 'General carrier policy disclosures (not an endorsement)' },
           ]} />
         </div>
