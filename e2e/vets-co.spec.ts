@@ -946,3 +946,17 @@ test('vets fix AF8: pain signs page leads with a sourced short answer and FAQ sc
   const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
   expect(ld).toContain('"FAQPage"')
 })
+
+test('vets fix OG1: og:image renders a real 1200x630 PNG', async ({ page, request }) => {
+  await page.goto('/health/heat-stroke-dogs', { waitUntil: 'domcontentloaded' })
+  const og = await page.locator('meta[property="og:image"]').getAttribute('content')
+  expect(og).toBeTruthy()
+  const u = new URL(og!)
+  const res = await request.get(u.pathname + u.search)
+  expect(res.status()).toBe(200)
+  expect(res.headers()['content-type']).toContain('image/png')
+  const body = await res.body()
+  expect(body.length).toBeGreaterThan(1000)
+  expect(body.readUInt32BE(16)).toBe(1200)
+  expect(body.readUInt32BE(20)).toBe(630)
+})

@@ -216,7 +216,8 @@ export function OgTemplate({
             color: 'rgba(255,255,255,0.50)',
           }}
         >
-          {site.name} · {new Date().getFullYear()}
+          {/* One text node: Satori rejects a non-flex div with several children. */}
+          {`${site.name} · ${new Date().getFullYear()}`}
         </div>
         {(() => {
           // Split at LAST dot — accent the TLD dot, not earlier dots
