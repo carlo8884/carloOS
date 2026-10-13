@@ -35,7 +35,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-10-13T00:00:00Z',
 })
 
 
@@ -48,7 +48,7 @@ const FAQS = [
   {
     question: 'Where do I look for an exotic-pet vet near me?',
     answer:
-      'Start with the Association of Exotic Mammal Veterinarians (AEMV) member directory at aemv.org, which lists clinicians who actively work in exotic-mammal medicine. The American Board of Veterinary Practitioners (ABVP) maintains a directory of certified specialists in Exotic Companion Mammal practice. Veterinary teaching hospitals at AVMA-accredited US veterinary schools, and large exotic-pet referral hospitals, are reliable backups. The American Ferret Association (AFA) at ferret-afa.org also points owners toward ferret-knowledgeable care.',
+      'Start with the Association of Exotic Mammal Veterinarians (AEMV) member directory at aemv.org, which searches for veterinarians with a specific interest in exotic mammal health. The American Board of Veterinary Practitioners (ABVP) maintains a directory of certified specialists in Exotic Companion Mammal practice. Veterinary teaching hospitals at AVMA-accredited US veterinary schools, and large exotic-pet referral hospitals, are reliable backups. The American Ferret Association (AFA) at ferret-afa.org also points owners toward ferret-knowledgeable care.',
   },
   {
     question: 'What should I ask when I call a new clinic?',
@@ -141,9 +141,15 @@ export default function FindAnExoticVetPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-01"
+            updatedAt="2026-10-13"
             reviewedBy="Editorial team"
           />
+
+          <CalloutBox variant="info" title="Short answer">
+            <p>
+              Start with the <a href="https://aemv.org/">Association of Exotic Mammal Veterinarians (AEMV)</a> Find a Vet search, which looks for veterinarians near you with a specific interest in exotic mammal health. For board certification, look for ABVP Exotic Companion Mammal certification, which <a href="https://aemv.org/certifications/">AEMV notes</a> focuses on ferrets, rabbits, rodents, and other pet mammals. Line up a vet before your ferret is sick.
+            </p>
+          </CalloutBox>
 
           <DropCap>
             The most important veterinary decision you make for a ferret is

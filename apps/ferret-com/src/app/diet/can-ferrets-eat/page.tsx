@@ -1,7 +1,7 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildFAQSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript, CrossPortfolioCard, FAQAccordion, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, buildFAQSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript, CrossPortfolioCard, FAQAccordion, ShopCtas, CalloutBox } from '@carloOS/ui'
 import { FERRET_FOODS, FERRET_FOOD_CATEGORIES, VERDICT_META } from '../../../data/foods'
 
 export const metadata: Metadata = buildMetadata({
@@ -67,6 +67,14 @@ export default function CanFerretsEatHubPage() {
         <span>›</span>
         <span className="text-brand-text-mid font-medium">Can Ferrets Eat…</span>
       </nav>
+
+      <div className="px-container-sm sm:px-container pt-6 bg-brand-surface max-w-content-wide">
+        <CalloutBox variant="info" title="Short answer">
+          <p>
+            Ferrets are carnivores: feed meat-based food. <a href="https://vcahospitals.com/know-your-pet/feeding-ferrets">VCA Animal Hospitals</a> advises avoiding sweets, dairy products, raisins, fruits, and vegetables, because they may cause diarrhea and erratic swings in blood sugar. A piece of cooked meat or some meat baby food is acceptable as an occasional treat.
+          </p>
+        </CalloutBox>
+      </div>
 
       <div className="px-container-sm sm:px-container py-6 bg-brand-surface border-b border-brand-border">
         <div className="rounded-lg border-2 p-4 max-w-content-wide" style={{ borderColor: '#b91c1c', background: '#fef2f2' }}>

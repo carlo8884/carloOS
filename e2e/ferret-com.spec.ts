@@ -901,3 +901,17 @@ test('ferret fix PA1: play-aggression page answers first and cites the MSD Veter
   const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
   expect(ld).toContain('"FAQPage"')
 })
+
+test('ferret fix AO1: kibble guide, can-ferrets-eat hub, and find-a-vet answer first from fetched sources', async ({ page }) => {
+  const cases: [string, string, string][] = [
+    ['/diet/best-ferret-kibble', '32% to 40% protein', 'https://vcahospitals.com/know-your-pet/feeding-ferrets'],
+    ['/diet/can-ferrets-eat', 'occasional treat', 'https://vcahospitals.com/know-your-pet/feeding-ferrets'],
+    ['/find-an-exotic-vet', 'Find a Vet search', 'https://aemv.org/'],
+  ]
+  for (const [path, text, href] of cases) {
+    await page.goto(path, { waitUntil: 'domcontentloaded' })
+    await expect(page.getByText('Short answer', { exact: true }).first(), path).toBeVisible()
+    await expect(page.locator('body'), path).toContainText(text)
+    await expect(page.locator(`a[href="${href}"]`).first(), path).toBeVisible()
+  }
+})
