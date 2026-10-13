@@ -1145,6 +1145,14 @@ test('vets fix HB7: /reviews hub answers first and has a sourced FAQ', async ({ 
   await expect(page.getByRole('heading', { name: 'Reviews FAQ' })).toBeVisible()
 })
 
+test('vets fix HB6: /breeds hub answers first and has a sourced FAQ', async ({ page }) => {
+  await page.goto('/breeds', { waitUntil: 'domcontentloaded' })
+  const box = page.getByTestId('short-answer')
+  await expect(box).toBeVisible()
+  await expect(box.locator('a[href="https://ofa.org/chic-programs/"]').first()).toBeVisible()
+  await expect(page.getByRole('heading', { name: 'Breed health FAQ' })).toBeVisible()
+})
+
 test('vets fix HB5: /tools hub answers first and has a sourced FAQ', async ({ page }) => {
   await page.goto('/tools', { waitUntil: 'domcontentloaded' })
   const box = page.getByTestId('short-answer')
