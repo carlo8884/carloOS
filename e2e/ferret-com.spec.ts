@@ -1045,3 +1045,11 @@ test('ferret fix TX5: email sequences and food data label unchecked references',
     }
   }
 })
+
+test('ferret fix VP2: vet-visit prep schedule, fasting and temperature follow Lafeber and Merck', async ({ page }) => {
+  await page.goto('/health/vet-visit-prep', { waitUntil: 'domcontentloaded' })
+  const text = (await page.locator('main').innerText()).replace(/\s+/g, ' ')
+  expect(text).not.toMatch(/3-4 hour|65-72°F|every 3-6 months/)
+  expect(text).toContain('65°F to 75°F')
+  await expect(page.locator('#cadence + ul a[href="https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf"]')).toBeVisible()
+})
