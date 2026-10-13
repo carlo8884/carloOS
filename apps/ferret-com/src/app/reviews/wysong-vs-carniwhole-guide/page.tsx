@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, EmailCapture, QuietPartnerLink, RelatedLinks, buildArticleSchema, buildItemListSchema, buildMetadata, combineSchemas, ArticleSourcesList, LastUpdated, ComparisonFoot } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, buildArticleSchema, buildItemListSchema, buildMetadata, combineSchemas, ArticleSourcesList, LastUpdated, ComparisonFoot } from '@carloOS/ui'
 import { HopDisclosure } from '../../../components/HopDisclosure'
 
 export const metadata: Metadata = buildMetadata({
@@ -19,7 +19,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-10-05T00:00:00Z',
-  modifiedAt: '2026-10-12T00:00:00Z',
+  modifiedAt: '2026-10-13T00:00:00Z',
 })
 
 const FAQS = [
@@ -57,8 +57,7 @@ export default function WysongVsCarniwholeGuidePage() {
         readTime: '6 min',
       }}
       heroHop={<><HopDisclosure siteId="ferret-com" href="/go/amazon/B019W9VXZK?s=reviews-wysong-vs-carniwhole-guide" /><a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" href="/go/amazon/B019W9VXZK?s=reviews-wysong-vs-carniwhole-guide">Check price of Wysong Epigen 90 on Amazon →</a></>}
-      heroExtra={<QuietPartnerLink tone="dark" href="/go/wysong/epigen-90?s=reviews-wysong-vs-carniwhole-guide" label="Check price of Wysong Epigen 90 at Wysong" />}
-      breadcrumbs={[
+            breadcrumbs={[
         { name: 'Home', href: '/' },
         { name: 'Reviews', href: '/reviews' },
         { name: 'Wysong vs Carniwhole', href: '/reviews/wysong-vs-carniwhole-guide' },
@@ -76,7 +75,7 @@ export default function WysongVsCarniwholeGuidePage() {
       priceAsOf="2026-10-07"
     >
       <div className="carloOS-article">
-          <LastUpdated date="2026-10-12" />
+          <LastUpdated date="2026-10-13" />
         <EmailCapture
           variant="inline"
           siteId="ferret-com"
@@ -131,7 +130,7 @@ export default function WysongVsCarniwholeGuidePage() {
             </tbody>
           </table>
         </div>
-        <ComparisonFoot updated="2026-10-12" />
+        <ComparisonFoot updated="2026-10-13" />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
                 <ArticleSourcesList

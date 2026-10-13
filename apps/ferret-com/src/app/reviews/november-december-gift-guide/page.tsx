@@ -115,7 +115,7 @@ export default function NovemberDecemberGiftGuidePage() {
               </tr>
               <tr className="border-b border-brand-border">
                 <td className="p-3">See current price per pack</td>
-                <td className="p-3 font-bold">Wysong freeze-dried treats<TableShopLink quietUntilTag href={`/go/wysong/freeze-dried-treats?s=${SOURCE}`} product="Wysong freeze-dried treats" /></td>
+                <td className="p-3 font-bold">Wysong freeze-dried treats</td>
                 <td className="p-3"><Link href="/diet/safe-treats">Treat page</Link></td>
               </tr>
               <tr className="border-b border-brand-border">
