@@ -134,6 +134,9 @@ export default function FerretOdorScentControlPage() {
                 { label: 'Cage Cleaning Routine', href: '/care/cage-cleaning-routine' },
                 { label: 'Bathing & Grooming', href: '/care/bathing-and-grooming' },
                 { label: 'Spaying & Neutering', href: '/health/spaying-and-neutering' },
+                { label: 'Paper vs Wood Litter', href: '/reviews/paper-vs-wood-litter-guide' },
+                { label: 'Paper vs Grass Litter', href: '/reviews/paper-vs-grass-litter-guide' },
+                { label: 'Wood vs Grass Litter', href: '/reviews/wood-vs-grass-litter-guide' },
               ]}
             />
             <CrossPortfolioCard currentSite="ferret-com" contentType="care" variant="sidebar" />
@@ -146,6 +149,9 @@ export default function FerretOdorScentControlPage() {
           { title: 'Bathing & Grooming', href: '/care/bathing-and-grooming' },
           { title: 'Cage Cleaning Routine', href: '/care/cage-cleaning-routine' },
           { title: 'Spaying & Neutering', href: '/health/spaying-and-neutering' },
+          { title: 'Paper vs Wood Litter', href: '/reviews/paper-vs-wood-litter-guide' },
+          { title: 'Paper vs Grass Litter', href: '/reviews/paper-vs-grass-litter-guide' },
+          { title: 'Wood vs Grass Litter', href: '/reviews/wood-vs-grass-litter-guide' },
         ]}
 >
         <div className="carloOS-article">

@@ -158,6 +158,9 @@ export default function FerretLitterTrainingPage() {
                 { label: 'Diet Basics', href: '/care/diet-basics' },
                 { label: 'Training & Bonding', href: '/behavior/training-and-bonding' },
                 { label: 'Litter Planner', href: '/tools/litter-planner' },
+                { label: 'Paper vs Wood Litter', href: '/reviews/paper-vs-wood-litter-guide' },
+                { label: 'Paper vs Grass Litter', href: '/reviews/paper-vs-grass-litter-guide' },
+                { label: 'Wood vs Grass Litter', href: '/reviews/wood-vs-grass-litter-guide' },
               ]}
             />
             <CrossPortfolioCard currentSite="ferret-com" contentType="care" variant="sidebar" />
@@ -172,6 +175,9 @@ export default function FerretLitterTrainingPage() {
           { title: 'Cage Setup', href: '/care/cage-setup' },
           { title: 'Ferret Starter Kit', href: '/ferret-starter-kit' },
           { title: 'Litter Planner', href: '/tools/litter-planner' },
+          { title: 'Paper vs Wood Litter', href: '/reviews/paper-vs-wood-litter-guide' },
+          { title: 'Paper vs Grass Litter', href: '/reviews/paper-vs-grass-litter-guide' },
+          { title: 'Wood vs Grass Litter', href: '/reviews/wood-vs-grass-litter-guide' },
         ]}
  priceAsOf="2026-05-31">
         <div className="carloOS-article">

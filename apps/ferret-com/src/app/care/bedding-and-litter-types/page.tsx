@@ -118,6 +118,9 @@ export default function BeddingAndLitterTypesPage() {
                 { label: 'Litter Training', href: '/care/litter-training' },
                 { label: 'Litter Planner', href: '/tools/litter-planner' },
                 { label: 'Multi-Level Housing', href: '/care/multi-level-housing' },
+                { label: 'Paper vs Wood Litter', href: '/reviews/paper-vs-wood-litter-guide' },
+                { label: 'Paper vs Grass Litter', href: '/reviews/paper-vs-grass-litter-guide' },
+                { label: 'Wood vs Grass Litter', href: '/reviews/wood-vs-grass-litter-guide' },
               ]}
             />
             <CrossPortfolioCard currentSite="ferret-com" contentType="care" variant="sidebar" />
@@ -131,6 +134,9 @@ export default function BeddingAndLitterTypesPage() {
           { title: 'Litter Training', href: '/care/litter-training' },
           { title: 'Litter Planner', href: '/tools/litter-planner' },
           { title: 'Cage Cleaning Routine', href: '/care/cage-cleaning-routine' },
+          { title: 'Paper vs Wood Litter', href: '/reviews/paper-vs-wood-litter-guide' },
+          { title: 'Paper vs Grass Litter', href: '/reviews/paper-vs-grass-litter-guide' },
+          { title: 'Wood vs Grass Litter', href: '/reviews/wood-vs-grass-litter-guide' },
         ]}
 >
         <div className="carloOS-article">

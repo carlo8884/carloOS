@@ -158,6 +158,7 @@ export default function FerretBathingGroomingPage() {
                 { label: 'Cage Setup', href: '/care/cage-setup' },
                 { label: 'Dental Disease', href: '/health/dental-disease' },
                 { label: 'Adrenal Disease', href: '/health/adrenal-disease' },
+                { label: 'Fall Molt Brush Guide', href: '/reviews/fall-molt-brush-guide' },
               ]}
             />
             <CrossPortfolioCard currentSite="ferret-com" contentType="care" variant="sidebar" />
@@ -170,6 +171,7 @@ export default function FerretBathingGroomingPage() {
           { title: 'Ear Cleaning', href: '/care/ear-cleaning' },
           { title: 'Nail Trimming', href: '/care/nail-trimming' },
           { title: 'Odor & Scent Control', href: '/care/odor-and-scent-control' },
+          { title: 'Fall Molt Brush Guide', href: '/reviews/fall-molt-brush-guide' },
         ]}
  priceAsOf="2026-10-04">
         <div className="carloOS-article">

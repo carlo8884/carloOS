@@ -600,3 +600,17 @@ test('ferret fix IL1: harness, travel and exercise pages link to both harness gu
     for (const href of ['/reviews/h-style-vs-mesh-harness-guide', '/reviews/winter-harness-fit-guide']) await expect(page.locator(`a[href="${href}"]`).first(), `${path} ${href}`).toBeAttached()
   }
 })
+
+test('ferret fix IL3: care pages link to the cage, litter and molt-brush comparison guides', async ({ page }) => {
+  const cage = ['/reviews/ferret-nation-vs-prevue-guide', '/reviews/kaytee-vs-ferret-nation-guide', '/reviews/kaytee-vs-prevue-guide']
+  const litter = ['/reviews/paper-vs-wood-litter-guide', '/reviews/paper-vs-grass-litter-guide', '/reviews/wood-vs-grass-litter-guide']
+  const map: Record<string, string[]> = {
+    '/care/cage-setup': cage, '/care/multi-level-housing': cage,
+    '/care/litter-training': litter, '/behavior/litter-box-troubleshooting': litter, '/care/bedding-and-litter-types': litter, '/care/odor-and-scent-control': litter,
+    '/care/bathing-and-grooming': ['/reviews/fall-molt-brush-guide'],
+  }
+  for (const [path, hrefs] of Object.entries(map)) {
+    await page.goto(path, { waitUntil: 'domcontentloaded' })
+    for (const href of hrefs) await expect(page.locator(`a[href="${href}"]`).first(), `${path} ${href}`).toBeAttached()
+  }
+})
