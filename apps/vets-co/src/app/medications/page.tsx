@@ -7,8 +7,20 @@ import { PrimaryHop,
   combineSchemas,
   SchemaScript,
   StockImage,
+  FAQAccordion,
+  ArticleSourcesList,
+  LastUpdated,
 } from '@carloOS/ui'
 import { Medications, type Medication } from '../../data/medications'
+
+const FDA_PAIN = 'https://www.fda.gov/animal-veterinary/animal-health-literacy/get-facts-about-pain-relievers-pets'
+const FAQS = [
+  { question: 'Can I give my dog or cat a human pain reliever?', answer: 'Not without talking to your veterinarian first. The FDA warns that NSAIDs made for people, such as aspirin, ibuprofen and naproxen, may last longer, be absorbed faster and reach higher blood levels in pets. Acetaminophen (Tylenol) is fatal to cats and should never be given to them.' },
+  { question: 'What side effects should I watch for on an NSAID?', answer: 'The FDA lists vomiting, diarrhea, bloody or black stool, decreased appetite, decreased activity and yellowing of the whites of the eyes or gums. If you see any of these, stop the medication and call your veterinarian.' },
+  { question: 'Can my pet take two pain medications at once?', answer: 'Two different NSAIDs, or an NSAID together with a steroid such as prednisone, should not be given at the same time, according to the FDA, because it raises the risk of stomach and intestinal side effects.' },
+  { question: 'Are there FDA-approved pain relievers for cats?', answer: 'Only two NSAIDs are FDA-approved for cats, meloxicam and robenacoxib, both for short-term use around surgery. No NSAID is FDA-approved for long-term use in cats.' },
+  { question: 'Why does Vets.co not publish doses?', answer: 'The right dose depends on your pet\'s weight, the condition being treated, kidney and liver function and every other medication it takes. Each medication page explains what the drug does and what to watch for, then sends you to the prescribing veterinarian for the dose.' },
+]
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'vets-co',
@@ -153,6 +165,16 @@ export default function MedicationsHubPage() {
         </p>
       </div>
 
+      <div className="px-container-sm sm:px-container pt-8 max-w-6xl">
+        <LastUpdated date="2026-10-13" />
+        <div className="rounded-lg border-l-4 border-brand-primary bg-brand-surface p-5 mt-4" data-testid="short-answer">
+          <h2 className="font-display text-lg font-bold mb-2">The short answer</h2>
+          <p className="text-base leading-relaxed text-brand-text-mid m-0">
+            Don&apos;t give your pet any medication, including a human pain reliever, until you&apos;ve talked to your veterinarian. Human NSAIDs such as aspirin, ibuprofen and naproxen can act differently in pets, and acetaminophen is fatal to cats (<a href={FDA_PAIN}>FDA</a>). Each page below explains what a prescribed medication treats, its side effects and the monitoring it needs; your vet sets the dose.
+          </p>
+        </div>
+      </div>
+
       <div className="px-container-sm sm:px-container pt-8">
         <StockImage manifestKey="vets-co:medications-hero" aspect="16:9" variant="wide" priority />
       </div>
@@ -286,11 +308,15 @@ export default function MedicationsHubPage() {
       </div>
 
       <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
-
-        <div className="max-w-content-wide mt-6">
+        <div className="max-w-content-wide pt-8">
+          <h2 id="faq" className="font-display text-xl font-bold text-brand-dark mb-4">Pet medication FAQ</h2>
+          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
+          <ArticleSourcesList title="Sources" sources={[
+            { label: 'Get the Facts about Pain Relievers for Pets', url: FDA_PAIN, publisher: 'U.S. FDA Center for Veterinary Medicine' },
+            { label: 'Animal Drugs @ FDA (approved animal drug labels)', url: 'https://animaldrugsatfda.fda.gov', publisher: 'U.S. FDA' },
+          ]} />
         </div>
-
-              </section>
+      </section>
     </>
   )
 }
