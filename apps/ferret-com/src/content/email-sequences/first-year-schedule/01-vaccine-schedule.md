@@ -26,6 +26,6 @@ Two vaccines matter in the first year: canine distemper and rabies. Both are cor
 
 ---
 
-*Sources: American Ferret Association (AFA) vaccine guidance; Association of Exotic Mammal Veterinarians (AEMV) clinical statements; Greenacre CB (2003), JAAHA, "Incidence of adverse events in ferrets vaccinated with distemper or rabies vaccine"; Quesenberry &amp; Carpenter, Ferrets, Rabbits, and Rodents (Saunders).*
+*Sources: American Ferret Association (AFA) vaccine guidance; Association of Exotic Mammal Veterinarians (AEMV) clinical statements; Greenacre CB (2003), JAAHA, "Incidence of adverse events in ferrets vaccinated with distemper or rabies vaccine"; Quesenberry &amp; Carpenter, Ferrets, Rabbits, and Rodents (Saunders) (general references; not checked against this email).*
 
 *Unsubscribe any time — link below.*

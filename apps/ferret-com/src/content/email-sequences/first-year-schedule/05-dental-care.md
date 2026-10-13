@@ -6,7 +6,7 @@ delay_after_signup: 35 days
 tag: first-year-schedule
 ---
 
-Ferrets accumulate plaque on kibble diets fast. Clinically meaningful tartar and gingivitis are commonly visible by age 2–3 — much earlier than in dogs or cats. By the time the disease is visible to the owner across the room, the underlying inflammation has usually been progressing for months. The *Journal of Exotic Pet Medicine* flags periodontal disease as one of the most under-treated conditions in pet ferrets.
+Ferrets accumulate plaque on kibble diets fast. Clinically meaningful tartar and gingivitis are commonly visible by age 2–3 — much earlier than in dogs or cats. By the time the disease is visible to the owner across the room, the underlying inflammation has usually been progressing for months.
 
 The first year is when you build the habit that prevents most of this.
 
@@ -32,6 +32,6 @@ The first year is when you build the habit that prevents most of this.
 
 ---
 
-*Sources: Journal of Exotic Pet Medicine; Quesenberry &amp; Carpenter, Ferrets, Rabbits, and Rodents; Association of Exotic Mammal Veterinarians (AEMV) dental statements.*
+*Sources: Journal of Exotic Pet Medicine; Quesenberry &amp; Carpenter, Ferrets, Rabbits, and Rodents; Association of Exotic Mammal Veterinarians (AEMV) dental statements (general references; not checked against this email).*
 
 *Unsubscribe any time — link below.*
