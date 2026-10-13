@@ -741,3 +741,14 @@ test('ferret fix OG1: og:image renders a real 1200x630 PNG', async ({ page, requ
   expect(body.readUInt32BE(16)).toBe(1200)
   expect(body.readUInt32BE(20)).toBe(630)
 })
+
+test('ferret fix FA1: travel pages lead with a Merck-sourced short answer and FAQ schema', async ({ page }) => {
+  for (const path of ['/care/travel-and-carriers', '/ownership/traveling-with-a-ferret']) {
+    await page.goto(path, { waitUntil: 'domcontentloaded' })
+    await expect(page.locator('.carloOS-article').filter({ hasText: 'Short answer' }).first(), path).toContainText('65°F to 75°F')
+    await expect(page.locator('a[href="https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/management-of-ferrets"]').first(), path).toBeAttached()
+    await expect(page.getByText('Can I leave a ferret in a parked car for a few minutes?').first(), path).toBeVisible()
+    const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
+    expect(ld, path).toContain('"FAQPage"')
+  }
+})
