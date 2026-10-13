@@ -31,6 +31,7 @@ const SOURCES = [
   { label: 'Quesenberry KE, Carpenter JW (eds.). Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery. 3rd ed. — ferret emergency presentation and critical-care chapters (general reference; not checked against this page)', url: 'https://www.elsevier.com/books/ferrets-rabbits-and-rodents/quesenberry/978-1-4160-6621-7', publisher: 'Elsevier/Saunders' },
   { label: 'Merck Veterinary Manual: Routine Health Care of Ferrets — emergency vs wait presentations', url: 'https://www.merckvetmanual.com/all-other-pets/ferrets/routine-health-care-for-ferrets', publisher: 'Merck Vet Manual' },
   { label: 'Association of Exotic Mammal Veterinarians (AEMV) — exotic-mammal emergency care and practitioner directory (general reference; not checked against this page)', url: 'https://aemv.org', publisher: 'AEMV' },
+  { label: 'Merck Veterinary Manual: When to See a Veterinarian (general guidance for pets)', url: 'https://www.merckvetmanual.com/multimedia/table/when-to-see-a-veterinarian', publisher: 'Merck Veterinary Manual' },
   { label: 'ASPCA Animal Poison Control Center: Pet Poison Information', url: 'https://www.aspca.org/pet-care/aspca-poison-control', publisher: 'ASPCA' },
   { label: 'AVMA: Emergency Care for Pets — Warning Signs', url: 'https://www.avma.org/resources-tools/pet-owners/emergency-care', publisher: 'AVMA' },
 ]
@@ -193,6 +194,22 @@ export default function IsThisAFerretEmergencyPage() {
         <span className="text-brand-text-mid font-medium">Is This a Ferret Emergency?</span>
       </nav>
 
+
+      {/* Short answer — answer-first opening for readers and search */}
+      <section className="px-container-sm sm:px-container pt-8">
+        <div className="max-w-3xl rounded-lg border-l-4 border-brand-primary bg-brand-surface p-5" data-testid="short-answer">
+          <h2 className="font-display text-lg font-bold mb-2">The short answer</h2>
+          <p className="text-base leading-relaxed text-brand-text-mid m-0">
+            Treat it as an emergency and see a vet immediately if your ferret has difficulty or shallow breathing,
+            heavy bleeding, seizures, staggering, extreme lethargy, bluish or white gums, is straining but cannot pass
+            urine or stool, or has not eaten or drunk for 24 hours. Vomiting or diarrhea lasting more than 24 hours, or
+            a sudden change in behavior, needs a vet within 24 hours (<a href="https://www.merckvetmanual.com/multimedia/table/when-to-see-a-veterinarian">Merck
+            Veterinary Manual, When to See a Veterinarian</a>, general guidance for pets). Merck also advises locating an
+            after-hours clinic that treats ferrets before you need one
+            (<a href="https://www.merckvetmanual.com/all-other-pets/ferrets/routine-health-care-for-ferrets">Merck, Routine Health Care of Ferrets</a>).
+          </p>
+        </div>
+      </section>
 
       {/* PERSISTENT TOP BANNER — renders above the checklist on every state */}
       <section className="px-container-sm sm:px-container pt-section">

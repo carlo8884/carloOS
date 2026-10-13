@@ -973,6 +973,19 @@ test('ferret fix TX1: generic textbook and journal citations are labelled as unc
   }
 })
 
+test('ferret fix AO2: emergency and readiness tools open with a sourced short answer', async ({ page }) => {
+  for (const [path, href] of [
+    ['/tools/is-this-a-ferret-emergency', 'https://www.merckvetmanual.com/multimedia/table/when-to-see-a-veterinarian'],
+    ['/tools/readiness-quiz', 'https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf'],
+  ]) {
+    await page.goto(path, { waitUntil: 'domcontentloaded' })
+    const box = page.getByTestId('short-answer')
+    await expect(box, path).toBeVisible()
+    await expect(box.getByRole('heading', { name: 'The short answer' })).toBeVisible()
+    await expect(box.locator(`a[href="${href}"]`)).toBeVisible()
+  }
+})
+
 test('ferret fix TX3: health hub labels unchecked general references', async ({ page }) => {
   await page.goto('/health', { waitUntil: 'domcontentloaded' })
   const text = (await page.locator('main').innerText()).replace(/\s+/g, ' ')
