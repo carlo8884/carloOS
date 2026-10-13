@@ -32,7 +32,7 @@ The existing `first-year-schedule` sequence is the model for how a specific sequ
 
 ## Rules baked into every email
 
-- **Sourced bodies.** Quesenberry & Carpenter (*Ferrets, Rabbits, and Rodents*), AFA, AEMV, exotic-pet veterinary literature.
+- **Sourced bodies.** Quesenberry & Carpenter (*Ferrets, Rabbits, and Rodents*), AFA, AEMV, exotic-pet veterinary literature. These are general references and have not been checked against each email; label them "general references; not checked against this email" in copy.
 - **No first-person clinical voice.** Ferret.com Editorial only. Medical questions defer to "your exotic-pet vet" — never give individualized advice.
 - **Health pages: supportive supplies only**, never treatment claims (matches QC §1 and the existing `/health/aging-ferret-care` framing).
 - **One CTA per email** — link to a Ferret.com reference page.

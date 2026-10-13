@@ -9,7 +9,7 @@ You signed up on Ferret.com. Welcome.
 
 Ferret.com is a working exotic-pet reference for *Mustela putorius furo*, the domestic ferret — a strict obligate carnivore with a 100-foot-shorter GI tract than a cat, dental and endocrine disease profiles unique to the species, and husbandry demands closer to a small dog than to a rodent or rabbit. Standard small-mammal advice gets a lot wrong about ferrets; this site is the corrected reference.
 
-Drawn from Quesenberry & Carpenter, *Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery*, the American Ferret Association owner-education materials, the Association of Exotic Mammal Veterinarians, and peer-reviewed exotic-pet veterinary literature.
+Drawn from Quesenberry & Carpenter, *Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery*, the American Ferret Association owner-education materials, the Association of Exotic Mammal Veterinarians, and peer-reviewed exotic-pet veterinary literature (general references; not checked against this email).
 
 For anything specific to your ferret, defer to an **exotic-pet vet** — ideally an Association of Exotic Mammal Veterinarians (AEMV) member or a clinician with ABVP certification in Exotic Companion Mammal practice. Standard small-animal practitioners often have limited ferret experience.
 

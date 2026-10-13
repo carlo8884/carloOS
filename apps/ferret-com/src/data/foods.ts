@@ -69,8 +69,8 @@ export interface FoodEntry {
 
 const ASPCA = 'ASPCA Animal Poison Control Center'
 const PPH = 'Pet Poison Helpline'
-const QC = 'Quesenberry & Carpenter, Ferrets, Rabbits, and Rodents (clinical reference)'
-const VCEAP = 'Veterinary Clinics of North America: Exotic Animal Practice'
+const QC = 'Quesenberry & Carpenter, Ferrets, Rabbits, and Rodents (general reference; not checked against this entry)'
+const VCEAP = 'Veterinary Clinics of North America: Exotic Animal Practice (general reference; not checked against this entry)'
 
 export const FERRET_FOODS: FoodEntry[] = [
   // ---------------- TOXIC ----------------

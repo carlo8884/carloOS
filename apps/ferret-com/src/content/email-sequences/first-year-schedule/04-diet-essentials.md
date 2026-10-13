@@ -8,7 +8,7 @@ tag: first-year-schedule
 
 Diet is the single largest controllable input on a ferret's lifespan. It is also the place where new owners — given mostly good intentions — accidentally do the most damage, usually by treating a ferret as a small cat and feeding cat food, or worse, by offering fruit and "ferret treats" sweetened with sugar.
 
-**The macronutrient targets** (widely cited in exotic-pet veterinary references including Quesenberry &amp; Carpenter and the *Journal of Exotic Pet Medicine*):
+**The macronutrient targets** (from exotic-pet veterinary references including Quesenberry &amp; Carpenter and the *Journal of Exotic Pet Medicine*; general references, not checked against this email):
 
 - **Protein: 32–40%** dry-matter basis, primarily animal-sourced
 - **Fat: 18–22%** dry-matter basis, animal-sourced (ferrets metabolize fat as their primary energy substrate)
@@ -42,6 +42,6 @@ Diet is the single largest controllable input on a ferret's lifespan. It is also
 
 ---
 
-*Sources: Quesenberry &amp; Carpenter, Ferrets, Rabbits, and Rodents; Journal of Exotic Pet Medicine; Veterinary Clinics of North America: Exotic Animal Practice; American Ferret Association (AFA) nutrition guidance.*
+*Sources: Quesenberry &amp; Carpenter, Ferrets, Rabbits, and Rodents; Journal of Exotic Pet Medicine; Veterinary Clinics of North America: Exotic Animal Practice; American Ferret Association (AFA) nutrition guidance (general references; not checked against this email).*
 
 *Unsubscribe any time — link below.*

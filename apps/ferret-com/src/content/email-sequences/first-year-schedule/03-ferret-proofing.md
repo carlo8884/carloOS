@@ -40,6 +40,6 @@ A ferret-proofed room is not the same as a baby-proofed room. The hazard profile
 
 ---
 
-*Sources: Mehler SJ and Bennett RA (2001), gastrointestinal foreign body retrieval in ferrets, JAAHA; Quesenberry &amp; Carpenter, Ferrets, Rabbits, and Rodents; American Ferret Association (AFA) safety guidance.*
+*Sources: Mehler SJ and Bennett RA (2001), gastrointestinal foreign body retrieval in ferrets, JAAHA; Quesenberry &amp; Carpenter, Ferrets, Rabbits, and Rodents; American Ferret Association (AFA) safety guidance (general references; not checked against this email).*
 
 *Unsubscribe any time — link below.*
