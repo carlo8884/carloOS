@@ -1,26 +1,44 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, ShopCtas, LastUpdated } from '@carloOS/ui'
+import { buildMetadata, FAQAccordion, CalloutBox, ArticleLayout, CrossPortfolioCard, RelatedLinks, ShopCtas, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
-export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Intestinal Parasites in Dogs — Roundworms, Hookworms | Vets.co', description: 'Annual fecal testing detects roundworms, hookworms, whipworms, coccidia, and Giardia before they cause clinical disease.', path: '/health/intestinal-parasites', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Intestinal Parasites in Dogs — Roundworms, Hookworms | Vets.co', description: 'Regular fecal testing detects roundworms, hookworms, whipworms, coccidia, and Giardia before they cause clinical disease.', path: '/health/intestinal-parasites', type: 'article' })
 const SOURCES = [
   { label: 'Companion Animal Parasite Council: Ascarid (roundworm) guidelines', url: 'https://capcvet.org/guidelines/ascarid/', publisher: 'CAPC' },
   { label: 'Companion Animal Parasite Council: Hookworms', url: 'https://capcvet.org/guidelines/hookworms/', publisher: 'CAPC' },
   { label: 'Companion Animal Parasite Council: Giardia', url: 'https://capcvet.org/guidelines/giardia/', publisher: 'CAPC' },
   { label: 'CDC: About Toxocariasis', url: 'https://www.cdc.gov/toxocariasis/about/index.html', publisher: 'CDC' },
 ]
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Intestinal Parasites in Dogs', description: 'Roundworms, hookworms, whipworms, Giardia — testing, treatment, and zoonotic risk.', url: 'https://vets.co/health/intestinal-parasites', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-12T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Intestinal Parasites in Dogs', description: 'Roundworms, hookworms, whipworms, Giardia — testing, treatment, and zoonotic risk.', url: 'https://vets.co/health/intestinal-parasites', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-13T00:00:00Z' ,
   citation: SOURCES,
 })
 const med = buildMedicalWebPageSchema({ name: 'Intestinal Parasites in Dogs', description: 'Diagnosis and treatment of common intestinal parasites in dogs.', url: 'https://vets.co/health/intestinal-parasites', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-07' })
 const combined = combineSchemas(schema, med)
+const FAQS = [
+  {
+    "question": "How often should my dog have a fecal test?",
+    "answer": "CAPC recommends testing for intestinal parasites at least four times in the first year of life and at least two times per year in adult dogs, depending on health and lifestyle."
+  },
+  {
+    "question": "When should puppies be dewormed?",
+    "answer": "CAPC advises deworming puppies starting at 2 weeks of age and repeating every 2 weeks until regular broad-spectrum parasite control begins. Nursing mothers should be treated at the same time as their litters."
+  },
+  {
+    "question": "Can I catch worms from my dog?",
+    "answer": "Some can spread to people. CAPC says Toxocara roundworm infection is most common in children who swallow eggs from contaminated soil, and animal hookworms are the most common cause of cutaneous larva migrans, itchy winding skin lesions. Prompt removal of feces and keeping dogs on parasite control reduce the risk."
+  },
+  {
+    "question": "What are the signs of Giardia in dogs?",
+    "answer": "Per CAPC, most Giardia infections cause no signs. When signs occur they include diarrhea that may be sudden, intermittent, or chronic, sometimes with gas, vomiting, or mucus in the stool, and in severe cases lethargy, poor appetite, and weight loss. CAPC recommends bathing the dog on the last day of treatment and removing feces daily."
+  }
+]
 export default function IntestinalParasitesPage() {
   return (
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: 'Intestinal Parasites in Dogs', subtitle: 'Intestinal parasites are among the most common findings in routine fecal testing — and most infected dogs show no clinical signs until the burden becomes significant. Annual fecal testing catches parasites before disease develops, and several common canine parasites are zoonotic — transmissible to humans — making routine testing a family health issue, not just a pet health issue.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', publishedAt: 'May 2025', readTime: '9 min',}}
+        hero={{ title: 'Intestinal Parasites in Dogs', subtitle: 'Intestinal parasites are among the most common findings in routine fecal testing — and most infected dogs show no clinical signs until the burden becomes significant. Routine fecal testing catches parasites before disease develops, and several common canine parasites are zoonotic — transmissible to humans — making routine testing a family health issue, not just a pet health issue.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', publishedAt: 'May 2025', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Intestinal Parasites', href: '/health/intestinal-parasites' }]}
         relatedLinks={[
           { title: 'Health Conditions', href: '/health', category: 'Hub' },
@@ -45,11 +63,15 @@ export default function IntestinalParasitesPage() {
 </>}
       >
         <div className="carloOS-article">
-          <LastUpdated date="2026-10-12" />
+          <LastUpdated date="2026-10-13" />
+
+          <CalloutBox variant="info" title="Short answer">
+            <p>Many dogs with intestinal parasites show no signs, so testing matters. The Companion Animal Parasite Council (CAPC) recommends fecal testing at least four times in a puppy's first year and at least twice a year in adults, deworming puppies from 2 weeks of age every 2 weeks, and year-round broad-spectrum parasite control for adult dogs. Pick up feces promptly: roundworms and hookworms can infect people, especially children. Source: <a href="https://capcvet.org/guidelines/ascarid/">Companion Animal Parasite Council</a>.</p>
+          </CalloutBox>
 
           <h2>Roundworms — The Most Common and Zoonotic</h2>
           <p>Toxocara canis (roundworm) is the most commonly found intestinal parasite in dogs and one of the most important zoonotic parasites worldwide. Adult roundworms live in the small intestine. Puppies are often infected in utero or through nursing — almost all puppies are born with roundworm larvae transmitted transplacentally. Clinical signs in heavily infected puppies: pot-bellied appearance, dull coat, diarrhea, and in severe cases, intestinal obstruction. Adult dogs with small burdens often show no signs.</p>
-          <p><strong>Zoonotic risk:</strong> Toxocara eggs are shed in dog feces and become infective in the environment after 2–4 weeks. Children playing in contaminated soil can accidentally ingest eggs — larvae migrate through human tissues (visceral larva migrans) and in rare cases reach the eyes (ocular larva migrans), causing vision damage. This is why children&apos;s sandboxes near dog areas and handwashing after dog contact are genuine public health recommendations. A hinged cedar sandbox cover is how a kids&apos; sandbox next to a dog area stays a lidded box instead of an open soil tray — it is not a zippered waterproof dog duvet cover and it is not a quilted disposable underpad. A metal-jaw dog waste scooper is how yard feces leave the grass before that 2–4 week infective window — it is not a dog poop bag, not a fecal-sample collection kit, and not a pasture manure rake. An outdoor garden hand-wash station is how handwashing after dog contact is a yard-side wash instead of a hoped-for indoor sink — it is not powder-free nitrile exam gloves and it is not disposable nitrile gloves. Annual fecal testing and regular deworming are a household health measure, not just veterinary maintenance. A sandbox cover, a waste scooper, and a yard hand-wash station do not diagnose intestinal parasites and they do not replace that fecal test.</p>
+          <p><strong>Zoonotic risk:</strong> Toxocara eggs are shed in dog feces and become infective in the environment after 2–4 weeks. Children playing in contaminated soil can accidentally ingest eggs — larvae migrate through human tissues (visceral larva migrans) and in rare cases reach the eyes (ocular larva migrans), causing vision damage. This is why children&apos;s sandboxes near dog areas and handwashing after dog contact are genuine public health recommendations. A hinged cedar sandbox cover is how a kids&apos; sandbox next to a dog area stays a lidded box instead of an open soil tray — it is not a zippered waterproof dog duvet cover and it is not a quilted disposable underpad. A metal-jaw dog waste scooper is how yard feces leave the grass before that 2–4 week infective window — it is not a dog poop bag, not a fecal-sample collection kit, and not a pasture manure rake. An outdoor garden hand-wash station is how handwashing after dog contact is a yard-side wash instead of a hoped-for indoor sink — it is not powder-free nitrile exam gloves and it is not disposable nitrile gloves. Routine fecal testing and regular deworming are a household health measure, not just veterinary maintenance. A sandbox cover, a waste scooper, and a yard hand-wash station do not diagnose intestinal parasites and they do not replace that fecal test.</p>
           <p>Treatment: fenbendazole (Panacur) 5 days, repeated at 2-3 weeks. Pyrantel pamoate (in most monthly heartworm preventives) prevents reinfestation with monthly dosing. All puppies should be dewormed starting at 2 weeks of age, repeated every 2 weeks until 8 weeks, then monthly until 6 months. Fenbendazole, pyrantel, praziquantel, and metronidazole are clinic prescriptions, not product links.</p>
 
           <h2>Hookworms — Blood Loss and Skin Penetration</h2>
@@ -60,8 +82,8 @@ export default function IntestinalParasitesPage() {
           <p>Giardia duodenalis is a protozoan parasite (not a worm) that causes intermittent soft or liquid diarrhea that may be mucoid, fatty-appearing, and foul-smelling. Many infected dogs are asymptomatic. Diagnosis requires specific Giardia antigen testing or PCR — standard fecal flotation misses Giardia cysts in most cases. Treatment: metronidazole (5-7 days) combined with fenbendazole (5 days) has better clearance rates than either alone. Environmental decontamination is important — Giardia cysts survive in the environment and resist standard disinfectants (dilute bleach 1:32 or quaternary ammonium compounds are effective). An outdoor garden hand-wash station is how a yard-side wash happens after handling an infected dog or cleaning diarrhea — it is not a pet-safe kennel disinfectant spray and it is not an accelerated hydrogen peroxide disinfectant. Hand-washing gear does not clear Giardia from a dog.</p>
           <p>Giardia is considered potentially zoonotic to humans — the strain (assemblage) in dogs most commonly is assemblage C or D, which has low transmissibility to humans, but immunocompromised people should exercise standard hygiene precautions around infected dogs.</p>
 
-          <h2>Annual Fecal Testing — The Standard of Care</h2>
-          <p>The Companion Animal Parasite Council (CAPC) recommends fecal testing at least annually for all dogs, and 2-4 times per year for puppies and dogs in high-exposure environments (doggy daycare, boarding facilities, dog parks, multiple-dog households, hunting dogs). The fecal flotation detects roundworm, hookworm, whipworm, coccidia, and tapeworm eggs. A separate Giardia antigen ELISA or PCR is required to detect Giardia — it is not part of standard fecal flotation. Most annual wellness fecal tests include both. A waste scooper is yard hygiene; it is not a fecal-sample collection kit and it does not replace the laboratory flotation.</p>
+          <h2>Routine Fecal Testing — The Standard of Care</h2>
+          <p>The <a href="https://capcvet.org/guidelines/ascarid/">Companion Animal Parasite Council (CAPC)</a> recommends testing for intestinal parasites at least four times in a puppy&apos;s first year and at least two times per year in adult dogs, depending on health and lifestyle. The fecal flotation detects roundworm, hookworm, whipworm, coccidia, and tapeworm eggs. A separate Giardia antigen ELISA or PCR is required to detect Giardia — it is not part of standard fecal flotation. Many wellness fecal panels include both. A waste scooper is yard hygiene; it is not a fecal-sample collection kit and it does not replace the laboratory flotation.</p>
 
           <h2 id="kit">Supplies named on this page</h2>
           <p>
@@ -169,6 +191,9 @@ export default function IntestinalParasitesPage() {
               />
           </div>
           </div>
+          <h2 id="faq">Frequently asked questions</h2>
+          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
+
 
           <ArticleSourcesList sources={SOURCES} />
         </div>

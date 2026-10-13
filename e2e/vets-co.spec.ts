@@ -913,6 +913,23 @@ test('vets fix SD2: Article schema omits image instead of shipping an empty stri
   }
 })
 
+test('vets fix AF7: parasites and cognitive dysfunction pages lead with sourced short answers, FAQ schema, and CAPC testing frequency', async ({ page }) => {
+  const cases: Array<[string, string, string, string]> = [
+    ['/health/intestinal-parasites', 'at least twice a year in adults', 'How often should my dog have a fecal test?', 'https://capcvet.org/guidelines/ascarid/'],
+    ['/health/cognitive-dysfunction', 'around nine years of age', 'Is there medication for dog dementia?', 'https://www.vet.cornell.edu/departments-centers-and-institutes/riney-canine-health-center/canine-health-topics/cognitive-dysfunction-syndrome'],
+  ]
+  for (const [path, short, question, href] of cases) {
+    await page.goto(path, { waitUntil: 'domcontentloaded' })
+    await expect(page.locator('.carloOS-article').filter({ hasText: 'Short answer' }).first(), path).toContainText(short)
+    await expect(page.locator(`a[href="${href}"]`).first(), path).toBeAttached()
+    await expect(page.getByText(question).first(), path).toBeVisible()
+    const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
+    expect(ld, path).toContain('"FAQPage"')
+  }
+  await page.goto('/health/intestinal-parasites', { waitUntil: 'domcontentloaded' })
+  await expect(page.locator('body')).not.toContainText('fecal testing at least annually')
+})
+
 test('vets fix SM2: directory sitemap shards carry no build-time lastmod', async ({ request }) => {
   for (const id of [1, 2]) {
     const xml = await (await request.get(`/sitemap/${id}.xml`)).text()

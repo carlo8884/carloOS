@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, ShopCtas, LastUpdated } from '@carloOS/ui'
+import { buildMetadata, FAQAccordion, ArticleLayout, CrossPortfolioCard, RelatedLinks, ShopCtas, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Canine Cognitive Dysfunction — Dog Dementia Signs | Vets.co', description: 'CDS (dog dementia) affects 22% of dogs 9-11 years. Disorientation, sleep disruption, house soiling, and anxiety. Purina Bright Mind, Anipryl.', path: '/health/cognitive-dysfunction', type: 'article' })
@@ -9,11 +9,29 @@ const SOURCES = [
   { label: 'Madari A et al. Assessment of severity and progression of canine cognitive dysfunction syndrome using the CAnine DEmentia Scale (CADES). Appl Anim Behav Sci. 2015;171:138-145.', url: 'https://doi.org/10.1016/j.applanim.2015.08.034', publisher: 'Applied Animal Behaviour Science' },
   { label: 'Landsberg GM et al. Cognitive dysfunction syndrome: a disease of canine and feline brain aging. Vet Clin Small Anim. 2012;42(4):749-768.', url: 'https://doi.org/10.1016/j.cvsm.2012.04.003', publisher: 'Veterinary Clinics of North America' },
 ]
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Cognitive Dysfunction Syndrome in Dogs', description: 'Signs, diagnosis, and management of canine cognitive dysfunction syndrome (dog dementia).', url: 'https://vets.co/health/cognitive-dysfunction', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-12T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Cognitive Dysfunction Syndrome in Dogs', description: 'Signs, diagnosis, and management of canine cognitive dysfunction syndrome (dog dementia).', url: 'https://vets.co/health/cognitive-dysfunction', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-13T00:00:00Z' ,
   citation: SOURCES,
 })
 const med = buildMedicalWebPageSchema({ name: 'Cognitive Dysfunction Syndrome in Dogs', description: 'Signs, diagnosis, and treatment of CDS — canine cognitive dysfunction.', url: 'https://vets.co/health/cognitive-dysfunction', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-07' })
 const combined = combineSchemas(schema, med)
+const FAQS = [
+  {
+    "question": "How is dog dementia diagnosed?",
+    "answer": "Cornell says CDS is diagnosed from the clinical signs after your vet rules out conditions that look similar, such as pain, arthritis, seizures, other illness, and vision or hearing loss, using an exam plus blood and urine tests. MRI is sometimes used to rule out a brain tumor."
+  },
+  {
+    "question": "Is there medication for dog dementia?",
+    "answer": "Selegiline is approved for treating CDS in North America, according to Cornell University College of Veterinary Medicine. Your vet may also prescribe medication for specific problems such as anxiety."
+  },
+  {
+    "question": "Can diet help a dog with cognitive dysfunction?",
+    "answer": "Cornell notes that certain prescription diets rich in antioxidants and fatty acids are used to support the brain, alongside regular play, interactive toys, and exercise. Ask your vet before starting any supplement."
+  },
+  {
+    "question": "Is cognitive dysfunction just normal aging?",
+    "answer": "No. Cornell says CDS may be underdiagnosed because changes come on slowly and owners assume they are normal aging. Tell your vet about new behavior changes in an older dog, since early intervention helps."
+  }
+]
 export default function CognitiveDysfunctionPage() {
   return (
     <>
@@ -44,8 +62,12 @@ export default function CognitiveDysfunctionPage() {
       >
         <div className="carloOS-article">
 
-          <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-09-05T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-12" />
+          <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-10-13T00:00:00Z" reviewedBy="Editorial team" />
+          <LastUpdated date="2026-10-13" />
+
+          <CalloutBox variant="info" title="Short answer">
+            <p>Canine cognitive dysfunction syndrome (CDS) is an age-related brain disease similar to Alzheimer's disease that can start around nine years of age or older. Signs include getting lost or stuck in familiar places, changes in interaction, night wandering, house-soiling, less interest in play, new anxiety, and forgetting known commands. There is no cure, but early diet, enrichment, and medication can slow progression and improve quality of life. Source: <a href="https://www.vet.cornell.edu/departments-centers-and-institutes/riney-canine-health-center/canine-health-topics/cognitive-dysfunction-syndrome">Cornell University College of Veterinary Medicine</a>.</p>
+          </CalloutBox>
 
           <h2>The DISHAA Framework</h2>
           <DropCap>The DISHAA acronym provides a standardized clinical assessment for CDS — Disorientation, Interactions (changes), Sleep/wake cycle changes, Housetraining regression, Activity changes, and Anxiety. Any 1–2 signs from different categories suggest possible CDS; 3+ signs across multiple categories is highly consistent with the diagnosis. The DISHAA assessment is completed by the owner based on observations at home — it provides more clinically relevant information than what the veterinarian observes in the exam room (dogs often appear more alert during veterinary visits due to the stimulation).</DropCap>
@@ -107,6 +129,9 @@ export default function CognitiveDysfunctionPage() {
               />
           </div>
           </div>
+          <h2 id="faq">Frequently asked questions</h2>
+          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
+
 
           <ArticleSourcesList sources={SOURCES} />
         </div>
