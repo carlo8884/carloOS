@@ -22,7 +22,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-10-05T00:00:00Z',
-  modifiedAt: '2026-10-12T00:00:00Z',
+  modifiedAt: '2026-10-13T00:00:00Z',
 })
 
 const FAQS = [
@@ -82,7 +82,7 @@ export default function NovemberDecemberGiftGuidePage() {
       priceAsOf="2026-10-10"
     >
       <div className="carloOS-article">
-          <LastUpdated date="2026-10-12" />
+          <LastUpdated date="2026-10-13" />
         <p>November and December gifts for a ferret are usually a small supply, a bag of food, or a cage someone has already measured. The <Link href="/reviews">reviews hub</Link> points at those pages. This guide only lists cards that name a product and a shop link. Where a card says see current price, this page says the same. The cage review’s $, $$, and $$$ tiers stay symbols. Inventing a dollar range for those symbols would be a new price, and this page does not do that.</p>
         <p>Seasonal coat and harness fit already have guides. The <Link href="/reviews/fall-molt-brush-guide">fall molt guide</Link> is the brush page. The <Link href="/reviews/winter-harness-fit-guide">winter harness guide</Link> is the fit check. They are not repeated as new products here.</p>
         <h2>Smaller gifts</h2>
@@ -110,7 +110,7 @@ export default function NovemberDecemberGiftGuidePage() {
               </tr>
               <tr className="border-b border-brand-border">
                 <td className="p-3">$8–14</td>
-                <td className="p-3 font-bold">Marshall ferret shampoo<TableShopLink quietUntilTag href={`/go/marshall/ferret+shampoo?s=${SOURCE}`} product="Marshall ferret shampoo" /></td>
+                <td className="p-3 font-bold">Marshall ferret shampoo</td>
                 <td className="p-3"><Link href="/care/bathing-and-grooming">Grooming page</Link></td>
               </tr>
               <tr className="border-b border-brand-border">
@@ -120,12 +120,12 @@ export default function NovemberDecemberGiftGuidePage() {
               </tr>
               <tr className="border-b border-brand-border">
                 <td className="p-3">See current price</td>
-                <td className="p-3 font-bold">Marshall sleep sack<TableShopLink quietUntilTag href={`/go/marshall/ferret+hammock?s=${SOURCE}`} product="Marshall sleep sack" /></td>
+                <td className="p-3 font-bold">Marshall sleep sack</td>
                 <td className="p-3"><Link href="/care/cage-setup">Cage setup</Link></td>
               </tr>
               <tr className="border-b border-brand-border">
                 <td className="p-3">$15–25 for 4 pounds</td>
-                <td className="p-3 font-bold">Marshall Premium<TableShopLink quietUntilTag href={`/go/marshall/premium-ferret-diet?s=${SOURCE}`} product="Marshall Premium" /></td>
+                <td className="p-3 font-bold">Marshall Premium</td>
                 <td className="p-3"><Link href="/diet/best-ferret-kibble">Kibble review</Link></td>
               </tr>
               <tr className="border-b border-brand-border">
@@ -141,7 +141,7 @@ export default function NovemberDecemberGiftGuidePage() {
             </tbody>
           </table>
         </div>
-        <ComparisonFoot updated="2026-10-12" />
+        <ComparisonFoot updated="2026-10-13" />
         <EmailCapture
           variant="inline"
           siteId="ferret-com"

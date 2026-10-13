@@ -64,7 +64,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-05-29T00:00:00Z',
-  modifiedAt: '2026-05-29T00:00:00Z',
+  modifiedAt: '2026-10-13T00:00:00Z',
 
   citation: SOURCES,
 })
@@ -184,7 +184,7 @@ export default function FerretLitterTrainingPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-05-29"
-            updatedAt="2026-05-29"
+            updatedAt="2026-10-13"
             reviewedBy="Editorial team"
           />
 
@@ -551,10 +551,6 @@ export default function FerretLitterTrainingPage() {
             cons={['Splashes can still reach the wall behind a heavily-used pan', 'Plastic surface shows wear in heavy households']}
             price="see current price"
             priceNote="dated 2026-05-31."
-            ctaText="Find Marshall lock-on litter pans"
-            ctaHref="/go/marshall/lock+on+litter+pan?s=care-litter-training"
-            ctaAffiliateProgram="marshall"
-            ctaAffiliateProduct="lock+on+litter+pan"
           />
           <ReviewCard quietUntilTag
             id="recycled-paper-pellet"

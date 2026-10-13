@@ -55,7 +55,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-10-13T00:00:00Z',
 
   citation: SOURCES,
 })
@@ -161,7 +161,7 @@ export default function LeashAndHarnessTrainingPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-01"
+            updatedAt="2026-10-13"
           />
 
           <DropCap>
@@ -339,10 +339,6 @@ export default function LeashAndHarnessTrainingPage() {
             cons={['Thin straps on the small size require careful fitting', 'Re-check fit every few weeks as body weight shifts']}
             price="see current price"
             priceNote="dated 2026-06-04."
-            ctaText="Find Marshall harness and lead sets"
-            ctaHref="/go/marshall/harness+lead?s=behavior-leash-harness"
-            ctaAffiliateProgram="marshall"
-            ctaAffiliateProduct="harness+lead"
           />
           <ReviewCard quietUntilTag
             id="ferret-vest-harness"
