@@ -1,19 +1,34 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, ShopCtas, LastUpdated } from '@carloOS/ui'
+import { buildMetadata, FAQAccordion, CalloutBox, ArticleLayout, CrossPortfolioCard, RelatedLinks, ShopCtas, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: '14 Signs Your Dog Is in Pain — Subtle | Vets.co', description: 'Dogs hide pain well. 14 signs — from obvious limping to subtle changes in posture, appetite, and behavior — that indicate a dog is experiencing pain.', path: '/health/pain-signs-dogs', type: 'article' })
 const SOURCES = [
+  { label: 'Merck Veterinary Manual: Recognizing and Assessing Pain in Animals (pet owner version)', url: 'https://www.merckvetmanual.com/special-pet-topics/pain-management/recognizing-and-assessing-pain-in-animals', publisher: 'Merck Veterinary Manual' },
   { label: 'WSAVA: Pain Management Guidelines', url: 'https://wsava.org/global-guidelines/pain-guidelines/', publisher: 'WSAVA' },
   { label: 'AAHA: Pain Management Guidelines for Dogs and Cats', url: 'https://www.aaha.org/aaha-guidelines/pain-management/', publisher: 'AAHA' },
   { label: 'Merck Veterinary Manual: Signs of Pain in Animals', url: 'https://www.merckvetmanual.com/therapeutics/pain-assessment-and-management/overview-of-pain-assessment-and-management-in-animals', publisher: 'Merck Vet Manual' },
 ]
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Signs Your Dog Is in Pain', description: '14 pain indicators in dogs — subtle and obvious signs of chronic and acute pain.', url: 'https://vets.co/health/pain-signs-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-12T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Signs Your Dog Is in Pain', description: '14 pain indicators in dogs — subtle and obvious signs of chronic and acute pain.', url: 'https://vets.co/health/pain-signs-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-13T00:00:00Z' ,
   citation: SOURCES,
 })
 const med = buildMedicalWebPageSchema({ name: 'Signs Your Dog Is in Pain', description: 'Subtle and obvious pain indicators in dogs.', url: 'https://vets.co/health/pain-signs-dogs', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-07' })
 const combined = combineSchemas(schema, med)
+const FAQS = [
+  {
+    "question": "Can a dog be in pain and still wag its tail?",
+    "answer": "Yes. The Merck Veterinary Manual notes that some pets hide pain well, and a dog might still wag its tail and greet people in spite of being in pain. Changes from what is normal for your dog are the better guide."
+  },
+  {
+    "question": "What are signs of chronic pain in dogs?",
+    "answer": "Merck says chronic pain is usually harder to notice than sudden pain. Decreased activity or appetite, weight loss, or poor grooming don't always mean pain, but they do show something is wrong. Your description of how your dog acts around the family helps your vet assess it."
+  },
+  {
+    "question": "How do vets tell if a dog is in pain?",
+    "answer": "Vets use vital signs, behavior changes, pain scales, and the animal's history, according to Merck. A dog with chronic pain can have normal vital signs, and if a dog becomes more active after pain medicine, that suggests pain was behind the behavior change."
+  }
+]
 const SIGNS = [
   { sign: 'Changes in posture', detail: 'A hunched back, tucked abdomen, or a stance with weight shifted away from one limb indicates pain. Dogs with abdominal pain adopt a "praying position" (front down, rear elevated). Hunched posture in a dog that normally stands upright is significant. An egg-crate foam dog kennel pad is how a dog that left the couch or bed for the floor gets a surface you can watch — hunched, tucked, or weight-shifted — without guessing from carpet pile. It is not an orthopedic dog bed, not a self-warming mat, and not a crate-training pad. It does not treat pain and it is not a diagnosis of abdominal disease.' },
   { sign: 'Facial expression changes', detail: 'Research has validated the "Dog Grimace Scale" — dogs in pain show: narrowed eyes or partially closed eyes, tense orbital area, rounded or drawn back ears, raised cheeks, and a tense muzzle. These subtle facial changes are observable before vocalization or behavioral changes occur. A printable grimace poster is a weak household tool; the observation that matters is the change from this dog\'s baseline face, not a shopped chart.' },
@@ -57,7 +72,11 @@ export default function PainSignsPage() {
 </>}
       >
         <div className="carloOS-article">
-          <LastUpdated date="2026-10-12" />
+          <LastUpdated date="2026-10-13" />
+
+          <CalloutBox variant="info" title="Short answer">
+            <p>Signs of pain in dogs include eating less, staying still or struggling to get comfortable, restlessness or anxiety, hiding or withdrawing, mood or personality changes, irritability, and licking, biting, or rubbing a sore spot, plus changes in movement, posture, or breathing. Some dogs still wag their tails and greet people while in pain, so tell your vet about any change from your dog's normal behavior. Source: <a href="https://www.merckvetmanual.com/special-pet-topics/pain-management/recognizing-and-assessing-pain-in-animals">Merck Veterinary Manual (pet owner version)</a>.</p>
+          </CalloutBox>
 
           <p className="text-base text-brand-text-mid leading-relaxed mb-8">A stoic dog in chronic pain may show none of the classic &quot;pain&quot; behaviors — no whimpering, no limping, no obvious distress. They adapt. They stop doing things that hurt, move differently, interact less. The change from baseline is what matters. Know your dog&apos;s normal. Household observation gear — an egg-crate foam dog kennel pad, carpeted wooden pet steps, a wide-platform veterinary floor scale — is how posture, stair reluctance, restlessness, and weight change stay visible.</p>
           {SIGNS.map((item, i) => (
@@ -96,6 +115,9 @@ export default function PainSignsPage() {
               />
           </div>
           </div>
+          <h2 id="faq">Frequently asked questions</h2>
+          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
+
 
           <ArticleSourcesList sources={SOURCES} />
         </div>

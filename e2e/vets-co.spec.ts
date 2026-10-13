@@ -937,3 +937,12 @@ test('vets fix SM2: directory sitemap shards carry no build-time lastmod', async
     expect(xml, `sitemap ${id}`).not.toContain('<lastmod>')
   }
 })
+
+test('vets fix AF8: pain signs page leads with a sourced short answer and FAQ schema', async ({ page }) => {
+  await page.goto('/health/pain-signs-dogs', { waitUntil: 'domcontentloaded' })
+  await expect(page.locator('.carloOS-article').filter({ hasText: 'Short answer' }).first()).toContainText('still wag their tails')
+  await expect(page.locator('a[href="https://www.merckvetmanual.com/special-pet-topics/pain-management/recognizing-and-assessing-pain-in-animals"]').first()).toBeAttached()
+  await expect(page.getByText('Can a dog be in pain and still wag its tail?').first()).toBeVisible()
+  const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
+  expect(ld).toContain('"FAQPage"')
+})
