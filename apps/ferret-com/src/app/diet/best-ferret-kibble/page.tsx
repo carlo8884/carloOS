@@ -376,7 +376,7 @@ export default function BestFerretKibblePage() {
 
           <h2 id="sources">Sources</h2>
           <p>
-            Ingredient and macronutrient guidance draws on Quesenberry KE and Carpenter JW (eds.), <em>Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery</em> (Saunders/Elsevier), and Carpenter JW, <em>Exotic Animal Formulary</em>. The carbohydrate–insulinoma association is discussed in the <em>Veterinary Clinics of North America: Exotic Animal Practice</em> literature on ferret endocrine disease. The American Ferret Association publishes an owner-facing nutrition statement consistent with this framework. Locate primary sources by title, as URLs change.
+            Ingredient and macronutrient guidance draws on Quesenberry KE and Carpenter JW (eds.), <em>Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery</em> (Saunders/Elsevier), and Carpenter JW, <em>Exotic Animal Formulary</em>. The carbohydrate–insulinoma association is discussed in the <em>Veterinary Clinics of North America: Exotic Animal Practice</em> literature on ferret endocrine disease. The American Ferret Association publishes an owner-facing nutrition statement consistent with this framework. Locate primary sources by title, as URLs change. We have not checked these general references against the claims on this page.
           </p>
           <p className="text-sm text-brand-text-light">
             This page describes how to evaluate a diet, not a prescription for an individual animal. A ferret with a diagnosed condition should have diet decisions supervised by a veterinarian familiar with ferrets.
@@ -384,8 +384,8 @@ export default function BestFerretKibblePage() {
                   <ArticleSourcesList title="Sources"
             sources={[
             { label: "Feeding Ferrets", url: "https://vcahospitals.com/know-your-pet/feeding-ferrets", publisher: "VCA Animal Hospitals" },
-            { label: "American Ferret Association", url: "https://www.ferret.org/", publisher: "AFA" },
-            { label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery", url: "https://www.elsevier.com/books/ferrets-rabbits-and-rodents/quesenberry/978-1-4160-6621-7", publisher: "Elsevier" },
+            { label: "American Ferret Association (general reference; not checked against this page)", url: "https://www.ferret.org/", publisher: "AFA" },
+            { label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery (general reference; not checked against this page)", url: "https://www.elsevier.com/books/ferrets-rabbits-and-rodents/quesenberry/978-1-4160-6621-7", publisher: "Elsevier" },
             { label: 'Merck Veterinary Manual: management of ferrets', url: 'https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/management-of-ferrets', publisher: 'Merck Veterinary Manual' },
             ]}
           />

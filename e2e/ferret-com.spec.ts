@@ -945,3 +945,12 @@ test('ferret fix WY1: no page carries a /go/wysong href, even a held one', async
     expect(await page.content(), path).not.toContain('/go/wysong')
   }
 })
+
+test('ferret fix TX2: find-a-vet drops the dead ferret-afa.org link and labels unchecked references', async ({ page }) => {
+  await page.goto('/find-an-exotic-vet', { waitUntil: 'domcontentloaded' })
+  expect(await page.content()).not.toContain('ferret-afa.org')
+  await expect(page.locator('#sources + ul a[href="https://aemv.org/certifications/"]')).toBeVisible()
+  await expect(page.locator('main')).toContainText('not checked against this page')
+  await page.goto('/diet/best-ferret-kibble', { waitUntil: 'domcontentloaded' })
+  await expect(page.locator('main')).toContainText('not checked these general references')
+})

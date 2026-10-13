@@ -48,7 +48,7 @@ const FAQS = [
   {
     question: 'Where do I look for an exotic-pet vet near me?',
     answer:
-      'Start with the Association of Exotic Mammal Veterinarians (AEMV) member directory at aemv.org, which searches for veterinarians with a specific interest in exotic mammal health. The American Board of Veterinary Practitioners (ABVP) maintains a directory of certified specialists in Exotic Companion Mammal practice. Veterinary teaching hospitals at AVMA-accredited US veterinary schools, and large exotic-pet referral hospitals, are reliable backups. The American Ferret Association (AFA) at ferret-afa.org also points owners toward ferret-knowledgeable care.',
+      'Start with the Association of Exotic Mammal Veterinarians (AEMV) member directory at aemv.org, which searches for veterinarians with a specific interest in exotic mammal health. The American Board of Veterinary Practitioners (ABVP) maintains a directory of certified specialists in Exotic Companion Mammal practice. Veterinary teaching hospitals at AVMA-accredited US veterinary schools, and large exotic-pet referral hospitals, are reliable backups. The American Ferret Association (AFA) also points owners toward ferret-knowledgeable care.',
   },
   {
     question: 'What should I ask when I call a new clinic?',
@@ -229,15 +229,7 @@ export default function FindAnExoticVetPage() {
               and the full range of diagnostics on site.
             </li>
             <li>
-              <strong>American Ferret Association resources.</strong> The{' '}
-              <a
-                href="https://www.ferret-afa.org"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                American Ferret Association (ferret-afa.org)
-              </a>{' '}
-              is an owner-facing organization whose care resources and community
+              <strong>American Ferret Association resources.</strong> The American Ferret Association is an owner-facing organization whose care resources and community
               can point you toward ferret-knowledgeable care in your region.
             </li>
           </ul>
@@ -354,26 +346,23 @@ export default function FindAnExoticVetPage() {
           <h2 id="sources">Sources</h2>
           <ul>
             <li>
-              Association of Exotic Mammal Veterinarians (AEMV) — practitioner
-              member directory, <em>aemv.org</em>.
+              <a href="https://aemv.org/">Association of Exotic Mammal Veterinarians (AEMV)</a> — Find a Vet search for veterinarians with a specific interest in exotic mammal health.
             </li>
             <li>
-              American Board of Veterinary Practitioners (ABVP) — Exotic
-              Companion Mammal diplomate directory.
+              <a href="https://aemv.org/certifications/">AEMV, Specialist Certifications</a> — ABVP Exotic Companion Mammal certification covers ferrets, rabbits, rodents, and other pet mammals.
             </li>
             <li>
-              American Ferret Association (AFA) — owner-facing care resources,{' '}
-              <em>ferret-afa.org</em>.
+              American Ferret Association (AFA) — owner-facing care resources. <em>(general reference; not checked against this page)</em>
             </li>
             <li>
               Quesenberry KE, Carpenter JW (eds.). <em>Ferrets, Rabbits, and
               Rodents: Clinical Medicine and Surgery.</em> Saunders/Elsevier —
               preventive-care and disease chapters describe the ferret-specific
-              clinical picture referenced here.
+              clinical picture referenced here. <em>(general reference; not checked against this page)</em>
             </li>
             <li>
               American Animal Hospital Association (AAHA) — exotic-mammal
-              preventive-care and life-stage guidance.
+              preventive-care and life-stage guidance. <em>(general reference; not checked against this page)</em>
             </li>
           </ul>
           <p className="text-sm text-brand-text-light">
