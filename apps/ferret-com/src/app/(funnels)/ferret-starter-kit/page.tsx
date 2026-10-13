@@ -213,11 +213,12 @@ export default function FerretStarterKitPage() {
           One More Thing: Insurance Before Symptoms
         </h2>
         <p className="text-brand-text-mid leading-relaxed mb-4">
-          Ferrets have a notably high lifetime rate of expensive hereditary
-          conditions (insulinoma, adrenal disease, lymphoma). Adrenal surgery
-          alone runs $1,500–$3,500. Insurance is dramatically cheaper to buy
-          BEFORE symptoms appear — exotic-pet policies will exclude conditions
-          that have already been diagnosed.
+          Tumors are commonly diagnosed in ferrets, and about half arise in
+          the endocrine and blood/lymph systems, which covers insulinoma,
+          adrenal tumors and lymphoma (<a href="https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/neoplasia-of-ferrets">Merck
+          Veterinary Manual</a>). Treatment can be expensive, so ask your vet
+          for an estimate. Buy insurance before symptoms appear: most pet
+          insurers exclude pre-existing conditions (<a href="https://content.naic.org/insurance-topics/pet-insurance">NAIC</a>).
         </p>
         <a
           href="https://vets.co/pet-insurance"
