@@ -5,7 +5,9 @@
  * `/tools/is-this-a-ferret-emergency`. Copy is grounded in existing
  * Ferret.com owner-side references (emergency warning signs, GI blockage,
  * insulinoma, toxic foods, dead-sleep) plus Quesenberry & Carpenter /
- * Merck / AEMV / ASPCA framing.
+ * Merck / AEMV / ASPCA framing. Re-reviewed 2026-10-13 against the Merck
+ * Veterinary Manual table "When to See a Veterinarian": signs 13 and 15 moved
+ * to emergency, sign 12 is no longer monitor-eligible.
  *
  * This is a planning / triage aid, NOT a diagnosis. `level` is the only
  * triage tier; the helper maps presentation only. Mixed selections always
@@ -66,19 +68,19 @@ export const SIGNS: Sign[] = [
   },
   {
     num: '12', level: 'urgent' as const, title: 'Skipped One Meal — Still Energetic',
-    body: 'Missing one meal in an otherwise bright, playful ferret that is still drinking and using the litter box: monitor closely. Ferrets have a rapid metabolism and a high insulinoma risk, so anorexia is more dangerous than in dogs. Complete refusal for most of a day, or any skipped meal with lethargy, teeth-grinding, or a hard belly: vet today or now.',
+    body: 'Missing one meal in an otherwise bright, playful ferret that is still drinking and using the litter box: call your exotic-mammal vet today. Merck lists lack of appetite with no other signs as a reason to see a vet within 24 hours, and ferrets have a high metabolism and need to eat frequently. Complete refusal for a day, or any skipped meal with lethargy, teeth-grinding, or a hard belly: go now.',
   },
   {
-    num: '13', level: 'urgent' as const, title: 'Not Eating for a Day — Especially with Lethargy',
-    body: 'A ferret that refuses food for a day, especially with lethargy, teeth-grinding, or hiding, needs same-day exotic-mammal care. Anorexia can point to blockage, ulcer, or insulinoma — all time-sensitive. Escalate to emergency if collapse, a hard belly, unproductive straining, or labored breathing appears.',
+    num: '13', level: 'emergency' as const, title: 'Not Eating or Drinking for a Day',
+    body: 'A ferret that has not eaten or drunk for 24 hours needs a vet now: Merck lists failure to eat or drink for 24 hours as a reason to see a veterinarian immediately. Anorexia can point to blockage, ulcer, or insulinoma — all time-sensitive.',
   },
   {
     num: '14', level: 'urgent' as const, title: 'Teeth-Grinding, Hunched Posture, or Hiding',
     body: 'Teeth-grinding, a hunched belly-tucked posture, or a usually social ferret that hides and will not play. Ferrets conceal pain. Same-day evaluation. If hiding is paired with collapse, labored breathing, a hard belly, or unproductive straining, treat it as emergency.',
   },
   {
-    num: '15', level: 'urgent' as const, title: 'Blood in Stool or Urine — Still Bright',
-    body: 'Fresh blood or black tarry stool, or blood-tinged urine, in a ferret that is still energetic: same-day exotic-mammal care. Paired with lethargy, collapse, pale gums, or a hard belly: emergency. Do not wait for a second bloody episode to decide.',
+    num: '15', level: 'emergency' as const, title: 'Blood in Stool or Urine',
+    body: 'Fresh blood or black tarry stool, or blood-tinged urine, even in a ferret that still seems bright: go now. Merck lists bloody urine, bloody diarrhea and thick black stools as reasons to see a veterinarian immediately. Do not wait for a second bloody episode to decide.',
   },
 ]
 
@@ -89,9 +91,9 @@ export const STYLES = {
 
 /**
  * Signs whose existing `body` copy explicitly permits monitoring a single
- * mild episode ("One isolated mild sneeze... monitor" / "Missing one meal...
- * monitor"). These are the ONLY signs that can produce a MONITOR verdict —
+ * mild episode ("One isolated mild sneeze... monitor"). Sign 12 was removed
+ * on the 2026-10-13 review: Merck puts lack of appetite in the within-24-hours column. These are the ONLY signs that can produce a MONITOR verdict —
  * and that verdict always carries a hard escalation line. Presentation
  * mapping of EXISTING copy, not new clinical guidance.
  */
-export const MONITOR_ELIGIBLE = new Set(['11', '12'])
+export const MONITOR_ELIGIBLE = new Set(['11'])
