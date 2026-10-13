@@ -54,7 +54,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-10-13T00:00:00Z',
 
   citation: SOURCES,
 })
@@ -154,7 +154,7 @@ export default function FerretDIYEnrichmentPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-01"
+            updatedAt="2026-10-13"
           />
 
           <DropCap>
@@ -335,10 +335,6 @@ export default function FerretDIYEnrichmentPage() {
             cons={['Check the listing for any internal wire before you buy']}
             price="see current price"
             priceNote="dated 2026-06-04."
-            ctaText="Find Marshall play tunnels"
-            ctaHref="/go/marshall/ferret+play+tunnel?s=behavior-diy-enrichment"
-            ctaAffiliateProgram="marshall"
-            ctaAffiliateProduct="ferret+play+tunnel"
           />
           <ReviewCard quietUntilTag
             id="snuffle-mat-ferret"

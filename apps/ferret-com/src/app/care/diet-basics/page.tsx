@@ -45,7 +45,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-05-28T00:00:00Z',
-  modifiedAt: '2026-06-11T00:00:00Z',
+  modifiedAt: '2026-10-13T00:00:00Z',
 
   citation: SOURCES,
 })
@@ -170,7 +170,7 @@ export default function FerretDietBasicsPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-05-28"
-            updatedAt="2026-06-11"
+            updatedAt="2026-10-13"
             reviewedBy="Editorial team"
           />
 
@@ -316,10 +316,6 @@ export default function FerretDietBasicsPage() {
             cons={['Carbohydrate is not on the guaranteed analysis. Check the label.', 'Check the ingredient list on the current bag']}
             price="see current price / 4 lb"
             priceNote="dated 2026-05-31."
-            ctaText="Find Marshall Premium Ferret Diet"
-            ctaHref="/go/marshall/premium-ferret-diet?s=care-diet-basics"
-            ctaAffiliateProgram="marshall"
-            ctaAffiliateProduct="premium-ferret-diet"
           />
           <ReviewCard quietUntilTag
             id="carniwhole"

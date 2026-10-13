@@ -228,10 +228,6 @@ export default function KitVsAdultFeedingPage() {
             cons={['Carbohydrate is not on the guaranteed analysis. Check the label.', 'Check the ingredient list on the current bag']}
             price="see current price / 4 lb"
             priceNote="dated 2026-06-01."
-            ctaText="Find Marshall Premium Ferret Diet"
-            ctaHref="/go/marshall/premium-ferret-diet?s=diet-kit-vs-adult-feeding"
-            ctaAffiliateProgram="marshall"
-            ctaAffiliateProduct="premium-ferret-diet"
           />
           <p>The other bag in that rotation, when you want the one marketed as starch-free, is Wysong Epigen 90. The <a href="/reviews/wysong-vs-marshall-kibble-guide">Wysong versus Marshall guide</a> prints both guaranteed analyses. Carbohydrate is not on either label.</p>
           <p><a className="font-semibold text-brand-primary" href="/go/amazon/B019W9VXZK?s=kit-vs-adult-feeding">Check price of Wysong Epigen 90 on Amazon →</a></p>
