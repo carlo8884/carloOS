@@ -1042,3 +1042,11 @@ test('vets fix BR2: Golden insurance answer drops 60%+ and links its price sourc
   await expect(page.locator('a[href="https://hospital.cvm.ncsu.edu/services/small-animals/cancer-oncology/radiation-oncology/radiation-therapy-for-bone-cancer/"]').first()).toBeAttached()
   await expect(page.locator('body')).toContainText('dated 2026-10-13')
 })
+
+test('vets fix PC1: senior bloodwork follows AAHA 6–12 months and the fecal FAQ cites differing sources', async ({ page }) => {
+  await page.goto('/health/preventive-care-schedule', { waitUntil: 'domcontentloaded' })
+  await expect(page.locator('body')).toContainText('Every 6–12 months (AAHA)')
+  await page.getByText('How often should my dog have a fecal test?').first().click()
+  await expect(page.locator('body')).toContainText('Sources differ.')
+  await expect(page.locator('a[href*="2023-aaha-senior-care-guidelines-for-dogs-and-cats.pdf"]').first()).toBeAttached()
+})
