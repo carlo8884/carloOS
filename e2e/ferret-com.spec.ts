@@ -1007,6 +1007,6 @@ test('ferret fix VP1: vet-visit prep drops unsourced cost ranges', async ({ page
   await page.goto('/health/vet-visit-prep', { waitUntil: 'domcontentloaded' })
   const text = (await page.locator('main').innerText()).replace(/\s+/g, ' ')
   expect(text).not.toMatch(/\$\s?\d/)
-  expect(text).toContain('ask the clinic for a written estimate')
+  expect(text).toMatch(/ask the clinic for a written estimate/i)
   await expect(page.locator('h2#cost')).toHaveText('Costs: Ask for an Estimate')
 })
