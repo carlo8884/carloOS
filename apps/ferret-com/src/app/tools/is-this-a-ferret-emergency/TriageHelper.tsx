@@ -10,7 +10,7 @@
  * Verdict = highest-severity tier among selected signs:
  *   - any `emergency` sign        -> GO NOW (red)
  *   - all `urgent`, none emergency -> SAME-DAY VET (amber)
- *   - ONLY monitor-eligible signs (11/12) -> MONITOR CLOSELY (neutral) +
+ *   - ONLY monitor-eligible sign (11) -> MONITOR CLOSELY (neutral) +
  *     hard escalation line
  *   - nothing selected            -> pre-input (no fabricated verdict)
  * Mixed selections ALWAYS resolve UPWARD. There is no "all clear" verdict.
@@ -48,7 +48,7 @@ function deriveVerdict(selected: Set<string>): Verdict | null {
   }
 
   // No emergency signs selected -> everything is urgent.
-  // MONITOR only if EVERY selected sign is monitor-eligible (11/12).
+  // MONITOR only if EVERY selected sign is monitor-eligible (11).
   const allMonitorEligible = picked.every((s) => MONITOR_ELIGIBLE.has(s.num))
 
   if (allMonitorEligible) {
@@ -56,7 +56,7 @@ function deriveVerdict(selected: Set<string>): Verdict | null {
       tier: 'monitor',
       eyebrow: 'Monitor closely',
       headline: 'It may be reasonable to monitor for a short window — but stay close.',
-      lead: 'For a single mild sneeze, or one skipped meal in an otherwise bright, energetic ferret that is still drinking, watching closely for a short window can be reasonable. Call your exotic-mammal vet — or the nearest ferret-capable emergency clinic — if it persists, worsens, repeats, or you are unsure. Ferrets escalate faster than dogs. When in doubt, seek care now.',
+      lead: 'For a single mild sneeze in an otherwise bright, energetic ferret that is eating and drinking, watching closely for a short window can be reasonable. Call your exotic-mammal vet — or the nearest ferret-capable emergency clinic — if it persists, worsens, repeats, or you are unsure. Ferrets escalate faster than dogs. When in doubt, seek care now.',
     }
   }
 

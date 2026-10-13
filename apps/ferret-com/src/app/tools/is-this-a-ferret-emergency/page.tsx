@@ -47,9 +47,9 @@ const FAQS = [
   {
     question: 'What do the three results mean?',
     answer:
-      'Go now means at least one sign you selected can be a life-threatening emergency — go to a ferret-capable emergency vet immediately and do not wait for another symptom. Same-day vet means the signs warrant exotic-mammal attention within 24 hours, or sooner if anything worsens. Monitor closely applies only to a single mild episode of two specific signs (one isolated mild sneeze, or missing one meal in an otherwise bright, energetic ferret that is still drinking) — and it still tells you to call your vet if it persists, worsens, repeats, or you are unsure. Ferrets escalate faster than dogs. If you select signs from more than one level, the result always reflects the most urgent one.',
+      'Go now means at least one sign you selected can be a life-threatening emergency — go to a ferret-capable emergency vet immediately and do not wait for another symptom. Same-day vet means the signs warrant exotic-mammal attention within 24 hours, or sooner if anything worsens. Monitor closely applies only to one isolated mild sneeze in an otherwise bright, energetic ferret that is eating and drinking — and it still tells you to call your vet if it persists, worsens, repeats, or you are unsure. Ferrets escalate faster than dogs. If you select signs from more than one level, the result always reflects the most urgent one.',
     answerText:
-      'Go now = possible life-threatening emergency, go immediately. Same-day vet = see an exotic-mammal vet within 24 hours, sooner if it worsens. Monitor closely = a single mild sneeze or one skipped meal with normal energy, but call your vet if it persists, worsens, or you are unsure. Mixed selections resolve to the most urgent.',
+      'Go now = possible life-threatening emergency, go immediately. Same-day vet = see an exotic-mammal vet within 24 hours, sooner if it worsens. Monitor closely = a single mild sneeze with normal energy, but call your vet if it persists, worsens, or you are unsure. Mixed selections resolve to the most urgent.',
   },
   {
     question: 'How is this different from the emergency warning signs guide?',
@@ -106,7 +106,7 @@ const medicalSchema = buildMedicalWebPageSchema({
     'A conservative triage aid that matches ferret symptoms against exotic-mammal emergency-medicine criteria to help owners decide how urgently to seek care. Not a diagnosis.',
   url: 'https://ferret.com/tools/is-this-a-ferret-emergency',
   authorName: 'Ferret.com Editorial',
-  lastReviewed: '2026-09-03',
+  lastReviewed: '2026-10-13',
 })
 
 const howToSchema = buildHowToSchema({
@@ -124,7 +124,7 @@ const howToSchema = buildHowToSchema({
     },
     {
       name: 'Read the urgency result',
-      text: 'The tool returns the most urgent result among your selections: "Go now" (possible life-threatening emergency — go immediately), "Same-day vet" (attention within 24 hours), or "Monitor closely" (a single mild sneeze or one skipped meal with normal energy, but still call your vet if it persists or worsens).',
+      text: 'The tool returns the most urgent result among your selections: "Go now" (possible life-threatening emergency — go immediately), "Same-day vet" (attention within 24 hours), or "Monitor closely" (a single mild sneeze with normal energy, but still call your vet if it persists or worsens).',
     },
     {
       name: 'Act on the result conservatively',
@@ -331,8 +331,8 @@ export default function IsThisAFerretEmergencyPage() {
             Select every sign you are seeing. The tool returns the most urgent result among your selections —
             it always rounds toward more care, never less. There are three results: <strong>go now</strong>{' '}
             (a possible life-threatening emergency), <strong>same-day vet</strong> (attention within 24 hours,
-            sooner if it worsens), and <strong>monitor closely</strong> (reserved for a single mild sneeze or
-            one skipped meal with normal energy, and it still tells you to call your vet if anything persists,
+            sooner if it worsens), and <strong>monitor closely</strong> (reserved for a single mild sneeze with
+            normal energy, and it still tells you to call your vet if anything persists,
             worsens, or you are unsure). There is deliberately no &quot;all clear&quot; result.
           </p>
           <p className="mb-4 text-base leading-relaxed text-brand-text-mid">
