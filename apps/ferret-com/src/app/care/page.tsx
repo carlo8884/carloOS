@@ -1,7 +1,7 @@
 import { HopDisclosure } from '../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, ShopCtas, CrossPortfolioCard, DirectoryPlacesCta } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, ShopCtas, CrossPortfolioCard, DirectoryPlacesCta, FAQAccordion, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
 import listings from '../../data/directory-listings.json'
 import { HubHero } from '../../components/HubHero'
 
@@ -166,6 +166,14 @@ const careListSchema = {
 
 const schema = combineSchemas(breadcrumbSchema, careListSchema)
 
+const HUB_FAQS = [
+  { question: "How much time should a ferret spend out of its cage?", answer: "At least 2 to 4 hours every day, supervised or in a ferret-proofed area, according to the Merck Veterinary Manual." },
+  { question: "What temperature is right for a ferret?", answer: "About 65\u00b0F to 75\u00b0F (18\u00b0C to 23\u00b0C) is usually comfortable. Ferrets have no sweat glands, so keep the cage away from heat, sun, drafts and dampness (Merck Veterinary Manual)." },
+  { question: "What bedding and litter should I use?", answer: "Use a clean towel, blanket, hammock or fabric hut and check that the ferret isn't eating the fabric. Avoid newspaper, wood chips and cedar, and avoid clumping cat litter, which may cause breathing problems (Merck Veterinary Manual)." },
+  { question: "How often should I bathe a ferret?", answer: "No more than two to four times a year. Frequent bathing dries the skin and coat and makes the musky odor stronger for a few days; washing bedding regularly does more to cut odor (Lafeber Vet)." },
+  { question: "Which vaccines and checkups does a ferret need?", answer: "Ferrets should be vaccinated against canine distemper and rabies, with annual boosters. Annual exams are recommended, and twice-yearly exams are a good idea from 3 years of age (Lafeber Vet)." },
+]
+
 export default function CareHubPage() {
   return (
     <>
@@ -197,6 +205,16 @@ export default function CareHubPage() {
         <span>›</span>
         <span style={{ color: 'var(--brand-text-mid)', fontWeight: 500 }}>Care</span>
       </nav>
+
+      <div className="px-container-sm sm:px-container pt-8 max-w-4xl">
+        <LastUpdated date="2026-10-13" />
+        <div className="rounded-lg border-l-4 border-brand-primary bg-brand-white p-5 mt-4" data-testid="short-answer">
+          <h2 className="font-display text-lg font-bold mb-2">The short answer</h2>
+          <p className="text-base leading-relaxed text-brand-text-mid m-0">
+            Give your ferret a cage with a solid or padded floor, soft bedding (no cedar, wood chips or newspaper), a litter box with non-clumping litter, and food and water at all times. Keep the room around 65–75°F, because ferrets have no sweat glands and overheat easily, and allow at least 2 to 4 hours of supervised time out of the cage every day (<a href="https://www.merckvetmanual.com/all-other-pets/ferrets/providing-a-home-for-a-ferret" className="text-brand-primary hover:underline">Merck Veterinary Manual</a>). Plan an annual vet exam and distemper and rabies vaccines (<a href="https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf" className="text-brand-primary hover:underline">Lafeber Vet</a>).
+          </p>
+        </div>
+      </div>
 
       {/* Cards */}
       <div
@@ -295,6 +313,17 @@ export default function CareHubPage() {
           ))}
         </ul>
       </div>
+
+      <section className="px-container-sm sm:px-container py-10">
+        <div className="max-w-content-wide">
+          <h2 id="faq" className="font-display text-xl font-bold text-brand-dark mb-4">Ferret care FAQ</h2>
+          <FAQAccordion items={HUB_FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
+          <ArticleSourcesList title="Sources" sources={[
+            { label: "Providing a Home for a Ferret", url: "https://www.merckvetmanual.com/all-other-pets/ferrets/providing-a-home-for-a-ferret", publisher: "Merck Veterinary Manual" },
+            { label: "Care of the Pet Ferret (owner handout)", url: "https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf", publisher: "Lafeber Vet" },
+          ]} />
+        </div>
+      </section>
 
       <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <h2 id="kit" className="font-display font-bold text-brand-dark text-xl mb-4 max-w-content-wide">Related supplies</h2>

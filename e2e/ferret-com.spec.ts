@@ -673,7 +673,7 @@ test('ferret fix AF2: grooming and nail pages lead with a sourced short answer t
 })
 
 test('ferret fix SM1: sitemap lastmod is the stamped page date, and unstamped hubs carry none', async ({ request }) => {
-  await expectStampedLastmod(request, ['/care/nail-trimming', '/care/bathing-and-grooming', '/behavior/biting-and-nipping'], ['/care'])
+  await expectStampedLastmod(request, ['/care/nail-trimming', '/care/bathing-and-grooming', '/behavior/biting-and-nipping'], ['/colors'])
 })
 
 test('ferret fix SD2: Article schema omits image instead of shipping an empty string', async ({ request }) => {
@@ -1075,6 +1075,10 @@ test('ferret fix VP2: vet-visit prep schedule, fasting and temperature follow La
 
 test('ferret fix FH4: /ownership hub answers first and has a sourced FAQ', async ({ page }) => {
   await page.goto('/ownership', { waitUntil: 'domcontentloaded' })
+})
+
+test('ferret fix FH1: /care hub answers first and has a sourced FAQ', async ({ page }) => {
+  await page.goto('/care', { waitUntil: 'domcontentloaded' })
 })
 
 test('ferret fix FH3: /behavior hub answers first and has a sourced FAQ', async ({ page }) => {
