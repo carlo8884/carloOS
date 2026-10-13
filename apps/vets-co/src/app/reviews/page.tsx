@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, DirectoryPlacesCta, PriceAsOf, HubSearch, HubJumpNav, LastUpdated } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, DirectoryPlacesCta, PriceAsOf, HubSearch, HubJumpNav, LastUpdated, FAQAccordion, ArticleSourcesList } from '@carloOS/ui'
 import listings from '../../data/directory-listings.json'
 import { HubMasthead } from '../../components/HubMasthead'
 
@@ -17,6 +17,13 @@ const REVIEW_GROUPS = [
   { id: 'vets-reviews-insurance', label: 'Insurance', intro: 'Insurance comparisons. Printed prices are not a quote.' },
   { id: 'vets-reviews-telehealth', label: 'Telehealth', intro: 'Remote-vet comparisons. They are not emergency care.' },
   { id: 'vets-reviews-season', label: 'Season', intro: 'Holiday feeding and holiday emergency-visit pages.' },
+]
+
+const FAQS = [
+  { question: 'What should I compare when choosing pet insurance?', answer: 'Compare the type of coverage (accident-only, accident and illness, or wellness), how the policy treats pre-existing, hereditary and congenital conditions, waiting periods, the deductible, and whether it reimburses a percentage of your bill or pays from a benefit schedule (NAIC).' },
+  { question: 'Are the prices on these comparisons a quote?', answer: 'No. Printed prices are reference figures, not a quote. Your price depends on species, breed, gender, age, location, and the coverage and deductible you choose (NAIC), so get a quote for your own pet.' },
+  { question: 'Can I use telehealth in an emergency?', answer: 'No. Telehealth is not emergency care. Go to a vet immediately for difficulty breathing, heavy bleeding, seizures, collapse, bluish or white gums, or straining without passing urine or stool (Merck Veterinary Manual).' },
+  { question: 'Do companies pay for placement on Vets.co?', answer: 'No. Vets.co does not sell insurance or accept payment for favorable placement.' },
 ]
 
 const REVIEWS = [
@@ -83,7 +90,7 @@ export default function VetsReviewsPage() {
       />
       <div className="px-container-sm sm:px-container pt-6">
         <PriceAsOf date="2026-06-06" />
-        <LastUpdated date="2026-10-12" />
+        <LastUpdated date="2026-10-13" />
       </div>
       <nav aria-label="Breadcrumb" className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
         <Link href="/" className="inline-flex min-h-6 items-center hover:text-brand-primary no-underline">Home</Link><span>›</span>
@@ -92,6 +99,12 @@ export default function VetsReviewsPage() {
 
       <div className="px-container-sm sm:px-container pt-12 pb-2">
         <div className="max-w-2xl mx-auto">
+          <div className="rounded-lg border-l-4 border-brand-primary bg-brand-surface p-5 mb-8" data-testid="short-answer">
+            <h2 className="font-display text-lg font-bold mb-2">The short answer</h2>
+            <p className="text-base leading-relaxed text-brand-text-mid m-0">
+              When comparing pet insurance, look at the coverage type, exclusions for pre-existing, hereditary and congenital conditions, waiting periods, the deductible and how the policy reimburses you (<a href="https://content.naic.org/insurance-topics/pet-insurance">NAIC</a>); printed prices are not a quote. Telehealth is convenient for non-urgent questions but is not emergency care: go to a vet immediately for trouble breathing, heavy bleeding, seizures or collapse (<a href="https://www.merckvetmanual.com/multimedia/table/when-to-see-a-veterinarian">Merck Veterinary Manual</a>). Vets.co accepts no payment for placement.
+            </p>
+          </div>
           <h2 className="font-display font-bold text-brand-dark text-2xl mb-4 leading-tight">How these reviews are decided</h2>
           <p className="text-base text-brand-text-light leading-relaxed mb-4">
             The products covered on this hub are the ones where a bad choice is expensive and hard to reverse: pet insurance you commit to before your pet is sick, and telehealth services you reach for at the worst possible moment. Rather than rank them on marketing or sign-up bonuses, our comparisons lean on the evidence an owner can actually verify &mdash; published payout and complaint data, insurer policy disclosures, the credentials of the people answering a telehealth call, and the fine print that determines whether a claim is paid or denied. The goal is to surface what matters when care is needed, not what is easiest to advertise.
@@ -129,11 +142,15 @@ export default function VetsReviewsPage() {
       </div>
 
       <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
-
-        <div className="max-w-content-wide mt-6">
+        <div className="max-w-content-wide pt-8">
+          <h2 id="faq" className="font-display text-xl font-bold text-brand-dark mb-4">Reviews FAQ</h2>
+          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
+          <ArticleSourcesList title="Sources" sources={[
+            { label: 'Pet Insurance (consumer topic page)', url: 'https://content.naic.org/insurance-topics/pet-insurance', publisher: 'NAIC' },
+            { label: 'When to See a Veterinarian (general guidance for pets)', url: 'https://www.merckvetmanual.com/multimedia/table/when-to-see-a-veterinarian', publisher: 'Merck Veterinary Manual' },
+          ]} />
         </div>
-
-              </section>
+      </section>
 
       <DirectoryPlacesCta listings={listings} noun="licensed veterinarians" />
     </>
