@@ -245,7 +245,7 @@ export default function HealthHubPage() {
         <span style={{ color: 'var(--brand-text-mid)', fontWeight: 500 }}>Health</span>
       </nav>
       <section className="px-container-sm sm:px-container pt-8 max-w-3xl mx-auto">
-        <LastUpdated date="2026-10-09" />
+        <LastUpdated date="2026-10-13" />
         <ArticleSourcesList
           sources={[
             { label: 'Quesenberry KE, Carpenter JW. Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery. (general reference; not checked against this page)', url: 'https://www.elsevier.com/books/ferrets-rabbits-and-rodents/quesenberry/978-1-4160-6621-7', publisher: 'Elsevier' },
