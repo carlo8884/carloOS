@@ -840,6 +840,18 @@ test('ferret fix KF1: kit-vs-adult feeding cites Apfelbach, VCA and Merck and dr
   expect(ld).toContain('"FAQPage"')
 })
 
+test('ferret fix LS1: lifespan page answers first with Lafeber 6 to 8 years', async ({ page }) => {
+  await page.goto('/colors/ferret-lifespan', { waitUntil: 'domcontentloaded' })
+  const body = page.locator('body')
+  await expect(body).not.toContainText('5 to 8 years')
+  await expect(body).not.toContainText('around age five')
+  await expect(page.locator('.carloOS-article').filter({ hasText: 'Short answer' }).first()).toContainText('6 to 8 years')
+  await expect(page.locator('a[href*="Care-of-the-Ferret-2020.pdf"]').first()).toBeVisible()
+  const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
+  expect(ld).toContain('"FAQPage"')
+  expect(ld).toContain('6 to 8 years')
+})
+
 test('ferret fix MR1: no page carries a /go/marshall href, even a held one', async ({ page }) => {
   for (const path of [
     '/behavior/digging-and-burrowing',
