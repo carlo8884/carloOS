@@ -48,7 +48,7 @@ export default function Page() {
           <p>Because insurers review records at claim time, an undisclosed prior note can lead to a denied claim even if you did not realize it was relevant. The exclusion is not a judgment about honesty; it is how the product is designed. Insurance covers the unknown, and a condition already on the record is, by definition, known.</p>
 
           <h2>Curable vs. Incurable</h2>
-          <p>The most important distinction in this area is curable versus incurable. Incurable or chronic conditions — diabetes, allergies, heart disease, cancer, kidney disease, most orthopedic disease — are generally excluded for the life of the policy, at every carrier. Curable conditions — a single ear infection, a respiratory infection, a urinary tract infection that fully resolved — may become eligible again at some insurers after the pet has gone a defined symptom-free and treatment-free period, often six to eighteen months.</p>
+          <p>The most important distinction in this area is curable versus incurable. Incurable or chronic conditions — diabetes, allergies, heart disease, cancer, kidney disease, most orthopedic disease — are generally excluded for the life of the policy, at every carrier. Curable conditions — a single ear infection, a respiratory infection, a urinary tract infection that fully resolved — may become eligible again at some insurers after the pet has gone a defined symptom-free and treatment-free period that varies by insurer.</p>
           <p>Not every insurer offers this curable-condition pathway, and the symptom-free window varies, which makes it a genuine point of comparison rather than a universal rule. If your pet has a resolved past issue, the exact wording of an insurer&apos;s curable-condition policy can change whether that condition is ever coverable again — so read it before you assume.</p>
           <div className="my-6 max-w-full min-w-0">
             <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
@@ -69,7 +69,7 @@ export default function Page() {
                 <tr className="border-b border-brand-border align-top">
                   <th scope="row" className="p-3 font-bold text-brand-dark text-left">Coverage</th>
                   <td className="p-3">Generally excluded for the life of the policy, at every carrier</td>
-                  <td className="p-3">May become eligible again at some insurers after a symptom-free and treatment-free period, often six to eighteen months</td>
+                  <td className="p-3">May become eligible again at some insurers after a symptom-free and treatment-free period that varies by insurer</td>
                 </tr>
                 <tr className="border-b border-brand-border align-top">
                   <th scope="row" className="p-3 font-bold text-brand-dark text-left">What varies</th>

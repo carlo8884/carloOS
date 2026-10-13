@@ -1071,3 +1071,22 @@ test('vets fix IQ1: insurance cost and pre-existing answers match NAPHIA and NAI
   expect(text).toContain('Most pet insurance companies exclude pre-existing conditions')
   await expect(page.locator('a[href="https://content.naic.org/insurance-topics/pet-insurance"]').first()).toBeVisible()
 })
+
+test('vets fix IQ2: insurance Q&A drops unsourced figures and cites NAIC', async ({ page }) => {
+  const naic = 'a[href="https://content.naic.org/insurance-topics/pet-insurance"]'
+  const pages: Array<[string, RegExp]> = [
+    ['multi-pet-discounts', /5–10%|five to ten percent/],
+    ['when-should-i-get-pet-insurance', /six to eight weeks|6–8 weeks/],
+    ['how-does-the-claims-process-work', /a few days to a few weeks|almost always/],
+    ['does-pet-insurance-cover-pre-existing-conditions', /six to eighteen months/],
+    ['is-pet-insurance-worth-it', /$^/],
+    ['does-pet-insurance-cover-dental', /$^/],
+    ['does-pet-insurance-cover-vaccines', /$^/],
+  ]
+  for (const [slug, banned] of pages) {
+    await page.goto(`/insurance/questions/${slug}`, { waitUntil: 'domcontentloaded' })
+    const text = (await page.locator('main').innerText()).replace(/\s+/g, ' ')
+    expect(text, slug).not.toMatch(banned)
+    expect(await page.locator(naic).count(), slug).toBeGreaterThan(0)
+  }
+})
