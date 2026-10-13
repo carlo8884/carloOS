@@ -1099,3 +1099,13 @@ test('vets fix IQ3: insurance Q&A has no unlinked sample-carrier sources or orph
     expect(await page.locator('a[href="https://content.naic.org/insurance-topics/pet-insurance"]').count(), slug).toBeGreaterThan(0)
   }
 })
+
+test('vets fix HB1: insurance hub answers first and has a sourced FAQ', async ({ page }) => {
+  await page.goto('/insurance', { waitUntil: 'domcontentloaded' })
+  const box = page.getByTestId('short-answer')
+  await expect(box).toBeVisible()
+  await expect(box.locator('a[href="https://content.naic.org/insurance-topics/pet-insurance"]')).toBeVisible()
+  await expect(page.locator('h2#faq')).toBeVisible()
+  const ld = await page.locator('script[type="application/ld+json"]').allTextContents()
+  expect(ld.filter((t) => t.includes('"FAQPage"')).length).toBe(1)
+})

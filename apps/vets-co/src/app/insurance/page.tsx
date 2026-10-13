@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, DirectoryPlacesCta, LastUpdated } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, DirectoryPlacesCta, LastUpdated, FAQAccordion, ArticleSourcesList } from '@carloOS/ui'
 import listings from '../../data/directory-listings.json'
 import { HubMasthead } from '../../components/HubMasthead'
 
@@ -18,6 +18,14 @@ const GUIDES = [
   { category: 'Choosing & Timing', items: [{ title: 'When to Enroll Your Pet', href: '/insurance/when-to-enroll' }, { title: 'Reading the Fine Print', href: '/insurance/reading-the-fine-print' }, { title: 'Deductibles & Reimbursement', href: '/insurance/deductibles-reimbursement' }] },
   { category: 'Risk & Cost', items: [{ title: 'Breed-Specific Insurance Risk', href: '/insurance/breed-specific-risk' }, { title: 'Wellness Plans vs. Insurance', href: '/insurance/wellness-plans-vs-insurance' }] },
   { category: 'Common Questions', items: [{ title: 'Pet Insurance Questions, Answered', href: '/insurance/questions', badge: 'Q&A Hub' }, { title: 'Is Pet Insurance Worth It?', href: '/insurance/questions/is-pet-insurance-worth-it' }, { title: 'How Much Does Pet Insurance Cost?', href: '/insurance/questions/how-much-does-pet-insurance-cost' }] },
+]
+
+// Cost figures: NAPHIA 2024 US averages, dated 2026-10-13.
+const FAQS = [
+  { question: 'How does pet insurance work?', answer: 'Most pet insurance policies pay on a reimbursement basis: you pay the vet, then claim back from the insurer. Some insurers reimburse a percentage of what you spent; others use a benefit schedule that pays set amounts by condition and coverage level (NAIC).' },
+  { question: 'What types of pet insurance are there?', answer: 'Insurers typically sell three kinds of coverage: accident-only, accident and illness, and wellness. Each covers and excludes specific services and is priced differently (NAIC).' },
+  { question: 'Does pet insurance cover pre-existing conditions?', answer: 'Usually not. Most pet insurance companies exclude pre-existing conditions as well as hereditary or congenital conditions, and many have waiting periods before benefits begin (NAIC). Enrolling while your pet is young and healthy avoids the most exclusions.' },
+  { question: 'How much does pet insurance cost?', answer: 'NAPHIA puts the 2024 US average accident-and-illness premium at $62.44 a month for dogs and $32.21 a month for cats. Your price depends on species, breed, gender, age, location, and the coverage and deductible you choose (NAIC).' },
 ]
 
 const insuranceGuides = GUIDES.flatMap((s) => s.items)
@@ -51,7 +59,7 @@ export default function VetsInsuranceHubPage() {
         secondaryCta={{ href: '/insurance/how-pet-insurance-works', label: 'Start with the basics' }}
       />
       <div className="px-container-sm sm:px-container pt-6">
-        <LastUpdated date="2026-10-10" />
+        <LastUpdated date="2026-10-13" />
       </div>
       <nav aria-label="Breadcrumb" className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
         <Link href="/" className="inline-flex min-h-6 items-center hover:text-brand-primary no-underline">Home</Link><span>›</span>
@@ -60,6 +68,12 @@ export default function VetsInsuranceHubPage() {
 
       <div className="px-container-sm sm:px-container pt-14 pb-2">
         <div className="max-w-2xl">
+          <div className="rounded-lg border-l-4 border-brand-primary bg-brand-surface p-5 mb-8" data-testid="short-answer">
+            <h2 className="font-display text-lg font-bold mb-2">The short answer</h2>
+            <p className="text-base leading-relaxed text-brand-text-mid m-0">
+              Pet insurance usually reimburses you after you pay the vet. Most policies exclude pre-existing, hereditary and congenital conditions, and many have waiting periods, so enrolling early matters (<a href="https://content.naic.org/insurance-topics/pet-insurance">NAIC</a>). The 2024 US average accident-and-illness premium was $62.44 a month for dogs and $32.21 for cats (<a href="https://naphia.org/news/naphia-news/soi-report-2025/">NAPHIA</a>, dated 2026-10-13); your quote depends on species, breed, age, location and the deductible you choose.
+            </p>
+          </div>
           <h2 className="font-display text-2xl font-bold text-brand-dark mb-4 leading-tight">What this hub covers</h2>
           <p className="text-base text-brand-text-mid leading-relaxed mb-4">
             Pet insurance is one of the few financial decisions an owner makes years before they know whether they will need it, and the industry&apos;s language is built to obscure rather than clarify. This hub is a structured, jargon-free education in how coverage actually works &mdash; written from a clinical perspective so the explanations connect the policy mechanics to the real veterinary situations they are meant to cover. It is deliberately editorial: Vets.co does not sell insurance, take commissions on enrollments, or rank insurers for payment, so the guidance here is about understanding the product, not steering you toward one.
@@ -111,11 +125,15 @@ export default function VetsInsuranceHubPage() {
         ))}
       </div>
       <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
-
-        <div className="max-w-content-wide mt-6">
+        <div className="max-w-content-wide pt-8">
+          <h2 id="faq" className="font-display text-xl font-bold text-brand-dark mb-4">Pet insurance FAQ</h2>
+          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
+          <ArticleSourcesList title="Sources" sources={[
+            { label: 'Pet Insurance (consumer topic page)', url: 'https://content.naic.org/insurance-topics/pet-insurance', publisher: 'NAIC' },
+            { label: 'NAPHIA 2025 State of the Industry Report', url: 'https://naphia.org/news/naphia-news/soi-report-2025/', publisher: 'NAPHIA' },
+          ]} />
         </div>
-
-              </section>
+      </section>
 
       <DirectoryPlacesCta listings={listings} noun="licensed veterinarians" />
     </>
