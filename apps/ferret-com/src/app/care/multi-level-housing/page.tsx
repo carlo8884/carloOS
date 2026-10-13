@@ -85,6 +85,9 @@ export default function MultiLevelHousingPage() {
                 { label: 'Cage Size Calculator', href: '/tools/cage-size-calculator' },
                 { label: 'Bedding & Litter Types', href: '/care/bedding-and-litter-types' },
                 { label: 'Exercise & Enrichment', href: '/care/exercise-and-enrichment' },
+                { label: 'Ferret Nation vs Prevue', href: '/reviews/ferret-nation-vs-prevue-guide' },
+                { label: 'Kaytee vs Ferret Nation', href: '/reviews/kaytee-vs-ferret-nation-guide' },
+                { label: 'Kaytee vs Prevue', href: '/reviews/kaytee-vs-prevue-guide' },
               ]}
             />
             <CrossPortfolioCard currentSite="ferret-com" contentType="care" variant="sidebar" />
@@ -98,6 +101,9 @@ export default function MultiLevelHousingPage() {
           { title: 'Cage Size Calculator', href: '/tools/cage-size-calculator' },
           { title: 'Bedding & Litter Types', href: '/care/bedding-and-litter-types' },
           { title: 'Exercise & Enrichment', href: '/care/exercise-and-enrichment' },
+          { title: 'Ferret Nation vs Prevue', href: '/reviews/ferret-nation-vs-prevue-guide' },
+          { title: 'Kaytee vs Ferret Nation', href: '/reviews/kaytee-vs-ferret-nation-guide' },
+          { title: 'Kaytee vs Prevue', href: '/reviews/kaytee-vs-prevue-guide' },
         ]}
 >
         <div className="carloOS-article">

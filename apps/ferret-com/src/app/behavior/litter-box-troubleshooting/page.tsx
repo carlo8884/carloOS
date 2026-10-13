@@ -128,6 +128,9 @@ export default function LitterBoxTroubleshootingPage() {
                 { label: 'Training & Bonding', href: '/behavior/training-and-bonding' },
                 { label: 'Leash & Harness Training', href: '/behavior/leash-and-harness-training' },
                 { label: 'Behavior Hub', href: '/behavior' },
+                { label: 'Paper vs Wood Litter', href: '/reviews/paper-vs-wood-litter-guide' },
+                { label: 'Paper vs Grass Litter', href: '/reviews/paper-vs-grass-litter-guide' },
+                { label: 'Wood vs Grass Litter', href: '/reviews/wood-vs-grass-litter-guide' },
               ]}
             />
 
@@ -140,6 +143,9 @@ export default function LitterBoxTroubleshootingPage() {
           { title: 'Litter Training', href: '/care/litter-training' },
           { title: 'Cage Setup', href: '/care/cage-setup' },
           { title: 'Cage Cleaning Routine', href: '/care/cage-cleaning-routine' },
+          { title: 'Paper vs Wood Litter', href: '/reviews/paper-vs-wood-litter-guide' },
+          { title: 'Paper vs Grass Litter', href: '/reviews/paper-vs-grass-litter-guide' },
+          { title: 'Wood vs Grass Litter', href: '/reviews/wood-vs-grass-litter-guide' },
         ]}
 >
         <div className="carloOS-article">

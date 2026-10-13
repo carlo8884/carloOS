@@ -132,6 +132,9 @@ export default function FerretCageSetupPage() {
                 { label: 'Cage Size Calculator', href: '/tools/cage-size-calculator' },
                 { label: 'Diet Basics', href: '/care/diet-basics' },
                 { label: 'Insulinoma', href: '/health/insulinoma' },
+                { label: 'Ferret Nation vs Prevue', href: '/reviews/ferret-nation-vs-prevue-guide' },
+                { label: 'Kaytee vs Ferret Nation', href: '/reviews/kaytee-vs-ferret-nation-guide' },
+                { label: 'Kaytee vs Prevue', href: '/reviews/kaytee-vs-prevue-guide' },
               ]}
             />
             <CrossPortfolioCard currentSite="ferret-com" contentType="care" variant="sidebar" />
@@ -146,6 +149,9 @@ export default function FerretCageSetupPage() {
           { title: 'Bedding & Litter Types', href: '/care/bedding-and-litter-types' },
           { title: 'Cage Cleaning Routine', href: '/care/cage-cleaning-routine' },
           { title: 'Ferret Starter Kit', href: '/ferret-starter-kit' },
+          { title: 'Ferret Nation vs Prevue', href: '/reviews/ferret-nation-vs-prevue-guide' },
+          { title: 'Kaytee vs Ferret Nation', href: '/reviews/kaytee-vs-ferret-nation-guide' },
+          { title: 'Kaytee vs Prevue', href: '/reviews/kaytee-vs-prevue-guide' },
         ]}
  priceAsOf="2026-05-31">
         <div className="carloOS-article">
