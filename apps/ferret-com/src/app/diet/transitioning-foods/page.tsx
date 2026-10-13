@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, CalloutBox, ReviewCard, CrossPortfolioCard, ShopCtas, ComparisonFoot, LastUpdated } from '@carloOS/ui'
+import { buildMetadata, FAQAccordion, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, CalloutBox, ReviewCard, CrossPortfolioCard, ShopCtas, ComparisonFoot, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -21,7 +21,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-10-12T00:00:00Z',
+  modifiedAt: '2026-10-13T00:00:00Z',
 })
 
 const med = buildMedicalWebPageSchema({
@@ -33,6 +33,20 @@ const med = buildMedicalWebPageSchema({
   lastReviewed: '2026-06-01',
 })
 const combined = combineSchemas(schema, med)
+const FAQS = [
+  {
+    "question": "How do I switch my ferret to a new food?",
+    "answer": "Mix the new food in with the usual food for several days and slowly increase the amount of new food, according to the Merck Veterinary Manual. Ferrets do not react well to frequent diet changes."
+  },
+  {
+    "question": "Should my ferret get used to soft food too?",
+    "answer": "Yes. Merck notes that ferrets raised on dry food may be unused to moist or semi-moist foods, which are often recommended when a ferret is sick, so do not wait until your ferret is ill to introduce softer foods."
+  },
+  {
+    "question": "What should a ferret's food contain?",
+    "answer": "Lafeber's care sheet describes ferrets as strict carnivores needing a diet rich in animal protein (30% to 40%) and fat (15% to 20%) with small amounts of fiber (about 2%). Dog food and vegetarian-type pet foods are inappropriate because of their high vegetable protein and fiber."
+  }
+]
 
 export default function TransitioningFoodsPage() {
   return (
@@ -92,10 +106,14 @@ export default function TransitioningFoodsPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-01"
+            updatedAt="2026-10-13"
             reviewedBy="Editorial team"
           />
-          <LastUpdated date="2026-10-12" />
+          <LastUpdated date="2026-10-13" />
+
+          <CalloutBox variant="info" title="Short answer">
+            <p>Change a ferret's food gradually. The Merck Veterinary Manual says ferrets do not react well to frequent diet changes; mix the new food into the usual food for several days, slowly increasing the share of new food. Pick a meat-based commercial ferret food that is high in protein and low in carbohydrate. Source: <a href="https://www.merckvetmanual.com/all-other-pets/ferrets/providing-a-home-for-a-ferret">Merck Veterinary Manual</a>.</p>
+          </CalloutBox>
           <div className="mb-8">
             <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
 
@@ -155,7 +173,7 @@ export default function TransitioningFoodsPage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-12" />
+          <ComparisonFoot updated="2026-10-13" />
           <h2>Who should slow which step</h2>
           <p>A fixated ferret goes slower than the one-to-two-week schedule. If the ferret picks out only the old food or develops loose stool, hold the current ratio for a few extra days. Day 12 is only for a ferret whose stool and appetite stayed normal.</p>
           <p>
@@ -277,7 +295,14 @@ export default function TransitioningFoodsPage() {
             ctaAffiliateProduct="meat-based-food-topper"
           />
 
+          <h2 id="faq">Frequently asked questions</h2>
+          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
+
           <h2 id="sources">Sources</h2>
+          <ul>
+            <li><a href="https://www.merckvetmanual.com/all-other-pets/ferrets/providing-a-home-for-a-ferret">Merck Veterinary Manual: Providing a Home for a Ferret</a></li>
+            <li><a href="https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf">Lafeber Company, Care of the Pet Ferret (PDF)</a></li>
+          </ul>
           <p>
             Food imprinting, the rationale for gradual transition, and the
             hypoglycemia risk of feeding interruption are drawn from Quesenberry KE

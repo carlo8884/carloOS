@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, ReviewCard, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, LastUpdated, FAQAccordion, CalloutBox, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, ReviewCard, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -21,7 +21,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-10-13T00:00:00Z',
 })
 
 const med = buildMedicalWebPageSchema({
@@ -33,6 +33,20 @@ const med = buildMedicalWebPageSchema({
   lastReviewed: '2026-06-01',
 })
 const combined = combineSchemas(schema, med)
+const FAQS = [
+  {
+    "question": "How much should a ferret weigh?",
+    "answer": "Lafeber's care sheet says females typically weigh 500 to 900 grams (1.1 to 2 lb) and males 800 to 1,200 grams (1.7 to 2.6 lb)."
+  },
+  {
+    "question": "How many treats can a ferret have?",
+    "answer": "The Merck Veterinary Manual says to keep treats to no more than 5% of a ferret's daily calories. Good choices include meat, eggs, and freeze-dried muscle or organ meat; avoid sugary foods such as honey, raisins, and fruit."
+  },
+  {
+    "question": "How much exercise does a ferret need?",
+    "answer": "At a minimum, ferrets need 2 to 4 hours a day outside the cage, according to the Merck Veterinary Manual. Lafeber recommends at least 2 hours of supervised time in a ferret-proofed area daily."
+  }
+]
 
 export default function WeightManagementPage() {
   return (
@@ -95,9 +109,14 @@ export default function WeightManagementPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-01"
+            updatedAt="2026-10-13"
             reviewedBy="Editorial team"
           />
+          <LastUpdated date="2026-10-13" />
+
+          <CalloutBox variant="info" title="Short answer">
+            <p>Lafeber gives typical adult weights of 500 to 900 grams (1.1 to 2 lb) for females and 800 to 1,200 grams (1.7 to 2.6 lb) for males. Ferrets eat many small meals, so food is usually left available at all times. To keep weight in check, limit treats to no more than 5% of daily calories, choose meat, egg, or freeze-dried meat treats, and give at least 2 to 4 hours of out-of-cage exercise a day. Source: <a href="https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf">Lafeber Care of the Pet Ferret</a>.</p>
+          </CalloutBox>
 
           <h2 id="seasonal">The Seasonal Weight Swing</h2>
           <p>
@@ -160,7 +179,14 @@ export default function WeightManagementPage() {
             ctaAffiliateProduct="digital-gram-scale"
           />
 
+          <h2 id="faq">Frequently asked questions</h2>
+          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
+
           <h2 id="sources">Sources</h2>
+          <ul>
+            <li><a href="https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf">Lafeber Company, Care of the Pet Ferret (PDF)</a></li>
+            <li><a href="https://www.merckvetmanual.com/all-other-pets/ferrets/providing-a-home-for-a-ferret">Merck Veterinary Manual: Providing a Home for a Ferret</a></li>
+          </ul>
           <p>
             Seasonal weight cycling, body-condition assessment, and the association of weight change with insulinoma, adrenal disease, lymphoma, and dental disease are covered in Quesenberry KE and Carpenter JW (eds.), <em>Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery</em> (Saunders/Elsevier), and Carpenter JW, <em>Exotic Animal Formulary</em>. Locate primary publications by title.
           </p>

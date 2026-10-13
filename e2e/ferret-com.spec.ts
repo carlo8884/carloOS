@@ -689,3 +689,20 @@ test('ferret fix SM2: directory sitemap shard carries no build-time lastmod', as
   expect(xml).toContain('<loc>https://ferret.com/directory/')
   expect(xml).not.toContain('<lastmod>')
 })
+
+test('ferret fix AF5: diet pages lead with sourced short answers, FAQ schema, and linked sources', async ({ page }) => {
+  const cases: Array<[string, string, string, string]> = [
+    ['/diet/hydration-and-water', 'Rinse bottles daily', 'Why are ferrets prone to dehydration?', 'https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf'],
+    ['/diet/transitioning-foods', 'do not react well to frequent diet changes', 'How do I switch my ferret to a new food?', 'https://www.merckvetmanual.com/all-other-pets/ferrets/providing-a-home-for-a-ferret'],
+    ['/diet/senior-ferret-nutrition', 'insulinoma', 'Does an older ferret need vitamin supplements?', 'https://www.merckvetmanual.com/all-other-pets/ferrets/routine-health-care-for-ferrets'],
+    ['/diet/weight-management', 'no more than 5% of daily calories', 'How much should a ferret weigh?', 'https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf'],
+  ]
+  for (const [path, short, question, href] of cases) {
+    await page.goto(path, { waitUntil: 'domcontentloaded' })
+    await expect(page.locator('.carloOS-article').filter({ hasText: 'Short answer' }).first(), path).toContainText(short)
+    await expect(page.locator(`#sources ~ ul a[href="${href}"]`).first(), path).toBeAttached()
+    await expect(page.getByText(question).first(), path).toBeVisible()
+    const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
+    expect(ld, path).toContain('"FAQPage"')
+  }
+})

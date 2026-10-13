@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, CalloutBox, ReviewCard, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, LastUpdated, FAQAccordion, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, CalloutBox, ReviewCard, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -21,7 +21,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-10-13T00:00:00Z',
 })
 
 const med = buildMedicalWebPageSchema({
@@ -33,6 +33,20 @@ const med = buildMedicalWebPageSchema({
   lastReviewed: '2026-06-01',
 })
 const combined = combineSchemas(schema, med)
+const FAQS = [
+  {
+    "question": "Does an older ferret need vitamin supplements?",
+    "answer": "Not usually. The Merck Veterinary Manual says vitamins and supplements are not necessary except under special conditions or for older ferrets, and your veterinarian can advise whether yours needs them."
+  },
+  {
+    "question": "How often should a senior ferret see a vet?",
+    "answer": "Lafeber's care sheet recommends annual exams for pet ferrets and twice-yearly exams for ferrets 3 years or older, plus annual dental cleaning for ferrets over 3."
+  },
+  {
+    "question": "What if my older ferret stops eating?",
+    "answer": "Call your vet. The Merck Veterinary Manual says powdered ferret recovery diets can be mixed with water and syringe-fed, or meat-based baby food used if those are unavailable, served barely warm. Check with your vet for amounts and timing."
+  }
+]
 
 export default function SeniorFerretNutritionPage() {
   return (
@@ -101,9 +115,14 @@ export default function SeniorFerretNutritionPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-01"
+            updatedAt="2026-10-13"
             reviewedBy="Editorial team"
           />
+          <LastUpdated date="2026-10-13" />
+
+          <CalloutBox variant="info" title="Short answer">
+            <p>Older ferrets still need a meat-based, high-protein, low-carbohydrate ferret diet. Avoid sugary treats such as honey, raisins, and fruit, which can worsen signs of insulinoma, a pancreatic tumor common in ferrets. Vitamin supplements are generally unnecessary, though your vet may advise them for an older ferret. Lafeber recommends vet exams twice a year from age 3 and annual dental cleanings for ferrets over 3. Source: <a href="https://www.merckvetmanual.com/all-other-pets/ferrets/providing-a-home-for-a-ferret">Merck Veterinary Manual</a>.</p>
+          </CalloutBox>
 
           <h2 id="when">When a Ferret Becomes Senior</h2>
           <p>
@@ -256,7 +275,15 @@ export default function SeniorFerretNutritionPage() {
           />
           <p>The chain-shelf alternative is Marshall Premium. The <a href="/reviews/wysong-vs-marshall-kibble-guide">Wysong versus Marshall guide</a> prints both guaranteed analyses and says to skip Marshall when insulinoma risk is why you are choosing a food.</p>
 
+          <h2 id="faq">Frequently asked questions</h2>
+          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
+
           <h2 id="sources">Sources</h2>
+          <ul>
+            <li><a href="https://www.merckvetmanual.com/all-other-pets/ferrets/providing-a-home-for-a-ferret">Merck Veterinary Manual: Providing a Home for a Ferret</a></li>
+            <li><a href="https://www.merckvetmanual.com/all-other-pets/ferrets/routine-health-care-for-ferrets">Merck Veterinary Manual: Routine Health Care for Ferrets</a></li>
+            <li><a href="https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf">Lafeber Company, Care of the Pet Ferret (PDF)</a></li>
+          </ul>
           <p>
             Senior ferret nutritional needs, insulinoma feeding management, and the
             relationship between dental disease and intake are drawn from
