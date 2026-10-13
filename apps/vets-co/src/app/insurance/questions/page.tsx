@@ -26,7 +26,7 @@ const QUESTIONS = [
   { q: 'Is pet insurance worth it?', href: '/insurance/questions/is-pet-insurance-worth-it', summary: 'It is catastrophic-cost protection, not average savings. We frame both sides and point you to the breakeven math.', tag: 'Decision' },
   { q: 'How does the claims process work?', href: '/insurance/questions/how-does-the-claims-process-work', summary: 'Almost always reimbursement-based: you pay the vet, submit the invoice, and the insurer pays back your share after the deductible.', tag: 'How it works' },
   { q: 'When should I get pet insurance?', href: '/insurance/questions/when-should-i-get-pet-insurance', summary: 'As early as the insurer allows — enrolling a young, healthy pet locks in coverage before exclusions and lower premiums.', tag: 'Timing' },
-  { q: 'Are there multi-pet discounts?', href: '/insurance/questions/multi-pet-discounts', summary: 'Most insurers offer a modest 5–10% multi-pet discount; coverage terms matter far more than the saving.', tag: 'Cost' },
+  { q: 'Are there multi-pet discounts?', href: '/insurance/questions/multi-pet-discounts', summary: 'Many insurers offer a modest multi-pet discount that varies by insurer; coverage terms matter far more than the saving.', tag: 'Cost' },
   { q: 'Does pet insurance cover dental?', href: '/insurance/questions/does-pet-insurance-cover-dental', summary: 'Most policies cover dental disease and injuries but exclude routine cleanings; many require annual dental exams to keep claims eligible.', tag: 'Coverage' },
 ]
 
