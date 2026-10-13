@@ -94,7 +94,7 @@ function refBuildArticleSchema(p) {
     headline: p.title,
     description: p.description,
     url: p.url,
-    image: p.imageUrl,
+    ...(p.imageUrl ? { image: p.imageUrl } : {}),
     datePublished: p.publishedAt,
     dateModified: p.modifiedAt,
     author: { '@type': 'Person', name: p.authorName },

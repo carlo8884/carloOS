@@ -885,3 +885,11 @@ test('vets fix AF3: influenza, allergic reaction and tick-borne pages open with 
   await page.goto('/health/canine-influenza', { waitUntil: 'domcontentloaded' })
   await expect(page.locator('body')).not.toContainText(/incubation period is 2–4 days|recover in 2–4 weeks|less prevalent than H3N2/)
 })
+
+test('vets fix SD2: Article schema omits image instead of shipping an empty string', async ({ request }) => {
+  for (const path of ['/breeds/beagle-health', '/health/heat-stroke-dogs']) {
+    const html = await (await request.get(path)).text()
+    expect(html, path).toContain('"@type":"Article"')
+    expect(html, path).not.toContain('"image":""')
+  }
+})
