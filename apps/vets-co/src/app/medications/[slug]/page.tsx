@@ -400,6 +400,12 @@ export default function MedicationPage({ params }: PageProps) {
             the medications hub kitchen. Educational
             only — never a dose, never an Rx product. */}
 
+        {m.slug !== 'cytopoint' && (
+          <p className="mt-8">
+            If your vet sends {m.name} home with you, our guide on <Link href="/guides/how-to-give-your-pet-a-pill">how to give your pet a pill</Link> covers pill pockets, the three-treat routine and pill guns.
+          </p>
+        )}
+
         {/* Cross-portfolio recommendations */}
         <div className="not-prose mt-10">
           <CrossPortfolioCard currentSite="vets-co" contentType="medication" variant="footer" />

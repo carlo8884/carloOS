@@ -794,3 +794,12 @@ test('vets fix IL1: related health pages link to the first-aid kit, recovery con
     await expect(page.locator(`a[href="${href}"]`).first(), path).toBeAttached()
   }
 })
+
+test('vets fix IL2: oral medication pages link to the pill guide, injectable Cytopoint does not', async ({ page }) => {
+  for (const path of ['/medications/apoquel', '/medications/carprofen', '/medications/doxycycline', '/medications/vetmedin']) {
+    await page.goto(path, { waitUntil: 'domcontentloaded' })
+    await expect(page.locator('main a[href="/guides/how-to-give-your-pet-a-pill"]').first(), path).toBeVisible()
+  }
+  await page.goto('/medications/cytopoint', { waitUntil: 'domcontentloaded' })
+  await expect(page.locator('a[href="/guides/how-to-give-your-pet-a-pill"]')).toHaveCount(0)
+})
