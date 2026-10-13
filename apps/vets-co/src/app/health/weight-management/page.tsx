@@ -1,28 +1,43 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, PrimaryHop, RelatedLinks, ShopCtas, LastUpdated } from '@carloOS/ui'
+import { buildMetadata, FAQAccordion, CalloutBox, ArticleLayout, CrossPortfolioCard, PrimaryHop, RelatedLinks, ShopCtas, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Weight Management in Dogs and Cats | Vets.co', description: 'Dog body-condition scoring and a calorie example. Cats use the body condition score tool and the cat calorie calculator.', path: '/health/weight-management', type: 'article' })
 const SOURCES = [
+  { label: 'Association for Pet Obesity Prevention: 2022 State of Pet Obesity Report', url: 'https://www.petobesityprevention.org/2022-state-of-pet-obesity-report-summary', publisher: 'APOP' },
   { label: 'AAHA: Nutritional Assessment Guidelines', url: 'https://www.aaha.org/aaha-guidelines/nutritional-assessment/', publisher: 'AAHA' },
   { label: 'WSAVA: Global Nutrition Guidelines', url: 'https://wsava.org/global-guidelines/global-nutrition-guidelines/', publisher: 'WSAVA' },
-  { label: 'Kealy RD et al. JAVMA 2002 — Effects of Diet Restriction on Life Span and Age-Related Changes', url: 'https://pubmed.ncbi.nlm.nih.gov/12420743/', publisher: 'Journal of the American Veterinary Medical Association' },
+  { label: 'Kealy RD et al. JAVMA 2002 — Effects of diet restriction on life span and age-related changes in dogs', url: 'https://pubmed.ncbi.nlm.nih.gov/11991408/', publisher: 'Journal of the American Veterinary Medical Association' },
 ]
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Weight Management in Dogs and Cats', description: 'Dog body-condition scoring and a calorie example. Cats use the body condition score tool and the cat calorie calculator.', url: 'https://vets.co/health/weight-management', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-12T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Weight Management in Dogs and Cats', description: 'Dog body-condition scoring and a calorie example. Cats use the body condition score tool and the cat calorie calculator.', url: 'https://vets.co/health/weight-management', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-13T00:00:00Z' ,
   citation: SOURCES,
 })
 const med = buildMedicalWebPageSchema({ name: 'Weight Management in Dogs and Cats', description: 'Dog body-condition scoring and a calorie example. Cat checks use the body condition score tool and the cat calorie calculator.', url: 'https://vets.co/health/weight-management', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-07' })
 const combined = combineSchemas(schema, med)
+const FAQS = [
+  {
+    "question": "How many dogs are overweight?",
+    "answer": "In the Association for Pet Obesity Prevention's 2022 survey, US veterinary professionals classified 59% of the dogs and 61% of the cats they evaluated as overweight or obese."
+  },
+  {
+    "question": "Do leaner dogs live longer?",
+    "answer": "In Kealy and colleagues' study of 48 Labrador Retrievers (JAVMA 2002), dogs fed 25% less food than their pair-mates from 8 weeks of age had a significantly longer median life span, and signs of chronic disease generally appeared later."
+  },
+  {
+    "question": "What is a body condition score?",
+    "answer": "A body condition score rates a pet's fat stores by look and feel rather than weight alone. WSAVA's global nutrition guidelines provide body condition score charts for dogs and cats so veterinary teams can assess it at every visit."
+  }
+]
 
 export default function WeightManagementPage() {
   return (
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: 'Weight Management in Dogs and Cats', subtitle: 'Roughly 59% of US dogs are overweight or obese (APOP 2022 survey). Excess weight is not a cosmetic issue — it is the leading modifiable risk factor for arthritis, diabetes, respiratory disease, cardiac stress, reduced mobility, and shortened lifespan in dogs. A dog at ideal body weight lives on average ~1.8 years longer than the same dog kept overweight (Kealy et al., Purina Lifespan Study, JAVMA 2002). That survey figure is for dogs. Cat checks are the tools linked below, not this dog example.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', publishedAt: 'May 2025', readTime: '9 min',}}
+        hero={{ title: 'Weight Management in Dogs and Cats', subtitle: 'In the APOP 2022 survey, veterinary teams classed 59% of US dogs as overweight or obese. Excess weight is not a cosmetic issue — it is the leading modifiable risk factor for arthritis, diabetes, respiratory disease, cardiac stress, reduced mobility, and shortened lifespan in dogs. In a lifelong study of 48 Labrador Retrievers, dogs fed 25% less than their pair-mates lived significantly longer (Kealy et al., JAVMA 2002). That survey figure is for dogs. Cat checks are the tools linked below, not this dog example.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', publishedAt: 'May 2025', readTime: '9 min',}}
         heroHop={<>
           <PrimaryHop href="/go/amazon-brand/digital+pet+scale?s=health-weight-management" label="Search Amazon for a digital pet scale" />
           <HopDisclosure tone="on-dark" siteId="vets-co" href="/go/amazon-brand/digital+pet+scale?s=health-weight-management" />
@@ -53,7 +68,11 @@ export default function WeightManagementPage() {
 </>}
       >
         <div className="carloOS-article">
-          <LastUpdated date="2026-10-12" />
+          <LastUpdated date="2026-10-13" />
+
+          <CalloutBox variant="info" title="Short answer">
+            <p>Most US dogs are heavier than they should be: in APOP's 2022 survey, veterinary teams classed 59% of dogs and 61% of cats as overweight or obese. Weight matters for lifespan. In a lifelong study of 48 Labrador Retrievers, dogs fed 25% less than their littermate pair-mates lived significantly longer and developed signs of chronic disease later. Ask your vet to score your pet's body condition, which measures fat stores, rather than going by weight alone. Source: <a href="https://pubmed.ncbi.nlm.nih.gov/11991408/">Kealy et al., JAVMA 2002 (PubMed)</a>.</p>
+          </CalloutBox>
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
               Keep the kitchen-scale portioning notes
@@ -134,6 +153,9 @@ export default function WeightManagementPage() {
               />
           </div>
           </div>
+          <h2 id="faq">Frequently asked questions</h2>
+          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
+
 
           <ArticleSourcesList sources={SOURCES} />
         </div>

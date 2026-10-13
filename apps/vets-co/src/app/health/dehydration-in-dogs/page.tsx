@@ -1,17 +1,36 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, ShopCtas, LastUpdated } from '@carloOS/ui'
+import { buildMetadata, FAQAccordion, CalloutBox, ArticleLayout, CrossPortfolioCard, RelatedLinks, ShopCtas, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Dehydration in Dogs — Signs, Skin Turgor Test | Vets.co', description: 'How to assess dehydration in dogs using the skin turgor test and gum assessment. When dehydration is mild (oral fluids OK) vs severe (IV fluids needed).', path: '/health/dehydration-in-dogs', type: 'article' })
 const SOURCES = [
+  { label: 'AKC: Dehydration in Dogs (Dr. Jerry Klein)', url: 'https://www.akc.org/expert-advice/health/warning-signs-dehydration-dogs/', publisher: 'American Kennel Club' },
   { label: 'Merck Veterinary Manual: Fluid Therapy in Small Animals', url: 'https://www.merckvetmanual.com/therapeutics/fluid-therapy/fluid-therapy-in-animals', publisher: 'Merck Vet Manual' },
 ]
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Dehydration in Dogs', description: 'Signs, skin turgor test, and IV fluids decision guide for dog dehydration.', url: 'https://vets.co/health/dehydration-in-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-12T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Dehydration in Dogs', description: 'Signs, skin turgor test, and IV fluids decision guide for dog dehydration.', url: 'https://vets.co/health/dehydration-in-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-13T00:00:00Z' ,
   citation: SOURCES,
 })
 const med = buildMedicalWebPageSchema({ name: 'Dehydration in Dogs', description: 'Assessing and treating dehydration in dogs — skin turgor, gum assessment, and fluid therapy.', url: 'https://vets.co/health/dehydration-in-dogs', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-07' })
 const combined = combineSchemas(schema, med)
+const FAQS = [
+  {
+    "question": "How do I check my dog for dehydration at home?",
+    "answer": "Gently lift the skin near the shoulder blades and let go; in a well-hydrated dog it springs straight back, and in a dehydrated dog it falls back slowly. Also feel whether the gums are dry and sticky. AKC suggests testing the skin while your dog is well hydrated so you know what normal feels like, especially in wrinkly breeds."
+  },
+  {
+    "question": "Can I give my dog Pedialyte for dehydration?",
+    "answer": "AKC says an electrolyte fluid such as Pedialyte can be tried if your dog is not vomiting, but check with your veterinarian on the amount first. A dog that keeps vomiting needs a vet."
+  },
+  {
+    "question": "How much water does a dog need a day?",
+    "answer": "As a general rule, AKC says dogs need at least one ounce of water per pound of body weight per day, more in hot weather or with exercise. Your vet can advise for your dog's age, weight, and health."
+  },
+  {
+    "question": "Which dogs are most at risk of dehydration?",
+    "answer": "According to AKC, puppies, senior dogs, nursing mothers, and toy breeds are at higher risk. Vomiting, diarrhea, heatstroke, fever, and illnesses such as kidney disease or diabetes can also cause dehydration."
+  }
+]
 export default function DehydrationPage() {
   return (
     <>
@@ -43,7 +62,11 @@ export default function DehydrationPage() {
         <div className="carloOS-article">
 
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-09-05T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-12" />
+          <LastUpdated date="2026-10-13" />
+
+          <CalloutBox variant="info" title="Short answer">
+            <p>Signs of dehydration in dogs include skin that is slow to spring back when lifted, dry or sticky gums, thick saliva, sunken dry-looking eyes, lethargy, loss of appetite, and vomiting. Offer fresh, cool water. If your dog has these signs along with persistent vomiting, or you suspect heatstroke, treat it as an emergency: a vet can give fluids under the skin or into a vein. Source: <a href="https://www.akc.org/expert-advice/health/warning-signs-dehydration-dogs/">AKC (Dr. Jerry Klein, AKC Chief Veterinarian)</a>.</p>
+          </CalloutBox>
 
           <h2>The Skin Turgor Test</h2>
           <p>The skin turgor test assesses skin elasticity — dehydration reduces skin elasticity as fluid is lost from subcutaneous tissues. Technique: grasp a fold of skin on the back of the neck or between the shoulder blades. Gently lift and then release. In a well-hydrated dog, the skin snaps back immediately to its normal position. In a dehydrated dog, the skin returns slowly ("tenting") or remains raised for a moment before settling. The slower the return, the more significant the dehydration.</p>
@@ -103,6 +126,9 @@ export default function DehydrationPage() {
               />
           </div>
           </div>
+          <h2 id="faq">Frequently asked questions</h2>
+          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
+
 
           <ArticleSourcesList sources={SOURCES} />
         </div>

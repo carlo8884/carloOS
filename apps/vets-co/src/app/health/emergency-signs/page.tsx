@@ -1,19 +1,39 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, PrimaryHop, RelatedLinks, ShopCtas, LastUpdated } from '@carloOS/ui'
+import { buildMetadata, FAQAccordion, CalloutBox, ArticleLayout, CrossPortfolioCard, PrimaryHop, RelatedLinks, ShopCtas, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: '14 Dog Emergency Signs — When to Go to the Vet Right Now | Vets.co', description: '14 signs that require emergency veterinary care immediately. Pale gums, unproductive retching, seizures, and more', path: '/health/emergency-signs', type: 'article' })
 const SOURCES = [
+  { label: 'Merck Veterinary Manual: When to See a Veterinarian', url: 'https://www.merckvetmanual.com/multimedia/table/when-to-see-a-veterinarian', publisher: 'Merck Veterinary Manual' },
+  { label: 'AVMA: First aid tips for pet owners', url: 'https://www.avma.org/resources/pet-owners/emergencycare/13-animal-emergencies-require-immediate-veterinary-consultation-andor-care', publisher: 'AVMA' },
   { label: 'AVMA: Emergency Care for Your Pet', url: 'https://www.avma.org/resources-tools/pet-owners/emergency-care', publisher: 'AVMA' },
   { label: 'ASPCA Animal Poison Control Center', url: 'https://www.aspca.org/pet-care/aspca-poison-control', publisher: 'ASPCA' },
 ]
-const schema = buildArticleSchema({ siteId: 'vets-co', title: '14 Dog Emergency Signs', description: 'Veterinary emergency signs requiring immediate care — Reference guide.', url: 'https://vets.co/health/emergency-signs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-12T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'vets-co', title: '14 Dog Emergency Signs', description: 'Veterinary emergency signs requiring immediate care — Reference guide.', url: 'https://vets.co/health/emergency-signs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-13T00:00:00Z' ,
   citation: SOURCES,
 })
 const med = buildMedicalWebPageSchema({ name: '14 Dog Emergency Signs', description: 'Signs requiring immediate emergency veterinary care.', url: 'https://vets.co/health/emergency-signs', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-07' })
 const combined = combineSchemas(schema, med)
+const FAQS = [
+  {
+    "question": "When should my dog see a vet within 24 hours instead of right away?",
+    "answer": "The Merck Veterinary Manual lists signs that need a vet within 24 hours rather than immediately, including vomiting or diarrhea lasting more than 24 hours, continuous sneezing or coughing, drinking much more water than usual, a sudden change in behavior, lameness lasting more than 24 hours, and loss of appetite with no other signs of illness."
+  },
+  {
+    "question": "When is a seizure an emergency?",
+    "answer": "The AVMA says to take your pet to a veterinarian immediately after two or more seizures in 24 hours, a seizure lasting longer than 5 minutes, or seizure activity that doesn't stop. During a seizure, keep your hands away from the mouth and time it."
+  },
+  {
+    "question": "What are the signs of internal bleeding in a dog?",
+    "answer": "Per the AVMA, signs include bleeding from the nose, mouth, or rectum, coughing up blood, bloody urine, pale gums, collapse, and a weak, rapid pulse. Keep your pet warm and quiet and go to the nearest veterinary hospital."
+  },
+  {
+    "question": "Who do I call if my pet ate something poisonous?",
+    "answer": "The AVMA advises calling your veterinarian, an emergency veterinary clinic, the ASPCA Animal Poison Control Center (888-426-4435), or the Pet Poison Helpline (855-764-7661) immediately; a consultation fee may apply. Bring the product packaging if you can."
+  }
+]
 const EMERGENCY_SIGNS = [
   { sign: 'Pale, white, blue, or gray gums', detail: 'Normal gum color is pink. Pale gums indicate cardiovascular shock, internal bleeding, or severe anemia. White or blue gums indicate oxygen deprivation. Any color other than pink-to-salmon requires immediate emergency evaluation — gum color is one of the fastest assessments of circulatory status. A handheld AA LED flashlight is how that gum-color check happens at night or in a dim hallway — lift the lip, shine across the gums, and look for pink-to-salmon versus pale, white, blue, or gray. It is not a medical penlight, not a foaling headlamp, and not a gum-color assessment chart. A color other than pink-to-salmon is a reason to call ahead and drive, not a diagnosis of shock.' },
   { sign: 'Unproductive retching or attempting to vomit without producing anything', detail: 'In large and deep-chested breeds, this is GDV (gastric dilatation-volvulus) until proven otherwise. Do not wait. Call ahead to the emergency vet and go immediately. Time measured in hours. Household prep gear does not treat GDV, does not decompress a stomach, and does not replace the emergency clinic.' },
@@ -60,7 +80,11 @@ export default function EmergencySignsPage() {
 </>}
       >
         <div className="carloOS-article">
-          <LastUpdated date="2026-10-12" />
+          <LastUpdated date="2026-10-13" />
+
+          <CalloutBox variant="info" title="Short answer">
+            <p>Get to a vet immediately for difficulty or shallow breathing, choking, pale, white, or bluish gums, a weak pulse, heavy bleeding, seizures, staggering, extreme lethargy, straining without passing urine or stool, bloody or uncontrollable diarrhea, black stools, severe pain, broken bones, or not eating or drinking for 24 hours. If you think your pet swallowed something toxic, call your vet, an emergency clinic, or a poison control line right away. Source: <a href="https://www.merckvetmanual.com/multimedia/table/when-to-see-a-veterinarian">Merck Veterinary Manual</a>.</p>
+          </CalloutBox>
 
           <p className="text-base text-brand-text-mid leading-relaxed mb-8">This page is not a veterinarian. If your dog may be in danger, contact a vet. When in doubt: call your emergency vet and describe what you are seeing. A 2-minute call is far better than waiting and watching something become life-threatening. Emergency vets would rather you call unnecessarily than delay a critical situation. These 14 signs should prompt an immediate call and drive. Household prep gear — a wire basket dog muzzle, quilted disposable underpads, a handheld AA LED flashlight — is how the ride stays safer and cleaner. It does not treat GDV, it does not replace the clinic, and it is not a reason to delay the drive.</p>
           {EMERGENCY_SIGNS.map((item, i) => (
@@ -100,6 +124,9 @@ export default function EmergencySignsPage() {
           </div>
 
           <p>These 14 signs are a reason to drive, not a reason to price the visit first. After the pet is stable, the <a href="/guides/emergency-vet-costs">emergency vet costs</a> guide explains why that bill runs higher than a daytime appointment, and <a href="/guides/how-to-afford-vet-care">how to afford vet care</a> covers payment options.</p>
+          <h2 id="faq">Frequently asked questions</h2>
+          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
+
           <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>
