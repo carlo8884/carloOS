@@ -29,7 +29,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-05-28T00:00:00Z',
-  modifiedAt: '2026-05-28T00:00:00Z',
+  modifiedAt: '2026-10-13T00:00:00Z',
 })
 
 const FAQS = [
@@ -51,7 +51,7 @@ const FAQS = [
   {
     question: 'Why is dental disease so common in ferrets?',
     answer:
-      'Ferrets accumulate plaque rapidly on kibble diets, and clinically meaningful tartar and gingivitis are often visible by age 2–3 — much earlier than in dogs or cats. The Journal of Exotic Pet Medicine and Quesenberry & Carpenter both flag periodontal disease as one of the most under-treated conditions in pet ferrets. Daily brushing with a small soft brush and an enzymatic pet toothpaste (never human toothpaste — xylitol/fluoride risk), plus annual dental check, is the standard prevention pattern.',
+      'Plaque builds up and can lead to gum disease and tooth loss. The Merck Veterinary Manual advises having your ferret\'s teeth and gums examined by a veterinarian every year; a professional dental cleaning requires general anesthesia. Brushing your ferret\'s teeth and feeding dry ferret food help minimize plaque. Do not use human toothpaste with fluoride; use a pet toothpaste from your veterinarian. Lafeber recommends annual dental cleaning for ferrets older than 3 years.',
   },
   {
     question: 'How often should I trim my ferret\'s nails?',
@@ -61,7 +61,7 @@ const FAQS = [
   {
     question: 'When should I start watching for insulinoma symptoms?',
     answer:
-      'The clinical onset window begins around age 3 and peaks between ages 4 and 7 (Quesenberry & Carpenter; Veterinary Clinics of North America: Exotic Animal Practice). The first year is when you build the diet, weight, and exotic-pet-vet relationships that let you catch it early. Later symptoms: hindlimb weakness, mouth-pawing (nausea), staring spells, increased sleep. Do not test blood glucose at home — that is a vet decision. See our insulinoma page for clinical detail.',
+      'Lafeber recommends twice-yearly vet exams once a ferret is 3 or older, which is a practical point to start watching closely for insulinoma signs. The first year is when you build the diet, weight, and exotic-pet-vet relationships that let you catch it early. Later symptoms: hindlimb weakness, mouth-pawing (nausea), staring spells, increased sleep. Do not test blood glucose at home — that is a vet decision. See our insulinoma page for clinical detail.',
   },
   {
     question: 'I missed the first few weeks — is this still useful?',
@@ -195,12 +195,12 @@ export default function FerretFirstYearSchedulePage() {
             <p className="text-lg font-light text-white/65 leading-relaxed max-w-xl mb-8">
               Ferrets are unusual pets — they need vaccines, dental care, an exotic-pet vet, and
               lifelong monitoring most pet owners do not expect. This 52-week schedule builds the
-              foundation for the next 5–8 years of their life. It is on this page — not emailed.
+              foundation for the rest of their life. It is on this page — not emailed.
             </p>
             <ul className="text-sm text-white/70 space-y-2 mb-10 max-w-md">
               <li className="flex items-start gap-3"><span className="text-brand-primary">✓</span><span>Printable 52-week schedule (vaccines, dental, neuter, diet, vet visits)</span></li>
               <li className="flex items-start gap-3"><span className="text-brand-primary">✓</span><span>On this page — not emailed. No signup required.</span></li>
-              <li className="flex items-start gap-3"><span className="text-brand-primary">✓</span><span>Grounded in exotic-pet veterinary references (AEMV, AFA, Quesenberry &amp; Carpenter)</span></li>
+              <li className="flex items-start gap-3"><span className="text-brand-primary">✓</span><span>Grounded in the Merck Veterinary Manual and Lafeber veterinary care sheets</span></li>
               <li className="flex items-start gap-3"><span className="text-brand-primary">✓</span><span>Print or save a copy from this page.</span></li>
             </ul>
           </div>
@@ -288,12 +288,11 @@ export default function FerretFirstYearSchedulePage() {
           </h2>
           <div className="prose max-w-3xl text-brand-text-mid leading-relaxed space-y-4">
             <p>
-              Domestic ferrets live an average of 5–8 years (Quesenberry &amp; Carpenter,{' '}
-              <em>Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery</em>). The first
+              Ferrets live an average of 6 to 8 years (<a href="https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf">Lafeber, Care of the Ferret</a>). The first
               year is the shortest stretch in their lives — but it is when dental routine, diet
               pattern, exotic-pet-vet relationship, and weight baseline get established. Each
-              becomes critical when insulinoma, adrenal disease, or dental disease begin to
-              surface in years 3–7.
+              becomes critical as insulinoma, adrenal disease, and dental disease become more
+              common with age.
             </p>
             <p>
               A ferret whose owner brushes their teeth daily from kithood arrives at year three
@@ -351,7 +350,9 @@ export default function FerretFirstYearSchedulePage() {
               <li><Link href="/care/cage-setup" className="text-brand-primary hover:underline">Ferret Cage Setup — multi-level housing and ferret-proofing</Link></li>
             </ul>
             <p className="mt-8 text-xs text-brand-text-light leading-relaxed">
-              Sources: Quesenberry KE and Carpenter JW (eds.),{' '}
+              Sources: <a href="https://www.merckvetmanual.com/all-other-pets/ferrets/routine-health-care-for-ferrets">Merck Veterinary Manual, Routine Health Care for Ferrets</a>; 
+              <a href="https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf">Lafeber, Care of the Ferret</a>. General references, not checked against
+              this page: Quesenberry KE and Carpenter JW (eds.), 
               <em>Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery</em>, Saunders;{' '}
               <em>Journal of Exotic Pet Medicine</em>; <em>Veterinary Clinics of North America:
               Exotic Animal Practice</em>; American Ferret Association (AFA); Association of
