@@ -83,12 +83,12 @@ const TRIAGE_TIERS = [
   {
     tier: 'Emergency',
     timeframe: 'Go now — nearest open ER, do not wait',
-    signs: 'Trouble breathing, collapse, unproductive retching with a swollen abdomen (possible bloat/GDV), seizures lasting more than a few minutes or back-to-back, suspected poisoning, severe trauma, pale or blue gums, inability to urinate, heatstroke, uncontrolled bleeding.',
+    signs: 'Trouble breathing, collapse, unproductive retching with a swollen abdomen (possible bloat/GDV), seizures lasting more than a few minutes or back-to-back, suspected poisoning, severe trauma, pale or blue gums, straining without passing urine or stool, heatstroke, uncontrolled bleeding, bite wounds, sudden severe lameness, or not eating or drinking for 24 hours (Merck Veterinary Manual).',
   },
   {
     tier: 'Urgent',
     timeframe: 'Same day or within 24 hours',
-    signs: 'Repeated vomiting or diarrhea, not eating for more than a day, limping that will not bear weight, a painful or rapidly swelling eye, an abscess or bite wound, straining in the litter box, lethargy with fever, or any sudden behavior change in a sick-appearing pet.',
+    signs: 'Vomiting or diarrhea for more than 24 hours, lameness lasting more than 24 hours, poor appetite with no other signs of illness, a painful or rapidly swelling eye, an abscess, lethargy with fever, or any sudden behavior change (Merck Veterinary Manual).',
   },
   {
     tier: 'Routine',
@@ -104,7 +104,7 @@ const TRIAGE_TIERS = [
 const FAQS = [
   {
     question: 'How do I know if my pet needs the ER or a regular appointment?',
-    answer: 'Use the urgency tiers above. Trouble breathing, collapse, seizures, suspected poisoning, bloat-like retching with a swollen belly, an inability to urinate, or pale gums are emergencies — go to the nearest open hospital and do not wait. Repeated vomiting, not eating for more than a day, non-weight-bearing lameness, or a painful eye are urgent and usually warrant same-day care. Mild, gradual, or preventive concerns can be handled at a routine appointment. When you are unsure, err toward calling a veterinarian or pet poison control rather than waiting.',
+    answer: 'Use the urgency tiers above. Trouble breathing, collapse, seizures, suspected poisoning, bloat-like retching with a swollen belly, straining without passing urine, pale gums, sudden severe lameness, or not eating or drinking for 24 hours are emergencies — go to the nearest open hospital and do not wait. Vomiting or diarrhea for more than 24 hours, lameness lasting more than 24 hours, or a painful eye are urgent and need a vet within 24 hours (Merck Veterinary Manual). Mild, gradual, or preventive concerns can be handled at a routine appointment. When you are unsure, err toward calling a veterinarian or pet poison control rather than waiting.',
   },
   {
     question: 'Are these guides a substitute for seeing a veterinarian?',
@@ -147,10 +147,11 @@ export default function VetsHealthHubPage() {
         <span className="text-brand-text-mid font-medium">Health</span>
       </nav>
       <div className="px-container-sm sm:px-container pt-6 pb-2 bg-brand-surface border-b border-brand-border">
-        <p className="text-xs text-brand-text-light max-w-3xl leading-relaxed">Drawing on current <a href="https://www.avma.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">AVMA</a>, <a href="https://aaha.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">AAHA</a>, and <a href="https://www.acvim.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">ACVIM</a> guidance.</p>
-        <LastUpdated date="2026-10-07" />
+        <p className="text-xs text-brand-text-light max-w-3xl leading-relaxed">General references (not checked against each statement on this page): <a href="https://www.avma.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">AVMA</a>, <a href="https://aaha.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">AAHA</a>, and <a href="https://www.acvim.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">ACVIM</a>. The triage tiers follow the Merck Veterinary Manual&apos;s <a href="https://www.merckvetmanual.com/multimedia/table/when-to-see-a-veterinarian" rel="noopener" target="_blank" className="text-brand-primary hover:underline">When to See a Veterinarian</a> table.</p>
+        <LastUpdated date="2026-10-13" />
         <ArticleSourcesList
           sources={[
+            { label: 'When to See a Veterinarian (general guidance for pets)', url: 'https://www.merckvetmanual.com/multimedia/table/when-to-see-a-veterinarian', publisher: 'Merck Veterinary Manual' },
             { label: 'American Veterinary Medical Association', url: 'https://www.avma.org/', publisher: 'AVMA' },
             { label: 'American Animal Hospital Association', url: 'https://www.aaha.org/', publisher: 'AAHA' },
             { label: 'American College of Veterinary Internal Medicine', url: 'https://www.acvim.org/', publisher: 'ACVIM' },
@@ -165,7 +166,7 @@ export default function VetsHealthHubPage() {
         <div className="max-w-3xl">
           <h2 id="health-tldr" className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">The short version</h2>
           <p className="text-base text-brand-text-mid leading-relaxed mb-3">
-            This library explains common pet conditions, what their warning signs mean, and <strong className="text-brand-dark">when to seek care</strong>. The fastest triage: <strong className="text-brand-dark">trouble breathing, collapse, seizures, suspected poisoning, bloat-like retching, inability to urinate, or pale gums are emergencies</strong> — go to the nearest open hospital now. Repeated vomiting, refusing food for over a day, or non-weight-bearing lameness are <strong className="text-brand-dark">urgent</strong> and usually need same-day care. Mild, gradual, and preventive concerns belong at a <strong className="text-brand-dark">routine</strong> appointment.
+            This library explains common pet conditions, what their warning signs mean, and <strong className="text-brand-dark">when to seek care</strong>. The fastest triage: <strong className="text-brand-dark">trouble breathing, collapse, seizures, suspected poisoning, bloat-like retching, straining without passing urine, pale gums, sudden severe lameness, or no eating or drinking for 24 hours are emergencies</strong> — go to the nearest open hospital now. Vomiting or diarrhea for more than 24 hours, or lameness lasting more than 24 hours, is <strong className="text-brand-dark">urgent</strong>: see a vet within 24 hours (<a href="https://www.merckvetmanual.com/multimedia/table/when-to-see-a-veterinarian" className="text-brand-primary hover:underline">Merck Veterinary Manual</a>). Mild, gradual, and preventive concerns belong at a <strong className="text-brand-dark">routine</strong> appointment.
           </p>
           <p className="text-sm text-brand-text-light leading-relaxed">
             These guides are educational and not a diagnosis. For suspected poisoning, call <a href="tel:8884264435" className="text-brand-primary hover:underline font-semibold">ASPCA Poison Control at 888-426-4435</a> or your veterinarian immediately. Start with the <Link href="/symptoms" className="text-brand-primary hover:underline">symptom checker</Link>, review <Link href="/health/emergency-signs" className="text-brand-primary hover:underline">emergency warning signs</Link>, or <Link href="/find-a-vet" className="text-brand-primary hover:underline">find a vet</Link>.
