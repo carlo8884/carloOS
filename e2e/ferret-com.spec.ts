@@ -700,3 +700,24 @@ test('ferret fix AF5: diet pages lead with sourced short answers, FAQ schema, an
     expect(ld, path).toContain('"FAQPage"')
   }
 })
+
+test('ferret fix AF6: care and ownership pages lead with sourced short answers, FAQ schema, and Lafeber-aligned figures', async ({ page }) => {
+  const LAF = 'https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf'
+  const cases: Array<[string, string, string]> = [
+    ['/diet/supplements-and-vitamins', 'not necessary except under special conditions', 'Do ferrets need vitamins?'],
+    ['/care/bedding-and-litter-types', 'several times a week', 'What litter is best for ferrets?'],
+    ['/care/multi-level-housing', '24 × 24 × 18 inches', 'What bar spacing is safe for a ferret cage?'],
+    ['/ownership/is-a-ferret-right-for-you', 'average of 6 to 8 years', 'How long do ferrets live?'],
+    ['/ownership/ferrets-and-other-pets', 'birds, rabbits, rodents, or lizards', 'Can ferrets live with cats and dogs?'],
+  ]
+  for (const [path, short, question] of cases) {
+    await page.goto(path, { waitUntil: 'domcontentloaded' })
+    await expect(page.locator('.carloOS-article').filter({ hasText: 'Short answer' }).first(), path).toContainText(short)
+    await expect(page.locator(`a[href="${LAF}"]`).first(), path).toBeAttached()
+    await expect(page.getByText(question).first(), path).toBeVisible()
+    const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
+    expect(ld, path).toContain('"FAQPage"')
+  }
+  await page.goto('/ownership/is-a-ferret-right-for-you', { waitUntil: 'domcontentloaded' })
+  await expect(page.locator('body')).not.toContainText('six to ten years')
+})

@@ -4,6 +4,9 @@ import Link from 'next/link'
 import {
   buildMetadata,
   ArticleLayout,
+  LastUpdated,
+  FAQAccordion,
+  CalloutBox,
   ArticleByline,
   RelatedLinks,
   TableOfContents,
@@ -27,6 +30,8 @@ export const metadata: Metadata = buildMetadata({
 })
 
 const SOURCES = [
+  { label: "Lafeber Company, Care of the Pet Ferret (PDF)", url: "https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf", publisher: "Lafeber" },
+  { label: "Merck Veterinary Manual: Providing a Home for a Ferret", url: "https://www.merckvetmanual.com/all-other-pets/ferrets/providing-a-home-for-a-ferret", publisher: "Merck Veterinary Manual" },
   {
     label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — GI foreign-body and respiratory-irritant chapters",
     publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
@@ -65,11 +70,25 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-10-12T00:00:00Z',
+  modifiedAt: '2026-10-13T00:00:00Z',
 
   citation: SOURCES,
 })
 const combined = combineSchemas(schema)
+const FAQS = [
+  {
+    "question": "What litter is best for ferrets?",
+    "answer": "Lafeber's care sheet prefers pelleted litter, such as recycled newspaper products, or natural-fiber litters, because they are cleaner, more absorbent, non-toxic if swallowed, and compostable. Kits often play and burrow in clay or clumping litter."
+  },
+  {
+    "question": "How often should I clean a ferret's litter box?",
+    "answer": "Ferrets do not cover their waste, so Lafeber advises spot-cleaning daily and changing the litter several times a week to keep odor down."
+  },
+  {
+    "question": "What bedding is safe for ferrets?",
+    "answer": "Lafeber suggests old towels or shirts, or sleeping products such as cloth tubes, tents, and hammocks, free of loops, holes, or loose strings. If your ferret chews cloth, swap in a small cardboard or wooden box with clean straw or hay. Merck adds a check that fabric won't unravel and that the ferret isn't eating it."
+  }
+]
 
 
 export default function BeddingAndLitterTypesPage() {
@@ -143,9 +162,14 @@ export default function BeddingAndLitterTypesPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-10-12"
+            updatedAt="2026-10-13"
             reviewedBy="Editorial team"
           />
+          <LastUpdated date="2026-10-13" />
+
+          <CalloutBox variant="info" title="Short answer">
+            <p>Lafeber recommends pelleted litter such as recycled newspaper or natural-fiber litter, which is cleaner, more absorbent, non-toxic if swallowed, and compostable; kits often play and burrow in clay or clumping litter. Spot-clean daily and change the litter several times a week. For bedding, old towels, shirts, hammocks, or cloth tubes work, as long as they have no loops, holes, or loose strings that can catch nails. Source: <a href="https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf">Lafeber Care of the Pet Ferret</a>.</p>
+          </CalloutBox>
           <EmailCapture
             variant="inline"
             siteId="ferret-com"
@@ -269,7 +293,7 @@ export default function BeddingAndLitterTypesPage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-12" />
+          <ComparisonFoot updated="2026-10-13" />
 
           <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/ferret+hammock?s=care-bedding-and-litter-types", "/go/amazon-brand/ferret+fleece+liner?s=care-bedding-and-litter-types", "/go/amazon-brand/recycled+paper+pellet+litter?s=care-bedding-and-litter-types", "/go/amazon-brand/ferret+corner+litter+pan?s=care-bedding-and-litter-types"]} />
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
@@ -327,10 +351,13 @@ export default function BeddingAndLitterTypesPage() {
             Inspect bedding at every wash and retire it when fleece thins, seams fray, or chew holes appear — typically every few months with regular laundering. A frayed sack is an ingestion hazard, not a frugal save.
           </p>
           <p>
-            Litter pans want a daily spot-clean and a full empty-and-wipe weekly. Ferrets are fastidious about their corners; a pan left dirty is the fastest way to teach a ferret to eliminate beside it instead. For the placement and multi-pan strategy that makes litter actually work, see <a href="/care/litter-training">litter training</a>, and for how bedding and litter zones fit a tall cage, our <a href="/care/multi-level-housing">multi-level housing</a> guide.
+            Litter pans want a daily spot-clean and a full litter change several times a week (<a href="https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf">Lafeber</a>). Ferrets are fastidious about their corners; a pan left dirty is the fastest way to teach a ferret to eliminate beside it instead. For the placement and multi-pan strategy that makes litter actually work, see <a href="/care/litter-training">litter training</a>, and for how bedding and litter zones fit a tall cage, our <a href="/care/multi-level-housing">multi-level housing</a> guide.
           </p>
 
           <p>The litter materials above are compared in the <Link href="/reviews/best-ferret-litter">ferret litter review</Link>.</p>
+          <h2 id="faq">Frequently asked questions</h2>
+          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
+
           <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>

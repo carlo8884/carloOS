@@ -1,7 +1,9 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleSourcesList, ShopCtas } from '@carloOS/ui'
+import { CalloutBox, buildMetadata, ArticleLayout,
+  LastUpdated,
+  FAQAccordion, ArticleByline, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleSourcesList, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -14,6 +16,8 @@ export const metadata: Metadata = buildMetadata({
 })
 
 const SOURCES = [
+  { label: "Lafeber Company, Care of the Pet Ferret (PDF)", url: "https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf", publisher: "Lafeber" },
+  { label: "Merck Veterinary Manual: Providing a Home for a Ferret", url: "https://www.merckvetmanual.com/all-other-pets/ferrets/providing-a-home-for-a-ferret", publisher: "Merck Veterinary Manual" },
   {
     label: "American Ferret Association (AFA) — cage sizing, level spacing, and out-of-cage time owner guidance",
     url: "https://www.ferret.org",
@@ -37,11 +41,25 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-09-04T00:00:00Z',
+  modifiedAt: '2026-10-13T00:00:00Z',
 
   citation: SOURCES,
 })
 const combined = combineSchemas(schema)
+const FAQS = [
+  {
+    "question": "How big should a ferret cage be?",
+    "answer": "Lafeber's care sheet gives a minimum of 24 × 24 × 18 inches (60 × 60 × 45 cm) for one to two ferrets, and says large multi-level cages with ramps are frequently used."
+  },
+  {
+    "question": "What bar spacing is safe for a ferret cage?",
+    "answer": "Per Lafeber, bar spacing should be no wider than 1 inch (2.5 cm), with 0.5 inch (1.3 cm) preferable. A wire-mesh floor should have squares no larger than 0.25 inch (0.6 cm) to prevent foot injury."
+  },
+  {
+    "question": "Where should the litter box go in a ferret cage?",
+    "answer": "The Merck Veterinary Manual says to place the litter box in the cage but not too close to the sleeping or eating areas, or the ferret will not use it. Ferrets prefer to eliminate in the same spot."
+  }
+]
 
 
 export default function MultiLevelHousingPage() {
@@ -110,16 +128,21 @@ export default function MultiLevelHousingPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-09-04"
+            updatedAt="2026-10-13"
             reviewedBy="Editorial team"
           />
+          <LastUpdated date="2026-10-13" />
+
+          <CalloutBox variant="info" title="Short answer">
+            <p>Lafeber's minimum cage size for one to two ferrets is 24 × 24 × 18 inches (60 × 60 × 45 cm), and large multi-level cages with ramps are common. Keep bar spacing no wider than 1 inch (0.5 inch is better) and any wire-mesh floor squares no larger than 0.25 inch. Aquariums are unsuitable. Even in a good cage, ferrets need at least 2 to 4 hours a day outside it, per the Merck Veterinary Manual. Source: <a href="https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf">Lafeber Care of the Pet Ferret</a>.</p>
+          </CalloutBox>
 
           <h2 id="why-vertical">Why Vertical Layout Wins</h2>
           <p>
             A ferret evaluates a space in three dimensions. In the wild, the European polecat — the ancestor of the domestic ferret — moves through burrow systems, root tangles, and stacked cover, not open floor. That instinct survives in the pet: given a choice between a wide flat cage and a tall narrow one of equal volume, most ferrets use the tall one more completely, climbing between levels dozens of times a day.
           </p>
           <p>
-            This has a practical consequence. The 24 × 24 inch floor and 18 inch height per ferret are a planning figure, not a fetched published standard. Stacking levels multiplies usable habitat without enlarging the cage's footprint in your room. A 36 × 24-inch base with three levels is the same kind of planning figure, and it uses the same floor space, which is the binding constraint in most apartments and homes. The <a href="/tools/cage-size-calculator">cage size calculator</a> turns those notes into an L × W × H for your headcount and level count.
+            This has a practical consequence. <a href="https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf">Lafeber&apos;s care sheet</a> gives a minimum of 24 × 24 × 18 inches for one to two ferrets. Stacking levels multiplies usable habitat without enlarging the cage's footprint in your room. A 36 × 24-inch base with three levels is the same kind of planning figure, and it uses the same floor space, which is the binding constraint in most apartments and homes. The <a href="/tools/cage-size-calculator">cage size calculator</a> turns those notes into an L × W × H for your headcount and level count.
           </p>
           <p>
             The right mental model is a small vertical apartment: a ground floor with the litter and access doors, a middle floor with food and water, and an upper floor of hammocks and sleep sacks where the ferret actually spends most of its sleeping hours. Each level does a job, and ramps connect them.
@@ -220,6 +243,9 @@ export default function MultiLevelHousingPage() {
           </div>
 
           <p>Multi-level cages are compared in the <Link href="/reviews/best-ferret-cage">ferret cage review</Link>.</p>
+          <h2 id="faq">Frequently asked questions</h2>
+          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
+
           <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>
