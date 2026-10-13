@@ -21,7 +21,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-11T00:00:00Z',
+  modifiedAt: '2026-10-13T00:00:00Z',
 })
 
 const med = buildMedicalWebPageSchema({
@@ -135,7 +135,7 @@ export default function ProteinAndFatRequirementsPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-11"
+            updatedAt="2026-10-13"
             reviewedBy="Editorial team"
           />
 
@@ -214,10 +214,6 @@ export default function ProteinAndFatRequirementsPage() {
             cons={['Premium price', 'Not always stocked at supermarket pet aisles']}
             price="see current price / 5 lb"
             priceNote="dated 2026-06-01."
-            ctaText="Find Wysong Epigen 90"
-            ctaHref="/go/wysong/epigen-90?s=diet-protein-and-fat-requirements"
-            ctaAffiliateProgram="wysong"
-            ctaAffiliateProduct="epigen-90"
           />
           <p>The chain-shelf bag next to this one is Marshall Premium. The <a href="/reviews/wysong-vs-marshall-kibble-guide">Wysong versus Marshall guide</a> prints both guaranteed analyses and says to skip Marshall when insulinoma risk is why you are choosing a food.</p>
 

@@ -1,7 +1,7 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, QuietPartnerLink, RelatedLinks, buildArticleSchema, buildMetadata, PrimaryHop, ArticleSourcesList, LastUpdated, ComparisonFoot, EmailCapture } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata, PrimaryHop, ArticleSourcesList, LastUpdated, ComparisonFoot, EmailCapture } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -19,7 +19,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-10-04T00:00:00Z',
-  modifiedAt: '2026-10-12T00:00:00Z',
+  modifiedAt: '2026-10-13T00:00:00Z',
 })
 
 const FAQS = [
@@ -75,7 +75,7 @@ export default function WysongVsMarshallKibbleGuidePage() {
       }
      priceAsOf="2026-10-07">
       <div className="carloOS-article">
-          <LastUpdated date="2026-10-12" />
+          <LastUpdated date="2026-10-13" />
         <p>The <Link href="/diet/best-ferret-kibble">kibble review</Link> already lists Wysong Epigen 90 as the premium pick the current page markets as starch-free, and Marshall Premium as the mid-tier bag you are more likely to find in a chain aisle. Carbohydrate is not on either guaranteed analysis. The percentages below are the ones printed in the review.</p>
         <h2>What the review says about Wysong</h2>
         <p>Wysong Epigen 90 is the top row and the winner. The current Wysong Epigen 90 page lists crude protein minimum 63% and crude fat minimum 16%. Those are guaranteed-analysis figures as printed, not a dry-matter conversion. The page markets the food as starch-free. Carbohydrate is not on the guaranteed analysis — check the label. The printed price is $30–50 for 5 lb. Distribution is direct and specialty retail, and it is not always stocked in chain pet aisles.</p>
@@ -88,7 +88,6 @@ export default function WysongVsMarshallKibbleGuidePage() {
         <HopDisclosure siteId="ferret-com" href="/go/amazon/B019W9VXZK?s=reviews-wysong-vs-marshall-kibble-guide" />
         <p>The link below opens the Wysong Epigen 90 product page already used on the diet pages. The price there is the retailer's.</p>
         <p><a className="font-semibold text-brand-primary" href="/go/amazon/B019W9VXZK?s=reviews-wysong-vs-marshall-kibble-guide">Check price of Wysong Epigen 90 on Amazon →</a></p>
-        <QuietPartnerLink href="/go/wysong/epigen-90?s=reviews-wysong-vs-marshall-kibble-guide" label="Check price of Wysong Epigen 90 at Wysong" />
         <div className="my-6 max-w-full min-w-0">
           <table className="w-full text-sm border-collapse table-fixed [&_th]:break-words [&_td]:break-words">
             <caption className="text-left font-semibold text-brand-dark p-3">At a glance</caption>
@@ -128,7 +127,7 @@ export default function WysongVsMarshallKibbleGuidePage() {
             </tbody>
           </table>
         </div>
-        <ComparisonFoot updated="2026-10-12" />
+        <ComparisonFoot updated="2026-10-13" />
         <EmailCapture
           variant="inline"
           siteId="ferret-com"

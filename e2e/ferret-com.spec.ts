@@ -901,3 +901,22 @@ test('ferret fix PA1: play-aggression page answers first and cites the MSD Veter
   const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
   expect(ld).toContain('"FAQPage"')
 })
+
+test('ferret fix WY1: no page carries a /go/wysong href, even a held one', async ({ page }) => {
+  for (const path of [
+    '/care/diet-basics',
+    '/diet/best-ferret-kibble',
+    '/diet/protein-and-fat-requirements',
+    '/diet/reading-food-labels',
+    '/diet/safe-treats',
+    '/diet/senior-ferret-nutrition',
+    '/diet/whole-prey-vs-kibble',
+    '/reviews/november-december-gift-guide',
+    '/reviews/wysong-vs-carniwhole-guide',
+    '/reviews/wysong-vs-marshall-kibble-guide',
+    '/tools/label-calculator',
+  ]) {
+    await page.goto(path, { waitUntil: 'domcontentloaded' })
+    expect(await page.content(), path).not.toContain('/go/wysong')
+  }
+})
