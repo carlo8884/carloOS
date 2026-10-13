@@ -1,1 +1,1 @@
-PLACEHOLDER_GROK
+$(cat /tmp/GROK_new.md)
