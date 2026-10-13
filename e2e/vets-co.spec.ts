@@ -1090,3 +1090,12 @@ test('vets fix IQ2: insurance Q&A drops unsourced figures and cites NAIC', async
     expect(await page.locator(naic).count(), slug).toBeGreaterThan(0)
   }
 })
+
+test('vets fix IQ3: insurance Q&A has no unlinked sample-carrier sources or orphan range dates', async ({ page }) => {
+  for (const slug of ['is-pet-insurance-worth-it', 'multi-pet-discounts', 'how-does-the-claims-process-work', 'does-pet-insurance-cover-dental', 'does-pet-insurance-cover-vaccines', 'when-should-i-get-pet-insurance', 'how-much-does-pet-insurance-cost', 'does-pet-insurance-cover-pre-existing-conditions']) {
+    await page.goto(`/insurance/questions/${slug}`, { waitUntil: 'domcontentloaded' })
+    const text = (await page.locator('body').innerText()).replace(/\s+/g, ' ')
+    expect(text, slug).not.toMatch(/Sample carrier|typical US ranges dated 2026-06-11/)
+    expect(await page.locator('a[href="https://content.naic.org/insurance-topics/pet-insurance"]').count(), slug).toBeGreaterThan(0)
+  }
+})
