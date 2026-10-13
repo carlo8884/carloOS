@@ -980,3 +980,12 @@ test('ferret fix TX3: health hub labels unchecked general references', async ({ 
   expect(text).toMatch(/Association of Exotic Mammal Veterinarians \(general reference; not checked against this page\)/)
   expect(text).toContain('background reading we have not checked against this page')
 })
+
+test('ferret fix SK2: starter kit insurance box cites Merck and NAIC, no unsourced surgery cost', async ({ page }) => {
+  await page.goto('/ferret-starter-kit', { waitUntil: 'domcontentloaded' })
+  const box = page.locator('section', { hasText: 'Insurance Before Symptoms' })
+  const text = (await box.innerText()).replace(/\s+/g, ' ')
+  expect(text).not.toMatch(/\$1,500|hereditary/)
+  await expect(box.locator('a[href="https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/neoplasia-of-ferrets"]')).toBeVisible()
+  await expect(box.locator('a[href="https://content.naic.org/insurance-topics/pet-insurance"]')).toBeVisible()
+})
