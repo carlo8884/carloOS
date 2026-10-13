@@ -1,6 +1,8 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, ShopCtas } from '@carloOS/ui'
+import { CalloutBox, buildMetadata, ArticleLayout,
+  LastUpdated,
+  FAQAccordion, ArticleByline, RelatedLinks, TableOfContents, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -21,7 +23,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-10-13T00:00:00Z',
 })
 
 const med = buildMedicalWebPageSchema({
@@ -33,6 +35,16 @@ const med = buildMedicalWebPageSchema({
   lastReviewed: '2026-06-01',
 })
 const combined = combineSchemas(schema, med)
+const FAQS = [
+  {
+    "question": "Can ferrets live with cats and dogs?",
+    "answer": "Lafeber's care sheet says ferrets tend to get along well with most cats and dogs. Individual temperament still matters, so supervise introductions."
+  },
+  {
+    "question": "Can ferrets live with rabbits, rodents, or birds?",
+    "answer": "Lafeber cautions that ferrets, a predator species, may not get along with birds, rabbits, rodents, or lizards."
+  }
+]
 
 export default function FerretsAndOtherPetsPage() {
   return (
@@ -91,9 +103,14 @@ export default function FerretsAndOtherPetsPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-01"
+            updatedAt="2026-10-13"
             reviewedBy="Editorial team"
           />
+          <LastUpdated date="2026-10-13" />
+
+          <CalloutBox variant="info" title="Short answer">
+            <p>Lafeber says ferrets tend to get along well with most cats and dogs, but as a predator species they may not get along with birds, rabbits, rodents, or lizards. Supervise early introductions and keep small prey animals in separate, secure housing. Source: <a href="https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf">Lafeber Care of the Pet Ferret</a>.</p>
+          </CalloutBox>
 
           <h2 id="prey-drive">Prey Drive First</h2>
           <p>
@@ -140,7 +157,13 @@ export default function FerretsAndOtherPetsPage() {
           </div>
           </div>
 
+          <h2 id="faq">Frequently asked questions</h2>
+          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
+
           <h2 id="sources">Sources</h2>
+          <ul>
+            <li><a href="https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf">Lafeber Company, Care of the Pet Ferret (PDF)</a></li>
+          </ul>
           <p>
             Ferret prey-drive behavior, social housing, and quarantine practice are covered in Quesenberry KE and Carpenter JW (eds.), <em>Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery</em> (Saunders/Elsevier), and in American Ferret Association husbandry guidance. Cross-species compatibility reflects standard companion-animal behavioral references. Locate primary publications by title.
           </p>

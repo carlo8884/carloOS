@@ -1,6 +1,8 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, ShopCtas } from '@carloOS/ui'
+import { CalloutBox, buildMetadata, ArticleLayout,
+  LastUpdated,
+  FAQAccordion, ArticleByline, RelatedLinks, TableOfContents, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -21,7 +23,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-10-13T00:00:00Z',
 })
 
 const med = buildMedicalWebPageSchema({
@@ -33,6 +35,24 @@ const med = buildMedicalWebPageSchema({
   lastReviewed: '2026-06-01',
 })
 const combined = combineSchemas(schema, med)
+const FAQS = [
+  {
+    "question": "How long do ferrets live?",
+    "answer": "Lafeber's care sheet puts the average ferret lifespan at 6 to 8 years."
+  },
+  {
+    "question": "Are ferrets good pets for young children?",
+    "answer": "Lafeber says a ferret may not be the best pet for a family with young children, and any interaction between a ferret and a young child should always be supervised."
+  },
+  {
+    "question": "Do descented ferrets still smell?",
+    "answer": "Yes. Lafeber notes that pet ferrets keep their natural musky odor even after descenting, and that frequent bathing makes it stronger. Washing bedding regularly does the most to cut odor."
+  },
+  {
+    "question": "Do ferrets need regular vet visits?",
+    "answer": "Lafeber recommends annual exams, twice yearly from age 3, and vaccination against canine distemper and rabies. The Merck Veterinary Manual suggests finding a vet experienced with ferrets and an after-hours clinic that treats them."
+  }
+]
 
 export default function IsAFerretRightForYouPage() {
   return (
@@ -43,7 +63,7 @@ export default function IsAFerretRightForYouPage() {
         hero={{
           title: 'Is a Ferret Right for You?',
           subtitle:
-            'Ferrets are funny, affectionate, deeply interactive animals — and they are also demanding, sometimes smelly, expensive to keep well, and illegal in a few places. This is a candid self-assessment: not a sales pitch, but an honest set of questions to help you decide whether a ferret genuinely fits your life before you commit to six to ten years of one.',
+            'Ferrets are funny, affectionate, deeply interactive animals — and they are also demanding, sometimes smelly, expensive to keep well, and illegal in a few places. This is a candid self-assessment: not a sales pitch, but an honest set of questions to help you decide whether a ferret genuinely fits your life before you commit to six to eight years of one.',
           category: 'Ownership & Lifestyle',
           authorName: 'Ferret.com Editorial',
           publishedAt: 'June 2026',
@@ -95,9 +115,14 @@ export default function IsAFerretRightForYouPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-01"
+            updatedAt="2026-10-13"
             reviewedBy="Editorial team"
           />
+          <LastUpdated date="2026-10-13" />
+
+          <CalloutBox variant="info" title="Short answer">
+            <p>Ferrets live an average of 6 to 8 years and need daily time and attention: the Merck Veterinary Manual says at least 2 to 4 hours outside the cage every day. Lafeber notes a ferret may not be the best pet for a family with young children, keeps a natural musky odor even when descented, may not get along with birds, rabbits, rodents, or lizards, and is restricted or needs a permit in some places, so check local laws first. Source: <a href="https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf">Lafeber Care of the Pet Ferret</a>.</p>
+          </CalloutBox>
 
           <h2 id="how">How to Use This</h2>
           <p>
@@ -131,7 +156,7 @@ export default function IsAFerretRightForYouPage() {
 
           <h2 id="longhaul">The Long Haul</h2>
           <p>
-            A ferret lives roughly six to ten years. That means a decade of daily care, a decade of veterinary responsibility, and — realistically — a senior ferret with chronic health needs in the later years. Will your life accommodate that? Moves, job changes, new relationships, and new babies all have to make room for the animal. Adopting a ferret is a years-long commitment to a creature that will depend on you for its entire life, including the harder, more expensive end of it. That is the real question underneath all the others.
+            A ferret lives an average of six to eight years (<a href="https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf">Lafeber</a>). That means years of daily care, years of veterinary responsibility, and — realistically — a senior ferret with chronic health needs in the later years. Will your life accommodate that? Moves, job changes, new relationships, and new babies all have to make room for the animal. Adopting a ferret is a years-long commitment to a creature that will depend on you for its entire life, including the harder, more expensive end of it. That is the real question underneath all the others.
           </p>
 
           <h2 id="verdict">Good Fit vs Poor Fit</h2>
@@ -157,7 +182,15 @@ export default function IsAFerretRightForYouPage() {
           </div>
           </div>
 
+          <h2 id="faq">Frequently asked questions</h2>
+          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
+
           <h2 id="sources">Sources</h2>
+          <ul>
+            <li><a href="https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf">Lafeber Company, Care of the Pet Ferret (PDF)</a></li>
+            <li><a href="https://www.merckvetmanual.com/all-other-pets/ferrets/providing-a-home-for-a-ferret">Merck Veterinary Manual: Providing a Home for a Ferret</a></li>
+            <li><a href="https://www.merckvetmanual.com/all-other-pets/ferrets/routine-health-care-for-ferrets">Merck Veterinary Manual: Routine Health Care for Ferrets</a></li>
+          </ul>
           <p>
             Ferret activity needs, lifespan, odor biology, and disease incidence are drawn from standard exotic-mammal references including Quesenberry KE and Carpenter JW (eds.), <em>Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery</em> (Saunders/Elsevier), and from American Ferret Association husbandry guidance. Legality reflects state and local regulation. Locate primary sources by title.
           </p>

@@ -1,6 +1,8 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
+import { CalloutBox, buildMetadata, ArticleLayout,
+  LastUpdated,
+  FAQAccordion, ArticleByline, RelatedLinks, TableOfContents, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -21,7 +23,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-10-13T00:00:00Z',
 })
 
 const med = buildMedicalWebPageSchema({
@@ -33,6 +35,20 @@ const med = buildMedicalWebPageSchema({
   lastReviewed: '2026-06-01',
 })
 const combined = combineSchemas(schema, med)
+const FAQS = [
+  {
+    "question": "Do ferrets need vitamins?",
+    "answer": "Usually not. The Merck Veterinary Manual says vitamins and supplements are not necessary except under special conditions or for older ferrets. Ask your veterinarian before adding one."
+  },
+  {
+    "question": "What should a ferret's main diet be?",
+    "answer": "Merck recommends commercial ferret food that is low in carbohydrate, moderate in fat, and high in protein, and notes that a meat-based diet suits a carnivore. Lafeber's care sheet gives targets of 30% to 40% animal protein, 15% to 20% fat, and about 2% fiber."
+  },
+  {
+    "question": "Can a hairball remedy help a shedding ferret?",
+    "answer": "The Merck Veterinary Manual says a ferret that is shedding a lot can be treated weekly with a malt-based cat or ferret laxative."
+  }
+]
 
 export default function SupplementsAndVitaminsPage() {
   return (
@@ -92,9 +108,14 @@ export default function SupplementsAndVitaminsPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-01"
+            updatedAt="2026-10-13"
             reviewedBy="Editorial team"
           />
+          <LastUpdated date="2026-10-13" />
+
+          <CalloutBox variant="info" title="Short answer">
+            <p>Most ferrets do not need vitamin supplements. The Merck Veterinary Manual says vitamins and supplements are not necessary except under special conditions or for older ferrets, and your veterinarian can advise if yours needs them. A complete commercial ferret food that is high in animal protein and low in carbohydrate is the foundation. Source: <a href="https://www.merckvetmanual.com/all-other-pets/ferrets/providing-a-home-for-a-ferret">Merck Veterinary Manual</a>.</p>
+          </CalloutBox>
 
           <h2 id="default">The Default: A Complete Diet Needs Little</h2>
           <p>
@@ -144,7 +165,14 @@ export default function SupplementsAndVitaminsPage() {
           </div>
           </div>
 
+          <h2 id="faq">Frequently asked questions</h2>
+          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
+
           <h2 id="sources">Sources</h2>
+          <ul>
+            <li><a href="https://www.merckvetmanual.com/all-other-pets/ferrets/providing-a-home-for-a-ferret">Merck Veterinary Manual: Providing a Home for a Ferret</a></li>
+            <li><a href="https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf">Lafeber Company, Care of the Pet Ferret (PDF)</a></li>
+          </ul>
           <p>
             Nutritional adequacy of complete diets and the risks of fat-soluble vitamin oversupplementation are discussed in Quesenberry KE and Carpenter JW (eds.), <em>Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery</em> (Saunders/Elsevier), and Carpenter JW, <em>Exotic Animal Formulary</em>. Hairball-obstruction risk and seasonal coat-change management are covered in the same references. Locate primary publications by title.
           </p>
