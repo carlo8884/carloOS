@@ -5,7 +5,7 @@ import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaSc
 import { ArticleByline, CalloutBox, DropCap, PullQuote, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Diabetes Mellitus in Dogs & Cats — Signs, Management | Vets.co", description: "Diabetes mellitus in pets causes excessive thirst, urination, and weight loss. Insulin therapy, diet, and monitoring explained for dog and cat owners.", path: '/health/diabetes-in-dogs-cats', type: 'article' })
 const SOURCES = [
-  { label: 'Sparkes AH et al. ISFM consensus guidelines on the practical management of diabetes mellitus in cats. J Feline Med Surg. 2015;17(3):235-250.', url: 'https://doi.org/10.1177/1098612X15571880', publisher: 'J Feline Med Surg' },
+  { label: 'Sparkes AH et al. ISFM consensus guidelines on the practical management of diabetes mellitus in cats. J Feline Med Surg. 2015;17(3):235-250.', url: 'https://pubmed.ncbi.nlm.nih.gov/25701862/', publisher: 'J Feline Med Surg' },
   { label: 'Merck Veterinary Manual: Diabetes Mellitus in Animals', url: 'https://www.merckvetmanual.com/endocrine-system/the-pancreas/diabetes-mellitus-in-dogs-and-cats', publisher: 'Merck Vet Manual' },
   { label: 'AVMA: Diabetes in Pets', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/diabetes-pets', publisher: 'AVMA' },
 ]
@@ -80,7 +80,7 @@ export default function DiabetesPage() {
           <p>Diet is a powerful tool. Diabetic cats benefit from low-carbohydrate, high-protein diets that reduce insulin demand and improve remission odds. Diabetic dogs do best on consistent, measured meals with moderate fiber to slow glucose absorption, fed on a fixed schedule that matches insulin timing. Obesity worsens insulin resistance, so a structured weight-loss plan often improves control. Treats and table scraps should be minimized and standardized, because erratic feeding undermines insulin dosing. It does not set a ration. Hill&apos;s w/d and Royal Canin Diabetic stay educational copy only.</p>
 
           <CalloutBox variant="evidence" title="Feline diabetic remission: diet and early treatment">
-            The <a href="https://doi.org/10.1177/1098612X15571880">ISFM consensus guidelines on managing diabetes in cats</a> say that optimising body weight, feeding an appropriate diet and using a longer-acting insulin are all likely to improve glucose control in most cats, and that there is some evidence better control may improve the chance of diabetic remission. Remission means the cat no longer needs insulin to keep blood glucose normal.
+            The <a href="https://pubmed.ncbi.nlm.nih.gov/25701862/">ISFM consensus guidelines on managing diabetes in cats</a> say that optimising body weight, feeding an appropriate diet and using a longer-acting insulin are all likely to improve glucose control in most cats, and that there is some evidence better control may improve the chance of diabetic remission. Remission means the cat no longer needs insulin to keep blood glucose normal.
           </CalloutBox>
 
           <h2>Monitoring at Home and at the Clinic</h2>

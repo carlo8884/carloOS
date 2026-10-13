@@ -7,7 +7,7 @@ export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Chr
 const SOURCES = [
   { label: 'Merck Veterinary Manual: Renal Dysfunction in Dogs and Cats', url: 'https://www.merckvetmanual.com/urinary-system/noninfectious-diseases-of-the-urinary-system-in-small-animals/renal-dysfunction-in-dogs-and-cats', publisher: 'Merck Vet Manual' },
   { label: 'IRIS (International Renal Interest Society): CKD Staging and Substaging Guidelines', url: 'https://www.iris-kidney.com/iris-staging-system', publisher: 'IRIS' },
-  { label: 'Sparkes AH et al. ISFM Consensus Guidelines on the Diagnosis and Management of Feline CKD. J Feline Med Surg. 2016;18(3):219-239.', url: 'https://doi.org/10.1177/1098612X16631234', publisher: 'J Feline Med Surg' },
+  { label: 'Sparkes AH et al. ISFM Consensus Guidelines on the Diagnosis and Management of Feline CKD. J Feline Med Surg. 2016;18(3):219-239.', url: 'https://pubmed.ncbi.nlm.nih.gov/26936494/', publisher: 'J Feline Med Surg' },
   { label: 'Brown SA et al. Beneficial effects of chronic administration of dietary omega-3 polyunsaturated fatty acids in dogs with renal insufficiency. J Lab Clin Med. 1998;131(5):447-455.', url: 'https://doi.org/10.1016/s0022-2143(98)90146-9', publisher: 'J Lab Clin Med' },
 ]
 const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Chronic Kidney Disease in Cats', description: 'IRIS staging, diet, fluid therapy, and prognosis for feline chronic kidney disease.', url: 'https://vets.co/health/kidney-disease-cats', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-10-12T00:00:00Z' ,
