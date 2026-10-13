@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { HopDisclosure } from '../../components/HopDisclosure'
 import Link from 'next/link'
-import { ArticleSourcesList, TableShopLink, RelatedReads, ComparisonFoot, EmailCapture, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, Breadcrumb, FAQAccordion, ShopCtas, PriceAsOf } from '@carloOS/ui'
+import { ArticleSourcesList, TableShopLink, RelatedReads, ComparisonFoot, EmailCapture, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, Breadcrumb, FAQAccordion, ShopCtas, PriceAsOf, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { HubMasthead } from '../../components/HubMasthead'
 
@@ -77,6 +77,15 @@ export default function TelehealthPage() {
       </div>
       <QuickPicks items={PICKS} />
       <Breadcrumb siteId="vets-co" items={[{ name: "Home", href: "/" }, { name: "Telehealth" }]} />
+      <div className="px-container-sm sm:px-container pt-8 max-w-4xl">
+        <LastUpdated date="2026-10-13" />
+        <div className="rounded-lg border-l-4 border-brand-primary bg-brand-surface p-5 mt-4" data-testid="short-answer">
+          <h2 className="font-display text-lg font-bold mb-2">The short answer</h2>
+          <p className="text-base leading-relaxed text-brand-text-mid m-0">
+            Pet telehealth is useful for triage, minor problems and follow-up questions, but it has to meet the same standard of care as an in-person visit, and diagnosing or prescribing requires a veterinarian-client-patient relationship (VCPR) under your state&apos;s rules (<a href="https://www.avma.org/resources-tools/animal-health-and-welfare/telehealth-telemedicine-veterinary-practice" className="text-brand-primary hover:underline">AVMA</a>). It is not emergency care: go to a vet immediately for trouble breathing, heavy bleeding, seizures, collapse or pale or blue gums (<a href="https://www.merckvetmanual.com/multimedia/table/when-to-see-a-veterinarian" className="text-brand-primary hover:underline">Merck Veterinary Manual</a>).
+          </p>
+        </div>
+      </div>
 
       <div className="px-container-sm sm:px-container py-12">
         <div className="grid lg:grid-cols-[1fr_270px] gap-12 min-w-0">
@@ -187,7 +196,7 @@ export default function TelehealthPage() {
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-12" />
+              <ComparisonFoot updated="2026-10-13" />
             </div>
             <h2 className="font-display text-2xl font-bold text-brand-dark mt-12 mb-6">Frequently Asked Questions</h2>
             <p>Those figures are typical US ranges dated 2026-10-05.</p>

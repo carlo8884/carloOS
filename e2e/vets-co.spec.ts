@@ -1174,3 +1174,22 @@ test('vets fix TR1: health and symptoms hubs follow Merck triage timing and cite
     await expect(page.locator('a[href="https://www.merckvetmanual.com/multimedia/table/when-to-see-a-veterinarian"]').first()).toBeVisible()
   }
 })
+
+test('vets fix HB8: diagnostics, specialists, telehealth and triage card open with a sourced short answer', async ({ page }) => {
+  const cases: [string, string][] = [
+    ['/diagnostics', 'https://www.merckvetmanual.com/special-pet-topics/diagnostic-tests-and-imaging/common-laboratory-tests-in-veterinary-medicine'],
+    ['/specialists', 'https://www.avma.org/education/veterinary-specialties'],
+    ['/telehealth', 'https://www.avma.org/resources-tools/animal-health-and-welfare/telehealth-telemedicine-veterinary-practice'],
+    ['/emergency-triage-card', 'https://www.merckvetmanual.com/multimedia/table/when-to-see-a-veterinarian'],
+  ]
+  for (const [path, src] of cases) {
+    await page.goto(path, { waitUntil: 'domcontentloaded' })
+    const box = page.getByTestId('short-answer')
+    await expect(box).toBeVisible()
+    await expect(box.locator(`a[href="${src}"]`)).toBeVisible()
+  }
+  const text = await page.locator('body').innerText()
+  expect(text).not.toContain('Single seizure, fully recovered')
+  expect(text).not.toMatch(/Not eating for 24 h \(cats/)
+  expect(text).toContain('Any seizure, even one that has stopped')
+})

@@ -1,15 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import {
-  buildMetadata,
-  buildBreadcrumbSchema,
-  buildFAQSchema,
-  combineSchemas,
-  FAQAccordion,
-  SchemaScript,
-  StockImage,
-  PriceAsOf,
-} from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, buildFAQSchema, combineSchemas, FAQAccordion, SchemaScript, StockImage, PriceAsOf, LastUpdated } from '@carloOS/ui'
 import { Diagnostics, type Diagnostic, type DiagnosticCategory } from '../../data/diagnostics'
 
 // Hub-level FAQs — grounded ONLY in facts already stated on this page and in
@@ -183,6 +174,16 @@ export default function DiagnosticsHubPage() {
           </a>
           .
         </p>
+      </div>
+
+      <div className="px-container-sm sm:px-container pt-8 max-w-4xl">
+        <LastUpdated date="2026-10-13" />
+        <div className="rounded-lg border-l-4 border-brand-primary bg-brand-surface p-5 mt-4" data-testid="short-answer">
+          <h2 className="font-display text-lg font-bold mb-2">The short answer</h2>
+          <p className="text-base leading-relaxed text-brand-text-mid m-0">
+            A diagnostic workup usually starts with a physical exam: vital signs, gums, heart and lungs, and the belly and lymph nodes. Your vet may then order a complete blood count, a chemistry panel, a urinalysis or a fecal test. Some tests run in the clinic and others go to an outside lab. Results are clues your vet reads alongside the exam, not a diagnosis on their own (<a href="https://www.merckvetmanual.com/special-pet-topics/diagnostic-tests-and-imaging/common-laboratory-tests-in-veterinary-medicine" className="text-brand-primary hover:underline">Merck Veterinary Manual</a>).
+          </p>
+        </div>
       </div>
 
       <div className="px-container-sm sm:px-container pt-8">
