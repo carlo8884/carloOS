@@ -758,3 +758,13 @@ test('ferret fix FA3: kids and first-week pages lead with Lafeber/Merck short an
   await page.goto('/ownership/ferrets-with-kids', { waitUntil: 'domcontentloaded' })
   await expect(page.locator('body')).not.toContainText('6–10 year life')
 })
+test('ferret fix FA4: legality page cites CDFW and Hawaii agriculture with FAQ schema', async ({ page }) => {
+  await page.goto('/ownership/ferret-legality-by-state', { waitUntil: 'domcontentloaded' })
+  await expect(page.locator('.carloOS-article').filter({ hasText: 'Short answer' }).first()).toContainText('California')
+  await expect(page.locator('a[href="https://wildlife.ca.gov/Living-with-Wildlife/Restricted-Species"]').first()).toBeAttached()
+  await expect(page.locator('a[href="https://dab.hawaii.gov/pi/pq/import-program/animal-guidelines/"]').first()).toBeAttached()
+  await expect(page.locator('body')).not.toContainText('New York City and Washington')
+  await expect(page.getByText('Which US states ban pet ferrets?').first()).toBeVisible()
+  const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
+  expect(ld).toContain('"FAQPage"')
+})
