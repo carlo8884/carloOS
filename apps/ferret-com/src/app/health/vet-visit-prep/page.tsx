@@ -60,7 +60,7 @@ const articleSchema = buildArticleSchema({
   siteId: 'ferret-com',
   title: 'Ferret Vet Visit Prep',
   description:
-    'Preparation guide for ferret annual checkups and sick visits — exotic-pet vet selection, what to bring, expected bloodwork and imaging, cost ranges, and pre-visit checklist.',
+    'Preparation guide for ferret annual checkups and sick visits — exotic-pet vet selection, what to bring, expected bloodwork and imaging, cost estimates, and pre-visit checklist.',
   url: 'https://ferret.com/health/vet-visit-prep',
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
@@ -88,8 +88,7 @@ const FAQS = [
   {
     question: 'How much does a ferret vet visit cost?',
     answer:
-      "Ranges on this answer are dated 2026-10-04. " +
-      "Costs vary substantially by region and clinic but ballpark figures for US exotic-pet practice as of 2026: routine annual exam $75-150, full senior bloodwork (CBC + chemistry + fasting glucose) $150-300, abdominal ultrasound $250-500, dental cleaning under anesthesia $400-800, ferret surgery (insulinoma or adrenalectomy) $1500-3500. Emergency exotic-vet visits at non-routine hours start around $200-400 before any diagnostics. Pet insurance for exotics exists but with significant coverage gaps; check pre-existing condition rules carefully.",
+      "We have not found a published source for ferret vet prices that we could check, so we do not quote figures. Costs vary widely by region and clinic: before any visit or procedure, ask the clinic for a written estimate, and ask whether bloodwork, imaging or anesthesia are included. Pet insurance for exotics exists, but most pet insurers exclude pre-existing conditions, so check those rules carefully.",
   },
   {
     question: 'Should I fast my ferret before the visit?',
@@ -147,7 +146,7 @@ export default function FerretVetVisitPrepPage() {
                 { label: 'What to Bring', href: '#bring' },
                 { label: 'Carrier and Travel', href: '#carrier' },
                 { label: 'Expected Diagnostics', href: '#diagnostics' },
-                { label: 'Typical Cost Ranges', href: '#cost' },
+                { label: 'Costs: Ask for an Estimate', href: '#cost' },
                 { label: 'Visit Cadence by Age', href: '#cadence' },
                 { label: 'FAQ', href: '#faq' },
                 { label: 'Sources', href: '#sources' },
@@ -174,7 +173,7 @@ export default function FerretVetVisitPrepPage() {
           { title: 'Find an Exotic Vet', href: '/find-an-exotic-vet' },
           { title: 'Vaccinations', href: '/health/vaccinations' },
         ]}
- priceAsOf="2026-10-04">
+>
         <div className="carloOS-article">
           <ArticleByline
             siteName="Ferret.com Editorial"
@@ -201,7 +200,6 @@ export default function FerretVetVisitPrepPage() {
             tool sorts common signs into go-now and call-today. It does not replace the clinic.
           </p>
 
-          <p>The exam, bloodwork, dental, and surgery figures below are typical US exotic-pet clinic ranges dated 2026-10-04.</p>
                     <p>
             Use an exotic-pet vet, ideally an AEMV member or an ABVP
             Exotic Companion Mammal diplomate. Bring a familiar carrier,
@@ -209,9 +207,8 @@ export default function FerretVetVisitPrepPage() {
             weight, and any prior records. Healthy ferrets do not need
             to fast for routine visits; fast 3-4 hours only for specific
             insulinoma bloodwork or per pre-anesthesia instructions.
-            Expect cost ranges of $75-150 for a routine exam, $150-300
-            for full bloodwork, $400-800 for dental work under
-            anesthesia, $1,500–$3,500 for major ferret surgery. Annual visits
+            Costs vary widely by clinic, so ask for a written estimate
+            before bloodwork, dental work or surgery. Annual visits
             through age 3, every 6 months age 3-5, every 3-6 months
             beyond that.
           </p>
@@ -434,60 +431,22 @@ export default function FerretVetVisitPrepPage() {
             </li>
           </ul>
 
-          <p>The service bands in the table below are those same clinic ranges, dated 2026-10-04.</p>
-          <h2 id="cost">Typical Cost Ranges</h2>
+          <h2 id="cost">Costs: Ask for an Estimate</h2>
           <p>
-            US exotic-pet practice cost ranges as of 2026, with
-            substantial regional variation:
+            We have not found a published source for ferret vet prices
+            that we could check, so we don&apos;t quote figures. Prices vary
+            widely by region and clinic. Ask the clinic for a written
+            estimate for whichever of these your ferret needs: a routine
+            wellness exam, vaccines (canine distemper; rabies where
+            required), CBC, chemistry and glucose bloodwork, an adrenal
+            hormone panel, abdominal ultrasound, dental cleaning under
+            anesthesia, insulinoma or adrenal surgery, and emergency or
+            after-hours visits. Ask what each estimate includes.
           </p>
-          <div className="overflow-x-auto my-6">
-            <table className="w-full text-sm border-collapse">
-              <thead>
-                <tr className="bg-brand-surface border-b border-brand-border">
-                  <th className="text-left p-3 font-semibold">Service</th>
-                  <th className="text-left p-3 font-semibold">Approximate range</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="border-b border-brand-border">
-                  <td className="p-3 font-medium">Routine wellness exam</td>
-                  <td className="p-3">$75-150</td>
-                </tr>
-                <tr className="border-b border-brand-border">
-                  <td className="p-3 font-medium">Vaccine (CDV or rabies)</td>
-                  <td className="p-3">$25-50 each</td>
-                </tr>
-                <tr className="border-b border-brand-border">
-                  <td className="p-3 font-medium">CBC + chemistry + glucose</td>
-                  <td className="p-3">$150-300</td>
-                </tr>
-                <tr className="border-b border-brand-border">
-                  <td className="p-3 font-medium">Adrenal hormone panel</td>
-                  <td className="p-3">$200-350 (lab + draw)</td>
-                </tr>
-                <tr className="border-b border-brand-border">
-                  <td className="p-3 font-medium">Abdominal ultrasound</td>
-                  <td className="p-3">$250-500</td>
-                </tr>
-                <tr className="border-b border-brand-border">
-                  <td className="p-3 font-medium">Dental cleaning under anesthesia</td>
-                  <td className="p-3">$400-800</td>
-                </tr>
-                <tr className="border-b border-brand-border">
-                  <td className="p-3 font-medium">Insulinoma or adrenal surgery</td>
-                  <td className="p-3">$1500-3500</td>
-                </tr>
-                <tr>
-                  <td className="p-3 font-medium">Emergency / after-hours visit</td>
-                  <td className="p-3">$200-400 before diagnostics</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
           <p>
             Pet insurance for ferrets exists through several specialty
             exotic-pet carriers. Coverage gaps are meaningful: most
-            policies exclude pre-existing conditions, and the
+            pet insurers exclude pre-existing conditions (<a href="https://content.naic.org/insurance-topics/pet-insurance">NAIC</a>), and the
             insulinoma/adrenal/lymphoma cluster that dominates senior
             ferret cost is often the slowest-developing and easiest to
             be classified as pre-existing. Read the policy carefully and
@@ -501,7 +460,7 @@ export default function FerretVetVisitPrepPage() {
             toSite="vets-co"
             topic="vet-costs"
           >
-            The ranges above are planning figures for exotic-pet clinics. Vets.co explains why an after-hours hospital bill costs more than a routine exam, and it is not an exotic-carrier comparison.
+            Vets.co explains why an after-hours hospital bill costs more than a routine exam, and it is not an exotic-carrier comparison.
           </CrossSiteHelp>
 
           <h2 id="cadence">Visit Cadence by Age</h2>
@@ -551,7 +510,6 @@ export default function FerretVetVisitPrepPage() {
           </div>
 
           <h2 id="faq">FAQ</h2>
-          <p>The cost question below repeats those same clinic ranges, dated 2026-10-04.</p>
           <FAQAccordion items={FAQS} includeSchema={false} />
 
           <ArticleSourcesList sources={SOURCES} />
