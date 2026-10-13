@@ -7694,7 +7694,7 @@ const CALCULATORS = [
       { re: /from '\.\.\/\.\.\/\.\.\/data\/ferret-symptom-signs'/, label: 'signs imported from shared ferret-symptom-signs (do not fork)' },
       { re: /href="\/health\/vet-visit-prep"/, label: 'triage result links vet-visit prep' },
     ],
-    why: 'Conservative ferret triage: any emergency sign → go now; monitor only for 11/12 monitor-eligible signs; mixed selections resolve upward. No all-clear. Do not invent a new formula.',
+    why: 'Conservative ferret triage: any emergency sign → go now; monitor only for the 11 monitor-eligible sign; mixed selections resolve upward. No all-clear. Do not invent a new formula.',
   },
   {
     id: 'ferret · is-this-a-ferret-emergency hops',
