@@ -66,6 +66,14 @@ jobs:
         run: npx playwright install --with-deps chromium
       - name: Money journey smoke tests
         run: npx playwright test
+      - name: Keep Playwright traces from failed tests
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-test-results-${{ github.run_id }}-${{ github.run_attempt }}
+          path: test-results/
+          retention-days: 14
+          if-no-files-found: ignore
 
   # Proves go-live is SITE_INDEXABLE=true on a rebuild. This job sets the flag
   # only on the GitHub runner. Do not copy it onto the Vercel projects.

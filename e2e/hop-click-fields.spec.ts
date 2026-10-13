@@ -32,7 +32,57 @@ async function clicks(page: Page): Promise<ClickFields[]> {
 
 async function arm(link: Locator) {
   await link.evaluate((el) => {
-    el.addEventListener('click', (event) => event.preventDefault(), { capture: true })
+    const w = window as unknown as { __hopClickTimes?: number[] }
+    w.__hopClickTimes = []
+    el.addEventListener(
+      'click',
+      (event) => {
+        event.preventDefault()
+        w.__hopClickTimes?.push(performance.now())
+      },
+      { capture: true },
+    )
+  })
+}
+
+/**
+ * Test-only diagnostics for the intermittent dog-com double-count. Records
+ * the gap between the two clicks, whether the gtag library has loaded, the
+ * hydration flag, and every affiliate_click queued so far. Attached to the
+ * report (and printed) only when the one-click assertion fails.
+ */
+async function hopDiagnostics(page: Page) {
+  return page.evaluate(() => {
+    const w = window as unknown as {
+      __hopClickTimes?: number[]
+      google_tag_manager?: unknown
+      gtag?: unknown
+      dataLayer?: unknown[]
+    }
+    const times = w.__hopClickTimes ?? []
+    const gtagEntry = performance
+      .getEntriesByType('resource')
+      .find((entry) => entry.name.includes('googletagmanager.com/gtag/js')) as PerformanceResourceTiming | undefined
+    const layer = w.dataLayer ?? []
+    const events: Array<Record<string, unknown>> = []
+    for (const entry of layer) {
+      const list = Array.isArray(entry) ? entry : Array.from(entry as ArrayLike<unknown>)
+      if (list[0] === 'event' && list[1] === 'affiliate_click' && list[2] && typeof list[2] === 'object') {
+        const p = list[2] as Record<string, unknown>
+        events.push({ slot: p.slot, link_url: p.link_url, destination: p.destination })
+      }
+    }
+    return {
+      clickTimesMs: times.map((t) => Math.round(t)),
+      clickGapMs: times.length >= 2 ? Math.round(times[1] - times[0]) : null,
+      hydrated: document.documentElement.dataset.hopClick ?? null,
+      gtagStub: typeof w.gtag === 'function',
+      gtagScriptTag: Boolean(document.querySelector('script[src*="googletagmanager.com/gtag/js"]')),
+      gtagLibraryLoaded: Boolean(w.google_tag_manager),
+      gtagFetchedAtMs: gtagEntry ? Math.round(gtagEntry.responseEnd) : null,
+      dataLayerLength: layer.length,
+      affiliateClicks: events,
+    }
   })
 }
 
@@ -78,7 +128,17 @@ async function oneClick(page: Page, link: Locator, site: string, pagePath: strin
   await arm(link)
   await link.click()
   await link.click()
-  await expect.poll(async () => (await clicks(page)).length).toBe(before + 1)
+  try {
+    await expect.poll(async () => (await clicks(page)).length).toBe(before + 1)
+  } catch (error) {
+    const diagnostics = { site, pagePath, before, ...(await hopDiagnostics(page)) }
+    console.log(`hop-click diagnostics ${JSON.stringify(diagnostics)}`)
+    await test.info().attach('hop-click-diagnostics', {
+      body: JSON.stringify(diagnostics, null, 2),
+      contentType: 'application/json',
+    })
+    throw error
+  }
   const event = (await clicks(page)).at(-1)
   expect(event?.site).toBe(site)
   expect(event?.page).toBe(pagePath)
