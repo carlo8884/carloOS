@@ -1,20 +1,40 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, ShopCtas, LastUpdated } from '@carloOS/ui'
+import { buildMetadata, FAQAccordion, CalloutBox, ArticleLayout, CrossPortfolioCard, RelatedLinks, ShopCtas, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Dog Preventive Care Schedule — Puppy, Adult | Vets.co', description: 'Complete dog preventive care schedule. Puppy vaccines and deworming, adult annual maintenance, and the enhanced senior screening protocol from age 7+.', path: '/health/preventive-care-schedule', type: 'article' })
 const SOURCES = [
+  { label: 'Merck Veterinary Manual: Routine Health Care of Dogs (dog owner version)', url: 'https://www.merckvetmanual.com/dog-owners/routine-care-of-dogs/routine-health-care-of-dogs', publisher: 'Merck Veterinary Manual' },
+  { label: 'Companion Animal Parasite Council: Ascarid (roundworm) guidelines', url: 'https://capcvet.org/guidelines/ascarid/', publisher: 'CAPC' },
   { label: 'AAHA: Canine Vaccination Guidelines', url: 'https://www.aaha.org/aaha-guidelines/vaccination-canine-configuration/', publisher: 'AAHA' },
   { label: 'WSAVA: Vaccination Guidelines for Dogs and Cats', url: 'https://wsava.org/global-guidelines/vaccination-guidelines/', publisher: 'WSAVA' },
   { label: 'Companion Animal Parasite Council: Guidelines', url: 'https://capcvet.org/guidelines/', publisher: 'CAPC' },
   { label: 'American Heartworm Society: Prevention Guidelines', url: 'https://www.heartwormsociety.org/veterinary-resources/american-heartworm-society-guidelines', publisher: 'American Heartworm Society' },
 ]
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Dog Preventive Care Schedule', description: 'Puppy, adult, and senior preventive care timelines for dogs.', url: 'https://vets.co/health/preventive-care-schedule', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-12T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Dog Preventive Care Schedule', description: 'Puppy, adult, and senior preventive care timelines for dogs.', url: 'https://vets.co/health/preventive-care-schedule', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-13T00:00:00Z' ,
   citation: SOURCES,
 })
 const med = buildMedicalWebPageSchema({ name: 'Dog Preventive Care Schedule', description: 'Puppy through senior preventive care timelines for dogs.', url: 'https://vets.co/health/preventive-care-schedule', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-07' })
 const combined = combineSchemas(schema, med)
+const FAQS = [
+  {
+    "question": "How often should a puppy see the vet?",
+    "answer": "Every 3 to 4 weeks until about 4 months old, according to the Merck Veterinary Manual. After that, adult dogs need a full checkup at least once a year, and senior dogs twice a year or more."
+  },
+  {
+    "question": "Which vaccines does my dog need?",
+    "answer": "Merck says core vaccines recommended by nearly all veterinarians protect against distemper, parvovirus, and rabies. Vaccines such as Lyme disease or Bordetella matter in certain areas or lifestyles, and your vet will set the booster schedule."
+  },
+  {
+    "question": "Does my dog need heartworm prevention all year?",
+    "answer": "Yes. The Merck Veterinary Manual says dogs should be tested for heartworm every year and receive heartworm prevention year-round. Many heartworm medicines also help prevent intestinal parasites."
+  },
+  {
+    "question": "How often should my dog have a fecal test?",
+    "answer": "The Companion Animal Parasite Council (CAPC) recommends testing for intestinal parasites at least four times in a puppy's first year and at least two times per year in adult dogs, depending on health and lifestyle."
+  }
+]
 export default function PreventiveCareSchedulePage() {
   return (
     <>
@@ -35,7 +55,11 @@ export default function PreventiveCareSchedulePage() {
 </>}
       >
         <div className="carloOS-article">
-          <LastUpdated date="2026-10-12" />
+          <LastUpdated date="2026-10-13" />
+
+          <CalloutBox variant="info" title="Short answer">
+            <p>The Merck Veterinary Manual recommends vet visits every 3 to 4 weeks for puppies until 4 months old, at least once a year for adult dogs, and twice a year or more for senior dogs over 7 to 8 years old. Core vaccines protect against distemper, parvovirus, and rabies, and Merck advises a heartworm test every year with year-round heartworm prevention. Source: <a href="https://www.merckvetmanual.com/dog-owners/routine-care-of-dogs/routine-health-care-of-dogs">Merck Veterinary Manual (dog owner version)</a>.</p>
+          </CalloutBox>
 
           <h2>Puppy Schedule (Birth to 16 Weeks)</h2>
           <div className="overflow-x-auto mb-6">
@@ -130,6 +154,9 @@ export default function PreventiveCareSchedulePage() {
               />
             </div>
           </div>
+          <h2 id="faq">Frequently asked questions</h2>
+          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
+
 
           <ArticleSourcesList sources={SOURCES} />
         </div>
