@@ -683,3 +683,9 @@ test('ferret fix SD2: Article schema omits image instead of shipping an empty st
     expect(html, path).not.toContain('"image":""')
   }
 })
+
+test('ferret fix SM2: directory sitemap shard carries no build-time lastmod', async ({ request }) => {
+  const xml = await (await request.get('/sitemap/1.xml')).text()
+  expect(xml).toContain('<loc>https://ferret.com/directory/')
+  expect(xml).not.toContain('<lastmod>')
+})

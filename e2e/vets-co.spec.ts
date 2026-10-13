@@ -893,3 +893,11 @@ test('vets fix SD2: Article schema omits image instead of shipping an empty stri
     expect(html, path).not.toContain('"image":""')
   }
 })
+
+test('vets fix SM2: directory sitemap shards carry no build-time lastmod', async ({ request }) => {
+  for (const id of [1, 2]) {
+    const xml = await (await request.get(`/sitemap/${id}.xml`)).text()
+    expect(xml, `sitemap ${id}`).toContain('<loc>https://vets.co/directory/')
+    expect(xml, `sitemap ${id}`).not.toContain('<lastmod>')
+  }
+})
