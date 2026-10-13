@@ -247,6 +247,8 @@ describe('directory local SEO', () => {
     assert.equal(firstShard.length, DIRECTORY_SITEMAP_DETAIL_CAP)
     assert.equal(overflow.length, 3)
     assert.equal(overflow[0].url, `https://vets.co/directory/n-${DIRECTORY_SITEMAP_DETAIL_CAP}`)
+    // No per-listing date exists, so directory URLs omit <lastmod> instead of claiming the build time.
+    assert.equal([...places, ...firstShard].some((row) => 'lastModified' in row), false)
 
     const index = buildSitemapIndexXml('https://vets.co', many)
     assert.ok(index.includes('<sitemapindex'))
