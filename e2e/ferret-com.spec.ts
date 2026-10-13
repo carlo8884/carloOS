@@ -802,6 +802,13 @@ test('ferret fix FA7: supplies checklist leads with a Lafeber/Merck short answer
   await expect(page.locator('.carloOS-article').filter({ hasText: 'Short answer' }).first()).toContainText('24 × 24 × 18 inches')
   await expect(page.locator('a[href="https://www.merckvetmanual.com/all-other-pets/ferrets/providing-a-home-for-a-ferret"]').first()).toBeAttached()
   await expect(page.getByText('What litter is safe for ferrets?').first()).toBeVisible()
+})
+
+test('ferret fix FA6: adoption-vs-buying leads with a Lafeber/Merck short answer and FAQ schema', async ({ page }) => {
+  await page.goto('/ownership/adoption-vs-buying', { waitUntil: 'domcontentloaded' })
+  await expect(page.locator('.carloOS-article').filter({ hasText: 'Short answer' }).first()).toContainText('commercial farms')
+  await expect(page.locator('a[href="https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/management-of-ferrets"]').first()).toBeAttached()
+  await expect(page.getByText('Does descenting stop a ferret from smelling?').first()).toBeVisible()
   const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
   expect(ld).toContain('"FAQPage"')
 })
