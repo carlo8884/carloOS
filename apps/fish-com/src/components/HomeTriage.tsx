@@ -203,18 +203,8 @@ export function HomeTriage() {
                 <StockImage manifestKey="fish-com:species-thumb-corydoras" alt="Corydoras catfish" aspect="4:3" subtleCredit />
               </div>
               <div className="pr-3 py-2">
-                <div className="mb-1 flex items-center gap-2">
-                  <div className={`relative h-7 w-10 shrink-0 overflow-hidden rounded-md bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                    <StockImage manifestKey="fish-com:species-thumb-corydoras" alt="Corydoras catfish" aspect="4:3" subtleCredit />
-                  </div>
-                  <div className="font-display font-bold text-brand-dark text-sm leading-tight italic group-hover:text-brand-primary">Editorial standards</div>
-                </div>
-                <div className="text-xs text-brand-text-mid mt-0.5 flex items-center gap-2">
-                  <div className={`relative h-6 w-9 shrink-0 overflow-hidden rounded-md bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                    <StockImage manifestKey="fish-com:species-thumb-corydoras" alt="" aspect="4:3" />
-                  </div>
-                  <span>Signed guides, no invented experts.</span>
-                </div>
+                <div className="font-display font-bold text-brand-dark text-sm leading-tight italic group-hover:text-brand-primary">Editorial standards</div>
+                <div className="text-xs text-brand-text-mid mt-0.5">Signed guides, no invented experts.</div>
               </div>
             </Link>
           </div>
@@ -280,18 +270,8 @@ export function HomeTriage() {
               <StockImage manifestKey="fish-com:species-thumb-betta" alt="A betta fish" aspect="4:3" subtleCredit />
             </div>
             <div className="pr-3 py-2">
-              <div className="mb-1 flex items-center gap-2">
-                <div className={`relative h-7 w-10 shrink-0 overflow-hidden rounded-md bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                  <StockImage manifestKey="fish-com:species-thumb-betta" alt="A betta fish" aspect="4:3" subtleCredit />
-                </div>
-                <div className="font-display font-bold text-white text-sm leading-tight italic group-hover:text-[#3aa4cc]">All calculators</div>
-              </div>
-              <div className="text-xs text-white/55 mt-0.5 flex items-center gap-2">
-                <div className={`relative h-6 w-9 shrink-0 overflow-hidden rounded-md bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                  <StockImage manifestKey="fish-com:species-thumb-betta" alt="" aspect="4:3" />
-                </div>
-                <span>Volume, stocking, heater, CO₂, cycling.</span>
-              </div>
+              <div className="font-display font-bold text-white text-sm leading-tight italic group-hover:text-[#3aa4cc]">All calculators</div>
+              <div className="text-xs text-white/55 mt-0.5">Volume, stocking, heater, CO₂, cycling.</div>
             </div>
           </Link>
         </div>
@@ -301,10 +281,7 @@ export function HomeTriage() {
               <div className={`relative h-16 bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
                 <StockImage manifestKey={c.imageKey} alt={c.imageAlt} aspect="16:9" subtleCredit />
               </div>
-              <div className="flex items-center gap-2 px-2.5 py-2">
-                <div className={`relative h-7 w-10 shrink-0 overflow-hidden rounded-md bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                  <StockImage manifestKey={c.imageKey} alt={c.imageAlt} aspect="4:3" subtleCredit />
-                </div>
+              <div className="px-2.5 py-2">
                 <span className="text-xs font-semibold text-white leading-tight">{c.title}</span>
               </div>
             </Link>
