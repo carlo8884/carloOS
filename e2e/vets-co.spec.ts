@@ -969,3 +969,12 @@ test('vets fix AF9: senior care page leads with a sourced short answer and FAQ s
   const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
   expect(ld).toContain('"FAQPage"')
 })
+
+test('vets fix AF12: senior bloodwork page leads with a sourced short answer and FAQ schema', async ({ page }) => {
+  await page.goto('/health/senior-bloodwork-guide', { waitUntil: 'domcontentloaded' })
+  await expect(page.locator('.carloOS-article').filter({ hasText: 'Short answer' }).first()).toContainText('every 6 to 12 months')
+  await expect(page.locator('a[href*="2023-aaha-senior-care-guidelines-for-dogs-and-cats.pdf"]').first()).toBeAttached()
+  await expect(page.getByText('How often should a senior dog have bloodwork?').first()).toBeVisible()
+  const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
+  expect(ld).toContain('"FAQPage"')
+})
