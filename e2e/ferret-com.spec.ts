@@ -239,7 +239,7 @@ test('ferret fix T6: grooming page drops unsourced vet-approved and practice-sta
   const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
   expect(ld).not.toMatch(removed)
   await expect(page.locator('#pet-ear-cleaner')).toContainText('Pet Ear Cleaner (Epi-Otic style)')
-  await expect(page.locator('#marshall-ferret-shampoo')).toContainText('A sensible default for the every-2–3-month bathing schedule.')
+  await expect(page.locator('#marshall-ferret-shampoo')).toContainText('A sensible default for a ferret bathed only a few times a year.')
 })
 
 test('ferret fix M5: wood litter and ear cleaner cards get one Amazon search button; held and unmatched cards stay unlinked', async ({ page }) => {
