@@ -1010,3 +1010,11 @@ test('ferret fix FN1: ferret names page has a FAQ with FAQPage schema', async ({
   const ld = await page.locator('script[type="application/ld+json"]').allTextContents()
   expect(ld.filter((t) => t.includes('"FAQPage"')).length).toBe(1)
 })
+
+test('ferret fix VP1: vet-visit prep drops unsourced cost ranges', async ({ page }) => {
+  await page.goto('/health/vet-visit-prep', { waitUntil: 'domcontentloaded' })
+  const text = (await page.locator('main').innerText()).replace(/\s+/g, ' ')
+  expect(text).not.toMatch(/\$\s?\d/)
+  expect(text).toMatch(/ask the clinic for a written estimate/i)
+  await expect(page.locator('h2#cost')).toHaveText('Costs: Ask for an Estimate')
+})
