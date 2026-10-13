@@ -1,7 +1,7 @@
 import { HopDisclosure } from '../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, ShopCtas, StockImage } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, ShopCtas, StockImage, FAQAccordion, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
 import { HubHero } from '../../components/HubHero'
 
 export const metadata: Metadata = buildMetadata({
@@ -128,6 +128,14 @@ const itemListSchema = {
 
 const ferretBehaviorSchema = combineSchemas(breadcrumbSchema, itemListSchema)
 
+const HUB_FAQS = [
+  { question: "How much do ferrets sleep?", answer: "Up to 18 hours a day. Young ferrets can sleep so deeply they are hard to wake; a ferret with a moist pink mouth that feels warm and breathes slowly and regularly is just asleep (Merck Veterinary Manual)." },
+  { question: "Why does my ferret run, jump and crash into things?", answer: "When let out of the cage, ferrets often run, jump, twist in the air and collide with objects. Merck describes this as normal, healthy ferret behavior." },
+  { question: "How do I stop my ferret from nipping?", answer: "Don't tolerate it, because occasional nips can progress to painful bites. Calmly detach the ferret by the scruff, say \"No\" firmly, and redirect its attention; never hit or flick it (Lafeber Vet)." },
+  { question: "Why does my ferret drag its bottom after using the litter box?", answer: "Ferrets wipe themselves this way after urinating or defecating. It is normal and not a sign of illness (Merck Veterinary Manual)." },
+  { question: "Why did my ferret bite?", answer: "Ferrets can bite when overstimulated or frightened. Don't hold an unfamiliar ferret near your face (Lafeber Vet)." },
+]
+
 export default function BehaviorHubPage() {
   return (
     <>
@@ -159,6 +167,16 @@ export default function BehaviorHubPage() {
         <span>›</span>
         <span style={{ color: 'var(--brand-text-mid)', fontWeight: 500 }}>Behavior</span>
       </nav>
+
+      <div className="px-container-sm sm:px-container pt-8 max-w-4xl">
+        <LastUpdated date="2026-10-13" />
+        <div className="rounded-lg border-l-4 border-brand-primary bg-brand-white p-5 mt-4" data-testid="short-answer">
+          <h2 className="font-display text-lg font-bold mb-2">The short answer</h2>
+          <p className="text-base leading-relaxed text-brand-text-mid m-0">
+            Ferrets are playful, curious, social animals that sleep up to 18 hours a day. Deep sleep, shivering on waking, wild running and twisting, and dragging the hindquarters after using the litter box are all normal (<a href="https://www.merckvetmanual.com/all-other-pets/ferrets/providing-a-home-for-a-ferret" className="text-brand-primary hover:underline">Merck Veterinary Manual</a>). Kits nip in play and usually grow out of it, but don&apos;t tolerate nipping and never hit a ferret, which can teach it to bite out of fear (<a href="https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf" className="text-brand-primary hover:underline">Lafeber Vet</a>).
+          </p>
+        </div>
+      </div>
 
       {/* Featured behavior spokes — three photo-backed pillar articles */}
       <div
@@ -369,6 +387,17 @@ export default function BehaviorHubPage() {
           ))}
         </ul>
       </div>
+
+      <section className="px-container-sm sm:px-container py-10">
+        <div className="max-w-content-wide">
+          <h2 id="faq" className="font-display text-xl font-bold text-brand-dark mb-4">Ferret behavior FAQ</h2>
+          <FAQAccordion items={HUB_FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
+          <ArticleSourcesList title="Sources" sources={[
+            { label: "Providing a Home for a Ferret", url: "https://www.merckvetmanual.com/all-other-pets/ferrets/providing-a-home-for-a-ferret", publisher: "Merck Veterinary Manual" },
+            { label: "Care of the Pet Ferret (owner handout)", url: "https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf", publisher: "Lafeber Vet" },
+          ]} />
+        </div>
+      </section>
 
       <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <h2 id="kit" className="font-display font-bold text-brand-dark text-xl mb-4 max-w-content-wide">Related supplies</h2>

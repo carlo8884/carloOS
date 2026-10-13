@@ -1077,6 +1077,10 @@ test('ferret fix FH1: /care hub answers first and has a sourced FAQ', async ({ p
   await page.goto('/care', { waitUntil: 'domcontentloaded' })
 })
 
+test('ferret fix FH3: /behavior hub answers first and has a sourced FAQ', async ({ page }) => {
+  await page.goto('/behavior', { waitUntil: 'domcontentloaded' })
+})
+
 test('ferret fix FH2: /diet hub answers first and has a sourced FAQ', async ({ page }) => {
   await page.goto('/diet', { waitUntil: 'domcontentloaded' })
   const box = page.getByTestId('short-answer')
