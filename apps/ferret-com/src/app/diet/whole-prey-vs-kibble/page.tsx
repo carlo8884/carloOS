@@ -299,7 +299,7 @@ export default function WholePreyVsKibblePage() {
 
           <h2 id="sources">Sources</h2>
           <p>
-            Obligate-carnivore physiology and macronutrient targets are drawn from Quesenberry KE and Carpenter JW (eds.), <em>Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery</em> (Saunders/Elsevier), and Carpenter JW, <em>Exotic Animal Formulary</em>. Food-safety guidance reflects the American Veterinary Medical Association policy on raw or undercooked animal-source protein in pet food. The American Ferret Association maintains an owner-facing nutrition statement consistent with the high-protein, low-carbohydrate framework described here. Primary publications are best located by title, as URLs change over time.
+            Obligate-carnivore physiology and macronutrient targets are drawn from Quesenberry KE and Carpenter JW (eds.), <em>Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery</em> (Saunders/Elsevier), and Carpenter JW, <em>Exotic Animal Formulary</em>. Food-safety guidance reflects the American Veterinary Medical Association policy on raw or undercooked animal-source protein in pet food. The American Ferret Association maintains an owner-facing nutrition statement consistent with the high-protein, low-carbohydrate framework described here. Primary publications are best located by title, as URLs change over time. We have not checked this general reference against the claims on this page.
           </p>
           <p className="text-sm text-brand-text-light">
             This page is general nutrition information, not individualized veterinary advice. Discuss any major diet change with a veterinarian familiar with ferrets, particularly for a ferret with a diagnosed endocrine or gastrointestinal condition.

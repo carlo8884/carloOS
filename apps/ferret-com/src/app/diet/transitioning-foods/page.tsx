@@ -310,7 +310,7 @@ export default function TransitioningFoodsPage() {
             Medicine and Surgery</em> (Saunders/Elsevier), and the{' '}
             <em>Veterinary Clinics of North America: Exotic Animal Practice</em>{' '}
             literature on ferret nutrition and gastrointestinal physiology. Locate
-            primary publications by title.
+            primary publications by title. We have not checked this general reference against the claims on this page.
           </p>
           <p className="text-sm text-brand-text-light">
             This page is general nutrition information, not individualized

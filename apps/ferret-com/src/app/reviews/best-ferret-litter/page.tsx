@@ -15,7 +15,7 @@ export const metadata: Metadata = buildMetadata({
 const PAGE_URL = 'https://ferret.com/reviews/best-ferret-litter'
 
 const SOURCES = [
-  { label: 'Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery (husbandry & respiratory disease)', publisher: 'Quesenberry & Carpenter, Saunders/Elsevier' },
+  { label: 'Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery (husbandry & respiratory disease) (general reference; not checked against this page)', publisher: 'Quesenberry & Carpenter, Saunders/Elsevier' },
   { label: 'Merck Veterinary Manual: Providing a Home for a Ferret', url: 'https://www.merckvetmanual.com/all-other-pets/ferrets/providing-a-home-for-a-ferret', publisher: 'Merck Veterinary Manual' },
   { label: 'Merck Veterinary Manual: Management of Ferrets (housing)', url: 'https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/management-of-ferrets', publisher: 'Merck Veterinary Manual' },
   { label: 'Ferret litter and bedding guidance', publisher: 'American Ferret Association' },
@@ -31,7 +31,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-11T00:00:00Z',
-  modifiedAt: '2026-10-12T00:00:00Z',
+  modifiedAt: '2026-10-13T00:00:00Z',
 
   citation: SOURCES,
 })
@@ -166,10 +166,10 @@ export default function BestFerretLitterPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-11"
-            updatedAt="2026-06-11"
+            updatedAt="2026-10-13"
             reviewedBy="Editorial team"
           />
-          <LastUpdated date="2026-10-12" />
+          <LastUpdated date="2026-10-13" />
           <EmailCapture
             variant="inline"
             siteId="ferret-com"
@@ -369,7 +369,7 @@ export default function BestFerretLitterPage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-12" />
+          <ComparisonFoot updated="2026-10-13" />
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />

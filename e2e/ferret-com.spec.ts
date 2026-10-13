@@ -945,3 +945,11 @@ test('ferret fix WY1: no page carries a /go/wysong href, even a held one', async
     expect(await page.content(), path).not.toContain('/go/wysong')
   }
 })
+
+test('ferret fix TX1: generic textbook and journal citations are labelled as unchecked', async ({ page }) => {
+  for (const path of ['/behavior/biting-and-nipping', '/colors/ferret-lifespan', '/diet/weight-management', '/health/insulinoma']) {
+    await page.goto(path, { waitUntil: 'domcontentloaded' })
+    const text = (await page.locator('main').innerText()).replace(/\s+/g, ' ')
+    expect(text, path).toMatch(/not checked against this page|not checked this general reference against the claims on this page/)
+  }
+})

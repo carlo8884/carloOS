@@ -242,7 +242,7 @@ export default function KitVsAdultFeedingPage() {
             <li><a href="https://www.merckvetmanual.com/all-other-pets/ferrets/providing-a-home-for-a-ferret">Merck Veterinary Manual: Providing a Home for a Ferret</a></li>
           </ul>
           <p>
-            Life-stage nutritional requirements, food-imprinting behavior, and senior-ferret feeding considerations are drawn from Quesenberry KE and Carpenter JW (eds.), <em>Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery</em> (Saunders/Elsevier), and Carpenter JW, <em>Exotic Animal Formulary</em>. The American Ferret Association publishes owner-facing guidance consistent with this framework. Locate primary publications by title.
+            Life-stage nutritional requirements, food-imprinting behavior, and senior-ferret feeding considerations are drawn from Quesenberry KE and Carpenter JW (eds.), <em>Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery</em> (Saunders/Elsevier), and Carpenter JW, <em>Exotic Animal Formulary</em>. The American Ferret Association publishes owner-facing guidance consistent with this framework. Locate primary publications by title. We have not checked this general reference against the claims on this page.
           </p>
           <p className="text-sm text-brand-text-light">
             This page is general information, not individualized veterinary advice. Feeding for a pregnant jill, a kit with health concerns, or a senior ferret with a diagnosis should be guided by a veterinarian familiar with ferrets.

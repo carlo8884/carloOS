@@ -31,7 +31,7 @@ export const metadata: Metadata = buildMetadata({
 
 const SOURCES = [
   {
-    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — ferret dermatology, sebaceous-gland physiology, and reproductive endocrinology",
+    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — ferret dermatology, sebaceous-gland physiology, and reproductive endocrinology (general reference; not checked against this page)",
     publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
   },
   {
@@ -39,7 +39,7 @@ const SOURCES = [
     publisher: "Elsevier",
   },
   {
-    label: "American Ferret Association (AFA) — owner guidance on ferret odor, descenting, and bathing",
+    label: "American Ferret Association (AFA) — owner guidance on ferret odor, descenting, and bathing (general reference; not checked against this page)",
     url: "https://www.ferret.org",
     publisher: "AFA",
   },
@@ -53,7 +53,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-10-13T00:00:00Z',
 
   citation: SOURCES,
 })
@@ -158,7 +158,7 @@ export default function FerretOdorScentControlPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-01"
+            updatedAt="2026-10-13"
           />
 
           <DropCap>

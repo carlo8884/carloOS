@@ -25,15 +25,15 @@ export const metadata: Metadata = buildMetadata({
 
 const SOURCES = [
   {
-    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — foreign-body, appliance-injury, and household-hazard chapters",
+    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — foreign-body, appliance-injury, and household-hazard chapters (general reference; not checked against this page)",
     publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
   },
   {
-    label: "Journal of Exotic Pet Medicine — case reports on ferret foreign-body obstruction and household injuries",
+    label: "Journal of Exotic Pet Medicine — case reports on ferret foreign-body obstruction and household injuries (general reference; not checked against this page)",
     publisher: "Elsevier",
   },
   {
-    label: "American Ferret Association (AFA) — ferret-proofing and household safety owner-education materials",
+    label: "American Ferret Association (AFA) — ferret-proofing and household safety owner-education materials (general reference; not checked against this page)",
     url: "https://www.ferret.org",
     publisher: "AFA",
   },
@@ -47,7 +47,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-09-04T00:00:00Z',
+  modifiedAt: '2026-10-13T00:00:00Z',
 
   citation: SOURCES,
 })
@@ -142,7 +142,7 @@ export default function FerretProofingPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-09-04"
+            updatedAt="2026-10-13"
             reviewedBy="Editorial team"
           />
 
