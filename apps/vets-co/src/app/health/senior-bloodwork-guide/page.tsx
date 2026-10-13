@@ -1,7 +1,7 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import { HubMoneyLinks, LastUpdated } from '@carloOS/ui'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, FAQAccordion, CalloutBox, ArticleLayout, CrossPortfolioCard, RelatedLinks, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Senior Dog Bloodwork Guide — What Each Test Finds | Vets.co', description: 'What your senior dog\'s bloodwork actually measures. CBC, chemistry panel, urinalysis, SDMA, and thyroid explained', path: '/health/senior-bloodwork-guide', type: 'article' })
@@ -10,11 +10,25 @@ const SOURCES = [
   { label: 'AAHA: 2023 Senior Care Guidelines for Dogs and Cats', url: 'https://www.aaha.org/wp-content/uploads/globalassets/02-guidelines/2023-aaha-senior-care-guidelines-for-dogs-and-cats/resources/2023-aaha-senior-care-guidelines-for-dogs-and-cats.pdf', publisher: 'AAHA' },
   { label: 'IRIS: SDMA and Early Kidney Disease Detection', url: 'https://www.iris-kidney.com/', publisher: 'International Renal Interest Society' },
 ]
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Senior Dog Bloodwork — What Each Test Finds', description: 'What CBC, chemistry panel, urinalysis, SDMA, and T4 measure in senior dogs.', url: 'https://vets.co/health/senior-bloodwork-guide', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-12T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Senior Dog Bloodwork — What Each Test Finds', description: 'What CBC, chemistry panel, urinalysis, SDMA, and T4 measure in senior dogs.', url: 'https://vets.co/health/senior-bloodwork-guide', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-13T00:00:00Z' ,
   citation: SOURCES,
 })
 const med = buildMedicalWebPageSchema({ name: 'Senior Dog Bloodwork Guide', description: 'Interpreting CBC, chemistry panel, and urinalysis in senior dogs.', url: 'https://vets.co/health/senior-bloodwork-guide', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-07' })
 const combined = combineSchemas(schema, med)
+const FAQS = [
+  {
+    "question": "How often should a senior dog have bloodwork?",
+    "answer": "AAHA's 2023 senior care guidelines list a complete blood count, chemistry panel, and urinalysis every 6 to 12 months for senior dogs, as part of a medical workup once or twice a year."
+  },
+  {
+    "question": "When is a dog considered senior?",
+    "answer": "AAHA notes there is no single age for senior status because aging varies by species and breed. Its canine life stage guidelines define senior as the last 25% of a dog's estimated lifespan through the end of life."
+  },
+  {
+    "question": "What tests are in a senior dog wellness panel?",
+    "answer": "For senior dogs, AAHA's table lists a CBC, chemistry (total protein, albumin, ALT, glucose, BUN, creatinine, electrolytes, calcium, and SDMA if available), and urinalysis every 6 to 12 months, plus T4 and blood pressure annually. It also recommends fecal testing 1 to 4 times a year and annual heartworm testing."
+  }
+]
 export default function SeniorBloodworkPage() {
   return (
     <>
@@ -35,7 +49,11 @@ export default function SeniorBloodworkPage() {
 </>}
       >
         <div className="carloOS-article">
-          <LastUpdated date="2026-10-12" />
+          <LastUpdated date="2026-10-13" />
+
+          <CalloutBox variant="info" title="Short answer">
+            <p>AAHA's 2023 senior care guidelines recommend a medical workup for senior pets once or twice a year. For senior dogs, its table lists a complete blood count, chemistry panel (including SDMA if available), and urinalysis every 6 to 12 months, plus a thyroid test (T4) and blood pressure check annually. Tracking results over time helps your vet spot early changes, such as a rising SDMA or creatinine. Source: <a href="https://www.aaha.org/wp-content/uploads/globalassets/02-guidelines/2023-aaha-senior-care-guidelines-for-dogs-and-cats/resources/2023-aaha-senior-care-guidelines-for-dogs-and-cats.pdf">AAHA 2023 Senior Care Guidelines</a>.</p>
+          </CalloutBox>
 
           <h2>Complete Blood Count (CBC)</h2>
           <p>The CBC evaluates the cellular components of blood — the cells that carry oxygen, fight infection, and enable clotting. Key values:</p>
@@ -131,6 +149,9 @@ export default function SeniorBloodworkPage() {
               />
           </div>
           </div>
+          <h2 id="faq">Frequently asked questions</h2>
+          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
+
 
           <ArticleSourcesList sources={SOURCES} />
         </div>
