@@ -3,6 +3,7 @@ import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfoli
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 
+// Cost figures: NAPHIA 2024 US averages, dated 2026-10-13.
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'How Much Does Pet Insurance Cost? | Vets.co', description: '2024 US average accident-and-illness premium: $62.44/month for dogs, $32.21 for cats (NAPHIA). What moves your price, and how to set the deductible.', path: '/insurance/questions/how-much-does-pet-insurance-cost', type: 'article' })
 
 const schema = buildArticleSchema({ siteId: 'vets-co', title: 'How Much Does Pet Insurance Cost?', description: 'Typical pet insurance price ranges and the deductible, reimbursement, and limit levers that move your premium.', url: 'https://vets.co/insurance/questions/how-much-does-pet-insurance-cost', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-11T00:00:00Z', modifiedAt: '2026-10-13T00:00:00Z', speakable: true })
@@ -31,7 +32,7 @@ export default function Page() {
                 <div className="text-2xs text-brand-text-light">{d}</div>
               </div>
             ))}
-            <p className="text-2xs text-brand-text-light mt-3 mb-0">These are NAPHIA's 2024 US averages, checked 2026-10-13.</p>
+            <p className="text-2xs text-brand-text-light mt-3 mb-0">These are NAPHIA's 2024 US averages, dated 2026-10-13.</p>
           </div>
           <RelatedLinks title="Related Questions" links={[{ label: 'Is pet insurance worth it?', href: '/insurance/questions/is-pet-insurance-worth-it' }, { label: 'Are there multi-pet discounts?', href: '/insurance/questions/multi-pet-discounts' }, { label: 'Deductibles & Reimbursement', href: '/insurance/deductibles-reimbursement' }, { label: 'All insurance questions', href: '/insurance/questions' }]} />
           <CrossPortfolioCard currentSite="vets-co" contentType="health" variant="sidebar" />
@@ -44,7 +45,7 @@ export default function Page() {
           <CalloutBox variant="info" title="The short answer">
             The average US accident-and-illness premium in 2024 was <strong>$62.44 a month for dogs</strong> and <strong>$32.21 a month for cats</strong> (<a href="https://naphia.org/news/naphia-news/soi-report-2025/">NAPHIA 2025 State of the Industry</a>), but your specific price swings with species, breed, age, location, and the deductible, reimbursement percentage, and annual limit you select. Treat any single &ldquo;average&rdquo; as a starting point, not a quote.
           </CalloutBox>
-          <p>The monthly figures in the short answer and the sidebar are NAPHIA's 2024 US averages, checked 2026-10-13. They are not a quote for one pet.</p>
+          <p>The monthly figures in the short answer and the sidebar are NAPHIA's 2024 US averages, dated 2026-10-13. They are not a quote for one pet.</p>
 
           <h2>What the Typical Ranges Mean</h2>
           <p>NAPHIA&apos;s 2025 report puts the 2024 US average accident-and-illness premium at $749.29 a year for dogs and $386.47 a year for cats. The <a href="https://content.naic.org/insurance-topics/pet-insurance">NAIC</a> notes the actual cost depends on species, breed, gender, age, location, and the coverages and deductible chosen. These averages are useful for setting expectations but should not be mistaken for a personalized price. The spread inside those ranges is wide because a handful of factors push individual quotes well above or below the midpoint.</p>

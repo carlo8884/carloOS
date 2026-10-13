@@ -20,6 +20,7 @@ const breadcrumbSchema = buildBreadcrumbSchema({
 
 const QUESTIONS = [
   { q: 'Does pet insurance cover vaccines?', href: '/insurance/questions/does-pet-insurance-cover-vaccines', summary: 'Core accident-and-illness policies exclude vaccines; only an optional wellness add-on reimburses routine care.', tag: 'Coverage' },
+  // Cost figures in summaries: NAPHIA 2024 US averages, dated 2026-10-13.
   { q: 'Does pet insurance cover pre-existing conditions?', href: '/insurance/questions/does-pet-insurance-cover-pre-existing-conditions', summary: 'No insurer covers pre-existing conditions, though some re-cover curable ones after a symptom-free window.', tag: 'Coverage' },
   { q: 'How much does pet insurance cost?', href: '/insurance/questions/how-much-does-pet-insurance-cost', summary: 'NAPHIA puts the 2024 US average at $62.44/month for dogs and $32.21 for cats, driven by species, breed, age, and the deductible you choose.', tag: 'Cost' },
   { q: 'Is pet insurance worth it?', href: '/insurance/questions/is-pet-insurance-worth-it', summary: 'It is catastrophic-cost protection, not average savings. We frame both sides and point you to the breakeven math.', tag: 'Decision' },
@@ -86,7 +87,7 @@ export default function InsuranceQuestionsHubPage() {
 
         <div className="px-container-sm sm:px-container pb-14 pt-8">
           <h2 className="font-display text-xl font-bold text-brand-dark mb-4 pb-3 border-b border-brand-border">The 8 most-asked questions</h2>
-          <p className="text-sm text-brand-text-mid mb-4">Cost figures are NAPHIA&apos;s 2024 US averages, checked 2026-10-13.</p>
+          <p className="text-sm text-brand-text-mid mb-4">Cost figures are NAPHIA&apos;s 2024 US averages, dated 2026-10-13.</p>
           <div className="grid sm:grid-cols-2 gap-4">
             {QUESTIONS.map((item) => (
               <Link key={item.href} href={item.href} className="block bg-brand-white border border-brand-border rounded-lg p-5 no-underline hover:border-brand-primary transition-colors">
