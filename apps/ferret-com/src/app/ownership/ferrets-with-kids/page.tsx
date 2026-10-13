@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, ShopCtas, CalloutBox, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -21,7 +21,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-10-13T00:00:00Z',
 })
 
 const med = buildMedicalWebPageSchema({
@@ -33,6 +33,24 @@ const med = buildMedicalWebPageSchema({
   lastReviewed: '2026-06-01',
 })
 const combined = combineSchemas(schema, med)
+
+const FAQS = [
+  {
+    question: 'Are ferrets good pets for families with young children?',
+    answer:
+      'Lafeber Company’s ferret care sheet says a ferret may not be the best pet for a family with young children, and that interactions between ferrets (or any pet) and a young child should always be monitored.',
+  },
+  {
+    question: 'How long will a family ferret live?',
+    answer:
+      'Ferrets live an average of 6 to 8 years, according to Lafeber, so an adult should plan for that whole commitment.',
+  },
+  {
+    question: 'Can a ferret live with our cat or dog?',
+    answer:
+      'Lafeber says ferrets tend to get along well with most cats and dogs, but may not get along with birds, rabbits, rodents, or lizards.',
+  },
+]
 
 export default function FerretsWithKidsPage() {
   return (
@@ -64,6 +82,7 @@ export default function FerretsWithKidsPage() {
                 { label: 'Supervision Rules', href: '#supervision' },
                 { label: 'Hygiene', href: '#hygiene' },
                 { label: 'Adult Responsibility', href: '#responsibility' },
+                { label: 'FAQ', href: '#faq' },
                 { label: 'Sources', href: '#sources' },
               ]}
             />
@@ -91,13 +110,18 @@ export default function FerretsWithKidsPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-01"
+            updatedAt="2026-10-13"
             reviewedBy="Editorial team"
           />
+          <CalloutBox variant="info" title="Short answer">
+            <p>
+              A ferret may not be the best pet for a family with young children, and any interaction between a ferret and a young child should always be monitored (<a href="https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf">Lafeber</a>). An adult should own the care for the ferret’s 6 to 8 years.
+            </p>
+          </CalloutBox>
 
           <h2 id="family">Are Ferrets Good Family Pets?</h2>
           <p>
-            For the right family, yes. Ferrets are intelligent, social, and genuinely playful, and many children find them captivating. But they suit a particular kind of household: one with an engaged adult who takes ultimate responsibility, older or well-supervised children, and a willingness to invest in training and an exotic-mammal veterinarian over a 6–10 year life. A ferret is a poor match for a home expecting a low-effort, child-managed pet — they need daily out-of-cage time, careful handling, and a level of supervision that a hamster or fish does not.
+            For the right family, yes. Ferrets are intelligent, social, and genuinely playful, and many children find them captivating. But they suit a particular kind of household: one with an engaged adult who takes ultimate responsibility, older or well-supervised children, and a willingness to invest in training and an exotic-mammal veterinarian over a 6 to 8 year life. A ferret is a poor match for a home expecting a low-effort, child-managed pet — they need daily out-of-cage time, careful handling, and a level of supervision that a hamster or fish does not.
           </p>
 
           <h2 id="age">Age-Appropriate Handling</h2>
@@ -140,7 +164,13 @@ export default function FerretsWithKidsPage() {
           </div>
           </div>
 
+          <h2 id="faq">Frequently Asked Questions</h2>
+          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
+
           <h2 id="sources">Sources</h2>
+          <ul>
+            <li><a href="https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf">Lafeber Company: Care of the Ferret (2020)</a></li>
+          </ul>
           <p>
             Ferret temperament, nipping behavior, bite-inhibition training, and zoonotic-hygiene considerations are covered in Quesenberry KE and Carpenter JW (eds.), <em>Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery</em> (Saunders/Elsevier), and in American Ferret Association owner guidance. Child-and-pet supervision guidance reflects standard companion-animal and public-health references. Locate primary publications by title.
           </p>

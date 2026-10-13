@@ -752,3 +752,20 @@ test('ferret fix FA1: travel pages lead with a Merck-sourced short answer and FA
     expect(ld, path).toContain('"FAQPage"')
   }
 })
+
+test('ferret fix FA3: kids and first-week pages lead with Lafeber/Merck short answers and FAQ schema', async ({ page }) => {
+  const cases: Array<[string, string, string]> = [
+    ['/ownership/ferrets-with-kids', 'should always be monitored', 'Are ferrets good pets for families with young children?'],
+    ['/ownership/first-week-checklist', 'rabies and canine distemper', 'What vaccines does a new ferret need?'],
+  ]
+  for (const [path, short, question] of cases) {
+    await page.goto(path, { waitUntil: 'domcontentloaded' })
+    await expect(page.locator('.carloOS-article').filter({ hasText: 'Short answer' }).first(), path).toContainText(short)
+    await expect(page.locator('a[href="https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf"]').first(), path).toBeAttached()
+    await expect(page.getByText(question).first(), path).toBeVisible()
+    const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
+    expect(ld, path).toContain('"FAQPage"')
+  }
+  await page.goto('/ownership/ferrets-with-kids', { waitUntil: 'domcontentloaded' })
+  await expect(page.locator('body')).not.toContainText('6–10 year life')
+})
