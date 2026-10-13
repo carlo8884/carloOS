@@ -32,6 +32,11 @@ export const metadata: Metadata = buildMetadata({
 
 const SOURCES = [
   {
+    label: "Biting (ferret behavior table)",
+    url: "https://www.merckvetmanual.com/multimedia/table/biting",
+    publisher: "Merck Veterinary Manual",
+  },
+  {
     label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — ferret behaviour, handling, and socialization chapters",
     publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
   },
@@ -59,13 +64,18 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-10-13T00:00:00Z',
   speakable: true,
 
   citation: SOURCES,
 })
 
 const FAQS = [
+  {
+    question: 'What should I do right after my ferret nips?',
+    answer:
+      "The Merck Veterinary Manual recommends returning the ferret to its cage for a brief time-out each time it nips. Done consistently, the ferret learns that biting is not appropriate. Merck notes biting is natural ferret behavior, often for attention or play, and is particularly common in young males 3 to 4 months old raised in a pet shop with little human contact.",
+  },
   {
     question: 'Do all ferret bites hurt?',
     answer:
@@ -74,12 +84,12 @@ const FAQS = [
   {
     question: 'How long does it take to train a ferret out of biting?',
     answer:
-      "For a young kit learning bite inhibition, expect a few weeks to a couple of months of consistent, calm handling. Kits removed from littermates early (5-6 weeks is typical for US pet-store ferrets) missed some of the natural bite-inhibition lessons their siblings would have taught, so they need a human to finish the job. Consistency matters more than intensity — short daily sessions beat occasional long ones.",
+      "For a young kit learning bite inhibition, expect a few weeks to a couple of months of consistent, calm handling. Kits removed from littermates early missed some of the natural bite-inhibition lessons their siblings would have taught, so they need a human to finish the job. Consistency matters more than intensity — short daily sessions beat occasional long ones.",
   },
   {
     question: 'Should I bite my ferret back or flick its nose?',
     answer:
-      "No. Physical punishment — flicking, thumping, 'biting back' — teaches a ferret that hands are dangerous and tends to increase defensive biting rather than reduce it. The companion-animal behaviour literature is consistent across species that punishment-based methods raise bite incidence over time. Use calm interruption (a sharp 'no', ending play briefly) instead.",
+      "No. Physical punishment — flicking, thumping, 'biting back' — teaches a ferret that hands are dangerous and tends to increase defensive biting rather than reduce it. Use calm interruption (a sharp 'no', ending play briefly) instead.",
   },
   {
     question: 'My friendly adult ferret suddenly started biting — why?',
@@ -156,8 +166,14 @@ export default function FerretBitingNippingPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-01"
+            updatedAt="2026-10-13"
           />
+
+          <CalloutBox variant="info" title="Short answer">
+            <p>
+              Ferrets bite as part of natural play and to get attention, especially young males around 3 to 4 months old with little human handling. The <a href="https://www.merckvetmanual.com/multimedia/table/biting">Merck Veterinary Manual</a> advises a brief time-out in the cage after each nip; done consistently, the ferret learns biting is not appropriate.
+            </p>
+          </CalloutBox>
 
           <DropCap>
             A ferret&apos;s mouth is its primary tool for exploring the world.

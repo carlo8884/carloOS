@@ -883,6 +883,17 @@ test('ferret fix MR1: no page carries a /go/marshall href, even a held one', asy
   }
 })
 
+test('ferret fix BT1: biting page answers first from Merck and drops unsourced claims', async ({ page }) => {
+  await page.goto('/behavior/biting-and-nipping', { waitUntil: 'domcontentloaded' })
+  const body = page.locator('body')
+  await expect(body).not.toContainText('5-6 weeks is typical')
+  await expect(body).not.toContainText('behaviour literature is consistent')
+  await expect(page.locator('.carloOS-article').filter({ hasText: 'Short answer' }).first()).toContainText('time-out')
+  await expect(page.locator('a[href="https://www.merckvetmanual.com/multimedia/table/biting"]').first()).toBeVisible()
+  const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
+  expect(ld).toContain('What should I do right after my ferret nips?')
+})
+
 test('ferret fix PA1: play-aggression page answers first and cites the MSD Veterinary Manual', async ({ page }) => {
   await page.goto('/behavior/play-aggression', { waitUntil: 'domcontentloaded' })
   await expect(page.locator('.carloOS-article').filter({ hasText: 'Short answer' }).first()).toContainText('Usually it is play')
