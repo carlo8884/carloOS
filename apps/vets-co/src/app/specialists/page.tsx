@@ -14,17 +14,7 @@
 
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import {
-  buildMetadata,
-  buildBreadcrumbSchema,
-  buildFAQSchema,
-  combineSchemas,
-  FAQAccordion,
-  SchemaScript,
-  CalloutBox,
-  StockImage,
-  PriceAsOf,
-} from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, buildFAQSchema, combineSchemas, FAQAccordion, SchemaScript, CalloutBox, StockImage, PriceAsOf, LastUpdated } from '@carloOS/ui'
 import { Specialties, type Specialty } from '../../data/specialties'
 
 // Short credential label (e.g. "DACVIM (Cardiology)") parsed from the
@@ -146,6 +136,16 @@ export default function SpecialistsHubPage() {
           typical US cost ranges, how pet insurance fits in, and how to verify board
           certification. Sourced from ACVIM, ACVD, ACVO, ACVECC, ACVS, AVDC, and AVMA references.
         </p>
+      </div>
+
+      <div className="px-container-sm sm:px-container pt-8 max-w-4xl">
+        <LastUpdated date="2026-10-13" />
+        <div className="rounded-lg border-l-4 border-brand-primary bg-brand-surface p-5 mt-4" data-testid="short-answer">
+          <h2 className="font-display text-lg font-bold mb-2">The short answer</h2>
+          <p className="text-base leading-relaxed text-brand-text-mid m-0">
+            A board-certified veterinary specialist is a vet who completed additional training in one area and passed that specialty&apos;s exam. The AVMA recognizes 22 specialty organizations covering 48 specialties, such as internal medicine, surgery, cardiology, oncology, and emergency and critical care. Specialists work alongside your primary care vet (<a href="https://www.avma.org/education/veterinary-specialties" className="text-brand-primary hover:underline">AVMA</a>). For an emergency, go to the nearest emergency hospital first (<a href="https://www.merckvetmanual.com/multimedia/table/when-to-see-a-veterinarian" className="text-brand-primary hover:underline">Merck Veterinary Manual</a>).
+          </p>
+        </div>
       </div>
 
       <div className="px-container-sm sm:px-container pt-8">

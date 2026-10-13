@@ -1,15 +1,7 @@
 import { HopDisclosure } from '../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import {
-  buildMetadata,
-  EmailCapture,
-  FAQAccordion,
-  buildBreadcrumbSchema,
-  PrimaryHop,
-  ShopCtas,
-  PriceAsOf
-} from '@carloOS/ui'
+import { buildMetadata, EmailCapture, FAQAccordion, buildBreadcrumbSchema, PrimaryHop, ShopCtas, PriceAsOf, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -36,7 +28,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Vets.co Editorial',
   publishedAt: '2026-05-28T00:00:00Z',
-  modifiedAt: '2026-05-28T00:00:00Z',
+  modifiedAt: '2026-10-13T00:00:00Z',
 })
 
 const FAQS = [
@@ -88,6 +80,9 @@ const TRIAGE_CATEGORIES = [
       'Toxin ingestion: antifreeze, rodenticide, xylitol, lily (cats), toxic-dose chocolate, grapes',
       'Trauma: hit by car, fall from height, large-dog attack puncture',
       'Male cat straining to urinate with nothing coming out',
+      'Not eating or drinking for 24 h (Merck: see a vet immediately)',
+      'Any seizure, even one that has stopped (Merck: see a vet immediately)',
+      'Bloody urine, straining or discomfort while urinating (Merck: see a vet immediately)',
       'Heat stroke: heavy panting, brick-red gums, temp > 104.5 °F',
       'Bleeding that does not slow with 5 min of firm pressure',
       'Venomous-snake bite, facial swelling, anaphylaxis',
@@ -101,9 +96,8 @@ const TRIAGE_CATEGORIES = [
       'Vomiting or diarrhea > 3 times in a day, no other red flags',
       'Limping overnight that has not resolved (non-weight-bearing is ER NOW)',
       'A new lump that is hot, painful, or growing rapidly',
-      'Not eating for 24 h (cats: faster red flag — lipidosis risk)',
-      'Single seizure, fully recovered in 5 min, no prior history',
-      'Possible UTI signs (frequent small urinations, mild straining)',
+      'Poor appetite with no other signs of illness (cats: faster red flag — lipidosis risk)',
+      'Frequent small urinations with no straining, blood or discomfort',
       'Mild itching or allergic reaction, no facial swelling',
       'Mild ear discomfort, head shaking, or odor',
     ],
@@ -208,6 +202,16 @@ export default function EmergencyTriageCardPage() {
           </a>
         </div>
       </section>
+
+      <div className="px-container-sm sm:px-container pt-8 max-w-4xl">
+        <LastUpdated date="2026-10-13" />
+        <div className="rounded-lg border-l-4 border-brand-primary bg-brand-surface p-5 mt-4" data-testid="short-answer">
+          <h2 className="font-display text-lg font-bold mb-2">The short answer</h2>
+          <p className="text-base leading-relaxed text-brand-text-mid m-0">
+            Go to an emergency vet immediately for trouble breathing, heavy bleeding, any seizure, collapse, pale or blue gums, straining without passing urine or stool, or a pet that hasn&apos;t eaten or drunk for 24 hours. Vomiting or diarrhea lasting more than 24 hours needs a vet within 24 hours (<a href="https://www.merckvetmanual.com/multimedia/table/when-to-see-a-veterinarian" className="text-brand-primary hover:underline">Merck Veterinary Manual</a>). For suspected poisoning, call ASPCA Animal Poison Control at (888) 426-4435; a fee may apply (<a href="https://www.aspca.org/pet-care/aspca-poison-control" className="text-brand-primary hover:underline">ASPCA</a>). The card below sorts common signs into ER now, same-day and monitor at home.
+          </p>
+        </div>
+      </div>
 
       {/* TRIAGE CATEGORIES */}
       <section id="triage-card" className="bg-brand-surface px-container-sm sm:px-container py-section">
@@ -447,6 +451,9 @@ ER NOW — drive to the nearest 24-hour ER
 • Toxin ingestion: antifreeze, rodenticide, xylitol, lily (cats), toxic-dose chocolate, grapes
 • Trauma: hit by car, fall from height, large-dog attack puncture
 • Male cat straining to urinate with nothing coming out
+• Not eating or drinking for 24 h
+• Any seizure, even one that has stopped
+• Bloody urine, straining or discomfort while urinating
 • Heat stroke: heavy panting, brick-red gums, temp > 104.5 °F
 • Bleeding that does not slow with 5 min of firm pressure
 • Venomous-snake bite, facial swelling, anaphylaxis
@@ -455,8 +462,7 @@ Same-day vet
 • Vomiting or diarrhea > 3 times in a day, no other red flags
 • Limping overnight that has not resolved (non-weight-bearing is ER NOW)
 • A new lump that is hot, painful, or growing rapidly
-• Not eating for 24 h (cats: faster red flag — lipidosis risk)
-• Single seizure, fully recovered in 5 min, no prior history
+• Poor appetite with no other signs of illness (cats: faster red flag — lipidosis risk)
 
 Monitor at home
 • One episode of vomiting or one loose stool, normal behaviour
@@ -465,7 +471,7 @@ Monitor at home
 • Small superficial scrape, stopped bleeding, clean
 
 Poison control: ASPCA 888-426-4435 · Pet Poison Helpline 855-764-7661 (both fee-based)
-This is a triage aid, not a diagnosis. When unsure, call your vet or the nearest ER.
+Timing follows the Merck Veterinary Manual's When to See a Veterinarian table. This is a triage aid, not a diagnosis. When unsure, call your vet or the nearest ER.
 `}
             resourceLabel="Save the triage card"
           />
