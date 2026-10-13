@@ -1028,3 +1028,11 @@ test('ferret fix VP1: vet-visit prep drops unsourced cost ranges', async ({ page
   expect(text).toMatch(/ask the clinic for a written estimate/i)
   await expect(page.locator('h2#cost')).toHaveText('Costs: Ask for an Estimate')
 })
+
+test('ferret fix VP2: vet-visit prep schedule, fasting and temperature follow Lafeber and Merck', async ({ page }) => {
+  await page.goto('/health/vet-visit-prep', { waitUntil: 'domcontentloaded' })
+  const text = (await page.locator('main').innerText()).replace(/\s+/g, ' ')
+  expect(text).not.toMatch(/3-4 hour|65-72°F|every 3-6 months/)
+  expect(text).toContain('65°F to 75°F')
+  await expect(page.locator('#cadence + ul a[href="https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf"]')).toBeVisible()
+})
