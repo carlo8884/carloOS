@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, FAQAccordion, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
 import { HubHero } from '../../components/HubHero'
 
 export const metadata: Metadata = buildMetadata({
@@ -143,6 +143,13 @@ const colorListSchema = {
 
 const schema = combineSchemas(breadcrumbSchema, colorListSchema)
 
+const HUB_FAQS = [
+  { question: "What is the difference between a ferret's color and its pattern?", answer: "Color is the color of the guard hairs, undercoat, eyes and nose. Pattern is how that color is concentrated and distributed on the body, mask and nose, plus any white markings on the head or feet (American Ferret Association)." },
+  { question: "How do I tell an albino ferret from a dark-eyed white?", answer: "Both are white. Any solid white ferret with red (pink) eyes is an albino; a solid white ferret with any other eye color is a dark-eyed white, or DEW (American Ferret Association)." },
+  { question: "What is the most common ferret color?", answer: "The AFA standards don't rank colors by how common they are. They do note that cinnamons are less common than champagnes (American Ferret Association)." },
+  { question: "What makes a blaze or panda ferret?", answer: "A blaze has a long white stripe from the forehead down the back of the neck, and a panda has an almost completely white head and neck; both have white mitts on the feet (American Ferret Association)." },
+]
+
 export default function ColorsHubPage() {
   return (
     <>
@@ -174,6 +181,16 @@ export default function ColorsHubPage() {
         <span>›</span>
         <span style={{ color: 'var(--brand-text-mid)', fontWeight: 500 }}>Colors &amp; Patterns</span>
       </nav>
+
+      <div className="px-container-sm sm:px-container pt-8 max-w-4xl">
+        <LastUpdated date="2026-10-13" />
+        <div className="rounded-lg border-l-4 border-brand-primary bg-brand-white p-5 mt-4" data-testid="short-answer">
+          <h2 className="font-display text-lg font-bold mb-2">The short answer</h2>
+          <p className="text-base leading-relaxed text-brand-text-mid m-0">
+            The American Ferret Association describes a ferret by color (the color of its guard hairs, undercoat, eyes and nose) and pattern (how that color is concentrated and where white markings fall). Recognized colors include sable, black sable, black, chocolate, champagne, cinnamon, albino and dark-eyed white; patterns include standard, solid, roan, point (Siamese), blaze, panda and mitts (<a href="https://www.ferret.org/events/colors/colorchart.html" className="text-brand-primary hover:underline">American Ferret Association</a>).
+          </p>
+        </div>
+      </div>
 
       {/* Intro */}
       <div
@@ -291,6 +308,16 @@ export default function ColorsHubPage() {
           ))}
         </ul>
       </div>
+
+      <section className="px-container-sm sm:px-container py-10">
+        <div className="max-w-content-wide">
+          <h2 id="faq" className="font-display text-xl font-bold text-brand-dark mb-4">Ferret colors FAQ</h2>
+          <FAQAccordion items={HUB_FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
+          <ArticleSourcesList title="Sources" sources={[
+            { label: "Ferret Color and Pattern Standards", url: "https://www.ferret.org/events/colors/colorchart.html", publisher: "American Ferret Association" },
+          ]} />
+        </div>
+      </section>
 
       <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
 

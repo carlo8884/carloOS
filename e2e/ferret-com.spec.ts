@@ -673,7 +673,7 @@ test('ferret fix AF2: grooming and nail pages lead with a sourced short answer t
 })
 
 test('ferret fix SM1: sitemap lastmod is the stamped page date, and unstamped hubs carry none', async ({ request }) => {
-  await expectStampedLastmod(request, ['/care/nail-trimming', '/care/bathing-and-grooming', '/behavior/biting-and-nipping'], ['/colors'])
+  await expectStampedLastmod(request, ['/care/nail-trimming', '/care/bathing-and-grooming', '/behavior/biting-and-nipping'], ['/about'])
 })
 
 test('ferret fix SD2: Article schema omits image instead of shipping an empty string', async ({ request }) => {
@@ -1119,4 +1119,14 @@ test('ferret fix VX1: vaccine timing follows Merck and Lafeber; first-year sched
   expect(text).toMatch(/20 to 30 minutes/)
   await page.goto('/health', { waitUntil: 'domcontentloaded' })
   expect(await page.locator('body').innerText()).not.toContain('Rabies at 12+ weeks')
+})
+
+test('ferret fix FH6: /colors hub answers first and has a sourced FAQ', async ({ page }) => {
+  await page.goto('/colors', { waitUntil: 'domcontentloaded' })
+  const box = page.getByTestId('short-answer')
+  await expect(box).toBeVisible()
+  await expect(box.locator('a[href="https://www.ferret.org/events/colors/colorchart.html"]')).toBeVisible()
+  await expect(page.locator('h2#faq')).toBeVisible()
+  const ld = await page.locator('script[type="application/ld+json"]').allTextContents()
+  expect(ld.filter((t) => t.includes('"FAQPage"')).length).toBe(1)
 })
