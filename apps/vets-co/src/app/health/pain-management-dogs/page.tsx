@@ -1,21 +1,36 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, ShopCtas, LastUpdated } from '@carloOS/ui'
+import { buildMetadata, FAQAccordion, CalloutBox, ArticleLayout, CrossPortfolioCard, RelatedLinks, ShopCtas, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Pain Management in Dogs — NSAIDs, Gabapentin | Vets.co', description: 'Pain in dogs is undertreated. NSAIDs, gabapentin, Librela, and multimodal protocols for chronic pain. How to assess pain in dogs who hide it. Reference guide.', path: '/health/pain-management-dogs', type: 'article' })
 const SOURCES = [
+  { label: 'Merck Veterinary Manual: Pain Treatment in Animals (pet owner version)', url: 'https://www.merckvetmanual.com/special-pet-topics/pain-management/pain-treatment-in-animals', publisher: 'Merck Veterinary Manual' },
   { label: 'WSAVA: Pain Management Guidelines', url: 'https://wsava.org/global-guidelines/pain-guidelines/', publisher: 'WSAVA' },
   { label: 'AAHA: Pain Management Guidelines for Dogs and Cats', url: 'https://www.aaha.org/aaha-guidelines/pain-management/', publisher: 'AAHA' },
   { label: 'Merck Veterinary Manual: Pain Assessment and Management', url: 'https://www.merckvetmanual.com/therapeutics/pain-assessment-and-management/overview-of-pain-assessment-and-management-in-animals', publisher: 'Merck Vet Manual' },
   { label: 'Kealy et al., JAVMA 2000', url: 'https://doi.org/10.2460/javma.2000.217.1678', publisher: 'JAVMA' },
 ]
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Pain Management in Dogs', description: 'NSAIDs, gabapentin, Librela, and multimodal pain protocols for dogs.', url: 'https://vets.co/health/pain-management-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-12T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Pain Management in Dogs', description: 'NSAIDs, gabapentin, Librela, and multimodal pain protocols for dogs.', url: 'https://vets.co/health/pain-management-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-13T00:00:00Z' ,
   citation: SOURCES,
 })
 const med = buildMedicalWebPageSchema({ name: 'Pain Management in Dogs', description: 'Assessment and multimodal treatment of acute and chronic pain in dogs.', url: 'https://vets.co/health/pain-management-dogs', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-07' })
 const combined = combineSchemas(schema, med)
+const FAQS = [
+  {
+    "question": "Why does my vet give pain medicine on a schedule?",
+    "answer": "Pain signs in animals can be hard to see, so the Merck Veterinary Manual says giving pain medicine regularly is usually best. Vets may also give medicine and watch for improvement to confirm that pain was the problem."
+  },
+  {
+    "question": "Is it normal for my dog to sleep a lot after surgery?",
+    "answer": "Good pain relief helps animals rest, and pets may sleep more after surgery, but Merck says they should still be easy to wake. If you can't wake your dog or it seems too sleepy, call your vet."
+  },
+  {
+    "question": "What can I do at home to help my dog's pain?",
+    "answer": "Follow your vet's plan, and add the non-drug care Merck describes: warm compresses or ice or heat packs, massage, and physical therapy, plus housing, diet, and company that suit your dog. Stress can make pain worse, so extra attention helps, for example if your dog is separated from a playmate while healing."
+  }
+]
 
 export default function PainManagementPage() {
   return (
@@ -43,7 +58,11 @@ export default function PainManagementPage() {
 </>}
       >
         <div className="carloOS-article">
-          <LastUpdated date="2026-10-12" />
+          <LastUpdated date="2026-10-13" />
+
+          <CalloutBox variant="info" title="Short answer">
+            <p>Vets usually treat pain with one or more pain-relieving drugs, chosen by how severe the pain is, the dog's overall health, and what works best for dogs. Merck says giving pain medicine regularly is usually best because pain signs can be hard to see, and combining drugs can allow smaller doses of each. Non-drug care such as warm compresses or ice or heat packs, massage, physical therapy, rest, and low stress helps the medicine work better. Source: <a href="https://www.merckvetmanual.com/special-pet-topics/pain-management/pain-treatment-in-animals">Merck Veterinary Manual (pet owner version)</a>.</p>
+          </CalloutBox>
 
           <h2>Why Dogs Hide Pain — and How to See Through It</h2>
           <p>Dogs are descended from prey animals whose survival depended on not appearing weak — showing pain attracted predators. This evolutionary pressure remains: dogs with significant chronic pain often appear &quot;fine&quot; to casual observation while making behavioral adaptations that are the actual pain signal. The dog that used to bound up the stairs and now takes them slowly. The dog that stopped initiating play. The dog that gets up from rest with a brief hesitation before moving normally. These behavioral changes are pain signs that owners frequently attribute to &quot;slowing down with age&quot; — which is itself often a pain signal. An elevated mesh dog cot is rest for that hesitation — a low, open cot they can step onto and off without climbing out of a deep bed, not an extra-large bolster dog lounge and not an egg-crate foam kennel pad. It does not treat pain and it is not a substitute for a veterinary exam. Clear adhesive non-slip stair treads are how the existing staircase gets grip for the dog that now takes the stairs slowly — they are not carpeted wooden pet steps, not a dog ramp, and not a traction rug. A hardcover weekly appointment planner is how those rest and stair observations, plus a daily pain score, stay dated notes you can hand the veterinarian — not a pocket spiral memo pad.</p>
@@ -91,6 +110,9 @@ export default function PainManagementPage() {
               />
           </div>
           </div>
+          <h2 id="faq">Frequently asked questions</h2>
+          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
+
 
           <ArticleSourcesList sources={SOURCES} />
         </div>
