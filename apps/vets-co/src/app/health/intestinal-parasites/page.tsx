@@ -27,6 +27,7 @@ export default function IntestinalParasitesPage() {
           { title: 'Preventive Care Schedule', href: '/health/preventive-care-schedule', category: 'Veterinary Guide' },
           { title: 'Heartworm in Dogs', href: '/health/heartworm-in-dogs', category: 'Veterinary Guide' },
           { title: 'Vomiting and Diarrhea in Pets', href: '/health/vomiting-diarrhea-pets', category: 'Veterinary Guide' },
+          { title: 'How to Give Your Pet a Pill', href: '/guides/how-to-give-your-pet-a-pill' },
         ]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -38,7 +39,7 @@ export default function IntestinalParasitesPage() {
               </div>
             ))}
           </div>
-          <RelatedLinks title="Related Guides" links={[{ label: 'Preventive Care Schedule', href: '/health/preventive-care-schedule' }, { label: 'Heartworm Prevention', href: '/health/heartworm-in-dogs' }, { label: 'Vomiting & Diarrhea', href: '/health/vomiting-diarrhea-pets' }]} />
+          <RelatedLinks title="Related Guides" links={[{ label: 'Preventive Care Schedule', href: '/health/preventive-care-schedule' }, { label: 'Heartworm Prevention', href: '/health/heartworm-in-dogs' }, { label: 'Vomiting & Diarrhea', href: '/health/vomiting-diarrhea-pets' }, { label: 'How to Give Your Pet a Pill', href: '/guides/how-to-give-your-pet-a-pill' }]} />
 
                   <CrossPortfolioCard currentSite="vets-co" contentType="health" variant="sidebar" />
 </>}

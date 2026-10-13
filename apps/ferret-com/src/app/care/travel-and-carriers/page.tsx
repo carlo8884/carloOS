@@ -93,6 +93,8 @@ export default function TravelAndCarriersPage() {
                 { label: 'Vet Visit Prep', href: '/health/vet-visit-prep' },
                 { label: 'Heat Stroke Prevention', href: '/care/heat-stroke-prevention' },
                 { label: 'Cage Setup', href: '/care/cage-setup' },
+                { label: 'H-Style vs Mesh Harness', href: '/reviews/h-style-vs-mesh-harness-guide' },
+                { label: 'Winter Harness Fit', href: '/reviews/winter-harness-fit-guide' },
               ]}
             />
             <CrossPortfolioCard currentSite="ferret-com" contentType="care" variant="sidebar" />
@@ -105,6 +107,8 @@ export default function TravelAndCarriersPage() {
           { title: 'Traveling With a Ferret', href: '/ownership/traveling-with-a-ferret' },
           { title: 'Ferret Legality by State', href: '/ownership/ferret-legality-by-state' },
           { title: 'Vet Visit Prep', href: '/health/vet-visit-prep' },
+          { title: 'H-Style vs Mesh Harness', href: '/reviews/h-style-vs-mesh-harness-guide' },
+          { title: 'Winter Harness Fit', href: '/reviews/winter-harness-fit-guide' },
         ]}
 >
         <div className="carloOS-article">

@@ -30,6 +30,7 @@ export default function HeatStrokePage() {
           { title: 'Emergency Signs', href: '/health/emergency-signs', category: 'Emergency Guide' },
           { title: 'Dehydration in Dogs', href: '/health/dehydration-in-dogs', category: 'Veterinary Guide' },
           { title: 'Find a Vet', href: '/find-a-vet', category: 'Directory' },
+          { title: 'Pet First Aid Kit', href: '/guides/pet-first-aid-kit' },
         ]}
         sidebar={<>
           <div className="bg-brand-danger/8 border border-brand-danger/30 rounded-xl p-5">
@@ -40,7 +41,7 @@ export default function HeatStrokePage() {
               </div>
             ))}
           </div>
-          <RelatedLinks title="Related Guides" links={[{ label: 'Emergency Signs', href: '/health/emergency-signs' }, { label: 'Dehydration', href: '/health/dehydration-in-dogs' }, { label: 'Find Emergency Vet', href: '/find-a-vet' }]} />
+          <RelatedLinks title="Related Guides" links={[{ label: 'Emergency Signs', href: '/health/emergency-signs' }, { label: 'Dehydration', href: '/health/dehydration-in-dogs' }, { label: 'Find Emergency Vet', href: '/find-a-vet' }, { label: 'Pet First Aid Kit', href: '/guides/pet-first-aid-kit' }]} />
 
                   <CrossPortfolioCard currentSite="vets-co" contentType="health" variant="sidebar" />
 </>}

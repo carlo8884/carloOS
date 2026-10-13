@@ -29,6 +29,7 @@ export default function EarInfectionsDogsPage() {
           { title: 'Allergic Reactions in Dogs', href: '/health/allergic-reactions-dogs', category: 'Veterinary Guide' },
           { title: 'Hypothyroidism in Dogs', href: '/health/hypothyroidism-dogs', category: 'Veterinary Guide' },
           { title: 'Find a Vet', href: '/find-a-vet', category: 'Directory' },
+          { title: 'Recovery Cones and E-Collars', href: '/guides/recovery-cone-e-collar' },
         ]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -40,7 +41,7 @@ export default function EarInfectionsDogsPage() {
               </div>
             ))}
           </div>
-          <RelatedLinks title="Related Guides" links={[{ label: 'Allergic Reactions in Dogs', href: '/health/allergic-reactions-dogs' }, { label: 'Hypothyroidism in Dogs', href: '/health/hypothyroidism-dogs' }, { label: 'Preventive Care Schedule', href: '/health/preventive-care-schedule' }]} />
+          <RelatedLinks title="Related Guides" links={[{ label: 'Allergic Reactions in Dogs', href: '/health/allergic-reactions-dogs' }, { label: 'Hypothyroidism in Dogs', href: '/health/hypothyroidism-dogs' }, { label: 'Preventive Care Schedule', href: '/health/preventive-care-schedule' }, { label: 'Recovery Cones and E-Collars', href: '/guides/recovery-cone-e-collar' }]} />
 
                   <CrossPortfolioCard currentSite="vets-co" contentType="health" variant="sidebar" />
 </>}
