@@ -913,6 +913,7 @@ test('ferret fix AO1: kibble guide, can-ferrets-eat hub, and find-a-vet answer f
     await expect(page.getByText('Short answer', { exact: true }).first(), path).toBeVisible()
     await expect(page.locator('body'), path).toContainText(text)
     await expect(page.locator(`a[href="${href}"]`).first(), path).toBeVisible()
+  }
 })
 
 test('ferret fix WY1: no page carries a /go/wysong href, even a held one', async ({ page }) => {
