@@ -847,6 +847,7 @@ test('ferret fix SC1: can-ferrets-eat food pages emit Article and FAQPage schema
     expect(ld, path).toContain('"Article"')
     expect(ld.match(/"FAQPage"/g)?.length, path).toBe(1)
     expect(ld, path).toContain('Can ferrets eat')
+  }
 })
 
 test('ferret fix MR1: no page carries a /go/marshall href, even a held one', async ({ page }) => {
