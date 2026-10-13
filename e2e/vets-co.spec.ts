@@ -839,3 +839,24 @@ test('vets fix SD1: rendered JSON-LD on key templates parses and has no structur
   for (const path of ['/', '/health/kidney-disease-cats', '/breeds/beagle-health', '/guides/pet-first-aid-kit', '/tools', '/tools/er-vs-clinic', '/insurance', '/medications']) problems.push(...(await jsonLdProblems(request, path)))
   expect(problems).toEqual([])
 })
+
+test('vets fix AF1: heat stroke, leptospirosis and UTI pages open with a sourced short answer and carry FAQ schema', async ({ page }) => {
+  const cases: Array<[string, RegExp, string]> = [
+    ['/health/heat-stroke-dogs', /Do not put your dog in cold water/, 'Can I use ice packs on a dog with heat stroke?'],
+    ['/health/leptospirosis', /treat it with the antibiotic doxycycline/, 'Can I catch leptospirosis from my dog?'],
+    ['/health/urinary-tract-infection', /short antibiotic course of 3 to 5 days/, 'Does cranberry prevent UTIs in dogs?'],
+  ]
+  for (const [path, short, question] of cases) {
+    await page.goto(path, { waitUntil: 'domcontentloaded' })
+    const box = page.locator('.carloOS-article').getByText('Short answer').first()
+    await expect(box, path).toBeVisible()
+    await expect(page.locator('.carloOS-article').filter({ hasText: 'Short answer' }).first(), path).toContainText(short)
+    await expect(page.locator('.carloOS-article a[href^="https://www.merckvetmanual.com/"]').first(), path).toBeAttached()
+    await expect(page.getByText(question).first(), path).toBeVisible()
+    const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
+    expect(ld, path).toContain('"FAQPage"')
+    expect(ld, path).toContain(question)
+  }
+  await page.goto('/health/heat-stroke-dogs', { waitUntil: 'domcontentloaded' })
+  await expect(page.locator('body')).not.toContainText('Ice water or ice packs cause vasoconstriction')
+})
