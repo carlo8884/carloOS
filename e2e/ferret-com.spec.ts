@@ -1075,6 +1075,10 @@ test('ferret fix VP2: vet-visit prep schedule, fasting and temperature follow La
 
 test('ferret fix FH1: /care hub answers first and has a sourced FAQ', async ({ page }) => {
   await page.goto('/care', { waitUntil: 'domcontentloaded' })
+})
+
+test('ferret fix FH2: /diet hub answers first and has a sourced FAQ', async ({ page }) => {
+  await page.goto('/diet', { waitUntil: 'domcontentloaded' })
   const box = page.getByTestId('short-answer')
   await expect(box).toBeVisible()
   await expect(box.locator('a[href="https://www.merckvetmanual.com/all-other-pets/ferrets/providing-a-home-for-a-ferret"]')).toBeVisible()
