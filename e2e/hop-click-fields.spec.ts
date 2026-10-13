@@ -126,8 +126,11 @@ async function oneClick(page: Page, link: Locator, site: string, pagePath: strin
   const destination = expectedDestination(href as string)
   const before = (await clicks(page)).length
   await arm(link)
-  await link.click()
-  await link.click()
+  // One double-click gesture: both clicks land milliseconds apart, inside the
+  // listener's 1200 ms dedupe window. Two separate link.click() calls each ran
+  // actionability checks and on a slow CI runner landed 1447 ms apart, which
+  // the listener correctly counted as two clicks (HC2).
+  await link.dblclick()
   try {
     await expect.poll(async () => (await clicks(page)).length).toBe(before + 1)
   } catch (error) {
@@ -230,4 +233,28 @@ test('five hops record one click each, including a double click', async ({ page 
 
   await page.goto('/search?q=zzzznotapage')
   await oneClick(page, page.locator('#empty-search-guides a').first(), site, '/search')
+})
+
+const DOUBLE_CLICK_PAGE: Record<(typeof SITES)[number], string> = {
+  'dog-com': '/reviews/best-dog-crates',
+  'fish-com': '/reviews/best-aquarium-filters',
+  'horses-com': '/reviews/best-equine-supplements',
+  'vets-co': '/reviews/holiday-leftovers-low-fat-guide',
+  'ferret-com': '/reviews/best-ferret-cage',
+}
+
+test('HC2: a double click is one gesture inside the 1200 ms dedupe window and records one hop', async ({ page }, testInfo) => {
+  const site = testInfo.project.name as (typeof SITES)[number]
+  expect(SITES).toContain(site)
+  await page.goto(DOUBLE_CLICK_PAGE[site])
+  const link = page.locator('main a[href*="/go/"]').first()
+  await expect(link).toBeVisible()
+  await expect(page.locator('html[data-hop-click="on"]')).toBeAttached()
+  const before = (await clicks(page)).length
+  await arm(link)
+  await link.dblclick()
+  const times = await page.evaluate(() => (window as unknown as { __hopClickTimes?: number[] }).__hopClickTimes ?? [])
+  expect(times.length).toBe(2)
+  expect(times[1] - times[0]).toBeLessThan(1200)
+  await expect.poll(async () => (await clicks(page)).length).toBe(before + 1)
 })
