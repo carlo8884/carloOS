@@ -1137,6 +1137,14 @@ test('vets fix HB2: medications hub answers first and has a sourced FAQ', async 
   expect(ld.filter((t) => t.includes('"FAQPage"')).length).toBe(1)
 })
 
+test('vets fix HB7: /reviews hub answers first and has a sourced FAQ', async ({ page }) => {
+  await page.goto('/reviews', { waitUntil: 'domcontentloaded' })
+  const box = page.getByTestId('short-answer')
+  await expect(box).toBeVisible()
+  await expect(box.locator('a[href="https://content.naic.org/insurance-topics/pet-insurance"]').first()).toBeVisible()
+  await expect(page.getByRole('heading', { name: 'Reviews FAQ' })).toBeVisible()
+})
+
 test('vets fix HB6: /breeds hub answers first and has a sourced FAQ', async ({ page }) => {
   await page.goto('/breeds', { waitUntil: 'domcontentloaded' })
   const box = page.getByTestId('short-answer')
