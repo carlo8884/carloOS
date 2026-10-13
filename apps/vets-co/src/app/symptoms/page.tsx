@@ -7,6 +7,7 @@ import { PrimaryHop,
   combineSchemas,
   SchemaScript,
   FAQAccordion,
+  LastUpdated,
 } from '@carloOS/ui'
 import { HubMasthead } from '../../components/HubMasthead'
 import { Symptoms, type Symptom, type UrgencyTier } from '../../data/symptoms'
@@ -88,13 +89,13 @@ const TIER_REFERENCE: Array<{
     tier: 'ER NOW',
     meaning: 'Drive to the nearest open emergency hospital immediately; call ahead if you can.',
     signs:
-      'A swollen, hard belly with unproductive retching (possible bloat/GDV), pale or white gums, a cat straining in the litter box and producing little or no urine, fast or labored breathing in a cat, head pressing, collapse, a seizure that will not stop, or known toxin ingestion.',
+      'A swollen, hard belly with unproductive retching (possible bloat/GDV), pale or white gums, a cat straining in the litter box and producing little or no urine, fast or labored breathing in a cat, head pressing, collapse, a seizure that will not stop, known toxin ingestion, sudden severe lameness, or not eating or drinking for 24 hours (Merck Veterinary Manual).',
   },
   {
     tier: 'Same-day vet',
     meaning: 'Call your primary veterinarian today; urgent-care or telehealth is reasonable if they cannot fit you in.',
     signs:
-      'Repeated vomiting or diarrhea, refusing food for more than a day, limping that still bears some weight, a painful or rapidly swelling eye, or sudden lethargy in an otherwise sick-appearing pet.',
+      'Vomiting or diarrhea for more than 24 hours, poor appetite with no other signs of illness, limping that still bears some weight, a painful or rapidly swelling eye, or sudden lethargy in an otherwise sick-appearing pet.',
   },
   {
     tier: 'Schedule vet visit',
@@ -118,7 +119,7 @@ const FAQS = [
   {
     question: 'How do I know if a pet symptom is an emergency?',
     answer:
-      'Use the urgency tiers above. A swollen, hard belly with unproductive retching (possible bloat), pale or white gums, a cat that cannot urinate, fast or labored breathing, head pressing, collapse, a non-stop seizure, or known toxin ingestion are ER-now signs — go to the nearest open hospital and do not wait for a callback. Repeated vomiting, refusing food for more than a day, or limping are usually same-day concerns. Gradual or mild changes can wait for a routine appointment. When you are unsure, call a veterinarian rather than waiting.',
+      'Use the urgency tiers above. A swollen, hard belly with unproductive retching (possible bloat), pale or white gums, a cat that cannot urinate, fast or labored breathing, head pressing, collapse, a non-stop seizure, known toxin ingestion, sudden severe lameness, or not eating or drinking for 24 hours are ER-now signs — go to the nearest open hospital and do not wait for a callback. Vomiting or diarrhea for more than 24 hours, or limping that still bears weight, needs a vet within 24 hours (Merck Veterinary Manual). Gradual or mild changes can wait for a routine appointment. When you are unsure, call a veterinarian rather than waiting.',
   },
   {
     question: 'Is this symptom library a substitute for seeing a veterinarian?',
@@ -211,12 +212,14 @@ export default function SymptomsHubPage() {
       />
       <div className="px-container-sm sm:px-container pt-6 pb-2 bg-brand-surface border-b border-brand-border">
         <p className="text-xs text-brand-text-light max-w-3xl leading-relaxed">
-          Triage guidance drawn from current{' '}
+          General references (not checked against each statement on this page):{' '}
           <a href="https://www.avma.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">AVMA</a>,{' '}
           <a href="https://aaha.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">AAHA</a>, and{' '}
-          <a href="https://www.acvim.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">ACVIM</a> guidance.
+          <a href="https://www.acvim.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">ACVIM</a>. The urgency tiers follow the Merck Veterinary Manual&apos;s{' '}
+          <a href="https://www.merckvetmanual.com/multimedia/table/when-to-see-a-veterinarian" rel="noopener" target="_blank" className="text-brand-primary hover:underline">When to See a Veterinarian</a> table.
           This page is not a veterinarian. If your pet may be in danger, contact a vet.
         </p>
+        <LastUpdated date="2026-10-13" />
       </div>
 
       {/* Direct-answer / TL;DR block — extractable summary for AI Overviews,
@@ -226,7 +229,7 @@ export default function SymptomsHubPage() {
         <div className="max-w-3xl">
           <h2 id="symptoms-tldr" className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">The short version</h2>
           <p className="text-base text-brand-text-mid leading-relaxed mb-3">
-            This library sorts {Symptoms.length} dog and cat symptoms into four urgency tiers so you can decide <strong className="text-brand-dark">how fast to act</strong>. The fastest read: <strong className="text-brand-dark">a swollen hard belly with unproductive retching, pale or white gums, a cat that cannot urinate, fast or labored breathing, head pressing, collapse, a non-stop seizure, or known toxin ingestion are ER-now signs</strong> — go to the nearest open hospital immediately. Repeated vomiting, refusing food for over a day, or limping usually warrant <strong className="text-brand-dark">same-day</strong> care. Gradual or mild changes can wait for a <strong className="text-brand-dark">routine</strong> appointment.
+            This library sorts {Symptoms.length} dog and cat symptoms into four urgency tiers so you can decide <strong className="text-brand-dark">how fast to act</strong>. The fastest read: <strong className="text-brand-dark">a swollen hard belly with unproductive retching, pale or white gums, a cat that cannot urinate, fast or labored breathing, head pressing, collapse, a non-stop seizure, known toxin ingestion, sudden severe lameness, or no eating or drinking for 24 hours are ER-now signs</strong> — go to the nearest open hospital immediately. Vomiting or diarrhea for more than 24 hours, or limping that still bears weight, warrants <strong className="text-brand-dark">same-day</strong> care (<a href="https://www.merckvetmanual.com/multimedia/table/when-to-see-a-veterinarian" className="text-brand-primary hover:underline">Merck Veterinary Manual</a>). Gradual or mild changes can wait for a <strong className="text-brand-dark">routine</strong> appointment.
           </p>
           <p className="text-sm text-brand-text-mid leading-relaxed">
             These pages are educational and not a diagnosis. For suspected poisoning, call <a href="tel:8884264435" className="text-brand-primary hover:underline font-semibold">ASPCA Poison Control at 888-426-4435</a> or your veterinarian immediately. Review the <Link href="/health/emergency-signs" className="text-brand-primary hover:underline">emergency warning signs</Link>, run the interactive <Link href="/tools/er-vs-clinic" className="text-brand-primary hover:underline">ER vs clinic vs telehealth</Link> tool, keep a printable <Link href="/emergency-triage-card" className="text-brand-primary hover:underline">emergency triage card</Link> handy, or <Link href="/find-a-vet" className="text-brand-primary hover:underline">find a vet</Link>.

@@ -1162,3 +1162,15 @@ test('vets fix HB5: /tools hub answers first and has a sourced FAQ', async ({ pa
   const ld = await page.locator('script[type="application/ld+json"]').allTextContents()
   expect(ld.filter((t) => t.includes('"FAQPage"')).length).toBe(1)
 })
+
+test('vets fix TR1: health and symptoms hubs follow Merck triage timing and cite it', async ({ page }) => {
+  for (const path of ['/health', '/symptoms']) {
+    await page.goto(path, { waitUntil: 'domcontentloaded' })
+    const text = await page.locator('body').innerText()
+    expect(text).not.toMatch(/refusing food for (over|more than) a day/i)
+    expect(text).not.toMatch(/not eating for more than a day/i)
+    expect(text).toMatch(/not eating or drinking for 24 hours|no eating or drinking for 24 hours/i)
+    expect(text).toMatch(/General references \(not checked against each statement on this page\)/)
+    await expect(page.locator('a[href="https://www.merckvetmanual.com/multimedia/table/when-to-see-a-veterinarian"]').first()).toBeVisible()
+  }
+})
