@@ -182,12 +182,9 @@ export function HomeGuides() {
                 Start with the right fish.
               </h2>
             </div>
-            <div className="text-base text-brand-text-mid mt-3 mb-0 max-w-2xl leading-relaxed flex items-start gap-2.5">
-              <div className={`relative mt-0.5 h-8 w-12 shrink-0 overflow-hidden rounded-md bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                <StockImage manifestKey="fish-com:species-thumb-angelfish" alt="" aspect="4:3" />
-              </div>
-              <span>Tank size, temperament, and school size first — the four profiles below are the ones most newcomers actually keep.</span>
-            </div>
+            <p className="text-base text-brand-text-mid mt-3 mb-0 max-w-2xl leading-relaxed">
+              Tank size, temperament, and school size first — the four profiles below are the ones most newcomers actually keep.
+            </p>
           </div>
           <Link
             href="/species"
@@ -197,18 +194,8 @@ export function HomeGuides() {
               <StockImage manifestKey="fish-com:species-thumb-angelfish" alt="An angelfish in an aquarium" aspect="4:3" subtleCredit />
             </div>
             <div className="pr-3 py-2">
-              <div className="mb-1 flex items-center gap-2">
-                <div className={`relative h-7 w-10 shrink-0 overflow-hidden rounded-md bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                  <StockImage manifestKey="fish-com:species-thumb-angelfish" alt="An angelfish in an aquarium" aspect="4:3" subtleCredit />
-                </div>
-                <div className="font-display font-bold text-brand-dark text-sm leading-tight italic group-hover:text-brand-primary">All species guides</div>
-              </div>
-              <div className="text-xs text-brand-text-mid mt-0.5 flex items-center gap-2">
-                <div className={`relative h-6 w-9 shrink-0 overflow-hidden rounded-md bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                  <StockImage manifestKey="fish-com:species-thumb-angelfish" alt="" aspect="4:3" />
-                </div>
-                <span>Parameter targets before the next fish.</span>
-              </div>
+              <div className="font-display font-bold text-brand-dark text-sm leading-tight italic group-hover:text-brand-primary">All species guides</div>
+              <div className="text-xs text-brand-text-mid mt-0.5">Parameter targets before the next fish.</div>
             </div>
           </Link>
         </div>
@@ -223,24 +210,9 @@ export function HomeGuides() {
                 <StockImage manifestKey={s.imageKey} alt={s.imageAlt} aspect="16:9" subtleCredit />
               </div>
               <div className="p-5">
-                <div className="flex items-center gap-2.5 mb-1">
-                  <div className={`relative h-8 w-12 shrink-0 overflow-hidden rounded-md bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                    <StockImage manifestKey={s.imageKey} alt={s.imageAlt} aspect="4:3" />
-                  </div>
-                  <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">{s.type}</span>
-                </div>
-                <div className="mb-1 flex items-center gap-2.5">
-                  <div className={`relative h-8 w-12 shrink-0 overflow-hidden rounded-md bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                    <StockImage manifestKey={s.imageKey} alt={s.imageAlt} aspect="4:3" />
-                  </div>
-                  <h3 className="font-display font-bold text-brand-dark text-lg leading-tight italic group-hover:text-brand-primary">{s.name}</h3>
-                </div>
-                <div className="text-sm text-brand-text-mid flex items-center gap-2">
-                  <div className={`relative h-7 w-10 shrink-0 overflow-hidden rounded-md bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                    <StockImage manifestKey={s.imageKey} alt="" aspect="4:3" />
-                  </div>
-                  <span>{s.note}</span>
-                </div>
+                <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-1 block">{s.type}</span>
+                <h3 className="font-display font-bold text-brand-dark text-lg leading-tight italic group-hover:text-brand-primary mb-1">{s.name}</h3>
+                <p className="text-sm text-brand-text-mid">{s.note}</p>
               </div>
             </Link>
           ))}
