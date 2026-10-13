@@ -955,6 +955,16 @@ test('ferret fix TX2: find-a-vet drops the dead ferret-afa.org link and labels u
   await expect(page.locator('main')).toContainText('not checked these general references')
 })
 
+test('ferret fix FY1: first-year schedule uses Lafeber and Merck, labels unchecked references', async ({ page }) => {
+  await page.goto('/first-year-schedule', { waitUntil: 'domcontentloaded' })
+  const body = page.locator('body')
+  await expect(body).not.toContainText('5–8 years')
+  await expect(body).not.toContainText('peaks between ages 4 and 7')
+  await expect(body).toContainText('6 to 8 years')
+  await expect(body).toContainText('General references, not checked against')
+  await expect(page.locator('a[href="https://www.merckvetmanual.com/all-other-pets/ferrets/routine-health-care-for-ferrets"]').first()).toBeVisible()
+})
+
 test('ferret fix TX1: generic textbook and journal citations are labelled as unchecked', async ({ page }) => {
   for (const path of ['/behavior/biting-and-nipping', '/colors/ferret-lifespan', '/diet/weight-management', '/health/insulinoma']) {
     await page.goto(path, { waitUntil: 'domcontentloaded' })
