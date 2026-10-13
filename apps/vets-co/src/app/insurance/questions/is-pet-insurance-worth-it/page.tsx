@@ -1,11 +1,11 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, LastUpdated, ComparisonFoot } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
-import { ArticleByline, CalloutBox } from '@carloOS/ui'
+import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Is Pet Insurance Worth It? An Honest Answer | Vets.co', description: 'Pet insurance is protection against rare, large vet bills — not a way to save money on average. When it makes sense, when it does not, and how to decide.', path: '/insurance/questions/is-pet-insurance-worth-it', type: 'article' })
 
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Is Pet Insurance Worth It?', description: 'An honest, both-sides look at when pet insurance is worth it, framed as catastrophic-cost protection rather than expected savings.', url: 'https://vets.co/insurance/questions/is-pet-insurance-worth-it', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-11T00:00:00Z', modifiedAt: '2026-10-12T00:00:00Z', speakable: true })
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Is Pet Insurance Worth It?', description: 'An honest, both-sides look at when pet insurance is worth it, framed as catastrophic-cost protection rather than expected savings.', url: 'https://vets.co/insurance/questions/is-pet-insurance-worth-it', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-11T00:00:00Z', modifiedAt: '2026-10-13T00:00:00Z', speakable: true })
 
 const FAQS = [
   { question: 'Does pet insurance save money on average?', answer: 'For most pets in most years, no — and that is by design. Like any insurance, it is priced so the insurer covers claims, overhead, and a margin, which means the average policyholder pays in somewhat more than they get back. You come out ahead financially only if eligible claims over the pet’s life exceed total premiums and deductibles, which generally requires one or more major incidents. The product is risk transfer, not a savings vehicle.' },
@@ -38,12 +38,12 @@ export default function Page() {
         </>}
       >
         <div className="carloOS-article">
-          <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-11T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-12" />
+          <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-11T00:00:00Z" updatedAt="2026-10-13T00:00:00Z" reviewedBy="Editorial team" />
+          <LastUpdated date="2026-10-13" />
 
           <p>Those figures are typical US ranges dated 2026-06-11.</p>
           <CalloutBox variant="info" title="The short answer">
-            Pet insurance is <strong>protection against rare, large vet bills — not a way to save money on average.</strong> It is most worth it when you could not comfortably absorb a sudden large emergency bill from savings and you enroll while your pet is young and healthy. It is least useful as a way to recoup predictable routine costs. The honest answer is to run the breakeven for your own situation rather than rely on a blanket yes or no.
+            Pet insurance is <strong>protection against rare, large vet bills — not a way to save money on average.</strong> It is most worth it when you could not comfortably absorb a sudden large emergency bill from savings and you enroll while your pet is young and healthy. It is least useful as a way to recoup predictable routine costs. As the <a href="https://content.naic.org/insurance-topics/pet-insurance">NAIC</a> puts it, pet insurance is not for everyone, and anyone considering it should research the policy and the company. The honest answer is to run the breakeven for your own situation rather than rely on a blanket yes or no.
           </CalloutBox>
 
           <h2>What the Product Actually Is</h2>
@@ -91,7 +91,7 @@ export default function Page() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-12" />
+          <ComparisonFoot updated="2026-10-13" />
           <h2>Who should use which</h2>
           <p>Use insurance when a large bill would force a hard choice and you can enroll before a condition exists. Use a fund when you will fund it and a large bill would not change your life. Some owners keep a modest fund for routine surprises and insurance for the catastrophic tail.</p>
 
@@ -116,6 +116,10 @@ export default function Page() {
           <h2>FAQ</h2>
           <p>Those figures are typical US ranges dated 2026-06-11.</p>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
+
+          <ArticleSourcesList title="Sources" sources={[
+            { label: 'Pet Insurance (consumer topic page)', url: 'https://content.naic.org/insurance-topics/pet-insurance', publisher: 'NAIC' },
+          ]} />
 
         </div>
       </ArticleLayout>

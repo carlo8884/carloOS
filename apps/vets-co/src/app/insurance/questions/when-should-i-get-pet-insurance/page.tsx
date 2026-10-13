@@ -3,12 +3,12 @@ import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfoli
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'When Should I Get Pet Insurance? Best Age to Enroll | Vets.co', description: 'Enroll as early as the insurer allows — often 6–8 weeks. It locks in coverage before conditions become pre-existing exclusions and starts premiums lower.', path: '/insurance/questions/when-should-i-get-pet-insurance', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'When Should I Get Pet Insurance? Best Age to Enroll | Vets.co', description: 'Enroll as early as the insurer allows; minimum ages vary. It locks in coverage before conditions become pre-existing exclusions and starts premiums lower.', path: '/insurance/questions/when-should-i-get-pet-insurance', type: 'article' })
 
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'When Should I Get Pet Insurance?', description: 'Why enrolling a young, healthy pet maximizes coverage, how waiting periods work, and what to know about enrollment-age limits.', url: 'https://vets.co/insurance/questions/when-should-i-get-pet-insurance', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-11T00:00:00Z', modifiedAt: '2026-10-12T00:00:00Z', speakable: true })
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'When Should I Get Pet Insurance?', description: 'Why enrolling a young, healthy pet maximizes coverage, how waiting periods work, and what to know about enrollment-age limits.', url: 'https://vets.co/insurance/questions/when-should-i-get-pet-insurance', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-11T00:00:00Z', modifiedAt: '2026-10-13T00:00:00Z', speakable: true })
 
 const FAQS = [
-  { question: 'What is the best age to get pet insurance?', answer: 'As early as the insurer allows — many begin coverage at six to eight weeks of age. Enrolling while a pet is young and healthy locks in coverage before any condition becomes a permanent pre-existing exclusion, and premiums start lower. There is no single magic age beyond "as soon as practical," because every additional week without coverage is a week in which a new note in the records could become an exclusion.' },
+  { question: 'What is the best age to get pet insurance?', answer: 'As early as the insurer allows; each insurer sets its own minimum enrollment age, and some will not accept pets after a certain age (NAIC). Enrolling while a pet is young and healthy locks in coverage before any condition becomes a permanent pre-existing exclusion, and premiums start lower. There is no single magic age beyond "as soon as practical," because every additional week without coverage is a week in which a new note in the records could become an exclusion.' },
   { question: 'Is it ever too late to get pet insurance?', answer: 'Not if your pet is healthy. You can enroll an older pet, and coverage still has value for new, unrelated conditions. The two cautions are that premiums are higher for older pets and rise further with age, and that anything already on the medical record will be treated as pre-existing and excluded. So it is rarely "too late," but every year you wait both raises the price and risks turning a future condition into an exclusion.' },
   { question: 'Do waiting periods mean coverage is not immediate?', answer: 'Correct. Policies impose waiting periods after enrollment before coverage begins — commonly a few days for accidents, around fourteen days for illness, and longer for orthopedic or cruciate conditions. Anything that arises during a waiting period is treated as pre-existing and excluded. This is a core reason to enroll before you need coverage rather than after symptoms appear: a condition that emerges in the gap between signing up and coverage taking effect will not be paid.' },
 ]
@@ -19,7 +19,7 @@ export default function Page() {
       <SchemaScript schema={schema} />
       <ArticleLayout siteId="vets-co"
         heroHop={<a href="/insurance/when-to-enroll" className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline mb-5">When to enroll</a>}
-        hero={{ title: 'When Should I Get Pet Insurance?', subtitle: 'Enroll as early as the insurer allows — often as young as six to eight weeks. Signing up while a pet is young and healthy locks in coverage before any condition becomes a permanent pre-existing exclusion, and starts your premium from a lower base.', category: 'Insurance Q&A', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '6 min' }}
+        hero={{ title: 'When Should I Get Pet Insurance?', subtitle: 'Enroll as early as the insurer allows; minimum ages vary by insurer. Signing up while a pet is young and healthy locks in coverage before any condition becomes a permanent pre-existing exclusion, and starts your premium from a lower base.', category: 'Insurance Q&A', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '6 min' }}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Insurance', href: '/insurance' }, { name: 'Questions', href: '/insurance/questions' }, { name: 'When to Enroll', href: '/insurance/questions/when-should-i-get-pet-insurance' }]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -36,11 +36,11 @@ export default function Page() {
         </>}
       >
         <div className="carloOS-article">
-          <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-11T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-12" />
+          <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-11T00:00:00Z" updatedAt="2026-10-13T00:00:00Z" reviewedBy="Editorial team" />
+          <LastUpdated date="2026-10-13" />
 
           <CalloutBox variant="info" title="The short answer">
-            Enroll <strong>as early as the insurer allows</strong> — many start coverage at six to eight weeks of age. Enrolling while a pet is young and healthy locks in coverage before any condition becomes a permanent pre-existing exclusion, and premiums start lower. There is no &ldquo;too late&rdquo; if your pet is healthy, but every year you wait risks a new note in the records becoming an exclusion.
+            Enroll <strong>as early as the insurer allows</strong>; minimum ages vary by insurer, and some will not accept pets after a certain age (<a href="https://content.naic.org/insurance-topics/pet-insurance">NAIC</a>). Enrolling while a pet is young and healthy locks in coverage before any condition becomes a permanent pre-existing exclusion, and premiums start lower. There is no &ldquo;too late&rdquo; if your pet is healthy, but every year you wait risks a new note in the records becoming an exclusion.
           </CalloutBox>
 
           <h2>Why Earlier Is Almost Always Better</h2>
@@ -48,7 +48,7 @@ export default function Page() {
           <p>Premiums reinforce the same conclusion. Younger pets are cheaper to insure, and while you cannot avoid the age-based increases that come later, enrolling young starts the premium from a lower base and keeps coverage continuous into the senior years when claims are most likely.</p>
 
           <h2>How Young Is Too Young?</h2>
-          <p>Most insurers will begin coverage at around six to eight weeks of age, which in practice means you can insure a pet almost as soon as it joins your household. There is little reason to delay: the sooner coverage starts, the sooner the waiting periods elapse and protection becomes real. The main practical step is simply to set the policy up early rather than treating insurance as something to sort out &ldquo;later,&rdquo; because later is precisely when the first excludable note tends to appear.</p>
+          <p>Insurers set their own minimum enrollment ages, so check the policy, and many have waiting periods before benefits begin (NAIC). There is little reason to delay: the sooner coverage starts, the sooner the waiting periods elapse and protection becomes real. The main practical step is simply to set the policy up early rather than treating insurance as something to sort out &ldquo;later,&rdquo; because later is precisely when the first excludable note tends to appear.</p>
 
           <h2>Waiting Periods Mean Coverage Is Not Instant</h2>
           <p>Enrolling early matters partly because coverage does not begin the moment you sign up. Policies impose waiting periods: commonly a few days for accidents, around fourteen days for illness, and often longer — sometimes months — for orthopedic and cruciate conditions. Anything that arises during a waiting period is treated as pre-existing and excluded. The practical lesson is to enroll before you need coverage, not after a worrying symptom, because a condition that emerges in the waiting-period gap will not be paid. Our <a href="/insurance/when-to-enroll">when-to-enroll guide</a> details typical waiting-period lengths by condition type.</p>
@@ -80,7 +80,7 @@ export default function Page() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-12" />
+          <ComparisonFoot updated="2026-10-13" />
           <h2>Who should start when</h2>
           <p>Start while the pet is young and healthy. Enroll before a worrying symptom, because a condition that shows up in the waiting period is not paid. Do not wait to open a first policy on a senior record.</p>
 
@@ -106,6 +106,7 @@ export default function Page() {
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
 
           <ArticleSourcesList title="Sources" sources={[
+            { label: 'Pet Insurance (consumer topic page)', url: 'https://content.naic.org/insurance-topics/pet-insurance', publisher: 'NAIC' },
             { label: 'Sample carrier waiting-period and enrollment-age disclosures', publisher: 'General carrier policy disclosures (not an endorsement)' },
           ]} />
         </div>

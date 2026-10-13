@@ -5,7 +5,7 @@ import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Does Pet Insurance Cover Vaccines? | Vets.co', description: 'Standard accident-and-illness pet insurance does not cover vaccines. Only an optional wellness plan reimburses routine care — here is how that math works.', path: '/insurance/questions/does-pet-insurance-cover-vaccines', type: 'article' })
 
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Does Pet Insurance Cover Vaccines?', description: 'Why accident-and-illness pet insurance excludes vaccines, and when an optional wellness plan is worth adding.', url: 'https://vets.co/insurance/questions/does-pet-insurance-cover-vaccines', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-11T00:00:00Z', modifiedAt: '2026-10-12T00:00:00Z', speakable: true })
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Does Pet Insurance Cover Vaccines?', description: 'Why accident-and-illness pet insurance excludes vaccines, and when an optional wellness plan is worth adding.', url: 'https://vets.co/insurance/questions/does-pet-insurance-cover-vaccines', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-11T00:00:00Z', modifiedAt: '2026-10-13T00:00:00Z', speakable: true })
 
 const FAQS = [
   { question: 'Does any pet insurance cover vaccines?', answer: 'Not through the core accident-and-illness policy. Vaccines are covered only when you add an optional wellness or routine-care plan — sometimes called a preventive rider — which reimburses a fixed annual allowance toward vaccines, exams, and other predictable care for an extra monthly cost. The base policy is designed to pay for the unexpected, not the scheduled.' },
@@ -37,11 +37,11 @@ export default function Page() {
         </>}
       >
         <div className="carloOS-article">
-          <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-11T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-12" />
+          <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-11T00:00:00Z" updatedAt="2026-10-13T00:00:00Z" reviewedBy="Editorial team" />
+          <LastUpdated date="2026-10-13" />
 
           <CalloutBox variant="info" title="The short answer">
-            Standard accident-and-illness pet insurance does <strong>not</strong> cover vaccines or other routine, preventive care. Vaccines are reimbursed only if you add an optional wellness or routine-care plan for an extra monthly cost. The core policy pays for unexpected illness and injury — not predictable annual care.
+            Standard accident-and-illness pet insurance does <strong>not</strong> cover vaccines or other routine, preventive care. Vaccines are reimbursed only if you add an optional wellness or routine-care plan for an extra monthly cost. The core policy pays for unexpected illness and injury — not predictable annual care. The <a href="https://content.naic.org/insurance-topics/pet-insurance">NAIC</a> notes insurers typically sell three kinds of coverage: accident-only, accident and illness, and wellness, each with its own covered and excluded services.
           </CalloutBox>
 
           <h2>Why the Core Policy Excludes Vaccines</h2>
@@ -91,7 +91,7 @@ export default function Page() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-12" />
+          <ComparisonFoot updated="2026-10-13" />
           <h2>Who should buy which layer</h2>
           <p>Buy the core policy when the goal is a large unexpected bill. Add wellness only after the per-category caps and the premium match what you already spend on routine care. Vaccines stay off the core policy either way.</p>
 
@@ -117,6 +117,7 @@ export default function Page() {
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
 
           <ArticleSourcesList title="Sources" sources={[
+            { label: 'Pet Insurance (consumer topic page)', url: 'https://content.naic.org/insurance-topics/pet-insurance', publisher: 'NAIC' },
             { label: 'Sample accident-and-illness and wellness policy documents', publisher: 'General carrier policy disclosures (not an endorsement)' },
           ]} />
         </div>
