@@ -1073,6 +1073,10 @@ test('ferret fix VP2: vet-visit prep schedule, fasting and temperature follow La
   await expect(page.locator('#cadence + ul a[href="https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf"]')).toBeVisible()
 })
 
+test('ferret fix FH3: /behavior hub answers first and has a sourced FAQ', async ({ page }) => {
+  await page.goto('/behavior', { waitUntil: 'domcontentloaded' })
+})
+
 test('ferret fix FH2: /diet hub answers first and has a sourced FAQ', async ({ page }) => {
   await page.goto('/diet', { waitUntil: 'domcontentloaded' })
   const box = page.getByTestId('short-answer')
