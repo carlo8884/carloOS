@@ -1072,3 +1072,14 @@ test('ferret fix VP2: vet-visit prep schedule, fasting and temperature follow La
   expect(text).toContain('65°F to 75°F')
   await expect(page.locator('#cadence + ul a[href="https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf"]')).toBeVisible()
 })
+
+test('ferret fix FH1: /care hub answers first and has a sourced FAQ', async ({ page }) => {
+  await page.goto('/care', { waitUntil: 'domcontentloaded' })
+  const box = page.getByTestId('short-answer')
+  await expect(box).toBeVisible()
+  await expect(box.locator('a[href="https://www.merckvetmanual.com/all-other-pets/ferrets/providing-a-home-for-a-ferret"]')).toBeVisible()
+  await expect(box.locator('a[href="https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf"]')).toBeVisible()
+  await expect(page.locator('h2#faq')).toBeVisible()
+  const ld = await page.locator('script[type="application/ld+json"]').allTextContents()
+  expect(ld.filter((t) => t.includes('"FAQPage"')).length).toBe(1)
+})
