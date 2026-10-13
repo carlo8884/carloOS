@@ -248,11 +248,12 @@ export default function HealthHubPage() {
         <LastUpdated date="2026-10-09" />
         <ArticleSourcesList
           sources={[
-            { label: 'Quesenberry KE, Carpenter JW. Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery.', url: 'https://www.elsevier.com/books/ferrets-rabbits-and-rodents/quesenberry/978-1-4160-6621-7', publisher: 'Elsevier' },
+            { label: 'Quesenberry KE, Carpenter JW. Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery. (general reference; not checked against this page)', url: 'https://www.elsevier.com/books/ferrets-rabbits-and-rodents/quesenberry/978-1-4160-6621-7', publisher: 'Elsevier' },
             { label: 'Merck Veterinary Manual — routine health care for ferrets', url: 'https://www.merckvetmanual.com/all-other-pets/ferrets/routine-health-care-for-ferrets', publisher: 'Merck Veterinary Manual' },
-            { label: 'Association of Exotic Mammal Veterinarians', url: 'https://aemv.org/', publisher: 'AEMV' },
+            { label: 'Association of Exotic Mammal Veterinarians (general reference; not checked against this page)', url: 'https://aemv.org/', publisher: 'AEMV' },
           ]}
         />
+        <p className="text-sm text-brand-text-light mt-2">Sources marked &ldquo;general reference&rdquo; are background reading we have not checked against this page.</p>
       </section>
 
       {/* Direct-answer / TL;DR block — extractable summary for search + AI surfaces */}

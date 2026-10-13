@@ -972,3 +972,11 @@ test('ferret fix TX1: generic textbook and journal citations are labelled as unc
     expect(text, path).toMatch(/not checked against this page|not checked this general reference against the claims on this page/)
   }
 })
+
+test('ferret fix TX3: health hub labels unchecked general references', async ({ page }) => {
+  await page.goto('/health', { waitUntil: 'domcontentloaded' })
+  const text = (await page.locator('main').innerText()).replace(/\s+/g, ' ')
+  expect(text).toMatch(/Clinical Medicine and Surgery\. \(general reference; not checked against this page\)/)
+  expect(text).toMatch(/Association of Exotic Mammal Veterinarians \(general reference; not checked against this page\)/)
+  expect(text).toContain('background reading we have not checked against this page')
+})
