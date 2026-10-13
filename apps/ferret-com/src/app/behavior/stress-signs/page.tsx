@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -310,6 +311,7 @@ export default function FerretStressSignsPage() {
               Pair the sleep sack with an out-of-cage routine →
             </Link>
           </p>
+          <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/ferret+hammock?s=behavior-stress-signs" />
           <ReviewCard quietUntilTag
             id="ferret-sleep-sack"
             badge="Sleep Comfort"
