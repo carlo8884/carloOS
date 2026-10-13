@@ -4,6 +4,7 @@ import { expectMoneyCopy, reviewRoutes } from './money-copy'
 import { expectHop } from './hop'
 import { AMAZON_TAG, TRUPANION_TAG } from './tags'
 import { jsonLdProblems } from './jsonld'
+import { expectStampedLastmod } from './sitemap-lastmod'
 
 test('insurance review, then a carrier quote hop', async ({ page }) => {
   await page.goto('/reviews/best-pet-insurance')
@@ -859,4 +860,8 @@ test('vets fix AF1: heat stroke, leptospirosis and UTI pages open with a sourced
   }
   await page.goto('/health/heat-stroke-dogs', { waitUntil: 'domcontentloaded' })
   await expect(page.locator('body')).not.toContainText('Ice water or ice packs cause vasoconstriction')
+})
+
+test('vets fix SM1: sitemap lastmod is the stamped page date, and unstamped hubs carry none', async ({ request }) => {
+  await expectStampedLastmod(request, ['/health/heat-stroke-dogs', '/health/kidney-disease-cats', '/breeds/beagle-health'], ['/how-we-pick', '/symptoms/dog-vomiting'])
 })

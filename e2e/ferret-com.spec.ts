@@ -4,6 +4,7 @@ import { expectMoneyCopy, reviewRoutes } from './money-copy'
 import { expectHop } from './hop'
 import { AMAZON_TAG } from './tags'
 import { jsonLdProblems } from './jsonld'
+import { expectStampedLastmod } from './sitemap-lastmod'
 
 test('cage guide, cage setup, tagged hop', async ({ page }) => {
   await page.goto('/reviews/best-ferret-cage')
@@ -669,4 +670,8 @@ test('ferret fix AF2: grooming and nail pages lead with a sourced short answer t
   await expect(page.locator('main')).not.toContainText('tend to crush rather than cleanly cut')
   const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
   expect(ld).toContain('a nail clipper made for humans may be used')
+})
+
+test('ferret fix SM1: sitemap lastmod is the stamped page date, and unstamped hubs carry none', async ({ request }) => {
+  await expectStampedLastmod(request, ['/care/nail-trimming', '/care/bathing-and-grooming', '/behavior/biting-and-nipping'], ['/care'])
 })

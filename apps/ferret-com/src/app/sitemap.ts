@@ -1,4 +1,5 @@
 import { MetadataRoute } from 'next'
+import { withStampedDates } from '../sitemap-dates'
 import { FERRET_FOODS } from '../data/foods'
 import { directorySitemapEntries, directorySitemapIds } from '@carloOS/config/directory'
 import directoryListings from '../data/directory-listings.json'
@@ -13,6 +14,12 @@ export function generateSitemaps() {
 }
 
 export default function sitemap(props?: { id?: number | string }): MetadataRoute.Sitemap {
+  const id = Number(props?.id ?? 0)
+  const entries = curatedSitemap(props)
+  return id >= 1 ? entries : withStampedDates(entries)
+}
+
+function curatedSitemap(props?: { id?: number | string }): MetadataRoute.Sitemap {
   const id = Number(props?.id ?? 0)
   const now = new Date()
   if (id >= 1) {
