@@ -36,7 +36,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-10-13T00:00:00Z',
 })
 
 const FAQS = [
@@ -122,7 +122,7 @@ export default function ChoosingHealthyFerretPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-01"
+            updatedAt="2026-10-13"
           />
 
           <DropCap>
@@ -280,19 +280,19 @@ export default function ChoosingHealthyFerretPage() {
             <li>
               Quesenberry KE, Carpenter JW (eds.). <em>Ferrets, Rabbits, and
               Rodents: Clinical Medicine and Surgery.</em> Saunders/Elsevier —
-              ferret wellness, husbandry, and common-disease chapters.
+              ferret wellness, husbandry, and common-disease chapters. <em>(general reference; not checked against this page)</em>
             </li>
             <li>
               <em>Journal of Exotic Pet Medicine</em> — articles on ferret
-              wellness and preventive care.
+              wellness and preventive care. <em>(general reference; not checked against this page)</em>
             </li>
             <li>
               Association of Exotic Mammal Veterinarians (AEMV) — clinician
-              resources and member directory for ferret care.
+              resources and member directory for ferret care. <em>(general reference; not checked against this page)</em>
             </li>
             <li>
               American Ferret Association (AFA) — owner-facing adoption and
-              selection guidance.
+              selection guidance. <em>(general reference; not checked against this page)</em>
             </li>
           </ul>
           <p className="text-sm text-brand-text-light">

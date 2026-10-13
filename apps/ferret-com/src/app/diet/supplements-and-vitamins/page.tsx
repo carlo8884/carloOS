@@ -174,7 +174,7 @@ export default function SupplementsAndVitaminsPage() {
             <li><a href="https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf">Lafeber Company, Care of the Pet Ferret (PDF)</a></li>
           </ul>
           <p>
-            Nutritional adequacy of complete diets and the risks of fat-soluble vitamin oversupplementation are discussed in Quesenberry KE and Carpenter JW (eds.), <em>Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery</em> (Saunders/Elsevier), and Carpenter JW, <em>Exotic Animal Formulary</em>. Hairball-obstruction risk and seasonal coat-change management are covered in the same references. Locate primary publications by title.
+            Nutritional adequacy of complete diets and the risks of fat-soluble vitamin oversupplementation are discussed in Quesenberry KE and Carpenter JW (eds.), <em>Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery</em> (Saunders/Elsevier), and Carpenter JW, <em>Exotic Animal Formulary</em>. Hairball-obstruction risk and seasonal coat-change management are covered in the same references. Locate primary publications by title. We have not checked this general reference against the claims on this page.
           </p>
           <p className="text-sm text-brand-text-light">
             This page is general information, not individualized veterinary advice, and contains no dosing instructions. Any supplement for a specific ferret should be selected and dosed by a veterinarian familiar with ferrets.

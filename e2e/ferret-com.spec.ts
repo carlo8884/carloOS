@@ -955,3 +955,11 @@ test('ferret fix FY1: first-year schedule uses Lafeber and Merck, labels uncheck
   await expect(body).toContainText('General references, not checked against')
   await expect(page.locator('a[href="https://www.merckvetmanual.com/all-other-pets/ferrets/routine-health-care-for-ferrets"]').first()).toBeVisible()
 })
+
+test('ferret fix TX1: generic textbook and journal citations are labelled as unchecked', async ({ page }) => {
+  for (const path of ['/behavior/biting-and-nipping', '/colors/ferret-lifespan', '/diet/weight-management', '/health/insulinoma']) {
+    await page.goto(path, { waitUntil: 'domcontentloaded' })
+    const text = (await page.locator('main').innerText()).replace(/\s+/g, ' ')
+    expect(text, path).toMatch(/not checked against this page|not checked this general reference against the claims on this page/)
+  }
+})

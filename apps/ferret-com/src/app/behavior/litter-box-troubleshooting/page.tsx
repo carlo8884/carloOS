@@ -32,16 +32,16 @@ export const metadata: Metadata = buildMetadata({
 
 const SOURCES = [
   {
-    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — behaviour and clinical chapters on elimination and disease",
+    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — behaviour and clinical chapters on elimination and disease (general reference; not checked against this page)",
     publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
   },
   {
-    label: "American Ferret Association (AFA) — litter-training guidance and realistic compliance expectations",
+    label: "American Ferret Association (AFA) — litter-training guidance and realistic compliance expectations (general reference; not checked against this page)",
     url: "https://www.ferret.org",
     publisher: "AFA",
   },
   {
-    label: "Association of Exotic Mammal Veterinarians (AEMV) — clinician resources on ferret GI and urinary disease",
+    label: "Association of Exotic Mammal Veterinarians (AEMV) — clinician resources on ferret GI and urinary disease (general reference; not checked against this page)",
     url: "https://www.aemv.org",
     publisher: "AEMV",
   },
@@ -55,7 +55,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-10-13T00:00:00Z',
   speakable: true,
 
   citation: SOURCES,
@@ -152,7 +152,7 @@ export default function LitterBoxTroubleshootingPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-01"
+            updatedAt="2026-10-13"
           />
 
           <DropCap>

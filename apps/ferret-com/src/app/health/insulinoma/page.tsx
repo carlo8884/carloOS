@@ -7,7 +7,7 @@ import { crossSiteHref } from '@carloOS/config'
 
 const SOURCES = [
   {
-    label: "Quesenberry KE, Carpenter JW (eds.). Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery. 4th ed. Saunders/Elsevier — ferret endocrine-disease and insulinoma chapters.",
+    label: "Quesenberry KE, Carpenter JW (eds.). Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery. 3rd ed. Saunders/Elsevier — ferret endocrine-disease and insulinoma chapters. (general reference; not checked against this page)",
     url: "https://www.elsevier.com/books/ferrets-rabbits-and-rodents/quesenberry/978-1-4160-6621-7",
     publisher: "Elsevier/Saunders",
   },
@@ -17,12 +17,12 @@ const SOURCES = [
     publisher: "Merck Veterinary Manual",
   },
   {
-    label: "Association of Exotic Mammal Veterinarians (AEMV) — exotic-mammal practitioner directory and ferret medicine continuing-education resources",
+    label: "Association of Exotic Mammal Veterinarians (AEMV) — exotic-mammal practitioner directory and ferret medicine continuing-education resources (general reference; not checked against this page)",
     url: "https://aemv.org",
     publisher: "AEMV",
   },
   {
-    label: "Journal of Exotic Pet Medicine — clinical articles on ferret insulinoma diagnosis, surgical outcomes, and medical management",
+    label: "Journal of Exotic Pet Medicine — clinical articles on ferret insulinoma diagnosis, surgical outcomes, and medical management (general reference; not checked against this page)",
     url: "https://www.sciencedirect.com/journal/journal-of-exotic-pet-medicine",
     publisher: "Journal of Exotic Pet Medicine",
   },
@@ -46,7 +46,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-05-28T00:00:00Z',
-  modifiedAt: '2026-10-12T00:00:00Z',
+  modifiedAt: '2026-10-13T00:00:00Z',
   speakable: true,
 
   citation: SOURCES,
@@ -218,10 +218,10 @@ export default function FerretInsulinomaPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-05-28"
-            updatedAt="2026-09-05"
+            updatedAt="2026-10-13"
             reviewedBy="Editorial team"
           />
-          <LastUpdated date="2026-10-12" />
+          <LastUpdated date="2026-10-13" />
 
           <DropCap>
             Insulinoma is the disease most ferret owners eventually learn the

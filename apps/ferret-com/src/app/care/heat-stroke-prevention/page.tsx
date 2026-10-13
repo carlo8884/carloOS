@@ -25,11 +25,11 @@ export const metadata: Metadata = buildMetadata({
 
 const SOURCES = [
   {
-    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — thermoregulation and heat-stroke chapters",
+    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — thermoregulation and heat-stroke chapters (general reference; not checked against this page)",
     publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
   },
   {
-    label: "American Ferret Association (AFA) — heat safety and temperature management owner guidance",
+    label: "American Ferret Association (AFA) — heat safety and temperature management owner guidance (general reference; not checked against this page)",
     url: "https://www.ferret.org",
     publisher: "AFA",
   },
@@ -48,7 +48,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-09-04T00:00:00Z',
+  modifiedAt: '2026-10-13T00:00:00Z',
 
   citation: SOURCES,
 })
@@ -143,7 +143,7 @@ export default function HeatStrokePreventionPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-09-04"
+            updatedAt="2026-10-13"
             reviewedBy="Editorial team"
           />
 

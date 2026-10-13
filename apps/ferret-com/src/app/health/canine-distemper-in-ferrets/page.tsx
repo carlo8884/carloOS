@@ -15,7 +15,7 @@ import {
 
 const SOURCES = [
   {
-    label: "Quesenberry KE, Carpenter JW (eds.). Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery. 4th ed. Saunders/Elsevier — ferret infectious disease chapter covering canine distemper virus pathogenesis and near-universal mortality.",
+    label: "Quesenberry KE, Carpenter JW (eds.). Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery. 3rd ed. Saunders/Elsevier — ferret infectious disease chapter covering canine distemper virus pathogenesis and near-universal mortality. (general reference; not checked against this page)",
     url: "https://www.elsevier.com/books/ferrets-rabbits-and-rodents/quesenberry/978-1-4160-6621-7",
     publisher: "Elsevier/Saunders",
   },
@@ -25,7 +25,7 @@ const SOURCES = [
     publisher: "Merck Veterinary Manual",
   },
   {
-    label: "Association of Exotic Mammal Veterinarians (AEMV) — ferret vaccination protocols and practitioner continuing-education resources",
+    label: "Association of Exotic Mammal Veterinarians (AEMV) — ferret vaccination protocols and practitioner continuing-education resources (general reference; not checked against this page)",
     url: "https://aemv.org",
     publisher: "AEMV",
   },
@@ -56,7 +56,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-10-12T00:00:00Z',
+  modifiedAt: '2026-10-13T00:00:00Z',
   speakable: true,
 
   citation: SOURCES,
@@ -160,9 +160,9 @@ export default function FerretCanineDistemperPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-01"
+            updatedAt="2026-10-13"
           />
-          <LastUpdated date="2026-10-12" />
+          <LastUpdated date="2026-10-13" />
 
           <DropCap>
             Of all the diseases a ferret can face, canine distemper is the one

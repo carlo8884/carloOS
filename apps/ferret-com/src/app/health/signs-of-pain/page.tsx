@@ -15,7 +15,7 @@ import {
 
 const SOURCES = [
   {
-    label: "Quesenberry KE, Carpenter JW (eds.). Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery. 4th ed. Saunders/Elsevier — ferret analgesia, pain recognition, and clinical examination chapters.",
+    label: "Quesenberry KE, Carpenter JW (eds.). Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery. 3rd ed. Saunders/Elsevier — ferret analgesia, pain recognition, and clinical examination chapters. (general reference; not checked against this page)",
     url: "https://www.elsevier.com/books/ferrets-rabbits-and-rodents/quesenberry/978-1-4160-6621-7",
     publisher: "Elsevier/Saunders",
   },
@@ -25,12 +25,12 @@ const SOURCES = [
     publisher: "Merck Veterinary Manual",
   },
   {
-    label: "Association of Exotic Mammal Veterinarians (AEMV) — pain recognition and analgesia continuing-education materials for exotic-mammal practitioners",
+    label: "Association of Exotic Mammal Veterinarians (AEMV) — pain recognition and analgesia continuing-education materials for exotic-mammal practitioners (general reference; not checked against this page)",
     url: "https://aemv.org",
     publisher: "AEMV",
   },
   {
-    label: "Journal of Exotic Pet Medicine — clinical reports on pain assessment in ferrets and behavioral indicators of abdominal and musculoskeletal pain",
+    label: "Journal of Exotic Pet Medicine — clinical reports on pain assessment in ferrets and behavioral indicators of abdominal and musculoskeletal pain (general reference; not checked against this page)",
     url: "https://www.sciencedirect.com/journal/journal-of-exotic-pet-medicine",
     publisher: "Journal of Exotic Pet Medicine",
   },
@@ -61,7 +61,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-10-12T00:00:00Z',
+  modifiedAt: '2026-10-13T00:00:00Z',
   speakable: true,
 
   citation: SOURCES,
@@ -173,9 +173,9 @@ export default function FerretSignsOfPainPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-01"
+            updatedAt="2026-10-13"
           />
-          <LastUpdated date="2026-10-12" />
+          <LastUpdated date="2026-10-13" />
 
           <DropCap>
             A ferret in pain rarely cries out. The species evolved as both a

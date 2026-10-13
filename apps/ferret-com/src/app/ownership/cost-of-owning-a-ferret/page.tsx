@@ -225,7 +225,7 @@ export default function CostOfOwningAFerretPage() {
             <li><a href="https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/neoplasia-of-ferrets">Merck Veterinary Manual: Neoplasia of Ferrets</a></li>
           </ul>
           <p>
-            Disease incidence in middle-aged and older ferrets — insulinoma, adrenal disease, lymphoma, dental disease — is documented in Quesenberry KE and Carpenter JW (eds.), <em>Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery</em> (Saunders/Elsevier). Vaccination and routine-care expectations follow standard exotic-mammal veterinary practice. Cost figures are general planning ranges, not quotes, and vary by region and provider. Locate primary publications by title.
+            Disease incidence in middle-aged and older ferrets — insulinoma, adrenal disease, lymphoma, dental disease — is documented in Quesenberry KE and Carpenter JW (eds.), <em>Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery</em> (Saunders/Elsevier). Vaccination and routine-care expectations follow standard exotic-mammal veterinary practice. Cost figures are general planning ranges, not quotes, and vary by region and provider. Locate primary publications by title. We have not checked this general reference against the claims on this page.
           </p>
           <p className="text-sm text-brand-text-light">
             This page is general budgeting information, not a quote or financial advice. Veterinary costs in particular vary widely; consult a local exotic-mammal veterinarian for accurate pricing in your area.

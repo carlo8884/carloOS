@@ -248,7 +248,7 @@ export default function HydrationAndWaterPage() {
             <li><a href="https://www.merckvetmanual.com/all-other-pets/ferrets/providing-a-home-for-a-ferret">Merck Veterinary Manual: Providing a Home for a Ferret</a></li>
           </ul>
           <p>
-            Hydration, heat-stress vulnerability, and dietary-moisture considerations are covered in Quesenberry KE and Carpenter JW (eds.), <em>Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery</em> (Saunders/Elsevier), and Carpenter JW, <em>Exotic Animal Formulary</em>. Dehydration assessment reflects standard small-mammal clinical references. Locate primary publications by title.
+            Hydration, heat-stress vulnerability, and dietary-moisture considerations are covered in Quesenberry KE and Carpenter JW (eds.), <em>Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery</em> (Saunders/Elsevier), and Carpenter JW, <em>Exotic Animal Formulary</em>. Dehydration assessment reflects standard small-mammal clinical references. Locate primary publications by title. We have not checked this general reference against the claims on this page.
           </p>
           <p className="text-sm text-brand-text-light">
             This page is general information, not individualized veterinary advice. A ferret showing signs of dehydration or heat stress should be seen promptly by a veterinarian familiar with ferrets.

@@ -219,7 +219,7 @@ export default function SafeTreatsPage() {
 
           <h2 id="sources">Sources</h2>
           <p>
-            Obligate-carnivore physiology and the carbohydrate–insulinoma association are drawn from Quesenberry KE and Carpenter JW (eds.), <em>Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery</em> (Saunders/Elsevier), and the <em>Veterinary Clinics of North America: Exotic Animal Practice</em> literature on ferret endocrine disease. The toxin list reflects standard small-mammal and companion-animal poison-control references. Locate primary publications by title.
+            Obligate-carnivore physiology and the carbohydrate–insulinoma association are drawn from Quesenberry KE and Carpenter JW (eds.), <em>Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery</em> (Saunders/Elsevier), and the <em>Veterinary Clinics of North America: Exotic Animal Practice</em> literature on ferret endocrine disease. The toxin list reflects standard small-mammal and companion-animal poison-control references. Locate primary publications by title. We have not checked this general reference against the claims on this page.
           </p>
           <p className="text-sm text-brand-text-light">
             This page is general information, not individualized veterinary advice. If your ferret has insulinoma or another endocrine condition, treat choices should be discussed with a veterinarian familiar with ferrets.

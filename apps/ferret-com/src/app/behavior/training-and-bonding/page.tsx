@@ -32,7 +32,7 @@ export const metadata: Metadata = buildMetadata({
 
 const SOURCES = [
   {
-    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — ferret behaviour, welfare, and training chapters",
+    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — ferret behaviour, welfare, and training chapters (general reference; not checked against this page)",
     publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
   },
   {
@@ -40,12 +40,12 @@ const SOURCES = [
     publisher: "Elsevier",
   },
   {
-    label: "American Ferret Association (AFA) — behaviour, training, and bite-inhibition owner guidance",
+    label: "American Ferret Association (AFA) — behaviour, training, and bite-inhibition owner guidance (general reference; not checked against this page)",
     url: "https://www.ferret.org",
     publisher: "AFA",
   },
   {
-    label: "Association of Exotic Mammal Veterinarians (AEMV) — clinician resources on ferret behaviour and welfare assessment",
+    label: "Association of Exotic Mammal Veterinarians (AEMV) — clinician resources on ferret behaviour and welfare assessment (general reference; not checked against this page)",
     url: "https://www.aemv.org",
     publisher: "AEMV",
   },
@@ -64,7 +64,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-05-28T00:00:00Z',
-  modifiedAt: '2026-05-28T00:00:00Z',
+  modifiedAt: '2026-10-13T00:00:00Z',
 
   citation: SOURCES,
 })
@@ -171,7 +171,7 @@ export default function FerretTrainingBondingPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-05-28"
-            updatedAt="2026-05-28"
+            updatedAt="2026-10-13"
           />
 
           <DropCap>

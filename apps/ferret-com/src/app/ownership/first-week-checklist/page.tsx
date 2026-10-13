@@ -245,7 +245,7 @@ export default function FirstWeekChecklistPage() {
             <li><a href="https://www.merckvetmanual.com/all-other-pets/ferrets/routine-health-care-for-ferrets">Merck Veterinary Manual: Routine Health Care for Ferrets</a></li>
           </ul>
           <p>
-            New-ferret acclimation, early training, quarantine practice, and wellness-exam recommendations are drawn from Quesenberry KE and Carpenter JW (eds.), <em>Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery</em> (Saunders/Elsevier), and American Ferret Association owner guidance. Vaccination expectations follow standard exotic-mammal veterinary practice. Locate primary publications by title.
+            New-ferret acclimation, early training, quarantine practice, and wellness-exam recommendations are drawn from Quesenberry KE and Carpenter JW (eds.), <em>Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery</em> (Saunders/Elsevier), and American Ferret Association owner guidance. Vaccination expectations follow standard exotic-mammal veterinary practice. Locate primary publications by title. We have not checked this general reference against the claims on this page.
           </p>
           <p className="text-sm text-brand-text-light">
             This page is general information, not individualized veterinary advice. Schedule a wellness exam with a veterinarian familiar with ferrets, and seek prompt care if a new ferret stops eating or shows signs of illness.

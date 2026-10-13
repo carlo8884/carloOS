@@ -188,7 +188,7 @@ export default function WeightManagementPage() {
             <li><a href="https://www.merckvetmanual.com/all-other-pets/ferrets/providing-a-home-for-a-ferret">Merck Veterinary Manual: Providing a Home for a Ferret</a></li>
           </ul>
           <p>
-            Seasonal weight cycling, body-condition assessment, and the association of weight change with insulinoma, adrenal disease, lymphoma, and dental disease are covered in Quesenberry KE and Carpenter JW (eds.), <em>Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery</em> (Saunders/Elsevier), and Carpenter JW, <em>Exotic Animal Formulary</em>. Locate primary publications by title.
+            Seasonal weight cycling, body-condition assessment, and the association of weight change with insulinoma, adrenal disease, lymphoma, and dental disease are covered in Quesenberry KE and Carpenter JW (eds.), <em>Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery</em> (Saunders/Elsevier), and Carpenter JW, <em>Exotic Animal Formulary</em>. Locate primary publications by title. We have not checked this general reference against the claims on this page.
           </p>
           <p className="text-sm text-brand-text-light">
             This page is general information, not individualized veterinary advice. Unexplained or rapid weight change should be evaluated by a veterinarian familiar with ferrets rather than addressed by diet alone.

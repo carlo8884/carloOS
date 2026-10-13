@@ -33,11 +33,11 @@ export const metadata: Metadata = buildMetadata({
 
 const SOURCES = [
   {
-    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — behaviour, welfare, and enrichment chapters",
+    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — behaviour, welfare, and enrichment chapters (general reference; not checked against this page)",
     publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
   },
   {
-    label: "Journal of Exotic Pet Medicine — behavioural welfare and enrichment articles for exotic companion mammals",
+    label: "Journal of Exotic Pet Medicine — behavioural welfare and enrichment articles for exotic companion mammals (general reference; not checked against this page)",
     publisher: "Elsevier",
   },
   {
@@ -45,12 +45,12 @@ const SOURCES = [
     publisher: "Elsevier",
   },
   {
-    label: "American Ferret Association (AFA) — cage sizing, out-of-cage time, and enrichment owner guidance",
+    label: "American Ferret Association (AFA) — cage sizing, out-of-cage time, and enrichment owner guidance (general reference; not checked against this page)",
     url: "https://www.ferret.org",
     publisher: "AFA",
   },
   {
-    label: "Association of Exotic Mammal Veterinarians (AEMV) — practitioner resources on welfare assessment in exotic mammals",
+    label: "Association of Exotic Mammal Veterinarians (AEMV) — practitioner resources on welfare assessment in exotic mammals (general reference; not checked against this page)",
     url: "https://www.aemv.org",
     publisher: "AEMV",
   },

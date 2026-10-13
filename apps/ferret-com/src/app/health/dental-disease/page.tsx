@@ -18,17 +18,17 @@ import {
 
 const SOURCES = [
   {
-    label: "Quesenberry KE, Carpenter JW (eds.). Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery. 4th ed. Saunders/Elsevier — ferret gastrointestinal and dental chapters covering periodontal disease and oral-cavity neoplasia.",
+    label: "Quesenberry KE, Carpenter JW (eds.). Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery. 3rd ed. Saunders/Elsevier — ferret gastrointestinal and dental chapters covering periodontal disease and oral-cavity neoplasia. (general reference; not checked against this page)",
     url: "https://www.elsevier.com/books/ferrets-rabbits-and-rodents/quesenberry/978-1-4160-6621-7",
     publisher: "Elsevier/Saunders",
   },
     {
-    label: "Association of Exotic Mammal Veterinarians (AEMV) — ferret dentistry and oral-surgery continuing-education resources",
+    label: "Association of Exotic Mammal Veterinarians (AEMV) — ferret dentistry and oral-surgery continuing-education resources (general reference; not checked against this page)",
     url: "https://aemv.org",
     publisher: "AEMV",
   },
   {
-    label: "Journal of Exotic Pet Medicine — clinical articles on ferret dental disease, periodontal grading, and anesthetic dental-cleaning outcomes",
+    label: "Journal of Exotic Pet Medicine — clinical articles on ferret dental disease, periodontal grading, and anesthetic dental-cleaning outcomes (general reference; not checked against this page)",
     url: "https://www.sciencedirect.com/journal/journal-of-exotic-pet-medicine",
     publisher: "Journal of Exotic Pet Medicine",
   },
@@ -59,7 +59,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-05-28T00:00:00Z',
-  modifiedAt: '2026-10-12T00:00:00Z',
+  modifiedAt: '2026-10-13T00:00:00Z',
 
   citation: SOURCES,
 })
@@ -176,10 +176,10 @@ export default function FerretDentalDiseasePage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-05-28"
-            updatedAt="2026-09-05"
+            updatedAt="2026-10-13"
             reviewedBy="Editorial team"
           />
-          <LastUpdated date="2026-10-12" />
+          <LastUpdated date="2026-10-13" />
 
           <DropCap>
             Open a healthy 2-year-old ferret&apos;s mouth and you will almost

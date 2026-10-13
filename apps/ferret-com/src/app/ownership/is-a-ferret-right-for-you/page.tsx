@@ -192,7 +192,7 @@ export default function IsAFerretRightForYouPage() {
             <li><a href="https://www.merckvetmanual.com/all-other-pets/ferrets/routine-health-care-for-ferrets">Merck Veterinary Manual: Routine Health Care for Ferrets</a></li>
           </ul>
           <p>
-            Ferret activity needs, lifespan, odor biology, and disease incidence are drawn from standard exotic-mammal references including Quesenberry KE and Carpenter JW (eds.), <em>Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery</em> (Saunders/Elsevier), and from American Ferret Association husbandry guidance. Legality reflects state and local regulation. Locate primary sources by title.
+            Ferret activity needs, lifespan, odor biology, and disease incidence are drawn from standard exotic-mammal references including Quesenberry KE and Carpenter JW (eds.), <em>Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery</em> (Saunders/Elsevier), and from American Ferret Association husbandry guidance. Legality reflects state and local regulation. Locate primary sources by title. We have not checked this general reference against the claims on this page.
           </p>
           <p className="text-sm text-brand-text-light">
             This page is general decision-stage information, not advice for a specific situation. Confirm legality with your local authorities and discuss any health or household concerns with a veterinarian familiar with ferrets.

@@ -222,7 +222,7 @@ export default function ProteinAndFatRequirementsPage() {
 
           <h2 id="sources">Sources</h2>
           <p>
-            Macronutrient targets and obligate-carnivore physiology are drawn from Quesenberry KE and Carpenter JW (eds.), <em>Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery</em> (Saunders/Elsevier), and Carpenter JW, <em>Exotic Animal Formulary</em>. Carbohydrate–insulinoma associations are discussed in the <em>Veterinary Clinics of North America: Exotic Animal Practice</em> literature on ferret endocrine disease and the <em>Journal of Exotic Pet Medicine</em>. The taurine–cardiomyopathy link is well established in companion-carnivore nutrition. Locate primary publications by title.
+            Macronutrient targets and obligate-carnivore physiology are drawn from Quesenberry KE and Carpenter JW (eds.), <em>Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery</em> (Saunders/Elsevier), and Carpenter JW, <em>Exotic Animal Formulary</em>. Carbohydrate–insulinoma associations are discussed in the <em>Veterinary Clinics of North America: Exotic Animal Practice</em> literature on ferret endocrine disease and the <em>Journal of Exotic Pet Medicine</em>. The taurine–cardiomyopathy link is well established in companion-carnivore nutrition. Locate primary publications by title. We have not checked this general reference against the claims on this page.
           </p>
           <p className="text-sm text-brand-text-light">
             This page is general nutrition reference, not individualized veterinary advice. Requirements shift with life stage and health status; a ferret with a diagnosed condition should have its diet supervised by a veterinarian familiar with ferrets.

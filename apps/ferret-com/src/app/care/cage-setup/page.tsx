@@ -15,16 +15,16 @@ export const metadata: Metadata = buildMetadata({
 
 const SOURCES = [
   {
-    label: "American Ferret Association (AFA) — cage sizing, bar-spacing, and out-of-cage time owner guidance",
+    label: "American Ferret Association (AFA) — cage sizing, bar-spacing, and out-of-cage time owner guidance (general reference; not checked against this page)",
     url: "https://www.ferret.org",
     publisher: "AFA",
   },
   {
-    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — ferret husbandry, bedding, and respiratory-irritant chapters",
+    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — ferret husbandry, bedding, and respiratory-irritant chapters (general reference; not checked against this page)",
     publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
   },
   {
-    label: "Journal of Exotic Pet Medicine — case literature on ferret GI foreign bodies and housing-related injuries",
+    label: "Journal of Exotic Pet Medicine — case literature on ferret GI foreign bodies and housing-related injuries (general reference; not checked against this page)",
     publisher: "Elsevier",
   },
   {
@@ -196,7 +196,8 @@ export default function FerretCageSetupPage() {
           <p>Two specific concerns with loose bedding:</p>
           <ul>
             <li><strong>Respiratory.</strong> Aromatic softwood shavings (cedar, untreated pine) release phenols that are documented respiratory irritants in small mammals. Not appropriate for an animal that sleeps face-in for 16 hours a day.</li>
-            <li><strong>Ingestion and obstruction.</strong> Foreign-body GI obstruction is one of the most common surgical presentations in pet ferrets reported in the <em>Journal of Exotic Pet Medicine</em> and the <em>Veterinary Clinics of North America: Exotic Animal Practice</em>, with bedding among the substrates implicated.</li>
+            <li><strong>Ingestion and obstruction.</strong> Foreign-body GI obstruction is one of the most common surgical presentations in pet ferrets reported in the <em>Journal of Exotic Pet Medicine</em> and the <em>Veterinary Clinics of North America: Exotic Animal Practice</em>, with bedding among the substrates implicated. <em>(general reference; not checked against this page)</em>
+            </li>
           </ul>
           <p>
             Use instead: machine-washable fleece liners cut to fit each level; commercial sleep sacks and hammocks (Marshall, The Ferret Store, small fabric sellers); fleece tunnels; and one designated dig box where loose-substrate behavior is allowed in a controlled way.
