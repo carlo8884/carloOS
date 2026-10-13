@@ -59,7 +59,7 @@ const FAQS = [
   {
     question: 'What size cage does a ferret need?',
     answer:
-      'For a single ferret, a common community guideline is a minimum usable floor area on the order of two feet by three feet, with multiple levels adding effective living space; more ferrets need proportionally more room. The cage is for sleeping, eating, litter, and water — not for living full-time. Every ferret needs several hours of supervised out-of-cage time daily regardless of cage size, so floor space and level count matter more than overall height alone.',
+      'Lafeber\u2019s ferret care handout and VCA Animal Hospitals both put the minimum cage for one or two ferrets at 24 x 24 x 18 inches, and VCA says to buy as large a cage as you can afford. Multiple levels add living space. The cage is for sleeping, eating, litter, and water — not for living full-time. Every ferret needs several hours of supervised out-of-cage time daily regardless of cage size, so floor space and level count matter more than overall height alone.',
   },
   {
     question: 'What bar spacing is safe for a ferret cage?',

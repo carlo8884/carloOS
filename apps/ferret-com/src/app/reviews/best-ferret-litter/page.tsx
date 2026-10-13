@@ -67,7 +67,7 @@ const FAQS = [
   {
     question: 'Are pine and cedar shavings safe for ferret litter?',
     answer:
-      'Loose aromatic cedar and pine shavings are best avoided. The aromatic oils (phenols) they release have long been associated in small-mammal husbandry references with respiratory irritation. Heat-treated, kiln-dried compressed wood pellets are different — the high-temperature processing drives off most of the volatile phenols — and those pelleted forms are commonly used. The distinction is loose aromatic shavings (avoid) versus heat-treated compressed pellets (acceptable).',
+      'Loose cedar and pine shavings are best avoided. The Merck Veterinary Manual notes that cedar releases an oil that may be toxic to ferrets, and that wood shavings and sawdust are not recommended because the dust can irritate the upper airway. Compressed wood pellets are a different form from loose shavings; sift out the fines to keep dust down. The distinction is loose shavings (avoid) versus compressed pellets.',
   },
   {
     question: 'How does litter dust affect a ferret’s health?',
@@ -86,7 +86,7 @@ const combined = combineSchemas(schema, breadcrumbSchema, itemList, faqSchema)
 
 const QUICK_PICKS = [
   { label: 'Best Overall', name: 'Recycled Paper Pellet', subtitle: 'Low-dust · Non-clumping · Soft', href: '#paper-pellet', pickHop: '/go/amazon-brand/recycled+paper+pellet+litter+non+clumping?s=reviews-best-ferret-litter' },
-  { label: 'Best for Odor', name: 'Heat-Treated Wood Pellet', subtitle: 'Phenol-free · Strong odor control', href: '#wood-pellet' },
+  { label: 'Best for Odor', name: 'Heat-Treated Wood Pellet', subtitle: 'Compressed pellets · Strong odor control', href: '#wood-pellet' },
   { label: 'Soft Alternative', name: 'Grass / Plant-Fiber Pellet', subtitle: 'Low-dust · Lighter tracking', href: '#grass-pellet' },
 ]
 
@@ -126,7 +126,7 @@ export default function BestFerretLitterPage() {
                 { label: 'The Two Safety Criteria', href: '#criteria' },
                 { label: 'Why No Clumping Litter', href: '#no-clump' },
                 { label: 'Dust & the Respiratory Tract', href: '#dust' },
-                { label: 'Pine & Cedar — The Phenol Problem', href: '#phenols' },
+                { label: 'Pine & Cedar Shavings', href: '#phenols' },
                 { label: 'Odor Control & Tracking', href: '#odor' },
                 { label: 'Litters That Meet the Criteria', href: '#picks' },
                 { label: 'Who should buy which litter', href: '#who' },
@@ -230,14 +230,14 @@ export default function BestFerretLitterPage() {
             <a href="/health/emergency-warning-signs">emergency warning signs</a> guide.
           </p>
 
-          <h2 id="phenols">Pine & Cedar — The Phenol Problem</h2>
+          <h2 id="phenols">Pine & Cedar Shavings</h2>
           <p>
-            Loose aromatic cedar and pine shavings deserve a specific warning. The aromatic oils they release —
-            phenols — have a long association in small-mammal husbandry literature with respiratory irritation, which is
-            why loose aromatic shavings are discouraged as ferret litter. The nuance that confuses people is that
-            heat-treated, kiln-dried <em>compressed wood pellets</em> are different: the high-temperature processing
-            drives off most of the volatile phenols, and those pelleted forms are commonly and acceptably used. The line
-            to remember is loose aromatic shavings (avoid) versus heat-treated compressed pellets (fine).
+            Loose cedar and pine shavings deserve a specific warning. The <a href="https://www.merckvetmanual.com/all-other-pets/ferrets/providing-a-home-for-a-ferret">Merck Veterinary Manual</a> notes
+            that cedar releases an oil that may be toxic to ferrets, and Merck&apos;s <a href="https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/management-of-ferrets">ferret management
+            chapter</a> says sawdust and wood shavings are not recommended because the dust can irritate the upper airway.
+            <em>Compressed wood pellets</em> are a different form from loose shavings, and <a href="https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf">Lafeber&apos;s
+            ferret care handout</a> prefers pelleted litters over clay or clumping ones. Sift out the fines to keep dust
+            down. The line to remember is loose shavings (avoid) versus compressed pellets.
           </p>
 
           <h2 id="odor">Odor Control & Tracking</h2>
@@ -293,9 +293,9 @@ export default function BestFerretLitterPage() {
             id="wood-pellet"
             badge="Best for Odor"
             name="Compressed Wood (Heat-Treated) Pellet Litter"
-            subtitle="Kiln-dried softwood pellets, strong odor control — use phenol-free types only"
+            subtitle="Compressed softwood pellets, strong odor control — never loose shavings"
             description={
-              <p>Kiln-dried, compressed softwood pellets offer the strongest natural odor control of the safe options and low dust once the fines are sifted out. The important caveat is the wood form: aromatic raw cedar and pine shavings release phenols implicated in respiratory irritation, so use only heat-treated, low-phenol compressed pellets — never loose aromatic shavings. With that caveat respected, it is a strong pick when odor is the priority.</p>
+              <p>Kiln-dried, compressed softwood pellets offer the strongest natural odor control of the safe options and low dust once the fines are sifted out. The important caveat is the wood form: Merck advises against loose wood shavings and sawdust because the dust can irritate the airway, and notes that cedar oil may be toxic, so use compressed pellets with the fines sifted out — never loose cedar or pine shavings. With that caveat respected, it is a strong pick when odor is the priority.</p>
             }
             specs={[
               { label: 'Dust', value: 'Low (sift fines)', highlight: 'good' },
@@ -305,7 +305,7 @@ export default function BestFerretLitterPage() {
               { label: 'Best for', value: 'Odor-priority setups' },
             ]}
             pros={['Best natural odor control of the safe options', 'Low dust once fines are removed', 'Economical', 'Non-clumping']}
-            cons={['Must be heat-treated / low-phenol', 'Never use loose aromatic shavings', 'Harder underfoot than paper']}
+            cons={['Compressed pellets only, sift the fines', 'Never use loose aromatic shavings', 'Harder underfoot than paper']}
             price="$"
             ctaText="Search Amazon for heat-treated wood pellet litter"
             ctaHref="/go/amazon-brand/heat+treated+wood+pellet+litter?s=reviews-best-ferret-litter"

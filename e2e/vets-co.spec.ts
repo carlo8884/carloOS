@@ -813,3 +813,22 @@ test('vets fix AI1: llms.txt matches the site (Amazon disclosure, no scores, gui
   for (const p of ['/guides/pet-first-aid-kit', '/guides/recovery-cone-e-collar', '/guides/how-to-give-your-pet-a-pill', '/how-we-pick', '/disclosure']) expect(t).toContain(p)
   for (const m of t.matchAll(/\]\(https:\/\/vets\.co(\/[^)]*)\)/g)) expect((await request.get(m[1])).status(), m[1]).toBe(200)
 })
+test('vets fix TS2: journal citations link to their DOI, unverifiable citations and the unsourced remission rate are gone', async ({ page }) => {
+  const want: Record<string, string[]> = {
+    '/health/bloat-gdv-dogs': ['10.2460/javma.2000.216.40'],
+    '/health/cognitive-dysfunction': ['10.1016/j.applanim.2015.08.034', '10.1016/j.cvsm.2012.04.003'],
+    '/health/cushing-disease-dogs': ['10.1111/jvim.12192', '10.1016/j.cvsm.2009.10.008'],
+    '/health/diabetes-in-dogs-cats': [],
+    '/health/kidney-disease-cats': ['10.1016/s0022-2143(98)90146-9'],
+    '/health/heartworm-in-dogs': [],
+  }
+  for (const [path, dois] of Object.entries(want)) {
+    await page.goto(path, { waitUntil: 'domcontentloaded' })
+    for (const doi of dois) await expect(page.locator(`a[href="https://doi.org/${doi}"]`).first(), `${path} ${doi}`).toBeAttached()
+    await expect(page.locator('body'), path).not.toContainText(/Atkins CE|Gilor C|Rand JS|30-50%/)
+  }
+  for (const [path, href] of [['/health/diabetes-in-dogs-cats', 'https://pubmed.ncbi.nlm.nih.gov/25701862/'], ['/health/kidney-disease-cats', 'https://pubmed.ncbi.nlm.nih.gov/26936494/']]) {
+    await page.goto(path, { waitUntil: 'domcontentloaded' })
+    await expect(page.locator(`a[href="${href}"]`).first(), path).toBeAttached()
+  }
+})
