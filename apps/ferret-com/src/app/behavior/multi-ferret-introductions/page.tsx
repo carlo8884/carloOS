@@ -31,16 +31,16 @@ export const metadata: Metadata = buildMetadata({
 
 const SOURCES = [
   {
-    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — ferret social behaviour, quarantine, and infectious-disease chapters",
+    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — ferret social behaviour, quarantine, and infectious-disease chapters (general reference; not checked against this page)",
     publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
   },
   {
-    label: "American Ferret Association (AFA) — quarantine, introduction, and group-housing owner guidance",
+    label: "American Ferret Association (AFA) — quarantine, introduction, and group-housing owner guidance (general reference; not checked against this page)",
     url: "https://www.ferret.org",
     publisher: "AFA",
   },
   {
-    label: "Association of Exotic Mammal Veterinarians (AEMV) — clinician resources on ferret social behavior and infectious disease",
+    label: "Association of Exotic Mammal Veterinarians (AEMV) — clinician resources on ferret social behavior and infectious disease (general reference; not checked against this page)",
     url: "https://www.aemv.org",
     publisher: "AEMV",
   },
@@ -54,7 +54,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-09-05T00:00:00Z',
+  modifiedAt: '2026-10-13T00:00:00Z',
 
   citation: SOURCES,
 })
@@ -147,7 +147,7 @@ export default function MultiFerretIntroductionsPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-09-05"
+            updatedAt="2026-10-13"
           />
 
           <DropCap>

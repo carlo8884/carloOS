@@ -25,7 +25,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-05-29T00:00:00Z',
-  modifiedAt: '2026-10-11T00:00:00Z',
+  modifiedAt: '2026-10-13T00:00:00Z',
 })
 
 export default function DisclosurePage() {
@@ -51,7 +51,7 @@ export default function DisclosurePage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-05-29"
-            updatedAt="2026-10-11"
+            updatedAt="2026-10-13"
             reviewedBy="Editorial team"
           />
 
@@ -167,8 +167,8 @@ export default function DisclosurePage() {
             fabricated specialist credentials. When we cite ferret-specific
             clinical sources (Quesenberry &amp; Carpenter, the
             <em>Journal of Exotic Pet Medicine</em>, AEMV materials), we cite
-            them by name.
-          </li>
+            them by name. <em>(general reference; not checked against this page)</em>
+            </li>
           <li>
             <strong>We do not use undisclosed affiliate links.</strong>
           </li>

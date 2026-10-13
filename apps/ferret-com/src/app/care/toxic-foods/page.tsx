@@ -37,7 +37,7 @@ const SOURCES = [
     publisher: "ASPCA",
   },
   {
-    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — toxicology and GI foreign-body chapters",
+    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — toxicology and GI foreign-body chapters (general reference; not checked against this page)",
     publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
   },
   {
@@ -45,12 +45,12 @@ const SOURCES = [
     publisher: "Elsevier",
   },
   {
-    label: "American Ferret Association (AFA) — toxic food and household-hazard owner resources",
+    label: "American Ferret Association (AFA) — toxic food and household-hazard owner resources (general reference; not checked against this page)",
     url: "https://www.ferret.org",
     publisher: "AFA",
   },
   {
-    label: "Association of Exotic Mammal Veterinarians (AEMV) — exotic-mammal toxicology continuing education",
+    label: "Association of Exotic Mammal Veterinarians (AEMV) — exotic-mammal toxicology continuing education (general reference; not checked against this page)",
     url: "https://www.aemv.org",
     publisher: "AEMV",
   },
@@ -64,7 +64,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-05-29T00:00:00Z',
-  modifiedAt: '2026-09-04T00:00:00Z',
+  modifiedAt: '2026-10-13T00:00:00Z',
 
   citation: SOURCES,
 })
@@ -168,7 +168,7 @@ export default function FerretToxicFoodsPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-05-29"
-            updatedAt="2026-09-04"
+            updatedAt="2026-10-13"
             reviewedBy="Editorial team"
           />
           <div className="mb-8">

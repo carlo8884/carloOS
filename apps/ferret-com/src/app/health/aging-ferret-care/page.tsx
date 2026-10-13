@@ -19,7 +19,7 @@ import {
 
 const SOURCES = [
   {
-    label: "Quesenberry KE, Carpenter JW (eds.). Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery. 4th ed. Saunders/Elsevier — senior care, endocrine, oncology, and geriatric-ferret chapters.",
+    label: "Quesenberry KE, Carpenter JW (eds.). Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery. 3rd ed. Saunders/Elsevier — senior care, endocrine, oncology, and geriatric-ferret chapters. (general reference; not checked against this page)",
     url: "https://www.elsevier.com/books/ferrets-rabbits-and-rodents/quesenberry/978-1-4160-6621-7",
     publisher: "Elsevier/Saunders",
   },
@@ -29,12 +29,12 @@ const SOURCES = [
     publisher: "Merck Veterinary Manual",
   },
   {
-    label: "Association of Exotic Mammal Veterinarians (AEMV) — senior exotic-mammal care continuing-education materials and practitioner directory",
+    label: "Association of Exotic Mammal Veterinarians (AEMV) — senior exotic-mammal care continuing-education materials and practitioner directory (general reference; not checked against this page)",
     url: "https://aemv.org",
     publisher: "AEMV",
   },
   {
-    label: "Journal of Exotic Pet Medicine — clinical articles on ferret geriatric medicine, palliative care, and quality-of-life assessment",
+    label: "Journal of Exotic Pet Medicine — clinical articles on ferret geriatric medicine, palliative care, and quality-of-life assessment (general reference; not checked against this page)",
     url: "https://www.sciencedirect.com/journal/journal-of-exotic-pet-medicine",
     publisher: "Journal of Exotic Pet Medicine",
   },

@@ -37,15 +37,15 @@ const SOURCES = [
     publisher: "Merck Veterinary Manual",
   },
   {
-    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — ferret behaviour, handling, and socialization chapters",
+    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — ferret behaviour, handling, and socialization chapters (general reference; not checked against this page)",
     publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
   },
   {
-    label: "Journal of Exotic Pet Medicine — articles on ferret behaviour, socialization, and welfare assessment",
+    label: "Journal of Exotic Pet Medicine — articles on ferret behaviour, socialization, and welfare assessment (general reference; not checked against this page)",
     publisher: "Elsevier",
   },
   {
-    label: "American Ferret Association (AFA) — bite-inhibition and socialization owner guidance",
+    label: "American Ferret Association (AFA) — bite-inhibition and socialization owner guidance (general reference; not checked against this page)",
     url: "https://www.ferret.org",
     publisher: "AFA",
   },

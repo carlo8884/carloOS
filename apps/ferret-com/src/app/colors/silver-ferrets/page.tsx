@@ -35,7 +35,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-10-13T00:00:00Z',
 })
 
 const FAQS = [
@@ -125,7 +125,7 @@ export default function SilverFerretsPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-01"
+            updatedAt="2026-10-13"
           />
 
           <DropCap>
@@ -239,16 +239,16 @@ export default function SilverFerretsPage() {
           <ul>
             <li>
               American Ferret Association (AFA) — recognized color and pattern
-              standards and owner-facing color guidance.
+              standards and owner-facing color guidance. <em>(general reference; not checked against this page)</em>
             </li>
             <li>
               Quesenberry KE, Carpenter JW (eds.). <em>Ferrets, Rabbits, and
               Rodents: Clinical Medicine and Surgery.</em> Saunders/Elsevier —
-              coat genetics and pigment-related hearing notes.
+              coat genetics and pigment-related hearing notes. <em>(general reference; not checked against this page)</em>
             </li>
             <li>
               <em>Journal of Exotic Pet Medicine</em> — articles on ferret coat
-              genetics and husbandry.
+              genetics and husbandry. <em>(general reference; not checked against this page)</em>
             </li>
           </ul>
           <p className="text-sm text-brand-text-light">

@@ -246,19 +246,19 @@ export default function FerretLifespanPage() {
             <li>
               Quesenberry KE, Carpenter JW (eds.). <em>Ferrets, Rabbits, and
               Rodents: Clinical Medicine and Surgery.</em> Saunders/Elsevier —
-              ferret husbandry, lifespan, and disease chapters.
+              ferret husbandry, lifespan, and disease chapters. <em>(general reference; not checked against this page)</em>
             </li>
             <li>
               <em>Journal of Exotic Pet Medicine</em> — articles on ferret
-              longevity, geriatric care, and common diseases.
+              longevity, geriatric care, and common diseases. <em>(general reference; not checked against this page)</em>
             </li>
             <li>
               Association of Exotic Mammal Veterinarians (AEMV) — clinician
-              resources on ferret geriatric medicine.
+              resources on ferret geriatric medicine. <em>(general reference; not checked against this page)</em>
             </li>
             <li>
               American Ferret Association (AFA) — owner-facing care and longevity
-              guidance.
+              guidance. <em>(general reference; not checked against this page)</em>
             </li>
           </ul>
           <p className="text-sm text-brand-text-light">

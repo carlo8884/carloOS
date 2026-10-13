@@ -236,7 +236,7 @@ export default function TravelingWithAFerretPage() {
             Medicine and Surgery</em> (Saunders/Elsevier). Legality varies by
             jurisdiction and changes over time; verify current rules with state
             and local authorities and, for air travel, directly with the airline.
-            Locate primary publications by title.
+            Locate primary publications by title. We have not checked this general reference against the claims on this page.
           </p>
           <p className="text-sm text-brand-text-light">
             General travel-planning information, not individualized veterinary

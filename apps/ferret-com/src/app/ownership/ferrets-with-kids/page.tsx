@@ -172,7 +172,7 @@ export default function FerretsWithKidsPage() {
             <li><a href="https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf">Lafeber Company: Care of the Ferret (2020)</a></li>
           </ul>
           <p>
-            Ferret temperament, nipping behavior, bite-inhibition training, and zoonotic-hygiene considerations are covered in Quesenberry KE and Carpenter JW (eds.), <em>Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery</em> (Saunders/Elsevier), and in American Ferret Association owner guidance. Child-and-pet supervision guidance reflects standard companion-animal and public-health references. Locate primary publications by title.
+            Ferret temperament, nipping behavior, bite-inhibition training, and zoonotic-hygiene considerations are covered in Quesenberry KE and Carpenter JW (eds.), <em>Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery</em> (Saunders/Elsevier), and in American Ferret Association owner guidance. Child-and-pet supervision guidance reflects standard companion-animal and public-health references. Locate primary publications by title. We have not checked this general reference against the claims on this page.
           </p>
           <p className="text-sm text-brand-text-light">
             This page is general information, not individualized advice. Supervise all interactions between children and ferrets, and consult a veterinarian or qualified behavior professional with specific concerns.

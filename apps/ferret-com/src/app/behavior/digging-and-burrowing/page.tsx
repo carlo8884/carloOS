@@ -32,15 +32,15 @@ export const metadata: Metadata = buildMetadata({
 
 const SOURCES = [
   {
-    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — ferret natural history, behaviour, and enrichment chapters",
+    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — ferret natural history, behaviour, and enrichment chapters (general reference; not checked against this page)",
     publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
   },
   {
-    label: "Journal of Exotic Pet Medicine — articles on ferret behaviour, enrichment, and welfare",
+    label: "Journal of Exotic Pet Medicine — articles on ferret behaviour, enrichment, and welfare (general reference; not checked against this page)",
     publisher: "Elsevier",
   },
   {
-    label: "American Ferret Association (AFA) — enrichment and housing owner guidance",
+    label: "American Ferret Association (AFA) — enrichment and housing owner guidance (general reference; not checked against this page)",
     url: "https://www.ferret.org",
     publisher: "AFA",
   },

@@ -14,7 +14,7 @@ export const metadata: Metadata = buildMetadata({
 
 const SOURCES = [
   {
-    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed.",
+    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. (general reference; not checked against this page)",
     publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
   },
   {
@@ -22,7 +22,7 @@ const SOURCES = [
     publisher: "Elsevier",
   },
   {
-    label: "American Ferret Association (AFA) — owner nutrition guidance and diet recommendations",
+    label: "American Ferret Association (AFA) — owner nutrition guidance and diet recommendations (general reference; not checked against this page)",
     url: "https://www.ferret.org",
     publisher: "AFA",
   },
@@ -32,7 +32,7 @@ const SOURCES = [
     publisher: "American Veterinary Medical Association",
   },
   {
-    label: "Journal of Exotic Pet Medicine — clinical articles on ferret gastrointestinal and endocrine disease",
+    label: "Journal of Exotic Pet Medicine — clinical articles on ferret gastrointestinal and endocrine disease (general reference; not checked against this page)",
     publisher: "Elsevier",
   },
 ]

@@ -43,7 +43,7 @@ const SOURCES = [
     publisher: "Lafeber Vet",
   },
   {
-    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed.",
+    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. (general reference; not checked against this page)",
     publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
   },
   {
@@ -51,17 +51,17 @@ const SOURCES = [
     publisher: "Elsevier",
   },
   {
-    label: "American Ferret Association (AFA) — owner-facing care guidance on bathing and seasonal coat changes",
+    label: "American Ferret Association (AFA) — owner-facing care guidance on bathing and seasonal coat changes (general reference; not checked against this page)",
     url: "https://www.ferret.org",
     publisher: "AFA",
   },
   {
-    label: "Association of Exotic Mammal Veterinarians (AEMV) — ferret husbandry and dermatologic disease resources",
+    label: "Association of Exotic Mammal Veterinarians (AEMV) — ferret husbandry and dermatologic disease resources (general reference; not checked against this page)",
     url: "https://www.aemv.org",
     publisher: "AEMV",
   },
   {
-    label: "Journal of Exotic Pet Medicine — clinical articles on ferret dermatology and ear disease",
+    label: "Journal of Exotic Pet Medicine — clinical articles on ferret dermatology and ear disease (general reference; not checked against this page)",
     publisher: "Elsevier",
   },
 ]

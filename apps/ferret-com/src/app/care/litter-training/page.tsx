@@ -33,7 +33,7 @@ export const metadata: Metadata = buildMetadata({
 
 const SOURCES = [
   {
-    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — ferret behaviour and substrate-safety chapters",
+    label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — ferret behaviour and substrate-safety chapters (general reference; not checked against this page)",
     publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
   },
   {
@@ -41,17 +41,17 @@ const SOURCES = [
     publisher: "Elsevier",
   },
   {
-    label: "American Ferret Association (AFA) — owner guidance on litter training, realistic expectations, and substrate safety",
+    label: "American Ferret Association (AFA) — owner guidance on litter training, realistic expectations, and substrate safety (general reference; not checked against this page)",
     url: "https://www.ferret.org",
     publisher: "AFA",
   },
   {
-    label: "Association of Exotic Mammal Veterinarians (AEMV) — clinician resources on ferret husbandry and substrate-related complications",
+    label: "Association of Exotic Mammal Veterinarians (AEMV) — clinician resources on ferret husbandry and substrate-related complications (general reference; not checked against this page)",
     url: "https://www.aemv.org",
     publisher: "AEMV",
   },
   {
-    label: "Journal of Exotic Pet Medicine — case reports on clumping-clay ingestion and substrate complications in small mammals",
+    label: "Journal of Exotic Pet Medicine — case reports on clumping-clay ingestion and substrate complications in small mammals (general reference; not checked against this page)",
     publisher: "Elsevier",
   },
 ]

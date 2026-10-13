@@ -15,7 +15,7 @@ export const metadata: Metadata = buildMetadata({
 const PAGE_URL = 'https://ferret.com/reviews/best-ferret-harness'
 
 const SOURCES = [
-  { label: 'Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery (behavior & restraint)', publisher: 'Quesenberry & Carpenter, Saunders/Elsevier' },
+  { label: 'Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery (behavior & restraint) (general reference; not checked against this page)', publisher: 'Quesenberry & Carpenter, Saunders/Elsevier' },
   { label: 'Ferret harness fit, leash training, and outdoor-safety guidance', publisher: 'American Ferret Association' },
   { label: 'PetMD: How to Train Your Ferret to Walk on a Leash', url: 'https://www.petmd.com/ferret/training/how-leash-train-and-walk-your-ferret', publisher: 'PetMD' },
   { label: 'Manufacturer sizing charts and fit instructions', publisher: 'Ferret harness manufacturers' },
@@ -29,7 +29,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-11T00:00:00Z',
-  modifiedAt: '2026-10-12T00:00:00Z',
+  modifiedAt: '2026-10-13T00:00:00Z',
 
   citation: SOURCES,
 })
@@ -161,10 +161,10 @@ export default function BestFerretHarnessPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-11"
-            updatedAt="2026-06-11"
+            updatedAt="2026-10-13"
             reviewedBy="Editorial team"
           />
-          <LastUpdated date="2026-10-12" />
+          <LastUpdated date="2026-10-13" />
           <EmailCapture
             variant="inline"
             siteId="ferret-com"
@@ -368,7 +368,7 @@ export default function BestFerretHarnessPage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-12" />
+          <ComparisonFoot updated="2026-10-13" />
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />

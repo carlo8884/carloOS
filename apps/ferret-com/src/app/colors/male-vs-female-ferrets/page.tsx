@@ -36,7 +36,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-10-12T00:00:00Z',
+  modifiedAt: '2026-10-13T00:00:00Z',
 })
 
 const FAQS = [
@@ -121,9 +121,9 @@ export default function MaleVsFemaleFerretsPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-01"
+            updatedAt="2026-10-13"
           />
-          <LastUpdated date="2026-10-12" />
+          <LastUpdated date="2026-10-13" />
           <div className="mb-8">
             <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
 
@@ -249,7 +249,7 @@ export default function MaleVsFemaleFerretsPage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-12" />
+          <ComparisonFoot updated="2026-10-13" />
           <h2>Who should choose which</h2>
           <p>Choose the individual ferret you click with. Use sex as a size lever when you want a larger or smaller animal. Manage an intact jill’s heat with a veterinarian. Nearly all pet-store ferrets are already altered.</p>
 
@@ -262,19 +262,19 @@ export default function MaleVsFemaleFerretsPage() {
               Quesenberry KE, Carpenter JW (eds.). <em>Ferrets, Rabbits, and
               Rodents: Clinical Medicine and Surgery.</em> Saunders/Elsevier —
               ferret reproduction, estrogen-associated anemia, and husbandry
-              chapters.
+              chapters. <em>(general reference; not checked against this page)</em>
             </li>
             <li>
               <em>Journal of Exotic Pet Medicine</em> — articles on ferret
-              reproduction and endocrine disease.
+              reproduction and endocrine disease. <em>(general reference; not checked against this page)</em>
             </li>
             <li>
               Association of Exotic Mammal Veterinarians (AEMV) — clinician
-              resources on ferret reproductive health.
+              resources on ferret reproductive health. <em>(general reference; not checked against this page)</em>
             </li>
             <li>
               American Ferret Association (AFA) — owner-facing guidance on ferret
-              sex differences and altering.
+              sex differences and altering. <em>(general reference; not checked against this page)</em>
             </li>
           </ul>
           <p className="text-sm text-brand-text-light">

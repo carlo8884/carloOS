@@ -22,7 +22,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-10-12T00:00:00Z',
+  modifiedAt: '2026-10-13T00:00:00Z',
 })
 
 const med = buildMedicalWebPageSchema({
@@ -126,10 +126,10 @@ export default function RawFeedingGuidePage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-11"
+            updatedAt="2026-10-13"
             reviewedBy="Editorial team"
           />
-          <LastUpdated date="2026-10-12" />
+          <LastUpdated date="2026-10-13" />
 
           <h2 id="why">Why Raw</h2>
           <p>
@@ -169,7 +169,7 @@ export default function RawFeedingGuidePage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-12" />
+          <ComparisonFoot updated="2026-10-13" />
           <h2>Who should feed which</h2>
           <p>Feed whole prey when you want the balance to arrive with the animal. Feed frankenprey when familiar meats are easier to source and you will keep the ratio right. A poorly assembled raw diet can be worse than a good commercial kibble.</p>
 
@@ -245,7 +245,7 @@ export default function RawFeedingGuidePage() {
 
           <h2 id="sources">Sources</h2>
           <p>
-            The macronutrient framework draws on Quesenberry KE and Carpenter JW (eds.), <em>Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery</em> (Saunders/Elsevier), and Carpenter JW, <em>Exotic Animal Formulary</em>. Food-safety guidance reflects the American Veterinary Medical Association policy on raw or undercooked animal-source protein in pet food. The frankenprey ratio reflects long-standing carnivore raw-feeding practice rather than a single primary source; calcium-to-phosphorus balance is the most consistently cited failure mode in the veterinary literature. Locate primary publications by title.
+            The macronutrient framework draws on Quesenberry KE and Carpenter JW (eds.), <em>Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery</em> (Saunders/Elsevier), and Carpenter JW, <em>Exotic Animal Formulary</em>. Food-safety guidance reflects the American Veterinary Medical Association policy on raw or undercooked animal-source protein in pet food. The frankenprey ratio reflects long-standing carnivore raw-feeding practice rather than a single primary source; calcium-to-phosphorus balance is the most consistently cited failure mode in the veterinary literature. Locate primary publications by title. We have not checked this general reference against the claims on this page.
           </p>
           <p className="text-sm text-brand-text-light">
             This page is general information. Raw feeding has genuine risks and is not appropriate for every household. Confirm any raw diet's nutritional adequacy and discuss food-safety risk with a veterinarian familiar with ferrets before adopting it as a sole diet.

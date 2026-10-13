@@ -402,7 +402,7 @@ export default function FerretGrimaceScalePage() {
             <li>
               Quesenberry KE, Carpenter JW (eds.). <em>Ferrets, Rabbits,
               and Rodents: Clinical Medicine and Surgery</em>. Ferret
-              analgesia, pain recognition, and clinical examination chapters.
+              analgesia, pain recognition, and clinical examination chapters. <em>(general reference; not checked against this page)</em>
             </li>
             <li>
               American Veterinary Medical Association and Association of

@@ -34,7 +34,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-10-13T00:00:00Z',
 })
 
 const FAQS = [
@@ -122,7 +122,7 @@ export default function BlazeAndRoanPatternsPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-01"
+            updatedAt="2026-10-13"
           />
 
           <DropCap>
@@ -216,17 +216,17 @@ export default function BlazeAndRoanPatternsPage() {
           <ul>
             <li>
               American Ferret Association (AFA) — recognized color and pattern
-              standards and owner-facing pattern guidance.
+              standards and owner-facing pattern guidance. <em>(general reference; not checked against this page)</em>
             </li>
             <li>
               Quesenberry KE, Carpenter JW (eds.). <em>Ferrets, Rabbits, and
               Rodents: Clinical Medicine and Surgery.</em> Saunders/Elsevier —
               coat genetics and pigment-related deafness in white-patterned
-              ferrets.
+              ferrets. <em>(general reference; not checked against this page)</em>
             </li>
             <li>
               <em>Journal of Exotic Pet Medicine</em> — articles on ferret coat
-              genetics, white-patterning, and hearing.
+              genetics, white-patterning, and hearing. <em>(general reference; not checked against this page)</em>
             </li>
           </ul>
           <p className="text-sm text-brand-text-light">

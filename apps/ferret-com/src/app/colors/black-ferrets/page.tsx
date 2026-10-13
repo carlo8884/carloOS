@@ -35,7 +35,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-05-30T00:00:00Z',
-  modifiedAt: '2026-05-30T00:00:00Z',
+  modifiedAt: '2026-10-13T00:00:00Z',
 })
 
 const FAQS = [
@@ -125,7 +125,7 @@ export default function BlackFerretsPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-05-30"
-            updatedAt="2026-05-30"
+            updatedAt="2026-10-13"
           />
 
           <DropCap>
@@ -252,7 +252,7 @@ export default function BlackFerretsPage() {
           <ul>
             <li>
               American Ferret Association (AFA) — recognized colors and patterns standard, including
-              the black and black sable classifications.
+              the black and black sable classifications. <em>(general reference; not checked against this page)</em>
             </li>
             <li>
               Lewington JH (ed.). <em>Ferret Husbandry, Medicine and Surgery.</em> Saunders/Elsevier
@@ -260,7 +260,7 @@ export default function BlackFerretsPage() {
             </li>
             <li>
               Quesenberry KE, Carpenter JW (eds.). <em>Ferrets, Rabbits, and Rodents: Clinical
-              Medicine and Surgery.</em> Saunders/Elsevier — ferret husbandry and natural history.
+              Medicine and Surgery.</em> Saunders/Elsevier — ferret husbandry and natural history. <em>(general reference; not checked against this page)</em>
             </li>
           </ul>
           <p className="text-sm text-brand-text-light">
