@@ -1121,6 +1121,13 @@ test('ferret fix VX1: vaccine timing follows Merck and Lafeber; first-year sched
   expect(await page.locator('body').innerText()).not.toContain('Rabies at 12+ weeks')
 })
 
+test('ferret fix FH7: /reviews hub answers first and has a sourced FAQ', async ({ page }) => {
+  await page.goto('/reviews', { waitUntil: 'domcontentloaded' })
+  const box = page.getByTestId('short-answer')
+  await expect(box).toBeVisible()
+  await expect(box.locator('a[href="https://www.merckvetmanual.com/all-other-pets/ferrets/providing-a-home-for-a-ferret"]')).toBeVisible()
+})
+
 test('ferret fix FH6: /colors hub answers first and has a sourced FAQ', async ({ page }) => {
   await page.goto('/colors', { waitUntil: 'domcontentloaded' })
   const box = page.getByTestId('short-answer')

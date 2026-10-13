@@ -1,7 +1,7 @@
 import { HopDisclosure } from '../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, buildItemListSchema, combineSchemas, SchemaScript, ShopCtas, DirectoryPlacesCta, HubSearch, HubJumpNav, LastUpdated } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, buildItemListSchema, combineSchemas, SchemaScript, ShopCtas, DirectoryPlacesCta, HubSearch, HubJumpNav, LastUpdated, FAQAccordion, ArticleSourcesList } from '@carloOS/ui'
 import listings from '../../data/directory-listings.json'
 import { HubHero } from '../../components/HubHero'
 
@@ -215,6 +215,13 @@ const itemListSchema = buildItemListSchema({
 
 const reviewsSchema = combineSchemas(breadcrumbSchema, itemListSchema)
 
+const HUB_FAQS = [
+  { question: "What should I look for in a ferret cage?", answer: "A solid or padded floor, because bare wire can hurt a ferret's paws, no sharp wire, no gaps large enough to escape through, and room for separate sleeping, eating and litter areas (Merck Veterinary Manual)." },
+  { question: "Which litter is best for ferrets?", answer: "Avoid clumping cat litter, which may cause breathing problems (Merck Veterinary Manual). Pelleted litters such as recycled-paper products are preferable (Lafeber Vet)." },
+  { question: "What food should I buy?", answer: "A commercial ferret food. Ferrets are carnivores and need a meat-based diet low in carbohydrate and high in protein; foods high in plant protein can cause bladder stones (Merck Veterinary Manual)." },
+  { question: "Which toys are safe?", answer: "Toys made of hard, durable material and large enough that they can't be swallowed, such as ping-pong balls (Lafeber Vet)." },
+]
+
 export default function ReviewsHubPage() {
   return (
     <>
@@ -241,7 +248,7 @@ export default function ReviewsHubPage() {
         </div>
       </section>
       <div className="px-container-sm sm:px-container pt-6">
-        <LastUpdated date="2026-10-10" />
+        <LastUpdated date="2026-10-13" />
       </div>
 
       {/* Breadcrumb */}
@@ -260,6 +267,15 @@ export default function ReviewsHubPage() {
         <span>›</span>
         <span style={{ color: 'var(--brand-text-mid)', fontWeight: 500 }}>Reviews</span>
       </nav>
+
+      <div className="px-container-sm sm:px-container pt-8 max-w-4xl">
+        <div className="rounded-lg border-l-4 border-brand-primary bg-brand-white p-5 mt-4" data-testid="short-answer">
+          <h2 className="font-display text-lg font-bold mb-2">The short answer</h2>
+          <p className="text-base leading-relaxed text-brand-text-mid m-0">
+            Choose gear around a ferret&apos;s needs, not a brand. Use a commercial ferret food, a cage with a solid or padded floor, soft bedding with no cedar or wood chips, and non-clumping litter, which is easier on a ferret&apos;s airways (<a href="https://www.merckvetmanual.com/all-other-pets/ferrets/providing-a-home-for-a-ferret" className="text-brand-primary hover:underline">Merck Veterinary Manual</a>). Pick toys too large to swallow and made of hard, durable material (<a href="https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf" className="text-brand-primary hover:underline">Lafeber Vet</a>). The guides below compare specific products.
+          </p>
+        </div>
+      </div>
 
       {/* Methodology intro */}
       <div
@@ -410,6 +426,17 @@ export default function ReviewsHubPage() {
         ))}
         </div>
       </div>
+      <section className="px-container-sm sm:px-container py-10">
+        <div className="max-w-content-wide">
+          <h2 id="faq" className="font-display text-xl font-bold text-brand-dark mb-4">Ferret gear FAQ</h2>
+          <FAQAccordion items={HUB_FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
+          <ArticleSourcesList title="Sources" sources={[
+            { label: "Providing a Home for a Ferret", url: "https://www.merckvetmanual.com/all-other-pets/ferrets/providing-a-home-for-a-ferret", publisher: "Merck Veterinary Manual" },
+            { label: "Care of the Pet Ferret (owner handout)", url: "https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf", publisher: "Lafeber Vet" },
+          ]} />
+        </div>
+      </section>
+
       <DirectoryPlacesCta listings={listings} noun="licensed exotic-mammal professionals" />
 
     </>
