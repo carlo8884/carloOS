@@ -1,7 +1,7 @@
 import { HopDisclosure } from '../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildArticleSchema, buildMetadata, buildBreadcrumbSchema, SchemaScript, ShopCtas, StockImage } from '@carloOS/ui'
+import { buildArticleSchema, buildMetadata, buildBreadcrumbSchema, SchemaScript, ShopCtas, StockImage, FAQAccordion, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'vets-co',
@@ -16,6 +16,13 @@ const breadcrumbSchema = buildBreadcrumbSchema({
     { name: 'Tools', url: 'https://vets.co/tools' },
   ],
 })
+
+const FAQS = [
+  { question: 'Which tool should I use if I think my pet needs urgent care?', answer: 'If your pet has difficulty breathing, heavy bleeding, seizures, collapse, pale or bluish gums, or is straining without passing urine or stool, skip the tools and go to a vet immediately (Merck Veterinary Manual). For less clear cases, the cat emergency triage and the ER vs clinic vs telehealth chooser help you decide how fast to seek care.' },
+  { question: 'Do these tools diagnose my pet?', answer: 'No. The triage tools give a conservative urgency read and the calculators give estimates. None of them replaces an examination by a veterinarian.' },
+  { question: 'How does the pet insurance reimbursement estimator work?', answer: 'You enter a carrier quote (monthly premium, deductible, reimbursement percentage and annual cap) and your expected claims; it returns your annual reimbursement, total cost with insurance and net benefit versus paying out of pocket. Most pet insurance policies pay on a reimbursement basis, either as a percentage of what you spent or by a benefit schedule, so check which your policy uses (NAIC). The calculation runs in your browser and your inputs never leave the page.' },
+  { question: 'Do I need to sign up to use the tools?', answer: 'No. The tools are free, need no sign-up, and do not collect or sell personal data.' },
+]
 
 const TOOLS = [
   {
@@ -152,6 +159,13 @@ export default function ToolsHub() {
 
       <section className="bg-brand-surface px-container-sm sm:px-container py-section">
         <div className="max-w-3xl mb-12">
+          <LastUpdated date="2026-10-13" />
+          <div className="rounded-lg border-l-4 border-brand-primary bg-brand-white p-5 my-6" data-testid="short-answer">
+            <h2 className="font-display text-lg font-bold mb-2">The short answer</h2>
+            <p className="text-base leading-relaxed text-brand-text-mid m-0">
+              These free tools help you decide how fast to seek care and estimate insurance and feeding numbers; they don&apos;t diagnose. If your pet has trouble breathing, heavy bleeding, seizures, collapse or pale or blue gums, go to a vet immediately rather than using a tool (<a href="https://www.merckvetmanual.com/multimedia/table/when-to-see-a-veterinarian">Merck Veterinary Manual</a>). The insurance tools assume a reimbursement policy, which is how most pet insurance pays (<a href="https://content.naic.org/insurance-topics/pet-insurance">NAIC</a>).
+            </p>
+          </div>
           <h2 className="font-display text-2xl font-bold text-brand-text-dark mb-4">What&apos;s in the toolkit</h2>
           <p className="text-base text-brand-text-mid leading-relaxed mb-4">
             A focused set of references, each built to answer a question the Vets.co editorial team kept hearing from owners: <em>are these cat signs go-now, same-day, or monitor</em>, <em>is this an ER right now, a clinic visit, or telehealth</em>, <em>is pet insurance even worth it for my pet</em>, <em>which carriers fit what I care about</em>, <em>did this insurance policy actually pay what I expected</em>, and <em>where do I find a specialist for this condition</em>. The tools are deliberately narrow — each does one thing and gets it right rather than wrapping a dozen marginal calculators.
@@ -234,6 +248,17 @@ export default function ToolsHub() {
               amazonLabel="Browse digital pet scale on Amazon →"
             />
           </div>
+        </div>
+      </section>
+
+      <section className="px-container-sm sm:px-container py-10">
+        <div className="max-w-content-wide">
+          <h2 id="faq" className="font-display text-xl font-bold text-brand-dark mb-4">Tools FAQ</h2>
+          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
+          <ArticleSourcesList title="Sources" sources={[
+            { label: 'When to See a Veterinarian (general guidance for pets)', url: 'https://www.merckvetmanual.com/multimedia/table/when-to-see-a-veterinarian', publisher: 'Merck Veterinary Manual' },
+            { label: 'Pet Insurance (consumer topic page)', url: 'https://content.naic.org/insurance-topics/pet-insurance', publisher: 'NAIC' },
+          ]} />
         </div>
       </section>
 
