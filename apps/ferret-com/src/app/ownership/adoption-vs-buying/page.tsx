@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, ComparisonFoot, LastUpdated } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, ComparisonFoot, LastUpdated, CalloutBox, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -20,7 +20,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-10-12T00:00:00Z',
+  modifiedAt: '2026-10-13T00:00:00Z',
 })
 
 const med = buildMedicalWebPageSchema({
@@ -32,6 +32,24 @@ const med = buildMedicalWebPageSchema({
   lastReviewed: '2026-06-01',
 })
 const combined = combineSchemas(schema, med)
+
+const FAQS = [
+  {
+    question: 'Where do pet-store ferrets come from?',
+    answer:
+      'Lafeber Company’s ferret care sheet says most ferrets sold as pets in the United States come from a commercial breeding farm, where kits are neutered and descented and given two small blue ear tattoos at the same time.',
+  },
+  {
+    question: 'Does descenting stop a ferret from smelling?',
+    answer:
+      'No. Lafeber notes that descented pet ferrets still retain their natural, musky odor.',
+  },
+  {
+    question: 'Why does it matter whether a female ferret is spayed?',
+    answer:
+      'The Merck Veterinary Manual explains that females are induced ovulators, and if not bred or spayed they can develop severe estrogen-related pancytopenia from persistent estrus. Ask any source whether a female is spayed.',
+  },
+]
 
 export default function AdoptionVsBuyingPage() {
   return (
@@ -64,6 +82,7 @@ export default function AdoptionVsBuyingPage() {
                 { label: 'Altering & Descenting', href: '#altering' },
                 { label: 'Health Questions to Ask', href: '#health' },
                 { label: 'Making the Choice', href: '#choice' },
+                { label: 'FAQ', href: '#faq' },
                 { label: 'Sources', href: '#sources' },
               ]}
             />
@@ -91,10 +110,15 @@ export default function AdoptionVsBuyingPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-01"
+            updatedAt="2026-10-13"
             reviewedBy="Editorial team"
           />
-          <LastUpdated date="2026-10-12" />
+          <LastUpdated date="2026-10-13" />
+          <CalloutBox variant="info" title="Short answer">
+            <p>
+              Rescues usually place adults that are already altered; breeders can offer kits of known parentage; most US pet-store ferrets come from commercial farms where kits are neutered and descented (<a href="https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf">Lafeber</a>). Whatever the source, confirm a female is spayed: unspayed, unbred females can develop severe estrogen-related pancytopenia (<a href="https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/management-of-ferrets">Merck Veterinary Manual</a>).
+            </p>
+          </CalloutBox>
 
           <h2 id="sources-overview">The Three Sources</h2>
           <p>
@@ -163,12 +187,19 @@ export default function AdoptionVsBuyingPage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-12" />
+          <ComparisonFoot updated="2026-10-13" />
           <h2>Who should start where</h2>
           <p>Start with a rescue if you are open to an adult. Choose a breeder if you want a kit and will ask about the parents. A pet store is the convenient entry, with the least history. Confirm ferrets are legal where you live before any of the three.</p>
 
 
+          <h2 id="faq">Frequently Asked Questions</h2>
+          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
+
           <h2 id="sources">Sources</h2>
+          <ul>
+            <li><a href="https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf">Lafeber Company: Care of the Ferret (2020)</a></li>
+            <li><a href="https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/management-of-ferrets">Merck Veterinary Manual: Management of Ferrets</a></li>
+          </ul>
           <p>
             Estrogen-toxicity risk in intact unbred jills, the role of altering, and discussion of early-altering and adrenal-disease associations are covered in Quesenberry KE and Carpenter JW (eds.), <em>Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery</em> (Saunders/Elsevier). Descenting and odor management reflect standard ferret-husbandry references and American Ferret Association guidance. Locate primary publications by title.
           </p>

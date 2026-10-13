@@ -796,3 +796,12 @@ test('ferret fix FA5: insurance basics leads with an NAIC/Merck short answer, FA
   const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
   expect(ld).toContain('"FAQPage"')
 })
+
+test('ferret fix FA6: adoption-vs-buying leads with a Lafeber/Merck short answer and FAQ schema', async ({ page }) => {
+  await page.goto('/ownership/adoption-vs-buying', { waitUntil: 'domcontentloaded' })
+  await expect(page.locator('.carloOS-article').filter({ hasText: 'Short answer' }).first()).toContainText('commercial farms')
+  await expect(page.locator('a[href="https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/management-of-ferrets"]').first()).toBeAttached()
+  await expect(page.getByText('Does descenting stop a ferret from smelling?').first()).toBeVisible()
+  const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
+  expect(ld).toContain('"FAQPage"')
+})
