@@ -818,7 +818,7 @@ test('vets fix AI1: llms.txt matches the site (Amazon disclosure, no scores, gui
 test('vets fix TS2: journal citations link to their DOI, unverifiable citations and the unsourced remission rate are gone', async ({ page }) => {
   const want: Record<string, string[]> = {
     '/health/bloat-gdv-dogs': ['10.2460/javma.2000.216.40'],
-    '/health/cognitive-dysfunction': ['10.1016/j.applanim.2015.08.034', '10.1016/j.cvsm.2012.04.003'],
+    '/health/cognitive-dysfunction': ['10.1016/j.cvsm.2012.04.003'],
     '/health/cushing-disease-dogs': ['10.1111/jvim.12192', '10.1016/j.cvsm.2009.10.008'],
     '/health/diabetes-in-dogs-cats': [],
     '/health/kidney-disease-cats': ['10.1016/s0022-2143(98)90146-9'],
@@ -977,4 +977,24 @@ test('vets fix AF11: pain management page leads with a sourced short answer and 
   await expect(page.getByText('Is it normal for my dog to sleep a lot after surgery?').first()).toBeVisible()
   const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
   expect(ld).toContain('"FAQPage"')
+})
+
+test('vets fix AF10: eye conditions page leads with a sourced short answer and FAQ schema', async ({ page }) => {
+  await page.goto('/health/dog-eye-conditions', { waitUntil: 'domcontentloaded' })
+  await expect(page.locator('.carloOS-article').filter({ hasText: 'Short answer' }).first()).toContainText('see a vet immediately')
+  await expect(page.locator('a[href="https://www.merckvetmanual.com/dog-owners/eye-disorders-of-dogs/glaucoma-in-dogs"]').first()).toBeAttached()
+  await expect(page.getByText('Is glaucoma in dogs an emergency?').first()).toBeVisible()
+  const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
+  expect(ld).toContain('"FAQPage"')
+})
+
+test('vets fix CD1: dog dementia prevalence matches the cited Neilson 2001 abstract', async ({ page }) => {
+  for (const path of ['/health/cognitive-dysfunction', '/health/senior-pet-care']) {
+    await page.goto(path, { waitUntil: 'domcontentloaded' })
+    const body = page.locator('body')
+    await expect(body, path).toContainText('68% of dogs aged 15–16')
+    await expect(body, path).not.toContainText('22% of dogs')
+    await expect(body, path).not.toContainText('Madari')
+    await expect(page.locator('a[href="https://pubmed.ncbi.nlm.nih.gov/11394831/"]').first(), path).toBeAttached()
+  }
 })
