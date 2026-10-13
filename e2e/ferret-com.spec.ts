@@ -1029,6 +1029,25 @@ test('ferret fix VP1: vet-visit prep drops unsourced cost ranges', async ({ page
   await expect(page.locator('h2#cost')).toHaveText('Costs: Ask for an Estimate')
 })
 
+test('ferret fix ER1: emergency triage matches Merck when-to-see-a-vet tiers', async ({ page }) => {
+  await page.goto('/tools/is-this-a-ferret-emergency', { waitUntil: 'domcontentloaded' })
+  const verdict = page.locator('[aria-live="polite"]')
+  const sign = (t: string) => page.getByRole('checkbox', { name: new RegExp(t) }).first()
+  await sign('Skipped One Meal').click()
+  await expect(verdict).toContainText('Same-day vet')
+  await sign('Skipped One Meal').click()
+  await sign('Not Eating or Drinking for a Day').click()
+  await expect(verdict).toContainText('Go now')
+  await sign('Not Eating or Drinking for a Day').click()
+  await sign('Blood in Stool or Urine').click()
+  await expect(verdict).toContainText('Go now')
+  await sign('Blood in Stool or Urine').click()
+  await sign('Isolated Mild Sneeze').click()
+  await expect(verdict).toContainText('Monitor closely')
+  const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('')
+  expect(ld).toContain('"lastReviewed":"2026-10-13"')
+})
+
 test('ferret fix VP2: vet-visit prep schedule, fasting and temperature follow Lafeber and Merck', async ({ page }) => {
   await page.goto('/health/vet-visit-prep', { waitUntil: 'domcontentloaded' })
   const text = (await page.locator('main').innerText()).replace(/\s+/g, ' ')
