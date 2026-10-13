@@ -30,14 +30,14 @@ export function HomeHero() {
 
       <div
         aria-hidden="true"
-        className="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/65 to-brand-dark/25"
+        className="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/75 to-brand-dark/30"
       />
       <div
         aria-hidden="true"
-        className="absolute inset-0 opacity-25"
+        className="absolute inset-0 opacity-30"
         style={{
           backgroundImage:
-            'radial-gradient(ellipse at 25% 75%, rgba(14,107,138,0.45) 0%, transparent 60%)',
+            'radial-gradient(ellipse at 25% 75%, rgba(14,107,138,0.55) 0%, transparent 55%)',
         }}
       />
 
