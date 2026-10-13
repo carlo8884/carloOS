@@ -1034,3 +1034,11 @@ test('vets fix BR3: Pomeranian periodontal claim matches Merck', async ({ page }
   await expect(page.locator('body')).toContainText('up to 80% of dogs have some level of periodontal disease by age 2')
   await expect(page.locator('a[href="https://www.merckvetmanual.com/digestive-system/dentistry-in-small-animals/periodontal-disease-in-small-animals"]').first()).toBeAttached()
 })
+
+test('vets fix BR2: Golden insurance answer drops 60%+ and links its price sources', async ({ page }) => {
+  await page.goto('/breeds/golden-retriever-health', { waitUntil: 'domcontentloaded' })
+  await expect(page.locator('body')).not.toContainText('60%+ lifetime cancer rate')
+  await expect(page.locator('a[href="https://www.dogcancerfoundation.org/blog/cost-dog-chemotherapy"]').first()).toBeAttached()
+  await expect(page.locator('a[href="https://hospital.cvm.ncsu.edu/services/small-animals/cancer-oncology/radiation-oncology/radiation-therapy-for-bone-cancer/"]').first()).toBeAttached()
+  await expect(page.locator('body')).toContainText('dated 2026-10-13')
+})
