@@ -36,19 +36,19 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-10-13T00:00:00Z',
 })
 
 const FAQS = [
   {
     question: 'How long do ferrets live?',
     answer:
-      "Pet ferrets commonly live around 5 to 8 years, with some reaching the upper end or slightly beyond with good care and a bit of luck. Lifespan varies with genetics, husbandry, and the burden of age-related disease that ferrets are unfortunately prone to.",
+      "Ferrets live an average of 6 to 8 years, according to the Lafeber Care of the Ferret sheet, with some reaching the upper end or slightly beyond with good care and a bit of luck. Lifespan varies with genetics, husbandry, and the burden of age-related disease that ferrets are unfortunately prone to.",
   },
   {
     question: 'What is the oldest a ferret can live?',
     answer:
-      "While the typical range tops out around 8 years, individual ferrets occasionally live longer with attentive care and good fortune. These are exceptions rather than the rule. Most owners should plan around the 5-to-8-year expectation rather than counting on an unusually long life.",
+      "While the average range tops out around 8 years, individual ferrets occasionally live longer with attentive care and good fortune. These are exceptions rather than the rule. Most owners should plan around the 6-to-8-year average rather than counting on an unusually long life.",
   },
   {
     question: "What shortens a ferret's lifespan?",
@@ -121,8 +121,14 @@ export default function FerretLifespanPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-01"
+            updatedAt="2026-10-13"
           />
+
+          <CalloutBox variant="info" title="Short answer">
+            <p>
+              Ferrets live an average of 6 to 8 years (<a href="https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf">Lafeber, Care of the Ferret</a>). Lafeber recommends a vet exam every year, and twice a year once a ferret is 3 or older.
+            </p>
+          </CalloutBox>
 
           <DropCap>
             A ferret packs an enormous amount of personality into a relatively
@@ -135,10 +141,10 @@ export default function FerretLifespanPage() {
 
           <h2 id="typical">The Typical Lifespan</h2>
           <p>
-            Pet ferrets commonly live around <strong>5 to 8 years</strong>. Some
+            Ferrets live an average of <strong>6 to 8 years</strong> (<a href="https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf">Lafeber, Care of the Ferret</a>). Some
             reach the upper end or a little beyond with excellent care and good
             luck; others are cut short by the age-related diseases the species is
-            prone to. As a planning figure, the 5-to-8-year range is the right
+            prone to. As a planning figure, the 6-to-8-year average is the right
             expectation to set when you bring a ferret home.
           </p>
 
@@ -155,12 +161,12 @@ export default function FerretLifespanPage() {
               The ferret is fully grown, playful, and generally robust.
             </li>
             <li>
-              <strong>Middle age (3-5 years).</strong> The window where the common
+              <strong>Middle age (from 3 years).</strong> Lafeber recommends twice-yearly exams from 3 years of age (<a href="https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf">Care of the Ferret</a>). This is the window where the common
               ferret diseases — insulinoma and adrenal disease especially — start
               to appear. Regular vet checks earn their keep here.
             </li>
             <li>
-              <strong>Senior (5+ years).</strong> Slowing down, higher disease
+              <strong>Senior.</strong> Slowing down, higher disease
               burden, and a need for closer monitoring. Our{' '}
               <a href="/health/aging-ferret-care">aging ferret care</a> reference
               covers this stage in depth.
@@ -219,7 +225,7 @@ export default function FerretLifespanPage() {
 
           <h2 id="senior">Senior Ferret Care</h2>
           <p>
-            Once a ferret crosses into its senior years around age five, the
+            As a ferret moves into its senior years, the
             emphasis shifts toward monitoring and comfort. More frequent vet
             checks, attention to weight and appetite, and quick action on
             warning signs help an older ferret stay comfortable. Because the early
@@ -234,6 +240,9 @@ export default function FerretLifespanPage() {
 
           <h2 id="sources">Sources</h2>
           <ul>
+            <li>
+              <a href="https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf">Lafeber Company. Care of the Ferret (veterinary client handout, 2020)</a> — average lifespan and exam frequency.
+            </li>
             <li>
               Quesenberry KE, Carpenter JW (eds.). <em>Ferrets, Rabbits, and
               Rodents: Clinical Medicine and Surgery.</em> Saunders/Elsevier —
