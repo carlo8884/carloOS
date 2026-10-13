@@ -1007,3 +1007,12 @@ test('vets fix CD1: dog dementia prevalence matches the cited Neilson 2001 abstr
     await expect(page.locator('a[href="https://pubmed.ncbi.nlm.nih.gov/11394831/"]').first(), path).toBeAttached()
   }
 })
+
+test('vets fix AF13: preventive care schedule leads with a sourced short answer and FAQ schema', async ({ page }) => {
+  await page.goto('/health/preventive-care-schedule', { waitUntil: 'domcontentloaded' })
+  await expect(page.locator('.carloOS-article').filter({ hasText: 'Short answer' }).first()).toContainText('every 3 to 4 weeks for puppies')
+  await expect(page.locator('a[href="https://www.merckvetmanual.com/dog-owners/routine-care-of-dogs/routine-health-care-of-dogs"]').first()).toBeAttached()
+  await expect(page.getByText('Does my dog need heartworm prevention all year?').first()).toBeVisible()
+  const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
+  expect(ld).toContain('"FAQPage"')
+})
