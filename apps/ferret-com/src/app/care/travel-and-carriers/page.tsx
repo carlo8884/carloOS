@@ -10,6 +10,8 @@ import {
   CrossPortfolioCard,
   ArticleSourcesList,
   ShopCtas,
+  CalloutBox,
+  FAQAccordion,
 } from '@carloOS/ui'
 import { buildArticleSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
@@ -23,6 +25,9 @@ export const metadata: Metadata = buildMetadata({
 })
 
 const SOURCES = [
+  { label: 'Routine Health Care for Ferrets', url: 'https://www.merckvetmanual.com/all-other-pets/ferrets/routine-health-care-for-ferrets', publisher: 'Merck Veterinary Manual' },
+  { label: 'Providing a Home for a Ferret', url: 'https://www.merckvetmanual.com/all-other-pets/ferrets/providing-a-home-for-a-ferret', publisher: 'Merck Veterinary Manual' },
+  { label: 'Management of Ferrets', url: 'https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/management-of-ferrets', publisher: 'Merck Veterinary Manual' },
   {
     label: "Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery, 4th ed. — thermoregulation and husbandry",
     publisher: "Quesenberry KE, Carpenter JW (eds.) — Saunders/Elsevier",
@@ -47,11 +52,28 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-09-04T00:00:00Z',
+  modifiedAt: '2026-10-13T00:00:00Z',
 
   citation: SOURCES,
 })
 const combined = combineSchemas(schema)
+const FAQS = [
+  {
+    question: 'What kind of carrier does a ferret need?',
+    answer:
+      'The Merck Veterinary Manual says a plastic cat carrier is sufficient for taking a ferret to the veterinarian. Choose one with a secure latch and ventilation, and belt it in or wedge it on the floor so it cannot slide.',
+  },
+  {
+    question: 'What temperature should the car be for a ferret?',
+    answer:
+      'Merck gives 65°F to 75°F (18°C to 23°C) as usually comfortable for ferrets, and notes they handle cold better than heat. Keep the cabin in that range and the carrier out of direct sun.',
+  },
+  {
+    question: 'Can I leave a ferret in a parked car for a few minutes?',
+    answer:
+      'No. Merck notes ferrets are highly susceptible to heatstroke because they cannot sweat. A parked car heats up quickly, so take the ferret with you or leave it at home.',
+  },
+]
 
 
 export default function TravelAndCarriersPage() {
@@ -84,6 +106,7 @@ export default function TravelAndCarriersPage() {
                 { label: 'Water, Food & Litter', href: '#supplies' },
                 { label: 'Reducing Travel Stress', href: '#stress' },
                 { label: 'Longer Trips & Air Travel', href: '#long-trips' },
+                { label: 'FAQ', href: '#faq' },
                 { label: 'Sources', href: '#sources' },
               ]}
             />
@@ -115,9 +138,14 @@ export default function TravelAndCarriersPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-09-04"
+            updatedAt="2026-10-13"
             reviewedBy="Editorial team"
           />
+          <CalloutBox variant="info" title="Short answer">
+            <p>
+              Use a secure, ventilated carrier (a plastic cat carrier is sufficient, per the <a href="https://www.merckvetmanual.com/all-other-pets/ferrets/routine-health-care-for-ferrets">Merck Veterinary Manual</a>), keep the car at about 65°F to 75°F (<a href="https://www.merckvetmanual.com/all-other-pets/ferrets/providing-a-home-for-a-ferret">Merck</a>), and never leave a ferret in a parked car: ferrets cannot sweat and are highly susceptible to heatstroke (<a href="https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/management-of-ferrets">Merck</a>).
+            </p>
+          </CalloutBox>
 
           <h2 id="carrier">Choosing a Carrier</h2>
           <p>
@@ -145,7 +173,7 @@ export default function TravelAndCarriersPage() {
 
           <h2 id="temperature">Temperature on the Road</h2>
           <p>
-            Heat is the single greatest travel danger to a ferret, because ferrets cannot sweat and overheat with frightening speed. The car's climate control must keep the cabin in the cool comfortable range — broadly the 60s into the low 70s Fahrenheit — for the whole trip, and the carrier must sit where that cooled air actually reaches it, not in a sun-baked corner.
+            Heat is the single greatest travel danger to a ferret, because ferrets cannot sweat and overheat with frightening speed. The car's climate control must keep the cabin in the cool comfortable range — about 65°F to 75°F (18°C to 23°C), the range the Merck Veterinary Manual gives as usually comfortable — for the whole trip, and the carrier must sit where that cooled air actually reaches it, not in a sun-baked corner.
           </p>
           <p>
             The non-negotiable rule: <strong>never leave a ferret in a parked car, even for a few minutes, even with windows cracked.</strong> A parked vehicle's interior climbs far above the outside temperature within minutes, and a ferret can suffer fatal heat stroke in the time it takes to run one errand. On warm days, plan trips so the ferret is never left in the vehicle. The full picture of ferret heat physiology and emergency cooling is in our <a href="/care/heat-stroke-prevention">heat stroke prevention</a> guide.
@@ -220,6 +248,8 @@ export default function TravelAndCarriersPage() {
             Air travel is more involved and far less routine. Airline policies on ferrets vary widely and many carriers do not accept them in the cabin or as cargo at all; some jurisdictions restrict or prohibit ferrets entirely, which makes destination legality a real concern. Anyone planning to fly with a ferret should confirm the specific airline's current pet policy in writing and verify that ferrets are legal at the destination well before booking. Health documentation and a recent veterinary check are typically required. Because the rules change and differ by carrier and region, treat air travel as something to research case by case rather than assume.
           </p>
 
+          <h2 id="faq">Frequently Asked Questions</h2>
+          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
           <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>
