@@ -3,13 +3,13 @@ import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfoli
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'How Does the Pet Insurance Claims Process Work? | Vets.co', description: 'Pet insurance is almost always reimbursement-based: you pay the vet, submit the invoice, and the insurer pays back your share after the deductible.', path: '/insurance/questions/how-does-the-claims-process-work', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'How Does the Pet Insurance Claims Process Work? | Vets.co', description: 'Most pet insurance pays on a reimbursement basis: you pay the vet, submit the invoice, and the insurer pays back your share after the deductible.', path: '/insurance/questions/how-does-the-claims-process-work', type: 'article' })
 
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'How Does the Pet Insurance Claims Process Work?', description: 'The reimbursement-based pet insurance claim process step by step, plus deductible mechanics and what speeds payouts.', url: 'https://vets.co/insurance/questions/how-does-the-claims-process-work', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-11T00:00:00Z', modifiedAt: '2026-10-12T00:00:00Z', speakable: true })
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'How Does the Pet Insurance Claims Process Work?', description: 'The reimbursement-based pet insurance claim process step by step, plus deductible mechanics and what speeds payouts.', url: 'https://vets.co/insurance/questions/how-does-the-claims-process-work', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-11T00:00:00Z', modifiedAt: '2026-10-13T00:00:00Z', speakable: true })
 
 const FAQS = [
-  { question: 'Do I have to pay the vet upfront?', answer: 'In most cases, yes. Pet insurance is overwhelmingly reimbursement-based: you settle the bill with your veterinarian in full, then submit the itemized invoice to the insurer, which pays you back your reimbursement percentage of the eligible amount after your deductible is met. A few insurers, with select vets, support direct payment so you only owe your share at checkout — but this is the exception, not the norm, so plan to cover the full bill first.' },
-  { question: 'How long does a pet insurance claim take?', answer: 'Processing typically takes from a few days to a few weeks, depending on the insurer and the complexity of the claim. Claims submitted digitally with a complete itemized invoice and any required medical records tend to move fastest; claims missing documentation get delayed while the insurer requests it. Some insurers advertise faster app-based claims, and a few offer same- or next-day decisions on straightforward submissions.' },
+  { question: 'Do I have to pay the vet upfront?', answer: 'In most cases, yes. Most policies pay on a reimbursement basis (NAIC): you settle the bill with your veterinarian in full, then submit the itemized invoice to the insurer, which pays you back your reimbursement percentage of the eligible amount after your deductible is met. A few insurers, with select vets, support direct payment so you only owe your share at checkout — but this is the exception, not the norm, so plan to cover the full bill first.' },
+  { question: 'How long does a pet insurance claim take?', answer: 'Processing time varies by insurer and by how complex the claim is; check the insurer\'s stated timeline. Claims submitted digitally with a complete itemized invoice and any required medical records tend to move fastest; claims missing documentation get delayed while the insurer requests it. Some insurers advertise faster app-based claims, and a few offer same- or next-day decisions on straightforward submissions.' },
   { question: 'What is the difference between an annual and a per-incident deductible?', answer: 'An annual deductible is met once per policy year — after you have paid that amount across all eligible claims, the insurer reimburses the rest of that year subject to your percentage and limit. A per-incident deductible applies separately to each new condition or incident, so multiple unrelated problems each carry their own deductible. Annual deductibles are generally simpler and more predictable; check which structure your policy uses, because it changes your real out-of-pocket on a year with several claims.' },
 ]
 
@@ -19,7 +19,7 @@ export default function Page() {
       <SchemaScript schema={schema} />
       <ArticleLayout siteId="vets-co"
         heroHop={<a href="/insurance/how-pet-insurance-works" className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline mb-5">How pet insurance works</a>}
-        hero={{ title: 'How Does the Pet Insurance Claims Process Work?', subtitle: 'Pet insurance is almost always reimbursement-based: you pay the vet in full, submit the itemized invoice, and the insurer pays you back your share of the eligible amount after the deductible. Here is the process step by step, and what speeds it up.', category: 'Insurance Q&A', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '6 min' }}
+        hero={{ title: 'How Does the Pet Insurance Claims Process Work?', subtitle: 'Most pet insurance pays on a reimbursement basis: you pay the vet in full, submit the itemized invoice, and the insurer pays you back your share of the eligible amount after the deductible. Here is the process step by step, and what speeds it up.', category: 'Insurance Q&A', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '6 min' }}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Insurance', href: '/insurance' }, { name: 'Questions', href: '/insurance/questions' }, { name: 'Claims Process', href: '/insurance/questions/how-does-the-claims-process-work' }]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -36,11 +36,11 @@ export default function Page() {
         </>}
       >
         <div className="carloOS-article">
-          <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-11T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-12" />
+          <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-11T00:00:00Z" updatedAt="2026-10-13T00:00:00Z" reviewedBy="Editorial team" />
+          <LastUpdated date="2026-10-13" />
 
           <CalloutBox variant="info" title="The short answer">
-            Pet insurance is almost always <strong>reimbursement-based</strong>: you pay the veterinarian in full, then submit the itemized invoice (and sometimes records) to the insurer, which pays you back your reimbursement percentage of the eligible amount after your deductible is met. Processing usually takes a few days to a few weeks; some insurers offer faster app-based claims or, with select vets, direct pay.
+            Most pet insurance policies pay on a <strong>reimbursement basis</strong> (<a href="https://content.naic.org/insurance-topics/pet-insurance">NAIC</a>): you pay the veterinarian in full, then submit the itemized invoice (and sometimes records) to the insurer, which pays you back your reimbursement percentage of the eligible amount after your deductible is met. Processing time varies by insurer; some insurers offer faster app-based claims or, with select vets, direct pay.
           </CalloutBox>
 
           <h2>The Reimbursement Model</h2>
@@ -76,7 +76,7 @@ export default function Page() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-12" />
+          <ComparisonFoot updated="2026-10-13" />
           <h2>Who should check which deductible</h2>
           <p>Confirm which structure the policy uses before you assume a year with several claims. An annual deductible is the simpler one to predict. A per-incident deductible repeats for each new condition.</p>
 
@@ -106,6 +106,7 @@ export default function Page() {
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
 
           <ArticleSourcesList title="Sources" sources={[
+            { label: 'Pet Insurance (consumer topic page)', url: 'https://content.naic.org/insurance-topics/pet-insurance', publisher: 'NAIC' },
             { label: 'Sample carrier claim-process and deductible disclosures', publisher: 'General carrier policy disclosures (not an endorsement)' },
           ]} />
         </div>

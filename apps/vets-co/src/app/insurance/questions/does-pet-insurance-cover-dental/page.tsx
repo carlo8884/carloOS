@@ -5,7 +5,7 @@ import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Does Pet Insurance Cover Dental? | Vets.co', description: 'Most accident-and-illness policies cover dental disease and injuries but not routine cleanings. Many require annual dental care to keep claims eligible.', path: '/insurance/questions/does-pet-insurance-cover-dental', type: 'article' })
 
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Does Pet Insurance Cover Dental?', description: 'What pet insurance covers for dental disease and injuries versus routine cleanings, and the dental-care requirements that keep claims eligible.', url: 'https://vets.co/insurance/questions/does-pet-insurance-cover-dental', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-11T00:00:00Z', modifiedAt: '2026-10-12T00:00:00Z', speakable: true })
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Does Pet Insurance Cover Dental?', description: 'What pet insurance covers for dental disease and injuries versus routine cleanings, and the dental-care requirements that keep claims eligible.', url: 'https://vets.co/insurance/questions/does-pet-insurance-cover-dental', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-11T00:00:00Z', modifiedAt: '2026-10-13T00:00:00Z', speakable: true })
 
 const FAQS = [
   { question: 'Does pet insurance cover dental cleanings?', answer: 'Not through the core policy. Routine dental cleanings are preventive care, which accident-and-illness policies exclude — the same way they exclude vaccines and annual exams. Cleanings are covered only if you add a wellness or routine-care plan, which reimburses a fixed annual allowance toward predictable care. The core policy covers dental disease and injury treatment, not the scheduled cleaning that helps prevent them.' },
@@ -36,11 +36,11 @@ export default function Page() {
         </>}
       >
         <div className="carloOS-article">
-          <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-11T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-12" />
+          <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-11T00:00:00Z" updatedAt="2026-10-13T00:00:00Z" reviewedBy="Editorial team" />
+          <LastUpdated date="2026-10-13" />
 
           <CalloutBox variant="info" title="The short answer">
-            Most accident-and-illness policies cover <strong>dental disease and dental injuries</strong> — extractions, fractured teeth, and treatment of periodontal disease — but <strong>not</strong> routine dental <strong>cleanings</strong>, which are preventive and sit in wellness-plan territory. Many insurers require evidence of annual dental exams or cleanings to keep dental-illness claims eligible, so read the dental clause.
+            Most accident-and-illness policies cover <strong>dental disease and dental injuries</strong> — extractions, fractured teeth, and treatment of periodontal disease — but <strong>not</strong> routine dental <strong>cleanings</strong>, which are preventive and sit in wellness-plan territory. The <a href="https://content.naic.org/insurance-topics/pet-insurance">NAIC</a> notes insurers typically sell three kinds of coverage: accident-only, accident and illness, and wellness, each with its own covered and excluded services. Many insurers require evidence of annual dental exams or cleanings to keep dental-illness claims eligible, so read the dental clause.
           </CalloutBox>
 
           <h2>The Line Between Disease and Maintenance</h2>
@@ -81,7 +81,7 @@ export default function Page() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-12" />
+          <ComparisonFoot updated="2026-10-13" />
           <h2>Who should read which clause</h2>
           <p>Read the dental clause before you assume treatment is covered. Disease and injury sit on the core policy. A cleaning sits on a wellness add-on. Many insurers still require an annual dental exam or cleaning before a later illness claim stays eligible.</p>
 
@@ -110,6 +110,7 @@ export default function Page() {
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
 
           <ArticleSourcesList title="Sources" sources={[
+            { label: 'Pet Insurance (consumer topic page)', url: 'https://content.naic.org/insurance-topics/pet-insurance', publisher: 'NAIC' },
             { label: 'Sample carrier dental-coverage and maintenance-requirement disclosures', publisher: 'General carrier policy disclosures (not an endorsement)' },
           ]} />
         </div>
