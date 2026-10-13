@@ -4,8 +4,7 @@ import type { APIRequestContext } from '@playwright/test'
  * Structural JSON-LD problems in rendered HTML: unparsable blocks, a missing
  * or http @context, a missing @type, FAQ questions without answers,
  * breadcrumb positions that are not 1..n, relative URLs, and any Review or
- * AggregateRating (we publish no ratings). Empty `image` strings on Article
- * come from the shared builder and are tracked separately, not checked here.
+ * AggregateRating (we publish no ratings), and empty or relative `image` values.
  */
 export async function jsonLdProblems(request: APIRequestContext, path: string): Promise<string[]> {
   const res = await request.get(path)
@@ -34,6 +33,7 @@ export async function jsonLdProblems(request: APIRequestContext, path: string): 
       const items = (r.itemListElement as Array<Record<string, unknown>>) ?? []
       if (items.some((it, i) => it.position !== i + 1)) out.push(`${path}: breadcrumb positions`)
     }
+    if ('image' in r && (r.image === '' || (typeof r.image === 'string' && !r.image.startsWith('https://')))) out.push(`${path}: bad image ${JSON.stringify(r.image)} in ${String(t)}`)
     for (const k of ['url', '@id', 'mainEntityOfPage']) {
       const v = r[k]
       if (typeof v === 'string' && v.startsWith('/')) out.push(`${path}: relative ${k} in ${String(t)}`)
