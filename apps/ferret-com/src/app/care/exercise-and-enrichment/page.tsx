@@ -156,6 +156,8 @@ export default function FerretExerciseEnrichmentPage() {
                 { label: 'Cage Setup', href: '/care/cage-setup' },
                 { label: 'Training & Bonding', href: '/behavior/training-and-bonding' },
                 { label: 'Adrenal Disease', href: '/health/adrenal-disease' },
+                { label: 'H-Style vs Mesh Harness', href: '/reviews/h-style-vs-mesh-harness-guide' },
+                { label: 'Winter Harness Fit', href: '/reviews/winter-harness-fit-guide' },
               ]}
             />
             <CrossPortfolioCard currentSite="ferret-com" contentType="care" variant="sidebar" />
@@ -168,6 +170,8 @@ export default function FerretExerciseEnrichmentPage() {
           { title: 'DIY Enrichment Toys', href: '/behavior/diy-enrichment-toys' },
           { title: 'Ferret-Proofing Your Home', href: '/care/ferret-proofing-your-home' },
           { title: 'Cage Setup', href: '/care/cage-setup' },
+          { title: 'H-Style vs Mesh Harness', href: '/reviews/h-style-vs-mesh-harness-guide' },
+          { title: 'Winter Harness Fit', href: '/reviews/winter-harness-fit-guide' },
         ]}
  priceAsOf="2026-05-31">
         <div className="carloOS-article">

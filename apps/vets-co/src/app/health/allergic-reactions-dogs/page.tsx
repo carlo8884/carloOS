@@ -28,6 +28,7 @@ export default function AllergicReactionsPage() {
           { title: 'Emergency Signs', href: '/health/emergency-signs', category: 'Veterinary Guide' },
           { title: 'Dog Vaccinations Guide', href: '/health/dog-vaccinations-guide', category: 'Veterinary Guide' },
           { title: 'Find a Vet', href: '/find-a-vet', category: 'Directory' },
+          { title: 'Pet First Aid Kit', href: '/guides/pet-first-aid-kit' },
         ]}
         sidebar={<>
           <div className="bg-brand-danger/8 border border-brand-danger/30 rounded-xl p-5">
@@ -38,7 +39,7 @@ export default function AllergicReactionsPage() {
               </div>
             ))}
           </div>
-          <RelatedLinks title="Related Guides" links={[{ label: 'Emergency Signs Guide', href: '/health/emergency-signs' }, { label: 'Dog Vaccinations', href: '/health/dog-vaccinations-guide' }, { label: 'Find Emergency Vet', href: '/find-a-vet' }]} />
+          <RelatedLinks title="Related Guides" links={[{ label: 'Emergency Signs Guide', href: '/health/emergency-signs' }, { label: 'Dog Vaccinations', href: '/health/dog-vaccinations-guide' }, { label: 'Find Emergency Vet', href: '/find-a-vet' }, { label: 'Pet First Aid Kit', href: '/guides/pet-first-aid-kit' }]} />
 
                   <CrossPortfolioCard currentSite="vets-co" contentType="health" variant="sidebar" />
 </>}

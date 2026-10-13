@@ -138,6 +138,8 @@ export default function LeashAndHarnessTrainingPage() {
                 { label: 'Multi-Ferret Introductions', href: '/behavior/multi-ferret-introductions' },
                 { label: 'Behavior Hub', href: '/behavior' },
                 { label: 'Vest vs H-Style Harness', href: '/reviews/vest-vs-h-harness-guide' },
+                { label: 'H-Style vs Mesh Harness', href: '/reviews/h-style-vs-mesh-harness-guide' },
+                { label: 'Winter Harness Fit', href: '/reviews/winter-harness-fit-guide' },
               ]}
             />
 
@@ -151,6 +153,8 @@ export default function LeashAndHarnessTrainingPage() {
           { title: 'Bonding With Your Ferret', href: '/behavior/bonding-with-your-ferret' },
           { title: 'Travel & Carriers', href: '/care/travel-and-carriers' },
           { title: 'Vest vs H-Style Harness', href: '/reviews/vest-vs-h-harness-guide', category: 'Reviews' },
+          { title: 'H-Style vs Mesh Harness', href: '/reviews/h-style-vs-mesh-harness-guide' },
+          { title: 'Winter Harness Fit', href: '/reviews/winter-harness-fit-guide' },
         ]}
  priceAsOf="2026-06-04">
         <div className="carloOS-article">

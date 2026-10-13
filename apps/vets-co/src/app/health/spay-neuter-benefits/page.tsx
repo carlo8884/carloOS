@@ -31,6 +31,7 @@ export default function SpayNeuterPage() {
           { title: 'Senior Dog Care', href: '/health/senior-pet-care', category: 'Veterinary Guide' },
           { title: 'Weight Management', href: '/health/weight-management', category: 'Veterinary Guide' },
           { title: 'Find a Vet', href: '/find-a-vet', category: 'Directory' },
+          { title: 'Recovery Cones and E-Collars', href: '/guides/recovery-cone-e-collar' },
         ]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -39,7 +40,7 @@ export default function SpayNeuterPage() {
               <div key={b} className="py-1 border-b border-brand-border last:border-0 text-xs text-brand-text-mid flex gap-2"><span className="text-green-600">✓</span>{b}</div>
             ))}
           </div>
-          <RelatedLinks title="Related Guides" links={[{ label: 'Senior Dog Care', href: '/health/senior-pet-care' }, { label: 'Pain Signs in Dogs', href: '/health/pain-signs-dogs' }, { label: 'Find a Vet', href: '/find-a-vet' }]} />
+          <RelatedLinks title="Related Guides" links={[{ label: 'Senior Dog Care', href: '/health/senior-pet-care' }, { label: 'Pain Signs in Dogs', href: '/health/pain-signs-dogs' }, { label: 'Find a Vet', href: '/find-a-vet' }, { label: 'Recovery Cones and E-Collars', href: '/guides/recovery-cone-e-collar' }]} />
 
                   <CrossPortfolioCard currentSite="vets-co" contentType="health" variant="sidebar" />
 </>}

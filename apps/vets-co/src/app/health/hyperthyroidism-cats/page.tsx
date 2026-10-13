@@ -30,6 +30,7 @@ export default function HyperthyroidismCatsPage() {
           { title: 'Kidney Disease in Cats', href: '/health/kidney-disease-cats', category: 'Veterinary Guide' },
           { title: 'Senior Pet Care', href: '/health/senior-pet-care', category: 'Veterinary Guide' },
           { title: 'Senior Bloodwork Guide', href: '/health/senior-bloodwork-guide', category: 'Veterinary Guide' },
+          { title: 'How to Give Your Pet a Pill', href: '/guides/how-to-give-your-pet-a-pill' },
         ]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
@@ -41,7 +42,7 @@ export default function HyperthyroidismCatsPage() {
               </div>
             ))}
           </div>
-          <RelatedLinks title="Related Guides" links={[{ label: 'Kidney Disease in Cats', href: '/health/kidney-disease-cats' }, { label: 'Senior Pet Care', href: '/health/senior-pet-care' }, { label: 'Senior Bloodwork Guide', href: '/health/senior-bloodwork-guide' }]} />
+          <RelatedLinks title="Related Guides" links={[{ label: 'Kidney Disease in Cats', href: '/health/kidney-disease-cats' }, { label: 'Senior Pet Care', href: '/health/senior-pet-care' }, { label: 'Senior Bloodwork Guide', href: '/health/senior-bloodwork-guide' }, { label: 'How to Give Your Pet a Pill', href: '/guides/how-to-give-your-pet-a-pill' }]} />
 
                   <CrossPortfolioCard currentSite="vets-co" contentType="health" variant="sidebar" />
 </>}

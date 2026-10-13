@@ -593,3 +593,10 @@ test('ferret fix T13: exact-ASIN and search hops carry exactly the env tag, no r
     expect(new URL(res.headers().location).searchParams.getAll('tag'), h).toEqual([AMAZON_TAG])
   }
 })
+
+test('ferret fix IL1: harness, travel and exercise pages link to both harness guides', async ({ page }) => {
+  for (const path of ['/behavior/leash-and-harness-training', '/care/travel-and-carriers', '/care/exercise-and-enrichment']) {
+    await page.goto(path, { waitUntil: 'domcontentloaded' })
+    for (const href of ['/reviews/h-style-vs-mesh-harness-guide', '/reviews/winter-harness-fit-guide']) await expect(page.locator(`a[href="${href}"]`).first(), `${path} ${href}`).toBeAttached()
+  }
+})

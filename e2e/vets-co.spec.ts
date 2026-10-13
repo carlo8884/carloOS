@@ -781,3 +781,16 @@ test('vets fix T13: Amazon hops carry exactly the env tag, no raw Amazon links, 
     expect(new URL(res.headers().location).searchParams.getAll('tag'), h).toEqual([AMAZON_TAG])
   }
 })
+
+test('vets fix IL1: related health pages link to the first-aid kit, recovery cone and pill guides', async ({ page }) => {
+  const map: Record<string, string> = {
+    '/health/emergency-signs': '/guides/pet-first-aid-kit', '/health/heat-stroke-dogs': '/guides/pet-first-aid-kit', '/health/allergic-reactions-dogs': '/guides/pet-first-aid-kit',
+    '/health/spay-neuter-benefits': '/guides/recovery-cone-e-collar', '/health/ear-infections-dogs': '/guides/recovery-cone-e-collar',
+    '/health/heartworm-in-dogs': '/guides/how-to-give-your-pet-a-pill', '/health/intestinal-parasites': '/guides/how-to-give-your-pet-a-pill',
+    '/health/hyperthyroidism-cats': '/guides/how-to-give-your-pet-a-pill', '/health/urinary-tract-infection': '/guides/how-to-give-your-pet-a-pill',
+  }
+  for (const [path, href] of Object.entries(map)) {
+    await page.goto(path, { waitUntil: 'domcontentloaded' })
+    await expect(page.locator(`a[href="${href}"]`).first(), path).toBeAttached()
+  }
+})
