@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, SchemaScript, DirectoryPlacesCta, PriceAsOf} from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, SchemaScript, DirectoryPlacesCta, LastUpdated, FAQAccordion, ArticleSourcesList } from '@carloOS/ui'
 import listings from '../../data/directory-listings.json'
 import { HubMasthead } from '../../components/HubMasthead'
 import { DirectoryPackEmpty } from '../../components/DirectoryPackEmpty'
@@ -26,6 +26,13 @@ const SPECIALISTS = [
   { specialty: 'Dentistry', credential: 'DAVDC', when: 'Complex dental extractions, oral tumors, jaw fractures, advanced periodontal disease, dental radiograph interpretation', abbr: 'DT', color: '#64748B' },
   { specialty: 'Behavioral Medicine', credential: 'DACVB', when: 'Aggression, severe anxiety, separation anxiety, compulsive disorders, medication management for behavioral conditions', abbr: 'BM', color: '#92400E' },
 ]
+const FAQS = [
+  { question: 'What is a board-certified veterinary specialist?', answer: 'A veterinarian who has completed additional training in a specific area of veterinary medicine and passed an examination in that specialty. The AVMA recognizes 22 veterinary specialty organizations covering 48 specialties, including internal medicine, surgery, emergency and critical care, dentistry and behavior.' },
+  { question: 'When should I take my pet to an emergency vet?', answer: 'Go immediately for difficulty breathing, heavy bleeding, seizures, collapse or extreme lethargy, bluish or white gums, straining without passing urine or stool, or failure to eat or drink for 24 hours, according to the Merck Veterinary Manual. Vomiting or diarrhea lasting more than 24 hours needs a vet within 24 hours.' },
+  { question: 'What should I do if my pet ate something poisonous?', answer: 'Call your vet or ASPCA Animal Poison Control at (888) 426-4435. It is open 24 hours a day, 365 days a year, and a consultation fee may apply.' },
+  { question: 'Does this page list clinics?', answer: 'No. These are how-to-choose guides, not a live clinic list. State license records appear in the Vets.co directory only when a state board list has been imported; we do not invent phone numbers, emails or ratings.' },
+]
+
 export default function FindAVetPage() {
   return (
     <>
@@ -57,6 +64,13 @@ export default function FindAVetPage() {
       </div>
 
       <div className="px-container-sm sm:px-container py-14 max-w-5xl">
+        <LastUpdated date="2026-10-13" />
+        <div className="rounded-lg border-l-4 border-brand-primary bg-brand-surface p-5 my-6" data-testid="short-answer">
+          <h2 className="font-display text-lg font-bold mb-2">The short answer</h2>
+          <p className="text-base leading-relaxed text-brand-text-mid m-0">
+            Start with a general practice vet for wellness care and most illnesses; they refer you to a board-certified specialist when needed. Specialists have extra training and passed a specialty exam in one of 48 AVMA-recognized specialties (<a href="https://www.avma.org/education/veterinary-specialties">AVMA</a>). Go to an emergency vet immediately for trouble breathing, heavy bleeding, seizures, collapse or pale or blue gums (<a href="https://www.merckvetmanual.com/multimedia/table/when-to-see-a-veterinarian">Merck Veterinary Manual</a>). For suspected poisoning, call ASPCA Animal Poison Control at (888) 426-4435 (<a href="https://www.aspca.org/pet-care/aspca-poison-control">ASPCA</a>).
+          </p>
+        </div>
         <DirectoryPackEmpty />
         <section id="general" className="mb-16">
           <h2 className="font-display font-black text-brand-dark mb-2" style={{ fontSize: 'clamp(20px, 2.5vw, 32px)' }}>Your General Practice Vet</h2>
@@ -104,8 +118,7 @@ export default function FindAVetPage() {
               ))}
             </div>
             <div className="mt-4 pt-4 border-t border-brand-danger/20">
-              <PriceAsOf date="2026-10-04" />
-              <div className="text-xs text-brand-text-mid">ASPCA Animal Poison Control: <span className="font-bold text-brand-dark">888-426-4435</span> (24/7, $70–100 consultation fee)</div>
+              <div className="text-xs text-brand-text-mid">ASPCA Animal Poison Control: <span className="font-bold text-brand-dark">888-426-4435</span> (24/7; a consultation fee may apply)</div>
             </div>
           </div>
           <Link href="/health/emergency-signs" className="inline-flex min-h-6 items-center text-brand-primary text-sm font-bold no-underline hover:underline">→ Full emergency signs guide (14 signs to know)</Link>
@@ -136,6 +149,16 @@ export default function FindAVetPage() {
             </Link>
             . Until then that directory stays empty. This page does not invent a phone number, email, or rating.
           </p>
+        </section>
+
+        <section id="faq" className="mb-8">
+          <h2 className="font-display font-black text-brand-dark mb-4" style={{ fontSize: 'clamp(20px, 2.5vw, 32px)' }}>Finding a vet: FAQ</h2>
+          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
+          <ArticleSourcesList title="Sources" sources={[
+            { label: 'Veterinary specialties (American Board of Veterinary Specialties)', url: 'https://www.avma.org/education/veterinary-specialties', publisher: 'AVMA' },
+            { label: 'When to See a Veterinarian (general guidance for pets)', url: 'https://www.merckvetmanual.com/multimedia/table/when-to-see-a-veterinarian', publisher: 'Merck Veterinary Manual' },
+            { label: 'ASPCA Poison Control', url: 'https://www.aspca.org/pet-care/aspca-poison-control', publisher: 'ASPCA' },
+          ]} />
         </section>
       </div>
       <DirectoryPlacesCta listings={listings} noun="licensed veterinarians" />
