@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, ShopCtas, LastUpdated } from '@carloOS/ui'
+import { buildMetadata, FAQAccordion, ArticleLayout, CrossPortfolioCard, RelatedLinks, ShopCtas, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Senior Dog Care — Biannual Exams, Screening | Vets.co', description: 'Senior dogs need more frequent veterinary care, not less. The biannual exam protocol, what screenings matter at 7+.', path: '/health/senior-pet-care', type: 'article' })
@@ -9,11 +9,25 @@ const SOURCES = [
   { label: 'AAHA: 2023 Senior Care Guidelines for Dogs and Cats', url: 'https://www.aaha.org/wp-content/uploads/globalassets/02-guidelines/2023-aaha-senior-care-guidelines-for-dogs-and-cats/resources/2023-aaha-senior-care-guidelines-for-dogs-and-cats.pdf', publisher: 'AAHA' },
   { label: 'AVMA: Senior Pet Care', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/senior-pets', publisher: 'AVMA' },
 ]
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Senior Dog Care Guide', description: 'Biannual exams, screening protocols, and quality of life for senior dogs.', url: 'https://vets.co/health/senior-pet-care', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-12T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Senior Dog Care Guide', description: 'Biannual exams, screening protocols, and quality of life for senior dogs.', url: 'https://vets.co/health/senior-pet-care', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-13T00:00:00Z' ,
   citation: SOURCES,
 })
 const med = buildMedicalWebPageSchema({ name: 'Senior Dog Care', description: 'Veterinary care protocols and quality of life for aging dogs.', url: 'https://vets.co/health/senior-pet-care', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-07' })
 const combined = combineSchemas(schema, med)
+const FAQS = [
+  {
+    "question": "How often should a senior dog see the vet?",
+    "answer": "Twice a year or more for dogs over 7 to 8 years old, according to the Merck Veterinary Manual, compared with at least once a year for adult dogs. Older dogs are more likely to get sick, so more frequent visits help catch problems early."
+  },
+  {
+    "question": "What signs mean my older dog should see a vet?",
+    "answer": "Merck lists not eating, being less active, vomiting or diarrhea, urinating more or less often than usual, coughing or sneezing, discharge from the eyes, ears, or nose, hair loss, itching or red spots, and limping. If any of these last more than a day or two, schedule a vet visit."
+  },
+  {
+    "question": "Do senior dogs need dental care?",
+    "answer": "Yes. Merck recommends regular tooth brushing with a dog toothbrush and toothpaste, dry food, dental toys, and professional cleanings as needed to prevent plaque and tartar buildup that can lead to gum disease."
+  }
+]
 export default function SeniorPetCarePage() {
   return (
     <>
@@ -44,8 +58,12 @@ export default function SeniorPetCarePage() {
       >
         <div className="carloOS-article">
 
-          <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-06-07T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-12" />
+          <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-10-13T00:00:00Z" reviewedBy="Editorial team" />
+          <LastUpdated date="2026-10-13" />
+
+          <CalloutBox variant="info" title="Short answer">
+            <p>The Merck Veterinary Manual advises vet checkups twice a year or more for senior dogs (over 7 to 8 years old), compared with at least once a year for adults, because older dogs are more likely to get sick. Your vet may suggest blood tests or x-rays to catch problems early. Between visits, book an appointment if your dog shows signs of illness for more than a day or two. Source: <a href="https://www.merckvetmanual.com/dog-owners/routine-care-of-dogs/routine-health-care-of-dogs">Merck Veterinary Manual (dog owner version)</a>.</p>
+          </CalloutBox>
 
           <h2>Why Biannual Exams Matter</h2>
           <DropCap>A year in a senior dog&apos;s life corresponds to 5–7 human years. Conditions that develop gradually — dental disease, kidney disease, hypothyroidism, arthritis, cardiac disease, early cancer — can progress from manageable to advanced within one annual exam cycle. The standard of care for dogs 7+ is twice-yearly comprehensive examinations. This is not excessive — it is appropriate for the rate at which senior dogs&apos; health changes.</DropCap>
@@ -101,6 +119,9 @@ export default function SeniorPetCarePage() {
               />
           </div>
           </div>
+          <h2 id="faq">Frequently asked questions</h2>
+          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
+
 
           <ArticleSourcesList sources={SOURCES} />
         </div>

@@ -960,3 +960,12 @@ test('vets fix OG1: og:image renders a real 1200x630 PNG', async ({ page, reques
   expect(body.readUInt32BE(16)).toBe(1200)
   expect(body.readUInt32BE(20)).toBe(630)
 })
+
+test('vets fix AF9: senior care page leads with a sourced short answer and FAQ schema', async ({ page }) => {
+  await page.goto('/health/senior-pet-care', { waitUntil: 'domcontentloaded' })
+  await expect(page.locator('.carloOS-article').filter({ hasText: 'Short answer' }).first()).toContainText('twice a year or more')
+  await expect(page.locator('a[href="https://www.merckvetmanual.com/dog-owners/routine-care-of-dogs/routine-health-care-of-dogs"]').first()).toBeAttached()
+  await expect(page.getByText('How often should a senior dog see the vet?').first()).toBeVisible()
+  const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
+  expect(ld).toContain('"FAQPage"')
+})
