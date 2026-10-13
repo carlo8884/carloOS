@@ -1,7 +1,7 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import { TableShopLink, ComparisonFoot, EmailCapture, FAQAccordion, buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, ReviewCard, StockImage, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
-import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript, buildItemListSchema, QuietPartnerLink} from '@carloOS/ui'
+import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript, buildItemListSchema} from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -21,7 +21,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-01T00:00:00Z',
+  modifiedAt: '2026-10-13T00:00:00Z',
 })
 
 const med = buildMedicalWebPageSchema({
@@ -53,7 +53,6 @@ export default function WholePreyVsKibblePage() {
             <div className="mb-4" data-primary-hop="true">
               <a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" data-shop-placement="hero" href="/go/amazon/B019W9VXZK?s=whole-prey-vs-kibble">Check price of Wysong Epigen 90 on Amazon →</a>
             </div>
-            <QuietPartnerLink tone="dark" href="/go/wysong/epigen-90?s=diet-whole-prey-vs-kibble" label="Check price of Wysong Epigen 90 from Wysong" />
           </>
         }
         hero={{
@@ -122,7 +121,7 @@ export default function WholePreyVsKibblePage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-01"
+            updatedAt="2026-10-13"
             reviewedBy="Editorial team"
           />
           <EmailCapture
@@ -226,10 +225,6 @@ export default function WholePreyVsKibblePage() {
             cons={['Premium price', 'Less dental abrasion than whole prey']}
             price="$30–50 / 5 lb"
             priceNote="dated 2026-10-05."
-            ctaText="Check price of Wysong Epigen 90 from Wysong"
-            ctaHref="/go/wysong/epigen-90?s=diet-whole-prey-vs-kibble"
-            ctaAffiliateProgram="wysong"
-            ctaAffiliateProduct="epigen-90"
           />
           <p>If the kibble choice is this bag or the chain-shelf Marshall Premium, the <a href="/reviews/wysong-vs-marshall-kibble-guide">Wysong versus Marshall guide</a> prints both guaranteed analyses. Carbohydrate is not on either label.</p>
           <ReviewCard quietUntilTag
@@ -270,7 +265,7 @@ export default function WholePreyVsKibblePage() {
               <tbody>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 text-brand-text-mid">A shelf-stable base a sitter can feed</td>
-                  <td className="p-3 font-bold text-brand-dark"><a href="#wysong-epigen-90" className="text-brand-primary">Wysong Epigen 90</a><TableShopLink quietUntilTag href={"/go/wysong/epigen-90?s=diet-whole-prey-vs-kibble"} product={"Wysong Epigen 90"} /></td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#wysong-epigen-90" className="text-brand-primary">Wysong Epigen 90</a></td>
                   <td className="p-3 text-brand-text-mid">Kibble model. Starch-free. $30–50 / 5 lb</td>
                   <td className="p-3 text-brand-text-mid">You want the dental abrasion of whole prey. The card says kibble gives less of that, and the price is premium</td>
                 </tr>
@@ -283,7 +278,7 @@ export default function WholePreyVsKibblePage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-11" />
+          <ComparisonFoot updated="2026-10-13" />
 
           <h2 id="faq">FAQ</h2>
           <p>Those figures are typical US ranges dated 2026-10-05.</p>

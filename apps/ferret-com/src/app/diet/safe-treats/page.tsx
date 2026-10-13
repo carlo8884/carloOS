@@ -21,7 +21,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-06-11T00:00:00Z',
+  modifiedAt: '2026-10-13T00:00:00Z',
 })
 
 const med = buildMedicalWebPageSchema({
@@ -132,7 +132,7 @@ export default function SafeTreatsPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-06-11"
+            updatedAt="2026-10-13"
             reviewedBy="Editorial team"
           />
 
@@ -212,10 +212,6 @@ export default function SafeTreatsPage() {
             cons={['Pricier per ounce than bulk treats', 'Still calorie-dense — portion carefully']}
             price="see current price / pack"
             priceNote="dated 2026-06-01."
-            ctaText="Find Wysong Freeze-Dried Treats"
-            ctaHref="/go/wysong/freeze-dried-treats?s=diet-safe-treats"
-            ctaAffiliateProgram="wysong"
-            ctaAffiliateProduct="freeze-dried-treats"
           />
 
           <h2 id="faq">FAQ</h2>
