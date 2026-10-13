@@ -239,7 +239,7 @@ test('ferret fix T6: grooming page drops unsourced vet-approved and practice-sta
   const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
   expect(ld).not.toMatch(removed)
   await expect(page.locator('#pet-ear-cleaner')).toContainText('Pet Ear Cleaner (Epi-Otic style)')
-  await expect(page.locator('#marshall-ferret-shampoo')).toContainText('A sensible default for the every-2–3-month bathing schedule.')
+  await expect(page.locator('#marshall-ferret-shampoo')).toContainText('A sensible default for a ferret bathed only a few times a year.')
 })
 
 test('ferret fix M5: wood litter and ear cleaner cards get one Amazon search button; held and unmatched cards stay unlinked', async ({ page }) => {
@@ -652,4 +652,21 @@ test('ferret fix SD1: rendered JSON-LD on key templates parses and has no struct
   const problems: string[] = []
   for (const path of ['/', '/reviews/best-ferret-cage', '/behavior/biting-and-nipping', '/tools/cage-size-calculator', '/diet/best-ferret-kibble', '/first-year-schedule']) problems.push(...(await jsonLdProblems(request, path)))
   expect(problems).toEqual([])
+})
+
+test('ferret fix AF2: grooming and nail pages lead with a sourced short answer that matches Merck and Lafeber', async ({ page }) => {
+  await page.goto('/care/bathing-and-grooming', { waitUntil: 'domcontentloaded' })
+  const article = page.locator('main')
+  await expect(article.getByText('Short answer:').first()).toBeVisible()
+  await expect(article).toContainText('two to four times a year')
+  await expect(article).toContainText('every 1 to 2 weeks')
+  await expect(article).not.toContainText(/every 2-3 months|every 2-3 weeks|every 2–3 weeks|every 2-4 weeks|every 2–4 weeks|not human clippers/)
+  await expect(page.locator('a[href="https://www.merckvetmanual.com/all-other-pets/ferrets/routine-health-care-for-ferrets"]').first()).toBeAttached()
+  await expect(page.locator('a[href="https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf"]').first()).toBeAttached()
+  await page.goto('/care/nail-trimming', { waitUntil: 'domcontentloaded' })
+  await expect(page.locator('main').getByText('Short answer').first()).toBeVisible()
+  await expect(page.locator('main')).toContainText('Never declaw a ferret')
+  await expect(page.locator('main')).not.toContainText('tend to crush rather than cleanly cut')
+  const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
+  expect(ld).toContain('a nail clipper made for humans may be used')
 })
