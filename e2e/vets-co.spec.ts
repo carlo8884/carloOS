@@ -804,6 +804,15 @@ test('vets fix IL2: oral medication pages link to the pill guide, injectable Cyt
   await expect(page.locator('a[href="/guides/how-to-give-your-pet-a-pill"]')).toHaveCount(0)
 })
 
+test('vets fix AI1: llms.txt matches the site (Amazon disclosure, no scores, guides listed)', async ({ request }) => {
+  const res = await request.get('/llms.txt')
+  expect(res.status()).toBe(200)
+  const t = await res.text()
+  expect(t).not.toMatch(/does not promote pet-retail|promotes insurance only|editorial scoring/)
+  expect(t).toContain('Amazon Associate')
+  for (const p of ['/guides/pet-first-aid-kit', '/guides/recovery-cone-e-collar', '/guides/how-to-give-your-pet-a-pill', '/how-we-pick', '/disclosure']) expect(t).toContain(p)
+  for (const m of t.matchAll(/\]\(https:\/\/vets\.co(\/[^)]*)\)/g)) expect((await request.get(m[1])).status(), m[1]).toBe(200)
+})
 test('vets fix TS2: journal citations link to their DOI, unverifiable citations and the unsourced remission rate are gone', async ({ page }) => {
   const want: Record<string, string[]> = {
     '/health/bloat-gdv-dogs': ['10.2460/javma.2000.216.40'],

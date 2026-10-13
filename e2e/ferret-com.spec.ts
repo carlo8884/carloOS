@@ -632,6 +632,11 @@ test('ferret fix TS1: money review sources are verifiable, vague aggregate citat
   }
 })
 
+test('ferret fix AI1: llms.txt lists the money reviews and every linked path resolves', async ({ request }) => {
+  const t = await (await request.get('/llms.txt')).text()
+  for (const p of ['/reviews/best-ferret-cage', '/reviews/best-ferret-litter', '/reviews/best-ferret-harness', '/diet/best-ferret-kibble', '/how-we-pick']) expect(t).toContain(p)
+  for (const m of t.matchAll(/\]\(https:\/\/ferret\.com(\/[^)]*)\)/g)) expect((await request.get(m[1])).status(), m[1]).toBe(200)
+})
 test('ferret fix TS2: cage size and wood-litter claims are sourced, unsourced phenol and floor-space lines gone', async ({ page }) => {
   await page.goto('/reviews/best-ferret-cage', { waitUntil: 'domcontentloaded' })
   await expect(page.locator('body')).not.toContainText(/two feet by three feet|common community guideline/)
