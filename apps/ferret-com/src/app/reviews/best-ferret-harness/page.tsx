@@ -17,7 +17,7 @@ const PAGE_URL = 'https://ferret.com/reviews/best-ferret-harness'
 const SOURCES = [
   { label: 'Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery (behavior & restraint)', publisher: 'Quesenberry & Carpenter, Saunders/Elsevier' },
   { label: 'Ferret harness fit, leash training, and outdoor-safety guidance', publisher: 'American Ferret Association' },
-  { label: 'Small-mammal harness and restraint safety', publisher: 'Exotic-mammal veterinary husbandry references' },
+  { label: 'PetMD: How to Train Your Ferret to Walk on a Leash', url: 'https://www.petmd.com/ferret/training/how-leash-train-and-walk-your-ferret', publisher: 'PetMD' },
   { label: 'Manufacturer sizing charts and fit instructions', publisher: 'Ferret harness manufacturers' },
 ]
 const schema = buildArticleSchema({
@@ -246,6 +246,9 @@ export default function BestFerretHarnessPage() {
             Check for rough stitching or hard buckle edges that sit against the armpit or chest. Comfort is not a
             luxury here: a harness that pinches teaches the ferret to fight it, which makes every future walk harder.
           </p>
+
+          <h2 id="vet-references">What the veterinary references say</h2>
+          <p><a href="https://www.petmd.com/ferret/training/how-leash-train-and-walk-your-ferret">PetMD</a> says ferrets should walk in a snug harness, not a collar, because they slip out of collars easily. It advises practicing indoors first, keeping walks to about 5 to 10 minutes, and asking your vet about parasite prevention before going outside.</p>
 
           <h2 id="picks">Harnesses That Meet the Criteria</h2>
           <p>

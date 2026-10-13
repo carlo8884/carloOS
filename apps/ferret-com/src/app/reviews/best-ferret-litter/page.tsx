@@ -16,9 +16,11 @@ const PAGE_URL = 'https://ferret.com/reviews/best-ferret-litter'
 
 const SOURCES = [
   { label: 'Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery (husbandry & respiratory disease)', publisher: 'Quesenberry & Carpenter, Saunders/Elsevier' },
-  { label: 'Softwood bedding phenols and small-mammal respiratory irritation (review of the literature)', publisher: 'Laboratory-animal husbandry references' },
+  { label: 'Merck Veterinary Manual: Providing a Home for a Ferret', url: 'https://www.merckvetmanual.com/all-other-pets/ferrets/providing-a-home-for-a-ferret', publisher: 'Merck Veterinary Manual' },
+  { label: 'Merck Veterinary Manual: Management of Ferrets (housing)', url: 'https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/management-of-ferrets', publisher: 'Merck Veterinary Manual' },
   { label: 'Ferret litter and bedding guidance', publisher: 'American Ferret Association' },
-  { label: 'Clumping-litter ingestion hazard in small mammals', publisher: 'Exotic-mammal veterinary clinical references' },
+  { label: 'Lafeber Vet: Care of the Pet Ferret (client handout)', url: 'https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf', publisher: 'Lafeber Company' },
+  { label: 'VCA Animal Hospitals: Ferrets - Housing', url: 'https://vcahospitals.com/know-your-pet/ferrets---housing', publisher: 'VCA Animal Hospitals' },
 ]
 const schema = buildArticleSchema({
   siteId: 'ferret-com',
@@ -248,6 +250,10 @@ export default function BestFerretLitterPage() {
             high-backed corner box and a litter mat help. Avoid the temptation to switch to a perfumed clumping litter
             for odor — that trades a real safety margin for a cosmetic one. That no-clumping rule, next to where the box sits in the cage, is in the <a href="/care/cage-setup" className="text-brand-primary underline">cage-setup guide</a>.
           </p>
+
+          <h2 id="vet-references">What the veterinary references say</h2>
+          <p>The <a href="https://www.merckvetmanual.com/all-other-pets/ferrets/providing-a-home-for-a-ferret">Merck Veterinary Manual</a> advises against clumping cat litter, which may cause respiratory problems in ferrets, and notes that cedar releases an oil that may be toxic to them. Merck&apos;s <a href="https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/management-of-ferrets">ferret management chapter</a> adds that sawdust and wood shavings are not recommended because the dust can irritate the upper airway.</p>
+          <p><a href="https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf">Lafeber&apos;s ferret care handout</a> prefers pelleted recycled-paper or natural-fiber litter as cleaner, more absorbent and non-toxic if swallowed. <a href="https://vcahospitals.com/know-your-pet/ferrets---housing">VCA Animal Hospitals</a> says ferrets can be trained to a box of recycled paper pellet litter set in a cage corner.</p>
 
           <h2 id="picks">Litters That Meet the Criteria</h2>
           <p>

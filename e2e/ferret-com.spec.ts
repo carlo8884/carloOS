@@ -614,3 +614,20 @@ test('ferret fix IL3: care pages link to the cage, litter and molt-brush compari
     for (const href of hrefs) await expect(page.locator(`a[href="${href}"]`).first(), `${path} ${href}`).toBeAttached()
   }
 })
+
+test('ferret fix TS1: money review sources are verifiable, vague aggregate citations removed', async ({ page }) => {
+  const vague = /House Rabbit Society|Exotic-mammal veterinary|Laboratory-animal husbandry references/
+  const want: Record<string, string[]> = {
+    '/reviews/best-ferret-cage': ['https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/management-of-ferrets', 'https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf', 'https://vcahospitals.com/know-your-pet/ferrets---housing'],
+    '/reviews/best-ferret-harness': ['https://www.petmd.com/ferret/training/how-leash-train-and-walk-your-ferret'],
+    '/reviews/best-ferret-litter': ['https://www.merckvetmanual.com/all-other-pets/ferrets/providing-a-home-for-a-ferret', 'https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/management-of-ferrets', 'https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf', 'https://vcahospitals.com/know-your-pet/ferrets---housing'],
+  }
+  for (const [path, hrefs] of Object.entries(want)) {
+    await page.goto(path, { waitUntil: 'domcontentloaded' })
+    await expect(page.locator('body')).not.toContainText(vague)
+    await expect(page.locator('h2#vet-references')).toBeVisible()
+    for (const href of hrefs) await expect(page.locator(`a[href="${href}"]`).first(), `${path} ${href}`).toBeAttached()
+    const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
+    expect(ld, path).not.toMatch(vague)
+  }
+})
