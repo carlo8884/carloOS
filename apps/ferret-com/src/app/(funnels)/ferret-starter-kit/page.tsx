@@ -7,6 +7,8 @@ import {
   combineSchemas,
   SchemaScript,
   AffiliateDisclosure,
+  CalloutBox,
+  FAQAccordion,
 } from '@carloOS/ui'
 import { heldShopText, liveAnchorHref } from '@carloOS/config/affiliate-hop'
 import { STARTER_KIT, BUDGET_SUMMARIES } from '../../../data/starter-kit'
@@ -63,7 +65,7 @@ const schema = combineSchemas(
     imageUrl: '',
     authorName: 'Ferret.com Editorial',
     publishedAt: '2026-05-30T00:00:00Z',
-    modifiedAt: '2026-05-30T00:00:00Z',
+    modifiedAt: '2026-10-13T00:00:00Z',
   }),
   buildBreadcrumbSchema({
     items: [
@@ -75,6 +77,25 @@ const schema = combineSchemas(
     ],
   }),
 )
+
+const FAQS = [
+  {
+    question: 'What size cage does a ferret need?',
+    answer: "The Merck Veterinary Manual says a wire cage at least 3 feet wide by 3 feet deep by 2 feet high is sufficient. Check it for sharp wire and escape gaps, and pad the bottom or choose a solid floor, because bare wire can hurt a ferret's paws.",
+  },
+  {
+    question: 'What litter should I use for a ferret?',
+    answer: 'Merck says a cat litter box cut down to size and cat litter can be used, but avoid clumping litter, which may cause respiratory problems. Keep the box in the cage, away from the sleeping and eating areas.',
+  },
+  {
+    question: 'What bedding is safe for ferrets?',
+    answer: 'Merck suggests a clean towel or small blanket, checking that the fabric does not unravel and the ferret does not eat it, and notes ferrets often enjoy hammocks or fabric huts. Do not use newspaper or wood chips; cedar releases oil that may be toxic to ferrets.',
+  },
+  {
+    question: 'How much time does a ferret need out of its cage?',
+    answer: 'At minimum 2 to 4 hours every day, supervised or in a ferret-proofed space, according to the Merck Veterinary Manual.',
+  },
+]
 
 export default function FerretStarterKitPage() {
   return (
@@ -93,11 +114,17 @@ export default function FerretStarterKitPage() {
         Ferret Starter Kit — Everything You Need Before Your Ferret Comes Home
       </h1>
       <p className="text-lg text-brand-text-mid mb-6 leading-relaxed">
-        Bringing home a ferret without the right gear is the single most
-        common reason new owners panic and rehome within 90 days. This is the
+        Having the cage, bedding, litter and food set up before your ferret
+        arrives makes the first weeks easier for both of you. This is the
         shopping list we&apos;d hand to ourselves if we were starting over —
         broken into 5 categories at 3 budget tiers, with every pick justified.
       </p>
+
+      <CalloutBox variant="info" title="Short answer">
+        <p>
+          Before day one, a ferret needs a wire cage at least 3 feet wide, 3 feet deep and 2 feet high with a solid or padded floor, soft bedding or a hammock, a litter box with non-clumping litter, sturdy food and water containers, and a ferret food. Plan for 2 to 4 hours of supervised time out of the cage every day (<a href="https://www.merckvetmanual.com/all-other-pets/ferrets/providing-a-home-for-a-ferret">Merck Veterinary Manual</a>).
+        </p>
+      </CalloutBox>
 
       <AffiliateDisclosure variant="inline" siteId="ferret-com" />
 
@@ -171,6 +198,14 @@ export default function FerretStarterKitPage() {
           </div>
         </section>
       ))}
+
+      <section className="mt-12">
+        <h2 id="faq" className="font-display text-2xl font-bold mb-4">Frequently Asked Questions</h2>
+        <FAQAccordion items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
+        <p className="text-sm text-brand-text-light mt-4">
+          Source: <a href="https://www.merckvetmanual.com/all-other-pets/ferrets/providing-a-home-for-a-ferret">Merck Veterinary Manual, Providing a Home for a Ferret</a>.
+        </p>
+      </section>
 
       {/* ─── Insurance cross-link ─────────────────────────────────────────── */}
       <section className="mt-12 bg-brand-surface rounded-lg p-6 border-l-4 border-brand-primary">
