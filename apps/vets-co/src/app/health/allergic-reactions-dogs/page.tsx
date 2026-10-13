@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, ShopCtas, LastUpdated } from '@carloOS/ui'
+import { buildMetadata, FAQAccordion, CalloutBox, ArticleLayout, CrossPortfolioCard, RelatedLinks, ShopCtas, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 
@@ -9,11 +9,29 @@ const SOURCES = [
   { label: 'Merck Veterinary Manual: Anaphylactic Reactions in Dogs', url: 'https://www.merckvetmanual.com/dog-owners/immune-disorders-of-dogs/disorders-involving-anaphylactic-reactions-type-i-reactions-atopy-in-dogs', publisher: 'Merck Vet Manual' },
   { label: 'AVMA: Allergic Reactions in Pets', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/allergies-pets', publisher: 'AVMA' },
 ]
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Allergic Reactions in Dogs', description: 'Hives, anaphylaxis, and vaccine reactions in dogs — when to treat at home vs emergency care.', url: 'https://vets.co/health/allergic-reactions-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-12T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Allergic Reactions in Dogs', description: 'Hives, anaphylaxis, and vaccine reactions in dogs — when to treat at home vs emergency care.', url: 'https://vets.co/health/allergic-reactions-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-13T00:00:00Z' ,
   citation: SOURCES,
 })
 const med = buildMedicalWebPageSchema({ name: 'Allergic Reactions in Dogs', description: 'Hives, anaphylaxis, and emergency management of acute allergic reactions in dogs.', url: 'https://vets.co/health/allergic-reactions-dogs', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-07' })
 const combined = combineSchemas(schema, med)
+const FAQS = [
+  {
+    "question": "What are the signs of anaphylaxis in a dog?",
+    "answer": "The Merck Veterinary Manual notes that in dogs anaphylaxis mainly affects the liver and gut rather than the lungs, so the major signs are sudden diarrhea, excessive drooling, vomiting, shock, seizures, and collapse. Gums may be pale, limbs cold, and the pulse fast but weak."
+  },
+  {
+    "question": "How quickly do hives appear after an allergic trigger?",
+    "answer": "Hives and swelling generally develop within 20 minutes of exposure, according to Merck. Swelling is most often seen on the face, especially the lips, muzzle, and around the eyes."
+  },
+  {
+    "question": "Are hives in dogs dangerous?",
+    "answer": "Merck describes hives as the least severe type of anaphylactic reaction. They are usually not life-threatening and typically go away once the trigger is removed. Facial swelling severe enough to close the eyes, or any vomiting, weakness, or collapse, needs a vet."
+  },
+  {
+    "question": "How do vets treat anaphylaxis in dogs?",
+    "answer": "A veterinarian can give intravenous epinephrine (adrenaline) to counteract the reaction, plus treatment for related problems such as difficulty breathing, according to the Merck Veterinary Manual."
+  }
+]
 
 
 export default function AllergicReactionsPage() {
@@ -45,7 +63,11 @@ export default function AllergicReactionsPage() {
 </>}
       >
         <div className="carloOS-article">
-          <LastUpdated date="2026-10-12" />
+          <LastUpdated date="2026-10-13" />
+
+          <CalloutBox variant="info" title="Short answer">
+            <p>Hives and facial swelling usually appear within about 20 minutes of exposure to a trigger such as a drug, food, or insect bite. They are rarely life-threatening and often fade once the trigger is gone, and vets treat them with antihistamines. Anaphylaxis is different: it is rare but an extreme emergency. In dogs the main signs are sudden diarrhea, vomiting, heavy drooling, pale gums, cold limbs, collapse, or seizures. Get emergency veterinary care immediately. Source: <a href="https://www.merckvetmanual.com/dog-owners/immune-disorders-of-dogs/disorders-involving-anaphylactic-reactions-type-i-reactions-atopy-in-dogs">Merck Veterinary Manual</a>.</p>
+          </CalloutBox>
 
           <h2>Types of Allergic Reaction — Severity Spectrum</h2>
           <p><strong>Mild (localized hives/urticaria):</strong> Raised bumpy welts on the skin, often visible as hair standing up in patches across the body. The dog may scratch at affected areas. No facial swelling, no respiratory signs, the dog is alert and mobile. Most common after insect stings, contact with allergens, or certain vaccines. This is the mildest form of allergic reaction — concerning but not immediately life-threatening.</p>
@@ -104,6 +126,9 @@ export default function AllergicReactionsPage() {
               />
           </div>
           </div>
+          <h2 id="faq">Frequently asked questions</h2>
+          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
+
 
           <ArticleSourcesList sources={SOURCES} />
         </div>

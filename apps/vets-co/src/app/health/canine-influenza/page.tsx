@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, ShopCtas, LastUpdated } from '@carloOS/ui'
+import { buildMetadata, FAQAccordion, CalloutBox, ArticleLayout, CrossPortfolioCard, RelatedLinks, ShopCtas, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Canine Influenza (Dog Flu) — H3N8, H3N2 | Vets.co', description: 'Canine influenza is caused by H3N8 and H3N2 strains. Highly contagious among dogs. Vaccine recommended for dogs that attend boarding, doggy daycare.', path: '/health/canine-influenza', type: 'article' })
@@ -8,11 +8,29 @@ const SOURCES = [
   { label: 'AVMA: Canine Influenza', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/canine-influenza', publisher: 'AVMA' },
   { label: 'Merck Veterinary Manual: Canine Influenza', url: 'https://www.merckvetmanual.com/respiratory-system/respiratory-diseases-of-small-animals/canine-influenza-flu', publisher: 'Merck Vet Manual' },
 ]
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Canine Influenza (Dog Flu)', description: 'H3N8 and H3N2 canine influenza — signs, treatment, and vaccination recommendations.', url: 'https://vets.co/health/canine-influenza', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-12T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Canine Influenza (Dog Flu)', description: 'H3N8 and H3N2 canine influenza — signs, treatment, and vaccination recommendations.', url: 'https://vets.co/health/canine-influenza', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-13T00:00:00Z' ,
   citation: SOURCES,
 })
 const med = buildMedicalWebPageSchema({ name: 'Canine Influenza', description: 'Dog flu — H3N8 and H3N2 strains, signs, and vaccination.', url: 'https://vets.co/health/canine-influenza', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-07' })
 const combined = combineSchemas(schema, med)
+const FAQS = [
+  {
+    "question": "How long is a dog with canine influenza contagious?",
+    "answer": "According to the Merck Veterinary Manual, dogs are most contagious 2 to 4 days after infection, can spread the virus before they show signs, and should be considered contagious for up to 4 weeks after exposure."
+  },
+  {
+    "question": "Do antibiotics treat dog flu?",
+    "answer": "No. Merck says antibiotics have no effect on the influenza virus itself, though a vet may use them for a secondary bacterial infection. The antiviral oseltamivir is neither approved nor recommended for dogs with canine influenza."
+  },
+  {
+    "question": "Can people catch canine influenza?",
+    "answer": "Merck reports no evidence of the H3N2 canine influenza virus spreading from dogs to people. Cats have been infected with H3N2."
+  },
+  {
+    "question": "How many doses does the canine influenza vaccine need?",
+    "answer": "Two doses are needed for an effective immune response, per the Merck Veterinary Manual. Vaccines are available for H3N8, H3N2, or both strains combined."
+  }
+]
 export default function CanineInfluenzaPage() {
   return (
     <>
@@ -39,17 +57,21 @@ export default function CanineInfluenzaPage() {
 </>}
       >
         <div className="carloOS-article">
-          <LastUpdated date="2026-10-12" />
+          <LastUpdated date="2026-10-13" />
+
+          <CalloutBox variant="info" title="Short answer">
+            <p>Canine influenza (dog flu) spreads between dogs through the air, shared objects such as water bowls, and people's hands and clothes. Most infected dogs get a mild illness with a cough that lasts 1 to 3 weeks; some develop high fever and pneumonia. Treatment is supportive and most dogs recover in 2 to 3 weeks. Vaccines need two doses, and there is no evidence the H3N2 strain spreads from dogs to people. Source: <a href="https://www.merckvetmanual.com/respiratory-system/respiratory-diseases-of-small-animals/canine-influenza-flu">Merck Veterinary Manual</a>.</p>
+          </CalloutBox>
 
           <h2>How Canine Influenza Spreads</h2>
           <p>Canine influenza is transmitted through respiratory secretions — direct dog-to-dog contact, airborne droplets (sneezing, coughing), and contact with contaminated surfaces (water bowls, kennel surfaces, human hands that have touched infected dogs). Virtually all dogs exposed to the virus develop infection — canine influenza viruses are novel to the dog immune system, meaning there is minimal pre-existing immunity in unvaccinated populations. This is different from kennel cough (Bordetella), where healthy adults with prior exposure may resist infection — essentially all naïve dogs exposed to influenza become infected.</p>
-          <p>The incubation period is 2–4 days — dogs can shed virus before showing signs. A dog returning from a boarding facility may have been exposed and be shedding virus before coughing begins. This is why isolation of any dog returning from high-exposure environments (boarding, dog shows, dog parks during outbreak periods) for 7 days before returning to contact with other dogs is the responsible protocol during active outbreaks. A double-door wire dog crate in a separate room is how that 7-day isolation becomes a physical setup instead of a hope the dogs stay apart — it is not a recovery crate, not a soft-sided crate, not a wire crate with a divider panel, and not an airline crate. It does not prevent infection and it does not replace a veterinarian. A pet-safe kennel disinfectant spray is how bowls and kennel surfaces get a pass after a boarding or daycare return — it is not accelerated hydrogen peroxide labeled for parvovirus, not an enzymatic stain cleaner, and not a small-animal cage cleaner. Hands that touched the returning dog should be washed before they touch the household dogs. These are household isolation tools, not treatments.</p>
+          <p>The incubation period is 1–5 days, dogs are most contagious 2–4 days after infection, and they can shed virus before showing signs (Merck Veterinary Manual). A dog returning from a boarding facility may have been exposed and be shedding virus before coughing begins. This is why isolation of any dog returning from high-exposure environments (boarding, dog shows, dog parks during outbreak periods) for 7 days before returning to contact with other dogs is the responsible protocol during active outbreaks. A double-door wire dog crate in a separate room is how that 7-day isolation becomes a physical setup instead of a hope the dogs stay apart — it is not a recovery crate, not a soft-sided crate, not a wire crate with a divider panel, and not an airline crate. It does not prevent infection and it does not replace a veterinarian. A pet-safe kennel disinfectant spray is how bowls and kennel surfaces get a pass after a boarding or daycare return — it is not accelerated hydrogen peroxide labeled for parvovirus, not an enzymatic stain cleaner, and not a small-animal cage cleaner. Hands that touched the returning dog should be washed before they touch the household dogs. These are household isolation tools, not treatments.</p>
 
           <h2>H3N8 vs H3N2</h2>
-          <p>H3N8 (equine-origin, adapted to dogs circa 2004): emerged in US racing greyhounds, spread to pet population. Currently less prevalent than H3N2 in most US regions. H3N2 (avian-origin, introduced from Asia circa 2015): more recently introduced, associated with several major regional outbreaks including the large 2015 Chicago outbreak. H3N2 appears more contagious in the dog population. Both strains cause similar clinical illness; both are covered by the bivalent canine influenza vaccine.</p>
+          <p>H3N8 (equine-origin, adapted to dogs circa 2004): emerged in US racing greyhounds, spread to pet population. Merck notes it is not known whether H3N8 strains are still circulating, and active H3N8 infection is very rare, if it occurs at all. H3N2 (avian-origin, introduced from Asia circa 2015): more recently introduced, associated with several major regional outbreaks including the large 2015 Chicago outbreak. H3N2 appears more contagious in the dog population. Both strains cause similar clinical illness; vaccines are available for each strain and as a combined vaccine.</p>
 
           <h2>Treatment</h2>
-          <p>No specific antiviral treatment exists for canine influenza in dogs (canine-labeled antivirals are not available). Treatment is supportive: rest, fluid support for dehydrated or anorectic dogs, anti-inflammatory medication for fever, and antibiotics if secondary bacterial pneumonia develops (the most serious complication). Most dogs with mild illness recover in 2–4 weeks without veterinary intervention beyond rest and monitoring. Dogs with fever, complete anorexia, difficulty breathing, or signs of pneumonia (productive cough, rapid/labored breathing) require veterinary evaluation and possibly hospitalization. An analog wall clock with a second hand is how rapid or labored breathing gets a one-minute count during isolation rest — it is not a digital pet thermometer, not a cool-mist humidifier, and not a handheld stopwatch. A rising count or labored effort is a reason to call the veterinarian, not a diagnosis of pneumonia, and not a substitute for the clinic that decides whether supportive care or hospitalization is indicated.</p>
+          <p>No specific antiviral treatment exists for canine influenza in dogs (canine-labeled antivirals are not available). Treatment is supportive: rest, fluid support for dehydrated or anorectic dogs, anti-inflammatory medication for fever, and antibiotics if secondary bacterial pneumonia develops (the most serious complication). Most dogs recover in 2–3 weeks (Merck) without veterinary intervention beyond rest and monitoring. Dogs with fever, complete anorexia, difficulty breathing, or signs of pneumonia (productive cough, rapid/labored breathing) require veterinary evaluation and possibly hospitalization. An analog wall clock with a second hand is how rapid or labored breathing gets a one-minute count during isolation rest — it is not a digital pet thermometer, not a cool-mist humidifier, and not a handheld stopwatch. A rising count or labored effort is a reason to call the veterinarian, not a diagnosis of pneumonia, and not a substitute for the clinic that decides whether supportive care or hospitalization is indicated.</p>
 
           <h2>Vaccination — Who Should Be Vaccinated</h2>
 
@@ -82,6 +104,9 @@ export default function CanineInfluenzaPage() {
               />
             </div>
           </div>
+          <h2 id="faq">Frequently asked questions</h2>
+          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
+
 
           <ArticleSourcesList sources={SOURCES} />
         </div>
