@@ -90,7 +90,7 @@ jobs:
         run: node scripts/ci/hub-spoke-check.mjs
 
   schema-validate:
-    name: JSON-LD schema validator (report-only)
+    name: JSON-LD schema validator
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
