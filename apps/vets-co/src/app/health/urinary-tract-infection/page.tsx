@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, ShopCtas, LastUpdated } from '@carloOS/ui'
+import { buildMetadata, FAQAccordion, CalloutBox, ArticleLayout, CrossPortfolioCard, RelatedLinks, ShopCtas, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Urinary Tract Infections in Dogs — Signs, Culture | Vets.co', description: 'UTIs in dogs cause straining, blood in urine, and accidents. Culture and sensitivity before antibiotics prevents resistance.', path: '/health/urinary-tract-infection', type: 'article' })
@@ -8,11 +8,29 @@ const SOURCES = [
   { label: 'Merck Veterinary Manual: Bacterial Cystitis in Small Animals', url: 'https://www.merckvetmanual.com/urinary-system/infectious-diseases-of-the-urinary-system-in-small-animals/bacterial-cystitis-in-small-animals', publisher: 'Merck Vet Manual' },
   { label: 'ISCAID: Antimicrobial Use Guidelines for UTI in Dogs and Cats', url: 'https://onlinelibrary.wiley.com/doi/10.1111/jvim.15575', publisher: 'Journal of Veterinary Internal Medicine' },
 ]
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Urinary Tract Infections in Dogs', description: 'Signs, urine culture, antibiotic selection, and recurrent UTI management in dogs.', url: 'https://vets.co/health/urinary-tract-infection', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-12T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Urinary Tract Infections in Dogs', description: 'Signs, urine culture, antibiotic selection, and recurrent UTI management in dogs.', url: 'https://vets.co/health/urinary-tract-infection', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-13T00:00:00Z' ,
   citation: SOURCES,
 })
 const med = buildMedicalWebPageSchema({ name: 'Urinary Tract Infections in Dogs', description: 'Signs, urine culture, and treatment of bacterial UTI in dogs.', url: 'https://vets.co/health/urinary-tract-infection', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-07' })
 const combined = combineSchemas(schema, med)
+const FAQS = [
+  {
+    "question": "Does my dog need a urine culture?",
+    "answer": "A quantitative urine culture is the gold standard for diagnosing bacterial cystitis, according to the Merck Veterinary Manual. A urine sediment exam can suggest infection, but the culture confirms it and shows which antibiotics will work."
+  },
+  {
+    "question": "How long are dog UTIs treated?",
+    "answer": "Merck notes that 3 to 5 days of antibiotics are now recommended for a sporadic bladder infection. Kidney or prostate infections and deep-seated infections need different drugs and longer courses."
+  },
+  {
+    "question": "When is a UTI called recurrent?",
+    "answer": "Merck classes it as recurrent after 3 or more episodes in 12 months, 2 or more in 6 months, or another episode within 3 months of the last one. Recurrent cases need a thorough workup to find the cause."
+  },
+  {
+    "question": "Does cranberry prevent UTIs in dogs?",
+    "answer": "The evidence is poor. The Merck Veterinary Manual lists cranberry extract, D-mannose, probiotics, and oral glycosaminoglycans as having poor evidence for preventing repeat infections."
+  }
+]
 export default function UTIPage() {
   return (
     <>
@@ -40,7 +58,11 @@ export default function UTIPage() {
 </>}
       >
         <div className="carloOS-article">
-          <LastUpdated date="2026-10-12" />
+          <LastUpdated date="2026-10-13" />
+
+          <CalloutBox variant="info" title="Short answer">
+            <p>Signs of a bladder infection (bacterial cystitis) include peeing more often, straining, pain when urinating, blood in the urine, and accidents. A urine culture is the gold standard for diagnosis. For a one-off infection, current guidance recommends a short antibiotic course of 3 to 5 days; repeat infections need a fuller workup. Bacteria found in urine without any signs usually do not need treatment. Source: <a href="https://www.merckvetmanual.com/urinary-system/infectious-diseases-of-the-urinary-system-in-small-animals/bacterial-cystitis-in-small-animals">Merck Veterinary Manual</a>.</p>
+          </CalloutBox>
 
           <h2>Diagnosis — Culture Before Antibiotics</h2>
           <p>The appropriate diagnostic sequence: urinalysis (evaluates urine concentration, pH, white cells, red cells, bacteria, casts, protein) followed by urine culture and antibiotic sensitivity testing when bacteria are present on urinalysis. The culture takes 48-72 hours but identifies exactly which bacteria is causing the infection and which antibiotics will treat it effectively.</p>
@@ -96,6 +118,9 @@ export default function UTIPage() {
               />
           </div>
           </div>
+          <h2 id="faq">Frequently asked questions</h2>
+          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
+
 
           <ArticleSourcesList sources={SOURCES} />
         </div>

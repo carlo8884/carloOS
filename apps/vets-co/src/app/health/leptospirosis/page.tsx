@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, ShopCtas, LastUpdated } from '@carloOS/ui'
+import { buildMetadata, FAQAccordion, ArticleLayout, CrossPortfolioCard, RelatedLinks, ShopCtas, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Leptospirosis in Dogs — Zoonotic, Vaccine Recommended | Vets.co', description: 'Leptospirosis is a zoonotic bacterial disease from wildlife urine in water. Causes acute kidney and liver failure.', path: '/health/leptospirosis', type: 'article' })
@@ -10,11 +10,29 @@ const SOURCES = [
   { label: 'CDC: Leptospirosis in Animals', url: 'https://www.cdc.gov/leptospirosis/pets/index.html', publisher: 'CDC' },
   { label: 'WSAVA: Vaccination Guidelines (Leptospirosis)', url: 'https://wsava.org/global-guidelines/vaccination-guidelines/', publisher: 'WSAVA' },
 ]
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Leptospirosis in Dogs', description: 'Signs, treatment, zoonotic risk, and vaccination for canine leptospirosis.', url: 'https://vets.co/health/leptospirosis', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-12T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Leptospirosis in Dogs', description: 'Signs, treatment, zoonotic risk, and vaccination for canine leptospirosis.', url: 'https://vets.co/health/leptospirosis', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-13T00:00:00Z' ,
   citation: SOURCES,
 })
 const med = buildMedicalWebPageSchema({ name: 'Leptospirosis in Dogs', description: 'Leptospira bacterial infection — signs, treatment, and vaccination.', url: 'https://vets.co/health/leptospirosis', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-07' })
 const combined = combineSchemas(schema, med)
+const FAQS = [
+  {
+    "question": "Can I catch leptospirosis from my dog?",
+    "answer": "It is possible, though human infections from pets are not common. The Merck Veterinary Manual advises owners of a dog with leptospirosis to wear gloves when cleaning up urine, wash their hands after handling the dog at least until the antibiotic course is finished, and contact their own doctor with any health concerns."
+  },
+  {
+    "question": "Do only outdoor or large dogs get leptospirosis?",
+    "answer": "No. Merck says any age, breed, or sex of dog can get leptospirosis, and it is not restricted to large-breed dogs, male dogs, or dogs that live mostly outdoors."
+  },
+  {
+    "question": "How long does the leptospirosis vaccine last?",
+    "answer": "Per the Merck Veterinary Manual, current vaccines give good protection from disease for at least one year and reduce urine shedding. Earlier advice to vaccinate every 6 months is no longer considered justified."
+  },
+  {
+    "question": "Is the leptospirosis vaccine safe?",
+    "answer": "Merck says vaccination is safe in most cases, and studies have shown no significant increase in allergic-type reactions compared with other vaccines. Ask your vet whether it suits your dog's risk."
+  }
+]
 export default function LeptospirosisPage() {
   return (
     <>
@@ -43,7 +61,11 @@ export default function LeptospirosisPage() {
         <div className="carloOS-article">
 
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-06-07T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-12" />
+          <LastUpdated date="2026-10-13" />
+
+          <CalloutBox variant="info" title="Short answer">
+            <p>Leptospirosis is a bacterial infection that dogs usually catch through contact with infected urine or other body fluids, including urine in the environment. It most often causes sudden kidney injury and can also affect the liver; signs include lethargy, poor appetite, vomiting, belly pain, and changes in how much your dog urinates. Vets treat it with the antibiotic doxycycline plus supportive care, and vaccines help prevent it. It can spread to people, so wear gloves when cleaning up a sick dog's urine. Source: <a href="https://www.merckvetmanual.com/infectious-diseases/leptospirosis/leptospirosis-in-dogs">Merck Veterinary Manual</a>.</p>
+          </CalloutBox>
 
           <h2>Transmission and Geographic Risk</h2>
           <DropCap>Leptospira bacteria survive in warm, moist environments — standing water, muddy soil, and waterways contaminated with infected wildlife urine. Dogs are exposed through: contact with contaminated water (drinking from puddles, swimming in ponds or streams), contact with infected urine directly, or contact with contaminated soil. The bacteria enter through mucous membranes, skin abrasions, or the GI tract. Lepto is not only a rural problem — urban and suburban dogs encounter raccoons, opossums, and rodents that shed Leptospira in their urine in parks, yards, and storm drainage systems. A 24-ounce stainless hiking dog bottle is how a walk becomes a carried sip instead of a puddle gulp — it is not a wide-rim stainless cat water bowl, not an insulated pet water bowl, not a kitchen liquid measuring pitcher, and not a ferret water bottle. A 32-gallon locking animal-proof trash can is how curb overnight leftovers stop inviting raccoon and rodent traffic into the same yard the dog uses — it is not a locking kitchen trash can.</DropCap>
@@ -163,6 +185,9 @@ export default function LeptospirosisPage() {
               />
           </div>
           </div>
+          <h2 id="faq">Frequently asked questions</h2>
+          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
+
 
           <ArticleSourcesList sources={SOURCES} />
         </div>

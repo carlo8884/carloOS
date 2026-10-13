@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, PrimaryHop, RelatedLinks, ShopCtas, LastUpdated } from '@carloOS/ui'
+import { buildMetadata, FAQAccordion, CalloutBox, ArticleLayout, CrossPortfolioCard, PrimaryHop, RelatedLinks, ShopCtas, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 
@@ -8,11 +8,29 @@ export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Hea
 const SOURCES = [
   { label: 'Merck Veterinary Manual — What to Do in a Dog or Cat Emergency (heat stroke)', url: 'https://www.merckvetmanual.com/special-pet-topics/emergencies/what-to-do-in-a-dog-or-cat-emergency', publisher: 'Merck Veterinary Manual' },
 ]
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Heat Stroke in Dogs', description: 'Emergency recognition, first aid, and prevention of heat stroke in dogs.', url: 'https://vets.co/health/heat-stroke-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-12T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Heat Stroke in Dogs', description: 'Emergency recognition, first aid, and prevention of heat stroke in dogs.', url: 'https://vets.co/health/heat-stroke-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-13T00:00:00Z' ,
   citation: SOURCES,
 })
 const med = buildMedicalWebPageSchema({ name: 'Heat Stroke in Dogs', description: 'Heat stroke emergency — recognition, first aid cooling, and veterinary treatment.', url: 'https://vets.co/health/heat-stroke-dogs', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-07' })
 const combined = combineSchemas(schema, med)
+const FAQS = [
+  {
+    "question": "Can I use ice packs on a dog with heat stroke?",
+    "answer": "Yes. The Merck Veterinary Manual lists cool water, ice packs, and wet towels, especially on the belly, plus a fan, as ways to cool a pet with heat stroke on the way to the vet. What it warns against is putting the animal in cold water."
+  },
+  {
+    "question": "Should I give my dog water during heat stroke?",
+    "answer": "Offer small amounts of water once your dog's body temperature begins to go down, according to the Merck Veterinary Manual. Cooling and getting to a vet come first."
+  },
+  {
+    "question": "What is a normal temperature for a dog?",
+    "answer": "The Merck Veterinary Manual gives a normal rectal temperature of about 101.5 to 102°F (38.6 to 38.9°C) for dogs and cats."
+  },
+  {
+    "question": "Which dogs are most at risk of heat stroke?",
+    "answer": "Short-nosed breeds can overheat from stress or excitement even on cool days, according to the Merck Veterinary Manual."
+  }
+]
 
 export default function HeatStrokePage() {
   return (
@@ -47,7 +65,11 @@ export default function HeatStrokePage() {
 </>}
       >
         <div className="carloOS-article">
-          <LastUpdated date="2026-10-12" />
+          <LastUpdated date="2026-10-13" />
+
+          <CalloutBox variant="info" title="Short answer">
+            <p>Heat stroke is an emergency. Signs include hot skin, rapid panting, drooling, vomiting, distress, wobbly movement, collapse, or unconsciousness. Move your dog out of the heat, cool the head and body (especially the belly) with cool water, wet towels, or ice packs, use a fan if you have one, and go to a vet right away. Do not put your dog in cold water. Source: <a href="https://www.merckvetmanual.com/special-pet-topics/emergencies/what-to-do-in-a-dog-or-cat-emergency">Merck Veterinary Manual</a>.</p>
+          </CalloutBox>
 
           <h2>The Car Problem — How It Happens</h2>
           <p>A parked car heats up fast, even with the windows cracked. A dog left in a parked car in warm weather for "just a few minutes" can be in danger faster than almost any owner anticipates. This is the most common cause of canine heat stroke — and it is entirely preventable by leaving the dog at home or using drive-through services when running errands.</p>
@@ -57,7 +79,7 @@ export default function HeatStrokePage() {
           <p>Do these things simultaneously with calling the vet and driving there — not as a substitute for veterinary care:</p>
           <ul>
             <li><strong>Move to shade/air conditioning immediately</strong></li>
-            <li><strong>Apply cool (not ice cold) water</strong> to the body — especially the neck, armpits, and groin where large blood vessels are near the surface. Cool water causes peripheral vasodilation which dissipates core heat. Ice water or ice packs cause vasoconstriction — the opposite of what you want — and can slow cooling. Cool-water towels (wet towels with cool water) work; submerging in cold water does not.</li>
+            <li><strong>Cool the head and body</strong> — especially the belly — with cool water, wet towels, or ice packs, and use a fan if you have one. Do not immerse your dog in cold water (<a href="https://www.merckvetmanual.com/special-pet-topics/emergencies/what-to-do-in-a-dog-or-cat-emergency">Merck Veterinary Manual</a>).</li>
             <li><strong>Run air conditioning at full blast</strong> in the car during transport</li>
             <li><strong>Do not force water into the dog's mouth</strong> — a heat-affected dog may aspirate. Offer water to drink voluntarily if the dog is conscious and able to swallow</li>
             <li><strong>Monitor temperature if you have a digital thermometer</strong> — stop active cooling before the dog becomes chilled, and let the clinic take over temperature control</li>
@@ -97,6 +119,9 @@ export default function HeatStrokePage() {
               />
           </div>
           </div>
+          <h2 id="faq">Frequently asked questions</h2>
+          <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
+
 
           <ArticleSourcesList sources={SOURCES} />
         </div>
