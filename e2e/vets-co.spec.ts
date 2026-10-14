@@ -1566,3 +1566,12 @@ test('vets BC1: per-button Amazon lines are small and muted, senior care has no 
     for (const s of sizes) expect(s, path).toBeLessThanOrEqual(11)
   }
 })
+
+test('vets TT1: standalone links and buttons on /reviews/best-pet-insurance are at least 24px tall at both sizes', async ({ page }) => {
+  for (const [width, height] of [[1280, 800], [390, 844]]) {
+    await page.setViewportSize({ width, height })
+    await page.goto('/reviews/best-pet-insurance')
+    const small = await page.$$eval('main a, main button', (els) => els.filter((e) => { if ((e as HTMLElement).offsetParent === null) return false; const r = e.getBoundingClientRect(); return r.height < 24 && !e.closest('p, li, td') }).map((e) => (e.textContent || '').trim().slice(0, 60)))
+    expect(small, `${width}px: ${small.join(' | ')}`).toEqual([])
+  }
+})

@@ -1436,3 +1436,12 @@ test('ferret design CI1: calculators stay within their height budget on mobile',
   }
   expect(problems, problems.join('\n')).toEqual([])
 })
+
+test('ferret TT1: standalone links and buttons on /reviews/best-ferret-cage are at least 24px tall at both sizes', async ({ page }) => {
+  for (const [width, height] of [[1280, 800], [390, 844]]) {
+    await page.setViewportSize({ width, height })
+    await page.goto('/reviews/best-ferret-cage')
+    const small = await page.$$eval('main a, main button', (els) => els.filter((e) => { if ((e as HTMLElement).offsetParent === null) return false; const r = e.getBoundingClientRect(); return r.height < 24 && !e.closest('p, li, td') }).map((e) => (e.textContent || '').trim().slice(0, 60)))
+    expect(small, `${width}px: ${small.join(' | ')}`).toEqual([])
+  }
+})
