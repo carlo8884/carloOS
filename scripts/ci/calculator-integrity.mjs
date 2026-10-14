@@ -9907,7 +9907,7 @@ const CALCULATORS = [
     file: 'apps/vets-co/src/app/guides/when-to-go-to-the-vet/page.tsx',
     mustInclude: [
       { re: /amazon-brand\/pet\+first\+aid\+kit\?s=tools-er-vs-clinic/, label: 'existing ER-tool pet first-aid kit search (the triage guide reuses this hop; the kitchen timer is not the product hop)' },
-      { re: /amazon-brand\/lined\+telephone\+message\+pad\?s=guides-when-to-go-to-the-vet/, label: 'lined telephone message-pad search hop (matches on-page when-unsure / call-the-clinic / sign-start-time copy; unique vs pocket+spiral+memo+pad / a5+hardcover+dot+grid+notebook / waterproof+field+notebook / dog+weight+log+book)' },
+      { re: /amazon-brand\/digital\+pet\+thermometer\?s=guides-when-to-go-to-the-vet/, label: 'digital-pet-thermometer search hop (topic-matched care product; replaced a paperwork hop in the 2026-10-13 product policy change)' },
       { re: /amazon-brand\/medium\+hard\+sided\+plastic\+pet\+carrier\?s=guides-when-to-go-to-the-vet/, label: 'medium hard-sided plastic pet-carrier search hop (matches on-page same-day / clinic-trip copy; unique vs soft+sided+vet+visit+carrier / soft+cat+carrier / hard+sided+airline+dog+crate / folding+four+wheel+dog+stroller / cat+carrier / soft+pet+carrier)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
     ],
@@ -11256,7 +11256,7 @@ const CALCULATORS = [
     file: 'apps/vets-co/src/app/guides/what-to-expect-at-the-vet/page.tsx',
     mustInclude: [
       { re: /amazon-brand\/small\+soft\+cooler\+bag\?s=guides-what-to-expect-at-the-vet/, label: 'small-soft-cooler-bag search hop (matches on-page fresh-stool-sample transport copy; unique vs soft+pet+carrier / medium+hard+sided+plastic+pet+carrier)' },
-      { re: /amazon-brand\/clipboard\+with\+storage\?s=guides-what-to-expect-at-the-vet/, label: 'clipboard-with-storage search hop (matches on-page visit-findings / dosing / follow-up-plan paperwork copy; unique vs weatherproof+storage+clipboard / hardcover+weekly+appointment+planner / hanging+file+folders+letter+size)' },
+      { re: /amazon-brand\/soft\+pet\+carrier\?s=guides-what-to-expect-at-the-vet/, label: 'soft-pet-carrier search hop (topic-matched care product; replaced a paperwork hop in the 2026-10-13 product policy change)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
@@ -11292,7 +11292,7 @@ const CALCULATORS = [
     id: 'vets · choosing-a-veterinarian hops',
     file: 'apps/vets-co/src/app/guides/choosing-a-veterinarian/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/kraft\+two\+pocket\+folder\?s=guides-choosing-a-veterinarian/, label: 'kraft-two-pocket-folder search hop (matches on-page services / referral-scope comparison copy; unique vs hanging+file+folders+letter+size / accordion+file+folder+letter+size / letter+size+sheet+protectors)' },
+      { re: /amazon-brand\/soft\+pet\+carrier\?s=guides-choosing-a-veterinarian/, label: 'soft-pet-carrier search hop (topic-matched care product; replaced a paperwork hop in the 2026-10-13 product policy change)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],

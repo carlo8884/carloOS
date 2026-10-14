@@ -1309,3 +1309,16 @@ test('vets fix ST1: mobile sticky bar appears after scrolling with internal next
   await bar.getByRole('button', { name: 'Close' }).click()
   await expect(bar).toHaveCount(0)
 })
+
+test('vets fix PG1: visit guides shop trip and care products, not stationery', async ({ page }) => {
+  const expectations: Record<string, string> = {
+    '/guides/choosing-a-veterinarian': 'soft+pet+carrier',
+    '/guides/what-to-expect-at-the-vet': 'soft+pet+carrier',
+    '/guides/when-to-go-to-the-vet': 'digital+pet+thermometer',
+  }
+  for (const [path, slug] of Object.entries(expectations)) {
+    await page.goto(path, { waitUntil: 'domcontentloaded' })
+    await expect(page.locator(`a[href^="/go/amazon-brand/${slug}?"]`).first(), path).toBeAttached()
+    expect(await page.content(), path).not.toMatch(/amazon-brand\/(kraft\+two\+pocket|pocket\+size\+address|clipboard\+with\+storage|lined\+telephone)/)
+  }
+})

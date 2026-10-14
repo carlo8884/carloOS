@@ -4,7 +4,7 @@ import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ShopCtas } fr
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "How to Choose a Veterinarian — A Practical Guide | Vets.co", description: "Accreditation, communication, services, location, and emergency arrangements all matter when choosing a vet. Here is how to find the right clinic for your pet.", path: '/guides/choosing-a-veterinarian', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'How to Choose a Veterinarian', description: 'Practical criteria for choosing a veterinary clinic that fits your pet and your needs.', url: 'https://vets.co/guides/choosing-a-veterinarian', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-09-06T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'How to Choose a Veterinarian', description: 'Practical criteria for choosing a veterinary clinic that fits your pet and your needs.', url: 'https://vets.co/guides/choosing-a-veterinarian', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-10-13T00:00:00Z' })
 const FAQS = [
   { question: "What is AAHA accreditation and does it matter?", answer: "AAHA (American Animal Hospital Association) accreditation is a voluntary standard that evaluates a practice against several hundred quality benchmarks covering medical care, equipment, safety, and management. Unlike human hospitals, veterinary practices are not required to be accredited, so AAHA accreditation signals a clinic has chosen to meet and maintain a high standard. It is not the only marker of a good practice, but it is a meaningful one, and pairing it with your own impressions of communication and care gives a fuller picture." },
   { question: "Should I prioritize location or quality?", answer: "Both matter, and the right balance depends on your situation. A nearby clinic is invaluable for emergencies and easy routine visits, especially if your pet finds travel stressful. But quality of medicine, communication, and the comfort you feel with the team are equally important for long-term care. Many owners choose a good general practice nearby for routine care and identify a separate emergency or specialty hospital in advance for after-hours needs, getting the benefits of both proximity and capability." },
@@ -33,7 +33,7 @@ export default function ChoosingVetPage() {
       >
         <div className="carloOS-article">
 
-          <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-09-06T00:00:00Z" reviewedBy="Editorial team" />
+          <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-10-13T00:00:00Z" reviewedBy="Editorial team" />
 
           <CalloutBox variant="info" title="The relationship is long-term">
             A veterinarian who knows your pet over years can spot subtle changes and provide continuity that improves care. Choosing well at the start, and building a relationship, pays dividends — so weigh communication and trust alongside credentials and convenience.
@@ -46,23 +46,23 @@ export default function ChoosingVetPage() {
           <p>Good medicine depends on good communication. Notice whether the team explains conditions and options clearly, answers questions patiently, and respects your involvement in decisions. Observe how your pet is handled — a calm, fear-aware approach reduces stress and is increasingly a hallmark of quality practices. The comfort and trust you feel with a team matters for the years of care ahead, so weigh your own impressions heavily.</p>
 
           <h2>Services and Capabilities</h2>
-          <p>Match the practice&apos;s services to your pet&apos;s likely needs. Ask what diagnostics and treatments are offered in-house, whether they handle surgery and dentistry, and how they manage referrals to specialists for complex cases. A kraft two-pocket folder keeps the in-house-services list in one pocket and the referral / specialty notes in the other so the scope comparison stays a file . A general practice that refers promptly and communicates well with specialists serves most pets fully; specialty needs may warrant a clinic with broader capabilities. Knowing the scope helps you understand when your pet can be cared for in one place and when a referral is the right step.</p>
+          <p>Match the practice&apos;s services to your pet&apos;s likely needs. Ask what diagnostics and treatments are offered in-house, whether they handle surgery and dentistry, and how they manage referrals to specialists for complex cases. A general practice that refers promptly and communicates well with specialists serves most pets fully; specialty needs may warrant a clinic with broader capabilities. Knowing the scope helps you understand when your pet can be cared for in one place and when a referral is the right step.</p>
 
           <h2>Location and Logistics</h2>
-          <p>Practical factors carry real weight. A conveniently located clinic makes routine visits easier and is valuable in an emergency, particularly for pets that find travel stressful. Consider hours, appointment availability, communication channels, and payment options, including whether they accept pet insurance reimbursement workflows and offer estimates. These logistics shape how easy it is to actually get care when you need it. The same kraft two-pocket folder holds hours and payment-option notes with the services list so a second clinic tour is compared on paper, not from memory.</p>
+          <p>Practical factors carry real weight. A conveniently located clinic makes routine visits easier and is valuable in an emergency, particularly for pets that find travel stressful. Consider hours, appointment availability, communication channels, and payment options, including whether they accept pet insurance reimbursement workflows and offer estimates. These logistics shape how easy it is to actually get care when you need it.</p>
 
           <h2>Emergency Arrangements</h2>
           <p>Find out how the practice handles after-hours emergencies before you ever face one. Some clinics offer extended or emergency hours; others refer to a dedicated emergency hospital overnight and on weekends. Either way, identify your nearest 24-hour emergency facility in advance and keep its details handy. Pairing a trusted general practice for routine care with a known emergency option gives you coverage across every scenario. The find-a-vet guide explains how to choose a clinic. It is not a live clinic list.</p>
 
           <h2 id="kit">Supplies for comparing clinics</h2>
-          <p>A kraft two-pocket folder keeps clinic notes in one pocket and the after-hours hospital card in the other. A pocket-size address book is where the 24-hour emergency facility stays a named number. These are paperwork tools, not a treatment and not a ranked product list.</p>
+          <p>A soft pet carrier makes clinic tours and first visits calmer for small pets. A waterproof rear seat hammock keeps the back seat clean on clinic trips. These are paperwork tools, not a treatment and not a ranked product list.</p>
 
-          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/kraft+two+pocket+folder?s=guides-choosing-a-veterinarian", "/go/amazon-brand/pocket+size+address+book?s=guides-choosing-a-veterinarian"]} />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/soft+pet+carrier?s=guides-choosing-a-veterinarian", "/go/amazon-brand/waterproof+rear+seat+hammock?s=guides-choosing-a-veterinarian"]} />
 
           {/* Shop note — live amazon-brand search buttons
               (reporter notebook /
-              kraft two-pocket folder /
-              pocket-size address book).
+              soft pet carrier /
+              waterproof rear seat hammock).
               These are educational
               clinic-comparison / paperwork tools,
               not a ranked product list, not a
@@ -106,12 +106,12 @@ export default function ChoosingVetPage() {
             <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
 <ShopCtas
-                amazonHref="/go/amazon-brand/kraft+two+pocket+folder?s=guides-choosing-a-veterinarian"
-                amazonLabel="Browse kraft two-pocket folders on Amazon →"
+                amazonHref="/go/amazon-brand/soft+pet+carrier?s=guides-choosing-a-veterinarian"
+                amazonLabel="Browse soft pet carriers on Amazon →"
               />
               <ShopCtas
-                amazonHref="/go/amazon-brand/pocket+size+address+book?s=guides-choosing-a-veterinarian"
-                amazonLabel="Browse pocket-size address books on Amazon →"
+                amazonHref="/go/amazon-brand/waterproof+rear+seat+hammock?s=guides-choosing-a-veterinarian"
+                amazonLabel="Browse waterproof rear seat hammocks on Amazon →"
               />
           </div>
           </div>

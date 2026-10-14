@@ -4,7 +4,7 @@ import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ShopCtas } fr
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "What to Expect at the Vet — A Visit Walkthrough | Vets.co", description: "From check-in to physical exam to the treatment plan, here is what happens at a typical veterinary visit and how to prepare so your pet gets the best care.", path: '/guides/what-to-expect-at-the-vet', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'What to Expect at the Vet', description: 'A walkthrough of a typical veterinary visit and how to prepare for it.', url: 'https://vets.co/guides/what-to-expect-at-the-vet', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-09-06T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'What to Expect at the Vet', description: 'A walkthrough of a typical veterinary visit and how to prepare for it.', url: 'https://vets.co/guides/what-to-expect-at-the-vet', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-10-13T00:00:00Z' })
 const FAQS = [
   { question: "How should I prepare for a vet visit?", answer: "Bring any prior medical records if you are a new client, a list of current medications and supplements with their doses, and notes on the reason for the visit — when signs started, how often they occur, and any changes in appetite, drinking, urination, or behavior. A fresh stool sample is helpful for wellness or digestive visits. Bring a hungry pet for easier treat-based handling, and for cats, use a secure carrier introduced calmly in advance. A short video of any intermittent problem at home is often more useful than describing it." },
   { question: "What happens during the physical exam?", answer: "The veterinarian performs a nose-to-tail assessment: checking weight and body condition, listening to the heart and lungs, examining eyes, ears, mouth and teeth, feeling the abdomen and lymph nodes, assessing the skin and coat, and checking joints and gait. This systematic exam can reveal problems an owner has not noticed and is one of the most valuable parts of the visit. The vet will also discuss your concerns and ask questions to build a full picture before recommending any tests or treatment." },
@@ -33,7 +33,7 @@ export default function WhatToExpectPage() {
       >
         <div className="carloOS-article">
 
-          <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-09-06T00:00:00Z" reviewedBy="Editorial team" />
+          <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-10-13T00:00:00Z" reviewedBy="Editorial team" />
 
           <CalloutBox variant="info" title="The history is half the diagnosis">
             What you tell the veterinary team about your pet at home — when signs started, how they have changed, what is normal for your pet — is often as valuable as the exam itself. Coming prepared with these details meaningfully improves the quality of care.
@@ -52,17 +52,17 @@ export default function WhatToExpectPage() {
           <p>Based on the exam and history, the veterinarian may recommend diagnostics — bloodwork, urinalysis, imaging, or samples — to see beyond what hands and stethoscope reveal, confirm or rule out conditions, and set healthy baselines. You can ask why each test is suggested, what it will show, and how it will affect the plan. A good team explains the reasoning and offers options if cost is a concern, treating diagnostics as a shared decision rather than an automatic add-on.</p>
 
           <h2>The Plan and Follow-Up</h2>
-          <p>The visit ends with a discussion of findings and a plan: vaccines or preventives due, any treatments or medications, lifestyle or diet recommendations, and whether a recheck or referral is needed. This is the time to ask questions and confirm you understand the instructions, dosing, and what signs should prompt a call back. A clipboard with storage is how those visit findings, dosing instructions, and the follow-up plan stay one sheaf instead of loose papers in the car . Leaving with a clear understanding of the plan — and how to reach the clinic with questions — is the mark of a productive visit.</p>
+          <p>The visit ends with a discussion of findings and a plan: vaccines or preventives due, any treatments or medications, lifestyle or diet recommendations, and whether a recheck or referral is needed. This is the time to ask questions and confirm you understand the instructions, dosing, and what signs should prompt a call back. A soft pet carrier keeps a cat or small dog contained and calmer on the trip in and in the waiting room. Leaving with a clear understanding of the plan — and how to reach the clinic with questions — is the mark of a productive visit.</p>
 
           <h2 id="kit">Supplies for the visit</h2>
-          <p>A clipboard with storage keeps the visit findings, dosing instructions, and the follow-up plan in one sheaf. A small soft cooler bag keeps a fresh stool sample cold on the way to the clinic when the team asked for one. These are visit-prep tools, not a treatment and not a ranked product list.</p>
+          <p>A soft pet carrier keeps a small pet contained and calmer in the waiting room. A small soft cooler bag keeps a fresh stool sample cold on the way to the clinic when the team asked for one. These are visit-prep tools, not a treatment and not a ranked product list.</p>
 
-          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/small+soft+cooler+bag?s=guides-what-to-expect-at-the-vet", "/go/amazon-brand/clipboard+with+storage?s=guides-what-to-expect-at-the-vet"]} />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/small+soft+cooler+bag?s=guides-what-to-expect-at-the-vet", "/go/amazon-brand/soft+pet+carrier?s=guides-what-to-expect-at-the-vet"]} />
 
           {/* Shop note — live amazon-brand search buttons
               (spiral notebook /
               small soft cooler bag /
-              clipboard with storage).
+              soft pet carrier).
               These are educational visit-prep /
               paperwork tools, not a ranked product
               list, not a substitute for veterinary
@@ -120,8 +120,8 @@ export default function WhatToExpectPage() {
                 amazonLabel="Browse small soft cooler bags on Amazon →"
               />
               <ShopCtas
-                amazonHref="/go/amazon-brand/clipboard+with+storage?s=guides-what-to-expect-at-the-vet"
-                amazonLabel="Browse clipboards with storage on Amazon →"
+                amazonHref="/go/amazon-brand/soft+pet+carrier?s=guides-what-to-expect-at-the-vet"
+                amazonLabel="Browse soft pet carriers on Amazon →"
               />
           </div>
           </div>
