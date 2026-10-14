@@ -1193,3 +1193,17 @@ test('vets fix HB8: diagnostics, specialists, telehealth and triage card open wi
   expect(text).not.toMatch(/Not eating for 24 h \(cats/)
   expect(text).toContain('Any seizure, even one that has stopped')
 })
+
+test('vets fix DV1: dog vaccination guide opens with a sourced short answer and softened schedule claims', async ({ page }) => {
+  await page.goto('/health/dog-vaccinations-guide', { waitUntil: 'domcontentloaded' })
+  const box = page.getByTestId('short-answer')
+  await expect(box).toBeVisible()
+  await expect(box.locator('a[href="https://www.avma.org/resources-tools/pet-owners/petcare/vaccinations"]')).toBeVisible()
+  await expect(box.locator('a[href="https://wsava.org/wp-content/uploads/2025/06/Dogs-Vaccination-Table.pdf"]')).toBeVisible()
+  const text = await page.locator('body').innerText()
+  expect(text).not.toContain('Required by law in virtually all US states')
+  expect(text).not.toContain('Northeast, Upper Midwest, Pacific Northwest')
+  expect(text).not.toContain('within 72 hours')
+  expect(text).not.toContain('same-day results')
+  expect(text).toContain('general reference; not checked against this page')
+})
