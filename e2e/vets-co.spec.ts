@@ -1351,3 +1351,16 @@ test('vets fix PH1: health pages shop topic-matched care products, not paperwork
     expect(await page.content(), path).not.toMatch(/amazon-brand\/(analog\+wall\+clock|72\+hour\+digital|hardcover\+weekly|wall\+mounted\+magnetic|12\+hour\+mechanical|letter\+size|dog\+weight\+log|pocket\+spiral)/)
   }
 })
+
+test('vets fix PG1: visit guides shop trip and care products, not stationery', async ({ page }) => {
+  const expectations: Record<string, string> = {
+    '/guides/choosing-a-veterinarian': 'soft+pet+carrier',
+    '/guides/what-to-expect-at-the-vet': 'soft+pet+carrier',
+    '/guides/when-to-go-to-the-vet': 'digital+pet+thermometer',
+  }
+  for (const [path, slug] of Object.entries(expectations)) {
+    await page.goto(path, { waitUntil: 'domcontentloaded' })
+    await expect(page.locator(`a[href^="/go/amazon-brand/${slug}?"]`).first(), path).toBeAttached()
+    expect(await page.content(), path).not.toMatch(/amazon-brand\/(kraft\+two\+pocket|pocket\+size\+address|clipboard\+with\+storage|lined\+telephone)/)
+  }
+})

@@ -4,7 +4,7 @@ import { buildMetadata, ArticleLayout, FAQAccordion, PrimaryHop, RelatedLinks, S
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "When to Take Your Pet to the Vet — A Decision Guide | Vets.co", description: "Some signs warrant watchful waiting; others need same-day or emergency care. Learn which symptoms mean it is time to call the vet and which cannot wait.", path: '/guides/when-to-go-to-the-vet', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'When to Take Your Pet to the Vet', description: 'A decision guide for which symptoms warrant watchful waiting, same-day care, or emergency care.', url: 'https://vets.co/guides/when-to-go-to-the-vet', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-09-05T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'When to Take Your Pet to the Vet', description: 'A decision guide for which symptoms warrant watchful waiting, same-day care, or emergency care.', url: 'https://vets.co/guides/when-to-go-to-the-vet', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-10-13T00:00:00Z' })
 const FAQS = [
   { question: "My pet vomited once but seems fine — should I worry?", answer: "A single episode of vomiting in an otherwise bright, alert pet that is still eating and drinking normally is often not urgent, and watchful waiting with a brief period of dietary care may be reasonable. However, you should seek care if vomiting repeats, if the pet becomes lethargic, stops eating or drinking, has a swollen or painful abdomen, vomits blood, or if you suspect they ate something dangerous. When uncertain or if your pet is very young, very old, or has existing conditions, call your veterinarian for guidance." },
   { question: "How do I know if something is a true emergency?", answer: "Certain signs are always emergencies: difficulty breathing, severe bleeding, collapse, repeated or non-stop seizures, suspected bloat, a male cat unable to urinate, suspected poisoning, major trauma, pale or blue gums, and a distended painful abdomen. These are time-critical and warrant going to an emergency hospital immediately. Beyond these, any rapid worsening, severe pain, or your strong instinct that something is seriously wrong justifies emergency care. It is always better to be checked unnecessarily than to wait too long." },
@@ -37,7 +37,7 @@ export default function WhenToGoPage() {
       >
         <div className="carloOS-article">
 
-          <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-09-05T00:00:00Z" reviewedBy="Editorial team" />
+          <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-10-13T00:00:00Z" reviewedBy="Editorial team" />
 
           <CalloutBox variant="warning" title="Trust your instinct on serious signs">
             You know your pet better than anyone. If your gut says something is seriously wrong — even if you cannot name the sign — it is reasonable to seek care. Owners are often the first to detect that something is off, and acting on that instinct saves lives.
@@ -60,14 +60,14 @@ export default function WhenToGoPage() {
           <p>Uncertainty is common, and there is a simple rule: when in doubt, call. Your veterinary clinic, or an emergency hospital after hours, can help you decide whether to watch, come in, or treat the situation as an emergency, often with a few questions over the phone. Describing the sign, when it started, and how your pet is otherwise doing helps them advise you. It is always better to ask and be reassured than to wait on something serious.</p>
 
           <h2 id="kit">Supplies named on this page</h2>
-          <p>A pet first-aid kit covers the supplies for a clinic trip. A lined telephone message pad is where you write the sign, when it started, and how the pet is otherwise doing before you call. A medium hard-sided plastic pet carrier is the crate for a same-day visit. These are home-care and transport tools, not a treatment and not a ranked product list.</p>
+          <p>A pet first-aid kit covers the supplies for a clinic trip. A digital pet thermometer gives you a temperature reading to share when you call. A medium hard-sided plastic pet carrier is the crate for a same-day visit. These are home-care and transport tools, not a treatment and not a ranked product list.</p>
 
-          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/pet+first+aid+kit?s=tools-er-vs-clinic", "/go/amazon-brand/lined+telephone+message+pad?s=guides-when-to-go-to-the-vet", "/go/amazon-brand/medium+hard+sided+plastic+pet+carrier?s=guides-when-to-go-to-the-vet"]} />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/pet+first+aid+kit?s=tools-er-vs-clinic", "/go/amazon-brand/digital+pet+thermometer?s=guides-when-to-go-to-the-vet", "/go/amazon-brand/medium+hard+sided+plastic+pet+carrier?s=guides-when-to-go-to-the-vet"]} />
 
           {/* Shop note — live amazon-brand search buttons
               (pet first-aid kit already on the
               ER-vs-clinic tool /
-              lined telephone message pad /
+              digital pet thermometer /
               medium hard-sided plastic pet carrier).
               These are educational home-care /
               monitoring / transport tools, not a
@@ -129,8 +129,8 @@ export default function WhenToGoPage() {
                 amazonLabel="Browse pet first-aid kits on Amazon →"
               />
               <ShopCtas
-                amazonHref="/go/amazon-brand/lined+telephone+message+pad?s=guides-when-to-go-to-the-vet"
-                amazonLabel="Browse lined telephone message pads on Amazon →"
+                amazonHref="/go/amazon-brand/digital+pet+thermometer?s=guides-when-to-go-to-the-vet"
+                amazonLabel="Browse digital pet thermometers on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/medium+hard+sided+plastic+pet+carrier?s=guides-when-to-go-to-the-vet"
