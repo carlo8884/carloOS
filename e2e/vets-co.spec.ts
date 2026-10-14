@@ -1295,3 +1295,17 @@ test('vets fix SK1: senior bloodwork, eye conditions and cat kidney pages drop u
   expect(text).not.toMatch(/vision loss within hours|30-40% of the tear film|within 4-8 weeks/)
   await expect(page.getByText('Short answer').first()).toBeVisible()
 })
+
+test('vets fix SC1: mobile sticky bar appears after scrolling with internal next steps', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 })
+  await page.goto('/health/anxiety-in-dogs', { waitUntil: 'load' })
+  const bar = page.getByTestId('mobile-sticky-cta')
+  await expect(bar).toHaveAttribute('aria-hidden', 'true')
+  await page.mouse.wheel(0, 1500)
+  await expect(bar).toHaveAttribute('aria-hidden', 'false')
+  await expect(bar.locator('a[href="/emergency-triage-card"]')).toBeVisible()
+  await expect(bar.locator('a[href="/reviews/best-pet-insurance"]')).toBeVisible()
+  await expect(bar.locator('a[href*="/go/"]')).toHaveCount(0)
+  await bar.getByRole('button', { name: 'Close' }).click()
+  await expect(bar).toHaveCount(0)
+})

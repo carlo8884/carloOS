@@ -1212,3 +1212,14 @@ test('ferret fix FE4: FE2 pages carry no unsourced chemo cost, insurer age cap o
   expect(text).not.toMatch(/30[-–]60 second|6-10 weeks/)
   await expect(page.locator('a[href^="/go/amazon-brand/"]').first()).toBeVisible()
 })
+
+test('ferret fix SC1: mobile sticky bar appears after scrolling with internal next steps', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 })
+  await page.goto('/health/adrenal-disease', { waitUntil: 'load' })
+  const bar = page.getByTestId('mobile-sticky-cta')
+  await expect(bar).toHaveAttribute('aria-hidden', 'true')
+  await page.mouse.wheel(0, 1500)
+  await expect(bar).toHaveAttribute('aria-hidden', 'false')
+  await expect(bar.locator('a[href="/first-year-schedule"]')).toBeVisible()
+  await expect(bar.locator('a[href*="/go/"]')).toHaveCount(0)
+})

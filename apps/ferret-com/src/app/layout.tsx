@@ -5,7 +5,7 @@ import { buildMetadata } from '@carloOS/ui'
 import { displayAds } from '../data/display-ads'
 import { HomeEmailCapture } from '../components/HomeEmailCapture'
 import { EmailCaptureGate } from '../components/EmailCaptureGate'
-import { EmailUnderHero } from '@carloOS/ui'
+import { EmailUnderHero, MobileStickyCta } from '@carloOS/ui'
 import './globals.css'
 
 const playfair = Playfair_Display({
@@ -74,6 +74,8 @@ export default function RootLayout({
         </EmailCaptureGate>
         </main>
 
+        <MobileStickyCta primary={{ href: '/first-year-schedule', label: 'First-year schedule' }} secondary={{ href: '/reviews', label: 'Gear reviews' }} />
+        <div className="h-16 md:hidden" aria-hidden="true" />
         <Footer siteId="ferret-com" showAffiliateDisclosure />
 
         <DisplayAds config={displayAds} />
