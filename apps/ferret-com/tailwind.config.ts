@@ -11,6 +11,8 @@ const config: Config = {
   theme: {
     extend: {
       // Ferret.com-specific overrides — driven by CSS variables in globals.css.
+      // Redesign HR2: header 56px mobile / 64px desktop via --nav-height.
+      spacing: { nav: 'var(--nav-height)' },
     },
   },
   plugins: [typography],

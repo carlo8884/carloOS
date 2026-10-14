@@ -46,7 +46,6 @@ import Link from 'next/link'
 import { buildMetadata, StockImage } from '@carloOS/ui'
 // Live ferret food evaluator embedded on the homepage — score a food on the
 // first screens, not a link to a tool (premium gate 3).
-import { FerretFoodEvaluator } from '../components/visual/FerretFoodEvaluator'
 import { SchemaScript, combineSchemas, buildOrganizationSchema, buildWebSiteSchema } from '@carloOS/ui'
 
 const homeSchema = combineSchemas(
@@ -225,192 +224,32 @@ export default function HomePage() {
     <>
       <SchemaScript schema={homeSchema} />
 
-      {/* ════════════════════════════════════════════════════════════════
-          HERO — full-bleed IMAGE-FIRST masthead (Dog reference #487)
-          A REAL ferret photo (ferret-com:hero) is the first + dominant thing
-          after the nav on EVERY breakpoint. H1 + CTA sit on a subject-clear
-          overlay (bottom-right veil, not a full-bleed mid scrim) so the ferret
-          stays visible and the type stays readable. The hero carries
-          subtleCredit (attribution present + clickable, QC §1).
-          ════════════════════════════════════════════════════════════════ */}
-      <section
-        className="ferret-home-hero"
-        style={{ position: 'relative', background: 'var(--brand-dark)', minHeight: 'clamp(62vh, 70vh, 78vh)' }}
-      >
-        {/* Full-bleed hero photo — fills this absolute, full-height wrapper.
-            Uses the inline variant with FILL_IMAGE overrides so the photo
-            simply fills the parent (the 'full-bleed' variant's transform
-            fights an absolute parent). object-position (globals) pins the
-            albino ferret — lower-left of ferret-com:hero — in frame. */}
-        <div
-          className={`${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto] [&_figure>div]:h-full [&_figure>div]:!rounded-none [&>div]:h-full`}
-          style={{ position: 'absolute', inset: 0 }}
-        >
-          <StockImage
-            manifestKey="ferret-com:hero"
-            alt="A curious, healthy ferret"
-            aspect="16:9"
-            variant="inline"
-            priority
-            subtleCredit
-          />
-        </div>
-
-        {/* Subject-clear overlay (globals). The photo is a white ferret on
-            black, lower-left; a full-bleed mid scrim (~0.66) + left-bottom
-            amber wash hid the subject. Contrast now lives with the copy —
-            top on small screens, bottom-right from md — plus a short seam
-            into the trust bar. The ferret stays open. */}
-        <div aria-hidden className="ferret-home-hero__scrim" />
-        <div aria-hidden className="ferret-home-hero__wash" />
-
-        {/* Copy on the native black field so it does not sit on the ferret. */}
-        <div className="ferret-home-hero__stage">
-          <div className="ferret-home-hero__copy">
-          <div style={{ marginBottom: '18px' }}>
-            <span
-              style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '10px',
-                fontSize: '0.72rem',
-                fontWeight: 700,
-                letterSpacing: '0.14em',
-                textTransform: 'uppercase',
-                color: 'var(--brand-amber)',
-                textShadow: '0 1px 10px rgba(0,0,0,0.7)',
-              }}
-            >
-              <span
-                aria-hidden
-                style={{ display: 'inline-block', width: '24px', height: '2px', background: 'var(--brand-amber)', flexShrink: 0 }}
-              />
-              Ferret.com — Owner&apos;s reference
-            </span>
+      {/* HERO — compact (redesign HR2): copy left, real ferret photo right
+          (never behind the text), 56/64px header, ≤320px desktop / ≤400px mobile. */}
+      <section data-testid="home-hero" className="bg-brand-dark px-6 py-7 md:py-8">
+        <div className="mx-auto grid max-w-[1180px] items-center gap-8 md:grid-cols-[1fr_360px]">
+          <div>
+            <h1 className="mb-2 font-display font-black leading-tight tracking-tight text-[rgba(251,245,232,0.98)]" style={{ fontSize: 'clamp(26px, 4vw, 44px)' }}>
+              Everything a ferret needs you to know.
+            </h1>
+            <p className="mb-4 max-w-xl text-sm text-[rgba(251,245,232,0.8)] md:text-base">
+              Diet, health, housing and the conditions that surface in years three through seven, from exotic-mammal veterinary literature.
+            </p>
+            <form action="/search" method="get" role="search" className="mb-3 flex max-w-xl gap-2">
+              <label htmlFor="home-search" className="sr-only">Search Ferret.com</label>
+              <input id="home-search" name="q" type="search" placeholder="Search diet, health or gear" className="min-w-0 flex-1 rounded-md border-0 bg-white px-4 py-3 text-sm text-brand-dark" />
+              <button type="submit" className="rounded-md bg-[var(--brand-amber)] px-5 py-3 text-sm font-bold text-brand-dark">Search</button>
+            </form>
+            <div className="flex flex-wrap gap-2 [&>a]:inline-flex [&>a]:min-h-[44px] [&>a]:items-center [&>a]:rounded-md [&>a]:px-3 [&>a]:text-sm [&>a]:font-semibold [&>a]:no-underline md:[&>a]:px-4">
+              <Link href="/first-year-schedule" className="border border-[rgba(251,245,232,0.35)] text-[rgba(251,245,232,0.97)] hover:bg-white/10">First-year schedule</Link>
+              <Link href="/care/diet-basics" className="border border-[rgba(251,245,232,0.35)] text-[rgba(251,245,232,0.97)] hover:bg-white/10">Diet guide</Link>
+              <Link href="/reviews" className="border border-[rgba(251,245,232,0.35)] text-[rgba(251,245,232,0.97)] hover:bg-white/10">Gear guides</Link>
+            </div>
           </div>
-
-          <h1
-            style={{
-              fontFamily: 'var(--font-display)',
-              fontSize: 'clamp(2.25rem, 6vw, 4.25rem)',
-              fontWeight: 900,
-              letterSpacing: '-0.025em',
-              lineHeight: 1.04,
-              color: 'rgba(251, 245, 232, 0.98)',
-              maxWidth: '20ch',
-              margin: '0 0 18px',
-              textShadow: '0 2px 18px rgba(0,0,0,0.72), 0 0 28px rgba(0,0,0,0.45)',
-            }}
-          >
-            Everything a ferret needs you to know.
-          </h1>
-
-          <p
-            style={{
-              fontFamily: 'var(--font-display)',
-              fontSize: 'clamp(1.0625rem, 2.2vw, 1.5rem)',
-              fontWeight: 400,
-              fontStyle: 'italic',
-              lineHeight: 1.4,
-              color: 'rgba(251, 245, 232, 0.92)',
-              maxWidth: '34ch',
-              margin: '0 0 28px',
-              textShadow: '0 1px 12px rgba(0,0,0,0.75), 0 0 22px rgba(0,0,0,0.4)',
-            }}
-          >
-            Diet, health, housing, and the conditions that surface in years three
-            through seven — grounded in exotic-mammal veterinary literature.
-          </p>
-
-          <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap' }}>
-            <Link
-              href="/first-year-schedule"
-              style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '8px',
-                background: 'var(--brand-amber)',
-                color: 'var(--brand-dark)',
-                padding: '15px 26px',
-                borderRadius: '8px',
-                fontWeight: 700,
-                fontSize: '1rem',
-                textDecoration: 'none',
-                border: '2px solid var(--brand-amber)',
-                boxShadow: '0 6px 24px rgba(201,157,95,0.35)',
-              }}
-            >
-              Get the first-year schedule
-              <span aria-hidden>&rarr;</span>
-            </Link>
-            <Link
-              href="/care/diet-basics"
-              style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '8px',
-                background: 'rgba(30, 20, 10, 0.55)',
-                color: 'rgba(251, 245, 232, 0.97)',
-                padding: '15px 26px',
-                borderRadius: '8px',
-                fontWeight: 700,
-                fontSize: '1rem',
-                textDecoration: 'none',
-                border: '1px solid rgba(251, 245, 232, 0.42)',
-                backdropFilter: 'blur(6px)',
-              }}
-            >
-              Read the diet guide
-            </Link>
-          </div>
+          <div className={`hidden h-[240px] overflow-hidden rounded-xl md:block ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto] [&_figure>div]:h-full [&>div]:h-full`}>
+            <StockImage manifestKey="ferret-com:hero" alt="A curious, healthy ferret" aspect="16:9" variant="inline" priority subtleCredit />
           </div>
         </div>
-      </section>
-
-      {/* ════════════════════════════════════════════════════════════════
-          TRUST BAR — dark masthead
-          ════════════════════════════════════════════════════════════════ */}
-      <section
-        style={{
-          background: 'var(--brand-dark)',
-          padding: '24px',
-          borderTop: '1px solid rgba(201, 157, 95, 0.18)',
-          borderBottom: '1px solid rgba(201, 157, 95, 0.18)',
-        }}
-      >
-        <ul
-          role="list"
-          style={{
-            listStyle: 'none',
-            padding: 0,
-            margin: 0,
-            maxWidth: '1180px',
-            marginInline: 'auto',
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
-            gap: '14px 32px',
-          }}
-        >
-          {TRUST_CLAIMS.map((claim) => (
-            <li
-              key={claim}
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                gap: '10px',
-                color: 'rgba(251, 245, 232, 0.92)',
-                fontSize: '0.875rem',
-                fontWeight: 500,
-                letterSpacing: '0.01em',
-              }}
-            >
-              <span aria-hidden style={{ color: 'var(--brand-amber)', fontSize: '1rem', fontWeight: 700 }}>
-                ✓
-              </span>
-              {claim}
-            </li>
-          ))}
-        </ul>
       </section>
 
       {/* ════════════════════════════════════════════════════════════════
@@ -434,7 +273,7 @@ export default function HomePage() {
             zIndex: 10,
             maxWidth: '1180px',
             margin: '0 auto',
-            padding: 'clamp(56px, 7vw, 80px) clamp(20px, 5vw, 40px)',
+            padding: 'clamp(32px, 5vw, 56px) clamp(20px, 5vw, 40px)',
           }}
         >
           <div style={{ marginBottom: '28px' }}>
@@ -475,7 +314,7 @@ export default function HomePage() {
               padding: 0,
               margin: 0,
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 260px), 1fr))',
               gap: '16px',
             }}
           >
@@ -491,7 +330,7 @@ export default function HomePage() {
                     textDecoration: 'none',
                     color: 'inherit',
                     boxShadow: 'inset 0 0 0 1px rgba(251, 245, 232, 0.1)',
-                    minHeight: '230px',
+                    minHeight: 'clamp(150px, 18vw, 210px)',
                   }}
                 >
                   {/* Real hub photo fills the tile */}
@@ -525,7 +364,7 @@ export default function HomePage() {
                       display: 'flex',
                       flexDirection: 'column',
                       justifyContent: 'flex-end',
-                      minHeight: '230px',
+                      minHeight: 'clamp(150px, 18vw, 210px)',
                       padding: '22px 22px',
                     }}
                   >
@@ -570,28 +409,28 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ════════════════════════════════════════════════════════════════
-          LIVE TOOL — ferret food evaluator (premium gate 3)
-          ════════════════════════════════════════════════════════════════ */}
-      <section
-        style={{
-          background: 'var(--brand-surface)',
-          padding: 'clamp(56px, 7vw, 88px) 24px',
-          borderBottom: '1px solid var(--brand-border)',
-        }}
-      >
-        <div style={{ maxWidth: '1180px', marginInline: 'auto' }}>
-          <p style={{ fontSize: '0.75rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--brand-primary)', margin: '0 0 12px' }}>
-            Try it · Ferret food evaluator
-          </p>
-          <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(24px, 3vw, 38px)', fontWeight: 800, color: 'var(--brand-text-dark)', margin: '0 0 12px', lineHeight: 1.1 }}>
-            Is that food right for a ferret?
-          </h2>
-          <p style={{ fontSize: '0.95rem', color: 'var(--brand-text-mid)', margin: '0 0 28px', maxWidth: '42rem', lineHeight: 1.6 }}>
-            Ferrets are obligate carnivores. Read the first few ingredients off the bag and score
-            the food on protein source, carbs, and fillers — before you buy.
-          </p>
-          <FerretFoodEvaluator />
+      {/* MONEY — the one buying section on the home page (HR2). Internal
+          buyer guides only; no held partners, no prices or ratings here. */}
+      <section data-home-money className="border-b border-brand-border bg-brand-surface px-6 py-10">
+        <div className="mx-auto max-w-[1180px]">
+          <p className="mb-2 text-xs font-bold uppercase tracking-[0.12em] text-brand-primary">Gear buyer guides</p>
+          <h2 className="mb-5 font-display text-2xl font-extrabold leading-tight text-brand-text-dark md:text-3xl">Set up the cage, harness and litter right</h2>
+          <ul role="list" className="grid list-none gap-3 p-0 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              ['/reviews/best-ferret-cage', 'Best ferret cages', 'Multi-level cages sized for a business of ferrets.'],
+              ['/reviews/best-ferret-harness', 'Best ferret harnesses', 'H-style and mesh harnesses a ferret cannot back out of.'],
+              ['/reviews/best-ferret-litter', 'Best ferret litter', 'Low-dust litters that suit corner pans.'],
+              ['/ferret-starter-kit', 'Ferret starter kit', 'Everything for the first week home, in one list.'],
+            ].map(([href, title, blurb]) => (
+              <li key={href}>
+                <Link href={href} className="flex h-full min-h-[44px] flex-col rounded-xl border border-brand-border bg-white p-4 no-underline hover:border-brand-primary">
+                  <span className="font-display text-lg font-bold text-brand-text-dark">{title}</span>
+                  <span className="mt-1 text-sm text-brand-text-mid">{blurb}</span>
+                  <span className="mt-3 text-sm font-semibold text-brand-primary">See the picks &rarr;</span>
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 
@@ -1561,6 +1400,15 @@ export default function HomePage() {
       </section>
 
       {/* Email capture lives under the hero via layout EmailUnderHero. Single capture. */}
+
+      {/* Trust claims, quiet, near the footer (HR2: no full-width trust strip). */}
+      <section className="bg-brand-white px-6 pt-8">
+        <ul role="list" className="mx-auto flex max-w-[1180px] list-none flex-wrap justify-center gap-x-6 gap-y-2 p-0 text-sm text-brand-text-mid">
+          {TRUST_CLAIMS.map((claim) => (
+            <li key={claim} className="flex items-center gap-2"><span aria-hidden className="font-bold text-brand-primary">✓</span>{claim}</li>
+          ))}
+        </ul>
+      </section>
 
       {/* ════════════════════════════════════════════════════════════════
           EDITORIAL FOOTER NOTE (above shared <Footer />)

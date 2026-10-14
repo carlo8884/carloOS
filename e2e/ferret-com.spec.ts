@@ -437,7 +437,7 @@ test('ferret fix T12: every Amazon hop on the main money pages redirects to amaz
 })
 
 test('ferret fix L3: food evaluator verdict meets WCAG AA contrast', async ({ page }) => {
-  await page.goto('/', { waitUntil: 'networkidle' })
+  await page.goto('/tools/food-evaluator', { waitUntil: 'networkidle' })
   await expectAAContrast(page, '[class*="bg-emerald-50"] p, [class*="bg-amber-50"] p, [class*="bg-red-50"] p')
 })
 
@@ -1268,5 +1268,28 @@ test('ferret fix DS1: affiliate disclosure is a tiny Affiliate links link before
     expect(info!.height, path).toBeLessThanOrEqual(48)
     expect(info!.text, path).toBe('Affiliate links')
     expect(info!.href, path).toBe('/disclosure')
+  }
+})
+
+test('ferret fix HR2: compact home hero, slim header, one money section, no embedded calculators', async ({ page }) => {
+  for (const [w, h, navMax, heroMax] of [[1280, 800, 64, 320], [390, 844, 56, 400]] as const) {
+    await page.setViewportSize({ width: w, height: h })
+    await page.goto('/', { waitUntil: 'domcontentloaded' })
+    const m = await page.evaluate(() => {
+      const nav = document.querySelector('nav, header') as HTMLElement
+      const hero = document.querySelector('[data-testid="home-hero"]') as HTMLElement
+      return {
+        nav: nav.getBoundingClientRect().height,
+        hero: hero ? hero.getBoundingClientRect().height : 9999,
+        search: Boolean(hero?.querySelector('form[action="/search"] input[name="q"]')),
+        money: document.querySelectorAll('[data-home-money]').length,
+        calcs: document.querySelectorAll('main input[type="number"], main input[type="range"]').length,
+      }
+    })
+    expect(m.nav, `nav ${w}`).toBeLessThanOrEqual(navMax)
+    expect(m.hero, `hero ${w}`).toBeLessThanOrEqual(heroMax)
+    expect(m.search).toBe(true)
+    expect(m.money).toBe(1)
+    expect(m.calcs).toBe(0)
   }
 })
