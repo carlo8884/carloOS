@@ -12,8 +12,13 @@ const SOURCES = [
     publisher: "Elsevier/Saunders",
   },
   {
-    label: "Merck Veterinary Manual — Endocrine Diseases of Ferrets: insulinoma overview, clinical signs, diagnosis, and treatment",
+    label: "Merck Veterinary Manual (pet owner) — Hormonal Disorders of Ferrets: insulinoma signs, diagnosis, treatment and home first aid",
     url: "https://www.merckvetmanual.com/all-other-pets/ferrets/hormonal-disorders-of-ferrets",
+    publisher: "Merck Veterinary Manual",
+  },
+  {
+    label: "Merck Veterinary Manual (professional) — Endocrine Disorders of Ferrets: glucose cutoff, reference range and fasting time",
+    url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/endocrine-disorders-of-ferrets",
     publisher: "Merck Veterinary Manual",
   },
   {
@@ -58,14 +63,14 @@ const med = buildMedicalWebPageSchema({
     'Clinical reference on pancreatic beta-cell tumor (insulinoma) in domestic ferrets, including diagnosis, treatment, and emergency management.',
   url: 'https://ferret.com/health/insulinoma',
   authorName: 'Ferret.com Editorial',
-  lastReviewed: '2026-05-28',
+  lastReviewed: '2026-10-13',
 })
 
 const FAQS = [
   {
     question: 'What is insulinoma in ferrets?',
     answer:
-      'Insulinoma is a functional tumor of the pancreatic beta cells — the cells that produce insulin. The tumor cells secrete insulin in an unregulated way, independent of the normal feedback loop, producing chronic, intermittent, often severe hypoglycemia. It is the most commonly diagnosed neoplasm in middle-aged and older domestic ferrets, typically appearing between roughly 3 and 7 years of age.',
+      'Insulinoma is a functional tumor of the pancreatic beta cells — the cells that produce insulin. The tumor cells secrete insulin in an unregulated way, independent of the normal feedback loop, producing chronic, intermittent, often severe hypoglycemia. It is very common in ferrets older than about 3 years (Merck Veterinary Manual).',
   },
   {
     question: 'What are the first signs of insulinoma in a ferret?',
@@ -75,12 +80,12 @@ const FAQS = [
   {
     question: 'How is insulinoma diagnosed in ferrets?',
     answer:
-      'The diagnostic centerpiece is a fasting blood glucose after a controlled 3- to 4-hour in-clinic fast (longer fasts risk precipitating a crisis). A fasting glucose under 60 mg/dL in the absence of another explanation is considered diagnostic; normal ferret fasting glucose sits roughly between 90 and 125 mg/dL. A paired insulin-to-glucose ratio is the gold-standard biochemical confirmation. Ultrasound is used to screen for visible nodules and concurrent adrenal disease, but most insulinomas are too small to see — a negative scan does not rule out the diagnosis. This workup belongs with an exotic-animal veterinarian.',
+      'The diagnostic centerpiece is a fasting blood glucose after food has been withheld for about 4 hours, as your vet directs. Merck gives a low result as under 60 mg/dL, against a reference range of 90–125 mg/dL. Insulin is usually raised at the same time but can be within the reference range. Ultrasound is used to screen for visible nodules and concurrent adrenal disease, but most insulinomas are too small to see — a negative scan does not rule out the diagnosis. This workup belongs with an exotic-animal veterinarian.',
   },
   {
     question: 'How long can a ferret live with insulinoma?',
     answer:
-      'Published case series in the exotic-pet veterinary literature report median survival on medical management in the range of 12-24 months from diagnosis, with substantial individual variation. Surgical cases report median disease-free intervals of roughly 6-18 months, with most ferrets eventually returning to medical management. Quality of life on appropriate management is generally good — most insulinoma ferrets continue to eat, play, and engage between episodes.',
+      'There is no cure. Per the Merck Veterinary Manual, surgery can reduce signs, ease management and moderately increase survival time, but most ferrets need continued medical treatment, and medical treatment is lifelong. Survival varies widely between ferrets, so ask your vet about your ferret\'s outlook. Quality of life on appropriate management is generally good — most insulinoma ferrets continue to eat, play, and engage between episodes.',
   },
   {
     question: 'Can diet prevent insulinoma in ferrets?',
@@ -100,17 +105,17 @@ const FAQS = [
   {
     question: 'What is a normal blood glucose for a ferret, and what number means insulinoma?',
     answer:
-      'Normal fasting blood glucose in ferrets sits roughly between 90 and 125 mg/dL (about 5.0-6.9 mmol/L). A fasting value under 60 mg/dL (3.3 mmol/L) in the absence of another explanation is considered diagnostic for insulinoma. Values between 60 and 90 mg/dL are equivocal and warrant a recheck after a controlled in-clinic fast or a paired insulin-to-glucose ratio. Reference ranges vary by laboratory, so any result should be interpreted by a veterinarian familiar with ferrets rather than against a fixed cutoff at home.',
+      'The Merck Veterinary Manual gives a reference range of 90–125 mg/dL (5.0–7.0 mmol/L) and treats a glucose under 60 mg/dL (3.3 mmol/L), after food is withheld for at least 4 hours, as low and consistent with insulinoma alongside matching signs. Merck lists that threshold and range; results near the cutoff are for your vet to interpret, and may be rechecked. Reference ranges vary by laboratory, so any result should be interpreted by a veterinarian familiar with ferrets rather than against a fixed cutoff at home.',
   },
   {
     question: 'Why does my ferret crash again after I give it sugar for low blood sugar?',
     answer:
-      'Pure sugar can produce a rebound. The ferret’s remaining functional beta cells can respond to the glucose load with another insulin spike. This page does not cite a minute range for that rebound. Oral sugar (Karo syrup, honey) is only the rescue step for a ferret that cannot safely swallow food — once the ferret is alert, offer a protein-and-fat meal. Sugar buys a short window; protein is the next step while you get to a veterinarian. Crisis-level hypoglycemia still warrants inpatient evaluation even after an apparent recovery at home.',
+      'Pure sugar can produce a rebound. The ferret’s remaining functional beta cells can respond to the glucose load with another insulin spike. This page does not cite a minute range for that rebound. Merck says you can offer a little honey or corn syrup to a weak or collapsed ferret, but never put anything in the mouth of a ferret having a seizure. Once the ferret is alert, offer a protein-and-fat meal. Sugar buys a short window; protein is the next step while you get to a veterinarian. Crisis-level hypoglycemia still warrants inpatient evaluation even after an apparent recovery at home.',
   },
   {
     question: 'Is a ferret hypoglycemic episode an emergency?',
     answer:
-      'Collapse, seizure, or unresponsiveness is a medical emergency. Seizures lasting more than two minutes, recurrent crises within a single day, or any episode that does not resolve cleanly within 5-10 minutes are all reasons to be on the way to an emergency veterinary hospital — ideally one with exotic-mammal capability — rather than waiting at home. Crisis-level hypoglycemia warrants inpatient evaluation even if the ferret appears to recover. Every household with an insulinoma ferret should review the crisis response with their exotic-animal veterinarian in advance.',
+      'Collapse, seizure, or unresponsiveness is a medical emergency. Merck says ferrets with signs of low blood sugar should be seen by a veterinarian immediately: offer a little honey or corn syrup if the ferret is weak or collapsed, put nothing in the mouth during a seizure, and go — ideally to a clinic that treats ferrets — rather than waiting at home. Crisis-level hypoglycemia warrants inpatient evaluation even if the ferret appears to recover. Every household with an insulinoma ferret should review the crisis response with their exotic-animal veterinarian in advance.',
   },
 ]
 const faqSchema = buildFAQSchema({ questions: FAQS })
@@ -131,7 +136,7 @@ export default function FerretInsulinomaPage() {
         hero={{
           title: 'Insulinoma in Ferrets',
           subtitle:
-            'Insulinoma — a functional tumor of the pancreatic beta cells — is the most commonly diagnosed neoplasm in middle-aged and older domestic ferrets. The clinical picture is easily mistaken for "an old ferret slowing down". The biochemistry is unambiguous when looked for, and the treatment is well-established. Early recognition meaningfully changes the prognosis.',
+            'Insulinoma — a functional tumor of the pancreatic beta cells — is very common in ferrets older than about 3 years (Merck Veterinary Manual). The clinical picture is easily mistaken for "an old ferret slowing down". The biochemistry is unambiguous when looked for, and the treatment is well-established. Early recognition meaningfully changes the prognosis.',
           category: 'Ferret Health',
           authorName: 'Ferret.com Editorial',
           publishedAt: 'May 2026',
@@ -222,6 +227,12 @@ export default function FerretInsulinomaPage() {
             reviewedBy="Editorial team"
           />
           <LastUpdated date="2026-10-13" />
+          <div className="rounded-lg border-l-4 border-brand-primary bg-brand-white p-5 my-6" data-testid="short-answer">
+            <h2 className="font-display text-lg font-bold mb-2">The short answer</h2>
+            <p className="text-base leading-relaxed text-brand-text-mid m-0">
+              Insulinoma is a pancreatic tumor that makes too much insulin, causing low blood sugar. It is very common in ferrets over about 3 years. Signs include weakness, lethargy, hind-leg weakness, drooling and teeth grinding, with seizures in severe cases. Diagnosis is a fasting blood glucose after about 4 hours without food. There is no cure, but surgery and lifelong medication can control the signs (<a href="https://www.merckvetmanual.com/all-other-pets/ferrets/hormonal-disorders-of-ferrets">Merck</a>). A low result is under 60&nbsp;mg/dL against a reference range of 90&ndash;125&nbsp;mg/dL (<a href="https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/endocrine-disorders-of-ferrets">Merck, professional</a>). If your ferret is weak or collapses, offer a little honey or corn syrup, but put nothing in the mouth during a seizure, and see a vet immediately.
+            </p>
+          </div>
 
           <DropCap>
             Insulinoma is the disease most ferret owners eventually learn the
@@ -236,15 +247,13 @@ export default function FerretInsulinomaPage() {
             Insulinoma is a functional tumor of the pancreatic beta cells that
             secretes insulin without regard to the normal feedback loop,
             producing chronic, intermittent hypoglycemia. It is the most
-            commonly diagnosed neoplasm in middle-aged and older ferrets,
-            typically appearing between roughly 3 and 7 years of age. Classic
+            common tumor in ferrets older than about 3 years. Classic
             signs are episodic after a fast or long sleep: hindlimb weakness,
             pawing at the mouth with drooling, vacant &quot;stargazing&quot;
             stares, and — at the severe end — tremor, seizure, or collapse.
             Diagnosis centers on a <strong>fasting blood glucose under
-            60&nbsp;mg/dL</strong> (normal fasting glucose is roughly
-            90&ndash;125&nbsp;mg/dL), confirmed where needed by a paired
-            insulin-to-glucose ratio. Treatment follows a ladder — diet, then
+            60&nbsp;mg/dL</strong> (reference range 90&ndash;125&nbsp;mg/dL, per
+            Merck), with insulin usually raised. Treatment follows a ladder — diet, then
             prednisolone, then diazoxide, then surgical partial pancreatectomy —
             and a collapse or seizure is a medical emergency requiring immediate
             care. This page is general clinical information; diagnosis and
@@ -261,14 +270,14 @@ export default function FerretInsulinomaPage() {
 
           <h2 id="epidemiology">Who Gets It</h2>
           <p>
-            Insulinoma is most commonly diagnosed in ferrets aged roughly 3 to 7 years, although cases are reported in younger and older animals. There is no consistent sex predisposition in the published literature. In North American pet ferret populations — most of which originate from a small number of large commercial breeders — case series suggest insulinoma is encountered in a substantial fraction of middle-aged animals seen by exotic-mammal specialists.
+            Merck describes insulinoma as very common in ferrets older than 2–3 years. There is no consistent sex predisposition in the published literature. In North American pet ferret populations — most of which originate from a small number of large commercial breeders — case series suggest insulinoma is encountered in a substantial fraction of middle-aged animals seen by exotic-mammal specialists.
           </p>
           <p>
             The{' '}
             <a href="/tools/ferret-age-calculator" className="text-brand-primary underline underline-offset-2">
               Ferret Age Calculator
             </a>{' '}
-            places a calendar age on the same life-stage bands, so a 3-to-7-year window is a stage label rather than a surprise.
+            places a calendar age on the same life-stage bands, so the over-3 risk window is a stage label rather than a surprise.
           </p>
           <p>
             The leading working hypothesis for the unusually high prevalence in domestic ferrets is chronic dietary carbohydrate exposure driving sustained insulin demand and eventual beta-cell hyperplasia. Minimizing dietary carbohydrate is a planning choice on this page, not a fetched American Ferret Association cutoff. The Merck Veterinary Manual states that ferrets require protein of 35%–40%, and that carbohydrate (under 25%) and fiber (under 2.5%) proportions of the diet should be relatively low (<a href="https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/management-of-ferrets">Merck Veterinary Manual</a>). The evidence is associational rather than experimentally proven.
@@ -287,7 +296,7 @@ export default function FerretInsulinomaPage() {
             <li><strong>Weight changes.</strong> Variable — some insulinoma ferrets gain weight (the anabolic effect of excess insulin), some lose weight, and many remain stable.</li>
           </ul>
           <p>
-            Many of these signs are intermittent. A ferret can have a 30-second hypoglycemic episode in the morning and look completely normal at the veterinary appointment that afternoon. This is why screening bloodwork is more sensitive than physical exam in early disease. Because adrenal disease shares the same 3-to-7-year age window, a ferret losing its back-end coordination and a ferret losing its tail-base fur can be the same animal — see <a href="/health/adrenal-disease">adrenal disease</a> for the parallel work-up.
+            Many of these signs are intermittent. A ferret can have a 30-second hypoglycemic episode in the morning and look completely normal at the veterinary appointment that afternoon. This is why screening bloodwork is more sensitive than physical exam in early disease. Because adrenal disease is also common in middle-aged ferrets (Merck), a ferret losing its back-end coordination and a ferret losing its tail-base fur can be the same animal — see <a href="/health/adrenal-disease">adrenal disease</a> for the parallel work-up.
           </p>
 
           <h2 id="quickref">Quick Reference</h2>
@@ -305,7 +314,7 @@ export default function FerretInsulinomaPage() {
               <tbody>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 font-medium">Typical age of onset</td>
-                  <td className="p-3">3-7 years; cases reported earlier and later</td>
+                  <td className="p-3">Usually older than about 2–3 years (Merck)</td>
                 </tr>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 font-medium">Sex predisposition</td>
@@ -317,27 +326,27 @@ export default function FerretInsulinomaPage() {
                 </tr>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 font-medium">Normal fasting glucose</td>
-                  <td className="p-3">Roughly 90-125 mg/dL (≈5.0-6.9 mmol/L)</td>
+                  <td className="p-3">Reference range 90–125 mg/dL (5.0–7.0 mmol/L), per Merck</td>
                 </tr>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 font-medium">Diagnostic glucose threshold</td>
-                  <td className="p-3">Under 60 mg/dL (3.3 mmol/L) fasted, absent another cause</td>
+                  <td className="p-3">Under 60 mg/dL (3.3 mmol/L) after at least 4 hours without food (Merck)</td>
                 </tr>
                 <tr className="border-b border-brand-border">
-                  <td className="p-3 font-medium">Equivocal range</td>
-                  <td className="p-3">60-90 mg/dL — recheck after a controlled fast or run insulin:glucose ratio</td>
+                  <td className="p-3 font-medium">Borderline results</td>
+                  <td className="p-3">Your vet interprets and may recheck</td>
                 </tr>
                 <tr className="border-b border-brand-border">
-                  <td className="p-3 font-medium">Gold-standard confirmation</td>
-                  <td className="p-3">Elevated serum insulin paired with low glucose (insulin:glucose ratio)</td>
+                  <td className="p-3 font-medium">Insulin</td>
+                  <td className="p-3">Usually raised with low glucose, but can be within range (Merck)</td>
                 </tr>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 font-medium">First-line medication</td>
                   <td className="p-3">Prednisolone (vet-prescribed, titrated to glucose and signs)</td>
                 </tr>
                 <tr className="border-b border-brand-border">
-                  <td className="p-3 font-medium">Median survival (medical)</td>
-                  <td className="p-3">~12-24 months from diagnosis; wide individual variation</td>
+                  <td className="p-3 font-medium">Outlook</td>
+                  <td className="p-3">No cure; lifelong management, wide individual variation (Merck)</td>
                 </tr>
                 <tr>
                   <td className="p-3 font-medium">Urgency</td>
@@ -351,12 +360,12 @@ export default function FerretInsulinomaPage() {
 
           <h2 id="diagnosis">Diagnosis</h2>
           <p>
-            The diagnostic centerpiece is a <strong>fasting blood glucose</strong>. A 3- to 4-hour fast is standard in clinic — longer fasts are not appropriate in suspected insulinoma cases because they risk precipitating a hypoglycemic crisis.
+            The diagnostic centerpiece is a <strong>fasting blood glucose</strong>. Food is withheld for about 4 hours before the blood sample, as your vet directs (Merck); do not fast a suspected insulinoma ferret longer at home.
           </p>
           <ul>
-            <li><strong>Fasting blood glucose under 60 mg/dL (3.3 mmol/L)</strong> in a fasted ferret is considered diagnostic for insulinoma in the absence of another explanation (sepsis, severe hepatic disease, iatrogenic insulin). Some references use a 70 mg/dL threshold for a presumptive diagnosis with consistent signs.</li>
-            <li><strong>Normal fasting glucose in ferrets</strong> sits roughly between 90 and 125 mg/dL. Values between 60 and 90 mg/dL are equivocal — recheck after a controlled in-clinic fast or proceed to the insulin-to-glucose ratio.</li>
-            <li><strong>Paired insulin and glucose (insulin:glucose ratio).</strong> An elevated serum insulin concentration in the face of low glucose confirms inappropriate insulin secretion. This is the gold-standard biochemical confirmation and is described in JAVMA case series. Reference ranges vary by laboratory; interpret in consultation with the lab.</li>
+            <li><strong>Fasting blood glucose under 60 mg/dL (3.3 mmol/L)</strong> in a fasted ferret is considered diagnostic for insulinoma in the absence of another explanation (sepsis, severe hepatic disease, iatrogenic insulin).</li>
+            <li><strong>Normal fasting glucose in ferrets</strong> has a reference range of 90–125 mg/dL (Merck). Results near the cutoff are for your vet to interpret and may be rechecked.</li>
+            <li><strong>Paired insulin and glucose (insulin:glucose ratio).</strong> Insulin is usually raised alongside low glucose, which supports the diagnosis, but it can be within the reference range (Merck). Reference ranges vary by laboratory; interpret in consultation with the lab.</li>
             <li><strong>Imaging.</strong> Abdominal ultrasound is performed to screen for visible pancreatic nodules and to evaluate for concurrent adrenal disease (which is common comorbidity in middle-aged ferrets). Most insulinomas are too small to see on ultrasound; a negative scan does not rule out the diagnosis.</li>
             <li><strong>Concurrent workup.</strong> CBC, full chemistry panel, and urinalysis to rule out alternative causes of hypoglycemia and to baseline organ function before starting steroids.</li>
           </ul>
@@ -438,17 +447,17 @@ export default function FerretInsulinomaPage() {
           </p>
           <ol>
             <li><strong>If the ferret is responsive enough to swallow:</strong> offer a high-value protein meal (a small amount of meat baby food, a piece of cooked chicken, a meat-based recovery diet such as Carnivore Care). Food beats sugar for medium-term stabilization in a ferret because protein and fat are their primary metabolic substrate.</li>
-            <li><strong>If the ferret is collapsed, seizing, or cannot swallow safely:</strong> use Karo (light corn) syrup, honey, or maple syrup. Rub a small amount — roughly 1–2 drops, no more than a quarter teaspoon — on the gums and inside the cheek. Sugar absorbs across mucous membranes quickly. Do not pour sugar into the mouth of an unresponsive ferret; aspiration is a real risk.</li>
-            <li><strong>Once the ferret is alert:</strong> offer a protein meal as in step 1. Sugar alone produces a rebound — the ferret’s remaining functional beta cells respond to the glucose load with another insulin spike, and the crisis recurs in 20–40 minutes.</li>
+            <li><strong>If the ferret is weak or collapsed but not seizing:</strong> Merck says you can offer a little honey or corn syrup. <strong>Never put anything in the mouth of a ferret having a seizure</strong> (Merck); keep it from falling or hitting objects and head for the vet.</li>
+            <li><strong>Once the ferret is alert:</strong> offer a protein meal as in step 1. Sugar alone can be followed by another drop in blood sugar, so do not rely on it.</li>
             <li><strong>Transport to an emergency veterinary hospital immediately</strong>, ideally one with exotic-mammal capability. Crisis-level hypoglycemia warrants IV dextrose and inpatient monitoring even after the ferret appears to have recovered at home.</li>
           </ol>
           <p>
-            Seizures lasting more than two minutes, recurrent crises within a single day, or any episode that does not resolve cleanly within 5–10 minutes of oral sugar are all reasons to be in the car on the way to the ER rather than waiting at home.
+            Merck says ferrets with signs of hypoglycemia should be seen by a veterinarian immediately, so do not wait at home to see whether an episode passes.
           </p>
 
           <h2 id="prognosis">Prognosis</h2>
           <p>
-            Published case series in the exotic-pet veterinary literature report median survival on medical management in the range of 12–24 months from diagnosis, with substantial individual variation. Surgical cases report median disease-free intervals in the 6–18 month range, with most ferrets eventually returning to medical management as residual or recurrent disease becomes clinically apparent.
+            There is no cure. Surgery can reduce signs, ease management and moderately increase survival time, but tiny tumors scattered through the pancreas may be missed, and most ferrets need continued medical treatment. Medical treatment is lifelong and does not shrink the tumor, and blood glucose should be rechecked every few months and after dose changes (Merck). Survival varies widely between ferrets.
           </p>
           <p>
             Quality of life on appropriate management is generally good. Most insulinoma ferrets continue to eat well, play, and engage with their household between episodes. The trajectory is not "rapid decline"; it is "stable on management with intermittent breakthrough episodes that become more frequent over time".

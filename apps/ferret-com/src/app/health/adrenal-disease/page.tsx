@@ -20,6 +20,11 @@ import {
 
 const SOURCES = [
   {
+    label: "Merck Veterinary Manual (professional) — Endocrine Disorders of Ferrets: hyperadrenocorticism cause, deslorelin licensing and disease-free periods",
+    url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/endocrine-disorders-of-ferrets",
+    publisher: "Merck Veterinary Manual",
+  },
+  {
     label: "Quesenberry KE, Carpenter JW (eds.). Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery. 3rd ed. Saunders/Elsevier — ferret adrenal-disease chapter, including the early-neuter hypothesis and deslorelin therapy. (general reference; not checked against this page)",
     url: "https://www.elsevier.com/books/ferrets-rabbits-and-rodents/quesenberry/978-1-4160-6621-7",
     publisher: "Elsevier/Saunders",
@@ -80,7 +85,7 @@ const medSchema = buildMedicalWebPageSchema({
     'Clinical reference on hyperadrenocorticism (adrenal gland disease) in domestic ferrets, including diagnosis and treatment options.',
   url: 'https://ferret.com/health/adrenal-disease',
   authorName: 'Ferret.com Editorial',
-  lastReviewed: '2026-05-28',
+  lastReviewed: '2026-10-13',
 })
 
 
@@ -98,7 +103,7 @@ const FAQS = [
   {
     question: 'Will the deslorelin implant cure my ferret?',
     answer:
-      'No — it manages signs but does not remove the tumor. Deslorelin (Suprelorin) is a GnRH agonist that suppresses the downstream sex-steroid output, so hair regrows, vulvar swelling resolves, and behavior normalizes. The underlying adrenal nodule continues to grow slowly. Most ferrets need a repeat implant every 12-24 months as effect wanes.',
+      'No — it manages signs but does not remove the tumor. Deslorelin (Suprelorin) is a GnRH agonist that suppresses the downstream sex-steroid output, so hair regrows, vulvar swelling resolves, and behavior normalizes. Medical treatment does not shrink the tumor (Merck). In one reported series the average disease-free period after an implant was 16.5 months (range 3–30 months), and signs can return as the implant loses effect (Merck, professional).',
   },
   {
     question: 'Surgery or implant — which is better?',
@@ -108,12 +113,12 @@ const FAQS = [
   {
     question: 'Can adrenal disease be prevented?',
     answer:
-      'There is no proven prevention. The leading hypotheses involve very early neutering (typical in US pet-store ferrets, often before 6 weeks) and reduced exposure to a natural photoperiod, both of which may dysregulate the hypothalamic-pituitary-gonadal axis. The evidence is associational. The practical takeaway: source from breeders who neuter later when possible, and provide a natural light cycle indoors.',
+      'There is no proven prevention. Merck links the disease to raised gonadotropin hormones after neutering, but says the age at neutering is no longer thought to play a significant role. Preliminary data suggest a deslorelin implant used instead of surgical neutering may lower the risk. Ask your vet whether that suits your ferret.',
   },
   {
     question: 'Does adrenal disease and insulinoma occur together?',
     answer:
-      'Frequently. Both peak in the same age window (3-7 years), and exotic-pet veterinary references consistently note co-occurrence in middle-aged ferrets. Any ferret being worked up for one should be screened for the other — a fasting glucose at the same visit as the hormone panel is good practice. See our companion page on insulinoma.',
+      'They can occur together. Merck describes insulinoma and adrenal disease as the two common hormonal disorders of ferrets, and both are seen in middle-aged ferrets. Any ferret being worked up for one should be screened for the other — a fasting glucose at the same visit as the hormone panel is good practice. See our companion page on insulinoma.',
   },
 ]
 const faqSchema = buildFAQSchema({ questions: FAQS })
@@ -134,7 +139,7 @@ export default function FerretAdrenalDiseasePage() {
         hero={{
           title: 'Adrenal Disease in Ferrets',
           subtitle:
-            "Adrenal gland disease — hyperplasia, adenoma, or adenocarcinoma of the adrenal cortex — is the second most commonly diagnosed disease of middle-aged ferrets, behind only insulinoma. It is hormonally driven rather than cortisol-driven (unlike canine Cushing's), which changes both the clinical picture and the diagnostic workup.",
+            "Adrenal gland disease — hyperplasia, adenoma, or adenocarcinoma of the adrenal cortex — is one of the two common hormonal disorders of ferrets, alongside insulinoma (Merck). It is hormonally driven rather than cortisol-driven (unlike canine Cushing's), which changes both the clinical picture and the diagnostic workup.",
           category: 'Ferret Health',
           authorName: 'Ferret.com Editorial',
           publishedAt: 'May 2026',
@@ -217,6 +222,12 @@ export default function FerretAdrenalDiseasePage() {
             updatedAt="2026-10-13"
           />
           <LastUpdated date="2026-10-13" />
+          <div className="rounded-lg border-l-4 border-brand-primary bg-brand-white p-5 my-6" data-testid="short-answer">
+            <h2 className="font-display text-lg font-bold mb-2">The short answer</h2>
+            <p className="text-base leading-relaxed text-brand-text-mid m-0">
+              Ferret adrenal disease is overproduction of sex hormones by the adrenal gland, not cortisol as in Cushing&apos;s in dogs. It can appear from about 1.5 years of age. The most common sign is hair loss starting on the tail and rump. Females may have a swollen vulva, and males may struggle to urinate because of an enlarged prostate, which needs a vet as soon as possible. Diagnosis uses a hormone panel and ultrasound. Surgery is more likely to cure it but the disease returns in about 40% of ferrets, while implants or injections control signs for life without shrinking the tumor (<a href="https://www.merckvetmanual.com/all-other-pets/ferrets/hormonal-disorders-of-ferrets">Merck</a>). A deslorelin implant is licensed for ferrets and has become the preferred treatment (<a href="https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/endocrine-disorders-of-ferrets">Merck, professional</a>).
+            </p>
+          </div>
 
           <DropCap>
             Adrenal disease is the diagnosis owners learn to expect somewhere in
@@ -260,28 +271,20 @@ export default function FerretAdrenalDiseasePage() {
             prognosis differs materially between adenoma and adenocarcinoma.
           </p>
           <p>
-            The leading working hypothesis for the unusually high prevalence
-            of adrenal disease in US ferrets centers on{' '}
-            <strong>very early neutering</strong>. The majority of US pet-store
-            ferrets are sourced from a small number of large commercial breeders
-            that spay/neuter kits at roughly 5-6 weeks of age. Without gonadal
-            negative feedback on the hypothalamic-pituitary axis, gonadotropin
-            (LH, FSH) levels remain chronically elevated. Adrenal cortical
-            tissue expresses gonadotropin receptors, and chronic stimulation
-            is hypothesized to drive the cortical proliferation that becomes
-            adrenal disease. The hypothesis is widely discussed in Quesenberry
-            &amp; Carpenter and in the <em>Veterinary Clinics of North America:
-            Exotic Animal Practice</em> issues on ferret endocrine disease; the
-            evidence is associational rather than experimentally proven.
+            Per the Merck Veterinary Manual, the likely driver is the rise in
+            gonadotropin hormones (LH, FSH) after neutering removes the
+            normal feedback, which keeps stimulating the adrenal cortex until
+            it grows. Merck adds that the <strong>age at neutering is no longer
+            thought to play a significant role</strong>, and preliminary data
+            suggest that a deslorelin implant used instead of surgical neutering
+            may lower the risk.
           </p>
 
           <h2 id="epidemiology">Who Gets It</h2>
           <p>
-            Adrenal disease is most commonly diagnosed between ages 3 and 7,
-            with cases reported earlier and later. Both sexes are affected.
-            US-sourced pet ferrets carry materially higher disease prevalence
-            than ferrets from regions where early-neuter is uncommon, which
-            is the observation that fuels the early-neuter hypothesis.
+            Adrenal disease is usually seen in middle-aged ferrets, but Merck
+            notes it can appear in ferrets as young as 1.5 years. Both sexes
+            are affected.
           </p>
           <p>
             Co-occurrence with <a href="/health/insulinoma">insulinoma</a> is
@@ -345,8 +348,8 @@ export default function FerretAdrenalDiseasePage() {
               enlargement can obstruct his urethra completely. Straining to
               urinate, no urine production, vocalization, or abdominal pain
               are all emergency presentations — drive to an ER, ideally one
-              with exotic-mammal capability. Untreated obstruction is fatal
-              within roughly 24-48 hours.
+              with exotic-mammal capability. Merck lists straining but failing
+              to urinate as a reason to see a vet immediately.
             </p>
           </CalloutBox>
 
@@ -363,7 +366,7 @@ export default function FerretAdrenalDiseasePage() {
               <tbody>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 font-medium">Typical age of onset</td>
-                  <td className="p-3">3-7 years; cases reported earlier and later</td>
+                  <td className="p-3">Usually middle age; seen as young as 1.5 years (Merck)</td>
                 </tr>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 font-medium">Sex predisposition</td>
@@ -468,17 +471,16 @@ export default function FerretAdrenalDiseasePage() {
 
           <h3>Deslorelin (Suprelorin) implant</h3>
           <p>
-            Deslorelin is a sustained-release GnRH agonist. The implant is a
-            small biodegradable rod (typically 4.7 mg, originally registered
-            for chemical sterilization of dogs) placed subcutaneously between
-            the shoulder blades under brief anesthesia or heavy sedation.
+            Deslorelin is a sustained-release GnRH agonist, and the implant is
+            licensed for treating adrenal disease in ferrets (Merck). It is
+            placed under the skin by your vet.
             After an initial brief flare of GnRH activity, the chronic
             agonist exposure desensitizes pituitary gonadotrophs, suppressing
             LH and FSH output. With the gonadotropin drive to the diseased
             adrenal gland removed, the adrenal&apos;s sex-steroid output falls and
             clinical signs regress.
           </p>
-          <p>Typical timeline of response: vulvar swelling resolves within 2-6 weeks, hair regrows over 2-4 months, behavioral signs normalize within weeks. Most published series report median duration of effect per implant of approximately{' '} 12-24 months, with substantial individual variation. When signs return, a repeat implant is placed. Some ferrets receive multiple implant cycles across the rest of their life with good symptom control.</p>
+          <p>Signs such as vulvar swelling, hair loss and behavior changes typically improve over the following weeks to months; ask your vet what to expect. Merck cites an average disease-free period of 16.5 months (range 3–30 months) after the implant, against 13.6 months (range 0–38 months) after surgery, which is why medical treatment has become preferred. When signs return, a repeat implant is placed. Some ferrets receive multiple implant cycles across the rest of their life with good symptom control.</p>
           <p>
             Limitations: deslorelin treats signs, not the tumor. The adrenal
             lesion continues to grow at its native rate, and a small fraction
@@ -490,9 +492,9 @@ export default function FerretAdrenalDiseasePage() {
           <h3>Surgical adrenalectomy</h3>
           <p>
             Removal of the diseased gland (or both, in bilateral cases) by
-            an exotic-mammal surgeon. Surgery removes the tumor and offers
-            the closest thing to a cure, but it is not without significant
-            technical complexity — see the next section on left vs right
+            an exotic-mammal surgeon. Surgery is more likely than medical
+            management to cure the disease, but it returns in about 40% of
+            affected ferrets (Merck), and it carries real technical complexity — see the next section on left vs right
             laterality. Recovery is typically uncomplicated in healthy
             ferrets; serious post-op complications cluster around major
             vessel injury during right-sided procedures.
@@ -504,8 +506,8 @@ export default function FerretAdrenalDiseasePage() {
             Neither is the modern standard of care in ferrets — efficacy is
             inconsistent and side-effect burden is meaningful. They appear in
             older case reports but are rarely first-line in current practice.
-            Melatonin implants are sometimes used as adjuncts, although the
-            evidence is thinner than for deslorelin.
+            Melatonin has been used for hair loss, but Merck notes it does not
+            stop the adrenal tumor growing.
           </p>
 
           <h2 id="surgery">Surgery — Why Left vs Right Matters</h2>
@@ -546,8 +548,7 @@ export default function FerretAdrenalDiseasePage() {
               maintains a directory of practitioners with declared exotic-mammal
               practice. For right-sided adrenalectomy specifically, ask any
               candidate surgeon how many ferret right adrenalectomies they
-              have personally performed in the last year — answers below
-              about a dozen suggest looking further. Veterinary teaching
+              have personally performed. Veterinary teaching
               hospitals with exotic-mammal services (Tufts, Cornell, UC Davis,
               Texas A&amp;M, North Carolina State, among others) often have
               the deepest experience.
@@ -558,13 +559,11 @@ export default function FerretAdrenalDiseasePage() {
           <p>
             Adrenal disease is in general a chronic-management disease, not
             an acute-fatal one. Published case series in the exotic-pet
-            veterinary literature report median survival from diagnosis on
-            deslorelin therapy of approximately <strong>1-2 years per
-            implant cycle</strong>, with many ferrets receiving multiple cycles
-            and living several years from diagnosis. Surgical cases with
-            complete unilateral resection of a benign lesion can be
-            functionally cured for the remainder of the ferret&apos;s life,
-            though recurrence in the contralateral gland is a known pattern.
+            literature, as summarized by Merck, gives an average disease-free
+            period of about 16.5 months per implant and 13.6 months after
+            surgery, with wide ranges. Spread of the cancer outside the glands
+            is unlikely, but after surgery the disease returns in about 40% of
+            ferrets (Merck).
           </p>
           <p>
             Quality of life on appropriate therapy is generally excellent.
