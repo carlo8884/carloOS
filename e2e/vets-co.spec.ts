@@ -1232,3 +1232,11 @@ test('vets fix ES1: emergency-signs list matches Merck/AVMA (any seizure, no uns
   expect(text).toContain('seizure longer than 5 minutes')
   await expect(page.locator('a[href="https://www.merckvetmanual.com/multimedia/table/when-to-see-a-veterinarian"]').first()).toBeVisible()
 })
+
+test('vets fix TL1: when-to-go and ER-vs-urgent guides show no 72-hour timer claim', async ({ page }) => {
+  for (const path of ['/guides/when-to-go-to-the-vet', '/guides/er-vs-urgent-care']) {
+    await page.goto(path, { waitUntil: 'domcontentloaded' })
+    expect(await page.locator('body').innerText()).not.toMatch(/72[- ]hour/i)
+    await expect(page.locator('a[href^="/go/amazon-brand/"]').first()).toBeVisible()
+  }
+})
