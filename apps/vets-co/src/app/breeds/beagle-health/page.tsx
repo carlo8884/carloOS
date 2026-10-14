@@ -40,7 +40,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Vets.co Editorial',
   publishedAt: '2026-05-28T00:00:00Z',
-  modifiedAt: '2026-05-28T00:00:00Z',
+  modifiedAt: '2026-10-13T00:00:00Z',
 })
 
 const medicalSchema = buildMedicalWebPageSchema({
@@ -49,7 +49,7 @@ const medicalSchema = buildMedicalWebPageSchema({
     'Veterinary owner guide to the most common Beagle health conditions with screening guidance and citations.',
   url: PAGE_URL,
   authorName: 'Vets.co Editorial',
-  lastReviewed: '2026-05-28',
+  lastReviewed: '2026-10-13',
 })
 
 const FAQS = [
@@ -133,7 +133,7 @@ export default function VetsBeagleHealthPage() {
           <ArticleByline
             siteName="Vets.co Editorial"
             publishedAt="2026-05-28T00:00:00Z"
-            updatedAt="2026-09-06T00:00:00Z"
+            updatedAt="2026-10-13T00:00:00Z"
             reviewedBy="Editorial team"
           />
 
@@ -304,10 +304,10 @@ export default function VetsBeagleHealthPage() {
 
           <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Keep these on hand: an analog stopwatch so seizure duration stays a written count against the five-minute emergency line, blank index cards so each seizure stays one dated card, and a recipe-card box so measured meals stay one card per ration. These are educational Beagle-health / paperwork tools, not a ranked product list, not a substitute for veterinary care, and not a treatment.
+            Keep these on hand: a dog ear cleaner solution for routine cleaning of those long, floppy ears (ask your vet how often), a maze slow-feed bowl for fast eaters, and a digital food portion scale so measured meals stay measured. These are general care supplies, not a ranked product list, not a substitute for veterinary care, and not a treatment.
           </p>
 
-          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/analog+stopwatch?s=breeds-beagle-health", "/go/amazon-brand/blank+index+cards?s=breeds-beagle-health", "/go/amazon-brand/recipe+card+box?s=breeds-beagle-health"]} />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/dog+ear+cleaner+solution?s=breeds-beagle-health", "/go/amazon-brand/maze+slow+feed+dog+bowl?s=breeds-beagle-health", "/go/amazon-brand/digital+pet+food+portion+scale?s=breeds-beagle-health"]} />
 
           {/* Shop note — live amazon-brand search buttons
               (analog stopwatch /
@@ -336,16 +336,16 @@ export default function VetsBeagleHealthPage() {
             <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/analog+stopwatch?s=breeds-beagle-health"
-                amazonLabel="Browse analog stopwatches on Amazon →"
+                amazonHref="/go/amazon-brand/dog+ear+cleaner+solution?s=breeds-beagle-health"
+                amazonLabel="Browse dog ear cleaner solutions on Amazon →"
               />
               <ShopCtas
-                amazonHref="/go/amazon-brand/blank+index+cards?s=breeds-beagle-health"
-                amazonLabel="Browse blank index cards on Amazon →"
+                amazonHref="/go/amazon-brand/maze+slow+feed+dog+bowl?s=breeds-beagle-health"
+                amazonLabel="Browse maze slow-feed dog bowls on Amazon →"
               />
               <ShopCtas
-                amazonHref="/go/amazon-brand/recipe+card+box?s=breeds-beagle-health"
-                amazonLabel="Browse recipe-card boxes on Amazon →"
+                amazonHref="/go/amazon-brand/digital+pet+food+portion+scale?s=breeds-beagle-health"
+                amazonLabel="Browse digital pet food portion scales on Amazon →"
               />
           </div>
           </div>

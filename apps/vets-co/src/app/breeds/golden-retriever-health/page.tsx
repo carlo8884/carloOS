@@ -155,9 +155,9 @@ export default function VetsGoldenRetrieverHealthPage() {
         <p>This page does not name a recommended carrier. See the <Link href="/reviews/best-pet-insurance">full comparison →</Link></p>
 
         <h2 id="kit">Supplies named on this page</h2>
-        <p>Keep these on hand: paint chip sample cards and 18 month wall calendar. These are educational Golden-retriever-health / paperwork tools, not a ranked product list, not a substitute for veterinary care, and not a treatment.</p>
+        <p>Keep these on hand: a dog ear cleaner solution for routine ear cleaning (ask your vet how often) and an orthopedic dog bed for a large dog&apos;s joints. These are general care supplies, not a ranked product list, not a substitute for veterinary care, and not a treatment.</p>
 
-        <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/paint+chip+sample+cards?s=breeds-golden-retriever-health", "/go/amazon-brand/18+month+wall+calendar?s=breeds-golden-retriever-health"]} />
+        <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/dog+ear+cleaner+solution?s=breeds-golden-retriever-health", "/go/amazon-brand/orthopedic+dog+bed?s=breeds-golden-retriever-health"]} />
 
         {/* Shop note — live amazon-brand search buttons
             (dot-grid notebook /
@@ -193,12 +193,12 @@ export default function VetsGoldenRetrieverHealthPage() {
           <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
           <div className="flex flex-col gap-3">
 <ShopCtas
-              amazonHref="/go/amazon-brand/paint+chip+sample+cards?s=breeds-golden-retriever-health"
-              amazonLabel="Browse paint-chip sample cards on Amazon →"
+              amazonHref="/go/amazon-brand/dog+ear+cleaner+solution?s=breeds-golden-retriever-health"
+              amazonLabel="Browse dog ear cleaner solutions on Amazon →"
             />
             <ShopCtas
-              amazonHref="/go/amazon-brand/18+month+wall+calendar?s=breeds-golden-retriever-health"
-              amazonLabel="Browse 18-month wall calendars on Amazon →"
+              amazonHref="/go/amazon-brand/orthopedic+dog+bed?s=breeds-golden-retriever-health"
+              amazonLabel="Browse orthopedic dog beds on Amazon →"
             />
           </div>
         </div>

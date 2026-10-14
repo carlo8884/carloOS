@@ -8,7 +8,7 @@ import { BreedHealthCard } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'German Shepherd Health — DM, Hip Dysplasia & GDV | Vets.co', description: 'German Shepherds have specific health predispositions: degenerative myelopathy, hip dysplasia, and GDV. This guide explains monitoring, screening.', path: '/breeds/german-shepherd-health', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'German Shepherd Health — Owner Guide', description: 'DM, hip dysplasia, GDV, and EPI in German Shepherds from published veterinary sources.', url: 'https://vets.co/breeds/german-shepherd-health', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'German Shepherd Health — Owner Guide', description: 'DM, hip dysplasia, GDV, and EPI in German Shepherds from published veterinary sources.', url: 'https://vets.co/breeds/german-shepherd-health', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-13T00:00:00Z' })
 
 const FAQS = [
   {
@@ -57,7 +57,7 @@ export default function GSHealthPage() {
     >
       <div className="carloOS-article">
 
-        <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-09-06T00:00:00Z" reviewedBy="Editorial team" />
+        <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-10-13T00:00:00Z" reviewedBy="Editorial team" />
 
         <BreedHealthCard name="Degenerative Myelopathy (DM)" riskLevel="very-high" description="DM is a progressive, fatal neurological disease affecting the spinal cord — analogous to ALS in humans. Starts as hind limb wobbling and weakness, progresses to complete paralysis over 6–18 months. No cure exists. DNA testing identifies carriers and affected dogs. Almost all German Shepherds showing DM carry two copies of the SOD1 gene mutation — DNA test before breeding. Physical therapy and supportive care can maintain quality of life significantly longer than untreated progression." signs={['Hind limb wobbling or weakness', 'Crossing hind legs while walking', 'Knuckling (paws turning under)', 'Eventual inability to walk']} management="DNA test all GSDs before breeding. Physical therapy (underwater treadmill, controlled exercise) significantly extends functional life. Wheelchairs when paralysis progresses. DM-affected dogs maintain quality of life with dedicated care." />
 
@@ -74,10 +74,10 @@ export default function GSHealthPage() {
 
         <h2 id="kit">Supplies named on this page</h2>
         <p>
-          Keep these on hand: a top-bound steno pad so hind- limb wobble and knuckling after age 5 stay a written DM-workup log, a mechanical kitchen timer so the no- exercise-right-after-eating rule stays a timed rest, and self-adhesive file- folder labels so OFA hip-and-elbow, SOD1 DNA, and gastropexy notes stay three labeled tabs. These are educational German-shepherd-health / paperwork tools, not a ranked product list, not a substitute for veterinary care, and not a treatment.
+          Keep these on hand: an orthopedic dog bed for a large dog&apos;s hips and elbows, a maze slow-feed bowl so meals are not gulped, and a dog traction rug for slippery floors. These are general care supplies, not a ranked product list, not a substitute for veterinary care, and not a treatment.
         </p>
 
-        <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/top+bound+steno+pad?s=breeds-german-shepherd-health", "/go/amazon-brand/mechanical+kitchen+timer?s=breeds-german-shepherd-health", "/go/amazon-brand/self+adhesive+file+folder+labels?s=breeds-german-shepherd-health"]} />
+        <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/orthopedic+dog+bed?s=breeds-german-shepherd-health", "/go/amazon-brand/maze+slow+feed+dog+bowl?s=breeds-german-shepherd-health", "/go/amazon-brand/dog+traction+rug?s=breeds-german-shepherd-health"]} />
 
         {/* Shop note — live amazon-brand search buttons
             (top-bound steno pad /
@@ -110,16 +110,16 @@ export default function GSHealthPage() {
           <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
-              amazonHref="/go/amazon-brand/top+bound+steno+pad?s=breeds-german-shepherd-health"
-              amazonLabel="Browse top-bound steno pads on Amazon →"
+              amazonHref="/go/amazon-brand/orthopedic+dog+bed?s=breeds-german-shepherd-health"
+              amazonLabel="Browse orthopedic dog beds on Amazon →"
             />
             <ShopCtas
-              amazonHref="/go/amazon-brand/mechanical+kitchen+timer?s=breeds-german-shepherd-health"
-              amazonLabel="Browse mechanical kitchen timers on Amazon →"
+              amazonHref="/go/amazon-brand/maze+slow+feed+dog+bowl?s=breeds-german-shepherd-health"
+              amazonLabel="Browse maze slow-feed dog bowls on Amazon →"
             />
             <ShopCtas
-              amazonHref="/go/amazon-brand/self+adhesive+file+folder+labels?s=breeds-german-shepherd-health"
-              amazonLabel="Browse self-adhesive file-folder labels on Amazon →"
+              amazonHref="/go/amazon-brand/dog+traction+rug?s=breeds-german-shepherd-health"
+              amazonLabel="Browse dog traction rugs on Amazon →"
             />
           </div>
         </div>
