@@ -198,9 +198,9 @@ export default function SymptomsHubPage() {
         eyebrow="Symptom Triage Library"
         title="Pet Symptom Triage"
         intro={`When a pet symptom is ER now, when it is same-day vet, and when it is safe to monitor at home — ${dogCount} dog symptoms and ${catCount} cat symptoms, triaged by urgency.`}
-        manifestKey="vets-co:symptoms-hero"
+        manifestKey="dog-com:symptoms-hero"
         fallbackKey="vets-co:hero"
-        imageAlt="A veterinarian examining a pet during a check-up"
+        imageAlt="A brown Labrador Retriever resting on the floor"
         primaryCta={{ href: '/find-a-vet', label: 'Find a vet' }}
         secondaryCta={{ href: '/health/emergency-signs', label: 'Emergency signs' }}
         hop={

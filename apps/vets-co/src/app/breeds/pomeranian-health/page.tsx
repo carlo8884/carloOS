@@ -7,8 +7,7 @@ import {
   RelatedLinks,
   FAQAccordion,
   ShopCtas,
-  CrossSiteHelp,
-} from '@carloOS/ui'
+  CrossSiteHelp, StockImage } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 import {
   buildArticleSchema,
@@ -141,6 +140,9 @@ export default function VetsPomeranianHealthPage() {
             <HopDisclosure siteId="vets-co" href="/go/amazon-brand/analog+indoor+hygrometer?s=breeds-pomeranian-health" />
             <ShopCtas amazonHref="/go/amazon-brand/analog+indoor+hygrometer?s=breeds-pomeranian-health" amazonLabel="Browse analog indoor hygrometers on Amazon →" />
             <a href="#kit" className="inline-flex min-h-[44px] items-center text-xs text-brand-text-mid underline underline-offset-2">All supplies on this page ↓</a>
+          </div>
+          <div className="not-prose my-5 overflow-hidden rounded-xl">
+            <StockImage manifestKey="dog-com:breed-pomeranian" alt="A Pomeranian standing in grass" aspect="16:9" variant="inline" belowFold subtleCredit />
           </div>
 
                     <p>

@@ -54,9 +54,9 @@ export default function InsuranceQuestionsHubPage() {
           eyebrow="Pet Insurance Q&A"
           title="Pet Insurance Questions, Answered"
           intro="Straight, jargon-free answers to the questions owners actually ask before buying pet insurance — vaccines, pre-existing conditions, cost, whether it is worth it, claims, timing, multi-pet, and dental. Editorial only; we do not sell insurance."
-          manifestKey="vets-co:insurance-hero"
+          manifestKey="vets-co:category-pet-insurance"
           fallbackKey="vets-co:hero"
-          imageAlt="A pet owner reviewing insurance paperwork at a desk"
+          imageAlt="A person holding a silver tabby cat"
           primaryCta={{ href: '/tools/pet-insurance-worth-it-calculator', label: 'Is it worth it? Run the calculator' }}
           secondaryCta={{ href: '/insurance', label: 'Start with the basics' }}
         />

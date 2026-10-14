@@ -7,8 +7,7 @@ import {
   RelatedLinks,
   FAQAccordion,
   ShopCtas,
-  CrossSiteHelp,
-} from '@carloOS/ui'
+  CrossSiteHelp, StockImage } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 import {
   buildArticleSchema,
@@ -141,6 +140,9 @@ export default function VetsBeagleHealthPage() {
             <HopDisclosure siteId="vets-co" href="/go/amazon-brand/dog+ear+cleaner+solution?s=breeds-beagle-health" />
             <ShopCtas amazonHref="/go/amazon-brand/dog+ear+cleaner+solution?s=breeds-beagle-health" amazonLabel="Browse dog ear cleaner solutions on Amazon →" />
             <a href="#kit" className="inline-flex min-h-[44px] items-center text-xs text-brand-text-mid underline underline-offset-2">All supplies on this page ↓</a>
+          </div>
+          <div className="not-prose my-5 overflow-hidden rounded-xl">
+            <StockImage manifestKey="dog-com:breed-beagle" alt="A Beagle" aspect="16:9" variant="inline" belowFold subtleCredit />
           </div>
 
                     <p>

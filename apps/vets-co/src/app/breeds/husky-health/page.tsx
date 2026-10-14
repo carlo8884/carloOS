@@ -7,8 +7,7 @@ import {
   RelatedLinks,
   FAQAccordion,
   ShopCtas,
-  CrossSiteHelp,
-} from '@carloOS/ui'
+  CrossSiteHelp, StockImage } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 import {
   buildArticleSchema,
@@ -141,6 +140,9 @@ export default function VetsHuskyHealthPage() {
             <HopDisclosure siteId="vets-co" href="/go/amazon-brand/undercoat+rake+dog?s=breeds-husky-health" />
             <ShopCtas amazonHref="/go/amazon-brand/undercoat+rake+dog?s=breeds-husky-health" amazonLabel="Browse undercoat rakes for dogs on Amazon →" />
             <a href="#kit" className="inline-flex min-h-[44px] items-center text-xs text-brand-text-mid underline underline-offset-2">All supplies on this page ↓</a>
+          </div>
+          <div className="not-prose my-5 overflow-hidden rounded-xl">
+            <StockImage manifestKey="dog-com:breed-siberian-husky" alt="A Siberian Husky" aspect="16:9" variant="inline" belowFold subtleCredit />
           </div>
 
                     <p>

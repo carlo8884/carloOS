@@ -135,9 +135,9 @@ export default function VetsHealthHubPage() {
         eyebrow="Pet Health Library"
         title="Pet Health Library"
         intro="Condition references, emergency guides, breed health, and preventive-care schedules — every claim sourced to a primary paper. Read the guidelines, then find the care your pet needs."
-        manifestKey="vets-co:health-hero"
+        manifestKey="dog-com:category-health"
         fallbackKey="vets-co:hero"
-        imageAlt="Reference books arranged on a library shelf"
+        imageAlt="A calm dog in a polka-dot shirt"
         primaryCta={{ href: '/find-a-vet', label: 'Find a vet' }}
         secondaryCta={{ href: '/health/emergency-signs', label: 'Emergency signs' }}
       />

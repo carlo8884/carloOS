@@ -1,7 +1,7 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas, CrossSiteHelp } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas, CrossSiteHelp, StockImage } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { BreedHealthCard } from '@carloOS/ui'
@@ -113,6 +113,9 @@ export default function VetsGoldenRetrieverHealthPage() {
             <HopDisclosure siteId="vets-co" href="/go/amazon-brand/dog+ear+cleaner+solution?s=breeds-golden-retriever-health" />
             <ShopCtas amazonHref="/go/amazon-brand/dog+ear+cleaner+solution?s=breeds-golden-retriever-health" amazonLabel="Browse dog ear cleaner solutions on Amazon →" />
             <a href="#kit" className="inline-flex min-h-[44px] items-center text-xs text-brand-text-mid underline underline-offset-2">All supplies on this page ↓</a>
+          </div>
+          <div className="not-prose my-5 overflow-hidden rounded-xl">
+            <StockImage manifestKey="dog-com:breed-golden-retriever" alt="A Golden Retriever puppy" aspect="16:9" variant="inline" belowFold subtleCredit />
           </div>
 
         <h2 id="cancer">The Cancer Reality — What I Tell Every New Golden Owner</h2>
