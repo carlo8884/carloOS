@@ -11,7 +11,7 @@ const SOURCES = [
 const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Urinary Tract Infections in Dogs', description: 'Signs, urine culture, antibiotic selection, and recurrent UTI management in dogs.', url: 'https://vets.co/health/urinary-tract-infection', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-13T00:00:00Z' ,
   citation: SOURCES,
 })
-const med = buildMedicalWebPageSchema({ name: 'Urinary Tract Infections in Dogs', description: 'Signs, urine culture, and treatment of bacterial UTI in dogs.', url: 'https://vets.co/health/urinary-tract-infection', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-07' })
+const med = buildMedicalWebPageSchema({ name: 'Urinary Tract Infections in Dogs', description: 'Signs, urine culture, and treatment of bacterial UTI in dogs.', url: 'https://vets.co/health/urinary-tract-infection', authorName: 'Vets.co Editorial', lastReviewed: '2026-10-13' })
 const combined = combineSchemas(schema, med)
 const FAQS = [
   {
@@ -59,10 +59,16 @@ export default function UTIPage() {
       >
         <div className="carloOS-article">
           <LastUpdated date="2026-10-13" />
+          <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
+            <HopDisclosure siteId="vets-co" href="/go/amazon-brand/stainless+steel+dog+fountain?s=health-urinary-tract-infection" />
+            <ShopCtas amazonHref="/go/amazon-brand/stainless+steel+dog+fountain?s=health-urinary-tract-infection" amazonLabel="Browse stainless-steel dog fountains on Amazon →" />
+            <a href="#kit" className="inline-flex min-h-[44px] items-center text-xs text-brand-text-mid underline underline-offset-2">All supplies on this page ↓</a>
+          </div>
 
           <CalloutBox variant="info" title="Short answer">
             <p>Signs of a bladder infection (bacterial cystitis) include peeing more often, straining, pain when urinating, blood in the urine, and accidents. A urine culture is the gold standard for diagnosis. For a one-off infection, current guidance recommends a short antibiotic course of 3 to 5 days; repeat infections need a fuller workup. Bacteria found in urine without any signs usually do not need treatment. Source: <a href="https://www.merckvetmanual.com/urinary-system/infectious-diseases-of-the-urinary-system-in-small-animals/bacterial-cystitis-in-small-animals">Merck Veterinary Manual</a>.</p>
           </CalloutBox>
+
 
           <h2>Diagnosis — Culture Before Antibiotics</h2>
           <p>The appropriate diagnostic sequence: urinalysis (evaluates urine concentration, pH, white cells, red cells, bacteria, casts, protein) followed by urine culture and antibiotic sensitivity testing when bacteria are present on urinalysis. The culture takes 48-72 hours but identifies exactly which bacteria is causing the infection and which antibiotics will treat it effectively.</p>

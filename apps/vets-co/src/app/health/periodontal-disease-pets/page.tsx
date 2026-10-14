@@ -9,10 +9,10 @@ const SOURCES = [
   { label: 'AAHA: 2019 Dental Care Guidelines for Dogs and Cats', url: 'https://www.aaha.org/resources/2019-aaha-dental-care-guidelines-for-dogs-and-cats/resource-center/', publisher: 'AAHA' },
   { label: 'WSAVA: Dental Guidelines', url: 'https://wsava.org/global-guidelines/dental-guidelines/', publisher: 'WSAVA' },
 ]
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Periodontal Disease in Dogs and Cats', description: 'Causes, signs, and prevention of periodontal disease in pets.', url: 'https://vets.co/health/periodontal-disease-pets', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-10-12T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Periodontal Disease in Dogs and Cats', description: 'Causes, signs, and prevention of periodontal disease in pets.', url: 'https://vets.co/health/periodontal-disease-pets', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-10-13T00:00:00Z' ,
   citation: SOURCES,
 })
-const med = buildMedicalWebPageSchema({ name: 'Periodontal Disease in Dogs and Cats', description: 'Causes, signs, and prevention of dental disease in pets.', url: 'https://vets.co/health/periodontal-disease-pets', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-01' })
+const med = buildMedicalWebPageSchema({ name: 'Periodontal Disease in Dogs and Cats', description: 'Causes, signs, and prevention of dental disease in pets.', url: 'https://vets.co/health/periodontal-disease-pets', authorName: 'Vets.co Editorial', lastReviewed: '2026-10-13' })
 const combined = combineSchemas(schema, med)
 const FAQS = [
   { question: "Why does my pet need anesthesia for a dental cleaning?", answer: "A thorough, safe dental cleaning requires anesthesia because the most important work happens below the gumline — where disease actually lives — and involves probing each tooth, taking dental X-rays, and scaling under the gums, none of which an awake pet will tolerate. Anesthesia-free dentistry only scrapes visible tartar off the crown, leaving the disease beneath untouched and creating a false sense of health. Modern anesthesia with pre-operative bloodwork and monitoring is very safe for the vast majority of pets, and the diagnostic and treatment quality it allows is far superior." },
@@ -49,12 +49,18 @@ export default function PeriodontalDiseasePage() {
       >
         <div className="carloOS-article">
 
-          <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-09-05T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-12" />
+          <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-10-13T00:00:00Z" reviewedBy="Editorial team" />
+          <LastUpdated date="2026-10-13" />
+          <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
+            <HopDisclosure siteId="vets-co" href="/go/amazon-brand/pet+toothbrush+and+enzymatic+toothpaste+kit?s=health-periodontal-disease-pets" />
+            <ShopCtas amazonHref="/go/amazon-brand/pet+toothbrush+and+enzymatic+toothpaste+kit?s=health-periodontal-disease-pets" amazonLabel="Browse pet toothbrush and enzymatic toothpaste kits on Amazon →" />
+            <a href="#kit" className="inline-flex min-h-[44px] items-center text-xs text-brand-text-mid underline underline-offset-2">All supplies on this page ↓</a>
+          </div>
 
           <CalloutBox variant="info" title="The disease lives below the gumline">
             What owners see — tartar on the visible tooth — is only the surface. Periodontal disease destroys the structures anchoring the tooth beneath the gum, where it causes pain and bone loss invisibly. This is why dental X-rays and cleaning under the gumline, which require anesthesia, are essential to real dental care.
           </CalloutBox>
+
 
           <h2>How Periodontal Disease Develops</h2>
           <p>It begins with plaque — a film of bacteria that constantly forms on teeth. Within days, minerals in saliva harden plaque into tartar (calculus), which provides a rough surface for more plaque. Bacteria along and under the gumline trigger inflammation (gingivitis), the reversible early stage. If unchecked, the inflammation progresses to periodontitis, destroying the gum, ligament, and bone that hold the tooth in place. This deeper destruction is permanent and is where the real damage and pain occur.</p>

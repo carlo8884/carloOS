@@ -51,10 +51,16 @@ export default function VomitingDiarrheaPage() {
 
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-10-13T00:00:00Z" reviewedBy="Editorial team" />
           <LastUpdated date="2026-10-13" />
+          <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
+            <HopDisclosure siteId="vets-co" href="/go/amazon-brand/narrow+neck+glass+water+carafe?s=health-vomiting-diarrhea-pets" />
+            <ShopCtas amazonHref="/go/amazon-brand/narrow+neck+glass+water+carafe?s=health-vomiting-diarrhea-pets" amazonLabel="Browse narrow-neck glass water carafes on Amazon →" />
+            <a href="#kit" className="inline-flex min-h-[44px] items-center text-xs text-brand-text-mid underline underline-offset-2">All supplies on this page ↓</a>
+          </div>
 
           <CalloutBox variant="warning" title="Blood, pain, or lethargy means call now">
             Vomiting or diarrhea containing blood, a painful or distended abdomen, repeated unproductive retching, profound lethargy, or refusal to eat or drink are not signs to watch — they warrant prompt veterinary care. So does any suspected ingestion of a toxin or foreign object.
           </CalloutBox>
+
 
           <h2>Common and Usually Mild Causes</h2>
           <p>Many episodes of vomiting and diarrhea stem from minor, self-limiting causes: dietary indiscretion (eating something unusual or too rich), an abrupt diet change, mild stress, or a transient infection. In an otherwise bright, active pet that continues to eat, drink, and behave normally, a single mild episode often resolves on its own. The key is that the pet is otherwise well and the signs are isolated and not worsening.</p>

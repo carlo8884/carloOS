@@ -59,6 +59,12 @@ export default function GSHealthPage() {
 
         <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-10-13T00:00:00Z" reviewedBy="Editorial team" />
 
+          <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
+            <HopDisclosure siteId="vets-co" href="/go/amazon-brand/orthopedic+dog+bed?s=breeds-german-shepherd-health" />
+            <ShopCtas amazonHref="/go/amazon-brand/orthopedic+dog+bed?s=breeds-german-shepherd-health" amazonLabel="Browse orthopedic dog beds on Amazon →" />
+            <a href="#kit" className="inline-flex min-h-[44px] items-center text-xs text-brand-text-mid underline underline-offset-2">All supplies on this page ↓</a>
+          </div>
+
         <BreedHealthCard name="Degenerative Myelopathy (DM)" riskLevel="very-high" description="DM is a progressive, fatal neurological disease affecting the spinal cord — analogous to ALS in humans. Starts as hind limb wobbling and weakness, progresses to complete paralysis over 6–18 months. No cure exists. DNA testing identifies carriers and affected dogs. Almost all German Shepherds showing DM carry two copies of the SOD1 gene mutation — DNA test before breeding. Physical therapy and supportive care can maintain quality of life significantly longer than untreated progression." signs={['Hind limb wobbling or weakness', 'Crossing hind legs while walking', 'Knuckling (paws turning under)', 'Eventual inability to walk']} management="DNA test all GSDs before breeding. Physical therapy (underwater treadmill, controlled exercise) significantly extends functional life. Wheelchairs when paralysis progresses. DM-affected dogs maintain quality of life with dedicated care." />
 
         <BreedHealthCard name="Hip and Elbow Dysplasia" riskLevel="high" description="GSDs have among the highest rates of hip and elbow dysplasia of any breed. OFA screening of breeding dogs has improved outcomes over decades but has not eliminated the problem. Signs typically appear in the first 2 years of life. Weight management and appropriate exercise still belong in the plan. This page does not cite a pounds-of-force figure." signs={['Lameness after exercise', 'Bunny-hopping gait', 'Difficulty rising', 'Reluctance to jump or use stairs']} management="OFA hip and elbow screening for breeding stock. Lean body condition throughout life. Fish oil from young adulthood. Glucosamine/chondroitin supplementation. Surgical options (FHO, TPO, total hip replacement) for severe cases." />

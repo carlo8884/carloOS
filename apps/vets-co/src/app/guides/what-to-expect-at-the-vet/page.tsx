@@ -39,6 +39,12 @@ export default function WhatToExpectPage() {
             What you tell the veterinary team about your pet at home — when signs started, how they have changed, what is normal for your pet — is often as valuable as the exam itself. Coming prepared with these details meaningfully improves the quality of care.
           </CalloutBox>
 
+          <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
+            <HopDisclosure siteId="vets-co" href="/go/amazon-brand/small+soft+cooler+bag?s=guides-what-to-expect-at-the-vet" />
+            <ShopCtas amazonHref="/go/amazon-brand/small+soft+cooler+bag?s=guides-what-to-expect-at-the-vet" amazonLabel="Browse small soft cooler bags on Amazon →" />
+            <a href="#kit" className="inline-flex min-h-[44px] items-center text-xs text-brand-text-mid underline underline-offset-2">All supplies on this page ↓</a>
+          </div>
+
           <h2>Before the Visit</h2>
           <p>Good visits start with preparation. If you are a new client, request your pet&apos;s prior records in advance. Make a list of current medications and supplements with doses, and write down the reason for the visit: when any signs began, how often they happen, and changes in appetite, thirst, urination, or behavior. For digestive or wellness visits, a fresh stool sample helps. Cats travel best in a secure carrier introduced calmly at home, and a short video of any intermittent problem is invaluable since pets rarely perform their symptoms on cue.</p>
 

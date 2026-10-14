@@ -8,10 +8,10 @@ const SOURCES = [
   { label: 'Merck Veterinary Manual: Pancreatitis in Dogs', url: 'https://www.merckvetmanual.com/digestive-system/the-exocrine-pancreas/pancreatitis-in-dogs-and-cats', publisher: 'Merck Vet Manual' },
   { label: 'AAHA: Nutritional Assessment Guidelines', url: 'https://www.aaha.org/aaha-guidelines/nutritional-assessment/', publisher: 'AAHA' },
 ]
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Pancreatitis in Dogs', description: 'Causes, clinical signs, diagnosis, and recovery management of canine pancreatitis.', url: 'https://vets.co/health/pancreatitis-in-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-10-12T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Pancreatitis in Dogs', description: 'Causes, clinical signs, diagnosis, and recovery management of canine pancreatitis.', url: 'https://vets.co/health/pancreatitis-in-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-10-13T00:00:00Z' ,
   citation: SOURCES,
 })
-const med = buildMedicalWebPageSchema({ name: 'Pancreatitis in Dogs', description: 'Causes, signs, diagnosis, and management of pancreatitis in dogs.', url: 'https://vets.co/health/pancreatitis-in-dogs', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-01' })
+const med = buildMedicalWebPageSchema({ name: 'Pancreatitis in Dogs', description: 'Causes, signs, diagnosis, and management of pancreatitis in dogs.', url: 'https://vets.co/health/pancreatitis-in-dogs', authorName: 'Vets.co Editorial', lastReviewed: '2026-10-13' })
 const combined = combineSchemas(schema, med)
 const FAQS = [
   { question: "Can a fatty meal really cause pancreatitis?", answer: "Yes — dietary indiscretion, especially a high-fat meal such as table scraps, bacon grease, or holiday leftovers, is one of the most commonly recognized triggers of acute pancreatitis in dogs. The fat stimulates the pancreas to release digestive enzymes, which in a susceptible dog can begin digesting the pancreas itself. This is why veterinarians advise against feeding fatty human food, particularly around holidays, and why breeds and individuals with a history of pancreatitis need strict lifelong low-fat diets." },
@@ -48,12 +48,18 @@ export default function PancreatitisPage() {
       >
         <div className="carloOS-article">
 
-          <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-09-05T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-12" />
+          <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-10-13T00:00:00Z" reviewedBy="Editorial team" />
+          <LastUpdated date="2026-10-13" />
+          <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
+            <HopDisclosure siteId="vets-co" href="/go/amazon-brand/low+fat+digestive+care+dog+food?s=health-pancreatitis-in-dogs" />
+            <ShopCtas amazonHref="/go/amazon-brand/low+fat+digestive+care+dog+food?s=health-pancreatitis-in-dogs" amazonLabel="Browse low-fat digestive-care dog foods on Amazon →" />
+            <a href="#kit" className="inline-flex min-h-[44px] items-center text-xs text-brand-text-mid underline underline-offset-2">All supplies on this page ↓</a>
+          </div>
 
           <CalloutBox variant="warning" title="Repeated vomiting and pain are urgent">
             A dog that is repeatedly vomiting, refusing food, painful in the belly, or lethargic needs same-day veterinary evaluation. Severe pancreatitis can progress to dehydration, organ involvement, and a dangerous systemic inflammatory response. Early fluids and supportive care dramatically improve the outcome.
           </CalloutBox>
+
 
           <h2>What the Pancreas Does and What Goes Wrong</h2>
           <p>The pancreas produces digestive enzymes and the hormones insulin and glucagon. Normally these enzymes stay inactive until they reach the intestine. In pancreatitis, enzymes activate prematurely within the pancreas and begin to digest the organ itself, triggering inflammation, pain, and the release of inflammatory mediators into the bloodstream. In severe cases this systemic inflammation can affect the liver, kidneys, clotting, and other organs.</p>

@@ -50,10 +50,16 @@ export default function SeniorBloodworkPage() {
       >
         <div className="carloOS-article">
           <LastUpdated date="2026-10-13" />
+          <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
+            <HopDisclosure siteId="vets-co" href="/go/amazon-brand/soft+pet+carrier?s=health-senior-bloodwork-guide" />
+            <ShopCtas amazonHref="/go/amazon-brand/soft+pet+carrier?s=health-senior-bloodwork-guide" amazonLabel="Browse soft pet carriers on Amazon →" />
+            <a href="#kit" className="inline-flex min-h-[44px] items-center text-xs text-brand-text-mid underline underline-offset-2">All supplies on this page ↓</a>
+          </div>
 
           <CalloutBox variant="info" title="Short answer">
             <p>AAHA's 2023 senior care guidelines recommend a medical workup for senior pets once or twice a year. For senior dogs, its table lists a complete blood count, chemistry panel (including SDMA if available), and urinalysis every 6 to 12 months, plus a thyroid test (T4) and blood pressure check annually. Tracking results over time helps your vet spot early changes, such as a rising SDMA or creatinine. Source: <a href="https://www.aaha.org/wp-content/uploads/globalassets/02-guidelines/2023-aaha-senior-care-guidelines-for-dogs-and-cats/resources/2023-aaha-senior-care-guidelines-for-dogs-and-cats.pdf">AAHA 2023 Senior Care Guidelines</a>.</p>
           </CalloutBox>
+
 
           <h2>Complete Blood Count (CBC)</h2>
           <p>The CBC evaluates the cellular components of blood — the cells that carry oxygen, fight infection, and enable clotting. Key values:</p>

@@ -4,7 +4,7 @@ import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ShopCtas } fr
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Emergency Vet Costs Explained — Why ER Care Costs More | Vets.co", description: "Emergency veterinary care costs more than routine care for real reasons. Learn what drives ER pricing, how estimates work, and how to prepare financially.", path: '/guides/emergency-vet-costs', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Emergency Vet Costs, Explained', description: 'Why emergency veterinary care costs more, how ER estimates work, and how to prepare.', url: 'https://vets.co/guides/emergency-vet-costs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-09-06T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Emergency Vet Costs, Explained', description: 'Why emergency veterinary care costs more, how ER estimates work, and how to prepare.', url: 'https://vets.co/guides/emergency-vet-costs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-10-13T00:00:00Z' })
 const FAQS = [
   { question: "Why is the emergency vet so much more expensive than my regular vet?", answer: "Emergency hospitals carry far higher overhead than general practices. They staff veterinarians and trained technicians around the clock, including overnight, weekends, and holidays; maintain intensive-care equipment, oxygen, blood products, and advanced monitoring; and must be ready for the sickest patients at any moment. That standing readiness has a real cost that is reflected in pricing. You are paying for immediate access to a fully staffed, fully equipped facility at the exact moment you need it, which is fundamentally different from a scheduled routine visit." },
   { question: "Will the emergency vet give me an estimate before treating?", answer: "Yes — for non-immediately-life-threatening situations, emergency hospitals provide a written treatment plan and cost estimate, often presented as a range because the workup may reveal more. For a patient in critical condition, the team will stabilize first and discuss costs as soon as the immediate crisis allows. You can and should ask questions about the estimate, what is essential versus optional, and whether care can be phased. A deposit is commonly requested before treatment begins, which is standard practice." },
@@ -32,11 +32,17 @@ export default function EmergencyCostsPage() {
         </>}
       >
         <div className="carloOS-article">
-          <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-09-06T00:00:00Z" reviewedBy="Editorial team" />
+          <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-10-13T00:00:00Z" reviewedBy="Editorial team" />
 
           <CalloutBox variant="warning" title="Never delay genuine emergency care over cost">
             If your pet is having a true emergency — difficulty breathing, severe bleeding, collapse, inability to urinate, suspected bloat — go immediately. Financial options can be discussed once your pet is stable. Delay in a real emergency can cost a life that money cannot recover.
           </CalloutBox>
+
+          <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
+            <HopDisclosure siteId="vets-co" href="/go/amazon-brand/locking+cash+box+with+key?s=guides-emergency-vet-costs" />
+            <ShopCtas amazonHref="/go/amazon-brand/locking+cash+box+with+key?s=guides-emergency-vet-costs" amazonLabel="Browse locking cash boxes with keys on Amazon →" />
+            <a href="#kit" className="inline-flex min-h-[44px] items-center text-xs text-brand-text-mid underline underline-offset-2">All supplies on this page ↓</a>
+          </div>
 
           <h2>Why Emergency Care Costs More</h2>
           <p>An emergency hospital is a fundamentally different operation from a general practice. It maintains veterinarians and trained technicians on duty around the clock — overnight, weekends, and holidays — and keeps intensive-care equipment, oxygen, blood products, and advanced monitoring ready at all times. This standing capacity to handle the sickest patients the moment they arrive carries substantial fixed costs that are reflected in pricing. In essence, you are paying for guaranteed, immediate access to a fully equipped and staffed facility precisely when you need it.</p>

@@ -137,6 +137,12 @@ export default function VetsBeagleHealthPage() {
             reviewedBy="Editorial team"
           />
 
+          <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
+            <HopDisclosure siteId="vets-co" href="/go/amazon-brand/dog+ear+cleaner+solution?s=breeds-beagle-health" />
+            <ShopCtas amazonHref="/go/amazon-brand/dog+ear+cleaner+solution?s=breeds-beagle-health" amazonLabel="Browse dog ear cleaner solutions on Amazon →" />
+            <a href="#kit" className="inline-flex min-h-[44px] items-center text-xs text-brand-text-mid underline underline-offset-2">All supplies on this page ↓</a>
+          </div>
+
                     <p>
             The Beagle is a medium-small (20–30 lb), long-lived (12–15 years) scent hound with a focused set
             of predispositions: idiopathic epilepsy (the Beagle is a model breed in canine epilepsy

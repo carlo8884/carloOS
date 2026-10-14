@@ -137,6 +137,12 @@ export default function VetsHuskyHealthPage() {
             reviewedBy="Editorial team"
           />
 
+          <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
+            <HopDisclosure siteId="vets-co" href="/go/amazon-brand/undercoat+rake+dog?s=breeds-husky-health" />
+            <ShopCtas amazonHref="/go/amazon-brand/undercoat+rake+dog?s=breeds-husky-health" amazonLabel="Browse undercoat rakes for dogs on Amazon →" />
+            <a href="#kit" className="inline-flex min-h-[44px] items-center text-xs text-brand-text-mid underline underline-offset-2">All supplies on this page ↓</a>
+          </div>
+
                     <p>
             The Siberian Husky is a medium (35–60 lb), athletic (12–15 year) working sled-dog breed with a
             distinctive cluster of predispositions: hereditary cataracts, progressive retinal atrophy and

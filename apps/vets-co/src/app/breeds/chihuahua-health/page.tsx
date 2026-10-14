@@ -137,6 +137,12 @@ export default function VetsChihuahuaHealthPage() {
             reviewedBy="Editorial team"
           />
 
+          <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
+            <HopDisclosure siteId="vets-co" href="/go/amazon-brand/pet+toothbrush+and+enzymatic+toothpaste+kit?s=breeds-chihuahua-health" />
+            <ShopCtas amazonHref="/go/amazon-brand/pet+toothbrush+and+enzymatic+toothpaste+kit?s=breeds-chihuahua-health" amazonLabel="Browse pet toothbrush and enzymatic toothpaste kits on Amazon →" />
+            <a href="#kit" className="inline-flex min-h-[44px] items-center text-xs text-brand-text-mid underline underline-offset-2">All supplies on this page ↓</a>
+          </div>
+
                     <p>
             The Chihuahua is a small (typically 3–6 lb), long-lived (12–16 years) toy breed with a
             well-described cluster of predispositions: patellar luxation, hydrocephalus (more often suspected

@@ -52,8 +52,13 @@ export default function DiabetesPage() {
       >
         <div className="carloOS-article">
 
-          <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-05T00:00:00Z" reviewedBy="Editorial team" />
+          <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-10-13T00:00:00Z" reviewedBy="Editorial team" />
           <LastUpdated date="2026-10-13" />
+          <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
+            <HopDisclosure siteId="vets-co" href="/go/amazon-brand/insulated+pet+water+bowl?s=health-diabetes-in-dogs-cats" />
+            <ShopCtas amazonHref="/go/amazon-brand/insulated+pet+water+bowl?s=health-diabetes-in-dogs-cats" amazonLabel="Browse insulated pet water bowls on Amazon →" />
+            <a href="#kit" className="inline-flex min-h-[44px] items-center text-xs text-brand-text-mid underline underline-offset-2">All supplies on this page ↓</a>
+          </div>
           <div className="rounded-lg border-l-4 border-brand-primary bg-brand-surface p-5 my-6" data-testid="short-answer">
             <h2 className="font-display text-lg font-bold mb-2">The short answer</h2>
             <p className="text-base leading-relaxed text-brand-text-mid m-0">
@@ -64,6 +69,7 @@ export default function DiabetesPage() {
           <CalloutBox variant="warning" title="Diabetic ketoacidosis is an emergency">
             A diabetic pet that stops eating, vomits, becomes lethargic, or shows rapid breathing may be developing diabetic ketoacidosis (DKA) — a life-threatening metabolic emergency. Do not wait: the AVMA says to contact your veterinarian or an emergency clinic immediately. Never give insulin to a pet that is not eating without veterinary guidance, as this risks dangerous hypoglycemia.
           </CalloutBox>
+
 
           <DropCap>Diabetes mellitus is a failure of glucose regulation. Normally, the pancreas secretes insulin in response to rising blood glucose, and insulin allows cells to take up glucose for energy. In diabetes, either the pancreas does not make enough insulin (insulin-dependent, typical of dogs) or the body cannot respond to it (insulin resistance, typical of cats). The result is persistently elevated blood glucose while cells starve. The body begins breaking down fat and muscle for energy, producing the classic picture of a hungry pet that drinks and urinates excessively while losing weight.</DropCap>
 

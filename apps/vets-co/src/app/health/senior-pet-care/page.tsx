@@ -60,10 +60,16 @@ export default function SeniorPetCarePage() {
 
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-10-13T00:00:00Z" reviewedBy="Editorial team" />
           <LastUpdated date="2026-10-13" />
+          <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
+            <HopDisclosure siteId="vets-co" href="/go/amazon-brand/orthopedic+dog+bed?s=health-senior-pet-care" />
+            <ShopCtas amazonHref="/go/amazon-brand/orthopedic+dog+bed?s=health-senior-pet-care" amazonLabel="Browse orthopedic dog beds on Amazon →" />
+            <a href="#kit" className="inline-flex min-h-[44px] items-center text-xs text-brand-text-mid underline underline-offset-2">All supplies on this page ↓</a>
+          </div>
 
           <CalloutBox variant="info" title="Short answer">
             <p>The Merck Veterinary Manual advises vet checkups twice a year or more for senior dogs (over 7 to 8 years old), compared with at least once a year for adults, because older dogs are more likely to get sick. Your vet may suggest blood tests or x-rays to catch problems early. Between visits, book an appointment if your dog shows signs of illness for more than a day or two. Source: <a href="https://www.merckvetmanual.com/dog-owners/routine-care-of-dogs/routine-health-care-of-dogs">Merck Veterinary Manual (dog owner version)</a>.</p>
           </CalloutBox>
+
 
           <h2>Why Biannual Exams Matter</h2>
           <DropCap>A year in a senior dog&apos;s life corresponds to 5–7 human years. Conditions that develop gradually — dental disease, kidney disease, hypothyroidism, arthritis, cardiac disease, early cancer — can progress from manageable to advanced within one annual exam cycle. The standard of care for dogs 7+ is twice-yearly comprehensive examinations. This is not excessive — it is appropriate for the rate at which senior dogs&apos; health changes.</DropCap>

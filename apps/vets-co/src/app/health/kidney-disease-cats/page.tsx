@@ -55,6 +55,11 @@ export default function KidneyDiseaseCatsPage() {
 
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-10-13T00:00:00Z" reviewedBy="Editorial team" />
           <LastUpdated date="2026-10-13" />
+          <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
+            <HopDisclosure siteId="vets-co" href="/go/amazon-brand/wide+rim+stainless+cat+water+bowl?s=health-kidney-disease-cats" />
+            <ShopCtas amazonHref="/go/amazon-brand/wide+rim+stainless+cat+water+bowl?s=health-kidney-disease-cats" amazonLabel="Browse wide-rim stainless cat water bowls on Amazon →" />
+            <a href="#kit" className="inline-flex min-h-[44px] items-center text-xs text-brand-text-mid underline underline-offset-2">All supplies on this page ↓</a>
+          </div>
           <div className="rounded-lg border-l-4 border-brand-primary bg-brand-surface p-5 my-6" data-testid="short-answer">
             <h2 className="font-display text-lg font-bold mb-2">The short answer</h2>
             <p className="text-base leading-relaxed text-brand-text-mid m-0">
@@ -65,6 +70,7 @@ export default function KidneyDiseaseCatsPage() {
           <CalloutBox variant="info" title="Early detection changes the outcome">
             Merck says SDMA can rise above the reference interval while creatinine is still normal, and that kidney-related azotemia appears only after about 75% of nephrons are lost. Regular bloodwork in senior cats, tracking SDMA and creatinine trends over time, is the most effective tool for catching CKD while management is most effective.
           </CalloutBox>
+
 
           <DropCap>The kidneys filter waste, balance fluids and electrolytes, regulate blood pressure, and support red blood cell production. In chronic kidney disease, functional kidney tissue (nephrons) is gradually lost and replaced by scar tissue. The decline is irreversible and tends to progress over months to years. Because cats compensate well, they often show no signs until a large fraction of kidney function is already gone — which is why screening older cats is so valuable.</DropCap>
 

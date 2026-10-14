@@ -8,10 +8,10 @@ const SOURCES = [
   { label: 'Merck Veterinary Manual: Gastric Dilatation and Volvulus in Small Animals', url: 'https://www.merckvetmanual.com/digestive-system/surgical-problems-of-the-gastrointestinal-tract-in-small-animals/gastric-dilation-and-volvulus-in-small-animals', publisher: 'Merck Vet Manual' },
   { label: 'Glickman LT et al. Incidence of and breed-related risk factors for gastric dilatation-volvulus in dogs. JAVMA. 2000;216(1):40-45.', url: 'https://doi.org/10.2460/javma.2000.216.40', publisher: 'JAVMA' },
 ]
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Bloat (GDV) in Dogs', description: 'Emergency recognition, risk factors, and prevention of gastric dilatation-volvulus in dogs.', url: 'https://vets.co/health/bloat-gdv-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-10-12T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Bloat (GDV) in Dogs', description: 'Emergency recognition, risk factors, and prevention of gastric dilatation-volvulus in dogs.', url: 'https://vets.co/health/bloat-gdv-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-10-13T00:00:00Z' ,
   citation: SOURCES,
 })
-const med = buildMedicalWebPageSchema({ name: 'Bloat (Gastric Dilatation-Volvulus) in Dogs', description: 'Recognition, risk factors, and prevention of GDV in dogs.', url: 'https://vets.co/health/bloat-gdv-dogs', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-01' })
+const med = buildMedicalWebPageSchema({ name: 'Bloat (Gastric Dilatation-Volvulus) in Dogs', description: 'Recognition, risk factors, and prevention of GDV in dogs.', url: 'https://vets.co/health/bloat-gdv-dogs', authorName: 'Vets.co Editorial', lastReviewed: '2026-10-13' })
 const combined = combineSchemas(schema, med)
 const FAQS = [
   { question: "How fast does bloat become fatal?", answer: "Very fast. Gastric dilatation-volvulus (GDV) can progress from the first signs to shock and death within an hour or two. Once the stomach twists, it cuts off its own blood supply and traps gas, the expanding stomach compresses major blood vessels, and the dog rapidly enters shock. There is no home treatment — GDV requires emergency surgery. If you see the warning signs, go to an emergency veterinary hospital immediately; minutes matter." },
@@ -48,12 +48,18 @@ export default function BloatGDVPage() {
       >
         <div className="carloOS-article">
 
-          <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-09-05T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-12" />
+          <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-10-13T00:00:00Z" reviewedBy="Editorial team" />
+          <LastUpdated date="2026-10-13" />
+          <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
+            <HopDisclosure siteId="vets-co" href="/go/amazon-brand/automatic+timed+dog+feeder?s=health-bloat-gdv-dogs" />
+            <ShopCtas amazonHref="/go/amazon-brand/automatic+timed+dog+feeder?s=health-bloat-gdv-dogs" amazonLabel="Browse timed automatic dog feeders on Amazon →" />
+            <a href="#kit" className="inline-flex min-h-[44px] items-center text-xs text-brand-text-mid underline underline-offset-2">All supplies on this page ↓</a>
+          </div>
 
           <CalloutBox variant="warning" title="This is a go-now emergency">
             If your dog has a swollen belly and is repeatedly trying to vomit without producing anything, go to an emergency veterinary hospital immediately. Do not wait to see if it passes. GDV is fatal within hours and there is no effective home treatment. Call ahead if you can so the team is ready.
           </CalloutBox>
+
 
           <h2>What GDV Is</h2>
           <p>Bloat begins when the stomach fills with gas and fluid (dilatation). In the dangerous form, the distended stomach then rotates on its axis (volvulus), sealing off both ends so gas cannot escape and blocking the stomach's blood supply. The trapped, expanding stomach presses on the large veins returning blood to the heart, dropping cardiac output and driving the dog into shock. The stomach wall begins to die, toxins are released, and the spleen is often involved. Without surgery, the cascade is fatal.</p>

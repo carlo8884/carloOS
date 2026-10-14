@@ -62,10 +62,16 @@ export default function LeptospirosisPage() {
 
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-10-13T00:00:00Z" reviewedBy="Editorial team" />
           <LastUpdated date="2026-10-13" />
+          <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
+            <HopDisclosure siteId="vets-co" href="/go/amazon-brand/24+ounce+stainless+hiking+dog+bottle?s=health-leptospirosis" />
+            <ShopCtas amazonHref="/go/amazon-brand/24+ounce+stainless+hiking+dog+bottle?s=health-leptospirosis" amazonLabel="Browse 24-ounce stainless hiking dog bottles on Amazon →" />
+            <a href="#kit" className="inline-flex min-h-[44px] items-center text-xs text-brand-text-mid underline underline-offset-2">All supplies on this page ↓</a>
+          </div>
 
           <CalloutBox variant="info" title="Short answer">
             <p>Leptospirosis is a bacterial infection that dogs usually catch through contact with infected urine or other body fluids, including urine in the environment. It most often causes sudden kidney injury and can also affect the liver; signs include lethargy, poor appetite, vomiting, belly pain, and changes in how much your dog urinates. Vets treat it with the antibiotic doxycycline plus supportive care. Vaccines help prevent it, and the AVMA says experts recommend vaccinating all dogs (<a href="https://www.avma.org/resources-tools/pet-owners/petcare/leptospirosis">AVMA</a>). It can spread to people, so wear gloves when cleaning up a sick dog's urine. Source: <a href="https://www.merckvetmanual.com/infectious-diseases/leptospirosis/leptospirosis-in-dogs">Merck Veterinary Manual</a>.</p>
           </CalloutBox>
+
 
           <h2>Transmission and Geographic Risk</h2>
           <DropCap>Leptospira bacteria survive in warm, moist environments — standing water, muddy soil, and waterways contaminated with infected wildlife urine. Dogs are exposed through: contact with contaminated water (drinking from puddles, swimming in ponds or streams), contact with infected urine directly, or contact with contaminated soil. The bacteria enter through mucous membranes, skin abrasions, or the GI tract. Lepto is not only a rural problem — urban and suburban dogs encounter raccoons, opossums, and rodents that shed Leptospira in their urine in parks, yards, and storm drainage systems. A 24-ounce stainless hiking dog bottle is how a walk becomes a carried sip instead of a puddle gulp — it is not a wide-rim stainless cat water bowl, not an insulated pet water bowl, not a kitchen liquid measuring pitcher, and not a ferret water bottle. A 32-gallon locking animal-proof trash can is how curb overnight leftovers stop inviting raccoon and rodent traffic into the same yard the dog uses — it is not a locking kitchen trash can.</DropCap>

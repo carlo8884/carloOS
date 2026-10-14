@@ -9,10 +9,10 @@ const SOURCES = [
   { label: 'AVMA: Feline Lower Urinary Tract Disease', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/feline-lower-urinary-tract-disease', publisher: 'AVMA' },
   { label: '2025 iCatCare / FelineVMA consensus guidelines on feline lower urinary tract disease', url: 'https://catvets.com/publication/2025-icatcare-consensus-guidelines-on-the-diagnosis-and-management-of-lower-urinary-tract-diseases-in-cats/', publisher: 'American Association of Feline Practitioners' },
 ]
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Feline Lower Urinary Tract Disease (FLUTD)', description: 'Signs, causes, and management of feline lower urinary tract disease.', url: 'https://vets.co/health/feline-lower-urinary-tract-disease', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-10-12T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Feline Lower Urinary Tract Disease (FLUTD)', description: 'Signs, causes, and management of feline lower urinary tract disease.', url: 'https://vets.co/health/feline-lower-urinary-tract-disease', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-10-13T00:00:00Z' ,
   citation: SOURCES,
 })
-const med = buildMedicalWebPageSchema({ name: 'Feline Lower Urinary Tract Disease', description: 'Recognition, causes, and management of FLUTD in cats.', url: 'https://vets.co/health/feline-lower-urinary-tract-disease', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-01' })
+const med = buildMedicalWebPageSchema({ name: 'Feline Lower Urinary Tract Disease', description: 'Recognition, causes, and management of FLUTD in cats.', url: 'https://vets.co/health/feline-lower-urinary-tract-disease', authorName: 'Vets.co Editorial', lastReviewed: '2026-10-13' })
 const combined = combineSchemas(schema, med)
 const FAQS = [
   { question: "Why is a blocked male cat an emergency?", answer: "A male cat that cannot urinate has a urethral obstruction — a life-threatening emergency. The blockage prevents the body from eliminating waste and potassium, causing the bladder to overfill and toxins and potassium to build up in the blood, which can stop the heart within 24 to 48 hours. A cat straining in the litter box and producing nothing, crying in pain, vomiting, or becoming lethargic needs emergency veterinary care immediately. Female cats block far less often due to their wider urethra, but any cat unable to urinate is an emergency." },
@@ -48,12 +48,18 @@ export default function FLUTDPage() {
 </>}
       >
         <div className="carloOS-article">
-          <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-09-05T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-12" />
+          <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-10-13T00:00:00Z" reviewedBy="Editorial team" />
+          <LastUpdated date="2026-10-13" />
+          <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
+            <HopDisclosure siteId="vets-co" href="/go/amazon-brand/cat+water+fountain?s=health-feline-lower-urinary-tract-disease" />
+            <ShopCtas amazonHref="/go/amazon-brand/cat+water+fountain?s=health-feline-lower-urinary-tract-disease" amazonLabel="Browse cat water fountains on Amazon →" />
+            <a href="#kit" className="inline-flex min-h-[44px] items-center text-xs text-brand-text-mid underline underline-offset-2">All supplies on this page ↓</a>
+          </div>
 
           <CalloutBox variant="warning" title="A cat that cannot urinate is an emergency">
             If your cat — especially a male cat — is straining in the litter box and producing little or no urine, crying, vomiting, or hiding and lethargic, treat it as an emergency and seek veterinary care right away. A complete urethral obstruction can be fatal within a day. Do not wait until morning.
           </CalloutBox>
+
 
           <h2>What FLUTD Means</h2>
           <p>Feline lower urinary tract disease is not a single diagnosis but a group of conditions affecting the bladder and urethra that produce similar signs: difficulty and pain urinating, frequent small urinations, blood in the urine, and urinating outside the litter box. Causes include idiopathic cystitis (painful inflammation with no clear cause), bladder stones, crystals, urethral plugs, infection, anatomical problems, and rarely tumors. The signs overlap so closely that testing is needed to identify the underlying cause.</p>

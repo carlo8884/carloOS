@@ -8,10 +8,10 @@ const SOURCES = [
   { label: 'Merck Veterinary Manual: Hyperthyroidism in Cats', url: 'https://www.merckvetmanual.com/endocrine-system/the-thyroid-gland/hyperthyroidism-in-animals', publisher: 'Merck Vet Manual' },
   { label: 'AAFP: Feline Hyperthyroidism Guidelines', url: 'https://catvets.com/resource/management-of-feline-hyperthyroidism-guidelines/', publisher: 'American Association of Feline Practitioners' },
 ]
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Hyperthyroidism in Cats', description: 'Signs, diagnosis, and the four treatment options for feline hyperthyroidism.', url: 'https://vets.co/health/hyperthyroidism-cats', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-10-12T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Hyperthyroidism in Cats', description: 'Signs, diagnosis, and the four treatment options for feline hyperthyroidism.', url: 'https://vets.co/health/hyperthyroidism-cats', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-10-13T00:00:00Z' ,
   citation: SOURCES,
 })
-const med = buildMedicalWebPageSchema({ name: 'Hyperthyroidism in Cats', description: 'Clinical signs, diagnosis, and treatment of feline hyperthyroidism.', url: 'https://vets.co/health/hyperthyroidism-cats', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-01' })
+const med = buildMedicalWebPageSchema({ name: 'Hyperthyroidism in Cats', description: 'Clinical signs, diagnosis, and treatment of feline hyperthyroidism.', url: 'https://vets.co/health/hyperthyroidism-cats', authorName: 'Vets.co Editorial', lastReviewed: '2026-10-13' })
 const combined = combineSchemas(schema, med)
 const FAQS = [
   { question: "Is radioiodine treatment a cure for hyperthyroidism?", answer: "Radioiodine (I-131) therapy is considered the gold-standard treatment and is curative in the large majority of cats with a single injection. It selectively destroys overactive thyroid tissue while sparing normal tissue, requires no daily medication afterward, and avoids surgical and anesthetic risk. The trade-offs are upfront cost and a short hospital stay for radiation safety. It is the preferred option for many cats, though concurrent kidney disease can influence the decision and should be discussed with your veterinarian." },
@@ -49,12 +49,18 @@ export default function HyperthyroidismCatsPage() {
       >
         <div className="carloOS-article">
 
-          <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-12" />
+          <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-10-13T00:00:00Z" reviewedBy="Editorial team" />
+          <LastUpdated date="2026-10-13" />
+          <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
+            <HopDisclosure siteId="vets-co" href="/go/amazon-brand/small+digital+kitchen+food+scale?s=health-hyperthyroidism-cats" />
+            <ShopCtas amazonHref="/go/amazon-brand/small+digital+kitchen+food+scale?s=health-hyperthyroidism-cats" amazonLabel="Browse small digital kitchen food scales on Amazon →" />
+            <a href="#kit" className="inline-flex min-h-[44px] items-center text-xs text-brand-text-mid underline underline-offset-2">All supplies on this page ↓</a>
+          </div>
 
           <CalloutBox variant="info" title="Hyperthyroidism can mask kidney disease">
             Excess thyroid hormone increases blood flow through the kidneys, which can make kidney values look better than they truly are. When hyperthyroidism is treated, underlying kidney disease may become apparent. This is why veterinarians monitor kidney values closely before and after treatment — it changes the plan, not whether to treat. A kitchen food scale, grooming glove, and measuring cup do not diagnose thyroid or kidney disease and they do not replace that bloodwork.
           </CalloutBox>
+
 
           <h2>What Happens in Hyperthyroidism</h2>
           <p>In the vast majority of cases, one or both thyroid glands in the neck develop a benign nodular overgrowth that produces excess thyroid hormone. Thyroid hormone sets the body's metabolic rate, so an excess revs every system. The heart works harder, often thickening over time; metabolism races, burning through body reserves; and the nervous system becomes overstimulated. Malignant thyroid tumors are rare in cats. Left untreated, the disease damages the heart and other organs, which is why prompt treatment matters even though the underlying tumor is usually benign.</p>

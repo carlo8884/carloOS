@@ -69,6 +69,12 @@ export default function VetsFrenchBulldogHealthPage() {
 
         <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-10-13T00:00:00Z" reviewedBy="Editorial team" />
 
+          <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
+            <HopDisclosure siteId="vets-co" href="/go/amazon-brand/y+shaped+front+clip+dog+harness?s=breeds-french-bulldog-health" />
+            <ShopCtas amazonHref="/go/amazon-brand/y+shaped+front+clip+dog+harness?s=breeds-french-bulldog-health" amazonLabel="Browse Y-shaped front-clip dog harnesses on Amazon →" />
+            <a href="#kit" className="inline-flex min-h-[44px] items-center text-xs text-brand-text-mid underline underline-offset-2">All supplies on this page ↓</a>
+          </div>
+
         <div style={{ background: 'rgba(200,74,42,0.05)', border: '1px solid rgba(200,74,42,0.18)', borderRadius: '10px', padding: '16px 20px', marginBottom: '24px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#C84A2A', marginBottom: '8px' }}>Insurance Note</div>
           <p style={{ fontSize: '14px', color: 'var(--brand-text-mid)', margin: 0, lineHeight: 1.65 }}>French Bulldogs are the most expensive breed to insure — and the one that most needs it. Read each policy&apos;s hereditary and pre-existing terms — this page does not state which insurers exclude BOAS. Enroll before any symptoms develop, before the first veterinary visit. Do not delay.</p>

@@ -137,6 +137,12 @@ export default function VetsPomeranianHealthPage() {
             reviewedBy="Editorial team"
           />
 
+          <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
+            <HopDisclosure siteId="vets-co" href="/go/amazon-brand/analog+indoor+hygrometer?s=breeds-pomeranian-health" />
+            <ShopCtas amazonHref="/go/amazon-brand/analog+indoor+hygrometer?s=breeds-pomeranian-health" amazonLabel="Browse analog indoor hygrometers on Amazon →" />
+            <a href="#kit" className="inline-flex min-h-[44px] items-center text-xs text-brand-text-mid underline underline-offset-2">All supplies on this page ↓</a>
+          </div>
+
                     <p>
             The Pomeranian is a small (typically 3–7 lb), long-lived (12–16 years) toy spitz with a well-documented
             cluster of breed-predispositions: patellar luxation, tracheal collapse, dental crowding and periodontal

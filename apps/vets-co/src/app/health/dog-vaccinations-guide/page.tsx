@@ -52,6 +52,12 @@ export default function DogVaccinationsGuidePage() {
       >
         <div className="carloOS-article">
           <LastUpdated date="2026-10-13" />
+
+          <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
+            <HopDisclosure siteId="vets-co" href="/go/amazon-brand/collapsible+silicone+travel+dog+bowl?s=health-dog-vaccinations-guide" />
+            <ShopCtas amazonHref="/go/amazon-brand/collapsible+silicone+travel+dog+bowl?s=health-dog-vaccinations-guide" amazonLabel="Browse collapsible silicone travel dog bowl on Amazon →" />
+            <a href="#kit" className="inline-flex min-h-[44px] items-center text-xs text-brand-text-mid underline underline-offset-2">All supplies on this page ↓</a>
+          </div>
           <div className="rounded-lg border-l-4 border-brand-primary bg-brand-surface p-5 my-4" data-testid="short-answer">
             <h2 className="font-display text-lg font-bold mb-2">The short answer</h2>
             <p className="text-base leading-relaxed text-brand-text-mid m-0">

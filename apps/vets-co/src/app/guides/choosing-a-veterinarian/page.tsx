@@ -39,6 +39,12 @@ export default function ChoosingVetPage() {
             A veterinarian who knows your pet over years can spot subtle changes and provide continuity that improves care. Choosing well at the start, and building a relationship, pays dividends — so weigh communication and trust alongside credentials and convenience.
           </CalloutBox>
 
+          <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
+            <HopDisclosure siteId="vets-co" href="/go/amazon-brand/soft+pet+carrier?s=guides-choosing-a-veterinarian" />
+            <ShopCtas amazonHref="/go/amazon-brand/soft+pet+carrier?s=guides-choosing-a-veterinarian" amazonLabel="Browse soft pet carriers on Amazon →" />
+            <a href="#kit" className="inline-flex min-h-[44px] items-center text-xs text-brand-text-mid underline underline-offset-2">All supplies on this page ↓</a>
+          </div>
+
           <h2>Credentials and Accreditation</h2>
           <p>Start with the fundamentals. All practicing veterinarians are licensed, but voluntary accreditation — most notably AAHA accreditation in the United States — indicates a practice has chosen to meet several hundred quality benchmarks for medical care, equipment, and safety. Because veterinary practices are not required to be accredited, this voluntary step is a meaningful signal of commitment to standards. Consider it alongside the practice&apos;s areas of focus and whether specialists are on staff or available by referral.</p>
 
