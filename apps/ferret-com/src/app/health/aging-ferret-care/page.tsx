@@ -151,7 +151,7 @@ export default function FerretAgingPage() {
         hero={{
           title: 'Aging Ferret Care',
           subtitle:
-            'Ferrets live an average of 6 to 8 years (Lafeber). The later years — is when the disease incidence curve climbs sharply and the daily care commitment shifts from preventive maintenance to active monitoring. Done well, the senior years can be the closest, most rewarding part of ferret ownership.',
+            'Ferrets live an average of 6 to 8 years (Lafeber). The later years are when the disease incidence curve climbs sharply and the daily care commitment shifts from preventive maintenance to active monitoring. Done well, the senior years can be the closest, most rewarding part of ferret ownership.',
           category: 'Ferret Health',
           authorName: 'Ferret.com Editorial',
           publishedAt: 'May 2026',
@@ -195,10 +195,9 @@ export default function FerretAgingPage() {
                 Insurance gets harder to qualify for as ferrets age
               </h3>
               <p className="text-xs text-white/60 mb-3 leading-relaxed">
-                Most exotic-pet insurers have age caps (typically 8 years).
-                If your ferret is approaching senior age, lock in a policy
-                now — once a condition is diagnosed, it&apos;s permanently
-                excluded.
+                Some insurers limit enrollment age or exclude conditions found
+                before coverage starts. Check each policy&apos;s age limits and
+                pre-existing-condition terms before you enroll.
               </p>
               <a
                 href={crossSiteHref('vets-co', '/reviews/best-pet-insurance')}
@@ -284,7 +283,7 @@ export default function FerretAgingPage() {
           <h2 id="concerns">Age-Related Concerns</h2>
           <p>
             The senior-ferret differential is dominated by a small number of
-            high-prevalence conditions, all peaking in the 3-7 year window
+            high-prevalence conditions, most common from middle age
             and continuing through the rest of life. Quesenberry &amp;
             Carpenter and the <em>Veterinary Clinics of North America:
             Exotic Animal Practice</em> ferret issues cover each in depth.

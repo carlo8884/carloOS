@@ -18,6 +18,11 @@ import {
 
 const SOURCES = [
   {
+    label: "American Veterinary Dental College — Nomenclature: periodontal disease stages (PD1–PD4 attachment loss)",
+    url: "https://avdc.org/avdc-nomenclature/",
+    publisher: "AVDC",
+  },
+  {
     label: "Merck Veterinary Manual — Routine Health Care for Ferrets: dental care, anesthesia for cleaning, toothpaste",
     url: "https://www.merckvetmanual.com/all-other-pets/ferrets/routine-health-care-for-ferrets",
     publisher: "Merck Veterinary Manual",
@@ -317,7 +322,7 @@ export default function FerretDentalDiseasePage() {
 
           <h3>Stage 2 — Early Periodontitis</h3>
           <p>
-            Up to 25% attachment loss. The gum has begun to detach from the
+            Under 25% attachment loss (AVDC staging). The gum has begun to detach from the
             tooth, pocket formation starts, and bacterial colonization
             extends subgingivally. Anesthetized scaling and probing become
             necessary because the affected tissue is below the gumline and
@@ -326,7 +331,7 @@ export default function FerretDentalDiseasePage() {
 
           <h3>Stage 3 — Moderate Periodontitis</h3>
           <p>
-            25-50% attachment loss. Pockets are deeper, root surface is
+            25-50% attachment loss (AVDC). Pockets are deeper, root surface is
             exposed in places, mobility of affected teeth may begin. Treatment
             includes thorough scaling, root planing, and sometimes targeted
             extractions of severely compromised teeth.
@@ -387,7 +392,7 @@ export default function FerretDentalDiseasePage() {
               tongue.
             </li>
             <li>
-              <strong>Steady state:</strong> 30-60 seconds, daily, outside
+              <strong>Steady state:</strong> a short session, daily, outside
               surfaces only, enzymatic pet paste only. End with a treat
               every time. Many keepers integrate brushing into a fixed
               evening routine the ferret learns to anticipate.
@@ -397,7 +402,7 @@ export default function FerretDentalDiseasePage() {
           <h3>Starting on an adult ferret</h3>
           <p>
             Possible but slower. The same progression works, just stretched
-            over 6-10 weeks instead of 4. The harder problem is that an
+            over a longer period. The harder problem is that an
             adult ferret with no dental history is more likely to have
             uncomfortable established tartar; brushing over sensitive,
             inflamed gum tissue is unpleasant and reinforces resistance.
@@ -417,7 +422,7 @@ export default function FerretDentalDiseasePage() {
 
           <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Keep these on hand: a fingertip rubber brush so a kit can learn the flavor and the feel before a handle is introduced, a soft infant toothbrush for the 30–60 second outside-surface pass, and pet dental wipes (gauze on a fingertip with enzymatic paste) for the days a ferret will not tolerate a brush. Enzymatic pet toothpaste sits beside those three as the paste already described in the protocol on this page. Human toothpaste (fluoride, xylitol), named toothpaste brands, antibiotics, analgesia (meloxicam, buprenorphine), and anesthetized scaling stay educational copy only.
+            Keep these on hand: a fingertip rubber brush so a kit can learn the flavor and the feel before a handle is introduced, a soft infant toothbrush for a short outside-surface pass, and pet dental wipes (gauze on a fingertip with enzymatic paste) for the days a ferret will not tolerate a brush. Enzymatic pet toothpaste sits beside those three as the paste already described in the protocol on this page. Human toothpaste (fluoride, xylitol), named toothpaste brands, antibiotics, analgesia (meloxicam, buprenorphine), and anesthetized scaling stay educational copy only.
           </p>
 
           <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/finger+toothbrush+pet?s=health-dental-disease", "/go/amazon-brand/infant+toothbrush+soft+bristle?s=health-dental-disease", "/go/amazon-brand/pet+dental+wipes?s=health-dental-disease"]} />

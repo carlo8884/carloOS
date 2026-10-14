@@ -102,7 +102,7 @@ export default function HeartwormPage() {
 
           <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Keep these on hand: a heavy-gauge 48-inch dog crate so an 8-week treatment rest is a crate, a 2-foot nylon traffic lead so outdoor potty stays leash-restricted, and an adjustable aluminum downspout extender so roof runoff does not pool into a mosquito breeding puddle. These are educational home-care and monitoring tools, not a ranked product list, not a substitute for veterinary care, and not a treatment for heartworm. Heartgard, Interceptor, Sentinel, Revolution, ProHeart, ivermectin, milbemycin, moxidectin, and melarsomine are clinic prescriptions, not product links. </p>
+            Keep these on hand: a heavy-gauge 48-inch dog crate so the rest period your vet sets is a crate, a 2-foot nylon traffic lead so outdoor potty stays leash-restricted, and an adjustable aluminum downspout extender so roof runoff does not pool into a mosquito breeding puddle. These are educational home-care and monitoring tools, not a ranked product list, not a substitute for veterinary care, and not a treatment for heartworm. Heartgard, Interceptor, Sentinel, Revolution, ProHeart, ivermectin, milbemycin, moxidectin, and melarsomine are clinic prescriptions, not product links. </p>
 
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/heavy+gauge+48+inch+dog+crate?s=health-heartworm-in-dogs", "/go/amazon-brand/2+foot+nylon+traffic+lead?s=health-heartworm-in-dogs", "/go/amazon-brand/adjustable+aluminum+downspout+extender?s=health-heartworm-in-dogs"]} />
 
