@@ -21,7 +21,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-10-13T00:00:00Z',
+  modifiedAt: '2026-10-14T00:00:00Z',
 })
 
 const med = buildMedicalWebPageSchema({
@@ -110,9 +110,13 @@ export default function FerretsWithKidsPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-10-13"
+            updatedAt="2026-10-14"
             reviewedBy="Editorial team"
           />
+          <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
+            <HopDisclosure siteId="ferret-com" above href="/go/amazon-brand/ferret+litter?s=ferrets-with-kids" />
+            <ShopCtas amazonHref="/go/amazon-brand/ferret+litter?s=ferrets-with-kids" amazonLabel="Browse ferret litter on Amazon →" />
+          </div>
           <CalloutBox variant="info" title="Short answer">
             <p>
               A ferret may not be the best pet for a family with young children, and any interaction between a ferret and a young child should always be monitored (<a href="https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf">Lafeber</a>). An adult should own the care for the ferret’s 6 to 8 years.

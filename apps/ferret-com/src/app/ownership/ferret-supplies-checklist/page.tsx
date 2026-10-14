@@ -21,7 +21,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-10-13T00:00:00Z',
+  modifiedAt: '2026-10-14T00:00:00Z',
 })
 
 const med = buildMedicalWebPageSchema({
@@ -113,10 +113,14 @@ export default function FerretSuppliesChecklistPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-10-13"
+            updatedAt="2026-10-14"
             reviewedBy="Editorial team"
           />
-          <LastUpdated date="2026-10-13" />
+          <LastUpdated date="2026-10-14" />
+          <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
+            <HopDisclosure siteId="ferret-com" above href="/go/amazon-brand/ferret+litter?s=ferret-supplies-checklist" />
+            <ShopCtas amazonHref="/go/amazon-brand/ferret+litter?s=ferret-supplies-checklist" amazonLabel="Browse ferret litter on Amazon →" />
+          </div>
           <CalloutBox variant="info" title="Short answer">
             <p>
               Before day one: a secure cage (at least 24 × 24 × 18 inches for one to two ferrets, bars no wider than 1 inch, per <a href="https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf">Lafeber</a>), washable bedding or hammocks, a litter pan with non-clumping litter, sturdy food and water containers, food, and a carrier. Skip clumping litter, cedar, and latex or foam toys (<a href="https://www.merckvetmanual.com/all-other-pets/ferrets/providing-a-home-for-a-ferret">Merck Veterinary Manual</a>; Lafeber).
@@ -148,7 +152,7 @@ export default function FerretSuppliesChecklistPage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-13" />
+          <ComparisonFoot updated="2026-10-14" />
           <h2>Who should buy which first</h2>
           <p>Buy the cage, bedding, litter, dishes, food, and carrier before the ferret comes home. Add grooming tools, toys, and tunnels in the first week or two. A single good cage matters more than a pile of accessories.</p>
 

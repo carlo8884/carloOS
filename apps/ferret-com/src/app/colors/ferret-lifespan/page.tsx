@@ -36,7 +36,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-10-13T00:00:00Z',
+  modifiedAt: '2026-10-14T00:00:00Z',
 })
 
 const FAQS = [
@@ -121,8 +121,12 @@ export default function FerretLifespanPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-10-13"
+            updatedAt="2026-10-14"
           />
+          <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
+            <HopDisclosure siteId="ferret-com" above href="/go/amazon-brand/ferret+cage?s=ferret-lifespan" />
+            <ShopCtas amazonHref="/go/amazon-brand/ferret+cage?s=ferret-lifespan" amazonLabel="Browse ferret cages on Amazon →" />
+          </div>
 
           <CalloutBox variant="info" title="Short answer">
             <p>

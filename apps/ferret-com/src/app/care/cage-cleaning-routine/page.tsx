@@ -54,7 +54,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-10-13T00:00:00Z',
+  modifiedAt: '2026-10-14T00:00:00Z',
 
   citation: SOURCES,
 })
@@ -155,9 +155,13 @@ export default function FerretCageCleaningRoutinePage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-10-13"
+            updatedAt="2026-10-14"
             reviewedBy="Editorial team"
           />
+          <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
+            <HopDisclosure siteId="ferret-com" above href="/go/amazon-brand/enzymatic+pet+stain+odor+cleaner?s=care-cage-cleaning-routine" />
+            <ShopCtas amazonHref="/go/amazon-brand/enzymatic+pet+stain+odor+cleaner?s=care-cage-cleaning-routine" amazonLabel="Browse enzymatic stain and odor cleaner on Amazon →" />
+          </div>
 
           <DropCap>
             Ferrets are clean animals living in close quarters, and the cage is

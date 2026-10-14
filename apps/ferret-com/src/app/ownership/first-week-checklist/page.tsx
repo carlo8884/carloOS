@@ -21,7 +21,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-10-13T00:00:00Z',
+  modifiedAt: '2026-10-14T00:00:00Z',
 })
 
 const med = buildMedicalWebPageSchema({
@@ -111,9 +111,13 @@ export default function FirstWeekChecklistPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-10-13"
+            updatedAt="2026-10-14"
             reviewedBy="Editorial team"
           />
+          <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
+            <HopDisclosure siteId="ferret-com" above href="/go/amazon-brand/ferret+litter?s=first-week-checklist" />
+            <ShopCtas amazonHref="/go/amazon-brand/ferret+litter?s=first-week-checklist" amazonLabel="Browse ferret litter on Amazon →" />
+          </div>
           <CalloutBox variant="info" title="Short answer">
             <p>
               Before day one, check local ferret rules (some places restrict ownership or require permits, per <a href="https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf">Lafeber</a>). In the first week, book an exam with a ferret-experienced veterinarian; the <a href="https://www.merckvetmanual.com/all-other-pets/ferrets/routine-health-care-for-ferrets">Merck Veterinary Manual</a> recommends yearly exams and vaccination against rabies and canine distemper.

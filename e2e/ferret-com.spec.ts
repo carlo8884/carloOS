@@ -1314,3 +1314,21 @@ test('ferret fix VB2: hub cards show credited ferret photos with no text on the 
   const navBg = await page.evaluate(() => getComputedStyle(document.querySelector('nav[aria-label="Main navigation"]')!).backgroundColor)
   expect(navBg).not.toBe('rgba(0, 0, 0, 0)')
 })
+
+test('ferret fix TP1: articles show a relevant shop button within 1.5 mobile screens, after the disclosure', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 })
+  for (const path of ['/health/dental-disease', '/behavior/training-and-bonding', '/care/nail-trimming', '/health/vaccinations']) {
+    await page.goto(path, { waitUntil: 'domcontentloaded' })
+    const info = await page.evaluate(() => {
+      const box = document.querySelector('[data-top-shop]')
+      const link = box?.querySelector('a[href*="/go/"]') as HTMLElement | null
+      const disc = box?.querySelector('[data-affiliate-disclosure]')
+      if (!link || !disc) return null
+      return { y: link.getBoundingClientRect().top + window.scrollY, ok: Boolean(disc.compareDocumentPosition(link) & Node.DOCUMENT_POSITION_FOLLOWING) }
+    })
+    expect(info, path).not.toBeNull()
+    expect(info!.ok, path).toBe(true)
+    expect(info!.y, path).toBeLessThanOrEqual(1266)
+  }
+})
+

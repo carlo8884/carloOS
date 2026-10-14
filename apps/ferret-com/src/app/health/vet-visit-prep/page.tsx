@@ -75,7 +75,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-05-29T00:00:00Z',
-  modifiedAt: '2026-10-13T00:00:00Z',
+  modifiedAt: '2026-10-14T00:00:00Z',
 
   citation: SOURCES,
 })
@@ -86,7 +86,7 @@ const medSchema = buildMedicalWebPageSchema({
     'Practical preparation guide for ferret veterinary visits, including pre-visit checklist, expected diagnostics, and cost expectations.',
   url: 'https://ferret.com/health/vet-visit-prep',
   authorName: 'Ferret.com Editorial',
-  lastReviewed: '2026-10-13',
+  lastReviewed: '2026-10-14',
 })
 
 const FAQS = [
@@ -188,10 +188,14 @@ export default function FerretVetVisitPrepPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-05-29"
-            updatedAt="2026-10-13"
+            updatedAt="2026-10-14"
             reviewedBy="Editorial team"
           />
-          <LastUpdated date="2026-10-13" />
+          <LastUpdated date="2026-10-14" />
+          <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
+            <HopDisclosure siteId="ferret-com" above href="/go/amazon-brand/ferret+carrier?s=vet-visit-prep" />
+            <ShopCtas amazonHref="/go/amazon-brand/ferret+carrier?s=vet-visit-prep" amazonLabel="Browse ferret carriers on Amazon →" />
+          </div>
           <div className="rounded-lg border-l-4 border-brand-primary bg-brand-white p-5 my-6" data-testid="short-answer">
             <h2 className="font-display text-lg font-bold mb-2">The short answer</h2>
             <p className="text-base leading-relaxed text-brand-text-mid m-0">

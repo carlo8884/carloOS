@@ -22,7 +22,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-10-13T00:00:00Z',
+  modifiedAt: '2026-10-14T00:00:00Z',
 })
 
 const med = buildMedicalWebPageSchema({
@@ -112,9 +112,13 @@ export default function CostOfOwningAFerretPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-10-13"
+            updatedAt="2026-10-14"
             reviewedBy="Editorial team"
           />
+          <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
+            <HopDisclosure siteId="ferret-com" above href="/go/amazon-brand/ferret+kibble?s=cost-of-owning-a-ferret" />
+            <ShopCtas amazonHref="/go/amazon-brand/ferret+kibble?s=cost-of-owning-a-ferret" amazonLabel="Browse ferret kibble on Amazon →" />
+          </div>
           <CalloutBox variant="info" title="Short answer">
             <p>
               The ferret itself is the smallest cost. Plan for a cage and supplies up front, modest food and litter costs, a yearly exam with rabies and distemper vaccines (<a href="https://www.merckvetmanual.com/all-other-pets/ferrets/routine-health-care-for-ferrets">Merck Veterinary Manual</a>), and larger veterinary bills in later years, since tumors are commonly diagnosed in ferrets (<a href="https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/neoplasia-of-ferrets">Merck</a>). Ferrets live an average of 6 to 8 years (<a href="https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf">Lafeber</a>). We do not print dollar figures because prices vary by region and clinic.

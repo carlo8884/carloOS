@@ -21,7 +21,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-10-13T00:00:00Z',
+  modifiedAt: '2026-10-14T00:00:00Z',
 })
 
 const med = buildMedicalWebPageSchema({
@@ -110,9 +110,13 @@ export default function TravelingWithAFerretPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-10-13"
+            updatedAt="2026-10-14"
             reviewedBy="Editorial team"
           />
+          <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
+            <HopDisclosure siteId="ferret-com" above href="/go/amazon-brand/ferret+litter?s=traveling-with-a-ferret" />
+            <ShopCtas amazonHref="/go/amazon-brand/ferret+litter?s=traveling-with-a-ferret" amazonLabel="Browse ferret litter on Amazon →" />
+          </div>
           <CalloutBox variant="info" title="Short answer">
             <p>
               Use a secure, ventilated carrier (a plastic cat carrier is sufficient, per the <a href="https://www.merckvetmanual.com/all-other-pets/ferrets/routine-health-care-for-ferrets">Merck Veterinary Manual</a>), keep the car at about 65°F to 75°F (<a href="https://www.merckvetmanual.com/all-other-pets/ferrets/providing-a-home-for-a-ferret">Merck</a>), and never leave a ferret in a parked car: ferrets cannot sweat and are highly susceptible to heatstroke (<a href="https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/management-of-ferrets">Merck</a>).

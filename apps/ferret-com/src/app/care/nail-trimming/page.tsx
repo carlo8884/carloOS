@@ -49,7 +49,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-10-13T00:00:00Z',
+  modifiedAt: '2026-10-14T00:00:00Z',
 
   citation: SOURCES,
 })
@@ -149,9 +149,13 @@ export default function NailTrimmingPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-10-13"
+            updatedAt="2026-10-14"
             reviewedBy="Editorial team"
           />
+          <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
+            <HopDisclosure siteId="ferret-com" above href="/go/amazon-brand/cat+kitten+nail+clippers?s=care-nail-trimming" />
+            <ShopCtas amazonHref="/go/amazon-brand/cat+kitten+nail+clippers?s=care-nail-trimming" amazonLabel="Browse cat and kitten nail clippers on Amazon →" />
+          </div>
 
           <CalloutBox variant="info" title="Short answer">
             <p>Trim a ferret&apos;s claws every 1 to 2 weeks. Cut at an angle that leaves the claw end parallel to the floor when the ferret stands, and avoid the dark vein inside each claw. If you nick it, apply styptic powder right away. Never declaw a ferret; it needs its claws to walk and grasp. Source: <a href="https://www.merckvetmanual.com/all-other-pets/ferrets/routine-health-care-for-ferrets">Merck Veterinary Manual</a>.</p>

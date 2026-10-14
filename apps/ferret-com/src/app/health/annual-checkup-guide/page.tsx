@@ -63,7 +63,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-10-13T00:00:00Z',
+  modifiedAt: '2026-10-14T00:00:00Z',
 
   citation: SOURCES,
 })
@@ -171,9 +171,13 @@ export default function FerretAnnualCheckupGuidePage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-10-13"
+            updatedAt="2026-10-14"
           />
-          <LastUpdated date="2026-10-13" />
+          <LastUpdated date="2026-10-14" />
+          <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
+            <HopDisclosure siteId="ferret-com" above href="/go/amazon-brand/ferret+litter?s=annual-checkup-guide" />
+            <ShopCtas amazonHref="/go/amazon-brand/ferret+litter?s=annual-checkup-guide" amazonLabel="Browse ferret litter on Amazon →" />
+          </div>
 
           <DropCap>
             Ferrets live fast and develop disease young. By the time a ferret
