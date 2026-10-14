@@ -17,8 +17,8 @@ export default function ERvsUrgentPage() {
       <ArticleLayout siteId="vets-co"
         hero={{ title: 'ER vs. Urgent Care vs. Regular Vet', subtitle: 'When something is wrong with your pet, knowing where to go — the emergency hospital, an urgent care clinic, or your regular veterinarian — saves time, money, and sometimes your pet\'s life. This guide explains what each setting is for and how to match the severity and timing of a problem to the right level of care.', category: 'Owner Guide', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '8 min',}}
         heroHop={<>
-          <PrimaryHop href="/go/amazon-brand/pet+first+aid+kit?s=guides-er-vs-urgent-care" label="Search Amazon for a pet first-aid kit" />
           <HopDisclosure tone="on-dark" siteId="vets-co" href="/go/amazon-brand/pet+first+aid+kit?s=guides-er-vs-urgent-care" />
+          <PrimaryHop href="/go/amazon-brand/pet+first+aid+kit?s=guides-er-vs-urgent-care" label="Search Amazon for a pet first-aid kit" />
         </>}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Guides', href: '/guides' }, { name: 'ER vs. Urgent Care', href: '/guides/er-vs-urgent-care' }]}
         sidebar={<>

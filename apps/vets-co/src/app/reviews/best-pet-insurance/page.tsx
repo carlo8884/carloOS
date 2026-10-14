@@ -72,8 +72,7 @@ export default function VetsPetInsurancePage() {
         <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">Trupanion is the top pet insurance pick because it offers direct vet payment at checkout; check terms.</p>
         <PriceAsOf date="2026-10-09" tone="dark" />
         <div data-fold="offer">
-          <PrimaryHop href='/go/trupanion/home?s=reviews-best-pet-insurance' label='Get a Trupanion quote →' holdWithoutPartnerId />
-        <HopDisclosure tone="on-dark"
+          <HopDisclosure tone="on-dark"
           siteId="vets-co"
           noteClassName="mt-3 mb-0 text-xs leading-relaxed text-white/80"
           href={[
@@ -82,6 +81,7 @@ export default function VetsPetInsurancePage() {
             '/go/embrace/home?s=reviews-best-pet-insurance',
           ]}
         />
+        <PrimaryHop href='/go/trupanion/home?s=reviews-best-pet-insurance' label='Get a Trupanion quote →' holdWithoutPartnerId />
         </div>
         <EmailCapture
           variant="inline"

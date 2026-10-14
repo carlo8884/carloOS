@@ -205,8 +205,8 @@ export default function SymptomsHubPage() {
         secondaryCta={{ href: '/health/emergency-signs', label: 'Emergency signs' }}
         hop={
           <>
-            <PrimaryHop href="/go/amazon-brand/digital+pet+thermometer?s=symptoms" label="Search Amazon for a digital pet thermometer" />
             <HopDisclosure tone="on-dark" siteId="vets-co" href="/go/amazon-brand/digital+pet+thermometer?s=symptoms" />
+            <PrimaryHop href="/go/amazon-brand/digital+pet+thermometer?s=symptoms" label="Search Amazon for a digital pet thermometer" />
           </>
         }
       />

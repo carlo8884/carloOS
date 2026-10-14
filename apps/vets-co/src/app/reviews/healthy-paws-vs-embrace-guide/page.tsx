@@ -58,8 +58,8 @@ export default function HealthyPawsVsEmbraceGuidePage() {
         <>
           <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">Healthy Paws, whose claims page says most claims are processed in 2 days, or Embrace for a wellness add-on.</p>
           <div data-fold="offer">
-          <PrimaryHop href="/go/healthy-paws/home?s=reviews-healthy-paws-vs-embrace-guide" label="Get a Healthy Paws quote" holdWithoutPartnerId />
           <HopDisclosure tone="on-dark" siteId="vets-co" href="/go/healthy-paws/home?s=reviews-healthy-paws-vs-embrace-guide" noteClassName="mt-3 mb-0 text-xs leading-relaxed text-white/80" />
+          <PrimaryHop href="/go/healthy-paws/home?s=reviews-healthy-paws-vs-embrace-guide" label="Get a Healthy Paws quote" holdWithoutPartnerId />
         </div>
         </>
       }
