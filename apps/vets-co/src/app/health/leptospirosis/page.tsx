@@ -7,13 +7,13 @@ export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Lep
 const SOURCES = [
   { label: 'Merck Veterinary Manual: Leptospirosis in Dogs', url: 'https://www.merckvetmanual.com/infectious-diseases/leptospirosis/leptospirosis-in-dogs', publisher: 'Merck Vet Manual' },
   { label: 'AVMA: Leptospirosis', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/leptospirosis', publisher: 'AVMA' },
-  { label: 'CDC: Leptospirosis in Animals', url: 'https://www.cdc.gov/leptospirosis/pets/index.html', publisher: 'CDC' },
-  { label: 'WSAVA: Vaccination Guidelines (Leptospirosis)', url: 'https://wsava.org/global-guidelines/vaccination-guidelines/', publisher: 'WSAVA' },
+  { label: 'CDC: Leptospirosis in Animals (general reference; not checked against this page)', url: 'https://www.cdc.gov/leptospirosis/pets/index.html', publisher: 'CDC' },
+  { label: 'WSAVA: Vaccination table for dogs (2024 guidelines)', url: 'https://wsava.org/wp-content/uploads/2025/06/Dogs-Vaccination-Table.pdf', publisher: 'WSAVA' },
 ]
 const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Leptospirosis in Dogs', description: 'Signs, treatment, zoonotic risk, and vaccination for canine leptospirosis.', url: 'https://vets.co/health/leptospirosis', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-13T00:00:00Z' ,
   citation: SOURCES,
 })
-const med = buildMedicalWebPageSchema({ name: 'Leptospirosis in Dogs', description: 'Leptospira bacterial infection — signs, treatment, and vaccination.', url: 'https://vets.co/health/leptospirosis', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-07' })
+const med = buildMedicalWebPageSchema({ name: 'Leptospirosis in Dogs', description: 'Leptospira bacterial infection — signs, treatment, and vaccination.', url: 'https://vets.co/health/leptospirosis', authorName: 'Vets.co Editorial', lastReviewed: '2026-10-13' })
 const combined = combineSchemas(schema, med)
 const FAQS = [
   {
@@ -60,11 +60,11 @@ export default function LeptospirosisPage() {
       >
         <div className="carloOS-article">
 
-          <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-06-07T00:00:00Z" reviewedBy="Editorial team" />
+          <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-10-13T00:00:00Z" reviewedBy="Editorial team" />
           <LastUpdated date="2026-10-13" />
 
           <CalloutBox variant="info" title="Short answer">
-            <p>Leptospirosis is a bacterial infection that dogs usually catch through contact with infected urine or other body fluids, including urine in the environment. It most often causes sudden kidney injury and can also affect the liver; signs include lethargy, poor appetite, vomiting, belly pain, and changes in how much your dog urinates. Vets treat it with the antibiotic doxycycline plus supportive care, and vaccines help prevent it. It can spread to people, so wear gloves when cleaning up a sick dog's urine. Source: <a href="https://www.merckvetmanual.com/infectious-diseases/leptospirosis/leptospirosis-in-dogs">Merck Veterinary Manual</a>.</p>
+            <p>Leptospirosis is a bacterial infection that dogs usually catch through contact with infected urine or other body fluids, including urine in the environment. It most often causes sudden kidney injury and can also affect the liver; signs include lethargy, poor appetite, vomiting, belly pain, and changes in how much your dog urinates. Vets treat it with the antibiotic doxycycline plus supportive care. Vaccines help prevent it, and the AVMA says experts recommend vaccinating all dogs (<a href="https://www.avma.org/resources-tools/pet-owners/petcare/leptospirosis">AVMA</a>). It can spread to people, so wear gloves when cleaning up a sick dog's urine. Source: <a href="https://www.merckvetmanual.com/infectious-diseases/leptospirosis/leptospirosis-in-dogs">Merck Veterinary Manual</a>.</p>
           </CalloutBox>
 
           <h2>Transmission and Geographic Risk</h2>
@@ -73,7 +73,7 @@ export default function LeptospirosisPage() {
           <CalloutBox variant="warning" title="Zoonotic — call the vet today">
             A dog with sudden vomiting, lethargy, marked thirst, and reluctance to move after recent water or wildlife exposure may have leptospirosis. Lepto is transmissible to people through infected urine — call the veterinarian the same day and wear powder-free nitrile exam gloves when cleaning up urine until the dog is evaluated. A hiking bottle, exam gloves, and an animal-proof trash can do not diagnose leptospirosis and they do not replace that same-day call.
           </CalloutBox>
-          <p>Geographic risk is highest in warm, humid climates (Southeast US, Pacific Northwest) and following flooding events that disperse contaminated water widely. Risk is not zero anywhere in the continental US — it is variable. Dogs with outdoor exposure, dogs that frequent natural water sources, hunting dogs, and dogs in areas with high wildlife activity have the highest exposure risk. Household outdoor-risk gear does not change that geography and it does not replace the veterinarian who decides whether the leptospirosis vaccine is indicated.</p>
+          <p>The AVMA says leptospirosis is more common in warm climates with high rainfall but can occur anywhere, especially after heavy rain and flooding, and names the midwestern, eastern and southwestern US as hotspots for dogs. All dogs are at risk; slow-moving or stagnant water, rural roaming, wildlife or farm animals, and contact with other dogs raise it. Household outdoor-risk gear does not change that geography and it does not replace the veterinarian who decides whether the leptospirosis vaccine is indicated.</p>
 
           <h2>Clinical Signs — Two Main Presentations</h2>
           <p><strong>Acute kidney injury presentation (most common):</strong> Sudden onset of vomiting, lethargy, anorexia, increased thirst and urination (or reduced urination in acute kidney failure), and muscle pain (reluctance to move, stiff gait). Bloodwork shows elevated BUN, creatinine, and phosphorus from acute kidney failure. Some cases progress to anuric (no urine production) renal failure requiring dialysis.</p>
@@ -81,13 +81,13 @@ export default function LeptospirosisPage() {
           <p>Subclinical infection — dog is infected but shows no signs, clears the infection and develops antibody titers — is more common than is often appreciated. These dogs may shed Leptospira in their urine during the infection period, posing zoonotic risk to household members.</p>
 
           <h2>Zoonotic Risk — Protect Your Family</h2>
-          <p>Leptospirosis is one of the most widespread zoonotic diseases in the world. A dog diagnosed with leptospirosis is shedding Leptospira in its urine for weeks during and after illness — human household members can be infected through contact with contaminated urine. This is why veterinary teams handling lepto cases use significant personal protective equipment and why dog owners of infected animals should: wear powder-free nitrile exam gloves when handling the dog or cleaning up urine, avoid contact with the dog&apos;s urine, wash hands thoroughly, and inform healthcare providers if they develop flu-like symptoms after exposure. Powder-free nitrile exam gloves are how a urine wipe stays a gloved wipe — they are not disposable nitrile gloves and they are not a silicone cat grooming glove. Gloves do not treat leptospirosis and they do not replace the veterinarian.</p>
+          <p>Infected dogs can pass Leptospira in their urine even when they seem healthy, and the AVMA says the bacteria can survive for weeks to months in urine-soaked soil. An infected dog is unlikely to infect you, but there is some risk. This is why veterinary teams handling lepto cases use significant personal protective equipment and why dog owners of infected animals should: wear powder-free nitrile exam gloves when handling the dog or cleaning up urine, avoid contact with the dog&apos;s urine, wash hands thoroughly, and inform healthcare providers if they develop flu-like symptoms after exposure. Powder-free nitrile exam gloves are how a urine wipe stays a gloved wipe — they are not disposable nitrile gloves and they are not a silicone cat grooming glove. Gloves do not treat leptospirosis and they do not replace the veterinarian.</p>
 
           <h2>Treatment</h2>
           <p>Leptospirosis is bacterial and responds to antibiotics — specifically doxycycline (first-line; clears the renal carrier state) or ampicillin/amoxicillin in severely ill animals where GI absorption may be compromised. Hospitalization for IV fluid support of kidney and liver function is critical for moderate-to-severe cases — the bacterial septicemia is manageable but the organ damage requires supportive care. Prognosis: good for mild cases caught early; guarded for cases presenting in renal failure with anuric kidney injury.</p>
 
           <h2>Vaccination</h2>
-          <p>The leptospirosis vaccine is a non-core vaccine — recommended based on lifestyle risk rather than universally. Dogs with outdoor access, dogs in endemic areas, dogs that swim in natural water, hunting dogs, and dogs in suburban areas with wildlife exposure should receive the vaccine. The current 4-serovar vaccine (L4) covers the four most clinically prevalent serovars (Canicola, Icterohaemorrhagiae, Grippotyphosa, Pomona). Boosted annually as immunity wanes faster than core vaccines. A booster 2-4 weeks after initial vaccination is required for puppies and dogs receiving the vaccine for the first time. Nobivac, L4, doxycycline, and ampicillin are clinic prescriptions and hospital treatments, not product links. The hiking bottle, exam gloves, and animal-proof trash can are household outdoor-risk tools. They do not replace the veterinarian who chooses the protocol.</p>
+          <p>The AVMA says that, because of the risk and severity of leptospirosis, experts recommend vaccinating all dogs. It describes an initial series of two doses 4 weeks apart, starting at 12 weeks of age or later, then annual boosters, and says lepto vaccines are no more likely to cause side effects than other common vaccines. WSAVA lists two doses 2–4 weeks apart, then annual boosters, and treats the vaccine as core where canine leptospirosis is endemic. Nobivac, L4, doxycycline, and ampicillin are clinic prescriptions and hospital treatments, not product links. The hiking bottle, exam gloves, and animal-proof trash can are household outdoor-risk tools. They do not replace the veterinarian who chooses the protocol.</p>
 
           <h2 id="kit">Supplies named on this page</h2>
           <p>
