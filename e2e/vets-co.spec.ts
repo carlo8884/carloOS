@@ -1555,3 +1555,14 @@ test('vets design CI1: calculators stay within their height budget on mobile', a
   }
   expect(problems, problems.join('\n')).toEqual([])
 })
+
+test('vets BC1: per-button Amazon lines are small and muted, senior care has no SDMA 25% figure', async ({ page }) => {
+  await page.goto('/health/senior-pet-care')
+  const body = await page.locator('main').innerText()
+  expect(body).not.toMatch(/25% of kidney function/)
+  for (const path of ['/health/senior-pet-care', '/health/anxiety-in-dogs', '/reviews/best-pet-insurance']) {
+    await page.goto(path)
+    const sizes = await page.$$eval('[data-affiliate-disclosure="hop"]', (els) => els.filter((e) => /Amazon Associate/.test(e.textContent || '')).map((e) => parseFloat(getComputedStyle(e).fontSize)))
+    for (const s of sizes) expect(s, path).toBeLessThanOrEqual(11)
+  }
+})
