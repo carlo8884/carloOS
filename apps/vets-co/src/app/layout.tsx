@@ -86,7 +86,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </EmailUnderHero>
         </EmailCaptureGate>
         </main>
-        <MobileStickyCta primary={{ href: '/emergency-triage-card', label: 'Emergency triage card' }} secondary={{ href: '/reviews/best-pet-insurance', label: 'Compare insurance' }} />
+        <MobileStickyCta primary={{ href: '/emergency-triage-card', label: 'Emergency triage card' }} />
         <div className="h-16 md:hidden" aria-hidden="true" />
         <Footer siteId="vets-co" showAffiliateDisclosure />
         </HopEarnsProvider>

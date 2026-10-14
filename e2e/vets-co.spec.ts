@@ -1304,7 +1304,6 @@ test('vets fix ST1: mobile sticky bar appears after scrolling with internal next
   await page.mouse.wheel(0, 1500)
   await expect(bar).toHaveAttribute('aria-hidden', 'false')
   await expect(bar.locator('a[href="/emergency-triage-card"]')).toBeVisible()
-  await expect(bar.locator('a[href="/reviews/best-pet-insurance"]')).toBeVisible()
   await expect(bar.locator('a[href*="/go/"]')).toHaveCount(0)
   await bar.getByRole('button', { name: 'Close' }).click()
   await expect(bar).toHaveCount(0)
@@ -1450,4 +1449,16 @@ test('vets fix VB1: real pet photos sit beside hub copy (never behind it) and on
   }
   await page.goto('/breeds/beagle-health', { waitUntil: 'domcontentloaded' })
   await expect(page.locator('img[alt="A Beagle"]')).toHaveCount(1)
+})
+
+test('vets fix ST2: sticky bar is one action, at most 56px, and hides near the footer', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 })
+  await page.goto('/health/anxiety-in-dogs', { waitUntil: 'load' })
+  const bar = page.getByTestId('mobile-sticky-cta')
+  await page.mouse.wheel(0, 1500)
+  await expect(bar).toHaveAttribute('aria-hidden', 'false')
+  expect((await bar.boundingBox())!.height).toBeLessThanOrEqual(56)
+  await expect(bar.locator('a')).toHaveCount(1)
+  await page.evaluate(() => window.scrollTo(0, document.documentElement.scrollHeight))
+  await expect(bar).toHaveAttribute('aria-hidden', 'true')
 })

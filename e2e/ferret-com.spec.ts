@@ -1332,3 +1332,14 @@ test('ferret fix TP1: articles show a relevant shop button within 1.5 mobile scr
   }
 })
 
+test('ferret fix ST2: sticky bar is one action, at most 56px, and hides near the footer', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 })
+  await page.goto('/health/adrenal-disease', { waitUntil: 'load' })
+  const bar = page.getByTestId('mobile-sticky-cta')
+  await page.mouse.wheel(0, 1500)
+  await expect(bar).toHaveAttribute('aria-hidden', 'false')
+  expect((await bar.boundingBox())!.height).toBeLessThanOrEqual(56)
+  await expect(bar.locator('a')).toHaveCount(1)
+  await page.evaluate(() => window.scrollTo(0, document.documentElement.scrollHeight))
+  await expect(bar).toHaveAttribute('aria-hidden', 'true')
+})
