@@ -28,6 +28,11 @@ const SOURCES = [
     publisher: "Merck Veterinary Manual",
   },
   {
+    label: "Lafeber Vet — Care of the Pet Ferret (owner handout): vaccination timing",
+    url: "https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf",
+    publisher: "Lafeber Vet",
+  },
+  {
     label: "Association of Exotic Mammal Veterinarians (AEMV) — ferret preventive-medicine and vaccination continuing-education materials (general reference; not checked against this page)",
     url: "https://aemv.org",
     publisher: "AEMV",
@@ -45,7 +50,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
   title: 'Ferret Vaccination Schedule — Distemper & Rabies | Ferret.com',
   description:
-    'Ferret vaccination schedule: distemper kit series plus annual booster, rabies at 12+ weeks plus annual. Reaction signs, premedication, and legal notes.',
+    'Ferret vaccination schedule: distemper kit series plus annual booster, rabies from 16 weeks plus annual. Reaction signs, premedication, and legal notes.',
   path: '/health/vaccinations',
   type: 'article',
 })
@@ -71,7 +76,7 @@ const medSchema = buildMedicalWebPageSchema({
     'Clinical reference for ferret canine-distemper and rabies vaccination, including kit timing, annual boosters, and adverse-reaction management.',
   url: 'https://ferret.com/health/vaccinations',
   authorName: 'Ferret.com Editorial',
-  lastReviewed: '2026-05-29',
+  lastReviewed: '2026-10-13',
 })
 
 
@@ -79,12 +84,12 @@ const FAQS = [
   {
     question: 'What vaccines do ferrets need?',
     answer:
-      "Two core vaccines: canine distemper virus (CDV) and rabies. Canine distemper is essentially 100% fatal in unvaccinated ferrets exposed to the virus. Rabies vaccination is required by law in most US states for any ferret over 12 weeks of age. No other vaccines are part of the standard ferret protocol — ferrets are not vaccinated for feline distemper (panleukopenia), canine parvo, or canine adenovirus.",
+      "Two core vaccines: canine distemper virus (CDV) and rabies. Canine distemper is essentially 100% fatal in unvaccinated ferrets exposed to the virus. Rabies is given annually, depending on local laws (Merck Veterinary Manual). No other vaccines are part of the standard ferret protocol — ferrets are not vaccinated for feline distemper (panleukopenia), canine parvo, or canine adenovirus.",
   },
   {
     question: 'When does a ferret kit get its first vaccines?',
     answer:
-      "Standard kit protocol per the American Animal Hospital Association (AAHA) and exotic-pet veterinary references: canine distemper at approximately 8, 11, and 14 weeks of age (three doses), with the first rabies vaccine at 12-16 weeks. Both vaccines are then boosted annually for life. The three-shot distemper series ensures coverage despite waning maternal antibody interference.",
+      "Lafeber Vet says pet-store kits usually get their first distemper vaccine at about 6 to 8 weeks, with boosters at about 10 to 12 and 14 to 16 weeks. The Merck Veterinary Manual says the first rabies vaccine should be given at 16 weeks or older and then repeated annually, and that distemper and rabies vaccines should not be given on the same day. Both vaccines are then boosted annually. The three-shot distemper series ensures coverage despite waning maternal antibody interference.",
   },
   {
     question: 'Which vaccine products are approved for ferrets?',
@@ -94,12 +99,12 @@ const FAQS = [
   {
     question: 'My ferret had a vaccine reaction — what should I do?',
     answer:
-      "Ferret vaccine reactions are well-documented and not rare. Mild reactions (lethargy, mild fever for 24 hours) are common and resolve. Anaphylactic reactions — vomiting, severe diarrhea, collapse, pale gums — typically occur within 30-60 minutes of injection and require immediate emergency care. Many exotic-pet vets premedicate with diphenhydramine (Benadryl) before each vaccine in any ferret with a prior reaction history; in some cases, vaccines are split across separate visits.",
+      "Ferret vaccine reactions are well-documented and not rare. Reactions can include vomiting and diarrhea, and in some ferrets shock and death; they can occur up to several hours after vaccination, and mild lethargy for several days afterward is common. The Merck Veterinary Manual advises staying at the clinic for 20 to 30 minutes after each vaccine and not giving distemper and rabies vaccines on the same day. Many exotic-pet vets premedicate with diphenhydramine (Benadryl) before each vaccine in any ferret with a prior reaction history; in some cases, vaccines are split across separate visits.",
   },
   {
     question: 'Can I skip vaccinations if my ferret stays indoors?',
     answer:
-      "Canine distemper is airborne and can be carried into the home on shoes, clothing, or by visiting dogs — indoor-only is not full protection. Rabies vaccination is a legal requirement in most US states regardless of indoor status; an unvaccinated ferret that bites a human can be required by local public health authorities to be euthanized for rabies testing. Skipping vaccines is not a sensible cost-saving measure in ferrets.",
+      "Canine distemper is airborne and can be carried into the home on shoes, clothing, or by visiting dogs — indoor-only is not full protection. Rabies vaccination rules vary by state and city and often apply regardless of indoor status; an unvaccinated ferret that bites a human can be required by local public health authorities to be euthanized for rabies testing. Skipping vaccines is not a sensible cost-saving measure in ferrets.",
   },
   {
     question: 'How often do adult ferrets need boosters?',
@@ -199,14 +204,15 @@ export default function FerretVaccinationsPage() {
 
                     <p>
             Ferrets need two vaccines: canine distemper virus (CDV) and
-            rabies. Kit series: CDV at approximately 8, 11, and 14 weeks;
-            rabies at 12-16 weeks. Annual boosters for life. Use the
+            rabies. Kit series: CDV at about 6–8, 10–12 and 14–16 weeks
+            (Lafeber Vet); rabies at 16 weeks or older, never on the same
+            day as distemper (Merck Veterinary Manual). Annual boosters for life. Use the
             USDA-licensed ferret products (IMRAB-3 for rabies; an
             appropriate CDV product per current availability and your
             exotic-pet vet&apos;s judgment). Vaccine reactions are not
-            rare and the response protocol — observe in clinic 30-60
-            minutes, premedicate at-risk ferrets, separate the two
-            vaccines into different visits when needed — is a vet
+            rare and the response protocol — observe in clinic at least
+            20 to 30 minutes (Merck Veterinary Manual), premedicate at-risk ferrets, give the two
+            vaccines at different visits — is a vet
             conversation worth having explicitly.
           </p>
 
@@ -227,8 +233,8 @@ export default function FerretVaccinationsPage() {
             </li>
             <li>
               <strong>Rabies.</strong> Universally fatal once symptomatic.
-              Required by law in most US states for ferrets over 12 weeks
-              of age. Required by the USDA APHIS for any interstate or
+              Required by law in many places; rules vary by state and city,
+              so ask your vet what applies locally. Required by the USDA APHIS for any interstate or
               international ferret travel.
             </li>
           </ul>
@@ -292,11 +298,10 @@ export default function FerretVaccinationsPage() {
             ferret label.
           </p>
           <p>
-            <strong>Timing.</strong> First rabies vaccine at 12-16 weeks
-            of age, then annually for life. The first dose can be given
-            at the same visit as the third CDV dose if the ferret has not
-            had prior reactions; many vets prefer to separate the doses
-            by 2-4 weeks to keep adverse-reaction attribution clean.
+            <strong>Timing.</strong> First rabies vaccine at 16 weeks of
+            age or older, then annually depending on local laws. Do not
+            give it on the same day as a distemper vaccine (Merck Veterinary
+            Manual).
           </p>
 
           <h2 id="kits">Kit Vaccination Schedule</h2>
@@ -315,33 +320,33 @@ export default function FerretVaccinationsPage() {
               </thead>
               <tbody>
                 <tr className="border-b border-brand-border">
-                  <td className="p-3 font-medium">~8 weeks</td>
+                  <td className="p-3 font-medium">~6–8 weeks</td>
                   <td className="p-3">CDV #1</td>
                   <td className="p-3">First dose of the three-shot distemper series</td>
                 </tr>
                 <tr className="border-b border-brand-border">
-                  <td className="p-3 font-medium">~11 weeks</td>
+                  <td className="p-3 font-medium">~10–12 weeks</td>
                   <td className="p-3">CDV #2</td>
-                  <td className="p-3">Three-week interval from CDV #1</td>
+                  <td className="p-3">Booster (Lafeber Vet)</td>
                 </tr>
                 <tr className="border-b border-brand-border">
-                  <td className="p-3 font-medium">~14 weeks</td>
+                  <td className="p-3 font-medium">~14–16 weeks</td>
                   <td className="p-3">CDV #3</td>
                   <td className="p-3">Series completion; protective immunity considered established</td>
                 </tr>
                 <tr>
-                  <td className="p-3 font-medium">~12-16 weeks</td>
+                  <td className="p-3 font-medium">16+ weeks</td>
                   <td className="p-3">Rabies #1</td>
-                  <td className="p-3">Often at a separate visit from the final CDV booster</td>
+                  <td className="p-3">Never on the same day as a distemper vaccine (Merck Veterinary Manual)</td>
                 </tr>
               </tbody>
             </table>
           </div>
           <p>
             The three-dose CDV series is needed because maternal antibody
-            from the queen interferes with vaccine response in young
-            kits. The interfering antibody declines over the first 12-16
-            weeks; spacing three doses across this window ensures that at
+            from the mother interferes with vaccine response in young
+            kits. The interfering antibody declines over the first months
+            of life; spacing the doses across this window helps ensure that at
             least one dose is given after maternal antibody has fallen
             below the interference threshold.
           </p>
@@ -399,8 +404,9 @@ export default function FerretVaccinationsPage() {
             response is immediate epinephrine, intravenous fluids,
             corticosteroids, and supportive care. This is the reason
             ferrets should be observed in the veterinary clinic for at
-            least 30-60 minutes after each vaccine — not in the car on
-            the way home.
+            least 20 to 30 minutes after each vaccine, as the Merck
+            Veterinary Manual advises — not in the car on the way home.
+            Reactions can still occur up to several hours later.
           </p>
 
           <CalloutBox variant="warning" title="Anaphylaxis is a medical emergency">
@@ -434,8 +440,8 @@ export default function FerretVaccinationsPage() {
               attribution if a reaction occurs.
             </li>
             <li>
-              <strong>Post-vaccine clinic observation</strong> of 30-60
-              minutes regardless of premedication status.
+              <strong>Post-vaccine clinic observation</strong> of at least
+              20 to 30 minutes (Merck Veterinary Manual) regardless of premedication status.
             </li>
             <li>
               <strong>Owner-side preparedness.</strong> Travel directly
@@ -447,9 +453,9 @@ export default function FerretVaccinationsPage() {
 
           <h2 id="legal">Legal and Travel Considerations</h2>
           <p>
-            Rabies vaccination of ferrets is required by law in most US
-            states for any ferret over 12 weeks of age. Some local
-            jurisdictions have stricter requirements. The compliance
+            Rabies vaccination rules for ferrets vary by state and city;
+            the Merck Veterinary Manual notes that annual rabies
+            revaccination depends on local laws. The compliance
             documentation is a state-recognized rabies vaccination
             certificate signed by the administering veterinarian.
           </p>
@@ -466,10 +472,10 @@ export default function FerretVaccinationsPage() {
             current export requirements.
           </p>
           <p>
-            Kit-series days are repeated clinic trips (roughly 8, 11,
-            and 14 weeks, plus a separate rabies visit). A top-loading
+            Kit-series days are repeated clinic trips (roughly 6–8, 10–12
+            and 14–16 weeks, plus a separate rabies visit). A top-loading
             small-animal carrier is the clinic-trip box for those buttons
-            and for the ride straight home after the 30–60 minute
+            and for the ride straight home after the 20 to 30 minute
             in-clinic observation — not a loose ferret on a lap, and
             not a leftover dog airline crate. A fleece small-animal
             bonding pouch is the quiet wrap for that observation wait

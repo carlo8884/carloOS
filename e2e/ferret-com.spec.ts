@@ -1107,6 +1107,20 @@ test('ferret fix FH5: /tools hub answers first and has a sourced FAQ', async ({ 
   expect(ld.filter((t) => t.includes('"FAQPage"')).length).toBe(1)
 })
 
+test('ferret fix VX1: vaccine timing follows Merck and Lafeber; first-year schedule answers first', async ({ page }) => {
+  await page.goto('/first-year-schedule', { waitUntil: 'domcontentloaded' })
+  await expect(page.getByTestId('short-answer').locator('a[href="https://www.merckvetmanual.com/all-other-pets/ferrets/routine-health-care-for-ferrets"]').first()).toBeVisible()
+  let text = await page.locator('body').innerText()
+  expect(text).not.toMatch(/12\+ weeks|salmon oil|2–3 weeks|18–20 hours/)
+  expect(text).toContain('16 weeks or older')
+  await page.goto('/health/vaccinations', { waitUntil: 'domcontentloaded' })
+  text = await page.locator('body').innerText()
+  expect(text).not.toMatch(/12-16 weeks|12\+ weeks|30-60 minutes|over 12 weeks/)
+  expect(text).toMatch(/20 to 30 minutes/)
+  await page.goto('/health', { waitUntil: 'domcontentloaded' })
+  expect(await page.locator('body').innerText()).not.toContain('Rabies at 12+ weeks')
+})
+
 test('ferret fix FH7: /reviews hub answers first and has a sourced FAQ', async ({ page }) => {
   await page.goto('/reviews', { waitUntil: 'domcontentloaded' })
   const box = page.getByTestId('short-answer')
