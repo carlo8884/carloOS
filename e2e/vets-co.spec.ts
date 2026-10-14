@@ -1594,3 +1594,15 @@ test('vets CB1: body condition and grimace tools ask one question at a time and 
   await groups.first().locator('input[type="checkbox"]').first().check()
   await expect(groups.first().locator('summary')).toContainText('1/')
 })
+
+test('vets LA1: long articles open an On this page list whose links reach each section', async ({ page }) => {
+  await page.goto('/breeds/beagle-health')
+  const nav = page.locator('[data-jump-nav]')
+  await expect(nav).toBeVisible()
+  await nav.locator('summary').click()
+  const links = nav.locator('a[href^="#"]')
+  expect(await links.count()).toBeGreaterThanOrEqual(3)
+  const href = await links.nth(2).getAttribute('href')
+  await links.nth(2).click()
+  await expect(page.locator(href!)).toBeInViewport()
+})
