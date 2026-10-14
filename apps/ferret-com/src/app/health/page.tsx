@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, buildFAQSchema, combineSchemas, SchemaScript, FAQAccordion, CrossPortfolioCard, DirectoryPlacesCta, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
+import { ChecklistCard, buildMetadata, buildBreadcrumbSchema, buildFAQSchema, combineSchemas, SchemaScript, FAQAccordion, CrossPortfolioCard, DirectoryPlacesCta, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
 import listings from '../../data/directory-listings.json'
 import { HubHero } from '../../components/HubHero'
 
@@ -245,7 +245,7 @@ export default function HealthHubPage() {
         <span style={{ color: 'var(--brand-text-mid)', fontWeight: 500 }}>Health</span>
       </nav>
       <section className="px-container-sm sm:px-container pt-8 max-w-3xl mx-auto">
-        <LastUpdated date="2026-10-13" />
+        <LastUpdated date="2026-10-14" />
         <ArticleSourcesList
           sources={[
             { label: 'Quesenberry KE, Carpenter JW. Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery. (general reference; not checked against this page)', url: 'https://www.elsevier.com/books/ferrets-rabbits-and-rodents/quesenberry/978-1-4160-6621-7', publisher: 'Elsevier' },
@@ -502,6 +502,19 @@ export default function HealthHubPage() {
             </li>
           ))}
         </ul>
+      </div>
+
+      <div className="px-container-sm sm:px-container pt-10 pb-4">
+        <ChecklistCard
+          className="max-w-3xl mx-auto"
+          title="Every ferret, every year"
+          items={[
+            'A vet exam of the teeth and gums every year',
+            'Brush with a pet toothpaste, never a fluoride human toothpaste',
+            'Feed dry ferret food to help limit plaque',
+          ]}
+          source={{ label: 'Merck Veterinary Manual: Routine Health Care for Ferrets', url: 'https://www.merckvetmanual.com/all-other-pets/ferrets/routine-health-care-for-ferrets' }}
+        />
       </div>
 
       <section className="bg-brand-surface px-container-sm sm:px-container pb-section">

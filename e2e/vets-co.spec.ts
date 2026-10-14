@@ -1606,3 +1606,14 @@ test('vets LA1: long articles open an On this page list whose links reach each s
   await links.nth(2).click()
   await expect(page.locator(href!)).toBeInViewport()
 })
+
+test('vets DK1: hub and article fact or checklist cards are visible, sourced and carry no shop links', async ({ page }) => {
+  for (const path of ['/health', '/health/senior-pet-care']) {
+    await page.goto(path)
+    const cards = page.locator('[data-fact-card], [data-checklist-card]')
+    expect(await cards.count(), path).toBeGreaterThan(0)
+    await expect(cards.first()).toBeVisible()
+    await expect(cards.first().locator('a[href^="https://www.merckvetmanual.com/"]')).toHaveCount(1)
+    await expect(cards.locator('a[href*="/go/"]')).toHaveCount(0)
+  }
+})

@@ -1,7 +1,7 @@
 import { HopDisclosure } from '../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, ShopCtas, FAQAccordion, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
+import { FactCard, buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, ShopCtas, FAQAccordion, ArticleSourcesList, LastUpdated } from '@carloOS/ui'
 import { HubMasthead } from '../../components/HubMasthead'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Pet Health Library — Sourced Guides | Vets.co', description: 'Complete pet health guides drawing on AVMA, ACVIM, and AAHA guidance. Emergency signs, breed health, preventive care, and specialist guidance.', path: '/health' })
@@ -148,7 +148,7 @@ export default function VetsHealthHubPage() {
       </nav>
       <div className="px-container-sm sm:px-container pt-6 pb-2 bg-brand-surface border-b border-brand-border">
         <p className="text-xs text-brand-text-light max-w-3xl leading-relaxed">General references (not checked against each statement on this page): <a href="https://www.avma.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">AVMA</a>, <a href="https://aaha.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">AAHA</a>, and <a href="https://www.acvim.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">ACVIM</a>. The triage tiers follow the Merck Veterinary Manual&apos;s <a href="https://www.merckvetmanual.com/multimedia/table/when-to-see-a-veterinarian" rel="noopener" target="_blank" className="text-brand-primary hover:underline">When to See a Veterinarian</a> table.</p>
-        <LastUpdated date="2026-10-13" />
+        <LastUpdated date="2026-10-14" />
         <ArticleSourcesList
           sources={[
             { label: 'When to See a Veterinarian (general guidance for pets)', url: 'https://www.merckvetmanual.com/multimedia/table/when-to-see-a-veterinarian', publisher: 'Merck Veterinary Manual' },
@@ -200,6 +200,12 @@ export default function VetsHealthHubPage() {
         </div>
         <p className="text-xs text-brand-text-light mt-4 max-w-3xl leading-relaxed">Related: <Link href="/symptoms" className="text-brand-primary hover:underline">symptom library</Link> · <Link href="/diagnostics" className="text-brand-primary hover:underline">diagnostic tests explained</Link> · <Link href="/medications" className="text-brand-primary hover:underline">pet medication reference</Link> · <Link href="/specialists" className="text-brand-primary hover:underline">when to see a specialist</Link>.</p>
       </section>
+
+      <div className="px-container-sm sm:px-container pt-10">
+        <FactCard className="max-w-3xl" source={{ label: 'Merck Veterinary Manual: Routine Health Care of Dogs', url: 'https://www.merckvetmanual.com/dog-owners/routine-care-of-dogs/routine-health-care-of-dogs' }}>
+          Senior dogs (over 7 to 8 years old) should see the vet twice a year or more, compared with at least once a year for adults. <Link href="/health/senior-pet-care" className="text-brand-primary underline">Senior dog care guide</Link>
+        </FactCard>
+      </div>
 
       <div className="px-container-sm sm:px-container py-14">
         {GUIDES.map(section => (
