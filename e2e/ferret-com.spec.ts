@@ -1213,7 +1213,7 @@ test('ferret fix FE4: FE2 pages carry no unsourced chemo cost, insurer age cap o
   await expect(page.locator('a[href^="/go/amazon-brand/"]').first()).toBeVisible()
 })
 
-test('ferret fix SC1: mobile sticky bar appears after scrolling with internal next steps', async ({ page }) => {
+test('ferret fix ST1: mobile sticky bar appears after scrolling with internal next steps', async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 })
   await page.goto('/health/adrenal-disease', { waitUntil: 'load' })
   const bar = page.getByTestId('mobile-sticky-cta')
@@ -1222,4 +1222,17 @@ test('ferret fix SC1: mobile sticky bar appears after scrolling with internal ne
   await expect(bar).toHaveAttribute('aria-hidden', 'false')
   await expect(bar.locator('a[href="/first-year-schedule"]')).toBeVisible()
   await expect(bar.locator('a[href*="/go/"]')).toHaveCount(0)
+})
+
+test('ferret fix DP1: affiliate disclosure sits above the first shop link on article and review heroes', async ({ page }) => {
+  for (const path of ['/health/adrenal-disease', '/care/bedding-and-litter-types', '/reviews/kaytee-vs-prevue-guide', '/reviews/paper-vs-grass-litter-guide']) {
+    await page.goto(path, { waitUntil: 'domcontentloaded' })
+    const disclosureFirst = await page.evaluate(() => {
+      const link = Array.from(document.querySelectorAll('a[href*="/go/"]')).find((a) => (a as HTMLElement).offsetParent && !a.closest('footer'))
+      const disclosure = Array.from(document.querySelectorAll('[data-affiliate-disclosure]')).find((d) => (d as HTMLElement).offsetParent)
+      if (!link || !disclosure) return false
+      return Boolean(disclosure.compareDocumentPosition(link) & Node.DOCUMENT_POSITION_FOLLOWING)
+    })
+    expect(disclosureFirst, path).toBe(true)
+  }
 })

@@ -170,8 +170,8 @@ export default function IsThisAFerretEmergencyPage() {
             Is This a Ferret Emergency?
           </h1>
           <div className="mb-5" data-fold="offer">
+            <HopDisclosure above tone="on-dark" siteId="ferret-com" href="/go/amazon-brand/pet+first+aid+kit?s=tools-is-this-a-ferret-emergency" />
             <PrimaryHop href="/go/amazon-brand/pet+first+aid+kit?s=tools-is-this-a-ferret-emergency" label="Search Amazon for a pet first-aid kit" />
-            <HopDisclosure tone="on-dark" siteId="ferret-com" href="/go/amazon-brand/pet+first+aid+kit?s=tools-is-this-a-ferret-emergency" />
           </div>
           <p className="text-lg text-white/55 leading-relaxed max-w-2xl">
             Check the ferret signs you are seeing and get a conservative urgency read — go now, same-day vet, or

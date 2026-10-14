@@ -108,8 +108,8 @@ export default function BestFerretLitterPage() {
         <>
           <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">Recycled paper pellets are the top ferret litter because they do not clump and the dust stays low.</p>
           <div data-fold="offer">
+          <HopDisclosure above siteId="ferret-com" href="/go/amazon-brand/recycled+paper+pellet+litter+non+clumping?s=reviews-best-ferret-litter" />
           <PrimaryHop href='/go/amazon-brand/recycled+paper+pellet+litter+non+clumping?s=reviews-best-ferret-litter' label="Open the recycled paper-pellet search." />
-          <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/recycled+paper+pellet+litter+non+clumping?s=reviews-best-ferret-litter" />
         </div>
         </>
       }

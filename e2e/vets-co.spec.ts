@@ -1296,7 +1296,7 @@ test('vets fix SK1: senior bloodwork, eye conditions and cat kidney pages drop u
   await expect(page.getByText('Short answer').first()).toBeVisible()
 })
 
-test('vets fix SC1: mobile sticky bar appears after scrolling with internal next steps', async ({ page }) => {
+test('vets fix ST1: mobile sticky bar appears after scrolling with internal next steps', async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 })
   await page.goto('/health/anxiety-in-dogs', { waitUntil: 'load' })
   const bar = page.getByTestId('mobile-sticky-cta')

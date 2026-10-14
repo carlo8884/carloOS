@@ -19,7 +19,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-10-04T00:00:00Z',
-  modifiedAt: '2026-10-12T00:00:00Z',
+  modifiedAt: '2026-10-13T00:00:00Z',
 })
 
 const FAQS = [
@@ -57,8 +57,8 @@ export default function FallMoltBrushGuidePage() {
         <>
           <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">Use a soft slicker or a fine comb for the fall molt, because that lifts the loose coat a ferret would otherwise swallow.</p>
           <div data-fold="offer">
+          <HopDisclosure above siteId="ferret-com" href="/go/amazon-brand/soft+slicker+brush+small+animal?s=reviews-fall-molt-brush-guide" />
           <PrimaryHop href="/go/amazon-brand/soft+slicker+brush+small+animal?s=reviews-fall-molt-brush-guide" label="Browse soft slicker brushes for small animals on Amazon" />
-          <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/soft+slicker+brush+small+animal?s=reviews-fall-molt-brush-guide" />
         </div>
         </>
       }
@@ -80,7 +80,7 @@ export default function FallMoltBrushGuidePage() {
       }
     >
       <div className="carloOS-article">
-          <LastUpdated date="2026-10-12" />
+          <LastUpdated date="2026-10-13" />
         <p>The <Link href="/care/bathing-and-grooming">bathing and grooming page</Link> describes two coat changes a year. The fall molt, about September through November, is the loss of the summer coat and the growth of a denser winter undercoat, over a similar two-to-four-week window as the spring shed. Normal, on that page, is diffuse shedding, an intact but thinner coat, and regrowth within weeks. Not normal is symmetric hair loss over the rump, tail base, or shoulders, or hair that does not grow back. Those patterns stay on the grooming page and are a reason to call a veterinarian, not a reason to buy a different brush.</p>
         <h2>What to do with the loose coat</h2>
         <p>The <Link href="/care/seasonal-shedding">seasonal shedding page</Link> says the job during a shed is to lift loose hair before the ferret swallows it. A soft slicker brush or a fine-toothed metal comb, in short sessions of a minute or two, is the method it names. Daily brushing during the peak captures more hair. Ferrets groom themselves and, unlike cats, do not reliably vomit hairballs. The page says a heavy shed raises the swallowed-hair load, and a hair mass can contribute to a gastrointestinal obstruction. A vet-recommended hairball remedy is the other step it names. This guide does not name a remedy brand.</p>
@@ -120,7 +120,7 @@ export default function FallMoltBrushGuidePage() {
             </tbody>
           </table>
         </div>
-        <ComparisonFoot updated="2026-10-12" />
+        <ComparisonFoot updated="2026-10-13" />
         <h2>Who should use which tool</h2>
         <p>Use either tool in short sessions during the fall molt. This page links the soft slicker and the comb. The lint roller stays on the shedding page. One warm-water bath can loosen a heavy shed. Do not repeat it.</p>
         <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/soft+slicker+brush+small+animal?s=reviews-fall-molt-brush-guide", "/go/amazon-brand/fine+tooth+metal+comb?s=reviews-fall-molt-brush-guide"]} />
