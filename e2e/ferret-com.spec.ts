@@ -1513,3 +1513,25 @@ test('ferret NB1: the fixed nav stays opaque and flush with the top after scroll
     expect(nav.alpha, `${width}px nav background alpha`).toBe(1)
   }
 })
+
+test('ferret LA2: long articles fold deep sections on phones without removing text, and keep shop and source sections open', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 })
+  await page.goto('/health/dental-disease')
+  const allText = (await page.locator('article').textContent()) || ''
+  const toggles = page.locator('[data-deep-section-toggle]')
+  await expect(toggles.first()).toBeVisible()
+  // Folded text stays in the page.
+  expect(((await page.locator('article').textContent()) || '').length).toBeGreaterThanOrEqual(allText.length - 200)
+  // Shop links and the sources list are never folded.
+  const hiddenShop = await page.$$eval('article [hidden] a[href*="/go/"], article [hidden][data-affiliate-disclosure]', (e) => e.length)
+  expect(hiddenShop).toBe(0)
+  // Opening a section shows its content.
+  const before = await page.evaluate(() => document.documentElement.scrollHeight)
+  await toggles.first().click()
+  expect(await page.evaluate(() => document.documentElement.scrollHeight)).toBeGreaterThan(before)
+  // Desktop never folds.
+  await page.setViewportSize({ width: 1280, height: 800 })
+  await page.goto('/health/dental-disease')
+  await page.waitForTimeout(300)
+  await expect(page.locator('[data-deep-section-toggle]')).toHaveCount(0)
+})
