@@ -9,7 +9,7 @@ const SOURCES = [
   { label: 'Merck Veterinary Manual: Lyme Disease in Dogs', url: 'https://www.merckvetmanual.com/infectious-diseases/lyme-borreliosis/lyme-borreliosis-in-animals', publisher: 'Merck Vet Manual' },
   { label: 'Companion Animal Parasite Council: Tick-Borne Disease', url: 'https://capcvet.org/guidelines/ticks/', publisher: 'CAPC' },
 ]
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Tick-Borne Diseases in Dogs', description: 'Lyme disease, Anaplasmosis, Ehrlichiosis, and RMSF in dogs — signs and treatment.', url: 'https://vets.co/health/tick-borne-diseases', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-13T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Tick-Borne Diseases in Dogs', description: 'Lyme disease, Anaplasmosis, Ehrlichiosis, and RMSF in dogs — signs and treatment.', url: 'https://vets.co/health/tick-borne-diseases', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-14T00:00:00Z' ,
   citation: SOURCES,
 })
 const med = buildMedicalWebPageSchema({ name: 'Tick-Borne Diseases in Dogs', description: 'Lyme, Anaplasmosis, Ehrlichiosis, and RMSF — signs, testing, and treatment.', url: 'https://vets.co/health/tick-borne-diseases', authorName: 'Vets.co Editorial', lastReviewed: '2026-10-13' })
@@ -62,12 +62,12 @@ export default function TickBornePage() {
 </>}
       >
         <div className="carloOS-article">
-          <LastUpdated date="2026-10-13" />
           <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
             <HopDisclosure siteId="vets-co" href="/go/amazon-brand/tick+removal+hook?s=health-tick-borne-diseases" />
             <ShopCtas amazonHref="/go/amazon-brand/tick+removal+hook?s=health-tick-borne-diseases" amazonLabel="Browse tick-removal hooks on Amazon →" />
             <a href="#kit" className="inline-flex min-h-[44px] items-center text-xs text-brand-text-mid underline underline-offset-2">All supplies on this page ↓</a>
           </div>
+          <LastUpdated date="2026-10-14" />
 
           <CalloutBox variant="info" title="Short answer">
             <p>In dogs, Lyme disease typically causes fever, poor appetite, lethargy, swollen lymph nodes, and lameness that comes and goes and shifts between legs. The bacteria pass from tick to dog only after the tick has fed for at least 24 hours, so prompt removal helps. But deer ticks are tiny, and Merck says repellents and tick-killing products work better than checks alone. Sick dogs are treated with a long course of antibiotics, about 4 weeks. Source: <a href="https://www.merckvetmanual.com/infectious-diseases/lyme-borreliosis/lyme-borreliosis-in-animals">Merck Veterinary Manual</a>.</p>

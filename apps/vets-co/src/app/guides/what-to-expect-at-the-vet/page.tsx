@@ -4,7 +4,7 @@ import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ShopCtas } fr
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "What to Expect at the Vet — A Visit Walkthrough | Vets.co", description: "From check-in to physical exam to the treatment plan, here is what happens at a typical veterinary visit and how to prepare so your pet gets the best care.", path: '/guides/what-to-expect-at-the-vet', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'What to Expect at the Vet', description: 'A walkthrough of a typical veterinary visit and how to prepare for it.', url: 'https://vets.co/guides/what-to-expect-at-the-vet', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-10-13T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'What to Expect at the Vet', description: 'A walkthrough of a typical veterinary visit and how to prepare for it.', url: 'https://vets.co/guides/what-to-expect-at-the-vet', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-10-14T00:00:00Z' })
 const FAQS = [
   { question: "How should I prepare for a vet visit?", answer: "Bring any prior medical records if you are a new client, a list of current medications and supplements with their doses, and notes on the reason for the visit — when signs started, how often they occur, and any changes in appetite, drinking, urination, or behavior. A fresh stool sample is helpful for wellness or digestive visits. Bring a hungry pet for easier treat-based handling, and for cats, use a secure carrier introduced calmly in advance. A short video of any intermittent problem at home is often more useful than describing it." },
   { question: "What happens during the physical exam?", answer: "The veterinarian performs a nose-to-tail assessment: checking weight and body condition, listening to the heart and lungs, examining eyes, ears, mouth and teeth, feeling the abdomen and lymph nodes, assessing the skin and coat, and checking joints and gait. This systematic exam can reveal problems an owner has not noticed and is one of the most valuable parts of the visit. The vet will also discuss your concerns and ask questions to build a full picture before recommending any tests or treatment." },
@@ -33,17 +33,17 @@ export default function WhatToExpectPage() {
       >
         <div className="carloOS-article">
 
-          <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-10-13T00:00:00Z" reviewedBy="Editorial team" />
-
-          <CalloutBox variant="info" title="The history is half the diagnosis">
-            What you tell the veterinary team about your pet at home — when signs started, how they have changed, what is normal for your pet — is often as valuable as the exam itself. Coming prepared with these details meaningfully improves the quality of care.
-          </CalloutBox>
-
           <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
             <HopDisclosure siteId="vets-co" href="/go/amazon-brand/small+soft+cooler+bag?s=guides-what-to-expect-at-the-vet" />
             <ShopCtas amazonHref="/go/amazon-brand/small+soft+cooler+bag?s=guides-what-to-expect-at-the-vet" amazonLabel="Browse small soft cooler bags on Amazon →" />
             <a href="#kit" className="inline-flex min-h-[44px] items-center text-xs text-brand-text-mid underline underline-offset-2">All supplies on this page ↓</a>
           </div>
+          <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-10-14T00:00:00Z" reviewedBy="Editorial team" />
+
+          <CalloutBox variant="info" title="The history is half the diagnosis">
+            What you tell the veterinary team about your pet at home — when signs started, how they have changed, what is normal for your pet — is often as valuable as the exam itself. Coming prepared with these details meaningfully improves the quality of care.
+          </CalloutBox>
+
 
           <h2>Before the Visit</h2>
           <p>Good visits start with preparation. If you are a new client, request your pet&apos;s prior records in advance. Make a list of current medications and supplements with doses, and write down the reason for the visit: when any signs began, how often they happen, and changes in appetite, thirst, urination, or behavior. For digestive or wellness visits, a fresh stool sample helps. Cats travel best in a secure carrier introduced calmly at home, and a short video of any intermittent problem is invaluable since pets rarely perform their symptoms on cue.</p>

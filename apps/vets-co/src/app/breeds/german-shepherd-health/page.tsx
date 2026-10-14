@@ -8,7 +8,7 @@ import { BreedHealthCard } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'German Shepherd Health — DM, Hip Dysplasia & GDV | Vets.co', description: 'German Shepherds have specific health predispositions: degenerative myelopathy, hip dysplasia, and GDV. This guide explains monitoring, screening.', path: '/breeds/german-shepherd-health', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'German Shepherd Health — Owner Guide', description: 'DM, hip dysplasia, GDV, and EPI in German Shepherds from published veterinary sources.', url: 'https://vets.co/breeds/german-shepherd-health', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-13T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'German Shepherd Health — Owner Guide', description: 'DM, hip dysplasia, GDV, and EPI in German Shepherds from published veterinary sources.', url: 'https://vets.co/breeds/german-shepherd-health', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-14T00:00:00Z' })
 
 const FAQS = [
   {
@@ -57,13 +57,13 @@ export default function GSHealthPage() {
     >
       <div className="carloOS-article">
 
-        <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-10-13T00:00:00Z" reviewedBy="Editorial team" />
-
           <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
             <HopDisclosure siteId="vets-co" href="/go/amazon-brand/orthopedic+dog+bed?s=breeds-german-shepherd-health" />
             <ShopCtas amazonHref="/go/amazon-brand/orthopedic+dog+bed?s=breeds-german-shepherd-health" amazonLabel="Browse orthopedic dog beds on Amazon →" />
             <a href="#kit" className="inline-flex min-h-[44px] items-center text-xs text-brand-text-mid underline underline-offset-2">All supplies on this page ↓</a>
           </div>
+        <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-10-14T00:00:00Z" reviewedBy="Editorial team" />
+
           <div className="not-prose my-5 overflow-hidden rounded-xl">
             <StockImage manifestKey="dog-com:breed-german-shepherd" alt="A German Shepherd lying on the ground" aspect="16:9" variant="inline" belowFold subtleCredit />
           </div>

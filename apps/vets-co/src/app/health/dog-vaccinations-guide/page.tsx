@@ -11,7 +11,7 @@ const SOURCES = [
   { label: 'AAHA: Canine Vaccination Guidelines (general reference; not checked against this page)', url: 'https://www.aaha.org/aaha-guidelines/vaccination-canine-configuration/', publisher: 'AAHA' },
   { label: 'AVMA: Vaccinations for Your Pet', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/vaccinations', publisher: 'AVMA' },
 ]
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Dog Vaccination Guide', description: 'Core vaccines, non-core vaccines, titer testing, and puppy schedule from a veterinary perspective.', url: 'https://vets.co/health/dog-vaccinations-guide', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-13T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Dog Vaccination Guide', description: 'Core vaccines, non-core vaccines, titer testing, and puppy schedule from a veterinary perspective.', url: 'https://vets.co/health/dog-vaccinations-guide', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-14T00:00:00Z' ,
   citation: SOURCES,
 })
 const med = buildMedicalWebPageSchema({ name: 'Dog Vaccination Guide', description: 'Core and non-core vaccines, titer testing, and puppy schedule.', url: 'https://vets.co/health/dog-vaccinations-guide', authorName: 'Vets.co Editorial', lastReviewed: '2026-10-13' })
@@ -51,13 +51,13 @@ export default function DogVaccinationsGuidePage() {
 </>}
       >
         <div className="carloOS-article">
-          <LastUpdated date="2026-10-13" />
-
           <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
             <HopDisclosure siteId="vets-co" href="/go/amazon-brand/collapsible+silicone+travel+dog+bowl?s=health-dog-vaccinations-guide" />
             <ShopCtas amazonHref="/go/amazon-brand/collapsible+silicone+travel+dog+bowl?s=health-dog-vaccinations-guide" amazonLabel="Browse collapsible silicone travel dog bowl on Amazon →" />
             <a href="#kit" className="inline-flex min-h-[44px] items-center text-xs text-brand-text-mid underline underline-offset-2">All supplies on this page ↓</a>
           </div>
+          <LastUpdated date="2026-10-14" />
+
           <div className="rounded-lg border-l-4 border-brand-primary bg-brand-surface p-5 my-4" data-testid="short-answer">
             <h2 className="font-display text-lg font-bold mb-2">The short answer</h2>
             <p className="text-base leading-relaxed text-brand-text-mid m-0">

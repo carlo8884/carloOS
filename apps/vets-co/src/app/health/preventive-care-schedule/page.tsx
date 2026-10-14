@@ -13,7 +13,7 @@ const SOURCES = [
   { label: 'Companion Animal Parasite Council: Guidelines', url: 'https://capcvet.org/guidelines/', publisher: 'CAPC' },
   { label: 'American Heartworm Society: Prevention Guidelines', url: 'https://www.heartwormsociety.org/veterinary-resources/american-heartworm-society-guidelines', publisher: 'American Heartworm Society' },
 ]
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Dog Preventive Care Schedule', description: 'Puppy, adult, and senior preventive care timelines for dogs.', url: 'https://vets.co/health/preventive-care-schedule', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-13T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Dog Preventive Care Schedule', description: 'Puppy, adult, and senior preventive care timelines for dogs.', url: 'https://vets.co/health/preventive-care-schedule', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-14T00:00:00Z' ,
   citation: SOURCES,
 })
 const med = buildMedicalWebPageSchema({ name: 'Dog Preventive Care Schedule', description: 'Puppy through senior preventive care timelines for dogs.', url: 'https://vets.co/health/preventive-care-schedule', authorName: 'Vets.co Editorial', lastReviewed: '2026-10-13' })
@@ -56,12 +56,12 @@ export default function PreventiveCareSchedulePage() {
 </>}
       >
         <div className="carloOS-article">
-          <LastUpdated date="2026-10-13" />
           <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
             <HopDisclosure siteId="vets-co" href="/go/amazon-brand/tick+removal+tool?s=health-preventive-care-schedule" />
             <ShopCtas amazonHref="/go/amazon-brand/tick+removal+tool?s=health-preventive-care-schedule" amazonLabel="Browse tick removal tools on Amazon →" />
             <a href="#kit" className="inline-flex min-h-[44px] items-center text-xs text-brand-text-mid underline underline-offset-2">All supplies on this page ↓</a>
           </div>
+          <LastUpdated date="2026-10-14" />
 
           <CalloutBox variant="info" title="Short answer">
             <p>The Merck Veterinary Manual recommends vet visits every 3 to 4 weeks for puppies until 4 months old, at least once a year for adult dogs, and twice a year or more for senior dogs over 7 to 8 years old. Core vaccines protect against distemper, parvovirus, and rabies, and Merck advises a heartworm test every year with year-round heartworm prevention. Source: <a href="https://www.merckvetmanual.com/dog-owners/routine-care-of-dogs/routine-health-care-of-dogs">Merck Veterinary Manual (dog owner version)</a>.</p>

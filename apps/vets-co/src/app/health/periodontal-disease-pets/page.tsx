@@ -9,7 +9,7 @@ const SOURCES = [
   { label: 'AAHA: 2019 Dental Care Guidelines for Dogs and Cats', url: 'https://www.aaha.org/resources/2019-aaha-dental-care-guidelines-for-dogs-and-cats/resource-center/', publisher: 'AAHA' },
   { label: 'WSAVA: Dental Guidelines', url: 'https://wsava.org/global-guidelines/dental-guidelines/', publisher: 'WSAVA' },
 ]
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Periodontal Disease in Dogs and Cats', description: 'Causes, signs, and prevention of periodontal disease in pets.', url: 'https://vets.co/health/periodontal-disease-pets', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-10-13T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Periodontal Disease in Dogs and Cats', description: 'Causes, signs, and prevention of periodontal disease in pets.', url: 'https://vets.co/health/periodontal-disease-pets', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-10-14T00:00:00Z' ,
   citation: SOURCES,
 })
 const med = buildMedicalWebPageSchema({ name: 'Periodontal Disease in Dogs and Cats', description: 'Causes, signs, and prevention of dental disease in pets.', url: 'https://vets.co/health/periodontal-disease-pets', authorName: 'Vets.co Editorial', lastReviewed: '2026-10-13' })
@@ -49,13 +49,13 @@ export default function PeriodontalDiseasePage() {
       >
         <div className="carloOS-article">
 
-          <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-10-13T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-13" />
           <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
             <HopDisclosure siteId="vets-co" href="/go/amazon-brand/pet+toothbrush+and+enzymatic+toothpaste+kit?s=health-periodontal-disease-pets" />
             <ShopCtas amazonHref="/go/amazon-brand/pet+toothbrush+and+enzymatic+toothpaste+kit?s=health-periodontal-disease-pets" amazonLabel="Browse pet toothbrush and enzymatic toothpaste kits on Amazon →" />
             <a href="#kit" className="inline-flex min-h-[44px] items-center text-xs text-brand-text-mid underline underline-offset-2">All supplies on this page ↓</a>
           </div>
+          <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-10-14T00:00:00Z" reviewedBy="Editorial team" />
+          <LastUpdated date="2026-10-14" />
 
           <CalloutBox variant="info" title="The disease lives below the gumline">
             What owners see — tartar on the visible tooth — is only the surface. Periodontal disease destroys the structures anchoring the tooth beneath the gum, where it causes pain and bone loss invisibly. This is why dental X-rays and cleaning under the gumline, which require anesthesia, are essential to real dental care.

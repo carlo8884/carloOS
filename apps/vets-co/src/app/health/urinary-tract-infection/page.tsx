@@ -8,7 +8,7 @@ const SOURCES = [
   { label: 'Merck Veterinary Manual: Bacterial Cystitis in Small Animals', url: 'https://www.merckvetmanual.com/urinary-system/infectious-diseases-of-the-urinary-system-in-small-animals/bacterial-cystitis-in-small-animals', publisher: 'Merck Vet Manual' },
   { label: 'ISCAID: Antimicrobial Use Guidelines for UTI in Dogs and Cats', url: 'https://onlinelibrary.wiley.com/doi/10.1111/jvim.15575', publisher: 'Journal of Veterinary Internal Medicine' },
 ]
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Urinary Tract Infections in Dogs', description: 'Signs, urine culture, antibiotic selection, and recurrent UTI management in dogs.', url: 'https://vets.co/health/urinary-tract-infection', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-13T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Urinary Tract Infections in Dogs', description: 'Signs, urine culture, antibiotic selection, and recurrent UTI management in dogs.', url: 'https://vets.co/health/urinary-tract-infection', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-14T00:00:00Z' ,
   citation: SOURCES,
 })
 const med = buildMedicalWebPageSchema({ name: 'Urinary Tract Infections in Dogs', description: 'Signs, urine culture, and treatment of bacterial UTI in dogs.', url: 'https://vets.co/health/urinary-tract-infection', authorName: 'Vets.co Editorial', lastReviewed: '2026-10-13' })
@@ -58,12 +58,12 @@ export default function UTIPage() {
 </>}
       >
         <div className="carloOS-article">
-          <LastUpdated date="2026-10-13" />
           <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
             <HopDisclosure siteId="vets-co" href="/go/amazon-brand/stainless+steel+dog+fountain?s=health-urinary-tract-infection" />
             <ShopCtas amazonHref="/go/amazon-brand/stainless+steel+dog+fountain?s=health-urinary-tract-infection" amazonLabel="Browse stainless-steel dog fountains on Amazon →" />
             <a href="#kit" className="inline-flex min-h-[44px] items-center text-xs text-brand-text-mid underline underline-offset-2">All supplies on this page ↓</a>
           </div>
+          <LastUpdated date="2026-10-14" />
 
           <CalloutBox variant="info" title="Short answer">
             <p>Signs of a bladder infection (bacterial cystitis) include peeing more often, straining, pain when urinating, blood in the urine, and accidents. A urine culture is the gold standard for diagnosis. For a one-off infection, current guidance recommends a short antibiotic course of 3 to 5 days; repeat infections need a fuller workup. Bacteria found in urine without any signs usually do not need treatment. Source: <a href="https://www.merckvetmanual.com/urinary-system/infectious-diseases-of-the-urinary-system-in-small-animals/bacterial-cystitis-in-small-animals">Merck Veterinary Manual</a>.</p>

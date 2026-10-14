@@ -10,7 +10,7 @@ const SOURCES = [
   { label: 'AAHA: Dental Care Guidelines for Dogs and Cats', url: 'https://www.aaha.org/aaha-guidelines/dental-care/', publisher: 'AAHA' },
   { label: 'WSAVA: Dental Assessment, Treatment and Prevention Guidelines', url: 'https://wsava.org/global-guidelines/dental-guidelines/', publisher: 'WSAVA' },
 ]
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Veterinary Dental Cleaning Guide', description: 'Dental grading, anesthesia safety, and what to expect from professional dental cleaning.', url: 'https://vets.co/health/dental-cleaning-guide', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-13T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Veterinary Dental Cleaning Guide', description: 'Dental grading, anesthesia safety, and what to expect from professional dental cleaning.', url: 'https://vets.co/health/dental-cleaning-guide', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-14T00:00:00Z' ,
   citation: SOURCES,
 })
 const med = buildMedicalWebPageSchema({ name: 'Veterinary Dental Cleaning Guide', description: 'Professional dental cleaning under anesthesia — grades, safety, and expectations.', url: 'https://vets.co/health/dental-cleaning-guide', authorName: 'Vets.co Editorial', lastReviewed: '2026-10-13' })
@@ -49,14 +49,14 @@ export default function DentalCleaningGuidePage() {
 </>}
       >
         <div className="carloOS-article">
-          <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-10-13T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-13" />
-
           <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
             <HopDisclosure siteId="vets-co" href="/go/amazon-brand/soft+pet+toothbrush?s=health-dental-cleaning-guide" />
             <ShopCtas amazonHref="/go/amazon-brand/soft+pet+toothbrush?s=health-dental-cleaning-guide" amazonLabel="Browse soft pet toothbrushes on Amazon →" />
             <a href="#kit" className="inline-flex min-h-[44px] items-center text-xs text-brand-text-mid underline underline-offset-2">All supplies on this page ↓</a>
           </div>
+          <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-10-14T00:00:00Z" reviewedBy="Editorial team" />
+          <LastUpdated date="2026-10-14" />
+
 
           <h2>Why Anesthesia Is Required</h2>
           <DropCap>Proper dental cleaning requires scaling above and below the gumline (subgingival scaling), probing every tooth to assess pocket depth (the space between tooth and gum — deep pockets indicate periodontitis), dental radiographs to evaluate the tooth root and surrounding bone (70% of tooth structure is below the gumline — invisible to visual examination), extraction of non-viable teeth, polishing, and charting for the dental record. None of these can be performed safely or effectively in an awake, unsedated dog. The mouth must be still, the subgingival environment must be accessible, and the animal must not aspirate water, debris, or extracted tooth fragments. General anesthesia with an endotracheal tube provides all of these requirements.</DropCap>

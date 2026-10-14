@@ -12,7 +12,7 @@ const SOURCES = [
   { label: 'Merck Veterinary Manual: Pain Assessment and Management', url: 'https://www.merckvetmanual.com/therapeutics/pain-assessment-and-management/overview-of-pain-assessment-and-management-in-animals', publisher: 'Merck Vet Manual' },
   { label: 'Kealy et al., JAVMA 2000', url: 'https://doi.org/10.2460/javma.2000.217.1678', publisher: 'JAVMA' },
 ]
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Pain Management in Dogs', description: 'NSAIDs, gabapentin, Librela, and multimodal pain protocols for dogs.', url: 'https://vets.co/health/pain-management-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-13T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Pain Management in Dogs', description: 'NSAIDs, gabapentin, Librela, and multimodal pain protocols for dogs.', url: 'https://vets.co/health/pain-management-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-14T00:00:00Z' ,
   citation: SOURCES,
 })
 const med = buildMedicalWebPageSchema({ name: 'Pain Management in Dogs', description: 'Assessment and multimodal treatment of acute and chronic pain in dogs.', url: 'https://vets.co/health/pain-management-dogs', authorName: 'Vets.co Editorial', lastReviewed: '2026-10-13' })
@@ -58,12 +58,12 @@ export default function PainManagementPage() {
 </>}
       >
         <div className="carloOS-article">
-          <LastUpdated date="2026-10-13" />
           <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
             <HopDisclosure siteId="vets-co" href="/go/amazon-brand/elevated+mesh+dog+cot?s=health-pain-management-dogs" />
             <ShopCtas amazonHref="/go/amazon-brand/elevated+mesh+dog+cot?s=health-pain-management-dogs" amazonLabel="Browse elevated mesh dog cots on Amazon →" />
             <a href="#kit" className="inline-flex min-h-[44px] items-center text-xs text-brand-text-mid underline underline-offset-2">All supplies on this page ↓</a>
           </div>
+          <LastUpdated date="2026-10-14" />
 
           <CalloutBox variant="info" title="Short answer">
             <p>Vets usually treat pain with one or more pain-relieving drugs, chosen by how severe the pain is, the dog's overall health, and what works best for dogs. Merck says giving pain medicine regularly is usually best because pain signs can be hard to see, and combining drugs can allow smaller doses of each. Non-drug care such as warm compresses or ice or heat packs, massage, physical therapy, rest, and low stress helps the medicine work better. Source: <a href="https://www.merckvetmanual.com/special-pet-topics/pain-management/pain-treatment-in-animals">Merck Veterinary Manual (pet owner version)</a>.</p>

@@ -47,7 +47,7 @@ const FAQS = [
 ]
 
 const schema = combineSchemas(
-  buildArticleSchema({ siteId: 'vets-co', title: 'Pet First-Aid Kit Checklist', description: 'What a dog or cat first-aid kit should hold, from the AVMA and Merck Veterinary Manual checklists.', url: PAGE_URL, imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-10-12T00:00:00Z', modifiedAt: '2026-10-13T00:00:00Z', citation: SOURCES }),
+  buildArticleSchema({ siteId: 'vets-co', title: 'Pet First-Aid Kit Checklist', description: 'What a dog or cat first-aid kit should hold, from the AVMA and Merck Veterinary Manual checklists.', url: PAGE_URL, imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-10-12T00:00:00Z', modifiedAt: '2026-10-14T00:00:00Z', citation: SOURCES }),
   buildFAQSchema({ questions: FAQS }),
 )
 
@@ -67,18 +67,18 @@ export default function PetFirstAidKitPage() {
         sidebar={<RelatedLinks title="Related Guides" links={[{ label: 'When to Go to the Vet', href: '/guides/when-to-go-to-the-vet' }, { label: 'ER vs. Urgent Care vs. Regular Vet', href: '/guides/er-vs-urgent-care' }, { label: 'Emergency Vet Costs', href: '/guides/emergency-vet-costs' }, { label: 'Can I Give My Dog…?', href: '/medications/can-i-give-my-dog' }]} />}
       >
         <div className="carloOS-article">
-          <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-10-12T00:00:00Z" updatedAt="2026-10-13T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-13" />
-
-          <CalloutBox variant="warning" title="A kit buys time. It does not replace the vet">
-            The AVMA says any first aid you give should be followed by immediate veterinary care. If your pet is struggling to breathe, bleeding heavily, collapsed, or has swallowed something toxic, call your vet or an emergency hospital on the way.
-          </CalloutBox>
-
           <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
             <HopDisclosure siteId="vets-co" href={`/go/amazon-brand/${SHOP[0].q}?s=${SOURCE}`} />
             <ShopCtas amazonHref={`/go/amazon-brand/${SHOP[0].q}?s=${SOURCE}`} amazonLabel={SHOP[0].label} />
             
           </div>
+          <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-10-12T00:00:00Z" updatedAt="2026-10-14T00:00:00Z" reviewedBy="Editorial team" />
+          <LastUpdated date="2026-10-14" />
+
+          <CalloutBox variant="warning" title="A kit buys time. It does not replace the vet">
+            The AVMA says any first aid you give should be followed by immediate veterinary care. If your pet is struggling to breathe, bleeding heavily, collapsed, or has swallowed something toxic, call your vet or an emergency hospital on the way.
+          </CalloutBox>
+
 
           <h2 id="buy-or-build">Buy one or build one</h2>
           <p>The Merck Veterinary Manual says you can buy a pet first-aid kit or assemble one yourself. Either way, keep it in a container with a secure lid, somewhere you can reach quickly, and learn how to use everything in it. Many items in a family first-aid kit work for pets too, according to the AVMA. A ready-made kit is a fast start; check it against the list below and add what it lacks, especially the phone numbers and the medical record copy.</p>

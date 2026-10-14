@@ -74,6 +74,10 @@ export default function CanFerretsEatHubPage() {
             Ferrets are carnivores: feed meat-based food. <a href="https://vcahospitals.com/know-your-pet/feeding-ferrets">VCA Animal Hospitals</a> advises avoiding sweets, dairy products, raisins, fruits, and vegetables, because they may cause diarrhea and erratic swings in blood sugar. A piece of cooked meat or some meat baby food is acceptable as an occasional treat.
           </p>
         </CalloutBox>
+        <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
+          <HopDisclosure siteId="ferret-com" above href="/go/amazon-brand/ferret+kibble?s=can-ferrets-eat" />
+          <ShopCtas amazonHref="/go/amazon-brand/ferret+kibble?s=can-ferrets-eat" amazonLabel="Browse ferret kibble on Amazon →" />
+        </div>
       </div>
 
       <div className="px-container-sm sm:px-container py-6 bg-brand-surface border-b border-brand-border">

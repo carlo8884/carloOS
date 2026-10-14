@@ -4,7 +4,7 @@ import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ShopCtas } fr
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "How to Afford Vet Care — Options That Actually Help | Vets.co", description: "Pet insurance, emergency funds, payment plans, charitable funds, and veterinary schools can all help cover vet bills. Here are realistic options to explore.", path: '/guides/how-to-afford-vet-care', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'How to Afford Vet Care', description: 'Realistic options for managing and affording veterinary costs, from insurance to assistance programs.', url: 'https://vets.co/guides/how-to-afford-vet-care', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-10-13T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'How to Afford Vet Care', description: 'Realistic options for managing and affording veterinary costs, from insurance to assistance programs.', url: 'https://vets.co/guides/how-to-afford-vet-care', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-10-14T00:00:00Z' })
 const FAQS = [
   { question: "What can I do if I cannot afford an emergency vet bill right now?", answer: "Several options exist. Many clinics accept third-party medical financing or offer payment plans; some emergency hospitals have in-house options. Charitable assistance funds and breed-specific or condition-specific organizations help in qualifying cases. Veterinary teaching hospitals sometimes offer lower-cost care through their training programs. Crucially, talk openly with your veterinary team about your budget — they can often prioritize the most essential treatments, phase care, or suggest alternatives. Asking early, before declining care entirely, opens the most doors." },
   { question: "Is it worth talking to the vet about cost openly?", answer: "Yes — being candid about your budget is one of the most useful things you can do. Veterinary teams routinely work with cost constraints and can often present a tiered plan: the ideal workup, a reasonable middle path, and a minimum that addresses the most urgent need. They cannot tailor a plan to your finances if they do not know the constraint. A respectful, honest conversation usually leads to better care within your means than silently declining recommendations." },
@@ -33,17 +33,17 @@ export default function AffordVetCarePage() {
       >
         <div className="carloOS-article">
 
-          <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-10-13T00:00:00Z" reviewedBy="Editorial team" />
-
-          <CalloutBox variant="info" title="Talk to your vet before declining care">
-            The single most useful step when facing an unaffordable bill is an honest conversation with your veterinary team. They routinely build tiered plans around real budgets and can often deliver meaningful care within your means — but only if they know the constraint.
-          </CalloutBox>
-
           <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
             <HopDisclosure siteId="vets-co" href="/go/amazon-brand/cash+envelope+budget+system?s=guides-how-to-afford-vet-care" />
             <ShopCtas amazonHref="/go/amazon-brand/cash+envelope+budget+system?s=guides-how-to-afford-vet-care" amazonLabel="Browse cash envelope budget systems on Amazon →" />
             <a href="#kit" className="inline-flex min-h-[44px] items-center text-xs text-brand-text-mid underline underline-offset-2">All supplies on this page ↓</a>
           </div>
+          <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-10-14T00:00:00Z" reviewedBy="Editorial team" />
+
+          <CalloutBox variant="info" title="Talk to your vet before declining care">
+            The single most useful step when facing an unaffordable bill is an honest conversation with your veterinary team. They routinely build tiered plans around real budgets and can often deliver meaningful care within your means — but only if they know the constraint.
+          </CalloutBox>
+
 
           <h2>Prepare Before You Need To</h2>
           <p>The most effective affordability strategy starts long before a crisis. Pet insurance, purchased while a pet is young and healthy, converts unpredictable catastrophic bills into a manageable monthly premium. A dedicated emergency fund, built gradually with automatic monthly transfers, covers deductibles, the non-reimbursed share of claims, and smaller surprises. A cash envelope budget system is how that monthly set-aside stays a counted transfer instead of a leftover intention. Together these two tools handle most financial scenarios a pet owner will face, and preparing in advance removes the pressure of making care decisions under financial stress. <a href="/reviews/best-pet-insurance">The pet insurance guide</a> compares the policies this page is weighing against a savings fund.</p>

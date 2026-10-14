@@ -9,7 +9,7 @@ const SOURCES = [
   { label: 'Merck Veterinary Manual: Canine Infectious Respiratory Disease', url: 'https://www.merckvetmanual.com/respiratory-system/respiratory-diseases-of-small-animals/kennel-cough', publisher: 'Merck Vet Manual' },
   { label: 'AAHA: Canine Vaccination Guidelines (Bordetella)', url: 'https://www.aaha.org/aaha-guidelines/vaccination-canine-configuration/', publisher: 'AAHA' },
 ]
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Kennel Cough in Dogs', description: 'Signs, treatment, and prevention of canine infectious respiratory disease (kennel cough).', url: 'https://vets.co/health/kennel-cough', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-10-13T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Kennel Cough in Dogs', description: 'Signs, treatment, and prevention of canine infectious respiratory disease (kennel cough).', url: 'https://vets.co/health/kennel-cough', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-10-14T00:00:00Z' ,
   citation: SOURCES,
 })
 const med = buildMedicalWebPageSchema({ name: 'Kennel Cough in Dogs', description: 'Signs, treatment, and prevention of kennel cough.', url: 'https://vets.co/health/kennel-cough', authorName: 'Vets.co Editorial', lastReviewed: '2026-10-13' })
@@ -48,13 +48,13 @@ export default function KennelCoughPage() {
 </>}
       >
         <div className="carloOS-article">
-          <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-10-13T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-13" />
           <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
             <HopDisclosure siteId="vets-co" href="/go/amazon-brand/y+shaped+front+clip+dog+harness?s=health-kennel-cough" />
             <ShopCtas amazonHref="/go/amazon-brand/y+shaped+front+clip+dog+harness?s=health-kennel-cough" amazonLabel="Browse Y-shaped front-clip dog harnesses on Amazon →" />
             <a href="#kit" className="inline-flex min-h-[44px] items-center text-xs text-brand-text-mid underline underline-offset-2">All supplies on this page ↓</a>
           </div>
+          <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-10-14T00:00:00Z" reviewedBy="Editorial team" />
+          <LastUpdated date="2026-10-14" />
 
           <CalloutBox variant="info" title="Usually mild, but watch the vulnerable">
             In a healthy adult dog, kennel cough is typically a self-limiting nuisance that clears with rest. In puppies, seniors, and dogs with underlying disease, it can be more serious and occasionally leads to pneumonia, so these dogs warrant closer monitoring and a lower threshold for veterinary care.

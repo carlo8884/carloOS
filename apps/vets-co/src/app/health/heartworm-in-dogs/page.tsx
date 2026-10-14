@@ -14,7 +14,7 @@ const SOURCES = [
   { label: 'Parasites & Vectors (2026): US clinic-transaction cost of canine heartworm treatment and prevention', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC13491753/', publisher: 'Parasites & Vectors' },
   { label: 'ASPCA Pro: Emancipet high-volume heartworm treatment costs', url: 'https://www.aspcapro.org/resource/improving-access-heartworm-treatment', publisher: 'ASPCA Pro' },
 ]
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Heartworm in Dogs', description: 'Prevention, annual testing, and melarsomine treatment for canine heartworm disease.', url: 'https://vets.co/health/heartworm-in-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-13T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Heartworm in Dogs', description: 'Prevention, annual testing, and melarsomine treatment for canine heartworm disease.', url: 'https://vets.co/health/heartworm-in-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-14T00:00:00Z' ,
   citation: SOURCES,
 })
 const med = buildMedicalWebPageSchema({ name: 'Heartworm Disease in Dogs', description: 'Prevention, testing, and treatment of Dirofilaria immitis heartworm in dogs.', url: 'https://vets.co/health/heartworm-in-dogs', authorName: 'Vets.co Editorial', lastReviewed: '2026-10-13' })
@@ -59,13 +59,13 @@ export default function HeartwormPage() {
       >
         <div className="carloOS-article">
 
-          <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-10-13T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-13" />
           <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
             <HopDisclosure siteId="vets-co" href="/go/amazon-brand/heavy+gauge+48+inch+dog+crate?s=health-heartworm-in-dogs" />
             <ShopCtas amazonHref="/go/amazon-brand/heavy+gauge+48+inch+dog+crate?s=health-heartworm-in-dogs" amazonLabel="Browse heavy-gauge 48-inch dog crates on Amazon →" />
             <a href="#kit" className="inline-flex min-h-[44px] items-center text-xs text-brand-text-mid underline underline-offset-2">All supplies on this page ↓</a>
           </div>
+          <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-10-14T00:00:00Z" reviewedBy="Editorial team" />
+          <LastUpdated date="2026-10-14" />
 
           <div className="rounded-lg border-l-4 border-brand-primary bg-brand-surface p-5 my-6" data-testid="short-answer">
             <h2 className="font-display text-lg font-bold mb-2">The short answer</h2>

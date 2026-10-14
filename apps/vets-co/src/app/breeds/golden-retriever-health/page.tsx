@@ -23,7 +23,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Vets.co Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
-  modifiedAt: '2026-10-13T00:00:00Z',
+  modifiedAt: '2026-10-14T00:00:00Z',
 })
 
 const medicalSchema = buildMedicalWebPageSchema({
@@ -107,13 +107,13 @@ export default function VetsGoldenRetrieverHealthPage() {
     >
       <div className="carloOS-article">
 
-        <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-10-13T00:00:00Z" reviewedBy="Editorial team" />
-
           <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
             <HopDisclosure siteId="vets-co" href="/go/amazon-brand/dog+ear+cleaner+solution?s=breeds-golden-retriever-health" />
             <ShopCtas amazonHref="/go/amazon-brand/dog+ear+cleaner+solution?s=breeds-golden-retriever-health" amazonLabel="Browse dog ear cleaner solutions on Amazon →" />
             <a href="#kit" className="inline-flex min-h-[44px] items-center text-xs text-brand-text-mid underline underline-offset-2">All supplies on this page ↓</a>
           </div>
+        <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-10-14T00:00:00Z" reviewedBy="Editorial team" />
+
           <div className="not-prose my-5 overflow-hidden rounded-xl">
             <StockImage manifestKey="dog-com:breed-golden-retriever" alt="A Golden Retriever puppy" aspect="16:9" variant="inline" belowFold subtleCredit />
           </div>

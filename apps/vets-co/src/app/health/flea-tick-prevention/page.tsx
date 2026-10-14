@@ -10,7 +10,7 @@ const SOURCES = [
   { label: 'Companion Animal Parasite Council: Ticks', url: 'https://capcvet.org/guidelines/ticks/', publisher: 'CAPC' },
   { label: 'CDC: Preventing Ticks on Pets', url: 'https://www.cdc.gov/ticks/prevention/preventing-ticks-on-pets.html', publisher: 'CDC' },
 ]
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Flea and Tick Prevention for Pets', description: 'How flea and tick prevention works and why year-round control matters.', url: 'https://vets.co/health/flea-tick-prevention', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-10-13T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Flea and Tick Prevention for Pets', description: 'How flea and tick prevention works and why year-round control matters.', url: 'https://vets.co/health/flea-tick-prevention', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-10-14T00:00:00Z' ,
   citation: SOURCES,
 })
 const med = buildMedicalWebPageSchema({ name: 'Flea and Tick Prevention for Pets', description: 'How parasite prevention works and the diseases it prevents.', url: 'https://vets.co/health/flea-tick-prevention', authorName: 'Vets.co Editorial', lastReviewed: '2026-10-13' })
@@ -50,13 +50,13 @@ export default function FleaTickPage() {
       >
         <div className="carloOS-article">
 
-          <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-10-13T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-13" />
           <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
             <HopDisclosure siteId="vets-co" href="/go/amazon-brand/14+inch+manual+reel+lawn+mower?s=health-flea-tick-prevention" />
             <ShopCtas amazonHref="/go/amazon-brand/14+inch+manual+reel+lawn+mower?s=health-flea-tick-prevention" amazonLabel="Browse 14-inch manual reel lawn mowers on Amazon →" />
             <a href="#kit" className="inline-flex min-h-[44px] items-center text-xs text-brand-text-mid underline underline-offset-2">All supplies on this page ↓</a>
           </div>
+          <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-10-14T00:00:00Z" reviewedBy="Editorial team" />
+          <LastUpdated date="2026-10-14" />
 
           <CalloutBox variant="warning" title="Never use dog products on cats">
             Some flea and tick products that are safe for dogs are highly toxic to cats and can cause severe, life-threatening reactions. Always use species-appropriate products and follow your veterinarian&apos;s guidance. If you have both species, keep their products clearly separated. Household yard, bedding, and after-walk gear does not replace that species check.

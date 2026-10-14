@@ -9,7 +9,7 @@ const SOURCES = [
   { label: 'Neilson JC et al. Prevalence of behavioral changes associated with age-related cognitive impairment in dogs. JAVMA 2001;218:1787-1791.', url: 'https://pubmed.ncbi.nlm.nih.gov/11394831/', publisher: 'PubMed' },
   { label: 'Landsberg GM et al. Cognitive dysfunction syndrome: a disease of canine and feline brain aging. Vet Clin Small Anim. 2012;42(4):749-768.', url: 'https://doi.org/10.1016/j.cvsm.2012.04.003', publisher: 'Veterinary Clinics of North America' },
 ]
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Cognitive Dysfunction Syndrome in Dogs', description: 'Signs, diagnosis, and management of canine cognitive dysfunction syndrome (dog dementia).', url: 'https://vets.co/health/cognitive-dysfunction', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-13T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Cognitive Dysfunction Syndrome in Dogs', description: 'Signs, diagnosis, and management of canine cognitive dysfunction syndrome (dog dementia).', url: 'https://vets.co/health/cognitive-dysfunction', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-14T00:00:00Z' ,
   citation: SOURCES,
 })
 const med = buildMedicalWebPageSchema({ name: 'Cognitive Dysfunction Syndrome in Dogs', description: 'Signs, diagnosis, and treatment of CDS — canine cognitive dysfunction.', url: 'https://vets.co/health/cognitive-dysfunction', authorName: 'Vets.co Editorial', lastReviewed: '2026-10-13' })
@@ -62,13 +62,13 @@ export default function CognitiveDysfunctionPage() {
       >
         <div className="carloOS-article">
 
-          <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-10-13T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-13" />
           <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
             <HopDisclosure siteId="vets-co" href="/go/amazon-brand/plug+in+night+light?s=health-cognitive-dysfunction" />
             <ShopCtas amazonHref="/go/amazon-brand/plug+in+night+light?s=health-cognitive-dysfunction" amazonLabel="Browse plug-in night lights on Amazon →" />
             <a href="#kit" className="inline-flex min-h-[44px] items-center text-xs text-brand-text-mid underline underline-offset-2">All supplies on this page ↓</a>
           </div>
+          <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-10-14T00:00:00Z" reviewedBy="Editorial team" />
+          <LastUpdated date="2026-10-14" />
 
           <CalloutBox variant="info" title="Short answer">
             <p>Canine cognitive dysfunction syndrome (CDS) is an age-related brain disease similar to Alzheimer's disease that can start around nine years of age or older. Signs include getting lost or stuck in familiar places, changes in interaction, night wandering, house-soiling, less interest in play, new anxiety, and forgetting known commands. There is no cure, but early diet, enrichment, and medication can slow progression and improve quality of life. Source: <a href="https://www.vet.cornell.edu/departments-centers-and-institutes/riney-canine-health-center/canine-health-topics/cognitive-dysfunction-syndrome">Cornell University College of Veterinary Medicine</a>.</p>
