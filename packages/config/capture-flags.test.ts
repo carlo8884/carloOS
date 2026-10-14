@@ -7,6 +7,8 @@ import {
   fishSubscribeFormVisible,
   inquireFormDefaultOpen,
   inquireOfferOpen,
+  siteSubscribeDeliveryEnabled,
+  siteSubscribeFormVisible,
   vetsInquireCaptureEnabled,
 } from './capture-flags'
 
@@ -116,5 +118,19 @@ describe('capture flags', () => {
       }),
       'checklist',
     )
+  })
+
+  it('keeps Vets.co and Ferret.com subscribe forms hidden until each site flag and an inbox exist', () => {
+    const inbox = { NEXT_PUBLIC_INQUIRE_EMAIL: 'inbox@example.com', INQUIRE_EMAIL: 'inbox@example.com' }
+    assert.equal(siteSubscribeFormVisible('vets-co', inbox), false)
+    assert.equal(siteSubscribeFormVisible('ferret-com', inbox), false)
+    assert.equal(siteSubscribeDeliveryEnabled('vets.co', inbox), false)
+    assert.equal(siteSubscribeFormVisible('vets-co', { ...inbox, NEXT_PUBLIC_VETS_SUBSCRIBE_CAPTURE: 'true' }), true)
+    assert.equal(siteSubscribeFormVisible('vets-co', { NEXT_PUBLIC_VETS_SUBSCRIBE_CAPTURE: 'true' }), false)
+    assert.equal(siteSubscribeDeliveryEnabled('ferret.com', { ...inbox, NEXT_PUBLIC_FERRET_SUBSCRIBE_CAPTURE: 'true' }), true)
+    assert.equal(siteSubscribeFormVisible('ferret-com', { ...inbox, NEXT_PUBLIC_VETS_SUBSCRIBE_CAPTURE: 'true' }), false)
+    assert.equal(emailCaptureSurface({ siteId: 'vets-co', source: 'vets-home-under-hero', hasResource: true, env: inbox }), 'magnet')
+    assert.equal(emailCaptureSurface({ siteId: 'vets-co', source: 'vets-home-under-hero', hasResource: true, env: { ...inbox, NEXT_PUBLIC_VETS_SUBSCRIBE_CAPTURE: 'true' } }), 'form')
+    assert.equal(emailCaptureSurface({ siteId: 'ferret-com', source: 'ferret-home-under-hero', hasResource: true, env: inbox }), 'magnet')
   })
 })

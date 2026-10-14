@@ -1326,3 +1326,13 @@ test('vets fix PB1: breed pages shop topic-matched care products, not paperwork'
     expect(html, path).not.toMatch(/amazon-brand\/(analog\+stopwatch|blank\+index\+cards|recipe\+card\+box|13\+column|desk\+blotter|numbered\+log\+book|top\+bound\+steno|self\+adhesive\+file|academic\+year|8\+column|newsprint)/)
   }
 })
+
+test('vets fix EM1: under-hero offer shows; email form stays hidden while the subscribe flag is off', async ({ page }) => {
+  await page.goto('/', { waitUntil: 'domcontentloaded' })
+  await expect(page.locator('a[href="/emergency-triage-card"]').first()).toBeVisible()
+  if (process.env.NEXT_PUBLIC_VETS_SUBSCRIBE_CAPTURE !== 'true') {
+    await expect(page.getByTestId('under-hero-email')).toHaveCount(0)
+  } else {
+    await expect(page.getByTestId('under-hero-email').locator('input[type="email"]')).toBeVisible()
+  }
+})
