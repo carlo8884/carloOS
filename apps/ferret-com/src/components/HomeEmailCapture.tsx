@@ -1,4 +1,6 @@
 import Link from 'next/link'
+import { EmailCapture } from '@carloOS/ui'
+import { siteSubscribeFormVisible } from '@carloOS/config/capture-flags'
 
 /** Homepage + hub resource strip — sits under the hero (not the footer). */
 export function HomeEmailCapture() {
@@ -22,6 +24,19 @@ export function HomeEmailCapture() {
             Open the first-year schedule
           </Link>
         </div>
+        {siteSubscribeFormVisible('ferret-com') && (
+          <div data-testid="under-hero-email" className="mx-auto mt-5 max-w-lg text-left">
+            <p className="text-sm font-semibold text-brand-dark mb-2 text-center">Get the first-year schedule plus vaccine and vet-check reminders by email.</p>
+            <EmailCapture
+              variant="inline"
+              siteId="ferret-com"
+              source="ferret-home-under-hero"
+              title="Get the first-year schedule plus vaccine and vet-check reminders by email."
+              ctaText="Sign me up"
+              captureOpen
+            />
+          </div>
+        )}
       </div>
     </section>
   )

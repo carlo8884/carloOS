@@ -13,6 +13,8 @@ function read(env: NodeJS.ProcessEnv, key: string): string | undefined {
   if (key === 'NEXT_PUBLIC_FISH_SUBSCRIBE_CAPTURE') return process.env.NEXT_PUBLIC_FISH_SUBSCRIBE_CAPTURE
   if (key === 'NEXT_PUBLIC_DOG_INQUIRE_CAPTURE') return process.env.NEXT_PUBLIC_DOG_INQUIRE_CAPTURE
   if (key === 'NEXT_PUBLIC_VETS_INQUIRE_CAPTURE') return process.env.NEXT_PUBLIC_VETS_INQUIRE_CAPTURE
+  if (key === 'NEXT_PUBLIC_VETS_SUBSCRIBE_CAPTURE') return process.env.NEXT_PUBLIC_VETS_SUBSCRIBE_CAPTURE
+  if (key === 'NEXT_PUBLIC_FERRET_SUBSCRIBE_CAPTURE') return process.env.NEXT_PUBLIC_FERRET_SUBSCRIBE_CAPTURE
   if (key === 'NEXT_PUBLIC_INQUIRE_EMAIL') return process.env.NEXT_PUBLIC_INQUIRE_EMAIL
   if (key === 'INQUIRE_EMAIL') return process.env.INQUIRE_EMAIL
   return undefined
@@ -57,6 +59,28 @@ export function inquireCaptureEnabled(siteHost: string, env: NodeJS.ProcessEnv =
   return true
 }
 
+const SUBSCRIBE_FLAG: Record<string, string> = {
+  'vets-co': 'NEXT_PUBLIC_VETS_SUBSCRIBE_CAPTURE',
+  'vets.co': 'NEXT_PUBLIC_VETS_SUBSCRIBE_CAPTURE',
+  'ferret-com': 'NEXT_PUBLIC_FERRET_SUBSCRIBE_CAPTURE',
+  'ferret.com': 'NEXT_PUBLIC_FERRET_SUBSCRIBE_CAPTURE',
+}
+
+/**
+ * Vets.co and Ferret.com newsletter form. Off until an operator sets the
+ * site flag to "true" and a public inbox marker exists. Client-safe.
+ */
+export function siteSubscribeFormVisible(site: string, env: NodeJS.ProcessEnv = process.env): boolean {
+  const key = SUBSCRIBE_FLAG[site]
+  return Boolean(key) && read(env, key) === 'true' && Boolean(read(env, 'NEXT_PUBLIC_INQUIRE_EMAIL'))
+}
+
+/** Server delivery for Vets.co and Ferret.com: the site flag plus either inbox. */
+export function siteSubscribeDeliveryEnabled(site: string, env: NodeJS.ProcessEnv = process.env): boolean {
+  const key = SUBSCRIBE_FLAG[site]
+  return Boolean(key) && read(env, key) === 'true' && Boolean(captureInbox(env))
+}
+
 const PAUSED_EMAIL_SITES = new Set(['dog-com', 'fish-com', 'horses-com', 'vets-co', 'ferret-com'])
 
 /**
@@ -78,9 +102,13 @@ export function emailCaptureSurface(opts: {
   const underHero = opts.source.endsWith('under-hero')
   const enabled = Boolean(opts.addressOnly) || underHero || opts.emailCaptureEnabled === true
   if (!enabled) return 'hidden'
-  const fishOpen = opts.siteId === 'fish-com' && !opts.addressOnly
-    ? (opts.captureOpen ?? fishSubscribeFormVisible(opts.env))
-    : false
+  const fishOpen = opts.addressOnly
+    ? false
+    : opts.siteId === 'fish-com'
+      ? (opts.captureOpen ?? fishSubscribeFormVisible(opts.env))
+      : SUBSCRIBE_FLAG[opts.siteId]
+        ? (opts.captureOpen ?? siteSubscribeFormVisible(opts.siteId, opts.env))
+        : false
   if (PAUSED_EMAIL_SITES.has(opts.siteId) && !opts.addressOnly && !fishOpen) {
     return opts.hasResource ? 'magnet' : 'hidden'
   }

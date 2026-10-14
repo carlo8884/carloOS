@@ -1309,3 +1309,13 @@ test('vets fix ST1: mobile sticky bar appears after scrolling with internal next
   await bar.getByRole('button', { name: 'Close' }).click()
   await expect(bar).toHaveCount(0)
 })
+
+test('vets fix EM1: under-hero offer shows; email form stays hidden while the subscribe flag is off', async ({ page }) => {
+  await page.goto('/', { waitUntil: 'domcontentloaded' })
+  await expect(page.locator('a[href="/emergency-triage-card"]').first()).toBeVisible()
+  if (process.env.NEXT_PUBLIC_VETS_SUBSCRIBE_CAPTURE !== 'true') {
+    await expect(page.getByTestId('under-hero-email')).toHaveCount(0)
+  } else {
+    await expect(page.getByTestId('under-hero-email').locator('input[type="email"]')).toBeVisible()
+  }
+})
