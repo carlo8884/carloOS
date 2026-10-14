@@ -17,6 +17,16 @@ import {
 
 const SOURCES = [
   {
+    label: "Merck Veterinary Manual (pet owner) — Infectious Diseases of Ferrets: ECE, Helicobacter and Lawsonia",
+    url: "https://www.merckvetmanual.com/all-other-pets/ferrets/infectious-diseases-of-ferrets",
+    publisher: "Merck Veterinary Manual",
+  },
+  {
+    label: "Merck Veterinary Manual — When to See a Veterinarian (triage table)",
+    url: "https://www.merckvetmanual.com/multimedia/table/when-to-see-a-veterinarian",
+    publisher: "Merck Veterinary Manual",
+  },
+  {
     label: "Merck Veterinary Manual — infectious gastrointestinal disease in ferrets, including Helicobacter mustelae and Lawsonia",
     url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/infectious-diseases-of-ferrets",
     publisher: "Merck Veterinary Manual",
@@ -75,7 +85,7 @@ const medSchema = buildMedicalWebPageSchema({
     "Clinical reference on the causes of diarrhea in domestic ferrets, stool-appearance interpretation, dehydration risk, and indications for urgent veterinary evaluation.",
   url: 'https://ferret.com/health/ferret-diarrhea-causes',
   authorName: 'Ferret.com Editorial',
-  lastReviewed: '2026-06-01',
+  lastReviewed: '2026-10-13',
 })
 
 const FAQS = [
@@ -176,6 +186,12 @@ export default function FerretDiarrheaCausesPage() {
             updatedAt="2026-10-13"
           />
           <LastUpdated date="2026-10-13" />
+          <div className="rounded-lg border-l-4 border-brand-primary bg-brand-white p-5 my-6" data-testid="short-answer">
+            <h2 className="font-display text-lg font-bold mb-2">The short answer</h2>
+            <p className="text-base leading-relaxed text-brand-text-mid m-0">
+              Ferret diarrhea has many causes, from a sudden diet change to infections such as epizootic catarrhal enteritis (green, watery or slimy diarrhea, highly contagious) and <em>Helicobacter</em> stomach inflammation, which can cause tarry black stool (<a href="https://www.merckvetmanual.com/all-other-pets/ferrets/infectious-diseases-of-ferrets">Merck</a>). See a vet immediately for bloody, foul-smelling or uncontrollable diarrhea, or thick black stools. Vomiting or diarrhea lasting more than 24 hours needs a vet within 24 hours (<a href="https://www.merckvetmanual.com/multimedia/table/when-to-see-a-veterinarian">Merck</a>). Ferrets dehydrate quickly, so don&apos;t wait if your ferret also stops eating or seems lethargic.
+            </p>
+          </div>
 
           <DropCap>
             Diarrhea is one of the most common reasons ferrets are brought to the

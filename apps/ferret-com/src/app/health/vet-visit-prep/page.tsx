@@ -86,7 +86,7 @@ const medSchema = buildMedicalWebPageSchema({
     'Practical preparation guide for ferret veterinary visits, including pre-visit checklist, expected diagnostics, and cost expectations.',
   url: 'https://ferret.com/health/vet-visit-prep',
   authorName: 'Ferret.com Editorial',
-  lastReviewed: '2026-05-29',
+  lastReviewed: '2026-10-13',
 })
 
 const FAQS = [
@@ -192,6 +192,12 @@ export default function FerretVetVisitPrepPage() {
             reviewedBy="Editorial team"
           />
           <LastUpdated date="2026-10-13" />
+          <div className="rounded-lg border-l-4 border-brand-primary bg-brand-white p-5 my-6" data-testid="short-answer">
+            <h2 className="font-display text-lg font-bold mb-2">The short answer</h2>
+            <p className="text-base leading-relaxed text-brand-text-mid m-0">
+              Find a vet who knows ferrets before you need one, plus an after-hours clinic that treats them, and bring your ferret in a plastic cat carrier (<a href="https://www.merckvetmanual.com/all-other-pets/ferrets/routine-health-care-for-ferrets">Merck</a>). Plan an exam every year, and twice a year once your ferret is 3 or older (<a href="https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf">Lafeber</a>). Bring notes on diet, stool, weight and any changes, plus a favorite food in case your ferret needs a meal at the clinic.
+            </p>
+          </div>
 
           <DropCap>
             The single highest-leverage decision in ferret veterinary care
