@@ -23,7 +23,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-10-13T00:00:00Z',
+  modifiedAt: '2026-10-14T00:00:00Z',
 })
 
 const med = buildMedicalWebPageSchema({
@@ -112,13 +112,17 @@ export default function IsAFerretRightForYouPage() {
         ]}
 >
         <div className="carloOS-article">
+          <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
+            <HopDisclosure siteId="ferret-com" above href="/go/amazon-brand/ferret+litter?s=is-a-ferret-right-for-you" />
+            <ShopCtas amazonHref="/go/amazon-brand/ferret+litter?s=is-a-ferret-right-for-you" amazonLabel="Browse ferret litter on Amazon →" />
+          </div>
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-10-13"
+            updatedAt="2026-10-14"
             reviewedBy="Editorial team"
           />
-          <LastUpdated date="2026-10-13" />
+          <LastUpdated date="2026-10-14" />
 
           <CalloutBox variant="info" title="Short answer">
             <p>Ferrets live an average of 6 to 8 years and need daily time and attention: the Merck Veterinary Manual says at least 2 to 4 hours outside the cage every day. Lafeber notes a ferret may not be the best pet for a family with young children, keeps a natural musky odor even when descented, may not get along with birds, rabbits, rodents, or lizards, and is restricted or needs a permit in some places, so check local laws first. Source: <a href="https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf">Lafeber Care of the Pet Ferret</a>.</p>

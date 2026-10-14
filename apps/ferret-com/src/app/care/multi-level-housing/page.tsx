@@ -41,7 +41,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-10-13T00:00:00Z',
+  modifiedAt: '2026-10-14T00:00:00Z',
 
   citation: SOURCES,
 })
@@ -125,13 +125,18 @@ export default function MultiLevelHousingPage() {
         ]}
 >
         <div className="carloOS-article">
+          <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
+            <HopDisclosure siteId="ferret-com" above href="/go/amazon-brand/fleece+ramp+cover?s=care-multi-level-housing" />
+            <ShopCtas amazonHref="/go/amazon-brand/fleece+ramp+cover?s=care-multi-level-housing" amazonLabel="Browse fleece ramp covers on Amazon →" />
+            <a href="#kit" className="inline-flex min-h-[44px] items-center text-xs text-brand-text-mid underline underline-offset-2">All supplies on this page ↓</a>
+          </div>
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-10-13"
+            updatedAt="2026-10-14"
             reviewedBy="Editorial team"
           />
-          <LastUpdated date="2026-10-13" />
+          <LastUpdated date="2026-10-14" />
 
           <CalloutBox variant="info" title="Short answer">
             <p>Lafeber's minimum cage size for one to two ferrets is 24 × 24 × 18 inches (60 × 60 × 45 cm), and large multi-level cages with ramps are common. Keep bar spacing no wider than 1 inch (0.5 inch is better) and any wire-mesh floor squares no larger than 0.25 inch. Aquariums are unsuitable. Even in a good cage, ferrets need at least 2 to 4 hours a day outside it, per the Merck Veterinary Manual. Source: <a href="https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf">Lafeber Care of the Pet Ferret</a>.</p>

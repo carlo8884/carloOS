@@ -23,7 +23,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-10-13T00:00:00Z',
+  modifiedAt: '2026-10-14T00:00:00Z',
 })
 
 const med = buildMedicalWebPageSchema({
@@ -105,13 +105,17 @@ export default function SupplementsAndVitaminsPage() {
         ]}
 >
         <div className="carloOS-article">
+          <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
+            <HopDisclosure siteId="ferret-com" above href="/go/amazon-brand/ferret+kibble?s=supplements-and-vitamins" />
+            <ShopCtas amazonHref="/go/amazon-brand/ferret+kibble?s=supplements-and-vitamins" amazonLabel="Browse ferret kibble on Amazon →" />
+          </div>
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-10-13"
+            updatedAt="2026-10-14"
             reviewedBy="Editorial team"
           />
-          <LastUpdated date="2026-10-13" />
+          <LastUpdated date="2026-10-14" />
 
           <CalloutBox variant="info" title="Short answer">
             <p>Most ferrets do not need vitamin supplements. The Merck Veterinary Manual says vitamins and supplements are not necessary except under special conditions or for older ferrets, and your veterinarian can advise if yours needs them. A complete commercial ferret food that is high in animal protein and low in carbohydrate is the foundation. Source: <a href="https://www.merckvetmanual.com/all-other-pets/ferrets/providing-a-home-for-a-ferret">Merck Veterinary Manual</a>.</p>

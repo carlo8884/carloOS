@@ -63,7 +63,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-10-13T00:00:00Z',
+  modifiedAt: '2026-10-14T00:00:00Z',
 
   citation: SOURCES,
 })
@@ -163,12 +163,16 @@ export default function FerretEarMitesPage() {
         ]}
 >
         <div className="carloOS-article">
+          <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
+            <HopDisclosure siteId="ferret-com" above href="/go/amazon-brand/ferret+cage?s=ear-mites" />
+            <ShopCtas amazonHref="/go/amazon-brand/ferret+cage?s=ear-mites" amazonLabel="Browse ferret cages on Amazon →" />
+          </div>
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-10-13"
+            updatedAt="2026-10-14"
           />
-          <LastUpdated date="2026-10-13" />
+          <LastUpdated date="2026-10-14" />
 
           <DropCap>
             A ferret that suddenly starts shaking its head, scratching at its
