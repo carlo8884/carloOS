@@ -17,6 +17,7 @@ export {
 // Layout
 export { Nav } from './components/Nav'
 export { Footer } from './components/Footer'
+export { MobileStickyCta } from './components/MobileStickyCta'
 export { ArticleLayout } from './components/ArticleLayout'
 export { PriceAsOf } from './components/PriceAsOf'
 export { Breadcrumb } from './components/Breadcrumb'

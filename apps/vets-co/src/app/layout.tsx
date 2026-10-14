@@ -3,7 +3,7 @@ import { Libre_Baskerville, Manrope } from 'next/font/google'
 import { Nav, Footer, buildMetadata, buildOrganizationSchema, SchemaScript, Ga4Loader, AffiliateClickListener, JourneyEvents, HopEarnsProvider } from '@carloOS/ui'
 import { HomeEmailCapture } from '../components/HomeEmailCapture'
 import { EmailCaptureGate } from '../components/EmailCaptureGate'
-import { EmailUnderHero } from '@carloOS/ui'
+import { EmailUnderHero, MobileStickyCta } from '@carloOS/ui'
 import './globals.css'
 
 // ─── Fonts ──────────────────────────────────────────────────────────────────
@@ -86,6 +86,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </EmailUnderHero>
         </EmailCaptureGate>
         </main>
+        <MobileStickyCta primary={{ href: '/emergency-triage-card', label: 'Emergency triage card' }} secondary={{ href: '/reviews/best-pet-insurance', label: 'Compare insurance' }} />
+        <div className="h-16 md:hidden" aria-hidden="true" />
         <Footer siteId="vets-co" showAffiliateDisclosure />
         </HopEarnsProvider>
       </body>
