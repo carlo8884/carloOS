@@ -23,7 +23,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Vets.co Editorial',
   publishedAt: '2026-10-04T00:00:00Z',
-  modifiedAt: '2026-10-12T00:00:00Z',
+  modifiedAt: '2026-10-13T00:00:00Z',
 })
 
 const FAQS = [
@@ -58,8 +58,8 @@ export default function SpotVsManyPetsGuidePage() {
         <>
           <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">Spot is the top pick when you want adjustable limits on one policy instead of a single comprehensive plan.</p>
           <div data-fold="offer">
-          <PrimaryHop href="/go/spot/home?s=reviews-spot-vs-manypets-guide" label="Get a Spot quote" />
           <HopDisclosure tone="on-dark" siteId="vets-co" href="/go/spot/home?s=reviews-spot-vs-manypets-guide" />
+          <PrimaryHop href="/go/spot/home?s=reviews-spot-vs-manypets-guide" label="Get a Spot quote" />
         </div>
         </>
       }
@@ -80,7 +80,7 @@ export default function SpotVsManyPetsGuidePage() {
       }
     >
       <div className="carloOS-article">
-          <LastUpdated date="2026-10-12" />
+          <LastUpdated date="2026-10-13" />
         <p>The <Link href="/insurance/reading-the-fine-print">fine-print page</Link> already puts Spot and ManyPets side by side as two sample policies to read, and it points to the <Link href="/reviews/best-pet-insurance">insurance review</Link> for the wider comparison. Neither product prints a monthly premium.</p>
         <h2>What the review says about Spot</h2>
         <p>Spot is Customizable and the winner on that page. Limits are adjustable. Exam fees are often covered. Preventive care is an optional add-on, and the review says that add-on is not insurance. The price line is quote-based. The cons say to read the waiting-period terms. Nothing here fills in a waiting-period length the review left unread.</p>
@@ -130,7 +130,7 @@ export default function SpotVsManyPetsGuidePage() {
             </tbody>
           </table>
         </div>
-        <ComparisonFoot updated="2026-10-12" />
+        <ComparisonFoot updated="2026-10-13" />
         <EmailCapture
           variant="inline"
           siteId="vets-co"

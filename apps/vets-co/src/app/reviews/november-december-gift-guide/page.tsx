@@ -102,8 +102,8 @@ export default function NovemberDecemberGiftGuidePage() {
         <>
           <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">Start with a pet first-aid kit: it is useful in any household with a dog or cat.</p>
           <div data-fold="offer">
-          <PrimaryHop href={shopHref('pet+first+aid+kit')} label="Search Amazon for pet first-aid kits" />
           <HopDisclosure tone="on-dark" siteId="vets-co" href={shopHref('pet+first+aid+kit')} />
+          <PrimaryHop href={shopHref('pet+first+aid+kit')} label="Search Amazon for pet first-aid kits" />
         </div>
         </>
       }

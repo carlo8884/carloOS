@@ -5,7 +5,7 @@ import {
   partnerQuoteHeld,
   visibleShopHref,
 } from '@carloOS/config/affiliate-hop'
-import { AffiliateDisclosure } from '@carloOS/ui'
+import { AffiliateDisclosure, QuietDisclosureLine } from '@carloOS/ui'
 
 /**
  * A live /go button (partner tag set) gets the standard affiliate disclosure.
@@ -39,15 +39,7 @@ export function HopDisclosure({
   })
   if (live) {
     if (tone === 'on-dark') {
-      return (
-        <p data-affiliate-disclosure="inline" className="mt-3 mb-0 text-xs leading-relaxed text-white">
-          <strong className="font-bold uppercase tracking-eyebrow text-2xs mr-2">Disclosure</strong>
-          Some links on this page are affiliate links. We earn a commission if you click and buy, at no cost to you. We never accept payment for favorable reviews.{' '}
-          <a href="/disclosure" className="font-semibold text-white underline underline-offset-2">
-            Read our full disclosure
-          </a>
-        </p>
-      )
+      return <QuietDisclosureLine tone="on-dark" className="mt-3 mb-0" />
     }
     return <AffiliateDisclosure variant="inline" siteId={siteId} className="mt-3 mb-0" />
   }

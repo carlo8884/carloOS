@@ -57,8 +57,8 @@ export default function EmergencySignsPage() {
       <ArticleLayout siteId="vets-co"
         hero={{ title: '14 Dog Emergency Signs', subtitle: 'Some signs warrant waiting until your regular vet opens. These do not. Print this page and keep it accessible. In a true emergency, knowing these signs before they happen is the difference between a treatment outcome and a fatality.', category: 'Emergency Guide', authorName: 'Vets.co Editorial', publishedAt: 'May 2025', readTime: '8 min',}}
         heroHop={<>
-          <PrimaryHop href="/go/amazon-brand/handheld+aa+led+flashlight?s=health-emergency-signs" label="Search Amazon for a handheld AA LED flashlight" />
           <HopDisclosure tone="on-dark" siteId="vets-co" href="/go/amazon-brand/handheld+aa+led+flashlight?s=health-emergency-signs" />
+          <PrimaryHop href="/go/amazon-brand/handheld+aa+led+flashlight?s=health-emergency-signs" label="Search Amazon for a handheld AA LED flashlight" />
         </>}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Emergency Signs', href: '/health/emergency-signs' }]}
         relatedLinks={[

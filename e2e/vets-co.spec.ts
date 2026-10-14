@@ -1364,3 +1364,27 @@ test('vets fix PG1: visit guides shop trip and care products, not stationery', a
     expect(await page.content(), path).not.toMatch(/amazon-brand\/(kraft\+two\+pocket|pocket\+size\+address|clipboard\+with\+storage|lined\+telephone)/)
   }
 })
+
+test('vets fix DS1: affiliate disclosure is a tiny Affiliate links link before the first shop link', async ({ page }) => {
+  for (const path of ['/health/anxiety-in-dogs', '/health/seizures-in-dogs', '/breeds/beagle-health']) {
+    await page.goto(path, { waitUntil: 'domcontentloaded' })
+    const info = await page.evaluate(() => {
+      const link = Array.from(document.querySelectorAll('a[href*="/go/"]')).find((a) => (a as HTMLElement).offsetParent && !a.closest('footer'))
+      const line = Array.from(document.querySelectorAll('[data-affiliate-disclosure="inline"], [data-affiliate-disclosure="banner"]')).find((d) => (d as HTMLElement).offsetParent) as HTMLElement | undefined
+      if (!link || !line) return null
+      return {
+        before: Boolean(line.compareDocumentPosition(link) & Node.DOCUMENT_POSITION_FOLLOWING),
+        tag: line.tagName,
+        height: line.getBoundingClientRect().height,
+        text: line.innerText,
+        href: line.querySelector('a')?.getAttribute('href'),
+      }
+    })
+    expect(info, path).not.toBeNull()
+    expect(info!.before, path).toBe(true)
+    expect(info!.tag, path).toBe('P')
+    expect(info!.height, path).toBeLessThanOrEqual(48)
+    expect(info!.text, path).toBe('Affiliate links')
+    expect(info!.href, path).toBe('/disclosure')
+  }
+})

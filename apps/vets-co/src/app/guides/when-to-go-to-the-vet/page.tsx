@@ -17,8 +17,8 @@ export default function WhenToGoPage() {
       <ArticleLayout siteId="vets-co"
         hero={{ title: 'When to Take Your Pet to the Vet', subtitle: 'Pet owners constantly face the same question: is this something to watch, something to call about, or something that cannot wait? This decision guide sorts common signs into watchful waiting, same-day care, and emergency care — and gives clear rules for when to escalate — so you can act with confidence rather than worry.', category: 'Owner Guide', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '8 min',}}
         heroHop={<>
-          <PrimaryHop href="/go/amazon-brand/pet+first+aid+kit?s=tools-er-vs-clinic" label="Search Amazon for a pet first-aid kit" />
           <HopDisclosure tone="on-dark" siteId="vets-co" href="/go/amazon-brand/pet+first+aid+kit?s=tools-er-vs-clinic" />
+          <PrimaryHop href="/go/amazon-brand/pet+first+aid+kit?s=tools-er-vs-clinic" label="Search Amazon for a pet first-aid kit" />
         </>}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Guides', href: '/guides' }, { name: 'When to Go to the Vet', href: '/guides/when-to-go-to-the-vet' }]}
         sidebar={<>

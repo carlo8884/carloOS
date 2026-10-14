@@ -39,8 +39,8 @@ export default function WeightManagementPage() {
       <ArticleLayout siteId="vets-co"
         hero={{ title: 'Weight Management in Dogs and Cats', subtitle: 'In the APOP 2022 survey, veterinary teams classed 59% of US dogs as overweight or obese. Excess weight is not a cosmetic issue — it is the leading modifiable risk factor for arthritis, diabetes, respiratory disease, cardiac stress, reduced mobility, and shortened lifespan in dogs. In a lifelong study of 48 Labrador Retrievers, dogs fed 25% less than their pair-mates lived significantly longer (Kealy et al., JAVMA 2002). That survey figure is for dogs. Cat checks are the tools linked below, not this dog example.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', publishedAt: 'May 2025', readTime: '9 min',}}
         heroHop={<>
-          <PrimaryHop href="/go/amazon-brand/digital+pet+scale?s=health-weight-management" label="Search Amazon for a digital pet scale" />
           <HopDisclosure tone="on-dark" siteId="vets-co" href="/go/amazon-brand/digital+pet+scale?s=health-weight-management" />
+          <PrimaryHop href="/go/amazon-brand/digital+pet+scale?s=health-weight-management" label="Search Amazon for a digital pet scale" />
         </>}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Weight Management', href: '/health/weight-management' }]}
         relatedLinks={[

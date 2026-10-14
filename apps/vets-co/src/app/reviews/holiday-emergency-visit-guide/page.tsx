@@ -61,8 +61,8 @@ export default function HolidayEmergencyVisitGuidePage() {
         <>
           <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">A holiday emergency visit costs more because the hospital keeps staff on duty overnight. Compare carriers such as Trupanion on the insurance review before a problem.</p>
           <div data-fold="offer">
-          <PrimaryHop href="/go/trupanion/home?s=reviews-holiday-emergency-visit-guide" label="See Trupanion plans" />
           <HopDisclosure tone="on-dark" siteId="vets-co" href="/go/trupanion/home?s=reviews-holiday-emergency-visit-guide" />
+          <PrimaryHop href="/go/trupanion/home?s=reviews-holiday-emergency-visit-guide" label="See Trupanion plans" />
         </div>
         </>
       }
