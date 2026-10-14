@@ -1184,3 +1184,17 @@ test('ferret fix FE2: aging, dental and lymphoma pages open with a Merck/Lafeber
   }
   expect(await page.locator('body').innerText()).toContain('Treatment has not been standardized')
 })
+
+test('ferret fix FE3: vaccinations, vet-visit prep and diarrhea pages open with a sourced short answer', async ({ page }) => {
+  const cases: [string, string][] = [
+    ['/health/vaccinations', 'https://www.merckvetmanual.com/all-other-pets/ferrets/routine-health-care-for-ferrets'],
+    ['/health/vet-visit-prep', 'https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf'],
+    ['/health/ferret-diarrhea-causes', 'https://www.merckvetmanual.com/multimedia/table/when-to-see-a-veterinarian'],
+  ]
+  for (const [path, src] of cases) {
+    await page.goto(path, { waitUntil: 'domcontentloaded' })
+    const box = page.getByTestId('short-answer')
+    await expect(box).toBeVisible()
+    await expect(box.locator(`a[href="${src}"]`)).toBeVisible()
+  }
+})

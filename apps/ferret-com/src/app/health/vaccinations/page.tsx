@@ -200,6 +200,12 @@ export default function FerretVaccinationsPage() {
             reviewedBy="Editorial team"
           />
           <LastUpdated date="2026-10-13" />
+          <div className="rounded-lg border-l-4 border-brand-primary bg-brand-white p-5 my-6" data-testid="short-answer">
+            <h2 className="font-display text-lg font-bold mb-2">The short answer</h2>
+            <p className="text-base leading-relaxed text-brand-text-mid m-0">
+              Ferrets need rabies and canine distemper vaccines. Give rabies at 16 weeks or older and then yearly, depending on local law. Ask your vet which distemper vaccine to use, and never give distemper and rabies on the same day. Stay at the clinic for 20 to 30 minutes after each shot to watch for reactions such as vomiting or diarrhea, which can be serious (<a href="https://www.merckvetmanual.com/all-other-pets/ferrets/routine-health-care-for-ferrets">Merck</a>). Lafeber describes a kit series at about 6 to 8, 10 to 12 and 14 to 16 weeks, with yearly boosters after that (<a href="https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf">Lafeber</a>).
+            </p>
+          </div>
 
           <DropCap>
             Ferret vaccination is one of the small number of preventive
