@@ -60,11 +60,11 @@ export default function DogVaccinationsGuidePage() {
           </div>
 
           <h2>Core Vaccines — Every Dog Regardless of Lifestyle</h2>
-          <p><strong>Rabies:</strong> Many state and local laws require it, even for indoor-only pets (AVMA). Fatal in all mammals including humans. No treatment exists for clinical rabies — prevention is the only option. Follow local law first; in some countries the first dose is generally not given before 12 weeks. Revaccination 1 year later is required, then boosters follow the vaccine&apos;s licensed 1- or 3-year duration or local law (WSAVA). Rabies vaccination certificates must be kept current for legal compliance. Letter-size thermal laminating pouches are how that certificate — and a later titer printout — stay a pocketable legal copy at boarding or a state checkpoint instead of a crumpled clinic slip. They are not a pet vaccination record book, not a letter-size plastic file box, and not a letter-size expanding file organizer. A laminating pouch does not vaccinate a dog and it does not replace the veterinarian who signs the certificate.</p>
+          <p><strong>Rabies:</strong> Many state and local laws require it, even for indoor-only pets (AVMA). Fatal in all mammals including humans. No treatment exists for clinical rabies — prevention is the only option. Follow local law first; in some countries the first dose is generally not given before 12 weeks. Revaccination 1 year later is required, then boosters follow the vaccine&apos;s licensed 1- or 3-year duration or local law (WSAVA). Rabies vaccination certificates must be kept current for legal compliance. Letter-size thermal laminating pouches are how that certificate — and a later titer printout — stay a pocketable legal copy at boarding or a state checkpoint instead of a crumpled clinic slip. A laminating pouch does not vaccinate a dog and it does not replace the veterinarian who signs the certificate.</p>
           <p><strong>DA2PP (Distemper, Adenovirus-2, Parvovirus, Parainfluenza):</strong> A combination vaccine protecting against four diseases. Canine parvovirus is highly contagious and fatal in unvaccinated puppies — it survives in the environment for months to years and is resistant to most common disinfectants. Canine distemper causes severe multisystemic disease including neurological damage. Per WSAVA, the puppy series starts no earlier than 6 weeks and repeats every 3–4 weeks until 16 weeks of age. A booster follows at about 6 months or 12–16 months, then at 3 years and no more often than every 3 years after that. Until that final puppy dose at 16 weeks or older, shared water bowls at parks and boarding kennels are an exposure the series is still building toward. A collapsible silicone travel dog bowl is how a carried sip stays the puppy&apos;s own bowl on those clinic-series trips — it is not a 24-ounce stainless hiking dog bottle, not an insulated pet water bowl, and not a foldable waterproof puppy mat.</p>
 
           <h2>Non-Core Vaccines — Lifestyle Dependent</h2>
-          <p><strong>Bordetella bronchiseptica (kennel cough):</strong> Recommended for any dog with exposure to other dogs — boarding, daycare, dog parks, training classes, grooming salons, dog shows. AVMA lists it for dogs that board or go to daycare. Intranasal and oral live vaccines protect after a single dose, while injectable versions need two doses. WSAVA lists annual revaccination; ask your vet how far ahead of boarding to vaccinate. A digital countdown timer is a simple way to track whatever lead time your vet gives you between the vaccine and boarding. It is not a 12-hour mechanical kitchen timer, not an analog wall clock with a second hand, and it is not a Bordetella product. The timer does not confer immunity. A collapsible silicone travel dog bowl is how boarding water is a carried bowl instead of a shared kennel bucket — the same high-contact setting that is why Bordetella is a lifestyle vaccine in the first place.</p>
+          <p><strong>Bordetella bronchiseptica (kennel cough):</strong> Recommended for any dog with exposure to other dogs — boarding, daycare, dog parks, training classes, grooming salons, dog shows. AVMA lists it for dogs that board or go to daycare. Intranasal and oral live vaccines protect after a single dose, while injectable versions need two doses. WSAVA lists annual revaccination; ask your vet how far ahead of boarding to vaccinate. A soft-sided dog crate gives your dog a quiet rest spot after a visit and a familiar space when boarding. It is not a Bordetella product. The timer does not confer immunity. A collapsible silicone travel dog bowl is how boarding water is a carried bowl instead of a shared kennel bucket — the same high-contact setting that is why Bordetella is a lifestyle vaccine in the first place.</p>
           <p><strong>Lyme disease:</strong> Generally recommended only for dogs at high risk of tick exposure where Lyme disease is known or likely. Two doses 2–4 weeks apart, then annually just before tick season (WSAVA). Does not replace tick prevention — use both. The Lyme vaccine reduces disease severity if a vaccinated dog is infected but does not provide complete protection.</p>
           <p><strong>Canine influenza (H3N2/H3N8):</strong> For dogs with high-contact lifestyles — boarding, dog shows, competition events, grooming salons. WSAVA suggests considering it for co-housed dogs, such as those in kennels, at shows or in day care. Two doses, generally 2–4 weeks apart per the product leaflet, then annually. A carried travel bowl is household hygiene at those same high-contact drops; it is not a kennel disinfectant spray and it is not an influenza vaccine.</p>
 
@@ -74,14 +74,14 @@ export default function DogVaccinationsGuidePage() {
 
           <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Keep these on hand: letter-size thermal laminating pouches so the rabies certificate and titer printout stay a pocketable legal copy, a digital countdown timer to track the vaccine-to-boarding lead time your vet sets, and a collapsible silicone travel dog bowl so boarding water is a carried bowl. These are educational home-care / recordkeeping / travel-prep / monitoring tools, not a ranked product list, not a substitute for veterinary care, and not a vaccine product. Vaccines and titer test kits are clinic products, not product links.
+            Keep these on hand: letter-size thermal laminating pouches so the rabies certificate and titer printout stay a pocketable legal copy, a soft-sided dog crate for a quiet rest spot at home and on boarding trips, and a collapsible silicone travel dog bowl so boarding water is a carried bowl. These are educational home-care / recordkeeping / travel-prep / monitoring tools, not a ranked product list, not a substitute for veterinary care, and not a vaccine product. Vaccines and titer test kits are clinic products, not product links.
           </p>
 
-          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/collapsible+silicone+travel+dog+bowl?s=health-dog-vaccinations-guide", "/go/amazon-brand/72+hour+digital+countdown+timer?s=health-dog-vaccinations-guide"]} />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/collapsible+silicone+travel+dog+bowl?s=health-dog-vaccinations-guide", "/go/amazon-brand/soft+sided+dog+crate?s=health-dog-vaccinations-guide"]} />
 
           {/* Shop note — live amazon-brand search buttons
               (letter-size thermal laminating pouches /
-              digital countdown timer (hop slug kept) /
+              soft-sided dog crate /
               collapsible silicone travel dog bowl).
               These are educational home-care /
               recordkeeping / travel-prep /
@@ -137,7 +137,7 @@ export default function DogVaccinationsGuidePage() {
               Shop these supplies
             </div>
             <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              Keep these on hand: letter-size thermal laminating pouches, a digital countdown timer, and a collapsible silicone travel dog bowl. Educational home-care / recordkeeping / travel-prep / monitoring tools only.
+              Keep these on hand: letter-size thermal laminating pouches, a soft-sided dog crate, and a collapsible silicone travel dog bowl. Educational home-care / recordkeeping / travel-prep / monitoring tools only.
             </p>
             <div className="flex flex-col gap-3">
               <ShopCtas
@@ -145,8 +145,8 @@ export default function DogVaccinationsGuidePage() {
                 amazonLabel="Browse collapsible silicone travel dog bowl on Amazon →"
               />
               <ShopCtas
-                amazonHref="/go/amazon-brand/72+hour+digital+countdown+timer?s=health-dog-vaccinations-guide"
-                amazonLabel="Browse digital countdown timers on Amazon →"
+                amazonHref="/go/amazon-brand/soft+sided+dog+crate?s=health-dog-vaccinations-guide"
+                amazonLabel="Browse soft-sided dog crates on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/collapsible+silicone+travel+dog+bowl?s=health-dog-vaccinations-guide"

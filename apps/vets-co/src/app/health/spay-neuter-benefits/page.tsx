@@ -9,13 +9,13 @@ const SOURCES = [
   { label: 'Merck Veterinary Manual: Reproductive Physiology of Dogs', url: 'https://www.merckvetmanual.com/dog-owners/reproductive-disorders-of-dogs/management-of-reproduction-in-dogs', publisher: 'Merck Vet Manual' },
   { label: 'Hart BL et al. Front Vet Sci 2020 — Neutering and Health Outcomes', url: 'https://www.frontiersin.org/articles/10.3389/fvets.2020.00388/full', publisher: 'Frontiers in Veterinary Science' },
 ]
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Spay & Neuter Guide', description: 'Benefits, timing, and breed-specific considerations for spay and neuter in dogs.', url: 'https://vets.co/health/spay-neuter-benefits', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-12T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Spay & Neuter Guide', description: 'Benefits, timing, and breed-specific considerations for spay and neuter in dogs.', url: 'https://vets.co/health/spay-neuter-benefits', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-13T00:00:00Z' ,
   citation: SOURCES,
 })
-const med = buildMedicalWebPageSchema({ name: 'Spay & Neuter Guide for Dogs', description: 'Benefits, timing, and evidence for spay and neuter decisions.', url: 'https://vets.co/health/spay-neuter-benefits', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-07' })
+const med = buildMedicalWebPageSchema({ name: 'Spay & Neuter Guide for Dogs', description: 'Benefits, timing, and evidence for spay and neuter decisions.', url: 'https://vets.co/health/spay-neuter-benefits', authorName: 'Vets.co Editorial', lastReviewed: '2026-10-13' })
 const combined = combineSchemas(schema, med)
 const FAQS = [
-  { question: 'Does neutering cause obesity in dogs?', answer: 'Neutering reduces resting metabolic rate by approximately 20-30%. Dogs on the same diet after neutering will gain weight unless portion is reduced. Neutering causes weight gain only if food intake is not adjusted — the surgery itself does not cause obesity. Reduce food by 20-25% after spay/neuter and monitor body condition monthly. An adjustable sliding dog-food scoop is how that 20–25% cut becomes a set mark instead of a guessed handful. Reusable dog-food portion cups keep the smaller daily ration pre-measured so every person in the house feeds the same amount. A dog weight-log book is where monthly body-condition notes go so the next clinic visit has a written trend instead of a remembered guess. These are household tools, not a weight-loss diet and not a substitute for veterinary guidance.' },
+  { question: 'Does neutering cause obesity in dogs?', answer: 'Neutering reduces resting metabolic rate by approximately 20-30%. Dogs on the same diet after neutering will gain weight unless portion is reduced. Neutering causes weight gain only if food intake is not adjusted — the surgery itself does not cause obesity. Reduce food by 20-25% after spay/neuter and monitor body condition monthly. An adjustable sliding dog-food scoop is how that 20–25% cut becomes a set mark instead of a guessed handful. Reusable dog-food portion cups keep the smaller daily ration pre-measured so every person in the house feeds the same amount. A digital pet scale makes monthly weight checks a number your clinic can compare. These are household tools, not a weight-loss diet and not a substitute for veterinary guidance.' },
   { question: 'Does early spay/neuter stunt growth?', answer: 'Early spay/neuter removes the sex hormones that signal growth plate closure. The growth plates remain open longer, resulting in slightly taller dogs with longer limbs. This is generally not clinically significant in small breeds. For large breeds, earlier plate closure may have orthopedic benefits — which is one reason many orthopedic specialists recommend waiting until 12-18 months for large breeds.' },
   { question: 'Can I spay my dog while she is in heat?', answer: 'Spaying during estrus (heat) is more technically complex due to increased blood supply to the reproductive tract but is performed routinely. Most surgeons prefer to wait 8-12 weeks after the end of the heat cycle when possible. Emergency situations (pyometra, unwanted pregnancy) may require surgery regardless of cycle status.' },
 ]
@@ -46,7 +46,7 @@ export default function SpayNeuterPage() {
 </>}
       >
         <div className="carloOS-article">
-          <LastUpdated date="2026-10-12" />
+          <LastUpdated date="2026-10-13" />
 
           <h2>Benefits of Spaying (Females)</h2>
           <p><strong>Pyometra prevention:</strong> Pyometra — life-threatening uterine infection — affects approximately 25% of intact female dogs by age 10. It requires emergency surgery in most cases and carries significant mortality risk in older or ill dogs. Spaying eliminates this risk entirely.</p>
@@ -63,21 +63,21 @@ export default function SpayNeuterPage() {
           <p><strong>Large and giant breeds (over 45 lbs):</strong> Research — particularly UC Davis studies on Golden Retrievers, Labrador Retrievers, and German Shepherds — has found associations between early neuter and increased incidence of certain joint disorders (hip dysplasia, cranial cruciate ligament disease) and some cancers (hemangiosarcoma, mast cell tumors, lymphoma) in these breeds. The hypothesis: sex hormones contribute to musculoskeletal development and immune regulation in ways that are more significant in large breeds.</p>
           <p>Current guidance for large breeds from many internal medicine and orthopedic specialists: consider waiting until 12–18 months for males (or considering alternatives such as vasectomy that preserve sex hormones while preventing reproduction); for females, the pyometra and mammary cancer risk reduction from early spay must be weighed against the orthopedic/cancer risk data. This is an evolving area — discuss with your veterinarian and consider a consultation with a board-certified internist or orthopedist for large breed dogs.</p>
 
-          <p>After the procedure, the metabolic drop is the household job that sits beside the surgical aftercare the clinic already covers. An adjustable sliding dog-food scoop is how the 20–25% portion cut becomes a set mark instead of a guessed handful — it is not a kitchen measuring cup and not a gram scale. Reusable dog-food portion cups keep that smaller daily ration pre-measured so the cut survives a busy week and more than one person feeding. A dog weight-log book is where monthly body-condition notes go so the next clinic visit has a written trend. These are household tools, not treatments. They do not replace a veterinarian, they do not treat pyometra or mammary tumors, and they are not a ranked product list. Ask your veterinarian what the new daily portion should be for this dog.</p>
+          <p>After the procedure, the metabolic drop is the household job that sits beside the surgical aftercare the clinic already covers. An adjustable sliding dog-food scoop is how the 20–25% portion cut becomes a set mark instead of a guessed handful — it is not a kitchen measuring cup and not a gram scale. Reusable dog-food portion cups keep that smaller daily ration pre-measured so the cut survives a busy week and more than one person feeding. A digital pet scale makes monthly weight checks a number your clinic can compare. These are household tools, not treatments. They do not replace a veterinarian, they do not treat pyometra or mammary tumors, and they are not a ranked product list. Ask your veterinarian what the new daily portion should be for this dog.</p>
 
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
 
           <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Keep these on hand: an adjustable sliding dog-food scoop so the 20–25% cut is a set mark, reusable dog-food portion cups so the smaller daily ration is pre-measured for the whole household, and a dog weight-log book so monthly body condition stays written down. These are household tools, not treatments. They do not treat obesity, they do not replace a veterinarian or a weight-management plan, and they are not a ranked product list. </p>
+            Keep these on hand: an adjustable sliding dog-food scoop so the 20–25% cut is a set mark, reusable dog-food portion cups so the smaller daily ration is pre-measured for the whole household, and a digital pet scale so monthly weight checks are a number. These are household tools, not treatments. They do not treat obesity, they do not replace a veterinarian or a weight-management plan, and they are not a ranked product list. </p>
 
-          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/adjustable+sliding+dog+food+scoop?s=health-spay-neuter-benefits", "/go/amazon-brand/reusable+dog+food+portion+cups?s=health-spay-neuter-benefits", "/go/amazon-brand/dog+weight+log+book?s=health-spay-neuter-benefits"]} />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/adjustable+sliding+dog+food+scoop?s=health-spay-neuter-benefits", "/go/amazon-brand/reusable+dog+food+portion+cups?s=health-spay-neuter-benefits", "/go/amazon-brand/digital+pet+scale?s=health-spay-neuter-benefits"]} />
 
           {/* Shop note — live amazon-brand search buttons
               (adjustable sliding dog-food scoop /
               reusable dog-food portion cups /
-              dog weight-log book).
+              digital pet scale).
               ShopCtas hides empty Chewy; never href="#"
               or an empty link. Amazon searches only —
               unused vs #1058 digital+handheld+stopwatch /
@@ -110,8 +110,8 @@ export default function SpayNeuterPage() {
                 amazonLabel="Browse reusable dog-food portion cups on Amazon →"
               />
               <ShopCtas
-                amazonHref="/go/amazon-brand/dog+weight+log+book?s=health-spay-neuter-benefits"
-                amazonLabel="Browse dog weight-log books on Amazon →"
+                amazonHref="/go/amazon-brand/digital+pet+scale?s=health-spay-neuter-benefits"
+                amazonLabel="Browse digital pet scales on Amazon →"
               />
           </div>
           </div>

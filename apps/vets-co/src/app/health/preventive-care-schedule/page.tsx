@@ -16,7 +16,7 @@ const SOURCES = [
 const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Dog Preventive Care Schedule', description: 'Puppy, adult, and senior preventive care timelines for dogs.', url: 'https://vets.co/health/preventive-care-schedule', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-13T00:00:00Z' ,
   citation: SOURCES,
 })
-const med = buildMedicalWebPageSchema({ name: 'Dog Preventive Care Schedule', description: 'Puppy through senior preventive care timelines for dogs.', url: 'https://vets.co/health/preventive-care-schedule', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-07' })
+const med = buildMedicalWebPageSchema({ name: 'Dog Preventive Care Schedule', description: 'Puppy through senior preventive care timelines for dogs.', url: 'https://vets.co/health/preventive-care-schedule', authorName: 'Vets.co Editorial', lastReviewed: '2026-10-13' })
 const combined = combineSchemas(schema, med)
 const FAQS = [
   {
@@ -81,7 +81,7 @@ export default function PreventiveCareSchedulePage() {
               </tbody>
             </table>
           </div>
-          <p>A wall-mounted magnetic monthly planner is how those 6–8, 10–12, and 14–16 week slots stay visible between visits — it is not a hardcover weekly appointment planner, not a dry-erase monthly calendar, and not an analog wall clock. It does not set a vaccine date. A waterproof rear seat hammock is how a not-yet-crate-trained puppy gets to those three booster visits without hopping a dog seat-belt tether or a soft-sided vet-visit carrier. Household ride and calendar gear does not replace the veterinarian who decides DA2PP, rabies, or when heartworm prevention starts.</p>
+          <p>A tick removal tool is for checking your dog after walks between visits; it does not replace the tick preventive your veterinarian chooses. A waterproof rear seat hammock is how a not-yet-crate-trained puppy gets to those three booster visits without hopping a dog seat-belt tether or a soft-sided vet-visit carrier. Household ride and calendar gear does not replace the veterinarian who decides DA2PP, rabies, or when heartworm prevention starts.</p>
 
           <h2>Adult Dog Schedule (1–7 Years)</h2>
           <div className="overflow-x-auto mb-6">
@@ -130,22 +130,22 @@ export default function PreventiveCareSchedulePage() {
 
           <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Keep these on hand: a wall-mounted magnetic monthly planner so the next wellness slot stays on the fridge, a waterproof rear seat hammock so the clinic ride does not soak the back seat, and a folding four-wheel dog stroller so a senior with a six-month mobility assessment can still make the lobby. These are household cadence and clinic-trip tools, not treatments. They do not replace a vaccine, a heartworm test, a fecal exam, or a veterinarian-chosen preventive, and they are not a ranked product list. Heartgard, Sentinel, Interceptor, ProHeart, Bravecto, NexGard, Simparica, and other prescription brands are not product links.
+            Keep these on hand: a tick removal tool for checks after walks, a waterproof rear seat hammock so the clinic ride does not soak the back seat, and a folding four-wheel dog stroller so a senior with a six-month mobility assessment can still make the lobby. These are household cadence and clinic-trip tools, not treatments. They do not replace a vaccine, a heartworm test, a fecal exam, or a veterinarian-chosen preventive, and they are not a ranked product list. Heartgard, Sentinel, Interceptor, ProHeart, Bravecto, NexGard, Simparica, and other prescription brands are not product links.
           </p>
 
-          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/wall+mounted+magnetic+monthly+planner?s=health-preventive-care-schedule", "/go/amazon-brand/waterproof+rear+seat+hammock?s=health-preventive-care-schedule", "/go/amazon-brand/folding+four+wheel+dog+stroller?s=health-preventive-care-schedule"]} />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/tick+removal+tool?s=health-preventive-care-schedule", "/go/amazon-brand/waterproof+rear+seat+hammock?s=health-preventive-care-schedule", "/go/amazon-brand/folding+four+wheel+dog+stroller?s=health-preventive-care-schedule"]} />
 
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop these supplies
             </div>
             <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              Keep these on hand: a wall-mounted magnetic monthly planner, a waterproof rear seat hammock, and a folding four-wheel dog stroller. Everyday cadence and clinic-trip supplies only.
+              Keep these on hand: a tick removal tool, a waterproof rear seat hammock, and a folding four-wheel dog stroller. Everyday cadence and clinic-trip supplies only.
             </p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/wall+mounted+magnetic+monthly+planner?s=health-preventive-care-schedule"
-                amazonLabel="Browse wall-mounted magnetic monthly planners on Amazon →"
+                amazonHref="/go/amazon-brand/tick+removal+tool?s=health-preventive-care-schedule"
+                amazonLabel="Browse tick removal tools on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/waterproof+rear+seat+hammock?s=health-preventive-care-schedule"
