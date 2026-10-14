@@ -32,10 +32,18 @@ export function QuotePrepChecklist({ groups }: { groups: QuotePrepGroup[] }) {
       <p className="mb-4 text-sm font-semibold text-brand-dark" aria-live="polite">
         {done} of {total} checked. The quote links below stay available either way.
       </p>
-      <div className="space-y-6">
+      {/* Each group folds so the checklist fits in 1.5 mobile screens; tap a group to open it. */}
+      <div className="space-y-3">
         {groups.map((group) => (
-          <fieldset key={group.id} className="m-0 min-w-0 border-0 p-0">
-            <legend className="mb-2 font-display text-lg font-bold text-brand-dark">{group.title}</legend>
+          <details key={group.id} className="group rounded-lg border border-brand-border bg-brand-white px-3">
+          <summary className="flex min-h-11 cursor-pointer items-center justify-between gap-3 font-display text-lg font-bold text-brand-dark">
+            <span>{group.title}</span>
+            <span className="text-2xs font-semibold text-brand-text-light">
+              {group.items.filter((item) => checked[item.id]).length}/{group.items.length}
+            </span>
+          </summary>
+          <fieldset className="m-0 min-w-0 border-0 p-0 pb-3">
+            <legend className="sr-only">{group.title}</legend>
             <ul className="m-0 list-none space-y-2 p-0">
               {group.items.map((item) => (
                 <li key={item.id}>
@@ -55,6 +63,7 @@ export function QuotePrepChecklist({ groups }: { groups: QuotePrepGroup[] }) {
               ))}
             </ul>
           </fieldset>
+          </details>
         ))}
       </div>
     </div>
