@@ -7,14 +7,14 @@ import { BreedHealthCard } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'French Bulldog Health — BOAS, IVDD & Skin Conditions | Vets.co', description: 'French Bulldogs have the highest veterinary costs of any dog breed. This guide explains BOAS surgery, IVDD risk, skin fold management.', path: '/breeds/french-bulldog-health', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'French Bulldog Health — Owner Guide', description: 'BOAS, IVDD, skin conditions, and heat risk in French Bulldogs from published veterinary sources.', url: 'https://vets.co/breeds/french-bulldog-health', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'French Bulldog Health — Owner Guide', description: 'BOAS, IVDD, skin conditions, and heat risk in French Bulldogs from published veterinary sources.', url: 'https://vets.co/breeds/french-bulldog-health', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-13T00:00:00Z' })
 
 const medicalSchema = buildMedicalWebPageSchema({
   name: 'French Bulldog Health',
   description: 'BOAS, IVDD, and heat stroke risk in French Bulldogs.',
   url: 'https://vets.co/breeds/french-bulldog-health',
   authorName: 'Vets.co Editorial',
-  lastReviewed: '2026-06-11',
+  lastReviewed: '2026-10-13',
 })
 
 const FAQS = [
@@ -67,7 +67,7 @@ export default function VetsFrenchBulldogHealthPage() {
     >
       <div className="carloOS-article">
 
-        <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-09-06T00:00:00Z" reviewedBy="Editorial team" />
+        <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-10-13T00:00:00Z" reviewedBy="Editorial team" />
 
         <div style={{ background: 'rgba(200,74,42,0.05)', border: '1px solid rgba(200,74,42,0.18)', borderRadius: '10px', padding: '16px 20px', marginBottom: '24px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#C84A2A', marginBottom: '8px' }}>Insurance Note</div>
@@ -98,10 +98,10 @@ export default function VetsFrenchBulldogHealthPage() {
 
         <h2 id="kit">Supplies named on this page</h2>
         <p>
-          Keep these on hand: four-tab dividers so BOAS grades 0–III stay four labeled stacks, an analog outdoor thermometer so the 70°F outdoor limit stays a written cutoff, and a weekly checklist notepad so fold-cleaning two-to-three times a week stays a dated list. These are educational French-bulldog-health / paperwork tools, not a ranked product list, not a substitute for veterinary care, and not a treatment.
+          Keep these on hand: a Y-shaped front-clip harness so the leash does not press on the neck, an analog outdoor thermometer so the 70°F outdoor limit is a reading rather than a guess, and dog wrinkle wipes for routine fold cleaning. These are general care supplies, not a ranked product list, not a substitute for veterinary care, and not a treatment.
         </p>
 
-        <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/four+tab+dividers?s=breeds-french-bulldog-health", "/go/amazon-brand/analog+outdoor+thermometer?s=breeds-french-bulldog-health", "/go/amazon-brand/weekly+checklist+notepad?s=breeds-french-bulldog-health"]} />
+        <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/y+shaped+front+clip+dog+harness?s=breeds-french-bulldog-health", "/go/amazon-brand/analog+outdoor+thermometer?s=breeds-french-bulldog-health", "/go/amazon-brand/dog+wrinkle+wipes?s=breeds-french-bulldog-health"]} />
 
         {/* Shop note — live amazon-brand search buttons
             (four-tab dividers /
@@ -131,20 +131,20 @@ export default function VetsFrenchBulldogHealthPage() {
             Shop these supplies
           </div>
           <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-            Keep these on hand: four-tab dividers, an analog outdoor thermometer, and a weekly checklist notepad. Educational French-bulldog-health / paperwork tools only.
+            Keep these on hand: a Y-shaped front-clip harness, an analog outdoor thermometer, and dog wrinkle wipes. General care supplies only.
           </p>
           <div className="flex flex-col gap-3">
             <ShopCtas
-              amazonHref="/go/amazon-brand/four+tab+dividers?s=breeds-french-bulldog-health"
-              amazonLabel="Browse four-tab dividers on Amazon →"
+              amazonHref="/go/amazon-brand/y+shaped+front+clip+dog+harness?s=breeds-french-bulldog-health"
+              amazonLabel="Browse Y-shaped front-clip dog harnesses on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/analog+outdoor+thermometer?s=breeds-french-bulldog-health"
               amazonLabel="Browse analog outdoor thermometers on Amazon →"
             />
             <ShopCtas
-              amazonHref="/go/amazon-brand/weekly+checklist+notepad?s=breeds-french-bulldog-health"
-              amazonLabel="Browse weekly checklist notepads on Amazon →"
+              amazonHref="/go/amazon-brand/dog+wrinkle+wipes?s=breeds-french-bulldog-health"
+              amazonLabel="Browse dog wrinkle wipes on Amazon →"
             />
           </div>
         </div>

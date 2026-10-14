@@ -1310,6 +1310,23 @@ test('vets fix ST1: mobile sticky bar appears after scrolling with internal next
   await expect(bar).toHaveCount(0)
 })
 
+test('vets fix PB1: breed pages shop topic-matched care products, not paperwork', async ({ page }) => {
+  const expectations: Record<string, string[]> = {
+    '/breeds/beagle-health': ['dog+ear+cleaner+solution', 'maze+slow+feed+dog+bowl', 'digital+pet+food+portion+scale'],
+    '/breeds/chihuahua-health': ['pet+toothbrush+and+enzymatic+toothpaste+kit', 'y+shaped+front+clip+dog+harness', 'dog+ramp'],
+    '/breeds/german-shepherd-health': ['orthopedic+dog+bed', 'dog+traction+rug'],
+    '/breeds/husky-health': ['undercoat+rake+dog', 'dog+cooling+mat'],
+  }
+  for (const [path, slugs] of Object.entries(expectations)) {
+    await page.goto(path, { waitUntil: 'domcontentloaded' })
+    for (const slug of slugs) {
+      await expect(page.locator(`a[href^="/go/amazon-brand/${slug}?"]`).first(), `${path} ${slug}`).toBeAttached()
+    }
+    const html = await page.content()
+    expect(html, path).not.toMatch(/amazon-brand\/(analog\+stopwatch|blank\+index\+cards|recipe\+card\+box|13\+column|desk\+blotter|numbered\+log\+book|top\+bound\+steno|self\+adhesive\+file|academic\+year|8\+column|newsprint)/)
+  }
+})
+
 test('vets fix EM1: under-hero offer shows; email form stays hidden while the subscribe flag is off', async ({ page }) => {
   await page.goto('/', { waitUntil: 'domcontentloaded' })
   await expect(page.locator('a[href="/emergency-triage-card"]').first()).toBeVisible()

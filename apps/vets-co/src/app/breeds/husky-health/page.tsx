@@ -40,7 +40,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Vets.co Editorial',
   publishedAt: '2026-05-28T00:00:00Z',
-  modifiedAt: '2026-05-28T00:00:00Z',
+  modifiedAt: '2026-10-13T00:00:00Z',
 })
 
 const medicalSchema = buildMedicalWebPageSchema({
@@ -49,7 +49,7 @@ const medicalSchema = buildMedicalWebPageSchema({
     'Veterinary owner guide to the most common Siberian Husky health conditions with screening guidance and citations.',
   url: PAGE_URL,
   authorName: 'Vets.co Editorial',
-  lastReviewed: '2026-05-28',
+  lastReviewed: '2026-10-13',
 })
 
 const FAQS = [
@@ -133,7 +133,7 @@ export default function VetsHuskyHealthPage() {
           <ArticleByline
             siteName="Vets.co Editorial"
             publishedAt="2026-05-28T00:00:00Z"
-            updatedAt="2026-09-06T00:00:00Z"
+            updatedAt="2026-10-13T00:00:00Z"
             reviewedBy="Editorial team"
           />
 
@@ -322,10 +322,10 @@ export default function VetsHuskyHealthPage() {
 
           <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Keep these on hand: an academic-year planner so the annual CAER eye exam stays one dated visit covering cataracts, PRA, and corneal dystrophy, an 8-column columnar pad so eyes, hips, thyroid, gastropexy, and platelet review stay one written row, and a newsprint sketch pad so facial crusting sites and PRA furniture- layout cues stay drawn, not guessed. These are educational Siberian-husky- health / paperwork tools, not a ranked product list, not a substitute for veterinary care, and not a treatment.
+            Keep these on hand: an undercoat rake for the double coat, a dog cooling mat for warm days, and a stainless dog water bottle for runs and hikes. These are general care supplies, not a ranked product list, not a substitute for veterinary care, and not a treatment.
           </p>
 
-          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/academic+year+planner?s=breeds-husky-health", "/go/amazon-brand/8+column+columnar+pad?s=breeds-husky-health", "/go/amazon-brand/newsprint+sketch+pad?s=breeds-husky-health"]} />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/undercoat+rake+dog?s=breeds-husky-health", "/go/amazon-brand/dog+cooling+mat?s=breeds-husky-health", "/go/amazon-brand/24+ounce+stainless+hiking+dog+bottle?s=breeds-husky-health"]} />
 
           {/* Shop note — live amazon-brand search buttons
               (academic-year planner /
@@ -354,16 +354,16 @@ export default function VetsHuskyHealthPage() {
             <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/academic+year+planner?s=breeds-husky-health"
-                amazonLabel="Browse academic-year planners on Amazon →"
+                amazonHref="/go/amazon-brand/undercoat+rake+dog?s=breeds-husky-health"
+                amazonLabel="Browse undercoat rakes for dogs on Amazon →"
               />
               <ShopCtas
-                amazonHref="/go/amazon-brand/8+column+columnar+pad?s=breeds-husky-health"
-                amazonLabel="Browse 8-column columnar pads on Amazon →"
+                amazonHref="/go/amazon-brand/dog+cooling+mat?s=breeds-husky-health"
+                amazonLabel="Browse dog cooling mats on Amazon →"
               />
               <ShopCtas
-                amazonHref="/go/amazon-brand/newsprint+sketch+pad?s=breeds-husky-health"
-                amazonLabel="Browse newsprint sketch pads on Amazon →"
+                amazonHref="/go/amazon-brand/24+ounce+stainless+hiking+dog+bottle?s=breeds-husky-health"
+                amazonLabel="Browse 24-ounce stainless hiking dog bottles on Amazon →"
               />
           </div>
           </div>
