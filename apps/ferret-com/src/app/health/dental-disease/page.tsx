@@ -18,6 +18,16 @@ import {
 
 const SOURCES = [
   {
+    label: "Merck Veterinary Manual — Routine Health Care for Ferrets: dental care, anesthesia for cleaning, toothpaste",
+    url: "https://www.merckvetmanual.com/all-other-pets/ferrets/routine-health-care-for-ferrets",
+    publisher: "Merck Veterinary Manual",
+  },
+  {
+    label: "Lafeber — Care of the Ferret (2020): lifespan and annual dental cleaning over 3 years",
+    url: "https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf",
+    publisher: "Lafeber Company",
+  },
+  {
     label: "Quesenberry KE, Carpenter JW (eds.). Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery. 3rd ed. Saunders/Elsevier — ferret gastrointestinal and dental chapters covering periodontal disease and oral-cavity neoplasia. (general reference; not checked against this page)",
     url: "https://www.elsevier.com/books/ferrets-rabbits-and-rodents/quesenberry/978-1-4160-6621-7",
     publisher: "Elsevier/Saunders",
@@ -70,7 +80,7 @@ const medSchema = buildMedicalWebPageSchema({
     'Clinical reference on dental and periodontal disease in domestic ferrets, including prevention, staging, and treatment.',
   url: 'https://ferret.com/health/dental-disease',
   authorName: 'Ferret.com Editorial',
-  lastReviewed: '2026-05-28',
+  lastReviewed: '2026-10-13',
 })
 
 
@@ -83,12 +93,12 @@ const FAQS = [
   {
     question: 'What toothpaste is safe for ferrets?',
     answer:
-      "Enzymatic pet toothpaste — chicken, malt, or seafood flavors — formulated for cats or dogs. Never use human toothpaste: fluoride is potentially toxic in the doses a ferret would swallow, and xylitol (in some human toothpastes) is acutely dangerous to most small mammals. CET and Virbac are the most widely-stocked enzymatic pet pastes; both are accepted by most ferrets.",
+      "Enzymatic pet toothpaste — chicken, malt, or seafood flavors — formulated for cats or dogs. Never use human toothpaste containing fluoride; it is not meant to be swallowed and could be toxic (Merck). Merck notes that poultry-flavored pet toothpaste is available from veterinarians.",
   },
   {
     question: 'Do ferrets really need anesthetized dental cleanings?',
     answer:
-      "Yes, if scaling and probing below the gumline is needed. The American Veterinary Dental College position is that meaningful periodontal evaluation and cleaning requires general anesthesia in any species — anesthesia-free \"cleanings\" address visible tartar but not the subgingival disease that actually determines tooth loss. Ferret anesthesia is higher-risk than canine or feline; choose an exotic-pet practice with isoflurane or sevoflurane and active intraoperative monitoring.",
+      "Yes, if scaling and probing below the gumline is needed. Merck says dental cleaning to remove plaque and prevent gum disease and tooth loss requires general anesthesia, and a thorough mouth exam may too. Ferret anesthesia is higher-risk than canine or feline; choose an exotic-pet practice with isoflurane or sevoflurane and active intraoperative monitoring.",
   },
   {
     question: 'My ferret refuses brushing — what are my options?',
@@ -103,7 +113,7 @@ const FAQS = [
   {
     question: 'How often should the anesthetized cleaning happen?',
     answer:
-      "Roughly annually from about age 2-3 onward in most ferrets, more frequently in animals with established periodontal disease, less frequently if home brushing has been excellent from kithood. Your exotic-pet vet will set cadence based on the gingival picture at the annual exam.",
+      "Lafeber recommends annual dental cleaning for ferrets over 3 years old, and Merck recommends a yearly vet exam of the teeth and gums. Your exotic-pet vet will set cadence based on the gingival picture at the annual exam.",
   },
 ]
 const faqSchema = buildFAQSchema({ questions: FAQS })
@@ -180,6 +190,12 @@ export default function FerretDentalDiseasePage() {
             reviewedBy="Editorial team"
           />
           <LastUpdated date="2026-10-13" />
+          <div className="rounded-lg border-l-4 border-brand-primary bg-brand-white p-5 my-6" data-testid="short-answer">
+            <h2 className="font-display text-lg font-bold mb-2">The short answer</h2>
+            <p className="text-base leading-relaxed text-brand-text-mid m-0">
+              Have a vet examine your ferret&apos;s teeth and gums every year. Professional cleaning requires general anesthesia, and brushing with a pet toothpaste (never fluoride human toothpaste) and dry ferret food help limit plaque (<a href="https://www.merckvetmanual.com/all-other-pets/ferrets/routine-health-care-for-ferrets">Merck</a>). Lafeber recommends annual dental cleaning for ferrets over 3 years old (<a href="https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf">Lafeber</a>). Drooling, pawing at the mouth, dropping food or facial swelling mean a vet visit.
+            </p>
+          </div>
 
           <DropCap>
             Open a healthy 2-year-old ferret&apos;s mouth and you will almost
@@ -187,17 +203,16 @@ export default function FerretDentalDiseasePage() {
             carnassials. Open a 4-year-old&apos;s and the picture is usually
             worse — visible tartar on multiple teeth, often reddened gum
             margins, sometimes mild recession. Dental disease in ferrets is
-            not unusual; it is the default outcome of feeding kibble to a
-            high-protein carnivore for years without an active dental routine.
+            not unusual, which is why an annual tooth exam and a home
+            routine matter.
           </DropCap>
 
                     <p>
-            Ferrets accumulate dental tartar rapidly on kibble diets, and
-            clinically meaningful gingivitis is commonly visible by age 2-3.
-            The standard prevention pattern across the exotic-pet veterinary
-            literature is: daily brushing with an enzymatic pet toothpaste
-            from kithood, an annual oral exam at the exotic-pet vet, and
-            anesthetized scaling roughly yearly once tartar is established.
+            Merck recommends a yearly veterinary exam of the teeth and gums;
+            cleaning requires general anesthesia, and brushing plus dry ferret
+            food help minimize plaque. Lafeber adds that good-quality kibble
+            reduces tartar and gingivitis and recommends annual dental cleaning
+            for ferrets over 3 years old.
             Ignored periodontal disease progresses through gingivitis to
             periodontitis to tooth loss, and root abscesses can become
             systemic infections in older ferrets.
@@ -230,8 +245,8 @@ export default function FerretDentalDiseasePage() {
               not reach.
             </li>
             <li>
-              <strong>Long lifespan exposure.</strong> Ferrets routinely live
-              5-8 years. That is plenty of time for cumulative plaque, calculus,
+              <strong>Long lifespan exposure.</strong> Ferrets live an
+              average of 6 to 8 years (Lafeber). That is plenty of time for cumulative plaque, calculus,
               and subgingival inflammation to progress to clinical periodontitis
               if no intervention happens.
             </li>
@@ -446,9 +461,9 @@ export default function FerretDentalDiseasePage() {
             <li>
               <strong>Pre-anesthetic workup.</strong> CBC, chemistry, and
               physical exam, sometimes a cardiac auscultation or echocardiogram
-              in senior ferrets to evaluate anesthesia risk. A pre-operative
-              fast of only 3-4 hours — long fasting is contraindicated in
-              ferrets because of insulinoma risk.
+              in senior ferrets to evaluate anesthesia risk. Follow your
+              vet&apos;s fasting instructions exactly; long fasts are risky for
+              ferrets with insulinoma.
             </li>
             <li>
               <strong>General anesthesia.</strong> Typically isoflurane or
