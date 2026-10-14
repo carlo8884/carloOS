@@ -116,6 +116,7 @@ function band(total: number): Band {
 }
 
 export default function CatGrimaceScale() {
+  const [step, setStep] = useState(0)
   const [answers, setAnswers] = useState<Record<string, number | null>>({
     ears: null,
     orbital: null,
@@ -139,7 +140,21 @@ export default function CatGrimaceScale() {
 
   return (
     <div className="rounded-lg border border-brand-border bg-brand-surface p-6 sm:p-8">
-      {ACTION_UNITS.map((u, ui) => (
+      {/* One question at a time keeps the tool inside 1.5 mobile screens. */}
+      <div className="mb-4 flex items-center justify-between gap-3" data-quiz-step>
+        <span className="text-2xs font-bold uppercase tracking-eyebrow text-brand-text-light" aria-live="polite">
+          Question {step + 1} of {ACTION_UNITS.length}
+        </span>
+        <span className="flex gap-2">
+          {ACTION_UNITS.map((u, ui) => (
+            <button key={u.id} type="button" onClick={() => setStep(ui)} aria-current={ui === step ? 'step' : undefined} aria-label={`Question ${ui + 1}${answers[u.id] != null ? ', answered' : ''}`}
+              className={['inline-flex h-6 min-w-6 items-center justify-center rounded-full border px-2 text-2xs font-bold', ui === step ? 'border-brand-primary bg-brand-primary text-white' : answers[u.id] != null ? 'border-brand-primary text-brand-primary bg-brand-white' : 'border-brand-border text-brand-text-light bg-brand-white'].join(' ')}>
+              {ui + 1}
+            </button>
+          ))}
+        </span>
+      </div>
+      {ACTION_UNITS.map((u, ui) => ui !== step ? null : (
         <fieldset key={u.id} className="mb-6">
           <legend className="mb-1 text-sm font-bold text-brand-text-dark">
             {ui + 1}. {u.prompt}
@@ -162,7 +177,7 @@ export default function CatGrimaceScale() {
                     type="radio"
                     name={u.id}
                     checked={checked}
-                    onChange={() => setAnswers((p) => ({ ...p, [u.id]: opt.score }))}
+                    onChange={() => { setAnswers((p) => ({ ...p, [u.id]: opt.score })); if (ui < ACTION_UNITS.length - 1) window.setTimeout(() => setStep(ui + 1), 250) }}
                     className="mt-0.5 shrink-0"
                   />
                   <span className="text-brand-text-dark leading-snug">

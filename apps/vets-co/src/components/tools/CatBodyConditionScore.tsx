@@ -104,6 +104,7 @@ function band(bcs: number): Band {
 }
 
 export default function CatBodyConditionScore() {
+  const [step, setStep] = useState(0)
   const [answers, setAnswers] = useState<Record<string, number | null>>({
     ribs: null,
     waist: null,
@@ -127,7 +128,21 @@ export default function CatBodyConditionScore() {
 
   return (
     <div className="rounded-lg border border-brand-border bg-brand-surface p-6 sm:p-8">
-      {QUESTIONS.map((q, qi) => (
+      {/* One question at a time keeps the tool inside 1.5 mobile screens. */}
+      <div className="mb-4 flex items-center justify-between gap-3" data-quiz-step>
+        <span className="text-2xs font-bold uppercase tracking-eyebrow text-brand-text-light" aria-live="polite">
+          Question {step + 1} of {QUESTIONS.length}
+        </span>
+        <span className="flex gap-2">
+          {QUESTIONS.map((q, qi) => (
+            <button key={q.id} type="button" onClick={() => setStep(qi)} aria-current={qi === step ? 'step' : undefined} aria-label={`Question ${qi + 1}${answers[q.id] != null ? ', answered' : ''}`}
+              className={['inline-flex h-6 min-w-6 items-center justify-center rounded-full border px-2 text-2xs font-bold', qi === step ? 'border-brand-primary bg-brand-primary text-white' : answers[q.id] != null ? 'border-brand-primary text-brand-primary bg-brand-white' : 'border-brand-border text-brand-text-light bg-brand-white'].join(' ')}>
+              {qi + 1}
+            </button>
+          ))}
+        </span>
+      </div>
+      {QUESTIONS.map((q, qi) => qi !== step ? null : (
         <fieldset key={q.id} className="mb-6">
           <legend className="mb-1 text-sm font-bold text-brand-text-dark">
             {qi + 1}. {q.prompt}
@@ -150,7 +165,7 @@ export default function CatBodyConditionScore() {
                     type="radio"
                     name={q.id}
                     checked={checked}
-                    onChange={() => setAnswers((p) => ({ ...p, [q.id]: opt.score }))}
+                    onChange={() => { setAnswers((p) => ({ ...p, [q.id]: opt.score })); if (qi < QUESTIONS.length - 1) window.setTimeout(() => setStep(qi + 1), 250) }}
                     className="mt-0.5 shrink-0"
                   />
                   <span className="text-brand-text-dark leading-snug">{opt.label}</span>

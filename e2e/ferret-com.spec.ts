@@ -1417,9 +1417,8 @@ test('ferret design CI1: every article keeps one tiny disclosure before the firs
 })
 
 test('ferret design CI1: calculators stay within their height budget on mobile', async ({ page }) => {
-  // Budget = 1.5 mobile screens (1266px). Tools already over it are pinned at
-  // today's height so they cannot grow; shrink them and lower the pin.
-  const PINNED: Record<string, number> = { '/tools/ferret-body-condition-score': 1530, '/tools/ferret-grimace-scale': 1980 }
+  // Budget = 1.5 mobile screens (1266px), no exemptions (CB1 removed the pins).
+  const PINNED: Record<string, number> = {}
   await page.setViewportSize({ width: 390, height: 844 })
   const problems: string[] = []
   for (const path of designArticlePaths('ferret-com', ['tools'])) {
@@ -1443,5 +1442,19 @@ test('ferret TT1: standalone links and buttons on /reviews/best-ferret-cage are 
     await page.goto('/reviews/best-ferret-cage')
     const small = await page.$$eval('main a, main button', (els) => els.filter((e) => { if ((e as HTMLElement).offsetParent === null) return false; const r = e.getBoundingClientRect(); return r.height < 24 && !e.closest('p, li, td') }).map((e) => (e.textContent || '').trim().slice(0, 60)))
     expect(small, `${width}px: ${small.join(' | ')}`).toEqual([])
+  }
+})
+
+test('ferret CB1: body condition and grimace tools ask one question at a time and still reach a result', async ({ page }) => {
+  for (const path of ['/tools/ferret-body-condition-score', '/tools/ferret-grimace-scale']) {
+    await page.goto(path)
+    const step = page.locator('[data-quiz-step]')
+    await expect(step).toContainText('Question 1 of')
+    const total = Number(((await step.locator('span').first().textContent()) || '').match(/of (\d+)/)![1])
+    for (let i = 0; i < total; i++) {
+      await expect(step).toContainText(`Question ${i + 1} of`)
+      await page.locator('main fieldset input[type="radio"]').first().check()
+    }
+    await expect(page.locator('main')).toContainText(/\/(9|10)|score/i)
   }
 })
