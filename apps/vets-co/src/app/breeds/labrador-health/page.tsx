@@ -15,7 +15,7 @@ const medicalSchema = buildMedicalWebPageSchema({
   description: 'Hip dysplasia, EIC, and obesity management in Labradors.',
   url: 'https://vets.co/breeds/labrador-health',
   authorName: 'Vets.co Editorial',
-  lastReviewed: '2026-10-07',
+  lastReviewed: '2026-10-13',
 })
 
 const FAQS = [
@@ -103,9 +103,9 @@ export default function VetsLabradorHealthPage() {
 
         <h2 id="kit">Supplies named on this page</h2>
         <p>
-          Keep these on hand: a flexible sewing tape measure so the visible waist and abdominal tuck stay a written BCS check, a bound composition book so the monthly weigh stays the same-scale same-time log, and a letter-size document frame so the OFA hip and elbow result stays one posted certificate. These are educational Labrador-health / paperwork tools, not a ranked product list, not a substitute for veterinary care, and not a treatment. </p>
+          Keep these on hand: a flexible sewing tape measure so the visible waist and abdominal tuck stay a measured body-condition check, a maze slow-feed bowl for a food-motivated eater, and a dog ear cleaner solution for routine ear cleaning (ask your vet how often). These are general care supplies, not a ranked product list, not a substitute for veterinary care, and not a treatment. </p>
 
-        <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/flexible+sewing+tape+measure?s=breeds-labrador-health", "/go/amazon-brand/bound+composition+book?s=breeds-labrador-health", "/go/amazon-brand/letter+size+document+frame?s=breeds-labrador-health"]} />
+        <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/flexible+sewing+tape+measure?s=breeds-labrador-health", "/go/amazon-brand/maze+slow+feed+dog+bowl?s=breeds-labrador-health", "/go/amazon-brand/dog+ear+cleaner+solution?s=breeds-labrador-health"]} />
 
         {/* Shop note — live amazon-brand search buttons
             (flexible sewing tape measure /
@@ -143,12 +143,12 @@ export default function VetsLabradorHealthPage() {
               amazonLabel="Browse flexible sewing tape measures on Amazon →"
             />
             <ShopCtas
-              amazonHref="/go/amazon-brand/bound+composition+book?s=breeds-labrador-health"
-              amazonLabel="Browse bound composition books on Amazon →"
+              amazonHref="/go/amazon-brand/maze+slow+feed+dog+bowl?s=breeds-labrador-health"
+              amazonLabel="Browse maze slow-feed dog bowls on Amazon →"
             />
             <ShopCtas
-              amazonHref="/go/amazon-brand/letter+size+document+frame?s=breeds-labrador-health"
-              amazonLabel="Browse letter-size document frames on Amazon →"
+              amazonHref="/go/amazon-brand/dog+ear+cleaner+solution?s=breeds-labrador-health"
+              amazonLabel="Browse dog ear cleaner solutions on Amazon →"
             />
           </div>
         </div>

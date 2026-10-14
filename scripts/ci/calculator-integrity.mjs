@@ -9516,9 +9516,9 @@ const CALCULATORS = [
     id: 'vets · senior-bloodwork-guide hops',
     file: 'apps/vets-co/src/app/health/senior-bloodwork-guide/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/letter\+size\+expanding\+file\+organizer\?s=health-senior-bloodwork-guide/, label: 'letter-size expanding-file-organizer search hop (matches on-page serial CBC / chemistry / SDMA printout copy; unique vs pet+medical+records+binder / pet+vaccination+record+book / dog+weight+log+book / waterproof+field+notebook)' },
+      { re: /amazon-brand\/soft\+pet\+carrier\?s=health-senior-bloodwork-guide/, label: 'soft-pet-carrier search hop (topic-matched care product; replaced a paperwork hop in the 2026-10-13 product policy change)' },
       { re: /amazon-brand\/sterile\+urine\+specimen\+cup\?s=health-senior-bloodwork-guide/, label: 'sterile urine-specimen-cup search hop (matches on-page first-morning free-catch / home urinalysis copy; unique vs fecal+sample+collection+kit / leak-proof+specimen+bags / equine+fecal+sample+container)' },
-      { re: /amazon-brand\/12\+hour\+mechanical\+kitchen\+timer\?s=health-senior-bloodwork-guide/, label: '12-hour mechanical kitchen-timer search hop (matches on-page pre-chemistry fasting-glucose window copy; unique vs one+minute+kitchen+timer / digital+handheld+stopwatch / aquarium+light+timer)' },
+      { re: /amazon-brand\/digital\+pet\+scale\?s=health-senior-bloodwork-guide/, label: 'digital-pet-scale search hop (topic-matched care product; replaced a paperwork hop in the 2026-10-13 product policy change)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
     ],
     mustExclude: [
@@ -9554,7 +9554,7 @@ const CALCULATORS = [
     mustInclude: [
       { re: /amazon-brand\/double\+door\+wire\+dog\+crate\?s=health-canine-influenza/, label: 'double-door wire-dog-crate search hop (matches on-page 7-day post-boarding isolation copy; unique vs dog+recovery+crate / soft+sided+dog+crate / wire+dog+crate+with+divider+panel / hard+sided+airline+dog+crate)' },
       { re: /amazon-brand\/pet\+safe\+kennel\+disinfectant\+spray\?s=health-canine-influenza/, label: 'pet-safe kennel-disinfectant-spray search hop (matches on-page bowls / kennel-surface contamination copy; unique vs accelerated+hydrogen+peroxide+disinfectant / enzymatic+pet+stain / small+animal+cage+cleaner)' },
-      { re: /amazon-brand\/analog\+wall\+clock\+with\+second\+hand\?s=health-canine-influenza/, label: 'analog wall-clock-with-second-hand search hop (matches on-page rapid / labored breathing one-minute-count copy; unique vs digital+pet+thermometer / cool+mist+humidifier / digital+handheld+stopwatch)' },
+      { re: /amazon-brand\/digital\+pet\+thermometer\?s=health-canine-influenza/, label: 'digital-pet-thermometer search hop (topic-matched care product; replaced a paperwork hop in the 2026-10-13 product policy change)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
     ],
     mustExclude: [
@@ -9626,7 +9626,7 @@ const CALCULATORS = [
     mustInclude: [
       { re: /amazon-brand\/narrow\+neck\+glass\+water\+carafe\?s=health-vomiting-diarrhea-pets/, label: 'narrow-neck glass water-carafe search hop (matches on-page hydration-watch / still-drinking copy; unique vs unflavored+pediatric+electrolyte / kitchen+liquid+measuring+pitcher / shallow+lipped+dog+saucer)' },
       { re: /amazon-brand\/2\+quart\+stainless\+saucepan\+with\+lid\?s=health-vomiting-diarrhea-pets/, label: '2-quart stainless-saucepan-with-lid search hop (matches on-page bland-diet prep copy; unique vs mini+rice+cooker / glass+meal+prep+containers)' },
-      { re: /amazon-brand\/pocket\+spiral\+memo\+pad\?s=health-vomiting-diarrhea-pets/, label: 'pocket spiral memo-pad search hop (matches on-page recovery-monitoring / episode-timing copy; unique vs waterproof+field+notebook / dog+weight+log+book)' },
+      { re: /amazon-brand\/quilted\+disposable\+underpads\?s=health-vomiting-diarrhea-pets/, label: 'quilted-disposable-underpads search hop (topic-matched care product; replaced a paperwork hop in the 2026-10-13 product policy change)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
     ],
     mustExclude: [
@@ -9661,7 +9661,7 @@ const CALCULATORS = [
     mustInclude: [
       { re: /amazon-brand\/elevated\+mesh\+dog\+cot\?s=health-pain-management-dogs/, label: 'elevated mesh dog-cot search hop (matches on-page rest / sleeping-more / hesitation-before-rising copy; unique vs extra+large+bolster+dog+lounge / egg+crate+foam+dog+kennel+pad / orthopedic+dog+bed)' },
       { re: /amazon-brand\/clear\+adhesive\+non\+slip\+stair\+treads\?s=health-pain-management-dogs/, label: 'clear adhesive non-slip stair-treads search hop (matches on-page stairs-slowly / non-slip-flooring / mobility-support copy; unique vs carpeted+wooden+pet+steps / dog+ramp / dog+traction+rug)' },
-      { re: /amazon-brand\/hardcover\+weekly\+appointment\+planner\?s=health-pain-management-dogs/, label: 'hardcover weekly appointment-planner search hop (matches on-page journaling pain-scores-for-the-vet copy; unique vs a5+hardcover+dot+grid+notebook / pocket+spiral+memo+pad / waterproof+field+notebook)' },
+      { re: /amazon-brand\/orthopedic\+dog\+bed\?s=health-pain-management-dogs/, label: 'orthopedic-dog-bed search hop (topic-matched care product; replaced a paperwork hop in the 2026-10-13 product policy change)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
     ],
     mustExclude: [
@@ -9677,7 +9677,7 @@ const CALCULATORS = [
     id: 'vets · senior-pet-care hops',
     file: 'apps/vets-co/src/app/health/senior-pet-care/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/letter\+size\+plastic\+file\+box\?s=health-senior-pet-care/, label: 'letter-size plastic file-box search hop (matches on-page biannual-exam / CBC / chemistry / SDMA / blood-pressure printout copy; unique vs letter+size+expanding+file+organizer / pet+medical+records+binder / pet+vaccination+record+book / hardcover+weekly+appointment+planner)' },
+      { re: /amazon-brand\/orthopedic\+dog\+bed\?s=health-senior-pet-care/, label: 'orthopedic-dog-bed search hop (topic-matched care product; replaced a paperwork hop in the 2026-10-13 product policy change)' },
       { re: /amazon-brand\/plug\+in\+heated\+pet\+mat\?s=health-senior-pet-care/, label: 'plug-in heated pet-mat search hop (matches on-page quality-of-life / rest-and-comfort copy; unique vs elevated+mesh+dog+cot / extra+large+bolster+dog+lounge / egg+crate+foam+dog+kennel+pad / orthopedic+dog+bed / self+warming+dog+mat)' },
       { re: /amazon-brand\/battery\+motion\+sensor\+night\+light\?s=health-senior-pet-care/, label: 'battery motion-sensor night-light search hop (matches on-page CDS / DISHAA / night-wandering / vocalizing observation copy; unique vs plug+in+night+light / analog+wall+clock+with+second+hand / handheld+aa+led+flashlight)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -9870,7 +9870,7 @@ const CALCULATORS = [
     file: 'apps/vets-co/src/app/health/dog-vaccinations-guide/page.tsx',
     mustInclude: [
       { re: /amazon-brand\/collapsible\+silicone\+travel\+dog\+bowl/, label: 'on-page product Amazon search hop' },
-      { re: /amazon-brand\/72\+hour\+digital\+countdown\+timer\?s=health-dog-vaccinations-guide/, label: '72-hour digital countdown-timer search hop (matches on-page Bordetella 72-hour boarding window copy; unique vs 12+hour+mechanical+kitchen+timer / analog+wall+clock+with+second+hand / digital+handheld+stopwatch)' },
+      { re: /amazon-brand\/soft\+sided\+dog\+crate\?s=health-dog-vaccinations-guide/, label: 'soft-sided-dog-crate search hop (topic-matched care product; replaced a paperwork hop in the 2026-10-13 product policy change)' },
       { re: /amazon-brand\/collapsible\+silicone\+travel\+dog\+bowl\?s=health-dog-vaccinations-guide/, label: 'collapsible silicone travel dog-bowl search hop (matches on-page boarding / daycare / puppy-series shared-water copy; unique vs 24+ounce+stainless+hiking+dog+bottle / insulated+pet+water+bowl / weighted+ceramic+dog+water+bowl / shallow+lipped+dog+saucer)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
     ],
@@ -11445,8 +11445,8 @@ const CALCULATORS = [
     file: 'apps/vets-co/src/app/breeds/labrador-health/page.tsx',
     mustInclude: [
       { re: /amazon-brand\/flexible\+sewing\+tape\+measure\?s=breeds-labrador-health/, label: 'flexible-sewing-tape-measure search hop (matches on-page visible-waist / abdominal-tuck BCS copy; unique vs handheld+tally+counter / basic+desktop+calculator / digital+pet+scale)' },
-      { re: /amazon-brand\/bound\+composition\+book\?s=breeds-labrador-health/, label: 'bound-composition-book search hop (matches on-page monthly same-scale weigh-log copy; unique vs spiral+notebook / reporter+notebook / quad+ruled+graph+pad)' },
-      { re: /amazon-brand\/letter\+size\+document\+frame\?s=breeds-labrador-health/, label: 'letter-size-document-frame search hop (matches on-page OFA hip-and-elbow certificate copy; unique vs letter+size+file+jacket / clasp+envelope+letter+size / blank+pedigree+chart)' },
+      { re: /amazon-brand\/maze\+slow\+feed\+dog\+bowl\?s=breeds-labrador-health/, label: 'maze-slow-feed-dog-bowl search hop (topic-matched care product; replaced a paperwork hop in the 2026-10-13 product policy change)' },
+      { re: /amazon-brand\/dog\+ear\+cleaner\+solution\?s=breeds-labrador-health/, label: 'dog-ear-cleaner-solution search hop (topic-matched care product; replaced a paperwork hop in the 2026-10-13 product policy change)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
@@ -11463,8 +11463,8 @@ const CALCULATORS = [
     id: 'vets · golden-retriever-health hops',
     file: 'apps/vets-co/src/app/breeds/golden-retriever-health/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/paint\+chip\+sample\+cards\?s=breeds-golden-retriever-health/, label: 'paint-chip-sample-cards search hop (matches on-page gum-color baseline / pale-or-white-gums copy; unique vs round+color+coding+labels / assorted+highlighter+set / dog+gum+color+assessment+chart)' },
-      { re: /amazon-brand\/18\+month\+wall\+calendar\?s=breeds-golden-retriever-health/, label: '18-month-wall-calendar search hop (matches on-page age-6 ultrasound / age-8 every-6-month visit copy; unique vs monthly+desk+pad+calendar / hardcover+weekly+appointment+planner / wall+mounted+magnetic+monthly+planner)' },
+      { re: /amazon-brand\/dog\+ear\+cleaner\+solution\?s=breeds-golden-retriever-health/, label: 'dog-ear-cleaner-solution search hop (topic-matched care product; replaced a paperwork hop in the 2026-10-13 product policy change)' },
+      { re: /amazon-brand\/orthopedic\+dog\+bed\?s=breeds-golden-retriever-health/, label: 'orthopedic-dog-bed search hop (topic-matched care product; replaced a paperwork hop in the 2026-10-13 product policy change)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
@@ -11481,9 +11481,9 @@ const CALCULATORS = [
     id: 'vets · german-shepherd-health hops',
     file: 'apps/vets-co/src/app/breeds/german-shepherd-health/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/top\+bound\+steno\+pad\?s=breeds-german-shepherd-health/, label: 'top-bound-steno-pad search hop (matches on-page hind-limb wobble / knuckling after-age-5 DM-workup copy; unique vs spiral+notebook / reporter+notebook / bound+composition+book / dot+grid+notebook)' },
-      { re: /amazon-brand\/mechanical\+kitchen\+timer\?s=breeds-german-shepherd-health/, label: 'mechanical-kitchen-timer search hop (matches on-page avoid-exercise-immediately-after-eating GDV copy; unique vs 48+hour+digital+kitchen+timer / 30+minute+sand+hourglass+timer / hardcover+weekly+appointment+planner)' },
-      { re: /amazon-brand\/self\+adhesive\+file\+folder\+labels\?s=breeds-german-shepherd-health/, label: 'self-adhesive-file-folder-labels search hop (matches on-page OFA hip-and-elbow / SOD1 DNA / gastropexy-record copy; unique vs round+color+coding+labels / 3+tab+dividers / removable+page+flags)' },
+      { re: /amazon-brand\/orthopedic\+dog\+bed\?s=breeds-german-shepherd-health/, label: 'orthopedic-dog-bed search hop (topic-matched care product; replaced a paperwork hop in the 2026-10-13 product policy change)' },
+      { re: /amazon-brand\/maze\+slow\+feed\+dog\+bowl\?s=breeds-german-shepherd-health/, label: 'maze-slow-feed-dog-bowl search hop (topic-matched care product; replaced a paperwork hop in the 2026-10-13 product policy change)' },
+      { re: /amazon-brand\/dog\+traction\+rug\?s=breeds-german-shepherd-health/, label: 'dog-traction-rug search hop (topic-matched care product; replaced a paperwork hop in the 2026-10-13 product policy change)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
@@ -11500,9 +11500,9 @@ const CALCULATORS = [
     id: 'vets · french-bulldog-health hops',
     file: 'apps/vets-co/src/app/breeds/french-bulldog-health/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/four\+tab\+dividers\?s=breeds-french-bulldog-health/, label: 'four-tab-dividers search hop (matches on-page BOAS grade 0–III copy; unique vs 3+tab+dividers / removable+page+flags / self+adhesive+file+folder+labels)' },
+      { re: /amazon-brand\/y\+shaped\+front\+clip\+dog\+harness\?s=breeds-french-bulldog-health/, label: 'y-shaped-front-clip-dog-harness search hop (topic-matched care product; replaced a paperwork hop in the 2026-10-13 product policy change)' },
       { re: /amazon-brand\/analog\+outdoor\+thermometer\?s=breeds-french-bulldog-health/, label: 'analog-outdoor-thermometer search hop (matches on-page 70°F outdoor-limit / heat-stroke copy; unique vs mechanical+kitchen+timer / 48+hour+digital+kitchen+timer / dog+cooling+mat / dog+cooling+vest)' },
-      { re: /amazon-brand\/weekly\+checklist\+notepad\?s=breeds-french-bulldog-health/, label: 'weekly-checklist-notepad search hop (matches on-page fold-cleaning 2–3 times weekly copy; unique vs hardcover+weekly+appointment+planner / monthly+desk+pad+calendar / 18+month+wall+calendar)' },
+      { re: /amazon-brand\/dog\+wrinkle\+wipes\?s=breeds-french-bulldog-health/, label: 'dog-wrinkle-wipes search hop (topic-matched care product; replaced a paperwork hop in the 2026-10-13 product policy change)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
@@ -11519,9 +11519,9 @@ const CALCULATORS = [
     id: 'vets · beagle-health hops',
     file: 'apps/vets-co/src/app/breeds/beagle-health/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/analog\+stopwatch\?s=breeds-beagle-health/, label: 'analog-stopwatch search hop (matches on-page seizure-duration / five-minute emergency copy; unique vs mechanical+kitchen+timer / 48+hour+digital+kitchen+timer / analog+outdoor+thermometer)' },
-      { re: /amazon-brand\/blank\+index\+cards\?s=breeds-beagle-health/, label: 'blank-index-cards search hop (matches on-page document-seizures date/duration copy; unique vs ruled+index+cards / top+bound+steno+pad / bound+composition+book)' },
-      { re: /amazon-brand\/recipe\+card\+box\?s=breeds-beagle-health/, label: 'recipe-card-box search hop (matches on-page measure-every-meal / never-free-feed copy; unique vs four+tab+dividers / weekly+checklist+notepad / hardcover+weekly+appointment+planner)' },
+      { re: /amazon-brand\/dog\+ear\+cleaner\+solution\?s=breeds-beagle-health/, label: 'dog-ear-cleaner-solution search hop (topic-matched care product; replaced a paperwork hop in the 2026-10-13 product policy change)' },
+      { re: /amazon-brand\/maze\+slow\+feed\+dog\+bowl\?s=breeds-beagle-health/, label: 'maze-slow-feed-dog-bowl search hop (topic-matched care product; replaced a paperwork hop in the 2026-10-13 product policy change)' },
+      { re: /amazon-brand\/digital\+pet\+food\+portion\+scale\?s=breeds-beagle-health/, label: 'digital-pet-food-portion-scale search hop (topic-matched care product; replaced a paperwork hop in the 2026-10-13 product policy change)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
@@ -11538,9 +11538,9 @@ const CALCULATORS = [
     id: 'vets · yorkshire-terrier-health hops',
     file: 'apps/vets-co/src/app/breeds/yorkshire-terrier-health/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/two\+column\+ledger\+pad\?s=breeds-yorkshire-terrier-health/, label: 'two-column-ledger-pad search hop (matches on-page fasting / post-prandial bile-acids pair copy; unique vs four+column+accounting+pad / quad+ruled+graph+pad / weekly+checklist+notepad)' },
-      { re: /amazon-brand\/30\+day\+habit\+tracker\+pad\?s=breeds-yorkshire-terrier-health/, label: '30-day-habit-tracker-pad search hop (matches on-page daily home-brushing copy; unique vs hardcover+weekly+appointment+planner / monthly+desk+pad+calendar / 18+month+wall+calendar)' },
-      { re: /amazon-brand\/hourly\+desk\+pad\?s=breeds-yorkshire-terrier-health/, label: 'hourly-desk-pad search hop (matches on-page four-small-meals-until-four-months copy; unique vs monthly+desk+pad+calendar / mechanical+kitchen+timer / recipe+card+box)' },
+      { re: /amazon-brand\/pet\+toothbrush\+and\+enzymatic\+toothpaste\+kit\?s=breeds-yorkshire-terrier-health/, label: 'pet-toothbrush-and-enzymatic-toothpaste-kit search hop (topic-matched care product; replaced a paperwork hop in the 2026-10-13 product policy change)' },
+      { re: /amazon-brand\/y\+shaped\+front\+clip\+dog\+harness\?s=breeds-yorkshire-terrier-health/, label: 'y-shaped-front-clip-dog-harness search hop (topic-matched care product; replaced a paperwork hop in the 2026-10-13 product policy change)' },
+      { re: /amazon-brand\/small\+digital\+kitchen\+food\+scale\?s=breeds-yorkshire-terrier-health/, label: 'small-digital-kitchen-food-scale search hop (topic-matched care product; replaced a paperwork hop in the 2026-10-13 product policy change)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
@@ -11557,9 +11557,9 @@ const CALCULATORS = [
     id: 'vets · chihuahua-health hops',
     file: 'apps/vets-co/src/app/breeds/chihuahua-health/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/13\+column\+analysis\+pad\?s=breeds-chihuahua-health/, label: '13-column-analysis-pad search hop (matches on-page murmur-grade / echo-date / Stage A–D / resting-RR copy; unique vs four+column+accounting+pad / quad+ruled+graph+pad / two+column+ledger+pad)' },
-      { re: /amazon-brand\/desk\+blotter\+pad\?s=breeds-chihuahua-health/, label: 'desk-blotter-pad search hop (matches on-page molera-protection household-rules copy; unique vs monthly+desk+pad+calendar / hourly+desk+pad / letter+size+document+frame)' },
-      { re: /amazon-brand\/numbered\+log\+book\?s=breeds-chihuahua-health/, label: 'numbered-log-book search hop (matches on-page tremor-versus-hypoglycemia episode copy; unique vs bound+composition+book / blank+index+cards / lined+telephone+message+pad)' },
+      { re: /amazon-brand\/pet\+toothbrush\+and\+enzymatic\+toothpaste\+kit\?s=breeds-chihuahua-health/, label: 'pet-toothbrush-and-enzymatic-toothpaste-kit search hop (topic-matched care product; replaced a paperwork hop in the 2026-10-13 product policy change)' },
+      { re: /amazon-brand\/y\+shaped\+front\+clip\+dog\+harness\?s=breeds-chihuahua-health/, label: 'y-shaped-front-clip-dog-harness search hop (topic-matched care product; replaced a paperwork hop in the 2026-10-13 product policy change)' },
+      { re: /amazon-brand\/dog\+ramp\?s=breeds-chihuahua-health/, label: 'dog-ramp search hop (topic-matched care product; replaced a paperwork hop in the 2026-10-13 product policy change)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
@@ -11576,9 +11576,9 @@ const CALCULATORS = [
     id: 'vets · husky-health hops',
     file: 'apps/vets-co/src/app/breeds/husky-health/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/academic\+year\+planner\?s=breeds-husky-health/, label: 'academic-year-planner search hop (matches on-page annual CAER eye-exam copy covering cataracts / PRA / corneal dystrophy; unique vs hardcover+weekly+appointment+planner / 18+month+wall+calendar / monthly+desk+pad+calendar)' },
-      { re: /amazon-brand\/8\+column\+columnar\+pad\?s=breeds-husky-health/, label: '8-column-columnar-pad search hop (matches on-page eyes / hips / thyroid / gastropexy / platelet-review screening row; unique vs 13+column+analysis+pad / four+column+accounting+pad / two+column+ledger+pad)' },
-      { re: /amazon-brand\/newsprint\+sketch\+pad\?s=breeds-husky-health/, label: 'newsprint-sketch-pad search hop (matches on-page facial-crusting-site / PRA furniture-layout copy; unique vs paint+chip+sample+cards / blank+pedigree+chart / desk+blotter+pad)' },
+      { re: /amazon-brand\/undercoat\+rake\+dog\?s=breeds-husky-health/, label: 'undercoat-rake-dog search hop (topic-matched care product; replaced a paperwork hop in the 2026-10-13 product policy change)' },
+      { re: /amazon-brand\/dog\+cooling\+mat\?s=breeds-husky-health/, label: 'dog-cooling-mat search hop (topic-matched care product; replaced a paperwork hop in the 2026-10-13 product policy change)' },
+      { re: /amazon-brand\/24\+ounce\+stainless\+hiking\+dog\+bottle\?s=breeds-husky-health/, label: '24-ounce-stainless-hiking-dog-bottle search hop (topic-matched care product; replaced a paperwork hop in the 2026-10-13 product policy change)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
@@ -11596,8 +11596,8 @@ const CALCULATORS = [
     file: 'apps/vets-co/src/app/breeds/pomeranian-health/page.tsx',
     mustInclude: [
       { re: /amazon-brand\/analog\+indoor\+hygrometer\?s=breeds-pomeranian-health/, label: 'analog-indoor-hygrometer search hop (matches on-page heat-and-humidity cough-trigger copy; unique vs analog+outdoor+thermometer / analog+stopwatch / digital+pet+thermometer)' },
-      { re: /amazon-brand\/6\+column\+columnar\+pad\?s=breeds-pomeranian-health/, label: '6-column-columnar-pad search hop (matches on-page patellar-grade / murmur / dental-score / BCS well-visit row; unique vs 8+column+columnar+pad / 13+column+analysis+pad / four+column+accounting+pad)' },
-      { re: /amazon-brand\/undated\+daily\+planner\?s=breeds-pomeranian-health/, label: 'undated-daily-planner search hop (matches on-page thyroid / ACTH / LDDS dates before accepting alopecia X; unique vs academic+year+planner / hardcover+weekly+appointment+planner / monthly+desk+pad+calendar)' },
+      { re: /amazon-brand\/y\+shaped\+front\+clip\+dog\+harness\?s=breeds-pomeranian-health/, label: 'y-shaped-front-clip-dog-harness search hop (topic-matched care product; replaced a paperwork hop in the 2026-10-13 product policy change)' },
+      { re: /amazon-brand\/pet\+toothbrush\+and\+enzymatic\+toothpaste\+kit\?s=breeds-pomeranian-health/, label: 'pet-toothbrush-and-enzymatic-toothpaste-kit search hop (topic-matched care product; replaced a paperwork hop in the 2026-10-13 product policy change)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],

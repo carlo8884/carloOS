@@ -1,4 +1,6 @@
 import Link from 'next/link'
+import { EmailCapture } from '@carloOS/ui'
+import { siteSubscribeFormVisible } from '@carloOS/config/capture-flags'
 
 /** Homepage + hub resource strip — sits under the hero. Hidden on /admin and /dashboard. */
 export function HomeEmailCapture() {
@@ -31,6 +33,19 @@ export function HomeEmailCapture() {
             When to go to the vet
           </Link>
         </div>
+        {siteSubscribeFormVisible('vets-co') && (
+          <div data-testid="under-hero-email" className="mx-auto mt-5 max-w-lg text-left">
+            <p className="text-sm font-semibold text-brand-dark mb-2 text-center">Get the triage card plus seasonal reminders (heartworm, vaccines, ticks) by email.</p>
+            <EmailCapture
+              variant="inline"
+              siteId="vets-co"
+              source="vets-home-under-hero"
+              title="Get the triage card plus seasonal reminders (heartworm, vaccines, ticks) by email."
+              ctaText="Sign me up"
+              captureOpen
+            />
+          </div>
+        )}
       </div>
     </section>
   )

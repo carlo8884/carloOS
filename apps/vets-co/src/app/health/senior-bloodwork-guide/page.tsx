@@ -70,7 +70,7 @@ export default function SeniorBloodworkPage() {
           <p><strong>Calcium:</strong> Hypercalcemia in dogs has a differential dominated by malignancy (lymphoma, apocrine gland anal sac adenocarcinoma, multiple myeloma) — an elevated calcium in a senior dog warrants cancer investigation. Also elevated with hyperparathyroidism and Addison&apos;s disease.</p>
 
           <h2>SDMA — The Early Kidney Marker</h2>
-          <p>Symmetric dimethylarginine (SDMA) is a newer kidney function marker included in most modern chemistry panels. Merck says SDMA is more sensitive to smaller losses of kidney filtration and can rise above the reference interval while creatinine is still normal. This makes SDMA a significantly earlier indicator of chronic kidney disease (CKD), allowing dietary intervention and monitoring to begin years before the dog would otherwise show clinical signs. For senior dogs, a rising SDMA over multiple blood panels — even if still within the normal range — is a meaningful signal worth tracking. A letter-size expanding file organizer is how those serial CBC, chemistry, and SDMA printouts stay in date order so the next visit can be compared to the last, not reconstructed from memory. It is not a pet medical-records binder, not a vaccination record book, and not a weight-log book. It does not interpret the panel and it does not replace the veterinarian who reviews the trend.</p>
+          <p>Symmetric dimethylarginine (SDMA) is a newer kidney function marker included in most modern chemistry panels. Merck says SDMA is more sensitive to smaller losses of kidney filtration and can rise above the reference interval while creatinine is still normal. This makes SDMA a significantly earlier indicator of chronic kidney disease (CKD), allowing dietary intervention and monitoring to begin years before the dog would otherwise show clinical signs. For senior dogs, a rising SDMA over multiple blood panels — even if still within the normal range — is a meaningful signal worth tracking. A digital pet scale lets you share weight trends between visits. It does not interpret the panel and it does not replace the veterinarian who reviews the trend.</p>
 
           <h2>Thyroid (T4)</h2>
           <p>Total T4 (thyroxine) screens for hypothyroidism — underactive thyroid. Low T4 in a dog with appropriate clinical signs (weight gain, lethargy, skin and coat changes, cold intolerance) suggests hypothyroidism. Hypothyroidism is common in middle-aged to older dogs and responds well to levothyroxine supplementation. Free T4 by equilibrium dialysis (fT4ed) is more specific and less affected by concurrent illness — used for confirmation when TT4 is borderline or ambiguous.</p>
@@ -83,14 +83,14 @@ export default function SeniorBloodworkPage() {
 
           <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Keep these on hand: a letter-size expanding file organizer so CBC, chemistry, and SDMA printouts stay in date order, a sterile urine specimen cup so a first-morning free-catch sample can travel with the dog when the clinic asks for a home urinalysis, and a 12-hour mechanical kitchen timer so the pre-chemistry food hold is a set window. These are household visit-prep tools, not treatments. They do not interpret labs, they do not diagnose CKD or diabetes, they do not replace a veterinarian, and they are not a ranked product list. </p>
+            Keep these on hand: a soft pet carrier for calmer trips to the clinic, a sterile urine specimen cup so a first-morning free-catch sample can travel with the dog when the clinic asks for a home urinalysis, and a digital pet scale so weight between visits is a number you can share. These are household visit-prep tools, not treatments. They do not interpret labs, they do not diagnose CKD or diabetes, they do not replace a veterinarian, and they are not a ranked product list. </p>
 
-          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/letter+size+expanding+file+organizer?s=health-senior-bloodwork-guide", "/go/amazon-brand/sterile+urine+specimen+cup?s=health-senior-bloodwork-guide", "/go/amazon-brand/12+hour+mechanical+kitchen+timer?s=health-senior-bloodwork-guide"]} />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/soft+pet+carrier?s=health-senior-bloodwork-guide", "/go/amazon-brand/sterile+urine+specimen+cup?s=health-senior-bloodwork-guide", "/go/amazon-brand/digital+pet+scale?s=health-senior-bloodwork-guide"]} />
 
           {/* Shop note — live amazon-brand search buttons
-              (letter-size expanding file organizer /
+              (soft pet carrier /
               sterile urine specimen cup /
-              12-hour mechanical kitchen timer).
+              digital pet scale).
               ShopCtas hides empty Chewy; never href="#"
               or an empty link. Amazon searches only —
               unused vs #1069
@@ -136,16 +136,16 @@ export default function SeniorBloodworkPage() {
             <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/letter+size+expanding+file+organizer?s=health-senior-bloodwork-guide"
-                amazonLabel="Browse letter-size expanding file organizers on Amazon →"
+                amazonHref="/go/amazon-brand/soft+pet+carrier?s=health-senior-bloodwork-guide"
+                amazonLabel="Browse soft pet carriers on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/sterile+urine+specimen+cup?s=health-senior-bloodwork-guide"
                 amazonLabel="Browse sterile urine specimen cups on Amazon →"
               />
               <ShopCtas
-                amazonHref="/go/amazon-brand/12+hour+mechanical+kitchen+timer?s=health-senior-bloodwork-guide"
-                amazonLabel="Browse 12-hour mechanical kitchen timers on Amazon →"
+                amazonHref="/go/amazon-brand/digital+pet+scale?s=health-senior-bloodwork-guide"
+                amazonLabel="Browse digital pet scales on Amazon →"
               />
           </div>
           </div>

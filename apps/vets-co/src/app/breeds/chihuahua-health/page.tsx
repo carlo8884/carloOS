@@ -40,7 +40,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Vets.co Editorial',
   publishedAt: '2026-05-28T00:00:00Z',
-  modifiedAt: '2026-05-28T00:00:00Z',
+  modifiedAt: '2026-10-13T00:00:00Z',
 })
 
 const medicalSchema = buildMedicalWebPageSchema({
@@ -49,7 +49,7 @@ const medicalSchema = buildMedicalWebPageSchema({
     'Veterinary owner guide to common Chihuahua health conditions with screening guidance and citations.',
   url: PAGE_URL,
   authorName: 'Vets.co Editorial',
-  lastReviewed: '2026-05-28',
+  lastReviewed: '2026-10-13',
 })
 
 const FAQS = [
@@ -133,7 +133,7 @@ export default function VetsChihuahuaHealthPage() {
           <ArticleByline
             siteName="Vets.co Editorial"
             publishedAt="2026-05-28T00:00:00Z"
-            updatedAt="2026-09-06T00:00:00Z"
+            updatedAt="2026-10-13T00:00:00Z"
             reviewedBy="Editorial team"
           />
 
@@ -306,9 +306,9 @@ export default function VetsChihuahuaHealthPage() {
 
           <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Keep these on hand: a 13-column analysis pad so murmur grade, echo date, Stage A–D, and resting respiratory rate stay one written row, a desk blotter pad so the molera-protection household rules stay where kids see them, and a numbered log book so each tremor-versus-hypo episode stays one dated entry. These are educational Chihuahua-health / paperwork tools, not a ranked product list, not a substitute for veterinary care, and not a treatment. </p>
+            Keep these on hand: a pet toothbrush and enzymatic toothpaste kit for home brushing, a Y-shaped front-clip harness so the leash does not pull on the neck, and a dog ramp so jumps on and off furniture are optional. These are general care supplies, not a ranked product list, not a substitute for veterinary care, and not a treatment. </p>
 
-          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/13+column+analysis+pad?s=breeds-chihuahua-health", "/go/amazon-brand/desk+blotter+pad?s=breeds-chihuahua-health", "/go/amazon-brand/numbered+log+book?s=breeds-chihuahua-health"]} />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/pet+toothbrush+and+enzymatic+toothpaste+kit?s=breeds-chihuahua-health", "/go/amazon-brand/y+shaped+front+clip+dog+harness?s=breeds-chihuahua-health", "/go/amazon-brand/dog+ramp?s=breeds-chihuahua-health"]} />
 
           {/* Shop note — live amazon-brand search buttons
               (13-column analysis pad /
@@ -337,16 +337,16 @@ export default function VetsChihuahuaHealthPage() {
             <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/13+column+analysis+pad?s=breeds-chihuahua-health"
-                amazonLabel="Browse 13-column analysis pads on Amazon →"
+                amazonHref="/go/amazon-brand/pet+toothbrush+and+enzymatic+toothpaste+kit?s=breeds-chihuahua-health"
+                amazonLabel="Browse pet toothbrush and enzymatic toothpaste kits on Amazon →"
               />
               <ShopCtas
-                amazonHref="/go/amazon-brand/desk+blotter+pad?s=breeds-chihuahua-health"
-                amazonLabel="Browse desk blotter pads on Amazon →"
+                amazonHref="/go/amazon-brand/y+shaped+front+clip+dog+harness?s=breeds-chihuahua-health"
+                amazonLabel="Browse Y-shaped front-clip dog harnesses on Amazon →"
               />
               <ShopCtas
-                amazonHref="/go/amazon-brand/numbered+log+book?s=breeds-chihuahua-health"
-                amazonLabel="Browse numbered log books on Amazon →"
+                amazonHref="/go/amazon-brand/dog+ramp?s=breeds-chihuahua-health"
+                amazonLabel="Browse dog ramps on Amazon →"
               />
           </div>
           </div>

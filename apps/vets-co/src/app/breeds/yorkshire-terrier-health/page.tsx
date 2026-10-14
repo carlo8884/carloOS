@@ -40,7 +40,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Vets.co Editorial',
   publishedAt: '2026-05-28T00:00:00Z',
-  modifiedAt: '2026-05-28T00:00:00Z',
+  modifiedAt: '2026-10-13T00:00:00Z',
 })
 
 const medicalSchema = buildMedicalWebPageSchema({
@@ -49,7 +49,7 @@ const medicalSchema = buildMedicalWebPageSchema({
     'Veterinary owner guide to the most common Yorkshire Terrier health conditions with screening guidance and citations.',
   url: PAGE_URL,
   authorName: 'Vets.co Editorial',
-  lastReviewed: '2026-05-28',
+  lastReviewed: '2026-10-13',
 })
 
 const FAQS = [
@@ -133,7 +133,7 @@ export default function VetsYorkshireTerrierHealthPage() {
           <ArticleByline
             siteName="Vets.co Editorial"
             publishedAt="2026-05-28T00:00:00Z"
-            updatedAt="2026-09-06T00:00:00Z"
+            updatedAt="2026-10-13T00:00:00Z"
             reviewedBy="Editorial team"
           />
 
@@ -301,10 +301,10 @@ export default function VetsYorkshireTerrierHealthPage() {
 
           <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Keep these on hand: a two-column ledger pad so the fasting and post-prandial bile-acids pair stays one written row, a 30-day habit-tracker pad so daily brushing stays a dated streak, and an hourly desk pad so the four small meals until four months stay timed blocks. These are educational Yorkshire-terrier-health / paperwork tools, not a ranked product list, not a substitute for veterinary care, and not a treatment.
+            Keep these on hand: a pet toothbrush and enzymatic toothpaste kit for daily brushing, a Y-shaped front-clip harness so the leash does not pull on the neck, and a small digital kitchen scale for measuring small, frequent puppy meals. These are general care supplies, not a ranked product list, not a substitute for veterinary care, and not a treatment.
           </p>
 
-          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/two+column+ledger+pad?s=breeds-yorkshire-terrier-health", "/go/amazon-brand/30+day+habit+tracker+pad?s=breeds-yorkshire-terrier-health", "/go/amazon-brand/hourly+desk+pad?s=breeds-yorkshire-terrier-health"]} />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/pet+toothbrush+and+enzymatic+toothpaste+kit?s=breeds-yorkshire-terrier-health", "/go/amazon-brand/y+shaped+front+clip+dog+harness?s=breeds-yorkshire-terrier-health", "/go/amazon-brand/small+digital+kitchen+food+scale?s=breeds-yorkshire-terrier-health"]} />
 
           {/* Shop note — live amazon-brand search buttons
               (two-column ledger pad /
@@ -333,16 +333,16 @@ export default function VetsYorkshireTerrierHealthPage() {
             <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/two+column+ledger+pad?s=breeds-yorkshire-terrier-health"
-                amazonLabel="Browse two-column ledger pads on Amazon →"
+                amazonHref="/go/amazon-brand/pet+toothbrush+and+enzymatic+toothpaste+kit?s=breeds-yorkshire-terrier-health"
+                amazonLabel="Browse pet toothbrush and enzymatic toothpaste kits on Amazon →"
               />
               <ShopCtas
-                amazonHref="/go/amazon-brand/30+day+habit+tracker+pad?s=breeds-yorkshire-terrier-health"
-                amazonLabel="Browse 30-day habit-tracker pads on Amazon →"
+                amazonHref="/go/amazon-brand/y+shaped+front+clip+dog+harness?s=breeds-yorkshire-terrier-health"
+                amazonLabel="Browse Y-shaped front-clip dog harnesses on Amazon →"
               />
               <ShopCtas
-                amazonHref="/go/amazon-brand/hourly+desk+pad?s=breeds-yorkshire-terrier-health"
-                amazonLabel="Browse hourly desk pads on Amazon →"
+                amazonHref="/go/amazon-brand/small+digital+kitchen+food+scale?s=breeds-yorkshire-terrier-health"
+                amazonLabel="Browse small digital kitchen food scales on Amazon →"
               />
           </div>
           </div>
