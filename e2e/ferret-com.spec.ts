@@ -1198,3 +1198,17 @@ test('ferret fix FE3: vaccinations, vet-visit prep and diarrhea pages open with 
     await expect(box.locator(`a[href="${src}"]`)).toBeVisible()
   }
 })
+
+test('ferret fix FE4: FE2 pages carry no unsourced chemo cost, insurer age cap or brushing timings', async ({ page }) => {
+  await page.goto('/health/lymphoma', { waitUntil: 'domcontentloaded' })
+  expect(await page.locator('body').innerText()).not.toMatch(/\$4,000|8,000/)
+  await page.goto('/health/aging-ferret-care', { waitUntil: 'domcontentloaded' })
+  let text = await page.locator('body').innerText()
+  expect(text).not.toContain('typically 8 years')
+  expect(text).not.toContain('3-7 year window')
+  expect(text).not.toContain('later years — is when')
+  await page.goto('/health/dental-disease', { waitUntil: 'domcontentloaded' })
+  text = await page.locator('body').innerText()
+  expect(text).not.toMatch(/30[-–]60 second|6-10 weeks/)
+  await expect(page.locator('a[href^="/go/amazon-brand/"]').first()).toBeVisible()
+})

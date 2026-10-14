@@ -176,11 +176,10 @@ export default function FerretLymphomaPage() {
               <h3 className="font-display text-base font-bold text-brand-white mb-2">
                 Cover this condition before it&apos;s diagnosed
               </h3>
-              <p>Those figures are typical US ranges dated 2026-05-30.</p>
               <p className="text-xs text-white/60 mb-3 leading-relaxed">
-                Lymphoma chemotherapy in ferrets can exceed $4,000-8,000 over
-                a treatment course. Exotic-pet insurance covers it — but ONLY
-                if enrolled before symptoms appear.
+                Lymphoma treatment in ferrets can mean repeated visits,
+                bloodwork, imaging and chemotherapy. Check any exotic-pet
+                policy&apos;s pre-existing-condition terms before you enroll.
               </p>
               <a
                 href={crossSiteHref('vets-co', '/reviews/best-pet-insurance')}

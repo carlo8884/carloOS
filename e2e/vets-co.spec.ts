@@ -1261,3 +1261,9 @@ test('vets fix PX1: heartworm, intestinal parasites and leptospirosis match AHS/
   expect(text).not.toContain('Southeast US, Pacific Northwest')
   expect(text).toContain('experts recommend vaccinating all dogs')
 })
+
+test('vets fix HW2: heartworm supplies copy uses vet-set rest wording, hops intact', async ({ page }) => {
+  await page.goto('/health/heartworm-in-dogs', { waitUntil: 'domcontentloaded' })
+  expect(await page.locator('body').innerText()).not.toMatch(/8-week/)
+  await expect(page.locator('a[href^="/go/amazon-brand/"]').first()).toBeVisible()
+})
