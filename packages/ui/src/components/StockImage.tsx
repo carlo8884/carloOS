@@ -22,7 +22,7 @@ import { displaySize } from '../lib/display-size'
 import { ImageCard, type ImageCardAspect, type ImageCardVariant } from './ImageCard'
 
 interface ManifestEntry {
-  provider: 'unsplash' | 'pexels'
+  provider: 'unsplash' | 'pexels' | 'wikimedia'
   id: string
   url: string
   width: number
@@ -52,6 +52,9 @@ interface ManifestEntry {
    * when next run on Carlo's machine.
    */
   curated?: boolean
+  /** Wikimedia Commons files: the licence short name and URL shown in the credit. */
+  license?: string
+  licenseUrl?: string
 }
 
 const manifest = manifestData as unknown as Record<string, ManifestEntry>
@@ -154,15 +157,19 @@ export function StockImage({
     )
   }
 
-  const providerLabel = entry.provider === 'unsplash' ? 'Unsplash' : 'Pexels'
+  const providerLabel = entry.provider === 'unsplash' ? 'Unsplash' : entry.provider === 'wikimedia' ? 'Wikimedia Commons' : 'Pexels'
   // Curated entries don't carry a real photographer name yet (sandbox has
   // no API access). Render "Source: <Provider>" with a link to sourceUrl
   // where the real photographer credit lives — honest, QC §1 safe.
   // Non-curated entries fall through the same path if photographer is missing
   // (defensive — never fabricate "undefined" or empty names into the credit).
-  const credit = entry.curated || !entry.photographer
-    ? `Source: ${providerLabel}`
-    : `Photo: ${entry.photographer} via ${providerLabel}`
+  // Commons files are CC-licensed: name the author and the licence (the
+  // credit links to the file page, which carries the full licence terms).
+  const credit = entry.provider === 'wikimedia' && entry.photographer && entry.license
+    ? `Photo: ${entry.photographer}, ${entry.license}, via ${providerLabel}`
+    : entry.curated || !entry.photographer
+      ? `Source: ${providerLabel}`
+      : `Photo: ${entry.photographer} via ${providerLabel}`
 
   const size = belowFold ? displaySize(entry.width, entry.height) : null
 

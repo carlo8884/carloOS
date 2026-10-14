@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import {
   buildMetadata,
   ArticleLayout,
-  StockImage,
   RelatedLinks,
   TableOfContents,
   FAQAccordion,
@@ -35,7 +34,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-05-30T00:00:00Z',
-  modifiedAt: '2026-10-13T00:00:00Z',
+  modifiedAt: '2026-10-14T00:00:00Z',
 })
 
 const FAQS = [
@@ -117,15 +116,10 @@ export default function ChampagneFerretsPage() {
         ]}
 >
         <div className="carloOS-article">
-          <StockImage
-            manifestKey="ferret-com:color-champagne"
-            aspect="16:9"
-            variant="inline"
-          />
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-05-30"
-            updatedAt="2026-10-13"
+            updatedAt="2026-10-14"
           />
 
           <DropCap>

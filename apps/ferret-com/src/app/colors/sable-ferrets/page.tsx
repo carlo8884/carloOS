@@ -35,7 +35,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-10-13T00:00:00Z',
+  modifiedAt: '2026-10-14T00:00:00Z',
 })
 
 const FAQS = [
@@ -122,10 +122,14 @@ export default function SableFerretsPage() {
             aspect="16:9"
             variant="inline"
           />
+          <p className="-mt-2 mb-4 text-2xs text-brand-text-light" data-photo-licence>
+            Photo: <a href="https://commons.wikimedia.org/wiki/File:Iltisfrettchen.jpg" rel="noopener">Iltisfrettchen.jpg</a> by Gilowyn, licensed{' '}
+            <a href="https://creativecommons.org/licenses/by-sa/3.0" rel="license noopener">CC BY-SA 3.0</a>, via Wikimedia Commons. Resized.
+          </p>
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-10-13"
+            updatedAt="2026-10-14"
           />
 
           <DropCap>
