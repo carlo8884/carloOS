@@ -55,8 +55,8 @@ export default function HydrationAndWaterPage() {
       <ArticleLayout
         siteId="ferret-com"
         heroHop={<>
+          <HopDisclosure above tone="on-dark" siteId="ferret-com" href="/go/amazon-brand/heavy+wide+ceramic+pet+bowl?s=diet-hydration-and-water" />
           <PrimaryHop href="/go/amazon-brand/heavy+wide+ceramic+pet+bowl?s=diet-hydration-and-water" label="Search Amazon for a heavy ceramic water bowl" />
-          <HopDisclosure tone="on-dark" siteId="ferret-com" href="/go/amazon-brand/heavy+wide+ceramic+pet+bowl?s=diet-hydration-and-water" />
         </>}
         hero={{
           title: 'Ferret Hydration & Water',

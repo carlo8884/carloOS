@@ -1212,3 +1212,16 @@ test('ferret fix FE4: FE2 pages carry no unsourced chemo cost, insurer age cap o
   expect(text).not.toMatch(/30[-–]60 second|6-10 weeks/)
   await expect(page.locator('a[href^="/go/amazon-brand/"]').first()).toBeVisible()
 })
+
+test('ferret fix DP1: affiliate disclosure sits above the first shop link on article and review heroes', async ({ page }) => {
+  for (const path of ['/health/adrenal-disease', '/care/bedding-and-litter-types', '/reviews/kaytee-vs-prevue-guide', '/reviews/paper-vs-grass-litter-guide']) {
+    await page.goto(path, { waitUntil: 'domcontentloaded' })
+    const disclosureFirst = await page.evaluate(() => {
+      const link = Array.from(document.querySelectorAll('a[href*="/go/"]')).find((a) => (a as HTMLElement).offsetParent && !a.closest('footer'))
+      const disclosure = Array.from(document.querySelectorAll('[data-affiliate-disclosure]')).find((d) => (d as HTMLElement).offsetParent)
+      if (!link || !disclosure) return false
+      return Boolean(disclosure.compareDocumentPosition(link) & Node.DOCUMENT_POSITION_FOLLOWING)
+    })
+    expect(disclosureFirst, path).toBe(true)
+  }
+})

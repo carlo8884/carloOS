@@ -18,6 +18,7 @@ export function HopDisclosure({
   noteClassName,
   showQuietNote = true,
   tone,
+  above = false,
 }: {
   href: string | readonly string[]
   siteId: SiteId
@@ -26,7 +27,10 @@ export function HopDisclosure({
   showQuietNote?: boolean
   /** Light text when this note sits on a dark hero. */
   tone?: 'on-dark'
+  /** Sits above its shop button, so the disclosure comes first. */
+  above?: boolean
 }) {
+  const gap = above ? 'mt-0 mb-3' : 'mt-3 mb-0'
   const hrefs = Array.isArray(href) ? href : [href]
   const live = hrefs.some((item) => {
     const consult = consultLink(item)
@@ -40,7 +44,7 @@ export function HopDisclosure({
   if (live) {
     if (tone === 'on-dark') {
       return (
-        <p data-affiliate-disclosure="inline" className="mt-3 mb-0 text-xs leading-relaxed text-white">
+        <p data-affiliate-disclosure="inline" className={`${gap} text-xs leading-relaxed text-white`}>
           <strong className="font-bold uppercase tracking-eyebrow text-2xs mr-2">Disclosure</strong>
           Some links on this page are affiliate links. We earn a commission if you click and buy, at no cost to you. We never accept payment for favorable reviews.{' '}
           <a href="/disclosure" className="font-semibold text-white underline underline-offset-2">
@@ -49,7 +53,7 @@ export function HopDisclosure({
         </p>
       )
     }
-    return <AffiliateDisclosure variant="inline" siteId={siteId} className="mt-3 mb-0" />
+    return <AffiliateDisclosure variant="inline" siteId={siteId} className={gap} />
   }
   if (!showQuietNote) return null
   const quiet = hrefs.some((item) => {

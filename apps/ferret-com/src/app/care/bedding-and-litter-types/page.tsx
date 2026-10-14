@@ -98,8 +98,8 @@ export default function BeddingAndLitterTypesPage() {
       <ArticleLayout
         siteId="ferret-com"
         heroHop={<>
+          <HopDisclosure above tone="on-dark" siteId="ferret-com" href="/go/amazon-brand/ferret+hammock?s=care-bedding-and-litter-types" />
           <PrimaryHop href="/go/amazon-brand/ferret+hammock?s=care-bedding-and-litter-types" label="Search Amazon for a ferret hammock" />
-          <HopDisclosure tone="on-dark" siteId="ferret-com" href="/go/amazon-brand/ferret+hammock?s=care-bedding-and-litter-types" />
         </>}
         hero={{
           title: 'Bedding & Litter Types',

@@ -110,8 +110,8 @@ export default function BestFerretCagePage() {
         <>
           <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">The Ferret Nation double unit is the top cage for a small group.</p>
           <div data-fold="offer">
+          <HopDisclosure above siteId="ferret-com" href="/go/amazon/B0054U8UGW?s=reviews-best-ferret-cage" />
           <PrimaryHop href='/go/amazon/B0054U8UGW?s=reviews-best-ferret-cage' label='Check price of the Ferret Nation double unit on Amazon' />
-          <HopDisclosure siteId="ferret-com" href="/go/amazon/B0054U8UGW?s=reviews-best-ferret-cage" />
         </div>
         </>
       }

@@ -106,8 +106,8 @@ export default function BestFerretHarnessPage() {
         <>
           <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">An escape-proof vest harness is the top ferret harness because the panel wraps the chest instead of a neck strap.</p>
           <div data-fold="offer">
+          <HopDisclosure above siteId="ferret-com" href="/go/amazon-brand/ferret+vest+harness+jacket+escape+proof?s=reviews-best-ferret-harness" />
           <PrimaryHop href='/go/amazon-brand/ferret+vest+harness+jacket+escape+proof?s=reviews-best-ferret-harness' label='Check price of an escape-proof vest jacket ferret harness on Amazon' />
-          <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/ferret+vest+harness+jacket+escape+proof?s=reviews-best-ferret-harness" />
         </div>
         </>
       }

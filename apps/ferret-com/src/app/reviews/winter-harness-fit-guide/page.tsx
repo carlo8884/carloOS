@@ -19,7 +19,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-10-04T00:00:00Z',
-  modifiedAt: '2026-10-12T00:00:00Z',
+  modifiedAt: '2026-10-13T00:00:00Z',
 })
 
 const FAQS = [
@@ -57,8 +57,8 @@ export default function WinterHarnessFitGuidePage() {
         <>
           <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">Recheck the vest harness as the seasons change, because a fit that was snug in winter can be loose by summer.</p>
           <div data-fold="offer">
+          <HopDisclosure above siteId="ferret-com" href="/go/amazon-brand/ferret+vest+harness+jacket+escape+proof?s=reviews-winter-harness-fit-guide" />
           <PrimaryHop href="/go/amazon-brand/ferret+vest+harness+jacket+escape+proof?s=reviews-winter-harness-fit-guide" label="Find an escape-proof jacket ferret harness on Amazon" />
-          <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/ferret+vest+harness+jacket+escape+proof?s=reviews-winter-harness-fit-guide" />
         </div>
         </>
       }
@@ -80,7 +80,7 @@ export default function WinterHarnessFitGuidePage() {
       }
     >
       <div className="carloOS-article">
-          <LastUpdated date="2026-10-12" />
+          <LastUpdated date="2026-10-13" />
         <p>The <Link href="/behavior/leash-and-harness-training">leash and harness training page</Link> says to recheck fit every few weeks because ferrets gain and lose noticeable weight with the seasons. Its example runs one direction: a harness that fit in winter may be loose by summer. It does not publish the reverse as a separate measurement. Heading into the colder months, the action on that page is the same recheck, not a new size chart. The two-finger rule on that page is its own sentence: two fingers should slide under the harness anywhere it touches the body. Tighter chafes. Looser lets the ferret back out. <a href="/reviews/best-ferret-harness">The ferret harness guide</a> compares the harness you are rechecking.</p>
         <h2>The review uses a different finger count</h2>
         <p>The <Link href="/reviews/vest-vs-h-harness-guide">vest versus H-style guide</Link> repeats the harness review&apos;s fit rule as one finger of slack, checked before the walk, with no unsupervised time in the harness. This page does not average one finger and two fingers into a third rule. Use the review&apos;s check on the review&apos;s harness, and the training page&apos;s check when you are following that page. Both say a loose harness is how a ferret backs out.</p>
@@ -120,7 +120,7 @@ export default function WinterHarnessFitGuidePage() {
             </tbody>
           </table>
         </div>
-        <ComparisonFoot updated="2026-10-12" />
+        <ComparisonFoot updated="2026-10-13" />
         <h2>Who should use which check</h2>
         <p>Use the review check on the review harness, and the training-page check when you are following that page. This page does not average one finger and two fingers into a third rule.</p>
         <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/ferret+vest+harness+jacket+escape+proof?s=reviews-winter-harness-fit-guide", "/go/amazon-brand/ferret+h+style+harness+adjustable?s=reviews-winter-harness-fit-guide"]} />

@@ -171,8 +171,8 @@ export default function LitterPlannerPage() {
         <div className="max-w-5xl">
           <Calculator />
           <div className="mt-6" data-fold="offer">
+            <HopDisclosure above siteId="ferret-com" href="/go/amazon-brand/ferret+corner+litter+pan?s=tools-litter-planner" />
             <PrimaryHop href="/go/amazon-brand/ferret+corner+litter+pan?s=tools-litter-planner" label="Search Amazon for a high-back corner litter pan" />
-            <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/ferret+corner+litter+pan?s=tools-litter-planner" />
           </div>
         </div>
       </section>

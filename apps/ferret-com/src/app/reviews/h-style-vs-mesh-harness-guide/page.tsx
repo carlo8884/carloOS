@@ -19,7 +19,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-10-05T00:00:00Z',
-  modifiedAt: '2026-10-12T00:00:00Z',
+  modifiedAt: '2026-10-13T00:00:00Z',
 })
 
 const FAQS = [
@@ -56,8 +56,10 @@ export default function HStyleVsMeshGuidePage() {
         publishedAt: 'October 2026',
         readTime: '6 min',
       }}
-      heroHop={<PrimaryHop href="/go/amazon-brand/ferret+h+style+harness+adjustable?s=reviews-h-style-vs-mesh-harness-guide" label="Search Amazon for an H-style ferret harness" />}
-      heroExtra={<HopDisclosure siteId="ferret-com" href="/go/amazon-brand/ferret+h+style+harness+adjustable?s=reviews-h-style-vs-mesh-harness-guide" />}
+      heroHop={<>
+        <HopDisclosure above siteId="ferret-com" href="/go/amazon-brand/ferret+h+style+harness+adjustable?s=reviews-h-style-vs-mesh-harness-guide" />
+        <PrimaryHop href="/go/amazon-brand/ferret+h+style+harness+adjustable?s=reviews-h-style-vs-mesh-harness-guide" label="Search Amazon for an H-style ferret harness" />
+      </>}
       breadcrumbs={[
         { name: 'Home', href: '/' },
         { name: 'Reviews', href: '/reviews' },
@@ -75,7 +77,7 @@ export default function HStyleVsMeshGuidePage() {
       }
     >
       <div className="carloOS-article">
-          <LastUpdated date="2026-10-12" />
+          <LastUpdated date="2026-10-13" />
         <EmailCapture
           variant="inline"
           siteId="ferret-com"
@@ -141,7 +143,7 @@ export default function HStyleVsMeshGuidePage() {
             </tbody>
           </table>
         </div>
-        <ComparisonFoot updated="2026-10-12" />
+        <ComparisonFoot updated="2026-10-13" />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
       </div>

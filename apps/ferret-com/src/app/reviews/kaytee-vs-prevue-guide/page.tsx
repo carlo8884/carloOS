@@ -19,7 +19,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-10-04T00:00:00Z',
-  modifiedAt: '2026-10-12T00:00:00Z',
+  modifiedAt: '2026-10-13T00:00:00Z',
 })
 
 const FAQS = [
@@ -50,8 +50,10 @@ export default function KayteeVsPrevueGuidePage() {
         publishedAt: 'October 2026',
         readTime: '6 min',
       }}
-      heroHop={<PrimaryHop href="/go/amazon/B000QFMYWQ?s=reviews-kaytee-vs-prevue-guide" label="Check price of the Prevue Feisty Ferret cage on Amazon" />}
-      heroExtra={<HopDisclosure siteId="ferret-com" href="/go/amazon/B000QFMYWQ?s=reviews-kaytee-vs-prevue-guide" />}
+      heroHop={<>
+        <HopDisclosure above siteId="ferret-com" href="/go/amazon/B000QFMYWQ?s=reviews-kaytee-vs-prevue-guide" />
+        <PrimaryHop href="/go/amazon/B000QFMYWQ?s=reviews-kaytee-vs-prevue-guide" label="Check price of the Prevue Feisty Ferret cage on Amazon" />
+      </>}
       breadcrumbs={[
         { name: 'Home', href: '/' },
         { name: 'Reviews', href: '/reviews' },
@@ -69,7 +71,7 @@ export default function KayteeVsPrevueGuidePage() {
       }
     >
       <div className="carloOS-article">
-          <LastUpdated date="2026-10-12" />
+          <LastUpdated date="2026-10-13" />
         <EmailCapture
           variant="inline"
           siteId="ferret-com"
@@ -147,7 +149,7 @@ export default function KayteeVsPrevueGuidePage() {
             </tbody>
           </table>
         </div>
-        <ComparisonFoot updated="2026-10-12" />
+        <ComparisonFoot updated="2026-10-13" />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
                 <ArticleSourcesList

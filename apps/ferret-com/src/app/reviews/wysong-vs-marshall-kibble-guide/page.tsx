@@ -53,8 +53,8 @@ export default function WysongVsMarshallKibbleGuidePage() {
         <>
           <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">Wysong Epigen 90 is the top kibble because the bag lists 63 percent protein and is marketed as starch-free.</p>
           <div data-fold="offer">
+          <HopDisclosure above siteId="ferret-com" href="/go/amazon/B019W9VXZK?s=reviews-wysong-vs-marshall-kibble-guide" />
           <PrimaryHop href="/go/amazon/B019W9VXZK?s=reviews-wysong-vs-marshall-kibble-guide" label="Check price of Wysong Epigen 90 on Amazon" />
-          <HopDisclosure siteId="ferret-com" href="/go/amazon/B019W9VXZK?s=reviews-wysong-vs-marshall-kibble-guide" />
         </div>
         </>
       }
