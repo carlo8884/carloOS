@@ -9,10 +9,10 @@ const SOURCES = [
   { label: 'Merck Veterinary Manual: Disorders of the Stomach and Intestines in Dogs', url: 'https://www.merckvetmanual.com/dog-owners/digestive-disorders-of-dogs/disorders-of-the-stomach-and-intestines-in-dogs', publisher: 'Merck Vet Manual' },
   { label: 'AAHA: Nutritional Assessment Guidelines', url: 'https://www.aaha.org/aaha-guidelines/nutritional-assessment/', publisher: 'AAHA' },
 ]
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Vomiting and Diarrhea in Pets', description: 'Common causes of vomiting and diarrhea and the warning signs that warrant veterinary care.', url: 'https://vets.co/health/vomiting-diarrhea-pets', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-10-12T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Vomiting and Diarrhea in Pets', description: 'Common causes of vomiting and diarrhea and the warning signs that warrant veterinary care.', url: 'https://vets.co/health/vomiting-diarrhea-pets', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-10-13T00:00:00Z' ,
   citation: SOURCES,
 })
-const med = buildMedicalWebPageSchema({ name: 'Vomiting and Diarrhea in Pets', description: 'Causes and warning signs of vomiting and diarrhea in dogs and cats.', url: 'https://vets.co/health/vomiting-diarrhea-pets', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-01' })
+const med = buildMedicalWebPageSchema({ name: 'Vomiting and Diarrhea in Pets', description: 'Causes and warning signs of vomiting and diarrhea in dogs and cats.', url: 'https://vets.co/health/vomiting-diarrhea-pets', authorName: 'Vets.co Editorial', lastReviewed: '2026-10-13' })
 const combined = combineSchemas(schema, med)
 const FAQS = [
   { question: "When should vomiting or diarrhea prompt a vet visit?", answer: "Seek veterinary care if vomiting or diarrhea is frequent or persistent, contains blood, or is accompanied by lethargy, loss of appetite, a painful or swollen abdomen, repeated unproductive retching, signs of dehydration, or known ingestion of a toxin or foreign object. Very young, very old, or chronically ill pets, and small breeds prone to rapid dehydration, warrant a lower threshold for care. A single episode in an otherwise bright, active pet that is still eating and drinking can often be monitored briefly, but worsening or additional signs change that." },
@@ -49,8 +49,8 @@ export default function VomitingDiarrheaPage() {
       >
         <div className="carloOS-article">
 
-          <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-09-05T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-12" />
+          <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-10-13T00:00:00Z" reviewedBy="Editorial team" />
+          <LastUpdated date="2026-10-13" />
 
           <CalloutBox variant="warning" title="Blood, pain, or lethargy means call now">
             Vomiting or diarrhea containing blood, a painful or distended abdomen, repeated unproductive retching, profound lethargy, or refusal to eat or drink are not signs to watch — they warrant prompt veterinary care. So does any suspected ingestion of a toxin or foreign object.
@@ -69,12 +69,12 @@ export default function VomitingDiarrheaPage() {
           <p>A single mild episode in a well pet that is still eating, drinking, and active can often be monitored briefly. Seek prompt care if signs are frequent or persistent, contain blood, or come with lethargy, appetite loss, abdominal pain, unproductive retching, or signs of dehydration — or if a toxin or foreign object may have been swallowed. Young, old, small, or chronically ill pets warrant a lower threshold for veterinary attention because they decline faster.</p>
 
           <h2>Supportive Care and Diagnosis</h2>
-          <p>For mild cases, your veterinarian may advise ensuring water access and, if appropriate, a short course of a bland, easily digestible diet before returning to normal food. A 2-quart stainless saucepan with lid is that bland-diet prep tool — a small batch of plain, easily digestible food if your veterinarian advises one, not a mini rice cooker and not glass meal-prep containers. A pocket spiral memo pad is how recovery monitoring stays specific: write the time of each vomit or diarrhea episode, whether water stayed down, and whether energy or appetite dropped, so "beyond a day," "frequent," or "worsening" is an observation you can hand the veterinarian. These are home-care and monitoring tools, not a ranked product list, and they are not a substitute for veterinary care. Avoid human medications, which can be toxic to pets. Do not give anti-nausea drugs such as Cerenia, maropitant, ondansetron, Pepto-Bismol, Imodium, or any human over-the-counter product unless a veterinarian prescribes them. When veterinary care is needed, the team evaluates hydration and may run diagnostics — bloodwork, imaging, or fecal testing — to find the cause and rule out obstruction or systemic disease, then provides fluids, anti-nausea medication, and any condition-specific treatment, with all medications and dosing determined by your veterinarian.</p>
+          <p>For mild cases, your veterinarian may advise ensuring water access and, if appropriate, a short course of a bland, easily digestible diet before returning to normal food. A 2-quart stainless saucepan with lid is that bland-diet prep tool — a small batch of plain, easily digestible food if your veterinarian advises one, not a mini rice cooker and not glass meal-prep containers. Quilted disposable underpads make cleanup easier while your pet recovers. These are home-care and monitoring tools, not a ranked product list, and they are not a substitute for veterinary care. Avoid human medications, which can be toxic to pets. Do not give anti-nausea drugs such as Cerenia, maropitant, ondansetron, Pepto-Bismol, Imodium, or any human over-the-counter product unless a veterinarian prescribes them. When veterinary care is needed, the team evaluates hydration and may run diagnostics — bloodwork, imaging, or fecal testing — to find the cause and rule out obstruction or systemic disease, then provides fluids, anti-nausea medication, and any condition-specific treatment, with all medications and dosing determined by your veterinarian.</p>
 
           <h2 id="kit">Home monitoring kit</h2>
-          <p>A narrow-neck glass water carafe makes it easier to see whether the pet is still drinking. A 2-quart stainless saucepan with a lid is for a short batch of plain food if your veterinarian advises one. A pocket spiral memo pad is where you write the time of each vomit or diarrhea episode, whether water stayed down, and whether energy or appetite dropped. These are home-care tools, not a treatment for vomiting, diarrhea, or a blockage, and not a ranked product list. Blood, a painful abdomen, unproductive retching, lethargy, or refusal to drink belongs with a veterinarian.</p>
+          <p>A narrow-neck glass water carafe makes it easier to see whether the pet is still drinking. A 2-quart stainless saucepan with a lid is for a short batch of plain food if your veterinarian advises one. Quilted disposable underpads make cleanup easier while your pet recovers. These are home-care tools, not a treatment for vomiting, diarrhea, or a blockage, and not a ranked product list. Blood, a painful abdomen, unproductive retching, lethargy, or refusal to drink belongs with a veterinarian.</p>
 
-          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/narrow+neck+glass+water+carafe?s=health-vomiting-diarrhea-pets", "/go/amazon-brand/2+quart+stainless+saucepan+with+lid?s=health-vomiting-diarrhea-pets", "/go/amazon-brand/pocket+spiral+memo+pad?s=health-vomiting-diarrhea-pets"]} />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/narrow+neck+glass+water+carafe?s=health-vomiting-diarrhea-pets", "/go/amazon-brand/2+quart+stainless+saucepan+with+lid?s=health-vomiting-diarrhea-pets", "/go/amazon-brand/quilted+disposable+underpads?s=health-vomiting-diarrhea-pets"]} />
 
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
@@ -91,8 +91,8 @@ export default function VomitingDiarrheaPage() {
                 amazonLabel="Browse 2-quart stainless saucepans with lids on Amazon →"
               />
               <ShopCtas
-                amazonHref="/go/amazon-brand/pocket+spiral+memo+pad?s=health-vomiting-diarrhea-pets"
-                amazonLabel="Browse pocket spiral memo pads on Amazon →"
+                amazonHref="/go/amazon-brand/quilted+disposable+underpads?s=health-vomiting-diarrhea-pets"
+                amazonLabel="Browse quilted disposable underpads on Amazon →"
               />
           </div>
           </div>

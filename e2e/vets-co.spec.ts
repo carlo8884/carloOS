@@ -1214,9 +1214,9 @@ test('vets fix DV2: dog vaccination supplies copy drops unsourced 72-hour and Va
   expect(text).not.toMatch(/72[- ]hour/i)
   expect(text).not.toContain('Vaccicheck')
   expect(text).not.toContain('same-day printout')
-  await expect(page.locator('a[href="/go/amazon-brand/72+hour+digital+countdown+timer?s=health-dog-vaccinations-guide"]').first()).toBeVisible()
+  await expect(page.locator('a[href="/go/amazon-brand/soft+sided+dog+crate?s=health-dog-vaccinations-guide"]').first()).toBeVisible()
   await expect(page.locator('a[href="/go/amazon-brand/collapsible+silicone+travel+dog+bowl?s=health-dog-vaccinations-guide"]').first()).toBeVisible()
-  await expect(page.getByText('Browse digital countdown timers on Amazon').first()).toBeVisible()
+  await expect(page.getByText('Browse soft-sided dog crates on Amazon').first()).toBeVisible()
 })
 
 test('vets fix ES1: emergency-signs list matches Merck/AVMA (any seizure, no unsourced time windows)', async ({ page }) => {
@@ -1308,4 +1308,19 @@ test('vets fix ST1: mobile sticky bar appears after scrolling with internal next
   await expect(bar.locator('a[href*="/go/"]')).toHaveCount(0)
   await bar.getByRole('button', { name: 'Close' }).click()
   await expect(bar).toHaveCount(0)
+})
+
+test('vets fix PH1: health pages shop topic-matched care products, not paperwork', async ({ page }) => {
+  const expectations: Record<string, string> = {
+    '/health/canine-influenza': 'digital+pet+thermometer',
+    '/health/dog-vaccinations-guide': 'soft+sided+dog+crate',
+    '/health/pain-management-dogs': 'orthopedic+dog+bed',
+    '/health/senior-bloodwork-guide': 'digital+pet+scale',
+    '/health/vomiting-diarrhea-pets': 'quilted+disposable+underpads',
+  }
+  for (const [path, slug] of Object.entries(expectations)) {
+    await page.goto(path, { waitUntil: 'domcontentloaded' })
+    await expect(page.locator(`a[href^="/go/amazon-brand/${slug}?"]`).first(), path).toBeAttached()
+    expect(await page.content(), path).not.toMatch(/amazon-brand\/(analog\+wall\+clock|72\+hour\+digital|hardcover\+weekly|wall\+mounted\+magnetic|12\+hour\+mechanical|letter\+size|dog\+weight\+log|pocket\+spiral)/)
+  }
 })

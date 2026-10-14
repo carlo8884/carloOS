@@ -9516,9 +9516,9 @@ const CALCULATORS = [
     id: 'vets · senior-bloodwork-guide hops',
     file: 'apps/vets-co/src/app/health/senior-bloodwork-guide/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/letter\+size\+expanding\+file\+organizer\?s=health-senior-bloodwork-guide/, label: 'letter-size expanding-file-organizer search hop (matches on-page serial CBC / chemistry / SDMA printout copy; unique vs pet+medical+records+binder / pet+vaccination+record+book / dog+weight+log+book / waterproof+field+notebook)' },
+      { re: /amazon-brand\/soft\+pet\+carrier\?s=health-senior-bloodwork-guide/, label: 'soft-pet-carrier search hop (topic-matched care product; replaced a paperwork hop in the 2026-10-13 product policy change)' },
       { re: /amazon-brand\/sterile\+urine\+specimen\+cup\?s=health-senior-bloodwork-guide/, label: 'sterile urine-specimen-cup search hop (matches on-page first-morning free-catch / home urinalysis copy; unique vs fecal+sample+collection+kit / leak-proof+specimen+bags / equine+fecal+sample+container)' },
-      { re: /amazon-brand\/12\+hour\+mechanical\+kitchen\+timer\?s=health-senior-bloodwork-guide/, label: '12-hour mechanical kitchen-timer search hop (matches on-page pre-chemistry fasting-glucose window copy; unique vs one+minute+kitchen+timer / digital+handheld+stopwatch / aquarium+light+timer)' },
+      { re: /amazon-brand\/digital\+pet\+scale\?s=health-senior-bloodwork-guide/, label: 'digital-pet-scale search hop (topic-matched care product; replaced a paperwork hop in the 2026-10-13 product policy change)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
     ],
     mustExclude: [
@@ -9554,7 +9554,7 @@ const CALCULATORS = [
     mustInclude: [
       { re: /amazon-brand\/double\+door\+wire\+dog\+crate\?s=health-canine-influenza/, label: 'double-door wire-dog-crate search hop (matches on-page 7-day post-boarding isolation copy; unique vs dog+recovery+crate / soft+sided+dog+crate / wire+dog+crate+with+divider+panel / hard+sided+airline+dog+crate)' },
       { re: /amazon-brand\/pet\+safe\+kennel\+disinfectant\+spray\?s=health-canine-influenza/, label: 'pet-safe kennel-disinfectant-spray search hop (matches on-page bowls / kennel-surface contamination copy; unique vs accelerated+hydrogen+peroxide+disinfectant / enzymatic+pet+stain / small+animal+cage+cleaner)' },
-      { re: /amazon-brand\/analog\+wall\+clock\+with\+second\+hand\?s=health-canine-influenza/, label: 'analog wall-clock-with-second-hand search hop (matches on-page rapid / labored breathing one-minute-count copy; unique vs digital+pet+thermometer / cool+mist+humidifier / digital+handheld+stopwatch)' },
+      { re: /amazon-brand\/digital\+pet\+thermometer\?s=health-canine-influenza/, label: 'digital-pet-thermometer search hop (topic-matched care product; replaced a paperwork hop in the 2026-10-13 product policy change)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
     ],
     mustExclude: [
@@ -9626,7 +9626,7 @@ const CALCULATORS = [
     mustInclude: [
       { re: /amazon-brand\/narrow\+neck\+glass\+water\+carafe\?s=health-vomiting-diarrhea-pets/, label: 'narrow-neck glass water-carafe search hop (matches on-page hydration-watch / still-drinking copy; unique vs unflavored+pediatric+electrolyte / kitchen+liquid+measuring+pitcher / shallow+lipped+dog+saucer)' },
       { re: /amazon-brand\/2\+quart\+stainless\+saucepan\+with\+lid\?s=health-vomiting-diarrhea-pets/, label: '2-quart stainless-saucepan-with-lid search hop (matches on-page bland-diet prep copy; unique vs mini+rice+cooker / glass+meal+prep+containers)' },
-      { re: /amazon-brand\/pocket\+spiral\+memo\+pad\?s=health-vomiting-diarrhea-pets/, label: 'pocket spiral memo-pad search hop (matches on-page recovery-monitoring / episode-timing copy; unique vs waterproof+field+notebook / dog+weight+log+book)' },
+      { re: /amazon-brand\/quilted\+disposable\+underpads\?s=health-vomiting-diarrhea-pets/, label: 'quilted-disposable-underpads search hop (topic-matched care product; replaced a paperwork hop in the 2026-10-13 product policy change)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
     ],
     mustExclude: [
@@ -9661,7 +9661,7 @@ const CALCULATORS = [
     mustInclude: [
       { re: /amazon-brand\/elevated\+mesh\+dog\+cot\?s=health-pain-management-dogs/, label: 'elevated mesh dog-cot search hop (matches on-page rest / sleeping-more / hesitation-before-rising copy; unique vs extra+large+bolster+dog+lounge / egg+crate+foam+dog+kennel+pad / orthopedic+dog+bed)' },
       { re: /amazon-brand\/clear\+adhesive\+non\+slip\+stair\+treads\?s=health-pain-management-dogs/, label: 'clear adhesive non-slip stair-treads search hop (matches on-page stairs-slowly / non-slip-flooring / mobility-support copy; unique vs carpeted+wooden+pet+steps / dog+ramp / dog+traction+rug)' },
-      { re: /amazon-brand\/hardcover\+weekly\+appointment\+planner\?s=health-pain-management-dogs/, label: 'hardcover weekly appointment-planner search hop (matches on-page journaling pain-scores-for-the-vet copy; unique vs a5+hardcover+dot+grid+notebook / pocket+spiral+memo+pad / waterproof+field+notebook)' },
+      { re: /amazon-brand\/orthopedic\+dog\+bed\?s=health-pain-management-dogs/, label: 'orthopedic-dog-bed search hop (topic-matched care product; replaced a paperwork hop in the 2026-10-13 product policy change)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
     ],
     mustExclude: [
@@ -9677,7 +9677,7 @@ const CALCULATORS = [
     id: 'vets · senior-pet-care hops',
     file: 'apps/vets-co/src/app/health/senior-pet-care/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/letter\+size\+plastic\+file\+box\?s=health-senior-pet-care/, label: 'letter-size plastic file-box search hop (matches on-page biannual-exam / CBC / chemistry / SDMA / blood-pressure printout copy; unique vs letter+size+expanding+file+organizer / pet+medical+records+binder / pet+vaccination+record+book / hardcover+weekly+appointment+planner)' },
+      { re: /amazon-brand\/orthopedic\+dog\+bed\?s=health-senior-pet-care/, label: 'orthopedic-dog-bed search hop (topic-matched care product; replaced a paperwork hop in the 2026-10-13 product policy change)' },
       { re: /amazon-brand\/plug\+in\+heated\+pet\+mat\?s=health-senior-pet-care/, label: 'plug-in heated pet-mat search hop (matches on-page quality-of-life / rest-and-comfort copy; unique vs elevated+mesh+dog+cot / extra+large+bolster+dog+lounge / egg+crate+foam+dog+kennel+pad / orthopedic+dog+bed / self+warming+dog+mat)' },
       { re: /amazon-brand\/battery\+motion\+sensor\+night\+light\?s=health-senior-pet-care/, label: 'battery motion-sensor night-light search hop (matches on-page CDS / DISHAA / night-wandering / vocalizing observation copy; unique vs plug+in+night+light / analog+wall+clock+with+second+hand / handheld+aa+led+flashlight)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -9870,7 +9870,7 @@ const CALCULATORS = [
     file: 'apps/vets-co/src/app/health/dog-vaccinations-guide/page.tsx',
     mustInclude: [
       { re: /amazon-brand\/collapsible\+silicone\+travel\+dog\+bowl/, label: 'on-page product Amazon search hop' },
-      { re: /amazon-brand\/72\+hour\+digital\+countdown\+timer\?s=health-dog-vaccinations-guide/, label: '72-hour digital countdown-timer search hop (matches on-page Bordetella 72-hour boarding window copy; unique vs 12+hour+mechanical+kitchen+timer / analog+wall+clock+with+second+hand / digital+handheld+stopwatch)' },
+      { re: /amazon-brand\/soft\+sided\+dog\+crate\?s=health-dog-vaccinations-guide/, label: 'soft-sided-dog-crate search hop (topic-matched care product; replaced a paperwork hop in the 2026-10-13 product policy change)' },
       { re: /amazon-brand\/collapsible\+silicone\+travel\+dog\+bowl\?s=health-dog-vaccinations-guide/, label: 'collapsible silicone travel dog-bowl search hop (matches on-page boarding / daycare / puppy-series shared-water copy; unique vs 24+ounce+stainless+hiking+dog+bottle / insulated+pet+water+bowl / weighted+ceramic+dog+water+bowl / shallow+lipped+dog+saucer)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
     ],
