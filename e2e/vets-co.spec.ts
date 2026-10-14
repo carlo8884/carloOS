@@ -1428,3 +1428,26 @@ test('vets fix HR1: compact home hero, slim header, no embedded calculators', as
     expect(m.calcs).toBe(0)
   }
 })
+
+test('vets fix VB1: real pet photos sit beside hub copy (never behind it) and on breed pages', async ({ page }) => {
+  await page.setViewportSize({ width: 1280, height: 800 })
+  for (const path of ['/', '/health', '/insurance', '/find-a-vet', '/reviews']) {
+    await page.goto(path, { waitUntil: 'domcontentloaded' })
+    const m = await page.evaluate(() => {
+      const hero = document.querySelector('[data-testid="hub-hero"],[data-testid="home-hero"]') as HTMLElement
+      const img = hero?.querySelector('img') as HTMLImageElement | null
+      const h1 = hero?.querySelector('h1') as HTMLElement | null
+      if (!hero || !img || !h1) return null
+      const a = img.getBoundingClientRect(), b = h1.getBoundingClientRect()
+      const overlap = !(a.right <= b.left || b.right <= a.left || a.bottom <= b.top || b.bottom <= a.top)
+      return { overlap, alt: img.alt, credit: /Unsplash|Pexels/i.test(hero.innerText), height: hero.getBoundingClientRect().height }
+    })
+    expect(m, path).not.toBeNull()
+    expect(m!.overlap, path).toBe(false)
+    expect(m!.alt.length, path).toBeGreaterThan(5)
+    expect(m!.credit, path).toBe(true)
+    expect(m!.height, path).toBeLessThanOrEqual(320)
+  }
+  await page.goto('/breeds/beagle-health', { waitUntil: 'domcontentloaded' })
+  await expect(page.locator('img[alt="A Beagle"]')).toHaveCount(1)
+})

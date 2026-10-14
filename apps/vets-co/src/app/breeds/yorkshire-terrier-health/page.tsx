@@ -7,8 +7,7 @@ import {
   RelatedLinks,
   FAQAccordion,
   ShopCtas,
-  CrossSiteHelp,
-} from '@carloOS/ui'
+  CrossSiteHelp, StockImage } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 import {
   buildArticleSchema,
@@ -141,6 +140,9 @@ export default function VetsYorkshireTerrierHealthPage() {
             <HopDisclosure siteId="vets-co" href="/go/amazon-brand/pet+toothbrush+and+enzymatic+toothpaste+kit?s=breeds-yorkshire-terrier-health" />
             <ShopCtas amazonHref="/go/amazon-brand/pet+toothbrush+and+enzymatic+toothpaste+kit?s=breeds-yorkshire-terrier-health" amazonLabel="Browse pet toothbrush and enzymatic toothpaste kits on Amazon →" />
             <a href="#kit" className="inline-flex min-h-[44px] items-center text-xs text-brand-text-mid underline underline-offset-2">All supplies on this page ↓</a>
+          </div>
+          <div className="not-prose my-5 overflow-hidden rounded-xl">
+            <StockImage manifestKey="dog-com:breed-yorkshire-terrier" alt="A Yorkshire Terrier puppy" aspect="16:9" variant="inline" belowFold subtleCredit />
           </div>
 
                     <p>

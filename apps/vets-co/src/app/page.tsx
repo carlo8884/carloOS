@@ -336,8 +336,9 @@ export default function VetsHomePage() {
       <SchemaScript schema={homeSchema} />
 
       {/* ── HERO: compact (redesign phase 3) ── H1, one line, search, two actions. ≤320px desktop. */}
-      <section className="bg-brand-dark px-container-sm sm:px-container py-6 sm:py-10" data-testid="home-hero">
-        <div className="mx-auto max-w-container-wide">
+      <section className="bg-brand-dark px-container-sm sm:px-container py-6 sm:py-8" data-testid="home-hero">
+        <div className="mx-auto grid max-w-container-wide items-center gap-8 md:grid-cols-[1fr_360px]">
+          <div>
           <h1 className="font-display font-bold text-white tracking-tight leading-tight mb-2" style={{ fontSize: 'clamp(26px, 4vw, 44px)' }}>
             Find a vet. Read the guidelines.
           </h1>
@@ -359,6 +360,11 @@ export default function VetsHomePage() {
             <Link href="/reviews/best-pet-insurance" className="inline-flex items-center rounded-md px-4 py-2.5 text-sm font-semibold no-underline text-white border border-white/30 hover:bg-white/10">
               <span className="sm:hidden">Pet insurance</span><span className="hidden sm:inline">Compare pet insurance</span>
             </Link>
+          </div>
+          </div>
+          {/* VB1: real pet photo beside the copy on desktop, never behind text. */}
+          <div className="hidden h-[240px] overflow-hidden rounded-xl md:block [&>figure]:my-0 [&>div]:my-0 [&_figure]:my-0 [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto] [&_figure>div]:h-full [&>div]:h-full">
+            <StockImage manifestKey="dog-com:hero" alt="A happy dog outdoors in natural light" aspect="16:9" variant="inline" priority subtleCredit />
           </div>
         </div>
       </section>

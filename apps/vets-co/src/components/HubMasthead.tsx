@@ -95,80 +95,24 @@ export function HubMasthead({
   hop,
 }: HubMastheadProps) {
   return (
-    <section className="relative overflow-hidden bg-brand-dark">
-      {/* Full-bleed hero photo — first + dominant on every breakpoint. */}
-      <div
-        className={`absolute inset-0 ${FILL_IMAGE} [&_figure]:h-full [&_figure>div]:h-full [&_figure>div]:!rounded-none [&>div]:h-full`}
-      >
-        <StockImage
-          manifestKey={manifestKey}
-          fallbackKey={fallbackKey}
-          alt={imageAlt}
-          aspect="16:9"
-          variant="inline"
-          priority
-          subtleCredit
-        />
-      </div>
-
-      {/* Bottom-up dark scrim so overlaid copy stays legible over the photo. */}
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/75 to-brand-dark/40"
-      />
-      {/* Brand wash for depth — brass top-right + teal bottom-left. */}
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 pointer-events-none opacity-90"
-        style={{
-          backgroundImage: [
-            'radial-gradient(ellipse 65% 55% at 85% 12%, rgba(182,136,48,0.18) 0%, transparent 60%)',
-            'radial-gradient(ellipse 75% 70% at 8% 95%, rgba(10,107,94,0.40) 0%, transparent 60%)',
-          ].join(','),
-        }}
-      />
-
-      {/* Overlaid copy + primary action — pinned to the bottom of the photo. */}
-      <div className="relative z-10 mx-auto max-w-container-wide flex flex-col justify-end min-h-[46vh] sm:min-h-[52vh] lg:min-h-[60vh] px-container-sm sm:px-container pt-16 pb-9 sm:pb-12">
+    <section data-testid="hub-hero" className="bg-brand-dark px-container-sm sm:px-container py-7 md:py-8">
+      {/* Redesign VB1: compact split masthead. Copy on the navy field, the real
+          pet photo beside it on desktop, never behind the text. */}
+      <div className="mx-auto grid max-w-container-wide items-center gap-8 md:grid-cols-[1fr_360px]">
         <div className="max-w-3xl">
-          <div className="flex items-center gap-3 mb-4">
-            <span
-              aria-hidden="true"
-              className="h-px w-8"
-              style={{ background: 'var(--brand-accent)' }}
-            />
-            <span
-              className="text-2xs font-bold uppercase tracking-eyebrow"
-              style={{ color: 'var(--brand-accent-light)' }}
-            >
-              {eyebrow}
-            </span>
-          </div>
-
-          <h1
-            className="font-display font-bold text-white tracking-tight leading-[1.06] mb-4"
-            style={{
-              fontSize: 'clamp(30px, 5vw, 56px)',
-              textShadow: '0 2px 18px rgba(0,0,0,0.45)',
-            }}
-          >
+          <span className="mb-2 block text-2xs font-bold uppercase tracking-eyebrow" style={{ color: 'var(--brand-accent-light)' }}>
+            {eyebrow}
+          </span>
+          <h1 className="mb-2 font-display font-bold leading-tight tracking-tight text-white" style={{ fontSize: 'clamp(26px, 4vw, 44px)' }}>
             {title}
           </h1>
-
-          <p
-            className="text-base lg:text-lg font-light text-white/85 leading-relaxed max-w-2xl mb-7"
-            style={{ textShadow: '0 1px 10px rgba(0,0,0,0.5)' }}
-          >
-            {intro}
-          </p>
-
+          <p className="mb-4 max-w-2xl text-sm leading-relaxed text-white/85 md:text-base">{intro}</p>
           {hop}
-
-          <div className="flex flex-wrap items-center gap-3">
+          <div className="flex flex-wrap items-center gap-2">
             <Link
               href={primaryCta.href}
-              className="inline-flex items-center gap-2 font-semibold text-sm px-7 py-3.5 rounded no-underline transition-colors duration-200 hover:opacity-90 shadow-[0_6px_24px_rgba(10,107,94,0.4)]"
-              style={{ background: 'var(--brand-primary)', color: '#FFFFFF' }}
+              className="inline-flex min-h-[44px] items-center gap-2 rounded-md px-5 text-sm font-semibold text-white no-underline hover:opacity-90"
+              style={{ background: 'var(--brand-primary)' }}
             >
               {primaryCta.label}
               <IconArrowRight />
@@ -176,13 +120,16 @@ export function HubMasthead({
             {secondaryCta && (
               <Link
                 href={secondaryCta.href}
-                className="group inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/25 text-white font-semibold text-sm px-6 py-3.5 rounded no-underline hover:bg-white/20 hover:border-white/40 transition-colors duration-200"
+                className="inline-flex min-h-[44px] items-center gap-2 rounded-md border border-white/30 px-5 text-sm font-semibold text-white no-underline hover:bg-white/10"
               >
                 {secondaryCta.label}
-                <IconArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5" />
+                <IconArrowRight className="h-3.5 w-3.5" />
               </Link>
             )}
           </div>
+        </div>
+        <div className={`hidden h-[240px] overflow-hidden rounded-xl md:block ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto] [&_figure>div]:h-full [&>div]:h-full`}>
+          <StockImage manifestKey={manifestKey} fallbackKey={fallbackKey} alt={imageAlt} aspect="16:9" variant="inline" priority subtleCredit />
         </div>
       </div>
     </section>

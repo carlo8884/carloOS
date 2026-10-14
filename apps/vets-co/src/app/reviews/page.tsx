@@ -82,9 +82,9 @@ export default function VetsReviewsPage() {
         eyebrow="Honest Comparisons"
         title="Pet Product Reviews"
         intro="Ranked from a clinical perspective on what actually matters when your pet needs care — published payout and complaint data, policy disclosures, and the credentials behind the advice. No paid placements."
-        manifestKey="vets-co:category-reviews"
+        manifestKey="dog-com:category-reviews"
         fallbackKey="vets-co:insurance-hero"
-        imageAlt="A desk with documents and a calculator used to compare options"
+        imageAlt="A black and tan dog lying on the floor"
         primaryCta={{ href: '/reviews/best-pet-insurance', label: 'Compare pet insurance' }}
         secondaryCta={{ href: '/telehealth', label: 'Compare telehealth' }}
       />

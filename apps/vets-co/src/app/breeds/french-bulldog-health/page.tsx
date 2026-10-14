@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, FAQAccordion, ShopCtas, CrossSiteHelp } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, FAQAccordion, ShopCtas, CrossSiteHelp, StockImage } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { BreedHealthCard } from '@carloOS/ui'
@@ -73,6 +73,9 @@ export default function VetsFrenchBulldogHealthPage() {
             <HopDisclosure siteId="vets-co" href="/go/amazon-brand/y+shaped+front+clip+dog+harness?s=breeds-french-bulldog-health" />
             <ShopCtas amazonHref="/go/amazon-brand/y+shaped+front+clip+dog+harness?s=breeds-french-bulldog-health" amazonLabel="Browse Y-shaped front-clip dog harnesses on Amazon →" />
             <a href="#kit" className="inline-flex min-h-[44px] items-center text-xs text-brand-text-mid underline underline-offset-2">All supplies on this page ↓</a>
+          </div>
+          <div className="not-prose my-5 overflow-hidden rounded-xl">
+            <StockImage manifestKey="dog-com:breed-french-bulldog" alt="A French Bulldog lying on a rug" aspect="16:9" variant="inline" belowFold subtleCredit />
           </div>
 
         <div style={{ background: 'rgba(200,74,42,0.05)', border: '1px solid rgba(200,74,42,0.18)', borderRadius: '10px', padding: '16px 20px', marginBottom: '24px' }}>

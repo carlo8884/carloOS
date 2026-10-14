@@ -52,9 +52,9 @@ export default function VetsInsuranceHubPage() {
         eyebrow="Pet Insurance Education"
         title="Pet Insurance, Explained"
         intro="A clinical-perspective, jargon-free guide to how pet insurance actually works — what it covers, when to enroll, how deductibles and reimbursement function, and how to read a policy before you sign. Editorial only; we do not sell insurance."
-        manifestKey="vets-co:insurance-hero"
+        manifestKey="vets-co:category-pet-insurance"
         fallbackKey="vets-co:hero"
-        imageAlt="Insurance paperwork and a calculator on a desk"
+        imageAlt="A person holding a silver tabby cat"
         primaryCta={{ href: '/reviews/best-pet-insurance', label: 'Compare insurance plans' }}
         secondaryCta={{ href: '/insurance/how-pet-insurance-works', label: 'Start with the basics' }}
       />

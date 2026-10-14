@@ -42,9 +42,9 @@ export default function FindAVetPage() {
         eyebrow="How to choose care"
         title="Find the Right Vet"
         intro="General practice vets handle most of your pet's healthcare. Board-certified specialists handle what GPs refer out — complex diagnostics, surgery, and conditions requiring advanced training. These are how-to-choose guides, not a live clinic list."
-        manifestKey="vets-co:find-a-vet-hero"
+        manifestKey="vets-co:category-find-a-vet"
         fallbackKey="vets-co:hero"
-        imageAlt="The exterior entrance of a veterinary clinic building"
+        imageAlt="A calm dog in a polka-dot shirt"
         primaryCta={{ href: '#states', label: 'Browse state guides' }}
         secondaryCta={{ href: '/directory', label: 'License directory' }}
       />
