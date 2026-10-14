@@ -22,6 +22,7 @@ import { RelatedReads } from './RelatedReads'
 import { SchemaScript } from './SEOHead'
 import { PriceAsOf } from './PriceAsOf'
 import { ArticleJumpNav } from './ArticleJumpNav'
+import { ArticleDeepSections } from './ArticleDeepSections'
 
 /** Sites that show the 'On this page' jump list on articles. */
 const JUMP_NAV_SITES = new Set(['vets-co', 'ferret-com'])
@@ -206,7 +207,7 @@ export function ArticleLayout({
           {/* Article body */}
           <article className="carloOS-article min-w-0">
             {priceAsOf ? <PriceAsOf date={priceAsOf} /> : null}
-            {JUMP_NAV_SITES.has(process.env.NEXT_PUBLIC_SITE_ID ?? '') ? <ArticleJumpNav /> : null}
+            {JUMP_NAV_SITES.has(process.env.NEXT_PUBLIC_SITE_ID ?? '') ? <><ArticleJumpNav /><ArticleDeepSections /></> : null}
             {children}
           </article>
 
