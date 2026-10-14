@@ -78,15 +78,15 @@ export default function SeniorPetCarePage() {
           <h2>What Bloodwork Reveals</h2>
           <p>Annual bloodwork in senior dogs — CBC (complete blood count) plus comprehensive chemistry panel plus urinalysis — screens for the most common senior health conditions before clinical signs develop. Key findings:</p>
           <ul>
-            <li><strong>Kidney disease:</strong> SDMA elevation detects CKD when 25% of kidney function is lost — years before BUN and creatinine become abnormal. Early detection allows dietary intervention before significant disease progression.</li>
+            <li><strong>Kidney disease:</strong> SDMA can flag CKD earlier than BUN and creatinine alone. Early detection allows dietary intervention before significant disease progression.</li>
             <li><strong>Hypothyroidism:</strong> Low T4 in a middle-aged to older dog with appropriate clinical signs. Easily managed with daily medication.</li>
             <li><strong>Diabetes:</strong> Elevated fasting glucose with appropriate history.</li>
             <li><strong>Liver disease:</strong> Elevated liver enzymes may indicate hepatic disease, Cushing&apos;s disease, or medication effects.</li>
             <li><strong>Anemia:</strong> May indicate blood loss, bone marrow disease, or chronic disease.</li>
           </ul>
 
-          <CalloutBox variant="evidence" title="SDMA catches CKD years early">
-            SDMA elevation detects chronic kidney disease when roughly 25% of kidney function has been lost — years before BUN and creatinine become abnormal. Adding SDMA to senior bloodwork is one of the highest-yield additions to the standard panel and allows dietary intervention well before clinical signs develop.
+          <CalloutBox variant="evidence" title="SDMA can flag CKD earlier">
+            SDMA can flag chronic kidney disease earlier than BUN and creatinine alone. Adding SDMA to senior bloodwork is one of the highest-yield additions to the standard panel and allows dietary intervention before clinical signs develop.
           </CalloutBox>
 
           <h2>Blood Pressure — The Overlooked Vital</h2>

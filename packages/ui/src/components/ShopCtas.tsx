@@ -67,7 +67,7 @@ export function ShopCtas({
   const disclosure = amazonEarns || chewyEarns ? (
     <p
       data-affiliate-disclosure="hop"
-      style={{ margin: '0 0 8px', fontSize: '12px', lineHeight: 1.45, color: 'var(--brand-text-mid, #5c6570)' }}
+      style={{ margin: '0 0 6px', fontSize: '11px', lineHeight: 1.4, color: 'var(--brand-text-light, #5E717D)' }}
     >
       {amazonEarns
         ? 'As an Amazon Associate we earn from qualifying purchases.'
