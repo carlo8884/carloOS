@@ -1470,3 +1470,17 @@ test('ferret LA1: long articles open an On this page list whose links reach each
   await links.nth(2).click()
   await expect(page.locator(href!)).toBeInViewport()
 })
+
+test('ferret PH2: sable page shows a credited Wikimedia Commons sable photo, champagne drops the wrong-colour photo', async ({ page }) => {
+  await page.goto('/colors/sable-ferrets')
+  const img = page.locator('main img[src*="sable-ferret-gilowyn"]').first()
+  await expect(img).toBeVisible()
+  await img.scrollIntoViewIfNeeded()
+  await expect.poll(() => img.evaluate((i: HTMLImageElement) => i.complete && i.naturalWidth > 0)).toBe(true)
+  await expect(page.locator('main')).toContainText('Photo: Gilowyn, CC BY-SA 3.0, via Wikimedia Commons')
+  const licence = page.locator('[data-photo-licence]')
+  await expect(licence.locator('a[href="https://commons.wikimedia.org/wiki/File:Iltisfrettchen.jpg"]')).toHaveCount(1)
+  await expect(licence.locator('a[href="https://creativecommons.org/licenses/by-sa/3.0"]')).toHaveCount(1)
+  await page.goto('/colors/champagne-ferrets')
+  await expect(page.locator('main img[src*="05c404f17d45"]')).toHaveCount(0)
+})
