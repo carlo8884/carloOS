@@ -1173,6 +1173,16 @@ test('ferret fix FE2: aging, dental and lymphoma pages open with a Merck/Lafeber
     ['/health/aging-ferret-care', 'https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf'],
     ['/health/dental-disease', 'https://www.merckvetmanual.com/all-other-pets/ferrets/routine-health-care-for-ferrets'],
     ['/health/lymphoma', 'https://www.merckvetmanual.com/all-other-pets/ferrets/cancers-and-tumors-of-ferrets'],
+  ]
+  for (const [path, src] of cases) {
+    await page.goto(path, { waitUntil: 'domcontentloaded' })
+    const box = page.getByTestId('short-answer')
+    await expect(box).toBeVisible()
+    await expect(box.locator(`a[href="${src}"]`)).toBeVisible()
+    const text = await page.locator('body').innerText()
+    expect(text).not.toMatch(/5-8 years|14-18 months|6-18 months|65-75°F/)
+  }
+  expect(await page.locator('body').innerText()).toContain('Treatment has not been standardized')
 })
 
 test('ferret fix FE3: vaccinations, vet-visit prep and diarrhea pages open with a sourced short answer', async ({ page }) => {
@@ -1186,11 +1196,5 @@ test('ferret fix FE3: vaccinations, vet-visit prep and diarrhea pages open with 
     const box = page.getByTestId('short-answer')
     await expect(box).toBeVisible()
     await expect(box.locator(`a[href="${src}"]`)).toBeVisible()
-    const text = await page.locator('body').innerText()
-    expect(text).not.toMatch(/5-8 years|14-18 months|6-18 months|65-75°F/)
-  }
-  expect(await page.locator('body').innerText()).toContain('Treatment has not been standardized')
-})
-
   }
 })
