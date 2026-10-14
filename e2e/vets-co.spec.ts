@@ -1267,3 +1267,14 @@ test('vets fix HW2: heartworm supplies copy uses vet-set rest wording, hops inta
   expect(await page.locator('body').innerText()).not.toMatch(/8-week/)
   await expect(page.locator('a[href^="/go/amazon-brand/"]').first()).toBeVisible()
 })
+
+test('vets fix DB1: diabetes page opens with an AVMA-sourced short answer and AVMA emergency timing', async ({ page }) => {
+  await page.goto('/health/diabetes-in-dogs-cats', { waitUntil: 'domcontentloaded' })
+  const box = page.getByTestId('short-answer')
+  await expect(box).toBeVisible()
+  await expect(box.locator('a[href="https://www.avma.org/resources-tools/pet-owners/petcare/diabetes-pets"]')).toBeVisible()
+  const text = await page.locator('body').innerText()
+  expect(text).not.toContain('Seek emergency veterinary care the same day')
+  expect(text).not.toContain('Dogs almost never go into remission')
+  expect(text).toContain('SGLT2')
+})
