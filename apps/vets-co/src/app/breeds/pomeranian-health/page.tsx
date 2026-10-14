@@ -49,7 +49,7 @@ const medicalSchema = buildMedicalWebPageSchema({
     'Veterinary owner guide to the most common Pomeranian health conditions, with screening guidance and citations.',
   url: PAGE_URL,
   authorName: 'Vets.co Editorial',
-  lastReviewed: '2026-05-28',
+  lastReviewed: '2026-10-13',
 })
 
 const FAQS = [
@@ -308,9 +308,9 @@ export default function VetsPomeranianHealthPage() {
 
           <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Keep these on hand: an analog indoor hygrometer so heat-and-humidity cough triggers stay a written reading, a 6-column columnar pad so patellar grade, murmur, dental score, and body condition stay one well-visit row, and an undated daily planner so thyroid / ACTH / LDDS dates stay written before anyone accepts alopecia X. These are educational Pomeranian-health / paperwork tools, not a ranked product list, not a substitute for veterinary care, and not a treatment. </p>
+            Keep these on hand: an analog indoor hygrometer so heat-and-humidity cough triggers stay a written reading, a Y-shaped front-clip harness so the leash does not pull on the neck, and a pet toothbrush and enzymatic toothpaste kit for home brushing. These are general care supplies, not a ranked product list, not a substitute for veterinary care, and not a treatment. </p>
 
-          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/analog+indoor+hygrometer?s=breeds-pomeranian-health", "/go/amazon-brand/6+column+columnar+pad?s=breeds-pomeranian-health", "/go/amazon-brand/undated+daily+planner?s=breeds-pomeranian-health"]} />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/analog+indoor+hygrometer?s=breeds-pomeranian-health", "/go/amazon-brand/y+shaped+front+clip+dog+harness?s=breeds-pomeranian-health", "/go/amazon-brand/pet+toothbrush+and+enzymatic+toothpaste+kit?s=breeds-pomeranian-health"]} />
 
           {/* Shop note — live amazon-brand search buttons
               (analog indoor hygrometer /
@@ -343,12 +343,12 @@ export default function VetsPomeranianHealthPage() {
                 amazonLabel="Browse analog indoor hygrometers on Amazon →"
               />
               <ShopCtas
-                amazonHref="/go/amazon-brand/6+column+columnar+pad?s=breeds-pomeranian-health"
-                amazonLabel="Browse 6-column columnar pads on Amazon →"
+                amazonHref="/go/amazon-brand/y+shaped+front+clip+dog+harness?s=breeds-pomeranian-health"
+                amazonLabel="Browse Y-shaped front-clip dog harnesses on Amazon →"
               />
               <ShopCtas
-                amazonHref="/go/amazon-brand/undated+daily+planner?s=breeds-pomeranian-health"
-                amazonLabel="Browse undated daily planners on Amazon →"
+                amazonHref="/go/amazon-brand/pet+toothbrush+and+enzymatic+toothpaste+kit?s=breeds-pomeranian-health"
+                amazonLabel="Browse pet toothbrush and enzymatic toothpaste kits on Amazon →"
               />
           </div>
           </div>
