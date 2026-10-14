@@ -23,9 +23,19 @@ const SOURCES = [
     publisher: "Elsevier/Saunders",
   },
   {
-    label: "Merck Veterinary Manual — Preventive Care of Ferrets: vaccination schedules, distemper and rabies products, and adverse-reaction management",
+    label: "Merck Veterinary Manual — Preventive Care of Ferrets: vaccination schedule, distemper vaccine choice, and adverse-reaction management",
     url: "https://www.merckvetmanual.com/all-other-pets/ferrets/routine-health-care-for-ferrets",
     publisher: "Merck Veterinary Manual",
+  },
+  {
+    label: "IMRAB 3 & IMRAB 3 TF product label (indications include ferrets 12 weeks and older; annual revaccination)",
+    url: "https://animalhealth.boehringer-ingelheim.com/pets/canine/products/vaccines/imrab/IMRAB-3",
+    publisher: "Boehringer Ingelheim Animal Health",
+  },
+  {
+    label: "NeoVac FD ferret distemper vaccine (manufacturer product page)",
+    url: "https://www.neotechvaccines.com/vaccines/neovac-fd",
+    publisher: "NeoTech, LLC",
   },
   {
     label: "Lafeber Vet — Care of the Pet Ferret (owner handout): vaccination timing",
@@ -94,7 +104,7 @@ const FAQS = [
   {
     question: 'Which vaccine products are approved for ferrets?',
     answer:
-      "Only one canine distemper vaccine is currently USDA-licensed for ferrets in the US (Merck Nobivac Puppy-DPv, with the historic Purevax/Recombitek-based products discontinued or unavailable at various points). For rabies, IMRAB-3 (Boehringer Ingelheim, killed virus) is the long-standing USDA-licensed ferret rabies vaccine. Off-label canine distemper products are sometimes used when no licensed product is available; this is a vet conversation, not a DIY decision.",
+      "For rabies, Boehringer Ingelheim's IMRAB 3 and IMRAB 3 TF labels include ferrets 12 weeks of age and older, with annual revaccination (the Merck Veterinary Manual advises waiting until at least 16 weeks). For distemper, NeoTech's NeoVac FD is a ferret distemper vaccine that its maker says is effective from 8 weeks of age with two initial doses. Ask your vet which distemper vaccine is best for your ferret, and avoid vaccines made from mink or ferret tissue culture, which may cause the disease (Merck Veterinary Manual).",
   },
   {
     question: 'My ferret had a vaccine reaction — what should I do?',
@@ -109,7 +119,7 @@ const FAQS = [
   {
     question: 'How often do adult ferrets need boosters?',
     answer:
-      "Annual boosters for both canine distemper and rabies. Unlike some recent recommendations for dogs and cats moving toward three-year intervals, the licensed ferret vaccine products are labeled for one-year duration of immunity and the standard exotic-pet veterinary recommendation is annual boostering for life. Older ferrets with prior reaction histories may have an individualized schedule developed with their exotic-pet vet.",
+      "Annual boosters for both canine distemper and rabies. The IMRAB 3 rabies label calls for annual revaccination of ferrets, and the Merck Veterinary Manual recommends yearly rabies and distemper vaccination. Older ferrets with prior reaction histories may have an individualized schedule developed with their exotic-pet vet.",
   },
 ]
 const faqSchema = buildFAQSchema({ questions: FAQS })
@@ -206,10 +216,9 @@ export default function FerretVaccinationsPage() {
             Ferrets need two vaccines: canine distemper virus (CDV) and
             rabies. Kit series: CDV at about 6–8, 10–12 and 14–16 weeks
             (Lafeber Vet); rabies at 16 weeks or older, never on the same
-            day as distemper (Merck Veterinary Manual). Annual boosters for life. Use the
-            USDA-licensed ferret products (IMRAB-3 for rabies; an
-            appropriate CDV product per current availability and your
-            exotic-pet vet&apos;s judgment). Vaccine reactions are not
+            day as distemper (Merck Veterinary Manual). Annual boosters for life. Use vaccines
+            labeled for ferrets (for rabies, IMRAB 3 or IMRAB 3 TF; for
+            distemper, the product your exotic-pet vet recommends). Vaccine reactions are not
             rare and the response protocol — observe in clinic at least
             20 to 30 minutes (Merck Veterinary Manual), premedicate at-risk ferrets, give the two
             vaccines at different visits — is a vet
@@ -221,8 +230,8 @@ export default function FerretVaccinationsPage() {
             Ferret vaccination, despite its reputation for being
             complicated, is genuinely a two-vaccine protocol. Both
             vaccines target diseases that are functionally untreatable
-            once contracted; both are USDA-licensed (with one or more
-            products) specifically for ferrets.
+            once contracted, and both have vaccines labeled for
+            ferrets.
           </p>
           <ul>
             <li>
@@ -234,8 +243,8 @@ export default function FerretVaccinationsPage() {
             <li>
               <strong>Rabies.</strong> Universally fatal once symptomatic.
               Required by law in many places; rules vary by state and city,
-              so ask your vet what applies locally. Required by the USDA APHIS for any interstate or
-              international ferret travel.
+              so ask your vet what applies locally. Travel rules also
+              vary by destination.
             </li>
           </ul>
           <p>
@@ -265,16 +274,16 @@ export default function FerretVaccinationsPage() {
             comfort but does not change the outcome.
           </p>
           <p>
-            <strong>Vaccine products.</strong> Historically the
-            USDA-licensed ferret product was a recombinant canarypox-
-            vectored vaccine (Purevax/Recombitek). Product availability
-            has changed multiple times in the past decade as licensure
-            and manufacturing have shifted. The currently widely-used
-            product in US exotic-pet practice is Merck Nobivac Puppy-DPv
-            or a similar single-strain modified-live product, administered
-            off-label or under specific manufacturer guidance. The
-            specific product is a vet decision based on current
-            availability and the individual ferret&apos;s reaction history.
+            <strong>Vaccine products.</strong> Distemper vaccine
+            availability for ferrets has changed over the years.{' '}
+            <a href="https://www.neotechvaccines.com/vaccines/neovac-fd">NeoVac FD</a> (NeoTech) is a ferret distemper
+            vaccine that its maker says is effective from 8 weeks of age
+            with two initial doses. The Merck Veterinary Manual says to
+            ask your vet which distemper vaccine is best for your ferret
+            and warns against vaccines made from mink or ferret tissue
+            culture, which may cause the disease. The specific product is
+            a vet decision based on availability and your ferret&apos;s
+            reaction history.
           </p>
 
           <h2 id="rabies">Rabies</h2>
@@ -288,14 +297,15 @@ export default function FerretVaccinationsPage() {
             simplifies the post-bite quarantine process.
           </p>
           <p>
-            <strong>Vaccine product.</strong> IMRAB-3 (Boehringer
-            Ingelheim) is the long-standing USDA-licensed ferret rabies
-            vaccine. It is a killed-virus product and is labeled for
-            annual administration in ferrets. The label and the AAHA
-            ferret vaccination guidance both call for annual
-            re-vaccination; the duration-of-immunity studies supporting
-            longer intervals in dogs and cats do not extend to the
-            ferret label.
+            <strong>Vaccine product.</strong>{' '}
+            <a href="https://animalhealth.boehringer-ingelheim.com/pets/canine/products/vaccines/imrab/IMRAB-3">IMRAB 3 and IMRAB 3 TF</a> (Boehringer
+            Ingelheim) are inactivated rabies vaccines labeled for healthy
+            ferrets 12 weeks of age and older, given as 1 mL under the
+            skin and repeated annually; the label gives ferrets a duration
+            of immunity of at least 1 year, compared with 3 years for dogs
+            and cats. The Merck Veterinary Manual advises a first rabies
+            dose at 16 weeks or older, so ask your vet which timing they
+            use.
           </p>
           <p>
             <strong>Timing.</strong> First rabies vaccine at 16 weeks of
@@ -373,17 +383,16 @@ export default function FerretVaccinationsPage() {
 
           <h2 id="reactions">Vaccine Reactions</h2>
           <p>
-            Adverse vaccine reactions in ferrets are well-described in
-            the exotic-pet veterinary literature, in JAVMA case series,
-            and in AAHA practice guidance. The published rates vary by
-            study but are higher than the equivalent dog and cat rates —
-            roughly 1-5% of ferrets show some reaction, with a smaller
-            fraction experiencing serious anaphylaxis.
+            The Merck Veterinary Manual says ferrets frequently have
+            vaccine reactions, which can include vomiting and diarrhea
+            and, in some ferrets, shock and death. Reactions can occur
+            up to several hours after vaccination, and mild lethargy for
+            several days afterward is common.
           </p>
           <h3>Mild reactions</h3>
           <ul>
-            <li>Lethargy and reduced appetite for 12-24 hours.</li>
-            <li>Mild fever for 12-24 hours.</li>
+            <li>Lethargy and reduced appetite for a few days.</li>
+            <li>Mild fever.</li>
             <li>Soreness or transient swelling at the injection site.</li>
           </ul>
           <p>
@@ -533,7 +542,7 @@ export default function FerretVaccinationsPage() {
               dog+seat+belt+tether,
               pet+glucometer / light+corn+syrup,
               pet+oral+feeding+syringe.
-              Vaccines, Nobivac, IMRAB, diphenhydramine,
+              Vaccines, IMRAB, diphenhydramine,
               insulin syringes, and prescription brands are not
               shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">

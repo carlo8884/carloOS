@@ -1137,3 +1137,13 @@ test('ferret fix FH6: /colors hub answers first and has a sourced FAQ', async ({
   const ld = await page.locator('script[type="application/ld+json"]').allTextContents()
   expect(ld.filter((t) => t.includes('"FAQPage"')).length).toBe(1)
 })
+
+test('ferret fix VX2: vaccine product names are label-sourced; unverified product claims removed', async ({ page }) => {
+  await page.goto('/health/vaccinations', { waitUntil: 'domcontentloaded' })
+  const text = await page.locator('body').innerText()
+  expect(text).not.toMatch(/Nobivac|Purevax|Recombitek|AAHA|1-5% of ferrets/)
+  await expect(page.locator('a[href="https://animalhealth.boehringer-ingelheim.com/pets/canine/products/vaccines/imrab/IMRAB-3"]').first()).toBeVisible()
+  await expect(page.locator('a[href="https://www.neotechvaccines.com/vaccines/neovac-fd"]').first()).toBeVisible()
+  const ld = (await page.locator('script[type="application/ld+json"]').allTextContents()).join('\n')
+  expect(ld).not.toMatch(/Nobivac|Purevax/)
+})

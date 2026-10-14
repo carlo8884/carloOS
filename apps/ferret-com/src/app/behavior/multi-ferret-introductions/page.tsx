@@ -322,7 +322,7 @@ export default function MultiFerretIntroductionsPage() {
               ferret+nation+critter+nation+double+unit,
               pet+glucometer / light+corn+syrup,
               pet+oral+feeding+syringe.
-              Vaccines, Nobivac, IMRAB, diphenhydramine,
+              Vaccines, IMRAB, diphenhydramine,
               insulin syringes, and prescription brands are not
               shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
