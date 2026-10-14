@@ -74,7 +74,7 @@ export default function RootLayout({
         </EmailCaptureGate>
         </main>
 
-        <MobileStickyCta primary={{ href: '/first-year-schedule', label: 'First-year schedule' }} secondary={{ href: '/reviews', label: 'Gear reviews' }} />
+        <MobileStickyCta primary={{ href: '/first-year-schedule', label: 'First-year schedule' }} />
         <div className="h-16 md:hidden" aria-hidden="true" />
         <Footer siteId="ferret-com" showAffiliateDisclosure />
 
