@@ -64,24 +64,24 @@ export default function DogVaccinationsGuidePage() {
           <p><strong>DA2PP (Distemper, Adenovirus-2, Parvovirus, Parainfluenza):</strong> A combination vaccine protecting against four diseases. Canine parvovirus is highly contagious and fatal in unvaccinated puppies — it survives in the environment for months to years and is resistant to most common disinfectants. Canine distemper causes severe multisystemic disease including neurological damage. Per WSAVA, the puppy series starts no earlier than 6 weeks and repeats every 3–4 weeks until 16 weeks of age. A booster follows at about 6 months or 12–16 months, then at 3 years and no more often than every 3 years after that. Until that final puppy dose at 16 weeks or older, shared water bowls at parks and boarding kennels are an exposure the series is still building toward. A collapsible silicone travel dog bowl is how a carried sip stays the puppy&apos;s own bowl on those clinic-series trips — it is not a 24-ounce stainless hiking dog bottle, not an insulated pet water bowl, and not a foldable waterproof puppy mat.</p>
 
           <h2>Non-Core Vaccines — Lifestyle Dependent</h2>
-          <p><strong>Bordetella bronchiseptica (kennel cough):</strong> Recommended for any dog with exposure to other dogs — boarding, daycare, dog parks, training classes, grooming salons, dog shows. AVMA lists it for dogs that board or go to daycare. Intranasal and oral live vaccines protect after a single dose, while injectable versions need two doses. WSAVA lists annual revaccination; ask your vet how far ahead of boarding to vaccinate. A 72-hour digital countdown timer is how that boarding window is a counted 72 hours after the intranasal dose instead of a guessed morning — it is not a 12-hour mechanical kitchen timer, not an analog wall clock with a second hand, and it is not a Bordetella product. The timer does not confer immunity. A collapsible silicone travel dog bowl is how boarding water is a carried bowl instead of a shared kennel bucket — the same high-contact setting that is why Bordetella is a lifestyle vaccine in the first place.</p>
+          <p><strong>Bordetella bronchiseptica (kennel cough):</strong> Recommended for any dog with exposure to other dogs — boarding, daycare, dog parks, training classes, grooming salons, dog shows. AVMA lists it for dogs that board or go to daycare. Intranasal and oral live vaccines protect after a single dose, while injectable versions need two doses. WSAVA lists annual revaccination; ask your vet how far ahead of boarding to vaccinate. A digital countdown timer is a simple way to track whatever lead time your vet gives you between the vaccine and boarding. It is not a 12-hour mechanical kitchen timer, not an analog wall clock with a second hand, and it is not a Bordetella product. The timer does not confer immunity. A collapsible silicone travel dog bowl is how boarding water is a carried bowl instead of a shared kennel bucket — the same high-contact setting that is why Bordetella is a lifestyle vaccine in the first place.</p>
           <p><strong>Lyme disease:</strong> Generally recommended only for dogs at high risk of tick exposure where Lyme disease is known or likely. Two doses 2–4 weeks apart, then annually just before tick season (WSAVA). Does not replace tick prevention — use both. The Lyme vaccine reduces disease severity if a vaccinated dog is infected but does not provide complete protection.</p>
           <p><strong>Canine influenza (H3N2/H3N8):</strong> For dogs with high-contact lifestyles — boarding, dog shows, competition events, grooming salons. WSAVA suggests considering it for co-housed dogs, such as those in kennels, at shows or in day care. Two doses, generally 2–4 weeks apart per the product leaflet, then annually. A carried travel bowl is household hygiene at those same high-contact drops; it is not a kennel disinfectant spray and it is not an influenza vaccine.</p>
 
           <h2>Titer Testing</h2>
-          <p>Titer tests measure circulating antibody levels against specific pathogens — they assess whether a prior vaccine generated a protective immune response. Positive titers for parvovirus, distemper, and adenovirus indicate likely immunity and can support a decision to defer revaccination. Some clinics offer in-clinic titer kits for these antigens; ask yours about turnaround time. Letter-size thermal laminating pouches are how that same-day printout rides with the rabies certificate instead of living in a glove-box pile — they are not a Vaccicheck kit, not a titer blood test, and not a clinic lab. A pouch does not measure antibodies.</p>
+          <p>Titer tests measure circulating antibody levels against specific pathogens — they assess whether a prior vaccine generated a protective immune response. Positive titers for parvovirus, distemper, and adenovirus indicate likely immunity and can support a decision to defer revaccination. Some clinics offer in-clinic titer kits for these antigens; ask yours about turnaround time. Letter-size thermal laminating pouches are how a titer printout rides with the rabies certificate instead of living in a glove-box pile — they are not a titer test kit, not a titer blood test, and not a clinic lab. A pouch does not measure antibodies.</p>
           <p>Important limitations: titer testing does not replace vaccination programs (AVMA), and rabies boosters follow the law where you live, whatever the titer shows. Titers measure one arm of immunity — circulating antibodies — and do not capture cell-mediated immunity. A negative titer does not definitively mean the dog is unprotected; a positive titer does not guarantee protection against all strains. Titer testing is most useful for owners of adult dogs with documented vaccine history who want to minimize vaccine frequency. Documented history is a kept certificate and a kept printout.</p>
 
           <h2 id="kit">Supplies named on this page</h2>
           <p>
-            Keep these on hand: letter-size thermal laminating pouches so the rabies certificate and titer printout stay a pocketable legal copy, a 72-hour digital countdown timer so the intranasal Bordetella window is a counted 72 hours, and a collapsible silicone travel dog bowl so boarding water is a carried bowl. These are educational home-care / recordkeeping / travel-prep / monitoring tools, not a ranked product list, not a substitute for veterinary care, and not a vaccine product. Nobivac, DA2PP, Bordetella, rabies, Lyme, influenza, and Vaccicheck kits are clinic products, not product links.
+            Keep these on hand: letter-size thermal laminating pouches so the rabies certificate and titer printout stay a pocketable legal copy, a digital countdown timer to track the vaccine-to-boarding lead time your vet sets, and a collapsible silicone travel dog bowl so boarding water is a carried bowl. These are educational home-care / recordkeeping / travel-prep / monitoring tools, not a ranked product list, not a substitute for veterinary care, and not a vaccine product. Vaccines and titer test kits are clinic products, not product links.
           </p>
 
           <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/collapsible+silicone+travel+dog+bowl?s=health-dog-vaccinations-guide", "/go/amazon-brand/72+hour+digital+countdown+timer?s=health-dog-vaccinations-guide"]} />
 
           {/* Shop note — live amazon-brand search buttons
               (letter-size thermal laminating pouches /
-              72-hour digital countdown timer /
+              digital countdown timer (hop slug kept) /
               collapsible silicone travel dog bowl).
               These are educational home-care /
               recordkeeping / travel-prep /
@@ -89,7 +89,7 @@ export default function DogVaccinationsGuidePage() {
               list, not a substitute for veterinary
               care, no Rx / vaccine / Nobivac /
               DA2PP / Bordetella / rabies / Lyme /
-              influenza / Vaccicheck product page buttons.
+              influenza / titer-kit product page buttons.
               ShopCtas hides empty Chewy; never href="#"
               or an empty link. Amazon searches only —
               unused vs #1090
@@ -130,14 +130,14 @@ export default function DogVaccinationsGuidePage() {
               dog+seat+belt+tether /
               foldable+waterproof+puppy+mat.
               Nobivac, DA2PP, Bordetella, rabies,
-              Lyme, influenza, and Vaccicheck
+              Lyme, influenza, and titer kits
               are not shoppable buttons. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop these supplies
             </div>
             <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              Keep these on hand: letter-size thermal laminating pouches, a 72-hour digital countdown timer, and a collapsible silicone travel dog bowl. Educational home-care / recordkeeping / travel-prep / monitoring tools only.
+              Keep these on hand: letter-size thermal laminating pouches, a digital countdown timer, and a collapsible silicone travel dog bowl. Educational home-care / recordkeeping / travel-prep / monitoring tools only.
             </p>
             <div className="flex flex-col gap-3">
               <ShopCtas
@@ -146,7 +146,7 @@ export default function DogVaccinationsGuidePage() {
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/72+hour+digital+countdown+timer?s=health-dog-vaccinations-guide"
-                amazonLabel="Browse 72-hour digital countdown timers on Amazon →"
+                amazonLabel="Browse digital countdown timers on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/collapsible+silicone+travel+dog+bowl?s=health-dog-vaccinations-guide"

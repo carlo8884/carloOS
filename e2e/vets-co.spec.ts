@@ -1207,3 +1207,14 @@ test('vets fix DV1: dog vaccination guide opens with a sourced short answer and 
   expect(text).not.toContain('same-day results')
   expect(text).toContain('general reference; not checked against this page')
 })
+
+test('vets fix DV2: dog vaccination supplies copy drops unsourced 72-hour and Vaccicheck claims, shop hops intact', async ({ page }) => {
+  await page.goto('/health/dog-vaccinations-guide', { waitUntil: 'domcontentloaded' })
+  const text = await page.locator('body').innerText()
+  expect(text).not.toMatch(/72[- ]hour/i)
+  expect(text).not.toContain('Vaccicheck')
+  expect(text).not.toContain('same-day printout')
+  await expect(page.locator('a[href="/go/amazon-brand/72+hour+digital+countdown+timer?s=health-dog-vaccinations-guide"]').first()).toBeVisible()
+  await expect(page.locator('a[href="/go/amazon-brand/collapsible+silicone+travel+dog+bowl?s=health-dog-vaccinations-guide"]').first()).toBeVisible()
+  await expect(page.getByText('Browse digital countdown timers on Amazon').first()).toBeVisible()
+})
