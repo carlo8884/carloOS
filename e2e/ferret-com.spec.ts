@@ -1293,3 +1293,24 @@ test('ferret fix HR2: compact home hero, slim header, one money section, no embe
     expect(m.calcs).toBe(0)
   }
 })
+
+test('ferret fix VB2: hub cards show credited ferret photos with no text on the photo, and the nav is solid', async ({ page }) => {
+  await page.setViewportSize({ width: 1280, height: 800 })
+  await page.goto('/', { waitUntil: 'domcontentloaded' })
+  const cards = page.locator('section:has(h2:text("Six libraries")) li')
+  await expect(cards).toHaveCount(6)
+  const m = await page.evaluate(() => {
+    const items = [...document.querySelectorAll('section li')].filter((li) => li.querySelector('img') && li.closest('section')?.querySelector('h2')?.textContent?.includes('Six libraries'))
+    return items.map((li) => {
+      const img = (li.querySelector('a > div') as HTMLElement).getBoundingClientRect()
+      const label = (li.querySelector('span.font-display') as HTMLElement).getBoundingClientRect()
+      return { below: label.top >= img.bottom - 1, alt: li.querySelector('img')!.alt }
+    })
+  })
+  for (const c of m) {
+    expect(c.below, c.alt).toBe(true)
+    expect(c.alt.toLowerCase()).toContain('ferret')
+  }
+  const navBg = await page.evaluate(() => getComputedStyle(document.querySelector('nav[aria-label="Main navigation"]')!).backgroundColor)
+  expect(navBg).not.toBe('rgba(0, 0, 0, 0)')
+})

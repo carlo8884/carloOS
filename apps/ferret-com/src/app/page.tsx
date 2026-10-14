@@ -215,6 +215,16 @@ const FEATURED_ARTICLES = [
 
 // Strip StockImage's outer margins (it renders my-8 on both the <figure> and
 // the pending-sync placeholder <div>) so it fills a tile edge-to-edge.
+/** VB2: one distinct, credited Unsplash ferret photo per hub (manifest keys). */
+const HUB_PHOTOS: Record<string, { key: string; alt: string }> = {
+  '/health': { key: 'ferret-com:health-hero', alt: 'A small ferret asleep inside a clay pot' },
+  '/care': { key: 'ferret-com:category-care', alt: 'A ferret sniffing on a dark background' },
+  '/behavior': { key: 'ferret-com:behavior-hero', alt: 'A white ferret on a black background' },
+  '/colors': { key: 'ferret-com:colors-hero', alt: 'A light-furred ferret on a black background' },
+  '/diet': { key: 'ferret-com:health-insulinoma', alt: 'A small ferret asleep inside a clay pot' },
+  '/ownership': { key: 'ferret-com:first-year-hero', alt: 'A light-furred ferret on a black background' },
+}
+
 const FILL_IMAGE = '[&>figure]:my-0 [&>div]:my-0 [&_figure]:my-0'
 
 // ── Component ───────────────────────────────────────────────────────────────
@@ -252,159 +262,30 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ════════════════════════════════════════════════════════════════
-          CLUSTER HUBS — image-backed entry tiles (Dog owner-path pattern)
-          Six top-level authority hubs, each backed by a REAL synced hub photo
-          with a bottom-up scrim keeping the label legible over the image.
-          ════════════════════════════════════════════════════════════════ */}
-      <section style={{ background: 'var(--brand-dark)', position: 'relative', overflow: 'hidden' }}>
-        <div
-          aria-hidden
-          style={{
-            position: 'absolute',
-            inset: 0,
-            opacity: 0.1,
-            backgroundImage: 'radial-gradient(ellipse at 72% 28%, rgba(201,157,95,0.3) 0%, transparent 55%)',
-          }}
-        />
-        <div
-          style={{
-            position: 'relative',
-            zIndex: 10,
-            maxWidth: '1180px',
-            margin: '0 auto',
-            padding: 'clamp(32px, 5vw, 56px) clamp(20px, 5vw, 40px)',
-          }}
-        >
-          <div style={{ marginBottom: '28px' }}>
-            <span
-              style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '10px',
-                fontSize: '0.7rem',
-                fontWeight: 700,
-                letterSpacing: '0.14em',
-                textTransform: 'uppercase',
-                color: 'var(--brand-amber)',
-              }}
-            >
-              <span aria-hidden style={{ display: 'inline-block', width: '24px', height: '2px', background: 'var(--brand-amber)', flexShrink: 0 }} />
-              Explore the library
-            </span>
-            <h2
-              style={{
-                fontFamily: 'var(--font-display)',
-                fontSize: 'clamp(1.875rem, 3.5vw, 2.75rem)',
-                fontWeight: 800,
-                letterSpacing: '-0.02em',
-                color: 'rgba(251, 245, 232, 0.97)',
-                lineHeight: 1.12,
-                margin: '14px 0 0',
-              }}
-            >
-              Six libraries, one reference
-            </h2>
-          </div>
-
-          <ul
-            role="list"
-            style={{
-              listStyle: 'none',
-              padding: 0,
-              margin: 0,
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 260px), 1fr))',
-              gap: '16px',
-            }}
-          >
-            {HUBS.map((hub) => (
-              <li key={hub.href}>
-                <Link
-                  href={hub.href}
-                  style={{
-                    position: 'relative',
-                    display: 'block',
-                    borderRadius: '14px',
-                    overflow: 'hidden',
-                    textDecoration: 'none',
-                    color: 'inherit',
-                    boxShadow: 'inset 0 0 0 1px rgba(251, 245, 232, 0.1)',
-                    minHeight: 'clamp(150px, 18vw, 210px)',
-                  }}
-                >
-                  {/* Real hub photo fills the tile */}
-                  <div
-                    className={`${FILL_IMAGE} [&_figure>div]:!rounded-none [&>div]:h-full [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}
-                    style={{ position: 'absolute', inset: 0 }}
-                  >
-                    <StockImage
-                      manifestKey={hub.manifestKey}
-                      alt={hub.imageAlt}
-                      aspect="3:4"
-                      variant="inline"
-                      subtleCredit
-                    />
-                  </div>
-                  {/* Bottom-up scrim — keeps label legible over any photo */}
-                  <div
-                    aria-hidden
-                    style={{
-                      position: 'absolute',
-                      inset: 0,
-                      background:
-                        'linear-gradient(to top, rgba(30,20,10,0.92) 0%, rgba(30,20,10,0.4) 50%, rgba(30,20,10,0.1) 100%)',
-                    }}
-                  />
-                  {/* Label content */}
-                  <div
-                    style={{
-                      position: 'relative',
-                      zIndex: 10,
-                      display: 'flex',
-                      flexDirection: 'column',
-                      justifyContent: 'flex-end',
-                      minHeight: 'clamp(150px, 18vw, 210px)',
-                      padding: '22px 22px',
-                    }}
-                  >
-                    <div
-                      style={{
-                        fontFamily: 'var(--font-display)',
-                        fontSize: '1.5rem',
-                        fontWeight: 800,
-                        color: 'rgba(251, 245, 232, 0.98)',
-                        marginBottom: '8px',
-                        lineHeight: 1.15,
-                        letterSpacing: '-0.01em',
-                      }}
-                    >
-                      {hub.label}
+      {/* CLUSTER HUBS (VB2) — photo-top cards on a warm tint. Each hub gets a
+          different credited ferret photo; no text sits on a photo. */}
+      <section className="bg-brand-surface px-6 py-10 md:py-12">
+        <div className="mx-auto max-w-[1180px]">
+          <p className="mb-2 text-xs font-bold uppercase tracking-[0.12em] text-brand-primary">Explore the library</p>
+          <h2 className="mb-5 font-display text-2xl font-extrabold leading-tight text-brand-text-dark md:text-3xl">Six libraries, one reference</h2>
+          <ul role="list" className="grid list-none grid-cols-2 gap-3 p-0 md:grid-cols-3 md:gap-4">
+            {HUBS.map((hub) => {
+              const photo = HUB_PHOTOS[hub.href] ?? { key: hub.manifestKey, alt: hub.imageAlt }
+              return (
+                <li key={hub.href}>
+                  <Link href={hub.href} className="flex h-full flex-col overflow-hidden rounded-xl border border-brand-border bg-white no-underline hover:border-brand-primary">
+                    <div className={`aspect-[4/3] overflow-hidden md:aspect-[16/9] ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto] [&_figure>div]:h-full [&_figure>div]:!rounded-none [&>div]:h-full`}>
+                      <StockImage manifestKey={photo.key} alt={photo.alt} aspect="16:9" variant="inline" belowFold subtleCredit />
                     </div>
-                    <p
-                      style={{
-                        fontSize: '0.875rem',
-                        lineHeight: 1.5,
-                        color: 'rgba(251, 245, 232, 0.78)',
-                        margin: '0 0 12px',
-                      }}
-                    >
-                      {hub.blurb}
-                    </p>
-                    <span
-                      style={{
-                        fontSize: '0.8125rem',
-                        fontWeight: 700,
-                        color: hub.ctaColor ?? 'var(--brand-amber)',
-                        letterSpacing: '0.01em',
-                      }}
-                    >
-                      {hub.cta} &rarr;
-                    </span>
-                  </div>
-                </Link>
-              </li>
-            ))}
+                    <div className="flex flex-1 flex-col p-3 md:p-4">
+                      <span className="font-display text-lg font-extrabold text-brand-text-dark md:text-xl">{hub.label}</span>
+                      <span className="mt-1 hidden text-sm text-brand-text-mid md:block">{hub.blurb}</span>
+                      <span className="mt-2 text-sm font-semibold text-brand-primary">{hub.cta} &rarr;</span>
+                    </div>
+                  </Link>
+                </li>
+              )
+            })}
           </ul>
         </div>
       </section>
