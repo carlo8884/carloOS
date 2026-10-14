@@ -32,7 +32,7 @@ function QuickPickShopLink({ href, name, shopLabel, quietUntilTag = false }: { h
       href={hop}
       data-shop-placement="quick-pick"
       rel="sponsored noopener"
-      className="relative z-10 ml-2 text-2xs font-semibold normal-case tracking-normal text-brand-dark underline underline-offset-2"
+      className="relative z-10 ml-2 inline-flex min-h-6 items-center text-2xs font-semibold normal-case tracking-normal text-brand-dark underline underline-offset-2"
     >
       {shopLabel || `Check price of ${built.label}`}
     </a>
@@ -46,7 +46,7 @@ function HowWePickLink({ label }: { label?: string }) {
   return (
     <a
       href="/how-we-pick"
-      className="relative z-10 ml-2 text-2xs font-semibold normal-case tracking-normal text-brand-text-light underline underline-offset-2 whitespace-nowrap"
+      className="relative z-10 ml-2 inline-flex min-h-6 items-center text-2xs font-semibold normal-case tracking-normal text-brand-text-light underline underline-offset-2 whitespace-nowrap"
     >
       How we pick
     </a>
