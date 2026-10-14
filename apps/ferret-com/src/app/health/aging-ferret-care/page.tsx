@@ -19,6 +19,21 @@ import {
 
 const SOURCES = [
   {
+    label: "Lafeber — Care of the Ferret (2020): lifespan, exam frequency and dental cleaning age",
+    url: "https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf",
+    publisher: "Lafeber Company",
+  },
+  {
+    label: "Merck Veterinary Manual — Hormonal Disorders of Ferrets",
+    url: "https://www.merckvetmanual.com/all-other-pets/ferrets/hormonal-disorders-of-ferrets",
+    publisher: "Merck Veterinary Manual",
+  },
+  {
+    label: "Merck Veterinary Manual — Other Noninfectious Diseases of Ferrets: dilated cardiomyopathy age and signs",
+    url: "https://www.merckvetmanual.com/all-other-pets/ferrets/other-noninfectious-diseases-of-ferrets",
+    publisher: "Merck Veterinary Manual",
+  },
+  {
     label: "Quesenberry KE, Carpenter JW (eds.). Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery. 3rd ed. Saunders/Elsevier — senior care, endocrine, oncology, and geriatric-ferret chapters. (general reference; not checked against this page)",
     url: "https://www.elsevier.com/books/ferrets-rabbits-and-rodents/quesenberry/978-1-4160-6621-7",
     publisher: "Elsevier/Saunders",
@@ -78,7 +93,7 @@ const medSchema = buildMedicalWebPageSchema({
     'Clinical reference on senior ferret care, including age-related disease incidence, diet adjustments, quality-of-life monitoring, and end-of-life decision frameworks.',
   url: 'https://ferret.com/health/aging-ferret-care',
   authorName: 'Ferret.com Editorial',
-  lastReviewed: '2026-05-28',
+  lastReviewed: '2026-10-13',
 })
 
 
@@ -86,17 +101,17 @@ const FAQS = [
   {
     question: 'What age is a "senior" ferret?',
     answer:
-      "There is no single hard cutoff, but most exotic-pet vets begin treating ferrets as senior at around age 4-5, with formal senior protocols by age 5. Average ferret lifespan in captivity is 5-8 years, with some individuals reaching 9-10. The senior label reflects the rising incidence of insulinoma, adrenal disease, cardiomyopathy, lymphoma, and dental disease in this age window, not a specific birthday.",
+      "There is no single hard cutoff, but Lafeber\'s Care of the Ferret gives an average lifespan of 6 to 8 years and recommends exams twice a year from age 3, so many owners treat 3+ as the start of closer monitoring. The senior label reflects the rising incidence of insulinoma, adrenal disease, cardiomyopathy, lymphoma, and dental disease in this age window, not a specific birthday.",
   },
   {
     question: 'Should my senior ferret get bloodwork more often?',
     answer:
-      "Yes. The standard pattern across exotic-pet practice is annual bloodwork from age 1-3, every 6 months from 3-5, and every 3-6 months from 5+ — adjusted for the specific ferret's clinical picture. The screening reasoning: insulinoma is best caught on fasting glucose, adrenal disease on hormone panel, lymphoma on CBC abnormalities. Catching these early changes the prognosis substantially.",
+      "Usually. Lafeber recommends annual exams for pet ferrets and twice-yearly exams from 3 years of age; ask your vet which bloodwork to run at those visits. The screening reasoning: insulinoma is best caught on fasting glucose, adrenal disease on hormone panel, lymphoma on CBC abnormalities. Catching these early changes the prognosis substantially.",
   },
   {
     question: 'My old ferret has lost a lot of weight — should I worry?',
     answer:
-      "Yes. Unexplained weight loss in a senior ferret is one of the most reliable signs of clinically meaningful disease — insulinoma, lymphoma, chronic kidney disease, dental pain interfering with eating, or simply progressive frailty. A senior ferret who has lost more than ~10% of body weight in a few months needs an exotic-pet vet visit; weight stability is one of the most useful single proxies for overall health in this age group.",
+      "Yes. Unexplained weight loss in a senior ferret is one of the most reliable signs of clinically meaningful disease — insulinoma, lymphoma, chronic kidney disease, dental pain interfering with eating, or simply progressive frailty. Unexplained weight loss in a senior ferret needs an exotic-pet vet visit; weight stability is one of the most useful single proxies for overall health in this age group.",
   },
   {
     question: 'How do I know when it\'s time for end-of-life care?',
@@ -111,7 +126,7 @@ const FAQS = [
   {
     question: 'Can I make my home easier for an arthritic senior ferret?',
     answer:
-      "Yes, several practical changes help. Lower the cage ramps and add fleece covers for grip. Move food and water to floor level. Soft sleep sacks at floor level so the ferret doesn't have to climb to nap. Padding under any height the ferret might jump from. Indoor temperature on the cooler side of comfortable (ferrets prefer ~65-75°F anyway, and arthritic joints do better cool). Pain management — meloxicam, gabapentin — is a vet conversation and worth having early in the trajectory.",
+      "Yes, several practical changes help. Lower the cage ramps and add fleece covers for grip. Move food and water to floor level. Soft sleep sacks at floor level so the ferret doesn't have to climb to nap. Padding under any height the ferret might jump from. Indoor temperature on the cooler side of comfortable (ask your vet what range suits your ferret). Pain management — meloxicam, gabapentin — is a vet conversation and worth having early in the trajectory.",
   },
 ]
 const faqSchema = buildFAQSchema({ questions: FAQS })
@@ -136,7 +151,7 @@ export default function FerretAgingPage() {
         hero={{
           title: 'Aging Ferret Care',
           subtitle:
-            'Ferrets live 5-8 years on average in captivity, sometimes 9-10. The last third of that lifespan — roughly age 4-5 onward — is when the disease incidence curve climbs sharply and the daily care commitment shifts from preventive maintenance to active monitoring. Done well, the senior years can be the closest, most rewarding part of ferret ownership.',
+            'Ferrets live an average of 6 to 8 years (Lafeber). The later years — is when the disease incidence curve climbs sharply and the daily care commitment shifts from preventive maintenance to active monitoring. Done well, the senior years can be the closest, most rewarding part of ferret ownership.',
           category: 'Ferret Health',
           authorName: 'Ferret.com Editorial',
           publishedAt: 'May 2026',
@@ -216,6 +231,12 @@ export default function FerretAgingPage() {
             updatedAt="2026-10-13"
           />
           <LastUpdated date="2026-10-13" />
+          <div className="rounded-lg border-l-4 border-brand-primary bg-brand-white p-5 my-6" data-testid="short-answer">
+            <h2 className="font-display text-lg font-bold mb-2">The short answer</h2>
+            <p className="text-base leading-relaxed text-brand-text-mid m-0">
+              Ferrets live an average of 6 to 8 years. Lafeber recommends a vet exam every year, twice a year from age 3, and annual dental cleaning for ferrets over 3 (<a href="https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf">Lafeber</a>). Insulinoma and adrenal disease are common hormonal disorders of ferrets (<a href="https://www.merckvetmanual.com/all-other-pets/ferrets/hormonal-disorders-of-ferrets">Merck</a>), and heart disease usually appears after age 4 (<a href="https://www.merckvetmanual.com/all-other-pets/ferrets/other-noninfectious-diseases-of-ferrets">Merck</a>). Watch for weakness, weight loss, hair loss and breathing trouble, and see a ferret-experienced vet promptly.
+            </p>
+          </div>
 
           <DropCap>
             The senior years are where the structural decisions made earlier
@@ -229,11 +250,11 @@ export default function FerretAgingPage() {
           </DropCap>
 
                     <p>
-            Domestic ferrets live an average of 5-8 years. Senior care
-            typically begins at age 4-5, with formal protocols by age 5.
+            Domestic ferrets live an average of 6 to 8 years, and Lafeber
+            recommends twice-yearly exams from age 3.
             Disease incidence rises sharply for insulinoma, adrenal disease,
             cardiomyopathy, lymphoma, and dental disease in this window.
-            Monitoring shifts from annual bloodwork to every 3-6 months,
+            Monitoring shifts from annual to more frequent vet checks,
             diet adjusts toward more frequent small meals, and the
             quality-of-life conversation should start before it feels urgent.
             Structured frameworks like the HHHHHMM scale and the AVMA
@@ -244,8 +265,7 @@ export default function FerretAgingPage() {
           <h2 id="lifespan">Lifespan and What &quot;Senior&quot; Means</h2>
           <p>
             Reported average lifespan for domestic ferrets in pet-keeper care
-            in the US is approximately <strong>5-8 years</strong>, with
-            individuals reaching 9 or occasionally 10 years. The variation
+            is an average of <strong>6 to 8 years</strong> (Lafeber). The variation
             reflects genetics, source (commercial pet-store ferrets vs
             private breeders), early-life husbandry, diet, and access to
             exotic-pet veterinary care. European working-line ferrets
@@ -374,14 +394,14 @@ export default function FerretAgingPage() {
                 </tr>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 font-medium">Year 3-5</td>
-                  <td className="p-3">Every 6 months</td>
-                  <td className="p-3">Every 6 months</td>
+                  <td className="p-3">Every 6 months (Lafeber: twice yearly from 3)</td>
+                  <td className="p-3">As your vet advises</td>
                   <td className="p-3">Cardiac auscultation; consider adrenal hormone panel if signs</td>
                 </tr>
                 <tr>
                   <td className="p-3 font-medium">Year 5+</td>
-                  <td className="p-3">Every 3-6 months</td>
-                  <td className="p-3">Every 3-6 months</td>
+                  <td className="p-3">At least every 6 months (Lafeber); more often if your vet advises</td>
+                  <td className="p-3">As your vet advises</td>
                   <td className="p-3">Cardiac, abdominal ultrasound annually, hormone panel as indicated</td>
                 </tr>
               </tbody>

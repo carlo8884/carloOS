@@ -15,6 +15,16 @@ import {
 
 const SOURCES = [
   {
+    label: "Merck Veterinary Manual (pet owner) — Cancers and Tumors of Ferrets: lymphoma, diagnosis and treatment",
+    url: "https://www.merckvetmanual.com/all-other-pets/ferrets/cancers-and-tumors-of-ferrets",
+    publisher: "Merck Veterinary Manual",
+  },
+  {
+    label: "Lafeber — Care of the Ferret (2020): exam frequency",
+    url: "https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf",
+    publisher: "Lafeber Company",
+  },
+  {
     label: "Quesenberry KE, Carpenter JW (eds.). Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery. 3rd ed. Saunders/Elsevier — ferret oncology chapter covering lymphoma classification, workup, and treatment frameworks. (general reference; not checked against this page)",
     url: "https://www.elsevier.com/books/ferrets-rabbits-and-rodents/quesenberry/978-1-4160-6621-7",
     publisher: "Elsevier/Saunders",
@@ -73,7 +83,7 @@ const medSchema = buildMedicalWebPageSchema({
     "Clinical reference on lymphoma in ferrets, including epidemiology, presentation, diagnosis, and treatment options.",
   url: 'https://ferret.com/health/lymphoma',
   authorName: 'Ferret.com Editorial',
-  lastReviewed: '2026-05-29',
+  lastReviewed: '2026-10-13',
 })
 
 const FAQS = [
@@ -95,17 +105,17 @@ const FAQS = [
   {
     question: 'Can ferret lymphoma be treated?',
     answer:
-      "Yes, with multi-agent chemotherapy protocols adapted from feline lymphoma medicine. The most commonly used backbone is a CHOP-style protocol (cyclophosphamide, doxorubicin, vincristine, prednisone) or simpler prednisone-only palliative therapy. Chemotherapy is typically offered through exotic-pet specialty practices or veterinary teaching hospitals. Surgery may be added for solitary masses. Response rates and durations vary by form and individual ferret.",
+      "Yes, though Merck notes treatment has not been standardized; options include removing affected tissue, chemotherapy or radiation. The most commonly used backbone is a CHOP-style protocol (cyclophosphamide, doxorubicin, vincristine, prednisone) or simpler prednisone-only palliative therapy. Chemotherapy is typically offered through exotic-pet specialty practices or veterinary teaching hospitals. Surgery may be added for solitary masses. Response rates and durations vary by form and individual ferret.",
   },
   {
     question: 'What is the prognosis?',
     answer:
-      "Highly variable by lymphoma form, anatomic distribution, immunophenotype, and ferret age. Juvenile lymphoma in young ferrets often progresses rapidly with short survival times even with treatment. Adult slow-progressing forms can have multi-year survival on chemotherapy. Prednisone-only palliation typically buys weeks to a few months. The exotic-pet vet handling the case is the right source of an individualized prognosis; population-level numbers vary too widely to be useful in a single answer.",
+      "Highly variable by lymphoma form, anatomic distribution, immunophenotype, and ferret age. Juvenile lymphoma in young ferrets often progresses rapidly with short survival times even with treatment. Merck notes lymphoma can progress rapidly in young ferrets but is often chronic in adults. The exotic-pet vet handling the case is the right source of an individualized prognosis; population-level numbers vary too widely to be useful in a single answer.",
   },
   {
     question: 'Should I screen my ferret for lymphoma?',
     answer:
-      "Routine senior bloodwork — CBC and chemistry every 6 months from age 3-5, every 3-6 months from age 5+ — is the practical screening tool. Unexplained lymphocytosis, anemia, or other CBC abnormalities are the most common early signal. Direct screening (e.g. prophylactic biopsy) is not standard. The same monitoring cadence catches insulinoma and adrenal disease and is the standard exotic-pet preventive-care recommendation regardless of any specific cancer concern.",
+      "Regular exams with bloodwork are the practical screening tool; Lafeber recommends exams twice a year from age 3. Unexplained lymphocytosis, anemia, or other CBC abnormalities are the most common early signal. Direct screening (e.g. prophylactic biopsy) is not standard. The same monitoring cadence catches insulinoma and adrenal disease and is the standard exotic-pet preventive-care recommendation regardless of any specific cancer concern.",
   },
 ]
 const faqSchema = buildFAQSchema({ questions: FAQS })
@@ -200,6 +210,12 @@ export default function FerretLymphomaPage() {
             reviewedBy="Editorial team"
           />
           <LastUpdated date="2026-10-13" />
+          <div className="rounded-lg border-l-4 border-brand-primary bg-brand-white p-5 my-6" data-testid="short-answer">
+            <h2 className="font-display text-lg font-bold mb-2">The short answer</h2>
+            <p className="text-base leading-relaxed text-brand-text-mid m-0">
+              Lymphoma is a common ferret cancer that can affect lymph nodes, spleen, liver, heart, thymus and kidneys. It can progress rapidly in young ferrets but is often chronic in adults. Diagnosis uses bloodwork, X-rays, ultrasound and tissue samples. Treatment has not been standardized and may include surgery, chemotherapy or radiation under close vet monitoring (<a href="https://www.merckvetmanual.com/all-other-pets/ferrets/cancers-and-tumors-of-ferrets">Merck</a>).
+            </p>
+          </div>
 
           <DropCap>
             Ferret lymphoma is the cancer that does not have a single
@@ -256,8 +272,8 @@ export default function FerretLymphomaPage() {
           </p>
           <ul>
             <li>
-              <strong>Juvenile lymphoma</strong> in ferrets under about
-              14-18 months. Often aggressive, often lymphoblastic,
+              <strong>Juvenile lymphoma</strong> in young ferrets, where Merck
+              notes it can progress rapidly. Often aggressive, often lymphoblastic,
               frequently with mediastinal involvement. Historically
               attributed to a possible viral etiology — analogous to
               feline leukemia virus in cats — but a specific ferret
@@ -340,15 +356,12 @@ export default function FerretLymphomaPage() {
           <h3>Juvenile lymphoblastic lymphoma</h3>
           <p>
             Aggressive, high-grade, frequently mediastinal. Affects
-            ferrets under approximately 14-18 months. Survival times
-            with treatment have historically been short — weeks to a
-            few months — although newer chemotherapy protocols
-            occasionally produce longer responses.
+            young ferrets and can progress rapidly (Merck).
           </p>
           <h3>Adult multicentric lymphoma</h3>
           <p>
             Multiple lymph node and organ involvement at presentation.
-            Mid-range survival times on multi-agent chemotherapy.
+            Outcomes on chemotherapy vary.
             Probably the most common adult presentation.
           </p>
           <h3>Alimentary (gastrointestinal) lymphoma</h3>
@@ -538,19 +551,15 @@ export default function FerretLymphomaPage() {
             </li>
             <li>
               <strong>Adult multi-agent chemotherapy responders:</strong>
-              Median survival in the range of 6-18 months, with
-              substantial individual variation. Some ferrets respond
-              durably and live multi-year intervals.
+              Outcomes vary widely; ask your vet.
             </li>
             <li>
               <strong>Adult prednisone-only palliation:</strong>
-              Typical survival weeks to a few months. Quality of life
-              is often good during this interval.
+              Aimed at comfort; ask your vet what to expect.
             </li>
             <li>
               <strong>Small-cell GI lymphoma on chlorambucil-prednisone:</strong>
-              Often longer survival, occasionally measured in years.
-              The most favorable prognosis category among adult forms.
+              Often more slowly progressing; ask your vet about outlook.
             </li>
           </ul>
           <p>
