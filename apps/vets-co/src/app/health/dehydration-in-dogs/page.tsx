@@ -8,7 +8,7 @@ const SOURCES = [
   { label: 'AKC: Dehydration in Dogs (Dr. Jerry Klein)', url: 'https://www.akc.org/expert-advice/health/warning-signs-dehydration-dogs/', publisher: 'American Kennel Club' },
   { label: 'Merck Veterinary Manual: Fluid Therapy in Small Animals', url: 'https://www.merckvetmanual.com/therapeutics/fluid-therapy/fluid-therapy-in-animals', publisher: 'Merck Vet Manual' },
 ]
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Dehydration in Dogs', description: 'Signs, skin turgor test, and IV fluids decision guide for dog dehydration.', url: 'https://vets.co/health/dehydration-in-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-13T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Dehydration in Dogs', description: 'Signs, skin turgor test, and IV fluids decision guide for dog dehydration.', url: 'https://vets.co/health/dehydration-in-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-14T00:00:00Z' ,
   citation: SOURCES,
 })
 const med = buildMedicalWebPageSchema({ name: 'Dehydration in Dogs', description: 'Assessing and treating dehydration in dogs — skin turgor, gum assessment, and fluid therapy.', url: 'https://vets.co/health/dehydration-in-dogs', authorName: 'Vets.co Editorial', lastReviewed: '2026-10-13' })
@@ -61,13 +61,13 @@ export default function DehydrationPage() {
       >
         <div className="carloOS-article">
 
-          <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-10-13T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-13" />
           <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
             <HopDisclosure siteId="vets-co" href="/go/amazon-brand/unflavored+pediatric+electrolyte?s=health-dehydration-in-dogs" />
             <ShopCtas amazonHref="/go/amazon-brand/unflavored+pediatric+electrolyte?s=health-dehydration-in-dogs" amazonLabel="Browse unflavored pediatric electrolytes on Amazon →" />
             <a href="#kit" className="inline-flex min-h-[44px] items-center text-xs text-brand-text-mid underline underline-offset-2">All supplies on this page ↓</a>
           </div>
+          <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-10-14T00:00:00Z" reviewedBy="Editorial team" />
+          <LastUpdated date="2026-10-14" />
 
           <CalloutBox variant="info" title="Short answer">
             <p>Signs of dehydration in dogs include skin that is slow to spring back when lifted, dry or sticky gums, thick saliva, sunken dry-looking eyes, lethargy, loss of appetite, and vomiting. Offer fresh, cool water. If your dog has these signs along with persistent vomiting, or you suspect heatstroke, treat it as an emergency: a vet can give fluids under the skin or into a vein. Source: <a href="https://www.akc.org/expert-advice/health/warning-signs-dehydration-dogs/">AKC (Dr. Jerry Klein, AKC Chief Veterinarian)</a>.</p>

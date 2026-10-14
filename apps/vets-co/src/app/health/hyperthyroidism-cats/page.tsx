@@ -8,7 +8,7 @@ const SOURCES = [
   { label: 'Merck Veterinary Manual: Hyperthyroidism in Cats', url: 'https://www.merckvetmanual.com/endocrine-system/the-thyroid-gland/hyperthyroidism-in-animals', publisher: 'Merck Vet Manual' },
   { label: 'AAFP: Feline Hyperthyroidism Guidelines', url: 'https://catvets.com/resource/management-of-feline-hyperthyroidism-guidelines/', publisher: 'American Association of Feline Practitioners' },
 ]
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Hyperthyroidism in Cats', description: 'Signs, diagnosis, and the four treatment options for feline hyperthyroidism.', url: 'https://vets.co/health/hyperthyroidism-cats', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-10-13T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Hyperthyroidism in Cats', description: 'Signs, diagnosis, and the four treatment options for feline hyperthyroidism.', url: 'https://vets.co/health/hyperthyroidism-cats', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-10-14T00:00:00Z' ,
   citation: SOURCES,
 })
 const med = buildMedicalWebPageSchema({ name: 'Hyperthyroidism in Cats', description: 'Clinical signs, diagnosis, and treatment of feline hyperthyroidism.', url: 'https://vets.co/health/hyperthyroidism-cats', authorName: 'Vets.co Editorial', lastReviewed: '2026-10-13' })
@@ -49,13 +49,13 @@ export default function HyperthyroidismCatsPage() {
       >
         <div className="carloOS-article">
 
-          <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-10-13T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-13" />
           <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
             <HopDisclosure siteId="vets-co" href="/go/amazon-brand/small+digital+kitchen+food+scale?s=health-hyperthyroidism-cats" />
             <ShopCtas amazonHref="/go/amazon-brand/small+digital+kitchen+food+scale?s=health-hyperthyroidism-cats" amazonLabel="Browse small digital kitchen food scales on Amazon →" />
             <a href="#kit" className="inline-flex min-h-[44px] items-center text-xs text-brand-text-mid underline underline-offset-2">All supplies on this page ↓</a>
           </div>
+          <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-10-14T00:00:00Z" reviewedBy="Editorial team" />
+          <LastUpdated date="2026-10-14" />
 
           <CalloutBox variant="info" title="Hyperthyroidism can mask kidney disease">
             Excess thyroid hormone increases blood flow through the kidneys, which can make kidney values look better than they truly are. When hyperthyroidism is treated, underlying kidney disease may become apparent. This is why veterinarians monitor kidney values closely before and after treatment — it changes the plan, not whether to treat. A kitchen food scale, grooming glove, and measuring cup do not diagnose thyroid or kidney disease and they do not replace that bloodwork.

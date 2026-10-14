@@ -10,7 +10,7 @@ const SOURCES = [
   { label: 'CDC: Leptospirosis in Animals (general reference; not checked against this page)', url: 'https://www.cdc.gov/leptospirosis/pets/index.html', publisher: 'CDC' },
   { label: 'WSAVA: Vaccination table for dogs (2024 guidelines)', url: 'https://wsava.org/wp-content/uploads/2025/06/Dogs-Vaccination-Table.pdf', publisher: 'WSAVA' },
 ]
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Leptospirosis in Dogs', description: 'Signs, treatment, zoonotic risk, and vaccination for canine leptospirosis.', url: 'https://vets.co/health/leptospirosis', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-13T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Leptospirosis in Dogs', description: 'Signs, treatment, zoonotic risk, and vaccination for canine leptospirosis.', url: 'https://vets.co/health/leptospirosis', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-14T00:00:00Z' ,
   citation: SOURCES,
 })
 const med = buildMedicalWebPageSchema({ name: 'Leptospirosis in Dogs', description: 'Leptospira bacterial infection — signs, treatment, and vaccination.', url: 'https://vets.co/health/leptospirosis', authorName: 'Vets.co Editorial', lastReviewed: '2026-10-13' })
@@ -60,13 +60,13 @@ export default function LeptospirosisPage() {
       >
         <div className="carloOS-article">
 
-          <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-10-13T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-13" />
           <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
             <HopDisclosure siteId="vets-co" href="/go/amazon-brand/24+ounce+stainless+hiking+dog+bottle?s=health-leptospirosis" />
             <ShopCtas amazonHref="/go/amazon-brand/24+ounce+stainless+hiking+dog+bottle?s=health-leptospirosis" amazonLabel="Browse 24-ounce stainless hiking dog bottles on Amazon →" />
             <a href="#kit" className="inline-flex min-h-[44px] items-center text-xs text-brand-text-mid underline underline-offset-2">All supplies on this page ↓</a>
           </div>
+          <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-10-14T00:00:00Z" reviewedBy="Editorial team" />
+          <LastUpdated date="2026-10-14" />
 
           <CalloutBox variant="info" title="Short answer">
             <p>Leptospirosis is a bacterial infection that dogs usually catch through contact with infected urine or other body fluids, including urine in the environment. It most often causes sudden kidney injury and can also affect the liver; signs include lethargy, poor appetite, vomiting, belly pain, and changes in how much your dog urinates. Vets treat it with the antibiotic doxycycline plus supportive care. Vaccines help prevent it, and the AVMA says experts recommend vaccinating all dogs (<a href="https://www.avma.org/resources-tools/pet-owners/petcare/leptospirosis">AVMA</a>). It can spread to people, so wear gloves when cleaning up a sick dog's urine. Source: <a href="https://www.merckvetmanual.com/infectious-diseases/leptospirosis/leptospirosis-in-dogs">Merck Veterinary Manual</a>.</p>

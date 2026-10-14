@@ -10,7 +10,7 @@ const SOURCES = [
   { label: 'Companion Animal Parasite Council: Giardia', url: 'https://capcvet.org/guidelines/giardia/', publisher: 'CAPC' },
   { label: 'CDC: About Toxocariasis', url: 'https://www.cdc.gov/toxocariasis/about/index.html', publisher: 'CDC' },
 ]
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Intestinal Parasites in Dogs', description: 'Roundworms, hookworms, whipworms, Giardia — testing, treatment, and zoonotic risk.', url: 'https://vets.co/health/intestinal-parasites', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-13T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Intestinal Parasites in Dogs', description: 'Roundworms, hookworms, whipworms, Giardia — testing, treatment, and zoonotic risk.', url: 'https://vets.co/health/intestinal-parasites', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-14T00:00:00Z' ,
   citation: SOURCES,
 })
 const med = buildMedicalWebPageSchema({ name: 'Intestinal Parasites in Dogs', description: 'Diagnosis and treatment of common intestinal parasites in dogs.', url: 'https://vets.co/health/intestinal-parasites', authorName: 'Vets.co Editorial', lastReviewed: '2026-10-13' })
@@ -63,12 +63,12 @@ export default function IntestinalParasitesPage() {
 </>}
       >
         <div className="carloOS-article">
-          <LastUpdated date="2026-10-13" />
           <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
             <HopDisclosure siteId="vets-co" href="/go/amazon-brand/hinged+cedar+sandbox+cover?s=health-intestinal-parasites" />
             <ShopCtas amazonHref="/go/amazon-brand/hinged+cedar+sandbox+cover?s=health-intestinal-parasites" amazonLabel="Browse hinged cedar sandbox covers on Amazon →" />
             <a href="#kit" className="inline-flex min-h-[44px] items-center text-xs text-brand-text-mid underline underline-offset-2">All supplies on this page ↓</a>
           </div>
+          <LastUpdated date="2026-10-14" />
 
           <CalloutBox variant="info" title="Short answer">
             <p>Many dogs with intestinal parasites show no signs, so testing matters. The Companion Animal Parasite Council (CAPC) recommends fecal testing at least four times in a puppy's first year and at least twice a year in adults, deworming puppies from 2 weeks of age every 2 weeks, and year-round broad-spectrum parasite control for adult dogs. Pick up feces promptly: roundworms and hookworms can infect people, especially children. Source: <a href="https://capcvet.org/guidelines/ascarid/">Companion Animal Parasite Council</a>.</p>

@@ -7,7 +7,7 @@ import { BreedHealthCard } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'French Bulldog Health — BOAS, IVDD & Skin Conditions | Vets.co', description: 'French Bulldogs have the highest veterinary costs of any dog breed. This guide explains BOAS surgery, IVDD risk, skin fold management.', path: '/breeds/french-bulldog-health', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'French Bulldog Health — Owner Guide', description: 'BOAS, IVDD, skin conditions, and heat risk in French Bulldogs from published veterinary sources.', url: 'https://vets.co/breeds/french-bulldog-health', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-13T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'French Bulldog Health — Owner Guide', description: 'BOAS, IVDD, skin conditions, and heat risk in French Bulldogs from published veterinary sources.', url: 'https://vets.co/breeds/french-bulldog-health', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-14T00:00:00Z' })
 
 const medicalSchema = buildMedicalWebPageSchema({
   name: 'French Bulldog Health',
@@ -67,13 +67,13 @@ export default function VetsFrenchBulldogHealthPage() {
     >
       <div className="carloOS-article">
 
-        <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-10-13T00:00:00Z" reviewedBy="Editorial team" />
-
           <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
             <HopDisclosure siteId="vets-co" href="/go/amazon-brand/y+shaped+front+clip+dog+harness?s=breeds-french-bulldog-health" />
             <ShopCtas amazonHref="/go/amazon-brand/y+shaped+front+clip+dog+harness?s=breeds-french-bulldog-health" amazonLabel="Browse Y-shaped front-clip dog harnesses on Amazon →" />
             <a href="#kit" className="inline-flex min-h-[44px] items-center text-xs text-brand-text-mid underline underline-offset-2">All supplies on this page ↓</a>
           </div>
+        <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-10-14T00:00:00Z" reviewedBy="Editorial team" />
+
           <div className="not-prose my-5 overflow-hidden rounded-xl">
             <StockImage manifestKey="dog-com:breed-french-bulldog" alt="A French Bulldog lying on a rug" aspect="16:9" variant="inline" belowFold subtleCredit />
           </div>

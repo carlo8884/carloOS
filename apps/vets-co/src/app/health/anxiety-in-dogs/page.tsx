@@ -8,7 +8,7 @@ const SOURCES = [
   { label: 'Merck Veterinary Manual: Behavioral Problems in Dogs', url: 'https://www.merckvetmanual.com/behavior/behavioral-medicine-introduction/overview-of-behavioral-medicine-in-animals', publisher: 'Merck Vet Manual' },
   { label: 'AAHA: Behavior Management Guidelines', url: 'https://www.aaha.org/aaha-guidelines/behavior-management/', publisher: 'AAHA' },
 ]
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Anxiety in Dogs', description: 'Signs and evidence-based management of separation, noise, and generalized anxiety in dogs.', url: 'https://vets.co/health/anxiety-in-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-10-13T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Anxiety in Dogs', description: 'Signs and evidence-based management of separation, noise, and generalized anxiety in dogs.', url: 'https://vets.co/health/anxiety-in-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-10-14T00:00:00Z' ,
   citation: SOURCES,
 })
 const med = buildMedicalWebPageSchema({ name: 'Anxiety in Dogs', description: 'Signs and management of canine anxiety.', url: 'https://vets.co/health/anxiety-in-dogs', authorName: 'Vets.co Editorial', lastReviewed: '2026-10-13' })
@@ -48,13 +48,13 @@ export default function AnxietyDogsPage() {
       >
         <div className="carloOS-article">
 
-          <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-10-13T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-13" />
           <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
             <HopDisclosure siteId="vets-co" href="/go/amazon-brand/anxiety+vest+dog?s=health-anxiety-in-dogs" />
             <ShopCtas amazonHref="/go/amazon-brand/anxiety+vest+dog?s=health-anxiety-in-dogs" amazonLabel="Browse anxiety vests for dogs on Amazon →" />
             <a href="#kit" className="inline-flex min-h-[44px] items-center text-xs text-brand-text-mid underline underline-offset-2">All supplies on this page ↓</a>
           </div>
+          <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-10-14T00:00:00Z" reviewedBy="Editorial team" />
+          <LastUpdated date="2026-10-14" />
 
           <CalloutBox variant="info" title="Anxiety is treatable, and punishment makes it worse">
             Punishing a fearful dog increases anxiety and damages trust, because the behavior is driven by fear, not defiance. Effective help comes from reducing the fear and teaching the dog that the trigger is safe. Early, compassionate intervention with professional guidance produces the best results.

@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, LastUpdated, FAQAccordion, CalloutBox, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, ReviewCard, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, LastUpdated, FAQAccordion, CalloutBox, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, ReviewCard, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -21,7 +21,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-10-13T00:00:00Z',
+  modifiedAt: '2026-10-14T00:00:00Z',
 })
 
 const med = buildMedicalWebPageSchema({
@@ -106,13 +106,17 @@ export default function WeightManagementPage() {
         ]}
  priceAsOf="2026-06-01">
         <div className="carloOS-article">
+          <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
+            <HopDisclosure siteId="ferret-com" above href="/go/amazon-brand/digital+gram+scale+kitchen+pet?s=diet-weight-management" />
+            <ShopCtas amazonHref="/go/amazon-brand/digital+gram+scale+kitchen+pet?s=diet-weight-management" amazonLabel="Browse digital gram scales on Amazon →" />
+          </div>
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-10-13"
+            updatedAt="2026-10-14"
             reviewedBy="Editorial team"
           />
-          <LastUpdated date="2026-10-13" />
+          <LastUpdated date="2026-10-14" />
 
           <CalloutBox variant="info" title="Short answer">
             <p>Lafeber gives typical adult weights of 500 to 900 grams (1.1 to 2 lb) for females and 800 to 1,200 grams (1.7 to 2.6 lb) for males. Ferrets eat many small meals, so food is usually left available at all times. To keep weight in check, limit treats to no more than 5% of daily calories, choose meat, egg, or freeze-dried meat treats, and give at least 2 to 4 hours of out-of-cage exercise a day. Source: <a href="https://lafeber.com/vet/wp-content/uploads/2020/08/Care-of-the-Ferret-2020.pdf">Lafeber Care of the Pet Ferret</a>.</p>

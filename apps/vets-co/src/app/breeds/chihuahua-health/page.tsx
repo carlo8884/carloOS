@@ -39,7 +39,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Vets.co Editorial',
   publishedAt: '2026-05-28T00:00:00Z',
-  modifiedAt: '2026-10-13T00:00:00Z',
+  modifiedAt: '2026-10-14T00:00:00Z',
 })
 
 const medicalSchema = buildMedicalWebPageSchema({
@@ -129,18 +129,18 @@ export default function VetsChihuahuaHealthPage() {
       >
         <div className="carloOS-article">
 
-          <ArticleByline
-            siteName="Vets.co Editorial"
-            publishedAt="2026-05-28T00:00:00Z"
-            updatedAt="2026-10-13T00:00:00Z"
-            reviewedBy="Editorial team"
-          />
-
           <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
             <HopDisclosure siteId="vets-co" href="/go/amazon-brand/pet+toothbrush+and+enzymatic+toothpaste+kit?s=breeds-chihuahua-health" />
             <ShopCtas amazonHref="/go/amazon-brand/pet+toothbrush+and+enzymatic+toothpaste+kit?s=breeds-chihuahua-health" amazonLabel="Browse pet toothbrush and enzymatic toothpaste kits on Amazon →" />
             <a href="#kit" className="inline-flex min-h-[44px] items-center text-xs text-brand-text-mid underline underline-offset-2">All supplies on this page ↓</a>
           </div>
+          <ArticleByline
+            siteName="Vets.co Editorial"
+            publishedAt="2026-05-28T00:00:00Z"
+            updatedAt="2026-10-14T00:00:00Z"
+            reviewedBy="Editorial team"
+          />
+
           <div className="not-prose my-5 overflow-hidden rounded-xl">
             <StockImage manifestKey="dog-com:breed-chihuahua" alt="A Chihuahua puppy" aspect="16:9" variant="inline" belowFold subtleCredit />
           </div>

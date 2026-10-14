@@ -8,7 +8,7 @@ const SOURCES = [
   { label: 'AVMA: Canine Influenza', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/canine-influenza', publisher: 'AVMA' },
   { label: 'Merck Veterinary Manual: Canine Influenza', url: 'https://www.merckvetmanual.com/respiratory-system/respiratory-diseases-of-small-animals/canine-influenza-flu', publisher: 'Merck Vet Manual' },
 ]
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Canine Influenza (Dog Flu)', description: 'H3N8 and H3N2 canine influenza — signs, treatment, and vaccination recommendations.', url: 'https://vets.co/health/canine-influenza', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-13T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Canine Influenza (Dog Flu)', description: 'H3N8 and H3N2 canine influenza — signs, treatment, and vaccination recommendations.', url: 'https://vets.co/health/canine-influenza', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-14T00:00:00Z' ,
   citation: SOURCES,
 })
 const med = buildMedicalWebPageSchema({ name: 'Canine Influenza', description: 'Dog flu — H3N8 and H3N2 strains, signs, and vaccination.', url: 'https://vets.co/health/canine-influenza', authorName: 'Vets.co Editorial', lastReviewed: '2026-10-13' })
@@ -57,12 +57,12 @@ export default function CanineInfluenzaPage() {
 </>}
       >
         <div className="carloOS-article">
-          <LastUpdated date="2026-10-13" />
           <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
             <HopDisclosure siteId="vets-co" href="/go/amazon-brand/double+door+wire+dog+crate?s=health-canine-influenza" />
             <ShopCtas amazonHref="/go/amazon-brand/double+door+wire+dog+crate?s=health-canine-influenza" amazonLabel="Browse double-door wire dog crates on Amazon →" />
             <a href="#kit" className="inline-flex min-h-[44px] items-center text-xs text-brand-text-mid underline underline-offset-2">All supplies on this page ↓</a>
           </div>
+          <LastUpdated date="2026-10-14" />
 
           <CalloutBox variant="info" title="Short answer">
             <p>Canine influenza (dog flu) spreads between dogs through the air, shared objects such as water bowls, and people's hands and clothes. Most infected dogs get a mild illness with a cough that lasts 1 to 3 weeks; some develop high fever and pneumonia. Treatment is supportive and most dogs recover in 2 to 3 weeks. Vaccines need two doses, and there is no evidence the H3N2 strain spreads from dogs to people. Source: <a href="https://www.merckvetmanual.com/respiratory-system/respiratory-diseases-of-small-animals/canine-influenza-flu">Merck Veterinary Manual</a>.</p>

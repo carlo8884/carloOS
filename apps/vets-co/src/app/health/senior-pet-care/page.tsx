@@ -9,7 +9,7 @@ const SOURCES = [
   { label: 'AAHA: 2023 Senior Care Guidelines for Dogs and Cats', url: 'https://www.aaha.org/wp-content/uploads/globalassets/02-guidelines/2023-aaha-senior-care-guidelines-for-dogs-and-cats/resources/2023-aaha-senior-care-guidelines-for-dogs-and-cats.pdf', publisher: 'AAHA' },
   { label: 'AVMA: Senior Pet Care', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/senior-pets', publisher: 'AVMA' },
 ]
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Senior Dog Care Guide', description: 'Biannual exams, screening protocols, and quality of life for senior dogs.', url: 'https://vets.co/health/senior-pet-care', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-13T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Senior Dog Care Guide', description: 'Biannual exams, screening protocols, and quality of life for senior dogs.', url: 'https://vets.co/health/senior-pet-care', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-14T00:00:00Z' ,
   citation: SOURCES,
 })
 const med = buildMedicalWebPageSchema({ name: 'Senior Dog Care', description: 'Veterinary care protocols and quality of life for aging dogs.', url: 'https://vets.co/health/senior-pet-care', authorName: 'Vets.co Editorial', lastReviewed: '2026-10-13' })
@@ -58,13 +58,13 @@ export default function SeniorPetCarePage() {
       >
         <div className="carloOS-article">
 
-          <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-10-13T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-13" />
           <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
             <HopDisclosure siteId="vets-co" href="/go/amazon-brand/orthopedic+dog+bed?s=health-senior-pet-care" />
             <ShopCtas amazonHref="/go/amazon-brand/orthopedic+dog+bed?s=health-senior-pet-care" amazonLabel="Browse orthopedic dog beds on Amazon →" />
             <a href="#kit" className="inline-flex min-h-[44px] items-center text-xs text-brand-text-mid underline underline-offset-2">All supplies on this page ↓</a>
           </div>
+          <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-10-14T00:00:00Z" reviewedBy="Editorial team" />
+          <LastUpdated date="2026-10-14" />
 
           <CalloutBox variant="info" title="Short answer">
             <p>The Merck Veterinary Manual advises vet checkups twice a year or more for senior dogs (over 7 to 8 years old), compared with at least once a year for adults, because older dogs are more likely to get sick. Your vet may suggest blood tests or x-rays to catch problems early. Between visits, book an appointment if your dog shows signs of illness for more than a day or two. Source: <a href="https://www.merckvetmanual.com/dog-owners/routine-care-of-dogs/routine-health-care-of-dogs">Merck Veterinary Manual (dog owner version)</a>.</p>

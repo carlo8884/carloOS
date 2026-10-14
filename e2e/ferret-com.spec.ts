@@ -1,3 +1,4 @@
+import * as fs from 'node:fs'
 import { expect, test } from '@playwright/test'
 import { expectAAContrast } from './contrast'
 import { expectMoneyCopy, reviewRoutes } from './money-copy'
@@ -1342,4 +1343,96 @@ test('ferret fix ST2: sticky bar is one action, at most 56px, and hides near the
   await expect(bar.locator('a')).toHaveCount(1)
   await page.evaluate(() => window.scrollTo(0, document.documentElement.scrollHeight))
   await expect(bar).toHaveAttribute('aria-hidden', 'true')
+})
+
+// ── Design guard (CI1): hard checks for premium-affiliate-site-design §12 ──
+// Shared by both site specs. Article lists come from the app folders so a new
+// page is checked without editing this file.
+function designArticlePaths(site: string, sections: string[], skip: string[] = []): string[] {
+  const fs = require('node:fs') as typeof import('node:fs')
+  const out: string[] = []
+  for (const s of sections) {
+    const dir = `apps/${site}/src/app/${s}`
+    if (!fs.existsSync(dir)) continue
+    for (const d of fs.readdirSync(dir)) {
+      if (d.startsWith('[') || !fs.existsSync(`${dir}/${d}/page.tsx`)) continue
+      const p = `/${s}/${d}`
+      if (!skip.includes(p)) out.push(p)
+    }
+  }
+  return out
+}
+
+async function designShopAndDisclosure(page: import('@playwright/test').Page, path: string) {
+  await page.goto(path, { waitUntil: 'domcontentloaded' })
+  return page.evaluate(() => {
+    const visible = (e: Element) => Boolean((e as HTMLElement).offsetParent)
+    const link = [...document.querySelectorAll('a[href*="/go/"]')].find((a) => visible(a) && !a.closest('footer, [data-sticky-cta]')) as HTMLElement | undefined
+    const lines = [...document.querySelectorAll('[data-affiliate-disclosure="inline"], [data-affiliate-disclosure="banner"]')].filter(visible) as HTMLElement[]
+    return {
+      linkY: link ? link.getBoundingClientRect().top + window.scrollY : null,
+      firstBefore: link && lines[0] ? Boolean(lines[0].compareDocumentPosition(link) & Node.DOCUMENT_POSITION_FOLLOWING) : null,
+      tallest: Math.max(0, ...lines.map((l) => l.getBoundingClientRect().height)),
+      texts: lines.map((l) => l.innerText.trim()),
+    }
+  })
+}
+
+test('ferret design CI1: header is at most 64px on desktop and 56px on mobile', async ({ page }) => {
+  for (const [w, h, max] of [[1280, 800, 64], [390, 844, 56]] as const) {
+    await page.setViewportSize({ width: w, height: h })
+    for (const path of ['/', '/health/dental-disease']) {
+      await page.goto(path, { waitUntil: 'domcontentloaded' })
+      const navH = await page.evaluate(() => document.querySelector('nav[aria-label="Main navigation"]')!.getBoundingClientRect().height)
+      expect(navH, `${path} @${w}`).toBeLessThanOrEqual(max)
+    }
+  }
+})
+
+test('ferret design CI1: home and hub heroes are at most 320px desktop and 400px mobile', async ({ page }) => {
+  for (const [w, h, max] of [[1280, 800, 320], [390, 844, 400]] as const) {
+    await page.setViewportSize({ width: w, height: h })
+    for (const path of ['/']) {
+      await page.goto(path, { waitUntil: 'domcontentloaded' })
+      const heroH = await page.evaluate(() => (document.querySelector('[data-testid="home-hero"], [data-testid="hub-hero"]') as HTMLElement | null)?.getBoundingClientRect().height ?? -1)
+      expect(heroH, `${path} @${w} has a hero`).toBeGreaterThan(0)
+      expect(heroH, `${path} @${w}`).toBeLessThanOrEqual(max)
+    }
+  }
+})
+
+test('ferret design CI1: every article keeps one tiny disclosure before the first shop link, and that link is within 1.5 mobile screens', async ({ page }) => {
+  test.setTimeout(240_000)
+  await page.setViewportSize({ width: 390, height: 844 })
+  const problems: string[] = []
+  for (const path of designArticlePaths('ferret-com', ['health', 'care', 'behavior', 'diet', 'ownership', 'colors'], ['/health/emergency-warning-signs', '/health/gastrointestinal-blockage'])) {
+    const r = await designShopAndDisclosure(page, path)
+    if (r.linkY === null) continue // no shop link on this page
+    if (r.firstBefore !== true) problems.push(`${path}: disclosure is not before the first shop link`)
+    if (r.tallest > 48) problems.push(`${path}: disclosure line is ${Math.round(r.tallest)}px tall`)
+    if (r.texts.some((t) => t !== 'Affiliate links')) problems.push(`${path}: disclosure text ${JSON.stringify(r.texts)}`)
+    if (r.linkY > 1266) problems.push(`${path}: first shop link at ${Math.round(r.linkY)}px (max 1266)`)
+  }
+  expect(problems, problems.join('\n')).toEqual([])
+})
+
+test('ferret design CI1: calculators stay within their height budget on mobile', async ({ page }) => {
+  // Budget = 1.5 mobile screens (1266px). Tools already over it are pinned at
+  // today's height so they cannot grow; shrink them and lower the pin.
+  const PINNED: Record<string, number> = { '/tools/ferret-body-condition-score': 1530, '/tools/ferret-grimace-scale': 1980 }
+  await page.setViewportSize({ width: 390, height: 844 })
+  const problems: string[] = []
+  for (const path of designArticlePaths('ferret-com', ['tools'])) {
+    await page.goto(path, { waitUntil: 'domcontentloaded' })
+    const h = await page.evaluate(() => {
+      const ins = [...document.querySelectorAll('main input, main select')].filter((i) => !['search', 'email', 'hidden'].includes((i as HTMLInputElement).type) && !i.closest('form[action="/search"]'))
+      if (!ins.length) return 0
+      let a: Element | null = ins[0]
+      while (a && !ins.every((i) => a!.contains(i))) a = a.parentElement
+      return a ? a.getBoundingClientRect().height : 0
+    })
+    const max = PINNED[path] ?? 1266
+    if (h > max) problems.push(`${path}: calculator ${Math.round(h)}px (max ${max})`)
+  }
+  expect(problems, problems.join('\n')).toEqual([])
 })

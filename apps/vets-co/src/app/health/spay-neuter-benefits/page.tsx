@@ -9,7 +9,7 @@ const SOURCES = [
   { label: 'Merck Veterinary Manual: Reproductive Physiology of Dogs', url: 'https://www.merckvetmanual.com/dog-owners/reproductive-disorders-of-dogs/management-of-reproduction-in-dogs', publisher: 'Merck Vet Manual' },
   { label: 'Hart BL et al. Front Vet Sci 2020 — Neutering and Health Outcomes', url: 'https://www.frontiersin.org/articles/10.3389/fvets.2020.00388/full', publisher: 'Frontiers in Veterinary Science' },
 ]
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Spay & Neuter Guide', description: 'Benefits, timing, and breed-specific considerations for spay and neuter in dogs.', url: 'https://vets.co/health/spay-neuter-benefits', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-13T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Spay & Neuter Guide', description: 'Benefits, timing, and breed-specific considerations for spay and neuter in dogs.', url: 'https://vets.co/health/spay-neuter-benefits', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-14T00:00:00Z' ,
   citation: SOURCES,
 })
 const med = buildMedicalWebPageSchema({ name: 'Spay & Neuter Guide for Dogs', description: 'Benefits, timing, and evidence for spay and neuter decisions.', url: 'https://vets.co/health/spay-neuter-benefits', authorName: 'Vets.co Editorial', lastReviewed: '2026-10-13' })
@@ -46,13 +46,13 @@ export default function SpayNeuterPage() {
 </>}
       >
         <div className="carloOS-article">
-          <LastUpdated date="2026-10-13" />
-
           <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
             <HopDisclosure siteId="vets-co" href="/go/amazon-brand/adjustable+sliding+dog+food+scoop?s=health-spay-neuter-benefits" />
             <ShopCtas amazonHref="/go/amazon-brand/adjustable+sliding+dog+food+scoop?s=health-spay-neuter-benefits" amazonLabel="Browse adjustable sliding dog-food scoops on Amazon →" />
             <a href="#kit" className="inline-flex min-h-[44px] items-center text-xs text-brand-text-mid underline underline-offset-2">All supplies on this page ↓</a>
           </div>
+          <LastUpdated date="2026-10-14" />
+
 
           <h2>Benefits of Spaying (Females)</h2>
           <p><strong>Pyometra prevention:</strong> Pyometra — life-threatening uterine infection — affects approximately 25% of intact female dogs by age 10. It requires emergency surgery in most cases and carries significant mortality risk in older or ill dogs. Spaying eliminates this risk entirely.</p>

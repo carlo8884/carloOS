@@ -4,7 +4,7 @@ import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ShopCtas } fr
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Questions to Ask Your Vet — Get the Most From Every Visit | Vets.co", description: "The right questions turn a rushed appointment into clear, confident care. Use this list to ask about diagnosis, treatment options, costs, and follow-up.", path: '/guides/questions-to-ask-your-vet', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Questions to Ask Your Vet', description: 'A practical list of questions to ask at a veterinary visit for clearer, more confident care.', url: 'https://vets.co/guides/questions-to-ask-your-vet', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-10-13T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Questions to Ask Your Vet', description: 'A practical list of questions to ask at a veterinary visit for clearer, more confident care.', url: 'https://vets.co/guides/questions-to-ask-your-vet', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-10-14T00:00:00Z' })
 const FAQS = [
   { question: "Is it okay to ask the vet about cost?", answer: "Absolutely — asking about cost is reasonable and expected, and a good veterinary team welcomes the conversation. You can ask for an estimate before procedures, what is essential versus optional, whether tests can be staged, and if there are lower-cost alternatives that still address the problem. Veterinary teams routinely tailor plans to budgets when they understand the constraint. Far from being awkward, an open cost discussion leads to better decisions and prevents the surprise of an unexpected bill." },
   { question: "What should I ask when my pet is prescribed a new medication?", answer: "Ask what the medication is for, how and when to give it, whether it should be given with food, what side effects to watch for, what to do if you miss a dose, and how long the course lasts. Confirm how it interacts with any other medications or supplements your pet takes. Also ask whether and when a recheck or follow-up bloodwork is needed. Understanding these points improves the chance the treatment works and that you catch any problems early." },
@@ -33,17 +33,17 @@ export default function QuestionsToAskPage() {
       >
         <div className="carloOS-article">
 
-          <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-10-13T00:00:00Z" reviewedBy="Editorial team" />
-
-          <CalloutBox variant="info" title="There are no bad questions">
-            Veterinary teams want you to understand your pet&apos;s care. Asking questions — even ones that feel basic — leads to better outcomes, because a treatment plan only works if you understand and can follow it. Never leave a visit confused; ask for clarification.
-          </CalloutBox>
-
           <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
             <HopDisclosure siteId="vets-co" href="/go/amazon-brand/ruled+index+cards?s=guides-questions-to-ask-your-vet" />
             <ShopCtas amazonHref="/go/amazon-brand/ruled+index+cards?s=guides-questions-to-ask-your-vet" amazonLabel="Browse ruled index cards on Amazon →" />
             <a href="#kit" className="inline-flex min-h-[44px] items-center text-xs text-brand-text-mid underline underline-offset-2">All supplies on this page ↓</a>
           </div>
+          <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-10-14T00:00:00Z" reviewedBy="Editorial team" />
+
+          <CalloutBox variant="info" title="There are no bad questions">
+            Veterinary teams want you to understand your pet&apos;s care. Asking questions — even ones that feel basic — leads to better outcomes, because a treatment plan only works if you understand and can follow it. Never leave a visit confused; ask for clarification.
+          </CalloutBox>
+
 
           <h2>Questions About the Diagnosis</h2>
           <p>When your pet is diagnosed with a condition, seek to understand it fully. Ask what the condition is in plain language, what caused it, whether it is curable or something to be managed long-term, and what the expected outlook is. Ask how confident the diagnosis is and whether further testing would clarify it. Ruled index cards are how those diagnosis questions stay one card each so a rushed visit still gets through the stack — they are not a yellow legal pad, and not a pocket spiral memo pad. Understanding the diagnosis is the foundation for every subsequent decision, so it is worth taking the time to grasp it before moving to treatment.</p>

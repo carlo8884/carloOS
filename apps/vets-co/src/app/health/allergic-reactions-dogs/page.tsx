@@ -9,7 +9,7 @@ const SOURCES = [
   { label: 'Merck Veterinary Manual: Anaphylactic Reactions in Dogs', url: 'https://www.merckvetmanual.com/dog-owners/immune-disorders-of-dogs/disorders-involving-anaphylactic-reactions-type-i-reactions-atopy-in-dogs', publisher: 'Merck Vet Manual' },
   { label: 'AVMA: Allergic Reactions in Pets', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/allergies-pets', publisher: 'AVMA' },
 ]
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Allergic Reactions in Dogs', description: 'Hives, anaphylaxis, and vaccine reactions in dogs — when to treat at home vs emergency care.', url: 'https://vets.co/health/allergic-reactions-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-13T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Allergic Reactions in Dogs', description: 'Hives, anaphylaxis, and vaccine reactions in dogs — when to treat at home vs emergency care.', url: 'https://vets.co/health/allergic-reactions-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-14T00:00:00Z' ,
   citation: SOURCES,
 })
 const med = buildMedicalWebPageSchema({ name: 'Allergic Reactions in Dogs', description: 'Hives, anaphylaxis, and emergency management of acute allergic reactions in dogs.', url: 'https://vets.co/health/allergic-reactions-dogs', authorName: 'Vets.co Editorial', lastReviewed: '2026-10-13' })
@@ -63,12 +63,12 @@ export default function AllergicReactionsPage() {
 </>}
       >
         <div className="carloOS-article">
-          <LastUpdated date="2026-10-13" />
           <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
             <HopDisclosure siteId="vets-co" href="/go/amazon-brand/oatmeal+dog+shampoo?s=health-allergic-reactions-dogs" />
             <ShopCtas amazonHref="/go/amazon-brand/oatmeal+dog+shampoo?s=health-allergic-reactions-dogs" amazonLabel="Browse oatmeal dog shampoo on Amazon →" />
             <a href="#kit" className="inline-flex min-h-[44px] items-center text-xs text-brand-text-mid underline underline-offset-2">All supplies on this page ↓</a>
           </div>
+          <LastUpdated date="2026-10-14" />
 
           <CalloutBox variant="info" title="Short answer">
             <p>Hives and facial swelling usually appear within about 20 minutes of exposure to a trigger such as a drug, food, or insect bite. They are rarely life-threatening and often fade once the trigger is gone, and vets treat them with antihistamines. Anaphylaxis is different: it is rare but an extreme emergency. In dogs the main signs are sudden diarrhea, vomiting, heavy drooling, pale gums, cold limbs, collapse, or seizures. Get emergency veterinary care immediately. Source: <a href="https://www.merckvetmanual.com/dog-owners/immune-disorders-of-dogs/disorders-involving-anaphylactic-reactions-type-i-reactions-atopy-in-dogs">Merck Veterinary Manual</a>.</p>

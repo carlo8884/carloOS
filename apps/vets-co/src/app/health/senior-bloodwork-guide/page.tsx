@@ -10,7 +10,7 @@ const SOURCES = [
   { label: 'AAHA: 2023 Senior Care Guidelines for Dogs and Cats', url: 'https://www.aaha.org/wp-content/uploads/globalassets/02-guidelines/2023-aaha-senior-care-guidelines-for-dogs-and-cats/resources/2023-aaha-senior-care-guidelines-for-dogs-and-cats.pdf', publisher: 'AAHA' },
   { label: 'IRIS: SDMA and Early Kidney Disease Detection', url: 'https://www.iris-kidney.com/', publisher: 'International Renal Interest Society' },
 ]
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Senior Dog Bloodwork — What Each Test Finds', description: 'What CBC, chemistry panel, urinalysis, SDMA, and T4 measure in senior dogs.', url: 'https://vets.co/health/senior-bloodwork-guide', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-13T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Senior Dog Bloodwork — What Each Test Finds', description: 'What CBC, chemistry panel, urinalysis, SDMA, and T4 measure in senior dogs.', url: 'https://vets.co/health/senior-bloodwork-guide', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-14T00:00:00Z' ,
   citation: SOURCES,
 })
 const med = buildMedicalWebPageSchema({ name: 'Senior Dog Bloodwork Guide', description: 'Interpreting CBC, chemistry panel, and urinalysis in senior dogs.', url: 'https://vets.co/health/senior-bloodwork-guide', authorName: 'Vets.co Editorial', lastReviewed: '2026-10-13' })
@@ -49,12 +49,12 @@ export default function SeniorBloodworkPage() {
 </>}
       >
         <div className="carloOS-article">
-          <LastUpdated date="2026-10-13" />
           <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
             <HopDisclosure siteId="vets-co" href="/go/amazon-brand/soft+pet+carrier?s=health-senior-bloodwork-guide" />
             <ShopCtas amazonHref="/go/amazon-brand/soft+pet+carrier?s=health-senior-bloodwork-guide" amazonLabel="Browse soft pet carriers on Amazon →" />
             <a href="#kit" className="inline-flex min-h-[44px] items-center text-xs text-brand-text-mid underline underline-offset-2">All supplies on this page ↓</a>
           </div>
+          <LastUpdated date="2026-10-14" />
 
           <CalloutBox variant="info" title="Short answer">
             <p>AAHA's 2023 senior care guidelines recommend a medical workup for senior pets once or twice a year. For senior dogs, its table lists a complete blood count, chemistry panel (including SDMA if available), and urinalysis every 6 to 12 months, plus a thyroid test (T4) and blood pressure check annually. Tracking results over time helps your vet spot early changes, such as a rising SDMA or creatinine. Source: <a href="https://www.aaha.org/wp-content/uploads/globalassets/02-guidelines/2023-aaha-senior-care-guidelines-for-dogs-and-cats/resources/2023-aaha-senior-care-guidelines-for-dogs-and-cats.pdf">AAHA 2023 Senior Care Guidelines</a>.</p>

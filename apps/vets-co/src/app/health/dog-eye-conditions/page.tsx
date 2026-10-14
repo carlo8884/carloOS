@@ -11,7 +11,7 @@ const SOURCES = [
   { label: 'ACVO: Eye Conditions in Dogs', url: 'https://www.acvo.org/common-conditions', publisher: 'American College of Veterinary Ophthalmologists' },
   { label: 'White and Brennan', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC6163435/', publisher: 'PMC' },
 ]
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Eye Conditions in Dogs', description: 'Cherry eye, cataracts, glaucoma, and PRA — identification and treatment urgency.', url: 'https://vets.co/health/dog-eye-conditions', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-13T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Eye Conditions in Dogs', description: 'Cherry eye, cataracts, glaucoma, and PRA — identification and treatment urgency.', url: 'https://vets.co/health/dog-eye-conditions', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-14T00:00:00Z' ,
   citation: SOURCES,
 })
 const med = buildMedicalWebPageSchema({ name: 'Eye Conditions in Dogs', description: 'Cherry eye, cataracts, glaucoma, and progressive retinal atrophy in dogs.', url: 'https://vets.co/health/dog-eye-conditions', authorName: 'Vets.co Editorial', lastReviewed: '2026-10-13' })
@@ -63,13 +63,13 @@ export default function DogEyeConditionsPage() {
       >
         <div className="carloOS-article">
 
-          <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-10-13T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-13" />
           <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
             <HopDisclosure siteId="vets-co" href="/go/amazon-brand/sterile+saline+eye+wash?s=health-dog-eye-conditions" />
             <ShopCtas amazonHref="/go/amazon-brand/sterile+saline+eye+wash?s=health-dog-eye-conditions" amazonLabel="Browse sterile saline eye wash on Amazon →" />
             <a href="#kit" className="inline-flex min-h-[44px] items-center text-xs text-brand-text-mid underline underline-offset-2">All supplies on this page ↓</a>
           </div>
+          <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-10-14T00:00:00Z" reviewedBy="Editorial team" />
+          <LastUpdated date="2026-10-14" />
 
           <CalloutBox variant="info" title="Short answer">
             <p>Sudden glaucoma is an emergency: signs include a dilated or slow-moving pupil, redness in the white of the eye, a cloudy or discolored cornea, and a firm eye, and Merck says a dog with any glaucoma signs should see a vet immediately. Cataracts make the lens cloudy and can lead to blindness. They are often inherited and can also follow diabetes, inflammation, or trauma, and are treated with surgery to remove the lens. Source: <a href="https://www.merckvetmanual.com/dog-owners/eye-disorders-of-dogs/glaucoma-in-dogs">Merck Veterinary Manual (dog owner version)</a>.</p>

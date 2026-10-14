@@ -11,7 +11,7 @@ const SOURCES = [
   { label: 'Anderson KL et al. Estimated annual prevalence of appendicular osteoarthritis in UK primary-care dogs. Scientific Reports. 2018.', url: 'https://www.nature.com/articles/s41598-018-23940-z', publisher: 'Scientific Reports' },
   { label: 'Kealy RD et al. Evaluation of the effect of limited food consumption on radiographic evidence of osteoarthritis in dogs. JAVMA. 2000;217:1678-1680.', url: 'https://doi.org/10.2460/javma.2000.217.1678', publisher: 'JAVMA' },
 ]
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Arthritis in Dogs', description: 'Recognizing and managing osteoarthritis and joint pain in dogs.', url: 'https://vets.co/health/arthritis-in-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-10-13T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Arthritis in Dogs', description: 'Recognizing and managing osteoarthritis and joint pain in dogs.', url: 'https://vets.co/health/arthritis-in-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-10-14T00:00:00Z' ,
   citation: SOURCES,
 })
 const med = buildMedicalWebPageSchema({ name: 'Arthritis in Dogs', description: 'Signs, diagnosis, and multimodal management of canine osteoarthritis.', url: 'https://vets.co/health/arthritis-in-dogs', authorName: 'Vets.co Editorial', lastReviewed: '2026-10-13' })
@@ -50,18 +50,18 @@ export default function ArthritisDogsPage() {
 </>}
       >
         <div className="carloOS-article">
-          <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-10-13T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-13" />
-
-          <CalloutBox variant="info" title="Arthritis is treatable, not just inevitable">
-            Many owners assume a stiff older dog is simply "slowing down" and that nothing can be done. In reality, osteoarthritis pain responds well to a structured plan. Dogs that seem to have lost their spark often become noticeably more active and engaged once their joint pain is properly managed.
-          </CalloutBox>
-
           <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
             <HopDisclosure siteId="vets-co" href="/go/amazon-brand/dog+traction+rug?s=health-arthritis-in-dogs" />
             <ShopCtas amazonHref="/go/amazon-brand/dog+traction+rug?s=health-arthritis-in-dogs" amazonLabel="Browse dog traction rugs on Amazon →" />
             <a href="#kit" className="inline-flex min-h-[44px] items-center text-xs text-brand-text-mid underline underline-offset-2">All supplies on this page ↓</a>
           </div>
+          <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-10-14T00:00:00Z" reviewedBy="Editorial team" />
+          <LastUpdated date="2026-10-14" />
+
+          <CalloutBox variant="info" title="Arthritis is treatable, not just inevitable">
+            Many owners assume a stiff older dog is simply "slowing down" and that nothing can be done. In reality, osteoarthritis pain responds well to a structured plan. Dogs that seem to have lost their spark often become noticeably more active and engaged once their joint pain is properly managed.
+          </CalloutBox>
+
 
           <h2>What Osteoarthritis Is</h2>
           <p>Osteoarthritis is the progressive breakdown of cartilage within a joint, accompanied by inflammation, thickening of the joint capsule, and the formation of bony spurs. As cartilage thins, bone grinds against bone, producing pain and reduced range of motion. The disease feeds on itself: pain leads to reduced use, muscle wastes, the joint becomes less stable, and damage accelerates. It most often affects the hips, knees, elbows, shoulders, and spine.</p>

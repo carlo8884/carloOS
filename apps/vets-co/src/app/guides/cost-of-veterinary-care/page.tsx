@@ -4,7 +4,7 @@ import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ShopCtas } fr
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "What Veterinary Care Really Costs — A Realistic Guide | Vets.co", description: "Understand the real cost of routine care, common procedures, and major emergencies, plus why prices vary and how to plan financially for a pet.", path: '/guides/cost-of-veterinary-care', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'What Veterinary Care Really Costs', description: 'A realistic overview of routine, procedural, and emergency veterinary costs and why they vary.', url: 'https://vets.co/guides/cost-of-veterinary-care', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-10-13T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'What Veterinary Care Really Costs', description: 'A realistic overview of routine, procedural, and emergency veterinary costs and why they vary.', url: 'https://vets.co/guides/cost-of-veterinary-care', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-10-14T00:00:00Z' })
 const FAQS = [
   { question: "Why do veterinary prices vary so much between clinics?", answer: "Veterinary prices reflect real differences in overhead, equipment, staffing, and location. A clinic in a high-cost urban area, or one with advanced diagnostic equipment and board-certified specialists on staff, will generally charge more than a rural general practice. Emergency and specialty hospitals carry higher costs because of round-the-clock staffing and intensive-care capability. Prices also vary with the complexity of a case. This is why getting an estimate before non-emergency procedures, and understanding what is included, helps you compare meaningfully." },
   { question: "What are the biggest cost surprises for new pet owners?", answer: "The most common surprises are emergencies and chronic illness. A single emergency surgery — for a swallowed object, a bloat, or a trauma — can run into the thousands, and chronic conditions like diabetes, kidney disease, or cancer generate recurring costs over months or years. Many owners budget for routine care but are unprepared for these larger, unpredictable expenses, which is precisely the gap that pet insurance or a dedicated emergency fund is designed to fill." },
@@ -33,17 +33,17 @@ export default function CostOfCarePage() {
       >
         <div className="carloOS-article">
 
-          <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-10-13T00:00:00Z" reviewedBy="Editorial team" />
-
-          <CalloutBox variant="info" title="Plan for two kinds of cost">
-            Veterinary expenses fall into two buckets: predictable routine care you can budget for, and unpredictable large expenses you must protect against. A sound financial plan handles both — a budget for routine care and either insurance or an emergency fund for the rest.
-          </CalloutBox>
-
           <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
             <HopDisclosure siteId="vets-co" href="/go/amazon-brand/household+budget+workbook?s=guides-cost-of-veterinary-care" />
             <ShopCtas amazonHref="/go/amazon-brand/household+budget+workbook?s=guides-cost-of-veterinary-care" amazonLabel="Browse household budget workbooks on Amazon →" />
             <a href="#kit" className="inline-flex min-h-[44px] items-center text-xs text-brand-text-mid underline underline-offset-2">All supplies on this page ↓</a>
           </div>
+          <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-10-14T00:00:00Z" reviewedBy="Editorial team" />
+
+          <CalloutBox variant="info" title="Plan for two kinds of cost">
+            Veterinary expenses fall into two buckets: predictable routine care you can budget for, and unpredictable large expenses you must protect against. A sound financial plan handles both — a budget for routine care and either insurance or an emergency fund for the rest.
+          </CalloutBox>
+
 
           <h2>Routine Care</h2>
           <p>Routine care is the predictable backbone of pet ownership: annual or twice-yearly wellness exams, vaccinations, parasite prevention (heartworm, flea, and tick), routine bloodwork, and periodic dental care. These costs recur on a known schedule and are straightforward to budget. A household budget workbook is how those wellness lines stay a written annual plan instead of a guessed monthly leftover. They are also among the highest-value spending you will do, because catching problems early and preventing disease averts far larger costs down the road.</p>

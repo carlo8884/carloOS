@@ -4,7 +4,7 @@ import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ShopCtas } fr
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "How to Choose a Veterinarian — A Practical Guide | Vets.co", description: "Accreditation, communication, services, location, and emergency arrangements all matter when choosing a vet. Here is how to find the right clinic for your pet.", path: '/guides/choosing-a-veterinarian', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'How to Choose a Veterinarian', description: 'Practical criteria for choosing a veterinary clinic that fits your pet and your needs.', url: 'https://vets.co/guides/choosing-a-veterinarian', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-10-13T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'How to Choose a Veterinarian', description: 'Practical criteria for choosing a veterinary clinic that fits your pet and your needs.', url: 'https://vets.co/guides/choosing-a-veterinarian', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-10-14T00:00:00Z' })
 const FAQS = [
   { question: "What is AAHA accreditation and does it matter?", answer: "AAHA (American Animal Hospital Association) accreditation is a voluntary standard that evaluates a practice against several hundred quality benchmarks covering medical care, equipment, safety, and management. Unlike human hospitals, veterinary practices are not required to be accredited, so AAHA accreditation signals a clinic has chosen to meet and maintain a high standard. It is not the only marker of a good practice, but it is a meaningful one, and pairing it with your own impressions of communication and care gives a fuller picture." },
   { question: "Should I prioritize location or quality?", answer: "Both matter, and the right balance depends on your situation. A nearby clinic is invaluable for emergencies and easy routine visits, especially if your pet finds travel stressful. But quality of medicine, communication, and the comfort you feel with the team are equally important for long-term care. Many owners choose a good general practice nearby for routine care and identify a separate emergency or specialty hospital in advance for after-hours needs, getting the benefits of both proximity and capability." },
@@ -33,17 +33,17 @@ export default function ChoosingVetPage() {
       >
         <div className="carloOS-article">
 
-          <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-10-13T00:00:00Z" reviewedBy="Editorial team" />
-
-          <CalloutBox variant="info" title="The relationship is long-term">
-            A veterinarian who knows your pet over years can spot subtle changes and provide continuity that improves care. Choosing well at the start, and building a relationship, pays dividends — so weigh communication and trust alongside credentials and convenience.
-          </CalloutBox>
-
           <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
             <HopDisclosure siteId="vets-co" href="/go/amazon-brand/soft+pet+carrier?s=guides-choosing-a-veterinarian" />
             <ShopCtas amazonHref="/go/amazon-brand/soft+pet+carrier?s=guides-choosing-a-veterinarian" amazonLabel="Browse soft pet carriers on Amazon →" />
             <a href="#kit" className="inline-flex min-h-[44px] items-center text-xs text-brand-text-mid underline underline-offset-2">All supplies on this page ↓</a>
           </div>
+          <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-10-14T00:00:00Z" reviewedBy="Editorial team" />
+
+          <CalloutBox variant="info" title="The relationship is long-term">
+            A veterinarian who knows your pet over years can spot subtle changes and provide continuity that improves care. Choosing well at the start, and building a relationship, pays dividends — so weigh communication and trust alongside credentials and convenience.
+          </CalloutBox>
+
 
           <h2>Credentials and Accreditation</h2>
           <p>Start with the fundamentals. All practicing veterinarians are licensed, but voluntary accreditation — most notably AAHA accreditation in the United States — indicates a practice has chosen to meet several hundred quality benchmarks for medical care, equipment, and safety. Because veterinary practices are not required to be accredited, this voluntary step is a meaningful signal of commitment to standards. Consider it alongside the practice&apos;s areas of focus and whether specialists are on staff or available by referral.</p>

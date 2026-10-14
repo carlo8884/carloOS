@@ -8,7 +8,7 @@ const SOURCES = [
   { label: 'Merck Veterinary Manual: Hypothyroidism in Dogs', url: 'https://www.merckvetmanual.com/endocrine-system/the-thyroid-gland/hypothyroidism-in-animals', publisher: 'Merck Vet Manual' },
   { label: 'AAHA: Endocrine Disease in Dogs', url: 'https://www.aaha.org/aaha-guidelines/', publisher: 'AAHA' },
 ]
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Hypothyroidism in Dogs', description: 'Signs, diagnosis, and lifelong management of canine hypothyroidism.', url: 'https://vets.co/health/hypothyroidism-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-10-13T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Hypothyroidism in Dogs', description: 'Signs, diagnosis, and lifelong management of canine hypothyroidism.', url: 'https://vets.co/health/hypothyroidism-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-10-14T00:00:00Z' ,
   citation: SOURCES,
 })
 const med = buildMedicalWebPageSchema({ name: 'Hypothyroidism in Dogs', description: 'Clinical signs, testing, and treatment of canine hypothyroidism.', url: 'https://vets.co/health/hypothyroidism-dogs', authorName: 'Vets.co Editorial', lastReviewed: '2026-10-13' })
@@ -48,13 +48,13 @@ export default function HypothyroidismDogsPage() {
       >
         <div className="carloOS-article">
 
-          <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-10-13T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-13" />
           <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
             <HopDisclosure siteId="vets-co" href="/go/amazon-brand/large+platform+digital+bathroom+scale?s=health-hypothyroidism-dogs" />
             <ShopCtas amazonHref="/go/amazon-brand/large+platform+digital+bathroom+scale?s=health-hypothyroidism-dogs" amazonLabel="Browse large platform digital bathroom scales on Amazon →" />
             <a href="#kit" className="inline-flex min-h-[44px] items-center text-xs text-brand-text-mid underline underline-offset-2">All supplies on this page ↓</a>
           </div>
+          <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-10-14T00:00:00Z" reviewedBy="Editorial team" />
+          <LastUpdated date="2026-10-14" />
 
           <CalloutBox variant="info" title="Easy to miss, easy to treat">
             Because the signs develop slowly and look like aging, many hypothyroid dogs go undiagnosed for a long time. A simple blood test confirms it, and treatment is highly effective and affordable. If your middle-aged dog has slowed down and gained weight, ask your veterinarian about thyroid testing. A large platform digital bathroom scale is only a home weight-watch — it does not diagnose hypothyroidism and it is not a substitute for that blood test.

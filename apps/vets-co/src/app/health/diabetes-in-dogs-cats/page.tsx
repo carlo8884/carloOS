@@ -9,7 +9,7 @@ const SOURCES = [
   { label: 'Merck Veterinary Manual: Diabetes Mellitus in Animals', url: 'https://www.merckvetmanual.com/endocrine-system/the-pancreas/diabetes-mellitus-in-dogs-and-cats', publisher: 'Merck Vet Manual' },
   { label: 'AVMA: Diabetes in Pets', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/diabetes-pets', publisher: 'AVMA' },
 ]
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Diabetes Mellitus in Dogs and Cats', description: 'Clinical signs, diagnosis, insulin management, and monitoring of diabetes in dogs and cats.', url: 'https://vets.co/health/diabetes-in-dogs-cats', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-10-13T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Diabetes Mellitus in Dogs and Cats', description: 'Clinical signs, diagnosis, insulin management, and monitoring of diabetes in dogs and cats.', url: 'https://vets.co/health/diabetes-in-dogs-cats', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-10-14T00:00:00Z' ,
   citation: SOURCES,
 })
 const med = buildMedicalWebPageSchema({ name: 'Diabetes Mellitus in Dogs and Cats', description: 'Signs, diagnosis, insulin therapy, and monitoring of diabetes mellitus in pets.', url: 'https://vets.co/health/diabetes-in-dogs-cats', authorName: 'Vets.co Editorial', lastReviewed: '2026-10-13' })
@@ -52,13 +52,13 @@ export default function DiabetesPage() {
       >
         <div className="carloOS-article">
 
-          <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-10-13T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-13" />
           <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
             <HopDisclosure siteId="vets-co" href="/go/amazon-brand/insulated+pet+water+bowl?s=health-diabetes-in-dogs-cats" />
             <ShopCtas amazonHref="/go/amazon-brand/insulated+pet+water+bowl?s=health-diabetes-in-dogs-cats" amazonLabel="Browse insulated pet water bowls on Amazon →" />
             <a href="#kit" className="inline-flex min-h-[44px] items-center text-xs text-brand-text-mid underline underline-offset-2">All supplies on this page ↓</a>
           </div>
+          <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-10-14T00:00:00Z" reviewedBy="Editorial team" />
+          <LastUpdated date="2026-10-14" />
           <div className="rounded-lg border-l-4 border-brand-primary bg-brand-surface p-5 my-6" data-testid="short-answer">
             <h2 className="font-display text-lg font-bold mb-2">The short answer</h2>
             <p className="text-base leading-relaxed text-brand-text-mid m-0">
