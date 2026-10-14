@@ -35,7 +35,7 @@ const FAQS = [
 ]
 
 const schema = combineSchemas(
-  buildArticleSchema({ siteId: 'vets-co', title: 'How to Give Your Dog or Cat a Pill', description: 'Vet-school advice on getting a dog or cat to take its medication.', url: PAGE_URL, imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-10-12T00:00:00Z', modifiedAt: '2026-10-12T00:00:00Z', citation: SOURCES }),
+  buildArticleSchema({ siteId: 'vets-co', title: 'How to Give Your Dog or Cat a Pill', description: 'Vet-school advice on getting a dog or cat to take its medication.', url: PAGE_URL, imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-10-12T00:00:00Z', modifiedAt: '2026-10-13T00:00:00Z', citation: SOURCES }),
   buildFAQSchema({ questions: FAQS }),
 )
 
@@ -55,12 +55,18 @@ export default function GivePillPage() {
         sidebar={<RelatedLinks title="Related Guides" links={[{ label: 'Questions to Ask Your Vet', href: '/guides/questions-to-ask-your-vet' }, { label: 'Veterinary Medication Library', href: '/medications' }, { label: 'Recovery Cones and E-Collars', href: '/guides/recovery-cone-e-collar' }]} />}
       >
         <div className="carloOS-article">
-          <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-10-12T00:00:00Z" updatedAt="2026-10-12T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-12" />
+          <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-10-12T00:00:00Z" updatedAt="2026-10-13T00:00:00Z" reviewedBy="Editorial team" />
+          <LastUpdated date="2026-10-13" />
 
           <CalloutBox variant="info" title="Give it exactly as prescribed">
             Cornell stresses giving a prescribed medication as prescribed. Ask your vet or pharmacist before crushing, splitting, or mixing a medicine into food, and never give a human medicine without asking.
           </CalloutBox>
+
+          <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
+            <HopDisclosure siteId="vets-co" href={`/go/amazon-brand/${SHOP[0].q}?s=${SOURCE}`} />
+            <ShopCtas amazonHref={`/go/amazon-brand/${SHOP[0].q}?s=${SOURCE}`} amazonLabel={SHOP[0].label} />
+            
+          </div>
 
           <h2 id="start-early">Start before you need it</h2>
           <p>Ohio State’s veterinary medical center says it is easiest to condition a pet to take medication while healthy, before illness or injury dulls the appetite. Start at mealtime, when your pet is already hungry, and use portions of the daily meal for practice.</p>

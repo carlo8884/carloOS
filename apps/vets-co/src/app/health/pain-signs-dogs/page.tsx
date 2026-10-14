@@ -13,7 +13,7 @@ const SOURCES = [
 const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Signs Your Dog Is in Pain', description: '14 pain indicators in dogs — subtle and obvious signs of chronic and acute pain.', url: 'https://vets.co/health/pain-signs-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-13T00:00:00Z' ,
   citation: SOURCES,
 })
-const med = buildMedicalWebPageSchema({ name: 'Signs Your Dog Is in Pain', description: 'Subtle and obvious pain indicators in dogs.', url: 'https://vets.co/health/pain-signs-dogs', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-07' })
+const med = buildMedicalWebPageSchema({ name: 'Signs Your Dog Is in Pain', description: 'Subtle and obvious pain indicators in dogs.', url: 'https://vets.co/health/pain-signs-dogs', authorName: 'Vets.co Editorial', lastReviewed: '2026-10-13' })
 const combined = combineSchemas(schema, med)
 const FAQS = [
   {
@@ -73,10 +73,16 @@ export default function PainSignsPage() {
       >
         <div className="carloOS-article">
           <LastUpdated date="2026-10-13" />
+          <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
+            <HopDisclosure siteId="vets-co" href="/go/amazon-brand/egg+crate+foam+dog+kennel+pad?s=health-pain-signs-dogs" />
+            <ShopCtas amazonHref="/go/amazon-brand/egg+crate+foam+dog+kennel+pad?s=health-pain-signs-dogs" amazonLabel="Browse egg-crate foam dog kennel pads on Amazon →" />
+            <a href="#kit" className="inline-flex min-h-[44px] items-center text-xs text-brand-text-mid underline underline-offset-2">All supplies on this page ↓</a>
+          </div>
 
           <CalloutBox variant="info" title="Short answer">
             <p>Signs of pain in dogs include eating less, staying still or struggling to get comfortable, restlessness or anxiety, hiding or withdrawing, mood or personality changes, irritability, and licking, biting, or rubbing a sore spot, plus changes in movement, posture, or breathing. Some dogs still wag their tails and greet people while in pain, so tell your vet about any change from your dog's normal behavior. Source: <a href="https://www.merckvetmanual.com/special-pet-topics/pain-management/recognizing-and-assessing-pain-in-animals">Merck Veterinary Manual (pet owner version)</a>.</p>
           </CalloutBox>
+
 
           <p className="text-base text-brand-text-mid leading-relaxed mb-8">A stoic dog in chronic pain may show none of the classic &quot;pain&quot; behaviors — no whimpering, no limping, no obvious distress. They adapt. They stop doing things that hurt, move differently, interact less. The change from baseline is what matters. Know your dog&apos;s normal. Household observation gear — an egg-crate foam dog kennel pad, carpeted wooden pet steps, a wide-platform veterinary floor scale — is how posture, stair reluctance, restlessness, and weight change stay visible.</p>
           {SIGNS.map((item, i) => (

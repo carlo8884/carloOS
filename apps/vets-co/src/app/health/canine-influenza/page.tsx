@@ -58,10 +58,16 @@ export default function CanineInfluenzaPage() {
       >
         <div className="carloOS-article">
           <LastUpdated date="2026-10-13" />
+          <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
+            <HopDisclosure siteId="vets-co" href="/go/amazon-brand/double+door+wire+dog+crate?s=health-canine-influenza" />
+            <ShopCtas amazonHref="/go/amazon-brand/double+door+wire+dog+crate?s=health-canine-influenza" amazonLabel="Browse double-door wire dog crates on Amazon →" />
+            <a href="#kit" className="inline-flex min-h-[44px] items-center text-xs text-brand-text-mid underline underline-offset-2">All supplies on this page ↓</a>
+          </div>
 
           <CalloutBox variant="info" title="Short answer">
             <p>Canine influenza (dog flu) spreads between dogs through the air, shared objects such as water bowls, and people's hands and clothes. Most infected dogs get a mild illness with a cough that lasts 1 to 3 weeks; some develop high fever and pneumonia. Treatment is supportive and most dogs recover in 2 to 3 weeks. Vaccines need two doses, and there is no evidence the H3N2 strain spreads from dogs to people. Source: <a href="https://www.merckvetmanual.com/respiratory-system/respiratory-diseases-of-small-animals/canine-influenza-flu">Merck Veterinary Manual</a>.</p>
           </CalloutBox>
+
 
           <h2>How Canine Influenza Spreads</h2>
           <p>Canine influenza is transmitted through respiratory secretions — direct dog-to-dog contact, airborne droplets (sneezing, coughing), and contact with contaminated surfaces (water bowls, kennel surfaces, human hands that have touched infected dogs). Virtually all dogs exposed to the virus develop infection — canine influenza viruses are novel to the dog immune system, meaning there is minimal pre-existing immunity in unvaccinated populations. This is different from kennel cough (Bordetella), where healthy adults with prior exposure may resist infection — essentially all naïve dogs exposed to influenza become infected.</p>

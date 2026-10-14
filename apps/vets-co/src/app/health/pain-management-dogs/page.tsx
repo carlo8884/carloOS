@@ -59,10 +59,16 @@ export default function PainManagementPage() {
       >
         <div className="carloOS-article">
           <LastUpdated date="2026-10-13" />
+          <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
+            <HopDisclosure siteId="vets-co" href="/go/amazon-brand/elevated+mesh+dog+cot?s=health-pain-management-dogs" />
+            <ShopCtas amazonHref="/go/amazon-brand/elevated+mesh+dog+cot?s=health-pain-management-dogs" amazonLabel="Browse elevated mesh dog cots on Amazon →" />
+            <a href="#kit" className="inline-flex min-h-[44px] items-center text-xs text-brand-text-mid underline underline-offset-2">All supplies on this page ↓</a>
+          </div>
 
           <CalloutBox variant="info" title="Short answer">
             <p>Vets usually treat pain with one or more pain-relieving drugs, chosen by how severe the pain is, the dog's overall health, and what works best for dogs. Merck says giving pain medicine regularly is usually best because pain signs can be hard to see, and combining drugs can allow smaller doses of each. Non-drug care such as warm compresses or ice or heat packs, massage, physical therapy, rest, and low stress helps the medicine work better. Source: <a href="https://www.merckvetmanual.com/special-pet-topics/pain-management/pain-treatment-in-animals">Merck Veterinary Manual (pet owner version)</a>.</p>
           </CalloutBox>
+
 
           <h2>Why Dogs Hide Pain — and How to See Through It</h2>
           <p>Dogs are descended from prey animals whose survival depended on not appearing weak — showing pain attracted predators. This evolutionary pressure remains: dogs with significant chronic pain often appear &quot;fine&quot; to casual observation while making behavioral adaptations that are the actual pain signal. The dog that used to bound up the stairs and now takes them slowly. The dog that stopped initiating play. The dog that gets up from rest with a brief hesitation before moving normally. These behavioral changes are pain signs that owners frequently attribute to &quot;slowing down with age&quot; — which is itself often a pain signal. An elevated mesh dog cot is rest for that hesitation — a low, open cot they can step onto and off without climbing out of a deep bed, not an extra-large bolster dog lounge and not an egg-crate foam kennel pad. It does not treat pain and it is not a substitute for a veterinary exam. Clear adhesive non-slip stair treads are how the existing staircase gets grip for the dog that now takes the stairs slowly — they are not carpeted wooden pet steps, not a dog ramp, and not a traction rug. An orthopedic dog bed gives a stiff dog a supportive place for long rests.</p>

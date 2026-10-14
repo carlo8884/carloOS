@@ -7,10 +7,10 @@ export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Ear
 const SOURCES = [
   { label: 'Merck Veterinary Manual: Otitis Externa in Dogs', url: 'https://www.merckvetmanual.com/dog-owners/ear-disorders-of-dogs/ear-infections-and-otitis-externa-in-dogs', publisher: 'Merck Vet Manual' },
 ]
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Ear Infections in Dogs', description: 'Causes, signs, and management of canine otitis externa and ear infections.', url: 'https://vets.co/health/ear-infections-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-10-12T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Ear Infections in Dogs', description: 'Causes, signs, and management of canine otitis externa and ear infections.', url: 'https://vets.co/health/ear-infections-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-10-13T00:00:00Z' ,
   citation: SOURCES,
 })
-const med = buildMedicalWebPageSchema({ name: 'Ear Infections in Dogs', description: 'Causes, signs, and treatment of ear infections in dogs.', url: 'https://vets.co/health/ear-infections-dogs', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-01' })
+const med = buildMedicalWebPageSchema({ name: 'Ear Infections in Dogs', description: 'Causes, signs, and treatment of ear infections in dogs.', url: 'https://vets.co/health/ear-infections-dogs', authorName: 'Vets.co Editorial', lastReviewed: '2026-10-13' })
 const combined = combineSchemas(schema, med)
 const FAQS = [
   { question: "Why does my dog keep getting ear infections?", answer: "Recurrent ear infections are almost always a symptom of an underlying problem rather than a standalone disease — most commonly allergies (environmental or food), which inflame the ear canal and create the warm, moist environment bacteria and yeast thrive in. Other contributors include the ear's anatomy in floppy-eared and hairy-eared breeds, moisture from swimming, excess wax, foreign material like grass awns, and underlying hormonal disease. Treating the infection without addressing the underlying cause leads to the frustrating cycle of repeated infections." },
@@ -47,12 +47,18 @@ export default function EarInfectionsDogsPage() {
 </>}
       >
         <div className="carloOS-article">
-          <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-09-05T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-12" />
+          <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-10-13T00:00:00Z" reviewedBy="Editorial team" />
+          <LastUpdated date="2026-10-13" />
 
           <CalloutBox variant="info" title="Recurrence means look deeper">
             A dog that gets ear infection after ear infection does not have bad luck — it has an unaddressed underlying cause, most often allergies. Breaking the cycle requires identifying and managing that cause, not just clearing each infection as it appears.
           </CalloutBox>
+
+          <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
+            <HopDisclosure siteId="vets-co" href="/go/amazon-brand/dog+ear+cleaner+solution?s=health-ear-infections-dogs" />
+            <ShopCtas amazonHref="/go/amazon-brand/dog+ear+cleaner+solution?s=health-ear-infections-dogs" amazonLabel="Browse dog ear-cleaner solutions on Amazon →" />
+            <a href="#kit" className="inline-flex min-h-[44px] items-center text-xs text-brand-text-mid underline underline-offset-2">All supplies on this page ↓</a>
+          </div>
 
           <h2>How Ear Infections Develop</h2>
           <p>The canine ear canal is long and L-shaped, which traps moisture and debris and makes the ear vulnerable. An ear infection (otitis externa) develops when the normal balance is disrupted and bacteria, yeast, or both overgrow in the canal. Crucially, infections rarely arise out of nowhere — they are usually secondary to a primary problem that inflames the canal and changes its environment, such as allergies, moisture, excess wax, foreign bodies, or hormonal disease.</p>

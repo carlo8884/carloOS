@@ -34,7 +34,7 @@ const FAQS = [
 ]
 
 const schema = combineSchemas(
-  buildArticleSchema({ siteId: 'vets-co', title: 'Recovery Cones and E-Collars', description: 'How to use a cone or e-collar after your dog or cat has surgery.', url: PAGE_URL, imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-10-12T00:00:00Z', modifiedAt: '2026-10-12T00:00:00Z', citation: SOURCES }),
+  buildArticleSchema({ siteId: 'vets-co', title: 'Recovery Cones and E-Collars', description: 'How to use a cone or e-collar after your dog or cat has surgery.', url: PAGE_URL, imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-10-12T00:00:00Z', modifiedAt: '2026-10-13T00:00:00Z', citation: SOURCES }),
   buildFAQSchema({ questions: FAQS }),
 )
 
@@ -54,12 +54,18 @@ export default function RecoveryConePage() {
         sidebar={<RelatedLinks title="Related Guides" links={[{ label: 'Pet First-Aid Kit Checklist', href: '/guides/pet-first-aid-kit' }, { label: 'What to Expect at the Vet', href: '/guides/what-to-expect-at-the-vet' }, { label: 'Spay and Neuter Benefits', href: '/health/spay-neuter-benefits' }]} />}
       >
         <div className="carloOS-article">
-          <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-10-12T00:00:00Z" updatedAt="2026-10-12T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-12" />
+          <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-10-12T00:00:00Z" updatedAt="2026-10-13T00:00:00Z" reviewedBy="Editorial team" />
+          <LastUpdated date="2026-10-13" />
 
           <CalloutBox variant="warning" title="Follow your own vet’s discharge instructions">
             Your veterinary team decides how long the cone stays on and which type suits the incision. If stitches come out, the incision opens, or it bleeds or discharges, call the clinic.
           </CalloutBox>
+
+          <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
+            <HopDisclosure siteId="vets-co" href={`/go/amazon-brand/${SHOP[0].q}?s=${SOURCE}`} />
+            <ShopCtas amazonHref={`/go/amazon-brand/${SHOP[0].q}?s=${SOURCE}`} amazonLabel={SHOP[0].label} />
+            
+          </div>
 
           <h2 id="why">Why the cone matters</h2>
           <p>Cones, also called Elizabethan collars or e-collars, stop a pet from licking or chewing the incision. Veterinary Partner says that prevents irritation, infection, and pulled stitches or staples. VCA warns it only takes a few seconds of chewing for a dog to remove stitches, and the ASPCA Spay/Neuter Alliance notes that licking can open or infect an incision, which usually means more visits and cost.</p>

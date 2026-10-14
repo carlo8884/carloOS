@@ -57,10 +57,16 @@ export default function PreventiveCareSchedulePage() {
       >
         <div className="carloOS-article">
           <LastUpdated date="2026-10-13" />
+          <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
+            <HopDisclosure siteId="vets-co" href="/go/amazon-brand/tick+removal+tool?s=health-preventive-care-schedule" />
+            <ShopCtas amazonHref="/go/amazon-brand/tick+removal+tool?s=health-preventive-care-schedule" amazonLabel="Browse tick removal tools on Amazon →" />
+            <a href="#kit" className="inline-flex min-h-[44px] items-center text-xs text-brand-text-mid underline underline-offset-2">All supplies on this page ↓</a>
+          </div>
 
           <CalloutBox variant="info" title="Short answer">
             <p>The Merck Veterinary Manual recommends vet visits every 3 to 4 weeks for puppies until 4 months old, at least once a year for adult dogs, and twice a year or more for senior dogs over 7 to 8 years old. Core vaccines protect against distemper, parvovirus, and rabies, and Merck advises a heartworm test every year with year-round heartworm prevention. Source: <a href="https://www.merckvetmanual.com/dog-owners/routine-care-of-dogs/routine-health-care-of-dogs">Merck Veterinary Manual (dog owner version)</a>.</p>
           </CalloutBox>
+
 
           <h2>Puppy Schedule (Birth to 16 Weeks)</h2>
           <div className="overflow-x-auto mb-6">

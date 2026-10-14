@@ -48,6 +48,12 @@ export default function SpayNeuterPage() {
         <div className="carloOS-article">
           <LastUpdated date="2026-10-13" />
 
+          <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
+            <HopDisclosure siteId="vets-co" href="/go/amazon-brand/adjustable+sliding+dog+food+scoop?s=health-spay-neuter-benefits" />
+            <ShopCtas amazonHref="/go/amazon-brand/adjustable+sliding+dog+food+scoop?s=health-spay-neuter-benefits" amazonLabel="Browse adjustable sliding dog-food scoops on Amazon →" />
+            <a href="#kit" className="inline-flex min-h-[44px] items-center text-xs text-brand-text-mid underline underline-offset-2">All supplies on this page ↓</a>
+          </div>
+
           <h2>Benefits of Spaying (Females)</h2>
           <p><strong>Pyometra prevention:</strong> Pyometra — life-threatening uterine infection — affects approximately 25% of intact female dogs by age 10. It requires emergency surgery in most cases and carries significant mortality risk in older or ill dogs. Spaying eliminates this risk entirely.</p>
           <p><strong>Mammary tumor reduction:</strong> Spaying before the first heat is associated with very low subsequent mammary tumor risk in early observational work (Schneider et al., J Natl Cancer Inst 1969); later systematic reviews (Beauvais et al., J Small Anim Pract 2012) describe the evidence as weaker than the often-quoted ~99.5% figure but still consistent with meaningful risk reduction. After the third heat, the protective effect diminishes significantly. Mammary tumors are the most common tumors in intact female dogs, and approximately 50% are malignant. Early spay is the most effective prevention.</p>

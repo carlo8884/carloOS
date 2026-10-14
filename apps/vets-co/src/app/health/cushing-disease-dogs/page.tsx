@@ -10,10 +10,10 @@ const SOURCES = [
   { label: 'Merck Veterinary Manual: Hyperadrenocorticism in Animals', url: 'https://www.merckvetmanual.com/endocrine-system/the-adrenal-glands/cushing-syndrome-hyperadrenocorticism-in-animals', publisher: 'Merck Vet Manual' },
   { label: 'Ramsey IK. Trilostane in dogs. Vet Clin North Am Small Anim Pract. 2010;40(2):269-283.', url: 'https://doi.org/10.1016/j.cvsm.2009.10.008', publisher: 'Vet Clin North Am' },
 ]
-const schema = buildArticleSchema({ siteId: 'vets-co', title: "Cushing's Disease in Dogs", description: "PDH vs adrenal tumor, LDDS testing, and trilostane treatment for canine hyperadrenocorticism.", url: 'https://vets.co/health/cushing-disease-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-12T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'vets-co', title: "Cushing's Disease in Dogs", description: "PDH vs adrenal tumor, LDDS testing, and trilostane treatment for canine hyperadrenocorticism.", url: 'https://vets.co/health/cushing-disease-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-13T00:00:00Z' ,
   citation: SOURCES,
 })
-const med = buildMedicalWebPageSchema({ name: "Cushing's Disease in Dogs", description: "Signs, testing, and trilostane treatment for canine hyperadrenocorticism.", url: 'https://vets.co/health/cushing-disease-dogs', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-05' })
+const med = buildMedicalWebPageSchema({ name: "Cushing's Disease in Dogs", description: "Signs, testing, and trilostane treatment for canine hyperadrenocorticism.", url: 'https://vets.co/health/cushing-disease-dogs', authorName: 'Vets.co Editorial', lastReviewed: '2026-10-13' })
 const combined = combineSchemas(schema, med)
 
 const FAQS = [
@@ -53,8 +53,14 @@ export default function CushingsPage() {
       >
         <div className="carloOS-article">
 
-          <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-06-05T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-12" />
+          <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-10-13T00:00:00Z" reviewedBy="Editorial team" />
+          <LastUpdated date="2026-10-13" />
+
+          <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
+            <HopDisclosure siteId="vets-co" href="/go/amazon-brand/2+liter+plastic+graduated+pitcher?s=health-cushing-disease-dogs" />
+            <ShopCtas amazonHref="/go/amazon-brand/2+liter+plastic+graduated+pitcher?s=health-cushing-disease-dogs" amazonLabel="Browse 2-liter plastic graduated pitchers on Amazon →" />
+            <a href="#kit" className="inline-flex min-h-[44px] items-center text-xs text-brand-text-mid underline underline-offset-2">All supplies on this page ↓</a>
+          </div>
 
           <DropCap>Pituitary-dependent hyperadrenocorticism (PDH) accounts for approximately 85% of Cushing's cases: a tumor (usually a small microadenoma) in the pituitary gland overproduces ACTH, which chronically overstimulates both adrenal glands to produce excess cortisol, resulting in bilateral adrenal hyperplasia. The remaining 15% is adrenal-dependent — a tumor in one adrenal gland autonomously overproduces cortisol regardless of pituitary input, and the opposite adrenal gland atrophies from suppressed ACTH. The distinction matters because it determines whether surgery is the definitive treatment.</DropCap>
 

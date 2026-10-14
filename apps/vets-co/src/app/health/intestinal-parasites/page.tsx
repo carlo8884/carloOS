@@ -64,10 +64,16 @@ export default function IntestinalParasitesPage() {
       >
         <div className="carloOS-article">
           <LastUpdated date="2026-10-13" />
+          <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
+            <HopDisclosure siteId="vets-co" href="/go/amazon-brand/hinged+cedar+sandbox+cover?s=health-intestinal-parasites" />
+            <ShopCtas amazonHref="/go/amazon-brand/hinged+cedar+sandbox+cover?s=health-intestinal-parasites" amazonLabel="Browse hinged cedar sandbox covers on Amazon →" />
+            <a href="#kit" className="inline-flex min-h-[44px] items-center text-xs text-brand-text-mid underline underline-offset-2">All supplies on this page ↓</a>
+          </div>
 
           <CalloutBox variant="info" title="Short answer">
             <p>Many dogs with intestinal parasites show no signs, so testing matters. The Companion Animal Parasite Council (CAPC) recommends fecal testing at least four times in a puppy's first year and at least twice a year in adults, deworming puppies from 2 weeks of age every 2 weeks, and year-round broad-spectrum parasite control for adult dogs. Pick up feces promptly: roundworms and hookworms can infect people, especially children. Source: <a href="https://capcvet.org/guidelines/ascarid/">Companion Animal Parasite Council</a>.</p>
           </CalloutBox>
+
 
           <h2>Roundworms — The Most Common and Zoonotic</h2>
           <p>Toxocara canis (roundworm) is the most commonly found intestinal parasite in dogs and one of the most important zoonotic parasites worldwide. Adult roundworms live in the small intestine. Puppies are often infected in utero or through nursing — CAPC advises vets to assume essentially every pup is likely to harbor developing roundworms. Clinical signs in heavily infected puppies: pot-bellied appearance, dull coat, diarrhea, and in severe cases, intestinal obstruction. Adult dogs with small burdens often show no signs.</p>

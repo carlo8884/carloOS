@@ -65,10 +65,16 @@ export default function DogEyeConditionsPage() {
 
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-10-13T00:00:00Z" reviewedBy="Editorial team" />
           <LastUpdated date="2026-10-13" />
+          <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
+            <HopDisclosure siteId="vets-co" href="/go/amazon-brand/sterile+saline+eye+wash?s=health-dog-eye-conditions" />
+            <ShopCtas amazonHref="/go/amazon-brand/sterile+saline+eye+wash?s=health-dog-eye-conditions" amazonLabel="Browse sterile saline eye wash on Amazon →" />
+            <a href="#kit" className="inline-flex min-h-[44px] items-center text-xs text-brand-text-mid underline underline-offset-2">All supplies on this page ↓</a>
+          </div>
 
           <CalloutBox variant="info" title="Short answer">
             <p>Sudden glaucoma is an emergency: signs include a dilated or slow-moving pupil, redness in the white of the eye, a cloudy or discolored cornea, and a firm eye, and Merck says a dog with any glaucoma signs should see a vet immediately. Cataracts make the lens cloudy and can lead to blindness. They are often inherited and can also follow diabetes, inflammation, or trauma, and are treated with surgery to remove the lens. Source: <a href="https://www.merckvetmanual.com/dog-owners/eye-disorders-of-dogs/glaucoma-in-dogs">Merck Veterinary Manual (dog owner version)</a>.</p>
           </CalloutBox>
+
 
           <CalloutBox variant="warning" title="Red-flag list — same-day vet visit">
             Any sudden change in eye appearance — cloudy or bluish tint, a visibly enlarged globe, squinting and reluctance to open the eye, sudden bumping into furniture, eye trauma, or chemical exposure — needs same-day evaluation. Closed-angle glaucoma is a sudden rise in eye pressure with severe pain, redness and vision loss, and Merck says the pressure must be lowered as quickly as possible; corneal lacerations and lens luxations are surgical emergencies. A sterile saline eye wash is only a rinse for a chemical splash on the way to the clinic — it is not a medicated eye drop, not Optimmune, and not a substitute for that same-day exam.

@@ -70,6 +70,12 @@ export default function VetsLabradorHealthPage() {
 
         <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-10-13T00:00:00Z" reviewedBy="Editorial team" />
 
+          <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
+            <HopDisclosure siteId="vets-co" href="/go/amazon-brand/flexible+sewing+tape+measure?s=breeds-labrador-health" />
+            <ShopCtas amazonHref="/go/amazon-brand/flexible+sewing+tape+measure?s=breeds-labrador-health" amazonLabel="Browse flexible sewing tape measures on Amazon →" />
+            <a href="#kit" className="inline-flex min-h-[44px] items-center text-xs text-brand-text-mid underline underline-offset-2">All supplies on this page ↓</a>
+          </div>
+
         <h2>The Conditions I Monitor Most Closely</h2>
 
         <BreedHealthCard name="Hip and Elbow Dysplasia" riskLevel="high" description="The most common orthopedic conditions in Labradors. Hip dysplasia: abnormal hip joint development causing pain and early arthritis. Elbow dysplasia: similar issue in the elbow, often presenting as forelimb lameness in young dogs. Both are polygenetic — breeding from OFA-cleared parents significantly reduces (but doesn't eliminate) risk. Signs appear in young dogs (8 months to 2 years) and worsen with age." signs={['Lameness, especially after exercise', 'Reluctance to rise or climb stairs', 'Abnormal gait — swaying, bunny-hopping', 'Joint swelling or pain on manipulation']} management="OFA screening for breeding dogs. Maintain lean weight — every extra pound accelerates joint damage significantly. Joint supplements (fish oil, glucosamine) from young adulthood. Surgical evaluation for severe cases — FHO, TPO, total hip replacement depending on severity and age." />

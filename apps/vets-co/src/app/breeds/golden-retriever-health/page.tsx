@@ -109,6 +109,12 @@ export default function VetsGoldenRetrieverHealthPage() {
 
         <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-10-13T00:00:00Z" reviewedBy="Editorial team" />
 
+          <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
+            <HopDisclosure siteId="vets-co" href="/go/amazon-brand/dog+ear+cleaner+solution?s=breeds-golden-retriever-health" />
+            <ShopCtas amazonHref="/go/amazon-brand/dog+ear+cleaner+solution?s=breeds-golden-retriever-health" amazonLabel="Browse dog ear cleaner solutions on Amazon →" />
+            <a href="#kit" className="inline-flex min-h-[44px] items-center text-xs text-brand-text-mid underline underline-offset-2">All supplies on this page ↓</a>
+          </div>
+
         <h2 id="cancer">The Cancer Reality — What I Tell Every New Golden Owner</h2>
         <p>Cancer is the leading cause of death in Golden Retrievers. In a 1998 Golden Retriever Club of America survey, cancer caused 61% of the 420 deaths recorded, and a necropsy study of 652 Goldens at a US veterinary teaching hospital found 65% cancer-related mortality; UK and Scandinavian studies found lower rates (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9182714/">Golden Retriever Lifetime Study cohort profile</a>). For lymphoma, CHOP-based chemotherapy has an initial response rate of 90% or more, with median survival of about 12 months for B-cell and 6–8 months for T-cell disease (<a href="https://www.merckvetmanual.com/circulatory-system/lymphoma-in-dogs/lymphoma-in-dogs">Merck Veterinary Manual</a>). I say this at every new Golden puppy appointment, because I want owners to understand from the beginning that proactive monitoring is not optional — it is the primary medical responsibility of Golden ownership.</p>
         <p>The two cancers that kill most Goldens are hemangiosarcoma and lymphoma. Both can be managed more effectively with earlier detection. Neither is currently curable, but treatment meaningfully extends quality life. And monitoring can catch them before the crisis presentation that brings owners in when options have narrowed significantly.</p>

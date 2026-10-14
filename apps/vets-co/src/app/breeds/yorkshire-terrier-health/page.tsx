@@ -137,6 +137,12 @@ export default function VetsYorkshireTerrierHealthPage() {
             reviewedBy="Editorial team"
           />
 
+          <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
+            <HopDisclosure siteId="vets-co" href="/go/amazon-brand/pet+toothbrush+and+enzymatic+toothpaste+kit?s=breeds-yorkshire-terrier-health" />
+            <ShopCtas amazonHref="/go/amazon-brand/pet+toothbrush+and+enzymatic+toothpaste+kit?s=breeds-yorkshire-terrier-health" amazonLabel="Browse pet toothbrush and enzymatic toothpaste kits on Amazon →" />
+            <a href="#kit" className="inline-flex min-h-[44px] items-center text-xs text-brand-text-mid underline underline-offset-2">All supplies on this page ↓</a>
+          </div>
+
                     <p>
             The Yorkshire Terrier is a small (4–7 lb), long-lived (12–15 years) toy terrier with a tightly
             defined cluster of breed predispositions: congenital portosystemic shunt, patellar luxation,

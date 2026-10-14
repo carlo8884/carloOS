@@ -12,7 +12,7 @@ const SOURCES = [
 const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Tick-Borne Diseases in Dogs', description: 'Lyme disease, Anaplasmosis, Ehrlichiosis, and RMSF in dogs — signs and treatment.', url: 'https://vets.co/health/tick-borne-diseases', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-13T00:00:00Z' ,
   citation: SOURCES,
 })
-const med = buildMedicalWebPageSchema({ name: 'Tick-Borne Diseases in Dogs', description: 'Lyme, Anaplasmosis, Ehrlichiosis, and RMSF — signs, testing, and treatment.', url: 'https://vets.co/health/tick-borne-diseases', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-07' })
+const med = buildMedicalWebPageSchema({ name: 'Tick-Borne Diseases in Dogs', description: 'Lyme, Anaplasmosis, Ehrlichiosis, and RMSF — signs, testing, and treatment.', url: 'https://vets.co/health/tick-borne-diseases', authorName: 'Vets.co Editorial', lastReviewed: '2026-10-13' })
 const combined = combineSchemas(schema, med)
 const FAQS = [
   {
@@ -63,10 +63,16 @@ export default function TickBornePage() {
       >
         <div className="carloOS-article">
           <LastUpdated date="2026-10-13" />
+          <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
+            <HopDisclosure siteId="vets-co" href="/go/amazon-brand/tick+removal+hook?s=health-tick-borne-diseases" />
+            <ShopCtas amazonHref="/go/amazon-brand/tick+removal+hook?s=health-tick-borne-diseases" amazonLabel="Browse tick-removal hooks on Amazon →" />
+            <a href="#kit" className="inline-flex min-h-[44px] items-center text-xs text-brand-text-mid underline underline-offset-2">All supplies on this page ↓</a>
+          </div>
 
           <CalloutBox variant="info" title="Short answer">
             <p>In dogs, Lyme disease typically causes fever, poor appetite, lethargy, swollen lymph nodes, and lameness that comes and goes and shifts between legs. The bacteria pass from tick to dog only after the tick has fed for at least 24 hours, so prompt removal helps. But deer ticks are tiny, and Merck says repellents and tick-killing products work better than checks alone. Sick dogs are treated with a long course of antibiotics, about 4 weeks. Source: <a href="https://www.merckvetmanual.com/infectious-diseases/lyme-borreliosis/lyme-borreliosis-in-animals">Merck Veterinary Manual</a>.</p>
           </CalloutBox>
+
 
           <h2>Lyme Disease (Borrelia burgdorferi)</h2>
           <p><strong>Tick vector:</strong> Ixodes scapularis (black-legged tick / deer tick) primarily; Ixodes pacificus on the West Coast. Requires 24–48 hours of tick attachment for transmission — emphasizing prompt tick removal. A tick-removal hook is how an attached tick comes off as a whole instead of a squeezed body — it is not a generic tick remover and not a first-aid tick-removal tool. A fine-tooth flea comb is how ears, armpits, groin, and the collar line get a pass after a walk in grass or woods, before that 24–48 hour window closes. These are household check tools, not treatments. They do not prevent Lyme, they do not replace a veterinarian-recommended preventive, and they do not interpret a 4Dx result. <strong>Geographic distribution:</strong> Northeast, Upper Midwest, and Pacific Northwest — highest prevalence in these regions, but expanding range. <strong>Signs in dogs:</strong> Fever, lethargy, shifting-leg lameness (the joint pain can move from leg to leg), reduced appetite. Lyme nephritis — a serious kidney complication — occurs in a subset of affected dogs, particularly Labrador Retrievers and Golden Retrievers, causing protein-losing nephropathy that can lead to kidney failure. <strong>Testing:</strong> The 4Dx SNAP test detects Lyme antibodies as part of the annual heartworm test. A positive Lyme antibody test means the dog has been exposed — many seropositive dogs never develop clinical disease. <strong>Treatment:</strong> Veterinarians may prescribe doxycycline, typically for about 30 days; the dose must be determined by a veterinarian. <strong>Prevention:</strong> Tick prevention (isoxazoline class products most effective) + Lyme vaccination in tick-endemic regions.</p>

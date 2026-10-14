@@ -1388,3 +1388,22 @@ test('vets fix DS1: affiliate disclosure is a tiny Affiliate links link before t
     expect(info!.href, path).toBe('/disclosure')
   }
 })
+
+test('vets fix VA1: articles show a relevant shop button within 1.5 mobile screens, after the disclosure', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 })
+  for (const path of ['/health/anxiety-in-dogs', '/breeds/beagle-health', '/guides/pet-first-aid-kit', '/breeds/german-shepherd-health']) {
+    await page.goto(path, { waitUntil: 'domcontentloaded' })
+    const info = await page.evaluate(() => {
+      const box = document.querySelector('[data-top-shop]') as HTMLElement | null
+      if (!box) return null
+      const link = box.querySelector('a[href*="/go/"]') as HTMLElement | null
+      const disc = box.querySelector('[data-affiliate-disclosure]') as HTMLElement | null
+      if (!link || !disc) return { y: -1, ok: false }
+      return { y: link.getBoundingClientRect().top + window.scrollY, ok: Boolean(disc.compareDocumentPosition(link) & Node.DOCUMENT_POSITION_FOLLOWING) }
+    })
+    expect(info, path).not.toBeNull()
+    expect(info!.ok, path).toBe(true)
+    expect(info!.y, path).toBeGreaterThan(0)
+    expect(info!.y, path).toBeLessThanOrEqual(1266)
+  }
+})

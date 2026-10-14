@@ -8,10 +8,10 @@ const SOURCES = [
   { label: 'Merck Veterinary Manual: Behavioral Problems in Dogs', url: 'https://www.merckvetmanual.com/behavior/behavioral-medicine-introduction/overview-of-behavioral-medicine-in-animals', publisher: 'Merck Vet Manual' },
   { label: 'AAHA: Behavior Management Guidelines', url: 'https://www.aaha.org/aaha-guidelines/behavior-management/', publisher: 'AAHA' },
 ]
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Anxiety in Dogs', description: 'Signs and evidence-based management of separation, noise, and generalized anxiety in dogs.', url: 'https://vets.co/health/anxiety-in-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-10-12T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Anxiety in Dogs', description: 'Signs and evidence-based management of separation, noise, and generalized anxiety in dogs.', url: 'https://vets.co/health/anxiety-in-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-10-13T00:00:00Z' ,
   citation: SOURCES,
 })
-const med = buildMedicalWebPageSchema({ name: 'Anxiety in Dogs', description: 'Signs and management of canine anxiety.', url: 'https://vets.co/health/anxiety-in-dogs', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-01' })
+const med = buildMedicalWebPageSchema({ name: 'Anxiety in Dogs', description: 'Signs and management of canine anxiety.', url: 'https://vets.co/health/anxiety-in-dogs', authorName: 'Vets.co Editorial', lastReviewed: '2026-10-13' })
 const combined = combineSchemas(schema, med)
 const FAQS = [
   { question: "How do I know if my dog has separation anxiety?", answer: "Separation anxiety shows as distress that occurs specifically when the dog is left alone or separated from a particular person. Common signs include destructive behavior focused on exit points, house soiling in an otherwise house-trained dog, excessive vocalizing, pacing, drooling, or attempts to escape — all happening shortly after departure and resolving on return. A telltale feature is that the behavior is tied to being alone, not boredom or lack of training. Video recording the dog when alone often confirms the pattern and helps the veterinary team tailor a plan." },
@@ -48,12 +48,18 @@ export default function AnxietyDogsPage() {
       >
         <div className="carloOS-article">
 
-          <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-09-05T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-12" />
+          <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-10-13T00:00:00Z" reviewedBy="Editorial team" />
+          <LastUpdated date="2026-10-13" />
+          <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
+            <HopDisclosure siteId="vets-co" href="/go/amazon-brand/anxiety+vest+dog?s=health-anxiety-in-dogs" />
+            <ShopCtas amazonHref="/go/amazon-brand/anxiety+vest+dog?s=health-anxiety-in-dogs" amazonLabel="Browse anxiety vests for dogs on Amazon →" />
+            <a href="#kit" className="inline-flex min-h-[44px] items-center text-xs text-brand-text-mid underline underline-offset-2">All supplies on this page ↓</a>
+          </div>
 
           <CalloutBox variant="info" title="Anxiety is treatable, and punishment makes it worse">
             Punishing a fearful dog increases anxiety and damages trust, because the behavior is driven by fear, not defiance. Effective help comes from reducing the fear and teaching the dog that the trigger is safe. Early, compassionate intervention with professional guidance produces the best results.
           </CalloutBox>
+
 
           <h2>Understanding Canine Anxiety</h2>
           <p>Anxiety is an emotional state of fear or apprehension, and in dogs it is a recognized medical and behavioral condition. It can be triggered by specific situations — being left alone, loud noises, unfamiliar people or animals — or be more generalized. The behaviors that result, such as destruction, vocalizing, or house soiling, are expressions of distress, not disobedience. Treating anxiety as a welfare issue rather than a discipline problem is the starting point for helping a dog effectively.</p>
