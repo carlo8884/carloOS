@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import {
   buildMetadata,
   ArticleLayout,
-  StockImage,
   RelatedLinks,
   TableOfContents,
   FAQAccordion,
@@ -117,11 +116,7 @@ export default function ChocolateFerretsPage() {
         ]}
 >
         <div className="carloOS-article">
-          <StockImage
-            manifestKey="ferret-com:color-chocolate"
-            aspect="16:9"
-            variant="inline"
-          />
+          {/* VB2: the stock photo here showed a dog, not a ferret; removed until a verified ferret photo of this colour is licensed. */}
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-05-30"

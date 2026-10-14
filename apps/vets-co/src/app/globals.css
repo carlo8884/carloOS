@@ -176,3 +176,7 @@ nav.flex.gap-4.mt-8 > a {
   min-height: 24px;
   align-items: center;
 }
+
+/* VB2: the shared nav uses bg-brand-white/95, which Tailwind cannot build from a
+   CSS-variable colour, so the bar was see-through over dark sections. Solid here. */
+nav[aria-label="Main navigation"] { background-color: var(--brand-white); }
