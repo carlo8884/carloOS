@@ -19,7 +19,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-10-04T00:00:00Z',
-  modifiedAt: '2026-10-12T00:00:00Z',
+  modifiedAt: '2026-10-13T00:00:00Z',
 })
 
 const FAQS = [
@@ -50,8 +50,10 @@ export default function PaperVsGrassLitterGuidePage() {
         publishedAt: 'October 2026',
         readTime: '6 min',
       }}
-      heroHop={<PrimaryHop href="/go/amazon-brand/recycled+paper+pellet+litter+non+clumping?s=reviews-paper-vs-grass-litter-guide" label="Open the recycled paper-pellet search." />}
-      heroExtra={<HopDisclosure siteId="ferret-com" href="/go/amazon-brand/recycled+paper+pellet+litter+non+clumping?s=reviews-paper-vs-grass-litter-guide" />}
+      heroHop={<>
+        <HopDisclosure above siteId="ferret-com" href="/go/amazon-brand/recycled+paper+pellet+litter+non+clumping?s=reviews-paper-vs-grass-litter-guide" />
+        <PrimaryHop href="/go/amazon-brand/recycled+paper+pellet+litter+non+clumping?s=reviews-paper-vs-grass-litter-guide" label="Open the recycled paper-pellet search." />
+      </>}
       breadcrumbs={[
         { name: 'Home', href: '/' },
         { name: 'Reviews', href: '/reviews' },
@@ -70,7 +72,7 @@ export default function PaperVsGrassLitterGuidePage() {
       }
     >
       <div className="carloOS-article">
-          <LastUpdated date="2026-10-12" />
+          <LastUpdated date="2026-10-13" />
         <EmailCapture
           variant="inline"
           siteId="ferret-com"
@@ -151,7 +153,7 @@ export default function PaperVsGrassLitterGuidePage() {
             </tbody>
           </table>
         </div>
-        <ComparisonFoot updated="2026-10-12" />
+        <ComparisonFoot updated="2026-10-13" />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
                 <ArticleSourcesList

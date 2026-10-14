@@ -200,8 +200,8 @@ export default function FerretFoodEvaluatorPage() {
         </p>
         <FerretFoodEvaluator />
         <div className="not-prose mt-6" data-fold="offer">
+          <HopDisclosure above siteId="ferret-com" href="/go/amazon-brand/high+protein+ferret+food+kibble?s=tools-food-evaluator" />
           <PrimaryHop href="/go/amazon-brand/high+protein+ferret+food+kibble?s=tools-food-evaluator" label="Search Amazon for high-protein ferret kibble" />
-          <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/high+protein+ferret+food+kibble?s=tools-food-evaluator" />
         </div>
 
         {/* Shop note — live amazon-brand search buttons (kibble / freeze-dried treats / oil).

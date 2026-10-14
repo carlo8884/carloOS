@@ -130,8 +130,8 @@ export default function FerretInsulinomaPage() {
         siteId="ferret-com"
         contentType="health"
         heroHop={<>
+          <HopDisclosure above tone="on-dark" siteId="ferret-com" href="/go/amazon-brand/carnivore+care+critical+care+formula?s=health-insulinoma" />
           <PrimaryHop href="/go/amazon-brand/carnivore+care+critical+care+formula?s=health-insulinoma" label="Search Amazon for a carnivore-care critical-care formula" />
-          <HopDisclosure tone="on-dark" siteId="ferret-com" href="/go/amazon-brand/carnivore+care+critical+care+formula?s=health-insulinoma" />
         </>}
         hero={{
           title: 'Insulinoma in Ferrets',

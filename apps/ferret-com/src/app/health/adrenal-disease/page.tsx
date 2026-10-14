@@ -133,8 +133,8 @@ export default function FerretAdrenalDiseasePage() {
         siteId="ferret-com"
         contentType="health"
         heroHop={<>
+          <HopDisclosure above tone="on-dark" siteId="ferret-com" href="/go/amazon-brand/soft+cotton+receiving+blanket?s=health-adrenal-disease" />
           <PrimaryHop href="/go/amazon-brand/soft+cotton+receiving+blanket?s=health-adrenal-disease" label="Search Amazon for a soft cotton receiving blanket" />
-          <HopDisclosure tone="on-dark" siteId="ferret-com" href="/go/amazon-brand/soft+cotton+receiving+blanket?s=health-adrenal-disease" />
         </>}
         hero={{
           title: 'Adrenal Disease in Ferrets',
