@@ -251,15 +251,15 @@ export function HomeGuides() {
               <div className={`relative h-10 w-14 shrink-0 overflow-hidden rounded-md bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
                 <StockImage manifestKey="fish-com:category-planted" alt="Lush aquatic plants in a planted aquarium" aspect="4:3" />
               </div>
-              <h2 className="font-display font-bold text-brand-dark tracking-tight italic mb-0" style={{ fontSize: 'clamp(22px, 3vw, 36px)' }}>
-                Before you buy the tank.
+              <h2 className="font-display font-bold text-brand-dark tracking-tight italic mb-0" style={{ fontSize: 'clamp(24px, 3.5vw, 40px)' }}>
+                Size it, then stock it.
               </h2>
             </div>
             <div className="text-base text-brand-text-mid mt-3 mb-0 max-w-2xl leading-relaxed flex items-start gap-2.5">
               <div className={`relative mt-0.5 h-8 w-12 shrink-0 overflow-hidden rounded-md bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
                 <StockImage manifestKey="fish-com:category-planted" alt="" aspect="4:3" />
               </div>
-              <span>Volume, water type, beginner stock, and the gear checklist — decide those before the first fish goes in.</span>
+              <span>Volume, bioload, and the equipment that has to be in place before the first fish.</span>
             </div>
           </div>
           <Link
@@ -274,13 +274,13 @@ export function HomeGuides() {
                 <div className={`relative h-7 w-10 shrink-0 overflow-hidden rounded-md bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
                   <StockImage manifestKey="fish-com:category-planted" alt="Lush aquatic plants in a planted aquarium" aspect="4:3" subtleCredit />
                 </div>
-                <div className="font-display font-bold text-brand-dark text-sm leading-tight italic group-hover:text-brand-primary">All setup guides</div>
+                <div className="font-display font-bold text-brand-dark text-sm leading-tight italic group-hover:text-brand-primary">Setup guides</div>
               </div>
               <div className="text-xs text-brand-text-mid mt-0.5 flex items-center gap-2">
                 <div className={`relative h-6 w-9 shrink-0 overflow-hidden rounded-md bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
                   <StockImage manifestKey="fish-com:category-planted" alt="" aspect="4:3" />
                 </div>
-                <span>Size, cycling, and first equipment.</span>
+                <span>Size, cycle, then the first fish.</span>
               </div>
             </div>
           </Link>
@@ -294,7 +294,7 @@ export function HomeGuides() {
             <div className="flex items-center gap-2.5 mb-3">
               <span className="w-6 h-0.5 bg-brand-primary" />
               <Link
-                href="/water"
+                href="/setup/water-chemistry-guide"
                 className="group flex items-center gap-2.5 no-underline"
               >
                 <div className={`relative h-9 w-14 shrink-0 overflow-hidden rounded-md bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
@@ -307,19 +307,19 @@ export function HomeGuides() {
               <div className={`relative h-10 w-14 shrink-0 overflow-hidden rounded-md bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
                 <StockImage manifestKey="fish-com:water-parameters-hero" alt="Aquarium water testing tubes and reagents" aspect="4:3" />
               </div>
-              <h2 className="font-display font-bold text-brand-dark tracking-tight italic mb-0" style={{ fontSize: 'clamp(22px, 3vw, 36px)' }}>
-                The parameters that actually matter.
+              <h2 className="font-display font-bold text-brand-dark tracking-tight italic mb-0" style={{ fontSize: 'clamp(24px, 3.5vw, 40px)' }}>
+                Keep the water right.
               </h2>
             </div>
             <div className="text-base text-brand-text-mid mt-3 mb-0 max-w-2xl leading-relaxed flex items-start gap-2.5">
               <div className={`relative mt-0.5 h-8 w-12 shrink-0 overflow-hidden rounded-md bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
                 <StockImage manifestKey="fish-com:water-parameters-hero" alt="" aspect="4:3" />
               </div>
-              <span>Stable beats perfect. Ranges, cycling, emergency changes, and the nitrogen cycle are the four checks that keep fish alive.</span>
+              <span>Ranges, the cycle, and the emergency change that actually moves the needle.</span>
             </div>
           </div>
           <Link
-            href="/water"
+            href="/setup/water-chemistry-guide"
             className="group flex items-center gap-3 overflow-hidden rounded-xl border border-brand-border bg-white no-underline hover:border-brand-primary transition-all"
           >
             <div className={`relative h-16 w-24 shrink-0 overflow-hidden bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
@@ -363,15 +363,15 @@ export function HomeGuides() {
               <div className={`relative h-10 w-14 shrink-0 overflow-hidden rounded-md bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
                 <StockImage manifestKey="fish-com:category-equipment" alt="Aquarium filtration and heating equipment" aspect="4:3" />
               </div>
-              <h2 className="font-display font-bold text-brand-dark tracking-tight italic mb-0" style={{ fontSize: 'clamp(22px, 3vw, 36px)' }}>
-                Gear that earns its place.
+              <h2 className="font-display font-bold text-brand-dark tracking-tight italic mb-0" style={{ fontSize: 'clamp(24px, 3.5vw, 40px)' }}>
+                The gear that earns a place.
               </h2>
             </div>
             <div className="text-base text-brand-text-mid mt-3 mb-0 max-w-2xl leading-relaxed flex items-start gap-2.5">
               <div className={`relative mt-0.5 h-8 w-12 shrink-0 overflow-hidden rounded-md bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
                 <StockImage manifestKey="fish-com:category-equipment" alt="" aspect="4:3" />
               </div>
-              <span>Filter, heater, light, and test kit — pick by tank size and stock, not by what a listing ranks first.</span>
+              <span>Filters, heaters, lighting, and the test kit you will actually use.</span>
             </div>
           </div>
           <Link
@@ -386,13 +386,13 @@ export function HomeGuides() {
                 <div className={`relative h-7 w-10 shrink-0 overflow-hidden rounded-md bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
                   <StockImage manifestKey="fish-com:category-equipment" alt="Aquarium filtration and heating equipment" aspect="4:3" subtleCredit />
                 </div>
-                <div className="font-display font-bold text-brand-dark text-sm leading-tight italic group-hover:text-brand-primary">All equipment guides</div>
+                <div className="font-display font-bold text-brand-dark text-sm leading-tight italic group-hover:text-brand-primary">Equipment guides</div>
               </div>
               <div className="text-xs text-brand-text-mid mt-0.5 flex items-center gap-2">
                 <div className={`relative h-6 w-9 shrink-0 overflow-hidden rounded-md bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
                   <StockImage manifestKey="fish-com:category-equipment" alt="" aspect="4:3" />
                 </div>
-                <span>Filters, heaters, lighting, and kits.</span>
+                <span>What belongs in the tank, and what doesn’t.</span>
               </div>
             </div>
           </Link>
@@ -401,106 +401,74 @@ export function HomeGuides() {
       </section>
 
       <section className="bg-brand-dark px-container-sm sm:px-container py-section">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+        <div className="flex items-end justify-between mb-7 flex-wrap gap-4">
           <div>
-            <div className="flex items-end justify-between mb-4 flex-wrap gap-4">
-              <div>
-                <div className="flex items-center gap-2.5 mb-3">
-                  <span className="w-6 h-0.5 bg-brand-primary" />
-                  <Link
-                    href="/reviews"
-                    className="group flex items-center gap-2.5 no-underline"
-                  >
-                    <div className={`relative h-9 w-14 shrink-0 overflow-hidden rounded-md bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                      <StockImage manifestKey="fish-com:species-amano-shrimp" alt="An Amano shrimp on aquarium hardscape" aspect="4:3" />
-                    </div>
-                    <span className="text-2xs font-bold tracking-eyebrow uppercase text-[#3aa4cc] group-hover:text-white">Product guides</span>
-                  </Link>
-                </div>
-                <div className="flex items-center gap-2.5">
-                  <div className={`relative h-10 w-14 shrink-0 overflow-hidden rounded-md bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                    <StockImage manifestKey="fish-com:species-amano-shrimp" alt="An Amano shrimp on aquarium hardscape" aspect="4:3" />
-                  </div>
-                  <h2 className="font-display font-bold text-white tracking-tight text-3xl italic mb-0">Compared, not ranked by ad spend.</h2>
-                </div>
-              </div>
+            <div className="flex items-center gap-2.5 mb-3">
+              <span className="w-6 h-0.5 bg-brand-primary" />
               <Link
                 href="/reviews"
-                className="group flex items-center gap-3 overflow-hidden rounded-xl border border-white/15 bg-white/[0.05] no-underline hover:border-brand-primary transition-all"
+                className="group flex items-center gap-2.5 no-underline"
               >
-                <div className={`relative h-16 w-24 shrink-0 overflow-hidden bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                  <StockImage manifestKey="fish-com:species-amano-shrimp" alt="An Amano shrimp on aquarium hardscape" aspect="4:3" subtleCredit />
+                <div className={`relative h-9 w-14 shrink-0 overflow-hidden rounded-md bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
+                  <StockImage manifestKey="fish-com:category-equipment" alt="Aquarium filtration and heating equipment" aspect="4:3" />
                 </div>
-                <div className="pr-3 py-2">
-                  <div className="mb-1 flex items-center gap-2">
-                    <div className={`relative h-7 w-10 shrink-0 overflow-hidden rounded-md bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                      <StockImage manifestKey="fish-com:species-amano-shrimp" alt="An Amano shrimp on aquarium hardscape" aspect="4:3" subtleCredit />
-                    </div>
-                    <div className="font-display font-bold text-white text-sm leading-tight italic group-hover:text-[#3aa4cc]">All product guides</div>
-                  </div>
-                  <div className="text-xs text-white/55 mt-0.5 flex items-center gap-2">
-                    <div className={`relative h-6 w-9 shrink-0 overflow-hidden rounded-md bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                      <StockImage manifestKey="fish-com:species-amano-shrimp" alt="" aspect="4:3" />
-                    </div>
-                    <span>Filters, heaters, lighting, test kits.</span>
-                  </div>
-                </div>
+                <span className="text-2xs font-bold tracking-eyebrow uppercase text-[#3aa4cc] group-hover:text-white">Product guides</span>
               </Link>
             </div>
-            <div className="text-base text-white/70 leading-relaxed mb-6 max-w-xl flex items-start gap-2.5">
-              <div className={`relative mt-0.5 h-8 w-12 shrink-0 overflow-hidden rounded-md bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                <StockImage manifestKey="fish-com:species-amano-shrimp" alt="" aspect="4:3" />
+            <div className="flex items-center gap-2.5">
+              <div className={`relative h-10 w-14 shrink-0 overflow-hidden rounded-md bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
+                <StockImage manifestKey="fish-com:category-equipment" alt="Aquarium filtration and heating equipment" aspect="4:3" />
               </div>
-              <span>Heaters, filters, lighting, canister filters, water-test kits, nano tanks, and planted-tank fertilizers — each guide weighs accuracy, durability, and price.</span>
+              <h2 className="font-display font-bold text-white tracking-tight italic mb-0" style={{ fontSize: 'clamp(24px, 3.5vw, 40px)' }}>
+                Scored on the page.
+              </h2>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              {PRODUCT_CHIPS.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className="group flex gap-3 overflow-hidden rounded-xl border border-white/10 bg-white/[0.05] no-underline hover:border-brand-primary transition-all"
-                >
-                  <div className={`relative h-20 w-24 shrink-0 overflow-hidden bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                    <StockImage manifestKey={item.imageKey} alt={item.imageAlt} aspect="4:3" subtleCredit />
-                  </div>
-                  <div className="py-3 pr-3">
-                    <div className="mb-1 flex items-center gap-2.5">
-                      <div className={`relative h-8 w-12 shrink-0 overflow-hidden rounded-md bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                        <StockImage manifestKey={item.imageKey} alt={item.imageAlt} aspect="4:3" />
-                      </div>
-                      <div className="font-display font-bold text-white text-sm leading-tight italic group-hover:text-[#3aa4cc]">{item.title}</div>
-                    </div>
-                    <div className="text-xs text-white/55 mt-1 leading-relaxed flex items-start gap-2">
-                      <div className={`relative mt-0.5 h-6 w-9 shrink-0 overflow-hidden rounded-md bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                        <StockImage manifestKey={item.imageKey} alt="" aspect="4:3" />
-                      </div>
-                      <span>{item.note}</span>
-                    </div>
-                  </div>
-                </Link>
-              ))}
+            <div className="text-base text-white/60 mt-3 mb-0 max-w-2xl leading-relaxed flex items-start gap-2.5">
+              <div className={`relative mt-0.5 h-8 w-12 shrink-0 overflow-hidden rounded-md bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
+                <StockImage manifestKey="fish-com:category-equipment" alt="" aspect="4:3" />
+              </div>
+              <span>Filters, heaters, lighting, and test kits — the criteria are on the page, not in a banner.</span>
             </div>
           </div>
-          <Link href="/reviews" className={`group relative block rounded-xl overflow-hidden no-underline ring-1 ring-white/10 hover:ring-brand-primary min-h-[220px] ${FILL_IMAGE}`}>
-            <div className={`absolute inset-0 ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-              <StockImage manifestKey="fish-com:category-freshwater" alt="A well-maintained freshwater display aquarium" aspect="4:3" subtleCredit />
+          <Link
+            href="/reviews"
+            className="group flex items-center gap-3 overflow-hidden rounded-xl border border-white/10 bg-white/[0.05] no-underline hover:border-brand-primary transition-all"
+          >
+            <div className={`relative h-16 w-24 shrink-0 overflow-hidden bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
+              <StockImage manifestKey="fish-com:category-equipment" alt="Aquarium filtration and heating equipment" aspect="4:3" subtleCredit />
             </div>
-            <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
-            <div className="relative z-10 flex flex-col justify-end h-full min-h-[220px] p-5">
+            <div className="pr-3 py-2">
               <div className="mb-1 flex items-center gap-2">
                 <div className={`relative h-7 w-10 shrink-0 overflow-hidden rounded-md bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                  <StockImage manifestKey="fish-com:category-freshwater" alt="" aspect="4:3" />
+                  <StockImage manifestKey="fish-com:category-equipment" alt="Aquarium filtration and heating equipment" aspect="4:3" subtleCredit />
                 </div>
-                <div className="text-2xs font-bold tracking-eyebrow uppercase text-[#3aa4cc]">All product guides</div>
+                <div className="font-display font-bold text-white text-sm leading-tight italic group-hover:text-[#3aa4cc]">All product guides</div>
               </div>
-              <div className="flex items-center gap-2.5">
-                <div className={`relative h-8 w-12 shrink-0 overflow-hidden rounded-md bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                  <StockImage manifestKey="fish-com:category-freshwater" alt="" aspect="4:3" />
+              <div className="text-xs text-white/55 mt-0.5 flex items-center gap-2">
+                <div className={`relative h-6 w-9 shrink-0 overflow-hidden rounded-md bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
+                  <StockImage manifestKey="fish-com:category-equipment" alt="" aspect="4:3" />
                 </div>
-                <div className="font-display font-bold text-white text-lg leading-tight italic">The gear that earns a place in your tank.</div>
+                <span>Scored, not sponsored.</span>
               </div>
             </div>
           </Link>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {PRODUCT_CHIPS.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="group block overflow-hidden rounded-xl border border-white/10 bg-white/[0.05] no-underline hover:border-brand-primary transition-all"
+            >
+              <div className={`relative h-28 bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
+                <StockImage manifestKey={item.imageKey} alt={item.imageAlt} aspect="16:9" subtleCredit />
+              </div>
+              <div className="p-4">
+                <h3 className="font-display font-bold text-white text-base leading-tight italic group-hover:text-[#3aa4cc] mb-1">{item.title}</h3>
+                <p className="text-xs text-white/55 leading-relaxed">{item.note}</p>
+              </div>
+            </Link>
+          ))}
         </div>
       </section>
 
@@ -568,18 +536,8 @@ export function HomeGuides() {
                     <StockImage manifestKey={item.imageKey} alt={item.imageAlt} aspect="4:3" subtleCredit />
                   </div>
                   <div className="py-3 pr-3">
-                    <div className="mb-1 flex items-center gap-2.5">
-                      <div className={`relative h-8 w-12 shrink-0 overflow-hidden rounded-md bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                        <StockImage manifestKey={item.imageKey} alt={item.imageAlt} aspect="4:3" />
-                      </div>
-                      <div className="font-display font-bold text-brand-dark text-sm leading-tight italic group-hover:text-brand-primary">{item.title}</div>
-                    </div>
-                    <div className="text-xs text-brand-text-mid mt-1 leading-relaxed flex items-start gap-2">
-                      <div className={`relative mt-0.5 h-6 w-9 shrink-0 overflow-hidden rounded-md bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                        <StockImage manifestKey={item.imageKey} alt="" aspect="4:3" />
-                      </div>
-                      <span>{item.note}</span>
-                    </div>
+                    <div className="font-display font-bold text-brand-dark text-sm leading-tight italic group-hover:text-brand-primary mb-1">{item.title}</div>
+                    <div className="text-xs text-brand-text-mid leading-relaxed">{item.note}</div>
                   </div>
                 </Link>
               ))}
