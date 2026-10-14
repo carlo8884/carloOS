@@ -3,7 +3,7 @@
  * Delivers to the same FormSubmit inbox as /api/inquire (INQUIRE_EMAIL).
  * Does not add Mailchimp. Empty inbox → 503, never a fake success.
  */
-import { fishSubscribeDeliveryEnabled } from './capture-flags'
+import { fishSubscribeDeliveryEnabled, siteSubscribeDeliveryEnabled } from './capture-flags'
 import {
   JUNK_EMAIL_MESSAGE,
   RATE_LIMIT_MESSAGE,
@@ -87,7 +87,8 @@ export async function handleSubscribePost(
 ): Promise<{ status: number; body: { ok?: boolean; message?: string } }> {
   const env = opts.env ?? process.env
   const inbox = env.INQUIRE_EMAIL || env.NEXT_PUBLIC_INQUIRE_EMAIL
-  if ((opts.site === 'fish.com' && !fishSubscribeDeliveryEnabled(env)) || !inbox) {
+  const gated = opts.site === 'vets.co' || opts.site === 'ferret.com'
+  if ((opts.site === 'fish.com' && !fishSubscribeDeliveryEnabled(env)) || (gated && !siteSubscribeDeliveryEnabled(opts.site, env)) || !inbox) {
     return {
       status: 200,
       body: {

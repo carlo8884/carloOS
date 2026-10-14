@@ -1236,3 +1236,13 @@ test('ferret fix DP1: affiliate disclosure sits above the first shop link on art
     expect(disclosureFirst, path).toBe(true)
   }
 })
+
+test('ferret fix EM1: under-hero offer shows; email form stays hidden while the subscribe flag is off', async ({ page }) => {
+  await page.goto('/', { waitUntil: 'domcontentloaded' })
+  await expect(page.locator('a[href="/first-year-schedule"]').first()).toBeVisible()
+  if (process.env.NEXT_PUBLIC_FERRET_SUBSCRIBE_CAPTURE !== 'true') {
+    await expect(page.getByTestId('under-hero-email')).toHaveCount(0)
+  } else {
+    await expect(page.getByTestId('under-hero-email').locator('input[type="email"]')).toBeVisible()
+  }
+})
