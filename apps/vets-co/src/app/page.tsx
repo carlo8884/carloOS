@@ -48,7 +48,6 @@ import Link from 'next/link'
 import { buildMetadata, StockImage } from '@carloOS/ui'
 // Live insurance-reimbursement estimator embedded on the homepage so the
 // first screens are a tool you use, not a link to one (premium gate 3).
-import { InsuranceReimbursementEstimator } from '../components/visual/InsuranceReimbursementEstimator'
 import { SchemaScript, combineSchemas, buildOrganizationSchema, buildWebSiteSchema } from '@carloOS/ui'
 
 const homeSchema = combineSchemas(
@@ -148,27 +147,6 @@ function CategoryIconSvg({ name }: { name: CategoryIcon }) {
 }
 
 // Brand mark — a stethoscope-bell glyph, used as a hero ornament.
-function HeroMarkSvg() {
-  return (
-    <svg
-      width="40"
-      height="40"
-      viewBox="0 0 32 32"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.4"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden="true"
-    >
-      <path d="M9 4v9a5 5 0 0 0 10 0V4" />
-      <path d="M9 4h2" />
-      <path d="M17 4h2" />
-      <path d="M14 18v3a4 4 0 0 0 4 4h2" />
-      <circle cx="23" cy="22" r="2.5" />
-    </svg>
-  )
-}
 
 function IconArrowRight({ className }: { className?: string }) {
   return (
@@ -357,269 +335,41 @@ export default function VetsHomePage() {
     <>
       <SchemaScript schema={homeSchema} />
 
-      {/* ── HERO: full-bleed IMAGE-FIRST navy masthead ───────────────────
-          The hero photo (vets-co:hero — a stethoscope on warm wood, object-led,
-          NO human subjects) is integrated INTO the deep-navy masthead as a
-          full-bleed background so it is the first + dominant thing in the
-          viewport on EVERY breakpoint (~60vh mobile / ~78vh desktop). The H1,
-          tagline, and primary CTA overlay a dark gradient scrim so copy stays
-          legible over the photo. subtleCredit keeps attribution present +
-          clickable (QC §1). No staged clinical scene; no human subject. */}
-      <section className="relative overflow-hidden bg-brand-dark">
-        {/* Full-bleed hero photo — first + dominant. Inline variant with
-            FILL_IMAGE overrides so the photo fills this absolute full-height
-            wrapper. */}
-        <div
-          className={`absolute inset-0 ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto] [&_figure>div]:h-full [&_figure>div]:!rounded-none [&>div]:h-full`}
-        >
-          <StockImage
-            manifestKey="vets-co:hero"
-            alt="A stethoscope resting on warm wood — clinical reference, no human subjects"
-            aspect="16:9"
-            variant="inline"
-            priority
-            subtleCredit
-          />
-        </div>
-
-        {/* Dark gradient scrim — bottom-up so the overlaid copy stays legible. */}
-        <div
-          aria-hidden="true"
-          className="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/75 to-brand-dark/35"
-        />
-        {/* Brand wash for depth — brass top-right + teal bottom-left, matching
-            the prior masthead's environmental field. */}
-        <div
-          aria-hidden="true"
-          className="absolute inset-0 pointer-events-none opacity-90"
-          style={{
-            backgroundImage: [
-              'radial-gradient(ellipse 65% 55% at 85% 12%, rgba(182,136,48,0.20) 0%, transparent 60%)',
-              'radial-gradient(ellipse 75% 70% at 8% 95%, rgba(10,107,94,0.45) 0%, transparent 60%)',
-            ].join(','),
-          }}
-        />
-        {/* Fine vertical grain — preserved masthead texture. */}
-        <div
-          aria-hidden="true"
-          className="absolute inset-0 pointer-events-none opacity-[0.05] mix-blend-overlay"
-          style={{
-            backgroundImage:
-              'repeating-linear-gradient(90deg, rgba(255,255,255,0.4) 0px, rgba(255,255,255,0.4) 1px, transparent 1px, transparent 3px)',
-          }}
-        />
-
-        {/* Overlaid copy + primary action — pinned to the bottom of the photo */}
-        <div className="relative z-10 mx-auto max-w-container-wide flex flex-col justify-end min-h-[60vh] sm:min-h-[68vh] lg:min-h-[78vh] px-container-sm sm:px-container pt-16 pb-9 sm:pb-12">
-          <div className="max-w-3xl">
-            {/* Stethoscope mark + eyebrow */}
-            <div
-              className="flex items-center gap-3 mb-5"
-              style={{ color: 'var(--brand-accent-light)' }}
-            >
-              <HeroMarkSvg />
-              <span className="h-px w-8" style={{ background: 'var(--brand-accent)' }} aria-hidden="true" />
-              <span className="text-2xs font-bold uppercase tracking-eyebrow" style={{ color: '#1e140a' }}>
-                The Pet-Owner Reference
-              </span>
-            </div>
-
-            {/* H1 — Libre Baskerville 700 */}
-            <h1
-              className="font-display font-bold text-white tracking-tight leading-[1.05] mb-4"
-              style={{
-                fontSize: 'clamp(38px, 6vw, 74px)',
-                textShadow: '0 2px 18px rgba(0,0,0,0.45)',
-              }}
-            >
-              Find a vet. Read the guidelines.
-            </h1>
-
-            {/* Italic Baskerville tagline — magazine masthead voice */}
-            <p
-              className="font-display italic mb-6"
-              style={{
-                color: 'var(--brand-accent-light)',
-                fontSize: 'clamp(18px, 2vw, 26px)',
-                lineHeight: 1.3,
-                maxWidth: '44rem',
-                textShadow: '0 1px 12px rgba(0,0,0,0.5)',
-              }}
-            >
-              The pet-owner&apos;s reference desk for veterinary medicine.
-            </p>
-
-            {/* Positioning paragraph */}
-            <p
-              className="text-base lg:text-lg font-light text-white/85 leading-relaxed max-w-2xl mb-8"
-              style={{ textShadow: '0 1px 10px rgba(0,0,0,0.5)' }}
-            >
-              We translate professional guidance — AVMA position statements, AAHA
-              guidelines, ACVIM consensus papers — into plain English for the
-              person making the decision at the kitchen table. A directory by
-              specialty, condition references for every common emergency, breed
-              risk profiles, and pet insurance compared on payout behavior.
-              Citations on every claim. No paid placements. No fake bylines.
-            </p>
-
-            {/* Primary + secondary CTAs */}
-            <div className="flex flex-wrap items-center gap-3">
-              <Link
-                href="/find-a-vet"
-                className="inline-flex items-center gap-2 font-semibold text-sm px-7 py-3.5 rounded no-underline transition-colors duration-200 hover:opacity-90 shadow-[0_6px_24px_rgba(10,107,94,0.4)]"
-                style={{
-                  background: 'var(--brand-primary)',
-                  color: '#FFFFFF',
-                }}
-              >
-                Find a vet near you
-                <IconArrowRight />
-              </Link>
-              <Link
-                href="/health/emergency-signs"
-                className="group inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/25 text-white font-semibold text-sm px-6 py-3.5 rounded no-underline hover:bg-white/20 hover:border-white/40 transition-colors duration-200"
-              >
-                Get the emergency triage card
-                <IconArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5" />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── DARK TRUST BAR ──────────────────────────────────────────── */}
-      <div
-        className="px-container-sm sm:px-container py-5"
-        style={{
-          background: 'var(--brand-primary-dark)',
-          borderTop: '1px solid rgba(255,255,255,0.06)',
-          borderBottom: '1px solid rgba(255,255,255,0.06)',
-        }}
-      >
-        <div className="mx-auto max-w-container-wide flex flex-wrap items-center justify-center sm:justify-between gap-x-8 gap-y-3">
-          {TRUST_CLAIMS.map((item, i, arr) => (
-            <span
-              key={item}
-              className="flex items-center text-2xs font-semibold uppercase tracking-eyebrow whitespace-nowrap"
-              style={{ color: 'rgba(255,255,255,0.85)' }}
-            >
-              <span
-                aria-hidden="true"
-                className="mr-2.5"
-                style={{ color: '#e6b85e' }}
-              >
-                ✓
-              </span>
-              {item}
-              {i < arr.length - 1 && (
-                <span
-                  aria-hidden="true"
-                  className="hidden sm:inline mx-2 h-3 w-px"
-                  style={{ background: 'rgba(255,255,255,0.18)' }}
-                />
-              )}
-            </span>
-          ))}
-        </div>
-      </div>
-
-      {/* ── REFERENCE-DESK ENTRY POINTS — image-backed tiles (REAL keys) ──
-          Three image-led entry points using real synced photography
-          (architecture / object / animal — no staged clinical scenes). Each
-          tile carries a bottom-up scrim so the white label stays legible over
-          the photo, plus subtleCredit for attribution (QC §1). */}
-      <section
-        className="px-container-sm sm:px-container py-section"
-        style={{ background: 'var(--brand-white)' }}
-      >
+      {/* ── HERO: compact (redesign phase 3) ── H1, one line, search, two actions. ≤320px desktop. */}
+      <section className="bg-brand-dark px-container-sm sm:px-container py-6 sm:py-10" data-testid="home-hero">
         <div className="mx-auto max-w-container-wide">
-          <div className="flex items-center gap-3 mb-7">
-            <span aria-hidden="true" className="h-px w-8" style={{ background: 'var(--brand-accent)' }} />
-            <span className="text-2xs font-bold uppercase tracking-eyebrow" style={{ color: 'var(--brand-primary)' }}>
-              Where are you starting?
-            </span>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            {IMAGE_DESKS.map((desk) => (
-              <Link
-                key={desk.href}
-                href={desk.href}
-                className={`group relative block rounded-md overflow-hidden no-underline ring-1 ring-brand-border hover:ring-brand-primary hover:shadow-card-hover transition-all duration-300 ease-carloOS ${FILL_IMAGE} [&_figure>div]:!rounded-none [&>div]:h-full [&_figure]:h-full`}
-              >
-                {/* Real photo fills the tile */}
-                <div className={`absolute inset-0 ${FILL_IMAGE} [&_figure>div]:!rounded-none [&>div]:h-full [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                  <StockImage
-                    manifestKey={desk.manifestKey}
-                    alt={desk.imageAlt}
-                    aspect="3:4"
-                    variant="inline"
-                    subtleCredit
-                  />
-                </div>
-                {/* Bottom-up scrim keeps the label legible over the photo */}
-                <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-brand-dark/35 to-transparent" />
-                {/* Label */}
-                <div className="relative z-10 flex flex-col justify-end min-h-[230px] sm:min-h-[260px] p-5">
-                  <div
-                    className="text-2xs font-bold tracking-eyebrow uppercase mb-1.5"
-                    style={
-                      desk.eyebrow === 'Read the guidelines'
-                        ? LABEL_PLATE
-                        : { color: desk.eyebrow === 'Know the breed' ? 'var(--brand-accent-light)' : '#ffffff' }
-                    }
-                  >
-                    {desk.eyebrow}
-                  </div>
-                  <h2
-                    className="font-display font-bold text-white text-xl sm:text-2xl leading-tight mb-1.5"
-                    style={desk.title === 'Health Library' ? LABEL_PLATE : undefined}
-                  >
-                    {desk.title}
-                  </h2>
-                  <p
-                    className="text-xs sm:text-sm leading-relaxed mb-3 text-white/75"
-                    style={desk.desc.startsWith('Screening tests') ? LABEL_PLATE : undefined}
-                  >
-                    {desk.desc}
-                  </p>
-                  <span className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-eyebrow text-white group-hover:gap-2.5 transition-all">
-                    {desk.cta}
-                    <IconArrowRight className="w-3.5 h-3.5" />
-                  </span>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── LIVE TOOL — insurance reimbursement estimator (premium gate 3) ── */}
-      <section className="px-container-sm sm:px-container py-section" style={{ background: 'var(--brand-surface)' }}>
-        <div className="mx-auto max-w-container-wide">
-          <div className="flex items-center gap-2.5 mb-3">
-            <span className="w-6 h-0.5 bg-brand-primary" />
-            <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">
-              Try it · Insurance reimbursement estimator
-            </span>
-          </div>
-          <h2 className="font-display font-bold text-brand-dark tracking-tight mb-3" style={{ fontSize: 'clamp(24px, 3vw, 40px)' }}>
-            What would pet insurance actually pay back?
-          </h2>
-          <p className="text-sm text-brand-text-mid mb-7 max-w-2xl leading-relaxed">
-            Enter a bill, deductible, and reimbursement rate to see your real out-of-pocket cost —
-            the NAIC/NAPHIA math, before you compare plans.
+          <h1 className="font-display font-bold text-white tracking-tight leading-tight mb-2" style={{ fontSize: 'clamp(26px, 4vw, 44px)' }}>
+            Find a vet. Read the guidelines.
+          </h1>
+          <p className="text-white/80 text-sm sm:text-base mb-4 sm:mb-5 max-w-2xl">
+            Plain-English veterinary guidance with citations on every claim. No paid placements.
           </p>
-          <InsuranceReimbursementEstimator />
+          <form action="/search" method="get" role="search" className="flex gap-2 max-w-xl mb-4">
+            <label htmlFor="home-search" className="sr-only">Search Vets.co</label>
+            <input id="home-search" name="q" type="search" placeholder="Search a symptom, medication or breed" className="flex-1 min-w-0 rounded-md px-4 py-3 text-sm text-brand-dark bg-white border-0" />
+            <button type="submit" className="rounded-md px-5 py-3 text-sm font-bold text-white" style={{ background: 'var(--brand-primary)' }}>Search</button>
+          </form>
+          <div className="flex flex-wrap gap-2 [&>a]:min-h-[44px] [&>a]:px-3 sm:[&>a]:px-4">
+            <Link href="/emergency-triage-card" className="inline-flex items-center rounded-md px-4 py-2.5 text-sm font-semibold no-underline text-white" style={{ background: 'var(--brand-primary)' }}>
+              <span className="sm:hidden">Triage card</span><span className="hidden sm:inline">Emergency triage card</span>
+            </Link>
+            <Link href="/find-a-vet" className="inline-flex items-center rounded-md px-4 py-2.5 text-sm font-semibold no-underline text-white border border-white/30 hover:bg-white/10">
+              <span className="sm:hidden">Find a vet</span><span className="hidden sm:inline">Find a vet near you</span>
+            </Link>
+            <Link href="/reviews/best-pet-insurance" className="inline-flex items-center rounded-md px-4 py-2.5 text-sm font-semibold no-underline text-white border border-white/30 hover:bg-white/10">
+              <span className="sm:hidden">Pet insurance</span><span className="hidden sm:inline">Compare pet insurance</span>
+            </Link>
+          </div>
         </div>
       </section>
 
       {/* ── CATEGORY GRID (6 cards, SVG icons preserved) ────────────── */}
       <section
-        className="px-container-sm sm:px-container py-section"
+        className="px-container-sm sm:px-container py-8 sm:py-section"
         style={{ background: 'var(--brand-white)' }}
       >
         <div className="mx-auto max-w-container-wide">
-          <div className="flex items-baseline justify-between gap-6 flex-wrap mb-10">
+          <div className="flex items-baseline justify-between gap-6 flex-wrap mb-5 sm:mb-10">
             <div>
               <div className="flex items-center gap-3 mb-3">
                 <span
@@ -639,7 +389,7 @@ export default function VetsHomePage() {
               </h2>
             </div>
             <p
-              className="text-sm max-w-md"
+              className="hidden sm:block text-sm max-w-md"
               style={{ color: 'var(--brand-text-light)' }}
             >
               Every section reads the same whether you arrived from a panic
@@ -647,37 +397,37 @@ export default function VetsHomePage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-5">
             {CATEGORIES.map((cat) => (
               <Link
                 key={cat.href}
                 href={cat.href}
-                className="group block p-7 rounded-md no-underline transition-all duration-300 ease-carloOS hover:-translate-y-1 hover:shadow-card-hover"
+                className="group block p-4 sm:p-7 rounded-md no-underline transition-all duration-300 ease-carloOS hover:-translate-y-1 hover:shadow-card-hover"
                 style={{
                   background: 'var(--brand-white)',
                   border: '1px solid var(--brand-border)',
                 }}
               >
                 <div
-                  className="mb-5"
+                  className="mb-2 sm:mb-5"
                   style={{ color: 'var(--brand-primary)' }}
                 >
                   <CategoryIconSvg name={cat.icon} />
                 </div>
                 <h3
-                  className="font-display font-bold text-xl leading-snug mb-2"
+                  className="font-display font-bold text-base sm:text-xl leading-snug mb-0 sm:mb-2"
                   style={{ color: 'var(--brand-text-dark)' }}
                 >
                   {cat.title}
                 </h3>
                 <p
-                  className="text-sm leading-relaxed mb-4"
+                  className="hidden sm:block text-sm leading-relaxed mb-4"
                   style={{ color: 'var(--brand-text-mid)' }}
                 >
                   {cat.desc}
                 </p>
                 <span
-                  className="inline-flex items-center text-xs font-semibold uppercase tracking-eyebrow"
+                  className="hidden sm:inline-flex items-center text-xs font-semibold uppercase tracking-eyebrow"
                   style={{ color: 'var(--brand-primary)' }}
                 >
                   Open
@@ -976,93 +726,6 @@ export default function VetsHomePage() {
         </div>
       </section>
 
-      {/* ── WHY VETS.CO — positioning band ──────────────────────────── */}
-      <section
-        className="px-container-sm sm:px-container py-section relative overflow-hidden"
-        style={{ background: 'var(--brand-primary)' }}
-      >
-        <div
-          aria-hidden="true"
-          className="absolute inset-0 pointer-events-none"
-          style={{
-            backgroundImage:
-              'radial-gradient(ellipse 55% 60% at 82% 18%, rgba(182,136,48,0.20) 0%, transparent 60%)',
-          }}
-        />
-        <div className="relative z-10 mx-auto max-w-container-wide grid lg:grid-cols-[1fr_1.4fr] gap-10 lg:gap-16 items-start">
-          <div>
-            <div className="flex items-center gap-3 mb-4">
-              <span
-                aria-hidden="true"
-                className="h-px w-8"
-                style={{ background: 'var(--brand-accent-light)' }}
-              />
-              <span
-                className="text-2xs font-bold uppercase tracking-eyebrow"
-                style={{ color: '#f6dba0' }}
-              >
-                Why Vets.co
-              </span>
-            </div>
-            <h2
-              className="font-display font-bold tracking-tight text-3xl sm:text-4xl text-white"
-              style={{ lineHeight: 1.14 }}
-            >
-              We translate professional guidance
-              <br />
-              <em
-                className="font-display italic"
-                style={{ color: '#f6dba0' }}
-              >
-                for the people who own the animal.
-              </em>
-            </h2>
-          </div>
-
-          <div className="text-white/85 leading-relaxed space-y-5">
-            <p className="text-base lg:text-lg">
-              We are not a hospital. We are not a directory of paid listings.
-              We are not a referral service. We are an editorial reference desk
-              that reads the AVMA position statements, the AAHA preventive-care
-              guidelines, and the ACVIM consensus papers — then rewrites them
-              for the owner who needs an answer tonight.
-            </p>
-            <p className="text-base lg:text-lg">
-              Where AAHA and AVMA write for the profession, we write for the
-              kitchen table. Where commercial pet-health sites optimize for
-              affiliate revenue, we evaluate insurance on payout speed and
-              exclusion language — the metrics that decide whether the policy
-              pays the bill. Every clinical claim cites a primary source.
-            </p>
-
-            <ul className="grid sm:grid-cols-2 gap-x-8 gap-y-3 pt-4">
-              {[
-                'Citation-anchored content',
-                'AAHA-aligned guidance',
-                'No paid placements in editorial',
-                'Affiliate disclosure on every commercial link',
-                'No fabricated bylines',
-                'No fabricated credential stamps',
-              ].map((claim) => (
-                <li
-                  key={claim}
-                  className="flex items-start text-sm text-white/85"
-                >
-                  <span
-                    aria-hidden="true"
-                    className="mr-3 mt-0.5 inline-block flex-shrink-0"
-                    style={{ color: '#f6dba0' }}
-                  >
-                    ✓
-                  </span>
-                  {claim}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </section>
-
       {/* ── FEATURED GUIDES (cornerstones) ──────────────────────────── */}
       <section
         className="px-container-sm sm:px-container py-section"
@@ -1167,6 +830,130 @@ export default function VetsHomePage() {
           </div>
         </div>
       </section>
+
+      {/* ── WHY VETS.CO — positioning band ──────────────────────────── */}
+      <section
+        className="px-container-sm sm:px-container py-section relative overflow-hidden"
+        style={{ background: 'var(--brand-primary)' }}
+      >
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            backgroundImage:
+              'radial-gradient(ellipse 55% 60% at 82% 18%, rgba(182,136,48,0.20) 0%, transparent 60%)',
+          }}
+        />
+        <div className="relative z-10 mx-auto max-w-container-wide grid lg:grid-cols-[1fr_1.4fr] gap-10 lg:gap-16 items-start">
+          <div>
+            <div className="flex items-center gap-3 mb-4">
+              <span
+                aria-hidden="true"
+                className="h-px w-8"
+                style={{ background: 'var(--brand-accent-light)' }}
+              />
+              <span
+                className="text-2xs font-bold uppercase tracking-eyebrow"
+                style={{ color: '#f6dba0' }}
+              >
+                Why Vets.co
+              </span>
+            </div>
+            <h2
+              className="font-display font-bold tracking-tight text-3xl sm:text-4xl text-white"
+              style={{ lineHeight: 1.14 }}
+            >
+              We translate professional guidance
+              <br />
+              <em
+                className="font-display italic"
+                style={{ color: '#f6dba0' }}
+              >
+                for the people who own the animal.
+              </em>
+            </h2>
+          </div>
+
+          <div className="text-white/85 leading-relaxed space-y-5">
+            <p className="text-base lg:text-lg">
+              We are not a hospital. We are not a directory of paid listings.
+              We are not a referral service. We are an editorial reference desk
+              that reads the AVMA position statements, the AAHA preventive-care
+              guidelines, and the ACVIM consensus papers — then rewrites them
+              for the owner who needs an answer tonight.
+            </p>
+            <p className="text-base lg:text-lg">
+              Where AAHA and AVMA write for the profession, we write for the
+              kitchen table. Where commercial pet-health sites optimize for
+              affiliate revenue, we evaluate insurance on payout speed and
+              exclusion language — the metrics that decide whether the policy
+              pays the bill. Every clinical claim cites a primary source.
+            </p>
+
+            <ul className="grid sm:grid-cols-2 gap-x-8 gap-y-3 pt-4">
+              {[
+                'Citation-anchored content',
+                'AAHA-aligned guidance',
+                'No paid placements in editorial',
+                'Affiliate disclosure on every commercial link',
+                'No fabricated bylines',
+                'No fabricated credential stamps',
+              ].map((claim) => (
+                <li
+                  key={claim}
+                  className="flex items-start text-sm text-white/85"
+                >
+                  <span
+                    aria-hidden="true"
+                    className="mr-3 mt-0.5 inline-block flex-shrink-0"
+                    style={{ color: '#f6dba0' }}
+                  >
+                    ✓
+                  </span>
+                  {claim}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* ── DARK TRUST BAR ──────────────────────────────────────────── */}
+      <div
+        className="px-container-sm sm:px-container py-5"
+        style={{
+          background: 'var(--brand-primary-dark)',
+          borderTop: '1px solid rgba(255,255,255,0.06)',
+          borderBottom: '1px solid rgba(255,255,255,0.06)',
+        }}
+      >
+        <div className="mx-auto max-w-container-wide flex flex-wrap items-center justify-center sm:justify-between gap-x-8 gap-y-3">
+          {TRUST_CLAIMS.map((item, i, arr) => (
+            <span
+              key={item}
+              className="flex items-center text-2xs font-semibold uppercase tracking-eyebrow whitespace-nowrap"
+              style={{ color: 'rgba(255,255,255,0.85)' }}
+            >
+              <span
+                aria-hidden="true"
+                className="mr-2.5"
+                style={{ color: '#e6b85e' }}
+              >
+                ✓
+              </span>
+              {item}
+              {i < arr.length - 1 && (
+                <span
+                  aria-hidden="true"
+                  className="hidden sm:inline mx-2 h-3 w-px"
+                  style={{ background: 'rgba(255,255,255,0.18)' }}
+                />
+              )}
+            </span>
+          ))}
+        </div>
+      </div>
+
 
       {/* Email capture lives under the hero via layout EmailUnderHero. Single capture. */}
 

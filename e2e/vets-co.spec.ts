@@ -495,7 +495,7 @@ test('vets fix L1: sitemap lists every symptom, diagnostic, specialist, medicati
 test('vets fix L3: listed text meets WCAG AA contrast', async ({ page }) => {
   const checks: Array<[string, string]> = [
     ['/', 'p.text-sm.leading-relaxed.mb-5'],
-    ['/', '[class*="bg-emerald-50"] p, [class*="bg-amber-50"] p'],
+    ['/', '[data-testid="home-hero"] p'], // estimator embed removed from home in HR1
     ['/symptoms', 'span[class*="946A1A"]'],
     ['/symptoms', 'p.text-sm.text-brand-text-mid.leading-relaxed'],
     ['/emergency-triage-card', '[data-email-capture="section"] > p'],
@@ -1405,5 +1405,26 @@ test('vets fix VA1: articles show a relevant shop button within 1.5 mobile scree
     expect(info!.ok, path).toBe(true)
     expect(info!.y, path).toBeGreaterThan(0)
     expect(info!.y, path).toBeLessThanOrEqual(1266)
+  }
+})
+
+test('vets fix HR1: compact home hero, slim header, no embedded calculators', async ({ page }) => {
+  for (const [w, h, navMax, heroMax] of [[1280, 800, 64, 320], [390, 844, 56, 400]] as const) {
+    await page.setViewportSize({ width: w, height: h })
+    await page.goto('/', { waitUntil: 'domcontentloaded' })
+    const m = await page.evaluate(() => {
+      const nav = document.querySelector('nav, header') as HTMLElement
+      const hero = document.querySelector('[data-testid="home-hero"]') as HTMLElement
+      return {
+        nav: nav.getBoundingClientRect().height,
+        hero: hero ? hero.getBoundingClientRect().height : 9999,
+        search: Boolean(hero?.querySelector('form[action="/search"] input[name="q"]')),
+        calcs: document.querySelectorAll('main form input[type="number"], main input[type="range"]').length,
+      }
+    })
+    expect(m.nav, `nav ${w}`).toBeLessThanOrEqual(navMax)
+    expect(m.hero, `hero ${w}`).toBeLessThanOrEqual(heroMax)
+    expect(m.search).toBe(true)
+    expect(m.calcs).toBe(0)
   }
 })
