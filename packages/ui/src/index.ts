@@ -151,7 +151,7 @@ export { LastUpdated } from './components/LastReviewed'
 export type { LastUpdatedProps } from './components/LastReviewed'
 export { EditorialStandardsSignal } from './components/EditorialStandardsSignal'
 export type { EditorialStandardsSignalProps } from './components/EditorialStandardsSignal'
-export { AffiliateDisclosure } from './components/AffiliateDisclosure'
+export { AffiliateDisclosure, QuietDisclosureLine } from './components/AffiliateDisclosure'
 export type {
   AffiliateDisclosureProps,
   AffiliateDisclosureVariant,

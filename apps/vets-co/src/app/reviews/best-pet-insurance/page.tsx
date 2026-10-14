@@ -23,7 +23,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Vets.co Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
-  modifiedAt: '2026-10-12T00:00:00Z',
+  modifiedAt: '2026-10-13T00:00:00Z',
 })
 
 const breadcrumbSchema = buildBreadcrumbSchema({
@@ -72,8 +72,7 @@ export default function VetsPetInsurancePage() {
         <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">Trupanion is the top pet insurance pick because it offers direct vet payment at checkout; check terms.</p>
         <PriceAsOf date="2026-10-09" tone="dark" />
         <div data-fold="offer">
-          <PrimaryHop href='/go/trupanion/home?s=reviews-best-pet-insurance' label='Get a Trupanion quote →' holdWithoutPartnerId />
-        <HopDisclosure tone="on-dark"
+          <HopDisclosure tone="on-dark"
           siteId="vets-co"
           noteClassName="mt-3 mb-0 text-xs leading-relaxed text-white/80"
           href={[
@@ -82,6 +81,7 @@ export default function VetsPetInsurancePage() {
             '/go/embrace/home?s=reviews-best-pet-insurance',
           ]}
         />
+        <PrimaryHop href='/go/trupanion/home?s=reviews-best-pet-insurance' label='Get a Trupanion quote →' holdWithoutPartnerId />
         </div>
         <EmailCapture
           variant="inline"
@@ -120,7 +120,7 @@ export default function VetsPetInsurancePage() {
         <div className="grid lg:grid-cols-[1fr_270px] gap-12 min-w-0">
           <div className="min-w-0">
             <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-10-07T00:00:00Z" reviewedBy="Editorial team" />
-          <LastUpdated date="2026-10-12" />
+          <LastUpdated date="2026-10-13" />
 
 
             <PullQuote variant="lead" quote="Enroll before your first vet visit. Every condition noted in records before enrollment may be permanently excluded as pre-existing." attribution="The single most important point on pet insurance" />
@@ -228,7 +228,7 @@ export default function VetsPetInsurancePage() {
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-12" />
+              <ComparisonFoot updated="2026-10-13" />
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Questions this comparison answers</h2>
               <FAQAccordion items={[
                 {
