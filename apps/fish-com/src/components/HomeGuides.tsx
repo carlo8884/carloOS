@@ -1,1 +1,1 @@
-PLACEHOLDER
+$(cat /tmp/HomeGuides_new.tsx)
