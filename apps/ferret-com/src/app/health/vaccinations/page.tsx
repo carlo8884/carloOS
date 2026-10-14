@@ -74,7 +74,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-05-29T00:00:00Z',
-  modifiedAt: '2026-10-13T00:00:00Z',
+  modifiedAt: '2026-10-14T00:00:00Z',
   speakable: true,
 
   citation: SOURCES,
@@ -86,7 +86,7 @@ const medSchema = buildMedicalWebPageSchema({
     'Clinical reference for ferret canine-distemper and rabies vaccination, including kit timing, annual boosters, and adverse-reaction management.',
   url: 'https://ferret.com/health/vaccinations',
   authorName: 'Ferret.com Editorial',
-  lastReviewed: '2026-10-13',
+  lastReviewed: '2026-10-14',
 })
 
 
@@ -193,13 +193,18 @@ export default function FerretVaccinationsPage() {
             variant="inline"
             subtleCredit
           />
+          <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
+            <HopDisclosure siteId="ferret-com" above href="/go/amazon-brand/small+animal+rabies+certificate+holder?s=health-vaccinations" />
+            <ShopCtas amazonHref="/go/amazon-brand/small+animal+rabies+certificate+holder?s=health-vaccinations" amazonLabel="Browse small-animal rabies-certificate holders on Amazon →" />
+            <a href="#kit" className="inline-flex min-h-[44px] items-center text-xs text-brand-text-mid underline underline-offset-2">All supplies on this page ↓</a>
+          </div>
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-05-29"
-            updatedAt="2026-10-13"
+            updatedAt="2026-10-14"
             reviewedBy="Editorial team"
           />
-          <LastUpdated date="2026-10-13" />
+          <LastUpdated date="2026-10-14" />
           <div className="rounded-lg border-l-4 border-brand-primary bg-brand-white p-5 my-6" data-testid="short-answer">
             <h2 className="font-display text-lg font-bold mb-2">The short answer</h2>
             <p className="text-base leading-relaxed text-brand-text-mid m-0">

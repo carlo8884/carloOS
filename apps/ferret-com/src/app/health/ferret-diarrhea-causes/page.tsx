@@ -73,7 +73,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-01T00:00:00Z',
-  modifiedAt: '2026-10-13T00:00:00Z',
+  modifiedAt: '2026-10-14T00:00:00Z',
   speakable: true,
 
   citation: SOURCES,
@@ -85,7 +85,7 @@ const medSchema = buildMedicalWebPageSchema({
     "Clinical reference on the causes of diarrhea in domestic ferrets, stool-appearance interpretation, dehydration risk, and indications for urgent veterinary evaluation.",
   url: 'https://ferret.com/health/ferret-diarrhea-causes',
   authorName: 'Ferret.com Editorial',
-  lastReviewed: '2026-10-13',
+  lastReviewed: '2026-10-14',
 })
 
 const FAQS = [
@@ -180,12 +180,16 @@ export default function FerretDiarrheaCausesPage() {
         ]}
 >
         <div className="carloOS-article">
+          <div data-top-shop className="not-prose my-5 rounded-xl border border-brand-border bg-brand-surface px-4 py-3">
+            <HopDisclosure siteId="ferret-com" above href="/go/amazon-brand/ferret+oral+electrolyte+solution?s=ferret-diarrhea-causes" />
+            <ShopCtas amazonHref="/go/amazon-brand/ferret+oral+electrolyte+solution?s=ferret-diarrhea-causes" amazonLabel="Browse ferret oral electrolyte solution on Amazon →" />
+          </div>
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-01"
-            updatedAt="2026-10-13"
+            updatedAt="2026-10-14"
           />
-          <LastUpdated date="2026-10-13" />
+          <LastUpdated date="2026-10-14" />
           <div className="rounded-lg border-l-4 border-brand-primary bg-brand-white p-5 my-6" data-testid="short-answer">
             <h2 className="font-display text-lg font-bold mb-2">The short answer</h2>
             <p className="text-base leading-relaxed text-brand-text-mid m-0">
