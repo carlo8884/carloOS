@@ -114,7 +114,7 @@ export default function WhenToGoPage() {
               folding+four+wheel+dog+stroller,
               emergency-signs muzzle / underpads /
               flashlight, vomiting memo-pad,
-              vaccinations 72-hour timer.
+              vaccinations countdown timer.
               Digital pet thermometers and
               prescriptions are not shoppable buttons
               on this guide. */}
