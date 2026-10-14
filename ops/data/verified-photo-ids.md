@@ -17,31 +17,18 @@ Visual Bot cannot reach the Unsplash API from sandbox per Carlo policy 2026-05-3
 
 ## Catalog
 
+> 2026-10-14: pruned the 22 IDs that no code under `apps/*/src` references any more (`node scripts/audit-photo-ids.mjs --check` reported them as stale). Pages now get photos through `packages/ui/src/data/image-manifest.json`, which this audit does not scan.
+
 ### Dog photos (8)
 
 | ID | Subject | Used in |
 |----|---------|---------|
-| `1587300003388-59208cc962cb` | A dog (puppy on bed) | Dog.com og:image, `dog-com:hero` manifest |
 | `1552053831-71594a27632d` | Golden Retriever portrait | Dog.com `/breeds/golden-retriever`, Vets.co OG, `dog-com:category-breeds` manifest |
-| `1579213838058-2aeeda8d6e2d` | Labrador Retriever | Dog.com `/breeds/labrador-retriever` |
-| `1583511655857-d19b40a7a54e` | French Bulldog | Dog.com `/breeds/french-bulldog` |
-| `1589941013453-ec89f33b5e95` | German Shepherd | Dog.com `/breeds/german-shepherd`, `/compare/[slug]` |
-| `1505628346881-b72b27e84530` | Beagle | Dog.com `/breeds/beagle`, `/compare/[slug]` |
-| `1616149955247-48c60b1d4413` | Poodle | Dog.com `/breeds/poodle`, `/compare/[slug]` |
-| `1576201836106-db1758fd1c97` | Veterinarian examining a Golden Retriever | Dog.com `/health/golden-retriever-health` |
 
 ### Fish photos (8)
 
 | ID | Subject | Used in |
 |----|---------|---------|
-| `1535591273668-578e31182c4f` | Betta fish in a planted aquarium | Fish.com og:image, `/species/betta-fish`, `/species/clownfish` (reused), `fish-com:hero` + `fish-com:cornerstone-species-betta` manifest |
-| `1522069213448-443a614da9b6` | School of neon tetras | Fish.com `/species/neon-tetra`, `fish-com:category-freshwater` manifest |
-| `1520637836862-4d197d17c55a` | Corydoras catfish on aquarium sand | Fish.com `/species/corydoras` |
-| `1522926193341-e9ffd686c60f` | Goldfish swimming | Fish.com `/species/goldfish` |
-| `1583377993497-f2f1b2b13c54` | Betta Fish (*Betta splendens*) | Fish.com `/species` index |
-| `1520302630591-fd1cb63aa58e` | Neon Tetra (*Paracheirodon innesi*) — reused for Guppy | Fish.com `/species` index |
-| `1524704654690-b56af7d6b9f1` | Goldfish (*Carassius auratus*) | Fish.com `/species` index |
-| `1571752726703-5e7d1f6a986d` | Angelfish (*Pterophyllum scalare*) — reused for Oscar | Fish.com `/species` index |
 | `1544552866-d3ed42536cfd` | Discus (*Symphysodon spp.*) | Fish.com `/species` index |
 
 ### Horse / equestrian photos (3)
@@ -49,19 +36,12 @@ Visual Bot cannot reach the Unsplash API from sandbox per Carlo policy 2026-05-3
 | ID | Subject | Used in |
 |----|---------|---------|
 | `1553284965-83fd3e82fa5a` | Dressage horse in tack at the canter | Horses.com hero inline `<Image>`, Saddle.com hero inline, `horses-com:hero` + `saddle-com:hero` manifest |
-| `1474546652694-a33dd8161d66` | Show jumper mid-flight over a fence | Horses.com `/supplements/joint-supplements`, Saddle.com, `horses-com:category-disciplines` + `saddle-com:category-jumping` manifest |
-| `1469820838967-83c1450cf56a` | Horse and rider in an all-purpose schooling session | Horses.com `/breeds/quarter-horse`, Saddle.com, `horses-com:category-care` + `saddle-com:cornerstone-fit` manifest |
 
 ### Reptile photos (6)
 
 | ID | Subject | Used in |
 |----|---------|---------|
 | `1548155810-af5c30a49059` | Reptile macro (used as Lizard.com hero) | Lizard.com homepage hero inline `<Image>`, `/species` (Crested Gecko card), `lizard-com:hero` manifest |
-| `1597484661643-2f5fef640dd1` | Leopard gecko (*Eublepharis macularius*) in profile | Lizard.com `/species/leopard-gecko`, `lizard-com:species-leopard-gecko` manifest |
-| `1585110396000-c9ffd4e4b308` | Bearded dragon (*Pogona vitticeps*) basking | Lizard.com `/health/sick-reptile-signs`, `lizard-com:species-bearded-dragon` manifest |
-| `1531386151447-fd76ad50012f` | Ball Python (*Python regius*) | Lizard.com `/species` index |
-| `1567612529009-afe25813a308` | Corn Snake (*Pantherophis guttatus*) | Lizard.com `/species` index |
-| `1583795484071-3c453e3a7c71` | Blue-Tongue Skink (*Tiliqua spp.*) | Lizard.com `/species` index |
 
 ## Sites with ZERO verified production IDs
 
