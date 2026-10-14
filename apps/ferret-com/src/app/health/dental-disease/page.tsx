@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import {
+import { ChecklistCard,
   buildMetadata,
   ArticleLayout,
   StockImage,
@@ -227,6 +227,17 @@ export default function FerretDentalDiseasePage() {
             periodontitis to tooth loss, and root abscesses can become
             systemic infections in older ferrets.
            <a href="/diet/best-ferret-kibble">The ferret kibble guide</a> compares the kibble this tartar pattern comes from.</p>
+
+          <ChecklistCard
+            title="Ferret dental care checklist"
+            items={[
+              'A vet exam of the teeth and gums every year',
+              'Brush with a pet toothpaste, never a fluoride human toothpaste',
+              'Feed dry ferret food to help limit plaque',
+              'Expect general anesthesia for a professional cleaning',
+            ]}
+            source={{ label: 'Merck Veterinary Manual: Routine Health Care for Ferrets', url: 'https://www.merckvetmanual.com/all-other-pets/ferrets/routine-health-care-for-ferrets' }}
+          />
 
           <h2 id="why-ferrets">Why Ferrets in Particular</h2>
           <p>

@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import {
+import { FactCard,
   buildMetadata,
   ArticleLayout,
   StockImage,
@@ -73,7 +73,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-05-28T00:00:00Z',
-  modifiedAt: '2026-10-13T00:00:00Z',
+  modifiedAt: '2026-10-14T00:00:00Z',
   speakable: true,
 
   citation: SOURCES,
@@ -219,9 +219,9 @@ export default function FerretAdrenalDiseasePage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-05-28"
-            updatedAt="2026-10-13"
+            updatedAt="2026-10-14"
           />
-          <LastUpdated date="2026-10-13" />
+          <LastUpdated date="2026-10-14" />
           <div className="rounded-lg border-l-4 border-brand-primary bg-brand-white p-5 my-6" data-testid="short-answer">
             <h2 className="font-display text-lg font-bold mb-2">The short answer</h2>
             <p className="text-base leading-relaxed text-brand-text-mid m-0">
@@ -249,6 +249,10 @@ export default function FerretAdrenalDiseasePage() {
             adrenalectomy — the choice depends on gland laterality, the ferret&apos;s
             overall health, and access to an exotic-mammal surgeon.
           </p>
+
+          <FactCard source={{ label: 'Merck Veterinary Manual: Hormonal Disorders of Ferrets', url: 'https://www.merckvetmanual.com/all-other-pets/ferrets/hormonal-disorders-of-ferrets' }}>
+            Surgery is more likely to cure adrenal disease, but it returns in about 40% of ferrets. Implants or injections control the signs for life without shrinking the tumor.
+          </FactCard>
 
           <h2 id="pathophys">What It Is</h2>
           <p>

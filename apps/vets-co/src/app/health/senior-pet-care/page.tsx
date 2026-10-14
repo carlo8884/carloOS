@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, FAQAccordion, ArticleLayout, CrossPortfolioCard, RelatedLinks, ShopCtas, LastUpdated } from '@carloOS/ui'
+import { ChecklistCard, buildMetadata, FAQAccordion, ArticleLayout, CrossPortfolioCard, RelatedLinks, ShopCtas, LastUpdated } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Senior Dog Care — Biannual Exams, Screening | Vets.co', description: 'Senior dogs need more frequent veterinary care, not less. The biannual exam protocol, what screenings matter at 7+.', path: '/health/senior-pet-care', type: 'article' })
@@ -74,6 +74,16 @@ export default function SeniorPetCarePage() {
           <h2>Why Biannual Exams Matter</h2>
           <DropCap>A year in a senior dog&apos;s life corresponds to 5–7 human years. Conditions that develop gradually — dental disease, kidney disease, hypothyroidism, arthritis, cardiac disease, early cancer — can progress from manageable to advanced within one annual exam cycle. The standard of care for dogs 7+ is twice-yearly comprehensive examinations. This is not excessive — it is appropriate for the rate at which senior dogs&apos; health changes.</DropCap>
           <p>Each biannual senior exam should include: a comprehensive physical examination with specific attention to lymph nodes (lymphoma screening), abdominal palpation (organ size and masses), cardiac auscultation (murmur grading), orthopedic assessment (joint pain, range of motion), ophthalmic assessment (cataracts, early glaucoma), dental grading, body weight and condition scoring, and a brief cognitive and behavioral history review. It does not interpret labs and it is not a substitute for the veterinarian who reviews the trend.</p>
+
+          <ChecklistCard
+            title="Senior dog visit checklist"
+            items={[
+              'Vet checkups twice a year or more once your dog is over 7 to 8 years old',
+              'Ask whether blood tests or x-rays would catch problems early',
+              'Book a visit if signs of illness last more than a day or two',
+            ]}
+            source={{ label: 'Merck Veterinary Manual: Routine Health Care of Dogs', url: 'https://www.merckvetmanual.com/dog-owners/routine-care-of-dogs/routine-health-care-of-dogs' }}
+          />
 
           <h2>What Bloodwork Reveals</h2>
           <p>Annual bloodwork in senior dogs — CBC (complete blood count) plus comprehensive chemistry panel plus urinalysis — screens for the most common senior health conditions before clinical signs develop. Key findings:</p>

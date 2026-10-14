@@ -1484,3 +1484,14 @@ test('ferret PH2: sable page shows a credited Wikimedia Commons sable photo, cha
   await page.goto('/colors/champagne-ferrets')
   await expect(page.locator('main img[src*="05c404f17d45"]')).toHaveCount(0)
 })
+
+test('ferret DK1: hub and article fact or checklist cards are visible, sourced and carry no shop links', async ({ page }) => {
+  for (const path of ['/health', '/health/adrenal-disease', '/health/dental-disease']) {
+    await page.goto(path)
+    const cards = page.locator('[data-fact-card], [data-checklist-card]')
+    expect(await cards.count(), path).toBeGreaterThan(0)
+    await expect(cards.first()).toBeVisible()
+    await expect(cards.first().locator('a[href^="https://www.merckvetmanual.com/"]')).toHaveCount(1)
+    await expect(cards.locator('a[href*="/go/"]')).toHaveCount(0)
+  }
+})
