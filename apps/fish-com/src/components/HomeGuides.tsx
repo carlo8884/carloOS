@@ -432,25 +432,16 @@ export function HomeGuides() {
                   <StockImage manifestKey="fish-com:species-amano-shrimp" alt="An Amano shrimp on aquarium hardscape" aspect="4:3" subtleCredit />
                 </div>
                 <div className="pr-3 py-2">
-                  <div className="mb-1 flex items-center gap-2">
-                    <div className={`relative h-7 w-10 shrink-0 overflow-hidden rounded-md bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                      <StockImage manifestKey="fish-com:species-amano-shrimp" alt="An Amano shrimp on aquarium hardscape" aspect="4:3" subtleCredit />
-                    </div>
+                  <div className="mb-1">
                     <div className="font-display font-bold text-white text-sm leading-tight italic group-hover:text-[#3aa4cc]">All product guides</div>
                   </div>
-                  <div className="text-xs text-white/55 mt-0.5 flex items-center gap-2">
-                    <div className={`relative h-6 w-9 shrink-0 overflow-hidden rounded-md bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                      <StockImage manifestKey="fish-com:species-amano-shrimp" alt="" aspect="4:3" />
-                    </div>
+                  <div className="text-xs text-white/55 mt-0.5">
                     <span>Filters, heaters, lighting, test kits.</span>
                   </div>
                 </div>
               </Link>
             </div>
-            <div className="text-base text-white/70 leading-relaxed mb-6 max-w-xl flex items-start gap-2.5">
-              <div className={`relative mt-0.5 h-8 w-12 shrink-0 overflow-hidden rounded-md bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                <StockImage manifestKey="fish-com:species-amano-shrimp" alt="" aspect="4:3" />
-              </div>
+            <div className="text-base text-white/70 leading-relaxed mb-6 max-w-xl">
               <span>Heaters, filters, lighting, canister filters, water-test kits, nano tanks, and planted-tank fertilizers — each guide weighs accuracy, durability, and price.</span>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
