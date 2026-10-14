@@ -1336,3 +1336,27 @@ test('vets fix EM1: under-hero offer shows; email form stays hidden while the su
     await expect(page.getByTestId('under-hero-email').locator('input[type="email"]')).toBeVisible()
   }
 })
+
+test('vets fix DS1: affiliate disclosure is one small muted line above the first shop link', async ({ page }) => {
+  for (const path of ['/health/anxiety-in-dogs', '/health/seizures-in-dogs', '/breeds/beagle-health']) {
+    await page.goto(path, { waitUntil: 'domcontentloaded' })
+    const info = await page.evaluate(() => {
+      const link = Array.from(document.querySelectorAll('a[href*="/go/"]')).find((a) => (a as HTMLElement).offsetParent && !a.closest('footer'))
+      const line = Array.from(document.querySelectorAll('[data-affiliate-disclosure="inline"], [data-affiliate-disclosure="banner"]')).find((d) => (d as HTMLElement).offsetParent) as HTMLElement | undefined
+      if (!link || !line) return null
+      return {
+        before: Boolean(line.compareDocumentPosition(link) & Node.DOCUMENT_POSITION_FOLLOWING),
+        tag: line.tagName,
+        height: line.getBoundingClientRect().height,
+        text: line.innerText,
+        href: line.querySelector('a')?.getAttribute('href'),
+      }
+    })
+    expect(info, path).not.toBeNull()
+    expect(info!.before, path).toBe(true)
+    expect(info!.tag, path).toBe('P')
+    expect(info!.height, path).toBeLessThan(44)
+    expect(info!.text, path).toContain('We may earn a commission when you buy through our links.')
+    expect(info!.href, path).toBe('/disclosure')
+  }
+})

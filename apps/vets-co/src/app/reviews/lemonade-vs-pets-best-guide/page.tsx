@@ -68,8 +68,8 @@ export default function LemonadeVsPetsBestGuidePage() {
         <>
           <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">Lemonade is the pick for a younger pet. Lemonade’s FAQ says a pet signed up young and healthy is not denied coverage at renewal because of age.</p>
           <div data-fold="offer">
-          <PrimaryHop href="/go/lemonade/home?s=reviews-lemonade-vs-pets-best-guide" label="Get a Lemonade quote" />
           <HopDisclosure tone="on-dark" siteId="vets-co" href="/go/lemonade/home?s=reviews-lemonade-vs-pets-best-guide" noteClassName="mt-3 mb-0 text-xs leading-relaxed text-white/80" />
+          <PrimaryHop href="/go/lemonade/home?s=reviews-lemonade-vs-pets-best-guide" label="Get a Lemonade quote" />
         </div>
         </>
       }

@@ -48,6 +48,14 @@ export function AffiliateDisclosure({
   className,
   children,
 }: AffiliateDisclosureProps) {
+  // Vets.co and Ferret.com: one small muted line (Wirecutter-style), not a box.
+  const quiet = _siteId === 'vets-co' || _siteId === 'ferret-com'
+  if (quiet && (variant === 'inline' || variant === 'banner')) {
+    const line = <QuietDisclosureLine variant={variant} href={href} className={className} />
+    return variant === 'banner'
+      ? <AffiliateDisclosureContext.Provider value={{ disclosed: true }}><div className="px-container-sm sm:px-container pt-3">{line}</div>{children}</AffiliateDisclosureContext.Provider>
+      : line
+  }
   if (variant === 'banner') {
     return (
       <AffiliateDisclosureContext.Provider value={{ disclosed: true }}>
@@ -147,6 +155,39 @@ export function AffiliateDisclosure({
         full disclosure
       </Link>
       .
+    </p>
+  )
+}
+
+/** The one-line disclosure used on Vets.co and Ferret.com. Sits above the first shop link. */
+export function QuietDisclosureLine({
+  variant = 'inline',
+  href = '/disclosure',
+  className,
+  tone,
+}: {
+  variant?: 'inline' | 'banner'
+  href?: string
+  className?: string
+  tone?: 'on-dark'
+}) {
+  const dark = tone === 'on-dark'
+  return (
+    <p
+      data-affiliate-disclosure={variant}
+      className={[
+        'text-xs leading-snug',
+        dark ? 'text-white/75' : 'text-brand-text-mid',
+        className ?? 'my-3',
+      ].join(' ')}
+    >
+      We may earn a commission when you buy through our links.{' '}
+      <Link
+        href={href}
+        className={dark ? 'text-white/90 underline underline-offset-2 hover:text-white' : 'text-brand-text-mid underline underline-offset-2 hover:text-brand-primary'}
+      >
+        How we review &rarr;
+      </Link>
     </p>
   )
 }
