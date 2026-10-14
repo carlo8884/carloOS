@@ -1208,7 +1208,6 @@ test('vets fix DV1: dog vaccination guide opens with a sourced short answer and 
   expect(text).toContain('general reference; not checked against this page')
 })
 
-<<<<<<< Updated upstream
 test('vets fix DV2: dog vaccination supplies copy drops unsourced 72-hour and Vaccicheck claims, shop hops intact', async ({ page }) => {
   await page.goto('/health/dog-vaccinations-guide', { waitUntil: 'domcontentloaded' })
   const text = await page.locator('body').innerText()
@@ -1218,7 +1217,8 @@ test('vets fix DV2: dog vaccination supplies copy drops unsourced 72-hour and Va
   await expect(page.locator('a[href="/go/amazon-brand/72+hour+digital+countdown+timer?s=health-dog-vaccinations-guide"]').first()).toBeVisible()
   await expect(page.locator('a[href="/go/amazon-brand/collapsible+silicone+travel+dog+bowl?s=health-dog-vaccinations-guide"]').first()).toBeVisible()
   await expect(page.getByText('Browse digital countdown timers on Amazon').first()).toBeVisible()
-=======
+})
+
 test('vets fix ES1: emergency-signs list matches Merck/AVMA (any seizure, no unsourced time windows)', async ({ page }) => {
   await page.goto('/health/emergency-signs', { waitUntil: 'domcontentloaded' })
   const text = await page.locator('body').innerText()
@@ -1231,5 +1231,4 @@ test('vets fix ES1: emergency-signs list matches Merck/AVMA (any seizure, no uns
   expect(text).not.toContain('Dogs do not pant in distress')
   expect(text).toContain('seizure longer than 5 minutes')
   await expect(page.locator('a[href="https://www.merckvetmanual.com/multimedia/table/when-to-see-a-veterinarian"]').first()).toBeVisible()
->>>>>>> Stashed changes
 })
