@@ -1617,3 +1617,21 @@ test('vets DK1: hub and article fact or checklist cards are visible, sourced and
     await expect(cards.locator('a[href*="/go/"]')).toHaveCount(0)
   }
 })
+
+test('vets NB1: the fixed nav stays opaque and flush with the top after scrolling, so no see-through band shows above content', async ({ page }) => {
+  for (const [width, height] of [[1280, 800], [390, 844]]) {
+    await page.setViewportSize({ width, height })
+    await page.goto('/health/anxiety-in-dogs')
+    await page.evaluate(() => window.scrollTo(0, 1500))
+    await page.waitForTimeout(300)
+    const nav = await page.evaluate(() => {
+      const el = document.querySelector('nav[aria-label="Main navigation"]') as HTMLElement
+      const r = el.getBoundingClientRect()
+      const bg = getComputedStyle(el).backgroundColor
+      const alpha = bg.startsWith('rgba') ? parseFloat(bg.split(',')[3]) : bg === 'transparent' ? 0 : 1
+      return { top: r.top, alpha }
+    })
+    expect(nav.top, `${width}px nav top`).toBe(0)
+    expect(nav.alpha, `${width}px nav background alpha`).toBe(1)
+  }
+})
