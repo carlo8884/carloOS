@@ -1,1 +1,1 @@
-$(cat /tmp/HomeGuides.edited.tsx)
+PLACEHOLDER_FULL_CONTENT_HERE
