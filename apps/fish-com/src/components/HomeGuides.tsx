@@ -108,24 +108,15 @@ export function HomeGuides() {
                 href="/tools"
                 className="group flex items-center gap-2.5 no-underline"
               >
-                <div className={`relative h-9 w-14 shrink-0 overflow-hidden rounded-md bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                  <StockImage manifestKey="fish-com:tools-hero" alt="An aquarium water test kit" aspect="4:3" />
-                </div>
                 <span className="text-2xs font-bold tracking-eyebrow uppercase text-[#3aa4cc] group-hover:text-white">Calculators & Tools</span>
               </Link>
             </div>
-            <div className="mb-3 flex items-center gap-2.5 max-w-3xl">
-              <div className={`relative h-10 w-14 shrink-0 overflow-hidden rounded-md bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                <StockImage manifestKey="fish-com:tools-hero" alt="An aquarium water test kit" aspect="4:3" />
-              </div>
+            <div className="mb-3 max-w-3xl">
               <h2 className="font-display font-bold text-white tracking-tight italic mb-0" style={{ fontSize: 'clamp(24px, 3.5vw, 44px)' }}>
                 Get a number, not just an article.
               </h2>
             </div>
-            <div className="text-base text-white/60 mb-0 max-w-2xl leading-relaxed flex items-start gap-2.5">
-              <div className={`relative mt-0.5 h-8 w-12 shrink-0 overflow-hidden rounded-md bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                <StockImage manifestKey="fish-com:tools-hero" alt="" aspect="4:3" />
-              </div>
+            <div className="text-base text-white/60 mb-0 max-w-2xl leading-relaxed">
               <span>Every calculator is built on published aquarist reference data — answer a few questions and get a precise, sourced answer for your tank right now.</span>
             </div>
           </div>
@@ -137,16 +128,10 @@ export function HomeGuides() {
               <StockImage manifestKey="fish-com:tools-hero" alt="An aquarium water test kit" aspect="4:3" subtleCredit />
             </div>
             <div className="pr-3 py-2">
-              <div className="mb-1 flex items-center gap-2">
-                <div className={`relative h-7 w-10 shrink-0 overflow-hidden rounded-md bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                  <StockImage manifestKey="fish-com:tools-hero" alt="An aquarium water test kit" aspect="4:3" subtleCredit />
-                </div>
+              <div className="mb-1">
                 <div className="font-display font-bold text-white text-sm leading-tight italic group-hover:text-[#3aa4cc]">All calculators</div>
               </div>
-              <div className="text-xs text-white/55 mt-0.5 flex items-center gap-2">
-                <div className={`relative h-6 w-9 shrink-0 overflow-hidden rounded-md bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                  <StockImage manifestKey="fish-com:tools-hero" alt="" aspect="4:3" />
-                </div>
+              <div className="text-xs text-white/55 mt-0.5">
                 <span>Volume, stocking, heater, water change.</span>
               </div>
             </div>
@@ -595,3 +580,4 @@ export function HomeGuides() {
     </>
   )
 }
+
