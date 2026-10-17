@@ -46,6 +46,8 @@ export const metadata: Metadata = buildMetadata({
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
 const gaReady = Boolean(GA_ID && GA_ID !== 'G-XXXXXXXXXX')
+// Vercel hosts these scripts. Off-platform they 404 as HTML and the browser refuses them.
+const vercelAnalytics = process.env.VERCEL === '1'
 
 const organizationSchema = buildOrganizationSchema({
   siteId: 'vets-co',
@@ -64,8 +66,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <SchemaScript schema={organizationSchema} />
         <Ga4Loader measurementId={GA_ID} />
         {/* Cookieless first-party traffic record. GA4 above stays as-is. */}
-        <Analytics />
-        <SpeedInsights />
+        {vercelAnalytics ? (
+          <>
+            <Analytics />
+            <SpeedInsights />
+          </>
+        ) : null}
         <AiReferralTracker enabled={gaReady} />
         <AffiliateClickListener site="vets-co" />
         <JourneyEvents site="vets-co" />
