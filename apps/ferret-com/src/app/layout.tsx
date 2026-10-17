@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 import { Playfair_Display, Source_Sans_3 } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/next'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import { Nav, Footer, DisplayAds, buildOrganizationSchema, SchemaScript, Ga4Loader, AffiliateClickListener, JourneyEvents, HopEarnsProvider } from '@carloOS/ui'
 import { buildMetadata } from '@carloOS/ui'
 import { displayAds } from '../data/display-ads'
@@ -55,6 +57,9 @@ export default function RootLayout({
         <HopEarnsProvider amazon={Boolean(process.env.AFF_AMAZON_TAG || process.env.AFF_AMAZON_BRAND_TAG)}>
         <SchemaScript schema={organizationSchema} />
         <Ga4Loader measurementId={GA_ID} customMap />
+        {/* Cookieless first-party traffic record. GA4 above stays as-is. */}
+        <Analytics />
+        <SpeedInsights />
         <AffiliateClickListener site="ferret-com" />
         <JourneyEvents site="ferret-com" />
         <a

@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 import { Libre_Baskerville, Manrope } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/next'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import { Nav, Footer, buildMetadata, buildOrganizationSchema, SchemaScript, Ga4Loader, AffiliateClickListener, JourneyEvents, HopEarnsProvider } from '@carloOS/ui'
 import { HomeEmailCapture } from '../components/HomeEmailCapture'
 import { EmailCaptureGate } from '../components/EmailCaptureGate'
@@ -60,6 +62,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <HopEarnsProvider amazon={Boolean(process.env.AFF_AMAZON_TAG || process.env.AFF_AMAZON_BRAND_TAG)}>
         <SchemaScript schema={organizationSchema} />
         <Ga4Loader measurementId={GA_ID} />
+        {/* Cookieless first-party traffic record. GA4 above stays as-is. */}
+        <Analytics />
+        <SpeedInsights />
         <AffiliateClickListener site="vets-co" />
         <JourneyEvents site="vets-co" />
         <Nav siteId="vets-co" />
