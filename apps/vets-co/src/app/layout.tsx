@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { Libre_Baskerville, Manrope } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { SpeedInsights } from '@vercel/speed-insights/next'
-import { Nav, Footer, buildMetadata, buildOrganizationSchema, SchemaScript, Ga4Loader, AffiliateClickListener, JourneyEvents, HopEarnsProvider } from '@carloOS/ui'
+import { Nav, Footer, buildMetadata, buildOrganizationSchema, SchemaScript, Ga4Loader, AiReferralTracker, AffiliateClickListener, JourneyEvents, HopEarnsProvider } from '@carloOS/ui'
 import { HomeEmailCapture } from '../components/HomeEmailCapture'
 import { EmailCaptureGate } from '../components/EmailCaptureGate'
 import { EmailUnderHero, MobileStickyCta } from '@carloOS/ui'
@@ -45,6 +45,7 @@ export const metadata: Metadata = buildMetadata({
 })
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
+const gaReady = Boolean(GA_ID && GA_ID !== 'G-XXXXXXXXXX')
 
 const organizationSchema = buildOrganizationSchema({
   siteId: 'vets-co',
@@ -65,6 +66,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* Cookieless first-party traffic record. GA4 above stays as-is. */}
         <Analytics />
         <SpeedInsights />
+        <AiReferralTracker enabled={gaReady} />
         <AffiliateClickListener site="vets-co" />
         <JourneyEvents site="vets-co" />
         <Nav siteId="vets-co" />

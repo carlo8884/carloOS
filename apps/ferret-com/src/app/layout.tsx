@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { Playfair_Display, Source_Sans_3 } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { SpeedInsights } from '@vercel/speed-insights/next'
-import { Nav, Footer, DisplayAds, buildOrganizationSchema, SchemaScript, Ga4Loader, AffiliateClickListener, JourneyEvents, HopEarnsProvider } from '@carloOS/ui'
+import { Nav, Footer, DisplayAds, buildOrganizationSchema, SchemaScript, Ga4Loader, AiReferralTracker, AffiliateClickListener, JourneyEvents, HopEarnsProvider } from '@carloOS/ui'
 import { buildMetadata } from '@carloOS/ui'
 import { displayAds } from '../data/display-ads'
 import { HomeEmailCapture } from '../components/HomeEmailCapture'
@@ -36,6 +36,7 @@ export const metadata: Metadata = buildMetadata({
 })
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
+const gaReady = Boolean(GA_ID && GA_ID !== 'G-XXXXXXXXXX')
 
 const organizationSchema = buildOrganizationSchema({
   siteId: 'ferret-com',
@@ -60,6 +61,7 @@ export default function RootLayout({
         {/* Cookieless first-party traffic record. GA4 above stays as-is. */}
         <Analytics />
         <SpeedInsights />
+        <AiReferralTracker enabled={gaReady} />
         <AffiliateClickListener site="ferret-com" />
         <JourneyEvents site="ferret-com" />
         <a

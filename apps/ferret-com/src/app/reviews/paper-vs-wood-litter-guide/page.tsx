@@ -1,7 +1,7 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, ShopCtas, buildArticleSchema, buildMetadata, PrimaryHop, ArticleSourcesList, LastUpdated, ComparisonFoot, TableShopLink } from '@carloOS/ui'
+import { ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, ShopCtas, buildArticleSchema, buildMetadata, PrimaryHop, ArticleSourcesList, LastUpdated, ComparisonFoot, TableShopLink, KeyFacts } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -19,7 +19,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-10-04T00:00:00Z',
-  modifiedAt: '2026-10-13T00:00:00Z',
+  modifiedAt: '2026-10-17T00:00:00Z',
 })
 
 const FAQS = [
@@ -51,7 +51,7 @@ export default function PaperVsWoodLitterGuidePage() {
       }}
       heroHop={
         <>
-          <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">Buy recycled paper pellets for most ferrets because they stay non-clumping and low-dust.</p>
+          <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">Best for most ferrets: recycled paper pellets stay non-clumping and low-dust.</p>
           <div data-fold="offer">
           <HopDisclosure above siteId="ferret-com" href="/go/amazon-brand/recycled+paper+pellet+litter+non+clumping?s=reviews-paper-vs-wood-litter-guide" />
           <PrimaryHop href="/go/amazon-brand/recycled+paper+pellet+litter+non+clumping?s=reviews-paper-vs-wood-litter-guide" label="Browse recycled paper pellet litter on Amazon" />
@@ -78,12 +78,18 @@ export default function PaperVsWoodLitterGuidePage() {
       }
     >
       <div className="carloOS-article">
-          <LastUpdated date="2026-10-13" />
+          <LastUpdated date="2026-10-17" />
+        <KeyFacts
+          items={[
+            { label: 'Best for most ferrets', detail: 'Recycled paper pellets. Very low dust, no clumping agents, soft underfoot, moderate odor control. Price tier $$. Change the pan instead of scooping and topping up.' },
+            { label: 'Best for odor', detail: 'Heat-treated wood pellets. Strongest odor control of the safe options, low dust once fines are sifted, price tier $. Harder underfoot than paper. Not loose cedar or pine shavings.' },
+          ]}
+        />
         <p>The <Link href="/reviews/best-ferret-litter">litter review</Link> refuses clumping cat litter and aromatic pine or cedar shavings, then compares three pelleted options that clear that bar. Paper versus wood is the everyday choice inside that safe set. Pelleted grass, the third option, is set beside paper in the <Link href="/reviews/paper-vs-grass-litter-guide">paper versus grass guide</Link>. Litter will not, by itself, fix ferret odor. Diet and the cleaning routine in the <Link href="/care/odor-and-scent-control">odor guide</Link> still do most of that work.</p>
         <h2>Paper pellets</h2>
-        <p>Recycled paper pellets are the best overall pick. The review lists very low dust, no clumping agents, a soft feel underfoot, and moderate odor control. The price tier is $$. The cons are the moderate odor, changing the pan instead of scooping and topping up, and lighter pellets that can scatter. The review calls this the litter to buy if you are not trying to optimize a single trait.</p>
+        <p>Recycled paper pellets are the pick for most ferrets. The review lists very low dust, no clumping agents, a soft feel underfoot, and moderate odor control. The price tier is $$. The cons are the moderate odor, changing the pan instead of scooping and topping up, and lighter pellets that can scatter. The review calls this the litter to buy if you are not trying to optimize a single trait.</p>
         <h2>Heat-treated wood pellets</h2>
-        <p>Compressed wood pellets are the odor pick. Odor control is the strongest of the safe options on the page. Dust is low once fines are sifted. The price tier is $. The caveat is the form of the wood. The review says aromatic raw cedar and pine shavings release phenols tied to respiratory irritation. The allowed product is heat-treated, low-phenol compressed pellets, not loose shavings. The pellets are harder underfoot than paper. If a ferret rejects that texture, pelleted grass is the other safe option, soft, low dust, moderate odor, and quicker to break down when wet.</p>
+        <p>Compressed wood pellets are the pick for odor. Odor control is the strongest of the safe options on the page. Dust is low once fines are sifted. The price tier is $. The caveat is the form of the wood. The review says aromatic raw cedar and pine shavings release phenols tied to respiratory irritation. The allowed product is heat-treated, low-phenol compressed pellets, not loose shavings. The pellets are harder underfoot than paper. If a ferret rejects that texture, pelleted grass is the other safe option, soft, low dust, moderate odor, and quicker to break down when wet.</p>
         <h2>Who should buy which</h2>
         <p>Buy paper pellets for most ferrets. Buy heat-treated wood pellets when smell is the problem you are willing to manage, and you will read the bag for heat treatment rather than a pine scent. Buy grass pellets only when the ferret refuses the other two textures. Do not “upgrade” any of them to a clumping, perfumed cat litter. The review treats that swap as trading a safety margin for a cosmetic one.</p>
         <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/recycled+paper+pellet+litter+non+clumping?s=reviews-paper-vs-wood-litter-guide", "/go/amazon-brand/heat+treated+wood+pellet+litter?s=reviews-paper-vs-wood-litter-guide"]} />
@@ -124,8 +130,8 @@ export default function PaperVsWoodLitterGuidePage() {
             <tbody>
               <tr className="border-b border-brand-border align-top">
                 <th scope="row" className="p-3 font-bold text-brand-dark text-left">Role</th>
-                <td className="p-3">Best overall</td>
-                <td className="p-3">Odor pick</td>
+                <td className="p-3">Best for most ferrets</td>
+                <td className="p-3">Best for odor</td>
               </tr>
               <tr className="border-b border-brand-border align-top">
                 <th scope="row" className="p-3 font-bold text-brand-dark text-left">Dust</th>
@@ -160,7 +166,7 @@ export default function PaperVsWoodLitterGuidePage() {
             </tbody>
           </table>
         </div>
-        <ComparisonFoot updated="2026-10-13" />
+        <ComparisonFoot updated="2026-10-17" />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
                 <ArticleSourcesList

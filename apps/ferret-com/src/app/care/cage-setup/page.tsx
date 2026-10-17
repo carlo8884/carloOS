@@ -259,7 +259,8 @@ export default function FerretCageSetupPage() {
           </p>
           <ReviewCard quietUntilTag
             id="critter-nation"
-            badge="Best Overall"
+            badge="Best for solid floors"
+            methodLink
             name="MidWest Critter Nation Double Unit (Model 162)"
             subtitle="Two-level, 36×25×62 inches. The manufacturer page does not print bar spacing"
             winner
@@ -284,7 +285,7 @@ export default function FerretCageSetupPage() {
           />
           <ReviewCard quietUntilTag
             id="marshall"
-            badge="Best Starter"
+            badge="Best for a first cage"
             name="Marshall ferret cage"
             subtitle="Current mansion listings are two levels. Accessories are not included."
             description={

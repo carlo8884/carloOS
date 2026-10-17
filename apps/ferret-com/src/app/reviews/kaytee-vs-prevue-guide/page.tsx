@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, ShopCtas, buildArticleSchema, buildMetadata, ArticleSourcesList, LastUpdated, ComparisonFoot, TableShopLink } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, ShopCtas, buildArticleSchema, buildMetadata, ArticleSourcesList, LastUpdated, ComparisonFoot, TableShopLink, KeyFacts } from '@carloOS/ui'
 import { HopDisclosure } from '../../../components/HopDisclosure'
 
 export const metadata: Metadata = buildMetadata({
@@ -19,13 +19,13 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-10-04T00:00:00Z',
-  modifiedAt: '2026-10-13T00:00:00Z',
+  modifiedAt: '2026-10-17T00:00:00Z',
 })
 
 const FAQS = [
   {
-    question: 'Which of these two does the review list first?',
-    answer: 'The Prevue Pet Products Feisty Ferret Cage, marked Best Value. The review lists ferret-appropriate bar spacing, several shelves and ramps, a mid price tier, and a fit of one to two ferrets. It is not expandable, and wire shelves still need a cover.',
+    question: 'Which of these two does the review list for one or two ferrets?',
+    answer: 'The Prevue Pet Products Feisty Ferret Cage, marked Best for one or two ferrets. The review lists ferret-appropriate bar spacing, several shelves and ramps, a mid price tier, and a fit of one to two ferrets. It is not expandable, and wire shelves still need a cover.',
   },
   {
     question: 'When does the review point to the Kaytee?',
@@ -33,7 +33,7 @@ const FAQS = [
   },
   {
     question: 'Where is the double unit in this comparison?',
-    answer: 'The Ferret Nation double unit is Best Overall on the cage review for one to four ferrets. That is a different comparison. These two are the smaller cages.',
+    answer: 'The Ferret Nation double unit is the pick for one to four ferrets on the cage review. That is a different comparison. These two are the smaller cages.',
   },
 ]
 
@@ -71,7 +71,13 @@ export default function KayteeVsPrevueGuidePage() {
       }
     >
       <div className="carloOS-article">
-          <LastUpdated date="2026-10-13" />
+          <LastUpdated date="2026-10-17" />
+        <KeyFacts
+          items={[
+            { label: 'Best for one or two ferrets', detail: 'Prevue Feisty Ferret. Ferret-appropriate bar spacing, several shelves and ramps, a mid price tier. It is not expandable, and wire shelves still need a cover.' },
+            { label: 'Best for one ferret', detail: 'Kaytee Multi-Level. Bar spacing in range if you verify the model, national chain retail, and the lowest price tier of the three cages. A second ferret may outgrow it.' },
+          ]}
+        />
         <EmailCapture
           variant="inline"
           siteId="ferret-com"
@@ -80,7 +86,7 @@ export default function KayteeVsPrevueGuidePage() {
           ctaText="Copy checklist"
           source="reviews-kaytee-vs-prevue-guide"
           checklist={[
-            "The Prevue Pet Products Feisty Ferret Cage, marked Best Value.",
+            "The Prevue Pet Products Feisty Ferret Cage, marked Best for one or two ferrets.",
             "The review lists ferret-appropriate bar spacing, several shelves and ramps, a mid price tier, and a fit of one to two ferrets.",
             "It is not expandable, and wire shelves still need a cover.",
             "As the entry cage for one ferret with daily out-of-cage time.",
@@ -88,11 +94,11 @@ export default function KayteeVsPrevueGuidePage() {
             "It may be outgrown if you add a second ferret.",
           ]}
         />
-        <p>Prices below are the ones on the <Link href="/reviews/best-ferret-cage">cage review</Link>. The Prevue Feisty Ferret ranks above the Kaytee Multi-Level. <Link href="/reviews/kaytee-vs-ferret-nation-guide">Kaytee versus Ferret Nation</Link> is the group cage. The Ferret Nation double unit on that review is the overall winner, and it is a separate comparison.</p>
+        <p>Prices below are the ones on the <Link href="/reviews/best-ferret-cage">cage review</Link>. The Prevue Feisty Ferret is the pick for one or two ferrets. The Kaytee is the pick for one ferret. <Link href="/reviews/kaytee-vs-ferret-nation-guide">Kaytee versus Ferret Nation</Link> is the group cage. The Ferret Nation double unit on that review is the pick for one to four ferrets, and it is a separate comparison.</p>
         <h2>What the review says about Prevue</h2>
-        <p>The Prevue Pet Products Feisty Ferret Cage is Best Value. Bar spacing is listed as ferret-appropriate. It includes several shelves and ramps. The price tier is mid. The review says the floor suits one to two ferrets, and that wire shelves and ramps still need fleece or a solid cover. It is not expandable, and it is smaller than a double modular unit.</p>
+        <p>The Prevue Pet Products Feisty Ferret Cage is the pick for one or two ferrets. Bar spacing is listed as ferret-appropriate. It includes several shelves and ramps. The price tier is mid. The review says the floor suits one to two ferrets, and that wire shelves and ramps still need fleece or a solid cover. It is not expandable, and it is smaller than a double modular unit.</p>
         <h2>What the review says about Kaytee</h2>
-        <p>The Kaytee Multi-Level Ferret Home is Entry / Single Ferret. Bar spacing is in range, and the review says to verify the exact model. The layout is multi-level. Availability is national chain retail. The fit is one ferret plus daily out-of-cage time, not a pair living in it full time. The price tier is the lowest of the three cages on that review. The cons say the footprint is tighter and that a second ferret may outgrow it.</p>
+        <p>The Kaytee Multi-Level Ferret Home is the pick for one ferret. Bar spacing is in range, and the review says to verify the exact model. The layout is multi-level. Availability is national chain retail. The fit is one ferret plus daily out-of-cage time, not a pair living in it full time. The price tier is the lowest of the three cages on that review. The cons say the footprint is tighter and that a second ferret may outgrow it.</p>
         <p>Floor space for the number of ferrets is on the <Link href="/tools/cage-size-calculator">cage-size calculator</Link>, using the rule from that review.</p>
         <h2>Who should buy which cage</h2>
         <p>Buy the Prevue when you want the one the review lists first of these two, with room the review sizes for one or two ferrets, and you do not need the cage to expand later. Buy the Kaytee when you need a single-ferret cage from a chain store today, you will give daily out-time, and you will check the bar spacing on the box. A pair or trio that should have a stackable double unit is the Ferret Nation on the same review.</p>
@@ -118,8 +124,8 @@ export default function KayteeVsPrevueGuidePage() {
             <tbody>
               <tr className="border-b border-brand-border align-top">
                 <th scope="row" className="p-3 font-bold text-brand-dark text-left">Role</th>
-                <td className="p-3">Best Value</td>
-                <td className="p-3">Entry / Single Ferret</td>
+                <td className="p-3">Best for one or two ferrets</td>
+                <td className="p-3">Best for one ferret</td>
               </tr>
               <tr className="border-b border-brand-border align-top">
                 <th scope="row" className="p-3 font-bold text-brand-dark text-left">Fit</th>
@@ -149,7 +155,7 @@ export default function KayteeVsPrevueGuidePage() {
             </tbody>
           </table>
         </div>
-        <ComparisonFoot updated="2026-10-13" />
+        <ComparisonFoot updated="2026-10-17" />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
                 <ArticleSourcesList
