@@ -43,7 +43,7 @@ export default function VetsterVsAskvetGuidePage() {
   const visit = liveAnchorHref(visitHref)
   return (
     <ArticleLayout
-      priceAsOf="2026-10-07"
+      priceAsOf="2026-10-17"
       siteId="vets-co"
       schema={schema}
       hero={{
@@ -77,7 +77,7 @@ export default function VetsterVsAskvetGuidePage() {
           <LastUpdated date="2026-10-17" />
         <KeyFacts
           items={[
-            { label: 'Best for a video visit', detail: 'Vetster consults are video and chat. Single visits start at $102. Plus is $12/month, billed annually. This page does not publish a wait time.' },
+            { label: 'Best for a video visit', detail: 'Vetster consults are video and chat. Single visits start at $102, dated 2026-10-17. Plus is $12/month, billed annually. This page does not publish a wait time.' },
             { label: 'Best for a specialist', detail: "Vetster lists specialists, including behavior, dermatology, and internal medicine. Its help article, updated 2025-12-18, says it verifies an active license in the veterinarian's jurisdiction before they go live." },
             { label: 'Best for frequent chat', detail: 'AskVet is the subscription the review names for a new puppy, a senior pet, several pets, or a chronic condition you already understand. There is no video, and prescriptions are limited.' },
           ]}

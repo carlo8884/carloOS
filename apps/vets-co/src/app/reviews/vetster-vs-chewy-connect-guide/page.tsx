@@ -72,13 +72,13 @@ export default function VetsterVsChewyConnectGuidePage() {
           ]}
         />
       }
-      priceAsOf="2026-10-07"
+      priceAsOf="2026-10-17"
     >
       <div className="carloOS-article">
           <LastUpdated date="2026-10-17" />
         <KeyFacts
           items={[
-            { label: 'Best for a video specialist visit', detail: 'Vetster lists video and chat, and specialists including behavior, dermatology, and internal medicine. Single visits start at $102. Plus is $12/month, billed annually.' },
+            { label: 'Best for a video specialist visit', detail: 'Vetster lists video and chat, and specialists including behavior, dermatology, and internal medicine. Single visits start at $102, dated 2026-10-17. Plus is $12/month, billed annually.' },
             { label: 'Best for Chewy customers', detail: 'Free chat is with a veterinary technician and comes with a Chewy account. The licensed-vet video visit is $49.99, and a prescription from that visit can be filled through Chewy.' },
           ]}
         />
@@ -103,7 +103,7 @@ export default function VetsterVsChewyConnectGuidePage() {
         <p>Vetster is the pick for a video specialist visit. The telehealth page on this site lists video and chat. Vetster’s help page, updated 2025-12-18 and fetched 2026-10-08, says it verifies an active license in the veterinarian’s jurisdiction before they go live. The telehealth page lists specialists, including behavior, dermatology, and internal medicine. This page does not publish a wait time. You pay per visit. The page says that per-visit figure is higher than a chat plan.</p>
         <p>Single visits start at $102. Plus is $12/month, billed annually.</p>
         <h2>What the page says about Chewy Connect</h2>
-        <p>Chewy Connect with a Vet is Best for Chewy Customers. Free chat is with a veterinary technician and comes with a Chewy account. A prescription from the licensed-vet video visit can be filled through Chewy and shipped. Specialist access is thinner than Vetster.</p>
+        <p>Chewy Connect with a Vet is the pick for Chewy customers. Free chat is with a veterinary technician and comes with a Chewy account. A prescription from the licensed-vet video visit can be filled through Chewy and shipped. Specialist access is thinner than Vetster.</p>
         <p>The licensed-vet video visit is $49.99.</p>
         <p>If you are deciding between a video visit, a clinic, and an emergency hospital, use the <Link href="/tools/er-vs-clinic">ER versus clinic tool</Link>. Neither service on this page replaces emergency care.</p>
         <h2>Who should open which service</h2>
@@ -123,7 +123,7 @@ export default function VetsterVsChewyConnectGuidePage() {
               <tr className="border-b border-brand-border align-top">
                 <th scope="row" className="p-3 font-bold text-brand-dark text-left">Role</th>
                 <td className="p-3">Best for a video specialist visit</td>
-                <td className="p-3">Best for Chewy Customers</td>
+                <td className="p-3">Best for Chewy customers</td>
               </tr>
               <tr className="border-b border-brand-border align-top">
                 <th scope="row" className="p-3 font-bold text-brand-dark text-left">Format</th>
