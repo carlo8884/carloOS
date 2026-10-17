@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 import { Libre_Baskerville, Manrope } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/next'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import { Nav, Footer, buildMetadata, buildOrganizationSchema, SchemaScript, Ga4Loader, AiReferralTracker, AffiliateClickListener, JourneyEvents, HopEarnsProvider } from '@carloOS/ui'
 import { HomeEmailCapture } from '../components/HomeEmailCapture'
 import { EmailCaptureGate } from '../components/EmailCaptureGate'
@@ -44,6 +46,8 @@ export const metadata: Metadata = buildMetadata({
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
 const gaReady = Boolean(GA_ID && GA_ID !== 'G-XXXXXXXXXX')
+// Vercel hosts these scripts. Off-platform they 404 as HTML and the browser refuses them.
+const vercelAnalytics = process.env.VERCEL === '1'
 
 const organizationSchema = buildOrganizationSchema({
   siteId: 'vets-co',
@@ -61,6 +65,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <HopEarnsProvider amazon={Boolean(process.env.AFF_AMAZON_TAG || process.env.AFF_AMAZON_BRAND_TAG)}>
         <SchemaScript schema={organizationSchema} />
         <Ga4Loader measurementId={GA_ID} />
+        {/* Cookieless first-party traffic record. GA4 above stays as-is. */}
+        {vercelAnalytics ? (
+          <>
+            <Analytics />
+            <SpeedInsights />
+          </>
+        ) : null}
         <AiReferralTracker enabled={gaReady} />
         <AffiliateClickListener site="vets-co" />
         <JourneyEvents site="vets-co" />
