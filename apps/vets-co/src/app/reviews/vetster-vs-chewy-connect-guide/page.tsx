@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata, ArticleSourcesList, LastUpdated, ComparisonFoot } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata, ArticleSourcesList, LastUpdated, ComparisonFoot, KeyFacts } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'vets-co',
@@ -18,13 +18,13 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Vets.co Editorial',
   publishedAt: '2026-10-04T00:00:00Z',
-  modifiedAt: '2026-10-12T00:00:00Z',
+  modifiedAt: '2026-10-17T00:00:00Z',
 })
 
 const FAQS = [
   {
-    question: 'Which service does the telehealth page pick overall?',
-    answer: 'Vetster. The telehealth page on this site lists video, chat, and specialists. Vetster’s help page, updated 2025-12-18 and fetched 2026-10-08, says it verifies an active license in the veterinarian’s jurisdiction before they go live. This page does not publish a wait time.',
+    question: 'Which service does the telehealth page pick for a video visit?',
+    answer: 'Vetster, for a video specialist visit. The telehealth page on this site lists video, chat, and specialists. Vetster’s help page, updated 2025-12-18 and fetched 2026-10-08, says it verifies an active license in the veterinarian’s jurisdiction before they go live. This page does not publish a wait time.',
   },
   {
     question: 'What does Chewy Connect include?',
@@ -50,7 +50,7 @@ export default function VetsterVsChewyConnectGuidePage() {
       }}
       heroHop={
         <>
-          <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">Vetster is the top pick for a video visit paid per consult, because the telehealth page lists veterinarians and specialists.</p>
+          <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">Best for a video specialist visit: Vetster lists veterinarians and specialists.</p>
           <div data-fold="offer">
           <PrimaryHop href="/go/vetster/telehealth?s=reviews-vetster-vs-connect-guide" label="Open Vetster" />
         </div>
@@ -75,7 +75,13 @@ export default function VetsterVsChewyConnectGuidePage() {
       priceAsOf="2026-10-07"
     >
       <div className="carloOS-article">
-          <LastUpdated date="2026-10-12" />
+          <LastUpdated date="2026-10-17" />
+        <KeyFacts
+          items={[
+            { label: 'Best for a video specialist visit', detail: 'Vetster lists video and chat, and specialists including behavior, dermatology, and internal medicine. Single visits start at $102. Plus is $12/month, billed annually.' },
+            { label: 'Best for Chewy customers', detail: 'Free chat is with a veterinary technician and comes with a Chewy account. The licensed-vet video visit is $49.99, and a prescription from that visit can be filled through Chewy.' },
+          ]}
+        />
         <EmailCapture
           variant="inline"
           siteId="vets-co"
@@ -92,9 +98,9 @@ export default function VetsterVsChewyConnectGuidePage() {
             "The page says that per-visit price is higher than a subscription.",
           ]}
         />
-        <p>Vetster is the overall service. Chewy Connect with a Vet is for people who already use Chewy. <Link href="/reviews/askvet-vs-chewy-connect-guide">AskVet versus Chewy Connect</Link> is the chat-subscription comparison, not this video visit. Vetster is also set beside AskVet in <Link href="/reviews/vetster-vs-askvet-guide">Vetster versus AskVet</Link>.</p>
+        <p>Vetster is the video-visit service. Chewy Connect with a Vet is for people who already use Chewy. <Link href="/reviews/askvet-vs-chewy-connect-guide">AskVet versus Chewy Connect</Link> is the chat-subscription comparison, not this video visit. Vetster is also set beside AskVet in <Link href="/reviews/vetster-vs-askvet-guide">Vetster versus AskVet</Link>.</p>
         <h2>What the page says about Vetster</h2>
-        <p>Vetster is Best Overall and the winner. The telehealth page on this site lists video and chat. Vetster’s help page, updated 2025-12-18 and fetched 2026-10-08, says it verifies an active license in the veterinarian’s jurisdiction before they go live. The telehealth page lists specialists, including behavior, dermatology, and internal medicine. This page does not publish a wait time. You pay per visit. The page says that per-visit figure is higher than a chat plan.</p>
+        <p>Vetster is the pick for a video specialist visit. The telehealth page on this site lists video and chat. Vetster’s help page, updated 2025-12-18 and fetched 2026-10-08, says it verifies an active license in the veterinarian’s jurisdiction before they go live. The telehealth page lists specialists, including behavior, dermatology, and internal medicine. This page does not publish a wait time. You pay per visit. The page says that per-visit figure is higher than a chat plan.</p>
         <p>Single visits start at $102. Plus is $12/month, billed annually.</p>
         <h2>What the page says about Chewy Connect</h2>
         <p>Chewy Connect with a Vet is Best for Chewy Customers. Free chat is with a veterinary technician and comes with a Chewy account. A prescription from the licensed-vet video visit can be filled through Chewy and shipped. Specialist access is thinner than Vetster.</p>
@@ -116,7 +122,7 @@ export default function VetsterVsChewyConnectGuidePage() {
             <tbody>
               <tr className="border-b border-brand-border align-top">
                 <th scope="row" className="p-3 font-bold text-brand-dark text-left">Role</th>
-                <td className="p-3">Best Overall, and the winner</td>
+                <td className="p-3">Best for a video specialist visit</td>
                 <td className="p-3">Best for Chewy Customers</td>
               </tr>
               <tr className="border-b border-brand-border align-top">
@@ -142,7 +148,7 @@ export default function VetsterVsChewyConnectGuidePage() {
             </tbody>
           </table>
         </div>
-        <ComparisonFoot updated="2026-10-12" />
+        <ComparisonFoot updated="2026-10-17" />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
                 <ArticleSourcesList

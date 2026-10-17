@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, EmailCapture, FAQAccordion, InlinePartnerQuote, PrimaryHop, RelatedLinks, buildArticleSchema, buildMetadata, ArticleSourcesList, LastUpdated, ComparisonFoot } from '@carloOS/ui'
+import { ArticleLayout, EmailCapture, FAQAccordion, InlinePartnerQuote, PrimaryHop, RelatedLinks, buildArticleSchema, buildMetadata, ArticleSourcesList, LastUpdated, ComparisonFoot, KeyFacts } from '@carloOS/ui'
 import { HopDisclosure } from '../../../components/HopDisclosure'
 
 // Request-time env, same as the insurance comparison. A set Trupanion tag
@@ -23,7 +23,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Vets.co Editorial',
   publishedAt: '2026-10-04T00:00:00Z',
-  modifiedAt: '2026-10-12T00:00:00Z',
+  modifiedAt: '2026-10-17T00:00:00Z',
 })
 
 const FAQS = [
@@ -58,7 +58,7 @@ export default function TrupanionVsHealthyPawsGuidePage() {
       }}
       heroHop={
         <>
-          <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">Trupanion is the best-overall pick because it pays the clinic at checkout.</p>
+          <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">Best for a chronic condition: Trupanion pays the clinic at checkout.</p>
           <PrimaryHop href="/go/trupanion/home?s=reviews-trupanion-vs-healthy-paws-guide" label="Get a Trupanion quote" holdWithoutPartnerId />
         </>
       }
@@ -84,10 +84,17 @@ export default function TrupanionVsHealthyPawsGuidePage() {
       }
     >
       <div className="carloOS-article">
-          <LastUpdated date="2026-10-12" />
+          <LastUpdated date="2026-10-17" />
+        <KeyFacts
+          items={[
+            { label: 'Best for a chronic condition', detail: 'The Trupanion deductible is per condition, which the review says favors a chronic disease once that deductible is met. It lists 90 percent reimbursement and unlimited payouts.' },
+            { label: 'Best for clinic checkout', detail: 'Trupanion pays the clinic at checkout rather than a submit-and-wait claim. Wellness is not included. Ask the clinic whether the software integration is on.' },
+            { label: 'Best if you can pay the clinic first', detail: 'Healthy Paws says most claims are processed in 2 days. The deductible is annual, and there is no direct payment to the clinic.' },
+          ]}
+        />
         <p>The <Link href="/reviews/best-pet-insurance">pet insurance review</Link> ranks Trupanion, Healthy Paws, and Embrace on published contract terms. This guide is only the first two, because that is the choice between direct pay and paying the clinic first, then claiming. Enroll before a condition is written into the record. The review says every insurer can exclude what is already documented. Model a bill in the <Link href="/tools/insurance-reimbursement-estimator">reimbursement estimator</Link> before you treat a monthly range as what you will pay.</p>
         <h2>Trupanion</h2>
-        <p>The Trupanion listing is the best-overall pick. It lists 90 percent reimbursement, unlimited payouts, and payment to the clinic at checkout rather than a submit-and-wait claim. The deductible is per condition, which the review says favors a chronic disease once that deductible is met. Wellness is not included. See the carrier&apos;s current terms for the monthly price. The cons are the higher premium and the missing wellness layer. The review says this is the carrier whose contract obligates direct payment. It does not say every clinic has the software integration turned on. Ask the clinic.</p>
+        <p>The Trupanion listing is the pick for a chronic condition and for clinic checkout. It lists 90 percent reimbursement, unlimited payouts, and payment to the clinic at checkout rather than a submit-and-wait claim. The deductible is per condition, which the review says favors a chronic disease once that deductible is met. Wellness is not included. See the carrier&apos;s current terms for the monthly price. The cons are the higher premium and the missing wellness layer. The review says this is the carrier whose contract obligates direct payment. It does not say every clinic has the software integration turned on. Ask the clinic.</p>
         <h2>Healthy Paws</h2>
         <p>The Healthy Paws listing is the pick if you can pay the clinic first. It lists reimbursement up to 90 percent, and the Healthy Paws claims page says most claims are processed in 2 days, and Direct Pay can reimburse the vet when funding is urgent. The deductible is annual, not per condition. There is no direct payment to the clinic and no wellness add-on. See the carrier&apos;s current terms for the monthly price. Buy this when you can put the invoice on a credit card and wait to be paid back, and you do not need the clinic paid before you leave.</p>
         <p>The annual limit is a choice of $5,000, $7,000, or unlimited.</p>
@@ -124,7 +131,7 @@ export default function TrupanionVsHealthyPawsGuidePage() {
             <tbody>
               <tr className="border-b border-brand-border align-top">
                 <th scope="row" className="p-3 font-bold text-brand-dark text-left">Role</th>
-                <td className="p-3">Best overall. Pays the clinic</td>
+                <td className="p-3">Best for clinic checkout and a chronic condition. Pays the clinic</td>
                 <td className="p-3">Most claims in 2 days, per its claims page</td>
               </tr>
               <tr className="border-b border-brand-border align-top">
@@ -155,7 +162,7 @@ export default function TrupanionVsHealthyPawsGuidePage() {
             </tbody>
           </table>
         </div>
-        <ComparisonFoot updated="2026-10-12" />
+        <ComparisonFoot updated="2026-10-17" />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
                 <ArticleSourcesList title="Sources"

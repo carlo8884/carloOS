@@ -2,7 +2,7 @@ import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { liveAnchorHref } from '@carloOS/config/affiliate-hop'
-import { ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata, ArticleSourcesList, LastUpdated, ComparisonFoot } from '@carloOS/ui'
+import { ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata, ArticleSourcesList, LastUpdated, ComparisonFoot, KeyFacts } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'vets-co',
@@ -20,7 +20,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Vets.co Editorial',
   publishedAt: '2026-10-04T00:00:00Z',
-  modifiedAt: '2026-10-12T00:00:00Z',
+  modifiedAt: '2026-10-17T00:00:00Z',
 })
 
 const FAQS = [
@@ -74,10 +74,17 @@ export default function VetsterVsAskvetGuidePage() {
       }
     >
       <div className="carloOS-article">
-          <LastUpdated date="2026-10-12" />
+          <LastUpdated date="2026-10-17" />
+        <KeyFacts
+          items={[
+            { label: 'Best for a video visit', detail: 'Vetster consults are video and chat. Single visits start at $102. Plus is $12/month, billed annually. This page does not publish a wait time.' },
+            { label: 'Best for a specialist', detail: "Vetster lists specialists, including behavior, dermatology, and internal medicine. Its help article, updated 2025-12-18, says it verifies an active license in the veterinarian's jurisdiction before they go live." },
+            { label: 'Best for frequent chat', detail: 'AskVet is the subscription the review names for a new puppy, a senior pet, several pets, or a chronic condition you already understand. There is no video, and prescriptions are limited.' },
+          ]}
+        />
         <p>The <Link href="/telehealth">telehealth comparison</Link> ranks Vetster, AskVet, and Chewy Connect. Vetster versus AskVet is the choice between paying for a visit and paying for a month of chat. If the pet is in crisis, neither policy applies. The page lists pale or blue gums, breathing difficulty, collapse, suspected poisoning, severe injury, and a cat that cannot urinate as reasons to go to an emergency clinic. The <Link href="/tools/er-vs-clinic">ER versus clinic tool</Link> is the setting check. This guide is for a question that can wait for a screen.</p>
         <h2>Vetster</h2>
-        <p>Vetster is the best overall pick. Consults are video and chat. Vetster&apos;s help article, updated 2025-12-18, says it verifies an active license in the veterinarian&apos;s jurisdiction before they go live. It does not say the veterinarian is licensed where the owner is, or that a prescription is therefore valid. Specialists are listed, including behavior, dermatology, and internal medicine. This page does not publish a wait time. The con is a higher per-visit figure than a chat plan.</p>
+        <p>Vetster is the pick for a video visit or a specialist. Consults are video and chat. Vetster&apos;s help article, updated 2025-12-18, says it verifies an active license in the veterinarian&apos;s jurisdiction before they go live. It does not say the veterinarian is licensed where the owner is, or that a prescription is therefore valid. Specialists are listed, including behavior, dermatology, and internal medicine. This page does not publish a wait time. The con is a higher per-visit figure than a chat plan.</p>
         <p>Single visits start at $102. Plus is $12/month, billed annually.</p>
         <h2>AskVet</h2>
         <p>AskVet is the subscription option. See the carrier&apos;s current terms for a monthly chat price. The current askvet.app pages do not print a visit type. Specialists are listed as general practice, and prescriptions are limited. The review says that is a reasonable trade when the questions are frequent: a new puppy, a senior pet, several pets, or a chronic condition you already understand and need to ask about. It is a weak substitute when you needed someone to look at the animal.</p>
@@ -117,8 +124,8 @@ export default function VetsterVsAskvetGuidePage() {
             <tbody>
               <tr className="border-b border-brand-border align-top">
                 <th scope="row" className="p-3 font-bold text-brand-dark text-left">Role</th>
-                <td className="p-3">Best overall</td>
-                <td className="p-3">Subscription</td>
+                <td className="p-3">Best for a video visit or a specialist</td>
+                <td className="p-3">Best for frequent chat</td>
               </tr>
               <tr className="border-b border-brand-border align-top">
                 <th scope="row" className="p-3 font-bold text-brand-dark text-left">Format</th>
@@ -143,7 +150,7 @@ export default function VetsterVsAskvetGuidePage() {
             </tbody>
           </table>
         </div>
-        <ComparisonFoot updated="2026-10-12" />
+        <ComparisonFoot updated="2026-10-17" />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
                 <ArticleSourcesList

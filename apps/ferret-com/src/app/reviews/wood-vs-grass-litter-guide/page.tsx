@@ -19,7 +19,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-10-04T00:00:00Z',
-  modifiedAt: '2026-10-12T00:00:00Z',
+  modifiedAt: '2026-10-17T00:00:00Z',
 })
 
 const FAQS = [
@@ -70,7 +70,7 @@ export default function WoodVsGrassLitterGuidePage() {
       }
     >
       <div className="carloOS-article">
-          <LastUpdated date="2026-10-12" />
+          <LastUpdated date="2026-10-17" />
         <EmailCapture
           variant="inline"
           siteId="ferret-com"
@@ -87,7 +87,7 @@ export default function WoodVsGrassLitterGuidePage() {
             "The litter review says all three safe options are non-clumping and low-dust, and not to switch to a clumping cat litter for smell.",
           ]}
         />
-        <p>Prices below are the ones on the <Link href="/reviews/best-ferret-litter">litter review</Link>. Compressed wood pellets are the odor pick. Pelleted grass is for ferrets that dislike a harder texture. Recycled paper is the overall winner on that page, and it is a separate comparison.</p>
+        <p>Prices below are the ones on the <Link href="/reviews/best-ferret-litter">litter review</Link>. Compressed wood pellets are the odor pick. Pelleted grass is for ferrets that dislike a harder texture. Recycled paper is the pick for most ferrets on that page, and it is a separate comparison.</p>
         <h2>What the review says about wood pellets</h2>
         <p>Compressed wood pellet litter is Best for Odor. Dust is low once the fines are sifted. It does not clump. Odor control is the strongest of the safe options on that page. The caveat is the wood form: use only heat-treated, low-phenol compressed pellets. The review says aromatic raw cedar and pine shavings release phenols implicated in respiratory irritation, so loose aromatic shavings are not this product. Wood is harder underfoot than paper. The price tier is the lowest of the three litters.</p>
         <h2>What the review says about grass pellets</h2>
@@ -157,7 +157,7 @@ export default function WoodVsGrassLitterGuidePage() {
             </tbody>
           </table>
         </div>
-        <ComparisonFoot updated="2026-10-12" />
+        <ComparisonFoot updated="2026-10-17" />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
       </div>

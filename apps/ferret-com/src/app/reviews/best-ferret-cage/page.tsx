@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { HopDisclosure } from '../../../components/HopDisclosure'
-import { TableShopLink, ComparisonFoot, EmailCapture, PrimaryHop, buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, QuickPicks, ArticleSourcesList, CrossPortfolioCard, LastUpdated } from '@carloOS/ui'
+import { TableShopLink, ComparisonFoot, EmailCapture, PrimaryHop, buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, QuickPicks, ArticleSourcesList, CrossPortfolioCard, LastUpdated, KeyFacts } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, buildItemListSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -32,7 +32,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-11T00:00:00Z',
-  modifiedAt: '2026-10-13T00:00:00Z',
+  modifiedAt: '2026-10-17T00:00:00Z',
 
   citation: SOURCES,
 })
@@ -87,9 +87,9 @@ const faqSchema = buildFAQSchema({ questions: FAQS })
 const combined = combineSchemas(schema, breadcrumbSchema, itemList, faqSchema)
 
 const QUICK_PICKS = [
-  { label: 'Best Overall', name: 'Ferret Nation Double Unit', subtitle: 'Modular · Full-front doors · Confirm bar spacing', href: '#ferret-nation', pickHop: '/go/amazon/B0054U8UGW?s=reviews-best-ferret-cage' },
-  { label: 'Best Value', name: 'Prevue Feisty Ferret', subtitle: 'Ferret-spaced · Shelves + ramps', href: '#prevue-feisty' },
-  { label: 'Entry / Single Ferret', name: 'Kaytee Multi-Level', subtitle: 'Widely stocked · One ferret + out-time', href: '#kaytee-multilevel' },
+  { label: 'Best for one to four ferrets', name: 'Ferret Nation Double Unit', subtitle: 'Modular · Full-front doors · Confirm bar spacing', href: '#ferret-nation', pickHop: '/go/amazon/B0054U8UGW?s=reviews-best-ferret-cage', methodLink: true },
+  { label: 'Best for one or two ferrets', name: 'Prevue Feisty Ferret', subtitle: 'Ferret-spaced · Shelves + ramps', href: '#prevue-feisty' },
+  { label: 'Best for one ferret', name: 'Kaytee Multi-Level', subtitle: 'Widely stocked · One ferret + out-time', href: '#kaytee-multilevel' },
 ]
 
 
@@ -108,7 +108,7 @@ export default function BestFerretCagePage() {
         }}
         heroHop={
         <>
-          <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">The Ferret Nation double unit is the top cage for a small group.</p>
+          <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">Best for one to four ferrets: the Ferret Nation double unit.</p>
           <div data-fold="offer">
           <HopDisclosure above siteId="ferret-com" href="/go/amazon/B0054U8UGW?s=reviews-best-ferret-cage" />
           <PrimaryHop href='/go/amazon/B0054U8UGW?s=reviews-best-ferret-cage' label='Check price of the Ferret Nation double unit on Amazon' />
@@ -168,10 +168,17 @@ export default function BestFerretCagePage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-11"
-            updatedAt="2026-10-13"
+            updatedAt="2026-10-17"
             reviewedBy="Editorial team"
           />
-          <LastUpdated date="2026-10-13" />
+          <LastUpdated date="2026-10-17" />
+          <KeyFacts
+            items={[
+              { label: 'Best for one to four ferrets', detail: 'Ferret Nation double unit. The card lists a modular stack, full-width doors, deep leak-proof pans, and a fit of 1–4 ferrets. Confirm bar spacing on the box. Price tier $$$.' },
+              { label: 'Best for one or two ferrets', detail: 'Prevue Feisty Ferret. Ferret-appropriate spacing, several shelves and ramps, and a mid price tier. It is not expandable.' },
+              { label: 'Best for one ferret', detail: 'Kaytee Multi-Level. Entry price tier, widely stocked, for one ferret with generous daily time outside the cage. Confirm spacing on the model.' },
+            ]}
+          />
           <EmailCapture
             variant="inline"
             siteId="ferret-com"
@@ -281,7 +288,8 @@ export default function BestFerretCagePage() {
 
           <ReviewCard
             id="ferret-nation"
-            badge="Best Overall"
+            badge="Best for one to four ferrets"
+            methodLink
             name="Ferret Nation Double Unit"
             subtitle="Full-width front doors, deep pans, expandable two-storey footprint. Confirm bar spacing on the box."
             winner
@@ -306,7 +314,7 @@ export default function BestFerretCagePage() {
 
           <ReviewCard
             id="prevue-feisty"
-            badge="Best Value"
+            badge="Best for one or two ferrets"
             name="Prevue Pet Products Feisty Ferret Cage"
             subtitle="Ferret-appropriate bar spacing, multiple solid shelves and ramps, mid-tier price"
             description={
@@ -329,7 +337,7 @@ export default function BestFerretCagePage() {
 
           <ReviewCard
             id="kaytee-multilevel"
-            badge="Entry / Single Ferret"
+            badge="Best for one ferret"
             name="Kaytee Multi-Level Ferret Home"
             subtitle="Entry-level multi-level cage, widely stocked, suited to a single ferret with daily out-time"
             description={
@@ -368,25 +376,25 @@ export default function BestFerretCagePage() {
                 <tr className="border-b border-brand-border">
                   <td className="p-3">One to four ferrets, and the cage is the long-term home</td>
                   <td className="p-3 font-bold"><a href="#ferret-nation">Ferret Nation double</a><TableShopLink href={"/go/amazon/B0054U8UGW?s=reviews-best-ferret-cage"} product={"Ferret Nation double"} /></td>
-                  <td className="p-3">Best overall. Confirm bar spacing on the box. Full-width doors. Price tier $$$</td>
+                  <td className="p-3">Best for one to four ferrets. Confirm bar spacing on the box. Full-width doors. Price tier $$$</td>
                   <td className="p-3">Heavy, large, and the wire shelves still need covering</td>
                 </tr>
                 <tr className="border-b border-brand-border">
                   <td className="p-3">One or two ferrets, and the double unit is too big or too expensive</td>
                   <td className="p-3 font-bold"><a href="#prevue-feisty">Prevue Feisty Ferret</a><TableShopLink href={"/go/amazon/B000QFMYWQ?s=reviews-best-ferret-cage"} product={"Prevue Feisty Ferret"} /></td>
-                  <td className="p-3">Best value. Ferret-appropriate spacing. Mid price tier $$</td>
+                  <td className="p-3">Best for one or two ferrets. Ferret-appropriate spacing. Mid price tier $$</td>
                   <td className="p-3">Not expandable, and smaller than the double modular unit</td>
                 </tr>
                 <tr className="border-b border-brand-border">
                   <td className="p-3">One ferret, with generous daily out-of-cage time</td>
                   <td className="p-3 font-bold"><a href="#kaytee-multilevel">Kaytee Multi-Level</a><TableShopLink href={"/go/amazon/B008FONT2Y?s=reviews-best-ferret-cage"} product={"Kaytee Multi-Level"} /></td>
-                  <td className="p-3">Entry pick. Spacing in range if you verify the model. Price tier $</td>
+                  <td className="p-3">Best for one ferret. Spacing in range if you verify the model. Price tier $</td>
                   <td className="p-3">Too tight for a pair living in it full-time</td>
                 </tr>
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-13" />
+          <ComparisonFoot updated="2026-10-17" />
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
