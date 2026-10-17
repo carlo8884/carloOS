@@ -407,18 +407,10 @@ export function HomeGuides() {
                     href="/editorial-standards"
                     className="group flex items-center gap-2.5 no-underline"
                   >
-                    <div className={`relative h-9 w-14 shrink-0 overflow-hidden rounded-md bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                      <StockImage manifestKey="fish-com:species-african-cichlid" alt="An African cichlid in an aquarium" aspect="4:3" />
-                    </div>
                     <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary group-hover:text-brand-dark">How we work</span>
                   </Link>
                 </div>
-                <div className="flex items-center gap-2.5">
-                  <div className={`relative h-10 w-14 shrink-0 overflow-hidden rounded-md bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                    <StockImage manifestKey="fish-com:species-african-cichlid" alt="An African cichlid in an aquarium" aspect="4:3" />
-                  </div>
-                  <h2 className="font-display font-bold text-brand-dark tracking-tight text-2xl italic mb-0">Practical and source-grounded.</h2>
-                </div>
+                <h2 className="font-display font-bold text-brand-dark tracking-tight text-2xl italic mb-0">Practical and source-grounded.</h2>
               </div>
               <Link
                 href="/editorial-standards"
@@ -428,25 +420,16 @@ export function HomeGuides() {
                   <StockImage manifestKey="fish-com:species-african-cichlid" alt="An African cichlid in an aquarium" aspect="4:3" subtleCredit />
                 </div>
                 <div className="pr-3 py-2">
-                  <div className="mb-1 flex items-center gap-2">
-                    <div className={`relative h-7 w-10 shrink-0 overflow-hidden rounded-md bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                      <StockImage manifestKey="fish-com:species-african-cichlid" alt="An African cichlid in an aquarium" aspect="4:3" subtleCredit />
-                    </div>
+                  <div className="mb-1">
                     <div className="font-display font-bold text-brand-dark text-sm leading-tight italic group-hover:text-brand-primary">Editorial standards</div>
                   </div>
-                  <div className="text-xs text-brand-text-mid mt-0.5 flex items-center gap-2">
-                    <div className={`relative h-6 w-9 shrink-0 overflow-hidden rounded-md bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                      <StockImage manifestKey="fish-com:species-african-cichlid" alt="" aspect="4:3" />
-                    </div>
+                  <div className="text-xs text-brand-text-mid mt-0.5">
                     <span>Signed guides, no invented experts.</span>
                   </div>
                 </div>
               </Link>
             </div>
-            <div className="text-sm text-brand-text-mid leading-relaxed mb-3 flex items-start gap-2.5">
-              <div className={`relative mt-0.5 h-8 w-12 shrink-0 overflow-hidden rounded-md bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                <StockImage manifestKey="fish-com:species-african-cichlid" alt="" aspect="4:3" />
-              </div>
+            <div className="text-sm text-brand-text-mid leading-relaxed mb-3">
               <span>Fish.com Editorial writes the guides on this site. We reference published aquarist literature, manufacturer specifications, and species-specific water-parameter data. We don't use AI-generated aquarists or biologists. Affiliate links are disclosed above the fold on every product page.</span>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4">
@@ -460,16 +443,10 @@ export function HomeGuides() {
                     <StockImage manifestKey={item.imageKey} alt={item.imageAlt} aspect="4:3" subtleCredit />
                   </div>
                   <div className="py-3 pr-3">
-                    <div className="mb-1 flex items-center gap-2.5">
-                      <div className={`relative h-8 w-12 shrink-0 overflow-hidden rounded-md bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                        <StockImage manifestKey={item.imageKey} alt={item.imageAlt} aspect="4:3" />
-                      </div>
+                    <div className="mb-1">
                       <div className="font-display font-bold text-brand-dark text-sm leading-tight italic group-hover:text-brand-primary">{item.title}</div>
                     </div>
-                    <div className="text-xs text-brand-text-mid mt-1 leading-relaxed flex items-start gap-2">
-                      <div className={`relative mt-0.5 h-6 w-9 shrink-0 overflow-hidden rounded-md bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                        <StockImage manifestKey={item.imageKey} alt="" aspect="4:3" />
-                      </div>
+                    <div className="text-xs text-brand-text-mid mt-1 leading-relaxed">
                       <span>{item.note}</span>
                     </div>
                   </div>
@@ -487,6 +464,7 @@ export function HomeGuides() {
     </>
   )
 }
+
 
 
 
