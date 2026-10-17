@@ -10,6 +10,7 @@
  */
 import { useEffect } from 'react'
 import { affiliateClickParams } from '../lib/affiliate-click'
+import { AI_SOURCE_STORAGE_KEY, affiliateClickWithAiSource, resolveAiSource } from '../lib/ai-referral'
 import { experimentEventParams } from '../lib/experiment-client'
 import { trackEvent } from '../lib/track-event'
 
@@ -79,7 +80,18 @@ export function AffiliateClickListener({ site }: { site: string }) {
         destination: click.destination,
         ...experimentEventParams(),
       }
-      trackEvent('affiliate_click', payload)
+      let stored: string | null = null
+      try {
+        stored = sessionStorage.getItem(AI_SOURCE_STORAGE_KEY)
+      } catch {
+        stored = null
+      }
+      const aiSource = resolveAiSource({
+        referrer: document.referrer,
+        utmSource: new URLSearchParams(window.location.search).get('utm_source'),
+        stored,
+      })
+      trackEvent('affiliate_click', affiliateClickWithAiSource(site, payload, aiSource))
       trackEvent('hop_click', {
         ...payload,
         card_id: click.slot,

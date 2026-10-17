@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { HopDisclosure } from '../../../components/HopDisclosure'
-import { TableShopLink, ComparisonFoot, EmailCapture, PrimaryHop, buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, QuickPicks, ArticleSourcesList, CrossPortfolioCard, LastUpdated } from '@carloOS/ui'
+import { TableShopLink, ComparisonFoot, EmailCapture, PrimaryHop, buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, QuickPicks, ArticleSourcesList, CrossPortfolioCard, LastUpdated, KeyFacts } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, buildItemListSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -31,7 +31,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-06-11T00:00:00Z',
-  modifiedAt: '2026-10-13T00:00:00Z',
+  modifiedAt: '2026-10-17T00:00:00Z',
 
   citation: SOURCES,
 })
@@ -85,9 +85,9 @@ const faqSchema = buildFAQSchema({ questions: FAQS })
 const combined = combineSchemas(schema, breadcrumbSchema, itemList, faqSchema)
 
 const QUICK_PICKS = [
-  { label: 'Best Overall', name: 'Recycled Paper Pellet', subtitle: 'Low-dust · Non-clumping · Soft', href: '#paper-pellet', pickHop: '/go/amazon-brand/recycled+paper+pellet+litter+non+clumping?s=reviews-best-ferret-litter' },
-  { label: 'Best for Odor', name: 'Heat-Treated Wood Pellet', subtitle: 'Compressed pellets · Strong odor control', href: '#wood-pellet' },
-  { label: 'Soft Alternative', name: 'Grass / Plant-Fiber Pellet', subtitle: 'Low-dust · Lighter tracking', href: '#grass-pellet' },
+  { label: 'Best for most ferrets', name: 'Recycled Paper Pellet', subtitle: 'Low-dust · Non-clumping · Soft', href: '#paper-pellet', pickHop: '/go/amazon-brand/recycled+paper+pellet+litter+non+clumping?s=reviews-best-ferret-litter', methodLink: true },
+  { label: 'Best for odor', name: 'Heat-Treated Wood Pellet', subtitle: 'Compressed pellets · Strong odor control', href: '#wood-pellet' },
+  { label: 'Best for a picky texture', name: 'Grass / Plant-Fiber Pellet', subtitle: 'Low-dust · Lighter tracking', href: '#grass-pellet' },
 ]
 
 
@@ -106,7 +106,7 @@ export default function BestFerretLitterPage() {
         }}
         heroHop={
         <>
-          <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">Recycled paper pellets are the top ferret litter because they do not clump and the dust stays low.</p>
+          <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">Best for most ferrets: recycled paper pellets stay low-dust and do not clump.</p>
           <div data-fold="offer">
           <HopDisclosure above siteId="ferret-com" href="/go/amazon-brand/recycled+paper+pellet+litter+non+clumping?s=reviews-best-ferret-litter" />
           <PrimaryHop href='/go/amazon-brand/recycled+paper+pellet+litter+non+clumping?s=reviews-best-ferret-litter' label="Open the recycled paper-pellet search." />
@@ -166,10 +166,17 @@ export default function BestFerretLitterPage() {
           <ArticleByline
             siteName="Ferret.com Editorial"
             publishedAt="2026-06-11"
-            updatedAt="2026-10-13"
+            updatedAt="2026-10-17"
             reviewedBy="Editorial team"
           />
-          <LastUpdated date="2026-10-13" />
+          <LastUpdated date="2026-10-17" />
+          <KeyFacts
+            items={[
+              { label: 'Best for most ferrets', detail: 'Recycled paper pellets. Very low dust, no clumping, soft underfoot, moderate odor control. Price tier $$. Change the pan rather than scoop and top it up.' },
+              { label: 'Best for odor', detail: 'Heat-treated compressed wood pellets. Strongest odor control of the safe options, low dust once fines are sifted, price tier $. Never loose cedar or pine shavings.' },
+              { label: 'Best for a picky texture', detail: 'Pelleted grass or other plant fiber. Low dust, non-clumping, and softer than wood. Wet pellets break down faster. Price tier $$.' },
+            ]}
+          />
           <EmailCapture
             variant="inline"
             siteId="ferret-com"
@@ -266,7 +273,8 @@ export default function BestFerretLitterPage() {
 
           <ReviewCard
             id="paper-pellet"
-            badge="Best Overall"
+            badge="Best for most ferrets"
+            methodLink
             name="Recycled Paper Pellet Litter"
             subtitle="Low-dust, non-clumping, soft on feet — the default ferret litter"
             winner
@@ -291,7 +299,7 @@ export default function BestFerretLitterPage() {
 
           <ReviewCard
             id="wood-pellet"
-            badge="Best for Odor"
+            badge="Best for odor"
             name="Compressed Wood (Heat-Treated) Pellet Litter"
             subtitle="Compressed softwood pellets, strong odor control — never loose shavings"
             description={
@@ -315,7 +323,7 @@ export default function BestFerretLitterPage() {
 
           <ReviewCard
             id="grass-pellet"
-            badge="Soft Alternative"
+            badge="Best for a picky texture"
             name="Pelleted Grass / Plant-Fiber Litter"
             subtitle="Soft plant-fiber pellets, low dust, lighter tracking"
             description={
@@ -351,7 +359,7 @@ export default function BestFerretLitterPage() {
                 <tr className="border-b border-brand-border">
                   <td className="p-3">A default that most ferrets accept</td>
                   <td className="p-3 font-bold"><a href="#paper-pellet">Recycled paper pellets</a><TableShopLink href={"/go/amazon-brand/recycled+paper+pellet+litter+non+clumping?s=reviews-best-ferret-litter"} product={"Recycled paper pellets"} /></td>
-                  <td className="p-3">Best overall. Very low dust. Soft. Price tier $$</td>
+                  <td className="p-3">Best for most ferrets. Very low dust. Soft. Price tier $$</td>
                   <td className="p-3">Moderate odor control. Change the box rather than scoop and top up</td>
                 </tr>
                 <tr className="border-b border-brand-border">
@@ -363,13 +371,13 @@ export default function BestFerretLitterPage() {
                 <tr className="border-b border-brand-border">
                   <td className="p-3">A ferret that rejects paper or wood texture</td>
                   <td className="p-3 font-bold"><a href="#grass-pellet">Grass or plant-fiber pellets</a></td>
-                  <td className="p-3">Soft alternative. Low dust. Non-clumping. Price tier $$</td>
+                  <td className="p-3">Best for a picky texture. Low dust. Non-clumping. Price tier $$</td>
                   <td className="p-3">Moderate odor, and the pellets break down faster when wet</td>
                 </tr>
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-13" />
+          <ComparisonFoot updated="2026-10-17" />
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />

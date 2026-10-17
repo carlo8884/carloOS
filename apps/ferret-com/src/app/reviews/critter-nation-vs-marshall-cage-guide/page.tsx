@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { HopDisclosure } from '../../../components/HopDisclosure'
-import { ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, buildArticleSchema, buildItemListSchema, buildMetadata, combineSchemas, ArticleSourcesList, LastUpdated, ComparisonFoot } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, buildArticleSchema, buildItemListSchema, buildMetadata, combineSchemas, ArticleSourcesList, LastUpdated, ComparisonFoot, KeyFacts } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -19,17 +19,17 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-10-10T00:00:00Z',
-  modifiedAt: '2026-10-12T00:00:00Z',
+  modifiedAt: '2026-10-17T00:00:00Z',
 })
 
 const FAQS = [
   {
-    question: 'Which cage does the cage-setup page pick?',
-    answer: 'The MidWest Critter Nation Double Unit (Model 162), marked Best Overall and the winner. The card lists 36×25×62 inches, two large solid PVC floors, full-width double doors on each level, and casters. The manufacturer page does not print bar spacing, so confirm it on the box.',
+    question: 'Which cage does the cage-setup page mark for solid floors?',
+    answer: 'The MidWest Critter Nation Double Unit (Model 162), marked Best for solid floors. The card lists 36×25×62 inches, two large solid PVC floors, full-width double doors on each level, and casters. The manufacturer page does not print bar spacing, so confirm it on the box.',
   },
   {
     question: 'When does the page point to the Marshall cage?',
-    answer: 'As the Best Starter for a first cage in a smaller apartment. The card says the current mansion listings are two levels, accessories are not included, and a smaller starter cage is often outgrown once a second ferret arrives. Check bar spacing and footprint on the current listing.',
+    answer: 'As the pick for a first cage in a smaller apartment. The card says the current mansion listings are two levels, accessories are not included, and a smaller starter cage is often outgrown once a second ferret arrives. Check bar spacing and footprint on the current listing.',
   },
   {
     question: 'Why is there no Marshall shop button on this page?',
@@ -57,7 +57,7 @@ export default function CritterNationVsMarshallCageGuidePage() {
       }}
       heroHop={
         <>
-          <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">The Critter Nation double unit is the top cage because it has two solid floors and full-width doors on each level.</p>
+          <p data-fold="answer" className="text-base text-white/85 leading-snug max-w-2xl mb-4">Best for solid floors: the Critter Nation double unit.</p>
           <div data-fold="offer">
           <HopDisclosure tone="on-dark" siteId="ferret-com" href="/go/amazon/B001NJ0DAY?s=reviews-critter-nation-vs-marshall-cage-guide" /><a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" href="/go/amazon/B001NJ0DAY?s=reviews-critter-nation-vs-marshall-cage-guide">Browse a Critter Nation double unit on Amazon →</a>
         </div>
@@ -81,7 +81,13 @@ export default function CritterNationVsMarshallCageGuidePage() {
       }
     >
       <div className="carloOS-article">
-          <LastUpdated date="2026-10-12" />
+          <LastUpdated date="2026-10-17" />
+        <KeyFacts
+          items={[
+            { label: 'Best for solid floors', detail: 'Critter Nation double unit (Model 162). 36×25×62 inches, two large solid PVC floors, full-width double doors on each level, and casters. Confirm bar spacing on the box.' },
+            { label: 'Best for a first cage', detail: 'A Marshall ferret cage. The current mansion listings are two levels, accessories are not included, and the footprint fits smaller apartments. A second ferret often outgrows it.' },
+          ]}
+        />
         <EmailCapture
           variant="inline"
           siteId="ferret-com"
@@ -98,11 +104,11 @@ export default function CritterNationVsMarshallCageGuidePage() {
             "Cover bare wire ramps and keep the floor solid or fleece-lined.",
           ]}
         />
-        <p>Both cages are cards on the <Link href="/care/cage-setup">cage-setup page</Link>. The MidWest Critter Nation double unit is the Best Overall pick, and a Marshall ferret cage is the Best Starter. Either one is the bedroom, not the house, and the ferret still needs daily time out of it.</p>
+        <p>Both cages are cards on the <Link href="/care/cage-setup">cage-setup page</Link>. The MidWest Critter Nation double unit is the pick for solid floors, and a Marshall ferret cage is the pick for a first cage. Either one is the bedroom, not the house, and the ferret still needs daily time out of it.</p>
         <h2>What the page says about Critter Nation</h2>
-        <p>The MidWest Critter Nation Double Unit (Model 162) is Best Overall and the winner. The card lists 36×25×62 inches for the double unit, two large solid PVC floors with a connecting ramp, full-width double doors on each level, and casters for moving it. A single-level Model 161 and three-level expansion options exist. The manufacturer page does not print bar spacing, so confirm it on the box. The cons are a heavy, large cage you should measure for, assembly that takes several hours and is easier with two people, and a ramp that can be slippery without a fleece cover.</p>
+        <p>The MidWest Critter Nation Double Unit (Model 162) is the pick for solid floors. The card lists 36×25×62 inches for the double unit, two large solid PVC floors with a connecting ramp, full-width double doors on each level, and casters for moving it. A single-level Model 161 and three-level expansion options exist. The manufacturer page does not print bar spacing, so confirm it on the box. The cons are a heavy, large cage you should measure for, assembly that takes several hours and is easier with two people, and a ramp that can be slippery without a fleece cover.</p>
         <h2>What the page says about Marshall</h2>
-        <p>The Marshall ferret cage is Best Starter. Marshall’s old Designer Ferret Cage page is gone, so look for Marshall’s current ferret cages instead. The current mansion listings are two levels, and accessories are not included. Check bar spacing and footprint on the current listing. The card says the footprint fits smaller apartments and the brand is widely available in US pet retail. The cons are that a two-ferret household outgrows it, the pan area is smaller than the Critter Nation’s, and plastic shelves wear in heavy-use households.</p>
+        <p>The Marshall ferret cage is the pick for a first cage. Marshall’s old Designer Ferret Cage page is gone, so look for Marshall’s current ferret cages instead. The current mansion listings are two levels, and accessories are not included. Check bar spacing and footprint on the current listing. The card says the footprint fits smaller apartments and the brand is widely available in US pet retail. The cons are that a two-ferret household outgrows it, the pan area is smaller than the Critter Nation’s, and plastic shelves wear in heavy-use households.</p>
         <p>Floor space for the number of ferrets is on the <Link href="/tools/cage-size-calculator">cage-size calculator</Link>. The cage-setup page gives about 36 × 24 inches with three levels for two ferrets as a planning figure, not a published standard.</p>
         <h2>Who should buy which cage</h2>
         <p>Buy the Critter Nation when you have room for a 36×25×62 inch cage, want solid floors and full-width doors for cleaning, and may keep two ferrets. Buy a Marshall cage when you need a first cage for one ferret in a smaller apartment and can check bar spacing and footprint on the listing. Skip the Marshall when a second ferret is already planned. Skip the Critter Nation when you cannot measure the room or manage a multi-hour assembly.</p>
@@ -120,8 +126,8 @@ export default function CritterNationVsMarshallCageGuidePage() {
             <tbody>
               <tr className="border-b border-brand-border align-top">
                 <th scope="row" className="p-3 font-bold text-brand-dark text-left">Role</th>
-                <td className="p-3">Best Overall, and the winner</td>
-                <td className="p-3">Best Starter</td>
+                <td className="p-3">Best for solid floors</td>
+                <td className="p-3">Best for a first cage</td>
               </tr>
               <tr className="border-b border-brand-border align-top">
                 <th scope="row" className="p-3 font-bold text-brand-dark text-left">Size</th>
@@ -151,7 +157,7 @@ export default function CritterNationVsMarshallCageGuidePage() {
             </tbody>
           </table>
         </div>
-        <ComparisonFoot updated="2026-10-12" />
+        <ComparisonFoot updated="2026-10-17" />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
                 <ArticleSourcesList

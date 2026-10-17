@@ -39,9 +39,9 @@ function QuickPickShopLink({ href, name, shopLabel, quietUntilTag = false }: { h
   )
 }
 
-/** Small method link beside a Best Overall label. Same line as the badge so the shop row does not move down. */
-function HowWePickLink({ label }: { label?: string }) {
-  if (label !== 'Best Overall') return null
+/** Small method link beside a Best Overall label, or a renamed situation pick that used to be one. Same line as the badge so the shop row does not move down. */
+function HowWePickLink({ show }: { show: boolean }) {
+  if (!show) return null
   if (!EARNING_PICK_SITES.has(process.env.NEXT_PUBLIC_SITE_ID ?? '')) return null
   return (
     <a
@@ -96,6 +96,9 @@ interface ReviewCardProps {
   /** Highlights the card with primary color top border */
   winner?: boolean
 
+  /** Keep the How we pick link when this card used to be labeled Best Overall. */
+  methodLink?: boolean
+
   /** Anchor ID for jump links */
   id?: string
 }
@@ -121,6 +124,7 @@ export function ReviewCard({
   ctaAffiliateProduct,
   editorial,
   winner = false,
+  methodLink = false,
   id,
 }: ReviewCardProps) {
   const rawHref = ctaHref && ctaHref !== '#' ? ctaHref : undefined
@@ -161,7 +165,7 @@ export function ReviewCard({
           {badge && (
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2 break-words">
               {badgeEmoji} {badge}
-              <HowWePickLink label={badge} />
+              <HowWePickLink show={badge === 'Best Overall' || methodLink} />
             </div>
           )}
           <h2 className="font-display text-2xl font-black text-brand-dark tracking-tight mb-1 break-words">
@@ -311,8 +315,10 @@ interface QuickPickItem {
   /** Page the subtitle's figure is taken from, kept beside the claim. */
   sourceUrl?: string
   href: string
-  /** Existing product hop for the Best Overall card. Other labels ignore it. */
+  /** Existing product hop. Shown for whichever pick already carries it. */
   pickHop?: string
+  /** Keep the How we pick link when this pick used to be labeled Best Overall. */
+  methodLink?: boolean
   /** Visible quick-pick wording when the hop is a search, not a product page. */
   pickShopLabel?: string
 }
@@ -341,7 +347,7 @@ export function QuickPicks({ items, title = 'Jump to Your Pick', embedded = fals
             <a href={item.href} aria-label={`${item.label}: ${item.name}`} className="absolute inset-0 rounded-lg" />
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-1.5 break-words">
               {item.emoji} {item.label}
-              <HowWePickLink label={item.label} />
+              <HowWePickLink show={item.label === 'Best Overall' || Boolean(item.methodLink)} />
               <QuickPickShopLink href={item.pickHop} name={item.name} shopLabel={item.pickShopLabel} quietUntilTag={quietUntilTag} />
             </div>
             <div className="pointer-events-none">

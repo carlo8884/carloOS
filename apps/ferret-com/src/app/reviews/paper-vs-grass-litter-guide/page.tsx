@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata, ArticleSourcesList, LastUpdated, ComparisonFoot, TableShopLink, ShopCtas } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata, ArticleSourcesList, LastUpdated, ComparisonFoot, TableShopLink, ShopCtas, KeyFacts } from '@carloOS/ui'
 import { HopDisclosure } from '../../../components/HopDisclosure'
 
 export const metadata: Metadata = buildMetadata({
@@ -19,13 +19,13 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
   publishedAt: '2026-10-04T00:00:00Z',
-  modifiedAt: '2026-10-13T00:00:00Z',
+  modifiedAt: '2026-10-17T00:00:00Z',
 })
 
 const FAQS = [
   {
-    question: 'Which litter does the review pick overall?',
-    answer: 'Recycled paper pellet litter is the paper pick. The review lists very low dust, no clumping, a soft feel underfoot, moderate odor control, and a mid price tier. You change the pan rather than scoop and top it up. Lighter pellets can scatter.',
+    question: 'Which litter does the review pick for most ferrets?',
+    answer: 'Recycled paper pellet litter. The review lists very low dust, no clumping, a soft feel underfoot, moderate odor control, and a mid price tier. You change the pan rather than scoop and top it up. Lighter pellets can scatter.',
   },
   {
     question: 'When does the review point to grass pellets?',
@@ -72,7 +72,13 @@ export default function PaperVsGrassLitterGuidePage() {
       }
     >
       <div className="carloOS-article">
-          <LastUpdated date="2026-10-13" />
+          <LastUpdated date="2026-10-17" />
+        <KeyFacts
+          items={[
+            { label: 'Best for most ferrets', detail: 'Recycled paper pellets. Very low dust, no clumping, soft underfoot, moderate odor control, mid price tier. Change the pan rather than scoop and top it up. Lighter pellets can scatter.' },
+            { label: 'Best for a picky texture', detail: 'Pelleted grass. Low dust, no clumping, soft, moderate odor. Wet pellets break down faster, so the pan may need changing more often. Mid price tier.' },
+          ]}
+        />
         <EmailCapture
           variant="inline"
           siteId="ferret-com"
@@ -91,9 +97,9 @@ export default function PaperVsGrassLitterGuidePage() {
         />
         <p>Prices below are the ones on the <Link href="/reviews/best-ferret-litter">litter review</Link>. Recycled paper pellets are the default. Pelleted grass is the softer alternative. Paper versus heat-treated wood is a different pair, on the <Link href="/reviews/paper-vs-wood-litter-guide">paper versus wood guide</Link>. Pelleted grass is set beside wood pellets in the <Link href="/reviews/wood-vs-grass-litter-guide">wood versus grass guide</Link>.</p>
         <h2>What the review says about paper pellets</h2>
-        <p>Recycled paper pellet litter is Best Overall and the winner. Dust is very low. It does not clump. The review says it is soft enough that ferrets accept it, with no clumping agent to swallow and no fine respiratory dust. Odor control is moderate compared with a perfumed cat litter. You change the pan rather than scoop and top it up. Lighter pellets can scatter. The price tier in the review is the mid tier. The review’s paper-pellet button opens an Amazon search for recycled paper-pellet litter. Purina discontinued Yesterday’s News on April 20, 2022.</p>
+        <p>Recycled paper pellet litter is the pick for most ferrets. Dust is very low. It does not clump. The review says it is soft enough that ferrets accept it, with no clumping agent to swallow and no fine respiratory dust. Odor control is moderate compared with a perfumed cat litter. You change the pan rather than scoop and top it up. Lighter pellets can scatter. The price tier in the review is the mid tier. The review’s paper-pellet button opens an Amazon search for recycled paper-pellet litter. Purina discontinued Yesterday’s News on April 20, 2022.</p>
         <h2>What the review says about grass pellets</h2>
-        <p>Pelleted grass or other plant fiber is the soft alternative. Dust is low. It does not clump. The review says some ferrets prefer it to wood, odor control is moderate, and wet pellets break down faster, so the pan may need changing more often than wood. Tracking is lighter. The price tier is also the mid tier. The review calls it useful mainly when a ferret dislikes the texture of paper or wood pellets.</p>
+        <p>Pelleted grass or other plant fiber is the pick for a picky texture. Dust is low. It does not clump. The review says some ferrets prefer it to wood, odor control is moderate, and wet pellets break down faster, so the pan may need changing more often than wood. Tracking is lighter. The price tier is also the mid tier. The review calls it useful mainly when a ferret dislikes the texture of paper or wood pellets.</p>
         <p>The <Link href="/tools/litter-planner">litter planner</Link> sizes the paper-pellet default for the number of ferrets. It does not switch the litter to wood or grass by count.</p>
         <h2>Who should buy which litter</h2>
         <p>Buy paper pellets when you want the litter the review calls the default: very low dust, non-clumping, and widely available. Buy grass pellets when texture is the complaint and you can change the pan more often. Do not buy a clumping cat litter for either job. Heat-treated wood pellets stay on the odor comparison, and only as compressed low-phenol pellets, never as aromatic shavings.</p>
@@ -117,8 +123,8 @@ export default function PaperVsGrassLitterGuidePage() {
             <tbody>
               <tr className="border-b border-brand-border align-top">
                 <th scope="row" className="p-3 font-bold text-brand-dark text-left">Role</th>
-                <td className="p-3">Best Overall, and the winner</td>
-                <td className="p-3">Soft alternative</td>
+                <td className="p-3">Best for most ferrets</td>
+                <td className="p-3">Best for a picky texture</td>
               </tr>
               <tr className="border-b border-brand-border align-top">
                 <th scope="row" className="p-3 font-bold text-brand-dark text-left">Dust</th>
@@ -153,7 +159,7 @@ export default function PaperVsGrassLitterGuidePage() {
             </tbody>
           </table>
         </div>
-        <ComparisonFoot updated="2026-10-13" />
+        <ComparisonFoot updated="2026-10-17" />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
                 <ArticleSourcesList
