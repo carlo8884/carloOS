@@ -211,16 +211,10 @@ export default function HomePage() {
                   <StockImage manifestKey={item.imageKey} fallbackKey="horses-com:hero" alt={item.imageAlt} aspect="16:9" variant="inline" subtleCredit />
                 </div>
                 <div className="p-3.5">
-                  <div className="mb-1 flex items-center gap-2">
-                    <div className={`relative h-7 w-10 shrink-0 overflow-hidden rounded-md ${FILL_IMAGE}`}>
-                      <StockImage manifestKey={item.imageKey} fallbackKey="horses-com:hero" alt={item.imageAlt} aspect="4:3" variant="inline" subtleCredit />
-                    </div>
+                  <div className="mb-1">
                     <div className="font-display font-bold text-sm leading-tight" style={{ color: 'var(--brand-text-dark)' }}>{item.label}</div>
                   </div>
-                  <div className="mt-1 flex items-start gap-2 text-xs leading-relaxed" style={{ color: 'var(--brand-text-mid)' }}>
-                    <div className={`relative mt-0.5 h-6 w-9 shrink-0 overflow-hidden rounded-md ${FILL_IMAGE}`}>
-                      <StockImage manifestKey={item.imageKey} fallbackKey="horses-com:hero" alt="" aspect="4:3" variant="inline" />
-                    </div>
+                  <div className="mt-1 text-xs leading-relaxed" style={{ color: 'var(--brand-text-mid)' }}>
                     <span>{item.note}</span>
                   </div>
                 </div>
@@ -474,3 +468,4 @@ export default function HomePage() {
     </>
   )
 }
+
