@@ -216,4 +216,39 @@ Carlo offline until next week. Recap logged here + email to carlo@tabibi.com.
 ---
 
 ## 2026-10-12 ~00:07 PDT hour
-1. Fish.com homepage visual quality — hero still image-first, teal/green wash, dual CTAs, subject-forward planted aquarium matching dog.com (hero brand eyebrow left text-only so it stays matched to dog.com). Species cards, tank-planning rows, water-safety rows, equipment rows, calculator cards, product-guide chips, how-we-work, math-strip, under-hero start band, trust chips, and section headers remain photo-led. Calculator/tool cards (ToolCard) and planning/water/equipment PhotoRows were repeating the same manifest thumb on eyebrow, title, description, and CTA under an already-credited card photo; those extra chips are gone so each card/row is one photo + clean text — matching the cl
+1. Fish.com homepage visual quality — hero still image-first, teal/green wash, dual CTAs, subject-forward planted aquarium matching dog.com (hero brand eyebrow left text-only so it stays matched to dog.com). Species cards, tank-planning rows, water-safety rows, equipment rows, calculator cards, product-guide chips, how-we-work, math-strip, under-hero start band, trust chips, and section headers remain photo-led. Calculator/tool cards (ToolCard) and planning/water/equipment PhotoRows were repeating the same manifest thumb on eyebrow, title, description, and CTA under an already-credited card photo; those extra chips are gone so each card/row is one photo + clean text — matching the cleaned ToolCards/PhotoRows and dog.com pattern. No new images, no doses, no sitemap.
+
+Preview URLs (Vercel):
+- https://carlo-os-fish-com.vercel.app/
+- https://dog-com-three.vercel.app/join/pro
+- https://dog-com-three.vercel.app/trainers
+- https://horses-com.vercel.app/inquire
+- https://horses-com.vercel.app/
+
+Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners on dog/fish/horses, no sitemap regen.
+
+Carlo offline until next week. Recap logged here + email to carlo@tabibi.com.
+
+---
+
+# GROK.md — CEO lane log (preview only)
+
+## Currently underway
+* Priority 1–4 satisfied. Horses discipline-filter eyebrow is now a photo chip with the existing credited category-disciplines thumb (Mikayla Storms), linking /disciplines.
+
+## Test and deployment status
+* Preview SSO-gated; production dog pages confirmed without SSO historically.
+* Production pattern: *-com-carlo-tabibi-s-projects.vercel.app / stable review URLs (dog-com-three.vercel.app, carlo-os-fish-com.vercel.app, horses-com.vercel.app).
+* Dog / Fish / Horses production READY on latest main; Dog homepage client residual resolved (confirmed ~18:11 PDT Aug 31 through ~20:08 PDT Sep 2). Equipment eyebrow chip is the 2026-10-05 ~17:03 PDT delta.
+
+## Next (Carlo only)
+1. First flip next week if pages look right: dog.com then fish.com then horses.com. vets.co after dog.
+2. Optional: Chewy / Impact applications.
+3. Rotate any Vercel token that was ever pasted in a chat.
+4. Confirm NEXT_PUBLIC_GA_MEASUREMENT_ID=G-TZBPLTVLHQ stays on dog-com.
+5. Gmail connector scopes available (create draft / send).
+
+## Live policy
+* First flip next week, if pages look right: dog.com then fish.com then horses.com. vets.co after dog.
+* 2026-10-06 ~07:05 PDT preview: horses popular-guides eyebrow uses the existing Lily Banse Quarter Horse thumb.
+* No homepage for-sale banners. eftyUrl unset on dog/fish.
