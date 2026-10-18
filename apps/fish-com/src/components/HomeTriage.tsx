@@ -241,11 +241,8 @@ export function HomeTriage() {
                 <span className="text-xs font-bold tracking-eyebrow uppercase text-[#3aa4cc] group-hover:text-white">Decide with math, not guesses</span>
               </Link>
             </div>
-            <div className="flex items-center gap-2.5">
-              <div className={`relative h-8 w-12 shrink-0 overflow-hidden rounded-md bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                <StockImage manifestKey="fish-com:category-planted" alt="Lush aquatic plants in a planted aquarium" aspect="4:3" />
-              </div>
-              <div className="text-sm sm:text-base text-white font-semibold">6 free aquarist calculators — volume, stocking, heater wattage, water changes, CO₂, cycling</div>
+            <div className="text-sm sm:text-base text-white font-semibold">
+              6 free aquarist calculators — volume, stocking, heater wattage, water changes, CO₂, cycling
             </div>
           </div>
           <Link
