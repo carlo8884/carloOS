@@ -125,11 +125,8 @@ export function HomeTriage() {
               <span className="w-6 h-0.5 bg-brand-primary" />
               <Link
                 href="/health"
-                className="group flex items-center gap-2.5 no-underline"
+                className="group no-underline"
               >
-                <div className={`relative h-9 w-14 shrink-0 overflow-hidden rounded-md bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                  <StockImage manifestKey="fish-com:cornerstone-cycling" alt="A freshwater aquarium test kit being used to check water parameters" aspect="4:3" />
-                </div>
                 <span className="text-2xs font-bold tracking-eyebrow uppercase text-[#3aa4cc] group-hover:text-white">Start where you are</span>
               </Link>
             </div>
@@ -181,11 +178,8 @@ export function HomeTriage() {
               <span className="w-6 h-0.5 bg-brand-primary" />
               <Link
                 href="/editorial-standards"
-                className="group flex items-center gap-2.5 no-underline"
+                className="group no-underline"
               >
-                <div className={`relative h-9 w-14 shrink-0 overflow-hidden rounded-md bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                  <StockImage manifestKey="fish-com:species-thumb-corydoras" alt="Corydoras catfish" aspect="4:3" />
-                </div>
                 <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary group-hover:text-brand-dark">Why this site</span>
               </Link>
             </div>
@@ -233,20 +227,12 @@ export function HomeTriage() {
               <span className="w-6 h-0.5 bg-brand-primary" />
               <Link
                 href="/tools/aquarium-volume-calculator"
-                className="group flex items-center gap-2.5 no-underline"
+                className="group no-underline"
               >
-                <div className={`relative h-9 w-14 shrink-0 overflow-hidden rounded-md bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                  <StockImage manifestKey="fish-com:category-planted" alt="Lush aquatic plants in a planted aquarium" aspect="4:3" />
-                </div>
                 <span className="text-xs font-bold tracking-eyebrow uppercase text-[#3aa4cc] group-hover:text-white">Decide with math, not guesses</span>
               </Link>
             </div>
-            <div className="flex items-center gap-2.5">
-              <div className={`relative h-8 w-12 shrink-0 overflow-hidden rounded-md bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                <StockImage manifestKey="fish-com:category-planted" alt="Lush aquatic plants in a planted aquarium" aspect="4:3" />
-              </div>
-              <div className="text-sm sm:text-base text-white font-semibold">6 free aquarist calculators — volume, stocking, heater wattage, water changes, CO₂, cycling</div>
-            </div>
+            <div className="text-sm sm:text-base text-white font-semibold">6 free aquarist calculators — volume, stocking, heater wattage, water changes, CO₂, cycling</div>
           </div>
           <Link
             href="/tools"
