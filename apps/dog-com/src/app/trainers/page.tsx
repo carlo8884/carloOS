@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout} from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, StockImage } from '@carloOS/ui'
 
 export const metadata: Metadata = {
   ...buildMetadata({
@@ -32,6 +32,18 @@ export default function TrainersIndexPage() {
       ]}
     >
       <div className="carloOS-article">
+        <div className="not-prose my-6">
+          <StockImage
+            manifestKey="dog-com:category-training"
+            fallbackKey="dog-com:hero"
+            alt="A dog working with its handler outdoors"
+            aspect="16:9"
+            variant="inline"
+            priority
+            subtleCredit
+          />
+        </div>
+
         <p>
           This list is empty on purpose. Invented names, star ratings, and
           “featured trainers” would cheapen the domain. When a trainer has a
@@ -68,9 +80,20 @@ export default function TrainersIndexPage() {
           ranking auction. A page is a public profile on dog.com, not a booking
           or payment product.
         </p>
-        <p>
-          <Link href="/join/pro">Apply for a trainer page →</Link>
-        </p>
+        <div className="not-prose my-6 rounded-xl p-6 bg-brand-primary-pale border border-brand-border">
+          <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
+            For trainers
+          </div>
+          <p className="text-brand-text-mid text-sm mb-4">
+            Free to apply. Approval is manual. No ranking auction, no booking fees.
+          </p>
+          <Link
+            href="/join/pro"
+            className="inline-flex items-center gap-2 bg-brand-primary text-white font-bold text-sm px-6 py-3.5 rounded-lg no-underline hover:bg-brand-primary-light transition-colors duration-200"
+          >
+            Claim your free listing →
+          </Link>
+        </div>
 
         <h2>How a trainer page gets listed</h2>
         <p>
