@@ -127,9 +127,6 @@ export function HomeTriage() {
                 href="/health"
                 className="group flex items-center gap-2.5 no-underline"
               >
-                <div className={`relative h-9 w-14 shrink-0 overflow-hidden rounded-md bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                  <StockImage manifestKey="fish-com:cornerstone-cycling" alt="A freshwater aquarium test kit being used to check water parameters" aspect="4:3" />
-                </div>
                 <span className="text-2xs font-bold tracking-eyebrow uppercase text-[#3aa4cc] group-hover:text-white">Start where you are</span>
               </Link>
             </div>
@@ -137,9 +134,6 @@ export function HomeTriage() {
               href="/health"
               className="group flex items-center gap-3 overflow-hidden rounded-xl border border-white/10 bg-white/[0.05] no-underline hover:border-brand-primary transition-all"
             >
-              <div className={`relative h-14 w-20 shrink-0 overflow-hidden bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                <StockImage manifestKey="fish-com:cornerstone-cycling" alt="A freshwater aquarium test kit being used to check water parameters" aspect="4:3" subtleCredit />
-              </div>
               <div className="pr-3 py-2">
                 <div className="mb-1">
                   <div className="font-display font-bold text-white text-sm leading-tight italic group-hover:text-[#3aa4cc]">Health guides</div>
