@@ -1,3 +1,24 @@
+## 2026-10-18 ~06:23 PDT hour
+1. Fish.com homepage visual quality — cleanups shipped by other lanes this weekend (#2825, #2828, #2834, #2837, #2840). Left alone this hour.
+2. Dog.com /trainers claimed-directory shell was text-only with a plain "Apply for a trainer page →" link. Now leads with one existing credited photo (dog-com:category-training, Photo: John Tuesday, already used on the homepage and /training) and a dog.com-styled CTA card: "For trainers" eyebrow, "Free to apply. Approval is manual. No ranking auction, no booking fees.", and a primary "Claim your free listing →" button to the existing /join/pro application form. List stays empty on purpose; no trainer names, reviews, credentials or counts. /join/pro left alone.
+3. Horses.com /inquire left alone; trust chips polish is open in #2841 by another lane.
+4. Shared Footer inquire left alone.
+
+One real merged improvement: #2842, squash 5f217230e4e0f7e52d3191a4a4a22d68288839b5. No new images, no doses, no sitemap.
+
+Preview URLs (Vercel):
+- https://dog-mhaivqe86-carlo-tabibi-s-projects.vercel.app/trainers (PR preview, READY)
+- https://dog-com-three.vercel.app/trainers
+- https://dog-com-three.vercel.app/join/pro
+
+Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners on dog/fish/horses, no sitemap regen.
+
+Next: Dog.com /join/pro — single credited photo to match /trainers, keep the apply form.
+
+Carlo offline until next week. Recap logged here + email to carlo@tabibi.com.
+
+---
+
 ## 2026-10-18 ~02:03 PDT hour
 1. Fish.com homepage visual quality — hero still image-first, teal/green wash, dual CTAs, subject-forward planted aquarium matching dog.com (hero brand eyebrow left text-only so it stays matched to dog.com). Species cards, tank-planning rows, water-safety rows, equipment rows, calculator cards, product-guide chips, how-we-work, math-strip, under-hero start band, trust chips, and section headers remain photo-led. Math-strip header eyebrow and lede were repeating the same manifest thumb under the already-credited action photo and calculator cards; those extra chips are gone so the section is one photo + clean text — matching the cleaned How we work / Product guides / Equipment / Water safety / Tank planning / Species / Calculators and dog.com pattern. Hero credit left as the photographer's real display name (ק. פ.).
 2. Dog.com /join/pro + /trainers claimed-directory shells present and non-thin: apply form + claimed-only disclaimer; trainers empty-by-design with no fake listings. Left alone.
