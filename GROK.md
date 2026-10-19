@@ -1,3 +1,22 @@
+## 2026-10-19 ~16:03 PDT hour
+1. Horses.com homepage polish: the "Where to start" section header repeated the same horses-com:category-breeds thumb on the eyebrow chip, the All breed guides action photo, plus small title/note chips. Removed the extra chips so the section header is clean text and the action is one credited photo + clean text, matching the cleaned Why this site pattern and fish.com/dog.com. No new images, no doses, no sitemap.
+2. Fish.com homepage visual quality — hero still image-first matching dog.com; prior section cleanups left alone. Dog.com /join/pro + /trainers claimed-directory shells present and non-thin. Horses /inquire shared offer form intact. Shared Footer inquire left alone.
+
+One real merged improvement: Horses.com Where to start section header now single credited photo + clean text. PR #2855 (branch bot/horses-where-start-header-20261019-1603).
+
+Preview URLs (Vercel):
+- https://carlo-os-fish-com.vercel.app/
+- https://dog-com-three.vercel.app/join/pro
+- https://dog-com-three.vercel.app/trainers
+- https://horses-com.vercel.app/inquire
+- https://horses-com.vercel.app/
+
+Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners on dog/fish/horses, no sitemap regen.
+
+Carlo offline until next week. Recap logged here + email to carlo@tabibi.com.
+
+---
+
 ## 2026-10-19 ~00:04 PDT hour
 1. Horses.com homepage polish: trust chips under "Why this site" repeated the same manifest thumb three times per chip (large card photo + label chip + note chip). Removed the two small chips so each trust item is one credited photo + clean text label/note, matching the cleaned section header and the fish.com/dog.com pattern. No new images, no doses, no sitemap.
 2. Fish.com homepage visual quality — hero still image-first matching dog.com; prior section cleanups left alone. Dog.com /join/pro + /trainers claimed-directory shells present and non-thin. Horses /inquire shared offer form intact. Shared Footer inquire left alone.
