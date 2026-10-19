@@ -156,7 +156,6 @@ export function HomeTriage() {
                 <div className="p-5">
                   <div className="mb-3 flex items-center gap-2 text-[#3aa4cc]">
                     {p.icon}
-                    <span className="text-2xs font-bold tracking-eyebrow uppercase">Start here</span>
                   </div>
                   <h2 className="font-display font-bold text-white text-base leading-tight italic mb-2">{p.title}</h2>
                   <p className="text-xs text-white/55 leading-relaxed mb-3">{p.desc}</p>
