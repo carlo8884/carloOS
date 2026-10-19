@@ -234,17 +234,11 @@ export default function HomePage() {
                 <StockImage manifestKey="horses-com:category-breeds" fallbackKey="horses-com:hero" alt="A horse standing in profile, showing conformation" aspect="4:3" variant="inline" subtleCredit />
               </div>
               <div className="pr-3 py-2">
-                <div className="mb-1 flex items-center gap-2">
-                  <div className={`relative h-7 w-10 shrink-0 overflow-hidden rounded-md ${FILL_IMAGE}`}>
-                    <StockImage manifestKey="horses-com:category-breeds" fallbackKey="horses-com:hero" alt="A horse standing in profile, showing conformation" aspect="4:3" variant="inline" subtleCredit />
-                  </div>
+                <div className="mb-1">
                   <span className="block font-display font-bold text-sm leading-tight" style={{ color: 'var(--brand-text-dark)' }}>All breed guides</span>
                 </div>
-                <span className="mt-0.5 flex items-center gap-2 text-xs" style={{ color: 'var(--brand-text-mid)' }}>
-                  <div className={`relative h-6 w-9 shrink-0 overflow-hidden rounded-md ${FILL_IMAGE}`}>
-                    <StockImage manifestKey="horses-com:category-breeds" fallbackKey="horses-com:hero" alt="" aspect="4:3" variant="inline" />
-                  </div>
-                  <span>Conformation and genetic panels.</span>
+                <span className="mt-0.5 text-xs" style={{ color: 'var(--brand-text-mid)' }}>
+                  Conformation and genetic panels.
                 </span>
               </div>
             </Link>
