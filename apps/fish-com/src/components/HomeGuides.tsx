@@ -456,7 +456,7 @@ export function HomeGuides() {
           </div>
           <div className={`relative min-h-[220px] overflow-hidden rounded-xl ring-1 ring-brand-border ${FILL_IMAGE}`}>
             <div className={`absolute inset-0 ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-              <StockImage manifestKey="fish-com:species-african-cichlid" alt="An African cichlid in an aquarium" aspect="4:3" subtleCredit />
+              <StockImage manifestKey="fish-com:glossary-hero" alt="A clear planted aquarium" aspect="4:3" subtleCredit />
             </div>
           </div>
         </div>
@@ -464,7 +464,3 @@ export function HomeGuides() {
     </>
   )
 }
-
-
-
-
