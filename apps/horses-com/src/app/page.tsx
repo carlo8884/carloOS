@@ -267,9 +267,6 @@ export default function HomePage() {
               <div className="flex items-center gap-3 mb-3">
                 <span aria-hidden="true" className="h-px w-8" style={{ background: 'var(--brand-accent)' }} />
                 <Link href="/breeds/quarter-horse" className="group flex items-center gap-2.5 no-underline">
-                  <div className={`relative h-9 w-14 shrink-0 overflow-hidden rounded-md ${FILL_IMAGE}`}>
-                    <StockImage manifestKey="horses-com:featured-quarter-horse" fallbackKey="horses-com:hero" alt="An American Quarter Horse and rider schooling" aspect="4:3" variant="inline" subtleCredit />
-                  </div>
                   <span className="text-2xs font-bold uppercase tracking-eyebrow group-hover:underline" style={{ color: '#7a5520' }}>Popular on Horses.com</span>
                 </Link>
               </div>
@@ -280,16 +277,10 @@ export default function HomePage() {
                 <StockImage manifestKey="horses-com:featured-quarter-horse" fallbackKey="horses-com:hero" alt="An American Quarter Horse and rider schooling" aspect="4:3" variant="inline" subtleCredit />
               </div>
               <div className="pr-3 py-2">
-                <div className="mb-1 flex items-center gap-2">
-                  <div className={`relative h-7 w-10 shrink-0 overflow-hidden rounded-md ${FILL_IMAGE}`}>
-                    <StockImage manifestKey="horses-com:featured-quarter-horse" fallbackKey="horses-com:hero" alt="An American Quarter Horse and rider schooling" aspect="4:3" variant="inline" subtleCredit />
-                  </div>
+                <div className="mb-1">
                   <span className="block font-display font-bold text-sm leading-tight" style={{ color: 'var(--brand-text-dark)' }}>Quarter Horse guide</span>
                 </div>
-                <span className="mt-0.5 flex items-center gap-2 text-xs" style={{ color: 'var(--brand-text-mid)' }}>
-                  <div className={`relative h-6 w-9 shrink-0 overflow-hidden rounded-md ${FILL_IMAGE}`}>
-                    <StockImage manifestKey="horses-com:featured-quarter-horse" fallbackKey="horses-com:hero" alt="" aspect="4:3" variant="inline" />
-                  </div>
+                <span className="mt-0.5 text-xs" style={{ color: 'var(--brand-text-mid)' }}>
                   <span>The breed owners open first.</span>
                 </span>
               </div>
@@ -304,10 +295,7 @@ export default function HomePage() {
                 <div className="flex flex-col flex-1 p-6">
                   <div className="text-2xs font-bold uppercase tracking-eyebrow mb-2" style={{ color: 'var(--brand-primary)' }}>{guide.eyebrow}</div>
                   <h3 className="font-display font-bold text-xl leading-snug mb-2" style={{ color: 'var(--brand-text-dark)' }}>{guide.title}</h3>
-                  <div className="mb-4 flex items-start gap-2 text-sm leading-relaxed" style={{ color: 'var(--brand-text-mid)' }}>
-                    <span className={`relative mt-0.5 h-6 w-9 shrink-0 overflow-hidden rounded-md ${FILL_IMAGE}`}>
-                      <StockImage manifestKey={guide.manifestKey} fallbackKey="horses-com:hero" alt="" aspect="4:3" variant="inline" />
-                    </span>
+                  <div className="mb-4 text-sm leading-relaxed" style={{ color: 'var(--brand-text-mid)' }}>
                     <span>{guide.desc}</span>
                   </div>
                 </div>
@@ -447,4 +435,5 @@ export default function HomePage() {
     </>
   )
 }
+
 
