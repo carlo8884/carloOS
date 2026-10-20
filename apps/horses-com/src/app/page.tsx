@@ -221,9 +221,6 @@ export default function HomePage() {
               <div className="flex items-center gap-3 mb-3">
                 <span aria-hidden="true" className="h-px w-8" style={{ background: 'var(--brand-accent)' }} />
                 <Link href="/breeds" className="group flex items-center gap-2.5 no-underline">
-                  <div className={`relative h-9 w-14 shrink-0 overflow-hidden rounded-md ${FILL_IMAGE}`}>
-                    <StockImage manifestKey="horses-com:category-breeds" fallbackKey="horses-com:hero" alt="A horse standing in profile, showing conformation" aspect="4:3" variant="inline" subtleCredit />
-                  </div>
                   <span className="text-2xs font-bold uppercase tracking-eyebrow group-hover:underline" style={{ color: '#7a5520' }}>By Category</span>
                 </Link>
               </div>
@@ -234,16 +231,10 @@ export default function HomePage() {
                 <StockImage manifestKey="horses-com:category-breeds" fallbackKey="horses-com:hero" alt="A horse standing in profile, showing conformation" aspect="4:3" variant="inline" subtleCredit />
               </div>
               <div className="pr-3 py-2">
-                <div className="mb-1 flex items-center gap-2">
-                  <div className={`relative h-7 w-10 shrink-0 overflow-hidden rounded-md ${FILL_IMAGE}`}>
-                    <StockImage manifestKey="horses-com:category-breeds" fallbackKey="horses-com:hero" alt="A horse standing in profile, showing conformation" aspect="4:3" variant="inline" subtleCredit />
-                  </div>
+                <div className="mb-1">
                   <span className="block font-display font-bold text-sm leading-tight" style={{ color: 'var(--brand-text-dark)' }}>All breed guides</span>
                 </div>
-                <span className="mt-0.5 flex items-center gap-2 text-xs" style={{ color: 'var(--brand-text-mid)' }}>
-                  <div className={`relative h-6 w-9 shrink-0 overflow-hidden rounded-md ${FILL_IMAGE}`}>
-                    <StockImage manifestKey="horses-com:category-breeds" fallbackKey="horses-com:hero" alt="" aspect="4:3" variant="inline" />
-                  </div>
+                <span className="mt-0.5 text-xs" style={{ color: 'var(--brand-text-mid)' }}>
                   <span>Conformation and genetic panels.</span>
                 </span>
               </div>
@@ -259,10 +250,7 @@ export default function HomePage() {
                 <div className="flex flex-col flex-1 p-6">
                   <div className="mb-3" style={{ color: 'var(--brand-primary)' }}><CategoryIconSvg name={cat.icon} /></div>
                   <h3 className="font-display font-bold text-xl leading-snug mb-2" style={{ color: 'var(--brand-text-dark)' }}>{cat.title}</h3>
-                  <div className="mb-4 flex items-start gap-2 text-sm leading-relaxed" style={{ color: 'var(--brand-text-mid)' }}>
-                    <span className={`relative mt-0.5 h-6 w-9 shrink-0 overflow-hidden rounded-md ${FILL_IMAGE}`}>
-                      <StockImage manifestKey={cat.manifestKey} fallbackKey="horses-com:hero" alt="" aspect="4:3" variant="inline" />
-                    </span>
+                  <div className="mb-4 text-sm leading-relaxed" style={{ color: 'var(--brand-text-mid)' }}>
                     <span>{cat.desc}</span>
                   </div>
                   <span className="mt-auto inline-flex items-center text-xs font-semibold uppercase tracking-eyebrow" style={{ color: 'var(--brand-primary)' }}>Read <span aria-hidden="true" className="ml-1.5 transition-transform group-hover:translate-x-0.5">→</span></span>
@@ -459,3 +447,4 @@ export default function HomePage() {
     </>
   )
 }
+
