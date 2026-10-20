@@ -186,7 +186,7 @@ export default function HomePage() {
                 <StockImage manifestKey="horses-com:hero" fallbackKey="horses-com:hero" alt="Horses running through a grassy field" aspect="4:3" variant="inline" subtleCredit />
               </div>
               <div className="pr-3 py-2">
-                <div className="mb-1 flex items-center gap-2">
+                <div className="mb-1">
                   <span className="block font-display font-bold text-sm leading-tight" style={{ color: 'var(--brand-text-dark)' }}>Editorial standards</span>
                 </div>
                 <span className="mt-0.5 flex items-center gap-2 text-xs" style={{ color: 'var(--brand-text-mid)' }}>
@@ -328,10 +328,7 @@ export default function HomePage() {
                       <StockImage manifestKey="horses-com:tool-bcs-calculator" fallbackKey="horses-com:hero" alt="A horse standing square for body condition assessment" aspect="4:3" variant="inline" subtleCredit />
                     </div>
                     <div className="pr-3 py-1.5">
-                      <div className="mb-1 flex items-center gap-2">
-                        <div className={`relative h-7 w-10 shrink-0 overflow-hidden rounded-md ${FILL_IMAGE}`}>
-                          <StockImage manifestKey="horses-com:tool-bcs-calculator" fallbackKey="horses-com:hero" alt="A horse standing square for body condition assessment" aspect="4:3" variant="inline" subtleCredit />
-                        </div>
+                      <div className="mb-1">
                         <span className="block font-display font-bold text-sm leading-tight" style={{ color: 'var(--brand-text-dark)' }}>Body condition tool</span>
                       </div>
                       <span className="mt-0.5 flex items-center gap-2 text-xs" style={{ color: 'var(--brand-text-mid)' }}>
@@ -397,16 +394,10 @@ export default function HomePage() {
                 <StockImage manifestKey="horses-com:category-care" fallbackKey="horses-com:hero" alt="A horse receiving routine care" aspect="4:3" variant="inline" subtleCredit />
               </div>
               <div className="pr-3 py-2">
-                <div className="mb-1 flex items-center gap-2">
-                  <div className={`relative h-7 w-10 shrink-0 overflow-hidden rounded-md ${FILL_IMAGE}`}>
-                    <StockImage manifestKey="horses-com:category-care" fallbackKey="horses-com:hero" alt="A horse receiving routine care" aspect="4:3" variant="inline" subtleCredit />
-                  </div>
+                <div className="mb-1">
                   <span className="block font-display font-bold text-sm leading-tight" style={{ color: 'var(--brand-text-dark)' }}>Equine health</span>
                 </div>
                 <span className="mt-0.5 flex items-center gap-2 text-xs" style={{ color: 'var(--brand-text-mid)' }}>
-                  <div className={`relative h-6 w-9 shrink-0 overflow-hidden rounded-md ${FILL_IMAGE}`}>
-                    <StockImage manifestKey="horses-com:category-care" fallbackKey="horses-com:hero" alt="" aspect="4:3" variant="inline" />
-                  </div>
                   <span>When-to-call thresholds, no invented clinicians.</span>
                 </span>
               </div>
@@ -419,10 +410,7 @@ export default function HomePage() {
                 <div className="p-7 lg:p-8">
                   <div className="text-2xs font-bold uppercase tracking-eyebrow mb-3" style={{ color: 'var(--brand-primary)' }}>{art.eyebrow}</div>
                   <h3 className="font-display font-bold text-2xl leading-tight mb-3" style={{ color: 'var(--brand-text-dark)' }}>{art.title}</h3>
-                  <div className="mb-5 flex items-start gap-2 text-base leading-relaxed" style={{ color: 'var(--brand-text-mid)' }}>
-                    <span className={`relative mt-1 h-7 w-10 shrink-0 overflow-hidden rounded-md ${FILL_IMAGE}`}>
-                      <StockImage manifestKey={art.imageKey} fallbackKey="horses-com:hero" alt="" aspect="4:3" variant="inline" />
-                    </span>
+                  <div className="mb-5 text-base leading-relaxed" style={{ color: 'var(--brand-text-mid)' }}>
                     <span>{art.teaser}</span>
                   </div>
                   <span className="text-xs font-semibold uppercase tracking-eyebrow" style={{ color: 'var(--brand-text-light)' }}>{art.readTime} read</span>
