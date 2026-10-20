@@ -259,10 +259,7 @@ export default function HomePage() {
                 <div className="flex flex-col flex-1 p-6">
                   <div className="mb-3" style={{ color: 'var(--brand-primary)' }}><CategoryIconSvg name={cat.icon} /></div>
                   <h3 className="font-display font-bold text-xl leading-snug mb-2" style={{ color: 'var(--brand-text-dark)' }}>{cat.title}</h3>
-                  <div className="mb-4 flex items-start gap-2 text-sm leading-relaxed" style={{ color: 'var(--brand-text-mid)' }}>
-                    <span className={`relative mt-0.5 h-6 w-9 shrink-0 overflow-hidden rounded-md ${FILL_IMAGE}`}>
-                      <StockImage manifestKey={cat.manifestKey} fallbackKey="horses-com:hero" alt="" aspect="4:3" variant="inline" />
-                    </span>
+                  <div className="mb-4 text-sm leading-relaxed" style={{ color: 'var(--brand-text-mid)' }}>
                     <span>{cat.desc}</span>
                   </div>
                   <span className="mt-auto inline-flex items-center text-xs font-semibold uppercase tracking-eyebrow" style={{ color: 'var(--brand-primary)' }}>Read <span aria-hidden="true" className="ml-1.5 transition-transform group-hover:translate-x-0.5">→</span></span>
