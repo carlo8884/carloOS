@@ -1,1 +1,0 @@
-$(cat /tmp/horses-cleaned.tsx)
