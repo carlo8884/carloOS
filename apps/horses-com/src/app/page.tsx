@@ -396,9 +396,6 @@ export default function HomePage() {
               <div className="flex items-center gap-3 mb-3">
                 <span aria-hidden="true" className="h-px w-8" style={{ background: 'var(--brand-accent)' }} />
                 <Link href="/health/equine-ulcers" className="group flex items-center gap-2.5 no-underline">
-                  <div className={`relative h-9 w-14 shrink-0 overflow-hidden rounded-md ${FILL_IMAGE}`}>
-                    <StockImage manifestKey="horses-com:category-care" fallbackKey="horses-com:hero" alt="A horse receiving routine care" aspect="4:3" variant="inline" subtleCredit />
-                  </div>
                   <span className="text-2xs font-bold uppercase tracking-eyebrow group-hover:underline" style={{ color: '#7a5520' }}>Cornerstone Articles</span>
                 </Link>
               </div>
@@ -410,15 +407,9 @@ export default function HomePage() {
               </div>
               <div className="pr-3 py-2">
                 <div className="mb-1 flex items-center gap-2">
-                  <div className={`relative h-7 w-10 shrink-0 overflow-hidden rounded-md ${FILL_IMAGE}`}>
-                    <StockImage manifestKey="horses-com:category-care" fallbackKey="horses-com:hero" alt="A horse receiving routine care" aspect="4:3" variant="inline" subtleCredit />
-                  </div>
                   <span className="block font-display font-bold text-sm leading-tight" style={{ color: 'var(--brand-text-dark)' }}>Equine health</span>
                 </div>
                 <span className="mt-0.5 flex items-center gap-2 text-xs" style={{ color: 'var(--brand-text-mid)' }}>
-                  <div className={`relative h-6 w-9 shrink-0 overflow-hidden rounded-md ${FILL_IMAGE}`}>
-                    <StockImage manifestKey="horses-com:category-care" fallbackKey="horses-com:hero" alt="" aspect="4:3" variant="inline" />
-                  </div>
                   <span>When-to-call thresholds, no invented clinicians.</span>
                 </span>
               </div>
@@ -432,9 +423,6 @@ export default function HomePage() {
                   <div className="text-2xs font-bold uppercase tracking-eyebrow mb-3" style={{ color: 'var(--brand-primary)' }}>{art.eyebrow}</div>
                   <h3 className="font-display font-bold text-2xl leading-tight mb-3" style={{ color: 'var(--brand-text-dark)' }}>{art.title}</h3>
                   <div className="mb-5 flex items-start gap-2 text-base leading-relaxed" style={{ color: 'var(--brand-text-mid)' }}>
-                    <span className={`relative mt-1 h-7 w-10 shrink-0 overflow-hidden rounded-md ${FILL_IMAGE}`}>
-                      <StockImage manifestKey={art.imageKey} fallbackKey="horses-com:hero" alt="" aspect="4:3" variant="inline" />
-                    </span>
                     <span>{art.teaser}</span>
                   </div>
                   <span className="text-xs font-semibold uppercase tracking-eyebrow" style={{ color: 'var(--brand-text-light)' }}>{art.readTime} read</span>
