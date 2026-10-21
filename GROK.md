@@ -1749,3 +1749,12 @@ Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners, no sitema
 3. Preview URLs: https://carlo-os-fish-com.vercel.app/ · https://dog-com-three.vercel.app/join/pro · https://dog-com-three.vercel.app/trainers · https://horses-com.vercel.app/inquire
 4. Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners, directory claimed=false.
 5. Carlo offline until next week; recap emailed to carlo@tabibi.com.
+
+---
+
+## 2026-10-21 ~16:05 PDT hour
+1. Fish.com homepage visual quality: the "Decide with math" calculator strip showed six small photo thumbnails (guppy, clownfish and others repeated elsewhere on the page) next to the "All calculators" photo. Calculator tiles are now clean text links with an arrow, leaving one credited photo for the section, matching dog.com.
+2. No new images, no doses, no sitemap regen. Dog.com /join/pro + /trainers shells, Horses /inquire and shared Footer inquire left alone.
+3. Preview URLs: https://carlo-os-fish-com.vercel.app/ · https://dog-com-three.vercel.app/join/pro · https://dog-com-three.vercel.app/trainers · https://horses-com.vercel.app/inquire · https://horses-com.vercel.app/
+4. Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners, directory claimed=false.
+5. Carlo offline until next week; recap emailed to carlo@tabibi.com.
