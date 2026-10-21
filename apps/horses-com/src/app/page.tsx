@@ -318,26 +318,14 @@ export default function HomePage() {
                 <div className="flex items-end justify-between gap-3 flex-wrap mb-3">
                   <Link href="/tools/body-condition-score" className="group flex items-center gap-2.5 no-underline">
                     <span className="w-6 h-0.5 bg-brand-primary" />
-                    <div className={`relative h-9 w-14 shrink-0 overflow-hidden rounded-md ${FILL_IMAGE}`}>
-                      <StockImage manifestKey="horses-com:tool-bcs-calculator" fallbackKey="horses-com:hero" alt="A horse standing square for body condition assessment" aspect="4:3" variant="inline" subtleCredit />
-                    </div>
                     <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary group-hover:underline">Try it · Henneke body condition score</span>
                   </Link>
                   <Link href="/tools/body-condition-score" className="group flex items-center gap-3 overflow-hidden rounded-md no-underline" style={{ background: 'var(--brand-surface)', border: '1px solid var(--brand-border)' }}>
-                    <div className={`relative h-12 w-16 shrink-0 overflow-hidden ${FILL_IMAGE}`}>
-                      <StockImage manifestKey="horses-com:tool-bcs-calculator" fallbackKey="horses-com:hero" alt="A horse standing square for body condition assessment" aspect="4:3" variant="inline" subtleCredit />
-                    </div>
                     <div className="pr-3 py-1.5">
-                      <div className="mb-1 flex items-center gap-2">
-                        <div className={`relative h-7 w-10 shrink-0 overflow-hidden rounded-md ${FILL_IMAGE}`}>
-                          <StockImage manifestKey="horses-com:tool-bcs-calculator" fallbackKey="horses-com:hero" alt="A horse standing square for body condition assessment" aspect="4:3" variant="inline" subtleCredit />
-                        </div>
+                      <div className="mb-1">
                         <span className="block font-display font-bold text-sm leading-tight" style={{ color: 'var(--brand-text-dark)' }}>Body condition tool</span>
                       </div>
-                      <span className="mt-0.5 flex items-center gap-2 text-xs" style={{ color: 'var(--brand-text-mid)' }}>
-                        <span className={`relative h-6 w-9 shrink-0 overflow-hidden rounded-md ${FILL_IMAGE}`}>
-                          <StockImage manifestKey="horses-com:tool-bcs-calculator" fallbackKey="horses-com:hero" alt="" aspect="4:3" variant="inline" />
-                        </span>
+                      <span className="mt-0.5 text-xs" style={{ color: 'var(--brand-text-mid)' }}>
                         <span>Six checkpoints, 1–9 score.</span>
                       </span>
                     </div>
