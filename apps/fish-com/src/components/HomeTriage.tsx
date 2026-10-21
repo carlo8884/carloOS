@@ -65,13 +65,13 @@ export function IconArrowRight({ className }: { className?: string }) {
   )
 }
 
-const PROBLEMS: { icon: React.ReactNode; title: string; desc: string; href: string; imageKey: string; imageAlt: string }[] = [
-  { icon: <ProblemIconCloud />, title: 'Cloudy water', desc: 'White/grey haze, bacterial bloom, or green water — what caused it and what fixes it.', href: '/setup/water-chemistry-guide', imageKey: 'fish-com:water-parameters-hero', imageAlt: 'Aquarium water testing tubes and reagents' },
-  { icon: <ProblemIconBubbles />, title: 'Fish gasping at the surface', desc: 'Low oxygen, high ammonia, gill irritation — triage and emergency actions.', href: '/health/fish-disease-guide', imageKey: 'fish-com:species-thumb-goldfish', imageAlt: 'A goldfish' },
-  { icon: <ProblemIconWarning />, title: 'Ammonia / nitrite spike', desc: 'Cycle crash, overstocking, dead fish, new-tank syndrome — what the readings mean.', href: '/health/new-tank-syndrome', imageKey: 'fish-com:cornerstone-cycling', imageAlt: 'A freshwater aquarium test kit being used to check water parameters' },
-  { icon: <ProblemIconLeaf />, title: 'Algae outbreak', desc: 'Green water, brown diatoms, black beard, hair algae — identify and treat by type.', href: '/setup/planted-tank-setup', imageKey: 'fish-com:category-planted', imageAlt: 'Lush aquatic plants in a planted aquarium' },
-  { icon: <ProblemIconCycle />, title: 'New tank cycling', desc: 'Fishless cycle, fish-in cycle, the nitrogen cycle in plain English — how long, what to test.', href: '/setup/aquarium-cycling-guide', imageKey: 'fish-com:glossary-hero', imageAlt: 'A clear planted aquarium' },
-  { icon: <ProblemIconFish />, title: 'Stocking & compatibility', desc: 'How many fish in your tank, who fights with whom, temperament + tank-size math.', href: '/tools/stocking-calculator', imageKey: 'fish-com:species-thumb-neon-tetra', imageAlt: 'Neon tetra fish in an aquarium' },
+const PROBLEMS: { icon: React.ReactNode; eyebrow: string; title: string; desc: string; href: string; imageKey: string; imageAlt: string }[] = [
+  { icon: <ProblemIconCloud />, eyebrow: 'Water', title: 'Cloudy water', desc: 'White/grey haze, bacterial bloom, or green water — what caused it and what fixes it.', href: '/setup/water-chemistry-guide', imageKey: 'fish-com:water-parameters-hero', imageAlt: 'Aquarium water testing tubes and reagents' },
+  { icon: <ProblemIconBubbles />, eyebrow: 'Oxygen', title: 'Fish gasping at the surface', desc: 'Low oxygen, high ammonia, gill irritation — triage and emergency actions.', href: '/health/fish-disease-guide', imageKey: 'fish-com:species-thumb-goldfish', imageAlt: 'A goldfish' },
+  { icon: <ProblemIconWarning />, eyebrow: 'Cycle', title: 'Ammonia / nitrite spike', desc: 'Cycle crash, overstocking, dead fish, new-tank syndrome — what the readings mean.', href: '/health/new-tank-syndrome', imageKey: 'fish-com:cornerstone-cycling', imageAlt: 'A freshwater aquarium test kit being used to check water parameters' },
+  { icon: <ProblemIconLeaf />, eyebrow: 'Algae', title: 'Algae outbreak', desc: 'Green water, brown diatoms, black beard, hair algae — identify and treat by type.', href: '/setup/planted-tank-setup', imageKey: 'fish-com:category-planted', imageAlt: 'Lush aquatic plants in a planted aquarium' },
+  { icon: <ProblemIconCycle />, eyebrow: 'Cycling', title: 'New tank cycling', desc: 'Fishless cycle, fish-in cycle, the nitrogen cycle in plain English — how long, what to test.', href: '/setup/aquarium-cycling-guide', imageKey: 'fish-com:glossary-hero', imageAlt: 'A clear planted aquarium' },
+  { icon: <ProblemIconFish />, eyebrow: 'Stocking', title: 'Stocking & compatibility', desc: 'How many fish in your tank, who fights with whom, temperament + tank-size math.', href: '/tools/stocking-calculator', imageKey: 'fish-com:species-thumb-neon-tetra', imageAlt: 'Neon tetra fish in an aquarium' },
 ]
 
 const CALCULATORS = [
@@ -156,7 +156,7 @@ export function HomeTriage() {
                 <div className="p-5">
                   <div className="mb-3 flex items-center gap-2 text-[#3aa4cc]">
                     {p.icon}
-                    <span className="text-2xs font-bold tracking-eyebrow uppercase">Start here</span>
+                    <span className="text-2xs font-bold tracking-eyebrow uppercase">{p.eyebrow}</span>
                   </div>
                   <h2 className="font-display font-bold text-white text-base leading-tight italic mb-2">{p.title}</h2>
                   <p className="text-xs text-white/55 leading-relaxed mb-3">{p.desc}</p>
