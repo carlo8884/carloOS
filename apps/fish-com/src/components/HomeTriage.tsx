@@ -161,7 +161,7 @@ export function HomeTriage() {
                   <h2 className="font-display font-bold text-white text-base leading-tight italic mb-2">{p.title}</h2>
                   <p className="text-xs text-white/55 leading-relaxed mb-3">{p.desc}</p>
                   <div className="inline-flex items-center gap-1.5 text-xs font-bold text-[#3aa4cc] group-hover:gap-2 transition-all">
-                    Start here
+                    Read the guide
                     <IconArrowRight className="w-3.5 h-3.5" />
                   </div>
                 </div>
