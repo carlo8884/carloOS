@@ -1740,3 +1740,12 @@ Preview URLs (Vercel):
 - https://horses-com.vercel.app/inquire
 
 Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners, no sitemap regen, directory claimed=false.
+
+---
+
+## 2026-10-21 ~14:05 PDT hour
+1. Fish.com homepage visual quality: "How we work" section showed the same African cichlid photo twice (small thumb on the Editorial standards link + the large section photo). Removed the duplicate thumb; the link is now clean text, leaving one credited photo per section, matching dog.com.
+2. No new images, no doses, no sitemap regen. Dog.com /join/pro + /trainers shells, Horses /inquire and shared Footer inquire left alone.
+3. Preview URLs: https://carlo-os-fish-com.vercel.app/ · https://dog-com-three.vercel.app/join/pro · https://dog-com-three.vercel.app/trainers · https://horses-com.vercel.app/inquire
+4. Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners, directory claimed=false.
+5. Carlo offline until next week; recap emailed to carlo@tabibi.com.

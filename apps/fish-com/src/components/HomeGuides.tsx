@@ -416,10 +416,7 @@ export function HomeGuides() {
                 href="/editorial-standards"
                 className="group flex items-center gap-3 overflow-hidden rounded-xl border border-brand-border bg-white no-underline hover:border-brand-primary transition-all"
               >
-                <div className={`relative h-14 w-20 shrink-0 overflow-hidden bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                  <StockImage manifestKey="fish-com:species-african-cichlid" alt="An African cichlid in an aquarium" aspect="4:3" subtleCredit />
-                </div>
-                <div className="pr-3 py-2">
+                <div className="px-3 py-2">
                   <div className="mb-1">
                     <div className="font-display font-bold text-brand-dark text-sm leading-tight italic group-hover:text-brand-primary">Editorial standards</div>
                   </div>
