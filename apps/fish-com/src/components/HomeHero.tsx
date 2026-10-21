@@ -49,7 +49,7 @@ export function HomeHero() {
           </span>
         </div>
         <h1
-          className="font-display font-bold text-white tracking-tight leading-[1.04] italic mb-4 max-w-3xl"
+          className="font-display font-bold text-white tracking-tight leading-[1.04] mb-4 max-w-3xl"
           style={{
             fontSize: 'clamp(34px, 6vw, 66px)',
             textShadow: '0 2px 18px rgba(0,0,0,0.5)',
