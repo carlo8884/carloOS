@@ -1749,3 +1749,12 @@ Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners, no sitema
 3. Preview URLs: https://carlo-os-fish-com.vercel.app/ · https://dog-com-three.vercel.app/join/pro · https://dog-com-three.vercel.app/trainers · https://horses-com.vercel.app/inquire
 4. Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners, directory claimed=false.
 5. Carlo offline until next week; recap emailed to carlo@tabibi.com.
+
+---
+
+## 2026-10-21 ~15:05 PDT hour
+1. Fish.com homepage visual quality: "New-tank setup and stocking" email-capture block repeated the same photo chips — planted-tank photo twice in the header, goldfish 3x on the Setup guides card, and each Start link card repeated its own photo as two extra mini-chips. Removed the duplicate chips; each block now has one credited photo + clean text, matching dog.com.
+2. No new images, no doses, no sitemap regen. Dog.com /join/pro + /trainers, Horses /inquire + homepage and shared Footer inquire left alone.
+3. Preview URLs: https://carlo-os-fish-com.vercel.app/ · https://dog-com-three.vercel.app/join/pro · https://dog-com-three.vercel.app/trainers · https://horses-com.vercel.app/inquire · https://horses-com.vercel.app/
+4. Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners, directory claimed=false.
+5. Carlo offline until next week; recap emailed to carlo@tabibi.com.
