@@ -40,8 +40,8 @@ const PRODUCT_CHIPS = [
 ]
 
 const WORK_CHIPS = [
-  { title: 'Editorial standards', note: 'How guides are sourced and signed.', href: '/editorial-standards', imageKey: 'fish-com:glossary-hero', imageAlt: 'A clear planted aquarium' },
-  { title: 'Affiliate disclosure', note: 'Links disclosed above the fold on product pages.', href: '/disclosure', imageKey: 'fish-com:species-thumb-oscar', imageAlt: 'An Oscar fish' },
+  { title: 'Editorial standards', note: 'How guides are sourced and signed.', href: '/editorial-standards' },
+  { title: 'Affiliate disclosure', note: 'Links disclosed above the fold on product pages.', href: '/disclosure' },
 ]
 
 const CALCULATORS = [
@@ -429,12 +429,9 @@ export function HomeGuides() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="group flex gap-3 overflow-hidden rounded-xl border border-brand-border bg-brand-surface no-underline hover:border-brand-primary transition-all"
+                  className="group flex items-start justify-between gap-3 overflow-hidden rounded-xl border border-brand-border bg-brand-surface no-underline hover:border-brand-primary transition-all"
                 >
-                  <div className={`relative h-20 w-24 shrink-0 overflow-hidden bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                    <StockImage manifestKey={item.imageKey} alt={item.imageAlt} aspect="4:3" subtleCredit />
-                  </div>
-                  <div className="py-3 pr-3">
+                  <div className="py-3 pl-4 pr-1">
                     <div className="mb-1">
                       <div className="font-display font-bold text-brand-dark text-sm leading-tight italic group-hover:text-brand-primary">{item.title}</div>
                     </div>
@@ -442,6 +439,7 @@ export function HomeGuides() {
                       <span>{item.note}</span>
                     </div>
                   </div>
+                  <IconArrowRight className="mt-3.5 mr-3 h-4 w-4 shrink-0 text-brand-text-mid group-hover:text-brand-primary" />
                 </Link>
               ))}
             </div>
