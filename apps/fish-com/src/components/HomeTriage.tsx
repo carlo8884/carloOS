@@ -88,29 +88,21 @@ const TRUST_CHIPS = [
     label: 'Source-grounded guides',
     note: 'Published aquarist literature, not invented experts.',
     href: '/editorial-standards',
-    imageKey: 'fish-com:species-african-cichlid',
-    imageAlt: 'An African cichlid in an aquarium',
   },
   {
     label: 'Calculators, not articles only',
     note: 'Volume, stocking, heater, water change, CO₂, cycling.',
     href: '/tools',
-    imageKey: 'fish-com:tools-hero',
-    imageAlt: 'An aquarium water test kit',
   },
   {
     label: '37+ species profiles',
     note: 'Parameter targets before you add the next fish.',
     href: '/species',
-    imageKey: 'fish-com:species-thumb-neon-tetra',
-    imageAlt: 'Neon tetra fish in an aquarium',
   },
   {
     label: 'Equipment compared',
     note: 'Scored on the page — not paid placements.',
     href: '/reviews',
-    imageKey: 'fish-com:category-equipment',
-    imageAlt: 'Aquarium filtration and heating equipment',
   },
 ]
 
@@ -203,12 +195,10 @@ export function HomeTriage() {
                 href={item.href}
                 className="group block overflow-hidden rounded-xl border border-brand-border bg-white no-underline hover:border-brand-primary transition-all"
               >
-                <div className={`relative h-24 bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                  <StockImage manifestKey={item.imageKey} alt={item.imageAlt} aspect="16:9" subtleCredit />
-                </div>
                 <div className="p-3.5">
-                  <div className="font-display font-bold text-brand-dark text-sm leading-tight italic group-hover:text-brand-primary mb-1">
-                    {item.label}
+                  <div className="flex items-center justify-between gap-2 font-display font-bold text-brand-dark text-sm leading-tight italic group-hover:text-brand-primary mb-1">
+                    <span>{item.label}</span>
+                    <IconArrowRight className="w-3.5 h-3.5 shrink-0 text-brand-primary" />
                   </div>
                   <div className="text-xs text-brand-text-mid mt-1 leading-relaxed">
                     {item.note}
