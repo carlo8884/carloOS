@@ -341,10 +341,7 @@ export function HomeGuides() {
                 href="/reviews"
                 className="group flex items-center gap-3 overflow-hidden rounded-xl border border-white/15 bg-white/[0.05] no-underline hover:border-brand-primary transition-all"
               >
-                <div className={`relative h-16 w-24 shrink-0 overflow-hidden bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                  <StockImage manifestKey="fish-com:species-amano-shrimp" alt="An Amano shrimp on aquarium hardscape" aspect="4:3" subtleCredit />
-                </div>
-                <div className="pr-3 py-2">
+                <div className="px-4 py-2">
                   <div className="mb-1">
                     <div className="font-display font-bold text-white text-sm leading-tight italic group-hover:text-[#3aa4cc]">All product guides</div>
                   </div>
@@ -362,12 +359,9 @@ export function HomeGuides() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="group flex gap-3 overflow-hidden rounded-xl border border-white/10 bg-white/[0.05] no-underline hover:border-brand-primary transition-all"
+                  className="group flex items-start justify-between gap-3 overflow-hidden rounded-xl border border-white/10 bg-white/[0.05] no-underline hover:border-brand-primary transition-all"
                 >
-                  <div className={`relative h-20 w-24 shrink-0 overflow-hidden bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                    <StockImage manifestKey={item.imageKey} alt={item.imageAlt} aspect="4:3" subtleCredit />
-                  </div>
-                  <div className="py-3 pr-3">
+                  <div className="py-3 pl-4 pr-1">
                     <div className="mb-1">
                       <div className="font-display font-bold text-white text-sm leading-tight italic group-hover:text-[#3aa4cc]">{item.title}</div>
                     </div>
@@ -375,6 +369,7 @@ export function HomeGuides() {
                       <span>{item.note}</span>
                     </div>
                   </div>
+                  <IconArrowRight className="mt-3.5 mr-3 h-4 w-4 shrink-0 text-white/40 group-hover:text-[#3aa4cc]" />
                 </Link>
               ))}
             </div>

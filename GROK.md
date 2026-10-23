@@ -256,7 +256,16 @@ Carlo offline until next week. Recap logged here + email to carlo@tabibi.com.
 
 ---
 
-# GROK.md — CEO lane log (preview only, last chip 2026-10-23 06:11 PDT)
+# GROK.md — CEO lane log (preview only, last chip 2026-10-23 07:20 PDT)
+
+## 2026-10-23 ~07:20 PDT hour
+1. Fish.com homepage visual quality: the "Compared, not ranked by ad spend" product-guides section showed five small photo thumbs (Amano shrimp on the All product guides link, plus clownfish/discus/etc. on the Filters, Heaters, Lighting and Test kits chips) next to its large credited photo. Chips and the action link are now clean text with an arrow, leaving one credited photo for the section, matching dog.com.
+2. No new images, no doses, no sitemap regen. Hero untouched.
+3. Dog.com /join/pro + /trainers shells, Horses /inquire and shared Footer inquire left alone this hour.
+4. Preview URLs: https://carlo-os-fish-com.vercel.app/ · https://dog-com-three.vercel.app/join/pro · https://dog-com-three.vercel.app/trainers · https://horses-com.vercel.app/inquire · https://horses-com.vercel.app/
+5. Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners, directory claimed=false. Recap emailed to carlo@tabibi.com.
+
+---
 
 ## 2026-10-23 ~06:11 PDT hour
 1. Fish.com homepage visual quality — hero untouched (still matched to dog.com). Email-capture block ("Start here" band, Setup guides card, and guide item cards) was repeating the same manifest thumb on label and note under already-credited card photos; those extra chips are gone so each is one photo + clean text, matching the calculator strip (#2867), trust chips, species cards and dog.com pattern. Supersedes stale PR #2866 (conflicting GROK.md, non-bot branch).
