@@ -337,9 +337,6 @@ export default function HomePage() {
               </div>
               <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
                 <Link href="/tools" className="group mb-3 flex items-center gap-3 no-underline">
-                  <div className={`relative h-12 w-16 shrink-0 overflow-hidden rounded-md ring-1 ring-brand-border ${FILL_IMAGE}`}>
-                    <StockImage manifestKey="horses-com:category-guides" fallbackKey="horses-com:hero" alt="A horse and rider working in the arena" aspect="4:3" variant="inline" subtleCredit />
-                  </div>
                   <span>
                     <span className="block text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light">More free calculators</span>
                     <span className="block text-sm font-semibold text-brand-primary group-hover:underline">Tools hub, on the page</span>
@@ -347,16 +344,14 @@ export default function HomePage() {
                 </Link>
                 <div className="flex flex-col gap-2 text-sm font-semibold">
                   {[
-                    { href: '/tools/horse-weight-calculator', label: 'Horse weight calculator', imageKey: 'horses-com:tool-bcs-calculator', imageAlt: 'A horse standing square for body condition assessment' },
-                    { href: '/tools/horse-feed-calculator', label: 'Feed & hay calculator', imageKey: 'horses-com:hero', imageAlt: 'Horses running through a grassy field' },
-                    { href: '/tools/stall-bedding-calculator', label: 'Stall bedding calculator', imageKey: 'horses-com:category-care', imageAlt: 'A horse receiving routine care' },
-                    { href: '/tools', label: 'Browse the tools hub', imageKey: 'horses-com:category-guides', imageAlt: 'A horse and rider working in the arena' },
+                    { href: '/tools/horse-weight-calculator', label: 'Horse weight calculator' },
+                    { href: '/tools/horse-feed-calculator', label: 'Feed & hay calculator' },
+                    { href: '/tools/stall-bedding-calculator', label: 'Stall bedding calculator' },
+                    { href: '/tools', label: 'Browse the tools hub' },
                   ].map((tool) => (
-                    <Link key={tool.href} href={tool.href} className="group flex items-center gap-3 text-brand-primary no-underline hover:underline">
-                      <div className={`relative h-12 w-16 shrink-0 overflow-hidden rounded-md ring-1 ring-brand-border ${FILL_IMAGE}`}>
-                        <StockImage manifestKey={tool.imageKey} fallbackKey="horses-com:hero" alt={tool.imageAlt} aspect="4:3" variant="inline" subtleCredit />
-                      </div>
-                      <span>{tool.label} →</span>
+                    <Link key={tool.href} href={tool.href} className="group flex items-center justify-between gap-3 rounded-md border border-brand-border bg-brand-white px-3 py-2.5 text-brand-primary no-underline hover:underline">
+                      <span>{tool.label}</span>
+                      <span aria-hidden="true">→</span>
                     </Link>
                   ))}
                 </div>
