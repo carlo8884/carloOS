@@ -52,14 +52,14 @@ export function HomeHero() {
           className="font-display font-bold text-white tracking-tight leading-[1.04] italic mb-4 max-w-3xl"
           style={{
             fontSize: 'clamp(34px, 6vw, 66px)',
-            textShadow: '0 2px 18px rgba(0,0,0,0.5)',
+            textShadow: '0 2px 18px rgba(0,0,0,0.45)',
           }}
         >
           What's happening in your tank?
         </h1>
         <p
           className="text-base sm:text-lg font-light text-white/85 leading-relaxed max-w-xl mb-6"
-          style={{ textShadow: '0 1px 10px rgba(0,0,0,0.55)' }}
+          style={{ textShadow: '0 1px 10px rgba(0,0,0,0.5)' }}
         >
           Cloudy water, fish gasping, an ammonia spike, algae taking over,
           mid-cycle confusion, or picking your next fish &mdash; start where you
