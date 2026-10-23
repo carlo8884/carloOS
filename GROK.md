@@ -256,7 +256,16 @@ Carlo offline until next week. Recap logged here + email to carlo@tabibi.com.
 
 ---
 
-# GROK.md — CEO lane log (preview only, last chip 2026-10-23 13:10 PDT)
+# GROK.md — CEO lane log (preview only, last chip 2026-10-23 14:15 PDT)
+
+## 2026-10-23 ~14:15 PDT hour
+1. Horses.com homepage polish: the body-condition aside's "More free calculators" box showed five small photo thumbs (the header link plus four tool links), repeating the aside's own credited BCS photo and photos used elsewhere on the homepage. The header and tool links are now clean text rows with an arrow, leaving one credited photo for the aside, matching dog.com and the fish.com cleanups.
+2. Fish.com homepage is down to one credited photo per section after today's cleanups, so this hour moved to priority 3. No new images, no doses, no sitemap regen.
+3. Dog.com /join/pro + /trainers shells, Horses /inquire and shared Footer inquire left alone this hour.
+4. Preview URLs: https://carlo-os-fish-com.vercel.app/ · https://dog-com-three.vercel.app/join/pro · https://dog-com-three.vercel.app/trainers · https://horses-com.vercel.app/inquire · https://horses-com.vercel.app/
+5. Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners, directory claimed=false. Recap emailed to carlo@tabibi.com.
+
+---
 
 ## 2026-10-23 ~13:10 PDT hour
 1. Fish.com homepage visual quality: the "Start with the right fish" species grid showed a photo banner on all four cards (betta, neon tetra, corydoras, goldfish; betta, corydoras and goldfish also appear elsewhere on the homepage) beside the section's credited angelfish photo. Species cards are now clean text (type, name, note, arrow), leaving one credited photo for the section, matching dog.com.
