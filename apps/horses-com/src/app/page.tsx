@@ -197,18 +197,16 @@ export default function HomePage() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
             {TRUST_CHIPS.map((item) => (
-              <Link key={item.href} href={item.href} className="group block overflow-hidden rounded-md no-underline transition-all duration-300 ease-carloOS hover:-translate-y-0.5" style={{ background: 'var(--brand-white)', border: '1px solid var(--brand-border)' }}>
-                <div className={`relative h-24 ${FILL_IMAGE}`}>
-                  <StockImage manifestKey={item.imageKey} fallbackKey="horses-com:hero" alt={item.imageAlt} aspect="16:9" variant="inline" subtleCredit />
-                </div>
-                <div className="p-3.5">
+              <Link key={item.href} href={item.href} className="group flex items-start justify-between gap-3 rounded-md p-3.5 no-underline transition-all duration-300 ease-carloOS hover:-translate-y-0.5" style={{ background: 'var(--brand-white)', border: '1px solid var(--brand-border)' }}>
+                <div>
                   <div className="mb-1">
-                    <div className="font-display font-bold text-sm leading-tight" style={{ color: 'var(--brand-text-dark)' }}>{item.label}</div>
+                    <div className="font-display font-bold text-sm leading-tight group-hover:underline" style={{ color: 'var(--brand-text-dark)' }}>{item.label}</div>
                   </div>
                   <div className="mt-1 text-xs leading-relaxed" style={{ color: 'var(--brand-text-mid)' }}>
                     <span>{item.note}</span>
                   </div>
                 </div>
+                <span aria-hidden="true" className="mt-0.5 text-sm transition-transform group-hover:translate-x-0.5" style={{ color: 'var(--brand-primary)' }}>→</span>
               </Link>
             ))}
           </div>
