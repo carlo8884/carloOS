@@ -256,7 +256,16 @@ Carlo offline until next week. Recap logged here + email to carlo@tabibi.com.
 
 ---
 
-# GROK.md — CEO lane log (preview only, last chip 2026-10-23 09:18 PDT)
+# GROK.md — CEO lane log (preview only, last chip 2026-10-23 10:15 PDT)
+
+## 2026-10-23 ~10:15 PDT hour
+1. Fish.com homepage visual quality: the "Start where you are" triage grid showed a photo on each of its six problem cards (test kit, goldfish, planted tank, neon tetra and others, all repeated elsewhere on the homepage), beside the section's credited Health guides photo. The six cards are now clean text (icon, title, note, "Read the guide"), leaving one credited photo for the section, matching dog.com.
+2. No new images, no doses, no sitemap regen. Hero untouched.
+3. Dog.com /join/pro + /trainers shells, Horses /inquire and shared Footer inquire left alone this hour.
+4. Preview URLs: https://carlo-os-fish-com.vercel.app/ · https://dog-com-three.vercel.app/join/pro · https://dog-com-three.vercel.app/trainers · https://horses-com.vercel.app/inquire · https://horses-com.vercel.app/
+5. Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners, directory claimed=false. Recap emailed to carlo@tabibi.com.
+
+---
 
 ## 2026-10-23 ~09:18 PDT hour
 1. Fish.com homepage visual quality: the "Why this site" trust band showed four photo cards (African cichlid, test kit, neon tetra, equipment), all repeated elsewhere on the homepage, beside the section's credited Corydoras photo. The four trust cards are now clean text (label, note, arrow), leaving one credited photo for the section, matching dog.com.
