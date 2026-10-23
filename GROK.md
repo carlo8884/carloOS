@@ -256,7 +256,16 @@ Carlo offline until next week. Recap logged here + email to carlo@tabibi.com.
 
 ---
 
-# GROK.md — CEO lane log (preview only, last chip 2026-10-23 11:15 PDT)
+# GROK.md — CEO lane log (preview only, last chip 2026-10-23 12:15 PDT)
+
+## 2026-10-23 ~12:15 PDT hour
+1. Fish.com homepage visual quality: the "Get a number, not just an article" calculator grid showed a photo banner on all six tool cards (planted tank, guppy, test tubes, clownfish, test kit, glossary tank, several repeating the section's own credited "All calculators" photo and photos used elsewhere). ToolCard is now clean text (eyebrow, title, note, CTA), leaving one credited photo for the section, matching dog.com.
+2. No new images, no doses, no sitemap regen. Hero untouched.
+3. Dog.com /join/pro + /trainers shells, Horses /inquire and shared Footer inquire left alone this hour.
+4. Preview URLs: https://carlo-os-fish-com.vercel.app/ · https://dog-com-three.vercel.app/join/pro · https://dog-com-three.vercel.app/trainers · https://horses-com.vercel.app/inquire · https://horses-com.vercel.app/
+5. Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners, directory claimed=false. Recap emailed to carlo@tabibi.com.
+
+---
 
 ## 2026-10-23 ~11:15 PDT hour
 1. Fish.com homepage visual quality: the Tank planning, Water safety and Equipment decisions sections each showed a photo thumb on all four guide cards (12 thumbs, several repeating the section's own credited photo, e.g. planted tank, test tubes, equipment). The shared PhotoRow cards are now clean text (title, note, arrow), leaving one credited photo per section, matching dog.com.
