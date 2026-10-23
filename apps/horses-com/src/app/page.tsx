@@ -287,15 +287,13 @@ export default function HomePage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {FEATURED_GUIDES.map((guide) => (
               <Link key={guide.href} href={guide.href} className="group flex flex-col rounded-md overflow-hidden no-underline transition-all duration-300 ease-carloOS hover:-translate-y-1" style={{ background: 'var(--brand-surface)', border: '1px solid var(--brand-border)' }}>
-                <div className={`relative aspect-video ${FILL_IMAGE}`}>
-                  <StockImage manifestKey={guide.manifestKey} fallbackKey="horses-com:hero" alt={guide.imageAlt} aspect="16:9" variant="inline" subtleCredit />
-                </div>
                 <div className="flex flex-col flex-1 p-6">
                   <div className="text-2xs font-bold uppercase tracking-eyebrow mb-2" style={{ color: 'var(--brand-primary)' }}>{guide.eyebrow}</div>
                   <h3 className="font-display font-bold text-xl leading-snug mb-2" style={{ color: 'var(--brand-text-dark)' }}>{guide.title}</h3>
                   <div className="mb-4 text-sm leading-relaxed" style={{ color: 'var(--brand-text-mid)' }}>
                     <span>{guide.desc}</span>
                   </div>
+                  <span className="mt-auto inline-flex items-center text-xs font-semibold uppercase tracking-eyebrow" style={{ color: 'var(--brand-primary)' }}>Read <span aria-hidden="true" className="ml-1.5 transition-transform group-hover:translate-x-0.5">→</span></span>
                 </div>
               </Link>
             ))}
