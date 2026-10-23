@@ -25,16 +25,6 @@ export function DisciplineFilter() {
     <nav aria-label="Browse by discipline" className="mb-10 -mt-2">
       <div className="mb-3 flex items-center justify-between gap-3 flex-wrap">
         <Link href="/disciplines" className="group flex items-center gap-2.5 no-underline">
-          <div className={`relative h-9 w-14 shrink-0 overflow-hidden rounded-md ${FILL_IMAGE}`}>
-            <StockImage
-              manifestKey="horses-com:category-disciplines"
-              fallbackKey="horses-com:hero"
-              alt="A dressage horse and rider in competition"
-              aspect="4:3"
-              variant="inline"
-              subtleCredit
-            />
-          </div>
           <span className="text-2xs font-bold uppercase tracking-eyebrow group-hover:underline" style={{ color: 'var(--brand-accent)' }}>
             For
           </span>
