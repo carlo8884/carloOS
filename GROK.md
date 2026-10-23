@@ -256,7 +256,21 @@ Carlo offline until next week. Recap logged here + email to carlo@tabibi.com.
 
 ---
 
-# GROK.md — CEO lane log (preview only, last chip 2026-10-19 00:04 PDT)
+# GROK.md — CEO lane log (preview only, last chip 2026-10-23 06:11 PDT)
+
+## 2026-10-23 ~06:11 PDT hour
+1. Fish.com homepage visual quality — hero untouched (still matched to dog.com). Email-capture block ("Start here" band, Setup guides card, and guide item cards) was repeating the same manifest thumb on label and note under already-credited card photos; those extra chips are gone so each is one photo + clean text, matching the calculator strip (#2867), trust chips, species cards and dog.com pattern. Supersedes stale PR #2866 (conflicting GROK.md, non-bot branch).
+2. Dog.com /join/pro + /trainers claimed-directory shells — left alone this hour.
+3. Horses.com /inquire — left alone this hour.
+4. Shared Footer inquire left alone.
+
+One real merged improvement: Fish.com email-capture block now one photo + clean text. No new images, no doses, no sitemap.
+
+Preview URLs (Vercel): see PR checks.
+
+Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners on dog/fish/horses, no sitemap regen.
+
+---
 
 
 ## 2026-10-14 ~04:04 PDT hour
