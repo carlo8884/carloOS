@@ -174,15 +174,10 @@ export function HomeTriage() {
             </div>
             <Link
               href="/editorial-standards"
-              className="group flex items-center gap-3 overflow-hidden rounded-xl border border-brand-border bg-white no-underline hover:border-brand-primary transition-all"
+              className="group flex items-center gap-2 no-underline"
             >
-              <div className={`relative h-14 w-20 shrink-0 overflow-hidden bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                <StockImage manifestKey="fish-com:species-thumb-corydoras" alt="Corydoras catfish" aspect="4:3" subtleCredit />
-              </div>
-              <div className="pr-3 py-2">
-                <div className="font-display font-bold text-brand-dark text-sm leading-tight italic group-hover:text-brand-primary">Editorial standards</div>
-                <div className="text-xs text-brand-text-mid mt-0.5">Signed guides, no invented experts.</div>
-              </div>
+              <span className="font-display font-bold text-brand-dark text-sm leading-tight italic group-hover:text-brand-primary">Editorial standards</span>
+              <IconArrowRight className="w-3.5 h-3.5 shrink-0 text-brand-primary transition-transform group-hover:translate-x-0.5" />
             </Link>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
