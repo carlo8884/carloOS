@@ -1,8 +1,4 @@
 import Link from 'next/link'
-import { StockImage } from '@carloOS/ui'
-
-const FILL_IMAGE =
-  '[&_figure]:!my-0 [&_figure]:!h-full [&_figure]:!w-full [&_figure>div]:!absolute [&_figure>div]:!inset-0 [&_figure>div]:!rounded-none'
 
 const DISCIPLINE_CHIPS: {
   label: string
@@ -33,20 +29,11 @@ export function DisciplineFilter() {
           className="group flex items-center gap-3 overflow-hidden rounded-md no-underline"
           style={{ background: 'var(--brand-white)', border: '1px solid var(--brand-border)' }}
         >
-          <div className={`relative h-14 w-20 shrink-0 overflow-hidden ${FILL_IMAGE}`}>
-            <StockImage
-              manifestKey="horses-com:category-disciplines"
-              fallbackKey="horses-com:hero"
-              alt="A dressage horse and rider in competition"
-              aspect="4:3"
-              variant="inline"
-              subtleCredit
-            />
-          </div>
-          <span className="pr-3 py-2">
+          <span className="pl-3 py-2">
             <span className="block font-display font-bold text-sm leading-tight" style={{ color: 'var(--brand-text-dark)' }}>All disciplines</span>
             <span className="block text-xs mt-0.5" style={{ color: 'var(--brand-text-mid)' }}>English, Western, trail, racing.</span>
           </span>
+          <span aria-hidden="true" className="pr-3 text-sm transition-transform group-hover:translate-x-0.5" style={{ color: 'var(--brand-primary)' }}>→</span>
         </Link>
       </div>
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
