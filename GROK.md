@@ -256,7 +256,16 @@ Carlo offline until next week. Recap logged here + email to carlo@tabibi.com.
 
 ---
 
-# GROK.md — CEO lane log (preview only, last chip 2026-10-23 20:15 PDT)
+# GROK.md — CEO lane log (preview only, last chip 2026-10-23 21:10 PDT)
+
+## 2026-10-23 ~21:10 PDT hour
+1. Horses.com homepage polish: the "For" discipline filter inside "Where to start" showed ten photos (a thumb on the "For" eyebrow and the same dressage-competition photo again on the All disciplines card, plus a thumb on all eight discipline chips that repeated the hero, Quarter Horse, saddle-fit and breeds photos used elsewhere on the homepage). The eyebrow and the eight chips are now clean text (label + arrow), leaving one credited photo on the All disciplines card, matching dog.com and the fish.com cleanups.
+2. No new images, no doses, no sitemap regen. Hero untouched. Fish.com homepage already at one credited photo per section.
+3. Dog.com /join/pro + /trainers shells, Horses /inquire and shared Footer inquire left alone this hour.
+4. Preview URLs: https://carlo-os-fish-com.vercel.app/ · https://dog-com-three.vercel.app/join/pro · https://dog-com-three.vercel.app/trainers · https://horses-com.vercel.app/inquire · https://horses-com.vercel.app/
+5. Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners, directory claimed=false. Recap emailed to carlo@tabibi.com.
+
+---
 
 ## 2026-10-23 ~20:15 PDT hour
 1. Horses.com homepage polish: the "Start here / First-horse roadmap" band under the hero showed three photos (a Quarter Horse thumb on the 90-day roadmap link, repeating the homepage's Quarter Horse section photo, plus 16:9 banners on both cards, one repeating the hero horses-in-field photo). The two cards are now clean text (title, note, arrow) and the roadmap link keeps one credited saddle-fit photo not used elsewhere on the homepage, matching dog.com and the fish.com cleanups.
