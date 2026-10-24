@@ -1925,3 +1925,12 @@ Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners, no sitema
 3. Preview URLs: https://horses-com.vercel.app/ · https://horses-com.vercel.app/inquire · https://carlo-os-fish-com.vercel.app/ · https://dog-com-three.vercel.app/join/pro · https://dog-com-three.vercel.app/trainers
 4. Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners, directory claimed=false.
 5. Carlo offline until next week; recap emailed to carlo@tabibi.com.
+
+---
+
+## 2026-10-24 ~08:28 PDT hour
+1. Dog.com /trainers claimed-directory shell: the "list is empty on purpose" paragraph is now a visible dashed empty-state panel (Directory · 0 listed / No trainers listed yet), and the redundant closing paragraph became a 3-step "How a trainer page gets listed" list matching /join/pro's How review works. PR #2892.
+2. No trainers, ratings, new images, doses, or sitemap changes; directory stays claimed=false/empty. Fish.com homepage (already one credited photo per section), Horses /inquire + homepage and shared Footer inquire left alone.
+3. Preview URLs: https://dog-com-git-dog-trainers-empty-state-carlo-tabibi-s-projects.vercel.app/trainers · https://dog-com-three.vercel.app/trainers · https://dog-com-three.vercel.app/join/pro · https://carlo-os-fish-com.vercel.app/ · https://horses-com.vercel.app/inquire · https://horses-com.vercel.app/
+4. Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners, directory claimed=false.
+5. Carlo offline until next week; recap emailed to carlo@tabibi.com.

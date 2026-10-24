@@ -44,11 +44,22 @@ export default function TrainersIndexPage() {
           />
         </div>
 
-        <p>
-          This list is empty on purpose. Invented names, star ratings, and
-          “featured trainers” would cheapen the domain. When a trainer has a
-          page here, it will be a page they asked for.
-        </p>
+        <div
+          className="not-prose my-6 rounded-xl border-2 border-dashed border-brand-border p-6 text-center"
+          aria-label="Trainer directory listings"
+        >
+          <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
+            Directory · 0 listed
+          </div>
+          <p className="font-bold text-brand-text-dark text-base mb-2">
+            No trainers listed yet
+          </p>
+          <p className="text-brand-text-mid text-sm max-w-md mx-auto">
+            This list is empty on purpose. Invented names, star ratings, and
+            “featured trainers” would cheapen the domain. When a trainer has a
+            page here, it will be a page they asked for.
+          </p>
+        </div>
 
         <h2>If you need a trainer now</h2>
         <p>
@@ -96,11 +107,11 @@ export default function TrainersIndexPage() {
         </div>
 
         <h2>How a trainer page gets listed</h2>
-        <p>
-          This list will not be filled with invented names. A page appears only
-          after a public source URL and license or credential is accepted — not a
-          ranking, not a booking tool.
-        </p>
+        <ol>
+          <li>The trainer applies with a service area and a public link.</li>
+          <li>We check the link and any credential listed. Nothing is published before that.</li>
+          <li>If accepted, a claimed profile appears here. If not, nobody is listed.</li>
+        </ol>
       </div>
     </ArticleLayout>
   )
