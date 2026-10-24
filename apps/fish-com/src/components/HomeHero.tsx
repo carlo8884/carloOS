@@ -30,7 +30,7 @@ export function HomeHero() {
 
       <div
         aria-hidden="true"
-        className="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/65 to-brand-dark/25"
+        className="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/70 to-brand-dark/30"
       />
       <div
         aria-hidden="true"
