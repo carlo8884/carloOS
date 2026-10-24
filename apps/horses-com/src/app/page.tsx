@@ -242,9 +242,6 @@ export default function HomePage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {CATEGORIES.map((cat) => (
               <Link key={cat.href} href={cat.href} className="group flex flex-col rounded-md overflow-hidden no-underline transition-all duration-300 ease-carloOS hover:-translate-y-1" style={{ background: 'var(--brand-white)', border: '1px solid var(--brand-border)' }}>
-                <div className={`relative aspect-[4/3] ${FILL_IMAGE}`}>
-                  <StockImage manifestKey={cat.manifestKey} fallbackKey="horses-com:hero" alt={cat.imageAlt} aspect="4:3" variant="inline" subtleCredit />
-                </div>
                 <div className="flex flex-col flex-1 p-6">
                   <div className="mb-3" style={{ color: 'var(--brand-primary)' }}><CategoryIconSvg name={cat.icon} /></div>
                   <h3 className="font-display font-bold text-xl leading-snug mb-2" style={{ color: 'var(--brand-text-dark)' }}>{cat.title}</h3>
