@@ -382,7 +382,6 @@ export default function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             {FEATURED_ARTICLES.map((art) => (
               <Link key={art.href} href={art.href} className="group block rounded-md overflow-hidden no-underline transition-all duration-300 ease-carloOS hover:-translate-y-1" style={{ background: 'var(--brand-surface)', border: '1px solid var(--brand-border)' }}>
-                <StockImage manifestKey={art.imageKey} alt={art.imageAlt} aspect="16:9" variant="inline" subtleCredit />
                 <div className="p-7 lg:p-8">
                   <div className="text-2xs font-bold uppercase tracking-eyebrow mb-3" style={{ color: 'var(--brand-primary)' }}>{art.eyebrow}</div>
                   <h3 className="font-display font-bold text-2xl leading-tight mb-3" style={{ color: 'var(--brand-text-dark)' }}>{art.title}</h3>
