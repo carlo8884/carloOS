@@ -119,12 +119,9 @@ export function HomeGuides() {
             href="/tools"
             className="group flex items-center gap-3 overflow-hidden rounded-xl border border-white/10 bg-white/[0.05] no-underline hover:border-brand-primary transition-all"
           >
-            <div className={`relative h-16 w-24 shrink-0 overflow-hidden bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-              <StockImage manifestKey="fish-com:tools-hero" alt="An aquarium water test kit" aspect="4:3" subtleCredit />
-            </div>
-            <div className="pr-3 py-2">
+            <div className="px-4 py-2.5">
               <div className="mb-1">
-                <div className="font-display font-bold text-white text-sm leading-tight italic group-hover:text-[#3aa4cc]">All calculators</div>
+                <div className="font-display font-bold text-white text-sm leading-tight italic group-hover:text-[#3aa4cc]">All calculators <span aria-hidden="true">→</span></div>
               </div>
               <div className="text-xs text-white/55 mt-0.5">
                 <span>Volume, stocking, heater, water change.</span>
@@ -300,11 +297,8 @@ export function HomeGuides() {
             href="/equipment"
             className="group flex items-center gap-3 overflow-hidden rounded-xl border border-brand-border bg-white no-underline hover:border-brand-primary transition-all"
           >
-            <div className={`relative h-16 w-24 shrink-0 overflow-hidden bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-              <StockImage manifestKey="fish-com:category-equipment" alt="Aquarium filtration and heating equipment" aspect="4:3" subtleCredit />
-            </div>
-            <div className="pr-3 py-2">
-              <div className="font-display font-bold text-brand-dark text-sm leading-tight italic group-hover:text-brand-primary">All equipment guides</div>
+            <div className="px-4 py-2.5">
+              <div className="font-display font-bold text-brand-dark text-sm leading-tight italic group-hover:text-brand-primary">All equipment guides <span aria-hidden="true">→</span></div>
               <div className="text-xs text-brand-text-mid mt-0.5">Filters, heaters, lighting, and kits.</div>
             </div>
           </Link>

@@ -1934,3 +1934,12 @@ Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners, no sitema
 3. Preview URLs: https://dog-com-git-dog-trainers-empty-state-carlo-tabibi-s-projects.vercel.app/trainers · https://dog-com-three.vercel.app/trainers · https://dog-com-three.vercel.app/join/pro · https://carlo-os-fish-com.vercel.app/ · https://horses-com.vercel.app/inquire · https://horses-com.vercel.app/
 4. Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners, directory claimed=false.
 5. Carlo offline until next week; recap emailed to carlo@tabibi.com.
+
+---
+
+## 2026-10-24 ~09:15 PDT hour
+1. Fish.com homepage visual quality: one Unsplash test-kit photo (Delbert Pagayona) appeared three times on the homepage — the triage cycling card plus the "All calculators" and "All equipment guides" link thumbs. Removed the two link thumbs; those links are now clean text with an arrow, matching dog.com's one credited photo + clean text pattern.
+2. No new images, no doses, no sitemap regen. Dog /join/pro + /trainers shells, Horses /inquire + homepage and shared Footer inquire left alone.
+3. Preview URLs: https://carlo-os-fish-com.vercel.app/ · https://dog-com-three.vercel.app/join/pro · https://dog-com-three.vercel.app/trainers · https://horses-com.vercel.app/inquire · https://horses-com.vercel.app/
+4. Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners, directory claimed=false.
+5. Carlo offline until next week; recap emailed to carlo@tabibi.com.
