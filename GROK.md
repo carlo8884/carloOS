@@ -1970,3 +1970,12 @@ Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners, no sitema
 3. Preview URLs: https://horses-com.vercel.app/ · https://horses-com.vercel.app/inquire · https://carlo-os-fish-com.vercel.app/ · https://dog-com-three.vercel.app/join/pro · https://dog-com-three.vercel.app/trainers
 4. Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners, directory claimed=false.
 5. Carlo offline until next week; recap emailed to carlo@tabibi.com.
+
+---
+
+## 2026-10-24 ~13:14 PDT hour
+1. Fish.com homepage polish: the "Why this site" Editorial standards action carried a decorative Corydoras thumb (fish-com:species-thumb-corydoras) unrelated to editorial standards — the fourth small photo chip in four consecutive bands under the hero. It's now a clean text link with an arrow, matching Horses.com's "Why this site" action (#2900) and Fish.com's own "How we work" Editorial standards link. PR #2901.
+2. No new images, no manifest changes, no doses, no sitemap regen. Dog /join/pro + /trainers shells, Horses /inquire + homepage and shared Footer inquire left alone. Next candidate: Fish "Health guides" thumb (fish-com:cornerstone-cycling) alt says "test kit" but the photo is a yellow fish (alt-text fix).
+3. Preview URLs: https://carlo-os-fish-com-git-bot-fish-w-97af93-carlo-tabibi-s-projects.vercel.app/ · https://carlo-os-fish-com.vercel.app/ · https://dog-com-three.vercel.app/join/pro · https://dog-com-three.vercel.app/trainers · https://horses-com.vercel.app/inquire · https://horses-com.vercel.app/
+4. Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners, directory claimed=false.
+5. Carlo offline until next week; recap emailed to carlo@tabibi.com.
