@@ -124,19 +124,10 @@ export function HomeTriage() {
             </div>
             <Link
               href="/health"
-              className="group flex items-center gap-3 overflow-hidden rounded-xl border border-white/10 bg-white/[0.05] no-underline hover:border-brand-primary transition-all"
+              className="group flex items-center gap-2 no-underline"
             >
-              <div className={`relative h-14 w-20 shrink-0 overflow-hidden bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                <StockImage manifestKey="fish-com:cornerstone-cycling" alt="A freshwater aquarium test kit being used to check water parameters" aspect="4:3" subtleCredit />
-              </div>
-              <div className="pr-3 py-2">
-                <div className="mb-1">
-                  <div className="font-display font-bold text-white text-sm leading-tight italic group-hover:text-[#3aa4cc]">Health guides</div>
-                </div>
-                <div className="text-xs text-white/55 mt-0.5">
-                  <span>Spikes, gasping, and when to test.</span>
-                </div>
-              </div>
+              <span className="font-display font-bold text-white text-sm leading-tight italic group-hover:text-[#3aa4cc]">Health guides</span>
+              <IconArrowRight className="w-3.5 h-3.5 shrink-0 text-[#3aa4cc] transition-transform group-hover:translate-x-0.5" />
             </Link>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
