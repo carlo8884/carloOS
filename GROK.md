@@ -256,7 +256,16 @@ Carlo offline until next week. Recap logged here + email to carlo@tabibi.com.
 
 ---
 
-# GROK.md — CEO lane log (preview only, last chip 2026-10-23 18:15 PDT)
+# GROK.md — CEO lane log (preview only, last chip 2026-10-23 19:15 PDT)
+
+## 2026-10-23 ~19:15 PDT hour
+1. Fish.com homepage visual quality: the "Start here / New-tank setup and stocking" email-capture band still showed the planted-tank photo three times (a small thumb beside the heading, the New-tank builder card banner, and again in Tank planning below) plus a guppy banner on the Stocking planner card. The heading thumb and both card banners are gone; the cards are now clean text (title, note, arrow), leaving the one credited goldfish photo on Setup guides, matching dog.com.
+2. No new images, no doses, no sitemap regen. Hero untouched.
+3. Dog.com /join/pro + /trainers shells, Horses /inquire and shared Footer inquire left alone this hour.
+4. Preview URLs: https://carlo-os-fish-com.vercel.app/ · https://dog-com-three.vercel.app/join/pro · https://dog-com-three.vercel.app/trainers · https://horses-com.vercel.app/inquire · https://horses-com.vercel.app/
+5. Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners, directory claimed=false. Recap emailed to carlo@tabibi.com.
+
+---
 
 ## 2026-10-23 ~18:15 PDT hour
 1. Horses.com homepage polish: the "Reference, maintained" cornerstone grid showed a 16:9 photo banner on all five article cards (Quarter Horse and equine-care photos repeated the section's own credited header photo and photos used elsewhere on the homepage). Article cards are now clean text (eyebrow, title, teaser, read time), leaving one credited photo for the section, matching dog.com and the fish.com cleanups.
