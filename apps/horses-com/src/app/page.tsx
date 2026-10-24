@@ -102,30 +102,28 @@ const CATEGORIES: {
   title: string
   desc: string
   href: string
-  manifestKey: string
-  imageAlt: string
 }[] = [
-  { icon: 'breeds', title: 'Breeds', desc: 'Discipline-tagged breed references with bloodlines, conformation, and genetic-panel coverage.', href: '/breeds/quarter-horse', manifestKey: 'horses-com:category-breeds', imageAlt: 'A horse standing in profile, showing conformation' },
-  { icon: 'health', title: 'Health', desc: 'Condition references with AAEP-aligned guidance and when-to-call-your-vet thresholds.', href: '/health', manifestKey: 'horses-com:category-care', imageAlt: 'A horse receiving routine care' },
-  { icon: 'guides', title: 'Guides', desc: 'Tack, turnout, and management fundamentals — written for owners who own the decision.', href: '/guides/saddle-fit-basics', manifestKey: 'horses-com:guide-saddle-fit', imageAlt: 'A dressage horse and rider working in tack at the canter' },
-  { icon: 'supplements', title: 'Supplements', desc: 'Ingredient-by-ingredient evaluation with research citations and dosing context.', href: '/supplements/joint-supplements', manifestKey: 'horses-com:supplement-joint', imageAlt: 'A working sport horse, the focus of joint-supplement research' },
-  { icon: 'reviews', title: 'Reviews', desc: 'Gear comparisons scored on the same dimensions, discipline-filterable.', href: '/reviews/best-winter-horse-blankets', manifestKey: 'horses-com:category-reviews', imageAlt: 'Horse gear compared side by side' },
-  { icon: 'roadmap', title: 'First-Horse Roadmap', desc: 'A free 90-day plan for the first-time owner — on the page, no email signup.', href: '/first-horse-roadmap', manifestKey: 'horses-com:featured-quarter-horse', imageAlt: 'A horse — the start of the first-horse journey' },
-  { icon: 'racing', title: 'Racing Intelligence', desc: 'Thoroughbred, harness, and Quarter Horse racing as educational reference — disciplines, governance, and OTTB aftercare.', href: '/racing', manifestKey: 'horses-com:category-disciplines', imageAlt: 'Horses competing on a track' },
+  { icon: 'breeds', title: 'Breeds', desc: 'Discipline-tagged breed references with bloodlines, conformation, and genetic-panel coverage.', href: '/breeds/quarter-horse' },
+  { icon: 'health', title: 'Health', desc: 'Condition references with AAEP-aligned guidance and when-to-call-your-vet thresholds.', href: '/health' },
+  { icon: 'guides', title: 'Guides', desc: 'Tack, turnout, and management fundamentals — written for owners who own the decision.', href: '/guides/saddle-fit-basics' },
+  { icon: 'supplements', title: 'Supplements', desc: 'Ingredient-by-ingredient evaluation with research citations and dosing context.', href: '/supplements/joint-supplements' },
+  { icon: 'reviews', title: 'Reviews', desc: 'Gear comparisons scored on the same dimensions, discipline-filterable.', href: '/reviews/best-winter-horse-blankets' },
+  { icon: 'roadmap', title: 'First-Horse Roadmap', desc: 'A free 90-day plan for the first-time owner — on the page, no email signup.', href: '/first-horse-roadmap' },
+  { icon: 'racing', title: 'Racing Intelligence', desc: 'Thoroughbred, harness, and Quarter Horse racing as educational reference — disciplines, governance, and OTTB aftercare.', href: '/racing' },
 ]
 
 const FEATURED_GUIDES = [
-  { eyebrow: 'Ownership', title: 'What a horse actually costs', desc: 'Board, farrier, vet, feed, and the once-a-year surprises — a realistic annual budget before you buy.', href: '/ownership/cost-of-owning-a-horse', manifestKey: 'horses-com:hero', imageAlt: 'Horses running through a grassy field' },
-  { eyebrow: 'Free tool', title: 'Estimate your horse\u2019s weight', desc: 'No livestock scale needed — heart-girth and body-length measurements give a working bodyweight for dosing and feeding.', href: '/tools/horse-weight-calculator', manifestKey: 'horses-com:tool-bcs-calculator', imageAlt: 'Measuring a horse to estimate bodyweight' },
-  { eyebrow: 'Breed guide', title: 'The American Quarter Horse', desc: 'The most populous breed in the U.S. — registry, the 5-panel genetic test, and what to expect as a first-time owner.', href: '/breeds/quarter-horse', manifestKey: 'horses-com:featured-quarter-horse', imageAlt: 'An American Quarter Horse and rider schooling' },
+  { eyebrow: 'Ownership', title: 'What a horse actually costs', desc: 'Board, farrier, vet, feed, and the once-a-year surprises — a realistic annual budget before you buy.', href: '/ownership/cost-of-owning-a-horse' },
+  { eyebrow: 'Free tool', title: 'Estimate your horse\u2019s weight', desc: 'No livestock scale needed — heart-girth and body-length measurements give a working bodyweight for dosing and feeding.', href: '/tools/horse-weight-calculator' },
+  { eyebrow: 'Breed guide', title: 'The American Quarter Horse', desc: 'The most populous breed in the U.S. — registry, the 5-panel genetic test, and what to expect as a first-time owner.', href: '/breeds/quarter-horse' },
 ]
 
 const FEATURED_ARTICLES = [
-  { href: '/breeds/quarter-horse', eyebrow: 'Breed Guide', title: 'American Quarter Horse', teaser: 'The most populous horse breed in the United States — short-coupled, heavily muscled, and built for explosive acceleration.', readTime: '14 min', imageKey: 'horses-com:featured-quarter-horse', imageAlt: 'A horse and rider in an all-purpose schooling session' },
-  { href: '/health/equine-ulcers', eyebrow: 'Equine Health', title: 'Equine Gastric Ulcer Syndrome', teaser: 'Up to 90% of racehorses and 60% of sport horses develop ulcers. Squamous vs. glandular disease, omeprazole protocols, and the management changes that actually move the needle.', readTime: '16 min', imageKey: 'horses-com:category-care', imageAlt: 'A horse receiving routine care' },
-  { href: '/guides/saddle-fit-basics', eyebrow: 'Tack & Fitting', title: 'Saddle Fit Basics', teaser: 'A field reference for the owner checking tree width, wither clearance, and panel contact between professional fittings.', readTime: '12 min', imageKey: 'horses-com:guide-saddle-fit', imageAlt: 'A dressage horse and rider working in tack at the canter' },
-  { href: '/supplements/joint-supplements', eyebrow: 'Supplements', title: 'Joint Supplements for the Working Horse', teaser: 'Glucosamine, chondroitin, hyaluronic acid, MSM — what the literature actually shows, and where to skip the marketing.', readTime: '13 min', imageKey: 'horses-com:featured-joint-supplements', imageAlt: 'A show jumper mid-flight over a fence' },
-  { href: '/reviews/best-winter-horse-blankets', eyebrow: 'Gear Review', title: 'Best Winter Horse Blankets', teaser: 'Denier ratings, fill weight, gusset design, and shoulder-fit by build. Eight blankets compared on the same dimensions.', readTime: '11 min', imageKey: 'horses-com:category-reviews', imageAlt: 'Horse gear compared side by side' },
+  { href: '/breeds/quarter-horse', eyebrow: 'Breed Guide', title: 'American Quarter Horse', teaser: 'The most populous horse breed in the United States — short-coupled, heavily muscled, and built for explosive acceleration.', readTime: '14 min' },
+  { href: '/health/equine-ulcers', eyebrow: 'Equine Health', title: 'Equine Gastric Ulcer Syndrome', teaser: 'Up to 90% of racehorses and 60% of sport horses develop ulcers. Squamous vs. glandular disease, omeprazole protocols, and the management changes that actually move the needle.', readTime: '16 min' },
+  { href: '/guides/saddle-fit-basics', eyebrow: 'Tack & Fitting', title: 'Saddle Fit Basics', teaser: 'A field reference for the owner checking tree width, wither clearance, and panel contact between professional fittings.', readTime: '12 min' },
+  { href: '/supplements/joint-supplements', eyebrow: 'Supplements', title: 'Joint Supplements for the Working Horse', teaser: 'Glucosamine, chondroitin, hyaluronic acid, MSM — what the literature actually shows, and where to skip the marketing.', readTime: '13 min' },
+  { href: '/reviews/best-winter-horse-blankets', eyebrow: 'Gear Review', title: 'Best Winter Horse Blankets', teaser: 'Denier ratings, fill weight, gusset design, and shoulder-fit by build. Eight blankets compared on the same dimensions.', readTime: '11 min' },
 ]
 
 const TRUST_CHIPS = [
@@ -133,29 +131,21 @@ const TRUST_CHIPS = [
     label: 'Research-based',
     note: 'Citation-anchored guides, signed on the page.',
     href: '/editorial-standards',
-    imageKey: 'horses-com:hero',
-    imageAlt: 'Horses running through a grassy field',
   },
   {
     label: 'Cross-discipline',
     note: 'Dressage through racing, as reference — not picks.',
     href: '/disciplines',
-    imageKey: 'horses-com:category-disciplines',
-    imageAlt: 'A dressage horse and rider in competition',
   },
   {
     label: 'No paid placements',
     note: 'Gear scored on the page. Affiliate links disclosed.',
     href: '/disclosure',
-    imageKey: 'horses-com:category-reviews',
-    imageAlt: 'A tacked-up horse at the jump',
   },
   {
     label: 'Veterinarian-respectful',
     note: 'When-to-call thresholds. No invented clinicians.',
     href: '/health',
-    imageKey: 'horses-com:category-care',
-    imageAlt: 'A horse receiving routine care',
   },
 ]
 
@@ -297,62 +287,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      <section className="bg-brand-white px-container-sm sm:px-container py-section border-y border-brand-border">
-        <div className="max-w-container mx-auto">
-          <div className="grid lg:grid-cols-[1.4fr_1fr] gap-8 lg:gap-12 items-start">
-            <div className="min-w-0"><BodyConditionScoreCalculator /></div>
-            <aside className="flex flex-col gap-6 lg:sticky lg:top-24 lg:self-start">
-              <div className={`relative min-h-[180px] overflow-hidden rounded-xl ring-1 ring-brand-border ${FILL_IMAGE}`}>
-                <div className={`absolute inset-0 ${FILL_IMAGE}`}>
-                  <StockImage manifestKey="horses-com:tool-bcs-calculator" fallbackKey="horses-com:hero" alt="A horse standing square for body condition assessment" aspect="4:3" variant="inline" subtleCredit />
-                </div>
-              </div>
-              <div>
-                <div className="flex items-end justify-between gap-3 flex-wrap mb-3">
-                  <Link href="/tools/body-condition-score" className="group flex items-center gap-2.5 no-underline">
-                    <span className="w-6 h-0.5 bg-brand-primary" />
-                    <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary group-hover:underline">Try it · Henneke body condition score</span>
-                  </Link>
-                  <Link href="/tools/body-condition-score" className="group flex items-center gap-3 overflow-hidden rounded-md no-underline" style={{ background: 'var(--brand-surface)', border: '1px solid var(--brand-border)' }}>
-                    <div className="pr-3 py-1.5">
-                      <div className="mb-1">
-                        <span className="block font-display font-bold text-sm leading-tight" style={{ color: 'var(--brand-text-dark)' }}>Body condition tool</span>
-                      </div>
-                      <span className="mt-0.5 text-xs" style={{ color: 'var(--brand-text-mid)' }}>
-                        <span>Six checkpoints, 1–9 score.</span>
-                      </span>
-                    </div>
-                  </Link>
-                </div>
-                <h2 className="font-display font-bold text-brand-dark tracking-tight mb-3" style={{ fontSize: 'clamp(24px, 3vw, 38px)' }}>Is your horse the right weight?</h2>
-                <p className="text-sm text-brand-text-mid leading-relaxed mb-3">Body condition is the single most useful daily check an owner can make.</p>
-                <p className="text-sm text-brand-text-mid leading-relaxed">Score the six Henneke checkpoints and the tool returns the 1–9 score vets and nutritionists use.</p>
-              </div>
-              <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
-                <Link href="/tools" className="group mb-3 flex items-center gap-3 no-underline">
-                  <span>
-                    <span className="block text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light">More free calculators</span>
-                    <span className="block text-sm font-semibold text-brand-primary group-hover:underline">Tools hub, on the page</span>
-                  </span>
-                </Link>
-                <div className="flex flex-col gap-2 text-sm font-semibold">
-                  {[
-                    { href: '/tools/horse-weight-calculator', label: 'Horse weight calculator' },
-                    { href: '/tools/horse-feed-calculator', label: 'Feed & hay calculator' },
-                    { href: '/tools/stall-bedding-calculator', label: 'Stall bedding calculator' },
-                    { href: '/tools', label: 'Browse the tools hub' },
-                  ].map((tool) => (
-                    <Link key={tool.href} href={tool.href} className="group flex items-center justify-between gap-3 rounded-md border border-brand-border bg-brand-white px-3 py-2.5 text-brand-primary no-underline hover:underline">
-                      <span>{tool.label}</span>
-                      <span aria-hidden="true">→</span>
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            </aside>
-          </div>
-        </div>
-      </section>
       <section className="px-container-sm sm:px-container py-section" style={{ background: 'var(--brand-surface)' }}>
         <div className="mx-auto max-w-container-wide">
           <div className="flex items-end justify-between gap-6 flex-wrap mb-10">
@@ -398,5 +332,3 @@ export default function HomePage() {
     </>
   )
 }
-
-
