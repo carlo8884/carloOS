@@ -1952,3 +1952,12 @@ Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners, no sitema
 3. Preview URLs: https://carlo-os-fish-com-git-bot-fish-e-6adf21-carlo-tabibi-s-projects.vercel.app/ · https://carlo-os-fish-com.vercel.app/ · https://dog-com-three.vercel.app/join/pro · https://dog-com-three.vercel.app/trainers · https://horses-com.vercel.app/inquire · https://horses-com.vercel.app/
 4. Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners, directory claimed=false.
 5. Carlo offline until next week; recap emailed to carlo@tabibi.com.
+
+---
+
+## 2026-10-24 ~11:14 PDT hour
+1. Horses.com homepage polish: the "Where to start" section showed two photos, and the DisciplineFilter "All disciplines" thumb (horses-com:category-disciplines) was the same Unsplash photo (9h_bJdGqzCk) as the large BCS tool aside (horses-com:tool-bcs-calculator) further down. The "All disciplines" link is now clean text with an arrow; the section keeps one credited photo (All breed guides), matching dog.com/fish.com. PR #2898.
+2. No new images, no manifest changes, no doses, no sitemap regen. Fish.com homepage (no repeats since #2896), Dog /join/pro + /trainers shells, Horses /inquire and shared Footer inquire left alone. Next candidate: Horses "Why this site" thumb (hero-section) is the same photo (vLrlxsNKE3Y) as the "Quarter Horse guide" thumb.
+3. Preview URLs: https://horses-com-git-bot-horses-discip-5b6b21-carlo-tabibi-s-projects.vercel.app/ · https://horses-com.vercel.app/ · https://horses-com.vercel.app/inquire · https://carlo-os-fish-com.vercel.app/ · https://dog-com-three.vercel.app/join/pro · https://dog-com-three.vercel.app/trainers
+4. Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners, directory claimed=false.
+5. Carlo offline until next week; recap emailed to carlo@tabibi.com.
