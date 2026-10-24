@@ -1916,3 +1916,12 @@ Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners, no sitema
 3. Preview URLs: https://dog-com-three.vercel.app/join/pro · https://dog-com-three.vercel.app/trainers · https://carlo-os-fish-com.vercel.app/ · https://horses-com.vercel.app/inquire
 4. Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners, directory claimed=false.
 5. Carlo offline until next week; recap emailed to carlo@tabibi.com.
+
+---
+
+## 2026-10-24 ~07:15 PDT hour
+1. Horses.com homepage polish: the "Why this site" Editorial standards action used horses-com:hero — the same galloping-field photo as the hero directly above, so the first two bands repeated one picture. Swapped to the existing credited horses-com:hero-section (Lily Banse), used nowhere else on the homepage; section stays one credited photo + clean text, matching dog.com/fish.com. PR #2891.
+2. No new images, no doses, no sitemap regen. Fish.com homepage re-checked (already one credited photo per section, no repeats); Dog /join/pro + /trainers shells, Horses /inquire and shared Footer inquire left alone.
+3. Preview URLs: https://horses-com.vercel.app/ · https://horses-com.vercel.app/inquire · https://carlo-os-fish-com.vercel.app/ · https://dog-com-three.vercel.app/join/pro · https://dog-com-three.vercel.app/trainers
+4. Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners, directory claimed=false.
+5. Carlo offline until next week; recap emailed to carlo@tabibi.com.

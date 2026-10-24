@@ -183,7 +183,7 @@ export default function HomePage() {
             </div>
             <Link href="/editorial-standards" className="group flex items-center gap-3 overflow-hidden rounded-md no-underline" style={{ background: 'var(--brand-white)', border: '1px solid var(--brand-border)' }}>
               <div className={`relative h-14 w-20 shrink-0 overflow-hidden ${FILL_IMAGE}`}>
-                <StockImage manifestKey="horses-com:hero" fallbackKey="horses-com:hero" alt="Horses running through a grassy field" aspect="4:3" variant="inline" subtleCredit />
+                <StockImage manifestKey="horses-com:hero-section" fallbackKey="horses-com:hero" alt="A dressage horse at the canter in moody equestrian light" aspect="4:3" variant="inline" subtleCredit />
               </div>
               <div className="pr-3 py-2">
                 <div className="mb-1 flex items-center gap-2">
