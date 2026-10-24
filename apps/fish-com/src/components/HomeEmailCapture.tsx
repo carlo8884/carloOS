@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { StockImage } from '@carloOS/ui'
+import { IconArrowRight } from './HomeTriage'
 
 const FILL_IMAGE = '[&>figure]:my-0 [&>div]:my-0 [&_figure]:my-0'
 
@@ -8,15 +9,11 @@ const START_LINKS = [
     title: 'New-tank builder',
     note: 'Volume, filter, and cycle order before the first fish.',
     href: '/tools/aquarium-setup-builder',
-    imageKey: 'fish-com:category-planted',
-    imageAlt: 'Lush aquatic plants in a planted aquarium',
   },
   {
     title: 'Stocking planner',
     note: 'A slim-inch ceiling from footprint and filter class.',
     href: '/tools/stocking-calculator',
-    imageKey: 'fish-com:species-thumb-guppy',
-    imageAlt: 'A guppy fish',
   },
 ]
 
@@ -36,9 +33,6 @@ export function HomeEmailCapture() {
               </Link>
             </div>
             <div className="mb-2 flex items-center justify-center lg:justify-start gap-2.5">
-              <div className={`relative h-10 w-14 shrink-0 overflow-hidden rounded-md bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                <StockImage manifestKey="fish-com:category-planted" alt="Lush aquatic plants in a planted aquarium" aspect="4:3" subtleCredit />
-              </div>
               <h2 className="font-display text-2xl font-bold text-brand-dark italic mb-0">
                 New-tank setup and stocking
               </h2>
@@ -71,14 +65,12 @@ export function HomeEmailCapture() {
               href={item.href}
               className="group block overflow-hidden rounded-xl border border-brand-border bg-white no-underline hover:border-brand-primary transition-all"
             >
-              <div className={`relative h-28 bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                <StockImage manifestKey={item.imageKey} alt={item.imageAlt} aspect="16:9" subtleCredit />
-              </div>
               <div className="p-4">
-                <div className="mb-1 flex items-center gap-2">
+                <div className="mb-1 flex items-center justify-between gap-2">
                   <div className="font-display font-bold text-brand-dark text-base leading-tight italic group-hover:text-brand-primary">
                     {item.title}
                   </div>
+                  <IconArrowRight className="w-3.5 h-3.5 shrink-0 text-brand-primary" />
                 </div>
                 <div className="text-xs text-brand-text-mid mt-1 leading-relaxed flex items-start gap-2">
                   <span>{item.note}</span>
