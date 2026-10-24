@@ -46,7 +46,7 @@ export function HomeEmailCapture() {
             className="group flex items-center gap-3 overflow-hidden rounded-xl border border-brand-border bg-white no-underline hover:border-brand-primary transition-all"
           >
             <div className={`relative h-14 w-20 shrink-0 overflow-hidden bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-              <StockImage manifestKey="fish-com:species-thumb-goldfish" alt="A goldfish" aspect="4:3" subtleCredit />
+              <StockImage manifestKey="fish-com:glossary-hero" alt="A green plant in a clear glass fish tank" aspect="4:3" subtleCredit />
             </div>
             <div className="pr-3 py-2">
               <div className="mb-1 flex items-center gap-2">
