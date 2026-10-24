@@ -1907,3 +1907,12 @@ Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners, no sitema
 3. Preview URLs: https://carlo-os-fish-com.vercel.app/ · https://dog-com-three.vercel.app/join/pro · https://dog-com-three.vercel.app/trainers · https://horses-com.vercel.app/inquire · https://horses-com.vercel.app/
 4. Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners, directory claimed=false.
 5. Carlo offline until next week; recap emailed to carlo@tabibi.com.
+
+---
+
+## 2026-10-24 ~03:03 PDT hour
+1. Dog.com /join/pro claimed-directory shell: added a plain 3-step "How review works" list (send form with public link → we check link/credential → claimed page goes live or nothing is posted) and linked the "Looking for a trainer" note back to /trainers. No trainers, ratings, or badges invented; directory stays empty/claimed-only.
+2. No new images, no doses, no sitemap regen. Fish.com hero, Horses /inquire (shared InquireOfferScreen, consistent with dog/fish) and shared Footer inquire left alone.
+3. Preview URLs: https://dog-com-three.vercel.app/join/pro · https://dog-com-three.vercel.app/trainers · https://carlo-os-fish-com.vercel.app/ · https://horses-com.vercel.app/inquire
+4. Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners, directory claimed=false.
+5. Carlo offline until next week; recap emailed to carlo@tabibi.com.
