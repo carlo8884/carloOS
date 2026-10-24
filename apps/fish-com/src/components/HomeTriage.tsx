@@ -1,8 +1,5 @@
 import Link from 'next/link'
 import type React from 'react'
-import { StockImage } from '@carloOS/ui'
-
-const FILL_IMAGE = '[&>figure]:my-0 [&>div]:my-0 [&_figure]:my-0'
 
 function ProblemIconCloud() {
   return (
@@ -211,11 +208,11 @@ export function HomeTriage() {
             href="/tools"
             className="group flex items-center gap-3 overflow-hidden rounded-xl border border-white/10 bg-white/[0.05] no-underline hover:border-brand-primary transition-all"
           >
-            <div className={`relative h-14 w-20 shrink-0 overflow-hidden bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-              <StockImage manifestKey="fish-com:species-thumb-betta" alt="A betta fish" aspect="4:3" subtleCredit />
-            </div>
-            <div className="pr-3 py-2">
-              <div className="font-display font-bold text-white text-sm leading-tight italic group-hover:text-[#3aa4cc]">All calculators</div>
+            <div className="px-4 py-2.5">
+              <div className="flex items-center gap-2 font-display font-bold text-white text-sm leading-tight italic group-hover:text-[#3aa4cc]">
+                <span>All calculators</span>
+                <IconArrowRight className="w-3.5 h-3.5 shrink-0 text-[#3aa4cc] transition-transform group-hover:translate-x-0.5" />
+              </div>
               <div className="text-xs text-white/55 mt-0.5">Volume, stocking, heater, CO₂, cycling.</div>
             </div>
           </Link>
