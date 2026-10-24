@@ -256,7 +256,16 @@ Carlo offline until next week. Recap logged here + email to carlo@tabibi.com.
 
 ---
 
-# GROK.md — CEO lane log (preview only, last chip 2026-10-23 17:10 PDT)
+# GROK.md — CEO lane log (preview only, last chip 2026-10-23 18:15 PDT)
+
+## 2026-10-23 ~18:15 PDT hour
+1. Horses.com homepage polish: the "Reference, maintained" cornerstone grid showed a 16:9 photo banner on all five article cards (Quarter Horse and equine-care photos repeated the section's own credited header photo and photos used elsewhere on the homepage). Article cards are now clean text (eyebrow, title, teaser, read time), leaving one credited photo for the section, matching dog.com and the fish.com cleanups.
+2. No new images, no doses, no sitemap regen. Hero and copy untouched.
+3. Dog.com /join/pro + /trainers shells, Horses /inquire and shared Footer inquire left alone this hour.
+4. Preview URLs: https://carlo-os-fish-com.vercel.app/ · https://dog-com-three.vercel.app/join/pro · https://dog-com-three.vercel.app/trainers · https://horses-com.vercel.app/inquire · https://horses-com.vercel.app/
+5. Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners, directory claimed=false. Recap emailed to carlo@tabibi.com.
+
+---
 
 ## 2026-10-23 ~17:10 PDT hour
 1. Horses.com homepage polish: the "Where to start" category grid showed a 4:3 photo on all seven category cards (Breeds repeated the section's own credited header photo; Quarter Horse, care and disciplines photos also appear elsewhere on the homepage). Category cards are now clean text (icon, title, note, "Read" arrow), leaving one credited photo for the section, matching dog.com and the fish.com cleanups.
