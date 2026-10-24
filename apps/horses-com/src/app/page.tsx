@@ -102,60 +102,50 @@ const CATEGORIES: {
   title: string
   desc: string
   href: string
-  manifestKey: string
-  imageAlt: string
 }[] = [
-  { icon: 'breeds', title: 'Breeds', desc: 'Discipline-tagged breed references with bloodlines, conformation, and genetic-panel coverage.', href: '/breeds/quarter-horse', manifestKey: 'horses-com:category-breeds', imageAlt: 'A horse standing in profile, showing conformation' },
-  { icon: 'health', title: 'Health', desc: 'Condition references with AAEP-aligned guidance and when-to-call-your-vet thresholds.', href: '/health', manifestKey: 'horses-com:category-care', imageAlt: 'A horse receiving routine care' },
-  { icon: 'guides', title: 'Guides', desc: 'Tack, turnout, and management fundamentals — written for owners who own the decision.', href: '/guides/saddle-fit-basics', manifestKey: 'horses-com:guide-saddle-fit', imageAlt: 'A dressage horse and rider working in tack at the canter' },
-  { icon: 'supplements', title: 'Supplements', desc: 'Ingredient-by-ingredient evaluation with research citations and dosing context.', href: '/supplements/joint-supplements', manifestKey: 'horses-com:supplement-joint', imageAlt: 'A working sport horse, the focus of joint-supplement research' },
-  { icon: 'reviews', title: 'Reviews', desc: 'Gear comparisons scored on the same dimensions, discipline-filterable.', href: '/reviews/best-winter-horse-blankets', manifestKey: 'horses-com:category-reviews', imageAlt: 'Horse gear compared side by side' },
-  { icon: 'roadmap', title: 'First-Horse Roadmap', desc: 'A free 90-day plan for the first-time owner — on the page, no email signup.', href: '/first-horse-roadmap', manifestKey: 'horses-com:featured-quarter-horse', imageAlt: 'A horse — the start of the first-horse journey' },
-  { icon: 'racing', title: 'Racing Intelligence', desc: 'Thoroughbred, harness, and Quarter Horse racing as educational reference — disciplines, governance, and OTTB aftercare.', href: '/racing', manifestKey: 'horses-com:category-disciplines', imageAlt: 'Horses competing on a track' },
+  { icon: 'breeds', title: 'Breeds', desc: 'Discipline-tagged breed references with bloodlines, conformation, and genetic-panel coverage.', href: '/breeds/quarter-horse' },
+  { icon: 'health', title: 'Health', desc: 'Condition references with AAEP-aligned guidance and when-to-call-your-vet thresholds.', href: '/health' },
+  { icon: 'guides', title: 'Guides', desc: 'Tack, turnout, and management fundamentals — written for owners who own the decision.', href: '/guides/saddle-fit-basics' },
+  { icon: 'supplements', title: 'Supplements', desc: 'Ingredient-by-ingredient evaluation with research citations and dosing context.', href: '/supplements/joint-supplements' },
+  { icon: 'reviews', title: 'Reviews', desc: 'Gear comparisons scored on the same dimensions, discipline-filterable.', href: '/reviews/best-winter-horse-blankets' },
+  { icon: 'roadmap', title: 'First-Horse Roadmap', desc: 'A free 90-day plan for the first-time owner — on the page, no email signup.', href: '/first-horse-roadmap' },
+  { icon: 'racing', title: 'Racing Intelligence', desc: 'Thoroughbred, harness, and Quarter Horse racing as educational reference — disciplines, governance, and OTTB aftercare.', href: '/racing' },
 ]
 
 const FEATURED_GUIDES = [
-  { eyebrow: 'Ownership', title: 'What a horse actually costs', desc: 'Board, farrier, vet, feed, and the once-a-year surprises — a realistic annual budget before you buy.', href: '/ownership/cost-of-owning-a-horse', manifestKey: 'horses-com:hero', imageAlt: 'Horses running through a grassy field' },
-  { eyebrow: 'Free tool', title: 'Estimate your horse\u2019s weight', desc: 'No livestock scale needed — heart-girth and body-length measurements give a working bodyweight for dosing and feeding.', href: '/tools/horse-weight-calculator', manifestKey: 'horses-com:tool-bcs-calculator', imageAlt: 'Measuring a horse to estimate bodyweight' },
-  { eyebrow: 'Breed guide', title: 'The American Quarter Horse', desc: 'The most populous breed in the U.S. — registry, the 5-panel genetic test, and what to expect as a first-time owner.', href: '/breeds/quarter-horse', manifestKey: 'horses-com:featured-quarter-horse', imageAlt: 'An American Quarter Horse and rider schooling' },
+  { eyebrow: 'Ownership', title: 'What a horse actually costs', desc: 'Board, farrier, vet, feed, and the once-a-year surprises — a realistic annual budget before you buy.', href: '/ownership/cost-of-owning-a-horse' },
+  { eyebrow: 'Free tool', title: 'Estimate your horse\u2019s weight', desc: 'No livestock scale needed — heart-girth and body-length measurements give a working bodyweight for dosing and feeding.', href: '/tools/horse-weight-calculator' },
+  { eyebrow: 'Breed guide', title: 'The American Quarter Horse', desc: 'The most populous breed in the U.S. — registry, the 5-panel genetic test, and what to expect as a first-time owner.', href: '/breeds/quarter-horse' },
 ]
 
 const FEATURED_ARTICLES = [
-  { href: '/breeds/quarter-horse', eyebrow: 'Breed Guide', title: 'American Quarter Horse', teaser: 'The most populous horse breed in the United States — short-coupled, heavily muscled, and built for explosive acceleration.', readTime: '14 min', imageKey: 'horses-com:featured-quarter-horse', imageAlt: 'A horse and rider in an all-purpose schooling session' },
-  { href: '/health/equine-ulcers', eyebrow: 'Equine Health', title: 'Equine Gastric Ulcer Syndrome', teaser: 'Up to 90% of racehorses and 60% of sport horses develop ulcers. Squamous vs. glandular disease, omeprazole protocols, and the management changes that actually move the needle.', readTime: '16 min', imageKey: 'horses-com:category-care', imageAlt: 'A horse receiving routine care' },
-  { href: '/guides/saddle-fit-basics', eyebrow: 'Tack & Fitting', title: 'Saddle Fit Basics', teaser: 'A field reference for the owner checking tree width, wither clearance, and panel contact between professional fittings.', readTime: '12 min', imageKey: 'horses-com:guide-saddle-fit', imageAlt: 'A dressage horse and rider working in tack at the canter' },
-  { href: '/supplements/joint-supplements', eyebrow: 'Supplements', title: 'Joint Supplements for the Working Horse', teaser: 'Glucosamine, chondroitin, hyaluronic acid, MSM — what the literature actually shows, and where to skip the marketing.', readTime: '13 min', imageKey: 'horses-com:featured-joint-supplements', imageAlt: 'A show jumper mid-flight over a fence' },
-  { href: '/reviews/best-winter-horse-blankets', eyebrow: 'Gear Review', title: 'Best Winter Horse Blankets', teaser: 'Denier ratings, fill weight, gusset design, and shoulder-fit by build. Eight blankets compared on the same dimensions.', readTime: '11 min', imageKey: 'horses-com:category-reviews', imageAlt: 'Horse gear compared side by side' },
+  { href: '/breeds/quarter-horse', eyebrow: 'Breed Guide', title: 'American Quarter Horse', teaser: 'The most populous horse breed in the United States — short-coupled, heavily muscled, and built for explosive acceleration.', readTime: '14 min' },
+  { href: '/health/equine-ulcers', eyebrow: 'Equine Health', title: 'Equine Gastric Ulcer Syndrome', teaser: 'Up to 90% of racehorses and 60% of sport horses develop ulcers. Squamous vs. glandular disease, omeprazole protocols, and the management changes that actually move the needle.', readTime: '16 min' },
+  { href: '/guides/saddle-fit-basics', eyebrow: 'Tack & Fitting', title: 'Saddle Fit Basics', teaser: 'A field reference for the owner checking tree width, wither clearance, and panel contact between professional fittings.', readTime: '12 min' },
+  { href: '/supplements/joint-supplements', eyebrow: 'Supplements', title: 'Joint Supplements for the Working Horse', teaser: 'Glucosamine, chondroitin, hyaluronic acid, MSM — what the literature actually shows, and where to skip the marketing.', readTime: '13 min' },
+  { href: '/reviews/best-winter-horse-blankets', eyebrow: 'Gear Review', title: 'Best Winter Horse Blankets', teaser: 'Denier ratings, fill weight, gusset design, and shoulder-fit by build. Eight blankets compared on the same dimensions.', readTime: '11 min' },
 ]
 
 const TRUST_CHIPS = [
   {
     label: 'Research-based',
     note: 'Citation-anchored guides, signed on the page.',
-    href: '/editorial-standards',
-    imageKey: 'horses-com:hero',
-    imageAlt: 'Horses running through a grassy field',
+    href: '/editorial-standards'
   },
   {
     label: 'Cross-discipline',
     note: 'Dressage through racing, as reference — not picks.',
-    href: '/disciplines',
-    imageKey: 'horses-com:category-disciplines',
-    imageAlt: 'A dressage horse and rider in competition',
+    href: '/disciplines'
   },
   {
     label: 'No paid placements',
     note: 'Gear scored on the page. Affiliate links disclosed.',
-    href: '/disclosure',
-    imageKey: 'horses-com:category-reviews',
-    imageAlt: 'A tacked-up horse at the jump',
+    href: '/disclosure'
   },
   {
     label: 'Veterinarian-respectful',
     note: 'When-to-call thresholds. No invented clinicians.',
-    href: '/health',
-    imageKey: 'horses-com:category-care',
-    imageAlt: 'A horse receiving routine care',
+    href: '/health'
   },
 ]
 
