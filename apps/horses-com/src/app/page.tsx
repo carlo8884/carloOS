@@ -181,18 +181,9 @@ export default function HomePage() {
                 <span className="text-2xs font-bold uppercase tracking-eyebrow group-hover:underline" style={{ color: '#7a5520' }}>Why this site</span>
               </Link>
             </div>
-            <Link href="/editorial-standards" className="group flex items-center gap-3 overflow-hidden rounded-md no-underline" style={{ background: 'var(--brand-white)', border: '1px solid var(--brand-border)' }}>
-              <div className={`relative h-14 w-20 shrink-0 overflow-hidden ${FILL_IMAGE}`}>
-                <StockImage manifestKey="horses-com:hero-section" fallbackKey="horses-com:hero" alt="A dressage horse at the canter in moody equestrian light" aspect="4:3" variant="inline" subtleCredit />
-              </div>
-              <div className="pr-3 py-2">
-                <div className="mb-1 flex items-center gap-2">
-                  <span className="block font-display font-bold text-sm leading-tight" style={{ color: 'var(--brand-text-dark)' }}>Editorial standards</span>
-                </div>
-                <span className="mt-0.5 flex items-center gap-2 text-xs" style={{ color: 'var(--brand-text-mid)' }}>
-                  <span>Citation-anchored, signed on the page.</span>
-                </span>
-              </div>
+            <Link href="/editorial-standards" className="group flex items-center gap-2 no-underline" style={{ color: 'var(--brand-text-dark)' }}>
+              <span className="font-display font-bold text-sm leading-tight group-hover:underline">Editorial standards</span>
+              <span aria-hidden="true" className="text-sm transition-transform group-hover:translate-x-0.5" style={{ color: 'var(--brand-primary)' }}>→</span>
             </Link>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
