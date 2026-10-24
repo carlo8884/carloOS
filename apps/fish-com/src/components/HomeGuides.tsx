@@ -33,10 +33,10 @@ const EQUIPMENT_DECISIONS = [
 ]
 
 const PRODUCT_CHIPS = [
-  { title: 'Filters', note: 'HOB, canister, and sponge — scored on the page.', href: '/reviews/best-aquarium-filters', imageKey: 'fish-com:category-equipment', imageAlt: 'Aquarium filtration and heating equipment' },
-  { title: 'Heaters', note: 'Wattage and redundancy, not brand slogans.', href: '/reviews/best-aquarium-heaters', imageKey: 'fish-com:species-thumb-clownfish', imageAlt: 'A clownfish' },
-  { title: 'Lighting', note: 'Spectrum and photoperiod for planted and reef tanks.', href: '/reviews/best-aquarium-lighting', imageKey: 'fish-com:species-thumb-discus', imageAlt: 'A discus fish' },
-  { title: 'Test kits', note: 'What to test, and how often, before the next water change.', href: '/reviews/best-water-test-kits', imageKey: 'fish-com:tools-hero', imageAlt: 'An aquarium water test kit' },
+  { title: 'Filters', note: 'HOB, canister, and sponge — scored on the page.', href: '/reviews/best-aquarium-filters' },
+  { title: 'Heaters', note: 'Wattage and redundancy, not brand slogans.', href: '/reviews/best-aquarium-heaters' },
+  { title: 'Lighting', note: 'Spectrum and photoperiod for planted and reef tanks.', href: '/reviews/best-aquarium-lighting' },
+  { title: 'Test kits', note: 'What to test, and how often, before the next water change.', href: '/reviews/best-water-test-kits' },
 ]
 
 const WORK_CHIPS = [
@@ -305,7 +305,9 @@ export function HomeGuides() {
             </div>
             <div className="pr-3 py-2">
               <div className="font-display font-bold text-brand-dark text-sm leading-tight italic group-hover:text-brand-primary">All equipment guides</div>
-              <div className="text-xs text-brand-text-mid mt-0.5">Filters, heaters, lighting, and kits.</div>
+              <div className="text-xs text-brand-text-mid mt-0.5">
+                <span>Filter, heater, light, test kit.</span>
+              </div>
             </div>
           </Link>
         </div>
@@ -315,35 +317,18 @@ export function HomeGuides() {
       <section className="bg-brand-dark px-container-sm sm:px-container py-section">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           <div>
-            <div className="flex items-end justify-between mb-4 flex-wrap gap-4">
-              <div>
-                <div className="flex items-center gap-2.5 mb-3">
-                  <span className="w-6 h-0.5 bg-brand-primary" />
-                  <Link
-                    href="/reviews"
-                    className="group flex items-center gap-2.5 no-underline"
-                  >
-                    <span className="text-2xs font-bold tracking-eyebrow uppercase text-[#3aa4cc] group-hover:text-white">Product guides</span>
-                  </Link>
-                </div>
-                <div className="mb-3 max-w-3xl">
-                  <h2 className="font-display font-bold text-white tracking-tight text-3xl italic mb-0">Compared, not ranked by ad spend.</h2>
-                </div>
-              </div>
+            <div className="flex items-center gap-2.5 mb-3">
+              <span className="w-6 h-0.5 bg-brand-primary" />
               <Link
                 href="/reviews"
-                className="group flex items-center gap-3 overflow-hidden rounded-xl border border-white/15 bg-white/[0.05] no-underline hover:border-brand-primary transition-all"
+                className="group flex items-center gap-2.5 no-underline"
               >
-                <div className="px-4 py-2">
-                  <div className="mb-1">
-                    <div className="font-display font-bold text-white text-sm leading-tight italic group-hover:text-[#3aa4cc]">All product guides</div>
-                  </div>
-                  <div className="text-xs text-white/55 mt-0.5">
-                    <span>Filters, heaters, lighting, test kits.</span>
-                  </div>
-                </div>
+                <span className="text-2xs font-bold tracking-eyebrow uppercase text-[#3aa4cc] group-hover:text-white">Product guides</span>
               </Link>
             </div>
+            <h2 className="font-display font-bold text-white tracking-tight italic mb-3" style={{ fontSize: 'clamp(22px, 3vw, 36px)' }}>
+              Gear scored on the page.
+            </h2>
             <div className="text-base text-white/70 leading-relaxed mb-6 max-w-xl">
               <span>Heaters, filters, lighting, canister filters, water-test kits, nano tanks, and planted-tank fertilizers — each guide weighs accuracy, durability, and price.</span>
             </div>
@@ -404,6 +389,9 @@ export function HomeGuides() {
                 href="/editorial-standards"
                 className="group flex items-center gap-3 overflow-hidden rounded-xl border border-brand-border bg-white no-underline hover:border-brand-primary transition-all"
               >
+                <div className={`relative h-14 w-20 shrink-0 overflow-hidden bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
+                  <StockImage manifestKey="fish-com:species-african-cichlid" alt="An African cichlid in an aquarium" aspect="4:3" subtleCredit />
+                </div>
                 <div className="px-3 py-2">
                   <div className="mb-1">
                     <div className="font-display font-bold text-brand-dark text-sm leading-tight italic group-hover:text-brand-primary">Editorial standards</div>
@@ -447,7 +435,3 @@ export function HomeGuides() {
     </>
   )
 }
-
-
-
-
