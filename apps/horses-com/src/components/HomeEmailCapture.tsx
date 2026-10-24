@@ -8,15 +8,11 @@ const START_LINKS = [
     title: 'First-horse roadmap',
     note: 'What to decide before you buy — on this site, no email required.',
     href: '/first-horse-roadmap',
-    imageKey: 'horses-com:hero',
-    imageAlt: 'A horse galloping through an open field',
   },
   {
     title: 'Care guides',
     note: 'Daily husbandry and the guides that follow the first 90 days.',
     href: '/care',
-    imageKey: 'horses-com:guide-saddle-fit',
-    imageAlt: 'A horse and rider working in tack at the canter',
   },
 ]
 
@@ -43,7 +39,7 @@ export function HomeEmailCapture() {
             className="group flex items-center gap-3 overflow-hidden rounded-xl border border-brand-border bg-white no-underline hover:border-brand-primary transition-all"
           >
             <div className={`relative h-14 w-20 shrink-0 overflow-hidden bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-              <StockImage manifestKey="horses-com:featured-quarter-horse" alt="A horse and rider in an all-purpose schooling session" aspect="4:3" subtleCredit />
+              <StockImage manifestKey="horses-com:guide-saddle-fit" alt="A horse and rider working in tack at the canter" aspect="4:3" subtleCredit />
             </div>
             <div className="pr-3 py-2">
               <div className="font-display font-bold text-brand-dark text-sm leading-tight group-hover:text-brand-primary">90-day roadmap</div>
@@ -56,17 +52,15 @@ export function HomeEmailCapture() {
             <Link
               key={item.href}
               href={item.href}
-              className="group block overflow-hidden rounded-xl border border-brand-border bg-white no-underline hover:border-brand-primary transition-all"
+              className="group flex items-start justify-between gap-3 overflow-hidden rounded-xl border border-brand-border bg-white no-underline hover:border-brand-primary transition-all"
             >
-              <div className={`relative h-28 bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                <StockImage manifestKey={item.imageKey} alt={item.imageAlt} aspect="16:9" subtleCredit />
-              </div>
-              <div className="p-4">
+              <div className="py-4 pl-4 pr-1">
                 <div className="font-display font-bold text-brand-dark text-base leading-tight group-hover:text-brand-primary">
                   {item.title}
                 </div>
                 <p className="text-xs text-brand-text-mid mt-1 leading-relaxed">{item.note}</p>
               </div>
+              <span aria-hidden="true" className="mt-4 mr-4 shrink-0 text-brand-text-mid group-hover:text-brand-primary">&rarr;</span>
             </Link>
           ))}
         </div>
