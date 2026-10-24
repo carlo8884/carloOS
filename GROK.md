@@ -1943,3 +1943,12 @@ Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners, no sitema
 3. Preview URLs: https://carlo-os-fish-com.vercel.app/ · https://dog-com-three.vercel.app/join/pro · https://dog-com-three.vercel.app/trainers · https://horses-com.vercel.app/inquire · https://horses-com.vercel.app/
 4. Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners, directory claimed=false.
 5. Carlo offline until next week; recap emailed to carlo@tabibi.com.
+
+---
+
+## 2026-10-24 ~10:07 PDT hour
+1. Fish.com homepage visual quality: the same Unsplash photo (Worachat Sodsri, two Siamese fighting fish) appeared twice — the email/start band's "Setup guides" thumb (key species-thumb-goldfish, mislabeled alt "A goldfish") and the "All calculators" thumb (species-thumb-betta). Swapped the band thumb to the existing credited fish-com:glossary-hero (Huy Phan, planted glass tank) with an accurate alt; no image repeats on the homepage now. PR #2896.
+2. No new images, no manifest changes, no doses, no sitemap regen. Dog /join/pro + /trainers shells, Horses /inquire + homepage and shared Footer inquire left alone.
+3. Preview URLs: https://carlo-os-fish-com-git-bot-fish-e-6adf21-carlo-tabibi-s-projects.vercel.app/ · https://carlo-os-fish-com.vercel.app/ · https://dog-com-three.vercel.app/join/pro · https://dog-com-three.vercel.app/trainers · https://horses-com.vercel.app/inquire · https://horses-com.vercel.app/
+4. Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners, directory claimed=false.
+5. Carlo offline until next week; recap emailed to carlo@tabibi.com.
