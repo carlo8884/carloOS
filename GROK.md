@@ -1979,3 +1979,12 @@ Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners, no sitema
 3. Preview URLs: https://carlo-os-fish-com-git-bot-fish-w-97af93-carlo-tabibi-s-projects.vercel.app/ · https://carlo-os-fish-com.vercel.app/ · https://dog-com-three.vercel.app/join/pro · https://dog-com-three.vercel.app/trainers · https://horses-com.vercel.app/inquire · https://horses-com.vercel.app/
 4. Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners, directory claimed=false.
 5. Carlo offline until next week; recap emailed to carlo@tabibi.com.
+
+---
+
+## 2026-10-24 ~14:07 PDT hour
+1. Fish.com homepage polish: the "Start where you are" band's Health guides action carried a small decorative photo chip (fish-com:cornerstone-cycling) whose alt said "test kit" but whose photo is a yellow fish. It's now a clean text link with an arrow, matching the Editorial standards action (#2901), so the band reads as clean text under the one credited hero photo like dog.com; the mislabeled alt is gone with it. PR #2903.
+2. No new images, no manifest changes, no doses, no sitemap regen. Dog /join/pro + /trainers shells, Horses /inquire + homepage and shared Footer inquire left alone. Next candidate: Fish "All calculators" thumb (fish-com:species-thumb-betta) in the "Decide with math" band is a decorative fish photo on a calculators link.
+3. Preview URLs: https://carlo-os-fish-com-git-bot-fish-h-2560ae-carlo-tabibi-s-projects.vercel.app/ · https://carlo-os-fish-com.vercel.app/ · https://dog-com-three.vercel.app/join/pro · https://dog-com-three.vercel.app/trainers · https://horses-com.vercel.app/inquire · https://horses-com.vercel.app/
+4. Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners, directory claimed=false.
+5. Carlo offline until next week; recap emailed to carlo@tabibi.com.
