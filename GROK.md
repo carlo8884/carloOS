@@ -1961,3 +1961,12 @@ Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners, no sitema
 3. Preview URLs: https://horses-com-git-bot-horses-discip-5b6b21-carlo-tabibi-s-projects.vercel.app/ · https://horses-com.vercel.app/ · https://horses-com.vercel.app/inquire · https://carlo-os-fish-com.vercel.app/ · https://dog-com-three.vercel.app/join/pro · https://dog-com-three.vercel.app/trainers
 4. Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners, directory claimed=false.
 5. Carlo offline until next week; recap emailed to carlo@tabibi.com.
+
+---
+
+## 2026-10-24 ~12:12 PDT hour
+1. Horses.com homepage polish: the "Why this site" Editorial standards action thumb (horses-com:hero-section) was the same Unsplash photo (vLrlxsNKE3Y, Lily Banse) as the "Quarter Horse guide" thumb further down. The action is now a clean text link with an arrow, so no photo repeats on the homepage, matching dog.com/fish.com one credited photo + clean text.
+2. No new images, no manifest changes, no doses, no sitemap regen. Fish.com homepage (no repeats), Dog /join/pro + /trainers shells, Horses /inquire and shared Footer inquire left alone. (Supersedes the un-PR'd branch bot/horses-why-this-site-20261024-1203.)
+3. Preview URLs: https://horses-com.vercel.app/ · https://horses-com.vercel.app/inquire · https://carlo-os-fish-com.vercel.app/ · https://dog-com-three.vercel.app/join/pro · https://dog-com-three.vercel.app/trainers
+4. Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners, directory claimed=false.
+5. Carlo offline until next week; recap emailed to carlo@tabibi.com.
