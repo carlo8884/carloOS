@@ -1,1 +1,1 @@
-$(cat /tmp/carloOS/apps/fish-com/src/components/HomeGuides.tsx)
+PLACEHOLDER_FOR_CONTENT
