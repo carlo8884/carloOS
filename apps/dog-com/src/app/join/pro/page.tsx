@@ -53,6 +53,12 @@ export default function JoinProPage({
           <li>A “verified by Dog.com” badge</li>
           <li>Guaranteed ranking in search</li>
         </ul>
+        <h2>How review works</h2>
+        <ol>
+          <li>You send the form below with your service area and a public link (website or business profile).</li>
+          <li>We check that the link and any credential you list are real. Nothing is published before that.</li>
+          <li>If accepted, your page goes live as a claimed profile. If not, nothing is posted and nobody is listed in your place.</li>
+        </ol>
         <p>
           List credentials you actually hold. Do not invent reviews. If we cannot
           tell where you work, the application sits.
@@ -82,7 +88,9 @@ export default function JoinProPage({
         <p>
           The form above is for trainers applying for a page. If you landed
           here looking for a trainer, the claimed list is empty on purpose.
-          No directory is invented here.
+          No directory is invented here. See the{' '}
+          <Link href="/trainers">trainer directory</Link> for how to vet a
+          trainer before you pay anyone.
         </p>
       </div>
     </ArticleLayout>
