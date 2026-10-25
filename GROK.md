@@ -2112,3 +2112,12 @@ Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners, no sitema
 3. Preview URLs: https://dog-com-git-bot-dog-joinpro-comp-54649c-carlo-tabibi-s-projects.vercel.app/join/pro · https://carlo-os-fish-com.vercel.app/ · https://dog-com-three.vercel.app/join/pro · https://dog-com-three.vercel.app/trainers · https://horses-com.vercel.app/inquire · https://horses-com.vercel.app/
 4. Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners, directory claimed=false.
 5. Carlo offline until next week; recap emailed to carlo@tabibi.com.
+
+---
+
+## 2026-10-25 ~14:07 PDT hour
+1. Fish.com homepage polish: each of the six "Start where you are" triage problem cards repeated a "Start here" eyebrow next to its line icon (the same label six times under a header that already says it). Cards now show just the icon above the title and description, matching dog.com's one-credited-photo plus clean-text pattern. PR #2930.
+2. Markup only: no new images, no manifest changes, no trainers, no doses, no sitemap regen. Dog /join/pro + /trainers shells, Horses homepage + /inquire and shared Footer inquire left alone.
+3. Preview URLs: https://carlo-os-fish-com-git-bot-fish-t-01392b-carlo-tabibi-s-projects.vercel.app/ · https://carlo-os-fish-com.vercel.app/ · https://dog-com-three.vercel.app/join/pro · https://dog-com-three.vercel.app/trainers · https://horses-com.vercel.app/inquire · https://horses-com.vercel.app/
+4. Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners, directory claimed=false.
+5. Carlo offline until next week; recap emailed to carlo@tabibi.com.
