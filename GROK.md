@@ -2094,6 +2094,9 @@ Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners, no sitema
 1. Horses.com homepage polish: data arrays (CATEGORIES, FEATURED_GUIDES, FEATURED_ARTICLES, TRUST_CHIPS) still carried unused imageKey/manifestKey/imageAlt after photo chips were cleaned to text-only. Dropped the fields and the matching type properties so the source matches the rendered clean-text homepage. PR #2925.
 2. No new images, no manifest changes, no doses, no sitemap regen. Fish.com homepage (one credited hero photo + clean text), Dog /join/pro + /trainers shells, Horses /inquire and shared Footer inquire left alone.
 3. Preview URLs: https://horses-com.vercel.app/ · https://carlo-os-fish-com.vercel.app/ · https://dog-com-three.vercel.app/join/pro · https://dog-com-three.vercel.app/trainers · https://horses-com.vercel.app/inquire
+
+---
+
 ## 2026-10-25 ~12:10 PDT hour
 1. Horses.com /inquire polish: the "Make an offer" hero photo only filled a 16:9 strip because ImageCard's inner frame carries an inline aspect-ratio, so tall or wide viewports showed an empty grey band under the photo. The shared InquireOfferScreen now forces that frame to full height (aspect-auto, no rounding), so the credited photo fills the whole section behind the form. Shared component, so every site's /inquire gets the same fix. PR #2926.
 2. Class-only change: no new images, no manifest changes, no doses, no sitemap regen. Fish.com homepage, Horses homepage, Dog /join/pro + /trainers and shared Footer inquire left alone.
