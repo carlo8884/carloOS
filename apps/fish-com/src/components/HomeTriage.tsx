@@ -131,10 +131,7 @@ export function HomeTriage() {
             {PROBLEMS.map((p) => (
               <Link key={p.href} href={p.href} className="group block overflow-hidden rounded-xl no-underline bg-white/[0.05] border border-white/[0.08] hover:bg-white/[0.1] hover:border-white/20 transition-all duration-200">
                 <div className="p-5">
-                  <div className="mb-3 flex items-center gap-2 text-[#3aa4cc]">
-                    {p.icon}
-                    <span className="text-2xs font-bold tracking-eyebrow uppercase">Start here</span>
-                  </div>
+                  <div className="mb-3 text-[#3aa4cc]">{p.icon}</div>
                   <h2 className="font-display font-bold text-white text-base leading-tight italic mb-2">{p.title}</h2>
                   <p className="text-xs text-white/55 leading-relaxed mb-3">{p.desc}</p>
                   <div className="inline-flex items-center gap-1.5 text-xs font-bold text-[#3aa4cc] group-hover:gap-2 transition-all">
