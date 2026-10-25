@@ -14,6 +14,29 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 }
 
+const GUIDE_CARDS = [
+  {
+    href: '/training/trainer-credentials',
+    title: 'Trainer credentials explained',
+    note: 'CPDT-KA, CBCC-KA, CAAB, DACVB, and what each is actually for.',
+  },
+  {
+    href: '/training/training-red-flags',
+    title: 'Training red flags',
+    note: 'Dominance talk, shock as a first tool, guarantees, flooding.',
+  },
+  {
+    href: '/training/positive-reinforcement',
+    title: 'Positive reinforcement',
+    note: 'What force-free work looks like in a session.',
+  },
+  {
+    href: '/training',
+    title: 'Training library',
+    note: 'House training, leash work, reactivity, separation anxiety.',
+  },
+]
+
 export default function TrainersIndexPage() {
   return (
     <ArticleLayout
@@ -66,24 +89,25 @@ export default function TrainersIndexPage() {
           Dog training is unregulated in the United States. Anyone can hang a
           sign. Use the guides below before you pay anyone — listed here or not.
         </p>
-        <ul>
-          <li>
-            <Link href="/training/trainer-credentials">Trainer credentials explained</Link>
-            {' — '}CPDT-KA, CBCC-KA, CAAB, DACVB, and what each is actually for.
-          </li>
-          <li>
-            <Link href="/training/training-red-flags">Training red flags</Link>
-            {' — '}dominance talk, shock as a first tool, guarantees, flooding.
-          </li>
-          <li>
-            <Link href="/training/positive-reinforcement">Positive reinforcement</Link>
-            {' — '}what force-free work looks like in a session.
-          </li>
-          <li>
-            <Link href="/training">Training library</Link>
-            {' — '}house training, leash work, reactivity, separation anxiety.
-          </li>
-        </ul>
+        <div className="not-prose my-6 grid gap-4 sm:grid-cols-2">
+          {GUIDE_CARDS.map((card) => (
+            <Link
+              key={card.href}
+              href={card.href}
+              className="group block rounded-xl border border-stone-200 bg-white p-5 no-underline hover:border-brand-primary transition-all"
+            >
+              <div className="font-display font-bold text-brand-dark text-sm leading-tight group-hover:text-brand-primary mb-1">
+                {card.title}
+              </div>
+              <p className="text-sm text-brand-text-mid leading-relaxed mb-0">
+                {card.note}
+              </p>
+              <div className="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-brand-primary">
+                Read <span aria-hidden="true" className="transition-transform group-hover:translate-x-0.5">→</span>
+              </div>
+            </Link>
+          ))}
+        </div>
 
         <h2>If you train dogs for a living</h2>
         <p>
