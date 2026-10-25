@@ -2078,3 +2078,12 @@ Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners, no sitema
 3. Preview URLs: https://horses-com-git-bot-horses-roadma-b14abf-carlo-tabibi-s-projects.vercel.app/ · https://carlo-os-fish-com.vercel.app/ · https://dog-com-three.vercel.app/join/pro · https://dog-com-three.vercel.app/trainers · https://horses-com.vercel.app/inquire · https://horses-com.vercel.app/
 4. Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners, directory claimed=false.
 5. Carlo offline until next week; recap emailed to carlo@tabibi.com.
+
+---
+
+## 2026-10-25 ~11:15 PDT hour
+1. Dog.com /trainers claimed-directory shell: the "Claim your free listing →" button rendered orange text on its orange fill (invisible label) because `.carloOS-article a` outranked Tailwind `text-white`. Added two scoped rules in dog-com globals.css so filled buttons inside article bodies keep a white, non-underlined label (verified white on #BB4D18 locally). PR #2924.
+2. CSS only: no new images, no manifest changes, no trainers, no doses, no sitemap regen. Fish.com homepage (one credited hero photo + clean text), Horses homepage (photo-free below hero), Dog /join/pro, Horses /inquire and shared Footer inquire left alone. Next candidate: Horses /inquire shows an empty grey band between the hero and footer.
+3. Preview URLs: https://dog-com-git-bot-dog-article-butt-a862e2-carlo-tabibi-s-projects.vercel.app/trainers · https://carlo-os-fish-com.vercel.app/ · https://dog-com-three.vercel.app/join/pro · https://dog-com-three.vercel.app/trainers · https://horses-com.vercel.app/inquire · https://horses-com.vercel.app/
+4. Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners, directory claimed=false.
+5. Carlo offline until next week; recap emailed to carlo@tabibi.com.

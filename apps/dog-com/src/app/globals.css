@@ -228,3 +228,9 @@ h1, h2, h3, h4, h5, h6, .font-display {
 .bg-brand-dark .text-brand-primary { color: #E8622A; }
 .carloOS-article a { color: #BB4D18; }
 p a { text-decoration-line: underline; text-underline-offset: 2px; }
+
+/* Filled buttons inside article bodies (e.g. /trainers "Claim your free
+   listing") were losing text-white to `.carloOS-article a`, rendering
+   orange text on the orange fill. Keep explicit white labels white. */
+.carloOS-article a.text-white { color: #fff; }
+.carloOS-article a.no-underline { text-decoration-line: none; }
