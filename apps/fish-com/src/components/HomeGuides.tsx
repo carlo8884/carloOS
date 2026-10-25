@@ -33,10 +33,10 @@ const EQUIPMENT_DECISIONS = [
 ]
 
 const PRODUCT_CHIPS = [
-  { title: 'Filters', note: 'HOB, canister, and sponge — scored on the page.', href: '/reviews/best-aquarium-filters', imageKey: 'fish-com:category-equipment', imageAlt: 'Aquarium filtration and heating equipment' },
-  { title: 'Heaters', note: 'Wattage and redundancy, not brand slogans.', href: '/reviews/best-aquarium-heaters', imageKey: 'fish-com:species-thumb-clownfish', imageAlt: 'A clownfish' },
-  { title: 'Lighting', note: 'Spectrum and photoperiod for planted and reef tanks.', href: '/reviews/best-aquarium-lighting', imageKey: 'fish-com:species-thumb-discus', imageAlt: 'A discus fish' },
-  { title: 'Test kits', note: 'What to test, and how often, before the next water change.', href: '/reviews/best-water-test-kits', imageKey: 'fish-com:tools-hero', imageAlt: 'An aquarium water test kit' },
+  { title: 'Filters', note: 'HOB, canister, and sponge — scored on the page.', href: '/reviews/best-aquarium-filters' },
+  { title: 'Heaters', note: 'Wattage and redundancy, not brand slogans.', href: '/reviews/best-aquarium-heaters' },
+  { title: 'Lighting', note: 'Spectrum and photoperiod for planted and reef tanks.', href: '/reviews/best-aquarium-lighting' },
+  { title: 'Test kits', note: 'What to test, and how often, before the next water change.', href: '/reviews/best-water-test-kits' },
 ]
 
 const WORK_CHIPS = [
@@ -370,7 +370,7 @@ export function HomeGuides() {
       </section>
 
       <section className="bg-brand-white border-t border-brand-border px-container-sm sm:px-container py-12">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+        <div>
           <div className="max-w-3xl">
             <div className="flex items-end justify-between mb-4 flex-wrap gap-4">
               <div>
@@ -420,11 +420,6 @@ export function HomeGuides() {
                   <IconArrowRight className="mt-3.5 mr-3 h-4 w-4 shrink-0 text-brand-text-mid group-hover:text-brand-primary" />
                 </Link>
               ))}
-            </div>
-          </div>
-          <div className={`relative min-h-[220px] overflow-hidden rounded-xl ring-1 ring-brand-border ${FILL_IMAGE}`}>
-            <div className={`absolute inset-0 ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-              <StockImage manifestKey="fish-com:species-african-cichlid" alt="An African cichlid in an aquarium" aspect="4:3" subtleCredit />
             </div>
           </div>
         </div>
