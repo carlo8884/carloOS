@@ -10,7 +10,7 @@ export function InquireOfferScreen({
   heroKey: string
 }) {
   return (
-    <section className="relative min-h-[calc(100vh-68px)] flex items-center justify-center px-4 py-10">
+    <section className="relative min-h-[calc(100vh-68px)] flex items-center justify-center px-4 py-10 bg-gray-900">
       <div className="absolute inset-0 overflow-hidden [&>figure]:absolute [&>figure]:inset-0 [&>figure]:m-0 [&>figure]:h-full [&>figure]:w-full [&_img]:h-full [&_img]:w-full [&_img]:object-cover">
         <StockImage manifestKey={heroKey} alt="" aspect="16:9" variant="inline" priority subtleCredit />
       </div>
