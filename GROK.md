@@ -2069,3 +2069,12 @@ Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners, no sitema
 3. Preview URLs: https://horses-com-git-bot-horses-health-05201f-carlo-tabibi-s-projects.vercel.app/ · https://carlo-os-fish-com.vercel.app/ · https://dog-com-three.vercel.app/join/pro · https://dog-com-three.vercel.app/trainers · https://horses-com.vercel.app/inquire · https://horses-com.vercel.app/
 4. Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners, directory claimed=false.
 5. Carlo offline until next week; recap emailed to carlo@tabibi.com.
+
+---
+
+## 2026-10-25 ~10:20 PDT hour
+1. Horses.com homepage polish: the "Start here / First-horse roadmap" strip under the hero carried a decorative saddle-fit thumbnail (horses-com:guide-saddle-fit) on its 90-day roadmap action. It's now a clean text link with an arrow, matching Equine health (#2920), Quarter Horse guide (#2918), the BCS aside (#2916) and All breed guides (#2914). Dropped the now-unused StockImage import and FILL_IMAGE constant. PR #2922.
+2. No new images, no manifest changes, no doses, no sitemap regen. Dog /join/pro + /trainers shells, Horses /inquire and shared Footer inquire left alone. Horses homepage body is now photo-free below the credited hero.
+3. Preview URLs: https://horses-com-git-bot-horses-roadma-b14abf-carlo-tabibi-s-projects.vercel.app/ · https://carlo-os-fish-com.vercel.app/ · https://dog-com-three.vercel.app/join/pro · https://dog-com-three.vercel.app/trainers · https://horses-com.vercel.app/inquire · https://horses-com.vercel.app/
+4. Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners, directory claimed=false.
+5. Carlo offline until next week; recap emailed to carlo@tabibi.com.
