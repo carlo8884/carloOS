@@ -1,8 +1,5 @@
 import Link from 'next/link'
-import { StockImage } from '@carloOS/ui'
 import { IconArrowRight } from './HomeTriage'
-
-const FILL_IMAGE = '[&>figure]:my-0 [&>div]:my-0 [&_figure]:my-0'
 
 const FEATURED_SPECIES = [
   { name: 'Betta', type: 'Freshwater · Beginner', note: '5 gal min · solitary · tropical', href: '/species/betta-fish' },
@@ -298,8 +295,8 @@ export function HomeGuides() {
       </section>
 
       <section className="bg-brand-dark px-container-sm sm:px-container py-section">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-          <div>
+        <div>
+          <div className="max-w-3xl">
             <div className="flex items-end justify-between mb-4 flex-wrap gap-4">
               <div>
                 <div className="flex items-center gap-2.5 mb-3">
@@ -352,20 +349,6 @@ export function HomeGuides() {
               ))}
             </div>
           </div>
-          <Link href="/reviews" className={`group relative block rounded-xl overflow-hidden no-underline ring-1 ring-white/10 hover:ring-brand-primary min-h-[220px] ${FILL_IMAGE}`}>
-            <div className={`absolute inset-0 ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-              <StockImage manifestKey="fish-com:category-freshwater" alt="A well-maintained freshwater display aquarium" aspect="4:3" subtleCredit />
-            </div>
-            <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
-            <div className="relative z-10 flex flex-col justify-end h-full min-h-[220px] p-5">
-              <div className="mb-1">
-                <div className="text-2xs font-bold tracking-eyebrow uppercase text-[#3aa4cc]">All product guides</div>
-              </div>
-              <div>
-                <div className="font-display font-bold text-white text-lg leading-tight italic">The gear that earns a place in your tank.</div>
-              </div>
-            </div>
-          </Link>
         </div>
       </section>
 
