@@ -290,11 +290,6 @@ export default function HomePage() {
           <div className="grid lg:grid-cols-[1.4fr_1fr] gap-8 lg:gap-12 items-start">
             <div className="min-w-0"><BodyConditionScoreCalculator /></div>
             <aside className="flex flex-col gap-6 lg:sticky lg:top-24 lg:self-start">
-              <div className={`relative min-h-[180px] overflow-hidden rounded-xl ring-1 ring-brand-border ${FILL_IMAGE}`}>
-                <div className={`absolute inset-0 ${FILL_IMAGE}`}>
-                  <StockImage manifestKey="horses-com:tool-bcs-calculator" fallbackKey="horses-com:hero" alt="A horse standing square for body condition assessment" aspect="4:3" variant="inline" subtleCredit />
-                </div>
-              </div>
               <div>
                 <div className="flex items-end justify-between gap-3 flex-wrap mb-3">
                   <Link href="/tools/body-condition-score" className="group flex items-center gap-2.5 no-underline">
