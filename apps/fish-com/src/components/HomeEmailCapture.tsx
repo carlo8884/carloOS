@@ -1,8 +1,5 @@
 import Link from 'next/link'
-import { StockImage } from '@carloOS/ui'
 import { IconArrowRight } from './HomeTriage'
-
-const FILL_IMAGE = '[&>figure]:my-0 [&>div]:my-0 [&_figure]:my-0'
 
 const START_LINKS = [
   {
@@ -45,14 +42,11 @@ export function HomeEmailCapture() {
             href="/setup"
             className="group flex items-center gap-3 overflow-hidden rounded-xl border border-brand-border bg-white no-underline hover:border-brand-primary transition-all"
           >
-            <div className={`relative h-14 w-20 shrink-0 overflow-hidden bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-              <StockImage manifestKey="fish-com:glossary-hero" alt="A green plant in a clear glass fish tank" aspect="4:3" subtleCredit />
-            </div>
-            <div className="pr-3 py-2">
+            <div className="px-4 py-2.5">
               <div className="mb-1 flex items-center gap-2">
-                <div className="font-display font-bold text-brand-dark text-sm leading-tight italic group-hover:text-brand-primary">Setup guides</div>
+                <div className="font-display font-bold text-brand-dark text-sm leading-tight italic group-hover:text-brand-primary">Setup guides <span aria-hidden="true">→</span></div>
               </div>
-              <div className="text-xs text-brand-text-mid mt-0.5 flex items-center gap-2">
+              <div className="text-xs text-brand-text-mid mt-0.5">
                 <span>Size, cycle, then the first fish.</span>
               </div>
             </div>
