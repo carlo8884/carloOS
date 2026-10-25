@@ -2087,3 +2087,12 @@ Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners, no sitema
 3. Preview URLs: https://dog-com-git-bot-dog-article-butt-a862e2-carlo-tabibi-s-projects.vercel.app/trainers · https://carlo-os-fish-com.vercel.app/ · https://dog-com-three.vercel.app/join/pro · https://dog-com-three.vercel.app/trainers · https://horses-com.vercel.app/inquire · https://horses-com.vercel.app/
 4. Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners, directory claimed=false.
 5. Carlo offline until next week; recap emailed to carlo@tabibi.com.
+
+---
+
+## 2026-10-25 ~12:03 PDT hour
+1. Horses.com homepage polish: data arrays (CATEGORIES, FEATURED_GUIDES, FEATURED_ARTICLES, TRUST_CHIPS) still carried unused imageKey/manifestKey/imageAlt after photo chips were cleaned to text-only. Dropped the fields and the matching type properties so the source matches the rendered clean-text homepage. PR #2925.
+2. No new images, no manifest changes, no doses, no sitemap regen. Fish.com homepage (one credited hero photo + clean text), Dog /join/pro + /trainers shells, Horses /inquire and shared Footer inquire left alone.
+3. Preview URLs: https://horses-com.vercel.app/ · https://carlo-os-fish-com.vercel.app/ · https://dog-com-three.vercel.app/join/pro · https://dog-com-three.vercel.app/trainers · https://horses-com.vercel.app/inquire
+4. Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners, directory claimed=false.
+5. Carlo offline until next week; recap emailed to carlo@tabibi.com.
