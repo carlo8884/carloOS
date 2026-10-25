@@ -2121,3 +2121,12 @@ Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners, no sitema
 3. Preview URLs: https://carlo-os-fish-com-git-bot-fish-t-01392b-carlo-tabibi-s-projects.vercel.app/ · https://carlo-os-fish-com.vercel.app/ · https://dog-com-three.vercel.app/join/pro · https://dog-com-three.vercel.app/trainers · https://horses-com.vercel.app/inquire · https://horses-com.vercel.app/
 4. Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners, directory claimed=false.
 5. Carlo offline until next week; recap emailed to carlo@tabibi.com.
+
+---
+
+## 2026-10-25 ~15:13 PDT hour
+1. Fish.com homepage polish: calculators showed up twice in a row, once as the "Decide with math" strip of six calculator tiles (with its own All calculators link) at the end of the triage block, then again as the full "Calculators & Tools" section right below. Removed the duplicate strip and its unused data so calculators appear once, keeping the page to one credited hero photo plus clean text like dog.com. PR #2932.
+2. Deletion only: no new images, no manifest changes, no trainers, no doses, no sitemap regen. Dog /join/pro + /trainers shells, Horses homepage + /inquire and shared Footer inquire left alone.
+3. Preview URLs: https://carlo-os-fish-com-git-bot-fish-d-b66417-carlo-tabibi-s-projects.vercel.app/ · https://carlo-os-fish-com.vercel.app/ · https://dog-com-three.vercel.app/join/pro · https://horses-com.vercel.app/inquire
+4. Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners, directory claimed=false.
+5. Recap delivered in chat only (no email, per Carlo 10/25 2:24pm PT).
