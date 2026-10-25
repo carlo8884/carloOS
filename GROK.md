@@ -2024,3 +2024,12 @@ Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners, no sitema
 3. Preview URLs: https://carlo-os-fish-com-git-bot-fish-w-700296-carlo-tabibi-s-projects.vercel.app/ · https://carlo-os-fish-com.vercel.app/ · https://dog-com-three.vercel.app/join/pro · https://dog-com-three.vercel.app/trainers · https://horses-com.vercel.app/inquire · https://horses-com.vercel.app/
 4. Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners, directory claimed=false.
 5. Carlo offline until next week; recap emailed to carlo@tabibi.com.
+
+---
+
+## 2026-10-24 ~19:10 PDT hour
+1. Fish.com homepage polish: the "How we work" band carried a decorative African cichlid photo (fish-com:species-african-cichlid) beside the editorial-standards text. It's gone, so the band reads as clean text and the homepage moves closer to dog.com's one-credited-photo pattern. Also dropped unused imageKey/imageAlt fields from the product-guide chips. PR #2911.
+2. No new images, no manifest changes, no doses, no sitemap regen. Dog /join/pro + /trainers shells, Horses /inquire + homepage and shared Footer inquire left alone. Next candidate: the Product guides band's side photo (fish-com:category-freshwater).
+3. Preview URLs: https://carlo-os-fish-com-git-bot-fish-h-22ee79-carlo-tabibi-s-projects.vercel.app/ · https://carlo-os-fish-com.vercel.app/ · https://dog-com-three.vercel.app/join/pro · https://dog-com-three.vercel.app/trainers · https://horses-com.vercel.app/inquire · https://horses-com.vercel.app/
+4. Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners, directory claimed=false.
+5. Carlo offline until next week; recap emailed to carlo@tabibi.com.
